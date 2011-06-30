@@ -1,0 +1,2431 @@
+"Flexible Survival" by Nuku Valente
+
+Book 0 - Pre game prep stuff
+
+Release along with an interpreter. 
+Release along with the source text.
+Use memory economy.
+Use fast route-finding.
+Use fast route-finding.
+Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
+Use MAX_PROP_TABLE_SIZE of 500000.
+Use MAX_OBJ_PROP_COUNT of 128.
+Include Basic Help Menu by Emily Short.
+Include Version 4 of Menus by Emily Short.
+
+The release number is 35.
+The story creation year is 2010.
+The maximum score is 1600.
+
+Table of Basic Help Options (continued)
+title	description 
+"Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://nukuv.blogspot.com/" 
+"Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break][line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break][line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break][line break]You can also hunt for locations, if you know their name."
+"Trading"	"You can trade with certain denizens of the city. Simple give x to y, like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
+"Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
+"Items"	"You will come to have a variety of items. Here are some useful commands.[line break][line break]Item: See a list of items you own.[line break]look (item): Look at a specific item.[line break]use (item): Use an item[line break]get (item): grab a specific item.[line break]get all: get everything in the room."
+"Weapons"	"Some items you find make good weapons! Be sure to use them before a battle to have them at hand."
+"Scavenging"	"Type [bold type]Scavenge[roman type] in any room you can fast travel from to look hunt for food and water."
+"Socializing"	"You can talk (person) to chat it up. If they are of more personal interest with you, you can also fuck (person)"
+"Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
+"Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
+
+Book 1 - Variable Definitions
+
+monster is a number that varies.
+The player has text called name.
+A person has a number called Energy.
+A person has a number called HP.
+A person has a number called MaxHP.
+A person has a number called XP.
+A person has a number called Level.
+A person has a number called Strength.
+A person has a number called Dexterity.
+A person has a number called Stamina.
+A person has a number called Charisma.
+A person has a number called Intelligence.
+A person has a number called Perception.
+A person has a number called Hunger.
+A person has a number called Thirst.
+A person has a number called Morale.
+A person has a number called Lust.
+A person has a number called Humanity.
+A person has a number called Hunger.
+A person has a number called cocks.
+A person has a number called testes.
+A person has a number called breasts.
+A person has a number called cunts.
+A person has a number called Breast Size.
+A Person has a number called Cock length.
+A person has a number called Cock Width.
+A person has a number called Cunt length.
+A person has a number called Cunt width.
+A person has a number called armor.
+A person has a number called capacity.
+A person has a number called libido.
+A person has a text called skin. Skin is usually "smooth";
+A person has a text called Cock. Cock is usually "";
+A person has a text called face. Face is usually "charmingly human";
+A person has a text called tail. tail is usually "";
+A person has a text called body. Body is usually "charmingly human";
+A person has a text called bodyname. Bodyname is usually "human";
+A person has a text called facename. Facename is usually "human";
+A person has a text called skinname. Skinname is usually "human";
+A person has a text called cockname. cockname is usually "human";
+A person has text called Cock Size Desc.
+A person has text called Cunt Size Desc.
+A person has text called Breast Size Desc.
+A person has a text called tailname. Tailname is usually "human";
+A person has a text called weapon. Weapon is usually "[one of]your quick wit[or]your body[or]impromptu wrestling[at random]";
+A person has a text called weapon type. Weapon type is usually "Melee";
+A person has a number called Weapon damage. Weapon damage is usually 4.
+A person has a list of text called conversation.
+
+
+
+
+playon is a number that varies.
+A object has a list of text called invent. 
+The player has a list of text called feats.
+A person can be a trader.
+Allobjs is a list of text that varies.
+Grab Object is a kind of thing.
+A person has a grab object called weapon object.
+A armament is a kind of grab object.
+A armament has a text called weapon.
+A armament has a text called weapon type.
+A armament has a number called Weapon Damage.
+A grab object can be temporary. A grab object is usually temporary.
+A grab object can be fast. A grab object is usually not fast.
+A grab object can be infectious. 
+A grab object  has a text called strain.
+A grab object has a text called trade.
+A grab object has a text called purified.
+A grab object has a text called usedesc.
+Turns is a number that varies. Turns is 240.
+Targetturns is a number that varies.
+Started is a number that varies.
+Child is a person.
+Child has a number called Gestation.
+Child can be born. Child is not born.
+Childrenfaces is a list of text that varies.
+Childrenskins is a list of text that varies.
+Childrenbodies is a list of text that varies.
+
+A situation is a kind of thing.
+A situation can be resolved or unresolved. A situation is usually unresolved.
+A situation has a text called sarea. The sarea of a situation is usually "Outside".
+A featset is a kind of thing.
+
+Definition: A grab object(called X) is wielded:
+	if weapon object of player is x, yes;
+	no;
+
+Definition: A situation(called X) is close:
+	if sarea of X is battleground, yes;
+	no;
+	
+Definition: A person(called X) is male:
+	if cocks of x is greater than 0, yes;
+	
+Definition: A person(called X) is female:
+	if cunts of x is greater than 0, yes;
+
+A thing can be rooted in place. A thing is usually not rooted in place.
+A thing can be restful. A thing is usually not restful.
+A door can be dangerous.
+A door has a text called marea.
+A room can be known or unknown. A room is usually unknown.
+A room can be fasttravel. A room is usually not fasttravel.
+A room can be private. A room is usually not private.
+The player is wearing a watch.
+The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.";
+
+instead of examining a grab object(called x):
+	say "[the desc corresponding to a object of  x in the table of game objects]";
+	
+after looking:
+	let x be the location of the player;
+	let z be the number of entries in invent of x;
+	if z is greater than 0:
+		say "Visible Objects: [invent of x]";
+
+Book 2 - Places
+
+Grey Abbey Library is a room. "Books, and a computer or two. The computers would be more useful if there was power in the building. You're still not entirely sure what knocked them out, but they're very out now. You came here because you knew there was a bunker in the basement. It's kept you alive, so far.".
+Grey Abbey Library is fasttravel.
+Bunker is a room. "Sparsely appointed, the bunker was built back during the cold war, then abandoned to a curiosity at best. Its walls are solid concrete and the shelves are at least in good repair. The small sink seems to be broken, producing no water no matter how much the knob is turned. There is a secure looking door leading [bold type]outside[roman type]".
+The invent of Bunker is { "medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
+Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
+East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
+East of library door is Grey Abbey Library.
+Inside of Grey Abbey Library is Bunker.
+The player is in Bunker.
+The marea of library door is "Outside";
+
+Smith Haven Mall Lot is a room. "A vast and sprawling parking lot puts you within walking distance of a large mall to the north. You remember coming here a lot more often when you were in school. It was 'the place' to be. Ah well, it's a fine [time of day], may as well go shopping."
+It is fasttravel.
+Mall Foodcourt is a room. "Just inside the exit to the parking lot to the south is the food court. There are many metal tables with uncomfortable looking plastic chairs. There are also many tiny eateries here, with the smaller stores arrayed out from them, beckoning your eyes towards them in consumeristic joy.".
+The invent of Mall FoodCourt is { "chair","food" }.
+North of Smith Haven Mall Lot is Mall FoodCourt. 
+Mall Atrium is a room. "A large open area, oppressively gloomy without the light. Furtive movements can be seen. When one focuses, the mall rats are not hard to spot. They are harmless enough at least, even offering a nod or wave at times. There are some benches laid out for sitting on, half the time occupied by several mall rats. There is also a fountain, but no water gurgles, and what is left looks too dirty to drink.".
+North of Mall Foodcourt is Mall Atrium.
+Sewer Grating is a door. Sewer Grating is dangerous. 
+Down of Mall Foodcourt is Sewer Grating.
+Down of sewer grating is Sewers A7.
+The marea of Sewer Grating is "Mall". The sewer grating is open. The description of sewer grating is "A sewer grate, broken open with bits of somewhat rusted iron strewn everywhere, some slime splattered about. Looks dangerous down there, but nothing ventured, nothing gained, right?"; understand "grate" and "grating" as the sewer grating.
+
+Outside Trevor Labs is a room. "You[apostrophe]ve heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here[apostrophe]s the headquarters, rising as a sleek and tall glass building to your west. You[apostrophe]re not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
+understand "lab" or "labs" as Outside Trevor Labs.
+Outside Trevor Labs is fasttravel.
+Trevor Labs Lobby is a room. "The ground floor of Trevor Labs. New age furniture has been ripped to shreds and thrown around and unknown liquid is splattered all over the place. The smell is somewhere between burnt plastic and sweaty humanity in an unappealing mixture. Fortunately, the scent is fading with time. It's somewhat dark, but not too dark as to see the emergency stairs are still accessible going up and down.".
+West of Outside Trevor Labs is Trevor Labs Lobby.
+2F Trevor Labs is a room. "The second floor of the labs. The lighting is dim, except for brilliant light shining from beneath a closed door at the end of the hallway. It casts a cone of brightness into the gloom. The area is silent, and smells of disuse and long old disinfectant. There does not seem to be much here to look at besides a broken water cooler and a motivational poster with a kitten, encouraging you to hang in there.";
+Trevor Labs Lobby is below 2F Trevor Labs.
+Primary Lab is a room. "One of the few places in the city with working power, this lab is brilliantly lit, showing off banks of busy computer terminals displaying dizzying amounts of information, largely obscure and technical. Overhead, soft humming of air conditioning is the likely reason that the room feels just a bit chilly. There is an especially comfy chair resting before the largest computer. There is only one window here, and it is mostly blocked by filing cabinets. Perhaps it is the light you saw outside.";
+Primary Lab is north of 2F Trevor Labs.
+There is an Infection Terminal in Primary Lab. "A glowing infection terminal quietly lists all the infections in the corner.".
+
+Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of, wait no, that grass has not been mowed for a while. Just how long were you in that bunker anyway? The grass is just starting to creep up onto the pavement that leads further into the park, Northwards. The wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
+Park Entrance is fasttravel.
+Park Trail is a room. "Following this North/South trail, you can see dense woods to either side. You could easily become lost in them, though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [time of day] sky".
+North of Park Entrance is Park Trail.
+East of Park Trail is Faint Trail.
+East of Faint Trail is Lost in the Woods.
+Faint Trail is a door. 
+The description of a faint trail is "A faint trail that heads eastwards into the deep woods. Looks dangerous, who knows what is lurking out there...".
+Faint Trail is dangerous.
+The marea of Faint Trail is "Park".
+
+Part 2 - Things
+
+There is a bed in the bunker. "Laying over in the corner is a small, simple, cot. Just the thing for a little [bold type]rest[roman type].".
+The cot is rooted in place. The cot is restful.
+There is a library computer in the Grey Abbey Library. "A computer rests nearby, powerless.".
+The description of it is "A computer terminal. It probably had web access and everything before the power cut out. Right now it's just a very heavy paperweight on a rolling stand.". It is rooted in place.
+Understand "computer" as library computer.
+There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
+Cola Vending Machine has a number called dispensed.
+understand "vending machine" as Cola Vending machine.
+Microwave is a thing. "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something."
+
+Vending is an action applying to one thing.
+understand "use [cola vending machine]" as vending.
+
+Carry out vending:
+	say "It's broken! Damn. All that soda. How to get it out?" ;
+	
+Instead of attacking the Cola Vending machine:
+	say "You give the soda machine a solid whack, ";
+	let the bonus be (( the strength of the player minus 10 ) divided by 2);
+	let the dice be a random number from 1 to 20;
+	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
+	increase dice by bonus;
+	if dice is greater than 15:
+		say "A soda can pops out!";
+		add "soda" to invent of player;
+		increase score by 1;
+		increase dispensed by 1;
+	otherwise:
+		say "Nothing happens...";
+	if ( a random chance of 5 in 100 succeeds ) or dispensed of noun is greater than 9:
+		say "The machine gives a final spark of defeat. You are certain there is no more soda to be had.";
+		remove Cola Vending machine from play;
+
+
+Book 3 - Definitions
+
+Definition: a direction (called D) is valid if the room D from the location of the player is a room.
+Definition: A grab object (called D) is owned:
+	if there is a name corresponding to a object of d in the table of game objects:
+		if the name corresponding to a object of d in the table of game objects is listed in the invent of the player, yes;
+	no;
+
+Definition: A grab object (called D) is present:
+	if there is a name corresponding to a object of d in the table of game objects:
+		if the name corresponding to a object of  d in the table of game objects is listed in the invent of the location of the player, yes;
+	no;
+
+Book 4 - Start the Game
+
+When play begins:
+	repeat with q running from 1 to the number of rows in the table of game objects:
+		add name in row Q of table of game objects to allobjs;
+	change the right hand status line to "[list of valid directions]";
+	follow the random stats rule;
+	increase the score by 10;
+[	follow the finish stats rule;]
+	change the current menu to the table of Start Game;
+	carry out the displaying activity;
+	repeat with x running through featsets:
+		now x is a part of the player;
+	featget;
+	clear the screen;
+	say "Phew, you barely made it in here before it all went bad, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
+	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
+	[try looking.]
+	
+instead of going somewhere while player is overburdened:
+	say "You are too over burdened to move. Drop some of that junk!";
+	
+instead of going through a dangerous door(called X):
+	if the hp of the player is less than 1:
+		say "You are too injured to go far. You rest instead.";
+		Rest;
+	otherwise:
+		now battleground is marea of x;
+		follow the explore rule;
+[		change the current menu to the table of Basic Actions;
+		carry out the displaying activity;
+		clear the screen;]
+	[try looking.]
+
+Book 5 - Tables
+
+Table of Game Objects
+name	desc	weight	object
+"medkit"	"A small white plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
+"water bottle"	"A bottle of water. Good for slaking thirst."	1	water bottle
+"dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
+"food"	"Some food. Nothing fancy. Maybe a sandwich, or a husky girl leg, whatever happens to be handy."	2	food
+"journal"	"A small leather clad book. Spending some time writing in it can help clear your thoughts and recenter your troubled mind."	2	journal
+"pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
+"chair"	"A metal folding chair that belongs in a food court. It could serve as a weapon in a pinch!"	10	chair
+"gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	3	gryphon milk
+"distilled milk"	"Gryphon milk boiled down to a concentrated, powdery, form? That can[apostrophe]t be dangerous!"	1	distilled milk
+"glob of goo"	"A small bottle of strange, neon colored, goop"	1	glob of goo
+"soda"	"A can of some soda or another. Somehow, it is still cool to the touch"	1	soda
+"chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
+"cot"	"A matress. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
+"Dog Milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
+
+journal is a grab object. It is a part of the player. It is not temporary.
+cot is a grab object. It is a part of the player. It is not temporary.
+understand "Bed" as cot.
+Understand "book" as journal.
+medkit is a grab object. It is a part of the player. It is fast. It is not temporary.
+dirty water is a grab object. It is a part of the player. The trade of dirty water is "chips". The purified of dirty water is "water bottle".
+understand "water" as dirty water.
+water bottle is a grab object. It is a part of the player. The trade of water bottle is "chips".
+Does the player mean using the dirty water: it is unlikely.
+dog milk is a grab object. It is a part of the player.
+soda is a grab object. It is a part of the player.
+chips is a grab object. It is a part of the player.
+glob of goo is a grab object. It is a part of the player. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
+food is a grab object. It is a part of the player. The trade of food is "soda".
+pocketknife is a armament. It is a part of the player. It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]". The weapon damage of pocketknife is 5. The weapon type of pocketknife is "Melee". It is not temporary.
+understand "knife" as pocketknife.
+chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary.
+understand "seat" as chair.
+gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon"; The trade of Gryphon Milk is "distilled milk".
+distilled milk is a grab object. It is a part of the player.
+
+The invent of the player is { "journal" };
+
+Table of Start Game
+title	subtable	description	toggle
+"Strength: [strength of player]"	--	"Your ability to exert force. Helps deal damage with mele weapons, and to carry heavy objects."	finish stats rule
+"Dexterity: [Dexterity of player]"	--	"Speed, agility. Dexterity  helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
+"Stamina: [stamina of player]"	--	"Your ability to withstand punishment. Stamina also helps to resist the physical aspects of infection."	finish stats rule
+"Charisma: [Charisma of player]"	--	"Your ability to exert social force. Deal with NPCs favorably, also helps resist mental aspects of infection."	finish stats rule
+"Perception: [Perception of player]"	--	"Your ability to detect things. Also helps resist mental aspects of infection."	finish stats rule
+"Intelligence: [Intelligence of player]"	--	"Your ability to logically compute things. Helps with activities that require 'book smarts'."	finish stats rule
+["Reroll Stats"	--	"Randomize your stats. Do this as often as you want."	random stats rule]
+"Select a Stat to gain [if started is 0]+5[otherwise]+1[end if]"	--	"You are satisfied with your stats"	--
+"Load a save"	--	"Load a save game!"	prerestore the game rule
+
+This is the prerestore the game rule:
+	decrease the menu depth by 1;
+	try restoring the game;
+	if maxhp of player is 0, try restarting the game;
+
+Table of sex choice
+title	subtable	description	toggle
+"Man"	--	--	male choice rule
+"Woman"	--	--	female choice rule
+
+Table of Basic Combat
+title	subtable	description	toggle
+"Attack"	--	"Attack!!!"	player attack rule
+"Item"	--	"Quick, where's my healing potion?!"	combat item rule
+"Flee"	--	"Run away!!!"	flee rule
+"Submit"	--	"Maybe it isn't so bad"	submit rule
+"Your HP: [hp of player]/[maxhp of player] [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters]"	--	"I am fit as a fiddle"	--
+
+Table of combat items
+title	subtable	description	toggle
+"Nothing"	--	"Nothing here."	combat item rule
+with 100 blank rows.
+
+Table of gainable feats
+title	subtable	description	toggle
+"Nothing"	--	"Nothing here."	gainfeat rule
+with 100 blank rows.
+
+
+Table of Basic Actions
+title	subtable	description	toggle
+["Go Exploring"	--	"Go wandering the city and look for generally interesting things."	explore rule]
+["Rest"	--	"Take a breather"	rest rule]
+["Examine yourself"	--	--	Self examine rule]
+"Help"	Table of Help	"Get some help on this madness!"
+"Strength: [strength of the player], Dexterity: [dexterity of the player], Stamina: [stamina of the player], Charisma: [Charisma of the player], Perception: [perception of the player], Intelligence: [intelligence of the player]."	--	"Stats"	--
+"Health: [hp of player]/[maxhp of player], Lust: [lust of player], Morale: [morale of player], Humanity: [Humanity of player]"	--	"More stats"	--
+"Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, Score: [score]"	--	"Time until the game ends."	Turnpass rule
+
+Table of Help
+title	subtable	description	toggle
+"Is this all?"	--	"Yep, more to come later, promise!"
+"Exit"	--	"Previous Menu"	menu exit rule
+
+
+
+To say gryphon fuck:
+	if cocks of player is greater than 0:
+		if cock length of player is less than 7:
+			say "[one of]The gryphon shoves you to the ground roughly and seems dissapointed about something. She sniffs at you once more before snorting loudly. With a disdainful kick of a foot, she leaves some dust on you, then departs.[or]The gryphon pushes you back with one hand while the other grabs at you, removing any clothing you may have. She speaks haltingly, as if she is not used to speaking anymore, 'You are too small, but maybe, later. For now, a gift.' She kneels before you and takes your [cock size desc of player] [cock of player] member into her beak, lapping over it with soft, wet, tongue. Her firm paw hands hold to your ass as she begins to bob slowly against you, making your flesh tingle with delight as she works at you expertly. All too soon you are spilling seed across that tongue, grunting with your own satisfaction. She rises, licking her beak. With a wink, she saunters off.[at random]";
+		otherwise:
+			say "Eyeing something she wants, the gryphon pushes you back a little before turning around and raising her tail high into the air, exposing her pouting lips to your view. Unable to resist, you move up and seize her well muscled hips and are soon pushing against her. With every sink of your [cock size desc of player] [cock of player] meat into her, she gives a pleasured,  keening sound. Her cunt squeezes around your hefty member, encouraging it until you blow your load deep inside of her dripping snatch. Your bodies tremble against one another as passions ebb and she lets you slide off to the ground. Before leaving, she turns to gently lick over your face, then cleans your [cock size desc of player] tool dutifully.";
+	otherwise:
+		if cunts of player is greater than 0:
+			if cunt length of player is less than 12:
+				say "The gryphon nudges you over onto your belly with suddenly gentle hands, holding you in place as she scrambles on top of you, pressing her warm furry bulk against your [skin of player] back. You feel a shaft that's far too large for your [cunt size desc of player] passageway. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the huge member as it batters against your cervix. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, directly injected into your womb with powerful canon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with potential life.[impregchance] Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.";
+				increase cunt length of player by 1;
+			otherwise:
+				say "The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [skin of player] [breast size desc of player] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.[impregchance] You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.";
+		
+To say gootemp:
+	if a random number from 1 to 100 is less than the libido of the player:
+		if a random number from 1 to 2 is 1: [ give it]
+			if cocks of player is greater than 0:
+				if cock length of player is greater than 20:
+					say "Following the brain in your [cock size desc of player] [cock] lower head instead of the one above, you march up to the prone jelly lady and lower the huge tool to her exposed lips. Some resistance is felt, but you press more firmly, and she begins to spread out around the tool. You push further, deeper, marveling at the deliciously tight, snug, fit her body offers to your sensitive body. Rearing back, she cries out, lifted entirely from the ground, impaled on your [cock size desc of player] pole.[line break][line break]Your throbbing tool has stretched her round, making her look like a colored condom more than a girl, though her assets do jiggle quite nicely against your raging tool. You grab for them and start to caress, jerking off yourself while teasing the goo girl, you can feel yourself rising rapidly toward release. As cum billows up your spear, you can see the huge gobs running along before exploding into her, making her mouth bulge, then spew out of her, running down her front in a messy drizzle of your fertile seed. Her entire form goes murky with the volume of seed you inject into her. She squirms on your great pole before she melts free of it, becoming a limp pool on the ground before you, worn out from the session.";
+				otherwise:
+					say "Your [cock size desc of player] [cock of player] shaft swells in your clothes uncomfortably at the sight. You consider leaving it alone, but your libido gets the best of you and you move over towards her, your cock throbbing anxiously. You expose yourself eagerly as you move in over the girl. Your mouth finds a transluscent nipple and you find a [one of]strawberry[or]grape[or]cherry[at random] flavor dancing across your tongue as you suckle firmly. She awakens with a soft moan that raises in pitch as you start to ease your firm [cock of player] tool into her quivering passage.[line break][line break]She rocks up against you, her hands grabbing at your sides, pulling you closer as you thrust faster, harder, her body able to take you with scarcely any effort at all. She trembles as hot honey runs down your length, climaxing powerfully against you. The taste in your mouth seems to grow more intense and the passage holding your cock firmly ripples delightfully. You can feel yourself tensing, then exploding into the jellied female, staining her pristine flesh with blasts of milky grey.[line break][line break] As you come down from your high, she kisses you on either cheek, then melts into the ground, gone.";
+			otherwise if cunts of player is greater than 0:
+				say "You feel flush with lust and swiftly approach the prone goo girl. Your cunt is hungry and you intend to solve that problem. You reach for her form and grab a hand, rubbing it between your own before pressing it between your thighs. The contact seems to rouse the girl, who blinks open her largely featureless eyes. As if understanding your intent, she smiles all the more and presses up into you. Her warm, thick, hand surges up, spreading you and exploring into your welcoming [cunt size desc of player] hole.";
+				if cunt length of player is greater than 12:
+					say "She gives a delighted giggle when she notices just how big your passage is, and surges forth. She seems to melt before you as her entire form flows warm and rippling into your waiting body. She fills your trembling folds even as she leaks and penetrates your innermost womb, making your belly become round with her presence. The sensation of being fucked from the inside grows stronger by the moment as your body rocks, your [breast size desc of player] breasts shuddering as you grab at your now full belly, moaning and almost senseless in the overload of it all.[line break][line break]When you regain consciousness, you feel the sensation, but subtly different. Opening your eyes shows the goo girl over you, rocking into you with a gooey shaft, rutting you with wild abandon. Your awakening startles you, however, and she suddenly goes red as if caught in the act. She flows away rapidly.";
+				otherwise:
+					say "She fills up your tight sex to the brim, then pushes harder. The feel of her undulating flesh inside of you sends wild spikes of pleasure through your body even as she works at stretching you with every crashing wave she sends against your cervix and along your over stimulated walls. You're soon on the ground under the gooey creature as she works you over. As it becomes too much, she draws from you, reforming to her usual human like shape. She leans over to kiss your cheek, a soft peck, and she flows away swiftly.";
+					increase cunt length of player by 2;
+					increase cunt width of player by 2;
+			otherwise:
+				say "Falling victim to a sudden urge of lusting, you approach the fallen goo girl. Having no penis or vagina, you settle for molestation. You crouch down beside the female creature and set your hands on her jiggly breasts, kneading them firmly, sure that your caresses will do little harm to the pliable flesh.[line break][line break]She comes to with a soft moan, looking up at you with those featureless eyes and reaching for your hands as they wander her front. She guides one down to her winking vulva and presses it firmly. You gently brush along the sensitive flesh, feeling it shudder and jiggle beneath your fingers as you slowly part it and slip a finger into her depths, rubbing your [skin of player] flesh against her. She arches her back and cries out in delight, pressing your hand closer, a second finger slipping in.[line break][line break]Emboldened, you press your fist in easily, her sex gobbling it up, then your forearm, thrusting it into the depths of the jellied girl to her obvious satisfaction. You lose track of yourself, fascinated with her capacity as you shove in the rest of your arm, the area filled with loud squelching sounds.[line break][line break]Her wail almost hurts your ears as she seems to have a full body earthquake of an orgasm, your arm and torso drenched in her fluids before she melts beneath you, passing out with that smile on her face, lost to the intense climax.";
+		otherwise: [take it]
+			if cunts of player is greater than 0:
+				say "You feel flush with lust and swiftly approach the prone goo girl. Your cunt is hungry and you intend to solve that problem. You reach for her form and grab a hand, rubbing it between your own before pressing it between your thighs. The contact seems to rouse the girl, who blinks open her largely featureless eyes. As if understanding your intent, she smiles all the more and presses up into you. Her warm, thick, hand surges up, spreading you and exploring into your welcoming [cunt size desc of player] hole.";
+				if cunt length of player is greater than 12:
+					say "She gives a delighted giggle when she notices just how big your passage is, and surges forth. She seems to melt before you as her entire form flows warm and rippling into your waiting body. She fills your trembling folds even as she leaks and penetrates your innermost womb, making your belly become round with her presence. The sensation of being fucked from the inside grows stronger by the moment as your body rocks, your [breast size desc of player] breasts shuddering as you grab at your now full belly, moaning and almost senseless in the overload of it all.[line break][line break]When you regain consciousness, you feel the sensation, but subtly different. Opening your eyes shows the goo girl over you, rocking into you with a gooey shaft, rutting you with wild abandon.[impregchance] Your awakening startles you, however, and she suddenly goes red as if caught in the act. She flows away rapidly.";
+				otherwise:
+					say "She fills up your tight sex to the brim, then pushes harder. The feel of her undulating flesh inside of you sends wild spikes of pleasure through your body even as she works at stretching you with every crashing wave she sends against your cervix and along your over stimulated walls. You're soon on the ground under the gooey creature as she works you over. As it becomes too much, she draws from you, reforming to her usual human like shape. She leans over to kiss your cheek, a soft peck, and she flows away swiftly.";
+					increase cunt length of player by 2;
+					increase cunt width of player by 2;
+			otherwise if cocks of player is greater than 0:
+				if cock length of player is greater than 20:
+					say "Following the brain in your [cock size desc of player] [cock] lower head instead of the one above, you march up to the prone jelly lady and lower the huge tool to her exposed lips. Some resistance is felt, but you press more firmly, and she begins to spread out around the tool. You push further, deeper, marveling at the deliciously tight, snug, fit her body offers to your sensitive body. Rearing back, she cries out, lifted entirely from the ground, impaled on your [cock size desc of player] pole.[line break][line break]Your throbbing tool has stretched her round, making her look like a colored condom more than a girl, though her assets do jiggle quite nicely against your raging tool. You grab for them and start to caress, jerking off yourself while teasing the goo girl, you can feel yourself rising rapidly toward release. As cum billows up your spear, you can see the huge gobs running along before exploding into her, making her mouth bulge, then spew out of her, running down her front in a messy drizzle of your fertile seed. Her entire form goes murky with the volume of seed you inject into her. She squirms on your great pole before she melts free of it, becoming a limp pool on the ground before you, worn out from the session.";
+				otherwise:
+					say "Your [cock size desc of player] [cock of player] shaft swells in your clothes uncomfortably at the sight. You consider leaving it alone, but your libido gets the best of you and you move over towards her, your cock throbbing anxiously. You expose yourself eagerly as you move in over the girl. Your mouth finds a transluscent nipple and you find a [one of]strawberry[or]grape[or]cherry[at random] flavor dancing across your tongue as you suckle firmly. She awakens with a soft moan that raises in pitch as you start to ease your firm [cock of player] tool into her quivering passage.[line break][line break]She rocks up against you, her hands grabbing at your sides, pulling you closer as you thrust faster, harder, her body able to take you with scarcely any effort at all. She trembles as hot honey runs down your length, climaxing powerfully against you. The taste in your mouth seems to grow more intense and the passage holding your cock firmly ripples delightfully. You can feel yourself tensing, then exploding into the jellied female, staining her pristine flesh with blasts of milky grey.[line break][line break] As you come down from your high, she kisses you on either cheek, then melts into the ground, gone.";
+			otherwise:
+				say "Falling victim to a sudden urge of lusting, you approach the fallen goo girl. Having no penis or vagina, you settle for molestation. You crouch down beside the female creature and set your hands on her jiggly breasts, kneading them firmly, sure that your caresses will do little harm to the pliable flesh.[line break][line break]She comes to with a soft moan, looking up at you with those featureless eyes and reaching for your hands as they wander her front. She guides one down to her winking vulva and presses it firmly. You gently brush along the sensitive flesh, feeling it shudder and jiggle beneath your fingers as you slowly part it and slip a finger into her depths, rubbing your [skin of player] flesh against her. She arches har back and cries out in delight, pressing your hand closer, a second finger slipping in.[line break][line break]Emboldened, you press your fist in easily, her sex gobbling it up, then your forearm, thrusting it into the depths of the jellied girl to her obvious satisfaction. You lose track of yourself, fascinated with her capacity as you shove in the rest of your arm, the area filled with loud squelching sounds.[line break][line break]Her wail almost hurts your ears as she seems to have a full body earthquake of an orgasm, your arm and torso drenched in her fluids before she melts beneath you, passing out with that smile on her face, lost to the intense climax.";
+		infect;
+		decrease libido of player by 10;
+		say "Playing around with that goo girl seems to have helped reign in some of your lustful urges.";
+	otherwise:
+		say "You resist the urge to act on the situation.";
+
+to say felitaur rape:
+	if cunts of player is 0:
+		say "The feline shoves you roughly to the ground, her lower forepaws on your shoulders as she inches up to you, thrusting her long, barbed, shaft against your lips and growling with an obvious desire. Her powerful rear hips rock forward, nudging you until you open your mouth and permit the salty pole across your tongue. The barbs prove soft, caressing over your mouth  as she begins to rock into you, purring all the louder with approval. Her paw hands caress over your head, stroking ears and running down over your cheek and [skin of player] skin. You can see her balls bouncing with each thrust, her many breasts jiggling just in front of you.[line break][line break]She draws you forward, pressing the shaft as far into your mouth as she can, trying to wedge it down your throat as she goes tense, flooding you with great rushes of feline pudding. Most of it arrives in your belly, a direct injection of protein, some of it backwashes, splattering across her own thick member and across your front. With a satisfied mew, she draws back, freeing herself from your lips with a pop before she settles. She looks at you a moment, then turns and leaves without word, tail swaying.";
+		decrease hunger of player by 5;
+		if hunger of player is less than 0, now hunger of player is 0;
+	otherwise:
+		if cunt length of player is less than 10 or cunt width of player is less than 8:
+			say "She moves up behind you, giving a soft purr of approval as she bowls you over onto your back. She clambers over you easily, many soft breasts along her belly rubbing against your [breast size desc of player ] chest. She thrusts her hips forward, and you can feel her thick, spined, member rubbing along your left leg, then your right as she rocks, trying to find the target. Her powerfuly lower paws pin you in place as she gets the aim right, nudging the massive head to your [cunt size desc of player] lips and shoves forward.[line break][line break]Pain and pleasure alternate as she tries to wedge herself into your resisting passage. Though you are too small to take her, she gives it her best try despite, stretching you and rubbing your walls with her soft spines, sending flashes before your eyes at the overwhelming sensations radiating from your overfilled pussy. As she finds your bottom, she starts to rock as hard as she can, battering against your cervix, her large balls swaying potently with every thrust, her breasts mashing against you. With a loud howl, she explodes thickly into you, feline cum spraying everywhere, splashing your thighs and messing up the ground as most of it back washes even as your womb swells with what does make it in.[impregchance][line break][line break]Satisfied, the feline uses a paw to gently rub your chest a moment, then slides free, spines tickling faintly along the way. With a happy sigh, she slips away, leaving you in the puddle.";
+			if cunt length of player is less than 10, increase cunt length of player by 2;
+			if cunt width of player is less than 8, increase cunt width of player by 1;
+		otherwise:
+			say "The feline brushes her paw like hands across your [skin of player] body, pressing to your front with her two heavy milk bags. Her hands reach for your sides, caressing as she bites at your ears gently, whispering, 'You will do just fine.'[line break][line break]She prowls about you to your back, then her forepaws hook around your torso, hefting you up as she eases herself forward. You can feel her firm spear press against your thick lips, then push smoothly into your trembling form. Despite its mass, the cat has no issue fucking your huge pussy, holding you firmly to her lower torso as she rocks against you powerfully, letting her heavy balls slap against you with potent thuds.[line break][line break]The barbs of the shaft tickle and pull at your inner walls with every withdraw of the firm tool, sending ecstatic tingles along your spine and keeping your paralyzed form locked in one fitful release after another. Those barbs press harder suddenly, digging softly against your flesh as great floods of seed rush out into your body, rounding your belly with molten heat spreading through you, and pouring in a waterfall back down along the shaft and your thighs, dripping to the ground below.[impregchance] The cat, roaring her satisfaction, is slow to gently pull you free, and set you to your shaking feet.";
+ 
+To say felitaur tempt:
+	if a random number from 1 to 100 is less than the libido of the player:
+		if cocks of player is less than 1 and cunts of player is greater than 0:
+			say "[felitaur rape]";
+		otherwise if cocks of player is greater than 0:
+			say "As if bowing to her superior, the cat turns away from you, flipping up her tail to expose her large feral sex to your hungry eyes. You can feel your [cock size desc of player] [cock of player] equipment rising to readiness as you approach, quickly shedding anything that would keep you from this graceful, claimed, being.[line break][line break]Your hands seize at her powerful rear hips as you press up against her, running the tip of your [cock of player] tool up and down against her sex, covering it in the hot, wet dew that she is leaking for you. The smell of it makes your [ball size] ache with need. Her soft mewl snaps you back into focus. You give the majestic beast what she desires, pressing the firm head of your tool to head, then easing it in slowly.[line break][line break] She looks over her back, almost frowning at your slowness. You pull her back and lunge forward. Her yowl echoes as she screams her approval, and there is nothing to hold either of you back. You rock against her, and she grinds against you, bodies meeting in violent passion. Her honey splatters against the ground as you slam home into her as if every movement were your last, [ball size] rocking under you as you plunge into that hot tight channel.[if cock length of player is greater than 15] Her cunt is spread lewdly wide around your mammoth cock, but she appears to be in heaven, despite, or even because of it, every wet slap making her mewl and tremble.[end if][line break][line break]At last, you cannot hold back the tide any longer. Your cry mixes with hers, filling her with seed, making her wet cunt go into spasms around your shaft. She presses back into you powerfully, holding you tight as you release, looking at you over shoulder as if daring you to not fill her all the way.[if cock width of player is less than 5] Your insufficient deposit angers the cat, she gives a displeased growl, then surges forward, leaving your cock glistening as she flees off, disappointed.[otherwise if cock width of player is greater than 10] Your huge balls explode in an amazing torrent of seed. Her tongue extends as her lower belly begins to sag under the weight of your offering. When your orgasm tapers off, she slowly pulls free and begins to, on shaking feet, pad off, satisfied and dizzy.[otherwise] You fire several powerful blasts into her waiting womb. She draws cleanly from you and turns, kissing your cheek, then prowling off.[end if]";
+		otherwise:
+			say "[felitaur rape]";
+	otherwise:
+		say "The cat gives a soft huff, almost a hiss, then flees on quick feline paws, her shapely rump the last thing seen.";
+ 
+ To say slut rat growth:
+	if "Female Preferred" is listed in feats of player:
+		say "You resist the growth!";
+	otherwise:
+		increase cock width of player by a random number from 1 to 3;
+		say "Your balls feel like they have become [ball size]!";
+ 
+ to say slut rat victory:
+	say "Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged.[line break][line break]They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
+	if cocks of player is greater than 0:
+		say "One rat lowers before you and takes your [cock size desc of player] [cock of player] dick into her waiting snout, suckling firmly as her hands caress your [ball size] in eager rubs of her smooth hands.";
+		if cocks of player is greater than 1:
+			let x be cocks of player minus 1;
+			say "Your other endowment is not put to waste, as a rat girl reaches for each, and you are soon being stroked in increasingly fast motions. [if x is greater than 1]Your extra cocks[otherwise]Your extra cock[end if] is stroked with loving adoration as they nuzzle into your excited flesh and lap at it with warm soft tongues.";
+	if cunts of player is greater than 0:
+		say "The rat who brought you in tips you forward, pressing her massive tool against your exposed snatch and rubbing along it in slow teasing motions, considering.";
+		if cunt length of player is less than 12 or cunt width of player is less than 7:
+			say "She humphs, 'You will not fit, but we can fix that,' she assures in a needy whisper in your ear. Soon your head is being tipped back as something sickly sweet is poured down your throat, making your female organs tingle powerfully as they begin to expand.";
+			increase cunt length of player by 4;
+			increase cunt width of player by 3;
+			if cunt length of player is less than 12 or cunt width of player is less than 7:
+				say "Despite the growth, you remain a bit too small, but the rat only has so much patience. She drives up, stuffing her huge organ into your now sopping wet cunt, the lubrication doing much to ease the passage as she begins to piston against you, slapping your bottom with her huge swaying balls and breeding you with a feral intensity.[impregchance]";
+			otherwise:
+				say "Now large enough, she smoothly pops her cock into your drenched hole, your needy fluids making it quite easy for her to pump lovingly against your wanton sex, grinding her hips against you when she isn't rocking with increasing intensity, her huge balls bumping you, promising a terrific load.[impregchance]";
+		otherwise:
+			say "Your needy cunt is soon being stuffed and your body rocked as she crashes into you with practiced strokes, tickling at your most sensitive places with her rock hard member. You can feel the tool spurting thick gobs of fluid inside of you with every thrust, even though she hasn't even climaxed yet, your body tingling with pleasure.[impregchance]";
+	otherwise:
+		say "The rat who took you leans you forward and presses her massive tool to your back door, easing up into your body with strange ease despite the size of the tool. As she rocks against you, new sensations explode and echo through your body. She pets over your [skin of player] form and cooes in your ear, pistoning against your ass with increasingly eager thumps.";
+	say "A rat grabs your head and pulls you off towards a waiting nipple. The milk flows thick and sweet across your tongue as your groin throbs and tingles with new delights.[slut rat growth]";
+	say "All at once, everyone is climaxing. In you, around you, shuddering squeals of rodent delight before you feel your own body shudder in powerful release. As darkness claims you, you can see the den getting smaller, the original rat dragging you away.";
+	
+
+Table of random critters
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+"Slut Rat"	"[one of]She slices at your face with a sudden swipe of her claws.[or]She draws you close with a loud rumble and presses your lips to a breast, holding you still until you start drinking from her, intense warmth rushing through your body, though you are left drained and tired as well.[if cock width of player is greater than 0] Your balls sing with pleasure as they grow heavier by the moment![otherwise] You squirm in shock as you feel a new set of balls erupt from your body![end if][slut rat growth] [or]Her tail loops around and tickles at you between the legs even as she shoves you back against the ground.[or]She suddenly turns, and a flying furry breasts crashes into you painfully.[at random]"	"She gives a final hiss of defiance, then scurries away out of sight, leaving you with an image of her perfect rump and twitching tail to remind her by."	"[slut rat victory]"	"Towering over most, a tall intimidating wall of fur and leather. It appears female at first glance. Piercing its large directed ears are one ring a piece, one a goldish hue, and another silverish shade. It's covered from top to bottom in ebony black fur, that is, where clothing is not apparent. Her eyes are the same black shade as her hair, the left eye having a scar that runs an inch above downwards in a slicing motion to an inch or two below.
+         She wears a rather large leather collar with a bell attached, the bell portion resting between the massive pillows of her chest, resting on top of them like some sort of sacred artifact. The bell makes no sound. Her breasts are restrained by her leather suit, the two upside down V's struggling mightily with small buckles between them just to keep them fastened and avoid falling apart. They might be seven or so inches in radius, and the leather doesn't do much to hide the details from the front, indents visible in the leather, revealing more than it ought to.[line break]
+         Her arms are long and slender, with black fur, and bright pink shaded paws. The paws have clearly defined fingers, looking quite capable of grasping things, or clawing, with sharp black shaded tips to them. Her midsection is slim and trim, and also concealed fully by the leather bodice she wears, clinging tightly to her contours.[line break]
+         Gazing at her from the back, it can be seen that the leather doesn't cover much back there beyond decency. Her furred buttocks and thighs are visible, though calves are again covered in the suit. From the front, an odd sight greets the eyes. The contours of the leather shape outwards from her thighs and along her belly, the shape is distinct and hard to miss, as if this bizarre furred female were in the possession of monstrously large male genitalia. She makes no move to be discreet or hide this abnormality, seeming perfectly at ease with its existence, probably having been the one to modify the suit in the first place to cope with such an unwieldy intruder.[line break]
+         Glancing back down to her feet, they are garbed in simple shoes, looking dated and warn from far too much overuse and abuse."	"furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"	"bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you."	"[one of]black furred[or]rat furred[or]softly furred[at random]"	"You have a long, [skin of player] tail. It is segmented, like a rat tail should be, thin and whip like, moving about in long motions."	"[one of][skin of player] sheathed[or]leaking[or]human like[at random]"	"your face draws forward into a long snout as hair spills to your shoulders"	"you can feel your entire body changing configuration to emphasize your fertile signals, ass and hips pushing outwards as waist slims. Short claws forming on your hands, which remain smooth. The rest of you [skin of player]"	"a wave of erotic satisfaction forces you to your knees, your genitals releasing their fluids across thighs as fur explodes out across your form"	"A long slithering sensation is felt in your pants. A quick check reveals it to be a naked pink rat tail."	"it swells and throbs and refuses to calm down. It is soon leaking prefluids all over the place in constant readiness."	10	16	10	10	12	10	"Both"	45	6	13	"Unknown"	1	12	10	2	10	0	1	12	7	100	"soda"	20
+"Drone Wasp"	"[one of]The drone attacks with its small claws, leaving tiny furrows that sting slightly.[or]The drone dive bombs through the air with its stinger at the ready, spreading its venom into your body causing you to shudder in pain and lust.[or]The drone flies in close and hugs you, not harming you but seeming to gaze longingly into your eyes.[at random]"	"[one of]The drone flitters off with a tattered wing, crying as she flies away, leaving you with a slight sense of guilt.[or]The drone falls to the ground and begins to cry, as you hear buzzing nearby you think its best to get away as you run quickly.[at random]"	"[one of]The drone slips her lips onto yours, kissing deeply as she lets a small amount of honey in her mouth slip into your own.[or]The drone flies around happily before flying off to brag to its sisters.[or]The drone pins you down to the ground as she grins forcing your lips onto her sex as she rubs her small mound against you, moaning softly before she finally cums, and giggles flying off as quickly as she came.[at random]"	"A small , shy of four feet, wasp like girl, small delicate buzzing wings on her back, her skin colored in yellow and brown marking. Her hands only having three fingers and small claws. Out of her rear extends her wasp like abdomen with a small stinger on the end. Her face seeming cute with her short brown/blond hair. She looks at you with a soft smile on her lips buzzing left and right.[line break][line break]Written by asani."	"charmingly human"	"largely human, except for the new abdomen protruding from your rump, sporting a new stinger. You are also a lot shorter, shy of four feet at best."	"black and brown striped"	""	""	"Your face tingles softly, but not much physically changes from the human norm, except that it is now cute, and female looking."	"You feel a bulging from your bottom that expands out to a whole new segment of body, a stinger slipping free."	"Your skin changes colour as it changes to yellow and brown, the striped markings covering your body."	"You feel something internal shifting around."	"You feel something internal shifting around."	10	10	14	12	10	10	"Female"	20	1	3	"Park"	0	0	0	2	3	0	1	6	4	50	--	0
+"Dragoness"	""	""	""	""	"reptillian snout and great teeth. Two horns spiral backwards over your"	"large and reptillian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptillian[at random]"	"your face draws forward into a reptillian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrapedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	--	--	--	"Nowhere"	0	0	0	2	10	0	1	15	10	40	--	0
+"Panther Taur"	"[one of]She leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had.[or]She rears up and plants her forward lower paws on your shoulders while her hind paws kick up, cutting into you with sharp claws in a painful rake.[or]She lashes out with a powerful set of sharp claws.[or]She rushes right at you, forcing you to back against a wall.[at random]"	"[one of]The cat looks entirely irritated at the constant abuse on her perfect body. With a haughty harumph, she suddenly turns tail, raising it to expose her thick, furry, netherlips, then bolts off.[or]The cat mewls sadly, backing away before she raises her hands to her heavy breasts, pressing them together as she gives you a smoldering look. Wouldn't it be nice to make love instead of war?[felitaur tempt][at random]"	"[felitaur rape][line break]"	"An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her pretty [one of]blue[or]brown[or]green[at random] slitted eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rests six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.[line break][line break]Commissioned by AsureaSkie"	"feline face, with blunt snout, wet black nose and pointed ears above your"	"is bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws.[if breasts of player is greater than 2] All your breasts except the first two rest on the chest of that lower torso, swaying with each step.[end if]"	"[one of]furry[or]black furred[at random]"	"You have a long, black, feline tail that likes to curl and uncurl at its own whim. "	"[one of]black sheathed[or]barbed[at random]"	"You can feel warmth as your face begins to reshape into a muzzle, long teeth filling your new mouth, tongue becoming rougher. Your ears are tugged as if by an angry mother, soon perched at the top of your head, pointed and twitching."	"You stagger in place, almost toppling backwards as new legs sprout out, ruining your balance. Fortunately, those new legs dig into the ground, helping to restore your equilibrium as you rapidly grow the torso of a panther from the hips down. Your hands become somewhat paw like, claws sliding free.[if breasts of player is greater than 2] Your breasts quiver as all but the top two migrate downward, settling on the undercarriage of your new torso.[end if]"	"soft ticklish sensation greets the arrival of a thick pelt of pure black fur across your body."	"you shake it, a new limb extending from it, becoming a long [skin of player] tail, clearly feline in build."	"Your cock draws up against your belly as a [skin of player] sheath wraps around it. It also grows soft barbs around the head, sure to stimulate any partner."	12	18	10	12	10	10	"Both"	20	3	6	"Outside"	1	14	15	6	8	0	1	14	8	90	--	0
+"Goo Girl"	"[one of][if cocks of player is greater than 0]With a swipe of a flexible hand, she bypasses your clothes, slithering under them to grab at your [cock size desc of player] [cock of player] shaft and start squeezing, causing pain and pleasure in equal parts.[otherwise if cunts of player is greater than 0 and cunt length of player is less than 12]She surges towards you and grabs at your crotch. Her fluid body flows through creases and cracks, finding your [cunt size desc of player] pussy and diving into it with great zeal, stretching and buzzing harshly, almost making you dizzy with forced pleasure.[otherwise if cunts of player is greater than 0 and cunt length of player is greater than 11]The goo girl grabs at your crotch, and suddenly seems to be shrinking. Your [cunt size desc of player] cunt suddenly sings in pleasure as she flows into you rapidly, making your belly bloat wide for a moment as she fully inhabits your womb before she spills back out in a great warm rush of thick fluids.[otherwise]She swats at you with a flexible hand, bruising you between the legs.[end if][or]She hugs you into her soft bosom. It would be kind of nice if you could breath![or]A thousand tiny tendrils suddenly spread from her body, slapping at you wildly. It's fortunate they are not too hard.[at random]"	"[one of]The gooey girl falls back onto her bottom, panting, or just quivering, it's hard to tell. Her thighs are parted, exposing her gently undulating folds to your eyes. [gootemp][or]The girl loses cohesion with a gurgling cry of dismay, becoming a pool of unmoving ichor at your feet.[or]The goo girl suddenly dives for a nearby liquid and vanishes into it instantly, gone.[at random]"	"[one of]The girl laughs in soft bubbles at your defeat, but takes mercy on you, leaving you to peace.[or]The goo girl moves up to you and hugs you suddenly, drawing you into a firm embrace against her soft body. She shakes her head silently, then spreads her semi solid nethers before your eyes, leaning back and offering herself. [gootemp][or]Victorious, the goo creature lashes you a few times with a whip like hand for good measure, then loses interest.[at random]"	"A jiggling girl of [one of]blue[or]green[or]purple[at random] color. You can see through her, mostly, her gelatin like flesh tinting the area behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. She seems to notice you and turns to you. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile."	"curiously disquieting smile on a pretty human"	"melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh."	"[one of]jellied[or]gelatin like[or]translucent[at random] [one of]blue[or]red[or]purple[sticky random]"	""	"[one of]partially fluid[or]flexibly semi solid[or]jellied[at random]"	"You can feel your face reshaping into rather pretty proportions. An urge overtakes you and you smile, and never stop."	"You feel your feet drawn to one another as strange throbbing builds in your shins. Your lower legs flow into one another, creating a [skin of player] base of flesh that goes up to your lower thighs."	"A ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello like flesh!"	"You get an odd feeling, but see no change."	"Your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done."	8	10	10	10	10	5	"Both"	30	2	3	"Mall"	0	6	4	2	3	0	1	20	20	40	"glob of goo"	100
+"Naga"	"[one of]The snake swipes at you with its pipe with alarming accuracy.[or]With a loud hiss, the snake lashes at you, sinking a few fangs painfully into your [skin of player] body.[or]The snake lashes out with its tail, striking you solidly with the heavy mass.[at random]"	"[one of]The snake staggers from its many wounds and collapses to the ground, unmoving.[or]Your last blow draws a shuddering hiss before the snake falls to the ground and ceases fighting.[or]Detecting the fight lost, the snake suddenly flees on quick scales, abandoning the struggle.[at random]"	"[first time]The snake laughs, like a dry hiss, tongue flicking as it moves over your defeated form, 'You should go back to where you came from, human, your kind is finished in this city. Remember it or you will be punished fresh.' [only][one of]The snake prods you with its club to ensure the fight has left you before slithering off, seemingly satisfied with its victory.[or]The great naga throws its coils about you in a warm, soft, crushing embrace. Breathing becomes hard as it constricts. Consciousness fades to black. When you awaken, the snake man has departed.[or]With a cruel sounding laugh, the naga grabs you and throws you over a coil, wrenching free your clothes to expose your bottom to it. It coils about you, warm and trapping, as it becomes a he, twice so, two thick human like shafts sliding free of some internal sheath. Intent on punishment over breeding, he grabs you to pull you back as he thrusts firmly into your back door, lancing you on the thick tool and rocking without concern for your comfort.[line break][line break]Your ass sends guilty pangs of pain and pleasure through you as the snake keeps your wriggling form under control, pounding eagerly at your [skin of player] flesh. The tool within you swells suddenly, then begins to explode, filling your bowels with thick gouts of snake seed. Satisfied, the snake rolls you off of himself to the ground, and slithers away.[at random] "	"Human and snake blended together in an intimidating mixture. It has [one of]brown and black[or]bright red and yellow[or]grey and tan[at random] scales, fine and soft looking. Two muscular arms are its only limbs, if one discounts the great tail that makes up most of its body. Clenched in its right hand is a pipe. A crude, but likely effective, makeshift weapon. Of course, it also has great jaws that likely contain sharp, possible venomous, teeth. Its human torso is well muscled and sleek, well built all around and lacking in blemish. Its head and face is entirely that of a huge snake, staring unblinkingly and tasting the air with flickering forked tongue.[line break][line break][line break]Commissioned by AsureaSkie."	"snake's head, with unblinking eyes and huge venomous fangs. Your [skin of player] hide is sleek across your majestic hood, flaring wide when excited or worked up, framing your head from behind your"	"Extremely long. You can feel the powerful rings of your muscles drawing you forward quietly across the ground. It almost feels like you're floating along, moving with a sublime confidence in your snake like body"	"[one of]scaly[or]softly scaled[or]scaled[at random]"	""	""	"You can feel your [skin of player] skin stretching out as your skull flattens out into a snake like face. Your eyes blink for the last time before the lids become clear. You find you can now taste the air."	"your legs snap together, almost toppling you as they flow together quickly. Strange numbing pleasure radiates down along your torso as you can feel your spine extending down along your fused legs, then beyond, forming a powerful tube like body that trails along behind you."	"soft [one of]brown and black[or]bright red and yellow[or]gray and tan[at random] scales begin to spread quickly from your palms. As they settle, soft itching warmth follows, then fades, leaving you with a new hide to admire."	"You feel something settle in your lower torso, but nothing physically changes that you can see."	"Your cock becomes achingly erect for a moment before settling down, seemingly unchanged."	14	10	12	12	12	8	"Male"	25	3	6	"Mall"	2	16	9	2	3	0	0	0	0	20	--	0
+"Hermaphrodite Gryphon"	"[one of]She throws her impressive, and somewhat jiggly, bulk against you.[or]She snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body.[or]She presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully.[or]She charges at you, wings pulling her free of the ground just moments before she crashes bodily into you.[at random]"	"[one of]The once proud beast is knocked to the ground, her wings drawn protectively. Victorious, you move on.[or]Succumbing to her wounds, the gryphon collapses at your feet, posing no further threat.[at random]"	"[gryphon fuck]"	"She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted, black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade, and sport huge wicked claws that clack on hard surfaces."	"powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered"	"dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"	"[one of]soft, blue, and furry[or]softly furred[at random]"	"You have a thin leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."	"[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"	"your ears are drawn upwards to the top of your head and a wicked beak pushes forward"	"you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"	"a flush of arousal stirs through you as a dense carpet of blue fur engulfs you in its warm, encouraging, presence"	"you feel a new weight. A glance shows a long [skin of player] tube growing over your ass. The end blossoms out into a blue, furry, tuft. You have a tail"	"pleasure builds in your cock as it deepens to a midnight black, a large swollen knot forming towards the base and a [skin of player] sheath overtaking the very base of it"	12	10	12	14	10	12	"Both"	22	2	5	"Outside"	1	13	7	2	8	0	1	13	7	80	"gryphon milk"	50
+"Female Husky"	"[one of]The sex crazed husky manages to pin you against some debris as she gnaws at your shoulder. You're sure she means it as a come on, but it just hurts.[or]The husky howls in frustration and slices with her dull claws. It seems awkward, but it stings![or]She manages to get her hands on you and squeezes tightly, pressing her delightful assets to you even as she denies you breath in the tight embrace.[at random]"	"[if cocks of player is greater than 0 and libido of player is greater than 40]Having bested her, you shove her back. She yelps as she falls and twists, landing on all fours. You grab her wide hips and, without hesitation, slam your [cock size desc of player] [cock of player] pole into her hot depths and begin to breed her on the spot. She barks and shudders with pleasure, rocking against you as you pump into her round form, caressing her large breasts greedily as you rock her forward. Her furry flesh rubs against your [skin of player] skin, sending tingles through your body.[line break][line break]You feel climax strike like a lightning bolt, and you fill her wanting womb with thick squirts of hot fertile seed. She arches under you, trembling in pleasure. Satisfied, you pull from her, slapping her furry ass before leaving.[otherwise][one of]She whimpers and falls back, stumbling onto her ass as she looks up at you fearfully. Her wide, doe like eyes glisten with terror before she squeezes them shut, and spreads her thighs. Despite temptation, you decide to not take on her offer, and leave her there, whining.[or]Exhausted, she slumps against you, tears streaming along her furry cheeks. Her paws gently brush at you as she mutters something of an apology. You push her away, but decide against hurting her further, simply leaving her there.[at random][end if]"	"[if cocks of player is greater than 0][one of]Having defeated you, the husky begins to pant heavily. She rolls you onto your back and clambers on top of you. Her deft fingers soon have you free of your clothing, tossed to the side as she barks in your face. She slips up and waves her excited furry snatch in your face before settling back, pressing your [cock size desc of player] [cock of player] shaft into her quivering cunt. She howls and yips as she rises and falls against you, her many breast jiggling about with every pound down against you. Her sex is a hot, wet, oven, clenching powerfully and pulling you right over the edge.[line break][line break]As you catch your breath, she rubs over her softly furred belly, glowing with satisfaction at your seeding. Finally, she draws up from you with a wet sucking noise from her sated cunt, and she prowls off, leaving you in a puddle of sweat to recover at your own pace.[or]She kneels down and nuzzles into your crotch, biting at you until she has direct access, then running her long, wet, tongue across your increasingly excited [cock size desc of player] [cock of player] cock. Her long snout descends, taking it in entirely as she bobs slowly, suckling and milking your balls with a softly furred hand. It is not long before you are filling her snout, watching her swallow most of it, a little dribbling down her black lips, just to be lapped right back up. She sits up, smiles at you, and quietly departs.[at random][otherwise]She lays down on top of you and grinds lustfully, but you lack the parts she so urgently needs. She does think of one part you have she can use and slides up against you, pressing her hot, musky, snatch against your face, grinding insistently, grunting and whimpering with need. Her hot juices flow down across your nose and mouth, though you are unable to participate much in your current state. Suddenly she arcs her back and howls, almost drowning you in thick husky honeys as she hits peak. She slumps back, panting loudly, and slowly rolls off of you, slinking off into the city.[end if]"	"A slutty husky, a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. Her chest bears two firm and gropable C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. Her creamy colored tummy is slightly swollen as if she is barely pregnant, though that will probably change soon due to the aching need oozing from her swollen slit as it's obvious she's become nothing more than a needy whore."	"slim, feminine muzzle and perky, overlarge ears over a canine"	"that of a bipedal dog, with digitigrade legs and paw like hands."	"[one of]soft white fur[or]dense white fur[at random]"	"You have a long and fluffy dog[apostrophe]s tail swaying behind you."	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face draws forward into a slender canine snout. Your elongated tongue slips free of your new lips, lolling in the air wetly a moment"	"your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw like"	"your skin prickles from head to toes as fur begins to push through from underneath, soon covering you in a soft, almost comforting, layer of fluffy white fur"	"a long tail pushes from your spine, uplifting in a stiff arc, it begins to sway slowly without your input"	"your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago."	6	12	6	6	2	16	"Female"	15	1	3	"Outside"	0	0	0	4	6	0	1	10	6	90	--	0
+"Latex Fox"	"[one of]The latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so.[or]The fox leaps on you, raking several bloody lines with its claws.[or]The fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth.[at random]"	"The latex fox gets an odd expression before a soft hissing is heard. The poor creature slowly sinks to the ground as the air escapes it, softly whining until it is an inanimate pile of latex."	"[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at you with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up and wander back to the bunker, defeated.[or]The fox rolls you over and clambers up on top of you with a feral snarl.[if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes.[impregchance] Sated, he rises and departs into the city.[otherwise] He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and flees, leaving a trail of rubbery looking seed.[end if][at random]"	"You encounter a creature made of glistening latex. It is largely red in color, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry."	"mixture of canine and human, in a perpetual sneer of exposed teeth, making for an interesting"	"mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous."	"red, black, and white latex"	"You have a long tail, shaped like a fox tail, but made entirely of rubber. It squeaks as it sways back and forth. "	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face reforms, vision blocked by a narrow fox like snout, and new ears twitching on top of your head"	"A wave of itching runs through the meat of your body as your legs pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely paws. Your fingers are still itching as sharp little claws slip free of them"	"smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush"	"a sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically"	"Your cock grows steel hard as it begins to throb urgently. It grows increasingly red as it becomes slightly more slender. Soon a [cock width of player] inch knot forms at the base, ready to tie you to a willing, or not, partner"	10	12	8	10	6	6	"Male"	15	1	4	"Outside"	1	8	6	2	5	0	4	8	6	20	--	0
+
+Include Needy Heat for FS by Telanda Softpaw.
+Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
+Include Equine for FS by Nuku Valente.
+Include Ashen Breeder For Fs by Auto Translator.
+Include Lizard Girl For Fs by Damaged.
+Include Skunk For Fs by Damaged.
+Include Random Events by Hiccup.
+Include Random Shemale Smooth Collie For Fs by Voldine.
+Include Alien Felinoid For FS by Damaged.
+Include Bovine For Fs by Damaged.
+Include Small Feline And Lion For Fs by Damaged.
+Include Random Tentacle Horror For Fs by Kazard.
+Include Demon Brute For Fs by Leo X.
+Include Parasitic Plant For Fs by Xeylef.
+Include Awesome Tree For Fs by Damaged.
+Include Herm Hyena for FS by Anony Mouse.
+Include Wyvern For Fs by Damaged.
+Include Stuck Dragon by Hiccup.
+Include Tanuki by Nuku Valente.
+Include Red Light by Hiccup.
+Include Cannon by Hiccup.
+Include Spidergirl For Fs by Tentacle Specialist.
+Include Mouse Taur by Nuku Valente.
+Include Red Light by Hiccup.
+Include Bear For Fs by Nuku Valente.
+Include Pit Bull For FS by Ilovecock.
+Include Painted Wolf Herm by Kyvi Stormbreaker.
+Include Lusty Skunk by Nuku Valente.
+Include Gator by Nuku Valente.
+Include Deer by Nuku Valente.
+Include MothGirl for Fs by Soren.
+Include otter by Nuku Valente.
+Include Ash Drakenoid by Sweraptor.
+
+understand the command "feed" as something new.
+
+
+
+Definition: A person is fastlearning:
+	if "Fast Learner" is listed in feats of player, yes;
+	no;
+
+To say level up needed:
+	say "[if player is fastlearning][((level of player plus 1) times 8)][otherwise][(level of player plus 1) times 10][end if]";
+
+Table of Fancy Status
+left	central	right
+"Location: [the player's surroundings]"	"XP:[xp of player]/[level up needed] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
+"Exits: [List of Valid Directions]"	"Hunger: [hunger of player] Thirst: [thirst of player]"	"Score:[score]/[maximum score]"
+[" You are:[Player_Status],[Player_Gender_Status]"	""	""]
+
+
+Book 6 - Rules, Obey them!
+
+First for constructing the status line (this is the bypass status line map rule):
+	fill status bar with table of fancy status;
+	
+
+d18 is a number that varies.
+descr is text that varies.
+cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+battleground is a text that varies.
+Lusting is a text that varies.
+monsterhp is a number that varies.
+
+Hunting is an action applying to one topic.
+
+understand "hunt [text]" as hunting.
+
+check hunting:
+	if there is no dangerous door in the location of the player:
+		say "I don't see any good hunting grounds around here." instead;
+	otherwise:
+		now battleground is the marea of a random dangerous door in the location of the player;
+		
+carry out hunting:
+	let Q be a list of numbers;
+	let found be 0;
+	repeat with X running from 1 to number of rows in table of random critters:
+		choose row X from the table of random critters;
+		if area entry matches the text battleground:
+			if name entry matches the text topic understood, case insensitively:
+				add x to q;
+			otherwise:
+				if there is a lev entry:
+					if lev entry is greater than level of player plus 3, next;
+				otherwise:
+					next;
+				add x to q;
+			if name entry matches the text topic understood, case insensitively:
+				say "You are almost certain you saw some [name entry] tracks...";
+				now found is 1;
+				add x to q;
+				add x to q;
+				if "Expert Hunter" is listed in feats of player:
+					add x to q;
+					add x to q;
+				if "Master Baiter" is listed in feats of player:
+					add x to q;
+					add x to q;
+					add x to q;
+					add x to q;
+					add x to q;
+	if the number of entries in q is not 0 and found is 1:
+		sort Q in random order;
+		repeat with Z running through q:
+			now monster is Z;
+			break;
+		choose row monster from the table of random critters;
+		now monsterhp is hp entry;
+		challenge;
+		follow the turnpass rule;
+	otherwise:
+		now found is 0;
+		repeat with z running through unknown fasttravel rooms:
+			if z is private, next;
+			if printed name of z matches the text topic understood, case insensitively:
+				say "It should be somewhere....";
+				now found is 1;
+				let dice be a random number from 1 to 20;
+				let the bonus be (( the perception of the player minus 10 ) divided by 2);
+				increase dice by bonus;
+				if dice is greater than 15:
+					say "You manage to find your way to [z]!";
+					move the player to z;
+					now z is known;
+					now dice is a random number from 1 to 20;
+					if dice is greater than 14:
+						Fight;
+				otherwise:
+					say "Despite your searches, you fail to find it.";
+				break;
+		if found is 0:
+			let dice be a random number from 1 to 20;
+			if dice is greater than 14:
+				Fight;
+		follow the turnpass rule;
+
+
+This is the combat item rule:
+	blank out the whole of table of combat items;
+	let X be 1;
+	repeat with Q running through invent of player:
+		let z be journal;
+		repeat with y running through grab objects:
+			if q matches the regular expression printed name of y, case insensitively:
+				let z be y;
+				break;
+		if z is not fast, next;
+		choose a blank row in table of combat items;
+		now title entry is Q;
+		now toggle entry is combat item process rule;
+[	let z be the number of rows in table of combat items;
+	say "[Z].";]
+	if there is no title in row 1 of table of combat items:
+		say "You have no combat ready items to use!";
+		wait for any key;
+	otherwise:
+		change the current menu to table of Combat Items;
+		carry out the displaying activity;
+
+this is the combat item process rule:
+	choose row Current Menu Selection in table of combat items;
+	let nam be title entry;
+	repeat with N running from 1 to the number of rows in the table of game objects:
+		choose row N in the table of game objects;
+		if name entry is nam:
+			process object entry;
+			break;
+	retaliate;
+	wait for any key;
+	decrease the menu depth by 1;
+	
+destinationcheck is an action applying to nothing.
+
+understand "navigate" as destinationcheck.
+understand "nav" as destinationcheck.
+
+carry out destinationcheck:
+	let L be a list of rooms;
+	repeat with Q running through known fasttravel rooms:
+		add q to L;
+	say "You know how to get to the following places: [line break]";
+	if the number of entries in L is 0:
+		say "Nowhere.";
+	otherwise:
+		repeat with q running through L:
+			say "[Q][line break]";
+	
+navigating is an action applying to one thing.
+
+understand "navigate [any known fasttravel room]" as navigating;
+understand "navigate to [any known fasttravel room]" as navigating;
+understand "nav [any known fasttravel room]" as navigating;
+understand "travel to [any known fasttravel room]" as navigating;
+understand "travel [any known fasttravel room]" as navigating;
+understand "go to [any known fasttravel room]" as navigating;
+understand "return to [any known fasttravel room]" as navigating;
+
+
+carry out navigating:
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if noun is location of player:
+		say "You're already there.";
+		stop the action;
+	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	now battleground is "Outside";
+	if a random number from 1 to 20 is less than 10 minus bonus:
+		if there is a area of Battleground in the table of random critters:
+			Fight;
+	otherwise:
+		say "You travel to [the noun], avoiding trouble as best you can.";
+	move the player to the noun;
+	follow turnpass rule;
+	
+
+understand the command "i" and "inv" and "inventory" as something new.
+
+Inventorying is an action applying to nothing.
+
+understand "item" as Inventorying.
+understand "i" as Inventorying.
+understand "inv" as Inventorying.
+understand "inventory" as Inventorying.
+
+carry out Inventorying:
+	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
+	if the number of entries in invent of player is greater than 0:
+		let weight be 0;
+		repeat with x running from 1 to the number of rows in the table of game objects:
+			choose row x in the table of game objects;
+			if object entry is owned:
+				say "[name entry]";
+				if object entry is weapon object of player and object entry is armament:
+					say "(wielded)";
+					if object entry is improved:
+						say "(improved)";
+				say " x ";
+				let number be 0;
+				repeat with  y running through invent of player:
+					if y is name entry, increase number by 1;
+				say "[number]([weight entry times number] lbs)";
+				increase weight by weight entry times number;
+				say "[line break]";
+		if the player is overburdened, say "*OVERBURDENED*";
+		say "Total Weight: [weight]/[capacity of player] lbs";
+
+strongbacked is a number that varies.
+
+definition: A person is overburdened:
+	let weight be 0;
+	if the number of entries in invent of player is greater than 0:
+		repeat with x running from 1 to the number of rows in the table of game objects:
+			choose row x in the table of game objects;
+			if object entry is owned:
+				let number be 0;
+				repeat with  y running through invent of player:
+					if y is name entry, increase number by 1;
+				increase weight by weight entry times number;
+	if "Strong Back" is listed in feats of player and strongbacked is 0:
+		now strongbacked is 1;
+		increase capacity of player by 50;
+	if weight is greater than capacity of player, yes;
+	no;
+
+
+To Birth:
+	let infection be "";
+	if a random number from 1 to 100 is greater than 50:
+		now infection is skinname of child;
+	otherwise:
+		now infection is skinname of player;
+	now skinname of child is infection;
+	if a random number from 1 to 100 is greater than 50:
+		now infection is bodyname of child;
+	otherwise:
+		now infection is bodyname of player;
+	now bodyname of child is infection;
+	if a random number from 1 to 100 is greater than 50:
+		now infection is tailname of child;
+	otherwise:
+		now infection is tailname of player;
+	now tailname of child is infection;
+	if a random number from 1 to 100 is greater than 50:
+		now infection is facename of child;
+	otherwise:
+		now infection is facename of player;
+	now facename of child is infection;
+	say "Your child suckles at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your body. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+	add facename of child to childrenfaces;
+	add bodyname of child to childrenbodies;
+	add skinname of child to childrenskins;
+	increase perception of player by 2;
+	now the child is not born;
+	now the gestation of child is 0;
+
+To impregnate with (x - text):
+	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player:
+		stop the action;
+	now gestation of child is a random number from 24 to 48;
+	let infection be "";
+	if a random number from 1 to 100 is greater than 50:
+		now infection is x;
+	otherwise:
+		now infection is skinname of player;
+	now skinname of child is infection;
+	if a random number from 1 to 100 is greater than 50:
+		now infection is x;
+	otherwise:
+		now infection is bodyname of player;
+	now bodyname of child is infection;
+	if a random number from 1 to 100 is greater than 50:
+		now infection is x;
+	otherwise:
+		now infection is tailname of player;
+	now tailname of child is infection;
+	if a random number from 1 to 100 is greater than 50:
+		now infection is x;
+	otherwise:
+		now infection is facename of player;
+	now facename of child is infection;
+	say "[line break]You have an odd feeling, a palpable wave of contentment from within your lower belly.";
+	
+to say impregchance:
+	choose row monster from the table of random critters;
+	if a random chance of 1 in 5 succeeds, impregnate with name entry;
+	if "Fertile" is listed in feats of the player:
+		if a random chance of 1 in 5 succeeds, impregnate with name entry;
+	
+
+instead of examining a watch:
+	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, it is currently [time of day].";
+	
+Using is an action applying to one thing.
+
+understand "use [owned grab object]" as using.
+understand "eat [owned grab object]" as using.
+understand "drink [owned grab object]" as using.
+understand "equip [owned grab object]" as using.
+understand "hold [owned grab object]" as using.
+understand "wield [owned grab object]" as using.
+understand "write in [owned grab object]" as using.
+understand "use cot" as resting.
+
+Carry out using a grab object(called x):
+	if x is owned:
+		process x;
+	otherwise:
+		say "You don't see any [x] in your backpack.";
+
+Resolving is an action applying to one thing.
+
+Carry out resolving a situation(called X):
+	say "This situation has not been properly written!";
+
+After resolving a situation:
+	try looking;
+
+When play begins:
+	repeat with x running through situations:
+		now x is a part of the player;
+	repeat with x running through grab objects:
+		now x is a part of the player;
+	now the command prompt is "[list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";
+[	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
+
+
+Include Desperate Bunny by Nuku Valente.
+Include Hyper Squirrel by Nuku Valente.
+Include Food and Water Finding by Nuku Valente.
+Include Random German Shepherd For Fs by Telanda Softpaw.
+Include Hungry Boar Man by Hiccup.
+Include Feats by Nuku Valente.
+
+to delete (X - a grab object):
+	let found be 0;
+	let number be 0;
+	repeat with Q running through invent of the the player:
+		increase number by 1;
+		if q matches the regular expression printed name of x, case insensitively:
+			now found is 1;
+			remove entry number from invent of the player;
+			break;
+
+instead of waiting:
+	follow the turnpass rule;
+
+To say time of day:
+	if remainder after dividing turns by 8 is 7:
+		say "early morning";
+	if remainder after dividing turns by 8 is 6:
+		say "mid morning";
+	if remainder after dividing turns by 8 is 5:
+		say "noon";
+	if remainder after dividing turns by 8 is 4:
+		say "mid after noon";
+	if remainder after dividing turns by 8 is 3:
+		say "evening";
+	if remainder after dividing turns by 8 is 2:
+		say "early night";
+	if remainder after dividing turns by 8 is 1:
+		say "midnight";
+	if remainder after dividing turns by 8 is 0:
+		say "pre dawn";
+	if remainder after dividing turns by 8 is -1:
+		say "early morning";
+	if remainder after dividing turns by 8 is -2:
+		say "mid morning";
+	if remainder after dividing turns by 8 is -3:
+		say "noon";
+	if remainder after dividing turns by 8 is -4:
+		say "mid after noon";
+	if remainder after dividing turns by 8 is -5:
+		say "evening";
+	if remainder after dividing turns by 8 is -6:
+		say "early night";
+	if remainder after dividing turns by 8 is -7:
+		say "midnight";
+	if remainder after dividing turns by 8 is -8:
+		say "pre dawn";
+		
+
+To process (X - a grab object):
+	if x is temporary:
+		say "You eagerly use up the [x]! ";
+		let found be 0;
+		let number be 0;
+		repeat with Q running through invent of the the player:
+			increase number by 1;
+			if q matches the regular expression printed name of x, case insensitively:
+				now found is 1;
+				remove entry number from invent of the player;
+				break;
+	otherwise:
+		say "You use the [x]. ";
+	if usedesc of x is "":
+		now x is x;
+	otherwise:
+		say "[usedesc of x]";
+	if x is food:
+		if hunger of player is greater than 11:
+			increase score by 4;
+		decrease hunger of player by 12;
+		if hunger of player is less than 0, now hunger of player is 0;
+		say "You feel less hungry after wolfing down some food, yum!";
+		if morale of player is less than 0:
+			increase morale of player by 30;
+			if morale of player is greater than 0, now morale of player is 0;
+			say "You feel better having eaten.";
+	if x is chips:
+		if hunger of player is greater than 5:
+			increase score by 2;
+		decrease hunger of player by 6;
+		if hunger of player is less than 0, now hunger of player is 0;
+		say "You feel less hungry after wolfing down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random], yum!";
+		if morale of player is less than 0:
+			increase morale of player by 15;
+			if morale of player is greater than 0, now morale of player is 0;
+			say "You feel better having eaten.";
+	if x is glob of goo:
+		if hunger of player is greater than 5:
+			increase score by 2;
+		decrease hunger of player by 6;
+		if hunger of player is less than 0, now hunger of player is 0;
+		say "You slurp up the neon colored goo and find that it tastes delicious, and even helps slake your hunger somewhat as you chew at it, mmm...";
+		if morale of player is less than 0:
+			increase morale of player by 15;
+			if morale of player is greater than 0, now morale of player is 0;
+			say "You feel better having eaten.";
+	if x is water bottle:
+		if thirst of player is greater than 0:
+			increase score by thirst of player divided by 3;
+			if thirst of player is greater than 25:
+				decrease score by ( thirst of player minus 25 ) divided by 3;
+		decrease thirst of player by 25;
+		if thirst of player is less than 0, now thirst of player is 0;
+		say "You feel less thirsty after guzzling some water, yum!";
+		if morale of player is less than 0:
+			increase morale of player by 62;
+			if morale of player is greater than 0, now morale of player is 0;
+			say "After drinking something, you feel better.";
+	if x is dirty water:
+		if thirst of player is greater than 0:
+			increase score by thirst of player divided by 4;
+			if thirst of player is greater than 25:
+				decrease score by ( thirst of player minus 25 ) divided by 4;
+		decrease thirst of player by 25;
+		if thirst of player is less than 0, now thirst of player is 0;
+		say "You feel less thirsty after guzzling some dirty water, yum!";
+		if morale of player is less than 0:
+			increase morale of player by 62;
+			if morale of player is greater than 0, now morale of player is 0;
+			say "After drinking something, you feel better.";
+		now monster is a random number from 1 to number of rows in the table of random critters;
+		if "Iron Stomach" is not listed in feats of player, infect;
+	if x is soda:
+		if thirst of player is greater than 0:
+			increase score by thirst of player divided by 3;
+			if thirst of player is greater than 12:
+				decrease score by ( thirst of player minus 12 ) divided by 3;
+		decrease thirst of player by 12;
+		if thirst of player is less than 0, now thirst of player is 0;
+		say "You feel less thirsty after guzzling some soda, [one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random] yum!";
+		if morale of player is less than 0:
+			increase morale of player by 30;
+			if morale of player is greater than 0, now morale of player is 0;
+			say "You feel better having drunken something.";
+	if x is gryphon milk:
+		say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
+		decrease thirst of player by 15;
+		if thirst of player is less than 0, now thirst of player is 0;
+	if x is dog milk:
+		say "Somehow still warm, you guzzle it down without thinking too hard about its origins. A prickly warmth fills your belly as the cream flows along your gullet.";
+		decrease thirst of player by 15;
+		if thirst of player is less than 0, now thirst of player is 0;
+		repeat with Z running from 1 to number of filled rows in table of random critters:
+			choose row Z from the table of random critters;
+			let zed be "collie";
+			if name entry matches the text zed, case insensitively:
+				now monster is Z;
+				break;
+		if "Iron Stomach" is not listed in feats of player, follow the sex change rule;
+	if x is distilled milk:
+		say "Ugh, dry milk. It takes some effort to force the almost sickeningly sweet powder down your throat, but once it hits your belly, your body is wracked with powerful waves of alternating lust and breathlessness.";
+		increase thirst of player by 5;
+		grow breasts by 3;
+		say "[line break]";
+	if x is infectious and "Iron Stomach" is not listed in feats of player:
+		repeat with y running from 1 to number of rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is strain of x:
+				now monster is y;
+				break;
+		infect;
+	if x is a journal:
+		follow the brain descr rule;
+		say "You settle down and start scribbling in your journal about your [descr]. ";
+		if the humanity of the player is less than 100:
+			let healed be 10 + level of player + ( ( perception of player minus 10 ) divided by 2 );
+			increase humanity of player by healed;
+			if humanity of player is greater than 100:
+				decrease healed by humanity of player minus 100;
+				now humanity of player is 100;
+			say "([humanity of the player]/100).";
+		follow turnpass rule;
+	if x is a armament:
+		if weapon of player is weapon of x: [ unequip]
+			now weapon of player is "[one of]your fists[or]quick kick[or]impromptu wrestling[at random]";
+			now weapon damage of player is 4;
+			now weapon type of player is "Melee";
+			now weapon object of player is journal;
+			say "You stop holding your [x].";
+		otherwise: [equip]
+			now weapon object of player is x;
+			now weapon of player is weapon of x;
+			now weapon damage of player is weapon damage of x;
+			now weapon type of player is weapon type of x;
+			say "You ready your [x].";
+	if x is a medkit:
+		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
+		increase hp of player by healed;
+		if hp of player is greater than maxhp of player:
+			decrease healed by hp of player minus maxhp of player;
+			now hp of player is maxhp of player;
+		say "Using your medkit, [one of]You spray your cuts with anesthetic[or]You bandage your worst wounds[at random]. You regain [healed] hit points.";
+		if a random chance of 1 in 10 succeeds:
+			say "You have used up the last of the medkit.";
+			delete medkit;
+		
+
+understand "talk [person]" as conversing.
+understand "talk to [person]" as conversing.
+understand "chat [person]" as conversing.
+understand "chat with [person]" as conversing.
+understand "talk with [person]" as conversing.
+
+Conversing is an action applying to one thing.
+
+Check Conversing:
+	if the noun is the player, say "I know this is stressful, but talking to yourself will not help." instead;
+	if the number of entries in conversation of noun is 0, say "They have nothing to say" instead.
+	
+carry out conversing:
+	sort conversation of the noun in random order;
+	repeat with comment running through conversation of the noun:
+		say "[Noun] says, '[Comment]'";
+		break;
+
+Part 1 - Item Code
+
+Understand the command "get" as something new.
+Understand the command "take" as something new.
+
+Grabbing is an action applying to one thing.
+
+understand "get [present grab object]" as grabbing.
+understand "take [present grab object]" as grabbing.
+understand "grab [present grab object]" as grabbing.
+
+carry out grabbing something(called x):
+	let found be 0;
+	let number be 0;
+	repeat with Q running through invent of the location of the player:
+		increase number by 1;
+		if q matches the regular expression printed name of x, case insensitively:
+			now found is 1;
+			add q to the invent of the player;
+			remove entry number from invent of the location of the player;
+			say "You pick up the [q] and tuck it in your backpack.";
+			break;
+	if found is 0:
+		say "You don't see any [x] around here.";
+		if x is owned, say "You do see one in your backpack though. Did you mean to [bold type]use[roman type] it?";
+
+Understand the command "drop" as something new.
+
+littering is an action applying to one thing.
+
+understand "drop [owned grab object]" as littering.
+
+carry out littering something(called x):
+	let found be 0;
+	let number be 0;
+	repeat with Q running through invent of the the player:
+		increase number by 1;
+		if q matches the regular expression printed name of x, case insensitively:
+			now found is 1;
+			add q to the invent of the location of the player;
+			remove entry number from invent of the player;
+			say "You set down the [q].";
+			break;
+	if found is 0:
+		say "You don't see any [x] in your backpack.";
+
+Looting is an action applying to nothing.
+
+understand "get all" as looting.
+understand "get everything" as looting.
+understand "take all" as looting.
+understand "take everything" as looting.
+understand "grab all" as looting.
+
+carry out looting:
+	let found be 0;
+	let number be 0;
+	repeat with Q running through invent of the location of the player:
+		increase number by 1;
+		now found is 1;
+		add q to the invent of the player;
+		say "You pick up the [q] and tuck it in your backpack.";
+	if found is 0:
+		say "You don't see anything around here.";
+	otherwise:
+		now the invent of the location of the player is { };
+
+before taking a thing:
+	if noun is rooted in place:
+		say "You can't take that.";
+		stop the action;
+	say "That seems secured in place.";
+
+understand the command "give" and "offer" as something new.
+
+Purifying is an action applying to one thing.
+
+understand "microwave [owned grab object]" as purifying.
+
+Check Purifying:
+   if the microwave is not visible, say "You see nothing to purify with." instead;
+   
+Carry out Purifying:
+	if purified of noun is "":
+		say "You don[apostrophe]t think that can get any more pure, at least not this way.";
+		stop the action;
+	let number be 0;
+	repeat with Q running through invent of the the player:
+		increase number by 1;
+		if q matches the regular expression printed name of the noun, case insensitively:
+			remove entry number from invent of the player;
+			break;
+	say "After purifying the [noun], you are left with [purified of the noun].";
+	add purified of the noun to the invent of the player;
+	
+
+Trading is an action applying to two things.
+
+Understand "give [owned grab object] to [person]" as trading.
+
+Check trading:
+	if second noun is the player, say "Do you think you will get a good deal from yourself? That[apostrophe]s a hard bargain, man." instead;
+	if second noun is not a trader, say "They do not look interested in trading." instead;
+	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
+	if trade of the noun is "", say "They don[apostrophe]t seem interested in that specific item." instead;
+
+Carry out trading:
+	say "You offer up [the noun] to [second noun] and they look it over for a moment before nodding and drawing out a [trade of the noun] and handing it to you. A fair trade, right?";
+	add trade of the noun to the invent of the player;
+	if "Haggler" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		say "You get a second one free with your amazing negotiating skills.";
+		add trade of noun to the invent of the player;
+	let number be 0;
+	repeat with Q running through invent of the the player:
+		increase number by 1;
+		if q matches the regular expression printed name of the noun, case insensitively:
+			remove entry number from invent of the player;
+			break;
+	
+instead of trading the demon seed when the current action involves the ronda:
+	say "Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy, groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen with them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
+	remove ronda from play;
+	choose row 1 from the table of random critters;
+	now area entry is "Mall";
+	extend game by 16;
+	increase score by 20;
+	
+
+To Rest:
+	increase the hp of the player by (the stamina of the player times 2) plus the level of the player;
+	follow the turnpass rule;
+	follow the player injury rule;
+	say "You are [descr]([hp of player]/[maxhp of player]).";
+
+This is the sex change rule:
+	choose row monster from the table of random critters;
+	if ( the sex entry is "Male" or the sex entry is "Both") and cock length of player is less than cock length entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
+		increase cock length of player by 1;
+		increase cock length of player by ( cock length entry minus cock length of player ) divided by 3;
+		follow the cock descr rule;
+		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as it gains in length, becoming [descr]!";
+	if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player is less than cock width entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
+		increase cock width of player by 1;
+		increase cock width of player by ( cock width entry minus cock width of player ) divided by 3;
+		follow the cock descr rule;
+		say "You can see your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]!";
+	if cocks of player is less than cocks entry and ( the sex entry is "Male" or the sex entry is "Both") and "Female Preferred" is not listed in feats of player:
+		if cocks of player is 0 or cock length of player is 0 or cock width of player is 0:
+			now the cock length of player is cock length entry divided by 3;
+			now the cock width of player is cock width entry divided by 3;
+		increase the cocks of player by 1;
+		now cockname of player is name entry;
+		now cock of player is cock entry;
+		follow the cock descr rule;
+		say " Your groin throbs with intense sensations as a [descr] [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
+	if cunts of player is not 0 and the sex entry is "Male" and "Female Preferred" is not listed in feats of player and "One Way" is not listed in feats of player:
+		decrease cunt length of player by 1;
+		decrease cunt length of player by cunt length of player divided by 3;
+		decrease cunt width of player by 1;
+		decrease cunt width of player by cunt width of player divided by 4;
+		follow the cunt descr rule;
+		say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[or]pussy[or]vagina[or]cleft[at random] begins to shrink. [if cunts of player is greater than 1]They[otherwise]It[end if] dwindles in size, becoming [descr]. ";
+		if cunt length of player is less than 1 or cunt width of player is less than 1:
+			say "With a sickening noise, you cease to be female all together.";
+			now the cunts of the player is 0;
+	if ( the sex entry is "Female" or the sex entry is "Both") and cunt length of player is less than cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
+		increase cunt length of player by 1;
+		increase cunt length of player by ( cunt length entry minus cunt length of player ) divided by 3;
+		follow the cunt descr rule;
+		say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as it grows deeper into your body, becoming [descr]!";
+	if ( the sex entry is "Female" or the sex entry is "Both") and cunt width of player is less than cunt width entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
+		increase cunt width of player by 1;
+		increase cunt width of player by ( cunt width entry minus cunt width of player ) divided by 3;
+		follow the breast descr rule;
+		say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as your thighs are nudged apart to make room for those thickening lips, growing wider!";
+	if cunts of player is less than cunts entry and ( the sex entry is "Female" or the sex entry is "Both") and "Male Preferred" is not listed in feats of player:
+		if cunt length of player is 0:
+			now the cunt length of player is cunt length entry divided by 3;
+			now the cunt width of player is cunt width entry divided by 3;
+		increase the cunts of player by 1;
+		follow the cunt descr rule;
+		say " Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking honey along a thigh as you quiver.";
+	if cocks of player is not 0 and the sex entry is "Female" and "Male Preferred" is not listed in feats of player and "One Way" is not listed in feats of player:
+		decrease cock length of player by 1;
+		decrease cock length of player by cock length of player divided by 3;
+		decrease cock width of player by 1;
+		decrease cock width of player by cock width of player divided by 4;
+		follow the cock descr rule;
+		say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cock[or]man meat[or]shaft[or]pole[at random] begins to shrink. [if cunts of player is greater than 1]They[otherwise]It[end if] dwindles in size, becoming [descr]. ";
+		if cock length of player is less than 1 or cock width of player is less than 1:
+			say "You barely have time to give a whimper as you cease to be a male.";
+			now the cocks of the player is 0;
+
+Retaliating is an action applying to nothing.
+
+To Retaliate:
+	choose row monster from the table of random critters;
+	let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
+	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the roll be a random number from 1 to 20;
+	say "[name entry] rolls 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
+	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
+		say "[Attack entry] You take [dam] damage!";
+		decrease hp of the player by dam;
+		follow the player injury rule;
+		say "You are [descr].";
+	otherwise:
+		say "[Name Entry] misses!";
+	if hp of the player is greater than 0:
+		say "";
+		[wait for any key;]
+		[carry out the displaying activity;]
+	otherwise:
+		Lose;
+	rule succeeds;
+	
+To grow breasts by (x - a number):
+		follow the breast descr rule;
+		let oldbreast be descr;
+		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+		increase breast size of player by a random number from 1 to x;
+		if breast size of player is greater than 26, now breast size of player is 26;
+		follow the breast descr rule;
+		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+
+
+To Infect:
+	choose row monster from the table of random critters;
+	if "Microwaved" is listed in feats of player:
+		say "An infection from [name entry] is present. Allow it?";
+		if the player consents:
+			say "Ok.";
+		otherwise:
+			say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
+			stop the action;
+	let x be a random number from 1 to 5;
+	if x is 1:
+		if skinname of player is not name entry:
+			say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
+			now skinname of player is name entry;
+			now skin of player is skin entry;
+	if x is 2:
+		if facename of player is not name entry:
+			say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
+			now facename of player is name entry;
+			now face of player is face entry;
+	if x is 3:
+		if tailname of player is not name entry:
+			say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
+			now tailname of player is name entry;
+			now tail of player is tail entry;
+	if x is 4:
+		if breasts of player is not breasts entry:
+			decrease breast size of player by 2;
+			follow the breast descr rule;
+			if breasts entry is greater than breasts of player:
+				increase breasts of player by 2;
+				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
+			otherwise:
+				decrease breasts of player by 2;
+				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
+			increase breast size of player by 2;
+		if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			increase breast size of player by 1;
+			increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		if bodyname of player is not name entry:
+			say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+			now bodyname of player is name entry;
+			now body of player is body entry;
+		follow the sex change rule;
+	if x is 5:
+		follow the sex change rule;
+		if cockname of player is not name entry:
+			if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+			now cockname of player is name entry;
+			now cock of player is cock entry;
+	now x is a random number from 1 to 6;
+	if x is 1:
+		if strength of player is not str entry:
+			if strength of player is greater than str entry and a random chance of 1 in 10 succeeds:
+				say "Your muscles feel weaker as the infection spreads through you.";
+				decrease strength of player by 1;
+			if strength of player is less than str entry:
+				say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
+				increase strength of player by 1;
+				increase capacity of player by 5;
+	if x is 2:
+		if Intelligence of player is not Int entry:
+			if Intelligence of player is greater than Int entry and a random chance of 1 in 10 succeeds:
+				say "Your head aches as the infection spreads through you.";
+				decrease Intelligence of player by 1;
+			if Intelligence of player is less than Int entry:
+				say "You feel your mind swelling with [name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
+				increase Intelligence of player by 1;
+	if x is 3:
+		if Dexterity of player is not Dex entry:
+			if Dexterity of player is greater than Dex entry and a random chance of 1 in 10 succeeds:
+				say "Your coordination feels weaker as the infection spreads through you.";
+				decrease Dexterity of player by 1;
+			if Dexterity of player is less than Dex entry:
+				say "You feel your hand eye coordination swelling with [name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
+				increase Dexterity of player by 1;
+	if x is 4:
+		if Stamina of player is not Sta entry:
+			if Stamina of player is greater than Sta entry and a random chance of 1 in 10 succeeds:
+				say "Your constitution feels weaker as the infection spreads through you.";
+				decrease Stamina of player by 1;
+				if remainder after dividing stamina of player by 2 is 1:
+					decrease maxhp of player by level of player plus 1;
+			if Stamina of player is less than Sta entry:
+				say "You feel your body toughening with [name entry] [one of]Stamina[or]physique[or]power[at random].";
+				increase Stamina of player by 1;
+				if remainder after dividing stamina of player by 2 is 0:
+					increase maxhp of player by level of player plus 1;
+	if x is 5:
+		if Perception of player is not Per entry:
+			if Perception of player is greater than Per entry and a random chance of 1 in 10 succeeds:
+				say "Your senses dull as the infection spreads through you.";
+				decrease Perception of player by 1;
+			if Perception of player is less than Per entry:
+				say "You feel your senses swelling with [name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
+				increase Perception of player by 1;
+	if x is 6:
+		if Charisma of player is not Cha entry:
+			if Charisma of player is greater than Cha entry and a random chance of 1 in 10 succeeds:
+				say "You feel more isolated as the infection spreads through you.";
+				decrease Charisma of player by 1;
+			if Charisma of player is less than Cha entry:
+				say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
+				increase Charisma of player by 1;
+	if the libido of the player is less than libido entry:
+[		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";]
+		let oldlib be libido of player;
+		increase libido of player by 1;
+		increase libido of player by ( libido entry minus libido of player ) divided by 3;
+		if oldlib is less than 50 and libido of player is greater than 49:
+			say "Your thoughts have sunk to almost constant depravity!";
+		if oldlib is less than 80 and libido of player is greater than 79:
+			say "You now have trouble thinking of anything but sexual satisfaction!";
+
+To lose:
+	choose row monster from the table of random critters;
+	follow the cock descr rule;
+	follow the breast descr rule;
+	say "[victory entry]";
+	infect;
+	increase the XP of the player by lev entry divided by two;
+	decrease the score by 1;
+	decrease the morale of the player by 3;
+	decrease the menu depth by 1;
+
+
+This is the flee rule:
+	choose row monster from the table of random critters;
+	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 20 ) divided by 2) plus level of the player;
+	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the roll be a random number from 1 to 20;
+	say "You roll 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
+	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+		say "You manage to evade [name entry] and slip back into the city.";
+		wait for any key;
+		decrease the menu depth by 1;
+	otherwise:
+		say "You fail to get away.";
+		Retaliate;
+		wait for any key;
+		if the hp of the player is less than 1:
+			decrease the menu depth by 1;
+
+This is the submit rule:
+	choose row monster from the table of random critters;
+	let temp be the hp of the player;
+	Lose;
+	wait for any key;
+	decrease the menu depth by 1;
+
+combat abort is a number that varies.	
+
+to say combat abort:
+	now combat abort is 1;
+
+This is the player attack rule:
+	choose row monster from the table of random critters;
+	let the attack bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
+	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the roll be a random number from 1 to 20;
+	say "You roll 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
+	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+		let dam be ( weapon damage of the player times a random number from 80 to 120 ) divided by 100;
+		if weapon type of player is "Melee":
+			increase dam by (( the strength of the player minus 10 ) divided by 2);
+		if a random chance of the morale of the player in 200 succeeds:
+			say "Filled with sudden motivation, your attack scores particularly well!";
+			increase dam by dam;
+		say "You [one of]strike with[or]attack with[or]use your[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		if a random chance of 5 in 20 succeeds and "Spirited Youth" is listed in feats of player:
+			let y be a random number from 4 to 6;
+			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [y] damage!";
+			increase dam by y;
+		decrease monsterhp by dam;
+		follow the monster injury rule;
+		say "[Name entry] is [descr].";
+	otherwise:
+		say "You miss!";
+	if monsterhp is greater than 0:
+		Retaliate;
+		wait for any key;
+		change the current menu to table of Basic Combat;
+		if the hp of the player is less than 1 or combat abort is 1:
+			now combat abort is 0;
+			decrease the menu depth by 1;
+	otherwise:
+		follow the cock descr rule;
+		follow the breast descr rule;
+		say "[defeated entry] ";
+		increase the XP of the player by lev entry times two;
+		increase the morale of the player by 1;
+		if a random chance of lootchance entry in 100 succeeds:
+			say "You gain 1 x [loot entry]!";
+			add loot entry to invent of player;
+		decrease the menu depth by 1;
+		wait for any key;
+	clear the screen;
+	[if the menu depth is greater than 0, carry out the displaying activity;]
+	[if the menu depth is 0, try looking;]
+	rule succeeds;
+
+predestiny is a number that varies.
+
+To level up:
+	increase level of player by 1;
+	decrease xp of player by level of player times 10;
+	if "Fast Learner" is listed in feats of player:
+		increase xp of player by ( level of player times 2 );
+	say "You have gained level [level of player]! Congratulations!";
+	if remainder after dividing level of player by 2 is 0:
+		say "Pick a stat to increase.";
+		wait for any key;
+		change the current menu to Table of Start Game;
+		carry out the displaying activity;
+		clear the screen;
+	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
+	increase maxhp of player by 2;
+	now hp of player is maxhp of player;
+	increase score by level of the player times level of the player;
+	
+To fight:
+	now monster is a random number from 1 to number of rows in the table of random critters;
+	let Q be a list of numbers;
+	repeat with X running from 1 to number of rows in table of random critters:
+		choose row X from the table of random critters;
+		if there is a lev entry:
+			if lev entry is greater than level of player plus 3:
+				next;
+		otherwise:
+			next;
+		if area entry matches the text battleground:
+			add x to q;
+	if the number of entries in q is not 0:
+		sort Q in random order;
+		repeat with Z running through q:
+			now monster is Z;
+			break;
+		choose row monster from the table of random critters;
+		say "You run into a [name entry]. [desc entry].";
+		if combat abort is 1:
+			now combat abort is 0;
+			rule succeeds;
+			stop the action;
+		now monsterhp is hp entry;
+		let bonus be ( perception of player minus 10 ) divided by 2;
+		decrease bonus by ( dex entry minus 10 ) divided by 2;
+		increase bonus by a random number from 1 to 20;
+		if bonus is less than 6:
+			say "The creature gets the drop on you!";
+			retaliate;
+			if hp of player is less than 1, stop the action;
+		wait for any key;
+		change the current menu to table of Basic Combat;
+		carry out the displaying activity;
+		clear the screen;
+		let needed be ( level of player plus one ) times 10;
+		if "Fast Learner" is listed in feats of player:
+			now needed is ( level of player plus one ) times 8;
+		if xp of player is greater than needed:
+			level up;
+		[try looking;]
+	rule succeeds;
+
+To challenge:
+	choose row monster from the table of random critters;
+	now monsterhp is hp entry;
+	say "You run into a [name entry]. [desc entry].";
+	wait for any key;
+	change the current menu to table of Basic Combat;
+	carry out the displaying activity;
+	clear the screen;
+	if xp of player is greater than ( level of player plus one ) times 10:
+		level up;
+	if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:
+		level up;
+	[try looking;]
+	rule succeeds;
+	
+Playing on is an action applying to nothing.
+understand "play on" as playing on.
+
+carry out playing on:
+	now playon is 1;
+	say "You are now in extended play mode. The rescue will never come.";
+
+Early Birding is an action applying to nothing.
+understand "end now" and "end game" as early birding.
+
+carry out early birding:
+	if playon is 1:
+		say "You are already in play on mode. There is no rescue to wait for.";
+		stop the action;
+	decrease the score by 100;
+	end the game saying "You waited for rescue.";
+
+Milking is an action applying to nothing.
+understand "milkme" as milking
+
+Carry out milking:
+	add "distilled milk" to invent of player;
+	add "distilled milk" to invent of player;
+	add "distilled milk" to invent of player;
+	add "distilled milk" to invent of player;
+	add "distilled milk" to invent of player;
+	add "dog milk" to invent of player;
+	add "dog milk" to invent of player;
+	add "dog milk" to invent of player;
+	say "Your backpack jingles with suddenly appearing milk."
+
+Punying is an action applying to nothing.
+understand "Puny" as punying.
+
+carry out punying:
+	now dexterity of player is 1;
+	now stamina of player is 1;
+	now perception of player is 18;
+	say "You feel puny, but perceptive.";
+
+Resting is an action applying to nothing.
+understand "Rest" as resting;
+
+check resting:
+	if "cot" is listed in invent of player:
+		say "You pull out your cot and lay it out before resting for a while.";
+		continue the action;
+	if "cot" is listed in invent of location of player:
+		say "You rest on the cot.";
+		continue the action;
+	say "You have nothing to rest on.";
+	stop the action;
+
+carry out resting:
+	Rest;
+
+
+This is the explore rule:
+	let something be 0;
+	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	if something is 0 and a random number from 1 to 20 is less than 5 plus bonus and there is an unknown fasttravel room:
+		let L be a random unknown fasttravel not private room;
+		if L is not nothing:
+			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
+			move player to L;
+			now something is 1;
+			plot;
+			wait for any key;
+	if something is 0 and a random number from 1 to 20 is less than 5 plus bonus and there is an unresolved situation :
+		let L be a random close unresolved situation;
+		If L is not nothing:
+			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
+			now something is 1;
+			try resolving L;
+			wait for any key;
+	if a random number from 1 to 20 is less than 10 plus bonus:
+		if there is a area of Battleground in the table of random critters:
+			now something is 1;
+			Fight;
+	if something is 0, say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
+	follow the turnpass rule;
+[	wait for any key;
+	now the menu depth is 0;]
+	[try looking;]
+	rule succeeds.
+	
+exploring is an action applying to nothing.
+understand "explore" as exploring
+
+check exploring:
+	if location of player is not fasttravel, say "You can not explore from here." instead;
+
+carry out exploring:
+	follow the explore rule;
+
+This is the turnpass rule:
+	if the hunger of player is less than 0, now the hunger of player is 0;
+	if the thirst of player is less than 0, now the thirst of player is 0;
+	if the hp of the player is less than the maxhp of the player:
+		increase the hp of the player by the stamina of the player divided by 2;
+	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
+	if the morale of the player is greater than the charisma of the player plus the perception of the player plus the level of the player:
+		say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
+		now the morale of the player is the charisma of the player plus the perception of the player;
+	if a random number from 1 to 20 is greater than the stamina of the player minus 5:
+		increase hunger of player by 1;
+		if child is born and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
+		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease hunger of player by 1;
+	if a random number from 1 to 20 is greater than the stamina of the player minus 10:
+		increase thirst of player by 3;
+		if child is born, increase thirst of player by 1;
+		if "Spartan Diet" is listed in feats of player, decrease thirst of player by 1;
+	if "Automatic Survival" is listed in feats of player:
+		now thirst of player is 0;
+		now hunger of player is 0;
+	if the remainder after dividing turns by 3 is 0:
+		if hunger of player is greater than 90:
+			say "You will die if you don't eat soon.";
+		otherwise if hunger of player is greater than 50:
+			say "Your stomach feels like a black hole of pain.";
+		otherwise if hunger of player is greater than 30:
+			say "You're famished.";
+		otherwise if hunger of player is greater than 3:
+			say "You feel a little hungry.";
+		if hunger of player is greater than 30:
+			decrease the morale of the player by ( hunger of the player minus 30 ) divided by 5;
+		if hunger of player is greater than 99:
+			now hp of player is -9999;
+			end the game saying "You have died of hunger.";
+		if thirst of player is greater than 90:
+			say "You will die if you don't drink something soon.";
+		otherwise if thirst of player is greater than 50:
+			say "Your throat is parched and your lips cracking.";
+		otherwise if thirst of player is greater than 30:
+			say "You're really thirsty!";
+		otherwise if thirst of player is greater than 12:
+			say "You feel a little thirsty.";
+		if thirst of player is greater than 30:
+			decrease the morale of the player by ( thirst of the player minus 30 ) divided by 5;
+		if thirst of player is greater than 99:
+			now hp of player is -9999;
+			end the game saying "You have died of thirst.";
+		if hunger of player is greater than 50 or thirst of player is greater than 50:
+			say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
+	let corruption be 0;
+	if the skinname of the player is not "human", increase corruption by a random number from 0 to 1;
+	if the cockname of the player is not "human", increase corruption by a random number from 0 to 1;
+	if the bodyname of the player is not "human", increase corruption by a random number from 0 to 1;
+	if the tailname of the player is not "human", increase corruption by a random number from 0 to 1;
+	if the facename of the player is not "human", increase corruption by a random number from 0 to 1;
+	if corruption is greater than 0:
+		decrease corruption by a random number from 0 to ( Perception of the player minus 10) divided by 2;
+		decrease corruption by a random number from 0 to ( Charisma of the player minus 10) divided by 2;
+	if corruption is greater than 0:
+		follow the brain descr rule;
+		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr].([humanity of the player]/100)[line break]";
+		decrease the humanity of the player by corruption;
+	if child is not born and gestation of child is greater than 0:
+		decrease gestation of child by 1;
+		if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease gestation of child by 1;
+		if gestation of child is less than 5:
+			say "Your belly protrudes in a firm dome of pregnancy, full of some unborn being, waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
+			if a random chance of 1 in 10 succeeds:
+				increase breast size of player by 1;
+				follow breast descr rule;
+				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
+		otherwise if gestation of child is less than 10:
+			say "Your body is somewhat rounded with the effects of your oncoming pregnancy. It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
+			increase morale of player by 1;
+			if a random chance of 1 in 20 succeeds:
+				increase breast size of player by 1;
+				follow breast descr rule;
+				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
+		otherwise if gestation of child is less than 30:
+			if a random chance of 1 in 2 succeeds, say "Warm tingles gently run through your lower belly.";
+			if a random chance of 1 in 30 succeeds:
+				increase breast size of player by 1;
+				follow breast descr rule;
+				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
+		if gestation of child is less than 1 and cunts of player is greater than 0:
+			say "With a sudden pouring of fluids, birth is upon you. You settle  without much choice, breathing quickly as your body spasms in readiness. ";
+			follow cunt descr rule;
+			if cunt width of player is greater than 10:
+				say "Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated body easily slipping the child free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
+			otherwise if cunt width of player is greater than 3:
+				say "You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the newborn from your [descr] birthing canal. It is not as painful as the movies make out, and after about twenty minutes, the child is ready to be held by you. You feel tired, but whole, and satisfied.";
+				increase morale of player by 5;
+			otherwise:
+				say "Horrible pain lances through your body as your [descr] sex disgorges the child only after what feels like hours of struggle. Your [skin of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
+				now hp of player is 1;
+				decrease morale of player by 10;
+			now child is born;
+			Birth;
+			increase score by 20;
+			extend game by 4;
+		otherwise:
+			if gestation of child is less than 0, now gestation of child is 1;
+	if the humanity of the player is less than 1:
+		end the game saying "Your mind is lost to the infection.";
+	decrease turns by 1;
+	if ( turns minus targetturns ) is 0 and playon is 0:
+		end the game saying "You survived until the rescue came.";
+	otherwise if ( turns minus targetturns ) is less than 20 and a random chance of 1 in 3 succeeds:
+		say "[one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
+	rule succeeds;
+
+This is the monster injury rule:
+	choose row monster from the table of random critters;
+	let per be ( monsterhp times 100 ) divided by hp entry;
+	if per is less than 10:
+		now descr is "[one of]on death[apostrophe]s door[or]almost defeated[or]barely mobile[at random]";
+	otherwise if per is less than 40:
+		now descr is "[one of]wounded[or]bashed around[or]significantly harmed[at random]";
+	otherwise if per is less than 80:
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random]";
+	otherwise:
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random]";
+	rule succeeds;
+
+This is the player injury rule:
+	choose row monster from the table of random critters;
+	let per be ( hp of the player times 100 ) divided by maxhp of the player;
+	if per is less than 10:
+		now descr is "[one of]on death[apostrophe]s door[or]almost defeated[or]barely mobile[at random]";
+	otherwise if per is less than 40:
+		now descr is "[one of]wounded[or]bashed around[or]significantly harmed[at random]";
+	otherwise if per is less than 80:
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random]";
+	otherwise:
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random]";
+	rule succeeds;
+
+This is the brain descr rule:
+	if humanity of player is greater than 90:
+		now descr is "[one of]clean[or]pristine[or]perfectly normal[at random][lusting]";
+	otherwise if humanity of player is greater than 70:
+		now descr is "[one of]lightly tainted[or]occasionally plagued with odd instinctual[at random][lusting]";
+	otherwise if humanity  of player is greater than 30:
+		if facename of player is not "human":
+			now descr is "increasingly [facename of player] perspective[lusting]";
+		otherwise if bodyname of player is not "human":
+			now descr is "increasingly [bodyname of player] perspective[lusting]";
+		if skinname of player is not "human":
+			now descr is "increasingly [skinname of player] perspective[lusting]";
+		if cockname of player is not "human":
+			now descr is "increasingly [cockname of player] perspective[lusting]";
+		if tailname of player is not "human":
+			now descr is "increasingly [tailname of player] perspective[lusting]";
+	otherwise:
+		now descr is "almost entirely subsumed[lusting]";
+	if libido of player is less than 21, now lusting is " thoughts.";
+	if libido of player is greater than 80:
+		let mun be a random number from 1 to number of rows in table of random critters;
+		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [name in row monster of the table of random critters] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+	otherwise if libido of player is greater than 40:
+		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
+	otherwise if libido of player is greater than 20:
+		now lusting is " thoughts. You are riddled with occasionally dirty lapses";
+
+This is the breast descr rule:
+	if breast size of player is less than 1:
+		now descr is "[one of]nonexistent[or]entirely flat[or]manly[at random]";
+	otherwise if breast size of player is less than 3:
+		now descr is "[one of]palmable[or]small[or]dainty[or]slender[at random] [character number breast size of player in cupsize] cup";
+	otherwise if breast size of player is less than 6:
+		now descr is "[one of]large[or]jiggling[or]heavy[or]plump[at random] [character number breast size of player in cupsize] cup";
+	otherwise if breast size of player is less than 12:
+		now descr is "[one of]massive[or]head sized[or]basketball[at random] [character number breast size of player in cupsize] cup";
+	otherwise:
+		now descr is "[one of]gargantuan[or]beach ball[at random] [character number breast size of player in cupsize] cup";
+	now breast size desc of player is descr;
+	rule succeeds;
+
+This is the cock descr rule:
+	if cock length of player is less than 3:
+		now descr is "[one of]infantile[or]extremely small[or]puny[at random]";
+	otherwise if cock length of player is less than 6:
+		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
+	otherwise if cock length of player is less than 8:
+		now descr is "[one of]average[or]normal sized[at random]";
+	otherwise if cock length of player is less than 12:
+		now descr is "[one of]large[or]heavy[or]above average[at random]";
+	otherwise if cock length of player is less than 18:
+		now descr is "[one of]foot long[or]massive[or]forearm length[at random]";
+	otherwise:
+		now descr is "[one of]titanic[or]third leg[or]elephantine[at random]";
+	now cock size desc of player is descr;
+	rule succeeds;
+
+To say ball size:
+	if cock width of player is greater than 0:
+		if cock width of player is less than 4:
+			say "[one of]marble[or]tiny[or]very small[at random]";
+		otherwise if cock width of player is less than 6:
+			say "[one of]plum[or]average[at random]";
+		otherwise if cock width of player is less than 12:
+			say "[one of]golf ball[or]large[at random]";
+		otherwise if cock width of player is less than 16:
+			say "[one of]baseball[or]hand filling[at random]";
+		otherwise if cock width of player is less than 20:
+			say "[one of]grapefruit[or]massive[at random]";
+		otherwise:
+			say "[one of]giant[or]knee knocking[at random]";
+		say " sized balls";
+	
+This is the cunt descr rule:
+	if cunt length of player is less than 3:
+		now descr is "[one of]infantile[or]extremely small[or]puny[at random]";
+	otherwise if cunt length of player is less than 6:
+		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
+	otherwise if cunt length of player is less than 8:
+		now descr is "[one of]average[or]normal sized[at random]";
+	otherwise if cunt length of player is less than 12:
+		now descr is "[one of]large[or]thick lipped[or]above average[at random]";
+	otherwise if cunt length of player is less than 18:
+		now descr is "[one of]belly bulgingly huge[or]seemingly bottomless[or]forearm length[at random]";
+	otherwise:
+		now descr is "[one of]titanic[or]so deep you look constantly pregnant with just the flesh of it[or]elephantine[at random]";
+	now cunt size desc of player is descr;
+	rule succeeds;
+	
+
+looknow is a number that varies.
+
+instead of examining the player:
+	follow the self examine rule;
+	
+Showstatting is an action applying to nothing.
+
+Understand "stat" as showstatting.
+Understand "stats" as showstatting.
+
+carry out showstatting:
+	showstats player;
+	
+To showstats (x - Person):
+	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Perception: [perception of the x], Intelligence: [intelligence of the x].";
+	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [hp of x]/[maxhp of x] Libido: [libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
+	let z be ( level of x plus one) times 10;
+	if "Fast Learner" is listed in feats of x:
+		now z is ( level of x plus one) times 8;
+	say "Level: [level of x], XP: [xp of x]/[z]";
+	if the number of entries in the feats of the x is greater than 0:
+		say ", Feats: [feats of the x][line break]";
+ 
+ This is the self examine rule:
+	now looknow is 1;
+	showstats player;
+	let cocktext be "";
+	follow the cock descr rule;
+	if the cocks of the player is greater than 0:
+		if the cocks of the player is greater than 1:
+			now cocktext is "You have [cocks of the player] [descr] [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. [if cocks of player is greater than 1]They are[otherwise]It is[end if] [cock length of player] inches long[if cock width of player is greater than 0] and hanging underneath it are [ball size].[end if] ";
+		otherwise:
+			now cocktext is "You have a [descr] [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [cock length of player] inches long[if cock width of player is greater than 0] and hanging underneath it are [ball size]. ";
+	let cunttext be "";
+	if the cunts of the player is greater than 0:
+		if the cunts of the player is greater than 1:
+			now cunttext is "You have [cunts of the player] [one of]cunts[or]pussies[or]vaginas[or]clefts[at random]. It is [cunt length of player] inches long and [cunt width of player] around. ";
+		otherwise:
+			now cunttext is "You have a [one of]cunt[or]pussy[or]vagina[or]cleft[at random]. It is [cunt length of player] inches deep and can stretch to [cunt width of player] around. ";
+	say "Looking over yourself, your body is covered in [skin of the player] flesh. You have a [face of the player] face. Your body is [body of the player]. [tail of the player]A private peek shows you to have: ";
+	if cocktext is not "", say "[cocktext]";
+	if cunttext is not "", say "[cunttext]";
+	follow the breast descr rule;
+	if breasts of player is greater than 0:
+		say "You have [breasts of player] [if breasts of player is greater than 2]starting with [end if][descr] breasts. ";
+		if breasts of player is greater than 2:
+			if breast size of player is 0:
+				say "Your breasts are flat.";
+			otherwise:
+				say " The first two curve out [breast size of player] inches from your chest. ";
+				say "The second two curve out [breast size of player times three divided by five] inch[if breast size of player times three divided by 5 is not 1]es[end if] from your chest. ";
+				if breasts of player is greater than 4:
+					say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
+		otherwise:
+			if breast size of player is 0:
+				say "Your breasts are just nipples.";
+			otherwise:
+				say " They curve out [breast size of player] inches from your chest.";
+	if child is not born and gestation of child is greater than 0:
+		if gestation of child is less than 10:
+			say "Your belly is swollen in a taught [skin of player] dome before you, ready to spill forth life at any moment.";
+		otherwise if gestation of child is less than 20:
+			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
+		otherwise if gestation of child is less than 30:
+			say "You feel a soft subtle glow.";
+	if the number of entries in childrenfaces is greater than 0:
+		repeat with x running from 1 to number of entries in childrenfaces:
+			now facename of child is entry x of childrenfaces;
+			now bodyname of child is entry x of childrenbodies;
+			now skinname of child is entry x of childrenskins;
+			if ( skinname of child is not bodyname of child ) or ( skinname of child is not facename of child ):
+				say "Trailing behind you, your child stays close, they have a [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+			otherwise:
+				say "Trailing behind you, your child stays close. They are a pure blood [facename of child].";
+		if number of entries in childrenfaces is greater than 1:
+			say "The children remain as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to a young adult, somewhere between 18 and 22 years of age, both in physical size and apparent emotional and mental development.";
+		otherwise:
+			say "The child remains as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to a young adult, somewhere between 18 and 22 years of age, both in physical size and apparent emotional and mental development.";
+	now looknow is 0;
+	rule succeeds;
+ 
+This is the final stats rule:
+	now the morale of the player is the charisma of the player plus the perception of the player;
+	now the HP of the player is the stamina of the player times two;
+	increase the HP of the player by 5;
+	now the maxhp of the player is the hp of the player;
+	now the humanity of the player is 100;
+	now the capacity of the player is five times the strength of the player;
+	now the menu depth is 0;
+	clear the screen;
+	try looking;
+	rule succeeds;
+
+This is the male choice rule:
+	now the cocks of the player is 1;
+	now the cock length of the player is 6;
+	now the cock width of the player is 4;
+	now the breasts of the player is 2;
+	now the breast size of the player is 0;
+	change the current menu to table of Basic Actions;
+	say "You are a man.";
+	wait for any key;
+	follow the final stats rule;
+	rule succeeds;
+	
+This is the female choice rule:
+	now the cunts of the player is 1;
+	now the cunt length of the player is 6;
+	now the cunt width of the player is 4;
+	now the breasts of the player is 2;
+	now the breast size of the player is 2;
+	change the current menu to table of Basic Actions;
+	say "You are a woman.";
+	wait for any key;
+	follow the final stats rule;
+	rule succeeds;
+	
+This is the d18 rule:
+	now d18 is 0;
+[	increase d18 by a random number from 1 to 6;
+	increase d18 by a random number from 1 to 6;
+	increase d18 by a random number from 1 to 6;
+]
+	now d18 is 12;
+	rule succeeds;
+	
+This is the random stats rule:
+	follow the d18 rule;
+	now the strength of the player is d18;
+	follow the d18 rule;
+	now the Dexterity of the player is d18;
+	follow the d18 rule;
+	now the Stamina of the player is d18;
+	follow the d18 rule;
+	now the Charisma of the player is d18;
+	follow the d18 rule;
+	now the Perception of the player is d18;
+	follow the d18 rule;
+	now the Intelligence of the player is d18;
+	decrease the score by 1;
+	rule succeeds.
+
+This is the Menu Exit Rule:
+	decrease the menu depth by 1;
+[	carry out the displaying activity;
+	clear the screen;
+	try looking;]
+	rule succeeds.
+	
+
+Instead of examining the infection terminal:
+	say "Filled with glowing characters, the terminal lists all identified infections with some stats beside:[line break]";
+	repeat with X running from 1 to number of rows in table of random critters:
+		choose row X from the table of random critters;
+		if there is a lev entry:
+			say "[Name Entry]: Danger Level: [lev entry], Typical Environment: [area entry][line break]";
+	say "End List.";
+	say "Under it is something called a 'credit' list, how odd.";
+	say "[complete list of extension credits]";
+
+To Plot:
+	let x be the location;
+	if x is unknown:
+		now x is known;
+		increase score by 1;
+		if x is fasttravel:
+			say "You feel you could [bold type]navigate[roman type] back to here easily from other such rooms.";
+
+After going: 
+	try looking;
+	plot;
+ 
+This is the finish stats rule:
+	if started is 1:
+		if Current menu selection is 1:
+			increase strength of player by 1;
+			increase capacity of player by 5;
+			say "Your strength grows.";
+		if Current menu selection is 2:
+			increase dexterity of player by 1;
+			say "Your dexterity grows.";
+		if Current menu selection is 3:
+			increase Stamina of player by 1;
+			say "Your Stamina grows.";
+		if Current menu selection is 4:
+			increase charisma of player by 1;
+			say "Your charisma grows.";
+		if Current menu selection is 5:
+			increase perception of player by 1;
+			say "Your perception grows.";
+		if Current menu selection is 6:
+			increase intelligence of player by 1;
+			say "Your intelligence grows.";
+		decrease menu depth by 1;
+		rule succeeds;
+	if Current menu selection is 1:
+		increase strength of player by 5;
+		say "Your strength is your specialty.";
+	if Current menu selection is 2:
+		increase dexterity of player by 5;
+		say "Your dexterity is your specialty.";
+	if Current menu selection is 3:
+		increase Stamina of player by 5;
+		say "Your Stamina is your specialty.";
+	if Current menu selection is 4:
+		increase charisma of player by 5;
+		say "Your charisma is your specialty.";
+	if Current menu selection is 5:
+		increase perception of player by 5;
+		say "Your perception is your specialty.";
+	if Current menu selection is 6:
+		increase intelligence of player by 5;
+		say "Your intelligence is your specialty.";
+	now started is 1;
+	say "You have decided your physical talents, but are you a man or a woman?";
+	wait for any key;
+	change the current menu to table of Sex Choice;
+	carry out the displaying activity;
+	clear the screen;
+[	try looking;]
+	rule succeeds;
+	
+scavenging is an action applying to nothing.
+
+understand "Scavenge" as scavenging.
+understand "Scav" as scavenging.
+
+check scavenging:
+	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
+
+carry out scavenging:
+	let x be a random visible dangerous door;
+	if x is not nothing:
+		now battleground is marea of x;
+	otherwise:
+		now battleground is "Outside";
+	say "You set out in the desperate search of food and water.";
+	let the bonus be (( the perception of the player minus 10 ) divided by 2);
+	if "Survivalist" is listed in feats of the player, increase bonus by 4;
+	let the dice be a random number from 1 to 20;
+	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
+	if dice plus bonus is greater than 10:
+		try resolving potential resources;
+	otherwise:
+		say "Your search turns up empty.";
+	if battleground is "", now battleground is "Outside";
+	if a random number from 1 to 20 is less than 7:
+		if there is a area of Battleground in the table of random critters:
+			Fight;
+	follow turnpass rule;
+	
+
+Section x - Debug Commands - Not for release 
+
+[ Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
+
+Spawnmonster is an action applying to one topic.
+
+understand "spawn [text]" as spawnmonster.
+
+carry out spawnmonster:
+	repeat with X running from 1 to number of filled rows in table of random critters:
+		choose row X from the table of random critters;
+		if name entry matches the text topic understood, case insensitively:
+			now monster is X;
+			now monsterhp is hp entry;
+			challenge;
+			break;
+
+Book 7 - Endings
+
+When play ends:
+	follow the self examine rule;
+	if hp of player is less than 1:
+		say "You did not survive, but at least you did not join the monstrous masses. There is something to be said for that, right?";
+		increase score by 10;
+	say "You have achieved a score of [score].";
+	say "This rates you as ";
+	if score is less than 40:
+		say "inanimate pool toy.";
+	otherwise if the score is less than 80:
+		say "small barking dog.";
+	otherwise if the score is less than 160:
+		say "Talented Child";
+	otherwise if the score is less than 320:
+		say "College Student";
+	otherwise if the score is less than 500:
+		say "Grad Student";
+	otherwise if the score is less than 760:
+		say "Professor";
+	otherwise if the score is less than 1000:
+		say "Grand Scholar";
+	otherwise:
+		say "Ultimate Master";
+	say "[line break]";
+	if the score is greater than 9000:
+		say "What, 9000?!";
+	say "[line break]";
+	if hp of player is less than 1:
+		stop the action;
+	if humanity of the player is less than 10 and hp of the player is greater than 0:
+		if bodyname of player is "Dragoness":
+			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
+		if bodyname of player is "Panther Taur":
+			say "You get the sudden urge to prowl, and begin seeking an ideal mate. Something within you does not allow you to accept any but the strongest.[if cocks of player is greater than 1] Oddly enough, exposed and vulnerable females seem to always be acceptable. Just the thought of pinning a female down and shoving your [cock size desc of player] [cock of player] rod into their depths is enough to give you a raging hard on.[end if]";
+		if bodyname of player is "Naga":
+			say "Suddenly, it all becomes clear. You return to the mall and rejoin your reptillian brothers and sisters. The world will be yours in time, it simply requires patience. Fortunately, patience is something that your new kind has in abundance.";
+		if bodyname of player is "Goo Girl":
+			say "With a body of jello, your prospects of benevolent rescue are slim, not that you feel much urge for that anymore anyway. You descend into the darkness and [apostrophe]greet[apostrophe] those foolish enough to follow. Your undulating form and increasingly skillful teases draw a few more curious souls to your bosom than might otherwise be tempted to go looking.";
+			if cunt length of player is greater than 20:
+				say "One day you capture a woman poking around. You wrestle her to the ground and draw her up into your greedy form. The experience is like one extended orgasm, and her every struggling motion is a spike of sensation. You keep her inside for a month before you release her, but by then the damage was done. What emerged was another goo creature like yourself, and she no longer wished to leave. You grew to enjoy the company.";
+		if bodyname of player is "Hermaphrodite Gryphon":
+			say "Possessed with a sudden need to fly, you beat your powerful wings and launch to the air. You eventually roost with a few other gryphon sorts and remain out of sight, even after the city is eventually dealt with. You and the other gryphons live in a large open family, affectionate, loving, and tender.";
+		if bodyname of player is "Slut Rat":
+			say "You can no longer deny your new basic needs. You flee to the mall and its comforting sewers. Following your instincts, you are soon in the welcoming embrace of your rodent sisters, who take turns fucking and being fucked by you for what feels like days in a celebration of your coming around. Your family remains there, hiding from the rescue, and living out your days together.";
+		if bodyname of player is "Latex Fox":
+			say "Driven mad with your new, rubbery, instincts, you leave the bunker and wander the city looking for further victims.";
+			if the cocks of the player is greater than 0:
+				follow the cock descr rule;
+				say "You find a few females to practice your [descr] manliness on, enjoying your new knot as it ties you to them and they become another yapping fox beneath you.";
+			if the cunts of the player is greater than 0:
+				say "A strange pain paralyzes you a few days later and you squat. A small rubbery ball escapes your distended vulva, rapidly growing into another fox being. Driven mad with jealousy, you give the young thing a nip, and it flees off to find its own victims.";
+	otherwise:
+		say "You emerge from your harrowing experience with your mind intact, with your [bodyname of player] form and [facename of player] face.";
+		if bodyname is "Human":
+			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
+		if cock length of player is greater than 10 or cock width of player is greater than 6:
+			say "Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends.";
+			if cocks of player is greater than 1:
+				say "Your multiple endowments become quite popular amongst some infected, whom come from some great distance to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two.";
+		if skinname of player matches the text "human", case insensitively:
+			increase score by 0;
+		otherwise:
+			say "Your unnatural [skin of player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
+		if bodyname of player is "Goo Girl" and skinname of player is "Goo Girl":
+			say "Your jello like form proves to be quite a curiosity, especially seeing how it seems immune to the usual signs of aging. You discover that those you absorb for a few hours can be renewed within your undulating form, and offer the service out to the wealthy, who enjoy a false second youth. They don't live any longer, but they do it as a fit and healthy twenty something year old body.";
+		if bodyname of player is "Slut Rat":
+			say "Despite your sanity, you find your thoughts drifting back to your rodent sisters. When the rescue comes, you point them out. They put out a terrific struggle, but, with your help, they are rounded up successfully and brought out of the city. They slowly come around to sentience again, and you all live together, working a massage parlor as a strangely loving family. No customer leaves unhappy.";
+		if bodyname of player is "Panther Taur":
+			say "Your feline body draws stares, mixed between envy and disgust. You eventually gather a bit of a following, all too eager to see to your needs as they worship you as some kind of strange new god. Not that you mind much, it's nice to be waited on.";
+			if cocks of player is greater than 0:
+				say "Strangely enough, some woman travel a distance to find you. It seems people are remembering that felines are ancient caretakers of mothers, and ask for your blessings over their bellies, usually pregnant already, sometimes now.[line break][line break]Those that are not often present themselves, begging to be filled with your [cock size desc of player] [cock of player] shaft. You are only too pleased to comply, filling such supplicants to overflowing with thick seed, then life. They become as priests to you, remaining faithfully at your side as they birth litters of healthy kittens.";
+			if cunts of player is greater than 0:
+				say "You have your fair share of male suitors, most filled with empty praise and grabbing hands. They are pleasing for satisfying itches but little else. It is not until one arrives with the strength to topple you that you feel the stirrings of something close to love. You welcome the man to your bosom, and at your side, for the rest of your lives, producing a large, healthy, family of cats.";
+		if bodyname of player is "Dragoness":
+			say "Your dragon like body proves as much a curiosity as repulsion in those around you. You find gainful employment as a mascot for a theme park, where you are paid to wander the park and entertain the clients within. The job proves largely enjoyable, especially since the more annoying people are intimidated by your bulk and claws.";
+	if bodyname of player is “Female Husky”:
+		if humanity of player is greater than 10:
+			say “In this strange new world, there are a hell of a lot worse things to end up as than a husky. Once things settle down, you move up north, ending up as a bartender in a small city bar frequented by the locals.”;
+			if cocks of player is greater than 0 and cunts of player is greater than 0:
+				say  “Life isn't bad; it takes a while, but you fit in just fine here. The regular humans accept you, and the mutants appreciate having a good representative in town. One slow weekday night, another herm saunters in and asks for a drink. Shi's beautiful, your heart skipping a beat as hir eyes meet yours. All that practice of keeping your cool behind the heavy oak bar melt away, and you stammer like a teenager as you get hir beer. Shi just smiles, and it isn't long at all till you are off of work, and tangled up in hir arms. The relationship lasts, both of you settling into your dual roles without too much trouble, taking turns bearing pups. Even humans envy the equanimity and quality of your relationship.";
+			otherwise if cocks of player is greater than 0:
+				say ”The endless tug-of-war between your rational mind and your instincts make adapting to life 'in the normal world' a bit tougher than you expected. Humans and other mutants don't quite follow the same pack mentality your instincts demands. You struggle and it's hard, make no mistake, but you rise above. Of course, it helps that once word gets out just how much fun a male canine is in bed, that you are never short of female company of all shapes and species. With that urge taken care of at least, fitting in becomes a hell of a lot easier. Of course, the universe has a sense of a humor, and not three months later, a group of canines having the same issues as you start a co-op on the west side of town. This proves to be a great place for you, rising to the top of the pack and having your pick of the females-in heat, no less, many of the next generation call you sire.”;
+			otherwise:
+				say  “Initially, things go quite smoothly. Everyone loves dogs, and your lovely female figure earns more than a few warm smiles and invitations to coffee. Then, unexpectedly, your heat strikes, the rush of pheromones and hormones nearly toppling the fragile life you'd built for yourself. Luckily, you had become friends with a male dragon who understood better than most what you were going through. After a desperate phone call, you go over there, nearly tackling him onto the ground in your rush to soothe the burning need between your legs. The next week is spent in the throes of passion, impaling yourself on his thick shaft every chance you get. The heat passes, but it leaves behind a certain... emptiness, that you know won't be fulfilled till you find a male canine. That little search takes longer than you expected, and two more heats slam into you, driving you into the arms of a menagerie of humans and mutants, their spurts of seed dousing the fire enough for you to function. On a cool summer night, he saunters into the bar: a tall, strong male canine, just perfect. After a few weeks of getting to know each other, your relationship deepens. Everything is going just fine, and then your heat strikes again, and you find yourself in his apartment, on your hands and knees, offering yourself up to him. After what feels like an eternity, he takes you up on, your howls of pleasure mingling as he drives into your needy body. You climax again and again as his thick knot ties you together, his fertile seed flooding your ready womb. It isn't long till your belly rounds with his pups. You feel... fulfilled.”;
+		otherwise:
+			say ”You are completely lost to your urges, an alpha predator, stalking the ruins of the city. Ah, but you are not alone, a pack coalesces around you, a dozen of so like minded canines, howling their madness and need to an uncaring sky. Superior numbers and ferocity make you more than a match for the other beasts loose in the city. It doesn't take long before the echoing howls, calling your fellows to hunt, causing even the most ferocious mutants and monsters to look for a place to hide. Those caught were either devoured, or subdued and dragged back to your dens, their bodies changed and their minds worn down by a furious night of animal passion. Thick cum filled their every hole, the slick passion of the females coating their cocks and muzzles. Any female captured is pregnant by dawn, the high birth rate needed to keep up with the attrition rate, the city is not safe. You are the absolute ruler of your domain, a pity your mind is too far gone to appreciate it..”;
+				
+Book  8 - People
+
+Rod Mallrat is a person. "A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]Mcdonalds[or]one of the tables[or]the broken sewer drain[at random].".
+The description of rod mallrat is "Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.".
+Rod is a trader.
+The conversation of rod is { "Did I introduce myself yet? I'm Rod, Rod Mallrat.", "You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.", "Dude, you see those nagas? They hunt us mall rats, you know, scary shit, no joke.", "Like the threads? The girl picked them out for me.", "Dude, just chillin.", "Sup?" }
+
+
+	
+Rod Mallrat is in Mall FoodCourt.
+
+
+Ronda Mallrat  is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
+The description of Ronda Mallrat is "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.".
+The conversation of Ronda is { "Hey there, sugar, you just call me Ronda.", "You meet Rod? He's my boy. You be nice to him, or I will be very... upset.", "Those clothes are out of date hon, you should update your wardrobe.", "Being a mall rat is way better than being a human, no offense or anything to humans.", "We can find anything we need here in the mall, it is our Eden." }.
+Ronda Mallrat is in Mall Atrium.
+
+Orthas is a person. "A dragon person, clearly female, is watching the area. If her name badge is accurate, her name is 'Orthas'.".
+The description of Orthas is "A black scaled dragon woman. She stands about six and a half feet tall, with wings that are about three feet long each folded to her back. She watches the area intently, her arms crossed half the time. Behind her, a slender reptillian tail sways slowly. Her overall shape is human, especially those huge, F cup knockers that heave distractingly with every breath she takes.".
+The conversation of Orthas is { "Hello there.", "The good doctor is upstairs. You can see him. Don't cause trouble.", "You are pretty brave to wander the city right now.", "I would explore too if I wasn't guarding the doctor.", "What is it like out there?" }.
+Orthas is in Trevor Labs Lobby.
+
+Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be 'Doctor Matt'";
+Doctor Matt is in Primary Lab.
+understand "Matt" as doctor matt.
+
+Instead of conversing the doctor matt:
+	if hp of doctor matt is 0:
+		say "'Welcome to Trevor Labs,' says the man in the hazmat suit, 'I am Doctor Salacious, but most just call me Doctor Matt. Since I didn't hear any scuffling, I presume Orthas let you in, so you are probably not a crazy mutant.'";
+		say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn[apostrophe]t know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I[apostrophe]m not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
+		wait for any key;
+		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don[apostrophe]t look at me like that. Anyone not in a fully sealed environment is infected by now.[if humanity of player is less than 80] In fact I'd say you[apostrophe]ve already been pretty badly infected, interesting...[end if] But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself, 'Only one catch...'";
+		wait for any key;
+		say "'I haven[apostrophe]t had any test subjects. Until you. So you come in here, [bold type]volunteer[roman type], and we[apostrophe]ll make you better than when you started. In return, you can help us save the city. A fair deal, right?' he says, but he[apostrophe]s already turning back to his monitors, not actually listening for your reply.";
+		now hp of doctor matt is 1;
+		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
+		extend game by 16;
+	if hp of doctor matt is 1:
+		say "'Alright, we have a limited amount of time. I have been doing my best to delay the military, but without something concrete to report, they will be here soon, and they will pave this thing as hard as they can, leaving all mysteries unsolved. Now that you are here, we can get to work and keep them off our backs,' explains the hazmat suited man as he pushes his chair towards another terminal and starts typing.";
+		wait for any key;
+		say "'The first problem is a lack of test subjects. I can[apostrophe]t send Orthas out to collect samples, that would leave me unprotected. You, on the other hand, are not so limited. Go to the mall and get some samples from the amorphous transformatives there, and some nutritive secretions from one of those raptor slash panthera leo transformatives. I would prefer two of each, enough to be able to experiment without risking the whole of the subject matter,' he explains, turning to face you.";
+		wait for any key;
+		say "'Once you have them, just come back here and we will be that much closer to solving this.'";
+		say "You get the idea you[apostrophe]ve been dismissed, as he goes quiet, and eventually turns back to his work. Not much of a socialite.";
+		now hp of doctor matt is 2;
+		now level of doctor matt is 0;
+	if hp of doctor matt is 2:
+		let milkfound be 0;
+		let goofound be 0;
+		repeat with x running through invent of player:
+			if x is "glob of goo", increase goofound by 1;
+			if x is "gryphon milk", increase milkfound by 1;
+		if milkfound is less than 2:
+			say "'You do not have enough nutritive secretions,' he chastises.";
+			stop the action;
+		if goofound is less than 2:
+			say "'You do not have enough amorphous samples,' he chastises.";
+			stop the action;
+		extend game by 5;
+		let number be 0;
+		repeat with Q running through invent of the the player:
+			increase number by 1;
+			if q matches the text "glob of goo":
+				remove entry number from invent of the player;
+				break;
+		now number is 0;
+		repeat with Q running through invent of the the player:
+			increase number by 1;
+			if q matches the text "glob of goo":
+				remove entry number from invent of the player;
+				break;
+		now number is 0;
+		repeat with Q running through invent of the the player:
+			increase number by 1;
+			if q matches the text "gryphon milk":
+				remove entry number from invent of the player;
+				break;
+		now number is 0;
+		repeat with Q running through invent of the the player:
+			increase number by 1;
+			if q matches the text "gryphon milk":
+				remove entry number from invent of the player;
+				break;
+		say "'Ah, exemplary work,' he murmurs, already taking your goo and milk and quickly getting them into a deep freeze box that glows ominous blue. Chill white mist escapes for the moment he pops it open to place the precious objects inside, 'Now then, we shall see what can be seen. Come back tomorrow.'";
+		now level of doctor matt is turns;
+		increase score by 20;
+		now hp of doctor matt is 3;
+	if hp of doctor matt is 3:
+		if level of doctor matt minus turns is less than 8:
+			say "'Still working on those samples you brought, come back later.'";
+			stop the action;
+		extend game by 24;
+		increase score by 5;
+		say "'Simply amazing. There is no other word for it,' says Doctor matt, looking excited through his hazmat faceplate, 'The adaptability of the nanites is simply... I would have said it was impossible if I hadn't laid my own eyes on it. I sent out my results and the military have grudgingly agreed to a three day extension on their plans.'";
+		wait for any key;
+		say "'The nanites seem to come in a few varieties that cooperate. The most important ones, the ones that allow the miracle work, are the... brain... nanites, for lack of better word. They link with neighboring brain nanites like nerve endings and seem capable of forming neural patterns of astonishing complexity! The nanites stopped receiving directives a long time ago, but they can adjust and make up their own choices independently. It is little wonder this is causing so much trouble,' he gushes with bubbling enthusiasm, like a young boy having caught a creepy looking insect.";
+		wait for any key;
+		now hp of doctor matt is 4;
+	if hp of doctor matt is 4:
+		say "'Oh, one thing of more immediate use. I discovered how to neutralize the nanites. A limited area of them at least. They do not like being microwaved. I have one in the corner there, feel free to [bold type]microwave[roman type] anything you want to bake the infection out.'";
+		move the microwave to the location of doctor matt;
+		now hp of doctor matt is 5;
+	if hp of doctor matt is 5:
+		say "'Up for another task? Good. Orthas spotted something interesting while hunting. A singular creature. You must understand, one of the standard impulses the infection seems to give on its infectees is the desire to spread the infection. To see just one is unusual. A trait I have only seen in Orthas so far. Go to the park and find this creature, bring it to me for study.'";
+		now unusual creature is unresolved;
+		now hp of doctor matt is 6;
+	if hp of doctor is 6 and unusual creature is unresolved:
+		say "'Did you forget already?' asks Matt, 'Go to the park, find the unusual creature. Bring it here. Orthas said it was intersexed, if that helps.'";
+	otherwise if hp of doctor matt is 6:
+		say "'Ah ha, yes, she is an interesting creature, is she not?' he says, looking at the deer through his face plate. 'She says her name is Susan, just so you know.'";
+		if deerconsent is 1:
+			say "'And she[apostrophe]s taken a fancy to you. This is good.";
+		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[apostrophe]t want to, just talk to her and decide for yourself. Don[apostrophe]t look at me that way. I can[apostrophe]t very well do it from inside this suit, now can I?";
+		now hp of doctor is 7;
+		increase score by 20;
+		extend game by 24;
+	if hp of doctor matt is 7 and deerconsent is not 2:
+		say "'Go on, talk to her.'";
+	otherwise if hp of doctor matt is 7:
+		if susan is visible:
+			say "'Excellent work. I will observe. You can proceed at whatever rate is comfortable. You are doing a great service for science,' says Matt as he raises a finger towards the sky.";
+		otherwise:
+			say "'Poor news. The specimen escaped, went running off back towards the park. She probably went feral. Nothing to do about it now, just look out for her. Probably dangerous.";
+			repeat with y running from 1 to number of rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "doe":
+					now monster is y;
+					break;
+			now area entry is "Park";
+		now hp of doctor is 8;
+	say "He looks kind of busy right now.";
+			
+
+To Extend game by (x - a number):
+	decrease targetturns by x;
+	say "[bold type]((You have earned additional time: [x divided by 8] days, [(remainder after dividing x by 8) times 3] hours))[roman type]";
+	
+When play ends:
+	say "----------";
+	say "I hope you enjoyed playing that as much as I enjoyed coding/writing it! It doesn[apostrophe]t have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";
+	say "http://flexiblesurvival.com/[line break]";
+	say "Once you have a character, click [apostrophe]direct control[apostrophe], and we[apostrophe]ll be there, waiting to give a hand!";
+	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2000";
