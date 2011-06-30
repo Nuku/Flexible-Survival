@@ -1,0 +1,91 @@
+Version 3 of Random Shemale Smooth Collie For FS by Voldine begins here. 
+[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+
+"Adds a Shemale Smooth Collie to Flexible Survivals Wandering Monsters table, With Impreg chance"
+[Description text for this Extension.]
+
+Section 1 - Monster Responses
+
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+colliedefeat is a number that varies.
+to say Shemale Smooth Collie attack:
+	if colliedefeat is 0:
+		say "The bitch quickly bowls you over as your body begins to go limp from the pain and battle weariness. She sniffs eagerly at your crotch while flipping you onto your hands and knees, her tongue slipping out to lap gently before she yanks your clothes off with disturbing ease. She wastes no time at all in foreplay beyond that, her massive cock already hard and dripping as she shoves it up against your [if cunts of player > 0] sensitive folds [otherwise] tense sphincter [end if] and applies a little pressure while her precum serves to make this easier on both of you...if only slightly. [line break] [line break] She only manages to squeeze a few inches into your tense body at first, but with each stroke the pleasure grows and your body responds by loosening up a bit. You find yourself moaning after only a minute of her slow fucking, the pleasure quickly building to a peak that has your hips bucking and jerking, your spread muscles clenching down on the thickness within, putting even more pressure on her sensitive glans. [line break] [line break] She arches her back and howls as her balls tighten up, that lengthy prick swelling slightly just before she unloads within you. In only a few seconds she pulls out and moans as her ongoing orgasm paints your back white. 'You're such a good lay. I can't wait to see how you turn out.'[line break]";
+		now colliedefeat is 1;
+	otherwise:
+		if gestation of child > 0:
+			say "The bitch moves in as if to pounce on top of you before her nose begins twitching. She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your crotch as she inhales deeply. She gives a single lick across your folds, followed by a comforting growl as she nuzzles your stomach. [line break] [line break] 'I'll have to paw off later, you're carrying a child and I don't want to risk hurting you. I can offer you something to drink though, you do look thirsty.' She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth. Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.[line break]";
+			if thirst of the player > 30:
+				decrease thirst of the player by 30;
+			otherwise:
+				now thirst of the player is 0;
+		otherwise:
+			if cunts of player > 0 and cunt length of player is less than 18 or cunt width of player is less than 6:
+				say "'Ohhh, I knew I smelled a fresh bitch in town, and you smell absolutely delicious.' She removes your clothes easily and her tongue flicks out to lick your folds, slipping in after a couple licks to probe and prime your depths, stretching them a bit as her prick engorges and begins to drip thick pre onto the ground. You can feel your walls begin dripping with juices as she stimulates them masterfully, her tongue finding all the right places to almost make you feel like a bitch in heat. [line break] [line break] 'Mmmm, hope you're ready, because I'm going to leave you walking funny for hours honey.'  She immediately mounts you, her odd-shaped prick stretching your walls, but in a way that actually feels good even as her thrusts begin to stretch your tunnel out, making your passage even deeper as her two-foot battering ram tries to breach your inner gate. [line break] [line break] Within a minute she's unable to last any longer, and you feel a sense of blessed relief as her hot cum begins flooding your passage, her swollen knot presses against your lips because she simply couldn't fit. 'Ooohhh YES! Feel that, bitch? I'm going to give you so many puppies as soon as I can squeeze this thing into you completely.' [line break] [line break] She pulls out without wasting another second, her cock still gushing out her rich sperm as she turns to walk away. You, your clothes, and much of the local plants end up splashed with her hot seed. Your abused passage throbs from the fierceness of her short pounding [impregchance][line break]";
+				increase cunt width of player by 1;
+				increase cunt length of player by 2;
+			otherwise:
+				if cunts of player is 0:
+					say "She growls as she removes your clothes only to find out that you lack the equipment to do what she really wants to you. Nevertheless, she quickly covers you and uses one broad hand to hold you in place as her cock begins to nudge up against your ass. 'All you had to do was grow a cunt for me, that's all I wanted you to do. This would have been so much nicer for the both of us if you had done that.' And with that said she thrusts in HARD, her tool sinking in three inches on the first thrust, not even giving her precum a chance to lube up your hole or anything. 'I'm just so horny, I keep smelling bitches in heat in this city but they all run away from me.' [line break] [line break] She's not trying to take her time, her hard thrusts forcing as much of her length into you as she can while her pre flows heavily. She's left with more than half of her cock outside when your ass refuses to take anymore, her thrusts now actually a bit painful. All sense of care and tenderness that she may have shown before goes right out the window when she begins to piston in and out in quick jerks of her hips, her head throbbing and flaring as the tight walls of your ass squeeze and ripple around it. [line break] [line break] Within minutes she's over the edge, her length swelling as her seed is forced into your body, more and more flowing in every second as her nuts unleash their torrent. You can feel the hot fluid as the pressure from this giant's tool forces it back through your system,the heat in your body only increasing as she pulls out and allows the rest of her orgasm to pump over you, covering your entire body with her seed and leaving her scent to seep into your skin before she storms off. The ground shakes with her angry and frustrated steps. You need a shower, badly. [line break]";
+				otherwise:
+					say "'Mmmmm, such a beautiful little bitch, and you smell so nice.' Her tongue lightly caresses your folds before she gives them a gentle nip. Her tone seems almost loving though. The brief nuzzle she gives as she crawls over you and places one hand on your chest to hold you in place while her large prick rubs against your rapidly dampening folds supports this as she's not simply using you like some random fucktoy. [line break] [line break] Her hand tightens on your shoulders as she presses in slowly, sucking in a sharp breath as your passage eagerly accepts her stiff rod. Her nipples can be felt against your back, pressing against your skin as she begins to gently rock back and forth, drawing this encounter out as long as she can. For the first time you notice a slightly sweet scent, and feel an odd dampness on your back as the giant shemale begins to leak. Small drops fall from each nipple at random moments in the time she takes, to truly screw you, and you feel your own orgasm hit at least three times in the time it takes for her knot to begin bumping against your soaked lips. [line break] [line break] She begins growling softly, her thrusts becoming harder and more insistent until she finally manages to sink that thicker bulb within you and tie herself  to you. Once more she howls as she cums, her seed gushing out in a constant series of spurts that leaves your womb swollen in no time, but her large size works against both of you as the pressure simply keeps building as her balls continue their twitching and pumping of her thick, fertile seed until you begin to think that you might burst from how much your body is being stretched. [impregchance] Her orgasm finally stops, the discomfort making it feel as if it lasted for hours. She very carefully pulls herself out of you, her knot still swollen, but the pressure within your body aiding this. [line break] [line break] What feels like a couple gallons of seed gush out immediately before the flow slows to a trickle. She moves off of you and brings her head down to your abused folds, licking tenderly for a few minutes to try and ease the pain. 'I'm sorry, I didn't mean to hurt you like this but I just got so carried away when I found out you could actually take me. I'll leave you alone for now, but I won't be able  to control myself if I see you again you sweet little thing. I want puppies so badly, and I can't have them myself...' She trails off and stands up quickly at this point, walking away quickly and leaving you alone to clean yourself up and try to figure out how to fit in your clothes again when you're round enough to be carrying twins... [line break]";
+
+Section 2 - Monster Insertion
+
+Table of random critters (continued)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
+[ Adds a blank row to the table, this is immediately filled ;) ]
+When Play begins:
+	Choose a blank row from Table of random critters;
+	now name entry is "Shemale Smooth Collie"; [Name of your new Monster]
+	now attack entry is "[one of]The 'bitch' charges in quickly, barking as it runs at you before biting at your shoulder and trying to overbalance you in an attempt to subdue you quickly and with minimal pain.[or]The oversized beast backs up slightly before running and leaping at you, throwing all of its weight at your stomach in an effort to knock you on your ass. She must be 90% muscle![at random]"; [Text used when the monster makes an Attack]
+	now defeated entry is "With a thud the Shemale Smooth Collie hits the ground, defeated."; [ Text or say command used when Monster is defeated.]
+	now victory entry is  "[Shemale Smooth Collie attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now desc entry is "This canine beast looks quite a bit like Lassie, if Lassie were twelve feet tall, and walked upright and had the general shape of an attractive woman, and had eight rather large breasts and a dick that would probably cause a stallion some envy...oh, and much shorter fur. You know, I guess she doesn't look much like Lassie after all.";[ Description of the creature when you encounter it.]
+	now face entry is "drawn forward into a long muzzle that leads back into a flat canine skull. Your ears now stick straight up from your head most of the time, only shifting when you hear a particularly loud noise. New muscles easily change which way they";[ Face description, format as the text "Your face is (your text)"] 
+	if "Male Preferred" is listed in feats of player:
+		now body entry is "reminiscient of a female bodybuilder, with defined muscles and only slightly wider hips with a thin waist and digitigrade legs ending in paws";[ Body Description, format as the text "Your Body is (your text)"]
+	otherwise:
+		now body entry is "that of a voluptuous woman with digitigrade legs ending in paws"; 
+	now skin entry is "[if looknow is 1] short, soft, dense fur in the sable pattern of a collie, completely covering your [otherwise]short furred, sable patterned[end if]";[ skin Description, format as the text "You have (your text) skin"] 
+	now tail entry is "Your tail, it's still strange to think about it that way even if it is true, is covered in short, soft, golden fur from your ass right up to the last inch or so, where it abruptly turns white.";[ Tail description, write a whole Sentence or leave blank. ] 
+	now cock entry is "[if looknow is 1]bright red canine/human hybrid in shape, complete with a knot and sheath, [otherwise]canine hybrid[end if]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face change entry is "as your skull begins to alter in shape as if made of clay. A sense of pressure here and a bit of stretching there, followed by a burning sensation in your mouth as your teeth are reshaped. You end up with the long, slender muzzle leading into a flat head of a collie."; [ face change text. format as "Your face feels funny as (your text)" ]
+	if "Male Preferred" is listed in feats of player:
+		now body change entry is "the change begins, bones crack and snap painlessly as they reshape. You can feel your waist drawing in somewhat and your shoulders broadening slightly, your body fat begins to melt away as your muscles bulk up and become more defined, making you look like a bodybuilder..though with a more feminine figure than you'd like. Your spine curves in a way that leaves your chest thrust out and displayed more prominently. Your legs gain digitigrade form and thick pads form on your feet as they are altered into paws. Your palms burn a bit as thinner pads form there when your hands begin reshaping, leaving you with slender fingers tipped with nails that look slightly more claw-like than a human's"; [ body change text. format as "Your body feels funny as (your text)" ]
+	otherwise:
+		now body change entry is "the change begins, bones crack and snap painlessly as they reshape. You can feel your waist drawing in and your shoulder broadening slightly, leaving you with a voluptuous figure that many women would kill to have. Your spine curves in a way that leaves your chest thrust out and displayed more prominently. Your legs gain digitigrade form and thick pads form on your feet as they are altered into paws. Your palms burn a bit as thinner pads form there when your hands begin reshaping, leaving you with slender fingers tipped with nails that look slightly more claw-like than a human's";
+	now skin change entry is "fur grows in a wave radiating out from the center of your abdomen. The pelt is dense enough to obscure any hint of your flesh on a good 99% of your body, seemingly leaving only your anus and lips bare. "; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "it begins ballooning out as if being pumped full of air. A quick brush across it as it continues expanding leaves you gasping at how sensitive it feels. Baby got back, the only problem is it's YOUR back"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "its flesh is reshaped, a slight itching feeling permeates your balls as well as your entire groin is altered, pulling your prick up close against your stomach in a protective sheath as it is reshaped into something between a canine and a human one. The flesh is a bright red with a slight taper, but you still have a nice mushroom head. A small swelling at the base that pushes your new sheath down reveals that you have a knot as well."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now str entry is 18;
+	now dex entry is 14;
+	now sta entry is 24;					
+	now per entry is 12;
+	now int entry is 12;
+	now cha entry is 10;
+	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 50;			[ How many HP has the monster got? ]
+	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 8;			[Amount of Damage monster Does when attacking.]
+	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 12;		[ Length infection will make cock grow to if cocks]
+	now cock width entry is 3;		[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 6;			[ Number of Breasts infection will give you. ]
+	now breast size entry is 10;		[Size of breasts infection will try to attain ]
+	now male breast size entry is 4;	[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 24;		[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ] 
+	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
+	now loot entry is "Dog Milk";			[ Loot monster drops, ]
+	now lootchance entry is 60;		[ Chance of loot dropping 0-100 ]
+
+[ Edit this to have the correct Name as wall]
+Random Shemale Smooth Collie For FS ends here.
+
+
+[Dog Milk is a drinkable item that reduces thirst but causes breast size to increase as well as up to 6 breasts (total, not additional) to grow on the player with no other transformative effects. Growth is limited to one inch at a time. I have no idea how to code this in though.
+This could be a good item to use to further progress the 'sister' plotline with Sandra. Say that she thinks one more thing needs to be done, but she needs some milk, and since it's already been established by her prior dialogue that she dislikes the feral gryphons, she refuses gryphon milk. She'll take the Dog Milk though, drink it herself and then give you a drink the same way she does when you visit her and are thirsty enough, except with the fresh nanites involved she gives you 6 instantly, and can do this to forms that don't normally allow it like the gryphon body.]
