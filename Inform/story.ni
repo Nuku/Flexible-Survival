@@ -556,6 +556,7 @@ Table of Fancy Status
 left	central	right
 "Location: [the player's surroundings]"	"XP:[xp of player]/[level up needed] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
 "Exits: [List of Valid Directions]"	"Hunger: [hunger of player] Thirst: [thirst of player]"	"Score:[score]/[maximum score]"
+"In menus:"	"Type n for next"	"Type p for previous"
 [" You are:[Player_Status],[Player_Gender_Status]"	""	""]
 
 
@@ -580,7 +581,8 @@ check hunting:
 	if there is no dangerous door in the location of the player:
 		say "I don't see any good hunting grounds around here." instead;
 	otherwise:
-		now battleground is the marea of a random dangerous door in the location of the player;
+		let y be a random dangerous door in the location of the player;
+		now battleground is the marea of y;
 		
 carry out hunting:
 	let Q be a list of numbers;
