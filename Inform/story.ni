@@ -2196,7 +2196,14 @@ carry out spawnmonster:
 			now monsterhp is hp entry;
 			challenge;
 			break;
+			
+levelcheat is an action applying to nothing.
 
+understand "givelevel" as levelcheat.
+
+carry out levelcheat:
+	increase the xp of the player by 100;
+	
 Book 7 - Endings
 
 When play ends:

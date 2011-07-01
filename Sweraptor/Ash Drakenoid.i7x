@@ -69,6 +69,8 @@ When Play begins:
 	now cunt length entry is 10;
 	now cunt width entry is 10;
 	now libido entry is 50;
+	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
+	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 
 when play ends:
 	if bodyname of player is "Ash Drakenoid":
