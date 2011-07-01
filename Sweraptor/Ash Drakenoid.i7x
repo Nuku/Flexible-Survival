@@ -57,7 +57,7 @@ When Play begins:
 	now sex entry is "Both";
 	now hp entry is 80;
 	now lev entry is 16;
-	now wdam entry is 30;
+	now wdam entry is 20;
 	now area entry is "Outside";
 	now cocks entry is 1;
 	now cock length entry is 10;
