@@ -539,6 +539,7 @@ Include Deer by Nuku Valente.
 Include MothGirl for Fs by Soren.
 Include otter by Nuku Valente.
 Include Ash Drakenoid by Sweraptor.
+Include Kangaroo by batroo.
 
 understand the command "feed" as something new.
 
