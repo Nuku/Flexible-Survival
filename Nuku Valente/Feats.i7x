@@ -62,18 +62,22 @@ instead of addfeating the basic feats:
 	if "Fertile" is not listed in feats of player, addfeat "Sterile" with "You are incapable of mothering a child.";
 	if intelligence of player is greater than 14:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% xp needed to level.";
+		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
 	if perception of player is greater than 14:
 		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases from 3 X to 5 X.";
 	if "Expert Hunter" is listed in feats of player:
 		addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature. Your proficiency doubles from 5X to 10X.";
 	addfeat "Male Preferred" with "You will reject female mutation";
 	addfeat "Female Preferred" with "You will reject male mutation";
+	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
 	addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
 	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";
 	if strength of player is greater than 14:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";
 	if number of entries in childrenfaces is greater than 0:
 		addfeat "Spirited Youth" with "Your child will lend their aid in combat, occasionally dealing damage to the enemy.";
+	if "Spirited Youth" is listed in feats of player and number of entries in childrenfaces is greater than 2:
+		addfeat "Youthful Tides" with "Once in a while, all of your kids will swarm to your aid in battle.";
 	if hp of doctor matt is greater than 4:
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
 

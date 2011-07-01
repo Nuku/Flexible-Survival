@@ -14,7 +14,10 @@ Instead of resolving a potential resources:
 	if x is 2:
 		now y is "water bottle";
 	if x is 3:
-		now y is "dirty water";
+		if "Survivalist" is listed in feats of player and a random chance of 1 in 2 succeeds:
+			now y is "medkit";
+		otherwise:
+			now y is "dirty water";
 	say "While wandering about, you're certain you see some [y] and move to get it.";
 	now x is a random number from 1 to 4;
 	if x is 1:

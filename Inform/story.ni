@@ -1068,6 +1068,8 @@ To process (X - a grab object):
 			say "You ready your [x].";
 	if x is a medkit:
 		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
+		if "Expert Medic" is listed in the feats of the player:
+			increase healed by ( healed times 125 ) divided by 100;
 		increase hp of player by healed;
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
@@ -1075,7 +1077,10 @@ To process (X - a grab object):
 		say "Using your medkit, [one of]You spray your cuts with anesthetic[or]You bandage your worst wounds[at random]. You regain [healed] hit points.";
 		if a random chance of 1 in 10 succeeds:
 			say "You have used up the last of the medkit.";
-			delete medkit;
+			if "Expert Medic" is listed in the feats of the player and a random chance of 2 in 10 succeeds:
+				say "You manage to save the medkit with your amazing skills.";
+			otherwise:
+				delete medkit;
 		
 
 understand "talk [person]" as conversing.
@@ -1277,7 +1282,7 @@ This is the sex change rule:
 			now the cunt width of player is cunt width entry divided by 3;
 		increase the cunts of player by 1;
 		follow the cunt descr rule;
-		say " Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking honey along a thigh as you quiver.";
+		say " Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking 	 along a thigh as you quiver.";
 	if cocks of player is not 0 and the sex entry is "Female" and "Male Preferred" is not listed in feats of player and "One Way" is not listed in feats of player:
 		decrease cock length of player by 1;
 		decrease cock length of player by cock length of player divided by 3;
@@ -1501,6 +1506,12 @@ This is the player attack rule:
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [y] damage!";
 			increase dam by y;
+		otherwise if a random chance of 1 in 20 succeeds and "Youthful Tides" is listed in feats of player:
+			let y be 0;
+			repeat with s running from 1 to number of entries in childrenfaces:
+				increase y by a random number from 2 to 4;
+			increase dam by y;
+			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [y] damage!";
 		decrease monsterhp by dam;
 		follow the monster injury rule;
 		say "[Name entry] is [descr].";
@@ -1560,6 +1571,14 @@ To fight:
 			next;
 		if area entry matches the text battleground:
 			add x to q;
+			if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry:
+				add x to q;
+			if "Like Attracts Like" is listed in the feats of the player and bodyname of player is name entry:
+				add x to q;
+			if "Like Attracts Like" is listed in the feats of the player and cockname of player is name entry:
+				add x to q;
+			if "Like Attracts Like" is listed in the feats of the player and facename of player is name entry:
+				add x to q;
 	if the number of entries in q is not 0:
 		sort Q in random order;
 		repeat with Z running through q:
