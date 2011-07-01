@@ -12,7 +12,7 @@ to say kangaroo attack:
 	say "Swiping her tail, the kangaroo knocks you down onto your back. ‘You[apostrophe]re going to be my joey for today’ A grin crosses across her muzzle. Trying to get away a heavy foot is slammed into your back pressing you into the ground. Rolling you over, the kangaroo strips your clothes off to see what she has to work with.”;
 	wait for any key;
 	if cocks of player is greater than 0:
-		say "’Oh, what do we have here?’ Her hands start to caress your [skin of player] tracing fingers down till she reaches your flagging [cock of player]. ‘Perfect.’ She whispers climbing up your body, her drooling pussy hovering over your maleness. Slamming down onto you, a grunt rising from your chest from the force, as a moan escapes her chest. Quick bounces using those powerful legs, riding you with more force than you[apostrophe]re use to.";
+		say "’Oh, what do we have here?’ Her hands start to caress your [skin of player] body, tracing fingers down till she reaches your flagging [cock of player] shaft. ‘Perfect.’ She whispers climbing up your body, her drooling pussy hovering over your maleness. Slamming down onto you, a grunt rising from your chest from the force, as a moan escapes her chest. Quick bounces using those powerful legs, riding you with more force than you[apostrophe]re use to.";
 		wait for any key;
 		say "Riding you harder with each passing second, before you give her what she wants. Ropes of your seed pump up into her gripping depths, powerful hips grinding down on you to draw every last spurt from you. ‘Oh you[apostrophe]ve been fun, I will have to find you again, very soon.’ Then with a shove, she bounces away dripping your seed across the ground as she goes.";
 	otherwise:
