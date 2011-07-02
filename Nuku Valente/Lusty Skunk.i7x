@@ -8,7 +8,7 @@ Section 1 - The Situation
 Lusty Skunk is a situation.
 The sarea of Lusty Skunk is "Park";
 
-skrp is a number that varies.
+skrp is a number that varies. skrp is usually -1;
 Lastskunkfuck is a number that varies. Lastskunkfuck is usually 250.
 skunkmulticock is a number that varies. skunkmulticock is usually 0.
 skunkfucked is a number that varies. skunkfucked is usually 0.
@@ -28,6 +28,14 @@ To Skunkform:
 	
 
 Instead of Resolving a Lusty Skunk:
+	if skrp is -1:
+		say "You notice a crudely drawn sign, posted in the grass. 'Beware Double Skunks. If you cherish your privacy, turn away now.'";
+		say "Do you want to proceed?";
+		if the player consents:
+			now skrp is 0;
+		otherwise:
+			now lusty skunk is resolved;
+			say "You turn and walk away from the area, making a note not to wander back into it later. Phew, good thing you saw that sign.";
 	if skrp is 1:
 		say "You happen across another skunk hybrid. A shapely female human form perched on a skunk lower frame, two faces both smiling at you. Without a word, they prance up and embrace you. Any desire you had to avoid them fades like mist before the morning sun as their hands eagerly explore your form. Your body grows warm and tingly as  it remembers the form they want, reaffirming your strange, new, nature with gentle coos of affection and familial bond.";
 		skunkform;
