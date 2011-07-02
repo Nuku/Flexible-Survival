@@ -549,6 +549,7 @@ Table of Fancy Status
 left	central	right
 "Location: [the player's surroundings]"	"XP:[xp of player]/[level up needed] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
 "Exits: [List of Valid Directions]"	"Hunger: [hunger of player] Thirst: [thirst of player]"	"Score:[score]/[maximum score]"
+"Sanity: [humanity of player]/100"	"Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours"	"[if number of entries in childrenfaces is greater than 0]Children: [number of entries in childrenfaces][end if]"
 "In menus:"	"Type n for next"	"Type p for previous"
 [" You are:[Player_Status],[Player_Gender_Status]"	""	""]
 
