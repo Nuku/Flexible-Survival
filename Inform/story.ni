@@ -88,6 +88,7 @@ playon is a number that varies.
 A object has a list of text called invent. 
 The player has a list of text called feats.
 A person can be a trader.
+Scenario is a text that varies.
 Allobjs is a list of text that varies.
 Grab Object is a kind of thing.
 A person has a grab object called weapon object.
@@ -248,22 +249,6 @@ Definition: A grab object (called D) is present:
 
 Book 4 - Start the Game
 
-When play begins:
-	repeat with q running from 1 to the number of rows in the table of game objects:
-		add name in row Q of table of game objects to allobjs;
-	change the right hand status line to "[list of valid directions]";
-	follow the random stats rule;
-	increase the score by 10;
-[	follow the finish stats rule;]
-	change the current menu to the table of Start Game;
-	carry out the displaying activity;
-	repeat with x running through featsets:
-		now x is a part of the player;
-	featget;
-	clear the screen;
-	say "Phew, you barely made it in here before it all went bad, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
-	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
-	[try looking.]
 	
 instead of going somewhere while player is overburdened:
 	say "You are too over burdened to move. Drop some of that junk!";
@@ -343,6 +328,13 @@ Table of sex choice
 title	subtable	description	toggle
 "Man"	--	--	male choice rule
 "Woman"	--	--	female choice rule
+
+Table of Starting Location
+title	subtable	description	toggle
+"Bunker"	--	--	location choice rule
+"Caught Outside"	--	--	location choice rule
+"Rescuer Stranded"	--	--	location choice rule
+
 
 Table of Basic Combat
 title	subtable	description	toggle
@@ -994,12 +986,12 @@ To process (X - a grab object):
 			say "After drinking something, you feel better.";
 	if x is dirty water:
 		if thirst of player is greater than 0:
+			say "You feel less thirsty after guzzling some dirty water, yum!";
 			increase score by thirst of player divided by 4;
 			if thirst of player is greater than 25:
 				decrease score by ( thirst of player minus 25 ) divided by 4;
 		decrease thirst of player by 25;
 		if thirst of player is less than 0, now thirst of player is 0;
-		say "You feel less thirsty after guzzling some dirty water, yum!";
 		if morale of player is less than 0:
 			increase morale of player by 62;
 			if morale of player is greater than 0, now morale of player is 0;
@@ -1333,6 +1325,12 @@ To grow breasts by (x - a number):
 
 To Infect:
 	choose row monster from the table of random critters;
+	while there is no name entry:
+		now monster is a random number from 1 to number of rows in table of random critters;
+		choose row monster from the table of random critters;
+		if there is no name entry:
+			next;
+		break;
 	if "Microwaved" is listed in feats of player:
 		say "An infection from [name entry] is present. Allow it?";
 		if the player consents:
@@ -2031,6 +2029,36 @@ To showstats (x - Person):
 	now looknow is 0;
 	rule succeeds;
  
+This is the location choice rule:
+	choose row current menu selection in the current menu;
+	if title entry is "Bunker":
+		say "You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.";
+	otherwise if title entry is "Caught Outside":
+		say "You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you.(Gain Spartan Diet)[line break]";
+	otherwise if title entry is "Rescuer Stranded":
+		say "You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive!(Start with no supplies, an iron man mode, can you survive?)[line break]";
+	say "Continue?";
+	if the player consents:
+		now looknow is 0;
+	otherwise:
+		the rule fails;
+	if title entry is not "Bunker":
+		say "What luck. After looking around desperately, you come across a library with a mostly intact bunker in it. This will serve well as a refuge while you wait for rescue.";
+		if title entry is "Caught Outside":
+			add "Spartan Diet" to feats of player;
+			process dirty water;
+			process dirty water;
+			process dirty water;
+			process dirty water;
+		if title entry is "Rescuer Stranded":
+			now invent of bunker is { };
+			add "cot" to invent of bunker;
+			increase score by 300;
+	now scenario is title entry;
+	now the menu depth is 0;
+	clear the screen;
+	rule succeeds;
+	
 This is the final stats rule:
 	now the morale of the player is the charisma of the player plus the perception of the player;
 	now the HP of the player is the stamina of the player times two;
@@ -2040,6 +2068,10 @@ This is the final stats rule:
 	now the capacity of the player is five times the strength of the player;
 	now the menu depth is 0;
 	clear the screen;
+	change the current menu to table of Starting Location;
+	carry out the displaying activity;
+	clear the screen;
+[	try looking;]
 	try looking;
 	rule succeeds;
 
@@ -2122,6 +2154,23 @@ After going:
 	try looking;
 	plot;
  
+When play begins:
+	repeat with q running from 1 to the number of rows in the table of game objects:
+		add name in row Q of table of game objects to allobjs;
+	change the right hand status line to "[list of valid directions]";
+	follow the random stats rule;
+	increase the score by 10;
+[	follow the finish stats rule;]
+	change the current menu to the table of Start Game;
+	carry out the displaying activity;
+	repeat with x running through featsets:
+		now x is a part of the player;
+	featget;
+	clear the screen;
+	say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
+	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
+	[try looking.]
+
 This is the finish stats rule:
 	if started is 1:
 		if Current menu selection is 1:
@@ -2233,7 +2282,7 @@ When play ends:
 	if hp of player is less than 1:
 		say "You did not survive, but at least you did not join the monstrous masses. There is something to be said for that, right?";
 		increase score by 10;
-	say "You have achieved a score of [score].";
+	say "In Scenario: [scenario], You have achieved a score of [score].";
 	say "This rates you as ";
 	if score is less than 40:
 		say "inanimate pool toy.";
