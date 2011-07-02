@@ -13,9 +13,9 @@ Use MAX_OBJ_PROP_COUNT of 128.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 
-The release number is 35.
+The release number is 36.
 The story creation year is 2010.
-The maximum score is 1600.
+The maximum score is 1800.
 
 Table of Basic Help Options (continued)
 title	description 
@@ -634,6 +634,7 @@ carry out hunting:
 					say "Despite your searches, you fail to find it.";
 				break;
 		if found is 0:
+			say "[bold type]You don't think what you[apostrophe]re looking for can be found here...[roman type]";
 			let dice be a random number from 1 to 20;
 			if dice is greater than 14:
 				Fight;
