@@ -1722,6 +1722,8 @@ carry out exploring:
 	follow the explore rule;
 
 This is the turnpass rule:
+	if libido of player is less than 96 and "Horny Bastard" is listed in feats of player:
+		increase libido of player by 5;
 	if the hunger of player is less than 0, now the hunger of player is 0;
 	if the thirst of player is less than 0, now the thirst of player is 0;
 	if the hp of the player is less than the maxhp of the player:

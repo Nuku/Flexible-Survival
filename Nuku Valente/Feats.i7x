@@ -80,6 +80,7 @@ instead of addfeating the basic feats:
 		addfeat "Youthful Tides" with "Once in a while, all of your kids will swarm to your aid in battle.";
 	if hp of doctor matt is greater than 4:
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
+	addfeat "Horny Bastard" with "You just can't get enough. Every few hours your libido raises all on its own.";
 
 
 This is the gainfeat rule:
