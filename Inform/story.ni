@@ -837,6 +837,7 @@ to say impregchance:
 	if a random chance of 1 in 5 succeeds, impregnate with name entry;
 	if "Fertile" is listed in feats of the player:
 		if a random chance of 1 in 5 succeeds, impregnate with name entry;
+	now the libido of the player is (the libido of the player) / 2;
 	
 
 instead of examining a watch:
