@@ -10,18 +10,18 @@ Section 1 - Monster Responses
 dragondefeat is a number that varies.
 dragonconsent is a number that varies.
 to say dragon attack:
-	say "The male dragon roars dominance as he bests you.  The beast huffs out a sound reminiscent of a laugh as it swaggers towards you.  His cock starting to slide free as the great beast nears you.”;
+	say "The male dragon roars dominance as he bests you.  The beast huffs out a sound reminiscent of a laugh as he swaggers towards you.  His cock starting to slide free as the great beast nears you.”;
 	wait for any key;
-	say “The beast viciously snaps at you with its jaws.  Leaving you nearly terrified as it only manages to leave minor cuts as all your clothes drop to the ground shredded.  It then begins to nuzzle your genitals.”;
+	say “The beast viciously snaps at you with its jaws.  Throwing you to the ground while only leaving minor cuts as all your clothes tear free from your form.  It then lowers its large head towards you.  Making you close your eyes in fear.”;
 	wait for any key;
 	if cunts of player is greater than 0:
-		say “The dragon nuzzles and licks your [cunt size desc of player] pussy before dipping the split end of its tongue inside you.  Seemingly measuring you.  Its thick and slimy drool beginning to coat your groin.";
+		say “The dragon nuzzles and licks at your [cunt size desc of player] pussy.  Shocking you out of your fear of being eaten.  It suddenly dips the forked end of its tongue inside you.  Seemingly checking for something.  Its thick and slimy drool beginning to coat your lower half.";
 	wait for any key;
 	if cunt length of player is less than 12:
-		say "The beast huffs and rips it tongue free of your slit. Then he positions himself over you. His massive cock looks as if it’ll tear you apart! The spade shaped tip presses against your entrance for a moment before the beast suddenly begins to piss IN you.  You womb filling up in seconds before the beast drops its head near yours.  It remains motionless for a few seconds before speaking in a strange language that you can somehow understand! ‘You will be mine, if you wish to bare me young you’ll know where to go.’  He then backs away from you and gives you a knowing look before it rushes back into the water.";
+		say "The beast huffs and rips it tongue free of your cunt. Then he repositions himself over you. His massive cock looks as if it could tear you apart! The  spade shaped tip presses against your entrance for a moment before the beast suddenly begins to piss IN you.  You womb filling up in seconds before the beast drops its head near yours.  It remains motionless for a few seconds before speaking in a strange language that you can somehow understand! ‘You will be mine.’  He then backs away from you and gives you a knowing look before it rushes back into the water.";
 		wait for any key;
-	otherwise if cunt length of player is less than 28:
-		say “The dragon lets out an airy hiss.  It‘s breath reeking of decayed fish.  It then leasurely draws its tongue free.  Savoring your flavor it lifts its head and positions its cock.  The massive shaft sends palpable waves of fear through you.  You could swear you nearly tasted your own fear as it suddenly lunges.  The spaded tip pounds your well fitting tunnel as he takes his time with you.  He pushes you over the edge over and over.  His pace not even hinting at his peak.  You begin to welcome his thrusting and begin to think of him as an owner… and you his property.  Suddenly your belly bulges as his load is fired into you. You feel cum gushing out around his massive member.  You can[apostrophe]t help but sample some as he withdraws.  You lose yourself in the potent musk.  Your unsure how long you where unaware of your surroundings but he is gone. [impregchance]”;
+	otherwise if cunt length of player is greater than 11:
+		say “The dragon lets out an airy hiss.  Its breath reeking of decayed fish.  Then leisurely drawing its tongue free.  Savoring the flavor of your fluids he lifts his head and positions his cock.  The massive shaft gives you a feeling of unease.  The spaded tip pierces your tunnel.    He pushes you over the edge over and over.  His pace not even hinting at his peak.  You begin to welcome his thrusting and begin to think of him as an owner… and you his property.  Suddenly your belly bulges as his load is fired into you. You feel cum squirting out around his massive member.  You can[apostrophe]t help but sample some as he withdraws.  You lose yourself in the potent musk.  Your unsure how long you were unaware of your surroundings but he is now gone. [impregchance]”;
 	otherwise:
 		say "The dragon gives a sudden hiss before stomping you into the sand and bolting off back to the water.";
 
@@ -53,9 +53,9 @@ When Play begins:
 	now skin change entry is "your flesh becomes tougher and somewhat smoother as it becomes glittering scales."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "your center of balance tips dangerously as a tremendously long yet narrow tail explodes from your ass. A small sail forming along the top."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is “your cock turns black as it gradually tapers towards the tip.  As the tapering reaches the tip it spreads out into a spade shape.”;
-	now str entry is 24;
-	now dex entry is 10;
-	now sta entry is 22;					
+	now str entry is 20;
+	now dex entry is 15;
+	now sta entry is 20;					
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 4;
