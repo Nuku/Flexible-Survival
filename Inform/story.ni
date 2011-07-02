@@ -340,6 +340,7 @@ Table of Basic Combat
 title	subtable	description	toggle
 "Attack"	--	"Attack!!!"	player attack rule
 "Item"	--	"Quick, where's my healing potion?!"	combat item rule
+"Pass"	--	"Hey look, a distraction!"	combat pass rule
 "Flee"	--	"Run away!!!"	flee rule
 "Submit"	--	"Maybe it isn't so bad"	submit rule
 "Your HP: [hp of player]/[maxhp of player] [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters]"	--	"I am fit as a fiddle"	--
@@ -663,6 +664,10 @@ This is the combat item rule:
 		change the current menu to table of Combat Items;
 		carry out the displaying activity;
 
+This is the combat pass rule:
+	retaliate;
+	wait for any key;
+	
 this is the combat item process rule:
 	choose row Current Menu Selection in table of combat items;
 	let nam be title entry;
