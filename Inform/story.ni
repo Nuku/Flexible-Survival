@@ -1306,6 +1306,9 @@ To Retaliate:
 	say "[name entry] rolls 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
 	if the roll plus the attack bonus minus the defense bonus is greater than 8:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
+		if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
+			say "You nimbly avoid the attack at the last moment!";
+			now dam is 0;
 		say "[Attack entry] You take [dam] damage!";
 		decrease hp of the player by dam;
 		follow the player injury rule;
@@ -1505,6 +1508,11 @@ This is the player attack rule:
 	say "You roll 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
 	if the roll plus the attack bonus minus the defense bonus is greater than 8:
 		let dam be ( weapon damage of the player times a random number from 80 to 120 ) divided by 100;
+		if weapon object of player is journal:
+			if "Martial Artist" is listed in feats of player:
+				now dam is ( dam * 120 ) divided by 100;
+			if "Black Belt" is listed in feats of player:
+				now dam is ( dam * 110 ) divided by 100;
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
 		if a random chance of the morale of the player in 200 succeeds:

@@ -65,6 +65,10 @@ instead of addfeating the basic feats:
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
 	if perception of player is greater than 14:
 		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases from 3 X to 5 X.";
+	if dexterity of player is greater than 14:
+		addfeat "Martial Artist" with "You have basic martial arts training, increasing the damage you cause when you have no weapon.";
+	if "Martial Artist" is listed in feats of player:
+		addfeat "Black Belt" with "Your martial artistry is amazing. Your damage increases furher while unarmed, and you have a small(10%) chance of avoiding hits that would otherwise have landed.";
 	if "Expert Hunter" is listed in feats of player:
 		addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature. Your proficiency doubles from 5X to 10X.";
 	addfeat "Male Preferred" with "You will reject female mutation";
