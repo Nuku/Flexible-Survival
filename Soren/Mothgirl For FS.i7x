@@ -128,14 +128,14 @@ to say cock pill use:
 	say "You take the pill and pop it into your mouth...";
 	if cocks of player is 0:
 		now cocks of player is 1;
-		now cock length is 7;
-		now cock width is 10;
+		now cock length of player is 7;
+		now cock width of player is 10;
 		say "With a rush of eophoria, your groin practically explodes as a new [cock of player] cock bursts free of you, twitching readily, fueled by [ball size] orbs dangling underneath.";
 	otherwise if a random chance of 1 in 5 succeeds:
 		say "You feel dizzy, leaning against the nearest support as your [cock of player] shaft[if cocks of player is greater than 1]s[end if] engorge painfully, growing larger before splitting, revealing a new shaft.";
 		increase cocks of player by 1;
 	otherwise:
-		increase cock length by a random number from 1 to 2;
+		increase cock length of player by a random number from 1 to 2;
 		Follow the cock descr rule;
 		say "You groan as you gain more male meat, leaving you with a [cock size desc of player] [cock of player] dick[if cocks of player is greater than 1]s[end if]";
 
