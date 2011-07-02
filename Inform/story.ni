@@ -2249,7 +2249,7 @@ carry out scavenging:
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	if "Survivalist" is listed in feats of the player, increase bonus by 4;
 	let the dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
+	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
 	if dice plus bonus is greater than 10:
 		try resolving potential resources;
 	otherwise:

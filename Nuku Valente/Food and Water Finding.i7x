@@ -40,7 +40,7 @@ Instead of resolving a potential resources:
 		if player consents:
 			let bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player divided by 2;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
+			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
 			if difficulty is greater than dice:
 				say "You try your best to scale up, but only end up hurting yourself in the process.";
@@ -69,7 +69,7 @@ Instead of resolving a potential resources:
 		if player consents:
 			let bonus be (( the strength of the player minus 10 ) divided by 2) plus level of the player divided by 2;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
+			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
 			if difficulty is greater than dice:
 				say "You try your best to lift up the barrier, but to no avail, denying you the [y].";
@@ -97,7 +97,7 @@ Instead of resolving a potential resources:
 		if player consents:
 			let bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player divided by 2;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
+			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
 			if difficulty is greater than dice:
 				say "Your arguments fall on deaf ears. Wait, does this guy even have ears?";
