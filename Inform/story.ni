@@ -532,6 +532,7 @@ Include MothGirl for Fs by Soren.
 Include otter by Nuku Valente.
 Include Ash Drakenoid by Sweraptor.
 Include Kangaroo by batroo.
+Include Pets by Nuku Valente.
 
 understand the command "feed" as something new.
 
@@ -2051,6 +2052,8 @@ To showstats (x - Person):
 			say "The children remain as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to a young adult, somewhere between 18 and 22 years of age, both in physical size and apparent emotional and mental development.";
 		otherwise:
 			say "The child remains as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to a young adult, somewhere between 18 and 22 years of age, both in physical size and apparent emotional and mental development.";
+	if the player is not lonely:
+		say "Accompanying you, you have a [companion of player]. [initial appearance of companion of player]";
 	now looknow is 0;
 	rule succeeds;
  
