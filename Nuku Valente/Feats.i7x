@@ -54,6 +54,8 @@ To addfeat (x - text) with (y - text):
 instead of addfeating the basic feats:
 	if charisma of player is greater than 14:
 		addfeat "Haggler" with "You are an especially skilled haggler. Sometimes, you end up with two of what you are trading for!";
+		if player is not lonely:
+			addfeat "Good Teacher" with "Your pets gain levels much more quickly than normal.";
 	addfeat "Survivalist" with "You are great at scavenging. When doing such, you get a +4 to finding things.";
 	if stamina of player is greater than 14:
 		addfeat "Spartan Diet" with "You don't need 2 liters of water and great feasts to keep you going! You become thirsty and hungry slower.";

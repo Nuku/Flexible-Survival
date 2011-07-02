@@ -16,6 +16,13 @@ Calling is an action applying to one thing.
 
 understand "pet [tamed pet]" as calling.
 
+Petcounting is an action applying to nothing.
+
+understand "pet" or "pets" as petcounting.
+
+Carry out petcounting:
+	say "Pets: [list of tamed pets]";
+
 carry out calling a pet(called x):
 	now the companion of player is x;
 	say "[summondesc of x]";

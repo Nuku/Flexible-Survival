@@ -1555,6 +1555,9 @@ This is the player attack rule:
 				now ok is 0;
 		if ok is 1, say "[defeated entry] ";
 		increase the XP of the player by lev entry times two;
+		if the player is not lonely:
+			increase the xp of the companion of the player by lev entry times two;
+			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
 		increase the morale of the player by 1;
 		if a random chance of lootchance entry in 100 succeeds:
 			say "You gain 1 x [loot entry]!";
@@ -1567,6 +1570,15 @@ This is the player attack rule:
 	rule succeeds;
 
 predestiny is a number that varies.
+
+to Pet level up:
+	increase level of companion of player by 1;
+	decrease xp of companion of player by ( level of companion of player minus 1 ) times 10;
+	if "Fast Learner" is listed in feats of player:
+		increase xp of companion of player by ( level of companion of player minus 1 ) times 4;
+	say "Your [companion of player] has gained level [level of companion of player]! Congratulations!";
+	if remainder after dividing level of player by 2 is 0:
+		increase weapon damage of companion of player by 1;
 
 To level up:
 	increase level of player by 1;
@@ -1633,6 +1645,11 @@ To fight:
 			now needed is ( level of player plus one ) times 8;
 		if xp of player is greater than needed:
 			level up;
+		now needed is ( level of companion ) times 10;
+		if "Good Teacher" is listed in feats of player:
+			now needed is ( level of companion ) times 6;
+		if xp of companion of player is greater than needed and level of companion is less than level of player:
+			pet level up;
 		[try looking;]
 	rule succeeds;
 
