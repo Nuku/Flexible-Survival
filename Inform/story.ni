@@ -1536,7 +1536,14 @@ This is the player attack rule:
 	otherwise:
 		follow the cock descr rule;
 		follow the breast descr rule;
-		say "[defeated entry] ";
+		let ok be 1;
+		if "Control Freak" is listed in feats of player:
+			say "Do you want to perform after combat scene?";
+			if the player consents:
+				now ok is 1;
+			otherwise:
+				now ok is 0;
+		if ok is 1, say "[defeated entry] ";
 		increase the XP of the player by lev entry times two;
 		increase the morale of the player by 1;
 		if a random chance of lootchance entry in 100 succeeds:
@@ -2018,7 +2025,7 @@ To showstats (x - Person):
 				say " They curve out [breast size of player] inches from your chest.";
 	if child is not born and gestation of child is greater than 0:
 		if gestation of child is less than 10:
-			say "Your belly is swollen in a taught [skin of player] dome before you, ready to spill forth life at any moment.";
+			say "Your belly is swollen in a taught [skin of player] before you, ready to spill forth life at any moment.";
 		otherwise if gestation of child is less than 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
 		otherwise if gestation of child is less than 30:
