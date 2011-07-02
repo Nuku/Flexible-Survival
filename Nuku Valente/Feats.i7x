@@ -83,6 +83,7 @@ instead of addfeating the basic feats:
 	addfeat "Horny Bastard" with "You just can't get enough. Every few hours your libido raises all on its own.";
 	addfeat "Control Freak" with "When you win a battle, you may choose if you wish to engage in the post battle activities or not.";
 	addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
+	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
 
 
 This is the gainfeat rule:
