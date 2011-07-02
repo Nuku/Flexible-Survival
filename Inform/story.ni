@@ -532,6 +532,7 @@ Include MothGirl for Fs by Soren.
 Include otter by Nuku Valente.
 Include Ash Drakenoid by Sweraptor.
 Include Kangaroo by batroo.
+Include Feral Sea Dragon by Tunalord Sefont.
 Include Pets by Nuku Valente.
 
 understand the command "feed" as something new.
