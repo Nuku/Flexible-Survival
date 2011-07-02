@@ -82,6 +82,7 @@ instead of addfeating the basic feats:
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
 	addfeat "Horny Bastard" with "You just can't get enough. Every few hours your libido raises all on its own.";
 	addfeat "Control Freak" with "When you win a battle, you may choose if you wish to engage in the post battle activities or not.";
+	addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
 
 
 This is the gainfeat rule:

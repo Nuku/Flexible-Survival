@@ -3,7 +3,6 @@
 Book 0 - Pre game prep stuff
 
 Release along with an interpreter. 
-Release along with the source text.
 Use memory economy.
 Use fast route-finding.
 Use fast route-finding.
@@ -778,22 +777,22 @@ definition: A person is overburdened:
 
 To Birth:
 	let infection be "";
-	if a random number from 1 to 100 is greater than 50:
+	if a random number from 1 to 100 is greater than 50 and "They Have Your Eyes" is not listed in feats of player:
 		now infection is skinname of child;
 	otherwise:
 		now infection is skinname of player;
 	now skinname of child is infection;
-	if a random number from 1 to 100 is greater than 50:
+	if a random number from 1 to 100 is greater than 50 and "They Have Your Eyes" is not listed in feats of player:
 		now infection is bodyname of child;
 	otherwise:
 		now infection is bodyname of player;
 	now bodyname of child is infection;
-	if a random number from 1 to 100 is greater than 50:
+	if a random number from 1 to 100 is greater than 50 and "They Have Your Eyes" is not listed in feats of player:
 		now infection is tailname of child;
 	otherwise:
 		now infection is tailname of player;
 	now tailname of child is infection;
-	if a random number from 1 to 100 is greater than 50:
+	if a random number from 1 to 100 is greater than 50 and "They Have Your Eyes" is not listed in feats of player:
 		now infection is facename of child;
 	otherwise:
 		now infection is facename of player;
