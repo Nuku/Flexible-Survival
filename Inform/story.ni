@@ -1554,6 +1554,15 @@ This is the player attack rule:
 		say "[Name entry] is [descr].";
 	otherwise:
 		say "You miss!";
+	if player is not lonely and a random chance of 1 in 5 succeeds:
+		now attack bonus is ( ( dexterity of companion of player minus 10 ) divided by 2 ) plus level of companion of player;
+		now roll is a random number from 1 to 20;
+		if roll plus the attack bonus minus the defense bonus is greater than 8:
+			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
+			say "[assault of companion of player] [dam] damage inflicted!";
+			decrease monsterhp by dam;
+		otherwise:
+			say "Your [companion of player] misses!";
 	if monsterhp is greater than 0:
 		Retaliate;
 		wait for any key;

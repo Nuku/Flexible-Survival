@@ -3,6 +3,7 @@ Pets by Nuku Valente begins here.
 Pet is a kind of person.
 A pet can be tamed. A pet is usually not tamed.
 A pet has text called summondesc.
+A pet has a text called assault.
 The player has a pet called companion.
 Definition: A person is lonely:
 	if companion of player is nullpet, yes;
@@ -32,6 +33,7 @@ The weapon damage of cute crab is 6;
 The level of cute crab is 1;
 The Dexterity of cute crab is 8;
 The summondesc of cute crab is "Bursting from the ground near you, your cute crab appears. It clacks its pincers together in an excited fashion like a castinet player.";
+The assault of cute crab is "[one of]Your crab snaps with his great pincers![or]Scuttling crazily, you are not even entirely sure when your crab landed a blow.[at random]";
 
 Lost Crab is a situation.
 The sarea of Lost Crab is "Beach";
