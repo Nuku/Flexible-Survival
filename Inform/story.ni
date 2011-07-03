@@ -573,7 +573,7 @@ The infections of furry is { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon"
 Guy is a flag.
 The infections of guy is { "Naga", "Latex Fox", "black equinoid", "skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Wyvern", "Cock Cannon", "Bear", "sea otter", "Ash Drakenoid", "feral sea dragon", "German Shepherd", "feline" };
 Girl is a flag.
-The infections of girl is { "Drone Wasp", "Goo Girl", "Female Husky", "black equinoid", "lizard girl", "felinoid", "skunk", "sea otter", "Tentacle Horror", "spidergirl", "Mothgirl", "red kangaroo" };
+The infections of girl is { "Drone Wasp", "Goo Girl", "Female Husky", "black equinoid", "lizard girl", "felinoid", "skunk", "sea otter", "Tentacle Horror", "spidergirl", "Mothgirl", "red kangaroo", "city sprite" };
 Hermaphrodite is a flag.
 The infections of hermaphrodite is { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe" };
 
