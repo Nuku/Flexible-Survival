@@ -93,18 +93,6 @@ When Play begins:
 	now loot entry is "Fish";			[ Loot monster drops, ]
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
 
-Table of Game Objects(continued)
-name	desc	weight	object
-"Fish"	"Black skunk goo on a stick"	1	Fish
-
-Fish is a grab object. "A fish. It could be a big fish or a small fish, but it has scales on it. A sniff of it oddly reminds you of otters.".
-
-Fish is infectious. The strain of Fish is "Sea Otter".
-usedesc of Fish is "[otterfish]";
-
-To say otterfish:
-	decrease the hunger of the player by 15;
-
 when play ends:
 	if bodyname of player is "sea otter":
 		if humanity of player is less than 10:

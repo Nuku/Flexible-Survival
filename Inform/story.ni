@@ -92,7 +92,6 @@ Allobjs is a list of text that varies.
 flag is a kind of thing.
 A flag has a list of text called infections.
 A flag can be banned. A flag is usually not banned.
-Furry is a flag.
 Grab Object is a kind of thing.
 A person has a grab object called weapon object.
 A armament is a kind of grab object.
@@ -541,6 +540,7 @@ Include Ash Drakenoid by Sweraptor.
 Include Kangaroo by batroo.
 Include Feral Sea Dragon by Tunalord Sefont.
 Include Pets by Nuku Valente.
+Include sprite by Nuku Valente.
 
 
 
@@ -568,8 +568,14 @@ Book 6 - Rules, Obey them!
 
 Section 1 - Flags
 
+Furry is a flag.
 The infections of furry is { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd"  };
-
+Guy is a flag.
+The infections of guy is { "Naga", "Latex Fox", "black equinoid", "skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Wyvern", "Cock Cannon", "Bear", "sea otter", "Ash Drakenoid", "feral sea dragon", "German Shepherd", "feline" };
+Girl is a flag.
+The infections of girl is { "Drone Wasp", "Goo Girl", "Female Husky", "black equinoid", "lizard girl", "felinoid", "skunk", "sea otter", "Tentacle Horror", "spidergirl", "Mothgirl", "red kangaroo" };
+Hermaphrodite is a flag.
+The infections of hermaphrodite is { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe" };
 
 Section 2 - Rules
 
