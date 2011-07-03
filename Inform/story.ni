@@ -637,10 +637,28 @@ carry out hunting:
 					say "Despite your searches, you fail to find it.";
 				break;
 		if found is 0:
-			say "[bold type]You don't think what you[apostrophe]re looking for can be found here...[roman type]";
-			let dice be a random number from 1 to 20;
-			if dice is greater than 14:
-				Fight;
+			repeat with z running through situations:
+				if z is resolved, next;
+				if printed name of z matches the text topic understood, case insensitively:
+					say "It should be somewhere....";
+					now found is 1;
+					let dice be a random number from 1 to 20;
+					let the bonus be (( the perception of the player minus 10 ) divided by 2);
+					increase dice by bonus;
+					if dice is greater than 15:
+						say "You manage to find your way to [z]!";
+						try resolving z;
+						now dice is a random number from 1 to 20;
+						if dice is greater than 14:
+							Fight;
+					otherwise:
+						say "Despite your searches, you fail to find it.";
+					break;
+			if found is 0:
+				say "[bold type]You don't think what you[apostrophe]re looking for can be found here...[roman type]";
+				let dice be a random number from 1 to 20;
+				if dice is greater than 14:
+					Fight;
 		follow the turnpass rule;
 
 
@@ -1645,10 +1663,10 @@ To fight:
 			now needed is ( level of player plus one ) times 8;
 		if xp of player is greater than needed:
 			level up;
-		now needed is ( level of companion ) times 10;
+		now needed is ( level of companion of player ) times 10;
 		if "Good Teacher" is listed in feats of player:
-			now needed is ( level of companion ) times 6;
-		if xp of companion of player is greater than needed and level of companion is less than level of player:
+			now needed is ( level of companion of player ) times 6;
+		if xp of companion of player is greater than needed and level of companion of player is less than level of player:
 			pet level up;
 		[try looking;]
 	rule succeeds;
