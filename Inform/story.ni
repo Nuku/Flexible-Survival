@@ -1755,7 +1755,7 @@ carry out resting:
 This is the explore rule:
 	let something be 0;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if something is 0 and a random number from 1 to 20 is less than 5 plus bonus and there is an unknown fasttravel room:
+	if something is 0 and a random number from 1 to 20 is less than 5 plus bonus and there is an unknown fasttravel room and battleground is "Outside":
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
 			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
