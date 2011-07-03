@@ -333,6 +333,7 @@ title	subtable	description	toggle
 "Bunker"	--	--	location choice rule
 "Caught Outside"	--	--	location choice rule
 "Rescuer Stranded"	--	--	location choice rule
+"Forgotten"	--	--	location choice rule
 
 
 Table of Basic Combat
@@ -2110,6 +2111,8 @@ This is the location choice rule:
 		say "You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you.(Gain Spartan Diet)[line break]";
 	otherwise if title entry is "Rescuer Stranded":
 		say "You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive!(Start with no supplies, an iron man mode, can you survive?)[line break]";
+	otherwise if title entry is "Forgotten":
+		say "You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
 	say "Continue?";
 	if the player consents:
 		now looknow is 0;
@@ -2127,6 +2130,14 @@ This is the location choice rule:
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
 			increase score by 300;
+		if title entry is "Forgotten":
+			now invent of bunker is { };
+			add "cot" to invent of bunker;
+			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
+			now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
+			now the hp of doctor matt is 100;
+			remove orthas from play;
+			increase score by 600;
 	now scenario is title entry;
 	now the menu depth is 0;
 	clear the screen;
@@ -2464,6 +2475,11 @@ Doctor Matt is in Primary Lab.
 understand "Matt" as doctor matt.
 
 Instead of conversing the doctor matt:
+	if hp of doctor matt is 100:
+		say "'If you are listening to this, you are probably still in the city. My condolences. I have left behind some facilities for you. You will find they can enhance your abilities due to the nanite infection.";
+		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
+		say "'God Speed and Good Luck,' says the recording before clicking off.";
+		stop the action;
 	if hp of doctor matt is 0:
 		say "'Welcome to Trevor Labs,' says the man in the hazmat suit, 'I am Doctor Salacious, but most just call me Doctor Matt. Since I didn't hear any scuffling, I presume Orthas let you in, so you are probably not a crazy mutant.'";
 		say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn[apostrophe]t know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I[apostrophe]m not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
