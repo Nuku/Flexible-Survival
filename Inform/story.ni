@@ -1590,7 +1590,7 @@ This is the player attack rule:
 			say "You gain 1 x [loot entry]!";
 			add loot entry to invent of player;
 		decrease the menu depth by 1;
-		wait for any key;
+		if ok is 1, wait for any key;
 	clear the screen;
 	[if the menu depth is greater than 0, carry out the displaying activity;]
 	[if the menu depth is 0, try looking;]
@@ -2098,7 +2098,7 @@ To showstats (x - Person):
 		otherwise:
 			say "The child remains as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to a young adult, somewhere between 18 and 22 years of age, both in physical size and apparent emotional and mental development.";
 	if the player is not lonely:
-		say "Accompanying you, you have a [companion of player]. [initial appearance of companion of player]";
+		say "Accompanying you, you have a level [level of companion of player] [companion of player]. [initial appearance of companion of player]";
 	now looknow is 0;
 	rule succeeds;
  
