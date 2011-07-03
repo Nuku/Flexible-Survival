@@ -14,7 +14,7 @@ Include Version 4 of Menus by Emily Short.
 
 The release number is 36.
 The story creation year is 2010.
-The maximum score is 1800.
+The maximum score is 2500.
 
 Table of Basic Help Options (continued)
 title	description 
@@ -2369,19 +2369,19 @@ When play ends:
 		increase score by 10;
 	say "In Scenario: [scenario], You have achieved a score of [score].";
 	say "This rates you as ";
-	if score is less than 40:
+	if score is less than 60:
 		say "inanimate pool toy.";
-	otherwise if the score is less than 80:
+	otherwise if the score is less than 120:
 		say "small barking dog.";
-	otherwise if the score is less than 160:
+	otherwise if the score is less than 240:
 		say "Talented Child";
-	otherwise if the score is less than 320:
-		say "College Student";
 	otherwise if the score is less than 500:
+		say "College Student";
+	otherwise if the score is less than 700:
 		say "Grad Student";
-	otherwise if the score is less than 760:
+	otherwise if the score is less than 960:
 		say "Professor";
-	otherwise if the score is less than 1000:
+	otherwise if the score is less than 1400:
 		say "Grand Scholar";
 	otherwise:
 		say "Ultimate Master";
