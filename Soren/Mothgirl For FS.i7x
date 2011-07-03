@@ -10,7 +10,7 @@ Section 1 - Monster Responses
 Mothdefeat is a number that varies.
 to say Moth attack:
 	if Mothdefeat is 0: [ first time losing to a moth ]
-		say "The Mothgirl would smile, rubbing her hands together collecting a small amount of light blue dust from her hands into her palm. She would blow the dust into your face gently, making you feel tipsy and aroused. The moth would look at your dreary state and rub her breasts onto your [Breast size of player] breasts and kisses you lightly on the lips before departing, whispering in your ear 'enjoy' as she leaves you in your state";
+		say "The Mothgirl smiles, rubbing her hands together collecting a small amount of light blue dust from her hands into her palm. She blows the dust into your face gently, making you feel tipsy and aroused. The moth  looks at your dreary state and rub her breasts onto your [Breast size of player] breasts and kisses you lightly on the lips before departing, whispering in your ear 'enjoy' as she leaves you in your state";
 		increase breast size of player by 1;
 		increase charisma of player by 1;
 		decrease intelligence of player by 1;
