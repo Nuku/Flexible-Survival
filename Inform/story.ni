@@ -89,6 +89,10 @@ The player has a list of text called feats.
 A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
+flag is a kind of thing.
+A flag has a list of text called infections.
+A flag can be banned. A flag is usually not banned.
+Furry is a flag.
 Grab Object is a kind of thing.
 A person has a grab object called weapon object.
 A armament is a kind of grab object.
@@ -483,6 +487,8 @@ To say felitaur tempt:
 	say "All at once, everyone is climaxing. In you, around you, shuddering squeals of rodent delight before you feel your own body shudder in powerful release. As darkness claims you, you can see the den getting smaller, the original rat dragging you away.";
 	
 
+
+
 Table of random critters
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 "Slut Rat"	"[one of]She slices at your face with a sudden swipe of her claws.[or]She draws you close with a loud rumble and presses your lips to a breast, holding you still until you start drinking from her, intense warmth rushing through your body, though you are left drained and tired as well.[if cock width of player is greater than 0] Your balls sing with pleasure as they grow heavier by the moment![otherwise] You squirm in shock as you feel a new set of balls erupt from your body![end if][slut rat growth] [or]Her tail loops around and tickles at you between the legs even as she shoves you back against the ground.[or]She suddenly turns, and a flying furry breasts crashes into you painfully.[at random]"	"She gives a final hiss of defiance, then scurries away out of sight, leaving you with an image of her perfect rump and twitching tail to remind her by."	"[slut rat victory]"	"Towering over most, a tall intimidating wall of fur and leather. It appears female at first glance. Piercing its large directed ears are one ring a piece, one a goldish hue, and another silverish shade. It's covered from top to bottom in ebony black fur, that is, where clothing is not apparent. Her eyes are the same black shade as her hair, the left eye having a scar that runs an inch above downwards in a slicing motion to an inch or two below.
@@ -536,6 +542,8 @@ Include Kangaroo by batroo.
 Include Feral Sea Dragon by Tunalord Sefont.
 Include Pets by Nuku Valente.
 
+
+
 understand the command "feed" as something new.
 
 
@@ -557,6 +565,13 @@ left	central	right
 
 
 Book 6 - Rules, Obey them!
+
+Section 1 - Flags
+
+The infections of furry is { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd"  };
+
+
+Section 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
@@ -2254,6 +2269,21 @@ When play begins:
 	clear the screen;
 	say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
 	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
+	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
+	if the player consents:
+		say "[list of flags]";
+		repeat with n running through flags:
+			say "Would you like to ban [N] flagged creatures from the game?";
+			if the player consents:
+				now n is banned;
+	repeat through the table of random critters:
+		let bad be 0;
+		repeat with n running through all banned flags:
+			if name entry is listed in infections of n:
+				now bad is 1;
+		if bad is 1:
+			blank out the whole row;
+
 	[try looking.]
 
 This is the finish stats rule:
