@@ -16,12 +16,12 @@ to say dragon attack:
 	wait for any key;
 	if cunts of player is greater than 0:
 		say “The dragon nuzzles and licks at your [cunt size desc of player] pussy.  Shocking you out of your fear of being eaten.  It suddenly dips the forked end of its tongue inside you.  Seemingly checking for something.  Its thick and slimy drool beginning to coat your lower half.";
-	wait for any key;
-	if cunt length of player is less than 12:
-		say "The beast huffs and rips it tongue free of your cunt. Then he repositions himself over you. His massive cock looks as if it could tear you apart! The  spade shaped tip presses against your entrance for a moment before the beast suddenly begins to piss IN you.  You womb filling up in seconds before the beast drops its head near yours.  It remains motionless for a few seconds before speaking in a strange language that you can somehow understand! ‘You will be mine.’  He then backs away from you and gives you a knowing look before it rushes back into the water.";
 		wait for any key;
-	otherwise if cunt length of player is greater than 11:
-		say “The dragon lets out an airy hiss.  Its breath reeking of decayed fish.  Then leisurely drawing its tongue free.  Savoring the flavor of your fluids he lifts his head and positions his cock.  The massive shaft gives you a feeling of unease.  The spaded tip pierces your tunnel.    He pushes you over the edge over and over.  His pace not even hinting at his peak.  You begin to welcome his thrusting and begin to think of him as an owner… and you his property.  Suddenly your belly bulges as his load is fired into you. You feel cum squirting out around his massive member.  You can[apostrophe]t help but sample some as he withdraws.  You lose yourself in the potent musk.  Your unsure how long you were unaware of your surroundings but he is now gone. [impregchance]”;
+		if cunt length of player is less than 12:
+			say "The beast huffs and rips it tongue free of your cunt. Then he repositions himself over you. His massive cock looks as if it could tear you apart! The  spade shaped tip presses against your entrance for a moment before the beast suddenly begins to piss IN you.  You womb filling up in seconds before the beast drops its head near yours.  It remains motionless for a few seconds before speaking in a strange language that you can somehow understand! ‘You will be mine.’  He then backs away from you and gives you a knowing look before it rushes back into the water.";
+			wait for any key;
+		otherwise:
+			say “The dragon lets out an airy hiss.  Its breath reeking of decayed fish.  Then leisurely drawing its tongue free.  Savoring the flavor of your fluids he lifts his head and positions his cock.  The massive shaft gives you a feeling of unease.  The spaded tip pierces your tunnel.    He pushes you over the edge over and over.  His pace not even hinting at his peak.  You begin to welcome his thrusting and begin to think of him as an owner… and you his property.  Suddenly your belly bulges as his load is fired into you. You feel cum squirting out around his massive member.  You can[apostrophe]t help but sample some as he withdraws.  You lose yourself in the potent musk.  Your unsure how long you were unaware of your surroundings but he is now gone. [impregchance]”;
 	otherwise:
 		say "The dragon gives a sudden hiss before stomping you into the sand and bolting off back to the water.";
 
