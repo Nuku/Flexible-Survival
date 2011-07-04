@@ -2327,9 +2327,9 @@ When play begins:
 	say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
 	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
-	ban menu;
-[	if the player consents:
-		repeat with n running through flags:
+	if the player consents:
+		ban menu;
+[		repeat with n running through flags:
 			say "Would you like to ban [N] flagged creatures from the game?";
 			if the player consents:
 				now n is banned;]
