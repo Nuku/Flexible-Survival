@@ -89,9 +89,6 @@ The player has a list of text called feats.
 A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
-flag is a kind of thing.
-A flag has a list of text called infections.
-A flag can be banned. A flag is usually not banned.
 Grab Object is a kind of thing.
 A person has a grab object called weapon object.
 A armament is a kind of grab object.
@@ -566,8 +563,12 @@ left	central	right
 
 Book 6 - Rules, Obey them!
 
-Section 1 - Flags
+Part 1 - Flags
 
+flag is a kind of thing.
+A flag has a list of text called infections.
+A flag has a list of situations called badspots.
+A flag can be banned. A flag is usually not banned.
 Furry is a flag.
 The infections of furry is { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd"  };
 Guy is a flag.
@@ -577,7 +578,7 @@ The infections of girl is { "Drone Wasp", "Goo Girl", "Female Husky", "black equ
 Hermaphrodite is a flag.
 The infections of hermaphrodite is { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe" };
 
-Section 2 - Rules
+Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
@@ -1145,7 +1146,7 @@ carry out conversing:
 		say "[Noun] says, '[Comment]'";
 		break;
 
-Part 1 - Item Code
+Part 3 - Item Code
 
 Understand the command "get" as something new.
 Understand the command "take" as something new.
@@ -2277,7 +2278,6 @@ When play begins:
 	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
 	if the player consents:
-		say "[list of flags]";
 		repeat with n running through flags:
 			say "Would you like to ban [N] flagged creatures from the game?";
 			if the player consents:
@@ -2289,7 +2289,14 @@ When play begins:
 				now bad is 1;
 		if bad is 1:
 			blank out the whole row;
-
+	repeat with n running through situations:
+		let bad be 0;
+		repeat with q running through all banned flags:
+			if n is listed in badspots of q:
+				say "[n] removed due to [q].";
+				now bad is 1;
+		if bad is 1:
+			now n is resolved;
 	[try looking.]
 
 This is the finish stats rule:
@@ -2542,6 +2549,10 @@ Instead of conversing the doctor matt:
 		repeat with x running through invent of player:
 			if x is "glob of goo", increase goofound by 1;
 			if x is "gryphon milk", increase milkfound by 1;
+		if female is banned:
+			now goofound is 2;
+		if hermaphrodite is banned or furry is banned:
+			now milkfound is 2;
 		if milkfound is less than 2:
 			say "'You do not have enough nutritive secretions,' he chastises.";
 			stop the action;
