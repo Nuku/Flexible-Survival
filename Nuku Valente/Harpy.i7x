@@ -20,7 +20,7 @@ to say Harpy attack:
 
 [ [Harpy loss] ]
 To say Harpy loss:
-	say "Defeated, the group of Harpys backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don[apostrophe]t be so stuck up. We could have so much fun together![or]Come back when you change your mind, we[apostrophe]ll save you some fish![at random]'";
+	say "Emitting a sudden foul curse, the young woman takes to the air, fleeing before her wounds can ground her.";
 	
 	
 Section 2 - Monster Insertion
