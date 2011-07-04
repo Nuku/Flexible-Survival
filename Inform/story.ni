@@ -635,6 +635,7 @@ carry out hunting:
 	if the number of entries in q is not 0 and found is 1:
 		sort Q in random order;
 		repeat with Z running through q:
+			choose row z from the table of random critters;
 			if there is a name entry:
 				now monster is Z;
 			otherwise:
