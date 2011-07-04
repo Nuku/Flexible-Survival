@@ -607,6 +607,7 @@ carry out hunting:
 	let found be 0;
 	repeat with X running from 1 to number of rows in table of random critters:
 		choose row X from the table of random critters;
+		if there is no area entry, next;
 		if area entry matches the text battleground:
 			if name entry matches the text topic understood, case insensitively:
 				add x to q;
@@ -633,7 +634,10 @@ carry out hunting:
 	if the number of entries in q is not 0 and found is 1:
 		sort Q in random order;
 		repeat with Z running through q:
-			now monster is Z;
+			if there is a name entry:
+				now monster is Z;
+			otherwise:
+				next;
 			break;
 		choose row monster from the table of random critters;
 		now monsterhp is hp entry;
@@ -2297,6 +2301,7 @@ When play begins:
 				now bad is 1;
 		if bad is 1:
 			now n is resolved;
+	sort table of random critters in lev order;
 	[try looking.]
 
 This is the finish stats rule:
