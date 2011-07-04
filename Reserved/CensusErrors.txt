@@ -1,1 +1,2 @@
 Story.ni by Inform - title contains a full stop<br>
+Harpy.i7x by Nuku Valente - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is 'Otter by Nuku Valente')<br>
