@@ -104,7 +104,7 @@ When Play begins:
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
 
 when play ends:
-	if bodyname is "spidergirl":
+	if bodyname of player is "spidergirl":
 		if humanity of player is less than 10:
 			say "Your predatory instincts take over and you scurry off into the ruins of the city, drinking the blood of other outcasts and forcing them to bear your eggs. It is a rough existence, but eventually you acquire a sort of 'harem' of lovers who enjoy the rough imprisonment you offer...";
 		otherwise:
