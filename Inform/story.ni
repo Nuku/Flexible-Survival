@@ -932,6 +932,7 @@ Include Food and Water Finding by Nuku Valente.
 Include Random German Shepherd For Fs by Telanda Softpaw.
 Include Hungry Boar Man by Hiccup.
 Include Messy Pig for Fs by anonymous.
+Include Elf by Nuku Valente.
 Include Feats by Nuku Valente.
 
 to delete (X - a grab object):
