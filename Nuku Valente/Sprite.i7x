@@ -59,7 +59,7 @@ When Play begins:
 	now skin entry is "flawless human";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]human[or]uncut[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "your face reforms as you gain a short Spriteish snout and round [skin of player] ears."; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "your ears become long and elfin, pudgy and youthful, you could almost pass for human."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you shrink dramatically and swiftly. Your form becoms more female looking as curves develop. Behind you, dragonfly like wings extend outwards, buzzing excitedly for a moment before folding neatly against your reduced form."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it becomes soft and supple, perfect human flesh."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "your rump becomes round and grabbable."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]

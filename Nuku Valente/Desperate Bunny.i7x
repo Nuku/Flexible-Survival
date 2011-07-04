@@ -6,6 +6,10 @@ Section 1 - The Situation
 
 Needy Rabbit Girl is a situation.
 
+when play begins:
+	add Needy Rabbit Girl to badspots of girl;
+	add Needy Rabbit Girl to badspots of furry;
+
 NGRP is a number that varies.
 Lastrabbitfuck is a number that varies. Lastrabbitfuck is usually 250.
 rabbitmulticock is a number that varies. rabbitmulticock is usually 0.

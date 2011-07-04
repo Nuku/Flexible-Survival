@@ -89,9 +89,6 @@ The player has a list of text called feats.
 A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
-flag is a kind of thing.
-A flag has a list of text called infections.
-A flag can be banned. A flag is usually not banned.
 Grab Object is a kind of thing.
 A person has a grab object called weapon object.
 A armament is a kind of grab object.
@@ -349,7 +346,7 @@ title	subtable	description	toggle
 "Your HP: [hp of player]/[maxhp of player] [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters]"	--	"I am fit as a fiddle"	--
 
 Table of combat items
-title	subtable	description	toggle
+title(indexed text)	subtable	description	toggle
 "Nothing"	--	"Nothing here."	combat item rule
 with 100 blank rows.
 
@@ -566,18 +563,23 @@ left	central	right
 
 Book 6 - Rules, Obey them!
 
-Section 1 - Flags
+Part 1 - Flags
 
+flag is a kind of thing.
+A flag has a list of text called infections.
+A flag has a list of situations called badspots.
+A flag can be banned. A flag is usually not banned.
 Furry is a flag.
-The infections of furry is { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd"  };
 Guy is a flag.
-The infections of guy is { "Naga", "Latex Fox", "black equinoid", "skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Wyvern", "Cock Cannon", "Bear", "sea otter", "Ash Drakenoid", "feral sea dragon", "German Shepherd", "feline" };
 Girl is a flag.
-The infections of girl is { "Drone Wasp", "Goo Girl", "Female Husky", "black equinoid", "lizard girl", "felinoid", "skunk", "sea otter", "Tentacle Horror", "spidergirl", "Mothgirl", "red kangaroo", "city sprite" };
 Hermaphrodite is a flag.
-The infections of hermaphrodite is { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe" };
+when play begins:
+	add { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd"  } to infections of furry;
+	add { "Naga", "Latex Fox", "black equinoid", "skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Wyvern", "Cock Cannon", "Bear", "sea otter", "Ash Drakenoid", "feral sea dragon", "German Shepherd", "feline" } to infections of guy;
+	add { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid" } to infections of hermaphrodite;
+	add { "Drone Wasp", "Goo Girl", "Female Husky", "black equinoid", "lizard girl", "felinoid", "skunk", "sea otter", "Tentacle Horror", "spidergirl", "Mothgirl", "red kangaroo", "city sprite" } to infections of girl;
 
-Section 2 - Rules
+Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
@@ -606,6 +608,7 @@ carry out hunting:
 	let found be 0;
 	repeat with X running from 1 to number of rows in table of random critters:
 		choose row X from the table of random critters;
+		if there is no area entry, next;
 		if area entry matches the text battleground:
 			if name entry matches the text topic understood, case insensitively:
 				add x to q;
@@ -632,7 +635,11 @@ carry out hunting:
 	if the number of entries in q is not 0 and found is 1:
 		sort Q in random order;
 		repeat with Z running through q:
-			now monster is Z;
+			choose row z from the table of random critters;
+			if there is a name entry:
+				now monster is Z;
+			otherwise:
+				next;
 			break;
 		choose row monster from the table of random critters;
 		now monsterhp is hp entry;
@@ -683,6 +690,39 @@ carry out hunting:
 					Fight;
 		follow the turnpass rule;
 
+to ban menu:
+	blank out the whole of table of combat items;
+	let X be 1;
+	repeat with Q running through flags:
+		choose a blank row in table of combat items;
+		now title entry is printed name of Q;
+		now description entry is printed name of Q;
+		if q is banned:
+			now title entry is "BANNED";
+		now toggle entry is flag ban rule;
+[	let z be the number of rows in table of combat items;
+	say "[Z].";]
+	if there is no title in row 1 of table of combat items:
+		say "There are no flags!";
+		wait for any key;
+	otherwise:
+		change the current menu to table of Combat Items;
+		carry out the displaying activity;
+
+This is the flag ban rule:
+	choose row Current Menu Selection in table of combat items;
+	let nam be description entry;
+	let z be furry;
+	repeat with y running through flags:
+		if nam matches the text printed name of y:
+			now z is y;
+			break;
+	if z is banned:
+		now z is not banned;
+	otherwise:
+		now z is banned;
+	decrease the menu depth by 1;
+	ban menu;
 
 This is the combat item rule:
 	blank out the whole of table of combat items;
@@ -924,6 +964,8 @@ Include Hyper Squirrel by Nuku Valente.
 Include Food and Water Finding by Nuku Valente.
 Include Random German Shepherd For Fs by Telanda Softpaw.
 Include Hungry Boar Man by Hiccup.
+Include Messy Pig for Fs by anonymous.
+Include Elf by Nuku Valente.
 Include Feats by Nuku Valente.
 
 to delete (X - a grab object):
@@ -1045,7 +1087,8 @@ To process (X - a grab object):
 			increase morale of player by 62;
 			if morale of player is greater than 0, now morale of player is 0;
 			say "After drinking something, you feel better.";
-		now monster is a random number from 1 to number of rows in the table of random critters;
+		sort table of random critters in random order;
+		now monster is 1;
 		if "Iron Stomach" is not listed in feats of player, infect;
 	if x is soda:
 		if thirst of player is greater than 0:
@@ -1145,7 +1188,7 @@ carry out conversing:
 		say "[Noun] says, '[Comment]'";
 		break;
 
-Part 1 - Item Code
+Part 3 - Item Code
 
 Understand the command "get" as something new.
 Understand the command "take" as something new.
@@ -1310,6 +1353,9 @@ This is the sex change rule:
 		if cunt length of player is less than 1 or cunt width of player is less than 1:
 			say "With a sickening noise, you cease to be female all together.";
 			now the cunts of the player is 0;
+		if cunts of the player is greater than 1 and a random chance of 1 in 3 succeeds:
+			say "An odd wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] have vanished!";
+			decrease cunts of player by 1;
 	if ( the sex entry is "Female" or the sex entry is "Both") and cunt length of player is less than cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		increase cunt length of player by 1;
 		increase cunt length of player by ( cunt length entry minus cunt length of player ) divided by 3;
@@ -1337,6 +1383,9 @@ This is the sex change rule:
 		if cock length of player is less than 1 or cock width of player is less than 1:
 			say "You barely have time to give a whimper as you cease to be a male.";
 			now the cocks of the player is 0;
+		if cocks of the player is greater than 1 and a random chance of 1 in 3 succeeds:
+			say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
+			decrease cocks of player by 1;
 
 Retaliating is an action applying to nothing.
 
@@ -1810,6 +1859,8 @@ check exploring:
 	if location of player is not fasttravel, say "You can not explore from here." instead;
 
 carry out exploring:
+	let l be a random visible dangerous door;
+	if l is not nothing, now battleground is the marea of l;
 	follow the explore rule;
 
 This is the turnpass rule:
@@ -2159,7 +2210,7 @@ This is the location choice rule:
 			now the hp of doctor matt is 100;
 			remove orthas from play;
 			increase score by 600;
-			extend game by 64;
+			extend game by 240;
 	now scenario is title entry;
 	now the menu depth is 0;
 	clear the screen;
@@ -2277,11 +2328,11 @@ When play begins:
 	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
 	if the player consents:
-		say "[list of flags]";
-		repeat with n running through flags:
+		ban menu;
+[		repeat with n running through flags:
 			say "Would you like to ban [N] flagged creatures from the game?";
 			if the player consents:
-				now n is banned;
+				now n is banned;]
 	repeat through the table of random critters:
 		let bad be 0;
 		repeat with n running through all banned flags:
@@ -2289,7 +2340,15 @@ When play begins:
 				now bad is 1;
 		if bad is 1:
 			blank out the whole row;
-
+	repeat with n running through situations:
+		let bad be 0;
+		repeat with q running through all banned flags:
+			if n is listed in badspots of q:
+				say "[n] removed due to [q].";
+				now bad is 1;
+		if bad is 1:
+			now n is resolved;
+	sort table of random critters in lev order;
 	[try looking.]
 
 This is the finish stats rule:
@@ -2316,23 +2375,47 @@ This is the finish stats rule:
 		decrease menu depth by 1;
 		rule succeeds;
 	if Current menu selection is 1:
-		increase strength of player by 5;
 		say "Your strength is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase strength of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 2:
-		increase dexterity of player by 5;
 		say "Your dexterity is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase dexterity of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 3:
-		increase Stamina of player by 5;
-		say "Your Stamina is your specialty.";
+		say "Your stamina is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase stamina of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 4:
-		increase charisma of player by 5;
 		say "Your charisma is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase charisma of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 5:
-		increase perception of player by 5;
 		say "Your perception is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase perception of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 6:
-		increase intelligence of player by 5;
 		say "Your intelligence is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase intelligence of player by 5;
+		otherwise:
+			rule fails;
 	now started is 1;
 	say "You have decided your physical talents, but are you a man or a woman?";
 	wait for any key;
@@ -2542,6 +2625,10 @@ Instead of conversing the doctor matt:
 		repeat with x running through invent of player:
 			if x is "glob of goo", increase goofound by 1;
 			if x is "gryphon milk", increase milkfound by 1;
+		if female is banned:
+			now goofound is 2;
+		if hermaphrodite is banned or furry is banned:
+			now milkfound is 2;
 		if milkfound is less than 2:
 			say "'You do not have enough nutritive secretions,' he chastises.";
 			stop the action;
