@@ -2331,23 +2331,47 @@ This is the finish stats rule:
 		decrease menu depth by 1;
 		rule succeeds;
 	if Current menu selection is 1:
-		increase strength of player by 5;
 		say "Your strength is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase strength of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 2:
-		increase dexterity of player by 5;
 		say "Your dexterity is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase dexterity of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 3:
-		increase Stamina of player by 5;
-		say "Your Stamina is your specialty.";
+		say "Your stamina is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase stamina of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 4:
-		increase charisma of player by 5;
 		say "Your charisma is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase charisma of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 5:
-		increase perception of player by 5;
 		say "Your perception is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase perception of player by 5;
+		otherwise:
+			rule fails;
 	if Current menu selection is 6:
-		increase intelligence of player by 5;
 		say "Your intelligence is your specialty.";
+		say "Are you sure?";
+		if the player consents:
+			increase intelligence of player by 5;
+		otherwise:
+			rule fails;
 	now started is 1;
 	say "You have decided your physical talents, but are you a man or a woman?";
 	wait for any key;
