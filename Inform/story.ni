@@ -346,7 +346,7 @@ title	subtable	description	toggle
 "Your HP: [hp of player]/[maxhp of player] [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters]"	--	"I am fit as a fiddle"	--
 
 Table of combat items
-title	subtable	description	toggle
+title(indexed text)	subtable	description	toggle
 "Nothing"	--	"Nothing here."	combat item rule
 with 100 blank rows.
 
@@ -690,6 +690,39 @@ carry out hunting:
 					Fight;
 		follow the turnpass rule;
 
+to ban menu:
+	blank out the whole of table of combat items;
+	let X be 1;
+	repeat with Q running through flags:
+		choose a blank row in table of combat items;
+		now title entry is printed name of Q;
+		now description entry is printed name of Q;
+		if q is banned:
+			now title entry is "BANNED";
+		now toggle entry is flag ban rule;
+[	let z be the number of rows in table of combat items;
+	say "[Z].";]
+	if there is no title in row 1 of table of combat items:
+		say "There are no flags!";
+		wait for any key;
+	otherwise:
+		change the current menu to table of Combat Items;
+		carry out the displaying activity;
+
+This is the flag ban rule:
+	choose row Current Menu Selection in table of combat items;
+	let nam be description entry;
+	let z be furry;
+	repeat with y running through flags:
+		if nam matches the text printed name of y:
+			now z is y;
+			break;
+	if z is banned:
+		now z is not banned;
+	otherwise:
+		now z is banned;
+	decrease the menu depth by 1;
+	ban menu;
 
 This is the combat item rule:
 	blank out the whole of table of combat items;
@@ -2294,11 +2327,12 @@ When play begins:
 	say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
 	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
-	if the player consents:
+	ban menu;
+[	if the player consents:
 		repeat with n running through flags:
 			say "Would you like to ban [N] flagged creatures from the game?";
 			if the player consents:
-				now n is banned;
+				now n is banned;]
 	repeat through the table of random critters:
 		let bad be 0;
 		repeat with n running through all banned flags:
