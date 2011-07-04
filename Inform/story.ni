@@ -2164,7 +2164,7 @@ This is the location choice rule:
 			now the hp of doctor matt is 100;
 			remove orthas from play;
 			increase score by 600;
-			extend game by 64;
+			extend game by 240;
 	now scenario is title entry;
 	now the menu depth is 0;
 	clear the screen;
