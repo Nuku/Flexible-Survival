@@ -11,33 +11,11 @@ Harpydefeat is a number that varies.
 Harpyconsent is a number that varies.
 to say Harpy attack:
 	if hp of player is greater than 0:
-		say "When you stop struggling, the Harpys squeal with joy, pressing in warmly from all directions and holding you in their loving, if lecherous, arms. You are passed from one Harpy to the next, sniffed at and licked across the face and chest along the way. Only when you[apostrophe]ve been passed to each in turn do they push you into the center, all smiling, and move to begin play in earnest.";
+		say "She swoops down and grabs you up, pressing her lips to yours. Peace sweeps through this form even as your heart hammers in your chest. You pull her tight as she draws you closer, swept away in the fierce exchange. You are unsure how long you remain like that, but eventually she sets you down and shakes her head, 'We will meet again, I hope.' and she takes off.";
 		now Harpyconsent is 1;
 		wait for any key;
-	if a random chance of 1 in 2 succeeds:
-		say "An Harpy swims up behind you and grabs you at the sides, pulling you back against a stiff shaft. He nuzzles into your left ear, then right, as he snuggles up against your back and works the pointed tip of his bestial member into your back door, slowly working it into your body as his friends bark and cheer their encouragement. He pulls you back firmly, sinking several inches more of himself into you, the pain giving way to nanite induced pleasure that echoes outwards from where he stretches you lustfully.";
-		wait for any key;
-	if a random chance of 1 in 2 succeeds and cunts of player is greater than 0:
-		say "An Harpy nuzzles into your throat as he presses himself against your front a moment. He grabs for your hips, then leans back, pressing his eager pointed tool against your nethers, easing it into you with a few sharp thrusts. He begins to piston against you like a machine, eyes closed and chest heaving with heavy gulps of air as he makes wild love. The rough loving is painful only for the first moment, giving way to erotic waves of tingling pleasure that run up and down your belly, centered on your ecstatic cunt, trembling tightly around the penetrating pole of that eager creature.[impregchance]";
-		wait for any key;
-	if a random chance of 1 in 2 succeeds:
-		if a random chance of 1 in 2 succeeds:
-			say "An Harpy suddenly clambers up on top of you, somehow avoiding plunging you into the waves as it settles down on your head and perches. It turns out to be a she, the heated scent of her arroused cunt close to your nose as she curls to look down at you from above, grinning.";
-		otherwise:
-			say "Soft pricks are felt as Harpy paws grab you and pull you down. Narrowly avoiding plunging you, an Harpy scales you and perches on your head with a happy bark, his balls draping over your face to obscure your vision a moment before he laughs and moves a bit.";
-		say "The Harpy on your head leans back a little, balancing quite well as they begin to pleasure themselves with throaty groans and loud barks, sharing in the pleasure of the moment.";
-		wait for any key;
-	if a random chance of 1 in 2 succeeds and cocks of player is greater than 0:
-		if cock length of player is greater than 12:
-			say "Too large for her to ride the traditional way, she goes for the alternative, grabbing at its huge length and grinding her entire front along it, stroking it with her slender breasts and thick waterproofed hide. Her arms warp around it as she works you closer to climax.";
-			if cocks of player is greater than 1:
-				say "Not to let your other organs go to waste, her tail snags around another, loosely stroking at it in time with her energetic body massage against your primary dick, coaxing you towards a wild release.";
-		otherwise:
-			say "A sleek female Harpy moves up against you, grabbing for your [cock of player] dick and squeezing lightly as she looks into your eyes. She slips in closer, guiding your cock into her needy sex, sinking wetly into the snug passage as she presses her groin down to consume it entirely. She thrusts in rapid little motions that thrashes the water with bubbles swirling around you in the motions. Strange warmth builds in your cock as it plunges deeper and deeper into her willing passage, pleasure building in your body in the motions.";
-			if cocks of player is greater than 1:
-				say "Noticing you have extra male meat, another female swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their sopping wet cunts, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
-			wait for any key;
-		say "Time is lost as the Harpys have their way with you. Frantic acts of filling and being filled eventually spill over to all members of the raft have their turn reaching their complete satisfaction, taking you along for the ride. By the time it is over, you are soaked in sweat and several other fluids, and are left on the sandy beach to recover, sore, but still buzzing with a wicked afterglow.";
+	otherwise:
+		say "She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her fustration, she flaps her wings and retreats.";
 		wait for any key;
 
 [ [Harpy loss] ]
@@ -97,15 +75,12 @@ When Play begins:
 when play ends:
 	if bodyname of player is "harpy":
 		if humanity of player is less than 10:
-			if Harpyconsent is 1:
-				say "You return to the raft of Harpys that dominates your throats, throwing yourself into the water and swimming out into their eager grasps. Without further worry for the world, you live with them, fucking, being fucked, hunting for tasty fishes and clams. You find you have little complaint over your new, simple, life.";
-			otherwise:
-				say "You feel an overwhelming desire to enter water, but try to resist against it. You end up at the mall, shivering and cold. The rats take you inside, and feed you, but as soon as you spot their fountain, you dive in. You become something of a permanent fixture there, but they don't really seem to mind your presence. You become a sort of mascot for them, not to mention a desperation date whenever a rat is feeling particularly lonely.";
+			say "You take flight and are rejoined with other harpies high in a secluded mountain. You are content with one another except when heat strikes. Once a year, each of you feels a 'special' need that cannot be met by your sisters and you descend on the small city below, plucking up a male to satisfy you and give you an egg to care for, until the next year. Most men prove to be pliable enough, and a few even stay, helping to tend to the aeries while the females do business and hunt.";
 		otherwise:
 			if Harpyconsent is 1:
-				say "As the rescue arrives, you direct the military back out to the beach. With eager waves, you coax your friends up and all get rescued together, despite some initial misgivings by your raft mates. In time, the Harpys grow accostomed to civilized living, mostly, working as life guards for a wide strip of beach. After hours, you fill the waves with the sounds of lust and love.";
+				say "You are rescued and taken back to civilization. Though you greatly enjoy having access to flowing water and easy food, you never forget the tingle of her lips on your own. Eventually, driven by longing, you take flight back to that great city, and eventually find her. Convincing her to leave with you would be a whole other adventure...";
 			otherwise:
-				say "You are taken back to civilization, but find that, as an Harpy, you have a base need to be around water. You secure a job working at a city pool, where your aquatic skills come in handy, for rescues and training. You become a swim instructor for the city and remain so for the rest of your days, eagerly pressing your smooth form through the water.";
+				say "Adjusting to life as a harpy takes some getting use to. You find that a good perch works better than a couch, and your diet has a lot more nuts and berries than your old diet ever had. Still, you're mostly human, and getting by proves easy enough for such a young, pretty, looking thing.";
 
 			
 
