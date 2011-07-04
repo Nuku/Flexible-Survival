@@ -1819,6 +1819,8 @@ check exploring:
 	if location of player is not fasttravel, say "You can not explore from here." instead;
 
 carry out exploring:
+	let l be a random visible dangerous door;
+	if l is not nothing, now battleground is the marea of l;
 	follow the explore rule;
 
 This is the turnpass rule:
