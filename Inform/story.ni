@@ -1050,7 +1050,8 @@ To process (X - a grab object):
 			increase morale of player by 62;
 			if morale of player is greater than 0, now morale of player is 0;
 			say "After drinking something, you feel better.";
-		now monster is a random number from 1 to number of rows in the table of random critters;
+		sort table of random critters in random order;
+		now monster is 1;
 		if "Iron Stomach" is not listed in feats of player, infect;
 	if x is soda:
 		if thirst of player is greater than 0:
