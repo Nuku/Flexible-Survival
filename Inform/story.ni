@@ -1319,6 +1319,9 @@ This is the sex change rule:
 		if cunt length of player is less than 1 or cunt width of player is less than 1:
 			say "With a sickening noise, you cease to be female all together.";
 			now the cunts of the player is 0;
+		if cunts of the player is greater than 1 and a random chance of 1 in 3 succeeds:
+			say "An odd wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] have vanished!";
+			decrease cunts of player by 1;
 	if ( the sex entry is "Female" or the sex entry is "Both") and cunt length of player is less than cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		increase cunt length of player by 1;
 		increase cunt length of player by ( cunt length entry minus cunt length of player ) divided by 3;
@@ -1346,6 +1349,9 @@ This is the sex change rule:
 		if cock length of player is less than 1 or cock width of player is less than 1:
 			say "You barely have time to give a whimper as you cease to be a male.";
 			now the cocks of the player is 0;
+		if cocks of the player is greater than 1 and a random chance of 1 in 3 succeeds:
+			say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
+			decrease cocks of player by 1;
 
 Retaliating is an action applying to nothing.
 
