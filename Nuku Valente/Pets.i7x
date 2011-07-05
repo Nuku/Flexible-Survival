@@ -21,7 +21,7 @@ carry out dismissing:
 	if player is lonely:
 		say "There is no pet around to dismiss.";
 	otherwise:
-		now pet of player is nullpet;
+		now companion of player is nullpet;
 		say "You send your pet away.";
 
 Calling is an action applying to one thing.
