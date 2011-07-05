@@ -46,6 +46,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
+	add "Cute Chinchilla Woman" to infections of girl;
 	now name entry is "Cute Chinchilla Woman"; [Name of your new Monster]
 	now attack entry is "[one of]She runs swiftly between your legs causing you lose your balance falling back into the ground.[or]With blinding swiftness she gives your ankle a huge chomp![or]She leaps suddenly at you giving your face a swipe with her tiny claws![or]She flails franticly kicking dirt and sharp rocks in all directions ouch![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "The little ball of fury fluff is almost defeated!  Giving a loud squeak she whirls around suddenly bolting on all fours as fast as her little paws will take her to the nearest underbrush, leaving a huge dust cloud in her wake."; [ Text or say command used when Monster is defeated.]
