@@ -554,6 +554,7 @@ Include otter by Nuku Valente.
 Include Ash Drakenoid by Sweraptor.
 Include Kangaroo by batroo.
 Include Feral Sea Dragon by Tunalord Sefont.
+Include Feral Sea Dragoness by Tunalord Sefont.
 Include Pets by Nuku Valente.
 Include sprite by Nuku Valente.
 Include Harpy by Nuku Valente.
