@@ -585,8 +585,8 @@ when play begins:
 	add { "Awesome", "Cock Cannon" } to infections of humorous;
 	add { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd", "Cute Chinchilla Woman", "feral sea dragoness"  } to infections of furry;
 	add { "Naga", "Latex Fox", "skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Wyvern", "Cock Cannon", "sea otter", "Ash Drakenoid", "feral sea dragon", "German Shepherd", "feline", "Felinoid" } to infections of guy;
-	add { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman" } to infections of hermaphrodite;
-	add { "Drone Wasp", "Goo Girl", "Female Husky", "black equinoid", "lizard girl", "felinoid", "skunk", "sea otter", "Tentacle Horror", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "Pit bull", "feral sea dragoness" } to infections of girl;
+	add { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "mothgirl" } to infections of hermaphrodite;
+	add { "Drone Wasp", "Goo Girl", "Female Husky", "black equinoid", "lizard girl", "felinoid", "skunk", "sea otter", "Tentacle Horror", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "Pit bull", "feral sea dragoness", "Bovine" } to infections of girl;
 
 Part 2 - Rules
 
