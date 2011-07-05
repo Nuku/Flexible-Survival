@@ -86,7 +86,7 @@ When Play begins:
 	now lootchance entry is 60;		[ Chance of loot dropping 0-100 ]
 
 when play ends:
-	if bodyname is "Cute Chinchilla Girl":
+	if bodyname is "Cute Chinchilla Woman":
 		if humanity of player is less than 10:
 			say "Following your inner needs, you seek out a soft grassy field and even find other chinchillas.  You spend a great deal of time hunting for food and hiding from the larger predators, when you aren't distracted by trying out the unusual sexual antics of your chinchilla bretheren that is.";
 		otherwise:
