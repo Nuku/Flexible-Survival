@@ -13,29 +13,29 @@ to say chinchilla attack:
 		say "The cute little ball of fluff gives a high pitched chitter as she triamphantly jumps on your chest, her little plump chinchilla paws sinking gently into your chestflesh.  She stretches up gently giving you a view of her many small breasts lining all the way down her front to the top of a tight and still slightly human chinchilla sex.  'Honey I'm much too fast for you to catch you silly thing,' twitching her tail and tickling you down your belly. Looking at you longingly with soft green eyes, she takes hold of your chin and gives you a long deep kiss.  Her little whiskers tickling your face, sending a long strong heat down your throat.  'Mmm.. that was nice honey she says leaping from your chest, maybe I'll find you again when you are more suitable for some real fun!'  The little chinchilla squeaks before quickly scampering away'";
 		now chinchilladefeat is 1;
 	otherwise:
-		if chinchilladefeat is > 0: [ Prefer female action]
+		if chinchilladefeat > 0: [ Prefer female action]
 			if cunts of player > 0:
 				if cunt length of player is less than 15 and cunt width of player is less than 25:
 					say "'Still too slow for me! The little chinchilla chitters scampering up to you.  She stands giving you a bit of a seductive pose her many breasts wobbling slightly, before abruptly pouncing you to the ground.  Suddenly your face is filled with swollen chinchilla cunt, hot and swollen dripping with honey.   'Lick' She demands digging her small claws into your chest softly.  Her juice sends tingles down your tongue and you quickly find yourself lapping and carressing the dribbling snatch with gusto.  The chinchilla girl squeals in delight!  Moaning and grinding against your face, the tight mound swelling and growing visibly before your eyes, allowing your tongue to explore further. Her many breasts swell slightly,gently starting to dribble milk along your torso, running over your sides, as she lets out a triamphant 'Squeee!'  Soaking your face and neck in the process, sending shockwaves of tingling heat down your body.  She gently pops free of your face, sticky juices still connecting the slightly as they dribble down your chin. 'Mmm... That was good honey let's play again soon!'  She jumps from your chest fluffs and shakes herself cutely before retreating into the brush.";
 					increase cunt width of player by 3;
-					increase cunt lenght of player by 2;
+					increase cunt length of player by 2;
 					increase libido of player by 15;
 					increase breasts of player by 2;
 				otherwise:
-				if chinchilladefeat is > 0: [ Prefer female action]
-			        if cunts of player > 0:
-				if cunt length of player is more than 15 and cunt width of player is more than 25 and libido of player is more than 50:
-					say "Wasting no time in pouncing you down, the chinchilla girl looks at [cunt size desc of player] with big glassy eyes.  'ooohhh! That looks perfect!  She moves downwards dragging her nipples across your [body description of player], appearing to plump slightly at the stimulation. The sly little fuzzball kneads gently at your huge petal lips with her huge plump hindpaws and tiny front ones expertly, like it was a huge ball of dough. rubbing her own large glistening sex along it.  You watch with curiousity as she licks her little chops giving a very sly almost sneaky look.   Suddenly the little petite rodent bends her ears back and with and enormous slurrrrk! stuffs her head forwards into the swollen petals.  You let out a long sensual moan as sparks dance in front of your eyes, as your leaking swollen sex betrays you pulliing more and more of the plump little fuzzball inwards.   Two by two her breasts pop inwards till all that is left is her huge plump thrashing paws, which are quickly englufed and pulled within.  You let out a sigh as your pussy closes a bit the last long piece of her fluffy little tail pulling in with a slurp like a long string of spegetti. You can feel her little paw and nipple tips rubbing around your senstive womb pulling wave after wave of little orgasms.  Followed by one of the most mind blowing ones you have ever had, juices explode from your sex and at the same time manage to eject your now sopping wet occupant. [impregchance] The little chinchilla girl squeals happily, rolling on her back and curling her big soft paws, rubbing what looks to be a bit of a swollen tummy.  Her sex dripping with what looks like cum, wondering how that is possible. 'That was lots of fun! Lets do it again sometime!,' she giggles before scurring away into the brush.";
-					increase cunt width of player by 3;
-					increase cunt lenght of player by 2;
-					increase libido of player by 15;
-					increase breasts of player by 2;
+					if chinchilladefeat > 0: [ Prefer female action]
+						if cunts of player > 0:
+							if cunt length of player is greater than 15 and cunt width of player is greater than 25 and libido of player is greater than 50:
+								say "Wasting no time in pouncing you down, the chinchilla girl looks at [cunt size desc of player] with big glassy eyes.  'ooohhh! That looks perfect!  She moves downwards dragging her nipples across your [skin of player] body, appearing to plump slightly at the stimulation. The sly little fuzzball kneads gently at your huge petal lips with her huge plump hindpaws and tiny front ones expertly, like it was a huge ball of dough. rubbing her own large glistening sex along it.  You watch with curiousity as she licks her little chops giving a very sly almost sneaky look.   Suddenly the little petite rodent bends her ears back and with and enormous slurrrrk! stuffs her head forwards into the swollen petals.  You let out a long sensual moan as sparks dance in front of your eyes, as your leaking swollen sex betrays you pulliing more and more of the plump little fuzzball inwards.   Two by two her breasts pop inwards till all that is left is her huge plump thrashing paws, which are quickly englufed and pulled within.  You let out a sigh as your pussy closes a bit the last long piece of her fluffy little tail pulling in with a slurp like a long string of spegetti. You can feel her little paw and nipple tips rubbing around your senstive womb pulling wave after wave of little orgasms.  Followed by one of the most mind blowing ones you have ever had, juices explode from your sex and at the same time manage to eject your now sopping wet occupant. [impregchance] The little chinchilla girl squeals happily, rolling on her back and curling her big soft paws, rubbing what looks to be a bit of a swollen tummy.  Her sex dripping with what looks like cum, wondering how that is possible. 'That was lots of fun! Lets do it again sometime!,' she giggles before scurring away into the brush.";
+								increase cunt width of player by 3;
+								increase cunt length of player by 2;
+								increase libido of player by 15;
+								increase breasts of player by 2;
 			otherwise:
-			if chinchilladefeat is > 0:[ Prefer male action]
-			if cunts of player > 0:
-			if cunt lenght of player 
-				say "'Still too slow for me! The little chinchilla chitters scampering up to you.  She stands giving you a bit of a seductive pose her many breasts wobbling slightly, before abruptly pouncing you to the ground.  Suddenly your face is filled with swollen chinchilla cunt, hot and swollen dripping with honey.   'Lick' She demands digging her small claws into your chest softly.  Her juice sends tingles down your tongue and you quickly find yourself lapping and carressing the dribbling snatch with gusto.  The chinchilla girl squeals in delight!  Moaning and grinding against your face, the tight mound swelling and growing visibly before your eyes, allowing your tongue to explore further. Her many breasts swell slightly,gently starting to dribble milk along your torso, running over your sides, as she lets out a triamphant 'Squeee!'  Soaking your face and neck in the process, sending shockwaves of tingling heat down your body.  She gently pops free of your face, sticky juices still connecting the slightly as they dribble down your chin. 'Mmm... That was good honey let's play again soon!'  She jumps from your chest fluffs and shakes herself cutely before retreating into the brush.";
-				increase libido of player by 15;
+				if chinchilladefeat > 0:[ Prefer male action]
+					if cunts of player > 0:
+						if cunt length of player is less than 15:
+							say "'Still too slow for me! The little chinchilla chitters scampering up to you.  She stands giving you a bit of a seductive pose her many breasts wobbling slightly, before abruptly pouncing you to the ground.  Suddenly your face is filled with swollen chinchilla cunt, hot and swollen dripping with honey.   'Lick' She demands digging her small claws into your chest softly.  Her juice sends tingles down your tongue and you quickly find yourself lapping and carressing the dribbling snatch with gusto.  The chinchilla girl squeals in delight!  Moaning and grinding against your face, the tight mound swelling and growing visibly before your eyes, allowing your tongue to explore further. Her many breasts swell slightly,gently starting to dribble milk along your torso, running over your sides, as she lets out a triamphant 'Squeee!'  Soaking your face and neck in the process, sending shockwaves of tingling heat down your body.  She gently pops free of your face, sticky juices still connecting the slightly as they dribble down your chin. 'Mmm... That was good honey let's play again soon!'  She jumps from your chest fluffs and shakes herself cutely before retreating into the brush.";
+							increase libido of player by 15;
 		
 Section 2 - Monster Insertion
 
@@ -96,7 +96,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "tuft of chin fur"	"A soft piece of chinchilla fur. Chinchillas are pretty rare maybe it's valuable to someone?"	1	tuft of chin fur
 
-chinchilla fur is a grab object.
+tuft of chin fur is a grab object.
 
 the usedesc of tuft of chin fur is "[tuft of chin fur use]";
 
@@ -106,4 +106,4 @@ to say tuft of chin fur use:
 
 
 [ Edit this to have the correct Name as wall]
-Chinchilla For FS ends here.
+Cute Chinchilla Girl For FS ends here.

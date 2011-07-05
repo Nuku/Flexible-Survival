@@ -557,6 +557,7 @@ Include Feral Sea Dragon by Tunalord Sefont.
 Include Pets by Nuku Valente.
 Include sprite by Nuku Valente.
 Include Harpy by Nuku Valente.
+Include Cute Chinchilla Girl For FS by Trav.
 
 
 understand the command "feed" as something new.
