@@ -156,16 +156,6 @@ after looking:
 Book 2 - Places
 
 Grey Abbey Library is a room. "Books, and a computer or two. The computers would be more useful if there was power in the building. You're still not entirely sure what knocked them out, but they're very out now. You came here because you knew there was a bunker in the basement. It's kept you alive, so far.".
-Books is a thing. "Some [bold type]books[roman type] are laying about on a table.". books is in grey abbey library.
-
-Instead of examining the books:
-	say "One book catches your eyes. It looks rather new, like someone scribbled it out hastily...";
-	say "It also looks a bit long, are you sure you want to read it?";
-	if the player consents:
-		say "[text of file of flexiblestory]";
-		wait for any key;
-
-	
 Grey Abbey Library is fasttravel.
 Bunker is a room. "Sparsely appointed, the bunker was built back during the cold war, then abandoned to a curiosity at best. Its walls are solid concrete and the shelves are at least in good repair. The small sink seems to be broken, producing no water no matter how much the knob is turned. There is a secure looking door leading [bold type]outside[roman type]".
 The invent of Bunker is { "medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
@@ -358,12 +348,7 @@ title	subtable	description	toggle
 "Submit"	--	"Maybe it isn't so bad"	submit rule
 "Your HP: [hp of player]/[maxhp of player] [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters]"	--	"I am fit as a fiddle"	--
 
-Table of story reading
-message
-"Nothing"
-with 20000 blank rows.
- 
- Table of combat items
+Table of combat items
 title(indexed text)	subtable	description	toggle
 "Nothing"	--	"Nothing here."	combat item rule
 with 100 blank rows.
