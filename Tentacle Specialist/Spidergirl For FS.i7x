@@ -70,15 +70,15 @@ When Play begins:
 	now victory entry is "[spidergirl attack]";
 	now desc entry is "A hybrid of human and arachnid. From the waist up, the picture of a voluptuous woman, with smooth skin and heavy breasts topped with delicate pink nipples; she also has eight luminous [one of]violet[or]green[or]orange[or]magenta[at random] pupilless eyes blinking from behind her [one of]short gray[or]long golden[or]raven-black[at random] hair. Down below she is a giant spider, with eight hairy, twitching legs and an abdomen armored with [one of]dull brown[or]shiny black[or]black and red[at random] chitin. At the tip of her abdomen can be seen an opening with spinnerets, and between the front pair of legs a set of armor plates look like they might be hiding something...";
 	now face entry is "multi-eyed, but otherwise human";
-	now body entry is "curved and feminine from the waist up, but your legs have been replaced with the abdomen of a great spider, twitching with hairy legs.";
-	now skin entry is "[one of]shiny black[or]dull brown[or]black and red[at random] chitin-armored in places";
-	now tail entry is ""; [ Left blank, tail didn't seem appropriate here. ]
-	now cock entry is "armor-sheathed";
+	now body entry is "curved and feminine from the waist up, but your legs have been replaced with the abdomen of a great spider, twitching with hairy legs";
+	now skin entry is "[one of]shiny black[or]dull brown[or]black and red[at random] chitin-armored";
+	now tail entry is "Nestled in your backside are several spinnerets, ready to spin web at a moment's notice.";
+	now cock entry is "armor-protected";
 	now face change entry is "swellings grow on your head, suddenly bursting open into new eyes, expanding your field of vision";
-	now body change entry is "you fall to the ground, your torso flowing and creaks together, swelling into a bulging abdomen. It sprouts chitinous armor and then eight legs, raising you up off the ground again to stand like a spider!";
-	now skin change entry is "it roughens and sprouts black armored plates, though much of your skin turns smoothly human.";
-	now ass change entry is ""; [ Left blank? ]
-	now cock change entry is "it shifts and lengthens, the base roughening and sprouting black plates of armor that reach up to conceal and cover it."; [ Is this correct? ]
+	now body change entry is "you fall to the ground, your lower torso flowing and bulging with great creaks and pops, swelling into a bulging abdomen. It sprouts chitinous armor and then eight legs, raising you up off the ground again to stand like a spider";
+	now skin change entry is "it roughens and sprouts black armored plates, though much of your skin turns smoothly human";
+	now ass change entry is "intricate glands swell within it, developing into spinnerets; you can even feel a bit of webbing ready to be spun";
+	now cock change entry is "it shifts and lengthens, the base roughening and sprouting black plates of armor that reach up to conceal and cover it";
 	now str entry is 12;
 	now dex entry is 16; [ Lots of legs! ]
 	now sta entry is 12;					
