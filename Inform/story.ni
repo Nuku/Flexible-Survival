@@ -307,6 +307,9 @@ understand "seat" as chair.
 gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon"; The trade of Gryphon Milk is "distilled milk".
 distilled milk is a grab object. It is a part of the player.
 
+Include Red Light by Hiccup.
+Include High Rise District by Batroo.
+
 The invent of the player is { "journal" };
 
 Table of Start Game
@@ -523,7 +526,6 @@ Include Herm Hyena for FS by Anony Mouse.
 Include Wyvern For Fs by Damaged.
 Include Stuck Dragon by Hiccup.
 Include Tanuki by Nuku Valente.
-Include Red Light by Hiccup.
 Include Cannon by Hiccup.
 Include Spidergirl For Fs by Tentacle Specialist.
 Include Mouse Taur by Nuku Valente.

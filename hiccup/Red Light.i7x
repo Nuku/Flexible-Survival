@@ -20,16 +20,4 @@ The description of Adult Shopping Center is "Stores full of adult toys and porno
 Side Street is a room. North from the Side Street is a room called Adult Shopping Center.
 The description of Side Street is "This is the alley behind one of the adult stores in the red light district. This place is filthy and very seeding looking.";
 
-Section 3 - Dildo
-
-[Adds a new weapon]
-Table of Game Objects(continuation)
-name	desc	weight	object
-"Large Dildo"	"A bright pink dildo. It looks large enough to be used as a blunt weapon."	1	Large Dildo
-
-Large Dildo is a armament. It has a weapon "your pink dildo". The weapon damage of Large Dildo is 6. The weapon type of Large Dildo is "Melee". It is not temporary.
-
-[The Large Dildo is found on the ground in the Side Street]
-Large Dildo is in a room called Side Street.
-
 Red Light ends here.
