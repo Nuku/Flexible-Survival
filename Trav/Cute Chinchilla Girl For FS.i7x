@@ -62,7 +62,7 @@ When Play begins:
 	now ass change entry is "A long, sprig like tail grows from your butt, complete with a loud *FOOMP!* becoming fluffy."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "Your shaft tingles with sudden arrousal as it is engulfed in a soft grey sheath, becoming fully pink and rodentlike as it slides back into its new home."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 10;
-	now dex entry is 12;
+	now dex entry is 24;
 	now sta entry is 14;					
 	now per entry is 12;
 	now int entry is 12;
