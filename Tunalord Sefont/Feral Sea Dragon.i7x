@@ -4,7 +4,7 @@ Feral Sea Dragon by Tunalord Sefont begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks.. ] 
 dragonessdefeat is a number that varies.
 dragonessmemory is a number that varies.
 to say dragoness attack:
