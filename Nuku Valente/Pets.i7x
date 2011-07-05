@@ -13,6 +13,17 @@ Definition: A person is not lonely:
 
 Nullpet is a pet. Nullpet is a part of the player;
 
+Dismissing is an action applying to nothing.
+
+understand "pet dismiss" and "dismiss" as dismissing.
+ 
+carry out dismissing:
+	if player is lonely:
+		say "There is no pet around to dismiss.";
+	otherwise:
+		now pet of player is nullpet;
+		say "You send your pet away.";
+
 Calling is an action applying to one thing.
 
 understand "pet [tamed pet]" as calling.
@@ -47,7 +58,7 @@ Instead of resolving lost crab:
 			delete food;
 			say "The crab munches quite happily at the food, blowing a few bubbles afterwards to show its appreciation.";
 			now cute crab is tamed;
-			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing pet cute crab. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap)[roman type]";
+			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing pet cute crab. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
 		otherwise:
 			say "The crab scuttles away sadly.";
 		now lost crab is resolved;
