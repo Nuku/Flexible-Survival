@@ -2496,6 +2496,23 @@ carry out levelcheat:
 	
 Book 7 - Endings
 
+vetcheat is an action applying to nothing.
+understand "i am a pro" as vetcheat.
+
+vetcheater is a number that varies.
+carry out vetcheat:
+	if vetcheater is not 0: 
+		say "You can only use this once.";
+		stop the action;
+	increase xp of player by 200;
+	level up;
+	level up;
+	level up;
+	level up;
+	level up;
+	decrease score by 400;
+	
+
 When play ends:
 	follow the self examine rule;
 	if hp of player is less than 1:
@@ -2519,6 +2536,8 @@ When play ends:
 		say "Grand Scholar";
 	otherwise:
 		say "Ultimate Master";
+	if the score is greater than 999:
+		say "Your performance was so excellent, we'll give you a little... help, for your next run through. Type 'I am a pro' to gain 200 XP. It only works once per character.";
 	say "[line break]";
 	if the score is greater than 9000:
 		say "What, 9000?!";
