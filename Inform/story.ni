@@ -1132,12 +1132,14 @@ To process (X - a grab object):
 		grow breasts by 3;
 		say "[line break]";
 	if x is infectious and "Iron Stomach" is not listed in feats of player:
+		let found be 0;
 		repeat with y running from 1 to number of rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is strain of x:
 				now monster is y;
+				now found is 1;
 				break;
-		infect;
+		if found is 1, infect;
 	if x is a journal:
 		follow the brain descr rule;
 		say "You settle down and start scribbling in your journal about your [descr]. ";
