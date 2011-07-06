@@ -2507,11 +2507,12 @@ carry out vetcheat:
 		stop the action;
 	increase vetcheater by 1;
 	increase xp of player by 200;
-	level up;
-	level up;
-	level up;
-	level up;
-	level up;
+	if level of player is less than 5:
+		level up;
+		level up;
+		level up;
+		level up;
+		level up;
 	decrease score by 400;
 	
 
