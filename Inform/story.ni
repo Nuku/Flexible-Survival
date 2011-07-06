@@ -1570,6 +1570,7 @@ To lose:
 	follow the breast descr rule;
 	say "[victory entry]";
 	infect;
+	if hp of player is less than 1, now hp of player is 1;
 	increase the XP of the player by lev entry divided by two;
 	decrease the score by 1;
 	decrease the morale of the player by 3;
@@ -2504,6 +2505,7 @@ carry out vetcheat:
 	if vetcheater is not 0: 
 		say "You can only use this once.";
 		stop the action;
+	increase vetcheater by 1;
 	increase xp of player by 200;
 	level up;
 	level up;
