@@ -1352,11 +1352,14 @@ This is the sex change rule:
 		now cock of player is cock entry;
 		follow the cock descr rule;
 		say " Your groin throbs with intense sensations as a [descr] [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
-	if cunts of player is not 0 and the sex entry is "Male" and "Female Preferred" is not listed in feats of player and "One Way" is not listed in feats of player:
+	if cunts of player is not 0 and the sex entry is "Male" and "One Way" is not listed in feats of player:
 		decrease cunt length of player by 1;
 		decrease cunt length of player by cunt length of player divided by 3;
 		decrease cunt width of player by 1;
 		decrease cunt width of player by cunt width of player divided by 4;
+		if "Female Preferred" is listed in feats of player:
+			if cunt length of player is less than 4, now cunt length of player is 4;
+			if cunt width of player is less than 2, now cunt width of player is 2;
 		follow the cunt descr rule;
 		say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[or]pussy[or]vagina[or]cleft[at random] begins to shrink. [if cunts of player is greater than 1]They[otherwise]It[end if] dwindles in size, becoming [descr]. ";
 		if cunt length of player is less than 1 or cunt width of player is less than 1:
@@ -1382,11 +1385,14 @@ This is the sex change rule:
 		increase the cunts of player by 1;
 		follow the cunt descr rule;
 		say " Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking 	 along a thigh as you quiver.";
-	if cocks of player is not 0 and the sex entry is "Female" and "Male Preferred" is not listed in feats of player and "One Way" is not listed in feats of player:
+	if cocks of player is not 0 and the sex entry is "Female" and "One Way" is not listed in feats of player:
 		decrease cock length of player by 1;
 		decrease cock length of player by cock length of player divided by 3;
 		decrease cock width of player by 1;
 		decrease cock width of player by cock width of player divided by 4;
+		if "Male Preferred" is listed in feats of player:
+			if cock length of player is less than 4, now cock length of player is 4;
+			if cock width of player is less than 2, now cock width of player is 2;
 		follow the cock descr rule;
 		say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cock[or]man meat[or]shaft[or]pole[at random] begins to shrink. [if cunts of player is greater than 1]They[otherwise]It[end if] dwindles in size, becoming [descr]. ";
 		if cock length of player is less than 1 or cock width of player is less than 1:
