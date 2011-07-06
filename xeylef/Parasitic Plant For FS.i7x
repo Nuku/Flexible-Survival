@@ -114,7 +114,7 @@ name	desc	weight	object
 
 Musky Cock Flower is a grab object.
 Musky Cock Flower has a usedesc "[facerape use]";
-Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic plant"
+Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic Plant"
 
 [ Edit this to have the correct Name as wall]
 Parasitic Plant For FS ends here.
