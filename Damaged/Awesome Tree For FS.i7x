@@ -153,11 +153,11 @@ to say awesome bat proc:
 	choose row monster from the table of random critters;
 	if hp entry is 60:
 		if name entry matches the text "Awesome":
-			say "Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor";
+			say "[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor.";
 			now monsterhp is 0;
 			increase Awesome_noreward by 1;
 			
-awesome bat is a armament. It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second. [line break][awesome bat proc].[or]bat of awesomeness[or]indestructible length of awesome-wood[at random][line break]". 
+awesome bat is a armament. It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second,[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]". 
 The weapon damage of awesome bat is 7. 
 The weapon type of awesome bat is "Melee". It is not temporary.
 
