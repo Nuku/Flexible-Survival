@@ -1630,6 +1630,16 @@ This is the player attack rule:
 				now dam is ( dam * 120 ) divided by 100;
 			if "Black Belt" is listed in feats of player:
 				now dam is ( dam * 110 ) divided by 100;
+			if "Natural Armaments" is listed in feats of player and bodyname is not "human":
+				let z be 0;
+				repeat with y running from 1 to number of rows in table of random critters:
+					choose row y in table of random critters;
+					if name entry is bodyname of player:
+						now z is y;
+						break;
+				choose row z in table of random critters;
+				increase dam by wdam entry divided by 2;
+				choose row monster from table of random critters;
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
 		if a random chance of the morale of the player in 200 succeeds:
