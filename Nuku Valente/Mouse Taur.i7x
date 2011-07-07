@@ -165,6 +165,10 @@ The description of Lisa is "A mouse taur. Her mouse like body is six feet long a
 Lisa is in Porn Store.
 The conversation of Lisa is { "Why a porn store? Well no one else cared about it, so why not?", "I guess I won't be a teacher now, you think?", "Did you do something with your hair?", "Don't mind the porn, unless you want to watch some of it.", "I am glad you visited. I was getting lonely.", "How are you?" };
 
+When play begins:
+	add "Mouse Taur" to infections of Furry;
+	add "Mouse Taur" to infections of Girl;
+
 When play ends:
 	if mousefucked is greater than 1 and humanity of the player is greater than 10:
 		say "You receive an occasional letter or call from Lisa. Turns out she made it through alright and has joined forces with the [apostrophe]Prometheans[apostrophe], Sounds like some kind of wierd cult thing, but at least she is ok. You remain good pen pals.";
