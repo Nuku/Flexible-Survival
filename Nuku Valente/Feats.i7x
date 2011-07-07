@@ -5,6 +5,9 @@ Version 1 of Feats by Nuku Valente begins here.
 Section 1 - Basic Feats
 
 basic feats is a featset.
+A featset can be functional. A featset is usually not functional.
+basic feats is functional.
+fun feats is a featset.
 
 The player has a number called featgained.
 
@@ -18,7 +21,7 @@ Check featgetting:
 
 carry out featgetting:
 	blank out the whole of table of gainable feats;
-	repeat with x running through featsets:
+	repeat with x running through functional featsets:
 		try addfeating x;
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
@@ -29,7 +32,7 @@ carry out featgetting:
 	
 To Featget:
 	blank out the whole of table of gainable feats;
-	repeat with x running through featsets:
+	repeat with x running through functional featsets:
 		try addfeating x;
 	if there is no title in row 1 of table of gainable feats:
 		say "There are no feats to gain!";
@@ -38,7 +41,18 @@ To Featget:
 		change the current menu to table of Gainable Feats;
 		carry out the displaying activity;
 
-Addfeating is an action applying to one thing.
+To FunFeatget:
+	blank out the whole of table of gainable feats;
+	repeat with x running through not functional featsets:
+		try addfeating x;
+	if there is no title in row 1 of table of gainable feats:
+		say "There are no feats to gain!";
+		wait for any key;
+	otherwise:
+		change the current menu to table of Gainable Feats;
+		carry out the displaying activity;
+ 
+ Addfeating is an action applying to one thing.
 
 carry out addfeating:
 	say "Tuna";
@@ -51,6 +65,16 @@ To addfeat (x - text) with (y - text):
 		now description entry is Y;
 
 	
+instead of addfeating the fun feats:
+	addfeat "Male Preferred" with "You will reject female mutation";
+	addfeat "Female Preferred" with "You will reject male mutation";
+	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
+	addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
+	addfeat "Horny Bastard" with "You just can't get enough. Every few hours your libido raises all on its own.";
+	addfeat "Control Freak" with "When you win a battle, you may choose if you wish to engage in the post battle activities or not.";
+	addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
+	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
+
 instead of addfeating the basic feats:
 	if charisma of player is greater than 14:
 		addfeat "Haggler" with "You are an especially skilled haggler. Sometimes, you end up with two of what you are trading for!";
@@ -74,10 +98,6 @@ instead of addfeating the basic feats:
 		addfeat "Black Belt" with "Your martial artistry is amazing. Your damage increases furher while unarmed, and you have a small(10%) chance of avoiding hits that would otherwise have landed.";
 	if "Expert Hunter" is listed in feats of player:
 		addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature. Your proficiency doubles from 5X to 10X.";
-	addfeat "Male Preferred" with "You will reject female mutation";
-	addfeat "Female Preferred" with "You will reject male mutation";
-	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
-	addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
 	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";
 	if strength of player is greater than 14:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";
@@ -87,10 +107,6 @@ instead of addfeating the basic feats:
 		addfeat "Youthful Tides" with "Once in a while, all of your kids will swarm to your aid in battle.";
 	if hp of doctor matt is greater than 4:
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
-	addfeat "Horny Bastard" with "You just can't get enough. Every few hours your libido raises all on its own.";
-	addfeat "Control Freak" with "When you win a battle, you may choose if you wish to engage in the post battle activities or not.";
-	addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
-	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
 
 
 This is the gainfeat rule:

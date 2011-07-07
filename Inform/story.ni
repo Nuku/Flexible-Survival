@@ -1729,6 +1729,8 @@ To level up:
 	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
 	increase maxhp of player by 2;
 	now hp of player is maxhp of player;
+	if the remainder after dividing level of the player by 6 is 0:
+		funfeatget;
 	increase score by level of the player times level of the player;
 	
 To fight:
@@ -2359,6 +2361,7 @@ When play begins:
 	repeat with x running through featsets:
 		now x is a part of the player;
 	featget;
+	funfeatget;
 	clear the screen;
 	say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
 	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
