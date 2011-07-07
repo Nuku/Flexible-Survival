@@ -51,6 +51,7 @@ To FunFeatget:
 	otherwise:
 		change the current menu to table of Gainable Feats;
 		carry out the displaying activity;
+	decrease featgained of player by 1;
  
  Addfeating is an action applying to one thing.
 

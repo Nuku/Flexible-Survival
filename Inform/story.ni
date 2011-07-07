@@ -108,6 +108,7 @@ A grab object has a text called usedesc.
 Turns is a number that varies. Turns is 240.
 Targetturns is a number that varies.
 Started is a number that varies.
+Freefeats is a number that varies.
 Child is a person.
 Child has a number called Gestation.
 Child can be born. Child is not born.
