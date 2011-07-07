@@ -715,12 +715,19 @@ to ban menu:
 		say "There are no flags!";
 		wait for any key;
 	otherwise:
+		choose a blank row in table of combat items;
+		now title entry is "Begin Game";
+		now description entry is "Begin Game";
+		now toggle entry is flag ban rule;
 		change the current menu to table of Combat Items;
 		carry out the displaying activity;
 
 This is the flag ban rule:
 	choose row Current Menu Selection in table of combat items;
 	let nam be description entry;
+	if nam is "Begin Game":
+		decrease the menu depth by 1;
+		rule succeeds;
 	let z be furry;
 	repeat with y running through flags:
 		if nam matches the text printed name of y:
