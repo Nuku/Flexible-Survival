@@ -2392,9 +2392,9 @@ When play begins:
 		if bad is 1:
 			now n is resolved;
 	sort table of random critters in lev order;
-	say "You remember how it went down. Sattelite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters, freaks. They'd grab people. Some got mauled on the spot. Some faught back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
+	say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters, freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 	wait for any key;
-	say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little apocolypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.";
+	say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.";
 	wait for any key;
 	say "Welcome to...";
 	wait for any key;

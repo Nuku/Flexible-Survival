@@ -30,6 +30,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
+	add "Ash Whelp" to infections of guy;
 	now name entry is "Ash Whelp";
 	now attack entry is "[one of]The Whelp hiccups, then burps, then finally coughs up a small fireball which is lobbed at you.[or]The whelp dives at you its snapping jaws catching your arm, he pulls away leaving you with a bloodied bite mark.[at random]"; 
 	now defeated entry is "Crying mournfully the whelp loses its strength to fly and falls to the ground with a thud. where it does not stir again.";
