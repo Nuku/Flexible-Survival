@@ -551,6 +551,7 @@ Include Harpy by Nuku Valente.
 Include Cute Chinchilla Girl For FS by Trav.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
+Include Ash Whelp For FS by Sweraptor.
 
 understand the command "feed" as something new.
 
