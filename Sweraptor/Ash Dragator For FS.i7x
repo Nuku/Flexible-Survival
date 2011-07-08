@@ -63,7 +63,9 @@ When Play begins:
 	now cunts entry is 1;			
 	now cunt length entry is 16;	
 	now cunt width entry is 17;		
-	now libido entry is 40;			
+	now libido entry is 40;	
+	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+		
 	
 			
 when play ends:
