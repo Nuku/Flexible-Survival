@@ -552,6 +552,7 @@ Include Cute Chinchilla Girl For FS by Trav.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
+Include Orthas by Nuku Valente.
 
 understand the command "feed" as something new.
 
@@ -2657,7 +2658,7 @@ Ronda Mallrat is in Mall Atrium.
 
 Orthas is a person. "A dragon person, clearly female, is watching the area. If her name badge is accurate, her name is 'Orthas'.".
 The description of Orthas is "A black scaled dragon woman. She stands about six and a half feet tall, with wings that are about three feet long each folded to her back. She watches the area intently, her arms crossed half the time. Behind her, a slender reptillian tail sways slowly. Her overall shape is human, especially those huge, F cup knockers that heave distractingly with every breath she takes.".
-The conversation of Orthas is { "Hello there.", "The good doctor is upstairs. You can see him. Don't cause trouble.", "You are pretty brave to wander the city right now.", "I would explore too if I wasn't guarding the doctor.", "What is it like out there?" }.
+The conversation of Orthas is { "[if orthasstart is greater than 3]Hey there, how's momma?[otherwise]Hello there.[end if]", "[if orthasstart is greater than 2]Hey there, hot stuff.[otherwise]The good doctor is upstairs. You can see him. Don't cause trouble.[end if]", "You are pretty brave to wander the city right now.", "I would explore too if I wasn't guarding the doctor.", "What is it like out there?" }.
 Orthas is in Trevor Labs Lobby.
 
 Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be 'Doctor Matt'";
