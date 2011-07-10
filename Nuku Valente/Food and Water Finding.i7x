@@ -36,8 +36,7 @@ Instead of resolving a potential resources:
 			say "very difficult";
 		otherwise:
 			say "extremely difficult";
-		say " to climb, do you attempt it?";
-		wait for any key;
+		say " to climb";
 		let bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player divided by 2;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -62,8 +61,7 @@ Instead of resolving a potential resources:
 			say "very difficult";
 		otherwise:
 			say "extremely difficult";
-		say " to lift, do you attempt it?";
-		wait for any key;
+		say " to lift.";
 		let bonus be (( the strength of the player minus 10 ) divided by 2) plus level of the player divided by 2;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -87,8 +85,7 @@ Instead of resolving a potential resources:
 			say "very difficult";
 		otherwise:
 			say "extremely difficult";
-		say " to sway, do you attempt it?";
-		wait for any key;
+		say " to sway";
 		let bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player divided by 2;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -99,6 +96,7 @@ Instead of resolving a potential resources:
 		otherwise:
 			say "After working out the specifics, you are handed the [y]  and you stuff it into your backpack.";
 			add y to invent of the player;
+	wait for any key;
 	
 
 Food and Water Finding ends here.
