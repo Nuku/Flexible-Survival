@@ -1334,8 +1334,11 @@ Carry out trading:
 instead of trading the demon seed when the current action involves the ronda:
 	say "Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy, groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen with them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
 	remove ronda from play;
-	choose row 1 from the table of random critters;
-	now area entry is "Mall";
+	repeat with y running from 1 to number of rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Slut Rat":
+			now area entry is "Mall";
+			break;
 	extend game by 16;
 	increase score by 20;
 	
