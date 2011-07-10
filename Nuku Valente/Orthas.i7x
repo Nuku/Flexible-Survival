@@ -84,9 +84,6 @@ instead of going east from Trevor Labs Lobby when the hp of doctor matt is great
 		continue the action;
 
 
-when play begins:
-	now hp of doctor matt is 3;
-
 Orthasfuck is an action applying to nothing.
 
 Understand "fuck orthas" as orthasfuck.
@@ -144,7 +141,7 @@ carry out orthasfuck:
 		wait for any key;
 		say "You can't take much of this, and you cum hard and strong into her, moaning out in pleasure as even as the first bursts of your cum splash against her cervix, her body is already making ready for part two of this interaction. When your orgasm dies down, she has laid on top of you, her heavy breasts pressed into yours as her belly swells into yours. Before her belly has even finished swelling to its full size, she's already pulled off your dick and laid down, coaxing out her ovipositor. Anal or vaginal? (Yes for Vaginal)";
 		if the player consents:
-			say "Climbing on, you push her 'cock' toward your slit, and you already feel her pushing deep at your cervix --- it doesn't take long for it to reach full length, does it? She bobs her hips, but since she is in control of her eggs, she waits for you to get your pleasure first. But with the way that 'member' bobs and weaves in your slit, it won't take you long at all, and as you climax, you feel the egg pushing at your slit, and forcing its way up your pussy into your womb. ((Same things here for pregnancy/nonpregnancy))";
+			say "Climbing on, you push her 'cock' toward your slit, and you already feel her pushing deep at your cervix --- it doesn't take long for it to reach full length, does it? She bobs her hips, but since she is in control of her eggs, she waits for you to get your pleasure first. But with the way that 'member' bobs and weaves in your slit, it won't take you long at all, and as you climax, you feel the egg pushing at your slit, and forcing its way up your pussy into your womb.";
 			if the gestation of the child is greater than 0:
 				say "The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
 				decrease gestation of child by a random number from 5 to 10;
