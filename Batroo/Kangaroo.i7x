@@ -22,7 +22,7 @@ to say kangaroo attack:
 
 
 To say kangaroo loss:
-	say "Whimpering she rears back onto her tail, using it as a seat while her thick legs open, showing off her moist cunt to you";
+	say "Whimpering she rears back onto her tail, using it as a seat while her thick legs open, showing off her moist cunt to you.";
 	wait for any key;
 	if cocks of player is greater than 0:
 		say "You move between those spread legs, taking her thighs in each hand. [cock of player] shaft presses into that moist tunnel, a moan rising from both of you, punctuated with a hard thrust by you making her gasp. Her breasts jiggle about with each thrust, body rocking on the tail, your hands pressing her legs further apart allowing you to get deeper into her squeezing tunnel. You balls slap against her rump and tail with muffled slaps after every thrust into the wet, squeezing tunnel. ";
