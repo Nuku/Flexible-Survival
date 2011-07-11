@@ -252,6 +252,12 @@ Definition: A grab object (called D) is present:
 		if the name corresponding to a object of  d in the table of game objects is listed in the invent of the location of the player, yes;
 	no;
 
+before examining the grab object(called x):
+	let good be 0;
+	if x is owned, now good is 1;
+	if x is present, now good is 1;
+	if good is 0, say "I don't see any [x] around here..." instead;
+
 Book 4 - Start the Game
 
 	
