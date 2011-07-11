@@ -64,7 +64,8 @@ When Play begins:
 	now cunt length entry is 16;	
 	now cunt width entry is 17;		
 	now libido entry is 40;	
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "Ash Dragon Heart";
 		
 	
 			

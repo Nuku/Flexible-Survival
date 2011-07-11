@@ -205,7 +205,7 @@ The marea of Faint Trail is "Park".
 
 Part 2 - Things
 
-There is a bed in the bunker. "Laying over in the corner is a small, simple, cot. Just the thing for a little [bold type]rest[roman type].".
+There is a bed in the bunker. "[if cot is present]Laying over in the corner is a small, simple, cot. Just the thing for a little [bold type]rest[roman type].[otherwise]There is an empty spot where a cot once sat, cleaner than the rest.".
 The cot is rooted in place. The cot is restful.
 There is a library computer in the Grey Abbey Library. "A computer rests nearby, powerless.".
 The description of it is "A computer terminal. It probably had web access and everything before the power cut out. Right now it's just a very heavy paperweight on a rolling stand.". It is rooted in place.
@@ -969,6 +969,19 @@ Carry out using a grab object(called x):
 		process x;
 	otherwise:
 		say "You don't see any [x] in your backpack.";
+
+[MassUsing is an action applying to a number and one thing.
+
+Understand "use [number] [owned grab object]" as massusing.
+
+Carry out massusing:
+	repeat with z running from 1 to number:
+		if second noun is owned:
+			process second noun;
+		otherwise:
+			say "You don't see any [second noun] in your backpack.";
+]
+
 
 Resolving is an action applying to one thing.
 
