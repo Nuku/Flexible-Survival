@@ -90,14 +90,14 @@ When Play begins:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Nuthin"	"Black skunk goo on a stick"	1	Fish
+"Fish"	"Black skunk goo on a stick"	1	Fish
 
 Fish is a grab object. "A fish. It could be a big fish or a small fish, but it has scales on it. A sniff of it oddly reminds you of Sprites.".
 
-Fish is infectious. The strain of Fish is "Sea Sprite".
-usedesc of Fish is "[Spritefish]";
+Fish is infectious. The strain of Fish is "sea otter".
+usedesc of Fish is "[Fish]";
 
-To say Spritefish:
+To say Fish:
 	decrease the hunger of the player by 15;
 
 when play ends:
