@@ -1370,6 +1370,11 @@ To Rest:
 
 This is the sex change rule:
 	choose row monster from the table of random critters;
+	if "Just One" is listed in feats of player:
+		if cocks entry is greater than 1:
+			now cocks entry is 1;
+		if cunts entry is greater than 1:
+			now cunts entry is 1;
 	if ( the sex entry is "Male" or the sex entry is "Both") and cock length of player is less than cock length entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
 		increase cock length of player by 1;
 		increase cock length of player by ( cock length entry minus cock length of player ) divided by 3;
