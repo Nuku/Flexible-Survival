@@ -14,6 +14,8 @@ to say Moth attack:
 		increase breast size of player by 1;
 		increase charisma of player by 1;
 		decrease intelligence of player by 1;
+		if the intelligence of player is < 1:
+			now intelligence of player is 1;
 		now Mothdefeat is 1;
 	otherwise:
 		if a random chance of 2 in 3 succeeds: [ Prefer male action]
@@ -29,7 +31,11 @@ to say Moth attack:
 						say "She looks at you having been defeated by her once again, she now has no mercy on you as she douses you with an abundance of dust from her wings. This drives your thoughts into submission as she tells you gently 'come here my pet' your body and mind unable to withstand the effects of the dust obeys and approaches the mothgirl. The mothgirl than spreads her legs and motions you with her finger to come closer as she says almost in a whisper 'now use that tongue of yours to please me, here' as she points to her pussy. You without pause drop your face onto her snatch and begin licking her gently at first. After a minute of teasing she tells you in an aroused tone 'faster if you please' giving you a sexy smile. You obey and quicken your pace, giving her suprisingly wet cunt a thorough licking. She starts to pant heavily as she says to you in a forciful tone 'harder' you unable to control your actions start to bury your tongue deep into her pussy. She soon reaches climax spraying nectar onto your face she then says softly through panted breathes 'lick it up, you will enjoy it'. You still under the effects of the dust clean her of the sprayed nectar and soon go to licking the liquid from your face";
 						increase breast size of player by 5;
 						decrease intelligence of player by 2;
+						if the intelligence of player is < 1:
+							now intelligence of player is 1;
 						decrease stamina of player by 2;
+						if the stamina of player is < 1:
+							now stamina of player is 1;
 						increase charisma of player by 1;
 					otherwise:
 						say "She looks at you having been defeated by her once again, she now has no mercy on you as she douses you with an abundance of dust from her wings. However you recover from this dust and you escape before she has a chance to do anything to you. However you leave slightly aroused.";
