@@ -76,6 +76,7 @@ instead of addfeating the fun feats:
 	addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
 	addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";
+	addfeat "One Pair" with "You will not grow more than two breasts.";
 
 instead of addfeating the basic feats:
 	if charisma of player is greater than 14:

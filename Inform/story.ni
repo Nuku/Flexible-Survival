@@ -1513,7 +1513,7 @@ To Infect:
 			now tailname of player is name entry;
 			now tail of player is tail entry;
 	if x is 4:
-		if breasts of player is not breasts entry:
+		if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
 			decrease breast size of player by 2;
 			follow the breast descr rule;
 			if breasts entry is greater than breasts of player:
@@ -2642,6 +2642,8 @@ When play ends:
 			increase score by 0;
 		otherwise:
 			say "Your unnatural [skin of player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
+		if "Fertile" is listed in feats of player and number of entries in childrenfaces is greater than 5:
+			say "You’ve been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to reimpregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you’re alarmed by this, but your ever growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
 		if bodyname of player is "Goo Girl" and skinname of player is "Goo Girl":
 			say "Your jello like form proves to be quite a curiosity, especially seeing how it seems immune to the usual signs of aging. You discover that those you absorb for a few hours can be renewed within your undulating form, and offer the service out to the wealthy, who enjoy a false second youth. They don't live any longer, but they do it as a fit and healthy twenty something year old body.";
 		if bodyname of player is "Slut Rat":
