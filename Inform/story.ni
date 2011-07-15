@@ -1531,6 +1531,14 @@ To Infect:
 			increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
 			follow the breast descr rule;
 			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		if breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			decrease breast size of player by 1;
+			decrease breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
 		if bodyname of player is not name entry:
 			say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now bodyname of player is name entry;
@@ -2642,7 +2650,7 @@ When play ends:
 			increase score by 0;
 		otherwise:
 			say "Your unnatural [skin of player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
-		if "Fertile" is listed in feats of player and number of entries in childrenfaces is greater than 5:
+		if "Fertile" is listed in feats of player and number of entries in childrenfaces is greater than 5 and cunts of player is greater than 0:
 			say "You’ve been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to reimpregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you’re alarmed by this, but your ever growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
 		if bodyname of player is "Goo Girl" and skinname of player is "Goo Girl":
 			say "Your jello like form proves to be quite a curiosity, especially seeing how it seems immune to the usual signs of aging. You discover that those you absorb for a few hours can be renewed within your undulating form, and offer the service out to the wealthy, who enjoy a false second youth. They don't live any longer, but they do it as a fit and healthy twenty something year old body.";
