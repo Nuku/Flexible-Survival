@@ -7,6 +7,7 @@ after going east from Trevor Labs Lobby when the hp of doctor matt is greater th
 
 
 instead of going east from Trevor Labs Lobby when the hp of doctor matt is greater than 2 and orthasstart is 0 and orthas is visible:
+	say "((This arc written by Khabi))";
 	say "As you enter the downstairs area of the lab, Orthas, the dragoness who has been guarding the good Doctor this whole time, stops you. She's probably six and a half feet tall, and a rather imposing figure, but there is no malice apparent in her appearance.";
 	say "'Hey --- you've been helping out the doctor. I figure I could talk to you for a while, as someone else who was interested in doing so.' She offers to tell you her story, if you'll stay and listen.";
 	if the player consents:
