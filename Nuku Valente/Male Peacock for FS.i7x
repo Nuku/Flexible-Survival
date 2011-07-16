@@ -58,6 +58,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 
 When Play begins:
+	add "peacock" to infections of guy;
+	add "peacock" to infections of furry;
 	Choose a blank row from Table of random critters;
 	now name entry is "peacock"; 
 	now attack entry is "[peacockattack]";
