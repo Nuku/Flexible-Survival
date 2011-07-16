@@ -577,6 +577,7 @@ Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
 Include Alex by Nuku Valente.
+Include Male Peacock for FS by Nuku Valente.
 Include Orthas by Nuku Valente.
 
 understand the command "feed" as something new.
