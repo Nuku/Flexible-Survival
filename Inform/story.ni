@@ -1543,14 +1543,25 @@ To Infect:
 		if there is no name entry:
 			next;
 		break;
+	let x be a random number from 1 to 5;
 	if "Microwaved" is listed in feats of player:
-		say "An infection from [name entry] is present. Allow it?";
+		say "WARNING: [name entry] nanites detected!";
+		if x is 1:
+			say "Skin infection imminent";
+		if x is 2:
+			say "Head infection imminent";
+		if x is 3:
+			say "Posterior infection imminent";
+		if x is 4:
+			say "Torso infection imminent";
+		if x is 5:
+			say "Genital infection imminent";
+		say ", Allow?";
 		if the player consents:
 			say "Ok.";
 		otherwise:
 			say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 			stop the action;
-	let x be a random number from 1 to 5;
 	if x is 1:
 		if skinname of player is not name entry:
 			say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
