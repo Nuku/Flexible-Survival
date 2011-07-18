@@ -87,6 +87,7 @@ instead of addfeating the basic feats:
 	if stamina of player is greater than 14:
 		addfeat "Spartan Diet" with "You don't need 2 liters of water and great feasts to keep you going! You become thirsty and hungry slower.";
 		addfeat "Iron Stomach" with "Your belly has nano resistance! Eating or drinking infectious items fails to change you.";
+		addfeat "Toughened" with "You take less damage than others(-20% damage)";
 	if "Sterile" is not listed in feats of player, addfeat "Fertile" with "You are blessed by the rabbit totem! You are especially good at producing children.";
 	if "Fertile" is not listed in feats of player, addfeat "Sterile" with "You are incapable of mothering a child.";
 	if intelligence of player is greater than 14:
