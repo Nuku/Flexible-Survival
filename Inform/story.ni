@@ -1544,7 +1544,13 @@ To Retaliate:
 			say "You nimbly avoid the attack at the last moment!";
 			now dam is 0;
 		say "[Attack entry] You take [dam] damage!";
+		let absorb be 0;
+		if "Toughened" is listed in feats of player:
+			increase absorb by dam divided by 5;
+		if absorb is greater than 0:
+			say "You prevent [absorb] damage!";
 		decrease hp of the player by dam;
+		increase hp of player by absorb;
 		follow the player injury rule;
 		say "You are [descr].";
 	otherwise:
