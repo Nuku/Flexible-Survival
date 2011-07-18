@@ -603,6 +603,8 @@ Include Pets by Nuku Valente.
 Include sprite by Nuku Valente.
 Include Harpy by Nuku Valente.
 Include Cute Chinchilla Girl For FS by Trav.
+Include Ewe by Sarokcat.
+Include Ram by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
