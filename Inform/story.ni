@@ -1830,9 +1830,15 @@ This is the player attack rule:
 			increase the xp of the companion of the player by lev entry times two;
 			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
 		increase the morale of the player by 1;
+		let z be 0;
+		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+			now z is lootchance entry divided by 3;
+			increase lootchance entry by z;
 		if a random chance of lootchance entry in 100 succeeds:
 			say "You gain 1 x [loot entry]!";
 			add loot entry to invent of player;
+		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+			decrease lootchance entry by z;
 		decrease the menu depth by 1;
 		if ok is 1, wait for any key;
 	clear the screen;

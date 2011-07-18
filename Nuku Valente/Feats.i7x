@@ -93,6 +93,7 @@ instead of addfeating the basic feats:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% xp needed to level.";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
 	if perception of player is greater than 14:
+		addfeat "Magpie Eyes" with "You love shining things. Especially shining things on the defeated bodies of your enemies. Increased odds of drops.";
 		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases from 3 X to 5 X.";
 	if dexterity of player is greater than 14:
 		addfeat "Martial Artist" with "You have basic martial arts training, increasing the damage you cause when you have no weapon.";
