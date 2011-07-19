@@ -76,10 +76,7 @@ When Play begins:
 	now loot entry is "Tainted wool";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 
-when play ends:
-	if bodyname of player is "Ram":
-		say "Someone has to make up some Ram endings.";
-		
+
 to Ramify:
 	repeat with y running from 1 to number of rows in table of random critters:
 		choose row y in table of random critters;
