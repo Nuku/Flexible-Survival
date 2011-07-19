@@ -75,13 +75,6 @@ When Play begins:
 	now loot entry is "Food";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 
-when play ends:
-	if bodyname of player is "ewe":
-		if humanity of player is less than 10:
-			say "Someone should write a low humanity ewe ending";
-		otherwise:
-			say "Someone should write a high humanity ewe ending";
-
 
 to ewefy:
 	repeat with y running from 1 to number of rows in table of random critters:
