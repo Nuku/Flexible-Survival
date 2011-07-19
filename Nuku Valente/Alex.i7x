@@ -5,6 +5,48 @@ instead of entering the Confession Booth while progress of alex is 4:
 	say "You ask the priest if she's seen anyone.";
 	say "'Oh! Yes, I believe I know something that might help you. A man has barricaded himself inside one of the storage sheds to the north of the beach. There's a chance that he may be the one you're looking for.' You profusely thank the priestess, who waves off the praise. 'Thank the Goddess for your good fortune, not me. Stay safe, my child.'";
  
+Lee's Shed is a room.
+West of Dirty Sheds is Lee's Room.
+
+Instead of going west from dirty sheds:
+	if progress of alex is 4:
+		say "You come to a shed that has been barricaded shut. 'Stay away! I don't want any of you freaks coming in here!' You ask if the person inside is Lee, and you hear what might be a grunt in the affirmative, before he shouts again. 'Who's asking? Who sent you!?' You claim that Alex sent you, but it appears that these things are a little bit too easy for him to just accept you. Do you attempt to persuade him to come with you? (Y/N)";
+		let success be 0;
+		if the player consents:
+			let bonus be ( charisma of player minus 10 ) divided by 2;
+			let dice be a random number from 1 to 20;
+			say "You roll 1d20([dice])+[bonus] vs 20 and score [dice +bonus]: ";
+			if dice + bonus is greater than 19:
+				say "'Oh... he really did send you, didn't he?' You hear things being shoved aside, and the door opens a crack, an eye peering out, trying to gauge if the coast is clear. Seeing that it is, Lee steps out, and he isn't a he anymore. In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point. 'C-come on, let's hurry, I don't want anyone to see me!'";
+				now success is 1;
+			otherwise:
+				say "'Ha! As if I'd believe that!' You get the feeling you'll have to try again later to convince him to come out.";
+		if success is 0:
+			say "Do you attempt to break down the door? (Y/N)"
+			if the player consents:
+				let bonus be ( Strength of player minus 10 ) divided by 2;
+				let dice be a random number from 1 to 20;
+				say "You roll 1d20([dice])+[bonus] vs 22 and score [dice +bonus]: ";
+				if dice + bonus is greater than 21:
+					 say "'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
+					now success is 1;
+				otherwise:
+					say "You throw your body against the door, but it seems too tough for you. Maybe you could try again later.";
+		follow the turnpass rule;
+		if success is 1:
+			now progress of alex is 5;
+			move the player to Alex's Condo;
+			say "Arriving back at the High Rise district, Alex is bemused to see that this latest client has made a rather serious reassignment in gender, but he is pleased to see that Lee at least seems to have her faculties in order. 'Alright,' he says. 'Here's your reward for the last bit.' You receive one more food and one more water.";
+			add "food" to invent of player;
+			add "water bottle" to invent of player;
+			increase score by 40;
+			extend game by 10;
+			if cunts of player is greater than 0:
+				say "The weaselly lawyer looks you up and down, sizing you up. 'You know... I have a reputation as a hell of a lover,' he says, leering a little bit but remaining professional. 'What I'm saying is,' he chuckles, 'if you come and visit, I'd be willing to show you a good time.'";
+				say "He adjusts his tie. 'That wouldn't be professional to do while Lee and Lorena still here,' he says. 'Give me about a day to find safe lodging for them, and then we can see about those options.'";
+	otherwise:
+		say "There's nothing interesting over there.";
+ 
 Instead of conversing the Alex:
 	if progress of alex is 3:
 		say "Alex opens the door and hustles you inside, looking side to side for Darrell, then he follows you in with a mix of confusion and anger on his face. 'Where's Darrell? I thought you sent word that you'd found him.' This is where you have to explain to Alex that Darrell survived the incident, but not in the same way he started it. Upon hearing that Darrell was still sane and relatively secure mentally, Alex is pleased enough, anyway. 'He can still pay me,' says Alex, 'and that's good enough. Here's your next installment.' He hands you another bit of food and water as payment.";
@@ -18,7 +60,8 @@ Instead of conversing the Alex:
 	if progress of alex is 4:
 		say "'Have you found Lee? He should be at the park or the beach.'";
 		stop the action;
-	say "'Welcome to my humble abode.'";
+	say "'Yes, something I can do for you?' 'The city's become really dangerous lately.'";
+
 
 Instead of conversing the Rod while progress of alex is 2:
 	say " 'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised.'[if hp of ronda is greater than -1] 'Go talk to my girl, she knows where he is.'[otherwise] He shrugs, and points to the north. 'Go ask the others, they might know where he is.' He seems a little bummed.[end if]";
