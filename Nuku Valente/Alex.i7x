@@ -23,7 +23,7 @@ Instead of conversing the Alex:
 Instead of conversing the Rod while progress of alex is 2:
 	say " 'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised.'[if hp of ronda is greater than -1] 'Go talk to my girl, she knows where he is.'[otherwise] He shrugs, and points to the north. 'Go ask the others, they might know where he is.' He seems a little bummed.[end if]";
 	
-instead of going north from Mall Foodcourt when progress of alex is 2:
+instead of going north from Mall Foodcourt while progress of alex is 2:
 	if ronda is visible:
 		say "You arrive in the atrium of the mall and approach Rhonda, Rod's girlfriend. 'Yeah, I know where he is. Darrell, c'mere!' Another mall rat approaches, and it shortly becomes clear that the city's star point guard is now a good deal furrier and rattier. He arrives, and asks her 'What's up?' She explains the situation, and he nods, facing you. After some brief explanation, he nods. 'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.' You try to convince him, but he stands firm on it. 'Nah, I'm good here, man.' Darrell waves and heads back to talk to some of the other rats. You sigh a bit, and you have some mixed news for Alex the next time you see him.";
 	otherwise:
@@ -32,9 +32,6 @@ instead of going north from Mall Foodcourt when progress of alex is 2:
 
 	
 	
-when play begins:
-	now progress of alex is 2;
-
 Find Lorenda is a situation.
 The sarea of Find Lorenda is "Red".
 Find Lorenda is resolved.
