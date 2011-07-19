@@ -112,7 +112,8 @@ Instead of Resolving a New Ewe Store:
 		say " 'Of course Mary over there hasn't talked about much else since you rescued her, i think she might have a bit of a crush on you,' Leon says as he gestures to where the Ewe you saved earlier is peeking around a corner at you. 'If you'd rather join her instead it wouldn't be a problem either, just go Talk to Mary, instead.'";
 		wait for any key;
 		say "'Either way,' He says as he finishes up, 'Thanks for helping us out and we hope you join us again sometime soon.'";
-		now New Ewe Store is resolved:
+		now New Ewe Store is resolved;
+		now New Ewe Storeroom is known;
 
 
 
