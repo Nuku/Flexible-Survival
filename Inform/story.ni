@@ -2115,6 +2115,8 @@ This is the turnpass rule:
 		follow the brain descr rule;
 		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr].([humanity of the player]/100)[line break]";
 		decrease the humanity of the player by corruption;
+		if humanity of the player is less than 50:
+			say "Maybe you should [bold type]use[roman type] that [bold type]journal[roman type] to help collect your thoughts.";
 	if child is not born and gestation of child is greater than 0:
 		decrease gestation of child by 1;
 		if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease gestation of child by 1;
