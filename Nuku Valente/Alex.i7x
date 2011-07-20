@@ -15,18 +15,18 @@ Instead of going west from dirty sheds:
 		if the player consents:
 			let bonus be ( charisma of player minus 10 ) divided by 2;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus] vs 20 and score [dice +bonus]: ";
+			say "You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
 			if dice + bonus is greater than 19:
 				say "'Oh... he really did send you, didn't he?' You hear things being shoved aside, and the door opens a crack, an eye peering out, trying to gauge if the coast is clear. Seeing that it is, Lee steps out, and he isn't a he anymore. In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point. 'C-come on, let's hurry, I don't want anyone to see me!'";
 				now success is 1;
 			otherwise:
 				say "'Ha! As if I'd believe that!' You get the feeling you'll have to try again later to convince him to come out.";
 		if success is 0:
-			say "Do you attempt to break down the door? (Y/N)"
+			say "Do you attempt to break down the door? (Y/N)";
 			if the player consents:
 				let bonus be ( Strength of player minus 10 ) divided by 2;
 				let dice be a random number from 1 to 20;
-				say "You roll 1d20([dice])+[bonus] vs 22 and score [dice +bonus]: ";
+				say "You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
 				if dice + bonus is greater than 21:
 					 say "'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
 					now success is 1;
