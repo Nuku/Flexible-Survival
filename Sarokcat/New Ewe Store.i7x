@@ -31,17 +31,28 @@ check ewefucking:
 	if Mary is not visible, say "who?" instead;
 
 
-To ramfuck:
+Instead of ramfucking while ramfucked is 0:
+	try conversing the leon;
+
+Instead of ewefucking while ewefucked is 0:
+	try conversing the mary;
+
+Carry out ramfucking:
 	if lastramfuck - turns is less than 8:
 		say "Leon smiles at you as you approach, before shaking his head sadly at you. 'Much as I'd like to spend some more time with you, you aren't the only one in the flock that needs my personal attention. And it wouldn't be fair to the rest of them for me to neglect them like that, but if you come back later I'm sure we could find some time.'.";
 		stop the action;
 	now lastramfuck is turns;
+	say "[ram attack]";
+	ramify;
 
-To ewefuck:
+Carry out ewefucking:
 	if lastewefuck - turns is less than 8:
 		say "Mary blushes as she looks around, before sighing, 'Sorry, i can't duck out again from my duties here again so soon. Maybe you could come back a little later?' she says hopefully.'.";
 		stop the action;
 	now lastewefuck is turns;
+	say "[ewe attack]";
+	say "Pickle";
+	ewefy;
 
 
 After resolving a  New Ewe Store, try looking;
