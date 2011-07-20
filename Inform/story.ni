@@ -2654,6 +2654,10 @@ Section x - Debug Commands - Not for release
 
 [ Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
 
+When play begins:
+	repeat through table of game objects:
+		say "[name entry][line break]";
+	
 Spawnmonster is an action applying to one topic.
 
 understand "spawn [text]" as spawnmonster.
