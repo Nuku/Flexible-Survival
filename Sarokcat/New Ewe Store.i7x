@@ -51,7 +51,6 @@ Carry out ewefucking:
 		stop the action;
 	now lastewefuck is turns;
 	say "[ewe attack]";
-	say "Pickle";
 	ewefy;
 
 
