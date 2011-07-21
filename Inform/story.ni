@@ -1061,6 +1061,7 @@ Include Hungry Boar Man by Hiccup.
 Include Messy Pig for Fs by anonymous.
 Include Elf by Nuku Valente.
 Include Feats by Nuku Valente.
+Include Junkyard and Warehouse by Rimme.
 
 to delete (X - a grab object):
 	let found be 0;
