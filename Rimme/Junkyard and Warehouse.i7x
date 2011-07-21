@@ -42,6 +42,7 @@ Instead of going south from the Abandoned Lot:
 			say "'Hello! Who's there?' a man from behind the door says.";
 			if Stevenswayed is 1:
 				say "'Oh, you again. Come on in.' He opens the door up.";
+				move player to Storage Room;
 			Otherwise:
 				let changed be false;
 				if the player is not skintone human, let changed be true;
@@ -271,7 +272,7 @@ To stevenfuck:
 		say "He presses your body up and down his equine body, until you finally catch his cock with your hands. Now you bring your head down onto it and start sucking it, loudly, strongly, with as much ferocity as his tongue. He falls over backwards, gasping, pounding the floor as loud as he can, screaming long and hard. He spasms hard, exhaling at the top of his lungs, and just as the seed comes forth and fills your mouth, the door roars open as heavy footsteps barge in and yank you away from your satisfied boyfriend.";
 	say "The guards grab at Steven, two at each arm, three at each leg, in order to subdue him. They finally pin him against the wall, away from you, while another three drag you out. A hushed murmur has fallen amidst the crowd outside, but all you hear is your heart racing and your stomach spinning with glee. You barely notice being thrown outside.";
 	move the player to Abandoned Lot;
-	increase libido by 10;
+	increase libido of player by 10;
 	now Stevenremoved is 1;
 	newstevenconverse;
 	move Steven to Steven's home;
