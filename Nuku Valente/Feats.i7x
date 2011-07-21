@@ -98,6 +98,7 @@ instead of addfeating the basic feats:
 		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases from 3 X to 5 X.";
 	if dexterity of player is greater than 14:
 		addfeat "Martial Artist" with "You have basic martial arts training, increasing the damage you cause when you have no weapon.";
+		addfeat "Stealthy" with "Your chance of running into a monster is decreased while you are scavenging or exploring.";
 	if "Martial Artist" is listed in feats of player:
 		addfeat "Natural Armaments" with "You gain additional power based on the mutation of your body, borrowing the natural weapons of your infection.";
 		addfeat "Black Belt" with "Your martial artistry is amazing. Your damage increases furher while unarmed, and you have a small(10%) chance of avoiding hits that would otherwise have landed.";
