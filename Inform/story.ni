@@ -2030,6 +2030,7 @@ This is the explore rule:
 			now something is 1;
 			try resolving L;
 			wait for any key;
+	if "Stealthy" is listed in feats of player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
 	if a random number from 1 to 20 is less than 10 plus bonus:
 		if there is a area of Battleground in the table of random critters:
 			now something is 1;
@@ -2647,7 +2648,9 @@ carry out scavenging:
 	otherwise:
 		say "Your search turns up empty.";
 	if battleground is "", now battleground is "Outside";
-	if a random number from 1 to 20 is less than 7:
+	let z be 7;
+	if "Stealthy" is listed in feats of player, decrease z by 2;
+	if a random number from 1 to 20 is less than z:
 		if there is a area of Battleground in the table of random critters:
 			Fight;
 	follow turnpass rule;
