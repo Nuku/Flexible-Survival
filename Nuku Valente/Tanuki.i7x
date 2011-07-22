@@ -40,7 +40,7 @@ Carry out ringing:
 	if the demand of the shrine is journal:
 		now the demand of shrine is a random temporary grab object;
 	say "'Bring me a [demand of shrine]! [bold type]sacrifice[roman type] it before me and I will be appeased!'";
-	say "With this said, the spirit grabs between its legs and pulls out its ballsac in a great furry blanket, curling up into it before vanishing in a puff.";
+	say "With this said, the spirit grabs between its legs and pulls out its scrotum in a great furry blanket, curling up into it before vanishing in a puff.";
 
 sacrificing is an action applying to one thing.
 

@@ -21,7 +21,7 @@ Instead of resolving a potential resources:
 	say "While wandering about, you're certain you see some [y] and move to get it.";
 	now x is a random number from 1 to 4;
 	if x is 1:
-		say "It's just laying there, hidden in [one of]a busted vending machine[or]a counter[or]a wheel barrel[or]the middle of a street[or]in a bag[at random].";
+		say "It's just laying there, hidden in [one of]a busted vending machine[or]a counter[or]a wheel barrow[or]the middle of a street[or]in a bag[at random].";
 		add y to invent of the player;
 	if x is 2:
 		let difficulty be a random number from 6 to 16;

@@ -42,7 +42,7 @@ When Play begins:
 	now attack entry is "[one of]Runs up, bringing her feet forward in a flying kick.[or]Leaps in and bites at your arm.[or]Claws at you woth her slender paws.[at random]";
 	now defeated entry is "[skunkg defeat]";
 	now victory entry is  "[skunkg attack]"; 
-	now desc entry is "A very female anthropomorphic skunk with hints of animal, its curves and beasts leave you wanting, without any reservations, to fuck it senseless.";[ Description of the creature when you encounter it.]
+	now desc entry is "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";[ Description of the creature when you encounter it.]
 	now face entry is "have a large-muzzled female skunk's head.";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "curvaceous and screams 'female and needs IT', men want to fuck you women want to be you... and fuck you.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[otherwise]black and white fured[end if]";[ skin Description, format as the text "You have (your text) skin"]
