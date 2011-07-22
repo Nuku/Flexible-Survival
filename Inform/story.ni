@@ -14,7 +14,7 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
-The release number is 36.
+The release number is 37.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -975,6 +975,13 @@ To Birth:
 To impregnate with (x - text):
 	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player:
 		stop the action;
+	if "Selective Mother" is listed in feats of player:
+		say "Do you wish to be impregnated with a [x] child?";
+		if the player consents:
+			let q be 1;
+		otherwise:
+			say "You choose not to accept the seed.";
+			stop the action;
 	now gestation of child is a random number from 24 to 48;
 	let infection be "";
 	if a random number from 1 to 100 is greater than 50:

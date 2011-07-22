@@ -77,6 +77,8 @@ instead of addfeating the fun feats:
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
 	addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";
 	addfeat "One Pair" with "You will not grow more than two breasts.";
+	if "Fertile" is listed in feats of player:
+		addfeat "Selective Mother" with "You can decide if you want to become pregnant.";
 
 instead of addfeating the basic feats:
 	if charisma of player is greater than 14:
