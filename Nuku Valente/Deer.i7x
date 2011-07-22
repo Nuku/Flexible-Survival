@@ -139,6 +139,8 @@ when play ends:
 		otherwise:
 			if susan is in primary lab:
 				say "When the rescue comes, you return to Susan and leave the city hand in hand. Despite any other loves or friends you pick up, she remains your favored. Her belly is swollen round often with the fruit of your couplings, and she accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives, eventually tended to by the children you sired and raised so well.";
+				if orthasstart is 4:
+					say "Susan remains your loving and loyal doe, bearing twin foals from your union.  Your new family convinces you to settle down with them in a life that, though perhaps unplanned, you still find rewarding.  Her work assisting Dr. Matt's research continues to yield fascinating discoveries.[line break][line break]Your two relationships cause some friction at first, but eventually Susan and Orthas learn to live with, and even rely on and care for each other in times of trouble.  Your children grow up together, well-protected and cared for.  Dr. Matt's exposure to your family causes him to reconsider some of his less ethical approaches to science.";
 			otherwise:
 				say "Your sleek lines attract many. You easily secure a job as a secretary, but live for the weekends, when you'd hit the clubs and dance the night away to the gawkings of others. Though some humans remain fearful on basis of your being mutated at all, more than a few approach you openly, seeing your attention and affection. You show them a good time, on the dance floor, or the bedroom floor, depending on how much you like them. Man, woman, you find yourself not caring as much between the two.";
 
