@@ -137,8 +137,8 @@ Instead of trading when the second noun is Steven:
 		if the noun is chips:
 			say "Steven shakes his head sadly. 'I think I lost my appetite for junk food, frankly.'";
 		if the noun is medkit:
-			say "UNDEFINED";
-			[what to give back?]
+			say "He shakes his head. 'Eh, you keep it. I'm not particularly injured right now.'";
+			[]
 
 Section 4 - Steven, requests
 
@@ -226,7 +226,7 @@ Carry out stevenfucking:
 					say "'You've had some painful memories,' you say, as you walk over to him, and lean over to whisper in his ear. 'But I can help you forget.'";
 					stevenfuck;
 				otherwise:
-					say "You politely clear your throat, embarrassed by this incident. He pulls up his trousers, and straightens them carefully. 'Thank you,' he says, shaking. 'Don't tell anyone. I mean it, even more than that soda. I'll give you clean food and water, no charge, no questions asked, I promise. Just [bold type]ask for food[roman type] or [bold type]ask for water[roman type], and I'll give it to you.' He walks to the door. 'Thanks for the chat,' as he leaves.";
+					say "You politely clear your throat, embarrassed by this incident. He pulls up his trousers, and straightens them carefully. 'Thank you,' he says, shaking. 'Don't tell anyone. I mean it[soda reference]. I'll give you clean food and water, no charge, no questions asked, I promise. Just [bold type]ask for food[roman type] or [bold type]ask for water[roman type], and I'll give it to you.' He walks to the door. 'Thanks for the chat,' as he leaves.";
 					now steventrust is 1;
 					move Steven to Storage Room;
 			otherwise:
@@ -240,6 +240,10 @@ Carry out stevenfucking:
 					move Steven to Storage Room;
 		otherwise:
 			stevenjunkfuck;
+
+To say soda reference:
+	if stevenswayed is 1:
+		say ", even more than that soda";
 
 To stevenfuck:
 	if cunts of player > 0:
@@ -288,6 +292,7 @@ To stevenfuck:
 Section 4 - Steven in the Junkyard
 	
 To newstevenconverse:
+	now the
 	now the description of Steven is "A tall, imposing horse figure, were he not someone you knew. He has muscles up and down his red-haired body, his black hair replaced with a long red mane. He wears a loincloth and a belt, probably from his old uniform. He walks awkwardly, but carefully with his legs that end in hooves.";
 	now the conversation of Steven is {"I've seen a few beasts here and there, but I always manage to run away and hide. It's not as infested out here as the guards made it out to be.", "I think a wild animal used to live here, before the infestation. Smells like it hasn't been back for a long time.", "I actually feel pretty good. Even better than as a guard. It feels like I have a purpose, now.", "I might miss my old human body, but if you can't beat them, join them.' He chuckles, 'And no one could beat you, dear.", "You'd think there'd be a lot of disease going around. But I guess the nanites took care of that problem.", "One thing I like about this body is I feel so strong, I could lift a car. I always did wish I had a stronger build.", "I didn't use to be fond of horses, but now I can't stop thinking about them.", "I wish I had something to offer you, but I don't. There's not a lot of food here anymore.", "There are plenty of coffee tins here. I think I might make a set of bongo drums."}.
 
@@ -372,7 +377,7 @@ Instead of resolving junkyard digups:
 
 Section 3 - Steven's home
 
-Steven's home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private. Outside of Steven's home is Junkyard Entrance. 
+Steven's home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private. Outside of Steven's home is Junkyard Entrance. Inside of Junkyard Entrance is nowhere.
 [The sarea of Steven's home is "Junkyard."]
 
 a junkyard home is a situation.
@@ -380,13 +385,14 @@ The sarea of a junkyard home is "Junkyard".
 
 Instead of resolving a junkyard home:
 	if Stevenremoved is 0:
-		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. You decide to leave it alone for now.";
+		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
 		stop the action;
 	otherwise:
 		say "You turn around a corner and find a quaint little cove in the stacks of junk. A familiar-looking person is tidying up the floor, and looks up as you approach.";
 		say "'Ah, hello,' Steven says. 'Didn't know if I'd see you again.' He looks down at near-naked equine body, wearing only a belt and a loincloth. 'As you can tell, I was permanently disbarred and exiled. My old clothes don't fit me anymore. This loincloth was part of a curtain. There is a lot of useful stuff out here, but it's not like it was in the shelter. I'm sure we'll make it through, though.'";
 		say "'I want to thank you,' he says. 'I don't know if it was the best decision I've made, but I feel some relief for this body. It feels like, completion, I guess. The grass is tastier on the other side, after all.' He smiles. 'You like the place? I think it's roomy enough. If you want to... you know... move in.' He coughs and goes back to work.";
 		move the player to Steven's home;
+		now junkyard home is resolved.
 
 Section 4 - Finding a tool
 
@@ -419,10 +425,10 @@ Instead of resolving an unused tool:
 
 Section 5 - Find a random infected object
 
-a scene of a scuffle is a situation.
-The sarea of a scene of a scuffle is "Junkyard".
+signs of a scuffle is a situation.
+The sarea of signs of a scuffle is "Junkyard".
 
-Instead of resolving a scene of a scuffle:
+Instead of resolving signs of a scuffle:
 	say "It looks like two infected creatures were fighting each other out here. You search the area for any fallen loot: ";
 	let opportunity be 0;
 	let firstbeast be a random number from 1 to number of rows in the table of random critters;
