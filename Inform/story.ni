@@ -2300,8 +2300,11 @@ This is the cunt descr rule:
 
 looknow is a number that varies.
 
-instead of examining the player:
-	follow the self examine rule;
+instead of examining a person(called x):
+	if x is the player:
+		follow the self examine rule;
+	otherwise:
+		say "[The description of x]";
 	
 Showstatting is an action applying to nothing.
 
@@ -2321,7 +2324,7 @@ To showstats (x - Person):
 	if the number of entries in the feats of the x is greater than 0:
 		say ", Feats: [feats of the x][line break]";
  
- This is the self examine rule:
+This is the self examine rule:
 	now looknow is 1;
 	showstats player;
 	let cocktext be "";
