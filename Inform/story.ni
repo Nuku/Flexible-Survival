@@ -605,6 +605,7 @@ Include Kangaroo by batroo.
 Include Feral Sea Dragon by Tunalord Sefont.
 Include Feral Sea Dragoness by Tunalord Sefont.
 Include Pets by Nuku Valente.
+Include Little Fox by Sarokcat.
 Include sprite by Nuku Valente.
 Include Harpy by Nuku Valente.
 Include Cute Chinchilla Girl For FS by Trav.
