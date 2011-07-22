@@ -37,7 +37,7 @@ Instead of entering the Storage Room:
 [Instead of going south from the Abandoned Lot:
 	try going through the Warehouse Door;]
 
-Instead of going through the Warehouse Door:
+Instead of going south from the abandoned lot:
 	if Stevenremoved is 0:
 		say "You knock on the door, and a slat opens up at eye level. ";
 		if the player is not facially human:
@@ -102,7 +102,7 @@ After going to Storage Room from Steven's Office:
 To say steven flattery:
 	if the player is bodily human:
 		if the player is skintone human:
-			if tailname is not "":
+			if tailname is not "human":
 				if the breast size of player is less than 4:
 					if the Cock Length of player is less than 12 or the cock width of player is less than 12:
 						say "You seem pretty reasonably human. Glad the disaster didn't take a hit out of you, eh?";
@@ -287,6 +287,7 @@ To stevenfuck:
 	now Stevenremoved is 1;
 	newstevenconverse;
 	move Steven to Steven's home;
+	now monster is 1;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if name entry is "red horse":
@@ -438,14 +439,14 @@ The sarea of signs of a scuffle is "Junkyard".
 Instead of resolving signs of a scuffle:
 	say "It looks like two infected creatures were fighting each other out here. You search the area for any fallen loot:[line break]";
 	let opportunity be 0;
-	let firstbeast be a random number from 1 to number of rows in the table of random critters;
+	let firstbeast be a random number from 1 to number of filled rows in the table of random critters;
 	choose row firstbeast from the table of random critters;
 	if there is a loot entry:
 		if loot entry is not "":
 			add loot entry to invent of player;
 			say "You found 1 x [loot entry]!";
 			now opportunity is 1;
-	let secondbeast be a random number from 1 to number of rows in the table of random critters;
+	let secondbeast be a random number from 1 to number of filled rows in the table of random critters;
 	choose row secondbeast from the table of random critters;
 	if there is a loot entry:
 		if loot entry is not "":
