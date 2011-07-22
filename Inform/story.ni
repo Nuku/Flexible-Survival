@@ -305,6 +305,8 @@ understand "water" as dirty water.
 water bottle is a grab object. It is a part of the player. The trade of water bottle is "chips".
 Does the player mean using the dirty water: it is unlikely.
 dog milk is a grab object. It is a part of the player.
+The purified of dog milk is "water bottle".
+The purified of Wyvern Goop is "food".
 soda is a grab object. It is a part of the player.
 chips is a grab object. It is a part of the player.
 glob of goo is a grab object. It is a part of the player. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
