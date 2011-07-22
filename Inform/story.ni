@@ -498,6 +498,9 @@ To say felitaur tempt:
 	say "All at once, everyone is climaxing. In you, around you, shuddering squeals of rodent delight before you feel your own body shudder in powerful release. As darkness claims you, you can see the den getting smaller, the original rat dragging you away.";
 	
 to say latexfoxrape:
+	if libido of player is 0:
+		say "The latex fox gets an odd expression before a soft hissing is heard. The poor creature slowly sinks to the ground as the air escapes it, softly whining until it is an inanimate pile of latex.";
+		stop the action;
 	if a random number from 1 to 100 is greater than libido of player:
 		let c be 1;
 	otherwise:
