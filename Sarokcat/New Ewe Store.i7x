@@ -158,7 +158,7 @@ To say leonchat:
 				say "The room is well lit from the overhead lights, though that seems to be the only constants with most other break rooms you've seen. At some point most of the furniture seems to have been replaced with low benches, and the rest of the room is stuffed with what appears to be fresh piles of wool made into bedding. The room is covered in a strong musk of sheep and sex, making your head swim and your body tingle. Your attention is once more drawn back to Leon as he runs his hand along your neck, before carefully helping you remove your clothes, leaving you blushing as all of your [skin of player] skin is exposed for him to see." ;
 				wait for any key;
 				say "Leon grins as he looks you up and down, before guiding you over to one of the benches to sit.";
-				if cunts of player is greater than 0:
+				if cocks of player is greater than 0:
 					say "'Hmm looks like you won't fit in here quite yet...' he says, eyeing your male attributes, 'only room in a flock for one Ram at a time.  Nothing we cant fix though!'";
 				otherwise:
 					say "'Oh yeah, that's what I like to see in woman,' he says, eyeing you lewdly, 'Now we just need to fix the rest of you...'";
