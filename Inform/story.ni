@@ -609,6 +609,7 @@ Include Cute Chinchilla Girl For FS by Trav.
 Include Ewe by Sarokcat.
 Include Ram by Sarokcat.
 Include New Ewe Store by Sarokcat.
+Include New Events by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
