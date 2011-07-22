@@ -42,7 +42,7 @@ Instead of resolving a wild squirrels:
 	otherwise:
 		now bodyname of player is "squirrel girl";
 		now skinname of player is "squirrel girl";
-		now body of player is "curved but athletic looking, a dancer's body perhaps.";
+		now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws.";
 		now skin of player is "white furred";
 		now tailname of player is "squirrel Girl";
 		now tail of player is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
