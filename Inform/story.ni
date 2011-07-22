@@ -2530,7 +2530,14 @@ When play begins:
 	featget;
 	funfeatget;
 	clear the screen;
-	say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
+	if scenario is "Rescuer Stranded":
+		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
+		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
+		say "You awake in what appears to be a disused bunker. You have no idea how you even got here, but you are uninfected. In your panicked flight you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack, and your watch.";
+		say "Heaven only knows what awaits you outside but, you have to find a way back.";
+		say "Taking a deep breath you open the door to your sanctuary...";
+	otherwise:
+		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
 	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
 	if the player consents:
@@ -2673,10 +2680,6 @@ Section x - Debug Commands - Not for release
 
 [ Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
 
-When play begins:
-	repeat through table of game objects:
-		say "[name entry][line break]";
-	
 Spawnmonster is an action applying to one topic.
 
 understand "spawn [text]" as spawnmonster.
