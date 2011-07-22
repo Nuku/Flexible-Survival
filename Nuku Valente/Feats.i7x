@@ -115,6 +115,8 @@ instead of addfeating the basic feats:
 		addfeat "Youthful Tides" with "Once in a while, all of your kids will swarm to your aid in battle.";
 	if hp of doctor matt is greater than 4:
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
+	if level of player is greater than 1:
+		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Wierdo!";
 
 
 This is the gainfeat rule:
@@ -128,5 +130,6 @@ This is the gainfeat rule:
 		decrease menu depth by 1;
 		increase featgained of player by 1;
 		if nam is "Automatic Survival", decrease score by 600;
+		if nam is "More Time", extend game by 24;
 
 Feats ends here.
