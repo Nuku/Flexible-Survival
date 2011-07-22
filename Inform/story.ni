@@ -2214,7 +2214,7 @@ This is the brain descr rule:
 		now descr is "almost entirely subsumed[lusting]";
 	if libido of player is less than 21, now lusting is " thoughts.";
 	if libido of player is greater than 80:
-		let mun be a random number from 1 to number of rows in table of random critters;
+		let mun be a random number from 1 to number of filled rows in table of random critters;
 		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [name in row monster of the table of random critters] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
 	otherwise if libido of player is greater than 40:
 		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
