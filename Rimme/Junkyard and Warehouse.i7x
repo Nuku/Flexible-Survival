@@ -6,7 +6,7 @@ Section 1 - Lot Environment
 
 Abandoned Lot is a room. "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the infestation, this place was disheveled. Bordering the lot are a series of broken-down, graffiti-colored warehouses. Old 'Authorized Personnel Only' signs lay on the ground.[line break][line break]Among the warehouses to the east is a road leading further away from the town." Abandoned Lot is fasttravel.
 
-Warehouse Door is a door. "One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it."
+Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it.[otherwise]There are many doors along the wall, but the only one open to you is the one leading outside.[end if]"
 South of the Abandoned Lot is Warehouse Door.
 
 Section 2 - Entering the Warehouse
@@ -30,7 +30,13 @@ Definition: a person is bodily human:
 	if the bodyname of the player is "awesome", yes;
 	no;
 
+Instead of entering the Storage Room:
+	try going through the Warehouse Door;
+
 Instead of going south from the Abandoned Lot:
+	try going through the Warehouse Door;
+
+Instead of going through the Warehouse Door:
 	if Stevenremoved is 0:
 		say "You knock on the door, and a slat opens up at eye level. ";
 		if the player is not facially human:
@@ -73,7 +79,7 @@ Section 1 - The environment
 
 The storage room is a room. "The inside of this warehouse has been converted into a shelter. The large stockpile of packaging and spare parts remains in the center of the room, a remnant of the city's industry. More heavily guarded are the stockpiles of bottled water in the corner. A line of survivors stretches from the water all the way around the wall. Few of them carry any possessions; they sit on blankets as they talk to one another. Every now and then, a glint of color or a patch of fur catches your eye; it seems at least a few of these survivors have already been mutated, and are desperately trying to hide it.";
 
-South of the Warehouse Door is the Storage Room. 
+South of the Warehouse Door is the Storage Room.
 
 Section 2 - Steven, chat
 
@@ -81,7 +87,7 @@ Stevenswayed is a number that varies. Stevenswayed is usually 0.
 
 Steven is a person in the Storage Room. "A guard who you recognize as the doorkeeper stands, understandably, by the big steel door. A nametag says 'Steven'."
 The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?"
-The conversation of Steven is {"[steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits."}.
+The conversation of Steven is {"[steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.", "I haven't washed this uniform in so long. I could really go for a non-infected shower."}.
 
 Before conversing Steven:
 	if the player is in Storage Room:
@@ -95,7 +101,7 @@ After going to Storage Room from Steven's Office:
 To say steven flattery:
 	if the player is bodily human:
 		if the player is skintone human:
-			if tailname is "":
+			if tailname is not "":
 				if the breast size of player is less than 4:
 					if the Cock Length of player is less than 12 or the cock width of player is less than 12:
 						say "You seem pretty reasonably human. Glad the disaster didn't take a hit out of you, eh?";
@@ -160,7 +166,7 @@ Check foodrequest:
 	if the player is not in Storage Room:
 		say "He shakes his head. 'No, it's too late for that.'" instead;
 	if lastfoodrun - turns is less than 4:
-		say "'Not all at once,' he whispers. 'The longest the guards will tolerate a missing food ration is 12 hours. Ask me then.'";
+		say "'Not all at once,' he whispers. 'The longest the guards will tolerate a missing food ration is 12 hours. Ask me then.'" instead;
 
 Carry out foodrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a packet of food.";
@@ -177,7 +183,7 @@ Check waterrequest:
 	if the player is not in Storage Room:
 		say "He shakes his head. 'No, it's too late for that.'" instead;
 	if lastwaterrun - turns is less than 8:
-		say "'Sorry,' he hushes you, 'but water is even stricter than food here. I can sneak you some water once every 24 hours, but any more than that, and the boss'll chew everyone's head off for stealing water.'";
+		say "'Sorry,' he hushes you, 'but water is even stricter than food here. I can sneak you some water once every 24 hours, but any more than that, and the boss'll chew everyone's head off for stealing water.'" instead;
 
 Carry out waterrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a bottle of water.";
@@ -293,7 +299,8 @@ Section 4 - Steven in the Junkyard
 	
 To newstevenconverse:
 	now the description of Steven is "A tall, imposing horse figure, were he not someone you knew. He has muscles up and down his red-haired body, his black hair replaced with a long red mane. He wears a loincloth and a belt, probably from his old uniform. He walks awkwardly, but carefully with his legs that end in hooves.";
-	now the conversation of Steven is {"I've seen a few beasts here and there, but I always manage to run away and hide. It's not as infested out here as the guards made it out to be.", "I think a wild animal used to live here, before the infestation. Smells like it hasn't been back for a long time.", "I actually feel pretty good. Even better than as a guard. It feels like I have a purpose, now.", "I might miss my old human body, but if you can't beat them, join them.' He chuckles, 'And no one could beat you, dear.", "You'd think there'd be a lot of disease going around. But I guess the nanites took care of that problem.", "One thing I like about this body is I feel so strong, I could lift a car. I always did wish I had a stronger build.", "I didn't use to be fond of horses, but now I can't stop thinking about them.", "I wish I had something to offer you, but I don't. There's not a lot of food here anymore.", "There are plenty of coffee tins here. I think I might make a set of bongo drums."}.
+	now the conversation of Steven is {"I've seen a few beasts here and there, but I always manage to run away and hide. It's not as infested out here as the guards made it out to be.", "I think a wild animal used to live here, before the infestation. Smells like it hasn't been back for a long time.", "I actually feel pretty good. Even better than as a guard. It feels like I have a purpose, now.", "I might miss my old human body, but if you can't beat them, join them.' He chuckles, 'And no one could beat you, dear.", "You'd think there'd be a lot of disease going around. But I guess the nanites took care of that problem.", "One thing I like about this body is I feel so strong, I could lift a car. I always did wish I had a stronger build.", "I didn't use to be fond of horses, but now I can't stop thinking about them.", "I wish I had something to offer you, but I don't. There's not a lot of food here anymore.", "There are plenty of coffee tins here. I think I might make a set of bongo drums.", "The smell still gets through, once in a while. Tell me if you find any potpourri or something."}.
+	now the initial appearance of Steven is "[one of]Steven continues to rearrange the furnishings[or]Steven waits on you patiently[or]Steven swats away an annoying fly[or]Steven straightens his loincloth[or]Steven smiles warmly as you look at him[at random]."
 
 Laststevenfuck is a number that varies. Laststevenfuck is usually 250.
 
@@ -314,7 +321,7 @@ When play begins:
 	add "red horse" to infections of hermaphrodite;
 	Choose a blank row from Table of random critters;
 	now name entry is "red horse";
-	now face entry is "long equine face, complete with flat teeth and prehensile lips.";
+	now face entry is "flat-toothed, prehensile-lipped equine";
 	now body entry is "well-muscled";
 	now skin entry is "long red hairs up and down your";
 	now tail entry is "You have a long stringy tail that you can whisk as you please.";
@@ -377,7 +384,7 @@ Instead of resolving junkyard digups:
 Section 3 - Steven's home
 
 Steven's home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private. Outside of Steven's home is Junkyard Entrance. Inside of Junkyard Entrance is nowhere.
-[The sarea of Steven's home is "Junkyard."]
+The sarea of Steven's home is "Junkyard."
 
 a junkyard home is a situation.
 The sarea of a junkyard home is "Junkyard".
@@ -428,20 +435,22 @@ signs of a scuffle is a situation.
 The sarea of signs of a scuffle is "Junkyard".
 
 Instead of resolving signs of a scuffle:
-	say "It looks like two infected creatures were fighting each other out here. You search the area for any fallen loot: ";
+	say "It looks like two infected creatures were fighting each other out here. You search the area for any fallen loot:[line break]";
 	let opportunity be 0;
 	let firstbeast be a random number from 1 to number of rows in the table of random critters;
 	choose row firstbeast from the table of random critters;
 	if there is a loot entry:
-		add loot entry to invent of player;
-		say "You found 1 x [loot entry]!";
-		now opportunity is 1;
+		if loot entry is not "":
+			add loot entry to invent of player;
+			say "You found 1 x [loot entry]!";
+			now opportunity is 1;
 	let secondbeast be a random number from 1 to number of rows in the table of random critters;
 	choose row secondbeast from the table of random critters;
 	if there is a loot entry:
-		add loot entry to invent of player;
-		say "You found 1 x [loot entry]!";
-		now opportunity is 1;
+		if loot entry is not "":
+			add loot entry to invent of player;
+			say "You found 1 x [loot entry]!";
+			now opportunity is 1;
 	if opportunity is 0:
 		say "Alas, you found nothing but dirt, dust, and junk."
 
