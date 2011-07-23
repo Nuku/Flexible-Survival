@@ -43,7 +43,8 @@ Carry out ramfucking:
 		stop the action;
 	now lastramfuck is turns;
 	say "[ram attack]";
-	ewefy;
+	ramify;
+	if cunts of player is greater than 0, say "[impregchance]";
 
 Carry out ewefucking:
 	if lastewefuck - turns is less than 8:
@@ -51,7 +52,7 @@ Carry out ewefucking:
 		stop the action;
 	now lastewefuck is turns;
 	say "[ewe attack]";
-	ramify;
+	ewefy;
 
 
 After resolving a  New Ewe Store, try looking;

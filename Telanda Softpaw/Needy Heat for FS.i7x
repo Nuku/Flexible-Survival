@@ -36,7 +36,7 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 		say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs.  Unable to control your lust you strike out in the direction of and immediately upon seeing the infected monster that you scented drop onto you immediately submit, offering yourself freely.";
 		now slutfucked is 0;
 		let hmonlist be a list of numbers;
-		repeat with X running from 1 to number of rows in table of random critters:	[ Loop through and select all monsters that appear "outside" ] 
+		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear "outside" ] 
 			choose row X from the table of random critters;
 			if area entry is "Outside":
 				add X to hmonlist;
