@@ -620,6 +620,7 @@ Include Ash Whelp For FS by Sweraptor.
 Include Alex by Nuku Valente.
 Include Male Peacock for FS by Nuku Valente.
 Include Orthas by Nuku Valente.
+Include Infected Pool for FS by Hellerhound.
 
 understand the command "feed" as something new.
 
@@ -2687,6 +2688,14 @@ To Challenge (x - text):
 			now monster is y;
 			now monsterhp is hp entry;
 			challenge;
+			break;
+
+To Infect (x - text):
+	repeat with y running from 1 to number of rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is x:
+			now monster is y;
+			infect;
 			break;
 
 Section x - Debug Commands - Not for release 
