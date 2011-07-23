@@ -2679,7 +2679,15 @@ carry out scavenging:
 		if there is a area of Battleground in the table of random critters:
 			Fight;
 	follow turnpass rule;
-	
+
+To Challenge (x - text):	
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y from the table of random critters;
+		if name entry is x:
+			now monster is y;
+			now monsterhp is hp entry;
+			challenge;
+			break;
 
 Section x - Debug Commands - Not for release 
 
