@@ -4,7 +4,7 @@ Version 1 of infected pool for fs by Hellerhound begins here.
 Section 1 - Pure Pool
 
 Pure pool is a situation.
-
+The sarea of Pure Pool is "Park";
 purpol is a number that varies.
 purpolu is a number that varies.
 
@@ -26,8 +26,8 @@ to wyvernify:
 instead of resolving a pure pool:
 	if purpol is 0:
 		say "You smell in the air a slight difference, seeming cleaner, more pure. You look around for the source.";
-		say "You come across a pool of water in the park. Unlike the puddls in the city, this one is clean and clear, and you can see the red stones at the bottom. You take a small drink, and feel less thirsty.";
-		decrease thirst by 10;
+		say "You come across a pool of water in the park. Unlike the puddles in the city, this one is clean and clear, and you can see the red stones at the bottom. You take a small drink, and feel less thirsty.";
+		decrease thirst of the player by 10;
 		increase purpol by 1;
 	otherwise if purpol is 1:
 		say "Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park?";
@@ -55,8 +55,8 @@ instead of resolving a pure pool:
 				challenge "Wyvern";
 				say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
 				wait for any key;
-				say "[line break] You drink away your thirst.";
-				now thirst is 0;
+				say "[line break] Yo drink away your thirst.";
+				now thirst of the player is 0;
 			otherwise:
 				say "You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
 				if the player consents:
@@ -66,13 +66,13 @@ instead of resolving a pure pool:
 					challenge "Wyvern";
 					say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
 					wait for any key;
-					say "[line break] Yo drink away your thirst.";
-					now thirst is 0;                       
+					say "[line break] You drink away your thirst.";
+					now thirst of player is 0;                       
 				otherwise:
 					say "You watch as the wyvern screams just like it did before.";
-					if perception of player is greater than 12:
-						decrease perception by 2;
-						say "The blast damages your eardrums. (perception -2)";
+					if the Perception of the player is greater than 12:
+						decrease perception of the player by 4;
+						say "The blast damages your eardrums. (perception -4)";
 					say "Then the wyvern blows its load into the pool, clouding the water and dissapating the clean smell about the area.";
 					now purpol is 4;
 	otherwise if purpol is 4:
@@ -85,6 +85,7 @@ instead of resolving a pure pool:
 		if the player consents:
 			say "You dip your head into the cloudy pool and drink deeply.";
 			wyvernify;
+			now the thirst of the player is 0;
 		otherwise:
 			say "You keep clear of the infected water.";
 
