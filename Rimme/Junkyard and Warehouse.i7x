@@ -288,14 +288,9 @@ To stevenfuck:
 	newstevenconverse;
 	move Steven to Steven's home;
 	now monster is 1;
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
-		if name entry is "red horse":
-			now monster is X;
-			break;
 	say "You slowly pull yourself up, still wheezing from excitement. "; [continues into next line]
-	infect;
-	infect;
+	infect "red horse";
+	infect "red horse";
 
 Section 4 - Steven in the Junkyard
 	
