@@ -337,6 +337,7 @@ When play begins:
 	now sex entry is "Both";
 	now cock length entry is 15;
 	now cock width entry is 6;
+	now cocks entry is 1;
 	now breasts entry is 2;
 	now breast size entry is 4;
 	now male breast size entry is 0;
