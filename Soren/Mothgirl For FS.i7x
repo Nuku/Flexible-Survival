@@ -83,7 +83,7 @@ When Play begins:
 	now desc entry is "You see a girl with butterfly wings and fur around her neck, she has [one of]blonde[or]red[or]black[or]Auburn[at random] hair. Her [one of]blue[or]grey[or]hazel[or]green[or]lavender[or]brown[at random] eyes seem to gleam like a jewel as she looks at you. Her skin is grey in color and has perky C cup breasts. She is about 5 feet in height despite the fact of being a mothgirl she still retains most of her height ";[ Description of the creature when you encounter it.]
 	now face entry is "Your face is feminine looking with bright eyes.";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "You have moth wings with each flap you leave a trail of small dust behind you. Your body shrinks to 5 feet in height, and you get light curves to your body.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "You have Grey skin that lightly shines in the light";[ skin Description, format as the text "You have (your text) skin"] 
+	now skin entry is "glimmering grey";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "Your face begins to pull in and feel softer."; [ face change text. format as "Your face feels funny as (your text)" ]
