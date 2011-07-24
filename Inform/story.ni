@@ -623,6 +623,7 @@ Include Orthas by Nuku Valente.
 Include Infected Pool for FS by Hellerhound.
 Include Gryphons Plot for FS by Hellerhound.
 Include Underwater Zone For Fs by Hellerhound.
+Include Hyena Situations by Hellerhound.
 
 understand the command "feed" as something new.
 
