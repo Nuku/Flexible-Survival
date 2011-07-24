@@ -95,6 +95,7 @@ Instead of Resolving a Hyena Gang:
 		stop the action;
 	if hyg is 1:
 		Say “Searching the mostly empty streets of the city, you come across several familiar graffiti markings in the area. It seems like the territory claimed by that group of Hyenas is spreading rapidly, all of a sudden you feel like someone is watching you intently.  Glancing around you don't see anyone near by, but the uneasy feeling of being watched won[apostrophe]t leave you alone.  Deciding not to continue going in this direction, you turn and head back the way you came, trying not to break into a run as you leave.”;
+		Increase hyg by 1;
 		stop the action;	
 	if hyg is 2:
 		say “As you are out searching the city, you once more encounter the same hyena graffiti that you found in several other locations in the area.  Turning to leave before you run into trouble, you are surprised to see a hyena come sauntering out into the street behind you, and quickly prepare for a fight, only to realize it doesn[apostrophe]t show any signs of attacking as it approaches, its hands held out to the side in a nonthreatening manner.[line break] 'Hey don[apostrophe]t worry,' the hyena says as he draws closer, making you nervous, 'I[apostrophe]m not here for a fight, but we[apostrophe]ve noticed you near our turf and looking at our signage before,' he says with a gesture at the graffiti, 'So I thought I[apostrophe]d come over and offer you a chance to join on up,”; 
