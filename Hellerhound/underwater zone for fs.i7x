@@ -64,13 +64,11 @@ carry out swimtoing:
 	if the location of the player is noun:
 		say "You're already there.";
 		stop the action;
-	now battleground is "Beach";
+	now battleground is "Sea";
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	if a random number from 1 to 20 is less than 10 minus bonus:
-		if a random chance of one in two succeeds:
-			challenge "Feral Sea Dragon";
-		otherwise:
-			challenge "Feral Sea Dragoness";
+		if there is a area of Battleground in the table of random critters:
+			Fight;
 	otherwise:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;
@@ -149,23 +147,6 @@ to say sea dragon cum use:
 
 sea dragon cum is a grab object;
 sea dragon cum has a usedesc "[sea dragon cum use]";
-
-
-
-
-
-Section 4 - Dragolf 
-
-
-[TODO later, will be unfinished for a while]
-
-
-
-
-
-
-
-
 
 
 
