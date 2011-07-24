@@ -67,8 +67,10 @@ carry out swimtoing:
 	now battleground is "Beach";
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	if a random number from 1 to 20 is less than 10 minus bonus:
-		if there is a area of Battleground in the table of random critters:
-			Fight;
+		if a random chance of one in two succeeds:
+			challenge "Feral Sea Dragon";
+		otherwise:
+			challenge "Feral Sea Dragoness";
 	otherwise:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;
@@ -108,7 +110,6 @@ Sunken Ship is south of Coral Ring.
 
 Sunken Ship is a room. "A large ship lays sunken and rotting here. It is an attraction for divers and sea creatures alike. Maybe going here was a bad idea.".
 There is 2 Sea Dragon Cum in Sunken Ship. "Two clouds of thick seed are hanging in the water, tribute to some huge beast.".
-The invent of sunken ship is { "sea dragon cum" };
 
 
 Section 3 - Sea Dragon Cum
@@ -121,7 +122,7 @@ to say gill fruit:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"sea dragon cum"	"Thick seed from one of the dangerous sea dragons that marauds the coast. It is rarely found concentrated like this."	1	sea dragon cum
+"Sea Dragon Cum"	"Thick seed from one of the dangerous sea dragons that marauds the coast. It is rarely found concentrated like this."	1	sea dragon cum
 
 to say sea dragon cum use:
 	if the cunts of the player > 0:
@@ -135,10 +136,9 @@ to say sea dragon cum use:
 			say "You rub the thick stuff into your waiting cunt, massaging it in.";
 			if a random chance of one in two succeeds:
 				infect "Feral Sea Dragon";
-				impregnate with "Feral Sea Dragon";
 			otherwise:
 				infect "Feral Sea Dragoness";
-				impregnate with "Feral Sea Dragoness";
+			impregnate with "Feral Sea Dragon[one of][or]ess[at random]";
 	otherwise:
 		if a random chance of one in two succeeds:
 			infect "Feral Sea Dragon";
