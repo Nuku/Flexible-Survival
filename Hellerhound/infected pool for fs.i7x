@@ -23,6 +23,37 @@ to wyvernify:
 	infect;    
 
 
+to say wvern stop:
+	say "Do you try to stop them?";
+	if the player consents:
+		challenge "Wyvern";
+		say "After you finish with the first wyvern, the second attacks!";
+		wait for any key;
+		challenge "Wyvern";
+		say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
+		wait for any key;
+		say "[line break] Yo drink away your thirst.";
+		now thirst of the player is 0;
+	otherwise:
+		say "You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
+		if the player consents:
+			challenge "Wyvern";
+			say "After you finish with the first wyvern, the second attacks!";
+			wait for any key;
+			challenge "Wyvern";
+			say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
+			wait for any key;
+			say "[line break] You drink away your thirst.";
+			now thirst of player is 0;                       
+		otherwise:
+			say "You watch as the wyvern screams just like it did before.";
+			if the Perception of the player is greater than 12:
+				decrease perception of the player by 4;
+				say "The blast damages your eardrums. (perception -4)";
+			say "Then the wyvern blows its load into the pool, clouding the water and dissapating the clean smell about the area.";
+			now purpol is 4;
+
+
 instead of resolving a pure pool:
 	if purpol is 0:
 		say "You smell in the air a slight difference, seeming cleaner, more pure. You look around for the source.";
@@ -46,35 +77,10 @@ instead of resolving a pure pool:
 						say "You blow your load into the pool, thick streams of seed coming from your [cock length of player] inch long [cock of player] [if the cocks of player > 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] and scream as well. The seed sprays into the pool, making the water murky and infecting the whole thing. The water becomes cloudy and the clean smell in the air disappears.";
 						now purpol is 4;
 						now purpolu is 1;
-		otherwise:
-			say "Do you try to stop them?";
-			if the player consents:
-				challenge "Wyvern";
-				say "After you finish with the first wyvern, the second attacks!";
-				wait for any key;
-				challenge "Wyvern";
-				say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
-				wait for any key;
-				say "[line break] Yo drink away your thirst.";
-				now thirst of the player is 0;
-			otherwise:
-				say "You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
-				if the player consents:
-					challenge "Wyvern";
-					say "After you finish with the first wyvern, the second attacks!";
-					wait for any key;
-					challenge "Wyvern";
-					say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
-					wait for any key;
-					say "[line break] You drink away your thirst.";
-					now thirst of player is 0;                       
 				otherwise:
-					say "You watch as the wyvern screams just like it did before.";
-					if the Perception of the player is greater than 12:
-						decrease perception of the player by 4;
-						say "The blast damages your eardrums. (perception -4)";
-					say "Then the wyvern blows its load into the pool, clouding the water and dissapating the clean smell about the area.";
-					now purpol is 4;
+					say "[stop wyvern]";
+			otherwise:
+				say "[stop wyvern]";
 	otherwise if purpol is 4:
 		say "You find the infected pool";
 		if purpolu is greater than 0:
