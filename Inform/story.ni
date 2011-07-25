@@ -2575,7 +2575,7 @@ This is the Menu Exit Rule:
 
 Instead of examining the infection terminal:
 	say "Filled with glowing characters, the terminal lists all identified infections with some stats beside:[line break]";
-	repeat with X running from 1 to number of rows in table of random critters:
+	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is a lev entry:
 			say "[Name Entry]: Danger Level: [lev entry], Typical Environment: [area entry][line break]";
@@ -2764,7 +2764,7 @@ To Challenge (x - text):
 			break;
 
 To Infect (x - text):
-	repeat with y running from 1 to number of rows in table of random critters:
+	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is x:
 			now monster is y;
@@ -3039,7 +3039,7 @@ Instead of conversing the doctor matt:
 			say "'Excellent work. I will observe. You can proceed at whatever rate is comfortable. You are doing a great service for science,' says Matt as he raises a finger towards the sky.";
 		otherwise:
 			say "'Poor news. The specimen escaped, went running off back towards the park. She probably went feral. Nothing to do about it now, just look out for her. Probably dangerous.";
-			repeat with y running from 1 to number of rows in table of random critters:
+			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "doe":
 					now monster is y;

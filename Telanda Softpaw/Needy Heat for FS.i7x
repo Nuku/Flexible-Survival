@@ -1,4 +1,4 @@
-Needy Heat for FS by Telanda Softpaw begins here.
+	Needy Heat for FS by Telanda Softpaw begins here.
 
 "Addon for adding an 'in heat' Event to infections, Designed to work with all monster type infections by default. with the option to be customisable if you want to add specifics for your monster."
 
@@ -38,6 +38,7 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 		let hmonlist be a list of numbers;
 		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear "outside" ] 
 			choose row X from the table of random critters;
+			if there is no area entry, next;
 			if area entry is "Outside":
 				add X to hmonlist;
 		sort hmonlist in random order;
@@ -49,7 +50,7 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 		follow the breast descr rule;
 		say "[victory entry]";
 		infect;
-		decrease the score by 1;
+		decrease the score by 5;
 		decrease the morale of the player by 3;
 	else if libido of player is greater than 90:
 		increase slutfucked by 1;
