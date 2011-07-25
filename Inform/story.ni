@@ -679,7 +679,7 @@ Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
 Include Alex by Nuku Valente.
-Include Male Peacock for FS by Nuku Valente.
+Include Male Peacock for FS By Lago Moro.
 Include Orthas by Nuku Valente.
 Include Infected Pool for FS by Hellerhound.
 Include Gryphons Plot for FS by Hellerhound.
