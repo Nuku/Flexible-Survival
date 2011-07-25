@@ -38,7 +38,7 @@ to say gill fruit use:
 	say "Your neck feels odd as gills seem to sprout, tiny folds of skin flat in the air.";
 	follow the turnpass rule;
 
-An afterexamine rule:
+after examining the player:
 	if hasgills is 1:
 		say "You have small gills on your neck, a result of eating strange fruit.";
 
@@ -56,37 +56,42 @@ swimtoing is an action applying to one thing.
 
 understand "swim [any room]" as swimtoing;
 understand "swim to [any room]" as swimtoing;
-
-
-[nuku, if you know how to add direction moving here, I would be very happy]
-
+		[
+			Fight;]
+[if there is a area of Battleground in the table of random critters:]
+[now battleground is "Sea";]
 carry out swimtoing:
+	if the noun is not adjacent to the location of the player:
+		say "That isn't nearby.";
+		stop the action;
 	if the location of the player is noun:
 		say "You're already there.";
 		stop the action;
-	now battleground is "Sea";
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if a random number from 1 to 20 is less than 10 minus bonus:
-		if there is a area of Battleground in the table of random critters:
-			Fight;
+	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
+		if a random chance of one in two succeeds:
+			challenge "feral sea dragon"; [duh case, all three ways]
+		otherwise:
+			challenge "feral sea dragoness";
 	otherwise:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;
 	follow turnpass rule;
 
 
-the south beach is a door. "The southern beach is currently flooded due to global warming, with waves hitting the rock barrier to the southeast. You could also try to [bold type]swim[roman type] along the coast.". 
-the south beach is southeast of public beach.
-The Sloping Sand is a room. "The sand here slopes gently downward, slow enough for one to walk into the water against the waves. However it provides a haven for any denizens of the depths that may live here. Keep on your guard. To the east is a red spot, maybe coral?".
-the Sloping Sand is southeast of south beach. 
-the marea of the south beach is "Beach".
 
-before swimtoing the south beach:
+after looking when the player is in the public beach:
+	say "The sloping sands are currently flooded due to global warming, with waves hitting the rock barrier to the southeast. You could also try to [bold type]swim[roman type] along the coast.";
+
+
+The Sloping Sand is a room. "The sand here slopes gently downward, slow enough for one to walk into the water against the waves. However it provides a haven for any denizens of the depths that may live here. Keep on your guard. To the east is a red spot, maybe coral?".
+the Sloping Sand is southeast of public beach. 
+
+before swimtoing The Sloping sand:
 	if hasgills is not 1:
-		say "As you attempt to walk into the waves, the water sprays your open mouth, causing you to choke. Quickly you walk up the beach and abandon your plan to enter the water.";
+		say "You are unable to go further south, the waves pounding against sharp rocks. You would have to go underwater. If only you had gills...";
 		stop the action;
 	otherwise:
-		say "The gills on your neck prove thier worth, gathering air for you underwater as you walk beneath the waves. [line break]You will have to [bold type]swim[roman type] from now on. Since the water impedes any sense of direction, [bold type]you'll have to name where you are going.[roman type]";
+		say "The gills on your neck prove their worth, gathering air for you underwater as you walk beneath the waves. [line break]You will have to [bold type]swim[roman type] from now on. Since the water impedes any sense of direction, [bold type]you'll have to name where you are going.[roman type]";
 
 before going to the coral ring:
 	say "You can't do that! You'll be running in circles!";
@@ -127,26 +132,37 @@ to say sea dragon cum use:
 		say "Do you wish to eat the seed (y), or impregnate yourself with it(n)?";
 		if the player consents:
 			if a random chance of one in two succeeds:
-				infect "Feral Sea Dragon";
+				infect "feral sea dragon";
 			otherwise:
-				infect "Feral Sea Dragoness";
+				infect "feral sea dragoness";
 		otherwise:
 			say "You rub the thick stuff into your waiting cunt, massaging it in.";
 			if a random chance of one in two succeeds:
-				infect "Feral Sea Dragon";
+				infect "feral sea dragon";
 			otherwise:
-				infect "Feral Sea Dragoness";
-			impregnate with "Feral Sea Dragon[one of][or]ess[at random]";
+				infect "feral sea dragoness";
+			impregnate with "feral sea dragon[one of][or]ess[at random]";
 	otherwise:
 		if a random chance of one in two succeeds:
-			infect "Feral Sea Dragon";
+			infect "feral sea dragon";
 		otherwise:
-			infect "Feral Sea Dragoness";		
+			infect "feral sea dragoness";		
 			
 
 
 sea dragon cum is a grab object;
 sea dragon cum has a usedesc "[sea dragon cum use]";
+
+
+
+
+
+
+
+
+
+
+
 
 
 
