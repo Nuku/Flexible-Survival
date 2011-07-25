@@ -675,6 +675,8 @@ Include Ram by Sarokcat.
 Include New Ewe Store by Sarokcat.
 Include New Events by Sarokcat.
 Include Kitty Cat by Sarokcat.
+Include State Fair by Sarokcat.
+Include Teddy Bear by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
@@ -688,6 +690,7 @@ Include Hyena Situations by Hellerhound.
 Include Odd Weapons for FS by Hellerhound.
 Include Catapult Encounter by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
+
 
 understand the command "feed" as something new.
 
