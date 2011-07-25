@@ -2371,9 +2371,12 @@ This is the cunt descr rule:
 
 looknow is a number that varies.
 
+Afterexamine rules is a rulebook.
+
 instead of examining a person(called x):
 	if x is the player:
 		follow the self examine rule;
+		follow the afterexamine rules;
 	otherwise:
 		say "[The description of x]";
 	

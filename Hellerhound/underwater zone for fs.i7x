@@ -38,7 +38,7 @@ to say gill fruit use:
 	say "Your neck feels odd as gills seem to sprout, tiny folds of skin flat in the air.";
 	follow the turnpass rule;
 
-after examining the player:
+An afterexamine rule:
 	if hasgills is 1:
 		say "You have small gills on your neck, a result of eating strange fruit.";
 
