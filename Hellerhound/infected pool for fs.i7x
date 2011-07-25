@@ -23,7 +23,7 @@ to wyvernify:
 	infect;    
 
 
-to say wvern stop:
+to say stop wyvern:
 	say "Do you try to stop them?";
 	if the player consents:
 		challenge "Wyvern";

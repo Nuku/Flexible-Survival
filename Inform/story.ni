@@ -136,6 +136,7 @@ Definition: A person(called X) is male:
 Definition: A person(called X) is female:
 	if cunts of x is greater than 0, yes;
 
+
 A thing can be rooted in place. A thing is usually not rooted in place.
 A thing can be restful. A thing is usually not restful.
 A door can be dangerous.
@@ -684,6 +685,7 @@ Include Infected Pool for FS by Hellerhound.
 Include Gryphons Plot for FS by Hellerhound.
 Include Underwater Zone For Fs by Hellerhound.
 Include Hyena Situations by Hellerhound.
+Include Odd Weapons for FS by Hellerhound.
 Include Catapult Encounter by Hellerhound.
 
 understand the command "feed" as something new.
@@ -2133,6 +2135,8 @@ carry out exploring:
 	if l is not nothing, now battleground is the marea of l;
 	follow the explore rule;
 
+Everyturn rules is a rulebook.
+
 This is the turnpass rule:
 	if libido of player is less than 96 and "Horny Bastard" is listed in feats of player:
 		increase libido of player by 5;
@@ -2246,6 +2250,7 @@ This is the turnpass rule:
 		end the game saying "You survived until the rescue came.";
 	otherwise if ( turns minus targetturns ) is less than 20 and a random chance of 1 in 3 succeeds:
 		say "[one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
+	follow the everyturn rules;
 	rule succeeds;
 
 This is the monster injury rule:
