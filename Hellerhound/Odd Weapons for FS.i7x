@@ -10,7 +10,8 @@ name	desc	weight	object
 "dirty whip"	"A whip covered with dripping horse cum. It is infectious, and was found abandoned by its owner."	3	dirty whip
 "Whip"	"A whip that was once covered with horse cum. It has metal studs."	2	clean whip
 
-[todo whip arm values]
+
+
 
 dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your horsy whip[or]white streak[at random]". The weapon damage of dirty whip is 5. The weapon type of dirty whip is "Melee". It is not temporary.
 
@@ -59,9 +60,71 @@ washerenest is a number that varies.
 fellforward is a number that varies.
 
 
+to say randominfect:
+	sort table of random critters in random order;
+	now monster is X;
+	infect;
+
+
 instead of resolving sword nest:
 	say "You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here.. or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
 	now washerenest is 1;
+	if the humanity of the player is less than 60: [falling to the nanites]
+		say "Your mind feels fuzzy, and you have a strange desire to roll in the muck. Do you submit?";
+		if the player consents:
+			say "You run and jump into the slimy muck, a sick splot sounding and echoeing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
+			decrease the humanity of the player by 15;
+			say "[randominfect]";
+			say "[randominfect]";
+			say "[randominfect]";
+			say "[randominfect]";
+			say "[randominfect]";
+			say "[randominfect]";
+			say "[randominfect]";
+			say "[randominfect]";
+			say "[line break]";
+			say "...";
+			wait for any key;
+			say "The sludge covering you releases that desire, as you orgasm intensely in the muck.";
+			say "You feel another desire rear its head, to drink from the giant puddle.";
+			say "Do you submit?";
+			if the player consents:
+				reduce the humanity of the player by 15;
+				say "You dip your [head of player] head into the slime and suck greedily. It sates your hunger and thirst.";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "[randominfect]";
+				say "Another desire roars inside your head, causing you to start pulling the sludge up into your hands.";
+				say "you manage to stop it, but will you let it continue?";
+				if the player consents:
+					say "You lose the will to resist and proceed to follow every desire and lust.";
+					say "You grab the slime in your hands and pour it over your head, and then grab some more, and think about what to do with it next.";
+					if the cunts of the player is 1:
+						say "You take your slime-filled hands and shove them up your waiting cunt, filling it with the sludge.";
+						say "You feel a palpatable wave f contentment from your lower belly.";
+						say "you then shove them up your rear, filling it as well.";
+					otherwise:
+						say "You decide to try and drink all of the slime you can, tasting its deliciously dirty flavor.";
+					say "After a short while, you collapse with the corrupt pleasure roaring through your body.";
+					repeat with T running from one to 15:
+						say "[randominfect]";
+					reduce the humanity of the player by 100;
+					end the game saying "Your humanity submits to the sludge nanites, and you go feral.";
+				otherwise:
+					say "You rein in your lusts and desires almost too late.";
+			otherwise:
+				say "You wisely rein in your desires before the got away with you.";
+		otherwise:
+			say "You master the desire, and look around paying more attention to detail.";
 	if a random number between one and 20 < the perception of the player:
 		say "You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. It's metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. IT looks like a powerful, but dangerous weapon. Walk into the mess and take it?";
 		if the player consents: 
@@ -77,9 +140,7 @@ instead of resolving sword nest:
 			otherwise:
 				now fellforward is 12;
 			repeat with X running from 0 to fellforward:
-				sort table of random critters in random order;
-				now monster is X;
-				infect;
+				say "[randominfect]";
 				say "The infected slime changes you.";
 				wait for any key;
 			add "Infected Sword" to the invent of the player;
@@ -92,9 +153,7 @@ instead of resolving sword nest:
 An everyturn rule:
 	if the infected sword is wielded:
 		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it. [line break]";
-		sort table of random critters in random order;
-		now monster is 1;
-		infect;
+		say "[randominfect];
 		say "The infected sword changes you.[line break]";
 
 
@@ -161,6 +220,10 @@ An everyturn rule:
 	if the dirty whip is wielded:
 		say "The cum on the dirty whip slips down onto your hand.";
 		infect "black equinoid";
+
+
+
 	
+
 
 Odd Weapons for FS ends here.
