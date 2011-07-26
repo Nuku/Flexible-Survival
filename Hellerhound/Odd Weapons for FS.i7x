@@ -62,7 +62,7 @@ fellforward is a number that varies.
 
 to say randominfect:
 	sort table of random critters in random order;
-	now monster is X;
+	now monster is 1;
 	infect;
 
 
@@ -89,8 +89,8 @@ instead of resolving sword nest:
 			say "You feel another desire rear its head, to drink from the giant puddle.";
 			say "Do you submit?";
 			if the player consents:
-				reduce the humanity of the player by 15;
-				say "You dip your [head of player] head into the slime and suck greedily. It sates your hunger and thirst.";
+				decrease the humanity of the player by 15;
+				say "You dip your [face of player] head into the slime and suck greedily. It sates your hunger and thirst.";
 				say "[randominfect]";
 				say "[randominfect]";
 				say "[randominfect]";
@@ -117,7 +117,7 @@ instead of resolving sword nest:
 					say "After a short while, you collapse with the corrupt pleasure roaring through your body.";
 					repeat with T running from one to 15:
 						say "[randominfect]";
-					reduce the humanity of the player by 100;
+					decrease the humanity of the player by 100;
 					end the game saying "Your humanity submits to the sludge nanites, and you go feral.";
 				otherwise:
 					say "You rein in your lusts and desires almost too late.";
@@ -153,7 +153,7 @@ instead of resolving sword nest:
 An everyturn rule:
 	if the infected sword is wielded:
 		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it. [line break]";
-		say "[randominfect];
+		say "[randominfect]";
 		say "The infected sword changes you.[line break]";
 
 

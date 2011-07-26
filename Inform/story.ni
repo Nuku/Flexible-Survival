@@ -2058,20 +2058,6 @@ carry out early birding:
 	decrease the score by 100;
 	end the game saying "You waited for rescue.";
 
-Milking is an action applying to nothing.
-understand "milkme" as milking
-
-Carry out milking:
-	add "distilled milk" to invent of player;
-	add "distilled milk" to invent of player;
-	add "distilled milk" to invent of player;
-	add "distilled milk" to invent of player;
-	add "distilled milk" to invent of player;
-	add "dog milk" to invent of player;
-	add "dog milk" to invent of player;
-	add "dog milk" to invent of player;
-	say "Your backpack jingles with suddenly appearing milk."
-
 Punying is an action applying to nothing.
 understand "Puny" as punying.
 
@@ -3062,3 +3048,44 @@ When play ends:
 	say "http://flexiblesurvival.com/[line break]";
 	say "Once you have a character, click [apostrophe]direct control[apostrophe], and we[apostrophe]ll be there, waiting to give a hand!";
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2000";
+	
+
+Milking is an action applying to nothing.
+understand "milkme" as milking.
+understand "milk me" as milking.
+understand "milk myself" as milking.
+
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Panther Milk"	"The thick, luscous milk of one of the panther taurs."	1	panther milk
+
+panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur".
+
+
+check milking:
+	if breasts of player is 0:
+		say "You don't appear to have anything worth milking." instead;
+	if breast size of player is less than 2:
+		say "You don't appear to have anything worth milking." instead;
+	if cunts of player is less than 1:
+		say "Your breasts don't seem ready to lactate." instead;
+
+Carry out milking:
+	if the bodyname of the player is "Hermaphrodite Gryphon":
+		say "You milk your massive blue furred tits, reveling in the pleasant sensations.";
+		repeat with T running from one to the breasts of the player:
+			add "Gryphon Milk" to the invent of the player;
+	otherwise if the bodyname of the player is "Shemale Smooth Collie":
+		say "You milk your many large furred breasts, placing the milk in your bag while recuperating.";
+		repeat with T running from one to the breasts of the player:
+			add "Dog Milk" to the invent of the player;
+	otherwise if the bodyname of the player is "Panther Taur":
+		say "It takes a while to milk your black furred globes, but you manage to do so.";
+		repeat with T running from one to the breasts of the player:
+			add "Panther Milk" to the invent of the player;
+	otherwise:
+		say "You milk your breasts, and distill the milk, leaving you with the powdery remains. They couldn't be dangerous.";
+		repeat with T running from one to the breasts of the player:
+			add "Distilled Milk" to the invent of the player;
