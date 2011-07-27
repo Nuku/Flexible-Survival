@@ -184,14 +184,17 @@ instead of resolving Destroyed bushes:
 			say "In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. it is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if the player consents:	
 				let found be 0;
-				let number be 0;
-				repeat with Q running through invent of the the player:
-					increase number by 1;
-					if q matches the regular expression printed name of water bottle, case insensitively:
-						increase found by 1;
-						remove entry number from invent of the player;
-						if found is three:
-							break;
+				repeat with T running from one to three:
+					let number be 0;
+					repeat with Q running through invent of the the player:
+						increase number by 1;
+						if q matches the regular expression printed name of water bottle, case insensitively:
+							increase found by 1;
+							remove entry number from invent of the player;
+							if found is three:
+								break;
+					if found is three:
+						break;
 				if found is three:
 					say "You dump the water bottles on the whip, washing off the cum.";	
 					say "You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
