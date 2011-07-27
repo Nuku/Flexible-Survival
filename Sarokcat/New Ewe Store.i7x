@@ -208,14 +208,14 @@ To say marychat:
 				say  "'Oh, that's ok then, I understand if you have other things you[apostrophe]d rather do, but i'd really like it if you thought about it some more.'";
 
 to ewefy:
-	repeat with y running from 1 to number of rows in table of random critters:
+	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "ewe":
 			now monster is y;
+			infect;
+			infect;
+			infect;
 			break;
-	infect;
-	infect;
-	infect;
 
 
 
