@@ -30,6 +30,7 @@ to say stop wyvern:
 		say "After you finish with the first wyvern, the second attacks!";
 		wait for any key;
 		challenge "Wyvern";
+		say "After your ferocity in defending the pool, the wyverns decide they have had enough and leave, crashing a path through the park. It seems to head in the direction of the city.";
 		say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
 		wait for any key;
 		say "[line break] Yo drink away your thirst.";

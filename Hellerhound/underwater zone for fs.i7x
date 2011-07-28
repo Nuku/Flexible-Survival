@@ -61,6 +61,8 @@ understand "swim to [any room]" as swimtoing;
 [if there is a area of Battleground in the table of random critters:]
 [now battleground is "Sea";]
 carry out swimtoing:
+	if the noun is a direction:
+		say "If you enter the water, how will you know you are going the right direction? Maybe you should try swimming to the place itself.";
 	if the noun is not adjacent to the location of the player:
 		say "That isn't nearby.";
 		stop the action;

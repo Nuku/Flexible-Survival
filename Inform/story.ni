@@ -1095,6 +1095,8 @@ instead of examining a watch:
 	
 Using is an action applying to one thing.
 
+understand "dequip [owned grab object]" as using.
+understand "take off [owned grab object]" as using.
 understand "use [owned grab object]" as using.
 understand "eat [owned grab object]" as using.
 understand "drink [owned grab object]" as using.
@@ -1440,6 +1442,9 @@ understand "drop [owned grab object]" as littering.
 carry out littering something(called x):
 	let found be 0;
 	let number be 0;
+	if x is wielded:
+		say "You're wielding that, take it off first.";
+		stop the action;
 	repeat with Q running through invent of the the player:
 		increase number by 1;
 		if q matches the regular expression printed name of x, case insensitively:
