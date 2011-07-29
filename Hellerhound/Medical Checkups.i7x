@@ -66,13 +66,20 @@ instead of conversing the Doctor Medea:
 				if the player consents:
 					if "Sterile" is listed in feats of the player:
 						say "You are already sterile. I can't do anything more.";
-					otherwise if "Fertile" is listed in the feats of the player:
+					otherwise if "Fertile" is listed in the feats of the player and "Selective Mother" is not listed in the feats of the player:
 						say "Do you wish for me to make you NOT fertile?";
 						if the player consents:
 							say "She takes out a pair of specially shaped scissors and knocks you out with a cloth. When you wake up, your belly aches.";
 							remove "Fertile" from the feats of the player;
 						otherwise:
 							say "OK, I respect your judgement.";
+					otherwise if "Selective Mother" is listed in the feats of the player:
+						say "Do you want me to reduce your self control?";
+						if the player consents:
+							say "Doctor Medea places a odd looking helmet with wires running from it on your head, and you feel freeer, and odder. She removes the helmet, and you get back up.";
+							remove "Selective Mother" from the feats of the player;
+						otherwise:
+							say "All right.";
 					otherwise:
 						say "She takes a pad and straps it to your arm. ithin seconds, your body is enveloped with pain, and it slowly fades.";
 						say "Medea says 'you are now sterile'";

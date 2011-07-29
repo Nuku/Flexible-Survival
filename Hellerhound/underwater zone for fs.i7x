@@ -70,13 +70,15 @@ carry out swimtoing:
 		say "You're already there.";
 		stop the action;
 	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
-		let T be a random number between one and three;
+		let T be a random number between one and 4;
 		if T is 1:
 			say "You come across a tiny island, revealed by the tide. You are not the only one here as you step onto the beach.";
 			challenge "feral sea dragon"; [duh case, all three ways]
 		otherwise if T is 2:
 			say "You come across a tiny island, revealed by the tide. You are not the only one here as you step onto the beach.";
 			challenge "feral sea dragoness";
+		otherwise if T is 3:
+			challenge "hermaphrodite dolphin";
 	otherwise:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;

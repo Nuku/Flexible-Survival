@@ -690,6 +690,8 @@ Include Hyena Situations by Hellerhound.
 Include Odd Weapons for FS by Hellerhound.
 Include Catapult Encounter by Hellerhound.
 Include Medical Checkups by Hellerhound.
+Include Dolphin for FS by Hellerhound.
+Include Nymph for FS by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 
 
