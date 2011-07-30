@@ -48,7 +48,7 @@ check memberfucking:
 	if gang members is not visible, say "who?" instead;
 
 
-To memberfucked:
+Carry out memberfucking:
 	if lastmemberfucked - turns is less than 4:
 		say "While several of the hyena gang members seem interested in what your offering, it seems most of the ones still hanging out here in the den are still recovering from their last romp, perhaps you should try to excite them later.'.";
 		stop the action;
@@ -95,7 +95,7 @@ Gina is a woman.
 The description of Gina is "The hyena who recruited you into the gang is lounging around on a pile of cushions nearby, you think her name was Gina.";
 Gina is in Hyena hideout.
 
-The conversation of Gina is { “ginatalking” };
+The conversation of Gina is { “[ginatalking]” };
 
 To say ginatalking:
 	if ginatalk is 0:
@@ -222,3 +222,5 @@ Carry out ginafucking:
 
 
 Hyena Hideout ends here.
+
+
