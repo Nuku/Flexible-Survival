@@ -127,8 +127,8 @@ Instead of Resolving a Hyena Gang:
 		say “'There now, that should help you fit in here better,' Gina  says with a self satisfied smirk as you can feel your body becoming more hyenalike already.  'And now everyone will know you belong to me.' She finishes with a grin, causing you to realize that her own musky scent seems to be clinging to you now, its bestial odor both strange and arousing at the same time.  Noticing your increasing arousal, Gina runs her hand along your side slowly, causing you to twitch at the erotic sensation, while her other hand caresses her large package. 'Hmmm and if you want to pick up where that left off, maybe we should go inside instead of just standing around out here in the street.'  So saying she walks up to one of the side doors to a nondescript warehouse nearby, swishing her hips and hyena tail at you as you follow her, your nose filled with her erotic scent and your mind on her lovely assets, leaving you unable to think about doing anything but follow along like a good little hyena. As she opens the door and ushers you inside, she gives you a minute to take it all in, before going over to several mattresses set up nearby, obviously letting you decide what to do next.'”;
 		hyenaify;
 		increase libido of player by 30;
-[		move player to Hyena hideout;
-		now Hyena hideout is known;] [Removed, what hideout? It's not defined.]
+		move player to Hyena hideout;
+		now Hyena hideout is known;
 		now hyena gang is resolved;
 
 
