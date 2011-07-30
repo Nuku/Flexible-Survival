@@ -103,6 +103,19 @@ When Play begins:
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Nymph Cum";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	
+
+
+when play ends:
+	if the bodyname of the player is "Tree Nymph":
+		say "Life as a nymph is hard, your naked stature and vines, not to mention fear of clothes, keep you seperate from the normal humans, and keep you in trouble with the law, who are still trying to cope with your kind's breach of public nudity.";
+		if the humanity of the player < 10:
+			say "The revival of the city des you no good, and shortly you are behind bars for several acts of misconduct. You end up with a life sentence, and spend the rest of your time attempting to control the impulses the nanites wired into you.";
+		otherwise if the humanity of the player < 50:
+			say "A few days into the revival of the city, you decide to become another one of the tree's on the road where you found the original, growing bark and leaves, you form a new tree, and a new puzzle for the city council, who had not authorized the planting of new trees in their budget. You and your fellow trees take payments from those who wish your services, and retrun to your lot at night. Altogehter, it isn't a bporing life, with all the odd clients that come around, and the food they bring.";
+		otherwise:
+			say "you overcome your fear of clothing, and become relatively normal to those who don't see you without it, or your hat. you are able to resume life as normal, but have to get a different lover as your old one is unhappy with the changes.";
+
+
+
 [ Edit this to have the correct Name as wall]
 Nymph for FS ends here.
