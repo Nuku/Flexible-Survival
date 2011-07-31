@@ -990,7 +990,7 @@ carry out Inventorying:
 			choose row x in the table of game objects;
 			if object entry is owned:
 				say "[name entry]";
-				if object entry is weapon object of player and object entry is armament:
+				if object entry is wielded and object entry is armament:
 					say "(wielded)";
 					if object entry is improved:
 						say "(improved)";
