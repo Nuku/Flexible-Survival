@@ -133,7 +133,7 @@ To say ginatalking:
 				say “'You would?' Gina says with surprise, 'Well if you[apostrophe]re sure you want to try again I won[apostrophe]t stop you from trying' Gina says as she leads you back once more to the matriarchs den.  'Be careful though, much more of the matriarchs brand of submissiveness training, and I doubt you would be able to be dominant to pretty much anyone here anymore.' She finishes, as you once more find yourself before the curtained area with the crowd gathering, you brace yourself this time as one of the guards charges you and the fight is on again.”;
 				Challenge “Herm Hyena”;
 				Challenge “Herm Hyena”;
-				Challenge “Hyena Matriarch”;
+				Challenge “Hyena matriarch”;
 				if hp of player is greater than 0:
 					say “Gina pads over to you carefully after the orgy is finished, picking her way through the piles of collapsed bodies and pools of sexual fluids that cover the floor.  Reaching down she gives you a hand up as you survey your new subjects, you think you can see a new glint of respect and admiration for you in her eyes.  'That was amazing,' Gina says as she leads you back to your new quarters, leaving the former matriarch lying forgotten on the floor behind you.  'I knew you were special when I found ya, but I had no idea know just how tough you were.' She says with awe as she shows you the matriarchs chambers, a larger section of the warehouse with even more comfortable looking chairs and furniture... and your new home.  'If you ever need any help with running this place or anything, you know where to find me.' Gina finishes, as she helps you settle in for a much needed rest after the hard fight, and fuck afterwards.”;
 					stop the action;
