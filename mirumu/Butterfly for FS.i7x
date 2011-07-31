@@ -589,6 +589,9 @@ before using a grab object(called x):
 		if cunts of player is greater than 0:
 			say "As you move to slip the pill in your mouth you feel an uneasy shiver run through your cunt[if cunts of player is greater than 1]s[end if]. Are you sure to still want to use it?";
 			if the player consents:
+				if "Female Preferred" is listed in invent of player:
+					say "Your feat will not allow this to work.";
+					stop the action;
 				continue the action;
 			otherwise:
 				say "You decide against using the pill and pop it back into your backpack.";
