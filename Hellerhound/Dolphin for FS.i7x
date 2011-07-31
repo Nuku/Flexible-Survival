@@ -92,6 +92,8 @@ to say dolphin fuck:
 		otherwise:[cunt is finally big enough]
 			say "She shrieks with joy 'Your pussy is finally big enough for me. I bet that took a lot of doing.'";
 			say "She then proceeds to push deeper, slowly wriggling and twisting her prehensile member into your wet cunt. She bottoms out before she can get to your cervix, and looks relieved. 'I am so big, none of the others in my pod can totally cover me, without assistance, but you...' she says, awed and relieved. She begins to wriggle her cock, pulling in and out and forming rings inside of you, causing immense pleasure. As you start humping back, she screams in climax, the sound carrying you to yours. After what seems like hours of her filling you, she begins to pull out, cum flowing around her now shrinking cock out of your cunt and into the water. [impregchance]";
+	otherwise if "Male Preferred" is listed in feats of player:
+		say "The dolphin gives a sudden clicking cry of dismay before she retreats, leaving you behind.";
 	otherwise if the cocks of the player is not 0:[do female next]
 		say "She looks at your male genitals, surprised. 'Why not a girl?' she mutters, and kisses the base of your cock. Maybe next time you will be ready for me. Make sure to be nice and large!";
 		say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
