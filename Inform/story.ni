@@ -696,7 +696,7 @@ Include Dolphin for FS by Hellerhound.
 Include Centaur by Hellerhound.
 Include Nymph for FS by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
-
+Include Butterfly for FS by mirumu.
 
 understand the command "feed" as something new.
 
