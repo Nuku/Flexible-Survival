@@ -2965,7 +2965,7 @@ Instead of conversing the doctor matt:
 		repeat with x running through invent of player:
 			if x is "glob of goo", increase goofound by 1;
 			if x is "gryphon milk", increase milkfound by 1;
-		if female is banned:
+		if girl is banned:
 			now goofound is 2;
 		if hermaphrodite is banned or furry is banned:
 			now milkfound is 2;
