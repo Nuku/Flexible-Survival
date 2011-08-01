@@ -69,6 +69,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
+	add "Hyena matriarch" to infections of furry;
+	add "Hyena matriarch" to infections of hermaphrodite;
 	Choose a blank row from Table of random critters;
 	now name entry is "Hyena matriarch"; [Name of your new Monster]
 	now attack entry is "[one of]She rakes you with her claws, leaving bloody gashes behind.[or]She backhands you with enough force to send you flying.[or]Her excited member grinds against you as she tries to wrestle you into a submissive position.[or]She rips at you with her insanely sharp teeth.[or] Her hyena laugh fills the room, distracting you with the powerful desire to join her in laughter. [or]she leaps forward suddenly, knocking you to the ground under her.[or]She poses and begins rubbing her large member enticingly, obviously trying to convince you it would be better to submit... and it almost works.[at random]"; [Text used when the monster makes an Attack]

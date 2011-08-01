@@ -2755,6 +2755,7 @@ carry out scavenging:
 	follow turnpass rule;
 
 To Challenge (x - text):	
+	sort table of random critters in random order;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y from the table of random critters;
 		if name entry is x:
