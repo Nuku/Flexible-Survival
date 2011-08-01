@@ -110,6 +110,7 @@ Turns is a number that varies. Turns is 240.
 Targetturns is a number that varies.
 Started is a number that varies.
 Freefeats is a number that varies.
+Lost is a number that varies.
 Child is a person.
 Child has a number called Gestation.
 Child can be born. Child is not born.
@@ -695,6 +696,7 @@ Include Medical Checkups by Hellerhound.
 Include Dolphin for FS by Hellerhound.
 Include Centaur by Hellerhound.
 Include Nymph for FS by Hellerhound.
+Include Shifting by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.
 
@@ -1820,6 +1822,7 @@ To lose:
 	choose row monster from the table of random critters;
 	follow the cock descr rule;
 	follow the breast descr rule;
+	now lost is 1;
 	say "[victory entry]";
 	infect;
 	if hp of player is less than 1, now hp of player is 1;
@@ -2008,6 +2011,7 @@ To fight:
 			break;
 		choose row monster from the table of random critters;
 		say "You run into a [name entry]. [desc entry].";
+		now lost is 0;
 		if combat abort is 1:
 			now combat abort is 0;
 			rule succeeds;
@@ -2041,6 +2045,7 @@ To challenge:
 	choose row monster from the table of random critters;
 	now monsterhp is hp entry;
 	say "You run into a [name entry]. [desc entry].";
+	now lost is 0;
 	wait for any key;
 	change the current menu to table of Basic Combat;
 	carry out the displaying activity;
