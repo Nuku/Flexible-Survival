@@ -13,14 +13,6 @@ dragatorwon is a number that varies.
 
 
 
-[
-after losing:
-	if insecure is 1:
-		now dragatorwon is 1;
-
-]
-
-
 
 
 insecure is a number that varies.
@@ -45,7 +37,9 @@ instead of resolving a Secure Area:
 				if the player consents:
 					say "You march froward, and they attack.";
 					challenge "Ash Dragator";
+					if lost is 1, now dragatorwon is 1;
 					challenge "Ash Dragator";
+					if lost is 1, now dragatorwon is 1;
 					if dragatorwon is 1:
 						say "You collapse to their vicious defense, and are carried off, after being hit on the back of the head so hard you are knocked unconcious.";
 						say "You wake to the sight of the dragator filling your vision.[dragator attack]";
@@ -71,6 +65,7 @@ instead of resolving a Secure Area:
 	otherwise:
 		say "You wisely avoid what could only be more trouble than it is worth.";
 	now insecure is 0;
+	now Secure Area is resolved;
 
 
 
