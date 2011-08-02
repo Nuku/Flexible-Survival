@@ -82,7 +82,7 @@ when play ends:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Ash Dragon Heart"	"The white, gooey seed of one of your past demonic lovers. It smells very sweet, and is still warm."	1	Ash Dragon Heart
+"Ash Dragon Heart"	"Hot to the touch, and still simmering. You have to pay top dollar for hearts like these."	1	Ash Dragon Heart
 
 Ash Dragon Heart is a grab object.
 
