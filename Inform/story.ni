@@ -14,7 +14,7 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
-The release number is 38.
+The release number is 39.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -697,6 +697,7 @@ Include Dolphin for FS by Hellerhound.
 Include Centaur by Hellerhound.
 Include Nymph for FS by Hellerhound.
 Include Shifting by Hellerhound.
+Include Toy Store by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.
 

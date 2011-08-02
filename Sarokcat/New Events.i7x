@@ -343,37 +343,14 @@ Instead of Resolving a Strange preacher:
 
 
 to piggyify:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Messy Pig":
-			now monster is y;
-			break;
-	infect;
-	infect;
-
+	Infect "Messy Pig";
 
 
 to gryphonify:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Hermaphrodite Gryphon":
-			now monster is y;
-			break;
-	infect;
-	infect;
-	infect;
-
-
+	Infect "Hermaprhodite Gryphon";
 
 to hyenaify:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Herm Hyena":
-			now monster is y;
-			break;
-	infect;
-	infect;
-	infect;
+	Infect "Herm Hyena";
 
 New Events ends here.
 
