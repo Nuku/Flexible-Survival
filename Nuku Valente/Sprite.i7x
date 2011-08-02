@@ -90,9 +90,9 @@ When Play begins:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Fish"	"Black skunk goo on a stick"	1	Fish
+"Fish"	"A fish. It could be a big fish or a small fish, but it has scales on it. A sniff of it oddly reminds you of otters."	1	Fish
 
-Fish is a grab object. "A fish. It could be a big fish or a small fish, but it has scales on it. A sniff of it oddly reminds you of Sprites.".
+Fish is a grab object. 
 
 Fish is infectious. The strain of Fish is "sea otter".
 usedesc of Fish is "[Fish]";
@@ -100,6 +100,7 @@ The purified of fish is "food";
 
 To say Fish:
 	decrease the hunger of the player by 15;
+	if the hunger of the player is less than 0, now the hunger of the player is 0;
 
 when play ends:
 	if bodyname of player is "city sprite":
