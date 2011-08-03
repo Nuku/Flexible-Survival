@@ -172,7 +172,7 @@ To say centaur attack:
 		[male fury, centaur wants mate, not a companion!]
 	if cunts of player > 0:
 		Say "[centaur rape female]";
-	if cocks of player is 0 and cunts of player is 0:
+	if cocks of player is 0 and cunts of player is 0 and "Male Preferred" is not listed in feats of player:
 		say "The Centaur looks at you with aprehension. 'Nothing at all?' He groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lost it.'";
 		now the cunts of the player is 1;
 		now the cunt length of the player is 2;
