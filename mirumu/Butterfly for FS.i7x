@@ -114,10 +114,11 @@ To say butterfly defeat:
 				now speech is "'Not again!' she shouts in frustration sensing the mood of the moment. As you approach she fidgets anxiously, sure that a repeat of your previous encounter is about to occur. 'You brute.' she murmurs.";
 			say "The butterfly girl falls to her knees defeated. [speech] As you kneel down between her legs she uneasily [if ButterflyHasNegligee is True]lifts her negligee up to her waist[otherwise]pulls the leather straps aside[end if] exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her [one of]pristine[or]perfect[or]flawless[at random] slit glistens in the light. [if ButterflyNegligeeTorn is False and ButterflyHasNegligee is True]You grab the straps of her negligee and roughly yank them aside tearing the ribbon holding it to her chest and[otherwise if ButterflyHasNegligee is True]Fondling the [ButterflyBreastDesc] breasts protruding through her torn negligee you circle your finger over her textured areola and[otherwise]You slip your hand down her top roughly fondling her [ButterflyBreastDesc] breasts. Dragging them up by the nipples her tits pop free of her leather top and bulge forward prominently as you[end if] plunge [if cocks of player is greater than 1]one of [end if]your [cocktext]cock[if cocks of player is greater than 1]s[end if] deep into her wet and [one of]eager[or]expectant[or]excited[or]willing[at random] vagina. Simultaneously your tongue slips into her mouth as her proboscis coils around it locking your heads together as you exchange fluids. As you ramp up the pace she pushes at your [skin of player] body in an attempt to pull away from your cock. You[apostrophe]ve reached the limits of her petite vagina and are banging hard at the end of her passage. Her eyes well up with tears in pain. What will you do?";
 			wait for any key;
-			now the menu depth is 0;
+			let old menu depth be menu depth;
 			let ButterflyRapedBefore be ButterflyRaped;
 			change the current menu to table of Butterflytreatment choice;
 			carry out the displaying activity;
+			now menu depth is old menu depth;
 			if ButterflyRaped is greater than ButterflyRapedBefore:
 				say "Locking her body in place with your strength you keep pounding away with no respite. With a powerful thrust of your [cocktext]member it bursts into her cervix.";
 				if ButterflyRevenge is False and ButterflyRaped is greater than 1:
@@ -181,10 +182,11 @@ To say butterfly defeat:
 			say "The butterfly girl falls down on her back defeated. [speech] As you kneel your [skin of player] form down between her legs she uneasily [if ButterflyHasNegligee is True]lifts her negligee up to her waist[otherwise]pulls the leather straps aside[end if] exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her [one of]pristine[or]perfect[or]flawless[at random] slit glistens in the light. [if ButterflyNegligeeTorn is False and ButterflyHasNegligee is True]You grab the straps of her negligee and roughly yank them aside tearing the ribbon holding it to her chest and[otherwise if ButterflyHasNegligee is True]Fondling the [ButterflyBreastDesc] breasts protruding through her torn negligee you circle your finger over her textured areola and[otherwise]You slip your hand down her top roughly fondling her [ButterflyBreastDesc] breasts. Dragging them up by the nipples her tits pop free of her leather top and bulge forward prominently as you[end if] then without warning ram three of your fingers in her pussy. As she gasps at the unexpected attack you ramp up the pace and spread her wide. Her eyes well up with tears in pain and she rolls over and tries to pull away. What will you do?";
 			now ButterflyNegligeeTorn is True;
 			wait for any key;
-			now the menu depth is 0;
+			let old menu depth be menu depth;
 			let ButterflyRapedBefore be ButterflyRaped;
 			change the current menu to table of Butterflytreatment choice;
 			carry out the displaying activity;
+			now menu depth is old menu depth;
 			if ButterflyRaped is greater than ButterflyRapedBefore:
 				if ButterflyRevenge is False and ButterflyRaped is greater than 1:
 					say "You restrain her by the leg as you insert a fourth and then a fifth finger. With her on all fours you fist away at the butterfly stretching her passage to it[apostrophe]s limits. She screams at your deep penetration, but then tries to reign-in her outward emotions determined not to give you the satisfaction. She bites her lip trying to distract her mind from the assault her body is receiving as [if ButterflyHasNegligee is True]you tear the tattered remains of her negligee from it[otherwise]you let slip the tie on her leather skirt allowing it to fall off her and onto the ground[end if]. Spreading her legs further apart for better access you hammer away at her pussy unabated, her vulnerable breasts bobbing around on her chest like lumps of jelly. Continuing to pummel her cunt you sense her mind begin to break as she moans and groans gasping for air. Losing all sense of the difference between pleasure and pain the butterfly orgasms in spite of herself. Still dazed she starts to crawl away[if ButterflyHasNegligee is False], her skirt in her hand[end if]. Attempting to lift off she loses her sense of direction and orientation descending back to the ground with a thud. Eventually after a couple of attempts she manages to get airborne and flies off. [line break][line break]";
@@ -516,31 +518,32 @@ This is the butterflytreatment choice rule:
 		if ButterflyRaped is 0:
 			say "You sense this decision may have consequences. Are you sure you want to force her?";
 			if the player consents:
+				say "You shrug off your moment of doubt and decide to force her anyway. [line break]";
 				now the_player_consets is True;
+			otherwise:
+				say "You decide not to force her. [line break]";
+				now the_player_consets is False;
 		otherwise:	 [You've confirmed once, no need to re-ask]
 			now the_player_consets is True;
 		if the_player_consets is True:
 			increase ButterflyRaped by 1;
 			if ButterflyRaped is greater than 1:
 				now ButterflyAttire is "She is wearing a long-sleeved, strapless, skin-tight black leather top with a split down the middle reaching to her navel. The split is pulled together by a zig-zag of lacing as the inner-side of each [ButterflyBreastDesc] breast bulges out around the strands. Her rigid nipples deform the otherwise smooth surface of the leather. Colorful wings extend through sizable openings at the back allowing them complete freedom. A tie around her waist dangles dozens of strips of black leather down below her crotch in the style of a grass skirt, but the gaps in coverage let you see she[apostrophe]s completely bare underneath. Her stripy yellow and black abdomen pokes out through the strands at the back. She sports a pair of shiny black PVC stockings up to her thighs and a svelte pair of black high-heeled leather boots on her feet.";
-		otherwise:
-			rule fails;
+			if ButterflyRaped is 1:		[She's going to be seriously pissed with you and twice as strong]
+				repeat with y running from 1 to number of filled rows in table of random critters:
+					choose row y in table of random critters;
+					if name entry is "Butterfly":
+						now str entry is 32;
+						now dex entry is 32;
+						now hp entry is 45;
+						now wdam entry is 14;
+						now sex entry is "Female"; 
+						now lev entry is 4;
+						break;
+			now ButterflyLove is False;
 	otherwise:
 		now ButterflyRaped is 0;
-	if ButterflyRaped is 1:		[She's going to be seriously pissed with you and twice as strong]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Butterfly":
-				now str entry is 32;
-				now dex entry is 32;
-				now hp entry is 45;
-				now wdam entry is 14;
-				now sex entry is "Female"; 
-				now lev entry is 4;
-				break;
-		now ButterflyLove is False;
-	now the menu depth is 0;
-	rule succeeds;
+	decrease the menu depth by 1;
 	
 This is the ButterflyTummyDesc rule:
 	if gestation of ButterflyBaby is 3:
@@ -551,7 +554,6 @@ This is the ButterflyTummyDesc rule:
 		now ButterflyTummy is " Her skin gives off a radiant glow.";
 	otherwise:
 		now ButterflyTummy is "";
-	rule succeeds;
 		
 
 Section 7 - Monster Items
