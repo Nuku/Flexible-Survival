@@ -680,6 +680,7 @@ Include Hyena Matriarch by Sarokcat.
 Include Alpha Wolf by Sarokcat.
 Include Plush Lion by Sarokcat.
 Include Fair Events by Sarokcat.
+Include Mall Events by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
