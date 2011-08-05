@@ -5,6 +5,8 @@ Mall events by Sarokcat begins here.
 Section 1- Tight space
 
 Tight space is a situation.
+The sarea of Tight space is “mall”;
+
 
 Instead of resolving Tight space:
 	say “ You come across a very narrow opening in the sewers underneath the city, you think you see something gleaming in the back of it, but it would be a really tight squeeze to fit in there, and might leave you vunerable to attack.  Do you try to enter the tight space anyways?”;
@@ -160,3 +162,4 @@ Instead of resolving a Old rail system:
 
 
 Mall events ends here.
+
