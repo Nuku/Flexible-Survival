@@ -144,6 +144,7 @@ instead of resolving sword nest:
 				say "The infected slime changes you.";
 				wait for any key;
 			add "Infected Sword" to the invent of the player;
+			now sword nest is resolved;
 		otherwise:
 			say "You leave the mess and its sword there without touching it.";
 	otherwise:
@@ -199,6 +200,7 @@ instead of resolving Destroyed bushes:
 					say "You dump the water bottles on the whip, washing off the cum.";	
 					say "You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
 					add "Whip" to the invent of the player;
+					now destroyed bushes is resolved;
 					now gotwhip is 1;
 				otherwise:
 					repeat with X running from 0 to found:
