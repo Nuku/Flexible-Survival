@@ -67,7 +67,6 @@ to say randominfect:
 
 
 instead of resolving sword nest:
-	now sword nest is resolved;
 	say "You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here.. or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
 	now washerenest is 1;
 	if the humanity of the player is less than 60: [falling to the nanites]
@@ -167,7 +166,6 @@ numwater is a number that varies;
 gotwhip is a number that varies.
 
 instead of resolving Destroyed bushes:
-	now destroyed bushes is resolved;
 	say "You come across a circle of bushes crushed flat against the ground, large pools of cum and  juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that soemone was overtaken by one of the equines.";
 	if the humanity of the player is less than 50:
 		say "You could also drink from the puddles?";
