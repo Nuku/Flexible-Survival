@@ -209,9 +209,6 @@ Part 2 - Things
 
 There is a bed in the bunker. "[if cot is present]Laying over in the corner is a small, simple, cot. Just the thing for a little [bold type]rest[roman type].[otherwise]There is an empty spot where a cot once sat, cleaner than the rest.".
 The cot is rooted in place. The cot is restful.
-There is a library computer in the Grey Abbey Library. "A computer rests nearby, powerless.".
-The description of it is "A computer terminal. It probably had web access and everything before the power cut out. Right now it's just a very heavy paperweight on a rolling stand.". It is rooted in place.
-Understand "computer" as library computer.
 There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
 Cola Vending Machine has a number called dispensed.
 understand "vending machine" as Cola Vending machine.
@@ -697,6 +694,8 @@ Include Dolphin for FS by Hellerhound.
 Include Centaur by Hellerhound.
 Include Nymph for FS by Hellerhound.
 Include Shifting by Hellerhound.
+Include Computers by Hellerhound.
+Include Power Plant by Hellerhound.
 Include Toy Store by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.
