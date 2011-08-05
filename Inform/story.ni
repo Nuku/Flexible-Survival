@@ -685,6 +685,8 @@ Include Beach Events by Sarokcat.
 Include Rubber Tigress by Sarokcat.
 Include Park Events by Sarokcat.
 Include Museum by Sarokcat.
+Include Satyr by Sarokcat.
+Include Greek Nymph by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
