@@ -2240,6 +2240,11 @@ This is the turnpass rule:
 				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
 		if gestation of child is less than 1 and cunts of player is greater than 0:
 			say "With a sudden pouring of fluids, birth is upon you. You settle  without much choice, breathing quickly as your body spasms in readiness. ";
+			let z be 1;
+			if a random chance of 1 in 100 succeeds:
+				increase z by 1;
+			if a random chance of 3 in 100 succeeds:
+				increase z by 1;
 			follow cunt descr rule;
 			if cunt width of player is greater than 10:
 				say "Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated body easily slipping the child free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
@@ -2250,8 +2255,15 @@ This is the turnpass rule:
 				say "Horrible pain lances through your body as your [descr] sex disgorges the child only after what feels like hours of struggle. Your [skin of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
 				now hp of player is 1;
 				decrease morale of player by 10;
-			now child is born;
-			Birth;
+			if z is 2:
+				say "Twins!";
+			otherwise if z is 3:
+				say "Triplets!";
+			otherwise if z is 4:
+				say "Quadruplets!";
+			repeat with y running from 1 to z:
+				now child is born;
+				Birth;
 			increase score by 20;
 			extend game by 4;
 		otherwise:
