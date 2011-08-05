@@ -5,7 +5,7 @@ Beach Events by Sarokcat begins here.
 Section 1- Beach bum
 
 Beach bum is a situation.
-The sarea of Beach bum is “beach”;
+The sarea of Beach bum is “Beach”;
 
 bbum is a number that varies.
 
@@ -75,7 +75,7 @@ Instead of resolving a Beach bum:
 Section 2- Flotsam bits
 
 Flotsam bits is a situation.
-The sarea of Flotsam bits is “beach”;
+The sarea of Flotsam bits is “Beach”;
 
 Instead of resolving a Flotsam bits:
 	say “Wandering along the beach, you spy a small pile of flotsam washed up on the beach, approaching cautiously, everything seems safe enough, so you spend a moment searching through the detrius, though the only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a club.  Shrugging, you take the bit of wood with you, and continue along the beach.“;
@@ -91,7 +91,7 @@ flotsam club is an armament. It is part of the player. It has a weapon “[one o
 Section 3- Strange tide
 
 Strange tide is a situation.
-The sarea of Strange tide is “beach”;
+The sarea of Strange tide is “Beach”;
 
 Instead of resolving a Strange tide:
 	say “Walking along the beach, you notice a strange roiling of the tide, not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below.  Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together, realizing how vigourously whatever is down there must be moving you decide to continue on your way before it notices you.“;
@@ -103,7 +103,7 @@ Instead of resolving a Strange tide:
 Section 4- Strange wave
 
 Strange wave is a situation.
-The sarea of Strange wave is “beach”;
+The sarea of Strange wave is “Beach”;
 
 Instead of resolving a Strange wave:
 	say “walking along the beach, all of a sudden you hear a strange noise, almost like a loud groaning noise, causing you to look towards the water.  You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don[apostrophe]t get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more then you would expect.“;
@@ -114,7 +114,7 @@ Instead of resolving a Strange wave:
 Section 5- Smashed boat
 
 Smashed boat is a situation.
-The sarea of Smashed boat is “beach”;
+The sarea of Smashed boat is “Beach”;
 
 Instead of resolving a Smashed boat:
 	say “As you go along the beach, you come across a boat smashed up against some rocks, listing heavily to one side, seeing no one around you move closer to investigate.  From what you can tell it looks like whoever was on this boat was trying to flee whatever was going on in the city, having stocked up on supplies, and a chart to the next city down the way. Unfortunately it doesn[apostrophe]t look like they made it that far... but you do decide to take some of their supplies with you, since you doubt they will be needing them anymore wherever or whatever they now are.“;
@@ -129,7 +129,7 @@ Instead of resolving a Smashed boat:
 Section 6- Dragon voyeurism
 
 Dragon voyeurism is a situation.
-The sarea of Dragon voyeurism is “beach”;
+The sarea of Dragon voyeurism is “Beach”;
 
 Instead of resolving a Dragon voyeurism:
 	say “Moving along the beach, you hear strange noises from up ahead, causing you to move cautiously as you look around the upcoming dune.  You gasp at the strange sight before you, of a male sea dragon in the shallows mounting what looks to be a mixture of a human and sea dragoness, shreds of a divers wetsuit still cling to her expanding body as he fucks her roughly. The expression on the womans face is screwed up into one of the purest ecstasy as he thrusts into her, her happy cries and the strong musk of their mating causing you to grow excited as well. You find yourself unable to move on your eyes locked to the strangely erotic scene in front of you even as your hands begin to roam your body.  The woman cooing and writhing wantonly under the dragon, even as her changes continue sweeping over her, until finally the sea dragon roars as he spills his seed into what used to be a human diver, and is now indistinguishable from just another sea dragon. The dragons stay there in the low surf for a minute, shuddering in pleasure, before the male sea dragon pulls out, and drags himself back out into the surf. The newly made dragoness looks around for a minute as if confused by something, before fixating on his retreating form, she quickly dives into the surf after him, swimming along quickly to catch up to the beast that changed her, and now owns her.  You gasp in relief tinged with disappointment as they move away, your body tingling both from the sheer erotic nature of the sight you just witnessed, as well as the strong scent of sea dragon mating that covers the area and seems to cling to you strongly.“;
@@ -144,7 +144,7 @@ Instead of resolving a Dragon voyeurism:
 Section 7-  relaxing scene
 
 relaxing scene is a situation.
-The sarea of relaxing scene is “beach”;
+The sarea of relaxing scene is “Beach”;
 
 Instead of resolving a relaxing scene:
 	say “Moving along down the silent beach, a glint on the water catches your attention,  you immediately realize that it was just a flash of light on the water, but the view is so impressive you stop and stare anyways. The sounds of the soft waves lapping the beach, the reflected glow of the light on the water, the crisp clean air, it all makes for such an idyllic and relaxing scene that you feel refreshed and happier after even just a moment of standing their soaking it all in..“;
@@ -156,7 +156,7 @@ Instead of resolving a relaxing scene:
 Section 8- Plundered boat
 
 Plundered boat is a situation.
-The sarea of Plundered boat is “beach”;
+The sarea of Plundered boat is “Beach”;
 
 Instead of resolving a Plundered boat:
 	say “Walking along the beach, you come across a half sunk boat sticking out of the water, curiosity getting the best of you, you wade over to inspect the boat.  Hauling yourself aboard you immediately note signs of a struggle, it looks like several people tried to put up some kind of fight here, but there are no signs of either the winners or the losers. Moving around the boat, you note that someone appears to have already plundered the boat and taken anything of value, although you do find a bit of ripped cloth that looks like it might be from some sort of bandanna, the black cloth appears to have the skull and bones of a pirate logo printed on it, although the skulls teeth are pointed and sharklike.  Shrugging and unable to find anything of use, you wade back to the beach and continue on your way.“;
@@ -177,7 +177,7 @@ Instead of resolving a Plundered boat:
 Section 9- Tainted yacht
 
 Tainted yacht is a situation.
-The sarea of Tainted yacht is “beach”;
+The sarea of Tainted yacht is “Beach”;
 
 Instead of resolving a Tainted yacht:
 	say “While moving along the nearly deserted coast, you spot a small 60 foot yacht anchored nearby, you think with a bit of effort you might be able to swim out to the anchored boat, do you try?“;
@@ -198,7 +198,7 @@ Instead of resolving a Tainted yacht:
 Section 10- Strange castle
 
 Strange castle is a situation.
-The sarea of Strange castle is “beach”;
+The sarea of Strange castle is “Beach”;
 
 Instead of resolving a Strange castle:
 	say “Traveling along the beach, you come to an area where someone has obviously recently been hard at work.  Just sitting there near the surf is an extremely intricately made sand castle, a magnificent looking edifice with numerous carefully sculpted towers and many fine details.  Looking around you can[apostrophe]t see any sign of who might have made such a thing, and then just abandoned it here.  Shaking your head at the strange little building, you continue along your way, the waves behind you beginning to erode away at the small castles structure.“;
@@ -210,7 +210,7 @@ Instead of resolving a Strange castle:
 Section 11- otter view
 
 otter view is a situation.
-The sarea of otter view is “beach”;
+The sarea of otter view is “Beach”;
 
 Instead of resolving a otter view:
 	say “As you wander along the beach, you hear some laughter and splashing from the cove up ahead.  Moving forward to take a closer look, you spy a small group of otters, laughing and frolicking in the shallow water.  You smile at the innocently playful creatures for a while, until their play starts to get a bit more 'hands on' with each other.  At which point you continue on your journey before they notice you.“;
@@ -220,7 +220,7 @@ Instead of resolving a otter view:
 Section 12- Cream stand
 
 Cream stand is a situation.
-The sarea of Cream stand is “beach”;
+The sarea of Cream stand is “Beach”;
 
 Instead of resolving a Cream stand:
 	say “Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, looking around curiously though you don[apostrophe]t spot anyone nearby.  It is something of a hot day, perhaps you should go help yourself to some ice cream?“;
@@ -239,7 +239,7 @@ Instead of resolving a Cream stand:
 Section 13- Lucky seashell
 
 Lucky seashell is a situation.
-The sarea of Lucky seashell is “beach”;
+The sarea of Lucky seashell is “Beach”;
 
 Instead of resolving a Lucky seashell:
 	say “As you wander along the beach, you enjoy the feel of the sand underneath your feet and the beautiful sky overhead... until you nearly trip on something half buried in the sand. Cursing you look down and discover a large seashell was revealed when you nearly tripped over it, curiously you pick the shell up and marvel at the iridescent sheen of the shell. Just holding the thing makes you feel a bit better about things, who knows, maybe finding the shell means today will be a lucky day after all you think to yourself!“;
@@ -272,5 +272,7 @@ Instead of resolving a Lucky seashell:
 
 
 Beach Events ends here.
+
+
 
 
