@@ -703,6 +703,7 @@ Include Nymph for FS by Hellerhound.
 Include Shifting by Hellerhound.
 Include Computers by Hellerhound.
 Include Power Plant by Hellerhound.
+Include Control Pills by Hellerhound.
 Include Toy Store by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.
