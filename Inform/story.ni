@@ -688,6 +688,7 @@ Include Museum by Sarokcat.
 Include Satyr by Sarokcat.
 Include Greek Nymph by Sarokcat.
 Include Museum Events by Sarokcat.
+Include Skunk Pet by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
