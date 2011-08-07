@@ -713,6 +713,7 @@ Include Toy Store by Hellerhound.
 Include Zoo by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.
+Include Rabbit Pack for FS by Lago Moro.
 
 understand the command "feed" as something new.
 
