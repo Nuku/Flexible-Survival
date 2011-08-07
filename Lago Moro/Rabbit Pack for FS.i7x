@@ -21,7 +21,7 @@ to say rabpackdesc:
 to say rabpackvictory:
 	if bodyname of player is "rabbit pack":
 		say "The rabbit creatures take all of you into a nearby abandoned building. They...no, it has plans for you, and it doesn[apostrophe]t wants unwanted guests.[line break] After laying you to the ground, they step back, sitting or crouching around you. Instinctually, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
-		wait for any input;
+		wait for any key;
 		say "It[apostrophe]s so slow...not lazy or sluggish, but costantly building up your pleasure, a tiny bit at a time. Couples and groups changes constantly, without a pattern, and you weakly realize that a few of your own copies are making out with each other. Even your thoughts are interweaving with...well...hir, and you find your consciousness passing from male to female in a pinkish blur...either by you or to you, cocks are [one of]jerked[or]sucked[or]inserted[at random], breasts[one of]massaged[or]milked[at random], asses[one of]groped[or]prodded[at random], cunts[one of]licked[or]fingered[or]filled[at random]...every often a [one of]sweet[or]warm[or]lovely[at random] kiss...";
 		say "After at least hours, it finally ends. After a little rest, they escort you back to where they ambushed you, worn-out but satisfied.";
 		decrease libido of player by 50;
@@ -30,8 +30,8 @@ to say rabpackvictory:
 		say "Your body can[apostrophe]t resist their attentions, and you orgasm, matting a few of them. This doesn[apostrophe] stop them, as they keeps stimulating you, themselves, and each other, indifferently, no matter how spent any of you is...[line break] When it finally ends, those who can still stand guide the others somewhere else. You curl on the ground and fall asleep, trying to recover.";
 
 to say rabpacka:
-	if breastsize of player > 6:
-		say "They immediately eye your generous bosom; two of them, one for side, kneel down and begin sucking and fondling your [breastsize of player] breasts.";
+	if breast size of player > 6:
+		say "They immediately eye your generous bosom; two of them, one for side, kneel down and begin sucking and fondling your [breast size of player] breasts.";
 	otherwise:
 		say "You feel a weigth on your chest as one of them sits on it, smiling happily at you. [one of]She then slides closer, putting her pussy right in front of you. You comply, licking it while she sighs and moans[or]He leans closer and kisses you lovingly, while you can feel a small pressure as his cock slides out on is own, a little spot of pre already matting your skin[at random].";
 
@@ -126,7 +126,7 @@ now inheat entry is "[rabpackinheat]"; [this final say block is triggered every 
 
 to say rabpackinheat:
 	say "[one of]Repeat: there is only a me. A single me. A single consciousness. There is no 'we', only 'I'. I can[apostrophe]t go insane now.[or]Maybe is the infection, but you find yourself calling a male body a 'cock', and a female one a 'pussy', or similar... what the hell...[or]Even if your individual bodies are weaker, you can coordinate them with ease. And two pair of eyes are better than just one, for example.[or]You realize one of your copies is acting affectionately towards another one, on its own. You can[apostrophe]t help it: it[apostrophe]s like a tic.[or]How was it? A female copy for every cunt and a male one for every penis? So waht would happen if you were to lose both?[or]Note to self: talking and generally do things in perfect synchrony tends to unnerve people.[or]It is a bit odd to define the whole bunch of your copies [apostrophe]your body[apostrophe]. You still want to cling to how much sanity you have left, though.[at random]";
-	increase lust of player by 1;
+	increase libido of player by 1;
 	decrease humanity of player by 1;
 [ +++++ ] 
 
