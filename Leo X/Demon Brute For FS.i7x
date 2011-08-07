@@ -73,7 +73,7 @@ name	desc	weight	object
 
 demon seed is a grab object.
 
-demon seed is infectious. The strain of demon seed is "demon brute".
+demon seed is infectious. The strain of demon seed is "Demon Brute".
 
 the usedesc of demon seed is "The warm, sticky liquid tastes sweet as you drink it.";
 
