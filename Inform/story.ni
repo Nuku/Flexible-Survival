@@ -710,6 +710,7 @@ Include Computers by Hellerhound.
 Include Power Plant by Hellerhound.
 Include Control Pills by Hellerhound.
 Include Toy Store by Hellerhound.
+Include Zoo by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.
 
