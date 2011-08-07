@@ -555,6 +555,12 @@ This is the ButterflyTummyDesc rule:
 	otherwise:
 		now ButterflyTummy is "";
 		
+Does the player mean examining the damaged negligee when the damaged negligee is owned: it is very likely.
+Does the player mean examining the pristine negligee when the pristine negligee is owned: it is likely.
+Does the player mean littering the damaged negligee when the damaged negligee is owned: it is very likely.
+Does the player mean littering the pristine negligee when the pristine negligee is owned: it is likely.
+Does the player mean littering the testosterone pill when the testosterone pill is owned: it is likely.	
+Does the player mean grabbing the pristine negligee: it is very likely.
 
 Section 7 - Monster Items
 
@@ -961,6 +967,8 @@ carry out impregbutterfly:
 	now ButterflyForeplay is True;
 	say "You gain 1 x damaged negligee!";
 	add "damaged negligee" to invent of player;
+	say "You gain 1 x pristine negligee!";
+	add "pristine negligee" to invent of player;
 	now ButterflyHasNegligee is False;
 	say "You find a note she left behind with a rough map leading to her home.";
 	now butterfly grove is known;
