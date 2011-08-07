@@ -12,7 +12,7 @@ The summondesc of skunk kit is "You call out for the little skunk you rescued to
 The assault of skunk kit is "[one of]The little skunk viciously launches itself at your attacker![or]Turning around, the skunk sprays your attacker in the face![or]Afraid of being left alone again, the little skunk goes into a frenzy of biting![or]all of a sudden the powerful scent of skunk washes over the fight from where your little skunk kit is playing nearby.[or] taking advantage of your foes distraction, the skunk nips and bites at whatever part of your opponent it can reach.[or] Your adversary pauses for a minute as the little skunk growls at it, startling it enough for you to land a hit![or]The little skunk charges in to protect you, and your oppenent seems so startled at its sudden appearance it falls backwards[or] The little skunk tries to threaten your adversary from the sidelines, and spotting the skunk your adversary recoils in fear of its smell.[at random]";
 
 An everyturn rule:
-	if skunk kit is wielded:
+	if companion of player is skunk kit:
 		if a random number between one and 20 < 4:
 			say "[one of]The scent from the little skunk kit wafts over you strongly, causing your body to change![or]The little skunk kit comes up to you and nuzzles you, and you find yourself changing[or]The little skunk kit calls out for it[apostrophe]s mother, and you find yourself filling in for her.[or]The little skunk kit rubs up against you, his skunky smell teasing your nose with images of mature skunk beasts[or]The little skunk kit is startled by something and sprays the area, hitting you as well![at random]";
 			infect "Skunk":
