@@ -52,6 +52,7 @@ instead of resolving a Secure Area:
 							say "There are glyphs and writings covering the wall, and some show people in various states of infection. Looking closer, you notice that the writings seem to denote how to control the nanites, and the changes. You can now [bold type]shift[roman type] into other infections.";
 							increase the score by 500;
 							now shiftable is 1;
+							now Secure Area is resolved;
 						otherwise:
 							say "The door refuses to budge, and you go on your way, disappointed that you couldn't get any further.";
 				otherwise:
@@ -65,7 +66,7 @@ instead of resolving a Secure Area:
 	otherwise:
 		say "You wisely avoid what could only be more trouble than it is worth.";
 	now insecure is 0;
-	now Secure Area is resolved;
+	
 
 
 
@@ -165,62 +166,34 @@ To transform:
 			now cockname of player is name entry;
 			now cock of player is cock entry;
 	if 1 is 1:
-		while strength of player is not str entry:
-			if strength of player is greater than str entry and a random chance of 1 in 10 succeeds:
-				say "Your muscles feel weaker as the infection spreads through you.";
-				decrease strength of player by 1;
-			if strength of player is less than str entry:
+		while strength of player is less than str entry:
 				say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
 				increase strength of player by 1;
 				increase capacity of player by 5;
 	if 2 is 2:
-		while Intelligence of player is not Int entry:
-			if Intelligence of player is greater than Int entry and a random chance of 1 in 10 succeeds:
-				say "Your head aches as the infection spreads through you.";
-				decrease Intelligence of player by 1;
-			if Intelligence of player is less than Int entry:
+		while Intelligence of player is less than Int entry:
 				say "You feel your mind swelling with [name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
 				increase Intelligence of player by 1;
 	if 3 is 3:
-		while Dexterity of player is not Dex entry:
-			if Dexterity of player is greater than Dex entry and a random chance of 1 in 10 succeeds:
-				say "Your coordination feels weaker as the infection spreads through you.";
-				decrease Dexterity of player by 1;
-			if Dexterity of player is less than Dex entry:
+		while Dexterity of player is less than Dex entry:
 				say "You feel your hand eye coordination swelling with [name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
 				increase Dexterity of player by 1;
 	if 4 is 4:
-		while Stamina of player is not Sta entry:
-			if Stamina of player is greater than Sta entry and a random chance of 1 in 10 succeeds:
-				say "Your constitution feels weaker as the infection spreads through you.";
-				decrease Stamina of player by 1;
-				if remainder after dividing stamina of player by 2 is 1:
-					decrease maxhp of player by level of player plus 1;
-			if Stamina of player is less than Sta entry:
+		while Stamina of player is less than Sta entry:
 				say "You feel your body toughening with [name entry] [one of]Stamina[or]physique[or]power[at random].";
 				increase Stamina of player by 1;
 				if remainder after dividing stamina of player by 2 is 0:
 					increase maxhp of player by level of player plus 1;
 	if 5 is 5:
-		while Perception of player is not Per entry:
-			if Perception of player is greater than Per entry and a random chance of 1 in 10 succeeds:
-				say "Your senses dull as the infection spreads through you.";
-				decrease Perception of player by 1;
-			if Perception of player is less than Per entry:
+		while Perception of player is less than Per entry:
 				say "You feel your senses swelling with [name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
 				increase Perception of player by 1;
 	if 6 is 6:
-		while Charisma of player is not Cha entry:
-			if Charisma of player is greater than Cha entry and a random chance of 1 in 10 succeeds:
-				say "You feel more isolated as the infection spreads through you.";
-				decrease Charisma of player by 1;
-			if Charisma of player is less than Cha entry:
+		while Charisma of player is less than Cha entry:
 				say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
 				increase Charisma of player by 1;
 	if the libido of the player is less than libido entry:
 		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
-		let oldlib be libido of player;
-		increase libido of player by 1;
-		increase libido of player by ( libido entry minus libido of player ) divided by 3;
+		now the libido of the player is the libido entry;
 
 Shifting ends here.
