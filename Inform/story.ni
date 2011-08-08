@@ -14,7 +14,7 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
-The release number is 39.
+The release number is 40.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -690,6 +690,7 @@ Include Greek Nymph by Sarokcat.
 Include Museum Events by Sarokcat.
 Include Skunk Pet by Sarokcat.
 Include Zoo Events by Sarokcat.
+Include Panda by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
