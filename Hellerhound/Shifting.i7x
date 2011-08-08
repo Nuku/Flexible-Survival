@@ -79,121 +79,120 @@ Section 2 - Shifting
 shiftable is a number that varies.
 
 shifting is an action applying to one topic.
+understand the command "shift" as something new.
 understand "shift [text]" as shifting.
 understand "shift into [text]" as shifting.
 understand "shift to [text]" as shifting.
+ttransform is a number that varies.
+tmonster is a number that varies.
 
-check shifting:
+carry out shifting:
 	if shiftable is 0:
 		say "You do not know how to do that!";
 		stop the action;
-
-carry out shifting:
-	say "You concentrate on becoming one with them.";
+[	say "You sense becoming human would be nearly impossible after doing this. Do you wish to continue anyway?";
+	if the player consents:
+		say "";
+	otherwise:
+		stop the action;]
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
+		say "[name entry].";
 		if name entry matches the text topic understood, case insensitively:
 			now monster is X;
+			now ttransform is 1;
+			now tmonster is monster;
+			say "You concentrate on becoming one with the [name entry]s.";
 			break;
-	transform;
+	if ttransform is 0:
+		say "You don't know any such beast.";
 
-
+an everyturn rule:
+	if ttransform is 1:
+		transform;
+	now tmonster is 0;
+	now ttransform is 0;
 
 Section 3 -transform
 
 
 To transform:
-	choose row monster from the table of random critters;
-	while there is no name entry:
-		now monster is a random number from 1 to number of rows in table of random critters;
-		choose row monster from the table of random critters;
-		if there is no name entry:
-			next;
-		break;
-	if 1 is 1:
-		if skinname of player is not name entry:
-			say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
-			now skinname of player is name entry;
-			now skin of player is skin entry;
-	if 2 is 2:
-		if facename of player is not name entry:
-			say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
-			now facename of player is name entry;
-			now face of player is face entry;
-	if 3 is 3:
-		if tailname of player is not name entry:
-			say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
-			now tailname of player is name entry;
-			now tail of player is tail entry;
-	if 4 is 4:
-		if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
-			decrease breast size of player by 2;
-			follow the breast descr rule;
-			if breasts entry is greater than breasts of the player:
-				while breasts entry is greater than breasts of player:
-					increase breasts of player by 2;
-					say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
-			otherwise:
-				while breasts entry is less than breasts of player:
-					decrease breasts of player by 2;
-					say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
-			increase breast size of player by 2;
-		while ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
-			follow the breast descr rule;
-			let oldbreast be descr;
-			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-			increase breast size of player by 1;
-			increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
-			follow the breast descr rule;
-			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-		while breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
-			follow the breast descr rule;
-			let oldbreast be descr;
-			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-			decrease breast size of player by 1;
-			decrease breast size of player by ( breast size entry minus breast size of player ) divided by 3;
-			follow the breast descr rule;
-			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-		if bodyname of player is not name entry:
-			say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
-			now bodyname of player is name entry;
-			now body of player is body entry;
-		follow the sex change rule;
-	if 5 is 5:
-		follow the sex change rule;
-		if cockname of player is not name entry:
-			if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
-			now cockname of player is name entry;
-			now cock of player is cock entry;
-	if 1 is 1:
-		while strength of player is less than str entry:
-				say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
-				increase strength of player by 1;
-				increase capacity of player by 5;
-	if 2 is 2:
-		while Intelligence of player is less than Int entry:
-				say "You feel your mind swelling with [name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
-				increase Intelligence of player by 1;
-	if 3 is 3:
-		while Dexterity of player is less than Dex entry:
-				say "You feel your hand eye coordination swelling with [name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
-				increase Dexterity of player by 1;
-	if 4 is 4:
-		while Stamina of player is less than Sta entry:
-				say "You feel your body toughening with [name entry] [one of]Stamina[or]physique[or]power[at random].";
-				increase Stamina of player by 1;
-				if remainder after dividing stamina of player by 2 is 0:
-					increase maxhp of player by level of player plus 1;
-	if 5 is 5:
-		while Perception of player is less than Per entry:
-				say "You feel your senses swelling with [name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
-				increase Perception of player by 1;
-	if 6 is 6:
-		while Charisma of player is less than Cha entry:
-				say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
-				increase Charisma of player by 1;
+	choose row tmonster from the table of random critters;
+	if skinname of player is not name entry:
+		say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
+		now skinname of player is name entry;
+		now skin of player is skin entry;
+	if facename of player is not name entry:
+		say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
+		now facename of player is name entry;
+		now face of player is face entry;
+	if tailname of player is not name entry:
+		say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
+		now tailname of player is name entry;
+		now tail of player is tail entry;
+	if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
+		decrease breast size of player by 2;
+		follow the breast descr rule;
+		if breasts entry is greater than breasts of the player:
+			if breasts entry is greater than breasts of player:
+				increase breasts of player by 2;
+				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
+		otherwise:
+			if breasts entry is less than breasts of player:
+				decrease breasts of player by 2;
+				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
+		increase breast size of player by 2;
+	if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
+		follow the breast descr rule;
+		let oldbreast be descr;
+		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+		increase breast size of player by 1;
+		increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+		follow the breast descr rule;
+		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	if breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
+		follow the breast descr rule;
+		let oldbreast be descr;
+		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+		decrease breast size of player by 1;
+		decrease breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+		follow the breast descr rule;
+		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	if bodyname of player is not name entry:
+		say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+		now bodyname of player is name entry;
+		now body of player is body entry;
+	follow the sex change rule;
+	follow the sex change rule;
+	if cockname of player is not name entry:
+		if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+		now cockname of player is name entry;
+		now cock of player is cock entry;
+	if strength of player is less than str entry:
+		say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
+		increase strength of player by 1;
+		increase capacity of player by 5;
+	if Intelligence of player is less than Int entry:
+		say "You feel your mind swelling with [name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
+		increase Intelligence of player by 1;
+	if Dexterity of player is less than Dex entry:
+		say "You feel your hand eye coordination swelling with [name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
+		increase Dexterity of player by 1;
+	if Stamina of player is less than Sta entry:
+		say "You feel your body toughening with [name entry] [one of]Stamina[or]physique[or]power[at random].";
+		increase Stamina of player by 1;
+		if remainder after dividing stamina of player by 2 is 0:
+			increase maxhp of player by level of player plus 1;
+	if Perception of player is less than Per entry:
+		say "You feel your senses swelling with [name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
+		increase Perception of player by 1;
+	if Charisma of player is less than Cha entry:
+		say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
+		increase Charisma of player by 1;
 	if the libido of the player is less than libido entry:
 		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
 		now the libido of the player is the libido entry;
+
+
 
 Shifting ends here.
