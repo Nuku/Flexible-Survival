@@ -1,6 +1,11 @@
 Zoo by Hellerhound begins here.
 [extension 'the zoo' by hellerhound, created vby similarly named story bu nuku valente :)]
 
+The Bird Door is a door.
+understand "door" or "gate" as the Bird door.
+Outside of Bird door is Bird House.
+Inside of Bird door is the Bird Enclosure.
+
 Zoo entrance is a room. It is fasttravel. "The grand entrance to the zoo, with wrought iron gates and large stone walls surrounding the visible area, and booths for tickets. A large sign says 'free admission'. It looks as if it was put up this morning. You know from experience that the walls extend all the way around the park, which would explain why no creatures ever left it, or did they?".
 Zoo exit is a door. "The city is west of here.". Zoo exit is west of Zoo entrance. Zoo exit is dangerous. The marea of Zoo exit is "Outside".  west of zoo exit is Exploring the City.
 Fence Path is a room. The description of Fence Path is "The Path running along the outside of the zoo. The zoo is bordered with a metal fence, in the spikes you would expect on the edge of a large mansion. The city wall is to the north. As you walk along the path, you see one of the bars is cut out of the fence next to the cheetah exhibit. That doesn't look safe.". Fence Path is north of Zoo entrance. east of fence path is cheetah habitat. north of fence path is Border Wall.
