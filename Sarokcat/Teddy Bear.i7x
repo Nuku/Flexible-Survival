@@ -12,7 +12,7 @@ to say teddy bear attack:
 		say "The giant stuffed bear lets out a happy cry as you collapse, before quickly climbing on top of you. You soon see that someone has stiched a large opening in the crotch, right where a cunt should be. Before you can think about it too much, she quickly stuffs your [cock of player] cock into her waiting opening. You cry out as her velvety insides caress you, her body moving and twisting on top of you as her insides massage you like a velvet glove, ripping one of your most intense orgasms ever out of you. Soon your mind begins to cloud over with pleasure as she tirelessly rides you to orgasm after orgasm, hardly pausing at all as she runs her soft plush hands up and down your body, her bearlike muzzle planting soft kisses over your face the entire time. Eventually your body can[apostrophe]t take anymore, and you pass out in a haze of pleasure.  Waking up, there is no sign of your plush tormentor, realizing she has probably gone off to pleasure someone else, you quickly gather up your belongings and leave while you can.";
 		teddify;
 	otherwise:
-		say “The giant stuffed bear lets out a happy cry as you collapse helplessly. It[apostrophe]s hands wander your body for a minute, stripping you naked before it plops down next to you and begins to rub its soft plush body on you. You quickly realize it is actually a female bear, or at least someone has made an appropriate opening, as she rubs herself on your thighs. She then lowers her bearlike muzzle to your female opening and begins to lick and rub at you with her long tounge and furred muzzle, causing you to moan in pleasure. Her plush fur and soft whiskers tickle your thighs as her flexible tounge massages your insides, causing you to clench and rub your legs along her soft sides as the pleasure builds, until finally your orgasm shoots through you, causing you to cry out as you cover her plush face in your female juices.  Seeming somewhat smug the giant teddy bear lifts her damp muzzle up, licking it clean as she moves up beside you, gathering you into her soft fluffy arms as you drift off into an exhausted slumber.  Waking up later there is no sign of the big fluffy bear, making you feel vaguely sad and lonely as you gather up your belongings and leave.“;
+		say "The giant stuffed bear lets out a happy cry as you collapse helplessly. It[apostrophe]s hands wander your body for a minute, stripping you naked before it plops down next to you and begins to rub its soft plush body on you. You quickly realize it is actually a female bear, or at least someone has made an appropriate opening, as she rubs herself on your thighs. She then lowers her bearlike muzzle to your female opening and begins to lick and rub at you with her long tounge and furred muzzle, causing you to moan in pleasure. Her plush fur and soft whiskers tickle your thighs as her flexible tounge massages your insides, causing you to clench and rub your legs along her soft sides as the pleasure builds, until finally your orgasm shoots through you, causing you to cry out as you cover her plush face in your female juices.  Seeming somewhat smug the giant teddy bear lifts her damp muzzle up, licking it clean as she moves up beside you, gathering you into her soft fluffy arms as you drift off into an exhausted slumber.  Waking up later there is no sign of the big fluffy bear, making you feel vaguely sad and lonely as you gather up your belongings and leave.";
 		teddify;
 
 To say teddy bear loss:
@@ -27,8 +27,6 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	add "Teddy bear" to infections of girl;
-	add "Teddy bear" to infections of furry;
 	Choose a blank row from Table of random critters;
 	now name entry is "Teddy bear"; [Name of your new Monster]
 	now attack entry is "[one of]The bear windmills its arms and crashes into you, knocking you down.[or]The strange plush bear takes a moment out of combat to give you a big fuzzy hug, causing you to feel vaguely unsettled.[or]Its large plush hands come down hard on your head, making you wonder through the ringing in your ears just what the heck its stuffed with, lead?.[or]Jumping up as it charges, the big fluffy bear knocks you flat as it crashes to the ground.[or]Singing along with the fair music, the fluffy bear prances around seemingly at random, until it ends up ramming into you.[or] Charging forward with its oversized head lowered, the giant bear rams right into you, knocking you both down.[at random]"; [Text used when the monster makes an Attack]
@@ -43,7 +41,7 @@ When Play begins:
 	now face change entry is "your face balloons outwards as your head seems to swell up, your cheeks stretching out and a cute little muzzle forming as your face becomes that of a happy giant teddy bear"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it shifts and plumps outwards, your hands and feet becoming fatter and rounder, making it hard to balance as you seem to become much more like a children[apostrophe]s toy."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "your flesh tingles and sprouts a soft thick brown pelt of plush fake fur"; ["Your skin feels funny as (your text)" ]
-	now ass change entry is "your center of balance tips dangerously as a huge thick tail emerges from you, with two bony ridges along the top, an alligator's tail."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now ass change entry is "it plumps up, making you feel like you are sitting on some sort of padding, looking behind you, find your new fabric like ass has also sprouted a short little bear tail, which you find yourself wiggling a few times, surprised at how well the bit of fabric responds.."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it shifts and seems to fill with some sort of strange stuffing, making it both more sensitive and flexible."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 16;
@@ -78,15 +76,10 @@ when play ends:
 	
 
 to teddify:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "teddy bear":
-			now monster is y;
-			break;
-	infect;
-	infect;
-			
+	infect "teddy bear";
 
 
 [ Edit this to have the correct Name as wall]
 Teddy bear ends here.
+
+.
