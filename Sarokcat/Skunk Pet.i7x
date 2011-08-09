@@ -94,4 +94,25 @@ Instead of resolving Lost skunk kit:
 
 
 
+
+when play ends:
+	if skunk kit is tamed:
+		if bodyname of player is "Skunk":
+			if humanity of player is less than 10:
+				say "Surrendering to the infection, you make an even better mother to the little skunk kit, as you soon give your first little skunk child several siblings to play with. Still the first little skunk you rescued always has a special place in your skunky heart, and once he has grown up enough, he also proves to be a fine skunk mate for you in your new life, and you bear him even more wonderful skunk kits for you to raise.";
+			otherwise:
+				say "After your rescue, you manage to smuggle the little skunk kit out of the city with you. Its presence a constant comfort to you as you settle into your new life outside the city.  Eventually though like all kits will, it grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world.  Eventually though, when its size is close to that of the skunk beasts in the city, you realize its presence seems to be triggering something within you. Where before its presence triggered strong protective impulses, now its presences only serves to excite your body, a fact that seems to interest it more and more, until one day you find yourself panting in need when you catch his scent, and realize his presence has triggered your body to go into heat.  Seeing the skunk you raised in an entirely new manner, you crawl before him, and he sates himself on your eager body, instinct guiding him in how best to dominate you.  As you moan underneath the new skunkbeast, you know the roles have changed in your life for good now, and you are now the pet, while he is the master.  While at first no one can tell the difference, you soon buy yourself a proper collar to show your new status, and begin to plan ways to help your new master acquire more pets.  You just know they will love bearing skunk kittens just like you will...";
+		otherwise:
+			if humanity of player is less than 10:
+				say "The little skunk kit whines at you pathetically as you surrender to the infection fully, still obviously attached to you even now.  You manage to bring yourself to care for it for a bit longer, but as it grows larger and stronger and more like a regular skunkbeast, you find yourself less and less able to tolerate his presence. Eventually you drive the skunkbeast out into the wild on its own, the beast more then able to take care of itself now, and let you get back to your own cares.";
+			otherwise:
+				say "after your rescue, you manage to smuggle the little skunk kit out of the city with you. Its presence a constant comfort to you as you settle into your new life outside the city.  Eventually though like all kits will, it grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Soon the skunk kit has grown almost as large as those you fought in the city, this doesn[apostrophe]t cause any problems until at one point he tries to mount you in your sleep.  While you wake up in time to stop the action, his scent filling the room makes you almost want to let him continue.  Unable to ignore the problem you try to make the skunk understand it has to be careful, only to have the now instinct driven beast set out on its own to find mates to fill in this new area.  You try to find him for quite a while, and turn up no clues at all, although you hear later about a new explosion of skunkmorphs in the region..."
+
+
+
+
+
+
 Skunk Pet ends here.
+
+

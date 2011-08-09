@@ -27,9 +27,19 @@ Instead of resolving Abandoned Fox:
 			say "hardening your heart to its plainitive cries, you move back from the abandoned fox den and leave nature to take its course.).";
 			now Abandoned Fox is resolved;
 	otherwise:
-		say “Worried that you might be walking into some kind of trap, you turn your back on the noise and continue your walk through the park.”;
+		say "Worried that you might be walking into some kind of trap, you turn your back on the noise and continue your walk through the park.";
 
 
 
+when play ends:
+	if little fox is tamed:
+		if humanity of player is less than 10:
+			say "When you give in to your feral instincts, the little fox you rescued stays with you, traveling with you and helping as best it can, trying to help you hunt and teasing at you to play with it.  Finally though it grows large enough that one day it leaves on its own, fully able to forage for itself now, and leaving you to your fate. You miss the little creature occassionally.... when you can remember it anyways.";
+		otherwise:
+			say "After your rescue, you manage to convince the distracted military that the little fox isn[apostrophe]t a threat, and he comes with you out into your new life.  Being a mostly wild creature, he doesn[apostrophe]t really fit in anywhere that you take him however, and so eventually you decide to find a wilderness preservation to release him into, where you hear there are several other foxes for the little fellow to play with.  Several years later though, you are surprised to find someone has left another little baby fox at your door while you slept, a roughly scrawled note just says 'thanks mom,' with a little paw mark in the corner.";
 
 Little Fox ends here.
+
+
+
+

@@ -691,6 +691,8 @@ Include Museum Events by Sarokcat.
 Include Skunk Pet by Sarokcat.
 Include Zoo Events by Sarokcat.
 Include Panda by Sarokcat.
+Include Exotic Bird by Sarokcat.
+Include Fair Events by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
