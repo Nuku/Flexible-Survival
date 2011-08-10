@@ -2167,6 +2167,7 @@ carry out exploring:
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
+	if breast size of player is greater than 26, now breast size of player is 26;
 	if libido of player is less than 96 and "Horny Bastard" is listed in feats of player:
 		increase libido of player by 5;
 	if the hunger of player is less than 0, now the hunger of player is 0;
