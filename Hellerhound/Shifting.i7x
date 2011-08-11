@@ -91,7 +91,10 @@ carry out shifting:
 	if shiftable is 0:
 		say "You do not know how to do that!";
 		stop the action;
-[	say "You sense becoming human would be nearly impossible after doing this. Do you wish to continue anyway?";
+	if the humanity of the player < 50:
+		say "Your feral impulses prevent you from concentrating hard enough to change.";
+		stop the action;
+	[say "You sense becoming human would be nearly impossible after doing this. Do you wish to continue anyway?";
 	if the player consents:
 		say "";
 	otherwise:
@@ -196,6 +199,10 @@ To transform:
 
 when play ends:
 	if shiftable is 1:
+		if the humanity of the player > 50:
+			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind, that do not spread.";
+		otherwise:
+			say "Your feral impulses prevent the concentration required for shifting, and the knoledge doesn't return until the rescue comes.";
 		now body of player is "nothing";
 		say "((Being a shapeshifter, your normal ending for your body type is supressed))";
 
