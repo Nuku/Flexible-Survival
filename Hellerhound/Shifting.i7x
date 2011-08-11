@@ -194,6 +194,9 @@ To transform:
 		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
 		now the libido of the player is the libido entry;
 
-
+when play ends:
+	if shiftable is 1:
+		now body of player is "nothing";
+		say "((Being a shapeshifter, your normal ending for your body type is supressed))";
 
 Shifting ends here.
