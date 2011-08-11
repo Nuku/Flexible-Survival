@@ -36,6 +36,7 @@ instead of resolving a Secure Area:
 				say "The shimmering dissipated, you look towards the guards at the door, and with a shock realize they are of the Ash Dragator infection. You could turn back now, or maybe you want to challenge them?";
 				if the player consents:
 					say "You march froward, and they attack.";
+					now dragatorwon is 0;
 					challenge "Ash Dragator";
 					if lost is 1, now dragatorwon is 1;
 					challenge "Ash Dragator";
