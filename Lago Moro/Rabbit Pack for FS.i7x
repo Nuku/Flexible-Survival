@@ -99,6 +99,8 @@ When Play begins:
 	now cunt length entry is 4;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 3;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 10;			[ Amount player Libido will go up if defeated ]
+	now loot entry is "lucky horseshoe";
+	now lootchance entry is 0;
 
 when play ends:
 	if bodyname is "rabbit pack":

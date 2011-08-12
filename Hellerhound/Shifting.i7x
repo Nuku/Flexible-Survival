@@ -77,7 +77,7 @@ instead of resolving a Secure Area:
 
 Section 2 - Shifting
 
-shiftable is a number that varies.
+shiftable is a number that varies. shiftable is usually 1;
 
 shifting is an action applying to one topic.
 understand the command "shift" as something new.
@@ -99,15 +99,31 @@ carry out shifting:
 		say "";
 	otherwise:
 		stop the action;]
+	let critter be the topic understood;
+	let critter list be a list of text;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
-		say "[name entry].";
-		if name entry matches the text topic understood, case insensitively:
+		add name entry to critter list;
+		if name entry matches the regular expression "^[critter]$", case insensitively:
 			now monster is X;
 			now ttransform is 1;
 			now tmonster is monster;
-			say "You concentrate on becoming one with the [name entry]s.";
 			break;
+	if ttransform is 0:
+		now critter list is {};
+		repeat with X running from 1 to number of filled rows in table of random critters:
+			choose row X from the table of random critters;
+			add name entry to critter list;
+			if name entry matches the regular expression ".*[critter].*", case insensitively:
+				now monster is X;
+				now ttransform is 1;
+				now tmonster is monster;
+				break;
+	repeat with x running through critter list:
+		say "[x].[line break]";
+	if ttransform is 1:
+		choose row monster from the table of random critters;
+		say "You concentrate on becoming one with the [name entry]s.";
 	if ttransform is 0:
 		say "You don't know any such beast.";
 
@@ -205,6 +221,7 @@ when play ends:
 			say "Your feral impulses prevent the concentration required for shifting, and the knowledge doesn't return until the rescue comes.";
 			say "You are unable to choose a form, and spend your days changing to whatever suits you. Within a few days of the revivation of the city, the spy force contacts you, ringing your phone off the hook for hours until you finaly return home. They offer you work, and give such bonuses and pay that you couldn't resist. Your ability helps, and the only work you have to do is mimicking the knowledge of who you are impersonating, training yourself for future success.";
 		now body of player is "nothing"; 
+		now bodyname of player is "nothing";
 		say "((Being a shapeshifter, your normal ending for your body type is supressed))";
 
 Shifting ends here.
