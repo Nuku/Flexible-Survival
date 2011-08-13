@@ -70,9 +70,9 @@ The sarea of Grizzly gone is "Zoo";
 
 Instead of Resolving a Grizzly gone:
 	say "Traveling through the zoo in search of anything of use, you come across a zookeepers hut it seems like something broke into, taking a chance you look inside, and see that most of the area seems to be empty and smelling of sex. About to leave you notice several hurried notes someone left, picking them up you begin to leaf through them.[line break].";
-	say "'The grizzly is gone from the enclosure this morning! No sign of it at all and the door was left wide open! What the hell happened last night, I need to ask the night watch...'";
-	say "'Holy shit, if anyone is reading this, I found the grizzly and watch out, He seems to be a size larger then he was yesterday! And god if he doesnt seem to be smarter now too! I locked him out of the shed and I should be safe in here.'";
-	say "I don[apostrophe]t know what the bear is up to out there, but there was a lot of grunting just a minute ago, and there is a strange smell in here now... it smells kinda... good.  For some reason the shack seems to be a size too small now though...";
+	say "'The grizzly is gone from the enclosure this morning! No sign of it at all and the door was left wide open! What the hell happened last night, I need to ask the night watch...'[line break]";
+	say "'Holy shit, if anyone is reading this, I found the grizzly and watch out, He seems to be a size larger then he was yesterday! And god if he doesnt seem to be smarter now too! I locked him out of the shed and I should be safe in here.'[line break]";
+	say "I don[apostrophe]t know what the bear is up to out there, but there was a lot of grunting just a minute ago, and there is a strange smell in here now... it smells kinda... good.  For some reason the shack seems to be a size too small now though...[line break]";
 	say "Grizzly so good,  grizzly cock is sized juuust right,'  The last note ends there, trailing off into an unrecognizable scrawl.";
 	Now Grizzly gone is resolved;
 
@@ -88,8 +88,32 @@ Instead of Resolving a Tasty Treats:
 	Now Tasty Treats is resolved;
 
 
-Section 9-  Angie trapped
+Section 9-  angietrapped
 
+angietrapped is a situation.
+The sarea of angietrapped is "Zoo";
+
+angiehappy is a number that varies.
+
+Instead of Resolving a angietrapped:
+	if angiehappy is 0:
+		say "Wandering along the zoo pathways, you hear several of the creatures roaming the zoo apparently fighting nearby. Curious you move slightly closer to investigate, and see a few of the beasts appear to be fighting outside one of the smaller animal pens, you really aren[apostrophe]t sure what they are fighting about, but it could be dangerous to interfere, do you do so anyways?";
+		if player consents:
+			say "Deciding that whatever this is about, it might be best if you intervened, you step forward and prepare to fight!";
+			fight;
+			fight;
+			say "As you recover from your recent exertions, you hear a voice call out from the small den the creatures were fighting outside of.  'Is it safe now?' The voice calls, causing you to turn your head and stare in astonishment as the face of a black panther wearing a zookeepers hat sticks itself out, looking around before the rest of the body follows. You find yourself staring at her changed body as she looks around, her legs resting easily on her new pantherlike paws, her face a blend of panther and human, and wearing the remains of what was obviously a zookeepers uniform.  The uniform has seen better days however, as her zookeepers vest hangs open, revealing a shirt that is torn almost all the way down, and now does nothing to conceal the rather large breasts that obviously expanded enough to tear it apart.  Her shorts are in even worse shape, having obviously had something large claw a hole in the crotch for easier access, the hole now gapes open revealing not only her new panther snatch, damp with her obvious arousal, but also revealing her erect panther like cock, its soft barbs easily visable. [line break]";
+			say "Noticing where your gaze has strayed, the former zoo employee coughs, drawing your attention back to her muzzle.  'Thanks for driving those two off, I was sure I was about to get fucked again, and this time I don[apostrophe]t think I would have managed to get away again, to be honest im not sure I would have wanted to if it was as good as...' her voice trails off, before she catches herself daydreaming and continues. 'Sorry, my names Angie, and well, I work here, or at least I used to, as one of the big cat handlers. Of course that all changed a little bit ago, when I went to take care of the panthers, and I found out that the male cat was waiting there to take care of me instead. He was on me so fast, forcing me down and then fucking me, god it was so good,' Angie says, her eyes going unfocused for a minute as she pants at the memory.  'I didn[apostrophe]t know what was going on, but I couldn[apostrophe]t bring myself to to stop him, it was probably the best i[apostrophe]ve ever felt in my life, being his feline fuck toy,' She says with a moan, 'But he wasn[apostrophe]t the only one of the cats that got loose, and before he could finish making me into his pet fully, he got interrupted by one of the other cats.  While the two of them squabbled over me, I managed to crawl away and lock myself in one of the side rooms while my changes finished, and once I managed to recover I have been trying to sneak around the zoo, and see if I can figure out whats going on, or if I can find some supplies.  Unfortunately,' Angie says with a sigh, 'Thats when those two managed to find me, and then you showed up. I[apostrophe]m grateful to you for your help here, and if you know anyplace around thats semi safe i[apostrophe]d be even more grateful.' She says hopefully, you tell the panther herm about the zoo giftshop, and how it seems to be safe for now, making her smile and nod, as she heads there right away, her tail lashing in excitement behind her.";
+			increase angiehappy by 1;
+			now angiefound is 1;
+			stop the action;
+		otherwise:
+			say "deciding it might be best to let them fight amongst themselves, you continue on your way.";
+			stop the action;
+	if angiehappy is 1:
+		say "Traveling down the zoo pathways, you hear some strange sounds coming from one of the enclosures, taking a cautious look, you see what appears to be a large pantherlike beast, growling and chuffing as it tries to reach something that appears to have fallen into a narrow space beside the den.  You watch for a while as the beast tries increasingly desperate measures to get at whatever is stuck in there, before it eventually gives up and stalks off in a huff.  Curiosity getting the better of you, you go down to investigate and find some small cloth wrapped packet has rolled into the crack. Grabbing a nearby branch you manage to roll the small bundle out of the crack, and take a look at it, and while it seems to exude a nice pleasantly minty odor, you can[apostrophe] tell why the big panther wanted it so badly.  Shrugging you decide to tuck it away for further investigation later, and continue on through the zoo.";
+		now angiearoused is 1;
+		Now angietrapped is resolved;
 
 Section 10-  Panda parade
 
@@ -128,3 +152,5 @@ Instead of Resolving a Instructional video:
 
 
 Zoo Events ends here.
+
+
