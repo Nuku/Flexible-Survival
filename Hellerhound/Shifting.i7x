@@ -77,7 +77,7 @@ instead of resolving a Secure Area:
 
 Section 2 - Shifting
 
-shiftable is a number that varies. shiftable is usually 1;
+shiftable is a number that varies.
 
 shifting is an action applying to one topic.
 understand the command "shift" as something new.
