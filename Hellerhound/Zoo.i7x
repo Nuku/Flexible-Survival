@@ -61,7 +61,7 @@ to say cheetahrape:
 	if a random chance of 1 in 4 succeeds:
 		say "You look behind you and freeze, a large spotted cat prowling towards you. You stand there frozen as it comes and walks up, placing its paws on your shoulders and rolling you over. You remember from TV that the best thing to do in this situation is to reamins still and hope it leaves you alone. It doesn't work. [line break][line break]The cat nuzzles up to yoursex, nuzzling it and lapping at it. You feel slightly more calm as it seems to be just playing with you.";
 		infect "Cheetah";
-		infect "Cheetah";
+		follow the turnpass rule;
 	otherwise:
 		say "It is eerily quiet in here. You should probably leave now.";
 
