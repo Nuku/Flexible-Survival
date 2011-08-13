@@ -20,7 +20,7 @@ Chase is a man.
 The description of Chase is "The large striped tiger man you helped out earlier is hanging around near the side of the den, watching as several of the other Tigerlike people here go about their business.";
 Chase is in Tiger den.
 
-The conversation of Chase is { "[chasetalking]" };
+The conversation of Chase is { "[Chasetalking]" };
 
 To say Chasetalking:
 	if Chasetalk is 0:
