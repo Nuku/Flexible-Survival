@@ -699,6 +699,7 @@ Include Gazelle by Sarokcat.
 Include Zebra by Sarokcat.
 Include Cheetah by Sarokcat.
 Include Tiger by Sarokcat.
+Include Tigertaur by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
