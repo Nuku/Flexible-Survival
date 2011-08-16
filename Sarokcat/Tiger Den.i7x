@@ -60,14 +60,14 @@ carry out chasefucking:
 
 
 
-Section 2- Tiger vs taur
+Section 2- TigerVSTaur
 
 
 
-Tiger vs taur is a situation.
-The sarea of Tiger vs taur is "Zoo";
+TigerVSTaur is a situation.
+The sarea of TigerVSTaur is "Zoo";
 
-Instead of Resolving a Tiger vs taur:
+Instead of Resolving a TigerVSTaur:
 	say "Traveling down the zoo pathways, you hear a strange roaring noise nearby, followed by some violent sounds, after a few seconds the sounds fade somewhat, and you cautiously peek through the greenery to see a strange sight on one of the employee travel paths of the zoo.  Two creatures appear to have been fighting here, strangely enough it appears to be a couple of the tigertaurs that have been plaguing the zoo.  Closer inspection however, reveals that only one of the combatants happens to be a tigertaur, the other combatant appears to be merely an extremely tigerlike humanoid, with no tiger like lower body at all!  The combat is quickly drawing to a close however, as the tigertaurs larger form seems to give it an advantage against the more humanlike tiger, and indeed as you watch, the tigerman seems to be growing more and more aroused and less able to resist the tigertaurs advances. You could intervene if you wanted, but it truly doesn[apostrophe]t look like the situation is any of your affair. Do you interfere?";
 	if player consents:
 		say "You quickly resolve to involve yourself in what is essentially not your conflict, but unable to see it continue without taking some action on your part.  You rush from hiding and into the fray, startling both combatants into taking a step back for second startled by your sudden presence, you have only a few seconds however before the conflict will obviously resume, in which to decide just who to aid.  The tigertaur seemed to be winning the fight so far, and it might make more sense for you to ally yourself with the obviously superior power, but you could also take the greater risk and try to aid the tiger against the strong tigertaur if you choose.     Do you side with the Tigertaur?";
@@ -84,7 +84,7 @@ Instead of Resolving a Tiger vs taur:
 			say "'Sadly I never did actually encounter a tiger that day, but there must have been enough of whatever is causing the changes left over in their den to change me, I still don[apostrophe]t regret it though... this body is so much better then my old one was.' he says, flashing you a grin as you thread through the destroyed office building, furniture placed haphazardly all over, causing the place to look like a major battle took place here at some point. 'And hey!' Chase says as he opens a door almost hidden by the debris and leads you down what looks like maintance stairs to the basement. 'At least i[apostrophe]m not alone like this' the tiger man says with a grin, as he throws open the basement door, causing you to stare inside, as several other tiger men and tiger women look up to see whats happening.  'Welcome to the Tiger den' Your guide says somewhat smugly, as he leads you inside."; 
 			move player to Tiger den;
 			now Tiger den is known;
-			now Tiger vs taur is resolved;
+			now TigerVSTaur is resolved;
 	otherwise:
 		say "Deciding to let the two infected beasts finish their little dominance battle in privacy, you continue along your way without stopping to see what happens.";
 
