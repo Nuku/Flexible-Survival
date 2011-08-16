@@ -36,6 +36,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
+	add "tigertaur" to infections of girl;
+	add "tigertaur" to infections of furry;	
 	Choose a blank row from Table of random critters;
 	now name entry is "tigertaur"; [Name of your new Monster]
 	now attack entry is "[one of]She leaps forward, slamming her large body into you roughly[or]Lashing out with one of her large tiger forepaws, she her claws rake over your body. [or] The tiger like taur moans and rubs her hands along her body, a strong scent of need and arousal filling the air.[or]Charging forward much to your surprise you find herself rubbing her body against yours in excitement instead of attacking![or]Dancing forward on her four feline legs, she lashes out with one of her clawed hands.[or]Springing forward, she slams her head forward, her tiger teeth glinting dangerously as they approach your face, only to find her muzzle lock with your mouth as she kisses you passionately![or]She charges forward, her hands and paws roaming excitedly over your body as she tries to find a way to pin you down.[at random]"; [Text used when the monster makes an Attack]
