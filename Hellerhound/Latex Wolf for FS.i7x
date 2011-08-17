@@ -81,7 +81,9 @@ When Play begins:
 	
 [ Edit this to have the correct Name as wall]
 
-
+when play ends:
+	if the bodyname of the player is "Latex Wolf":
+		say "As the resuce begins you hear the sirens off in the distance and with your improved hearing can tell they are coming your way. Firetrucks arrive, sirens blaring and you run up to one, tail wagging. As you move closer to the truck you are sprayed with a strange chemical, Perhaps this is the cure? You turn your head back and watch as the latex melts off of your body leaving fur underneath. You fall down and whimper as you realize that you are no longer a latex wolf, but a real one.";
 
 
 
