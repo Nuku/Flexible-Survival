@@ -69,7 +69,7 @@ greendull is a room. "ERROR 682".
 greendull is up from Green Apartment.
 
 brightdull is a room. "ERROR 682".
-brightdull is up from Bright Alley.
+brightdull is east of Bright Alley.
 
 Red Apartment is a room. "A red building, with a fire escape on this side. It looks much like the average building.[redflight]". It is fasttravel.
 
