@@ -132,11 +132,9 @@ carry out treasurehunt:
 				say "Wandering through the caves of the island, you hear a strange rhythmic noise coming from one of the caverns up ahead, do you want to investigate?";
 				if player consents:
 					say "Moving ahead you find yourself in a large open beach cave, a strange pleasant scent filling your nostrils as you move into the cave.  The noise continues, before a loud roar lets out behind you.  Jumping you turn around swiftly to see a sea dragon and dragoness panting together in the far back of the cave, this must be their lair, and the rhythmic sound was the sound of their mating!  The two large beasts stare at you for a second, and you stare back at them as well, before they can react you break into a run, leaving the cave to the two large beasts before they can get around to punishing you for trespassing.  Still after the encounter you find yourself feeling slightly strange and woozy, your head still filled with the scent of their mating as you realize it is trying to change you...";
-					if cunts of player is greater then 0;
-						infect "feral sea dragon";
+					if cunts of player is greater than 0:
 						infect "feral sea dragon";
 					otherwise:
-						infect "feral sea dragoness";
 						infect "feral sea dragoness";
 				otherwise:
 					say "Deciding that it probably isn[apostrophe]t treasure, you continue on your way.";
@@ -162,20 +160,20 @@ tmapfound is a number that varies.
 
 Instead of resolving a Noteinbottle:
 	say "Walking along the beach enjoying the view of the surf you notice something bobbing on the waves just out of reach of shore, do you dive in to try to get it?";
-		if player consents:
-			fight;
-			fight;
-			say "having braved the waves you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside!  More then a bit curious at this point you quickly open the bottle up and fish the message out.  Spreading it out on the sand beside you, you puzzle over the hastily scrawled message, looking almost like a rat scribbled on the page. Unable to make it out fully, it seems to be a warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference or a boat it is totally useless to you right now.  Still if there is pirates their might be treasure right?  Just to be on the safe side you roll the map up and stick it in your pocket anyways.";
-			now tmapfound is 1;
-			Now Noteinbottle is resolved;
-			stop the action;
-		otherwise:
-			say "Deciding not to bother with the strange bobbing object, you continue your nice walk along the beach.";
-			stop the action; 
+	if player consents:
+		fight;
+		fight;
+		say "having braved the waves you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside!  More then a bit curious at this point you quickly open the bottle up and fish the message out.  Spreading it out on the sand beside you, you puzzle over the hastily scrawled message, looking almost like a rat scribbled on the page. Unable to make it out fully, it seems to be a warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference or a boat it is totally useless to you right now.  Still if there is pirates their might be treasure right?  Just to be on the safe side you roll the map up and stick it in your pocket anyways.";
+		now tmapfound is 1;
+		Now Noteinbottle is resolved;
+		stop the action;
+	otherwise:
+		say "Deciding not to bother with the strange bobbing object, you continue your nice walk along the beach.";
+		stop the action; 
 
 
 
-Findingboat is a situation
+Findingboat is a situation.
 the sarea of Findingboat is "Beach"
 
 Instead of conversing the Rod while tmapfound is 1:
