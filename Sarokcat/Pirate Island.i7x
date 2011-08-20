@@ -48,7 +48,7 @@ carry out treasurehunt:
 			if T is 2:
 				say "Walking through the dark and damp caves, you hear a soft trickling noise from one of the nearby alcoves, deciding to investigate you find a small stream trickling up from a crack in the wall.  Taking a look at the small spring you find the water is both crisp and clear, and decide to gather some of it up to take with you.  You continue exploring through the caves, but eventually find they twist and turn back on each other, and you end up back on the beach.[line break]";
 				Add "water bottle" to invent of player;
-				say "You gained a water bottle!"
+				say "You gained a water bottle!";
 				stop the action;
 			if T is 3:
 				say "Walking through the caves, you find yourself starting to jog a bit, and then a bit more, as you move along the long cave, always following the left passage when it appears in an attempt to solve the maze of passages within.  After some time you begin to tire, but there is no end to the cave in sight, as you move in the dim light you realize your surrounding seem increasingly familiar even as you continue to jog along.  Finally in frustration you take a right turn instead of a left turn, and almost immediately shoot back out onto the beach from the cave you entered from, with an embarrassed glance behind you, you realize the left part of that cave looped in a large circle, and you have been running around it for hours. You sigh as you plop down on the beach to rest for a minute, still you do feel slightly more dexterous from all that jogging you find yourself thinking, as you let the waves lap at your body.[line break]";
@@ -90,10 +90,10 @@ carry out treasurehunt:
 					stop the action;
 			if T is 7:
 				say "Traveling through the dark and damp caves, you swear you hear some off key singing from around the bend, peeking around you find several pirate sharks dicing over some small items in a cave half filled with water.  You lean closer to get a closer look, only to be spotted by one of the sharks, they give out a cry and dive into the water, circling before charging back to engage you, looks like you are in for a fight!";
-				challenge "pirate shark"
-				challenge "pirate shark"
-				challenge "pirate shark"
-				say "After a long and exhausting time, the sharks have finally left, leaving you in the cave by yourself, sighing you lie down to rest for a minute, only to find something uncomfortable underneath you.  Glancing down, you realize they left behind the items they were dicing over!  While it may not be actual treasure, it certainly isn[apostrphe]t anything to sniff at you think as you tuck the items into your pack.";
+				challenge "pirate shark";
+				challenge "pirate shark";
+				challenge "pirate shark";
+				say "After a long and exhausting time, the sharks have finally left, leaving you in the cave by yourself, sighing you lie down to rest for a minute, only to find something uncomfortable underneath you.  Glancing down, you realize they left behind the items they were dicing over!  While it may not be actual treasure, it certainly isn[apostrophe]t anything to sniff at you think as you tuck the items into your pack.";
 				let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
 				choose row minortreasure from the table of random critters;
 				if there is a loot entry:
@@ -141,7 +141,7 @@ carry out treasurehunt:
 				stop the action;
 			otherwise:
 				say "Wandering through the dark caves, you slip on one of the damp corridors and find yourself sliding out of control down a long ramp, the ramp twists and turns before depositing your screaming body in the sea at the coast of the island, as you sputter and look around for a way back to the beach, you spot something heading your way!";
-				now marea is Beach;
+				now battleground is "Beach";
 				fight;
 				stop the action;
 		otherwise:
@@ -182,7 +182,7 @@ Instead of conversing the Rod while tmapfound is 1:
 
 Instead of resolving Findingboat:
 	if tmapfound is 2:
-		say "Wandering along the beach,  you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn[apostrophe]t go too far, they might be able to get you to the island shown on the map!  Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go."
+		say "Wandering along the beach,  you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, even though they wouldn[apostrophe]t go too far, they might be able to get you to the island shown on the map!  Deciding to take a look, you spend some time searching through the boats to find one that could get you where you need to go.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
@@ -192,7 +192,7 @@ Instead of resolving Findingboat:
 			challenge "pirate shark";
 			challenge "pirate shark";
 			if lost is 1:
-				say "Sadly the rough battle with the sharks has practically wrecked your little boat, and you barely make it back to shore before it sinks, it looks like you will have to try again another time with a different boat..."
+				say "Sadly the rough battle with the sharks has practically wrecked your little boat, and you barely make it back to shore before it sinks, it looks like you will have to try again another time with a different boat...";
 				stop the action; 
 			otherwise:
 				say "Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn[apostrophe]t seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
