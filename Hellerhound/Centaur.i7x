@@ -70,29 +70,22 @@ To say centaur defeat:
 			now the libido of the player is 0;
 		otherwise if the humanity of the player < 90:
 			say "The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaurs furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while with your concentration, something wet and large pokes at your back. You stop, and turn around in surprise to see the centaur large green cock, starkly erect and tip dripping precum nudging your back, and a trail of the precum leading along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
-			infect "Mutant Centaur";
 			say "You turn and place the cock at your waiting entrance, precum dripping onto your hole as you try and force it in.";
 			if the cunt width of the player is less than 16:[too small, cock won't fit]
 				say "The cock doesn't go in, no matter how hard you try, so you bend over and rub it on your mouth, it spaming in response, more precum flowing out onto your front.";
-				infect "Mutant Centaur";
 				say "You open your mouth wide, but cannot get the cock in more than the head, so you lick it and suck at the hole, drinking in the juices, until it climax's.";
 				say "The spray of green fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, the spray of cum soaking your whole body.";
 				say "You help yourself and the centaur clean up, and go on your way, with an apple as payment.";
 				add "Fresh Apple" to the invent of the player;
 				now the libido of the player is 0;
-				repeat with n running from one to six:
-					infect "Mutant Centaur";
 			otherwise: [cock will fit]
 				say "The cock goes in after some pushing, and your walls contract, bringing it every further inside, and you closer to it's balls. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
 				say "At the noise, the centaur seems to wake up, and begins to bend its body, pumping itself in and out of your cunt, and soaking your insides in precum.";
 				say "you drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, then the cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.";
-				say "[impregchance][impregchance]";
 				say "The centaur gets up, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 				if a random chance of one in two succeeds:
 					add "Fresh Apple" to the invent of the player;
 				add "Fresh Apple" to the invent of the player;
-				repeat with n running from one to seven:
-					infect "Mutant Centaur";
 		otherwise:
 			if "Kinky" is not listed in the feats of the player:
 				say "The sight of the tentacles puts you off your lunch, and you lose it a short time later, heaving your guts all over the ground.";

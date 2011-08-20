@@ -41,7 +41,7 @@ to say dolphin attack:
 
 To say dolphin loss:
 	say "You hit the blue dolphinoid human over the head with your weapon, and she floats in the water, unmoving. From here, however, you can see all, three? of her slits. It looks like she wants you to take her.";
-	if the libido of the player is less than 50:
+	if the libido of the player is less than 80:
 		say "You do not have the desire to mate with her, and leave her there.";
 	otherwise:
 		now dolphinconsent is 1;
