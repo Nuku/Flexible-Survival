@@ -632,6 +632,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 Include Shifting by Hellerhound.
 Include Needy Heat for FS by Telanda Softpaw.
 Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
+Include Yamato Dragon For FS by Kohryu.
 Include Equine for FS by Nuku Valente.
 Include Ashen Breeder For Fs by Auto Translator.
 Include Lizard Girl For Fs by Damaged.
