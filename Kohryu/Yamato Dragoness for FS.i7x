@@ -1,4 +1,4 @@
-Version 7 of Yamato Dragoness For FS by Kohryu. 
+Version 7 of Yamato Dragoness For FS by Kohryu begins here. 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Yamato Dragoness to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -8,16 +8,16 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Yamato Dragoness attack:
-                say "The female dragon lowers her head to sniff at you.";
+	say "The female dragon lowers her head to sniff at you.";
 	if cocks of player is greater than 0 and cunts of player is not greater than 0:
 		Say "After she finishes sniffing you she starts to speak, though she doesn't open her mouth so you're not sure how she is speaking.  'You smell like an interesting male, lets see what you have.'  She then breathes a plume of blue fire over you, it doesn't burn or hurt, but your clothing disintegrates, revealing all of your body for her to see.";
-                                wait for any key;
-                                if cock length is less then 15:
-                                            say "The dragoness looks at your [cock of player] cock in disappointment and says 'You're just not big enough, come back when you've sized up ok.' and then flies off, leaving you naked in the middle of the park.";
-                                otherwise:
-                                            say "The dragoness sees the size of you [cock of player] cock and exclaims 'Oh!  You're pretty big; this is going to be fun!' She then moves her body over you before lifting her upper-body into the air and kneeling her lower-body around your hips and where your cock is.  You look at where her pussy should be and become aroused as she opens her scaled slit to reveal her dripping wet red pussy.  She lowers her self slowly onto your [cock of player] member, despite her size her pussy is crushingly tight, her powerful inner walls holding you with all there might.  Every inch she works in sends waves of pleasure through you until she finally has all of your cock...And then she starts working her inner muscles, pulling and pushing and twisting around your [cock of player] cock.  It barely takes a minute of this before you are cumming into her depths, but she doesn't stop, she starts to writhe as her pussy abuses your cock more and more.  After what seems like a lifetime she finally stops, lifting herself off of your sore member she closes her pussy tight to seal in all the cum she milked from you and says 'That was fun!  We should do it again sometime.' and flies away.  Leaving you to pick yourself up and walk awkwardly away.";
-              otherwise;
-                             Say "The dragoness doesn't seem to like what she smells and says 'What am I supposed to do with you?  Guess I have to find someone else' and flies off."
+		wait for any key;
+		if cock length of player is less than 15:
+			say "The dragoness looks at your [cock of player] cock in disappointment and says 'You're just not big enough, come back when you've sized up ok.' and then flies off, leaving you naked in the middle of the park.";
+		otherwise:
+			say "The dragoness sees the size of you [cock of player] cock and exclaims 'Oh!  You're pretty big; this is going to be fun!' She then moves her body over you before lifting her upper-body into the air and kneeling her lower-body around your hips and where your cock is.  You look at where her pussy should be and become aroused as she opens her scaled slit to reveal her dripping wet red pussy.  She lowers her self slowly onto your [cock of player] member, despite her size her pussy is crushingly tight, her powerful inner walls holding you with all there might.  Every inch she works in sends waves of pleasure through you until she finally has all of your cock...And then she starts working her inner muscles, pulling and pushing and twisting around your [cock of player] cock.  It barely takes a minute of this before you are cumming into her depths, but she doesn't stop, she starts to writhe as her pussy abuses your cock more and more.  After what seems like a lifetime she finally stops, lifting herself off of your sore member she closes her pussy tight to seal in all the cum she milked from you and says 'That was fun!  We should do it again sometime.' and flies away.  Leaving you to pick yourself up and walk awkwardly away.";
+	otherwise:
+		Say "The dragoness doesn't seem to like what she smells and says 'What am I supposed to do with you?  Guess I have to find someone else' and flies off."
                                             
 	
 	
