@@ -347,7 +347,7 @@ to piggyify:
 
 
 to gryphonify:
-	Infect "Hermaprhodite Gryphon";
+	Infect "Hermaphrodite Gryphon";
 
 to hyenaify:
 	Infect "Herm Hyena";
