@@ -102,7 +102,7 @@ Instead of fucking the Diego:
 		say "'Sorry there, the Little coyote can only come out to play every so often,' Diego says with a smirk on his muzzle.";
 		stop the action;
 	otherwise:
-		if coyotetricks is greater then 6:
+		if coyotetricks is greater than 6:
 			if cocks of player is greater than 0:
 				if cunts of player is greater than 0:
 					say "'Hmm you look pretty good there,' Diego says with some interest,  'Sadly though, as a coyote I can already tell you have a trick hidden away next to your lovely treat.' The coyote says as he gestures to your cock.  'Nice try there. But better luck next time eh?'";
