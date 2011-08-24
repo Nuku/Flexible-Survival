@@ -204,15 +204,7 @@ Section 2 - Stevenfucking
 Steventrust is a number that varies. Steventrust is usually 0.
 Stevenremoved is a number that varies. Stevenremoved is usually 0.
 
-Stevenfucking is an action applying to nothing.
-Understand "fuck steven" as stevenfucking.
-Understand "fuck guard" as stevenfucking.
-Understand "fuck doorkeeper" as stevenfucking.
-
-Check stevenfucking:
-	if Steven is not visible, say "Who?" instead;
-
-Carry out stevenfucking:
+Instead of fucking the steven:
 	if the player is in Storage Room:
 		if cocks of player > 0:
 			say "You lustily let down your pants as your member throbs in anticipation. As people around you begin screaming, however, a couple of guards grab you, keeping your precum away from anyone around you. They hurl open the door and toss you outside onto the stinging gravel.";
