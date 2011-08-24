@@ -125,19 +125,13 @@ To pigfeed:
 			say "He groans and rubs his gut, 'I'm still digesting the food you gave me earlier. Come back later.'";
 			stop the action;
 
-Pigfucking is an action applying to nothing.
-
-understand "fuck Philip" as pigfucking;
-understand "fuck pig" as pigfucking;
-
-check pigfucking:
-	if Philip is not visible, say "Who?" instead;
-	if pigfed < 3, say "'I know it[apostrophe]s hard to resist my charmingly good looks,' Philip smiles, 'But the way to my heart is through my stomach and you simply haven't fed me enough times yet.'" instead;
-
-Carry out pigfucking:
-	pigfuck;
-
-To pigfuck:
+instead of fucking the philip:
+	if Philip is not visible:
+		say "Who?";
+		stop the action;
+	if pigfed < 3:
+		say "'I know it[apostrophe]s hard to resist my charmingly good looks,' Philip smiles, 'But the way to my heart is through my stomach and you simply haven't fed me enough times yet.'";
+		stop the action
 	say "'I knew you couldn[apostrophe]t resist my, OINK!, studly physique.' Philip says as he jiggles his fat gut for emphasise while a grin spreads across his pig like face, 'Now, what should we do first?'[line break][line break]He takes a moment to look over your body, before he makes a decision.[line break][line break]";
 	if pigfed is greater than 0 and tailname of player is not "Piggy":
 		say "Philip frowns as he take a close look at you, then he grins and smears a handful of mud above your butt as he yells, 'Suuuueeeyyy, pig, pig, pig!'[line break][line break]You[apostrophe]re not sure if it[apostrophe]s the mud or his words that cause it, but your curly pig tail suddenly regrows.[line break][line break]";

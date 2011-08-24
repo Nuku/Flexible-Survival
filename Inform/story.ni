@@ -707,6 +707,7 @@ Include Tiger Den by Sarokcat.
 Include Sphinx by Sarokcat.
 Include Pirate Shark by Sarokcat.
 Include Pirate Island by Sarokcat.
+Include Zoo People by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
