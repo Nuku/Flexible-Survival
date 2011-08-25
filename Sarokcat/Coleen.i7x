@@ -72,14 +72,19 @@ check Coleenspraying:
 carry out Coleenspraying:
 	if Coleenspray is 0:
 		say "'Well ok, here goes nothing,' Coleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
-		infect "Human";
-		infect "Human";
+		now face of player is "human";
+		now facename of player is "human";
+		now body of player is "human";
+		now bodyname of player is "human";
+		now skin of player is "human";
+		now skinname of player is "human";
 		increase humanity of player by 20;
 		increase Coleenspray by 1;
 		stop the action;
 	if Coleenspray is 1:
 		say "'Ok lets try that again! I only have about enough for one more dose after this,' Coleen warns you as she once again sprays you with the foul smelling liquid again, the tingling feeling spreading through you again, although strangely it seems to be much less strong this time, perhaps the chemicals are losing their effectiveness?";
-		infect "Human";
+		now body of player is "human";
+		now bodyname of player is "human";
 		increase humanity of player by 20;
 		increase Coleenspray by 1;
 		stop the action;
