@@ -1,6 +1,9 @@
 Qytat a'th Lundrues by Hellerhound begins here.
 "Adds floating city to FS"
 
+when play begins:
+	now staircaselocation is -1;
+	
 Guard Gryphon is a situation.
 
 findablestairs is a number that varies.
