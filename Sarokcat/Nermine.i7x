@@ -184,6 +184,7 @@ carry out nerminehelping:
 			delete Wyvern Goop;
 			delete Wyvern Goop;
 			delete Wyvern Goop;
+			now winefound is 1;
 			add "Jackal totem" to invent of player;
 			increase xp of player by 10;
 			now Nerminehelpstatus is 6;
@@ -357,7 +358,7 @@ To say jackaltotemmagic:
 	if jackalboytf is 1:
 		say "Taking hold of the next Jackal statue, you nervously rub it between your hands several times, wondering what will happen this time. The totem seems to grow warm before crumbling under your hands, and your hands seem to start to tingle strangely as the pieces of the statue fall to the ground. looking down at your hands, you blink as the dark black color of the totem seems to be rubbing off on you, your hands seeming to be shiny and black now as well. You quickly realize as the blackness spreads down your arms and starts to cover your body completely, that it is actually shiny black fur, sleek dark jackal fur just like Nermines. For some reason though, the idea of having soft and sexy black fur just like the nice and wonderful shopkeeper of that strange shop seems to make you feel happier and more content, and also perhaps just a bit horny as well. Somehow you are sure your nice new pelt of soft fur will appeal to more then just the shopkeeper as well, and find yourself looking forward to showing off your new beautiful looks.";
 		now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
-		now skinname is "jackalboy";
+		now skinname  of player is "jackalboy";
 		increase charisma of player by 4;
 		say "your charisma has increased by 4!";
 		now jackalboytf is 2;
