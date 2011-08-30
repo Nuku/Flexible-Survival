@@ -138,7 +138,7 @@ carry out nerminehelping:
 	if Nerminehelpstatus is 5:
 		let feathers be 0;
 		repeat with z running through invent of player:
-			if z is "Peacock feather, increase feathers by 1;
+			if z is "Peacock feather", increase feathers by 1;
 		if feathers > 2:
 			say "'Yes you brought them!' the Jackal woman says as she snatches the large shiny feathers from you. 'Now Nermine can have a pretty new peacock feather necklace to wear!' She says as she places the glittering feathers in several different positions on her dark neck and glances into a mirror beside the counter as if to see which position she likes best.  She notices you watching in amusement, and flashes you a soft grin, 'What, not everything is about other customers, sometimes Nermine likes to get pretty things herself too.  Still you are being such a good helper,' She says as she reaches out to caress the side of your new muzzle gently,   'So very  nice and always so happy to help me out with the shop, maybe you would like to help Nermine out with her other needs as well?' She says with a wink as she runs her hand slowly down your black furred chest. 'Nermine has one last bit of help to give you first though,' The sleek Jackal says as she reaches behind the counter and produces another of those familiar looking jackal totems and hands it to you. 'You let totem finish helping you become even better, and then maybe Nermine will let her lovely little helper help her out of clothes in back room?' The thought of helping the sultry shopkeeper out in a more intimate manner makes your body flush with desire, and you look down at the totem in your hand with anticipation....'";
 			delete Peacock feather;
@@ -176,9 +176,9 @@ carry out nerminehelping:
 		say "'Nermine already is helping you! You use totem again and see!', Nermine says with a twinkle in her eye.";
 		stop the action;
 	if Nerminehelpstatus is 2:
-		let feathers be 0:
+		let feathers be 0;
 		repeat with z running through invent of player:
-			if z is "Wyvern Goop", increase by 1; 
+			if z is "Wyvern Goop", increase feathers by 1; 
 		if feathers > 2:
 			say "'Yes you bring me the samples!' Nermine says with a smile on her muzzle as she takes the samples from you. 'Now Nermine can make several charms to trap one of the beasts for customer who wants little pet wyvern, Nermine think he will make handsome mate for trapped wyvern when she is done. Not that helpful little friend here needs to worry about that,' She says as she reaches over to trace one of her short claws along your cheek in a soft teasing manner. 'Now Nermine promised you to help you in return, and she keeps her bargains.' The jackalwoman says as she reaches underneath the counter again and pulls out another of those polished onyx statues.";
 			delete Wyvern Goop;
@@ -435,7 +435,6 @@ Instead of Resolving a Strangeshop:
 	say "As you sit there panting and hoping not to be noticed by the beasts outside, you are startled by a voice behind you. 'Well that is interesting,' The voice says, making you blink and look around in the dim light, noting the area is only partially lit, a number of candles bathing the room in a soft glow.  Before you can think of how to respond, you hear a click from the door, and look up to see a smooth hand covered in shiny black fur messing with the door you just slammed closed. 'Do not worry, no else one will be finding their way through that door now,' The strange voice says, as you blink rapidly to try to adjust your eyes to the dim light, you vaguely see a black shape with a white shirt for a minute, before it moves down one of the isles in what is obviously a strange store of some sort. You sit there for a moment while you calm down, before  looking around the shop you seem to be in, noting a larger glass door on another wall, you move to see if your pursuers are still milling around out there looking for you. You find yourself blinking in surprise, you didn[apostrophe]t think you had managed to run all the way to the mall, but it seems like you did without realizing it since this door opens right out onto the smith haven mall atrium, and though you have no clue how you managed to get here in time, you are definitely glad to find yourself somewhere safe.  With that thought in mind, you turn around to look at this strange shop you seem to have found yourself.";
 	Move player to The Mysterious Shop;
 	Now The Mysterious Shop is known;
-	Now The Mysterious Shop is west of mall atrium;
 	now Strangeshop is resolved;
 
 Bacchus wine is a situation.
