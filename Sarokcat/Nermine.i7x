@@ -9,7 +9,8 @@ The Mysterious Shop is a room. It is private. It is fasttravel.
 The description of The Mysterious Shop is "Bells jingle softly as you enter this rather quiet and eccentric shop, this strange shop seems to be still open and doing fine even without power. Softly scented candles cast a dim light over shelves covered with strange and unusual items which seem to be displayed in no discernible order.  You can[apostrophe]t see any of the normal things you would expect to find in a mall shop however, no nicely packed boxes, no brand name items clamoring for your attention, no well marked shelves, just a rather large strange assortment of items spread out as far as the eye can see. Children[apostrophe]s toys are placed next to expensive looking decorations,  candle holders lying next to ornamental fans from the orient, almost as if someone merely grabbed anything that interested them, and then spread their new treasures out for people to see. Compared to most other shops you have been in, this one seems quite strange and mysterious indeed although with the city in the state it is currently in you probably shouldn[apostrophe]t be too surprised at the strange things you find, although for some reason you can never quite remember seeing this shop here before....";
 Nermine is in The Mysterious Shop.
 Bargain Bin is in The Mysterious Shop.
-before entering the Mall Atrium:
+
+before entering the Mall Atrium when the mysterious shop is known:
 	let T be a random number between one and five;
 	if T is 1:
 		change the west exit of mall atrium to The Mysterious Shop;
