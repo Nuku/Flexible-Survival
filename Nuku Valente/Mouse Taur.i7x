@@ -70,7 +70,6 @@ To mousefuck:
 						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
 						increase mousespot by 1;
 					otherwise:
-						now monster is 8;
 						follow the sex change rule;					
 					say "She licks over her lips as she rises back to her feet, '[one of]It is almost a shame I suck the dick right off of things, almost.[or]You look really tired, you should work on your stamina.[or]That was nice, we should play again soon, ok?[at random].' She stretches out slowly, 'I am going to take a shower, Meet you back in front?' While you consider how she could take a shower, she vanishes down a hallway, leaving you to wander back into the front.";
 				otherwise:
@@ -79,7 +78,6 @@ To mousefuck:
 						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
 						increase mousespot by 1;
 					otherwise:
-						now monster is 8;
 						follow the sex change rule;					
 			otherwise:
 				say "She turns from you, flipping up her tail to expose her thick lipped cunt, but she's already moving away, 'I probably would say no, too. I understand,' she whispers, body waving enticingly as she approaches her clothing at the far end of the room, 'I doubt a guy would want to give up being a guy just for me.'";
@@ -91,7 +89,6 @@ To mousefuck:
 						say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
 						increase mousespot by 1;
 					otherwise:
-						now monster is 8;
 						follow the sex change rule;
 				otherwise:
 					say "She gently escorts you back to the front, delivers a firm hug, and swats you on your bottom, 'Off with ya.'";
@@ -106,7 +103,6 @@ To mousefuck:
 					say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
 					increase mousespot by 1;
 				otherwise:
-					now monster is 8;
 					follow the sex change rule;
 			otherwise:
 				say "Turning, you shake your head, what were you thinking...";
@@ -129,7 +125,6 @@ To mousefuck:
 				say "Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";					
 				increase mousespot by 1;
 			otherwise:
-				now monster is 8;
 				follow the sex change rule;	
 		otherwise:
 			say "She gently escorts you back to the front, delivers a firm hug, and swats you on your bottom, 'Off with ya.'";
