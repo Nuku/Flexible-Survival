@@ -146,7 +146,7 @@ Instead of Resolving a Mouse Taur:
 			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit, 'I was hoping for something a little more...' she trails off, then shakes her head, 'Nevermind that, I am being rude. You will be just fine, I[apostrophe]m sure, with some work.' She smiles brilliantly and offers a hand, 'Lisa, you are?'";
 		if cunts of player is greater than 0 and cocks of player is greater than 0:
 			say "'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression, 'Glad to run into someone who can talk. My name is Lisa. What's your name?";
-		if cunts of player is greater than 0 and cocks of player is less than 0:
+		if cunts of player is greater than 0 and cocks of player is less than 1:
 			say "She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment, 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
 		if cunts of player is less than 0 and cocks of player is less than 1:
 			say "She sniffs the air lightly and looks at you with some confusion, 'You must have had such a hard time of it,' she says with some sympathy, 'I am Lisa, nice to meet you.'";
