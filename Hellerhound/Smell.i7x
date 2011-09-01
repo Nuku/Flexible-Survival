@@ -32,9 +32,9 @@ understand "sniff around" as heresniffing.
 
 
 carry out heresniffing:
-	sniff the location of the player;
-	repeat with X running through all the things in the room of the player:
-		sniff X;
+	try sniffing the location of the player;
+	repeat with X running through all the things in the location of the player:
+		try sniffing X;
 	
 
 Section 2 - overrides for included places
@@ -42,7 +42,7 @@ Section 2 - overrides for included places
 [this is just a start...]
 
 instead of sniffing Sarah:
-	say "She smells like a horny husky. [if sarahpreg is not 0]She is pregnant.[end if]";
+	say "She smells like a horny husky. [if sarahpregnant is not 0]She is pregnant.[end if]";
 
 instead of sniffing grey abbey library:
 	say "The smell of books permeates the air.";
