@@ -19,7 +19,6 @@ foundaitem is a number that varies.
 
 
 before using a grab object (called X):
-	say "TEST DEBUG";
 	if X is addictive and X is owned:
 		now foundaitem is 0;
 		repeat with Z running from 1 to the number of rows in the Table of Addictive Items:
