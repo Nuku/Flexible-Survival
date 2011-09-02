@@ -108,7 +108,6 @@ shadowy is a number that varies.
 an everyturn rule:
 	if findablestairs is 1:
 		now staircaselocation is a random number from 0 to 2;
-		say "[staircaselocation]";
 		if shadowy < 4:
 			say "The nearby shadows shift slightly.";
 			increase shadowy by 1;
