@@ -587,6 +587,19 @@ pristine negligee is a grab object. It is temporary. It is a part of the player.
 damaged negligee is a grab object. It is temporary. It is a part of the player.
 cute panties is a grab object. It is temporary. It is a part of the player.
 
+instead of smelling testosterone pill:
+	say "The testosterone pill is largely odourless, but a very faint scent conjures images of motor-oil, sawdust and duct tape.";
+
+instead of smelling pristine negligee:
+	say "The pristine negligee smells fresh airy just like the day it was made.";
+
+instead of smelling damaged negligee:
+	say "The damaged negligee smells of sex. You take a whiff and almost collapse as a wave of the butterfly[apostrophe]s scent, pheromones and sexual fluids fills you.";
+
+instead of smelling cute panties:
+	say "The cute panties smell like freshly aired linen with a slight hint of perfume.";
+
+
 the usedesc of testosterone pill is "[testosterone pill use]";
 
 before using a grab object(called x):
@@ -780,7 +793,7 @@ to say butterfly grove scene:
 		wait for any key;
 		say "You decide to follow the butterfly girl[apostrophe]s example and remove your clothes, unable to hide your raging boner[if cocks of player is greater than 1]s[end if]. She approaches you affectionately while looking quietly pleased with herself. She flies hovering in front of you, kissing you enthusiastically and holding your face in her hands as you lift your hands up to her waist and abdomen. She lowers to the ground allowing your hands to wrap around her. Slowly she spins her body in your grip, her large wing brushing across your hands and chest. Your hands come to rest on her belly and she holds them there for a moment as she entwines her fingers with yours. Letting out an excited giggle she turns her head back for a quick kiss. She then turns to face you once again brushing you softly with her other colorful wing and reaches behind your neck. After kissing each other for a moment she tries to lift her body using your shoulders as leverage, but your dick[if cocks of player is greater than 1]s[end if] get[if cocks of player is 1]s[end if] in the way. With both her legs and wings flailing you stoop and pull her up by her thighs. [line break][line break]";
 		wait for any key;	
-		say "As her [ButterflyBreastDesc] breasts press against your [skin of player] body she wraps her legs around your midsection kissing you obsessively. With one hand firmly on her abdomen you position [if cocks of player is greater than 1]the largest of [end if]your cock[if cocks of player is greater than 1]s[end if] against her moist labia. Noticing your member draw near she slides back on both arms around your neck to get a good view of you inserting into her. As she peers down, her antennae bob before of your eyes. You press your face into her golden tresses and take in her sweet scent. The moans begin as your cock slips into her cunt and you both begin to rock your hips. Her wings spasming in pulses she begins a kissing assault once again, and you return the favor. As her hindquarters fuck you relentlessly you feel the tension build in your cock. Quickly pulling it out of her you press it between your bodies as it explodes in a torrent spraying cum up over her tummy and splattering it on the underside of her breasts. With her legs still wrapped around your waist, she grinds her clit against your cock[if cocks of player is greater than 1]s[end if] as she holds on to you from a single arm around your neck. With her free hand she scoops the cum off her body and feeds it into her mouth.";
+		say "As her [ButterflyBreastDesc] breasts press against your [skin of player] body she wraps her legs around your midsection kissing you obsessively. With one hand firmly on her abdomen you position [if cocks of player is greater than 1]the largest of [end if]your cock[if cocks of player is greater than 1]s[end if] against her moist labia. Noticing your member draw near she slides back on both arms around your neck to get a good view of you inserting into her. As she peers down, her antennae bob before your eyes. You press your face into her golden tresses and take in her sweet scent. The moans begin as your cock slips into her cunt and you both begin to rock your hips. Her wings spasming in pulses she begins a kissing assault once again, and you return the favor. As her hindquarters fuck you relentlessly you feel the tension build in your cock. Quickly pulling it out of her you press it between your bodies as it explodes in a torrent spraying cum up over her tummy and splattering it on the underside of her breasts. With her legs still wrapped around your waist, she grinds her clit against your cock[if cocks of player is greater than 1]s[end if] as she holds on to you from a single arm around your neck. With her free hand she scoops the cum off her body and feeds it into her mouth.";
 		wait for any key;
 	otherwise if ButterflyPregnant is True and ButterflyLove is True and gestation of ButterflyBaby is 2 and ButterflyRaped is 0:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy] [line break][line break]";
@@ -894,6 +907,9 @@ to say lingerie store scene:
 			say "[line break]Out of the corner of your eye you notice something small sticking out from under one of the display racks. You crouch down to take a look, but accidentally bump into one of the racks knocking it's contents to the floor. ";
 			add "cute panties" to invent of lingerie store;
 			now ButterflyPantiesFound is True;
+
+instead of smelling lingerie store:
+	say "The store has a somewhat musty smell as the air conditioning hasn[apostrophe]t been turned on for some time. The product however smells fresh and newly manufactured.";
 
 Section 9 - Debugging - Not for release
 
