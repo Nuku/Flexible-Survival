@@ -102,6 +102,8 @@ with 100 blank rows.
 
 Book 4 - Tribes
 
+The Snozzlefoggles is a species.
+
 Blue Gryphons is a species.
 The description of it is "Their body is covered in soft fur. Hir head is avian, with powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above hir altered face. Hir body is adorned with two large feathery wings that flutter softly. Milk also seems to flow at a soft rate from hir nipples. Sie has 2 plump D cup sized breasts. Hir arms are well muscled and vaguely avian, sporting dangerous claws at the end each digit. Hir legs are dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on hir softly furred feet-paws. Sie has a thin leonine tail swaying over hir ass. Its soft, blue, and furry length has a tuft of blue fur at the end. Sie has a single, black, knotted member that averages around a foot long, and a female portal that can easily accept it.".
 The skin of it is "soft blue fur".
@@ -141,6 +143,7 @@ to species menu:
 	blank out the whole of table of combat items;
 	let X be 1;
 	repeat with Q running through species:
+		if the might of q is 0, next;
 		choose a blank row in table of combat items;
 		now title entry is printed name of Q;
 		now description entry is printed name of Q;
@@ -163,10 +166,10 @@ to species menu:
  This is the species select rule:
 	choose row Current Menu Selection in table of combat items;
 	let nam be description entry;
-	if nam is "Begin Game":
+	if nam is "Begin Game" and might of tribe of player is greater than 0:
 		decrease the menu depth by 1;
 		rule succeeds;
-	let z be blue gryphons;
+	let z be Snozzlefoggles;
 	repeat with y running through species:
 		if nam matches the text printed name of y:
 			now z is y;
@@ -175,10 +178,11 @@ to species menu:
 	decrease the menu depth by 1;
 	species menu;
 
-When play begins:
+When play begins(this is the play start rule):
 	say "Welcome to Flexible Society. You are a member of a species, probably quite new, trying to secure a niche in the world rocked by the Promethean Virus, a nanite plauge that has reduced mankind to largescale rubbe and given rise to hundreds of new species. Your first decision will be what species you are and will lead. Some species are better some some things than others.";
 	wait for any key;
 	Species Menu;
+	if the might of tribe of player is 0, follow the play start rule;
 	
 Instead of examining the player:
 	say "You are the leader of the [tribe of player]. Your people tend to look like:[line break][description of tribe of player]";
