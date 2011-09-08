@@ -76,10 +76,11 @@ A species has a text called Faceadj.
 
 
 The player has a species called tribe.
+Definition: a direction (called D) is valid if the room D from the location of the player is a room.
 
 Book 2 - The Village
 
-Village Center is a room. "You stand in the middle of, what you hope, will become the vast hub of your future civilization. For now it is just a small bonfire for you and your kind.".
+Village Center is a room. "You stand in the middle of, what you hope, will become the vast hub of your future civilization. For now it is just a small bonfire for you and your kind.[if population of tribe of player is greater than 0] Wandering the village, you see your people number [population of tribe of player].[end if]".
 
 Book 3 - Tables n Stuff
 
@@ -99,6 +100,14 @@ Table of combat items
 title	subtable	description	toggle
 "Nothing"	--	"Nothing here."	standard name printing rule
 with 100 blank rows.
+
+Table of Fancy Status
+left	central	right
+"Location: [the player's surroundings]"	"Morale: [morale of tribe of player]/100"	"Tribe:[tribe of player]"
+"Exits: [List of Valid Directions]"	"Food: [food of tribe of player] Water: [water of tribe of player]"	"Score:[score]/[maximum score]"
+"Population: [population of tribe of player]"	""	""
+"[if menu depth > 0]N = Next[end if]"	"[if menu depth > 0]ENTER = Select[end if]"	"[if menu depth > 0]P = Previous[end if]"
+
 
 Book 4 - Tribes
 
@@ -134,10 +143,58 @@ The Thirst of it is 50.
 The Territory of it is 4.
 The Population of it is 10.
 The Density of it is 4.
+The Food of it is 20.
+The water of it is 20.
 The Diet of it is { "Meat", "Plant" }.
 The Perks of it is { "Flight", "Healing Milk" }.
 
 Book 6 - Rules N Stuff
+
+Part 1 - Turn Rules
+
+Everyturn rules is a rulebook.
+
+This is the turnpass rule:
+	follow the everyturn rules;
+
+To multiply(X - a number) by (Y - a number):
+	now x is x * y;
+ 
+To divide(X - a number) by (Y - a number):
+	now x is x / y;
+ 
+ An everyturn rule(this is the Basic Turn rule):
+	let consume be the population of the tribe of player;
+	now consume is consume times the hunger of the tribe of player;
+	now consume is consume / 100;
+	if consume is less than 0, now consume is 0;
+	decrease food of tribe of player by consume;
+	if food of tribe of player is less than 0:
+		say "Your people starve without food: ";
+		let x be 0 - food of tribe of player;
+		now food of tribe of player is 0;
+		multiply x by 100;
+		divide x by hunger of the tribe of the player;
+		if x is greater than 0:
+			say "Casualties: [x] ";
+			decrease population of tribe of player by x;
+		let loss be 1;
+		increase loss by x times 2;
+		multiply loss by 100;
+		divide loss by mood of tribe of player;
+		if loss is greater than 0:
+			say "Morale Loss: [loss]";
+		say "[line break]";
+
+Part 2 - Other rules
+
+Instead of examining the player:
+	say "You are the leader of the [tribe of player]. Your people tend to look like:[line break][description of tribe of player]";
+	
+Part 3 - Game Start
+
+First for constructing the status line (this is the bypass status line map rule):
+	fill status bar with table of fancy status;
 
 to species menu:
 	blank out the whole of table of combat items;
@@ -179,10 +236,8 @@ to species menu:
 	species menu;
 
 When play begins(this is the play start rule):
-	say "Welcome to Flexible Society. You are a member of a species, probably quite new, trying to secure a niche in the world rocked by the Promethean Virus, a nanite plauge that has reduced mankind to largescale rubbe and given rise to hundreds of new species. Your first decision will be what species you are and will lead. Some species are better some some things than others.";
+	say "Welcome to Flexible Society. You are a member of a species, probably quite new, trying to secure a niche in the world rocked by the Promethean Virus, a nanite plauge that has reduced mankind to largescale rubble and given rise to hundreds of new species. Your first decision will be what species you are and will lead. Some species are better some some things than others.";
 	wait for any key;
 	Species Menu;
 	if the might of tribe of player is 0, follow the play start rule;
 	
-Instead of examining the player:
-	say "You are the leader of the [tribe of player]. Your people tend to look like:[line break][description of tribe of player]";
