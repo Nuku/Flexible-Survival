@@ -66,6 +66,12 @@ A species has a list of text called Perks.
 A species has a number called Population.
 A species has a number called Density.
 A species has a list of text called Diet.
+A species has a text called Skin.
+A species has a text called Body.
+A species has a text called Face.
+A species has a text called Skinadj.
+A species has a text called Bodyadj.
+A species has a text called Faceadj.
 
 
 
@@ -93,6 +99,12 @@ Book 4 - Tribes
 
 Blue Gryphons is a species.
 The description of it is "Their body is covered in soft fur. Hir head is avian, with powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above hir altered face. Hir body is adorned with two large feathery wings that flutter softly. Milk also seems to flow at a soft rate from hir nipples. Sie has 2 plump D cup sized breasts. Hir arms are well muscled and vaguely avian, sporting dangerous claws at the end each digit. Hir legs are dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on hir softly furred feet-paws. Sie has a thin leonine tail swaying over hir ass. Its soft, blue, and furry length has a tuft of blue fur at the end. Sie has a single, black, knotted member that averages around a foot long, and a female portal that can easily accept it.".
+The skin of it is "soft blue fur".
+The skinadj of it is "blue furred".
+The body of it is "fertile hermaphrodite blend of panther and bird".
+The bodyadj of it is "herm gryphon".
+The face of it is "avian beak and feline ears".
+The faceadj of it is "gryphon".
 The Intelligence of it is 40.
 The Might of it is 50.
 The Stamina of it is 50.
@@ -117,3 +129,6 @@ The Population of it is 10.
 The Density of it is 4.
 The Diet of it is { "Meat", "Plant" }.
 The Perks of it is { "Flight" }.
+
+Book 6 - Rules N Stuff
+
