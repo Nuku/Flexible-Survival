@@ -179,3 +179,6 @@ When play begins:
 	say "Welcome to Flexible Society. You are a member of a species, probably quite new, trying to secure a niche in the world rocked by the Promethean Virus, a nanite plauge that has reduced mankind to largescale rubbe and given rise to hundreds of new species. Your first decision will be what species you are and will lead. Some species are better some some things than others.";
 	wait for any key;
 	Species Menu;
+	
+Instead of examining the player:
+	say "You are the leader of the [tribe of player]. Your people tend to look like:[line break][description of tribe of player]";
