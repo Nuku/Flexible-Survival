@@ -36,6 +36,8 @@ Book 1 - Variable Definitions
 
 The file of flexiblestory is called "flexible1".
 
+Turns is a number that varies.
+
 The player has text called name.
 
 A Species is a kind of thing.
@@ -72,6 +74,7 @@ A species has a text called Face.
 A species has a text called Skinadj.
 A species has a text called Bodyadj.
 A species has a text called Faceadj.
+A species has a number called occupied.
 
 
 
@@ -155,18 +158,46 @@ Part 1 - Turn Rules
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
+	increase turns by 1;
 	follow the everyturn rules;
 
-To multiply(X - a number) by (Y - a number):
+To multiply (X - a number) by (Y - a number):
 	now x is x * y;
  
-To divide(X - a number) by (Y - a number):
+To divide (X - a number) by (Y - a number):
 	now x is x / y;
 
  Every Turn:
-	follow the everyturn rules;
+	follow the turnpass rule;
 	
- An everyturn rule(this is the Eternal Hunger rule):
+An everyturn rule(this is the Foraging rule):
+	if ( occupied of tribe of player + 1) > population of tribe of player, rule succeeds;
+	let foragers be population of tribe of player;
+	decrease foragers by occupied of tribe of player;
+	[First check for easy to grab salvage, will become more scarce over time]
+	let x be a random number from 1 to 100;
+	decrease x by turns;
+	increase x by ( perception of tribe of player ) divided by 5;
+	if x is greater than 0: [ There is forage available ]
+		decrease x by ( perception of tribe of player ) divided by 5;
+		now x is x * perception of tribe of player;
+		now x is x /  100;
+		now x is x /  10;
+		now x is x * foragers;
+		if x is less than 1, now x is 1;
+		if x is greater than foragers * 3, now x is foragers * 3;
+		say "Foraging for food amongst the ruins yields food: +[x][line break]";
+		increase food of tribe of player by x;
+
+An everyturn rule(This is the Water's Fine rule):
+	let consume be the population of the tribe of player;
+	now consume is consume times the thirst of the tribe of player;
+	now consume is consume / 100;
+	if consume is less than 0, now consume is 0;
+	increase water of tribe of player by consume;
+	
+
+An everyturn rule(this is the Eternal Hunger rule):
 	let consume be the population of the tribe of player;
 	now consume is consume times the hunger of the tribe of player;
 	now consume is consume / 100;
@@ -176,8 +207,8 @@ To divide(X - a number) by (Y - a number):
 		say "Your people starve without food: ";
 		let x be 0 - food of tribe of player;
 		now food of tribe of player is 0;
-		multiply x by 100;
-		divide x by hunger of the tribe of the player;
+		now x is x * 100;
+		now x is x /  hunger of the tribe of the player;
 		if x is greater than 0:
 			say "Casualties: [x] ";
 			decrease population of tribe of player by x;
@@ -201,15 +232,15 @@ To divide(X - a number) by (Y - a number):
 		say "Your people starve without water: ";
 		let x be 0 - water of tribe of player;
 		now water of tribe of player is 0;
-		multiply x by 100;
-		divide x by thirst of the tribe of the player;
+		now x is x * 100;
+		now x is x /  thirst of the tribe of the player;
 		if x is greater than 0:
 			say "Casualties: [x] ";
 			decrease population of tribe of player by x;
 		let loss be 1;
 		increase loss by x times 2;
-		multiply loss by 100;
-		divide loss by mood of tribe of player;
+		now loss is loss * 100;
+		now  loss is loss / mood of tribe of player;
 		if loss is greater than 0:
 			say "Morale Loss: [loss]";
 		decrease morale of tribe of player by loss;
