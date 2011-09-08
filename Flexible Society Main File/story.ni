@@ -61,8 +61,13 @@ A species has a number called Hunger.
 A species has a number called Food.
 A species has a number called Thirst.
 A species has a number called Water.
+A species has a number called Territory.
 A species has a list of text called Perks.
 A species has a number called Population.
+A species has a number called Density.
+A species has a list of text called Diet.
+
+
 
 The player has a species called tribe.
 
@@ -87,3 +92,27 @@ title	subtable	description	toggle
 Book 4 - Tribes
 
 Blue Gryphons is a species.
+The Intelligence of it is 40.
+The Might of it is 50.
+The Stamina of it is 50.
+The Perception of it is 75.
+The Industrilization of it is 20.
+The Hostile Infection Rate of it is 50.
+The Friendly Infection Rate of it is 10.
+The Resistance of it is 0.
+The Mood of it is 60.
+The Morale of it is 50.
+The Libido of it is 65.
+The Self Fertility of it is 50.
+The External Fertility of it is 50.
+The Gender of it is { "Hermaphrodite" }.
+The Military of it is 0.
+The Science of it is 0.
+The Manufactury of it is 0.
+The Hunger of it is 50.
+The Thirst of it is 50.
+The Territory of it is 4.
+The Population of it is 10.
+The Density of it is 4.
+The Diet of it is { "Meat", "Plant" }.
+The Perks of it is { "Flight" }.
