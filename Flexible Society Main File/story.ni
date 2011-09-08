@@ -95,6 +95,11 @@ Table of Sex Choice
 title	subtable	description	toggle
 --	--	--	--
 
+Table of combat items
+title	subtable	description	toggle
+"Nothing"	--	"Nothing here."	standard name printing rule
+with 100 blank rows.
+
 Book 4 - Tribes
 
 Blue Gryphons is a species.
@@ -128,7 +133,49 @@ The Territory of it is 4.
 The Population of it is 10.
 The Density of it is 4.
 The Diet of it is { "Meat", "Plant" }.
-The Perks of it is { "Flight" }.
+The Perks of it is { "Flight", "Healing Milk" }.
 
 Book 6 - Rules N Stuff
 
+to species menu:
+	blank out the whole of table of combat items;
+	let X be 1;
+	repeat with Q running through species:
+		choose a blank row in table of combat items;
+		now title entry is printed name of Q;
+		now description entry is printed name of Q;
+		if tribe of player is q:
+			now title entry is "SELECTED";
+		now toggle entry is species select rule;
+[	let z be the number of rows in table of combat items;
+	say "[Z].";]
+	if there is no title in row 1 of table of combat items:
+		say "There are no species!";
+		wait for any key;
+	otherwise:
+		choose a blank row in table of combat items;
+		now title entry is "Begin Game";
+		now description entry is "Begin Game";
+		now toggle entry is species select rule;
+		change the current menu to table of Combat Items;
+		carry out the displaying activity;
+ 
+ This is the species select rule:
+	choose row Current Menu Selection in table of combat items;
+	let nam be description entry;
+	if nam is "Begin Game":
+		decrease the menu depth by 1;
+		rule succeeds;
+	let z be blue gryphons;
+	repeat with y running through species:
+		if nam matches the text printed name of y:
+			now z is y;
+			break;
+	now tribe of player is z;
+	decrease the menu depth by 1;
+	species menu;
+
+When play begins:
+	say "Welcome to Flexible Society. You are a member of a species, probably quite new, trying to secure a niche in the world rocked by the Promethean Virus, a nanite plauge that has reduced mankind to largescale rubbe and given rise to hundreds of new species. Your first decision will be what species you are and will lead. Some species are better some some things than others.";
+	wait for any key;
+	Species Menu;
