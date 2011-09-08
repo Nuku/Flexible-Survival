@@ -46,6 +46,9 @@ A species has a number called Perception.
 A species has a number called Industrilization.
 A species has a number called Hostile Infection Rate.
 A species has a number called Friendly Infection Rate.
+A species has a number called Resistance.
+A species has a number called Mood.
+A species has a number called Morale.
 A species has a number called Charm.
 A species has a number called Libido.
 A species has a number called Self Fertility.
