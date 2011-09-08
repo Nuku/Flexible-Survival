@@ -162,8 +162,11 @@ To multiply(X - a number) by (Y - a number):
  
 To divide(X - a number) by (Y - a number):
 	now x is x / y;
- 
- An everyturn rule(this is the Basic Turn rule):
+
+ Every Turn:
+	follow the everyturn rules;
+	
+ An everyturn rule(this is the Eternal Hunger rule):
 	let consume be the population of the tribe of player;
 	now consume is consume times the hunger of the tribe of player;
 	now consume is consume / 100;
@@ -184,6 +187,33 @@ To divide(X - a number) by (Y - a number):
 		divide loss by mood of tribe of player;
 		if loss is greater than 0:
 			say "Morale Loss: [loss]";
+		decrease morale of tribe of player by loss;
+		if morale of tribe of player is less than 0, now morale of tribe of player is 0;
+		say "[line break]";
+
+ An everyturn rule(this is the Eternal Thirst rule):
+	let consume be the population of the tribe of player;
+	now consume is consume times the thirst of the tribe of player;
+	now consume is consume / 100;
+	if consume is less than 0, now consume is 0;
+	decrease water of tribe of player by consume;
+	if water of tribe of player is less than 0:
+		say "Your people starve without water: ";
+		let x be 0 - water of tribe of player;
+		now water of tribe of player is 0;
+		multiply x by 100;
+		divide x by thirst of the tribe of the player;
+		if x is greater than 0:
+			say "Casualties: [x] ";
+			decrease population of tribe of player by x;
+		let loss be 1;
+		increase loss by x times 2;
+		multiply loss by 100;
+		divide loss by mood of tribe of player;
+		if loss is greater than 0:
+			say "Morale Loss: [loss]";
+		decrease morale of tribe of player by loss;
+		if morale of tribe of player is less than 0, now morale of tribe of player is 0;
 		say "[line break]";
 
 Part 2 - Other rules
