@@ -574,7 +574,6 @@ To say gryphon lose:
 			wait for any key;
 			say "You absentmindedly start sucking on one of your lovers dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the Gryphons magnificent nectar. once your thirst has been quenched you notice that the Gryphons cock has shrunk down and can now be easily removed. As you rise to your feet the Gryphons cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying Gryphon seed everywhere.";
 			decrease thirst of player by 5;
-			increase breast size of player by 1;
 			wait for any key;
 			say "'Call me!' the Gryphon squawks plaintively as you stumble away, dressing yourself as you go.";
 		if cock length of player is less than 8 and cunts of player is greater than 0:
@@ -582,7 +581,6 @@ To say gryphon lose:
 			wait for any key;
 			say "As you increase your pace, you see what appears to be milk dribbling from the beasts large nipples. You bend down and take one of the nipples into your mouth. As you greedily suck up all the milk these wonderful teats will produce a hot wave of desire floods through you, and you start to really want that knot inside you. Grinding harder and harder, faster and faster, you try and get that bulb to pass your slick pink lips. You feel climax approaching, so you pull down as hard as you can trying to force that knot inside.";
 			decrease thirst of player by 5;
-			increase breast size of player by 1;
 			wait for any key;
 			if cunt length of player is less than 6:
 				say "It's no use, you are just too small to take it all in. The Gryphon chirps soothingly understanding your frustration. Suddenly you let out a startled yelp as you feel an electrifying tickling sensation on your clit, you look down to see the puffed end of a blue tail to be the cause.";
@@ -606,7 +604,6 @@ To say gryphon lose:
 			wait for any key;
 			say "The combined stimulation is too much for the Gryphon as her body is wracked with orgasm. Gob after gob of the most delicious cum starts pouring down your throat, while at the same time milk gushes from the Gryphons massive breasts, soaking the both of you. Your blue partners orgasm causes her muscles to involuntarily clamp down on your throbbing cock, this increased friction is all it takes as you start to pump her full of your seed.";
 			decrease hunger of player by 5;
-			increase cock length of player by 1;
 			wait for any key;
 			say "Spent and exhausted you get dressed and walk away, leaving the Hermaphroditic Gryphon to lie in a pool of her own milk.";
 			decrease libido of player by 30;
@@ -630,6 +627,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 "Latex Fox"	"[one of]The latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so.[or]The fox leaps on you, raking several bloody lines with its claws.[or]The fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth.[at random]"	"[latexfoxrape]"	"[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at you with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up and wander back to the bunker, defeated.[or]The fox rolls you over and clambers up on top of you with a feral snarl.[if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes.[impregchance] Sated, he rises and departs into the city.[otherwise] He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and flees, leaving a trail of rubbery looking seed.[end if][at random]"	"You encounter a creature made of glistening latex. It is largely red in color, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry."	"mixture of canine and human, in a perpetual sneer of exposed teeth, making for an interesting"	"mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous."	"red, black, and white latex"	"You have a long tail, shaped like a fox tail, but made entirely of rubber. It squeaks as it sways back and forth. "	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face reforms, vision blocked by a narrow fox like snout, and new ears twitching on top of your head"	"A wave of itching runs through the meat of your body as your legs pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely paws. Your fingers are still itching as sharp little claws slip free of them"	"smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush"	"a sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically"	"Your cock grows steel hard as it begins to throb urgently. It grows increasingly red as it becomes slightly more slender. Soon a [cock width of player] inch knot forms at the base, ready to tie you to a willing, or not, partner"	10	12	8	10	6	6	"Male"	15	1	4	"Outside"	1	8	6	2	5	0	4	8	6	20	--	0
 
 Include Shifting by Hellerhound.
+Include Qytat Shifters  by Hellerhound.
 Include Fucking by Nuku Valente.
 Include Needy Heat for FS by Telanda Softpaw.
 Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
@@ -669,7 +667,9 @@ Include Kangaroo by batroo.
 Include Feral Sea Dragon by Tunalord Sefont.
 Include Feral Sea Dragoness by Tunalord Sefont.
 Include Pets by Nuku Valente.
+Include Tigress Hooker for FS by Stripes.
 Include Little Fox by Sarokcat.
+Include Red Events by Stripes.
 Include sprite by Nuku Valente.
 Include Harpy by Nuku Valente.
 Include Cute Chinchilla Girl For FS by Trav.
@@ -710,6 +710,10 @@ Include Pirate Island by Sarokcat.
 Include Zoo People by Sarokcat.
 Include Coleen by Sarokcat.
 Include Sabretooth by Sarokcat.
+Include Nermine by Sarokcat.
+Include Jackalboy by Sarokcat.
+Include Wolftaur by Sarokcat.
+Include Lindsey by Sarokcat..
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
@@ -734,9 +738,13 @@ Include Zoo by Hellerhound.
 Include giving in by Hellerhound.
 Include Latex Wolf for FS by Hellerhound.
 Include Qytat a'th Lundrues by hellerhound.
+Include Sarah by Sarokcat&Hellerhound.
+Include Addiction by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.
 Include Rabbit Pack for FS by Lago Moro.
+Include Smell by Hellerhound.
+
 
 understand the command "feed" as something new.
 
@@ -3154,6 +3162,4 @@ Carry out milking:
 		repeat with T running from one to the breasts of the player:
 			add "Panther Milk" to the invent of the player;
 	otherwise:
-		say "You milk your breasts, and distill the milk, leaving you with the powdery remains. They couldn't be dangerous.";
-		repeat with T running from one to the breasts of the player:
-			add "Distilled Milk" to the invent of the player;
+		say "Your milk wouldn't be that interesting.";
