@@ -46,8 +46,13 @@ Check researching:
 	if noun is current of nerd, say "Your advisor assures you that it is already being worked on as hard as it can be. Maybe if we had more scientists?" instead;
 
 Carry out researching:
-	now current of nerd is noun;
-	say "You begin researching [noun].";
+	say "[description of noun]";
+	say "Begin?";
+	if the player consents:
+		now current of nerd is noun;
+		say "You begin researching [noun].";
+	otherwise:
+		say "Aborted.";
 		
 	
 Book - Define Research

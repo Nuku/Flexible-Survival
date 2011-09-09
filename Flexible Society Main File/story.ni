@@ -30,19 +30,10 @@ Book - Help
 Table of Basic Help Options (continued)
 title	description 
 "Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://nukuv.blogspot.com/" 
-"Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break][line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break][line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break][line break]You can also hunt for locations, if you know their name."
-"Trading"	"You can trade with certain denizens of the city. Simple give x to y, like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
-"Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
-"Items"	"You will come to have a variety of items. Here are some useful commands.[line break][line break]Item: See a list of items you own.[line break]look (item): Look at a specific item.[line break]use (item): Use an item[line break]get (item): grab a specific item.[line break]get all: get everything in the room."
-"Weapons"	"Some items you find make good weapons! Be sure to use them before a battle to have them at hand."
-"Scavenging"	"Type [bold type]Scavenge[roman type] in any room you can fast travel from to look hunt for food and water."
-"Socializing"	"You can talk (person) to chat it up. If they are of more personal interest with you, you can also fuck (person)"
-"Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
-"Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
+"Food"	"Most tribes need food to survive. Be sure to assign some workers to hunting or farming as appropriate."
+"Turns"	"As leader of the tribe, you and you alone decide when time advances. Type turn to make this happen."
 
 Book 1 - Variable Definitions
-
-The file of flexiblestory is called "flexible1".
 
 Turns is a number that varies.
 
@@ -203,7 +194,10 @@ This is the turnpass rule:
 	workercheck;
 	follow the everyturn rules;
 
- Every Turn:
+Taketurn is an action applying to nothing.
+Understand "Turn" as Taketurn.
+
+Carry out Taketurn:
 	follow the turnpass rule;
 	
 An everyturn rule(this is the Foraging rule):
@@ -343,6 +337,7 @@ Part 2 - Other rules
 
 Instead of examining the player:
 	say "You are the leader of the [tribe of player]. Your people tend to look like:[line break][description of tribe of player]";
+	say "[Line Break]Notable traits of your tribe: [perks of tribe of player]";
 	
 Part 3 - Game Start
 
@@ -397,6 +392,7 @@ When play begins(this is the play start rule):
 	wait for any key;
 	Species Menu;
 	if the might of tribe of player is 0, follow the play start rule;
+	say "As leader of the tribe, you and you alone decide when time advances. Type [bold type]turn[roman type] to make this happen.";
 	
 Part 4 - Job assigning
 
@@ -451,3 +447,8 @@ Carry out Tasking:
 	now workers of the second noun is number understood;
 	say "You assign [number understood] workers to [second noun].";
 	try assigning;
+	
+Book - Game Over
+
+When Play Ends:
+	try examining the player;
