@@ -97,7 +97,7 @@ Definition: A job (called J) is valid:
 		no;
  
 Include Flexible Jobs by Nuku Valente.
-
+Include Entertainers by Maw.
 
 The player has a species called tribe.
 
