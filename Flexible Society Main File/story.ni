@@ -134,7 +134,7 @@ Table of Fancy Status
 left	central	right
 "Location: [the player's surroundings]"	"Morale: [morale of tribe of player]/100"	"Tribe:[tribe of player]"
 "Exits: [List of Valid Directions]"	"Food: [food of tribe of player] Water: [water of tribe of player]"	"Score:[score]/[maximum score]"
-"Population: [population of tribe of player]"	"Freecreds: [creds of tribe of player]"	""
+"Population: [population of tribe of player]"	"Freecreds: [creds of tribe of player]"	"Science: [science of tribe of player]"
 "[if menu depth > 0]N = Next[end if]"	"[if menu depth > 0]ENTER = Select[end if]"	"[if menu depth > 0]P = Previous[end if]"
 
 
@@ -216,7 +216,7 @@ An everyturn rule(this is the Foraging rule):
 	if "Scavenging" is listed in perks of tribe of player:
 		if x is less than 30, now x is 30;
 		increase x by 20;
-	let x be a random number from 80 to 120; [mild variance]
+	let x be a random number from 90 to 110; [mild variance]
 	decrease x by turns;
 	if "Scavenging" is listed in perks of tribe of player:
 		if x is less than 10, now x is 10;

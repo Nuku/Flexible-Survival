@@ -1,5 +1,8 @@
 Flexible Jobs by Nuku Valente begins here.
 
+The validation of a job is usually warvailable rule;
+The maximum of a job is usually maxwarrior rule;
+
 Farmer is a job.
 The validation of Farmer is the farmvailable rule.
 The maximum of farmer is maxfarmer rule.
