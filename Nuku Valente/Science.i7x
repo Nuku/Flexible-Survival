@@ -37,6 +37,17 @@ carry out researchlist:
 		say "[x]([progress of x]/[cost of x])[if current of nerd is x](Current Topic)[end if]";
 	say "To begin a new topic, type [bold type]research (topic)[roman type].";
 	
+Researching is an action applying to one thing.
+Understand "Research [research]" as researching.
+
+Check researching:
+	if nerd is not visible, say "You need your trusty ner, er, science advisor, to conduct matters of research." instead;
+	if noun is complete, say "You seem to have already completed that topic." instead;
+	if noun is current of nerd, say "Your advisor assures you that it is already being worked on as hard as it can be. Maybe if we had more scientists?" instead;
+
+Carry out researching:
+	now current of nerd is noun;
+	say "You begin researching [noun].";
 		
 	
 Book - Define Research
