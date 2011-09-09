@@ -2,6 +2,17 @@ Flexible Jobs by Nuku Valente begins here.
 
 Farmer is a job.
 The validation of Farmer is the farmvailable rule.
+The maximum of farmer is maxfarmer rule.
+
+This is the maxfarmer rule:
+	now max of farmer is territory of tribe of player;
+	let x be 100;
+	if "Farming" is listed in perks of tribe of player:
+		increase x by 25;
+	if "Plant" is listed in diet of tribe of player:
+		increase x by 25;
+	now max of farmer is ( max of farmer * x ) / 100;
+	
 
 This is the farmvailable rule:
 	if "Plant" is listed in diet of tribe of player:
@@ -33,7 +44,17 @@ An everyturn rule(this is the Farming rule):
 
 Hunter is a job.
 The validation of Hunter is the huntvailable rule.
+The maximum of hunter is maxhunter rule.
 
+This is the maxhunter rule:
+	now max of hunter is territory of tribe of player;
+	let x be 100;
+	if "Hunting" is listed in perks of tribe of player:
+		increase x by 25;
+	if "Meat" is listed in diet of tribe of player:
+		increase x by 25;
+	now max of hunter is ( max of hunter * x ) / 100;
+ 
 This is the huntvailable rule:
 	if "Meat" is listed in diet of tribe of player, rule succeeds;
 	if "Hunting" is listed in perks of tribe of player, rule succeeds;
@@ -62,6 +83,10 @@ An everyturn rule(this is the Hunting rule):
 
 Warrior is a job.
 The validation of Warrior is the warvailable rule.
+The maximum of Warrior is maxwarrior rule.
+
+This is the maxwarrior rule:
+	now max of warrior is population of tribe of player;
 
 This is the warvailable rule:
 	rule succeeds;
@@ -84,8 +109,9 @@ An everyturn rule(this is the Warrior Payday rule):
 		if creds of tribe of player < x:
 			decrease x by creds of tribe of player;
 			now creds of tribe of player is 0;
+			if x is less than 2, now x is 2;
 			decrease morale of tribe of player by ( x / 2 );
-			say "You lack the funds to properly pay for warriors. Morale: - [x / 2]";
+			say "You lack the funds to properly pay for warriors. Morale: -[x / 2]";
 		otherwise:
 			decrease creds of tribe of player by x;
 			say "You pay [x] freecreds for your military.";

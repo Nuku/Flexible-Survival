@@ -86,6 +86,8 @@ Part 2 - Jobs
 A job is a kind of thing.
 A job has a rule called validation.
 A job has a number called workers.
+A job has a rule called maximum.
+A job has a number called max.
 
 Definition: A job (called J) is valid:
 	follow the validation of J;
@@ -225,7 +227,7 @@ An everyturn rule(this is the Foraging rule):
 	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250 ;
 	now y is ( y * morale of tribe of player ) / 100;
 	if y is greater than 0:
-		say "There is joy in the air as your population grows: +[y] ";
+		say "New [skinadj of tribe of player] children are born, rapidly growing to ready adults: +[y] ";
 		increase population of tribe of player by y;
 		if morale of tribe of player is less than 60:
 			let gain be 1;
@@ -383,7 +385,8 @@ Carry out Assigning:
 	workercheck;
 	say "Job -- Workers Currently Assigned";
 	repeat with x running through valid jobs:
-		say "[x] -- [workers of x][line break]";
+		follow the maximum of x;
+		say "[x] -- [workers of x]/[max of x][line break]";
 	say "Unassigned Workers: [population of tribe of player - occupied of tribe of player]";
 	say "[line break]Type [bold type]assign (number) to (job)[roman type] to change the amount of workers in a job.";
 	
@@ -402,6 +405,9 @@ Carry out Tasking:
 	let y be the population of the tribe of the player - the occupied of the tribe of the player;
 	if the number understood > y:
 		now number understood is y;
+	follow the maximum of second noun;
+	if the number understood > max of second noun:
+		now number understood is max of second noun;
 	now workers of the second noun is number understood;
 	say "You assign [number understood] workers to [second noun].";
 	try assigning;
