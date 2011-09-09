@@ -104,6 +104,24 @@ This is the farmvailable rule:
 		rule succeeds;
 	rule fails;
 
+An everyturn rule(this is the Farming rule):
+	if the remainder after dividing turns by 4 is not 0, continue the action;
+	if workers of farmer is 0, continue the action;
+	let foragers be workers of farmer;
+	[First check for easy to grab salvage, will become more scarce over time]
+	let x be a random number from 80 to 120; [mild variance]
+	if "Farming" is listed in perks of tribe of player:
+		increase x by 10;
+	if "Plant" is listed in diet of tribe of player:
+		increase x by 10;
+	now x is x * 4;
+	now x is x * foragers;
+	now x is x / 100;
+	if x is greater than 0: [ There is forage available ]
+		if x is less than 1, now x is 1;
+		say "Farming yields food: +[x]";
+		increase food of tribe of player by x;
+
 Hunter is a job.
 The validation of Hunter is the huntvailable rule.
 
@@ -205,8 +223,8 @@ This is the turnpass rule:
 	follow the turnpass rule;
 	
 An everyturn rule(this is the Foraging rule):
-	if the remainder after dividing turns by 2 is 0, the rule succeeds;
-	if ( occupied of tribe of player + 1) > population of tribe of player, rule succeeds;
+	if the remainder after dividing turns by 2 is 0, continue the action;
+	if ( occupied of tribe of player + 1) > population of tribe of player, continue the action;
 	let foragers be population of tribe of player;
 	decrease foragers by occupied of tribe of player;
 	[First check for easy to grab salvage, will become more scarce over time]
@@ -225,7 +243,7 @@ An everyturn rule(this is the Foraging rule):
 		increase food of tribe of player by x;
 
 An everyturn rule(this is the Self Love rule):
-	if the remainder after dividing turns by 2 is 0, the rule succeeds;
+	if the remainder after dividing turns by 2 is 0, continue the action;
 	let foragers be population of tribe of player;
 	decrease foragers by occupied of tribe of player;
 	increase foragers by the population of the tribe of the player;
