@@ -228,21 +228,20 @@ An everyturn rule(this is the Foraging rule):
 	let foragers be population of tribe of player;
 	decrease foragers by occupied of tribe of player;
 	[First check for easy to grab salvage, will become more scarce over time]
-	let x be a random number from 1 to 100;
+	let x be a random number from 80 to 120; [mild variance]
 	decrease x by turns;
-	increase x by ( perception of tribe of player ) divided by 5;
+	if "Scavenging" is listed in perks of tribe of player:
+		if x is less than 30, now x is 30;
+		increase x by 20;
+	increase x by (perception of tribe of player) / 5;
+	now x is x * foragers;
+	now x is x / 100;
 	if x is greater than 0: [ There is forage available ]
-		decrease x by ( perception of tribe of player ) divided by 5;
-		now x is x * perception of tribe of player;
-		now x is x /  100;
-		now x is x /  10;
-		now x is x * foragers;
 		if x is less than 1, now x is 1;
-		if x is greater than foragers * 3, now x is foragers * 3;
-		say "Foraging for food amongst the ruins yields food: +[x]";
+		say "Foraging yields food: +[x]";
 		increase food of tribe of player by x;
-
-An everyturn rule(this is the Self Love rule):
+ 
+ An everyturn rule(this is the Self Love rule):
 	if the remainder after dividing turns by 2 is 0, continue the action;
 	let foragers be population of tribe of player;
 	decrease foragers by occupied of tribe of player;
