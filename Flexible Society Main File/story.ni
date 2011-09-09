@@ -348,7 +348,7 @@ Part 3 - Game Start
 
 When play begins:
 	repeat with x running through jobs:
-		now x is a part of the player;
+		now x is a part of the clipboard;
 		
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
