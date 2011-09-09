@@ -120,7 +120,10 @@ An everyturn rule(this is the Farming rule):
 	if x is greater than 0: [ There is forage available ]
 		if x is less than 1, now x is 1;
 		say "Farming yields food: +[x]";
-		increase food of tribe of player by x;
+		if "Plant" is listed in diet of tribe of player:
+			increase food of tribe of player by x;
+		otherwise:
+			increase creds of tribe of player by x;
 
 Hunter is a job.
 The validation of Hunter is the huntvailable rule.
@@ -129,6 +132,27 @@ This is the huntvailable rule:
 	if "Meat" is listed in diet of tribe of player, rule succeeds;
 	if "Hunting" is listed in perks of tribe of player, rule succeeds;
 	rule fails;
+
+An everyturn rule(this is the Hunting rule):
+	if the remainder after dividing turns by 2 is not 0, continue the action;
+	if workers of hunter is 0, continue the action;
+	let foragers be workers of hunter;
+	[First check for easy to grab salvage, will become more scarce over time]
+	let x be a random number from 80 to 120; [mild variance]
+	if "Hunting" is listed in perks of tribe of player:
+		increase x by 10;
+	if "Meat" is listed in diet of tribe of player:
+		increase x by 10;
+	now x is x * 2;
+	now x is x * foragers;
+	now x is x / 100;
+	if x is greater than 0: [ There is forage available ]
+		if x is less than 1, now x is 1;
+		say "Hunting yields food: +[x]";
+		if "Meat" is listed in diet of tribe of player:
+			increase food of tribe of player by x;
+		otherwise:
+			increase creds of tribe of player by x;
 
 
 The player has a species called tribe.
@@ -166,7 +190,7 @@ Table of Fancy Status
 left	central	right
 "Location: [the player's surroundings]"	"Morale: [morale of tribe of player]/100"	"Tribe:[tribe of player]"
 "Exits: [List of Valid Directions]"	"Food: [food of tribe of player] Water: [water of tribe of player]"	"Score:[score]/[maximum score]"
-"Population: [population of tribe of player]"	""	""
+"Population: [population of tribe of player]"	"Freecreds: [creds of tribe of player]"	""
 "[if menu depth > 0]N = Next[end if]"	"[if menu depth > 0]ENTER = Select[end if]"	"[if menu depth > 0]P = Previous[end if]"
 
 
@@ -217,6 +241,7 @@ Everyturn rules is a rulebook.
 
 This is the turnpass rule:
 	increase turns by 1;
+	workercheck;
 	follow the everyturn rules;
 
  Every Turn:
@@ -256,6 +281,7 @@ An everyturn rule(this is the Foraging rule):
 	otherwise:
 		now y is 1;
 	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250 ;
+	now y is ( y * morale of tribe of player ) / 100;
 	if y is greater than 0:
 		say "There is joy in the air as your population grows: +[y] ";
 		increase population of tribe of player by y;
@@ -398,7 +424,7 @@ To Workercheck:
 		otherwise:
 			now workers of x is 0;
 	if occupied of tribe of player is greater than population of tribe of player:
-		say "Something is wrong here. You have too many people assigned. Let's start from the beginning.";
+		say "Something is wrong here. You have too many people assigned. Let's start from the beginning. Job assignments reset.";
 		repeat with x running through jobs:
 			now workers of x is 0;
 		now occupied of tribe of player is 0;
