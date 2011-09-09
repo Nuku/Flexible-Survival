@@ -111,7 +111,7 @@ Definition: a direction (called D) is valid:
 Part 3 - Science
 
 Include Science by Nuku Valente.
-
+Include Sciency by Hellerhound.
 
 Book 3 - Tables n Stuff
 
