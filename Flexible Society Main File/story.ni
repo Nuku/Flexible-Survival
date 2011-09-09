@@ -77,10 +77,41 @@ A species has a text called Bodyadj.
 A species has a text called Faceadj.
 A species has a number called occupied.
 
+A job is a kind of object.
+A job has a rule called validation.
+A job has a number called workers.
+
+Definition: A job (called J) is valid:
+	follow the validation of J;
+	if rule succeeded:
+		yes;
+	otherwise:
+		no;
+
+Part 2 - Jobs
+
+Farmer is a job.
+The validation of it is the farmvailable rule.
+
+This is the farmvailable rule:
+	if "Plant" is listed in diet of tribe of player, yes;
+	if "Farming" is listed in perks of tribe of player, yes;
+	no;
+
+Hunter is a job.
+The validation of it is the huntvailable rule.
+
+This is the huntvailable rule:
+	if "Meat" is listed in diet of tribe of player, yes;
+	if "Hunting" is listed in perks of tribe of player, yes;
+	no;
 
 
 The player has a species called tribe.
-Definition: a direction (called D) is valid if the room D from the location of the player is a room.
+
+Definition: a direction (called D) is valid:
+	if the room D from the location of the player is a room, yes;
+	no;
 
 Book 2 - The Village
 
@@ -162,16 +193,11 @@ This is the turnpass rule:
 	increase turns by 1;
 	follow the everyturn rules;
 
-To multiply (X - a number) by (Y - a number):
-	now x is x * y;
- 
-To divide (X - a number) by (Y - a number):
-	now x is x / y;
-
  Every Turn:
 	follow the turnpass rule;
 	
 An everyturn rule(this is the Foraging rule):
+	if the remainder after dividing turns by 2 is 0, the rule succeeds;
 	if ( occupied of tribe of player + 1) > population of tribe of player, rule succeeds;
 	let foragers be population of tribe of player;
 	decrease foragers by occupied of tribe of player;
@@ -189,6 +215,38 @@ An everyturn rule(this is the Foraging rule):
 		if x is greater than foragers * 3, now x is foragers * 3;
 		say "Foraging for food amongst the ruins yields food: +[x][line break]";
 		increase food of tribe of player by x;
+
+An everyturn rule(this is the Self Love rule):
+	if the remainder after dividing turns by 2 is 0, the rule succeeds;
+	let foragers be population of tribe of player;
+	decrease foragers by occupied of tribe of player;
+	increase foragers by the population of the tribe of the player;
+	now foragers is foragers / 2; [People breed easier when not busy, but aren't entirely unavailable even while busy]
+	let x be a random number from 1 to 100;
+	let y be 0;
+	if x is greater than 90:
+		now y is 3;
+	otherwise if x is greater than 60:
+		now y is 2;
+	otherwise:
+		now y is 1;
+	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250 ;
+	if y is less than 0, now y is 0;
+	if y is greater than 0:
+		say "There is joy in the air as your population grows: +[y] ";
+		increase population of tribe of player by y;
+		if morale of tribe of player is less than 60:
+			let gain be 1;
+			increase gain by y times 2;
+			now gain is gain * mood of tribe of player;
+			now gain is gain / 100;
+			if gain is greater than 0:
+				say "Morale gain: [gain]";
+			increase morale of tribe of player by gain;
+	say "[line break]";
+
+	
+	
 
 An everyturn rule(This is the Water's Fine rule):
 	let consume be the population of the tribe of player;
@@ -215,8 +273,8 @@ An everyturn rule(this is the Eternal Hunger rule):
 			decrease population of tribe of player by x;
 		let loss be 1;
 		increase loss by x times 2;
-		multiply loss by 100;
-		divide loss by mood of tribe of player;
+		now loss is loss * 100;
+		now loss is loss / mood of tribe of player;
 		if loss is greater than 0:
 			say "Morale Loss: [loss]";
 		decrease morale of tribe of player by loss;
