@@ -40,6 +40,8 @@ Turns is a number that varies.
 
 The player has text called name.
 
+Part 1 - Species
+
 A Species is a kind of object.
 A species has a text called Description.
 A species has a number called Intelligence.
@@ -76,8 +78,12 @@ A species has a text called Skinadj.
 A species has a text called Bodyadj.
 A species has a text called Faceadj.
 A species has a number called occupied.
+A species has a number called creds.
 
-A job is a kind of object.
+
+Part 2 - Jobs
+
+A job is a kind of thing.
 A job has a rule called validation.
 A job has a number called workers.
 
@@ -87,24 +93,24 @@ Definition: A job (called J) is valid:
 		yes;
 	otherwise:
 		no;
-
-Part 2 - Jobs
-
-Farmer is a job.
-The validation of it is the farmvailable rule.
+ 
+ Farmer is a job.
+The validation of Farmer is the farmvailable rule.
 
 This is the farmvailable rule:
-	if "Plant" is listed in diet of tribe of player, yes;
-	if "Farming" is listed in perks of tribe of player, yes;
-	no;
+	if "Plant" is listed in diet of tribe of player:
+		rule succeeds;
+	if "Farming" is listed in perks of tribe of player:
+		rule succeeds;
+	rule fails;
 
 Hunter is a job.
-The validation of it is the huntvailable rule.
+The validation of Hunter is the huntvailable rule.
 
 This is the huntvailable rule:
-	if "Meat" is listed in diet of tribe of player, yes;
-	if "Hunting" is listed in perks of tribe of player, yes;
-	no;
+	if "Meat" is listed in diet of tribe of player, rule succeeds;
+	if "Hunting" is listed in perks of tribe of player, rule succeeds;
+	rule fails;
 
 
 The player has a species called tribe.
@@ -116,6 +122,8 @@ Definition: a direction (called D) is valid:
 Book 2 - The Village
 
 Village Center is a room. "You stand in the middle of, what you hope, will become the vast hub of your future civilization. For now it is just a small bonfire for you and your kind.[if population of tribe of player is greater than 0] Wandering the village, you see your people number [population of tribe of player].[end if]".
+
+There is a Clipboard in it. "A clipboard is set near the fire. You are sure you can use it to [bold type]assign[roman type] jobs.".
 
 Book 3 - Tables n Stuff
 
@@ -213,7 +221,7 @@ An everyturn rule(this is the Foraging rule):
 		now x is x * foragers;
 		if x is less than 1, now x is 1;
 		if x is greater than foragers * 3, now x is foragers * 3;
-		say "Foraging for food amongst the ruins yields food: +[x][line break]";
+		say "Foraging for food amongst the ruins yields food: +[x]";
 		increase food of tribe of player by x;
 
 An everyturn rule(this is the Self Love rule):
@@ -231,7 +239,6 @@ An everyturn rule(this is the Self Love rule):
 	otherwise:
 		now y is 1;
 	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250 ;
-	if y is less than 0, now y is 0;
 	if y is greater than 0:
 		say "There is joy in the air as your population grows: +[y] ";
 		increase population of tribe of player by y;
@@ -243,7 +250,6 @@ An everyturn rule(this is the Self Love rule):
 			if gain is greater than 0:
 				say "Morale gain: [gain]";
 			increase morale of tribe of player by gain;
-	say "[line break]";
 
 	
 	
@@ -313,6 +319,10 @@ Instead of examining the player:
 	
 Part 3 - Game Start
 
+When play begins:
+	repeat with x running through jobs:
+		now x is a part of the player;
+		
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
 
@@ -361,3 +371,52 @@ When play begins(this is the play start rule):
 	Species Menu;
 	if the might of tribe of player is 0, follow the play start rule;
 	
+Part 4 - Job assigning
+
+To Workercheck:
+	now occupied of tribe of player is 0;
+	repeat with x running through jobs:
+		if x is valid:
+			increase occupied of tribe of player by workers of x;
+		otherwise:
+			now workers of x is 0;
+	if occupied of tribe of player is greater than population of tribe of player:
+		say "Something is wrong here. You have too many people assigned. Let's start from the beginning.";
+		repeat with x running through jobs:
+			now workers of x is 0;
+		now occupied of tribe of player is 0;
+
+Understand "Assign" as assigning.
+
+Assigning is an action applying to nothing.
+
+Check Assigning:
+	if clipboard is not visible:
+		say "You need your trusty clipboard to assign jobs." instead;
+
+Carry out Assigning:
+	workercheck;
+	say "Job -- Workers Currently Assigned";
+	repeat with x running through valid jobs:
+		say "[x] -- [workers of x][line break]";
+	say "Unassigned Workers: [population of tribe of player - occupied of tribe of player]";
+	say "[line break]Type [bold type]assign (number) to (job)[roman type] to change the amount of workers in a job.";
+	
+Understand "Assign [number] to [job]" as tasking.
+
+Tasking is an action applying to a number and one thing.
+
+Check Tasking:
+	if clipboard is not visible:
+		say "You need your trusty clipboard to assign jobs." instead;
+	if second noun is not valid:
+		say "Your people do not know how to do that job" instead;
+
+Carry out Tasking:
+	workercheck;
+	let y be the population of the tribe of the player - the occupied of the tribe of the player;
+	if the number understood > y:
+		now number understood is y;
+	now workers of the second noun is number understood;
+	say "You assign [number understood] workers to [second noun].";
+	try assigning;
