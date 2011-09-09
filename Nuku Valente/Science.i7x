@@ -22,6 +22,23 @@ Understand "nerd" as nerding.
 check nerding:
 	say "The nerd is a person, not an action. You could try looking at them?(look nerd)" instead;
 	
+Part - Change Topics
+
+Researchlist is an action applying to nothing.
+Understand "Research" as researchlist.
+
+Check researchlist:
+	if nerd is not visible, say "You need your trusty ner, er, science advisor, to conduct matters of research." instead;
+
+carry out researchlist:
+	say "Available Topics: ";
+	repeat with x running through valid research:
+		if x is complete, next;
+		say "[x]([progress of x]/[cost of x])[if current of nerd is x](Current Topic)[end if]";
+	say "To begin a new topic, type [bold type]research (topic)[roman type].";
+	
+		
+	
 Book - Define Research
 
 A Research is a kind of thing.
