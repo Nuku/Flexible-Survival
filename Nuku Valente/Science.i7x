@@ -31,10 +31,11 @@ Check researchlist:
 	if nerd is not visible, say "You need your trusty ner, er, science advisor, to conduct matters of research." instead;
 
 carry out researchlist:
-	say "Available Topics: ";
+	say "Available Topics: [no line break]";
 	repeat with x running through valid research:
 		if x is complete, next;
-		say "[x]([progress of x]/[cost of x])[if current of nerd is x](Current Topic)[end if]";
+		say "[line break]";
+		say "[x]([progress of x]/[cost of x])[if current of nerd is x](Current Topic)[end if][no line break]";
 	say "To begin a new topic, type [bold type]research (topic)[roman type].";
 	
 Researching is an action applying to one thing.
@@ -47,7 +48,7 @@ Check researching:
 
 Carry out researching:
 	say "[description of noun]";
-	say "Begin?";
+	say "[line break]Begin?";
 	if the player consents:
 		now current of nerd is noun;
 		say "You begin researching [noun].";
@@ -65,6 +66,7 @@ A Research has a number called progress.
 A Research has a number called cost.
 A Research has a rule called Completion.
 The completion of a research is usually nothing rule;
+A research has a text called perk.
 
 This is the nothing rule:
 	do nothing;
@@ -121,8 +123,19 @@ An everyturn rule(this is the SCIENCE rule):
 		if current of nerd is complete:
 			say ". [bold type][current of nerd][roman type] is complete!";
 			follow the completion of current of nerd;
-			add the printed name of current of nerd to perks of tribe of player;
+			if the perk of current of nerd is not "":
+				add the perk of current of nerd to perks of tribe of player;
 		decrease science of tribe of player by x;
+
+Farming is a research.
+The description of it is "Farming the land can be a source of valuable food and/or trade goods. It takes far fewer people to farm food than it does to forage.".
+The cost of it is 50.
+The perk of it is "Farming".
+
+Hunting is a research.
+The description of it is "Hunting techniques allow for efficient exploiting of animal resources on your lands, producing more food and/or trade goods.".
+The cost of it is 50.
+The perk of it is "Hunting".
 
 
 Science ends here.
