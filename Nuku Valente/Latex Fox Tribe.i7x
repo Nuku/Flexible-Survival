@@ -1,13 +1,13 @@
 Latex Fox Tribe by Nuku Valente begins here.
 
 Latex Foxes is a species.
-The description of it is "Their body is covered in soft fur. Hir head is avian, with powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above hir altered face. Hir body is adorned with two large feathery wings that flutter softly. Milk also seems to flow at a soft rate from hir nipples. Sie has 2 plump D cup sized breasts. Hir arms are well muscled and vaguely avian, sporting dangerous claws at the end each digit. Hir legs are dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on hir softly furred feet-paws. Sie has a thin leonine tail swaying over hir ass. Its soft, blue, and furry length has a tuft of blue fur at the end. Sie has a single, black, knotted member that averages around a foot long, and a female portal that can easily accept it.".
-The skin of it is "soft blue fur".
-The skinadj of it is "blue furred".
-The body of it is "fertile hermaphrodite blend of panther and bird".
-The bodyadj of it is "herm gryphon".
-The face of it is "avian beak and feline ears".
-The faceadj of it is "gryphon".
+The description of it is "Their body is covered in red and white latex. Their head is a mixture of canine and human, a perpetual sneer showing off exposed teeth. Their body is largely human, with only faint hints of bestial physique. They have arms that are largely human, except their hands are somewhat paw like, with black claws at the ends of fingers. Their legs are digitigrade and shaped like dog legs with large paws for feet. They have a large fox tail cartoonishly ballooning from their bottom. Sexually, they come in male and female varieties. They average around eight inches. Females average a C cup. They have no need to eat, but do enjoy chewing things with their rubbery teeth.".
+The skin of it is "red and white latex".
+The skinadj of it is "rubbery".
+The body of it is "rubber pool toy fox".
+The bodyadj of it is "latex fox".
+The face of it is "glistening canine grin".
+The faceadj of it is "canine".
 The Intelligence of it is 30.
 The Might of it is 40.
 The Stamina of it is 60.
