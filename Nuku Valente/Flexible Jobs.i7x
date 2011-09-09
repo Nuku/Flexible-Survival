@@ -1,6 +1,6 @@
 Flexible Jobs by Nuku Valente begins here.
 
- Farmer is a job.
+Farmer is a job.
 The validation of Farmer is the farmvailable rule.
 
 This is the farmvailable rule:
@@ -59,6 +59,36 @@ An everyturn rule(this is the Hunting rule):
 			increase food of tribe of player by x;
 		otherwise:
 			increase creds of tribe of player by x;
+
+Warrior is a job.
+The validation of Warrior is the warvailable rule.
+
+This is the warvailable rule:
+	rule succeeds;
+
+An everyturn rule(this is the Warrior Payday rule):
+	if workers of warrior is 0, continue the action;
+	let foragers be workers of warrior;
+	decrease foragers by 5;
+	if foragers is less than 0, continue the action;
+	[First check for easy to grab salvage, will become more scarce over time]
+	let x be 100;
+	if "Militant" is listed in perks of tribe of player:
+		decrease x by 10;
+	if "Ascetic" is listed in diet of tribe of player:
+		decrease x by 10;
+	now x is x * foragers;
+	now x is x / 100;
+	if x is greater than 0: [ The warriors demand monies ]
+		if x is less than 1, now x is 1;
+		if creds of tribe of player < x:
+			decrease x by creds of tribe of player;
+			now creds of tribe of player is 0;
+			decrease morale of tribe of player by ( x / 2 );
+			say "You lack the funds to properly pay for warriors. Morale: - [x / 2]";
+		otherwise:
+			decrease creds of tribe of player by x;
+			say "You pay [x] freecreds for your military.";
 
 
 Flexible Jobs ends here.
