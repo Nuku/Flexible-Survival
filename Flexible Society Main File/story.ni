@@ -48,7 +48,7 @@ A species has a number called Intelligence.
 A species has a number called Might.
 A species has a number called Stamina.
 A species has a number called Perception.
-A species has a number called Industrilization.
+A species has a number called Handiness.
 A species has a number called Hostile Infection Rate.
 A species has a number called Friendly Infection Rate.
 A species has a number called Resistance.
@@ -154,7 +154,7 @@ The Intelligence of it is 40.
 The Might of it is 50.
 The Stamina of it is 50.
 The Perception of it is 75.
-The Industrilization of it is 20.
+The Handiness of it is 20.
 The Hostile Infection Rate of it is 50.
 The Friendly Infection Rate of it is 10.
 The Resistance of it is 0.
@@ -176,6 +176,8 @@ The Food of it is 20.
 The water of it is 20.
 The Diet of it is { "Meat", "Plant" }.
 The Perks of it is { "Flight", "Healing Milk" }.
+
+Include Latex Fox Tribe by Nuku Valente.
 
 Book 6 - Rules N Stuff
 
