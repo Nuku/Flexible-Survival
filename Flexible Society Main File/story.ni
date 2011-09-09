@@ -19,6 +19,14 @@ The release number is 1.
 The story creation year is 2011.
 The maximum score is 100.
 
+Book - The Village
+
+Village Center is a room. "You stand in the middle of, what you hope, will become the vast hub of your future civilization. For now it is just a small bonfire for you and your kind.[if population of tribe of player is greater than 0] Wandering the village, you see your people number [population of tribe of player].[end if]".
+
+There is a Clipboard in it. "A clipboard is set near the fire. You are sure you can use it to [bold type]assign[roman type] jobs.".
+
+Book - Help
+
 Table of Basic Help Options (continued)
 title	description 
 "Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://nukuv.blogspot.com/" 
@@ -77,6 +85,10 @@ A species has a text called Face.
 A species has a text called Skinadj.
 A species has a text called Bodyadj.
 A species has a text called Faceadj.
+A species has a text called Science Advisor.
+The science advisor of a species is usually "An uptight looking individual, waiting with many scribbles and notes to discuss scientific matters.".
+A species has a text called the Science Admin.
+The Science Admin of a species is usually "Nerd".
 A species has a number called occupied.
 A species has a number called creds.
 
@@ -105,11 +117,10 @@ Definition: a direction (called D) is valid:
 	if the room D from the location of the player is a room, yes;
 	no;
 
-Book 2 - The Village
+Part 3 - Science
 
-Village Center is a room. "You stand in the middle of, what you hope, will become the vast hub of your future civilization. For now it is just a small bonfire for you and your kind.[if population of tribe of player is greater than 0] Wandering the village, you see your people number [population of tribe of player].[end if]".
+Include Science by Nuku Valente.
 
-There is a Clipboard in it. "A clipboard is set near the fire. You are sure you can use it to [bold type]assign[roman type] jobs.".
 
 Book 3 - Tables n Stuff
 
@@ -176,6 +187,8 @@ The Food of it is 20.
 The water of it is 20.
 The Diet of it is { "Meat", "Plant" }.
 The Perks of it is { "Flight", "Healing Milk" }.
+The science advisor of it is "This gryphon has a motherly look, with swollen breast and belly. She is usally seated by the fire, scribbling notes in a journal while tending to the new adults. She doubles a communal den mother and dreamer, and despite her odd ways, is quite popular with the others.".
+
 
 Include Latex Fox Tribe by Nuku Valente.
 
@@ -319,6 +332,9 @@ An everyturn rule(this is the Eternal Hunger rule):
 		decrease morale of tribe of player by loss;
 		if morale of tribe of player is less than 0, now morale of tribe of player is 0;
 		say "[line break]";
+
+An everyturn rule(This is the You Lose rule):
+	say "In Progress";
 
 Part 2 - Other rules
 

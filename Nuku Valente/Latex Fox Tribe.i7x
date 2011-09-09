@@ -34,5 +34,7 @@ The Food of it is 0.
 The water of it is 20.
 The Diet of it is {  }.
 The Perks of it is { }.
+The science advisor of it is "An imperious looking latex vixen. You can tell she's the smart one because she has the glasses on. Nevermind that one of the lenses fell out. Besides, look at that hat, so tall, with bells. She obviously knows her stuff!".
+
 
 Latex Fox Tribe ends here.
