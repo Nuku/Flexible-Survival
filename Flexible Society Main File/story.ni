@@ -334,7 +334,10 @@ An everyturn rule(this is the Eternal Hunger rule):
 		say "[line break]";
 
 An everyturn rule(This is the You Lose rule):
-	say "In Progress";
+	if population of tribe of player is less than 1:
+		end the game saying "Your people have been destroyed.";
+	if the territory of tribe of player is less than 1:
+		end the game saying "Your people have been driven away and scattered.";
 
 Part 2 - Other rules
 
