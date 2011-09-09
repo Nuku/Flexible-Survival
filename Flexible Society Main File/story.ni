@@ -40,7 +40,8 @@ Turns is a number that varies.
 
 The player has text called name.
 
-A Species is a kind of thing.
+A Species is a kind of object.
+A species has a text called Description.
 A species has a number called Intelligence.
 A species has a number called Might.
 A species has a number called Stamina.
