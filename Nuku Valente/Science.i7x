@@ -107,7 +107,7 @@ An everyturn rule(this is the SCIENCE rule):
 	if current of nerd is complete:
 		say "Your current research topic is complete. You should pick a new one.";
 		continue the action;
-	let foragers be workers of researchers;
+	let foragers be workers of researcher;
 	increase foragers by 1; [The nerd is always there. They love you!]
 	[First check for easy to grab salvage, will become more scarce over time]
 	let x be a random number from 80 to 120; [mild variance]
