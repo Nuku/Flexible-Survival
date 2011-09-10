@@ -107,7 +107,6 @@ Definition: A job (called J) is valid:
 		no;
  
 Include Flexible Jobs by Nuku Valente.
-Include Entertainers by Maw.
 
 The player has a species called tribe.
 
@@ -119,6 +118,7 @@ Part 3 - Science
 
 Include Science by Nuku Valente.
 Include Sciency by Hellerhound.
+Include Union and Tools by Maw.
 
 Book 3 - Tables n Stuff
 
@@ -490,3 +490,7 @@ The ongoing of a construct is usually the nothing rule.
 An everyturn rule(This is the Awesome Building Effects Rule):
 	repeat with x running through complete constructs:
 		follow the ongoing of x;
+		
+Book - Random Includes
+
+Include Entertainers by Maw.

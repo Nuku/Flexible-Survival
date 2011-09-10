@@ -1,10 +1,14 @@
 Entertainers by Maw begins here.
 
+Public Relations is a research.
+The cost of it is 60.
+The description of it is "Our people are bored. We should encourage the arts to entertain them.".
+
 Entertainer is a job.
 The validation of Entertainer is the entertainvailable rule.
 
 This is the entertainvailable rule:
-	if "Public Relations" is listed in perks of tribe of player:
+	if public relations is complete:
 		rule succeeds;
 	rule fails;
 
@@ -22,5 +26,6 @@ An everyturn rule(this is the entertainer rule):
 		if x is less than 1, now x is 1;
 		say "[if x is less than 5] Your entertainers yeild a bonus of +[x] morale for your tribe.[otherwise]With an excellent team of entertainers working alongside eachother, your people have gained an outstanding +[x] morale!";
 		increase morale of tribe of player by x;
+
 
 Entertainers ends here.
