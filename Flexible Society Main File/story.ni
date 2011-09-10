@@ -201,6 +201,7 @@ Understand "Pass" as Taketurn.
 
 Carry out Taketurn:
 	say "Time passes...";
+	if morale of tribe of player is less than 0, now morale of tribe of player is 0;
 	follow the turnpass rule;
 	
 An everyturn rule(this is the Foraging rule):
