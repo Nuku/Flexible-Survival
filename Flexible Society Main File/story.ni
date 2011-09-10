@@ -205,6 +205,8 @@ Taketurn is an action applying to nothing.
 Understand "Turn" as Taketurn.
 Understand "End Turn" as Taketurn.
 Understand "Pass" as Taketurn.
+Understand the command "wait" as something new.
+Understand "Wait" as Taketurn.
 
 Carry out Taketurn:
 	say "Time passes...";
