@@ -73,7 +73,7 @@ A print has a construct called building.
 A print has a room called origin.
 A print has a direction called facing.
 A print can be started.
-blueprints is a print. "A large sheet of dark-blue paper with thin, light blue lining upon the broad face of it. With a little ingenuity one could consider this a invaluable tool for [bold type]building[roman type]".
+blueprints is a print. "A large sheet of dark-blue paper with thin, light blue lining upon the broad face of it. With a little ingenuity one could consider this a invaluable tool to [bold type]plan[roman type] buildings.".
 blueprints is in Village center.
 
 After examining the blueprints:
