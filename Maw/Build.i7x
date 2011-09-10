@@ -127,6 +127,8 @@ Book - Building!
 
 An everyturn rule(this is the Can We Build It rule):
 	if blueprints is not started, continue the action;
+	let z be the number of valid not placed constructs;
+	if z is 0, continue the action;
 	if building of blueprints is complete:
 		say "Your current building project is complete. You should pick a new one.";
 		continue the action;
