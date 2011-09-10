@@ -1,55 +1,104 @@
 Build by Maw begins here.
 
-Part - Things that are
+When play begins:
+	repeat with x running through construct:
+		now x is a part of the blueprints;
 
-A Blueprint is an object. "A dark blue sheet of paper filled with light blue, finely lined boxes. You think you could [bold type]draw[roman type] plans up for some form of structures on it."
-A Refinery is a building.
-A Nursery is a building.
-A College is a building.
-A University is a building.
-A Residential Area is a building.
-A Barracks is a building.
-The Refinery is a room.
-The Nursery is a room.
-The College is a room.
-The University is a room.
-The Residential Area is a room.
-The Barracks is a room.
+Book - Dem Blues
 
-Part - Nouns
+blueprints is a object. "A large sheet of dark-blue paper with thin, light blue lining upon the broad face of it. With a little ingenuity one could consider this a invaluable tool for [bold type]building[roman type]".
+blueprints is in Village center.
 
-Understand "s" as south.
-Understand "n" as north.
-Understand "w" as west.
-Understand "e" as east.
-Understand "Buildings" as blist.
-Understand "Draw" as bhelp.
-Understand "Build [building] at [direction]" as Construct.
+After examining the blueprints:
+	if progress of current of blueprints < cost of current of blueprints:
+		say "Current Construction Designs: [current of blueprints]([progress of current of blueprints]/[cost of current of blueprints])";
+	say "[line break]To begin a new build, type [bold type]build (building) at (direction)[roman type].";
+	say "Type [bold type]plan[roman type] alone to see available buildings.";
 
-Construct is an action applying to one thing and one place.
-blist is an action applying to nothing.
+Part - Change Builds
 
-Part - Rules/Variables
+builds is an action applying to nothing.
+Understand "plan" as builds.
 
-check blist:
-if blueprints is not visible, say "You must have lost them!" instead;
+Check builds:
+	if blueprints is not visible, say "You can't check your current designs without... your designs!" instead;
 
-carry out blist:
-	say "Available buildings: [no line break]";
-	repeat with x running through valid research:
+carry out researchlist:
+	say "Available Designs: [no line break]";
+	repeat with x running through valid construct:
 		if x is complete, next;
-	
+		say "[line break]";
+		say "[x]([progress of x]/[cost of x])[if current of blueprints is x](Current construction)[end if][no line break]";
+	say "To begin a new build, type [bold type]build (building) at (direction)[roman type].";
 
-check building (building buying rule)
-	if [cost] of the [building] is less than (freecred of tribe of player);
-		
-	instead;
-		say "You are too poor.[one of[or] Maybe someone will grant you a loan?[or] Maybe [nerd] has some money you can borrow?[at random]"
-		
+constructing is an action applying to two things.
+Understand "Build [Construct] at [direction]" as constructing.
 
-The [room] is [direction] of the [player location].
+Check constructing:
+	if blueprints is not visible, say "You can't give orders to your builders while you don't have your designs with you!" instead;
+	if noun is complete, say "That building has already been constructed" instead;
+	if noun is current of blueprints, say "Your builders stare at you, hammers and two-by-fours in hand, looking about ready to hammer you upside the head with both, 'We are working on it.' Maybe you should hire more builders?" instead;
 
-Part - Rooms
+Carry out constructing:
+	say "[description of noun]";
+	say "[line break]Construct?";
+	if the player consents:
+		now current of blueprints is noun;
+		say "Your builders begin constructing [noun].";
+	otherwise:
+		say "Aborted.";
 
+
+Book - Define Construct
+
+
+A Construct is a kind of room.
+A Construct has a text called description.
+A Construct has a rule called validation.
+The validation of a Construct is usually Convailable rule.
+A Construct has a number called progress.
+A Construct has a number called cost.
+A Construct has a rule called completion.
+The completion of a Construct is usually nothing rule;
+
+A Direction is a text value.
+	if the value of direction is north:
+	if the value of direction is east:
+	if the value of direction is south:
+	if the value of direction is west:
+	if the value of direction is northeast:
+	if the value of direction is northwest:
+	if the value of direction is southeast:
+	if the value of direction is southwest:
+
+This is the nothing rule:
+do nothing;
+
+Definition: A Construct (called C) is valid:
+	follow the validation of C;
+	if rule succeeded:
+		yes;
+	otherwise:
+		no;
+
+Definition: A Construct (called C) is complete:
+	if progress of C >= cost of C:
+		yes;
+	otherwise:
+		no;
+
+
+Part 2 - Constructs
+
+
+The blueprint has a Construct called current.
+cur is a text that varies.
+
+Agricultural Zone is a Construct.
+The description of it is "A massive, flat area filled with rows upon rows of[one of] wheat[or] corn[or] tomato stalks[or] apple trees[or] grape vines[or] marijuana.[sticky random] You feel at peace here, the wildlife of the area unperterbed and singing happily. The rustic look quite an eyesore for the city-folk. (Increases farmers' efficency by offering organized plot of farmland (No effect on hunters))".
+The cost of it is 60.
+The completion of it is Agricultural Zone.
+
+An everyturn rule(this is the Agricultural Zone rule):
 
 Build ends here.
