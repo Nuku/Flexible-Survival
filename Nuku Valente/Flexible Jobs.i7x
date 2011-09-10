@@ -10,7 +10,7 @@ The maximum of farmer is maxfarmer rule.
 This is the maxfarmer rule:
 	now max of farmer is territory of tribe of player;
 	let x be 100;
-	if "Farming" is listed in perks of tribe of player:
+	if farming is complete:
 		increase x by 25;
 	if "Plant" is listed in diet of tribe of player:
 		increase x by 25;
@@ -20,7 +20,7 @@ This is the maxfarmer rule:
 This is the farmvailable rule:
 	if "Plant" is listed in diet of tribe of player:
 		rule succeeds;
-	if "Farming" is listed in perks of tribe of player:
+	if farming is complete:
 		rule succeeds;
 	rule fails;
 
@@ -30,7 +30,7 @@ An everyturn rule(this is the Farming rule):
 	let foragers be workers of farmer;
 	[First check for easy to grab salvage, will become more scarce over time]
 	let x be a random number from 80 to 120; [mild variance]
-	if "Farming" is listed in perks of tribe of player:
+	if farming is complete:
 		increase x by 10;
 	if "Plant" is listed in diet of tribe of player:
 		increase x by 10;
@@ -52,7 +52,7 @@ The maximum of hunter is maxhunter rule.
 This is the maxhunter rule:
 	now max of hunter is territory of tribe of player;
 	let x be 100;
-	if "Hunting" is listed in perks of tribe of player:
+	if hunting is complete:
 		increase x by 25;
 	if "Meat" is listed in diet of tribe of player:
 		increase x by 25;
@@ -69,7 +69,7 @@ An everyturn rule(this is the Hunting rule):
 	let foragers be workers of hunter;
 	[First check for easy to grab salvage, will become more scarce over time]
 	let x be a random number from 80 to 120; [mild variance]
-	if "Hunting" is listed in perks of tribe of player:
+	if hunting is complete:
 		increase x by 10;
 	if "Meat" is listed in diet of tribe of player:
 		increase x by 10;

@@ -463,3 +463,7 @@ Book - Game Over
 
 When Play Ends:
 	try examining the player;
+	
+Book - Building
+
+[Include Build by Maw.]
