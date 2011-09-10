@@ -16,15 +16,15 @@ carry out builds:
 		say "[x]([progress of x]/[cost of x])[if building of blueprints is x](building construction)[end if][no line break]";
 	say "To begin a new build, type [bold type]build (building) at (direction)[roman type].";
 
-constructing is an action applying to two things.
-Understand "Build [Construct] at [direction]" as constructing.
+constructing is an action applying to one thing and one visible thing.
+Understand "Build [any Construct] at [direction]" as constructing.
 Understand "Build [Construct] in [direction]" as constructing.
 Understand "Build [Construct] to [direction]" as constructing.
 
 Check constructing:
 	if blueprints is not visible, say "You can't give orders to your builders while you don't have your designs with you!" instead;
 	if noun is complete or noun is placed, say "That building has already been constructed" instead;
-	if noun is building of blueprints, say "Your builders stare at you, hammers and two-by-fours in hand, looking about ready to hammer you upside the head with both, 'We are working on it.' Maybe you should hire more builders?" instead;
+	if noun is building of blueprints and blueprints is started, say "Your builders stare at you, hammers and two-by-fours in hand, looking about ready to hammer you upside the head with both, 'We are working on it.' Maybe you should hire more builders?" instead;
 
 Carry out constructing:
 	say "[description of noun]";
