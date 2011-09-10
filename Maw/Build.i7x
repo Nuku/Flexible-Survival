@@ -92,10 +92,34 @@ The description of it is "A massive, flat area filled with rows upon rows of[one
 The cost of it is 60.
 The validation of agricultural zone is agricheck rule.
 The proximity of it is "You smell tilled earth to the";
+The ongoing of it is the agri output rule.
+
+This is the Agri Output Rule:
+	if the remainder after dividing turns by 4 is not 0, continue the action;
+	let x be 5;
+	now x is x + ( workers of farmer / 5 );
+	increase food of tribe of player by x;
 
 This is the agricheck rule:
 	if farming is complete, rule succeeds;
 	rule fails;
+
+Well is a construct.
+The description of it is "A simple source of water. A salvaged bucket has been provided to lower down and bring up some, mostly delicious, water. You see some [bodyadj of tribe of player] people hanging around at most times of the day, socializing near the wellspring of life.".
+The cost of it is 50.
+The validation of it is agricheck rule.
+The proximity of it is "You can see people hanging around a well to the".
+The ongoing of it is the well rule.
+
+This is the well rule:
+	if the remainder after dividing turns by 4 is not 0, continue the action;
+	let x be 0;
+	if well is adjacent to agricultural zone:
+		increase x by 2;
+		now x is x + ( workers of farmer / 10 );
+	increase food of tribe of player by x;
+
+
 
 Book - Building!
 

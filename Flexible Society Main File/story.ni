@@ -482,3 +482,9 @@ After examining a room:
 		say "[proximity of x] [best route from location of player to x].";
 
 Include Build by Maw.
+Construct has a rule called ongoing.
+The ongoing of a construct is usually the nothing rule.
+
+An everyturn rule(This is the Awesome Building Effects Rule):
+	repeat with x running through complete constructs:
+		follow the ongoing of x;
