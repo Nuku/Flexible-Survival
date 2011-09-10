@@ -450,7 +450,7 @@ Check Tasking:
 
 Carry out Tasking:
 	workercheck;
-	let y be the population of the tribe of the player - the occupied of the tribe of the player;
+	let y be the population of the tribe of the player - the occupied of the tribe of the player + workers of second noun;
 	if the number understood > y:
 		now number understood is y;
 	follow the maximum of second noun;
