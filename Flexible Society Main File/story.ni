@@ -467,4 +467,4 @@ When Play Ends:
 	
 Book - Building
 
-[Include Build by Maw.]
+Include Build by Maw.
