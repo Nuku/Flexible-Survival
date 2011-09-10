@@ -22,6 +22,7 @@ The maximum score is 100.
 Book - The Village
 
 Village Center is a room. "You stand in the middle of, what you hope, will become the vast hub of your future civilization. For now it is just a small bonfire for you and your kind.[if population of tribe of player is greater than 0] Wandering the village, you see your people number [population of tribe of player].[end if]".
+The proximity of it is "You can see the village center to the".
 
 There is a Clipboard in it. "A clipboard is set near the fire. You are sure you can use it to [bold type]assign[roman type] jobs.".
 
