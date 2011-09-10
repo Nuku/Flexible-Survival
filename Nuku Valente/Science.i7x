@@ -121,14 +121,14 @@ An everyturn rule(this is the SCIENCE rule):
 		now z is the science of tribe of player;
 	if x is greater than 0: [ There is science to be done ]
 		if z is greater than 0:
-			say "Your science advances: +[x]";
-			increase progress of current of nerd by x;
+			say "Your science advances: +[z]";
+			increase progress of current of nerd by z;
 			if current of nerd is complete:
 				say ". [bold type][current of nerd][roman type] is complete!";
 				follow the completion of current of nerd;
 				if the perk of current of nerd is not "":
 					add the perk of current of nerd to perks of tribe of player;
-			decrease science of tribe of player by x;
+			decrease science of tribe of player by z;
 		now x is x / 2;
 		if x is less than 1, now x is 1;
 		increase science of tribe of player by x;
