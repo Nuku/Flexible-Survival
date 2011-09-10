@@ -103,7 +103,7 @@ An everyturn rule(this is the Can We Build It rule):
 	if building of blueprints is complete:
 		say "Your current building project is complete. You should pick a new one.";
 		continue the action;
-	let foragers be 0; [ builders not defined]
+	let foragers be workers of builder; [ builders not defined]
 	now foragers is foragers * 10; [ Builders are worth 10 points each ]
 	increase foragers by 2 * ( population of tribe of player - occupied of tribe of player ); [ idle people are worth 2 points each ]
 	[First check for easy to grab salvage, will become more scarce over time]
@@ -125,5 +125,19 @@ An everyturn rule(this is the Can We Build It rule):
 			change the opposite of facing of blueprints exit of building of blueprints to origin of blueprints;
 			now building of blueprints is placed;
 
+Book - Builders
+
+builder is a job.
+The validation of builder is the buildervailable rule.
+The maximum of builder is maxbuilder rule.
+
+This is the maxbuilder rule:
+	now max of builder is population of tribe of player;
+
+
+This is the buildervailable rule:
+	let x be the number of valid incomplete constructs;
+	if x is 0, the rule fails;
+	the rule succeeds;
 
 Build ends here.

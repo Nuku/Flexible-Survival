@@ -92,6 +92,12 @@ A job has a number called workers.
 A job has a rule called maximum.
 A job has a number called max.
 
+Definition: An object (called O) is incomplete:
+	if O is complete:
+		no;
+	otherwise:
+		yes;
+
 Definition: A job (called J) is valid:
 	follow the validation of J;
 	if rule succeeded:
