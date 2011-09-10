@@ -254,9 +254,14 @@ An everyturn rule(this is the Foraging rule):
  An everyturn rule(this is the Self Love rule):
 	if the remainder after dividing turns by 2 is 0, continue the action;
 	let z be territory of tribe of player * density of tribe of player;
-	if population of tribe of player > z and morale of tribe of player > 20:
+	let zeta be z;
+	let max be 20;
+	if shelter is complete:
+		increase zeta by 2 * density of tribe of player;
+		increase max by 5;
+	if population of tribe of player > zeta and morale of tribe of player > max:
 		say "Overcrowding erodes morale.";
-		if morale of tribe of player > 20:
+		if morale of tribe of player > max:
 			decrease morale of tribe of player by 1;
 	if population of tribe of player > z * 2, continue the action;
 	let foragers be population of tribe of player;

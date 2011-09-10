@@ -89,6 +89,8 @@ Part 2 - Constructs
 
 cur is a text that varies.
 
+Section - Agricultural Zone
+
 Agricultural Zone is a Construct.
 The description of it is "A massive, flat area filled with rows upon rows of[one of] wheat[or] corn[or] tomato stalks[or] apple trees[or] grape vines[or] marijuana.[sticky random] You feel at peace here, the wildlife of the area unperterbed and singing happily. The rustic look quite an eyesore for the city-folk. (Increases farmers' efficency by offering organized plot of farmland (No effect on hunters))".
 The cost of it is 60.
@@ -106,6 +108,8 @@ This is the agricheck rule:
 	if farming is complete, rule succeeds;
 	rule fails;
 
+Section - Well
+
 Well is a construct.
 The description of it is "A simple source of water. A salvaged bucket has been provided to lower down and bring up some, mostly delicious, water. You see some [bodyadj of tribe of player] people hanging around at most times of the day, socializing near the wellspring of life.".
 The cost of it is 50.
@@ -121,6 +125,12 @@ This is the well rule:
 		now x is x + ( workers of farmer / 10 );
 	increase food of tribe of player by x;
 
+Section - Shelter
+
+Shelter is a construct.
+The description of it is "A crude shelter made by refurbishing a building that was already there. Still, some soft beds and a decent job keeping out cold breezes does a lot to make the people feel at home.".
+The cost of it is 25.
+The proximity of it is "You can smell someone's dinner coming from the".
 
 
 Book - Building!
