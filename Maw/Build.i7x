@@ -217,6 +217,72 @@ An everyturn rule(this is the Can We Build It rule):
 							if roomcheck is not nothing:
 								change the east exit of roomcheck to target;
 								change the west exit of target to roomcheck;
+			if facing is north:
+				let roomcheck be the room west of the startroom;
+				if roomcheck is not nothing:
+					now roomcheck is the room north of roomcheck;
+					if roomcheck is not nothing:
+						change the east exit of roomcheck to target;
+						change the west exit of target to roomcheck;
+				now roomcheck is the room east of the startroom;
+				if roomcheck is not nothing:
+					now roomcheck is the room north of roomcheck;
+					if roomcheck is not nothing:
+						change the west exit of roomcheck to target;
+						change the east exit of target to roomcheck;
+				now roomcheck is the room west of the startroom;
+				if roomcheck is not nothing:
+					now roomcheck is the room north of roomcheck;
+					if roomcheck is not nothing:
+						now roomcheck is the room north of roomcheck;
+						if roomcheck is not nothing:
+							now roomcheck is the room east of roomcheck;
+							if roomcheck is not nothing:
+								change the south exit of roomcheck to target;
+								change the north exit of target to roomcheck;
+				now roomcheck is the room east of the startroom;
+				if roomcheck is not nothing:
+					now roomcheck is the room north of roomcheck;
+					if roomcheck is not nothing:
+						now roomcheck is the room north of roomcheck;
+						if roomcheck is not nothing:
+							now roomcheck is the room west of roomcheck;
+							if roomcheck is not nothing:
+								change the south exit of roomcheck to target;
+								change the north exit of target to roomcheck;
+			if facing is south:
+				let roomcheck be the room west of the startroom;
+				if roomcheck is not nothing:
+					now roomcheck is the room south of roomcheck;
+					if roomcheck is not nothing:
+						change the east exit of roomcheck to target;
+						change the west exit of target to roomcheck;
+				now roomcheck is the room east of the startroom;
+				if roomcheck is not nothing:
+					now roomcheck is the room south of roomcheck;
+					if roomcheck is not nothing:
+						change the west exit of roomcheck to target;
+						change the east exit of target to roomcheck;
+				now roomcheck is the room west of the startroom;
+				if roomcheck is not nothing:
+					now roomcheck is the room south of roomcheck;
+					if roomcheck is not nothing:
+						now roomcheck is the room south of roomcheck;
+						if roomcheck is not nothing:
+							now roomcheck is the room east of roomcheck;
+							if roomcheck is not nothing:
+								change the north exit of roomcheck to target;
+								change the south exit of target to roomcheck;
+				now roomcheck is the room east of the startroom;
+				if roomcheck is not nothing:
+					now roomcheck is the room south of roomcheck;
+					if roomcheck is not nothing:
+						now roomcheck is the room south of roomcheck;
+						if roomcheck is not nothing:
+							now roomcheck is the room west of roomcheck;
+							if roomcheck is not nothing:
+								change the north exit of roomcheck to target;
+								change the south exit of target to roomcheck;
 
 Book - Builders
 
