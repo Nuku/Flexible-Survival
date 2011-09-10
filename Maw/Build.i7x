@@ -26,7 +26,7 @@ Check constructing:
 	if noun is complete or noun is placed, say "That building has already been constructed" instead;
 	if noun is building of blueprints and blueprints is started, say "Your builders stare at you, hammers and two-by-fours in hand, looking about ready to hammer you upside the head with both, 'We are working on it.' Maybe you should hire more builders?" instead;
 	if second noun is valid, say "There's something in the way, boss." instead;
-	if the secound noun is not east and the second noun is not west and the second noun is not north and the second noun is not south, say "What direction? Let's keep it to the basic cardinals." instead;
+	if the second noun is not east and the second noun is not west and the second noun is not north and the second noun is not south, say "What direction? Let's keep it to the basic cardinals." instead;
 
 Carry out constructing:
 	say "[description of noun]";
