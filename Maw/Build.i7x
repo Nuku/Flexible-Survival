@@ -91,6 +91,7 @@ Agricultural Zone is a Construct.
 The description of it is "A massive, flat area filled with rows upon rows of[one of] wheat[or] corn[or] tomato stalks[or] apple trees[or] grape vines[or] marijuana.[sticky random] You feel at peace here, the wildlife of the area unperterbed and singing happily. The rustic look quite an eyesore for the city-folk. (Increases farmers' efficency by offering organized plot of farmland (No effect on hunters))".
 The cost of it is 60.
 The validation of agricultural zone is agricheck rule.
+The proximity of it is "You smell tilled earth to the";
 
 This is the agricheck rule:
 	if farming is complete, rule succeeds;
@@ -133,7 +134,6 @@ The maximum of builder is maxbuilder rule.
 
 This is the maxbuilder rule:
 	now max of builder is population of tribe of player;
-
 
 This is the buildervailable rule:
 	let x be the number of valid incomplete constructs;

@@ -473,4 +473,11 @@ When Play Ends:
 	
 Book - Building
 
+A room has a text called proximity.
+The proximity of a room is usually "You see something interesting to the ";
+
+After examining a room:
+	repeat with x running through adjacent rooms:
+		say "[proximity of x] [best route from location of player to x].";
+
 Include Build by Maw.
