@@ -262,7 +262,9 @@ An everyturn rule(this is the Foraging rule):
 	otherwise:
 		now y is 1;
 	now y is ( foragers * the Self Fertility of the tribe of player * y ) / 250 ;
-	now y is ( y * morale of tribe of player ) / 100;
+	let mor be morale of tribe of player;
+	if mor is less than 20, now mor is 20;
+	now y is ( y * mor ) / 100;
 	if y is greater than 0:
 		say "New [skinadj of tribe of player] children are born, rapidly growing to ready adults: +[y] ";
 		increase population of tribe of player by y;
