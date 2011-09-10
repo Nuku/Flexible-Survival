@@ -130,7 +130,7 @@ An everyturn rule(this is the Can We Build It rule):
 	if building of blueprints is complete:
 		say "Your current building project is complete. You should pick a new one.";
 		continue the action;
-	let foragers be workers of builder; [ builders not defined]
+	let foragers be workers of builder;
 	now foragers is foragers * 10; [ Builders are worth 10 points each ]
 	increase foragers by 2 * ( population of tribe of player - occupied of tribe of player ); [ idle people are worth 2 points each ]
 	[First check for easy to grab salvage, will become more scarce over time]
@@ -138,7 +138,7 @@ An everyturn rule(this is the Can We Build It rule):
 	increase x by (Handiness of tribe of player) / 5;
 	if "Deft" is listed in perks of tribe of player:
 		increase x by 20;
-	now x is x / 100;
+	now x is ( x * foragers ) / 100;
 	if x is greater than 0: [ There is building to be done ]
 		if x is less than 1, now x is 1;
 		say "Your construction advances: +[x]";
