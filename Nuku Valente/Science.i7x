@@ -107,7 +107,7 @@ An everyturn rule(this is the SCIENCE rule):
 	if current of nerd is complete:
 		say "Your current research topic is complete. You should pick a new one.";
 		continue the action;
-	let foragers be 0; [ No scientist job yet]
+	let foragers be workers of researchers;
 	increase foragers by 1; [The nerd is always there. They love you!]
 	[First check for easy to grab salvage, will become more scarce over time]
 	let x be a random number from 80 to 120; [mild variance]
@@ -126,6 +126,11 @@ An everyturn rule(this is the SCIENCE rule):
 			if the perk of current of nerd is not "":
 				add the perk of current of nerd to perks of tribe of player;
 		decrease science of tribe of player by x;
+		now x is x / 2;
+		if x is less than 1, now x is 1;
+		increase science of tribe of player by x;
+		
+		
 
 Farming is a research.
 The description of it is "Farming the land can be a source of valuable food and/or trade goods. It takes far fewer people to farm food than it does to forage.".

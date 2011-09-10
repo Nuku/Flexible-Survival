@@ -16,7 +16,7 @@ this is the maxresearcher rule:
 		increase x by 4;
 	if "Brilliant" is listed in perks of tribe of player:
 		increase x by 1;
-		now x is ( x * 5 ) / 4
+		now x is ( x * 5 ) / 4;
 	now max of researchers is x;
 
 this is the researchvailable rule:
