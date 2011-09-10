@@ -144,7 +144,7 @@ An everyturn rule(this is the Can We Build It rule):
 		say "Your construction advances: +[x]";
 		increase progress of building of blueprints by x;
 		if building of blueprints is complete:
-			say ". [bold type][current of nerd][roman type] is complete!";
+			say ". [bold type][building of blueprints][roman type] is constructed!";
 			follow the completion of building of blueprints;
 			if the perk of building of blueprints is not "":
 				add the perk of building of blueprints to perks of tribe of player;
