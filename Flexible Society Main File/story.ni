@@ -15,7 +15,7 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
-The release number is 1.
+The release number is 2.
 The story creation year is 2011.
 The maximum score is 100.
 
