@@ -6,6 +6,17 @@ The description of it is "Our people are bored. We should encourage the arts to 
 
 Entertainer is a job.
 The validation of Entertainer is the entertainvailable rule.
+The maximum of Entertainer is maxentertainer rule.
+
+This is the maxentertainer rule:
+	now max of entertainer is population of tribe of player / 5;
+	let x be 100;
+	if "Charming" is listed in perks of tribe of player:
+		increase x by 25;
+	if "Fun Loving" is listed in perks of tribe of player:
+		increase x by 25;
+	now max of entertainer is ( max of entertainer * x ) / 100;
+
 
 This is the entertainvailable rule:
 	if public relations is complete:
