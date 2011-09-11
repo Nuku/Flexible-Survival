@@ -361,6 +361,11 @@ An everyturn rule(This is the You Lose rule):
 		end the game saying "Your people have been destroyed.";
 	if the territory of tribe of player is less than 1:
 		end the game saying "Your people have been driven away and scattered.";
+		
+An everyturn rule(This is the Not 9001 rule):
+	if morale of tribe of player is greater than 100, now morale of tribe of player is 100.
+	
+The not 9001 rule is listed last in the everyturn rules.
 
 Part 2 - Other rules
 
