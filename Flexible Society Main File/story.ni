@@ -269,6 +269,8 @@ An everyturn rule(this is the Foraging rule):
 	decrease foragers by occupied of tribe of player;
 	increase foragers by the population of the tribe of the player;
 	now foragers is foragers / 2; [People breed easier when not busy, but aren't entirely unavailable even while busy]
+	if foragers * self fertility of tribe of player < ( 252 * 5 * 3 ):
+		now foragers is ( 252 * 3 * 5 ) / self fertility of tribe of player;
 	let x be a random number from 1 to 100;
 	let y be 0;
 	if x is greater than 90:
