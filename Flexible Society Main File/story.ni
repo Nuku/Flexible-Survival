@@ -269,7 +269,7 @@ An everyturn rule(this is the Foraging rule):
 	decrease foragers by occupied of tribe of player;
 	increase foragers by the population of the tribe of the player;
 	now foragers is foragers / 2; [People breed easier when not busy, but aren't entirely unavailable even while busy]
-	if foragers * self fertility of tribe of player < ( 252 * 5 * 3 ):
+	if foragers * self fertility of tribe of player < ( 252 * 5 * 3 ) and self fertility of tribe of player is greater than 0:
 		now foragers is ( 252 * 3 * 5 ) / self fertility of tribe of player;
 	let x be a random number from 1 to 100;
 	let y be 0;
@@ -502,3 +502,22 @@ An everyturn rule(This is the Awesome Building Effects Rule):
 Book - Random Includes
 
 Include Entertainers by Maw.
+
+Book - Fucking
+
+A person has a number called fuckfrequency.
+The fuckfrequency of a person is usually 4.
+A person has a number called lastfuck.
+
+Fucking is an action applying to one thing.
+
+Understand "fuck [person]" as fucking.
+
+Check fucking:
+	if noun is not visible, say "Who?" instead;
+	if turns - lastfuck of noun is less than fuckfrequency of noun and lastfuck of noun is greater than 0, say "It's too soon." instead;
+
+Carry out fucking:
+	say "[Noun] does not look interested.";
+
+Book - Talking
