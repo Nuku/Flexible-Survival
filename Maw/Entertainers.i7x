@@ -9,7 +9,7 @@ The validation of Entertainer is the entertainvailable rule.
 The maximum of Entertainer is maxentertainer rule.
 
 This is the maxentertainer rule:
-	now max of entertainer is population of tribe of player / 5;
+	now max of entertainer is population of tribe of player / 10;
 	let x be 100;
 	if "Charming" is listed in perks of tribe of player:
 		increase x by 25;
