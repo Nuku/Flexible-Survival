@@ -84,6 +84,12 @@ The Science Admin of a species is usually "Nerd".
 A species has a number called occupied.
 A species has a number called creds.
 
+To study (target - a species):
+	say "[bold type][target][roman type][line break]";
+	say "Basic Appearance: [description of target][line break]";
+	say "Basic Stats: Might: [might of target], Intelligence: [intelligence of target], Stamina: [stamina of target], Perception: [perception of target], Handiness: [handiness of target][line break]";
+	say "Population Stats: Population: [population of target], Density: [density of target], Hunger: [hunger of target], Self Fertility: [self fertility of target], External Fertility: [external fertility of target][line break]";
+	say "Perks: [perks of target][line break]";
 
 Part 2 - Jobs
 
@@ -425,6 +431,13 @@ When play begins(this is the play start rule):
 	say "Welcome to Flexible Society. You are a member of a species, probably quite new, trying to secure a niche in the world rocked by the Promethean Virus, a nanite plauge that has reduced mankind to largescale rubble and given rise to hundreds of new species. Your first decision will be what species you are and will lead. Some species are better some some things than others.";
 	wait for any key;
 	Species Menu;
+	study tribe of player;
+	say "Are you sure?";
+	if player consents:
+		follow the nothing rule;
+	otherwise:
+		follow the play start rule;
+		continue the action;
 	if the might of tribe of player is 0, follow the play start rule;
 	say "As leader of the tribe, you and you alone decide when time advances. Type [bold type]turn[roman type] to make this happen.";
 	
