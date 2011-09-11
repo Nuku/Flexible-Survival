@@ -189,6 +189,7 @@ The science advisor of it is "This gryphon has a motherly look, with swollen bre
 
 
 Include Latex Fox Tribe by Nuku Valente.
+Include Huskies by Hellerhound.
 
 Book 6 - Rules N Stuff
 
