@@ -25,7 +25,7 @@ The Gender of it is { "Male", "Female" }.
 The Military of it is 0.
 The Science of it is 0.
 The Manufactury of it is 0.
-The Hunger of it is 0.
+The Hunger of it is 50.
 The Thirst of it is 20.
 The Territory of it is 4.
 The Population of it is 10.
