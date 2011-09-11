@@ -536,3 +536,70 @@ Check talking:
 
 Carry out talking:
 	say "[Noun] does not have anything interesting to say.";
+	
+Book - Situations
+
+A situation is a kind of thing.
+A situation can be resolved or unresolved. A situation is usually unresolved.
+A situation can be good.
+A situation can be bad.
+A situation has a rule called validation.
+The validation of a situation is usually warvailable rule.
+
+Definition: A situation (called J) is valid:
+	follow the validation of J;
+	if rule succeeded:
+		yes;
+	otherwise:
+		no;
+
+When play begins:
+	repeat with x running through all situation:
+		now x is a part of the player;
+
+An everyturn rule(This is the Shit Happens rule):
+	let x be a random number from 1 to 100;
+	if "Unlucky" is listed in perks of tribe of player:
+		increase x by 10;
+	if x is greater than 75 and "Lucky" is not listed in perks of tribe of player:
+		let sit be a random bad unresolved valid situation;
+		if sit is nothing, continue the action;
+		try resolving sit;
+		continue the action;
+	now x is a random number from 1 to 100;
+	if "Lucky" is listed in perks of tribe of player:
+		increase x by 10;
+	if x is greater than 75 and "unlucky" is not listed in perks of tribe of player:
+		let sit be a random good unresolved valid situation;
+		if sit is nothing, continue the action;
+		try resolving sit;
+		continue the action;
+	now x is a random number from 1 to 100;
+	if x is greater than 75:
+		let sit be a random not good not bad unresolved valid situation;
+		if sit is nothing, continue the action;
+		try resolving sit;
+		continue the action;
+
+Part - Resolving Action
+
+Resolving is an action applying to one thing.
+
+Carry out resolving a situation(called X):
+	say "This situation has not been properly written!";
+
+Part - Sample Situation
+
+Lost Territory is a situation.
+It is good.
+The validation of it is lost territory rule.
+
+This is the lost territory rule:
+	if local survey is complete, rule succeeds;
+	rule fails;
+
+Instead of resolving the lost territory:
+	say "You get the sudden good news. Some land that was though to be infested with hostile mutants has been reported as abandoned by your scouts. Your people claim it eagerly.";
+	increase the territory of tribe of player by a random number from 2 to 6;
+	now lost territory is resolved;
+
