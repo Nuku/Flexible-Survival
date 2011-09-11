@@ -570,27 +570,31 @@ When play begins:
 
 An everyturn rule(This is the Shit Happens rule):
 	let x be a random number from 1 to 100;
+	if x is less than 75, continue the action;
+	let x be a random number from 1 to 100;
 	if "Unlucky" is listed in perks of tribe of player:
 		increase x by 10;
-	if x is greater than 75 and "Lucky" is not listed in perks of tribe of player:
+	if "lucky" is listed in perks of tribe of player:
+		decrease x by 10;
+	if x is greater than 75:
+		now x is 100;
+	if x is less than 25:
+		now x is 1;
+	if x is 100 and "Lucky" is not listed in perks of tribe of player:
 		let sit be a random bad unresolved valid situation;
 		if sit is nothing, continue the action;
 		try resolving sit;
 		continue the action;
 	now x is a random number from 1 to 100;
-	if "Lucky" is listed in perks of tribe of player:
-		increase x by 10;
-	if x is greater than 75 and "unlucky" is not listed in perks of tribe of player:
+	if x is 1 and "unlucky" is not listed in perks of tribe of player:
 		let sit be a random good unresolved valid situation;
 		if sit is nothing, continue the action;
 		try resolving sit;
 		continue the action;
-	now x is a random number from 1 to 100;
-	if x is greater than 75:
-		let sit be a random not good not bad unresolved valid situation;
-		if sit is nothing, continue the action;
-		try resolving sit;
-		continue the action;
+	let sit be a random not good not bad unresolved valid situation;
+	if sit is nothing, continue the action;
+	try resolving sit;
+	continue the action;
 
 Part - Resolving Action
 
