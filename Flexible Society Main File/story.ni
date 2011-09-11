@@ -521,3 +521,18 @@ Carry out fucking:
 	say "[Noun] does not look interested.";
 
 Book - Talking
+
+A person has a number called talkfrequency.
+The talkfrequency of a person is usually 4.
+A person has a number called lasttalk.
+
+talking is an action applying to one thing.
+
+Understand "talk [person]" as talking.
+
+Check talking:
+	if noun is not visible, say "Who?" instead;
+	if turns - lasttalk of noun is less than talkfrequency of noun and lasttalk of noun is greater than 0, say "They don't appear to want to talk again so soon." instead;
+
+Carry out talking:
+	say "[Noun] does not have anything interesting to say.";
