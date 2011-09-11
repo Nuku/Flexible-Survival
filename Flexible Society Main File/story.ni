@@ -37,7 +37,7 @@ title	description
 Book 1 - Variable Definitions
 
 Turns is a number that varies.
-
+Turns is usually 1.
 The player has text called name.
 
 Part 1 - Species
