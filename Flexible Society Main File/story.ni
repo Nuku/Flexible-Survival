@@ -487,7 +487,13 @@ Book - Building
 A room has a text called proximity.
 The proximity of a room is usually "You see something interesting to the ";
 
-After examining a room:
+After looking(This is the Nearby rule):
+	repeat with x running through adjacent rooms:
+		say "[proximity of x] [best route from location of player to x].";
+
+After going somewhere(This is the Nearby Glance rule):
+	say "[bold type][location of player][roman type][line break]";
+	say "[description of location of player][line break]";
 	repeat with x running through adjacent rooms:
 		say "[proximity of x] [best route from location of player to x].";
 

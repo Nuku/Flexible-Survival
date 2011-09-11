@@ -4,6 +4,7 @@ Part - Change Builds
 
 builds is an action applying to nothing.
 Understand "plan" as builds.
+Understand "build" as builds.
 
 Check builds:
 	if blueprints is not visible, say "You can't check your building designs without... your designs!" instead;
@@ -165,7 +166,7 @@ An everyturn rule(this is the Can We Build It rule):
 			now building of blueprints is placed;
 			let startroom be the origin of blueprints;
 			let target be building of blueprints;
-			if facing is east:
+			if facing of blueprints is east:
 				let roomcheck be the room north of the startroom;
 				if roomcheck is not nothing:
 					now roomcheck is the room east of roomcheck;
@@ -198,7 +199,7 @@ An everyturn rule(this is the Can We Build It rule):
 							if roomcheck is not nothing:
 								change the west exit of roomcheck to target;
 								change the east exit of target to roomcheck;
-			if facing is west:
+			if facing of blueprints is west:
 				let roomcheck be the room north of the startroom;
 				if roomcheck is not nothing:
 					now roomcheck is the room west of roomcheck;
@@ -231,7 +232,7 @@ An everyturn rule(this is the Can We Build It rule):
 							if roomcheck is not nothing:
 								change the east exit of roomcheck to target;
 								change the west exit of target to roomcheck;
-			if facing is north:
+			if facing of blueprints is north:
 				let roomcheck be the room west of the startroom;
 				if roomcheck is not nothing:
 					now roomcheck is the room north of roomcheck;
@@ -264,7 +265,7 @@ An everyturn rule(this is the Can We Build It rule):
 							if roomcheck is not nothing:
 								change the south exit of roomcheck to target;
 								change the north exit of target to roomcheck;
-			if facing is south:
+			if facing of blueprints is south:
 				let roomcheck be the room west of the startroom;
 				if roomcheck is not nothing:
 					now roomcheck is the room south of roomcheck;
