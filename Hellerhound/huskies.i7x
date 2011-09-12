@@ -30,7 +30,7 @@ The Thirst of it is 20.
 The Territory of it is 4.
 The Population of it is 10.
 The Density of it is 8.
-The Food of it is 0.
+The Food of it is 40.
 The water of it is 20.
 The Diet of it is { "Meat"  }.
 The Perks of it is { "Hunter" }.
