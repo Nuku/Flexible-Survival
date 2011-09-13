@@ -168,7 +168,7 @@ An everyturn rule(This is the Brave Settler rule):
 						say " You lose [enemies] settlers in the battle to claim the region.";
 						decrease population of tribe of player by enemies;
 						decrease workers of settler by enemies;
-		increase territory of player by 1;
+		increase territory of tribe of player by 1;
 		decrease openland by 1;
 						
 
