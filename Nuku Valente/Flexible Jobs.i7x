@@ -119,5 +119,57 @@ An everyturn rule(this is the Warrior Payday rule):
 			decrease creds of tribe of player by x;
 			say "You pay [x] freecreds for your military.";
 
+Settler is a job.
+The validation of it is the Settlervailable rule.
+The maximum of it is the maxsettler rule.
+
+This is the maxsettler rule:
+	now max of settler is population of tribe of player;
+
+This is the settlervailable rule:
+	if openland > 0, rule succeeds;
+	rule fails;
+	
+An everyturn rule(This is the Brave Settler rule):
+	if openland < 1, now workers of settler is 0;
+	let foragers be workers of settler;
+	if foragers is 0, continue the action;
+	let x be a random number from 80 to 120;
+	increase x by perception of tribe of player / 5;
+	increase x by foragers;
+	if x > 80:
+		say "Excellent news! Promising land has been claimed by your people.";
+		let enemies be a random number from 1 to 3;
+		increase enemies by a random number from 1 to 3;
+		increase enemies by a random number from 1 to 3;
+		let enum be enemies;
+		now enemies is ( enemies * 100 ) / stamina of tribe of player;
+		if enemies is 0:
+			say " You manage to claim it and defeat the native mutants without losing a single soul. Hurray!";
+		otherwise:
+			if enemies < workers of warrior:
+				say " You lose [enemies] warriors in the battle to claim the region.";
+				decrease population of tribe of player by enemies;
+				decrease workers of warrior by enemies;
+			otherwise:
+				if workers of warrior > 0:
+					say " You lose all your warriors in the battle to claim the region.";
+					decrease population of tribe of player by workers of warrior;
+					decrease enemies by workers of warrior;
+					now workers of warrior is 0;
+				if enemies > 0:
+					now enemies is ( enemies * 3 ) / 2;
+					if enemies > workers of settler:
+						say "No settlers survive the attempt, the region is lost!";
+						decrease population of tribe of player by workers of settler;
+						now workers of settler is 0;
+						continue the action;
+					otherwise:
+						say " You lose [enemies] settlers in the battle to claim the region.";
+						decrease population of tribe of player by enemies;
+						decrease workers of settler by enemies;
+		increase territory of player by 1;
+		decrease openland by 1;
+						
 
 Flexible Jobs ends here.
