@@ -326,6 +326,7 @@ An everyturn rule(this is the Eternal Hunger rule):
 		now x is x * 100;
 		now x is x /  hunger of the tribe of the player;
 		if x is greater than 0:
+			now x is a random number from 1 to x;
 			say "Casualties: [x] ";
 			decrease population of tribe of player by x;
 		let loss be 1;
