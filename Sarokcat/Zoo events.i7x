@@ -7,9 +7,39 @@ Section 1- Electric shockers
 Electric shockers is a situation.
 The sarea of Electric shockers is "Zoo";
 
+Electricprodstatus is a number that varies.
+
 Instead of Resolving a Electric shockers:
-	say "Moving through the zoo, you come across one of the zookeepers shacks that seems to have been left open in the confusion. Taking advantage of the situation, you move inside and start searching the place, although it really doesn[apostrophe]t take much looking to find the locked case of what look like extendable cattle prods, obviously intended to shock dangerous animals at a small distance.  Unfortunately the case is locked up tight and all your efforts to pry it open fail miserably, though you do notice someone has placed a sticky note up in the corner.  Reading the note you find it says 'Electric shock treatment available in release 2.0! preorder now!'  Well isn[apostrophe]t that just dandy....";
-	Now Electric shockers is resolved;
+	if Electricprodstatus is 0:
+		say "Moving through the zoo, you come across one of the zookeepers shacks that seems to have been left open in the confusion. Taking advantage of the situation, you move inside and start searching the place, although it really doesn[apostrophe]t take much looking to find the locked case of what look like extendable cattle prods, obviously intended to shock dangerous animals at a small distance.  Unfortunately the case is locked up tight and all your efforts to pry it open fail miserably, though you do notice someone has placed a sticky note up in the corner.  Reading the note you find it says 'Electric shock treatment available in release 2.0! preorder now!'  Well isn[apostrophe]t that just dandy....";
+		now Electricprodstatus is 1;
+	if Electricprodstatus is 1:
+		say "Traveling through the zoo, you come across a rather familiar looking zookeepers shack, and it looks like someone else has been here recently as well. Deciding to be careful you peek around the door to make sure there isn[apostrophe]t some kind of strange beast there waiting for you.  You are rather surprised to note that not only is the shack empty again, but it looks like whatever was here had a goal, they seem to have made a concerted assault on the case in the corner holding the powerful electric prods.  They seem to have had more success then you, because the case now hangs open loosely, and several of the useful tools have spilled out onto the floor, a quick examination shows you that most of the weapons were damaged too severely to work by whoever broke the case open, but you actually manage to find one that you think might actually work for a while before it burns out. ";
+		add "Electric prod" to invent of player;
+		now Electricprodstatus is 2;
+		stop the action;
+	if Electricprodstatus is 2:
+		say "You find the shack where you managed to salvage your slightly damaged Electric weapon from again, and take a quick look around inside, but just like before all you can find are spare batteries, and a number of heavily damaged electric sticks that are about as useful now as a regular stick would be. Sighing you continue on your way.";
+	if Electricprodstatus is 3:
+		say "Finding the shack your electric weapn originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods, eventually cannibalizing one of them in order to replace the burnt out parts in your own. It takes a decent amount of time, but at the end of it, you once more have a semifunctional electric prod, and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.
+		add "Electric prod" to invent of player;
+		now Electricprodstatus is 2;		
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+“Electric prod”	“A powerful electric tool designed to shock and incapacitate wild animals, it should work on the beasts around the city as well.”	5	 Electric prod
+
+Electric prod is an armament. It is part of the player. It has a weapon “[one of]shocking stick[or]your electric prod[at random]”. The weapon damage of Electric prod is 21. The weapon type of Electric prod is “Melee”. It is not temporary.
+
+
+An everyturn rule:
+	if the Electric prod is wielded:
+		if a random chance of 1 in 20 succeeds:
+			say "With one last electric fizz and pop, the electric prod dies in your hands, its battery obviously drained by the damaged circuits burning out.  Sighing you take a look at your broken weapon, before sticking it in the back of your pack to throw away later... At least you got to have some fun with it while it lasted...";
+			now Electricprodstatus is 3;
+			delete "Electric prod";
+
 
 Section 2-  Hyena cages
 
@@ -47,8 +77,8 @@ The sarea of Useful pamphlet is "Zoo";
 Instead of Resolving a Useful pamphlet:
 	say "Wandering around the zoo, you come across an area dedicated to visitor information, you browse through the few remaining pamphlets and find a couple that seem to be very pertinent on how to defend yourself from wild animals. Useful information indeed under the current circumstances!";
 	increase xp of player by 5;
-	Say "Your xp increases slightly due to the helpful pamphlet!";
-	if a random chance of 1 in 10 succeeds:
+	Say "Your xp increases slightly due to the helpful pamphlet!;
+	if a random chance of 1 in 10 is successful:
 		now Useful pamphlet is resolved;
 
 
@@ -88,14 +118,14 @@ Instead of Resolving a Tasty Treats:
 	Now Tasty Treats is resolved;
 
 
-Section 9-  angietrapped
+Section 9-  Angie trapped
 
-angietrapped is a situation.
-The sarea of angietrapped is "Zoo";
+Angie trapped is a situation.
+The sarea of Angie trapped is "Zoo";
 
 angiehappy is a number that varies.
 
-Instead of Resolving a angietrapped:
+Instead of Resolving a Angie trapped:
 	if angiehappy is 0:
 		say "Wandering along the zoo pathways, you hear several of the creatures roaming the zoo apparently fighting nearby. Curious you move slightly closer to investigate, and see a few of the beasts appear to be fighting outside one of the smaller animal pens, you really aren[apostrophe]t sure what they are fighting about, but it could be dangerous to interfere, do you do so anyways?";
 		if player consents:
@@ -110,10 +140,10 @@ Instead of Resolving a angietrapped:
 		otherwise:
 			say "deciding it might be best to let them fight amongst themselves, you continue on your way.";
 			stop the action;
-	if angiehappy is 1:
+	if angiehappy is 1;
 		say "Traveling down the zoo pathways, you hear some strange sounds coming from one of the enclosures, taking a cautious look, you see what appears to be a large pantherlike beast, growling and chuffing as it tries to reach something that appears to have fallen into a narrow space beside the den.  You watch for a while as the beast tries increasingly desperate measures to get at whatever is stuck in there, before it eventually gives up and stalks off in a huff.  Curiosity getting the better of you, you go down to investigate and find some small cloth wrapped packet has rolled into the crack. Grabbing a nearby branch you manage to roll the small bundle out of the crack, and take a look at it, and while it seems to exude a nice pleasantly minty odor, you can[apostrophe] tell why the big panther wanted it so badly.  Shrugging you decide to tuck it away for further investigation later, and continue on through the zoo.";
 		now angiearoused is 1;
-		Now angietrapped is resolved;
+		Now angie trapped is resolved;
 
 Section 10-  Panda parade
 
@@ -147,6 +177,96 @@ Instead of Resolving a Instructional video:
 	say "Coming across one of the zoo buildings in your wanderings, you try taking a look inside, and find a small open class like area, with several desks set up and a projector hooked up to a vcr.  Taking a look at the vcr it is labeled 'Animal Handling Training', feeling curious you push play and settle down to watch a bit.  Soon you are caught up in all the tips and tricks the training tape teaches to aspiring zookeepers on how to handle the animals and deal with any trouble.  An hour later when the tape clicks off, you find yourself feeling much more confidant about your ability to deal with any animals or beasts that you might come across.";
 	increase xp of player by 30;
 	Now Instructional video is resolved;
+
+Section 13- Vet supplies
+
+Vet supplies is a situation.
+The sarea of Vet supplies is "Zoo";
+
+Instead of Resolving a Vet supplies:
+	say "Traveling down some of the zoo maintenance pathways, you come across a small veterinary bag, obviously used by one of the employees to treat the animals. Unfortunately for the employee involved, from the torn vegetation and scent of animal sex in the area, it looks like they were the one who got their 'treatment' today instead. Still deciding there might be something useful to you in the bag, you begin to sort through the various supplies inside. Strangely most of what seems to be contained within is a variety of animal hormone shots, and treatments for either male or female animals depending.  You think you could probably inject yourself with some of the animal hormone boosters, and the extra hormones could help you maintain your gender identity... but should you really be using medicine designed for animals? Do you inject yourself?";
+	if player consents:
+		say "Deciding to try your luck with the animal drugs, you sort them out until you have male and female hormone shots and treatments fully laid out, as well as having figured out just how to apply them properly.  Now that leaves you with just one last decision... which shots do you want to take?  Do you take the female shots?";
+		if player consents:
+			say "Examining the female shots you have laid out before you, you decide to discard the male  shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things..
+			if "Female Preferred" is listed in feats of the player:
+				say "While the chemicals running through your body rushs to your head, you groan as your instincts surge and makes you feel even more beastial then ever, you seem to feel as if your body could not truly be even more female oriented, and all the shots seem to do is make you feel more animalistic and feral then ever.";
+				decrease humanity of player by 40; 
+				stop the action;
+			if "Male Preferred" is listed in feats of the player:
+				say "You can feel the Female hormones running through your body as they counter your strong male orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into females to suit their pleasure and bear their offspring again...";
+				delete "Male Preferred" from feats of the player;
+				decrease hp of player by 30;
+				stop the action;
+			otherwise:
+				say "You can feel the female hormones rushing through your body, and they surprisingly feel amazing as they rush through your body, your body surges with the primal need to breed and formerly neglected maternal instincts are enhanced and strengthened.  You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won[apostrophe]t have to worry about becoming a male anymore!";
+				decrease humanity of player by 20;
+				add "Female Preferred" to feats of the player;
+				stop the action;
+		otherwise:
+			say "Discarding the female shots, you focus your attention on the male treatments you have laid out, and slowly begin the process of injecting yourself with the chemicals, your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of beastial testosterone rushing through your body.";
+			if "Male Preferred" is listed in feats of the player:
+				say "While the testosterone running through your body rushes to your head, and makes you feel even more beastial then ever, you seem to feel as if your body could not truly be even more male oriented, and all the shots seem to do is make you feel more animalistic then ever.";
+				decrease humanity of player by 40; 
+			if "Female Preferred" is listed in feats of the player:
+				say "You can feel the Male hormones running through your body as they counter your strong female orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into males to suit their pleasure again...";
+				delete "Female Preferred" from feats of the player;
+				decrease hp of player by 30;
+				stop the action;
+			otherwise:
+				say "You can feel the male hormones rushing through your body, and they surprisingly feel damn good as your more aggressive male tendancies are enhanced and strengthened.  You feel downright predatory as the chemicals react with and alter your body, and you feel very sure that you won[apostrophe]t have to worry about becoming a female anymore!";
+				decrease humanity of player by 20;
+				add "Male Preferred" to feats of the player;
+				stop the action;
+	otherwise:
+		say "Deciding not to take your chances with any of the medicine designed for animals, you leave the veterinary bag where it lies, and continue along your way through the zoo.";
+	Now Vet supplies is resolved;
+
+
+Section 14- Feeding time
+
+Feeding time is a situation.
+The sarea of Feeding time is "Zoo";
+
+Instead of Resolving a Feeding time:
+	say "Traveling through the twisting paths of the zoo, you come across a rather strange sight, someone has left several cans of food and a bottle of water out in one of the animal feeding areas. Looking around you can[apostrophe]t see any reason for someone to have done so, and the food and water could be pretty useful, still it is rather suspicious, do you try to take it?";
+	if player consents:
+		say "You can[apostrophe]t resist the temptation to snag some fresh supplies, and cautiously move forward to take the food and water. Just as you are bending over to stuff them in your backpack, you hear a sound behind you and whirl around to see a Tigertaur charge at you out of the bushes, obviously glad someone has taken the bait and walked into its trap!";
+		decrease hp of player by 15;
+		challenge "tigertaur";
+		if lost is 0:
+			say " Grinning at the silly beast that thought it could beat you, you quickly pocket the food and water it so graciously left here for you, and whistling continue on your way, keeping your eye out for other traps like this one... after all you could use the supplies.";
+			Add "water bottle" to invent of player;
+			Add "water bottle" to invent of player;
+			Add "food" to invent of player;
+			Add "food" to invent of player;
+			now Feeding time is resolved;
+		otherwise:
+			say "Lying there on the ground while you recover from the beasts devious trap, you eventually manage to roll over and pull yourself back to your feet. Looking around, you note with a sigh that the tigertaur took the food with it when it left, leaving you with nothing to show for your efforts other then your well fucked body. Shouldering your pack sadly, you continue on through the zoo, resolving to not be so easily tricked next time.
+			Stop the action;
+	otherwise:
+		say "Deciding that anything that looks this suspicious is probably some form of trap, you continue along your way, leaving the food and water behind.";
+		now Feeding time is resolved;
+
+Section 15- Security Station
+
+Security Station is a situation.
+The sarea of Security Station is "Zoo";
+
+Instead of Resolving a Security Station:
+	say "Traveling through the deserted zoo, you come across the entrance to a security station. While normally the doors to such areas are locked tightly, this one seems to have been broken down at some point during the recent troubles. Deciding to take a look inside, you can see the security station has several monitors that appear to be working at a glance, although some of them appear to be playing on a loop.  Moving into the small security area, you note that it smells like beastial sex in here, leaving no doubt as to why the security station was broken into, the rich musky scent makes your body tingle with lust, and you realize you can[apostrophe]t stay in here for long without becoming even more aroused then usual. Still there might be something of use in here, you think as you search the small monitoring room, you find your eyes continually drawn to the monitors however, as the action on the screen repeats itself over and over.  Soon you stop even trying to search the area, and are just watching intently, as a cheetah woman teases a zoo intruder into becoming her male mate, and the scene as a pair of wolftaurs burst out of the bathroom and run down some of the zoo paths, before the male catches the female and begins to mate her like an animal. Other scenes of sex and transformation are played out on the monitors in front of you, but you manage to pull yourself away from the sexual scene and scents, and stagger out of the Security booth. Somehow sure that if you had stayed much longer, you would have stayed there watching the sexual scenes and growing increasingly aroused until one of the beasts in the zoo managed to find you in there, and given how aroused you already are.. by that point you might not even have fought whatever strong sexual beast came to take you...  Shaking your head to try to clear it of the increasingly lewd thoughts you continue on your way through the zoo.";
+	now libido of player is 100;
+	decrease humanity of player by 10;
+	Now Security Station is resolved;
+
+Section 16- Broken fences
+
+Broken fences is a situation.
+The sarea of Broken fences is "Zoo";
+
+Instead of Resolving a Broken fences:
+	say "While traveling through the zoo paths, you note a small broken area of the underbrush, and out of curiosity move a little closer to take a look.  Behind the foliage, you can see the back of one of the animal enclosures, a nice thick area of fence designed to keep the animals inside. Of course in this case you can see how this group of animals got out, as the fence has been broken and torn here where it isn[apostrophe]t easily visible, leaving more then enough room for someone, or something, to slip into or out of the enclosure.  Examining the edges of the fence, you find yourself more then a little worried about encountering something able to do that kind of damage to the special cage fences, and decide to move along down the pathway quickly, just in case it might still be in the area.";
+	Now Broken fences is resolved;
 
 
 
