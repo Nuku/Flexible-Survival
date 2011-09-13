@@ -19,8 +19,8 @@ carry out builds:
 
 constructing is an action applying to one thing and one visible thing.
 Understand "Build [any Construct] at [direction]" as constructing.
-Understand "Build [Construct] in [direction]" as constructing.
-Understand "Build [Construct] to [direction]" as constructing.
+Understand "Build [any Construct] in [direction]" as constructing.
+Understand "Build [any Construct] to [direction]" as constructing.
 
 Check constructing:
 	if blueprints is not visible, say "You can't give orders to your builders while you don't have your designs with you!" instead;
