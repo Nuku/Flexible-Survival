@@ -21,7 +21,7 @@ Instead of Resolving a Electric shockers:
 	if Electricprodstatus is 2:
 		say "You find the shack where you managed to salvage your slightly damaged Electric weapon from again, and take a quick look around inside, but just like before all you can find are spare batteries, and a number of heavily damaged electric sticks that are about as useful now as a regular stick would be. Sighing you continue on your way.";
 	if Electricprodstatus is 3:
-		say "Finding the shack your electric weapn originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods, eventually cannibalizing one of them in order to replace the burnt out parts in your own. It takes a decent amount of time, but at the end of it, you once more have a semifunctional electric prod, and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.
+		say "Finding the shack your electric weapn originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods, eventually cannibalizing one of them in order to replace the burnt out parts in your own. It takes a decent amount of time, but at the end of it, you once more have a semifunctional electric prod, and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.";
 		add "Electric prod" to invent of player;
 		now Electricprodstatus is 2;		
 
@@ -38,7 +38,7 @@ An everyturn rule:
 		if a random chance of 1 in 20 succeeds:
 			say "With one last electric fizz and pop, the electric prod dies in your hands, its battery obviously drained by the damaged circuits burning out.  Sighing you take a look at your broken weapon, before sticking it in the back of your pack to throw away later... At least you got to have some fun with it while it lasted...";
 			now Electricprodstatus is 3;
-			delete "Electric prod";
+			delete Electric prod;
 
 
 Section 2-  Hyena cages
@@ -77,8 +77,8 @@ The sarea of Useful pamphlet is "Zoo";
 Instead of Resolving a Useful pamphlet:
 	say "Wandering around the zoo, you come across an area dedicated to visitor information, you browse through the few remaining pamphlets and find a couple that seem to be very pertinent on how to defend yourself from wild animals. Useful information indeed under the current circumstances!";
 	increase xp of player by 5;
-	Say "Your xp increases slightly due to the helpful pamphlet!;
-	if a random chance of 1 in 10 is successful:
+	Say "Your xp increases slightly due to the helpful pamphlet!";
+	if a random chance of 1 in 10 succeeds:
 		now Useful pamphlet is resolved;
 
 
@@ -118,14 +118,14 @@ Instead of Resolving a Tasty Treats:
 	Now Tasty Treats is resolved;
 
 
-Section 9-  Angie trapped
+Section 9-  AngieTrapped
 
-Angie trapped is a situation.
-The sarea of Angie trapped is "Zoo";
+AngieTrapped is a situation.
+The sarea of AngieTrapped is "Zoo";
 
 angiehappy is a number that varies.
 
-Instead of Resolving a Angie trapped:
+Instead of Resolving a AngieTrapped:
 	if angiehappy is 0:
 		say "Wandering along the zoo pathways, you hear several of the creatures roaming the zoo apparently fighting nearby. Curious you move slightly closer to investigate, and see a few of the beasts appear to be fighting outside one of the smaller animal pens, you really aren[apostrophe]t sure what they are fighting about, but it could be dangerous to interfere, do you do so anyways?";
 		if player consents:
@@ -140,10 +140,10 @@ Instead of Resolving a Angie trapped:
 		otherwise:
 			say "deciding it might be best to let them fight amongst themselves, you continue on your way.";
 			stop the action;
-	if angiehappy is 1;
+	if angiehappy is 1:
 		say "Traveling down the zoo pathways, you hear some strange sounds coming from one of the enclosures, taking a cautious look, you see what appears to be a large pantherlike beast, growling and chuffing as it tries to reach something that appears to have fallen into a narrow space beside the den.  You watch for a while as the beast tries increasingly desperate measures to get at whatever is stuck in there, before it eventually gives up and stalks off in a huff.  Curiosity getting the better of you, you go down to investigate and find some small cloth wrapped packet has rolled into the crack. Grabbing a nearby branch you manage to roll the small bundle out of the crack, and take a look at it, and while it seems to exude a nice pleasantly minty odor, you can[apostrophe] tell why the big panther wanted it so badly.  Shrugging you decide to tuck it away for further investigation later, and continue on through the zoo.";
 		now angiearoused is 1;
-		Now angie trapped is resolved;
+		Now AngieTrapped is resolved;
 
 Section 10-  Panda parade
 
@@ -188,14 +188,14 @@ Instead of Resolving a Vet supplies:
 	if player consents:
 		say "Deciding to try your luck with the animal drugs, you sort them out until you have male and female hormone shots and treatments fully laid out, as well as having figured out just how to apply them properly.  Now that leaves you with just one last decision... which shots do you want to take?  Do you take the female shots?";
 		if player consents:
-			say "Examining the female shots you have laid out before you, you decide to discard the male  shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things..
+			say "Examining the female shots you have laid out before you, you decide to discard the male  shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things..";
 			if "Female Preferred" is listed in feats of the player:
 				say "While the chemicals running through your body rushs to your head, you groan as your instincts surge and makes you feel even more beastial then ever, you seem to feel as if your body could not truly be even more female oriented, and all the shots seem to do is make you feel more animalistic and feral then ever.";
 				decrease humanity of player by 40; 
 				stop the action;
 			if "Male Preferred" is listed in feats of the player:
 				say "You can feel the Female hormones running through your body as they counter your strong male orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into females to suit their pleasure and bear their offspring again...";
-				delete "Male Preferred" from feats of the player;
+				remove "Male Preferred" from feats of the player;
 				decrease hp of player by 30;
 				stop the action;
 			otherwise:
@@ -210,7 +210,7 @@ Instead of Resolving a Vet supplies:
 				decrease humanity of player by 40; 
 			if "Female Preferred" is listed in feats of the player:
 				say "You can feel the Male hormones running through your body as they counter your strong female orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into males to suit their pleasure again...";
-				delete "Female Preferred" from feats of the player;
+				remove "Female Preferred" from feats of the player;
 				decrease hp of player by 30;
 				stop the action;
 			otherwise:
@@ -242,7 +242,7 @@ Instead of Resolving a Feeding time:
 			Add "food" to invent of player;
 			now Feeding time is resolved;
 		otherwise:
-			say "Lying there on the ground while you recover from the beasts devious trap, you eventually manage to roll over and pull yourself back to your feet. Looking around, you note with a sigh that the tigertaur took the food with it when it left, leaving you with nothing to show for your efforts other then your well fucked body. Shouldering your pack sadly, you continue on through the zoo, resolving to not be so easily tricked next time.
+			say "Lying there on the ground while you recover from the beasts devious trap, you eventually manage to roll over and pull yourself back to your feet. Looking around, you note with a sigh that the tigertaur took the food with it when it left, leaving you with nothing to show for your efforts other then your well fucked body. Shouldering your pack sadly, you continue on through the zoo, resolving to not be so easily tricked next time.";
 			Stop the action;
 	otherwise:
 		say "Deciding that anything that looks this suspicious is probably some form of trap, you continue along your way, leaving the food and water behind.";
