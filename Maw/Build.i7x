@@ -144,8 +144,8 @@ An everyturn rule(this is the Can We Build It rule):
 		say "Your current building project is complete. You should pick a new one.";
 		continue the action;
 	let foragers be workers of builder;
-	now foragers is foragers * 10; [ Builders are worth 10 points each ]
-	increase foragers by 2 * ( population of tribe of player - occupied of tribe of player ); [ idle people are worth 2 points each ]
+	now foragers is foragers * 2; [ Builders are worth 2 points each ]
+	increase foragers by ( population of tribe of player - occupied of tribe of player ) / 5; [ idle people are worth 1/5th points each ]
 	[First check for easy to grab salvage, will become more scarce over time]
 	let x be a random number from 80 to 120; [mild variance]
 	increase x by (Handiness of tribe of player) / 5;
