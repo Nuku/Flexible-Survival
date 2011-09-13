@@ -143,7 +143,7 @@ An everyturn rule(This is the Brave Settler rule):
 		increase enemies by a random number from 1 to 3;
 		increase enemies by a random number from 1 to 3;
 		if turns < 100:
-			now enemies is enemies -1;
+			now enemies is enemies - 1;
 		if turns < 50:
 			now enemies is enemies / 2;
 		if enemies < 1, now enemies is 1;
