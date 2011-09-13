@@ -713,7 +713,8 @@ Include Sabretooth by Sarokcat.
 Include Nermine by Sarokcat.
 Include Jackalboy by Sarokcat.
 Include Wolftaur by Sarokcat.
-Include Lindsey by Sarokcat..
+Include Lindsey by Sarokcat.
+Include jackalman by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
