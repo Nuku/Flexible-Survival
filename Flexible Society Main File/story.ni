@@ -275,12 +275,12 @@ An everyturn rule(this is the Foraging rule):
 	decrease foragers by occupied of tribe of player;
 	increase foragers by the population of the tribe of the player;
 	now foragers is foragers / 2; [People breed easier when not busy, but aren't entirely unavailable even while busy]
-	if foragers * self fertility of tribe of player < ( 252 * 5 * 3 ) and self fertility of tribe of player is greater than 0:
-		now foragers is ( 252 * 3 * 5 ) / self fertility of tribe of player;
 	let x be a random number from 1 to 100;
 	let y be 0;
+	let crit be 0;
 	if x is greater than 90:
 		now y is 3;
+		now crit is 1;
 	otherwise if x is greater than 60:
 		now y is 2;
 	otherwise:
@@ -289,6 +289,7 @@ An everyturn rule(this is the Foraging rule):
 	let mor be morale of tribe of player;
 	if mor is less than 20, now mor is 20;
 	now y is ( y * mor ) / 100;
+	if crit is 1 and y is less than 1, now y is 1;
 	if y is greater than 0:
 		say "New [skinadj of tribe of player] children are born, rapidly growing to ready adults: +[y] ";
 		increase population of tribe of player by y;
