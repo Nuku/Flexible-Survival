@@ -151,10 +151,10 @@ An everyturn rule(This is the Brave Settler rule):
 			now enemies is enemies / 2;
 		if enemies < 1, now enemies is 1;
 		let enum be enemies;
-		say "We have [workers of warrior] warriors available and [workers of settler] settlers available to fight. There are [enum] enemies.";
+		say "We have [workers of warrior] warrior[if workers of warrior is not 1]s[end if] available and [workers of settler] settler[if workers of settler is not 1]s[end if] available to fight. There are [enum] enemie[if enum is not 1]s[end if].";
 		now enemies is ( enemies * 100 ) / stamina of tribe of player;
 		let estimate be ( enemies * a random number from 66 to 150) / 100;
-		say "We estimate we will lose [estimate] warriors(or even more settlers if we run out of warriors)";
+		say "We estimate we will lose [estimate] warrior[if estimate is not 1]s[end if](or even more settlers if we run out of warriors)";
 		say "Should we proceed?";
 		if player consents:
 			now estimate is 0;
@@ -165,7 +165,7 @@ An everyturn rule(This is the Brave Settler rule):
 			say " You manage to claim it and defeat the native mutants without losing a single soul. Hurray!";
 		otherwise:
 			if enemies < workers of warrior:
-				say " You lose [enemies] warriors in the battle to claim the region.";
+				say " You lose [enemies] warrior[if enemies is not 1]s[end if] in the battle to claim the region.";
 				decrease population of tribe of player by enemies;
 				decrease workers of warrior by enemies;
 			otherwise:
@@ -182,7 +182,7 @@ An everyturn rule(This is the Brave Settler rule):
 						now workers of settler is 0;
 						continue the action;
 					otherwise:
-						say " You lose [enemies] settlers in the battle to claim the region.";
+						say " You lose [enemies] settler[if enemies is not 1]s[end if] in the battle to claim the region.";
 						decrease population of tribe of player by enemies;
 						decrease workers of settler by enemies;
 		increase territory of tribe of player by 1;
