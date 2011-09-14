@@ -153,6 +153,7 @@ Hunting is a research.
 The description of it is "Hunting techniques allow for efficient exploiting of animal resources on your lands, producing more food and/or trade goods.".
 The cost of it is 50.
 The perk of it is "Hunting".
+It is indefinite.
 
 
 Science ends here.

@@ -30,7 +30,10 @@ An everyturn rule(this is the Farming rule):
 	[First check for easy to grab salvage, will become more scarce over time]
 	let x be a random number from 80 to 120; [mild variance]
 	if farming is complete:
-		increase x by 10;
+		let z be level of farming;
+		if "Farming" is listed in perks of tribe of player, increase z by 1;
+		if z is less than 1, now z is 1;
+		increase x by 10 * z;
 	if "Plant" is listed in diet of tribe of player:
 		increase x by 10;
 	now x is x * foragers;
@@ -67,7 +70,10 @@ An everyturn rule(this is the Hunting rule):
 	[First check for easy to grab salvage, will become more scarce over time]
 	let x be a random number from 80 to 120; [mild variance]
 	if hunting is complete:
-		increase x by 10;
+		let z be level of hunting;
+		if "Hunting" is listed in perks of tribe of player, increase z by 1;
+		if z is less than 1, now z is 1;
+		increase x by 10 * z;
 	if "Meat" is listed in diet of tribe of player:
 		increase x by 10;
 	now x is x * foragers;
