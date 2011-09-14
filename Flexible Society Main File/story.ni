@@ -463,7 +463,7 @@ To Workercheck:
 		repeat with x running through jobs:
 			if x is valid and x is maximized and workers of x < max of x:
 				let z be max of x - workers of x;
-				if z is less than population of tribe of player - occupied of tribe of player, now z is population of tribe of player - occupied of tribe of player;
+				if z is greater than population of tribe of player - occupied of tribe of player, now z is population of tribe of player - occupied of tribe of player;
 				increase workers of x by z;
 				increase occupied of tribe of player by z;
 
@@ -483,6 +483,7 @@ Carry out Assigning:
 		say "[x] -- [workers of x]/[max of x][if x is maximized](MAXIMIZED)[end if][line break]";
 	say "Unassigned Workers: [population of tribe of player - occupied of tribe of player]";
 	say "[line break]Type [bold type]assign (number) to (job)[roman type] to change the amount of workers in a job.";
+	say "Type [bold type]assign max to (job)[roman type] to auto fill a job with available workers.";
 	
 Understand "Assign max to [job]" as maxtasking.
 
