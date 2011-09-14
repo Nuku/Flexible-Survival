@@ -668,6 +668,7 @@ Include Feral Sea Dragon by Tunalord Sefont.
 Include Feral Sea Dragoness by Tunalord Sefont.
 Include Pets by Nuku Valente.
 Include Tigress Hooker for FS by Stripes.
+Include High Rise Events by Stripes.
 Include Little Fox by Sarokcat.
 Include Red Events by Stripes.
 Include sprite by Nuku Valente.
