@@ -153,7 +153,7 @@ An everyturn rule(This is the Brave Settler rule):
 		let enum be enemies;
 		say "We have [workers of warrior] warriors available and [workers of settler] settlers available to fight. There are [enum] enemies.";
 		now enemies is ( enemies * 100 ) / stamina of tribe of player;
-		let estimate be enemies * a random number from 66 to 150;
+		let estimate be ( enemies * a random number from 66 to 150) / 100;
 		say "We estimate we will lose [estimate] warriors(or even more settlers if we run out of warriors)";
 		say "Should we proceed?";
 		if player consents:
