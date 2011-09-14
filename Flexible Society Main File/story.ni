@@ -459,6 +459,13 @@ To Workercheck:
 		repeat with x running through jobs:
 			now workers of x is 0;
 		now occupied of tribe of player is 0;
+	otherwise:
+		repeat with x running through jobs:
+			if x is valid and x is maximized and workers of x < max of x:
+				let z be max of x - workers of x;
+				if z is less than population of tribe of player - occupied of tribe of player, now z is population of tribe of player - occupied of tribe of player;
+				increase workers of x by z;
+				increase occupied of tribe of player by z;
 
 Understand "Assign" as assigning.
 
@@ -473,10 +480,32 @@ Carry out Assigning:
 	say "Job -- Workers Currently Assigned";
 	repeat with x running through valid jobs:
 		follow the maximum of x;
-		say "[x] -- [workers of x]/[max of x][line break]";
+		say "[x] -- [workers of x]/[max of x][if x is maximized](MAXIMIZED)[end if][line break]";
 	say "Unassigned Workers: [population of tribe of player - occupied of tribe of player]";
 	say "[line break]Type [bold type]assign (number) to (job)[roman type] to change the amount of workers in a job.";
 	
+Understand "Assign max to [job]" as maxtasking.
+
+Maxtasking is an action applying to one thing.
+
+Check Maxtasking:
+	if clipboard is not visible:
+		say "You need your trusty clipboard to assign jobs." instead;
+	if noun is not valid:
+		say "Your people do not know how to do that job" instead;
+	follow maximum of noun;
+	if max of noun is population of tribe of player:
+		say "That job appears to have no real maximum.";
+
+Carry out Maxtasking:
+	workercheck;
+	if noun is maximized:
+		say "[noun] will no longer be automatically filled with workers.";
+		now noun is not maximized;
+	otherwise:
+		say "[noun] will be automatically filled with workers.";
+		now noun is maximized;
+
 Understand "Assign [number] to [job]" as tasking.
 
 Tasking is an action applying to a number and one thing.
