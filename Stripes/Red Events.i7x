@@ -1,5 +1,5 @@
 Red Events by Stripes begins here.
-[version 1]
+[version 2 - scoring added]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the Red Light District."
 
@@ -12,6 +12,7 @@ The sarea of Leather Wolves is "Red";
 Instead of resolving a Leather Wolves:
 	say "     Some noise up ahead attracts your attention and you creep closer.  Hunkering down behind a pair of cars, you look at the small pack of wolfmen gathered in front of a leather store.  At some point, several of the mannequins have been stripped of their outfits and the wolves seem to be wearing them.  Somehow they leather gear is shaped to cover large parts of their lupine faces and transformed bodies.  A pair of them are indulging in sex on the leather harness they[apostrophe]ve hung from a building-side flagpole.  Others are stroking themselves off or fingering their pussies while they watch.  As you study the pack more closely, you come to realize that they are not merely wearing the leather, but that it is part of them at the same time.";
 	say "     With this pack established here, there[apostrophe]s clearly no safe way to search the immediate area further and you quietly backtrack.";
+	increase score by 1;
 	Now Leather Wolves is resolved;
 
 
@@ -23,7 +24,9 @@ The sarea of Fetish Store is "Red";
 
 Instead of resolving a Fetish Store:
 	say "     You come across a sex and fetish shop, which has clearly been ransacked by the sex-crazed mob.  After cautiously glancing around, you slip inside to see if you can find anything of use.  Sidestepping toppled displays, broken glass and sticky puddles, you quickly see that the sextoys and lube have all been taken.  Any remaining kinkwear is damaged beyond usability or soaked in cum.  This place has been stripped cleaner than any place you[apostrophe]ve examined to date.  But fortune smiles upon you just a little before you head out and you spot something sticking out from under one of the toppled shelves.  Moving the shelf aside, you see it is a small riding crop.  Rather than leaving empty-handed, you decide to keep it and slip back outside to continue searching.";
+	say "     Riding crop obtained.  Giddy-up!";
 	add "riding crop" to invent of player;
+	increase score by 5;
 	Now Fetish Store is resolved;
 
 Table of Game Objects (continued)
@@ -46,6 +49,8 @@ Instead of resolving a Raided Corner Store:
 		if hyg is 3:
 			if the bodyname of player is "Herm Hyena":
 				say "     As one of the pair is about to step forward to deal with you, the other grabs hir shoulder, holding them back.  The second steps forward, looking you over more carefully.  'Hey, I think I heard about you from Gina.  You certainly smell like you[apostrophe]ve met her.  Could you use some help there?'  You nod and the hyenas join you by the door.  One has some lockpicks and they soon get the door open.  Little of the stores inside are usable, most having been eaten or damaged already.  Presumably the owner was holed up in here. Before they succumbed to the infection and presumably left to the wilds of the city, that is.  But there is still some the usable loot.  You split your find with the hyenas, taking a couple of drinks and snacks each before you and they go your separate ways.[line break]";
+				say "     You obtain two snacks and two soft drinks.";
+				increase score by 10;
 				add "soda" to invent of player;
 				add "soda" to invent of player;
 				add "chips" to invent of player;
@@ -60,6 +65,7 @@ Instead of resolving a Raided Corner Store:
 			say "After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open.  Disappointed, you head back into the city.";
 	otherwise:
 		say "You opt to leave it alone and head back to search elsewhere.  The grapes were probably sour anyhow.";
+		increase score by 1;
 	Now Raided Corner Store is resolved;
 
 
@@ -90,15 +96,18 @@ Instead of resolving a Aussie Pub:
 			decrease humanity of player by 18;
 			decrease thirst of player by 30;
 			decrease hunger of player by 12;
+			increase score by 25;
 			if hunger of player is less than 0:
 				now hunger of player is 0;
 			if thirst of player < 0:
 				now thirst of player is 0;
 		otherwise:
 			say "You resist the temptation and head off with a little more resolve.";
+			increase score by 1;
 			increase humanity of player by 5;
 	otherwise:
 		say "You decide it[apostrophe]d probably be best to head for sneak away before you[apostrophe]re noticed.";
+		increase score by 1;
 	Now Aussie Pub is resolved;
 
 
@@ -119,6 +128,7 @@ Instead of resolving a Flooded Street:
 		say "Those disturbing creatures finally dealt with, you make good your escape before others turn up.";
 	otherwise:
 		say "You quietly make your escape.";
+		increase score by 1;
 	Now Flooded Street is resolved;
 
 
@@ -136,6 +146,7 @@ Instead of resolving a Strip Bar:
 			say "[stripbarsearch]";
 		otherwise:
 			say "     You go off, deciding to find a safer place to search.";
+			increase score by 1;
 		now stripbarcounter is 2;
 	if stripbarcounter is 2:
 		say "     You come to a third strip bar tucked into secluded part of this seedy part of town.  It seems to have faired relatively well, with only minor damage.  After a cautious glance inside, you don[apostrophe]t see any signs of trouble.  Do you enter?";
@@ -143,6 +154,7 @@ Instead of resolving a Strip Bar:
 			say "[stripbarsearch]";
 		otherwise:
 			say "     You go off, deciding to find a safer place to search.";
+			increase score by 1;
 		Now Strip Bar is resolved;
 	otherwise:
 		say "     Passing through the infected city, you keep a watch for aggressive creatures or possible things of use while you await rescue.  During your searching, you come across a relatively intact strip bar.  While the lights and neon are off and it seems unoccupied, the place seems to be in better shape than many of the others you[apostrophe]ve come across.  Perhaps there may still be something useful in there.  Though given the nature of the business, you do worry about the risks.  Do you enter?";
@@ -150,6 +162,7 @@ Instead of resolving a Strip Bar:
 			say "[stripbarsearch]";
 		otherwise:
 			say "     You go off, deciding to find a safer place to search.";
+			increase score by 1;
 		now stripbarcounter is 1;
 	stop the action;
 
@@ -157,12 +170,16 @@ to say stripbarsearch:
 	let T be a random number between one and twelve;
 	if T is 1:
 		say "     Navigating around the tables and the occasional cum puddle, you see that the outbreak struck here as well while the business was running.  You are extra cautious and avoid the main public area, instead checking behind the bar for supplies.  It seems that much of it was damaged or take already, but you do have some luck and find some soda you can take.";
+		say "     You obtain three soft drink cans.";
+		increase score by 5;
 		add "soda" to invent of player;
 		add "soda" to invent of player;
 		add "soda" to invent of player;
 	if T is 2:
 		say "     Searching through the strip bar, you have to avoid cum puddles.  You head over to check the bar, but find that it was destroyed during the outbreak.  It is covered in claw marks all over.  You can see a huge puddle of cum behind the bar.  You consider leaving, but spot the backstage door and slip in there before you leave.  It[apostrophe]s also quite messy back here, but you do manage to recover some snacks that one of the girls must have brought.";
+		say "     You obtain a can of soft drink.";
 		add "soda" to invent of player;
+		increase score by 1;
 	if T is 3:
 		say "     Searching the strip bar, take care to avoid the cum puddles you find in there.  Clearly this place was open when the infection struck and the patrons and staff fell quickly.  You look around as best you can, but the extent of the contamination is too great and you have to give up the place for a loss.  As you step out, you are spotted by a tigress who emerges from a nearby alleyway.  She grins at you and runs a paw along her side.  'Looking for a little fun, are we?  I[apostrophe]ve got just what you need,' she purrrs, fondling a sizeable bulge under hir skirt.[line break]";
 		challenge "Tigress Hooker";
@@ -191,8 +208,10 @@ to say stripbarsearch:
 		sort table of random critters in random order;
 		now monster is 1;
 		infect;
+		decrease score by 5;
 	if T > 7:
 		say "Searching through the strip bar, you have to avoid cum puddles.  You head over to check the bar, but find that it was destroyed during the outbreak.  Clearly someone became something large and aggressive.  The booze rack has been knocked completely over and the bottles are shattered.  There are large patches of cum all around that area, so you have no inclination to search it more closely for any goods which may have survived.  Well, better luck next time.";
+		increase score by 1;
 
 
 
@@ -209,20 +228,23 @@ Instead of resolving a Evangelist:
 	fight;
 	say "     Having dealt with the next, you look over just in time to see the man get blasted across the face by a large splatter of cum.  Turning to the side, you see a trio of leather-clad wolves with their arms around the body of one of the large, cock-shaped creatures.  They stroke and tease it again, this time one mounting it from behind as the others aim.  Another volley is shot, striking the man in the chest.  He[apostrophe]s already begun to transform, face taking the smooth shape of a giant glans and torso reshaping into a giant cock.  The press of fur and flesh around you brings another monster to press against you, trying to bear you down to take its pleasure.[line break]";
 	fight;
-	say "     Taking a quick breath, you look back to what remains of the man, but find him but another piece of the writhing mass of orgiastic sex.  Only the tattered remains of his clothes let you spot him, he is shifting almost constantly as a spit-roasted by a leopard guy at the front and a raccoon herm at the rear.  Several others stroke their cocks, spraying cum all over him, and he seems to be loving it.  Lost in the release of his long pent-up inhibitions, he has joined the mindlessly infected.";
+	say "     Taking a quick breath, you look back to what remains of the man, but find him but another piece of the writhing mass of orgiastic sex.  Only the tattered remains of his clothes let you spot him, he is shifting almost constantly as he is spit-roasted by a leopard guy at the front and a raccoon herm at the rear.  Several others stroke their cocks, spraying cum all over him, and he seems to be loving it.  Lost in the release of his long pent-up inhibitions, he has joined the mindlessly infected.";
 	if libido of player > 39:
 		say "     The sights, sounds and scents around you are becoming more and more cloying.  You look around, seeing so many attractive pairings and trios of lustful animals.  You are tempted to join them - to simply give into the lustful mass and join the orgy.";
 		if libido of player > 74:
 			say "[orgyoutcome]";
+			increase score by 50;
 			Now Evangelist is resolved;
 			stop the action;
 		if player consents:
 			say "[orgyoutcome]";
+			increase score by 50;
 			Now Evangelist is resolved;
 			stop the action;
 	say "     You resist the urge to give in and join the orgy that has formed after the battle and scan around the sea of fur and flesh surrounding you.  You notice the leather wolves are still at it with the cock cannon and one of them points towards you, trying to get the attention of his lustful breathren.  You need to get out of here soon.  Finding a path between several mating pairs, you try to dash to safety before things cascade further.  You run, making it most of the way out of the crowd before being blocked by another monster.[line break]";
 	fight;
 	say "     Pushing your way free, you move to the relative safety of a nearby alcove, panting to catch your breath and to recover you energy.  You look back at the top of the car, seeing that the leopard has prevailed against the other prospective lovers and is now plowing into the newly corrupted leopardess beneath him.  They both yowl in feline ecstacy as he pumps his heavy load into her womb, seeking to breed his new mate.";
+	increase score by 50;
 	Now Evangelist is resolved;
 
 to say orgyoutcome:
@@ -268,6 +290,7 @@ Instead of resolving a Business as Usual:
 	say "     You spot a grey mouse person a few buildings away.  He[apostrophe]s wearing a blue t-shirt and shorts and is carrying a small backpack in one hand.  Despite their small size, barely over four feet tall, you take cover to observe him for a moment, trying to decide what to do.  He darts intently across the street, stopping short of a tigress who steps from a nearby alleyway.";
 	say "     The tigress is much taller than him and wearing a skimpy outfit that shows off her shapely body.  She has a pink half-shirt that barely holds in her large bosom.  She has a fishnet undershirt that covers her tight belly and has a cheap, leather skirt around her waist.  Her red hair is tied into a ponytail by a small bow.  She has another similar bow at the end of her tail.";
 	say "     The mouse stands there nervously for a while, shifting from one foot to another, while she is at ease, almost as if bored by the discussion.  Finally, she grows weary of a conversation she[apostrophe]s probably had many times before and waves for him to give her the bag[apostrophe]s contents.  He smiles and pulls out a two-liter carton of milk and the tigress[apostrophe]s eyes almost light up.  She takes it and rushes him into the alley, paws roaming over his body.  It seems that even in these strange times, the world[apostrophe]s oldest profession lives on.";
+	increase score by 1;
 	Now Business as Usual is resolved;
 
 
