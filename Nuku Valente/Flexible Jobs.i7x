@@ -25,7 +25,6 @@ This is the farmvailable rule:
 	rule fails;
 
 An everyturn rule(this is the Farming rule):
-	if the remainder after dividing turns by 4 is not 0, continue the action;
 	if workers of farmer is 0, continue the action;
 	let foragers be workers of farmer;
 	[First check for easy to grab salvage, will become more scarce over time]
@@ -34,7 +33,6 @@ An everyturn rule(this is the Farming rule):
 		increase x by 10;
 	if "Plant" is listed in diet of tribe of player:
 		increase x by 10;
-	now x is x * 4;
 	now x is x * foragers;
 	now x is x / 100;
 	if x is greater than 0: [ There is forage available ]
@@ -64,7 +62,6 @@ This is the huntvailable rule:
 	rule fails;
 
 An everyturn rule(this is the Hunting rule):
-	if the remainder after dividing turns by 2 is not 0, continue the action;
 	if workers of hunter is 0, continue the action;
 	let foragers be workers of hunter;
 	[First check for easy to grab salvage, will become more scarce over time]
@@ -73,7 +70,6 @@ An everyturn rule(this is the Hunting rule):
 		increase x by 10;
 	if "Meat" is listed in diet of tribe of player:
 		increase x by 10;
-	now x is x * 2;
 	now x is x * foragers;
 	now x is x / 100;
 	if x is greater than 0: [ There is forage available ]
