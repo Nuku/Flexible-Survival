@@ -67,6 +67,8 @@ A Research has a number called cost.
 A Research has a rule called Completion.
 The completion of a research is usually nothing rule;
 A research has a text called perk.
+A research can be indefinite.
+A research has a number called level.
 
 This is the nothing rule:
 	do nothing;
@@ -79,6 +81,7 @@ Definition: A Research (called J) is valid:
 		no;
 
 Definition: A Research (called J) is complete:
+	if level of J > 0, yes;
 	if progress of J >= cost of J:
 		yes;
 	otherwise:
@@ -129,6 +132,11 @@ An everyturn rule(this is the SCIENCE rule):
 				if the perk of current of nerd is not "":
 					add the perk of current of nerd to perks of tribe of player;
 			decrease science of tribe of player by z;
+			if current of nerd is indefinite and progress of current of nerd > cost of current of nerd:
+				say " Research continues on [current of nerd].";
+				now progress of current of nerd is 0;
+				now cost of current of nerd is cost of current of nerd * 2;
+				increase level of current of nerd by 1;
 		now x is x / 2;
 		if x is less than 1, now x is 1;
 		increase science of tribe of player by x;
@@ -139,6 +147,7 @@ Farming is a research.
 The description of it is "Farming the land can be a source of valuable food and/or trade goods. It takes far fewer people to farm food than it does to forage.".
 The cost of it is 50.
 The perk of it is "Farming".
+It is indefinite.
 
 Hunting is a research.
 The description of it is "Hunting techniques allow for efficient exploiting of animal resources on your lands, producing more food and/or trade goods.".
