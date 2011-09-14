@@ -33,7 +33,7 @@ The Density of it is 6.
 The Food of it is 0.
 The water of it is 20.
 The Diet of it is {  }.
-The Perks of it is { }.
+The Perks of it is { "Does Not Eat" }.
 The science advisor of it is "An imperious looking latex vixen. You can tell she's the smart one because she has the glasses on. Nevermind that one of the lenses fell out. Besides, look at that hat, so tall, with bells. She obviously knows her stuff!".
 
 Instead of talking the nerd when tribe of player is latex foxes:
