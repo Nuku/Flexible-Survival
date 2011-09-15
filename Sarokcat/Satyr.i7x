@@ -8,13 +8,13 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Satyr attack:
-	if cunts of player is greater than 0:
+	if cunts of player is greater then 0:
 		say “'Hah!' The satyr says as he pins you to the wall,  'What do we have here?' the goatlike man says with a leer as his hands roam your body, 'Not quite a proper nymph I[apostrophe]ll admit, but you[apostrophe]ll do!'  The satyr says as he begins to fondle you, wine spilling everywhere the scent of the strong wine seeming to spiral through your head making you feel as if you had had a few too many drinks yourself.  The satyr pays no attention however to your distraction, as he is too busy positioning his large member for best effect, a fact brought to your attention as it begins to poke at your feminine opening.  Looking down you can only get small glimpses of his large member, as his body is in the way as he presses your back up against the wall. His hands drop to your hips as he spreads you wide for him, you open your mouth to try to protest, but only a lusty moan comes out as he begins to sink his hot goatlike meat into you.[line break]”;
 		say “Your mind fogs even more as the scent of wine, the satyrs musk, and your own bodys lust combine, sending you into a pleasurable haze as he begins to fuck you hard against the wall. His stout goatlike legs easily supporting both your weight, as he holds your moaning body up, you can[apostrophe]t help but realize now why nymphs always end up letting satyrs catch them. You find yourself thinking idly, their cock just feels sooo good.  You moan in delight as his cock stimulates all the places deep inside you, throwing your head back as you orgasm around his cock, and he doesn[apostrophe]t even stop, just pumps into you all the harder. You find your legs and arms wrapping around his back as he thrusts into you, holding him tight as he continues to fuck you, bringing you to yet another orgasm as his wonderful rod thrusts into you.  Finally satisfied that you are good and fucked, the satyr groans himself, and lets his cock explode inside of you, filling you with his hot seed. Gasping, you shudder in one last orgasm as your mind goes blank for a minute, only dimly noticing as the sated satyr pulls you off of him and lies you down carefully on the floor.  'Not quite the fun of a real nymph yet,' you think you hear the satyr say, 'But I have to admit that was pretty damn good anyways, maybe you[apostrophe]ll let me catch ya again sometime and we can make a real nymph out of you.' The satyr finishes with a smile, as he snags his wine cup from where it fell, and goes looking for a refill.  Slowly you manage to pull your well used body together, and head back off into the museum halls yourself, almost looking forward to that next promised chase[impregchance]”;
 		infect “Greek Nymph”;
 		infect “Greek Nymph”;
 	otherwise:
-		say “'Hey there brother! Up with you now, there are nymph[apostrophe]s waiting for us to find them!'  The jovial satyr says as he hauls you up, 'Come join the revel!' The happy little beast trots off looking for the nymphs and the party, almost dragging you along behind.  Soon you are joined by more and more satyr[apostrophe]s as they party and share wine and good cheer, all while looking for the elusive nymphs.  Eventually you are caught up in the happy festive mood of the goat men, and enjoy the party and hunt as well, though lacking their seemingly boundless energy, you eventually fall behind the group.  Given a few moments to yourself, you come back to your senses and slip off down the museum passages back towards the entry.”;
+		say “'Hey there brother! Up with you now, there are nymph[apostrophe]s waiting for us to find them!'  The jovial satyr says as he hauls you up, 'Come join the revel!' The happy little beast trots off looking for the nymphs and the party, almost dragging you along behind.  Soon you are joined by more and more satyr[apostrophe]s as they party and share wine and good cheer, their wine burning through your head pleasantly as you join them in carousing, all while looking for the elusive nymphs.  Eventually you are caught up in the happy festive mood of the goat men, and enjoy the party and hunt as well, lacking their seemingly boundless energy however, you eventually manage to fall behind the group.  Given a few moments to yourself, you come back to your senses and slip off down the museum passages back towards the entry.”;
 		infect “Satyr”;
 		infect “Satyr”;
 
@@ -68,8 +68,22 @@ When Play begins:
 	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "Satyr Wine";			[ Loot monster drops, ]
+	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Satyr Wine"	"A ssmall sample of some dark wine you found left behind by one of those strange Satyr folk, it looks like there is about enough left for a single mouthful."	1	Satyr Wine
+
+Satyr Wine is a grab object. It is part of the player. Understand "patch"  as Satyr Wine. Satyr Wine is infectious. The strain of Satyr Wine is "Satyr".
+
+The usedesc of Satyr Wine is "[wineusing].";
+
+to say wineusing:
+	say "Taking out the small mouthful of dark wine, you swirl the liquid around in the small cup for a minute, before tossing it back, gasping as the heady stuff burns its way down your throat, and makes  your head spin.  Thats definitely the good stuff!";
+	decrease thirst of player by 10;
+
+
 
 when play ends:
 	if bodyname of player is "Satyr":
