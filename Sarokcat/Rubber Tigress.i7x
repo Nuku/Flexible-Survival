@@ -9,7 +9,7 @@ Section 1 - Monster Responses
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Rubber tigress attack:
 	If cocks of player is greater than 0:
-		say "With one last charge, the tigress bowls you over, landing on top of you as you fall to the ground.  As you lie there stunned, she takes advantage of the situation to reach down and spread your legs wide.  You swear you see a feline grin cross her rubber muzzle as she lowers one of her hands down to stroke your erect cock.  The feel of her soft and smooth paw rubbing up against your cock makes you moan and give up any pretense at fighting as you thrust upwards helplessly into her paw.  With a squeaky giggle the tigress positions herself over you, before guiding you into her with her paw.   [line break]";
+		say "With one last charge, the tigress bowls you over, landing on top of you as you fall to the ground.  As you lie there stunned, she takes advantage of the situation to reach down and spread your legs wide.  You swear you see a feline grin cross her rubber muzzle as she lowers one of her hands down to stroke your erect cock.  The feel of her soft and smooth paw rubbing up against your cock makes you moan and give up any pretense at fighting as you thrust upwards helplessly into her paw.  With a squeaky giggle the tigress positions herself over you, before carefully guiding you into her with her paw.   [line break]";
 		say “The feeling of her soft rubbery folds surrounding your cock is amazing, you thought her paw was nice but this is somehow a hundred times better.  You moan out loud as her folds almost seem to meld themselves around your cock, adjusting their contours to grip it and massage it perfectly. The tigress lies herself down on top of you, even as you thrust into her wonderfully tight and slick passage, she takes advantage of your open mouth, covering it with her muzzle in a rough and slick kiss.  You almost gag for a second as the strong taste of warm rubber fills your mouth as her tongue darts inside, only to find after a second that your body seems to have adapted, finding the taste almost exotic and arousing as she teases your tongue into tangling with hers.  Her body begins vibrating as she rubs it against yours, the strange purring sound filling your ears, and making your cock twitch and jump as her body vibrates and grips it tightly.  Finally the sensations are too much for your overwhelmed mind, and you cry out into her eager muzzle as you explode into the tigress shooting your seed into her eager body, your hands grip her soft rubber body to yours tightly as she purrs and writhes above you. Exhausted and drained, you collapse onto the ground underneath her, even as she continues to rub her soft rubber all over you, your eyes drift closed for a minute. When you open them later, you find yourself exhausted and alone in the carnival, and slowly start to pull yourself back together, the memory of your exciting time with the tigress still running through your head as you leave.”;
 		rubtigify;
 	otherwise:
@@ -65,8 +65,20 @@ When Play begins:
 	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "Tiger patch";			[ Loot monster drops, ]
+	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Tiger patch"	"A strange swatch of sticky rubber that looks somewhat like a bandage or clothing patch, it looks like it could be useful to seal up wounds or for patching things, interestingly enough, it seems to have orange and black tiger stripes on it."	1	Tiger patch
+
+Tiger patch is a grab object. It is part of the player. Understand "patch"  as Tiger patch. Tiger patch is infectious. The strain of Tiger patch is "Rubber tigress".
+
+The usedesc of Tiger patch is "Taking out the small piece of tiger striped material, you note it could be useful as either a patch or a stylish accessory or even a bandage. Holding it up to your skin for a minute you smile at how natural it seems to look, almost like part of your body. You blink as you try to pull it away only to realize that it has actually become part of you! You tug futily on the soft striped rubber, even as you can feel the infection spreading through your body.";
+
+
+
+
 
 when play ends:
 	if bodyname of player is "Rubber tigress":
@@ -88,3 +100,4 @@ to rubtigify:
 
 [ Edit this to have the correct Name as wall]
 Rubber tigress ends here.
+
