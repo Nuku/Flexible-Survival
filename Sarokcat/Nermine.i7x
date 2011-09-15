@@ -803,7 +803,7 @@ Instead of resolving a Anubis statue:
 	if statuequest is 2:
 		say "Returning to the museum with the samples the strange man sent you to retrieve, you quickly retrace your steps to the empty pedestal, and are unsurprised to find the Jackal like man leaning up against it with an amused grin. 'Found them I see?' He says with a smirk as he takes them from you eagerly, 'Trust me, these little beauties will make it more then worth your while,' The Jackalman says as he begins to carefully mix the pheromones together, the scent of some strange sort of musk filling your nose as he does so. 'Ah there we go!' He says happily as he takes a whiff of the completed project, seeming satisfied as he pulls out a familiar looking ankh with a jackal embossed on it. The man gives you a wink, as he slowly pours the mixture over the ankh, and the metal seems to almost absorb the liquid into itself. 'There we go now, once you use this little beauty, that little shopkeep won[apostrophe]t be able to keep her hands off of you. The jackal musk and enhanced pheromone mix should make sure of that.' The beastman says with a grin as he hands you the strangely scented ankh. 'I told you this little side trip of yours would be beneficial to both of us now didn[apostrophe]t I? I look forward to seeing how it works out.' he says in a voice filled with amusement as he turns and wanders off into the dark museum halls again.";
 		now statuequest is 0;
-		add "strange ankh" to invent of player;
+		add "Strange ankh" to invent of player;
 
 
 
