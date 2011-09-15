@@ -100,9 +100,10 @@ The proximity of it is "You smell tilled earth to the";
 The ongoing of it is the agri output rule.
 
 This is the Agri Output Rule:
-	if the remainder after dividing turns by 4 is not 0, continue the action;
-	let x be 5;
-	now x is x + ( workers of farmer / 5 );
+	let x be 1;
+	if a random chance of 1 in 4 succeeds:
+		increase x by 1;
+	now x is x + ( workers of farmer / 20 );
 	increase food of tribe of player by x;
 
 This is the agricheck rule:
@@ -119,11 +120,11 @@ The proximity of it is "You can see people hanging around a well to the".
 The ongoing of it is the well rule.
 
 This is the well rule:
-	if the remainder after dividing turns by 4 is not 0, continue the action;
+	if the remainder after dividing turns by 2 is not 0, continue the action;
 	let x be 0;
 	if well is adjacent to agricultural zone:
-		increase x by 2;
-		now x is x + ( workers of farmer / 10 );
+		increase x by 1;
+		now x is x + ( workers of farmer / 20 );
 	increase food of tribe of player by x;
 
 Section - Shelter
