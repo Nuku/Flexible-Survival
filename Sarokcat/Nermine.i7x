@@ -477,11 +477,6 @@ carry out bargainhunting:
 				Add "water bottle" to invent of player;
 				Add "food" to invent of player;
 				Add "water bottle" to invent of player;
-				if "Control Freak" is listed in feats of the player:
-					stop the action;
-				otherwise:
-					add "Control Freak" to feats of the player;
-					stop the action;
 			Otherwise:
 				say "Once more feeling a package of books stashed away in the bargain bin, you pull it out, and seeing the jackal like hero on the cover, pass it over the counter to Nermine with a small grin. The Jackal shopkeeper blushes in embarrassment  as she hides the books under the counter, and passes over some food and water without any further commentary";
 				Add "food" to invent of player;
@@ -808,7 +803,7 @@ Instead of resolving a Anubis statue:
 
 
 Beastial Pheromones is a situation.
-The Sarea of Beastial Pheromones is "Museum";
+The Sarea of Beastial Pheromones is "Zoo";
 anubisrequest is a number that varies;
 
 Instead of resolving a Beastial Pheromones:
@@ -866,7 +861,7 @@ Instead of resolving a Twisted fruit grove:
 				otherwise:
 					say "You moan as the vines wrap around you as tightly as they have the newly trapped felinoid, his fight having been lost sometime during your own harsh battle. The vines cock like flowers invading your every orifice as they begin to cocoon your helpless body with their green leafy tendrils, anchoring you in place, unable to even lift a finger to escape.  You can feel the scent of the area invading your mind as your body continues to become more and plant like, your mind starting to fade as you realize that before much longer you will be more plant then animal, rooted here in the glade like several of the other strange plants. You struggle slightly in your viney bonds, but there is no one left to save you this time.  Your struggles slowly fade, as your mind fills with the strangely relaxing scent of the glade, and your body fills with the wonderful pleasure of the vines massaging your body. Soon you can[apostrophe]t even remember why you would want to struggle, or even why you would want to do anything other then relax here in your nice safe cocoon, your mind slowly fading completely as your new roots sink into the soil and your own new vines begin to entwine with those around you.";
 					now vinetrapped is 1;
-					decrease humanity by 100;
+					decrease humanity of player by 100;
 					now body of player is "Parasitic Plant";
 					now bodyname of player is "Parasitic Plant";
 					follow the turnpass rule;			
@@ -1053,7 +1048,7 @@ To say jackalankhmagic:
 		now jackalmantf is 1;
 		stop the action;
 	if jackalmantf is 1:
-		say "Eagerly gripping the next small ankh, you rub your price softly between your hands again, your fingers tracing over the jackalmans form set into the base.  Once more the gold seems to grow warm and melt into your body, the golden colour staining your hands slightly, before a darker black colour begins to spread out from where the ankh was, your hands quickly coming to be covered in a coating of shiny and black fur. You quickly realize as the blackness spreads down your arms and starts to cover your body completely, that your skin is changing and being covered in sleek dark jackal fur just like Nermines, The thought of having thick powerful dark jackals fur makes you grin, as for some reason , the idea of looking more and more like a powerful jackal match to the nice and sexy shopkeeper of that strange shop begins to make you feel almost predatory, and more then a  bit horny as well. Feeling your new thick black jackal pelt, you are somehow sure your nice new pelt of soft fur will appeal to more then just the shopkeeper as well, and quite possibly provide a handsome defense from attackers as well.[line break]";
+		say "Eagerly gripping the next small ankh, you rub your prize softly between your hands again, your fingers tracing over the jackalmans form set into the base.  Once more the gold seems to grow warm and melt into your body, the golden colour staining your hands slightly, before a darker black colour begins to spread out from where the ankh was, your hands quickly coming to be covered in a coating of shiny and black fur. You quickly realize as the blackness spreads down your arms and starts to cover your body completely, that your skin is changing and being covered in sleek dark jackal fur just like Nermines, The thought of having thick powerful dark jackals fur makes you grin, as for some reason , the idea of looking more and more like a powerful jackal match to the nice and sexy shopkeeper of that strange shop begins to make you feel almost predatory, and more then a  bit horny as well. Feeling your new thick black jackal pelt, you are somehow sure your nice new pelt of soft fur will appeal to more then just the shopkeeper as well, and quite possibly provide a handsome defense from attackers as well.[line break]";
 		now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 		now skinname  of player is "jackalman";
 		increase charisma of player by 3;
