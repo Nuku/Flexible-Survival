@@ -35,7 +35,7 @@ carry out researchlist:
 	repeat with x running through valid research:
 		if x is complete and x is not indefinite, next;
 		say "[line break]";
-		say "[x]([progress of x]/[cost of x])[if current of nerd is x](Current Topic)[end if][no line break]";
+		say "[x]([progress of x]/[cost of x])[if x is indefinite](Level: [level of x])[end if][if current of nerd is x](Current Topic)[end if][no line break]";
 	say "To begin a new topic, type [bold type]research (topic)[roman type].";
 	
 Researching is an action applying to one thing.
