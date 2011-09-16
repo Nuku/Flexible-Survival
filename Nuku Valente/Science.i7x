@@ -33,7 +33,7 @@ Check researchlist:
 carry out researchlist:
 	say "Available Topics: [no line break]";
 	repeat with x running through valid research:
-		if x is complete, next;
+		if x is complete and x is not indefinite, next;
 		say "[line break]";
 		say "[x]([progress of x]/[cost of x])[if current of nerd is x](Current Topic)[end if][no line break]";
 	say "To begin a new topic, type [bold type]research (topic)[roman type].";
@@ -43,7 +43,7 @@ Understand "Research [research]" as researching.
 
 Check researching:
 	if nerd is not visible, say "You need your trusty ner, er, science advisor, to conduct matters of research." instead;
-	if noun is complete, say "You seem to have already completed that topic." instead;
+	if noun is complete and noun is not indefinite, say "You seem to have already completed that topic." instead;
 	if noun is current of nerd, say "Your advisor assures you that it is already being worked on as hard as it can be. Maybe if we had more scientists?" instead;
 
 Carry out researching:
@@ -107,7 +107,7 @@ This is the local survey rule:
 
 An everyturn rule(this is the SCIENCE rule):
 	if science of tribe of player is less than 1, continue the action; [ No research without research points ]
-	if current of nerd is complete:
+	if current of nerd is complete and current of nerd is not indefinite:
 		say "Your current research topic is complete. You should pick a new one.";
 		continue the action;
 	let foragers be workers of researcher;
