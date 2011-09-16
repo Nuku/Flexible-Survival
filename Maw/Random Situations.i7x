@@ -8,7 +8,7 @@ Husky Group Take Two is a situation.
 Bloated Hunter is a situation.
 Bloated Hunter is bad.
 Bloated Hunter has a rule called Dasvalid. [Req: Hunters]
-Nerd Rage is a situation. [Req: Lost Physics]
+[Nerd Rage is a situation. [Req: Lost Physics]
 Nerd Rage is bad.
 Hidden Cache is a situation.
 Hidden Cache is good.
@@ -19,9 +19,9 @@ Beast's Den is a situation. [Req: Hunters]
 Beast's Den is bad.
 Susan Sighting is a situation.
 Nerd Rage is resolved. 
-Hidden Cache is resolved.
+Hidden Cache is resolved.]
 Bloated Hunter is resolved.
-Beast's Den is resolved.
+[Beast's Den is resolved.]
 Husky Group Take Two is resolved.
 
 Chapter 2 - Dem be das rules
@@ -65,8 +65,8 @@ Instead of resolving Bloated Hunter:
 			if "Hermaphrodite" is listed in the gender of the tribe of player:
 				say "One of your hunteresses returns looking rather... round around the middle. Her stomach gurgling loudly, bloated beyond recognition, even you yourself were not oblivious enough to know that this particular girl wasn't at all overweight, nor pregnant the morning you saw her last. Her distended stomach could tell numerous stories, and the most likely one was likely the truth. Her hands/paws holding the lip of ber bulging stomach up, hoisting and carrying it as she waddled down the road. Mumbling incoherently to herself. Thankfully it didn[apostrophe]t look as if she was infected with a different strain of nanites. [if Husky Group is resolved and Husky Group Take Two is resolved]Knowing damn well what the infection could potentially do to your tribe, you stare--quite intently at the female as she wanders on by. That sickly sloshing stomach most certainly causing your own stomach to be clenching up tightly, churning at the thought of a nanite outbreak in your settlement.[otherwise] Watching with a tilted head and cocked brow, you listen to the sounds of the contents of that stomach sickly sloshing about with every step of hers.[end if][line break][line break]";
 	now Bloated Hunter is resolved.
-	
-Instead of resolving Nerd Rage:
+
+[Instead of resolving Nerd Rage:
 	if the species is Latex Foxes:
 		say "boobies";
 	if the species is huskies:
@@ -95,6 +95,6 @@ Instead of resolving Lost Physics Homework:
 
 Instead of resolving Susan Sighting:
 	say "boobies";
-	now Susan Sighting is resolved;
+	now Susan Sighting is resolved;]
 
 Random Situations ends here.
