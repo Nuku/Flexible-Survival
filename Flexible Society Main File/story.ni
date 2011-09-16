@@ -152,7 +152,7 @@ left	central	right
 "Location: [the player's surroundings]"	"Morale: [morale of tribe of player]/100"	"Tribe:[tribe of player]"
 "Exits: [List of Valid Directions]"	"Food: [food of tribe of player] Water: [water of tribe of player]"	"Score:[score]/[maximum score]"
 "Population: [population of tribe of player]"	"Freecreds: [creds of tribe of player]"	"Science: [science of tribe of player]"
-"[if menu depth > 0]N = Next[otherwise]Research[end if]"	"[if menu depth > 0]ENTER = Select[otherwise][current of nerd][end if]"	"[if menu depth > 0]P = Previous[otherwise][progress of current of nerd]/[cost of current of nerd][end if]"
+"[if menu depth > 0]N = Next[otherwise]Research[end if]"	"[if menu depth > 0]ENTER = Select[otherwise][current of nerd] Lvl [level of current of nerd plus one][end if]"	"[if menu depth > 0]P = Previous[otherwise][progress of current of nerd]/[cost of current of nerd][end if]"
 
 
 Book 4 - Tribes

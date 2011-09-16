@@ -33,7 +33,7 @@ Check researchlist:
 carry out researchlist:
 	say "Available Topics: [no line break]";
 	repeat with x running through valid research:
-		if x is complete and x is not indefinite, next;
+		if x is complete and x is definite, next;
 		say "[line break]";
 		say "[x]([progress of x]/[cost of x])[if x is indefinite](Level: [level of x])[end if][if current of nerd is x](Current Topic)[end if][no line break]";
 	say "To begin a new topic, type [bold type]research (topic)[roman type].";
@@ -43,7 +43,7 @@ Understand "Research [research]" as researching.
 
 Check researching:
 	if nerd is not visible, say "You need your trusty ner, er, science advisor, to conduct matters of research." instead;
-	if noun is complete and noun is not indefinite, say "You seem to have already completed that topic." instead;
+	if noun is complete and noun is definite, say "You seem to have already completed that topic." instead;
 	if noun is current of nerd, say "Your advisor assures you that it is already being worked on as hard as it can be. Maybe if we had more scientists?" instead;
 
 Carry out researching:
@@ -67,7 +67,8 @@ A Research has a number called cost.
 A Research has a rule called Completion.
 The completion of a research is usually nothing rule;
 A research has a text called perk.
-A research can be indefinite.
+A research can be indefinite or definite.
+A research is usually definite.
 A research has a number called level.
 
 This is the nothing rule:
