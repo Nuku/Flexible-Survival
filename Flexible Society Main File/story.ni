@@ -645,6 +645,8 @@ An everyturn rule(This is the Shit Happens rule):
 	try resolving sit;
 	continue the action;
 
+Include  Random Situations by Maw.
+
 Part - Resolving Action
 
 Resolving is an action applying to one thing.
