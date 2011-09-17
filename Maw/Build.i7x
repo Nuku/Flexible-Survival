@@ -106,7 +106,7 @@ This is the Ranch Output Rule:
 	now x is x + ( workers of hunter / 20 );
 	if agricultural zone is adjacent to Ranch:
 		increase x by 1;
-	if "Meat" is listed in diet of player:
+	if "Meat" is listed in diet of tribe of player:
 		increase food of tribe of player by x;
 	otherwise:
 		increase creds of tribe of player by x;
@@ -129,7 +129,7 @@ This is the Agri Output Rule:
 	if a random chance of 1 in 4 succeeds:
 		increase x by 1;
 	now x is x + ( workers of farmer / 20 );
-	if "Plant" is listed in diet of player:
+	if "Plant" is listed in diet of tribe of player:
 		increase food of tribe of player by x;
 	otherwise:
 		increase creds of tribe of player by x;
@@ -153,7 +153,7 @@ This is the well rule:
 	if well is adjacent to agricultural zone:
 		increase x by 1;
 		now x is x + ( workers of farmer / 20 );
-	if "Plant" is listed in diet of player:
+	if "Plant" is listed in diet of tribe of player:
 		increase food of tribe of player by x;
 	otherwise:
 		increase creds of tribe of player by x;
