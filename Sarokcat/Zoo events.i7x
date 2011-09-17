@@ -13,6 +13,7 @@ Instead of Resolving a Electric shockers:
 	if Electricprodstatus is 0:
 		say "Moving through the zoo, you come across one of the zookeepers shacks that seems to have been left open in the confusion. Taking advantage of the situation, you move inside and start searching the place, although it really doesn[apostrophe]t take much looking to find the locked case of what look like extendable cattle prods, obviously intended to shock dangerous animals at a small distance.  Unfortunately the case is locked up tight and all your efforts to pry it open fail miserably, though you do notice someone has placed a sticky note up in the corner.  Reading the note you find it says 'Electric shock treatment available in release 2.0! preorder now!'  Well isn[apostrophe]t that just dandy....";
 		now Electricprodstatus is 1;
+		stop the action;
 	if Electricprodstatus is 1:
 		say "Traveling through the zoo, you come across a rather familiar looking zookeepers shack, and it looks like someone else has been here recently as well. Deciding to be careful you peek around the door to make sure there isn[apostrophe]t some kind of strange beast there waiting for you.  You are rather surprised to note that not only is the shack empty again, but it looks like whatever was here had a goal, they seem to have made a concerted assault on the case in the corner holding the powerful electric prods.  They seem to have had more success then you, because the case now hangs open loosely, and several of the useful tools have spilled out onto the floor, a quick examination shows you that most of the weapons were damaged too severely to work by whoever broke the case open, but you actually manage to find one that you think might actually work for a while before it burns out. ";
 		add "Electric prod" to invent of player;
@@ -30,7 +31,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 “Electric prod”	“A powerful electric tool designed to shock and incapacitate wild animals, it should work on the beasts around the city as well.”	5	 Electric prod
 
-Electric prod is an armament. It is part of the player. It has a weapon “[one of]shocking stick[or]your electric prod[at random]”. The weapon damage of Electric prod is 21. The weapon type of Electric prod is “Melee”. It is not temporary.
+Electric prod is an armament. It is part of the player. It has a weapon “[one of]shocking stick[or]your electric prod[at random]”. The weapon damage of Electric prod is 22. The weapon type of Electric prod is “Melee”. It is not temporary.
 
 
 An everyturn rule:
@@ -38,8 +39,8 @@ An everyturn rule:
 		if a random chance of 1 in 20 succeeds:
 			say "With one last electric fizz and pop, the electric prod dies in your hands, its battery obviously drained by the damaged circuits burning out.  Sighing you take a look at your broken weapon, before sticking it in the back of your pack to throw away later... At least you got to have some fun with it while it lasted...";
 			now Electricprodstatus is 3;
+			process Electric prod;
 			delete Electric prod;
-
 
 Section 2-  Hyena cages
 
@@ -143,7 +144,7 @@ Instead of Resolving a AngieTrapped:
 	if angiehappy is 1:
 		say "Traveling down the zoo pathways, you hear some strange sounds coming from one of the enclosures, taking a cautious look, you see what appears to be a large pantherlike beast, growling and chuffing as it tries to reach something that appears to have fallen into a narrow space beside the den.  You watch for a while as the beast tries increasingly desperate measures to get at whatever is stuck in there, before it eventually gives up and stalks off in a huff.  Curiosity getting the better of you, you go down to investigate and find some small cloth wrapped packet has rolled into the crack. Grabbing a nearby branch you manage to roll the small bundle out of the crack, and take a look at it, and while it seems to exude a nice pleasantly minty odor, you can[apostrophe] tell why the big panther wanted it so badly.  Shrugging you decide to tuck it away for further investigation later, and continue on through the zoo.";
 		now angiearoused is 1;
-		Now AngieTrapped is resolved;
+		Now angieTrapped is resolved;
 
 Section 10-  Panda parade
 
@@ -210,7 +211,7 @@ Instead of Resolving a Vet supplies:
 				decrease humanity of player by 40; 
 			if "Female Preferred" is listed in feats of the player:
 				say "You can feel the Male hormones running through your body as they counter your strong female orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into males to suit their pleasure again...";
-				remove "Female Preferred" from feats of the player;
+				Remove "Female Preferred" from feats of the player;
 				decrease hp of player by 30;
 				stop the action;
 			otherwise:
@@ -268,6 +269,34 @@ Instead of Resolving a Broken fences:
 	say "While traveling through the zoo paths, you note a small broken area of the underbrush, and out of curiosity move a little closer to take a look.  Behind the foliage, you can see the back of one of the animal enclosures, a nice thick area of fence designed to keep the animals inside. Of course in this case you can see how this group of animals got out, as the fence has been broken and torn here where it isn[apostrophe]t easily visible, leaving more then enough room for someone, or something, to slip into or out of the enclosure.  Examining the edges of the fence, you find yourself more then a little worried about encountering something able to do that kind of damage to the special cage fences, and decide to move along down the pathway quickly, just in case it might still be in the area.";
 	Now Broken fences is resolved;
 
+
+Section 17- Wandering beasts
+
+Wandering beasts is a situation.
+The sarea of Wandering beasts is "Zoo";
+
+Instead of Resolving a Wandering beasts:
+	say "While traveling through the zoo, you feel the hair on the back of you neck stand up, and feel like something large is coming your way. Feeling somewhat panicked, you waste no time in ducking down behind one of the bushes, doing your best to conceal yourself from whatever is coming your way.  You are just in time as you see a large group of different beasts come charging down the zoo pathways, obviously hot on the scent of a still changeble person.  You hold your breath as the small stampede passes, only letting it out after they have all passed by safely, sighing with relief as you step out of your impromptu hiding place.  Hearing a noise behind you, you realize that you started to relax too soon, as you turn and find yourself staring at one of the beasts that was straggling along behind the stampede!";
+	fight;
+	Now Wandering beasts is resolved;
+
+Section 18- Roaming spots
+
+Roaming spots is a situation.
+The sarea of Roaming spots is "Zoo";
+
+Instead of Resolving a Roaming spots:
+	say "Wandering through the zoo, you find yourself alongside one of the small stands of trees set up against the sides of the zoo. You freeze as you hear a noise come from the branches up ahead, and slowly look up, not seeing anything for a minute, before suddenly realizing that a large Leopardman is slowly moving across the branches.  You feel your cheeks heating up even as you try to hold your breath, your eyes fixed on his large sheath even as the spotted Leopardman slowly shifts into the next tree.  You watch with a mixture of fascination and a strange desire as the sleek feline stretches up from his position in his newest tree, until he can grip the top of the zoo wall easily. You blink as in one swift movement the lithe Leopard hauls himself onto the top of the wall, before sliding down out of sight on the other side.  You let out a soft gasp of relief as you realize you are safe from the large feline for now, although for some strange reason you find yourself almost wishing the powerful male cat had noticed you standing there..."; 
+	now Roaming spots is resolved;
+
+Section 19- Picture striping
+
+Picture striping is a situation.
+The sarea of Picture striping is "Zoo";
+
+Instead of Resolving a Picture striping:
+	say "Traveling through the mostly deserted zoo, you find yourself next to one of those old fashioned photo kiosks, this one proudly displaying several various animal themed backgrounds you can choose from. Smiling you pull the curtain to step inside, only to find your nose assaulted with the scent of sex and musk, letting the curtain fall, you gasp for some clean air. As you do so you notice that the slot that dispenses pictures seems to have a strip already in it, curious you pull the strip of pictures out.  Blinking you stare down as a handsome young teenager poses against an african background, a zebra close behind him, the next picture shows the young man turning as the zebra puts its head on his shoulder, an actual zebraman that appears to have been hiding in the booth. The next several shots show in full colour detail the zebra stallion pinning the changing man up against the side of the photo booth, as his body lengthens and is covered in stripes.  The final photo is a wonderfully done photo of a zebra stallion mounting an eager zebra mare with a lewd smile on his snout. You shudder as you realize what a narrow escape you just had, if you had been the first person into that booth, there would have been no way for you to escape or fight in such a confined space. Sighing you prop the pictures up against the photo booth, leaving them there in case the zebras involved want to come back for a momento, you continue your trip through the zoo.";
+	now Picture striping is resolved;
 
 
 
