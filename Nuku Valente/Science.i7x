@@ -147,13 +147,20 @@ An everyturn rule(this is the SCIENCE rule):
 Farming is a research.
 The description of it is "Farming the land can be a source of valuable food and/or trade goods. It takes far fewer people to farm food than it does to forage.".
 The cost of it is 50.
-The perk of it is "Farming".
 It is indefinite.
+
+Ranching is a research.
+The description of it is "Why go hunt wild animals when you can herd and tend to your own?".
+The validation of it is ranchvalidation rule.
+The cost of it is 100.
+
+This is the ranchvalidation rule:
+	if hunting is complete, rule succeeds;
+	rule fails;
 
 Hunting is a research.
 The description of it is "Hunting techniques allow for efficient exploiting of animal resources on your lands, producing more food and/or trade goods.".
 The cost of it is 50.
-The perk of it is "Hunting".
 It is indefinite.
 
 
