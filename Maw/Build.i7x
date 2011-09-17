@@ -97,9 +97,9 @@ The description of it is "This farm clearly specializes in animals. It seems dom
 The cost of it is 120.
 The validation of agricultural zone is ranchcheck rule.
 The proximity of it is "You smell animals to the";
-The ongoing of it is the agri output rule.
+The ongoing of it is the Ranch output rule.
 
-This is the Agri Output Rule:
+This is the Ranch Output Rule:
 	let x be 1;
 	if a random chance of 1 in 4 succeeds:
 		increase x by 1;
