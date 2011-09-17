@@ -86,7 +86,7 @@ To say Diegotalking:
 			say "[one of]'Damn fine trick you pulled there!'[or]'Thank God I still have my nice thick coyote cock' Diego says with a grin as he rubs said cock suggestively.[or]'Hell I can[apostrophe]t decide whether I should pull a trick on you, or thank you for this.' She says as she gestures at her changed body.[or]'You know, I hear there is an alpha wolf out there in the city looking for packmembers, maybe you should go see if he has room for you?' She suggests with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways?' Diego says with a grin as she licks her lips.[or]'I saw a woman riding a horse go by here a while back, I[apostrophe]m pretty sure though the horse was the one doing the riding eventually though if you know what I mean.'[or]'There was a deer around here recently at some point, she looked kinda lonely if you know what I mean...'[or]'I wonder whats bigger..' Diego muses with a thoughtful expression on her muzzle, 'The horse cocks here in the park, or the zebra cocks in the zoo....'[or]'Careful around the cute chinchilla in the park, they are almost as tricky sometimes as I am.'[or]'I wonder how much those strange cock plants are going to keep spreading.'[or]'Cock and pussy, best of both worlds!'[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch' She says with a smile.[at random]";
 			stop the action;
 	if Diegochanged is 0:
-		if coyotetricks is greater than 6:
+		if coyotetricks is greater than 4:
 			if "Dog Milk" is listed in invent of player:
 				say "Noticing the strange coyote mans thirst, you wonder if you should perhaps play a bit of another trick on Diego, and decide to play just a bit by rummaging around in your backpack until you find the milk from the canine you fought earlier. 'Hey something smells good there,' The tricky coyote says as you shift through your backpack, making sure to flash the small bottle of milk several times where the coyote can see it. 'Damn,' Diego says with a sad smile as he looks at you with large coyote eyes, 'Its just so much work tricking the man, very very thirsty work if you know what I mean.' The trickster says with a smile on his muzzle, 'Why not help a fellow out, If you know what I mean?' He says hopefully as he eyes the bottle of milk you just pulled out.  Do you decide to continue and give him the changing milk?";
 				if player consents:
@@ -114,7 +114,7 @@ Check Diegotricking:
 	If Diego is not visible, say "Who?" instead;
 
 carry out Diegotricking:
-	if lastDiegotricked - turns is less than 8:
+	if lastDiegotricked - turns is less than 6:
 		say "'Sorry bud, only so much time for tricking people in the day,' Diego says as he shakes his head sadly, 'Trick people too much and it just gets stale, so come back and try again later.'";
 		stop the action;
 	now lastDiegotricked is turns;
@@ -123,15 +123,15 @@ carry out Diegotricking:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
+	if diceroll is greater than 18:
+		say "'Woah amazing!' Diego exclaims happily, 'Are you sure you aren[apostrophe]t part coyote? I mean Damn that was an impressive trick!' The coyote says as he shakes his head in admiration. 'That kinda trick will get some extra effort on my part, should take those silly military types ages to get it all sorted out!'";
+		increase Coyotetricks by 2;
+		extend game by 18; 
 	if diceroll is greater than 12:
 		say "'Dang that was a good one! Not quite up to my usual standards of course, but pretty damn good!' Diego says with a happy grin on his face, 'I think I might be willing to try that one out on some of their scouts, might earn ya a bit of time ya see.";
 		extend game by 6;
 		increase Coyotetricks by 1;
 		stop the action;
-	if diceroll is greater than 18:
-		say "'Woah amazing!' Diego exclaims happily, 'Are you sure you aren[apostrophe]t part coyote? I mean Damn that was an impressive trick!' The coyote says as he shakes his head in admiration. 'That kinda trick will get some extra effort on my part, should take those silly military types ages to get it all sorted out!'";
-		increase Coyotetricks by 2;
-		extend game by 18; 
 	otherwise:
 		say "'You call that a trick?' Diego says derisively, snickering at your pathetic attempt, 'Now this is a trick!' He says as he swiftly whips out a trick that makes you stagger back in shock and makes you feel slightly less human.";
 		decrease humanity of player by 10;
@@ -180,7 +180,7 @@ Instead of fucking the Diego:
 			now diegobitched is 1;
 			stop the action;
 	otherwise:
-		if coyotetricks is greater than 6:
+		if coyotetricks is greater than 4:
 			if cocks of player is greater than 0:
 				if cunts of player is greater than 0:
 					say "'Hmm you look pretty good there,' Diego says with some interest,  'Sadly though, as a coyote I can already tell you have a trick hidden away next to your lovely treat.' The coyote says as he gestures to your cock.  'Nice try there. But better luck next time eh?'";
