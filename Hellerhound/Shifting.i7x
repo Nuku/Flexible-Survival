@@ -20,7 +20,7 @@ insecure is a number that varies.
 instead of resolving a Secure Area:
 	now insecure is 1;
 	say "On your jaunt through the city, you come across a yard, mostly intact, covered with barbed wire and odd defensive technology you could have sworn was science fiction. Behind the barriers, one of which is a shimmering halo in midair, stand two creatures, tall, but their silhouette is blurred by the halo, and you cannot make out if they are human or not. You can still make out the huge doors, made of something clearish white...";
-	if a random number between one and 30 > the perception of the player:
+	if a random number between 10 and 20 is less than the perception of the player:
 		say "Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
 	say "[line break][line break][line break]";
 	wait for any key;
