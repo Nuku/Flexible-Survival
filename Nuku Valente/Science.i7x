@@ -127,7 +127,7 @@ An everyturn rule(this is the SCIENCE rule):
 		if z is greater than 0:
 			say "Your science advances: +[z]";
 			increase progress of current of nerd by z;
-			if current of nerd is complete:
+			if progress of current of nerd is greater than cost of current of nerd:
 				say ". [bold type][current of nerd][roman type] is complete!";
 				follow the completion of current of nerd;
 				if the perk of current of nerd is not "":
