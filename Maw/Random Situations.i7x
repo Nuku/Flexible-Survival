@@ -3,15 +3,15 @@ Random Situations by Maw begins here.
 Chapter 1 - Is a
 
 Husky Group is a situation.
-Husky Group has a rule called Nohusky.
+The validation of it is the Nohusky rule.
 Husky Group Take Two is a situation.
 Husky Group Take Two is resolved.
 Bloated Hunter is a situation.
+The validation of it is the Dasvalid rule.
 Bloated Hunter is bad.
-Bloated Hunter has a rule called Dasvalid. [Req: Hunters]
 Hidden Cache is a situation.
+The validation of it is the Dasvalid rule.
 Hidden Cache is good.
-Hidden Cache has a rule called Dasvalid. [Req: Hunters]
 [Beast's Den is a situation. [Req: Hunters]
 Beast's Den has a rule called Dasvalid.
 Beast's Den is bad.
@@ -22,7 +22,10 @@ Nerd's Opinion is resolved.]
 Chapter 2 - Dem ich das rules
 
 This is the Nohusky rule:
-	if the tribe of player is huskies, rule fails;
+	if tribe of player is Huskies:
+		rule fails;
+	if Local Survey is not complete:
+		rule fails;
 	rule succeeds;
 
 This is the Dasvalid rule:
