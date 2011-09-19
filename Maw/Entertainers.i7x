@@ -28,6 +28,8 @@ An everyturn rule(this is the entertainer rule):
 	if workers of entertainer is 0, stop the action;
 	let foragers be workers of entertainer;
 	let x be a random number from 80 to 120;
+	if Novelstudies is 2:
+		increase x by 20;
 	if "Theatre" is listed in perks of tribe of player:
 		increase x by 20; [Not yet implemented]
 	now x is foragers * 20 * x;
