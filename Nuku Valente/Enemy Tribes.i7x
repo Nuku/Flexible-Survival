@@ -7,6 +7,7 @@ When play begins:
 	say "Please pick the species that will be competing with you. Chose as many as you wish. More tribes may prove more of a challenge. Playing alone is easiest.";
 	wait for any key;
 	rival menu;
+	now the tribe of player is inactive;
 
 to rival menu:
 	blank out the whole of table of combat items;
@@ -67,6 +68,7 @@ to rival menu:
 An everyturn rule(This is the Enemies Breed rule):
 	if the remainder after dividing turns by 2 is 0, continue the action;
 	repeat with enemy running through active species:
+		if population of enemy is 0, next;
 		let z be territory of enemy * density of enemy;
 		let zeta be z;
 		let max be 20;
@@ -102,7 +104,44 @@ An everyturn rule(This is the Enemies Breed rule):
 				now gain is gain * mood of enemy;
 				now gain is gain / 100;
 				increase morale of enemy by gain;
-		say "The population of [enemy] is now [population of enemy].";
+
+An everyturn rule(This is the Enemy Expanding rule):
+	repeat with enemy running through active species:
+		if population of enemy is 0, next;
+		if openland < 1, next;
+		let foragers be population of enemy;
+		let x be a random number from 80 to 120;
+		increase x by perception of enemy / 5;
+		increase x by foragers;
+		if x > 80:
+			say "Scouts report that an enemy tribe is conquering wild territory!";
+			let enemies be a random number from 1 to 3;
+			increase enemies by a random number from 1 to 3;
+			increase enemies by a random number from 1 to 3;
+			if turns < 100:
+				now enemies is enemies - 1;
+			if turns < 50:
+				now enemies is enemies / 2;
+			if enemies < 1, now enemies is 1;
+			let enum be enemies;
+			now enemies is ( enemies * 100 ) / stamina of enemy;
+			let estimate be ( enemies * a random number from 66 to 150) / 100;
+			if enemies is 0:
+				say " You manage to claim it and defeat the native mutants without losing a single soul. Hurray!";
+			otherwise:
+				if enemies > 0:
+					if enemies > population of enemy:
+						say "They fail to conquer the region!";
+						decrease population of enemy by enemies;
+						if population of enemy is less than 5, now population of enemy is 5;
+						next;
+					otherwise:
+						say " They claim the region!";
+						decrease population of enemy by enemies;
+						if population of enemy is less than 5, now population of enemy is 5;
+			increase territory of enemy by 1;
+			decrease openland by 1;
+
 
 		
 
