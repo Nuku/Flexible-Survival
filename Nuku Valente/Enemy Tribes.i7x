@@ -64,5 +64,46 @@ to rival menu:
 	decrease the menu depth by 1;
 	rival menu;
 	
+An everyturn rule(This is the Enemies Breed rule):
+	if the remainder after dividing turns by 2 is 0, continue the action;
+	repeat with enemy running through active species:
+		let z be territory of enemy * density of enemy;
+		let zeta be z;
+		let max be 20;
+[		if shelter is complete:
+			increase zeta by 2 * density of enemy;
+			increase max by 5;
+		if population of enemy > zeta and morale of enemy > max:
+			say "Overcrowding erodes morale.";
+			if morale of enemy > max:
+				decrease morale of enemy by 1;]
+		if population of enemy > z * 2, next;
+		let foragers be population of enemy;
+		let x be a random number from 1 to 100;
+		let y be 0;
+		let crit be 0;
+		if x is greater than 90:
+			now y is 3;
+			now crit is 1;
+		otherwise if x is greater than 60:
+			now y is 2;
+		otherwise:
+			now y is 1;
+		now y is ( foragers * the Self Fertility of the enemy * y ) / 250 ;
+		let mor be morale of enemy;
+		if mor is less than 20, now mor is 20;
+		now y is ( y * mor ) / 100;
+		if crit is 1 and y is less than 1, now y is 1;
+		if y is greater than 0:
+			increase population of enemy by y;
+			if morale of enemy is less than 60:
+				let gain be 1;
+				increase gain by y times 2;
+				now gain is gain * mood of enemy;
+				now gain is gain / 100;
+				increase morale of enemy by gain;
+		say "The population of [enemy] is now [population of enemy].";
+
+		
 
 Enemy Tribes ends here.
