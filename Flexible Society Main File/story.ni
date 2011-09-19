@@ -444,6 +444,8 @@ When play begins(this is the play start rule):
 		continue the action;
 	if the might of tribe of player is 0, follow the play start rule;
 	say "As leader of the tribe, you and you alone decide when time advances. Type [bold type]turn[roman type] to make this happen.";
+
+Include Enemy Tribes by Nuku Valente.
 	
 Part 4 - Job assigning
 
