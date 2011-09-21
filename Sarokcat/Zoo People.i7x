@@ -5,6 +5,8 @@ Zoo People by SarokCat begins here.
 
 "Adds a large group of scattered npcs to Flexible Survival with a variety of responses and goals..."
 
+Include Gryphon Companion by Sarokcat.
+
 Section 1- Brian
 
 Briantalk is a number that varies.
