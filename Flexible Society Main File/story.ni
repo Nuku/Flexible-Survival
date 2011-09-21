@@ -530,6 +530,51 @@ Carry out Tasking:
 	now workers of the second noun is number understood;
 	say "You assign [number understood] workers to [second noun].";
 	try assigning;
+
+Part - Navigating
+
+A room can be fasttravel. A room is usually not fasttravel.
+A room can be private. A room is usually not private.
+A room can be known.
+Village Center is known and fasttravel.
+
+destinationcheck is an action applying to nothing.
+
+understand "navigate" as destinationcheck.
+understand "nav" as destinationcheck.
+
+carry out destinationcheck:
+	let L be a list of rooms;
+	repeat with Q running through known fasttravel rooms:
+		add q to L;
+	say "You know how to get to the following places: [line break]";
+	if the number of entries in L is 0:
+		say "Nowhere.";
+	otherwise:
+		repeat with q running through L:
+			say "[Q][line break]";
+	
+navigating is an action applying to one thing.
+
+understand "navigate [any known fasttravel room]" as navigating;
+understand "navigate to [any known fasttravel room]" as navigating;
+understand "nav [any known fasttravel room]" as navigating;
+understand "travel to [any known fasttravel room]" as navigating;
+understand "travel [any known fasttravel room]" as navigating;
+understand "go to [any known fasttravel room]" as navigating;
+understand "return to [any known fasttravel room]" as navigating;
+
+
+carry out navigating:
+	if location of player is not fasttravel:
+		say "You can't navigate from here.";
+		stop the action;
+	if noun is location of player:
+		say "You're already there.";
+		stop the action;
+	say "You travel to [the noun].";
+	move the player to the noun;
+
 	
 Book - Game Over
 
