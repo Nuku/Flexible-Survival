@@ -1,4 +1,4 @@
-Version 1 of Tigress Hooker For FS by Stripes begins here.
+Version 2 of Tigress Hooker For FS by Stripes begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Tigress Hooker creature to Flexible Survivals Wandering Monsters table, With Impreg chance and resource loss"
 [Description text for this Extension.]
@@ -12,8 +12,17 @@ tigresswinner is a number that varies.	[marked as having won last time - used la
 tigressfucked is a number that varies.	[marked as having lost last time - used later]
 tigressclient is a number that varies.	[marked as having submitted last time - used later]
 stiffedpayment is a number that varies.   [marked as having failed to pay the fee - used later]
+mqfightresult is a number that varies.    [ 1 = win / 2 = lose / 3 = fled (unchanged) ]
 
 to say losetotigress:
+	if mqstatus is 3:				[if on the motel run, set variable and prevent the regular scene]
+		now mqfightresult is 2;
+		say "Oh No! You are beaten up by the tigress at the motel.";
+		stop the action;
+	if mqstatus is 6:				[if fighting matron, set variable and prevent the regular scene]
+		now mqfightresult is 2;
+		say "Oh No! You are beaten up by the tigress matron.";
+		stop the action;
 	now tempnum is 0;										[Reset payment flag]
 	if hp of player > 0:									[DID THE PLAYER SUBMIT? - YES]
 		say "   As you give in to hir offer, shi moves up to you with a lustful smile.  Rumbling and purring as shi rubs hir body against yours, shi guides you into a shadowy alleyway as shi starts releasing the easy straps on hir street clothes.  There[apostrophe]s an old mattress in there and from the smell, shi[apostrophe]s used it for hir clients before.  As shi guides you towards it, shi nuzzles along your neck and slides your backpack[apostrophe]s straps off your shoulders.  As shi helps you with your remaining clothes with one paw and a smile, hir other dips into your pack, searching for something to take as payment.";
@@ -82,8 +91,8 @@ Once you both are finally drained, shi eases hirself off your cocks with a soft,
 			otherwise:
 				say "   As the tigress finally moves hir head back, shi smiles up at you.  You smile back at hir dazedly, still woozy in the blissful haze of the afterglow.  Shi moves to sit atop your waist and grind hir wet, dripping pussy lips along your spent shaft while pumping at hir cock intently.  Soon shi[apostrophe]s pumping hot tigress cum all over your chest[if cocks of player > 1] to add to the mess of you own seed already there[end if], as if marking you as one of hir clients.  Now spent hirself, shi has you up and on your way with a kiss on the cheek and a squeeze on the bottom, asking you to come back again soon.  You feel a touch of excitement in your loins, lustfully looking forward to meeting up with another of these sexy felines.";
 		otherwise if cunts of player > 0 and cocks of player is 0:		[Yes = FEMALE Identified!]
-			say "   Shi presses you down onto the mattress looks hir client over with a predatory rumble.  Shi lowers hirself onto the mattress and bring hir muzzle to your [character number breast size of player in cupsize] cup bosom.  Hir raspy tongue plays over your [skinname] flesh as shi licks and kisses at your chest.  While tending to your hard nipples, shi moves hir paw between your legs to stroke the wet lips of your [if cunts of player is 1]pussy. [otherwise]pussies. [end if] Shi dips them in slowly and starts to stroke your vaginal walls, working to find all the spots that excite you.  Quite adept at hir work, you find yourself growing to a quick climax which soaks hir paw in your juices.";
-			say "   As you shiver with the tingles of your orgasm running through you, shi slides down your [bodyname] body and buries hir muzzle between your legs, licking at your juicy folds.  Hir rough, feline tongue sends new waves of pleasure through you.  It dives deep into you, once again finding those pleasure spots and ravaging them, intent on giving hir jane a fine romp.[if cunts of player > 1]  While hir tongue ends to your upper slit, hir right paw is working away at the other, making sure it is not neglected in any way.[end if]";
+			say "   Shi presses you down onto the mattress looks hir client over with a predatory rumble.  Shi lowers hirself onto the mattress and bring hir muzzle to your [character number breast size of player in cupsize] cup bosom.  Hir raspy tongue plays over your [skinname of player] flesh as shi licks and kisses at your chest.  While tending to your hard nipples, shi moves hir paw between your legs to stroke the wet lips of your [if cunts of player is 1]pussy. [otherwise]pussies. [end if] Shi dips them in slowly and starts to stroke your vaginal walls, working to find all the spots that excite you.  Quite adept at hir work, you find yourself growing to a quick climax which soaks hir paw in your juices.";
+			say "   As you shiver with the tingles of your orgasm running through you, shi slides down your [bodyname of player] body and buries hir muzzle between your legs, licking at your juicy folds.  Hir rough, feline tongue sends new waves of pleasure through you.  It dives deep into you, once again finding those pleasure spots and ravaging them, intent on giving hir jane a fine romp.[if cunts of player > 1]  While hir tongue ends to your upper slit, hir right paw is working away at the other, making sure it is not neglected in any way.[end if]";
 			say "   Hir left paw is firmly wrapped around hir cock, stroking and pumping it as shi works your honeypot with practiced intent.  Hir shaft looks to be about nine inches in length and dribbles pre as shi works hir paw along it.  It is a dark red with a pointed glans and small bumps along it.  This time, shi eases off repeatedly as you start to build close to orgasm, having roughly gauged the signs from your first and letting you instead build over and over.  You are soon moaning and whimpering with need, much to hir satisfaction.";
 			say "   When the climax finally comes, it hits you like a tidal wave, washing through your body even as your hot juices spray across hir muzzle.  Hir tail lashes excitedly while hir tongue goes from patiently working your cunny to lapping up your sweet nectar eagerly.  Your climax is long and powerful, drawn out by the rough tongue trying to get every drop it can from you.";
 			increase libido of player by 10;					[Oral submission increases Libido]
@@ -93,7 +102,7 @@ Once you both are finally drained, shi eases hirself off your cocks with a soft,
 			if diceroll < libido of player:
 				say "[line break]   As the tigress finally moves hir head back, shi smiles up at you.  You smile back at hir dazedly, still woozy in the blissful haze of the afterglow, but still feeling quite horny.  With a soft moan, you spread your legs and hold your pussy lips open for hir, moaning as you eye hir waiting cock.  'Do me,' you say with a lustful rumble in your voice.  'I want more, kitty.' More than happy to give hir client what she wants, the tigress smiles lustfully back at you.";
 				say "   Moving atop you, shi lines up hir cock with your wet folds and starts to sink hir barbed shaft into you.  After the long session preparing you, shi has little trouble sliding hirself into you and sets to pounding at your already soaked pussy.  Shi plants hir paws on either side of you, gripping the mattress firmly in hir claws for support as shi drives hir throbbing member into again and again.";
-				say "   Rubbing hir body against yours, soft striped fur running along your [bodyname] body, shi moves to lick and nibbling along your neck.  You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite.  The barbed cock is in no way painful, only small bumps that tingle along your walls as shi thrusts, building you towards climax again.  Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you.  You can feel it warming you deep inside as shi gives you a third orgasm that nearly knocks you out.";
+				say "   Rubbing hir body against yours, soft striped fur running along your [bodyname of player] body, shi moves to lick and nibbling along your neck.  You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite.  The barbed cock is in no way painful, only small bumps that tingle along your walls as shi thrusts, building you towards climax again.  Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you.  You can feel it warming you deep inside as shi gives you a third orgasm that nearly knocks you out.";
 				say "   [impregchance]";
 				say "   Once shi[apostrophe]s finally drained hir balls into you and filled you with tigercum, shi withdraws with a soft, satisfied mew.  Shi moves up and rubs hir cum-slick cock against your [character number breast size of player in cupsize] cup boobs, as if marking you as one of hir clients.  Shi then rises slowly and helps you up, a little woozy hirself.  Shi gives your rump a firm squeeze with one paw, rubs the other over your belly, and kisses you full on the lips, feline tongue filling your muzzle.  After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
 				decrease libido of player by 20;				[Somewhat satisfied by sex...]
@@ -103,7 +112,7 @@ Once you both are finally drained, shi eases hirself off your cocks with a soft,
 			otherwise:
 				say "   As the tigress finally moves hir head back, shi smiles up at you.  You smile back at hir dazedly, still woozy in the blissful haze of the afterglow.  Shi moves to sit atop your waist and grind hir wet, dripping folds over yours while pumping at hir cock intently.  Soon shi[apostrophe]s pumping hot tigress cum all over your chest, as if marking you as one of hir clients.  Now spent hirself, shi has you up and on your way with a kiss on the cheek and a squeeze on the bottom, asking you to come back again soon.  You feel a touch of excitement in your loins, lustfully looking forward to meeting up with another of these sexy felines.";			[Female no-sex ending]
 		otherwise if cunts of player is 0 and cocks of player > 0:		[Yes = MALE Identified!]			
-			say "   Shi presses you down onto the mattress looks hir client over with a predatory rumble.  Shi lowers hirself onto the mattress atop you and rubbing hir body against yours.  Hir soft striped fur running along your [skinname] flesh, shi moves to lick and nibbling along your neck.  You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite.  You can feel the warm bulge of hir sheath and the wet touch of hir emerging cock as it bumps against yours.  Shi moves a paw down to stroke hir john[apostrophe]s [if cocks of player is 1]cock [otherwise]cocks [end if]as shi nibbles and nuzzles hir way down your chest and belly.";
+			say "   Shi presses you down onto the mattress looks hir client over with a predatory rumble.  Shi lowers hirself onto the mattress atop you and rubbing hir body against yours.  Hir soft striped fur running along your [skinname of player] flesh, shi moves to lick and nibbling along your neck.  You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite.  You can feel the warm bulge of hir sheath and the wet touch of hir emerging cock as it bumps against yours.  Shi moves a paw down to stroke hir john[apostrophe]s [if cocks of player is 1]cock [otherwise]cocks [end if]as shi nibbles and nuzzles hir way down your chest and belly.";
 			say "   With hir muzzle between your legs, shi starts licking and kissing your [if cocks of player is 1]cock. [otherwise]cocks. [end if] Hir raspy tongue slides along your sensitive [cockname of player] penis and lavishes attention on it, eager to please hir john.[if cocks of player is 1]  As you have multiple cocks for hir to tend to, shi sets to work on the lower one with hir muzzle and the other(s) with hir right paw.[end if]";
 			increase libido of player by 10;					[Oral submission increases Libido]
 			if libido of player > 100:
@@ -164,7 +173,7 @@ Once you both are finally drained, shi eases hirself off your cocks with a soft,
 			now libido of player is 100;
 		let diceroll be a random number from 1 to 125;				[lust check vs 125]
 		if diceroll < libido of player:						[scored under libido, too horny to wait]
-			say "   This gives the tigress a moment to release the easy straps on hir street clothes before pouncing atop you.  Shi pulls your backpack off and tosses it aside, all thoughts of payment lost after watching your lustful writhing on the bed.  As shi grinds hirself against your [bodyname] body, shi helps you out of your remaining clothes, eager to get right to it.  As the firm cheeks of your ass press around it, you can feel its pointed glans and small, stimulating bumps. You can tell it[apostrophe]a larger than average cock, but not massive like many you[apostrophe]ve seen since the outbreak.  You can feel the tigress[apostrophe]s pre leaking down between your cheeks and you find yourself longing for hir to take you with it.";
+			say "   This gives the tigress a moment to release the easy straps on hir street clothes before pouncing atop you.  Shi pulls your backpack off and tosses it aside, all thoughts of payment lost after watching your lustful writhing on the bed.  As shi grinds hirself against your [bodyname of player] body, shi helps you out of your remaining clothes, eager to get right to it.  As the firm cheeks of your ass press around it, you can feel its pointed glans and small, stimulating bumps. You can tell it[apostrophe]a larger than average cock, but not massive like many you[apostrophe]ve seen since the outbreak.  You can feel the tigress[apostrophe]s pre leaking down between your cheeks and you find yourself longing for hir to take you with it.";
 		otherwise:										[scored over libido, remebers to get paid]
 			say "   Shi grins down at you as you writhe on the mattress, losing yourself in the rich scent of sex pervading it.  Shi takes a moment to release the easy straps on hir street clothes before helping you with yours.  Shi sets your backpack aside, and then removes your remaining clothes.  Once naked, shi runs a paw down your back and between your legs to fondle and tease your equipment while hir other paw rummages through your backpack for something to take as payment.";
 			say "[paymentcheck]";
@@ -244,6 +253,14 @@ Once you both are finally drained, shi eases hirself off your cocks with a soft,
 
 
 to say beattigress:
+	if mqstatus is 3:				[if on the motel run, set variable and prevent the regular scene]
+		now mqfightresult is 1;
+		say "Hurray! You beat the tigress, time to continue.";
+		stop the action;
+	if mqstatus is 6:				[if fighting matron, set variable and prevent the regular scene]
+		now mqfightresult is 1;
+		say "Hurray! You beat the tigress matron, time to celebrate.";
+		stop the action;
 	say "   As you strike a final blow to the tigress, you drive hir back into the shaded alley, sending hir to collapse onto a dirty mattress in the shadows of the buildings.  From the smell, shi[apostrophe]s used it for hir clients before.  Shi mewls with lustful need, looking up at you with hir feline eyes as shi releases the easy straps of hir street clothes.  The slutty tigress bares hir striped body for you, lost to hir lustful desires but too weakened to pounce you to sate them.";
 	say "   The tigress whore is available for your amusement. Do you wish to give in have some fun with hir?";
 	if the player consents:									[Decides to fuck tigress]
@@ -254,7 +271,7 @@ to say beattigress:
 			if cock length of player < 13:					[Cock size check: small-large]
 				say "[line break]   As the tigress mewls hir need again, you decide to fill that lovely, striped muzzle and move overtop of hir.  Shi smiles up at you, licking hir lips even as you move into position.  Catching a flash of hir pointed teeth, you momentarily rethink your idea before shi grabs your hips and pulls you closer so hir raspy tongue can glide over your swollen [if cocks of player is 1]member.[otherwise]members.[end if]";
 				say "   Lowering your hips, you push your [cock size desc of player] [cock of player] cock into hir eager muzzle.  Shi wraps hir warm lips around it and starts licking and sucking with considerable skill, clearly having had a lot of practice.  You pump your cock into hir muzzle steadily, sliding it along hir palate.";
-				say "   As the tigress works [if cunt length of player < 6]a finger [otherwise]several fingers [end if]inside your [if cunts of player is 1]vagina[otherwise]vaginas[end if], you lean overtop hir and start licking and sucking hir dual equipment in return.  Hir shaft looks to be about nine inches in length and dribbles pre as you tease it.  It is a dark red with a pointed glans and small bumps along it.  After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return.  After getting hir pussy quivering and dripping with need, you move back to hir cock again.  As you plunge your [facename] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
+				say "   As the tigress works [if cunt length of player < 6]a finger [otherwise]several fingers [end if]inside your [if cunts of player is 1]vagina[otherwise]vaginas[end if], you lean overtop hir and start licking and sucking hir dual equipment in return.  Hir shaft looks to be about nine inches in length and dribbles pre as you tease it.  It is a dark red with a pointed glans and small bumps along it.  After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return.  After getting hir pussy quivering and dripping with need, you move back to hir cock again.  As you plunge your [facename of player] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
 				say "   Shi laps up your pre eagerly, working hir tongue over you with skillful intent, having your arousal build and build until you pound into hir muzzle hard and fast. You blow your load down hir throat and your [if cunts of player is 1]pussy soaks hir paw [otherwise]pussies soak hir paws [end if]in your juices.  This is enough to finally set hir off, blasting tigercum down your throat.  Shi swallows your cum down happily, even moaning in pleasure as shi does.  Clearly, this feline loves hir job.[if cocks of player is 2]  With one cock in hir muzzle, the other one ends up blowing its hot seed across hir body, covering hir striped fur in streaks of your white semen.[otherwise if cocks of player > 2]  With one cock in hir muzzle, the others end up blowing their hot seed across hir body, covering hir striped fur in streaks of your white semen.[end if]";
 			otherwise:									[Cock size check: huge!]
 				say "[line break]   As the tigress mewls hir need again, you decide to fill that lovely, striped muzzle and move to straddle hir chest.  Shi smiles up at you, licking hir lips even as you move into position.  Catching a flash of hir pointed teeth, you momentarily rethink your idea before shi grabs your hips and pulls you closer so hir raspy tongue can glide over your swollen [if cocks of player is 1]member.[otherwise]members.[end if].";
@@ -292,7 +309,7 @@ to say beattigress:
 				say "   Having had your fun, you get up slowly and stroke over hir ears before you get off the mattress and leave the alley behind.  Feeling somewhat satisfied for now, your loins warm with the thoughts of finding another of these sexy felines to play with as you see fit.";
 		otherwise if cunts of player > 0 and cocks of player is 0:		[Yes = FEMALE Identified!]
 			say "   As the tigress mewls hir need again, you decide to put that lovely, striped muzzle to use.  You sit across hir face, lowering your juicy pussy over hir muzzle.  Shi licks hir lips, then runs hir raspy tongue across your wet folds.  You moan in pleasure as you feel it glide across you and you grind down firmly onto hir muzzle, encouraging hir to send that talented tongue deep inside you.";
-			say "   As the tigress works hir tongue inside your [cunt size desc of player] vagina, you lean overtop hir and start licking and sucking hir dual equipment in return.  Hir shaft looks to be about nine inches in length and dribbles pre as you tease it.  It is a dark red with a pointed glans and small bumps along it.  After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return.  After getting hir pussy quivering and dripping with need, you move back to hir cock again.  As you plunge your [facename] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
+			say "   As the tigress works hir tongue inside your [cunt size desc of player] vagina, you lean overtop hir and start licking and sucking hir dual equipment in return.  Hir shaft looks to be about nine inches in length and dribbles pre as you tease it.  It is a dark red with a pointed glans and small bumps along it.  After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return.  After getting hir pussy quivering and dripping with need, you move back to hir cock again.  As you plunge your [facename of player] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
 			say "   This is enough to finally set hir off, blasting tigercum down your throat.  Even as you gulp it down, your orgasm hits as well, further soaking hir striped muzzle in your hot juices.  You moan in ecstacy, grinding down onto hir face as hir well-practiced tongue continues to play inside you, sending you crashing through multiple orgasms until you collapse atop hir, panting for breath for several minutes.";
 			increase libido of player by 10;					[Worked up by oral]
 			if libido of player > 100:
@@ -391,11 +408,38 @@ to say paymentcheck:
 Suddenly, your bowels are filled with a rush of stinging fluid, painful to your abused hole.  As shi withdraws, shi continues to empty hir bladder, pissing across your butt.  Shi shoves you to the ground, then finishes draining hirself all over your battered body.";
 		say "   Painfully grabbing you by the neck and ass, claws sinking into your flesh, shi tosses you from the alley.  Shi gives you a final kick to send you on your way.  You are left a dirty mess, reeking of hir scent and painfully aroused from the rough sex without relief.";
 		decrease hp of player by 20;
-		increase libido of player by 10;					[Increase libido because shi doesn't let you get off...]
+		increase libido of player by 15;					[Increase libido because shi doesn't let you get off...]
+		if libido of player > 100:
+			now libido of player is 100;
 		decrease humanity of player by 12;					[...and give in a lot more]
 		infect;									[Added infection as punishment]
 		now tempnum is 1;								[Temporarily marks lack of payment for use in losetotigress]
 		now stiffedpayment is 1;						[Permanenly marks failure to pay]
+
+to say tigress_desc:
+	choose row monster from the table of random critters;
+	if mqstatus is 3:				[fighting tigresses at the motel]
+		say "The lovely tigress is quite upset at the intruder to hir motel home.  Shi growls angrily and readies to deal with you soundly so shi can have hir way with you and put you in your place.  Under hir.";
+		now hp entry is 55;
+		now monsterhp is 55;
+		now wdam entry is 7;
+		now lev entry is 5;
+		now libido entry is 100;
+	otherwise if mqstatus is 6:				[fighting the matron]
+		say "The tigress matron of the motel is a larger and more impressive female.  Shi's got an extra foot of height on any of hir girls and a much fuller rack as well.  Hir long, flowing orange hair swishes as shi pulls off the bathrobe shi was wearing, baring hir strong and sensual body to you.  Shi looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of hir girls, but eager to put you in your place.  Hir dark nipples and cock are hard with hir anticipation of enjoying a new plaything.";
+		now hp entry is 90;
+		now monsterhp is 90;
+		now wdam entry is 12;
+		now lev entry is 8;
+		now libido entry is 100;
+	otherwise:					[standard tigress]
+		say "   Leaning against a building is a striking female feline.  She is wearing a skimpy outfit, a short top and even shorter skirt.  This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes.  Hir bosom and stomach have snowy, white fur that covers them.  Her ears have [one of]large hoop earrings.[or]a trio of small studs.[or]tattoos of stars on the inside.[or]long, dangling earrings.[at random]  Her [one of]long, black hair is held in a pony tail.[or]hair is dyed a bright red.[or]orange hair is styled into fiery mane.[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist.[or]hair is a deep blue, with green tips.[at random][line break]   Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly.  'So honey, you lookin[apostrophe] for a little fun?  For a little something, I[apostrophe]ll show you a good time.'  As she steps up, you catch the edge of something extra making a bulge under her skirt.  Clearly this tigress hooker is equipped to pleasure any client shi may find. And shi[apostrophe]s found you!";
+		now hp entry is 55;
+		now monsterhp is 55;
+		now wdam entry is 7;
+		now lev entry is 5;
+		now libido entry is 0;
+
 
 Section 2 - Monster Insertion
 
@@ -407,15 +451,15 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Tigress Hooker"; [Name of your new Monster]
-   now attack entry is "[one of]Slamming hir shoulder into you, shi pushes you back against a nearby wall, grabbing your groin![or]Punched in the gut, you reflexively bend forward, allowing hir to bury your face in hir cleavage![or]The tigress grabs you in a reverse arm lock and grinds the hard bulge under hir skirt against your rear until you can twist free![or]You have but a moment to awe at the tigress[apostrophe]s flexibility before that kick strikes you upside the head!  Dazed, you try to get up, only to have hir press your face under hir skirt and against hir pink panties![or]After several quick slashes of hir claws, shi grabs your shoulders and pulls you forward into a fierce kiss![or]With a judo throw, shi tosses you to the ground, then pounces atop you, nipping along your neck with a rumbling purr!  As you roll away, shi manages to grab your ass one last time![at random]"; [Text used when the monster makes an Attack]
+   now attack entry is "[one of]Slamming hir shoulder into you, shi pushes you back against a nearby wall, grabbing your groin![or]Punched in the gut, you reflexively bend forward, allowing hir to bury your face in hir cleavage![or]The tigress grabs you in a reverse arm lock and grinds the hard bulge under hir skirt against your rear until you can twist free![or]You have but a moment to awe at the tigress[apostrophe]s flexibility before that kick strikes you upside the head!  Dazed, you try to get up, only to have hir press your face under hir skirt and against hir pink panties![or]After several quick slashes of hir claws, shi grabs your shoulders and pulls you forward into an equally fierce kiss![or]With a judo throw, shi tosses you to the ground, then pounces atop you, nipping along your neck with a rumbling purr!  As you roll away, shi manages to grab your ass one last time![at random]"; [Text used when the monster makes an Attack]
    now defeated entry is "[beattigress]"; [ Text or say command used when Monster is defeated.]
    now victory entry is "[losetotigress]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "   Leaning against a building is a striking female feline.  She is wearing a skimpy outfit, a short top and even shorter skirt.  This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes.  Hir bosom and stomach have snowy, white fur that covers them.  Her ears have [one of]large hoop earrings.[or]a trio of small studs.[or]tattoos of stars on the inside.[or]long, dangling earrings.[at random]  Her [one of]long, black hair is held in a pony tail.[or]hair is dyed a bright red.[or]orange hair is styled into fiery mane.[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist.[or]hair is a deep blue, with green tips.[at random][line break]   Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly.  'So honey, you lookin[apostrophe] for a little fun?  For a little something, I[apostrophe]ll show you a good time.'  As she steps up, you catch the edge of something extra making a bulge under her skirt.  Clearly this tigress hooker is equipped to pleasure any client shi may find. And shi[apostrophe]s found you!";[ Description of the creature when you encounter it.]
-   now face entry is "feminine tiger face and long, flowing hair.  Your hair is raven black and curls lightly at the ends as it drapes across your shoulders and down your back.";[ Face description, format as the text "Your face is (your text)"]
-   now body entry is "curvaceous and desirable, moving with feline fluidity.  You body moves sensually with every step, drawing in the eye of all who see you.  Your hands are human in shape, but with feline claws, pawpads and fur.";[ Body Description, format as the text "Your Body is (your text)"]
+   now desc entry is "[tigress_desc]";[ Description of the creature when you encounter it.]
+   now face entry is "feminine tiger face and long, flowing hair.  Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your pretty";[ Face description, format as the text "Your face is (your text)"]
+   now body entry is "curvaceous and desirable, moving with feline fluidity.  You body moves sensually with every step, drawing in the eye of all who see you.  Your hands are human in shape, but with feline claws, pawpads and fur";[ Body Description, format as the text "Your Body is (your text)"]
    now skin entry is "ivory white fur streaked with tiger stripes that covers your";[ skin Description, format as the text "You have (your text) skin"]
    now tail entry is "From your rear emerges a long, white tail with black stripes banding the fur.  It flicks behind you with [one of]concealed nervousness[or]excitement[or]lustful playfulness[at random].";[ Tail description, write a whole Sentence or leave blank. ] 
-   now cock entry is "ebon, feline penis with soft barbs and a tapered glans.  Between your thighs, you have a softly-furred sheath from which pokes the tip of your";[ Cock Description, format as you have a 'size' (your text) cock]
+   now cock entry is "ebon feline";[ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it shifts and changes, forming a short muzzle.  Your new nose and muzzle twitch as your whiskers grow in.  Though you cannot see them yet, somehow you know your eyes have turned a pale, icy blue.  Long, luscious black hair flows down, curling lightly to give you a full and sexy locks.  You can feel your ears shifting, poking free as they become cute and tiger-like"; [ face change text. format as "Your face feels funny as (your text)" ]
    now body change entry is "it shifts, growing tighter here, wider there.  Your limbs and body stretch with feline flexibility as they move become those of a sexy tiger.  Delicate, hand-like paws replace your current hands.  They are nimble and you feel the urge to please someone with their touch.  They also hide sheathed claws, waiting to sink into those who displease you.  Your body starts giving off a subtle scent, like that of expensive perfume"; [ body change text. format as "Your body feels funny as (your text)" ]
    now skin change entry is "soft fur spreads across your body.  It is a white as pure as driven snow and sensually soft and silky to the touch.  Even as you start to examine it, deep black stripes start to spread through it, leaving you covered in tiger-striped fur!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
@@ -443,7 +487,7 @@ When Play begins:
    now cunt width entry is 4;        [ Width of female sex  infection will try and give you ]
    now libido entry is 0;            [ Set to zero in this monster to control elsewhere ]
    now loot entry is "motel key";            [ Dropped item.  Key will be used later ]
-   now lootchance entry is 65;        [ Chance of loot dropping 0-100 ]
+   now lootchance entry is 75;        [ Chance of loot dropping 0-100 ]
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -455,14 +499,6 @@ It is not temporary.
 
 instead of using motel key:
 	say "You fiddle with the motel key.  You look it over, but find no indication which motel it is for or where to find it.";
-
-when play ends:
-	if bodyname of player is "Tigress Hooker":
-		if humanity of player is less than 10:
-			say "   Surrendering to your new desires, you wander the streets of the fallen city, turning tricks for whatever reward you can get, or just for the fun of it.  You don[apostrophe]t really have a fixed location, just wandering the city and soliciting several of those you encounter.  Your path takes you back through one the seedier neighbourhoods one day and you encounter another tigress.  Shi takes you into hir alley and you share a long, sensual romp with hir before shi takes you back to hir home at a cheap motel.  You find it filled with several other tigress streetwalkers and you[apostrophe]re soon properly inducted into the group.";
-		otherwise: 
-			say "   After the military forces come through, rescuing those they can, they come across you and help you escape the degenerating city.  You are very friendly with your rescuers and some soon accept your [apostrophe]gratitude[apostrophe] as soon as you are properly treated and declared non-infectious.  Enjoying your romp with the soldiers, you flop around with a few of them, repaying them with sex.";
-			say "   Eventually, you grow tired of them and their regimented lifestyles and, after playing with several until you are bored, you move on.  You spent your life acting as mistress or paid lover to several wealthy businessmen over the years.  It is simply a matter of finding those who are single (or unsatisfied with their wife) and who find your altered looks and ravenous appetite for sex appealing.  You seem to have a talent for finding them, spotting the marks as you circulate through society.  You entice gifts, clothes, jewelry, even a home and car from them, giving you a life of leisure and sex.  Just what a horny feline like you needs.";
 
 
 [ Edit this to have the correct Name as well]
