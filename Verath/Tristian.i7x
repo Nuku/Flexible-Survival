@@ -15,7 +15,7 @@ to say Tristian attack:
 		say "yay";
 		infect "Tristian";
 	otherwise:
-		say "how the heck did you find me hiding here?;
+		say "how the heck did you find me hiding here?";
 		infect "Tristian";
 
 
@@ -36,7 +36,7 @@ When Play begins:
 	now defeated entry is "[Tristian loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Tristian attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "The Tristian is watching you!!";[ Description of the creature when you encounter it.]
-	now face entry is "that is a mixture of human and equine features, with a short palomino like muzzle and dark equine eyes, your features are only accentuated by the multiple earrings hanging from your new more equine ears, and your long dark black mane which hangs down the side of your face. The lovely spiked collar Tristian gave finishes the new look of your "[Your have a (your text) face."] 
+	now face entry is "that is a mixture of human and equine features, with a short palomino like muzzle and dark equine eyes, your features are only accentuated by the multiple earrings hanging from your new more equine ears, and your long dark black mane which hangs down the side of your face. The lovely spiked collar Tristian gave finishes the new look of your "; [Your have a (your text) face."] 
 	now body entry is "that of a humanoid horse thick and rather muscular, your hands and feet have slightly hooflike, fingernails. You are wearing the outfit that your fellow horse goth picked out for you, your strong torso covered in a tight long sleeved fishnet shirt, the fishnet pattern tracing down your well muscled arms to your spiked cuffs. Your thick black leather pants only serve to accentuate your well defined lower body, your slightly hooflike feet rest easily in the modified black leather boots Tristian had made for you.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]palomino spotted[or]lightly furred[or]palomino furred[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long black horses tail hanging from your rear, swishing from side to side across your rear, someone has braided a few small pieces of gothic silver jewelry into the tail, and it makes a soft chiming noise as it sways when you walk.";[ Tail description, write a whole Sentence or leave blank. ] 
