@@ -663,11 +663,15 @@ Include Deer by Nuku Valente.
 Include MothGirl for Fs by Soren.
 Include otter by Nuku Valente.
 Include Ash Drakenoid by Sweraptor.
+Include Lance by Verath.
+Include Palomino by Verath.
+Include Tristian by Verath.
 Include Kangaroo by batroo.
 Include Feral Sea Dragon by Tunalord Sefont.
 Include Feral Sea Dragoness by Tunalord Sefont.
 Include Pets by Nuku Valente.
 Include Tigress Hooker for FS by Stripes.
+Include Tiger Cop for FS by stripes.
 Include High Rise Events by Stripes.
 Include Little Fox by Sarokcat.
 Include Felinoid Companion by Sarokcat.
