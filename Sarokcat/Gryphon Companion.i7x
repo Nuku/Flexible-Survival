@@ -81,6 +81,7 @@ Instead of resolving Lonely Gryphoness:
 				say "Looking down at your own gryphon like body, the singing gryphon seems almost embarrassed for a minute, though when you open your mouth to speak, she darts towards you instead. Blinking in anticipation of a fight, you find her arms going around you in a soft hug, and hear her sweet voice whisper 'Your very cute,' in your ear. Before you can actually respond to this, the gryphon lets you go and turns and launches herself from the rooftop, shooting occassional wistful glances back at you as she vanishes in the direction of the beach.";
 				infect "Hermaphrodite Gryphon";
 				now gryphoncomforted is 1;
+				now Lonely Gryphoness is resolved;
 				stop the action;	
 			otherwise:
 				say "The strange gryphons eyes seem to fill up with panic as she stares at you, slowly backing away towards the edge of the roof and safety, obviously worried about what you might do to them. do you try to convince them you mean no harm?";
@@ -93,6 +94,7 @@ Instead of resolving Lonely Gryphoness:
 					if diceroll is greater than 14:
 						say "The gryphon stops to listen for a minute, as you try to convince her of your peaceful intentions. While they don[apostrophe]t actually say anything in response, you take their listening to be a good sign as you explain that you were only trying to find the source of that strangely beautiful music you heard. Hearing this, you can see the gryphons beak pulling up into a small smile, 'You really liked it?' You can hear her say in a soft tone, her sweet voice filling your ears even as she seems to flush in embarrasment. When you nod, the gryphon seems even more flustered, seeming uncomfortable with your praise, and beginning to back up towards the edge of the rooftop again. 'You seem kind of nice..' She says as she turns away from you, before looking back over her shoulder at you as she spreads her feathered wings. 'Maybe I can sing again for you sometime... I think I might like that..' The gryphon says as she launches herself out into the city, leaving you to stare after her as she vanishes in the direction of the beach, wondering just why this gryphon is so different from all the others you have encountered so far.";
 						now gryphoncomforted is 1;
+						now Lonely Gryphoness is resolved;
 						stop the action;	
 					otherwise:
 						say "Obviously not believing you, the gryphon wastes no time in waiting to hear what you have to say, as they launch themselves into the sky and fly away.";
@@ -156,7 +158,6 @@ Instead of resolving Gryphoness nest:
 						infect "Hermaphrodite Gryphon";
 						say "[bold type](The Gryphoness is now tamed! You can make it your active pet by typing pet Gryphoness. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";	
 						infect "Hermaphrodite Gryphon";
-						now Lonely Gryphoness is resolved;
 						now Gryphoness nest is resolved;
 						follow the turnpass rule;
 					otherwise:
@@ -166,7 +167,6 @@ Instead of resolving Gryphoness nest:
 						infect "Hermaphrodite Gryphon";
 						say "[bold type](The Gryphoness is now tamed! You can make it your active pet by typing pet Gryphoness. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";	
 						infect "Hermaphrodite Gryphon";
-						now Lonely Gryphoness is resolved;
 						now Gryphoness nest is resolved;
 						stop the action;
 				otherwise:
@@ -177,7 +177,6 @@ Instead of resolving Gryphoness nest:
 					infect "Hermaphrodite Gryphon";
 					say "[bold type](The Gryphoness is now tamed! You can make it your active pet by typing pet Gryphoness. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";	
 					infect "Hermaphrodite Gryphon";
-					now Lonely Gryphoness is resolved;
 					now Gryphoness nest is resolved;
 					stop the action;
 			otherwise:
@@ -194,7 +193,6 @@ Instead of resolving Gryphoness nest:
 						infect "Hermaphrodite Gryphon";
 						say "[bold type](The Gryphoness is now tamed! You can make it your active pet by typing pet Gryphoness. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";	
 						infect "Hermaphrodite Gryphon";
-						now Lonely Gryphoness is resolved;
 						now Gryphoness nest is resolved;
 						stop the action;
 					otherwise:
@@ -203,12 +201,10 @@ Instead of resolving Gryphoness nest:
 						infect "Hermaphrodite Gryphon";
 						say "[bold type](The Gryphoness is now tamed! You can make it your active pet by typing pet Gryphoness. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";	
 						infect "Hermaphrodite Gryphon";
-						now Lonely Gryphoness is resolved;
 						now Gryphoness nest is resolved;
 						stop the action;
 				otherwise:
 					say "Denise sighs as you shake your head, 'It[apostrophe]s ok..' She says sadly as she inches away from you and hangs her head down, 'I understand that no one really wants to take the risk of being around something like me now anyways, I might as well just go try to find the other gryphons and see if they at least still want me.' She sighs as she buries her face down in the soft cushions of her bed, ignoring your further attempts to talk to her.  You sigh as you eventually work your way down the narrow path outside, wondering if perhaps you shouldn[apostrophe]t have handled that differently after all...";
-					now Lonely Gryphoness is resolved;
 					now Gryphoness nest is resolved;
 					stop the action;	
 		otherwise:
@@ -224,5 +220,6 @@ Instead of resolving Gryphoness nest:
 
 
 Gryphon Companion ends here.
+
 
 
