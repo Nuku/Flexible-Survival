@@ -28,7 +28,7 @@ title	description
 "Items"	"You will come to have a variety of items. Here are some useful commands.[line break][line break]Item: See a list of items you own.[line break]look (item): Look at a specific item.[line break]use (item): Use an item[line break]get (item): grab a specific item.[line break]get all: get everything in the room."
 "Weapons"	"Some items you find make good weapons! Be sure to use them before a battle to have them at hand."
 "Scavenging"	"Type [bold type]Scavenge[roman type] in any room you can fast travel from to look hunt for food and water."
-"Socializing"	"You can talk (person) to chat it up. If they are of more personal interest w qith you, you can also fuck (person)"
+"Socializing"	"You can talk (person) to chat it up. If they are of more personal interest with you, you can also fuck (person)"
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 
