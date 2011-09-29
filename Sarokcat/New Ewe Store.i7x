@@ -80,8 +80,16 @@ Instead of Resolving a New Ewe Store:
 				If player consents:
 					say " 'Thank you very much, We've all been worried sick about her. It's not good for someone to be away from the flock for to long' The watching sheep nod at this statement.";
 					increase nes by 1;
-					now area of ram is "Outside";
-					now area of ewe is "Outside";
+					repeat with y running from 1 to number of filled rows in table of random critters:
+						choose row y in table of random critters;
+						if name entry is "ewe":
+							now area entry is "Outside";
+							break;
+					repeat with y running from 1 to number of filled rows in table of random critters:
+						choose row y in table of random critters;
+						if name entry is "ram":
+							now area entry is "Outside";
+							break;
 					stop the action;
 				otherwise:
 					say "They stare at you reproachfully with their big black sheep eyes making you uncomfortable, until you can't take it any more and leave.";

@@ -73,9 +73,6 @@ Zoo Giftshop is a room.
 Zoo Giftshop is west of Zoo entrance.
 The description of Zoo Giftshop is "The Zoos own personal giftshop, the place is decorated in safari paraphanalia and merchandise bearing the images of various animals is displayed prominently.  Unfortunately it seems several of the animals have decided to pay the shop a visit themselves, and much of the merchandise has been clawed or strewn around the floor.  Special attention seemed to have been paid to the soda and snack machines, which have been smashed open and their contents mostly emptied around the room, though you think there might be a few items left if you look hard enough. Looking around you spot a section that at one time was full of books detailing the habits and practices of many of the zoo animals, these could have at one point been very useful to you in your current situation, if they weren[apostrophe]t already clawed near to bits. There is a locked door behind the cashiers counter marked 'Employees only'.";
 
-The invent of Zoo Giftshop is { "chips" , "soda" };
-
-
 
 
 angietalk is a number that varies.

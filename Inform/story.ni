@@ -11,6 +11,7 @@ Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 580000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 50000.
+use ALLOC_CHUNK_SIZE of 50000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
