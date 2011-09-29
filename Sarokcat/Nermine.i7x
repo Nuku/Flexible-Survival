@@ -521,7 +521,7 @@ To say jackaltotemmagic:
 	if jackalboytf is 0:
 		say "Rubbing the small totem you wonder just what Nermine expects to happen, and are disappointed when all that seems to happen is the totem growing warm In your hands. You sigh and are about to put the small totem away when your ass start to tingle and feel strange, the statue growing even warmer under your touch.  Glancing behind you you surprised to see your ass seeming to stretch and change, your rear flattening out slightly as a small black jackal like tail forms behind you.  You feel a strange almost pleasant stretching sensation as your new tail grows until its tip is hanging just below your knees, staring at your new tail you find yourself experimentally moving it from side to side a few times, and watch as your new limb responds with surprising dexterity. Taking a few steps you are surprised to find your new tail seems to help your balance greatly, and you have to admit, the nice Jackal tail does look rather hot on you. Suddenly you feel something seem to break under your hands, and look down to see the Jackal totem Nermine gave you seems to have cracked and broken, its purpose fulfilled.";
 		now tailname of player is "jackalboy";
-		now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight ass with every step you take.";
+		now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
 		increase dexterity of player by 3;
 		say "your dexterity has increased by 3!";
 		now jackalboytf is 1;
@@ -546,7 +546,7 @@ To say jackaltotemmagic:
 		say "Pulling this small jackal totem out, you find yourself grinning along with the statue as you realize that surely this statue will be the last one you will need.  Rubbing the totem eagerly you feel a surge of warmth as it seems to melt under your hands, not crumbling like the others but seeming to almost melt into your body and become part of you. You don[apostrophe] have much time to think about this however, as your entire body starts to tingle and shift this time, your muscles seeming to ripple and smooth out, to give you a softer and more delicate appearance. You can feel the sharp claws of a jackal pushing out of your hands and feet, even as your body begins to take on a slightly more animalistic shape. Your heels lifting slightly off the ground as your rear legs crack and shift to a more stable stance as your feet seem to spread apart on new jackal paws. [line break]";
 		say "Looking down at yourself as the tingling begins to fade, you realize that you seem to be rather lean and skinny now, and perhaps a little shorter, your body obviously more built for grace and speed instead of combat.  The sight of your new form makes you smile happily though, as you realize that this new form is just what you needed for serving your mistress, its silky soft skin, and sensitive body obviously perfect for pleasuring and serving the larger and stronger Jackalwoman.   Thinking about Nermine you realize you can hardly wait to get back and show her your new perfect form, and thank her for all her help in helping you become the submissive little jackaltoy she wanted you to be. Wasting no time, you quickly run towards the shop, unable to wait as thoughts of the pretty and dominant shopkeeper run through your head, maybe if you are lucky she will even have another job or two for you to do, and if you are really lucky maybe she will even play with you some! You find yourself panting happily at the new thoughts, even as you run through the city on your swifter and surer legs.  ";
 		now bodyname of player is "jackalboy";
-		now body of player is "slim and sleek, only lightly muscled with slightly digigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself.";
+		now body of player is "slim and sleek, only lightly muscled with slightly digigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal toy like yourself.";
 		now cockname of player is "jackalboy";
 		now cock of player is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
 		decrease strength of player by 2;
@@ -561,39 +561,49 @@ An everyturn rule:
 		if tailname of player is not "jackalboy":
 			say "Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body, as your jackal like tail reforms.  Its sleek dark presence behind you proving that its form is stronger then your more recent infection.";
 			now tailname of player is "jackalboy";
+			now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
 	if jackalboytf is 2:
 		if tailname of player is not "jackalboy":
 			say "Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body, as your jackal like tail reforms.  Its sleek dark presence behind you proving that its form is stronger then your more recent infection.";
 			now tailname of player is "jackalboy";
+			now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
 		if skinname of player is not "jackalboy":
 			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
 			now skinname of player is "jackalboy";
+			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 	if jackalboytf is 3:
 		if tailname of player is not "jackalboy":
 			say "Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body, as your jackal like tail reforms.  Its sleek dark presence behind you proving that its form is stronger then your more recent infection.";
 			now tailname of player is "jackalboy";
+			now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
 		if facename of player is not "jackalboy":
 			say "Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem.  You can feel the pressure inside your head building, until finally something inside your head seems to snap, and you let out a loud low moan of pleasure as your face seems to snap and reshape itself.  Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
 			Now facename of player is "jackalboy";
+			now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[apostrophe]t help but enjoy how much your mistress seems to like your new jackal[apostrophe]s";
 		if skinname of player is not "jackalboy":
 			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
 			now skinname of player is "jackalboy";
+			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 	if jackalboytf is 4:
 		if tailname of player is not "jackalboy":
 			say "Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body, as your jackal like tail reforms.  Its sleek dark presence behind you proving that its form is stronger then your more recent infection.";
 			now tailname of player is "jackalboy";
+			now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
 		if facename of player is not "jackalboy":
 			say "Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem.  You can feel the pressure inside your head building, until finally something inside your head seems to snap, and you let out a loud low moan of pleasure as your face seems to snap and reshape itself.  Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
 			Now facename of player is "jackalboy";
+			now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[apostrophe]t help but enjoy how much your mistress seems to like your new jackal[apostrophe]s";
 		if skinname of player is not "jackalboy":
 			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
 			now skinname of player is "jackalboy";
+			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 		if bodyname of player is not "jackalboy":
 			say "Your body seems to twist and warp, making you convulse as your body fights off the intrusive new infection, soon you can see your body slimming back down into the sleek soft lines of the jackal boy your mistress likes so much.  The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you would[apostrophe]t want to make your mistress unhappy by being anything less than the lovely submissive jackal she helped mold you into.";
 			now bodyname of player is "jackalboy";
+			now body of player is "slim and sleek, only lightly muscled with slightly digigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal toy like yourself.";
 		if cockname of player is not "jackalboy":
 			now cockname of player is "jackalboy";
-
+			now cock of player is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
 
 
 Section 5 Nermine quests
@@ -723,7 +733,8 @@ Instead of resolving a Hyena Challenging:
 			increase charisma of player by 2;
 			now Hyena Challenging is resolved;
 		otherwise:
-			say "Following the trail of clues leads you to the edges of the territory claimed by the gang of herm hyenas and though you are pretty sure they have what you are looking for somewhere in their territory, you have no clue where to begin your search, it seems pretty obvious that you are going to need to ask some of the gang members for help in that regards, although you doubt they will cooperate without a fight.  After some searching you do manage to find a pair of gang members lounging around the area, and while they seem friendly enough at first as they try to convince you to join their gang, their mood swiftly changes when they realize you are trying to retrieve something from their gang, as they quickly turn and attack";
+			say "Following the trail of clues leads you to the edges of the territory claimed by the gang of herm hyenas and though you are pretty sure they have what you are looking for somewhere in their territory, you have no clue where to begin your search, it seems pretty obvious that you are going to need to ask some of the gang members for help in that regards, although you doubt they will cooperate without a fight.  After some searching you do manage to find a pair of gang members lounging around the area, and while they seem friendly enough at first as they try to convince you to join their gang, their mood swiftly changes when they realize you are trying to retrieve something from their gang, as they quickly turn and attack, striking at you before you can respond!";
+			decrease hp of player by 15;
 			Challenge “Herm Hyena”;
 			Challenge “Herm Hyena”;
 			if lost is 0:
@@ -1090,39 +1101,49 @@ An everyturn rule:
 		if tailname of player is not "jackalman":
 			say "Your ass tingles as it shifts and changes while you watch, a pleasant sensation stealing over you as the power of the ankh you used returns your body to a proper form, your jackal like tail reforming behind you.  Its sleek dark presence behind you proving that its power is stronger then your more recent infection .";
 			now tailname of player is "jackalman";
+			now tail of player is "You have a long sleek jackal[apostrophe]s tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
 	if jackalmantf is 2:
 		if tailname of player is not "jackalman":
 			say "Your ass tingles as it shifts and changes while you watch, a pleasant sensation stealing over you as the power of the ankh you used returns your body to a proper form, your jackal like tail reforming behind you.  Its sleek dark presence behind you proving that its power is stronger then your more recent infection .";
 			now tailname of player is "jackalman";
+			now tail of player is "You have a long sleek jackal[apostrophe]s tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
 		if skinname of player is not "jackalman":
 			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
 			now skinname of player is "jackalman";
+			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 	if jackalmantf is 3:
 		if tailname of player is not "jackalman":
 			say "Your ass tingles as it shifts and changes while you watch, a pleasant sensation stealing over you as the power of the ankh you used returns your body to a proper form, your jackal like tail reforming behind you.  Its sleek dark presence behind you proving that its power is stronger then your more recent infection.";
 			now tailname of player is "jackalman";
+			now tail of player is "You have a long sleek jackal[apostrophe]s tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
 		if facename of player is not "jackalman":
 			say "You feel a strange discontent building in your head, as your face seems to burn and flex, its external form not matching that of your internal jackal, causing you to snap and snarl even as the bones in you face begin to shift and stretch again, and you let out a loud howl of triumphant pleasure as your face reshape itself back into a proper jackals visage, your grin once more stretching your muzzle as your gold dusted black fur settles in once more over your handsome jackals countenance.";
 			Now facename of player is "jackalman";
+			now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seeming both predatory, and strangely sexy at the same time.";
 		if skinname of player is not "jackalman":
 			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
 			now skinname of player is "jackalman";
+			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 	if jackalmantf is 4:
 		if tailname of player is not "jackalman":
 			say "Your ass tingles as it shifts and changes while you watch, a pleasant sensation stealing over you as the power of the ankh you used returns your body to a proper form, your jackal like tail reforming behind you.  Its sleek dark presence behind you proving that its power is stronger then your more recent infection .";
 			now tailname of player is "jackalman";
+			now tail of player is "You have a long sleek jackal[apostrophe]s tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
 		if facename of player is not "jackalman":
 			say "You feel a strange discontent building in your head, as your face seems to burn and flex, its external form not matching that of your internal jackal, causing you to snap and snarl even as the bones in you face begin to shift and stretch again, and you let out a loud howl of triumphant pleasure as your face reshape itself back into a proper jackals visage, your grin once more stretching your muzzle as your gold dusted black fur settles in once more over your handsome jackal countenance.";
 			Now facename of player is "jackalman";
+			now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seeming both predatory, and strangely sexy at the same time.";
 		if skinname of player is not "jackalman":
 			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
 			now skinname of player is "jackalman";
+			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 		if bodyname of player is not "jackalman":
 			say "Your body seems to twist and warp, your muscles heating up again as your body fights the outside infection. Soon enough you can feel your form twisting and warping back into the proper and powerful shape of a predatory jackal.";
 			now bodyname of player is "jackalman";
+			now body of player is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself..";
 		if cockname of player is not "jackalman":
 			now cockname of player is "jackalman";
-
+			now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 
 
 Section 8- Strange doll

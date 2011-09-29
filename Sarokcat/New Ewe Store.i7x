@@ -14,45 +14,54 @@ Lastewefuck is a number that varies. Lastewefuck is usually 250.
 ramfucked is a number that varies. Ramfucked is usually 0.
 ewefucked is a number that varies. ewefucked is usually 0.
 
-Ramfucking is an action applying to nothing.
-
-understand "fuck leon" as ramfucking;
-understand "fuck ram" as ramfucking;
-
-check ramfucking:
-	if Leon is not visible, say "who?" instead;
-
-Ewefucking is an action applying to nothing.
-
-Understand "fuck mary" as ewefucking;
-Understand "fuck ewe" as ewefucking;
-
-check ewefucking:
-	if Mary is not visible, say "who?" instead;
 
 
-Instead of ramfucking while ramfucked is 0:
-	try conversing the leon;
-
-Instead of ewefucking while ewefucked is 0:
-	try conversing the mary;
-
-Carry out ramfucking:
-	if lastramfuck - turns is less than 8:
-		say "Leon smiles at you as you approach, before shaking his head sadly at you. 'Much as I'd like to spend some more time with you, you aren't the only one in the flock that needs my personal attention. And it wouldn't be fair to the rest of them for me to neglect them like that, but if you come back later I'm sure we could find some time.'.";
+Instead of fucking the Leon:
+	if ewefucked > 0:
+		say "'Well that sounds like an interesting offer,' Leon says, 'But I'm not the one you should be talking to now am I? You wouldn't want your little lamb over there to get lonely would you?";
+	if lastramfuck - turns is less than 6:
+		say "Leon smiles at you as you approach, before shaking his head sadly at you. 'Much as I'd like to spend some more time with you, you aren't the only one in the flock that needs my personal attention. And it wouldn't be fair to the rest of them for me to neglect them like that, but if you come back later I'm sure we could find some time.' Your handsome flock leader says with some amusement..";
 		stop the action;
 	now lastramfuck is turns;
-	say "[ram attack]";
-	ewefy;
+	say "Leon looks up from what he was doing as you approach and smiles, 'I can tell what you want, just head on back to the back room and i'll be right there' he says as he calls over one of the other ewes to finish what he was doing.  Shuddering in anticipation you find yourself heading through the doorway as your ram suggested, unable to disobey.";
+	wait for any key;
+	if cunts of player is greater than 0:
+		say "Leon reaches the room right behind you giving you little time to get comfortable, noting you still have your clothes on he quickly gestures for you to strip.  You eagerly find yourself removing what little clothing you were wearing, your body tightening in pleasure in spite of yourself at a command from the strong and dominant ram. 'Now that's what I like to see,' He says as he takes in your naked body, his eyes lingering on your now exposed slit. Leon grins as he slowly begins stalking forward, something in the way he moves making you feel smaller and more needy as he draws close to you, his strong masculine musk filling your nose and making your insides clench in need. Reaching out he rests his three fingered hand on your shoulder for a minute, before gently turning you to face away from him.";
+		wait for any key;
+		say "Being unable to see whats happening adds an extra erotic flavor to the experience as he gently pushes you forward until you are braced on one of the low padded benches in the room, causing you to shudder in anticipation. Your body tenses as you can feel the tip of his hard cock pressed up against your ass, almost unconsciously you find yourself lifting your ass up higher to provide your ram with easier access to your increasingly wet opening.  You hear Leon chuckle softly behind you at your obvious wantonness,  before you can turn your head to look behind you, you feel your vagina split open as he impales you with his rod in one swift move.  Gasping in shock and pleasure you quickly lower your head as he begins to slowly slide himself in and out of your needy pussy.  You can only moan as you feel your insides shudder and grip his cock tightly, his every move sending shockwaves of pleasure through your body.";
+		wait for any key;
+		let ram be "ram";
+		let ewe be "ewe";
+		say "[if skinname of player is ram or skinname of player is ewe]He buries his rough hands in your soft wool, gripping you tighter and then he begins to grip and release as he thrusts into you, his hands massaging your woollen outside as his cock massages your insides with each thrust.[end if][if facename of player is ram or facename of player is ewe]With his strong musk filling your  sheeplike nose, you can't help yourself from responding, you quickly find yourself making soft baaing and bleating noises with each and every one of his thrusts.  Leon only thrusts harder with each noise, seeming encouraged and turned on by your obvious sign of submission.[end if] As Leon begins to rock his hips forward even faster, you can feel his front leaning over you pressing you down into the bench even further, his rod moving within you making your eyes close in pleasure as your mouth hangs open weakly.  You feel your mind emptying out of everything else except for the strong ram above you and his wonderful tool as he breeds you, your body signalling its total submission to his dominance, with your mind quickly following suit. Nothing seems quite as important to you anymore as being just another mindless part of the flock, surrendering body and soul to the strong male above you.  As if sensing your readiness to submit, Leon thrusts forward one last time, his voice rising in a triumphant bleat as his cock explodes within you, your mind exploding with pleasure as he coats your insides with his fertile dominant seed. Moaning at the feel of his fertile treasure within you, you find yourself unable to do anything but shudder as aftershocks run through you,  before he pulls himself out of you.  You can feel him pat you on the back as you lie there helplessly before hearing the door open and shut as he leaves you alone to recover and pull your shattered mind back together. Eventually you recover and manage to clean up and drag yourself back outside, a little bit worried at how easily he reduced you to just another mindless ewe, and a little bit excited by it as well.[impregchance]";
+	otherwise:
+		say "Leon reaches the room right behind you giving you little time to get comfortable, noting you still have your clothes on he quickly gestures for you to strip.  You quickly find yourself removing what little clothing you were wearing, finding yourself unable to resist a command from the dominant ram in the flock. Leon smiles, then takes a look at you before shaking his head sadly, 'Now this just won't do.' He says as he gestures to your [cock of player] cock, 'There's only room in the flock for one ram at a time ya see.'  He continues with a shake of his head, 'Looks like I'm going to need to show you your place in this flock properly, and fix that little problem you got between your legs there.' So saying he quickly moves stalks toward you his posture and movements intimidating as he shows his dominance. ";
+		wait for any key;
+		say "Forcing you down on your knees he reaches down and begins fondling his own cock in front of you, 'Don't move now.' Leon says with a grunt as he begins to stroke himself.  His thick black and pick cock emerges slowly from its wooly sheath in front of your eyes, its tip level with your face as he slowly pumps his hoof like hand up and down its length.  You can't help but stare in fascination as your rams strong male musk fills the room, its earthy scent going straight to your head and making your own cock tighten in response. Quickening his strokes, before you know it, Leon cums with a loud Baaaing noise, as his seed spurts all over your face, covering you in his sticky ram juices.  Blinking to clear your eyes, you cant help but lick your lips, tasting his seed on and in your mouth, as the rest sinks into your skin. As the strong taste of his male seed shoots through you, you can feel your body twisting and changing in response, becoming better suited to being a proper ewe to his ram.   'Ah, that was good.' Leon says as he begins to clean himself up, 'I'm looking forward to our next time, already, and seeing how you look as a proper ewe.' he finishes with a lewd wink before ducking out the door. Leaving you to clean up on your own before making your own way back to the store, the taste of his seed still filling your mouth. ";
+	infect "ram";
 	if cunts of player is greater than 0, say "[impregchance]";
 
-Carry out ewefucking:
-	if lastewefuck - turns is less than 8:
-		say "Mary blushes as she looks around, before sighing, 'Sorry, i can't duck out again from my duties here again so soon. Maybe you could come back a little later?' she says hopefully.'.";
+
+
+Instead of fucking the Mary:
+	if ramfucked > 0:
+		say "Mary smiles at you happily as you greet her 'It's always good to see you here, but i think the Flock leader will be even happier to see you if you know what i mean.' The blushing ewe says as she gives you a nudge in Leon's direction";
+	if lastewefuck - turns is less than 6:
+		say "Mary blushes happily as she looks around, before sighing sadly at the amused glances the other flock members send her way, 'Sorry, i just can't duck out again from my duties here again so soon. Maybe you could come back a little later?' your cute little ewe says hopefully.'.";
 		stop the action;
 	now lastewefuck is turns;
-	say "[ewe attack]";
-	ramify;
+	say "'Mary blushes eagerly at your advances, nodding shyly she quickly looks around the store before ducking outside with you. Quickly heading over to her nearby hideout she kisses you as soon as the two of you are safe and alone. Breaking off the kiss Mary says, 'I'm so glad to see you again,' she pants eagerly, 'I haven't been able to stop thinking about you since last time.' Before you know it she has quickly stripped you naked and is pushing you down onto the couch.";
+	wait for any key;
+	if cocks of player is greater than 0:
+		say "Her eyes slowly drift down your body only to stop at your erect [cock of player] cock, staring in licking her lips in anticipation she lowers her head to it and runs her long tounge along the base of it, her eyes crossing as she savors the taste. Unable to wait any longer, she quickly moves herself over you, straddling you as she positions herself over your erect maleness.  Before you can say anything she lowers herself onto you in one swift movement, moaning in ecstasy as her soft cavern wraps around your cock. ";
+		wait for any key;
+		say "Unable to resist the soft feel of her wet folds enveloping you, you bury your hands in the soft wool of her hips, gripping tightly as you thrust upwards.  Mary moans in pleasure as you take charge, her inner muscles tightening around you deliciously with your every movement.  Soon you settle into a rhythm of short quick thrusts into your willing ewe, her soft body rubbing up against your [skin of player] with every thrust, her face full of animalistic pleasure as she makes soft bleating and moaning noises in time with your thrusting.  Before you know it you feel your muscles tense in orgasm, as your cock empties its load into her fertile belly, causing her to shudder in orgasm as well as your seed fills her belly. Panting, she collapses on top of you, your cock still twitching in her, as you both lie there exhausted.";
+		wait for any key;
+		say "Waking up after a couple hours, you find yourself alone on the couch, quickly gathering up your belongings you find a short note left behind from Mary.  'I had to return to the store to take care of a few things, though I am definitely looking forward to spending more time with you as soon as we can. Signed, Your loyal ewe.'  Smiling as you read the note, you feel a surge of satisfaction at having taken care of your ewe properly, and tuck the note into your backpack before heading back over to the store yourself.";
+	otherwise:
+		say "Mary's sheeplike face pouts slightly as she takes in your female form, 'It looks like you aren't quite ready to be the ram of the flock yet.' She says as she runs her hands over your body. 'But that doesn't mean we can't have a little bonding time in the flock anyways,' She finishes as she leans over you to lick the side of your face erotically.  Wasting no time she begins running her hands up and down your body, teasing and exciting you as she begins to lick and kiss her way down your body.  She pays special attention to your nipples and stomach, before finally lowering her head to your wet pussy, which she begins to nibble and tease with her soft lips and flexible tounge.  Unable to help yourself you bury your hands in the soft fleece around her head as you moan and writhe underneath her, her marvelously skilled tounge quickly bringing you to the edge of orgasm, before finally making you cry out as you cum, your juices eagerly licked up by her wonderful tounge.";
+		wait for any key;
+	say "As you collapse back onto the couch from your amazing orgasm, Mary slowly moves back up your body in order to kiss you again, the taste of your own sexual fluids exploding into your mouth from the deep kiss. Eventually breaking the kiss off, she lies next to you as you drift off into an exhausted sleep.  You can vaguely here her comment as you drift off, something about not being able to wait for next time...";;
+	infect "ewe";
 
 
 After resolving a  New Ewe Store, try looking;
@@ -71,6 +80,8 @@ Instead of Resolving a New Ewe Store:
 				If player consents:
 					say " 'Thank you very much, We've all been worried sick about her. It's not good for someone to be away from the flock for to long' The watching sheep nod at this statement.";
 					increase nes by 1;
+					now area of ram is "Outside";
+					now area of ewe is "Outside";
 					stop the action;
 				otherwise:
 					say "They stare at you reproachfully with their big black sheep eyes making you uncomfortable, until you can't take it any more and leave.";
@@ -86,13 +97,32 @@ Instead of Resolving a New Ewe Store:
 			if diceroll is greater than 12:
 				say "After a while of calling out, you are about to leave when you hear a small voice reply.";
 				say "Hello can you help me?  I was chased in here by some flying beasts while scavenging some goods for my family, and the entryway came down when they tried to force their way through.  It's dark down here and I don't know how to find my way out. Please won[apostrophe]t you help me?'  After reassuring the voice that you will do the best you can, you look at the collapsed entry carefully and realize you would never be able to dig through that in time, perhaps you can find another way down through the sewers?";
-				now the sarea of New Ewe Store is "Mall";
 				increase nes by 1;
 				stop the action;
 			otherwise:
 				say "you talk and you talk but hear nothing further, perhaps it was only your imagination after all?";
 		otherwise:
 			say "Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You Explain to the hopeful faces that you haven't yet seen their missing flock member, and watch the Sheep's faces fall as they look at you reproachfully. Feeling vaugely guilty you let yourself back out.";
+	If nes is 2:
+		say "Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You explain to the hopeful faces your progress so far on finding their missing flock member, and the sheeplike faces of the flock tighten with worry as they begin to bleat  in distress when they learn of their lost lambs predicament. Leon seems to be rather earnest as he asks for your help in rescuing their trapped lamb and returning her to the flock, unable to resist such a desperate plea, you nod and promise to help as you slip back out the door.";
+		stop the action;		
+	if nes is 3:
+		say "As you travel the deserted streets you notice that you are near the Grocery store again, you find your thoughts drifting to Mary and wondering if she made it home safely.  Deciding it cant hurt to stop and check you head that way and are quickly at the store entrance, pushing the door open you are greeted warmly by the small group of sheep inside. Most of them gather around you smiling, as Leon pushes his way to the front of the group to address you.";
+		say " 'We're glad to see you back again safely,' The big ram says with smile on his muzzle. 'Mary told us all about how you helped her out, and we are all very grateful to you.' He pauses for a second as all the other sheep nod in agreement.  'We wish we could find some way to repay you properly for all your help, but your definitely welcome to Rest in our store anytime from now on!' he continues as some of the group clap for you.";
+		wait for any key;
+		say "'As a matter of fact if you want a safe place to stay I'd be more then happy for you to join our flock here if you want. We have a pretty good spot picked out here and some decent supplies, and its not without some side benefits too,' Leon says with a bit of a leer. 'Just talk to me, whenever you feel like it'";
+		say " 'Of course Mary over there hasn't talked about much else since you rescued her, i think she might have a bit of a crush on you,' Leon says as he gestures to where the Ewe you saved earlier is peeking around a corner at you. 'If you'd rather join her instead it wouldn't be a problem either, just go Talk to Mary, instead.'";
+		wait for any key;
+		say "'Either way,' He says as he finishes up, 'Thanks for helping us out and we hope you join us again sometime soon.'";
+		now New Ewe Store is resolved;
+		now New Ewe Storeroom is known;
+		move player to New Ewe Storeroom;
+
+
+Littlelostlamb is a situation.
+The sarea of Littlelostlamb is "Mall";
+
+Instead of resolving Littlelostlamb:
 	If nes is 2:
 		say "After searching through the sewers for an hour, you find an opening into the subway tunnels, remembering the person left trapped down there you attempt to find your way through the tunnels to their location.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
@@ -111,22 +141,12 @@ Instead of Resolving a New Ewe Store:
 			increase nes by 1;
 			add "water bottle" to invent of mall;
 			add "soda" to invent of mall;
-			now the sarea of new ewe store is "Outside";
 			stop the action;
 		otherwise:
 			say "you hunt through the dark tunnels for what seems like hours, the tunnels twisting and turning until you have lost all sense of direction, eventually you find yourself back where you entered the tunnel,  Shuddering you quickly exit the subway tunnels for now... you can always come back later... ";
-	if nes is 3:
-		say "As you travel the deserted streets you notice that you are near the Grocery store again, you find your thoughts drifting to Mary and wondering if she made it home safely.  Deciding it cant hurt to stop and check you head that way and are quickly at the store entrance, pushing the door open you are greeted warmly by the small group of sheep inside. Most of them gather around you smiling, as Leon pushes his way to the front of the group to address you.";
-		say " 'We're glad to see you back again safely,' The big ram says with smile on his muzzle. 'Mary told us all about how you helped her out, and we are all very grateful to you.' He pauses for a second as all the other sheep nod in agreement.  'We wish we could find some way to repay you properly for all your help, but your definitely welcome to Rest in our store anytime from now on!' he continues as some of the group clap for you.";
-		wait for any key;
-		say "'As a matter of fact if you want a safe place to stay I'd be more then happy for you to join our flock here if you want. We have a pretty good spot picked out here and some decent supplies, and its not without some side benefits too,' Leon says with a bit of a leer. 'Just talk to me, whenever you feel like it'";
-		say " 'Of course Mary over there hasn't talked about much else since you rescued her, i think she might have a bit of a crush on you,' Leon says as he gestures to where the Ewe you saved earlier is peeking around a corner at you. 'If you'd rather join her instead it wouldn't be a problem either, just go Talk to Mary, instead.'";
-		wait for any key;
-		say "'Either way,' He says as he finishes up, 'Thanks for helping us out and we hope you join us again sometime soon.'";
-		now New Ewe Store is resolved;
-		now New Ewe Storeroom is known;
-
-
+			stop the action;
+	otherwise:
+		say "Traveling through the dark sewers, and maintainence passageways underneath the mall, you find an opening leading out into what appear to be the cities subway tunnels. Looking through the passageway, you poke around on the other side of the opening for a minute. You find yourself somewhat worried by the signs  that there are a large number of creatures still using the subway actively, and given how easy it would be to get lost in the maze of the subway tunnels, you decide to return to the somewhat more familiar area underneath the mall.";
 
 
 
@@ -134,6 +154,8 @@ Instead of Resolving a New Ewe Store:
 New Ewe Storeroom is a room. It is fasttravel. It is private.
 
 The description of New Ewe Storeroom is "This small family grocery store is now home to a small flock of sheep, though in most other respects it seems to be a relatively normal store.  The shelves are mostly empty now, or full of goods that the flock themselves are using, and some of the narrow aisles have blankets and bedding laid out for the sheep to sleep on, though they have made a place for you if you need to rest(enable rest here). Their is a somewhat musky and woolen odor to the place, though the smell seems more comforting and almost arousing then anything else.";
+
+The invent of Zoo Giftshop is { "chips" , "food" , "water bottle" , "soda" };
 
 Leon is a man.
 The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you, You recall his name was Leon.";
@@ -168,19 +190,12 @@ To say leonchat:
 				say  "As your getting ready to leave, you cant help but notice you smell a bit like a sheep now yourself, just like all the other flock members in the store. For some reason it doesn't seem to bother you to smell like your fellow sheep, you all belong to the same ram after all...  Blushing uncertainly at that thought you return to the main store area.";
 				increase libido of player by 10;
 				increase ramfucked by 1;
-				Ramify;
+				infect "ram";
+				infect "ram";
 			otherwise:
 				say  "Ah well, I thought you would make a great addition to the flock, think it over some more would you?";
 
-to Ramify:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "ram":
-			now monster is y;
-			break;
-	infect;
-	infect;
-	infect;
+
 
 
 The conversation of Mary is { "[marychat]" };
@@ -203,36 +218,18 @@ To say marychat:
 				say "You continue to talk about a number of subjects as you both relax, eventually Mary falling asleep in your lap. Softly moving her into a more comfortable position, you realize how much your comfortable time with your new flock member seems to have changed you, even making you smell a bit like her.";
 				increase libido of player by 10;
 				increase ewefucked by 1;
-				ewefy;
+				Infect "ewe";
+				infect "ewe";
+				stop the action;
 			otherwise:
 				say  "'Oh, that's ok then, I understand if you have other things you[apostrophe]d rather do, but i'd really like it if you thought about it some more.'";
 
-to ewefy:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "ewe":
-			now monster is y;
-			infect;
-			infect;
-			infect;
-			break;
 
 
 
 
-
-when play ends:
-	if bodyname of player is "ram":
-		if humanity of player is less than 10:
-			say "[one of]You wander the city aimlessly, your mind consumed with lewd thoughts and your body consumed with need, eventually you are captured by a large wolf who carries you off to a makeshift den before having his way with you.  He uses you hard and often, his Knot stretching you in the most amazing ways and tieing you to him, you stay behind in the den while he often goes out hunting for supplies or fresh converts. Before he comes back and puts you on his wonderful knot again.  Inevitably you end up pregnant with his seed, and bear him many pups, which you often clothe in your own wool....[or] As your grip on your humanity weakens, you find yourself giving in to your more instintual side. You end up wandering the city alone, the feelings of loneliness without a flock tearing at you constantly. Searching desperately for someplace to belong, you come across a changed group of smooth collies.  Unable to resist as they bark and nip at you, you are quickly herded into a makeshift pen.  The collies treat you well, almost like a pet, though they seem to enjoy playing at herding you around and taking care of you.  Eventually they manage to hunt up a few more sheep for their small flock, including a familiar looking ram that seems particularly attracted to you...[or]Feeling your mind fading, you stumble back to the store and the sense of safety it provides. Making it there safely Leon and the flock take you in and take care of you, letting you sleep curled up amongst the other sheep.  When the rest of the flock is rescued later, they take you with them to their new pasturage, where you can spend the day with the regular uninfected sheep grazing, and the nights in the pen either with Leon or one of the regular rams he buys.  You happily bear them both many little lambs...[at random]";
-		otherwise:
-			say "Rescue finally arrives, and you and your flock happily leave the city for greener pastures.  Finding yourself somewhat of an outcast due to your unusual changes, you end up sticking together closely with your flock, at least they understand what it's like.  Eventually Leon sets up a small organic farm in the countryside for your flock, and you learn to enjoy the fresh air and the open pastures.  and most especially you come to enjoy the almost nightly visits from your Ram.  Having quickly become one of his favorites Leon takes you almost every night, ensuring you are happy and complacent carrying his little lambs,  you happily bear him many offspring, spending most of your days pregnant or tending to his little ones, until eventually you can't really recall ever doing anything else...";
-	if bodyname of player is "ewe":
-		if humanity of player is less than 10:
-			say "Your mind giving out under the strain of the infection, you head out into the city, Mary following along like a good little ewe. You quickly set about finding more members to convert to your flock, increasing your numbers for a time and protecting the trail of Ewes following you. Unfortunately you aren't alone in the city and are beset on all sides by different predators and infected until finally you and your flock are captured by a group of hyenas.  At first it is somewhat disconcerting to be surrounded by predators, but soon you realize it isn't all bad.  As the only male you are indispensible to them, and you are kept in some comfort, your only duty is to breed the Ewes all day and relax.  Eventually you don't even mind one or two of your flock disappearing every now and then, and you even come to enjoy being sheared....";
-		otherwise:
-			say "You and Mary are quite happy when the rescue arrives, allowing you to leave the city once you are determined to be safe enough. You travel together for a while, but it is lonely with only the two of you.  You decide to settle down and raise a larger flock eventually, opening a small clothing and fabric store before settling down to breed some new young lambs.  The demand for your handspun clothing and well made designs quickly outstrips your ability to keep up, and so you find yourself hiring on a few other young women to help, who eventually join the flock eagerly after a gift of some of your 'specially treated' wool garments. You soon enough have a rather brisk buisness going, and a small but ever increasing flock to take care of you. Though the next time the building inspecter complains about the multiple occupancy you just might have to invite her into the flock as well....";
 
 
 
 New Ewe Store ends here.
+
