@@ -675,6 +675,7 @@ Include Tigress Hooker for FS by Stripes.
 Include Tiger Cop for FS by stripes.
 Include High Rise Events by Stripes.
 Include Feral Wolf for FS by Shadowwolf94.
+Include Pirate Island by Sarokcat.
 Include Little Fox by Sarokcat.
 Include Felinoid Companion by Sarokcat.
 Include Red Events by Stripes.
