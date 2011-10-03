@@ -22,7 +22,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Demon Brute";
-	now attack entry is "The brute [one of]throws a powerful punch[or]swings a great fist[or]begins to kick wildly with powerful legs[at random]";
+	now attack entry is "The brute [one of]throws a powerful punch[or]swings a great fist[or]begins to kick wildly with powerful legs[at random].";
 	now defeated entry is "With a rather loud thud, the Demon Brute collapses to the ground, defeated. It proceeds to vanish into a fine purple mist, and is blown away by the wind."; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[demon brute attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "You see a massive beast ahead, with dark purple skin, a frightening face with slits for nostrils, yellow eyes with red irises, and sharp, intimidating teeth. His entire body is gigantic and muscle-bound, and between his legs hangs a giant cock, flaccid for the time being. Behind that, his massive pair of balls dangle, swollen with cum. He also has a spindly, spade-tipped tail protruding from his body somewhere behind that which is constantly flicking back and forth. He wears nothing but a grin";[ Description of the creature when you encounter it.]
