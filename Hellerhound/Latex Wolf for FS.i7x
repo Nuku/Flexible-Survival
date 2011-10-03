@@ -40,7 +40,7 @@ To say latex wolf attack:[todo]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Wolf"; [Name of your new Monster]
-	now attack entry is "[one of] slaps you with a rubbery pad[or] claws you with plastics nails[or] bites with rubbery teeth[or] pounces forward and bodyslams you[at random]."; [Text used when the monster makes an Attack]
+	now attack entry is "The Latex Wolf [one of] slaps you with a rubbery pad[or] claws you with plastic nails[or] bites with rubbery teeth[or] pounces forward and bodyslams you[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[latex wolf defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[latex wolf attack]";

@@ -90,8 +90,8 @@ to say take gsd:
 to say attk gsd:
 	now gsd attack is 1; [You've attacked the monster, he wont' be happy!]
 	say "[one of]The Dog growls, swiping at you with an open paw-like hand, dull claws leaving scratches in your [skin of player] skin[or]
-	as you extend to strike the German Shepherd he twists and his jaws clamp on your arm before releasing again, leaving a bloody bite.[or]
-	dodging back the large canine growls before charging forward, using the extra momentum to tackle you knocking you over.[at random]";
+	As you extend to strike the German Shepherd he twists and his jaws clamp on your arm before releasing again, leaving a bloody bite.[or]
+	Dodging back the large canine growls before charging forward, using the extra momentum to tackle you knocking you over.[at random]";
 	
 Section 2 - Monster Insertion
 
