@@ -693,7 +693,8 @@ An everyturn rule(This is the Shit Happens rule):
 	continue the action;
 
 Include  Random Situations by Maw.
-
+Include Events Basic by Sarokcat.
+ 
 Part - Resolving Action
 
 Resolving is an action applying to one thing.

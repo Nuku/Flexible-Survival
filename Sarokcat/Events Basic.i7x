@@ -1,20 +1,21 @@
-
 Events basic by Sarokcat begins here.
 
 Tribal Skirmish is a situation.
 
 Instead of resolving a tribal skirmish:
-	If population of tribe is greater then 20:
-		 let T be a random number between one and fifty:
-		If T is greater than Warrior of players tribe:
-			say "Your camp seems slightly emptier come morning, and you learn from several of your warriors that at some point last night, members of the [Rival of player] tribe managed to sneak into your encampment, and entice several of your people to slip away with them. You sigh as you look around your slightly smaller tribe, and resolve to make sure your sentries are keeping a better eye on things in the future.";
-			Let Z be a random number between one and five:
-			Decrease the population of tribe of player by Z;
+	If population of tribe of player is greater than 20:
+		let T be a random number between one and 50;
+		let z be the printed name of a random active species;
+		if z is "", now z is "mutant";
+		If T is greater than workers of warrior:
+			say "Your camp seems slightly emptier come morning, and you learn from several of your warriors that at some point last night, members of the [z] tribe managed to sneak into your encampment, and entice several of your people to slip away with them. You sigh as you look around your slightly smaller tribe, and resolve to make sure your sentries are keeping a better eye on things in the future.";
+			Let y be a random number between one and five;
+			Decrease the population of tribe of player by y;
 			stop the action;
 		otherwise:
-			say "Your warriors capture several members of the [Rival of player] tribe, sneaking around your camp looking to kidnap and convert some of your tribe members.  You find yourself grinning at the delicious irony of the situation, as that night your tribe holds a celeberation to help convert and welcome your newest tribe members, even joining in to enjoy the changing bodies of your former rivals tribe, as they learn to embrace their new life of sexual bliss as happily fucked members of your own tribe.";
-			Let Z be a random number between two and eight;
-			Increase the Population of Tribe of player by Z;
+			say "Your warriors capture several members of the [z] tribe, sneaking around your camp looking to kidnap and convert some of your tribe members.  You find yourself grinning at the delicious irony of the situation, as that night your tribe holds a celeberation to help convert and welcome your newest tribe members, even joining in to enjoy the changing bodies of your former rivals tribe, as they learn to embrace their new life of sexual bliss as happily fucked members of your own tribe.";
+			Let y be a random number between two and eight;
+			Increase the Population of Tribe of player by y;
 			stop the action;
 	otherwise:
 		say "Several members of your tribe report seeing signs of other species sneaking around your camp, and you warn everyone to be careful and keep an eye out for any possible intruders looking for people to kidnap and covert.";
@@ -24,7 +25,7 @@ Silly strangeness is a situation.
 
 Instead of resolving a Silly strangeness:
 	say " Your scouts report something rather unusual near the borders of your territory, and curious about what could be so strange, you find yourself following one of the scouts back to take a look. Traveling through the deserted and slightly ruined city, you blink when you come across an area that seems bright and shiny, the colours gleaming and every surface shining brightly with reflected light.  Moving forward carefully, you see the area seems surprisingly cheerful looking, with strange smiley faces stuck on the buildings, giving the place an almost cartoonlike flair. Stepping forward to move into the area, you blink as the ground squeaks slightly under your feet, and looking down to examine it closer, you realize that the pavement is actually black latex.  Stepping back in surprise, you examine everything you can see without entering the area, quickly determining the entire area seems to be covered in, if not completely converted to, some kind of strange latex!";
-	If tribe of player contains the word "Latex" or "Rubber":
+	If printed name of tribe of player matches the text "Latex" or printed name of tribe of player matches the text "Rubber":
 		say "You smile and commend your scouts for finding such a nice and safe location for your tribe, and quickly move to claim the rather cartoonlike stretch of land for your own, enjoying the way the place squeaks pleasantly when you stroke your own smooth skin against it.";
 		Increase Territory of Tribe of player by 10;
 		now Silly strangeness is resolved;
@@ -85,7 +86,7 @@ Gatornapping is a situation.
 Gatornapping is bad.
 
 Instead of resolving a Gatornapping:
-	Let T be a number between one and two:
+	Let T be a random number between one and two;
 	if T is one:
 		say "One of your foragers returns from his day of scouting throughout the city, in a panic, babbling about large glowing eyes, and without his fellow scavenging partner. Once you finally have them calmed down enough to talk, you learn that they were foraging near a large sewer access, and heard a strange fascinating voice becoking them to come closer. When your foragers looked, they saw a pair of large reptilian eyes staring at them from out of the sewer entry, the almost hypnotic voice calling to them and telling them about all sorts of depraved fun the beast would like to have with them. While your panicked forager managed to resist, their companion succumbed to the beasts teasing words, drawing closer to the opening, until the large reptile could reach out and haul them down into the sewers with them. Shuddering at your tribe members description of a powerful gator like beast, you sigh and order your tribe members to steer clear of the sewer openings from now on. Shaking your head, you continue about your daily buisness, wondering whats next now that you actually have gators in the sewer system, flying pigs?";
 		Decrease the population of Tribe of player by 1;
@@ -106,7 +107,7 @@ Survivorhunting is a number that varies.
 
 Instead of resolving Thelonesurvivor:
 	say "One of your tribe members reports a strange encounter with an untransformed human wandering the city, you listen eagerly as they describe their surprising find, and the subsequent fight with the survivor. Apparently the human was hiding in some kind of bunker throughout the changes in the city, and has just now been forced out into the city to try to recover enough food and water to survive. You grin as you realize that while the human managed to get away this time, from the sounds of things, your tribe member managed to infect them with a little bit of your species strain of the infection, giving you a head start on the other species in the area on making this lone survivor into a nice and productive member of your own tribe!  You give the orders for your scouts and warriors to be on the lookout for this wandering human, as they are sure to show themselves again sometime soon in their quest for supplies, and while it may take several encounters, you are sure if you keep trying you will manage to fuck any resistance they might have to the idea right out of them....";
-	Survivorhunting is now 1;
+	now Survivorhunting is 1;
 	Now Thelonesurvivor is resolved;
 
 
