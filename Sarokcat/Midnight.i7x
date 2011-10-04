@@ -2,12 +2,13 @@ Midnight by Sarokcat begins here.
 
 "Adds a npc to Flexible Survival with a variety of responses and goals..."
 
-section 1- 
+section 1- Midnight
 
 Midnighttalk is a number that varies.
 Midnightaroused is a number that varies.
 Midnightfound is a number that varies. 
-Lastmidnightmimiced is a number that varies.
+Lastmidnightmimiced is a number that varies. Lastmidnightmimiced is usually 250.
+Midnightmimiced is a number that varies. Midnightmimiced is usually 0.
 LastMidnightfucked is a number that varies. LastMidnightfucked is usually 250.
 Midnightfucked is a number that varies. Midnightfucked is usually 0.
 
@@ -148,3 +149,5 @@ Instead of conversing the Angie while midnightsighted is 1:
 	now midnightsighted is 2;
 
 Midnight ends here.
+
+
