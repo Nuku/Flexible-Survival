@@ -21,7 +21,7 @@ to say losetowolverine:
 		otherwise:
 			say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the [wolvloc] he[apostrophe]s protecting so aggressively.";
 	otherwise:
-	say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the [wolvloc] he[apostrophe]s protecting so aggressively.";
+		say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the [wolvloc] he[apostrophe]s protecting so aggressively.";
 
 
 to say beatthewolverine:
