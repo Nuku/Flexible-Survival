@@ -675,6 +675,7 @@ Include Tigress Hooker for FS by Stripes.
 Include Tiger Cop for FS by stripes.
 Include High Rise Events by Stripes.
 Include Hyena Bikers by Stripes.
+Include Wolverine Guard for FS by Stripes.
 Include Feral Wolf for FS by Shadowwolf94.
 Include Anthro Shaft Beast for FS by Dragonflayer.
 Include Pirate Island by Sarokcat.
