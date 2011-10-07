@@ -1,5 +1,5 @@
 High Rise Events by Stripes begins here.
-[version 1]
+[version 1.1]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the High Rise District."
 
@@ -185,7 +185,7 @@ to say dogparksearch:
 
 
 to say doggyinfect:
-	let tempnum  be a random number between one and five;  [adjust this for new dogs]
+	let tempnum  be a random number between one and six;  [adjust this for new dogs]
 	if tempnum  is 1:
 		infect "Female Husky";
 	if tempnum  is 2:
@@ -196,6 +196,8 @@ to say doggyinfect:
 		infect "Pit bull";
 	if tempnum  is 5:
 		infect "Ashen Breeder";
+	if tempnum  is 6:
+		infect "Chocolate Lab";
 
 
 
@@ -272,7 +274,7 @@ to say vetsearch:
 		say "[randomvetfight]";
 		say "     After having lost time dealing with the creature, you can feel the scents suffusing the vet[apostrophe]s office are getting to you and you leave before you succumb entirely.";
 	if T is 8:
-		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn[apostrophe]t stay long, move quickly through the examination rooms.  In them you find more signs of rapid transformation and sex.  Perhaps an owner had brought in their pet when it started to show [apostrophe]symptoms[apostrophe].  You open up the medical cabinet to look through it, but accidentally place your hand in a sticky puddle of something.  Your hand starts to tingle and you can feel the infection trying to take hold.  The scents all around you become more attractive. You feel a strong urge to give in and roll around in them, and even lap them up.  You manage to suppress it long enough to run out of the place, panting in the fresh air to clear your head.";
+		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn[apostrophe]t stay long, you move quickly through the examination rooms.  In them you find more signs of rapid transformation and sex.  Perhaps an owner had brought in their pet when it started to show [apostrophe]symptoms[apostrophe].  You open up the medical cabinet to look through it, but accidentally place your hand in a sticky puddle of something.  Your hand starts to tingle and you can feel the infection trying to take hold.  The scents all around you become more attractive. You feel a strong urge to give in and roll around in them, and even lap them up.  You manage to suppress it long enough to run out of the place, panting in the fresh air to clear your head.";
 		infect "Female Husky";
 	if T is 9:
 		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn[apostrophe]t stay long, move quickly through the examination rooms.  In them you find more signs of rapid transformation and sex.  Perhaps an owner had brought in their pet when it started to show [apostrophe]symptoms[apostrophe].";
@@ -333,6 +335,18 @@ to say doggycheck:		[add new canids when they arise]
 		now doggyness is 1;
 	if the facename of player is "jackalboy":
 		now doggyness is 1;
+	if the bodyname of player is "jackalman":
+		now doggyness is 1;
+	if the facename of player is "jackalman":
+		now doggyness is 1;
+	if the bodyname of player is "Chocolate Lab":
+		now doggyness is 1;
+	if the facename of player is "Chocolate Lab":
+		now doggyness is 1;
+	if the bodyname of player is "Feral Wolf":
+		now doggyness is 1;
+	if the facename of player is "Feral Wolf":
+		now doggyness is 1;
 
 to say kittycheck:		[add new felines when they arise]
 	now kittyness is 0;
@@ -364,6 +378,10 @@ to say kittycheck:		[add new felines when they arise]
 		now kittyness is 1;
 	if the facename of player is "Tiger":
 		now kittyness is 1;
+	if the bodyname of player is "Tiger Cop":
+		now kittyness is 1;
+	if the facename of player is "Tiger Cop":
+		now kittyness is 1;
 	if the bodyname of player is "Plush lion":
 		now kittyness is 1;
 	if the facename of player is "Plush lion":
@@ -383,6 +401,10 @@ to say kittycheck:		[add new felines when they arise]
 	if the bodyname of player is "Cheetah":
 		now kittyness is 1;
 	if the facename of player is "Cheetah":
+		now kittyness is 1;
+	if the bodyname of player is "Pantherherm":
+		now kittyness is 1;
+	if the facename of player is "Pantherherm":
 		now kittyness is 1;
 
 to say randomvetfight:				[more suitable pets can be added]
