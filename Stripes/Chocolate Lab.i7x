@@ -1,4 +1,4 @@
-Version 1 of Chocolate Lab For FS by Stripes begins here.
+Version 1 of Chocolate Lab by Stripes begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Chocolate Lab creature to Flexible Survivals Wandering Monsters table, with Impreg chance"
 [Description text for this Extension.]
@@ -141,4 +141,4 @@ when play ends:
 
 
 [ Edit this to have the correct Name as well]
-Chocolate Lab For FS ends here.
+Chocolate Lab ends here.
