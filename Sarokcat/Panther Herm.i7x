@@ -52,7 +52,7 @@ When Play begins:
 	now per entry is 24;
 	now int entry is 15;
 	now cha entry is 30;
-	now sex entry is "both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 300;			[ How many HP has the monster got? ]
 	now lev entry is 30;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 38;			[Amount of Damage monster Does when attacking.]
