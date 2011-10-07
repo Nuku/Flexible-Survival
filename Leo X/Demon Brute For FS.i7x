@@ -22,6 +22,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Demon Brute";
+	add {"Demon Brute"} to infections of hellspawn;
 	now attack entry is "The brute [one of]throws a powerful punch[or]swings a great fist[or]begins to kick wildly with powerful legs[at random].";
 	now defeated entry is "With a rather loud thud, the Demon Brute collapses to the ground, defeated. It proceeds to vanish into a fine purple mist, and is blown away by the wind."; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[demon brute attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 

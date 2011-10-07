@@ -42,6 +42,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Succubus"; [Name of your new Monster]
+	add {"Succubus"} to infections of girl;
+	add {"Succubus"} to infections of hellspawn;
 	now attack entry is "[one of]The succubus strikes out at you with her surprisingly sharp nails.[or]The Succubus[apostrophe]s strange green eyes seem to glow, and you find yourself staring into their slit pupiled depths, and wondering whether it wouldn[apostrophe]t be a better idea just to submit to her desires.[or]She pauses to pose in front of you, and you find yourself unable to attack such a perfectly beautiful creature...[or]Darting forward, you are surprised when she presses her lips to your face and gives you a kiss, the feel of her soft lips rubbing up against you making you moan with increasing desire.[or]Slipping to the side as you try to strike at her, the succubus lashes out at you with one of her wings![or]The succubus sways her hips seductively as she stalks forward, distracting you enough that her fist connecting with your face comes as a complete surprise![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Succubus loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Succubus attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
