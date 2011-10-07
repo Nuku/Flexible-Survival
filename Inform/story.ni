@@ -629,6 +629,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 Include Shifting by Hellerhound.
 Include Qytat Shifters  by Hellerhound.
+Include Chocolate Lab For Fs by Stripes.
 Include Fucking by Nuku Valente.
 Include Needy Heat for FS by Telanda Softpaw.
 Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
