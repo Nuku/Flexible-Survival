@@ -2394,47 +2394,53 @@ This is the breast descr rule:
 	if breast size of player is less than 1:
 		now descr is "[one of]nonexistent[or]entirely flat[or]manly[at random]";
 	otherwise if breast size of player is less than 3:
-		now descr is "[one of]palmable[or]small[or]dainty[or]slender[at random] [character number breast size of player in cupsize] cup";
-	otherwise if breast size of player is less than 6:
-		now descr is "[one of]large[or]jiggling[or]heavy[or]plump[at random] [character number breast size of player in cupsize] cup";
+		now descr is "[one of]palmable[or]small[or]dainty[or]slender[or]perky[at random] [character number breast size of player in cupsize] cup";
+	otherwise if breast size of player is less than 5:
+		now descr is "[character number breast size of player in cupsize] cup";
+	otherwise if breast size of player is less than 7:
+		now descr is "[one of]large[or]jiggling[or]well-shaped[or]plump[at random] [character number breast size of player in cupsize] cup";
+	otherwise if breast size of player is less than 9:
+		now descr is "[one of]massive[or]huge[or]heavy[at random] [character number breast size of player in cupsize] cup";
 	otherwise if breast size of player is less than 12:
-		now descr is "[one of]massive[or]head sized[or]basketball[at random] [character number breast size of player in cupsize] cup";
+		now descr is "[one of]enormous[or]giant[or]hulking[or]head sized[or]basketball sized[at random] [character number breast size of player in cupsize] cup";
 	otherwise:
-		now descr is "[one of]gargantuan[or]beach ball[at random] [character number breast size of player in cupsize] cup";
+		now descr is "[one of]gargantuan[or]beachball sized[or]mountainous[or]colossal[or]gigantic[at random] [character number breast size of player in cupsize] cup";
 	now breast size desc of player is descr;
 	rule succeeds;
 
 This is the cock descr rule:
 	if cock length of player is less than 3:
-		now descr is "[one of]infantile[or]extremely small[or]puny[at random]";
+		now descr is "[one of]tiny[or]veny small[or]puny[at random]";
 	otherwise if cock length of player is less than 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
 	otherwise if cock length of player is less than 8:
-		now descr is "[one of]average[or]normal sized[at random]";
+		now descr is "[one of][or]normal sized[at random]";
 	otherwise if cock length of player is less than 12:
-		now descr is "[one of]large[or]heavy[or]above average[at random]";
+		now descr is "[one of]large[or]sizable[or]well-built[or]longer than average[at random]";
+	otherwise if cock length of player is less than 13:
+		now descr is "foot long";
 	otherwise if cock length of player is less than 18:
-		now descr is "[one of]foot long[or]massive[or]forearm length[at random]";
+		now descr is "[one of]huge[or]heavy[or]ponderous[or]massive[or]forearm length[at random]";
 	otherwise:
-		now descr is "[one of]titanic[or]third leg[or]elephantine[at random]";
+		now descr is "[one of]giant[or]hulking[or]hypertrophied[or]monstrous[or]mammoth[or]gigantic[or]colossal[or]titanic[or]third leg[or]elephantine[at random]";
 	now cock size desc of player is descr;
 	rule succeeds;
 
 To say ball size:
 	if cock width of player is greater than 0:
-		if cock width of player is less than 4:
-			say "[one of]marble[or]tiny[or]very small[at random]";
+		if cock width of player is less than 3:
+			say "[one of]marble sized[or]tiny[or]very small[at random]";
 		otherwise if cock width of player is less than 6:
-			say "[one of]plum[or]average[at random]";
+			say "[one of]plum sized[or]golf ball sized[or]apricot sized[or]average[at random]";
 		otherwise if cock width of player is less than 12:
-			say "[one of]golf ball[or]large[at random]";
+			say "[one of]lemon sized[or]large[at random]";
 		otherwise if cock width of player is less than 16:
-			say "[one of]baseball[or]hand filling[at random]";
+			say "[one of]baseball sized[or]orange sized[or]hand filling[at random]";
 		otherwise if cock width of player is less than 20:
-			say "[one of]grapefruit[or]massive[at random]";
+			say "[one of]grapefruit sized[or]massive[at random]";
 		otherwise:
-			say "[one of]giant[or]knee knocking[at random]";
-		say " sized balls";
+			say "[one of]cantaloupe sized[or]giant[or]knee knocking[at random]";
+		say " [one of]balls[or]testicles[or]gonads[at random]";
 	
 This is the cunt descr rule:
 	if cunt length of player is less than 3:
@@ -2446,9 +2452,9 @@ This is the cunt descr rule:
 	otherwise if cunt length of player is less than 12:
 		now descr is "[one of]large[or]thick lipped[or]above average[at random]";
 	otherwise if cunt length of player is less than 18:
-		now descr is "[one of]belly bulgingly huge[or]seemingly bottomless[or]forearm length[at random]";
+		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
 	otherwise:
-		now descr is "[one of]titanic[or]so deep you look constantly pregnant with just the flesh of it[or]elephantine[at random]";
+		now descr is "[one of]titanic[or]seemingly bottomless[or]elephantine[at random]";
 	now cunt size desc of player is descr;
 	rule succeeds;
 	
@@ -2489,54 +2495,59 @@ This is the self examine rule:
 	follow the cock descr rule;
 	if the cocks of the player is greater than 0:
 		if the cocks of the player is greater than 1:
-			now cocktext is "You have [cocks of the player] [descr] [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. [if cocks of player is greater than 1]They are[otherwise]It is[end if] [cock length of player] inches long[if cock width of player is greater than 0] and hanging underneath it are [ball size].[end if] ";
+			now cocktext is "have [cocks of the player] [descr] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. Underneath them hang [ball size]. ";
 		otherwise:
-			now cocktext is "You have a [descr] [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [cock length of player] inches long[if cock width of player is greater than 0] and hanging underneath it are [ball size]. ";
+			now cocktext is "have a [descr] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. Underneath it hang [ball size]. ";
 	let cunttext be "";
+	follow the cunt descr rule;
 	if the cunts of the player is greater than 0:
 		if the cunts of the player is greater than 1:
-			now cunttext is "You have [cunts of the player] [one of]cunts[or]pussies[or]vaginas[or]clefts[at random]. It is [cunt length of player] inches long and [cunt width of player] around. ";
+			now cunttext is "have [cunts of the player] [descr] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. ";
 		otherwise:
-			now cunttext is "You have a [one of]cunt[or]pussy[or]vagina[or]cleft[at random]. It is [cunt length of player] inches deep and can stretch to [cunt width of player] around. ";
-	say "Looking over yourself, your body is covered in [skin of the player] flesh. You have a [face of the player] face. Your body is [body of the player]. [tail of the player]A private peek shows you to have: ";
-	if cocktext is not "", say "[cocktext]";
-	if cunttext is not "", say "[cunttext]";
+			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [descr], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. ";
+	say "Looking over yourself, your body is covered in [skin of the player] flesh. You have a [face of the player] face. Your body is [body of the player]. [tail of the player]";
+	if cocktext is not "":
+		if cunttext is "", say "A private peek shows that you [cocktext]";
+		otherwise:
+			say "A private peek shows that you [cocktext]. You also [cunttext]";
+	otherwise if cunttext is not "", say " You [cunttext]";
 	follow the breast descr rule;
 	if breasts of player is greater than 0:
-		say "You have [breasts of player] [if breasts of player is greater than 2]starting with [end if][descr] breasts. ";
-		if breasts of player is greater than 2:
-			if breast size of player is 0:
-				say "Your breasts are flat.";
-			otherwise:
-				say " The first two curve out [breast size of player] inches from your chest. ";
-				say "The second two curve out [breast size of player times three divided by five] inch[if breast size of player times three divided by 5 is not 1]es[end if] from your chest. ";
-				if breasts of player is greater than 4:
-					say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
+		if breast size of player is 0:
+			say "You have [breasts of player] nipples.";
 		otherwise:
-			if breast size of player is 0:
-				say "Your breasts are just nipples.";
+			if breasts of player is greater than 2:
+				say "You have [breasts of player] breasts. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [breast size of player times three divided by five] inch[if breast size of player times three divided by 5 is not 1]es[end if] from your chest. ";
+				if breasts of player is greater than 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
 			otherwise:
-				say " They curve out [breast size of player] inches from your chest.";
+				say "You have two [descr] breasts, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
 	if child is not born and gestation of child is greater than 0:
 		if gestation of child is less than 10:
-			say "Your belly is swollen in a taught [skin of player] before you, ready to spill forth life at any moment.";
+			say "Your [skin of player] swollen belly looks ready to spill forth life at any moment.";
 		otherwise if gestation of child is less than 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
 		otherwise if gestation of child is less than 30:
-			say "You feel a soft subtle glow.";
+			say "You feel a soft subtle glow somewhere in your belly.";
 	if the number of entries in childrenfaces is greater than 0:
-		repeat with x running from 1 to number of entries in childrenfaces:
-			now facename of child is entry x of childrenfaces;
-			now bodyname of child is entry x of childrenbodies;
-			now skinname of child is entry x of childrenskins;
+		if the number of entries in childrenfaces is 1:
+			now facename of child is entry 1 of childrenfaces;
+			now bodyname of child is entry 1 of childrenbodies;
+			now skinname of child is entry 1 of childrenskins;
 			if ( skinname of child is not bodyname of child ) or ( skinname of child is not facename of child ):
-				say "Trailing behind you, your child stays close, they have a [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+				say "Trailing behind you, your child has a [facename of child] face, and a [bodyname of child] body covered in [skinname of child] skin.";
 			otherwise:
-				say "Trailing behind you, your child stays close. They are a pure blood [facename of child].";
-		if number of entries in childrenfaces is greater than 1:
-			say "The children remain as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to a young adult, somewhere between 18 and 22 years of age, both in physical size and apparent emotional and mental development.";
-		otherwise:
-			say "The child remains as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to a young adult, somewhere between 18 and 22 years of age, both in physical size and apparent emotional and mental development.";
+				say "Trailing behind you, your child is a pure blood [facename of child].";
+			say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
+		otherwise :
+			say "Trailing behind you come your children.";
+			repeat with x running from 1 to number of entries in childrenfaces:
+				now facename of child is entry x of childrenfaces;
+				now bodyname of child is entry x of childrenbodies;
+				now skinname of child is entry x of childrenskins;
+				if ( skinname of child is not bodyname of child ) or ( skinname of child is not facename of child ), say "One has a [facename of child] face, and a [bodyname of child] body covered in [skinname of child] skin.";
+				otherwise:
+					say "One is a pure blood [facename of child].";
+			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
 		say "Accompanying you, you have a level [level of companion of player] [companion of player]. [initial appearance of companion of player]";
 	now looknow is 0;
