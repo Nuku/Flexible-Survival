@@ -231,9 +231,9 @@ Instead of fucking the Angie:
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll is greater than 12:
+			now angiearoused is 2;
 			if cocks of player is greater than 0:
 				say "'Your right..' Angie says as you talk convincingly to her, 'I just can[apostrophe]t keep denying myself what I need.' She says as she leans into you, shrugging her vest off onto the floor as she rubs herself up against you. Her large breasts rub up against you as she reaches down between your legs, her large slightly pawlike hands finding your erect cock, and stroking it several times, making you gasp.";
-				now angiearoused is 2;
 				if cunts of player is greater than 0:
 					say "'Mmm  it feels like you need it too,' Angie says as she rubs your cock, before one of her hands drifts down farther to your excited pussy before stroking it a few times as well. 'And just like me it looks like you have two different sets of equipment to play with now don[apostrophe]t you.' Angie says as she lets out a sultry purr, obviously anticipating the upcoming fun.  'Course the real question then is, how do we want to do this,  I know I would just Love it if you mounted me with that wonderfully stiff cock, just like HE did when he changed me, though I could try putting my lovely new cock to good use on you as well.' Angie says, her mouth open and panting as she stares at you, 'So what do you want to do first?  Do you want to mount me like an animal in heat?' She asks you, the thought obviously getting her even more aroused as she waits for your answer.";
 					if player consents:
