@@ -2508,9 +2508,10 @@ This is the self examine rule:
 	say "Looking over yourself, your body is covered in [skin of the player] flesh. You have a [face of the player] face. Your body is [body of the player]. [tail of the player]";
 	if cocktext is not "":
 		if cunttext is "", say "A private peek shows that you [cocktext]";
-		otherwise:
-			say "A private peek shows that you [cocktext]. You also [cunttext]";
-	otherwise if cunttext is not "", say " You [cunttext]";
+	otherwise:
+		say "A private peek shows that you [cocktext]. You also [cunttext]";
+	if cunttext is not "":
+		say " You [cunttext]";
 	follow the breast descr rule;
 	if breasts of player is greater than 0:
 		if breast size of player is 0:
@@ -2544,7 +2545,8 @@ This is the self examine rule:
 				now facename of child is entry x of childrenfaces;
 				now bodyname of child is entry x of childrenbodies;
 				now skinname of child is entry x of childrenskins;
-				if ( skinname of child is not bodyname of child ) or ( skinname of child is not facename of child ), say "One has a [facename of child] face, and a [bodyname of child] body covered in [skinname of child] skin.";
+				if ( skinname of child is not bodyname of child ) or ( skinname of child is not facename of child ):
+					say "One has a [facename of child] face, and a [bodyname of child] body covered in [skinname of child] skin.";
 				otherwise:
 					say "One is a pure blood [facename of child].";
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
