@@ -12,6 +12,7 @@ use MAX_STATIC_DATA of 580000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 50000.
 use ALLOC_CHUNK_SIZE of 50000.
+use MAX_OBJECTS of 1000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
@@ -796,6 +797,7 @@ Guy is a flag.
 Girl is a flag.
 Humorous is a flag.
 Hermaphrodite is a flag.
+Hellspawn is a flag.
 when play begins:
 	add { "Awesome", "Cock Cannon" } to infections of humorous;
 	add { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd", "Cute Chinchilla Woman", "feral sea dragoness"  } to infections of furry;
