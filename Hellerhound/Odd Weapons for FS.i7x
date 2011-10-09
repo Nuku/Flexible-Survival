@@ -110,11 +110,11 @@ instead of resolving sword nest:
 					say "You grab the slime in your hands and pour it over your head, and then grab some more, and think about what to do with it next.";
 					if the cunts of the player is 1:
 						say "You take your slime-filled hands and shove them up your waiting cunt, filling it with the sludge.";
-						say "You feel a palpatable wave f contentment from your lower belly.";
-						say "you then shove them up your rear, filling it as well.";
+						say "You feel a palpatable wave of contentment from your lower belly.";
+						say "You then shove them up your rear, filling it as well.";
 					otherwise:
 						say "You decide to try and drink all of the slime you can, tasting its deliciously dirty flavor.";
-					say "After a short while, you collapse with the corrupt pleasure roaring through your body.";
+					say "After a short while, you collapse, corrupt pleasure roaring through your body.";
 					repeat with T running from one to 15:
 						say "[randominfect]";
 					decrease the humanity of the player by 100;
@@ -122,11 +122,11 @@ instead of resolving sword nest:
 				otherwise:
 					say "You rein in your lusts and desires almost too late.";
 			otherwise:
-				say "You wisely rein in your desires before the got away with you.";
+				say "You wisely rein in your desires before they got away with you.";
 		otherwise:
 			say "You master the desire, and look around paying more attention to detail.";
 	if a random number between one and 20 < the perception of the player:
-		say "You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. It's metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. IT looks like a powerful, but dangerous weapon. Walk into the mess and take it?";
+		say "You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. Its metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. It looks like a powerful, but dangerous weapon. Do you want to walk into the mess and take it?";
 		if the player consents: 
 			say "You slosh through the mess, leaving a trail that fill after a couple of seconds. You get to the sword, and place it in your backpack, and trudge back.";
 			if a random number between 1 and 25 > the dexterity of the player:
@@ -169,7 +169,7 @@ gotwhip is a number that varies.
 instead of resolving Destroyed bushes:
 	say "You come across a circle of bushes crushed flat against the ground, large pools of cum and  juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that soemone was overtaken by one of the equines.";
 	if the humanity of the player is less than 50:
-		say "You could also drink from the puddles?";
+		say "Do you want to drink from the puddles?";
 		if the player consents:
 			infect "black equinoid";
 			infect "black equinoid";
@@ -177,10 +177,10 @@ instead of resolving Destroyed bushes:
 			if the thirst of the player < 0:
 				now the thirst of the player is 0;
 		otherwise:
-			say "You leave well enough alone.";
+			say "You leave them alone.";
 	say "Do you wish to look around?";
 	if the player consents:
-		say "In a nearby bush you find a riding saddle and riding boots, womens. It seems as if a woman went riding in the park when the infection broke out. Her horse changed, and raped her. Since the clearing is larger than if the horse just fucked her, you assume she changed and submitted as well.";
+		say "In a nearby bush you find a riding saddle and riding boots, both women's. It seems as if a woman went riding in the park when the infection broke out. Her horse changed, and raped her. Since the clearing is larger than if the horse just fucked her, you assume she changed and submitted as well.";
 		if the perception of the player is greater than a random number between one and 20:
 			say "In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. it is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if the player consents:	
