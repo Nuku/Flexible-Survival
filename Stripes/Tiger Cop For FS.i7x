@@ -1,5 +1,5 @@
 Tiger Cop For FS by Stripes begins here.
-[Version 1]
+[Version 2]
 
 Policeman is a situation.
 The sarea of Policeman is "High";
@@ -107,12 +107,13 @@ to say givekeys:
 		say "[line break][motelquest]";
 	otherwise:
 		now mqstatus is 2;
-		say "   He looks a little disappointed when you turn down his offer and looks you over.  'Well, I guess you[apostrophe]ve done your part and that[apostrophe]s fair enough.  Here, you take this and keep care of yourself out there,' he says, handing you his nightstick.  'You[apostrophe]ve been a big help on this and I appreciate that.  When I get this all taken care of and whip those girls into line, you can stop on by and I[apostrophe]ll show you my appreciation.  I[apostrophe]ll look you up once we[apostrophe]re all clear of the city and I[apostrophe]ll have those girls thank you proper like.'";
+		say "   He looks a little disappointed when you turn down his offer and looks you over.  'Well, I guess you[apostrophe]ve done your part and that[apostrophe]s fair enough.  Here, you take this and keep care of yourself out there,' he says, handing you his nightstick and a pair of pepperspray cans.  'You[apostrophe]ve been a big help on this and I appreciate that.  When I get this all taken care of and whip those girls into line, you can stop on by and I[apostrophe]ll show you my appreciation.  I[apostrophe]ll look you up once we[apostrophe]re all clear of the city and I[apostrophe]ll have those girls thank you proper like.'";
 		say "      He gives you another punch on the shoulder.  'You just be smarter about your supply huntin[apostrophe] and watch what you say when you get out of this.  Them military guys[apostrophe]ll be nosin[apostrophe] into your gear to look for weapons or stuff that could spread the infection.  With everyone they[apostrophe]ll find, they won[apostrophe]t have much time for twenty questions unless you say somethin[apostrophe] stupid.  You keep quiet and keep it light and you[apostrophe]ll do alright, I think.'";
 		say "   He grabs his bag, slings it over his shoulder and takes his leave of you.  You are left with much to think about and some new ideas for the future.";
-		say "   Nightstick obtained.";
+		say "   Nightstick and two cans of pepperspray obtained.";
 		add "nightstick" to invent of player;
-		[also given pepperspray when that's coded]
+		add "pepperspray" to invent of player;
+		add "pepperspray" to invent of player;
 		increase score by 50;
 		increase xp of player by 20;
 
@@ -414,7 +415,7 @@ to say losetotigercop:
 		if cunts of player is greater than 0:
  			say "   'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your pussy, making you shiver.  He teases you with it briefly, getting you wet despite yourself, before sinking it into you.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching pussy.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
 		otherwise:
-			say "   'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver.  He teases you with it briefly and you try your best to relax it before he sinks it into you.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching hole.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
+			say "   'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver.  He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching hole.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
 		infect "Tigress Hooker";
 	otherwise:
 		if cunts of player is greater than 0:
@@ -437,7 +438,12 @@ To say beattigercop:
 		say "   When the gas clears, you see that the tiger had dropped his nightstick at the end of the fight.  You pick it up and add it to your arsenal.";
 		say "   Nightstick obtained.";
 		add "nightstick" to invent of player;
-		now nsgained is 0;
+		now nsgained is 1;
+		increase score by 5;
+	if a random chance of 1 in 5 succeeds and nsgained is 1:
+		say "   When the gas clears, you see that the tiger had dropped a can of pepperspray during the course of the fight.  You pick it up and add it to your arsenal.";
+		say "   Pepperspray obtained.";
+		add "pepperspray" to invent of player;
 		increase score by 5;
 
 
@@ -493,7 +499,7 @@ When Play begins:
    now cunt length entry is 12;        [ Length of female sex infection will attempt to give you. ]
    now cunt width entry is 4;        [ Width of female sex infection will try and give you ]
    now libido entry is 100;            [ Amount player Libido will go up if defeated ]
-   now loot entry is "";            [ Dropped item.  Key will be used later ]
+   now loot entry is "pepperspray";            [ Dropped item.  Key will be used later ]
    now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
 
 
