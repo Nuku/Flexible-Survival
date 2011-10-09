@@ -1,5 +1,5 @@
 High Rise Events by Stripes begins here.
-[version 1.1]
+[version 2]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the High Rise District."
 
@@ -134,8 +134,9 @@ to say dogparksearch:
 		add "water bottle" to invent of player;
 		increase score by 1;
 	if T is 2:
-		say "2     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  You get lucky searching one pile of clothes, finding a used can of mace near the torn dress.  Quite sure it would be handy, you hope you will have better luck and are soon able to find a usable can in version 2.0.";
-		increase score by 3;
+		say "2     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  You get lucky searching one pile of clothes, finding a used can of mace near the torn dress.  Quite sure it would be handy, you pick it up and add it to your inventory.";
+		add "pepperspray" to invent of player;
+		increase score by 5;
 	if T is 3:
 		say "3      You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here.  Having failed to sneak up on you, the male German Shepherd approached swiftly.";
 		challenge "German Shepherd";
