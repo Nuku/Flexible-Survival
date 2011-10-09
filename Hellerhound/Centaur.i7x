@@ -42,47 +42,47 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 To say centaur defeat:
 	if libido of player < 50:
-		Say "The centaur groans, falling onto its face as you stirke the final blow. An apple spills out of the pack on its back.";
+		Say "The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
 		add "Fresh Apple" to the invent of the player;
 	if libido of player > 50 and cocks of player is greater than 0:
-		Say "The centaur lying on the ground, with its tail skewed off to the side, is the perfect target for your [cock of player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
+		Say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [cock of player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
 		wait for any key;
 		say "The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
 		if the humanity of the player > 90:
-			say "You instantly pull out, looking at the tentacles like the abomination they are. You kick dirt over the centaur as you leave, stealing an apple from it's pack.";
+			say "You instantly pull out, looking at the tentacles like the abomination they are. You kick dirt over the centaur as you leave, stealing an apple from its pack.";
 			add "Fresh Apple" to the invent of the player;
 			increase the libido of the player by 20;
 		otherwise:
-			say "The appearance of the helping tentacles is a wecome developement, and you begin thrusting with vigor, the lubrication of the creatures waste keeping you from ripping the walls.";
+			say "The appearance of the helping tentacles is a welcome development, and you begin thrusting with vigor, the lubrication of the creature's waste keeping you from ripping the walls.";
 			if the cunts of the player is greater than 0:
 				say "The tentacles circle your cock, and one rubs by your clit on its way. Almost immediately, they abandon your moving cock for the wetness of your pussy, stroking in and out in coils as they work to bring you to climax.";
-				say "You lose the battle to hold the climax back as you let out a scream of pleasure, your semon filling the bowels of the centaur and its tentacles being washed out of your pussy by the flow of fluids.";
+				say "You lose the battle to hold the climax back as you let out a scream of pleasure, your semen filling the bowels of the centaur while its tentacles are washed out of your pussy by the flow of fluids.";
 			otherwise:
 				say "The tentacles wrap around your cock, and then enter your ass with a slight poke of pain, driving you over the edge. The combined scream of rage from the centaur, along with the one of pleasure from you, mixes horribly and seems to shatter the air. The tentacles retract, and the centaur curls up, pulling your [cock of player] cock out of its dripping ass.";
 			say "Dazed by the sex, you wander off.";
 			now the libido of the player is 0;
 			decrease the humanity of the player by 4;
 	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
-		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. The view show you his large, green cock with vinelike bumps on the shaft, the sheath an even darken green.  Its ball sack hangs down half a foot from its massive cock, dark green, with two ginormous balls inside causing the skin to stretch. What really gets to you is the two tentacles, like growths, that sprout from stumplike protusions of the base of its sheath.";
+		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vinelike bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stumplike protusions of the base of its sheath.";
 		if the humanity of the player < 40:
-			say "The sight of those tentacles drives you insane with lust. You grab them, and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain, that when mixed wth your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then your hear a moan, and the centaur climaxs, spraying thick green seed all over the dusty ground and its underside. The tendrils retract form your body, and you leave the centaur, accepting an apple that it offers you.";
+			say "The sight of those tentacles drives you insane with lust. You grab them, and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain, that when mixed wth your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then your hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
 			add "Fresh Apple" to the invent of the player;
 			now the libido of the player is 0;
 		otherwise if the humanity of the player < 90:
-			say "The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaurs furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while with your concentration, something wet and large pokes at your back. You stop, and turn around in surprise to see the centaur large green cock, starkly erect and tip dripping precum nudging your back, and a trail of the precum leading along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
-			say "You turn and place the cock at your waiting entrance, precum dripping onto your hole as you try and force it in.";
+			say "The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
+			say "You turn and place the cock at your waiting entrance, smearing your hole with precum as you try and force it in.";
 			if the cunt width of the player is less than 16:[too small, cock won't fit]
-				say "The cock doesn't go in, no matter how hard you try, so you bend over and rub it on your mouth, it spaming in response, more precum flowing out onto your front.";
-				say "You open your mouth wide, but cannot get the cock in more than the head, so you lick it and suck at the hole, drinking in the juices, until it climax's.";
-				say "The spray of green fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, the spray of cum soaking your whole body.";
-				say "You help yourself and the centaur clean up, and go on your way, with an apple as payment.";
+				say "The cock doesn't go in, no matter how hard you try, so you bend over and start to lick it eagerly. It spams more precum in response, and your mouth becomes hot and gooey in an instant.";
+				say "You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
+				say "The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
+				say "After cleaning up the centaur as well as yourself, you go on your way, with an apple as payment.";
 				add "Fresh Apple" to the invent of the player;
 				now the libido of the player is 0;
 			otherwise: [cock will fit]
-				say "The cock goes in after some pushing, and your walls contract, bringing it every further inside, and you closer to it's balls. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
-				say "At the noise, the centaur seems to wake up, and begins to bend its body, pumping itself in and out of your cunt, and soaking your insides in precum.";
-				say "you drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, then the cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.";
-				say "The centaur gets up, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
+				say "After pulling at it for a moment, the head goes in. Your walls contract, bringing more of it inside you, and you closer to the monstrous testicles. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
+				say "At the noise, the centaur seems to wake up, and begins to bend its powerful muscles. You feel the giant cock pumping in and out of your cunt, soaking your insides in precum and bottoming out at each thrust.";
+				say "You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.";
+				say "The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 				if a random chance of one in two succeeds:
 					add "Fresh Apple" to the invent of the player;
 				add "Fresh Apple" to the invent of the player;
@@ -101,10 +101,10 @@ To say centaur defeat:
 		[todo]
 
 to say centaur rape female:
-	say "You turn around in surprise to see the centaurs large green cock, starkly erect and tip dripping precum nudging your back, and a trail of the precum leading along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready. Then the centaur pins you to the gorund, and place the cock at your entrance, despite your resistance.";
-	say "The cock goes in after some pushing, and your walls contract, bringing it every further inside, and you closer to it's balls. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
-	say "At the noise, the centaur seems to increase its attempt to cum, and begins to bend its body, pumping itself in and out of your cunt, and soaking your insides in precum.";
-	say "You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, then the cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.";
+	say "You turn and place the cock at your waiting entrance, smearing your hole with precum as you try and force it in.";
+	say "After pulling at it for a moment, the head goes in. Your walls contract, bringing more of it inside you, and you closer to the monstrous testicles. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
+	say "At the noise, the centaur seems to wake up, and begins to bend its powerful muscles. You feel the giant cock pumping in and out of your cunt, soaking your insides in precum and bottoming out at each thrust.";
+	say "You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.";
 	say "[impregchance][impregchance]";
 	say "The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 	if a random chance of one in two succeeds:
@@ -117,9 +117,9 @@ to say centaur rape female:
 centaurmate is a number that varies.
 to say centaurmeet:
 	say "As you walk in the plain, a dust cloud becomes visible. You look at it with fear, and attempt to run, but fail to escape.";
-	say "The dust cloud engulfs you, and settles to the ground, revealing a mutant centaur.";
+	say "The dust cloud engulfs you and settles to the ground, revealing an equine form with a powerful human torso. As it turns to slow down and stop in front of you, you catch a glimpse of a green thing under his belly, as it is very definitely a male.";
 	if centaurmate is 0:
-		say "He asks if you are going to be his 'willing' mate?";
+		say "He details you for a moment, and get aclear sight of a monstrously huge cock head sliding out of its sheath. Two green tentacle-like things move around, seemingly attached to its base. With a booming voice, he asks: 'Are you going to submit to me?'. You have a feeling that if you don't agree, he will take what he wants by force.";
 		if the player consents:
 			say "You bow down your head, and he laughs.";
 			now centaurmate is 1;
@@ -166,7 +166,7 @@ To say centaur attack:
 	if cunts of player > 0:
 		Say "[centaur rape female]";
 	if cocks of player is 0 and cunts of player is 0 and "Male Preferred" is not listed in feats of player:
-		say "The Centaur looks at you with aprehension. 'Nothing at all?' He groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lost it.'";
+		say "The Centaur looks at you with aprehension. 'Nothing at all?' He groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
 		now the cunts of the player is 1;
 		now the cunt length of the player is 2;
 		now the cunt width of the player is 1;
@@ -192,17 +192,17 @@ to say centaurgrowtorso:
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mutant Centaur"; [Name of your new Monster]
-	now attack entry is "The Centaur[one of] punches your face with its hand[or] headbutts you[or]'s green tentacles ise from under him and slap you[or] rears up and slams you with his front hooves[at random]."; [Text used when the monster makes an Attack]
+	now attack entry is "The Centaur[one of] punches your face with its hand[or] headbutts you[or]'s green tentacles rise from under him and slap you[or] rears up and slams you with his front hooves[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[centaur defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[centaur attack]";
 	now desc entry is "[centaurmeet]";[ Description of the creature when you encounter it.]
 	now face entry is "human, with horse ears";[ Face description, format as the text "Your face is (your text)"] 
-	now body entry is "large, and shaped like a small L with the body of a human on top, joining the torso of a horse where a head should";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "human skin, blending smoothly into black fur on your bottom half";[ skin Description, format as the text "You have (your text) skin"] 
+	now body entry is "distinctively equine, with a muscled human torso where the horse's head should be";[ Body Description, format as the text "Your Body is (your text)"] 
+	now skin entry is "human, blending smoothly into black fur on your bottom half";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "Your tail is made of spindry fibers that twitch in the still air.";[ Tail description, write a whole Sentence or leave blank. ]  
-	now cock entry is "large, equine, and green cock, with bumps covering it and tentacles growing out of two bulges alongside. The centaur didn't want you to have this ";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "your ears slide up to the top of your head, and grow fur, changing shape to become those of a horses"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now cock entry is "green and equine, with bumps covering it and tentacles growing out of two bulges along its sheath";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your body grows muscled at the bottom, and your legs change into those of a horse. Your breasts feel odd, and it seems like most of their girth is inside of you"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "the skin below your abdomen grows black fur, melding smoothly into the human skin above"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "[centaurgrowtorso]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
@@ -241,7 +241,7 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 "Mutant Centaur"	7	10	"[centheat]"	"winking and dripping green cunt "	--	--	"[defaultheat]"
 
 to say centheat:
-	say "You gasp in lust, and then gasp at the suddenness of the feeling. You look down to see your green cunt begin to wink open and closed, and light green juices run from it, and down your leg. It looks just like the ones at the farm when they are in heat, except, greener.";
+	say "You gasp in lust, and then gasp at the suddenness of the feeling. You look down to see your green cunt begin to wink open and closed, light green juices running from it and down your legs.";
 	if centaurmate is 1:
 		say "You think returning to your mate would be a good remedy.";
 	otherwise:
@@ -259,8 +259,8 @@ when play ends:
 			say "When the rescue arrives, they section off the plains with electrical fences and try many ways to disarm the nanites remotely, all without effect. A few years later, they just enlose you in a concrete tomb with fake light.";
 			say "You get used to it over time, but it still stinks.";
 		otherwise if the bodyname of the player is "Mutant Centaur":
-			if the cocks of the player is 0:
-				say "Your odd body attracts attention in the reviving world, as normal humans return, and you eventually give up the struggle to be normal, and offer rides and pulling services to those at a nearby farm. You mate with the horses there hen the need arises, but the rejection of the centaurs still weighs on your shoulders for years.";
+			if cunts of player is 1:
+				say "Your odd body attracts attention in the reviving world, as normal humans return, and you eventually give up the struggle to be normal, and offer rides and pulling services to those at a nearby farm. You mate with the horses there when the need arises, but the rejection of the centaurs still weighs on your shoulders for years.";
 			otherwise:
 				say "Your cock everntually shrivels off, much to the surprise of your doctors, and you become the subject of much study, a genderless centaur, and are pampered for the rest of your life.";
 		otherwise if compressedcock is 1:
@@ -272,7 +272,7 @@ when play ends:
 			say "You return to your mate, and entice him back home, where you bear him many children, after you change. The neighbors are slightly fearful, but they are also quick to ask for help if they cannot carry something, or if their children want a ride.";
 			say "You are not fully trusted, however, the green growths inside you and on him prevent that. The surveillance goes away after a few years, the mysteries explained to those in charge in some way.";
 	if centaurmate is -1:
-		say "The rejection of the centaurs hurts, especially hwen one walks over you as if it didn't see you to prove its point.";
+		say "The rejection of the centaurs hurts, especially when one walks over you as if it didn't see you to prove its point.";
 
 	
 	
