@@ -28,8 +28,8 @@ To say nymph defeat:
 	if libido of player < 50:
 		Say "You manage to break the nymph in half, much like a tree. As the crack forms, her skin goes rough, and turns brown, morphing into bark. She shouts at you that she will return.";
 	if libido of player > 50 and cocks of player is greater than 0:
-		Say "You move closer to the nymph, stroking your [cock of player] cock, the entry is deceptively easy, and you start as you feel vines creeping along her inner walls. You try to pull out, but they grab hold and pull you all the way in. 'Silly you, thinking you could rape me.', well, let me teach you a thing or to.";
-		say "She leans into you, vines stroking your cock as it is massaged against her inner walls. You come to climax surprisingly quiclly, spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind begin to suckle.";
+		Say "You move closer to the nymph, stroking your [cock of player] cock, the entry is deceptively easy, and you start as you feel vines creeping along her inner walls. You try to pull out, but they grab hold and pull you all the way in. 'Silly you, thinking you could rape me.', well, let me teach you a thing or two.";
+		say "She leans into you, vines stroking your cock as it is massaged against her inner walls. You come to climax surprisingly quickly, spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind begin to suckle.";
 		say "Thats good, have a drink, she says, as you roll over onto the ground, and she walks away, the tree disguise forming once more.";
 	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
 		say "The nymph screams in rage, and her skin turns barklike. In an instant she has become a true tree, unmoving, covered in vines.";
@@ -40,14 +40,14 @@ To say nymph attack:
 		Say "As you go limp from the beating, greenish vines wrap around your body, spreading your legs and lifting you off the ground. The nymph steps forward and rubs her clit, grinning evilly.";
 		wait for any key;
 		say "As you watch in horror, it turns a wooden brown, with a barklike texture and grows longer and thicker, becoming a small, six inch cock.";
-		say "The vines bend, and your entire body tilts backward, placing your [cunt size desc of player] cunt right in front of her cock. 'Sweet carryings', she smirks, as she pushes inside, causing you to scream in pain from the rough bark. The nymph pumps in and out, and by the time you realize her cock is absorbing the lubrication is when the pain causes you to lose consciousness.";
+		say "The vines bend, and your entire body tilts backward, placing your [cunt size desc of player] cunt right in front of her cock. 'Sweet carryings', she smirks, as she pushes inside, causing you to scream in pain from the rough bark. The nymph pumps in and out, and by the time you realize her cock is absorbing the lubrication, the pain causes you to lose consciousness.";
 		wait for any key;
-		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. Must be the blood loss, you realize, as the size of the puddle under you becomes apparent. [impregchance]";
+		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent. [impregchance]";
 		say "You manage to collect some of the cum, placing it in an empty water bottle.";
 		add "Nymph Cum" to the invent of the player;
 		infect "Tree Nymph";	
 	if cocks of player is greater than 0 and cunts of player is 0:
-		say "You collapse under the pain of your beating, and the nymph approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body, immobilizing you. ";
+		say "You collapse under the pain of your beating, and the nymph approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body and immobilizing you. ";
 		say "You watch as she strokes her clit, and stare as it grows into a 6 inch long wooden cock that she begins to stroke. You watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
 		repeat with n running from one to three:
 			infect "Tree Nymph";
@@ -69,17 +69,17 @@ When Play begins:
 	now defeated entry is "[nymph defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[nymph attack]";
-	now desc entry is "Walking through the red light district, you come across a road filled with trees. Many have had sex nearby, as you note the twisted shape of their branches, and the pinkish bark. One tree seems normalish enough, despite the enormous amounts of cum that are around its base. As you walk closer, the tree fades, and a tree nymph jumps in front of you.";[ Description of the creature when you encounter it.]
+	now desc entry is "Walking through the red light district, you come across a road filled with trees. Many have had sex nearby, as you note the twisted shape of their branches, and the pinkish bark. One tree seems normalish enough, despite the enormous amounts of cum around its base. As you walk closer, the tree fades, and a tree nymph jumps in front of you.";[ Description of the creature when you encounter it.]
 	now face entry is "cute, with green hair and branches growing behind your ears";[ Face description, format as the text "Your face is (your text)"] 
-	now body entry is "vine-wrapped with breasts that leak milk";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "human pink skin";[ skin Description, format as the text "You have (your text) skin"] 
+	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts";[ Body Description, format as the text "Your Body is (your text)"] 
+	now skin entry is "unblemished";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ]  
-	now cock entry is "wooden and patterend with reeking cum";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is " it becomes cuter, more feminine. Your hair turns green, and branches begin to grow from behind the ears."; [ face change text. format as "Your face feels funny as (your text)" ]
+	now cock entry is "wooden, cum-reeking";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face change entry is " it becomes cuter, more feminine. Your hair turns green, and branches begin to grow from behind your ears."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it becomes cuter. Green, tentacle-like vines grow from a new hole forming above your clit as they wrap around your body"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "blemishes dissapear, and the vines fully wrap around your figure, forming a green cloak that opens at will"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it becomes human again"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it shrinks into your body, and sliding down into your clit. You appear female, but by concentrating, your clit grows into your old cock, but new, with a wooden texture and reeking cum"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it shrinks and slides down into your clit. You appear female, but by concentrating, your clit can turn into full-sized, wooden-looking cock, with reeking cum leaking from it"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 22;
 	now sta entry is 20;					
