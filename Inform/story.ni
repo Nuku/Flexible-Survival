@@ -2506,7 +2506,7 @@ This is the self examine rule:
 			now cunttext is "have [cunts of the player] [descr] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. ";
 		otherwise:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [descr], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. ";
-	say "Looking over yourself, your body is covered in [skin of the player] flesh. You have a [face of the player] face. Your body is [body of the player]. [tail of the player]";
+	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player]. Your body is [body of the player]. [tail of the player]";
 	if cocktext is not "":
 		if cunttext is "":
 			say "A private peek shows that you [cocktext]";
