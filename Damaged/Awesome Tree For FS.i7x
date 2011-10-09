@@ -31,7 +31,7 @@ to say Give Awesome:
 		
 to say awesome attack:
 	if Awesome_boredom is 4:
-		say "The tree seems to vibrate, whether your fervent attacks or the breeze cause it, a branch falls, thumping you on the arm. You notice some fruit on the branch. Without hesitation you put one in your pocket, as you look at the remaining two, you feel a sudden hunger and attack them, eating uncontrollably. [infect]The world seems to go dark as you finish the second. Waking up you can't see any trace of the tree, but you feel pretty awesome none the less. You pat at your bag, where you put the fruit, and smile at the thought that you still have some awesome.";
+		say "The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably. [infect]The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.";
 		now hunger of player is 0;
 		now thirst of player is 0;
 		if a random number between 1 and 100 > 90:
@@ -40,7 +40,7 @@ to say awesome attack:
 				say "You get an awesome piece of wood that could be used as, an Awesome Bat!";
 		say "[Give Awesome][combat abort]";
 	otherwise:
-		say "[one of]While you try and attack the tree you trip over a root that you hadn't seen.[or]You stop a moment, and ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
+		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
 		now monsterhp is 60;
 		increase Awesome_boredom by 1;
 	
@@ -51,24 +51,24 @@ to say awesome defeat:
 			if Awesome Bat is weapon object of player:
 				try using Awesome Bat;
 			delete Awesome Bat;
-			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most Awesome of awesome senses, the wood take root and begin to grow.";
+			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
 		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
 		say "[combat abort]";
 	otherwise:	
 		say "Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
 		if Awesome_noreward > 2:
-			say "You drop to your knees, wailing, unable to live with yourself for how much awesome you have taken from the world. Rising to your feet you pledge, never to destroy another awesome tree so long as you live.";
+			say "You drop to your knees, wailing, unable to live with yourself for how much awesome you have taken from the world. Rising to your feet, you pledge never to destroy another awesome tree so long as you live.";
 		otherwise:
-			say "With a start you realize what you have done, you have ended a whole other kind of awesome in the world. Guiltily you walk away from the tree but promise you will find a way to atone for your sin.";
+			say "With a start, you realize what you have done: you have ended a whole other kind of awesome in the world. Guiltily you walk away from the tree but promise you will find a way to atone for your sin.";
 		let x be a random number between 4 and 10;
 		repeat with Awesome_counter running from 1 to x:
 			say "[Give Awesome]";
 	
 	
 to say awesome vict:
-	say "You look up at the tree, standing still, so very proudly and you curse under your breath. All of a sudden a crack sounds in the canopy above you and a single fruit drops down and smashes against the back of your head, knocking you out. The juice seeps down over your skin and almost seems to be absorbed by your body.[infect]";
-	say "Waking you wonder how the tree got away, it is completely gone. Guess thats just another awesome mystery for this messed up new world.";
+	say "You proudly look up at the tree, standing still, and curse under your breath. All of a sudden, a crack sounds in the canopy above you and a single fruit drops down and smashes against the back of your head, knocking you out. The juice seeps down over your skin and almost seems to be absorbed by your body.[infect]";
+	say "As you wake up, you look arouand and wonder how the tree got away. Guess thats just another awesome mystery for this messed up new world.";
 		
 to say awesome desc:
 	now Awesome_boredom is 0;
@@ -99,19 +99,19 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Awesome"; [Name of your new Monster]
+	now name entry is "Awesome tree"; [Name of your new Monster]
 	now attack entry is "[awesome attack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[awesome defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[awesome vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[awesome desc]";[ Description of the creature when you encounter it.]
-	now face entry is "completely human, normal in every way.";[ Face description, format as the text "Your face is (your text)"] 
-	now body entry is "a normal looking human body.";[ Body Description, format as the text "Your Body is (your text)"] 
+	now face entry is "completely human";[ Face description, format as the text "Your face is (your text)"] 
+	now body entry is "human-looking";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[if looknow is 1]human[otherwise]normal human, lovely, healthy looking[end if]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it seems to tingle, moving slightly, with a start you realize its human!"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "it seems to tingle, moving slightly, with a start you realize it's human!"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your muscles writhe about under your skin, slowly settling back into a human shape"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out, leaving you looking human."; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "all the hair on your body seems to fall out at once only to have what would be considered normal human hair sprout back out."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "[if awesome_sex is 2]your hips seem to return to human male normal[otherwise]your rear change, sliding into the perfect wide-hipped female figure.[end if]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it seems to feel hot, after a few gasps you realize it looks completely human."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 15;
