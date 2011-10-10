@@ -7,9 +7,9 @@ keycollection is a number that varies.
 mqstatus is a number that varies.
 nsgained is a number that varies.
 when play begins:
-	add Policeman to badspots for guy;
-	add Policeman to badspots for hermaphrodite;
-	add Policeman to badspots for furry;
+	add Policeman to badspots of guy;
+	add Policeman to badspots of hermaphrodite;
+	add Policeman to badspots of furry;
 
 [	0 new				]
 [	1 key hunting		]

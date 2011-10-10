@@ -10,9 +10,9 @@ Section 1- Core Event Tree
 Hyena Bikers is a situation.
 The sarea of Hyena Bikers is "High";
 when play begins:
-	add Hyena Bikers to badspots for guy;
-	add Hyena Bikers to badspots for hermaphrodite;
-	add Hyena Bikers to badspots for furry;
+	add Hyena Bikers to badspots of guy;
+	add Hyena Bikers to badspots of hermaphrodite;
+	add Hyena Bikers to badspots of furry;
 
 Instead of resolving a Hyena Bikers:
 	say "     As you pass down one street, you see a lot of fresh graffiti sprayed onto the concrete high-rises around you.  Looking it over, you see it proclaim the strength of the hyena gang.  This puzzles you, as you thought you were well out of hyena territory.";
