@@ -1,3 +1,5 @@
+ 
+
 Sarah by Sarokcat&Hellerhound begins here.
 
 
@@ -31,20 +33,20 @@ to say sarahrescue:
 	say "You jump forward, slamming the alpha out of the way and pick sarah off the ground, using her arm and not the leash. She smiles in gratitude for a second, and you read her collar: 'Sarah', but her expression quickly turns to one of fear and you turn, only managing to get halfway around before a particularly hard swat from the alpha husky sends you flying.";
 	say "You struggle for breath, gasping as you stand, and the husky pays you no notice, dragging her sharp claws along sarah's side. Blood wells up from the fearsome wound, and you are terrified that the husky just sentenced her death.";
 	increase morale of the player by 10;
-	say "You jump forawrds and challenge the husky, and the pack closes in behind you.";
+	say "You jump forwards and challenge the husky, and the pack closes in behind you.";
 	wait for any key;
 	challenge "Female Husky";
 	challenge "Female Husky";
 	challenge "Female Husky";
-	challenge "Female Husky";
+	challenge "Alpha Husky";
 	if lost is 0:
-		say "Standing victorious, you grab sarah, and carry her back to the bunker, and proceed to treat her wound. She changes under you, but with the medkit and a bit of skill manage to save her life.";
+		say "Standing victorious, you grab Sarah, and carry her back to the bunker, and proceed to treat her wound. She changes under you, but with the medkit and a bit of skill manage to save her life.";
 		wait for any key;
 		say "You don't feel sorry for the huskies you left lying in the street. You think getting caught by some of the more dangerous beasts out there would be a fit punishment for what they tried to do.";
 		now Sarah is in the bunker;
 	otherwise:
 		say "You fall to the huskies, and the alpha snorts at you, amazed that you would dare challenge her. She drags sarah off, and the pack follows. [line break] It is a while before you manage to get up and walk away.";
-		
+
 
 
 
@@ -96,7 +98,7 @@ to say sarahslutstate:
 			say "She smiles faintly, all dreams of humanity gone from her mind, rubbing her bloated belly. Her fur is matted from many sex acts without cleaning, and her lease, reading 'slut' on either side, is a testament to her state.";
 		otherwise:
 			say "She smiles faintly, all pretenions of humanity gone from her mind, as she rubs her needy slit and large breasts. Her fur is matted from the many sex acts without cleaning, and her leash, reading 'slut' on either side, is a testament to her state of mind.";
-			
+
 
 to say sarahtalking:
 	increase sarahtalk by 1;
@@ -231,7 +233,7 @@ Sarahpups is a number that varies.
 To say sarahpupstate:
 	if sarahpups is greater than 12:
 		say "Sarah is surrounded by her large brood of [sarahpups] puppies, several of them vying for her attention at any one second in time. Fortunately this seems to make your little husky breeder happier than ever as she smiles at your and her puppies and rubs her belly in anticipation of many more litters to come.";
-	if sarahpups is greater than 0:
+	otherwise if sarahpups is greater than 0:
 		say "Sarah is happily playing with your [sarahpups] husky puppies, keeping them happy and occupied while you explore the city, although from the looks the slutty husky is giving you even as she plays with the pups, she is already anticipating the next litter to come...";
 	otherwise:
 		say "She seems slightly lonely as the only husky around, making you want to comfort her.";
@@ -246,7 +248,7 @@ An everyturn rule:
 
 when play ends:
 	if sarah is in the bunker:
-		if sarahslut < 3:
+		if sarahslut is less than 4:
 			if humanity of player is less than 10:
 				say "Returning to the bunker, you waste no time in pouncing on the little husky you left there earlier, her moans as she fully succumbs to the infection are music to your ears. Before long she has been properly tamed, and all her pretense of clinging to her sanity and morals has vanished, helplessly stolen away under your powerful sexual assault. Enjoying your conquest, but still feeling as if it isn[apostrophe]t enough, you soon head out into the city, knowing that some new destiny awaits you out there, you and your faithful pet husky following behind you....";
 			otherwise:
@@ -256,7 +258,7 @@ when play ends:
 					say "You gather from their talk as they poke and tease your body that your inquiries were causing trouble for them, and when you came down here alone, they couldn[apostrophe]t resist the chance to add another pet to their 'stable'. Of course at about this point you lose track of what they are saying, as one of them finally inserts himself into your needy pussy, your mind going blank with pleasure and whatever drug they gave you as you find yourself reacting as if you were a slut just like Sarah. The handsome men use you over and over again throughout the night, your mind never knowing a minutes peace from the overwhelming pleasure, as they work your body you realize that you really ARE just a little slut like sarah, and that you would do just about anything for this pleasure to continue.  Eventually your body can[apostrophe]t take anymore and you end up passing out, only to be woken up by soft kisses, opening your eyes you see Sarah is lying next to you on the bed, 'I just knew you would feel better as a slutty little pet like me,' The vacant eyed husky says lustfully as she strokes your hypersensitive body making you moan. 'Just imagine, feeling like this all day and night, and all the wonderful cock we can share together...' She says with a moan as she begins to rub herself up against you, and your last coherent thought before the pleasure overtakes your body for good, is how much fun you and your slutty friend will be having together from now on, and how nice it will be to let your new well hung masters make all your decisions from now on!";
 				otherwise:
 					say "Sighing at her almost predictable fate, you make several attempts to recover the changed husky, only to find that they are not willing to sell and that further attempts may find you joining her in virtual slavery. Unable to help her that way, you resign yourself to following her new career with interest, as she becomes a better and more proficient slut under the direction of her new owners, making them considerable money. You find yourself realizing one thing with sorrow as you watch her turned from a smart young woman into an enslaved stripper... You really should have made sure she was your properly trained pet when you had the chance, instead of letting her go....";
-		otherwise:
+		if sarahslut is 4::
 			if humanity of player is less than 10:
 				say "Returning to the bunker, you waste no time in pouncing on the your little slut husky, her happy moans and begging are music to your ears, as you indulge yourself with your slut. You find yourself grinning as you enjoy some private time with her, instinctively knowing how best to dominate and control the submissive bitch. Soon though, she becomes less and less a husky bitch, perhaps due to your dominance as she begins to take on a form more like your own. The changes are small at first, though they grow more and more prominent as your strong dominant infection overwhelms her own, making her into a more suitable breeder for your needs.[line break]";
 				If cocks of player is greater than 0:
@@ -268,7 +270,7 @@ when play ends:
 					if sarahpups is greater than 0:
 						say "Her pups succumb to the changes even faster than their mother, her newly changed milk running through their vulnerable bodies and altering them as well. Soon her offspring are properly representative of your new forms, and looking at them you are proud to see them as proof of your own virility and as an example of the offspring you soon hope to be bearing from your own fertile body as well. You are soon helping her feed and care for the young, even as you both prowl the streets together looking for a proper male to fill both of your needy wombs up with their virile seed, so you can bear them even more little kits...";
 			otherwise:
-				say "Finally rescued by the military with your mind intact, you bring Sarah along with you, and while some of the military are worried about her obvious feral tendencies, you manage to reassure them that she is properly in hand.  It doesn[apostrophe]t hurt that they have bigger concerns than a personal pet of a survivor, and so you make your way out  into the world with your new slutty pet at your side. You soon find having your own personal husky slut is an even better thing now that you are in the outside world again, as she welcomes you home eagerly every night, and takes care of all the chores. Being a good little pet as you make new friends and meet new people, she is happy to help you out whenever you bring them over to 'meet' her. Eventually you feel like rewarding her with a companion, and pick up another husky dog to keep her company, a nice strong male one both for her pleasure and your own, as you find yourself enjoying watching the formerly bright paramedic eagerly going down on all fours for a purebred husky stud, moaning and yipping underneath the dog like a proper bitch.  She seems even happier as her belly grows round with husky puppies again and again, and while you sell some of them to breeders, you enjoy keeping several of them around the house, looking forward to when they grow up and you can have a full pack of slutty huskies at your disposal...[line break]";
+				say "Finally rescued by the military with your mind intact, you bring Sarah along with you, and while some of the military are worried about her obvious feral tendencies, you manage to reassure them that she is properly in hand.  It doesn[apostrophe]t hurt that they have bigger concerns than a personal pet of a survivor, and so you make your way out  into the world with your new slutty pet at your side. You soon find having your own personal husky slut is an even better thing now that you are in the outside world again, as she welcomes you home eagerly every night, and takes care of all the chores. Being a good little pet as you make new friends and meet new people, she is happy to help you out whenever you bring them over to 'meet' her. Eventually you feel like rewarding her with a companion, and pick up a normal	 husky dog to keep her company, a nice strong male one both for her pleasure and your own, as you find yourself enjoying watching the formerly bright paramedic eagerly going down on all fours for a purebred husky stud, moaning and yipping underneath the dog like a proper bitch.  She seems even happier as her belly grows round with husky puppies again and again, and while you sell some of them to breeders, you enjoy keeping several of them around the house, looking forward to when they grow up and you can have a full pack of slutty huskies at your disposal...[line break]";
 				if sarahpups is greater than 0:
 					say "You were able to smuggle your pups with Sarah out of the city under the militarys nose, and while as they grow they can become somewhat of a strain to keep fed, you enjoy watching them grow into strong little huskies.  You make sure to train them all properly when they are young, the males and females both, to insure they know their proper roles as well trained husky sluts for anyone who wants them.  And soon you have a number of good homes lined up for them to go live in, where they can serve their own masters and owners just as loyally as your own husky bitch serves you....";
 
@@ -276,4 +278,6 @@ when play ends:
 
 
 
-Sarah ends here.
+Sarah ends here.	 
+
+
