@@ -1,4 +1,4 @@
-Version 2.1 of Tigress Hooker For FS by Stripes begins here.
+Version 2 of Tigress Hooker For FS by Stripes begins here.
 [Version 2.1 - added exclusions]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Tigress Hooker creature to Flexible Survivals Wandering Monsters table, With Impreg chance and resource loss"
