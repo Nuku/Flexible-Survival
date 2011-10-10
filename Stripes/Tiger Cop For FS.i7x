@@ -1,4 +1,4 @@
-Version 2.1 of Tiger Cop For FS by Stripes begins here.
+Version 2 of Tiger Cop For FS by Stripes begins here.
 [Version 2.1 - added exclusions]
 
 Policeman is a situation.

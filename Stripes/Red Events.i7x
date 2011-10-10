@@ -1,4 +1,4 @@
-Version 2.1 of Red Events by Stripes begins here.
+Version 2 of Red Events by Stripes begins here.
 [version 2.1 - exclusions added]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the Red Light District."

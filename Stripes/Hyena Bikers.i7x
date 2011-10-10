@@ -1,4 +1,4 @@
-Version 1.1 of Hyena Bikers by Stripes begins here.
+Version 1 of Hyena Bikers by Stripes begins here.
 [Completed w/selection menu thanks to mirumu.]
 [version 1.1 - added exclusions]
 

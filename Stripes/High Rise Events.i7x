@@ -1,4 +1,4 @@
-Version 2.1 of High Rise Events by Stripes begins here.
+Version 2 of High Rise Events by Stripes begins here.
 [version 2.1 - added exclusions]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the High Rise District."
