@@ -1,5 +1,3 @@
- 
-
 Sarah by Sarokcat&Hellerhound begins here.
 
 
