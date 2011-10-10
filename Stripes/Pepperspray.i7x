@@ -1,4 +1,4 @@
-Pepperspray by Stripes begins here.
+Version 1 of Pepperspray by Stripes begins here.
 [version 1]
 
 
