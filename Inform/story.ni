@@ -362,7 +362,7 @@ title	subtable	description	toggle
 "Pass"	--	"Hey look, a distraction!"	combat pass rule
 "Flee"	--	"Run away!!!"	flee rule
 "Submit"	--	"Maybe it isn't so bad"	submit rule
-"Your HP: [hp of player]/[maxhp of player] [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters]"	--	"I am fit as a fiddle"	--
+"Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters]"	--	"I am fit as a fiddle"	--
 
 Table of combat items
 title(indexed text)	subtable	description	toggle
@@ -763,6 +763,9 @@ Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.
 Include Rabbit Pack for FS by Lago Moro.
 Include Smell by Hellerhound.
+Include Pepperspray by Stripes.
+
+
 
 
 understand the command "feed" as something new.
@@ -959,6 +962,7 @@ This is the flag ban rule:
 	ban menu;
 
 This is the combat item rule:
+	now battleitem is 0;
 	blank out the whole of table of combat items;
 	let X be 1;
 	repeat with Q running through invent of player:
@@ -992,8 +996,9 @@ this is the combat item process rule:
 		if name entry is nam:
 			process object entry;
 			break;
-	retaliate;
-	wait for any key;
+	if battleitem is 0 and monsterhp is greater than 0:
+		retaliate;
+		wait for any key;
 	decrease the menu depth by 1;
 	
 destinationcheck is an action applying to nothing.
@@ -1460,7 +1465,13 @@ To process (X - a grab object):
 				say "You manage to save the medkit with your amazing skills.";
 			otherwise:
 				delete medkit;
-		
+	if x is a pepperspray:
+		if current menu is table of combat items:
+			say "[usepepperspray]";
+		otherwise:
+			say "It would not be good idea to use that on yourself.  Spicy eyes!";
+
+
 
 understand "talk [person]" as conversing.
 understand "talk to [person]" as conversing.
@@ -2506,7 +2517,7 @@ This is the self examine rule:
 			now cunttext is "have [cunts of the player] [descr] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. ";
 		otherwise:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [descr], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. ";
-	say "Looking over yourself, your body is covered in [skin of the player] flesh. You have a [face of the player] face. Your body is [body of the player]. [tail of the player]";
+	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player]. Your body is [body of the player]. [tail of the player]";
 	if cocktext is not "":
 		if cunttext is "":
 			say "A private peek shows that you [cocktext]";
