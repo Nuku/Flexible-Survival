@@ -1732,13 +1732,19 @@ To Retaliate:
 	choose row monster from the table of random critters;
 	let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
 	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if combat bonus is less than -10:
+		now the combat bonus is -10;
 	let the roll be a random number from 1 to 20;
-	say "[name entry] rolls 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
-	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+	say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 8:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
 		if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
 			say "You nimbly avoid the attack at the last moment!";
 			now dam is 0;
+		otherwise if hardmode is true and a random chance of 1 in 10 succeeds:
+			now dam is (dam * 150) divided by 100;
+			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		say "[Attack entry] You take [dam] damage!";
 		let absorb be 0;
 		if "Toughened" is listed in feats of player:
