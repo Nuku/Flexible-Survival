@@ -136,7 +136,9 @@ Definition: A grab object(called X) is wielded:
 
 Definition: A situation(called X) is close:
 	if sarea of X is battleground:
-		if the level of X is greater than (the level of the player plus Levelwindow):
+		if Hardmode is true:
+			yes;
+		otherwise if the level of X is less than (the level of the player plus Levelwindow):
 			yes;
 	no;
 	
@@ -905,7 +907,7 @@ carry out hunting:
 				break;
 		if found is 0:
 			repeat with z running through situations:
-				if the level of z is greater than (the level of the player plus Levelwindow), next;
+				if Hardmode is false and the level of z is greater than (the level of the player plus Levelwindow), next;
 				if z is resolved, next;
 				if printed name of z matches the text topic understood, case insensitively:
 					say "It should be somewhere....";
