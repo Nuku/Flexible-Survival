@@ -804,7 +804,7 @@ Humorous is a flag.
 Hermaphrodite is a flag.
 Hellspawn is a flag.
 when play begins:
-	add { "Awesome", "Cock Cannon" } to infections of humorous;
+	add { "Awesome Tree", "Cock Cannon" } to infections of humorous;
 	add { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd", "Cute Chinchilla Woman", "feral sea dragoness"  } to infections of furry;
 	add { "Naga", "Latex Fox", "skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Wyvern", "Cock Cannon", "sea otter", "Ash Drakenoid", "feral sea dragon", "German Shepherd", "feline", "Felinoid" } to infections of guy;
 	add { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "mothgirl" } to infections of hermaphrodite;
