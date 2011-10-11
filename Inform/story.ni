@@ -136,9 +136,9 @@ Definition: A grab object(called X) is wielded:
 
 Definition: A situation(called X) is close:
 	if sarea of X is battleground:
-		if Hardmode is true:
+		if hardmode is true:
 			yes;
-		otherwise if the level of X is less than (the level of the player plus Levelwindow):
+		otherwise if the level of X is less than (the level of the player plus levelwindow):
 			yes;
 	no;
 	
@@ -854,7 +854,7 @@ carry out hunting:
 				add x to q;
 			otherwise:
 				if there is a lev entry:
-					if lev entry is greater than level of player plus Levelwindow, next;
+					if lev entry is greater than level of player plus levelwindow, next;
 				otherwise:
 					next;
 				add x to q;
@@ -907,7 +907,7 @@ carry out hunting:
 				break;
 		if found is 0:
 			repeat with z running through situations:
-				if Hardmode is false and the level of z is greater than (the level of the player plus Levelwindow), next;
+				if hardmode is false and the level of z is greater than (the level of the player plus levelwindow), next;
 				if z is resolved, next;
 				if printed name of z matches the text topic understood, case insensitively:
 					say "It should be somewhere....";
@@ -1196,7 +1196,7 @@ understand "write in [owned grab object]" as using.
 understand "use cot" as resting.
 
 Check using a grab object(called x):
-	if Hardmode is true and x is journal and (LastJournaluse minus 8) is less than turns:
+	if hardmode is true and x is journal and (LastJournaluse minus 8) is less than turns:
 		say "You can't use your [x] for another [(remainder after dividing (turns minus (LastJournaluse minus 8)) by 8 ) times 3] hours.";
 		stop the action;
 	continue the action;
@@ -1733,8 +1733,8 @@ To Retaliate:
 	let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
 	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
-	if combat bonus is less than -10:
-		now the combat bonus is -10;
+	if hardmode is true and the combat bonus is less than -10:
+			now the combat bonus is -10;
 	let the roll be a random number from 1 to 20;
 	say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
@@ -1937,9 +1937,12 @@ This is the flee rule:
 	choose row monster from the table of random critters;
 	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 20 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if hardmode is true and the combat bonus is less than -10:
+		now the combat bonus is -10;
 	let the roll be a random number from 1 to 20;
-	say "You roll 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
-	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 8:
 		say "You manage to evade [name entry] and slip back into the city.";
 		wait for any key;
 		decrease the menu depth by 1;
@@ -1968,8 +1971,11 @@ This is the player attack rule:
 	let the attack bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
-	if Hardmode is true and combat bonus is greater than 10:
-		now combat bonus is 10;
+	if hardmode is true:
+		if the combat bonus is greater than 10:
+			now combat bonus is 10;
+		otherwise if the combat bonus is less than -10:
+			now combat bonus is -10;
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
@@ -2013,7 +2019,7 @@ This is the player attack rule:
 	if player is not lonely and a random chance of 1 in 5 succeeds:
 		now attack bonus is ( ( dexterity of companion of player minus 10 ) divided by 2 ) plus level of companion of player;
 		let the combat bonus be attack bonus minus defense bonus;
-		if Hardmode is true and combat bonus is greater than 10:
+		if hardmode is true and combat bonus is greater than 10:
 			now combat bonus is 10;
 		now roll is a random number from 1 to 20;
 		if roll plus the combat bonus is greater than 8:
@@ -2097,7 +2103,7 @@ To fight:
 	repeat with X running from 1 to number of rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is a lev entry:
-			if lev entry is greater than level of player plus Levelwindow:
+			if lev entry is greater than level of player plus levelwindow:
 				next;
 		otherwise:
 			next;
@@ -2645,8 +2651,8 @@ This is the location choice rule:
 			remove orthas from play;
 			increase score by 900;
 			extend game by 240;
-			now Hardmode is true;
-			now Levelwindow is 99999;
+			now hardmode is true;
+			now levelwindow is 99999;
 	now scenario is title entry;
 	now the menu depth is 0;
 	clear the screen;
@@ -3251,3 +3257,4 @@ Carry out milking:
 			add "Panther Milk" to the invent of the player;
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
+		
