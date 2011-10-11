@@ -1734,7 +1734,7 @@ To Retaliate:
 	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
 	if hardmode is true and the combat bonus is less than -10:
-			now the combat bonus is -10;
+		now the combat bonus is -10;
 	let the roll be a random number from 1 to 20;
 	say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
