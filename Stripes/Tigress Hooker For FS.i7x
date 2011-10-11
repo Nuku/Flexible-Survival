@@ -1,4 +1,5 @@
 Version 2 of Tigress Hooker For FS by Stripes begins here.
+[Version 2.1 - added exclusions]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Tigress Hooker creature to Flexible Survivals Wandering Monsters table, With Impreg chance and resource loss"
 [Description text for this Extension.]
@@ -6,6 +7,10 @@ Version 2 of Tigress Hooker For FS by Stripes begins here.
 Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+
+when play begins:
+	add { "Tigress Hooker" } to infections of hermaphrodite;
+	add { "Tigress Hooker" } to infections of furry;
 
 tempnum is a number that varies.
 tigresswinner is a number that varies.	[marked as having won last time - used later]

@@ -1,5 +1,5 @@
-High Rise Events by Stripes begins here.
-[version 2]
+Version 2 of High Rise Events by Stripes begins here.
+[version 2.1 - added exclusions]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the High Rise District."
 
@@ -8,9 +8,12 @@ Section 1- Rabid Lawyers
 
 Rabid Lawyers is a situation.
 The sarea of Rabid Lawyers is "High";
+when play begins:
+	add Rabid Lawyers to badspots of guy;
+	add Rabid Lawyers to badspots of furry;
 
 Instead of resolving a Rabid Lawyers:
-	say "     While searching the city, you encounter a large pack of wolves in front of a law firm.  They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants.  The are growling and slavering as they snap at each other or swinging their briefcases around.  Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones.  Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males.  Unwilling to face a legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
+	say "     While searching the city, you encounter a large pack of wolves in front of a law firm.  They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants.  The are growling and slavering as they snap at each other or swinging their briefcases around.  Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones.  Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males.  Unwilling to face the legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
 	increase score by 1;
 	Now Rabid Lawyers is resolved;
 
@@ -21,6 +24,9 @@ Section 2- Pigging Out
 Pigging Out is a situation.
 The sarea of Pigging Out is "High";
 restaurantpig is a number that varies.	[to be used at a later date]
+when play begins:
+	add Pigging Out to badspots of girl;
+	add Pigging Out to badspots of furry;
 
 Instead of resolving a Pigging Out:
 	say "     You come to a very exclusive restaurant.  While you[apostrophe]ve never been there, you[apostrophe]ve heard that reservations are required months in advance and that the cuisine is both wonderful and expensive.  With the fall of the city, you know you won[apostrophe]t be able to order a meal there, but you may be able to get some fine food from the cold locker.  As you get closer, you hear some noise coming from the restaurant and approach more cautiously.  Glancing through one of the large windows, you see a large sow inside, making a mess of the place.  It looks like she has been eating and masturbating all over the place.  One hand holds a fistful of food while the other fingers her dripping pussy.";
@@ -115,6 +121,12 @@ Section 3- Small Park
 
 Small Park is a situation.
 The sarea of Small Park is "High";
+when play begins:
+	add Small Park to badspots of girl;
+	add Small Park to badspots of guy;
+	add Small Park to badspots of hermaphrodite;
+	add Small Park to badspots of furry;
+	add Small Park to badspots of humorous;
 
 Instead of resolving a Small Park:
 	say "     While searching the area, you come across a small park.  It is only about a hundred meters in each direction.  From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed.  You don[apostrophe]t spot any danger at the moment, so perhaps it[apostrophe]s safe.  Shall you enter the park and investigate further? (Y/N)";
@@ -206,6 +218,9 @@ Section 4- Corporate Fat Cats
 
 Corporate Fat Cats is a situation.
 The sarea of Corporate Fat Cats is "High";
+when play begins:
+	add Corporate Fat Cats to badspots of guy;
+	add Corporate Fat Cats to badspots of furry;
 
 Instead of resolving a Corporate Fat Cats:
 	say "     You come across a pair of hefty felines on the steps of one of the many high-rise buildings.  Their business suits have mostly been removed and scattered around them.  One is a male black cat with white paws and a splash of white on his wide belly.  The other is a chubby Maine Coon tom with the thick, fluffy fur of the breed.  They are rolling around against one another, groping each other.  While stroking the black cat[apostrophe]s cock, the other cat goes on about looking forward to some asset growth.  The black cat nibbles at the portly Maine Coon[apostrophe]s ear, telling him how he wants to set up this merger and come out on top.  They continue to go on like this, bantering in corporate lingo while the black cat mounts the other while you walk off, leaving the fat cats to their [apostrophe]merger[apostrophe].";
@@ -220,6 +235,11 @@ Veterinary Hospital is a situation.
 The sarea of Veterinary Hospital is "High";
 doggyness is a number that varies.
 kittyness is a number that varies.
+when play begins:
+	add Veterinary Hospital to badspots of girl;
+	add Veterinary Hospital to badspots of guy;
+	add Veterinary Hospital to badspots of hermaphrodite;
+	add Veterinary Hospital to badspots of furry;
 
 Instead of resolving a Veterinary Hospital:
 	say "     You find a veterinary hospital at the ground level of one of the high rises.  You don[apostrophe]t hear any monsters within and consider entering.  There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.  Shall you enter? (Y/N)";
@@ -432,6 +452,8 @@ Section 6- Golf Store
 
 Golf Store is a situation.
 The sarea of Golf Store is "High";
+when play begins:
+	add Golf Store to badspots of furry;
 
 Instead of resolving a Golf Store:
 	say "     While passing down the street, hear a growing sound, like many hard objects striking the pavement again and again.  As the sound draws closer, you look around for a place to hide and duck into a small golf store.  Peering from behind a display case, you see a small herd of horsemen clomping through the street.  They seem in good spirits, but are watchful and some at the edge of the herd are on the lookout.  Something in their look tells you to remain hidden, which is later confirmed when you see a few half-changed prisoners at the center of the herd.  You continue to watch from the shadow until they[apostrophe]re gone.  As they march out of earshot, you relax and take a moment to look around the golf store you[apostrophe]d hidden in.  You grab a sturdy looking 9-iron from the display, your mind focused on arming yourself after seeing the herd.";
@@ -452,6 +474,8 @@ Section 7- Electronics Store
 
 Electronics Store is a situation.
 The sarea of Electronics Store is "High";
+when play begins:
+	add Small Park to badspots of humorous;
 
 Instead of resolving a Electronics Store:
 	say "     In the corner of one of the high-rise office buildings, you spot an odd pair of beings.  They are a duo of strange, cybernetic people with vacant, luminescent eyes.  Unlike any of the others you[apostrophe]ve seen in the city, you are drawn to investigate.  From behind a car, you watch them as they eat the electronic hardware from the displays.  One is a glossy white with blue highlights and a smooth, dome head.  He is dressed in loose-fitting, slacker wear.  The other has a matte black finish where he[apostrophe]s not flesh and wearing a grey suit and charcoal tie.";

@@ -1,11 +1,15 @@
-Tiger Cop For FS by Stripes begins here.
-[Version 2]
+Version 2 of Tiger Cop For FS by Stripes begins here.
+[Version 2.1 - added exclusions]
 
 Policeman is a situation.
 The sarea of Policeman is "High";
 keycollection is a number that varies.
 mqstatus is a number that varies.
 nsgained is a number that varies.
+when play begins:
+	add Policeman to badspots of guy;
+	add Policeman to badspots of hermaphrodite;
+	add Policeman to badspots of furry;
 
 [	0 new				]
 [	1 key hunting		]
@@ -408,6 +412,11 @@ nightstick is an armament. It is part of the player. It has a weapon "[one of]yo
 
 
 Section 2 - Monster Desc for Tiger Cop
+
+when play begins:
+	add { "Tiger Cop" } to infections of guy;
+	add { "Tiger Cop" } to infections of hermaphrodite;
+	add { "Tiger Cop" } to infections of furry;
 
 to say losetotigercop:
 	if mqstatus is 98:

@@ -1,4 +1,5 @@
 Version 1 of Chocolate Lab by Stripes begins here.
+[Version 1.1 - added exclusions]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Chocolate Lab creature to Flexible Survivals Wandering Monsters table, with Impreg chance"
 [Description text for this Extension.]
@@ -7,6 +8,10 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 
+when play begins:
+	add { "Chocolate Lab" } to infections of hermaphrodite;
+	add { "Chocolate Lab" } to infections of humorous;
+	add { "Chocolate Lab" } to infections of furry;
 
 to say losetolab:
 	if cunts of player > 0 and cocks of player > 0:		[herm]

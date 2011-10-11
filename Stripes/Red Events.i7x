@@ -1,5 +1,5 @@
-Red Events by Stripes begins here.
-[version 2 - scoring added]
+Version 2 of Red Events by Stripes begins here.
+[version 2.1 - exclusions added]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the Red Light District."
 
@@ -8,13 +8,17 @@ Section 1- Leather Wolves
 
 Leather Wolves is a situation.
 The sarea of Leather Wolves is "Red";
+when play begins:
+	add Leather Wolves to badspots of girl;
+	add Leather Wolves to badspots of guy;
+	add Leather Wolves to badspots of furry;
+	add Leather Wolves to badspots of humorous;
 
 Instead of resolving a Leather Wolves:
 	say "     Some noise up ahead attracts your attention and you creep closer.  Hunkering down behind a pair of cars, you look at the small pack of wolfmen gathered in front of a leather store.  At some point, several of the mannequins have been stripped of their outfits and the wolves seem to be wearing them.  Somehow they leather gear is shaped to cover large parts of their lupine faces and transformed bodies.  A pair of them are indulging in sex on the leather harness they[apostrophe]ve hung from a building-side flagpole.  Others are stroking themselves off or fingering their pussies while they watch.  As you study the pack more closely, you come to realize that they are not merely wearing the leather, but that it is part of them at the same time.";
 	say "     With this pack established here, there[apostrophe]s clearly no safe way to search the immediate area further and you quietly backtrack.";
 	increase score by 1;
 	Now Leather Wolves is resolved;
-
 
 
 Section 2- Fetish Store
@@ -41,6 +45,9 @@ Section 3- Raided Corner Store
 
 Raided Corner Store is a situation.
 The sarea of Raided Corner Store is "Red";
+when play begins:
+	add Raided Corner Store to badspots of hermaphrodite;
+	add Raided Corner Store to badspots of furry;
 
 Instead of resolving a Raided Corner Store:
 	say "     You come across a small corner store.  While it has been raided, you can see that it[apostrophe]s not been as badly damaged as others and may still hold something of interest.  You slip inside and glance around, but the shelves, coolers and displays have been emptied of anything useful.  The cash register is empty as well.  You head to check the back and find that the entrance to the back is locked.  Perhaps there is something worthwhile in there.  You start by knocking as asking if anyone[apostrophe]s still safe in there, but get no response.  Do you try to break in?";
@@ -73,6 +80,11 @@ Section 4- Aussie Pub
 
 Aussie Pub is a situation.
 The sarea of Aussie Pub is "Red";
+when play begins:
+	add Aussie Pub to badspots of girl;
+	add Aussie Pub to badspots of guy;
+	add Aussie Pub to badspots of hermaphrodite;
+	add Aussie Pub to badspots of furry;
 
 Instead of resolving a Aussie Pub:
 	say "     While exploring the area, you come across an Australian themed pub previously called 'Down Under'.  Some bright blue paint has been used to add 'TAKE ME' to the front of its name.  Through the windows, you can see there are lots of carousing and arousing kangaroos in the pub.  You can see them eating, drinking and/or fucking with uproarious enjoyment inside.";
@@ -116,6 +128,9 @@ Section 5- Flooded Street
 
 Flooded Street is a situation.
 The sarea of Flooded Street is "Red";
+when play begins:
+	add Flooded Street to badspots of guy;
+	add Flooded Street to badspots of humorous;
 
 Instead of resolving a Flooded Street:
 	say "     You come across a small lake of cum blocking your path.  This section of street is literally flooded with cum.  Wading through musky pond are several of those giant walking cocks.  At the far side of the cum flood, a pair of them are pleasuring one another, releasing more spurts into the sea of semen.  You certainly cannot cross here and expect to remain intact and so start to back away slowly.";
@@ -138,6 +153,9 @@ Section 6- Strip Bar
 Strip Bar is a situation.
 The sarea of Strip Bar is "Red";
 stripbarcounter is a number that varies;
+when play begins:
+	add Strip Bar to badspots of hermaphrodite;
+	add Strip Bar to badspots of furry;
 
 Instead of resolving a Strip Bar:
 	if stripbarcounter is 1:
@@ -219,6 +237,12 @@ Section 7-  Evangelist
 
 Evangelist is a situation.
 The sarea of Evangelist is "Red";
+when play begins:
+	add Evangelist to badspots of girl;
+	add Evangelist to badspots of guy;
+	add Evangelist to badspots of hermaphrodite;
+	add Evangelist to badspots of furry;
+	add Evangelist to badspots of humorous;
 
 Instead of resolving a Evangelist:
 	say "     While trying to cross between stopped cars at a large intersection, you are stopped by the sound of someone climbing onto a car.  Still hunkered down, you see a unchanged human.  Unshaven for several days and dressed in dirty clothes, he smells strongly of alcohol.  He is wild-eyed and waves a bible around as he start yelling at no one.  He goes on incoherently about sinners, Babylon, bedding down with animals, damnation and so forth.  You try to calm him down, but he will have none of it.  Clearly overwrought by witnessing the transforming populous from his hiding spot, he[apostrophe]s gone off the deep end.  From some of his rambling, you gather he[apostrophe]s always been upset by the lascivious nature of the neighbourhood around his home.";
@@ -285,6 +309,8 @@ Section 8- Business as Usual
 
 Business as Usual is a situation.
 The sarea of Business as Usual is "Red";
+when play begins:
+	add Business as Usual to badspots of furry;
 
 Instead of resolving a Business as Usual:
 	say "     You spot a grey mouse person a few buildings away.  He[apostrophe]s wearing a blue t-shirt and shorts and is carrying a small backpack in one hand.  Despite their small size, barely over four feet tall, you take cover to observe him for a moment, trying to decide what to do.  He darts intently across the street, stopping short of a tigress who steps from a nearby alleyway.";

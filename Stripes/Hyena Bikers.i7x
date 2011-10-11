@@ -1,6 +1,6 @@
-Hyena Bikers by Stripes begins here.
+Version 1 of Hyena Bikers by Stripes begins here.
 [Completed w/selection menu thanks to mirumu.]
-[version 1]
+[version 1.1 - added exclusions]
 
 "Adds a situation with a pack of hyenas on motorcycles in the High Rise District."
 
@@ -9,6 +9,10 @@ Section 1- Core Event Tree
 
 Hyena Bikers is a situation.
 The sarea of Hyena Bikers is "High";
+when play begins:
+	add Hyena Bikers to badspots of guy;
+	add Hyena Bikers to badspots of hermaphrodite;
+	add Hyena Bikers to badspots of furry;
 
 Instead of resolving a Hyena Bikers:
 	say "     As you pass down one street, you see a lot of fresh graffiti sprayed onto the concrete high-rises around you.  Looking it over, you see it proclaim the strength of the hyena gang.  This puzzles you, as you thought you were well out of hyena territory.";
