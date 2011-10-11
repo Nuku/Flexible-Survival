@@ -136,15 +136,15 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 to say parasiticluststart:
 	if plantdefeat is 1:
 		 say "You feel a torrent of carnal lust washing over you, seemingly coming from the seed embedded deep in your belly.";
-		 if cunts of player = 1, say "Your vagina begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough for long. You need a cock in it. Preferably one able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
+		 if cunts of player is 1, say "Your vagina begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough for long. You need a cock in it. Preferably one able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
 		if cunts of player > 1:
 			say "Your vaginas begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough. You need cocks in them. Preferably cocks able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
 			now addedlibido is addedlibido + 2 times ( cunts of player minus 1 );
 		if tailname of player is "Parasitic Plant":
-			say"The same sensation comes from your ass-cunt, which seems just as aroused.";
+			say "The same sensation comes from your ass-cunt, which seems just as aroused.";
 			now addedlibido is addedlibido + 2;
 		if facename of player is "Parasitic Plant":
-			say"Your mouth-cunt also starts to produce a very musky substance that starts to trickle into your throat. It tastes like pure sex, adding to your lust.";
+			say "Your mouth-cunt also starts to produce a very musky substance that starts to trickle into your throat. It tastes like pure sex, adding to your lust.";
 			 now addedlibido is addedlibido + 5;
 
 to say parasiticlust:
@@ -153,14 +153,14 @@ to say parasiticlust:
 		if (libido of player is greater than  90) and (location of player is fasttravel ) and (timetillrampage is greater than 3):
 			say "As you pant and feverously massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rushes to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.[line break]";
 			wait for any key;
-			if skinname of player is "Parasitic Plant", keepskin is now 1;
-			if facename of player is "Parasitic Plant", keepface is now 1;
-			if tailname of player is "Parasitic Plant", keeptail is now 1;
-			if bodyname of player is "Parasitic Plant", keepbody is now 1;
-			if cockname of player is "Parasitic Plant", keepcock is now 1;
+			if skinname of player is "Parasitic Plant", now keepskin is 1;
+			if facename of player is "Parasitic Plant", now keepface is 1;
+			if tailname of player is "Parasitic Plant", now keeptail is 1;
+			if bodyname of player is "Parasitic Plant", now keepbody is 1;
+			if cockname of player is "Parasitic Plant", now keepcock is 1;
 			now timetillrampage is 0;
-			 repeat with Y running from 1 to a random number from 3 to 10:
-				let hmonlist be a list of numbers;
+			let hmonlist be a list of numbers;
+			repeat with Y running from 1 to a random number from 3 to 10:
 				repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear in the current area or Outside ] 
 					choose row X from the table of random critters;
 					if there is no area entry, next;
@@ -175,7 +175,7 @@ to say parasiticlust:
 				choose row monster from the table of random critters;
 				follow the cock descr rule;
 				follow the breast descr rule;
-				now didsubmit is 1
+				now didsubmit is 1;
 				say "[victory entry]";
 				infect;
 				wait for any key;
