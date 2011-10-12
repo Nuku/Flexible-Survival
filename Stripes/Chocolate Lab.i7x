@@ -56,7 +56,7 @@ to say beatthelab:
 			if libido of player < 0:
 				now libido of player is 0;
 		otherwise:
-			say "you leave as it struggles to regain enough cohesion to get away";
+			say "     You leave as it struggles to regain enough cohesion to get away";
 
 
 to say chococheck:

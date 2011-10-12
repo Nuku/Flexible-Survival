@@ -117,5 +117,109 @@ Musky Cock Flower is a grab object.
 Musky Cock Flower has a usedesc "[facerape use]";
 Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic Plant"
 
-[ Edit this to have the correct Name as wall]
+
+Section 4 - Heat
+
+timetillrampage is a number that varies. timetillrampage is usually 0.
+addedlibido is a number that varies. addedlibido is usually 0.
+keepskin is a number that varies. keepskin is usually 0.
+keepface is a number that varies. keepface is usually 0.
+keeptail is a number that varies. keeptail is usually 0.
+keepbody is a number that varies. keepbody is usually 0.
+keepcock is a number that varies. keepcock is usually 0.
+
+
+Table of infection heat(continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
+"Parasitic Plant"	7	7	"[parasiticluststart]"	"dripping wet cunts "	--	--	"[parasiticlust]"
+
+to say parasiticluststart:
+	if plantdefeat is 1:
+		 say "You feel a torrent of carnal lust washing over you, seemingly coming from the seed embedded deep in your belly.";
+		 if cunts of player is 1, say "Your vagina begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough for long. You need a cock in it. Preferably one able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
+		if cunts of player > 1:
+			say "Your vaginas begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough. You need cocks in them. Preferably cocks able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
+			now addedlibido is addedlibido + 2 times ( cunts of player minus 1 );
+		if tailname of player is "Parasitic Plant":
+			say "The same sensation comes from your ass-cunt, which seems just as aroused.";
+			now addedlibido is addedlibido + 2;
+		if facename of player is "Parasitic Plant":
+			say "Your mouth-cunt also starts to produce a very musky substance that starts to trickle into your throat. It tastes like pure sex, adding to your lust.";
+			 now addedlibido is addedlibido + 5;
+
+to say parasiticlust:
+	if plantdefeat is 1:
+		increase libido of player by 10 + addedlibido;
+		if (libido of player is greater than  90) and (location of player is fasttravel ) and (timetillrampage is greater than 3):
+			say "As you pant and feverously massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rushes to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.[line break]";
+			wait for any key;
+			if skinname of player is "Parasitic Plant", now keepskin is 1;
+			if facename of player is "Parasitic Plant", now keepface is 1;
+			if tailname of player is "Parasitic Plant", now keeptail is 1;
+			if bodyname of player is "Parasitic Plant", now keepbody is 1;
+			if cockname of player is "Parasitic Plant", now keepcock is 1;
+			now timetillrampage is 0;
+			let hmonlist be a list of numbers;
+			repeat with Y running from 1 to a random number from 3 to 10:
+				repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear in the current area or Outside ] 
+					choose row X from the table of random critters;
+					if there is no area entry, next;
+					if area entry matches the text battleground:
+						add X to hmonlist;
+					if area entry is "Outside":
+						add X to hmonlist;
+				sort hmonlist in random order;
+				repeat with Z running through hmonlist:		[Pick one of the monsters at random]
+					now monster is Z;
+					break;
+				choose row monster from the table of random critters;
+				follow the cock descr rule;
+				follow the breast descr rule;
+				now didsubmit is 1;
+				say "[victory entry]";
+				infect;
+				wait for any key;
+			say "The sex rampage finally ends and you regain control of your urges. You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes...[line break]";
+			wait for any key;
+			if keepskin is 1:
+				now skinname of player is "Parasitic Plant";
+				now skin of player is "[one of]green plant-like[or]beautiful plant-like[at random]";
+			if keepface is 1:
+				now facename of player is "Parasitic Plant";
+				now face of player is "beautiful, feminine face with vine-like hair and a vertical slit, looking much like a very wet pussy, replacing your mouth";
+			if keeptail is 1:
+				now tailname of player is "Parasitic Plant";
+				now face of player is "A very moist vagina replaced your anus, concealed by a dress made of long petals which extend down to the floor. ";
+			if keepbody is 1:
+				now bodyname of player is "Parasitic Plant";
+				now face of player is "undeniably feminine with root-like legs, your needy cunt exsuding a musky substance meant to attract males";
+			if keepcock is 1:
+				now cockname of player is "Parasitic Plant";
+				now face of player is "[if looknow is 1]tentacle cock[otherwise][one of]vine-like[or]tentacle[or]green tendril[at random][end if]";
+			decrease the score by 3;
+			if "Kinky" is not listed in feats of the player:
+				say "You feel ashamed and depressed for what you have done.";
+				decrease the morale of the player by 5;
+				now the libido of the player is 0;
+			otherwise:
+				say "You massage your abused holes and lick your cum-covered lips. Now that was a good fucking session!";				
+				increase the morale of the player by 5;	
+				now the libido of the player is (libido of player) / 2;
+		else if libido of player is greater than 90:
+			increase timetillrampage by 1;
+			say "The sexual urges caused by the seed are harder and harder to suppress.[line break]";
+		else:
+			now timetillrampage is 0;
+
+
+Section 5 - Endings
+
+when play ends:
+	if humanity of the player < 40:
+		if the cockname of the player is "Parasitic Plant":
+			say "When rescue arrives, you decide to hide the existence of the seed, deciding that it is now a part of what you are. You live a rather normal life, except for the very, very frequent sex, of course. Nymphomania is not really high on the list of mental illnesses you get locked in for.";
+	otherwise:
+		if the cockname of the player is "Parasitic Plant":
+			say "When rescue arrives, you have the seed removed from your belly, and live a rather normal, if a bit dull, life.";
+
 Parasitic Plant For FS ends here.
