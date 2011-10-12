@@ -2930,7 +2930,7 @@ To Infect (x - text):
 			infect;
 			break;
 
-Section x - Debug Commands [- Not for release ]
+Section x - Debug Commands - Not for release
 
 [ Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
 
