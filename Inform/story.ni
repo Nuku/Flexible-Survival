@@ -2136,7 +2136,7 @@ To fight:
 		if bonus is less than 6:
 			say "The creature gets the drop on you!";
 			retaliate;
-			if hp of player is less than 1, stop the action;
+			if hp of player is less than 1 or lost is 1, stop the action;
 		wait for any key;
 		change the current menu to table of Basic Combat;
 		carry out the displaying activity;
@@ -2930,7 +2930,7 @@ To Infect (x - text):
 			infect;
 			break;
 
-Section x - Debug Commands - Not for release 
+Section x - Debug Commands [- Not for release ]
 
 [ Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
 
