@@ -1958,7 +1958,7 @@ This is the submit rule:
 	choose row monster from the table of random critters;
 	let temp be the hp of the player;
 	Lose;
-	if "Kinky" is listed in feats of the player, increase the morale of the player by 3;
+	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 	wait for any key;
 	decrease the menu depth by 1;
 
