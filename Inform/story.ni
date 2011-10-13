@@ -2237,6 +2237,8 @@ This is the explore rule:
 		if there is a area of Battleground in the table of random critters:
 			now something is 1;
 			Fight;
+			if hardmode is true and a random chance of 1 in 10 succeeds:
+				Fight;
 	if something is 0, say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
 	follow the turnpass rule;
 [	wait for any key;
@@ -2616,7 +2618,7 @@ This is the location choice rule:
 	otherwise if title entry is "Forgotten":
 		say "You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
 	otherwise if title entry is "Hard mode":
-		say "You always had a desire to challenge yourself so purposesly waited for some stronger opponents to appear before venturing out. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
+		say "You always had a desire to challenge yourself so purposely waited for some stronger opponents to appear before venturing out. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
 	say "Continue?";
 	if the player consents:
 		now looknow is 0;
