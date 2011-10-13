@@ -6,6 +6,9 @@ Section 1 - Alex & Alex's Condo
 Alex is a person. Alex is in Alex's Condo.
 lastAlexfucked is a number that varies.  lastAlexfucked is usually 500.
 alexbrunch is a number that varies.
+alexdiego is a number that varies.
+alexleeinfo is a number that varies.
+gettinglee is a number that varies.
 
 The description of Alex is "[if alexbrunch < 4]A mostly humanoid male with ferret-like ears and a long sinuous tail.  He has a twitchy animal nose with whiskers around it.  He has a slightly rumpled suit on, still looking good despite his changes.  He is a pleasantly enough looking person who looks even better in those moments when he's not stress or worried by his clients.[otherwise]Alex is a sexy ferret male, with a cute mustelid head.  His twitchy animal nose has an array of whiskers around it.  He has a slightly rumpled suit on, still looking good despite his changes.  You find his new look quite pleasing to the eyes and he certainly seems much happier and friendlier of late.  It seems the changes he's undergone are for the better.[end if]";
 
@@ -49,7 +52,7 @@ to say alexrandomtalk:
 	say "     Alex's whiskers twitch a little as he looks up from his legal briefs to talk with you for a moment.  [one of]'Thanks for agreeing to help me on this.'[or]'Yes? Something I can do for you?'[or]'The city's become really dangerous lately.'[or]'I tried talking to one of those wolverine out there before I met you.  Watch out for them - they've really lost it.'  He rubs his side, which is clearly still sore from the encounter.[or]'From my window, I saw a feline cop.  I thought he might be able to help me, but he assaulted one of the weaker mutants and laughed as fucked her hard.  He was twice my size, so I- I stayed inside until he was gone,' he says softly, ashamed of his weakness.[or]'I have to wonder if this is some sick joke,' he says sadly as he points to himself.  'A lawyer made into a weasel.'[or]'I spotted a peacock out there with my binoculars.  It seems to entrance its victims somehow before leading them off somewhere.'[or]'I was never a very physical guy.  I've gotten through this mess mostly on luck for now, but I'm not strong enough to go out there and explore.  Thankfully, I'm safe enough in here.'[or]'The few other tenants I've seen left in here seem benign and leave me alone.  But please don't go snooping around or bothering them.  I don't want to risk upsetting them.'[or]'I've got to keep focused on my work.  It helps keep these strange instincts at bay.'[or]'There's a beautiful, butterfly creature fluttering around out there at times.  It's very pretty, in an odd sort of way.'[or]'One of my neighbours had a pet ferret.  I wonder if I caught this because of it.'[or]'I'd really like a moment to relax and unwind, if you know what I mean.'[or]'I've always been a sensitive guy, I think.  All this fighting, insanity and death is really upsetting.'[or]'Ahhh!  All this waiting is so frustrating,' he growls before getting up and running around and over his couch like a manic ferret for a bit.  Eventually, he settles down and collapses on the couch, panting and feeling much better after releasing all that pent up energy.[or]'Do you like my place?  I decorated it myself.  I'll miss it when we go,' he sighs softly.[or]'I've kept an eye out from my window using these,' he says, holding up a pair of binoculars.[or]'I don't like leaving here too often, as there are so many stairs to climb whenever I get back.'[or]'Being pent up in here makes the ferret in me go stir crazy at times.'  He grabs a nearby rubber ball and chews at it for a few times, chirring softly as he does.  'If I don't give it some release, things can get... messy.'[at random]";
 
 
-Section 3 - The Search
+Section 3 - The Search (Quests)
 
 Meet Alex is an situation.
 The sarea of meet alex is "High";
@@ -79,10 +82,24 @@ The sarea of Find Lorenda is "Red".
 Find Lorenda is resolved.
 Lisacheat is a number that varies.
 
+Instead of conversing the Lisa while progress of alex is 1 and lisacheat is 0:
+	say "     You decide to talk to Lisa about your search for Lorenda.  She nods and tells you that she may have seen her recently.  'I can't be certain, hon.  I used to just work here, so I've only seen her once or twice.  But I think it was here that I spotted go by outside.  She seemed a little frantic, and ran around a corner before I could call out to her.'  She points you in the direction she was heading.  That should help narrow down your search.";
+	now lisacheat is 1;
+
+
 Instead of resolving Find Lorenda:
 	let found be 0;
-	if lisacheat is 1, now found is 1;
-	if found is 0:
+	if lisacheat is 1:
+		let bonus be (( perception of player minus 10 ) divided by 2 ) + 5;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		if bonus + dice is greater than 16:
+			say "With the help of Lisa's information, you manage to find her trail!";
+			now found is 1;
+		otherwise:
+			say "Despite your search and Lisa's information, you fail to find her.  She has to be around here somewhere.";
+			stop the action;
+	if lisacheat is 0:
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
@@ -117,21 +134,31 @@ Instead of resolving Find Lorenda:
 
 
 Instead of conversing the Rod while progress of alex is 2:
-	say "    'Darrell?  Yeah, he was here when it all went down.  But... you might be a little surprised[if hp of ronda is greater than -1].  Go talk to my girl, she knows where he is.'[otherwise].'  He shrugs, and points to the north.  'Go ask the others.  They might know where he is.'  He seems a little bummed.[end if]";
+	say "     'Darrell?  Yeah, he was here when it all went down.  But... you might be a little surprised[if hp of ronda is greater than -1].  Go talk to my girl, she knows where he is.'[otherwise].'  He shrugs, and points to the north.  'Go ask the others.  They might know where he is.'  He seems a little bummed.[end if]";
 
 
 instead of going to Mall Atrium while progress of alex is 2:		[now works for getting there either from Nermine's shop or the food court]
 	now the player is in Mall Atrium;
 	if Ronda is in Mall Atrium:
-		say "     You arrive in the atrium of the mall and approach Ronda, Rod's girlfriend.  'Yeah, I know where he is.  Darrell, c'mere!'  Another mall rat approaches, and it shortly becomes clear that the city's star point guard is now a good deal furrier and rattier.  He arrives and asks her 'What's up?'  She explains the situation, and he nods, facing you.  After some brief explanation, he nods.  'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.'  You try to convince him, but he stands firm on it.  'Nah, I'm good here, man.'  Darrell waves and heads back to talk to some of the other rats.  You sigh a bit, and you have some mixed news for Alex the next time you see him.";
+		say "     You arrive in the atrium of the mall and approach Ronda, Rod's girlfriend.  'Yeah, I know where he is.  Darrell, c'mere!'  Another mall rat approaches, and it shortly becomes clear that the city's star point guard is now a good deal furrier and rattier.  He arrives and asks her 'What's up?'  She explains the situation, and he nods, facing you.  After some brief explanation, the white rat nods.  'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.'  You try to convince him, but he stands firm on it.  'Nah, I'm good here, man.'  Darrell waves and heads back to talk to some of the other rats, putting his arms around a pair of the girls.  You sigh a bit, and you have some mixed news for Alex the next time you see him.";
 	otherwise:
-		 say "     You arrive in the atrium of the mall and approach one of the various mall rats there.  After going back and forth between a few of them, eventually you come to Darrell.  It shortly becomes clear that the city's star point guard is now a good deal furrier and rattier.  'What's up?' he asks.  After some brief explanation, he nods.  'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.'  You try to convince him, but he stands firm on it.  'Nah, I'm good here, man.'  Darrell waves and heads back to talk to some of the other rats.  You sigh a bit, and you have some mixed news for Alex the next time you see him.";
+		 say "     You arrive in the atrium of the mall and approach one of the various mall rats there.  After going back and forth between a few of them, eventually you come to Darrell.  It shortly becomes clear that the city's star point guard is now a good deal furrier and rattier.  'What's up?' the white rat asks.  After some brief explanation, he nods.  'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.'  You try to convince him, but he stands firm on it.  'Nah, I'm good here, man.'  Darrell waves and heads back to talk to some of the other rats, putting his arms around a pair of the girls.  You sigh a bit, and you have some mixed news for Alex the next time you see him.";
 	now progress of alex is 3;
 
 
 instead of entering the Confession Booth while progress of alex is 4:
 	say "You ask the priest if she's seen anyone.";
 	say "'Oh! Yes, I believe I know something that might help you.  A man has barricaded himself inside one of the storage sheds to the north of the beach.  There's a chance that he may be the one you're looking for.'  You profusely thank the priestess, who waves off the praise.  'Thank the Goddess for your good fortune, not me.  Stay safe and explore a newness of yourself through change, my child.'";
+
+
+instead of conversing the Diego while progress of alex is 4 and alexdiego is 0:
+	say "You ask Diego if he's happened to have seen anyone hiding out in the park that meets Lee's description.  He shakes his head, saying he's not seen anyone like that, though you can never be certain if they changed too much.";
+	now alexdiego is 1;
+
+
+instead of conversing the Alex while gettinglee > 4 and alexleeinfo is 0:
+	say "     Normally, I shouldn't divulge information about a client's case, but this is an emergency and you can be considered part of my staff.'  He slips a paper from one of the case files on his table.  This memo that Lee found discusses under the table deals between members of the governor's staff and the city councillors of several cities in the area.  If that's really Lee in there, mention that I want to talk with him about these names here and he should realize that you could only get that info from me.  If it's not him, it won't mean anything to that person and the information is still safe until brought to court.";
+	now alexleeinfo is 5;
 
 
 Lee's Shed is a room.
@@ -142,7 +169,7 @@ Instead of going west from dirty sheds:
 		say "     You come to a shed that has been barricaded shut.  'Stay away!  I don't want any of you freaks coming in here!'  You ask if the person inside is Lee, and you hear what might be a grunt in the affirmative, before he shouts again.  'Who's asking? Who sent you!?'  You tell him that Alex sent you, but it appears that, with all the madness going on, is something he's reluctant to believe.  He starts mumbling that it's all some kind of setup.  Do you attempt to persuade him to come with you? (Y/N)";
 		let success be 0;
 		if the player consents:
-			let bonus be ( charisma of player minus 10 ) divided by 2;
+			let bonus be (( charisma of player minus 10 ) divided by 2) + alexleeinfo;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
 			if dice + bonus is greater than 19:
@@ -173,6 +200,10 @@ Instead of going west from dirty sheds:
 			say "[line break]     The weaselly lawyer looks you up and down, sizing you up.  'You know... I have a reputation as a hell of a lover,' he says, leering a little bit but remaining professional.  'What I'm saying is,' he chuckles, 'if you come and visit, I'd be willing to show you a good time.'";
 			say "     He adjusts his tie.  'That wouldn't be professional to do while Lee and Lorenda still here,' he says.  'Give me about a day to find safe lodging for them in one of the other condos, and then we can see about those options.'";
 			now lastAlexfucked is turns;		[creates the 1 day delay before sexy times]
+		otherwise:
+			increase gettinglee by 1;
+			if gettinglee > 5 and alexleeinfo is 0:
+				say "     This doesn't seem to be working for you.  Perhaps [bold type]Alex[roman type] has more info to help you convince Lee to trust you.";
 	otherwise:
 		say "     There's nothing interesting over there.";
 
