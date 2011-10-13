@@ -11,6 +11,7 @@ Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 580000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 50000.
+use MAX_NUM_STATIC_STRINGS of 30000.
 use ALLOC_CHUNK_SIZE of 50000.
 use MAX_OBJECTS of 1000.
 Include Basic Help Menu by Emily Short.
@@ -110,6 +111,9 @@ A grab object has a text called trade.
 A grab object has a text called purified.
 A grab object has a text called usedesc.
 Turns is a number that varies. Turns is 240.
+Hardmode is a truth state that varies. Hardmode is usually false;
+Levelwindow is a number that varies. Levelwindow is 3;
+Lastjournaluse is a number that varies. Lastjournaluse is 248;
 Targetturns is a number that varies.
 Started is a number that varies.
 Freefeats is a number that varies.
@@ -124,6 +128,7 @@ Childrenbodies is a list of text that varies.
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
 A situation has a text called sarea. The sarea of a situation is usually "Outside".
+A situation has a number called level. The level of a situation is usually 0.
 A featset is a kind of thing.
 
 Definition: A grab object(called X) is wielded:
@@ -131,7 +136,11 @@ Definition: A grab object(called X) is wielded:
 	no;
 
 Definition: A situation(called X) is close:
-	if sarea of X is battleground, yes;
+	if sarea of X is battleground:
+		if hardmode is true:
+			yes;
+		otherwise if the level of X is less than (the level of the player plus levelwindow):
+			yes;
 	no;
 	
 Definition: A person(called X) is male:
@@ -353,6 +362,7 @@ title	subtable	description	toggle
 "Caught Outside"	--	--	location choice rule
 "Rescuer Stranded"	--	--	location choice rule
 "Forgotten"	--	--	location choice rule
+"Hard mode"	--	--	location choice rule
 
 
 Table of Basic Combat
@@ -845,7 +855,7 @@ carry out hunting:
 				add x to q;
 			otherwise:
 				if there is a lev entry:
-					if lev entry is greater than level of player plus 3, next;
+					if lev entry is greater than level of player plus levelwindow, next;
 				otherwise:
 					next;
 				add x to q;
@@ -898,6 +908,7 @@ carry out hunting:
 				break;
 		if found is 0:
 			repeat with z running through situations:
+				if hardmode is false and the level of z is greater than (the level of the player plus levelwindow), next;
 				if z is resolved, next;
 				if printed name of z matches the text topic understood, case insensitively:
 					say "It should be somewhere....";
@@ -1185,6 +1196,12 @@ understand "wield [owned grab object]" as using.
 understand "write in [owned grab object]" as using.
 understand "use cot" as resting.
 
+Check using a grab object(called x):
+	if hardmode is true and x is journal and (LastJournaluse minus 8) is less than turns:
+		say "You can't use your [x] for another [(remainder after dividing (turns minus (LastJournaluse minus 8)) by 8 ) times 3] hours.";
+		stop the action;
+	continue the action;
+
 Carry out using a grab object(called x):
 	if x is owned:
 		process x;
@@ -1437,6 +1454,7 @@ To process (X - a grab object):
 				decrease healed by humanity of player minus 100;
 				now humanity of player is 100;
 			say "([humanity of the player]/100).";
+			now Lastjournaluse is turns;
 		follow turnpass rule;
 	if x is a armament:
 		if weapon of player is weapon of x: [ unequip]
@@ -1715,13 +1733,19 @@ To Retaliate:
 	choose row monster from the table of random critters;
 	let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
 	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if hardmode is true and the combat bonus is less than -10:
+		now the combat bonus is -10;
 	let the roll be a random number from 1 to 20;
-	say "[name entry] rolls 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
-	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+	say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 8:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
 		if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
 			say "You nimbly avoid the attack at the last moment!";
 			now dam is 0;
+		otherwise if hardmode is true and a random chance of 1 in 10 succeeds:
+			now dam is (dam * 150) divided by 100;
+			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		say "[Attack entry] You take [dam] damage!";
 		let absorb be 0;
 		if "Toughened" is listed in feats of player:
@@ -1914,9 +1938,12 @@ This is the flee rule:
 	choose row monster from the table of random critters;
 	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 20 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if hardmode is true and the combat bonus is less than -10:
+		now the combat bonus is -10;
 	let the roll be a random number from 1 to 20;
-	say "You roll 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
-	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 8:
 		say "You manage to evade [name entry] and slip back into the city.";
 		wait for any key;
 		decrease the menu depth by 1;
@@ -1944,9 +1971,15 @@ This is the player attack rule:
 	choose row monster from the table of random critters;
 	let the attack bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if hardmode is true:
+		if the combat bonus is greater than 10:
+			now combat bonus is 10;
+		otherwise if the combat bonus is less than -10:
+			now combat bonus is -10;
 	let the roll be a random number from 1 to 20;
-	say "You roll 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
-	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 8:
 		let dam be ( weapon damage of the player times a random number from 80 to 120 ) divided by 100;
 		if weapon object of player is journal:
 			if "Martial Artist" is listed in feats of player:
@@ -1986,8 +2019,11 @@ This is the player attack rule:
 		say "You miss!";
 	if player is not lonely and a random chance of 1 in 5 succeeds:
 		now attack bonus is ( ( dexterity of companion of player minus 10 ) divided by 2 ) plus level of companion of player;
+		let the combat bonus be attack bonus minus defense bonus;
+		if hardmode is true and combat bonus is greater than 10:
+			now combat bonus is 10;
 		now roll is a random number from 1 to 20;
-		if roll plus the attack bonus minus the defense bonus is greater than 8:
+		if roll plus the combat bonus is greater than 8:
 			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
 			say "[assault of companion of player] [dam] damage inflicted!";
 			decrease monsterhp by dam;
@@ -2068,7 +2104,7 @@ To fight:
 	repeat with X running from 1 to number of rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is a lev entry:
-			if lev entry is greater than level of player plus 3:
+			if lev entry is greater than level of player plus levelwindow:
 				next;
 		otherwise:
 			next;
@@ -2101,7 +2137,7 @@ To fight:
 		if bonus is less than 6:
 			say "The creature gets the drop on you!";
 			retaliate;
-			if hp of player is less than 1, stop the action;
+			if hp of player is less than 1 or lost is 1, stop the action;
 		wait for any key;
 		change the current menu to table of Basic Combat;
 		carry out the displaying activity;
@@ -2201,6 +2237,8 @@ This is the explore rule:
 		if there is a area of Battleground in the table of random critters:
 			now something is 1;
 			Fight;
+			if hardmode is true and a random chance of 1 in 10 succeeds:
+				Fight;
 	if something is 0, say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
 	follow the turnpass rule;
 [	wait for any key;
@@ -2579,6 +2617,8 @@ This is the location choice rule:
 		say "You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive!(Start with no supplies, an iron man mode, can you survive?)[line break]";
 	otherwise if title entry is "Forgotten":
 		say "You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
+	otherwise if title entry is "Hard mode":
+		say "You always had a desire to challenge yourself so purposely waited for some stronger opponents to appear before venturing out. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
 	say "Continue?";
 	if the player consents:
 		now looknow is 0;
@@ -2605,6 +2645,17 @@ This is the location choice rule:
 			remove orthas from play;
 			increase score by 600;
 			extend game by 240;
+		if title entry is "Hard mode":
+			now invent of bunker is { };
+			add "cot" to invent of bunker;
+			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
+			now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
+			now the hp of doctor matt is 100;
+			remove orthas from play;
+			increase score by 900;
+			extend game by 240;
+			now hardmode is true;
+			now levelwindow is 99999;
 	now scenario is title entry;
 	now the menu depth is 0;
 	clear the screen;
@@ -2882,7 +2933,7 @@ To Infect (x - text):
 			infect;
 			break;
 
-Section x - Debug Commands - Not for release 
+Section x - Debug Commands - Not for release
 
 [ Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
 
@@ -3209,3 +3260,4 @@ Carry out milking:
 			add "Panther Milk" to the invent of the player;
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
+		
