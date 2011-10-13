@@ -26,6 +26,8 @@ Instead of resolving a Hyena Bikers:
 			break;
 	if hyg is 3 and the bodyname of player is "Herm Hyena":
 		say "[ridetimecheck]";
+	otherwise if hyg is 3 and the facename of player is "Herm Hyena":
+		say "[ridetimecheck]";
 	otherwise:
 		say "[bikeattack]";
 		challenge "Herm Hyena";
