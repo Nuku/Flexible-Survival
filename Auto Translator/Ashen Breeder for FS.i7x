@@ -7,7 +7,7 @@ Ashen Breeder for FS by Auto Translator begins here.
  
  [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
  to say ashen breeder attack:
-	if cunts of player > 1 and gestation of child is 0:
+	if cunts of player > 0 and gestation of child is 0:
 		follow the breast descr rule;
 		say "Her nose twitches as a wild look comes to her eyes. She shoves you to the ground and clambers up on top of you even as her shaft rubs along your thigh in the motion. 'I am going to make you so full of child, your kids will be pregnant,' she whispers at you as she slips into you, strangely formed shaft sending sharp pangs of pleasure as each bump penetrates your clenching lips. The barbs that cover it pluck and pull at you when she draws back, just to slam home again. She nuzzles into your [descr] chest as she thumps against you like a huge rabbit, her own breasts rubbing along your front with each frantic push and pull. Liquid heat pours into you as she growls, slamming home and working a suddenly thick knot into your cunt, sealing herself to you.[impregchance] As you remain locked to her, she nuzzles up against you and pushes a teat to your mouth. The milk soothes and calms you, time melting into a pleasent blur. When the haze lifts, she has departed, leaving you with her sticky seed on your thighs to remind you of her.";
 	otherwise:
