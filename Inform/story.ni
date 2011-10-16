@@ -2543,7 +2543,6 @@ This is the self examine rule:
 	now looknow is 1;
 	showstats player;
 	let cocktext be "";
-	follow the cock descr rule;
 	if the cocks of the player is greater than 0:
 		if the cocks of the player is greater than 1:
 			now cocktext is "have [cocks of the player] [descr] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. Underneath them hang [ball size]. ";
@@ -2559,10 +2558,15 @@ This is the self examine rule:
 	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player]. Your body is [body of the player]. [tail of the player]";
 	if cocktext is not "":
 		if cunttext is "":
+			follow the cock descr rule;
 			say "A private peek shows that you [cocktext]";
 		otherwise:
-			say "A private peek shows that you [cocktext]. Also, you[cunttext]";
+			follow the cock descr rule;
+			say "A private peek shows that you [cocktext].";
+			follow the cunt descr rule;
+			say " Also, you[cunttext]";
 	otherwise if cunttext is not "":
+		follow the cunt descr rule;
 		say " You[cunttext]";
 	follow the breast descr rule;
 	if breasts of player is greater than 0:
