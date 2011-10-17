@@ -775,7 +775,11 @@ Include Butterfly for FS by mirumu.
 Include Rabbit Pack for FS by Lago Moro.
 Include Smell by Hellerhound.
 Include Pepperspray by Stripes.
-
+Include Jaguar Orderly For Fs by Stripes.
+Include Mismatched Chimera For Fs by Stripes.
+Include Candy Striper by Stripes.
+Include Hospital For Fs by Stripes.
+Include Naughty Nurse by Stripes.
 
 
 
@@ -1489,6 +1493,16 @@ To process (X - a grab object):
 			say "[usepepperspray]";
 		otherwise:
 			say "It would not be good idea to use that on yourself.  Spicy eyes!";
+	if x is a healing booster:
+		let healed be 15;
+		if "Expert Medic" is listed in the feats of the player:
+			now healed is 20;
+		increase hp of player by healed;
+		if hp of player is greater than maxhp of player:
+			decrease healed by hp of player minus maxhp of player;
+			now hp of player is maxhp of player;
+		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate.";
+		delete healing booster;
 
 
 
