@@ -26,8 +26,11 @@ this is the peppersprayflee rule:
 	choose row monster from the table of random critters;
 	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 12 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if hardmode is true and the combat bonus is less than -8:				[pepperspray limits hardmode penalty to -8]
+		now the combat bonus is -8;
 	let the roll be a random number from 1 to 20;
-	say "You roll 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
+	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the attack bonus minus the defense bonus is greater than 8:
 		say "Using the pepperspray to briefly disable the [name entry], you manage to make your escape.";
 		say "[pepperspraydrain]";
@@ -100,9 +103,15 @@ to say enhancedattack:
 	[Improves players attack chance by 3 for these attack actions]
 	let the attack bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if hardmode is true:
+		if the combat bonus is greater than 12:				[pepperspray increases hardmode bonus limit to +12]
+			now combat bonus is 12;
+		otherwise if the combat bonus is less than -8:			[pepperspray limits hardmode penalty to -8]
+			now combat bonus is -8;
 	let the roll be a random number from 1 to 20;
-	say "You roll 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
-	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 8:
 		let dam be ( weapon damage of the player times a random number from 80 to 120 ) divided by 100;
 		if weapon object of player is journal:
 			if "Martial Artist" is listed in feats of player:
@@ -142,8 +151,11 @@ to say enhancedattack:
 		say "You miss!";
 	if player is not lonely and a random chance of 1 in 5 succeeds:
 		now attack bonus is ( ( dexterity of companion of player minus 4 ) divided by 2 ) plus level of companion of player;	[+3 to hit for pet]
+		let the combat bonus be attack bonus minus defense bonus;
+		if hardmode is true and combat bonus is greater than 12:		[pepperspray increases hardmode bonus limit to +12]
+			now combat bonus is 12;
 		now roll is a random number from 1 to 20;
-		if roll plus the attack bonus minus the defense bonus is greater than 8:
+		if roll plus the combat bonus is greater than 8:
 			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
 			say "[assault of companion of player] [dam] damage inflicted!";
 			decrease monsterhp by dam;
@@ -155,13 +167,19 @@ to say weakretaliate:
 	choose row monster from the table of random critters;
 	let the defense bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;	[+3 greater chance to dodge]
 	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if hardmode is true and the combat bonus is less than -10:
+		now the combat bonus is -10;
 	let the roll be a random number from 1 to 20;
-	say "[name entry] rolls 1d20([roll])+[attack bonus minus defense bonus] -- [roll plus attack bonus minus defense bonus]: ";
-	if the roll plus the attack bonus minus the defense bonus is greater than 8:
+	say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 8:
 		let dam be ( wdam entry times a random number from 60 to 120 ) divided by 100;				[chance for weaker attacks]
 		if "Black Belt" is listed in feats of player and a random chance of 1 in 8 succeeds:			[1 in 8 for BB dodge]
 			say "You nimbly avoid the attack at the last moment!";
 			now dam is 0;
+		otherwise if hardmode is true and a random chance of 1 in 12 succeeds:						[lower chance of hard mode critical]
+			now dam is (dam * 150) divided by 100;
+			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		say "[Attack entry] You take [dam] damage!";
 		let absorb be 0;
 		if "Toughened" is listed in feats of player:
