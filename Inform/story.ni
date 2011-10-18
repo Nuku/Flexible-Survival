@@ -2118,7 +2118,7 @@ To fight:
 	repeat with X running from 1 to number of rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is a lev entry:
-			if lev entry is greater than level of player plus levelwindow:
+			if lev entry is greater than level of player plus levelwindow and hardmode is false:
 				next;
 		otherwise:
 			next;
@@ -2138,6 +2138,13 @@ To fight:
 			now monster is Z;
 			break;
 		choose row monster from the table of random critters;
+		if lev entry is less than level of player minus 2 and hardmode is true:
+			let debit be ( level of player - 2 ) - lev entry;
+			increase lev entry by debit;
+			increase str entry by debit;
+			increase dex entry by debit;
+			increase hp entry by debit * 5;
+			increase wdam entry by debit * 2;
 		say "You run into a [name entry]. [desc entry].";
 		now lost is 0;
 		if combat abort is 1:
