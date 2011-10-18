@@ -26,11 +26,11 @@ instead of resolving a toy store:
 		otherwise:	
 			say "Standing in a pile of incapacitated latex foxes, you yell your triumph, and take some food and water as a reward.";
 			repeat with E running from one to four:
-				add "Food" to the invent of the player;
+				add "food" to the invent of the player;
 				if a random chance of one in two succeeds:
-					add "Water Bottle" to the invent of the player;
+					add "water bottle" to the invent of the player;
 				otherwise:
-					add "Dirty Water" to the invent of the player;
+					add "dirty water" to the invent of the player;
 			now toy store is resolved;
 	otherwise:
 		say "You go on your way away from the store.";
