@@ -82,9 +82,9 @@ to say mixnmatch:
 	now lev entry is qq;
 	now dex entry is ( ( ( ( qq minus 1 ) times 4 ) divided by 3 ) plus 10 );
 	[testing values achieved]
-	say "Lvl is [qq].  Variable is [zz].";
+[	say "Lvl is [qq].  Variable is [zz].";
 	say "HP is [hp entry].";
-	say "Dmg is [wdam entry].  Dex is [dex entry].[line break]";
+	say "Dmg is [wdam entry].  Dex is [dex entry].[line break]";		]
 
 
 to say randombodypart:
