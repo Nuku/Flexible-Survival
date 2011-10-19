@@ -479,7 +479,7 @@ when play begins:
 
 Instead of resolving a Electronics Store:
 	say "     In the corner of one of the high-rise office buildings, you spot an odd pair of beings.  They are a duo of strange, cybernetic people with vacant, luminescent eyes.  Unlike any of the others you[apostrophe]ve seen in the city, you are drawn to investigate.  From behind a car, you watch them as they eat the electronic hardware from the displays.  One is a glossy white with blue highlights and a smooth, dome head.  He is dressed in loose-fitting, slacker wear.  The other has a matte black finish where he[apostrophe]s not flesh and wearing a grey suit and charcoal tie.";
-	say "     As you watch, the darker one twitches and shudders for a moment while trying to swallow down a big mouthful.  His eyes blink, then turn a solid blue.  He smacks his chest a few times to reboot himself.  Once that is settled opens his jacket, accesses a panel on himself and pulls out a video card, swapping it for a newer model from one of the shelves.";
+	say "     As you watch, the darker one twitches and shudders for a moment while trying to swallow down a big mouthful.  His eyes blink, then turn a solid blue.  He smacks his chest a few times to reboot himself.  Once that is settled, he opens his jacket, accesses a panel on himself and pulls out a video card, swapping it for a newer model from one of the shelves.";
 	say "     With this impromptu upgrade completed, they get back to squabbling over the various electronic phones, mp3 players and doodads, babbling marketing buzzwords all the while.";
 	increase score by 1;
 	Now Electronics Store is resolved;
