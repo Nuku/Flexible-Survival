@@ -1502,7 +1502,7 @@ To process (X - a grab object):
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
 			now hp of player is maxhp of player;
-		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate.";
+		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate.  You regain [healed] hit points.";
 		delete healing booster;
 
 
@@ -3210,14 +3210,14 @@ Instead of conversing the doctor matt:
 		say "'Up for another task? Good. Orthas spotted something interesting while hunting. A singular creature. You must understand, one of the standard impulses the infection seems to give on its infectees is the desire to spread the infection. To see just one is unusual. A trait I have only seen in Orthas so far. Go to the park and find this creature, bring it to me for study.'";
 		now unusual creature is unresolved;
 		now hp of doctor matt is 6;
-	if hp of doctor is 6 and unusual creature is unresolved:
+	if hp of doctor matt is 6 and unusual creature is unresolved:
 		say "'Did you forget already?' asks Matt, 'Go to the park, find the unusual creature. Bring it here. Orthas said it was intersexed, if that helps.'";
 	otherwise if hp of doctor matt is 6:
 		say "'Ah ha, yes, she is an interesting creature, is she not?' he says, looking at the deer through his face plate. 'She says her name is Susan, just so you know.'";
 		if deerconsent is 1:
 			say "'And she[apostrophe]s taken a fancy to you. This is good.";
 		say "'I was hoping you could test her for infectiousness, in a controlled situation. You don't have to if you don[apostrophe]t want to, just talk to her and decide for yourself. Don[apostrophe]t look at me that way. I can[apostrophe]t very well do it from inside this suit, now can I?";
-		now hp of doctor is 7;
+		now hp of doctor matt is 7;
 		increase score by 20;
 		extend game by 24;
 	if hp of doctor matt is 7 and deerconsent is not 2:
@@ -3233,7 +3233,7 @@ Instead of conversing the doctor matt:
 					now monster is y;
 					break;
 			now area entry is "Park";
-		now hp of doctor is 8;
+		now hp of doctor matt is 8;
 	say "He looks kind of busy right now.";
 			
 
