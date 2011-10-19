@@ -18,7 +18,7 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
-The release number is 43.
+The release number is 44.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -690,6 +690,7 @@ Include Hyena Bikers by Stripes.
 Include Wolverine Guard for FS by Stripes.
 Include Feral Wolf for FS by Shadowwolf94.
 Include Anthro Shaft Beast for FS by Dragonflayer.
+Include Feral Shaft Beast for FS by Dragonflayer.
 Include Pirate Island by Sarokcat.
 Include Little Fox by Sarokcat.
 Include Felinoid Companion by Sarokcat.
