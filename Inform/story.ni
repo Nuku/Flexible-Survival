@@ -3234,6 +3234,8 @@ Instead of conversing the doctor matt:
 					break;
 			now area entry is "Park";
 		now hp of doctor matt is 8;
+	if hp of doctor matt is 9:
+		say "'Please continue to assist Dr Mouse.  And let me know what you find out.'  Dr Matt then turns back to his work, intent on continuing his research.";
 	say "He looks kind of busy right now.";
 			
 
