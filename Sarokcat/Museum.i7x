@@ -73,7 +73,7 @@ carry out riddlesphinxing:
 		let prizegift be a random number from 1 to number of filled rows in the table of random critters;
 		choose row prizegift from the table of random critters;
 		if there is a loot entry:
-			if loot entry is not " ":
+			if loot entry is not "":
 				add loot entry to invent of player;
 				say "you acquired 1 [loot entry]";
 			otherwise:
