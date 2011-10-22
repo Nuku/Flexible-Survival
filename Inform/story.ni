@@ -2139,8 +2139,8 @@ To fight:
 			now monster is Z;
 			break;
 		choose row monster from the table of random critters;
-		if lev entry is less than level of player minus 2 and hardmode is true:
-			let debit be ( level of player - 2 ) - lev entry;
+		if lev entry is less than level of player and hardmode is true:
+			let debit be ( level of player ) - lev entry;
 			increase lev entry by debit;
 			increase str entry by debit;
 			increase dex entry by debit;
