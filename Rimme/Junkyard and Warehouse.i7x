@@ -53,7 +53,7 @@ Instead of going south from the abandoned lot:
 			Otherwise:
 				let changed be false;
 				if the player is not skintone human, let changed be true;
-				if the tailname of the player is not "", let changed be true;
+				if the tail of the player is not "", let changed be true;
 				if the player is not bodily human, let changed be true;
 				if changed is false:
 					say "You explain that you are another survivor, that you wish to enter. 'Of course. Open her up!' he calls out, closing the slat. The door swings open, and you step through.";
