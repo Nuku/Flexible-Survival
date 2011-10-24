@@ -9,45 +9,67 @@ Section 1 - Monster Responses
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 
 when play begins:
-	add { "Tigress Hooker" } to infections of guy;
-	add { "Tigress Hooker" } to infections of furry;
+	add { "Wolverine Guard" } to infections of guy;
+	add { "Wolverine Guard" } to infections of furry;
 
 wolvloc is a text that varies.
-
+wolvfightresult is a number that varies.
 
 to say losetowolverine:
-	if cunts of player > 0:
-		if a random chance of 2 in 3 succeeds:
-			say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he[apostrophe]s buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the [wolvloc] he was protecting so aggressively.";
-			say "     Keeping you pinned down, he looks around for any other threats to his post.  This gives you a moment to look around as well, but you can[apostrophe]t spot anything of use or wealth around.  Any food has long since been eaten by the wolverine and you don[apostrophe]t see anything of particular value to you or anyone in this crisis.";
-			say "     Satisfied that he won[apostrophe]t be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over.  He quickly mounts you, driving his large, brown cock deep inside you.  He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.";
-			say "     [impregchance]";
-			say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear.  He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way.";
+	now wolvfightresult is 2;
+	if lbfight is 0:
+		if cunts of player > 0:
+			if a random chance of 2 in 3 succeeds:
+				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he[apostrophe]s buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the [wolvloc] he was protecting so aggressively.";
+				say "     Keeping you pinned down, he looks around for any other threats to his post.  This gives you a moment to look around as well, but you can[apostrophe]t spot anything of use or wealth around.  Any food has long since been eaten by the wolverine and you don[apostrophe]t see anything of particular value to you or anyone in this crisis.";
+				say "     Satisfied that he won[apostrophe]t be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over.  He quickly mounts you, driving his large, brown cock deep inside you.  He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.";
+				say "     [impregchance]";
+				say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear.  He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way.";
+			otherwise:
+				say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the [wolvloc] he[apostrophe]s protecting so aggressively.";
 		otherwise:
 			say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the [wolvloc] he[apostrophe]s protecting so aggressively.";
-	otherwise:
-		say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the [wolvloc] he[apostrophe]s protecting so aggressively.";
+	otherwise if lbfight is 1:
+		if cunts of player > 0:
+			if a random chance of 2 in 3 succeeds:
+				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he[apostrophe]s buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the [wolvloc] he was protecting so aggressively.";
+				say "     Keeping you pinned down, he looks around for any other threats to his post.  This gives you a moment to look around for a way out of this predicament, but find none.";
+				say "     Satisfied that he won[apostrophe]t be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over.  He quickly mounts you, driving his large, brown cock deep inside you.  He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.";
+				say "     [impregchance]";
+				say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear.  He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way, forcing you to leave that section of the museum and to head back to the main foyer.";
+			otherwise:
+				say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the Medieval History wing of the museum.";
+		otherwise:
+			say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the Medieval History wing of the museum.";
 
 
 to say beatthewolverine:
-	if cunts of player > 0 and libido of player > 39 and bodyname of player is "Wolverine Guard":
-		say "     Having managed to beat the wolverine until you finally knocked him down, you look over the powerful male and you feel a yearning inside you.  The excitement of the fight has gotten your wolverine body quite aroused.  Your eyes wander down to the hefty package between his legs and you see that his cock is half-hard as well, aroused by the scent of a strong female.  Do you give in to your urges and ride that thick monster?";
-		if the player consents:
-			say "     Finding the prospect very enticing, you take a hold of his thick shaft and stroke it to full erection.  He rumbles appreciatively and rocks his hips, thrusting into your warm paw.  Once you[apostrophe]ve gotten him sufficiently ready, you climb atop that thick pole and line it up with your wet pussy.";
-			say "     You take it slow at first, despite your instincts screaming to cram it in, letting yourself adjust to its girth and enjoy the feeling of him filling you.  But once you[apostrophe]ve finally gotten it all in, you start riding hard and fast, eager to let this strong male mate with you.";
-			say "     As you ride him, you start growling and snapping at him and he growls and nips in return.  As your mating continues, it only grows more loud and aggressive, almost as violent as the fight that led up to it until finally he[apostrophe]s pumping his hot load into you and satisfying that burning need inside you.";
-			say "[impregchance]";
-			say "     Your mating done, you both settle down, licking and nuzzling each other for a few minutes.  You pull yourself off his flagging erection and head back on your way, leaving him to continue to guard his [wolvloc] with strong, instinctual dedication.";
+	now wolvfightresult is 1;
+	if lbfight is 0:
+		if cunts of player > 0 and libido of player > 39 and bodyname of player is "Wolverine Guard":
+			say "     Having managed to beat the wolverine until you finally knocked him down, you look over the powerful male and you feel a yearning inside you.  The excitement of the fight has gotten your wolverine body quite aroused.  Your eyes wander down to the hefty package between his legs and you see that his cock is half-hard as well, aroused by the scent of a strong female.  Do you give in to your urges and ride that thick monster?";
+			if the player consents:
+				say "     Finding the prospect very enticing, you take a hold of his thick shaft and stroke it to full erection.  He rumbles appreciatively and rocks his hips, thrusting into your warm paw.  Once you[apostrophe]ve gotten him sufficiently ready, you climb atop that thick pole and line it up with your wet pussy.";
+				say "     You take it slow at first, despite your instincts screaming to cram it in, letting yourself adjust to its girth and enjoy the feeling of him filling you.  But once you[apostrophe]ve finally gotten it all in, you start riding hard and fast, eager to let this strong male mate with you.";
+				say "     As you ride him, you start growling and snapping at him and he growls and nips in return.  As your mating continues, it only grows more loud and aggressive, almost as violent as the fight that led up to it until finally he[apostrophe]s pumping his hot load into you and satisfying that burning need inside you.";
+				say "[impregchance]";
+				say "     Your mating done, you both settle down, licking and nuzzling each other for a few minutes.  You pull yourself off his flagging erection and head back on your way, leaving him to continue to guard his [wolvloc] with strong, instinctual dedication.";
+			otherwise:
+				say "     You resist the urge to give in to your lust and turn away, quickly leaving him before you can have second thoughts.";
 		otherwise:
-			say "     You resist the urge to give in to your lust and turn away, quickly leaving him before you can have second thoughts.";
-	otherwise:
-		say "     Having managed to beat the wolverine until you finally knocked him down, you give him a finally blow to put him unconscious.  You move past him to look at the [wolvloc] was guarding.  You search around carefully, but can[apostrophe]t seem to find anything to warrant the aggressive defense of this location.  Any food around here has already been consumed by the mad creature and there is nothing of material interest for you to use.  You shake your head at the poor fellow, driven by strange instincts to uselessly guard this spot.";
+			say "     Having managed to beat the wolverine until you finally knocked him down, you give him a final blow to put him unconscious.  You move past him to look at the [wolvloc] was guarding.  You search around carefully, but can[apostrophe]t seem to find anything to warrant the aggressive defense of this location.  Any food around here has already been consumed by the mad creature and there is nothing of material interest for you to use.  You shake your head at the poor fellow, driven by strange instincts to uselessly guard this spot.";
+	otherwise if lbfight is 1:
+		say "     Having managed to beat the wolverine until you finally knocked him down, you give him a finally blow to put him unconscious.  You move past him to look up at the longship he was guarding, ready to continue with your mission.";
 
 
 to say wolverinedesc:
-	say "[wolverinelocation]";
-	say "[line break]     As you travel through the streets, you are spotted by a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company [one of]jacket on his animalistic body[or]hat on his animalistic head[at random].  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you.  You spot the company logo on his clothing - Wolverine Security.";
-	say "     He is prowling around a [wolvloc], his instincts having locked him into aggressively guarding it.  You seem to have come too close and set him off.  Before you can back away, he charges at you aggressively, powerful paws raised to strike."
+	if lbfight is 0:
+		say "[wolverinelocation]";
+		say "[line break]     As you travel through the streets, you are spotted by a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company [one of]jacket on his animalistic body[or]hat on his animalistic head[at random].  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you.  You spot the company logo on his clothing - Wolverine Security.";
+		say "     He is prowling around a [wolvloc], his instincts having locked him into aggressively guarding it.  You seem to have come too close and set him off.  Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
+	otherwise if lbfight is 1:
+		say "[line break]     You find yourself facing off with a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company jacket on his animalistic body.  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you.  You spot the company logo on his clothing - Wolverine Security.";
+		say "     He has moved himself between you and the boat and is approaching to expel the intruder, his instincts having locked him into aggressively guarding his post.  Stepping over the ropes into the display area seems to have set him off.  Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
 
 to say wolverinelocation:							[sets random location for the wolverine]
 	let T be a random number between 1 and 16;
