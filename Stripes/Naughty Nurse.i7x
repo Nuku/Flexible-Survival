@@ -8,24 +8,66 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 
+vixgender is a number that varies.
+
 when play begins:
 	add { "Vixen Nurse" } to infections of girl;
 	add { "Vixen Nurse" } to infections of furry;
 
 to say losetovixennurse:
-	If cocks of player > 0:
-		say "     The vixen nurse pushes you down as you stop struggling.  Climbing over you, her paws go to your crotch and grab your cock.  With an adept paw, she gets you fully hard before moving to line it up with her wet slit.  She sinks herself slowly down over your cock and moans.  She kneads her paws over your chest as her bubble butt bounces in your lap.  While she rides you, her silvery body and her white and black outfit become your entire, monochrome word of ecstacy.  That one spot of red on her cap is the only colour in your vision until finally you climax.  Your vision is then awash in a blur of colours as you pump your hot seed into her before finally sagging back onto the floor with a sigh of pleasure.  She smiles down at her happy patient and leaves you there.";
-	otherwise:
-		say "     The vixen nurse pushes you down at you stop struggling.  She takes you in her arms and holds you close as she unbuttons the front of her shirt enough to bare one of her breasts.  'Time to take your medicine, my dear,' she purrrs softly.  You consider resisting only briefly, for once your lips touch that nipple and taste the traces of her warm milk on it, you start nursing right away.  As you drink down her milk, she slips a paw between your legs to play with your pussy.  She teases your wet folds, then slips a finger into you.  She works it in and out quickly until you finally have a very fulfilling orgasm that makes your head spin and colours dance in your eyes.  As you try to recover from this, she lowers you to the floor and leaves her patient there, still licking your lips.";
-
+	if vixgender is 0:
+		If cocks of player > 0:
+			say "     The vixen nurse pushes you down as you stop struggling.  Climbing over you, her paws go to your crotch and grab your cock.  With an adept paw, she gets you fully hard before moving to line it up with her wet slit.  She sinks herself slowly down over your cock and moans.  She kneads her paws over your chest as her bubble butt bounces in your lap.  While she rides you, her silvery body and her white and black outfit become your entire, monochrome word of ecstacy.  That one spot of red on her cap is the only colour in your vision until finally you climax.  Your vision is then awash in a blur of colours as you pump your hot seed into her before finally sagging back onto the floor with a sigh of pleasure.  She smiles down at her happy patient and leaves you there.";
+		otherwise:
+			say "     The vixen nurse pushes you down at you stop struggling.  She takes you in her arms and holds you close as she unbuttons the front of her shirt enough to bare one of her breasts.  'Time to take your medicine, my dear,' she purrrs softly.  You consider resisting only briefly, for once your lips touch that nipple and taste the traces of her warm milk on it, you start nursing right away.  As you drink down her milk, she slips a paw between your legs to play with your pussy.  She teases your wet folds, then slips a finger into you.  She works it in and out quickly until you finally have a very fulfilling orgasm that makes your head spin and colours dance in your eyes.  As you try to recover from this, she lowers you to the floor and leaves her patient there, still licking your lips.";
+	if vixgender is 1:
+		if cunts of player > 0:
+			say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your pussy, making you moan.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing increasingly aroused and as soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed.";
+			say "     [impregchance]";
+			say "     Having nicely seeded your womb, she pulls out and wipes her shaft clean on your rear end before getting up and leaving you there, slowly leaking out her plentiful cum onto the floor.";
+		if cocks of player > 0:
+			say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your ass, making you groan in pain.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing increasingly aroused and start to submit to her as it becomes more and more pleasurable.  You are soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed.";
+			say "     Having nicely seeded your ass, she pulls out and wipes her shaft clean on your rear end before getting up and leaving you there, slowly leaking out her plentiful cum onto the floor.";
+	[value reset]
+	choose row monster from the table of random critters;
+	now hp entry is 36;
+	now lev entry is 4;
+	now wdam entry is 5;
+	now dex entry is 14;
 
 to say beatthevixennurse:
 	say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big trouble now.  I'm going to have to send the orderlies down here to deal with you.'  With that, she turns and runs away.";
+	[value reset]
+	choose row monster from the table of random critters;
+	now hp entry is 36;
+	now lev entry is 4;
+	now wdam entry is 5;
+	now dex entry is 14;
 
 
 to say vixennursedesc:
-	say "[line break]     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit.  She has a short cut, white apron with a black top under it.  There's even a traditional, white nurse's cap with a red cross on it on the vixen's head.  She has lustrous, gray fur, indicating that her infection originated from a silver fox.  Glancing down those long, slender legs you see they end in digitigrade paws.  To her ample chest, she holds a large clipboard.  You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard.  She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient[']s gotten out of bed[or]Bend over, sweety.  It[']s time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area.  The doctor will see you shortly.  Until then, let me take care of you[at random].'  She raises her clipboard, seemingly intent on clubbing you with it.";
-
+	choose row monster from the table of random critters;
+	now vixgender is 0;
+	if hermaphrodite is banned:			[always female if herm banned]
+		now vixgender is 0;
+	otherwise if hospquest > 5:
+		if a random chance of 2 in 5 succeeds:
+			now vixgender is 1;		[now a herm]
+	if vixgender is 0:
+		say "[line break]     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit.  She has a short cut, white apron with a black top under it.  There's even a traditional, white nurse's cap with a red cross on it on the vixen's head.  She has lustrous, gray fur, indicating that her infection originated from a silver fox.  Glancing down those long, slender legs you see they end in digitigrade paws.  To her ample chest, she holds a large clipboard.  You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard.  She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient[']s gotten out of bed[or]Bend over, sweety.  It[']s time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area.  The doctor will see you shortly.  Until then, let me take care of you[at random].'  She raises her clipboard, seemingly intent on clubbing you with it.";
+		now hp entry is 36;
+		now monsterhp is 36;
+		now lev entry is 4;
+		now wdam entry is 5;
+		now dex entry is 14;
+	otherwise:
+		say "[line break]     You find yourself face to face with one of those sensually curved vixen in the tight, little nurse's outfit.  She has lustrous, gray fur, indicating that her infection originated from a silver fox.  She has a traditional, white nurse's cap with a red cross on it on the vixen's head.  She is wearing a short cut, white apron with a black top under it.";
+		say "     And there your eyes stop, finding that something is amiss with this naughty nurse.  Her tight dress has a rather sizeable bulge in it and it is growing larger as you watch.  It's a trap!  Grinning, she rubs the firm lump and says, '[one of]It looks like one patient[']s gotten out of bed.  I'll tuck you in good and tight[or]Bend over, sweety.  Mmm... I want to take your temperature[or]You look like you a dose of my medicine[or]Let me give you a thorough examination, my pretty patient[at random].'  She rubs her four breasts and moans lustfully before charging at you.";
+		now hp entry is 72;
+		now monsterhp is 72;
+		now lev entry is 7;
+		now wdam entry is 8;
+		now dex entry is 18;
 
 Section 2 - Monster Insertion
 

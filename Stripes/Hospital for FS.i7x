@@ -9,8 +9,7 @@ Section 1 - City Hospital
 
 hospnav is a number that varies.
 hospstairs is a number that varies.
-hospquest is a number that varies.
-hospcountdown is a number that varies.
+
 
 City Hospital is a room. It is fasttravel.
 
@@ -53,7 +52,7 @@ to say drugsearch:
 		say "     You find a medkit.";
 		add "medkit" to invent of player;
 	if T is 2 or T is 3:
-		say "You find some parts for a medkit among the scattered mess.  Maybe someone could put them together?[line break]";
+		say "     You find some parts for a medkit among the scattered mess.  Maybe someone could put them together?[line break]";
 		increase hasparts by 1;
 	if T is 4:
 		say "     You find a testosterone pill still in the sample pack.";
@@ -312,7 +311,7 @@ when play ends:
 		if humanity of player is less than 10:
 			say "     As you give in to your feral instincts, your helper dog looks at you mournfully.  He then turns and wanders off to find another poor, needy soul to help.  Perhaps he will be more successful next time.";
 		otherwise:
-			say "     After your rescue, you are able to convince the distracted military that the helper dog isn't a threat.  He certainly seems quite normal to them and is an intelligent and helpful animal.  Once you arrive at the safety of the military compound and disembark with the others extracted with you, you spot Hobo in the distance.  He looks back at you once, and as if happy you are now safe, then turns and continues on, perhaps to find another poor soul in need of his help.";   [The God-I'm-so-fucking-Canadian ending]
+			say "     After your rescue, you are able to convince the distracted military that the helper dog isn't a threat.  He certainly seems quite normal to them and is an intelligent and helpful animal.  Once you arrive at the safety of the military compound and disembark with the others extracted with you, you spot Hobo in the distance.  He looks back at you once and, as if satisfied you are now safe, turns and continues on, perhaps to find another poor soul in need of his help.";   [The God-I'm-so-fucking-Canadian ending]
 
 
 Section 4 - The Hidden Lab & Dr Mouse
@@ -336,7 +335,7 @@ The description of Locked stairwell is "Off to one side are a pair of heavy, met
 
 East of Locked stairwell is Hidden Lab
 
-The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection.  The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites.  These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work..[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies.  The cot doesn't look like it's been used recently and the food supplies are in disarray.  The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras.  They have water and food dishes, as well as a small chemical toilet within reach of their tethers.  At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[at random] at the moment.";
+The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection.  The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites.  These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work..[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies.  The cot doesn't look like it's been used recently and the food supplies are in disarray.  The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras.  They have water and food dishes, as well as a small chemical toilet within reach of their tethers.  At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[at random].";
 
 
 [Message indicating progress]
@@ -363,7 +362,7 @@ The sarea of Finding a Way in is "Hospital";
 
 Instead of resolving a Finding a Way in:
 	if hospnav > 3 and hospstairs > 0:		[at least 4 waypoints and the stairs up]
-		say "          After taking many twists and turns through the hospital, you manage to find you way up several stories and over to the lit area.  There you pass by the operating theater and head down the hallway towards the door at the end.  It is partially open and light flows from it.  You approach cautiously, listening intently, but there is little sound coming from the room, labeled as [']Testing Labs['].";
+		say "     After taking many twists and turns through the hospital, you manage to find you way up several stories and over to the lit area.  There you pass by the operating theater and head down the hallway towards the door at the end.  It is partially open and light flows from it.  You approach cautiously, listening intently, but there is little sound coming from the room, labeled as [']Testing Labs['].";
 		say "[meetdrmouse]";
 		now the player is in Hidden Lab;
 		now locked stairwell is unlocked;
@@ -391,7 +390,7 @@ to say meetdrmouse:
 	say "     'I'm quite surprised you made it up here.  It's quite a mess downstairs and the creatures stop anyone from venturing in.  You should tell me what is happening out in the city?  I've not been able to leave here since the infection struck.  Far too dangerous for a little guy like me out there.  And so much to do here, studying the nanite infection.  It has such a capacity for healing.'  He starts to babble a little, perhaps from being isolated in here.";
 	wait for any key;
 	if hp of doctor matt is 100:
-		say "     'The cause of all this are nanites of some unknown origin.  I bet you didn't know that.  Nanites are microscopic machines.  These little buggers are about as big as a red blood cell and they are altering people's bodies according to whatever whimsy their programming is telling them to do at any given moment.  There are a variety of strains, as you have no doubt seen.  Most strains are in conflict with one another, though some appear to be able to live in symbiosis.";
+		say "     'The cause of all this are nanites of some unknown origin.  I bet you didn't know that.  Nanites are microscopic machines.  These little buggers are smaller than a red blood cell and they are altering people's bodies according to whatever whimsy their programming is telling them to do at any given moment.  There are a variety of strains, as you have no doubt seen.  Most strains are in conflict with one another, though some appear to be able to live in symbiosis.";
 		say "     Almost universally, the nanites alter their hosts form and push them with increased sexual growth and carnal desires, most likely to further spread that nanite strain.  There have also been a wide range of, for lack of a better term, evolutionary traits that the nanites introduce to increase their host's potential success in this regard.  Universally though, the nanites bring with them an increased rate of healing.";
 	otherwise:
 		say "     'The cause of all this are nanites of some unknown origin.  I bet you didn't know that.  Huh?  You did?  Most peculiar.  How did you come to discover this?  You don't look like a scientist.  Though, I guess I don't look much like one, despite my lab coat,' he titters a little, whiskers all atwitch.";
@@ -433,11 +432,14 @@ Instead of conversing the Doctor Mouse:
 			say "[hospquestpt3]";
 	otherwise if hospquest is 5:
 		say "[hospquestpt4]";
-	if hospquest is 6:
+	otherwise if hospquest is 6:
 		say "[hospquestpt5]";
-	if hospquest is 7:
-		say "     'I don't have anything more for you to assist me at the moment,' the white mouse replies to you inquiry.  'But once more is programmed, you should check back in.'  With that confusing and cryptic response, you decice to head off.'";
-
+	otherwise if hospquest is 7:
+		say "[hospquestpt6]";
+	otherwise if hospquest is 8:
+		say "[hospquestpt7]";
+	if hospquest is 9:
+		say "     'I don't have anything more for you to assist me at the moment,' the white mouse replies to you inquiry. 'But once more is programmed, you should check back in.' With that confusing and cryptic response, you decice to head off.'";
 
 Section 5 - Dr Mouse's Quests
 
@@ -448,8 +450,19 @@ Section 5 - Dr Mouse's Quests
 [	4 gave device		]
 [	5 wants Dog Milk		]
 [	6 given Dog Milk		]
-[	7 Dog Milk tests done	]
+[	7 wants tiger patch x3	]
+[	8 wants prehist + nerm	]
+[	9 returned batch		]
 
+hospquest is a number that varies.
+hospcountdown is a number that varies.
+nerminepackage is a number that varies.
+sabtoothed is a number that varies.
+triclamped is a number that varies.
+nerminepackagematt is a number that varies.
+sabtoothedmatt is a number that varies.
+triclampedmatt is a number that varies.
+mattcollection is a number that varies.
 
 instead of going to 2F Trevor Labs while hospquest is 2:		[Examining other labs]
 	now the player is in 2F Trevor Labs;
@@ -541,9 +554,234 @@ to say hospquestpt5:
 		say "     'I have been able to perform some research on the sample you brought back.  While some of the test results are inconclusive, I have been able to rule out several of my earlier hypotheses on its nature.  This knowledge will help me advance several of my other projects and better focus my research into ones which will yield results.  And I do believe I said I'd have a reward for you.'";
 		say "     'From my research into the factors activated in the collie's physiology by the nanites, I have been able to create a stamina booster, which will increase one's physical endurance.'  He smiles as he takes a syringe from a refridgerated storage case.  'As you are acting as my agent in the field, it is important that you be hardy enough to deal with the creatures out there.  And so, this is for you,' he says as he merrily injects you with it.";
 		increase stamina of player by 2;
-		say "     [bold type]Your stamina has been increased by 2.[roman type]";
+		say "     [bold type]Your stamina has been increased by 2.[roman type][line break]";
 		increase score by 10;
+		say "     'I do have another task for you, my helpful assistant,' the albino mouse continues.  'At the state fair across the city, there is a strange, rubber-like creature.  While I have obtained samples from the latex foxes and wolves running around, I wish to see how this feline's unusual body composition differs from theirs.  You should get three samples, as I know from experience working with the fox and wolf samples that it may require several to get any worthwhile data.  Being felines, these creatures seem able to entice the orderlies into becoming their mates and the vixens are not strong enough to deal with them on their own.  And when several vixens go together, these felines band together and repel them.  I'm hoping, as a lone individual, you will be successful where they have not.'";
 		now hospquest is 7;
+
+to say hospquestpt6:
+	let tigpatchfound be 0;
+	repeat with x running through invent of player:
+		if x is "Tiger patch", increase tigpatchfound by 1;
+	if tigpatchfound < 3:
+		say "     Please remember, I need you to obtain three samples, so I can be certain to have enough to obtain results.";
+	if tigpatchfound > 2:
+		delete Tiger patch;
+		delete Tiger patch;
+		delete Tiger patch;
+		say "     Good work!  I shall set to work on these right away.   And while I work on that, I do have another project for you.  I have a pair of situations where my orderlies have upset the locals too much to complete their task and I need someone independant of the hospital to go in and complete the job.";
+		say "     I have just obtained word that the museum contains a pair of prehistoric creatures.  Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes.  The reports from the hospital creatures are somewhat unspecific, but there appears to be a armoured, dinosaur-like creature and several smilodons.  I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter.  I need you to samples from both of these.";
+		say "     'The last thing I need for you is to perform a simple pick-up while you are out.  There is a jackal shopkeeper who has set herself up in the mall.  She has a package for me.  The rats who live there will not allow the hospital staff to approach, having been set off by the appearance of one of the jaguars when the order was first placed.";
+		now nerminepackage is 1;
+		now Dinosaur Nest is unresolved;
+		increase score by 25;
+		now hospquest is 8;
+
+to say hospquestpt7:
+	if triclamped is 0:
+		let tricllfound be 0;
+		repeat with x running through invent of player:
+			if x is "lava lamp", increase tricllfound by 1;
+		if tricllfound is 0:
+			say "     If you are not able to obtain a usable sample from this creature, be sure to go to its nest and search there.  There may be eggs or something else with enough nanites to act as a proper sample.  They were very clear that it was female.";
+		if tricllfound is 1:
+			delete lava lamp;
+			say "     The mouse dubiously looks at the lava lamp you[']ve pulled out, but goes to take it.  As you explain what you suspect it[']s been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands.  Only then does he handle it, setting it on the lab table.  'I... this is a rather ingenious way to obtain a sample.  I... uhh... commend you.  Please continue,' he says.";
+			now triclamped is 1;
+	if sabtoothed is 0:
+		let sabertoothfound be 0;
+		repeat with x running through invent of player:
+			if x is "Chipped tooth", increase sabertoothfound by 1;
+		if sabertoothfound is 0:
+			say "     There appear to be several of these smilodons in the museum.  Take care, smilodons, popularly known as sabretooth tigers, were the apex predators in their time and are larger than any current feline.  Any creatures based on them with nanite enhancement would be... quite powerful.";
+		if sabertoothfound > 0:
+			delete Chipped tooth;
+			say "     The mouse looks at the large fang with a mix of awe and delight.  He takes it carefully from you and places on a sample tray.  Another successful mission completed.";
+			now sabtoothed is 1;
+	if nerminepackage < 5:
+		let nermpack be 0;
+		repeat with x running through invent of player:
+			if x is "package", increase nermpack by 1;
+		if nermpack is 0:
+			say "     The shop keeper at the mall has a collection of... ahh... [']occult and mystical items[']', he says with a bit of disdain.  'But she does have some historically significant items and I wanted to obtain something from her.  She may want something of similar value in return,' he adds.";
+		if nermpack is 1:
+			say "     The mouse takes the package from you with a smile and puts it on his sample table quietly.";
+			delete package;
+			now nerminepackage is 5;
+	if nerminepackage is 5 and sabtoothed is 1 and triclamped is 1:
+		say "     'Excellent work, my assistant.  Now I have much to do.  I hope you will understand if I ask you to leave me to my investigations for a time.  But as a reward, you may have this for the moment,' the small mouse says as he passes you a medkit.";
+		say "     'For the reward to come, I would like to make an analysis of your nanites to better help you out there.'  You start to mumble an objection, but he brushes it off.  'Now, now.  You aren't afraid of a little needle, are you?  I am a doctor, after all.'  And then, while you start to consider the matter further, he pricks you with the needle and withdraws some blood.  'There.  All done.  Now, that wasn't so bad, was it?' he says, like a doctor speaking to a young patient.";
+		extend game by 12;
+		increase score by 40;
+		say "[line break]";
+		now hospquest is 9;
+
+
+Section 6 - Museum Quests - Triceratops
+
+Instead of conversing the Valerie while hospquest is 8 and valhosp is 0 and valtalk > 0:
+	now valhosp is 0;
+	say "     The jaguars who came by earlier?  How'd you hear about that?  Did the satyrs tell you?  They really got them worked up.  Broke up one of their drinking parties, which is what they're doing all the time.  Well, when they're not playing with the nymphs.  I'm not really sure what they intended to do, but I wasn't going to let them do it in my museum.  They're not very bright, so I posed them a couple of conundrums.  While they were trying to figure them out, I got some of the abstracts from the modern art wing to deal with them.  It hurts my head just to look at them, but it had to be done.  Drove them off and I won't let them back in now.";
+	say "     'Anything else you needed to know?' the sphinx asks with an inscrutible grin.";
+	if sabtoothed is 0:
+		say "     There are several sabretooth cats roaming around the museum.  Don't mess with them if you don't have to.  They're pretty tough.  Not too bright, unfortunately.  They're nice and hung, but I want someone clever as well.";
+	if triclamped is 0:
+		say "     The triceratops woman is dancing around the halls to the music in her head all the time, but she doesn't wander too far from her nest in the dinosaur wing.  She's got lots of stuff in there.  She raided several of the modern history displays and probably a few stores in the neighbourhood as well for that stuff.  She's very possessive of her collection.  Having it around keeps her happy, so I don't bother the silly girl about it.  If you want to take any of it, she'll show you her moves.";
+	if nerminepackage is 2:
+		say "     The Viking great longboat?  It's a brand new exhibit.  One of the museum's archeologists found it a year ago and it's finally ready and on display.  It dates back about a thousand years and is the only [italic type]drekar[roman type] ever found.  They were the largest of the Viking ships and feared by all.  I can certainly understand why you'd want to see it while you're here.  It's in the Medieval History wing.";
+	now valhosp is 1;
+
+Dinosaur Nest is a situation.
+The sarea of Dinosaur Nest is "Museum";
+Dinosaur Nest is resolved.		[unable to do this until activated]
+nesteddino is a number that varies.
+dinonest is a number that varies.
+dnfightresult is a number that varies.
+valhosp is a number that varies.
+
+Instead of resolving a Dinosaur Nest:
+	if nesteddino is 0:
+		say "     Your search of the museum brings you to the dinosaur wing.  There, the great thunderlizards are on display.  You try to move quietly between the displays, trying to fulfill, perhaps foolishly, Dr Mouse's request for dinosaur hunting.  You move around, eventually find a large pile of junk in one corner that may be what you're looking for.  A mound of debris, tacky cushions, kitchy knick-knacks and old clothes have been build into a large nest.  You head over to it and start poking through it in the hopes of finding something.";
+		let bonus be ( perception of player minus 10 ) divided by 2;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		if bonus + dice is greater than 11:
+			say "     As you shift aside some leisure suits and send a pile of mood rings scattering, you hear the steps of a large someone trying to move up on you quietly.  You jump aside just in time to avoid a swing from the angry triceratops woman.  'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
+		otherwise:
+			decrease hp of player by 15;
+			say "     As you shift aside some leisure suits and send a pile of mood rings scattering, you are struck firmly from behind and sent tumbling over into bean bag chair, taking 15 dmg!  As you pull yourself up, you find yourself looking at a large, angry triceratops woman.  'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
+	otherwise:
+		say "     You make your way back to the dinosaur's nest to try and investigate it again.  Being more watchful, you notice her coming up as you move aside a box of Abba 8-tracks to find some yo-yos.  You turn away from her nest and prepare to fight the disco dino again.  'Lookin['] for another dance lesson, honey?' she asks.";
+	now dinonest is 1;
+	now dnfightresult is 0;		[default 0 = flee]
+	challenge "Triceratops";
+	now dinonest is 0;
+	if dnfightresult is 0:		[flee]
+		say "     Unable to deal with her at this time, you have fled the scene and will have to come back again later to search.";
+	if dnfightresult is 2:		[lose]
+		say "     Having bested you, you can only wait and recover before trying to search her nest again later.";
+	if dnfightresult is 1:		[win]
+		say "     Having bested the triceratops woman, you can finish searching her nest in the hopes of finding something to satisfy the mouse doctor.  You dig around in the her collection of old stuff, but don't see anything for some time.  Eventually, you instead smell something and soon track the scent to a lava lamp.  Unplugged, the glass lamp is off its stand and is coated in a wet sheen of fluids.  Guessing the strange creature has been using it for some improvised fun, you wrap it in a paisley shirt and pack it away.";
+		say "     Lava lamp collected.";
+		add "lava lamp" to invent of player;
+		increase score by 10;
+		now Dinosaur Nest is resolved;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"lava lamp"	"     Inside the paisley shirt, you see a rather sticky lava lamp."	3	lava lamp
+
+lava lamp is a grab object.
+it is part of the player.
+It is not temporary.
+lavalamplick is a number that varies.
+
+instead of using lava lamp:
+	if lavalamplick is 0:
+		say "     You look at the improvised lava lamp dildo.  It smells strongly of the triceratops woman's arousing scent.  You find yourself tempted to lick it.  Do you follow your urge? (Y/N)";
+		if the player consents:
+			say "[line break]     Following the strange compulsion, you lick the lava lamp a few times, tasting the saurian's female juices on it, finding them quite arousing.  For a moment there, it's almost as if you can hear music.";
+			now lavalamplick is 1;
+			increase libido of player by 10;
+			if libido of player > 100:
+				now libido of player is 100;
+			decrease humanity of player by 5;
+			infect "Triceratops";
+		otherwise:
+			say "[line break]     Probably for the best that you don't do anything so foolish.  You'd best be careful if you're starting to get ideas like that.";
+	otherwise:
+		say "     You look at the improvised lava lamp dildo.  It smells strongly of the triceratops woman's arousing scent.  You find yourself considering licking it again, but bundle it back up.  If you lick it further, you may end up cleaning it off and Dr Mouse will be out of luck.";
+
+
+Section 7 - Museum Quests - Nermine
+
+Instead of conversing the Nermine while nerminepackage is 1 and Nerminetalk > 0:
+	say "     'You are here helping the mousey doctor at the hospital?  Nermine will play along with game,' the jackal woman says with a playful tone.  'I have been awaiting to hear back from the mousey customer after his kitties upset the rats.  Not thinking they would come back.  I have the item he wanted, but am wanting something in return.'";
+	say "     'At the museum, there is a [italic type]drekar[roman type].  Is a Viking longboat.  Only one ever found.  It is very big; too much to take, would not fit in store.  But masthead has gemstones and these have seen much of the world in their time.  Valuable to Nermine.  Get them for me and I will trade them for the pelt, little helper.'";
+	now nerminepackage is 2;
+	now Viking Longboat is unresolved;
+
+Instead of conversing the Rod while nerminepackage > 0 and rodhosp is 0:
+	say "     'Those big, spotted hairballs that rolled in here the other day?  That was a bad scene, dude.  They started to get fresh with some of the girls in the atrium and drag them off.  Well, we wouldn't put up with that.  Never try to force a mall rat from their mall, man.  We don't want none of them goons and their friends in here again.'";
+	now rodhosp is 1;
+
+Instead of conversing the Ronda while nerminepackage > 0 and rondahosp is 0:
+	say "     'You asking about those macho hairball rejects from Shock Therapy?  Suzie and Anna were talking to them after they rolled in here like they owned the place.  Just a little playful flirting to tease their boys.  No harm in it.  But the kitties started getting fresh.  They offered them a ride in their swanky helicopter, which was tempting, but that'd mean leaving the mall, so the girls said [']No way['].'";
+	say "     'Well, those kitty-litter heads didn't like that and started to get pushy about it.  By that point, their boyfriends had had enough and rallied the troops to deal with them.  That slutty vixen came running out of the store and the dude on her radio was squawking to know what was happening.  We kicked the lot of them out.  They came poking back once or twice, but they're not allowed to shop here anymore.  We told Bruno, he's security, on them and that crazy wolverine and a few of the boys sent them packing.'";
+	now rondahosp is 1;
+
+Viking Longboat is a situation.
+The sarea of Viking Longboat is "Museum";
+Viking Longboat is resolved.		[unable to do this until activated]
+lbfight is a number that varies.
+longboatfind is a number that varies.
+rondahosp is a number that varies.
+rodhosp is a number that varies.
+
+Instead of resolving a Viking Longboat:
+	if longboatfind is 0:
+		say "     Travelling through the museum, you come to the exhibits dealing with the Middle Ages in Europe and its centerpiece, the Viking longboat.  It is a huge ship with a carven dragon at its prow and wooden shields and spears along each side.  It is on display in the center of the room, taking up most of the space in the large hall, with a velvet rope barrier around it.  You are about to hop the barrier when you realize that you need to find a way to scale the ship and get aboard.";
+		say "     Looking around, you spot a tall ladder off to the side where finishing touches to this wing's new display were being made.  Grabbing it, you bring it over to the ship with greedy glee in your eyes.  You hop the red rope and start towards the ship, only to be halted by a loud call of 'Stop right there!'  You freeze and turn, finding yourself being approached by a big, hulking brute of fur and menace wearing a security guard's uniform.  You drop the ladder and prepare to defend yourself.";
+		now longboatfind is 1;
+	otherwise:
+		say "     You make your way back to the Medieval History wing of the museum and approach the longboat again.  The moment you put one foot over the rope barrier, the security guard is growling and charging at you with menace in his eyes.";
+	now lbfight is 1;
+	now wolvfightresult is 0;		[default 0 = flee]
+	challenge "Wolverine Guard";
+	now lbfight is 0;
+	if wolvfightresult is 0:		[flee]
+		say "     Unable to deal with the maddened wolverine, you have fled the scene and will have to come back again later to get the gemstones.";
+	if wolvfightresult is 2:		[lose]
+		say "     Having been bested, you can only stagger off and recover before trying to get on the boat again later.";
+	if wolvfightresult is 1:		[win]
+		say "     Having bested the wolverine guard, you leave it passed out and quickly put the ladder alongside the huge ship.  You climb up and head to the masthead across the old, creaking ship.  The wood is incredibly old and you grit your teeth with every soft step you make, worried you'll break through the deck and fall.";
+		say "     Reaching the bow of the ship, you are glad to find handholds in it, perhaps for a sailor to act as lookout.  It seems sturdier as well, thankfully.  You climb up carefully and manage to eventually pry out the green gems from the wooden dragon's eyes.  You climb back down and step back onto the deck just as the wooden masthead groans loudly and breaks from the ship.  The deck starts to crumble away as well even as you try to run for the ladder.";
+		let bonus be ( dexterity of player minus 10 ) divided by 2;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		if bonus + dice is greater than 18:
+			say "     Nimbly dashing across the collapsing ship, you manage to make it to the ladder and slide down it, barely touching the rungs at all.  You drop the last five feet onto all fours as more ancient lumber rains down and the ladder sways.  You scramble back quickly away from the devastated relic until the dust settles.  You pull out the two green gems from your pack and look at them before tucking them away again.  You look over the heap and decide to grab a souvenir for yourself, swiping one of the spears from the ruined display to add to your arsenal.";
+			say "     Spear added to inventory.  Stabby-stabby!";
+			add "spear" to the invent of player;
+			increase score by 20;
+		otherwise:
+			say "     You try to make it back to the ladder, but part of the floor gives out beneath you.  You fall through the deck, crashing through the bottom of the ship and falling to the ground.  Terrified of getting buried under the rain of ancient lumber that continues, you scramble away as fast as you can manage.  You fall panting in a heap, entangled by the velvet ropes as the last of it comes crashing down with a cloud of dust.  You get up unsteadily and pull out the green gems, hoping they're worth the many aches and bruises you now have.  (20 Dmg taken)";
+			decrease hp of player by 20;
+			increase score by 10;
+		now nerminepackage is 3;
+		now Viking Longboat is resolved;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"spear"	"A Viking spear retrieved from the museum.  It is in very good condition for its age."	4	spear
+
+spear is an armament. It is part of the player. It has a weapon "[one of]your spear[or]the Viking spear[at random]". The weapon damage of spear is 8. The weapon type of spear is "Melee". It is not temporary.
+
+
+Instead of conversing the Nermine while nerminepackage is 3:
+	add "package" to invent of player;
+	say "     'Have you been finding the dragon's eyes for Nermine?' she asks.  'Wonderful.  Most beautiful,' she says as she holds them up to the light and gazes through them.  'Even older than I thought, long before put on that ship.  Long history.  Nermine is very pleased to have these.  So much so I will give you some advice.'";
+	say "     'White mousey doctor is wanting something from Nermine's shop.  People who want things from my store often get exactly what they were looking for.  Be careful with mousey doctor, not get hurt,' the jackal woman says.  'The item in the box is quite old, much of its strength has faded, but it still came from a powerful creature long ago.'";
+	say "     The package for Dr Mouse has been obtained.";
+	let spearfound be 0;
+	repeat with x running through invent of player:
+		if x is "spear", increase spearfound by 1;
+	if spearfound is 1:
+		say "     'And you appear to be most lucky, little helper,' she adds, taking note of the spear you have.  'That is spear of great Viking chief who commanded the boat.  A rare fine, such a thing,' she says with a little greed in her eye, as if trying to come up with a suitable trade to tempt it away from you.";
+	increase score by 10;
+	now nerminepackage is 4;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"package"	"The sealed package for Doctor Mouse from Nermine's shop.  There are some Greek letters scrawled on one side, but you are unable read it."	5	package
+
+package is a grab object.
+it is part of the player.
+It is not temporary.
+
+instead of using package:
+	say "     You ponder the old box, string-tied box in your hands, wondering what the doctor's receiving.";
+
 
 
 [ Edit this to have the correct Name as well]
