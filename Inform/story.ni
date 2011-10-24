@@ -2142,10 +2142,8 @@ To fight:
 		if lev entry is less than level of player and hardmode is true:
 			let debit be ( level of player ) - lev entry;
 			increase lev entry by debit;
-			increase str entry by debit;
-			increase dex entry by debit;
-			increase hp entry by debit * 5;
-			increase wdam entry by debit * 2;
+			increase hp entry by debit * 2;
+			increase wdam entry by debit ;
 		say "You run into a [name entry]. [desc entry].";
 		now lost is 0;
 		if combat abort is 1:
