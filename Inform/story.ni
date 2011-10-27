@@ -879,6 +879,11 @@ carry out hunting:
 					add x to q;
 					add x to q;
 					add x to q;
+					add x to q;
+					add x to q;
+					add x to q;
+					add x to q;
+					add x to q;
 	if the number of entries in q is not 0 and found is 1:
 		sort Q in random order;
 		repeat with Z running through q:

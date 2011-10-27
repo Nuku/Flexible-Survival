@@ -105,7 +105,7 @@ instead of addfeating the basic feats:
 		addfeat "Natural Armaments" with "You gain additional power based on the mutation of your body, borrowing the natural weapons of your infection.";
 		addfeat "Black Belt" with "Your martial artistry is amazing. Your damage increases furher while unarmed, and you have a small(10%) chance of avoiding hits that would otherwise have landed.";
 	if "Expert Hunter" is listed in feats of player:
-		addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature. Your proficiency doubles from 5X to 10X.";
+		addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature. Your proficiency doubles from 5X to 15X.";
 	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";
 	if strength of player is greater than 14:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";
