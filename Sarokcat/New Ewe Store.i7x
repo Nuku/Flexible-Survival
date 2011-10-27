@@ -13,7 +13,7 @@ Lastramfuck is a number that varies. Lastramfuck is usually 250.
 Lastewefuck is a number that varies. Lastewefuck is usually 250.
 ramfucked is a number that varies. Ramfucked is usually 0.
 ewefucked is a number that varies. ewefucked is usually 0.
-
+marytalked is a number that varies.
 
 
 Instead of fucking the Leon:
@@ -112,16 +112,16 @@ Instead of Resolving a New Ewe Store:
 		otherwise:
 			say "Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You Explain to the hopeful faces that you haven't yet seen their missing flock member, and watch the Sheep's faces fall as they look at you reproachfully. Feeling vaugely guilty you let yourself back out.";
 	If nes is 2:
-		say "Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You explain to the hopeful faces your progress so far on finding their missing flock member, and the sheeplike faces of the flock tighten with worry as they begin to bleat  in distress when they learn of their lost lambs predicament. Leon seems to be rather earnest as he asks for your help in rescuing their trapped lamb and returning her to the flock, unable to resist such a desperate plea, you nod and promise to help as you slip back out the door.";
+		say "Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You explain to the hopeful faces your progress so far on finding their missing flock member, and the sheeplike faces of the flock tighten with worry as they begin to bleat  in distress when they learn of their lost lamb's predicament. Leon seems to be rather earnest as he asks for your help in rescuing their trapped lamb from underground and returning her to the flock, unable to resist such a desperate plea, you nod and promise to help as you slip back out the door.";
 		stop the action;		
 	if nes is 3:
 		say "As you travel the deserted streets you notice that you are near the Grocery store again, you find your thoughts drifting to Mary and wondering if she made it home safely.  Deciding it cant hurt to stop and check you head that way and are quickly at the store entrance, pushing the door open you are greeted warmly by the small group of sheep inside. Most of them gather around you smiling, as Leon pushes his way to the front of the group to address you.";
-		say " 'We're glad to see you back again safely,' The big ram says with smile on his muzzle. 'Mary told us all about how you helped her out, and we are all very grateful to you.' He pauses for a second as all the other sheep nod in agreement.  'We wish we could find some way to repay you properly for all your help, but your definitely welcome to Rest in our store anytime from now on!' he continues as some of the group clap for you.";
+		say "'We're glad to see you back again safely,' The big ram says with smile on his muzzle. 'Mary told us all about how you helped her out, and we are all very grateful to you.' He pauses for a second as all the other sheep nod in agreement.  'We wish we could find some way to repay you properly for all your help, but your definitely welcome to Rest in our store anytime from now on!' he continues as some of the group clap for you.";
 		wait for any key;
 		say "'As a matter of fact if you want a safe place to stay I'd be more then happy for you to join our flock here if you want. We have a pretty good spot picked out here and some decent supplies, and its not without some side benefits too,' Leon says with a bit of a leer. 'Just talk to me, whenever you feel like it'";
-		say " 'Of course Mary over there hasn't talked about much else since you rescued her, i think she might have a bit of a crush on you,' Leon says as he gestures to where the Ewe you saved earlier is peeking around a corner at you. 'If you'd rather join her instead it wouldn't be a problem either, just go Talk to Mary, instead.'";
+		say " 'Of course, Mary over there hasn't talked about much else since you rescued her. I think she might have a bit of a crush on you,' Leon says as he gestures to where the ewe whom you saved earlier is peeking around a corner at you. 'If you'd rather join her instead, it wouldn't be a problem either, just go talk to Mary, instead.'";
 		wait for any key;
-		say "'Either way,' He says as he finishes up, 'Thanks for helping us out and we hope you join us again sometime soon.'";
+		say "'Either way,' he says as he finishes up, 'thanks for helping us out and we hope you join us again sometime soon.'";
 		now New Ewe Store is resolved;
 		now New Ewe Storeroom is known;
 		move player to New Ewe Storeroom;
@@ -154,7 +154,7 @@ Instead of resolving Littlelostlamb:
 			say "you hunt through the dark tunnels for what seems like hours, the tunnels twisting and turning until you have lost all sense of direction, eventually you find yourself back where you entered the tunnel,  Shuddering you quickly exit the subway tunnels for now... you can always come back later... ";
 			stop the action;
 	otherwise:
-		say "Traveling through the dark sewers, and maintainence passageways underneath the mall, you find an opening leading out into what appear to be the cities subway tunnels. Looking through the passageway, you poke around on the other side of the opening for a minute. You find yourself somewhat worried by the signs  that there are a large number of creatures still using the subway actively, and given how easy it would be to get lost in the maze of the subway tunnels, you decide to return to the somewhat more familiar area underneath the mall.";
+		say "Traveling through the dark sewers, and maintainence passageways underneath the mall, you find an opening leading out into what appear to be the cities subway tunnels. Looking through the passageway, you poke around on the other side of the opening for a minute. You find yourself somewhat worried by the signs that there are a large number of creatures still using the subway actively, and given how easy it would be to get lost in the maze of the subway tunnels, you decide to return to the somewhat more familiar area underneath the mall.";
 
 
 
@@ -177,7 +177,7 @@ The conversation of Leon is { "[leonchat]" };
 
 To say leonchat:
 	if ewefucked > 0:
-		say "Hey there, good to see you,' Leon says, 'But I'm not the one you should be talking to, you wouldn't want your little lamb over there to get lonely would you? ";
+		say "Hey there, good to see you,' Leon says, 'But I'm not the one you should be talking to. You wouldn't want your little lamb over there to get lonely, would you? ";
 	otherwise:
 		if ramfucked > 0:
 			say  "[one of]Welcome back to our store![or]'Ah you came back to the flock like a good little ewe.'[or]'Be careful out there, i wouldn't want to see one of my flock get hurt'[or]'Are you sure all you want to do is talk?'[or]'IF you don't want to go back out into the city you can stay here anytime'[or] 'I heard there was a big wolf out there, you be careful'[or] 'How is it out there today?'[or]'Almost shearing time again.'[or]Leon bleats at you absentmindedly, before blushing when he realizes what happened.[or] 'If you need your ram to 'take care' of you, just let me know.'[or]'Want to head back to the break(ing) room with me?'[or]'I Wonder when rescue will arrive.'[at random] ";
@@ -209,13 +209,18 @@ To say leonchat:
 The conversation of Mary is { "[marychat]" };
 
 To say marychat:
+	if marytalked is 0:
+		say "'Hi there again! I want to thank you again for all your help.  I can't really do much to repay you except by giving you some tips for finding stuff out in the city.'  The little ewe speaks softly, nervous next to her hero.  'It's mostly a matter of keeping your eyes open and knowing where to look,' she says, continuing on to give you some anecdotes from her searching, though you do pick up a few ideas which may be helpful.  As she starts to go on about nimbly climbing some rubble, stops herself.  'I'm sorry.  I was rambling a little.'";
+		say "You have gained the [']Three Bags Full['] feat, which confers +1 to all scavenging rolls and checks.";
+		add "Three Bags Full" to feats of the player;
+		now marytalked is 1;
 	if ramfucked > 0:
-		say "Mary smiles at you happily as you greet her 'It's always good to see you here, but i think the Flock leader will be even happier to see you if you know what i mean.' She says as she gives you a nudge in Leon's direction";
+		say "Mary smiles at you happily as you greet her. 'It's always good to see you here, but i think the flock leader will be even happier to see you, if you know what I mean,' she says as she gives you a nudge in Leon's direction.";
 	otherwise:
 		if ewefucked > 0:
 			say  "[One of]Your little ewe only responds by throwing her arms around you in a big woolen hug.[or]'Be careful near the capitol building, i think something is going on over there.'[or] 'Have you seen any wolves out there?'[or]'Be careful if you go back down into the sewers, i heard a lot of strange things moving around down there'[or]'I mostly stay in the downtown area when i go scavenging, maybe i'll see you there sometime.'[or] 'I heard some strange howling and baying noises near the beach at night the other day, if the church is still there someone might have posted a warning.'[or]'Being a sheep isn't bad, especially if i get to  be your sheep.'[or] 'Don't tell the others, but sometimes i trade some of my food or water at the mall, the rats there are great scavengers.'[or]'I can't wait for you to rub your [skin of player] body over my fleece again.'[at random]";
 		otherwise:
-			Say "'Hi there again, I'm glad you came over to talk to me, I was kind of hoping I would get a chance to thank you properly' She says while blushing, 'I really thought we worked well together out there, and you were so brave and strong keeping me safe. I've been thinking, and i'd really like it if we could be part of the same flock, then we could be together all the time, what do you say?'";
+			Say "'But I'm glad you came over to talk to me. I was kind of hoping I would get a chance to thank you properly,' she says while blushing. 'I really thought we worked well together out there, and you were so brave and strong keeping me safe. I've been thinking, and I'd really like it if we could be part of the same flock, then we could be together all the time. What do you say?'";
 			if player consents:
 				say "'Really? You mean it?  That's wonderful!' she says with a smile, before grabbing the sides of your face and giving you another big kiss.  As she breaks the kiss you stare at her slightly bemused as she blushes, realizing every eye in the store is on the two of you. Glancing around at all the staring eyes she quickly grabs your arm and nearly drags your unprotesting body outside, slamming the door behind you. Pausing for a moment in the street, she quickly makes her way to one of the abandoned buildings next to the store, motioning you to follow as she quickly unlocks the door and slips inside.";
 				wait for any key;
