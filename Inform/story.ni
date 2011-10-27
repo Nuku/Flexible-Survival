@@ -106,7 +106,7 @@ A armament has a number called Weapon Damage.
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious. 
-A grab object  has a text called strain.
+A grab object has a text called strain.
 A grab object has a text called trade.
 A grab object has a text called purified.
 A grab object has a text called usedesc.
@@ -124,6 +124,7 @@ Child can be born. Child is not born.
 Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
+gascloud is a number that varies.
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -784,7 +785,6 @@ Include Naughty Nurse by Stripes.
 Include Triceratops For Fs by Stripes.
 
 
-
 understand the command "feed" as something new.
 
 
@@ -826,6 +826,14 @@ when play begins:
 	add { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "mothgirl" } to infections of hermaphrodite;
 	add { "Drone Wasp", "Goo Girl", "Female Husky", "black equinoid", "lizard girl", "felinoid", "skunk", "sea otter", "Tentacle Horror", "Feline", "Bear", "female skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "Pit bull", "feral sea dragoness", "Bovine" } to infections of girl;
 
+[corollary]
+marker is a kind of thing.
+A marker has a list of text called infections.
+Tailweapon is a marker.
+when play begins:
+	add { "red kangaroo", "Skunk", "Skunk Girl", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Slutty Dragoness", "Horny Dragon", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "Skunk Taur", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness" } to infections of Tailweapon;
+
+
 Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
@@ -864,19 +872,24 @@ carry out hunting:
 					if lev entry is greater than level of player plus levelwindow, next;
 				otherwise:
 					next;
-				add x to q;
+				if "Expert Hunter" is listed in feats of player and a random chance of 1 in 3 succeeds:
+					if name entry matches the text topic understood, case insensitively:
+						now x is x;
+				otherwise:
+					next;
+					add x to q;
 			if name entry matches the text topic understood, case insensitively:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
 				add x to q;
 				add x to q;
+				add x to q;
 				if "Expert Hunter" is listed in feats of player:
 					add x to q;
 					add x to q;
+					add x to q;
+					add x to q;
 				if "Master Baiter" is listed in feats of player:
-					add x to q;
-					add x to q;
-					add x to q;
 					add x to q;
 					add x to q;
 					add x to q;
@@ -906,13 +919,16 @@ carry out hunting:
 				now found is 1;
 				let dice be a random number from 1 to 20;
 				let the bonus be (( the perception of the player minus 10 ) divided by 2);
+				if "Curious" is listed in feats of player, increase bonus by 2;
 				increase dice by bonus;
 				if dice is greater than 15:
 					say "You manage to find your way to [z]!";
 					move the player to z;
 					now z is known;
 					now dice is a random number from 1 to 20;
-					if dice is greater than 14:
+					if "Curious" is listed in feats of player and dice is greater than 12:
+						Fight;
+					otherwise if dice is greater than 14:
 						Fight;
 				otherwise:
 					say "Despite your searches, you fail to find it.";
@@ -926,21 +942,26 @@ carry out hunting:
 					now found is 1;
 					let dice be a random number from 1 to 20;
 					let the bonus be (( the perception of the player minus 10 ) divided by 2);
+					if "Curious" is listed in feats of player, increase bonus by 2;
 					increase dice by bonus;
 					if dice is greater than 15:
 						say "You manage to find your way to [z]!";
 						try resolving z;
 						now dice is a random number from 1 to 20;
-						if dice is greater than 14:
+						if "Curious" is listed in feats of player and dice is greater than 12:
+							Fight;
+						otherwise if dice is greater than 14:
 							Fight;
 					otherwise:
 						say "Despite your searches, you fail to find it.";
 					break;
-			if found is 0:
-				say "[bold type]You don't think what you[apostrophe]re looking for can be found here...[roman type]";
-				let dice be a random number from 1 to 20;
-				if dice is greater than 14:
-					Fight;
+		if found is 0:
+			say "[bold type]You don't think what you[apostrophe]re looking for can be found here...[roman type]";
+			let dice be a random number from 1 to 20;
+			if "Curious" is listed in feats of player and dice is greater than 12:
+				Fight;
+			otherwise if dice is greater than 14:
+				Fight;
 		follow the turnpass rule;
 
 to ban menu:
@@ -1121,6 +1142,8 @@ definition: A person is overburdened:
 
 To Birth:
 	let infection be "";
+	if "Maternal" is listed in feats of player:
+		increase morale of player by 3;
 	if a random number from 1 to 100 is greater than 50 and "They Have Your Eyes" is not listed in feats of player:
 		now infection is skinname of child;
 	otherwise:
@@ -1145,7 +1168,8 @@ To Birth:
 	add facename of child to childrenfaces;
 	add bodyname of child to childrenbodies;
 	add skinname of child to childrenskins;
-	increase perception of player by 2;
+	increase score by 5;		[15 base +5/child]
+	increase perception of player by 1;
 	now the child is not born;
 	now the gestation of child is 0;
 
@@ -1358,25 +1382,48 @@ To process (X - a grab object):
 	otherwise:
 		say "[usedesc of x]";
 	if x is food:
-		if hunger of player is greater than 11:
-			increase score by 4;
-		decrease hunger of player by 12;
-		if hunger of player is less than 0, now hunger of player is 0;
-		say "You feel less hungry after wolfing down some food, yum!";
-		if morale of player is less than 0:
-			increase morale of player by 30;
-			if morale of player is greater than 0, now morale of player is 0;
-			say "You feel better having eaten.";
+		if "Junk Food Junky" is listed in feats of player:
+			if hunger of player is greater than 8:
+				increase score by 2;
+			decrease hunger of player by 9;
+			if hunger of player is less than 0, now hunger of player is 0;
+			say "The eat the food, feeling a little disappointed it's not junk food!";
+			if morale of player is less than 0:
+				increase morale of player by 10;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "You feel a little better having eaten some boring food.";
+		otherwise:
+			if hunger of player is greater than 11:
+				increase score by 4;
+			decrease hunger of player by 12;
+			if hunger of player is less than 0, now hunger of player is 0;
+			say "You feel less hungry after wolfing down some food, yum!";
+			if morale of player is less than 0:
+				increase morale of player by 30;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "You feel better having eaten.";
 	if x is chips:
-		if hunger of player is greater than 5:
-			increase score by 2;
-		decrease hunger of player by 6;
-		if hunger of player is less than 0, now hunger of player is 0;
-		say "You feel less hungry after wolfing down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random], yum!";
-		if morale of player is less than 0:
-			increase morale of player by 15;
-			if morale of player is greater than 0, now morale of player is 0;
-			say "You feel better having eaten.";
+		if "Junk Food Junky" is listed in feats of player:
+			if hunger of player is greater than 14:
+				increase score by 5;
+			decrease hunger of player by 15;
+			if hunger of player is less than 0, now hunger of player is 0;
+			say "Snack time!  You wolf down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random] with delight.  YUM!";
+			if morale of player is less than 0:
+				increase morale of player by 36;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "You feel much better after having a snack.";
+			increase morale of player by 1;
+		otherwise:
+			if hunger of player is greater than 5:
+				increase score by 2;
+			decrease hunger of player by 6;
+			if hunger of player is less than 0, now hunger of player is 0;
+			say "You feel less hungry after wolfing down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random], yum!";
+			if morale of player is less than 0:
+				increase morale of player by 15;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "You feel better having eaten.";
 	if x is glob of goo:
 		if hunger of player is greater than 5:
 			increase score by 2;
@@ -1388,44 +1435,84 @@ To process (X - a grab object):
 			if morale of player is greater than 0, now morale of player is 0;
 			say "You feel better having eaten.";
 	if x is water bottle:
-		if thirst of player is greater than 0:
-			increase score by thirst of player divided by 3;
-			if thirst of player is greater than 25:
-				decrease score by ( thirst of player minus 25 ) divided by 3;
-		decrease thirst of player by 25;
-		if thirst of player is less than 0, now thirst of player is 0;
-		say "You feel less thirsty after guzzling some water, yum!";
-		if morale of player is less than 0:
-			increase morale of player by 62;
-			if morale of player is greater than 0, now morale of player is 0;
-			say "After drinking something, you feel better.";
+		if "Junk Food Junky" is listed in feats of player:
+			if thirst of player is greater than 0:
+				increase score by thirst of player divided by 3;
+				if thirst of player is greater than 15:
+					decrease score by ( thirst of player minus 15 ) divided by 3;
+			decrease thirst of player by 15;
+			if thirst of player is less than 0, now thirst of player is 0;
+			say "You feel a little less thirty after drinking some bland water!";
+			if morale of player is less than 0:
+				increase morale of player by 20;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "After drinking something, you feel a little better.";
+		otherwise:
+			if thirst of player is greater than 0:
+				increase score by thirst of player divided by 3;
+				if thirst of player is greater than 25:
+					decrease score by ( thirst of player minus 25 ) divided by 3;
+			decrease thirst of player by 25;
+			if thirst of player is less than 0, now thirst of player is 0;
+			say "You feel less thirsty after guzzling some water, yum!";
+			if morale of player is less than 0:
+				increase morale of player by 62;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "After drinking something, you feel better.";
 	if x is dirty water:
-		if thirst of player is greater than 0:
-			say "You feel less thirsty after guzzling some dirty water, yum!";
-			increase score by thirst of player divided by 4;
-			if thirst of player is greater than 25:
-				decrease score by ( thirst of player minus 25 ) divided by 4;
-		decrease thirst of player by 25;
-		if thirst of player is less than 0, now thirst of player is 0;
-		if morale of player is less than 0:
-			increase morale of player by 62;
-			if morale of player is greater than 0, now morale of player is 0;
-			say "After drinking something, you feel better.";
+		if "Junk Food Junky" is listed in feats of player:
+			if thirst of player is greater than 0:
+				increase score by thirst of player divided by 3;
+				if thirst of player is greater than 15:
+					decrease score by ( thirst of player minus 15 ) divided by 3;
+			decrease thirst of player by 15;
+			if thirst of player is less than 0, now thirst of player is 0;
+			say "You feel a little less thirty after drinking some bland water!";
+			if morale of player is less than 0:
+				increase morale of player by 20;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "After drinking something, you feel a little better.";
+		otherwise:
+			if thirst of player is greater than 0:
+				increase score by thirst of player divided by 3;
+				if thirst of player is greater than 25:
+					decrease score by ( thirst of player minus 25 ) divided by 3;
+			decrease thirst of player by 25;
+			if thirst of player is less than 0, now thirst of player is 0;
+			say "You feel less thirsty after guzzling some water, yum!";
+			if morale of player is less than 0:
+				increase morale of player by 62;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "After drinking something, you feel better.";
 		sort table of random critters in random order;
 		now monster is 1;
 		if "Iron Stomach" is not listed in feats of player, infect;
 	if x is soda:
-		if thirst of player is greater than 0:
-			increase score by thirst of player divided by 3;
-			if thirst of player is greater than 12:
-				decrease score by ( thirst of player minus 12 ) divided by 3;
-		decrease thirst of player by 12;
-		if thirst of player is less than 0, now thirst of player is 0;
-		say "You feel less thirsty after guzzling some soda, [one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random] yum!";
-		if morale of player is less than 0:
-			increase morale of player by 30;
-			if morale of player is greater than 0, now morale of player is 0;
-			say "You feel better having drunken something.";
+		if "Junk Food Junky" is listed in feats of player:
+			if thirst of player is greater than 0:
+				increase score by thirst of player divided by 3;
+				if thirst of player is greater than 30:
+					decrease score by ( thirst of player minus 30 ) divided by 3;
+			decrease thirst of player by 30;
+			if thirst of player is less than 0, now thirst of player is 0;
+			say "Awesome!  Soda!  You it down, a delicious can of [one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random].  YUM!";
+			if morale of player is less than 0:
+				increase morale of player by 75;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "You feel much better having had a soda.";
+			increase morale of player by 1;
+		otherwise:
+			if thirst of player is greater than 0:
+				increase score by thirst of player divided by 3;
+				if thirst of player is greater than 12:
+					decrease score by ( thirst of player minus 12 ) divided by 3;
+			decrease thirst of player by 12;
+			if thirst of player is less than 0, now thirst of player is 0;
+			say "You feel less thirsty after guzzling some soda, [one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random] yum!";
+			if morale of player is less than 0:
+				increase morale of player by 30;
+				if morale of player is greater than 0, now morale of player is 0;
+				say "You feel better having drunken something.";
 	if x is gryphon milk:
 		say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
 		decrease thirst of player by 15;
@@ -1484,6 +1571,10 @@ To process (X - a grab object):
 		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
 		if "Expert Medic" is listed in the feats of the player:
 			increase healed by ( healed times 125 ) divided by 100;
+		if "Rapid Healing" is listed in the feats of the player:
+			increase healed by ( healed times 110 ) divided by 100;
+		if "Regeneration" is listed in the feats of the player:
+			increase healed by ( healed times 110 ) divided by 100;
 		increase hp of player by healed;
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
@@ -1501,9 +1592,13 @@ To process (X - a grab object):
 		otherwise:
 			say "It would not be good idea to use that on yourself.  Spicy eyes!";
 	if x is a healing booster:
-		let healed be 15;
+		let healed be 20;
 		if "Expert Medic" is listed in the feats of the player:
-			now healed is 20;
+			now healed is 25;
+		if "Rapid Healing" is listed in the feats of the player:
+			increase healed by 2;
+		if "Regeneration" is listed in the feats of the player:
+			increase healed by 3;
 		increase hp of player by healed;
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
@@ -1667,7 +1762,10 @@ instead of trading the demon seed when the current action involves the ronda:
 	
 
 To Rest:
-	increase the hp of the player by (the stamina of the player times 2) plus the level of the player;
+	if "cot" is listed in invent of player or "cot" is listed in invent of location of player:
+		increase the hp of the player by (the stamina of the player times 2) plus the level of the player;
+	otherwise if "Roughing It" is listed in feats of player:
+		increase the hp of the player by maxhp of the player divided by 4;
 	follow the turnpass rule;
 	follow the player injury rule;
 	say "You are [descr]([hp of player]/[maxhp of player]).";
@@ -1751,34 +1849,43 @@ This is the sex change rule:
 Retaliating is an action applying to nothing.
 
 To Retaliate:
+	if gascloud > 0:
+		decrease gascloud by 1;
 	choose row monster from the table of random critters;
 	let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
 	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
-	if hardmode is true and the combat bonus is less than -10:
-		now the combat bonus is -10;
-	let the roll be a random number from 1 to 20;
-	say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the combat bonus is greater than 8:
-		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
-		if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
-			say "You nimbly avoid the attack at the last moment!";
-			now dam is 0;
-		otherwise if hardmode is true and a random chance of 1 in 10 succeeds:
-			now dam is (dam * 150) divided by 100;
-			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-		say "[Attack entry] You take [dam] damage!";
-		let absorb be 0;
-		if "Toughened" is listed in feats of player:
-			increase absorb by dam divided by 5;
-		if absorb is greater than 0:
-			say "You prevent [absorb] damage!";
-		decrease hp of the player by dam;
-		increase hp of player by absorb;
-		follow the player injury rule;
-		say "You are [descr].";
-	otherwise:
+	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
+		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
 		say "[Name Entry] misses!";
+	otherwise:
+		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
+			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
+			decrease combat bonus by 3;
+		if hardmode is true and the combat bonus is less than -10:
+			now the combat bonus is -10;
+		let the roll be a random number from 1 to 20;
+		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		if the roll plus the combat bonus is greater than 8:
+			let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
+			if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
+				say "You nimbly avoid the attack at the last moment!";
+				now dam is 0;
+			otherwise if hardmode is true and a random chance of 1 in 10 succeeds:
+				now dam is (dam * 150) divided by 100;
+				say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+			say "[Attack entry] You take [dam] damage!";
+			let absorb be 0;
+			if "Toughened" is listed in feats of player:
+				increase absorb by dam divided by 5;
+			if absorb is greater than 0:
+				say "You prevent [absorb] damage!";
+			decrease hp of the player by dam;
+			increase hp of player by absorb;
+			follow the player injury rule;
+			say "You are [descr].";
+		otherwise:
+			say "[Name Entry] misses!";
 	if hp of the player is greater than 0:
 		say "";
 		[wait for any key;]
@@ -1806,6 +1913,11 @@ To Infect:
 			next;
 		break;
 	let x be a random number from 1 to 5;
+	if "Resistant" is listed in feats of player:
+		now x is a random number from 1 to 6;	[17% no mutation]
+		if x is 6:
+			say "Your nanites programmed resistance to change prevents further mutation.";
+			stop the action;
 	if "Microwaved" is listed in feats of player:
 		say "WARNING: [name entry] nanites detected!";
 		if x is 1:
@@ -1877,12 +1989,89 @@ To Infect:
 			if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now cockname of player is name entry;
 			now cock of player is cock entry;
+	if "Mutable" is listed in feats of player and a random chance of 1 in 2 succeeds:		[** Repeat of above code for physical change]
+		let x be a random number from 1 to 5;
+		if "Microwaved" is listed in feats of player:
+			say "WARNING: [name entry] nanites detected!";
+			if x is 1:
+				say "Skin infection imminent";
+			if x is 2:
+				say "Head infection imminent";
+			if x is 3:
+				say "Posterior infection imminent";
+			if x is 4:
+				say "Torso infection imminent";
+			if x is 5:
+				say "Genital infection imminent";
+			say ", Allow?";
+			if the player consents:
+				say "Ok.";
+			otherwise:
+				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
+				now x is 6;			[skips body tf, but stat change is still possible from first infection]
+		if x is 1:
+			if skinname of player is not name entry:
+				say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
+				now skinname of player is name entry;
+				now skin of player is skin entry;
+		if x is 2:
+			if facename of player is not name entry:
+				say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
+				now facename of player is name entry;
+				now face of player is face entry;
+		if x is 3:
+			if tailname of player is not name entry:
+				say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
+				now tailname of player is name entry;
+				now tail of player is tail entry;
+		if x is 4:
+			if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
+				decrease breast size of player by 2;
+				follow the breast descr rule;
+				if breasts entry is greater than breasts of player:
+					increase breasts of player by 2;
+					say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
+				otherwise:
+					decrease breasts of player by 2;
+					say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
+				increase breast size of player by 2;
+			if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				increase breast size of player by 1;
+				increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+			if breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				decrease breast size of player by 1;
+				decrease breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+			if bodyname of player is not name entry:
+				say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+				now bodyname of player is name entry;
+				now body of player is body entry;
+			follow the sex change rule;
+		if x is 5:
+			follow the sex change rule;
+			if cockname of player is not name entry:
+				if cocks of player is greater than 0, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+				now cockname of player is name entry;
+				now cock of player is cock entry;				[** end of addition for 'Mutable']
 	now x is a random number from 1 to 6;
 	if x is 1:
 		if strength of player is not str entry:
 			if strength of player is greater than str entry and a random chance of 1 in 10 succeeds:
-				say "Your muscles feel weaker as the infection spreads through you.";
-				decrease strength of player by 1;
+				if "Bestial Power" is not listed in feats of player:
+					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
+						now x is 0;		[do nothing placeholder]
+					otherwise:
+						say "Your muscles feel weaker as the infection spreads through you.";
+						decrease strength of player by 1;
 			if strength of player is less than str entry:
 				say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
 				increase strength of player by 1;
@@ -1890,24 +2079,36 @@ To Infect:
 	if x is 2:
 		if Intelligence of player is not Int entry:
 			if Intelligence of player is greater than Int entry and a random chance of 1 in 10 succeeds:
-				say "Your head aches as the infection spreads through you.";
-				decrease Intelligence of player by 1;
+				if "Bestial Power" is not listed in feats of player:
+					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
+						now x is 0;		[do nothing placeholder]
+					otherwise:
+						say "Your head aches as the infection spreads through you.";
+						decrease Intelligence of player by 1;
 			if Intelligence of player is less than Int entry:
 				say "You feel your mind swelling with [name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
 				increase Intelligence of player by 1;
 	if x is 3:
 		if Dexterity of player is not Dex entry:
 			if Dexterity of player is greater than Dex entry and a random chance of 1 in 10 succeeds:
-				say "Your coordination feels weaker as the infection spreads through you.";
-				decrease Dexterity of player by 1;
+				if "Bestial Power" is not listed in feats of player:
+					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
+						now x is 0;		[do nothing placeholder]
+					otherwise:
+						say "Your coordination feels weaker as the infection spreads through you.";
+						decrease Dexterity of player by 1;
 			if Dexterity of player is less than Dex entry:
 				say "You feel your hand eye coordination swelling with [name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
 				increase Dexterity of player by 1;
 	if x is 4:
 		if Stamina of player is not Sta entry:
 			if Stamina of player is greater than Sta entry and a random chance of 1 in 10 succeeds:
-				say "Your constitution feels weaker as the infection spreads through you.";
-				decrease Stamina of player by 1;
+				if "Bestial Power" is not listed in feats of player:
+					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
+						now x is 0;		[do nothing placeholder]
+					otherwise:
+						say "Your constitution feels weaker as the infection spreads through you.";
+						decrease Stamina of player by 1;
 				if remainder after dividing stamina of player by 2 is 1:
 					decrease maxhp of player by level of player plus 1;
 			if Stamina of player is less than Sta entry:
@@ -1918,16 +2119,24 @@ To Infect:
 	if x is 5:
 		if Perception of player is not Per entry:
 			if Perception of player is greater than Per entry and a random chance of 1 in 10 succeeds:
-				say "Your senses dull as the infection spreads through you.";
-				decrease Perception of player by 1;
+				if "Bestial Power" is not listed in feats of player:
+					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
+						now x is 0;		[do nothing placeholder]
+					otherwise:
+						say "Your senses dull as the infection spreads through you.";
+						decrease Perception of player by 1;
 			if Perception of player is less than Per entry:
 				say "You feel your senses swelling with [name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
 				increase Perception of player by 1;
 	if x is 6:
 		if Charisma of player is not Cha entry:
 			if Charisma of player is greater than Cha entry and a random chance of 1 in 10 succeeds:
-				say "You feel more isolated as the infection spreads through you.";
-				decrease Charisma of player by 1;
+				if "Bestial Power" is not listed in feats of player:
+					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
+						now x is 0;		[do nothing placeholder]
+					otherwise:
+						say "You feel more isolated as the infection spreads through you.";
+						decrease Charisma of player by 1;
 			if Charisma of player is less than Cha entry:
 				say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
 				increase Charisma of player by 1;
@@ -1960,6 +2169,14 @@ This is the flee rule:
 	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 20 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
+	if "Gas Cloud" is listed in feats of player and gascloud is 0:
+		if tailname of player is "Skunk" or tailname of player is "Skunk Girl" or tailname of player is "Skunk Taur":
+			say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
+			increase gascloud by 5;
+		otherwise:
+			say "You release your cover cloud and try to escape.";
+			increase gascloud by 3;
+		increase combat bonus by gascloud;
 	if hardmode is true and the combat bonus is less than -10:
 		now the combat bonus is -10;
 	let the roll be a random number from 1 to 20;
@@ -1979,6 +2196,7 @@ This is the submit rule:
 	choose row monster from the table of random critters;
 	let temp be the hp of the player;
 	Lose;
+	if "Submissive" is listed in feats of the player, increase the XP of the player by 2;
 	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 	wait for any key;
 	decrease the menu depth by 1;
@@ -2015,14 +2233,37 @@ This is the player attack rule:
 						now z is y;
 						break;
 				choose row z in table of random critters;
-				increase dam by wdam entry divided by 2;
+				let dammy be 1;
+				if wdam entry > 2:					[nerfed for very high damage critters]
+					now dammy is ( square root of ( wdam entry - 1 ) ) + 1;
+				increase dam by dammy;
 				choose row monster from table of random critters;
+		if "Powerful" is listed in feats of player:
+			now dam is ( ( dam times a random number from 100 to 125 ) divided by 100 );
+		if "Mayhem" is listed in feats of player:
+			let numnum be ( ( level of player * 5 ) / 2 ) + 100;
+			now dam is ( ( dam times a random number from 100 to numnum ) divided by 100 );
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
 		if a random chance of the morale of the player in 200 succeeds:
 			say "Filled with sudden motivation, your attack scores particularly well!";
 			increase dam by dam;
 		say "You [one of]strike with[or]attack with[or]use your[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		if a random chance of 4 in 20 succeeds and "Tail Strike" is listed in feats of player:
+			if tailname of player is listed in infections of Tailweapon:
+				let z be 0;
+				repeat with y running from 1 to number of rows in table of random critters:
+					choose row y in table of random critters;
+					if name entry is bodyname of player:
+						now z is y;
+						break;
+				choose row z in table of random critters;
+				let dammy be 2;
+				if wdam entry > 3:					[nerfed for very high damage critters]
+					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
+				say "[line break]You make an additional attack using your tail's natural abilities for [dammy] damage!";
+				increase dam by dammy;
+				choose row monster from table of random critters;
 		if a random chance of 5 in 20 succeeds and "Spirited Youth" is listed in feats of player:
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [y] damage!";
@@ -2071,10 +2312,14 @@ This is the player attack rule:
 		increase the XP of the player by lev entry times two;
 		if the player is not lonely:
 			increase the xp of the companion of the player by lev entry times two;
-			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
+			if "Ringmaster" is not listed in feats of player:
+				decrease the xp of the player by ( lev entry times 2 ) divided by 3;
 		increase the morale of the player by 1;
 		let z be 0;
-		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
+			now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
+			increase lootchance entry by z;
+		otherwise if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
 			now z is lootchance entry divided by 3;
 			increase lootchance entry by z;
 		if a random chance of lootchance entry in 100 succeeds:
@@ -2094,7 +2339,7 @@ predestiny is a number that varies.
 to Pet level up:
 	increase level of companion of player by 1;
 	decrease xp of companion of player by ( level of companion of player minus 1 ) times 10;
-	if "Fast Learner" is listed in feats of player:
+	if "Good Teacher" is listed in feats of player:
 		increase xp of companion of player by ( level of companion of player minus 1 ) times 4;
 	say "Your [companion of player] has gained level [level of companion of player]! Congratulations!";
 	if remainder after dividing level of player by 2 is 0:
@@ -2161,9 +2406,12 @@ To fight:
 		decrease bonus by ( dex entry minus 10 ) divided by 2;
 		increase bonus by a random number from 1 to 20;
 		if bonus is less than 6:
-			say "The creature gets the drop on you!";
-			retaliate;
-			if hp of player is less than 1 or lost is 1, stop the action;
+			if "Wary Watcher" is listed in feats of player:
+				say "The creature is about to get the drop on you, but your vigilence spots it just in time!  You ready yourself for battle.";
+			otherwise:
+				say "The creature gets the drop on you!";
+				retaliate;
+				if hp of player is less than 1 or lost is 1, stop the action;
 		wait for any key;
 		change the current menu to table of Basic Combat;
 		carry out the displaying activity;
@@ -2230,9 +2478,24 @@ check resting:
 	if "cot" is listed in invent of player:
 		say "You pull out your cot and lay it out before resting for a while.";
 		continue the action;
-	if "cot" is listed in invent of location of player:
+	otherwise if "cot" is listed in invent of location of player:
 		say "You rest on the cot.";
 		continue the action;
+	otherwise if "Roughing It" is listed in feats of player:
+		say "You hunker down somewhere secluded for a quick nap...";
+		if there is a dangerous door in the location of the player:
+			wait for any key;
+			if a random chance of 3 in 20 succeeds:
+				say "...but your nap is interrupted by the arrival of a creature.";
+				fight;
+				stop the action;
+			otherwise:
+				say "...and you complete your nap in peace.";
+				continue the action;
+		otherwise:
+			wait for any key;
+			say "...and you complete your nap in peace.";
+			continue the action;
 	say "You have nothing to rest on.";
 	stop the action;
 
@@ -2243,7 +2506,8 @@ carry out resting:
 This is the explore rule:
 	let something be 0;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if something is 0 and a random number from 1 to 20 is less than 5 plus bonus and there is an unknown fasttravel room and battleground is "Outside":
+	if "Curious" is listed in feats of player, increase bonus by 3;
+	if something is 0 and a random number from 1 to 20 is less than 6 plus bonus and there is an unknown fasttravel room and battleground is "Outside":
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
 			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
@@ -2251,7 +2515,7 @@ This is the explore rule:
 			now something is 1;
 			plot;
 			wait for any key;
-	if something is 0 and a random number from 1 to 20 is less than 5 plus bonus and there is an unresolved situation :
+	if something is 0 and a random number from 1 to 20 is less than 6 plus bonus and there is an unresolved situation :
 		let L be a random close unresolved situation;
 		If L is not nothing:
 			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
@@ -2286,17 +2550,21 @@ carry out exploring:
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
+	now gascloud is 0;
 	if breast size of player is greater than 26, now breast size of player is 26;
 	if libido of player is less than 96 and "Horny Bastard" is listed in feats of player:
 		increase libido of player by 5;
+	if libido of player is greater than 10 and "Cold Fish" is listed in feats of player:
+		decrease libido of player by ( ( libido of player divided by 12 ) + 1 );
 	if the hunger of player is less than 0, now the hunger of player is 0;
 	if the thirst of player is less than 0, now the thirst of player is 0;
 	if the hp of the player is less than the maxhp of the player:
 		increase the hp of the player by the stamina of the player divided by 2;
+	if "Regeneration" is listed in feats of player:
+		increase the hp of the player by (level of player divided by 3);
+	if "Rapid Healing" is listed in feats of player:
+		increase the hp of the player by 2;
 	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
-	if the morale of the player is greater than the charisma of the player plus the perception of the player plus the level of the player:
-		say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
-		now the morale of the player is the charisma of the player plus the perception of the player;
 	if a random number from 1 to 20 is greater than the stamina of the player minus 5:
 		increase hunger of player by 1;
 		if child is born and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
@@ -2309,6 +2577,8 @@ This is the turnpass rule:
 		now thirst of player is 0;
 		now hunger of player is 0;
 	if the remainder after dividing turns by 3 is 0:
+		if "Perky" is listed in feats of player:
+			increase morale of player by 1;
 		if hunger of player is greater than 90:
 			say "You will die if you don't eat soon.";
 		otherwise if hunger of player is greater than 50:
@@ -2337,6 +2607,17 @@ This is the turnpass rule:
 			end the game saying "You have died of thirst.";
 		if hunger of player is greater than 50 or thirst of player is greater than 50:
 			say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
+		let maxmorale be ( the charisma of the player plus the perception of the player );
+		let moralereset be ( maxmorale plus the level of the player );
+		if "Perky" is listed in feats of player:
+			increase moralereset by ( moralereset divided by 5);
+			increase maxmorale by ( maxmorale divided by 5);
+		if "Proud Parent" is listed in feats of player:
+			increase moralereset by (sarahpups divided by 5);
+			increase maxmorale by (sarahpups divided by 5);
+		otherwise if the morale of the player is greater than moralereset:
+			say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
+			now the morale of the player is maxmorale;
 	let corruption be 0;
 	if the skinname of the player is not "human", increase corruption by a random number from 0 to 1;
 	if the cockname of the player is not "human", increase corruption by a random number from 0 to 1;
@@ -2344,17 +2625,23 @@ This is the turnpass rule:
 	if the tailname of the player is not "human", increase corruption by a random number from 0 to 1;
 	if the facename of the player is not "human", increase corruption by a random number from 0 to 1;
 	if corruption is greater than 0:
-		decrease corruption by a random number from 0 to ( Perception of the player minus 10) divided by 2;
-		decrease corruption by a random number from 0 to ( Charisma of the player minus 10) divided by 2;
+		if "Corrupt" is listed in feats of player:
+			increase corruption by a random number from 0 to 1;
+			increase corruption by a random number from 0 to 1;
+		if "Pure" is listed in feats of player:
+			decrease corruption by a random number from 0 to 2;
+		decrease corruption by a random number from 0 to ( ( Perception of the player minus 10) divided by 2 );
+		decrease corruption by a random number from 0 to ( ( Charisma of the player minus 10) divided by 2 );
 	if corruption is greater than 0:
+		decrease the humanity of the player by corruption;
 		follow the brain descr rule;
 		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr].([humanity of the player]/100)[line break]";
-		decrease the humanity of the player by corruption;
 		if humanity of the player is less than 50:
 			say "Maybe you should [bold type]use[roman type] that [bold type]journal[roman type] to help collect your thoughts.";
 	if child is not born and gestation of child is greater than 0:
 		decrease gestation of child by 1;
 		if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease gestation of child by 1;
+		if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds, decrease gestation of child by 1;
 		if gestation of child is less than 5:
 			say "Your belly protrudes in a firm dome of pregnancy, full of some unborn being, waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
 			if a random chance of 1 in 10 succeeds:
@@ -2377,13 +2664,26 @@ This is the turnpass rule:
 		if gestation of child is less than 1 and cunts of player is greater than 0:
 			say "With a sudden pouring of fluids, birth is upon you. You settle  without much choice, breathing quickly as your body spasms in readiness. ";
 			let z be 1;
-			if a random chance of 1 in 100 succeeds:
+			let fer be 0;
+			if "Fertile" is listed in feats of player:
+				increase fer by 3;
+			if "Litter Bearer" is listed in feats of player:
+				increase fer by 12;
+			if a random chance of (1 + fer) in 100 succeeds:
 				increase z by 1;
-			if a random chance of 3 in 100 succeeds:
+			if a random chance of (3 + fer) in 100 succeeds:
 				increase z by 1;
+			if a random chance of (5 + fer) in 100 succeeds:
+				increase z by 1;
+			if a random chance of fer in 100 succeeds:
+				increase z by 1;
+			if a random chance of fer in 100 succeeds:
+				increase z by 1;
+			if z > 4, now z is 4;		[extra chance, still limited to 4]
 			follow cunt descr rule;
 			if cunt width of player is greater than 10:
 				say "Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated body easily slipping the child free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
+				increase morale of player by 5;
 			otherwise if cunt width of player is greater than 3:
 				say "You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the newborn from your [descr] birthing canal. It is not as painful as the movies make out, and after about twenty minutes, the child is ready to be held by you. You feel tired, but whole, and satisfied.";
 				increase morale of player by 5;
@@ -2392,15 +2692,15 @@ This is the turnpass rule:
 				now hp of player is 1;
 				decrease morale of player by 10;
 			if z is 2:
-				say "Twins!";
+				say "Twins![line break]";
 			otherwise if z is 3:
-				say "Triplets!";
+				say "Triplets![line break]";
 			otherwise if z is 4:
-				say "Quadruplets!";
+				say "Quadruplets![line break]";
 			repeat with y running from 1 to z:
 				now child is born;
 				Birth;
-			increase score by 20;
+			increase score by 15;		[15 base +5/child]
 			extend game by 4;
 		otherwise:
 			if gestation of child is less than 0, now gestation of child is 1;
@@ -2931,6 +3231,7 @@ carry out scavenging:
 	say "You set out in the desperate search of food and water.";
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	if "Survivalist" is listed in feats of the player, increase bonus by 4;
+	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
 	if dice plus bonus is greater than 10:
@@ -3254,11 +3555,11 @@ Instead of conversing the doctor matt:
 			if tricllfound is 0:
 				say "     Once you find a usable sample from this possible dinosaur, please bring it to me first, so that I may obtain a sample as well.";
 			if tricllfound is 1:
-				say "     Doctor Matt eyes the lava lamp suspiciously, noting the sticky film coating it.  Using several sterile swabs, he wipes a samples of the fluids from the improvised toy and sets them in a sample dish.  'Thank you for the chance to gain a sample before you turned it over to him.'";
+				say "     Doctor Matt eyes the lava lamp suspiciously, noting the sticky film coating it.  Using several sterile swabs, he wipes a samples of the fluids from the improvised toy and sets them in a sample dish.  'It was fortunate that you brought this here so I could gain a sample before you turned it over to him.'";
 				increase score by 10;
 				now triclampedmatt is 1;
 		otherwise if triclamped is 1 and triclamped is 0:
-			say "     It is unfortunate that you have turned the sample over to Dr Mouse already.  Unfortunately, I don't think it would be wise to try to obtain another.";
+			say "     'It is unfortunate that you have turned the sample over to Dr Mouse already,' Dr Matt says.  Unfortunately, I don't think it would be wise to try to obtain another.'";
 			now triclampedmatt is 2;
 		if sabtoothed is 0 and sabtoothedmatt is 0:
 			let sabertoothfound be 0;
@@ -3267,21 +3568,21 @@ Instead of conversing the doctor matt:
 			if sabertoothfound is 0:
 				say "     'I would like to ask you to obtain a sample from one of these creatures for me as well.  I know this means you may need to fight a second one, but I want to look into this matter as well.'";
 			if sabertoothfound > 0:
-				say "     I should like to keep this sample of from the sabretooth tiger, if I may.  I know this means you must obtain another for Dr Mouse, but I would like to examine this as well.  Do you give it to him? (Y/N)";
+				say "     'I should like to keep this sample of the sabretooth tiger.  I know this means you must obtain another for Dr Mouse, but I would like to take this one for my research.  If you were able to obtain this one, surely you can get another for your other employer.'  Do you give it to him? (Y/N)";
 				if the player consents:
 					delete Chipped tooth;
 					increase score by 10;
-					say "     'I appreciate the effort this represents.'  He picks up the large fang in his gloves and places it in a sample dish.";
+					say "     'It is good to see that you appreciate the important of my work.'  He picks up the large fang in his gloves and places it in a sample dish.";
 					now sabtoothedmatt is 1;
 				otherwise:
-					say "     'I appreciate the effort it would take to obtain another one.  Please continue to keep me appraised of Dr Mouse's activities.";
+					say "     'I am disappointed that you don't appreciate the importance of my work.  I hope you will at least continue to keep me appraised of Dr Mouse's activities.";
 					now sabtoothedmatt is 2;
 		otherwise if sabtoothed is 1 and sabtoothedmatt is 0:
 			let sabertoothfound be 0;
 			repeat with x running through invent of player:
 				if x is "Chipped tooth", increase sabertoothfound by 1;
 			if sabertoothfound is 0:
-				say "     'I would like to ask you to obtain a sample from one of these creatures for me as well before Dr Mouse gets too far ahead.  I know this means you may need to fight a second one, but I want to look into this matter as well.'";
+				say "     'I would like to ask you to obtain a sample from one of these creatures for me as well before Dr Mouse gets too far ahead.  I know this means you may need to fight a second one, but my research cannot fall behind.'";
 			if sabertoothfound > 0:
 				say "     'As you have already given Dr Mouse his sample, I should like to keep this sample for myself,' he says as he places the one you have into a sample dish.";
 				delete Chipped tooth;
@@ -3292,22 +3593,69 @@ Instead of conversing the doctor matt:
 			repeat with x running through invent of player:
 				if x is "package", increase nermpack by 1;
 			if nermpack is 0:
-				say "     'I should like a chance to examine whatever object you are retrieving from this mysterious shop.  Please bring it here before delivering it to Dr Mouse.'";
+				say "     'I should like a chance to examine whatever object you are retrieving from this mysterious shop.  I want you to bring it here before delivering it to Dr Mouse.'";
 			if nermpack is 1:
 				say "     You pull out the dusty package and set it on one of tables.  Dr Matt opens it carefully, using tongs to pull the strings to untie them.  When they drop away, he lifts the flaps with his tongs.  Peeking inside, you both see a large piece of golden fur.  The doctor, relaxing a little, pulls it out and holds it up.";
 				say "     'It seems to be a very old animal hide.  Lion, I should guess.  I'm not sure why he is interested in this ratty, old thing.  But I should take a sample just in case.  Dr Matt takes a scalpel to cut a small corner from the old lionskin.  But after several tries, he's only made a small notch in it.  He grunts and pulls out a larger knife and tries again, eventually managing to slice a small corner from it.";
-				say "     He looks down at the small cutting he's placed in the sample tray.  'That was most perplexing.  From all appearances, the hide is very old and should be quite fragile.'  He turns the box around, finding the Greek writing on it.  'Nemea?  What does that... the Nemean Lion!'  Dr Matt carefully folds up the pelt and puts it back in the box, very slowly tying it back up.  'It... makes no sense.  But what else could it be?'  The poor doctor seems quite out of sorts and it appears that no further explanation will be forthcoming.";
+				say "     He looks down at the small cutting he's placed in the sample tray.  'That was most perplexing.  From all appearances, the hide is very old and should be quite fragile.'  He turns the box around, finding the Greek writing on it.  'Nemea?  What does that... the Nemean Lion!'  Dr Matt stiffly folds up the pelt and puts it back in the box, very slowly tying it back up.  'It... makes no sense.  But what else could it be?'  The poor doctor seems quite out of sorts and it appears that no further explanation will be forthcoming.";
+				increase score by 10;
 				now nerminepackagematt is 1;
 		if nerminepackage is 5 and nerminepackagematt is 0:
-			say "     It is regretable that you turned over the package to Dr Mouse before I had a chance to examine its contents.  Please keep me better informed of his activities going forward.";
+			say "     It is regretable that you turned over the package to Dr Mouse before I had a chance to examine its contents.  I want you to keep me better informed of his activities going forward.";
 			now nerminepackagematt is 2;
 		if nerminepackagematt > 0 and sabtoothedmatt > 0 and triclampedmatt > 0:
-			now mattcollection is 1;
-	if mattcollection is 1:
+			if nerminepackagematt is 1 and sabtoothedmatt is 1 and triclampedmatt is 1:
+				say "     Having given the scientist a sample from each of the three items Dr Matt had you collect, he at least seems a little pleased.  'These do only represent the samples he's asked you specifically to gather.  It is apparent that his at least partial control of the hospital denizens has allowed him to collect specimens from many of the creatures in the city.  It is unclear to me what directions his research is taking and so I want to you continue to assist and monitor him.  Hopefully he can discover something to help us deal with this outbreak.'";
+				say "     'For your assistance in this matter and for ensuring I received a sample from them as well, I should give you something in payment.  I had been working on this device.  It is only a prototype, but it may be of assistance to you.  I am working on an improved model to eventually be used when the military comes in to rescue the infected survivors.'";
+				say "     From one of the worktables, Dr Matt gathers up a cobbled together device that looks like it was made from an array of wires and lights on a velcro wristband connected to a handheld game console.  'I had to make its case from the items I had available, but it is quite functional, if a little slow.  It acts as a personalized infection status monitor, or PISM.  Should you make contact with an unknown infection source, you can see to what degree and which strain has infected your body.  While many strains are obvious, others are harder to diagnose until further secondary features or behaviors arise.'";
+				say "     The strap can be placed around your wrist, ankle or other limb.  It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree.  To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body.  It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others.  I hope my larger model for the military will overcome this issue so they can do a quick scan at the base of the people they rescue to be aware of the strains infecting each individual.'";
+				say "     'As I stated, you may have this prototype, as I am working on an improved model for the military.  Perhaps it may be of some use to you.  If you can continue to help me, I may be able to upgrade its programming later,' he adds, clearly paying you to act as his double-agent.";
+				say "     Infection monitor obtained.  (Quick command: [bold type]pism[roman type])[line break]";
+				add "infection monitor" to invent of player;
+				now mattcollection is 1;
+				increase score by 10;
+			otherwise:
+				now mattcollection is 2;
+	if mattcollection > 0:
 		say "     'I suggest you continue to assist Dr Mouse.  It will further ingratiate you to him and allow you to monitor his activities.  I want you to keep me informed on what he's receving and please bring a sample for me as well.  Nor do not wish to fall behind in my research to this little upstart.";
 	say "He looks kind of busy right now.";
 
-			
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"infection monitor"	"     Cobbled together from various items, Dr Matt's infection analyzer can be used to check your body's infection status.  Type [bold type]pism[roman type] to use."	1	infection monitor
+
+infection monitor is a grab object.
+it is part of the player.
+It is not temporary.
+
+monitoring is an action applying to nothing.
+understand "pism" as monitoring.
+
+instead of using infection monitor:
+	monitor;
+
+check monitoring:
+	if "infection monitor" is listed in invent of player:
+		monitor;
+	otherwise:
+		say "You don't have anything capable of that.";
+	stop the action;
+
+to monitor:
+	say "You hook up the infection analyzer and run the program, checking on your body's status for any changes while looking yourself over.";
+	say "Head status:  [facename of player]     Body status:  [bodyname of player][line break]";
+	say "Skin status:  [skinname of player]     Tail status:  [tailname of player][line break]";
+	if cocks of player > 0:
+		if cunts of player > 0:
+			say "Cock status:  [cockname of player]     Gender: Herm[line break]";
+		otherwise:
+			say "Cock status:  [cockname of player]     Gender: Male[line break]";
+	otherwise if cunts of player > 0:
+		say "Gender: Female[line break]";
+	otherwise:
+		say "ERROR!: Neuter[line break]";
+	follow the self examine rule;
 
 To Extend game by (x - a number):
 	decrease targetturns by x;
