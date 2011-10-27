@@ -127,6 +127,8 @@ instead of addfeating the basic feats:
 			addfeat "Black Belt" with "Your martial artistry is amazing. Your damage increases further while unarmed, and you have a small(10%) chance of avoiding hits that would otherwise have landed.";
 			addfeat "Natural Armaments" with "You gain additional power based on the mutation of your body, borrowing the natural weapons of your infection.";
 		addfeat "Stealthy" with "Your chance of running into a monster is decreased while you are scavenging or exploring.";
+	if "Stealthy"is listed in feats of player:
+		addfeat "Experienced Scout" with "You have a chance of avoiding a random fight altogether if you so wish it.";
 	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";
 	if strength of player is greater than 14:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";

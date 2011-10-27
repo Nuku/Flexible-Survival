@@ -2396,6 +2396,11 @@ To fight:
 			increase hp entry by debit * 2;
 			increase wdam entry by debit ;
 		say "You run into a [name entry]. [desc entry].";
+		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds:
+			say "You notice an avenue of escape! Do you want to abort the combat?";
+			if the player consents:
+				now combat abort is 1;
+				say "You slip away before [name entry] can begin their assault.";
 		now lost is 0;
 		if combat abort is 1:
 			now combat abort is 0;
