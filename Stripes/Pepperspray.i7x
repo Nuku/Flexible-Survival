@@ -27,6 +27,7 @@ this is the peppersprayflee rule:
 	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 12 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
+	increase combat bonus by gascloud;								[cannot release gas cloud if pepperspraying, but will still linger]
 	if hardmode is true and the combat bonus is less than -8:				[pepperspray limits hardmode penalty to -8]
 		now the combat bonus is -8;
 	let the roll be a random number from 1 to 20;
@@ -39,6 +40,8 @@ this is the peppersprayflee rule:
 	otherwise:
 		say "You try to escape using the pepperspray, but fail.";
 		say "[pepperspraydrain]";
+		if gascloud > 0:
+			decrease gascloud by 1;
 		say "[weakretaliate]";
 		wait for any key;
 		if the hp of the player is less than 1:
@@ -79,10 +82,14 @@ this is the peppersprayattack rule:
 		increase the XP of the player by lev entry times two;
 		if the player is not lonely:
 			increase the xp of the companion of the player by lev entry times two;
-			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
+			if "Ringmaster" is not listed in feats of player:
+				decrease the xp of the player by ( lev entry times 2 ) divided by 3;
 		increase the morale of the player by 1;
 		let z be 0;
-		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
+			now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
+			increase lootchance entry by z;
+		otherwise if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
 			now z is lootchance entry divided by 3;
 			increase lootchance entry by z;
 		if a random chance of lootchance entry in 100 succeeds:
@@ -126,14 +133,37 @@ to say enhancedattack:
 						now z is y;
 						break;
 				choose row z in table of random critters;
-				increase dam by wdam entry divided by 2;
+				let dammy be 1;
+				if wdam entry > 2:					[nerfed for very high damage critters]
+					now dammy is ( square root of ( wdam entry - 1 ) ) + 1;
+				increase dam by dammy;
 				choose row monster from table of random critters;
+		if "Powerful" is listed in feats of player:
+			now dam is ( ( dam times a random number from 100 to 125 ) divided by 100 );
+		if "Mayhem" is listed in feats of player:
+			let numnum be ( ( level of player * 5 ) / 2 ) + 100;
+			now dam is ( ( dam times a random number from 100 to numnum ) divided by 100 );
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
 		if a random chance of the morale of the player in 200 succeeds:
 			say "Filled with sudden motivation, your attack scores particularly well!";
 			increase dam by dam;
 		say "You [one of]strike with[or]attack with[or]use your[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		if a random chance of 5 in 20 succeeds and "Tail Strike" is listed in feats of player:		[+5% of tail attack w/pepperspray]
+			if tailname of player is listed in infections of Tailweapon:
+				let z be 0;
+				repeat with y running from 1 to number of rows in table of random critters:
+					choose row y in table of random critters;
+					if name entry is bodyname of player:
+						now z is y;
+						break;
+				choose row z in table of random critters;
+				let dammy be 2;
+				if wdam entry > 3:					[nerfed for very high damage critters]
+					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
+				say "[line break]You make an additional attack using your tail's natural abilities for [dammy] damage!";
+				increase dam by dammy;
+				choose row monster from table of random critters;
 		if a random chance of 3 in 10 succeeds and "Spirited Youth" is listed in feats of player:		[+5% chance of Spirited Youth attack]
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [y] damage!";
@@ -164,34 +194,43 @@ to say enhancedattack:
 
 
 to say weakretaliate:
+	if gascloud > 0:
+		decrease gascloud by 1;
 	choose row monster from the table of random critters;
 	let the defense bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;	[+3 greater chance to dodge]
 	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
-	if hardmode is true and the combat bonus is less than -10:
-		now the combat bonus is -10;
-	let the roll be a random number from 1 to 20;
-	say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the combat bonus is greater than 8:
-		let dam be ( wdam entry times a random number from 60 to 120 ) divided by 100;				[chance for weaker attacks]
-		if "Black Belt" is listed in feats of player and a random chance of 1 in 8 succeeds:			[1 in 8 for BB dodge]
-			say "You nimbly avoid the attack at the last moment!";
-			now dam is 0;
-		otherwise if hardmode is true and a random chance of 1 in 12 succeeds:						[lower chance of hard mode critical]
-			now dam is (dam * 150) divided by 100;
-			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-		say "[Attack entry] You take [dam] damage!";
-		let absorb be 0;
-		if "Toughened" is listed in feats of player:
-			increase absorb by dam divided by 5;
-		if absorb is greater than 0:
-			say "You prevent [absorb] damage!";
-		decrease hp of the player by dam;
-		increase hp of player by absorb;
-		follow the player injury rule;
-		say "You are [descr].";
-	otherwise:
+	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
+		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
 		say "[Name Entry] misses!";
+	otherwise:
+		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
+			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
+			decrease combat bonus by 3;
+		if hardmode is true and the combat bonus is less than -10:
+			now the combat bonus is -10;
+		let the roll be a random number from 1 to 20;
+		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		if the roll plus the combat bonus is greater than 8:
+			let dam be ( wdam entry times a random number from 60 to 120 ) divided by 100;				[chance for weaker attacks]
+			if "Black Belt" is listed in feats of player and a random chance of 1 in 8 succeeds:			[1 in 8 for BB dodge]
+				say "You nimbly avoid the attack at the last moment!";
+				now dam is 0;
+			otherwise if hardmode is true and a random chance of 1 in 12 succeeds:						[lower chance of hard mode critical]
+				now dam is (dam * 150) divided by 100;
+				say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+			say "[Attack entry] You take [dam] damage!";
+			let absorb be 0;
+			if "Toughened" is listed in feats of player:
+				increase absorb by dam divided by 5;
+			if absorb is greater than 0:
+				say "You prevent [absorb] damage!";
+			decrease hp of the player by dam;
+			increase hp of player by absorb;
+			follow the player injury rule;
+			say "You are [descr].";
+		otherwise:
+			say "[Name Entry] misses!";
 	if hp of the player is greater than 0:
 		say "";
 		[wait for any key;]

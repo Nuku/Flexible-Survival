@@ -459,8 +459,14 @@ carry out bargainhunting:
 			say "your strength has increased by 2!";
 			stop the action;
 		if Z is 18:
-			if "Horny Bastard" is listed in feats of the player:
-				say "Pushing through the strange piles of unusual items stuffed into the overflowing bin, you find a small silver charm shaped like a [one of]feline[or]canine[or]demonic[or]equine[or] goat[or]dolphin[or]bestial[or]bear[at random] cock. The small charm glints in your hand as you pull it out of the bin, the lewd appearance of the finely detailed miniature cock charm making you grin. And leaves you feeling hornier and perhaps more bestial then ever as you slip the little charm onto a charm bracelet so you can wear it at all times. Now if only you could go out and find a real cock just like it....";
+			if "Cold Fish" is listed in feats of player:
+				say "Sorting through the strange bin, you feel a small shiver from one of the items in the bin and reflexively release the item, protecting yourself from it.  You withdraw your hand and clutch it tightly as the shivers run up your arm and then down your body, filling your loins with heat and arousal.  Nermine, noticing your odd expression, slides back the water and food.  'Some items in the bargain bin do not agree with some people.  You may try again if you wish or leave matters be.'";
+				increase libido of player by 10;
+				Add "water bottle" to invent of player;
+				Add "food" to invent of player;
+				stop the action;
+			otherwise if "Horny Bastard" is listed in feats of the player:
+				say "Pushing through the strange piles of unusual items stuffed into the overflowing bin, you find a small silver charm shaped like a [one of]feline[or]canine[or]demonic[or]equine[or]goat[or]dolphin[or]bestial[or]bear[at random] cock. The small charm glints in your hand as you pull it out of the bin, the lewd appearance of the finely detailed miniature cock charm making you grin. And leaves you feeling hornier and perhaps more bestial then ever as you slip the little charm onto a charm bracelet so you can wear it at all times. Now if only you could go out and find a real cock just like it....";
 				now libido of player is 100;
 				decrease humanity of player by 10;
 				stop the action;
@@ -1066,6 +1072,9 @@ To say jackalankhmagic:
 		say "your charisma has increased by 3![line break]";
 		increase stamina of player by 3;
 		say "your stamina has increased by 3!";
+		increase maxhp of player by level of player plus 1;		[guaranteed hp boost once]
+		if remainder after dividing stamina of player by 2 is 0:
+			increase maxhp of player by level of player plus 1;	[potential second boost]
 		now rarequesting is 7;
 		now jackalmantf is 2;
 		stop the action;

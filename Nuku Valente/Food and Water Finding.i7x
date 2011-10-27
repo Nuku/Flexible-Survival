@@ -16,6 +16,8 @@ Instead of resolving a potential resources:
 	if x is 3:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 4 succeeds:
 			now y is "medkit";
+		otherwise if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 7 succeeds:
+			now y is "medkit";
 		otherwise:
 			now y is "dirty water";
 	say "While wandering about, you're certain you see some [y] and move to get it.";
@@ -38,6 +40,9 @@ Instead of resolving a potential resources:
 			say "extremely difficult";
 		say " to climb";
 		let bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player divided by 2;
+		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of the player and bodyname of player is "ewe", increase bonus by 1;
+		if "Three Bags Full" is listed in feats of the player and bodyname of player is "ram", increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
@@ -63,6 +68,7 @@ Instead of resolving a potential resources:
 			say "extremely difficult";
 		say " to lift.";
 		let bonus be (( the strength of the player minus 10 ) divided by 2) plus level of the player divided by 2;
+		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
@@ -86,7 +92,8 @@ Instead of resolving a potential resources:
 		otherwise:
 			say "extremely difficult";
 		say " to sway";
-		let bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player divided by 2;
+		let bonus be (( the charisma of the player minus 10 ) divided by 2) plus level of the player divided by 2;
+		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;

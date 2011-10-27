@@ -61,6 +61,8 @@ To pigfeed:
 			now tailname of player is "Piggy";
 			now tail of player is "You have a short and curly pig tail above your ass. ";
 			increase stamina of player by 1;
+			if remainder after dividing stamina of player by 2 is 0:
+				increase maxhp of player by level of player plus 1;
 			say "[bold type]YOUR STAMINA HAS INCREASED BY 1[roman type]";
 			increase score by 5;							
 		otherwise:
@@ -76,6 +78,8 @@ To pigfeed:
 			now facename of player is "Piggy";
 			increase stamina of player by 1;
 			decrease perception of player by 1;
+			if remainder after dividing stamina of player by 2 is 0:
+				increase maxhp of player by level of player plus 1;
 			say "[bold type]YOUR STAMINA HAS INCREASED BY 1[line break]YOUR PERCEPTION HAS GONE DOWN BY 1[roman type]";
 			increase score by 5;
 			now pigfed is 2;

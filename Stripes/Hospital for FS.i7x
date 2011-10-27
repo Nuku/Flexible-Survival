@@ -420,7 +420,7 @@ Instead of conversing the Doctor Mouse:
 		repeat with x running through invent of player:
 			if x is "scientific device", increase devicefound by 1;
 		if devicefound is 0:
-			say "     'What do you mean you find the device but haven't brought it with you?  What fools I have to wo...'  He sighs and rubs his brow.  'Please, I need you to go back where you left it and get it for me.'";
+			say "     'What do you mean you found the device but haven't brought it with you?  What fools I have to wo...'  He sighs and rubs his brow.  'Please, I need you to go back where you left it and get it for me.'";
 		if devicefound is 1:
 			say "     'Yes!  That is it,' Doctor Mouse says as he hops down from his stool to grab for it before thinking better of it.  'Uh, would you be so kind as to put it over there for me?' he asks, pointing to an open spot on the central work area.";
 			say "[hospquestpt2]";
@@ -438,7 +438,9 @@ Instead of conversing the Doctor Mouse:
 		say "[hospquestpt6]";
 	otherwise if hospquest is 8:
 		say "[hospquestpt7]";
-	if hospquest is 9:
+	otherwise if hospquest is 9:
+		say "[hospquestpt8]";
+	otherwise if hospquest is 10:
 		say "     'I don't have anything more for you to assist me at the moment,' the white mouse replies to you inquiry. 'But once more is programmed, you should check back in.' With that confusing and cryptic response, you decice to head off.'";
 
 Section 5 - Dr Mouse's Quests
@@ -509,7 +511,7 @@ to say hospquestpt2:
 	add "healing booster" to invent of player;
 	add "water bottle" to invent of player;
 	now progress of Doctor Mouse is turns;
-	extend game by 8;
+	extend game by 6;
 	say "[line break]";
 	increase score by 25;
 	now hospquest is 4;
@@ -528,7 +530,7 @@ to say hospquestpt3:
 		say "     'What is this?' he exclaims as you pull out the bottle of dog milk.  'You already have some?  Astonishing!  I knew you would make a fine assistant, but this is most impressive.  There are numerous possibilities for why that dog creature is unique and some of them could affect the results of my other experiments.  Ascertaining or removing certain variables will greatly increase the likelihood of gaining meaningful results.";
 		delete Dog Milk;
 		now progress of Doctor Mouse is turns;
-		extend game by 8;
+		extend game by 6;
 		increase score by 25;
 		now hospquest is 6;
 
@@ -542,7 +544,7 @@ to say hospquestpt4:
 		say "     'You have it?  Excellent work.  I knew when you showed up that you'd make a fine assistant.  There was just something about you.'  He takes the jar of dog milk and starts drawing samples from it, putting them into beakers for testing.  'It will take some time to complete my tests, but I expect I'll have something for you once the results are in.'";
 		delete Dog Milk;
 		now progress of Doctor Mouse is turns;
-		extend game by 8;
+		extend game by 6;
 		increase score by 20;
 		say "[line break]";
 		now hospquest is 6;
@@ -554,6 +556,7 @@ to say hospquestpt5:
 		say "     'I have been able to perform some research on the sample you brought back.  While some of the test results are inconclusive, I have been able to rule out several of my earlier hypotheses on its nature.  This knowledge will help me advance several of my other projects and better focus my research into ones which will yield results.  And I do believe I said I'd have a reward for you.'";
 		say "     'From my research into the factors activated in the collie's physiology by the nanites, I have been able to create a stamina booster, which will increase one's physical endurance.'  He smiles as he takes a syringe from a refridgerated storage case.  'As you are acting as my agent in the field, it is important that you be hardy enough to deal with the creatures out there.  And so, this is for you,' he says as he merrily injects you with it.";
 		increase stamina of player by 2;
+		increase maxhp of player by level of player plus 1;
 		say "     [bold type]Your stamina has been increased by 2.[roman type][line break]";
 		increase score by 10;
 		say "     'I do have another task for you, my helpful assistant,' the albino mouse continues.  'At the state fair across the city, there is a strange, rubber-like creature.  While I have obtained samples from the latex foxes and wolves running around, I wish to see how this feline's unusual body composition differs from theirs.  You should get three samples, as I know from experience working with the fox and wolf samples that it may require several to get any worthwhile data.  Being felines, these creatures seem able to entice the orderlies into becoming their mates and the vixens are not strong enough to deal with them on their own.  And when several vixens go together, these felines band together and repel them.  I'm hoping, as a lone individual, you will be successful where they have not.'";
@@ -611,11 +614,26 @@ to say hospquestpt7:
 	if nerminepackage is 5 and sabtoothed is 1 and triclamped is 1:
 		say "     'Excellent work, my assistant.  Now I have much to do.  I hope you will understand if I ask you to leave me to my investigations for a time.  But as a reward, you may have this for the moment,' the small mouse says as he passes you a medkit.";
 		say "     'For the reward to come, I would like to make an analysis of your nanites to better help you out there.'  You start to mumble an objection, but he brushes it off.  'Now, now.  You aren't afraid of a little needle, are you?  I am a doctor, after all.'  And then, while you start to consider the matter further, he pricks you with the needle and withdraws some blood.  'There.  All done.  Now, that wasn't so bad, was it?' he says, like a doctor speaking to a young patient.";
-		extend game by 12;
+		say "     'Give me a couple of days to work on all this.  I hope to have a suitable reward for you at that time.'";
+		now progress of Doctor Mouse is turns;
+		extend game by 8;
 		increase score by 40;
 		say "[line break]";
 		now hospquest is 9;
 
+to say hospquestpt8:
+	if progress of doctor mouse minus turns is less than 16:
+		say "     'Please leave me to my research for the moment.  I believe I shall have something special for you when I am done.'";
+	otherwise:
+		say "     As you start to converse with Dr Mouse, one of the jaguar orderlies comes in signals for the little mouse's attention.  Dr Mouse goes over to him and speaks to him.  As you watch, you can't help noticing the jaguar's huge fangs, familiarly like those of the sabertooth tigers you faced.  He also seems to be larger and more muscled.  His shirt doesn't quite fit right and has popped its seams at the shoulders.  Dr Mouse eventually sends him off.";
+		say "     Coming back to you, Dr Mouse smiles and opens a sample fridge, taking out another injection.  'As I promised, I have something special for you.  I have made progress in analyzing the nanites['] method of healing and have a formula which will increase your healing rate.'  As he starts to prepare your arm for the injection, he continues, 'It will increase your recovery over time.  It will also give you a little more effectiveness from any field medecine you practice.  It won't measure up to proper medical training,' the white mouse doctor says, 'but it's still an improvement.'";
+		say "     Before you let the mouse inject you, you ask about the jaguars and if you should expect anything like that to happen.  Dr Mouse is briefly puzzled by your question.  'Oh, you mean the fangs?  Those are just the result of a test I did on them.  I needed to see how adjustments to the nanites would propogate through the population.  This one was more effective than the first attempt with the vixens.  Besides, the creatures out in the city are starting to form into factions and they need to be able to keep the hospital secure.  But don't worry.  This is just an increase to their healing protocols.'  Feeling reassured about the injection if not the jaguars, you allow him to inject you.";
+		say "     You have gained the [']Rapid Healing['] feat.";
+		add "Rapid Healing" to the feats of the player;
+		wait for any key;
+		say "     As the nanite update runs through your system, you ask what the jaguar wanted that was so upsetting.  'Oh, I wasn't too upset about the news.  It's just harder to understand them now that they've got those big teeth.  There's a little pest running around the hospital, distracting the other staff at times.  Nothing you need concern yourself with, though.  They'll catch the pink perv sooner or later.'";
+		say "     Dr Mouse heads back to his worktable.  'I have to get back to things now.  I don't think I'll have anything for you for at least a few days.  Please give me some time to process all of these results.'";
+		now hospquest is 10;
 
 Section 6 - Museum Quests - Triceratops
 

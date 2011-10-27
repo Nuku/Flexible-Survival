@@ -230,7 +230,7 @@ sarahpregnant is a number that varies.
 Sarahpups is a number that varies.
 
 To say sarahpupstate:
-	if sarahpups is greater than 12:
+	if sarahpups is greater than 11:
 		say "Sarah is surrounded by her large brood of [sarahpups] puppies, several of them vying for her attention at any one second in time. Fortunately this seems to make your little husky breeder happier than ever as she smiles at your and her puppies and rubs her belly in anticipation of many more litters to come.";
 	otherwise if sarahpups is greater than 0:
 		say "Sarah is happily playing with your [sarahpups] husky puppies, keeping them happy and occupied while you explore the city, although from the looks the slutty husky is giving you even as she plays with the pups, she is already anticipating the next litter to come...";
@@ -241,9 +241,20 @@ An everyturn rule:
 	if sarahpregnant is 1:
 		say "You have a strange feeling in your body, as if you somehow just know that more of your offspring have entered this world, maybe you should go back and check on Sarah in the bunker.... and make sure she is filled with your fertile seed again.";
 		increase sarahpups by a random number between 1 and 4;
+		if "Proud Parent" is listed in feats of player:
+			increase sarahpups by a random number between 0 and 1;
+		if sarahpups is greater than 11 and "Proud Parent" is not listed in feats of player:
+			say "Having sired so many puppies, you feel buoyed with happiness and a greater urge to get through this ordeal to protect them.";
+			say "You and Sarah have earned the [']Proud Parent['] feat, making her more fertile and you more eager to protect your growing kennel.";
+			add "Proud Parent" to feats of player;
+			increase morale of the player by 5;
+			increase score by 12;
 		now sarahpregnant is 0;		
 	if sarahpregnant is greater than 1:
 		decrease sarahpregnant by 1;
+		if "Proud Parent" is listed in feats of player and a random chance of 1 in 3 succeeds and sarahpregnant > 1:
+			decrease sarahpregnant by 1;
+
 
 when play ends:
 	if sarah is in the bunker:
