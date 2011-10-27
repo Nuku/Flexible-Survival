@@ -875,15 +875,9 @@ carry out hunting:
 				if "Expert Hunter" is listed in feats of player and a random chance of 1 in 3 succeeds:
 					if name entry matches the text topic understood, case insensitively:
 						now x is x;
-<<<<<<< HEAD
 					otherwise:
 						next;
 				add x to q;
-=======
-				otherwise:
-					next;
-					add x to q;
->>>>>>> 51a31e3acd439e3c8b46dd239a1ffa0a2b3870bc
 			if name entry matches the text topic understood, case insensitively:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
