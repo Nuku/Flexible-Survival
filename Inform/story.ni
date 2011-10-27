@@ -864,6 +864,11 @@ carry out hunting:
 					if lev entry is greater than level of player plus levelwindow, next;
 				otherwise:
 					next;
+				if "Expert Hunter" is listed in feats of player and a random chance of 1 in 3 succeeds:
+					if name entry matches the text topic understood, case insensitively:
+						now x is x;
+					otherwise:
+						next;
 				add x to q;
 			if name entry matches the text topic understood, case insensitively:
 				say "You are almost certain you saw some [name entry] tracks...";
