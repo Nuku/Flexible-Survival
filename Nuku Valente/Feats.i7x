@@ -73,9 +73,12 @@ instead of addfeating the fun feats:
 		addfeat "Female Preferred" with "You will reject male mutation";
 	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
 		addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership";
-	addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
+	if "Modest Organs" is not listed in feats of player:
+		addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
 	addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";
 	addfeat "One Pair" with "You will not grow more than two breasts.";
+	if "One Way" is not listed in feats of player:
+		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits.";
 	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
 	if "Cold Fish" is not listed in feats of player:
 		addfeat "Horny Bastard" with "You just can't get enough. Every few hours your libido raises all on its own.";

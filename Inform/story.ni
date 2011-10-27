@@ -1780,11 +1780,15 @@ This is the sex change rule:
 	if ( the sex entry is "Male" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and cock length of player is less than cock length entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
 		increase cock length of player by 1;
 		increase cock length of player by ( cock length entry minus cock length of player ) divided by 3;
+		if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
+			now cock length of player is 8;
 		follow the cock descr rule;
 		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as it gains in length, becoming [descr]!";
 	if ( the sex entry is "Male" or the sex entry is "Both"  or "Herm Preferred" is listed in feats of player) and cock width of player is less than cock width entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
 		increase cock width of player by 1;
 		increase cock width of player by ( cock width entry minus cock width of player ) divided by 3;
+		if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
+			now cock width of player is 4;
 		follow the cock descr rule;
 		say "You can see your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]!";
 	if cocks of player is less than cocks entry and ( the sex entry is "Male" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and "Female Preferred" is not listed in feats of player:
@@ -1821,11 +1825,15 @@ This is the sex change rule:
 	if ( the sex entry is "Female" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and cunt length of player is less than cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		increase cunt length of player by 1;
 		increase cunt length of player by ( cunt length entry minus cunt length of player ) divided by 3;
+		if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
+			now cunt length of player is 8;
 		follow the cunt descr rule;
 		say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as it grows deeper into your body, becoming [descr]!";
 	if ( the sex entry is "Female" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and cunt width of player is less than cunt width entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		increase cunt width of player by 1;
 		increase cunt width of player by ( cunt width entry minus cunt width of player ) divided by 3;
+		if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
+			now cunt width of player is 4;
 		follow the breast descr rule;
 		say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as your thighs are nudged apart to make room for those thickening lips, growing wider!";
 	if cunts of player is less than cunts entry and ( the sex entry is "Female" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and "Male Preferred" is not listed in feats of player:
