@@ -66,7 +66,7 @@ When Play begins:
    now face entry is "large, jutting muzzle adorned with a large horn.  Two other horns grow from your brow, facing forward.  At the back of your head, you have a broad, bony frill which rings your";	[ Face description, format as the text "You have a (your text) face."]
    now body entry is "strong and sturdy, but always itching to sway and dance to a beat you can't quite hear.  Your hands and feet are clawed, saurian ones, but still nimble and graceful.";	[ Body Description, format as the text "Your Body is (your text)"]
    now skin entry is "a mix of brown and green scales adorn your";	[ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "You have a thick, scaled tail which sways behind you like a metronome, making your hips sway with rhythm.";	[ Tail description, write a whole Sentence or leave blank. ] 
+   now tail entry is "You have a thick, scaled tail which sways behind you like a metronome, making your hips sway with rhythm.  Your ass is firmly toned, like a professional dancer's.";	[ Tail description, write a whole Sentence or leave blank. ] 
    now cock entry is "ridged saurian";	[ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it stretches forward into a large, pointed muzzle.  A hard, bony horn grows atop your nose.  A bony frill and another pair of horns grow onto your head";	[ face change text. format as "Your face feels funny as (your text)" ]
    now body change entry is "becomes strong, yet flexible.  Your hands and feet change, becoming clawed and saurian in shape, but still nimble and graceful"; [ body change text. format as "Your body feels funny as (your text)." ]
