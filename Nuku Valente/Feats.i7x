@@ -71,9 +71,14 @@ instead of addfeating the fun feats:
 		addfeat "Male Preferred" with "You will reject female mutation";
 	if "Male Preferred" is not listed in feats of player:
 		addfeat "Female Preferred" with "You will reject male mutation";
-	addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
+	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
+		addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership";
+	if "Modest Organs" is not listed in feats of player:
+		addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
 	addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";
 	addfeat "One Pair" with "You will not grow more than two breasts.";
+	if "One Way" is not listed in feats of player:
+		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits.";
 	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
 	if "Cold Fish" is not listed in feats of player:
 		addfeat "Horny Bastard" with "You just can't get enough. Every few hours your libido raises all on its own.";
@@ -127,6 +132,8 @@ instead of addfeating the basic feats:
 			addfeat "Black Belt" with "Your martial artistry is amazing. Your damage increases further while unarmed, and you have a small(10%) chance of avoiding hits that would otherwise have landed.";
 			addfeat "Natural Armaments" with "You gain additional power based on the mutation of your body, borrowing the natural weapons of your infection.";
 		addfeat "Stealthy" with "Your chance of running into a monster is decreased while you are scavenging or exploring.";
+	if "Stealthy"is listed in feats of player:
+		addfeat "Experienced Scout" with "You have a chance of avoiding a random fight altogether if you so wish it.";
 	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";
 	if strength of player is greater than 14:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";

@@ -875,9 +875,9 @@ carry out hunting:
 				if "Expert Hunter" is listed in feats of player and a random chance of 1 in 3 succeeds:
 					if name entry matches the text topic understood, case insensitively:
 						now x is x;
-				otherwise:
-					next;
-					add x to q;
+					otherwise:
+						next;
+				add x to q;
 			if name entry matches the text topic understood, case insensitively:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
@@ -932,6 +932,11 @@ carry out hunting:
 						Fight;
 				otherwise:
 					say "Despite your searches, you fail to find it.";
+					now dice is a random number from 1 to 20;
+					if "Curious" is listed in feats of player and dice is greater than 12:
+						Fight;
+					otherwise if dice is greater than 14:
+						Fight;
 				break;
 		if found is 0:
 			repeat with z running through situations:
@@ -1777,17 +1782,21 @@ This is the sex change rule:
 			now cocks entry is 1;
 		if cunts entry is greater than 1:
 			now cunts entry is 1;
-	if ( the sex entry is "Male" or the sex entry is "Both") and cock length of player is less than cock length entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
+	if ( the sex entry is "Male" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and cock length of player is less than cock length entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
 		increase cock length of player by 1;
 		increase cock length of player by ( cock length entry minus cock length of player ) divided by 3;
+		if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
+			now cock length of player is 8;
 		follow the cock descr rule;
 		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as it gains in length, becoming [descr]!";
-	if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player is less than cock width entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
+	if ( the sex entry is "Male" or the sex entry is "Both"  or "Herm Preferred" is listed in feats of player) and cock width of player is less than cock width entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
 		increase cock width of player by 1;
 		increase cock width of player by ( cock width entry minus cock width of player ) divided by 3;
+		if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
+			now cock width of player is 4;
 		follow the cock descr rule;
 		say "You can see your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]!";
-	if cocks of player is less than cocks entry and ( the sex entry is "Male" or the sex entry is "Both") and "Female Preferred" is not listed in feats of player:
+	if cocks of player is less than cocks entry and ( the sex entry is "Male" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and "Female Preferred" is not listed in feats of player:
 		if cocks of player is 0 or cock length of player is 0 or cock width of player is 0:
 			now the cock length of player is cock length entry divided by 3;
 			now the cock width of player is cock width entry divided by 3;
@@ -1807,22 +1816,32 @@ This is the sex change rule:
 		follow the cunt descr rule;
 		say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[or]pussy[or]vagina[or]cleft[at random] begins to shrink. [if cunts of player is greater than 1]They[otherwise]It[end if] dwindles in size, becoming [descr]. ";
 		if cunt length of player is less than 1 or cunt width of player is less than 1:
-			say "With a sickening noise, you cease to be female all together.";
-			now the cunts of the player is 0;
+			if "Herm Preferred" is listed in feats of player:
+				if cunt length of player is less than 4:
+					now cunt length of player is 4;
+				if cunt width of player is less than 2:
+					now cunt width of player is 2;
+			otherwise:
+				say "With a sickening noise, you cease to be female all together.";
+				now the cunts of the player is 0;
 		if cunts of the player is greater than 1 and a random chance of 1 in 3 succeeds:
 			say "An odd wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] have vanished!";
 			decrease cunts of player by 1;
-	if ( the sex entry is "Female" or the sex entry is "Both") and cunt length of player is less than cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
+	if ( the sex entry is "Female" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and cunt length of player is less than cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		increase cunt length of player by 1;
 		increase cunt length of player by ( cunt length entry minus cunt length of player ) divided by 3;
+		if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
+			now cunt length of player is 8;
 		follow the cunt descr rule;
 		say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as it grows deeper into your body, becoming [descr]!";
-	if ( the sex entry is "Female" or the sex entry is "Both") and cunt width of player is less than cunt width entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
+	if ( the sex entry is "Female" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and cunt width of player is less than cunt width entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
 		increase cunt width of player by 1;
 		increase cunt width of player by ( cunt width entry minus cunt width of player ) divided by 3;
+		if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
+			now cunt width of player is 4;
 		follow the breast descr rule;
 		say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorges[or]swells[or]throbs[at random][otherwise][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorge[or]swell[or]throb[at random][end if] as your thighs are nudged apart to make room for those thickening lips, growing wider!";
-	if cunts of player is less than cunts entry and ( the sex entry is "Female" or the sex entry is "Both") and "Male Preferred" is not listed in feats of player:
+	if cunts of player is less than cunts entry and ( the sex entry is "Female" or the sex entry is "Both" or "Herm Preferred" is listed in feats of player) and "Male Preferred" is not listed in feats of player:
 		if cunt length of player is 0:
 			now the cunt length of player is cunt length entry divided by 3;
 			now the cunt width of player is cunt width entry divided by 3;
@@ -1840,8 +1859,14 @@ This is the sex change rule:
 		follow the cock descr rule;
 		say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cock[or]man meat[or]shaft[or]pole[at random] begins to shrink. [if cunts of player is greater than 1]They[otherwise]It[end if] dwindles in size, becoming [descr]. ";
 		if cock length of player is less than 1 or cock width of player is less than 1:
-			say "You barely have time to give a whimper as you cease to be a male.";
-			now the cocks of the player is 0;
+			if "Herm Preferred" is listed in feats of player:
+				if cock length of player is less than 4:
+					now cock length of player is 4;
+				if cock width of player is less than 2:
+					now cock width of player is 2;
+			otherwise:
+				say "You barely have time to give a whimper as you cease to be a male.";
+				now the cocks of the player is 0;
 		if cocks of the player is greater than 1 and a random chance of 1 in 3 succeeds:
 			say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 			decrease cocks of player by 1;
@@ -2396,6 +2421,11 @@ To fight:
 			increase hp entry by debit * 2;
 			increase wdam entry by debit ;
 		say "You run into a [name entry]. [desc entry].";
+		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds:
+			say "You notice an avenue of escape! Do you want to abort the combat?";
+			if the player consents:
+				now combat abort is 1;
+				say "You slip away before [name entry] can begin their assault.";
 		now lost is 0;
 		if combat abort is 1:
 			now combat abort is 0;
