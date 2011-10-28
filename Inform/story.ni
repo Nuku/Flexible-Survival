@@ -692,6 +692,7 @@ Include Wolverine Guard for FS by Stripes.
 Include Feral Wolf for FS by Shadowwolf94.
 Include Anthro Shaft Beast for FS by Dragonflayer.
 Include Feral Shaft Beast for FS by Dragonflayer.
+Include Wrestling Wolf For Fs by Volcblaze.
 Include Pirate Island by Sarokcat.
 Include Little Fox by Sarokcat.
 Include Felinoid Companion by Sarokcat.
