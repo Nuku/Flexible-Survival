@@ -3730,7 +3730,7 @@ Carry out milking:
 	if the bodyname of the player is "Hermaphrodite Gryphon":
 		say "You milk your massive blue furred tits, reveling in the pleasant sensations.";
 		repeat with T running from one to the breasts of the player:
-			add "Gryphon Milk" to the invent of the player;
+			add "gryphon milk" to the invent of the player;
 	otherwise if the bodyname of the player is "Shemale Smooth Collie":
 		say "You milk your many large furred breasts, placing the milk in your bag while recuperating.";
 		repeat with T running from one to the breasts of the player:
