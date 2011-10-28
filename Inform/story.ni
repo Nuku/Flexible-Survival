@@ -931,7 +931,7 @@ carry out hunting:
 					otherwise if dice is greater than 14:
 						Fight;
 				otherwise:
-					say "Despite your searches, you fail to find it.";
+					say "Despite your searches, you fail to find it.[line break]";
 					now dice is a random number from 1 to 20;
 					if "Curious" is listed in feats of player and dice is greater than 12:
 						Fight;
@@ -958,7 +958,12 @@ carry out hunting:
 						otherwise if dice is greater than 14:
 							Fight;
 					otherwise:
-						say "Despite your searches, you fail to find it.";
+						say "Despite your searches, you fail to find it.[line break]";
+						now dice is a random number from 1 to 20;
+						if "Curious" is listed in feats of player and dice is greater than 12:
+							Fight;
+						otherwise if dice is greater than 14:
+							Fight;
 					break;
 		if found is 0:
 			say "[bold type]You don't think what you[apostrophe]re looking for can be found here...[roman type]";
