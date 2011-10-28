@@ -932,6 +932,11 @@ carry out hunting:
 						Fight;
 				otherwise:
 					say "Despite your searches, you fail to find it.";
+					now dice is a random number from 1 to 20;
+					if "Curious" is listed in feats of player and dice is greater than 12:
+						Fight;
+					otherwise if dice is greater than 14:
+						Fight;
 				break;
 		if found is 0:
 			repeat with z running through situations:
