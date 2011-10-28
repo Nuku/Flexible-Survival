@@ -33,7 +33,7 @@ When Play begins:
 	now tail entry is "You feel a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquifying.  The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything! ";
 	now cock entry is "You have a massive demon cock";
 	now face change entry is "you begin to feel your skull reshaping under your skin. You nose dissapears, leaving a pair of slits. Your teeth feel strange as they sharpen and grow in length, giving you a monstrous smile. Your eyes have changed, and, looking in a pool of water, you see that the white parts have become yellow, and your irises are now red."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your arms and legs begin to grow longer and more muscular. Your cheast widens as well.";
+	now body change entry is "your arms and legs begin to grow longer and more muscular. Your chest widens as well.";
 	now skin change entry is "you begin to feel a strange burning sensation. You look down, and realize that your skin has turned a deep shade of purple!";
 	now ass change entry is "you fell it becoming tighter, leaner, and more fit."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it begins to grow thicker, large bumps sprouting up all across its surface. At first, you think it is some sort of stange disease, but, then you realize that this entire thing is some sort of disease";
