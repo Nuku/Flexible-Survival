@@ -87,8 +87,8 @@ instead of addfeating the fun feats:
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
 	addfeat "Submissive" with "Gain extra XP for submitting to monsters.";
-	if "Pure" is not listed in feats of player, addfeat "Corrupt" with "You have a stronger grip on your humanity.";
-	if "Corrupt" is not listed in feats of player, addfeat "Pure" with "You have a weaker grip on your humanity.";
+	if "Pure" is not listed in feats of player, addfeat "Corrupt" with "You have a weaker grip on your humanity.";
+	if "Corrupt" is not listed in feats of player, addfeat "Pure" with "You have a stronger grip on your humanity.";
 	addfeat "Junk Food Junky" with "Junk food is better for you than regular food and water.";
 	addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
 
