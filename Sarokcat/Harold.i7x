@@ -20,7 +20,7 @@ The conversation of Harold is { "[Haroldtalking]" };
 To say Haroldtalking:
 	if Haroldtalk is 0:[first time you encounter the npc text]
 		say "'Hey there Newcomer, the names Harold,' The large unicorn says with a smile on his equine muzzle as he leans forward on the bar and stretches out a hand to welcome you. 'Good to see another friendly face around here, especially one that isn[apostrophe]t 'too friendly', if you know what I mean.' Harold says with a chuckling nicker of laughter. 'Plenty of 'too friendly' beasts out there already that I[apostrophe]m sure you have encountered already.' He nods knowingly at you as you shake his rather large hooflike hand. 'Had my own encounter with one as I[apostrophe]m sure you can tell already, though strangely enough it was a horse and not a unicorn that played 'hide the horn' with me.' Harold winks at you as he says this, resting his arms easily on the bar as a fond grin crosses his equine muzzle. 'Dunno why I ended up like this instead of a horse myself, but it does have some benefits, main one of which is that I seem to have kept my sanity while a buncha the others lost it.' The unicorn says with a shrug, before leaning close and saying in a lower tone of voice, 'The secondary benefit of course is what I ended up 'hung like' if ya get what I[apostrophe]m saying.' Harold whispers teasingly for your ears only, his ribald statement making you smile with amusement, even as you find yourself growing slightly aroused.";
-		increase Haroldtalk by 1:
+		increase Haroldtalk by 1;
 		stop the action;
 	if Haroldtalk is 1:
 		say "'Hey there again, been thinking about you actually.' The large unicorn bartender says with a smile as you sit down at the bar. 'I see you still wander around the city a lot, while most of us stick close to safety.' Harold says with a slight questioning tone to his voice. The unicorn smiles as you nod in response and continues, 'Perfect! I was hoping you would say that, see I was wondering what happened to a friend of mine out there, and I was hoping you could go check on them for me if you had some spare time?' Harold asks you hopefully.  Do you offer to help the bartender find his friend?";
@@ -64,7 +64,7 @@ Drinkserved is a number that varies. Drinkserved is usually 0.
 Drink bar is in The PALOMINO.
 
 
-Drink bar is a man
+Drink bar is a man.
 The description of Drink bar is "This well stocked bar is full of a number of drinks you have never seen before, some of them obviously made on site or probably nearby, as they are stored in all sorts of different bottles obviously scavanged and cleaned for the purpose with their labels removed. A small Sign on the bar lists the available drinks. To order a specific drink from the bar, merely 'Order 'drink name'', although a small notation on the drink sign does say that there is a daily drink limit. The list of drinks is as follows.  Equestrian Ale. Black wolf beer. Cheetah Chaser. Succubi Delight. Gryphon gulp. Satyr Special. Panda Pint. Harpy heaven. Jaguar Lager. Sabre Savager. Chocolate Rum. Tigress Tequila. And Zebra Vodka.  ";
 
 Aledrinking is an action applying to nothing.

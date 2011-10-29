@@ -4,7 +4,7 @@ Tattoo Parlor by Sarokcat begins here.
 
 Section 1- Tattoo parlor
 
-Tattoo parlor is a room. It is fastravel. It is private [in order to make something only found through a quest or revealed, put 'It is private.' here as well]
+Tattoo parlor is a room. It is fasttravel. It is private [in order to make something only found through a quest or revealed, put 'It is private.' here as well]
 
 The description of Tattoo parlor is "The painted dragon tattoo parlor stands empty, though there are obviously signs someone had stockpiled food and water for quite a while, most of the food has obviously been eaten, and what water there is left is of dubious quality. Looking around you see signs that whoever was here last has only been gone for a couple of days at best, probably they were hiding here as long as they could before venturing out into the city when their supplies ran low. The tattoo parlor itself is both large and clean, rather reminescent of a barber shop with its large mirrors, hair dying equipment, and adjustable couches.  Every bit of the walls not  covered with mirrors, is devoted to all sorts of fantasy artwork, with everything from stylized dragons, to roaring felines, to biker gang symbols adorning the shop and displaying the different types of tattoos available.";
 
