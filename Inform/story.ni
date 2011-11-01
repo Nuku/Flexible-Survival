@@ -14,6 +14,7 @@ use MAX_SYMBOLS of 50000.
 use MAX_NUM_STATIC_STRINGS of 30000.
 use ALLOC_CHUNK_SIZE of 50000.
 use MAX_OBJECTS of 1000.
+use MAX_ACTIONS of 250.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
@@ -786,6 +787,7 @@ Include Candy Striper by Stripes.
 Include Hospital For Fs by Stripes.
 Include Naughty Nurse by Stripes.
 Include Triceratops For Fs by Stripes.
+Include Siamese Cats by Stripes.
 
 
 understand the command "feed" as something new.
