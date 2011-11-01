@@ -3104,10 +3104,16 @@ This is the Menu Exit Rule:
 
 Instead of examining the infection terminal:
 	say "Filled with glowing characters, the terminal lists all identified infections with some stats beside:[line break]";
+	let z be 0;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is a lev entry:
+			increase z by 1;
 			say "[Name Entry]: Danger Level: [lev entry], Typical Environment: [area entry][line break]";
+			if z is 15:
+				say "Press any key to continue.";
+				wait for any key;
+				now z is 0;
 	say "End List.";
 	say "Under it is something called a 'credit' list, how odd.";
 	say "[complete list of extension credits]";
