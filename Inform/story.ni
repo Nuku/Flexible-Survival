@@ -3115,6 +3115,7 @@ Instead of examining the infection terminal:
 				wait for any key;
 				now z is 0;
 	say "End List.";
+	wait for any key;
 	say "Under it is something called a 'credit' list, how odd.";
 	say "[complete list of extension credits]";
 
