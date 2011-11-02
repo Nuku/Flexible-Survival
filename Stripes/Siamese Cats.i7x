@@ -104,9 +104,9 @@ to say beatthesiamesecat:
 			otherwise if cocks of player > 0 and cunts of player > 0:	[HERM PLAYER]
 				say "[line break]     Well, with your dual equipment, you find yourself with one last decision.  What to do with your feline plaything?  Would you like to fill the kitty's hot pussy or have her eat you out? (Y-fuck the kitty / N-oral)";
 				if the player consents:
-					say "[line break][siamsex3]";
-				otherwise:
 					say "[line break][siamsex4]";
+				otherwise:
+					say "[line break][siamsex3]";
 			otherwise:									[NEUTER]
 				say "[line break]     You are ill-equipped to play with the felines decide to leave them be.";
 	otherwise:
