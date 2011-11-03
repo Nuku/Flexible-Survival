@@ -99,7 +99,7 @@ A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
 Grab Object is a kind of thing.
-A person has a grab object called weapon object.
+A person has a grab object called weapon object. A weapon object is usually journal;
 A armament is a kind of grab object.
 A armament has a text called weapon.
 A armament has a text called weapon type.
@@ -788,6 +788,7 @@ Include Hospital For Fs by Stripes.
 Include Naughty Nurse by Stripes.
 Include Triceratops For Fs by Stripes.
 Include Siamese Cats by Stripes.
+Include Inventory Management Enhancements for FS by mirumu.
 
 
 understand the command "feed" as something new.
@@ -3107,6 +3108,7 @@ This is the Menu Exit Rule:
 Instead of examining the infection terminal:
 	say "Filled with glowing characters, the terminal lists all identified infections with some stats beside:[line break]";
 	let z be 0;
+	sort table of random critters in lev order;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is a lev entry:
