@@ -163,25 +163,25 @@ to say siameseattack:
 		increase hp of player by absorbby;
 		let T be a random number between 1 and 4;
 		if T is 1:
-			say "The [siamesegender] feline in front of you charges in with (his/her) claws.  (He/She) growls angrily and slashes at you!  You take [dammy] damage!";
+			say "The [siamesegender] feline in front of you charges in with [if siamesegender is "male"]his[otherwise]her[end if] claws[if siamesegender is "male"].  He[otherwise].  She[end if] growls angrily and slashes at you!  You take [dammy] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "  After its attack, it lowers its stance and the (female/male) cat twirls across (his/her) back and moves to the forefront.  The second feline charges in to attack you now.";
+			say "  After its attack, it lowers its stance and the [if siamesegender is "male"]female[otherwise]male[end if] cat twirls across [if siamesegender is "male"]his[otherwise]her[end if] back and moves to the forefront.  The second feline charges in to attack you now.";
 		if T is 2:
 			say "The [siamesegender] cat attacking you sends a whirling kick against your side!  You take [dammy] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "  As (his/her) flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
+			say "  As [if siamesegender is "male"]his[otherwise]her[end if] flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
 		if T is 3:
 			say "The [siamesegender] feline strikes your chest with and open-palmed strike, knocking out your breath and forcing you to step back!  You take [dammy] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "  As you try to recover, (he/she) does a backflip while the other slides under (him/her), taking the forefront in the attack.";
+			say "  As you try to recover, [if siamesegender is "male"]he[otherwise]she[end if] does a backflip while the other slides under [if siamesegender is "male"]him[otherwise]her[end if], taking the forefront in the attack.";
 		if T is 4:
 			say "With an agile slide behind you, the [siamesegender] one moves behind you and grabs your arms, twisting them painfully behind you!  You take [dammy] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "This leaves you open at the front for the (female/male) to strike and lead the attack against you.";
+			say "This leaves you open at the front for the [if siamesegender is "male"]female[otherwise]male[end if] to strike and lead the attack against you.";
 		if siamesegender is "male":
 			say "[line break][swaptofemale]";
 		otherwise:
@@ -195,11 +195,11 @@ to say standardsiamattack:
 	if T is 1:
 		say "With a quick spin through the air, the [siamesegender] cat kicks your side!";
 	if T is 2:
-		say "Growling menacingly, the [siamesegender] feline rakes (his/her) claws across your chest!";
+		say "Growling menacingly, the [siamesegender] feline rakes [if siamesegender is "male"]his[otherwise]her[end if] claws across your chest!";
 	if T is 3:
 		say "In a flurry of measure blows, the [siamesegender] feline manages to make several quick strikes against you!";
 	if T is 4:
-		say "The feline drops quickly to the ground and sweeps with (his/her) legs, knocking you to the ground.  You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
+		say "The feline drops quickly to the ground and sweeps with [if siamesegender is "male"]his[otherwise]her[end if] leg, knocking you to the ground.  You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
 
 
 to say swaptomale:

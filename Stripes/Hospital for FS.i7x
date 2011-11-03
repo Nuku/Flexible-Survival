@@ -659,6 +659,7 @@ valhosp is a number that varies.
 
 Instead of resolving a Dinosaur Nest:
 	if nesteddino is 0:
+		now nesteddino is 1;
 		say "     Your search of the museum brings you to the dinosaur wing.  There, the great thunderlizards are on display.  You try to move quietly between the displays, trying to fulfill, perhaps foolishly, Dr Mouse's request for dinosaur hunting.  You move around, eventually find a large pile of junk in one corner that may be what you're looking for.  A mound of debris, tacky cushions, kitchy knick-knacks and old clothes have been build into a large nest.  You head over to it and start poking through it in the hopes of finding something.";
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
