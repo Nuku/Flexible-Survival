@@ -3108,6 +3108,7 @@ This is the Menu Exit Rule:
 Instead of examining the infection terminal:
 	say "Filled with glowing characters, the terminal lists all identified infections with some stats beside:[line break]";
 	let z be 0;
+	sort table of random critters in lev order;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is a lev entry:
