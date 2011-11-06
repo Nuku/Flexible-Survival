@@ -9,6 +9,15 @@ Section 1 - Monster Responses
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 
 siamesegender is a text that varies.
+Siamgender is a thing.
+Definition: Siamgender is male:
+	if siamesegender is "male", yes;
+	no;
+
+Definition: Siamgender is female:
+	if siamesegender is "female", yes;
+	no;
+	
 malecathp is a number that varies.
 femalecathp is a number that varies.
 
@@ -20,7 +29,7 @@ when play begins:
 
 to say losetosiamesecat:
 	say "     Having bested you, the two cats look you over.  'I beat[']em,' the [siamesegender] purrs to the other, 'so I get to go first.'  That said, the [siamesegender] steps forward and grabs you, getting you into position for a little fun while they both remove your remaining clothes.";
-	if siamesegender is "male":
+	if siamgender is male:
 		if cunts of player > 0:
 			say "     The tom gets you onto all fours and lines up his hard cock with your pussy.  His russet-brown cock teases at your folds as he purrs in your ear.  This quickly gets you excited and soon you're moaning for him to mount you.  Grinning, he nibbles your ear and slowly slides himself into you.";
 		otherwise:
@@ -163,26 +172,26 @@ to say siameseattack:
 		increase hp of player by absorbby;
 		let T be a random number between 1 and 4;
 		if T is 1:
-			say "The [siamesegender] feline in front of you charges in with [if siamesegender is "male"]his[otherwise]her[end if] claws[if siamesegender is "male"].  He[otherwise].  She[end if] growls angrily and slashes at you!  You take [dammy] damage!";
+			say "The [siamesegender] feline in front of you charges in with [if siamgender is male]his[otherwise]her[end if] claws[if siamgender is male].  He[otherwise].  She[end if] growls angrily and slashes at you!  You take [dammy] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "  After its attack, it lowers its stance and the [if siamesegender is "male"]female[otherwise]male[end if] cat twirls across [if siamesegender is "male"]his[otherwise]her[end if] back and moves to the forefront.  The second feline charges in to attack you now.";
+			say "  After its attack, it lowers its stance and the [if siamgender is male]female[otherwise]male[end if] cat twirls across [if siamgender is male]his[otherwise]her[end if] back and moves to the forefront.  The second feline charges in to attack you now.";
 		if T is 2:
 			say "The [siamesegender] cat attacking you sends a whirling kick against your side!  You take [dammy] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "  As [if siamesegender is "male"]his[otherwise]her[end if] flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
+			say "  As [if siamgender is male]his[otherwise]her[end if] flip ends, the other cat is already spinning forward with them, giving you a new attacker to face.";
 		if T is 3:
 			say "The [siamesegender] feline strikes your chest with and open-palmed strike, knocking out your breath and forcing you to step back!  You take [dammy] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "  As you try to recover, [if siamesegender is "male"]he[otherwise]she[end if] does a backflip while the other slides under [if siamesegender is "male"]him[otherwise]her[end if], taking the forefront in the attack.";
+			say "  As you try to recover, [if siamgender is male]he[otherwise]she[end if] does a backflip while the other slides under [if siamgender is male]him[otherwise]her[end if], taking the forefront in the attack.";
 		if T is 4:
 			say "With an agile slide behind you, the [siamesegender] one moves behind you and grabs your arms, twisting them painfully behind you!  You take [dammy] damage!";
 			if absorbby > 0:
 				say "  You prevent [absorbby] damage!";
-			say "This leaves you open at the front for the [if siamesegender is "male"]female[otherwise]male[end if] to strike and lead the attack against you.";
-		if siamesegender is "male":
+			say "This leaves you open at the front for the [if siamgender is male]female[otherwise]male[end if] to strike and lead the attack against you.";
+		if siamgender is male:
 			say "[line break][swaptofemale]";
 		otherwise:
 			say "[line break][swaptomale]";
@@ -195,11 +204,11 @@ to say standardsiamattack:
 	if T is 1:
 		say "With a quick spin through the air, the [siamesegender] cat kicks your side!";
 	if T is 2:
-		say "Growling menacingly, the [siamesegender] feline rakes [if siamesegender is "male"]his[otherwise]her[end if] claws across your chest!";
+		say "Growling menacingly, the [siamesegender] feline rakes [if siamgender is male]his[otherwise]her[end if] claws across your chest!";
 	if T is 3:
 		say "In a flurry of measure blows, the [siamesegender] feline manages to make several quick strikes against you!";
 	if T is 4:
-		say "The feline drops quickly to the ground and sweeps with [if siamesegender is "male"]his[otherwise]her[end if] leg, knocking you to the ground.  You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
+		say "The feline drops quickly to the ground and sweeps with [if siamgender is male]his[otherwise]her[end if] leg, knocking you to the ground.  You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
 
 
 to say swaptomale:
@@ -207,9 +216,9 @@ to say swaptomale:
 	now femalecathp is monsterhp;		[current hp saved as female]
 	now monsterhp is malecathp;		[male hp made current]
 	now siamesegender is "male";		[male now current cat]
-	now sex entry is "Female";		[male cat seeks to make player female]
+	now sex entry is "female";		[male cat seeks to make player female]
 	now dex entry is 16;
-	now wdam entry is 6;
+	if hardmode is false, now wdam entry is 6;
 	say "     The [bold type]male[roman type] cat is now your opponent![line break]";
 
 
@@ -218,9 +227,9 @@ to say swaptofemale:
 	now malecathp is monsterhp;		[current hp saved as male]
 	now monsterhp is femalecathp;		[female hp made current]
 	now siamesegender is "female";	[female now current cat]
-	now sex entry is "Male";		[female cat seeks to make player male]
+	now sex entry is "male";		[female cat seeks to make player male]
 	now dex entry is 20;
-	now wdam entry is 4;
+	if hardmode is false, now wdam entry is 4;
 	say "     The [bold type]female[roman type] cat is now your opponent![line break]";
 
 
@@ -278,7 +287,7 @@ When Play begins:
    now per entry is 14;
    now int entry is 12;
    now cha entry is 14;
-   now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+   now sex entry is "female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
    now hp entry is 39;            [ How many HP has the monster got? ]
    now lev entry is 5;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
    now wdam entry is 6;            [Amount of Damage monster Does when attacking.]
@@ -288,7 +297,7 @@ When Play begins:
    now cock width entry is 3;        [ Size of balls apparently ;) sneaky Nuku]
    now breasts entry is 2;            [ Number of Breasts infection will give you. ]
    now breast size entry is 3;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+   now male breast size entry is 0;    [ Breast size for if Sex=male, usually zero. ]
    now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
    now cunt length entry is 7;        [ Length of female sex  infection will attempt to give you. ]
    now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
