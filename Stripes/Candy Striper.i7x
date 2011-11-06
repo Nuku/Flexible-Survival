@@ -36,7 +36,7 @@ to say beatthecandycoon:
 			say "     You decide it best to just leave the horny coon to his own devices.";
 
 to say candycoondesc:
-	say "[line break]     You have encountered a cute raccoon in a pink, candy striper outfit.  The uniform is a bright pink with a white apron and skirt.  It has a few white stains scattered on it.  The raccoon has a slender, feminine build.  The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears.  The raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body.  That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt.  The gay boytoy grins playfully as you notice the growing bump in his mini skirk and moves in to play with you.";
+	say "[line break]     You have encountered a cute raccoon in a pink, candy striper outfit.  The uniform is a bright pink with a white apron and skirt.  It has a few white stains scattered on it.  The raccoon has a slender, feminine build.  The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears.  The raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body.  That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt.  The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
 
 
 Section 2 - Monster Insertion
