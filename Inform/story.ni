@@ -1586,11 +1586,11 @@ To process (X - a grab object):
 	if x is a medkit:
 		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
 		if "Expert Medic" is listed in the feats of the player:
-			increase healed by ( healed times 125 ) divided by 100;
+			now healed is ( healed times 125 ) divided by 100;
 		if "Rapid Healing" is listed in the feats of the player:
-			increase healed by ( healed times 110 ) divided by 100;
+			now healed is ( healed times 110 ) divided by 100;
 		if "Regeneration" is listed in the feats of the player:
-			increase healed by ( healed times 110 ) divided by 100;
+			now healed is ( healed times 110 ) divided by 100;
 		increase hp of player by healed;
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
@@ -3666,7 +3666,7 @@ Instead of conversing the doctor matt:
 			otherwise:
 				now mattcollection is 2;
 	if mattcollection > 0:
-		say "     'I suggest you continue to assist Dr Mouse.  It will further ingratiate you to him and allow you to monitor his activities.  I want you to keep me informed on what he's receving and please bring a sample for me as well.  Nor do not wish to fall behind in my research to this little upstart.";
+		say "     'I suggest you continue to assist Dr Mouse.  It will further ingratiate you to him and allow you to monitor his activities.  I want you to keep me informed on what he's receving and please bring a sample for me as well.  Nor do I wish to fall behind in my research to this little upstart.";
 	say "He looks kind of busy right now.";
 
 
