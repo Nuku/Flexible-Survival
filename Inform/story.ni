@@ -1116,6 +1116,7 @@ understand "inv" as Inventorying.
 understand "inventory" as Inventorying.
 
 carry out Inventorying:
+	sort invent of player;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
 	if the number of entries in invent of player is greater than 0:
 		let weight be 0;
