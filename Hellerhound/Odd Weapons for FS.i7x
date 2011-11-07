@@ -5,13 +5,20 @@ Section 1 - Garbage can lid
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Garbage Can Lid"	"The lid of a garbage can, usable as a weapon."	4	garbage can lid
-"Infected Sword"	"A sword with cloudy metal found in a sea of slime. It is infectious, and keeps changing you."	10	infected sword
+"garbage can lid"	"The lid of a garbage can, usable as a weapon."	4	garbage can lid
+"infected sword"	"A sword with cloudy metal found in a sea of slime. It is infectious, and keeps changing you."	10	infected sword
 "dirty whip"	"A whip covered with dripping horse cum. It is infectious, and was found abandoned by its owner."	3	dirty whip
-"Whip"	"A whip that was once covered with horse cum. It has metal studs."	2	clean whip
+"whip"	"A whip that was once covered with horse cum. It has metal studs."	2	clean whip
 
+understand "whip" as clean whip.
+Does the player mean using the dirty whip when the dirty whip is owned: it is likely.
+Does the player mean littering the dirty whip when the dirty whip is owned: it is likely.
+Does the player mean littering the clean whip when the clean whip is owned: it is very likely.
+Does the player mean grabbing the dirty whip when the dirty whip is visible: it is likely.
+Does the player mean grabbing the clean whip when the clean whip is visible: it is very likely.
 
-
+When Play begins:
+	now the printed name of clean whip is "whip";
 
 dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your horsy whip[or]white streak[at random]". The weapon damage of dirty whip is 5. The weapon type of dirty whip is "Melee". It is not temporary.
 
@@ -45,7 +52,7 @@ Smelly garbage is a situation.
 instead of resolving a smelly garbage:
 	say "You come across a garbage pail, obviously not tended since before the infection began. The stuff inside is useless slime, but maybe you could use the lid as a shield?";
 	if the player consents:
-		add "Garbage Can Lid" to the invent of the player;
+		add "garbage can lid" to the invent of the player;
 		now smelly garbage is resolved;
 	otherwise:
 		say "You leave it there.";
@@ -143,7 +150,7 @@ instead of resolving sword nest:
 				say "[randominfect]";
 				say "The infected slime changes you.";
 				wait for any key;
-			add "Infected Sword" to the invent of the player;
+			add "infected sword" to the invent of the player;
 			now sword nest is resolved;
 		otherwise:
 			say "You leave the mess and its sword there without touching it.";
@@ -199,7 +206,7 @@ instead of resolving Destroyed bushes:
 				if found is three:
 					say "You dump the water bottles on the whip, washing off the cum.";	
 					say "You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
-					add "Whip" to the invent of the player;
+					add "whip" to the invent of the player;
 					now destroyed bushes is resolved;
 					now gotwhip is 1;
 				otherwise:
