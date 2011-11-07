@@ -17,8 +17,8 @@ Does the player mean littering the clean whip when the clean whip is owned: it i
 Does the player mean grabbing the dirty whip when the dirty whip is visible: it is likely.
 Does the player mean grabbing the clean whip when the clean whip is visible: it is very likely.
 
-When Play begins:
-	now the printed name of clean whip is "whip";
+[When Play begins:
+	now the printed name of clean whip is "whip";]
 
 dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your horsy whip[or]white streak[at random]". The weapon damage of dirty whip is 5. The weapon type of dirty whip is "Melee". It is not temporary.
 
