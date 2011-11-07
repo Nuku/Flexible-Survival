@@ -14,13 +14,13 @@ Section 2 - Entering the Warehouse
 
 Definition: a person is facially human:
 	if the facename of the player is "human", yes;
-	if the facename of the player is "awesome", yes;
+	if the facename of the player is "Awesome tree", yes;
 	if the facename of the player is "city sprite", yes;
 	no;
 
 Definition: a person is skintone human:
 	if the skinname of the player is "human", yes;
-	if the skinname of the player is "awesome", yes;
+	if the skinname of the player is "Awesome tree", yes;
 	if the skinname of the player is "elf", yes;
 	if the skinname of the player is "city sprite", yes;
 	if the skinname of the player is "harpy", yes;
@@ -28,14 +28,17 @@ Definition: a person is skintone human:
 
 Definition: a person is bodily human:
 	if the bodyname of the player is "human", yes;
-	if the bodyname of the player is "awesome", yes;
+	if the bodyname of the player is "Awesome tree", yes;
 	no;
 
 Instead of entering the Storage Room:
 	try going south;
 
-[Instead of going south from the Abandoned Lot:
-	try going through the Warehouse Door;]
+Instead of going through the Warehouse Door:
+	if location of the player is the Abandoned Lot:
+		try going south;
+	otherwise:
+		move the player to the Abandoned Lot;
 
 Instead of going south from the abandoned lot:
 	if Stevenremoved is 0:
