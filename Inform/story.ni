@@ -1682,12 +1682,22 @@ carry out littering something(called x):
 		stop the action;
 	repeat with Q running through invent of the the player:
 		increase number by 1;
-		if q matches the regular expression printed name of x, case insensitively:
+		if q exactly matches the text printed name of x, case insensitively:
 			now found is 1;
 			add q to the invent of the location of the player;
 			remove entry number from invent of the player;
 			say "You set down the [q].";
-			break;
+			break;	
+	if found is 0:
+		now number is 0;
+		repeat with Q running through invent of the the player:
+			increase number by 1;
+			if q matches the regular expression printed name of x, case insensitively:
+				now found is 1;
+				add q to the invent of the location of the player;
+				remove entry number from invent of the player;
+				say "You set down the [q].";
+				break;				
 	if found is 0:
 		say "You don't see any [x] in your backpack.";
 
