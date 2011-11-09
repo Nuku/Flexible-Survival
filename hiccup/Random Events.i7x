@@ -90,7 +90,7 @@ the sarea of Tracks is "Outside";
 After resolving a tracks, try looking;
 
 Instead of Resolving a Tracks:
-	say "While exploring the city, you discover a short trail of footprints leading through soom mud. At first, the footprints are human, but the tracks slowly change until they look like they were made by hooves. You follow the tracks as long as you can, but you eventually lose the trail.";
+	say "While exploring the city, you discover a short trail of footprints leading through some mud. At first, the footprints are human, but the tracks slowly change until they look like they were made by hooves. You follow the tracks as long as you can, but you eventually lose the trail.";
 	increase the score by 1;
 	now Tracks is Resolved;
 		
