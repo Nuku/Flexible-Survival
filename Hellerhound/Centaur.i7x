@@ -190,6 +190,7 @@ to say centaurgrowtorso:
 
 
 When Play begins:
+	add "Mutant Centaur" to infections of guy;
 	Choose a blank row from Table of random critters;
 	now name entry is "Mutant Centaur"; [Name of your new Monster]
 	now attack entry is "The Centaur[one of] punches your face with its hand[or] headbutts you[or]'s green tentacles rise from under him and slap you[or] rears up and slams you with his front hooves[at random]."; [Text used when the monster makes an Attack]
