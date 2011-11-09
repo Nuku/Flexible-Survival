@@ -867,7 +867,7 @@ check hunting:
 carry out hunting:
 	let Q be a list of numbers;
 	let found be 0;
-	repeat with X running from 1 to number of rows in table of random critters:
+	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is no area entry, next;
 		if area entry matches the text battleground:
@@ -1552,7 +1552,7 @@ To process (X - a grab object):
 		say "[line break]";
 	if x is infectious and "Iron Stomach" is not listed in feats of player:
 		let found be 0;
-		repeat with y running from 1 to number of rows in table of random critters:
+		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is strain of x:
 				now monster is y;
@@ -1779,7 +1779,7 @@ instead of trading the demon seed when the current action involves the ronda:
 	say "Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy, groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
 	remove ronda from play;
 	now hp of ronda is -1;
-	repeat with y running from 1 to number of rows in table of random critters:
+	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Slut Rat":
 			now area entry is "Mall";
@@ -1954,7 +1954,7 @@ To grow breasts by (x - a number):
 To Infect:
 	choose row monster from the table of random critters;
 	while there is no name entry:
-		now monster is a random number from 1 to number of rows in table of random critters;
+		now monster is a random number from 1 to number of filled rows in table of random critters;
 		choose row monster from the table of random critters;
 		if there is no name entry:
 			next;
@@ -2274,7 +2274,7 @@ This is the player attack rule:
 				now dam is ( dam * 110 ) divided by 100;
 			if "Natural Armaments" is listed in feats of player and bodyname is not "human":
 				let z be 0;
-				repeat with y running from 1 to number of rows in table of random critters:
+				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
 					if name entry is bodyname of player:
 						now z is y;
@@ -2299,7 +2299,7 @@ This is the player attack rule:
 		if a random chance of 4 in 20 succeeds and "Tail Strike" is listed in feats of player:
 			if tailname of player is listed in infections of Tailweapon:
 				let z be 0;
-				repeat with y running from 1 to number of rows in table of random critters:
+				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
 					if name entry is bodyname of player:
 						now z is y;
@@ -2412,9 +2412,9 @@ To level up:
 	increase score by level of the player times level of the player;
 	
 To fight:
-	now monster is a random number from 1 to number of rows in the table of random critters;
+	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	let Q be a list of numbers;
-	repeat with X running from 1 to number of rows in table of random critters:
+	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is a lev entry:
 			if lev entry is greater than level of player plus levelwindow and hardmode is false:
