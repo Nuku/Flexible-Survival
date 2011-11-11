@@ -79,7 +79,8 @@ To dragonfuck:
 			otherwise:
 				say "Your morality wins over and you decide to abandon your plan to screw the trapped dragoness. If you[apostrophe]re going to help her, you[apostrophe]ll need to find a way to talk to her face to face. That means you need to find a way around this doorway that her body is blocking. You found this building by searching through the sewers, so maybe you should start there?";
 				now EvilChoiceTwo is 1;
-		say "You[apostrophe]ve already decided to help her instead of fucking her.";
+		otherwise:
+			say "You[apostrophe]ve already decided to help her instead of fucking her.";
 		stop the action;
 	otherwise:
 		Carry out DragonFuckDetails:
