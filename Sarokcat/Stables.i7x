@@ -4,17 +4,19 @@ Stables by Sarokcat begins here.
 
 Section 1- The Stables
 
-The Stables is a room. It is fastravel. It is private. 
+Stables is a room. It is fasttravel. It is private. 
+Stable is a room.
+Stalls is a room.
 
-The description of The Stables is "The lobby of this large sprawling building seems to be in surprisingly good repair. The room is lit by fashionable oil lamps lining the walls, filling the room with a warm light and illuminating the reception area. The reception desk is currently empty, although someone has set up an obviously handwritten sign that welcomes new visitors to 'The Stables' and asks that they ring the bell for service. Unfortunately there doesn[apostrophe]t appear to be a bell here to ring right now. A smaller sign is set on the other edge of the desk, advising all customers to please have payment ready when they enter the area.";
+The description of Stables is "The lobby of this large sprawling building seems to be in surprisingly good repair. The room is lit by fashionable oil lamps lining the walls, filling the room with a warm light and illuminating the reception area. The reception desk is currently empty, although someone has set up an obviously handwritten sign that welcomes new visitors to 'The Stables' and asks that they ring the bell for service. Unfortunately there doesn[apostrophe]t appear to be a bell here to ring right now. A smaller sign is set on the other edge of the desk, advising all customers to please have payment ready when they enter the area.";
 [in order to add additional rooms off the main room, merely type the new room and state that it is some direction from your current room. For example]
-Northeast of The Stables is Stalls.
-West of The Stables is Employee Access. 
+
+Northeast of Stables is Stalls.
+West of Stables is Employee Access. 
 
 The invent of The Stables is { "lucky horseshoe" , "lucky horseshoe" };
 
 [This part creates a hunting area for your location, feel free to ignore it or remove it if the area does NOT have a random encounter zone.]
-Stable is a room.
 Stable entry is a door. "The lobby trails off to the north where a series of elevators and large double doors can be seen.". It is dangerous.
 
 North of Stable entry is Stable.
@@ -24,9 +26,9 @@ The marea of Stable entry is "Stable".
 
 
 [Additional rooms are easy as well]
-Stalls is a room.
 
 The description of Stalls is "This room appears to be the small lobby to one of the guest wings, and while it looks like the main part of the building is still mostly boarded up, this part appears to have been repaired recently, and halls to the north and south appear to have been refurbished for use. Strangely enough, someone seems to have hung a sign in this area, labeling this particular area 'The Stalls'.";
+
 North of Stalls is Mares Quarters. 
 South of Stalls is Holding Pens.
 
@@ -55,10 +57,10 @@ Understand "Sample food" as Marefeeding;
 Understand "Sample Horsefood" as Marefeeding;
 
 Check Marefeeding:
-	If Feeding Table is not visable, say "huh?" instead;
+	If Feeding Table is not visible, say "huh?" instead;
 
 Carry out Marefeeding:
-	if Lastmarefed – turns is less then 8:
+	if Lastmarefed – turns is less than 8:
 		say "You wander over to the table filled with food for the mares again, only to see several of the mares shooting you rather dirty looks as you look over the food. Sighing slightly, you decide that being greedy about the food isn[apostrophe]t worth annoying the so far polite horsewomen, and decide to try to snag some of the food again at a later time.";
 	otherwise:
 		say "Wandering over to the table filled with food on the side of the room, you notice several of the mares seem quite amused as you browse the selection, several of them coming over to help. The mares selecting several different bits of food for you to try, all the while they are giggling to themselvs as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all the attention the mares have been giving you.";

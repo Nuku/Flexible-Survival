@@ -1,4 +1,5 @@
 d - non-folder found where author folders should be<br>
 Story.ni by Flexible Society Main File - title contains a full stop<br>
 Story.ni by Inform - title contains a full stop<br>
+Stable Related Events.i7x by Sarokcat - an extension with the right filename but in the wrong author's folder (the extension says it is 'Stable Related Events by  Sarokcat')<br>
 Needy Heat for FS.i7x by Telanda Softpaw - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is '	needy Heat For Fs by Telanda Softpaw')<br>

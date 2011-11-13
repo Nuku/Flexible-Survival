@@ -2,13 +2,13 @@ Stable Related Events by  Sarokcat begins here.
 
 "Adds a series of random events to Flexible Survival set in the stables area."
 
-Section 1- A Stable Situation
+Section 1- A Stabled Situation
 
-A Stable Situation is a situation.
+A Stabled Situation is a situation.
 
 Stablesearchstatus is a number that varies.
 
-Instead of Resolving a A Stable Situation:
+Instead of Resolving a A Stabled Situation:
 	if Stablesearchstatus is 0:
 		say "Wandering through the streets of the city, you hear a strange noise echoing through the streets, like the sound of numerous hooves hitting the sidewalk repeatedly. As the sound seems to be getting closer, you decide to take cover inside a nearby abandoned car, peeking out through the windows carefully to see just what is making such a racket. You appear to have gotten under cover just in the nick of time, as a small group of horselike men come trotting down the street, their equine faces scanning  the street carefully as they continue along, most likely looking for a new playmate or two. The horsemen pass your hiding spot without noticing you fortunately, and continue on their way down the streets. Getting out of the car carefully, you find yourself curious as to just where such a group of horses came from, and consider briefly for a minute following them to find out, only to sigh as you realize that as alert as that group was, trying to follow them would likely only result in you getting caught by them.";
 		now Stablesearchstatus is 1;
@@ -24,7 +24,7 @@ Instead of Resolving a A Stable Situation:
 				delete soda;
 				Move player to The Stables;
 				Now The Stables is known;
-				now A Stable Situation is resolved;				
+				now A Stabled Situation is resolved;				
 			otherwise:
 				say "Sighing as you search through your pack, the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don[apostrophe]t have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something, everyone likes snack food right?";
 			now Stablesearchstatus is 2;
@@ -42,7 +42,7 @@ Instead of Resolving a A Stable Situation:
 				delete soda;
 				Move player to The Stables;
 				Now The Stables is known;
-				now A Stable Situation is resolved;				
+				now A Stabled Situation is resolved;				
 			otherwise:
 				say "You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously,  the two guards looking on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don[apostrophe]t have anything the guards would like right now, and that if you want to get into this strange looking place you will need to come back later. Maybe with some chips and soda or something, everyone likes snack food right?";
 			stop the action;	
@@ -52,23 +52,6 @@ Instead of Resolving a A Stable Situation:
 		
 
 
-Section 2-  Event Name
-
-Event Name is a situation.
-The sarea of Event Name is "Stable";
-
-Instead of Resolving a Event Name:
-	say "Your event descriptive text here.";
-	Now Event Name is resolved;
-
-Section 3-  Event Name
-
-Event Name is a situation.
-The sarea of Event Name is "Stable";
-
-Instead of Resolving a Event Name:
-	say "Your event descriptive text here.";
-	Now Event Name is resolved;
 
 Stable Related Events ends here.
 
