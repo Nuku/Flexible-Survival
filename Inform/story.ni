@@ -704,7 +704,6 @@ Include Fancy by Sarokcat n Verath.
 Include Horseman by Sarokcat n Verath.
 Include Daisy by Sarokcat n Verath.
 Include Onyx by Sarokcat n Verath.
-Include Pirate Island by Sarokcat.
 Include Little Fox by Sarokcat.
 Include Felinoid Companion by Sarokcat.
 Include Red Events by Stripes.
@@ -799,6 +798,7 @@ Include Naughty Nurse by Stripes.
 Include Triceratops For Fs by Stripes.
 Include Siamese Cats by Stripes.
 Include Inventory Management Enhancements for FS by mirumu.
+Include Albino Mouse by Stripes.
 
 
 understand the command "feed" as something new.
@@ -1973,7 +1973,7 @@ To Infect:
 	if "Resistant" is listed in feats of player:
 		now x is a random number from 1 to 6;	[17% no mutation]
 		if x is 6:
-			say "Your nanites programmed resistance to change prevents further mutation.";
+			say "Your nanites['] programmed resistance to change prevents further mutation.";
 			stop the action;
 	if "Microwaved" is listed in feats of player:
 		say "WARNING: [name entry] nanites detected!";
@@ -2853,7 +2853,7 @@ This is the cock descr rule:
 	otherwise if cock length of player is less than 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
 	otherwise if cock length of player is less than 8:
-		now descr is "[one of][or]normal sized[at random]";
+		now descr is "[one of]average in size[or]normal sized[at random]";
 	otherwise if cock length of player is less than 12:
 		now descr is "[one of]large[or]sizable[or]well-built[or]longer than average[at random]";
 	otherwise if cock length of player is less than 13:
@@ -3411,7 +3411,7 @@ When play ends:
 	if hp of player is less than 1:
 		stop the action;
 	if humanity of the player is less than 10 and hp of the player is greater than 0:
-		if bodyname of player is "Dragoness":
+		if bodyname of player is "Dragoness" and hp of doctor matt > 0:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 		if bodyname of player is "Panther Taur":
 			say "You get the sudden urge to prowl, and begin seeking an ideal mate. Something within you does not allow you to accept any but the strongest.[if cocks of player is greater than 1] Oddly enough, exposed and vulnerable females seem to always be acceptable. Just the thought of pinning a female down and shoving your [cock size desc of player] [cock of player] rod into their depths is enough to give you a raging hard on.[end if]";
@@ -3488,7 +3488,7 @@ The conversation of Ronda is { "Hey there, sugar, you just call me Ronda.", "You
 Ronda Mallrat is in Mall Atrium.
 
 Orthas is a person. "A dragon person, clearly female, is watching the area. If her name badge is accurate, her name is 'Orthas'.".
-The description of Orthas is "A black scaled dragon woman. She stands about six and a half feet tall, with wings that are about three feet long each folded to her back. She watches the area intently, her arms crossed half the time. Behind her, a slender reptillian tail sways slowly. Her overall shape is human, especially those huge, F cup knockers that heave distractingly with every breath she takes.".
+The description of Orthas is "A black scaled dragon woman. She stands about six and a half feet tall, with wings that are about three feet long each folded to her back. She watches the area intently, her arms crossed half the time. Behind her, a slender reptilian tail sways slowly. Her overall shape is human, especially those huge, F cup knockers that heave distractingly with every breath she takes.".
 The conversation of Orthas is { "[if orthasstart is greater than 3]Hey there, how's momma?[otherwise]Hello there.[end if]", "[if orthasstart is greater than 2]Hey there, hot stuff.[otherwise]The good doctor is upstairs. You can see him. Don't cause trouble.[end if]", "You are pretty brave to wander the city right now.", "I would explore too if I wasn't guarding the doctor.", "What is it like out there?" }.
 Orthas is in Trevor Labs Lobby.
 
@@ -3686,8 +3686,57 @@ Instead of conversing the doctor matt:
 				increase score by 10;
 			otherwise:
 				now mattcollection is 2;
-	if mattcollection > 0:
+	if mattcollection > 0 and hp of doctor matt < 10:
 		say "     'I suggest you continue to assist Dr Mouse.  It will further ingratiate you to him and allow you to monitor his activities.  I want you to keep me informed on what he's receving and please bring a sample for me as well.  Nor do I wish to fall behind in my research to this little upstart.";
+	if hp of doctor matt is 10:
+		say "     'A mind like Dr Mouse's cannot be allowed to continue to exploit the nanite infection unhindered.  I will need you to take care of him.  And be sure to bring back what research materials you can.'";
+	if hp of doctor matt is 8 and hospquest is 13:		[Doc completely unawares, hospital finished]
+		say "     Having much to tell Dr Matt, you begin with your discovery of the unusual activity at the hospital and then the lab within.  You go on to talk about the strange doctor you found there, working away at solving the nanite mystery.  This gets his attention and he becomes much more interested in your tale.  As you continue, you summarize what the mouse related to you about his findings and hypotheses about the infection.  You tell him these were what prompted you to assist him with the tasks he asked you to perform.";
+		say "     You describe the apparent control he had over the creatures of the hospital.  You relate to him how the research coming from the samples you were collecting began to manifest as changes and increased power in the hospital denizens.  Dr Matt is perturbed to hear about this news, both that such experiments were happening and that he was not made aware of another potential source of information on the nanites.";
+		say "     But you do not dwell on that, instead moving on to the most recent incident and the doctor's offer.  Dr Matt is quite stunned by it and stammers some thanks for your decision to side with him over the mouse doctor.";
+		if susan is visible:
+			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn’t say anything, only listening and being there for her chosen mate.";
+		if hp of doctor mouse is -2:
+			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Dr Matt seems unsurprised by the doctor's monstrous transformation, given what you related about his research, and is pleased to hear that he was dispatched so thoroughly.  You pull dump out the accumulated research you were able to abscond from the lab, offering it all to the scientist to help him deal with the infection.";
+			say "     Dr Matt is quite intrigued by what he sees in the documents and samples he glances over.  'This is quite a substantial find, my brave assistant.  I can see several results that I can put into place immediately and will be able to offer you several more options, should you wish to [bold type]volunteer[roman type] for nanite adjustments.'";
+			now featunlock is 1;
+		otherwise:
+			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Unable to defeat the mouse, you were not able to stop him, but survived the encounter and have returned to assist the scientist.";
+			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him.  I shall inform the military of these events, as well as the increased threat level at the hospital.  They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion.  He seems too intelligent to not have an exit strategy already formulated.'";
+		now hp of doctor matt is 12;
+	otherwise if hp of doctor matt is 9 and hospquest is 13:		[Doc partially unawares, hospital finished]
+		say "     As you start to tell Dr Matt about the recent events at the hospital, at first he believes you to simply be reporting again on another request for samples.  But as you tell him about Dr Mouse's plan to have you infected and steal his research, he is quite stunned.  He stammers some thanks for your decision to side with him over the mouse doctor.";
+		if susan is visible:
+			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn’t say anything, only listening and being there for her chosen mate.";
+		if hp of doctor mouse is -2:
+			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Dr Matt seems unsurprised by the doctor's monstrous transformation, given what you related about his research, and is pleased to hear that he was dispatched so thoroughly.  You pull dump out the accumulated research you were able to abscond from the lab, offering it all to the scientist to help him deal with the infection.";
+			say "     Dr Matt is quite intrigued by what he sees in the documents and samples he glances over.  'This is quite a substantial find, my brave assistant.  I can see several results that I can put into place immediately and will be able to offer you several more options, should you wish to [bold type]volunteer[roman type] for nanite adjustments.'";
+			now featunlock is 1;
+		otherwise:
+			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Unable to defeat the mouse, you were not able to stop him, but survived the encounter and have returned to assist the scientist.";
+			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him.  I shall inform the military of these events, as well as the increased threat level at the hospital.  They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion.  He seems too intelligent to not have an exit strategy already formulated.'";
+	if hp of doctor matt is 11:
+		if susan is visible:
+			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn’t say anything, only listening and being there for her chosen mate.";
+		if hp of doctor mouse is -2:
+			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Dr Matt seems unsurprised by the doctor's monstrous transformation, given what you related about his research, and is pleased to hear that he was dispatched so thoroughly.  You pull dump out the accumulated research you were able to abscond from the lab, offering it all to the scientist to help him deal with the infection.";
+			say "     Dr Matt is quite intrigued by what he sees in the documents and samples he glances over.  'This is quite a substantial find, my brave assistant.  I can see several results that I can put into place immediately and will be able to offer you several more options, should you wish to [bold type]volunteer[roman type] for nanite adjustments.'";
+			now featunlock is 1;
+		otherwise:
+			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Unable to defeat the mouse, you were not able to stop him, but survived the encounter and have returned to assist the scientist.";
+			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him.  I shall inform the military of these events, as well as the increased threat level at the hospital.  They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion.  He seems too intelligent to not have an exit strategy already formulated.'";
+		now hp of doctor matt is 12;
+	if hospquest is 13 and "Mental Booster" is not listed in feats of player:
+		say "     As thanks for your willingness to side with me over this impudent upstart mouse, I shall provide you with something I have been working on.  Trying to deal with the infected city can be mentally harrowing as well as physically harrowing.  It is easy to neglect the need to be intellectually able to deal with this crisis over the more obvious need for physical prowess.  As such, I have found a way to stimulate the mind, increasing one's reasoning abilities to make them better able to notice significant events, interpret that information and then relate it to others.'";
+		say "     The doctor injects you with the nanite adjustment.  At first you feel little, but as you start to consider what may be happening, you notice that you're interpreting stimuli faster and drawing conclusions about them more readily.  You don't suddenly know more information, but you can better process all that you have learned to make more out of it.  You also feel a little more confident in dealing with the world because of it.";
+		add "Mental Booster" to the feats of the player;
+		increase intelligence of player by 2;
+		increase perception of player by 2;
+		increase charisma of player by 2;
+		increase morale of player by 4;
+		say "[bold type]Your Intelligence, Perception and Charisma are all increased by 2.[roman type][line break]";
+	if hp of doctor matt is 12:
+		say "     I don't currently have any tasks for you.";
 	say "He looks kind of busy right now.";
 
 
