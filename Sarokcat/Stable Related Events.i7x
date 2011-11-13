@@ -1,4 +1,4 @@
-Stable Related Events by  Sarokcat begins here.
+Stable Related Events by Sarokcat begins here.
 
 "Adds a series of random events to Flexible Survival set in the stables area."
 
