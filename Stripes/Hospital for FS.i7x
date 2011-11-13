@@ -66,7 +66,7 @@ to say drugsearch:
 	if T is 7:
 		say "     You find a fertility enhancement pill still in the sample pack.";
 		add "Fertile Pill" to invent of player;
-	if T is 7:
+	if T is 8:
 		say "     You find a strange, blood red pill.";
 		add "Blood Pill" to invent of player;
 	if T is 9 or T is 10:
@@ -330,10 +330,10 @@ An everyturn rule:
 
 Locked stairwell is a door. "Off to one side are a pair of heavy, metal doors leading to a stairwell."
 Locked stairwell is lockable and locked.
-Locked stairwell is east of City Hospital.
+Locked stairwell is up of City Hospital.
 The description of Locked stairwell is "Off to one side are a pair of heavy, metal doors leading to a stairwell."
 
-East of Locked stairwell is Hidden Lab
+Up of Locked stairwell is Hidden Lab
 
 The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection.  The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites.  These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work..[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies.  The cot doesn't look like it's been used recently and the food supplies are in disarray.  The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras.  They have water and food dishes, as well as a small chemical toilet within reach of their tethers.  At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[at random].";
 
@@ -342,11 +342,11 @@ The description of Hidden Lab is "     Part of the hospital testing labs have be
 to say hospprogress:
 	if hospquest is 1:	[search still active]
 		say "[line break]";
-		if hospnav is 2:
+		if hospnav is 1:
 			say "     You are starting to learn your way around the hospital and are able to access more of it.  You are making progress.";
-		if hospnav is 3:
+		if hospnav is 2:
 			say "     You are figuring out how to get around in here better and better now that you've gotten to reach more landmarks.  You still don't think you'll be able to reach that upper corner, though.  Best keep at it.";
-		if hospnav > 3:
+		if hospnav > 2:
 			say "     You have gotten quite good at circumventing the blocked rooms and fire doors in the hospital and should be able to get to most places";
 			if hospstairs is 0:
 				say ", but you still need to find a way to get upstairs if you're going to get into those rooms.  You should look around for an accessible [bold type]stairwell[roman type].";
@@ -361,7 +361,7 @@ The sarea of Finding a Way in is "Hospital";
 
 
 Instead of resolving a Finding a Way in:
-	if hospnav > 3 and hospstairs > 0:		[at least 4 waypoints and the stairs up]
+	if hospnav > 2 and hospstairs > 0:		[at least 4 waypoints and the stairs up]
 		say "     After taking many twists and turns through the hospital, you manage to find you way up several stories and over to the lit area.  There you pass by the operating theater and head down the hallway towards the door at the end.  It is partially open and light flows from it.  You approach cautiously, listening intently, but there is little sound coming from the room, labeled as [']Testing Labs['].";
 		say "[meetdrmouse]";
 		now the player is in Hidden Lab;
@@ -384,7 +384,7 @@ to say meetdrmouse:
 	say "     Unable to see more than a few work tables and testing equipment, you slip through the open door to get a better look.  Inside is more of the same, through part of the room has been cleared away.  Some of it seems to be in active use, with several beakers simmering over burners or sitting on running auto-stirrers.";
 	wait for any key;
 	say "     You start to take another slow step into the room when a noise to one side startles you.  There is a pair of those mismatched chimeras in here.  They moan lustfully and try to crawl towards you, but are held back by collars around their necks.  They are chained to a workbench in the far corner.";
-	say "     You breathe a sigh of relief and turn back to the room, startled again by the sight of a white mouse poking his large head up over one of the tables.  This creature stares at you with blood red eyes as you are both frozen in surprise.  You start to raise your weapon slowly, but the mouse smiles happily and claps his hands together.";
+	say "     You breathe a sigh of relief and turn back to the room, startled again by the sight of a white mouse poking his large head up over one of the tables.  This creature stares at you with blood red eyes as you are both frozen in surprise.  You start to raise your weapon slowly, but the mouse smiles happily and claps his hands together with glee.";
 	wait for any key;
 	say "     'This is such an unexpected surprise.  Do please come in.  The creatures of this hospital rarely provide good company.'  As the mouse moves around the work table, you can see his head barely clears it at all, only about four feet tall at the ears.  He grabs a wooden stool and pulls it over, scraping it across the floor.  As he climbs up to get a seat, he adds, 'you should call me Doctor Mouse, I guess.  A new name for a new me,' he chuckles as he scrambles into the seat with some effort and motions for you to pull one up as well.";
 	say "     'I'm quite surprised you made it up here.  It's quite a mess downstairs and the creatures stop anyone from venturing in.  You should tell me what is happening out in the city?  I've not been able to leave here since the infection struck.  Far too dangerous for a little guy like me out there.  And so much to do here, studying the nanite infection.  It has such a capacity for healing.'  He starts to babble a little, perhaps from being isolated in here.";
@@ -410,9 +410,9 @@ to say meetdrmouse:
 
 Instead of conversing the Doctor Mouse:
 	if hospquest is 0:
-		say "ERROR:     'My dear boy/girl, I don't believe you should be here yet.'";
+		say "ERROR 0:     'My dear boy/girl, I don't believe you should be here yet.'";
 	if hospquest is 1:
-		say "ERROR:     'My dear boy/girl, I don't believe you should be here yet.'";
+		say "ERROR 1:     'My dear boy/girl, I don't believe you should be here yet.'";
 	if hospquest is 2:
 		say "     The white mouse looks up from his work.  'I need you to find that device for me.  Significant portions of my research are at a standstill without it.'";
 	if hospquest is 3:
@@ -425,9 +425,12 @@ Instead of conversing the Doctor Mouse:
 			say "     'Yes!  That is it,' Doctor Mouse says as he hops down from his stool to grab for it before thinking better of it.  'Uh, would you be so kind as to put it over there for me?' he asks, pointing to an open spot on the central work area.";
 			say "[hospquestpt2]";
 	if hospquest is 4:
-		if progress of doctor mouse minus turns is less than 8:
+		if girl is banned or guy is banned or furry is banned or hermaphrodite is banned:
+			say "     'I had hoped to obtain some samples, but the creatures cannot be located.  I don't have anything further for you,' the mouse says, shaking his head.";
+			say "     (Unable to proceed with current creature blocks.  Girl, guy, herm and furry are all needed for subsequent segments.)";
+		otherwise if progress of doctor mouse minus turns is less than 8:
 			say "     Please leave me to my research for the moment.  I believe I shall have more need for you once I am done.";
-		otherwise:
+		otherwise:					[need to apply a block here to guy/girl/furry/herm]
 			extend game by 16;
 			say "[hospquestpt3]";
 	otherwise if hospquest is 5:
@@ -441,7 +444,13 @@ Instead of conversing the Doctor Mouse:
 	otherwise if hospquest is 9:
 		say "[hospquestpt8]";
 	otherwise if hospquest is 10:
-		say "     'I don't have anything more for you to assist me at the moment,' the white mouse replies to you inquiry. 'But once more is programmed, you should check back in.' With that confusing and cryptic response, you decice to head off.'";
+		say "[hospquestpt9]";
+	otherwise if hospquest is 12:
+		say "ERROR 12:     'My dear boy/girl, I don't believe you should be able to get here right now.";
+	otherwise if hospquest is 13:
+		say "ERROR 13:     'My dear boy/girl, I don't believe you should be able to get back here.'";
+	if hospquest is 14:
+		say "     'I don't have anything more for you to assist me with at the moment,' the white mouse replies to you inquiry. 'But once more is programmed, you should check back in.' With that confusing and cryptic response, you decice to head off.'";
 
 Section 5 - Dr Mouse's Quests
 
@@ -455,6 +464,11 @@ Section 5 - Dr Mouse's Quests
 [	7 wants tiger patch x3	]
 [	8 wants prehist + nerm	]
 [	9 returned batch		]
+[	10 Coon+proposal		]
+[	11 Accepted proposal	]
+[	12 Met w/Dr Matt		]
+[	13 Chose Dr Matt - stop	]
+[	14 Chose Dr Mouse		]
 
 hospquest is a number that varies.
 hospcountdown is a number that varies.
@@ -573,7 +587,7 @@ to say hospquestpt6:
 		delete Tiger patch;
 		delete Tiger patch;
 		say "     Good work!  I shall set to work on these right away.   And while I work on that, I do have another project for you.  I have a pair of situations where my orderlies have upset the locals too much to complete their task and I need someone independant of the hospital to go in and complete the job.";
-		say "     I have just obtained word that the museum contains a pair of prehistoric creatures.  Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes.  The reports from the hospital creatures are somewhat unspecific, but there appears to be a armoured, dinosaur-like creature and several smilodons.  I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter.  I need you to samples from both of these.";
+		say "     I have just obtained word that the museum contains a pair of prehistoric creatures.  Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes.  The reports from the hospital creatures are somewhat unspecific, but there appears to be a armoured, dinosaur-like creature and several smilodons.  I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter.  I need you to obtain samples from both of these.";
 		say "     'The last thing I need for you is to perform a simple pick-up while you are out.  There is a jackal shopkeeper who has set herself up in the mall.  She has a package for me.  The rats who live there will not allow the hospital staff to approach, having been set off by the appearance of one of the jaguars when the order was first placed.";
 		now nerminepackage is 1;
 		now Dinosaur Nest is unresolved;
@@ -625,15 +639,621 @@ to say hospquestpt8:
 	if progress of doctor mouse minus turns is less than 16:
 		say "     'Please leave me to my research for the moment.  I believe I shall have something special for you when I am done.'";
 	otherwise:
-		say "     As you start to converse with Dr Mouse, one of the jaguar orderlies comes in signals for the little mouse's attention.  Dr Mouse goes over to him and speaks to him.  As you watch, you can't help noticing the jaguar's huge fangs, familiarly like those of the sabertooth tigers you faced.  He also seems to be larger and more muscled.  His shirt doesn't quite fit right and has popped its seams at the shoulders.  Dr Mouse eventually sends him off.";
-		say "     Coming back to you, Dr Mouse smiles and opens a sample fridge, taking out another injection.  'As I promised, I have something special for you.  I have made progress in analyzing the nanites['] method of healing and have a formula which will increase your healing rate.'  As he starts to prepare your arm for the injection, he continues, 'It will increase your recovery over time.  It will also give you a little more effectiveness from any field medecine you practice.  It won't measure up to proper medical training,' the white mouse doctor says, 'but it's still an improvement.'";
+		say "     As you start to converse with Dr Mouse, one of the jaguar orderlies comes in signals for the little mouse's attention.  Dr Mouse goes over to him and speaks to him.  As you watch, you can't help noticing the jaguar's huge fangs, familiarly like those of the sabertooth tigers you faced.  He also seems to be larger and more muscled.  His shirt doesn't quite fit right and has popped its seams at the shoulders.  Dr Mouse eventually sends him off in frustration.";
+		say "     Coming back to you, Dr Mouse smiles and opens a sample fridge, taking out another injection.  'As I promised, I have something special for you.  I have made progress in analyzing the nanites['] method of healing and have a formula which will increase your healing rate.'  As he starts to prepare your arm for the injection, he continues, 'It will increase your recovery over time.  It will also give you a little more effectiveness from any field medicine you practice.  It won't measure up to proper medical training,' the white mouse doctor says, 'but it's still an improvement.'";
 		say "     Before you let the mouse inject you, you ask about the jaguars and if you should expect anything like that to happen.  Dr Mouse is briefly puzzled by your question.  'Oh, you mean the fangs?  Those are just the result of a test I did on them.  I needed to see how adjustments to the nanites would propogate through the population.  This one was more effective than the first attempt with the vixens.  Besides, the creatures out in the city are starting to form into factions and they need to be able to keep the hospital secure.  But don't worry.  This is just an increase to their healing protocols.'  Feeling reassured about the injection if not the jaguars, you allow him to inject you.";
 		say "     You have gained the [']Rapid Healing['] feat.";
 		add "Rapid Healing" to the feats of the player;
 		wait for any key;
 		say "     As the nanite update runs through your system, you ask what the jaguar wanted that was so upsetting.  'Oh, I wasn't too upset about the news.  It's just harder to understand them now that they've got those big teeth.  There's a little pest running around the hospital, distracting the other staff at times.  Nothing you need concern yourself with, though.  They'll catch the pink perv sooner or later.'";
 		say "     Dr Mouse heads back to his worktable.  'I have to get back to things now.  I don't think I'll have anything for you for at least a few days.  Please give me some time to process all of these results.'";
+		now progress of Doctor Mouse is turns;
 		now hospquest is 10;
+
+to say hospquestpt9:
+	if progress of doctor mouse minus turns is less than 12:
+		say "     'I do not have any tasks for you at the moment, but please check back again later,' he white mouse replies to your enquiries about his research.";
+	otherwise:
+		say "     'I do not have any tasks for...' the white mouse starts to reply when there is a commotion outside the door.  He hops off the stool and heads to the door.  Reflexively, you ready yourself for combat.  The door leading to the depths of the hospital opens and in come a pair of orderlies with a crossdressing raccoon held firmly in their paws.  His grey fur has pink highlights and pink rings around his tail and his candy striper dress has gotten torn.  The coon is thrashing and struggling, spewing a mix of insults, pleas and offers of sex to let him go.";
+		say "     As Dr Mouse steps around the worktables and becomes visible to the girly raccoon, his eyes go wide and he falls silent, but struggles all the harder.  The orderlies have no trouble holding the little guy and Dr Mouse looks him over critically.  His face is very stern and not at all the friendly expression you're used to seeing from the little mouse fellow.";
+		say "     'You've been most disruptive to my hospital of late, you little perv.  I had hoped you might come around, as you were a volunteer here.  But you are only a distraction for my staff and my projects.  And I can't have that, so I can't have you running around unsupervised any longer,' he says ominously.";
+		wait for any key;
+		say "     The white mouse then turns to you with his usual smile.  'You have excellent timing.  As a reward for your service, I am going to give this troublemaker over to you.  Based on some of the findings I've made, there are conditions which the nanites can set up so one host is made subservient to another.  While it would only work on weaker creatures, I have been working on a formula to induce this effect.'  He motions to the orderlies and they shove the terrified coon boytoy into your arms.  'If you'd like, I could give it to him and make him an obedient pet for you,' he says, heading to his sample fridge.";
+		say "     You look down at the coon in your arms and his eyes are locked on you.  He is trembling and whimpers.  'Just get me out of here.  He's crazy.  Please,' he whispers emphatically.  'I'll go with you.  I'll be good.  Just don't let him keep me.'";
+		say "     As Dr Mouse comes over with the injection, the raccoon falls silent and buries his face in your chest, trembling in your arms.  The mouse holds it up, getting it ready.  'This injection will turn a weak creature like him into a useful pet.  Would you like to take him on as a pet?  He'd become obedient and helpful, and not so chatty as an added bonus.'";
+		say "     (Will you let Dr Mouse give him the injection or do you want to take him as-is? Y for injection)";
+		if the player consents:
+			increase score by 10;
+			decrease humanity of player by 5;
+			now coonstatus is -1;
+			repeat with y running from 1 to number of filled rows in table of random critters:	[puts Raccoon as lead monster...]
+				choose row y in table of random critters;
+				if name entry is "Raccoon":
+					now monster is y;
+					break;
+			now area entry is "Nowhere";
+			say "     With a nod to Dr Mouse, he injects the raccoon, who releases one last whimper before growing quiet.  After a few moments, he looks up at you, eyes filled with adoration, but little intelligence.  He moans softly and nuzzles your chest as his paws run along your sides and down to your hips.";
+			if cunts of player > 0 and cocks of player is 0:		[FEMALE]
+				say "     The raccoon slides a paw between your legs to play with your pussy.  His fingers stroke and tease you as he lowers himself to his knees.  He gives the briefest of shivers, so faint you barely notice it, before he buries his muzzle between your thighs and starts licking you.  You moan softly and stroke his ears.  He may lack in experience, but there is no lack of zeal in the coon, eager to please his new mistress.";
+				say "     His playful tongue teases your labia, lapping up your juices obediently.  His pink cock is quite hard, leaking pre onto the floor.  Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
+				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer.  Your pussy quivers and your hot juices flow, soaking his muzzle.  He laps them up from you like a good little pet, churring happily.";
+			otherwise if cunts of player is 0 and cocks of player > 0:	[MALE]
+				say "     The raccoon slides his paw between your legs to play with your cock.  His fingers stroke and tease your shaft as he lowers himself to his knees.  He opens his muzzle and takes your cock in happily.  You moan softly and stroke his ears.  He certainly doesn't lack experience, giving you a wonderful blow job and is eager to please his new master.";
+				say "     His talented tongue teases your shaft, playing along your penis as he sucks it.  His pink cock is quite hard, leaking pre onto the floor.  Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
+				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer.  Your cock throbs and your hot seed shoots into his waiting muzzle.  He swallows it all down and licks you clean like a good little pet, churring happily.";
+			otherwise:									[HERM]
+				say "     The raccoon slides his paw between your legs to play with your cock.  His fingers stroke and tease your shaft as he lowers himself to his knees.  He gives the briefest of shivers, so faint you barely notice it, before he nuzzles down to start licking your pussy as well.  He makes sure to lick you all over before bringing his muzzle up and happily taking your cock into his mouth.  You moan softly and stroke his ears.  He certainly doesn't lack experience, giving you a wonderful blow job.  And though the fingers that have moved to your pussy fumble around a little, it is clear that he is eager to please his new master.";
+				say "     His talented tongue teases your shaft, playing along your penis as he sucks it while his fingers caress your pussy.  His pink cock is quite hard, leaking pre onto the floor.  Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
+				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer.  Your cock throbs and your hot seed shoots into his waiting muzzle while your pussy soaks his paw in your juices.  He swallows it all down and licks you clean like a good little pet, churring happily.";
+			now pink raccoon is tamed;
+			say "(The pink raccoon is now tamed! You can make it your active pet by typing [bold type]pet pink raccoon[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])[line break]";
+		otherwise:
+			increase score by 20;
+			now coonstatus is 1;
+			move Candy to Bunker;
+			repeat with y running from 1 to number of filled rows in table of random critters:	[puts Raccoon as lead monster...]
+				choose row y in table of random critters;
+				if name entry is "Raccoon":
+					now monster is y;
+					break;
+			now area entry is "Nowhere";
+			say "     Dr Mouse shrugs as you decide to pass on the injection and passes it to one of the orderlies to put away.  'I still do not want him in my hospital any longer.  You will have to take him away from here and keep him out of trouble.  Use him for your own enjoyment.'  He leans in and jabs the coonboi with a finger.  'You don't want to know what I'll do to you if you ever come back here,' he little mouse whispers harshly in the his ear.  'Do you understand?'  The girly boi can only whimper louder and nod vigorously.  'Good.'";
+		wait for any key;
+		say "[line break]";
+		say "[hospquestpt10]";
+
+to say hospquestpt10:
+	say "     Dr Mouse smiles and dusts his paws together, now that his raccoon problem is taken care of by his assistant.  'Actually, now I think it's time for you to take care of something for me.  Consider it repayment for your new playtoy,' he chuckles, putting an arm around your waist and walking with you.";
+	if hp of doctor matt is 100:
+		say "     'From the intelligence I've gathered, there is a lab in the city where a device capable of making adjustments to the nanites has been left behind.  It is capable of bestowing a variety of abilities onto a host, enhancing their skills.  If there is something capable of enhancing the abilities given by nanites, I am very interested in this and want you to retrieve it for me.  Coupled with my research, the adjustments I can give you and the hotel staff will be astonishing.  No one will be able to stop us.'";
+		say "     'So,' he asks with a grin, 'will you get that machine for me?'";
+		if the player consents:
+			say "     'Excellent!  I knew I could rely on you,' the mouse says.  'I shall provide you with a radio to signal the helicopter once you have located it, so it can be transported here.'  The mouse gives you a pat on the back and drags his stool back over to his worktable, intent on resuming his work.  The orderlies grunt and motion for you to get on your way[if coonstatus is 1].  You take the coon's paw in yours, leading him out of the room and giving him directions back to the bunker, where he'll be safe until you return[end if].";
+			now hospquest is 11;
+			now player is in City Hospital;
+		otherwise:
+			say "     You shake your head and tell the doctor that you don't think you should remove the machine and bring it to him.  He growls angrily and reaches up to slap you across the face.  'Ungrateful fool!  I offer you power and you won't accept it?  Well, then I have no more use of you.'  He motions to his orderlies and they move in to deal with you.  The raccoon, too terrified to face the mad doctor's wrath, flees down the stairs.";
+			say "[hospbigfight1]";
+	otherwise:
+		say "     'I recall you mentioning when we first met another scientist and their nanite adjustment research.  If he has something capable of enhancing the abilities given by nanites, I am very interested in this and want you to retrieve it for me.  Coupled with my findings, the adjustments I can give you and the hotel staff will be astonishing.  No one will be able to stop us.'";
+		say "     Dr Mouse leads you over to another sample fridge and pulls out a syringe.  'Now, I honestly don't expect he'll be willing to part with such a useful research willingly, so I have this injection prepared.  It is a formulation based on several samples and should quickly turn anyone into a mindless slut.  No more rival to stand in the way of my work and some fun for you while you're at it.'";
+		say "     'So,' he asks with a grin, 'will you get those research notes for me?'";
+		if the player consents:
+			say "     'Excellent!  I knew I could rely on you,' the mouse says as he passes you the syringe.  'I shall provide you with a radio to signal the helicopter once you have secured the device, so it can be transported here.'  The mouse gives you a pat on the back and drags his stool back over to his worktable, intent on resuming his work.  The orderlies grunt and motion for you to get on your way[if coonstatus is 1].  You take the coon's paw in yours, leading him out of the room and giving him directions back to the bunker, where he'll be safe until you return[end if].";
+			now hospquest is 11;
+			now player is in City Hospital;
+		otherwise:
+			say "     You shake your head and tell the doctor that you won't betray Dr Matt's help by attacking and transforming him.  He growls angrily and reaches up to slap you across the face.  'Ungrateful fool!  I offer you power and you won't accept it to protect a meddling pest?  Well, then I have no more use of you.'  He motions to his orderlies and they move in to deal with you.  The raccoon, too terrified to face the mad doctor's wrath, flees down the stairs.";
+			say "[hospbigfight1]";
+
+
+instead of going to Hidden Lab while hospquest > 10:
+	if hospquest is 11:
+		say "     The jaguar guarding the door won't let you in until you finish the deed.";
+	otherwise if hospquest is 12:
+		say "     You tell the jaguar orderly guarding the stairs that there's been a small snag and that you need to speak with Dr Mouse.  It seems the addition of primitive DNA to the strain has not helped their intellect and you are able to convince him to let you up.";
+		now the player is in Hidden Lab;
+		say "     Entering the lab, you find Dr Mouse taking a rare break to have some food.  He's got a plate of food, probably sent up from the cafeteria, that looks like a colourful selection of warm mushes.  The doctor looks up from his meal at the sound of your arrival.";
+		say "     'I did not expect you back.  You did not call for the helicopter.  What has happened?  My orders were for you to only return when you had finished with the scientist.'  Noticing your expression, he stiffens and glares at you angrily with his blood red eyes.  'Unless you have no intention of doing so.  You dare betray me?'";
+		say "     He hops off his stool and rushes towards the intercom button at one corner of the room.  You, already taking advantage of his brief confusion, were already moving in that direction to cut him off.";
+		let bonus be ( dexterity of player minus 10 ) divided by 2;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
+		if bonus + dice is greater than 9:
+			say "     You easily block the doctor, grabbing the little mouse and shoving him back into the middle of the room.  This sends him into a rage.  He releases a high pitched growl and lunges at you, eyes flashing with red anger.  'Ungrateful fool!  The infection is too widely spread and cannot be stopped.  One can only take advantage of the power it offers.'";
+			now hp of doctor matt is 11;
+			say "[hospbigfight2]";
+		otherwise:
+			say "     As you grab for the little mouse, he ducks under your arms and gets past you.  Sometimes there are advantages to being small.  He slams his palm against the intercom button, calling to the security station at the end of the hall.  'Orderlies!  Code Silver!  Code Silver in the lab!'  Releasing the button, he turns back to you.  'Ungrateful fool!  The infection is too widely spread and cannot be stopped.  One can only take advantage of the power it offers.'  A pair of orderlies then burst into the room, moving in to attack.";
+			now hp of doctor matt is 11;
+			say "[hospbigfight1]";
+	otherwise if hospquest is 13:
+		say "     The stairwell is once again barred from the inside and you are not able to gain access.  You have a feeling the path through the hospital is blocked as well.";
+	otherwise:
+		now the player is in Hidden Lab;
+
+
+instead of going to Primary Lab while hospquest is 11:		[heading to the main lab to get the feat machine]
+	now the player is in Primary Lab;
+	if hp of doctor matt is 100:						[recording]
+		say "     You enter the lab and take stock of the enhancement device in the room.  You look it over briefly, then start to unhook it.  As you do, you hear a recording click on from the speakers.  'Unauthorized access to secure lab equipment.  Warning: This device is protected and its removal cannot be allowed to continue.'  An alarm sounds through the building.";
+		say "     You shrug, knowing there is no one here aside from you to worry about and continue.  As you're unhooking the nearby terminal, you hear the alarm change to a countdown.  That gets your attention and you toss the terminal onto the equipment cart and hustle it out as fast as you can.  You wrench your shoulders as you wrestle the cart down the stairs in a hurry, but continue as the numbers reach the single digits.";
+		wait for any key;
+		say "     You hear the countdown inside reach zero and several blasts inside the building go off ten seconds later.  You are running down the handicap access ramp with the cart as the windows blow out.  Glass and rubble bloody your back, but thankfully the equipment was mostly shielded by you and seems undamaged.";
+		say "     You take 15 damage![line break]";
+		say "     Fighting back against the pain, you contact the helicopter for extraction.  Having once been a trained rescue team, they are there swiftly.  Under your supervision, two of the brutish orderlies move the large machine and the terminal into the helicopter.  Loaded up, you climb into the helicopter and ride back with them to the hospital.";
+		decrease hp of player by 15;
+		increase score by 20;
+		now infection terminal is in Hidden Lab;
+		now hp of doctor matt is -3;
+		now hospquest is 12;
+		now the player is in Hidden Lab;
+		say "[posttlscene]";
+	otherwise:									[Dr Matt physically there]
+		say "     You enter the lab and take stock of the enhancement device you've been sent to collect.  Dr. Matt does not appear to have noticed you quite yet, buried in more work.  You slip the syringe from your pocket and look at it, considering what to do next.  Shall you inject Dr Matt? (Y-inject / N-talk)";
+		if the player consents:
+			say "[tlabsbigfight]";
+		otherwise:
+			say "     You decide you need to talk to Dr Matt about the mouse doctor's intentions.  Unwilling to go through with the mouse's plan, you get his attention and start to fill him in.";
+			if hp of doctor matt is 8:
+				say "     You begin by telling the scientist about hospital, the hidden lab within and the mouse working away there.  You tell him of what you saw there, the creatures of the hospital, apparently most if not all of them under the mouse's control.  You make sure to mention the mouse's findings and his hypotheses about the infection, noting they were part of the reason you assisted him despite any misgivings.";
+				say "     You relate how you helped him collect some samples he needed to continue his research.  But then that research started to manifest as changes and increased power in the hospital denizens.  Dr Matt is quite perturbed to hear about this news, both that such experiments were happening and that he was not made aware of another potential source of information on the nanites.  You do have to wonder if he's most upset that someone else could have gotten further into their research than he has.";
+				wait for any key;
+			say "     You finish by showing Dr Matt the syringe and tell him that Dr Mouse has sent you to remove him from the picture and steal the nanite adjustment system he'd been creating.";
+			say "     'If you're telling me this, I can assume you're not going to go through with it.  It has become clear that this Dr Mouse is not interested in a cure at all, but only exploiting the nanites and their hosts.  Enhancing the strains out there will only exacerbate the problem of controlling this chaos.'  He holds up the needle.  'While there would be some irony in returning this to you and asking you use it on him instead, I don't think he will give you that opportunity.  Provided he's not already made himself immune to it, for that matter.  I will have to ask you to return to the hospital and deal with him personally.'";
+			if Susan is visible:
+				wait for any key;
+				say "     Susan comes up to your side and holds your left in hers, clutching it tightly.  Her loving brown eyes look up at her mate.  'Please be careful, my brave buck.'  She leans in and gives your cheek a kiss before releasing you.";
+			increase humanity of player by 5;
+			if humanity of player > 100:
+				now humanity of player is 100;
+			increase score by 20;
+			now hp of doctor matt is 10;
+			now hospquest is 12;
+
+hospfight is a number that varies.
+
+to say hospbigfight1:
+	now hospfight is 1;
+	now fightstatus is 3;	[set to run away by default]
+	challenge "Jaguar";
+	if fightstatus is 3:
+		say "[hospranaway]";
+		stop the action;
+	if fightstatus is 2:
+		say "[hosploss]";
+		stop the action;
+	now fightstatus is 3;
+	say "     The second jaguar moves around the worktables steps past his fallen comrade to attack you as well.";
+	challenge "Jaguar";
+	if fightstatus is 3:	[reset to run away by default]
+		say "[hospranaway]";
+		stop the action;
+	if fightstatus is 2:
+		say "[hosploss]";
+		stop the action;
+	say "     The two guards dealt with, you barely dodge in time as the mouse tries to jab you with a syringe.  You knock it from his paw, sending it to shatter on the floor.  The powerful scent of an array of hormones fills the air, having clearly intended to change you into a mindless sex beast before you could attack him.  That option gone, the little mouse strikes out at you with his fists.";
+	say "[hospbigfight2]";
+
+to say hospbigfight2:
+	now hospfight is 1;
+	now fightstatus is 3;	[set to run away by default]
+	challenge "Albino Mouse";
+	if fightstatus is 3:
+		say "[hospranaway]";
+		stop the action;
+	if fightstatus is 2:
+		say "[hosploss]";
+		stop the action;
+	say "     Battered and bloodied, the mad doctor turns and runs.  For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
+	say "     'I had planned to further perfect this formula before ridding myself of this feeble body,' the white mouse exclaims.  'But you!  You force my hand.  And you will suffer for it!'";
+	say "     With that, he slams back the formula and its effects are almost immediate.  You charge, hoping to dispatch him before whatever he's doing can be completed, but he's already begun to grow and manages to slam you back a few feet with a strong backhand.";
+	wait for any key;
+	say "     His muscles swell and he gains inches of height by the second.  His growing body fills the lab coat so much it starts to strain to contain it until it finally fails.  The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
+	say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors.  The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle.  His hands, once cute paws, gain vicious claws and boney plates.";
+	wait for any key;
+	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls.  Thick, dark yellow grow to replace the white coat over them and this spreads up over the monstrous mouse's chest as well.  Clearly excited by the power of the changes, his cock grows hard and starts to emerge.  It is thick and blood red, with a spaded tip and several firm ridges along its shaft.  There's a faint swelling at the base, signs of a knot as well.  Thick precum leaks down the monstrous prick.";
+	say "     He chuckles madly as he looks himself over, clearly pleased with the results.  'I am going to enjoy showing you how disappointed I am with you.  In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
+	now hospfight is 2;
+	now fightstatus is 3;	[set to run away by default]
+	challenge "Albino Mouse";
+	if fightstatus is 3:
+		say "[hospranaway]";
+		stop the action;
+	if fightstatus is 2:
+		say "[hosploss]";
+		stop the action;
+	say "[hospvictory]";
+
+to say hospranaway:
+	say "     Unable or unwilling to continue fighting the crazed mouse, you vault over one of the worktables and dash to the exit.  You slam against the door and dash down the hall to the emergency exit.  You rush down the stairs, hearing Dr Mouse yelling above you, but don't even stop to look.";
+	say "     As you approach the bottom of the stairwell, you can see the jaguar orderly on guard inside.  His radio squawks with Dr Mouse's voice and you leap down the last four steps.  The added momentum lets you shove past the confused orderly and out the door before he can get his orders to stop you.  You push through the door and dash into the hospital lobby, then continue running out the door.";
+	wait for any key;
+	now the player is in City Hospital;
+	if hospquest is 10:	[Refused upon offer]
+		say "     Panting for breath, you slam against the main entrance doors and stumble out into the [if remainder after dividing turns by 8 > 4]darkness[otherwise]light[end if].  The raccoon, it seems, has been waiting fretfully on the steps for you and rushes into arms.  You grab his paw and continue running, pulling him along.  He needs no encouragement to leave this place and keeps pace with you as you cross the large parking lot and cut down a side street.";
+		if pink raccoon is tamed:
+			say "     Hiding in a nearby building, you pant to catch your breath.  The pink coon cuddles up to you, vacant eyes looking up at you in adoration and relief.  You pet his ears and he churrs softly[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
+		otherwise:
+			say "     Hiding in a nearby building, you pant to catch your breath.  The pink coon thanks you for getting him out, but starts to fret about where he can now go.  You decide, on impulse, to tell him about the bunker under the abbey library and give him directions[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
+	otherwise:
+		say "     Panting for breath, you slam against the main entrance doors and stumble out into the [if remainder after dividing turns by 8 > 4]darkness[otherwise]light[end if].  You continue to run down the steps and across the large parking lot, afraid of pursuit by the hospital's horde.  You cut down a side street and eventually come to a stop in a nearby building[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
+	now hp of doctor mouse is -1;
+	now locked stairwell is locked;
+	now hospquest is 13;
+
+to say hosploss:
+	say "     Your head is pounding and your vision is hazy even before you open your eyes.  Struggling to remember what happened, you try to look around.  As you attempt to open them, bright lights blind you and force them shut again, causing you to wince in pain.  You try to pull a hand to cover your eyes, but your arm won't move, tightly restrained.";
+	say "     'Ahh, the patient is now awake.  We may begin,' you hear from one side.  The sound of Dr Mouse's voice rushes reality back to you and you struggle to get up.  At his point, you discover that you are tightly strapped down and cannot move.";
+	wait for any key;
+	say "     As the spots begin to clear from your vision, there is much to take in.  Foremost is operating table you are strapped onto, held down by thick, leather straps.  Above that are large, bright lights shining down on you.  As the rest of the room becomes clearer, you start to make out the blurry forms around you.  There are several other figures on the operating floor around you, nurses and an orderly, as well as several trays of medical instruments.";
+	say "     Above the operating floor, a larger viewing area above the floor level and surrounding the room comes into focus.  Most of the seats are filled with more vixen nurses and jaguar orderlies, but there are a few others as well.  There is a rather plastic-looking fish creature who is constantly wiping himself with a wet cloth surrounded by big breasted owl women.  In one corner, there is a cluster crazed weasels in straightjackets secured to their seats, gibbering and snapping at one another.  A few other individual creatures fill scattered seats.  You are clearly in the operating theater, where demonstrations of medical procedures are performed for staff and students.";
+	wait for any key;
+	say "     As Dr Mouse steps forward after washing his paws, the room quickly falls silent[if hospfight is 2].  The altered doctor has smoothed down his fur a little and found a much larger lab coat to put on.  It barely fits across his shoulders and hangs open, leaving his mutated body and groin uncovered.  There are some holes torn into the back by his dorsal spines to make it fit at all[end if].  One of the nurses puts a pair of ill-fitting gloves over his [if hospfight is 1]little[otherwise]twisted[end if] paws as he looks you over.  Despite his dispassionate, clinical expression, there is a malicious gleam in his blood red eyes.  The [if hospfight is 1]little mouse[otherwise]monstrous mouse[end if] steps up beside you, then turns to look up at the assembled group.";
+	wait for any key;
+	say "     'My fellow staff,' he begins.  'Today, we have a very special procedure.  As you are no doubt aware, I have been making substantial progress in my research.  This is, in part, thanks to my assistant's help,' he says, motioning to you.  'Now, my volunteer will further help me continue that important work.'  He stresses volunteer, making it clear to all just how voluntary your participation is.  'Furthermore, I hope to teach the staff more about the infection as well as the price of defiance.'";
+	say "     Throughout his speech, the gathered mass of creatures is quiet.  Even the psychotic weasels are silent.  There is an aura of fear and respect in the air.  It is clear you will receive no help from anyone gathered here.";
+	wait for any key;
+	say "     Unwilling to just give up, you continue to struggle against your bonds.  The [if hospfight is 2]mutated [end if]mouse gives you a cold look as the grunts of your attempts interrupt him.  He motions to the orderly, who gives your head a hard smack with his fist before gagging your mouth.  Your head spins while the mouse continues talking, moving on to medical jargon that you can only make out snippets of with your ears ringing from the blow.  It is something about the nanites and transformations, but the rest is lost to you.";
+	wait for any key;
+	say "     'We will begin the series with an injection to prepare the patient for multiple transformations,' the mad doctor says, taking the syringe from a tray of a half-dozen.  [if hospfight is 1].  The small mouse steps up onto a wooden crate beside you so he can look over the operating table and his patient[end if].  As he injects the formula into your arm, there is a mad gleam in his eyes.  An odd tingling sensation spreads up your arm and throughout your body, and you seem less solid.  As an impulse, you try to pull yourself free, but while your arms and body do deform somewhat, it is not enough to pull loose of the straps.  Dr Mouse chuckles and goes on to point out this very effect to the audience, informing them the temporary elasticity comes from the tigress samples you brought him the other day.";
+	wait for any key;
+	say "[hosptfscene]";
+	say "     Dr Mouse motions to the orderly attending to his procedure.  'Dump that trash on the steps along with its gear.  It is of no further use to me.'  With those coldly spoken words, the mouse turns his back on you entirely and walks out of the operating theater.  The orderly calls forth several of his companions and they drag you, beaten and mutated, to the hospital steps.  They toss you and your gear down onto them without a word and head back inside.";
+	wait for any key;
+	if bodyname of player is "Tiger Cop":
+		now bodyname of player is "Tigress Hooker";
+	if tailname of player is "Tiger Cop":
+		now tailname of player is "Tigress Hooker";
+	if facename of player is "Tiger Cop":
+		now facename of player is "Tigress Hooker";
+	if skinname of player is "Tiger Cop":
+		now skinname of player is "Tigress Hooker";
+	if cockname of player is "Tiger Cop":
+		now cockname of player is "Tigress Hooker";
+	decrease humanity of player by 20;
+	increase libido of player by 20;
+	decrease score by 50;
+	if libido of player > 100:
+		now libido of player is 100;
+	now the player is in City Hospital;
+	if humanity of player < 1:		[Succumbing then and there]
+		if hospquest is 10:		[Refused upon offer]
+			say "     You groan, still in some pain from the rough handling as you try to get up.  After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling.  The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you.  Finding you radically transformed and succumbing, he helps take you to a nearby, unoccupied building.  There, he beds down with you, having sex with you again and again, turning you into another cute, girly raccoon like him, as it is the only thing he can do for you.";
+			say "[totalcoonification]";
+		otherwise:
+			say "     You groan, still in some pain from the rough handling as you try to get up.  After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling.  The random medley of infections your body has been subject to all vie for control.  Eventually the most prominent, that of your [bodyname of player] body, asserts its dominance over the new you.";
+	otherwise if hospquest is 10:		[Refused upon offer]
+		say "     You groan, still in some pain from the rough handling as you try to get up.  The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you.  He wraps his arm around you and helps you stand, leading you away from this blighted place.";
+		if pink raccoon is tamed:
+			say "     You don't go far, just to a nearby building to finish recovering and take stock of your situation.  The pink coon cuddles up to you, vacant eyes looking up at you with sadness at how you've been altered.  You pet his ears and he churrs softly[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
+		otherwise:
+			say "     You don't go far, just to a nearby building to finish recovering and take stock of your situation.  The pink coon looks you over with tears in the corners of his eyes, so sad that his saviour should be so treated.  This gets him to start fretting about where he can now go, as he definitely wants nothing to do with the hospital any more.  You decide, on impulse, to tell him about the bunker under the abbey library and give him directions[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
+	otherwise:
+		say "     You groan, still in some pain from the rough handling as you try to get up.  You eventually make it to your feet and pick up your pack.  You look back at the hospital and consider your options[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
+	now hp of doctor mouse is -1;
+	now locked stairwell is locked;
+	now hospquest is 13;
+	follow the turnpass rule;
+
+
+to say hosptfscene:
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from the table of random critters;
+	while name entry is tailname of player:
+		sort table of random critters in random order;
+		now monster is 1;
+		choose row monster from the table of random critters;
+		if there is no name entry:
+			next;
+		break;
+	now tailname of player is name entry;
+	now tail of player is tail entry;
+	say "     'The first injection will adjust the volunteer's lower spine.  We shall begin there, as the changes may be the least visible, depending on the outcome.'  The mouse the jabs a second needle, quite painfully, into your ass.  As he watches, the doctor comments to the group about how your ass becomes malleable as [ass change entry].";
+	while name entry is tailname of player or name entry is facename of player:
+		sort table of random critters in random order;
+		now monster is 1;
+		choose row monster from the table of random critters;
+		if there is no name entry:
+			next;
+		break;
+	now facename of player is name entry;
+	now face of player is face entry;
+	wait for any key;
+	say "          'We shall now move on to the head,' he states, motioning for the orderly to step up.  He grabs your neck and squeezes it painfully as he injects the next formula into your carotid artery, sending the fluid up into your head.  As a burning sensation courses through your head, the doctor discusses how [face change entry].  As your face shifts and changes, the orderly adjusts the various straps as necessary, keeping you restrained.";
+	while name entry is tailname of player or name entry is facename of player or name entry is skinname of player:
+		sort table of random critters in random order;
+		now monster is 1;
+		choose row monster from the table of random critters;
+		if there is no name entry:
+			next;
+		break;
+	now skinname of player is name entry;
+	now skin of player is skin entry;
+	wait for any key;
+	say "     The mad mouse picks up spray bottle and runs his paw over your chest.  'Before we continue with the patient's body, we shall deal with his epidermal layer.'  The bottle contains a thin, milky fluid and you can readily guess what at least one of the ingredients is.  Taking care not to spray himself, he spritzes a mist of the sticky fluid across your body.  You can feel a tingle all over as the mixture is absorbed into your skin and starts to change you.  Shivers of pleasure run all over your skin as [skin change entry].";
+	wait for any key;
+	say "     When those changes are complete, a pair of the vixen nurses step up and wash you and the table area clean using wet sponges.  They pay particular attention to your genitals, ending shivers of delight through you despite, or perhaps because of, your current situation.  They giggle and tease you, much to the delight of several in the audience members.";
+	say "     Actually, during this brief break in the procedure, you are able to take stock of the group watching.  It seems that some have become rather aroused by your transformation.  Several of the female nurses are riding the laps of the jaguars while one of the herm nurses has strapped a restrained weasel to the railing and is buggering him hard and fast.  Catching your eyes on her, she even winks at you.";
+	wait for any key;
+	if hospfight is 2:		[Dr Mouse is monstrous]
+		say "     You can see that the monstrous mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure.  Another of the vixen nurses is on her knees, licking and kissing the large cock.  Her muzzle is pulled onto the thick shaft as Dr Mouse gets tired of foreplay and starts facefucking her with a low growl.  She takes it in eagerly, playing with his heavy balls until he cums down her throat.  Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
+	otherwise:		[Dr Mouse is mouse]
+		say "     You can see that the albino mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure.  His cock is small, perhaps about four inches to match his small height.  But his balls are quite large, perhaps each the size of a peach.  One of the vixen nurses is on her knees, licking and kissing his cock before taking it into her muzzle.  She fondles his balls and sucks his shaft obediently until he sends his ample load down her throat.  Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
+	while name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player:
+		sort table of random critters in random order;
+		now monster is 1;
+		choose row monster from the table of random critters;
+		if there is no name entry:
+			next;
+		break;
+	now bodyname of player is name entry;
+	now body of player is body entry;
+	wait for any key;
+	say "     Satiated, the mouse straightens up and regains his composure.  'Ahem!  Now that the... intermission is over, let us proceed to the final stages.'  He grabs another syringe, the largest yet by far.  His paw feels along your body, finding a sensitive spot before jabbing the needle into it, making you wince in pain before the warm tingles of pleasant change flow through you.  The jaguar orderly adjusts the various straps as your body alters itself.  Continuing to comment, Dr Mouse observes your body as [body change entry].";
+	[below section copied from infect algorithm, update as that is updated]
+	if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
+		decrease breast size of player by 2;
+		follow the breast descr rule;
+		if breasts entry is greater than breasts of player:
+			increase breasts of player by 2;
+			say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
+		otherwise:
+			decrease breasts of player by 2;
+			say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
+		increase breast size of player by 2;
+	if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
+		follow the breast descr rule;
+		let oldbreast be descr;
+		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+		increase breast size of player by 1;
+		increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+		follow the breast descr rule;
+		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	if breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
+		follow the breast descr rule;
+		let oldbreast be descr;
+		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+		decrease breast size of player by 1;
+		decrease breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+		follow the breast descr rule;
+		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	follow the sex change rule;
+	say "[line break]";
+	wait for any key;
+	if cocks of player > 0:
+		while name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
+			sort table of random critters in random order;
+			now monster is 1;
+			choose row monster from the table of random critters;
+			if there is no name entry:
+				next;
+			break;
+		say "     The mouse doctor grins viciously as he looks over your changed form, then turns to the audience.  'There is one final injection to make, my colleagues.  And I'm sure this is the one you've all been anxiously awaiting.  He moves his paw to your cock(s), quite aroused by the earlier teasing, and gives it a squeeze.  Those watching are quite pleased by this and many shift forward in their seats to get a better look.";
+		say "     The doctor fondles your balls teasingly and slides the syringe across your cock and balls, making you involuntarily whimper.  You sigh in relief as he moves the needle down further and injects your inner thigh close to your groin.  As the mouse observes the changes, an arousing heat flows up into your groin as [cock change entry].";
+		follow the sex change rule;
+		now cockname of player is name entry;
+		now cock of player is cock entry;
+		wait for any key;
+		if cocks of player is 0:	[now female]
+			say "     The mouse doctor smiles as your final changes set in and you are left with only a wet pussy between your legs.  He teases your wet folds and turns to the audience.  'It seems I was mistaken.  There is one more injection to make,' he announces, slipping a pair of fingers into your vagina, making you moan in pleasure despite yourself.  His other paw is at his groin, stroking his stiffening cock back to erection.  Many in the audience cheer or laugh at that.";
+			wait for any key;
+			say "[drmousesex]";
+		otherwise:
+			say "     The mouse doctor wraps his gloved paw around your cock and starts stroking you quickly for audience, going on about how sensitive and aroused a cock is after transformation.  His motions to one of the silvery vixens, who passes him a bottle of lubrication.  He applies it to your shaft and continues pumping, discussing the characteristics of your new cock clinically, but with a gleam of amusement in his eyes.  His stroking soon gets to be too much and your hot seed splatters across your body.";
+			say "     The mad doctor discards his messy gloves with a grin.  He raises his arms to the crowd, who manage some dignified clapping despite the majour orgy that's broken out across most of the audience section.";
+	otherwise:
+		say "     The mouse doctor grins viciously as he looks over your changed form, then turns to the audience.  'There is one final injection to make, my colleagues.  And I'm sure this is the one you've all been anxiously awaiting.'  He moves a paw to your groin and starts to play with your pussy.  His gloved fingers tease your wet folds, making you moan with pleasure despite yourself.  His other paw is at his groin, stroking his stiffening cock back to erection.";
+		wait for any key;
+		say "[drmousesex]";
+
+to say drmousesex:
+	if hospfight is 1:	[normal mouse]
+		say "     The small mouse motions for the orderly, who gently lifts him up onto the operating table with you.  The white furred mouse grins down at you, lining up his cock with your pussy, making it clear what final injection he has in mind.  You struggle and try to shake your head, but the restraints keep you locked in place.  He grins and thrusts his cock hard into you.  Thankfully, due to his small size, there is little discomfort and it soon becomes quite pleasurable as mad mouse fucks you zealously.";
+		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and giving her a lap ride on her cock while playing with those enormous, feathered tits.";
+		wait for any key;
+		say "     The mouse's paws fondling your breasts brings you back to focusing on him.  His gloved paws tease your nipples and he laughs happily, aroused with his power over you.  His cock, while small, is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the little fellow makes.";
+		say "     'Mmm… I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  You can feel it fill your pussy to capacity and overflowing as much of it pushes and flows up into your womb.";
+	otherwise:			[monstrous mouse]
+		say "     The monstrous mouse climbs onto the operating table, making it groan from the added weight.  That malformed, musine face grins down at you as he lines up his cock with your pussy, making it clear what final injection he has in mind.  You struggle and try to shake your head, but the restraints keep you locked in place.  He grins and thrusts his cock hard into you.  You release a muffled groan as the massive prick spreads your pussy open.  Thankfully, some of the elasticized effect still remains and your vagina stretches to accommodate the huge cock with minimal pain.";
+		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and giving her a lap ride on her cock while playing with those enormous, feathered tits.";
+		wait for any key;
+		say "     The mouse's large paws fondling your breasts brings you back to focusing on him.  His gloved paws tease your nipples and he laughs happily, aroused with his power over you.  His monstrous cock is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the mutated mouse makes.  That spaded tip presses at your cervix, trying to spread it open while the ridges along his shaft feel so delightful against your vaginal walls.";
+		say "     'Mmm… I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  His spaded glans, pressed against your cervix, forces it to spread open, allowing the bulk of his mutated load to flow up into your womb in an attempt to breed you.";
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
+	say "[impregchance]";
+	if baby is 0 and gestation of child is not 0:
+		now facename of child is "Albino Mouse";
+		now bodyname of child is "Albino Mouse";
+		now skinname of child is "Albino Mouse";
+	say "     Panting, the mad doctor withdraws his spent shaft and hops down with a grin.  He raises his arms to the crowd, who manage some dignified clapping despite the majour orgy that's broken out across most of the audience section.";
+
+
+to say hospvictory:
+	say "     The monstrous Dr Mouse has been dazed by your final blow and has collapsed against a worktable at the far end of the room.  He's overturned the nearby water dish and broken the chemical toilet.  As the pair of mismatched chimera poke their heads around behind it, having hidden during the fight, you realize just where he's landed.";
+	say "     They scramble over to him, moaning softly with sexual need.  Their hard cocks and dripping pussies leak their fluids onto him.  One presses its breast to his lips and the addled doctor soon nurses from it, making the chimera coo happily.  The other grabs the doctor's cock and sinks itself down onto it, spurting cum onto his chest as it does.";
+	wait for any key;
+	if hp of doctor matt is 100:
+		say "     Feeling that the doctor is in good hands, you quickly look around the room, gathering any notes and samples you can find from the doctor's work area into one big pile.  Worried that someone may notice the commotion and come up to investigate, you don't take any time to look at the stuff.  You toss the contents from the doctor's storage case onto the heap.  After tearing open his notebook and breaking his laptop, you add them to it.";
+		say "     Reluctant to set a fire that could spread and take out the whole hospital, you instead pour a variety of chemicals onto the accumulated research.  Thankfully there are several strong acids used for testing which do an effective job of destroying the material.  Having seen what this twisted work has created, you don't want to leave someone else finding it and restarting it, nor do you know anyone you could trust with it.  That done, you turn back to check in on the mad doctor and his mismatched lovers.";
+	otherwise:
+		say "     Feeling that the doctor is in good hands, you quickly look around the room, grabbing what notes and samples you can from the doctor's work area.  Worried that someone may notice the commotion and come up to investigate, you rush to find as much as you can carry.  You take several interesting vials and concoctions from the storage case, carefully stowing them in some padding.  The doctor's laptop and research notebook go in there as well.";
+		say "     Having gathered what you could and breaking or spilling chemicals onto the other stuff to keep anyone from following Dr Mouse's research, you turn back to see take another look at the mad doctor and his mismatched lovers.";
+	wait for any key;
+	say "     The chimeras have continued to feed and fuck him, resulting in a seemingly random array of changes to his body starting to arise.  His head loses its mouse-like qualities entirely and becomes leonine.  While his right arm becomes that of some kind of lizard, his left one bifurcates into a pair of smaller limbs, one an avian wing and the other a monkey's arm.  One leg gains a horse's hoof while the other has a goat's.  His tail becomes long and serpentine, covered in red scales.";
+	say "     When breasts start to form on what was once the mouse's chest, the chimera riding him pulls off his cock, which is now wholly canine in form, and drives its cock into the new pussy under his balls.  That is enough to stir Dr Mouse to wakefulness, but what little intelligence there is in those eyes is fading rapidly as the infection takes over fully.  The new herm moans lustfully and wraps her mismatched legs around the chimera's waist, yowling with mindless need.";
+	say "     The second hybrid pulls its breast from their captive's muzzle and replaces it with its cock instead.  The ex-mouse takes it into its mouth eagerly, licking and sucking with need.  As the new hybrid continues to be mated by the fractured creatures of its own creation, there nothing but lust in those vacant eyes as she succumbs fully.";
+	wait for any key;
+	say "     Satisfied that the mouse is no longer a threat, you step over to the worktable and break off the anchor points for the chains.  The trio, too engrossed in sex, don't react more than looking up at you and mewling enticingly for you to join them.  Now freed, you are satisfied that the two unfortunate creatures will not be trapped to starve, and that they and their new companion can instead join the others like them in the hospital, where the doctor will never be heard from again.";
+	say "     Your task done, you decide to linger no longer and quickly go down the stairs.  Acting as if nothing is amiss, you walk past the jaguar guarding the stairwell and exit the hospital.";
+	wait for any key;
+	now the player is in City Hospital;
+	if hospquest is 10:		[Refused upon offer]
+		say "     Outside, you find the pink raccoon waiting for you fretfully on the steps.  Seeing you come out alive and well, he dashes into your arms and hugs you tightly.  Not wanting to cause a scene, you whisper to him to be quiet and come with you.  He takes your hand in his, prancing happily beside you.";
+		if pink raccoon is tamed:
+			say "     You go down a side street with him and duck into a vacant building to collect your thoughts safely away from the hospital.  The pink coon cuddles up to you, vacant eyes looking up at you with admiration, somehow knowing that you've dealt with the mouse that filled him with such fear.  You pet his ears and he churrs softly[if hp of doctor matt is not 100].  You know that you need to go see Dr Matt right away, wanting to turn over the research material to him before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
+		otherwise:
+			say "     You go down a side street with him and duck into a vacant building to collect your thoughts safely away from the hospital.  The pink coon cuddles up to you, thanking you again for helping to get him out of there.  While he doesn't say anything about it, he looks at you with considerable admiration, somehow knowing that you've dealt with the mouse that filled him with such fear.  As he starts to fret about where he can now go, you decide, on impulse to tell him about the bunker under the abbey library and give him directions[if hp of doctor matt is not 100].  You know that you need to go see Dr Matt right away, wanting to turn over the research material to him before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
+	otherwise:
+		say "     Outside, you go down the steps and walk across the large parking lot quietly but quickly.  You try not to draw attention to yourself, but want to flee the area as soon as possible, lest the events upstairs are discovered sooner rather than later.  As you walk off down a side street, you [if hp of doctor matt is not 100]know that you need to go see Dr Matt right away, wanting to turn over the research material to him before doing anything else[otherwise]wonder what to do next now that you are without scientific help[end if].";
+	wait for any key;
+	now hp of doctor mouse is -2;
+	now Locked stairwell is locked;
+	now hospquest is 13;
+	increase the score by 50;
+	if hp of doctor matt is not 100:
+		now the player is in Primary Lab;
+
+
+fightstatus is a number that varies.
+
+to say tlabsbigfight:
+	say "     You silently step up behind Dr Matt and stab the needle into him.  He cries out for Orthas and jabs a finger into an emergency button, sounding an alarm as well.  Trying to free himself from your grip, he struggles to reach the anti-infection microwave device he has on his desk.  As you fight to hold him, his now useless environment suit starts to come off.";
+	wait for any key;
+	say "     You can see that he's becoming some strange hybrid of husky and rabbit, with a cute, rabbit-like muzzle and ears, but a coat of fluffy fur and curled tail like a husky.  As six breasts with perky nipples start to form on his chest and a wet slit grows in under his fuzzy sheath, the struggles to get away start to become lustful grinding against your body as the hormones course through her system, clouding the doctor's judgment.";
+	wait for any key;
+	say "     You are about to take advantage of the situation, finding the transformation and the doctor's aroused pheromones quite enticing, when the door bursts open almost off its hinges as an angry dragon bursts in.  She growls loudly, quickly taking stock of sight of you about to have your way with the transformed doctor, sending her into a blind rage.";
+	if Susan is visible:
+		wait for any key;
+		say "     As Orthas steps forward to fight you, she is struck hard on the back of the head by Susan, surprising you both.  The heavy oscilloscope the doe used to hit her falls to the ground as Orthas shoves her back violently, stunning her.  Without understanding the conflict, the doe has clearly sided with her mate.  Your nanite bond with her fills you with a warm rush of affection for her.";
+	now fightstatus is 3;
+	challenge "Dragon";
+	if fightstatus is 3:
+		say "[tlranaway]";
+	if fightstatus is 2:
+		say "[tlloss]";
+	if fightstatus is 1:
+		say "[tlvictory]";
+
+
+to say tlranaway:
+	say "     Scared to continue fighting the maddened dragoness, you make a run for it[if Susan is visible].  Susan, who is just starting to recover, sees you flee and follows you out[end if].  As you reach the stairs down, you glance back to see Orthas trying to work the microwave neutralizer over Dr Matt's body to halt the infection.  It seems that your attack was at least partially successful, for the new hybrid herm has difficulty stopping herself from rubbing her new body and the dragoness's.";
+	say "     Orthas, catching sight of you out in the hall, growls and charges out after you.  You run down the stairs quickly and rush out the front door with her in hot pursuit.  As you rush down the steps, you are caught in a fiery blast that burns your flesh and sends you tumbling end over end.  The black dragoness growls from the doorway and slams it shut violently, heading back up to check on the doctor again.";
+	say "     In terrible pain, you struggle to rise, managing to pull out the radio and call the hospital for extraction[if Susan is visible].  Susan, only partially caught in the blast, is only a little better off than you.  She helps you[otherwise].  With considerable effort, you[end if] get up and put some distance between you and the lab before the dragoness can return to finish the job.  You manage to get about a block away before the helicopter arrives, taking you [if susan is visible]both [end if]back to the hospital.";
+	extend game by 20;
+	say "[line break]";
+	wait for any key;
+	now hp of doctor matt is -1;
+	move doctor matt to dark basement;
+	move orthas to dark basement;
+	if Susan is visible:
+		move susan to Hidden Lab;
+	now the door west of Outside Trevor Labs is locked;	[not sure how to do this]
+	now hospquest is 12;
+	now the player is in Hidden Lab;
+	say "[posttlscene]";
+
+
+to say tlloss:
+	say "     While Orthas attempts to treat the doctor, [if susan is visible]Susan starts to recover and slips out of the room to join you in the hall, helping you to get up and get away[otherwise]you manage to get back on your feet and start to head down the hall away towards the exit[end if].  As you make it to the stairwell down, you glance back.  Orthas, catching sight of you out in the hall, growls and charges out after you.  You run down the stairs quickly and rush out the front door with her in hot pursuit.  As you rush down the steps, you are caught in a fiery blast that burns your flesh and sends you tumbling end over end.  The black dragoness growls from the doorway and slams it shut violently, heading back up to check on the doctor again.";
+	say "     In terrible pain, you struggle to rise, managing to pull out the radio and call the hospital for extraction[if Susan is visible].  Susan, only partially caught in the blast, is only a little better off than you.  She helps you[otherwise].  With considerable effort, you[end if] get up and put some distance between you and the lab before the dragoness can return to finish the job.  You manage to get about a block away before the helicopter arrives, taking you [if susan is visible]both [end if]back to the hospital.";
+	decrease score by 50;
+	extend game by 20;
+	say "[line break]";
+	wait for any key;
+	now hp of doctor matt is -1;
+	move doctor matt to dark basement;
+	move orthas to dark basement;
+	if Susan is visible:
+		move susan to Hidden Lab;
+	now the door west of Outside Trevor Labs is locked;	[not sure how to do this]
+	now hospquest is 12;
+	now the player is in Hidden Lab;
+	say "[posttlscene]";
+
+
+to say tlvictory:
+	if cocks of player > 0:
+		say "     Dr Matt moans as she is clearly torn between the struggles to get to the microwave neutralizer and to enjoy the newly sexualized body.  'No, I need... mustn't give... but so good.  Why did I ever... ngg... but my work...'  Deciding to make the decision for her, you push the horny hybrid onto one of the tables and tease her six breasts.  The transformed doctor releases a soft yip and pants, reaching for your stiff penis despite the conflict in her failing mind.";
+		say "     Happy to oblige, you line up your cock her pussy, then slowly slide it into her.  Dr Matt arches her back and moans loudly, spraying cum from her canine cock across her ample bosom as her virginity is taken.  'Oh my god, yes!' she cries in ecstacy.  The lustful huskybunny's pussy squeezes and tugs at your cock eagerly, the slutty body responding automatically to a hard shaft filling it.  You grunt as the herm's vagina works you over so eagerly, starting to thrust hard and fast into her.";
+		wait for any key;
+		say "     Pinned to the table beneath you, the transformed doctor moans and yips as you fuck her good and hard, fulfilling the instinctual needs that are rapidly becoming all she knows.  You grin as you watch her, once a brilliant scientist, become a mindless sextoy as you screw her.  Her cute, rabbitty face smiles up at you and her husky tail wags happily as she's quite literally fucked senseless.";
+	otherwise:
+		say "     Dr Matt moans as she is clearly torn between the struggles to get to the microwave neutralizer and to enjoy the newly sexualized body.  'No, I need... mustn't give... but so good.  Why did I ever... ngg... but my work...'  Deciding to make the decision for her, you push the horny hybrid down to the floor, straddle and tease her six breasts.  The transformed doctor releases a soft yip and pants, grinding her stiff cock up against you.";
+		say "     Happy to oblige, you line up your pussy with her cock, then slowly slide it into you.  Dr Matt arches her back and moans loudly, releasing a spurt of cum from her canine cock, but remaining quite hard and starting to thrust up into you.  'Oh my god, yes!' she cries in ecstacy.  The lustful huskybunny's cock throbs inside you, pulsing with excitement as her slutty body responds automatically to the hot grip of a pussy around it.";
+		wait for any key;
+		say "     Pinned to the floor beneath you, the transformed doctor moans and yips as you fuck her good and hard, fulfilling the instinctual needs that are rapidly becoming all she knows.  You grin as you watch her, once a brilliant scientist, become a mindless sextoy as you ride her canine cock.  Her cute, rabbitty face smiles up at you and her husky tail wags happily as she's quite literally fucked senseless.";
+	if susan is visible:
+		wait for any key;
+		say "     Hearing some soft moans behind you, you glance over to find Susan have gotten in on the action and is driving her cock into Orthas.  The black dragoness moans weakly, still largely incapacitated from her fight with you.  The smaller doe pounds away at the dragon's cunt aggressively.  'I've seen you eyeing my mate.  He's mine, you slut.  Take my fucking cum instead, you black bitch.'";
+		say "     You have never known Susan to show any interest in using her cock before, so the sight of her pounding away at the dragon is quite surprising and arousing.  She pinches and squeezes the dragoness's huge breasts, teasing her nipples.  Orthas moans and starts rocking her hips up to meet each thrust, responding to the aggressive mating she's getting from the smaller doe herm.";
+		wait for any key;
+	if cocks of player > 0:
+		say "     Your groin is thoroughly soaked with the huskybunny's feminine juices, as she's already cum several times.  You wrap a hand around her large, throbbing cock and focus on seeding her properly.  The feel of the new hybrid's pussy around you is so good.  Dr Mouse's formula has worked wonders on the scientist, making a wonderful fucktoy that is certainly one of the best fucks you've ever had.";
+		wait for any key;
+		say "     With a final, hard thrust into her, you push your cock as deep as you can and unleash your hot load.  Your cum spurts deep inside her and her body responds instantly, tugging and milking at your shaft for all you'll give and pulling it up into her womb.  Pulling your spent shaft free, you wipe in clean on one of her big, fuzzy rabbit feet.";
+	otherwise:
+		say "     Your groin is thoroughly soaked with the huskybunny's feminine juices, as she's already cum several times without even being filled.  You lean down, licking and nibbling at her nipples as you focus on the throb of that thick cock filling you.  It feels so good inside you, stimulating all your sensitive spots and instinctively taking on a rhythm to give you the most pleasure.  Dr Mouse's formula has worked wonders on the scientist, making a wonderful fucktoy that is certainly one of the best fucks you've ever had.";
+		wait for any key;
+		say "     With a final, hard push down into her, you take her cock as deep as you can, moaning as the knot spreads you open and ties with you.  You can feel her heavy balls unleash her cum inside you, flowing up into your vagina and womb in an attempt to breed you.  You arch your back and moan loudly, clamping your vaginal walls firmly around it.  Her earlier spurts were nothing compared to the torrent of cum of her actually attempting to breed you.  It fills your womb and suffuses your body with an arousing warmth.";
+		let baby be 0;
+		if child is born or gestation of child is not 0, now baby is 1;
+		say "[impregchance]";
+		if baby is 0 and gestation of child is not 0:
+			now facename of child is "Huskybunny";
+			now bodyname of child is "Huskybunny";
+			now skinname of child is "Huskybunny";
+		say "     As the knot starts to go down, you pull yourself off of the little slut's cock and grin happily.  You take a quick look around, taking stock of the situation in the lab.";
+	if susan is visible:
+		wait for any key;
+		say "     You glance back over to the other pair and find Susan finishing up as well.  Her ballsac tightens up as she unleashes spurt after spurt of her seed into the dragoness.  Her orgasm lasts quite a long time, apparently having a considerable load saved up from lack of use.";
+		if orthasstart > 1:
+			say "     As the dragoness's belly starts to swell with the telltale sign of her eggs, the doe withdraws her shaft and grins to you.  'Bring that perv over here, hon.'  You nod and pull the huskybunny slut over, tossing her atop the dragoness.  She moans and grinds her cock against Orthas's belly as the dragoness's ovipositor starts to emerge.";
+			say "     'No, doctor.  Don't,' she moans, but cannot help herself as her body's urges push the ovipositor into the dripping waiting right above it.  She whimpers a little, but works the flexible, probing flesh deeper in, starting to rut the mindless sextoy whom she's failed to protect.";
+			wait for any key;
+			say "     You and Susan set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the dragon eggs start sliding through the ovipositor and into the slut's womb.";
+		otherwise:
+			say "     Having finished thoroughly seeding the dragoness, the doe withdraws her shaft and grins to you.  'Bring that perv over here, hon.'  You nod and pull the huskybunny slut over, tossing her atop the dragoness.  She moans and grinds her cock against those smooth, hard scales.";
+			say "    'No, doctor.  Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her.  She whimpers a little, but works arches her hips up into the thrusts, starting to rut the mindless sextoy whom she's failed to protect.";
+			wait for any key;
+			say "     You and Susan set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again.  As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum.";
+	otherwise:
+		say "     You glance over at Orthas and decide not to leave her out of the action.  Grabbing the little slut, you pull her off the table and over to the dragoness.  Tossing her down onto her black body, you watch as the creature that was once Dr Matt starts to grind her cock against those smooth, hard scales.";
+		say "     'No, doctor.  Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her.  She whimpers a little, but works arches her hips up into the thrusts, starting to rut the mindless sextoy whom she's failed to protect.";
+		wait for any key;
+		say "     You set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again[if orthasstart > 1].  As you are heading out, you can see that the dragoness's belly is starting to swell with eggs and her ovipositor is pushing those eggs into the furry slut's womb[otherwise].  As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum[end if].";
+	wait for any key;
+	say "     With Dr Matt in good hands, you [if Susan is visible]and Susan [end if]bring your haul down the stairs in stages and then take it out the door.  Having called for the helicopter pickup earlier, it arrives and you instruct the orderlies to load up the equipment before you all return to the hospital and the laboratory hidden within.";
+	say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there.  It seems that Orthas called in the military to take the transformed doctor and any remaining research material.  They've been dealt a sizeable setback to their plans.";
+	decrease the humanity of player by 5;
+	increase score by 50;
+	extend game by 56;
+	say "[line break]";
+	wait for any key;
+	now hp of doctor matt is -2;
+	move doctor matt to dark basement;
+	move infection terminal to Hidden Lab;
+	if Susan is visible:
+		move susan to Hidden Lab;
+	now the door west of Outside Trevor Labs is locked;	[not sure how to do this]
+	now hospquest is 12;
+	now the player is in Hidden Lab;
+	say "[posttlscene]";
+
+
+instead of going to Trevor Labs Lobby while hospquest > 11:		[Lab unenterable after attacking Dr Matt/stealing feat machine]
+	if hp of doctor matt is -1:
+		say "     After having fled the wrath of Orthas, you dare not try to enter again and risk facing her firey breath.";
+	otherwise if hp of doctor matt is -2:
+		say "     Having picked up Orthas and the transformed Dr Matt from the lab, it seems the military blasted the inside of the building, preventing any further theft of any sensitive technology and notes they could not take with them.  The building is no longer accessible, not that anything of value could have survived.";
+	otherwise if hp of doctor matt is -3:
+		say "     The self-destruct charges have done their job and much of the inside of the building has collapsed.  It is no longer accessible, not that anything of value could have survived.";
+	otherwise:
+		now the player is in Trevor Labs Lobby;
+
+
+to say posttlscene:
+	say "     Returning to the hospital, you are greeted by Dr Mouse on the helipad.  As he and the orderlies escort you [if Susan is visible]and Susan [end if]down to his lab, you relate to him your [if hp of doctor matt is -1]partial [end if]success at Trevor Labs.  The mouse is [if hp of doctor matt < -1]very [end if]pleased with the results.";
+	if hp of doctor matt is -1:		[fled/lost fight]
+		say "     'While the infection was not complete, the partial effects you described should severely hamper his... ahem... her abilities to continue her research.  At the very least, it will slow down their progress and I can take the lead.  While it is unfortunate that you did not get their nanite adjustment system, its gains would have largely been short term.  I should still be able to provide the same service as Dr Matt did for you.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
+		wait for any key;
+		say "     'Now, I have taken the liberty of perusing the hospital files and preparing a false identity from the patient records when the military finally do move into the city[if susan].  I will prepare one for your friend as well[end if].  They are physically similar to you, have no next of kin and won't be turning up to throw a wrench into things.'  It seems that the good doctor has been thinking ahead for you.";
+	if hp of doctor matt is -2:		[won fight]
+		say "     'From your report, you have done an excellent job.  The complete removal of my rival as competition to discover the nanites['] secrets will make my knowledge all the more valuable.  And these notes and equipment will be of great benefit in the here and now.'";
+		say "     'With them, I can more readily test the parameters of the nanites['] abilities and distribute any improvements I discover my more easily.  Once I have this hooked up, I should be able to provide services like the doctor did, but with many more options to you.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
+		wait for any key;
+		say "     'Now, I have taken the liberty of perusing the hospital files and preparing a false identity from the patient records when the military finally do move into the city[if susan].  I will prepare one for your friend as well[end if].  They are physically similar to you, have no next of kin and won't be turning up to throw a wrench into things.'  It seems that the good doctor has been thinking ahead for you.";
+		now featunlock is 1;
+	if hp of doctor matt is -3:		[took from empty lab]
+		say "     'You have done an excellent job.  This device just what I need to more readily test the parameters of the nanites['] abilities and distribute any improvements I discover my more easily.  Once I have this hooked up, I should also be able to provide many more options to you with it.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
+		wait for any key;
+		now featunlock is 1;
+	if susan is visible:
+		say "     'Your friend should stay here for the moment as well.  If this Dr Matt found value in observing her, I should do so also.  It sounds like he left you with nothing to do all day, my dear deer.  Perhaps you would be willing to help me out with a few simple tasks around the lab?'  Susan smiles and nods politely to the little white mouse.";
+		wait for any key;
+	now hospquest is 14;
+	say "     'Now, as a reward for your continued service,' he says, turning back to you.  'I have prepared an injection to boost your physical abilities.  It should result in increased physical strength, agility and endurance, as well as a more athletic body.  This should further obscure your identity should you not change species before being found.'";
+	say "     With the promise of being stronger and better able to deal with the hardships of the infected city, you hold out your arm for the injection.  There is a shiver of activity inside you as the nanites go to work, bulking up your muscles and improving your physique as a whole.  You become a more rugged version of yourself[if susan is visible].  Susan seems quite impressed by this improved version of you[end if].";
+	add "Physical Booster" to the feats of the player;
+	increase strength of player by 2;
+	increase dexterity of player by 2;
+	increase stamina of player by 2;
+	increase maxhp of player by ( level of player + 1 );
+	increase hp of player by (level of player + 1);
+	say "[bold type]Your Strength, Dexterity and Stamina are all increased by 2.[roman type][line break]";
+
 
 Section 6 - Museum Quests - Triceratops
 
@@ -721,7 +1341,7 @@ Instead of conversing the Nermine while nerminepackage is 1 and Nerminetalk > 0:
 	now Viking Longboat is unresolved;
 
 Instead of conversing the Rod while nerminepackage > 0 and rodhosp is 0:
-	say "     'Those big, spotted hairballs that rolled in here the other day?  That was a bad scene, dude.  They started to get fresh with some of the girls in the atrium and drag them off.  Well, we wouldn't put up with that.  Never try to force a mall rat from their mall, man.  We don't want none of them goons and their friends in here again.'";
+	say "     'Those big, spotted hairballs that rolled in here the other day?  That was a bad scene, dude.  They started to get fresh with some of the girls in the atrium and tried to drag them off.  Well, we wouldn't put up with that.  Never try to force a mall rat from their mall, man.  We don't want none of them goons and their friends in here again.'";
 	now rodhosp is 1;
 
 Instead of conversing the Ronda while nerminepackage > 0 and rondahosp is 0:
@@ -801,7 +1421,22 @@ It is not temporary.
 instead of using package:
 	say "     You ponder the old box, string-tied box in your hands, wondering what the doctor's receiving.";
 
+Section 8 - Endings
 
+when play ends:
+	if hospquest is 13 and humanity of player > 9:			[helped Dr Matt]
+		if hp of doctor mouse is -1:					[Dr Mouse not defeated]
+			say "When the military comes into the city, they are helped by Dr Matt's findings.  This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes.  Over the years, you do hear rumours of a bizarre mouse scientist working in distant countries, selling nanite based technology and weapons to foreign governments or guerilla factions of the infected.";
+		if hp of doctor mouse is -2:					[Dr Mouse defeated]
+			say "When the military comes into the city, they are helped by Dr Matt's findings.  This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes.  You are quietly awarded a medal at a small ceremony for your services.  Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
+	otherwise if hospquest > 13 and humanity of player > 9:	[helped Dr Mouse]
+		if bodyname of player is not "Wolverine Guard":
+			if hp of doctor matt is -1:					[Dr Matt not defeated]
+				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  You discretely ask a few questions and hear that the military's scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life.";
+			otherwise if hp of doctor matt is -2:			[Dr Matt defeated]
+				say "When the military comes through, you are taken in by the army.  The situation at the military base is chaos, with little ability to understand or control the infection.  As such, you receive little scrutiny and your false identity is not questioned.  After you are discharged, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed but helps you in your new life.";
+			otherwise if hp of doctor matt is -3:			[Feat machine stolen]
+				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life.";
 
 [ Edit this to have the correct Name as well]
 Hospital for FS ends here.

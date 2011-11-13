@@ -13,11 +13,13 @@ when play begins:
 	add { "Jaguar" } to infections of guy;
 
 to say losetojaguar:
+	now fightstatus is 2;		[required for hospital fight]
 	say "     You are battered by the brutish, feline orderly and left in a heap to recover.";
 	now hp of player is (( hp of player ) times 2 ) divided by 3;
 
 
 to say beatthejaguar:
+	now fightstatus is 1;		[required for hospital fight]
 	say "     You manage to knock the muscled jaguar out, at least for the moment.";
 
 
