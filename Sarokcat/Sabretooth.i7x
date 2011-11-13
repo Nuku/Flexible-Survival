@@ -71,7 +71,7 @@ When Play begins:
 	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Chipped tooth";			[ Loot monster drops, ]
-	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
+	now lootchance entry is 40;		[ Chance of loot dropping 0-100 ]
 
 Table of Game Objects (continued)
 name	desc	weight	object
