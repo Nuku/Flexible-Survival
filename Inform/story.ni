@@ -694,6 +694,16 @@ Include Feral Wolf for FS by Shadowwolf94.
 Include Anthro Shaft Beast for FS by Dragonflayer.
 Include Feral Shaft Beast for FS by Dragonflayer.
 Include Wrestling Wolf For Fs by Volcblaze.
+Include Donkeywoman by Sarokcat n Verath.
+Include Mareslut by Sarokcat.
+Include Stable Related Events by Sarokcat.
+Include Stables by Sarokcat.
+Include Stallionboi by Sarokcat n Verath.
+Include Donkeyman by Sarokcat n Verath.
+Include Fancy by Sarokcat n Verath.
+Include Horseman by Sarokcat n Verath.
+Include Daisy by Sarokcat n Verath.
+Include Onyx by Sarokcat n Verath.
 Include Pirate Island by Sarokcat.
 Include Little Fox by Sarokcat.
 Include Felinoid Companion by Sarokcat.
