@@ -1,5 +1,7 @@
 Orthas by Nuku Valente begins here.
 
+Section 1 - Orthas Eggses
+
 orthasstart is a number that varies.
 
 after going east from Trevor Labs Lobby when the hp of doctor matt is greater than 2 and orthasstart is -1:
@@ -155,12 +157,88 @@ carry out orthasfuck:
 			say "Deciding you don't need to come out of this with another pregnancy, you climb on but angle the ovipositor for your rear. You know that this egg will stretch you more than you've ever been stretched in that hole, but you don't care, knowing that you're more comfortable not carrying another child in the womb at the moment. It doesn't take Orthas long to get to the point where her egg is pushing up her 'shaft', and you can feel it pressing hard at your anal opening, and somehow, the egg finds its way past your tight anal ring, passing further up her shaft. After a few more tense moments of mixed pain and pleasure, the egg finishes its journey up there, and pops out of her shaft, making you moan lustfully... the egg will come out later.";
 
 
+Section 2 - Monster Responses
+
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
+
+when play begins:
+	add { "Dragon" } to infections of furry;
+
+to say losetoorthas:
+	now fightstatus is 2;
+	say "     The powerful dragoness strikes you with a mighty blow, you are sent flying out the broken door, landing in the hall.  As you struggle to rise, you can see her inside, passing the microwave device across Dr Matt to halt the transformation, but it's clear that the damage is at least partially done.  The doctor is fondling herself and Orthas even as the dragoness tries to help her, though the hybrid is sane enough to instruct Orthas to continue the process.";
+
+to say beatorthas:
+	now fightstatus is 1;
+	say "     You manage to knock the dragoness senseless and look over her and the transforming Dr Matt.";
+
+to say orthasdesc:
+	say "[line break]     Orthas, the black dragon, steps forward to battle you.  She stands about six and a half feet tall and has a very athletic body.  Her bat-like wings are each about three feet long and folded onto her back at the moment.  She was large, F cup breasts, but they don't seem to affect her balance or ability to fight at all.  Her eyes blaze with anger and thick smoke curls up from her nostrils as she moves to deal with you for your betrayal.";
+	if Susan is in Primary Lab:
+		say "     The dragoness is still rather woozy after the blow given to her by the doe.  While it doesn't look like she'll be able to help you further with the fight, she has made the dragoness a little easier to deal with.";
+		choose row monster from the table of random critters;
+		now hp entry is 150;
+		now monsterhp is 125;
+		now wdam entry is 9;
+		now lev entry is 11;
+		now libido entry is 20;
+		now dex entry is 24;
+
+
+Section 3 - Monster Insertion
+
+Table of random critters (continued)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
+
+[ Adds a blank row to the table, this is immediately filled ;) ]
+When Play begins:
+   Choose a blank row from Table of random critters;
+   now name entry is "Dragon"; [Name of your new Monster]
+   now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head.  You manage to grab her head and keep her from getting you with a potentially lethal bite.  As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes.  You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]"; [Text used when the monster makes an Attack]
+   now defeated entry is "[beatorthas]"; [ Text or say command used when Monster is defeated.]
+   now victory entry is "[losetoorthas]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+   now desc entry is "[orthasdesc]"; [ Description of the creature when you encounter it.]
+   now face entry is "draconic"; [ Face description, format as the text "You have a (your text) face."]
+   now body entry is "that of a well-muscled anthro dragon."; [ Body Description, format as the text "Your Body is (your text)"]
+   now skin entry is "dark scaled"; [ skin Description, format as the text "You have (your text) skin"]
+   now tail entry is "You have a slender, draconic tail."; [ Tail description, write a whole Sentence or leave blank. ] 
+   now cock entry is "ridged"; [ Cock Description, format as you have a 'size' (your text) cock]
+   now face change entry is "it shifts and reforms into a dragon's head."; [ face change text. format as "Your face feels funny as (your text)" ]
+   now body change entry is "your body shifts and alters itself, becoming that of a humanoid dragon"; [ body change text. format as "Your body feels funny as (your text)." ]
+   now skin change entry is "hard scales form on your skin, covering your entire body in a tough, but flexible hide"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+   now ass change entry is "a slender, draconic tail forms behind you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+   now cock change entry is "it changes shape, gaining firm ridges along its length to stimulate your partner"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+   now str entry is 20;
+   now dex entry is 24;
+   now sta entry is 20;
+   now per entry is 15;
+   now int entry is 12;
+   now cha entry is 15;
+   now sex entry is "nochange";     [ Invalid answer intentionally getting no change in gender]
+   now hp entry is 150;            [ How many HP has the monster got? ]
+   now lev entry is 12;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+   now wdam entry is 10;            [Amount of Damage monster Does when attacking.]
+   now area entry is "nowhere";    [ Location of monster, in this case nowhere]
+   now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+   now cock length entry is 8;        [ Length infection will make cock grow to if cocks]
+   now cock width entry is 4;        [ Size of balls apparently ;) sneaky Nuku]
+   now breasts entry is 2;            [ Number of Breasts infection will give you. ]
+   now breast size entry is 3;        [Size of breasts infection will try to attain ]
+   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+   now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
+   now cunt width entry is 5;        [ Width of female sex  infection will try and give you ]
+   now libido entry is 20;            [ Set to zero in this monster to control elsewhere ]
+   now loot entry is "";            [ Dropped item.  Key will be used later ]
+   now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
+
 
 When play ends:
-	if orthasstart is 4 and humanity of player is greater than 10:
+	if orthasstart is 4 and humanity of player is greater than 10 and hp of doctor matt > 0:
 		say "Once rescue comes, taking everyone with a sane mind out of the city, Orthas comes with you. She's grateful to you for continuing to help with the doctor, and so she stays fairly nearby you in your lives outside. You spend a lot of time together, and many eggs are laid, both into you and elsewhere. During this time, Orthas also learns that she can have a more conventional pregnancy if she holds the eggs inside of herself long enough, and finds that they grow significantly larger if she does so.";
 		if Snow is in Grey Abbey Library and Sandra is in the Bunker and susan is in primary lab:
 			say "At one point in your lives outside, Orthas stands with a silly grin on her face when you arrive at home. Susan, Snow, and Sandra are all sitting on the living room couch, also smiling, and this is the first time you notice that her ovipositor is extended. You suddenly realize you got home about 15 minutes too late.";
-		
+
 
 Orthas ends here.

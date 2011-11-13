@@ -134,6 +134,8 @@ when play ends:
 		if humanity of player is less than 10:
 			if susan is in primary lab:
 				say "Fear grips your heart and you take off running like the wind until you reach Susan's arms, leaping into them and curling up against her a moment. She calms you and pets you. Despite your loss of humanity, she remains clear, and cares for you as a mother, even if she likes playing with you like a lover. When rescue does come, she escorts you to society and continues to care for you to the end of your days, never leaving you wanting for company, or anything else.";
+			otherwise if susan is in hidden lab:
+				say "Fear grips your heart and you take off running like the wind until you reach Susan's arms, leaping into them and curling up against her a moment. She calms you and pets you. Despite your loss of humanity, she remains clear, and cares for you as a mother, even if she likes playing with you like a lover. When Dr Mouse leaves the city, she goes with him and takes you into hiding with them.  As the doctor continues his work in the shadows, the deer continues to care for you to the end of your days, never leaving you wanting for company, or anything else.";
 			otherwise:
 				say "You can feel your humanity drifting away from you and flee to where your instincts urge you. You find the herd of deer, led by that magnificent stag. On seeing you, Susan steps forward and welcomes you into her arms, holding your shivering form tight to herself, 'Now you see?' she whispers, then lays you down, rutting you to the cheers of the others, many of whom stroke their black cocks over your coupling bodies, spraying you and her with hot strings of seed even as she fills your belly and officially claims you as her own.[line break][line break]When she is done, she rises from you, and one of your pack sisters takes her place, rutting you just as eagerly. She rolls over, putting you on top[if cunts of player is greater than 0] and leaving the way open for another sister to come up and claim your ass, sandwhiching you between as you're fucked by[otherwise] fucking you wildly before passing you along to[end if] each sister in turn, passed around twice through the entire circle of adoring deer. By the time it is done, you are sore but satisfied, and begin your life as a member of the herd.";
 		otherwise:
@@ -141,6 +143,8 @@ when play ends:
 				say "When the rescue comes, you return to Susan and leave the city hand in hand. Despite any other loves or friends you pick up, she remains your favored. Her belly is swollen round often with the fruit of your couplings, and she accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives, eventually tended to by the children you sired and raised so well.";
 				if orthasstart is 4:
 					say "Susan remains your loving and loyal doe, bearing twin foals from your union.  Your new family convinces you to settle down with them in a life that, though perhaps unplanned, you still find rewarding.  Her work assisting Dr. Matt's research continues to yield fascinating discoveries.[line break][line break]Your two relationships cause some friction at first, but eventually Susan and Orthas learn to live with, and even rely on and care for each other in times of trouble.  Your children grow up together, well-protected and cared for.  Dr. Matt's exposure to your family causes him to reconsider some of his less ethical approaches to science.";
+			otherwise if susan is in hidden lab:
+				say "When the rescue comes, you return to Susan and leave the city hand in hand, using your false identities as cover. Despite any other loves or friends you pick up, she remains your favored. Her belly is swollen round often with the fruit of your couplings, and she accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives, eventually tended to by the children you sired and raised so well.";
 			otherwise:
 				say "Your sleek lines attract many. You easily secure a job as a secretary, but live for the weekends, when you'd hit the clubs and dance the night away to the gawkings of others. Though some humans remain fearful on basis of your being mutated at all, more than a few approach you openly, seeing your attention and affection. You show them a good time, on the dance floor, or the bedroom floor, depending on how much you like them. Man, woman, you find yourself not caring as much between the two.";
 
@@ -179,7 +183,7 @@ instead of conversing the susan:
 			remove susan from play;
 			now deerconsent is 2;
 	otherwise if deerconsent is 2:
-		if hp of doctor matt is less than 8:
+		if hp of doctor matt is less than 8 and hp of doctor matt > 0:
 			say "She blushes and nudges you, 'You should talk to the Doctor first.'";
 		otherwise:
 			if libido of player is less than 50:
