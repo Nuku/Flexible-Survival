@@ -41,7 +41,7 @@ Daisy is in Mares Quarters.
 Feeding Table is in Mares Quarters.
 
 Feeding Table is a man.
-The description of Feeding Table is "A large table that has been set up to the side of the room, it appears to have several different varieties of food set out on it. Perhaps not surprisingly, most of the food is of the type most attractive to horses, with several different types of oatcakes, and cereals set out, as well as some chips and grain trail mixes. There is also a small bowl of what appears to be labeled as, Mare[apostrophe]s Milk. Looking around, you note that some of the mares are eyeing you with curioisity as you look at the table, and a few even grin as they gesture for you to 'Sample the Food', maybe it wouldn[apostrophe]t hurt to 'Try the Horsefood' set out on the table?";
+The description of Feeding Table is "A large table that has been set up to the side of the room, it appears to have several different varieties of food set out on it. Perhaps not surprisingly, most of the food is of the type most attractive to horses, with several different types of oatcakes, and cereals set out, as well as some chips and grain trail mixes. There is also a small bowl of what appears to be labeled as, Mare[apostrophe]s Milk. Looking around, you note that some of the mares are eying you with curiosity as you look at the table, and a few even grin as they gesture for you to 'Sample the Food', maybe it wouldn[apostrophe]t hurt to 'Try the Horsefood' set out on the table?";
 
 
 
@@ -63,8 +63,9 @@ Carry out Marefeeding:
 	if Lastmarefed – turns is less than 8:
 		say "You wander over to the table filled with food for the mares again, only to see several of the mares shooting you rather dirty looks as you look over the food. Sighing slightly, you decide that being greedy about the food isn[apostrophe]t worth annoying the so far polite horsewomen, and decide to try to snag some of the food again at a later time.";
 	otherwise:
-		say "Wandering over to the table filled with food on the side of the room, you notice several of the mares seem quite amused as you browse the selection, several of them coming over to help. The mares selecting several different bits of food for you to try, all the while they are giggling to themselvs as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all the attention the mares have been giving you.";
+		say "Wandering over to the table filled with food on the side of the room, you notice several of the mares seem quite amused as you browse the selection, several of them coming over to help. The mares selecting several different bits of food for you to try, all the while they are giggling to themselves as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all the attention the mares have been giving you.";
 		decrease hunger of player by 10;
+		infect "Mareslut";
 		increase libido of player by 20;
 		
 
@@ -86,3 +87,4 @@ The description of Employee Access is "This long narrow hallway curves north, an
 
 
 Stables ends here.
+
