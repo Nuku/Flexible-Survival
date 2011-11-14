@@ -75,7 +75,7 @@ Instead of Resolving a Tack room:
 		say "Thinking about those creatures what they might use this gear for as you look around the room, you decide it might be best to leave while you still can, after all, this is obviously an area some of them visit often, and being found in a place with so many ways to restrain a person could be problematical you think as you slip out the door, even though for some reason the idea of being restrained seems increasingly sexy to you as you can[apostrophe]t help but imagining yourself in one of those nice sexy harnesses.";
 	Now Tack room is resolved;
 
-Section 3-  Onyxroom.
+Section 3-  Onyxroom
 
 Onyxroom is a situation.
 The sarea of Onyxroom is "Stable";
@@ -83,15 +83,6 @@ The sarea of Onyxroom is "Stable";
 Instead of Resolving a Onyxroom:
 	say "Exploring deeper into the maze of halls and rooms of the converted hotel you find yourself in another hallway much like the others. Checking to make sure you are alone you venture down the hallway noticing that next to each of the doors is a neatly engraved name plate, obviously the name of the rooms occupant. Halfway down the hall you see a name plate that reads Onyx. Taking a deep breath you open the door to the room and go inside. On the walls is an assortment of horse tack done in black leather. Bridles and halters of every description hang neatly from the walls along side reigns and bits, A large old fasioned horse collar hangs on another wall. On a stand sits an english saddle. Exploring further you find the closet is filled with fetish clothes and other outfits the dresser drawers are filled with more clothes and an even larger assortment of sex toys. Quickly backing out of the room you don't know if you should feel sorry for the boi you met in the holding pens or a little bit envious.";
 	Now Onyxroom is resolved;
-
-Section 4- Unlucky elevator
-
-Unlucky elevator is a situation.
-The sarea of Unlucky elevator is "Stable";
-
-Instead of Resolving a Unlucky elevator:
-	say "Wandering through the halls of the old hotel, you come across an elevator that appears to be open and ready for passengers, and while you don[apostrophe]t actually expect the elevator to work without power to this area of the city, you decide to investigate it anyways. Looking around inside you see that it seems to be a rather normal old style elevator, without much of use to be found in it, however you get a bit of a surprise when you look at the floor buttons. It seems that aside from the ground floor, all of the floor buttons are labeled 13, despite the fact that there are certainly more than 13 floors in the building. You feel a little unsettled as you stare at the similiarly labeled buttons, and decide as you step out of the elevator quickly, that you might not want to ride in that rather unlucky seeming elevator even if the power was running, as you quickly continue on your way.";
-	Now Unlucky elevator is resolved;
 
 Section 4- Unlucky elevator
 
