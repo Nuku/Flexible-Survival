@@ -3798,8 +3798,12 @@ understand "milk myself" as milking.
 Table of Game Objects (continued)
 name	desc	weight	object
 "Panther Milk"	"The thick, luscous milk of one of the panther taurs."	1	panther milk
+"Chocolate Milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
+"Vixen Milk"	"A thin milk with an alluring taste, like the silvery vixens it is from."	1	vixen milk
 
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur".
+chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "soda".
+vixen milk is a grab object. It is a part of the player. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk".
 
 
 check milking:
@@ -3823,6 +3827,16 @@ Carry out milking:
 		say "It takes a while to milk your black furred globes, but you manage to do so.";
 		repeat with T running from one to the breasts of the player:
 			add "Panther Milk" to the invent of the player;
+	otherwise if the bodyname of the player is "Chocolate Lab":
+		say "It takes little effort to draw some white chocolate flavoured milk from your breasts.";
+		repeat with T running from one to the breasts of the player:
+			add "Chocolate Milk" to the invent of the player;
+	otherwise if the bodyname of the player is "Vixen Nurse":
+		say "It takes a while to milk your silvery furred breasts.  You do not get much, but you manage to do so.";
+		add "Vixen Milk" to the invent of the player;
+	otherwise if the bodyname of the player is "hermaphrodite dolphin":
+		say "Stroking your cetacean breasts, you manage to draw out a small sample of your thick milk.";
+		add "dolphin milk" to the invent of the player;
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
 		
