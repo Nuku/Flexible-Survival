@@ -1,5 +1,5 @@
-Version 1 of Mismatched Chimera for FS by Stripes begins here.
-[Version 1]
+Version 2 of Mismatched Chimera for FS by Stripes begins here.
+[Version 2 - Endings added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Mismatched Chimera creature to Flexible Survivals Wandering Monsters table with impreg chance"
 [Description text for this Extension.]
@@ -152,16 +152,16 @@ When Play begins:
    now defeated entry is "[beatthemischim]"; [ Text or say command used when Monster is defeated.]
    now victory entry is "[losetomischim]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[mischimdesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "canine"; [ Face description, format as the text "You have a (your text) face."]
-   now body entry is "feline"; [ Body Description, format as the text "Your Body is (your text)"]
-   now skin entry is "scaled"; [ skin Description, format as the text "You have (your text) skin"]
+   now face entry is "canine, rabbit-eared"; [ Face description, format as the text "You have a (your text) face."]
+   now body entry is "feline in form with bony spines protruding from your back."; [ Body Description, format as the text "Your Body is (your text)"]
+   now skin entry is "scales over your body and white fur over your arms and legs to cover your"; [ skin Description, format as the text "You have (your text) skin"]
    now tail entry is "You have a slimy, suckered, octopus tentacle for a tail."; [ Tail description, write a whole Sentence or leave blank. ] 
-   now cock entry is "vulpine"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it becomes that of a dog."; [ face change text. format as "Your face feels funny as (your text)" ]
-   now body change entry is "it becomes that of a humanoid feline."; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "it is covered in green scales."; [ skin change text. format as "Your skin feels funny as (your text)." ]
+   now cock entry is "equine member with a knot at the base of your"; [ Cock Description, format as you have a 'size' (your text) cock]
+   now face change entry is "it becomes that of a dog, but with long rabbit ears."; [ face change text. format as "Your face feels funny as (your text)" ]
+   now body change entry is "it becomes that of a humanoid feline with saurian back spines"; [ body change text. format as "Your body feels funny as (your text)." ]
+   now skin change entry is "it is covered in green scales over your body, but long white fur over your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
    now ass change entry is "a wet appendage starts to grow from it, shaping itself into a octopod's tentacle.  It wiggles around behind you, largely beyond your control."; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it becomes vulpine in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+   now cock change entry is "it becomes equine in shape, but with a vulpine knot at its base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 15;
    now dex entry is 15;
    now sta entry is 15;
@@ -190,10 +190,21 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Mismatched Chimera":
 		if humanity of player is less than 10:
-			say "     Succumbed as mismatched chimera.";
+			say "     As your identity collapses, you are left with your fractured mind and instincts.  Lacking any true focus to your instincts, you wander the city in a haze.  You pass from one territory group to another, mating with the creatures there, but never transforming further, remaining a mismatched hodgepodge of creatures.  Several try to keep you as a mate or prisoner, but you always escape eventually and move on.  Your existence is aimless and with little conscious thought, but filled with sex of endless variety from all those you meet.";
+			if "Sterile" is not listed in feats of player and cunts of player > 0:
+				say "     Your womb gives birth of a wide array of hybrid children over the years.  Some are taken and assimilated into other groups, but some go on to form new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life.  You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
+			otherwise if cocks of player > 0:
+				say "     You sire a wide array of hybrid children over the years.  Some are taken and assimilated into other groups, but some go on to form new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life.  You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
+			otherwise:
+				say "     You watch time march on over the centuries, taking lovers from the various new species and races that continually form from the intermingling of the infected groups.  They rise and fall around you, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life.  You are one of the few constants in this ever-changing world and exist as an eternal witness to the variety of life until the end of time.";
 		otherwise:
-			say "     Survive as mismatched chimera.";
-
+			say "     After your rescue from the city, you are left aimless and take frequently to wandering the world for extended periods.  Your altered, hybrid body makes you stand out always, but you can always seem to find companionship for a time, perhaps drawn in by the medley of pheromones you emit.  You take on temporary dalliances of all kinds on these journeys, loving to experience the endless variety of lovers this world can provide to you.  You are never changed by these lovers, no matter how infected or mindless these may be.";
+			if "Sterile" is not listed in feats of player and cunts of player > 0:
+				say "     Your womb gives birth to a wide array of hybrid children over the years.  Some, you are pleased to see, give rise to new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life.  Even as your old friends and allies pass on, you continue your eternal drifting across the globe.  You are always drifting discretely through the world in your search to experience the ever-changing array of life rising and falling on this planet.  You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
+			otherwise if cocks of player > 0:
+				say "     You sire a wide array of hybrid children over the years.  Some, you are pleased to see, give rise to new species in their own right, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life.  Even as your old friends and allies pass on, you continue your eternal drifting across the globe.  You are always drifting discretely through the world in your search to experience the ever-changing array of life rising and falling on this planet.  You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
+			otherwise:
+				say "     You watch time march on over the centuries, taking on new lovers wherever you go, enjoying their company for a time before leaving and continuing on.  The various species and races of the infected groups rise and fall over time, adding to the variety of lovers for you to mate with over the centuries of your strangely unending life.  Even as your old friends and allies pass on, you continue your eternal drifting across the globe.  You are always drifting discretely through the world in your search to experience the ever-changing array of life rising and falling on this planet.  You are one of the few constants in this ever-changing world and exist as an eternal source for much of this new life which you bear witness to until the end of time.";
 
 
 [ Edit this to have the correct Name as well]

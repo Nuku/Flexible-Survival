@@ -1,5 +1,5 @@
-Version 1 of Naughty Nurse by Stripes begins here.
-[Version 1]
+Version 2 of Naughty Nurse by Stripes begins here.
+[Version 2 - Victory Sex and Endings added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Naughty Nurse Vixen creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -36,7 +36,24 @@ to say losetovixennurse:
 	now dex entry is 14;
 
 to say beatthevixennurse:
-	say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big trouble now.  I'm going to have to send the orderlies down here to deal with you.'  With that, she turns and runs away.";
+	if libido of player > 33:
+		say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big tr... eep!' she starts to say before you reach out and grab her by the wrist, pulling the weakened vixen into your arms.  She moans softly, trying half-heartedly to struggle, but you've taken the fight out of her.  Do you want to have a little fun with the naughty nurse?";
+		if the player consents:
+			if cocks of player > 0:
+				say "     Not wanting to waste such a fine prize, you shove her forward and force her to bend over one of the patient's beds.  You run a hand over her skirted bottom, giving it a squeeze before pulling it up to reveal her tight rump[if vixgender is 1], her dripping puss and her ballsac[otherwise] and her dripping puss[end if] to you.  Keeping one on her back to keep her in place, you slide the other over her rear, then between her legs to tease her wet slit.  She moans and wiggles her rear invitingly.";
+				say "     Being the offer you were waiting for, you get your hard cock lined up with her slit and sink it slowly into her.  Her moaning and yipping is deliciously cute as you start pounding away at her.  She pushes her hips back, eager now for you to take her.  You reach around to fondle her breasts, teasing her nipples.  The naughty nurse makes for a very enjoyable fuck, tight and wet around your cock.";
+				say "     After giving her the good dicking she so richly deserves, you push into her one last time and unleash your hot seed into her quivering puss.  Her orgasm makes her pussy shudder around you for a long time, extending your own orgasm to give her as much as you can give.  Once you're finally done, you pull out, wipe your cock with her bushy tail and leave her skirt up to show anyone who comes by what you did to the passed out silver vixen.";
+				decrease libido of player by 5;
+			otherwise:
+				say "     Not wanting to waste such a fine prize, you shove her forward and force her to bend over one of the patient's beds.  You run a hand over her skirted bottom, giving it a squeeze before pulling it up to reveal her tight rump[if vixgender is 1], her dripping puss and her ballsac[otherwise] and her dripping puss[end if] to you.  Keeping one on her back to keep her in place, you slide the other over her rear, then between her legs to tease her wet slit.  She moans and wiggles her rear invitingly.";
+				say "     You push a pair of fingers into her slit, making her release a deliciously cute set of moans and yips.  You pump those fingers into her again and again and she starts pushing back to meet them[if vixgender is 1].  You place your other hand on her cock, stroking over the herm's shaft, making her drip on the floor[end if].  Taking your time, you move your fingers over her sensitive flesh, teasing and caressing her.";
+				say "     You keep it up for quite some time, getting her good and riled up until finally she is driven over the edge.  Her pussy clamps down around your fingers and her inner walls quiver as her juices soak your hand and her thighs[if vixgender is 1].  Her cock throbs in your hand, unleashing its load onto the floor as you stroke her off[otherwise].  Your free hand is meanwhile rubbing her tail between your legs, teasing your female slit until cum as well and soak the soft fur in your juices[end if].  Quite pleased with yourself when you finish, you leave her passed out with her skirt up, showing any who pass what a state you've left the silver vixen in.";
+				decrease libido of player by 5;
+		otherwise:
+			say "     Not quite in the mood romp with the nurse, you decide you still can't let her go so easily.  Shoving her forward, you force her to bend over one of the patient's beds and hold her there.  You flip up the back of her dress, baring her tight rump[if vixgender is 1], her dripping puss and her ballsac[otherwise] and her dripping puss[end if] to you.  Taking her clipboard in hand, you start to spank her rump, making her moan.  A good dozen slaps later and her hips quiver as she cums, soaking her thighs[if vixgender is 1] and spraying onto the floor[end if].  With a smile, you drop the dress back down and walk away.  You find yourself looking forward to the next opportunity to play with one of these frisky foxes.";
+			increase libido of player by a random number between 4 and 10;
+	otherwise:
+		say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big trouble now.  I'm going to have to send the orderlies down here to deal with you.'  With that, she turns and runs away.";
 	[value reset]
 	choose row monster from the table of random critters;
 	now hp entry is 36;
@@ -128,10 +145,45 @@ healing booster is a grab object. It is a part of the player. It is fast. It is 
 when play ends:
 	if bodyname of player is "Vixen Nurse":
 		if humanity of player is less than 10:
-			say "     Succumbed as naughty nurse.";
+			say "     Falling to the instincts and reprogramming of the infection, you drift off into the city and eventual come to the city hospital.  There you are taken in by the silvery vixen nurses of the hospital staff, feeling the urge to work alongside them.  They welcome you happily, and lustfully, as do the other denizens of the large medical facility.";
+			if hospquest < 2:
+				if "Sterile" is not listed in feats of player and cunts of player > 0:
+					say "     After a particularly energetic romp with one of the jaguar orderlies, you become pregnant and are transferred to the maternity ward.  There you tend to the hospital's cubs, adding your own litter to them and feeding the cute cubs from your bosom.";
+				otherwise if cocks of player > 0:
+					say "     Being a rare vulpine in their midst with a cock, you are quite popular with the female vixens and mate with many of them, adding many more cubs to the maternity ward to grow and add to the hospital's population.";
+				otherwise:
+					say "     Between the strange, medical duties you and the others perform, you enjoy many an evening with the muscled jaguars that populate the hospital, never tiring of the feel of their cocks pounding into your hyper-sexualized body.";
+			otherwise if hospquest < 13:
+				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr Mouse.  While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff.  He puts you in charge of one of his exploratory teams, letting you order around the jaguar orderlies as they capture new [']volunteers['] for his experiments.";
+				if cunts of player > 0:
+					say "     On a trip to the beach, you are ambushed by a crew of pirate sharks after the helicopter.  Successfully boarding the craft, they disable the pirate and manage to deal with the orderlies only by sheer numbers.  They are all dumped overboard into the sea while you are kept as booty.  The sharks celebrate that evening with drink, song and sex, all eager to take a turn with you.  Being treated by the good doctor for your duties, you resist physically transforming to become another shark, but your mind unravels again.  You are remade into a vixen pirate, lover to this band of air pirates.";
+				otherwise:
+					say "     During a mission to an old hotel on the outskirts of the red light district, your team is assaulted by a herd of powerful equines.  The ferocious orderlies manage to hold their own, but you are dragged off.  The horses spend many weeks trying to turn you into another equine slave for their brothel, but the treatment given to you by the mouse doctor holds enough to keep your body intact.  But your mind does not fare as well and succumbs to the constant training they give you, turning you into a slutty, silver fox.  You act as their medical staff, helping them with their conversions when needed and the rare injuries that are too much for the nanites.  When not performing these infrequent duties, you are there to provide a change of pace to anyone looking for something a little different from the otherwise equine whorehouse.";
+			otherwise if hospquest is 13 and hp of doctor mouse is -1:
+				say "     Driven by your new instincts as a member of the hospital staff, you report back to Dr Mouse.  While you only vaguely remember the experiences that lead you to know him, he somehow recognizes you readily and is cruelly pleased with your fate.  Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants.  Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
+				if "Sterile" is not listed in feats of player and cunts of player > 0:
+					say ".  You birth many bizarre, hybrid creatures from these matings";
+				say ".  You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower";
+				if cunts of player > 0:
+					say ".  It hurts you the most any time he takes you as a lover to slake his lust upon you.  He is particularly cruel at these times, but you want it so badly from him and love it so much when your master fills you with his seed";
+				say ".";
+			otherwise if hospquest is 13 and hp of doctor mouse is -2:
+				say "     The hospital is in disarray when you arrive, more like a stirred up hornets nest than the orderly bee hive you feel it should be.  The various factions strike out at each other at times, but cooperate at others.  The maternity ward still runs, but the cafeteria is often host to in-fighting over mates.";
+				say "     It is only with the coming of the military that control is restored.  The united threat of military action unites the factions, at least temporarily.  And you would see that unity remain and enact a plan that percolates in the back of your mind.  Feeling the need to have someone in charge, you break from the defence and slip past the military lines.  You find a small veterinarian hospital and spot some activity inside.  Armed with a syringe filled with tranquilizers and a need to to what must be done for the good of the hospital, you slip in and attack the panther taur vet.  Unprepared for the injection, she moved in close, letting you knock her out with it.";
+				say "     You relay your success over the radio to the hospital, but it takes them some time to get a team past the military and out to you.  Thankfully the veterinary clinic still have supplies and you're able to keep her under until you can get her back to the hospital.  One of the female jaguars is allowed to welcome the panther herm to the hospital, bonding her into the staff as your new leader.  The taur doctor fills her position well, maintaining unity of the hospital staff after the military is repulsed.  The hospital's medical work slacks off, but several of the staff are sent out to capture many animal creatures from the city.  These are converted into more staff for an expanding new wing for sexual veterinary medicine.";
+			otherwise:
+				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr Mouse.  While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff.  He puts you in charge of monitoring his test subjects with a pair of jaguars to act as your muscle.  Obediently, you follow the mad doctor's orders, watching his [']volunteers['] and often using them as playtoys when he's done with them before sending them downstairs to the hospital proper to be assimilated into the staff[if susan is in hidden lab].  Susan, as his assistant, is there with him to help you and reward you with lustful sex[end if].";
+				say "     When the time comes to leave the city, Dr Mouse takes you[if susan is in hidden lab], Susan[end if] and several other of the staff to escape through the service tunnels under the hospital.  Meanwhile the main body of the staff hold the hospital against the army with the helicopter running as an added diversion.  You all escape out of the city and Dr Mouse sets up a new lab in secret.  He begins selling off the fruits of his research to foreign powers and the growing factions of transformed creatures that form.  He has you continue to monitor his test subjects for his ongoing experiments";
+				if cunts of player > 0:
+					say ".  You also are honoured with being the little mouse's personal sextoy when he needs to unwind after a particularly exciting procedure";
+					if "Sterile" is not listed in feats of player:
+						say ".  You are very proud when your belly grows full, swelling with his young";
+				say ".";
 		otherwise:
-			say "     Survive as naughty nurse.";
-
+			if hospquest > 13:
+				say "     When you are rescued from the infected city by the military, they take you to a base they've set up for the testing and processing of the infected.  While you are being examined, you have to resist your urges to play with doctor's like the naughty nurse you are.  You can't afford to draw too much attention to yourself.  Using your innate medical knowledge and your sensual body, you avoid receiving the treatment to render you non-infectious and fudge the results.  When cleared, you travel to a new city and insinuate yourself into a small clinic, infecting the staff there and setting up a nice little den of silver foxes to be your mates.";
+			otherwise:
+				say "     When you are rescued from the infected city by the military, they take you to a base they've set up for testing and processing of the infected.  While you are being examined, you chat up the doctors.  At first, they are clinical and unresponsive to your playful antics, but eventually begin to warm up to you as you prove clever and knowledgable about their medical examinations.  At your behest, one of them gets a nurse's outfit for you and join their staff.  Receiving the treatment to render you non-infectious, they also start giving in to your playful banter and sneaking off with you for a little fun to help relieve their stress after a particularly alluring patient gets them riled up.";
 
 
 [ Edit this to have the correct Name as well]
