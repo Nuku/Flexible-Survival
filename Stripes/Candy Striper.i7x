@@ -302,12 +302,13 @@ Section 6 - Endings
 when play ends:
 	if bodyname of player is "Raccoon":
 		if humanity of player is less than 10:
-			if coonstatus is 0:				[Coon player - Coon still in hospital]
-				say "     Unable to maintain your sanity, you give in to your body's instinctual needs.  Your thoughts fill with a yearning for sexy males and for cock to fill you.  Drawn by this, you head off into the city.  You drift around, flirting with some of the males you find on the way, but continue on to the hospital.";
-				say "     As you are arriving there, the cute pink raccoon spots you from a window and calls out to you.  This seems to cause a bit of commotion in the hospital and he's chased by a few jaguar orderlies on the way out.  He grabs your paw in his and you run off hand in hand.  It seems he's overstayed his welcome at the hospital.";
-				say "     Having nowhere else to go, your mind manages to remember the bunker and you return there with him";
-			otherwise if coonstatus is 1:			[Coon player - Coon in bunker]
-				say "     Unable to maintain your sanity, you end up giving in to your body's instinctual needs.  Your thoughts fill with a yearning for sexy males and for cock to fill you.  You return to the bunker to seek the pink raccoon to be your mate.  Candy accepts the change in your mindset and the small shreds of humanity he'd managed to regain let go";
+			if coonstatus > -1:				[Coon player - Coon non-pet]
+				if coonstatus is 0:			[Coon still in hospital]
+					say "     Unable to maintain your sanity, you give in to your body's instinctual needs.  Your thoughts fill with a yearning for sexy males and for cock to fill you.  Drawn by this, you head off into the city.  You drift around, flirting with some of the males you find on the way, but continue on to the hospital.";
+					say "     As you are arriving there, the cute pink raccoon spots you from a window and calls out to you.  This seems to cause a bit of commotion in the hospital and he's chased by a few jaguar orderlies on the way out.  He grabs your paw in his and you run off hand in hand.  It seems he's overstayed his welcome at the hospital.";
+					say "     Having nowhere else to go, your mind manages to remember the bunker and you return there with him";
+				otherwise if coonstatus is 1:		[Coon in bunker]
+					say "     Unable to maintain your sanity, you end up giving in to your body's instinctual needs.  Your thoughts fill with a yearning for sexy males and for cock to fill you.  You return to the bunker to seek the pink raccoon to be your mate.  Candy accepts the change in your mindset and the small shreds of humanity he'd managed to regain let go";
 				if cocks of player > 0:
 					say ".  As a pair of girly coons, you redecorate the place, turning it into your sexy love nest.  You both get along together well, only having some trouble coming from the fact that you both want to bottom more than top.";
 					say "     This problem is solved when the military pass through.  Unable to confront the squads head on, you sneak up and drag off a lone soldier.  A few hours later and you have an olive green coon who's more than happy topping his two playmates.  A few more are added every couple of days and eventually the bunker houses a rainbow collection of girly coons.";
@@ -328,13 +329,13 @@ when play ends:
 				otherwise:
 					say "     Your pink playtoy is eager to service you in any way you would like.  You happily explore a range of positions with him over several days, taking the top or bottom position as suits your fancy in the moment.  In time, you do feel the urge for more amusement.";
 					say "     This problem is solved when the military pass through.  Unable to confront the soldiers head on, you sneak up and drag off a lone soldier.  A few hours later and you have an olive green coon who is just as subservient.  A few more are added every couple of days and eventually the bunker houses a rainbow collection of girly coons.  When a few females are taken in, breeding begins in earnest.";
-	otherwise if pink raccoon is tamed:
+	otherwise if pink raccoon is tamed:				[non-coon player w/pet coon]
 		if humanity of player is less than 10:
 			say "     Bound to you, your girly coon pet remains loyally with you even as your mind collapses and give in to the infection.  He becomes a playtoy for you, fulfilling your sexual needs as best he can between any other lovers or mates you may have.";
 		otherwise:
 			say "     When their forces move in to rescue survivors, the military is reluctant to let your pink raccoon pet accompany you.  But the emotional breakdown he starts to have as the separation is even discussed is enough leverage for you to get them to bring him back to base.  You keep a tight rein on him at the base, fucking him often in an attempt to keep him out of trouble.  This rampant sexuality does make the soldiers on watch worried about just how sane you both are.  But in little time his playful nature gets them, one by one, to take advantage of his willing body and they stop reporting the issue to their superiors.";
 			say "     When you are leaving the compound, you can’t help but notice that they were starting to get a little more effeminate themselves and you suspect there’ll be a few more girly coons running around the base soon enough.  Your playtoy pet remains with you throughout the years, always giving you a source of amusement as you play with him or share him with others as a special reward.";
-	otherwise if Candy is in the Bunker:
+	otherwise if Candy is in the Bunker:			[non-coon player w/Candy rescued]
 		if humanity of the player is less than 10:
 			if cocks of player > 0:
 				say "     When you give in to the nanite infection, Candy’s attempts to resist end as well.  The girly raccoon reverts as the few shreds of humanity he was able to regain give out.  The pink coon accompanies you, an eager fucktoy for your use between any lovers or mates you may find out in the city.  He has dalliances of his own, seeking the attention of any sexy males you come across.";
