@@ -24,7 +24,7 @@ to say Mareslut attack:
 		
 
 To say Mareslut loss:
-	say "Driven back by your powerful assault, the Slutty mare groans with pain as she staggers backwards and shoots you a rather dirty and sexy look as she says '[one of]Well you didn[apostrophe]t have to be so rude! [or]Maybe you will be more fun next time sexy.[or]Why don[apostrophe]t you want to fuck me?[or]Damn sweety, thats a little rough for me, maybe you should try one of the donkeys.[at random].' before staggering off down the corridor, shooting you a last teasing glance over her shoulder as she does so.";
+	say "Driven back by your powerful assault, the Slutty mare groans with pain as she staggers backwards and shoots you a rather dirty and sexy look as she says '[one of]Well you didn[apostrophe]t have to be so rude!'[or]Maybe you will be more fun next time sexy,'[or]Why don[apostrophe]t you want to fuck me?'[or]Damn sweety, that's a little rough for me, maybe you should try one of the donkeys,'[at random] before staggering off down the corridor, shooting you a last teasing glance over her shoulder as she does so.";
 
 Section 2 - Monster Insertion
 

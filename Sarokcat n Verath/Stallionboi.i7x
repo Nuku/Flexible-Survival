@@ -19,7 +19,7 @@ to say Stallionboi attack:
 		infect "Stallionboi";
 
 To say Stallionboi loss:
-	say "Driven back by your powerful assault, the Stallionboi groans with pain as he staggers backwards and shoots you a rather dirty and sexy look, before bursting into tears as he says '[one of]Well you didn[apostrophe]t have to be so mean! [or]Maybe you will be more fun next time sexy.[or]Why don[apostrophe]t you want to fuck me?[or]Damn sweety, thats a little rough for me, maybe you should try one of the donkeys.[at random].' before staggering off down the corridor, shooting you a last teasing glance over her shoulder as she does so.";
+	say "Driven back by your powerful assault, the Stallionboi groans with pain as he staggers backwards and shoots you a rather dirty and sexy look, before bursting into tears as he says '[one of]Well you didn[apostrophe]t have to be so mean!'[or]Maybe you will be more fun next time sexy,'[or]Why don[apostrophe]t you want to fuck me?'[or]Damn sweety, that[']s a little rough for me, maybe you should try one of the donkeys,'[at random] before staggering off down the corridor, shooting you a last teasing glance over his shoulder as he does so.";
 
 Section 2 - Monster Insertion
 
