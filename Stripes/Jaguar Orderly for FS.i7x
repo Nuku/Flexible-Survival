@@ -1,5 +1,5 @@
 Version 2 of Jaguar Orderly for FS by Stripes begins here.
-[Version 2 - Victory Sex and Endings adding]
+[Version 2 - Losing Sex and Endings adding]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Jaguar Orderly creature to Flexible Survivals Wandering Monsters table with impreg chance"
 [Description text for this Extension.]
@@ -71,15 +71,15 @@ When Play begins:
    now defeated entry is "[beatthejaguar]"; [ Text or say command used when Monster is defeated.]
    now victory entry is "[losetojaguar]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[jaguardesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "feline head with dark spots covering your"; [ Face description, format as the text "You have a (your text) face."]
-   now body entry is "stocky, but strong.  You can feel the powerful muscles under your skin.  Your feline paws clench into hard fists when angry."; [ Body Description, format as the text "Your Body is (your text)"]
+   now face entry is "feline head with dark spots covering your face"; [ Face description, format as the text "Your face is (your text)."]
+   now body entry is "stocky, but strong.  You can feel the powerful muscles under your skin.  Your feline paws clench into hard fists when angry"; [ Body Description, format as the text "Your Body is (your text)."]
    now skin entry is "golden-yellow fur with black rosettes all over your"; [ skin Description, format as the text "You have (your text) skin"]
    now tail entry is "Behind you lashes a spotted, feline tail."; [ Tail description, write a whole Sentence or leave blank. ] 
    now cock entry is "deep, angry red"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "remolds itself into a blunt, feline muzzle with powerful jaws and sharp teeth."; [ face change text. format as "Your face feels funny as (your text)" ]
-   now body change entry is "it tightens with strong muscles.  Your body becomes short and stocky, but powerful.  Your hands are now paw-like fists."; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "it is covered by golden fur decorated with black rosettes."; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "you grow a long, slender tail.  As it lashes behind you angrily, fur coats it, a golden yellow and covered in black spots."; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+   now face change entry is "remolds itself into a blunt, feline muzzle with powerful jaws and sharp teeth"; [ face change text. format as "Your face feels funny as (your text)." ]
+   now body change entry is "it tightens with strong muscles.  Your body becomes short and stocky, but powerful.  Your hands are now paw-like fists"; [ body change text. format as "Your body feels funny as (your text)." ]
+   now skin change entry is "it is covered by golden fur decorated with black rosettes"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+   now ass change entry is "you grow a long, slender tail.  As it lashes behind you angrily, fur coats it, a golden yellow and covered in black spots"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
    now cock change entry is "turns a deep red in colour"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 16;
    now dex entry is 18;

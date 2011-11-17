@@ -1,4 +1,4 @@
-	Needy Heat for FS by Telanda Softpaw begins here.
+Needy Heat for FS by Telanda Softpaw begins here.
 
 "Addon for adding an 'in heat' Event to infections, Designed to work with all monster type infections by default. with the option to be customisable if you want to add specifics for your monster."
 

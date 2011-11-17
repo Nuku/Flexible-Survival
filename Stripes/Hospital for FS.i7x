@@ -1394,7 +1394,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "spear"	"A Viking spear retrieved from the museum.  It is in very good condition for its age."	4	spear
 
-spear is an armament. It is part of the player. It has a weapon "[one of]your spear[or]the Viking spear[at random]". The weapon damage of spear is 8. The weapon type of spear is "Melee". It is not temporary.
+spear is an armament. It is part of the player. It has a weapon "[one of]your spear[or]the Viking spear[at random]". The weapon damage of spear is 9. The weapon type of spear is "Melee". It is not temporary.
 
 
 Instead of conversing the Nermine while nerminepackage is 3:
