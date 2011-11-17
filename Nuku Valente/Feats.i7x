@@ -142,6 +142,8 @@ instead of addfeating the basic feats:
 	if intelligence of player is greater than 14:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% xp needed to level.";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
+	if intelligence of player > 15 and level of player > 5:
+		addfeat "Weaponsmaster" with "Your experience and knowledge allow you to assess a weapon's worth and wield it better.";
 	addfeat "Wary Watcher" with "Always on guard, creatures won't gain first strike on you.";
 	if perception of player is greater than 14:
 		addfeat "Magpie Eyes" with "You love shining things. Especially shining things on the defeated bodies of your enemies. Increased odds of drops.";
@@ -149,7 +151,7 @@ instead of addfeating the basic feats:
 		if "Expert Hunter" is listed in feats of player:
 			addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature. Your proficiency doubles from 8X to 15X.";
 	if dexterity of player is greater than 14:
-		if "Stealthy" is listed in feats of player or perception of player > 14:
+		if "Stealthy" is listed in feats of player or "Wary Watcher" is listed in feats of player or perception of player > 14:
 			addfeat "Experienced Scout" with "You have a chance of avoiding a random fight altogether if you so wish it.";
 		addfeat "Stealthy" with "Your chance of running into a monster is decreased while you are scavenging or exploring.";
 		addfeat "Martial Artist" with "You have basic martial arts training, increasing the damage you cause when you have no weapon.";
