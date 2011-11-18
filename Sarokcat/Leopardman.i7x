@@ -33,7 +33,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	
+	add "Leopardman" to infections of furry;
+	add "Leopardman" to infections of guy;
 	now name entry is "Leopardman"; [Name of your new Monster]
 	now attack entry is "[one of]The leopardman swipes at you with his sharp claws![or]The Leopardman pounces you playfully![or]He darts forward quickly and lashes out with a closed fist![or]The Leopardman pauses for a second to watch you carefully, before darting forward and swiping at your legs, knocking you down![or]The Leopardman grabs your arms with his hands, and leans forward to give you a teasing kiss before releasing you.[or]He charges forward and knocks you into a wall, pinning you for a second while he rubs his soft fur against you.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Leopardman loss]"; [ Text or say command used when Monster is defeated.]

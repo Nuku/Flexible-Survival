@@ -759,6 +759,7 @@ Include Twisted Pimp by Sarokcat.
 Include Alpha Husky by Sarokcat.
 Include Harold by Sarokcat.
 Include Tattoo Parlor by Sarokcat.
+Include Leopardman by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
