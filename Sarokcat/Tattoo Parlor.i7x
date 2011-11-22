@@ -12,7 +12,7 @@ The invent of Tattoo parlor is { "dirty water" , "dirty water" , "dirty water" }
 
 
 
-Section 2 – Finding the parlor
+Section 2 - Finding the parlor
 
 tattoonpiercing is a situation.
 The sarea of tattoonpiercing is "Red";
@@ -28,6 +28,45 @@ Instead of resolving tattoonpiercing:
 		now Tattoo parlor is known;
 		now tattoohunter is 2;
 		now tattoonpiercing is resolved;
+
+
+
+
+
+Findingkara is a situation.
+The sarea of Findingkara is "Red";
+
+
+
+Instead of resolving Findingkara:
+	if tattoohunter is 3:
+		say "Wandering absently through the red light district again, you hear a small commotion from a nearby alleyway, glancing over you spot one of those Herm Hyenas as it staggers out of the alleyway obviously exhausted. Spotting you the hyena staggers your way, and as you brace yourself for a fight, you note that the hyena looks a little different from most of the other hyenas you have seen so far. You blink as you take in the large number of piercings along the sides of the hyenas muzzle, and the rings hanging from its ears, and you find your eyes drawn to the strangely coloured patterns of fire and dragons that seem to shine as part of the beasts fur. 'Please I need help, there is just too many of them for me...' The hyena says as shi stops just out of reach of your upraised weapon, the obviously exhausted hyena obviously easy prey for the creatures you can already hear heading this way in pursuit.  Do you try to help the strange hyena, or do you get out of here before the creatures can catch you as well?";
+		if player consents:
+			Challenge "Leopardman";
+			Challenge "Leopardman";
+			Challenge "Leopardman";
+			if lost is 0:
+				say "'Wow that was amazing!' The hyena you saved gushes happily as she slips out of hiding, 'I would never have thought one person could be so strong! Though I guess I never would have thought this kind of thing could ever happen either.' Shi says with a smile and a shrug, as she moves over to the battlefield and hefts a small duffelbag that one of the Leopards dropped. 'Thanks a ton, it looks like they didn[apostrophe]t even have a chance to do anything to the supplies I gathered,' She says with a happy hyena laugh as she checks the bags contents, 'It looks like I really do owe you a big favor now, though maybe some supplies would help show my appreciation,' She says with a smile on her muzzle, her strong hyena furred body shifting sexily as she stretches and pulls out a couple medkits and some food and hands them to you. 'And I have a store nearby where we can rest and recover too, and hey maybe I can even find a way to help pay you off there too,' Shi says with a happy grin, her piercings jingling slightly as she leads you down the streets of the red light district to a surprisingly familiar Tattoo parlor. ";
+				say "Once inside she looks the place over and sighs at the empty room, before introducing herself as Kara, the owner of the shop. Kara seems rather surprised, when you mention Harold, and the fact that he sent you hear to look for her, a broad smile spreading across  hyenalike features as she clasps you close to her furry body in an exuberant hug. 'God I am so glad to hear that the crazy bastard is still around as well, and a unicorn no less? That must be a sight to see!' She chuckles with amusement at the thought, before explaining that she holed up in her apartment above the shop for as long as possible before heading out into the city for supplies.  Her eyes become slightly unfocused, and she pants slightly with lust as she explains her encounter with the hyena bikers, and how they pinned her down and rode her repeatedly until she was a proper little hyenaslut they could bring back to their gang.  Her words get you somewhat excited as she talks about how she begged several of the other gang members to fuck her needy body until she finally managed to pull herself together. She sighs slightly as she continues, explaining how she headed back to her shop once she could, though she still finds herself thinking of herself as a hyena gang member even now, and she warns you that since she let them know where it was, other gang members might stop by the shop from time to time as well.... at least she certainly hopes they will.. Kara says with a lusty grin on her hyena muzzle even as her aroused musk fills the air.  Thanking the changed hyena tattooist for the story, you prepare to head back to let harold know the news, though you find yourself wondering how he will take the news, even though Kara seems strangely content with her new sexy hyenalike form....";
+				now kara is in Tattoo parlor;
+				add "medkit" to invent of player;
+				add "medkit" to invent of player;
+				add "food" to invent of player;
+				move player to Tattoo parlor;
+				now tattoohunter is 4;
+				now Findingkara is resolved;
+			otherwise:
+				say "As you lie there trying to recover from your powerful experience with the sexy leopards, you notice a soft jingling as the hyena creeps up to make sure you are ok. 'Sorry about that,' Shi says sadly as she helps you up, 'I have had a hell of a time so far in the city, and well, I just don[apostrophe]t think I could take much more before giving in to the urges, so I hid.' She says with an embarrased shrug, seemingly ashamed at having abandoned you to the tender mercies of the hunting cats. 'I have a shop nearby where we can rest though, cmon...' Shi says, as she leads you down the streets of the red light district to a surprisingly familiar Tattoo parlor.[line break]";
+				say "Once inside she looks the place over and sighs, before introducing herself as Kara, the owner of the shop. Kara seems rather surprised, when you mention Harold, and the fact that he sent you hear to look for her, a broad smile spreading across  hyenalike features as she clasps you close to her furry body in an exuberant hug. 'God I am so glad to hear that the crazy bastard is still around as well, and a unicorn no less? That must be a sight to see!' She chuckles with amusement at the thought, before explaining that she holed up in her apartment above the shop for as long as possible before heading out into the city for supplies.  Her eyes become slightly unfocused, and she pants slightly with lust as she explains her encounter with the hyena bikers, and how they pinned her down and rode her repeatedly until she was a proper little hyenaslut they could bring back to their gang.  Her words get you somewhat excited as she talks about how she begged several of the other gang members to fuck her needy body until she finally managed to pull herself together. She sighs slightly as she continues, explaining how she headed back to her shop once she could, though she still finds herself thinking of herself as a hyena gang member even now, and she warns you that since she let them know where it was, other gang members might stop by the shop from time to time as well.... at least she certainly hopes they will.. kara says with a lusty grin on her hyena muzzle even as her aroused musk fills the air.  Thanking the changed hyena tattooist for the story, you prepare to head back to let harold know the news, though you find yourself wondering how he will take the news, even though Kara seems strangely content with her new sexy hyenalike form....";
+				now kara is in Tattoo parlor;
+				move player to Tattoo parlor;
+				now tattoohunter is 4;
+				now Findingkara is resolved;
+		otherwise:
+			say "You decide to leave well enough alone, and continue on your way, after all, what is one more hyena more or less in the city anyways?";
+			now Findingkara is resolved;
+	otherwise:
+		say "Wandering through the red light district, you spot evidence a group of hyenas were here recently, from the gang signs recently drawn in the area, and from the tire tracks and the smell of sex in the air, it seems like they not only were riding some bikes, but they found someone to have some fun with in the district. Shrugging slightly, since it is the red light district, you find yourself wondering where a group of hyenas found some bikes that still work in this crazy city, though the thought of hyenas in biker leathers seems strangely arousing as you continue along your way.";
  
 
 
@@ -37,3 +76,4 @@ Instead of resolving tattoonpiercing:
 
 
 Tattoo Parlor ends here.
+
