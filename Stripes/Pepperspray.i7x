@@ -206,7 +206,7 @@ to say weakretaliate:
 	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
 		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
 		say "[Name Entry] misses!";
-	otherwise if weapon object of player is bo staff:		[defensive combat]
+[	otherwise if weapon object of player is bo staff:		[defensive combat]
 		let boblock be 5;
 		increase boblock by 5;						[flat +5 thanks to pepperspray]
 		if "Martial Artist" is listed in feats of player, increase boblock by 2;
@@ -216,7 +216,7 @@ to say weakretaliate:
 		if numnum > 0, increase boblock by numnum;
 		increase boblock by gascloud;
 		if boblock < a random number between 0 and 99:
-			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
+			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";]
 	otherwise:
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
