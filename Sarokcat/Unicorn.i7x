@@ -1,5 +1,3 @@
-Unicorn by Sarokcat begins here.
-
 Unicorn by Sarokcat begins here. 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
@@ -73,7 +71,7 @@ When Play begins:
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 
 
-T
+
 
 when play ends:
 	if bodyname of player is "Unicorn":
@@ -94,8 +92,4 @@ when play ends:
 
 
 [ Edit this to have the correct Name as wall]
-Unicorn ends here.
-
-
-
 Unicorn ends here.
