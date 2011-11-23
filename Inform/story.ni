@@ -144,10 +144,10 @@ Definition: A situation(called X) is close:
 		otherwise if the level of X is less than (the level of the player plus levelwindow):
 			yes;
 	no;
-	
+
 Definition: A person(called X) is male:
 	if cocks of x is greater than 0, yes;
-	
+
 Definition: A person(called X) is female:
 	if cunts of x is greater than 0, yes;
 
@@ -164,7 +164,9 @@ The player is wearing a backpack. The description of the backpack is "A backpack
 
 instead of examining a grab object(called x):
 	say "[the desc corresponding to a object of  x in the table of game objects]";
-	
+	if "Weaponsmaster" is listed in feats of player and x is an armament:
+		say "  Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
+
 after looking:
 	let x be the location of the player;
 	let z be the number of entries in invent of x;
@@ -801,6 +803,8 @@ Include Triceratops For Fs by Stripes.
 Include Siamese Cats by Stripes.
 Include Inventory Management Enhancements for FS by mirumu.
 Include Albino Mouse by Stripes.
+Include Assorted Events by Stripes.
+Include Cat Ninjas by Stripes.
 
 
 understand the command "feed" as something new.
@@ -1905,54 +1909,6 @@ This is the sex change rule:
 			say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 			decrease cocks of player by 1;
 
-Retaliating is an action applying to nothing.
-
-To Retaliate:
-	if gascloud > 0:
-		decrease gascloud by 1;
-	choose row monster from the table of random critters;
-	let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
-	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
-	let the combat bonus be attack bonus minus defense bonus;
-	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
-		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
-		say "[Name Entry] misses!";
-	otherwise:
-		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
-			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
-			decrease combat bonus by 3;
-		if hardmode is true and the combat bonus is less than -10:
-			now the combat bonus is -10;
-		let the roll be a random number from 1 to 20;
-		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-		if the roll plus the combat bonus is greater than 8:
-			let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
-			if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
-				say "You nimbly avoid the attack at the last moment!";
-				now dam is 0;
-			otherwise if hardmode is true and a random chance of 1 in 10 succeeds:
-				now dam is (dam * 150) divided by 100;
-				say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-			say "[Attack entry] You take [dam] damage!";
-			let absorb be 0;
-			if "Toughened" is listed in feats of player:
-				increase absorb by dam divided by 5;
-			if absorb is greater than 0:
-				say "You prevent [absorb] damage!";
-			decrease hp of the player by dam;
-			increase hp of player by absorb;
-			follow the player injury rule;
-			say "You are [descr].";
-		otherwise:
-			say "[Name Entry] misses!";
-	if hp of the player is greater than 0:
-		say "";
-		[wait for any key;]
-		[carry out the displaying activity;]
-	otherwise:
-		Lose;
-	rule succeeds;
-	
 To grow breasts by (x - a number):
 		follow the breast descr rule;
 		let oldbreast be descr;
@@ -2278,12 +2234,12 @@ This is the player attack rule:
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
-		let dam be ( weapon damage of the player times a random number from 80 to 120 ) divided by 100;
-		if weapon object of player is journal:
+		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100;
+		if weapon object of player is journal:		[unarmed combat]
 			if "Martial Artist" is listed in feats of player:
-				now dam is ( dam * 120 ) divided by 100;
+				increase dam by 1;
 			if "Black Belt" is listed in feats of player:
-				now dam is ( dam * 110 ) divided by 100;
+				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
 			if "Natural Armaments" is listed in feats of player and bodyname is not "human":
 				let z be 0;
 				repeat with y running from 1 to number of filled rows in table of random critters:
@@ -2292,16 +2248,19 @@ This is the player attack rule:
 						now z is y;
 						break;
 				choose row z in table of random critters;
-				let dammy be 1;
-				if wdam entry > 2:					[nerfed for very high damage critters]
-					now dammy is ( square root of ( wdam entry - 1 ) ) + 1;
-				increase dam by dammy;
+				let dammy be 2;
+				if wdam entry > 3:					[nerfed for very high damage critters]
+					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
+				increase dam by a random number between 1 and dammy;
 				choose row monster from table of random critters;
+		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
+			let numnum be level of player + ( (intelligence of player - 10 ) / 2 ) + 105;
+			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if "Powerful" is listed in feats of player:
-			now dam is ( ( dam times a random number from 100 to 125 ) divided by 100 );
+			now dam is ( ( dam times a random number from 105 to 125 ) divided by 100 );
 		if "Mayhem" is listed in feats of player:
 			let numnum be ( ( level of player * 5 ) / 2 ) + 100;
-			now dam is ( ( dam times a random number from 100 to numnum ) divided by 100 );
+			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
 		if a random chance of the morale of the player in 200 succeeds:
@@ -2313,7 +2272,7 @@ This is the player attack rule:
 				let z be 0;
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
-					if name entry is bodyname of player:
+					if name entry is tailname of player:
 						now z is y;
 						break;
 				choose row z in table of random critters;
@@ -2350,6 +2309,7 @@ This is the player attack rule:
 			decrease monsterhp by dam;
 		otherwise:
 			say "Your [companion of player] misses!";
+	say "[line break]";
 	if monsterhp is greater than 0:
 		Retaliate;
 		wait for any key;
@@ -2423,6 +2383,74 @@ To level up:
 		funfeatget;
 	increase score by level of the player times level of the player;
 	
+Retaliating is an action applying to nothing.
+
+To Retaliate:
+	now avoidance is 0;
+	say "[avoidancecheck]";
+	if gascloud > 0, decrease gascloud by 1;
+	if avoidance is 1:
+		say "";
+	otherwise:
+		choose row monster from the table of random critters;
+		let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
+		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+		let the combat bonus be attack bonus minus defense bonus;
+		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
+			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
+			decrease combat bonus by 3;
+		if hardmode is true and the combat bonus is less than -10:
+			now the combat bonus is -10;
+		let the roll be a random number from 1 to 20;
+		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		if the roll plus the combat bonus is greater than 8:
+			let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
+			if hardmode is true and a random chance of 1 in 10 succeeds:
+				now dam is (dam * 150) divided by 100;
+				say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+			say "[Attack entry] You take [dam] damage!";
+			let absorb be 0;
+			if "Toughened" is listed in feats of player:
+				increase absorb by dam divided by 5;
+			if absorb is greater than 0:
+				say "You prevent [absorb] damage!";
+			decrease hp of the player by dam;
+			increase hp of player by absorb;
+			follow the player injury rule;
+			say "You are [descr].";
+		otherwise:
+			say "[Name Entry] misses!";
+	if hp of the player is greater than 0:
+		say "";
+		[wait for any key;]
+		[carry out the displaying activity;]
+	otherwise:
+		Lose;
+	rule succeeds;
+
+avoidance is a number that varies.
+
+to say avoidancecheck:					[collection of all enemy attack avoidance checks]
+	choose row monster from the table of random critters;
+	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
+		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
+		say "[Name Entry] misses!";
+		now avoidance is 1;
+	otherwise if weapon object of player is bo staff:		[defensive combat]
+		let boblock be 5;
+		if "Martial Artist" is listed in feats of player, increase boblock by 3;
+		if "Black Belt" is listed in feats of player, increase boblock by 4;
+		if "Weaponsmaster" is listed in feats of player, increase boblock by 6;
+		let numnum be ( (strength of player + dexterity of player + stamina of player - 36 ) / 3 );
+		if numnum > 0, increase boblock by numnum;
+		increase boblock by gascloud;
+		if boblock > a random number between 0 and 100:
+			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
+			now avoidance is 1;
+	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
+		say "You nimbly avoid the attack at the last moment!";
+		now avoidance is 1;
+
 To fight:
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	let Q be a list of numbers;
@@ -2454,7 +2482,7 @@ To fight:
 			increase lev entry by debit;
 			increase hp entry by debit * 2;
 			increase wdam entry by debit ;
-		say "You run into a [name entry]. [desc entry].";
+		say "You run into a [name entry].[line break][desc entry].";
 		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
 			if the player consents:
@@ -2496,7 +2524,7 @@ To fight:
 To challenge:
 	choose row monster from the table of random critters;
 	now monsterhp is hp entry;
-	say "You run into a [name entry]. [desc entry].";
+	say "You run into a [name entry].[line break][desc entry].";
 	now lost is 0;
 	wait for any key;
 	change the current menu to table of Basic Combat;
@@ -3697,7 +3725,7 @@ Instead of conversing the doctor matt:
 		say "     You describe the apparent control he had over the creatures of the hospital.  You relate to him how the research coming from the samples you were collecting began to manifest as changes and increased power in the hospital denizens.  Dr Matt is perturbed to hear about this news, both that such experiments were happening and that he was not made aware of another potential source of information on the nanites.";
 		say "     But you do not dwell on that, instead moving on to the most recent incident and the doctor's offer.  Dr Matt is quite stunned by it and stammers some thanks for your decision to side with him over the mouse doctor.";
 		if susan is visible:
-			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn’t say anything, only listening and being there for her chosen mate.";
+			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn't say anything, only listening and being there for her chosen mate.";
 		if hp of doctor mouse is -2:
 			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Dr Matt seems unsurprised by the doctor's monstrous transformation, given what you related about his research, and is pleased to hear that he was dispatched so thoroughly.  You pull dump out the accumulated research you were able to abscond from the lab, offering it all to the scientist to help him deal with the infection.";
 			say "     Dr Matt is quite intrigued by what he sees in the documents and samples he glances over.  'This is quite a substantial find, my brave assistant.  I can see several results that I can put into place immediately and will be able to offer you several more options, should you wish to [bold type]volunteer[roman type] for nanite adjustments.'";
@@ -3709,7 +3737,7 @@ Instead of conversing the doctor matt:
 	otherwise if hp of doctor matt is 9 and hospquest is 13:		[Doc partially unawares, hospital finished]
 		say "     As you start to tell Dr Matt about the recent events at the hospital, at first he believes you to simply be reporting again on another request for samples.  But as you tell him about Dr Mouse's plan to have you infected and steal his research, he is quite stunned.  He stammers some thanks for your decision to side with him over the mouse doctor.";
 		if susan is visible:
-			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn’t say anything, only listening and being there for her chosen mate.";
+			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn't say anything, only listening and being there for her chosen mate.";
 		if hp of doctor mouse is -2:
 			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Dr Matt seems unsurprised by the doctor's monstrous transformation, given what you related about his research, and is pleased to hear that he was dispatched so thoroughly.  You pull dump out the accumulated research you were able to abscond from the lab, offering it all to the scientist to help him deal with the infection.";
 			say "     Dr Matt is quite intrigued by what he sees in the documents and samples he glances over.  'This is quite a substantial find, my brave assistant.  I can see several results that I can put into place immediately and will be able to offer you several more options, should you wish to [bold type]volunteer[roman type] for nanite adjustments.'";
@@ -3719,7 +3747,7 @@ Instead of conversing the doctor matt:
 			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him.  I shall inform the military of these events, as well as the increased threat level at the hospital.  They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion.  He seems too intelligent to not have an exit strategy already formulated.'";
 	if hp of doctor matt is 11:
 		if susan is visible:
-			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn’t say anything, only listening and being there for her chosen mate.";
+			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn't say anything, only listening and being there for her chosen mate.";
 		if hp of doctor mouse is -2:
 			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Dr Matt seems unsurprised by the doctor's monstrous transformation, given what you related about his research, and is pleased to hear that he was dispatched so thoroughly.  You pull dump out the accumulated research you were able to abscond from the lab, offering it all to the scientist to help him deal with the infection.";
 			say "     Dr Matt is quite intrigued by what he sees in the documents and samples he glances over.  'This is quite a substantial find, my brave assistant.  I can see several results that I can put into place immediately and will be able to offer you several more options, should you wish to [bold type]volunteer[roman type] for nanite adjustments.'";
@@ -3827,7 +3855,7 @@ Carry out milking:
 			add "Dog Milk" to the invent of the player;
 	otherwise if the bodyname of the player is "Panther Taur":
 		say "It takes a while to milk your black furred globes, but you manage to do so.";
-		repeat with T running from one to the breasts of the player:
+		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 			add "Panther Milk" to the invent of the player;
 	otherwise if the bodyname of the player is "Chocolate Lab":
 		say "It takes little effort to draw some white chocolate flavoured milk from your breasts.";

@@ -119,12 +119,12 @@ to say enhancedattack:
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
-		let dam be ( weapon damage of the player times a random number from 80 to 120 ) divided by 100;
+		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100;
 		if weapon object of player is journal:
 			if "Martial Artist" is listed in feats of player:
 				increase dam by 1;
 			if "Black Belt" is listed in feats of player:
-				now dam is ( dam times a random number from 100 to 125 ) divided by 100;
+				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
 			if "Natural Armaments" is listed in feats of player and bodyname is not "human":
 				let z be 0;
 				repeat with y running from 1 to number of filled rows in table of random critters:
@@ -139,8 +139,8 @@ to say enhancedattack:
 				increase dam by a random number between 1 and dammy;
 				choose row monster from table of random critters;
 		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
-			let numnum be level of player + ( (intelligence of player - 10 ) / 2 ) + 100;
-			now dam is ( ( dam times a random number from 100 to numnum ) divided by 100 );
+			let numnum be level of player + ( (intelligence of player - 10 ) / 2 ) + 105;
+			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if "Powerful" is listed in feats of player:
 			now dam is ( ( dam times a random number from 105 to 125 ) divided by 100 );
 		if "Mayhem" is listed in feats of player:
@@ -157,7 +157,7 @@ to say enhancedattack:
 				let z be 0;
 				repeat with y running from 1 to number of rows in table of random critters:
 					choose row y in table of random critters;
-					if name entry is bodyname of player:
+					if name entry is tailname of player:
 						now z is y;
 						break;
 				choose row z in table of random critters;
@@ -197,27 +197,16 @@ to say enhancedattack:
 
 
 to say weakretaliate:
-	if gascloud > 0:
-		decrease gascloud by 1;
-	choose row monster from the table of random critters;
-	let the defense bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;	[+3 greater chance to dodge]
-	let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
-	let the combat bonus be attack bonus minus defense bonus;
-	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
-		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
-		say "[Name Entry] misses!";
-[	otherwise if weapon object of player is bo staff:		[defensive combat]
-		let boblock be 5;
-		increase boblock by 5;						[flat +5 thanks to pepperspray]
-		if "Martial Artist" is listed in feats of player, increase boblock by 2;
-		if "Black Belt" is listed in feats of player, increase boblock by 3;
-		if "Weaponsmaster" is listed in feats of player, increase boblock by 5;
-		let numnum be (strength of player + dexterity of player + stamina of player - 36 ) / 3;
-		if numnum > 0, increase boblock by numnum;
-		increase boblock by gascloud;
-		if boblock < a random number between 0 and 99:
-			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";]
+	now avoidance is 0;
+	say "[enhancedavoidance]";
+	if gascloud > 0, decrease gascloud by 1;
+	if avoidance is 1:
+		say "";
 	otherwise:
+		choose row monster from the table of random critters;
+		let the defense bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;	[+3 greater chance to dodge]
+		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+		let the combat bonus be attack bonus minus defense bonus;
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
 			decrease combat bonus by 3;
@@ -226,11 +215,8 @@ to say weakretaliate:
 		let the roll be a random number from 1 to 20;
 		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 		if the roll plus the combat bonus is greater than 8:
-			let dam be ( wdam entry times a random number from 60 to 120 ) divided by 100;			[chance for weaker attacks]
-			if "Black Belt" is listed in feats of player and a random chance of 1 in 8 succeeds:		[1 in 8 for BB dodge]
-				say "You nimbly avoid the attack at the last moment!";
-				now dam is 0;
-			otherwise if hardmode is true and a random chance of 1 in 12 succeeds:					[lower chance of hard mode critical]
+			let dam be ( wdam entry times a random number from 67 to 120 ) divided by 100;		[chance for weaker attacks]
+			if hardmode is true and a random chance of 1 in 12 succeeds:					[lower chance of hard mode critical]
 				now dam is (dam * 150) divided by 100;
 				say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 			say "[Attack entry] You take [dam] damage!";
@@ -252,6 +238,28 @@ to say weakretaliate:
 	otherwise:
 		Lose;
 	rule succeeds;
+
+to say enhancedavoidance:
+	choose row monster from the table of random critters;
+	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
+		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
+		say "[Name Entry] misses!";
+		now avoidance is 1;
+	otherwise if weapon object of player is bo staff:		[defensive combat]
+		let boblock be 5;
+		increase boblock by 5;						[flat +5 thanks to pepperspray]
+		if "Martial Artist" is listed in feats of player, increase boblock by 3;
+		if "Black Belt" is listed in feats of player, increase boblock by 3;
+		if "Weaponsmaster" is listed in feats of player, increase boblock by 6;
+		let numnum be ( (strength of player + dexterity of player + stamina of player - 36 ) / 3 );
+		if numnum > 0, increase boblock by numnum;
+		increase boblock by gascloud;
+		if boblock > a random number between 0 and 100:
+			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
+			now avoidance is 1;
+	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in 8 succeeds:
+		say "You nimbly avoid the attack at the last moment!";
+		now avoidance is 1;
 
 Table of pepperspraychoice
 title	subtable	description	toggle
