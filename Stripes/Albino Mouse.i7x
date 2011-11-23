@@ -33,9 +33,9 @@ to say beatdrmouse:
 
 to say drmousedesc:
 	if hospfight is 1:
-		say "[line break]     Dr Mouse, barely four feet tall, intends to fight you.  With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak.  But the musine doctor snarls angrily and charges at you, tiny paws clenched into fists.  You ready to strike, prepared to deal with the mad doctor once and for all.";
+		say "     Dr Mouse, barely four feet tall, intends to fight you.  With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak.  But the musine doctor snarls angrily and charges at you, tiny paws clenched into fists.  You ready to strike, prepared to deal with the mad doctor once and for all.";
 	if hospfight is 2:
-		say "[line break]     The now monstrous mouse is attacking you.  His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes.  He has managed to give himself a powerful physique and seems to have retained his twisted mind.  His hide is toughened, making it much harder to harm the mutated hybrid he's become.";
+		say "     The now monstrous mouse is attacking you.  His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes.  He has managed to give himself a powerful physique and seems to have retained his twisted mind.  His hide is toughened, making it much harder to harm the mutated hybrid he's become.";
 		choose row monster from the table of random critters;
 		now hp entry is 150;
 		now monsterhp is 150;

@@ -195,18 +195,13 @@ to say siameseattack:
 			say "[line break][swaptofemale]";
 		otherwise:
 			say "[line break][swaptomale]";
-		say "[standardsiamattack]";
-	otherwise:
-		say "[standardsiamattack]";
-
-to say standardsiamattack:
 	let T be a random number between 1 and 4;
 	if T is 1:
 		say "With a quick spin through the air, the [siamesegender] cat kicks your side!";
 	if T is 2:
 		say "Growling menacingly, the [siamesegender] feline rakes [if siamgender is male]his[otherwise]her[end if] claws across your chest!";
 	if T is 3:
-		say "In a flurry of measure blows, the [siamesegender] feline manages to make several quick strikes against you!";
+		say "In a flurry of measured blows, the [siamesegender] feline manages to make several quick strikes against you!";
 	if T is 4:
 		say "The feline drops quickly to the ground and sweeps with [if siamgender is male]his[otherwise]her[end if] leg, knocking you to the ground.  You try to get back up quickly, but have bruised your [one of]knee[or]shoulder[or]ribs[or]elbow[or]hip[at random] when you fell!";
 
@@ -216,7 +211,7 @@ to say swaptomale:
 	now femalecathp is monsterhp;		[current hp saved as female]
 	now monsterhp is malecathp;		[male hp made current]
 	now siamesegender is "male";		[male now current cat]
-	now sex entry is "female";		[male cat seeks to make player female]
+	now sex entry is "Female";		[male cat seeks to make player female]
 	now dex entry is 16;
 	if hardmode is false, now wdam entry is 6;
 	say "     The [bold type]male[roman type] cat is now your opponent![line break]";
@@ -227,16 +222,17 @@ to say swaptofemale:
 	now malecathp is monsterhp;		[current hp saved as male]
 	now monsterhp is femalecathp;		[female hp made current]
 	now siamesegender is "female";	[female now current cat]
-	now sex entry is "male";		[female cat seeks to make player male]
+	now sex entry is "Male";		[female cat seeks to make player male]
 	now dex entry is 20;
 	if hardmode is false, now wdam entry is 4;
 	say "     The [bold type]female[roman type] cat is now your opponent![line break]";
 
 
 to say siamesecatdesc:
+	now monsterhp is 39;
 	now malecathp is 39;
 	now femalecathp is 39;
-	say "[line break]     As you are moving along, a pair of felines drop down in front of you.  They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender.  They have cream coloured fur with darker fur around their faces and at the ends of their limbs.  They are both quite naked, except for the red, belled collars they have around their necks.  As you look them over, you notice that they are joined together at the end of their tails.";
+	say "     As you are moving along, a pair of felines drop down in front of you.  They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender.  They have cream coloured fur with darker fur around their faces and at the ends of their limbs.  They are both quite naked, except for the red, belled collars they have around their necks.  As you look them over, you notice that they are joined together at the end of their tails.";
 	if "Male Preferred" is listed in feats of player:			[MALE-PREF PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The female speaks to her twin, 'I think I'll play with this one, if I may.'  And with that, she takes the lead and attacks.";
 		say "[swaptofemale]";
@@ -271,14 +267,14 @@ When Play begins:
    now defeated entry is "[beatthesiamesecat]"; [ Text or say command used when Monster is defeated.]
    now victory entry is "[losetosiamesecat]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[siamesecatdesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "a feline head with large ears and a darker area over your muzzle and"; [ Face description, format as the text "Your face is (your text)."]
+   now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as the text "Your face is (your text)."]
    now body entry is "slender and feline in form, with sharp claws on your paw-like hands"; [ Body Description, format as the text "Your body is (your text)."]
    now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as the text "You have (your text) skin"]
    now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ] 
    now cock entry is "russet brown"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it shifts into a feline muzzle.  Your ears become large and dark coloured, as does your muzzle and much of your face"; [ face change text. format as "Your face feels funny as (your text)." ]
    now body change entry is "it becomes slender and vaguely feline in form.  Your arms end in dextrous paws with sharp, retractible claws"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "is grows a coat of smooth, glossy fur.  This fur is a cream colour on most of your body, but darker at the ends of your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+   now skin change entry is "it grows a coat of smooth, glossy fur.  This fur is a cream colour on most of your body, but darker at the ends of your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
    now ass change entry is "a slender, feline tail covered in dark brown fur extends from your spine"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
    now cock change entry is "it takes on a russet brown hue, but otherwise human-like"; [ cock change text. format as "Your cock feels funny as (your text)." ]
    now str entry is 14;
@@ -287,7 +283,7 @@ When Play begins:
    now per entry is 14;
    now int entry is 12;
    now cha entry is 14;
-   now sex entry is "female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+   now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
    now hp entry is 39;            [ How many HP has the monster got? ]
    now lev entry is 5;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
    now wdam entry is 6;            [Amount of Damage monster Does when attacking.]

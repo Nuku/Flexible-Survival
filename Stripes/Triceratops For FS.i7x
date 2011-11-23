@@ -46,7 +46,7 @@ to say beatthetric:
 
 
 to say tricdesc:
-	say "[line break]     Before you is a stunning dichotomy of anachronism!  The female dinosaur woman, a triceratops with horns and a broad frill, is dressed as a disco maven.  Her brown and green scaled body is only barely covered by the red disco dress she wears, exposing most of her bosom.  It is made of smooth satin with rhinestones around bell-bottom-like wide ankles and pleated waves over her shoulders.  The large afro behind her armoured frill, the big sunglasses and high platform shoes complete the look.  This double blast-from-the-past strikes a pose and strides to the beat, ready to mop the dance floor with you.";
+	say "     Before you is a stunning dichotomy of anachronism!  The female dinosaur woman, a triceratops with horns and a broad frill, is dressed as a disco maven.  Her brown and green scaled body is only barely covered by the red disco dress she wears, exposing most of her bosom.  It is made of smooth satin with rhinestones around bell-bottom-like wide ankles and pleated waves over her shoulders.  The large afro behind her armoured frill, the big sunglasses and high platform shoes complete the look.  This double blast-from-the-past strikes a pose and strides to the beat, ready to mop the dance floor with you.";
 
 
 Section 2 - Monster Insertion

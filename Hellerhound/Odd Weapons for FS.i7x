@@ -8,7 +8,7 @@ name	desc	weight	object
 "garbage can lid"	"The lid of a garbage can, usable as a weapon."	4	garbage can lid
 "infected sword"	"A sword with cloudy metal found in a sea of slime. It is infectious, and keeps changing you."	10	infected sword
 "dirty whip"	"A whip covered with dripping horse cum. It is infectious, and was found abandoned by its owner."	3	dirty whip
-"whip"	"A whip that was once covered with horse cum. It has metal studs."	2	clean whip
+"whip"	"A whip you found and cleaned up.  It has metal studs on the lash."	2	clean whip
 
 understand "whip" as clean whip.
 Does the player mean using the dirty whip when the dirty whip is owned: it is likely.
@@ -20,9 +20,9 @@ Does the player mean grabbing the clean whip when the clean whip is visible: it 
 [When Play begins:
 	now the printed name of clean whip is "whip";]
 
-dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your horsy whip[or]white streak[at random]". The weapon damage of dirty whip is 5. The weapon type of dirty whip is "Melee". It is not temporary.
+dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your horsy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
 
-clean whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]". the weapon damage of clean whip is 11. The weapon type of clean whip is "Melee". It is not temporary.
+clean whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]". the weapon damage of clean whip is 6. The weapon type of clean whip is "Melee". It is not temporary.
 
 
 garbage can lid is a armament. It is a part of the player. It has a weapon "[one of]your large shield[or]your lid[or]your trusty lid[or]flashing grey circle[at random]". The weapon damage of garbage can lid is 5. The weapon type of garbage can lid is "Melee". It is not temporary.

@@ -427,6 +427,14 @@ to say kittycheck:		[add new felines when they arise]
 		now kittyness is 1;
 	if the facename of player is "Pantherherm":
 		now kittyness is 1;
+	if the bodyname of player is "Leopardman":
+		now kittyness is 1;
+	if the facename of player is "Leopardman":
+		now kittyness is 1;
+	if the bodyname of player is "Ninja Cat":
+		now kittyness is 1;
+	if the facename of player is "Ninja Cat":
+		now kittyness is 1;
 
 to say randomvetfight:				[more suitable pets can be added]
 	let tempnum be a random number between one and seven;
@@ -444,8 +452,6 @@ to say randomvetfight:				[more suitable pets can be added]
 		challenge "rabbit pack";
 	if tempnum is 7:
 		challenge "Feline";
-
-
 
 
 Section 6- Golf Store
