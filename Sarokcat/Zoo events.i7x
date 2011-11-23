@@ -8,22 +8,32 @@ Electric shockers is a situation.
 The sarea of Electric shockers is "Zoo";
 
 Electricprodstatus is a number that varies.
+epcountdown is a number that varies.
+eptarget is a number that varies.
+eprecharge is a number that varies.
 
 Instead of Resolving a Electric shockers:
 	if Electricprodstatus is 0:
-		say "Moving through the zoo, you come across one of the zookeepers shacks that seems to have been left open in the confusion. Taking advantage of the situation, you move inside and start searching the place, although it really doesn[apostrophe]t take much looking to find the locked case of what look like extendable cattle prods, obviously intended to shock dangerous animals at a small distance.  Unfortunately the case is locked up tight and all your efforts to pry it open fail miserably, though you do notice someone has placed a sticky note up in the corner.  Reading the note you find it says 'Electric shock treatment available in release 2.0! preorder now!'  Well isn[apostrophe]t that just dandy....";
+		say "Moving through the zoo, you come across one of the zookeepers shacks that seems to have been left open in the confusion. Taking advantage of the situation, you move inside and start searching the place, although it really doesn[apostrophe]t take much looking to find the locked case of what look like extendable cattle prods, obviously intended to shock dangerous animals at a small distance.  Unfortunately the case is locked up tight and all your efforts to pry it open fail miserably.  You do make a mental note to come back again at another time and perhaps you'll have more luck.";
 		now Electricprodstatus is 1;
 		stop the action;
-	if Electricprodstatus is 1:
+	otherwise if Electricprodstatus is 1:
 		say "Traveling through the zoo, you come across a rather familiar looking zookeepers shack, and it looks like someone else has been here recently as well. Deciding to be careful you peek around the door to make sure there isn[apostrophe]t some kind of strange beast there waiting for you.  You are rather surprised to note that not only is the shack empty again, but it looks like whatever was here had a goal, they seem to have made a concerted assault on the case in the corner holding the powerful electric prods.  They seem to have had more success then you, because the case now hangs open loosely, and several of the useful tools have spilled out onto the floor, a quick examination shows you that most of the weapons were damaged too severely to work by whoever broke the case open, but you actually manage to find one that you think might actually work for a while before it burns out. ";
 		add "Electric prod" to invent of player;
+		now epcountdown is 0;
+		now eptarget is a random number between 11 and 31;
 		now Electricprodstatus is 2;
 		stop the action;
 	if Electricprodstatus is 2:
-		say "You find the shack where you managed to salvage your slightly damaged Electric weapon from again, and take a quick look around inside, but just like before all you can find are spare batteries, and a number of heavily damaged electric sticks that are about as useful now as a regular stick would be. Sighing you continue on your way.";
+		say "You find the shack where you managed to salvage your slightly damaged Electric weapon from again, and take a quick look around inside.  But just like before, all you can find are spare batteries, and a number of heavily damaged electric sticks that are about as useful now as a regular stick would be. Sighing, you continue on your way.";
 	if Electricprodstatus is 3:
-		say "Finding the shack your electric weapn originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods, eventually cannibalizing one of them in order to replace the burnt out parts in your own. It takes a decent amount of time, but at the end of it, you once more have a semifunctional electric prod, and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.";
+		increase eprecharge by 2;
+		say "Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods.  You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair.  At the end of it, you once more have a semifunctional electric prod[if eprecharge is 2], and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.[otherwise if eprecharge is 8], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining.[otherwise],  and while it could fritz out on you at any moment, you are hopefuly that you can return here and fix it again if you need to.[end if]";
 		add "Electric prod" to invent of player;
+		now epcountdown is 0;
+		now eptarget is a random number between 9 and ( 27 - eprecharge);	[repairs are increasingly less effective]
+		if eprecharge is 4:
+			now Electric Shockers is resolved;
 		now Electricprodstatus is 2;		
 
 
@@ -35,8 +45,9 @@ Electric prod is an armament. It is part of the player. It has a weapon "[one of
 
 
 An everyturn rule:
-	if the Electric prod is wielded:
-		if a random chance of 1 in 20 succeeds:
+	if the Electric prod is wielded and epcountdown is less than eptarget:
+		increase epcountdown by 1;
+		if epcountdown is eptarget:
 			say "With one last electric fizz and pop, the electric prod dies in your hands, its battery obviously drained by the damaged circuits burning out.  Sighing you take a look at your broken weapon, before sticking it in the back of your pack to throw away later... At least you got to have some fun with it while it lasted...";
 			now Electricprodstatus is 3;
 			process Electric prod;
