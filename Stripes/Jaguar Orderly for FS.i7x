@@ -43,17 +43,18 @@ to say beatthejaguar:
 to say jaguardesc:
 	choose row monster from the table of random critters;
 	if sabtoothed is 1:		[permanent upgrade]
-		say "[line break]     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw.  The devolved jaguarman growls and reaches to grab you with its powerful paws.";
+		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw.  The devolved jaguarman growls and reaches to grab you with its powerful paws.";
 		now hp entry is 95;
 		now monsterhp is 95;
 		now lev entry is 9;
 		now wdam entry is 12;
+		now int entry is 8;
 	otherwise:
-		say "[line break]     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
+		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
 		now hp entry is 80;
 		now monsterhp is 80;
 	if triclamped is 1:		[permanent upgrade]
-		say "     Getting a closer look at the creature as it charges towards you, you can see traces of toughened scales at the top of its neck and there are three small horns on its head, one at the end of its muzzle and two over its brow.";
+		say "     Getting a closer look at the creature as it charges towards you, you can see traces of toughened scales at the top of its neck and there are three small horns on its head, one at the end of its muzzle and two over its brow.  These poke just a little out from his fur.";
 		increase hp entry by 15;
 		increase monsterhp by 15;
 
