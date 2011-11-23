@@ -132,7 +132,7 @@ to say randombodypart:
 
 
 to say mischimdesc:
-	say "[line break][mixnmatch]     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest.  Somehow, it is a strange, cobbled-together mish-mash of other creatures.  The body parts don't match and you can see stitchmarks in several places where they were grafted together.  Several other spots have scars from what may have been medical procedures or experiments.";
+	say "[mixnmatch]     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest.  Somehow, it is a strange, cobbled-together mish-mash of other creatures.  The body parts don't match and you can see stitchmarks in several places where they were grafted together.  Several other spots have scars from what may have been medical procedures or experiments.";
 	say "     This unfortunate creature has the head of a [headdata] sewn onto its [torsodata] body.  Its body has several smaller mismatched patches and scars.  The strange chimera's right arm and shoulder are that of a [rarmdata], ending in a clawed human hand while its left forearm has that of a [larmdata] grafted on.  Its left leg is fully that of a [llegdata] attached on at the hip while its right leg is that of a [rlegdata] from the knee down.  Stitched to its chest are [breastdata] mismatched breasts while a [cockdata] dick hangs between its legs over a large, stitched-up scrotum.  It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
 	choose row monster from the table of random critters;
 	if lev entry is 8 or lev entry is 9:

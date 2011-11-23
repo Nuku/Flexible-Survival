@@ -244,7 +244,7 @@ dogfoodcount is a number that varies.
 Instead of resolving a Mournful Dog:
 	if hdog is 0:			[first time finding]
 		say "     While searching through a hallway of patient rooms, you open one to a terrible smell of decay.  You retch several times[if humanity of player < 50], barely hearing the soft growling coming from within,[end if] before recovering and taking stock of the room.  There is a body on the hospital bed, clearly long dead and unremoved.  On the floor beside it is a [if humanity of player < 50]growling[otherwise]sad[end if] dog.  The dog is a black and white shepherd wearing a bright vest on its bony flanks, denoting it as a helper dog.";
-		say "     It seems the poor beast's master passed away, and in the ensuing chaos at the hospital, was left here since.  It is unclear if they died before the outbreak took hold or if they were too weak and the infection finished them off before it could change and heal them.  The dog, probably hostile to the infected hospital staff, has continued to protect them and keep them from the removing the body.";
+		say "     It seems the poor beast's master passed away, and in the ensuing chaos at the hospital, was left here since.  It is unclear if they died before the outbreak took hold or if they were too weak and the infection finished them off before it could change and heal them.  The dog, probably hostile to the infected hospital staff, has continued to protect its master and kept them from the removing the body.";
 		now hdog is 1;
 		let foodfound be 0;
 		repeat with x running through invent of player:
@@ -257,10 +257,13 @@ Instead of resolving a Mournful Dog:
 				delete food;
 				increase dogfoodcount by 3;
 				let bonus be (( charisma of player minus 10 ) divided by 2);
+				let featbonus be 0;
+				if "Good Teacher" is listed in feats of player, increase featbonus by 1;
+				if "Ringmaster" is listed in feats of player, increase featbonus by 1;
 				let dice be a random number from 1 to 20;
-				let total be ( dice plus bonus plus dogfoodcount );
-				say "You roll 1d20([dice])+[bonus]+[dogfoodcount] vs 22 and score [total]: ";
-				if dice + bonus + dogfoodcount is greater than 21:
+				let total be ( dice plus bonus plus dogfoodcount plus featbonus);
+				say "You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
+				if total is greater than 21:
 					say "     You are able to coax the dog into letting you come close and pet it.  It wags its tail as you pat its head and check its tag, finding only the name 'Hobo'.  Reaching over, you pull the sheets over its former master's body, then you both leave together.";
 					now helper dog is tamed;
 					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
@@ -283,10 +286,13 @@ Instead of resolving a Mournful Dog:
 				delete food;
 				increase dogfoodcount by 3;
 				let bonus be (( charisma of player minus 10 ) divided by 2);
+				let featbonus be 0;
+				if "Good Teacher" is listed in feats of player, increase featbonus by 1;
+				if "Ringmaster" is listed in feats of player, increase featbonus by 1;
 				let dice be a random number from 1 to 20;
-				let total be ( dice plus bonus plus dogfoodcount );
-				say "You roll 1d20([dice])+[bonus]+[dogfoodcount] vs 22 and score [total]: ";
-				if dice + bonus + dogfoodcount is greater than 21:
+				let total be ( dice plus bonus plus dogfoodcount plus featbonus);
+				say "You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
+				if total is greater than 21:
 					say "     You are able to coax the dog into letting you come close and pet it.  It wags its tail as you pat its head.  Reaching over, you pull the sheets over its former master's body, then you both leave together.";
 					now helper dog is tamed;
 					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";

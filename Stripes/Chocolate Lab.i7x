@@ -22,7 +22,7 @@ to say losetolab:
 		say "[impregchance]";
 	Otherwise:								[male]
 		say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you.  You can feel the firm press of its body at your asshole, spreading you open with a cock of hard chocolate.  Its body also grips around your [if cocks of player > 1]cocks[otherwise]cock[end if] with a soft, wet pussy[if cocks of player > 1] for each[end if].  Its fluid form flows and ripples, rubbing all over your body and teasing your nipples.  The amorous confectionary stimulates you inside and out until finally it shoots its white chocolate cream into your mouth and rear, and you pump your hot cum into it in return.";
-	say "     Once it's done, it flows off of you slowly, splatters of white chocolate landing on your chest.  It flows out of your body, but leaving you with a warm mess of creamy, white filling inside.  You pant as you try to catch your breath after the short, but intensely body-wide sex you've just had.";
+	say "     Once it's done, it flows off of you slowly, splatters of white chocolate landing on your chest.  It flows out of your body, but leaving you with a warm mess of creamy, white filling inside.  You pant as you try to catch your breath after the brief, but intensely body-wide, sex you've just had.";
 	decrease hunger of player by 12;
 	if hunger of player < 0:
 		now hunger of player is 0;
@@ -67,7 +67,7 @@ to say chococheck:
 
 
 to say choclabdesc:
-	say "[line break]     Before you is a bizarre creature.  At first glance, it seems like a normal dog, a brown Labrador.  But it's soon apparent that it's quite unusual.  This chocolate Lab is flowing and shifting, leaving brown pawprints as it walks.  It seems to be quite literally a [italic type]chocolate[roman type] Lab.  Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer.  The creature has a gooey, brown tongue that drips chocolaty syrup.  Its eyes are solid black, like pure, dark chocolate.";
+	say "     Before you is a bizarre creature.  At first glance, it seems like a normal dog, a brown Labrador.  But it's soon apparent that it's quite unusual.  This chocolate Lab is flowing and shifting, leaving brown pawprints as it walks.  It seems to be quite literally a [italic type]chocolate[roman type] Lab.  Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer.  The creature has a gooey, brown tongue that drips chocolaty syrup.  Its eyes are solid black, like pure, dark chocolate.";
 
 
 Section 2 - Monster Insertion
