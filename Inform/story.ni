@@ -2879,7 +2879,7 @@ This is the breast descr rule:
 
 This is the cock descr rule:
 	if cock length of player is less than 3:
-		now descr is "[one of]tiny[or]veny small[or]puny[at random]";
+		now descr is "[one of]tiny[or]very small[or]puny[at random]";
 	otherwise if cock length of player is less than 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
 	otherwise if cock length of player is less than 8:
