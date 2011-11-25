@@ -765,6 +765,8 @@ Include Leopardman by Sarokcat.
 Include Hawkman by sarokcat.
 Include Kara by Sarokcat.
 Include Unicorn by Sarokcat.
+Include Arctic Fox by Sarokcat.
+Include Janice by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
