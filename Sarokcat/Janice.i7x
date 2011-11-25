@@ -101,8 +101,8 @@ instead of conversing the angie while janicequest is 1:
 	now janicequest is 2;
 
 
-Vixenposing is an action applying to nothing
-
+Vixenposing is an action applying to nothing.
+Lastvixenposing is a number that varies.
 Understand "Mimic Janice" as Vixenposing.
 Understand "pose for janice" as Vixenposing.
 Understand "Learn from Jance" as Vixenposing.
@@ -115,11 +115,11 @@ Check Vixenposing:
 	If Janice is not visible, say "And how do you expect to do that?" instead;
 
 carry out Vixenposing:
-	if last Vixenposing - turns is less than 6:
+	if lastVixenposing - turns is less than 6:
 		say "'Not right now my lovely,' Janice murrs at you as she stretches languidly out on the couch, 'It is just much too much effort for me to put in right now... perhaps later.' She says teasingly as she relaxes on the soft cushion.";
 		stop the action;
 	if janicearoused is greater than 0:
-		now last Vixenposing is turns;
+		now lastVixenposing is turns;
 		say "'Ah so you want to learn how to make the best use of that sexy body of yours? Well I suppose it would be quite fun to show you how to move that sexy tail of yours.' Janice says with an amused grin as she stretches her lithe body for a minute, before beginning to show off several extremely enticing poses, her soft furred form looking amazing even as her long white fox tail swishes behind her teasingly.  Soon she is strutting daintly around the room, her every movement setting your blood on fire with desire as she shows off her rather amazing assets for your inspection. After several minutes she stops teasing you, and begins to give you pointers as she makes you walk around the room and pose just like she did, the unusual amount of balance and muscle control required to look so damn enticing is rather surprising, and you try your best to keep up with her increasingly difficult instructions.";
 		let bonus be (( the dexterity of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
