@@ -1,6 +1,6 @@
-Version 1 of Hyena Bikers by Stripes begins here.
+Version 2 of Hyena Bikers by Stripes begins here.
 [Completed w/selection menu thanks to mirumu.]
-[version 1.1 - added exclusions]
+[version 2.0 - Biker leader at Gang HQ started ]
 
 "Adds a situation with a pack of hyenas on motorcycles in the High Rise District."
 
@@ -15,6 +15,7 @@ when play begins:
 	add Hyena Bikers to badspots of furry;
 
 Instead of resolving a Hyena Bikers:
+	move Grant to Hyena Hideout;
 	say "     As you pass down one street, you see a lot of fresh graffiti sprayed onto the concrete high-rises around you.  Looking it over, you see it proclaim the strength of the hyena gang.  This puzzles you, as you thought you were well out of hyena territory.";
 	say "     You hear the roar of engines from out of a side street.  It takes you a moment to even place the sound; it has been so long since you[apostrophe]ve heard a motor running.  Motorcycles, your mind screams.  As the moment of realization sets in, you are already running as the hyenas on motor bikes chase after you, cackling loudly.  The next corner is too far away, but you continue running, looking for escape to either side.  The nearby buildings both have no access within reach.  The bikers overtake you and encircle you, laughing like hyenas as they keep you hemmed in.  Many of the bikes have heavy bags tied to them (presumably filled with ill-gotten gains) and a couple carry spare tanks of gas.";
 	wait for any key;
@@ -323,5 +324,33 @@ name	desc	weight	object
 "tire iron"	"A heavy tire iron - a good, cliché make-shift weapon."	1	tire iron
 
 tire iron is an armament. It is part of the player. It has a weapon "[one of]your tire iron[or]the tire iron[or]your metal tire iron[at random]". The weapon damage of tire iron is 6. The weapon type of tire iron is "Melee". It is not temporary.
+
+
+Section 5 - Grant
+
+Grant is a man.
+The description of Grant is "[grantdesc]";
+granttalk is a number that varies.
+lastGrantfucked is a number that varies.
+
+to say grantdesc:
+	say "     The leader of the hyena bikers is here, sitting on a wooden crate and watching the others milling about.  His pose is casual, but his eyes watch them intently, as if sizing them up and evaluating them.  He is a strong, fully male hyena wearing a leather jacket and sunglasses that have been adjusted to fit on his muzzle.";
+
+instead of conversing the Grant:
+	if matriarchdefeated is 2:
+		say "     The impressive male hyena spares you the briefest of glances as you come over to him, then casually shoves you away with one of his feet, not interested in talking to a gang bitch like you.";
+	otherwise if granttalk is 0:
+		say "     You head on over to the biker leader to talk to him.  He [if matriarchowned is 1]rises respectfully as his superior comes over[otherwise if matriarchdefeated is 1]looks you over, a lesser member, and gives a soft grunt of acknowledgement[otherwise]nods casually to you, waiting to hear what you have to say[end if].  You start talking to him and he looks over the room again, then back to you.";
+		say "     'The name's Grant.  I don't think you got it earlier.  I've got the mechanics working on my bike, giving her a bit of tune up.  After so long out on the road, she needs some TLC.  I'll be here for a little while.  I've been eying the new recruits for possible riders while I've got the time, but haven't seen any I want to bother with.  Slim picking lately, it seems.'";
+		increase granttalk by 1;
+	otherwise:
+		say "[one of]'Like I said,' the biker leader states, 'I have the crew working on a tune up for my bike.  It's good to take a break after being away for so long.'[or]'Look at them,' the hyena says, 'most of them are running around without any focus.  Too undisciplined to be any use except as goons.'[or]'Most of this lot don't measure up to my riders.  I don't think I'll be adding any new riders.'[or]'It seems that you and Gina are hitting it off.  Stick with her.  She's a good lieutenant.'[or]'If Gina was into bikes, I'd have her in my team.'[at random]";
+
+instead of fucking the grant:
+	if matriarchdefeated is 2:
+		say "     The biker leader hops off the crate and push you against it roughly.  As you start to hope he'll mount you, he swats you hard on the rear before shoving you back into the room.  Many of the others around chuckle as the impressive male sends you off roughly.  It seems he's not interested in sex at the moment.  Maybe you'll have more luck with version 3.0 rolls around.";
+	otherwise:
+		say "     The biker leader grins at your advances, but shakes his head.  'I've not been much in the mood for riding at the moment, with my bike in the shop.  Perhaps once she's fixed up again.'  It seems you'll have to wait for version 3.0 for sexings.";
+
 
 Hyena Bikers ends here.
