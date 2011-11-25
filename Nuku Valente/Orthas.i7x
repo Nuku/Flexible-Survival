@@ -163,6 +163,7 @@ Section 2 - Monster Responses
 
 when play begins:
 	add { "Dragon" } to infections of furry;
+	add { "Dragon" } to infections of tailweapon;
 
 to say losetoorthas:
 	now fightstatus is 2;
