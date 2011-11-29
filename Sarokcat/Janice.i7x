@@ -7,25 +7,25 @@ section 1- Janice
 Janicetalk is a number that varies.
 Janicearoused is a number that varies.[not a needed number, but used to set different arousal states if they aren't automatically willing to just hop into bed.]
 Janicequest is a number that varies.[often used for quests or renamed to Janicequest, see boris for some good examples of this, totally unneeded if the npc doesn't have an associated quest.]
-LastJanicefucked is a number that varies. LastJanicefucked is usually 250.
+LastJanicefucked is a number that varies. LastJanicefucked is usually 800.
 Janicefucked is a number that varies. Janicefucked is usually 0.
 
 Janice is a woman.
-The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eying you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement..";
+The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eying you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.";
 
 
 The conversation of Janice is { "[Janicetalking]" };
 
 To say Janicetalking:
 	if Janicetalk is 0:[first time you encounter the npc text]
-		say "'Well hello there,' The vixen says in a sensually tempting voice, as you approach her to introduce yourself. 'It[apostrophe]s nice to see another new face around here, this place does seem to attract all kinds now doesn[apostrophe]t it?.' She says with amusement as she sits up and stretches out one of her rather dainty looking paws to shake your hand, before lying back on the couch and adjusting her position slightly, giving you a very tempting view of her perky breasts. 'The name is Janice, and well, unlike most of the others, I didn[apostrophe]t get attacked by one of those creatures, well not right away anyways,' Janice says with a small smirk forming on the side of her muzzle, 'And by then I already had claws of my own to fight them off with.' She says as she grins at you with amusement, her muzzle full of sharp pointy teeth quite evident as the vixen flexes her claws to make a point.[line break]";
-		say "'No,' Janice continues after a minute with a soft sigh, 'I ended up this way out of vanity mainly,' She says with a shake of her head before shooting you a teasing smile. 'I always liked fur, especially if it was soft and stylish, and well when I finally got an arctic fox fur sash, I just couldn't put it down.... Of course now I have a full pelt of beautiful fox fur of my own to run my hands through.' Janice says, her tail flicking with amusement as she suits her words to actions, running her dainty clawed hands through her soft white fur teasingly. 'I have to admit, while this isn[apostrophe]t  the way I would have necessarily chosen to wear fur from now on, I certainly am loving the experience.' She says with obvious enjoyment of her new condition as she winks at you teasingly. 'Of course since I wasn[apostrophe]t infected the 'usual' way by one of those creatures out there, there happens to be a shortage of other Arctic foxes around for me to play with around here.' Janice says with  a soft frown o her muzzle, before grinning at you again. 'Of course since it doesn[apostrophe]t look like you have settled on a final form yet, maybe you could help me out with remedying that situation sometime, it would be nice to have another fox like me around to stroke and pet....' The vixen says teasingly, as she rubs her pawlike hands along her inner thighs, giving you a glimpse of her damp wetness as she continues. 'If you wanted to show me you were interested in being a pretty fox like me anyways...";
+		say "'Well hello there,' The vixen says in a sensually tempting voice, as you approach her to introduce yourself. 'It[apostrophe]s nice to see another new face around here. This place does seem to attract all kinds, now doesn[apostrophe]t it?' she says with amusement as she sits up and stretches out one of her rather dainty looking paws to shake your hand, before lying back on the divan and adjusting her position slightly, giving you a very tempting view of her perky breasts. 'The name is Janice, and well, unlike most of the others, I didn[apostrophe]t get attacked by one of those creatures.  Well, not right away anyway,' Janice says with a small smirk forming on the side of her muzzle, 'And by then, I already had claws of my own to fight them off with.' She grins at you with amusement, her muzzle full of sharp pointy teeth quite evident as the vixen flexes her claws to make a point.[line break]";
+		say "'No,' Janice continues after a minute with a soft sigh, 'I ended up this way out of vanity mainly,' she says with a shake of her head before shooting you a teasing smile. 'I always liked fur, especially if it was soft and stylish, and when I finally got an arctic fox fur sash, I just couldn't put it down.... Of course now I have a full pelt of beautiful fox fur of my own to run my hands through,' Janice adds, her tail flicking with amusement as she suits her words to actions, running her dainty clawed hands through her soft white fur teasingly. 'I have to admit, while this isn[apostrophe]t the way I would have necessarily chosen to wear fur from now on, I certainly am loving the experience.' She says this with obvious enjoyment of her new condition as she winks at you teasingly. 'Of course, since I wasn[apostrophe]t infected the [']usual['] way by one of those creatures out there, there happens to be a shortage of other arctic foxes around for me to play with around here,' Janice says with a soft frown on her muzzle, before grinning at you again. 'Of course since it doesn[apostrophe]t look like you have settled on a final form yet, maybe you could help me out with remedying that situation sometime. It would be nice to have another fox like me around to stroke and pet...' the vixen says teasingly, as she rubs her pawlike hands along her inner thighs, giving you a glimpse of her damp wetness as she continues. 'If you wanted to show me you were interested in being a pretty fox like me anyways...";
 		increase Janicetalk by 1;
 		stop the action;
 	if Janicetalk is 1:
-		say "'Well hey there again, what brings you here to talk to me this time? Interested in having a luscious little fox pelt of your own?' Janice asks teasingly.";
+		say "'Well, hello again,' she purrs sensually. 'What brings you here to talk to me this time? Interested in having a luscious little fox pelt of your own?' Janice asks teasingly.";
 		if player consents:
-			say "'Well then, as I said before, all you have to do is show me how interested you actually are in being nice and foxy, I wouldn't want you to end up regretting it later after all.' Janice says with a soft smile, flashing her sharp teeth at you as she does so. 'And you wouldn[apostrophe]t be the first to claim to be interested only in hopes of getting a little 'tail' if you know what I mean.' The vixen says as she flips her handsome brush in your direction before continuing. 'Just find something around the city to show me how interested in foxes you are, I am sure you can do that, and then come talk to me again.' The arctic vixen says with an amused chuckle as she settles back on the luxurious couch to see what you will do.";
+			say "'Well then, as I said before, all you have to do is show me how interested you actually are in being nice and foxy. We wouldn't want you to end up regretting it later, after all,' Janice says with a soft smile, flashing her sharp teeth at you as she does so. 'And you wouldn[apostrophe]t be the first to claim to be interested only in hopes of getting a little [']tail['], if you know what I mean.' The vixen flips her handsome brush in your direction before continuing. 'Just find something around the city to show me how interested in foxes you are. I am sure you can do that, and then come talk to me again.' The arctic vixen releases an amused chuckle as she settles back on the luxurious couch to see what you will do.";
 			now Janicetalk is 3;
 			now janicequest is 1;
 			stop the action;
@@ -65,7 +65,7 @@ To say Janicetalking:
 
 Instead of fucking the Janice:
 	if lastJanicefucked - turns is less than 6:
-		say "'Sorry, but even us lusty little vixens need a bit of time to recover after such a lovely bit of fun.' Janice says teasingly as she plants a soft kiss on the side of your face before lying back on the wide couch and stretching theatrically. 'And besides my lovely little soon to be fox, haven[apostrophe]t you heard that anticipation makes everything better? And I am certainly already anticipating our next little romp eagerly...' She says as she gives you a vulpine grin and a soft wink before sending you on your way.";
+		say "'Sorry, but even us lusty little vixens need a bit of time to recover after such a lovely bit of fun,' Janice says teasingly as she plants a soft kiss on the side of your face before lying back on the wide couch and stretching theatrically. 'And besides my lovely little soon to be fox, haven[apostrophe]t you heard that anticipation makes everything better? And I am certainly already anticipating our next little romp eagerly...' she purrs sensually as she gives you a vulpine grin and a soft wink before sending you on your way.";
 		stop the action;
 	if Janicearoused is greater than 0:
 		if cocks of player is greater than 0:
@@ -91,7 +91,7 @@ Instead of fucking the Janice:
 			infect "Arctic fox";
 			stop the action;
 	otherwise:
-		say "'Sorry, but I am a bit more... selective in my choices of mates than that.' Janice says with a theatrical sigh, as she rubs her white furred legs together teasingly, 'Maybe once you have proven yourself a bit more... interesting, we can see...' She says teasingly as she reaches out with one of her soft dainty paws to stroke your [skin of player] cheek for a second, before reclining back on her backless couch again.";
+		say "'Sorry, but I am a bit more... selective in my choices of mates than that,' Janice says with a theatrical sigh, as she rubs her white furred legs together teasingly. 'Maybe once you have proven yourself a bit more... interesting, we can see...' she adds teasingly as she reaches out with one of her soft dainty paws to stroke your [skin of player] cheek for a second, before reclining back on her backless couch again.";
 
 
 
@@ -102,7 +102,7 @@ instead of conversing the angie while janicequest is 1:
 
 
 Vixenposing is an action applying to nothing.
-Lastvixenposing is a number that varies.
+Lastvixenposing is a number that varies. Lastvixenposing is usually 800.
 Understand "Mimic Janice" as Vixenposing.
 Understand "pose for janice" as Vixenposing.
 Understand "Learn from Jance" as Vixenposing.
@@ -145,7 +145,7 @@ Section 1- Private club room
 
 Private club room is a room. 
 
-The description of Private club room is "This smaller back room of the rather rambunctious club is rather mildy lit, the soft light reflecting off the several long low backless couches spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white furred occupant currently.  The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...";
+The description of Private club room is "This smaller back room of the rather rambunctious club is rather mildy lit, the soft light reflecting off the several divans spaced throughout the room. The soft scent of sex and heat filling the air tells you what this room has been used for most recently, though the room only seems to have a single white-furred occupant currently.  The loud club music is only a dimly heard counterpoint to the atmosphere of the room, mostly blocked by the rather thick walls and the cushioned walls. Though for some reason that only serves as a reminder of the fact that it is very unlikely that anyone out in the club could hear anything that goes on in here, no matter how loud or kinky it gets...";
 Janice is in Private club room.
 [in order to add additional rooms off the main room, merely type the new room and state that it is some direction from your current room. For example]
 SouthEast of Private club room is PALOMINO.

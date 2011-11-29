@@ -1,4 +1,5 @@
-Hungry Boar Man by hiccup begins here.
+Version 2 of Hungry Boar Man by hiccup begins here.
+[Version 2.0 w/updates by Stripes]
 
 "Adds an encounter to Flexible Survival with a hungry boar man."
 

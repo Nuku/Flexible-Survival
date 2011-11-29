@@ -3527,6 +3527,7 @@ The conversation of Orthas is { "[if orthasstart is greater than 3]Hey there, ho
 Orthas is in Trevor Labs Lobby.
 
 Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be 'Doctor Matt'";
+The description of Doctor Matt is "[if hp of doctor matt is 100]There is a small tape recorder with a sticky note on it, labeled as [']Doctor Matt['] on one of the lab tables[otherwise]Doctor Matt is working away at the various terminals, wandering from one to another when not working at his lab table or seated in his comfy chair.  He has a full environment suit on, covering his whole body, with only a glass visor to show his human face[end if].";
 Doctor Matt is in Primary Lab.
 understand "Matt" as doctor matt.
 
