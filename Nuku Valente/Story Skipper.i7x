@@ -74,20 +74,20 @@ Carry out reciting:
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
+						now skin is body entry;				
+						now skinname is name entry;
+			-- 15:
+				repeat with Y running from 1 to number of filled rows in table of random critters:
+					choose row Y from the table of random critters;
+					if name entry matches the text b, case insensitively:
 						now tail is body entry;				
 						now tailname is name entry;
-			-- 15:
+			-- 16:
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
 						now cock is body entry;				
 						now cockname is name entry;
-			-- 16:
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						now body is body entry;				
-						now bodyname is name entry;
 	now the score is -9999;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'all done!'";
 
