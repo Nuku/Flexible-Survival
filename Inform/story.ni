@@ -809,7 +809,7 @@ Include Inventory Management Enhancements for FS by mirumu.
 Include Albino Mouse by Stripes.
 Include Assorted Events by Stripes.
 Include Cat Ninjas by Stripes.
-
+Include Story Skipper by Nuku Valente.
 
 understand the command "feed" as something new.
 
