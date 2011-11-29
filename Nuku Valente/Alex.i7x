@@ -205,7 +205,7 @@ Instead of going west from dirty sheds:
 			if gettinglee > 5 and alexleeinfo is 0:
 				say "     This doesn't seem to be working for you.  Perhaps [bold type]Alex[roman type] has more info to help you convince Lee to trust you.";
 	otherwise:
-		say "     There's nothing interesting over there.";
+		say "     You take a quick look around, but you don't find anything of interest at the moment.  They are either locked or have already been raided.";
 
 
 Section 4 - Sexy Times!

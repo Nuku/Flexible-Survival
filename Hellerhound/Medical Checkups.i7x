@@ -9,7 +9,7 @@ The marea of pediatrics door is "Outside".
 North of Pediatrics Lobby is Doctors Office.
 Doctors Office is a room. "A doctors office, this one is a wreck, stains everywhere and food and water stockpiled in the cabinets. The clock is no longer running, and an oil lamp stands on the blue marble counter, on and buring. It fills the air with smoke. you wonder what happened to the smoke detectors.".
 
-Doctor Medea is a person. "A doctor, by the name on the door label, 'Doctor Medea', is busily mixing vials here. ".
+Doctor Medea is a person. "A doctor, by the name on the door label, 'Doctor Medea', is busily mixing vials here.".
 Doctor Medea is in Doctors Office.
 understand "medea" and "doctor" as Doctor Medea.
 
@@ -38,82 +38,84 @@ instead of resolving an abandoned truck:
 		otherwise:
 			say "You leave the abandoned truck behind and walk on.";
 
+The description of Doctor Medea is "[if medeaget is 0]Doctor Medea is a relatively human lizard, clothed, with multicolored scales. You suspect she got caught in the park initially[otherwise]Doctor Medea is a relatively human lizard, clothed, with multicolored scales. You suspect she got caught in the park initially. There is now a stream of darkness forms a line down her skirt to where some whitish cum is dripping. Looks like she came in herself, since the door was dust covered except for your marks[end if].";
+
 
 instead of conversing the Doctor Medea:
 	if medeaget is 0:
 		say "Doctor Medea is a relatively human lizard, clothed, with multicolored scales. You suspect she got caught in the park initially.";
 	otherwise:
 		say "Doctor Medea again. All that is different is that a stream of darkness forms a line down her skirt to where some whitish cum is dripping. Looks like she came in herself, since the door was dust covered except for your marks.";
-	say "Hello. I am doctor medea. I used to work here, and am only still here because the monster that broke in was too dumb to think of doors as an entrance. The condition of the lobby keeps the other monsters away, thinking this place has already been looted. I could help you?";
+	say "'Hello. I am doctor medea. I used to work here, and am only still here because the monster that broke in was too dumb to think of doors as an entrance. The condition of the lobby keeps the other monsters away, thinking this place has already been looted. I could help you?'";
 	if the cunts of the player is 0:
-		say "I cannot help you. I specialize in childbirth, and minor illnesses, none of which are occurring with the nanite plague. Maybe I could help if you were Female?";
+		say "'I cannot help you. I specialize in childbirth, and minor illnesses, none of which are occurring with the nanite plague. Maybe I could help if you were Female?'";
 	otherwise:
-		say "I could determine if you are pregnant, and with a little help, I could make you more fertile, or sterilize you.";
+		say "'I could determine if you are pregnant, and with a little help, I could make you more fertile, or sterilize you.'";
 		say "Check for pregnancy?";
 		if the player consents:
 			say "Doctor Medea takes out a machine and places it against your [bodyname of player] abdomen.";
 			say "It buzzes, and she looks at the results.";
 			if the gestation of the child is greater than 0:
-				say "You are pregnant.";
+				say "'You are pregnant.'";
 				wait for any key;
-				say "Its has [skinname of child] skin, a [bodyname of child] body, and a [facename of child] face.";
+				say "'It has [skinname of child] skin, a [bodyname of child] body, and a [facename of child] face.'";
 			otherwise:
-				say "You are not pregnant.";
+				say "'You are not pregnant.'";
 		if medeastuff is 1:
 			say "Do you want Medea to change your fertility?";
 			if the player consents:
 				say "Make you sterile(y) or fertile(n)?";
 				if the player consents:
 					if "Sterile" is listed in feats of the player:
-						say "You are already sterile. I can't do anything more.";
+						say "'You are already sterile. I can't do anything more.'";
 					otherwise if "Fertile" is listed in the feats of the player and "Selective Mother" is not listed in the feats of the player:
-						say "Do you wish for me to make you NOT fertile?";
+						say "'Do you wish for me to make you NOT fertile?'";
 						if the player consents:
 							say "She takes out a pair of specially shaped scissors and knocks you out with a cloth. When you wake up, your belly aches.";
 							remove "Fertile" from the feats of the player;
 						otherwise:
-							say "OK, I respect your judgement.";
+							say "'OK, I respect your judgement.'";
 					otherwise if "Selective Mother" is listed in the feats of the player:
-						say "Do you want me to reduce your self control?";
+						say "'Do you want me to reduce your self control?'";
 						if the player consents:
-							say "Doctor Medea places a odd looking helmet with wires running from it on your head, and you feel freeer, and odder. She removes the helmet, and you get back up.";
+							say "Doctor Medea places a odd looking helmet with wires running from it on your head, and you feel freer, and odder. She removes the helmet, and you get back up.";
 							remove "Selective Mother" from the feats of the player;
 						otherwise:
-							say "All right.";
+							say "'All right.'";
 					otherwise:
-						say "She takes a pad and straps it to your arm. ithin seconds, your body is enveloped with pain, and it slowly fades.";
+						say "She takes a pad and straps it to your arm. Within seconds, your body is enveloped with pain, and it slowly fades.";
 						say "Medea says 'you are now sterile'";
 						add "Sterile" to feats of the player;
 				otherwise:
 					if "Fertile" is listed in the feats of the player and "Selective Mother" is not listed in the feats of the player:
-						say "I cannot make you more fertile, but I could make you a selective mother?";
+						say "'I cannot make you more fertile, but I could make you a selective mother?'";
 						if the player consents:
 							add "Selective Mother" to feats of the player;
 							say "Done.";
 						otherwise:
-							say "As you wish.";
+							say "'As you wish.'";
 					otherwise if "Sterile" is listed in the feats of the player:
-						say "You are sterile, but I can fix that if you wish?";
+						say "'You are sterile, but I can fix that if you wish?'";
 						if the player consents:	
-							say "You can now be fertilized.";
+							say "'You can now be fertilized.'";
 							remove "Sterile" from the feats of the player;
 						otherwise:
-							say "Your choice.";
+							say "'Your choice.'";
 					otherwise if "Selective Mother" is listed in the feats of the player:
-						say "I can't do any more, sorry.";
+						say "'I can't do any more, sorry.'";
 					otherwise:
 						say "She takes a plunger and syringe from a cabinet that still looks new, and shoves it up your cunt. She depresses the plunger, and you feel euphoria rushing over you.";
 						add "Fertile" to the feats of the player;
 			otherwise:
-				say "Ok.";
+				say "'Ok.'";
 		otherwise:
 			if medeaget is 0:
-				say "I do not have the materials needed for such an operation. There should be some in a medical delivery truck that was supposed to arrive the day after the infection started. Here is a list.";
+				say "'I do not have the materials needed for such an operation. There should be some in a medical delivery truck that was supposed to arrive the day after the infection started. Here is a list.'";
 				now medeaget is 1;
 			 otherwise if medeaget is 1:
-				say "You need to get the materials. They should be in an abandoned truck!";
+				say "'You need to get the materials. They should be in an abandoned truck!'";
 			otherwise if medeaget is 2:
-				say "Yay! You managed to get the supplies! Thanks. I can now do medical work again!";
+				say "'Yay! You managed to get the supplies! Thanks. I can now do medical work again!'";
 				now medeastuff is 1;
 
 

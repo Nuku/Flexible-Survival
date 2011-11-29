@@ -39,22 +39,31 @@ to say brightflight:
 before going up from Red Apartment:
 	if staircaselocation is 0:
 		move the player to staircaseroof;
+	otherwise if findablestairs is 1:
+		say "You scout up on the roof, but the access point the gryphon told you about isn't there.";
+		stop the action;
 	otherwise:
-		say "Up to where?";
+		say "You check the rooftop quickly, but find nothing of interest at the moment and return to ground level.";
 		stop the action;
 
 before going up from Green Apartment:
 	if staircaselocation is 1:
 		move the player to staircaseroof;
+	otherwise if findablestairs is 1:
+		say "You scout up on the roof, but the access point the gryphon told you about isn't there.";
+		stop the action;
 	otherwise:
-		say "Up to where?";
+		say "You check the rooftop quickly, but find nothing of interest at the moment and return to ground level.";
 		stop the action;
 		
 before going east from Bright Alley:
 	if staircaselocation is 2:
 		move the player to staircaseroof;
+	otherwise if findablestairs is 1:
+		say "You check the far end of the alley, but the access point the gryphon told you about isn't there.";
+		stop the action;
 	otherwise:
-		say "East to where?";
+		say "You check down the east end of the alley, but find nothing of interest at the moment and return to the street.";
 		stop the action;
 
 before going down from staircaseroof:
