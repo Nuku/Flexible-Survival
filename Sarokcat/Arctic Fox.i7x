@@ -90,8 +90,5 @@ when play ends:
 
 			
 
-
-
 [ Edit this to have the correct Name as wall]
 Arctic fox ends here.
-
