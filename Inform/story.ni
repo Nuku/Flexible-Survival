@@ -3390,7 +3390,11 @@ levelcheat is an action applying to nothing.
 understand "givelevel" as levelcheat.
 
 carry out levelcheat:
-	increase the xp of the player by 100;
+	now xp of the player is (10 + (level of player times 10));
+	if "Fast Learner" is listed in feats of player:
+		decrease xp of player by ( level of player times 2 );
+	level up;
+	decrease score by level of the player times level of the player; 
 	
 Book 7 - Endings
 
