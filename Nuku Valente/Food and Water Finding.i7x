@@ -1,4 +1,4 @@
-Version 1 of Food and Water Finding by Nuku Valente begins here.
+Version 2 of Food and Water Finding by Nuku Valente begins here.
 
 "Allows finding food and water while roaming the city."
 
@@ -23,10 +23,11 @@ Instead of resolving a potential resources:
 	say "While wandering about, you're certain you see some [y] and move to get it.";
 	now x is a random number from 1 to 4;
 	if x is 1:
-		say "It's just laying there, hidden in [one of]a busted vending machine[or]a counter[or]a wheel barrow[or]the middle of a street[or]in a bag[at random].";
+		say "It's just laying there, hidden in [one of]a busted vending machine[or]a counter[or]a wheel barrow[or]the middle of a street[or]a bag[or]a backpack[or]an abandoned car[or]a pile of discarded clothes[purely at random].";
 		add y to invent of the player;
 	if x is 2:
 		let difficulty be a random number from 6 to 16;
+		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is up high, forcing you to climb up after it. Looks ";
 		if difficulty is less than 8:
 			say "easy";
@@ -55,6 +56,7 @@ Instead of resolving a potential resources:
 			add y to invent of the player;
 	if x is 3:
 		let difficulty be a random number from 6 to 16;
+		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is up stuck under something heavy. Looks ";
 		if difficulty is less than 8:
 			say "easy";
@@ -80,6 +82,7 @@ Instead of resolving a potential resources:
 			add y to invent of the player;
 	if x is 4:
 		let difficulty be a random number from 6 to 16;
+		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is in the hands of a sentient! Though mutant, Perhaps you could convince them to give it up, it looks like they have enough for themselves. They appear ";
 		if difficulty is less than 8:
 			say "easy";
@@ -101,7 +104,7 @@ Instead of resolving a potential resources:
 			say "Your arguments fall on deaf ears. Wait, does this guy even have ears?";
 			stop the action;
 		otherwise:
-			say "After working out the specifics, you are handed the [y]  and you stuff it into your backpack.";
+			say "After working out the specifics, you are handed the [y] and you stuff it into your backpack.";
 			add y to invent of the player;
 	wait for any key;
 	
