@@ -204,8 +204,6 @@ To say leonchat:
 				say  "Ah well, I thought you would make a great addition to the flock, think it over some more would you?";
 
 
-
-
 The conversation of Mary is { "[marychat]" };
 
 To say marychat:
