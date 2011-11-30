@@ -17,7 +17,7 @@ Instead of resolving Scared bird:
 	say "Traveling along the zoo paths you hear a strange noise from up ahead, moving carefully to investigate the area where you heard the noise, you look around the tree there but don[apostrophe]t actually see anything, you are about to turn to leave when you hear the sound again from up in the branches.  Looking up you are surprised to see a rather scared looking exotic bird taking shelter up in the branches, its brilliant plumage obvious at this distance as it huddles nervously above you.  You realize it must have escaped from one of the exotic bird exhibits, and sigh when you realize that its chances of survival in this violent city without help are pretty slim. Maybe you should try convincing it to come along with you instead of just hiding here?";
 	If player consents:
 		say "Making soft noises as the bird, you attempt to coax it down with a bit of food and friendly words, trying hard to convince it you want to be its friend.";
-		 let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
+		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
