@@ -19,6 +19,7 @@ Carry out reciting:
 	let x be indexed text;
 	let x be the topic understood;
 	replace the text " " in X with "`";
+	let lev be the level of the player;
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
@@ -140,15 +141,22 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now hyper squirrel girl is resolved;
+						now squirrel den is known;
 					otherwise:
 						now hyper squirrel girl is not resolved;
 			-- 31:
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now needy rabbit girl is resolved;
+						now rabbit den is known;
 					otherwise:
 						now needy rabbit girl is not resolved;
 	now the score is -9999;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'all done!'";
+	wait for any key;
+	repeat with counter running from lev + 1 to level of player:
+		if the remainder after dividing counter by 6 is 0:
+			funfeatget;
+
 
 Story Skipper ends here.
