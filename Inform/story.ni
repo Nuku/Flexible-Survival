@@ -3836,7 +3836,7 @@ name	desc	weight	object
 "Chocolate Milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
 "Vixen Milk"	"A thin milk with an alluring taste, like the silvery vixens it is from."	1	vixen milk
 
-panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur".
+panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".
 chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "soda".
 vixen milk is a grab object. It is a part of the player. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk".
 

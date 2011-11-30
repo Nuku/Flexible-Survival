@@ -1169,7 +1169,7 @@ to say tlvictory:
 	if cocks of player > 0:
 		say "     Your groin is thoroughly soaked with the huskybunny's feminine juices, as she's already cum several times.  You wrap a hand around her large, throbbing cock and focus on seeding her properly.  The feel of the new hybrid's pussy around you is so good.  Dr Mouse's formula has worked wonders on the scientist, making a wonderful fucktoy that is certainly one of the best fucks you've ever had.";
 		wait for any key;
-		say "     With a final, hard thrust into her, you push your cock as deep as you can and unleash your hot load.  Your cum spurts deep inside her and her body responds instantly, tugging and milking at your shaft for all you'll give and pulling it up into her womb.  Pulling your spent shaft free, you wipe in clean on one of her big, fuzzy rabbit feet.";
+		say "     With a final, hard thrust into her, you push your cock as deep as you can and unleash your hot load.  Your cum spurts deep inside her and her body responds instantly, tugging and milking at your shaft for all you'll give and pulling it up into her womb.  Pulling your spent shaft free, you wipe it clean on one of her big, fuzzy rabbit feet.";
 	otherwise:
 		say "     Your groin is thoroughly soaked with the huskybunny's feminine juices, as she's already cum several times without even being filled.  You lean down, licking and nibbling at her nipples as you focus on the throb of that thick cock filling you.  It feels so good inside you, stimulating all your sensitive spots and instinctively taking on a rhythm to give you the most pleasure.  Dr Mouse's formula has worked wonders on the scientist, making a wonderful fucktoy that is certainly one of the best fucks you've ever had.";
 		wait for any key;
