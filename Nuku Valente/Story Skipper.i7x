@@ -7,7 +7,7 @@ The description of trixie is "Look, it[apostrophe]s Trixie, the story fairy! She
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word: [magic word]." };
 
 To say magic word:
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[satisfied]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]";
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[satisfied]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]|[weapon object of player]";
 
 Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
@@ -118,6 +118,16 @@ Carry out reciting:
 			-- 26:
 				if the player's command matches "[number]":
 					now the cunt width of player is the number understood;
+			-- 27:
+				repeat with Y running through grab objects:
+					if the printed name of Y matches the text b, case insensitively:
+						if printed name of y is not listed in invent of player, add printed name of Y to invent of player;
+						if Y is armament:
+							now weapon object of player is Y;
+							now weapon of player is weapon of Y;
+							now weapon damage of player is weapon damage of Y;
+							now weapon type of player is weapon type of Y;
+							say "You ready your [Y].";
 	now the score is -9999;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'all done!'";
 
