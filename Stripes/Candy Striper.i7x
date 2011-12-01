@@ -359,9 +359,7 @@ when play ends:
 		otherwise:
 			say "     When the military forces move in to rescue survivors, Candy is taken out with you and the others.  You try to keep an eye on him, but being surrounded by sexy soldier boys is too much for the raccoon.  Behind your back, he makes out with several of the soldiers and officers.";
 			say "     When you are leaving the compound, you can't help but notice that they were starting to get a little more effeminate themselves and you suspect there'll be a few more girly coons running around the base soon enough.  Your suspicions are later confirmed when you catch the coon on the phone talking to one of them.  It seems he got phone numbers from his lovers on the base and maintains phone contact with them.  The army quickly finds itself with a platoon of horny, girly raccoons in a rainbow of colours in their ranks[if cocks of player > 0].  When not entertaining his many soldier lovers, the coon is always willing to enjoy your company and you fill his willing muzzle or ass on several occasions[end if].";
-
-when play ends:								[coon pet / Candy - interactions]
-	if humanity of player > 9:
+	if humanity of player > 9:						[coon pet / Candy - interactions]
 		if coonstatus is 1:						[coon saved]
 			if Sarah is in the bunker and sarahslut < 4:	[Candy + non-pet Sarah]
 				if cocks of player > 0:
