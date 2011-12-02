@@ -857,7 +857,7 @@ marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "red kangaroo", "Skunk", "Skunk Girl", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Slutty Dragoness", "Horny Dragon", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "Skunk Taur", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness" } to infections of Tailweapon;
+	add { "red kangaroo", "Skunk", "Skunk Girl", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "Skunk Taur", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness" } to infections of Tailweapon;
 
 
 Part 2 - Rules
