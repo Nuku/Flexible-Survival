@@ -7,7 +7,7 @@ The description of trixie is "Look, it[apostrophe]s Trixie, the story fairy! She
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word: [magic word]." };
 
 To say magic word:
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[satisfied]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenspray]";
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[satisfied]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]";
 	
 Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
@@ -23,7 +23,7 @@ Carry out reciting:
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
-		change the text of the player's command to b;		
+		change the text of the player's command to b;
 		if Z is:
 			-- 1:
 				if the player's command matches "[number]":
@@ -158,23 +158,20 @@ Carry out reciting:
 						now Womanfruittree is resolved;
 			-- 33:
 				if the player's command matches "[number]":
-					now the cunt width of player is the number understood;
+					now coleentalk is the number understood;
 			-- 34:
 				if the player's command matches "[number]":
-					now coleentalk is the number understood;
+					now coleenfound is the number understood;
 			-- 35:
 				if the player's command matches "[number]":
-					now coleenfound is the number understood;
+					now coleencollared is the number understood;
 			-- 36:
 				if the player's command matches "[number]":
-					now coleencollared is the number understood;
+					now coleenalpha is the number understood;
 			-- 37:
 				if the player's command matches "[number]":
-					now coleenalpha is the number understood;
-			-- 38:
-				if the player's command matches "[number]":
 					now coleenslut is the number understood;
-			-- 39:
+			-- 38:
 				if the player's command matches "[number]":
 					now coleenspray is the number understood;
 	now the score is -9999;
