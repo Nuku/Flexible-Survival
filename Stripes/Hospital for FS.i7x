@@ -44,6 +44,7 @@ Instead of resolving a Pharmaceutical Storage:
 	say "[drugsearch]";
 	increase hospnav by 1;
 	say "[hospprogress]";
+	increase score by 5;
 	now Pharmaceutical Storage is resolved;
 
 to say drugsearch:
@@ -93,6 +94,7 @@ Instead of resolving a Ambulance Dock:
 		say "     You opt to play it safe and continue your search elsewhere.";
 	increase hospnav by 1;
 	say "[hospprogress]";
+	increase score by 1;
 	now Ambulance Dock is resolved;
 
 
@@ -106,6 +108,7 @@ Instead of resolving a Operating Room:
 	add "bonesaw" to invent of player;
 	increase hospnav by 1;
 	say "[hospprogress]";
+	increase score by 5;
 	now Operating Room is resolved;
 
 Table of Game Objects (continued)
@@ -128,6 +131,7 @@ Instead of resolving a Staff Lounge:
 	say "     As you are about to head out, you bump into a girlish raccoon in a pink dress, carrying a large dildo in one paw.  It seems someone did come for a little fun in the break room.";
 	challenge "Raccoon";
 	say "     Your encounter with the boytoy raccoon over, you leave the lounge to continue your search.";
+	increase score by 1;
 	now Staff Lounge is resolved;
 
 
@@ -136,6 +140,7 @@ The sarea of Interruption is "Hospital";
 
 Instead of resolving a Interruption:
 	say "     While moving through the halls of the hospital, you poke into the patient rooms on each side, taking a quick glance for anything of interest.  At one, you are surprised to find a large jaguar with one of the vixen nurses in his lap, riding his hard cock.  He starts to growl and rise as he notices you, but the nurse, not seeing you, rides him harder and gives him a lustful kiss.  He purrrumbles as he settles back down, eyes closed as they kiss.  You decide to slip quietly back out of the room to leave the couple to their fun.";
+	increase score by 1;
 	now Interruption is resolved;
 
 
@@ -146,6 +151,7 @@ Instead of resolving a Maternity Ward:
 	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it.  Inside you find the place busy with vixen nurses.  Several are tending to the bassinets while a few others are nurse feeding little foxcub babies.  The staff dutifully tend over the cubs, cooing and playing with them happily.  You turn and quietly leave, unsure if you are disturbed or relieved that it was not as you feared within.";
 	increase hospnav by 1;
 	say "[hospprogress]";
+	increase score by 1;
 	now Maternity Ward is resolved;
 
 
@@ -163,6 +169,7 @@ Instead of resolving a Radiology:
 	say "     After your confrontation with the creature, you leave the room, worried that more will be drawn by the noise.  You do find a back door out, letting you slip into another section of the hospital.";
 	increase hospnav by 1;
 	say "[hospprogress]";
+	increase score by 1;
 	now Radiology is resolved;
 
 
@@ -204,6 +211,7 @@ Instead of resolving a Pathology:
 	say "     After the confrontation with the pair of creatures, you leave the room, only noticing then that the room you were in was marked as 'Pathology'.  You feel a little quiver in your stomach.  Did you catch something in there, or was that just from worry?  As you try to convince yourself that you couldn't be feeling sick after such a short amount of time, you notice that a door around the corner is ajar.  This hallway, once locked, was opened by the creatures as they passed through it and is now another path you can use to explore the hospital.";
 	increase hospnav by 1;
 	say "[hospprogress]";
+	increase score by 1;
 	now Pathology is resolved;
 
 
@@ -217,6 +225,7 @@ Instead of resolving a Stairwell:
 		say "     In a far corner of the hospital, you come to one of the stairwells and find the door stuck half-open.  There are several large and heavy items scattered behind it, including the overturned gurney which is keeping the door open.  From the mess of clothes and sticky stains among the mess, it looks like some people were trying to barricade the door, but the creatures forced their way in before the job could be completed.  You are able to slip through the mess and go up the stairs to explore the upper rooms.";
 		increase hospstairs by 1;
 		say "[hospprogress]";
+		increase score by 5;
 		now Stairwell is resolved;
 
 
@@ -231,6 +240,7 @@ Instead of resolving a Cafeteria:
 		say "     The sight of this decadent meal is quite aluring, but you do manage to draw yourself away before giving in.  With so many in there, you doubt you would emerge with your identity intact.";
 	otherwise:
 		say "     You turn away from the decadent meal and move back down the hall quietly, eager to get some distance between you and such a large group of creatures.";
+	increase score by 1;
 	now Cafeteria is resolved;
 
 
@@ -245,6 +255,7 @@ Instead of resolving a Mournful Dog:
 	if hdog is 0:			[first time finding]
 		say "     While searching through a hallway of patient rooms, you open one to a terrible smell of decay.  You retch several times[if humanity of player < 50], barely hearing the soft growling coming from within,[end if] before recovering and taking stock of the room.  There is a body on the hospital bed, clearly long dead and unremoved.  On the floor beside it is a [if humanity of player < 50]growling[otherwise]sad[end if] dog.  The dog is a black and white shepherd wearing a bright vest on its bony flanks, denoting it as a helper dog.";
 		say "     It seems the poor beast's master passed away, and in the ensuing chaos at the hospital, was left here since.  It is unclear if they died before the outbreak took hold or if they were too weak and the infection finished them off before it could change and heal them.  The dog, probably hostile to the infected hospital staff, has continued to protect its master and kept them from the removing the body.";
+		increase score by 1;
 		now hdog is 1;
 		let foodfound be 0;
 		repeat with x running through invent of player:
@@ -267,6 +278,7 @@ Instead of resolving a Mournful Dog:
 					say "     You are able to coax the dog into letting you come close and pet it.  It wags its tail as you pat its head and check its tag, finding only the name 'Hobo'.  Reaching over, you pull the sheets over its former master's body, then you both leave together.";
 					now helper dog is tamed;
 					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
+					increase score by 10;
 					now Mournful Dog is resolved;
 				otherwise:
 					say "     The dog accepts the food from you, but won't let you get close.  Maybe you should come back and try again another time.";
@@ -296,6 +308,7 @@ Instead of resolving a Mournful Dog:
 					say "     You are able to coax the dog into letting you come close and pet it.  It wags its tail as you pat its head.  Reaching over, you pull the sheets over its former master's body, then you both leave together.";
 					now helper dog is tamed;
 					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
+					increase score by 10;
 					now Mournful Dog is resolved;
 				otherwise:
 					say "     The dog accepts the food from you, but won't let you get close.  Maybe you should come back and try again another time.";
@@ -357,7 +370,7 @@ to say hospprogress:
 			if hospstairs is 0:
 				say ", but you still need to find a way to get upstairs if you're going to get into those rooms.  You should look around for an accessible [bold type]stairwell[roman type].";
 			if hospstairs is 1:
-				say ".  Between that and the open stairwell you've found to get upstairs, you should now be successful at [bold type]finding a way in[roman type] to reach those illuminated upper rooms.";
+				say ".  Between that and the open stairwell you've found to get upstairs, you should now be successful at [bold type]finding a way in[roman type] to reach those illuminated upper rooms with a little searching.";
 		wait for any key;
 
 
@@ -1437,11 +1450,11 @@ when play ends:
 			say "When the military comes into the city, they are helped by Dr Matt's findings.  This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes.  You are quietly awarded a medal at a small ceremony for your services.  Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
 	otherwise if hospquest > 13 and humanity of player > 9:	[helped Dr Mouse]
 		if bodyname of player is not "Wolverine Guard":
-			if hp of doctor matt is -1:					[Dr Matt not defeated]
-				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  You discretely ask a few questions and hear that the military's scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life.";
-			otherwise if hp of doctor matt is -2:			[Dr Matt defeated]
+			if hp of doctor matt is -1:				[Dr Matt not defeated]
+				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  You discretely ask a few questions and hear that the military's scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder.  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].";
+			otherwise if hp of doctor matt is -2:		[Dr Matt defeated]
 				say "When the military comes through, you are taken in by the army.  The situation at the military base is chaos, with little ability to understand or control the infection.  As such, you receive little scrutiny and your false identity is not questioned.  After you are discharged, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed but helps you in your new life.";
-			otherwise if hp of doctor matt is -3:			[Feat machine stolen]
+			otherwise if hp of doctor matt is -3:		[Feat machine stolen]
 				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life.";
 
 [ Edit this to have the correct Name as well]
