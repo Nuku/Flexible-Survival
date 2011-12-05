@@ -7,7 +7,7 @@ The description of trixie is "Look, it[apostrophe]s Trixie, the story fairy! She
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word: [magic word]." };
 
 To say magic word:
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[satisfied]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]";
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[satisfied]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]";
 	
 Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
@@ -174,12 +174,39 @@ Carry out reciting:
 			-- 38:
 				if the player's command matches "[number]":
 					now coleenspray is the number understood;
+			-- 39:
+				if the player's command matches "[number]":
+					now hp of doctor mouse is the number understood;
+			-- 40:
+				if the player's command matches "[number]":
+					now coonstatus is the number understood;
+			-- 41:
+				if the player's command matches "[number]":
+					now featunlock is the number understood;
 	now the score is -9999;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'all done!'";
 	wait for any key;
 	repeat with counter running from lev + 1 to level of player:
 		if the remainder after dividing counter by 6 is 0:
 			funfeatget;
+	if hospquest is 3, now hospquest is 2;
+	now progress of Doctor Mouse is turns;
+	if hospquest is 8, now Dinosaur Nest is unresolved;
+	if hospquest is 8, now nerminepackage is 1;
+	if hospquest > 9, add "Rapid Healing" to feats of the player;
+	if hospquest > 13, add "Physical Booster" to the feats of the player;
+	if hp of doctor matt > 11 and hp of doctor matt < 100, add "Mental Booster" to the feats of the player;
+	if coonstatus is -1, now pink raccoon is tamed;
+	if coonstatus > 0, move Candy to Bunker;
+	if coonstatus is not 0:
+		repeat with y running from 1 to number of filled rows in table of random critters:    [puts Raccoon as lead monster...]
+			choose row y in table of random critters;
+			if name entry is "Raccoon":
+				now monster is y;
+				break;
+	now area entry is "Nowhere";
+	if hospquest > 1, now locked stairwell is unlocked;
+	if hospquest is 13, now locked stairwell is locked;
 
 
 
