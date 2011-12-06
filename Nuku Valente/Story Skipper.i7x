@@ -203,8 +203,8 @@ Carry out reciting:
 			choose row y in table of random critters;
 			if name entry is "Raccoon":
 				now monster is y;
+				now area entry is "Nowhere";
 				break;
-	now area entry is "Nowhere";
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13, now locked stairwell is locked;
 
