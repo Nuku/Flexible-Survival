@@ -153,6 +153,7 @@ hyenastabledeal is a number that varies.
 Instead of Resolving a Hyenahorsemeet:
 	say "As you wander down the halls of the hotel aimlessly, you hear a rather harsh burst of laughter in the distance, the unusual sound seeming rather out of place in the horses hotel. Deciding this bears further investigation, you carefully proceed in the direction you heard the sound coming from, coming at last to a small conference room which appears to be occupied. Peeking inside, you see a rather surreal sight, as you find several of those hyenas who are everywhere out on the streets, sitting down and talking rather animatedly with a couple of horsemen that appear to be rather more intelligent than the rest, while a rather large bull like man wearing a suit top, and with polished horns, leans back and listens with unconcealed amusement. You are too far away to catch more than a few snippets of their strange conversation, though the words, 'Territory,' 'Agreements', and 'Recruitment.' Seem to come up often enough for you to pick them up from even this far away. Realizing that several of the hyena gang members are meeting with the horses, [if hyg < 3]you find yourself shuddering as you realize all the ways this could be dangerous, especially given what appears to be the topic of the conversation. Feeling very disturbed,[otherwise if matriarchowned is 1]you take note of the members in the room and how they are performing for you.  You are a little displeased that they would enter such important negotiations without informing their matriarch, but if they are successful, all will be forgiven.  Deciding not to upset the talks with your sudden arrival,[otherwise if matriarchdefeated is 2]you find yourself shuddering when you realize that several gang bitches like yourself could be given over to the stables as part of the deal.  While part of you resists being separated from the pack, another part of you wants to give in and be used by the strong horses.  Not wanting to be seen and have the decision taken away from you,[otherwise]you are torn between your loyalties to the hyenas, a bond that urges obedience, and the thought of how dangerous such a pact of cooperation could be.  Unable to reconcile your conflicted loyalties,[end if] you carefully slip away from the door and back out into the hotel proper, before anyone can notice you there listening.";
 	now hyenastabledeal is 1;
+	enable the Stables;
 	Now Hyenahorsemeet is resolved;
 
 Section 9-  Waitingcustomer
@@ -202,17 +203,4 @@ Instead of Resolving a Horsegarden:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 Stable Related Events ends here.
-
-

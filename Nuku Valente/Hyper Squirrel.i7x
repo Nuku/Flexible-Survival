@@ -37,18 +37,18 @@ Instead of resolving a wild squirrels:
 	say "The other squirrel approaches from the front. She reaches for your [skin of player] [if breast size of the player is greater than 0][breast size desc of player][otherwise]flat[end if] chest and rubs slowly as she presses slowly to your front, her stiff erection rubbing agaisnt your belly as she guides you to a large white furred breast. You are soon nursing at her, filling your belly with the intoxicating and warming fluids she can offer. Part of you wonders how Snow got away from these two at all as you feel your will to do so crumbling with time, your body arroused as never before even as she pulls you from her teat and pushes her cock to your lips, slowly easing the thick pink length into your mouth and rocking slowly against you.";
 	decrease the humanity of the player by 5;
 	if the humanity of the player is less than 10:
- 		now the bodyname of the player is "squirrel girl";
+		now the bodyname of the player is "squirrel";
 		end the game saying "You lose your mind to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take a turn with each, filling their wet and aching cunts with your pink shaft and petting thier long bushy tails before you all rise, satisfied, and hunt the city together.";
 	otherwise:
-		now bodyname of player is "squirrel girl";
-		now skinname of player is "squirrel girl";
+		now bodyname of player is "squirrel";
+		now skinname of player is "squirrel";
 		now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws.";
 		now skin of player is "white furred";
-		now tailname of player is "squirrel Girl";
+		now tailname of player is "squirrel";
 		now tail of player is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 		now face of player is "set of two long white squirrel ears twitching above your head, a long rodent snout with bucked teeth jutting out of your";
-		now facename of player is "squirrel Girl";
-		now cockname of player is "Squirrel";
+		now facename of player is "squirrel";
+		now cockname of player is "squirrel";
 		now cock of player is "bright pink";
 		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled, moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.";
 	now wild squirrels is resolved;
@@ -86,16 +86,16 @@ To squirrelfuck:
 	let lust be 0;
 	let oversized be 0;
 	let response1 be "";
-	if skinname of player is "squirrel girl" and squirrelspot is 0:
+	if skinname of player is "squirrel" and squirrelspot is 0:
 		now squirrelspot is 1;
 		say "Snow looks at you with some shock a moment before she grabs at your thick white fur, 'Oh, you ran into them!' she exclaims, 'And you got away, and you're sexy!' She stops talking then, shuddering and growing painfully hard. She begins to pant, almost hyperventilating as she shoves you up against a wall and kisses you fiercely for a moment, robbing you of breath. Finally, she draws back, swallowing heavily, 'I.. am so sorry. You just... smell like them. God, I... I almost didn... stayed with them. It was hard, ok?' She smiles gently, 'I[apostrophe]m glad you got away.'";
-	if squirrelsister is greater than 0 and facename of player is not "squirrel Girl":
+	if squirrelsister is greater than 0 and facename of player is not "squirrel":
 		say "'Oh your ears!' she exclaims, approaching and cooing at you. She snuggles firmly, then leans in to kiss, pressing lips tightly for a moment before you feel her sharp teeth sinking into your lip. Brief pain flares before her infection spreads to you rapidly, regaining your squirrel ears.";
 		now face of player is "set of two long white squirrel ears twitching above your head, looking odd compared to your normal";
-		now facename of player is "squirrel Girl";
-	if squirrelsister is greater than 1 and tailname of player is not "squirrel Girl":
+		now facename of player is "squirrel";
+	if squirrelsister is greater than 1 and tailname of player is not "squirrel":
 		say "Snow frowns as she notices your lack of squirrel tail. She grabs you suddenly and hauls you across your lap. Without word or warning, she slaps your bottom firmly, and begins to spank you on the spot. Her stinging blows make your ass warm and red even as it begins to change, slowly regaining that lost squirrel tail. When it is completely restored, she waves a finger at you, 'And don[apostrophe]t you go losing it again.'";
-		now tailname of player is "squirrel Girl";
+		now tailname of player is "squirrel";
 		now tail of player is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 	say "Snow gives a bright giggle as you advance on her and she grabs at your right hand, drawing you tight to her curvy front. She grinds against you, the lump in her pants growing firm as she bites at an ear, 'Want to play? I am in the mood!' ";
 	if a random number from 1 to 2 is 1: [ tries to use her cock]
@@ -126,7 +126,7 @@ To squirrelfuck:
 				follow cock descr rule;
 				say "As pleasure radiates from your groin, she looks up into your eyes, smiling around your [descr] shaft as it swells slowly against her lustful attentions, pressing all the more firmly against you. With a wet pop, she draws free, flicking tongue over the tip one last time. 'See, already getting better,' she says encouragingly as she strokes in long lazy motions over your excited flesh, other hand moving to rub at your [skin of player] balls, caressing the [ball size] orbs gently as they begin to tingle and grow as well. The pleasure of it is too much, and you explode in thick strands of fertile spunk, painting Snow across her snout. She yelps out a laugh before sealing her lips around that bulging opening, swallowing the rest down eagerly before letting your satisfied member settle down. With a final nuzzle, she rises up, 'You get used to that bad boy, and we can continue later.'";
 				increase cock width of player by 2;
-				now cockname of player is "Squirrel";
+				now cockname of player is "squirrel";
 				now cock of player is "bright pink";
 				now wild squirrels is not resolved;
 			otherwise:
@@ -138,11 +138,11 @@ After resolving a Hyper Squirrel Girl, try looking;
 
 Instead of Resolving a Hyper Squirrel Girl:
 	if hsrp is 0:
-		say "As you wander around, you get the feeling that you’re being watched. Catching a few brief glances of red fur, you realize your pursuer is playing with you. Growing tired of this, you sit down, and wait. A few minutes pass, when you hear a giggle to you left. You whip your head around, and there stands a squirrel girl, wearing the tattered remains of a buttoned shirt, buttons long gone. Squirrel herm, you correct yourself, as you notice the large bulge in her pants. Before you can call out to her, she takes off – you have a feeling she’ll be back.";
+		say "As you wander around, you get the feeling that you're being watched. Catching a few brief glances of red fur, you realize your pursuer is playing with you. Growing tired of this, you sit down, and wait. A few minutes pass, when you hear a giggle to you left. You whip your head around, and there stands a squirrel girl, wearing the tattered remains of a buttoned shirt, buttons long gone. Squirrel herm, you correct yourself, as you notice the large bulge in her pants. Before you can call out to her, she takes off – you have a feeling she'll be back.";
 		increase hsrp by 1;
 		stop the action;
 	if hsrp is 1:
-		say "You once again feel someone’s eyes on you, probably that squirrel herm again. Attempting to catch her off guard, you bolt to the nearest building, trying catch her before she runs again.";
+		say "You once again feel someone's eyes on you, probably that squirrel herm again. Attempting to catch her off guard, you bolt to the nearest building, trying catch her before she runs again.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
@@ -158,7 +158,7 @@ Instead of Resolving a Hyper Squirrel Girl:
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll is greater than 15:
-			say "You find a good spot to hide, and as she tries to locate you, she walks right past your hiding spot. You dive at her, pinning her to the ground... where she giggles again. 'That was fun! It’s been far too long since someone’s played with me.' Before you can ask her what she means, in the blink of an eye, she’s out of your grasp, in front of you.[line break][line break]You get up, in a sitting position, and ask how she became a squirrel. 'Well,' she begins, 'I was on my way to classes, when two squirrel herms that looked kinda like I do now appeared... Anyway, one pinned me down, while the other forced me to suck her off...' Her eyes glaze over as her erection, ever present, seems to grow another inch, forcing her pants ever-tighter. She rubs you with her breasts, arousal showing on your own parts.";
+			say "You find a good spot to hide, and as she tries to locate you, she walks right past your hiding spot. You dive at her, pinning her to the ground... where she giggles again. 'That was fun! It's been far too long since someone's played with me.' Before you can ask her what she means, in the blink of an eye, she's out of your grasp, in front of you.[line break][line break]You get up, in a sitting position, and ask how she became a squirrel. 'Well,' she begins, 'I was on my way to classes, when two squirrel herms that looked kinda like I do now appeared... Anyway, one pinned me down, while the other forced me to suck her off...' Her eyes glaze over as her erection, ever present, seems to grow another inch, forcing her pants ever-tighter. She rubs you with her breasts, arousal showing on your own parts.";
 			increase libido of player by 10;
 			if libido of player is less than 50:
 				say "'You are cute and all', she says, sighing, 'But I get the feeling you wouldn[apostrophe]t keep up with me. Learn to be half as hungry as I am and we can talk, ok?' She rises up and leans over, kissing your forehead before she departs with a wink.";
@@ -198,7 +198,7 @@ squirrel Den is a room. It is fasttravel. It is private.
 
 The description of squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.";
 Snow is a person.
-The description of Snow is "This sexual beauty is about six feet, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you’ve seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break][bold type]Snow loves messing with weapons. Type upgrade (weapon) and she'll give it a working over.[roman type]";
+The description of Snow is "This sexual beauty is about six feet, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break][bold type]Snow loves messing with weapons. Type upgrade (weapon) and she'll give it a working over.[roman type]";
 Snow is in squirrel Den.
 The conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" };
 A person can be a smither.
