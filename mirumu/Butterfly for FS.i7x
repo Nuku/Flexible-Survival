@@ -26,10 +26,9 @@ ButterflyRevenge is a truth state that varies. ButterflyRevenge is usually False
 ButterflyProcreated is a truth state that varies; ButterflyProcreated is usually False;
 ButterflyPantiesFound is a truth state that varies; ButterflyPantiesFound is usually False;
 ButterflyTummy is a text that varies. ButterflyTummy is usually "";
-ButterflyRow is a number that varies.
 ButterflyEncounters is a number that varies. ButterflyEncounters is usually 0;
 ButterflyHasNegligee is a truth state that varies. ButterflyHasNegligee is usually True;
-ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can[apostrophe]t help but notice the lack of undergarments through it[apostrophe]s sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap.[otherwise]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap.[end if]";
+ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can[apostrophe]t help but notice the lack of undergarments through it[apostrophe]s sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap. [otherwise]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap.[end if]";
 ButterflyBaby is a person.
 ButterflyBaby has a number called Gestation.
 
@@ -711,7 +710,6 @@ to say butterfly grove scene:
 		if "Sterile" is listed in feats of player:
 			now player_sterile is True;
 		if "pristine negligee" is listed in invent of player:
-			[choose row ButterflyRow from the table of random critters;]
 			say "You have an item she might like. Do you want to give it to her?";
 			if the player consents:
 				now player_returned_negligee is True;
@@ -911,7 +909,89 @@ to say lingerie store scene:
 instead of smelling lingerie store:
 	say "The store has a somewhat musty smell as the air conditioning hasn[apostrophe]t been turned on for some time. The product however smells fresh and newly manufactured.";
 
-Section 9 - Debugging - Not for release
+Section 9 - Trixie support
+
+bmagic is an indexed text that varies.
+bcupsize is an indexed text that varies.
+
+to say butterflymagic:
+	let bbdesc be indexed text;
+	now bbdesc is "[ButterflyBreastDesc]";
+	let bcupindex be the number of characters in bbdesc minus 4;
+	now bcupsize is character number bcupindex in bbdesc;
+	now bmagic is "000000X";
+	if ButterflyLove is True:
+		replace character number 1 in bmagic with "1";
+	if ButterflyRevenge is True:
+		replace character number 2 in bmagic with "1";
+	if ButterflyProcreated is True:
+		replace character number 3 in bmagic with "1";
+	if ButterflyAttire matches the regular expression "She is wearing a long-sleeved .*":
+		replace character number 4 in bmagic with "2";
+	otherwise if ButterflyAttire matches the regular expression "She is completely naked .*":
+		replace character number 4 in bmagic with "3";
+	otherwise:
+		replace character number 4 in bmagic with "1";
+	replace character number 5 in bmagic with "[ButterflyRaped]";
+	replace character number 6 in bmagic with "[Gestation of ButterflyBaby]";
+	replace character number 7 in bmagic with "[bcupsize]";
+	say "[bmagic]";
+	
+To recite butterflymagic(x - text):
+	now bmagic is "[x in upper case]";
+	now ButterflyForeplay is False;
+	now ButterflyPregnant is False;
+	now ButterflyBreastDesc is "cute and buoyant B-cup";
+	now ButterflyNegligeeTorn is False;
+	now ButterflyLove is False;
+	now ButterflyRevenge is False;
+	now ButterflyProcreated is False;
+	now ButterflyHasNegligee is True;
+	now butterfly grove is not known;
+	now lingerie store is not known;
+	if character number 1 in bmagic is "1":
+		now ButterflyLove is True;
+		now butterfly grove is known;
+	if character number 2 in bmagic is "1":
+		now ButterflyRevenge is True;
+	if character number 3 in bmagic is "1":
+		now ButterflyProcreated is True;
+		now butterfly grove is known;
+	if character number 4 in bmagic is "1":
+		now ButterflyAttire is "She is wearing a white negligee, but you can[apostrophe]t help but notice the lack of undergarments through it[apostrophe]s sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap. [otherwise]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap.[end if]";
+		now ButterflyHasNegligee is True;
+	otherwise if character number 4 in bmagic is "2":
+		now ButterflyAttire is "She is wearing a long-sleeved, strapless, skin-tight black leather top with a split down the middle reaching to her navel. The split is pulled together by a zig-zag of lacing as the inner-side of each [ButterflyBreastDesc] breast bulges out around the strands. Her rigid nipples deform the otherwise smooth surface of the leather. Colorful wings extend through sizable openings at the back allowing them complete freedom. A tie around her waist dangles dozens of strips of black leather down below her crotch in the style of a grass skirt, but the gaps in coverage let you see she[apostrophe]s completely bare underneath. Her stripy yellow and black abdomen pokes out through the strands at the back. She sports a pair of shiny black PVC stockings up to her thighs and a svelte pair of black high-heeled leather boots on her feet.";
+		now ButterflyHasNegligee is False;
+		add "damaged negligee" to the invent of the player;
+		now lingerie store is known;
+	otherwise if character number 4 in bmagic is "3":
+		now ButterflyAttire is "She is completely naked and makes no attempt to hide any part of her body from the golden tuft of hair above her pubes to the stiff [one of]ruby[or]scarlet[at random] red nipples decorating her jiggling [ButterflyBreastDesc] breasts like small cherries.";
+		now ButterflyHasNegligee is False;
+		add "pristine negligee" to the invent of the player;
+		now lingerie store is known;
+	change the text of the player's command to character number 5 in bmagic;
+	if the player's command matches "[number]":
+		now ButterflyRaped is the number understood;
+	change the text of the player's command to character number 6 in bmagic;
+	if the player's command matches "[number]":
+		now Gestation of ButterflyBaby is the number understood;
+		now ButterflyPregnant is True;
+		now butterfly grove is known;
+	if character number 7 in bmagic is "C":
+		now ButterflyBreastDesc is "full and firm C-cup";
+	otherwise if character number 7 in bmagic is "D":
+		now ButterflyBreastDesc is "plump and bouncy D-cup";
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Butterfly":
+			if the butterfly grove is known:
+				now area entry is "Unknown";
+			otherwise:
+				now area entry is "High";
+	follow the ButterflyTummyDesc rule;
+
+Section 10 - Debugging - Not for release
 
 ButterflyDebug is an action applying to nothing.
 Understand "bdebug" as ButterflyDebug.
@@ -1017,11 +1097,26 @@ carry out resetbutterfly:
 	now ButterflyRevenge is False;
 	now ButterflyProcreated is False;
 	now ButterflyTummy is "";
-	now ButterflyRow is 0; 
-	now ButterflyAttire is "She is wearing a white negligee, but you can[apostrophe]t help but notice the lack of undergarments through it[apostrophe]s sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap.[otherwise]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap.[end if]";
+	now ButterflyAttire is "She is wearing a white negligee, but you can[apostrophe]t help but notice the lack of undergarments through it[apostrophe]s sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles as her wings flap. [otherwise]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly as her wings flap.[end if]";
 	now ButterflyHasNegligee is True;
 	now ButterflyEncounters is 0;
 	now Gestation of ButterflyBaby is 0;
+
+bsave is an action applying to nothing.
+understand "bsave" as bsave.
+
+carry out bsave:
+	say "[butterflymagic]";
+
+brestoring is an action applying to one topic.
+understand "brestore [text]" as brestoring.
+
+carry out brestoring:
+	let x be indexed text;
+	let x be the topic understood;
+	change the text of the player's command to x;
+	recite butterflymagic "[the player's command]";
+
 
 [ Edit this to have the correct Name as wall]
 Butterfly for FS ends here.
