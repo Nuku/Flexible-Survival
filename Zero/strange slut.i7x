@@ -329,6 +329,10 @@ When Play begins:
 	now loot entry is "Slut tag";			[ Loot monster drops, ]
 	now lootchance entry is 45;		[ Chance of loot dropping 0-100 ]
 	
+Table of random critters (continued)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+
 When Play begins:
 	add "Female Slut" to infections of girl;
 	add "Female Slut" to infections of furry;
