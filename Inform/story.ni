@@ -810,6 +810,8 @@ Include Albino Mouse by Stripes.
 Include Assorted Events by Stripes.
 Include Cat Ninjas by Stripes.
 Include Story Skipper by Nuku Valente.
+Include items by zero.
+Include Strange Slut by Zero.
 
 understand the command "feed" as something new.
 
