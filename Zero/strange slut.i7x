@@ -382,6 +382,7 @@ When Play begins:
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
 --	--	--	--	--	--	--	--
+--	--	--	--	--	--	--	--
 
 When Play begins:
 Choose a blank row from Table of infection heat;
