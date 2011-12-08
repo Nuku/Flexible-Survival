@@ -9,10 +9,10 @@ slutty is a number that varies. slutty is usually 0.
 slutno is a number that varies. slutno is usually 0.
 
 to say slutdesc:
-   say "Walking down the street, you find yourself staring at a male[one of] black [or] brown [or] multi-colored[or] white[or] red[or] pink[or] yellow[or] light blue[at random]furry [randomdesc] whith a[one of] black spiked collar [or] black studded white collar[at random]. Unfortunately, it's staring back at you! "   
+   say "Walking down the street, you find yourself staring at a naked male[one of] black [or] brown [or] multi-colored[or] white[or] red[or] pink[or] yellow[or] light blue[at random]furry [randomdesc] whith a[one of] black spiked collar [or] black studded white collar[at random]. Unfortunately, it's staring back at you! "   
 
 to say slutydesc:
-   say "Walking down the street, you find yourself staring at a male[one of] black [or] brown [or] multi-colored[or] white[or] red[or] pink[or] yellow[or] light blue[at random]furry [randomdesc] whith a[one of] black spiked collar [or] black studded white collar[at random]. Unfortunately, it's staring back at you! "   
+   say "Walking down the street, you find yourself staring at a naked female[one of] black [or] brown [or] multi-colored[or] white[or] red[or] pink[or] yellow[or] light blue[at random]furry [randomdesc] whith a[one of] black spiked collar [or] black studded white collar[at random]. Unfortunately, it's staring back at you! "   
 
 to say randomdesc: 
 	let T be a random number between 1 and 15;
@@ -287,12 +287,12 @@ When Play begins:
 	now defeated entry is "[one of] [slutdef][or][slutydef][at random]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[slutvictory]";
 	now desc entry is "[slutdesc]";
-	now face entry is "is that of a wolf's with a pair of pointed wolf ears covered in [skin of player] ";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "is that of a wolf's with a pair of pointed wolf ears covered in [skin of player], a slut's collar has also formed around your neck ";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "that of a sexy wolf's and covered in [skin of player]";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "short, [one of]velverty, [or]soft, [or]shiny, [at random]light black fur";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long wolf's tail.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "constently dribbing canine";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it stretches out into a wolf's muzzle, two pointed wolf's ears sprouting from the top of your head a second later"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "it stretches out into a wolf's muzzle, two pointed wolf's ears sprouting from the top of your head a second later, a sluts collar forming around your neck"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you rapidly loses fat your body becoming that of a sexy wolf"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft and shiny black fur covers your body. "; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a long wolfs tail grows and begins waggling happily."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
@@ -334,12 +334,12 @@ When Play begins:
 	now defeated entry is "[one of] [slutdef][or][slutydef][at random]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[slutyvictory]";
 	now desc entry is "[slutydesc]";
-        now face entry is "is that a rabbits, compleate with a pair of long ears and twitching nose";[ Face description, format as the text "Your have a (your text) face."] 
+        now face entry is "is that a rabbits, compleate with a pair of long ears and twitching nose, a slut's collar has also formed around your neck";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "that of a sexy rabbits and covered in [skin of player]";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "short, [one of]velverty, [or]soft, [or]shiny, [at random]white fur";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a short and fluffy rabbit tail";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "constently dribbing bunny";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it stretches out into a rabbits muzzle, two long rabbit ears sprouting from the top of your head a second later"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "it stretches out into a rabbits muzzle, two long rabbit ears sprouting from the top of your head a second later, a sluts collar forming around your neck"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you rapidly loses fat your body becoming that of a sexy bunny"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft and silky, white fur covers your body. "; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a soft and fluffy rabbits tail sprouts."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
