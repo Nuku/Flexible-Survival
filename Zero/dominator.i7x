@@ -231,7 +231,7 @@ When Play begins:
 	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 100;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Dominator Chain";			[ Loot monster drops, ]
-	now lootchance entry is 100;		[ Chance of loot dropping 0-100 ]
+	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
 	
 
 [ +++++ ]
