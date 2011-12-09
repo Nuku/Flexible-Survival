@@ -237,7 +237,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
 
 When Play begins:
-	add ",Dominator" to infections of girl;
+	add ",Dominator" to infections of guy;
 	add ",Dominator" to infections of furry;
 	Choose a blank row from Table of random critters;
 	now name entry is ",Dominator";  [husky]
