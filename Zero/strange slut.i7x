@@ -180,14 +180,14 @@ to say slutdef:
 		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut, but the prize isn't up yet.'  With that, the [slutname] laughs and falls unconscious.";
 	otherwise:	
 		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut.  Too bad they already infected you.'  With that, the [slutname] laughs and falls unconscious.";
-	infect "Male Slut";
+		infect "Male Slut";
 		
 to say slutydef:
 	if slutprotection is greater than 0:
 		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut, but the prize isn't up yet.'  With that, the [slutname] laughs and falls unconscious.";
 	otherwise:	
 		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut.  Too bad they already infected you.'  With that, the [slutname] laughs and falls unconscious.";
-	infect "Female Slut";
+		infect "Female Slut";
 
 
 Section 2 - Monster Insertion
