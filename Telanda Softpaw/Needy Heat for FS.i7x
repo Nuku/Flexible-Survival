@@ -31,9 +31,10 @@ to say huskyheatend:
 	decrease Cunt length of player by 2;
 	
 to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting events that can happen if she doesn't get any satisfaction ]
-	if libido of player is less than 96, increase libido of player by 5;
+	increase libido of player by 5;
+	if libido of player > 100, now libido of player is 100;
 	if (libido of player is greater than 90) and (location of player is fasttravel ) and (slutfucked is greater than 8):
-		say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs.  Unable to control your lust you strike out in the direction of and immediately upon seeing the infected monster that you scented drop onto you immediately submit, offering yourself freely.";
+		say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs.  Unable to control your lust, you strike out in the direction of the infected monster.";
 		now slutfucked is 0;
 		let hmonlist be a list of numbers;
 		repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear "outside" ] 
@@ -46,6 +47,8 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 			now monster is Z;
 			break;
 		choose row monster from the table of random critters;
+		say "The enticing scent leads to a [name entry].  Immediately upon seeing the infected monster, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
+		wait for any key;
 		follow the cock descr rule;
 		follow the breast descr rule;
 		say "[victory entry]";
@@ -66,7 +69,7 @@ every turn (This is the check heat rule): [ May need to change this so that it o
 				now lastturn is turns;				
 				increase turns in heat by 1;
 				[She's vulnerable to heat, Time to calculate if she's actually Triggered or reverted.]
-				if  the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+				if the cockname of player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
 					choose a row with a infect name of (cockname of player) in Table of infection heat; 
 				else: [No specific Data, use Generic entry.]
 					choose a row 1 in Table of infection heat;

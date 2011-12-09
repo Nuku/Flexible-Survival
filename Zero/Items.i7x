@@ -4,9 +4,9 @@ Section 1 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"latex milk"	"strange as it sounds the milk of a latex fox."	1	latex milk
-"Slut tag"	"a small metal dogtag it has the word 'slut' ingraved into it."	1	Slut tag
-"Dominator Chain"	"a chain from around a Dominator's neck."	1	Dominator Chain
+"latex milk"	"It's as strange as it sounds - the milk of a latex fox."	1	latex milk
+"Slut tag"	"A small metal dog tag.  It has the word [']slut['] ingraved onto it."	1	Slut tag
+"Dominator Chain"	"A chain from around a Dominator's neck."	1	Dominator Chain
 
 the usedesc of Slut tag is "[Slut tag use]";
 
@@ -21,34 +21,36 @@ Section 2 - Use of Items
 
 to say Slut tag use:
 	if facename is "Male Slut":
-		say "you raise the tag up your collar, and giggle slightly as they meld together";
-		say "[one of] [Tager1] [or] [Tager2][at random]";
+		say "You raise the tag up your collar and giggle slightly as they meld together.";
 	otherwise if facename is "Female Slut":
-		say "you raise the tag up your collar, and giggle slightly as they meld together";
-		say "[one of] [Tager1] [or] [Tager2][at random]";
+		say "You raise the tag up your collar and giggle slightly as they meld together.";
 	otherwise:
-		say "as you rub the strange dogtag it begins melting into your hand!";
-		say "[one of] [Tager1] [or] [Tager2][at random]";
-
-to say Tager1:
-	infect "Male Slut";
-	
-to say Tager2:
-	infect "Female Slut";	
-
-to say Tager3:
-	infect "Male Dominator";
+		say "As you rub the strange dog tag, it begins melting into your hand!";
+	if a random chance of 1 in 2 succeeds:
+		infect "Male Slut";
+	otherwise:
+		infect "Female Slut";
 		
 
 to say Dominator Chain use:
 	if facename is "Male Dominator":
-		say "you raise the chain up to your collar, grinning slightly as they meld together";
-		say "[Tager3]";
+		say "You raise the chain up to your collar, grinning slightly as they meld together.";
 	otherwise:
-		say "the chain animates as you hold it skaing its way up your body and melting into your neck!";
-		say "[Tager3]";
+		say "The chain animates as you hold it, snaking its way up your body and melting into your neck!";
+	infect "Male Dominator";
 
-Section 3 - comands
+to say Tager1:
+	infect "Male Slut";
+
+to say Tager2:
+	infect "Female Slut";
+
+to say Tager3:
+	infect "Male Dominator";
+
+
+
+Section 3 - commands
 
 Anti-slut is an action applying to nothing.
 
@@ -60,13 +62,13 @@ Understand "ask for help" as Anti-slut.
 Understand "ask tanuki for help" as Anti-slut.
 
 check Anti-slut:
-	if the player is not in Shrine, say " your asking at the wrong place, mayby you should try a place of worship?" instead;
+	if the player is not in Shrine, say "You're asking at the wrong place.  Maybe you should try a place of worship?" instead;
 
 carry out Anti-Anti-slut:
 	if slutprotection is 0:
-		say "i can temperally protect you from the sluts that have resently appeaered, well the infecting regarless of it you win part at least, unforchenitly this will not last forever, just intill zero updates it";
+		say "'I can temporally protect you from the unnatural attraction of the sluts that have recently appeared, but you will still have to defend yourself.  That is, until Zero completes his work,' the voice adds cryptically.";
 		if the player consents:
-			say "you are now protected when lossing to sluts";
+			say "You are now protected when facing the sluts.";
 	now slutprotection is 1;
 
 Anti-Anti-slut is an action applying to nothing.
@@ -79,15 +81,14 @@ Understand "ask to remove protection" as Anti-Anti-slut.
 Understand "ask tanuki to remove protection" as Anti-Anti-slut.
 
 check Anti-Anti-slut:
-	if the player is not in Shrine, say " do you really want to do this? but your asking at the wrong place, mayby you should try a place of worship?" instead;
+	if the player is not in Shrine, say "Do you really want to do this?  But you're asking at the wrong place, maybe you should try at place of worship?" instead;
 
 carry out Anti-Anti-slut:
 	if slutprotection is 1:
-		say "i will remove your protection if you so wish";
+		say "I will remove your protection if you so wish.";
 		if the player consents:
-			say "you are no longer protected when lossing to sluts";
+			say "You are no longer protected when facing the sluts.";
 	now slutprotection is 0;
  
- [strange sluts have appeared, and something weird happens when you beat them, mayby you should "ask for help" ]
- 
+
 Items ends here.
