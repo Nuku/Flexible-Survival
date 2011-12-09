@@ -35,10 +35,20 @@ to say Slut tag use:
 to say Dominator Chain use:
 	if facename is "Male Dominator":
 		say "You raise the chain up to your collar, grinning slightly as they meld together.";
-		infect "Male Dominator";
 	otherwise:
 		say "The chain animates as you hold it, snaking its way up your body and melting into your neck!";
-		infect "Male Dominator";
+	infect "Male Dominator";
+
+to say Tager1:
+	infect "Male Slut";
+
+to say Tager2:
+	infect "Female Slut";
+
+to say Tager3:
+	infect "Male Dominator";
+
+
 
 Section 3 - commands
 
