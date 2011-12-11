@@ -2533,6 +2533,10 @@ To challenge:
 	now monsterhp is hp entry;
 	say "You run into a [name entry].[line break][desc entry].";
 	now lost is 0;
+	if combat abort is 1:
+		now combat abort is 0;
+		rule succeeds;
+		stop the action;
 	wait for any key;
 	change the current menu to table of Basic Combat;
 	carry out the displaying activity;
