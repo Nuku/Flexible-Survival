@@ -814,6 +814,7 @@ Include items by zero.
 Include Strange Slut by Zero.
 Include Dominator by Zero.
 
+
 understand the command "feed" as something new.
 
 
@@ -895,7 +896,24 @@ carry out hunting:
 		if there is no area entry, next;
 		if area entry matches the text battleground:
 			if name entry matches the text topic understood, case insensitively:
+				say "You are almost certain you saw some [name entry] tracks...";
+				now found is 1;
 				add x to q;
+				add x to q;
+				add x to q;
+				add x to q;
+				if "Curious" is listed in feats of player:
+					add x to q;
+				if "Expert Hunter" is listed in feats of player:
+					add x to q;
+					add x to q;
+				if "Master Baiter" is listed in feats of player:
+					add x to q;
+					add x to q;
+					add x to q;
+					add x to q;
+					add x to q;
+					add x to q;
 			otherwise:
 				if there is a lev entry:
 					if lev entry is greater than level of player plus levelwindow, next;
@@ -907,25 +925,6 @@ carry out hunting:
 					otherwise:
 						next;
 				add x to q;
-			if name entry matches the text topic understood, case insensitively:
-				say "You are almost certain you saw some [name entry] tracks...";
-				now found is 1;
-				add x to q;
-				add x to q;
-				add x to q;
-				if "Expert Hunter" is listed in feats of player:
-					add x to q;
-					add x to q;
-					add x to q;
-					add x to q;
-				if "Master Baiter" is listed in feats of player:
-					add x to q;
-					add x to q;
-					add x to q;
-					add x to q;
-					add x to q;
-					add x to q;
-					add x to q;
 	if the number of entries in q is not 0 and found is 1:
 		sort Q in random order;
 		repeat with Z running through q:
@@ -938,6 +937,9 @@ carry out hunting:
 		choose row monster from the table of random critters;
 		now monsterhp is hp entry;
 		challenge;
+		if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+			say "As you are trying to recover from your last encounter, another roving creature finds you.";
+			Fight;
 		follow the turnpass rule;
 	otherwise:
 		now found is 0;
@@ -955,17 +957,23 @@ carry out hunting:
 					move the player to z;
 					now z is known;
 					now dice is a random number from 1 to 20;
-					if "Curious" is listed in feats of player and dice is greater than 12:
+					if "Bad Luck" is listed in feats of player, increase dice by 1;
+					if "Curious" is listed in feats of player, increase dice by 2;
+					if dice is greater than 14:
 						Fight;
-					otherwise if dice is greater than 14:
-						Fight;
+						if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+							say "As you are trying to recover from your last encounter, another roving creature finds you.";
+							Fight;
 				otherwise:
 					say "Despite your searches, you fail to find it.[line break]";
 					now dice is a random number from 1 to 20;
-					if "Curious" is listed in feats of player and dice is greater than 12:
+					if "Bad Luck" is listed in feats of player, increase dice by 1;
+					if "Curious" is listed in feats of player, increase dice by 2;
+					if dice is greater than 14:
 						Fight;
-					otherwise if dice is greater than 14:
-						Fight;
+						if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+							say "As you are trying to recover from your last encounter, another roving creature finds you.";
+							Fight;
 				break;
 		if found is 0:
 			repeat with z running through situations:
@@ -982,25 +990,34 @@ carry out hunting:
 						say "You manage to find your way to [z]!";
 						try resolving z;
 						now dice is a random number from 1 to 20;
-						if "Curious" is listed in feats of player and dice is greater than 12:
+						if "Bad Luck" is listed in feats of player, increase dice by 1;
+						if "Curious" is listed in feats of player, increase dice by 2;
+						if dice is greater than 14:
 							Fight;
-						otherwise if dice is greater than 14:
-							Fight;
+							if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+								say "As you are trying to recover from your last encounter, another roving creature finds you.";
+								Fight;
 					otherwise:
 						say "Despite your searches, you fail to find it.[line break]";
 						now dice is a random number from 1 to 20;
-						if "Curious" is listed in feats of player and dice is greater than 12:
+						if "Bad Luck" is listed in feats of player, increase dice by 1;
+						if "Curious" is listed in feats of player, increase dice by 2;
+						if dice is greater than 14:
 							Fight;
-						otherwise if dice is greater than 14:
-							Fight;
+							if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+								say "As you are trying to recover from your last encounter, another roving creature finds you.";
+								Fight;
 					break;
 		if found is 0:
 			say "[bold type]You don't think what you[apostrophe]re looking for can be found here...[roman type]";
 			let dice be a random number from 1 to 20;
-			if "Curious" is listed in feats of player and dice is greater than 12:
+			if "Bad Luck" is listed in feats of player, increase dice by 1;
+			if "Curious" is listed in feats of player, increase dice by 2;
+			if dice is greater than 14:
 				Fight;
-			otherwise if dice is greater than 14:
-				Fight;
+				if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+					say "As you are trying to recover from your last encounter, another roving creature finds you.";
+					Fight;
 		follow the turnpass rule;
 
 to ban menu:
@@ -1123,6 +1140,9 @@ carry out navigating:
 	if a random number from 1 to 20 is less than 10 minus bonus:
 		if there is a area of Battleground in the table of random critters:
 			Fight;
+			if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+				say "As you are trying to recover from your last encounter, another roving creature finds you.";
+				Fight;
 	otherwise:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;
@@ -2181,6 +2201,7 @@ To lose:
 	infect;
 	if hp of player is less than 1, now hp of player is 1;
 	increase the XP of the player by lev entry divided by two;
+	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	decrease the score by 1;
 	decrease the morale of the player by 3;
 	decrease the menu depth by 1;
@@ -2219,6 +2240,7 @@ This is the submit rule:
 	let temp be the hp of the player;
 	Lose;
 	if "Submissive" is listed in feats of the player, increase the XP of the player by 2;
+	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 	wait for any key;
 	decrease the menu depth by 1;
@@ -2228,11 +2250,20 @@ combat abort is a number that varies.
 to say combat abort:
 	now combat abort is 1;
 
+speciesbonus is a number that varies.
+
 This is the player attack rule:
 	choose row monster from the table of random critters;
 	let the attack bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
+	if "Know Thyself" is listed in feats of player:
+		now speciesbonus is 0;
+		if bodyname of player is name entry, increase speciesbonus by a random number from 0 to 2;
+		if facename of player is name entry, increase speciesbonus by a random number from 0 to 1;
+		if cockname of player is name entry, increase libido of player by a random number from 0 to 1;
+		if speciesbonus > 2, now speciesbonus is 2;
+		increase combat bonus by speciesbonus;
 	if hardmode is true:
 		if the combat bonus is greater than 10:
 			now combat bonus is 10;
@@ -2336,6 +2367,7 @@ This is the player attack rule:
 				now ok is 0;
 		if ok is 1, say "[defeated entry] ";
 		increase the XP of the player by lev entry times two;
+		if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by (lev entry divided by 2);
 		if the player is not lonely:
 			increase the xp of the companion of the player by lev entry times two;
 			if "Ringmaster" is not listed in feats of player:
@@ -2626,11 +2658,13 @@ This is the explore rule:
 			try resolving L;
 			wait for any key;
 	if "Stealthy" is listed in feats of player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
+	if "Bad Luck" is listed in feats of player, increase bonus by 1;
 	if a random number from 1 to 20 is less than 10 plus bonus:
 		if there is a area of Battleground in the table of random critters:
 			now something is 1;
 			Fight;
-			if hardmode is true and a random chance of 1 in 10 succeeds:
+			if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
 	if something is 0, say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of the player].";
 	follow the turnpass rule;
@@ -2649,6 +2683,8 @@ carry out exploring:
 	let l be a random visible dangerous door;
 	if l is not nothing, now battleground is the marea of l;
 	follow the explore rule;
+
+restoration is a number that varies.
 
 Everyturn rules is a rulebook.
 
@@ -2682,6 +2718,45 @@ This is the turnpass rule:
 	if the remainder after dividing turns by 3 is 0:
 		if "Perky" is listed in feats of player:
 			increase morale of player by 1;
+		now restoration is 0;
+		if "Physical Booster" is listed in feats of player:
+			if Strength of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Strength of player by 1;
+				increase hunger of player by 6;
+				say "Your body strives to restore its lost might and rebuilds your muscles.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Strength increased by 1.[roman type][line break]";
+				now restoration is 1;
+			if Stamina of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Stamina of player by 1;
+				if remainder after dividing stamina of player by 2 is 0:
+					increase maxhp of player by level of player plus 1;
+				increase hunger of player by 6;
+				say "Your body strives to restore its lost hardiness and toughens your body.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Stamina increased by 1.[roman type][line break]";
+				now restoration is 1;
+			if Dexterity of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Dexterity of player by 1;
+				increase hunger of player by 6;
+				say "Your body strives to regain its lost agility and restores your flexibility.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Dexterity increased by 1.[roman type][line break]";
+				now restoration is 1;
+		if "Mental Booster" is listed in feats of player:
+			if Intelligence of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Intelligence of player by 1;
+				increase hunger of player by 3;
+				increase thirst of player by 3;
+				say "Your body strives to restore your mental functions.  You stomach churns and you sweat profusely from the effort of this process.  [bold type]Intelligence increased by 1.[roman type][line break]";
+				now restoration is 1;
+			if Charisma of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Charisma of player by 1;
+				increase hunger of player by 3;
+				increase thirst of player by 3;
+				now restoration is 1;
+				say "Your body strives to restore your natural charm and allure.  You stomach churns and you sweat profusely from the effort of this process.  [bold type]Charisma increased by 1.[roman type][line break]";
+				now restoration is 1;
+			if Perception of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Perception of player by 1;
+				increase hunger of player by 3;
+				increase thirst of player by 3;
+				say "Your body strives to restore your enhance perceptive abilities.  You stomach churns and you sweat profusely from the effort of this process.  [bold type]Perception increased by 1.[roman type][line break]";
+				now restoration is 1;
 		if hunger of player is greater than 90:
 			say "You will die if you don't eat soon.";
 		otherwise if hunger of player is greater than 50:
@@ -3352,9 +3427,13 @@ carry out scavenging:
 	if battleground is "", now battleground is "Outside";
 	let z be 7;
 	if "Stealthy" is listed in feats of player, decrease z by 2;
+	if "Bad Luck" is listed in feats of player, increase z by 1;
 	if a random number from 1 to 20 is less than z:
 		if there is a area of Battleground in the table of random critters:
 			Fight;
+			if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+				say "As you are trying to recover from your last encounter, another roving creature finds you.";
+				Fight;
 	follow turnpass rule;
 
 To Challenge (x - text):	
@@ -3773,7 +3852,7 @@ Instead of conversing the doctor matt:
 			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him.  I shall inform the military of these events, as well as the increased threat level at the hospital.  They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion.  He seems too intelligent to not have an exit strategy already formulated.'";
 		now hp of doctor matt is 12;
 	if hospquest is 13 and "Mental Booster" is not listed in feats of player:
-		say "     As thanks for your willingness to side with me over this impudent upstart mouse, I shall provide you with something I have been working on.  Trying to deal with the infected city can be mentally harrowing as well as physically harrowing.  It is easy to neglect the need to be intellectually able to deal with this crisis over the more obvious need for physical prowess.  As such, I have found a way to stimulate the mind, increasing one's reasoning abilities to make them better able to notice significant events, interpret that information and then relate it to others.'";
+		say "     As thanks for your willingness to side with me over this impudent upstart mouse, I shall provide you with something I have been working on.  Trying to deal with the infected city can be mentally harrowing as well as physically harrowing.  It is easy to neglect the need to be intellectually able to deal with this crisis over the more obvious need for physical prowess.  As such, I have found a way to stimulate the mind, increasing one's reasoning abilities to make them better able to notice significant events, interpret that information and then relate it to others.  This treatment will also strive to keep these mental faculties strong after mentally debilitating infections.'";
 		say "     The doctor injects you with the nanite adjustment.  At first you feel little, but as you start to consider what may be happening, you notice that you're interpreting stimuli faster and drawing conclusions about them more readily.  You don't suddenly know more information, but you can better process all that you have learned to make more out of it.  You also feel a little more confident in dealing with the world because of it.";
 		add "Mental Booster" to the feats of the player;
 		increase intelligence of player by 2;

@@ -84,6 +84,7 @@ instead of addfeating the fun feats:
 	if "One Way" is not listed in feats of player:
 		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits.";
 	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
+	addfeat "Bad Luck" with "You may end up in back-to-back fights occasionally.";
 	if "Cold Fish" is not listed in feats of player:
 		addfeat "Horny Bastard" with "You just can't get enough. Every few hours your libido raises all on its own.";
 	if "Horny Bastard" is not listed in feats of player:
@@ -125,7 +126,7 @@ instead of addfeating the basic feats:
 			if "Good Teacher" is listed in feats of player:
 				addfeat "Ringmaster" with "You will gain full xp while training your pets.";
 		if charisma of player > 11:
-			addfeat "Flash" with "Your skin/fur/scales will occasionally flash bright light, reducing your foes chance to hit.";
+			addfeat "Flash" with "Your skin/fur/scales will occasionally flash bright light, reducing your foe's chance to hit.";
 		if charisma of player > 13:
 			if "Flash" is listed in feats of player:
 				addfeat "Dazzle" with "Your flash can now sometimes bedazzle your enemy, making them lose their chance to retaliate.";
@@ -142,14 +143,16 @@ instead of addfeating the basic feats:
 	if intelligence of player is greater than 14:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% xp needed to level.";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
+	if intelligence of player is greater than 12 and ( bodyname of player is not "human" or facename of player is not "human" ):
+		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round.  Thingking with your other head gradually gets your infected loins more excited as well.  You gain more xp from these fights as well.";
 	if intelligence of player > 15 and level of player > 5:
 		addfeat "Weaponsmaster" with "Your experience and knowledge allow you to assess a weapon's worth and wield it better.";
 	addfeat "Wary Watcher" with "Always on guard, creatures won't gain first strike on you.";
 	if perception of player is greater than 14:
 		addfeat "Magpie Eyes" with "You love shining things. Especially shining things on the defeated bodies of your enemies. Increased odds of drops.";
-		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases from 4 X to 8 X.";
+		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases.";
 		if "Expert Hunter" is listed in feats of player:
-			addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature. Your proficiency doubles from 8X to 15X.";
+			addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature.";
 	if dexterity of player is greater than 14:
 		if "Stealthy" is listed in feats of player or "Wary Watcher" is listed in feats of player or perception of player > 14:
 			addfeat "Experienced Scout" with "You have a chance of avoiding a random fight altogether if you so wish it.";
