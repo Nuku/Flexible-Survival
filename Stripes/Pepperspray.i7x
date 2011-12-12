@@ -80,6 +80,7 @@ this is the peppersprayattack rule:
 				now ok is 0;
 		if ok is 1, say "[defeated entry] ";
 		increase the XP of the player by lev entry times two;
+		if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by (lev entry divided by 2);
 		if the player is not lonely:
 			increase the xp of the companion of the player by lev entry times two;
 			if "Ringmaster" is not listed in feats of player:
@@ -111,6 +112,13 @@ to say enhancedattack:
 	let the attack bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
+	if "Know Thyself" is listed in feats of player:
+		now speciesbonus is 0;
+		if bodyname of player is name entry, increase speciesbonus by a random number from 0 to 2;
+		if facename of player is name entry, increase speciesbonus by a random number from 0 to 1;
+		if cockname of player is name entry, increase libido of player by a random number from 0 to 1;
+		if speciesbonus > 2, now speciesbonus is 2;
+		increase combat bonus by speciesbonus;
 	if hardmode is true:
 		if the combat bonus is greater than 12:				[pepperspray increases hardmode bonus limit to +12]
 			now combat bonus is 12;
