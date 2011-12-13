@@ -644,10 +644,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 Include Shifting by Hellerhound.
 Include Qytat Shifters  by Hellerhound.
-Include Chocolate Lab by Stripes.
 Include Fucking by Nuku Valente.
 Include Needy Heat for FS by Telanda Softpaw.
 Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
+Include Chocolate Lab by Stripes.
 Include Yamato Dragon For FS by Kohryu.
 Include Yamato Dragoness For FS by Kohryu.
 Include Equine for FS by Nuku Valente.
@@ -809,6 +809,7 @@ Include Inventory Management Enhancements for FS by mirumu.
 Include Albino Mouse by Stripes.
 Include Assorted Events by Stripes.
 Include Cat Ninjas by Stripes.
+Include Reindeer by Stripes.
 Include Story Skipper by Nuku Valente.
 Include items by zero.
 Include Strange Slut by Zero.
@@ -3926,6 +3927,7 @@ name	desc	weight	object
 "Chocolate Milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
 "Vixen Milk"	"A thin milk with an alluring taste, like the silvery vixens it is from."	1	vixen milk
 
+
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".
 chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "soda".
 vixen milk is a grab object. It is a part of the player. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk".
@@ -3962,6 +3964,10 @@ Carry out milking:
 	otherwise if the bodyname of the player is "hermaphrodite dolphin":
 		say "Stroking your cetacean breasts, you manage to draw out a small sample of your thick milk.";
 		add "dolphin milk" to the invent of the player;
+	otherwise if the bodyname of the player is "Reindeer":
+		say "Stroking your caribou breasts, you manage to draw out a tasty sample of your egg-nog milk.";
+		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+			add "egg nog" to the invent of the player;
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
 		
