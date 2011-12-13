@@ -1,3 +1,4 @@
 d - non-folder found where author folders should be<br>
 Story.ni by Flexible Society Main File - title contains a full stop<br>
 Story.ni by Inform - title contains a full stop<br>
+Template For FS.i7x - non-folder found where author folders should be<br>
