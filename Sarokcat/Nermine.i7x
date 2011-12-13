@@ -320,161 +320,148 @@ carry out bargainhunting:
 		delete water bottle;
 		let Z be a random number between 1 and 20;
 		if Z is 1:
-			Say "You pull out a small urn of some sort, and look at it curiously, Nermine sighs behind you as she sees what you are holding, 'Is funeral urn, very old, and very bad luck, Nermine is not sure how it found its way into bargain bin again, but she will try to find a better place to put it this time.' Nermine says as she takes the small urn from your hands, and places it down on a shelf somewhere behind the counter.  'Nermine only hopes bad luck hasn[apostrophe]t rubbed off on you already, she will give you kiss for luck to make sure.' The Jackal says as she leans over the counter even further, her black muzzle brushing over your mouth even as you open it to respond.  Before you know it her tongue is exploring your mouth even as her muzzle rubs up against your face, in what is actually a surprisingly pleasant kiss. After a second, she pulls her tongue out of your mouth, leaving you standing there slightly stunned as she gives you another soft lick across the cheek. 'There that should counter any bad luck urn might have given you, let me know if you find the sneaky thing in bin again.' The sexy jackaless says with a wink as she returns to her normal place at the counter.  After a second you realize that you now don[apostrophe]t have anything to show for your hunt through the bargain bin, but at least you got a nice kiss for your efforts? That[apostrophe]s something of a bargain isn[apostrophe]t it?";
-			stop the action;
-		if Z is 2:
+			Say "You pull out a small urn of some sort, and look at it curiously.  Nermine sighs behind you as she sees what you are holding. 'Is funeral urn. Very old, and very bad luck. Nermine is not sure how it found its way into bargain bin again, but she will try to find a better place to put it this time.' Nermine says as she takes the small urn from your hands, and places it down on a shelf somewhere behind the counter.  'Nermine only hopes bad luck hasn[apostrophe]t rubbed off on you already, she will give you kiss for luck to make sure,' the jackal says as she leans over the counter even further, her black muzzle brushing over your mouth even as you open it to respond.  Before you know it, her tongue is exploring your mouth even as her muzzle rubs up against your face, in what is actually a surprisingly pleasant kiss.  After a second, she pulls her tongue out of your mouth, leaving you standing there slightly stunned as she gives you another soft lick across the cheek. 'There.  That should counter any bad luck urn might have given you.  Be letting me know if you find the sneaky thing in bin again,' the sexy jackaless says with a wink as she returns to her normal place at the counter.  After a second, you realize that you now don[apostrophe]t have anything to show for your hunt through the bargain bin, but at least you got a nice kiss for your efforts?  That[apostrophe]s something of a bargain, isn[apostrophe]t it?";
+		otherwise if Z is 2:
 			If strangebottledrink is less than 3:
-				Say "Looking through the bin, you spot a small vial labeled 'Drink Me', Amused at the old Alice in Wonderland reference, you decide to pull the small vial out and take a sip. You are somewhat disappointed when nothing magical seems to happen immediately and your size remains the same, although your body does seem to be strangely invigorated by the unusual drink, and you realize that you are no longer hungry or thirsty.";
+				Say "Looking through the bin, you spot a small vial labeled [']Drink Me['].  Amused at the old Alice in Wonderland reference, you decide to pull the small vial out and take a sip. You are somewhat disappointed when nothing magical seems to happen immediately and your size remains the same, although your body does seem to be strangely invigorated by the unusual drink, and you realize that you are no longer hungry or thirsty.";
 				now thirst of player is 0;
 				now hunger of player is 0;
 				increase strangebottledrink by 1;
-				stop the action;
-			if "Spartan Diet" is listed in feats of the player:
+			otherwise if "Spartan Diet" is listed in feats of the player:
 				say "Finding another of those vials of liquid tucked away within the bin, you decide to take the small vial of liquid with you, as refreshing as the small vial is it is obviously worth at least two full water bottles when you go to drink it later...";
 				Add "water bottle" to invent of player;
 				Add "water bottle" to invent of player;
-				stop the action;
 			otherwise:
-				Say "You smile as you once more come across one of those strange and very refreshing vials of liquid, quickly pulling  the small vial out of the bin you waste no time in taking a small sip of the strangely coloured liquid within. To your disappointment the drink seems somewhat less refreshing this time, although you can still feel your body tingling as the liquid obviously does something to you.";
+				Say "You smile as you once more come across one of those strange and very refreshing vials of liquid.  Quickly pulling the small vial out of the bin, you waste no time in taking a small sip of the strangely coloured liquid within.  To your disappointment the drink seems somewhat less refreshing this time, although you can still feel your body tingling as the liquid obviously does something to you.";
 				add "Spartan Diet" to feats of the player;
-				stop the action;
-		If Z is 3:
+		otherwise If Z is 3:
 			if "Strong Back" is listed in feats of the player:
-				say "Hunting through the strange bin of unusual bargains, you feel some kind of strap tangle around your arm, and quickly pull it out to see what you managed to catch. Much to your disappointment, the strap is attached to a small ornamental bag of some sort, glancing in the bag you can see that it is empty, and even putting something inside it seems to have no effect on either the bag or the item. Sighing you tuck your new purchase into your pack, realizing that sometimes you win, and sometimes you lose.";
-				stop the action;
+				say "Hunting through the strange bin of unusual bargains, you feel some kind of strap tangle around your arm, and quickly pull it out to see what you managed to catch.  Much to your disappointment, the strap is attached to a small, ornamental bag of some sort.  Glancing in the bag, you can see that it is empty, and even putting something inside it seems to have no effect on either the bag or the item.  Sighing, you tuck your new purchase into your pack, realizing that sometimes you win, and sometimes you lose.";
 			otherwise:
-				Say "Reaching around in the strange bin of treasures, you feel some kind of strap tangle around your arm as you move the unusual items around. Pulling your arm out you see that you have actually pulled out a strange type of belt pouch, and realize you just ended up purchasing it by pulling it out of the bin. Sighing you take a look at the pouch, and realize it is empty, and just another small storage bag to you. At least it looks like it can be strapped easily to your backpack, as you tie your new pouch onto your backpack, you begin to put a few small items in it just to help sort things out, and are surprised to realize that items in your new pouch don[apostrophe]t seem to weigh much of anything compared to those outside the pouch. Excited at this new discovery, you quickly fill your new pouch up to the brim, and while it may not be large enough to hold everything you have, it certainly makes carrying your current load much easier!";
+				Say "Reaching around in the strange bin of treasures, you feel some kind of strap tangle around your arm as you move the unusual items around. Pulling your arm out, you see that you have actually pulled out an odd belt pouch and realize you just ended up purchasing it by pulling it out of the bin.  Sighing, you take a look at the pouch, and realize it is empty, and just another small storage bag to you.  At least it looks like it can be strapped easily to your backpack.  After securing your new pouch, you begin to put a few small items in it just to help sort things out, and are surprised to realize that items in your new pouch don[apostrophe]t seem to weigh much of anything compared to those outside the pouch.  Excited at this new discovery, you quickly fill your new pouch up to the brim, and while it may not be large enough to hold everything you have, it certainly makes carrying your current load much easier!";
 				add "Strong Back" to feats of the player;	
-				stop the action;
-		If Z is 4:
+		otherwise If Z is 4:
 			Say "Sorting through the strange bin of unusual treasures, your eye catches on a breathtaking silver necklace, and you slowly pull it out of the bin, admiring its fine craftsmanship. Unable to resist the urge to put your lovely new piece of jewelry on, you swiftly clasp it around your neck, and while it doesn[apostrophe]t seem to do anything strange or magical, you certainly admire the way it accentuates your good looks in the mirror that Nermine produces for you to look into.[line break]";
 			increase charisma of player by 1;
 			say "your charisma has increased by 1!";
-			stop the action;
-		if Z is 5:
+		otherwise if Z is 5:
 			if "Like Attracts Like" is listed in feats of the player:
 				if "Kinky" is listed in feats of the player:
 					say "Sorting through the strange bin, you feel a small static shock from one of the items in the bin, and curious pull the item out.  You find yourself holding a strange pendant of some kind, an unusual occult design stamped on side side of the pendant, while on the other side is the image of some undetermined beast. While the amulet is actually kind of eerie, you did just buy it so you slip it over your head as you look around the shop, somehow seeming almost instantly in tune with your inner instincts.";
 					decrease humanity of player by 25;
-					stop the action;
 				otherwise:
 					say "Rummaging around in the small bin, you find your hands rustling up against several small folded pieces of paper. Curious you pull the folded sheaf of paper, and unfold it so you can get a better look at what is written inside. Much to your surprise, you see the papers are filled with detailed images of beasts and humans copulating in all sorts of strange and twisted manners.  As you slowly look through the papers, you find yourself growing increasingly more and more aroused by the strange scenes you find depicted there, wondering just how it would feel to take part in some of those actions.  Hearing movement behind you, you quickly fold the papers up and stick them in your pack with a blush as you notice Nermine leaning over curiously to see what you are staring at so intently.  Perhaps you will take time out later to enjoy your newfound purchase again, although it seems strange that you never realized just how kinky you really were before now...";  
 					add "Kinky" to feats of the player;
-					stop the action;
 			otherwise:
 				Say "Hunting through the bin, you find your hands drawn to a small charm of some sort, something about it seems to just draw you to it, pulling it out of the bin you find yourself admiring the strange looking charm, it almost looks just like you do now.  You wonder if this charm would be as attractive to other people or infected like yourself, and end up shrugging as you hang your new purchase off your backpack, you suppose you will find out!";
 				add "Like Attracts Like" to feats of the player;
-				stop the action;
-		if Z is 6:
-			Say "Poking absently through the bin, your eye catches on a small catlike charm, tucked away in the corner.  Pulling the charm out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers.  Suddenly the charm seems to slip and melt through your fingers, and you look around hurriedly to see where your new purchase went, strangely you can[apostrophe]t seem to see the little charm anywhere, but even as you look you realize your body is feeling slightly different....";
-			infect "Felinoid";
-			increase dexterity of player by 1;
-			say "your dexterity has increased by 1!";
-			stop the action;
-		If Z is 7:
+		otherwise if Z is 6:
+			if furry is not banned and guy is not banned:
+				Say "Poking absently through the bin, your eye catches on a small, catlike charm tucked away in the corner.  Pulling the charm out, you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers.  Suddenly the charm seems to slip and melt through your fingers.  You look around hurriedly to see where your new purchase went but, strangely, you can[apostrophe]t seem to locate the little charm anywhere, but even as you look you realize your body is feeling slightly different...";
+				infect "Felinoid";
+				increase dexterity of player by 1;
+				say "Your dexterity has increased by 1!";
+			otherwise:
+				say "Poking absently through the bin, your eye catches on a small catlike charm, tucked away in the corner.  Pulling the charm out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers.  Suddenly Nermine snatches the golden charm from your hand with a handkerchief and carefully puts it into a jewerly box.  'I can tell that you will not be wanting this item.  I am sorry, but the bargain bin is like that some times.  Here.  You can be taking these back and waiting a moment before trying again with fresh start.  But you should be thinking to not be so picky.  More fun is to be had that way,' she adds philosophically.";
+				Add "food" to invent of player;
+				Add "water bottle" to invent of player;
+		otherwise If Z is 7:
 			Say "Sorting through the bin, your eye is caught by a strange sparkly piece of jewelery in the bin, the pretty piece making you smile as you pull it out.  Closer inspection reveals that the item is nothing more then a simple piece of very sparkly costume jewelry, but somehow the strange piece makes you feel better as you stare at it.[line break]";
 			if "Magpie Eyes" is listed in feats of the player:
 				say "Smiling at your new piece of jewelry, you tuck your newest acquisition away with the rest of your small collection of glittery and shiny things. Finding a new treasure to keep makes you feel even better about yourself as you look around the store, your keen eyes seeking out new treasures to add to your collection.[line break]";
 				increase perception of player by 1;
-				say "your perception has increased by 1!";
-				stop the action;
+				say "Your perception has increased by 1!";
 			otherwise:
 				say "Flipping the small piece of jewelry over and over in your hands, your eyes seem drawn to its every sparkly movement, the little piece of glass and gilt fascinating you with the pleasant way it catches your gaze. Finally you blink, and happy at your new purchase tuck it away for later, the first piece of what might eventually become a small collection of glittery and shiny things, as your eyes dart around the area, now trained to better trained to look for small useful items in the oddest places, especially if they are shiny!";
 				add "Magpie Eyes" to feats of the player;
-				stop the action;
-		If Z is 8:
+		otherwise If Z is 8:
 			Say "Reaching deep into the bin, you find a strange square box, running your fingers over its smooth sides you notice it seems to have odd lines carved into it. Deciding to pull the box out for a better look, you realize you have just purchased some kind of Chinese puzzle box, the small blocks seeming to be able to pushed or moved around the surface of the wooden box.  Eager to see what might be inside, you spend some time working at and manipulating the box, slowly figuring out its secrets as you draw closer to finishing the puzzle.  Finally with a triumphant cry you manage to slide the lid of the box open, only to find a small piece of paper within, pulling out the paper you note it reads, 'The treasure is not in the finding, but in the journey.' All that work for a small fortune cookie like saying?  Still you feel that all that work on the puzzle box has definitely helped you at puzzling out problems, so maybe it wasn[apostrophe]t a waste after all...[line break]";
 			increase intelligence of player by 2;
-			say "your intelligence has increased by 2!";
-			stop the action;
-		if Z is 9:
+			say "Your intelligence has increased by 2!";
+		otherwise if Z is 9:
 			Say "Reaching deep into the bin, you find something seems to bite you and draw your hand back out of the bin quickly, you stare at your fingers as blood drips slowly from a nasty wound on your hand.  Nermine seems rather embarrassed by the whole affair as she helps you bandage up your new wound, and the jackal glares at the bin for a minute as if reprimanding whatever bit you.  'Nermine is sorry, sometimes things are not happy to end up in bargain bin, can make for bad misunderstandings,' The jackal says with a shrug, as she quickly refunds your food and water, and even places an extra packet of food and bottle of water out for the inconvenience.";
 			Add "food" to invent of player;
 			Add "food" to invent of player;
 			Add "water bottle" to invent of player;
 			Add "water bottle" to invent of player;
 			decrease hp of player by 25;
-			stop the action;
-		if Z is 10:
+		otherwise if Z is 10:
 			say "Sorting through the bin, you come across a strange old fashioned pocket watch, your curiosity getting the better of you, you pull the strange item out of the bin to examine it closer. The unusual brass watch seems to feel slightly warm in your hands as you wind it up, and you are hit with a sudden dizzy spell as soon as you finish winding the watch, making you stagger slightly.  Blinking you catch yourself and stare around you feeling slightly befuddled, before realizing the watch is no longer in your hands.  Sighing at the loss of the interesting looking watch, you prepare to move on, though you feel like something has changed, even if you can[apostrophe]t quite put your finger on what.";
 			extend game by 16;
-			stop the action;
-		if Z is 11:
+		otherwise if Z is 11:
 			say "Pushing items around in the bin, you feel a strange cardboard box move beneath your hands, deciding to give this a closer look, you pull the box out of the bin.  You blink in surprise as you stare at the image of one of those blue furred gryphons grinning back at you from the box of what appears to be a computer game. Looking at the box title, you see it says, 'Flexible Society, The best selling transformative strategy game in years!' Blinking at that strange proclamation, you look at the box some more, before deciding to take it with you, maybe once you get out of here and find a working computer you can find out just what all the fuss is about...";
 			increase score by 100;
-			stop the action;
-		if Z is 12:
-			say "Sorting through the unusual and strange items in the bargain bin, you blink as you come across what appears to be some sort of strange little lion doll. Pulling out the small little plush toy, you grin in amusement as you wonder just what a cute little thing like this was doing in such a strange place, Suddenly you feel slightly dizzy, and the new doll seems to slip from your hands as you stagger slightly before bracing yourself on the counter. Looking down you realize that while you don[apostrophe]t actually see the doll anymore, you see plenty of soft plush lion fur, spreading all over your body! Panicking slightly you try to shake the stuff off of you, before blinking as you realize that having such nice soft little lioness fur could be a good thing, now if only you could find another plush lion to play with you...";
-			now skinname of player is "Plush lion";
-			now cockname of player is "Plush lion";
-			now bodyname of player is "Plush lion";
-			now facename of player is "Plush lion";
-			now tailname of player is "Plush lion";
-			stop the action;
-		if Z is 13:
-			say "Rummaging through the bin, you find yourself blinking as you feel the familiar sleekness of a cell phone. Pulling the small phone out, you note that it appears to be labeled as a Mag-iPhone, causing you to wonder about what kind of strange knock of phone you managed to find. Poking at the phone a little bit, you find out much to your surprise, that not only does it still have some power, it seems to have a signal as well! Feeling excited you quickly try dialing to try to get someone outside of the containment area for help.  You grin as the phone begins to ring, only to blink and stare at the phone as someone answers in a strange almost purring voice, you aren[apostrophe]t sure quite what the purring voice is saying, the thick accent of the female speaker making it hard to understand. Though you think she is telling you that you have reached someplace called Siz[apostrophe]Calit in the land of Nimin, and wants to know if you are calling about the large delivery of pus fruit she ordered.... Feeling very confused, you apologize to the strange woman about the obviously wrong number, before hanging up and staring at the phone for several minutes. Deciding maybe it would be best to not try calling any other random numbers, you slip the Mag-iphone back into the bargain bin where it belongs, before continuing on your way.";
+		otherwise if Z is 12:
+			say "[plrtcl]";
+		otherwise if Z is 13:
+			say "Rummaging through the bin, you find yourself blinking as you feel the familiar sleekness of a cell phone. Pulling the small phone out, you note that it appears to be labeled as a Mag-iPhone, causing you to wonder about what kind of strange knock-off phone you managed to find. Poking at the phone a little bit, you find out much to your surprise, that not only does it still have some power, it seems to have a signal as well! Feeling excited you quickly try dialing to try to get someone outside of the containment area for help.  You grin as the phone begins to ring, only to blink and stare at the phone as someone answers in a strange almost purring voice, you aren[apostrophe]t sure quite what the purring voice is saying, the thick accent of the female speaker making it hard to understand. Though you think she is telling you that you have reached someplace called Siz[apostrophe]Calit in the land of Nimin, and wants to know if you are calling about the large delivery of pus fruit she ordered.... Feeling very confused, you apologize to the strange woman about the obviously wrong number, before hanging up and staring at the phone for several minutes. Deciding maybe it would be best to not try calling any other random numbers, you slip the Mag-iphone back into the bargain bin where it belongs, before continuing on your way.";
 			increase score by 20;
-			stop the action; 
-		if Z is 14:
-			say "Hunting through strange  bin full of items, you find yourself touching what appears to be some sort of plastic bag. Overcome with curiosity, you quickly pull the bag out of the bin, and take a look inside. You are surprised to see that the bag contains several neatly labeled samples taken from creatures inside the city. 'Ah Nermine was looking for those!' You can hear the jackal like shopkeeper say  as you stare at the items, making you look up at her instead, 'If fine looking customer doesn[apostrophe]t want to keep those, Nermine is more then willing to buy them back from them.' She says with a grin on her soft silver painted muzzle while you try to decide what to do with the items. Do you give them back to the Jackaless?";
-			if player consents:
-				Say "Deciding you definitely don[apostrophe]t need any more of the infectious items from creatures within the city, you quickly hand the bag full of stuff over to Nermine, while she slips your payment back to you. Checking the items she handed you back, you find yourself grinning as you realize the sly Jackal woman slipped you an extra package of food as well.";
+		otherwise if Z is 14:
+			say "Hunting through strange bin full of items, you find yourself touching what appears to be some sort of plastic bag. Overcome with curiosity, you quickly pull the bag out of the bin, and take a look inside. You are surprised to see that the bag contains several neatly labeled samples taken from creatures inside the city. 'Ah Nermine was looking for those!' You can hear the jackal like shopkeeper say as you stare at the items, making you look up at her instead. 'If fine looking customer doesn[apostrophe]t want to keep those, Nermine is more then willing to buy them back from them,' she says with a grin on her soft, silver-painted muzzle while you try to decide what to do with the items.  Do you give them back to the jackaless?";
+			if furry is banned:
+				say "Taking another quick glance at the contents, you decide that you have no interest in any of the beastially infected items and return the bag to Nermine while she slips your payment back to you. Checking the items she handed you back, you find yourself grinning as you realize the sly jackal woman slipped you an extra package of food as well.";
 				Add "food" to invent of player;
 				Add "food" to invent of player;
 				Add "water bottle" to invent of player;
-				stop the action;
+			otherwise if player consents:
+				Say "Deciding you definitely don[apostrophe]t need any more of the infectious items from creatures within the city, you quickly hand the bag full of stuff over to Nermine while she slips your payment back to you. Checking the items she handed you back, you find yourself grinning as you realize the sly jackal woman slipped you an extra package of food as well.";
+				Add "food" to invent of player;
+				Add "food" to invent of player;
+				Add "water bottle" to invent of player;
 			otherwise:
-				say "Deciding to keep the items yourself, since they could come in handy in this strange city you are stuck in, you stuff the bag into your pack. Nermine sighs slightly at your action, and shakes her head as she goes back to watching the counter.";
-				add "Skunk Goo" to invent of player;
-				add "Chipped tooth" to invent of player;
-				add "Dog Milk" to invent of player;
-				add "tuft of chin fur" to invent of player;
-				add "Honeycomb" to invent of player;
+				say "Deciding to keep the items yourself, since they could come in handy in this strange city you are stuck in, you stuff the bag into your pack.  Nermine sighs slightly at your choice and shakes her head as she goes back to watching the counter.";
+				if girl is not banned:
+					add "tuft of chin fur" to invent of player;
+					add "Honeycomb" to invent of player;
+					add "Skunk Goo" to invent of player;
+				if guy is not banned:
+					add "Chipped tooth" to invent of player;
+					add "pirate bandanna" to invent of player;
+				if hermaphrodite is not banned:
+					add "Dog Milk" to invent of player;
 				add "Fish" to invent of player;
-				add "pirate bandanna" to invent of player;
-				stop the action;
-		if Z is 15:
-			say "Searching through the bargain bin, you find a small travel pouch tucked away in the corner, and curious pull the pouch out. Flipping the pouch open, you blink in surprise as you note it seems to contain two nicely labeled samples of goo, and two small vials of gryphon milk. Staring at the items for a minute, you realize that you are obviously not the first person the good doctor Matt sent out in the city to retrieve samples for him... emptying the pouch out into your own backpack, you wonder just what happened to the former owner of the strange travel pouch, and if they are happier as whatever they are now.";
-			add "gryphon milk" to invent of player;
-			add "gryphon milk" to invent of player;
-			Add "glob of goo" to invent of player;
-			Add "glob of goo" to invent of player;	
-			Add "water bottle" to invent of player;
-			stop the action;
-		if Z is 16:
+		otherwise if Z is 15:
+			if girl is banned and ( hermaphrodite is banned or furry is banned ):
+				say "Searching through the bargain bin, you find a small travel pouch tucked away in the corner and, curious, pull the pouch out.  Flipping it open, all you find is a wad of used bubblegum and a bottle of water.  Ugh!  Oh well, can't win them all and at least you got some water back.";
+				Add "water bottle" to invent of player;
+			otherwise:
+				say "Searching through the bargain bin, you find a small travel pouch tucked away in the corner, and curious pull the pouch out. Flipping the pouch open, you blink in surprise as you note it seems to contain a bottle of water along with [if girl is not banned]two nicely labeled samples of goo[otherwise]a wad of used bubblegum[end if], and [if hermaphrodite is not banned and furry is not banned]two small vials of gryphon milk[otherwise]a wad of used bubblegum[end if].  Staring at the items for a moment, you realize that you are obviously not the first person the good doctor Matt sent out in the city to retrieve samples for him.  Emptying the pouch out into your own backpack, you wonder just what happened to the former owner of the strange travel pouch, and if they are happier as whatever they are now.";
+				Add "water bottle" to invent of player;
+				if hermaphrodite is not banned and furry is not banned:
+					add "gryphon milk" to invent of player;
+					add "gryphon milk" to invent of player;
+				if girl is not banned:
+					Add "glob of goo" to invent of player;
+					Add "glob of goo" to invent of player;
+		otherwise if Z is 16:
 			if dollfound is 0:
 				say "Reaching into the bin, you find your hand meeting some kind of plush stuffed toy, its soft form almost seeming to jump into your hand as you pull the strange thing out.  Looking at what you found, you blink as you find yourself holding a miniature version of yourself, the little plush doll appearing to be an exact replica of you as you are now right down to the smallest detail. Turning the unusual thing over in your hands several times and admiring the fine detail, you nearly drop the thing as it begins to shift and move on its own. The little doll stretching and turning its head from side to side as it looks around, before focusing its piercing little gaze on you. Blinking you put the miniature version of yourself carefully down on the ground for a minute, where it explores its new surroundings for a minute, before returning to sit at your feet, obviously happy to stay with you.";
 				now strange doll is tamed;
 				now dollfound is 1;
-				stop the action;
 			otherwise:
 				say "Searching through the bin again, you blink as your hand finds a small doll sized pack and some accessories, pulling them out, you stare at them in puzzlement for a minute, before passing them along to your miniature doll self to play with. It never hurts to accessorize right?";
 				increase dexterity of strange doll by 1;
-				stop the action;
-		if Z is 17:
+		otherwise if Z is 17:
 			say "Sorting through the bin, you come across a strange folded piece of paper, pulling it out of the bin and unwrapping it, you barely manage to catch the small pill that was wrapped in the paper before it falls out. Looking at the pill in confusion for a second, you then notice there seems to be something written on the paper, and reading it realize that it explains that the pill is some kind of miracle muscle enhancer, though it does warn of side effects. Shrugging off any possible side effects, you eagerly pop the pill in your mouth and swallow, although you do find yourself wondering as your muscles begin to burn slightly if that was the smartest thing you could have done.  You moan as the strange pill works its changes on your body, your muscles spasming with pleasure as you hold onto the counter... Eventually the changes stop, and you stand there panting for several minutes, before realizing you should probably be moving on soon. You can[apostrophe]t help but pause to admire your new muscles for a minute however, although for some reason thinking clearly about anything other then your muscles and sex seems to be harder then ever...";
 			decrease intelligence of player by 1;
 			decrease humanity of player by 5;
 			increase strength of player by 2;
 			say "your strength has increased by 2!";
 			stop the action;
-		if Z is 18:
+		otherwise if Z is 18:
 			if "Cold Fish" is listed in feats of player:
 				say "Sorting through the strange bin, you feel a small shiver from one of the items in the bin and reflexively release the item, protecting yourself from it.  You withdraw your hand and clutch it tightly as the shivers run up your arm and then down your body, filling your loins with heat and arousal.  Nermine, noticing your odd expression, slides back the water and food.  'Some items in the bargain bin do not agree with some people.  You may try again if you wish or leave matters be.'";
 				increase libido of player by 10;
 				Add "water bottle" to invent of player;
 				Add "food" to invent of player;
-				stop the action;
 			otherwise if "Horny Bastard" is listed in feats of the player:
 				say "Pushing through the strange piles of unusual items stuffed into the overflowing bin, you find a small silver charm shaped like a [one of]feline[or]canine[or]demonic[or]equine[or]goat[or]dolphin[or]bestial[or]bear[at random] cock. The small charm glints in your hand as you pull it out of the bin, the lewd appearance of the finely detailed miniature cock charm making you grin. And leaves you feeling hornier and perhaps more bestial then ever as you slip the little charm onto a charm bracelet so you can wear it at all times. Now if only you could go out and find a real cock just like it....";
 				now libido of player is 100;
 				decrease humanity of player by 10;
-				stop the action;
 			otherwise:
 				say "Pushing through the strange piles of unusual items stuffed into the overflowing bin, you blink as you come across a strange silver charm on a charm bracelet shaped a bit like a canine cock. Grinning you pull the small charm out of the bin, feeling slightly amused that someone would actually go to such great effort to make and design such a thing. Feeling rather amused at your purchase you slip the bracelet onto your arm where it seems to fit perfectly, somehow the feel of the silver cock charm against your skin makes you feel slightly more aroused almost immediately. You can feel your body warming up in arousal as your libido goes into high gear, and somehow thoughts of all sorts of beastial sex seem to become even more attractive to your increasingly lust fogged mind. Your hands straying down to rub your groin needfully as you begin to pant, finding it impossible to think of anything other then sex anymore, lovely, hot, beastial, sex... mmmmm yum...";
 				add "Horny Bastard" to feats of the player;
-				stop the action;
-		if Z is 19:
+		otherwise if Z is 19:
 			if romancebooksfound is 0:
 				say "Reaching into the bin, you can feel what seems to be some soft of book cover under your hands, blinking softly as you feel around, you realize that it isn[apostrophe]t just one book, but a small bundle of books tied together. Curious you draw the small bundle of books out of the bin, and are surprised to see the image of a half naked jackal like pirate looking at you from the cover of the first book. Slightly confused and curious you glance at the covers of the other books you pulled out, and see they all depict rather sexy looking jackal men posing suggestively in a variety of different situations. You open one of the books and begin to flip through it, and quickly realize it is a rather hard core romance novel featuring several beastial people, but featuring a handsome male jackal lead that swashbuckles his way through the hearts and beds of a large harem of various different women. [line break]";
 				say "You blush slightly in embarrassment and arousal at some of the scenes depicted in the books, causing Nermine to look over at you to see what Is so distracting. Upon spying what you are reading and the other books you are holding, the jackal shopkeeper coughs uncomfortably drawing your attention. 'Ah Nermine was wondering where those had gotten too.' She says as she carefully slips the books out of your hands and quickly hides them behind the counter. 'Nermine has no explanation for how such private material ended up in bargain bin, but is very reluctant to actually let them go, sometimes nights alone in shop can be very long you see.' The Jackal woman says with some embarrassment as she shifts uncomfortably behind the counter. Grinning slightly at the shopkeepers obvious discomfort, you shrug as she slides your payment back out on the counter for you to take, when you just stare at her with a smile, The jackal woman blushes even more, as she sets another package of food and water out next to your payment.  You can feel your smile grow even wider as you collect your supplies, thinking that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
@@ -489,7 +476,6 @@ carry out bargainhunting:
 				Add "water bottle" to invent of player;
 				Add "food" to invent of player;
 				Add "water bottle" to invent of player;
-				stop the action;
 		otherwise:
 			say "Rummaging through all the strange items in the bin, you find yourself pulling out a strange item you are sure you have seen somewhere else around the city, and sigh despondently as you tuck your new common item back in your backpack.";
 			let minorbargain be a random number from 1 to number of filled rows in the table of random critters;
@@ -499,16 +485,105 @@ carry out bargainhunting:
 					add loot entry to invent of player;
 					say "you acquired 1 [loot entry][line break]";
 					add "dirty water" to invent of player;
-					say "you acquired some dirty water!";
+					say "You acquired some dirty water!";
 				otherwise:
+					if guy is not banned and furry is not banned:
+						add "Chipped tooth" to invent of player;
+						say "you acquired a Chipped tooth!";
+					otherwise if girl is not banned and furry is not banned:
+						add "Skunk Goo" to invent of player;
+						say "You acquired some Skunk Goo!";
+					otherwise if hermaphrodite is not banned and furry is not banned:
+						add "Panther Milk" to invent of player;
+					`	say "You acquired some panther milk!";
+					otherwise:
+						add "dirty water" to invent of player;
+						say "You acquired some dirty water!";
+					add "dirty water" to invent of player;
+					say "You acquired some dirty water!";
+			otherwise:
+				if guy is not banned and furry is not banned:
 					add "Chipped tooth" to invent of player;
 					say "you acquired a Chipped tooth!";
-			otherwise:
-				add "Chipped tooth" to invent of player;
-				say "you acquired a Chipped tooth!";
-			stop the action;
+				otherwise if girl is not banned and furry is not banned:
+					add "Skunk Goo" to invent of player;
+					say "You acquired some Skunk Goo!";
+				otherwise if hermaphrodite is not banned and furry is not banned:
+					add "Panther Milk" to invent of player;
+					say "You acquired some panther milk!";
+				otherwise:
+					add "dirty water" to invent of player;
+					say "You acquired some dirty water!";
+				add "dirty water" to invent of player;
+				say "You acquired some dirty water!";
 	Otherwise:
 		say "Sorting through your pack, you are ashamed to realize you can[apostrophe]t afford to draw something out of the bargain bin right now.  You blush under Nermine[apostrophe]s curious gaze, as you casually move off to look through the rest of the store instead.";
+
+
+[ Plush lion / rubber tigress / chocolate lab in bin ]
+to say plrtcl:
+	if humorous is banned or furry is banned or ( guy is banned and girl is banned and hermaphrodite is banned):
+		say "As you start to dig in one corner of the bin, Nermine stops you.  'I can tell that you will not be wanting anything from that corner.  I am sorry, but the bargain bin is like that some times.  Here.  You can be taking these back and waiting a moment before trying again with fresh start.  But you should be thinking to not be so picky.  More fun is to be had that way,' she adds philosophically.";
+		Add "food" to invent of player;
+		Add "water bottle" to invent of player;
+	otherwise:
+		let Q be a list of numbers;
+		if guy is not banned, add 1 to Q;			[Plush lion]
+		if girl is not banned, add 2 to Q;			[Rubber tigress]
+		if hermaphrodite is not banned, add 3 to Q;	[Chocolate Lab]
+		sort Q in random order;
+		now tempnum is entry 1 of Q;
+		if tempnum is 1:
+			say "Sorting through the unusual and strange items in the bargain bin, you blink as you come across some sort of strange little lion doll.  Pulling out the small, plush toy, you grin in amusement as you wonder just what a cute little thing like this was doing in such a strange place.  Suddenly you feel slightly dizzy, and the new doll seems to slip from your hands as you stagger slightly before bracing yourself on the counter. Looking down you realize that while you don[apostrophe]t actually see the doll anymore, you see plenty of soft plush lion fur.  It's spreading all over your body!  Panicking slightly, you try to shake the stuff off of you.  As your head starts to fill with fluff, you blink as you realize that having such nice, soft, leonine fur could be a good thing.  Now, if only you could find another plush lion to play with you...";
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Plush lion":
+					now monster is y;
+					break;
+			now skinname of player is "Plush lion";
+			now cockname of player is "Plush lion";
+			now bodyname of player is "Plush lion";
+			now facename of player is "Plush lion";
+			now tailname of player is "Plush lion";
+			now tail of player is the tail entry;
+			now face of player is the face entry;
+			now skin of player is the skin entry;
+			now body of player is the body entry;
+			now cock of player is the cock entry;
+		otherwise if tempnum is 2:
+			say "Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange, inflatable tiger.  Pulling out the small, rubber toy, you grin in bemusement at what a silly little thing like this was doing in such a strange place.  Looking it over quickly, it seems to have surprisingly survived its time in the bargain bin unpunctured.  You give it a light squeeze between your hands and it pops with an odd, meow-like bang, causing you to jump back in surprise.  The popped balloon toy hangs limply in your hands... which start to tingle.  Looking down, you realize that the toy's rubber skin is melting into your own and spreading all over your body!  Panicking slightly, you try to shake the stuff off of you.  As your head shifts an inflates into a more feline form, you blink your plasticky eyes as you realize that having such lovely, smooth skin could be a good thing.  Now, if only you could find another rubber kitty to play with you...";
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Rubber tigress":
+					now monster is y;
+					break;
+			now skinname of player is "Rubber tigress";
+			now cockname of player is "Rubber tigress";
+			now bodyname of player is "Rubber tigress";
+			now facename of player is "Rubber tigress";
+			now tailname of player is "Rubber tigress";
+			now tail of player is the tail entry;
+			now face of player is the face entry;
+			now skin of player is the skin entry;
+			now body of player is the body entry;
+			now cock of player is the cock entry;
+		otherwise:
+			say "Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange, chocolate treat.  Held in a rather plain box, this two pound chocolate hound is small, but solid.  You presume it must be left from Easter and pop the top to take a better look.  Certainly, you feel, this would make a tastier treat than some of your recent meals.  Your mouth waters as the scent of delicious, quality cocoa chocolate fills the air.  You pull it out and look it over, telling yourself you'll just take a nibble and save the rest for the next time you're hungry.  The canine confectionary seems well molded at first, with considerable attention to detail, further instilling the idea that it's a quality product in your mind.  You then you start to notice flaws and few details as you go.  As you get back to the front you realize that it's not a lack of detail, it's that the chocolate is rapidly growing soft and is soon flowing down over your hands.  You can't help yourself and start gobbling down the chocolate, moaning in pleasure as its smooth sweetness flows down your through even as your hands gets stickier and the brown starts to spread up your arms.  As you lick up the last of the flowing chocolate, you realize that your hands have become chocolate paws!  Panicking slightly, you try to shake the stuff off of you, before blinking your dark chocolate eyes as the chocolate sinks deeper and you become solid chocolate like the dog you found.  Now, if only you could find another confectionary to play with you...";
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Chocolate Lab":
+					now monster is y;
+					break;
+			now skinname of player is "Chocolate Lab";
+			now cockname of player is "Chocolate Lab";
+			now bodyname of player is "Chocolate Lab";
+			now facename of player is "Chocolate Lab";
+			now tailname of player is "Chocolate Lab";
+			now tail of player is the tail entry;
+			now face of player is the face entry;
+			now skin of player is the skin entry;
+			now body of player is the body entry;
+			now cock of player is the cock entry;
 
 
 Section 4- Jackal totem

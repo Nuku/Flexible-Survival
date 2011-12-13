@@ -17,7 +17,7 @@ understand "volunteer" as featgetting.
 
 Check featgetting:
 	if hp of doctor matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
-	if featgained of player is greater than ( level of player divided by 3 ), say "You do not yet qualify for more feats." instead; 
+	if featgained of player is greater than ( ( level of player divided by 3 ) + foodwaterbonus ), say "You do not yet qualify for more feats." instead; 
 	if hp of doctor matt > 0:
 		if doctor matt is not visible, say "Only Doctor Matt knows how to do this." instead;
 	otherwise:
