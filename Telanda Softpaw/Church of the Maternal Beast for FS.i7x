@@ -441,7 +441,16 @@ When Play begins:
 
 When play ends:
 	if hellHoundLevel > 0:
-		if hp of the player is greater than 0:
+		if bodyname of player is "Reindeer" and facename of player is "Reindeer" and cockname of player is "Reindeer" and skinname of player is "Reindeer" and tailname of player is "Reindeer":								[gave into the holiday spirit]
+			say "     Having given in to the magic of the holidays, you are freed from the Hellhound's curse.";
+		otherwise if bodyname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and cockname of player is "Tigress Hooker" and skinname of player is "Tigress Hooker" and tailname of player is "Tigress Hooker":		[claimed at the tigress motel]
+			let T be 0;			[do nothing statement]
+		otherwise if bodyname of player is "Big Tiger" and facename of player is "Big Tiger" and cockname of player is "Big Tiger" and skinname of player is "Big Tiger" and tailname of player is "Big Tiger":						[victory at tigress motel]
+			let T be 0;			[do nothing statement]
+		otherwise if bodyname of player is "Big Tigress" and facename of player is "Big Tigress" and cockname of player is "Big Tigress" and skinname of player is "Big Tigress" and tailname of player is "Big Tigress":				[victory at tigress motel]
+			let T be 0;			[do nothing statement]
+		otherwise if hp of the player is greater than 0:
+			follow the check hellhound rule;
 			if maleHound is true:
 				if humanity of the player is less than 1:
 					say "As your mind fades more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body.  eventually you're so far gone that you start to couple with common animals without hesitation, and it's when you are tied in a feral mutt you discovered wandering the streets that a green flickering glow from behind you.[line break]The rough grip on your collar startles you enough to let out a surprised yelp, but the huge clawed red hand rubs your ears 'Easy boy, it's ok, it's just time to go home that is all, you've had enough fun in the mortal realm'  You let out a disappointed whine, bones melting and reflowing, your body altering to suit your mindless nature.  Now you are nothing more than a mindless Hell-hound, incapable of thought or speech, unlike the beast that initially corrupted you. 'Come boy, there's a gate for you to help guard, and bitches to breed. If you're good, I may let you out to play with the mortals again someday.'[line break]";[Rutting beast, loyal demon, or resisting mortal.]
