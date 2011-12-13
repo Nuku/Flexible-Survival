@@ -56,7 +56,7 @@ to say beatthelab:
 			if libido of player < 0:
 				now libido of player is 0;
 		otherwise:
-			say "     You leave as it struggles to regain enough cohesion to get away";
+			say "     You leave as it struggles to regain enough cohesion to get away.";
 
 
 to say chococheck:
@@ -131,7 +131,7 @@ when play ends:
 			say "     You manage to maintain cohesion throughout your ordeal in the city, though it does get easier over time.  Upon rescue, the soldiers and scientists are confused by your chocolaty body.  You are put through a series of inconclusive tests, but eventually you are released, as there are so many more to process.  While you are certainly intriguing, they don't feel you're dangerous.  The soft scent of chocolate you emit does help, everyone being happier around you.";
 			say "     You eventually settle down and become a chocolatier, having some innate feel for preparing it coming from your altered composition.  You do have a few close calls early on while near the oven, but manage to move away and re-solidify while you still can.  As time goes on, your products become in high demand to those who can afford your gourmet chocolates.";
 			if humanity of player < 50:		[Going a little mad]
-				say "     You even start adding some of your white chocolaty cream from your [if cocks of player > 0 and breast size of player > 0]cock and breasts[otherwise if cocks of player > 0]cock[otherwise]breasts[end if] to special items for special patrons.  While not infectious, they do prove to be powerful aphrodisiacs that are most enticing.  You keep their special ingredient secret from your clients.  Their silent addition to your selection further increases your profits and success.";
+				say "     You even start adding some of your white chocolaty cream from your [if cocks of player > 0 and breast size of player > 0]cock and breasts[otherwise if cocks of player > 0]cock[otherwise]breasts[end if] to special items for special patrons.  While not infectious, they do prove to be powerful aphrodisiacs that are most enticing.  You keep their special ingredient secret from your clients.  Their undocumented addition to your selection further increases your profits and success.";
 			if humanity of player < 25:		[...and then going completely mad]
 				say "     After a few years, you are struck with the sudden idea for your most daring and elaborate project yet.  With the help of all your apprentices over several uninterrupted days, you are milked for as much white chocolate syrup as you'll give over and over.  During this time, your fed only a diet of pure, white chocolate by your assistants who slowly change, becoming chocolate Labs like you.  You insist on only using your own chocolate on this project though, despite many volunteering to give as well.";
 				say "     The chocolate is prepared and heated, then poured into the elaborate, segmented mold you had specially commissioned for this project.  When it cools, your team opens it carefully, releasing the large, white chocolate figure.  It is a solid, white chocolate version of the creature you met in the city so long ago.  You nervously nibble the ends off your fingers as you watch and wait, elated when it starts to move.";
