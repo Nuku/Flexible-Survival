@@ -441,6 +441,16 @@ When Play begins:
 
 When play ends:
 	if hellHoundLevel > 0:
+		if bodyname of player is "Reindeer" and facename of player is "Reindeer" and cockname of player is "Reindeer" and skinname of player is "Reindeer" and tailname of player is "Reindeer":								[gave into the holiday spirit]
+			say "     Having given in to the magic of the holidays, you are freed from the Hellhound's curse.";
+		otherwise if bodyname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and cockname of player is "Tigress Hooker" and skinname of player is "Tigress Hooker" and tailname of player is "Tigress Hooker":		[claimed at the tigress motel]
+			let T be 0;			[do nothing statement]
+		otherwise if bodyname of player is "Big Tiger" and facename of player is "Big Tiger" and cockname of player is "Big Tiger" and skinname of player is "Big Tiger" and tailname of player is "Big Tiger":						[victory at tigress motel]
+			let T be 0;			[do nothing statement]
+		otherwise if bodyname of player is "Big Tigress" and facename of player is "Big Tigress" and cockname of player is "Big Tigress" and skinname of player is "Big Tigress" and tailname of player is "Big Tigress":				[victory at tigress motel]
+			let T be 0;			[do nothing statement]
+		otherwise if hp of the player is greater than 0:
+			follow the check hellhound rule;
 		if hp of the player is greater than 0:
 			if maleHound is true:
 				if humanity of the player is less than 1:
