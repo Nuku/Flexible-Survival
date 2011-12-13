@@ -1,4 +1,4 @@
-Version 1 of Male Peacock For FS By Lago Moro begins here. 
+Version 1 of Male Peacock For FS by Lago Moro begins here. 
 
 
 "Adds a Male Peacock to Flexible Survivals Wandering Monsters table."

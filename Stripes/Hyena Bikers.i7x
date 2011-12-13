@@ -1,6 +1,6 @@
 Version 2 of Hyena Bikers by Stripes begins here.
 [Completed w/selection menu thanks to mirumu.]
-[version 2.0 - Biker leader at Gang HQ started ]
+[version 2.5 - Biker leader sex]
 
 "Adds a situation with a pack of hyenas on motorcycles in the High Rise District."
 

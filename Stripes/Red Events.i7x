@@ -292,15 +292,16 @@ to say orgyoutcome:
 		now libido of player is 0;
 	sort table of random critters in random order;
 	now monster is 1;
+	choose row monster from the table of random critters;
 	infect;
-	sort table of random critters in random order;
-	now monster is 1;
+	now monster is 2;
+	choose row monster from the table of random critters;
 	infect;
-	sort table of random critters in random order;
-	now monster is 1;
+	now monster is 3;
+	choose row monster from the table of random critters;
 	infect;
-	sort table of random critters in random order;
-	now monster is 1;
+	now monster is 4;
+	choose row monster from the table of random critters;
 	infect;
 
 

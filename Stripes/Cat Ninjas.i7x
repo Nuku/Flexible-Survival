@@ -31,7 +31,7 @@ to say beattheninja:
 
 
 to say ninjaattack:
-	if a random chance of 1 in 5 succeeds:
+	if a random chance of 3 in 10 succeeds:
 		say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you.  The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random].  There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you.  As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
 		increase libido of player by a random number between 2 and 5;
 		if libido of player > 100, now libido of player is 100;
