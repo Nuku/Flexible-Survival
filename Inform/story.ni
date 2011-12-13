@@ -3852,6 +3852,7 @@ Instead of conversing the doctor matt:
 			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Unable to defeat the mouse, you were not able to stop him, but survived the encounter and have returned to assist the scientist.";
 			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him.  I shall inform the military of these events, as well as the increased threat level at the hospital.  They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion.  He seems too intelligent to not have an exit strategy already formulated.'";
 		now hp of doctor matt is 12;
+		now level of doctor matt is turns;
 	if hospquest is 13 and "Mental Booster" is not listed in feats of player:
 		say "     As thanks for your willingness to side with me over this impudent upstart mouse, I shall provide you with something I have been working on.  Trying to deal with the infected city can be mentally harrowing as well as physically harrowing.  It is easy to neglect the need to be intellectually able to deal with this crisis over the more obvious need for physical prowess.  As such, I have found a way to stimulate the mind, increasing one's reasoning abilities to make them better able to notice significant events, interpret that information and then relate it to others.  This treatment will also strive to keep these mental faculties strong after mentally debilitating infections.'";
 		say "     The doctor injects you with the nanite adjustment.  At first you feel little, but as you start to consider what may be happening, you notice that you're interpreting stimuli faster and drawing conclusions about them more readily.  You don't suddenly know more information, but you can better process all that you have learned to make more out of it.  You also feel a little more confident in dealing with the world because of it.";
@@ -3861,10 +3862,74 @@ Instead of conversing the doctor matt:
 		increase charisma of player by 2;
 		increase morale of player by 4;
 		say "[bold type]Your Intelligence, Perception and Charisma are all increased by 2.[roman type][line break]";
-	if hp of doctor matt is 12:
-		say "     I don't currently have any tasks for you.";
+	if "Automatic Survival" is listed in feats of player:
+		now hp of doctor matt is 14;					[Supply Run skipped entirely]
+	if hp of doctor matt is 12 and level of doctor matt minus turns is less than 16:
+		say "     'I don't currently have any tasks for you,' the doctor states.  'Please check back later after I've had a chance to take stock of our situation.'";
+	otherwise if hp of doctor matt is 12:
+		say "     'Given the situation in the city escalating from the recent interference, the military's final move has been delayed much more than anticipated.  While this gives me more time to hopefully give them the tools they'll need, this does mean our supplies will run dangerously low before the end if more cannot be obtained.'";
+		say "     'Now, while Orthas assures me she will be able negotiate some exchange with the occasional sane survivor that passes by, this is unreliable.  I would prefer to give us a wider margin of error.  I do not wish to inform the military of our needs, as they may foolishly try advancing the timetable or sending a team in to extract us beforehand.  As such, I want you to collect some food and water supplies for us.  Perhaps a half-dozen of each.  As you can freely roam the city, you may be able to scavenge additional supplies or find others who are willing to pay you in supplies for services.  Just take care to choose this allies more carefully this time,' he adds with a meaningful gaze.";
+		say "     'As you already have to deal with feeding yourself, this task will not go unrewarded.  I will prepare an enhancement injection of your choice once the supplies are obtained and given to me.  Oh, and don't tell Orthas I'm having you do this,' he adds as he turns back to his workbench.";
+		now waterneed is 6;
+		now foodneed is 6;
+		now hp of doctor matt is 13;
+	otherwise if hp of doctor matt is 13:
+		now foodcount is 0;
+		now watercount is 0;
+		repeat with x running through invent of player:
+			if x is "food", increase foodcount by 1;
+			if x is "water bottle", increase watercount by 1;
+		now tempnum is foodneed;
+		say "[thefoodening]";
+		say "[thefoodening]";
+		say "[thefoodening]";
+		say "[thefoodening]";
+		say "[thefoodening]";
+		say "[thefoodening]";
+		if tempnum > foodneed:
+			if foodneed is 0:
+				say "     'Good job!  This is sufficient food to build up our supplies.  Nothing like a good meal to keep the brain running its best' the doctor says, looking over the fare hungrily as he takes the supplies from you.  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
+			otherwise:
+				say "     'I'll add that food to our supplies to raise our stocks,' the doctor says, taking the food from you.  'We still need [foodneed] more meals though.'  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
+		now tempnum is waterneed;
+		say "[thewatering]";
+		say "[thewatering]";
+		say "[thewatering]";
+		say "[thewatering]";
+		say "[thewatering]";
+		say "[thewatering]";
+		if tempnum > waterneed:
+			if waterneed is 0:
+				say "     'Good job!  This is sufficient water to increase our supplies.  Nothing like a good drink to grease the wheels of science,' the doctor says, looking over the collected water thirstily as he takes the supplies from you.  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
+			otherwise:
+				say "     'I'll add that water to our supplies to raise our stocks,' the doctor says, taking the water from you.  'We still need [waterneed] more liters through.'  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
+		if foodneed is 0 and waterneed is 0:
+			say "     Having safely stored away the supplies, Dr Matt turns back to you as if wondering why you're still here when there's work to be done[if susan is present].  Susan politely coughs and nods towards the nanite enhancement device while tapping her hoofed foot on the floor[otherwise].  You glare at the doctor for a few seconds before finally pointing to the nanite enhancement device[end if], at which point Dr Matt brushs his gloved hands together and nods, heading over to it as if that was his intention all along.";
+			wait for any key;
+			now foodwaterbonus is 1;
+			featget;
+			now hp of doctor matt is 14;
 	say "He looks kind of busy right now.";
 
+
+to say thefoodening:
+	if foodcount > 0 and foodneed > 0:
+		delete food;
+		decrease foodcount by 1;
+		decrease foodneed by 1;
+
+to say thewatering:
+	if watercount > 0 and waterneed > 0:
+		delete bottle water;
+		decrease watercount by 1;
+		decrease waterneed by 1;
+
+
+waterneed is a number that varies.
+foodneed is a number that varies.
+foodcount is a number that varies.
+watercount is a number that varies.
+foodwaterbonus is a number that varies.  foodwaterbonus is usually 0.
 
 Table of Game Objects (continued)
 name	desc	weight	object
