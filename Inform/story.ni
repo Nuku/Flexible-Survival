@@ -1270,11 +1270,12 @@ To impregnate with (x - text):
 	say "[line break]You have an odd feeling, a palpable wave of contentment from within your lower belly.";
 	
 to say impregchance:
-	choose row monster from the table of random critters;
-	if a random chance of 1 in 5 succeeds, impregnate with name entry;
-	if "Fertile" is listed in feats of the player:
+	if cunts of player > 0 and "Sterile" is not listed in feats of player:
+		choose row monster from the table of random critters;
 		if a random chance of 1 in 5 succeeds, impregnate with name entry;
-	now the libido of the player is (the libido of the player) / 2;
+		if "Fertile" is listed in feats of the player:
+			if a random chance of 1 in 5 succeeds, impregnate with name entry;
+		now the libido of the player is (the libido of the player) / 2;
 	
 
 instead of examining a watch:
