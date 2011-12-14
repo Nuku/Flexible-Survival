@@ -495,7 +495,7 @@ carry out bargainhunting:
 						say "You acquired some Skunk Goo!";
 					otherwise if hermaphrodite is not banned and furry is not banned:
 						add "Panther Milk" to invent of player;
-					`	say "You acquired some panther milk!";
+						say "You acquired some panther milk!";
 					otherwise:
 						add "dirty water" to invent of player;
 						say "You acquired some dirty water!";
