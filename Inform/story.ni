@@ -814,7 +814,7 @@ Include Story Skipper by Nuku Valente.
 Include items by zero.
 Include Strange Slut by Zero.
 Include Dominator by Zero.
-[Include Hadiya by Kaxin.]
+Include Hadiya by Kaxin.
 
 
 understand the command "feed" as something new.
