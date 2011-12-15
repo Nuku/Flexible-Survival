@@ -59,6 +59,10 @@ Carry out reciting:
 			-- 11:
 				if the player's command matches "[number]":
 					now the hp of doctor matt is the number understood;
+					if hp of doctor matt is greater than 4 and hp of doctor matt is less than 100:
+						move the microwave to the location of doctor matt;
+					otherwise if hp of doctor matt is 100:
+						remove orthas from play;
 			-- 12:
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
