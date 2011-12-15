@@ -217,10 +217,10 @@ to say reindeerheat:
 			increase libido of player by a random number from 3 to 8;
 			if libido of player > 100, now libido of player is 100;
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Remembering the egg nog, you pull it out from your pack and take a drink.[nogging]";
-[		otherwise if "egg nog" is in current location of the player:
+		otherwise if "egg nog" is listed in invent of the location of the player:
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Spotting the egg nog, you grab it and take a drink.";
-			take "egg nog";
-			drink egg nog;					]
+			remove "egg nog" from invent of location of player;
+			process egg nog;
 		otherwise:
 			say "[reindeerbreastheat]";
 			increase libido of player by a random number from 3 to 8;
