@@ -8,7 +8,7 @@ heat enabled is a truth state that varies. heat enabled is usually True. [This v
 animal heat is a truth state that varies. animal heat is usually False. [This variable is used to check to see if you've started an animalistic breeding cycle.]
 turns in heat is a number that varies. turns in heat is usually 0. [ Counter to say how long you've been in heat.]
 inheat is  a truth state that varies. inheat is usually False. [ Variable for other mods to easily check if you are in heat right now.]
-slutfucked is a number that varies. slutfucked is usually 0. [ Variable to prevent to many random husky encounters.]
+slutfucked is a number that varies. slutfucked is usually 0. [ Variable to prevent too many random husky encounters.]
 lastturn is a number that varies. lastturn is usually 240. [This is used so that we only trigger events once per GAME turn(3 hr period) rather then each event turn.]
 
 Table of infection heat
@@ -28,8 +28,10 @@ to say huskyheatstart:
 
 to say huskyheatend:
 	decrease Cunt width of player by 1;
+	if cunt width < 1, now cunt width is 1;
 	decrease Cunt length of player by 2;
-	
+	if cunt length < 1, now cunt length is 1;
+
 to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting events that can happen if she doesn't get any satisfaction ]
 	increase libido of player by 5;
 	if libido of player > 100, now libido of player is 100;
@@ -60,7 +62,7 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 
 every turn (This is the check heat rule): [ May need to change this so that it only procs when theres a 'time' change]
 	if heat enabled is true:
-		if lastturn is not turns:	[This is used so that we only trigger events once per GAME turn(3 hr period) rather then each event turn.]
+		if lastturn is not turns:	[This is used so that we only trigger events once per GAME turn (3 hr period) rather then each event turn.]
 			if cunts of player is greater than 0 and (cockname of player is not "human") and gestation of child is 0:	[Only run if female. and has groin infection]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more Tainted Sexuality.";

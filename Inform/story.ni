@@ -676,7 +676,6 @@ Include Pit Bull For FS by Ilovecock.
 Include Painted Wolf Herm by Kyvi Stormbreaker.
 Include Lusty Skunk by Nuku Valente.
 Include Gator by Nuku Valente.
-Include Deer by Nuku Valente.
 Include MothGirl for Fs by Soren.
 Include otter by Nuku Valente.
 Include Ash Drakenoid by Sweraptor.
@@ -772,7 +771,6 @@ Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
 Include Alex by Nuku Valente.
 Include Male Peacock for FS By Lago Moro.
-Include Orthas by Nuku Valente.
 Include Infected Pool for FS by Hellerhound.
 Include Gryphons Plot for FS by Hellerhound.
 Include Underwater Zone For Fs by Hellerhound.
@@ -815,6 +813,8 @@ Include items by zero.
 Include Strange Slut by Zero.
 Include Dominator by Zero.
 Include Hadiya by Kaxin.
+Include Orthas by Nuku Valente.
+Include Deer by Nuku Valente.
 
 
 understand the command "feed" as something new.
