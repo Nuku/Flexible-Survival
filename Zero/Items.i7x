@@ -5,16 +5,16 @@ Section 1 - Items
 Table of Game Objects (continued)
 name	desc	weight	object
 "latex milk"	"It's as strange as it sounds - the milk of a latex fox."	1	latex milk
-"Slut tag"	"A small metal dog tag.  It has the word [']slut['] ingraved onto it."	1	Slut tag
-"Dominator Chain"	"A chain from around a Dominator's neck."	1	Dominator Chain
+"slut tag"	"A small metal dog tag.  It has the word [']slut['] ingraved onto it."	1	Slut tag
+"dominator chain"	"A chain from around a Dominator's neck."	1	Dominator Chain
 
 the usedesc of Slut tag is "[Slut tag use]";
 
 latex milk is a grab object. It is a part of the player. Understand "milk" as latex milk. latex milk is infectious. The strain of latex milk is "Latex Fox";
 
-Slut tag is a grab object. It is a part of the player. Understand "tag" as Slut tag. 
+slut tag is a grab object. It is a part of the player. Understand "tag" as Slut tag. 
 
-Dominator Chain is a grab object. It is a part of the player. Understand "chain" as Dominator Chain. 
+dominator chain is a grab object. It is a part of the player. Understand "chain" as Dominator Chain. 
 
 Section 2 - Use of Items
 

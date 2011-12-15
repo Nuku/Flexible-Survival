@@ -244,7 +244,6 @@ Instead of attacking the Cola Vending machine:
 	increase dice by bonus;
 	if dice is greater than 15:
 		say "A soda can pops out!";
-		add "soda" to invent of player;
 		increase score by 1;
 		increase dispensed by 1;
 	otherwise:
@@ -259,12 +258,16 @@ Book 3 - Definitions
 Definition: a direction (called D) is valid if the room D from the location of the player is a room.
 Definition: A grab object (called D) is owned:
 	if there is a name corresponding to a object of d in the table of game objects:
-		if the name corresponding to a object of d in the table of game objects is listed in the invent of the player, yes;
+		let z be the name corresponding to a object of  d in the table of game objects;
+		if z is listed in invent of player, yes;
+		[repeat with x running through invent of player:
+			if x matches the text z, yes;]
 	no;
 
 Definition: A grab object (called D) is present:
 	if there is a name corresponding to a object of d in the table of game objects:
-		if the name corresponding to a object of  d in the table of game objects is listed in the invent of the location of the player, yes;
+		let z be the name corresponding to a object of  d in the table of game objects;
+		if z is listed in the invent of the location of the player, yes;
 	no;
 
 before examining the grab object(called x):
@@ -308,7 +311,7 @@ name	desc	weight	object
 "soda"	"A can of some soda or another. Somehow, it is still cool to the touch"	1	soda
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A matress. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
-"Dog Milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
+"dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
 
 journal is a grab object. It is a part of the player. It is not temporary.
 cot is a grab object. It is a part of the player. It is not temporary.
@@ -1176,7 +1179,7 @@ carry out Inventorying:
 				say " x ";
 				let number be 0;
 				repeat with  y running through invent of player:
-					if y is name entry, increase number by 1;
+					if y in lower case matches the text name entry in lower case, increase number by 1;
 				say "[number]([weight entry times number] lbs)";
 				increase weight by weight entry times number;
 				say "[line break]";
@@ -3990,9 +3993,9 @@ understand "milk myself" as milking.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Panther Milk"	"The thick, luscous milk of one of the panther taurs."	1	panther milk
-"Chocolate Milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
-"Vixen Milk"	"A thin milk with an alluring taste, like the silvery vixens it is from."	1	vixen milk
+"panther milk"	"The thick, luscous milk of one of the panther taurs."	1	panther milk
+"chocolate milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
+"vixen milk"	"A thin milk with an alluring taste, like the silvery vixens it is from."	1	vixen milk
 
 
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".
