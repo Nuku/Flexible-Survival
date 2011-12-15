@@ -28,9 +28,9 @@ to say huskyheatstart:
 
 to say huskyheatend:
 	decrease Cunt width of player by 1;
-	if cunt width < 1, now cunt width is 1;
+	if cunt width of player < 1, now cunt width of player is 1;
 	decrease Cunt length of player by 2;
-	if cunt length < 1, now cunt length is 1;
+	if cunt length of player < 1, now cunt length of player is 1;
 
 to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting events that can happen if she doesn't get any satisfaction ]
 	increase libido of player by 5;
