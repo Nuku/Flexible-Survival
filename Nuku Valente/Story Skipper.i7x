@@ -63,6 +63,8 @@ Carry out reciting:
 						move the microwave to the location of doctor matt;
 					otherwise if hp of doctor matt is 100:
 						remove orthas from play;
+						now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
+						now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
 			-- 12:
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
