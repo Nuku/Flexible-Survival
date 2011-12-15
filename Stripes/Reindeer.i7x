@@ -146,7 +146,7 @@ to say nogging:
 	if hp of player > maxhp of player, now hp of player is maxhp of player;
 	increase morale of player by a random number from 0 to 1;
 	increase morale of player by a random number from 0 to 1;
-	decrease humanity of player by a random number from 2 to 5;
+	decrease humanity of player by a random number from 3 to 8;
 	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
 	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
@@ -174,7 +174,108 @@ to say nogging:
 		end the game saying "You gave in to the holiday spirit.";
 
 
-Section 4 - Endings
+Section 4 - Holiday Madness
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
+--	--	--	--	--	--	--	--
+
+When Play begins:
+Choose a blank row from Table of infection heat;
+now infect name entry is "Reindeer"; [ This should be exactly the same as your monster name in the main table]
+now heat cycle entry is 15; [ Total cycle - from start to starting again.  Default is 7. ]
+now heat duration entry is 12; [ This is how many days of the cycle you are actually in heat. Default is 1, set it to the same as cycle for permanently in heat.]
+now trigger text entry is "Naughty, festive thoughts start to creep into your head.  Thoughts of sugar plums and sodomy, of candy cane dildos and creamy reindeer egg nog.  Your dripping cunny feels hot, like a warm fireplace in need of someone to stoke it.  You start humming The Twelve Days of... Uh oh."; [ This is the text that is written to the screen when the player comes into heat]
+now inheat entry is "[reindeerheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+
+
+to say reindeerheat:
+	let diceroll be ( libido of player plus a random number between 0 and 100 );
+	if diceroll < 90:
+		increase libido of player by a random number between 0 and 3;
+	otherwise if diceroll < 130:		[90 - 130]
+		say "Holiday ditties play in your head as you squeeze your thighs together, moaning during a bout of holiday reindeer mating season.";
+		increase libido of player by a random number between 2 and 5;
+		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
+		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
+		if libido of player > 100, now libido of player is 100;
+	otherwise if diceroll < 155:		[130 - 155]
+		say "Your mind starts to wander [one of]and you start thinking about finding some holiday decorations for the bunker.  Your thighs feel wet as you think of snuggling up by a roaring fire next to the tree with someone special[or]and you set off in search of Christmas lights.  You finger yourself as you rummage about until you regain your senses[or]and you start humming carols while taking a break to play with yourself for a few minutes[or]to old holiday specials and you start singing some of your favorite songs from them.  You start to get turned on as you change a few words around to make them quite bawdy[or]while looking around for a [']present['] to stuff in your [']stocking with care['][or]to gift ideas for the people and creatures you've encountered in the city.  Almost invariably, you think of a rather naughty gift you could share with them[at random].";
+		increase libido of player by a random number between 3 and 8;
+		if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
+		if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
+		if libido of player > 100, now libido of player is 100;
+	otherwise if diceroll < 170:		[155 - 170]
+		say "Your heat-filled pussy leaks juices and clouds your mind so thoroughly with mindless holiday cheer that you have to take a long break to masturbate, though with only limited satisfaction.  You only come to your senses hours later.";
+		decrease libido of player by a random number between 5 and 10;
+		follow the turnpass rule;
+	otherwise if diceroll < 185:		[170 - 185]
+		say "[reindeerbreastheat]";
+	otherwise:					[185 - 200]
+		if "egg nog" is listed in invent of player:
+			delete egg nog;
+			increase libido of player by a random number from 3 to 8;
+			if libido of player > 100, now libido of player is 100;
+			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Remembering the egg nog, you pull it out from your pack and take a drink.[nogging]";
+[		otherwise if "egg nog" is in current location of the player:
+			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Spotting the egg nog, you grab it and take a drink.";
+			take "egg nog";
+			drink egg nog;					]
+		otherwise:
+			say "[reindeerbreastheat]";
+			increase libido of player by a random number from 3 to 8;
+			if libido of player > 100, now libido of player is 100;
+
+
+to say reindeerbreastheat:
+	if breast size of player < 2 or breasts of player is 0:
+		say "You moan lustfully and fondle your chest, teasing your nipples.  Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal.  As you continue to play with yourself, your nipples tingle and grow larger and fuller as your breasts change.";
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Reindeer":
+				now monster is y;
+				break;
+		[copied entirely from breast change section of 'to infect']
+		if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
+			decrease breast size of player by 2;
+			follow the breast descr rule;
+			if breasts entry is greater than breasts of player:
+				increase breasts of player by 2;
+				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
+			otherwise:
+				decrease breasts of player by 2;
+				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
+			increase breast size of player by 2;
+		if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			increase breast size of player by 1;
+			increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		if breast size of player is greater than breast size entry and "One Way" is not listed in feats of player:
+			follow the breast descr rule;
+			let oldbreast be descr;
+			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+			decrease breast size of player by 1;
+			decrease breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+			follow the breast descr rule;
+			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	otherwise:
+		say "You moan lustfully and fondle your chest, teasing your nipples.  Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal.  As you continue to play with yourself, your nipples start to leak milk, rich and scented like brandy egg nog.  Delighted at this, you continue to milk yourself until this surge of lust passes.";
+		[copied entirely from the 'milk me' section]
+		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+			add "egg nog" to the invent of the player;
+		increase libido of player by a random number from 3 to 8;
+		increase libido of player by a random number from 3 to 8;
+		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 1 and 3;
+		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 3;
+		if libido of player > 100, now libido of player is 100;
+
+
+
+Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Reindeer":
