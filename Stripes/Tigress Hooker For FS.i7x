@@ -382,18 +382,18 @@ to say paymentcheck:
 	otherwise if "Dolphin Milk" is listed in the invent of the player:
 		say "     Finding a container of dolphin milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Fishy milk at that.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete Dolphin Milk;
-	otherwise if "Panther Milk" is listed in the invent of the player:
+	otherwise if "panther milk" is listed in the invent of the player:
 		say "     Finding a container of panther milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'You brought kitty milk for the kitty.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
-		delete Panther Milk;
-	otherwise if "Chocolate Milk" is listed in the invent of the player:
+		delete panther milk;
+	otherwise if "chocolate milk" is listed in the invent of the player:
 		say "     Finding a container of white chocolate milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Oh my, creamy white chocolate milk!  The matron will be so pleased with me!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
-		delete Chocolate Milk;
-	otherwise if "Vixen Milk" is listed in the invent of the player:
+		delete chocolate milk;
+	otherwise if "vixen milk" is listed in the invent of the player:
 		say "     Finding a container of vixen milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Ugh!  It smells like medicine and musky vixens.  Maybe we can boil that fox smell out of it,' shi muses.  Keeping hir find as payment, shi sets your backpack aside.";
-		delete Vixen Milk;
-	otherwise if "Dog Milk" is listed in the invent of the player:
+		delete vixen milk;
+	otherwise if "dog milk" is listed in the invent of the player:
 		say "     Finding a container of dog milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Ugh, it smells of dog.  Well, it[apostrophe]s still milk, so I[apostrophe]ll take it!  Maybe we can boil that dog smell out of it,' shi muses.  Keeping hir find as payment, shi sets your backpack aside.";
-		delete Dog Milk;
+		delete dog milk;
 	otherwise if "Fish" is listed in the invent of the player:
 		say "     Finding the fish you[apostrophe]ve wrapped in old newspaper, shi smiles happily.  'Ooo!  Tasty feesh!  We[apostrophe]ll be eating well back at the motel tonight,' shi rumbles happily.  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete Fish;
