@@ -246,6 +246,7 @@ Instead of attacking the Cola Vending machine:
 		say "A soda can pops out!";
 		increase score by 1;
 		increase dispensed by 1;
+		add "soda" to invent of player;
 	otherwise:
 		say "Nothing happens...";
 	if ( a random chance of 5 in 100 succeeds ) or dispensed of noun is greater than 9:
