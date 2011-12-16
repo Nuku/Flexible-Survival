@@ -2952,6 +2952,12 @@ This is the brain descr rule:
 		now lusting is " thoughts. You are riddled with occasionally dirty lapses";
 
 This is the breast descr rule:
+	if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
+		now cunt width of player is 4;
+	if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
+		now cunt length of player is 8;
+	if "Modest Organs" is listed in feats of player and breast size of player is greater than 5:
+		now breast size of player is 5;
 	if breast size of player is less than 1:
 		now descr is "[one of]nonexistent[or]entirely flat[or]manly[at random]";
 	otherwise if breast size of player is less than 3:
@@ -2970,6 +2976,10 @@ This is the breast descr rule:
 	rule succeeds;
 
 This is the cock descr rule:
+	if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
+		now cock width of player is 4;
+	if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
+		now cock length of player is 8;
 	if cock length of player is less than 3:
 		now descr is "[one of]tiny[or]very small[or]puny[at random]";
 	otherwise if cock length of player is less than 6:
