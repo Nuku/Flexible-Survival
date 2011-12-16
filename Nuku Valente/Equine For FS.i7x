@@ -104,11 +104,5 @@ to say lucky horseshoe use:
 	otherwise:
 		say "You walk onwards, but nothing happens, aw...";
 
-when play begins:
-	add "lucky horseshoe" to invent of player;
-	add "lucky horseshoe" to invent of player;
-	add "lucky horseshoe" to invent of player;
-	add "lucky horseshoe" to invent of player;
-
 [ Edit this to have the correct Name as wall]
 Equine For FS ends here.
