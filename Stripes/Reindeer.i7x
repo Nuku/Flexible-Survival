@@ -122,7 +122,7 @@ When Play begins:
 	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 3;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 90;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "egg nog";		[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 33;		[ Percentage chance of dropping loot, from 0-100. ]
 
 
