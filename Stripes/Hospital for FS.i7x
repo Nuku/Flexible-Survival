@@ -551,17 +551,17 @@ to say hospquestpt2:
 
 to say hospquestpt3:
 	say "     The white mouse looks up from his research as you check in with him.  'You've done very well.  This has been a great boon in understanding the functioning of these little nanites.  I was hoping you'd be able to assist me with something further.  Through the use of the staff here, I have been able to secure several samples,' he says, pointing to various bottles and jars on one table, many of them filled with white fluids.  'But there's one creature, a large canine out looking for a mate, that they've seen rarely and have been unable to sample.  Being a twelve-foot dog, the orderlies are rather reluctant to approach it.  There are some times that the animal nature of the infection's changes do present a problem.";
-	say "     I would like you to try tracking down this creature and obtaining a sample from it.  From their accounts, it is a rather impressive creature with rather uncommon... shall we say... [']gender configuration[']?  It is a variation that should be investigated and I am curious to see if I can trace the source of its unusual pairing of features.";
+	say "     I would like you to try tracking down this creature and obtaining a sample from it.  From their accounts, it is a rather impressive creature with rather a uncommon... shall we say... [']gender configuration[']?  It is a variation that should be investigated and I am curious to see if I can trace the source of its unusual pairing of features.";
 	let dogmilkfound be 0;
 	repeat with x running through invent of player:
-		if x is "Dog Milk", increase dogmilkfound by 1;
+		if x is "dog milk", increase dogmilkfound by 1;
 	if dogmilkfound is 0:
 		say "     'I can only make assumptions on why that creature is unique, but each possible reason has different implications and applications.  Proper testing is required to learn more.  Going forward without that knowledge make affect the results of my other experiments.'";
 		now hospquest is 5;
 		increase score by 5;
 	if dogmilkfound > 0:
 		say "     'What is this?' he exclaims as you pull out the bottle of dog milk.  'You already have some?  Astonishing!  I knew you would make a fine assistant, but this is most impressive.  There are numerous possibilities for why that dog creature is unique and some of them could affect the results of my other experiments.  Ascertaining or removing certain variables will greatly increase the likelihood of gaining meaningful results.";
-		delete Dog Milk;
+		delete dog milk;
 		now progress of Doctor Mouse is turns;
 		extend game by 6;
 		increase score by 25;
@@ -570,12 +570,12 @@ to say hospquestpt3:
 to say hospquestpt4:
 	let dogmilkfound be 0;
 	repeat with x running through invent of player:
-		if x is "Dog Milk", increase dogmilkfound by 1;
+		if x is "dog milk", increase dogmilkfound by 1;
 	if dogmilkfound is 0:
 		say "     'I need you to get a sample, preferably its milk, from that large canine.  Its shemale attributes are unusual and I wish to determine what factor or factors may have made it different and unique.'";
 	if dogmilkfound > 0:
 		say "     'You have it?  Excellent work.  I knew when you showed up that you'd make a fine assistant.  There was just something about you.'  He takes the jar of dog milk and starts drawing samples from it, putting them into beakers for testing.  'It will take some time to complete my tests, but I expect I'll have something for you once the results are in.'";
-		delete Dog Milk;
+		delete dog milk;
 		now progress of Doctor Mouse is turns;
 		extend game by 6;
 		increase score by 20;
@@ -1451,7 +1451,7 @@ when play ends:
 	otherwise if hospquest > 13 and humanity of player > 9:	[helped Dr Mouse]
 		if bodyname of player is not "Wolverine Guard":
 			if hp of doctor matt is -1:				[Dr Matt not defeated]
-				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  You discretely ask a few questions and hear that the military's scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder.  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].";
+				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  You discretely ask a few questions and hear that the military's chief scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder.  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].";
 			otherwise if hp of doctor matt is -2:		[Dr Matt defeated]
 				say "When the military comes through, you are taken in by the army.  The situation at the military base is chaos, with little ability to understand or control the infection.  As such, you receive little scrutiny and your false identity is not questioned.  After you are discharged, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed but helps you in your new life.";
 			otherwise if hp of doctor matt is -3:		[Feat machine stolen]

@@ -7,7 +7,7 @@ The description of trixie is "Look, it[apostrophe]s Trixie, the story fairy! She
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word: [magic word]." };
 
 To say magic word:
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[satisfied]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[cat]}[mateable]}[gryphoncomforted]}[shiftable]";
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[satisfied]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[cat]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]";
 
 Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
@@ -59,6 +59,12 @@ Carry out reciting:
 			-- 11:
 				if the player's command matches "[number]":
 					now the hp of doctor matt is the number understood;
+					if hp of doctor matt is greater than 4 and hp of doctor matt is less than 100:
+						move the microwave to the location of doctor matt;
+					otherwise if hp of doctor matt is 100:
+						remove orthas from play;
+						now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
+						now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
 			-- 12:
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
@@ -199,6 +205,9 @@ Carry out reciting:
 			-- 46:
 				if the player's command matches "[number]":
 					now shiftable is the number understood;
+			-- 47:
+				if the player's command matches "[number]":
+					now medeastuff is the number understood;
 	now the score is -9999;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'all done!'";
 	wait for any key;

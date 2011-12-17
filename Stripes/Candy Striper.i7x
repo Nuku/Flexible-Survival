@@ -237,7 +237,7 @@ lastCandyfucked is a number that varies.  lastCandyfucked is normally 555.
 coonsex is a number that varies.
 
 to say coondesc:
-	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker.  His fur is a light grey with pink highlights.  His raccoon mask is pink, as are the stripes on his body and tail.  The raccoon has an effeminate body with a tight ass and slender figure.  He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute.  Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around.  He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and masturbates furiously until the room smells of cotton candy from his sweet cum.  You find yourself unsure if he's succumbed to the nanites or not, but he's there now and you will just hope for the best for the moment.";
+	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker.  His fur is a light grey with pink highlights.  His raccoon mask is pink, as are the stripes on his body and tail.  The raccoon has an effeminate body with a tight ass and slender figure.  He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute.  Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around.  He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and masturbates furiously until the room smells of cotton candy from his sweet cum.  You find yourself unsure if he's succumbed to the nanites or not, but he's here now and you will just hope for the best for the moment.";
 
 instead of going to Bunker while coonstatus is 1:
 	now the player is in Bunker;
@@ -393,7 +393,7 @@ when play ends:
 				say ".";
 			if timothymated < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
 				if bodyname of player is "Hermaphrodite Gryphon":
-					say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted.  He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows.  You aren't at all surprised when you spot start spotting a few fans with colourful raccoon tails in the audience.";
+					say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted.  He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
 				otherwise:
 					say "     Denise and your raccoon pet seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two loving pets.  You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
 			if pigfucked > 0:

@@ -77,7 +77,7 @@ When Play begins:
 	now cunt length entry is 15;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 50;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Wolf Cum";			[ Loot monster drops, ]
+	now loot entry is "wolf cum";			[ Loot monster drops, ]
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
 
 when play ends:
@@ -89,9 +89,9 @@ when play ends:
 			
 Table of Game Objects(continued)
 name	desc	weight	object
-"Wolf Cum"	"A vial of thick, creamy, white liquid. ‘dna sample, species, wolf’ is written on the side"	1	Wolf Cum
+"wolf cum"	"A vial of thick, creamy, white liquid. ‘dna sample, species, wolf’ is written on the side"	1	wolf cum
 
-Wolf Cum is a grab object.
+wolf cum is a grab object.
 
 the usedesc of Wolf Cum is "[Wolf Cum use]";
 
