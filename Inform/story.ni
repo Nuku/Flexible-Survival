@@ -244,9 +244,9 @@ Instead of attacking the Cola Vending machine:
 	increase dice by bonus;
 	if dice is greater than 15:
 		say "A soda can pops out!";
+		add "soda" to invent of player;
 		increase score by 1;
 		increase dispensed by 1;
-		add "soda" to invent of player;
 	otherwise:
 		say "Nothing happens...";
 	if ( a random chance of 5 in 100 succeeds ) or dispensed of noun is greater than 9:
@@ -259,16 +259,12 @@ Book 3 - Definitions
 Definition: a direction (called D) is valid if the room D from the location of the player is a room.
 Definition: A grab object (called D) is owned:
 	if there is a name corresponding to a object of d in the table of game objects:
-		let z be the name corresponding to a object of  d in the table of game objects;
-		if z is listed in invent of player, yes;
-		[repeat with x running through invent of player:
-			if x matches the text z, yes;]
+		if the name corresponding to a object of d in the table of game objects is listed in the invent of the player, yes;
 	no;
 
 Definition: A grab object (called D) is present:
 	if there is a name corresponding to a object of d in the table of game objects:
-		let z be the name corresponding to a object of  d in the table of game objects;
-		if z is listed in the invent of the location of the player, yes;
+		if the name corresponding to a object of  d in the table of game objects is listed in the invent of the location of the player, yes;
 	no;
 
 before examining the grab object(called x):
@@ -312,7 +308,7 @@ name	desc	weight	object
 "soda"	"A can of some soda or another. Somehow, it is still cool to the touch"	1	soda
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A matress. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
-"dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
+"Dog Milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
 
 journal is a grab object. It is a part of the player. It is not temporary.
 cot is a grab object. It is a part of the player. It is not temporary.
@@ -644,7 +640,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 "Naga"	"[one of]The snake swipes at you with its pipe with alarming accuracy.[or]With a loud hiss, the snake lashes at you, sinking a few fangs painfully into your [skin of player] body.[or]The snake lashes out with its tail, striking you solidly with the heavy mass.[at random]"	"[one of]The snake staggers from its many wounds and collapses to the ground, unmoving.[or]Your last blow draws a shuddering hiss before the snake falls to the ground and ceases fighting.[or]Detecting the fight lost, the snake suddenly flees on quick scales, abandoning the struggle.[at random]"	"[first time]The snake laughs, like a dry hiss, tongue flicking as it moves over your defeated form, 'You should go back to where you came from, human, your kind is finished in this city. Remember it or you will be punished fresh.' [only][one of]The snake prods you with its club to ensure the fight has left you before slithering off, seemingly satisfied with its victory.[or]The great naga throws its coils about you in a warm, soft, crushing embrace. Breathing becomes hard as it constricts. Consciousness fades to black. When you awaken, the snake man has departed.[or]With a cruel sounding laugh, the naga grabs you and throws you over a coil, wrenching free your clothes to expose your bottom to it. It coils about you, warm and trapping, as it becomes a he, twice so, two thick human like shafts sliding free of some internal sheath. Intent on punishment over breeding, he grabs you to pull you back as he thrusts firmly into your back door, lancing you on the thick tool and rocking without concern for your comfort.[line break][line break]Your ass sends guilty pangs of pain and pleasure through you as the snake keeps your wriggling form under control, pounding eagerly at your [skin of player] flesh. The tool within you swells suddenly, then begins to explode, filling your bowels with thick gouts of snake seed. Satisfied, the snake rolls you off of himself to the ground, and slithers away.[at random] "	"Human and snake blended together in an intimidating mixture. It has [one of]brown and black[or]bright red and yellow[or]grey and tan[at random] scales, fine and soft looking. Two muscular arms are its only limbs, if one discounts the great tail that makes up most of its body. Clenched in its right hand is a pipe. A crude, but likely effective, makeshift weapon. Of course, it also has great jaws that likely contain sharp, possible venomous, teeth. Its human torso is well muscled and sleek, well built all around and lacking in blemish. Its head and face is entirely that of a huge snake, staring unblinkingly and tasting the air with flickering forked tongue.[line break][line break][line break]Commissioned by AsureaSkie."	"snake's head, with unblinking eyes and huge venomous fangs. Your [skin of player] hide is sleek across your majestic hood, flaring wide when excited or worked up, framing your head from behind your"	"Extremely long. You can feel the powerful rings of your muscles drawing you forward quietly across the ground. It almost feels like you're floating along, moving with a sublime confidence in your snake like body"	"[one of]scaly[or]softly scaled[or]scaled[at random]"	""	""	"You can feel your [skin of player] skin stretching out as your skull flattens out into a snake like face. Your eyes blink for the last time before the lids become clear. You find you can now taste the air."	"your legs snap together, almost toppling you as they flow together quickly. Strange numbing pleasure radiates down along your torso as you can feel your spine extending down along your fused legs, then beyond, forming a powerful tube like body that trails along behind you."	"soft [one of]brown and black[or]bright red and yellow[or]gray and tan[at random] scales begin to spread quickly from your palms. As they settle, soft itching warmth follows, then fades, leaving you with a new hide to admire."	"You feel something settle in your lower torso, but nothing physically changes that you can see."	"Your cock becomes achingly erect for a moment before settling down, seemingly unchanged."	14	10	12	12	12	8	"Male"	25	3	6	"Mall"	2	16	9	2	3	0	0	0	0	20	--	0
 "Hermaphrodite Gryphon"	"[one of]She throws her impressive, and somewhat jiggly, bulk against you.[or]She snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body.[or]She presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully.[or]She charges at you, wings pulling her free of the ground just moments before she crashes bodily into you.[at random]"	"[gryphon lose]"	"[gryphon fuck]"	"She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted, black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade, and sport huge wicked claws that clack on hard surfaces."	"powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered"	"dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"	"[one of]soft, blue, and furry[or]softly furred[at random]"	"You have a thin leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."	"[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"	"your ears are drawn upwards to the top of your head and a wicked beak pushes forward"	"you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"	"a flush of arousal stirs through you as a dense carpet of blue fur engulfs you in its warm, encouraging, presence"	"you feel a new weight. A glance shows a long [skin of player] tube growing over your ass. The end blossoms out into a blue, furry, tuft. You have a tail"	"pleasure builds in your cock as it deepens to a midnight black, a large swollen knot forming towards the base and a [skin of player] sheath overtaking the very base of it"	12	10	12	14	10	12	"Both"	22	2	5	"Outside"	1	13	7	2	8	0	1	13	7	80	"gryphon milk"	50
 "Female Husky"	"[one of]The sex crazed husky manages to pin you against some debris as she gnaws at your shoulder. You're sure she means it as a come on, but it just hurts.[or]The husky howls in frustration and slices with her dull claws. It seems awkward, but it stings![or]She manages to get her hands on you and squeezes tightly, pressing her delightful assets to you even as she denies you breath in the tight embrace.[at random]"	"[if cocks of player is greater than 0 and libido of player is greater than 40]Having bested her, you shove her back. She yelps as she falls and twists, landing on all fours. You grab her wide hips and, without hesitation, slam your [cock size desc of player] [cock of player] pole into her hot depths and begin to breed her on the spot. She barks and shudders with pleasure, rocking against you as you pump into her round form, caressing her large breasts greedily as you rock her forward. Her furry flesh rubs against your [skin of player] skin, sending tingles through your body.[line break][line break]You feel climax strike like a lightning bolt, and you fill her wanting womb with thick squirts of hot fertile seed. She arches under you, trembling in pleasure. Satisfied, you pull from her, slapping her furry ass before leaving.[otherwise][one of]She whimpers and falls back, stumbling onto her ass as she looks up at you fearfully. Her wide, doe like eyes glisten with terror before she squeezes them shut, and spreads her thighs. Despite temptation, you decide to not take on her offer, and leave her there, whining.[or]Exhausted, she slumps against you, tears streaming along her furry cheeks. Her paws gently brush at you as she mutters something of an apology. You push her away, but decide against hurting her further, simply leaving her there.[at random][end if]"	"[if cocks of player is greater than 0][one of]Having defeated you, the husky begins to pant heavily. She rolls you onto your back and clambers on top of you. Her deft fingers soon have you free of your clothing, tossed to the side as she barks in your face. She slips up and waves her excited furry snatch in your face before settling back, pressing your [cock size desc of player] [cock of player] shaft into her quivering cunt. She howls and yips as she rises and falls against you, her many breast jiggling about with every pound down against you. Her sex is a hot, wet, oven, clenching powerfully and pulling you right over the edge.[line break][line break]As you catch your breath, she rubs over her softly furred belly, glowing with satisfaction at your seeding. Finally, she draws up from you with a wet sucking noise from her sated cunt, and she prowls off, leaving you in a puddle of sweat to recover at your own pace.[or]She kneels down and nuzzles into your crotch, biting at you until she has direct access, then running her long, wet, tongue across your increasingly excited [cock size desc of player] [cock of player] cock. Her long snout descends, taking it in entirely as she bobs slowly, suckling and milking your balls with a softly furred hand. It is not long before you are filling her snout, watching her swallow most of it, a little dribbling down her black lips, just to be lapped right back up. She sits up, smiles at you, and quietly departs.[at random][otherwise]She lays down on top of you and grinds lustfully, but you lack the parts she so urgently needs. She does think of one part you have she can use and slides up against you, pressing her hot, musky, snatch against your face, grinding insistently, grunting and whimpering with need. Her hot juices flow down across your nose and mouth, though you are unable to participate much in your current state. Suddenly she arcs her back and howls, almost drowning you in thick husky honeys as she hits peak. She slumps back, panting loudly, and slowly rolls off of you, slinking off into the city.[end if]"	"A slutty husky, a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. Her chest bears two firm and gropable C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. Her creamy colored tummy is slightly swollen as if she is barely pregnant, though that will probably change soon due to the aching need oozing from her swollen slit as it's obvious she's become nothing more than a needy whore."	"slim, feminine muzzle and perky, overlarge ears over a canine"	"that of a bipedal dog, with digitigrade legs and paw like hands."	"[one of]soft white fur[or]dense white fur[at random]"	"You have a long and fluffy dog[apostrophe]s tail swaying behind you."	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face draws forward into a slender canine snout. Your elongated tongue slips free of your new lips, lolling in the air wetly a moment"	"your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw like"	"your skin prickles from head to toes as fur begins to push through from underneath, soon covering you in a soft, almost comforting, layer of fluffy white fur"	"a long tail pushes from your spine, uplifting in a stiff arc, it begins to sway slowly without your input"	"your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago."	6	12	6	6	2	16	"Female"	15	1	3	"Outside"	0	0	0	4	6	0	1	10	6	90	--	0
-"Latex Fox"	"[one of]The latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so.[or]The fox leaps on you, raking several bloody lines with its claws.[or]The fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth.[at random]"	"[latexfoxrape]"	"[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at you with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up and wander back to the bunker, defeated.[or]The fox rolls you over and clambers up on top of you with a feral snarl.[if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes.[impregchance] Sated, he rises and departs into the city.[otherwise] He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and flees, leaving a trail of rubbery looking seed.[end if][at random]"	"You encounter a creature made of glistening latex. It is largely red in color, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry."	"mixture of canine and human, in a perpetual sneer of exposed teeth, making for an interesting"	"mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous."	"red, black, and white latex"	"You have a long tail, shaped like a fox tail, but made entirely of rubber. It squeaks as it sways back and forth. "	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face reforms, vision blocked by a narrow fox like snout, and new ears twitching on top of your head"	"A wave of itching runs through the meat of your body as your legs pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely paws. Your fingers are still itching as sharp little claws slip free of them"	"smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush"	"a sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically"	"Your cock grows steel hard as it begins to throb urgently. It grows increasingly red as it becomes slightly more slender. Soon a [cock width of player] inch knot forms at the base, ready to tie you to a willing, or not, partner"	10	12	8	10	6	6	"Male"	15	1	4	"Outside"	1	8	6	2	5	0	4	8	6	20	--	0
+"Latex Fox"	"[one of]The latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so.[or]The fox leaps on you, raking several bloody lines with its claws.[or]The fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth.[at random]"	"[latexfoxrape]"	"[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at you with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up and wander back to the bunker, defeated.[or]The fox rolls you over and clambers up on top of you with a feral snarl.[if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes.[impregchance] Sated, he rises and departs into the city.[otherwise] He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and flees, leaving a trail of rubbery looking seed.[end if][at random]"	"You encounter a creature made of glistening latex. It is largely red in color, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry."	"mixture of canine and human, in a perpetual sneer of exposed teeth, making for an interesting"	"mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous."	"red, black, and white latex"	"You have a long tail, shaped like a fox tail, but made entirely of rubber. It squeaks as it sways back and forth. "	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face reforms, vision blocked by a narrow fox like snout, and new ears twitching on top of your head"	"A wave of itching runs through the meat of your body as your legs pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely paws. Your fingers are still itching as sharp little claws slip free of them"	"smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush"	"a sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically"	"Your cock grows steel hard as it begins to throb urgently. It grows increasingly red as it becomes slightly more slender. Soon a [cock width of player] inch knot forms at the base, ready to tie you to a willing, or not, partner"	10	12	8	10	6	6	"Male"	15	1	4	"Outside"	1	8	6	2	5	0	4	8	6	20	"latex milk"	32
 
 Include Shifting by Hellerhound.
 Include Qytat Shifters  by Hellerhound.
@@ -680,6 +676,7 @@ Include Pit Bull For FS by Ilovecock.
 Include Painted Wolf Herm by Kyvi Stormbreaker.
 Include Lusty Skunk by Nuku Valente.
 Include Gator by Nuku Valente.
+Include Deer by Nuku Valente.
 Include MothGirl for Fs by Soren.
 Include otter by Nuku Valente.
 Include Ash Drakenoid by Sweraptor.
@@ -775,6 +772,7 @@ Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
 Include Alex by Nuku Valente.
 Include Male Peacock for FS By Lago Moro.
+Include Orthas by Nuku Valente.
 Include Infected Pool for FS by Hellerhound.
 Include Gryphons Plot for FS by Hellerhound.
 Include Underwater Zone For Fs by Hellerhound.
@@ -816,9 +814,9 @@ Include Story Skipper by Nuku Valente.
 Include items by zero.
 Include Strange Slut by Zero.
 Include Dominator by Zero.
-Include Hadiya by Kaxin.
-Include Orthas by Nuku Valente.
-Include Deer by Nuku Valente.
+Include Training center by Zero.
+Include GYM by Zero.
+[Include Hadiya by Kaxin.]
 
 
 understand the command "feed" as something new.
@@ -1180,7 +1178,7 @@ carry out Inventorying:
 				say " x ";
 				let number be 0;
 				repeat with  y running through invent of player:
-					if y in lower case matches the text name entry in lower case, increase number by 1;
+					if y is name entry, increase number by 1;
 				say "[number]([weight entry times number] lbs)";
 				increase weight by weight entry times number;
 				say "[line break]";
@@ -2953,12 +2951,6 @@ This is the brain descr rule:
 		now lusting is " thoughts. You are riddled with occasionally dirty lapses";
 
 This is the breast descr rule:
-	if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
-		now cunt width of player is 4;
-	if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
-		now cunt length of player is 8;
-	if "Modest Organs" is listed in feats of player and breast size of player is greater than 5:
-		now breast size of player is 5;
 	if breast size of player is less than 1:
 		now descr is "[one of]nonexistent[or]entirely flat[or]manly[at random]";
 	otherwise if breast size of player is less than 3:
@@ -2977,10 +2969,6 @@ This is the breast descr rule:
 	rule succeeds;
 
 This is the cock descr rule:
-	if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
-		now cock width of player is 4;
-	if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
-		now cock length of player is 8;
 	if cock length of player is less than 3:
 		now descr is "[one of]tiny[or]very small[or]puny[at random]";
 	otherwise if cock length of player is less than 6:
@@ -4004,9 +3992,9 @@ understand "milk myself" as milking.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"panther milk"	"The thick, luscous milk of one of the panther taurs."	1	panther milk
-"chocolate milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
-"vixen milk"	"A thin milk with an alluring taste, like the silvery vixens it is from."	1	vixen milk
+"Panther Milk"	"The thick, luscous milk of one of the panther taurs."	1	panther milk
+"Chocolate Milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
+"Vixen Milk"	"A thin milk with an alluring taste, like the silvery vixens it is from."	1	vixen milk
 
 
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".
