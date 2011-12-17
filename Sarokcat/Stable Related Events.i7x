@@ -93,15 +93,6 @@ Instead of Resolving a Unlucky elevator:
 	say "Wandering through the halls of the old hotel, you come across an elevator that appears to be open and ready for passengers, and while you don[apostrophe]t actually expect the elevator to work without power to this area of the city, you decide to investigate it anyways. Looking around inside you see that it seems to be a rather normal old style elevator, without much of use to be found in it, however you get a bit of a surprise when you look at the floor buttons. It seems that aside from the ground floor, all of the floor buttons are labeled 13, despite the fact that there are certainly more than 13 floors in the building. You feel a little unsettled as you stare at the similiarly labeled buttons, and decide as you step out of the elevator quickly, that you might not want to ride in that rather unlucky seeming elevator even if the power was running, as you quickly continue on your way.";
 	Now Unlucky elevator is resolved;
 
-Section 4- Unlucky elevator
-
-Unlucky elevator is a situation.
-The sarea of Unlucky elevator is "Stable";
-
-Instead of Resolving a Unlucky elevator:
-	say "Wandering through the halls of the old hotel, you come across an elevator that appears to be open and ready for passengers, and while you don[apostrophe]t actually expect the elevator to work without power to this area of the city, you decide to investigate it anyways. Looking around inside you see that it seems to be a rather normal old style elevator, without much of use to be found in it, however you get a bit of a surprise when you look at the floor buttons. It seems that aside from the ground floor, all of the floor buttons are labeled 13, despite the fact that there are certainly more than 13 floors in the building. You feel a little unsettled as you stare at the similiarly labeled buttons, and decide as you step out of the elevator quickly, that you might not want to ride in that rather unlucky seeming elevator even if the power was running, as you quickly continue on your way.";
-	Now Unlucky elevator is resolved;
-
 Section 5- Lupine visit
 
 Lupine visit is a situation.
