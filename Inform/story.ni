@@ -815,7 +815,7 @@ Include items by zero.
 Include Strange Slut by Zero.
 Include Dominator by Zero.
 Include Training center by Zero.
-Include manualy infects by Zero.
+Include GYM by Zero.
 [Include Hadiya by Kaxin.]
 
 
