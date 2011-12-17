@@ -211,6 +211,12 @@ Carry out reciting:
 			-- 48:
 				if the player's command matches "[number]":
 					now mtp is the number understood;
+			-- 48:
+				if the player's command matches "[number]":
+					now hyg is the number understood;
+					if hyg is 4:
+						now Hyena hideout is known;
+						now hyena gang is resolved;
 	now the score is -9999;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'all done!'";
 	wait for any key;
