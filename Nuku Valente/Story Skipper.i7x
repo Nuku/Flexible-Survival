@@ -242,7 +242,7 @@ Carry out reciting:
 						now Alex's Condo is known;
 			-- 55:
 				if the player's command matches "[number]":
-					now angiehapppy is the number understood;
+					now angiehappy is the number understood;
 					if angiehappy is greater than 0:
 						now angiefound is 1;
 						now zoo entrance is known;
