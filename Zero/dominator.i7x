@@ -3,10 +3,11 @@ dominator by Zero begins here.
 Section 1 - Monster Responses
 
 
-denjoined is a number that varies. denjoined is usually 0.
+slutmaster is a number that varies. slutmaster is usually 0.
 
 to say domdesc:
 	say "[randomdesc]";
+	say "[masterofslutsdom]";
 	say "Walking down the street, you are suddenly attacked by a muscular male[one of] black [or] brown [or] multi-coloured [or] white [or] red [or] orange [or] yellow [or] light blue [or] blue [at random]furry [slutname] wearing only a metal chain around his neck.[line break]";
 	say "[sluttybodycheck]";	
 
@@ -28,7 +29,18 @@ to say sluttybodycheck:
 		say "At the sight of him, your collar heats up and lust explodes through you, your body instantly submitting to him, regardless of your will.[line break]";
 		say "[slutysubmit]";
 		say "[combat abort]";
-
+		
+to say masterofslutsdom:		
+	if slutmaster is greater than 0:
+		repeat with y running from 1 to number of filled rows in table of random critters:	[puts dominator as lead monster...] 
+			choose row y in table of random critters;
+			if name entry is "Male Dominator":
+				now monster is y;
+				break;
+		choose row monster from the table of random critters;
+		follow the cock descr rule;
+		follow the breast descr rule;
+		say "[defeated entry]";
 
 to say slutysubmit:
 	say "The [slutname] grins as he watches you remove any and all clothing you have, submitting yourself to him. [line break] He tackes hold of you purring into your ear about how your 'sutch a good slut and how there master would be pleased' ";
@@ -124,10 +136,12 @@ to say domvictory:
 
 					
 to say domdef:
-	if denjoined is greater than 0:
-		say "The [slutname] suddenly stops and pats you on the back sayings 'good fight, remember our master is watching us', before he seemingly desolves into thin air[line break]";
+	if massdomfightwin is 1:
+		say "exhausted the dominator falls to the ground unconscious";
+	otherwise if slutmaster is greater than 0:
+		say "Feeling its masters presence, the [slutname] salutes to you before walking off to spread you influence further[line break]";
 	otherwise:	
-		say "The [slutname] suddenly stops and pats you on the back saying 'good fight, my master will be watching you', before he then seemingly desolves into thin air [line break] ";
+		say "The [slutname] suddenly stops and pats you on the back saying 'good fight, my master will be watching you', before he walks off grinning[line break] ";
 		
 					
 Section 2 - Monster Insertion
@@ -177,7 +191,7 @@ When Play begins:
 	now cunt length entry is 7;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 100;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Dominator Chain";			[ Loot monster drops, ]
+	now loot entry is "dominator Chain";			[ Loot monster drops, ]
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
 	
 
@@ -193,7 +207,7 @@ now infect name entry is "Male Dominator"; [ This should be exactly the same as 
 now heat cycle entry is 1; [ This is the number of days a heat "cycle" lasts, usualy 7 ]
 now heat duration entry is 1; [ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.]
 now trigger text entry is "your body becomes overcome with desire, to catch, to fuck, to dominate."; [ This is the text that is written to the screen when the player comes into heat]
-now inheat entry is "[MaleDomheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat riaises libido value by 5 every 3 hours. ]
+now inheat entry is "[MaleDomheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 
 
 to say MaleDomheat:
@@ -223,5 +237,7 @@ to say Domheat:  []
 		decrease the morale of the player by 3;
 	else if libido of player is greater than 90:
 		increase slutfucked by 1;	
+		
 
+		
 dominator ends here.

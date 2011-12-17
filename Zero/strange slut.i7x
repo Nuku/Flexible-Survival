@@ -4,19 +4,46 @@ strange slut by Zero begins here.
 Section 1 - Monster Responses
 
 
-slutprotection is a number that varies. slutprotection is usually 0.
+slutmaster is a number that varies. slutmaster is usually 0.
+slutprotection  is a number that varies. slutprotection  is usually 0.
 slutty is a number that varies. slutty is usually 0.
 slutname is a text that varies. slutname is usually "hound dog".
 
 to say slutdesc:
 	now slutty is 0;
 	say "[randomdesc]";
+	say "[masterofsluts]";
 	say "Walking down the street, you find yourself staring at a naked male [one of]black[or]brown[or]multi-coloured[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]black studded white[at random] collar. Unfortunately, it's staring back at you!";
 
 to say slutydesc:
 	now slutty is 0;
 	say "[randomdesc2]";
+	say "[masterofslutsfe]";
 	say "Walking down the street, you find yourself staring at a naked female [one of]black[or]brown[or]multi-coloured[or]white[or]red[or]pink[or]yellow[or]light blue[at random] furry [slutname] with a [one of]black spiked[or]black studded white[at random] collar. Unfortunately, it's staring back at you!";
+	
+to say masterofsluts:		
+	if slutmaster is greater than 0:
+		repeat with y running from 1 to number of filled rows in table of random critters:	[puts dominator as lead monster...] 
+			choose row y in table of random critters;
+			if name entry is "Male Slut":
+				now monster is y;
+				break;
+		choose row monster from the table of random critters;
+		follow the cock descr rule;
+		follow the breast descr rule;
+		say "[defeated entry]";	
+
+to say masterofslutsfe:		
+	if slutmaster is greater than 0:
+		repeat with y running from 1 to number of filled rows in table of random critters:	[puts dominator as lead monster...] 
+			choose row y in table of random critters;
+			if name entry is "Female Slut":
+				now monster is y;
+				break;
+		choose row monster from the table of random critters;
+		follow the cock descr rule;
+		follow the breast descr rule;
+		say "[defeated entry]";	
 
 to say randomdesc: 
 	let T be a random number between 1 and 15;
@@ -176,15 +203,19 @@ to say cuntinc:
 		increase cunt length of player by 1;		
 		
 to say slutdef:
-	if slutprotection is greater than 0:
-		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut, but the prize isn't up yet.'  With that, the [slutname] laughs and falls unconscious.";
+	if massdomfightwin is 1:
+		say "exhausted the slut falls to the ground unconscious";
+	if slutmaster is greater than 0:
+		say "Feeling its masters presence, the [slutname] salutes to you before walking off to spread you influence further";
 	otherwise:	
 		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut.  Too bad they already infected you.'  With that, the [slutname] laughs and falls unconscious.";
 		infect "Male Slut";
 		
 to say slutydef:
-	if slutprotection is greater than 0:
-		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut, but the prize isn't up yet.'  With that, the [slutname] laughs and falls unconscious.";
+	if massdomfightwin is 1:
+		say "exhausted the slut falls to the ground unconscious";
+	if slutmaster is greater than 0:
+		say "Feeling its masters presence, the [slutname] salutes to you before walking off to spread you influence further";
 	otherwise:	
 		say "The [slutname]'s eyes go blank and says in a monitone voice, 'Congratulations on beating my slut.  Too bad they already infected you.'  With that, the [slutname] laughs and falls unconscious.";
 		infect "Female Slut";
@@ -237,7 +268,7 @@ When Play begins:
 	now cunt length entry is 7;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 100;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Slut tag";			[ Loot monster drops, ]
+	now loot entry is "slut tag";			[ Loot monster drops, ]
 	now lootchance entry is 45;		[ Chance of loot dropping 0-100 ]
 	
 Table of random critters (continued)
@@ -284,7 +315,7 @@ When Play begins:
 	now cunt length entry is 7;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 100;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Slut tag";			[ Loot monster drops, ]
+	now loot entry is "slut tag";			[ Loot monster drops, ]
 	now lootchance entry is 46;		[ Chance of loot dropping 0-100 ]	
 
 
@@ -309,7 +340,7 @@ now infect name entry is "Female Slut"; [ This should be exactly the same as you
 now heat cycle entry is 7; [ This is the number of days a heat "cycle" lasts, usually 7 ]
 now heat duration entry is 7; [ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.]
 now trigger text entry is "Your body becomes overcome with desire, to suck, to submit, to please your master."; [ This is the text that is written to the screen when the player comes into heat]
-now inheat entry is "[sluttyheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat riaises libido value by 5 every 3 hours. ]
+now inheat entry is "[sluttyheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 
 to say sluttyheat:  
 	increase libido of player by 5;
