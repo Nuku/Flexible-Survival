@@ -3731,8 +3731,10 @@ Instead of conversing the doctor matt:
 	otherwise if hp of doctor matt is 7:
 		if susan is visible:
 			say "'Excellent work. I will observe. You can proceed at whatever rate is comfortable. You are doing a great service for science,' says Matt as he raises a finger towards the sky.";
+			now deerhappy is 2;
 		otherwise:
 			say "'Poor news. The specimen escaped, went running off back towards the park. She probably went feral. Nothing to do about it now, just look out for her. Probably dangerous.";
+			now deerhappy is 1;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "doe":

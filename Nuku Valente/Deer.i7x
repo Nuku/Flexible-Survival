@@ -7,8 +7,8 @@ Deer by Nuku Valente begins here.
 Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
-deerdefeat is a number that varies.
 deerconsent is a number that varies.
+deerhappy is a number that varies.
 
 Susan is a person. "Susan, a bipedal deer.". The description of susan is "A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large plum sized balls contained in a creamy colored softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.".
 unusual creature is a situation. It is resolved.
