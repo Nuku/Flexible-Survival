@@ -308,7 +308,7 @@ name	desc	weight	object
 "soda"	"A can of some soda or another. Somehow, it is still cool to the touch"	1	soda
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A matress. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
-"Dog Milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
+"dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
 
 journal is a grab object. It is a part of the player. It is not temporary.
 cot is a grab object. It is a part of the player. It is not temporary.
