@@ -965,7 +965,7 @@ Instead of resolving a Twisted fruit grove:
 		otherwise:
 			say "You moan as the vines wrap around you as tightly as they have the newly trapped felinoid, his fight having been lost sometime during your own harsh battle. The vines cock like flowers invading your every orifice as they begin to cocoon your helpless body with their green leafy tendrils, anchoring you in place, unable to even lift a finger to escape.  You can feel the scent of the area invading your mind as your body continues to become more and plant like, your mind starting to fade as you realize that before much longer you will be more plant then animal, rooted here in the glade like several of the other strange plants. You struggle slightly in your viney bonds, but there is no one left to save you this time.  Your struggles slowly fade, as your mind fills with the strangely relaxing scent of the glade, and your body fills with the wonderful pleasure of the vines massaging your body. Soon you can[apostrophe]t even remember why you would want to struggle, or even why you would want to do anything other then relax here in your nice safe cocoon, your mind slowly fading completely as your new roots sink into the soil and your own new vines begin to entwine with those around you.";
 			now vinetrapped is 1;
-			decrease humanity by 100;
+			decrease humanity of player by 100;
 			now body of player is "Parasitic Plant";
 			now bodyname of player is "Parasitic Plant";
 			follow the turnpass rule;			
