@@ -183,6 +183,9 @@ to deerfy:
 			break;
 	infect;
 	follow the sex change rule;
+	
+instead of fucking the susan:
+	try conversing the susan;
 			
 instead of conversing the susan:
 	if deerconsent is 0:
