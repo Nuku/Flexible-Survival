@@ -570,7 +570,8 @@ to say hospquestpt3:
 to say hospquestpt4:
 	let dogmilkfound be 0;
 	repeat with x running through invent of player:
-		if x is "dog milk", increase dogmilkfound by 1;
+		if x matches the text "dog milk", case insensitively:
+			increase dogmilkfound by 1;
 	if dogmilkfound is 0:
 		say "     'I need you to get a sample, preferably its milk, from that large canine.  Its shemale attributes are unusual and I wish to determine what factor or factors may have made it different and unique.'";
 	if dogmilkfound > 0:
