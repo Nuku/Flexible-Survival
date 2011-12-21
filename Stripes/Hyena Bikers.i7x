@@ -25,9 +25,9 @@ Instead of resolving a Hyena Bikers:
 		if name entry is "Herm Hyena":
 			now monster is y;
 			break;
-	if hyg is 3 and the bodyname of player is "Herm Hyena":
+	if hyg is 4 and the bodyname of player is "Herm Hyena":
 		say "[ridetimecheck]";
-	otherwise if hyg is 3 and the facename of player is "Herm Hyena":
+	otherwise if hyg is 4 and the facename of player is "Herm Hyena":
 		say "[ridetimecheck]";
 	otherwise:
 		say "[bikeattack]";
