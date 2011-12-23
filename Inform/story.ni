@@ -3869,7 +3869,7 @@ Instead of conversing the doctor matt:
 		increase charisma of player by 2;
 		increase morale of player by 4;
 		say "[bold type]Your Intelligence, Perception and Charisma are all increased by 2.[roman type][line break]";
-	if "Automatic Survival" is listed in feats of player:
+	if hp of doctor matt is 12 and "Automatic Survival" is listed in feats of player:
 		now hp of doctor matt is 14;					[Supply Run skipped entirely]
 	if hp of doctor matt is 12 and level of doctor matt minus turns is less than 16:
 		say "     'I don't currently have any tasks for you,' the doctor states.  'Please check back later after I've had a chance to take stock of our situation.'";
