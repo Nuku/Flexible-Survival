@@ -369,7 +369,12 @@ after going to the Grey Abbey Library when generatorfixing is 1:
 	say "Returning to the library after your trip to the stables, you spend a while hunting through several of the electrical texts there, and while they do appear to be helpful, strangely enough the library appears to be lacking a 'Connecting large generators to old wiring for dummies.' Book. Which just goes to show you the sad state of literature in this current age, you would think no one really expected to be overrun with strange nanomachines which turn people into sex crazed monsters or something, and failed to prepare adequately for the situation. Which is rather unfair when you think about it, though you do find quite a bit of helpful information here anyways, but perhaps you could find some more specialized information out in the city itself?";
 	now generatorfixing is 2;
 	try looking;
-	
+
+after going from the Grey Abbey Library when generatorfixing is 1:
+	say "Returning to the library after your trip to the stables, you spend a while hunting through several of the electrical texts there, and while they do appear to be helpful, strangely enough the library appears to be lacking a 'Connecting large generators to old wiring for dummies.' Book. Which just goes to show you the sad state of literature in this current age, you would think no one really expected to be overrun with strange nanomachines which turn people into sex crazed monsters or something, and failed to prepare adequately for the situation. Which is rather unfair when you think about it, though you do find quite a bit of helpful information here anyways, but perhaps you could find some more specialized information out in the city itself?";
+	now generatorfixing is 2;
+	try looking;
+
 Section 8-  technicalbookstore [Fancy quest part 3]
 
 technicalbookstore is a situation.
