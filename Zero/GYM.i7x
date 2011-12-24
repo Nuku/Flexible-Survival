@@ -23,14 +23,14 @@ corgitalk is a number that varies. corgitalk is usually 0.
 Instead of resolving Meeting the corgi:
 	if corgitalk is 1:
 		challenge "Male Dominator";
-		say "[line break] before the dominator can get very far, a small furry missile rams into him, and begins to beat the life out of him.";
-		say "do you attack the [']small furry missile['] while its distracted?";
+		say "[line break] Before the dominator can get very far, a small furry missile rams into him, and begins to beat the life out of him.";
+		say "Do you attack the [']small furry missile['] while it's distracted?";
 		if the player consents:
-			say "Deciding that such a aggressive creature could become a problem latter on try to knock it out from behind [line break] the now relieved corgi, blocks your attacks with ease and glares at you 'and here I thought you weren’t stupid, guess I was wrong', before you can do anything else the corgi slams a fist into your jaw knocking you out,[line break] leaving you stunned but conscious, leaving a very ticked off corgi to walk off";
+			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind [line break] The now relieved corgi blocks your attacks with ease and glares at you. 'And here I thought you weren’t stupid, guess I was wrong!' Before you can do anything else the corgi slams a fist into your jaw, knocking you out,[line break] leaving you stunned but conscious, and leaving a very ticked off corgi to walk off.";
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
 		otherwise:
-			say " after the dominator is reduced to a quivering mess, [']the small fury missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'hey there thanks for holding him off stupid [slutname] tried to steel my bag almost got a way to, dint you, ya little fucker?' he says before stomping hard onto the [slutname][apostrophe]s groin  resulting in a pained shout of the ,now, awake dominator 'anyway names Max, glad to see another sane one round here.....you are sane right' quickly nodding the corgi gives a sigh and continues on 'just had to be sure , lately these [apostrophe]dominators[apostrophe]' the corgi says sarcastically 'have been trying everything to get me for the last week or so, and its getting pretty annoying, well whatever, if you drop by the gym any time soon give me a shout , there[apostrophe]s a bunch of us hold up there if ya need any help ' the corgi then walks off dragging a very distressed [slutname] behind him[line break]";
+			say " After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, din't you, ya little fucker?' he says before stomping hard onto the [slutname][apostrophe]s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here.....you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure , lately these [apostrophe]dominators[apostrophe]' the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout , there[apostrophe]s a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
 			Increase corgitalk by 1;
 			now Meeting the corgi is resolved;
 
@@ -49,29 +49,29 @@ The conversation of Max is { "[Corgitalking]" };
 
 To say Corgitalking:
 	if location of player is Old Lounge:
-		say "do you want to fight the master? (y) or get out of here (n)";
+		say "Do you want to fight the master? (y) or get out of here (n)";
 		if the player consents: 
-			say "you sure your ready to fight?";
+			say "You sure you're ready to fight?";
 			if the player consents: 
-				say "nodding the corgi begins walking towards the sound of moaning, and you quickly follow behind him";
+				say "Nodding, the corgi begins walking towards the sound of moaning, and you quickly follow behind him.";
 				now corgihelp is 1;
 				challenge "The Mistress";
 			otherwise:
-				say "Just give me a shout when your ready ";	
+				say "Just give me a shout when you're ready. ";	
 			stop the action;		
 		otherwise:
-			say "you sure your ready to go?";
+			say "You sure you're ready to go?";
 			if the player consents: 
-				say "although you do run into a lot of enimes allong the way, you do eventually get out of the demented place and to the relitive safty of the mall";
+				say "Although you do run into a lot of enemies along the way, you do eventually get out of the demented place and to the relative safety of the mall";
 				move Max to Mall Atrium;	
 				move player to Mall Atrium;	
 				stop the action;
 			otherwise:
-				say "Just give me a shout when your ready to go";	
+				say "Just give me a shout when you're ready to go.";	
 			stop the action;	
 	otherwise if location of player is Mall Atrium:  [start of normal converce]
-		say "hey, glad we got out of there [if Mistresswon is 1]and we got rid of that demented creature too![end if]";
-		say "i[']m too tired to go anywhere now, but if you come back latter, i[']l show you a location you’ve never seen before";
+		say "Hey, glad we got out of there [if Mistresswon is 1]and got rid of that demented creature too![end if]";
+		say "I[']m too tired to go anywhere now, but if you come back later, I[']ll show you a location you’ve never seen before";
 	otherwise:
 		say "now how did you get here?";
 
