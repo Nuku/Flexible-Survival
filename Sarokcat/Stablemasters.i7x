@@ -4,7 +4,7 @@ Stablemasters by Sarokcat begins here.
 
 Section 1- Masters office
 
-Masters office is a room. It is fastravel. [in order to make something only found through a quest or revealed, put 'It is private.' here as well]
+Masters office is a room. It is fasttravel. [in order to make something only found through a quest or revealed, put 'It is private.' here as well]
 
 The description of Masters office is "This large and rather spacious room was once the 'office' of the owner of the stables, however now it is your new room and the centerpiece of your new kingdom.  The room itself was obviously once a suite for VIPs and dignitaries and is quite well furnished, though the previous stablemaster obviously did plenty of redecorating during his time here. There are now several large mattresses and piles of cushions around the area, as well as a number of rather nice paintings and hangings adorning the walls, and thick plush carpeting covers the floor which actually makes things quite comfortable for your hooved feet.  Several new furnishings also are now in the public side of the large room however, a functional new desk with an inbox for reports that affect the stables, as well as several overstuffed chairs sized for your new equine staff when you decide to meet them here. Although perhaps your favorite new furnishing is the former stablemaster herself, the lovely little black equine looking especially fetching in her new sexy slave collar as she kneels off to the side of the room.";
 Slutslave is in Masters office.
@@ -29,7 +29,7 @@ The description of Slutslave is "Your sexy black mare slave is kneeling meekly i
 The conversation of Slutslave is { "[Slutslavetalking]" };
 
 To say Slutslavetalking:
-	if Slutslavetalk is0:[Normal short messages the npc will say each time you talk to them]
+	if Slutslavetalk is 0:[Normal short messages the npc will say each time you talk to them]
 		say "[one of]'Welcome back master!'[or]'You make such a handsome owner.'[or]'I don[apostrophe]t know how a little slut like me could have ever thought to challenge someone as masterful as you...'[or]'Has master decided on a name for his slut yet?'[or]'Your slave never knew how wonderful being a pet could be before, thank you so much for showing me!'[or]'I love my new collar so much...' She moans happily.[or]Your slave just stares up at you adoringly from her kneeling position.[at random]";
 
 

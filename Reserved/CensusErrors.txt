@@ -1,4 +1,5 @@
 d - non-folder found where author folders should be<br>
 Story.ni by Flexible Society Main File - title contains a full stop<br>
 Story.ni by Inform - title contains a full stop<br>
+Harold.i7x by Sarokcat - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is ' Harold by Sarokcat')<br>
 Template For FS.i7x - non-folder found where author folders should be<br>
