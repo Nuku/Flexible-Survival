@@ -11,7 +11,13 @@ LastDaisyfucked is a number that varies. LastDaisyfucked is usually 250.
 Daisyfucked is a number that varies. Daisyfucked is usually 0.
 
 Daisy is a woman.[or woman]
-The description of Daisy is "Standing off in one corner of the room and trying to catch your attention without the other mares noticing is a rather youngish looking maregirl. A closer look at the mare shows that she is still only partially transformed, though her body is definitely showing the signs of her equine transformation. The tight electric blue g-string she is wearing shows off her newly enlarged cunt and new distinct cameltoe, and her face is almost completely equine and pushed out  into a proper muzzle while her ears have elongated into points and settled into their new position on top of her head. Her legs have also changed, although it is clear they are not quite complete yet, as they are longer and thinner and her heels have shifted upwards, forcing her to walk on her stiffening toes, they are well on their way to being proper digigrade legs like the rest of the mares.  Her half fearful half lust crazed look as she stares at you desperately makes you shudder as you realize how easily you could end up in her position.";
+The description of Daisy is "[Daisydescribing]";
+
+to say Daisydescribing:
+	if Daisy is in the Masters office:
+		say "A sexy brown and white dappled mare looks up at you eagerly from the corner of your office, her adoring look makes you grin with amusement, and the mare blush. Her lithe sexy form is now that of a perfectly shaped mareslut, her fur finely brushed and her blue eyes nice and bright, though unlike most of the other maresluts, she seems to have found a french maid costume somewhere, or at least a few scraps of cloth suggestive of one. Which she wears proudly as she goes around tidying up the masters office while you watch.";
+	otherwise:
+		say "Standing off in one corner of the room and trying to catch your attention without the other mares noticing is a rather youngish looking maregirl. A closer look at the mare shows that she is still only partially transformed, though her body is definitely showing the signs of her equine transformation. The tight electric blue g-string she is wearing shows off her newly enlarged cunt and new distinct cameltoe, and her face is almost completely equine and pushed out  into a proper muzzle while her ears have elongated into points and settled into their new position on top of her head. Her legs have also changed, although it is clear they are not quite complete yet, as they are longer and thinner and her heels have shifted upwards, forcing her to walk on her stiffening toes, they are well on their way to being proper digigrade legs like the rest of the mares.  Her half fearful half lust crazed look as she stares at you desperately makes you shudder as you realize how easily you could end up in her position.";
 
 
 The conversation of Daisy is { "[Daisytalking]" };
@@ -50,6 +56,8 @@ Instead of fucking the Daisy:
 		stop the action;
 	otherwise:
 		say "'Sorry, but I have to pass on that, while it would be kind of nice to be used like a proper mare, i haven[apostrophe]t managed to finish my training yet, and they say I can[apostrophe]t work with any customers until I know how to properly service them.' Daisy says with a shy smile, 'Though maybe you could come back once they say I am ready and you could ride me then?' She continues as she looks at you hopefully."; 
+
+
 
 
 Daisy ends here.

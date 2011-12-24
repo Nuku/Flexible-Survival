@@ -9,18 +9,13 @@ Section 1 - Monster Responses
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
 to say sphinx attack:
-	say "'wow you got here how did that happen.'";
-	wait for any key;
-	if cocks of player is greater than 0:
-		say "yay";
-		infect "sphinx";
-	otherwise:
-		say "yowza";
-		infect "sphinx";
+	say "'Not so tough now are you, silly little thief.' Valerie says with a grin as she knocks you backwards, her paw reaching out and deftly swiping the item you were trying to steal back from you, 'Now I am going to go put this back on display, and we will forget this little incident ever happened... because I don[apostrophe]t think even somone as silly as you will be making the same mistake twice now will they?' The sphinx asks with amusement, before vanishing off down the museum halls, likely to return the item to its proper place before she returns to her perch at her desk... Well at least you are still alive and allowed in the museum, though trying again certainly seems a bit dangerous right now...";
+	infect "sphinx";
+
 
 
 To say sphinx loss:
-	say "how the heck did you manage to get this, you are just that awesome I guess.'";
+	say "Valerie groans with pain as she stumbles backwards and crashes into one of the museum displays, her large wings becoming tangled in the display and her leonine flanks heaving with effort as she tries to extricate herself. Taking advantage of the situation, you quickly back off and look for a way out of the museum... just knowing that coming back here is going to be rather awkward...'";
 
 Section 2 - Monster Insertion
 
@@ -32,10 +27,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "sphinx"; [Name of your new Monster]
-	now attack entry is "[one of]She riddles you this and that till you cry.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She riddles you this and that till your head spins.[or]the sphinx lashes out at you with he powerful leonine paws![or]Valerie barrels into you, sending you both crashing to the ground![or]the enraged sphinx leaps at you and rakes you with her claws![or]You duck out of the way of Valeries leonine claws only to be sent flying as one of her powerful wings smashes into your side.[or]Catching your eyes, Valerie stares at you intimidatingly, and your head starts to swim for a minute before you manage to pull yourself back together.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[sphinx loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[sphinx attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "The sphinx is watching you!!";[ Description of the creature when you encounter it.]
+	now desc entry is "Valerie comes charging down the halls of the museum, her wings half spread and a look of rage on her face as she charges forward on her powerful and sharply clawed leonine paws. 'You put that back you thief!' She cries out with a roar as she leaps at you!";[ Description of the creature when you encounter it.]
 	now face entry is "Mostly human face, with slitted cat pupiled eyes and several slight feline features lending a feral cast to your"; [Your have a (your text) face."] 
 	now body entry is "long and lean, you have a feral lions body starting just below the shoulders, your hips and lower legs almost indistinquishable from those of a great cat, though your arms are still more human then beast, with clawed fingers instead of paws,Along your back rest a pair of soft feathered wings, the powerful muscles in them still not quite strong enough to let you use them to fly.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]soft leonine fur[or]tan furred[or]soft lion furred[at random]";[ skin Description, format as the text "You have (your text) skin"] 
@@ -46,16 +41,16 @@ When Play begins:
 	now skin change entry is "soft lion fur begins to grow out of your skin, your skin seeming to itch from within as it pushes itself out to cover your entire lower body ."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it tightens and powerful muscles shift around underneath the skin, and your rear seems to lengthen as a long lionlike tail presses its way out of your body, causing you to shiver in pleasure at the feel of the air over your new appendage as it lashes behind you eagerly."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it tapers and draws to a point, soft barbs appearing along its length as it takes on a more lionlike appearance, the skin shifting around near your groin to wrap it in a proper feline sheath and draw it up close to your body, where it can wait eagerly until an opprotunity to use it presents itself."; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 16;
-	now dex entry is 16;
+	now str entry is 18;
+	now dex entry is 18;
 	now sta entry is 12;					
 	now per entry is 20;
-	now int entry is 24;
+	now int entry is 28;
 	now cha entry is 16;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 100;			[ How many HP has the monster got? ]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 14;			[Amount of Damage monster Does when attacking.]
+	now lev entry is 20;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 18;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Foyer";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 9;		[ Length infection will make cock grow to if cocks]
@@ -63,11 +58,11 @@ When Play begins:
 	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
 	now breast size entry is 4;		[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
+	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
+	now loot entry is "Chipped tooth";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 
 when play ends:
@@ -91,3 +86,4 @@ when play ends:
 
 [ Edit this to have the correct Name as wall]
 sphinx ends here.
+

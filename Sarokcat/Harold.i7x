@@ -1,4 +1,4 @@
-Harold by Sarokcat begins here.
+ Harold by Sarokcat begins here.
 
 "Adds a npc to Flexible Survival with a well stocked bar and a problem..."
 
@@ -42,6 +42,15 @@ To say Haroldtalking:
 		say "'Welcome back! How did the search go?' Harold greets you enthusiastically as you settle down at the bar, though the unicorn[apostrophe]s happy demeanor quickly is replaced by a more somber one as you relate what you found. After explaining that his friend obviously headed out into the city in search of much needed supplies, and never managed to return, you inform the unhappy unicorn that it is likely some of the creatures in the city managed to get their hands on her, and she is quite possibly just as sex crazed as any other member of whatever species she ended up as.  Seeing the dejected look on the equine barkeepers face, you sigh and say you will continue to keep an eye out for her in the city, though it isn[apostrophe]t likely you will recognize her if she has changed too much.  Harold nods, and promises to think about the problem for a bit to see if he can come up with something to help you find her, before the powerful unicorn goes back to tending the bar.";
 		now tattoohunter is 3;
 		stop the action;
+	if hellgatherquest is 4;
+		if tattoohunter is 0:
+			say "'Hey there friend, what can I do for you?' The unicorn barkeep asks as you approach, only to sigh as he skims the list of ingredients you hand him. 'Well, yeah I have these items actually... but they weren[apoostrophe]t easy to acquire either, tell you what... you help me find out what happened to my friend, and I[apostrophe]ll let ya have the stuff you need, what do you say?' The barkeep asks hopefully, and you sigh and nod in agreement, much to the unicorns amusement.";
+			now Haroldtalk is 1;
+			stop the action;
+		if tattoohunter is greater than 2;
+			say "'Well friend, just because things didn[apostrophe]t quite work out the way I would have liked them to doesn[apostrophe]t mean I don[apostrophe]t owe ya for all your help looking for my friend, why don[apostrophe]t ya show me that list of yours there, and we can see what i[apostrophe]ve got.' The unicorn barkeep says with a broad smile and a nod of his head as you approach him about the ingredients, He wanders off into a narrow back room for a while, only to return with a small pouch full of some unknown items. 'Well here ya go, these should be what ya want, gave ya all of the stock I was saving since I didn[apostrophe]t know how much you would need, and if you need anything else, you be sure to come visit Harold ok?' The rather saucy Unicorn says with a sly wink as you tuck the pouch away and prepare to head back to Nermine with your findings.";
+			now hellgatherquest is 5;
+			stop the action;
 	if Haroldtalk is 2:[Normal short messages the npc will say each time you talk to them]
 		say "'[one of]No I wasn[apostrophe]t a virgin, so that can[apostrophe]t be why I ended up this way.' Harold says with some exasperation as you open your mouth to talk to him, making you blink in surprise.[or]Try some of the drinks, we make em all here!' Harold says proudly.[or]I wish some of the patrons would get back with those supplies I need, we are running low on some of the 'special ingredients' for some of the drinks..'[or]See Tristian over there? He really helped get this place going right after things went to hell, maybe you should go talk to him sometime about it.'[or]I was a bartender before all this happened, different bar of course, but I have to admit I like this venue better, lots of eye candy at least!'[or]Eat, Drink, Party! For tomorrow we may be overrun! Or something like that anyways.'[or]Looking to order a drink? Just look at the bar to see what we have available, and then order it. [or]It[apostrophe]s a good thing I don[apostrophe]t need to find virgins to play with, given the state the city is in now, I[apostrophe]m not sure there are any left!'[or]We get all types around here now, I have to say, it definitely makes bartending more interesting.[or]We occassionally have some trouble with the roaming beasts trying to get in here or attack people, but there are more then enough of us both here and in the apartment building next door to keep the place safe.'[or]If you need a place to crash sometime, we kind of took over the apartment building next door, blocked off the front access so no one can get in that way, and the side entrance we attached to the club.  That[apostrophe]s where most of the people here end up when they need to relax, it also has a good basement for the still.' Harold says with a chuckle.[or]If ya need help with something, you are probably in the wrong place, if you need a damn good time and a drink or two, then you are definitely in the right place.'[or]'We burned through most of the stocks of standard booze pretty fast at first, till we figured out how to mix them up to make them last longer, you should let us know how we did after trying some of the drinks.'[at random]";
 
@@ -63,7 +72,7 @@ Instead of fucking the Harold:
 			infect "Unicorn";
 			stop the action;
 		otherwise:
-			say "'Heh sorry there man, while I may not necessarily need virgins or anything, I am still a bit more comfortable with something with a pussy, if ya get my meaning. Though since you did me a favor and seem interested, heres a drink on me... or of me..' The unicorn stallion says with a grin as he sets a glass in front of you, the strange enticing aroma of the strange liquor going right to your head even as you toss it back. The spicy sweet taste and the kick of the alchol makes you gasp, even as a happy lust filled fog fills your brain, and you find yourself staring happily at the play of light across the stallions handsome horn even as you set your drink down";
+			say "'Heh sorry there man, while I may not necessarily need virgins or anything, I am still a bit more comfortable with something with a pussy, if ya get my meaning. Though since you did me a favor and seem interested, heres a drink on me... or of me..' The unicorn stallion says with a grin as he sets a glass in front of you, the strangely enticing aroma of the strange liquor going right to your head even as you toss it back. The spicy sweet taste and the kick of the alchol makes you gasp, even as a happy lust filled fog fills your brain, and you find yourself staring happily at the play of light across the stallions handsome horn even as you set your drink down";
 			infect "Unicorn";
 			stop the action;
  	otherwise:
@@ -361,4 +370,5 @@ carry out Tequiladrinking:
 		now lastDrinkserved is turns;
 
 Harold ends here.
+
 
