@@ -14,7 +14,7 @@ Feline_attached is a number that varies;
 
 
 to say cat att:
-	say "[one of]The Small Felinoid launches an attack, claws and teeth flying![or]The diminutive lioness attacks you, tripping you down and raking at your groin with her razer sharp claws.[at random]";
+	say "[one of]The Small Felinoid launches an attack, claws and teeth flying![or]The diminutive lioness attacks you, tripping you down and raking at your groin with her razor sharp claws.[at random]";
 
 to say lion att:
 	say "[one of]The big cat-man roars and lashes out with talon like retractable claws![or]In a show of viscousness the lion man leaps at your neck, clamping down his jaw. Only by poking at his eyes do you force him to let go.[at random]";
@@ -106,16 +106,16 @@ When Play begins:
 	now defeated entry is "[feline def]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[feline vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[feline desc]";[ Description of the creature when you encounter it.]
-	now face entry is "the cute head of a small lioness.";[ Face description, format as the text "Your face is (your text)"] 
-	now body entry is "a female lioness. You are only about four feet tall, though you have huge breasts for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down into your fur if it isn't being drunk constantly.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[if looknow is 1]tawny brown fur, covering pliable[otherwise]tawny brown fur covered[end if]";[ skin Description, format as the text "You have (your text) skin"] 
+	now face entry is "the cute head of a small lioness";[ Face description, format as the text "Your face is (your text)."] 
+	now body entry is "a female lioness. You are only about four feet tall, though you have huge breasts for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down into your fur if it isn't being drunk constantly";[ Body Description, format as the text "Your Body is (your text)."] 
+	now skin entry is "[if looknow is 1]tawny brown fur, covering pliable[otherwise]tawny brown fur covered[end if]";[ skin Description, format as the text "You have (your text) skin."] 
 	now tail entry is "You have a long tufted  lion's tail.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "leonine";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "your head shrinks and, as you gasp, you notice your voice has lightened, gaining you the face of a small female feline. For some reason, the scents of the groins of all around you become enticing and you can feel arousal building"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "urge to giggle becomes powerful as you shrink and gain the softness of a small lioness"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "tawny fur explodes over your chest, spreading rapidly across your front  and back, slightly lighter on the front."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it shrinks even as it becomes rounder, Pleasantly grabbable. It is covered in tan fur, you have a female lion's butt."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "you no longer think of yourself as male."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "your head shrinks and, as you gasp, you notice your voice has lightened, gaining you the face of a small female feline. For some reason, the scents of the groins of all around you become enticing and you can feel arousal building"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "urge to giggle becomes powerful as you shrink and gain the softness of a small lioness"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "tawny fur explodes over your chest, spreading rapidly across your front  and back, slightly lighter on the front"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it shrinks even as it becomes rounder, Pleasantly grabbable. It is covered in tan fur, you have a female lion's butt"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "you no longer think of yourself as male"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 6;
 	now dex entry is 21;
 	now sta entry is 8;					

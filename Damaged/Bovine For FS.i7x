@@ -23,14 +23,14 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 to say cow vict:
 	if Mooing < 1:
-		say "The cow grabs you and pulls you closer, sitting down in the process. Its strong bovine arms lift you up, pressing your lips to one engorged teat, 'Drink little heifer, sate yourself.' it says softly, motherly.[one of]The smell of the milk calls to your thirst and[or]One little drop of milk leaks from the engorged teat and it drips down onto your lip, without thinking your tongue snakes out and pulls it in to your mouth. Gasping[at random] you push your head forward, latching onto the nipple with your lips and begin sucking happily at the breast. 'See, its not so bad.' the cow says softly again, rocking you back and fourth in her arms as you drink.";
+		say "The cow grabs you and pulls you closer, sitting down in the process. Its strong bovine arms lift you up, pressing your lips to one engorged teat, 'Drink, little heifer.  Sate yourself,' it says softly, motherly[one of].  The smell of the milk calls to your thirst and[or].  One little drop of milk leaks from the engorged teat and it drips down onto your lip, without thinking your tongue snakes out and pulls it in to your mouth.  Gasping,[at random] you push your head forward, latching onto the nipple with your lips and begin sucking happily at the breast. 'See, it's not so bad.' the cow says softly again, rocking you back and fourth in her arms as you drink.";
 		now thirst of player is 0;
 		now hunger of player is 0;
 		infect;
 		if Mooing < 8:
 			increase Mooing by 1;
 	otherwise:
-		say "[one of]The cow sits down and you run into her waiting arms, mouth reaching to find a spare nipple.[or]You see the cow smile down at you, 'You wanted to play a little first. Come on now, its time for your meal.' she moos softly to you and you race over, leaping into her waiting arms to grip a teat and begin sucking.[at random] The flood of pure contentment as the milk begins to flow into your throat causes you to grow sleepy, soon causing you to fall asleep completely, still drinking from her.[line break]You wake up, stomach bulging slightly, the taste of her milk still in your mouth. You let out a breath that sounds more like a, 'Moo' and wander off.";
+		say "[one of]The cow sits down and you run into her waiting arms, mouth reaching to find a spare nipple.[or]You see the cow smile down at you, 'You wanted to play a little first. Come on now, it's time for your meal,' she moos softly to you and you race over, leaping into her waiting arms to grip a teat and begin sucking.[at random] The flood of pure contentment as the milk begins to flow into your throat causes you to grow sleepy, soon causing you to fall asleep completely, still drinking from her.[line break]You wake up, stomach bulging slightly, the taste of her milk still in your mouth. You let out a breath that sounds more like a [']Moo['] and wander off.";
 		now thirst of player is 0;
 		now hunger of player is 0;
 		infect;
@@ -45,7 +45,7 @@ to say infect:
 to say bull vict:
 	if CowKiller > 0:
 		if cunts of player > 0:
-			say "The big bull grunts fiercely, breathing hard after its maddened fight. It prods you with its sharp horns until you huddle on all fours.[line break]Without any warning you feel the animals huge member thrust into you, feeling like it will split you in half. Your cries, when you hear them, sound almost the same as the Cow you remember killing as you try in vain to brace yourself against the crazed beasts rutting. It makes a bellowing cry as you feel its burning seed pour into you, filling you out, making you look if not a little than very pregnant.[line break]Finally done with you, and calming after its release, it wanders off to graze.";
+			say "The big bull grunts fiercely, breathing hard after its maddened fight. It prods you with its sharp horns until you huddle on all fours.[line break]Without any warning, you feel the animal's huge member thrust into you, feeling like it will split you in half. Your cries, when you hear them, sound almost the same as the cow you remember killing as you try in vain to brace yourself against the crazed beasts rutting. It makes a bellowing cry as you feel its burning seed pour into you, filling you out, making you look, if not a little, then very pregnant.[line break]Finally done with you, and calming after its release, it wanders off to graze.";
 			say "It seems the scent of your fucking has covered completely whatever smell that remained on you of the bovine cows death at your hands.";
 			infect;
 			now CowKiller is 0;
@@ -164,16 +164,16 @@ When Play begins:
 	now defeated entry is "[bovine defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[bovine vict]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[bovine desc]";[ Description of the creature when you encounter it.]
-	now face entry is "drawn forward into a very cow-like muzzle, ending at a large damp nose. Large ears flick back and forward above your head idly.";[ Face description, format as the text "Your face is (your text)"] 
-	now body entry is "a cross between a bovine and a humans, large splayed hips lead down to hoofed feet.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[if looknow is 1]a thick mat of rough fur covering your body, patterned like a friesian cow over a thick[otherwise]cow patterned, furred[end if]";[ skin Description, format as the text "You have (your text) skin"] 
+	now face entry is "drawn forward into a very cow-like muzzle, ending at a large damp nose. Large ears flick back and forward above your head idly";[ Face description, format as the text "Your face is (your text)."] 
+	now body entry is "a cross between a bovine and a humans, large splayed hips lead down to hoofed feet";[ Body Description, format as the text "Your Body is (your text)."] 
+	now skin entry is "[if looknow is 1]a thick mat of rough fur covering your body, patterned like a friesian cow over a thick[otherwise]cow patterned, furred[end if]";[ skin Description, format as the text "You have (your text) skin."] 
 	now tail entry is "A thin, almost useless cow tail extends down over your buttocks, its only use seems to be to scare flies away.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "heavy, bovine,";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it draws forward, flowing into a large blunt cows muzzle even as your ears migrate up your head and stretching out to have a very bovine appearance. Slow thoughts begin to slowly push away your present needs. You find yourself mooing softly under your breath."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "grows and stretches, bones growing hugely into the frame of an cow beast, forcing your muscles and posture to follow."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it thickens and sprouts a pattern of black and white hair, slowly merging together into a very cow-like appearance."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it stretches and splays around new bones, forming up the wide hips of a cow."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it fills with power but not need, you almost wonder what this particular infection has in store for you."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock entry is "bovine";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face change entry is "it draws forward, flowing into a large blunt cows muzzle even as your ears migrate up your head and stretching out to have a very bovine appearance. Slow thoughts begin to slowly push away your present needs. You find yourself mooing softly under your breath"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "grows and stretches, bones growing hugely into the frame of a cow beast, forcing your muscles and posture to follow"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it thickens and sprouts a pattern of black and white hair, slowly merging together into a very cow-like appearance"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it stretches and splays around new bones, forming up the wide hips of a cow"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it fills with power but not need, you almost wonder what this particular infection has in store for you"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 22;
 	now dex entry is 8;
 	now sta entry is 18;					
@@ -200,7 +200,7 @@ When Play begins:
 
 Section 3 - Monster Heat
 
-[ IMPORTANT READ ME  - Thiss section is compleately optional. if you do NOT want to go through the trouble of adding a particular heat text of events to your creature, just delete between the two marker comments, for clarity i have included the German shepard entry. +++++]	
+[ IMPORTANT READ ME  - This section is compleately optional. if you do NOT want to go through the trouble of adding a particular heat text of events to your creature, just delete between the two marker comments, for clarity i have included the German shepard entry. +++++]	
 [ +++++ ]
 
 Table of infection heat (continued)

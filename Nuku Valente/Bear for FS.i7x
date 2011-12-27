@@ -86,11 +86,11 @@ When Play begins:
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
 
 when play ends:
-	if bodyname is "Brown Bear":
+	if bodyname is "Bear":
 		if humanity of player is less than 10:
 			say "You amble off into the parkland, only occasionally to reappearing to scare the hell out of anyone still foolish enough to try camping.  Occasionally you leave signs of your passing in the form of rifles twisted into pretzels and tales from horrified hunters that have been both attacked and abused.  Seeing you are no threat unless threatened, you are left to your own devices.";
 		otherwise:
-			say "Your body shape strongly inclines you to seek an outdoor life.  Your resourcefullness, hardiness and aptitude are noted and your kind are soon recognised as excellent park warden material. Despite often being posted to wildeness areas you are seldom left completely alone for long as bears begin to build an increasing fan base amongst both the infected and the more [one of] adventurous[or] deviant[at random] uninfected.";
+			say "Your body shape strongly inclines you to seek an outdoor life.  Your resourcefullness, hardiness and aptitude are noted and your kind are soon recognised as excellent park warden material. Despite often being posted to wildeness areas you are seldom left completely alone for long as bears begin to build an increasing fan base amongst both the infected and the more [one of]adventurous[or]deviant[at random] uninfected.";
 			
  Table of Game Objects(continued)
 name	desc	weight	object

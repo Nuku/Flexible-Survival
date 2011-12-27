@@ -166,7 +166,7 @@ Instead of resolving a Strip Bar:
 			say "     You go off, deciding to find a safer place to search.";
 			increase score by 1;
 		now stripbarcounter is 2;
-	if stripbarcounter is 2:
+	otherwise if stripbarcounter is 2:
 		say "     You come to a third strip bar tucked into secluded part of this seedy part of town.  It seems to have faired relatively well, with only minor damage.  After a cautious glance inside, you don[apostrophe]t see any signs of trouble.  Do you enter?";
 		if player consents:
 			say "[stripbarsearch]";
@@ -246,7 +246,7 @@ when play begins:
 
 Instead of resolving a Evangelist:
 	say "     While trying to cross between stopped cars at a large intersection, you are stopped by the sound of someone climbing onto a car.  Still hunkered down, you see a unchanged human.  Unshaven for several days and dressed in dirty clothes, he smells strongly of alcohol.  He is wild-eyed and waves a bible around as he start yelling at no one.  He goes on incoherently about sinners, Babylon, bedding down with animals, damnation and so forth.  You try to calm him down, but he will have none of it.  Clearly overwrought by witnessing the transforming populous from his hiding spot, he[apostrophe]s gone off the deep end.  From some of his rambling, you gather he[apostrophe]s always been upset by the lascivious nature of the neighbourhood around his home.";
-	say "     Before you can get him to be quiet long enough to talk, it[apostrophe]s too late.  Drawn by the ruckus, the nearby monsters have taken notice and approach the intersection.  Seeing an unchanged human, they go ballistic and charge forward.  With you between them, you are forced to stuggle against the maddened tide of lustful monsters.[line break]";
+	say "     Before you can get him to be quiet long enough to talk, it[apostrophe]s too late.  Drawn by the ruckus, the nearby monsters have taken notice and approach the intersection from all sides.  Seeing an unchanged human, they go ballistic and charge forward.  With you between them, you are forced to stuggle against the maddened tide of lustful monsters.[line break]";
 	fight;
 	say "     Looking up during a brief moment of respite, you see the would-be evangelist swinging his hardcover bible like a club, still screaming incessantly about the corruption of the flesh.  Madness has given him strength and he manages to keep the monsters from climbing onto the car roof.  The fact that many of the second ring of monsters around him are trying to mate those closer help him as well.  Before you can consider whether to push forward to help him or try to make your escape, you are drawn into another fight.[line break]";
 	fight;

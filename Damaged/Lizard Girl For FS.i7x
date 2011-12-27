@@ -109,17 +109,17 @@ When Play begins:
 	now attack entry is "[one of]She rakes you with her sharp claws.[or]A spinning scaled form precludes the tail that smacks into your face, knocking you down.[or]Laughing the reptile lances her head forward to bite you on the arm[at random][line break][lizgirl check angry]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[lizgirl defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[lizgirl attack]"; 
-	now desc entry is "[lizgirl desc]";[ Description of the creature when you encounter it.]
-	now face entry is "longer and thinner as soft dark colored scales cover your short muzzle, lending your ear less features a very reptilian air.";[ Face description, format as the text "Your face is (your text)"]
-	now body entry is "compact and solid, yet showing off every curve to perfection, heavy compact muscles belay strength despite their small representation.";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "beautiful reptilian scaled";[ skin Description, format as the text "You have (your text) skin"]
+	now desc entry is "[lizgirl desc]";	[ Description of the creature when you encounter it.]
+	now face entry is "longer and thinner as soft dark colored scales cover your short muzzle, lending your ear less features a very reptilian air";	[ Face description, format as the text "Your face is (your text)."]
+	now body entry is "compact and solid, yet showing off every curve to perfection, heavy compact muscles belay strength despite their small representation";[ Body Description, format as the text "Your Body is (your text)."]
+	now skin entry is "beautiful reptilian scaled";	[ skin Description, format as the text "You have (your text) skin."]
 	now tail entry is "Long and plump, your lizard-like tail is solid mass of muscle.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "human shaped";[ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it draws forward a little, a reptilian muzzle forming as your teeth reshape into delicate sharp points."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "feel the tingling radiate outwards, muscles, bones and organs shifting and rearranging."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "a wave of scales of seemingly random colors pours over you. Yet as they thicken and interlock you notice a strangely beautiful pattern emerge."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your cheeks are pulled in and tight."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it feels wrong, as though She had meant it just as a means to an end."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock entry is "human shaped";[ Cock Description, format as you have a 'size' (your text) cock.]
+	now face change entry is "it draws forward a little, a reptilian muzzle forming as your teeth reshape into delicate sharp points"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you can feel the tingling radiate outwards, muscles, bones and organs shifting and rearranging"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "a wave of scales of seemingly random colors pours over you. Yet as they thicken and interlock, you notice a strangely beautiful pattern emerge"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your cheeks are pulled in and tight"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it feels wrong, as though She had meant it just as a means to an end"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 16;
 	now sta entry is 10;						  
