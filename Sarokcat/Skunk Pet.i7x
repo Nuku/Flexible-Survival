@@ -1,4 +1,4 @@
-Versions 2 of Skunk Pet by Sarokcat begins here.
+Version 2 of Skunk Pet by Sarokcat begins here.
 [ Version 2 - Endings made gender sensitive and added endings for Skunk, Skunk Taur and Skunk Taur + Kit by Stripes ]
 
 "Adds a special event to Flexible Survival with a potential pet."
