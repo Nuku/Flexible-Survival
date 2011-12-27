@@ -223,26 +223,26 @@ When play ends:
 	if bodyname of player is not "Messy Pig" and bodyname of player is not "Piggy":
 		if Philip is in the Bunker:
 			if humanity of the player is less than 10:
-				say "Despite your loss of humanity, Philip vows to care for you. But one day, he gets hungry and wanders off. Leaving you free to rape any unfortunate human that crosses your path.";
+				say "     Despite your loss of humanity, Philip vows to care for you. But one day, he gets hungry and wanders off. Leaving you free to rape any unfortunate human that crosses your path.";
 			otherwise if pigfucked > 0:
 				if cocks of player < 1:
 					if cunts of player > 0:
-						say "Philip purchases a small pig farm out in the country and invites you to come live with him. You agree. Philip becomes your passionate lover as the two of you adjust to life on the farm. Eventually, your belly grows big and round. You're expecting your first litter of piglets any day now.";
+						say "     Philip purchases a small pig farm out in the country and invites you to come live with him. You agree. Philip becomes your passionate lover as the two of you adjust to life on the farm. Eventually, your belly grows big and round. You're expecting your first litter of piglets any day now.";
 						if Sandra is in the Bunker:
 							if Snow is in the Grey Abbey Library:
-								say "Sandra and Snow join you and Philip at the pig farm. The four of you spend your days having extremely wild and passionate orgies. Sandra and Snow are soon expecting their own litters of piglets. Philip feels like the luckiest pig in world now that he has his own personal harem.";
+								say "     Sandra and Snow join you and Philip at the pig farm. The four of you spend your days having extremely wild and passionate orgies. Sandra and Snow are soon expecting their own litters of piglets. Philip feels like the luckiest pig in world now that he has his own personal harem.";
 							otherwise:
-								say "Sandra joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Sandra is soon expecting her own litter of piglets.";
+								say "     Sandra joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Sandra is soon expecting her own litter of piglets.";
 						otherwise if Snow is in the Grey Abbey Library:
-							say "Snow joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Snow is soon expecting her own litter of piglets.";
+							say "     Snow joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Snow is soon expecting her own litter of piglets.";
 						if sarahslut is 4:
-							say "Sarah's numerous pups make fine farm dogs.  You set up a nice kennel to breed them on the farm as well.  They guard the farm and make for fine playthings when not enjoying messy, piggy sex.";
+							say "     Sarah's numerous pups make fine farm dogs.  You set up a nice kennel to breed them on the farm as well.  They guard the farm and make for fine playthings when not enjoying messy, piggy sex.";
 					otherwise:
-						say "Philip remains a loyal... if somewhat gluttonous, friend and lover for the rest of your days.";
+						say "     Philip remains a loyal... if somewhat gluttonous, friend and lover for the rest of your days.";
 				otherwise:
-					say "Philip remains a loyal... if somewhat gluttonous, friend and lover for the rest of your days.";
+					say "     Philip remains a loyal... if somewhat gluttonous, friend and lover for the rest of your days.";
 			otherwise:
-				say "Philip remains a loyal... if somewhat gluttonous, friend for the rest of your days.";
+				say "     Philip remains a loyal... if somewhat gluttonous, friend for the rest of your days.";
 	otherwise if bodyname of player is "Messy Pig" or bodyname of player is "Piggy":
 		if humanity of player is less than 10:
 			if pigfucked > 0:
@@ -256,7 +256,7 @@ When play ends:
 				if cocks of player > 0:
 					say "     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  After wandering back to the bunker, you are joined by Philip who follows you off into the city, drawn by your heavy scent.  You head together to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  As you rut the pig, squealing loudly as you do, he looks on lustfully before heading off.  Some time later, as you both are resting after your marathon of sex, he returns with a semi-transformed sow of his own.  He tosses her into the mess made by you both and mounts her, taking her roughly until her transformation is complete.  You and Philip set up a nice, big sty for your growing harem of sows and their piglets.";
 				otherwise:
-					say "F - Messy Pig - Phi     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  After wandering back to the bunker, you are joined by Philip who follows you off into the city, drawn by your heavy scent.  You head together to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  As you and her grope and fondle one another lustfully, it gets to be too much for the boar.  He charges over and mounts you both in turn, rutting you over and over again in a marathon of sex.  The sweat and the juices of your combined fluids add to the muck you both roll around in.  The boar gets dirtier, smellier and all the more attractive to you both.  Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets.lip";
+					say "     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  After wandering back to the bunker, you are joined by Philip who follows you off into the city, drawn by your heavy scent.  You head together to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  As you and her grope and fondle one another lustfully, it gets to be too much for the boar.  He charges over and mounts you both in turn, rutting you over and over again in a marathon of sex.  The sweat and the juices of your combined fluids add to the muck you both roll around in.  The boar gets dirtier, smellier and all the more attractive to you both.  Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets.";
 			otherwise:
 				if cocks of player > 0:
 					say "     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  You head to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  You rut the pig, squealing loudly as you do, in a long marathon of sex [if restaurantpig is 1]and eating[end if].  You rut her again and again, filling her with your seed over and over in a marathon of sex.  The sweat and the juices of your combined fluids add to the muck you both roll around in.  Together, you set up a messy sty filled with the sounds of sows, sex and piglets.";
@@ -295,14 +295,14 @@ When play ends:
 			if ( pigfucked > 0 ) or ( cunts of player > 0 and Philip is in Bunker ):	[Philip farm endings]
 				if Sandra is in the Bunker:
 					if Snow is in the Grey Abbey Library:
-						say "Sandra and Snow join you and Philip at the pig farm. The four of you spend your days having extremely wild and passionate orgies. Sandra and Snow are soon expecting their own litters of piglets. Philip feels like the luckiest pig in world now that he has his own personal harem.";
+						say "     Sandra and Snow join you and Philip at the pig farm. The four of you spend your days having extremely wild and passionate orgies. Sandra and Snow are soon expecting their own litters of piglets. Philip feels like the luckiest pig in world now that he has his own personal harem.";
 					otherwise:
-						say "Sandra joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Sandra is soon expecting her own litter of piglets.";
+						say "     Sandra joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Sandra is soon expecting her own litter of piglets.";
 				otherwise if Snow is in the Grey Abbey Library:
-					say "Snow joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Snow is soon expecting her own litter of piglets.";
+					say "     Snow joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Snow is soon expecting her own litter of piglets.";
 			if Philip is in Bunker:										[any farm ending]
 				if sarahslut is 4:
-					say "Sarah's numerous pups make fine farm dogs.  You set up a nice kennel to breed them on the farm as well.  They guard the farm and make for fine playthings when you're not enjoying messy, piggy sex.";
+					say "     Sarah's numerous pups make fine farm dogs.  You set up a nice kennel to breed them on the farm as well.  They guard the farm and make for fine playthings when you're not enjoying messy, piggy sex.";
 
 
 

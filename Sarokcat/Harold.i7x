@@ -1,4 +1,4 @@
- Harold by Sarokcat begins here.
+Harold by Sarokcat begins here.
 
 "Adds a npc to Flexible Survival with a well stocked bar and a problem..."
 

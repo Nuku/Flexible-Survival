@@ -1,6 +1,9 @@
 Toy Store by Hellerhound begins here.
 
 Toy Store is a situation.
+when play begins:
+	add Toy Store to badspots of guy;
+	add Toy Store to badspots of furry;
 
 instead of resolving a toy store:
 	say "You come across a store with gas lamps in the windows, and activity inside. You catch a flash of orange, but the windows are shaded, and you cannot really tell who or what is inside.";
