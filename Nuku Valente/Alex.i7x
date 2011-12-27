@@ -443,10 +443,10 @@ when play ends:
 				say "     Throughout your successful lives together, Lorenda and Lee are there for you both, good friends and occasional partners.  Their hybrid kittens help to make your large house into a home.";
 			if humanity of player > 49 and intelligence of player > 15 and charisma of player > 15:	[BEST ENDING ADD-ON]
 				say "     In your later years, you end up being instrumental in dealing with the growing problem of the hyena gangs.  The improvements to TF rights you[']ve brought about keep the situation from escalating beyond control.  Without a mass of disaffected youth to call upon, their influence was already dwindling.  When you finally are called to step in and negotiate with the leaders, you are able to curb the violence and end the coming crisis.";
-			otherwise if coonstatus is -1:				[coon pet]
-				say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed.  Lorenda and Lee, in the mood to make a show of playing frisky maids with your pink coontoy, are there with you to see it.  You all smile and agree he won[']t win, but you don[']t care.  You know you will when you run in a few years' time.";
-			otherwise:
-				say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed.  Lorenda and Lee, in the mood to play frisky maids that day, are there with you to see it.  You all smile and agree he won[']t win, but you don[']t care.  You know you will when you run in a few years' time.";
+				if coonstatus is -1:				[coon pet]
+					say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed.  Lorenda and Lee, in the mood to make a show of playing frisky maids with your pink coontoy, are there with you to see it.  You all smile and agree he won[']t win, but you don[']t care.  You know you will when you run in a few years' time.";
+				otherwise:
+					say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed.  Lorenda and Lee, in the mood to play frisky maids that day, are there with you to see it.  You all smile and agree he won[']t win, but you don[']t care.  You know you will when you run in a few years' time.";
 
 
 Alex ends here.
