@@ -89,7 +89,7 @@ When Play begins:
 when play ends:
 	if bodyname is "Cute Chinchilla Woman":
 		if humanity of player is less than 10:
-			say "Following your inner needs, you seek out a soft grassy field and even find other chinchillas.  You spend a great deal of time hunting for food and hiding from the larger predators, when you aren't distracted by trying out the unusual sexual antics of your chinchilla bretheren that is.";
+			say "Following your inner needs, you seek out a soft grassy field and even find other chinchillas.  You spend a great deal of time hunting for food and hiding from the larger predators, when you aren't distracted by trying out the unusual sexual antics of your chinchilla brethren that is.";
 		otherwise:
 			say "After you are rescued you are snatched up quickly by a producer for making erotic movies and modeling bikinis. Several at once! Your face shows up in many commericals and films as you turn into a huge success!";
 			

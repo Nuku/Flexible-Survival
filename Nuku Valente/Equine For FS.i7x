@@ -77,7 +77,7 @@ When Play begins:
 when play ends:
 	if bodyname is "black equinoid":
 		if humanity of player is less than 10:
-			say "Following a compulsion, you seek out other horses, and are soon welcomed into the herd proper. You defend the park against interlopers, be they mutant or human. Except the bees, they're tolerated for their benefit to the local flora.";
+			say "Following a compulsion, you seek out other horses, and are soon welcomed into the herd proper. You defend the park against interlopers, be they mutant or human. Except the bees, they're tolerated for their benefit to the local flora and their delicious honey.";
 		otherwise:
 			say "A movie producer spots you on TV as you are rescued and hires you immediately to play a minotaur like creature in his upcoming movie. It turns out to be [one of]big blockbuster[or]lukewarm summer movie[or]big flop[at random]!";
 			
