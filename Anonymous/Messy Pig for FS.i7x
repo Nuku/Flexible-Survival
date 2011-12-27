@@ -28,16 +28,16 @@ When Play begins:
 	now defeated entry is "The Pig, when realizing that the encounter is not going well, turns tail and waddles away faster than you thought possible. You hear its squeals of terror die down as it leaves your range of hearing. Looks like you win!"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[monster name attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "You hear a strange snorting sound, and looking around you see a bizarre creature. It rests on all fours, but its body seems human enough to stand on two legs. It appears to be a large, pinkish humanoid. She's quite fat, and has a large pig snout for a face. Floppy pig ears also adorn her head, and peak through her oddly human hair. Six breasts in two rows line her underside, and over her large bottom there is a cute and curly pig’s tail. Her hands end in cloven hooves, as do her feet. She spots you and looks up at you with hungry eyes! Uh oh!";[ Description of the creature when you encounter it.]
-	now face entry is "a pudgy face with a large pig's snout and two floppy ears";[ Face description, format as the text "Your face is (your text)"] 
-	now body entry is "fat and heavy, and also somewhat smelly";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "a pick-ish hue, more like that of a Pig then a human";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "a curly Pig tail";[ Tail description, write a whole Sentence or leave blank. ] 
+	now face entry is "a pudgy face with a large pig's snout and two floppy ears";[ Face description, format as the text "Your face is (your text)."] 
+	now body entry is "fat and heavy, and also somewhat smelly";[ Body Description, format as the text "Your Body is (your text)."] 
+	now skin entry is "a pick-ish hue, more like that of a Pig then a human";[ skin Description, format as the text "You have (your text) skin."] 
+	now tail entry is "Twisting to look around with some difficulty, you can see you have a curly, pig tail.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "you feel an odd feeling against your nose, as if invisible hands are molding and shaping it. As well as stretching it. Right before your eyes you see your nose deform, become large and snout-like, perfectly matching that of a pig. Your ears can also be felt changing into large and floppy versions of their former selves."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your stomach gurgles, and your body quickly start to put on fat! Your small frame billows with sudden and heavy fat completely ruining your figure. There is a mildly unpleasant smell in the air after the change as well, and it does not take long to realize it's you."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it tingles all over, as it's colour shifts mildly. The change isn't too obvious at first, but you quickly realize you're much pinker then you used to be."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it starts to rumble, and grow. Become comically large and fat. As if that weren't bad enough, a pinch of your tail bone signifies the growth of a curly pig tail to call your own."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is ""; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "you feel an odd feeling against your nose, as if invisible hands are molding and shaping it. As well as stretching it. Right before your eyes you see your nose deform, become large and snout-like, perfectly matching that of a pig. Your ears can also be felt changing into large and floppy versions of their former selves"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your stomach gurgles, and your body quickly start to put on fat! Your small frame billows with sudden and heavy fat completely ruining your figure. There is a mildly unpleasant smell in the air after the change as well, and it does not take long to realize it's you"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it tingles all over, as it's colour shifts mildly. The change isn't too obvious at first, but you quickly realize you're much pinker then you used to be"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it starts to rumble, and grow. Become comically large and fat. As if that weren't bad enough, a pinch of your tail bone signifies the growth of a curly pig tail to call your own"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "becomes pink and human-like"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 12;
 	now sta entry is 17;					
@@ -61,6 +61,8 @@ When Play begins:
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+
+[See Philip: 'Hungry Boar Man' by hiccup for endings]
 	
 [ Edit this to have the correct Name as wall]
 Messy Pig For FS ends here.
