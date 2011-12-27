@@ -1,5 +1,5 @@
-Version 2 of Hungry Boar Man by hiccup begins here.
-[Version 2.0 w/updates by Stripes]
+Version 3 of Hungry Boar Man by hiccup begins here.
+[Version 3 - completed endings by Stripes]
 
 "Adds an encounter to Flexible Survival with a hungry boar man."
 
@@ -220,8 +220,8 @@ Philip is in Pig Pen.
 The conversation of Philip is { "Hello, oink!", "Snort!", "Do you think the people who come to rescue us will have lots of food?", "How did I end up like this? Some Jerk zapped me with a strange ray gun that turned me into this.", "I love the feeling of mud against my skin."};
 
 When play ends:
-	if Philip is in the Bunker:
-		if hp of the player is greater than 0:
+	if bodyname of player is not "Messy Pig" and bodyname of player is not "Piggy":
+		if Philip is in the Bunker:
 			if humanity of the player is less than 10:
 				say "Despite your loss of humanity, Philip vows to care for you. But one day, he gets hungry and wanders off. Leaving you free to rape any unfortunate human that crosses your path.";
 			otherwise if pigfucked > 0:
@@ -235,11 +235,75 @@ When play ends:
 								say "Sandra joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Sandra is soon expecting her own litter of piglets.";
 						otherwise if Snow is in the Grey Abbey Library:
 							say "Snow joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Snow is soon expecting her own litter of piglets.";
+						if sarahslut is 4:
+							say "Sarah's numerous pups make fine farm dogs.  You set up a nice kennel to breed them on the farm as well.  They guard the farm and make for fine playthings when not enjoying messy, piggy sex.";
 					otherwise:
 						say "Philip remains a loyal... if somewhat gluttonous, friend and lover for the rest of your days.";
 				otherwise:
 					say "Philip remains a loyal... if somewhat gluttonous, friend and lover for the rest of your days.";
 			otherwise:
 				say "Philip remains a loyal... if somewhat gluttonous, friend for the rest of your days.";
-				
+	otherwise if bodyname of player is "Messy Pig" or bodyname of player is "Piggy":
+		if humanity of player is less than 10:
+			if pigfucked > 0:
+				if cunts of player > 0:
+					say "     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  Heading back to the bunker, you join Philip in a long and messy romp on the dirty floor, letting the sweat and the juices of your combined fluids add to the muck you both roll around in.  The boar gets dirtier, smellier and all the more attractive to you.  And more lustful as he joins you in succumbing to the infection.  Together, happily filled with his seed, you head back to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  Philip charges over and mounts you both in turn, rutting you over and over again in a marathon of sex.  Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets.  He adds several other sows to his sty as well, filling them with piglets as he ruts them in the muck.";
+				if pigfucked > 2:
+					say "     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  Heading back to the bunker, you join Philip in a long and messy romp on the dirty floor, mounting you and taking you like his sow again and again.  Your combined sweat and semen add to the muck you both roll around in.  The boar gets dirtier, smellier and all the more attractive to you.  And more lustful as he joins you in succumbing to the infection.  Quite sticky and messy, with your boar's cum leaking from your well-used tailhole, you head together to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  Together, the three of you set up a messy sty.  Philip is a good boar to you both, filling you with assloads of cum and her with piglets.  He adds several other sows to his sty as well, filling them with piglets as he ruts them in the muck.";
+				otherwise:
+					say "     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  Heading back to the bunker, you join Philip in a long and messy romp on the dirty floor, cumming on one another again and again.  Your combined sweat and semen add to the muck you both roll around in.  The boar gets dirtier, smellier and all the more attractive to you.  And more lustful as he joins you in succumbing to the infection.  Quite sticky and messy, you head together to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets.  You and Philip take turns mounting her and the others who are fortunate enough to be caught and made into sows for you as well.";
+			otherwise if Philip is in the Bunker:
+				if cocks of player > 0:
+					say "     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  After wandering back to the bunker, you are joined by Philip who follows you off into the city, drawn by your heavy scent.  You head together to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  As you rut the pig, squealing loudly as you do, he looks on lustfully before heading off.  Some time later, as you both are resting after your marathon of sex, he returns with a semi-transformed sow of his own.  He tosses her into the mess made by you both and mounts her, taking her roughly until her transformation is complete.  You and Philip set up a nice, big sty for your growing harem of sows and their piglets.";
+				otherwise:
+					say "F - Messy Pig - Phi     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  After wandering back to the bunker, you are joined by Philip who follows you off into the city, drawn by your heavy scent.  You head together to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  As you and her grope and fondle one another lustfully, it gets to be too much for the boar.  He charges over and mounts you both in turn, rutting you over and over again in a marathon of sex.  The sweat and the juices of your combined fluids add to the muck you both roll around in.  The boar gets dirtier, smellier and all the more attractive to you both.  Together, the three of you set up a messy sty filled with the sounds of sows, sex and piglets.lip";
+			otherwise:
+				if cocks of player > 0:
+					say "     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  You head to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  You rut the pig, squealing loudly as you do, in a long marathon of sex [if restaurantpig is 1]and eating[end if].  You rut her again and again, filling her with your seed over and over in a marathon of sex.  The sweat and the juices of your combined fluids add to the muck you both roll around in.  Together, you set up a messy sty filled with the sounds of sows, sex and piglets.";
+				otherwise:
+					say "     As time wears on, you can't hold back against your growing urges.  Your identity falls apart, leaving only your base needs for food and sex.  You head to the [if restaurantpig is 1]posh restaurant[otherwise]sewers below the mall[end if] to seek out the lovely sow there.  You and the pig roll around in the muck, groping and fondling one another lustfully for a marathon of sex.  Together, you set up a messy sty, adding several other sows to your group.  From time to time, you girls are able to lure in (or grab) a male creature from the city and ride him in the muck to fill your wombs with lovely hybrid piglets until he becomes another sow to wait her turn to be filled.";
+		otherwise:
+			if pigfucked > 0:
+				if cunts of player > 0:
+					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason.  But at least it ends up being brief, as they don't seem to want to keep you around long either.  You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive sow.  Only Philip really goes out of his way to spend time with you, though the guards won't give you a chance to show the boar how much you appreciate his affection.";
+					say "     But once you get cleared, oh then you are all over him, letting your big boar rut you again and again.  After so long without satisfaction, you both are eager to get to breeding.  His hefty rod fills you repeatedly with his hot seed, several times a day for the first week.  When later you start to grow full with piglets, he smiles happily, arranging to purchase a lovely pig farm to share with you.  It becomes your rustic love nest and breeding sty.";
+				if pigfucked > 2:
+					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason.  But at least it ends up being brief, as they don't seem to want to keep you around long either.  You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive boar.  Only Philip really goes out of his way to spend time with you, though the guards won't give you a chance to show the boar how much you appreciate his affection.";
+					say "     But once you get cleared, oh then you are on your knees for him, letting your big boar rut you again and again.  After so long without satisfaction, you both are eager have your big boar take you like a sow and filling your ass with his cum.  His hefty rod fills you repeatedly with his hot seed, several times a day for the first week.";
+					say "     You work odd jobs from time to time, never really staying very long at anything as your strong scent is too much for most other people.  Philip sets himself up with a small pig farm and eventually invites you out to join him.  He drives his cock into your ass and ruts you like a sow often to hear you squeal for him as he fucks you in the muddy sty.";
+				otherwise:
+					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason.  But at least it ends up being brief, as they don't seem to want to keep you around long either.  You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive boar.  Only Philip really goes out of his way to spend time with you, though the guards won't give you a chance to show the boar how much you appreciate his affection.";
+					say "     But once you get cleared, oh then you are on your knees for him, sucking his cock in thanks for his kindness.  After so long without satisfaction, big boar while you stroke yourself off to make a sticky mess on his hooves.";
+					say "     You work odd jobs from time to time, never really staying very long at anything as your strong scent is too much for most other people.  Philip sets himself up with a small pig farm and eventually invites you out to join him.  You both have an enjoyable life of running the farm and rutting the sows.";
+			otherwise if Philip is in the Bunker:
+				if cunts of player > 0:
+					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason.  But at least it ends up being brief, as they don't seem to want to keep you around long either.  You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive woman.  Only Philip really goes out of his way to spend time with you, making the wait tolerable at least.";
+					say "     After your eventual release, Philip visits often, bringing small chocolates or other treats for you.  He is friendly and talks to you about how busy he is with his new pig farm, though he always seems to have time to visit you.  You have trouble making new friends for some reason, despite your lovely, chubby figure and fragrant scent, but the boar keeps your company.";
+					say "     As your remaining funds start to run dry after having trouble getting work, he drops to one knee and asks to join him on his farm.  Only then do you realize that this big boar has been wooing you the whole time.  You agree eagerly and are at his farm that very night, pressed beneath him as he ruts you long and hard, having wanted you as his lovely sow for so long.";
+				otherwise:
+					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason.  But at least it ends up being brief, as they don't seem to want to keep you around long either.  You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive boar.  Only Philip really goes out of his way to spend time with you, making the wait tolerable at least.";
+					say "     After your eventual release, you keep in contact with Philip and visit his new pig farm from time to time.  You struggle to find work for some time, getting odd jobs for a while before getting an idea.  Inspired by Philip's moderate success as a farmer, you eventually set yourself up with a small truffle farm.  The work, coming naturally to you, is a pleasure to do and you do well enough at it to make a decent living for the first time since you're infection.  After you finish each year's harvest, you and Philip celebrate with a long night with his sows.";
+			otherwise:
+				if cocks of player > 0:
+					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason.  But at least it ends up being brief, as they don't seem to want to keep you around long either.  You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive boar, but no one else you meet seems to realize this.";
+					say "     After your eventual release, you have difficulty finding steady work.  No one seems to appreciate your rich fragrance.  You only manage to get odd jobs for quite a while before eventually becoming a garbage man.  The prevalent scent of your work keeps your coworkers from complaining about your scent and some part of you always enjoys getting dirtier and smellier from a day's work.";
+					say "     You manage to hit it off with a raccoon sanitation worker from the next town over during a union function.  She is a full-figured woman with wide hips, pudgy thighs and ample breasts.  And the fact that she's a little scruffy and likes getting messy as well suits you just fine.  After several dirty romps with her, she gets a transfer and moves in with you.  Soon enough, you have a house full of messy little raccoon kits and piglets.";
+				otherwise:
+					say "     The time in the military's quarantine area quite unpleasant, as most people tend to avoid you for some reason.  But at least it ends up being brief, as they don't seem to want to keep you around long either.  You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive woman, but no one else you meet seems to realize this.";
+					say "     After your eventual release, you have difficulty finding steady work.  No one seems to appreciate your rich fragrance.  You only manage to get odd jobs for quite a while before eventually becoming a garbage woman.  The prevalent scent of your work keeps your coworkers from complaining about your scent and some part of you always enjoys getting dirtier and smellier from a day's work.";
+					say "     One day while working the bulldozer at the far end of the landfill, a friendly coworker calls you over.  When you climb out to join the seagull, he presses you down into the trash and mounts you.  You try your best to muffle your squeals of delight, not wanting to get into trouble, but loving the nasty feeling of being fucked at work on a messy pile of trash.  After filling you, he invites you to join him at his place after work for more.  That night is a wild romp that soon becomes more and more nights of the same.  You move into his love nest and bear him clutch after clutch of eggs filled with winged piggies, loving your messy, dirty bird.";
+			if ( pigfucked > 0 ) or ( cunts of player > 0 and Philip is in Bunker ):	[Philip farm endings]
+				if Sandra is in the Bunker:
+					if Snow is in the Grey Abbey Library:
+						say "Sandra and Snow join you and Philip at the pig farm. The four of you spend your days having extremely wild and passionate orgies. Sandra and Snow are soon expecting their own litters of piglets. Philip feels like the luckiest pig in world now that he has his own personal harem.";
+					otherwise:
+						say "Sandra joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Sandra is soon expecting her own litter of piglets.";
+				otherwise if Snow is in the Grey Abbey Library:
+					say "Snow joins you and Philip at the pig farm. The three of you spend your days having passionate orgies. Snow is soon expecting her own litter of piglets.";
+			if Philip is in Bunker:										[any farm ending]
+				if sarahslut is 4:
+					say "Sarah's numerous pups make fine farm dogs.  You set up a nice kennel to breed them on the farm as well.  They guard the farm and make for fine playthings when you're not enjoying messy, piggy sex.";
+
+
+
 Hungry Boar Man ends here.

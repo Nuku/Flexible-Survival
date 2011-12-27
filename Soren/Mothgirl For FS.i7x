@@ -118,9 +118,9 @@ When Play begins:
 when play ends:
 	if bodyname is "Moth Girl":
 		if humanity of player is less than 10:
-			say "You do not have any prejudice to any particular infected creature, except spidergirls who's nature invites trouble. You flit around acting on the instincts of wanting sex or having sex with numerable partners";
+			say "You do not have any prejudice to any particular infected creature, except spidergirls whose nature invites trouble. You flit around acting on the instincts of wanting sex or having sex with numerable partners.";
 		otherwise:
-			say "You are able to fly anywhere you want in the city and take up a small delivery service, in exchange you get money and multiple sex partners to satisfy your lust";
+			say "You are able to fly anywhere you want in the city and take up a small delivery service, in exchange you get money and multiple sex partners to satisfy your lust.";
 			
 Table of Game Objects(continued)
 name	desc	weight	object

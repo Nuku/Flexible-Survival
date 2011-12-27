@@ -49,7 +49,7 @@ Instead of conversing the Alex:
 		say "[alexrandomtalk]";
 
 to say alexrandomtalk:
-	say "     Alex's whiskers twitch a little as he looks up from his legal briefs to talk with you for a moment.  [one of]'Thanks for agreeing to help me on this.'[or]'Yes? Something I can do for you?'[or]'The city's become really dangerous lately.'[or]'I tried talking to one of those wolverine out there before I met you.  Watch out for them - they've really lost it.'  He rubs his side, which is clearly still sore from the encounter.[or]'From my window, I saw a feline cop.  I thought he might be able to help me, but he assaulted one of the weaker mutants and laughed as fucked her hard.  He was twice my size, so I- I stayed inside until he was gone,' he says softly, ashamed of his weakness.[or]'I have to wonder if this is some sick joke,' he says sadly as he points to himself.  'A lawyer made into a weasel.'[or]'I spotted a peacock out there with my binoculars.  It seems to entrance its victims somehow before leading them off somewhere.'[or]'I was never a very physical guy.  I've gotten through this mess mostly on luck for now, but I'm not strong enough to go out there and explore.  Thankfully, I'm safe enough in here.'[or]'The few other tenants I've seen left in here seem benign and leave me alone.  But please don't go snooping around or bothering them.  I don't want to risk upsetting them.'[or]'I've got to keep focused on my work.  It helps keep these strange instincts at bay.'[or]'There's a beautiful, butterfly creature fluttering around out there at times.  It's very pretty, in an odd sort of way.'[or]'One of my neighbours had a pet ferret.  I wonder if I caught this because of it.'[or]'I'd really like a moment to relax and unwind, if you know what I mean.'[or]'I've always been a sensitive guy, I think.  All this fighting, insanity and death is really upsetting.'[or]'Ahhh!  All this waiting is so frustrating,' he growls before getting up and running around and over his couch like a manic ferret for a bit.  Eventually, he settles down and collapses on the couch, panting and feeling much better after releasing all that pent up energy.[or]'Do you like my place?  I decorated it myself.  I'll miss it when we go,' he sighs softly.[or]'I've kept an eye out from my window using these,' he says, holding up a pair of binoculars.[or]'I don't like leaving here too often, as there are so many stairs to climb whenever I get back.'[or]'Being pent up in here makes the ferret in me go stir crazy at times.'  He grabs a nearby rubber ball and chews at it for a few times, chirring softly as he does.  'If I don't give it some release, things can get... messy.'[in random order]";
+	say "     Alex's whiskers twitch a little as he looks up from his legal briefs to talk with you for a moment.  [one of]'Thanks for agreeing to help me on this.'[or]'Yes? Something I can do for you?'[or]'The city's become really dangerous lately.'[or]'I tried talking to one of those wolverines out there before I met you.  Watch out for them - they've really lost it.'  He rubs his side, which is clearly still sore from the encounter.[or]'From my window, I saw a feline cop.  I thought he might be able to help me, but he assaulted one of the weaker mutants and laughed as fucked her hard.  He was twice my size, so I- I stayed inside until he was gone,' he says softly, ashamed of his weakness.[or]'I have to wonder if this is some sick joke,' he says sadly as he points to himself.  'A lawyer made into a weasel.'[or]'I spotted a peacock out there with my binoculars.  It seems to entrance its victims somehow before leading them off somewhere.'[or]'I was never a very physical guy.  I've gotten through this mess mostly on luck for now, but I'm not strong enough to go out there and explore.  Thankfully, I'm safe enough in here.'[or]'The few other tenants I've seen left in here seem benign and leave me alone.  But please don't go snooping around or bothering them.  I don't want to risk upsetting them.'[or]'I've got to keep focused on my work.  It helps keep these strange instincts at bay.'[or]'There's a beautiful, butterfly creature fluttering around out there at times.  It's very pretty, in an odd sort of way.'[or]'One of my neighbours had a pet ferret.  I wonder if I caught this because of it.'[or]'I'd really like a moment to relax and unwind, if you know what I mean.'[or]'I've always been a sensitive guy, I think.  All this fighting, insanity and death is really upsetting.'[or]'Ahhh!  All this waiting is so frustrating,' he growls before getting up and running around and over his couch like a manic ferret for a bit.  Eventually, he settles down and collapses on the couch, panting and feeling much better after releasing all that pent up energy.[or]'Do you like my place?  I decorated it myself.  I'll miss it when we go,' he sighs softly.[or]'I've kept an eye out from my window using these,' he says, holding up a pair of binoculars.[or]'I don't like leaving here too often, as there are so many stairs to climb whenever I get back.'[or]'Being pent up in here makes the ferret in me go stir crazy at times.'  He grabs a nearby rubber ball and chews at it for a few times, chirring softly as he does.  'If I don't give it some release, things can get... messy.'[in random order]";
 
 
 Section 3 - The Search (Quests)
@@ -83,7 +83,7 @@ Find Lorenda is resolved.
 Lisacheat is a number that varies.
 
 Instead of conversing the Lisa while progress of alex is 1 and lisacheat is 0:
-	say "     You decide to talk to Lisa about your search for Lorenda.  She nods and tells you that she may have seen her recently.  'I can't be certain, hon.  I used to just work here, so I've only seen her once or twice.  But I think it was here that I spotted go by outside.  She seemed a little frantic, and ran around a corner before I could call out to her.'  She points you in the direction she was heading.  That should help narrow down your search.";
+	say "     You decide to talk to Lisa about your search for Lorenda.  She nods and tells you that she may have seen her recently.  'I can't be certain, hon.  I used to just work here, so I've only seen her once or twice.  But I think it was her that I spotted go by outside.  She seemed a little frantic, and ran around a corner before I could call out to her.'  She points you in the direction she was heading.  That should help narrow down your search.";
 	now lisacheat is 1;
 
 
@@ -120,7 +120,7 @@ Instead of resolving Find Lorenda:
 		challenge "Cock Cannon";
 		say "     Dealing with one mutant, you turn your attention to the second before it can reach Lorenda.";
 		challenge "Cock Cannon";
-	say "     She whimpers, and you pull her up from her spot on the alley concrete.  'Wh-what were those things?' [if humanity of player is less than 100] 'What are you?'[end if] She seems a bit panicked, but has calmed significantly once you dealt with the pair.  She hasn't totally escaped the city's various mutations - her clothes are painfully strained with the size of her inflated breasts and she bears a floofy fox tail likely given to her by one of those latex foxes - but she remains mostly human.  You point out that what they were was patently obvious, which earns you a smirk.  Once you explain that Alex sent you, she nods and gladly follows you back to his condo in the High Rise District.";
+	say "     She whimpers, and you pull her up from her spot on the alley concrete.  'Wh-what were those things?' [if humanity of player is less than 100] 'What are you?'[end if] She seems a bit panicked, but has calmed significantly once you dealt with the pair.  She hasn't totally escaped the city's various mutations - her clothes are painfully strained with the size of her inflated breasts and she bears a floofy fox tail likely given to her by one of those latex foxes or another vulpine - but she remains mostly human.  You point out that what they were was patently obvious, which earns you a smirk.  Once you explain that Alex sent you, she nods and gladly follows you back to his condo in the High Rise District.";
 	now the player is in Alex's Condo;
 	say "     Upon arriving, the door is thrown open by the weaselly lawyer who ushers both of you inside.  He shuts it behind him, letting out a sigh of relief as he leans back against it.  First, he shows her to the living room and sets her down with a cup of coffee, then he returns to you.  'Thanks for bringing her in.  You've done me a major favor, so here you go.'  He gives you some food and water.  He even gives you an extra bottle as a bonus for coming through for him despite the danger.";
 	say "     'My next client is an athlete.  He plays for the city's basketball team.  His name's Darrell.  I don't know where he was when the incident happened, but I believe he may have been at the mall.  The team was doing a promotion at the shoe store there some time before the accident.'";
@@ -329,7 +329,7 @@ to say alexbrunchtime:
 	if alexbrunch > 4:		[5+ brunches, breakfast in bed]
 		say "     Once again waking up in Alex[']s bed with the morning light streaming down onto you, you can smell the scent of food being made.  You stretch and are about to rise when Alex comes in wearing only a grin, carrying two bed trays with brunch on it.  He kisses you good morning as he puts your tray down, then joins you in bed with his.  You share a lovely morning with him, nuzzling and kissing as you eat your breakfast.";
 		say "     During your breakfast in bed, [pillowtalk]";
-		say "     Once your breakfast if finished and set aside, you both have a quick romp on the bed.  It[']s mainly just rolling around with each other while nibbling and nuzzling, through there are a few gropes thrown in for fun.  Afterwards, with that last boost to your spirits, you get your stuff together and get ready to head out into the city again.";
+		say "     Once your breakfast is finished and set aside, you both have a quick romp on the bed.  It[']s mainly just rolling around with each other while nibbling and nuzzling, through there are a few gropes thrown in for fun.  Afterwards, with that last boost to your spirits, you get your stuff together and get ready to head out into the city again.";
 	decrease hunger of player by 12;
 	if hunger of player is less than 0, now hunger of player is 0;
 	decrease thirst of player by 12;
@@ -343,20 +343,19 @@ to say alexbrunchtime:
 
 
 to say brunchtimechange:
-	if alexbrunch < 4:
-		if alexbrunch is 1:
-			now tailname of player is "Ferret";
-			now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur. ";
-		if alexbrunch is 2:
-			now skinname of player is "Ferret";
-			now skin of player is "soft, white fur that covers your";
-			increase charisma of player by 1;
-			say "[bold type]Your charisma has increased by 1.[roman type][line break]";
-		if alexbrunch is 3:
-			now facename of player is "Ferret";
-			now face of player is "that of an adorable mustelid with darting eyes that search for shinies.  You have a cute, pink nose with plentiful whiskers on your ferrety muzzle.";
-			increase intelligence of player by 2;
-			say "[bold type]Your intelligence has increased by 2.[roman type][line break]";
+	if alexbrunch is 1:
+		now tailname of player is "Ferret";
+		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur. ";
+	if alexbrunch is 2:
+		now skinname of player is "Ferret";
+		now skin of player is "soft, white fur that covers your";
+		increase charisma of player by 1;
+		say "[bold type]Your charisma has increased by 1.[roman type][line break]";
+	if alexbrunch is 3:
+		now facename of player is "Ferret";
+		now face of player is "that of an adorable mustelid with darting eyes that search for shinies.  You have a cute, pink nose with plentiful whiskers on your ferrety muzzle.";
+		increase intelligence of player by 2;
+		say "[bold type]Your intelligence has increased by 2.[roman type][line break]";
 	if alexbrunch is 4:
 		now bodyname of player is "Ferret";
 		now body of player is "the slender and flexible form of a ferret.  You constantly have the urge to weave and bob about playfully as you move";
@@ -444,7 +443,10 @@ when play ends:
 				say "     Throughout your successful lives together, Lorenda and Lee are there for you both, good friends and occasional partners.  Their hybrid kittens help to make your large house into a home.";
 			if humanity of player > 49 and intelligence of player > 15 and charisma of player > 15:	[BEST ENDING ADD-ON]
 				say "     In your later years, you end up being instrumental in dealing with the growing problem of the hyena gangs.  The improvements to TF rights you[']ve brought about keep the situation from escalating beyond control.  Without a mass of disaffected youth to call upon, their influence was already dwindling.  When you finally are called to step in and negotiate with the leaders, you are able to curb the violence and end the coming crisis.";
-				say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed.  Lorenda and Lee, in the mood to play frisky maids that day, are there with you to see it.  You all smile and agree he won[']t win, but you don[']t care.  You know you will when you run in a few years' time.";
+				otherwise if coonstatus is -1:				[coon pet]
+					say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed.  Lorenda and Lee, in the mood to make a show of playing frisky maids with your pink coontoy, are there with you to see it.  You all smile and agree he won[']t win, but you don[']t care.  You know you will when you run in a few years' time.";
+				otherwise:
+					say "     You watch as the first tf presidential candidate is announced while you and Alex snuggle with breakfast in bed.  Lorenda and Lee, in the mood to play frisky maids that day, are there with you to see it.  You all smile and agree he won[']t win, but you don[']t care.  You know you will when you run in a few years' time.";
 
 
 Alex ends here.

@@ -1,4 +1,5 @@
-Version 7 of Skunk For FS by Damaged begins here.
+Version 8 of Skunk For FS by Damaged begins here.
+[ Version 8 - Endings added by Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 
@@ -41,9 +42,9 @@ to say skunk defeat:
 
 to say skunk bodyshift:
 	if cunts of player > 1:
-		say "Your body becomes even more feminine, waist slimming, hips widening leaving you with curves that would make anyone, male or female, drool in lust.";
+		say "Your body becomes even more feminine, waist slimming, hips widening leaving you with curves that would make anyone, male or female, drool in lust";
 	otherwise:
-		say "Your body becomes more feminine, curves building that make it impossible to define you as anything but female despite what equipment you might have.";
+		say "Your body becomes more feminine, curves building that make it impossible to define you as anything but female despite what equipment you might have";
 
 to say skunkg vict:
 	say "The female skunk turns, spraying thick, oily musk everywhere!";
@@ -113,16 +114,16 @@ When Play begins:
 	now defeated entry is "[skunk_defeat]"; 
 	now victory entry is  "[skunk_vict]"; 
 	now desc entry is "[skunk_desc]";[ Description of the creature when you encounter it.]
-	now face entry is "have a large-muzzled female skunks head.";[ Face description, format as the text "Your face is (your text)"]
-	now body entry is "curvaceous and screams 'female and needs IT', men want to fuck you women want to be you... and fuck you.";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[otherwise]black and white furred[end if]";[ skin Description, format as the text "You have (your text) skin"]
+	now face entry is "have a large-muzzled female skunk's head";[ Face description, format as the text "Your face is (your text)."]
+	now body entry is "curvaceous and screams 'female and needs IT', men want to fuck you women want to be you... and fuck you";[ Body Description, format as the text "Your Body is (your text)."]
+	now skin entry is "[if looknow is 1]dark black fur contrasting with pure white down your front and a matching stripe down your back, completely covering your[otherwise]black and white furred[end if]";[ skin Description, format as the text "You have (your text) skin."]
 	now tail entry is "A thick, black mass of fur blossoms from your rear, growing in size until it's reached just above your head and then bending gracefully near the tip.  A pair of white stripes travel up its length, completing the effect.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human shaped";[- Cock Description, format as you have a "size" (your text) cock-]
-	now face change entry is "black fur moves over your head like a hood, leaving a muzzle that's white on the bottom with a head that's all black, all completed by the pair of rounded ears sitting atop it and a white stripe from the tip of your nose to your back."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "[skunk bodyshift]"; [- body change text. format as "Your body feels funny as (your text)" -]
-	now skin change entry is "a sea of black moves over your back and a sea of white over your chest, while a matching stripe forms down the middle of the black."; [- skin change text. format as "Your skin feels funny as (your text)" -]
-	now ass change entry is "the black fur shifts over your ass, squeezing it until it's tight and sexy."; [- ass/tail change text. format as "Your ass feels funny as (your text)" -]
-	now cock change entry is "it seems un-needed."; [- cock change text. format as "Your cock feels funny as (your text)" -]
+	now face change entry is "black fur moves over your head like a hood, leaving a muzzle that's white on the bottom with a head that's all black, all completed by the pair of rounded ears sitting atop it and a white stripe from the tip of your nose to your back"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "[skunk bodyshift]"; [body change text. format as "Your body feels funny as (your text)."]
+	now skin change entry is "a sea of black moves over your back and a sea of white over your chest, while a matching stripe forms down the middle of the black"; [- skin change text. format as "Your skin feels funny as (your text)." -]
+	now ass change entry is "the black fur shifts over your ass, squeezing it until it's tight and sexy"; [- ass/tail change text. format as "Your ass feels funny as (your text)." -]
+	now cock change entry is "it seems unneeded"; [- cock change text. format as "Your cock feels funny as (your text)." -]
 	now str entry is 12;
 	now dex entry is 18;
 	now sta entry is 14;                    
@@ -148,7 +149,7 @@ When Play begins:
 	now lootchance entry is 70;        [- Chance of loot dropping 0-100 -]
 
 
-[ +++++ ]
+Section 3 - Skunk heat and Skunk goo
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
@@ -176,7 +177,7 @@ to say skunk in heat:
 	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you you realise that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunks breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or] 'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
 	increase skunkready by 1;
 	increase libido of player by 10;
-[ +++++ ]	
+
 
 Table of Game Objects(continued)
 name	desc	weight	object
@@ -185,6 +186,12 @@ name	desc	weight	object
 Skunk Goo is a grab object.
 
 Skunk Goo is infectious. The strain of skunk goo is "Skunk".
+
+
+
+Section 4 - Endings
+
+[For endings, see the 'Skunk Pet' file by Sarokcat.]
 
 [ Edit this to have the correct Name as wall]
 Skunk For FS ends here.

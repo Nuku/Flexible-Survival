@@ -110,11 +110,9 @@ Instead of Resolving a Lusty Skunk:
 				skunkform;
 			otherwise:
 				say "Your entire lower body throbs with strange pleasure as she seems desperate to push herself into you from every direction, but even as your body trembles with fresh delight, it feels like she hit a wall. She draws back an inch from all your entrances, your body tugged as if she were stuck in you, but she pulls firmly, slowly parting from you in a long low squelch, body hot and tingling and your consciousness threatening to fail as she pops free. Leaving you panting and wet with your own lubricants and sweat, she rises. With a last blown kiss, she saunters into the wasteland, broad tail waving behind her.";
-			
-			
-				
 
-When play ends:
-	say "";
- 
+		
+[See 'Skunk Pet' file by Sarokcat for endings.]
+
+
 Lusty Skunk ends here.

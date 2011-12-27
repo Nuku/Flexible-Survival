@@ -71,16 +71,16 @@ When Play begins:
 	now defeated entry is "With a last roar the big cat claws out wildly, trying to hit you one last time before collapsing to the ground."; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[felinoid attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "What looks like a full sized lion without a mane paces up before you, nose raised in the air, sniffing a scent. You hear the big cat purr and look your way, with a sinking feeling you think that not only was it your scent he was following but that he is very pleased to see you at last.";[ Description of the creature when you encounter it.]
-	now face entry is "a short muzzled female lions.";[ Face description, format as the text "Your face is (your text)"] 
-	now body entry is "sleek, muscled, built for surviving, just like the large feline that gave it to you.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[if looknow is 1]a thick pelt of coarse yellow-gold fur covering your thick, pliable[otherwise]yellow-gold fur covered[end if]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "A lions tail twitches behind you. You just know that if you find the one who gave it to you, it would be cocked to the side in seconds.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "leonine";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it draws forward into a short feline muzzle, even as your ears draw upwards to perch, rounded, on top of your leonine head. Scents burn in your new nose and you find yourself turning in place, trying to catch His scent."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "power builds in every muscle, making you feel more alive than ever before. Somehow you just know that you would be just as comfortable on all fours now as on two legs."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "a light gold fur spreads down it, covering it in a thick pelt."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "the muscles under the skin change, modifying for leaping and catching prey."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "you no longer think of yourself as male."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face entry is "that of a short muzzled, female lion";[ Face description, format as the text "Your face is (your text)."] 
+	now body entry is "sleek, muscled, built for surviving, just like the large feline that gave it to you";[ Body Description, format as the text "Your Body is (your text)."] 
+	now skin entry is "[if looknow is 1]a thick pelt of coarse yellow-gold fur covering your thick, pliable[otherwise]yellow-gold fur covered[end if]";[ skin Description, format as the text "You have (your text) skin."] 
+	now tail entry is "A lion's tail twitches behind you. You just know that if you find the one who gave it to you, it would be cocked to the side in seconds";[ Tail description, write a whole Sentence or leave blank. ] 
+	now cock entry is "leonine";[ Cock Description, format as you have a 'size' (your text) cock.] 
+	now face change entry is "it draws forward into a short, feline muzzle, even as your ears draw upwards to perch, rounded, on top of your leonine head. Scents burn in your new nose and you find yourself turning in place, trying to catch His scent"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "power builds in every muscle, making you feel more alive than ever before. Somehow you just know that you would be just as comfortable on all fours now as on two legs"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "a light gold fur spreads down it, covering it in a thick pelt"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "the muscles under the skin change, modifying for leaping and catching prey"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "you no longer think of yourself as male"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 18;
 	now dex entry is 18;
 	now sta entry is 14;					
@@ -116,12 +116,8 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 --	--	--	--	--	--	--	--
 
 to say felinoidheat:
-	repeat with Z running from 1 to number of rows in table of random critters:
-		choose row Z from the table of random critters;
-		if name entry matches the text "lizard girl":
-			break;
 	say "Whining as you find yourself masturbating your feminine entrance slowly, you manage to snap out of the haze of need a moment, looking down at your hand, covered in your fluids, you raise it tentatively. Suddenly the scent of your body hits you and you begin lapping at your fingers, tasting your musk, needing more.";
-	infect;
+	infect "Felinoid";
 	increase libido of player by 15;
 
 to say felinoidheat end:
