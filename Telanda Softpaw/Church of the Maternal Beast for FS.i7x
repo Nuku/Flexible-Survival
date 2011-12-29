@@ -46,7 +46,7 @@ Overgrown Block is a room. "[block description]".
 North of Dirty Sheds is overgrown block.
 
 to say block description:
-	if remainder after dividing turns by 8 < 4: [ night ]
+	if ( remainder after dividing turns by 8 < 4 and remainder after dividing turns by 8 > -1 ) or ( remainder after dividing turns by 8 < -4 ): [ night ]
 		say "At this time of night it's far to dark to make out much of the unlit overgrown block.";
 		if houndfromhell is true and isHellhound is false:
 			say "[meetHellhound]";
