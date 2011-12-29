@@ -203,6 +203,7 @@ Instead of Resolving a findinghardware:
 					if lost is 0:
 						say "One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort, and you feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
 						Increase hp of player by 20;
+						if hp of player > maxhp of player, now hp of player is maxhp of player;
 						Add "medkit" to invent of player;	
 					otherwise:
 						say "One of the horsemen gives you a pat on the shoulder as he helps you up after driving off the rest of the creatures, and while you are certainly embarrassed at the situation, and having needed their help at this point, at least they managed to keep things going while you were being 'entertained' by your recent partner. Feeling somewhat weak after the exertion, when one of them hands you a draft beer and a medkit, you only nod gratefully as you drain the cool drink. You blink for a moment in surprise though as you feel a surge of power shoot through you, and groan as you realize it was a draft Horse beer you just drank, and while it definitely makes you feel a bit better, you can already feel your body changing In response.  Though you have little time to comment or react as several shadows blot out the sky, and you realize some of the areial creatures have arrived and are attacking you and your fellow lookouts directly!";
@@ -210,6 +211,7 @@ Instead of Resolving a findinghardware:
 						infect "Horseman";
 						increase hp of player by 40;
 						Add "medkit" to invent of player;	
+						if hp of player > maxhp of player, now hp of player is maxhp of player;
 					challenge "Wyvern";
 					challenge "Wyvern";
 					challenge "Wyvern";	
