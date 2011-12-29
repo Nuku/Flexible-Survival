@@ -225,7 +225,7 @@ When play ends:
 			if humanity of the player is less than 10:
 				say "     Despite your loss of humanity, Philip vows to care for you. But one day, he gets hungry and wanders off. Leaving you free to rape any unfortunate human that crosses your path.";
 			otherwise if pigfucked > 0:
-				if cocks of player < 1:
+				if cocks of player is 0:
 					if cunts of player > 0:
 						say "     Philip purchases a small pig farm out in the country and invites you to come live with him. You agree. Philip becomes your passionate lover as the two of you adjust to life on the farm. Eventually, your belly grows big and round. You're expecting your first litter of piglets any day now.";
 						if Sandra is in the Bunker:
@@ -267,7 +267,7 @@ When play ends:
 				if cunts of player > 0:
 					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason.  But at least it ends up being brief, as they don't seem to want to keep you around long either.  You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive sow.  Only Philip really goes out of his way to spend time with you, though the guards won't give you a chance to show the boar how much you appreciate his affection.";
 					say "     But once you get cleared, oh then you are all over him, letting your big boar rut you again and again.  After so long without satisfaction, you both are eager to get to breeding.  His hefty rod fills you repeatedly with his hot seed, several times a day for the first week.  When later you start to grow full with piglets, he smiles happily, arranging to purchase a lovely pig farm to share with you.  It becomes your rustic love nest and breeding sty.";
-				if pigfucked > 2:
+				otherwise if pigfucked > 2:
 					say "     The time in the military's quarantine area is quite unpleasant, as most people tend to avoid you for some reason.  But at least it ends up being brief, as they don't seem to want to keep you around long either.  You have such a full figure with luscious curves and a rich scent; you feel that you are a lovely and attractive boar.  Only Philip really goes out of his way to spend time with you, though the guards won't give you a chance to show the boar how much you appreciate his affection.";
 					say "     But once you get cleared, oh then you are on your knees for him, letting your big boar rut you again and again.  After so long without satisfaction, you both are eager have your big boar take you like a sow and filling your ass with his cum.  His hefty rod fills you repeatedly with his hot seed, several times a day for the first week.";
 					say "     You work odd jobs from time to time, never really staying very long at anything as your strong scent is too much for most other people.  Philip sets himself up with a small pig farm and eventually invites you out to join him.  He drives his cock into your ass and ruts you like a sow often to hear you squeal for him as he fucks you in the muddy sty.";
