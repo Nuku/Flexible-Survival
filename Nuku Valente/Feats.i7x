@@ -81,6 +81,7 @@ instead of addfeating the fun feats:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
 	addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";
 	addfeat "One Pair" with "You will not grow more than two breasts.";
+	addfeat "Singular" with "You are not one to go in half way. Whatever form your torso takes, the rest tends to follow.";
 	if "One Way" is not listed in feats of player:
 		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits.";
 	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";

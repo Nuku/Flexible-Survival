@@ -2711,6 +2711,35 @@ This is the turnpass rule:
 		increase the hp of the player by (level of player divided by 3);
 	if "Rapid Healing" is listed in feats of player:
 		increase the hp of the player by 2;
+	if "Singular" is listed in feats of player:
+		let z be 0;
+		if facename of player is bodyname of player:
+			now z is z;
+		otherwise:
+			now z is 1;
+		if tailname of player is bodyname of player:
+			now z is z;
+		otherwise:
+			now z is 1;
+		if skinname of player is bodyname of player:
+			now z is z;
+		otherwise:
+			now z is 1;
+		if cockname of player is bodyname of player:
+			now z is z;
+		otherwise:
+			now z is 1;
+		if bodyname of player is "human":
+			now z is 0;
+		if z is 1:
+			sort table of random critters in random order;
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y from the table of random critters;
+				if name entry is bodyname of player:
+					now monster is y;
+					say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
+					infect;
+					break;
 	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
 	if a random number from 1 to 20 is greater than the stamina of the player minus 5:
 		increase hunger of player by 1;
