@@ -7,7 +7,7 @@ Section 1 - The Situation
 Shrine is a room. "How odd for an American city. A Japanese style shrine lays nestled in the forest, tucked just off a faint trail and looking reasonably well upkept. There is a small box for donations, and a small mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
 Northwest of Park Trail is Shrine.
 
-Satisfied is a number that varies. Satisfied is usually 5.
+SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shrine has a Grab Object called Demand.
 The demand of shrine is usually journal.
 
@@ -32,7 +32,7 @@ instead of taking the hammer:
 
 check ringing:
 	if the player is not in Shrine, say "I see nothing to ring here." instead;
-	if satisfied is less than 1, say "Nothing happens." instead;
+	if SatisfiedTanuki is less than 1, say "Nothing happens." instead;
 	
 Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
@@ -54,9 +54,9 @@ check sacrificing:
 carry out sacrificing:
 	say "You bring out the [noun] and place it on the donation box. It vanishes in a bright poof of smoke that fades into brown leaves, whirling away and leaving nothing behind.";
 	delete noun;
-	decrease satisfied by 1;
+	decrease SatisfiedTanuki by 1;
 	increase score by 10;
-	if satisfied is 0:
+	if SatisfiedTanuki is 0:
 		extend game by 40;
 		say "The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistant mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your, new, true form.' With that said, the spirit folds up on itself and is soon gone.";
 	otherwise:
@@ -68,7 +68,7 @@ leafing is an action applying to nothing.
 understand "leaf" as leafing.
 
 check leafing:
-	if satisfied is greater than 0, say "What?" instead;
+	if SatisfiedTanuki is greater than 0, say "What?" instead;
 	
 
 carry out leafing:
@@ -223,7 +223,7 @@ When Play begins:
 	now lootchance entry is 0;        [- Chance of loot dropping 0-100 -]
 	
 when play ends:
-	if satisfied is 0:
+	if SatisfiedTanuki is 0:
 		say "Your tanuki blood serves you well. They say Tanuki are shapeshifters as well, but you never quite get past size shifting. A handy enough trick on its own? The ability to at least transition from tanuki form to human is quite useful at least!";
 		if humanity of player is less than 10:
 			increase humanity of player by 20;
