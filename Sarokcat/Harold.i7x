@@ -330,10 +330,10 @@ carry out Rumdrinking:
 
 Vodkadrinking is an action applying to nothing.
 
-understand "Order Zebra Voka" as Vodkadrinking;
+understand "Order Zebra Vodka" as Vodkadrinking;
 understand "Order Vodka" as Vodkadrinking;  
 
-check Rumdrinking:
+check Vodkadrinking:
 	if Drink bar is not visible, say "You must have already had one drink to many to try that here." instead;
 
 
