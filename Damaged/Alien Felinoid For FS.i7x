@@ -8,7 +8,7 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
-cat is a number that varies;
+catnum is a number that varies;
 mateable is a number that varies;
 
 to say felinoid attack:
@@ -22,9 +22,9 @@ to say felinoid attack:
 		otherwise:
 			if cunts of player is greater than 0:
 				if cunt length of player is greater than 7:
-					if cat is less than 3:
+					if catnum is less than 3:
 						say "At first he just starts nuzzling you, but pretty soon he begins pushing you around, trying to get you to move.[line break]You feel odd to begin with, his friendliness making something within you warm up and without thinking, without your concious mind having a say in it at all, you feel yourself on your knees, breasts pushing down into the ground.[line break]He rips at your clothing, tearing it.[line break]His weight pins you down and you moan out loud, needing what he would give you.[line break]Hips meet yours, but his aim was off. His third try was successful though and you cry out, feeling yourself filled and stretched around him.[line break]He didn't take it slow, he breeds you as though you were his very own mate.[line break]You moan out loud.[line break]You are his mate.[line break]Deeper and faster, his spines cause the friction building to turn alternately from agony to bliss as they scrape and then soothe sensitive parts deep within you.[line break]You are panting heavily, unsure if you could take much more.[line break]Existence fades then, he thrust deep once more and roars above you, finally deigning to clamp his jaws down on your neck, extending your own orgasm as his seed floods into you.[line break]Curling up as he paces off, you can't help but think how wonderful it was to just be His.";
-						increase cat by 1;
+						increase catnum by 1;
 						infect;
 					otherwise:
 						say "You gasp as he paces beside you and, reaching a fore-leg over your shoulder, leans his weight into you, forcing your chest to lower down into the dirt.[line break]He grips at your neck tightly, a reminder of just who is in control. Obediently your body gives in to his implied threat and you feel your rear raise up under him, pressing the small of your back hard against his underbelly.[line break]Gripping a little tighter at your neck, he pulls himself forward, or you backwards, you are not sure, all you do know is with that first movement, he has found his mark and sunk in.[line break]You whine loudly, the feel of his spines dragging into you, his girth now swelling further to fill your depths, depths that had yearned for this moment.[line break]";
@@ -37,24 +37,24 @@ to say felinoid attack:
 						infect;
 						now breasts of player is 2;
 						now breast size of player is 6;
-						increase cat by 1;
+						increase catnum by 1;
 					otherwise:
 						say "The big cat rubs himself against you, purring deeply, without thinking your hand reaches to scritch his ears, 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin  making you whine and whimper softly into his fur, breathing in more of the big animals suddenly fiery smelling musk.";
 						infect;
-						increase cat by 1;
+						increase catnum by 1;
 			otherwise:
 				if breasts of player is 0:
 					say "The big cat rubs himself against you, purring deeply, without thinking your hand reaches to scritch his ears, 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin and chest.[line break]Quickly, two large breasts swell into existence, pressing against the remnants of your clothing, making you gasp at the feeling of the cloth against the sensitive flesh even as you feel further changes at your groin.";
 					now breasts of player is 2;
 					now breast size of player is 6;
-					increase cat by 1;
+					increase catnum by 1;
 					now cocks of player is 0;
 					now cock length of player is 0;
 					now cock width of player is 0;
 				otherwise:
 					say "The big cat rubs himself against you, purring deeply, without thinking your hand reaches to scritch his ears, 'You're not so bad, friendly even...' you murmur just before the first tingling feeling builds at your groin  making you whine and whimper softly into his fur, breathing in more of the big animals suddenly fiery smelling musk.";
 					infect;
-					increase cat by 1;
+					increase catnum by 1;
 
 
 Section 2 - Monster Insertion

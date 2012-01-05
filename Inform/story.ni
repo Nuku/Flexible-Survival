@@ -333,8 +333,6 @@ understand "seat" as chair.
 gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon"; The trade of Gryphon Milk is "distilled milk".
 distilled milk is a grab object. It is a part of the player.
 
-Include Red Light by Hiccup.
-Include High Rise District by Batroo.
 
 The invent of the player is { "journal" };
 
@@ -642,185 +640,6 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 "Female Husky"	"[one of]The sex crazed husky manages to pin you against some debris as she gnaws at your shoulder. You're sure she means it as a come on, but it just hurts.[or]The husky howls in frustration and slices with her dull claws. It seems awkward, but it stings![or]She manages to get her hands on you and squeezes tightly, pressing her delightful assets to you even as she denies you breath in the tight embrace.[at random]"	"[if cocks of player is greater than 0 and libido of player is greater than 40]Having bested her, you shove her back. She yelps as she falls and twists, landing on all fours. You grab her wide hips and, without hesitation, slam your [cock size desc of player] [cock of player] pole into her hot depths and begin to breed her on the spot. She barks and shudders with pleasure, rocking against you as you pump into her round form, caressing her large breasts greedily as you rock her forward. Her furry flesh rubs against your [skin of player] skin, sending tingles through your body.[line break][line break]You feel climax strike like a lightning bolt, and you fill her wanting womb with thick squirts of hot fertile seed. She arches under you, trembling in pleasure. Satisfied, you pull from her, slapping her furry ass before leaving.[otherwise][one of]She whimpers and falls back, stumbling onto her ass as she looks up at you fearfully. Her wide, doe like eyes glisten with terror before she squeezes them shut, and spreads her thighs. Despite temptation, you decide to not take on her offer, and leave her there, whining.[or]Exhausted, she slumps against you, tears streaming along her furry cheeks. Her paws gently brush at you as she mutters something of an apology. You push her away, but decide against hurting her further, simply leaving her there.[at random][end if]"	"[if cocks of player is greater than 0][one of]Having defeated you, the husky begins to pant heavily. She rolls you onto your back and clambers on top of you. Her deft fingers soon have you free of your clothing, tossed to the side as she barks in your face. She slips up and waves her excited furry snatch in your face before settling back, pressing your [cock size desc of player] [cock of player] shaft into her quivering cunt. She howls and yips as she rises and falls against you, her many breast jiggling about with every pound down against you. Her sex is a hot, wet, oven, clenching powerfully and pulling you right over the edge.[line break][line break]As you catch your breath, she rubs over her softly furred belly, glowing with satisfaction at your seeding. Finally, she draws up from you with a wet sucking noise from her sated cunt, and she prowls off, leaving you in a puddle of sweat to recover at your own pace.[or]She kneels down and nuzzles into your crotch, biting at you until she has direct access, then running her long, wet, tongue across your increasingly excited [cock size desc of player] [cock of player] cock. Her long snout descends, taking it in entirely as she bobs slowly, suckling and milking your balls with a softly furred hand. It is not long before you are filling her snout, watching her swallow most of it, a little dribbling down her black lips, just to be lapped right back up. She sits up, smiles at you, and quietly departs.[at random][otherwise]She lays down on top of you and grinds lustfully, but you lack the parts she so urgently needs. She does think of one part you have she can use and slides up against you, pressing her hot, musky, snatch against your face, grinding insistently, grunting and whimpering with need. Her hot juices flow down across your nose and mouth, though you are unable to participate much in your current state. Suddenly she arcs her back and howls, almost drowning you in thick husky honeys as she hits peak. She slumps back, panting loudly, and slowly rolls off of you, slinking off into the city.[end if]"	"A slutty husky, a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. Her chest bears two firm and gropable C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. Her creamy colored tummy is slightly swollen as if she is barely pregnant, though that will probably change soon due to the aching need oozing from her swollen slit as it's obvious she's become nothing more than a needy whore."	"slim, feminine muzzle and perky, overlarge ears over a canine"	"that of a bipedal dog, with digitigrade legs and paw like hands."	"[one of]soft white fur[or]dense white fur[at random]"	"You have a long and fluffy dog[apostrophe]s tail swaying behind you."	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face draws forward into a slender canine snout. Your elongated tongue slips free of your new lips, lolling in the air wetly a moment"	"your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw like"	"your skin prickles from head to toes as fur begins to push through from underneath, soon covering you in a soft, almost comforting, layer of fluffy white fur"	"a long tail pushes from your spine, uplifting in a stiff arc, it begins to sway slowly without your input"	"your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago."	6	12	6	6	2	16	"Female"	15	1	3	"Outside"	0	0	0	4	6	0	1	10	6	90	--	0
 "Latex Fox"	"[one of]The latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so.[or]The fox leaps on you, raking several bloody lines with its claws.[or]The fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth.[at random]"	"[latexfoxrape]"	"[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at you with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up and wander back to the bunker, defeated.[or]The fox rolls you over and clambers up on top of you with a feral snarl.[if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes.[impregchance] Sated, he rises and departs into the city.[otherwise] He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and flees, leaving a trail of rubbery looking seed.[end if][at random]"	"You encounter a creature made of glistening latex. It is largely red in color, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry."	"mixture of canine and human, in a perpetual sneer of exposed teeth, making for an interesting"	"mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous."	"red, black, and white latex"	"You have a long tail, shaped like a fox tail, but made entirely of rubber. It squeaks as it sways back and forth. "	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face reforms, vision blocked by a narrow fox like snout, and new ears twitching on top of your head"	"A wave of itching runs through the meat of your body as your legs pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely paws. Your fingers are still itching as sharp little claws slip free of them"	"smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush"	"a sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically"	"Your cock grows steel hard as it begins to throb urgently. It grows increasingly red as it becomes slightly more slender. Soon a [cock width of player] inch knot forms at the base, ready to tie you to a willing, or not, partner"	10	12	8	10	6	6	"Male"	15	1	4	"Outside"	1	8	6	2	5	0	4	8	6	20	"latex milk"	32
 
-Include Shifting by Hellerhound.
-Include Qytat Shifters  by Hellerhound.
-Include Fucking by Nuku Valente.
-Include Needy Heat for FS by Telanda Softpaw.
-Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
-Include Chocolate Lab by Stripes.
-Include Yamato Dragon For FS by Kohryu.
-Include Yamato Dragoness For FS by Kohryu.
-Include Equine for FS by Nuku Valente.
-Include Ashen Breeder For Fs by Auto Translator.
-Include Lizard Girl For Fs by Damaged.
-Include Skunk For Fs by Damaged.
-Include Random Events by Hiccup.
-Include Random Shemale Smooth Collie For Fs by Voldine.
-Include Alien Felinoid For FS by Damaged.
-Include Bovine For Fs by Damaged.
-Include Small Feline And Lion For Fs by Damaged.
-Include Random Tentacle Horror For Fs by Kazard.
-Include Demon Brute For Fs by Leo X.
-Include Parasitic Plant For Fs by Xeylef.
-Include Awesome Tree For Fs by Damaged.
-Include Herm Hyena for FS by Anony Mouse.
-Include Wyvern For Fs by Damaged.
-Include Stuck Dragon by Hiccup.
-Include Tanuki by Nuku Valente.
-Include Cannon by Hiccup.
-Include Spidergirl For Fs by Tentacle Specialist.
-Include Mouse Taur by Nuku Valente.
-Include Red Light by Hiccup.
-Include Bear For Fs by Nuku Valente.
-Include Pit Bull For FS by Ilovecock.
-Include Painted Wolf Herm by Kyvi Stormbreaker.
-Include Lusty Skunk by Nuku Valente.
-Include Gator by Nuku Valente.
-Include Deer by Nuku Valente.
-Include MothGirl for Fs by Soren.
-Include otter by Nuku Valente.
-Include Ash Drakenoid by Sweraptor.
-Include Lance by Verath.
-Include Palomino by Verath.
-Include Tristian by Verath.
-Include Kangaroo by batroo.
-Include Feral Sea Dragon by Tunalord Sefont.
-Include Feral Sea Dragoness by Tunalord Sefont.
-Include Pets by Nuku Valente.
-Include Tigress Hooker for FS by Stripes.
-Include Tiger Cop for FS by stripes.
-Include High Rise Events by Stripes.
-Include Hyena Bikers by Stripes.
-Include Wolverine Guard for FS by Stripes.
-Include Feral Wolf for FS by Shadowwolf94.
-Include Anthro Shaft Beast for FS by Dragonflayer.
-Include Feral Shaft Beast for FS by Dragonflayer.
-Include Wrestling Wolf For Fs by Volcblaze.
-Include Donkeywoman by Sarokcat n Verath.
-Include Mareslut by Sarokcat.
-Include Stable Related Events by Sarokcat.
-Include Stables by Sarokcat.
-Include Stallionboi by Sarokcat n Verath.
-Include Donkeyman by Sarokcat n Verath.
-Include Fancy by Sarokcat n Verath.
-Include Horseman by Sarokcat n Verath.
-Include Daisy by Sarokcat n Verath.
-Include Onyx by Sarokcat n Verath.
-Include Little Fox by Sarokcat.
-Include Felinoid Companion by Sarokcat.
-Include Red Events by Stripes.
-Include sprite by Nuku Valente.
-Include Harpy by Nuku Valente.
-Include Cute Chinchilla Girl For FS by Trav.
-Include Ewe by Sarokcat.
-Include Ram by Sarokcat.
-Include New Ewe Store by Sarokcat.
-Include New Events by Sarokcat.
-Include Kitty Cat by Sarokcat.
-Include State Fair by Sarokcat.
-Include Teddy Bear by Sarokcat.
-Include Hyena Hideout by Sarokcat.
-Include Hyena Matriarch by Sarokcat.
-Include Alpha Wolf by Sarokcat.
-Include Plush Lion by Sarokcat.
-Include Fair Events by Sarokcat.
-Include Mall Events by Sarokcat.
-Include Beach Events by Sarokcat.
-Include Rubber Tigress by Sarokcat.
-Include Park Events by Sarokcat.
-Include Museum by Sarokcat.
-Include Satyr by Sarokcat.
-Include Greek Nymph by Sarokcat.
-Include Museum Events by Sarokcat.
-Include Skunk Pet by Sarokcat.
-Include Zoo Events by Sarokcat.
-Include Panda by Sarokcat.
-Include Exotic Bird by Sarokcat.
-Include Fair Events by Sarokcat.
-Include Gazelle by Sarokcat.
-Include Zebra by Sarokcat.
-Include Cheetah by Sarokcat.
-Include Tiger by Sarokcat.
-Include Tigertaur by Sarokcat.
-Include Tiger Den by Sarokcat.
-Include Sphinx by Sarokcat.
-Include Pirate Shark by Sarokcat.
-Include Pirate Island by Sarokcat.
-Include Zoo People by Sarokcat.
-Include Coleen by Sarokcat.
-Include Sabretooth by Sarokcat.
-Include Nermine by Sarokcat.
-Include Jackalboy by Sarokcat.
-Include Wolftaur by Sarokcat.
-Include Lindsey by Sarokcat.
-Include jackalman by Sarokcat.
-Include Midnight by Sarokcat.
-Include Panther Herm by Sarokcat.
-Include Succubus by Sarokcat.
-Include Twisted Pimp by Sarokcat.
-Include Alpha Husky by Sarokcat.
-Include Harold by Sarokcat.
-Include Tattoo Parlor by Sarokcat.
-Include Leopardman by Sarokcat.
-Include Hawkman by sarokcat.
-Include Kara by Sarokcat.
-Include Unicorn by Sarokcat.
-Include Arctic Fox by Sarokcat.
-Include Janice by Sarokcat.
-Include Stable Related Quests by Sarokcat.
-Include Stablemasters by Sarokcat.
-Include Nightmare by Sarokcat.
-Include Approaching the Capitol Building for FS by Sweraptor.
-Include Ash Dragator for FS by Sweraptor.
-Include Ash Whelp For FS by Sweraptor.
-Include Alex by Nuku Valente.
-Include Male Peacock for FS By Lago Moro.
-Include Orthas by Nuku Valente.
-Include Infected Pool for FS by Hellerhound.
-Include Gryphons Plot for FS by Hellerhound.
-Include Underwater Zone For Fs by Hellerhound.
-Include Hyena Situations by Hellerhound.
-Include Odd Weapons for FS by Hellerhound.
-Include Catapult Encounter by Hellerhound.
-Include Medical Checkups by Hellerhound.
-Include Dolphin for FS by Hellerhound.
-Include Centaur by Hellerhound.
-Include Nymph for FS by Hellerhound.
-Include Computers by Hellerhound.
-Include Power Plant by Hellerhound.
-Include Control Pills by Hellerhound.
-Include Toy Store by Hellerhound.
-Include Zoo by Hellerhound.
-Include giving in by Hellerhound.
-Include Latex Wolf for FS by Hellerhound.
-Include Qytat a'th Lundrues by hellerhound.
-Include Sarah by Sarokcat&Hellerhound.
-Include Addiction by Hellerhound.
-Include Hermaphrodite Latex Vixen for FS by Tentabear.
-Include Butterfly for FS by mirumu.
-Include Rabbit Pack for FS by Lago Moro.
-Include Smell by Hellerhound.
-Include Pepperspray by Stripes.
-Include Jaguar Orderly For Fs by Stripes.
-Include Mismatched Chimera For Fs by Stripes.
-Include Candy Striper by Stripes.
-Include Hospital For Fs by Stripes.
-Include Naughty Nurse by Stripes.
-Include Triceratops For Fs by Stripes.
-Include Siamese Cats by Stripes.
-Include Inventory Management Enhancements for FS by mirumu.
-Include Albino Mouse by Stripes.
-Include Assorted Events by Stripes.
-Include Cat Ninjas by Stripes.
-Include Reindeer by Stripes.
-Include Story Skipper by Nuku Valente.
-Include items by zero.
-Include Strange Slut by Zero.
-Include Dominator by Zero.
-Include Training center by Zero.
-Include GYM by Zero.
-Include Hadiya by Kaxin.
-
 
 understand the command "feed" as something new.
 
@@ -868,7 +687,7 @@ marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "red kangaroo", "Skunk", "Skunk Girl", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "Skunk Taur", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness" } to infections of Tailweapon;
+	add { "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness" } to infections of Tailweapon;
 
 
 Part 2 - Rules
@@ -1340,16 +1159,6 @@ When play begins:
 	now the command prompt is "[list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";
 [	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
 
-
-Include Desperate Bunny by Nuku Valente.
-Include Hyper Squirrel by Nuku Valente.
-Include Food and Water Finding by Nuku Valente.
-Include Random German Shepherd For Fs by Telanda Softpaw.
-Include Hungry Boar Man by Hiccup.
-Include Messy Pig for Fs by anonymous.
-Include Elf by Nuku Valente.
-Include Feats by Nuku Valente.
-Include Junkyard and Warehouse by Rimme.
 
 to delete (X - a grab object):
 	let found be 0;
@@ -2711,7 +2520,10 @@ This is the turnpass rule:
 		increase the hp of the player by (level of player divided by 3);
 	if "Rapid Healing" is listed in feats of player:
 		increase the hp of the player by 2;
-	if "Singular" is listed in feats of player:
+	let yy be 4;
+	if "Resistant" is listed in feats of player, increase yy by 2;
+	if "Mutable" is listed in feats of player, decrease yy by 1;
+	if "Singular" is listed in feats of player and a random chance of 1 in yy succeeds:
 		let z be 0;
 		if facename of player is bodyname of player:
 			now z is z;
@@ -2729,7 +2541,7 @@ This is the turnpass rule:
 			now z is z;
 		otherwise:
 			now z is 1;
-		if bodyname of player is "human":
+		if bodyname of player is "human" or ( shiftable is 2 and humanity of player > 49 ):		[blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
 			sort table of random critters in random order;
@@ -2741,11 +2553,11 @@ This is the turnpass rule:
 					infect;
 					break;
 	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
-	if a random number from 1 to 20 is greater than the stamina of the player minus 5:
+	if a random number from 1 to 20 is greater than ( ( the stamina of the player divided by 2 ) minus 1 ):
 		increase hunger of player by 1;
 		if child is born and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
 		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease hunger of player by 1;
-	if a random number from 1 to 20 is greater than the stamina of the player minus 10:
+	if a random number from 1 to 20 is greater than ( ( the stamina of the player divided by 3 ) minus 1 ):
 		increase thirst of player by 3;
 		if child is born, increase thirst of player by 1;
 		if "Spartan Diet" is listed in feats of player, decrease thirst of player by 1;
@@ -2778,20 +2590,20 @@ This is the turnpass rule:
 			if Intelligence of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Intelligence of player by 1;
 				increase hunger of player by 3;
-				increase thirst of player by 3;
+				increase thirst of player by 5;
 				say "Your body strives to restore your mental functions.  You stomach churns and you sweat profusely from the effort of this process.  [bold type]Intelligence increased by 1.[roman type][line break]";
 				now restoration is 1;
 			if Charisma of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Charisma of player by 1;
 				increase hunger of player by 3;
-				increase thirst of player by 3;
+				increase thirst of player by 5;
 				now restoration is 1;
 				say "Your body strives to restore your natural charm and allure.  You stomach churns and you sweat profusely from the effort of this process.  [bold type]Charisma increased by 1.[roman type][line break]";
 				now restoration is 1;
 			if Perception of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Perception of player by 1;
 				increase hunger of player by 3;
-				increase thirst of player by 3;
+				increase thirst of player by 5;
 				say "Your body strives to restore your enhance perceptive abilities.  You stomach churns and you sweat profusely from the effort of this process.  [bold type]Perception increased by 1.[roman type][line break]";
 				now restoration is 1;
 		if hunger of player is greater than 90:
@@ -4074,3 +3886,214 @@ Carry out milking:
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
 		
+
+[Special]
+Include Shifting by Hellerhound.
+Include Qytat Shifters by Hellerhound.
+Include Fucking by Nuku Valente.
+Include Needy Heat for FS by Telanda Softpaw.
+Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
+Include Pets by Nuku Valente.
+Include Computers by Hellerhound.
+
+
+
+[Locations]
+Include Red Light by Hiccup.
+Include High Rise District by Batroo.
+Include Stables by Sarokcat.
+Include New Ewe Store by Sarokcat.
+Include Hyena Hideout by Sarokcat.
+Include Museum by Sarokcat.
+Include Tiger Den by Sarokcat.
+Include Pirate Island by Sarokcat.
+Include Tattoo Parlor by Sarokcat.
+Include Stablemasters by Sarokcat.
+Include Approaching the Capitol Building for FS by Sweraptor.
+Include Training center by Zero.
+Include GYM by Zero.
+Include Underwater Zone For Fs by Hellerhound.
+Include Power Plant by Hellerhound.
+Include Zoo by Hellerhound.
+Include Qytat a'th Lundrues by hellerhound.
+Include Hospital For Fs by Stripes.
+Include Medical Checkups by Hellerhound.
+Include Junkyard and Warehouse by Rimme.
+Include State Fair by Sarokcat.
+
+
+[Quests & Events]
+Include Random Events by Hiccup.
+Include High Rise Events by Stripes.
+Include Hyena Bikers by Stripes.
+Include Stable Related Events by Sarokcat.
+Include Red Events by Stripes.
+Include New Events by Sarokcat.
+Include Fair Events by Sarokcat.
+Include Mall Events by Sarokcat.
+Include Beach Events by Sarokcat.
+Include Park Events by Sarokcat.
+Include Museum Events by Sarokcat.
+Include Zoo Events by Sarokcat.
+Include Fair Events by Sarokcat.
+Include Stable Related Quests by Sarokcat.
+Include Infected Pool for FS by Hellerhound.
+Include Hyena Situations by Hellerhound.
+Include Catapult Encounter by Hellerhound.
+Include Toy Store by Hellerhound.
+Include Assorted Events by Stripes.
+Include Food and Water Finding by Nuku Valente.
+Include Odd Weapons for FS by Hellerhound.
+Include Control Pills by Hellerhound.
+Include giving in by Hellerhound.
+Include Addiction by Hellerhound.
+Include Smell by Hellerhound.
+Include Inventory Management Enhancements for FS by mirumu.
+Include Story Skipper by Nuku Valente.
+Include items by zero.
+Include Feats by Nuku Valente.
+Include Pepperspray by Stripes.
+
+
+[Monsters/Infections]
+Include Chocolate Lab by Stripes.
+Include Yamato Dragon For FS by Kohryu.
+Include Yamato Dragoness For FS by Kohryu.
+Include Equine for FS by Nuku Valente.
+Include Ashen Breeder For Fs by Auto Translator.
+Include Lizard Girl For Fs by Damaged.
+Include Skunk For Fs by Damaged.
+Include Random Shemale Smooth Collie For Fs by Voldine.
+Include Alien Felinoid For FS by Damaged.
+Include Bovine For Fs by Damaged.
+Include Small Feline And Lion For Fs by Damaged.
+Include Random Tentacle Horror For Fs by Kazard.
+Include Demon Brute For Fs by Leo X.
+Include Parasitic Plant For Fs by Xeylef.
+Include Awesome Tree For Fs by Damaged.
+Include Herm Hyena for FS by Anony Mouse.
+Include Wyvern For Fs by Damaged.
+Include Cannon by Hiccup.
+Include Spidergirl For Fs by Tentacle Specialist.
+Include Bear For Fs by Nuku Valente.
+Include Pit Bull For FS by Ilovecock.
+Include Painted Wolf Herm by Kyvi Stormbreaker.
+Include Lusty Skunk by Nuku Valente.
+Include Gator by Nuku Valente.
+Include MothGirl for Fs by Soren.
+Include otter by Nuku Valente.
+Include Ash Drakenoid by Sweraptor.
+Include Kangaroo by batroo.
+Include Feral Sea Dragon by Tunalord Sefont.
+Include Feral Sea Dragoness by Tunalord Sefont.
+Include Tigress Hooker for FS by Stripes.
+Include Tiger Cop for FS by stripes.
+Include Wolverine Guard for FS by Stripes.
+Include Feral Wolf for FS by Shadowwolf94.
+Include Anthro Shaft Beast for FS by Dragonflayer.
+Include Feral Shaft Beast for FS by Dragonflayer.
+Include Wrestling Wolf For Fs by Volcblaze.
+Include Donkeywoman by Sarokcat n Verath.
+Include Mareslut by Sarokcat.
+Include Stallionboi by Sarokcat n Verath.
+Include Donkeyman by Sarokcat n Verath.
+Include Horseman by Sarokcat n Verath.
+Include sprite by Nuku Valente.
+Include Harpy by Nuku Valente.
+Include Cute Chinchilla Girl For FS by Trav.
+Include Ewe by Sarokcat.
+Include Ram by Sarokcat.
+Include Teddy Bear by Sarokcat.
+Include Hyena Matriarch by Sarokcat.
+Include Alpha Wolf by Sarokcat.
+Include Plush Lion by Sarokcat.
+Include Rubber Tigress by Sarokcat.
+Include Satyr by Sarokcat.
+Include Greek Nymph by Sarokcat.
+Include Panda by Sarokcat.
+Include Gazelle by Sarokcat.
+Include Zebra by Sarokcat.
+Include Cheetah by Sarokcat.
+Include Tiger by Sarokcat.
+Include Tigertaur by Sarokcat.
+Include Sphinx by Sarokcat.
+Include Pirate Shark by Sarokcat.
+Include Sabretooth by Sarokcat.
+Include Jackalboy by Sarokcat.
+Include Wolftaur by Sarokcat.
+Include jackalman by Sarokcat.
+Include Panther Herm by Sarokcat.
+Include Succubus by Sarokcat.
+Include Twisted Pimp by Sarokcat.
+Include Alpha Husky by Sarokcat.
+Include Leopardman by Sarokcat.
+Include Hawkman by sarokcat.
+Include Unicorn by Sarokcat.
+Include Arctic Fox by Sarokcat.
+Include Nightmare by Sarokcat.
+Include Ash Dragator for FS by Sweraptor.
+Include Ash Whelp For FS by Sweraptor.
+Include Male Peacock for FS By Lago Moro.
+Include Gryphons Plot for FS by Hellerhound.
+Include Dolphin for FS by Hellerhound.
+Include Centaur by Hellerhound.
+Include Nymph for FS by Hellerhound.
+Include Latex Wolf for FS by Hellerhound.
+Include Hermaphrodite Latex Vixen for FS by Tentabear.
+Include Butterfly for FS by mirumu.
+Include Rabbit Pack for FS by Lago Moro.
+Include Jaguar Orderly For Fs by Stripes.
+Include Mismatched Chimera For Fs by Stripes.
+Include Candy Striper by Stripes.
+Include Naughty Nurse by Stripes.
+Include Triceratops For Fs by Stripes.
+Include Siamese Cats by Stripes.
+Include Albino Mouse by Stripes.
+Include Cat Ninjas by Stripes.
+Include Reindeer by Stripes.
+Include Strange Slut by Zero.
+Include Dominator by Zero.
+Include Random German Shepherd For Fs by Telanda Softpaw.
+Include Messy Pig for Fs by anonymous.
+Include Elf by Nuku Valente.
+
+
+
+[NPCs]
+Include Stuck Dragon by Hiccup.
+Include Tanuki by Nuku Valente.
+Include Mouse Taur by Nuku Valente.
+Include Deer by Nuku Valente.
+Include Lance by Verath.
+Include Palomino by Verath.
+Include Tristian by Verath.
+Include Fancy by Sarokcat n Verath.
+Include Daisy by Sarokcat n Verath.
+Include Onyx by Sarokcat n Verath.
+Include Zoo People by Sarokcat.
+Include Sarah by Sarokcat&Hellerhound.
+Include Coleen by Sarokcat.
+Include Nermine by Sarokcat.
+Include Lindsey by Sarokcat.
+Include Midnight by Sarokcat.
+Include Harold by Sarokcat.
+Include Kara by Sarokcat.
+Include Janice by Sarokcat.
+Include Alex by Nuku Valente.
+Include Hadiya by Kaxin.
+Include Desperate Bunny by Nuku Valente.
+Include Hyper Squirrel by Nuku Valente.
+Include Hungry Boar Man by Hiccup.
+Include Orthas by Nuku Valente.
+
+
+
+[Pets]
+Include Little Fox by Sarokcat.
+Include Felinoid Companion by Sarokcat.
+Include Kitty Cat by Sarokcat.
+Include Skunk Pet by Sarokcat.
+Include Exotic Bird by Sarokcat.
+
+
+
