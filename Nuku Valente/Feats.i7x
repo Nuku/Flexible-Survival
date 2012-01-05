@@ -84,6 +84,7 @@ instead of addfeating the fun feats:
 	addfeat "Singular" with "You are not one to go in half way. Whatever form your torso takes, the rest tends to follow.";
 	if "One Way" is not listed in feats of player:
 		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits.";
+		addfeat "Passing Grade Chest" with "Your breasts will never fail a test, and will remain D cupped or smaller. If they do become too large, they will shrink rapidly back into line.";
 	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
 	addfeat "Bad Luck" with "You may end up in back-to-back fights occasionally.";
 	if "Cold Fish" is not listed in feats of player:

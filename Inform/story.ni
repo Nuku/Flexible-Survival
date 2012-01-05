@@ -2552,6 +2552,9 @@ This is the turnpass rule:
 					say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
 					infect;
 					break;
+	if "Passing Grade Chest" is listed in feats of player and breast size of player is greater than 4:
+		now breast size of player is 4;
+		say "You feel the pressure in your chest suddenly abate with a rush of relief.";
 	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
 	if a random number from 1 to 20 is greater than ( ( the stamina of the player divided by 2 ) minus 1 ):
 		increase hunger of player by 1;
