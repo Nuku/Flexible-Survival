@@ -49,7 +49,7 @@ to say Tager3:
 	infect "Male Dominator";
 
 
-
+[
 Section 3 - commands
 
 Anti-slut is an action applying to nothing.
@@ -64,7 +64,7 @@ Understand "ask tanuki for help" as Anti-slut.
 
 carry out Anti-slut:
 		say "sorry this event has ended, goodbye.";
-
+]
 
 
  
