@@ -1834,7 +1834,7 @@ To Infect:
 			let oldbreast be descr;
 			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
 			decrease breast size of player by 1;
-			decrease breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+			decrease breast size of player by ( breast size of player minus breast size entry ) divided by 3;
 			follow the breast descr rule;
 			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
 		if bodyname of player is not name entry:
@@ -1907,7 +1907,7 @@ To Infect:
 				let oldbreast be descr;
 				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
 				decrease breast size of player by 1;
-				decrease breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+				decrease breast size of player by ( breast size of player minus breast size entry ) divided by 3;
 				follow the breast descr rule;
 				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
 			if bodyname of player is not name entry:
@@ -3829,7 +3829,7 @@ When play ends:
 	say "I hope you enjoyed playing that as much as I enjoyed coding/writing it! It doesn[apostrophe]t have to end here though! Come join other mutants and play in the Flexible Survival universe with us!";
 	say "http://flexiblesurvival.com/[line break]";
 	say "Once you have a character, click [apostrophe]direct control[apostrophe], and we[apostrophe]ll be there, waiting to give a hand!";
-	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2000";
+	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2000[line break][line break]";
 	
 
 Milking is an action applying to nothing.
