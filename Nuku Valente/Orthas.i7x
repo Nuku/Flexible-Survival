@@ -236,7 +236,7 @@ When Play begins:
 
 
 When play ends:
-	if orthasstart is 4 and humanity of player is greater than 10 and hp of doctor matt > 0:
+	if orthasstart is 4 and humanity of player is greater than 10 and hp of doctor matt <= 100:
 		say "Once rescue comes, taking everyone with a sane mind out of the city, Orthas comes with you. She's grateful to you for continuing to help with the doctor, and so she stays fairly nearby you in your lives outside. You spend a lot of time together, and many eggs are laid, both into you and elsewhere. During this time, Orthas also learns that she can have a more conventional pregnancy if she holds the eggs inside of herself long enough, and finds that they grow significantly larger if she does so.";
 		if Snow is in Grey Abbey Library and Sandra is in the Bunker and susan is in primary lab:
 			say "At one point in your lives outside, Orthas stands with a silly grin on her face when you arrive at home. Susan, Snow, and Sandra are all sitting on the living room couch, also smiling, and this is the first time you notice that her ovipositor is extended. You suddenly realize you got home about 15 minutes too late.";

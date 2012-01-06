@@ -685,7 +685,7 @@ to say hospquestpt9:
 		if the player consents:
 			increase score by 10;
 			decrease humanity of player by 5;
-			now coonstatus is -1;
+			now coonstatus is 101;
 			repeat with y running from 1 to number of filled rows in table of random critters:	[puts Raccoon as lead monster...]
 				choose row y in table of random critters;
 				if name entry is "Raccoon":
@@ -785,7 +785,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 		decrease hp of player by 15;
 		increase score by 20;
 		now infection terminal is in Hidden Lab;
-		now hp of doctor matt is -3;
+		now hp of doctor matt is 103;
 		now hospquest is 12;
 		now the player is in Hidden Lab;
 		say "[posttlscene]";
@@ -878,7 +878,7 @@ to say hospranaway:
 			say "     Hiding in a nearby building, you pant to catch your breath.  The pink coon thanks you for getting him out, but starts to fret about where he can now go.  You decide, on impulse, to tell him about the bunker under the abbey library and give him directions[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
 	otherwise:
 		say "     Panting for breath, you slam against the main entrance doors and stumble out into the [if remainder after dividing turns by 8 > 4]darkness[otherwise]light[end if].  You continue to run down the steps and across the large parking lot, afraid of pursuit by the hospital's horde.  You cut down a side street and eventually come to a stop in a nearby building[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
-	now hp of doctor mouse is -1;
+	now hp of doctor mouse is 1;
 	now locked stairwell is locked;
 	now hospquest is 13;
 
@@ -931,7 +931,7 @@ to say hosploss:
 			say "     You don't go far, just to a nearby building to finish recovering and take stock of your situation.  The pink coon looks you over with tears in the corners of his eyes, so sad that his saviour should be so treated.  This gets him to start fretting about where he can now go, as he definitely wants nothing to do with the hospital any more.  You decide, on impulse, to tell him about the bunker under the abbey library and give him directions[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
 	otherwise:
 		say "     You groan, still in some pain from the rough handling as you try to get up.  You eventually make it to your feet and pick up your pack.  You look back at the hospital and consider your options[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
-	now hp of doctor mouse is -1;
+	now hp of doctor mouse is 1;
 	now locked stairwell is locked;
 	now hospquest is 13;
 	follow the turnpass rule;
@@ -1099,7 +1099,7 @@ to say hospvictory:
 	otherwise:
 		say "     Outside, you go down the steps and walk across the large parking lot quietly but quickly.  You try not to draw attention to yourself, but want to flee the area as soon as possible, lest the events upstairs are discovered sooner rather than later.  As you walk off down a side street, you [if hp of doctor matt is not 100]know that you need to go see Dr Matt right away, wanting to turn over the research material to him before doing anything else[otherwise]wonder what to do next now that you are without scientific help[end if].";
 	wait for any key;
-	now hp of doctor mouse is -2;
+	now hp of doctor mouse is 2;
 	now Locked stairwell is locked;
 	now hospquest is 13;
 	increase the score by 50;
@@ -1135,7 +1135,7 @@ to say tlranaway:
 	extend game by 20;
 	say "[line break]";
 	wait for any key;
-	now hp of doctor matt is -1;
+	now hp of doctor matt is 101;
 	move doctor matt to dark basement;
 	move orthas to dark basement;
 	if Susan is visible:
@@ -1153,7 +1153,7 @@ to say tlloss:
 	extend game by 20;
 	say "[line break]";
 	wait for any key;
-	now hp of doctor matt is -1;
+	now hp of doctor matt is 101;
 	move doctor matt to dark basement;
 	move orthas to dark basement;
 	if Susan is visible:
@@ -1222,7 +1222,7 @@ to say tlvictory:
 	extend game by 56;
 	say "[line break]";
 	wait for any key;
-	now hp of doctor matt is -2;
+	now hp of doctor matt is 102;
 	move doctor matt to dark basement;
 	move infection terminal to Hidden Lab;
 	if Susan is visible:
@@ -1234,29 +1234,29 @@ to say tlvictory:
 
 
 instead of going to Trevor Labs Lobby while hospquest > 11:		[Lab unenterable after attacking Dr Matt/stealing feat machine]
-	if hp of doctor matt is -1:
+	if hp of doctor matt is 101:
 		say "     After having fled the wrath of Orthas, you dare not try to enter again and risk facing her firey breath.";
-	otherwise if hp of doctor matt is -2:
+	otherwise if hp of doctor matt is 102:
 		say "     Having picked up Orthas and the transformed Dr Matt from the lab, it seems the military blasted the inside of the building, preventing any further theft of any sensitive technology and notes they could not take with them.  The building is no longer accessible, not that anything of value could have survived.";
-	otherwise if hp of doctor matt is -3:
+	otherwise if hp of doctor matt is 103:
 		say "     The self-destruct charges have done their job and much of the inside of the building has collapsed.  It is no longer accessible, not that anything of value could have survived.";
 	otherwise:
 		now the player is in Trevor Labs Lobby;
 
 
 to say posttlscene:
-	say "     Returning to the hospital, you are greeted by Dr Mouse on the helipad.  As he and the orderlies escort you [if Susan is visible]and Susan [end if]down to his lab, you relate to him your [if hp of doctor matt is -1]partial [end if]success at Trevor Labs.  The mouse is [if hp of doctor matt < -1]very [end if]pleased with the results.";
-	if hp of doctor matt is -1:		[fled/lost fight]
+	say "     Returning to the hospital, you are greeted by Dr Mouse on the helipad.  As he and the orderlies escort you [if Susan is visible]and Susan [end if]down to his lab, you relate to him your [if hp of doctor matt is 101]partial [end if]success at Trevor Labs.  The mouse is [if hp of doctor matt > 101]very [end if]pleased with the results.";
+	if hp of doctor matt is 101:		[fled/lost fight]
 		say "     'While the infection was not complete, the partial effects you described should severely hamper his... ahem... her abilities to continue her research.  At the very least, it will slow down their progress and I can take the lead.  While it is unfortunate that you did not get their nanite adjustment system, its gains would have largely been short term.  I should still be able to provide the same service as Dr Matt did for you.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
 		wait for any key;
 		say "     'Now, I have taken the liberty of perusing the hospital files and preparing a false identity from the patient records when the military finally do move into the city[if susan].  I will prepare one for your friend as well[end if].  They are physically similar to you, have no next of kin and won't be turning up to throw a wrench into things.'  It seems that the good doctor has been thinking ahead for you.";
-	if hp of doctor matt is -2:		[won fight]
+	if hp of doctor matt is 102:		[won fight]
 		say "     'From your report, you have done an excellent job.  The complete removal of my rival as competition to discover the nanites['] secrets will make my knowledge all the more valuable.  And these notes and equipment will be of great benefit in the here and now.'";
 		say "     'With them, I can more readily test the parameters of the nanites['] abilities and distribute any improvements I discover my more easily.  Once I have this hooked up, I should be able to provide services like the doctor did, but with many more options to you.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
 		wait for any key;
 		say "     'Now, I have taken the liberty of perusing the hospital files and preparing a false identity from the patient records when the military finally do move into the city[if susan].  I will prepare one for your friend as well[end if].  They are physically similar to you, have no next of kin and won't be turning up to throw a wrench into things.'  It seems that the good doctor has been thinking ahead for you.";
 		now featunlock is 1;
-	if hp of doctor matt is -3:		[took from empty lab]
+	if hp of doctor matt is 103:		[took from empty lab]
 		say "     'You have done an excellent job.  This device just what I need to more readily test the parameters of the nanites['] abilities and distribute any improvements I discover my more easily.  Once I have this hooked up, I should also be able to provide many more options to you with it.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
 		wait for any key;
 		now featunlock is 1;
@@ -1445,17 +1445,17 @@ Section 8 - Endings
 
 when play ends:
 	if hospquest is 13 and humanity of player > 9:			[helped Dr Matt]
-		if hp of doctor mouse is -1:					[Dr Mouse not defeated]
+		if hp of doctor mouse is 1:					[Dr Mouse not defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings.  This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes.  Over the years, you do hear rumours of a bizarre mouse scientist working in distant countries, selling nanite based technology and weapons to foreign governments or guerilla factions of the infected.";
-		if hp of doctor mouse is -2:					[Dr Mouse defeated]
+		if hp of doctor mouse is 2:					[Dr Mouse defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings.  This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes.  You are quietly awarded a medal at a small ceremony for your services.  Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
 	otherwise if hospquest > 13 and humanity of player > 9:	[helped Dr Mouse]
 		if bodyname of player is not "Wolverine Guard":
-			if hp of doctor matt is -1:				[Dr Matt not defeated]
+			if hp of doctor matt is 101:				[Dr Matt not defeated]
 				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  You discretely ask a few questions and hear that the military's chief scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder.  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].";
-			otherwise if hp of doctor matt is -2:		[Dr Matt defeated]
+			otherwise if hp of doctor matt is 102:		[Dr Matt defeated]
 				say "When the military comes through, you are taken in by the army.  The situation at the military base is chaos, with little ability to understand or control the infection.  As such, you receive little scrutiny and your false identity is not questioned.  After you are discharged, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed but helps you in your new life.";
-			otherwise if hp of doctor matt is -3:		[Feat machine stolen]
+			otherwise if hp of doctor matt is 103:		[Feat machine stolen]
 				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life.";
 
 [ Edit this to have the correct Name as well]

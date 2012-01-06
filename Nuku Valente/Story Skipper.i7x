@@ -293,8 +293,10 @@ Carry out reciting:
 	if hospquest > 9, add "Rapid Healing" to feats of the player;
 	if hospquest > 13, add "Physical Booster" to the feats of the player;
 	if hp of doctor matt > 11 and hp of doctor matt < 100, add "Mental Booster" to the feats of the player;
-	if coonstatus < 0, now pink raccoon is tamed;
-	if coonstatus > 0, move Candy to Bunker;
+	if coonstatus > 100:
+		now pink raccoon is tamed;
+	otherwise if coonstatus > 0:
+		move Candy to Bunker;
 	if coonstatus is not 0:
 		repeat with y running from 1 to number of filled rows in table of random critters:    [puts Raccoon as lead monster...]
 			choose row y in table of random critters;
