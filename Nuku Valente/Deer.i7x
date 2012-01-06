@@ -213,7 +213,7 @@ instead of conversing the susan:
 			remove susan from play;
 			now deerconsent is 2;
 	otherwise if deerconsent is 2:
-		if hp of doctor matt is less than 8 and hp of doctor matt > 0:
+		if hp of doctor matt is less than 8:
 			say "She blushes and nudges you, 'You should talk to the Doctor first.'";
 		otherwise:
 			if libido of player is less than 50:

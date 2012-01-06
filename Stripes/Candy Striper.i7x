@@ -302,7 +302,7 @@ Section 6 - Endings
 when play ends:
 	if bodyname of player is "Raccoon":
 		if humanity of player is less than 10:
-			if coonstatus > -1:				[Coon player - Coon non-pet]
+			if coonstatus < 100:				[Coon player - Coon non-pet]
 				if coonstatus is 0:			[Coon still in hospital]
 					say "     Unable to maintain your sanity, you give in to your body's instinctual needs.  Your thoughts fill with a yearning for sexy males and for cock to fill you.  Drawn by this, you head off into the city.  You drift around, flirting with some of the males you find on the way, but continue on to the hospital.";
 					say "     As you are arriving there, the cute pink raccoon spots you from a window and calls out to you.  This seems to cause a bit of commotion in the hospital and he's chased by a few jaguar orderlies on the way out.  He grabs your paw in his and you run off hand in hand.  It seems he's overstayed his welcome at the hospital.";
@@ -319,7 +319,7 @@ when play ends:
 				otherwise:
 					say ".  It takes a little coaxing by pouncing his morning wood to get him to properly fuck you, but soon enough you're cumming hard as his hot seed fills you.  But, being sterile, you cannot add any young to your nest.";
 					say "     This problem is solved when the military pass through.  Unable to confront the squads head on, you sneak up and drag off a lone soldier.  A few hours later and you have an olive green coon who's more than happy topping his two playmates.  A few more are added every couple of days and eventually the bunker houses a rainbow collection of girly coons.";
-			otherwise if coonstatus is -1:		[Coon player - Coon at pet]
+			otherwise if coonstatus is 101:		[Coon player - Coon at pet]
 				say "     Unable to maintain your sanity, you end up giving in to your body's instinctual needs.  You establish a love nest with your pink playtoy back at the bunker, using him for your pleasure as you see fit.";
 				if cunts of player > 0 and "Sterile" is not listed in feats of player:
 					say "     His reluctance to play with your pussy fades away completely and you have the girly coon fuck you again and again, breeding litters of raccoon cubs in a rainbow array of colours.  The females and herms are always the dominant ones, while the males are subservient playtoys for them.  They eagerly seek out others to capture and bring back to turn into colourful raccoon lovers to add to the gaze you lead at the bunker.";
@@ -337,13 +337,13 @@ when play ends:
 				otherwise:
 					say ".  Being a transformee in a predominantly human area, you are at first looked on as an oddity and nothing more, but eventually you manage to tempt a sexy guy into a little fun in the gay club's bathroom.  From that point on, word starts to get around and you become more popular.  In time, you have become an exotic treat that everyone wants to play with and you have no lack of favorite lovers.";
 			otherwise:
-				if coonstatus is -1:			[w/coon pet]
+				if coonstatus is 101:			[w/coon pet]
 					say "     When their forces move in to rescue survivors, the military is reluctant to let your pink raccoon pet accompany you.  But between the emotional breakdown he starts to go through when this separation is discussed and your clear physical similarities to him, they quickly relent and bring him back to the base with you.";
 					say "     You giggle inside as you watch your pet tease and tempt the soldiers on watch, much to their dismay.  But in time his playful nature gets them, one by one, to take advantage of his willing body.  He then brings them to you for your enjoyment.  You and your pet have lots of fun letting the big, tough soldiers fuck you again and again.";
-				if coonstatus > 0:			[w/Candy]
+				otherwise if coonstatus > 0:		[w/Candy]
 					say "     When the military forces move in to rescue survivors, Candy is taken out with you and the other survivors they find.  You and the raccoon make a very effective team, teasing and tempting the soldiers on watch, much to their initial dismay.  But in time you are able to get them, one by one, to take advantage of your willing bodies.  You both bring those you ensnare back to the other for a second round of fun.  You and your pink friend have lots of fun letting the big, tough soldiers fuck you again and again.";
-				say "     After a few bouts of sex with you both, you start to notice the soldiers becoming more effeminate and gaining small, coonish traits they keep concealed under their uniforms.  They are not at all dismayed by this, only becoming more eager to play with you both.  Before leaving the compound after being processed, you[if coonstatus > 0] and Candy[end if] make sure you've gotten numbers from all of them and you are soon setting up meetings with them on their off hours.";
-				say "     Despite being rendered non-infectious before getting discharged from the internment camp, playing with the infected soldiers reactivates your strain, allowing you to continue to change them.  When their traits start becoming too noticeable to hide any longer, you arrange for a special orgy with all of them at once.  You and [if coonstatus > 0]Candy[otherwise]your pet coon[end if] have a long romp with them, completing their change into a rainbow collection of coon bois for you.";
+				say "     After a few bouts of sex with you both, you start to notice the soldiers becoming more effeminate and gaining small, coonish traits they keep concealed under their uniforms.  They are not at all dismayed by this, only becoming more eager to play with you both.  Before leaving the compound after being processed, you[if coonstatus < 100] and Candy[end if] make sure you've gotten numbers from all of them and you are soon setting up meetings with them on their off hours.";
+				say "     Despite being rendered non-infectious before getting discharged from the internment camp, playing with the infected soldiers reactivates your strain, allowing you to continue to change them.  When their traits start becoming too noticeable to hide any longer, you arrange for a special orgy with all of them at once.  You and [if coonstatus < 100]Candy[otherwise]your pet coon[end if] have a long romp with them, completing their change into a rainbow collection of coon bois for you.";
 	otherwise if pink raccoon is tamed:				[non-coon player w/pet coon]
 		if humanity of player is less than 10:
 			say "     Bound to you, your girly coon pet remains loyally with you even as your mind collapses and give in to the infection.  He becomes a playtoy for you, fulfilling your sexual needs as best he can between any other lovers or mates you may have.";
@@ -360,7 +360,7 @@ when play ends:
 			say "     When the military forces move in to rescue survivors, Candy is taken out with you and the others.  You try to keep an eye on him, but being surrounded by sexy soldier boys is too much for the raccoon.  Behind your back, he makes out with several of the soldiers and officers.";
 			say "     When you are leaving the compound, you can't help but notice that they were starting to get a little more effeminate themselves and you suspect there'll be a few more girly coons running around the base soon enough.  Your suspicions are later confirmed when you catch the coon on the phone talking to one of them.  It seems he got phone numbers from his lovers on the base and maintains phone contact with them.  The army quickly finds itself with a platoon of horny, girly raccoons in a rainbow of colours in their ranks[if cocks of player > 0].  When not entertaining his many soldier lovers, the coon is always willing to enjoy your company and you fill his willing muzzle or ass on several occasions[end if].";
 	if humanity of player > 9:						[coon pet / Candy - interactions]
-		if coonstatus > 0:						[coon saved]
+		if coonstatus < 100 and coonstatus > 0:			[coon saved]
 			if Sarah is in the bunker and sarahslut < 4:	[Candy + non-pet Sarah]
 				if cocks of player > 0:
 					say "     Having saved him from an uncertain and frightening fate, Candy treats you like some damsel-rescuing hero.  Wanting to do good on the outside and drawing on what he still remembers of his past, he begins learning everything he can from Sarah.  For her part, Sarah is grateful to have a distraction from her endless reservoir of barely-controllable lust.  She throws herself into more medical training and Candy joins her.  Together they become an excellent team, saving lives against sometimes impossible odds.  Loving their rescuer with all their hearts, they learn to share your love and your bed and against all odds manage to keep each other from falling prey to their hypersensitive bodies and overactive libidos.  You sometimes find yourself regretting this however, as it is a challenge to keep up with them at times.";
@@ -382,7 +382,7 @@ when play ends:
 					say "     Candy never seems to warm up to Philip and is catty with him whenever the two end up together at your place.  It is clear that he is upset with your decision to join Philip at his farm, but has his own life as well (thanks to you) and has to accept your decision.  He does visit from time to time, but only when Philip is out, preferring you instead come visit him at his sex den.  You are always careful to clean the boar's strong scent from you before going over, lest it spoil the mood.  He always has at least one of his coon soldier bois over to play with, so he's never lonely and the visit is always fun.";
 				otherwise:
 					say "     Candy never seems to warm up to Philip and is catty with him whenever the two end up together.  You have to take care to wash the boar's strong scent from you after sex, lest it upset the gay coonboi.  Aside from holiday get-togethers with all your new, transformed family of friends, you make sure they are kept apart.";
-		otherwise if coonstatus is -1:				[coon pet]
+		otherwise if coonstatus is 101:				[coon pet]
 			if cocks of player > 0 and bodyname of player is not "Ferret":
 				say "     Your little pink pet remains a loyal slut under your care after your release from the military.  He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you.  He seems to show a preference for a French maid dress, and dutifully keeps house whenever you are out";
 			otherwise:
