@@ -2523,6 +2523,7 @@ This is the turnpass rule:
 	let yy be 4;
 	if "Resistant" is listed in feats of player, increase yy by 2;
 	if "Mutable" is listed in feats of player, decrease yy by 1;
+	now yy is 1;
 	if "Singular" is listed in feats of player and a random chance of 1 in yy succeeds:
 		let z be 0;
 		if facename of player is bodyname of player:
