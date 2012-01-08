@@ -1777,28 +1777,28 @@ To Infect:
 	repeat with y running through bodyparts:
 		now x is y;
 		if y is 1:
-			if skinname of player matches name entry:
-				continue;
+			if skinname of player is name entry:
+				next;
 			otherwise:
 				break;
 		if y is 2:
-			if headname of player matches name entry:
-				continue;
+			if facename of player is name entry:
+				next;
 			otherwise:
 				break;
 		if y is 3:
-			if tailname of player matches name entry:
-				continue;
+			if tailname of player is name entry:
+				next;
 			otherwise:
 				break;
 		if y is 4:
-			if bodyname of player matches name entry:
-				continue;
+			if bodyname of player is name entry:
+				next;
 			otherwise:
 				break;
 		if y is 5:
-			if cockname of player matches name entry:
-				continue;
+			if cockname of player is name entry:
+				next;
 			otherwise:
 				break;
 	if "Resistant" is listed in feats of player:
