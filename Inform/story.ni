@@ -1772,6 +1772,35 @@ To Infect:
 			next;
 		break;
 	let x be a random number from 1 to 5;
+	let bodyparts be { 1, 2, 3, 4, 5 };
+	sort bodyparts in random order;
+	repeat with y running through bodyparts:
+		now x is y;
+		if y is 1:
+			if skinname of player matches name entry:
+				continue;
+			otherwise:
+				break;
+		if y is 2:
+			if headname of player matches name entry:
+				continue;
+			otherwise:
+				break;
+		if y is 3:
+			if tailname of player matches name entry:
+				continue;
+			otherwise:
+				break;
+		if y is 4:
+			if bodyname of player matches name entry:
+				continue;
+			otherwise:
+				break;
+		if y is 5:
+			if cockname of player matches name entry:
+				continue;
+			otherwise:
+				break;
 	if "Resistant" is listed in feats of player:
 		now x is a random number from 1 to 6;	[17% no mutation]
 		if x is 6:
