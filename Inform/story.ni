@@ -1801,8 +1801,8 @@ To Infect:
 				next;
 			otherwise:
 				break;
-	if "Resistant" is listed in feats of player:
-		now x is a random number from 1 to 6;	[17% no mutation]
+	if "Resistant" is listed in feats of player and a random chance of 1 in 4 succeeds:
+		now x is 6;	[25% chance of no mutation]
 		if x is 6:
 			say "Your nanites['] programmed resistance to change prevents further mutation.";
 			stop the action;
@@ -1879,6 +1879,35 @@ To Infect:
 			now cock of player is cock entry;
 	if "Mutable" is listed in feats of player and a random chance of 1 in 2 succeeds:		[** Repeat of above code for physical change]
 		let x be a random number from 1 to 5;
+		let bodyparts be { 1, 2, 3, 4, 5 };
+		sort bodyparts in random order;
+		repeat with y running through bodyparts:
+			now x is y;
+			if y is 1:
+				if skinname of player is name entry:
+					next;
+				otherwise:
+					break;
+			if y is 2:
+				if facename of player is name entry:
+					next;
+				otherwise:
+					break;
+			if y is 3:
+				if tailname of player is name entry:
+					next;
+				otherwise:
+					break;
+			if y is 4:
+				if bodyname of player is name entry:
+					next;
+				otherwise:
+					break;
+			if y is 5:
+				if cockname of player is name entry:
+					next;
+				otherwise:
+					break;
 		if "Microwaved" is listed in feats of player:
 			say "WARNING: [name entry] nanites detected!";
 			if x is 1:
