@@ -3895,6 +3895,7 @@ Milking is an action applying to nothing.
 understand "milkme" as milking.
 understand "milk me" as milking.
 understand "milk myself" as milking.
+lastmilking is a number that varies.  lastmilking is usually 500.
 
 
 
@@ -3902,7 +3903,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Panther Milk"	"The thick, luscous milk of one of the panther taurs."	1	panther milk
 "Chocolate Milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
-"Vixen Milk"	"A thin milk with an alluring taste, like the silvery vixens it is from."	1	vixen milk
+"Vixen Milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
 
 
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".
@@ -3917,34 +3918,62 @@ check milking:
 		say "You don't appear to have anything worth milking." instead;
 	if cunts of player is less than 1:
 		say "Your breasts don't seem ready to lactate." instead;
+	if lastmilking - turns is less than 8:
+		say "Your breasts have been drained recently.  You'll need to wait before another worthwhile milking.";
 
 Carry out milking:
 	if the bodyname of the player is "Hermaphrodite Gryphon":
 		say "You milk your massive blue furred tits, reveling in the pleasant sensations.";
 		repeat with T running from one to the breasts of the player:
 			add "gryphon milk" to the invent of the player;
+		if breast size of player > 10:
+			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+				add "gryphon milk" to the invent of the player;
+		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Shemale Smooth Collie":
-		say "You milk your many large furred breasts, placing the milk in your bag while recuperating.";
+		say "You milk your many large, furred breasts, placing the milk in your bag while recuperating.";
 		repeat with T running from one to the breasts of the player:
-			add "Dog Milk" to the invent of the player;
+			add "dog milk" to the invent of the player;
+		if breast size of player > 10:
+			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+				add "dog milk" to the invent of the player;
+		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Panther Taur":
 		say "It takes a while to milk your black furred globes, but you manage to do so.";
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
-			add "Panther Milk" to the invent of the player;
+			add "panther milk" to the invent of the player;
+		if breast size of player > 10:
+			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+				add "panther milk" to the invent of the player;
+		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Chocolate Lab":
 		say "It takes little effort to draw some white chocolate flavoured milk from your breasts.";
 		repeat with T running from one to the breasts of the player:
-			add "Chocolate Milk" to the invent of the player;
+			add "chocolate milk" to the invent of the player;
+		if breast size of player > 10:
+			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+				add "chocolate milk" to the invent of the player;
+		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Vixen Nurse":
 		say "It takes a while to milk your silvery furred breasts.  You do not get much, but you manage to do so.";
-		add "Vixen Milk" to the invent of the player;
+		add "vixen milk" to the invent of the player;
+		if breast size of player > 10:
+			add "vixen milk" to the invent of the player;
+		now lastmilking is turns;
 	otherwise if the bodyname of the player is "hermaphrodite dolphin":
 		say "Stroking your cetacean breasts, you manage to draw out a small sample of your thick milk.";
 		add "dolphin milk" to the invent of the player;
+		if breast size of player > 10:
+			add "dolphin milk" to the invent of the player;
+		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Reindeer":
 		say "Stroking your caribou breasts, you manage to draw out a tasty sample of your egg-nog milk.";
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 			add "egg nog" to the invent of the player;
+		if breast size of player > 10:
+			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+				add "egg nog" to the invent of the player;
+		now lastmilking is turns;
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
 		
