@@ -105,20 +105,20 @@ When Play begins:
 	now name entry is "German Shepherd"; [Name of your new Monster]
 	now attack entry is "[attk gsd]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[take gsd]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[male shepherd rape][line break]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block] 
-	now desc entry is "Looking alert and confident a large bipedal canine creature stands before you. [line break]Standing on digitigrade legs the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns. It's completely unclothed, which makes it QUITE clear that this is a 'He', a furry canine sheath resting against his belly and a pair of golf ball size balls dangling beneath.  Studying you calmly there seems to be no reaction, with the exception of his tail starting to wag enthusiastically as he lets out a hungry growl  'Oh look, another newcomer'  his tongue flicks over his lips as he eyes you 'I wonder if you'll be smart enough to cooperate' ";
+	now victory entry is "[male shepherd rape][line break]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block] 
+	now desc entry is "Looking alert and confident a large bipedal canine creature stands before you. [line break]Standing on digitigrade legs the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns. It's completely unclothed, which makes it QUITE clear that this is a 'He', a furry canine sheath resting against his belly and a pair of golf ball size balls dangling beneath.  Studying you calmly there seems to be no reaction, with the exception of his tail starting to wag enthusiastically as he lets out a hungry growl  'Oh look, another newcomer'  his tongue flicks over his lips as he eyes you 'I wonder if you'll be smart enough to cooperate.'";
 	now face entry is "distinctly canine face, with a long canine muzzle filled with sharp teeth and a pair of expressive pointed ears atop your head";
-	now body entry is  "that of a bipedal dog, with digitigrade legs and paw like hands.";
+	now body entry is "that of a bipedal dog, with digitigrade legs and paw like hands";
 	now skin entry is "coarse [gsdfurcolour]furred";
-	now tail entry is "Behind you is a  new limb, whipping about expressively... and frequently betraying your mood is a dog[apostrophe]s tail. ";
+	now tail entry is "Behind you is a new limb, whipping about expressively... and frequently betraying your mood is a dog[apostrophe]s tail.";
 	now cock entry is "[if looknow is 1] surrounded in a tight[skin of player] sheath, protecting the wonderfully sensitive German Shepard cock residing within[otherwise]animalistic canine[end if]";
-	now face change entry is "Your face draws forward into a canine muzzle, which rapidly fills with teeth and a broad lolling tongue. at the same time your ears become more pointed and expressive and migrate towards the top of your now canine head.";
+	now face change entry is "Your face draws forward into a canine muzzle, which rapidly fills with teeth and a broad lolling tongue. at the same time your ears become more pointed and expressive and migrate towards the top of your now canine head";
 	now body change entry is "your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw like with dull black claws in the tips";
 	now skin change entry is "your skin prickles from head to toes as fur begins to push through from underneath, soon covering you in a coarse protective coat of [gsdfurcolour]fur";
-	now ass change entry is "a long tail pushes from your spine, Rushing straight out then curling between your legs at the feeling of shock as you study the appendage.";
-	now cock change entry is "your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago.";
+	now ass change entry is "a long tail pushes from your spine, Rushing straight out then curling between your legs at the feeling of shock as you study the appendage";
+	now cock change entry is "your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago";
 	now str entry is 12;
-	now dex entry is  12;
+	now dex entry is 12;
 	now sta entry is 14;					
 	now per entry is 12;
 	now int entry is 12;
