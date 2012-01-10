@@ -1,4 +1,5 @@
-Version 4 of Parasitic Plant For FS by xeylef begins here.
+Version 5 of Parasitic Plant For FS by xeylef begins here.
+[Version 5 - Update to heat]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Parasitic Plant creature to Flexible Survivals Wandering Monsters table, With multiple vaginas!"
 [Description text for this Extension.]
@@ -136,9 +137,10 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 to say parasiticluststart:
 	if plantdefeat is 1:
 		 say "You feel a torrent of carnal lust washing over you, seemingly coming from the seed embedded deep in your belly.";
+		now addedlibido is 10;
 		 if cunts of player is 1, say "Your vagina begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough for long. You need a cock in it. Preferably one able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
 		if cunts of player > 1:
-			say "Your vaginas begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough. You need cocks in them. Preferably cocks able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
+			say "Your vaginas begin to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough. You need cocks in them. Preferably cocks able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
 			now addedlibido is addedlibido + 2 times ( cunts of player minus 1 );
 		if tailname of player is "Parasitic Plant":
 			say "The same sensation comes from your ass-cunt, which seems just as aroused.";
@@ -149,9 +151,9 @@ to say parasiticluststart:
 
 to say parasiticlust:
 	if plantdefeat is 1:
-		increase libido of player by 10 + addedlibido;
-		if (libido of player is greater than  90) and (location of player is fasttravel ) and (timetillrampage is greater than 3):
-			say "As you pant and feverously massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rushes to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.[line break]";
+		increase libido of player by addedlibido;
+		if (libido of player is greater than 90) and (location of player is fasttravel) and (timetillrampage is greater than 3):
+			say "As you pant and feverously massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rushes to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.";
 			wait for any key;
 			if skinname of player is "Parasitic Plant", now keepskin is 1;
 			if facename of player is "Parasitic Plant", now keepface is 1;
@@ -160,49 +162,58 @@ to say parasiticlust:
 			if cockname of player is "Parasitic Plant", now keepcock is 1;
 			now timetillrampage is 0;
 			let hmonlist be a list of numbers;
+			repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear in the current area or Outside ] 
+				choose row X from the table of random critters;
+				if there is no area entry, next;
+				if area entry matches the text battleground:
+					add X to hmonlist;
+				if area entry is "Outside":
+					add X to hmonlist;
 			repeat with Y running from 1 to a random number from 3 to 10:
-				repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear in the current area or Outside ] 
-					choose row X from the table of random critters;
-					if there is no area entry, next;
-					if area entry matches the text battleground:
-						add X to hmonlist;
-					if area entry is "Outside":
-						add X to hmonlist;
 				sort hmonlist in random order;
 				repeat with Z running through hmonlist:		[Pick one of the monsters at random]
 					now monster is Z;
 					break;
 				choose row monster from the table of random critters;
+				say "[line break][line break]";
+				say "[one of]Your lustful urges lead you to a [name entry].  Immediately upon seeing the infected monster, you offer yourself to it in the hopes of satisfying some of your seed's hunger.[or]An enticing scent leads to a [name entry].  Hoping to slake your thirst for sexual juices, you immediately submit in the hopes of satisfying your body's carnal hungers.[or]A [name entry] encounters you while you wander in your lustful haze.  You submit to it with no reservations, needing to satisfy your deep, internal hunger.[or]A [name entry] crosses your wandering path as you seek out the scents to slake your inner needs.  You offer yourself to it, lustful for any sexual satisfaction you may get from it.[or]When your lustful meandering leads to a [name entry], you submit and offer yourself to it.[or]Wandering through the city with no aim greater than lustful self-satisfaction, you come across a [name entry] and give in to it immediately.[in random order]";
 				follow the cock descr rule;
 				follow the breast descr rule;
 				now didsubmit is 1;
 				say "[victory entry]";
 				infect;
 				wait for any key;
-			say "The sex rampage finally ends and you regain control of your urges. You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes...[line break]";
-			wait for any key;
+			say "[line break][line break]";
+			say "The sex rampage finally ends and you regain control of your urges.  You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes.  You can feel the seed deep inside you throb as your plant-like infection reasserts itself as it soaks up the sexual juices it so desired.  If seeps through your infected body, reclaiming your altered flesh and spreading further.[line break]";
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Parasitic Plant":
+					now monster is y;
+					break;
+			choose row monster from table of random critters;
 			if keepskin is 1:
 				now skinname of player is "Parasitic Plant";
-				now skin of player is "[one of]green plant-like[or]beautiful plant-like[at random]";
+				now skin of player is skin entry;
 			if keepface is 1:
 				now facename of player is "Parasitic Plant";
-				now face of player is "beautiful, feminine face with vine-like hair and a vertical slit, looking much like a very wet pussy, replacing your mouth";
+				now face of player is face entry;
 			if keeptail is 1:
 				now tailname of player is "Parasitic Plant";
-				now face of player is "A very moist vagina replaced your anus, concealed by a dress made of long petals which extend down to the floor. ";
+				now tail of player is tail entry;
 			if keepbody is 1:
 				now bodyname of player is "Parasitic Plant";
-				now face of player is "undeniably feminine with root-like legs, your needy cunt exsuding a musky substance meant to attract males";
+				now body of player is body entry;
 			if keepcock is 1:
 				now cockname of player is "Parasitic Plant";
-				now face of player is "[if looknow is 1]tentacle cock[otherwise][one of]vine-like[or]tentacle[or]green tendril[at random][end if]";
+				now cock of player is cock entry;
+			infect;
 			decrease the score by 3;
 			if "Kinky" is not listed in feats of the player:
-				say "You feel ashamed and depressed for what you have done.";
-				decrease the morale of the player by 5;
+				say "Your deep, lustful hunger sated for the moment, you feel ashamed and depressed for what you have done.";
+				decrease the morale of the player by a random number from 5 to 10;
 				now the libido of the player is 0;
 			otherwise:
-				say "You massage your abused holes and lick your cum-covered lips. Now that was a good fucking session!";				
+				say "With your deep, lustful hunger sated for the moment, you massage your abused holes and lick your cum-covered lips. Now that was a good fucking session!";				
 				increase the morale of the player by 5;	
 				now the libido of the player is (libido of player) / 2;
 		else if libido of player is greater than 90:
