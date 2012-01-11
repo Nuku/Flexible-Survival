@@ -343,6 +343,7 @@ carry out bargainhunting:
 		let Z be a random number between 1 and 30;
 		if Z is 1:
 			Say "You pull out a small urn of some sort, and look at it curiously.  Nermine sighs behind you as she sees what you are holding. 'Is funeral urn. Very old, and very bad luck. Nermine is not sure how it found its way into bargain bin again, but she will try to find a better place to put it this time.' Nermine says as she takes the small urn from your hands, and places it down on a shelf somewhere behind the counter.  'Nermine only hopes bad luck hasn[apostrophe]t rubbed off on you already, she will give you kiss for luck to make sure,' the jackal says as she leans over the counter even further, her black muzzle brushing over your mouth even as you open it to respond.  Before you know it, her tongue is exploring your mouth even as her muzzle rubs up against your face, in what is actually a surprisingly pleasant kiss.  After a second, she pulls her tongue out of your mouth, leaving you standing there slightly stunned as she gives you another soft lick across the cheek. 'There.  That should counter any bad luck urn might have given you.  Be letting me know if you find the sneaky thing in bin again,' the sexy jackaless says with a wink as she returns to her normal place at the counter.  After a second, you realize that you now don[apostrophe]t have anything to show for your hunt through the bargain bin, but at least you got a nice kiss for your efforts?  That[apostrophe]s something of a bargain, isn[apostrophe]t it?";
+			increase score by 5;
 		otherwise if Z is 2:
 			If strangebottledrink is less than 3:
 				Say "Looking through the bin, you spot a small vial labeled [']Drink Me['].  Amused at the old Alice in Wonderland reference, you decide to pull the small vial out and take a sip. You are somewhat disappointed when nothing magical seems to happen immediately and your size remains the same, although your body does seem to be strangely invigorated by the unusual drink, and you realize that you are no longer hungry or thirsty.";
@@ -545,10 +546,12 @@ carry out bargainhunting:
 				decrease hp of player by 50;
 			otherwise:
 				say "Reaching into the bargain bin with high hopes, you feel something rather thin and metallic under your fingers, pulling it out you find yourself staring into a rather nicely made hand mirror. Admiring the fine looking mirror, you take a look at your reflection, only to gasp in surprise as it shows you kneeling on the floor in front of a shadowy figure, your features strange and twisted, a mixture of several other beasts, only somehow weaker and less dominant, your eyes wide and glazed without any sign of free will left, though obvoiusly still recognizable as your own. Strangely enough even as you stare at it, the eyes of the shadowy figure turn and bore into your own eyes, and you gasp and drop the mirror in surprise. The sound of the mirror shattering as it hits the floor snaps you out of your shock however, and you look down at the mess even as Nermine tsks at you sadly. 'Is going to be seven years bad luck for you now, Nermine fears.' Her pronouncement makes you shudder slightly, as you feel a chill go down your spine... But as creepy as the mirror was, you can[apostrophe]t actually bring yourself to feel bad that it was destroyed.";
-				add "Bad Luck" to feats of the player;
+				if "Bad Luck" is not listed in feats of player, add "Bad Luck" to feats of the player;
 		otherwise if Z is 24:
 			say "As you start to reach into the bargain bin to search, Nermine reaches out and stops you. 'Nermine has bad feeling about this time, maybe you accept a bit of advice on things from Nermine instead?' The strange jackal woman says, and staring at the bargain bin you can swear you can almost see something moving around in the piles of strange charms and items... Feeling rather lucky she stopped you, you nod absently, and listen with increasing interest as Nermine gives you several rather useful tips and teaches you a few small tricks to help keep you alive in the city as it is now, and you come out of it feeling like you learned some important things! Although strangely enough after your conversation, you find it hard to recall just Exactly what some of the things she told you were... though you do remember they were quite significant...";
 			if a random chance of 1 in 3 succeeds and nerminefeat is 0:
+				say "Quite significant indeed...";
+				wait for any key;
 				now nerminefeat is 1;
 				featget;
 				stop the action;
@@ -574,9 +577,8 @@ carry out bargainhunting:
 				Move player to Park Entrance;
 			If P is 5:
 				Move player to Beach Plaza;
-			otherwise:
+			if P is 6:
 				Move player to State fair;
-			try looking;
 		otherwise if Z is 27:
 			if "Mutable" is listed in feats of the player or angryhorguth is 1:	
 				say "Rummaging through the bargain bin, you come across several unusual items, most of which you ignore, but eventually you find a rather strange and shiny rock which seems to call to you. Rolling the rock around in your hand with some amusement, you enjoy the way it seems to glow with an inner light, only to cry out in pain as it starts to sink into your unprotected hand! Pulling your hand out of the bin, you wave it around trying to dislodge the rock, while the Jackal shopkeeper shakes her head in amusement. The rock quickly vanishes under your skin despite your best efforts to dislodge it however, and a moment later you skin seems to tingle and harden somewhat, becoming slightly tougher. Which while somewhat of a relief that that is all that happens, is still rather disconcerting, not to mention painful!";
