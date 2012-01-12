@@ -46,7 +46,7 @@ understand "try riddle" as riddlesphinxing;
 understand "answer valerie" as riddlesphinxing;
 
 check riddlesphinxing:
-	if Valerie is not visible, say "who you are looking for is the real riddle here?" instead;
+	if Valerie is not visible, say "Who you are looking for is the real riddle here?" instead;
 
 sphinxfucking is an action applying to nothing.
 
@@ -83,7 +83,7 @@ carry out riddlesphinxing:
 	otherwise:
 		say "'That[apostrophe]s completely wrong!' Valerie says as she shoots you a smug look, 'Maybe you[apostrophe]ll have better luck next time, but I[apostrophe]m not impressed so far,' The sphinx says with a derisive swish of her tail as she dismisses you.  You feel somewhat humiliated by your loss, and strangely even feel as if you have lost a little bit of your humanity to the sphinxes wiles.";
 		decrease humanity of player by 10;
-		infect  "sphinx";
+		infect "sphinx";
 
 
 
