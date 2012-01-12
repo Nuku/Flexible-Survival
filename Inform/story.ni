@@ -3982,9 +3982,9 @@ lastmilking is a number that varies.  lastmilking is usually 500.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Panther Milk"	"The thick, luscous milk of one of the panther taurs."	1	panther milk
-"Chocolate Milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
-"Vixen Milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
+"panther milk"	"The thick, luscous milk of one of the panther taurs."	1	panther milk
+"chocolate milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
+"vixen milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
 
 
 panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".
@@ -4000,7 +4000,7 @@ check milking:
 	if cunts of player is less than 1:
 		say "Your breasts don't seem ready to lactate." instead;
 	if lastmilking - turns is less than 8:
-		say "Your breasts have been drained recently.  You'll need to wait before another worthwhile milking.";
+		say "Your breasts have been drained recently.  You'll need to wait before another worthwhile milking." instead;
 
 Carry out milking:
 	if the bodyname of the player is "Hermaphrodite Gryphon":
