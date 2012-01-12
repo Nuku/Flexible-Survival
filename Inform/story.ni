@@ -1808,9 +1808,9 @@ To Infect:
 				now found is 1;
 				break;
 	if found is 0:
-		now x is 5;
-	if "Resistant" is listed in feats of player and a random chance of 1 in 4 succeeds:
-		now x is 6;	[25% chance of no mutation]
+		now x is 4;
+	if "Resistant" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		now x is 6;	[33% chance of no mutation]
 		if x is 6:
 			say "Your nanites['] programmed resistance to change prevents further mutation.";
 			stop the action;
