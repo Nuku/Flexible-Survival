@@ -77,14 +77,15 @@ instead of addfeating the fun feats:
 		addfeat "Female Preferred" with "You will reject male mutation";
 	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
 		addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership";
-	if "Modest Organs" is not listed in feats of player:
+	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
+	if "One Way" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
+		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits, barring specific effects.";
+	if "Modest Organs" is not listed in feats of player or "One Way" is not listed in feats of player:
+		addfeat "Passing Grade Chest" with "Your breasts will never fail a test, and will remain D cupped or smaller, barring specific effects. If they do become too large, they will shrink rapidly back into line.";
 	addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";
 	addfeat "One Pair" with "You will not grow more than two breasts.";
 	addfeat "Singular" with "You are not one to go in half way. Whatever form your torso takes, the rest tends to follow.";
-	if "One Way" is not listed in feats of player:
-		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits.";
-		addfeat "Passing Grade Chest" with "Your breasts will never fail a test, and will remain D cupped or smaller. If they do become too large, they will shrink rapidly back into line.";
 	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
 	addfeat "Bad Luck" with "You may end up in back-to-back fights occasionally.";
 	if "Cold Fish" is not listed in feats of player:
