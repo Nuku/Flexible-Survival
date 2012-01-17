@@ -1,5 +1,5 @@
-Version 8 of Random Tentacle Horror For FS by Kazard begins here.
-[ Version 8 update by Shadowkeeper ]
+Version 9 of Random Tentacle Horror For FS by Kazard begins here.
+[ Version 9 update by Shadowkeeper ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Tentacle Horror to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -12,939 +12,85 @@ tentsubmit is a number that varies.
 tentaclerape is a number that varies.
 lasttentaclebattleoutcome is a number that varies.
 eggplanted is a number that varies.
+cuntsmall is a number that varies.
+hascunt is a number that varies.
+multicunt is a number that varies.
 
 to say horror victory:
 	if hp of player > 0:
 		now tentsubmit is 1;
 	otherwise:
 		now tentsubmit is 0;
+	if cunts of player is greater than 0:
+		if cunts of player is greater than 1:
+			now multicunt is 1;
+		otherwise:
+			now multicunt is 0;
+		now hascunt is 1;
+	otherwise:
+		now multicunt is 0;
+		now hascunt is 0;
+	if cunt length of player is less than 15 or cunt width of player is less than 12:
+		now cuntsmall is 1;
+	otherwise:
+		now cuntsmall is 0;
 	if "Male Preferred" is listed in feats of player:
 		say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 		stop the action;
 	if tentaclerape is 0:
 		if gestation of child is 0:
 			if tentsubmit is 1:
-				if cunts of player is 0:
-					if cocks of player is 0:
-						say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits, a tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your new pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-						say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-						now cunts of player is 1;
-						now cunt length of player is 15;
-						now cunt width of player is 12;
-						now tentaclerape is 1;
-						now lasttentaclebattleoutcome is 3;
-						Now gestation of child is a random number from 24 to 48;
-						let x be "Tentacle Horror";
-						let infection be "";
-						if a random number from 1 to 100 is greater than 50:
-							now infection is x;
-						otherwise:
-							now infection is skinname of player;
-						now skinname of child is infection;
-						if a random number from 1 to 100 is greater than 50:
-							now infection is x;
-						otherwise:
-							now infection is bodyname of player;
-						now bodyname of child is infection;
-						if a random number from 1 to 100 is greater than 50:
-							now infection is x;
-						otherwise:
-							now infection is tailname of player;
-						now tailname of child is infection;
-						if a random number from 1 to 100 is greater than 50:
-							now infection is x;
-						otherwise:
-							now infection is facename of player;
-						now facename of child is infection;
-					otherwise:
-						if cocks of player is 1:
-							say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits, a tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your new pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-							say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-							now cunts of player is 1;
-							now cunt length of player is 15;
-							now cunt width of player is 12;
-							now tentaclerape is 1;
-							now lasttentaclebattleoutcome is 3;
-							Now gestation of child is a random number from 24 to 48;
-							let x be "Tentacle Horror";
-							let infection be "";
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is skinname of player;
-							now skinname of child is infection;
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is bodyname of player;
-							now bodyname of child is infection;
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is tailname of player;
-							now tailname of child is infection;
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is facename of player;
-							now facename of child is infection;
-						otherwise:
-							if cocks of player is greater than 1:
-								say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break][line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break][line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits, a tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break][line break]";
-								say "After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break][line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your new pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-								now cunts of player is 1;
-								now cunt length of player is 15;
-								now cunt width of player is 12;
-								now tentaclerape is 1;
-								now lasttentaclebattleoutcome is 3;
-								Now gestation of child is a random number from 24 to 48;
-								let x be "Tentacle Horror";
-								let infection be "";
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is skinname of player;
-								now skinname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is bodyname of player;
-								now bodyname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is tailname of player;
-								now tailname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is facename of player;
-								now facename of child is infection;
-				otherwise:
-					if cunts of player is 1:
-						if cunt length of player is less than 15 or cunt width of player is less than 12:
-							if cocks of player is 0: 
-								say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your new pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-								say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-								now cunt length of player is 15;
-								now cunt width of player is 12;
-								now tentaclerape is 1;
-								now lasttentaclebattleoutcome is 3;
-								Now gestation of child is a random number from 24 to 48;
-								let x be "Tentacle Horror";
-								let infection be "";
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is skinname of player;
-								now skinname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is bodyname of player;
-								now bodyname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is tailname of player;
-								now tailname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is facename of player;
-								now facename of child is infection;
-							otherwise:
-								if cocks of player is 1:
-									say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your new pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-									say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now tentaclerape is 1;
-									now lasttentaclebattleoutcome is 3;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is greater than 1:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your new pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-										say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now tentaclerape is 1;
-										now lasttentaclebattleoutcome is 3;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-						otherwise:
-							if cocks of player is 0: 
-								say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-								say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-								now tentaclerape is 1;
-								now lasttentaclebattleoutcome is 3;
-								Now gestation of child is a random number from 24 to 48;
-								let x be "Tentacle Horror";
-								let infection be "";
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is skinname of player;
-								now skinname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is bodyname of player;
-								now bodyname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is tailname of player;
-								now tailname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is facename of player;
-								now facename of child is infection;
-							otherwise:
-								if cocks of player is 1:
-									say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-									say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now tentaclerape is 1;
-									now lasttentaclebattleoutcome is 3;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is greater than 1:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-										say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-										now tentaclerape is 1;
-										now lasttentaclebattleoutcome is 3;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-					otherwise:
-						if cunts of player is greater than 1:
-							if cunt length of player is less than 15 or cunt width of player is less than 12:
-								if cocks of player is 0:
-									say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-									say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now tentaclerape is 1;
-									now lasttentaclebattleoutcome is 3;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is 1:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. A lone tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-										say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now tentaclerape is 1;
-										now lasttentaclebattleoutcome is 3;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										if cocks of player is greater than 1:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. Still other tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your member's for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-											say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-											now cunt length of player is 15;
-											now cunt width of player is 12;
-											now tentaclerape is 1;
-											now lasttentaclebattleoutcome is 3;
-											Now gestation of child is a random number from 24 to 48;
-											let x be "Tentacle Horror";
-											let infection be "";
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is skinname of player;
-											now skinname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is bodyname of player;
-											now bodyname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is tailname of player;
-											now tailname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is facename of player;
-											now facename of child is infection;
-							otherwise:
-								if cocks of player is 0: 
-									say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-									say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-									now tentaclerape is 1;
-									now lasttentaclebattleoutcome is 3;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is 1:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. A lone tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-										say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now tentaclerape is 1;
-										now lasttentaclebattleoutcome is 3;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										if cocks of player is greater than 1:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. Still other tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your member's for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-											say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-											now tentaclerape is 1;
-											now lasttentaclebattleoutcome is 3;
-											Now gestation of child is a random number from 24 to 48;
-											let x be "Tentacle Horror";
-											let infection be "";
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is skinname of player;
-											now skinname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is bodyname of player;
-											now bodyname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is tailname of player;
-											now tailname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is facename of player;
-											now facename of child is infection;
+				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";
+				if hascunt is 0:
+					say "A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach,";
 			otherwise:
-				if cunts of player is 0:
-					if cocks of player is 0:
-						say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle forces itself into your mouth, and begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits, a tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles,your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature obviously doesn't want to take any chances as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-						say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-						now cunts of player is 1;
-						now cunt length of player is 15;
-						now cunt width of player is 12;
-						now tentaclerape is 1;
-						now lasttentaclebattleoutcome is 2;
-						Now gestation of child is a random number from 24 to 48;
-						let x be "Tentacle Horror";
-						let infection be "";
-						if a random number from 1 to 100 is greater than 50:
-							now infection is x;
-						otherwise:
-							now infection is skinname of player;
-						now skinname of child is infection;
-						if a random number from 1 to 100 is greater than 50:
-							now infection is x;
-						otherwise:
-							now infection is bodyname of player;
-						now bodyname of child is infection;
-						if a random number from 1 to 100 is greater than 50:
-							now infection is x;
-						otherwise:
-							now infection is tailname of player;
-						now tailname of child is infection;
-						if a random number from 1 to 100 is greater than 50:
-							now infection is x;
-						otherwise:
-							now infection is facename of player;
-						now facename of child is infection;
-					otherwise:
-						if cocks of player is 1:
-							say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle forces itself into your mouth, and begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits, a tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break][line break] As the tentacle removes itself from your body the creature obviously doesn't want to take any chances as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-							say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-							now cunts of player is 1;
-							now cunt length of player is 15;
-							now cunt width of player is 12;
-							now tentaclerape is 1;
-							now lasttentaclebattleoutcome is 2;
-							Now gestation of child is a random number from 24 to 48;
-							let x be "Tentacle Horror";
-							let infection be "";
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is skinname of player;
-							now skinname of child is infection;
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is bodyname of player;
-							now bodyname of child is infection;
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is tailname of player;
-							now tailname of child is infection;
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is facename of player;
-							now facename of child is infection;
-						otherwise:
-							if cocks of player is greater than 1:
-								say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle forces itself into your mouth, and begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits, a tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break][line break] As the tentacle removes itself from your body the creature obviously doesn't want to take any chances as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-								say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-								now cunts of player is 1;
-								now cunt length of player is 15;
-								now cunt width of player is 12;
-								now tentaclerape is 1;
-								now lasttentaclebattleoutcome is 2;
-								Now gestation of child is a random number from 24 to 48;
-								let x be "Tentacle Horror";
-								let infection be "";
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is skinname of player;
-								now skinname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is bodyname of player;
-								now bodyname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is tailname of player;
-								now tailname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is facename of player;
-								now facename of child is infection;
-				otherwise:
-					if cunts of player is 1:
-						if cunt length of player is less than 15 or cunt width of player is less than 12:
-							if cocks of player is 0: 
-								say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature obviously doesn't want to take any chances as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your now battered pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-								say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-								now cunt length of player is 15;
-								now cunt width of player is 12;
-								now tentaclerape is 1;
-								now lasttentaclebattleoutcome is 2;
-								Now gestation of child is a random number from 24 to 48;
-								let x be "Tentacle Horror";
-								let infection be "";
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is skinname of player;
-								now skinname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is bodyname of player;
-								now bodyname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is tailname of player;
-								now tailname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is facename of player;
-								now facename of child is infection;
-							otherwise:
-								if cocks of player is 1:
-									say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break][line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break][line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break][line break] As the tentacle removes itself from your body the creature obviously doesn't want to take any chances as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your now battered pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-									say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now tentaclerape is 1;
-									now lasttentaclebattleoutcome is 2;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is greater than 1:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature obviously doesn't want to take any chances as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break]";
-										say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now tentaclerape is 1;
-										now lasttentaclebattleoutcome is 2;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-						otherwise:
-							if cocks of player is 0: 
-								say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature obviously doesn't want to take any chances as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-								say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-								now tentaclerape is 1;
-								now lasttentaclebattleoutcome is 2;
-								Now gestation of child is a random number from 24 to 48;
-								let x be "Tentacle Horror";
-								let infection be "";
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is skinname of player;
-								now skinname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is bodyname of player;
-								now bodyname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is tailname of player;
-								now tailname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is facename of player;
-								now facename of child is infection;
-							otherwise:
-								if cocks of player is 1:
-									say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature obviously doesn't want to take any chances as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-									say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now tentaclerape is 1;
-									now lasttentaclebattleoutcome is 2;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is greater than 1:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your member's for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature obviously doesn't want to take any chances as a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-										say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-										now tentaclerape is 1;
-										now lasttentaclebattleoutcome is 2;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-					otherwise:
-						if cunts of player is greater than 1:
-							if cunt length of player is less than 15 or cunt width of player is less than 12:
-								if cocks of player is 0: 
-									say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-									say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now tentaclerape is 1;
-									now lasttentaclebattleoutcome is 2;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is 1:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. A lone tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-										say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now tentaclerape is 1;
-										now lasttentaclebattleoutcome is 2;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										if cocks of player is greater than 1:
-											say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. Still other tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your member's for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-											say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-											now cunt length of player is 15;
-											now cunt width of player is 12;
-											now tentaclerape is 1;
-											now lasttentaclebattleoutcome is 2;
-											Now gestation of child is a random number from 24 to 48;
-											let x be "Tentacle Horror";
-											let infection be "";
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is skinname of player;
-											now skinname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is bodyname of player;
-											now bodyname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is tailname of player;
-											now tailname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is facename of player;
-											now facename of child is infection;
-							otherwise:
-								if cocks of player is 0: 
-									say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-									say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-									now tentaclerape is 1;
-									now lasttentaclebattleoutcome is 2;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is 1:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. A lone tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-										say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now tentaclerape is 1;
-										now lasttentaclebattleoutcome is 2;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										if cocks of player is greater than 1:
-											say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. Still more tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your member's for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles,you mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already overstimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes it's widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
-											say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-											now tentaclerape is 1;
-											now lasttentaclebattleoutcome is 2;
-											Now gestation of child is a random number from 24 to 48;
-											let x be "Tentacle Horror";
-											let infection be "";
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is skinname of player;
-											now skinname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is bodyname of player;
-											now bodyname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is tailname of player;
-											now tailname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is facename of player;
-											now facename of child is infection;
+				say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";
+				if hascunt is 0:
+					say "A slimy tentacle forces itself into your mouth, and begins to pump chemicals directly into your stomach,";
+			if cunts of player is 0:
+				say " causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits,";
+			say "[if hascunt is 1]A[otherwise]a[end if] tentacle twice the size of the others forces it's way inside of you. Filling you [if cuntsmall is 1]far beyond your orifice's capacity, and stretching you deeper and wider than your cunt could initially contain.[otherwise]to your limit.[end if] It pounds within you, battering your cervix, before finally gaining entrance.[if multicunt is 1] Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into.";
+			if cocks of player is 1:
+				say "A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you.";
+			if cocks of player is greater than 1:
+				say "The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you.";
+			say "[line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, [if hascunt is 1]the secretions around the tentacle somehow[otherwise]the chemicals in your belly[end if] helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break]";
+			say "As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to come to a decision as [if multicunt is 1]different tentacles find your sexes and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your battered pussies. [otherwise]a different tentacle finds your sex and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your battered pussy. [end if]Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you. [line break][line break]";
+			say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks[if multicunt is 1] 9 months pregnant with twins...[otherwise] 7 months pregnant...[end if]";
+			if hascunt is 0:
+				now cunts of player is 1;
+				now thirst of player is 0; [all that liquid should quench your thirst ;) ]
+			if cuntsmall is 1:
+				now cunt length of player is 15;
+				now cunt width of player is 12;
+			now tentaclerape is 1;
+			if tentsubmit is 1:
+				now lasttentaclebattleoutcome is 3;
+			otherwise:
+				now lasttentaclebattleoutcome is 2;
+			Now gestation of child is a random number from 24 to 48;
+			let x be "Tentacle Horror";
+			let infection be "";
+			if a random number from 1 to 100 is greater than 50:
+				now infection is x;
+			otherwise:
+				now infection is skinname of player;
+			now skinname of child is infection;
+			if a random number from 1 to 100 is greater than 50:
+				now infection is x;
+			otherwise:
+				now infection is bodyname of player;
+			now bodyname of child is infection;
+			if a random number from 1 to 100 is greater than 50:
+				now infection is x;
+			otherwise:
+				now infection is tailname of player;
+			now tailname of child is infection;
+			if a random number from 1 to 100 is greater than 50:
+				now infection is x;
+			otherwise:
+				now infection is facename of player;
+			now facename of child is infection;
 		otherwise:
 			if tentsubmit is 1:
 				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, right before tearing away your clothes the creature stops. Apparantly sensing the new life growing inside of you the creature sets you down and leaves";
@@ -954,830 +100,145 @@ to say horror victory:
 				now lasttentaclebattleoutcome is 5;
 	otherwise:
 		if gestation of child is 0:
-			if tentsubmit is 1:
-				if eggplanted is 0:
-					if cunts of player is 0:
-						say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
+			if eggplanted is 0:
+				if tentsubmit is 1:
+					say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break]";
+				otherwise:
+					say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. ";
+				if cunts of player is 0:
+					say "It starts searching your body for certain characteristics... Rubbing across your groin and finding no usefull genitals for it's purpose it drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
+					if tentsubmit is 1:
 						now lasttentaclebattleoutcome is 4;
 					otherwise:
-						if cunts of player is 1:
-							if cunt length of player is less than 15 or cunt width of player is less than 12:
-								if cocks of player is 0:
-									say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest and sets you down on the ground, the egg remaining unfertilized.";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now lasttentaclebattleoutcome is 3;
-									now eggplanted is 1;
-								otherwise:
-									if cocks of player is 1:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest and sets you down on the ground, the egg remaining unfertilized.";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 3;
-										now eggplanted is 1;
-									otherwise:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest, sets you down on the ground and leaves, the egg remaining unfertilized.";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 3;
-										now eggplanted is 1;
-							otherwise:
-								if cocks of player is 0:
-									say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest and sets you down on the ground, the egg remaining unfertilized.";
-									now lasttentaclebattleoutcome is 3;
-									now eggplanted is 1;
-								otherwise:
-									if cocks of player is 1:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest and sets you down on the ground, the egg remaining unfertilized.";
-										now lasttentaclebattleoutcome is 3;
-										now eggplanted is 1;
-									otherwise:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest, sets you down on the ground and leaves, the egg remaining unfertilized.";
-										now lasttentaclebattleoutcome is 3;
-										now eggplanted is 1;
-						otherwise:
-							if cunts of player is greater than 1:
-								if cunt length of player is less than 15 or cunt width of player is less than 12:
-									if cocks of player is 0:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest, sets you down on the ground and leaves, the egg remaining unfertilized";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 3;
-										now eggplanted is 1;
-									otherwise:
-										if cocks of player is 1:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. A lone tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest, sets you down on the ground and leaves, the egg remaining unfertilized";
-											now cunt length of player is 15;
-											now cunt width of player is 12;
-											now lasttentaclebattleoutcome is 3;
-											now eggplanted is 1;
-										otherwise:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. Still other tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your member's for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest, sets you down on the ground and leaves, the egg remaining unfertilized";
-											now cunt length of player is 15;
-											now cunt width of player is 12;
-											now lasttentaclebattleoutcome is 3;
-											now eggplanted is 1;
-								otherwise:
-									if cocks of player is 0:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. [line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest, sets you down on the ground and leaves, the egg remaining unfertilized";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 3;
-										now eggplanted is 1;
-									otherwise:
-										if cocks of player is 1:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. A lone tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest, sets you down on the ground and leaves, the egg remaining unfertilized";
-											now cunt length of player is 15;
-											now cunt width of player is 12;
-											now lasttentaclebattleoutcome is 3;
-											now eggplanted is 1;
-										otherwise:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A slimy tentacle presses against your lips, pushing itself into your throat as you open your mouth to admit it, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. Still other tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your member's for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to hesitate for a moment, then seems to lose interest, sets you down on the ground and leaves, the egg remaining unfertilized";
-											now cunt length of player is 15;
-											now cunt width of player is 12;
-											now lasttentaclebattleoutcome is 3;
-											now eggplanted is 1;
+						now lasttentaclebattleoutcome is 5;
+					stop the action;
+				if tentsubmit is 1:
+					say "The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] ";
 				otherwise:
-					if cunts of player is 0:
-						if cocks of player is 0:
-							say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it extends a tentacle to your mouth gently prodding your lips.";
-							say "Do you let the tentacle in?";
-							if the player consents:
-								say "As you open your mouth the tentacle pushes itself into your throat, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits a tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-								now cunts of player is 1;
-								now cunt length of player is 15;
-								now cunt width of player is 12;
-								now lasttentaclebattleoutcome is 3;
-								now eggplanted is 0;
-								now thirst of player is 75;
-								Now gestation of child is a random number from 24 to 48;
-								let x be "Tentacle Horror";
-								let infection be "";
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is skinname of player;
-								now skinname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is bodyname of player;
-								now bodyname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is tailname of player;
-								now tailname of child is infection;
-								if a random number from 1 to 100 is greater than 50:
-									now infection is x;
-								otherwise:
-									now infection is facename of player;
-								now facename of child is infection;
-							otherwise:
-								say "The monster drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
-								now lasttentaclebattleoutcome is 4;
-						otherwise:
-							if cocks of player is 1:
-								say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] The beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two. As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening cock and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break] A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand alarmingly as your intestines are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw, as the monster pulls out the tentacles, covering you in the sticky substance, and puts you down you feel a sudden release as the cream floods out of your now gaping ass";
-								now lasttentaclebattleoutcome is 3;
-								now thirst of player is 75;
-							otherwise:
-								if cocks of player is greater than 1:
-									say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] The beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two. As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening cocks and starts to up and down all of them, jerking you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break] A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand alarmingly as your intestines are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw, as the tentacles pull free, covering you in the sticky substance, and the monster puts you down you feel a sudden release as the cream floods out of your now gaping ass";
-									now lasttentaclebattleoutcome is 3;
-									now thirst of player is 75;
-					otherwise:
-						if cunts of player is 1:
-							if cunt length of player is less than 15 or cunt width of player is less than 12:
-								if cocks of player is 0:
-									say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, stretching your cunt back to the size it was the last time the horror raped you. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now lasttentaclebattleoutcome is 3;
-									now thirst of player is 75;
-									now eggplanted is 0;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is 1:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, stretching your cunt back to the size it was the last time the horror raped you. As the tentacles continue their in and out thrusting rhythm another one wraps around your allready hard cock and starts to jerk you off. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 3;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, stretching your cunt back to the size it was the last time the horror raped you. As the tentacles continue their in and out thrusting rhythm another one wraps around your hardening cocks and starts to rub up and down all of them, jerking you off. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 3;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-							otherwise:
-								if cocks of player is 0:
-									say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now lasttentaclebattleoutcome is 3;
-									now thirst of player is 75;
-									now eggplanted is 0;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									if cocks of player is 1:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. As the tentacles continue their in and out thrusting rhythm another one wraps around your allready hard cock and starts to jerk you off. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-										now lasttentaclebattleoutcome is 3;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. As the tentacles continue their in and out thrusting rhythm another one wraps around your hardening cocks and starts to rub up and down all of them, jerking you off. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-										now lasttentaclebattleoutcome is 3;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-						otherwise:
-							if cunts of player is greater than 1:
-								if cunt length of player is less than 15 or cunt width of player is less than 12:
-									if cocks of player is 0:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, stretching your cunts back to the sizes they were the last time the horror finished raping you. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you. [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 3;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										if cocks of player is 1:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, stretching your cunts back to the sizes they were the last time the horror finished raping you. As the tentacles continue their in and out thrusting rhythm another one wraps around your allready hard cock and starts to jerk you off. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-											now cunt length of player is 15;
-											now cunt width of player is 12;
-											now lasttentaclebattleoutcome is 2;
-											now thirst of player is 75;
-											now eggplanted is 0;
-											Now gestation of child is a random number from 24 to 48;
-											let x be "Tentacle Horror";
-											let infection be "";
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is skinname of player;
-											now skinname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is bodyname of player;
-											now bodyname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is tailname of player;
-											now tailname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is facename of player;
-											now facename of child is infection;
-										otherwise:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, stretching your cunts back to the sizes they were the last time the horror finished raping you. As the tentacles continue their in and out thrusting rhythm another one wraps around your allready hard cocks and starts to jerk you off. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-											now cunt length of player is 15;
-											now cunt width of player is 12;
-											now lasttentaclebattleoutcome is 3;
-											now thirst of player is 75;
-											now eggplanted is 0;
-											Now gestation of child is a random number from 24 to 48;
-											let x be "Tentacle Horror";
-											let infection be "";
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is skinname of player;
-											now skinname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is bodyname of player;
-											now bodyname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is tailname of player;
-											now tailname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is facename of player;
-											now facename of child is infection;
-								otherwise:
-									if cocks of player is 0:
-										say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Ignoring your male genitalia,Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now lasttentaclebattleoutcome is 3;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										if cocks of player is 1:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. As the tentacles continue their in and out thrusting rhythm another one wraps around your allready hard cock and starts to jerk you off. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-											now lasttentaclebattleoutcome is 3;
-											now thirst of player is 75;
-											now eggplanted is 0;
-											Now gestation of child is a random number from 24 to 48;
-											let x be "Tentacle Horror";
-											let infection be "";
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is skinname of player;
-											now skinname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is bodyname of player;
-											now bodyname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is tailname of player;
-											now tailname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is facename of player;
-											now facename of child is infection;
-										otherwise:
-											say "As you lie down in a clear sign of submission the creature excitedly approaches you, extending its many tentacles towards you as it does so. [line break] The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. As the tentacles continue their in and out thrusting rhythm another one wraps around your allready hard cocks and starts to jerk you off. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-											now lasttentaclebattleoutcome is 3;
-											now thirst of player is 75;
-											now eggplanted is 0;
-											Now gestation of child is a random number from 24 to 48;
-											let x be "Tentacle Horror";
-											let infection be "";
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is skinname of player;
-											now skinname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is bodyname of player;
-											now bodyname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is tailname of player;
-											now tailname of child is infection;
-											if a random number from 1 to 100 is greater than 50:
-												now infection is x;
-											otherwise:
-												now infection is facename of player;
-											now facename of child is infection;
+					say "However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] ";
+				say "A tentacle twice the size of the others forces it's way inside of you. Filling you [if cuntsmall is 1]far beyond your orifice's capacity, and stretching you deeper and wider untill it is once again the size it had after the last time the monster raped you.[otherwise]to your limit.[end if] It pounds within you, battering your cervix, before finally gaining entrance.[if multicunt is 1] Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into.";
+				if cocks of player is 1:
+					say "A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across 	the floor below you.";
+				if cocks of player is greater than 1:
+					say "The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you.";
+				say "[line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the secretions around the tentacle somehow helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break]";
+				say "As the tentacle removes itself from your body the creature seems to [if tentsubmit is 1]hesitate for a moment, then seems to lose interest and sets you down on the ground[otherwise]lose interest and drops you to the ground, leaving you alone to recover[end if], the egg remaining unfertilized.";
+				if cuntsmall is 1:
+					now cunt length of player is 15;
+					now cunt width of player is 12;
+				if tentsubmit is 1:
+					now lasttentaclebattleoutcome is 3;
+				otherwise:
+					now lasttentaclebattleoutcome is 2;
+				now eggplanted is 1;
 			otherwise:
-				if eggplanted is 0:
-					if cunts of player is 0:
+				if cunts of player is 0 and cocks of player is 0: [implanted and genderless!? ZOMG!]
+					if tentsubmit is 0: [did not submit]
 						say "The tentacles sense that you can't continue the struggle any longer and surge forward around you, slithering in and through your clothing, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it drops you unceremoniously and starts to drag itself away from you, back into the shadows. Having already attempted to lay it's offspring inside of you once, it sees no reason why it should attempt to stimulate you to a climax that would never come... All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
 						now lasttentaclebattleoutcome is 5;
-					otherwise:
-						if cunts of player is 1:
-							if cunt length of player is less than 15 or cunt width of player is less than 12:
-								if cocks of player is 0:
-									say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the aftereffects of the chemicals the creature pumped into you on your first encounter helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone to recover, the egg remaining unfertilized";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now lasttentaclebattleoutcome is 2;
-									now eggplanted is 1;
-								otherwise:
-									if cocks of player is 1:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone in a puddle of your own juices to recover, the egg remaining unfertilized";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 2;
-										now eggplanted is 1;
-									otherwise:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone in a puddle of your own juices to recover, the egg remaining unfertilized";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 2;
-										now eggplanted is 1;
+					otherwise: [did submit, choice time]
+						say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it extends a tentacle to your mouth gently prodding your lips.";
+						say "Do you let the tentacle in?";
+						if the player consents:
+							say "As you open your mouth the tentacle pushes itself into your throat, once deftly lodged down your throat it begins to pump chemicals directly into your stomach, causing your entire body to start tingling. The tingling focuses on your crotch, and a moist opening forms rapidly, a tentacle rubs against your forming lips encouraging the growth. You feel a strange pressure inside your abdomen as your womb forms growing to average size. Without even a chance to process the sudden growth of your new lady bits a tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, filling you far beyond your new orifice's capacity, and stretching you deeper and wider than your new cunt could initially contain. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
+							now cunts of player is 1;
+							now cunt length of player is 15;
+							now cunt width of player is 12;
+							now lasttentaclebattleoutcome is 3;
+							now eggplanted is 0;
+							now thirst of player is 0; [all that liquid should quench your thirst ;) ]
+							Now gestation of child is a random number from 24 to 48;
+							let x be "Tentacle Horror";
+							let infection be "";
+							if a random number from 1 to 100 is greater than 50:
+								now infection is x;
 							otherwise:
-								if cocks of player is 0:
-									say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the aftereffects of the chemicals the creature pumped into you on your first encounter helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone to recover, the egg remaining unfertilized";
-									now lasttentaclebattleoutcome is 2;
-									now eggplanted is 1;
-								otherwise:
-									if cocks of player is 1:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone in a puddle of your own juices to recover, the egg remaining unfertilized";
-										now lasttentaclebattleoutcome is 2;
-										now eggplanted is 1;
-									otherwise:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others travels along your leg, and forces it's way inside of you, filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone in a puddle of your own juices to recover, the egg remaining unfertilized";
-										now lasttentaclebattleoutcome is 2;
-										now eggplanted is 1;
+								now infection is skinname of player;
+							now skinname of child is infection;
+							if a random number from 1 to 100 is greater than 50:
+								now infection is x;
+							otherwise:
+								now infection is bodyname of player;
+							now bodyname of child is infection;
+							if a random number from 1 to 100 is greater than 50:
+								now infection is x;
+							otherwise:
+								now infection is tailname of player;
+							now tailname of child is infection;
+							if a random number from 1 to 100 is greater than 50:
+								now infection is x;
+							otherwise:
+								now infection is facename of player;
+							now facename of child is infection;
 						otherwise:
-							if cunt length of player is less than 15 or cunt width of player is less than 12:
-								if cocks of player is 0:
-									say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the aftereffects of the chemicals the creature pumped into you on your first encounter helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone to recover, the egg remaining unfertilized";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now lasttentaclebattleoutcome is 2;
-									now eggplanted is 1;
-								otherwise:
-									if cocks of player is 1:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone in a puddle of your own juices to recover, the egg remaining unfertilized";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 2;
-										now eggplanted is 1;
-									otherwise:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you far beyond your orifice's capacity, and stretching you deeper and wider than ever before. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone in a puddle of your own juices to recover, the egg remaining unfertilized";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 2;
-										now eggplanted is 1;
-							otherwise:
-								if cocks of player is 0:
-									say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the aftereffects of the chemicals the creature pumped into you on your first encounter helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone to recover, the egg remaining unfertilized";
-									now lasttentaclebattleoutcome is 2;
-									now eggplanted is 1;
-								otherwise:
-									if cocks of player is 1:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. A tentacle brings your cock to full arousal, and wraps around it, jerking your member relentlessly. You quickly climax launching seed across the floor below you. The tentacle continues to relentlessly bring your cock to climax until your poor balls are spent. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone in a puddle of your own juices to recover, the egg remaining unfertilized";
-										now lasttentaclebattleoutcome is 2;
-										now eggplanted is 1;
-									otherwise:
-										say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime coated appendages before you hit the ground. However you quickly realize this was not out of kindness. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break] A tentacle twice the size of the others forces it's way inside of you. Filling you to your limit. It pounds within you, battering your cervix, before finally gaining entrance. Other tentacles thrust relentlessly in and out of all of your cunts the extra large appendage isn't stuffed into. The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you. [line break] [line break] After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eye go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the chemicals in your belly helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break] As the tentacle removes itself from your body the creature seems to lose interest and drops you to the ground, leaving you alone in a puddle of your own juices to recover, the egg remaining unfertilized";
-										now lasttentaclebattleoutcome is 2;
-										now eggplanted is 1;
+							say "The monster drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
+							now lasttentaclebattleoutcome is 4;
+							stop the action;
 				otherwise:
-					if cunts of player is 0:
-						if cocks of player is 0:
-							say "The tentacles sense that you can't continue the struggle any longer and surge forward around you, slithering in and through your clothing, searching your body for certain characteristics... Rubbing across your groin and finding it devoid of any sort of genitals it drops you unceremoniously and starts to drag itself away from you, back into the shadows. Having already attempted to lay it's offspring inside of you once, it sees no reason why it should attempt to stimulate you to a climax that would never come... All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
-							now lasttentaclebattleoutcome is 5;
-						otherwise:
-							if cocks of player is 1:
-								say "Having already laid its egg within you, the beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two. As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening cock and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break] A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand painfully as your intestines are filled to the brim with cream. The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass, the taste of it still heavy in your mouth. The creature is nowhere to be seen.";
-								now lasttentaclebattleoutcome is 2;
-							otherwise:
-								if cocks of player is greater than 1:
-									say "Having already laid its egg within you, the beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two. As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening cocks and starts to up and down all of them, jerking you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break] A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand painfully as your intestines are filled to the brim with cream. The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass, the taste of it still heavy in your mouth. The creature is nowhere to be seen.";
-									now lasttentaclebattleoutcome is 2;
+					if tentsubmit is 1:
+						say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";
+						if hascunt is 0:
+							say "The beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
+							say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
+							say "A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand alarmingly as your intestines are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw. As the monster pulls out the tentacles, covering you in the sticky substance, and puts you down you feel a sudden release as the cream floods out of your now gaping ass";
+							now lasttentaclebattleoutcome is 3;
+							now thirst of player is 0;
+							stop the action;
+						say "A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you.";
 					otherwise:
-						if cunts of player is 1:
-							if cunt length of player is less than 15 or cunt width of player is less than 12:
-								if cocks of player is 0:
-									say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, stretching your cunt back to the size it was the last time the horror raped you. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now lasttentaclebattleoutcome is 2;
-									now thirst of player is 75;
-									now eggplanted is 0;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Ignoring your male genitalia a tentacle finds your female sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, stretching your cunt back to the size it was the last time the horror raped you. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now cunt length of player is 15;
-									now cunt width of player is 12;
-									now lasttentaclebattleoutcome is 2;
-									now thirst of player is 75;
-									now eggplanted is 0;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-							otherwise:
-								if cocks of player is 0:
-									say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now lasttentaclebattleoutcome is 2;
-									now thirst of player is 75;
-									now eggplanted is 0;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
-								otherwise:
-									say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Ignoring your male genitalia a tentacle finds your female sex, the lips glistening with growing need, and plunges inside of you. It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, hardly stretching your [cunt size desc of player] pussy. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 7 months pregnant...";
-									now lasttentaclebattleoutcome is 2;
-									now thirst of player is 75;
-									now eggplanted is 0;
-									Now gestation of child is a random number from 24 to 48;
-									let x be "Tentacle Horror";
-									let infection be "";
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is skinname of player;
-									now skinname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is bodyname of player;
-									now bodyname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is tailname of player;
-									now tailname of child is infection;
-									if a random number from 1 to 100 is greater than 50:
-										now infection is x;
-									otherwise:
-										now infection is facename of player;
-									now facename of child is infection;
+						say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. [line break] [line break]";
+						if hascunt is 0:
+							say "Having already laid its egg within you, the beast uses it's tentacles to search for the pussy it laid the egg in. As the tentacles slide all over and around your pelvis, they can't seem to find what they're looking for, however, one of the tentacles brushes against the bud of your ass and decides that this is 'close enough'... Pain burns in your virgin asshole as the beast thrusts deep into your intestines without any sort of warning, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
+							say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
+							say "A few hours later you have three tentacles pumping in and out of your ass and there is a small puddle of your seed drying out on floor. The tentacles inside of you shudder and paint your intestines with fertility cream, an action that would have jump started the fertilization of the egg the beast placed within you earlier but now makes your stomach expand painfully as your intestines are filled to the brim with cream. The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass, the taste of it still heavy in your mouth. The creature is nowhere to be seen.";
+							now lasttentaclebattleoutcome is 2;
+							now thirst of player is 0;
+							stop the action;
+						say "Ignoring your male genitalia a tentacle finds your female sex, the lips glistening with growing need, and plunges inside of you.";
+					say "It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, [if cuntsmall is 1]stretching your cunt back to the size it was the last time the horror raped you[otherwise]hardly stretching your [cunt size desc of player] pussy[end if]. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break]";
+					if a random chance of 40 in 100 succeeds: [random assrape! 40% chance]
+						if tentsubmit is 1:
+							say "Suddenly your eyes grow wide as one of the tentacles brushes against the bud of your ass, you squirm trying to move the tentacle away but... Pain burns in your virgin asshole as the beast thrusts deep into your intestines, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
+							say "The tentacle starts an in and out thrusting rhythm quickly building up speed to keep up with the other tentacles allready in you. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
+							say "A few hours later you have three tentacles pumping in and out of your ass alongside with the ones in your [if multicunt is 1]cunts[otherwise]cunt[end if]. The tentacles inside of you shudder and paint your intestines and womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier and makes your belly expand alarmingly as your insides are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw. As the monster pulls out the tentacles, covering you in the sticky substance, and puts you down you feel a sudden release as the cream floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies[otherwise]pussy[end if]";
 						otherwise:
-							if cunts of player is greater than 1:
-								if cunt length of player is less than 15 or cunt width of player is less than 12:
-									if cocks of player is 0:
-										say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, stretching your cunts back to the sizes they were the last time the horror finished raping you. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 2;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Ignoring your male genitalia,Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, stretching your cunts back to the sizes they were the last time the horror finished raping you. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now cunt length of player is 15;
-										now cunt width of player is 12;
-										now lasttentaclebattleoutcome is 2;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-								otherwise:
-									if cocks of player is 0:
-										say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Ignoring your male genitalia,Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now lasttentaclebattleoutcome is 2;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-									otherwise:
-										say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. Ignoring your male genitalia,Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge inside of you. Each tentacle is quickly joined by 2 others, and all of the sets of three piston in and out of your pussies for hours, hardly stretching your [cunt size desc of player] pussies. Sexual juices are gushing from around the thrusting tentacles and flowing down your legs like a waterfall making a quickly growing slick puddle on the floor beneath you.  [line break][line break] A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks 9 months pregnant with twins...";
-										now lasttentaclebattleoutcome is 2;
-										now thirst of player is 75;
-										now eggplanted is 0;
-										Now gestation of child is a random number from 24 to 48;
-										let x be "Tentacle Horror";
-										let infection be "";
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is skinname of player;
-										now skinname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is bodyname of player;
-										now bodyname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is tailname of player;
-										now tailname of child is infection;
-										if a random number from 1 to 100 is greater than 50:
-											now infection is x;
-										otherwise:
-											now infection is facename of player;
-										now facename of child is infection;
-							otherwise:
-								say "error";
-								stop the action;
+							say "Suddenly your eyes grow wide as one of the tentacles brushes against the bud of your ass, you squirm trying to move the tentacle away but... Pain burns in your virgin asshole as the beast thrusts deep into your intestines, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
+							say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
+							say "A few hours later you have three tentacles pumping in and out of your ass alongside with the ones in your [if multicunt is 1]cunts[otherwise]cunt[end if]. The tentacles inside of you shudder and paint your intestines and womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier and makes your stomach expand painfully as your insides are filled to the brim with cream.";
+							say "The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies[otherwise]pussy[end if], the taste of it still heavy in your mouth. The creature is nowhere to be seen.";
+					otherwise:
+						say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks[if multicunt is 1] 9 months pregnant with twins...[otherwise] 7 months pregnant...[end if]";
+					if cuntsmall is 1:
+						now cunt length of player is 15;
+						now cunt width of player is 12;
+					if tentsubmit is 1:
+						now lasttentaclebattleoutcome is 3;
+					otherwise:
+						now lasttentaclebattleoutcome is 2;
+					now eggplanted is 0;
+					Now gestation of child is a random number from 24 to 48;
+					let x be "Tentacle Horror";
+					let infection be "";
+					if a random number from 1 to 100 is greater than 50:
+						now infection is x;
+					otherwise:
+						now infection is skinname of player;
+					now skinname of child is infection;
+					if a random number from 1 to 100 is greater than 50:
+						now infection is x;
+					otherwise:
+						now infection is bodyname of player;
+					now bodyname of child is infection;
+					if a random number from 1 to 100 is greater than 50:
+						now infection is x;
+					otherwise:
+						now infection is tailname of player;
+					now tailname of child is infection;
+					if a random number from 1 to 100 is greater than 50:
+						now infection is x;
+					otherwise:
+						now infection is facename of player;
+					now facename of child is infection;
 		otherwise:
 			if tentsubmit is 1:
 				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, right before tearing away your clothes the creature stops. Apparantly sensing the new life growing inside of you the creature sets you down and leaves";
@@ -1792,30 +253,24 @@ to say horror description:
 	otherwise:
 		if lasttentaclebattleoutcome is 1:
 			say "You boldly stride through the pitch black basement, memories of your triumph over the horror here last time making you more than a little cocky. You see the eyes of the beast loom out of the darkness and hear the sound of the slime covered tentacles slithering around, hidden by the deep shadows. You're shocked to see another beast down here in the dark, the idea that there might be more than one of these horrors lurking in the shadows sends a shiver down your spine. However you ready yourself for the battle hoping that this horror isn't tougher than the first... [line break][line break]By Kazard [line break]AKA Restitution69";
-		otherwise:
-			if eggplanted is 0:
-				if lasttentaclebattleoutcome is 2:
-					say "You don't know what you were thinking, coming back down here after what that horror in the dark did to you the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
-				otherwise:
-					if lasttentaclebattleoutcome is 3:
-						say "You don't know what you were thinking, coming back down here after what that horror in the dark did to you the last time you submitted to it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You somehow feel excited at the prospect of what the creature might do to you this round...[line break][line break] By Kazard[line break]AKA Restitution69";
-					otherwise:
-						if lasttentaclebattleoutcome is 4:
-							say "You don't know what you were thinking, coming back down here after the creature ignored your obvious wantonness the last time you submitted to it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You somehow feel excited at the prospect of what the creature might do to you this round...[line break][line break] By Kazard[line break]AKA Restitution69";
-						otherwise:
-							if lasttentaclebattleoutcome is 5:
-								say "You don't know what you were thinking, coming back down here after that horror in the dark somehow let you go the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
-			otherwise:
-				if lasttentaclebattleoutcome is 2:
-					say "You don't know what you were thinking, coming back down here after what that horror in the dark did to you the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
-				otherwise:
-					if lasttentaclebattleoutcome is 3:
-						say "You don't know what you were thinking, coming back down here after what that horror in the dark did to you the last time you submitted to it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you somehow feel excited at the prospect of what the creature might do to you this round...[line break][line break] By Kazard[line break]AKA Restitution69";
-						if lasttentaclebattleoutcome is 4:
-							say "You don't know what you were thinking, coming back down here after the creature ignored your obvious wantonness the last time you submitted to it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you somehow feel excited at the prospect of what the creature might do to you this round...[line break][line break] By Kazard[line break]AKA Restitution69";
-						otherwise:
-							if lasttentaclebattleoutcome is 5:
-								say "You don't know what you were thinking, coming back down here after that horror in the dark somehow let you go the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
+		otherwise if eggplanted is 0:
+			if lasttentaclebattleoutcome is 2:
+				say "You don't know what you were thinking, coming back down here after what that horror in the dark did to you the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
+			otherwise if lasttentaclebattleoutcome is 3:
+				say "You don't know what you were thinking, coming back down here after what that horror in the dark did to you the last time you submitted to it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You somehow feel excited at the prospect of what the creature might do to you this round...[line break][line break] By Kazard[line break]AKA Restitution69";
+			otherwise if lasttentaclebattleoutcome is 4:
+				say "You don't know what you were thinking, coming back down here after the creature ignored your obvious wantonness the last time you submitted to it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You somehow feel excited at the prospect of what the creature might do to you this round...[line break][line break] By Kazard[line break]AKA Restitution69";
+			otherwise if lasttentaclebattleoutcome is 5:
+				say "You don't know what you were thinking, coming back down here after that horror in the dark somehow let you go the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
+		otherwise
+			if lasttentaclebattleoutcome is 2:
+				say "You don't know what you were thinking, coming back down here after what that horror in the dark did to you the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
+			otherwise if lasttentaclebattleoutcome is 3:
+				say "You don't know what you were thinking, coming back down here after what that horror in the dark did to you the last time you submitted to it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you somehow feel excited at the prospect of what the creature might do to you this round...[line break][line break] By Kazard[line break]AKA Restitution69";
+			otherwise if lasttentaclebattleoutcome is 4:
+				say "You don't know what you were thinking, coming back down here after the creature ignored your obvious wantonness the last time you submitted to it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you somehow feel excited at the prospect of what the creature might do to you this round...[line break][line break] By Kazard[line break]AKA Restitution69";
+			otherwise if lasttentaclebattleoutcome is 5:
+				say "You don't know what you were thinking, coming back down here after that horror in the dark somehow let you go the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
 
 to say horror defeated:
 	say "The fearsome horror struggles to subdue and rape your comparatively vulnerable body, its dripping tentacle appendages reaching towards you before slamming to the ground twitching briefly before laying still. By some miracle, you've managed to slay the horror the professor endeavored to contain. You've done the world a huge service. Hidden from view, further in the chamber, are countless victims who wandered down into the depths of the lab's basement, most 'in the name of science'. Each victim sports massively pregnant looking bellies. One of them shudders as a new beast emerges growing quickly, and moves off into the dark depths of the basement...";
