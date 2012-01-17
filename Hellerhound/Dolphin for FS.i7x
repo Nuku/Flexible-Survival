@@ -221,8 +221,7 @@ to dolphinify:
 			now monster is y;
 			break;
 	infect;
-	infect;
-			
+	
 
 
 Table of Game Objects(continued)
