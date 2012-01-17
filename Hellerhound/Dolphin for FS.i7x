@@ -33,7 +33,7 @@ to say dolphin attack:
 		now the hp of the player is -40;
 		say "You can't be her mate any longer, it looks like she is still too pissed to even think in that direction.";
 	wait for any key;
-	say "She then strokes her top slit, and a cock worms its way out, the pink color dulling in the water. She then begins to piss into the water around you, the yellowing water spreading in a cloud around both of you. All of a sudden, the water begins to taste sweet, and you gulf a little before you realize what you are doing.";
+	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her fliiperlike hands.";
 	infect "hermaphrodite dolphin";
 	wait for any key;
 	now dolphinconsent is 0;
@@ -101,7 +101,8 @@ to say dolphin fuck:
 		increase the cunt length of the player by 6;
 		increase the cunt width of the player by 4;
 	otherwise:
-		say "'You genderless freak!' She screams as she begins to stroke the base of her cock with enthusiasm and skill. she then wraps the end of her prehensile tool around your body, and wriggles it and masturbates feverishly until she cums all over you. Make sure you have something for me to use later, she reprimands.";
+		say "'You genderless freak!' She screams. 'Make sure you have something for me to use later', she reprimands.";
+		decrease the HP of the player by 10;
 		
 
 dolphindmg is a number that varies;
@@ -220,7 +221,6 @@ to dolphinify:
 		if name entry is "hermaphrodite dolphin":
 			now monster is y;
 			break;
-	infect;
 	infect;
 			
 
