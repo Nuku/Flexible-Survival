@@ -262,7 +262,7 @@ to say horror description:
 				say "You don't know what you were thinking, coming back down here after the creature ignored your obvious wantonness the last time you submitted to it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You somehow feel excited at the prospect of what the creature might do to you this round...[line break][line break] By Kazard[line break]AKA Restitution69";
 			otherwise if lasttentaclebattleoutcome is 5:
 				say "You don't know what you were thinking, coming back down here after that horror in the dark somehow let you go the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. You can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
-		otherwise
+		otherwise:
 			if lasttentaclebattleoutcome is 2:
 				say "You don't know what you were thinking, coming back down here after what that horror in the dark did to you the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you can only pray you fare better this round...[line break][line break] By Kazard[line break]AKA Restitution69";
 			otherwise if lasttentaclebattleoutcome is 3:
