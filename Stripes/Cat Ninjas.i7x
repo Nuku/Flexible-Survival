@@ -131,7 +131,7 @@ when play ends:
 				say "     In time, you grow round with kittens and bear your young into the clan.  They are raised to be ninja, protecting the museum from the shadows from any who would strike at it.";
 		otherwise:
 			say "     When the military comes in, you manage to resist the urge to hide from them and instead allow yourself to be taken along with the others they rescue from the fallen city.  You wait patiently for your inevitable release, though you do take to slipping into the shadows and exploring the base.  You find several containment areas holding more exotic and powerful beings, but are careful not to get too close.  You also locate the records room and make a few adjustments to them.  The next day, the group you were being held with is cleared with no further processing.  They, like yourself, aren't rendered non-infectious, though the records state their group was done the day before.  You feel only the briefest concern over having done this, for they were all marked as low-risk species and infection levels.";
-		if humanity of player > 24:
+		if humanity of player > 30:
 			if cocks of player > 0:
 				say "     While those in your group are still confused and wondering what to do next after being released and dropped off unprepared, you keep your eyes on one in particular.  Among them is a woman with pure-white fur and cat ears whom you find very enticing.  Leading her off, your skilled paws soon coax her into sex.  As you make love to her with increasing passion, she is converted more fully into a graceful feline.  She gains a cat's face and tail";
 				if "One Pair" is not listed in feats of player, say ", and a second pair of breasts,";
