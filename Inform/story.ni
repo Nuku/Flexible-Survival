@@ -1099,8 +1099,10 @@ to say impregchance:
 		if a random chance of 1 in 5 succeeds, impregnate with name entry;
 		if "Fertile" is listed in feats of the player:
 			if a random chance of 1 in 5 succeeds, impregnate with name entry;
+		if inheat is True:
+			if a random chance of 1 in 5 succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
-	
+
 
 instead of examining a watch:
 	say "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, it is currently [time of day].";
@@ -4007,7 +4009,7 @@ Carry out milking:
 		say "You milk your massive blue furred tits, reveling in the pleasant sensations.";
 		repeat with T running from one to the breasts of the player:
 			add "gryphon milk" to the invent of the player;
-		if breast size of player > 10:
+		if breast size of player > 8:
 			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 				add "gryphon milk" to the invent of the player;
 		now lastmilking is turns;
@@ -4015,7 +4017,7 @@ Carry out milking:
 		say "You milk your many large, furred breasts, placing the milk in your bag while recuperating.";
 		repeat with T running from one to the breasts of the player:
 			add "dog milk" to the invent of the player;
-		if breast size of player > 10:
+		if breast size of player > 8:
 			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 				add "dog milk" to the invent of the player;
 		now lastmilking is turns;
@@ -4023,7 +4025,7 @@ Carry out milking:
 		say "It takes a while to milk your black furred globes, but you manage to do so.";
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 			add "panther milk" to the invent of the player;
-		if breast size of player > 10:
+		if breast size of player > 8:
 			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 				add "panther milk" to the invent of the player;
 		now lastmilking is turns;
@@ -4031,27 +4033,27 @@ Carry out milking:
 		say "It takes little effort to draw some white chocolate flavoured milk from your breasts.";
 		repeat with T running from one to the breasts of the player:
 			add "chocolate milk" to the invent of the player;
-		if breast size of player > 10:
+		if breast size of player > 8:
 			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 				add "chocolate milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Vixen Nurse":
 		say "It takes a while to milk your silvery furred breasts.  You do not get much, but you manage to do so.";
 		add "vixen milk" to the invent of the player;
-		if breast size of player > 10:
+		if breast size of player > 8:
 			add "vixen milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "hermaphrodite dolphin":
 		say "Stroking your cetacean breasts, you manage to draw out a small sample of your thick milk.";
 		add "dolphin milk" to the invent of the player;
-		if breast size of player > 10:
+		if breast size of player > 8:
 			add "dolphin milk" to the invent of the player;
 		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Reindeer":
 		say "Stroking your caribou breasts, you manage to draw out a tasty sample of your egg-nog milk.";
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 			add "egg nog" to the invent of the player;
-		if breast size of player > 10:
+		if breast size of player > 8:
 			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 				add "egg nog" to the invent of the player;
 		now lastmilking is turns;
@@ -4223,6 +4225,7 @@ Include Siamese Cats by Stripes.
 Include Albino Mouse by Stripes.
 Include Cat Ninjas by Stripes.
 Include Reindeer by Stripes.
+Include Snow Leopard for FS by Stripes.
 Include Strange Slut by Zero.
 Include Dominator by Zero.
 Include Random German Shepherd For Fs by Telanda Softpaw.

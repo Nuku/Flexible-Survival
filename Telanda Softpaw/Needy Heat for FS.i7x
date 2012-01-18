@@ -7,7 +7,7 @@ Book 1 - Variables
 heat enabled is a truth state that varies. heat enabled is usually True. [This variable turns the heat mod on an off.]
 animal heat is a truth state that varies. animal heat is usually False. [This variable is used to check to see if you've started an animalistic breeding cycle.]
 turns in heat is a number that varies. turns in heat is usually 0. [ Counter to say how long you've been in heat.]
-inheat is  a truth state that varies. inheat is usually False. [ Variable for other mods to easily check if you are in heat right now.]
+inheat is a truth state that varies. inheat is usually False. [ Variable for other mods to easily check if you are in heat right now.]
 slutfucked is a number that varies. slutfucked is usually 0. [ Variable to prevent too many random husky encounters.]
 lastturn is a number that varies. lastturn is usually 240. [This is used so that we only trigger events once per GAME turn(3 hr period) rather then each event turn.]
 
