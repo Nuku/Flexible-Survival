@@ -68,7 +68,7 @@ name	desc	weight	object
 
 
 
-the invent of  Red Light District is {"Cat Key"}.
+the invent of Red Light District is {"Cat Key"}.
 
 
 before opening Catwalk Door:
