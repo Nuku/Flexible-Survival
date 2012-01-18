@@ -1,8 +1,7 @@
 Qytat a'th Lundrues by Hellerhound begins here.
 "Adds floating city to FS"
 
-when play begins:
-	now staircaselocation is -1;
+
 	
 Guard Gryphon is a situation.
 
@@ -19,80 +18,25 @@ Instead of resolving a Guard Gryphon:
 	otherwise:
 		say "The gryphon walks on, with its emblem only slightly mussed.";
 
-[phantom room code. UGH]
-to say redflight:
-	if staircaselocation is 0:
-		say "There appears to be a staircase on top of the building, maybe you could go up?";
-	otherwise:
-		say "There is nothing else interesting about it.";
-to say greenflight:
-	if staircaselocation is 1:
-		say "There appears to be a staircase on top of the building, maybe you could go up?";
-	otherwise:
-		say "There is nothing else interesting about it.";
-to say brightflight:
-	if staircaselocation is 2:
-		say "There appears to be a staircase in the bright glow to the east, maybe you could go check it out?";
-	otherwise:
-		say "There is nothing else interesting about it.";
-
-before going up from Red Apartment:
-	if staircaselocation is 0:
-		move the player to staircaseroof;
-	otherwise if findablestairs is 1:
-		say "You scout up on the roof, but the access point the gryphon told you about isn't there.";
-		stop the action;
-	otherwise:
-		say "You check the rooftop quickly, but find nothing of interest at the moment and return to ground level.";
-		stop the action;
-
-before going up from Green Apartment:
-	if staircaselocation is 1:
-		move the player to staircaseroof;
-	otherwise if findablestairs is 1:
-		say "You scout up on the roof, but the access point the gryphon told you about isn't there.";
-		stop the action;
-	otherwise:
-		say "You check the rooftop quickly, but find nothing of interest at the moment and return to ground level.";
-		stop the action;
-		
-before going east from Bright Alley:
-	if staircaselocation is 2:
-		move the player to staircaseroof;
-	otherwise if findablestairs is 1:
-		say "You check the far end of the alley, but the access point the gryphon told you about isn't there.";
-		stop the action;
-	otherwise:
-		say "You check down the east end of the alley, but find nothing of interest at the moment and return to the street.";
-		stop the action;
-
-before going down from staircaseroof:
-	say "You climb down the fire escape, and walk back to the bunker.";
-	move the player to Bunker;
-	stop the action;
-
-downdull is a room. "ERROR 682 prepare to be lost forever.".
-downdull is below staircaseroof.
-
-reddull is a room. "ERROR 682".
-reddull is up from Red Apartment.
-
-greendull is a room. "ERROR 682".
-greendull is up from Green Apartment.
-
-brightdull is a room. "ERROR 682".
-brightdull is east of Bright Alley.
-
-Red Apartment is a room. "A red building, with a fire escape on this side. It looks much like the average building.[redflight]". It is fasttravel.
+[phantom room code. better since it now follows the working format that sarokcat uses. I have a backup of the old ugly stuff incase we run into unforseen problems (which shouldn't happen)]
 
 
-Green Apartment is a room. "A green building, almost identical to your apartment, with a fire escape, the mandatory type for buildings in the city. It seems very mediocre. [greenflight]". It is fasttravel.
 
 
-Bright Alley is a room. "A dark alley, with a silvery blue glow coming from the deeper reaches. [brightflight]". It is fasttravel.
 
 
-staircaseroof is a room. "The staircase stands before you, the legendary path to Qytat a'th Lundrues, the city of the flying. It is a blue silver of some higher element, and the stairs are floating, sliding a little with the slight breeze, but maintaining their orderly position. The stairs glow, and the warmth radiating from them makes you comforted and happy.".
+
+
+Red Apartment is a room. "A red building, with a fire escape on this side. It looks much like the average building.". It is fasttravel.
+
+
+Green Apartment is a room. "A green building, almost identical to your apartment, with a fire escape, the mandatory type for buildings in the city. It seems very mediocre. ". It is fasttravel.
+
+
+Bright Alley is a room. "A dark alley, with a silvery blue glow coming from the deeper reaches. ". It is fasttravel.
+
+
+Staircase Roof is a room. "The staircase stands before you, the legendary path to Qytat a'th Lundrues, the city of the flying. It is a blue silver of some higher element, and the stairs are floating, sliding a little with the slight breeze, but maintaining their orderly position. The stairs glow, and the warmth radiating from them makes you comforted and happy.".
 
 
 
@@ -116,10 +60,16 @@ staircaselocation is a number that varies.
 shadowy is a number that varies.
 an everyturn rule:
 	if findablestairs is 1:
-		now staircaselocation is a random number from 0 to 2;
 		if shadowy < 4:
 			say "The nearby shadows shift slightly.";
 			increase shadowy by 1;
+		let n be a random number between 1 and 4;
+		if n is 1:
+			change the up exit of Red Apartment to Staircase Roof;
+		otherwise if n is 2:
+			change the up exit of Green Apartment to Staircase Roof;
+		otherwise:
+			change the east exit of Bright Alley to Staircase Roof;
 
 
 

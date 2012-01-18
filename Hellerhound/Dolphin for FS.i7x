@@ -222,8 +222,6 @@ to dolphinify:
 			now monster is y;
 			break;
 	infect;
-			
-
 
 Table of Game Objects(continued)
 name	desc	weight	object
