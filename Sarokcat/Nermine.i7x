@@ -566,6 +566,7 @@ carry out bargainhunting:
 				add "Expert Medic" to feats of the player;	
 		otherwise if Z is 26:
 			say "Looking through the strange bin full of treasures and junk (and you can[apostrophe]t actually be sure which is which...), you find your attention drawn to a rather strange looking compass made out of some iridescent metal. Feeling curious you pull the compass out and look at it closely, only to be surprised as the needle on the compass starts to spin around and around with increasing speed. Just staring at the spinning needle makes you feel strangely dizzy and disoriented, and you stumble slightly for a minute, your head swimming as you blink and try to clear it, only to note with shock that the compass seems to have vanished! Looking up from your empty hand in shock, you notice with surprise that the store around you seems to have vanished as well, and now you are in someplace completely different with absolutely no idea how you got there!";
+			wait for any key;
 			let P be a random number between one and six;
 			if P is 1:
 				Move player to The PALOMINO;
