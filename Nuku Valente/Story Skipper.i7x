@@ -324,6 +324,8 @@ Carry out reciting:
 		now lastSvendrink is turns + 8;
 	if hp of Sven is 2 or hp of Sven is 3:
 		now lastSvendrink is turns;
+	if hp of Sven > 3 and hp of Sven < 50:
+		move Sven to Bunker;
 	if hp of Sven > 98:
 		move Sven to dark basement;
 		remove Sven from play;
