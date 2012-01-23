@@ -7,6 +7,9 @@ Section 1 - Sarah and the Husky pack
 Husky Pack is a situation.
 huskysubmit is a number that varies.
 the sarea of Husky Pack is "Outside".
+when play begins:
+	add Husky Pack to badspots of girl;
+	add Husky Pack to badspots of furry;
 
 instead of resolving a husky pack:
 	say "Rounding the corner, you run right into the leader of a small husky pack, the fur cushioning the impact. You jump back as he snarls in your face, white and sharp teeth bared around a red tongue. You catch a glimpse of a thin human female on a reddish leash with a bone collar, probably from the neighborhood pet store, being dragged behind the alpha male.";
@@ -34,9 +37,21 @@ to say sarahrescue:
 	say "You jump forwards and challenge the husky, and the pack closes in behind you.";
 	wait for any key;
 	challenge "Female Husky";
+	if lost is 1:
+		say "You fall to the huskies, and the alpha snorts at you, amazed that you would dare challenge him. He drags Sarah off, and the pack follows. [line break]It is a while before you manage to get up and walk away.";
+		continue the action;
 	challenge "Female Husky";
+	if lost is 1:
+		say "You fall to the huskies, and the alpha snorts at you, amazed that you would dare challenge him. He drags Sarah off, and the pack follows. [line break]It is a while before you manage to get up and walk away.";
+		continue the action;
 	challenge "Female Husky";
-	challenge "Alpha Husky";
+	if lost is 1:
+		say "You fall to the huskies, and the alpha snorts at you, amazed that you would dare challenge him. He drags Sarah off, and the pack follows. [line break]It is a while before you manage to get up and walk away.";
+		continue the action;
+	if guy is not banned:
+		challenge "Alpha Husky";
+	otherwise:
+		challenge "Female Husky";
 	if lost is 0:
 		say "Standing victorious, you grab Sarah, and carry her back to the bunker, and proceed to treat her wound. She changes under you, but with the medkit and a bit of skill manage to save her life.";
 		wait for any key;
@@ -58,18 +73,21 @@ instead of resolving Medkit Parts:
 
 
 Pet Shop is a situation.
-hascollar is a number that varies.
 
 instead of resolving a pet shop:
-	if sarahslut is not 2:
-		say "There is a pet shop here to the side. You have no reason to enter, as the windows have been smashed and pretty much everything of value looted from it.";
+	if sarahslut is 2 and hp of Sven is 6:
+		say "You manage to find your way back to the pet shop near where you rescued Sarah.  Reminded of your budding pets, you decide to have a look inside for something for them.  Unfortunately, the place is rather thoroughly looted, with the animal infected probably taking everything to placate their animal hungers or urges.  You do manage to find a few scattered collars lying around in the rubble.  You pick a grey, leather one with what smells like some husky cum on it.  Rinsing it off in a waterdish in a busted cage, you get it clean, though it still smells a little of huskies, perfect for your little pet.  You find a second one, a baby blue one made of woven fabrib with silver stars on it that fell in some spilled catnip.  Gauging it to be roughly his size, you decide it's perfect for your pretty kittyboi.  Taking a pair of the blank, heart-shaped tags, you use the press to punch the word [']SLUT['] onto Sarah's and [']FUCKTOY['] onto Sven's.  As you're operating the press, you spot an oversized toy mouse about the size of your fist lying beside it.  Tossing it and the water dish into the plastic bag, you put the new collars into in and head off, looking forward seeing how your pets will respond to their new roles.";
+		now sarahslut is 3;
+		now hp of Sven is 7;
+		now Pet Shop is resolved;
+	otherwise if sarahslut is 2:
+		say "You manage to find your way back to the pet shop near where you rescued Sarah.  Reminded of your husky pet, you decide to have a look inside for something for her.  The place is rather thoroughly looted, with the animal infected probably taking everything to placate their animal hungers or urges.  You do manage to find a few scattered collars lying around in the rubble.  You pick a grey, leather one with what smells like some husky cum on it.  Rinsing it off in a waterdish in a busted cage, you get it clean, though it still smells a little of huskies, perfect for your little pet.  Taking one of the blank, heart-shaped tags, you use the press to punch the word [']SLUT['] onto it.  Along with the water dish, you toss it into a plastic bag and head out, eagerly looking forward to what she'll play like with it on.";
+		now sarahslut is 3;
+	otherwise if hp of Sven is 6:
+		say "You come across a small pet shop and are reminded of your new, feline pet.  Deciding to have a look inside for something for him, you cautiously take a look around.  It has been rather thoroughly looked by the infected hordes.  You can imagine many of those infected by pets desiring the shop's contents to satisfy their animal urges.  You do manage to find a few scattered collars lying around in the rubble.  You pick up a baby blue one made of woven fabric with silver stars on it that fell in some spilled catnip.  Gauging it to be roughly his size, you decide it's perfect for your pretty kittyboi.  Taking one of the blank, heart-shaped tags, you use the press to punch the word [']FUCKTOY['] onto it.  Beside the press, you spot an oversized toy mouse about the size of your fist and toss it along with the collar into a plastic bag to bring as gifts for your playful pet.";
+		now hp of Sven is 7;
 	otherwise:
-		if hascollar is 0:
-			say "You find the collar she asked for here, and pick it up, noting that it is the only thing left. The collar is grey, and reads 'slut' along the side. The clip is silver, and looks like it would fit as her collar just fine. You feel eager to see what she will play like with this on.";
-			now hascollar is 1;
-			now sarahslut is 3;
-		otherwise:
-			say "You come across the pet store sarah told you about, but there is no more stuff inside, testament to your last visit.";
+		say "You spot a small pet shop, but a quick glance inside the smashed windows shows that pretty much everything of value has been looted from the place already.  Glancing across the street, you see a [one of]bank branch[or]electronics store[or]cell phone store[or]computer store[or]jewelry store[at random] that has been left untouched.  Chuckling a little at the strange priorities of the looters, you continue on your way.";
 
 
 
@@ -241,8 +259,10 @@ An everyturn rule:
 	if sarahpregnant is 1:
 		say "You have a strange feeling in your body, as if you somehow just know that more of your offspring have entered this world, maybe you should go back and check on Sarah in the bunker.... and make sure she is filled with your fertile seed again.";
 		increase sarahpups by a random number between 1 and 4;
+		increase score by a random number between 5 and 10;
 		if "Proud Parent" is listed in feats of player:
 			increase sarahpups by a random number between 0 and 1;
+			increase score by a random number between 0 and 2;
 		if sarahpups is greater than 11 and "Proud Parent" is not listed in feats of player:
 			say "Having sired so many puppies, you feel buoyed with happiness and a greater urge to get through this ordeal to protect them.";
 			say "You and Sarah have earned the [']Proud Parent['] feat, making her more fertile and you more eager to protect your growing kennel.";
