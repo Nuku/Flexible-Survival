@@ -19,7 +19,7 @@ Instead of resolving a Guard Gryphon:
 		change the down exit of Staircase Entry to Bright Alley;		[...and leaving it open, just in case.]
 		now Guard Gryphon is resolved;
 	otherwise:
-		say "The gryphon walks on, with its emblem only slightly mussed.";
+		say "     The gryphon flies off, heading to another building to keep watch, with its emblem only slightly mussed as it flaps in the wind behind it.";
 
 
 Section 2 - Entry Points
@@ -92,7 +92,7 @@ before going east from Bright Alley:
 	if staircaselocation is 3:
 		say "     You head up the ghostly stairs, finding them more solid than they initially appeared.";
 	otherwise if findablestairs is 1:
-		say "     You check the far end of the alley, but the access point the gryphon told you about isn't there right now." instead;
+		say "     You check the far end of the alley and the hilltop, but the access point the gryphon told you about isn't there right now." instead;
 	otherwise:
 		say "     You check down the east end of the alley and the small hill, but find nothing of interest at the moment and return to the street." instead;
 

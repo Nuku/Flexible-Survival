@@ -207,8 +207,8 @@ carry out Coleenspraying:
 				say "Well ok, The spray bottle is full so it should still work on you, and it might work to help Sarah overthere regain a bit of her sanity as well, but treating someone as far gone as her would take the whole bottle at once. So you need to decide what you want to do.' Coleen says as she uncaps the small spray bottle and holds it up.  Do ask her to help Sarah?'";
 				if player consents:
 					say " 'Ok! Your the boss!' Coleen says, as she turns and ambushes Sarah with the spray can, a chemical smell fills the bunker, warring with the scent of needy husky, as she unloads the can on the husky. Sarah looks offended at first, and then somewhat embarrassed as she blushes and clutches her clothes tightly to her. Soon the can clicks empty, and you can see that Sarah looks about as clearheaded now as she did right after you first found her...";
+					now Pet Shop is not resolved;
 					now sarahslut is 0;
-					now hascollar is 0;
 					now coleenspray is 3;
 					stop the action;
 				otherwise:
