@@ -4,10 +4,10 @@ Trixie is a person. Trixie is in Grey Abbey Library.
 
 The description of trixie is "Look, it[apostrophe]s Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a T Shirt that reads 'Let[apostrophe]s skip to the good stuff!'.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word: [magic word]." };
+The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" };
 
 To say magic word:
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]";
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]";
 
 Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
@@ -261,6 +261,9 @@ Carry out reciting:
 			-- 58:
 				if the player's command matches "[number]":
 					now deerhappy is the number understood;
+					move Susan to dark basement;
+					now unusual creature is resolved;
+					if hp of doctor matt is 6, now unusual creature is unresolved;
 					if hp of doctor matt is greater than 5:
 						if deerhappy is 1:
 							remove susan from play;
@@ -272,7 +275,7 @@ Carry out reciting:
 									now area entry is "Park";
 									break;
 						if deerhappy is 2:
-							move susan to location of doctor matt;
+							move susan to Primary Lab;
 							now unusual creature is resolved;
 			-- 59:
 				if the player's command matches "[number]":
@@ -293,9 +296,16 @@ Carry out reciting:
 			-- 63:
 				if the player's command matches "[number]":
 					now lust of Sven is the number understood;
+			-- 64:
+				if the player's command matches "[number]":
+					now sarahslut is the number understood;
+			-- 65:
+				if the player's command matches "[number]":
+					now sarahtalk is the number understood;
+			-- 66:
+				if the player's command matches "[number]":
+					now sarahpups is the number understood;
 	now the score is -9999;
-	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'all done!'";
-	wait for any key;
 	repeat with counter running from lev + 1 to level of player:
 		if the remainder after dividing counter by 6 is 0:
 			funfeatget;
@@ -309,13 +319,16 @@ Carry out reciting:
 	if hospquest is 8, now nerminepackage is 1;
 	if hospquest > 9, add "Rapid Healing" to feats of the player;
 	if hospquest > 13, add "Physical Booster" to the feats of the player;
+	if hospquest > 13 and deerhappy is 2:
+		 move Susan to Hidden Lab;
 	if hp of doctor matt > 11 and hp of doctor matt < 100, add "Mental Booster" to the feats of the player;
+	now Candy is in dark basement;
 	if coonstatus > 100:
 		now pink raccoon is tamed;
 	otherwise if coonstatus > 0:
 		move Candy to Bunker;
 	if coonstatus is not 0:
-		repeat with y running from 1 to number of filled rows in table of random critters:    [puts Raccoon as lead monster...]
+		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Raccoon":
 				now monster is y;
@@ -324,6 +337,7 @@ Carry out reciting:
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
 	if mattcollection is 1, add "infection monitor" to invent of player;
+	now Sven is in Sven's Place;
 	if hp of Sven > 0:
 		now Hidden Kitty is resolved;
 		now Sven's Place is known;
@@ -336,6 +350,17 @@ Carry out reciting:
 	if hp of Sven > 98:
 		move Sven to dark basement;
 		remove Sven from play;
+	now Sarah is in dark basement;
+	now Pet Shop is unresolved;
+	now sarahpregnant is 0;
+	if sarahtalk is 0 and sarahslut is 0:
+		now Husky Pack is unresolved;
+	otherwise:
+		move Sarah to bunker;
+		now Husky Pack is resolved;
+	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
+	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
+	wait for any key;
 
 
 
