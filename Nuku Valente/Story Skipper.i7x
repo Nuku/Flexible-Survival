@@ -338,6 +338,9 @@ Carry out reciting:
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
 	if mattcollection is 1, add "infection monitor" to invent of player;
 	now Sven is in Sven's Place;
+	now Svetlana is in dark basement;
+	now Hidden Kitty is unresolved;
+	now Sven's Place is unknown;
 	if hp of Sven > 0:
 		now Hidden Kitty is resolved;
 		now Sven's Place is known;
@@ -347,6 +350,11 @@ Carry out reciting:
 		now lastSvendrink is turns;
 	if hp of Sven > 3 and hp of Sven < 50:
 		move Sven to Bunker;
+	if hp of Sven is 50 or hp of Sven is 51:
+		move Sven to Porn Store;
+	if hp of Sven > 51 and hp of Sven < 98:
+		move Sven to dark basement;
+		move Svetlana to Porn Store;
 	if hp of Sven > 98:
 		move Sven to dark basement;
 		remove Sven from play;

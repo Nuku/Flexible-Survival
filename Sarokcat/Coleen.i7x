@@ -29,7 +29,6 @@ Instead of resolving a Womanfruittree:
 		otherwise:
 			say "You decide not to interfere with the hanging woman,  after all, the military is obviously not doing much for you right now after all.  Though you do find yourself rather curious as to just what creature will eventually manage to reach her up in the tree, and just what she will look like afterwards... maybe you should come back and see later...";
 			Now coleendeclined is 1;
-			stop the action;
 	otherwise:
 		say " Traveling through the park you come across a rather large tree, its branches spreading out to cover a wide area, and providing excellent shade and protection from the elements. You stop for a minute to enjoy the nice shady cover the tree provides, as you look out over the park, eventually though, you realize you need to keep moving, and continue on down the trail, leaving the tree behind.";
 
@@ -250,7 +249,6 @@ carry out Coleenspraying:
 
 
 LastColeenfucked is a number that varies. LastColeenfucked is usually 250.
-Coleenfucked is a number that varies. Coleenfucked is usually 0.
 
 
 Instead of fucking the Coleen:
