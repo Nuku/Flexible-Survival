@@ -661,6 +661,9 @@ left	central	right
 [" You are:[Player_Status],[Player_Gender_Status]"	""	""]
 
 
+
+
+
 Book 6 - Rules, Obey them!
 
 Part 1 - Flags
@@ -1152,15 +1155,6 @@ Carry out resolving a situation(called X):
 
 After resolving a situation:
 	try looking;
-
-When play begins:
-	repeat with x running through situations:
-		now x is a part of the player;
-	repeat with x running through grab objects:
-		now x is a part of the player;
-	now the command prompt is "[list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";
-[	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
-
 
 to delete (X - a grab object):
 	let found be 0;
@@ -2785,8 +2779,10 @@ This is the turnpass rule:
 			increase moralereset by ( moralereset divided by 5);
 			increase maxmorale by ( maxmorale divided by 5);
 		if "Proud Parent" is listed in feats of player:
-			increase moralereset by (sarahpups divided by 5);
-			increase maxmorale by (sarahpups divided by 5);
+			let SP be sarahpups / 5;
+			if SP > 20, now SP is 20;
+			increase moralereset by SP;
+			increase maxmorale by SP;
 		otherwise if the morale of the player is greater than moralereset:
 			say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
 			now the morale of the player is maxmorale;
@@ -3130,10 +3126,10 @@ This is the location choice rule:
 		say "What luck. After looking around desperately, you come across a library with a mostly intact bunker in it. This will serve well as a refuge while you wait for rescue.";
 		if title entry is "Caught Outside":
 			add "Spartan Diet" to feats of player;
+[			process dirty water;
 			process dirty water;
 			process dirty water;
-			process dirty water;
-			process dirty water;
+			process dirty water;	]
 		if title entry is "Rescuer Stranded":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
@@ -3266,60 +3262,6 @@ After going:
 	try looking;
 	plot;
  
-When play begins:
-	repeat with q running from 1 to the number of rows in the table of game objects:
-		add name in row Q of table of game objects to allobjs;
-	change the right hand status line to "[list of valid directions]";
-	follow the random stats rule;
-	increase the score by 10;
-[	follow the finish stats rule;]
-	change the current menu to the table of Start Game;
-	carry out the displaying activity;
-	repeat with x running through featsets:
-		now x is a part of the player;
-	featget;
-	funfeatget;
-	clear the screen;
-	if scenario is "Rescuer Stranded":
-		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
-		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
-		say "You awake in what appears to be a disused bunker. You have no idea how you even got here, but you are uninfected. In your panicked flight you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack, and your watch.";
-		say "Heaven only knows what awaits you outside but, you have to find a way back.";
-		say "Taking a deep breath you open the door to your sanctuary...";
-	otherwise:
-		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
-	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
-	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
-	if the player consents:
-		ban menu;
-[		repeat with n running through flags:
-			say "Would you like to ban [N] flagged creatures from the game?";
-			if the player consents:
-				now n is banned;]
-	repeat through the table of random critters:
-		let bad be 0;
-		repeat with n running through all banned flags:
-			if name entry is listed in infections of n:
-				now bad is 1;
-		if bad is 1:
-			blank out the whole row;
-	repeat with n running through situations:
-		let bad be 0;
-		repeat with q running through all banned flags:
-			if n is listed in badspots of q:
-				say "[n] removed due to [q].";
-				now bad is 1;
-		if bad is 1:
-			now n is resolved;
-	sort table of random critters in lev order;
-	say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters, freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
-	wait for any key;
-	say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.";
-	wait for any key;
-	say "Welcome to...";
-	wait for any key;
-	[try looking.]
-
 This is the finish stats rule:
 	if started is 1:
 		if Current menu selection is 1:
@@ -4059,7 +4001,10 @@ Carry out milking:
 		now lastmilking is turns;
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
-		
+
+
+
+Book 9 - Add-Ons
 
 [Special]
 Include Shifting by Hellerhound.
@@ -4069,7 +4014,6 @@ Include Needy Heat for FS by Telanda Softpaw.
 Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
 Include Pets by Nuku Valente.
 Include Computers by Hellerhound.
-
 
 
 [Locations]
@@ -4233,7 +4177,6 @@ Include Messy Pig for Fs by anonymous.
 Include Elf by Nuku Valente.
 
 
-
 [NPCs]
 Include Stuck Dragon by Hiccup.
 Include Tanuki by Nuku Valente.
@@ -4263,7 +4206,6 @@ Include Orthas by Nuku Valente.
 Include Sven by Stripes.
 
 
-
 [Pets]
 Include Little Fox by Sarokcat.
 Include Felinoid Companion by Sarokcat.
@@ -4272,4 +4214,73 @@ Include Skunk Pet by Sarokcat.
 Include Exotic Bird by Sarokcat.
 
 
+Book 10 - Let the Games Begin
+
+When play begins:
+	repeat with x running through situations:
+		now x is a part of the player;
+	repeat with x running through grab objects:
+		now x is a part of the player;
+	now the command prompt is "[list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";
+[	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
+
+
+When play begins:
+	repeat with q running from 1 to the number of rows in the table of game objects:
+		add name in row Q of table of game objects to allobjs;
+	change the right hand status line to "[list of valid directions]";
+	follow the random stats rule;
+	increase the score by 10;
+[	follow the finish stats rule;]
+	change the current menu to the table of Start Game;
+	carry out the displaying activity;
+	repeat with x running through featsets:
+		now x is a part of the player;
+	featget;
+	funfeatget;
+	clear the screen;
+	if scenario is "Rescuer Stranded":
+		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
+		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
+		say "You awake in what appears to be a disused bunker. You have no idea how you even got here, but you are uninfected. In your panicked flight you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack, and your watch.";
+		say "Heaven only knows what awaits you outside but, you have to find a way back.";
+		say "Taking a deep breath you open the door to your sanctuary...";
+	otherwise:
+		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
+	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
+	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
+	if the player consents:
+		ban menu;
+[		repeat with n running through flags:
+			say "Would you like to ban [N] flagged creatures from the game?";
+			if the player consents:
+				now n is banned;]
+	repeat through the table of random critters:
+		let bad be 0;
+		repeat with n running through all banned flags:
+			if name entry is listed in infections of n:
+				now bad is 1;
+		if bad is 1:
+			blank out the whole row;
+	repeat with n running through situations:
+		let bad be 0;
+		repeat with q running through all banned flags:
+			if n is listed in badspots of q:
+				say "[n] removed due to [q].";
+				now bad is 1;
+		if bad is 1:
+			now n is resolved;
+	sort table of random critters in lev order;
+	if scenario is "Caught Outside":
+		process dirty water;
+		process dirty water;
+		process dirty water;
+		process dirty water;
+	clear the screen;
+	say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
+	wait for any key;
+	say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.";
+	wait for any key;
+	say "Welcome to...";
+	wait for any key;
 
