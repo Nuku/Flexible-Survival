@@ -720,6 +720,7 @@ check hunting:
 carry out hunting:
 	let Q be a list of numbers;
 	let found be 0;
+	let sitfound be 0;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is no area entry, next;
@@ -728,21 +729,16 @@ carry out hunting:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
 				add x to q;
-				add x to q;
-				add x to q;
-				add x to q;
+				repeat with N running from 1 to ( perception of player / 4 ):
+					add x to q;
 				if "Curious" is listed in feats of player:
 					add x to q;
 				if "Expert Hunter" is listed in feats of player:
 					add x to q;
 					add x to q;
 				if "Master Baiter" is listed in feats of player:
-					add x to q;
-					add x to q;
-					add x to q;
-					add x to q;
-					add x to q;
-					add x to q;
+					repeat with N running from 1 to ( perception of player / 3 ):
+						add x to q;
 			otherwise:
 				if there is a lev entry:
 					if lev entry is greater than level of player plus levelwindow, next;
@@ -808,6 +804,10 @@ carry out hunting:
 			repeat with z running through situations:
 				if hardmode is false and the level of z is greater than (the level of the player plus levelwindow), next;
 				if z is resolved, next;
+				if sarea of z is not battleground:		[Only situations in this zone can be hunted]
+					if printed name of z matches the text topic understood, case insensitively:
+						now sitfound is 1;
+					next;
 				if printed name of z matches the text topic understood, case insensitively:
 					say "It should be somewhere....";
 					now found is 1;
@@ -838,7 +838,8 @@ carry out hunting:
 								Fight;
 					break;
 		if found is 0:
-			say "[bold type]You don't think what you[apostrophe]re looking for can be found here...[roman type]";
+			if sitfound is 0, say "[bold type]You don't think what you're looking for can be found here...[roman type]";
+			if sitfound is 1, say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type]";
 			let dice be a random number from 1 to 20;
 			if "Bad Luck" is listed in feats of player, increase dice by 1;
 			if "Curious" is listed in feats of player, increase dice by 2;
@@ -2589,12 +2590,13 @@ check resting:
 carry out resting:
 	Rest;
 
-
 This is the explore rule:
 	let something be 0;
+	let roomfirst be 1;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	if "Curious" is listed in feats of player, increase bonus by 3;
-	if something is 0 and a random number from 1 to 20 is less than 6 plus bonus and there is an unknown fasttravel room and battleground is "Outside":
+	if a random chance of 2 in 5 succeeds, now roomfirst is 0;		[Will it check for a room or situation first?]
+	if something is 0 and a random number from 1 to 20 is less than 6 plus bonus and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 1:
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
 			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
@@ -2608,6 +2610,14 @@ This is the explore rule:
 			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
 			now something is 1;
 			try resolving L;
+			wait for any key;
+	if something is 0 and a random number from 1 to 20 is less than 6 plus bonus and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
+		let L be a random unknown fasttravel not private room;
+		if L is not nothing:
+			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
+			move player to L;
+			now something is 1;
+			plot;
 			wait for any key;
 	if "Stealthy" is listed in feats of player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
 	if "Bad Luck" is listed in feats of player, increase bonus by 1;
