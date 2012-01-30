@@ -436,7 +436,7 @@ to say BTchangeover:
 		now bodyname of player is "Big Tigress";
 		now cockname of player is "Big Tigress";
 		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur.  It flicks behind you with excitement.";
-		now face of player is "feminine tiger face and long, flowing hair.  Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your steely-blue eyes";
+		now face of player is "a feminine tiger face and long, flowing hair.  Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your steely-blue eyes";
 		now skin of player is "ivory white fur streaked with tiger stripes that covers your";
 		now body of player is "powerfully built with a feminine flair and feline fluidity of motion.  You body moves sensually with every step, but with hidden power.  Your hands are human in shape, but with feline claws, pawpads and fur";
 		now cock of player is "ebon feline";
@@ -447,7 +447,7 @@ to say BTchangeover:
 		now bodyname of player is "Big Tiger";
 		now cockname of player is "Big Tiger";
 		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur.  It flicks behind you with excitement.";
-		now face of player is "male tiger head with a strong jaw and a predatory gaze.  With a fully feline head, you have fur, stripes and whiskers cover your stern muzzle";
+		now face of player is "a male tiger head with a strong jaw and a predatory gaze.  With a fully feline head, you have fur, stripes and whiskers cover your stern muzzle";
 		now skin of player is "ivory white fur streaked with tiger stripes that covers your";
 		now body of player is "a powerfully built, masculine form.  You move with predatory strength and confidence, as well as a feline's smooth grace.  Your hands are human in shape, but with feline claws, pawpads and fur";
 		now cock of player is "ebon feline";

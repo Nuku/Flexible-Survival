@@ -9,7 +9,7 @@ when play begins:
 
 
 to say losetosnowmeow:
-	if hp of player < 1, now snowmeowfight is 2;		[lost]
+	now snowmeowfight is 2;				[lost]
 	say "     The snow leopard gives a throaty purr as your struggles cease.  He presses you down to the ground and runs his eyes over you while a paw strokes his stiff shaft.  The fight over, you can see it is steely grey with a slightly feline-shaped glans and a pair of ample balls below it.  Between the feel of the snowmeow's lovely fur and the heavy scent of his arousal, you find yourself subconsiously licking your lips as a few beads of precum leak down that hard meat.";
 	if cocks of player > 0:
 		say "     The snow leopard licks his lips lustfully as he eyes your cock.  Turning around, he brings his stiff shaft to your face while his soft paws work your shaft to full erection.  His precum drips down onto your lips and your remaining self-control breaks.  You open your mouth and guide that tasty meat into your waiting mouth.  You lick and suck at it hungrily, moaning with increasing desire as his own lips close around your cock and he starts licking and sucking your throbbing shaft.";

@@ -42,7 +42,3 @@ when play ends:
 			say "After your rescue, you take the bird you rescued to several specialists, who are amazed to find that a member of its rare species survived the city, and they thank you profusely for your help in bringing it back safely.  Impressed at your ability to get the bird to trust you, not only do they offer you a reward for saving your bird friend, but they ask you to stop by occassionally not just to visit your now happy bird friend, but also to ask questions about any other strange birds and species you might have encountered in the city.";
 
 Exotic Bird ends here.
-
-
-
-
