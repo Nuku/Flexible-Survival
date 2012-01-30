@@ -165,8 +165,7 @@ to say coonpetsex3:		[coon offers ass]
 	say "     As you consider your next course of action, your pet raccoon moves up to you and nuzzles at your neck.  His cotton candy scent fills your nose and your cock stirs as he places a paw to rub over it.  He drops onto all fours in front of you and wiggles his rump with a needful moan.";
 	say "     You'd been feeling a little excited of late and could use some relief, so you grab his bottom and move into position.  You grind your cock against his rear until you're fully hard before lining it up with his tight tailhole.  As you sink it into him, he moans in pleasure and pushes back into it.";
 	say "     Once you're fully sheathed in his rump, you start taking him in slow, even thrusts that make him mewl and squirm with need.  You reach around and play with his cock, feeling his pre dribbling out over your fingers.  You keep it up until your cute, little pet's moans of pleasure get quite loud and insistent, then decide to finish the deed.";
-	say "
-     Gripping his ass firmly with one hand and stroking him quickly with the other, you pound away at his tight hole hard and fast.  His inner walls clamp down around you firmly with each thrust until you give him the hot load he so desires.  His own seed stains the ground, pleased to have his master's seed filling him.";
+	say "     Gripping his ass firmly with one hand and stroking him quickly with the other, you pound away at his tight hole hard and fast.  His inner walls clamp down around you firmly with each thrust until you give him the hot load he so desires.  His own seed stains the ground, pleased to have his master's seed filling him.";
 	decrease libido of player by 16;
 
 to say coonpetsex4:		[coon offers blow job]

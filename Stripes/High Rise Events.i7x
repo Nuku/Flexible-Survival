@@ -491,4 +491,117 @@ Instead of resolving a Electronics Store:
 	Now Electronics Store is resolved;
 
 
+Section 8 - Cameo
+
+Cameo is a situation.
+The sarea of Cameo is "High";
+choclabfight is a number that varies.
+when play begins:
+	add Cameo to badspots of hermaphrodite;
+	add Cameo to badspots of humorous;
+	add Cameo to badspots of furry;
+
+Instead of resolving a Cameo:
+	say "     Passing past a collection of deluxe shops, your eye is caught by a premiere chocolate store.  Glancing up that the face of the woman for which the store is named, you remember their fine quality products.  Your sweet tooth suddenly needs to be satisfied and you go in before you have a chance to think it over.  A quick glance around shows the store has been ransacked, with several creamy pools of white or dark chocolate on the floor.  The glass displays have chocolate pawprints, both inside and out.  You do spot a couple of display boxes and a cameo collection that seem undisturbed at the back of the store and head towards them.  But when you reach the middle of the store, those dark puddles reshape themselves, forming into gooey canids made of chocolate.  It seems you came across this place as they were cleaning it out and they set a trap for you.  You are surrounded by a trio of chocolatey canines.";
+	now choclabfight is 0;
+	challenge "Chocolate Lab";
+	if choclabfight is 1:
+		say "     After having finished with the lead dog, the others are moving in around the displays to get at you even as you keep moving to try and deal with them one on one.  It is difficult going as you have to avoid those while chocolate cream puddles of what you now know to be chocolate dog cum.  You manage to hop the sales counter and prepare to face the next one.";
+		now choclabfight is 0;
+		challenge "Chocolate Lab";
+		if choclabfight is 1:
+			say "     With a second down, you ready yourself to face the last of them.  As you look first to the gap your last opponent took, you catch sight of it out of the corner of your eye.  It quietly flowed up the counter as your last fight ended and makes a leap at you.";
+			let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
+			if "Wary Watcher" is listed in feats of player, increase bonus by 3;
+			if "Bad Luck" is listed in feats of player, decrease bonus by 2;
+			if bonus > 12, now bonus is 12;
+			let dice be a random number from 1 to 20;
+			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+			if bonus + dice is greater than 15:
+				say "     You manage to avoid the sneak attack, as the dog leaps past you and into the company logo, mashing its whole head into a slobbery kiss on the face of the store's namesake heroine.  It flows and reshapes itself quickly, forming its tail into a new head and swapping its front and back legs around.  This startling change shocks you long enough for it to complete the reversal and start snapping at you before you can take flight.";
+			otherwise:
+				say "     The chocolate dog slams itself into you, flowing itself across your body.  It squeezes around your chest, pushing out your breath even as its flowing body starts teasing at your nipples and groin.  As you are forced to exhale, the chocolate canine presses its gooey face to yours, pushing its chocolatey tongue into your mouth and humping against your body.  As its arousing taste fills your mouth, you moan softly and find yourself giving in before you snap back control of yourself and push the semi-solid dog back and off of you.  It growls in frustration at you denying its lustful urges and charges to attack.  But its assault on you has weakened you further as well as gotten you more aroused. (15 dmg taken)[line break]";
+				decrease hp of player by 15;
+				increase libido of player by 12;
+			now choclabfight is 0;
+			challenge "Chocolate Lab";
+			if choclabfight is 1:
+				say "     Having defeated the last of them, you pant for breath as the chocolate dogs slink off like beaten curs.  They press themselves to the ground so much that their legs melt away beneath them and flow out as dog-shaped puddles.  With them dispatched, you are free to look around the remains of the store.  It seems that much of the merchandise has already been consumed by the dogs or tainted by them during their lustful gorging.  The boxes of chocolates and cameos on display at the back are thankfully still good, so you snatch them up and exit the store before the strong scent of chocolates and sex arouses you into sampling from the tainted wares.";
+				if "Junk Food Junky" is listed in feats of player:
+					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack.  The fine chocolates are quite delicious.  You store the rest for later consumption.  Your junk food fueled metabolism finds the chocolates quite satisfying and you still have enough chocolates and almond bark to be equivalent to roughly two more snacks.";
+					decrease hunger of player by 15;
+					if hunger of player is less than 0, now hunger of player is 0;
+					if morale of player is less than 0:
+						increase morale of player by 36;
+						if morale of player is greater than 0, now morale of player is 0;
+						say "You feel much better after having your snack.";
+					increase morale of player by 1;
+					add "chips" to invent of player;
+					add "chips" to invent of player;
+					increase score by 15;
+				otherwise:
+					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack.  The fine chocolates are quite delicious.  You store the rest for later consumption.  While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
+					decrease hunger of player by 6;
+					if hunger of player is less than 0, now hunger of player is 0;
+					if morale of player is less than 0:
+						increase morale of player by 15;
+						if morale of player is greater than 0, now morale of player is 0;
+						say "You feel better having eaten.";
+					add "food" to invent of player;
+					increase score by 5;
+	if choclabfight is 0:
+		say "     Managing to outmaneuver the chocolate dogs, you push your way out of the store and into the courtyard around the shops.  Looking back, you spot the dogs pressed up against the glass, leaving chocolate streaks on windows before they hop down and return to their lustful consumption of the chocolates.  You are quite certain there will be nothing left in the store except for the white chocolate stains from their sexual play as they celebrate their victory at defending their delicious prize.";
+	otherwise if choclabfight is 2:
+		say "     When the victorious Labrador moves back, you look up to find yourself surrounded by the trio who look at you lustfully.  The other two flow atop you and start humping at your body.  You are buried in flowing chocolate as they cover you completely[if cunts of player > 1].  You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussies and asshole with a hard chocolate cock for each[otherwise if cunts of player is 1].  You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussy and asshole with a hard chocolate cock for each[otherwise].  You can feel their creamy tendrils flow into your mouth and asshole, fucking you at both ends with a hard chocolate cock[end if][if cocks of player > 1].  Their flowing bodies form warm, wet cunts around your cocks, sucking and squeezing at them as they pound into you[otherwise if cocks of player is 1].  Their flowing bodies form a warm, wet cunt around your cock, sucking and squeezing at them as they pound into you[end if].";
+		wait for any key;
+		say "     As this goes on, you can feel them flowing over your whole body, sliding off your clothes and backpack.  Completely naked, your can feel their flowing, rippling chocolate flesh sliding all over you, stimulating you so fully you sink further and further into a haze.  You barely notice the added weight of the third Labrador joining in, but you are somehow keenly aware that he's finished off the last of those chocolates as more and more of that creamy, white chocolate seed is pumped into you[if cocks of player > 0] while you pump your own cum out for them to enjoy[end if]";
+		if bodyname of player is "Chocolate Lab" or facename of player is "Chocolate Lab":
+			say ".";
+			wait for any key;
+			say "     During this rampant, fluidic sex with the dogs, you can feel much of your chocolate being intermingling with that of the other Labradors.  It feels like you are simultaneously filled and drained over and over again as your lovers mate you.  You seem to flow into them as they flow into you in an orgasmic melding of pleasure.  You feel yourself becoming much more canine and craving more and more chocolate, causing you to suck, squeeze and gulp down all you can get from them until finally much of you is gone.";
+			decrease humanity of player by a random number between 25 and 35;
+			increase hunger of player by 12;
+			if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 10;
+		otherwise:
+			say ".  It feels like you are simultaneously filled and drained over and over again as your lovers mate you.  You seem to flow into them as they flow into you in an orgasmic melding of pleasure.";
+			decrease humanity of player by a random number between 20 and 30;
+			increase hunger of player by 12;
+			if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 10;
+		[puts Chocolate Lab as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Chocolate Lab":
+				now monster is y;
+				break;
+		now tailname of player is "Chocolate Lab";
+		now facename of player is "Chocolate Lab";
+		now skinname of player is "Chocolate Lab";
+		now bodyname of player is "Chocolate Lab";
+		now cockname of player is "Chocolate Lab";
+		now tail of player is tail entry;
+		now face of player is face entry;
+		now skin of player is skin entry;
+		now body of player is body entry;
+		now cock of player is cock entry;
+		if hellHoundLevel is 0:
+			follow the sex change rule;
+			follow the sex change rule;
+		wait for any key;
+		if libido of player < 70, now libido of player is 70;
+		say "     When they are finally sated, they flow away from you, leaving you in a pool of creamy chocolate.  You struggle to sit up as they flow over the last of the scattered chocolates before heading out the door.  One of them, which you somehow sense to be the one who defeated you, turns back and looks at you, as if to see if you will follow before flowing after the others.";
+		say "     Trying again to pull yourself up, you discover that you've fully become flowing, animate chocolate like your assailants.  You try to pull yourself together, taking stock that you've changed and fully become a chocolate Labrador like those sexy, tasty hounds";
+		if humanity of player < 10:
+			say ".  You flow into the shape of a flowing, chocolate dog and head out after them with a wet yip, having lost too much of yourself to them and succumbing to the bizarre, confectionary infection.  When you catch up to them, they grin and give you slobbery, chocolatey licks and nuzzles, welcoming you into the pack.";
+			end the game saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
+			wait for any key;
+			follow the turnpass rule;
+			stop the action;
+		otherwise:
+			say ".  You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form.  Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival.  You do feel a strong longing for more sex or more chocolate.  Or best of all, more chocolate sex.  You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.";
+			say "[impregchance][impregchance]";
+	now Cameo is resolved;
+
+
 High Rise Events ends here.
