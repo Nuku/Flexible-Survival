@@ -4185,6 +4185,7 @@ Include Dominator by Zero.
 Include Random German Shepherd For Fs by Telanda Softpaw.
 Include Messy Pig for Fs by anonymous.
 Include Elf by Nuku Valente.
+Include Cougar by Stripes.
 
 
 [NPCs]

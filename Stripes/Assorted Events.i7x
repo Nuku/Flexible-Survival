@@ -297,4 +297,25 @@ Instead of resolving a Lovers Bench:
 		now Lovers Bench is resolved;
 
 
+CatsandDogs is a situation.
+when play begins:
+	add CatsandDogs to badspots of furry;
+
+instead of resolving a CatsandDogs:
+	say "     As you travel through the city, you come across a pair of old apartment buildings side by side.  The windows are open and the tenants are yelling at one another.  One building appears to be populated entirely by cats and the other by dogs.  They are growling, yowling and making rude gestures at one another.  They jeer at one another and toss trash across the alley dividing their buildings.  Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them.  You make note of the location and remind yourself to keep away, finding another path around this neighbourhood.";
+	now CatsandDogs is resolved;
+
+
+Tour Bus is a situation.
+when play begins:
+	add Tour Bus to badspots of furry;
+
+instead of resolving a Tour Bus:
+	say "     Your path through the city is interrupted by an overturned tour bus.  It seems there was quite an accident here, with several cars piled up around the bus as well.  You do manage to weave your way through the mess, but it takes some time.  You remind yourself not to take this street again next time when passing through this area.  You head over to check out the bus, hopeful to find something of use in there.  You climb up onto a car, then get on the bus's side.  Looking in the windows, you can see several bags and packs, but you also see large amounts of semen and scratches to the seats.  Regardless of how the accident came to pass, it seems like the occupents were all transformed into more sexual monsters.  Certainly, it would not be safe to enter the bus, given how soaked in cum everything is.";
+	say "     You hop back onto the car, then onto the ground.  You start to head on your way, mentally reminding yourself not to take this street again when passing through this area, when you hear a growl from behind you.  Crawling out of the bus, you see a large, cougar herm wearing a cap and coat that leads you to suspect this was once the bus driver.  It growls again and hops onto the ground, coming at you quickly.";
+	challenge "Cougar";
+	say "     Your encounter with the cougar creature over, you continue on your way, leaving it and its unusual den behind.";
+	now Tour Bus is resolved;
+
+
 Assorted Events ends here.
