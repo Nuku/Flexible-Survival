@@ -11,7 +11,7 @@ to say losetocougar:
 	say "     Falling to your knees in front of the cougar herm, she growls triumphantly and climbs atop you.  Her strong body holds you down as she rubs herself against you.  Her soft fur and lovely breasts slide against your chest, and you can feel the firm press of her throbbing cock against you";
 	if cocks of player > 0 and cunts of player is 0:
 		say "[cougarride]";
-	if cunts of player > 0 and cocks of player is 0:
+	otherwise if cunts of player > 0 and cocks of player is 0:
 		say "[cougartop]";
 	otherwise:
 		if a random chance of 1 in 2 succeeds:
