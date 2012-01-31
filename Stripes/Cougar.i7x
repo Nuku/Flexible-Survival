@@ -72,16 +72,16 @@ When Play begins:
 	now ass change entry is "a feline tail grows into place, swishing as it becomes more distinctly puma-like in form and pattern";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your balls churn and your cock reshapes itself into a vaguely human form, but with the stimulating spines of a feline penis.  Your shaft changes colour, becoming a deep brown as these changes complete themselves";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 20;			[ Only the monster's dexterity has any effect in combat. ]
+	now dex entry is 18;			[ Only the monster's dexterity has any effect in combat. ]
 	now sta entry is 14;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Both";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 35;			[ The monster's starting hit points. ]
-	now lev entry is 4;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 7;			[ Monster's average damage when attacking. ]
-	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now hp entry is 50;			[ The monster's starting hit points. ]
+	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 8;			[ Monster's average damage when attacking. ]
+	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9;		[ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
