@@ -932,7 +932,10 @@ to say butterflymagic:
 		replace character number 4 in bmagic with "3";
 	otherwise:
 		replace character number 4 in bmagic with "1";
-	replace character number 5 in bmagic with "[ButterflyRaped]";
+	if ButterflyRaped is greater than 9:
+		replace character number 5 in bmagic with "9";
+	otherwise:
+		replace character number 5 in bmagic with "[ButterflyRaped]";
 	replace character number 6 in bmagic with "[Gestation of ButterflyBaby]";
 	replace character number 7 in bmagic with "[bcupsize]";
 	say "[bmagic]";
