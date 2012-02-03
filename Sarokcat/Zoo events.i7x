@@ -198,17 +198,22 @@ The sarea of Vet supplies is "Zoo";
 Instead of Resolving a Vet supplies:
 	say "Traveling down some of the zoo maintenance pathways, you come across a small veterinary bag, obviously used by one of the employees to treat the animals. Unfortunately for the employee involved, from the torn vegetation and scent of animal sex in the area, it looks like they were the one who got their 'treatment' today instead. Still deciding there might be something useful to you in the bag, you begin to sort through the various supplies inside. Strangely most of what seems to be contained within is a variety of animal hormone shots, and treatments for either male or female animals depending.  You think you could probably inject yourself with some of the animal hormone boosters, and the extra hormones could help you maintain your gender identity... but should you really be using medicine designed for animals? Do you inject yourself?";
 	if player consents:
-		say "Deciding to try your luck with the animal drugs, you sort them out until you have male and female hormone shots and treatments fully laid out, as well as having figured out just how to apply them properly.  Now that leaves you with just one last decision... which shots do you want to take?  Do you take the female shots?";
+		say "Deciding to try your luck with the animal drugs, you sort them out until you have male and female hormone shots and treatments fully laid out, as well as having figured out just how to apply them properly.  Now that leaves you with just one last decision... which shots do you want to take?  Female, male or both?  Do you take the female shots?";
 		if player consents:
 			say "Examining the female shots you have laid out before you, you decide to discard the male  shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things..";
 			if "Female Preferred" is listed in feats of the player:
 				say "While the chemicals running through your body rushs to your head, you groan as your instincts surge and makes you feel even more beastial then ever, you seem to feel as if your body could not truly be even more female oriented, and all the shots seem to do is make you feel more animalistic and feral then ever.";
 				decrease humanity of player by 40; 
-				stop the action;
-			if "Male Preferred" is listed in feats of the player:
-				say "You can feel the Female hormones running through your body as they counter your strong male orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into females to suit their pleasure and bear their offspring again...";
+			otherwise if "Male Preferred" is listed in feats of the player:
+				say "You can feel the female hormones running through your body as they counter your strong male orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into females to suit their pleasure and bear their offspring again...";
 				remove "Male Preferred" from feats of the player;
 				decrease hp of player by 30;
+				stop the action;
+			otherwise if "Herm Preferred" is listed in feats of the player:
+				say "You can feel the female hormones running through your body as they seek to over-balance your dual-natured bias.  Your body is at war with itself painfully as the hormones shift your body towards a female-biased direction.  Your body surges with the primal need to be bred and formerly divided instincts are focused towards this urge.  You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won[']t have to worry about becoming anything but purely female anymore!";
+				remove "Herm Preferred" from feats of the player;
+				add "Female Preferred" to feats of the player;
+				decrease hp of player by 20;
 				stop the action;
 			otherwise:
 				say "You can feel the female hormones rushing through your body, and they surprisingly feel amazing as they rush through your body, your body surges with the primal need to breed and formerly neglected maternal instincts are enhanced and strengthened.  You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won[apostrophe]t have to worry about becoming a male anymore!";
@@ -216,23 +221,47 @@ Instead of Resolving a Vet supplies:
 				add "Female Preferred" to feats of the player;
 				stop the action;
 		otherwise:
-			say "Discarding the female shots, you focus your attention on the male treatments you have laid out, and slowly begin the process of injecting yourself with the chemicals, your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of beastial testosterone rushing through your body.";
-			if "Male Preferred" is listed in feats of the player:
-				say "While the testosterone running through your body rushes to your head, and makes you feel even more beastial then ever, you seem to feel as if your body could not truly be even more male oriented, and all the shots seem to do is make you feel more animalistic then ever.";
-				decrease humanity of player by 40; 
-			if "Female Preferred" is listed in feats of the player:
-				say "You can feel the Male hormones running through your body as they counter your strong female orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into males to suit their pleasure again...";
-				Remove "Female Preferred" from feats of the player;
-				decrease hp of player by 30;
-				stop the action;
+			say "Shifting your focus to the other pile, your look at the male hormones.  Shall you use the male ones?";
+			if the player consents:
+				say "Discarding the female shots, you focus your attention on the male treatments you have laid out, and slowly begin the process of injecting yourself with the chemicals, your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of beastial testosterone rushing through your body.";
+				if "Male Preferred" is listed in feats of the player:
+					say "While the testosterone running through your body rushes to your head, and makes you feel even more beastial then ever, you seem to feel as if your body could not truly be even more male oriented, and all the shots seem to do is make you feel more animalistic then ever.";
+					decrease humanity of player by 40; 
+				otherwise if "Female Preferred" is listed in feats of the player:
+					say "You can feel the Male hormones running through your body as they counter your strong female orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into males to suit their pleasure again...";
+					Remove "Female Preferred" from feats of the player;
+					decrease hp of player by 30;
+				otherwise if "Herm Preferred" is listed in feats of the player:
+					say "You can feel the male hormones running through your body as they seek to over-balance your dual-natured bias.  Your body is at war with itself painfully as the hormones shift your body towards a male-biased direction.  Your body surges with the primal need to breed and formerly divided instincts are focused towards this urge.  You feel a rush of aggressive, male urges as the chemicals react with and alter your body, and you feel very sure that you won[']t have to worry about becoming anything but purely male anymore!";
+					remove "Herm Preferred" from feats of the player;
+					add "Male Preferred" to feats of the player;
+					decrease hp of player by 20;
+				otherwise:
+					say "You can feel the male hormones rushing through your body, and they surprisingly feel damn good as your more aggressive male tendancies are enhanced and strengthened.  You feel downright predatory as the chemicals react with and alter your body, and you feel very sure that you won[apostrophe]t have to worry about becoming a female anymore!";
+					decrease humanity of player by 20;
+					add "Male Preferred" to feats of the player;
 			otherwise:
-				say "You can feel the male hormones rushing through your body, and they surprisingly feel damn good as your more aggressive male tendancies are enhanced and strengthened.  You feel downright predatory as the chemicals react with and alter your body, and you feel very sure that you won[apostrophe]t have to worry about becoming a female anymore!";
-				decrease humanity of player by 20;
-				add "Male Preferred" to feats of the player;
-				stop the action;
+				say "Taking an assortment from both sets of treatments you have laid out, you slowly begin the process of injecting yourself with the chemicals.  Your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of beastial testosterone and estrogen rushing through your body.";
+				if "Male Preferred" is listed in feats of the player:
+					say "While the medley of beastial hormones running through your body rushes to your head, it seems as if your body is enfused with wild, lustful urges.  You can feel the hormones running through your body as they seek to push your body out of male focus to some strange union of both.  Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction.  You have the urge to breed and be bred, both to sire and bear young.  Your male-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
+					Remove "Male Preferred" from feats of the player;
+					add "Herm Preferred" to feats of the player;
+					decrease hp of player by 20;
+				otherwise if "Female Preferred" is listed in feats of the player:
+					say "While the medley of beastial hormones running through your body rushes to your head, it seems as if your body is enfused with wild, lustful urges.  You can feel the hormones running through your body as they seek to push your body out of female focus to some strange union of both.  Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction.  You have the urge to breed and be bred, both to sire and bear young.  Your female-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
+					Remove "Female Preferred" from feats of the player;
+					add "Herm Preferred" to feats of the player;
+					decrease hp of player by 20;
+				otherwise if "Herm Preferred" is listed in feats of the player:
+					say "While the medley of hormones running through your body rushes to your head, and makes you feel even more beastial and lustful then ever, it seems as if your body is already as focused on having a dual-gendered nature as it can be.  All the shots seem to do is make you feel more animalistic then ever.";
+					decrease humanity of player by 40; 
+				otherwise:
+					say "You can feel the medley of hormones rushing through your body, and they surprisingly feel damn good as your lustful tendancies are enhanced and strengthened.  You feel both eager to breed and be bred as the chemicals react with and alter your body.  These changes shift you towards a dual-biased direction.  You feel very sure that you will be able to maintain a state of both male and female at once!";
+					decrease humanity of player by 20;
+					add "Herm Preferred" to feats of the player;
 	otherwise:
 		say "Deciding not to take your chances with any of the medicine designed for animals, you leave the veterinary bag where it lies, and continue along your way through the zoo.";
-	Now Vet supplies is resolved;
+		Now Vet supplies is resolved;
 
 
 Section 14- Feeding time
