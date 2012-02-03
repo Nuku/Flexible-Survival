@@ -1,4 +1,4 @@
-Version 2 of Food and Water Finding by Nuku Valente begins here.
+Version 3 of Food and Water Finding by Nuku Valente begins here.
 
 "Allows finding food and water while roaming the city."
 
@@ -8,27 +8,33 @@ potential resources is a situation.
 
 Instead of resolving a potential resources:
 	let y be "food";
-	let x be a random number from 1 to 3;
-	if x is 1:
+	let x be a random number from 1 to 8;
+	if x is 1 or x is 2:
 		now y is "food";
-	if x is 2:
+	if x is 3 or x is 4:
 		now y is "water bottle";
-	if x is 3:
-		if "Survivalist" is listed in feats of player and a random chance of 1 in 4 succeeds:
+	if x is 5:
+		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		otherwise if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 7 succeeds:
+		otherwise if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		otherwise:
 			now y is "dirty water";
+	if x is 6:
+		now y is "dirty water";
+	if x is 7:
+		now y is "chips";
+	if x is 8:
+		now y is "soda";
 	say "While wandering about, you're certain you see some [y] and move to get it.";
 	now x is a random number from 1 to 4;
 	if x is 1:
-		say "It's just laying there, hidden in [one of]a busted vending machine[or]a counter[or]a wheel barrow[or]the middle of a street[or]a bag[or]a backpack[or]an abandoned car[or]a pile of discarded clothes[purely at random].";
+		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
 		add y to invent of the player;
 	if x is 2:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
-		say "It is up high, forcing you to climb up after it. Looks ";
+		say "It is up high, forcing you to climb up after it. It looks ";
 		if difficulty is less than 8:
 			say "easy";
 		otherwise if difficulty is less than 10:
@@ -40,7 +46,8 @@ Instead of resolving a potential resources:
 		otherwise:
 			say "extremely difficult";
 		say " to climb";
-		let bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player divided by 2;
+		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
+		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		if "Three Bags Full" is listed in feats of the player and bodyname of player is "ewe", increase bonus by 1;
 		if "Three Bags Full" is listed in feats of the player and bodyname of player is "ram", increase bonus by 1;
@@ -57,7 +64,7 @@ Instead of resolving a potential resources:
 	if x is 3:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
-		say "It is up stuck under something heavy. Looks ";
+		say "It is up stuck under something heavy. It looks ";
 		if difficulty is less than 8:
 			say "easy";
 		otherwise if difficulty is less than 10:
@@ -69,7 +76,8 @@ Instead of resolving a potential resources:
 		otherwise:
 			say "extremely difficult";
 		say " to lift.";
-		let bonus be (( the strength of the player minus 10 ) divided by 2) plus level of the player divided by 2;
+		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
+		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -94,8 +102,9 @@ Instead of resolving a potential resources:
 			say "very difficult";
 		otherwise:
 			say "extremely difficult";
-		say " to sway";
-		let bonus be (( the charisma of the player minus 10 ) divided by 2) plus level of the player divided by 2;
+		say " to sway.";
+		let bonus be ( the charisma of the player plus level of the player minus 10 ) divided by 2;
+		if hardmode is true and bonus > 10, now bonus is 10;
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
