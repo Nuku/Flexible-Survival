@@ -69,14 +69,13 @@ to say lostninjahorde:
 	infect "Ninja Cat";
 
 
-Section 2 - Other events
+Section 2 - Outisde Events
 
 Losing It is a situation.
 snowmeowfight is a number that varies.
 when play begins:
 	add Losing It to badspots of furry;
 	add Losing It to badspots of guy;
-
 
 Instead of resolving a Losing It:
 	say "     Travelling through the city you see a stumbling figure with a skirt and a handbag in an alley.  Hoping to find another survivor, you rush over, but are disappointed by her current state.  Her face is reshaping itself into a feline muzzle while fur spreads over the last of her uncovered skin.  But most striking of it is the large erection and hefty balls propping up her... no, his skirt.  Suffering a complete gender swap from the infection, the poor woman has become a snow leopard man.  You try to help him along while he complains about the wretched heat and pants.  Then something changes in his eyes and he looks at you with an animalistic thirst.  He grabs you tightly and tries to wrestle you down, his mind unravelling even as you try to help him.  You escape his grip, but are left with facing the lustful snow leopard.";
@@ -97,6 +96,162 @@ Instead of resolving a Losing It:
 		say "     Escaping the crazed feline, you dash off into the city, deciding to search somewhere away from the newly transformed and lustful feline.  Perhaps once it has sated its lusts from its transformation it will wander off and you can return to searching.";
 	Now Losing It is resolved;
 
+
+CatsandDogs is a situation.
+when play begins:
+	add CatsandDogs to badspots of furry;
+
+instead of resolving a CatsandDogs:
+	say "     As you travel through the city, you come across a pair of old apartment buildings side by side.  The windows are open and the tenants are yelling at one another.  One building appears to be populated entirely by cats and the other by dogs.  They are growling, yowling and making rude gestures at one another.  They jeer at one another and toss trash across the alley dividing their buildings.  Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them.  You make note of the location and remind yourself to keep away, finding another path around this neighbourhood.";
+	now CatsandDogs is resolved;
+
+
+Tour Bus is a situation.
+when play begins:
+	add Tour Bus to badspots of furry;
+
+instead of resolving a Tour Bus:
+	say "     Your path through the city is interrupted by an overturned tour bus.  It seems there was quite an accident here, with several cars piled up around the bus as well.  You do manage to weave your way through the mess, but it takes some time.  You remind yourself not to take this street again next time when passing through this area.  You head over to check out the bus, hopeful to find something of use in there.  You climb up onto a car, then get on the bus's side.  Looking in the windows, you can see several bags and packs, but you also see large amounts of semen and scratches to the seats.  Regardless of how the accident came to pass, it seems like the occupents were all transformed into more sexual monsters.  Certainly, it would not be safe to enter the bus, given how soaked in cum everything is.";
+	say "     You hop back onto the car, then onto the ground.  You start to head on your way, mentally reminding yourself not to take this street again when passing through this area, when you hear a growl from behind you.  Crawling out of the bus, you see a large, cougar herm wearing a cap and coat that leads you to suspect this was once the bus driver.  It growls again and hops onto the ground, coming at you quickly.";
+	challenge "Cougar";
+	say "     Your encounter with the cougar creature over, you continue on your way, leaving it and its unusual den behind.";
+	now Tour Bus is resolved;
+
+
+Dropped Handbag is a situation.
+
+Instead of resolving a Dropped Handbag:
+	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it.  Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.  Do you want to search it?  It doesn't seem like they'll be needing it anymore.";
+	if the player consents:
+		let T be a random number between 1 and 100;
+		if T < 41:
+			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  You do manage a lucky find and dig out a small canister of pepperspray.";
+			add "pepperspray" to invent of player;
+			increase score by 5;
+		otherwise if T < 81:
+			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  But aside from the bottle of water at the top of the bag, you don't get anything of use.";
+			add "water bottle" to invent of player;
+			increase score by 1;
+		otherwise if T < 91:
+			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  But that's about all you find of use in the dropped handbag.";
+			increase score by 1;
+		otherwise:
+			say "     You open the bag and put your hand in to rummage through its contents, but are met with a sticky surprise.  Pulling it out, you find your hand covered in wet, sticky cum.  You can feel the tingles from the infected cum on your hand.  Someone, possibly the bag's original owner, filled it with their cum and left it for someone like you to find.";
+			say "[line break]";
+			sort table of random critters in random order;
+			repeat with X running from 1 to number of filled rows in table of random critters:
+				choose row X from the table of random critters;
+				if area entry matches the text battleground:
+					now monster is X;
+					break;
+			choose row monster from the table of random critters;
+			infect;
+			decrease humanity of player by 5;
+	otherwise:
+		say "     Deciding not to bother, you continue on your way.";
+	now Dropped Handbag is resolved;
+
+
+Section 3 - Park Events
+
+Lovers Bench is a situation.
+The sarea of Lovers Bench is "Park";
+loversbench is a number that varies.
+when play begins:
+	add Lovers Bench to badspots of furry;
+	add Lovers Bench to badspots of guy;
+	add Lovers Bench to badspots of girl;
+
+Instead of resolving a Lovers Bench:
+	if loversbench is 0:
+		say "     While travelling through the park, you come across a pair making out lustfully on one of the benches.  The male atop is a anthro wolf with grey fur and a strong build.  The female stretched back on the bench is a spotted feline, perhaps an ocelot.  Their clothes are scattered around the bench and seem partially torn.  You hang back, wary to approach but unwilling to look away from the sight.  You watch as the wolf eases his thick cock into the smaller woman's pussy, making her yowl in delight.  She puts her arms around him and grabs his rear, pulling him into her with each thrust he makes.  The ocelot licks and kisses at the wolf's neck and he brings a paw to caress her breast while the other digs into the back of the wooden bench.  When the wolf finally drives his lupine knot into the feline's cunt, they growl passionately, cumming hard.  You do as well, having started playing with yourself at some point while peeping on the spectacle.  Finished, the wolf sags atop the feline as they start licking and kissing one another.  The ocelot's markings start to spread into the wolf's pelt while her fur takes on a more greyish tint overall.";
+		say "     You quietly walk away, ashamed of your peeping and quite certain they have succumb too far to be safe to approach.  Even if currently sated, they are both equally infectious.  But at least they are a couple.";
+		increase score by 1;
+		increase loversbench by 1;
+	otherwise:
+		say "     Your meandering through the park brings you back to the lovers['] bench and find them gone, though their scattered clothes remain.  This helps confirm your earlier guess that they'd succumbed.  The bench has quite a few scratches and claw marks on it, clearly having been used by many others since the outbreak, as well as older, carved grafitti hearts.  You suspect this bench has been a make-out spot for quite some time, being in a more secluded spot in the park.  Certainly there is a strong scent of sex hanging around it, even in the open air of the park.  Remembering the lovemaking you witnessed here, you start to get turned on.";
+		if scenario is "Bunker" or scenario is "Caught Outside":
+			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  It is no better than your own, so you toss it aside.  The woman's jeans do yield a small cannister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
+			say "     Pepperspray obtained.";
+			add "pepperspray" to invent of player;
+			increase score by 5;
+		otherwise:
+			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  Thinking it may be a useful tool or perhaps a weapon in a pinch, you take it.  The woman's jeans do yield a small cannister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
+			say "     Pocketknife and pepperspray obtained.";
+			add "pocketknife" to invent of player;
+			add "pepperspray" to invent of player;
+			increase score by 10;
+		if companion of player is pink raccoon:
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Raccoon":
+					now monster is y;
+					break;
+			if cocks of player > 0:
+				say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr.  He smiles and kneels on the bench, flagging his tail up to uncover his tight rump.  He makes a needful moan.  It seems your pet wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You stand behind him and give his rump a squeeze, spreading his cheeks and lining up your cock with his pink pucker.  You dribble pre onto it, then slowly ease into him, enjoying the sound of his soft moan as you penetrate him.";
+				say "     Gripping the bench tightly with his little claws, her leaves fresh holes in the wood while you thrust into him.  You stroke his back and sides, telling him what a good pet he is and how much you love him.  Something about the bench makes this more than just sex, but instead lovemaking.  Your coon smiles back at you and his cotton candy scent fills the air, mingling with all the other arousing scents.  You reach around to pump at his cock while you work your cock into his tight bottom.  His pink, banded tail wraps around your waist, snugging you lovingly.";
+				say "     After a powerfully long orgasm that pumps your seed into your pet's ass and his own sweet smelling cum is added to bench's scents, you withdraw.  Your pet is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
+			otherwise:
+				say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr.  He smiles and nuzzles you, guiding you to lay back on the bench.  You can see the front of his skirt standing up as his erect cock makes it rise.  He makes a needful moan as you slip a hand under his skirt to fondle his balls.  It seems your pet wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You stretch back on the bench, leaving one leg draped over the side, giving your pink pet clear access to your dripping slit.  He climbs atop you, lining up his cock even as he nuzzles at your neck.  You scritch his ears and caress his back as his penis sinks into your cunt, enjoying the sound of his soft moan as he slowly, tenderly penetrates you.";
+				say "     Gripping the bench tightly with his little claws, her leaves fresh holes in the wood while he thrusts into you.  You stroke his back and sides, telling him what a good pet he is and how much you love him.  Something about the bench makes this more than just sex, but instead lovemaking.  Your coon smiles down at you, kissing and nuzzling your face as you do the same.  His cotton candy scent fills the air, mingling with all the other arousing scents.  You reach around to grab his rump, squeezing it and making him moan as you pull him to thrust harder and harder into your dripping pussy.";
+				say "     After a powerfully long orgasm that pumps an impressive load of his coonboi seed into your pussy, he withdraws slowly.  Your pet is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
+				say "[impregchance]";
+			infect "Raccoon";
+			now libido of player is libido of player / 2;
+			decrease humanity of player by 5;
+			if "Pure" is listed in feats of player, increase humanity of player by 1;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			increase xp of pink raccoon by level of pink raccoon + 1;
+			increase score by 20;
+		otherwise if companion of player is Gryphoness:
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Hermaphrodite Gryphon":
+					now monster is y;
+					break;
+			say "     As you're finishing up your scavenging, Denise takes your hand in hers and grins playfully at you.  She gives you a tug over to the bench.  'We should... umm... I mean, everyone's using this bench for...' she says softly as she sits back on it, running her paws over her lovely body.  Her nipples are quite hard, as is her cock and gryphon juices drip from her aroused pussy.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on her offer.";
+			if cocks of player > 0:
+				say "     You snuggle up beside her on the bench, nuzzling and kissing one another.  Her paw soon find its way to your cock and strokes at your stiff shaft.  With her other arm around you, she moves to lay back on the bench while guiding you atop her.  Soon enough, you are lining your cock up with that dripping snatch and sinking into her, causing her to moan lustfully.  You continue kissing as you thrust into her, enjoying the warm, wet grip of her cunt around you.  Her paws roam over your body while her taloned feet dig into the bench, adding her marks to those of the others who've used it.  Your sex is lustful, but loving as well, as something about the bench makes this more like lovemaking than raw sex.  With one hand on the bench for support like that wolf, you let the other stroke Denise's bosom as she sings out her love for you and you respond in kind.";
+				say "     After a powerfully long orgasm that pumps your seed into the sexy gryphoness's pussy and her own cum sprays across her body and the bench, you withdraw.  Your companion is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.";
+			otherwise:
+				say "     You snuggle up beside her on the bench, nuzzling and kissing one another.  Her paw soon find its way to your pussy and she fingers and teases your wet folds.  With her other arm around you, she moves to sit at one corner of the bench and guides you to sit in her lap.  Soon enough, you are lining up her throbbing cock with your wet hole while kissing your loving companion.  You moan in pleasure as you sink down on her leonine cock, gripping her shoulders.  She nuzzles your bosom, licking and sucking at your nipples before moving her head back up to kiss you.  You continue kissing as you ride in her lap, enjoying the feel of her throbbing meat inside your cunt.  One paw roams over your body while the other digs into the bench, adding her marks to those of the others who've used it.  Your ride her cock lustfully, but loving as well, as something about the bench makes this more like lovemaking than raw sex.  With your arms around her, you hold her lovingly while scritching at her wing roots, which makes her sing out her love for you and you respond in kind.";
+				say "     After a powerfully long orgasm that pumps an impressive load of her gryphon seed into your pussy and her own female juices leak onto the bench to join the others, you ease yourself off her spent shaft.  Your companion is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.";
+				say "[impregchance]";
+			infect "Hermaphrodite Gryphon";
+			now libido of player is libido of player / 2;
+			decrease humanity of player by 5;
+			if "Pure" is listed in feats of player, increase humanity of player by 1;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			increase xp of Gryphoness by level of Gryphoness + 1;
+			increase score by 20;
+		otherwise if companion of player is Felinoid companion:
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Felinoid":
+					now monster is y;
+					break;
+			if cunts of player > 0:
+				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body.  You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face.  You can see his aroused cock, red and throbbing as it drips precum on your leg.  It seems your companion wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You move to lay back on the bench, putting your hips at one edge so your four-legged feline can mount you.  And he quickly does, lining up his cock with your dripping snatch before slowly sinking into you.  You moan in delight and run your paws over his sides and hips as his large, feline cock eases into you.";
+				say "     His large paws dig into the bench beside your head, leaving fresh scratches in the wood while he thrusts into you.  You nuzzle and kiss his feline face, telling him what a good kitty he is and how much you love him.  Something about the bench makes this more than just sex, but instead lovemaking.  Your kitty seems to smile down at you as he lickgrooms your face and chest, running his raspy tongue over your breasts.  You reach back to rub his large balls and squeeze his tightly muscled rear while he thrusts into you.  The sex is somehow both wildly animalistic and tenderly loving as the feline beast mates with you.";
+				say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your pussy, he eases his spent shaft from your cream-filled cunt.  Your companion is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
+				say "[impregchance]";
+			otherwise:
+				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body.  You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face.  You can see his aroused cock, red and throbbing as it drips precum on your leg.  It seems your companion wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You put your hands at his hips and get him to climb a little further onto the bench, bringing his large cock within reach of your mouth.  You start licking and kissing at his throbbing meat, then slide your mouth down over it, enjoying his mrowl of pleasure as you do.";
+				say "     His large paws dig into the back of the bench, leaving fresh scratches in the wood as he thrusts gently into your muzzle.  You face is buried in his soft fur as you run your fingers through it, stroking his belly and thighs as you lick and suck his cock.  You slide your mouth off, telling him what a good kitty he is and how much you love him as you kiss his cock and balls.  Something about the bench makes this more than just sex, but instead lovemaking.  Your kitty seems to smile down at you as you take him in you mouth again and he starts thrusting soflty.  You reach rub his large balls and squeeze his tightly muscled rear while he rocks his hips.  The sex is somehow both wildly animalistic and tenderly loving as the feline beast pumps his cock as you take it fully into your mouth and down your throat.";
+				say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your belly, he eases his spent shaft from your mouth.  Your companion is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
+			infect "Felinoid";
+			now libido of player is libido of player / 2;
+			decrease humanity of player by 5;
+			if "Pure" is listed in feats of player, increase humanity of player by 1;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			increase xp of Felinoid companion by level of Felinoid companion + 1;
+			increase score by 20;
+		otherwise:
+			increase libido of player by ( 100 - libido of player ) / 4;
+		now Lovers Bench is resolved;
+
+
+Section 4 - State Fair Events
 
 Concession Stand is a situation.
 The sarea of Concession Stand is "Midway";
@@ -198,124 +353,6 @@ when play ends:
 			otherwise:
 				say ".  The fel beasts breed you incessantly, filling your womb with litters of their spawn.  Regardless of your form, they are always pure hellspawn like their brethren.  They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time.";
 		stop the action;
-
-
-Lovers Bench is a situation.
-The sarea of Lovers Bench is "Park";
-loversbench is a number that varies.
-when play begins:
-	add Lovers Bench to badspots of furry;
-	add Lovers Bench to badspots of guy;
-	add Lovers Bench to badspots of girl;
-
-Instead of resolving a Lovers Bench:
-	if loversbench is 0:
-		say "     While travelling through the park, you come across a pair making out lustfully on one of the benches.  The male atop is a anthro wolf with grey fur and a strong build.  The female stretched back on the bench is a spotted feline, perhaps an ocelot.  Their clothes are scattered around the bench and seem partially torn.  You hang back, wary to approach but unwilling to look away from the sight.  You watch as the wolf eases his thick cock into the smaller woman's pussy, making her yowl in delight.  She puts her arms around him and grabs his rear, pulling him into her with each thrust he makes.  The ocelot licks and kisses at the wolf's neck and he brings a paw to caress her breast while the other digs into the back of the wooden bench.  When the wolf finally drives his lupine knot into the feline's cunt, they growl passionately, cumming hard.  You do as well, having started playing with yourself at some point while peeping on the spectacle.  Finished, the wolf sags atop the feline as they start licking and kissing one another.  The ocelot's markings start to spread into the wolf's pelt while her fur takes on a more greyish tint overall.";
-		say "     You quietly walk away, ashamed of your peeping and quite certain they have succumb too far to be safe to approach.  Even if currently sated, they are both equally infectious.  But at least they are a couple.";
-		increase score by 1;
-		increase loversbench by 1;
-	otherwise:
-		say "     Your meandering through the park brings you back to the lovers['] bench and find them gone, though their scattered clothes remain.  This helps confirm your earlier guess that they'd succumbed.  The bench has quite a few scratches and claw marks on it, clearly having been used by many others since the outbreak, as well as older, carved grafitti hearts.  You suspect this bench has been a make-out spot for quite some time, being in a more secluded spot in the park.  Certainly there is a strong scent of sex hanging around it, even in the open air of the park.  Remembering the lovemaking you witnessed here, you start to get turned on.";
-		if scenario is "Bunker" or scenario is "Caught Outside":
-			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  It is no better than your own, so you toss it aside.  The woman's jeans do yield a small cannister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
-			say "     Pepperspray obtained.";
-			add "pepperspray" to invent of player;
-			increase score by 5;
-		otherwise:
-			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  Thinking it may be a useful tool or perhaps a weapon in a pinch, you take it.  The woman's jeans do yield a small cannister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
-			say "     Pocketknife and pepperspray obtained.";
-			add "pocketknife" to invent of player;
-			add "pepperspray" to invent of player;
-			increase score by 10;
-		if companion of player is pink raccoon:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Raccoon":
-					now monster is y;
-					break;
-			if cocks of player > 0:
-				say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr.  He smiles and kneels on the bench, flagging his tail up to uncover his tight rump.  He makes a needful moan.  It seems your pet wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You stand behind him and give his rump a squeeze, spreading his cheeks and lining up your cock with his pink pucker.  You dribble pre onto it, then slowly ease into him, enjoying the sound of his soft moan as you penetrate him.";
-				say "     Gripping the bench tightly with his little claws, her leaves fresh holes in the wood while you thrust into him.  You stroke his back and sides, telling him what a good pet he is and how much you love him.  Something about the bench makes this more than just sex, but instead lovemaking.  Your coon smiles back at you and his cotton candy scent fills the air, mingling with all the other arousing scents.  You reach around to pump at his cock while you work your cock into his tight bottom.  His pink, banded tail wraps around your waist, snugging you lovingly.";
-				say "     After a powerfully long orgasm that pumps your seed into your pet's ass and his own sweet smelling cum is added to bench's scents, you withdraw.  Your pet is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
-			otherwise:
-				say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr.  He smiles and nuzzles you, guiding you to lay back on the bench.  You can see the front of his skirt standing up as his erect cock makes it rise.  He makes a needful moan as you slip a hand under his skirt to fondle his balls.  It seems your pet wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You stretch back on the bench, leaving one leg draped over the side, giving your pink pet clear access to your dripping slit.  He climbs atop you, lining up his cock even as he nuzzles at your neck.  You scritch his ears and caress his back as his penis sinks into your cunt, enjoying the sound of his soft moan as he slowly, tenderly penetrates you.";
-				say "     Gripping the bench tightly with his little claws, her leaves fresh holes in the wood while he thrusts into you.  You stroke his back and sides, telling him what a good pet he is and how much you love him.  Something about the bench makes this more than just sex, but instead lovemaking.  Your coon smiles down at you, kissing and nuzzling your face as you do the same.  His cotton candy scent fills the air, mingling with all the other arousing scents.  You reach around to grab his rump, squeezing it and making him moan as you pull him to thrust harder and harder into your dripping pussy.";
-				say "     After a powerfully long orgasm that pumps an impressive load of his coonboi seed into your pussy, he withdraws slowly.  Your pet is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
-				say "[impregchance]";
-			infect "Raccoon";
-			now libido of player is libido of player / 2;
-			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of pink raccoon by level of pink raccoon + 1;
-			increase score by 20;
-		otherwise if companion of player is Gryphoness:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Hermaphrodite Gryphon":
-					now monster is y;
-					break;
-			say "     As you're finishing up your scavenging, Denise takes your hand in hers and grins playfully at you.  She gives you a tug over to the bench.  'We should... umm... I mean, everyone's using this bench for...' she says softly as she sits back on it, running her paws over her lovely body.  Her nipples are quite hard, as is her cock and gryphon juices drip from her aroused pussy.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on her offer.";
-			if cocks of player > 0:
-				say "     You snuggle up beside her on the bench, nuzzling and kissing one another.  Her paw soon find its way to your cock and strokes at your stiff shaft.  With her other arm around you, she moves to lay back on the bench while guiding you atop her.  Soon enough, you are lining your cock up with that dripping snatch and sinking into her, causing her to moan lustfully.  You continue kissing as you thrust into her, enjoying the warm, wet grip of her cunt around you.  Her paws roam over your body while her taloned feet dig into the bench, adding her marks to those of the others who've used it.  Your sex is lustful, but loving as well, as something about the bench makes this more like lovemaking than raw sex.  With one hand on the bench for support like that wolf, you let the other stroke Denise's bosom as she sings out her love for you and you respond in kind.";
-				say "     After a powerfully long orgasm that pumps your seed into the sexy gryphoness's pussy and her own cum sprays across her body and the bench, you withdraw.  Your companion is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.";
-			otherwise:
-				say "     You snuggle up beside her on the bench, nuzzling and kissing one another.  Her paw soon find its way to your pussy and she fingers and teases your wet folds.  With her other arm around you, she moves to sit at one corner of the bench and guides you to sit in her lap.  Soon enough, you are lining up her throbbing cock with your wet hole while kissing your loving companion.  You moan in pleasure as you sink down on her leonine cock, gripping her shoulders.  She nuzzles your bosom, licking and sucking at your nipples before moving her head back up to kiss you.  You continue kissing as you ride in her lap, enjoying the feel of her throbbing meat inside your cunt.  One paw roams over your body while the other digs into the bench, adding her marks to those of the others who've used it.  Your ride her cock lustfully, but loving as well, as something about the bench makes this more like lovemaking than raw sex.  With your arms around her, you hold her lovingly while scritching at her wing roots, which makes her sing out her love for you and you respond in kind.";
-				say "     After a powerfully long orgasm that pumps an impressive load of her gryphon seed into your pussy and her own female juices leak onto the bench to join the others, you ease yourself off her spent shaft.  Your companion is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.";
-				say "[impregchance]";
-			infect "Hermaphrodite Gryphon";
-			now libido of player is libido of player / 2;
-			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of Gryphoness by level of Gryphoness + 1;
-			increase score by 20;
-		otherwise if companion of player is Felinoid companion:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Felinoid":
-					now monster is y;
-					break;
-			if cunts of player > 0:
-				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body.  You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face.  You can see his aroused cock, red and throbbing as it drips precum on your leg.  It seems your companion wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You move to lay back on the bench, putting your hips at one edge so your four-legged feline can mount you.  And he quickly does, lining up his cock with your dripping snatch before slowly sinking into you.  You moan in delight and run your paws over his sides and hips as his large, feline cock eases into you.";
-				say "     His large paws dig into the bench beside your head, leaving fresh scratches in the wood while he thrusts into you.  You nuzzle and kiss his feline face, telling him what a good kitty he is and how much you love him.  Something about the bench makes this more than just sex, but instead lovemaking.  Your kitty seems to smile down at you as he lickgrooms your face and chest, running his raspy tongue over your breasts.  You reach back to rub his large balls and squeeze his tightly muscled rear while he thrusts into you.  The sex is somehow both wildly animalistic and tenderly loving as the feline beast mates with you.";
-				say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your pussy, he eases his spent shaft from your cream-filled cunt.  Your companion is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
-				say "[impregchance]";
-			otherwise:
-				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body.  You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face.  You can see his aroused cock, red and throbbing as it drips precum on your leg.  It seems your companion wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You put your hands at his hips and get him to climb a little further onto the bench, bringing his large cock within reach of your mouth.  You start licking and kissing at his throbbing meat, then slide your mouth down over it, enjoying his mrowl of pleasure as you do.";
-				say "     His large paws dig into the back of the bench, leaving fresh scratches in the wood as he thrusts gently into your muzzle.  You face is buried in his soft fur as you run your fingers through it, stroking his belly and thighs as you lick and suck his cock.  You slide your mouth off, telling him what a good kitty he is and how much you love him as you kiss his cock and balls.  Something about the bench makes this more than just sex, but instead lovemaking.  Your kitty seems to smile down at you as you take him in you mouth again and he starts thrusting soflty.  You reach rub his large balls and squeeze his tightly muscled rear while he rocks his hips.  The sex is somehow both wildly animalistic and tenderly loving as the feline beast pumps his cock as you take it fully into your mouth and down your throat.";
-				say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your belly, he eases his spent shaft from your mouth.  Your companion is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
-			infect "Felinoid";
-			now libido of player is libido of player / 2;
-			decrease humanity of player by 5;
-			if "Pure" is listed in feats of player, increase humanity of player by 1;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of Felinoid companion by level of Felinoid companion + 1;
-			increase score by 20;
-		otherwise:
-			increase libido of player by ( 100 - libido of player ) / 4;
-		now Lovers Bench is resolved;
-
-
-CatsandDogs is a situation.
-when play begins:
-	add CatsandDogs to badspots of furry;
-
-instead of resolving a CatsandDogs:
-	say "     As you travel through the city, you come across a pair of old apartment buildings side by side.  The windows are open and the tenants are yelling at one another.  One building appears to be populated entirely by cats and the other by dogs.  They are growling, yowling and making rude gestures at one another.  They jeer at one another and toss trash across the alley dividing their buildings.  Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them.  You make note of the location and remind yourself to keep away, finding another path around this neighbourhood.";
-	now CatsandDogs is resolved;
-
-
-Tour Bus is a situation.
-when play begins:
-	add Tour Bus to badspots of furry;
-
-instead of resolving a Tour Bus:
-	say "     Your path through the city is interrupted by an overturned tour bus.  It seems there was quite an accident here, with several cars piled up around the bus as well.  You do manage to weave your way through the mess, but it takes some time.  You remind yourself not to take this street again next time when passing through this area.  You head over to check out the bus, hopeful to find something of use in there.  You climb up onto a car, then get on the bus's side.  Looking in the windows, you can see several bags and packs, but you also see large amounts of semen and scratches to the seats.  Regardless of how the accident came to pass, it seems like the occupents were all transformed into more sexual monsters.  Certainly, it would not be safe to enter the bus, given how soaked in cum everything is.";
-	say "     You hop back onto the car, then onto the ground.  You start to head on your way, mentally reminding yourself not to take this street again when passing through this area, when you hear a growl from behind you.  Crawling out of the bus, you see a large, cougar herm wearing a cap and coat that leads you to suspect this was once the bus driver.  It growls again and hops onto the ground, coming at you quickly.";
-	challenge "Cougar";
-	say "     Your encounter with the cougar creature over, you continue on your way, leaving it and its unusual den behind.";
-	now Tour Bus is resolved;
 
 
 Assorted Events ends here.
