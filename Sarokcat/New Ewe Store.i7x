@@ -108,9 +108,9 @@ Instead of Resolving a New Ewe Store:
 				increase nes by 1;
 				stop the action;
 			otherwise:
-				say "you talk and you talk but hear nothing further, perhaps it was only your imagination after all?";
+				say "You talk and you talk but hear nothing further.  Perhaps it was only your imagination after all?";
 		otherwise:
-			say "Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You Explain to the hopeful faces that you haven't yet seen their missing flock member, and watch the Sheep's faces fall as they look at you reproachfully. Feeling vaugely guilty you let yourself back out.";
+			say "Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You explain to the hopeful faces that you haven't yet seen their missing flock member, and watch the Sheep's faces fall as they look at you reproachfully. Feeling vaugely guilty, you let yourself back out.";
 	If nes is 2:
 		say "Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You explain to the hopeful faces your progress so far on finding their missing flock member, and the sheeplike faces of the flock tighten with worry as they begin to bleat  in distress when they learn of their lost lamb's predicament. Leon seems to be rather earnest as he asks for your help in rescuing their trapped lamb from underground and returning her to the flock, unable to resist such a desperate plea, you nod and promise to help as you slip back out the door.";
 		stop the action;		
