@@ -1,5 +1,5 @@
-Version 2 of Hospital for FS by Stripes begins here.
-[Version 2 - Basic events and first half of Dr Mouse's quests]
+Version 3 of Hospital for FS by Stripes begins here.
+[Version 3 - Improved Raccoon/Candy functionality]
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
 [Description text for this Extension.]
 
@@ -165,7 +165,10 @@ when play begins:
 
 Instead of resolving a Radiology:
 	say "     The radiology department, where the x-rays are taken, seems to have had recent use.  There are several fresh x-rays showing images of the altered physiology of transformees.  While some seem to have been taken during partial transformation, most are of completed changes.  Many are arranged out on the illuminated viewers with annotations marked on.  Most are circles or arrows marking key points with a red wax pencil, but others contain medical jargon about the bones or joints being changed.  Briefly distracted by all this, you don't hear the sound of approaching footsteps until its too late and one of the hospital's creatures steps in.";
-	say "[hospfight]";
+	if coonstatus is 0:
+		say "[hospfight1]";
+	otherwise:
+		say "[hospfight2]";
 	say "     After your confrontation with the creature, you leave the room, worried that more will be drawn by the noise.  You do find a back door out, letting you slip into another section of the hospital.";
 	increase hospnav by 1;
 	say "[hospprogress]";
@@ -173,7 +176,7 @@ Instead of resolving a Radiology:
 	now Radiology is resolved;
 
 
-to say hospfight:
+to say hospfight1:
 	let T be a random number between 1 and 6;
 	if T is 1:
 		challenge "Raccoon";
@@ -205,7 +208,10 @@ when play begins:
 
 Instead of resolving a Pathology:
 	say "     Hearing the sound of footsteps and talking approaching, you slip through a nearby door.  Inside you find yourself in a medical lab.  The room, unlike many of the others has been kept clean and seems largely undisturbed by the events which have struck the hospital.  Curious, you are about to look around further when the door opens and in strides the two creatures.  You seem to have inadvertantly hidden yourself at their destination.  The first charges at you while the other, laden with several test tubes and samples, moves to set its burden down first.";
-	say "[hospfight]";
+	if coonstatus is 0:
+		say "[hospfight1]";
+	otherwise:
+		say "[hospfight2]";
 	say "     Just having finished with the first, the second monster now moves up to have a go at you.";
 	say "[hospfight2]";
 	say "     After the confrontation with the pair of creatures, you leave the room, only noticing then that the room you were in was marked as 'Pathology'.  You feel a little quiver in your stomach.  Did you catch something in there, or was that just from worry?  As you try to convince yourself that you couldn't be feeling sick after such a short amount of time, you notice that a door around the corner is ajar.  This hallway, once locked, was opened by the creatures as they passed through it and is now another path you can use to explore the hospital.";
@@ -674,6 +680,13 @@ to say hospquestpt9:
 	if progress of doctor mouse minus turns is less than 12:
 		say "     'I do not have any tasks for you at the moment, but please check back again later,' he white mouse replies to your enquiries about his research.";
 	otherwise:
+		now Staff Lounge is resolved;
+		repeat with y running from 1 to number of filled rows in table of random critters:	[removes Raccoon monster from Hospital]
+			choose row y in table of random critters;
+			if name entry is "Raccoon":
+				now monster is y;
+				break;
+		now area entry is "Nowhere";
 		say "     'I do not have any tasks for...' the white mouse starts to reply when there is a commotion outside the door.  He hops off the stool and heads to the door.  Reflexively, you ready yourself for combat.  The door leading to the depths of the hospital opens and in come a pair of orderlies with a crossdressing raccoon held firmly in their paws.  His grey fur has pink highlights and pink rings around his tail and his candy striper dress has gotten torn.  The coon is thrashing and struggling, spewing a mix of insults, pleas and offers of sex to let him go.";
 		say "     As Dr Mouse steps around the worktables and becomes visible to the girly raccoon, his eyes go wide and he falls silent, but struggles all the harder.  The orderlies have no trouble holding the little guy and Dr Mouse looks him over critically.  His face is very stern and not at all the friendly expression you're used to seeing from the little mouse fellow.";
 		say "     'You've been most disruptive to my hospital of late, you little perv.  I had hoped you might come around, as you were a volunteer here.  But you are only a distraction for my staff and my projects.  And I can't have that, so I can't have you running around unsupervised any longer,' he says ominously.";
@@ -686,12 +699,6 @@ to say hospquestpt9:
 			increase score by 10;
 			decrease humanity of player by 5;
 			now coonstatus is 101;
-			repeat with y running from 1 to number of filled rows in table of random critters:	[puts Raccoon as lead monster...]
-				choose row y in table of random critters;
-				if name entry is "Raccoon":
-					now monster is y;
-					break;
-			now area entry is "Nowhere";
 			say "     With a nod to Dr Mouse, he injects the raccoon, who releases one last whimper before growing quiet.  After a few moments, he looks up at you, eyes filled with adoration, but little intelligence.  He moans softly and nuzzles your chest as his paws run along your sides and down to your hips.";
 			if cunts of player > 0 and cocks of player is 0:		[FEMALE]
 				say "     The raccoon slides a paw between your legs to play with your pussy.  His fingers stroke and tease you as he lowers himself to his knees.  He gives the briefest of shivers, so faint you barely notice it, before he buries his muzzle between your thighs and starts licking you.  You moan softly and stroke his ears.  He may lack in experience, but there is no lack of zeal in the coon, eager to please his new mistress.";
@@ -711,12 +718,7 @@ to say hospquestpt9:
 			increase score by 20;
 			now coonstatus is 1;
 			move Candy to Bunker;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Raccoon":
-					now monster is y;
-					break;
-			now area entry is "Nowhere";
+			if hp of Sven is 8, now lastSvendrink is turns - 4;
 			say "     Dr Mouse shrugs as you decide to pass on the injection and passes it to one of the orderlies to put away.  'I still do not want him in my hospital any longer.  You will have to take him away from here and keep him out of trouble.  Use him for your own enjoyment.'  He leans in and jabs the coonboi with a finger.  'You don't want to know what I'll do to you if you ever come back here,' he little mouse whispers harshly in his ear.  'Do you understand?'  The girly boi can only whimper louder and nod vigorously.  'Good.'";
 		wait for any key;
 		say "[line break]";
@@ -877,7 +879,7 @@ to say hospranaway:
 		otherwise:
 			say "     Hiding in a nearby building, you pant to catch your breath.  The pink coon thanks you for getting him out, but starts to fret about where he can now go.  You decide, on impulse, to tell him about the bunker under the abbey library and give him directions[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
 	otherwise:
-		say "     Panting for breath, you slam against the main entrance doors and stumble out into the [if remainder after dividing turns by 8 > 4]darkness[otherwise]light[end if].  You continue to run down the steps and across the large parking lot, afraid of pursuit by the hospital's horde.  You cut down a side street and eventually come to a stop in a nearby building[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
+		say "     Panting for breath, you slam against the main entrance doors and stumble out into the [if remainder after dividing turns by 8 > 4]darkness[otherwise]light[end if].  You continue to run down the steps and across the large parking lot, afraid of pursuit by the hospital's horde.  You cut down a side street and eventually come to a stop in a nearby building to catch your breath[if hp of doctor matt is not 100].  You feel that perhaps you should go talk to Dr Matt before doing anything else[otherwise].  Now without scientific help, you wonder what to do next[end if].";
 	now hp of doctor mouse is 1;
 	now locked stairwell is locked;
 	now hospquest is 13;
