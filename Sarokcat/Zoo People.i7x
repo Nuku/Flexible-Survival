@@ -1,7 +1,5 @@
-Zoo People by SarokCat begins here.
-
-
-
+Version 3 of Zoo People by SarokCat begins here.
+[ Version 3 - Linked to Diego Events ]
 
 "Adds a large group of scattered npcs to Flexible Survival with a variety of responses and goals..."
 
@@ -131,11 +129,17 @@ carry out Diegotricking:
 		say "'Woah amazing!' Diego exclaims happily, 'Are you sure you aren[apostrophe]t part coyote? I mean Damn that was an impressive trick!' The coyote says as he shakes his head in admiration. 'That kinda trick will get some extra effort on my part, should take those silly military types ages to get it all sorted out!'";
 		increase Coyotetricks by 2;
 		extend game by 18; 
+		if Coyotetricks > 3 and prankevent is 0:
+			now Prank Aftermath is not resolved;
+			now prankevent is 1;
 		stop the action;
 	if diceroll is greater than 12:
 		say "'Dang that was a good one! Not quite up to my usual standards of course, but pretty damn good!' Diego says with a happy grin on his face, 'I think I might be willing to try that one out on some of their scouts, might earn ya a bit of time ya see.";
 		extend game by 6;
 		increase Coyotetricks by 1;
+		if Coyotetricks > 3 and prankevent is 0:
+			now Prank Aftermath is not resolved;
+			now prankevent is 1;
 		stop the action;
 	otherwise:
 		say "'You call that a trick?' Diego says derisively, snickering at your pathetic attempt, 'Now this is a trick!' He says as he swiftly whips out a trick that makes you stagger back in shock and makes you feel slightly less human.";
