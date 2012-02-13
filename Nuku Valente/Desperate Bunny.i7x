@@ -252,11 +252,14 @@ The conversation of Sandra is { "Did I mention my name is Sandra yet? I can be a
 When play ends:
 	if Sandra is in the Bunker:
 		if hp of the player is greater than 0:
-			say "Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side.";
 			if humanity of the player is less than 10:
-				say "Despite your loss of humanity, she remains with you, tending to your needs, all of them, as best she is able. She does not permit you to predate on unchanged humans, tackling you to the ground when the urge becomes too strong and fucking you into a cooperative stupor. Could one ask for a better friend?";
+				say "Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side despite your loss of humanity.  She remains with you, tending to your needs, all of them, as best she is able.  She does not permit you to predate on unchanged humans, tackling you to the ground when the urge becomes too strong and fucking you into a cooperative stupor.  Could anyone ask for a better friend?  ";
+			otherwise:
+				say "     Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side after you are all rescued from the infected city.  ";
 			if cocks of the player is greater than 0:
-				say "Eventually, she grows round and plump, and bears you a child. The child emerges with rabbit ears, [one of]male[or]female[at random], and adorable. The child grows up loving the both of you and is raised with fierce protectiveness";
+				say "Eventually, she grows round and plump, and bears you a child.  The child emerges with rabbit ears, [one of]male[or]female[at random], and adorable.  The child grows up loving the both of you and is raised with fierce protectiveness.";
 				increase score by 5;
+			otherwise:
+				say "[line break]";
 		
 Desperate Bunny ends here.

@@ -1,5 +1,5 @@
 Version 2 of High Rise Events by Stripes begins here.
-[version 2.1 - added exclusions]
+[version 2.2 - Veterinary Hospital update]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the High Rise District."
 
@@ -434,6 +434,14 @@ to say kittycheck:		[add new felines when they arise]
 	if the bodyname of player is "Ninja Cat":
 		now kittyness is 1;
 	if the facename of player is "Ninja Cat":
+		now kittyness is 1;
+	if the bodyname of player is "Cougar":
+		now kittyness is 1;
+	if the facename of player is "Cougar":
+		now kittyness is 1;
+	if the bodyname of player is "Snow Leopard":
+		now kittyness is 1;
+	if the facename of player is "Snow Leopard":
 		now kittyness is 1;
 
 to say randomvetfight:				[more suitable pets can be added]

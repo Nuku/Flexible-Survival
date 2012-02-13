@@ -32,7 +32,7 @@ to say losetowolverine:
 	otherwise if lbfight is 1:
 		if cunts of player > 0:
 			if a random chance of 2 in 3 succeeds:
-				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he[apostrophe]s buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the [wolvloc] he was protecting so aggressively.";
+				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he[apostrophe]s buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the alcove he was standing guard in before you arrived.";
 				say "     Keeping you pinned down, he looks around for any other threats to his post.  This gives you a moment to look around for a way out of this predicament, but find none.";
 				say "     Satisfied that he won[apostrophe]t be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over.  He quickly mounts you, driving his large, brown cock deep inside you.  He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.";
 				say "     [impregchance]";
