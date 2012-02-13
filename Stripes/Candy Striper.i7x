@@ -1,5 +1,6 @@
-Version 3 of Candy Striper by Stripes begins here.
-[Version 3 - Endings added]
+Version 4 of Candy Striper by Stripes begins here.
+[Version 4 - Linked to Sven content]
+
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Raccoon Candy Striper creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -252,7 +253,13 @@ instead of going to Bunker while coonstatus is 1:
 
 
 instead of conversing the Candy:
-	say "     [one of]'I'm glad I'm away from there.  I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy.  And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital.  I was a little... ah... worked up.  I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[at random]";
+	if hp of Sven is not 10:
+		say "     [one of]'I'm glad I'm away from there.  I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy.  And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so I have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital.  I was a little... ah... worked up.  I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[at random]";
+	otherwise if hp of Sven is 10 and lastSvenfucked < 6:
+		say "     [one of]'I'm glad I'm away from there.  I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy.  And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital.  I was a little... ah... worked up.  I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[or]Candy pats your hand.  'Don't worry about Sven, sweety.  I know he's yours.  I'm just... helping him get some experience.'[or]Candy grins.  'I'll keep a close eye on your kitty while your out, sweety.'[at random]";
+	otherwise:
+		say "     [one of]'I'm glad I'm away from there.  I mean, the orderlies were fun if you could catch them when they weren't busy, but that wasn't always easy.  And a coon's got needs, you know,' he says with a playful wink.[or]'Please keep an eye out for any toys or lube while you're out there,' the coon says with a giggle.[or]'See if you can find some more cute guys to bring back here so we have some proper company, sweety,' he churrs with a grin.[or]'I'm sorry for any trouble I caused you back at the hospital.  I was a little... ah... worked up.  I'm doing better now, really,' he says, giving you a big smile, trying to look sincere.[or]Candy pats your hand.  'Don't worry about Sven, sweety.  I know he's yours.  I'm just... helping him get some experience.'[or]Candy grins.  'I'll keep a close eye on your kitty while your out, sweety.'[or]You end up speaking to Candy just as he's walking back from Sven's bunk.  'I've got him all warmed up for you, hon,' he churrs, licking his lips.  'Have fun!'[at random]";
+
 
 Instead of fucking the Candy:
 	if lastCandyfucked - turns is less than 8:
@@ -381,7 +388,7 @@ when play ends:
 				if bodyname of player is "Hermaphrodite Gryphon":
 					say "     Candy is probably your band's number one fan, running and moderating the band's web forums in his off hours.  Being bright pink, you easily spot him dancing happily with your groupies whenever you have a show in town.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
 				otherwise:
-					say "     Denise and Candy pet seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two friends.  You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
+					say "     Denise and Candy seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two friends.  You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
 			otherwise:
 				if cocks of player > 0:
 					say "     Having saved him from an uncertain and frightening fate, Candy treats you like some damsel-rescuing hero.  Wanting to do good on the outside and drawing on what he still remembers of his past, he begins nurse training, and proves quite adept at it despite his regular lewd suggestions of 'sexual healing' and 'sweet injections.'  The raccoon soldiers are always eager patients, coming to him for the most minor of complaints and are always up for Candy's playful suggestions.  Outside of his work, he spends a lot of time dressing up in various cute costumes, always searching for the ones you find the most enticing and 'christening' them with you in nights of wild passion.";
