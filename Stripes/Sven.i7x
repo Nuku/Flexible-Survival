@@ -1,5 +1,5 @@
-Version 3 of Sven by Stripes begins here.
-[Version 3 - Candy Interactions]
+Version 4 of Sven by Stripes begins here.
+[Version 4 - Endings at last!]
 "Adds an NPC named Sven/Svetlana to the Flexible Survival game"
 
 Section 1 - Event and Hideaway
@@ -572,6 +572,8 @@ to say svetlanatrio:
 [	52: Transition		]
 [	53: Svetlana		]
 [	54: Sexed up Svetlana	]
+[	99: Taken			]
+[	100: Lost in city		]
 
 [	Lust of Sven	]
 [	0: Normal		]
@@ -579,16 +581,42 @@ to say svetlanatrio:
 [	2: WS-Gold		]
 [	3: Pink		]
 
-[
-Section 5 - Endings (Coming soon)
+
+Section 5 - Endings
 
 when play ends:
-	if hp of Sven is 8:
-		say "Sven the fucktoy pet.";
-	otherwise if hp of Sven > 3 and hp of Sven < 8:
-		say "Sven the NPC.";
-]
+	if Sven is in the bunker and bodyname of player is not "Snow Leopard" and bodyname of player is not "Siamese Cat":	[Sven special cases]
+		if humanity of player < 10:
+			if ( bodyname of player is "Pantherherm" and angiearoused is 3 ) or ( felinoid companion is tamed and bodyname of player is "Felinoid" ) or bodyname of player is "Rubber tigress" or bodyname of player is "Plush lion":
+				let tempnum be 1;		[blank - Special Sven succumb endings as per species of player]
+			otherwise if hp of Sven > 3 and hp of Sven < 8:
+				say "     When you succumb to your infection, Sven's loyalty to you makes him waver, but he manages to make his escape from the bunker, running off into the city.  What rational thought you have left doesn't think much of his chances and expect he'll end up in the arms of a lustful snow leopard or taken as a fucktoy by one of the many other creatures out there.";
+			otherwise if hp of Sven < 7 and hp of Sven < 50:		[Sven the fucktoy]
+				say "     Being the loving and adoring pet that he is, Sven accompagnies you after you succumb to your infection.  You play lustfully with him often and his humanity fades away more and more, becoming your lustful and loyal servant in your future endeavours.  Bound to you, he remains loyally with you, fulfilling your sexual needs as best he can between any other lovers or mates you may have.  Having grown attached to your sexy snow leopard, you are always careful not to fuck him so much that he ends up transforming.  Despite your instinctual urges, you find his [if hp of Sven is 10]colourful [end if]snow leopard body beautiful and take care to preserve it... a courtesy you don't extend to others you may find.";
+		otherwise:
+			if hp of Sven < 8:	[Sven not pet]
+				say "     After an uncomfortable period in military holding area, Sven is released with you and the others.  The hot and muggy compound provided few chances for relief for the overheated kitty.  He spends some recovery time with you before eventually moving back to Europe.  He maintains correspondence with you [if Candy is in the bunker]and Candy [end if]and seems to be enjoying his new, partially feline body and his new life.  Coming from a well-to-do family, he has few financial worries and instead travels around Northern Europe, enjoying his increased love for the majestic beauty of his native lands[if Candy is in the bunker].  Coming across a letter to Candy that was left out, you do see that the coon's been encouraging him to enjoy his new body to the fullest and this letter includes a rather detailed account of the kitty's encounter with a group of sexy skiers[end if].  When you start to hear of groups of snow leopards popping up across Scandinavia, you aren't surprised and suspect that the snow leopard's anti-infection treatment didn't hold well under the snowy climate.  You wish him and his feline lovers well.";
+			otherwise if hp of Sven > 7 and hp of Sven < 50:		[Sven the fucktoy]
+				say "     After an uncomfortable period in military holding area, Sven is released with you and the others.  The hot and muggy compound provided few chances for relief for the overheated kitty.  You bring him along with you into your new life and help him to recover through long, lustful sessions of lovemaking to satisfy his unquenched thirst for sexual fluids.  Sven becomes a wonderful pet, always eager to satisfy your lusts and any kinky desire you have.  The beautiful kitty lounges around your home naked, shyly teasing from behind his tail.  His coy playfulness always draws the attention of your visitors, making him a wonderful means to coax them into a three-way.  When you become acquainted with a zookeeper, Sven has them playing with him after only a few visits, and after that, you're slipping your pet into the zoo to play with the big cats there.  You enjoy watching your pet mount the females and be taken by the males.  You even paid for using Sven as a stud on their female snow leopards, though the kitty always seems to be looking forward to having a strong male atop him.";
+			if hp of Sven is 10:							[Addition for Sven and Candy]
+				say "     Candy visits often, having grown quite fond of the sexy snowmeow during their shared time in the infected city.  While the pink coonboi has his own lovers now, he always has time for your special kitty.  Whenever business or other obligations take you away from him, you happily leave Sven with Candy, safe in the knowledge that he'll be cared for and have a good time with the girly coon.  And you always enjoy listening to Sven shyly tell you every sordid detail of his visit and how the coon and his myriad lovers made use of your sexy pet's body.  These seem to get more elaborate and involved as time goes on, as the coon makes bigger and bigger plans to celebrate the kitty's visit with lustful orgies centered around the exotically colourful snowmeow.";
+	[other Sven the fucktoy pet interactions]
+	if Sven is in the bunker and bodyname of player is not "Siamese Cat":	[Siamese union w/Sven blocks these]
+		if humanity of player < 10:
+			let tempnum be 1;					[Interactions while succumbed, if any, would go here]
+		otherwise:
+			if hp of Sven > 7:								[Other Sven interactions]
+				if sarahslut is 4:			[Sarah pet]
+					say "     Sven and Sarah don't get along well, at odds as cats and dogs often are.  Initially, when you're just starting to get settled in, they are quite irritating, as there is little space for them to avoid on another.  You start to worry that won't be able to get them to reconcile and will have to take some drastic measures.  Not wanting to lose either of them, you fret over it for quite some time.";
+					say "     And then one night, one of Sarah's anthro pups snuggles up with the sleeping kitty in his plush, oversized cat bed.  The two become almost inseparable, the cute puppy girl following the kitty around the house and sleeping beside him every night.  Sven and Sarah's become less irritated with each other and are soon friends, if never lovers.  In time, when little Anja grows up into a mature, sexy husky girl, her relationship with Sven changes and they become lovers as well.  Anja bears numerous litters of hybrid pups and kittens, all of whom make wonderfully submissive and lustful pets for any form of play.  The husky-patterned kitties and snowmeow-spotted doggies are very popular and add to your kennel's offered love pets.";
+				if coleencollared is 1:			[Coleen pet]
+					say "     During her time with you, Sven is also at odds with Coleen, though she does give him a slightly different look when he's not watching than Sarah does.  You are a little more hopeful they'll be able to bridge the gap before she goes, but it doesn't look like it's going to happen.  But then, the night before you're to have the general visit, you hear a commotion and rush to Sven's cat bed.  There you find Coleen having pinned the kitty down and riding his feline cock eagerly.  The snowmeow mrowls in delight and you can smell his arousal, as well as the beginning of the husky's heat.  It seems she decided to take this last chance to sate her lusts with him despite their rocky relationship.  With her more aggressive nature and military training, she would easily be able to pin your kitty pet and be bred by him.  They go at it all night long, ensuring the general will be quite surprised by her little of husky-snowmeow hybrid pups in a few months.";
+				if Sandra is in the bunker:		[Sandra rescued]
+					say "     You come home one day to find Sandra the bunny girl spread out on your couch with Sven pounding away eagerly at her pussy.  From the look, and smell, of things, they'd been going at it for quite a while.  The rabbit, having come over to visit you while in heat and wanting to share her lustful need with you, arrived while you were out.  Despite their somewhat shy, timid natures, they soon gave in to their arousal and had a long, lustful breeding session leaving her bloated with snow leopard cum.  Her swollen tummy doesn't go away completely, growing into hybrid cabbits in her sated womb.  They are lovely pair of white bunnies girls with long snowmeow tails and markings.  The twins, despite their timid, quiet natures, always seem to get themselves pulled into wild, erotic escapades.";
+				if pink raccoon is tamed:		[pink raccoon pet]
+					say "     Your coon pet gets along well with Sven, snuggling up to him often and after some initial trepidation on the kitty's part, gets them to have sex together.  The beautiful snowmeow becomes the pink coonboi's preferred lover, after yourself, loving the feel of the kitty's big cock in him or filling the snow leopard's ass with his sweet-scented seed.  The girly raccoon spends hours doting over your kitty, scritching, brushing and petting him, attention that your pretty pet enjoys so much and always rewards the coon by another gay romp to satisfy their lusts for cock.";
+				if felinoid companion is tamed and hermaphrodite is not banned:	[felinoid companion w/o herm blocked]
+					say "     Sven soon draws the attention of your felinoid companion, you nuzzles and snuggles up with the other feline.  Over the next few days, they grow closer and closer, spending more time nuzzling and grooming one another.  On the evening of the third day, you come home to find the feral feline mounted atop Sven, pounding away at him.  Glad they're getting along so well, you take a seat to watch the show, but soon realize that there things are not quite as they were.  Growing breasts sway from Sven's chest and the felinoid is driving his cock into your snow leopard's new, virgin pussy.  Their mating is repeated several times, until Sven, now a sexy snowmeow herm, is well bred and filled with kittens.  She bears him many litters of [if hp of Sven is 10]colourful [end if]snow leopard kittens and is fucked often, used to slake his lusts between the new playtoys you lure home for him to enjoy.";
 
-
-[ Edit this to have the correct Name as well]
+[ Edit this to have the correct Name as well ]
 Sven ends here.

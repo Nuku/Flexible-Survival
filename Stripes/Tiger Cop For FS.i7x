@@ -45,7 +45,7 @@ Instead of resolving a Policeman:
 		say "     'So, you tell me:  Have I found a concerned citizen who[apostrophe]s willin[apostrophe] to help the police or another punk looter?' he asks, slapping his nightstick in his paw meaningfully. (Y/N - Do you agree to help the tiger cop?)";
 		if the player consents:			[quest becomes active]
 			now mqstatus is 1;
-			say "     'Good, I figured you were right for the job.  Those damn pussies are on the lookout for me now, so I need someone else to help me get the rest of those keys.'  He smacks his broad chest.  'I may be in much better shape now, but they're still faster than me.  I want you to bring me about five more, just to make sure we've got all the rooms.  You get [apostrophe]em and then report back to me, good ole Sgt Marks.  Then I can lay down the law.'";
+			say "     'Good, I figured you were right for the job.  Those damn pussies are on the lookout for me now, so I need someone else to help me get the rest of those keys.'  He smacks his broad chest.  'I may be in much better shape now, but they're still faster than me.  I want you to bring me about five more, just to make sure we've got all the rooms.  You get your ass to the Red Light District, get those keys and then report back to me, good ole Sgt Marks.  Then I can lay down the law.'";
 		otherwise:					[quest refused / tiger cop now enemy]
 			now mqstatus is 98;
 			say "[line break]     With almost no warning, the officer swings his nightstick hard and fast at your head!";
