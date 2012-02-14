@@ -1,4 +1,5 @@
-Deer by Nuku Valente begins here. 
+Version 2 of Deer by Nuku Valente begins here.
+[Version 2 - Bug fix, oversized 'One Way' result and removed unused deer den code]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a deer to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -203,10 +204,10 @@ instead of conversing the susan:
 				move susan to dark basement;
 				remove susan from play;
 				now deerconsent is 2;
-				stop the action;
-			say "She wraps her arms around you in a firm hug, pressing needfully against you. Warm tingles sweep over your form as change is felt building, 'Go talk to the doctor. I will wait for you.'";
-			deerfy;
-			now deerconsent is 2;
+			otherwise:
+				say "She wraps her arms around you in a firm hug, pressing needfully against you. Warm tingles sweep over your form as change is felt building, 'Go talk to the doctor. I will wait for you.'";
+				deerfy;
+				now deerconsent is 2;
 		otherwise:
 			say "She looked crushed at your refusal, but instead of arguing the case further, just sulks and wanders off.";
 			move susan to dark basement;
@@ -228,8 +229,26 @@ instead of conversing the susan:
 				otherwise:
 					if cock length of player is greater than 12:
 						say "She eyeballs your [cock size desc of player] shaft a moment before she shakes her head vigorously, 'Too large for me,' she exclaims, then leans in. Her soft warm tongue bathes over your [cock of player] pole as she strokes it with her soft palms. Sharp tingles run through your loins as she tries to bring it down to a better size for coupling.";
-						deerfy;
-						follow the sex change rule;
+						if "One Way" is not listed in feats of player:
+							decrease cock length of player by ( ( cock length of player - 9 ) / 3 );
+							if cock width of player > 9:
+								decrease cock width of player by ( ( cock width of player - 6 ) / 3 );
+							deerfy;
+							follow the sex change rule;
+						otherwise:
+							deerfy;
+							follow the sex change rule;
+							say "She tries her best, but your genitals resist any change to get them to shrink down.  She is clearly very disappointed by this outcome.  'I guess you won't be able to be my buck any more,' she says sadly.  Turning away from you, she stiffles a sob and rushes out.  Exiting the lab, she heads downstairs and leaves for parts unknown.  Perhaps you'll be able to track her down back at the park.";
+							move susan to dark basement;
+							remove susan from play;
+							now deerconsent is 2;
+							repeat with y running from 1 to number of filled rows in table of random critters:
+								choose row y in table of random critters;
+								if name entry is "doe":
+									now monster is y;
+									break;
+							now area entry is "Park";
+							stop the action;
 						if cock length of player is greater than 12:
 							say "She pouts a bit as you remain too large for her. Her hands continue to gently pull at your excited length even as she looks disappointed, 'We can try again later.' she promises, leaving you brimming with unsated sexual lust, balls rumbling with seed. Oddly, you feel no urge to approach her again immediately.";
 							stop the action;
@@ -261,85 +280,7 @@ instead of conversing the susan:
 	
 [Susan is in primary lab.]
 
-to say deer den scene:
-	say "As you enter the den, you give a quick look around. It's dry and clean, with a large bed propped in a corner. It looks like someone grabbed a bed and dragged it down here, but it is also clean and soft looking. Laying across it is the deer. She's smiling at you, laying on her belly, breasts gently compressed beneath her, head on her hands as she gazes at you. Behind her, her tail sways slowly over her wide, round, hips, '[one of]I am so glad you took some time to visit, lover. We have so much to talk about, to do...[or]I feel as horny as anything, you are just in time to keep me company.[or]You have no idea how happy you just made me, visiting me. It gets so lonely down here.[at random]'";
-	say "Do you want to stay?";
-	if the player consents:
-		now deerconsent is 1;
-	otherwise:
-		say "You decide you don't really want to spend time with her, and head back for the library.";
-		move the player to Grey Abbey Library;
-		follow the turnpass rule;
-		stop the action;
-	if bodyname of player is "doe":
-		say "'You are still looking mighty fine. Come over here and let me give you a kiss,' she beckons. As you slip up onto the bed to join her, she wraps her arms around you, pressing her soft warm scales to your [skin of player] front, grinding gently as she presses her snout to you and gives a slow kiss, quiet for long moments as her hands wander across your back eagerly. Your body grows warm, responding to her desire for a mate, changing to be more like her ideal catch.";
-	otherwise:
-		say "'You are still missing a little something,' she chastises gently, patting the bed for you. When you slip up beside her, she slips in against you, one hand reaching between your legs, rubbing slowly as she begins to nuzzle across your neck and cheek, nipping carefully with those large teeth. As she cuddles in closer, your body grows warm, nanites rushing to modify you towards her ideal lover.";
-	wait for any key;
-	deerfy;
-	wait for any key;
-	say "Seemingly satisfied, at least for the moment, she rolls up on top of you with a smile, 'Now what to do...'";
-	if a random chance of 1 in 3 succeeds: [ She just talks ]
-		say "'I want to talk, get to know you,' she says, leaning in and snuggling against your front. She chats with you quietly as she gropes and fondles at you, drawing out your name and your old job, and telling you about her old life as a bus driver. She confides that she loves her new body. 'I just want someone to share it with,' she says, nuzzling you with her great snout as she speaks, 'We can be together, have little allideerettes. It would be nice....' she assures in a sultry whisper.";
-		say "Her words seem to wriggle insidiously in your mind, feeling like a better idea by the moment. Though she does not change your body any further in the long chat, your mind feels a bit bent, and you look forward to your next visit all the more for it.";
-		decrease the humanity of the player by a random number from 5 to 20;
-	otherwise: [ Sex]
-		if a random chance of 1 in 2 succeeds and cocks of player is greater than 0: [ She wants to be fucked]
-			say "She  rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs, 'Come show me just how much a stud you are,' she invites. Your [cock size desc of player] [cock of player] cock[if cocks of player is greater than 1]s[end if] rise[if cocks of player is 1]s[end if] to attention quickly and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
-			if cock length of player is less than 4:
-				say "She gets an odd expression when you sink into her, then looks over shoulder, 'Mi amor, you need help,' she croons, curling her tail around you and squeezing. The warmth returns to you, filling you with hot tingles that slowly sink into your groin as things begin to change down there, swelling up inside the deer as she gasps and coos. The pleasure of changing while sheathed in the fertile female burns at your mind, eroding your human sensibilities.";
-				follow the sex change rule;
-				follow the sex change rule;
-				decrease the humanity of the player by 5;
-			if cock length of player is greater than 10:
-				say "She squeals loudly as you try to cram your oversized manhood into her, but it's too much. She scampers away from you in a wriggle, but before you can be disappointed, you feel her soft hands on you, stroking firmly at you, 'Poor little dear,' she says with a smile, 'I will help us both,' she promises, engulfing you in the warm heat of her mouth, lapping at you with a large tongue and stroking at you with her skilled fingers. Your body tingles with pleasure, and change, as your genitals throb with the tell tale hint of transformation as she works you towards a peak rapidly. The changing throbbing reaches its climax just as you do, spilling your seed into her waiting maw.";
-				if cock width of player is greater than 20:
-					say "The force and volume of your seed is so great that it overflows her long snout and runs down her front in great rivers, painting her heaving breasts in your pearly virility. She groans as her belly distends, gulping down as much as she can even as it gets everywhere else, leaving her quite a mess.";
-				follow the sex change rule;
-				decrease the humanity of the player by 5;
-			otherwise: [ just right! ]
-				say "You pull back, tool glistening with the generous lubricants of the reptile woman. She pushes back against you, sinking you back into herself as she gives a soft hissing growl. You begin to dance with her, rocking smoothly against one another. She mates like a wild animal at first, as if desperate to prove what is going on to the world itself, slamming her deliciously soft cheeks into your thighs. Her own cock wags with each movement, dripping onto the bed with her excitement as you moan softly together.";
-				say "You reach for one of her legs and lift it up, thrusting up into her and making her frame jiggle with every slam into her, feeling yourself sink all the deeper for the new angle. She groans and praises you, tail rubbing against your chest as she flexes powerfully around your [cock of player] shaft. All too suddenly, your [ball size] orbs contract, and you can feel your vital fluid rushing up into the scaled female. She hisses, and sprays up into the air even as her passage clamps like a vice around you, drawing out the seed towards her hungry womb.";
-				wait for any key;
-		otherwise if a random chance of 1 in 2 succeeds: [ She fucks]
-			if cunts of player is greater than 0:
-				say "She presses firmly to your front, rubbing chests together in slow circles as her firmness grows against you, poking into your belly lightly, 'Gonna make you squeal,' she says with a smile, reaching for your hips and pulling up, she shimmies to light herself up to enter your moist cavern without delay.";
-				if cunt length of player is less than 8:
-					say "Her cock stretches your relatively small cunt as it spears up into your cavern. By the second motion, find find yourself gushing wet, making her motions all the easier as she works at you, loosening your sex with her eager thumps.";
-					increase cunt length of player by 2;
-					increase cunt width of player by 2;
-				otherwise if cunt length of player is greater than 12:
-					say "She sinks easily into your gaping hole, thrusting with loud lewd slurps as she grinds and groans with the pleasure of your hot tunnel around her eager shaft, not minding your large nature at all.";
-				say "She wraps her arms around you in a fond embrace, rubbing her scaly cheek against your own as she coos soft delightful things to you, her words echoing in erotic tingles in your body even as she starts to piston against you, filling you with her urgent and virile pole. Her thick tail thrashes about with every movement even as your own hips start to rise to meet her, crashing together in a dance of love and lust.";
-				wait for any key;
-				say "Your belly grows warm as she ruts harder, her soft words seeming to make your womb tingle fiercely with a strange but deliriously wonderful sensation. You are not even sure when she spilled over the top, but you are being filled with thick seed and give out a deep sluttish moan as she clings to you, keeping her shaft plugged tight as the thick deer seed flows.[impregchance]";
-				say "Satisfied, she draws from you with a wet pop, 'Perfect, my lovely mate. You should stay... But you don[apostrophe]t have to, think about it, come back.' She blows a kiss at you and leans back on her bed, looking content for the moment as your cunt tingles with lingering pleasure.";
-				wait for any key;
-			if cunts of player is less than 1:
-				say "'I want to be on top,' she says as she rubs over your belly and chest slowly, 'But you are missing the part I want to fuck most. How about I let you choose?' She leans in close, rubbing her nose to yours, 'Want me to take that pretty ass of yours?'";
-				if the player consents:
-					say "With your approval, she grins and flips you right over. She runs her soft scaly palms over your rump as she rumbles appreciatively, 'Don[apostrophe]t you worry one bit. Mother will be gentle.' She licks a finger, running it across the wet surface of her tongue before pressing the dangerously sharp tip of her claw to your puckered back door. She gently nudges your ring apart, wriggling the finger into your tight flesh as she leans in over you, 'Open up for mother, relax...' Her voice soothes you, and you find yourself relaxing at her command, allowing her digit to slowly push past, embedded fully in you. You can feel it moving inside of you as she insures your readiness.";
-					wait for any key;
-					say "She draws the finger back, then clambers up behind you fully, her hot member rubbing against your ass cheeks as she leans over you. She hugs you from behind, snuggling against your back, her breasts rubbing slowly against you as she nudges herself into position, and begins to slowly rock her ready tool into your loosened doughnut. She slips in almost painlessly, and what little discomfort is soon forgotten as her rod begins to stroke into you, teasing sensitive portions of you as she pulls you back into her eager motions. She licks at your ears from behind as she couples, growling soft appreciations. Her balls slap up against you with each, increasingly fast, thrust.";
-					wait for any key;
-					say "With a load groan, you feel her body stiffen over your own, and her shaft swell and explode powerfully into you. Pleasure explodes abruptly, causing you to seize in a climax of your own, echoing her in tremble and timber as she holds you preciously close, clutching almost desperately as the feelings pass. As composure returns, she pulls free of you and swats you smartly on the bottom, 'Good, you made momma really happy. You come back, any time. Momma always has time for you.' she insists, sending you on your way.";
-				otherwise:
-					say "'Well then, we still have one other option.' She flashes her teeth, and scooches up along your body until her groin is at your face, already firm cock bumping against you and the scent of her balls close, 'Put your mouth to work for me,' she bids, thick tail swaying back and forth eagerly. Before you can muster up much argument one way or the other, her slick member nudges past your lips and she draws you forward by the back of the head, gently petting at you as she gives reptilian purrs. Her cock is salty at first, but becomes clean as you suck at it. Your reservations seem to fade like vapor as she whispers encouragement, rocking and fucking your face.";
-					wait for any key;
-					say "Your tongue explores the alien textures of her smooth member, teasing it, to her vocal approval. She rubs along the back of your head as she presses forward, shaft twitching as you feel the seed splatter hotly across tongue and mouth. It tastes a little bitter and salty, but you loyally swallow the offering, soft tingles rewarding you in addition to her gentle words of encouragement. She pulls away and slips down to sit beside you, 'Good. I needed that. Maybe next time, you get a turn,' she winks, then reclines, looking ready to relax.";
-		otherwise: [She makes the player pleasure her orally]
-			say "'Well then, I know just what to do.' She flashes her teeth, and scooches up along your body until her groin is at your face, already firm cock bumping against you and the scent of her balls close, 'Put your mouth to work for me,' she bids, thick tail swaying back and forth eagerly. Before you can muster up much argument one way or the other, her slick member nudges past your lips and she draws you forward by the back of the head, gently petting at you as she gives reptilian purrs. Her cock is salty at first, but becomes clean as you suck at it. Your reservations seem to fade like vapor as she whispers encouragement, rocking and fucking your face.";
-			wait for any key;
-			say "Your tongue explores the alien textures of her smooth member, teasing it, to her vocal approval. She rubs along the back of your head as she presses forward, shaft twitching as you feel the seed splatter hotly across tongue and mouth. It tastes a little bitter and salty, but you loyally swallow the offering, soft tingles rewarding you in addition to her gentle words of encouragement. She pulls away and slips down to sit beside you, 'Good. I needed that. Maybe next time, you get a turn,' she winks, then reclines, looking ready to relax.";
-	wait for any key;
-	decrease the humanity of the player by 5;
-	if the humanity of the player is less than 10:
-		end the game saying "You decide against leaving after all.";
-	say "You head home afterwards.";
-	move the player to grey abbey library;
-	follow the turnpass rule;
-
-deer Den is a room. "[deer den scene]". It is unknown. It is fasttravel. It is private.
+deer Den is a room. "You should not be here.". It is unknown. It is fasttravel. It is private.
 
 After examining deer den:
 	say "Stuff happens, then you go home.";
