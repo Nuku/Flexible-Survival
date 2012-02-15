@@ -1,5 +1,5 @@
-Ashen Breeder for FS by Auto Translator begins here. 
-[ Version 2 - Endings added by Stripes ]
+Version 3 of Ashen Breeder for FS by Auto Translator begins here.
+[ Version 3 - Victory Sex ]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
  
 "Adds Ashen Breeder to Flexible Survival."
@@ -16,9 +16,21 @@ Ashen Breeder for FS by Auto Translator begins here.
 			Say "Chirping triumphantly, the Ashen Breeder grabs you and pulls them tight to their chest. Smiling, blissful in hir lusty haze, the Ashen Breeder quickly forces a nipple into your mouth and squeezes hard on hir own tit. Sweet, rich cream explodes from the abused nipple, a constant stream that forces you to swallow or be drowned. Smiling, the Ashen Breeder slowly strokes across your back, planting small, butterfly kisses across your brow until the flow tapers to a halt. Satisfied, the herm gently strokes your distended tummy until you fall asleep, giving a soft kiss goodnight before departing. ";
 		else:
 			Say "The Ashen Breeder lowers you gently to the ground and quickly removes your clothing.  Sie very demurely crawls between your legs and licks your [cock size desc of player] dick until it's standing up straight in her delicate grip.  Hir swollen tits drip milk on your skin as sie slides back up your body and lines hir dripping slit up with your rigid member and quickly impales hirself on you.  Your shaft slips completely into hir with no resistance and sie chirps in pleasure and begins to fuck you with reckless abandon.  You feel hir juices dripping down your thighs and pooling in between your legs while hir pre-cum splatters your chest as hir cock bounces up and down.  Hir hips begin to slam into you hard enough to make you ache but your own orgasm is close as sie shows no sign of stopping hirself.  You try to hold back but sie suddenly clamps down on your cock as both of hir sexual organs orgasm together; hir cock shoots cum all over your chest and face, leaving almost no inch clear of the sticky fluids.  The clenching of hir tunnel around your shaft is more than you can take as your cock unloads into hir, splattering your seed against hir walls and into hir womb.  Sie leans down and kisses you as hir orgasm subsides before getting up and walking shakily away, leaving you lying in a state of bliss on the ground.";
-		
- 
- 
+
+
+to say beattheashenbr:
+	say "     The Ashen Breeder moans with need, staggering as shi's tries in vain to continue the struggle.  Torn between hir lusts and exhaustion, hir paws roam all over hir body, playing with her breasts, cock and pussy as she stumbles to hir knees";
+	let diceroll be a random number between 40 and 125;
+	if diceroll < libido of player and cocks of player > 0:
+		say ".  Something about hir needy display arouses you and you feel an uncontrollable urge to mate with this strange beast.  Pushing hir down onto all fours, shi releases a series of pleasured chirps.  You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight";
+		if cock length of player > 18:
+			say ".  Hir pussy stretches open to accommodate your massive shaft, bulging at the belly to fit you in.  Shi brings a paw to the bulge, rubbing over it with happy chirps, glad to be taken by such a virile and well-hung male";
+		say ".  You bring your hands to hir breasts, squeezing them, causing large spurts of milk to shoot from hir nipples onto the ground.  You work at milking hir the whole time you breed hir, soaking the tunnel floor in a growing puddle of breast milk.";
+		say "     When you feel your orgasm about to arrive, you drive yourself fully into hir, pushing your cock into hir accommodating womb and releasing your thick seed to breed hir.  Shi moans in delight, clamping down firmly on your cock and milking it for all you'll give[if cock width of player > 10].  Your large balls drain into hir, making hir belly swell with your semen, almost certain to impregnate the needy, breeding bitch[end if].  Hir penis twitches and hir balls pull up, spraying hir own seed into the puddle of hir milk, adding to the messy white stain.  When you withdraw hir cock, the breeding slut passes out in the puddle of hir own fluids with a dazed expression of happiness on hir muzzled face.";
+	otherwise:
+		say ".  Shi gropes hirself briefly, then hir paws drop to hir sides, too weak to continue.  With a sad look in hir eyes, shi falls to the ground and slips unconscious, milk still leaking steadily from hir swollen tits.";
+
+
 Section 2 - Monster Insertion
  
 Table of random critters (continued)
@@ -29,7 +41,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Ashen Breeder"; [Name of your new Monster]
 	now attack entry is "[one of]grabs at you with hir small claws trying to pull you against hir chest[or]overpenetrate[or]wraps hir claws around a tit and squeezes hard, sie lets the warm milk splashes against your body[or]manages to get a hold of you and pull you against one of hir nipples, sie forces your mouth against it and squeezes hard and milk pours down your throat[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "With a sad look in hir eyes she falls to the ground and falls unconscious, milk still leaks steadily from hir swollen tits."; [Text or say command used when Monster is defeated.]
+	now defeated entry is "[beattheashenbr]"; [Text or say command used when Monster is defeated.]
 	now victory entry is "[Ashen Breeder Attack]" ; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "A mutant dog-like creature. Hir long, floppy ears perk up as she notices you. Sie has [one of] red [or] pink [at random] eyes and looks at you with obvious lust.  Sie is completely unclothed and you can see just by looking at hir that sie is built to pleasure whoever sie comes in contact with; all of hir breasts drip milk at a steady rate and sie has a cock that makes your mouth water.  Sie lets out a moan and strokes hirself for a moment before rushing at you.";[ Description of the creature when you encounter it.]
 	now face entry is "an obviously canine head, with long floppy ears";	[ Face Description, format as the text "Your face is (your text)." ]
@@ -54,15 +66,15 @@ When Play begins:
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Mall";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 6;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 2;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
+	now cock width entry is 4;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
 	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
 	now breast size entry is 6;		[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 6;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
+	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
+	now libido entry is 66;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 

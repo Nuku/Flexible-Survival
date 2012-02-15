@@ -1,4 +1,5 @@
-Version 1 of Snow Leopard For FS by Stripes begins here.
+Version 2 of Snow Leopard For FS by Stripes begins here.
+[Version 2 - Sven specific endings added]
 "Adds a Snow Leopard creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses

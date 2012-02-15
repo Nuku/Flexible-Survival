@@ -152,6 +152,8 @@ Instead of resolving a Dropped Handbag:
 	now Dropped Handbag is resolved;
 
 
+Section 3 - Diego Events
+
 Trickster is a situation.
 wolffight is a number that varies.
 when play begins:
@@ -242,7 +244,7 @@ instead of resolving a Prank Aftermath:
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 		if libido of player > 100, now libido of player is 100;
 	say "[line break]";
-	say "     As you watch, the last of the soldiers is made into a herm with a pair of swelling breasts on her chest and a pair of feline ears.  She is pushed into the arms of two of her former teammates.  Too far gone in their own infection, they push her onto all fours, one taking her virgin pussy with her feline cock and the other forces her cock into his mouth.  As they fuck her, all three continue to change until they full puma herms, fucking with mrowls of lustful delight.  The former soldiers cum hard into their ex-teammate, filling her new pussy and feline muzzle with their hot cum.  Watching this arousing show, you can't help but get turned on and start masturbating.  As you climax, you groan loudly and cum hard, unable to stop yourself.  But this doesn't go unheard and several of the powerful felines come after you.  Having just cum, you barely manage to get yourself back on your feet and ready to fight by the time the first one reaches you.";
+	say "     As you watch, the last of the soldiers is made into a herm with a pair of swelling breasts on her chest and a pair of feline ears.  She is pushed into the arms of two of her former teammates.  Too far gone in their own infection, they push her onto all fours, one taking her virgin pussy with her feline cock and the other forces her cock into his mouth.  As they fuck her, all three continue to change until they are full puma herms, fucking with mrowls of lustful delight.  The former soldiers cum hard into their ex-teammate, filling her new pussy and feline muzzle with their hot cum.  Watching this arousing show, you can't help but get turned on and start masturbating.  As you climax, you groan loudly and cum hard, unable to stop yourself.  But this doesn't go unheard and several of the powerful felines come after you.  Having just cum, you barely manage to get yourself back on your feet and ready to fight by the time the first one reaches you.";
 	say "[line break]";
 	challenge "Cougar";
 	say "     Recovering from your encounter with the first feline, you try to get away, but have to deal with another who moves to bar your path.";
@@ -252,7 +254,7 @@ instead of resolving a Prank Aftermath:
 	now Prank Aftermath is resolved;
 
 
-Section 3 - Park Events
+Section 4 - Park Events
 
 Lovers Bench is a situation.
 The sarea of Lovers Bench is "Park";
@@ -351,7 +353,7 @@ Instead of resolving a Lovers Bench:
 		now Lovers Bench is resolved;
 
 
-Section 4 - State Fair Events
+Section 5 - State Fair Events
 
 Concession Stand is a situation.
 The sarea of Concession Stand is "Midway";
