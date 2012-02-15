@@ -1,0 +1,53 @@
+Margay for FS by Auto Translator begins here. 
+[This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
+ 
+"Adds Margay to Flexible Survival."
+ 
+Section 2 - Monster Insertion
+ 
+Table of random critters (continued)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+ 
+When Play begins:
+	Choose a blank row from Table of random critters;
+	now name entry is "Margay"; [Name of your new Monster]
+	now attack entry is "Margay uses their [one of]Rending Claws[or]Love Box[or]Royal Delight[or]Purr[or]Snap Kick[or]mutant power[at random]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[if you is female and you is not male]You get a sudden urge to cuddle the Margay. Your body prepares its second womb, heat flooding your insides as your second pussy starts to become wet and ready. Your instincts tell you that you want to put this being in your womb, to cuddle it in a more intimate manner and perhaps change it into one of your own, but your mind is more powerful than your instincts. You are able to resist the urge to unbirth the poor creature and move on your way, though now you've got to find some other way to deal with your body's need to be stuffed full of something large.[end][end if][line break][if you is female and you is male]You get a sudden urge to cuddle the Margay. Your body prepares its second womb, heat flooding your insides as your second pussy starts to become wet and ready. Even your cock starts to grow erect with willingness to get in on the action. Your instincts tell you that you want to put this being in your womb, to cuddle it in a more intimate manner and perhaps change it into one of your own, but your mind is more powerful than your instincts. You are able to resist the urge to un-birth the poor creature and move on your way, though now you've got to find some other way to deal with your body's need to be stuffed full of something large.[end][end if][line break][if vicor is male and you is not female]You get a powerful urge to stuff yourself full with the Margay's body, but you don't have a vagina to do it. It took a very firm effort, but you shrug off the urge and walk away.[end][end if][line break][if you is not male and you is not female]You get a powerful urge to stuff yourself full with the Margay's body, but you lack the genitals to do it. It took a very firm effort, but you shrug off the urge and walk away.[end][end if][line break][line break]";
+	now victory entry is  "The Margay looms over you, purring happily at her new prize. You aren't prepared for what happens next as the feline turns around and flashes her TWO vaginas in your face. "Oh you'll make a FINE member of my family," she purrs before squatting on your head.[line break]You're too paralyzed to move, her posterior cunt stretching around your head and swallowing you up. Within moments you feel the rest of your body getting sucked up into her second yet very warm uterus, forced into a fetal position as your captor's walls grow a placenta and an umbilical cord snakes its way down to your navel area to connect with a warm tingling. You pass out after that point.[line break]When you come to, you're on the ground, naked, in a strange place you haven't been before. And you feel different too, changed a little.[line break][line break]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "Looking over Margay, her body is covered in a soft coat of golden fur speckled by leopard spots. The pattern changed on her head where it becomes a pair of stripes that run down the middle of her faces, brushing past the eyes and passing both sides of the nose to stop at the end of said nose. It also turns the back of her ears black. flesh. Her head is a small feline head with large feline eyes and small pointed feline ears. Her body is quite large and VERY elastic in the belly. Easily capable of smuggling a fully grown human in there. She has 6 starting at small breasts. The breasts under the first top pair are smaller. Row 2 is small breasts. Row 3 is small breasts. Her arms are motherly feline arms with human-style hands featuring retractable claws. Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles. She end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads. She has wide hips that look big enough to swallow people whole. Easily capable of giving painless and effortless births. Its completed by a thick and leg-length feline tail. A private peek would reveal that she has: Her groin resembles that of a margay. She has 2 body length vaginas.";[ Description of the creature when you encounter it.]
+	now face entry is "a small feline head with large feline eyes and small pointed feline ears.";[ Face description, format as the text "Your have a (your text) face."] 
+	now body entry is "quite large and VERY elastic in the belly. Easily capable of smuggling a fully grown human in there.. Your arms are motherly feline arms with human-style hands featuring retractable claws.. Your legs are plantigrade legs with plenty of jiggle and firmly toned muscles. They end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads.";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "soft, furred";[ skin Description, format as the text "You have (your text) skin"] 
+	now tail entry is "They have wide hips that look big enough to swallow people whole. Easily capable of giving painless and effortless births. Its completed by a thick and leg-length feline tail.";[ Tail description, write a whole Sentence or leave blank. ] 
+	now cock entry is "barbed feline";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face change entry is "The infection hits your head, making your eyes grow bigger and your head a little smaller. your ears turn triangular and move to the top of your head while your face grows a very very short muzzle like that of a wild jungle cat."; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "The infection reaches your body, seeping in through the nicks and cuts. Your torso then starts growing bigger and taller, developing extra space that makes you feel like you could smuggle a washing machine in your belly. Your arms burn with an itchy fire as the infection spreads through them. Your hands crack and grow a little smaller while new claws take form in your fingers. The itchy fire hits your legs as the Margay infection takes hold in them, forcing your toes to grow claws and plumping them up with extra muscles to carry a very significant amount of weight for short periods of time."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "The Margay infection strikes your skin, soaking into it and making your entire body itch. Your body hair starts to grow in thicker and in heavier density thanks to new follicles growing in your skin. The new fur then shifts into gold and black patterns before your eyes. Oh now you've definitely got to go look in a mirror!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "Your ass itches with the infectious nanites seeping into your skin. Your hips immediately start to widen to fit a very large frame, making it very easy for you to give birth to any children you may have if you happen to have a female reproductive system. Even if you don't, those are still very large hips and it all comes with a feline tail dropping from above your ass and growing until it brushes the ground with its tip."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "Your groin feels like its going to explode in orgasm. A burning need growing in your loins, changing the way it looks. You get an urge to shove very large things like other people up into you, but you're not sure that's even possible. It just feels changed.. You need a moment alone to find out just how changed your genitals really are."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now str entry is 25;   [a big strong bear]
+	now dex entry is 8;   [not so limber]
+	now sta entry is 11;  [not too much stamina  -a lot of bear to lug about.] 				
+	now per entry is 20;  [bears are good at finding stuff]
+	now int entry is 14;   [not that much of a bear with little brain]
+	now cha entry is 14;  [because you wouldn't want to argue]
+	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 60;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
+	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
+	now cocks entry is ;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is ;		[ Length infection will make cock grow to if cocks]
+	now cock width entry is ;		[ Size of balls apparently ;) sneaky Nuku  (big balls are underrated.)]
+	now breasts entry is 6;			[ Number of Breasts infection will give you. ]
+	now breast size entry is 4;		[Size of breasts infection will try to attain ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 2;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 25;		[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 17;		[ Width of female sex  infection will try and give you ] 
+	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
+	now loot entry is "";			[ Loot monster drops, ]
+	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+
+Margay for FS ends here. 

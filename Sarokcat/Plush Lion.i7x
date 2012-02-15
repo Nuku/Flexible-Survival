@@ -1,4 +1,4 @@
-Versions 2 of Plush lion by Sarokcat begins here.
+Version 2 of Plush lion by Sarokcat begins here.
 [ Version 2 - Sven specific endings added ]
 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
