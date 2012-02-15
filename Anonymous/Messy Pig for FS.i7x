@@ -1,4 +1,5 @@
-Version 7 of Messy Pig For FS by Anonymous begins here. 
+Version 8 of Messy Pig For FS by Anonymous begins here.
+[Version 8 - Victory sex]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Monster name to Flexible Survivals Wandering Monsters table"
@@ -7,12 +8,19 @@ Version 7 of Messy Pig For FS by Anonymous begins here.
 Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
-to say monster name attack:
+to say messypigattack:
 	if cunts of player > 0:
 		Say "The pig girl charges at you one last time, and in your weakened state you fall backwards landing painfully on your butt. The pig quickly pins you down with her heavy body. She turns, and your vision is filled with large, fat, pig butt. Perhaps due to being lazy she lies down, drowning your face in her behind, as she hungrily goes about eating you out! Clearly this creature has an appetite for your sex! She digs her snout deep as she laps at it greedily, and you can do nothing but struggle weekly as she pins your head with her huge butt. After some time the pleasure of the pig girls meal becomes impossible to ignore, and you find your body quivering as you cum. The Pig finally stands up and waddles off. You cough, finally having fresh air as you climb to your knees shakily. ";
 	else:
 		say "The pig girl looks you over and huffs angrily. Apparently you're not quite what she wanted! She turns around, giving you a large view of her large behind before she kicks some dirt and mud into your face. You sneeze, and by the time you are able to see again she is gone.";
-	
+
+
+to say beatthepig:
+	if ( cockname of player is "Messy Pig" or cockname of player is "Piggy" ) and libido of player > 40 and cocks of player > 0:
+		say "     The pig, when realizing that the encounter is not going well, turns to make a run for it.  But as you catch a glimpse of her wet pussy as she turns away, your porcine cock throbs with need.  Before you have a chance to think about it, you leap atop her, making her squeal loudly.  She struggles to pull away, but you manage to keep a grip on the sow and pull out your throbbing pig sticker.  With a loud, piggish oink, you thrust your stiff penis into her cunt.  She continues to squirm and struggle, but it soon becomes less a matter of her trying to get away as more part of the game of fucking the sow.  She squeals and paws at the ground with her hoof-like hands as you thrust into her again and again.  Your cock throbs inside her as you drive it in one last time, [if cock length of player > 19]making her belly bulge with your overgrown meat, [end if]pumping your hot cum deep inside her as your porcine cock seeks to breed this plump sow.  When you're finished with her, you give her ass a swat, sending her squealing again as she waddles away quickly, dripping your semen from her well-used pussy as she goes.";
+	otherwise:
+		say "     The pig, when realizing that the encounter is not going well, turns tail and waddles away faster than you thought possible. You hear its squeals of terror die down as it leaves your range of hearing. Looks like you win!";
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -25,8 +33,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Messy Pig"; [Name of your new Monster]
 	now attack entry is "[one of]The Pig creature charges at you, slamming forcefully into your stomach and knocking the wind out of you![or]Chomp! The Pig bites your arm. Perhaps disappointed in your taste, she backs off and prepares for another attack.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "The Pig, when realizing that the encounter is not going well, turns tail and waddles away faster than you thought possible. You hear its squeals of terror die down as it leaves your range of hearing. Looks like you win!"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[monster name attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now defeated entry is "[beatthepig]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is  "[messypigattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "You hear a strange snorting sound, and looking around you see a bizarre creature. It rests on all fours, but its body seems human enough to stand on two legs. It appears to be a large, pinkish humanoid. She's quite fat, and has a large pig snout for a face. Floppy pig ears also adorn her head, and peak through her oddly human hair. Six breasts in two rows line her underside, and over her large bottom there is a cute and curly pig’s tail. Her hands end in cloven hooves, as do her feet. She spots you and looks up at you with hungry eyes! Uh oh!";[ Description of the creature when you encounter it.]
 	now face entry is "a pudgy face with a large pig's snout and two floppy ears";[ Face description, format as the text "Your face is (your text)."] 
 	now body entry is "fat and heavy, and also somewhat smelly";[ Body Description, format as the text "Your Body is (your text)."] 
