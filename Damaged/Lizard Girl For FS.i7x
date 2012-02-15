@@ -70,7 +70,7 @@ to say lizgirl defeat:
 		if lizgirlangry is 0:
 			say "She looks up at you mournfully, 'Oh what I could have done with you...' she says softly before collapsing.";
 		otherwise:
-			say "Looking at you one last time, she sheds a tear. 'Such a wonderful fighter. How can such a flawed being be so grand?' before dieing.";
+			say "Looking at you one last time, she sheds a tear. 'Such a wonderful fighter. How can such a flawed being be so grand?' before passing out.";
 	otherwise:
 		if lizgirlmarked is 1:
 			say "'Why did you not want this? Was the canvas too flawed?' she murmurs before losing consciousness.";

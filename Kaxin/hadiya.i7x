@@ -5,9 +5,6 @@ Version 1 of Hadiya by Kaxin begins here.
 
 Section 1 - The Situation
 
-Annoyed Hyena is a situation.
-The sarea of Annoyed Hyena is "Outside";
-
 mtrp is a number that varies.
 Lasthadiyafuck is a number that varies. Lasthadiyafuck is usually 250.
 hadiyafucked is a number that varies. hadiyafucked is usually 0.
@@ -32,11 +29,10 @@ To hadiyafuck:
 	let lust be 0;
 	let oversized be 0;
 	let response1 be "";
-	if cocks of player is less than 1:
-		if cunts of player is greater than 0:
+	if cocks of player is 0:
+		if cunts of player > 0:
 			say "'Yeah, not really interested in you. I'm more into the boys if you know what I mean. Though I can take them in between just as well. Grow some parts and we'll talk.'";
-			stop the action;
-	if a random chance of 1 in 2 succeeds and cocks of player is greater than 0: [She's thirsty]
+	otherwise if a random chance of 1 in 2 succeeds and cocks of player > 0: [She's thirsty]
 		say "'I'm not really up for anything right about now.. Though I might be a little..thirsty.' She licks her lips suggestively, showing off those feral teeth of hers, making you have very mixed feelings about the whole thing, but the raging hardness that soon greets her oversized paw helps tell her exactly what you think about the situation. 'Thats a good boy. Give me what I want and you probably won't get hurt.'";
 		wait for any key;
 		say "With those reassuring words, the Hyena just shoves you down on the nearest pile of clothes and pins you there with her greater weight, not exactly helping your arousal anyway. Just tearing your pants off with a single swipe of her claws, reducing the crotch to shreds and allowing your straining shaft to be released. Bobbing in the air, she quickly wraps her paw around the very base of it, stroking..squeezing it. Bumping her nose against the very tip to see just what your scent is. 'Quite the delicious looking cock you've got here. It would be a shame if anything happened to it, now wouldn't it?' She asks with an evil chuckle.";
@@ -51,7 +47,6 @@ To hadiyafuck:
 		wait for any key;
 		say "Satisfied for the moment, she finally pulls back, grinning back up into your eyes. 'Not bad, I'll definitely use you more later..'";
 		hyenaify;
-		stop the action;
 	Otherwise:
 		say "'There you are, now.. It's time for you to help serve your Mistress.' The obviously worked up Hyena doesn't waste any time with disrobing. Unbuttoning her pants and tugging them down just enough that you can see the thick red fleshed canine cock already pushing it's way out of her sheath. Her heavy, furry orbs obviously quite full and needing someone to help empty them. 'It's been quite a long time since I've had regular company. I might need you around quite a bit after this.' She lets out a growl, sinking her paw down to wrap around the emerging tip, stroking it steadily while you watch.. Getting herself nice and firm. 'Now, I'm going to get myself off tonight, but I wouldn't want to do anything without your full consent..' She taunts, obviously teasing you. 'So, want to get fucked?' She asks bluntly.'";
 		if the player consents:
@@ -64,7 +59,6 @@ To hadiyafuck:
 			say "She obviously is very pent up and wants to make sure that you'll be remembering her for a good long time after she's done with you. The powerful thrusts of her hips just pounding your body against the wall, plunging the full length of her cock inside you, making you moan in obvious arousal at the feeling of warmth and fullness deep inside your bowels. The pain mixes with pleasure, but you can only hold on and take it. Helpless underneath the dominant Hyena and her desires. Her lust quickly rises to a fever pitch, and she finally unloads inside you. Letting out a muffled cackle, she just hilts herself one last time. Cock pulsing, firing hot sticky ropes of her seed deep inside you, staining the inner walls with her sticky hot seed." ;
 			say "Yanking her cock out, she gives your rump a firm slap. 'Pretty good, come back when I'm ready and you can help me out again.' she snarls, obviously done with you for now.";
 			hyenaify;
-			stop the action;
 		otherwise:
 			say "'After hearing that, she doesn't bother to waste time. 'Guess you'll just have to use your other end then.' Just placing one of her oversized paws on your shoulder and applying some of her natural Hyena strength. Forcing you down onto your knees in front of her. Your view completely dominated by the sight of the swollen red flesh of her aroused length. The scent of her feminine musk almost overpowering, you simply can't help yourself, beginning to nuzzle against the very tip. Pressing your lips against the tapering tip to get a direct taste of her shaft, something that makes the hyena let out a satisfied little cackle. 'Thats a good bitch, keep it up.'.";
 			wait for any key;
@@ -76,22 +70,23 @@ To hadiyafuck:
 			wait for any key;
 			say "'Wiping her still hard cock clean on your lips, she smears it with her own unique scent. Just grinning down at her prey. 'Not bad. Now get out of here, I'll use you again once I'm recovered..'";
 			hyenaify;
-			stop the action;
-						
+
+
+Annoyed Hyena is a situation.
+The sarea of Annoyed Hyena is "Outside";
+
 After resolving a Annoyed Hyena, try looking;
 
 Instead of Resolving a Annoyed Hyena:
-	if mtrp is 0:
-		say "While exploring, you accidently run face first into what at first seems a warm, furry wall. Upon recovering and taking a second look, you realize that it's actually a Hyena. A tall, obviously intimidating hyena. Her sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other Hyenas that you've met in the past..She doesn't seem to be hostile to you, or at least not just yet to say the least.. As she just seems to be more amused by your presence than anything else.";
-		wait for any key;
-		say "Her slacks seem to conceal an obvious bulge. Seems she's pretty much the same as the rest of the Hyenas around here by the looks of it..Though she at least covers it up!";
-		wait for any key;
-		say "'Well now, just what do we have here? Someone new around to have fun with... suppose I might be up for you visiting me. I definitely need more company. And by company I mean a warm squealing bitch underneath me, giving me exactly what I want. Come on over and I promise I'll make you regret it later.' She growls, just winking over at you. 'I have a little shack set up nearby. Just come over anytime you want to get treated like the fucktoy that you are.' And with that, she just turns and disappears, leaving you slightly baffled and curious...but also very much wanting to see just what she has in store for you!";
-		decrease hunger of player by 20;
-		if hunger of player is less than 0, now hunger of player is 0;
-		now Hyena Shack is known;
-		now Annoyed Hyena is resolved;
-				
+	say "While exploring, you accidently run face first into what at first seems a warm, furry wall. Upon recovering and taking a second look, you realize that it's actually a Hyena. A tall, obviously intimidating hyena. Her sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other Hyenas that you've met in the past..She doesn't seem to be hostile to you, or at least not just yet to say the least.. As she just seems to be more amused by your presence than anything else.";
+	wait for any key;
+	say "Her slacks seem to conceal an obvious bulge. Seems she's pretty much the same as the rest of the Hyenas around here by the looks of it..Though she at least covers it up!";
+	wait for any key;
+	say "'Well now, just what do we have here? Someone new around to have fun with... suppose I might be up for you visiting me. I definitely need more company. And by company I mean a warm squealing bitch underneath me, giving me exactly what I want. Come on over and I promise I'll make you regret it later.' She growls, just winking over at you. 'I have a little shack set up nearby. Just come over anytime you want to get treated like the fucktoy that you are.' And with that, she just turns and disappears, leaving you slightly baffled and curious...but also very much wanting to see just what she has in store for you!";
+	now Hyena Shack is known;
+	now Annoyed Hyena is resolved;
+
+
 Hyena Shack is a room. It is fasttravel. It is private.
 
 The description of Hyena Shack is "A small looking wooden shack that she apparently built for herself, it's good enough to keep her out of the cold, and the hyena scent radiating strongly from it seems to keep out anyone that doesn't want to regret their intrusion. She's got quite a bit of stolen furniture though, as it's not like many people around are going to be objecting to it. And of course, Hadiya herself is never far to be found, usually fixing something inside the shack that has broken or just reclining and getting ready for her prey. Currently she's just reclining on a large sofa, sprawled out and looking very lazy as usual. She beckons you closer, seeing if you're dumb enough to actually do so.";
@@ -99,5 +94,5 @@ Hadiya is a person.
 The description of Hadiya is "A tall, obviously intimidating hyena. The sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other Hyenas that you've met in the past.. Her shaggy fur about as well groomed as you can expect it to be in a situation like this. Just reclining against one of benches in her home and giving the intruder a curious look. She towers over you, and by the sharp claws and various weapons, knives, and other objects on her belt she definitely could give you a hard time if she wanted to. Though for now doesn't seem like she's in any hurry to actually use any of them right now.";
 Hadiya is in Hyena Shack.
 The conversation of Hadiya is { "'So you actually came? That didn[apostrophe]t take long.'" };
-	 
+
 Hadiya ends here.
