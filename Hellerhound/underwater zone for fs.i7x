@@ -54,26 +54,25 @@ swimtoing is an action applying to one thing.
 
 understand "swim [any room]" as swimtoing;
 understand "swim to [any room]" as swimtoing;
-		[
-			Fight;]
+
+		[Fight;]
 [if there is a area of Battleground in the table of random critters:]
 [now battleground is "Sea";]
+
+check swimtoing:
+	if hasgills is not 1, say "You'll not be able to swim there without a way to breath underwater.  It's too far and too deep." instead;
+	if the noun is a direction, say "If you enter the water, how will you know you are going the right direction? Maybe you should try swimming towards the place itself." instead;
+	if the noun is not adjacent to the location of the player, say "That isn't nearby.  Make sure that you're swimming to a specific location nearby." instead;
+	if the location of the player is noun, say "You're already there." instead;
+
 carry out swimtoing:
-	if the noun is a direction:
-		say "If you enter the water, how will you know you are going the right direction? Maybe you should try swimming to the place itself.";
-	if the noun is not adjacent to the location of the player:
-		say "That isn't nearby.";
-		stop the action;
-	if the location of the player is noun:
-		say "You're already there.";
-		stop the action;
 	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
 		let T be a random number between one and 4;
 		if T is 1:
-			say "You come across a tiny island, revealed by the tide. You are not the only one here as you step onto the beach.";
+			say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
 			challenge "feral sea dragon"; [duh case, all three ways]
 		otherwise if T is 2:
-			say "You come across a tiny island, revealed by the tide. You are not the only one here as you step onto the beach.";
+			say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
 			challenge "feral sea dragoness";
 		otherwise if T is 3:
 			challenge "hermaphrodite dolphin";
@@ -85,10 +84,10 @@ carry out swimtoing:
 
 
 after looking when the player is in the public beach:
-	say "The sloping sands are currently flooded due to global warming, with waves hitting the rock barrier to the southeast. You could also try to [bold type]swim[roman type] along the coast.";
+	say "The rolling waves pass over the sandy shore, which slopes down into the ocean.  In the distance, past those sloping sands, the waves strike a rocky barrier.  To get past it, you would need to be able to [bold type]swim[roman type] along the coast.";
 
 
-The Sloping Sand is a room. "The sand here slopes gently downward, slow enough for one to walk into the water against the waves. However it provides a haven for any denizens of the depths that may live here. Keep on your guard. To the east is a red spot, maybe coral?".
+The Sloping Sand is a room. "The sand here slopes gently downward, with a few rising dunes under the water causing shallow and deep areas, but always progressively passing deeper into the ocean.  From here, you have a better view of the rocky area with the crashing waves.  It looks like a rather unhealthy area to swim - but at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks.";
 the Sloping Sand is southeast of public beach. 
 
 before swimtoing The Sloping sand:
@@ -99,12 +98,12 @@ before swimtoing The Sloping sand:
 		say "The gills on your neck prove their worth, gathering air for you underwater as you walk beneath the waves. [line break]You will have to [bold type]swim[roman type] from now on. Since the water impedes any sense of direction, [bold type]you'll have to name where you are going.[roman type]";
 
 before going to the coral ring:
-	say "You can't do that! You'll be running in circles!";
+	say "You can't just walk out into the ocean.  You'll have to swim into the deeper waters.";
 	stop the action;
 
-Coral Ring is east of the Sloping Sand.
+Coral Ring is south of the Sloping Sand.
 
-The coral ring is a room. "A huge ring of red coral surges over your head, marking this place as the netryway to the waterworld. To the south is what looks like a roting mast, maybe a sunken ship?".
+The coral ring is a room. "A huge ring of red coral arches over your head, allowing you passage through the choppy waters by the jagged rocks.  By passing through here, you are able to move to and from the deeper reaches of the sea.  To the south from here, you can see a shadowy shape beneath the water, barely at the limits of your restricted vision in the deeper waters.  It seems like a sunken ship, its broken mast helping you distinguish the shape.  It looks like there's a shipwreck to explore!".
 
 after entering the coral ring:
 	say "You look up with awe, sure this accomplishment was great.";
@@ -117,7 +116,7 @@ before going to the sunken ship:
 Sunken Ship is south of Coral Ring.
 
 Sunken Ship is a room.
-The description of Sunken Ship is "A large ship lays sunken and rotting here. It is an attraction for divers and sea creatures alike. Maybe going here was a bad idea.  There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast.  You'd best be careful.";
+The description of Sunken Ship is "A large ship lays sunken and rotting here.  From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago.  It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea.  There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast.  You'd best be careful.  From here, you can barely make out the lighter spot in the rocks that is the coral ring you passed through to get here.";
 
 The invent of Sunken Ship is { "Sea Dragon Cum" , "Sea Dragon Cum" };
 
