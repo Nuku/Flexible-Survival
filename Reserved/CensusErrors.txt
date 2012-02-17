@@ -1,6 +1,6 @@
-Clockwork Fox Girl.i7x by Auto Translator - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is 'Clockwork Fox Girl For Fs by Auto Translator')<br>
-Clockwork Fox Guy.i7x by Auto Translator - appears not to be an extension (its first line does not end 'begin(s) here', as extension titling lines must)<br>
+Killer Whale for FS.i7x by Auto Translator - appears not to be an extension (its first line does not end 'begin(s) here', as extension titling lines must)<br>
 d - non-folder found where author folders should be<br>
 Story.ni by Flexible Society Main File - title contains a full stop<br>
 Story.ni by Inform - title contains a full stop<br>
+Clockwork Fox.i7x by Stripes - an extension stored in the correct author's folder, but with the wrong filename (the extension says it is 'Clockwork Fox For Fs by Stripes')<br>
 Template For FS.i7x - non-folder found where author folders should be<br>
