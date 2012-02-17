@@ -2479,7 +2479,7 @@ To fight:
 			increase hp entry by debit * 2;
 			increase wdam entry by debit ;
 		say "You run into a [name entry].[line break][desc entry].";
-		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds:
+		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
 			if the player consents:
 				now combat abort is 1;
@@ -4087,6 +4087,7 @@ Include Feats by Nuku Valente.
 Include Pepperspray by Stripes.
 
 
+
 [Monsters/Infections]
 Include Chocolate Lab by Stripes.
 Include Yamato Dragon For FS by Kohryu.
@@ -4190,6 +4191,9 @@ Include Random German Shepherd For Fs by Telanda Softpaw.
 Include Messy Pig for Fs by anonymous.
 Include Elf by Nuku Valente.
 Include Cougar by Stripes.
+Include Margay For Fs by Stripes.
+Include Clockwork Fox For Fs by Stripes.
+
 
 
 [NPCs]
