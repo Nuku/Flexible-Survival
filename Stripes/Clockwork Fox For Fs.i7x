@@ -139,6 +139,7 @@ When Play begins:
 
 Section 3 - Endings
 
+when play ends:
 	if bodyname of player is "Clockwork Fox":
 		if humanity of player is less than 10:
 			say "     As your humanity is ground away by the inner clicking of your increasinly mechanical mind, you automatically make your way back to the shadowy museum.  There, you meet up with several other mechanical foxes and vixens who have set up their dens in a hall displaying the growth of mechanical clockwork from its beginnings in the 13th Century and onto the later mechanical marvels designed before electricity hastened to make the art obsolete.  As you're setting up your new den among the others, several of them snuggle up to you, clearly wanting to welcome you properly into the mechanical skulk with a good, long winding.";
