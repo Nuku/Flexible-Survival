@@ -443,6 +443,10 @@ to say kittycheck:		[add new felines when they arise]
 		now kittyness is 1;
 	if the facename of player is "Snow Leopard":
 		now kittyness is 1;
+	if the bodyname of player is "Margay":
+		now kittyness is 1;
+	if the facename of player is "Margay":
+		now kittyness is 1;
 
 to say randomvetfight:				[more suitable pets can be added]
 	let tempnum be a random number between one and seven;
