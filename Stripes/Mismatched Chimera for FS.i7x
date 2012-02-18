@@ -43,8 +43,7 @@ to say losetomischim:
 	sort table of random critters in random order;
 	now monster is 1;
 	infect;
-	sort table of random critters in random order;
-	now monster is 1;
+	now monster is 2;
 
 
 to say beatthemischim:
