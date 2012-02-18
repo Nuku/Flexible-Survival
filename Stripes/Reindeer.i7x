@@ -23,7 +23,7 @@ to say losetoreindeer:
 		say "     He gives a merry laugh which causes his jingle bells to ring and lines up his cock behind you.  With another spurt of his pre, this time to lube your tailhole, he starts to slide his slender cock into you.  You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells.  His cock fills you nice and deep, but isn't painful to take at all.";
 		say "     You leak precum onto the cold ground, only feeling the heat of your strong buck atop you.  When he gives a few last shoves into you, you groan loudly and cum hard, spilling your seed moments before his hot cum sprays into you, filling you with his holiday cheer.  This load is quite substantial, a ball-draining, belly-plumping, ass-flooding flow that leaves you panting on the ground, but filled with warmth and happiness.";
 	say "     He gives you a final, minty-sweet kiss under the mistletoe before flying off to spread more holiday cheer with others.  As he leaves, the temperature gradually returns to normal, but his hot special present keeps you warm inside until then.";
-	increase morale of player by a random number from 1 to 3;
+	increase morale of player by a random number from 2 to 4;
 	decrease humanity of player by a random number from 2 to 5;
 	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
 	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;

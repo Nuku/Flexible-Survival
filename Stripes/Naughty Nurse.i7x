@@ -79,7 +79,7 @@ to say vixennursedesc:
 		now dex entry is 14;
 	otherwise:
 		say "     You find yourself face to face with one of those sensually curved vixen in the tight, little nurse's outfit.  She has lustrous, gray fur, indicating that her infection originated from a silver fox.  She has a traditional, white nurse's cap with a red cross on it on the vixen's head.  She is wearing a short cut, white apron with a black top under it.";
-		say "     And there your eyes stop, finding that something is amiss with this naughty nurse.  Her tight dress has a rather sizeable bulge in it and it is growing larger as you watch.  It's a trap!  Grinning, she rubs the firm lump and says, '[one of]It looks like one patient[']s gotten out of bed.  I'll tuck you in good and tight[or]Bend over, sweety.  Mmm... I want to take your temperature[or]You look like you a dose of my medicine[or]Let me give you a thorough examination, my pretty patient[at random].'  She rubs her four breasts and moans lustfully before charging at you.";
+		say "     And there your eyes stop, finding that something is amiss with this naughty nurse.  Her tight dress has a rather sizeable bulge in it and it is growing larger as you watch.  It's a trap!  Grinning, she rubs the firm lump and says, '[one of]It looks like one patient[']s gotten out of bed.  I'll tuck you in good and tight[or]Bend over, sweety.  Mmm... I want to take your temperature[or]You look like you need a dose of my medicine[or]Let me give you a thorough examination, my pretty patient[at random].'  She rubs her four breasts and moans lustfully before charging at you.";
 		now hp entry is 72;
 		now monsterhp is 72;
 		now lev entry is 7;
