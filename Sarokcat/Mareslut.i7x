@@ -20,8 +20,7 @@ to say Mareslut attack:
 		say "Finally after a near eternity of sexual bliss, you can[apostrophe]t take any more, and you hear the mare chuckling softly and feel her hooflike hand stroking your cheek tenderly as you begin to pass out from exhaustion, you think you hear her mutter something about what a good little mare you will make, before you fall asleep.  Eventually you wake up, and blink as you feel a large warm body pressed up against you, looking over carefully you see the mare from before sleeping next to you on the bed, obviously as worn out from your playtime as you still are. Realizing you can[apostrophe]t have been out that long, you slowly begin to slip out of the bed, careful not to disturb the lusty mare as you gather your stuff together.  You pause for a minute as the lingering sexual scents from the room fill your head with the desire to go back to the bed and wake the mareslut up for another round, but somehow you know that if you do that you would probably never get up the willpower to leave, and you sigh with regret as you slip out of the room and cautiously make your way back to the entrance.";
 		infect "Mareslut";
 		decrease humanity of player by 2;
-		infect "Mareslut";
-		
+
 
 To say Mareslut loss:
 	say "Driven back by your powerful assault, the Slutty mare groans with pain as she staggers backwards and shoots you a rather dirty and sexy look as she says '[one of]Well you didn[apostrophe]t have to be so rude!'[or]Maybe you will be more fun next time sexy,'[or]Why don[apostrophe]t you want to fuck me?'[or]Damn sweety, that's a little rough for me, maybe you should try one of the donkeys,'[at random] before staggering off down the corridor, shooting you a last teasing glance over her shoulder as she does so.";

@@ -15,7 +15,7 @@ to say rabpackdesc:
 	otherwise if "Just One" is listed in feats of player:
 		say "However, something in your scent sends the critter away from you. (They won't attack you if you have the Just One feat.)[combat abort]";
 	otherwise:
-		say "However, the creature is not alone. In an istant you are surrounded by about ten rabbit-like creatures, some females, other males, all wanting YOU!";
+		say "However, the creature is not alone. In an instant, you are surrounded by about ten rabbit-like creatures, some females, other males, all wanting YOU!";
 
 
 to say rabpackvictory:

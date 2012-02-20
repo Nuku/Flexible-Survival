@@ -83,8 +83,8 @@ carry out treasurehunt:
 							add "dirty water" to invent of player;
 							say "you acquired some dirty water!";
 						otherwise:
-							add "pirate bandanna" to invent of player;
-							say "you acquired a pirate bandanna!";
+							add "pirate bandana" to invent of player;
+							say "you acquired a pirate bandana!";
 					otherwise:
 						add "food" to invent of player;
 						say "You acquired some seafood!";	
@@ -116,8 +116,8 @@ carry out treasurehunt:
 							add "dirty water" to invent of player;
 							say "you acquired some dirty water!";
 						otherwise:
-							add "pirate bandanna" to invent of player;
-							say "you acquired a pirate bandanna!";
+							add "pirate bandana" to invent of player;
+							say "you acquired a pirate bandana!";
 					otherwise:
 						add "food" to invent of player;
 						say "You acquired some seafood!";	
@@ -130,8 +130,8 @@ carry out treasurehunt:
 							add "dirty water" to invent of player;
 							say "you acquired some dirty water!";
 						otherwise:
-							add "pirate bandanna" to invent of player;
-							say "you acquired a pirate bandanna!";
+							add "pirate bandana" to invent of player;
+							say "you acquired a pirate bandana!";
 					otherwise:
 						add "food" to invent of player;
 						say "You acquired some seafood!";	
