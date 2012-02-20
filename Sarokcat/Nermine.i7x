@@ -440,7 +440,7 @@ carry out bargainhunting:
 					add "Skunk Goo" to invent of player;
 				if guy is not banned:
 					add "Chipped tooth" to invent of player;
-					add "pirate bandanna" to invent of player;
+					add "pirate bandana" to invent of player;
 				if hermaphrodite is not banned:
 					add "Dog Milk" to invent of player;
     				add "Fish" to invent of player;

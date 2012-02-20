@@ -431,9 +431,7 @@ To say cheetah defeat:
 				say "You kiss him, and he bends his head to your crotch, noting the abnormal features.";
 				say "He licks your crotch sadly, and you share his sadness, hoping that soon there will be something there to be remarked upon.";
 				infect "Cheetah";
-				infect "Cheetah";
-				infect "Cheetah";
-				infect "Cheetah";
+			infect "Cheetah";
 
 To say cheetah attack:
 	say "The cheetah turns you over, and growls, raising the hairs on the back of your neck.";
