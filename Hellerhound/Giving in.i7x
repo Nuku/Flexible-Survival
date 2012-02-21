@@ -36,7 +36,9 @@ an everyturn rule:
 		say "The nanites work inside your partially willing brain, making you more feral.";
 		decrease the humanity of the player by 20;
 		decrease score by 200;
-		if humanity of player < 0, follow the turnpass rule;
+		if humanity of player < 0:
+			now givingupton is 0;
+			end the game saying "You gave in to your infection.";
 
 
 Giving in ends here.

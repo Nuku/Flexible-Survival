@@ -244,6 +244,7 @@ instead of resolving a Prank Aftermath:
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 		if libido of player > 100, now libido of player is 100;
 	say "[line break]";
+	wait for any key;
 	say "     As you watch, the last of the soldiers is made into a herm with a pair of swelling breasts on her chest and a pair of feline ears.  She is pushed into the arms of two of her former teammates.  Too far gone in their own infection, they push her onto all fours, one taking her virgin pussy with her feline cock and the other forces her cock into his mouth.  As they fuck her, all three continue to change until they are full puma herms, fucking with mrowls of lustful delight.  The former soldiers cum hard into their ex-teammate, filling her new pussy and feline muzzle with their hot cum.  Watching this arousing show, you can't help but get turned on and start masturbating.  As you climax, you groan loudly and cum hard, unable to stop yourself.  But this doesn't go unheard and several of the powerful felines come after you.  Having just cum, you barely manage to get yourself back on your feet and ready to fight by the time the first one reaches you.";
 	say "[line break]";
 	challenge "Cougar";
