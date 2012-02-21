@@ -8,7 +8,7 @@ Version 1 of Killer Whale for FS by Stripes begins here.
 orcadom is a number that varies.
 when play begins:
 	add { "Killer Whale" } to infections of furry;
-	add { "Killer Whale" } to infections of girl;
+	add { "Killer Whale" } to infections of guy;
 	add ( "Killer Whale" ) to infections of tailweapon;
 
 Section 1 - Monster Responses
