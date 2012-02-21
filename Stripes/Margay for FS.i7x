@@ -1,9 +1,11 @@
 Version 1 of Margay for FS by Stripes begins here.
+
 [Adaptation for Flexible Survival by Stripes]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 [This monster was updated and converted to a more readable format by Stripes.  All sexual encounters from MP MUD have been rewritten to fit the game better, all credit to creature idea goes to original author!]
 
 "Adds Margay to Flexible Survival."
+
 when play begins:
 	add { "Margay" } to infections of furry;
 	add { "Margay" } to infections of girl;

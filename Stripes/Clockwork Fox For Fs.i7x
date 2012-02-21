@@ -4,6 +4,7 @@ Clockwork Fox for FS by Stripes begins here.
 [This monster was updated and converted to a more readable format by Stripes.  All sexual encounters from MP MUD have been rewritten to fit the game better, all credit to creature idea goes to original author!]
 
 "Adds Clockwork Fox to Flexible Survival."
+
 when play begins:
 	add { "Clockwork Fox" } to infections of furry;
 
