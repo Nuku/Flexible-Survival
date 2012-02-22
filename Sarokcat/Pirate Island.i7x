@@ -217,6 +217,7 @@ Instead of resolving Findingboat:
 				Now Pirate Island is known;
 				Move player to Pirate Island;
 				now Findingboat is resolved;
+				now tmapfound is 3;
 		otherwise:
 			say "Sadly, you don[apostrophe]t manage to find any useful boats here right now, and sighing you are forced to continue on your way, maybe you will have better luck another time.";
 			stop the action;
