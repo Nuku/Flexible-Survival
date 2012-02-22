@@ -2,7 +2,7 @@ Giving in by Hellerhound begins here.
 [request by The Dark Master]
 
 Table of Basic Help Options (continued)
-title	description 
+title	description
 "Giving In"	"Want to give in to the changes? Type [bold type]givein[roman type] and your character will surrender to the nanites. Make sure there is no space. Type it again to attempt to regain control."
 
 givingup is an action applying to nothing.
@@ -14,8 +14,6 @@ check givingup:
 	if the humanity of the player > 99:
 		say "To what? There is nothing to take control if you do.";
 		stop the action;
-		
-		
 
 givingupton is a number that varies.
 
@@ -30,15 +28,14 @@ carry out givingup:
 			now givingupton is 0;
 		otherwise:
 			now givingupton is 1;
-			
+
 an everyturn rule:
 	if givingupton is 1:
-		say "The nanites work inside your partially willing brain, making you more feral.";
 		decrease the humanity of the player by 20;
+		say "The nanites work inside your partially willing brain, making you more feral. ([humanity of player]/100)";
 		decrease score by 200;
 		if humanity of player < 0:
 			now givingupton is 0;
 			end the game saying "You gave in to your infection.";
-
 
 Giving in ends here.
