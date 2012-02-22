@@ -161,7 +161,7 @@ When Play begins:
 	now defeated entry is "[dolphin loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[dolphin attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "As you [if the location of the player is not Public Beach] swim along[otherwise]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'";[ Description of the creature when you encounter it.]
-	now face entry is "long dolphin snout of a ";[ Face description, format as the text "Your have a (your text) face."] 
+	now face entry is "long dolphin snout";
 	now body entry is "silvery with a blue back. A dorsal fin sits on top. Strong muscles contract underneath the surface";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]wet, glistening[or]smooth silver[or]thick blubbered[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a tail that fattens out horizontally at the end, much like a dolphins. However, it is only half as thick, and the ends are not rounded. It is covered in [skin of player] flesh and sways behind you with every step. ";[ Tail description, write a whole Sentence or leave blank. ] 
@@ -170,7 +170,7 @@ When Play begins:
 	now body change entry is "you swell with the appearance of muscles under your flesh, and a nice-looking dorsal fin sprouts out of your back"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "your flesh becomes tougher and thicker, yet somehow still supple and soft as blubber forms and it turns gray and silver"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "your legs feel odd as they seem to change in shape. Your ass pinches with pain as it extends into what looks like the top half of a dolphin tail. The rest appears to be your legs. You could place all three of your appendages together to make what looks to be a dolphins tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it twists and writhes in a strange dance, growing longer and pinker as the top tapers off. Your balls grow as they are absorbed into your body, and a slit forms as your cock withdraws as well. You ranus also moves forward as your ass cheeks dissapear, forming a second slit below the first"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it twists and writhes in a strange dance, growing longer and pinker as the top tapers off. Your balls grow as they are absorbed into your body, and a slit forms as your cock withdraws as well. Your anus also moves forward as your ass cheeks dissapear, forming a second slit below the first"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 23;
 	now dex entry is 26;
 	now sta entry is 24;					
