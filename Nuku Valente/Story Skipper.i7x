@@ -248,7 +248,6 @@ Carry out reciting:
 						now finding lorenda is unresolved;
 					if progress of alex > 1:
 						now finding lorenda is resolved;
-
 			-- 55:
 				if the player's command matches "[number]":
 					now angiehappy is the number understood;
