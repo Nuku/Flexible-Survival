@@ -253,9 +253,9 @@ Carry out reciting:
 					if progress of alex is greater than 0:
 						now Alex's Condo is known;
 					if progress of alex is 1:
-						now finding lorenda is unresolved;
+						now find lorenda is unresolved;
 					if progress of alex > 1:
-						now finding lorenda is resolved;
+						now find lorenda is resolved;
 			-- 55:
 				if the player's command matches "[number]":
 					now angiehappy is the number understood;
