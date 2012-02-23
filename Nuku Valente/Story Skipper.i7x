@@ -252,6 +252,10 @@ Carry out reciting:
 					now progress of alex is the number understood;
 					if progress of alex is greater than 0:
 						now Alex's Condo is known;
+					if progress of alex is 1:
+						now finding lorenda is unresolved;
+					if progress of alex > 1:
+						now finding lorenda is resolved;
 			-- 55:
 				if the player's command matches "[number]":
 					now angiehappy is the number understood;
@@ -383,9 +387,13 @@ Carry out reciting:
 		move Sven to Bunker;
 	if hp of Sven is 50 or hp of Sven is 51:
 		move Sven to Porn Store;
+		now Mouse Taur is resolved;
+		now Porn Store is known;
 	if hp of Sven > 51 and hp of Sven < 98:
 		move Sven to dark basement;
 		move Svetlana to Porn Store;
+		now Mouse Taur is resolved;
+		now Porn Store is known;
 	if hp of Sven > 98:
 		move Sven to dark basement;
 		remove Sven from play;
