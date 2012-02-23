@@ -8,6 +8,8 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 
 To say magic word:
 	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}[progress of alex]}[alexbrunch]}[treasurefound]}[tmapfound]";
+	say "'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:";
+	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}[progress of alex]}[alexbrunch]}[treasurefound]}[tmapfound]";
 
 Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
@@ -20,10 +22,16 @@ Carry out reciting:
 	let x be the topic understood;
 	replace the text " " in X with "`";
 	let lev be the level of the player;
+	let upit be 0;
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
+		if "continuedchant" matches the text b:
+			now upit is 1;
+			next;
 		change the text of the player's command to b;
+		if upit is 1:
+			increase z by 58;
 		if Z is:
 			-- 1:
 				if the player's command matches "[number]":
@@ -326,6 +334,8 @@ Carry out reciting:
 					if tmapfound is greater than 2:
 						now pirate island is known;
 						now findingboat is resolved;
+		if upit is 1:
+			decrease z by 58;
 	now the score is -9999;
 	repeat with counter running from lev + 1 to level of player:
 		if the remainder after dividing counter by 6 is 0:
