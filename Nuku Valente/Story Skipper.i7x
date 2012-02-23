@@ -377,9 +377,13 @@ Carry out reciting:
 		move Sven to Bunker;
 	if hp of Sven is 50 or hp of Sven is 51:
 		move Sven to Porn Store;
+		now Mouse Taur is resolved;
+		now Porn Store is known;
 	if hp of Sven > 51 and hp of Sven < 98:
 		move Sven to dark basement;
 		move Svetlana to Porn Store;
+		now Mouse Taur is resolved;
+		now Porn Store is known;
 	if hp of Sven > 98:
 		move Sven to dark basement;
 		remove Sven from play;
