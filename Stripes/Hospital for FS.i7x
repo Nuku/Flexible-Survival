@@ -177,24 +177,28 @@ Instead of resolving a Radiology:
 
 
 to say hospfight1:
-	let T be a random number between 1 and 6;
+	let T be a random number between 1 and 7;
 	if T is 1:
 		challenge "Raccoon";
-	if T is 2 or T is 3:
+	if T is 2:
+		challenge "Fluffy Owl";
+	if T is 3 or T is 4:
 		challenge "Vixen Nurse";
-	if T is 4 or T is 5:
+	if T is 5 or T is 6:
 		challenge "Mismatched Chimera";
-	if T is 6:
+	if T is 7:
 		challenge "Jaguar";
 
 
 to say hospfight2:		[prevents duplicate of raccoon, who is a unique individual]
 	let T be a random number between 1 and 5;
-	if T is 1 or T is 2:
+	if T is 1:
+		challenge "Fluffy Owl";
+	if T is 2 or T is 3:
 		challenge "Vixen Nurse";
-	if T is 3:
+	if T is 4:
 		challenge "Mismatched Chimera";
-	if T is 4 or T is 5:
+	if T is 5 or T is 6:
 		challenge "Jaguar";
 
 
@@ -888,7 +892,7 @@ to say hosploss:
 	say "     Your head is pounding and your vision is hazy even before you open your eyes.  Struggling to remember what happened, you try to look around.  As you attempt to open them, bright lights blind you and force them shut again, causing you to wince in pain.  You try to pull a hand to cover your eyes, but your arm won't move, tightly restrained.";
 	say "     'Ahh, the patient is now awake.  We may begin,' you hear from one side.  The sound of Dr Mouse's voice rushes reality back to you and you struggle to get up.  At his point, you discover that you are tightly strapped down and cannot move.";
 	wait for any key;
-	say "     As the spots begin to clear from your vision, there is much to take in.  Foremost is operating table you are strapped onto, held down by thick, leather straps.  Above that are large, bright lights shining down on you.  As the rest of the room becomes clearer, you start to make out the blurry forms around you.  There are several other figures on the operating floor around you, nurses and an orderly, as well as several trays of medical instruments.";
+	say "     As the spots begin to clear from your vision, there is much to take in.  Foremost is the operating table you are strapped onto, held down by thick, leather straps.  Above that are large, bright lights shining down on you.  As the rest of the room becomes clearer, you start to make out the blurry forms around you.  There are several other figures on the operating floor around you, nurses and an orderly, as well as several trays of medical instruments.";
 	say "     Above the operating floor, a larger viewing area above the floor level and surrounding the room comes into focus.  Most of the seats are filled with more vixen nurses and jaguar orderlies, but there are a few others as well.  There is a rather plastic-looking fish creature who is constantly wiping himself with a wet cloth surrounded by big breasted owl women.  In one corner, there is a cluster crazed weasels in straightjackets secured to their seats, gibbering and snapping at one another.  A few other individual creatures fill scattered seats.  You are clearly in the operating theater, where demonstrations of medical procedures are performed for staff and students.";
 	wait for any key;
 	say "     As Dr Mouse steps forward after washing his paws, the room quickly falls silent[if hospfight is 2].  The altered doctor has smoothed down his fur a little and found a much larger lab coat to put on.  It barely fits across his shoulders and hangs open, leaving his mutated body and groin uncovered.  There are some holes torn into the back by his dorsal spines to make it fit at all[end if].  One of the nurses puts a pair of ill-fitting gloves over his [if hospfight is 1]little[otherwise]twisted[end if] paws as he looks you over.  Despite his dispassionate, clinical expression, there is a malicious gleam in his blood red eyes.  The [if hospfight is 1]little mouse[otherwise]monstrous mouse[end if] steps up beside you, then turns to look up at the assembled group.";
@@ -974,7 +978,7 @@ to say hosptfscene:
 	now skinname of player is name entry;
 	now skin of player is skin entry;
 	wait for any key;
-	say "     The mad mouse picks up spray bottle and runs his paw over your chest.  'Before we continue with the patient's body, we shall deal with his epidermal layer.'  The bottle contains a thin, milky fluid and you can readily guess what at least one of the ingredients is.  Taking care not to spray himself, he spritzes a mist of the sticky fluid across your body.  You can feel a tingle all over as the mixture is absorbed into your skin and starts to change you.  Shivers of pleasure run all over your skin as [skin change entry].";
+	say "     The mad mouse picks up a spray bottle and runs his gloved paw over your chest.  'Before we continue with the patient's body, we shall deal with his epidermal layer.'  The bottle contains a thin, milky fluid and you can readily guess what at least one of the ingredients is.  Taking care not to spray himself, he spritzes a mist of the sticky fluid across your body.  You can feel a tingle all over as the mixture is absorbed into your skin and starts to change you.  Shivers of pleasure run all over your skin as [skin change entry].";
 	wait for any key;
 	say "     When those changes are complete, a pair of the vixen nurses step up and wash you and the table area clean using wet sponges.  They pay particular attention to your genitals, ending shivers of delight through you despite, or perhaps because of, your current situation.  They giggle and tease you, much to the delight of several in the audience members.";
 	say "     Actually, during this brief break in the procedure, you are able to take stock of the group watching.  It seems that some have become rather aroused by your transformation.  Several of the female nurses are riding the laps of the jaguars while one of the herm nurses has strapped a restrained weasel to the railing and is buggering him hard and fast.  Catching your eyes on her, she even winks at you.";
@@ -1039,11 +1043,11 @@ to say hosptfscene:
 		now cock of player is cock entry;
 		wait for any key;
 		if cocks of player is 0:	[now female]
-			say "     The mouse doctor smiles as your final changes set in and you are left with only a wet pussy between your legs.  He teases your wet folds and turns to the audience.  'It seems I was mistaken.  There is one more injection to make,' he announces, slipping a pair of fingers into your vagina, making you moan in pleasure despite yourself.  His other paw is at his groin, stroking his stiffening cock back to erection.  Many in the audience cheer or laugh at that.";
+			say "     The mouse doctor smiles as your final changes set in and you are left with only a wet pussy between your legs.  He teases your wet folds and turns to the audience.  'It seems I was mistaken.  There is one more injection to make,' he announces, slipping a pair of fingers into your vagina, making you moan in response despite yourself.  His other paw is at his groin, stroking his stiffening cock back to erection.  Many in the audience cheer or laugh at that.";
 			wait for any key;
 			say "[drmousesex]";
 		otherwise:
-			say "     The mouse doctor wraps his gloved paw around your cock and starts stroking you quickly for audience, going on about how sensitive and aroused a cock is after transformation.  His motions to one of the silvery vixens, who passes him a bottle of lubrication.  He applies it to your shaft and continues pumping, discussing the characteristics of your new cock clinically, but with a gleam of amusement in his eyes.  His stroking soon gets to be too much and your hot seed splatters across your body.";
+			say "     The mouse doctor wraps his gloved paw around your cock and starts stroking you quickly for audience, going on about how sensitive and aroused a cock is after transformation.  He motions to one of the silvery vixens, who passes him a bottle of lubrication.  He applies it to your shaft and continues pumping, discussing the characteristics of your new cock clinically, but with a gleam of amusement in his eyes.  His stroking soon gets to be too much and your hot seed splatters across your body.";
 			say "     The mad doctor discards his messy gloves with a grin.  He raises his arms to the crowd, who manage some dignified clapping despite the majour orgy that's broken out across most of the audience section.";
 	otherwise:
 		say "     The mouse doctor grins viciously as he looks over your changed form, then turns to the audience.  'There is one final injection to make, my colleagues.  And I'm sure this is the one you've all been anxiously awaiting.'  He moves a paw to your groin and starts to play with your pussy.  His gloved fingers tease your wet folds, making you moan with pleasure despite yourself.  His other paw is at his groin, stroking his stiffening cock back to erection.";
@@ -1053,16 +1057,16 @@ to say hosptfscene:
 to say drmousesex:
 	if hospfight is 1:	[normal mouse]
 		say "     The small mouse motions for the orderly, who gently lifts him up onto the operating table with you.  The white furred mouse grins down at you, lining up his cock with your pussy, making it clear what final injection he has in mind.  You struggle and try to shake your head, but the restraints keep you locked in place.  He grins and thrusts his cock hard into you.  Thankfully, due to his small size, there is little discomfort and it soon becomes quite pleasurable as mad mouse fucks you zealously.";
-		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and giving her a lap ride on her cock while playing with those enormous, feathered tits.";
+		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and is giving her a lap ride on her cock while playing with those enormous, feathered tits.";
 		wait for any key;
 		say "     The mouse's paws fondling your breasts brings you back to focusing on him.  His gloved paws tease your nipples and he laughs happily, aroused with his power over you.  His cock, while small, is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the little fellow makes.";
-		say "     'Mmm… I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  You can feel it fill your pussy to capacity and overflowing as much of it pushes and flows up into your womb.";
+		say "     'Mmm... I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  You can feel it fill your pussy to capacity and overflowing as much of it pushes and flows up into your womb.";
 	otherwise:			[monstrous mouse]
 		say "     The monstrous mouse climbs onto the operating table, making it groan from the added weight.  That malformed, musine face grins down at you as he lines up his cock with your pussy, making it clear what final injection he has in mind.  You struggle and try to shake your head, but the restraints keep you locked in place.  He grins and thrusts his cock hard into you.  You release a muffled groan as the massive prick spreads your pussy open.  Thankfully, some of the elasticized effect still remains and your vagina stretches to accommodate the huge cock with minimal pain.";
-		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and giving her a lap ride on her cock while playing with those enormous, feathered tits.";
+		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and is giving her a lap ride on her cock while playing with those enormous, feathered tits.";
 		wait for any key;
 		say "     The mouse's large paws fondling your breasts brings you back to focusing on him.  His gloved paws tease your nipples and he laughs happily, aroused with his power over you.  His monstrous cock is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the mutated mouse makes.  That spaded tip presses at your cervix, trying to spread it open while the ridges along his shaft feel so delightful against your vaginal walls.";
-		say "     'Mmm… I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  His spaded glans, pressed against your cervix, forces it to spread open, allowing the bulk of his mutated load to flow up into your womb in an attempt to breed you.";
+		say "     'Mmm... I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  His spaded glans, pressed against your cervix, forces it to spread open, allowing the bulk of his mutated load to flow up into your womb in an attempt to breed you.";
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "[impregchance]";

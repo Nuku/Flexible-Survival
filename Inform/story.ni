@@ -4195,6 +4195,9 @@ Include Margay For Fs by Stripes.
 Include Clockwork Fox For Fs by Stripes.
 Include Killer Whale For Fs by Stripes.
 Include Cerberus For Fs by Stripes.
+Include Rodeo Clown For Fs by Stripes.
+Include Fluffy Owl For Fs by Stripes.
+Include Rhino For Fs by Stripes.
 
 
 [NPCs]
