@@ -6,6 +6,10 @@ Version 2 of Latex Wolf for FS by Hellerhound begins here.
 [Description text for this Extension.]
 
 
+when play begins:
+	add { "Latex Wolf" } to infections of guy;
+	add { "Latex Wolf" } to infections of furry;
+
 Section 1 - Monster Responses
 
 To say latex wolf defeat:

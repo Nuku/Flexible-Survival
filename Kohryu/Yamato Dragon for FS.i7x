@@ -6,6 +6,9 @@ Version 7 of Yamato Dragon For FS by Kohryu begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add { "Yamato Dragon" } to infections of guy;
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Yamato Dragon attack:
 	say "The male dragon lowers his head to sniff at you.";

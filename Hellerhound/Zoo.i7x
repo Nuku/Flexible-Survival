@@ -396,6 +396,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 cheetahmate is a number that varies.
 
+when play begins:
+	add { "cheetah" } to infections of guy;
+	add { "cheetah" } to infections of furry;
+
+
 To say cheetah defeat:
 	if the facename of the player is not "Cheetah":
 		say "The cheetah collapses, and you move on.";

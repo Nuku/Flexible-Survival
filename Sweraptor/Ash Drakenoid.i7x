@@ -30,6 +30,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 
 When Play begins:
+	add { "Ash Drakenoid" } to infections of hermaphrodite;
 	Choose a blank row from Table of random critters;
 	now name entry is "Ash Drakenoid";
 	now attack entry is "[one of]The Drakenoid lets out a deafening shriek before charging you, claws outstretched. Once in close the herm savages you with her talon like hands.[or]The Drakenoid ducks under one of your blows and springs forth arms outstretched. Taking you full on you are slammed to the ground, and viscously clawed.[or] She braces herself against the ground debris and takes a deep breath. You throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned.[or]Managing to pin the Drakenoid you try to force its face down to the round, but the lithe female twists and squirms in ways which should not be possible. She quickly turns the tables on you and you find yourself struggling to now get free of her grip! She bites down sharply on your neck as her unnaturally warm member digs painfully into your side.[at random]"; [Text used when the monster makes an Attack]

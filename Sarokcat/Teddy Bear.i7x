@@ -1,19 +1,21 @@
 Teddy bear by Sarokcat begins here. 
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a giant teddy bear to Flexible Survivals Wandering Monsters table, With Impreg chance"
+"Adds a giant teddy bear to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
+
+when play begins:
+	add { "Teddy bear" } to infections of girl;
+	add { "Teddy bear" } to infections of furry;
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say teddy bear attack:
 	If cocks of player is greater than 0:
 		say "The giant stuffed bear lets out a happy cry as you collapse, before quickly climbing on top of you. You soon see that someone has stiched a large opening in the crotch, right where a cunt should be. Before you can think about it too much, she quickly stuffs your [cock of player] cock into her waiting opening. You cry out as her velvety insides caress you, her body moving and twisting on top of you as her insides massage you like a velvet glove, ripping one of your most intense orgasms ever out of you. Soon your mind begins to cloud over with pleasure as she tirelessly rides you to orgasm after orgasm, hardly pausing at all as she runs her soft plush hands up and down your body, her bearlike muzzle planting soft kisses over your face the entire time. Eventually your body can[apostrophe]t take anymore, and you pass out in a haze of pleasure.  Waking up, there is no sign of your plush tormentor, realizing she has probably gone off to pleasure someone else, you quickly gather up your belongings and leave while you can.";
-		teddify;
 	otherwise:
 		say "The giant stuffed bear lets out a happy cry as you collapse helplessly. It[apostrophe]s hands wander your body for a minute, stripping you naked before it plops down next to you and begins to rub its soft plush body on you. You quickly realize it is actually a female bear, or at least someone has made an appropriate opening, as she rubs herself on your thighs. She then lowers her bearlike muzzle to your female opening and begins to lick and rub at you with her long tounge and furred muzzle, causing you to moan in pleasure. Her plush fur and soft whiskers tickle your thighs as her flexible tounge massages your insides, causing you to clench and rub your legs along her soft sides as the pleasure builds, until finally your orgasm shoots through you, causing you to cry out as you cover her plush face in your female juices.  Seeming somewhat smug the giant teddy bear lifts her damp muzzle up, licking it clean as she moves up beside you, gathering you into her soft fluffy arms as you drift off into an exhausted slumber.  Waking up later there is no sign of the big fluffy bear, making you feel vaguely sad and lonely as you gather up your belongings and leave.";
-		teddify;
 
 To say teddy bear loss:
 	say "The strange plush animal wimpers in defeat as it[apostrophe]s stuffing leaks out all over the place, It hurriedly gathers some of its stuffing up before waddling away, shooting scared glances back over its shoulder at you, making you feel vaguely guilty for beating up on a poor stuffed animal.'";
@@ -74,10 +76,6 @@ when play ends:
 		otherwise:
 			say "You are happy when the rescue finally comes, although the rescuers don[apostrophe]t really know what to make of you and your teddy bear body.  Eventually being cleared as noninfectious you find a job at one of the large malls playing with the children and advertising for the mall. After a time one of the people there gives you a card with a strange web address on it, checking it out later leads you to a whole underground fetish of people fascinated with plush animals.  Getting in contact with the person who gave you the card, you quickly end up moonlighting at an adult club for people with this strange fetish, partying all night and getting many compliments on your wonderful 'costume'.";
 	
-
-to teddify:
-	infect "teddy bear";
-
 
 [ Edit this to have the correct Name as wall]
 Teddy bear ends here.

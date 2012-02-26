@@ -8,6 +8,10 @@ Version 2 of Rubber tigress by Sarokcat begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add { "Rubber tigress" } to infections of girl;
+	add { "Rubber tigress" } to infections of furry;
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Rubber tigress attack:
 	If cocks of player is greater than 0:

@@ -6,6 +6,10 @@ gazelle by Sarokcat begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add { "gazelle" } to infections of hermaphrodite;
+	add { "gazelle" } to infections of furry;
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
 to say gazelle attack:
@@ -52,7 +56,7 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 30;			[ How many HP has the monster got? ]
 	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 8;			[Amount of Damage monster Does when attacking.]

@@ -33,7 +33,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	add "tigertaur" to infections of girl;
+	add "tigertaur" to infections of hermaphrodite;
 	add "tigertaur" to infections of furry;	
 	Choose a blank row from Table of random critters;
 	now name entry is "tigertaur"; [Name of your new Monster]
@@ -57,7 +57,7 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 14;
-	now sex entry is "both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 80;			[ How many HP has the monster got? ]
 	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 12;			[Amount of Damage monster Does when attacking.]
