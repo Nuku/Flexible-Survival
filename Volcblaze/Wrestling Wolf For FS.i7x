@@ -6,6 +6,10 @@ Wrestling Wolf For FS by Volcblaze begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add { "Wrestling Wolf" } to infections of guy;
+	add { "Wrestling Wolf" } to infections of furry;
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 wrestlingwolfdefeat is a number that varies.
 

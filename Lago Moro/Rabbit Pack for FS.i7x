@@ -6,6 +6,11 @@ Version 1 of Rabbit Pack For FS by Lago Moro begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add { "rabbit pack" } to infections of girl;
+	add { "rabbit pack" } to infections of guy;
+	add { "rabbit pack" } to infections of furry;
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
 to say rabpackdesc:

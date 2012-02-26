@@ -117,8 +117,8 @@ When Play begins:
    now cunt length entry is 12;        [ Length of female sex  infection will attempt to give you. ]
    now cunt width entry is 6;        [ Width of female sex  infection will try and give you ]
    now libido entry is 70;            [ Set to zero in this monster to control elsewhere ]
-   now loot entry is "";            [ Dropped item.  Key will be used later ]
-   now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
+   now loot entry is "chocolate milk";            [ Dropped item.  Key will be used later ]
+   now lootchance entry is 25;        [ Chance of loot dropping 0-100 ]
 
 
 when play ends:

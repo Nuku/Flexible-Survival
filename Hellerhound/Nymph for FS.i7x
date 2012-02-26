@@ -18,6 +18,9 @@ nymph cum is a grab object. It is a part of the player. Understand "cum" and "se
 
 Section 2 - Monster Insertion
 
+when play begins:
+	add { "Tree Nymph" } to infections of hermaphrodite;
+
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;

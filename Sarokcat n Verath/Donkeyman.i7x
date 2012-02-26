@@ -6,6 +6,10 @@ Donkeyman by Sarokcat n Verath begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add { "Donkeyman" } to infections of guy;
+	add { "Donkeyman" } to infections of furry;
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
 to say Donkeyman attack:

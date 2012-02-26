@@ -8,6 +8,10 @@ Version 2 of Plush lion by Sarokcat begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add { "Plush lion" } to infections of guy;
+	add { "Plush lion" } to infections of furry;
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Plush lion attack:
 	If cunts of player is greater than 0:

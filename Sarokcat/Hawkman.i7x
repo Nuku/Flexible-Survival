@@ -6,6 +6,10 @@ Hawkman by Sarokcat begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add { "Hawkman" } to infections of guy;
+	add { "Hawkman" } to infections of furry;
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
 to say Hawkman attack:
@@ -65,8 +69,8 @@ When Play begins:
 	now cunt length entry is 8;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 3;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 50;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Spotted fur";			[ Loot monster drops, ]
-	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "";			[ Loot monster drops, ]
+	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 
 
 
