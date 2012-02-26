@@ -119,7 +119,7 @@ to say centaurmeet:
 	say "As you walk in the plain, a dust cloud becomes visible. You look at it with fear, and attempt to run, but fail to escape.";
 	say "The dust cloud engulfs you and settles to the ground, revealing an equine form with a powerful human torso. As it turns to slow down and stop in front of you, you catch a glimpse of a green thing under his belly, as it is very definitely a male.";
 	if centaurmate is 0:
-		say "He details you for a moment, and get aclear sight of a monstrously huge cock head sliding out of its sheath. Two green tentacle-like things move around, seemingly attached to its base. With a booming voice, he asks: 'Are you going to submit to me?'. You have a feeling that if you don't agree, he will take what he wants by force.";
+		say "He details you for a moment, and you get a clear sight of a monstrously huge cock head sliding out of its sheath. Two green tentacle-like things move around, seemingly attached to its base. With a booming voice, he asks: 'Are you going to submit to me?'. You have a feeling that if you don't agree, he will take what he wants by force.";
 		if the player consents:
 			say "You bow down your head, and he laughs.";
 			now centaurmate is 1;

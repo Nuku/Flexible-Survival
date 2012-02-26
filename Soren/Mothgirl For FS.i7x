@@ -116,7 +116,7 @@ When Play begins:
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
 
 when play ends:
-	if bodyname is "Moth Girl":
+	if bodyname is "Mothgirl":
 		if humanity of player is less than 10:
 			say "You do not have any prejudice to any particular infected creature, except spidergirls whose nature invites trouble. You flit around acting on the instincts of wanting sex or having sex with numerable partners.";
 		otherwise:

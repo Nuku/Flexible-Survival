@@ -1,5 +1,5 @@
 Version 2 of Otter by Nuku Valente begins here.
-[Version 2 - possesses no gender restrictions, processed internally]
+[Version 2.1 - no gender restrictions, adjusts target gender as needed]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Otter to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -126,6 +126,15 @@ to say otterstrike:
 	otherwise:
 		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands  and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
 
+to say otterdesc:
+	choose row monster from table of random critters;
+	if "Female Preferred" is listed in feats of player:
+		now sex entry is "Female";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Male";
+	say "Not one, but a group of playful looking otters. They spot you and move to intercept you swiftly, swimming all around you with their athletic forms rubbing amorously against your own. Your fingers can't help but brush against their aroused bodies in the rush before one grins at you, 'You want to play with us?'";
 
 Section 2 - Monster Insertion
 
@@ -140,7 +149,7 @@ When Play begins:
 	now attack entry is "[otterstrike]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Otter loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Otter attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "Not one, but a group of playful looking otters. They spot you and move to intercept you swiftly, swimming all around you with their athletic forms rubbing amorously against your own. Your fingers can't help but brush against their aroused bodies in the rush before one grins at you, 'You want to play with us?'";[ Description of the creature when you encounter it.]
+	now desc entry is "[otterdesc]";[ Description of the creature when you encounter it.]
 	now face entry is "blunt nose of an otter, with small round ears set over your cute face";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "sleek and athletic. Almost androgynous in a way, with the curves subsumed in the trim musculature of a born swimmer. Your hands and feet are webbed with flaps of skins between fingers and toes that are quite ticklish when touched by another.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]sleek pelted[or]smooth furred[or]waterproofed[at random]";[ skin Description, format as the text "You have (your text) skin"] 

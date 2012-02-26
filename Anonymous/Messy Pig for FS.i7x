@@ -16,7 +16,7 @@ to say messypigattack:
 
 
 to say beatthepig:
-	if ( cockname of player is "Messy Pig" or cockname of player is "Piggy" ) and libido of player > 40 and cocks of player > 0:
+	if ( cockname of player is "Messy Pig" or cockname of player is "Piggy" ) and libido of player > 33 and cocks of player > 0:
 		say "     The pig, when realizing that the encounter is not going well, turns to make a run for it.  But as you catch a glimpse of her wet pussy as she turns away, your porcine cock throbs with need.  Before you have a chance to think about it, you leap atop her, making her squeal loudly.  She struggles to pull away, but you manage to keep a grip on the sow and pull out your throbbing pig sticker.  With a loud, piggish oink, you thrust your stiff penis into her cunt.  She continues to squirm and struggle, but it soon becomes less a matter of her trying to get away as more part of the game of fucking the sow.  She squeals and paws at the ground with her hoof-like hands as you thrust into her again and again.  Your cock throbs inside her as you drive it in one last time, [if cock length of player > 19]making her belly bulge with your overgrown meat, [end if]pumping your hot cum deep inside her as your porcine cock seeks to breed this plump sow.  When you're finished with her, you give her ass a swat, sending her squealing again as she waddles away quickly, dripping your semen from her well-used pussy as she goes.";
 	otherwise:
 		say "     The pig, when realizing that the encounter is not going well, turns tail and waddles away faster than you thought possible. You hear its squeals of terror die down as it leaves your range of hearing. Looks like you win!";
@@ -66,7 +66,7 @@ When Play begins:
 	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 6;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
+	now libido entry is 45;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 

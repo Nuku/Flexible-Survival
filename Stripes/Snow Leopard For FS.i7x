@@ -115,7 +115,7 @@ to say snowmeowdesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Male";
-	say "     You have encountered another citizen striken by the infection, this one having turned into an exotic snow leopard.  His five foot tall body is covered with snowy white and ash grey fur marked by coal black spots.  The fur is fluffy and thick, especially on tail which has larger dark patches on it.  He eyes you intently with his icy gaze.  He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst.  He strides towards you, growling aggressively in his throat.";
+	say "     You have encountered another citizen stricken by the infection, this one having turned into an exotic snow leopard.  His five foot tall body is covered with snowy white and ash grey fur marked by coal black spots.  The fur is fluffy and thick, especially on tail which has larger dark patches on it.  He eyes you intently with his icy gaze.  He seems rather uncomfortable in the summer heat, but the stiff erection he's sporting shows he's quite intent on slaking his lusts as well as his thirst.  He strides towards you, growling aggressively in his throat.";
 
 
 Section 2 - Monster Insertion

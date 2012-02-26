@@ -79,7 +79,7 @@ When Play begins:
 	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Food";			[ Loot monster drops, ]
+	now loot entry is "food";			[ Loot monster drops, ]
 	now lootchance entry is 33;		[ Chance of loot dropping 0-100 ]
 
 
