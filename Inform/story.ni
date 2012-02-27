@@ -4179,7 +4179,6 @@ Include Butterfly for FS by mirumu.
 Include Rabbit Pack for FS by Lago Moro.
 Include Jaguar Orderly For Fs by Stripes.
 Include Mismatched Chimera For Fs by Stripes.
-Include Candy Striper by Stripes.
 Include Naughty Nurse by Stripes.
 Include Triceratops For Fs by Stripes.
 Include Siamese Cats by Stripes.
@@ -4200,6 +4199,8 @@ Include Cerberus For Fs by Stripes.
 Include Rodeo Clown For Fs by Stripes.
 Include Fluffy Owl For Fs by Stripes.
 Include Rhino For Fs by Stripes.
+Include Siren For Fs by Stripes.
+Include Candy Striper by Stripes.
 
 
 

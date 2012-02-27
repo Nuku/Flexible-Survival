@@ -384,6 +384,8 @@ when play ends:
 				otherwise:						[Candy solo]
 					say "     Having saved him from an uncertain and frightening fate, Candy treats you like a protective big sister.  Wanting to do good on the outside and drawing on what he still remembers of his past, he begins learning everything he can from Sarah.  For her part, Sarah is grateful to have a distraction from her endless reservoir of barely-controllable lust.  She throws herself into more medical training and Candy joins her.  Together they become an excellent team, sometimes saving lives against impossible odds.  Loving their rescuer with all their hearts, they remain friends with you for the rest of their lives.";
 					say "     When they find a bisexual samoyed male to partner with them, they find sexual fulfillment along with their professional fulfillment.  He is a very friendly and affectionate guy, stern but loving to his horny partners, just what they need to keep them reined in.  Not being the jealous type, they aren't upset at all when he has sex with you and are even happy to share him with their most dear friend.  But that is a rare treat, as their rampant libidos keep him rather exhausted most of the time.";
+			if bodyname of player is "Siren":
+				say "     Candy is probably your band's number one fan, running and moderating the band's web forums in his off hours.  Being bright pink, you easily spot him dancing happily with your groupies whenever you have a show in town.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
 			otherwise if timothymated < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
 				if bodyname of player is "Hermaphrodite Gryphon":
 					say "     Candy is probably your band's number one fan, running and moderating the band's web forums in his off hours.  Being bright pink, you easily spot him dancing happily with your groupies whenever you have a show in town.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
@@ -400,7 +402,7 @@ when play ends:
 				otherwise:
 					say "     Candy never seems to warm up to Philip and is catty with him whenever the two end up together.  You have to take care to wash the boar's strong scent from you after sex, lest it upset the gay coonboi.  Aside from holiday get-togethers with all your new, transformed family of friends, you make sure they are kept apart.";
 		otherwise if coonstatus is 101:				[coon pet]
-			if cocks of player > 0 and bodyname of player is not "Ferret":
+			if cocks of player > 0:
 				say "     Your little pink pet remains a loyal slut under your care after your release from the military.  He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you.  He seems to show a preference for a French maid dress, and dutifully keeps house whenever you are out";
 			otherwise:
 				say "     Your little pink pet remains a loyal slut under your care after your release from the military.  He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you.  He seems to show a preference for a French maid's dress, and dutifully keeps house whenever you are out.  You make sure to pass him off to your male and herm friends from time to time, to appease his lust for cock";
@@ -408,7 +410,9 @@ when play ends:
 				say ".  Lorenda and Lee take particular enjoyment out of their fellow [']maid's['] companionship and are often found playing with him in their outfits.";
 			otherwise:
 				say ".";
-			if timothymated < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
+			if bodyname of player is "Siren":
+				say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted.  He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
+			otherwise if timothymated < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
 				if bodyname of player is "Hermaphrodite Gryphon":
 					say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted.  He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows.  You aren't at all surprised when you start spotting a few fans with colourful raccoon tails in the audience.";
 				otherwise:
