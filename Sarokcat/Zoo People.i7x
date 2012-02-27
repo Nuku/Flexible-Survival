@@ -396,7 +396,7 @@ when play ends:
 					say "When you surrender to the lusty instincts inside you, Denise tries to stay away for a while, but is unable to take the loneliness of life in the city without anyone to talk to, especially after having had a friend even for a short time.  Soon you hear her soft song through the city, and almost instinctively you follow it to where she is waiting for you. She smiles as she welcomes you with open arms, and lets you change her and make her yours, so she can follow you wherever you go in your new life in the city...";
 				otherwise:
 					say "Taking your surrender to your feral instincts as a sign, Denise stops fighting her own instincts, and while she stays with you for a short while, soon she flies off in search of other gryphons to mount her and make her a proper breeder just like you...";
-			otherwise:
+			otherwise if bodyname of player is not "Siren":
 				say "Rescued from the city, you manage to convince Denise to come with you as you make your way out into the new world, her shy demeanor makes it somewhat easy for you to keep her with you as you try to settle in to your new life.  Eventually she becomes happy settling in wherever you are, though she does manage to accumulate a large variety of music, which she often listens to wistfully.";
 
 Section 4- Gryphon Nest
