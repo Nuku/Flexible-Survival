@@ -9,11 +9,14 @@ Section 1 - Command
 
 sniffing is an action applying to one thing.
 
+understand the command smell as something new.
+understand the command sniff as something new.
 understand "sniff [something]" as sniffing.
 understand "smell [something]" as sniffing.
 
 check sniffing:
-	if noun is not visible, say "What?" instead;
+	if the location of the player is noun, continue the action;
+	if noun is not visible, say "What? I don't see any [noun] around here to smell." instead;
 
 before sniffing:
 	say "You sniff the [noun].";
@@ -33,7 +36,7 @@ understand "sniff around" as heresniffing.
 
 carry out heresniffing:
 	try sniffing the location of the player;
-	repeat with X running through all the things in the location of the player:
+	repeat with X running through all the visible things in the location of the player:
 		try sniffing X;
 
 
