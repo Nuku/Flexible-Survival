@@ -4200,6 +4200,8 @@ Include Rodeo Clown For Fs by Stripes.
 Include Fluffy Owl For Fs by Stripes.
 Include Rhino For Fs by Stripes.
 Include Siren For Fs by Stripes.
+Include Werewolf Costume For Fs by Stripes.
+Include Hippo Strongman For Fs by Stripes.
 Include Candy Striper by Stripes.
 
 
