@@ -1,6 +1,6 @@
 Slutrat by Nuku Valente begins here.
  
- To say slut rat growth:
+To say slut rat growth:
 	if "Female Preferred" is listed in feats of player:
 		say "You resist the growth!";
 	otherwise:
@@ -30,6 +30,13 @@ Slutrat by Nuku Valente begins here.
 		say "The rat who took you leans you forward and presses her massive tool to your back door, easing up into your body with strange ease despite the size of the tool. As she rocks against you, new sensations explode and echo through your body. She pets over your [skin of player] form and cooes in your ear, pistoning against your ass with increasingly eager thumps.";
 	say "A rat grabs your head and pulls you off towards a waiting nipple. The milk flows thick and sweet across your tongue as your groin throbs and tingles with new delights.[slut rat growth]";
 	say "All at once, everyone is climaxing. In you, around you, shuddering squeals of rodent delight before you feel your own body shudder in powerful release. As darkness claims you, you can see the den getting smaller, the original rat dragging you away.";
+	if a random chance of 1 in 2 succeeds and slutrat den is unknown:
+		say "You remember the way back!";
+		now the Slutrat Den is known;
+	
+SlutRat Den is a room. "This little slice of 'heaven' is a cleaned out section of the sewers. Despite its location, it smells of a soft incense, mixed with the heavy, musky, odor of the rats that dwell within it. Large pillows have been thrown around, many supporting the full rumps of their rodent owners as they watch your movements. For entertainment, besides one another, small heaps of books have been scattered about wherever their owners last grew tired of them. A dart board is also set up on the far wall with small metal darts poking in it at wildly varying points.[slutratdenscene]". Slutrat Den is private. Slutrat Den is fasttravel.
+
+To Say SlutRatDenScene:
 	
 
 Slutrat ends here.
