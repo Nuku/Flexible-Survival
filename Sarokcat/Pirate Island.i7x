@@ -24,6 +24,9 @@ treasurehunt is a number that varies. treasurehunt is usually 0.
 treasurehunt is an action applying to nothing.
 
 understand "explore caves" as treasurehunt;
+understand "explore cave" as treasurehunt;
+understand "explore tunnel" as treasurehunt;
+understand "explore tunnels" as treasurehunt;
 understand "hunt treasure" as treasurehunt;
 understand "explore treasure caves" as treasurehunt;
 understand "find treasure" as treasurehunt;
