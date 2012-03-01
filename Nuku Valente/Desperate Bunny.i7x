@@ -1,4 +1,5 @@
-Version 2 of Desperate Bunny by Nuku Valente begins here.
+Version 3 of Desperate Bunny by Nuku Valente begins here.
+[Version 3 - Sandra and Coleen interaction by Stripes]
 
 "Adds a situation to Flexible Survival with a needy, but uninfectious, rabbit."
 
@@ -15,6 +16,8 @@ Lastrabbitfuck is a number that varies. Lastrabbitfuck is usually 250.
 rabbitmulticock is a number that varies. rabbitmulticock is usually 0.
 rabbitfucked is a number that varies. Rabbitfucked is usually 0.
 rabbitsister is a number that varies. Rabbitsister is usually 0.
+lust of sandra is 555.
+hp of Sandra is 0.
 
 Rabbitfucking is an action applying to nothing.
 
@@ -32,6 +35,17 @@ To rabbitfuck:
 		say "She flushes gently, 'It has not been long enough since last time. Even a girl needs to recharge a little, you animal you.' She leans in to kiss your cheek softly, but does not proceed with intimacy.";
 		stop the action;
 	now lastrabbitfuck is turns;
+	if hp of Sandra is 3:
+		say "Coleen's ears perk up as she notices you heading over to the bunny's.  It seems the perceptive puppy's picked up on your intent and has taken an interest in the upcoming show";
+		if lastColeenfucked - turns < 4:
+			say ".  The husky girl rolls onto her back and slides a paw between her legs, seemingly content to watch what she hopes will be a nice show.";
+		otherwise:
+			say ".  The husky girl whines softly and wags her tail, turning to flash her wet pussy at you.  Will you call over [if coleencollared > 0]your slutty pet[otherwise] the stray bitch[end if]?";
+			if the player consents:
+				say "[sandracoleentrio]";
+				stop the action;
+			otherwise:
+				say ".  You make a motion for her to stay and she remains, hopeful that you'll come and [if coleencollared > 0]play with your pet bitch[otherwise if coleenslut > 0]play with the stray slut[otherwise]submit to her like a needy bitch again soon[end if].";
 	let lust be 0;
 	let oversized be 0;
 	let response1 be "";
@@ -109,6 +123,8 @@ To rabbitfuck:
 						add "food" to invent of bunker;
 						move sandra to Bunker;
 						move player to bunker;
+						now hp of Sandra is 1;
+						if coleenslut > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 						say "'Thank you!' she cries, pressing her abundant front into your side, clinging warmly as she follows you back to the bunker, tail wagging the entire way. When you arrive, you see that she somehow trailed a suitcase of belongings, and she makes herself at home quickly. She even adds two bottles of water to your bunker supplies and a small package of dried meat.";
 						increase score by 5;
 						now the rabbit den is not known;
@@ -177,13 +193,13 @@ To rabbitfuck:
 				add "food" to invent of bunker;
 				move sandra to Bunker;
 				move player to bunker;
+				now hp of Sandra is 1;
+				if coleenslut > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 				now the rabbit den is not known;
 				follow turnpass rule;
 			otherwise:
 				say "'Hello sister,' she says, smiling. 'Oh, sorry, I'm not in the mood for that.'";
 			now lastrabbitfuck is 250;
-
-
 
 After resolving a needy rabbit girl, try looking;
 
@@ -253,16 +269,74 @@ instead of sniffing Rabbit Den:
 	say "This basement hidey-hole has a soft, musky scent in the air.  It smells of female rabbit, heather and clover.";
 
 instead of sniffing Sandra:
-	say "Sandra smells of female rabbit, with hints of heather and clover in her scent.";
+	say "Sandra smells of female rabbit, with hints of heather and clover in her scent[if hp of Sandra is 3].  You can smell Sandra's scent upon her as well[end if].";
+
+
+Section 2 - Sandra and Coleen Interplay
+
+An everyturn rule:
+	if lust of Sandra - turns > 15 and hp of Sandra is 1:
+		now hp of Sandra is 2;
+		now lastColeenfucked is turns;
+		now lastrabbitfuck is turns;
+		if player is in Bunker:
+			say "     As you sit in the bunker for a moment's rest, you look over and spot Sandra playing with the Coleen the husky girl.  Having found a ball somewhere, they're playing fetch.  Coleen is clearly more at ease with infected people since her transition and Sandra's become more relaxed after coming to the safety of the bunker.  You smile as you watch their blossoming friendship.";
+			say "     After playing around, the bunny girl scritches the husky's ears, then down her back and over her tummy as she rolls over.  She doesn't seem to notice as Coleen wriggles around on her back, tongue hanging out as the husky positions herself so her breasts are being scritched.  A little more rolling around and the bunny's paw moves down between the husky's legs.  When she feels her paw is rubbing at the husky's wet snatch, the bunny freezes.  Coleen whines softly and rubs her paws over Sandra's, getting her to resume stroking her wet folds.";
+			say "     The horny husky wriggles on her back like a happy dog getting scritches, except it's a different itch being scratched.  And when Coleen's muzzle finds its way under her skirt to lick her, she moans loudly as that doggy tongue delves into her, the bunny throws herself into it as well.  She spreads her legs and pulls up her skirt to give the husky better access while pumping a pair of fingers into her lover in return.";
+			say "     They go at it for quite some time, not caring about who may be watching them in their lesbian tryst.  They swap positions a few times, licking, kissing and fingering one another until they've cum so many times they finally pass out, exhausted and satisfied.";
+			now hp of Sandra is 3;
+			increase score by 10;
+
+instead of going to Bunker while hp of Sandra is 2:
+	now the player is in Bunker;
+	now hp of Sandra is 3;
+	say "     After entering the bunker and taking a look around, you spot Coleen resting with her head in Sandra's lap.  The bunny girl is stroking the husky gently and you smile.  It's good to see those two becoming more at ease.  It takes you a little bit to notice that they both seem particularly happy and that the scent of female husky and bunny arousal hang in the air.  And that's when it clicks that Sandra's blouse is open and her skirt is sitting beside her.  After being out and seeing all the wanton sex and nudity in the city, it took you a moment to notice what must have been going on while you were out.";
+	now lastColeenfucked is turns;
+	now lastrabbitfuck is turns;
+
+to say sandracoleentrio:
+	say "     You grin and motion for Coleen to join you and she pads on over quickly on all fours.  She dashes ahead of you and pounces into Sandra's lap, licking and lapping at her face before it turns into a kiss with the doggy tongue diving into the bunny girl's muzzle.  You move up behind Sandra and put your arms around her, nibbling her ear and whispering that it's you.  You run your paws over the bunny's body, sliding her clothes.  As you bare her soft fur, Coleen is there to nuzzle, lick or nip at her, getting her friend to moan delightfully.  Once she's naked, Coleen buries her muzzle between Sandra's legs and laps at her large pussy, giving you a moment to toss off the last of your clothes as well.";
+	say "     The bunny girl pushes Coleen's muzzle away and she turns to look at you, smiling and quite happy to spend a special moment with her two friends.";
+	if rabbitsister is greater than 0 and ( facename of player is not "Rabbit Girl" or facename of player is not "Female Husky" or facename of player is not "Alpha Husky" ):
+		say "     'Oh your ears!' she exclaims, approaching and cooing at you. She snuggles firmly, then leans in to kiss, pressing lips tightly for a moment before you feel her sharp teeth sinking into your lip. Brief pain flares before her infection spreads to you rapidly, regaining your rabbit ears.";
+		now face of player is "set of two long white rabbit ears twitching above your head, looking odd compared to your normal";
+		now facename of player is "Rabbit Girl";
+	otherwise if rabbitsister is greater than 0 and ( facename of player is "Female Husky" or facename of player is "Alpha Husky" ):
+		say "     She looks at your husky face and smiles, grinning to Coleen.  'Oh, I guess a husky face is pretty cute, too.  Don't you think, sweety?' she asks [if coleencollared > 0]your slutty pet[otherwise]the horny stray[end if] as she scritches the doggy's ears.";
+	if rabbitsister is greater than 1 and ( tailname of player is not "Rabbit Girl" or tailname of player is not "Female Husky" or tailname of player is not "Alpha Husky" ):
+		say "     Sandra frowns as she notices your lack of rabbit tail. She grabs you suddenly and hauls you across your lap. Without word or warning, she slaps your bottom firmly, and begins to spank you on the spot. Her stinging blows make your ass warm and red even as it begins to change, slowly regaining that lost rabbit tail. When it is completely restored, she waves a finger at you, 'And don[apostrophe]t you go losing it again.'";
+		now tailname of player is "Rabbit Girl";
+		now tail of player is "You have a short white rabbit's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
+	otherwise if rabbitsister is greater than 1 and ( tailname of player is "Female Husky" or tailname of player is "Alpha Husky" ):
+		say "     Sandra runs a paw over your fluffy, husky tail.  'And a cute husky tail is nice and soft as well.  I'll let you hang onto it for now,' she says, winking to Coleen[if coleencollared > 0].  Your husky pet[otherwise].  The stray husky slut[end if] barks in agreement, winking back.";
+	if the thirst of the player is greater than 50:
+		say "     The bunny girl puts her arms around you and pulls your face into her ample bosom, pressing you against her firm breasts and brushing her nipple against your lips.  'You should take better care to drink enough out there, hon.'  Feeling quite thirsty, you start to suckle from her breast, drinking down the milk it quickly starts giving you.  There is a bark beside you and Coleen nuzzles against you, going for the other breast.  'Oh, and I know how much you like my milk, sweety,' the bunny girl says, scritching the husky's ears.  You both nurse from her bosom, filling your bellies with her sweet cream as the bunny pets and coos at you both encouragingly.  After you've each had a good drink, she gently pushes you back.";
+	if cocks of player > 0:
+		say "[sctriomale]";
+	otherwise:
+		say "[sctriofemale]";
+
+to say sctriomale:
+	say "     Taking a seat on her bunk, you slide the bunny girl into your lap, rubbing your stiff [if cocks of player > 1]members[otherwise]member[end if] against her ass and fluffy tail.  She moans softly as you tease her nipples while hops up to give her another doggy kiss.  You grind against her softly-furred bottom, leaking precum onto her [if cock length of player > 12]back[otherwise]tail[end if] until you can't wait any longer and want more.";
+	say "     Boosting her up, you get your [if cocks of player > 1]cocks[otherwise]cock[end if] into position and enjoy her needy moan into the kiss with husky girl.  You lowering her down, Coleen's paws have moved to help get you lined up.  You can feel her wet pussy [if cocks of player > 1]and tight tailhole [end if]pressed against your glans before spreading open allowing you entrance into the busty bunny's beautiful body.";
+	say "     Coleen breaks the kiss and drops back to the floor on all fours, burying her muzzle in Sandra's fluffy muff to nuzzle at your genitals.  Her cold, wet nose against the bunny's clit makes her shiver before that warm, wet tongue sets to work.  She laps at your thrusting cock and the bunny's quivering folds as you drive into her against and again.  Bunny juices run down your shaft for the playful husky to lick up[if cock length of player < 12 or cock width of player < 10].  As your cock is not quite enough to fully satisfy the bunny's large pussy, the husky yips and slides a few fingers in as well, rubbing along your penis and the sensitive vaginal walls[end if].";
+	say "     The bunny has a long and enjoyable ride in your lap, cumming several times from the combined action of her lustful friends.  When finally it gets to be too much, you drive hard into her one last time and pump your hot load deep into her, earning one last moan and orgasm from Sandra, which Coleen is eager to lap up the juices and jizz from.  Coleen, fingering herself with one paw, is sitting in an extensive puddle of her own juices as well, clearly having cum repeated as well.  When your erection finally starts to go down, you slip Sandra off your lap.  Coleen hops up onto her bunk to join her for a nap while you get up and head off quietly to take care of other matters.";
+
+to say sctriofemale:
+	say "     You slide to your knees between Sandra's legs and bury your muzzle in her fluffy muff, deciding you want a turn licking at those juicy lips.  You slip a pair of fingers into her easily and listen to her moan in pleasure.  You hear Coleen hop up onto the bunk beside the bunny.  You catch her turning and presenting her pussy to the bunny out of the corner of your eye before Sandra presses your face back against her wet snatch.  You get back to work, shifting a little as the bunny leans over to lick at the offered pussy for a while.";
+	say "     You slide another finger, then another into those ample folds, eventually fisting the moaning bunny girl.  You take a moment to glance back up and find Sandra pumping a rubber dog toy into Coleen's dripping pussy, making the husky girl whine and whimper in ecstasy.  The rough texture and bumps on the chew bone stimulate the horny doggy girl greatly.  Excited by the show, you pump your fingers into Sandra all the more and move your free hand down between your legs to drive a few fingers into your own snatch.";
+	say "     Sandra notices your predicament and slides a fluffy bunny foot between your legs.  She rubs the soft paw against your pussy and wriggles her toes against it[if cunt width of player > 9].  Your wide pussy spreads open and allows her to work her large bunny foot into you, stimulating you further with her fluffy paw and wriggling digits[otherwise].  She slips a fluffy digit into you, stimulating you even further[end if].  You three continue like this, all cumming several times before finally running out of steam and collapsing back to rest.  Coleen and Sandra end up snuggled together on the bunk while you head off quietly to take care of other matters.";
 
 
 When play ends:
 	if Sandra is in the Bunker:
 		if hp of the player is greater than 0:
-			if humanity of the player is less than 10:
+			if humanity of the player < 10 and coleenalpha > 0:
+				say "Sandra ends up going off with Coleen, the dominant husky taking her to be the pack's bunny slut and to be bred full of adorable husky-bunny hybrid pups.  On the occasions the alpha female husky allows her to spend time with you, the bunny tells you how much she is enjoying her new life, falling into her role as a plaything for the horny canines.  ";
+			otherwise if humanity of the player is less than 10:
 				say "Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side despite your loss of humanity.  She remains with you, tending to your needs, all of them, as best she is able.  She does not permit you to predate on unchanged humans, tackling you to the ground when the urge becomes too strong and fucking you into a cooperative stupor.  Could anyone ask for a better friend?  ";
 			otherwise:
-				say "     Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side after you are all rescued from the infected city.  ";
+				say "Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side after you are all rescued from the infected city[if hp of Sandra is 3].  Sandra visits with Coleen often as well, always looking forward to playing with the horny puppy[end if][if coleencollared > 0].  She even ends up adopting one of Coleen's many pups, raising him to be an obedient and loyal sex pet[end if].  ";
 			if cocks of player > 0 and bodyname of player is "Siren":
 				say "The lovely bunnygirl is particularly excited by your ability to deposit eggs into her and readily has you stuff her full of them on several occasions.  She is particularly eager to do this around springtime, painting the eggs after she pushes them out and handing them out to others on Easter.  Many young sirens join new families to further spread your infection thanks to Sandra's lustful efforts.";
 				increase score by 25;
@@ -271,5 +345,5 @@ When play ends:
 				increase score by 5;
 			otherwise:
 				say "[line break]";
-		
+
 Desperate Bunny ends here.
