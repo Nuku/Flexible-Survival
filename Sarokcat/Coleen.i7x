@@ -1,4 +1,5 @@
-Coleen by Sarokcat begins here.
+Version 2 of Coleen by Sarokcat begins here.
+[Version 2 - Linked to Sandra the Desperate Bunny content]
 "Adds a military npc to Flexible Survival with a variety of responses and goals..."
 
 Section 1- Coleen events
@@ -293,7 +294,7 @@ Instead of fucking the Coleen:
 				now lastcoleenfucked is turns;
 				infect "Alpha Husky";
 				stop the action;
-		if coleenslut is  1:
+		if coleenslut is 1:
 			if cocks of player is greater than 0:
 				say "'You want to play too?' The slutty little husky asks as you approach her, her eyes wandering over your male body with interest as her tail wags eagerly behind her, as she begins to crawl towards you on all fours. Her position makes her breasts seem even more prominent as they hang straight down from her chest, as she slowly stalks forward, her eyes fixed on your [cock of player] shaft. You can feel a grin tugging at your face as you watch the formerly strong military woman reduced to a panting bitch, begging and whining for a cock to fill her up. As she rubs her softly furred side up against you, you decide to take her up on her offer, and push her down to the ground as you move around behind her, deciding that if she really wants to play the role of a slutty little beast, you might as well take her like one.  You can hear her groan eagerly as you position yourself above her, her rear wagging at you eagerly as you ram your cock into her in one swift movement, making her howl out in pleasure.[line break]";
 				say "You grin and groan in pleasure as you reach forward and grip and massage her soft breasts where they hang down from her chest, using them as handholds as you lean forward over her back. Her tail wags against the side of your chest as she pushes herself back to meet your every thrust, obviously as eager and wanton a bitch now, as any you have ever seen. You enjoy the changes in her personality almost as much as you are enjoying the changes to her body, loving the way she yips and whines and begs underneath you as she submits just as willingly to you as you know she now would to anything with a cock, her mind truly matching her body now, a slutty bitch both inside and outside. Each thrust inside her hot tight form brings you closer and closer to completion, as you pant and play with her body eagerly, the pressure and pleasure building up ever higher until with one last thrust your cock explodes within her, sending your seed straight into her needy womb as she lets loose another long howl of pleasure as she orgasms as well. You lie there locked with your bitch for several minutes as you both recover, before pulling yourself out of her slutty form, letting her collapse to the ground helplessly as she pants from the sheer pleasure acting out her role as a husky slut brings her.";
@@ -310,7 +311,7 @@ Instead of fucking the Coleen:
 					now coleenslut is 0;
 					stop the action;
 				otherwise:
-					say "'Thats too bad,' Coleen pants as she lies back on the ground to recover from your rough lovemaking and play session, 'But maybe we can at least play like this again sometime soon.' She says hopefully, as you slowly get to your feet and begin to gather up your belongings to head out again.";
+					say "'That's too bad,' Coleen pants as she lies back on the ground to recover from your rough lovemaking and play session, 'But maybe we can at least play like this again sometime soon.' She says hopefully, as you slowly get to your feet and begin to gather up your belongings to head out again.";
 					infect "Female Husky";
 					now lastcoleenfucked is turns;
 					stop the action;
@@ -351,6 +352,7 @@ Instead of fucking the Coleen:
 				if cocks of player is greater than 0:
 					say "Before you can respond, the new bitch has dropped to all fours, and has turned her rear to you, her tail lifting up eagerly in an unspoken invitation as she looks back at you over her shoulder. 'Why don[apostrophe]t you come play hide the bone, with a bitch...' She says as her she wiggles her rear at you, her damp lips winking at you as the scent of a bitch in need fills the air.  The invitation is just to perfect to decline, your rod stiffening eagerly as you move over to her needy body, and you rub the tip of your cock up against her heat swollen lips, making her moan.  Her animalistic posture, and her acceptance of the beastial changes within, make you feel almost like a animal yourself as you sheath your [cock of player] cock in her warm silken passage, Coleen yiping and whining in pleasure underneath you.  You grip her hips tightly as she lifts her rear up even higher to allow you better access to her body, her tail brushing across your chest as it wags eagerly, even as her body shifts to become a full husky bitch underneath you, nearly indistinguishable from all the other slutty little huskies roaming the city. The pleasure of the rough sex fills your mind as you take her from behind like an animal, thrusting into her again and again as she yips and pants underneath you, her every sound proof of your victory over her body and mind as she embraces her new role as a husky slut. Soon your eyes close and your head swims with pleasure as you shoot your seed into her waiting body, making her howl in pleasure underneath you as you fill her womb up with your fertile sperm.   Panting from the exertion, you slowly release the new husky slut as you pull yourself out of her, and she twists around to lick at her well used passage with her long canine tongue. You sit down to rest for a minute while she cleans herself up, before she turns to you and wags her tail happily. 'Thanks so much! I hope we can do this again lots!' She says with a happy look on her lust filled canine face.  'Now I[apostrophe]m going to go see what other kinds of fun I can find in the city!  Don[apostrophe]t worry though! I won[apostrophe]t be far from here and your wonderful cock for long!' She says as she wanders out the bunker door, her tail wagging happily as she goes to explore, although you know that she will always end up back here whenever you return to the bunker, her needy cunt leading her right back to where your cock filled her up for the first time....'";
 					now coleenslut is 1;
+					if Sandra is in bunker, now lust of Sandra is turns - 4;
 					now coleenfound is 2;
 					now lastcoleenfucked is turns;
 					stop the action;
@@ -361,6 +363,7 @@ Instead of fucking the Coleen:
 						say "Unable to resist the images the strong husky bitch in front of you is evoking,  you find yourself nodding eagerly even as you hold Coleen tight. 'See that wasn[apostrophe]t so hard to admit now was it?' The sexy husky whispers into your ear, making you smile even as you nod in agreement, the heat filled scent of two other husky bitches making it seem so very easy to admit how much you want to be happy and slutty like them. 'I knew you would see it my way,' Coleen says with a grin, 'And helping you admit what you really wanted is the least I can do for you after you brought me here and helped me realize how much I really wanted to be a slutty little bitch deep down inside.' The new bitch says as she runs her paws over her own new body. 'Now I think I need to go try this new body out some more in the city,' She says as she turns to the bunker entrance eagerly,  'But don[apostrophe]t worry! I[apostrophe]ll be here to help you out as much as you helped me out whenever you are ready!' She calls back as she heads outside, her tail wagging eagerly giving you a good view of her wet husky slit as she vanishes into the streets.";
 						infect "Female Husky";
 						increase coleenalpha by 1;
+						if Sandra is in bunker, now lust of Sandra is turns + 4;
 						now sarahslut is 5;
 						now lastcoleenfucked is turns;
 						stop the action;
@@ -369,6 +372,7 @@ Instead of fucking the Coleen:
 						infect "Female Husky";
 						now lastcoleenfucked is turns;
 						increase coleenslut by 1;
+						if Sandra is in bunker, now lust of Sandra is turns - 4;
 						now coleenfound is 2;
 						stop the action;
 		if sarahslut is 3:
@@ -382,8 +386,6 @@ Instead of fucking the Coleen:
 			stop the action;
 	otherwise:
 		say "'Sorry, but that seems to be how the infection spreads the fastest, and while I know I probably won[apostrophe]t get out of this place without some changes, I think i[apostrophe]d like to try to keep them to a minimum.' Coleen says with a wry shrug.";
-
-
 
 
 when play ends:	
@@ -458,21 +460,5 @@ When play ends:
 			say "     Finally overcome with your strong beastial instincts to breed, fuck, and spread the infection. You recall where a perfect new pet is waiting for you, nice and safe, and above all unsuspecting, in your bunker. Swiftly returning to the library, you manage to behave long enough to convince Coleen to let you in, where you immediately pounce on her and fuck her like the beast you are. The former soldier moans and pants underneath you, her body shifting and changing as you spread your infection to your new friend.  You ravish her body until her form is as twisted and changed as yours, a perfect match for the wonderful new beast you have become, and then over the course of the next day or so, you keep the new Coleen trapped in the bunker with you while you mate her even more thoroughly, enjoying the way her mind changes more and more with each sexual encounter, as she loses her humanity bit by bit, the infection conquering her mind as easily as it conquered yours, making her little more then a beast just like you.  Finally satisfied, you head out into the city to seek out even more new conquests to spread your glorious new form to, sure in the knowledge that your most recent convert will be doing the same elsewhere in the city as well...";
 		otherwise:
 			say "     Coleen is extremely happy when the rescue arrives, and while she has picked up a few unusual traits from her time spent with you in the bunker, she is still recognizable and mostly human. She manages to talk to several of the military troops that rescue you, and puts in several good words for you based on how you helped her survive, this means the military is more than happy to let you out of the city while they deal with the more important and dangerous beasts still left inside.  Coleen keeps in touch with you as you begin to make a life for yourself afterwards, until finally you lose contact with her after she goes on a scouting mission in the area around the city to make sure none of the beasts managed to escape.  You find yourself alternatively hoping she turns up ok and unchanged, or wondering if she would be happy to welcome you and change you into whatever she became if you hunted her down...";
- 
- Coleen ends here.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Coleen ends here.

@@ -35,7 +35,7 @@ understand "explore tunnel" as treasurehunt;
 understand "explore tunnels" as treasurehunt;
 understand "explore the caves" as treasurehunt;
 understand "hunt treasure" as treasurehunt;
-understand "find for treasure" as treasurehunt;
+understand "hunt for treasure" as treasurehunt;
 understand "explore treasure caves" as treasurehunt;
 understand "find treasure" as treasurehunt;
 understand "find the treasure" as treasurehunt;
