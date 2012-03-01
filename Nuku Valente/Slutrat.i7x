@@ -36,12 +36,80 @@ To say slut rat growth:
 	
 SlutRat Den is a room. "This little slice of 'heaven' is a cleaned out section of the sewers. Despite its location, it smells of a soft incense, mixed with the heavy, musky, odor of the rats that dwell within it. Large pillows have been thrown around, many supporting the full rumps of their rodent owners as they watch your movements. For entertainment, besides one another, small heaps of books have been scattered about wherever their owners last grew tired of them. A dart board is also set up on the far wall with small metal darts poking in it at wildly varying points.[slutratdenscene]". Slutrat Den is private. Slutrat Den is fasttravel. It has a number called visittimes.
 
-[ instead of sniffing SlutRat Den:
-	say "The den is heavy with the musky scents of the lustful rats, which is only slightly masked by the soft incenses."; ]
+There is a ratdartboard in SlutRat Den. "The dart board looks like anyone could [bold type]throw darts[roman type] if they felt like it.".
+
+ratdarts is an action applying to nothing.
+understand "throw darts" as ratdarts.
+understand "play darts" as ratdarts.
+
+check ratdarts:
+	if the location of the player is not Slutrat Den, say "What darts?" instead;
+	if visittimes of slutrat den is less than 1:
+		say "The rats scowl at you when you approach the dart board. Perhaps you should reconsider.";
+		say "Continue?";
+		if the player consents:
+			say "One of the rats hops to her feet and rushes at you angrily.";
+			challenge "Slut Rat";
+			if lost is 1:
+				move the player to Mall Foodcourt;
+				stop the action;
+		otherwise:
+			say "Reconsidering your options, you back away from the dart board.";
+			stop the action;
+		
+Carry out ratdarts:
+	let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
+	let the dice be a random number from 1 to 20;
+	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: Taking a brief breath, you draw back the dart and eye the center circle. With a sudden thrust, the dart sails forward. ";
+	let total be bonus + dice;
+	now total is total / 5;
+	if total is less than 0, now total is 0;
+	if total is greater than 5, now total is 5;
+	if total is:
+		-- 0:
+			say "Your dart goes drastically wide, almost hitting one of the lounging rats. With a loud annoyed sound, she moves to tackle you to the ground.";
+			say "Do you let her?"
+			if the player consents:
+				increase slutratsub by 1;
+				say "[slutratsubsex]";
+			otherwise:
+				challenge "Slut Rat";
+				if lost is 1:
+					move player to Mall Foodcourt;
+		-- 1:
+			say "You missed entirely! The rat bounces lightly off the cement wall behind the board and falls to the ground with a soft clatter. The rats snicker softly at your performance.";
+			if a random chance of 1 in 3 succeeds:
+				say "A naked pink tail swats across your back end, 'You can do better than that.'";
+		-- 2:
+			say "Your dart lands on the outer rim of the board. The rats nod lightly, but none of them look terribly impressed at your skill. Perhaps with more practice...";
+		-- 3:
+			say "With pride, you land in the inner section of the board, shy of a bulls eye. One of the rats tosses a pack of chips towards you with a thumbs up.";
+			add "chips" to invent of player;
+		-- 4:
+			say "Yes! Your dart lands in the central circle, a bulls eye! The rats give a polite cheer at your excellent shot. One of them reaches under herself and pulls out a can of soda and tosses it to you, still warmed from her rump.";
+			add "soda" to invent of player;
+		-- 5:
+			say "Perfection. Your dart lands right in the middle of the central circle. A soft whistle of appreciation raises through the gathered rats. You can't help but feel more confident in yourself as a result.";
+			decrease slutratsub by 1;
+			increase score by 5;
+			say "One of the rats seems interested in you as a result of your athleticism. Do you wish to approach her?";
+			if the player consents:
+				say "[slutratdomsex]";
+	follow the turnpass rule;
+	
+instead of sniffing SlutRat Den:
+	say "The den is heavy with the musky scents of the lustful rats, which is only slightly masked by the soft incenses.";
 
 SlutratSub is a number that varies.
 Slutratcor is a number that varies.
+lastratvisit is a number that varies.
 
+To say slutratsubsex:
+	say "Scene not written yet.";
+
+To say slutratdomsex:
+	say "Scene not written yet.";
+	
 To ratslutchug:
 	say "Do you drink as hard as you can?";
 	if player consents:
@@ -88,19 +156,12 @@ To Say ratslutwelcome:
 				ratslutchug;
 				if lost is 1: [ bad end]
 					say "Your thoughts seem a jumble as you stagger in place. You feel warm paws supporting you. You try to remember what you were just doing. Something about a drink? Why would you need a drink. Who are you? Who are they? One of the rats smiles at you, and the fog lifts. You remember. These rats are your kin. Wonderful, wonderful kin.";
-					if slutratsub is 0:
-						infect "Slut Rat";
-						infect "Slut Rat";
-						infect "Slut Rat";
-						infect "Slut Rat";
-						infect "Slut Rat";
-						if slutratcor is greater than 4:
-							end the game saying "Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It[']s time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords had need of you both.";
-							stop the action;
-						end the game saying "You are equals, sisters of long tails. You surrender your old life, having forgotten it, to living alongside your sisters, loving fiercely, being loved in kind.";						
-						stop the action;
-					otherwise:
-						say "NOT WRITTEN";
+					infect "Slut Rat";
+					infect "Slut Rat";
+					infect "Slut Rat";
+					infect "Slut Rat";
+					infect "Slut Rat";
+					end the game saying "You succumb to the honeyed drink.";
 					stop the action;
 			otherwise:
 				say "'Bad bitch!' she hisses, 'If you won[']t learn your place, we[']ll just have to do it the hard way.";
@@ -111,13 +172,15 @@ To Say ratslutwelcome:
 	say "Not Written Yet.";
 	
  To Say slutratdenscene:
+	if lastratvisit - turns is less than 8 and lastratvisit is greater than 0:
+		continue the action;
+	now lastratvisit is turns;
 	if visittimes of SlutRat Den is 0:
 		say "You follow your memory back through the sewers, pulling yourself along the, sometimes frighteningly narrow, pipes. At points you have to crawl on hands and knees for what feels like an hour. You wonder to yourself how the rat managed to haul you so effortlessly all this way, but you are determined. The scent of them hits you first, and you hasten your steps.[line break]Heart pounding, you start to run down the tunnel, skidding on the slimey floor and almost falling as you turn sharply, and half dive into the den. The rats are there, and look up at you with clear surprise.";
 		say "'Fresh bitch just can[']t wait for more', says one of the rats as she smoothly slides to her feet. A hand dips between her shapely thighs to grab at the obscenely swollen package there as she eyes you with an intense desire burning in her eyes, 'Bitch doesn't know her place. I[']ll show her how things work around here...' She advances towards you with a leer.";
 		Challenge "Slut Rat";
 		If lost is 1:
 			move player to Mall FoodCourt;
-			try looking;
 			continue the action;
 		otherwise:
 			say "The defeated rat withdraws into the den, scurrying beneath one of the pillows with a sullen expression. Her sisters laugh at the sight, and one of them rises to her feet in a hop, breasts wobbling enticingly as she approaches you, 'What a good bitch you are,' she croons, 'You just want some love, not fighting, am I right?'";
@@ -130,5 +193,22 @@ To Say ratslutwelcome:
 				say "She seems surprised when you refuse the offer. Despite it, she reaches to set her naked pink hands on your cheeks and draw you forward for a kiss, 'That will be fine then. Maybe you[']re not here to be our bitch after all.' Her tongue flicks over your face and she draws you to a pillow before flopping on it herself and leaving you standing. 'Fine then, tough guy, you can do what you want, welcome to our den.' The other rats give a brief round of applause before the celebration turns more intimate between a few pairs of them, coupling together in excited squeals that don't seem to include you for the moment.";
 				increase visittimes of slutrat den by 1;
 			continue the action;
+
+When play ends:
+	if humanity of the player is less than 10 and hp of the player is greater than 0:
+		if bodyname of player is "Slut Rat":
+			say "You can no longer deny your new basic needs. You flee to the mall and its comforting sewers. Following your instincts, you are soon in the welcoming embrace of your rodent sisters, who take turns fucking and being fucked by you for what feels like days in a celebration of your coming around. Your family remains there, hiding from the rescue, and living out your days together.";
+			if slutratcor is greater than 4:
+				end the game saying "Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It[']s time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords had need of you both.";
+				continue the action;
+			otherwise if visittimes of slutrat den is greater than 0:
+				if slutratsub is 0:
+					say "You are neither dominant nor submissive of your rat sisters, living as equals. This is not without its frictions, as you do not all have the same ideas, but you always managed to reach an accord, eventually. Sometimes this involves taking or being taken until someone realizes the error of their ways in a pile of sweat andother fluids, but you don't find that to be a disagreeable way to work things out.";
+				if slutratsub is less than -1:
+					say "The others call you [']little sister['] when they are very happy with you, and [']bitch['] the rest of the time. You are the omega of the group, made to do the more menial of tasks. Still, their love for you is unquestionable, and they protect you from any and all threats to your sewer lair.";
+	otherwise:
+		if bodyname of player is "Slut Rat":
+			say "Despite your sanity, you find your thoughts drifting back to your rodent sisters. When the rescue comes, you point them out. They put out a terrific struggle, but, with your help, they are rounded up successfully and brought out of the city. They slowly come around to sentience again, and you all live together, working a massage parlor as a strangely loving family. No customer leaves unhappy.";
+
 
 Slutrat ends here.

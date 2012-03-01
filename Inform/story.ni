@@ -3468,8 +3468,6 @@ When play ends:
 				say "One day you capture a woman poking around. You wrestle her to the ground and draw her up into your greedy form. The experience is like one extended orgasm, and her every struggling motion is a spike of sensation. You keep her inside for a month before you release her, but by then the damage was done. What emerged was another goo creature like yourself, and she no longer wished to leave. You grew to enjoy the company.";
 		if bodyname of player is "Hermaphrodite Gryphon":
 			say "Possessed with a sudden need to fly, you beat your powerful wings and launch to the air. You eventually roost with a few other gryphon sorts and remain out of sight, even after the city is eventually dealt with. You and the other gryphons live in a large open family, affectionate, loving, and tender.";
-		if bodyname of player is "Slut Rat":
-			say "You can no longer deny your new basic needs. You flee to the mall and its comforting sewers. Following your instincts, you are soon in the welcoming embrace of your rodent sisters, who take turns fucking and being fucked by you for what feels like days in a celebration of your coming around. Your family remains there, hiding from the rescue, and living out your days together.";
 		if bodyname of player is "Latex Fox":
 			say "Driven mad with your new, rubbery, instincts, you leave the bunker and wander the city looking for further victims.";
 			if the cocks of the player is greater than 0:
@@ -3493,8 +3491,6 @@ When play ends:
 			say "You’ve been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to reimpregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you’re alarmed by this, but your ever growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
 		if bodyname of player is "Goo Girl" and skinname of player is "Goo Girl":
 			say "Your jello like form proves to be quite a curiosity, especially seeing how it seems immune to the usual signs of aging. You discover that those you absorb for a few hours can be renewed within your undulating form, and offer the service out to the wealthy, who enjoy a false second youth. They don't live any longer, but they do it as a fit and healthy twenty something year old body.";
-		if bodyname of player is "Slut Rat":
-			say "Despite your sanity, you find your thoughts drifting back to your rodent sisters. When the rescue comes, you point them out. They put out a terrific struggle, but, with your help, they are rounded up successfully and brought out of the city. They slowly come around to sentience again, and you all live together, working a massage parlor as a strangely loving family. No customer leaves unhappy.";
 		if bodyname of player is "Panther Taur":
 			say "Your feline body draws stares, mixed between envy and disgust. You eventually gather a bit of a following, all too eager to see to your needs as they worship you as some kind of strange new god. Not that you mind much, it's nice to be waited on.";
 			if cocks of player is greater than 0:
