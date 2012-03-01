@@ -4207,6 +4207,7 @@ Include Felinoid Companion by Sarokcat.
 Include Kitty Cat by Sarokcat.
 Include Skunk Pet by Sarokcat.
 Include Exotic Bird by Sarokcat.
+Include Honey by Stripes.
 
 
 Book 10 - Let the Games Begin
