@@ -68,7 +68,7 @@ Carry out ratdarts:
 	if total is:
 		-- 0:
 			say "Your dart goes drastically wide, almost hitting one of the lounging rats. With a loud annoyed sound, she moves to tackle you to the ground.";
-			say "Do you let her?"
+			say "Do you let her?";
 			if the player consents:
 				increase slutratsub by 1;
 				say "[slutratsubsex]";
@@ -141,7 +141,7 @@ To ratslutchug:
 To Say ratslutwelcome:
 	if breasts of player is greater than 0 and breast size of player is greater than 0:
 		say "Her slender fingers brush up across your [skin of player] breasts, squeezing lightly even as the sharp claws at the end slowly trail across delicate flesh. 'We[']re not always sharing.' she whispers as she gazes into your eyes with her own vibrantly violet ones, 'Such a good little bitch.' she croons, trailing claws down over your nipples as she looks downwards.";
-	if cocks of player is greater than 0:
+	if (cocks of player is greater than 0 and cunts of player is 0) or ( cunts of player is greater than 0 and cocks of player is greater than 0 and a random chance of 1 in 2 succeeds):
 		say "She crouches down and reaches to cup your groin, fingers seeking out your [cock size desc of player] [cock of player] tool and give it a few soft pulls, stroking it ever so slowly to erection as she looks up at you, 'And just how big is our littleman?' she coos, long tongue flicking out across it in a flicker.";
 		if cocks of player is greater than 1:
 			say "Her fine whiskers tickle at your extra man meat. She leans back and brushes across all of your painfully erect shafts, tickling from the base to the tips and back down again in slow appraisal.";
@@ -169,6 +169,9 @@ To Say ratslutwelcome:
 				if lost is 0:
 					if slutratsub is greater than 0:
 						decrease slutratsub by 1;
+		continue the action;
+	if cunts of player is greater than 0:
+		say "Female Scene Pending";
 	say "Not Written Yet.";
 	
  To Say slutratdenscene:
