@@ -415,6 +415,7 @@ Carry out reciting:
 		move Sarah to bunker;
 		now Husky Pack is resolved;
 	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
+	if Sandra is in bunker and hp of Sandra is 0, now hp of Sandra is 1;
 	now lust of Sandra is turns;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
