@@ -91,7 +91,11 @@ To Say ratslutwelcome:
 						infect "Slut Rat";
 						infect "Slut Rat";
 						infect "Slut Rat";
-						say "You are equals, sisters of long tails. You surrender your old life, having forgotten it, to living alongside your sisters, loving fiercely, being loved in kind.";
+						if slutratcor is greater than 4:
+							end the game saying "Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It[']s time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords had need of you both.";
+							stop the action;
+						end the game saying "You are equals, sisters of long tails. You surrender your old life, having forgotten it, to living alongside your sisters, loving fiercely, being loved in kind.";						
+						stop the action;
 					otherwise:
 						say "NOT WRITTEN";
 					stop the action;
