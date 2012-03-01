@@ -1,4 +1,5 @@
-Smell by Hellerhound begins here.
+Version 2 of Smell by Hellerhound begins here.
+[Version 2 update by Stripes - smell all the things!]
 "Adds the sense of smell to Flexible Survival"
 
 
@@ -142,7 +143,7 @@ instead of sniffing chair:
 instead of sniffing journal:
 	say "The journal smells of cheap leather, paper and ink.";
 
-instead of sniffing the medkit:
+instead of sniffing medkit:
 	say "The medkit smells like antiseptic.";
 
 instead of sniffing gryphon milk:
