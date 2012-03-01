@@ -87,6 +87,9 @@ name	desc	weight	object
 
 flotsam club is an armament. It is part of the player. It has a weapon "[one of]your giant club[or]your rough club[or]your flotsam log[or]your length of sea hardened wood[at random]". The weapon damage of flotsam club is 10. The weapon type of flotsam club is "Melee". It is not temporary.
 
+instead of sniffing flotsam club:
+	say "The large club smells of the sea and those giant trees.";
+
 Section 3- Strange tide
 
 Strange tide is a situation.

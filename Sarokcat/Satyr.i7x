@@ -74,16 +74,18 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Satyr Wine"	"A ssmall sample of some dark wine you found left behind by one of those strange Satyr folk, it looks like there is about enough left for a single mouthful."	1	Satyr Wine
+"Satyr Wine"	"A small sample of some dark wine you found left behind by one of those strange Satyr folk, it looks like there is about enough left for a single mouthful."	1	Satyr Wine
 
-Satyr Wine is a grab object. It is part of the player. Understand "patch"  as Satyr Wine. Satyr Wine is infectious. The strain of Satyr Wine is "Satyr".
+Satyr Wine is a grab object. It is part of the player. Understand "wine" as Satyr Wine. Satyr Wine is infectious. The strain of Satyr Wine is "Satyr".
 
-The usedesc of Satyr Wine is "[wineusing].";
+The usedesc of Satyr Wine is "[wineusing]";
 
 to say wineusing:
-	say "Taking out the small mouthful of dark wine, you swirl the liquid around in the small cup for a minute, before tossing it back, gasping as the heady stuff burns its way down your throat, and makes  your head spin.  Thats definitely the good stuff!";
+	say "Taking out the small mouthful of dark wine, you swirl the liquid around in the small cup for a minute, before tossing it back, gasping as the heady stuff burns its way down your throat, and makes your head spin.  That's definitely the good stuff!";
 	decrease thirst of player by 10;
 
+instead of sniffing Satyr Wine:
+	say "The wine is aromatic and quite powerful.  And after everything you've seen in this strange city, you could definitely go for a drink.";
 
 
 when play ends:

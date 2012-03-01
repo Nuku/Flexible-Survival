@@ -22,6 +22,9 @@ North of Hospital Halls is Hospital interior.
 
 The marea of Hospital Halls is "Hospital".
 
+instead of sniffing City Hospital:
+	say "The hospital smells predominantly of antiseptic, but beneath that is a layer of arousal and fear.";
+
 
 Section 2 - Hospital Events
 
@@ -116,6 +119,9 @@ name	desc	weight	object
 "bonesaw"	"A stainless steel bonesaw used for medical procedures.  A little unwieldy, but sharp."	3	bonesaw
 
 bonesaw is an armament. It is part of the player. It has a weapon "[one of]the bonesaw[or]your bonesaw[or]your medical blade[or]the stainless steel saw[at random]". The weapon damage of bonesaw is 6. The weapon type of bonesaw is "Melee". It is not temporary.
+
+instead of sniffing the bonesaw:
+	say "The bonesaw smells faintly of antiseptic and blood.";
 
 
 Staff Lounge is a situation.
@@ -335,6 +341,9 @@ The Dexterity of helper dog is 14;
 The summondesc of helper dog is "Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.";
 The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg it finally pulled free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In an surprising piece of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]";
 
+instead of sniffing helper dog:
+	say "Your helper dog smells like a normal dog, surprisingly given the circumstances.";
+
 when play ends:
 	if helper dog is tamed:
 		if humanity of player is less than 10:
@@ -366,6 +375,8 @@ Up of Locked stairwell is Hidden Lab
 
 The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection.  The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites.  These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work..[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies.  The cot doesn't look like it's been used recently and the food supplies are in disarray.  The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras.  They have water and food dishes, as well as a small chemical toilet within reach of their tethers.  At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[at random].";
 
+instead of sniffing the Hidden Lab:
+	say "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.";
 
 [Message indicating progress]
 to say hospprogress:
@@ -407,6 +418,9 @@ understand "Dr Mouse" as Doctor Mouse.
 Doctor Mouse has a number called progress.
 
 The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears.  He's only about four feet tall, and that's to the top of his ears.  He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it.  He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.";
+
+instead of sniffing Doctor Mouse:
+	say "The small lab mouse looks at you sternly as you sniff him.  He smells of mouse, chemicals and sleepless nights in the lab.";
 
 
 to say meetdrmouse:
@@ -1341,6 +1355,22 @@ it is part of the player.
 It is not temporary.
 lavalamplick is a number that varies.
 
+instead of sniffing the lava lamp:
+	if lavalamplick is 0:
+		say "     You sniff the improvised lava lamp dildo.  It smells strongly of the triceratops woman's arousing scent.  You find yourself tempted to lick it.  Do you follow your urge? (Y/N)";
+		if the player consents:
+			say "[line break]     Following the strange compulsion, you lick the lava lamp a few times, tasting the saurian's female juices on it, finding them quite arousing.  For a moment there, it's almost as if you can hear music.";
+			now lavalamplick is 1;
+			increase libido of player by 10;
+			if libido of player > 100:
+				now libido of player is 100;
+			decrease humanity of player by 5;
+			infect "Triceratops";
+		otherwise:
+			say "[line break]     Probably for the best that you don't do anything so foolish.  You'd best be careful if you're starting to get ideas like that.";
+	otherwise:
+		say "     You give the improvised lava lamp dildo another sniff.  It smells strongly of the triceratops woman's arousing scent.  You find yourself considering licking it again, but bundle it back up.  If you lick it further, you may end up cleaning it off and Dr Mouse will be out of luck.";
+
 instead of using lava lamp:
 	if lavalamplick is 0:
 		say "     You look at the improvised lava lamp dildo.  It smells strongly of the triceratops woman's arousing scent.  You find yourself tempted to lick it.  Do you follow your urge? (Y/N)";
@@ -1422,6 +1452,8 @@ name	desc	weight	object
 
 spear is an armament. It is part of the player. It has a weapon "[one of]your spear[or]the Viking spear[at random]". The weapon damage of spear is 9. The weapon type of spear is "Melee". It is not temporary.
 
+instead of sniffing the spear:
+	say "The Viking spear smells of ancient battles.  The scent gets your blood pumping for battle.";
 
 Instead of conversing the Nermine while nerminepackage is 3:
 	add "package" to invent of player;
@@ -1446,6 +1478,10 @@ It is not temporary.
 
 instead of using package:
 	say "     You ponder the old box, string-tied box in your hands, wondering what the doctor's receiving.";
+
+instead of sniffing the package:
+	say "The old box smells of dust and times long past that may never have been at all.";
+
 
 Section 8 - Endings
 

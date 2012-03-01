@@ -12,6 +12,9 @@ Karafucked is a number that varies. Karafucked is usually 0.
 Kara is a woman.[or woman]
 The description of Kara is "The sexy looking hyena herm you rescued seems to have found a leather jacket somewhere, and a pair of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have coloured the hyena fur as it grew in.  Catching you looking at her, the new hyena herm eyes you back curously, and with not a little bit of lust..";
 
+instead of sniffing Kara:
+	say "Kara smells like an aroused hyena herm.";
+
 
 The conversation of Kara is { "[Karatalking]" };
 
@@ -35,7 +38,7 @@ Instead of fucking the Kara:
 		now lastKarafucked is turns;
 	otherwise:
 		say "'Sorry, but I kind of was hoping for another hyena if you know what I mean,' Kara says with a feral grin as she sizes you up, 'Ever since those wonderful sexy bikers, I haven[apostrophe]t been able to think about much else, especially since I am part of the 'gang' now too,' She says with a shake of her head, 'Though if you were to join the gang as well... well just think how much fun we could have...' The slutty hyena herm says teasingly, as she runs her clawed hand over your body, before planting a deep lusty kiss right on your mouth, her sharp teeth rubbing up against yours as her taste fills your mouth. Her tongue teases your own for a minute, before she breaks the kiss and backs off for a second, leaving you panting with arousal as she shoots you a wink, 'Think about it anyways...' She says as she goes back to what she was doing."; 
-
+		say "(Content currently incomplete.  No sex for you. :(";
 
 
 

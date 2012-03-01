@@ -11,7 +11,6 @@ The sarea of Mouse Taur is "Red";
 
 mtrp is a number that varies.
 Lastmousefuck is a number that varies. Lastmousefuck is usually 250.
-mousemulticock is a number that varies. mousemulticock is usually 0.
 mousefucked is a number that varies. mousefucked is usually 0.
 mousespot is a number that varies. mousespot is usually 0.
 
@@ -151,6 +150,12 @@ The description of Porn Store is "[pornstoredesc]";
 Lisa is a person.
 The description of Lisa is "A mouse taur. Her mouse like body is six feet long and about three feet tall where it flows into the curvy form of a well built, mostly human, female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.";
 Lisa is in Porn Store.
+
+instead of sniffing Lisa:
+	say "The mousetaur smells very feminine and musine.  She wears a soft perfume and scented oils.  There is a strong scent of females and sex about her person.";
+
+instead of sniffing Porn Store:
+	say "The porn store smells of scented oils and candles, lube, latex toys, secret desires and backroom sex.  There is also the smell of mouse[if hp of Sven > 49 and hp of Sven < 99] and snow leopard from its residents[otherwise] from its resident[end if].";
 
 to say pornstoredesc:
 	say "     It was once a [']den of sin['], now mostly quiet. It smells fresh and clean. A small picture on the counter shows a familiar looking female, presumably before she became a mouse creature. She is quite recognizable, at least in the face and general build. Most of the pictures show her alone. The porn is still present, stacked in neat piles or arranged on the shelves. Only a few are out of place. Girls on Girls 23, Lesbone 7 and Cunning Linguist Part 4.";

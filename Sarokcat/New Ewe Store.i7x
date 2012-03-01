@@ -172,6 +172,15 @@ Mary is a woman.
 The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around, You remember her introducing herself as Mary.";
 Mary is in New Ewe Storeroom.
 
+instead of sniffing New Ewe Storeroom:
+	say "The storeroom smells of the sheep who live here and their stockpile of jealously kept supplies.";
+
+instead of sniffing Leon:
+	say "Leon smells of a male ram and hard work.";
+
+instead of sniffing Mary:
+	say "Mary smells like a female sheep and has traces of the city's scents in her wool.";
+
 
 The conversation of Leon is { "[leonchat]" };
 

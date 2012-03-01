@@ -187,7 +187,8 @@ Skunk Goo is a grab object.
 
 Skunk Goo is infectious. The strain of skunk goo is "Skunk".
 
-
+instead of sniffing skunk goo:
+	say "The gooey black gunk smells strongly of skunk.";
 
 Section 4 - Endings
 

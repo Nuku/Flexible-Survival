@@ -1,17 +1,26 @@
 Medical Checkups by Hellerhound begins here.
 
 Pediatrics door is a door. "The city lies out of the huge hole in the roof and wall, jagged edges making the going difficult, but passable.".
-Pediatrics Lobby is a room. "The lobby for one of those medical places people go to to find a doctor. this is the lobby, or was. The cushy seats are shattered, the wood splintered, and the floor cracked and gouged by huge claws. Cum lies everywhere, and you have to pick your way through the room carefully. The doors to the inner area are still shut and locked. Battered, but intact. Maybe there is someone hiding out there?".
+Pediatrics Lobby is a room. "The lobby for one of those medical clinis people go to to find a doctor. This is the lobby, or was. The cushy seats are shattered, the wood splintered, and the floor cracked and gouged by huge claws. Cum lies everywhere, and you have to pick your way through the room carefully. The doors to the inner area are still shut and locked. Battered, but intact. Maybe there is someone hiding out there?".
 Pediatrics Lobby is fasttravel.
 Pediatrics door is dangerous.
 North of Pediatrics door is pediatrics Lobby.
 The marea of pediatrics door is "Outside".
 North of Pediatrics Lobby is Doctors Office.
-Doctors Office is a room. "A doctors office, this one is a wreck, stains everywhere and food and water stockpiled in the cabinets. The clock is no longer running, and an oil lamp stands on the blue marble counter, on and buring. It fills the air with smoke. you wonder what happened to the smoke detectors.".
+Doctors Office is a room. "A doctor's office, this one is a wreck.  There are stains everywhere and food and water stockpiled in the cabinets.  The clock is no longer running, and an oil lamp stands on the blue marble counter, on and buring.  It fills the air with smoke.  You idly wonder what happened to the smoke detectors.".
+
+instead of sniffing the Doctors Office:
+	say "The doctor's office smells of antiseptic and aroused lizard scents.";
+
+instead of sniffing Pediatrics Lobby:
+	say "With the numerous cum stains here, it hard to smell anything but that.";
 
 Doctor Medea is a person. "A doctor, by the name on the door label, 'Doctor Medea', is busily mixing vials here.".
 Doctor Medea is in Doctors Office.
 understand "medea" and "doctor" as Doctor Medea.
+
+instead of sniffing Doctor Medea:
+	say "The doctor smells of female lizard, though there's a hint of male musk in there as well.";
 
 medeastuff is a number that varies.
 medeaget is a number that varies.

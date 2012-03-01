@@ -214,10 +214,17 @@ Instead of Resolving a Hungry Piggy:
 Pig Pen is a room. It is fasttravel. It is private.
 
 The description of Pig Pen is "Not a literal pig pen, a basement actually. The floor is covered in a thick layer of mud. It seems whomever lives here is well stocked with small bottles of water, but there is no food anywhere, just a bunch of empty wrappers. There is a foul odor in the air.";
+
+instead of sniffing Pig Pen:
+	say "This place smells like a sty.  Oh... wait... yeah.";
+
 Philip is a man.
 The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker].  He's made a mudhole of his own in one corner of the bunker by breaking a whole in the wall and cracking a pipe.  He and spends much of his time lounging in it[end if].";
 Philip is in Pig Pen.
 The conversation of Philip is { "Hello, oink!", "Snort!", "Do you think the people who come to rescue us will have lots of food?", "How did I end up like this? Some Jerk zapped me with a strange ray gun that turned me into this.", "I love the feeling of mud against my skin."};
+
+instead of sniffing Philip:
+	say "Philip has the strong scent of a male hog[if pigfucked > 3].  You've become quite used to his musky scent and find it quite arousing now[end if].";
 
 When play ends:
 	if bodyname of player is not "Messy Pig" and bodyname of player is not "Piggy":

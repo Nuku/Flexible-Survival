@@ -103,6 +103,9 @@ the usedesc of Honeycomb is "[Honeycomb use]";
 to say Honeycomb use:
 	say " You just are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth. ";
 	decrease the hunger of the player by 6;
-	[reduce hunger by 6; increase thirst by 1;]
+	increase thirst of player by 1;
+
+instead of sniffing honeycomb:
+	say "The small piece of honeycomb smells like a sweet smackerel of honey.  You don't notice anything unusual or infected about its odor.";
 
 Bear For FS ends here.

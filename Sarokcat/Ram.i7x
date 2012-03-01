@@ -83,9 +83,8 @@ Tainted wool is a grab object. It is part of the player. Understand "patch"  as 
 
 The usedesc of Tainted wool is "You take out the small bundle of wool you acquired earlier, and your head swims slightly as your nose fills with its strong musky odor. Feeling a bit aroused by the strange scent, you slowly start to rub the wool up against your cheek in order to enjoy the smell better. The feeling of the soft wool rubbing against your body, as well as the arousing aroma, make you lose track of time for a minute, until you realize you can feel your body starting to change.";
 
-
-
-
+instead of sniffing Tainted wool:
+	say "The wool smells of ram musk.";
 
 
 

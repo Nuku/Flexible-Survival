@@ -1,7 +1,5 @@
 Sarah by Sarokcat&Hellerhound begins here.
 
-
-
 Section 1 - Sarah and the Husky pack
 
 Husky Pack is a situation.
@@ -96,7 +94,8 @@ sarahtalk is a number that varies.
 sarahslut is a number that varies.
 The description of Sarah is "A thin woman, with husky fur, a lolling tongue, and paws. There are white scar lines down her side where the huskies slashed her, and she has the slit of one of the feral bitches, just waiting to be filled. Her red collar stands out, with its leash ring on the back and the nameplate on front. [sarahslutstate][sarahpupstate]";
 
-
+instead of sniffing Sarah:
+	say "She smells like a [if sarahpregnant is not 0]pregnant, [end if]horny husky[if sarahslut > 2].  The scent of her arousal is quite strong from your lustful pet bitch[end if].";
 
 to say sarahslutstate:
 	if sarahslut is 0:

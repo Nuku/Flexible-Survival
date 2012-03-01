@@ -24,6 +24,12 @@ North of The Stables is Stable entry.
 
 The marea of Stable entry is "Stable".
 
+instead of sniffing Stables:
+	say "The air here is thick with the scents of many equines.  Arousal and sex is strong in the air as well.";
+
+instead of sniffing Stalls:
+	say "This lobby area smells strongly of equine sex coming from the nearby rooms.";
+
 
 [Additional rooms are easy as well]
 
@@ -43,7 +49,11 @@ Feeding Table is in Mares Quarters.
 Feeding Table is a man.
 The description of Feeding Table is "A large table that has been set up to the side of the room, it appears to have several different varieties of food set out on it. Perhaps not surprisingly, most of the food is of the type most attractive to horses, with several different types of oatcakes, and cereals set out, as well as some chips and grain trail mixes. There is also a small bowl of what appears to be labeled as, Mare[apostrophe]s Milk. Looking around, you note that some of the mares are eying you with curiosity as you look at the table, and a few even grin as they gesture for you to 'Sample the Food', maybe it wouldn[apostrophe]t hurt to 'Try the Horsefood' set out on the table?";
 
+instead of sniffing Mares Quarters:
+	say "The mares['] quarters smells strongly of mares and equine sex.  While the scent of the females living here is the strongest, there is the scent of many males as well, clearly left by their aroused [']visitors['].";
 
+instead of sniffing Feeding Table:
+	say "The food on the table smells pretty good and might help with your growing hunger.";
 
 Lastmarefed is a number that varies. Lastmarefed is usually 250.
 marefed is a number that varies. marefed is usually 0.
@@ -60,11 +70,12 @@ Check Marefeeding:
 	If Feeding Table is not visible, say "huh?" instead;
 
 Carry out Marefeeding:
-	if Lastmarefed – turns is less than 8:
+	if Lastmarefed - turns is less than 8:
 		say "You wander over to the table filled with food for the mares again, only to see several of the mares shooting you rather dirty looks as you look over the food. Sighing slightly, you decide that being greedy about the food isn[apostrophe]t worth annoying the so far polite horsewomen, and decide to try to snag some of the food again at a later time.";
 	otherwise:
 		say "Wandering over to the table filled with food on the side of the room, you notice several of the mares seem quite amused as you browse the selection, several of them coming over to help. The mares selecting several different bits of food for you to try, all the while they are giggling to themselves as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all the attention the mares have been giving you.";
 		decrease hunger of player by 10;
+		if hunger of player < 0, now hunger of player is 0;
 		infect "Mareslut";
 		increase libido of player by 20;
 		
@@ -75,16 +86,17 @@ Holding Pens is a room.
 The description of Holding Pens is "This area seems to be a rather large hallway, with several open doors leading into small cell like rooms, that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all the rooms seem to have been modified with small bars to make them hard to escape from. Interestingly enough, one of the Cells at the end of the hallway appears to be occupied, and next to it someone has hung a handmade sign, reading, 'Onyx'.";
 Onyx is in Holding Pens.
 
-
+instead of sniffing Holding Pens:
+	say "The holding pen smells like a mix of human and equine scents, though the equine scents are much stronger and overpowering the weaker human ones.";
 
 
 Employee Access is a room.
 
 The description of Employee Access is "This long narrow hallway curves north, and has several doors along the sides, eventually ending in a pair of large closed double doors, labeled Master[apostrophe]s Stable. Unfortunately most of the doors are sealed tight, and you will need to find the keys or some other way to open them before you can go any further in this direction.";
 
-
+instead of sniffing Employee Access:
+	say "This area smells particularly strongly of the dominant, equine scents beyond.";
 
 
 
 Stables ends here.
-

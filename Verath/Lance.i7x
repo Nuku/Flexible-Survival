@@ -10,6 +10,8 @@ Lancetalk is a number that varies.
 Lance is a man.[or woman]
 The description of Lance is "Leaning against the bar casually, is the lithe avian form of the black swan you rescued from the clutches of the heynas. He is now dressed in a loose black studded outfit, with lots of extra buckles, and his new beak already sports several piercings, which jingle slightly as he bobs his head to the loud music happily.";
 
+instead of sniffing Lance:
+	say "He smells like an avian male with the scents of gay sex clinging to his feathers.";
 
 The conversation of Lance is { "[Lancetalking]" };
 

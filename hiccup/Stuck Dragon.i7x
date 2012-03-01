@@ -25,6 +25,13 @@ after examining the Old Building:
 Isolated Street is a room. It is fasttravel. It is private. Inside from the Isolated Street is a room called Old Building.
 The description of Isolated Street is "The only thing of interest on this street is an old, rundown building that has been around for a while. It's been condemed for as long as you can remember, so you have no idea what this building was used for.";
 
+instead of sniffing the Isolated Street:
+	say "Being cut off, there are no irregular scents here.";
+
+instead of sniffing the Old Building:
+	say "The air in this old building is thick with the scent of aroused dragoness pussy.";
+
+
 Section 2 - Trapped Dragon Rear
 
 NoIntroduction is a number that varies. NoIntroduction is usually 0.
@@ -138,6 +145,9 @@ Instead of conversing the Dragoness:
 	otherwise:
 		say "'That was great, come back and fuck me again sometime. Gah! I meant to say, stay away from me you evil monster!'";
 
+instead of sniffing Dragoness:
+	say "The scent coming off this large dragoness and her huge pussy is very arousing.";
+
 Section 3 - Bypass the Blocked Door
 
 Another Ladder is a situation.
@@ -167,6 +177,12 @@ after examining the Back Room:
 Back Alley is a room. It is fasttravel. It is private. Inside from the Back Alley is a room called Back Room.
 The description of Back Alley is "You[apostrophe]re standing in an alley behind an old building. It[apostrophe]s the same old building that you found earlier. There is a side entrance to the old building here. Looks like you[apostrophe]ve found the way around the blocked doorway.";
 
+instead of sniffing Back Alley:
+	say "There are no unusual scents here.";
+
+instead of sniffing Back Room:
+	say "The scent of aroused dragoness hangs in the room.";
+
 Section 4 - Trapped Dragon Front
 
 FaceToFace is a number that varies. FaceToFace is usually 0.
@@ -178,6 +194,9 @@ after examining the Christy:
 		say "She looks like a dragon that was ripped straight from the pages of a fairy tale. The Dragoness has beautiful, scarlet colored scales and emerald colored eyes. There are two large wings on her back. She is laying on her back and her body is so large that it is completely stuck in the doorway with no space between her body and the doorframe. The infection must have caused her to rapidly grow to a huge size just as she was walking through the doorway, so she became stuck.";
 	otherwise:
 		say "She looks like a dragon that was ripped straight from the pages of a fairy tale. The Dragoness has beautiful, scarlet colored scales and emerald colored eyes. There are two large wings on her back. Now that she[apostrophe]s been freed from the doorway, you[apostrophe]re able to see just how big she is. She[apostrophe]s over 7 feet tall and 10 feet long!";
+
+instead of sniffing Christy:
+	say "The dragoness smells strongly of the arousal she's trying to suppress.";
 
 DragonFreeing is an action applying to nothing.
 
@@ -275,6 +294,9 @@ To HatchDragon:
 
 Small Dark Room is a room.
 The description of Small Dark Room is "You[apostrophe]re curled up in a ball inside a dark room that is so small that the walls and ceiling are pressing against your body from all sides. You should try to STRUGGLE to get out.";
+
+instead of sniffing Small Dark Room:
+	say "The only scent in here is a new, draconic odor that you can't identify.";
 
 Section 6 - When the game ends
 

@@ -249,6 +249,13 @@ The description of Sandra is "A mostly human female, if you didn't count the rab
 Sandra is in Rabbit Den.
 The conversation of Sandra is { "Did I mention my name is Sandra yet? I can be a ditz sometimes about that.", "It is so nice having someone around to talk with.", "Do you think someone will come rescue us?", "I hope my rabbit is ok. I mean, yea, it did kind of bite me and turn me into a crazy rabbit lady, but he is still my pet.", "You smell nice. God that sounded wierd, sorry.", "Hello there!" }
 
+instead of sniffing Rabbit Den:
+	say "This basement hidey-hole has a soft, musky scent in the air.  It smells of female rabbit, heather and clover.";
+
+instead of sniffing Sandra:
+	say "Sandra smells of female rabbit, with hints of heather and clover in her scent.";
+
+
 When play ends:
 	if Sandra is in the Bunker:
 		if hp of the player is greater than 0:
@@ -256,7 +263,10 @@ When play ends:
 				say "Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side despite your loss of humanity.  She remains with you, tending to your needs, all of them, as best she is able.  She does not permit you to predate on unchanged humans, tackling you to the ground when the urge becomes too strong and fucking you into a cooperative stupor.  Could anyone ask for a better friend?  ";
 			otherwise:
 				say "     Sandra remains a loyal friend and affectionate lover to you for the rest of your days, remaining at your side after you are all rescued from the infected city.  ";
-			if cocks of the player is greater than 0:
+			if cocks of player > 0 and bodyname of player is "Siren":
+				say "The lovely bunnygirl is particularly excited by your ability to deposit eggs into her and readily has you stuff her full of them on several occasions.  She is particularly eager to do this around springtime, painting the eggs after she pushes them out and handing them out to others on Easter.  Many young sirens join new families to further spread your infection thanks to Sandra's lustful efforts.";
+				increase score by 25;
+			otherwise if cocks of the player is greater than 0:
 				say "Eventually, she grows round and plump, and bears you a child.  The child emerges with rabbit ears, [one of]male[or]female[at random], and adorable.  The child grows up loving the both of you and is raised with fierce protectiveness.";
 				increase score by 5;
 			otherwise:

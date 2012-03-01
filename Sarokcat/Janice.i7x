@@ -10,6 +10,9 @@ Janicequest is a number that varies.[often used for quests or renamed to Janiceq
 LastJanicefucked is a number that varies. LastJanicefucked is usually 800.
 Janicefucked is a number that varies. Janicefucked is usually 0.
 
+instead of sniffing Janice:
+	say "Janice smells of vixen and lust, perfume and sex, longing and regret.";
+
 Janice is a woman.
 The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eying you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.";
 
@@ -142,7 +145,6 @@ carry out Vixenposing:
 Section 2- private rooms
 
 
-
 Section 1- Private club room
 
 Private club room is a room. 
@@ -151,6 +153,9 @@ The description of Private club room is "This smaller back room of the rather ra
 Janice is in Private club room.
 [in order to add additional rooms off the main room, merely type the new room and state that it is some direction from your current room. For example]
 SouthEast of Private club room is PALOMINO.
+
+instead of sniffing Private club room:
+	say "This back room smells of sex, heat and lust and is strong with Janice's vixen aroused scent.";
 
 
 Janice ends here.

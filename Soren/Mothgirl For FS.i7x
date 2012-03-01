@@ -128,6 +128,9 @@ name	desc	weight	object
 
 cock pill is a grab object. It is temporary. It is a part of the player.
 
+instead of sniffing cock pill:
+	say "The small pill smells faintly of male pheromones and arousal.";
+
 the usedesc of cock pill is "[cock pill use]";
 
 to say cock pill use:

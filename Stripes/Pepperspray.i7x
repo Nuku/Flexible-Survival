@@ -10,6 +10,9 @@ name	desc	weight	object
 
 pepperspray is a grab object. It is a part of the player. It is fast. It is not temporary.
 
+instead of sniffing the pepperspray:
+	say "Smelling the pepperspray cannister makes your eyes water.";
+
 to say pepperspraydrain:
 	if a random chance of 3 in 10 succeeds:		[average 3-4 uses]
 		say "Uh oh! That used up the last of that can and you drop it to the ground, empty.[line break]";

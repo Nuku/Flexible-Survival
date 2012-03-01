@@ -15,6 +15,9 @@ Brian is a man.
 The description of Brian is "You see an exceptionally large and well built Rhino man, obviously heavily infected, over by a series of cracks in the border wall. Easily eight feet tall or more, his body is covered in thick rough looking grey skin, he balances rather uneasily on his large hooflike feet, a large thick cock hangs rather limply between his legs, swaying slightly as he moves. His face is a cross between a humans and a rhinos, though it seems to lean more towards that of a beasts, especially with the large thick bony horn that protrudes from the top of his rhinolike muzzle.  He doesn[apostrophe]t seem to be the brightest of the infected, whatever he might have been before, this is emphasized by him lowering his his head so his horn is facing the wall... and charging forward at the thick concrete wall. There is a resounding impact as he staggers backwards slightly, holding his head, although you do think there are a few new cracks in the wall where he hit...";
 Brian is in Border Wall.
 
+instead of sniffing Brian:
+	say "Brian smells like a male rhino, covered in sweat.";
+
 The conversation of Brian is { "[Briantalking]" };
 
 To say Briantalking:
@@ -52,6 +55,9 @@ Diegofucked is a number that varies. Diegofucked is usually 0.
 Diego is a man.
 The description of Diego is "[Diegodescribed]";
 Diego is in Park Entrance.
+
+instead of sniffing Diego:
+	say "Diego smells like a [if diegochanged is 0]male[otherwise if diegochanged is 1]herm[otherwise]female[end if] coyote.";
 
 To say diegodescribed:
 	if diegochanged is 2:
@@ -240,6 +246,8 @@ Timothyfucked is a number that varies. Timothyfucked is usually 0.
 Timothy is a man.
 The description of Timothy is "Lying on a rather large pile of stolen cushions, is a rather striking blue furred gryphon, her attractive blue feathered wings half spread out behind her as she reclines back. The creatures talon like hands are absently rubbing its large white furred belly, obviously quite pregnant and unable to move quickly, its large breasts are slowly dribbling milk as it shifts its body slightly, giving you a good look at both its thick black cock resting up against the gryphons distended belly, and the rather large and obviously well used passage resting between the gryphons leonine thighs.  Its lionlike tail twitches where it is lying between her slightly spread legs, as the Hemaphrodite gryphon cocks her avian head to look at you, her tongue hanging out the side of her beak slightly as she pants and rubs herself a bit more. You notice a small collar with a tag hanging around her neck, the tag just reads 'Pet'";
 
+instead of sniffing timothy:
+	say "She smells like a hermaphrodite gryphon.  The scent of pregancy, egg-laying and sex hang thick around her.";
 
 The conversation of Timothy is { "[Timothytalking]" };
 
@@ -406,6 +414,9 @@ Gryphon nest is a room.
 The description of Gryphon nest is "This small room is tucked between several of the other tents filling the area, its soft canvas surrounding a small private enclosure filled with a large variety of different cushions and cloths, the soft light from the glowing floor and tent cloth illuminating the area. You can see several small items and trinkets, scattered amongst the cushions, but your eyes are drawn most to the heavily pregnant herm gryphon lying sprawled out on the cushions, a small collar with a tag hanging from around her neck.";
 Timothy is in Gryphon nest.
 Gryphon nest is west of City Plaza.
+
+instead of sniffing the Gryphon nest:
+	say "The nest area smells strongly of gryphon arousal, sex and egg-laying.";
 
 
 

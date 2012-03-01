@@ -88,20 +88,6 @@ When Play begins:
 	now loot entry is "Fish";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 
-Table of Game Objects(continued)
-name	desc	weight	object
-"Fish"	"A fish. It could be a big fish or a small fish, but it has scales on it. A sniff of it oddly reminds you of otters."	1	Fish
-
-Fish is a grab object. 
-
-Fish is infectious. The strain of Fish is "sea otter".
-usedesc of Fish is "[Fish]";
-The purified of fish is "food";
-
-To say Fish:
-	decrease the hunger of the player by 15;
-	if the hunger of the player is less than 0, now the hunger of the player is 0;
-
 when play ends:
 	if bodyname of player is "city sprite":
 		if humanity of player is less than 10:
@@ -114,8 +100,6 @@ when play ends:
 				say "Great glows of bright colors eminate off your body as you begin to shrink down. The sprite cloud arrives moments later, trying to lead you away. Your mind still sharp, you give another idea. They seem confused at your idea, and the leader steps forward to challenge her. Rather than fight her, you grab her up in a fierce kiss, hands wandering over her back and buttocks.[line break] [line break]When the kiss parts, she agrees to your terms, and you guide the sprites to a city, becoming a source of mystery and predating on the people there who need it most. Lonely Friday nights are a thing of the past.";
 			otherwise:
 				say "You are picked up by the rescuers just moments before you start to shrink down the rest of the way to Sprite size. You have a hard time getting a job being so small, at least until that advertising firm found you. You did quite well as a model, where scale meant a lot less. Besides, how could Sprite resist using you?";
-
-			
 
 
 [ Edit this to have the correct Name as wall]

@@ -11,6 +11,9 @@ The Dexterity of Gryphoness is 10;
 The summondesc of Gryphoness is "You sing out several notes of the song the way the gryphon you encountered taught you, your voice echoing through the empty city, and before long you hear an answering voice responding, and with flap of wings from above, and you look up just in time to see the herm gryphon you helped hurl herself into your arms, cooing and rubbing up against your body eagerly.";
 The assault of Gryphoness is "[one of]Your gryphon companion launches herself at your attacker![or]Your eager gryphon ally pounces on your foe![or]A soft song drifts through the melee, distracting your opponent![or]The sweet scent of Your Gryphon ally gives you the strength to land another hit![or] taking advantage of your foes distraction, the herm gryphon with you strikes out with her claws.[or] Your ally manages to grab onto your opponent,  providing you with an opening![or]The gryphoness charges into the melee to protect you, and your oppenent seems so startled at her charge they falls backwards[or]Striking from above, your gryphon ally rakes your opponent with her leonine legs.[or]Your opponent is distracted for a minute by a gryphon landing on their back from above![or]The gryphon with you slams at your opponent with her wings.[at random]";
 
+instead of sniffing Gryphoness:
+	say "Denise smells like a herm gryphoness, aroused and in heat.";
+
 An everyturn rule:
 	if companion of player is Gryphoness:
 		if a random number between one and 20 < 6:

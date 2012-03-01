@@ -346,6 +346,9 @@ name	desc	weight	object
 
 medium sledge is an armament. It is part of the player. It has a weapon "[one of]your sledgehammer[or]your well balanced sledgehammer[or]your heavy weapon[at random]". The weapon damage of medium sledge is 18. The weapon type of medium sledge is "Melee". It is not temporary.
 
+instead of sniffing medium sledge:
+	say "The large sledge smells of metal and broken concrete, plaster and heads.";
+
 
 Section 7-  horsepowering[Fancy quest part 3]
 

@@ -15,6 +15,8 @@ Nightmaremastery is a number that varies.
 Fancy is a man.[or woman]
 The description of Fancy is "A rather sexy looking mare eyes you with amusement from where she is seated at the small table she is using as a desk, wearing only her soft pelt of white horse fur and a set of white panties that reveal far more then they conceal. Her body is well built, and nicely rounded in all the right places, the horsewoman has nice strong thighs, and her powerful hooves stretch out in front of her, her legs slightly parted teasingly as she gives you a good view of her tightly stretched panties. She rests her equine muzzle on her slightly hooflike hands as she looks at you with anticipation, her deep blue eyes twinkling with amusement as she cocks her ears forward to hear what you have to say.";
 
+instead of sniffing Fancy:
+	say "Fancy smells like a strong, willful mare.  She smells strongly of sex and arousal, clearly an experienced lover.";
 
 The conversation of Fancy is { "[Fancytalking]" };
 
@@ -254,6 +256,9 @@ name	desc	weight	object
 "Nightmare Vial"	 "a small vial of some strange whitish liquid, though flashes of red and black can be glimpsed inside the swirling vial"	1	 Nightmare Vial
 
 Nightmare Vial is a grab object. It is part of the player. Understand "Vial" and "Nightmare" as Nightmare Vial. 
+
+instead of sniffing Nightmare Vial:
+	say "The scent from the vial's liquid is powerful, equine and sulfurous.";
 
 The usedesc of Nightmare Vial is "[nightmaremagic].";
 

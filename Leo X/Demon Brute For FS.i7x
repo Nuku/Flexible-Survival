@@ -78,6 +78,9 @@ demon seed is infectious. The strain of demon seed is "Demon Brute".
 
 the usedesc of demon seed is "The warm, sticky liquid tastes sweet as you drink it.";
 
+instead of sniffing demon seed:
+	say "The demonic semen smells cloyingly sweet.";
+
 [ Right now this only infects you, I would like to make it quench thirst and boost/lower stats in the future ]
 
 [ Edit this to have the correct Name as wall]

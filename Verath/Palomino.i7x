@@ -11,9 +11,11 @@ Tristian is in The PALOMINO.
 
 The invent of The PALOMINO is { "soda" , "soda" };
 
+instead of sniffing PALOMINO:
+	say "The infected dance club smells strongly of aroused males, sweat and sex.  Lots of sex.";
+
 
 Section 2-Tristian
-
 
 Tristiantalk is a number that varies.
 Tristianaroused is a number that varies.[not a needed number, but used to set different arousal states if they aren't automatically willing to just hop into bed.]
@@ -22,8 +24,10 @@ LastTristianfucked is a number that varies. LastTristianfucked is usually 250.
 Tristianfucked is a number that varies. Tristianfucked is usually 0.
 
 Tristian is a man.[or woman]
-The description of Tristian is "Approaching one of the dim booths a rather cute stallion boy turns to look at you. His shoulder length dark hair is cut into an emo style covering his left eye. You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digigrade legs. He’s also wearing a tight shirt that does nothing to hide his tight swimmers build, you notice the hints of pierced nipples pushing at the fabric of his shirt. On his wrists are spiked cuffs and a few shiny bracelets. As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip. Around his neck is a necklace that incorporates an ankh and a horseshoe.";
+The description of Tristian is "Approaching one of the dim booths a rather cute stallion boy turns to look at you. His shoulder length dark hair is cut into an emo style covering his left eye. You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digigrade legs. He's also wearing a tight shirt that does nothing to hide his tight swimmer's build, you notice the hints of pierced nipples pushing at the fabric of his shirt. On his wrists are spiked cuffs and a few shiny bracelets. As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip. Around his neck is a necklace that incorporates an ankh and a horseshoe.";
 
+instead of sniffing Tristian:
+	say "The stallion boy smells of leather and lust.  The scent of gay sex with various other males clings to him.";
 
 The conversation of Tristian is { "[Tristiantalking]" };
 

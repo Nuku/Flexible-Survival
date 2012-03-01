@@ -23,6 +23,9 @@ Instead of resolving a Hidden Kitty:
 Sven's Place is a room. It is fasttravel. It is private.
 The description of Sven's Place is "[svenplacedesc]";
 
+instead of sniffing Sven's Place:
+	say "The small basement apartment smells faintly of mold and snow leopard from its [if hp of Sven > 3]former [end if]occupant[if hp of Sven is 99].  The scent of snow leopard sex from the cum is strong[end if].";
+
 to say svenplacedesc:
 	if hp of Sven < 4:
 		say "     Hidden beneath one of the many homes in this neighbourhood, Sven's basement apartment has avoided scrutiny by the lustful hordes outside for the moment.  The rundown place has little furniture and fewer supplies.  It seems whatever stores the young man had are almost gone.  The apartment is tidy enough, with most of the mess coming from his confinement while hiding and not from slovenliness.  The place is made up of a small kitchen, a smaller bathroom and one small bedroom.";
@@ -40,6 +43,19 @@ Sven is a man.  Sven is in Sven's Place.  The hp of Sven is normally 0.
 The description of Sven is "[svendesc]";
 lastSvenfucked is a number that varies.  lastSvenfucked is normally 555.
 lastSvendrink is a number that varies.  lastSvendrink is normally 555.
+
+instead of sniffing the Sven:
+	if hp of Sven < 5 or hp of Sven is 50:
+		say "Sven smells faintly of male snow leopard and growing arousal.";
+	otherwise if hp of Sven < 8:
+		say "Sven smells increasingly of male snow leopard and sex.";
+	otherwise if hp of Sven < 50 and lust of Sven is 1:
+		say "Sven smells like a male snow leopard and heavily of sex[if hp of Sven is 8].  Your scent is mixed in with his[otherwise].  Aside from your scent all over him, there's a hint of cotton candy sweetness from his raccoon playmate[end if].";
+	otherwise if hp of Sven < 50 and lust of Sven is 2:
+		say "Sven smells like a male snow leopard and heavily of sex[if hp of Sven is 8].  He is marked quite thoroughly with your scent from all your messy fun with the kitty[otherwise].  Aside from your scent all over him, there's a hint of cotton candy sweetness from his raccoon playmate[end if].";
+	if hp of Sven is 51:
+		say "Sven smells faintly of snow leopard, mouse and sex.  There's a mix of male and female scents over him, lingering from his fun with Lisa.";
+
 
 to say svendesc:
 	if hp of Sven < 4:
@@ -454,6 +470,9 @@ Section 4 - Svetlana
 
 Svetlana is a woman.  The description of Svetlana is "[svetlanadesc]".
 [uses same variables as Sven for easier saving and restoration.]
+
+instead of sniffing the svetlana:
+	say "Svetlana smells of aroused female snow leopard.  Lisa's scent clings to her as well.";
 
 to say svetlanadesc:
 	if hp of Sven < 53:

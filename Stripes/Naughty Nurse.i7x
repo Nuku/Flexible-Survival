@@ -141,6 +141,8 @@ name	desc	weight	object
 
 healing booster is a grab object. It is a part of the player. It is fast. It is not temporary.
 
+instead of sniffing the healing booster:
+	say "The healing booster smells of chemicals and medicine.";
 
 when play ends:
 	if bodyname of player is "Vixen Nurse":

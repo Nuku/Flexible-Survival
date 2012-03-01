@@ -19,6 +19,8 @@ to say Daisydescribing:
 	otherwise:
 		say "Standing off in one corner of the room and trying to catch your attention without the other mares noticing is a rather youngish looking maregirl. A closer look at the mare shows that she is still only partially transformed, though her body is definitely showing the signs of her equine transformation. The tight electric blue g-string she is wearing shows off her newly enlarged cunt and new distinct cameltoe, and her face is almost completely equine and pushed out  into a proper muzzle while her ears have elongated into points and settled into their new position on top of her head. Her legs have also changed, although it is clear they are not quite complete yet, as they are longer and thinner and her heels have shifted upwards, forcing her to walk on her stiffening toes, they are well on their way to being proper digigrade legs like the rest of the mares.  Her half fearful half lust crazed look as she stares at you desperately makes you shudder as you realize how easily you could end up in her position.";
 
+instead of sniffing Daisy:
+	say "The dappled mare smells of horny mare and growing arousal.  She is soon to go into heat.";
 
 The conversation of Daisy is { "[Daisytalking]" };
 

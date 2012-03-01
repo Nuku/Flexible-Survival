@@ -7,6 +7,9 @@ Section 1 - The Situation
 Shrine is a room. "How odd for an American city. A Japanese style shrine lays nestled in the forest, tucked just off a faint trail and looking reasonably well upkept. There is a small box for donations, and a small mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
 Northwest of Park Trail is Shrine.
 
+instead of sniffing Shrine:
+	say "The shrine smells faintly of cherry blossoms and spring.  The scent puts you as ease.";
+
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shrine has a Grab Object called Demand.
 The demand of shrine is usually journal.

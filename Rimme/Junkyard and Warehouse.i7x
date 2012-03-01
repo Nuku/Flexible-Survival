@@ -10,12 +10,19 @@ Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehou
 
 South of Abandoned Lot is Warehouse Door.
 
+instead of sniffing Abandoned Lot:
+	say "This area smells of dry earth, old machinery and oil.";
+
+instead of sniffing Warehouse Door:
+	say "This area smells old machinery and oil, and behind that, faintly of human beings.";
+
 Section 2 - Entering the Warehouse
 
 Definition: a person is facially human:
 	if the facename of the player is "human", yes;
 	if the facename of the player is "Awesome tree", yes;
 	if the facename of the player is "city sprite", yes;
+	if the facename of the player is "Siren", yes;
 	no;
 
 Definition: a person is skintone human:
@@ -24,6 +31,7 @@ Definition: a person is skintone human:
 	if the skinname of the player is "elf", yes;
 	if the skinname of the player is "city sprite", yes;
 	if the skinname of the player is "harpy", yes;
+	if the skinname of the player is "Siren", yes;
 	no;
 
 Definition: a person is bodily human:
@@ -85,6 +93,9 @@ The storage room is a room. "The inside of this warehouse has been converted int
 
 South of the Warehouse Door is the Storage Room.
 
+instead of sniffing Storage Room:
+	say "The storage room smells of the human survivors and their supplies.  Fear is thick in the air, almost completely masking the faint traces of other non-human scents among the group.  It seems a few of them are at least slightly infected and desperately trying to hide it.";
+
 Section 2 - Steven, chat
 
 Stevenswayed is a number that varies. Stevenswayed is usually 0.
@@ -92,6 +103,10 @@ Stevenswayed is a number that varies. Stevenswayed is usually 0.
 Steven is a person in the Storage Room. "A guard who you recognize as the doorkeeper stands, understandably, by the big steel door. A nametag says 'Steven'."
 The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?"
 The conversation of Steven is {"[steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.", "I haven't washed this uniform in so long. I could really go for a non-infected shower."}.
+
+instead of sniffing Steven:
+	say "Steven smells strong and manly, reminding you of old cowboy movies for some reason.";
+
 
 Before conversing Steven:
 	if the player is in Storage Room:
@@ -201,6 +216,9 @@ Section 1 - The Office
 Steven's Office is a room. "The office is very sparsely decorated. A desk made from pallets and a chair made from crates sits on one corner of the room. A pallet in another corner functions as a bookshelf, showing a couple of books and a blackened popsicle picture frame, with 'Daddy' crayoned inside. Nothing else is decorated. A door leads back to the warehouse floor.";
 
 Outside of Steven's Office is Storage Room. Inside of Storage Room is nowhere.
+
+instead of sniffing Steven's Office:
+	say "The room smells like Steven, strong and manly.";
 
 Section 2 - Stevenfucking
 
@@ -348,6 +366,9 @@ Section 1 - The environment
 
 Junkyard Entrance is east of the Abandoned Lot. "In this dirty part of the town you stand on the road to an even dirtier place. The smells of the city junkyard, of rotting food and fetid water, reek from the north. The dirt road curves to the west, back to the abandoned warehouse complex."
 
+instead of sniffing Junkyard Entrance:
+	say "The junkyard smells predominantly of old machinery and oil, though there's a faint smell of normal trash as well.";
+
 Junkyard Gate is a door. "The junkyard to the north appears threatening and dangerous, but there's probably plenty of loot for the taking." Junkyard Gate is dangerous.
 
 North of Junkyard Gate is Junkyard Interior.
@@ -379,6 +400,9 @@ Section 3 - Steven's home
 Steven's home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private. Outside of Steven's home is Junkyard Entrance. Inside of Junkyard Entrance is nowhere.
 [The sarea of Steven's home is "Junkyard."]
 
+instead of sniffing Steven's home:
+	say "This spot in the junkyard smells of Steven and his manly, equine scent.  It only partially blocks the pervasive scent of the junkyard though.";
+
 a junkyard home is a situation.
 The sarea of a junkyard home is "Junkyard".
 
@@ -402,11 +426,21 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "crowbar"	"A big, heavy crowbar. It's not sharp, but it's heavy enough to strike a good blow."	3	crowbar
 "mallet"	"A heavy mallet. If you swung it hard enough, you could easily crack someone's head open."	5	mallet
-"iron pipe"	"A piece of iron pipe. It might make a good blunt weapon."	3	iron pipe
+"iron pipe"	"A piece of iron pipe. It might make a adequate blunt weapon."	3	iron pipe
 
 crowbar is a armament. It is a part of the player. It has a weapon "your crowbar". The weapon damage of crowbar is 6. The weapon type of crowbar is "Melee". It is not temporary.
 mallet is a armament. It is a part of the player. It has a weapon "your mallet". The weapon damage of mallet is 7. The weapon type of mallet is "Melee". It is not temporary.
-iron pipe is a armament. It is a part of the player. It has a weapon "your iron pipe". The weapon damage of iron pipe is 3. The weapon type of iron pipe is "Melee". It is not temporary.
+iron pipe is a armament. It is a part of the player. It has a weapon "your iron pipe". The weapon damage of iron pipe is 5. The weapon type of iron pipe is "Melee". It is not temporary.
+
+instead of sniffing the crowbar:
+	say "The crowbar smells of metal and motor oil.";
+
+instead of sniffing the mallet:
+	say "The mallet smells faintly of the junkyard where you found it.";
+
+instead of sniffing the beach plaza:
+	say "The iron pipe smells like old rust and whatever that hard, dry gunk inside was.";
+
 
 Instead of resolving an unused tool:
 	say "As you explore the junkyard, you come across a pile of discarded tools. You search through the pile for something interesting.";

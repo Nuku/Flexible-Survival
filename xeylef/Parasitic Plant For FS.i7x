@@ -118,6 +118,9 @@ Musky Cock Flower is a grab object.
 Musky Cock Flower has a usedesc "[facerape use]";
 Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic Plant"
 
+instead of sniffing Musky Cock Flower:
+	say "The strange blossom smells strongly of cum and male musk.";
+
 
 Section 4 - Heat
 

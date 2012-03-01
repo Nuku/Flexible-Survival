@@ -127,6 +127,8 @@ to say Peacock feather use:
 
 Peacock feather is infectious. The strain of Peacock feather is "peacock".
 
+instead of sniffing Peacock feather:
+	say "The long feather smells of an avian male and makes your mind foggy momentarily.";
 
 
 Male Peacock For FS ends here.

@@ -11,6 +11,9 @@ The Dexterity of little fox is 10;
 The summondesc of little fox is "Wriggling its way out of your pack, the cute little fox looks around the area before sitting down and staring at you with its bright shining eyes, eager to explore.";
 The assault of little fox is "[one of]The little fox darts forward quickly and trips your opponent![or]Yipping and harrassing your opponent, the little fox allows you to score a glancing blow![or]Growling ferociously, your little fox friend springs forward to attack, only to slip and knock over some junk nearby, luckily pelting your opponent with it.[or]Your oppenent jumps and twists around suddenly in pain, allowing you to see your little fox friend hanging onto their rear valiantly by their teeth.[or] taking advantage of your foes momentary distraction, your pet fox manages to get in a few solid nips.[at random]";
 
+instead of sniffing Little fox:
+	say "The little fox has the scent of normal vulpine musk.";
+
 Abandoned Fox is a situation.
 The sarea of Abandoned Fox is "Park";
 Instead of resolving Abandoned Fox:

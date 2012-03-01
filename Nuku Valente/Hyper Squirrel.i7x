@@ -61,9 +61,7 @@ Hyper Squirrel Girl is a situation.
 
 hsrp is a number that varies.
 Lastsquirrelfuck is a number that varies. Lastsquirrelfuck is usually 250.
-squirrelmulticock is a number that varies. squirrelmulticock is usually 0.
 squirrelfucked is a number that varies. squirrelfucked is usually 0.
-squirrelsister is a number that varies. squirrelsister is usually 0.
 squirrelspot is a number that varies. squirrelspot is usually 0.
 
 squirrelfucking is an action applying to nothing.
@@ -89,13 +87,6 @@ To squirrelfuck:
 	if skinname of player is "squirrel" and squirrelspot is 0:
 		now squirrelspot is 1;
 		say "Snow looks at you with some shock a moment before she grabs at your thick white fur, 'Oh, you ran into them!' she exclaims, 'And you got away, and you're sexy!' She stops talking then, shuddering and growing painfully hard. She begins to pant, almost hyperventilating as she shoves you up against a wall and kisses you fiercely for a moment, robbing you of breath. Finally, she draws back, swallowing heavily, 'I.. am so sorry. You just... smell like them. God, I... I almost didn... stayed with them. It was hard, ok?' She smiles gently, 'I[apostrophe]m glad you got away.'";
-	if squirrelsister is greater than 0 and facename of player is not "squirrel":
-		say "'Oh your ears!' she exclaims, approaching and cooing at you. She snuggles firmly, then leans in to kiss, pressing lips tightly for a moment before you feel her sharp teeth sinking into your lip. Brief pain flares before her infection spreads to you rapidly, regaining your squirrel ears.";
-		now face of player is "set of two long white squirrel ears twitching above your head, looking odd compared to your normal";
-		now facename of player is "squirrel";
-	if squirrelsister is greater than 1 and tailname of player is not "squirrel":
-		say "Snow frowns as she notices your lack of squirrel tail. She grabs you suddenly and hauls you across your lap. Without word or warning, she slaps your bottom firmly, and begins to spank you on the spot. Her stinging blows make your ass warm and red even as it begins to change, slowly regaining that lost squirrel tail. When it is completely restored, she waves a finger at you, 'And don[apostrophe]t you go losing it again.'";
-		now tailname of player is "squirrel";
 		now tail of player is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
 	say "Snow gives a bright giggle as you advance on her and she grabs at your right hand, drawing you tight to her curvy front. She grinds against you, the lump in her pants growing firm as she bites at an ear, 'Want to play? I am in the mood!' ";
 	if a random number from 1 to 2 is 1: [ tries to use her cock]
@@ -201,6 +192,13 @@ Snow is a person.
 The description of Snow is "This sexual beauty is about six feet, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break][bold type]Snow loves messing with weapons. Type upgrade (weapon) and she'll give it a working over.[roman type]";
 Snow is in squirrel Den.
 The conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" };
+
+instead of sniffing Snow:
+	if skinname of player is "squirrel":
+		say "Snow's powerful scent is very alluring now, reminding you of those wild squirrels, which gets your blood pumping and your loins ache with increasing arousal.";
+	otherwise:
+		say "Snow smells has a musky and alluring scent, a mix of male and female.  Her scent has hints of sex, nuts, oil and metal to it beneath that powerful smell of herm squirrel.";
+
 A person can be a smither.
 An armament can be improved.
 Snow is a smither.

@@ -100,11 +100,14 @@ name	desc	weight	object
 
 tuft of chin fur is a grab object.
 
+instead of sniffing tuft of chin fur:
+	say "This soft fur smells a little dusty, but quite nice.";
+
 the usedesc of tuft of chin fur is "[tuft of chin fur use]";
 
 to say tuft of chin fur use:
-	say "You dont see a real use for this item yet.";
-	
+	say "You don't see a real use for this item yet.";
+
 
 
 [ Edit this to have the correct Name as wall]

@@ -36,6 +36,9 @@ To say slut rat growth:
 	
 SlutRat Den is a room. "This little slice of 'heaven' is a cleaned out section of the sewers. Despite its location, it smells of a soft incense, mixed with the heavy, musky, odor of the rats that dwell within it. Large pillows have been thrown around, many supporting the full rumps of their rodent owners as they watch your movements. For entertainment, besides one another, small heaps of books have been scattered about wherever their owners last grew tired of them. A dart board is also set up on the far wall with small metal darts poking in it at wildly varying points.[slutratdenscene]". Slutrat Den is private. Slutrat Den is fasttravel. It has a number called visittimes.
 
+[ instead of sniffing SlutRat Den:
+	say "The den is heavy with the musky scents of the lustful rats, which is only slightly masked by the soft incenses."; ]
+
 SlutratSub is a number that varies.
 Slutratcor is a number that varies.
 

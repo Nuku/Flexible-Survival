@@ -86,6 +86,8 @@ instead of going east from Trevor Labs Lobby when the hp of doctor matt is great
 		now orthasstart is -1;
 		continue the action;
 
+instead of sniffing the Orthas:
+	say "Orthas smells like a strong, powerful dragoness[if orthasstart is 2 or orthasstart is 3].  She has a lingering scent of arousal hanging over her[otherwise if orthasstart is 4].  She has a strong scent of arousal and egg-laying hanging over her[end if].";
 
 Orthasfuck is an action applying to nothing.
 

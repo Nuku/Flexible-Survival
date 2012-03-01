@@ -6,7 +6,10 @@ Section 1- Tiger den enviornment
 
 Tiger den is a room. It is fasttravel. It is private
 
-The description of Tiger den is "Sparsely furnished, this large concrete basement bears a slight resemblance to your own emergency bunker back at the library, and while it seems to be not quite as well hidden, its size certainly seems to make up for it.  Half of the large room is however sectioned off by small movable screens someone has set up, seperating the basement into a slightly confusing maze of temporary rooms. In the half of the room that is still open, you can see several tiger like humans, with alterations ranging from merely tiger furred with some feline features, to those with a full tiger head and only a few human features like hands and walking on two legs, much like the one you rescued. It looks like they have barricaded the defensible entry way with scavenged furniture and items, and with the traps they seem to have placed in the empty building above, it seems like they should be safe from most of the infected as long as they can stay here, although several of the tigers do eye you warily as you move around the den, just in case you decide to do something stupid to cause trouble.";
+The description of Tiger den is "Sparsely furnished, this large concrete basement bears a slight resemblance to your own emergency bunker back at the library, and while it seems to be not quite as well hidden, its size certainly seems to make up for it.  Half of the large room is however sectioned off by small movable screens someone has set up, seperating the basement into a slightly confusing maze of temporary rooms. In the half of the room that is still open, you can see several tiger-like humans, with alterations ranging from merely tiger furred with some feline features, to those with a full tiger head and only a few human features like hands and walking on two legs, much like the one you rescued. It looks like they have barricaded the defensible entry way with scavenged furniture and items, and with the traps they seem to have placed in the empty building above, it seems like they should be safe from most of the infected as long as they can stay here, although several of the tigers do eye you warily as you move around the den, just in case you decide to do something stupid to cause trouble.";
+
+instead of sniffing Tiger den:
+	say "The enclosed basement hideout smells strongly of tigers.";
 
 
 
@@ -19,6 +22,9 @@ chasefucked is a number that varies. chasefucked is usually 0.
 Chase is a man.
 The description of Chase is "The large striped tiger man you helped out earlier is hanging around near the side of the den, watching as several of the other Tigerlike people here go about their business.";
 Chase is in Tiger den.
+
+instead of sniffing Chase:
+	say "The tigerman smells strongly of male tiger[if cunts of player > 0] and arousal[end if].";
 
 The conversation of Chase is { "[Chasetalking]" };
 
