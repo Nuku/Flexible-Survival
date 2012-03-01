@@ -8,14 +8,20 @@ Pirate Island is a room. It is fasttravel. It is private.
 
 The description of Pirate Island is "Finally the island with the treasure marked on the map! The small island seems to be a rather nice island not far off the coast, seeming just like many other similar islands in the area, this one happens however to be riddled with what seems to be a rather large amount of caves and tunnels, just waiting to be explored.";
 
+instead of sniffing Pirate Island:
+	say "The island smells of the ocean and fetid sea caves.";
+
 
 
 
 
 
 Treasure cave is a man.
-The description of Treasure cave is "Not just one cave but a large series of caves that dot the shores of the island, they look like the perfect place for some suspicious pirate to have hidden some treasure.  Still the dark openings look ominous, and you can hear water sloshing within some of them occassionally, it will take a lot of bravery to explore these caves.";
+The description of Treasure cave is "Not just one cave but a large series of caves that dot the shores of the island, they look like the perfect place for some suspicious pirate to have hidden some treasure.  Still the dark openings look ominous, and you can hear water sloshing within some of them occassionally, it will take a lot of bravery to explore these caves.  You will have to [']hunt for treasure['] in them.";
 Treasure cave is in Pirate Island.
+
+instead of sniffing Treasure cave:
+	say "The sea cases smell of stagnant sea air.";
 
 Treasurefound is a number that varies.
 Lasttreasurehunt is a number that varies. Lasttreasurehunt is usually 250.
@@ -24,9 +30,14 @@ treasurehunt is a number that varies. treasurehunt is usually 0.
 treasurehunt is an action applying to nothing.
 
 understand "explore caves" as treasurehunt;
+understand "explore the caves" as treasurehunt;
 understand "hunt treasure" as treasurehunt;
+understand "find for treasure" as treasurehunt;
 understand "explore treasure caves" as treasurehunt;
 understand "find treasure" as treasurehunt;
+understand "find the treasure" as treasurehunt;
+understand "search caves" as treasurehunt;
+understand "search the caves" as treasurehunt;
 
 
 check treasurehunt:

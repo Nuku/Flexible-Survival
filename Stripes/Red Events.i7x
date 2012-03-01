@@ -39,7 +39,8 @@ name	desc	weight	object
 
 riding crop is an armament. It is part of the player. It has a weapon "[one of]your riding crop[or]your crop[or]your leather crop[or]your disciplinary tool[at random]". The weapon damage of riding crop is 4. The weapon type of riding crop is "Melee". It is not temporary.
 
-
+instead of sniffing the riding crop:
+	say "The riding crop smells of leather and discipline.";
 
 Section 3- Raided Corner Store
 

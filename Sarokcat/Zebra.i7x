@@ -7,6 +7,8 @@ Zebra by Sarokcat begins here.
 Section 1 - Monster Responses
 
 when play begins:
+[These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
+[Delete the lines with unneeded flags and replace 'Template' with your creature's name entry.  Case sensitive.]
 	add { "Zebra" } to infections of guy;
 	add { "Zebra" } to infections of furry;
 

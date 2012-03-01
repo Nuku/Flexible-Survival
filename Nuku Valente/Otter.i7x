@@ -184,6 +184,25 @@ When Play begins:
 	now loot entry is "Fish";			[ Loot monster drops, ]
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
 
+
+Table of Game Objects(continued)
+name	desc	weight	object
+"Fish"	"A fish. It could be a big fish or a small fish, but it has scales on it. A sniff of it oddly reminds you of otters."	1	Fish
+
+Fish is a grab object. 
+
+Fish is infectious. The strain of Fish is "sea otter".
+usedesc of Fish is "[Fish]";
+The purified of fish is "food";
+
+To say Fish:
+	decrease the hunger of the player by 15;
+	if the hunger of the player is less than 0, now the hunger of the player is 0;
+
+instead of sniffing Fish:
+	say "It smells like a fish, somehow still fresh if a little odd... strangely reminding you of otters.";
+
+
 when play ends:
 	if bodyname of player is "sea otter":
 		if humanity of player is less than 10:
@@ -196,9 +215,7 @@ when play ends:
 				say "As the rescue arrives, you direct the military back out to the beach. With eager waves, you coax your friends up and all get rescued together, despite some initial misgivings by your raft mates. In time, the otters grow accostomed to civilized living, mostly, working as life guards for a wide strip of beach. After hours, you fill the waves with the sounds of lust and love.";
 			otherwise:
 				say "You are taken back to civilization, but find that, as an otter, you have a base need to be around water. You secure a job working at a city pool, where your aquatic skills come in handy, for rescues and training. You become a swim instructor for the city and remain so for the rest of your days, eagerly pressing your smooth form through the water.";
-
-			
-
+	
 
 [ Edit this to have the correct Name as wall]
 Otter ends here.

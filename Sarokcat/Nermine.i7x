@@ -23,6 +23,8 @@ before entering the Mall Atrium when The Mysterious Shop is known:
 	otherwise:
 		change the northwest exit of mall atrium to The Mysterious Shop;
 
+instead of sniffing Mysterious Shop:
+	say "The mysterious shop smells of scented candles and ancient secrets.";
 
 
 section 2- Nermine
@@ -41,6 +43,9 @@ angryhorguth is a number that varies.
 
 Nermine is a woman.
 The description of Nermine is " [Nerminedescribing] ";
+
+instead of sniffing Nermine:
+	say "Nermine smells like a female jackal.  Her scent is subtle and alluring.";
 
 to say Nerminedescribing:
 	if rarequesting is 13:
@@ -320,6 +325,9 @@ Section 3- Magic Bargain Bin
 
 Bargain Bin is a man.
 The description of Bargain Bin is "This large bin seems filled with a number of small packets, bottles, and charms, who knows what you could find in there? Above the bin someone has posted a recently drawn sign reading, 'You try bargain bin? You pull it out and you bought it, one pick for one packet of food and one bottle of water.' Reading the sign you aren[apostrophe]t exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try HUNTing a bargain, or SORTing through the bin?";
+
+instead of sniffing bargain bin:
+	say "The bargain bin smells like omens and mysteries... at a discount price.";
 
 strangebottledrink is a number that varies.
 
@@ -741,6 +749,9 @@ name	desc	weight	object
 
 Jackal totem is a grab object. It is part of the player. Understand "totem" and "jackal" as Jackal totem. 
 
+instead of sniffing jackal totem:
+	say "The totem smells like hot sand.";
+
 The usedesc of Jackal totem is "[jackaltotemmagic].";
 
 To say jackaltotemmagic:
@@ -1159,6 +1170,9 @@ Rare Counter is a man.
 The description of Rare Counter is "This Glass counter seems to hold several of the finer pieces in the store, some very fancy bits of art and some finely carved gems resting next to unusual porcelain dolls and ancient looking scrolls. It also seems to be missing several pieces, or at least there are several empty spots sitting open and waiting for something to be placed there, maybe you should Talk over it to Nermine for some more information about it...";
 Rare Counter is in The Mysterious Shop.
 
+instead of sniffing Rare Counter:
+	say "You smell the items on the counter and a shiver runs down your spine.  There is something strange and mysterious to these items and they should be handled with care.";
+
 Rarequesting is a number that varies.
 
 The conversation of Rare Counter is { "[rarecountertalking]" };
@@ -1273,6 +1287,9 @@ name	desc	weight	object
 Strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as Strange ankh. 
 
 The usedesc of Strange ankh is "[jackalankhmagic].";
+
+instead of sniffing Strange ankh:
+	say "The golden ankh smells faintly of desert sand and masculine musk.";
 
 To say jackalankhmagic:
 	if Nightmaretf is greater than 0:
@@ -1392,6 +1409,9 @@ The summondesc of strange doll is "You pull the strange little doll from the sho
 The assault of strange doll is "[one of]The strange doll picks up something from the ground nearby, and tries to stab your attacker with it![or]Running up under your attacker, your strange plush doll tosses itself at their legs, tangling them up![or]The strange doll of you mimics your attack, striking at your opponent![or]Your opponent suddenly cries out in pain, your little ally having managed to score a hit in a sensitive area.[or] taking advantage of your foes distraction, your little doll gets in several good hits.[or]All of a sudden your opponent stops fighting and begins to try to claw at their face, taking the opportunity to land an extra hit, you notice your little plush doll managed to climb up and put its hands over their eyes.[or]All of a sudden your opponent is startled by a sudden rain of debris tossed at it by your little ally, causing it to fall backwards[or]Imitating you, your little mini me attacks the beast with wild abandon![at random]";
 
 dollfound is a number that varies.
+
+instead of sniffing jackal totem:
+	say "The strange doll smells strangely like you.";
 
 when play ends:
 	if strange doll is tamed:

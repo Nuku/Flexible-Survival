@@ -16,6 +16,45 @@ understand "door" or "gate" as the cheetah door.
 south of cheetah door is Entryway.
 north of cheetah door is cheetah habitat.
 
+instead of sniffing Zoo entrance:
+	say "The whole area smells strongly of animal scents, arousal and sex.";
+
+instead of sniffing Fence Path:
+	say "The whole area smells strongly of animal scents, arousal and sex.";
+
+instead of sniffing Border Wall:
+	say "The whole area smells strongly of animal scents, arousal and sex.";
+
+instead of sniffing Cheetah Habitat:
+	say "Inside the cheetah habitat, it smells very strongly of aroused cheetah.  It makes you excited and weak in the knees.";
+
+instead of sniffing Entryway:
+	say "The whole area smells strongly of animal scents, arousal and sex.";
+
+instead of sniffing Main Path:
+	say "The whole area smells strongly of animal scents, arousal and sex.  The scent of the bird house to the south can faintly be smelled as well.";
+
+instead of sniffing Guardhouse:
+	say "The scent of lustful animal creatures is lesser in here.";
+
+instead of sniffing Roundabout:
+	say "The whole area smells strongly of animal scents, arousal and sex.  Close to the lion's den and snake house, those scents are the strongest.";
+
+instead of sniffing Lion Pit:
+	say "The lion's den smells strongly of those powerful felines and the scent of their arousal and sex is so thick in the air you can taste it.";
+
+instead of sniffing Snake House:
+	say "The whole area smells strongly of snakes.";
+
+instead of sniffing Bird House:
+	say "This habitat area smells strongly of birds.";
+
+instead of sniffing Gator Pit:
+	say "This enclosure smells strongly of the gators who once lived her.  The scents rising from the sewers make you pinch your nose shut.";
+
+instead of sniffing Bathrooms:
+	say "The bathrooms are thick with the musky scent of arousal and cum.  The air is sharp with the scent of urine from countless animal creatures.  The heavy scents in the air are arousing and make you long to find a beastly lover.";
+
 
 Entryway is a room. "The entryway of the zoo, it is paved with cobblestones. To the northeast is the rest of the exhibits. The cheetah exhibit is to the north.". Entryway is east of zoo entrance.
 Main Path is a room. "The main path of the zoo, it runs along the exhibits. The maintenance men used to use this. It looks like they are taking a break in the rest area to the northeast. This path is grey and white gravel. to the south is the bird house, and the roundabout is east of here." Main Path is northeast of entryway.
@@ -33,7 +72,7 @@ lion door is lockable and locked.
 
 
 Bird House is a room. "The bird house, with tons of critters in the large cage, flying around. There is a small door here leading into the enclosure. Back north is the exit to the path.". Bird House is south of main path.
-Bird Enclosure is a room. "The actual cage where the birds are kept. You can't believe you can actually touch the birds inside! Make sure not to be seen, or you could get busted by the security gurads and locked up overnight. the sign on the wall says they will not give you your 'basic rights'. [birdrape]".
+Bird Enclosure is a room. "The actual cage where the birds are kept. You can't believe you can actually touch the birds inside! Make sure not to be seen, or you could get busted by the security guards and locked up overnight. the sign on the wall says they will not give you your 'basic rights'. [birdrape]".
 
 Bathrooms is a room. "The bathrooms, complete with toilets, but the stall doors have all been ripped off and there is some kind of musk in the air, it makes you feel a little sleepy. You shake it off. Then you notice there are pawprints on the floor.". Bathrooms is south of entryway.
 
@@ -72,6 +111,13 @@ to say cheetahrape:
 Zoo Giftshop is a room.
 Zoo Giftshop is west of Zoo entrance.
 
+instead of sniffing Zoo Giftshop:
+	if angiearoused is 3:
+		say "The musky scent of panther sex fills the air in here.";
+	otherwise if angiefound is 1:
+		say "As Angie's new home, the gift shop smells of panther.";
+	otherwise:
+		say "There is the scents of many animal creatures having been through here.";
 
 The invent of Zoo Giftshop is { "chips" , "soda" };
 
@@ -80,16 +126,10 @@ The description of Zoo Giftshop is "[shopappearance]";
 to say shopappearance:
 	if angiearoused is 3:
 		say "The Zoo[apostrophe]s giftshop now looks decidedly different, much of the destroyed merchandise has bee thrown out at this point, and the floor is relatively clear and clean. The destroyed soda and snack machines are still standing over In the corner, although it looks like Angie has probably gone through and recovered anything of use from them already. The walls of the shop are now decorated with posters of large cats running and posing, with the pictures of panthers being the most prominently displayed. Other feline themed merchandise is scattered around the place prominently, and it looks like Angie has laid out a number of animal print blankets over in the corner near the register counter for her and Midnight to sleep, although from the musky scent of feline arousal filling the air, you doubt that sleeping is the main priority for either of them. "; 
-		stop the action;
-	if Angiefound is 1:
+	otherwise if Angiefound is 1:
 		say " The Zoo[apostrophe]s giftshop is looking much better now that Angie is here, much of the destroyed merchandise has been swept into one corner to be sorted through at this point, leaving the rest of the floor relatively clear. The destroyed soda and snack machines are still standing over In the corner, although it looks like Angie has probably gone through and recovered anything of use from them already. The shelves that once held the books on the various animals throughout the zoo now hold stacks of rescued papers instead, Angie obviously saving the most legible pieces from the various destroyed books in case they might be useful later. There is a small employees only door behind the counter, leading to the breakroom and the employees bathroom.";
-		stop the action;
 	otherwise:
 		say "The Zoos own personal giftshop, the place is decorated in safari paraphanalia and merchandise bearing the images of various animals is displayed prominently.  Unfortunately it seems several of the animals have decided to pay the shop a visit themselves, and much of the merchandise has been clawed or strewn around the floor.  Special attention seemed to have been paid to the soda and snack machines, which have been smashed open and their contents mostly emptied around the room, though you think there might be a few items left if you look hard enough. Looking around you spot a section that at one time was full of books detailing the habits and practices of many of the zoo animals, these could have at one point been very useful to you in your current situation, if they weren[apostrophe]t already clawed near to bits. There is a locked door behind the cashiers counter marked 'Employees only'.";
-
-
-
-
 
 
 angietalk is a number that varies.
@@ -106,6 +146,12 @@ to say angieappearance:
 		say "Wandering around the gift shop happily, is the six foot talk humanoid black panther herm you brought back from the zoo, she looks slightly more beastial now that she has given in to her new bodies urges so completely. Her large black furred breasts swinging freely around as she moves things around in the shop, Angie has obviously abandoned any pretense at being human, as she is now clad only in her soft black fur. Her long panther tail lashing behind her teasingly, and her half erect feline cock poking seductively out of its sheath above her damp female sex She shoots you a teasing smile as she notices you watching her, pausing for a minute to stretch and give you good view of her partially feline body, balancing easily on her large feline paws as she stalks around the shop with feline grace."; 
 	otherwise:
 		say "Standing over by the counter eyeing the destruction in the store sadly, is a large six foot tall humanoid black panther.  Her large breasts having torn her shirt, and she has obviously not found anything to replace it in her new size amongst the devastation in the store, she is still wearing her zoo workers vest, though it too is several sizes too small for her new frame.  She has replaced her torn shorts with a short khaki skirt with a little cheerful lion waving on them, though this does little to hide the bulge where her new cock presses against the fabric, and her long black tail lashes idly behind her, lifting the rear of the skirt up for easier access from behind.  She seems to balance easily on her new paws however, her movements swift and smooth like that of the hunting cat she now resembles.";
+
+instead of sniffing Angie:
+	if angiearoused > 1:
+		say "Angie's scent is that of a herm panther, heavy with the smell of sex and arousal.";
+	otherwise:
+		say "Angie's scent is that of a herm panther, with a hidden scent of supressed arousal.";
 
 Every turn while angiefound is 1:
 	move Angie to the Zoo Giftshop.
@@ -127,11 +173,14 @@ name	desc	weight	object
 
 
 to say Catnip use:
-	say "You open the packet of Catnip and take a deep whiff";
+	say "You open the packet of Catnip and take a deep whiff.";
 		say "You gasp as scent hits you like a sledge hammer, bringing you instantly to full arousal.";
 		increase libido of player by 100;
 		Remove "catnip" from invent of player;
 		Stop the action;
+
+instead of sniffing catnip:
+	process catnip;
 
 The conversation of Angie is { "[angietalking]" };
 
@@ -370,16 +419,6 @@ carry out angielearned:
 	otherwise:
 		say "'Sorry hun,' the large panther herm says with a sigh as she absentmindedly rubs her large tits, 'But I[apostrophe]m a bit too distracted to be helping anyone else out with learning anything right now.'";
 		stop the action;
-
-
-
-
-
-
-
-
-
-
 
 
 

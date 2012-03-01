@@ -40,6 +40,9 @@ after examining the player:
 	if hasgills is 1:
 		say "You have small gills on your neck, a result of eating strange fruit.";
 
+instead of sniffing gill fruit:
+	say "The strange fruit has a faint, fishy scent.";
+	
 
 gill fruit is a grab object;
 gill fruit has a usedesc "[gill fruit use]";
@@ -88,7 +91,10 @@ after looking when the player is in the public beach:
 
 
 The Sloping Sand is a room. "The sand here slopes gently downward, with a few rising dunes under the water causing shallow and deep areas, but always progressively passing deeper into the ocean.  From here, you have a better view of the rocky area with the crashing waves.  It looks like a rather unhealthy area to swim - but at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks.";
-the Sloping Sand is southeast of public beach. 
+the Sloping Sand is southeast of public beach.
+
+instead of sniffing Sloping Sand:
+	say "All you can smell out here is the strong scent of the ocean.";
 
 before swimtoing The Sloping sand:
 	if hasgills is not 1:
@@ -105,6 +111,9 @@ Coral Ring is south of the Sloping Sand.
 
 The coral ring is a room. "A huge ring of red coral arches over your head, allowing you passage through the choppy waters by the jagged rocks.  By passing through here, you are able to move to and from the deeper reaches of the sea.  To the south from here, you can see a shadowy shape beneath the water, barely at the limits of your restricted vision in the deeper waters.  It seems like a sunken ship, its broken mast helping you distinguish the shape.  It looks like there's a shipwreck to explore!".
 
+instead of sniffing Coral Ring:
+	say "All you can smell out here is the strong scent of the ocean.";
+
 after entering the coral ring:
 	say "You look up with awe, sure this accomplishment was great.";
 	increase score by 5;
@@ -120,6 +129,9 @@ The description of Sunken Ship is "A large ship lays sunken and rotting here.  F
 
 The invent of Sunken Ship is { "Sea Dragon Cum" , "Sea Dragon Cum" };
 
+instead of sniffing Sunken Ship:
+	say "You can't smell anything while underwater.";
+
 
 Section 3 - Sea Dragon Cum
 
@@ -127,6 +139,9 @@ Section 3 - Sea Dragon Cum
 Table of Game Objects(continued)
 name	desc	weight	object
 "Sea Dragon Cum"	"Thick seed from one of the dangerous sea dragons that marauds the coast. It is rarely found concentrated like this."	1	sea dragon cum
+
+instead of sniffing sea dragon cum:
+	say "The cum smells powerfully of a male sea dragon.";
 
 to say sea dragon cum use:
 	if the cunts of the player > 0:
@@ -148,7 +163,6 @@ to say sea dragon cum use:
 			infect "feral sea dragon";
 		otherwise:
 			infect "feral sea dragoness";		
-
 
 sea dragon cum is a grab object;
 sea dragon cum has a usedesc "[sea dragon cum use]";

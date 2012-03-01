@@ -45,6 +45,21 @@ Coleenspray is a number that varies.
 Coleen is a woman.
 The description of Coleen is "[Collenstatus]";
 
+instead of sniffing Coleen:
+	if coleenalpha > 0:
+		say "Coleen smells of aroused female husky.  The scents of her roaming the city for sex linger on her.  Something in her scent makes you consider submitting to the lustful husky.";
+	otherwise if coleenslut is 1:
+		say "Coleen smells of aroused female husky.  The scents of her roaming the city for sex linger on her.";
+	otherwise if coleencollared is 1:
+		say "Coleen smells of aroused female husky.  The scents of her lustful escapades with you and Sarah cling to her thickly.";
+	otherwise if sarahslut is 4 or sarahslut is 3:
+		say "Coleen smells increasingly of aroused female husky, though some lingering traces of her human scent remain.";
+	otherwise if sarahslut is 2 or sarahslut is 1:
+		say "Coleen smells mostly human, though faintly female husky as well.";
+	otherwise:
+		say "Coleen smells like a human female.";
+
+
 to say Collenstatus:
 	if coleenalpha is greater than 0:
 		say "The nervous military woman you rescued from the tree is completely gone now, and in her place is a happy little husky bitch.  The new bitch doen[apostrophe]t seem to mind the changes a bit however, reveling in the lovely feel of her new hypersexualized body, her damp slit still showing signs of her latest mating as she prances happily around the bunker in just her bare fur. She seems to have acquired a small pile of trophies and toys stacked up in her corner of the bunker, evidence of her many trips outside to hunt and fuck, although you never can actually manage to catch her outside of the bunker when you come back. Still she seems to be the happiest husky bitch you have ever come across, and her teasing glances and the way she wiggles her ass at you with abandon makes you wonder what it would be like to just give in and become a happy little bitch yourself....";

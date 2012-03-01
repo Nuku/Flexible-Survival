@@ -11,6 +11,10 @@ The Dexterity of Exotic Bird is 15;
 The summondesc of Exotic Bird is "Hearing you whistle, the exotic bird flaps over and takes up position overhead, keeping an eye out for any threats.";
 The assault of Exotic Bird is "[one of]The Exotic Bird dive bombs your opponent![or]the exotic bird flaps its wings in your adversarys face, blinding it![or]diving down to engage, your bird friend scratches at your opponent with its talons![or]Your oppenent jumps and twists around in pain with an exotic bird pecking at its scalp.[or] taking advantage of your foes momentary distraction, your pet bird manages to land a few quick attacks.[or] Your bird friend takes a moment to relieve itself, fortuitously right on your opponent.[at random]";
 
+instead of sniffing Exotic Bird:
+	say "It smells like an exotic bird with a faint, tropical scent to it.";
+
+
 Scared bird is a situation.
 The sarea of Scared bird is "Zoo";
 Instead of resolving Scared bird:

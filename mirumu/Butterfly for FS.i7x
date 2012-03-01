@@ -586,16 +586,16 @@ pristine negligee is a grab object. It is temporary. It is a part of the player.
 damaged negligee is a grab object. It is temporary. It is a part of the player.
 cute panties is a grab object. It is temporary. It is a part of the player.
 
-instead of smelling testosterone pill:
+instead of sniffing testosterone pill:
 	say "The testosterone pill is largely odourless, but a very faint scent conjures images of motor-oil, sawdust and duct tape.";
 
-instead of smelling pristine negligee:
+instead of sniffing pristine negligee:
 	say "The pristine negligee smells fresh airy just like the day it was made.";
 
-instead of smelling damaged negligee:
+instead of sniffing damaged negligee:
 	say "The damaged negligee smells of sex. You take a whiff and almost collapse as a wave of the butterfly[apostrophe]s scent, pheromones and sexual fluids fills you.";
 
-instead of smelling cute panties:
+instead of sniffing cute panties:
 	say "The cute panties smell like freshly aired linen with a slight hint of perfume.";
 
 
@@ -906,7 +906,7 @@ to say lingerie store scene:
 			add "cute panties" to invent of lingerie store;
 			now ButterflyPantiesFound is True;
 
-instead of smelling lingerie store:
+instead of sniffing lingerie store:
 	say "The store has a somewhat musty smell as the air conditioning hasn[apostrophe]t been turned on for some time. The product however smells fresh and newly manufactured.";
 
 Section 9 - Trixie support

@@ -141,7 +141,7 @@ Definition: A situation(called X) is close:
 	if sarea of X matches the text battleground, case insensitively:
 		if hardmode is true:
 			yes;
-		otherwise if the level of X is less than (the level of the player plus levelwindow):
+		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):
 			yes;
 	no;
 
@@ -482,7 +482,7 @@ To say felitaur tempt:
 	otherwise:
 		say "The cat gives a soft huff, almost a hiss, then flees on quick feline paws, her shapely rump the last thing seen.";
  
- to say latexfoxrape:
+to say latexfoxrape:
 	if libido of player is 0:
 		say "The latex fox gets an odd expression before a soft hissing is heard. The poor creature slowly sinks to the ground as the air escapes it, softly whining until it is an inanimate pile of latex.";
 		stop the action;
@@ -771,7 +771,7 @@ carry out hunting:
 				break;
 		if found is 0:
 			repeat with z running through situations:
-				if hardmode is false and the level of z is greater than (the level of the player plus levelwindow), next;
+				[ if hardmode is false and the level of z is greater than (the level of the player plus levelwindow), next; ]
 				if z is resolved, next;
 				if sarea of z matches the text battleground, case insensitively:		[Only situations in this zone can be hunted]
 					let tempnum be 0;			[do-nothing action]

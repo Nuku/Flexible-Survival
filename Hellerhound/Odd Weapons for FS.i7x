@@ -22,12 +22,23 @@ Does the player mean grabbing the clean whip when the clean whip is visible: it 
 
 dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your horsy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
 
+instead of sniffing dirty whip:
+	say "The sticky whip smells of equine cum.";
+
 clean whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]". the weapon damage of clean whip is 6. The weapon type of clean whip is "Melee". It is not temporary.
 
+instead of sniffing clean whip:
+	say "The clean whip smells of leather and oils.";
 
 garbage can lid is a armament. It is a part of the player. It has a weapon "[one of]your large shield[or]your lid[or]your trusty lid[or]flashing grey circle[at random]". The weapon damage of garbage can lid is 5. The weapon type of garbage can lid is "Melee". It is not temporary.
 
+instead of sniffing garbage can lid:
+	say "A heavy scent of garbage fills your nose as you sniff your makeshift shield.";
+
 infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. the purified of infected sword is "Nothing".
+
+instead of sniffing infected sword:
+	say "The infected sword smells of a myriad of musky scents, all shifting and changing.  You can never seem to identify a scent before a new one appears.";
 
 instead of purifying an infected sword:
 	say "The sword sets the sides of the microwave on fire, and Matt rushes over and sprays it with the fire extinguisher. 'What are you doing?' he exclaims, 'Don't you know what happens when you put metal in the microwave?";

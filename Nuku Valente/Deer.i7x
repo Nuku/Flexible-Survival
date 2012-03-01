@@ -15,6 +15,9 @@ Susan is a person. "Susan, a bipedal deer.". The description of susan is "A bipe
 unusual creature is a situation. It is resolved.
 The sarea of unusual creature is "Park";
 
+instead of sniffing Susan:
+	say "The herm deer has a mix of doe and buck scents, heavy with arousal and longing.";
+
 After resolving a unusual creature, try looking;
 
 Instead of resolving unusual creature:

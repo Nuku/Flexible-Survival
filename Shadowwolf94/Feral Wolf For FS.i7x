@@ -95,6 +95,9 @@ name	desc	weight	object
 
 wolf cum is a grab object.
 
+instead of sniffing wolf cum:
+	say "The wolf semen smells of wolves and cum, naturally.";
+
 the usedesc of Wolf Cum is "[Wolf Cum use]";
 
 to say Wolf Cum use:

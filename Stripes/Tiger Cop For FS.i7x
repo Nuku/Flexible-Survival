@@ -124,6 +124,9 @@ Section 2 - Tiger Cop character and Police Car location
 Police Car is a room. It is private. It is fasttravel.
 The description of Police Car is "[policecardesc]";
 
+Instead of sniffing the Police Car:
+	say "This area smells faintly of gasoline and sun-heated cars, as well as dried patches of old cum.";
+
 to say policecardesc:
 	if Sgt Marks is in Police Car:
 		say "     This intersection seems to be the sight of a major crash, which must of happened as the chaos was reaching its peak.  There are several cars smashed into a cluster, many with doors open and messy stains in their interiors.  There are scattered clothes and more of these old stains littering the intersection and the cars.  In one of the streets leading to this mess is a cop car sideways in the street with streaks marks from its sudden stop.  More cars are blocking the street behind it, penning it in.  Like most of the streets, this spot is impassable by vehicle now.  Sitting on the hood of the cop car is a large tiger in a police uniform, Sgt Marks.  The feline cop is looking over his gear, getting it all packed up and ready.";
@@ -142,6 +145,8 @@ Sgt Marks is a man. Sgt Marks is in Police Car.
 The description of Sgt Marks is "     The tiger cop is quite large and impressively strong looking.  His police jacket hangs open, unable to close around his broad, striped chest.  His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered.  To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast.  His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.";
 sgtmarkstalk is an number that varies.
 
+Instead of sniffing the Sgt Marks:
+	say "The tiger cop growls and pushes you away as you come up to sniff him.";
 
 Instead of conversing the Sgt Marks:
 	if sgtmarkstalk is 0:
@@ -472,6 +477,8 @@ name	desc	weight	object
 
 nightstick is an armament. It is part of the player. It has a weapon "[one of]your nightstick[or]your t-baton[or]your side-handle baton[or]your police nightstick[or]your black nightstick[at random]". The weapon damage of nightstick is 6. The weapon type of nightstick is "Melee". It is not temporary.
 
+instead of sniffing the nightstick:
+	say "The nightstick smells faintly of violent authority.";
 
 Section 7 - Monster Desc for Tiger Cop
 

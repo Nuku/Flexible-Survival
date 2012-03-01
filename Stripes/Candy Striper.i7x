@@ -101,8 +101,10 @@ The Dexterity of pink raccoon is 14;
 The summondesc of pink raccoon is "Coming happily to your call, the girly raccoon runs up to you and wraps his arms around you, hugging you close.  He churrs happily, ready and eager to obey.";
 The assault of pink raccoon is "[one of]The raccoon charges in, regardless of any risk to himself and strikes wildly at your enemy![or]Your raccoon pet leaps at the enemy, trying to tackle them.  He gets them off balance long enough for you to score a quick hit before he's tossed off![or]Yipping angrily, he nips at your foe![or]The coon boy hikes up his skirt and starts masterbating, shooting his hot seed onto his dress in a show that distracts your foe long enough to get in a quick strike![or]The raccoon grabs stray trash and rubble, pelting your enemy with it![at random]";
 
+instead of sniffing the pink raccoon:
+	say "The pink coonboi smell of cotton candy, arousal and sex, all with a faint hint of your own scent beneath that.";
 
- An everyturn rule:
+An everyturn rule:
 	if companion of player is pink raccoon:
 		increase libido of player by 2;
 		let diceroll be a random number from 35 to 150;			[lust check vs 150, player libido 35 or less auto-wins]
@@ -236,6 +238,9 @@ The description of Candy is "[coondesc]";
 candytalk is a number that varies.
 lastCandyfucked is a number that varies.  lastCandyfucked is normally 555.
 coonsex is a number that varies.
+
+instead of sniffing the Candy:
+	say "The candy coon smell of cotton candy, male arousal and sex.";
 
 to say coondesc:
 	say "     The pink raccoon, now going by the name of Candy, is staying peaceably in the bunker.  His fur is a light grey with pink highlights.  His raccoon mask is pink, as are the stripes on his body and tail.  The raccoon has an effeminate body with a tight ass and slender figure.  He's sewed his candy striper uniform and is happily prancing around in it, looking quite cute.  Watching him, you do notice that he's found some lace-trimmed panties to add to his ensemble, keeping him from completely showing when he sashays around.  He's largely keeping himself out of trouble, though occasionally seems to revert to more primal needs and [if hp of Sven is 10]coaxes your feline pet into some more playtime[otherwise]masturbates furiously until the room smells of cotton candy from his sweet cum[end if].  You find yourself unsure if he's succumbed to the nanites or not, but he's here now and you will just hope for the best for the moment.";

@@ -95,4 +95,10 @@ The description of Hadiya is "A tall, obviously intimidating hyena. The sharp pr
 Hadiya is in Hyena Shack.
 The conversation of Hadiya is { "'So you actually came? That didn[apostrophe]t take long.'" };
 
+instead of sniffing Hyena Shack:
+	say "This places smells quite strongly of hyena herm and male sex.";
+
+instead of sniffing Hadiya:
+	say "Hadiya smells like a strong, dominant hyena herm.";
+
 Hadiya ends here.

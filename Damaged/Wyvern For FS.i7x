@@ -107,6 +107,8 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Wyvern Goop"	"Thick, white and yellow, it seems to almost pulse with the ability to sustain life."	1	wyvern goop
 
+instead of sniffing wyvern goop:
+	say "The sticky gel has an acrid, spicy scent.";
 
 To say wyvern goop use:
 	say "Eating the goop you feel all your needs sated, calm and relaxed you could almost sleep, but not before you churr happily to yourself as you drift off and do just that.";

@@ -8,6 +8,9 @@ State fair is a room. It is fasttravel.
 
 The description of State fair is "The entrance to the state fair, colourful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up, it looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.";
 
+instead of sniffing State fair:
+	say "The scents of popcorn and cotton candy and other treats fill the air.  Beneath those enticing scents there lies the strange scents of arousal, as if those musky scents are trying to hide beneath them.  Among those scents, you catch the whiff of [one of]several felines[or]a rubbery scent[or]plush toys[or]male arousal[or]female heat[or]manly sweat[or]lupine cum[at random]";
+
 Midway is a room.
 Midway entry is a door. "The midway stretches to the west.". It is dangerous.
 
@@ -26,6 +29,9 @@ borisfucked is a number that varies. borisfucked is usually 0.
 Boris the lion is a man.
 The description of Boris the lion is "Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair.  Even you recognize that the person is dressed up as  the (semi)famous Boris the lion suit.  Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic then any you suit you have ever seen before, a closer look shows there is no loose areas of skin on the costume, and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn[apostrophe]t a suit anymore, its Boris the lion!";
 Boris the lion is in State fair.
+
+instead of sniffing Boris:
+	say "Boris smells faintly of funfur and lions[if borisquest is 5].  The scent of his new maleness is strong around him[end if].";
 
 The conversation of Boris the lion is { "[boristalking]" };
 
@@ -161,6 +167,9 @@ Carnival game is a man.
 The description of Carnival game is "standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.";
 Carnival game is in State fair.
 
+instead of sniffing Carnival game:
+	say "The automated carnival game smells of cheap wiring and strange prizes.";
+
 
 Lastgameplay is a number that varies. Lastgameplay is usually 250.
 gameplay is a number that varies. gameplay is usually 0.
@@ -208,10 +217,4 @@ carry out gameplay:
 
 
 
-
-
 State Fair ends here.
-
-
-
-

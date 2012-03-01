@@ -14,6 +14,8 @@ Harold is in The PALOMINO.
 Harold is a man.[or woman]
 The description of Harold is "Standing behind the bar is a well built rather horse like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons, his slightly hooflike hands not seeming to slow him down at all. A black leather vest resting against his pure white fur and making him look even more striking due to the sharp contrast of colours. Even more striking however, is the spiraling horn emerging from the center of the equines forehead, it[apostrophe]s pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking his direction, the equine barkeep winks at you, and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers";
 
+instead of sniffing Harold:
+	say "Harold has an equine scent laced faintly with that of several fine alcohols.";
 
 The conversation of Harold is { "[Haroldtalking]" };
 
@@ -90,6 +92,9 @@ Drink bar is in The PALOMINO.
 
 Drink bar is a man.
 The description of Drink bar is "This well stocked bar is full of a number of drinks you have never seen before, some of them obviously made on site or probably nearby, as they are stored in all sorts of different bottles obviously scavanged and cleaned for the purpose with their labels removed. A small Sign on the bar lists the available drinks. To order a specific drink from the bar, merely 'Order 'drink name'', although a small notation on the drink sign does say that there is a daily drink limit. The list of drinks is as follows.  Equestrian Ale. Black wolf beer. Cheetah Chaser. Succubi Delight. Gryphon gulp. Satyr Special. Panda Pint. Harpy heaven. Jaguar Lager. Sabre Savager. Chocolate Rum. Tigress Tequila. And Zebra Vodka.  ";
+
+instead of sniffing Drink bar:
+	say "The drink bar smells of a myriad of alcoholic drinks.  Past the regular scents of booze, there are faint traces of several of the creatures you've seen in the city in the air here.";
 
 Aledrinking is an action applying to nothing.
 

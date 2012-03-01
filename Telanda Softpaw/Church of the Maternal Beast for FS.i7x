@@ -27,9 +27,14 @@ Southwest of Beach Plaza is Public Beach.
 Sea is a door. "The sea is visible to the east. What things lurk within?". Sea is dangerous.
 The marea of sea is "Beach";
 
-
 East of Public Beach is Sea.
 East of Sea is Ocean.
+
+instead of sniffing the beach plaza:
+	say "The seashore is near.  There is salt in the air.";
+
+instead of sniffing Public Beach:
+	say "The salt in the air is reminicint of high tide at the beach.";
 
 
 
@@ -38,6 +43,18 @@ North of Beach Plaza is Church Hall.
 There is a Notice Board in the Church Hall. It is Rooted in place.
 There is a Confession Booth in the Church Hall. "Standing against one wall, the dark wood of the Large confession booth catches the eye... It's been modified to allow even a large creature such of those Panther Taurs to Fit inside.".
 It is Rooted in place.
+
+instead of sniffing Church Hall:
+	say "The church smells of incense, arousal and the sea air from outside.";
+
+instead of sniffing Dirty Sheds:
+	say "The area smells like fresh, sea air.";
+
+instead of sniffing the Overgrown Block:
+	if houndfromhell is true:
+		say "Aside from the seaside air, there is a strong, sulfurous scent that is [if isHellhound is true]very arousing, smelling strongly of the Hellhound you mated with[otherwise]both frightening and arousing.  Something has been marking its territory here[end if].";
+	otherwise:
+		say "This deserted spot smells faintly of the seaside air.";
 
 Dirty Sheds is a room. "Set a way back from the beach, the row of dilapidated sheds were used to store things like lifesaving equipment and other stuff.  Now the overlong grass makes it nearly impossible to open the doors, and that is if you could do something about the big rusted padlocks on most of the doors.  One seems to have been broken into already however, the door hanging off it's hinges and ransacked interior barely visible.[line break]Between two of the sheds there is one oddity, a path north has been worn into the overlong grass.".
 north of public beach is Dirty Sheds.

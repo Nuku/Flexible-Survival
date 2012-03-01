@@ -133,6 +133,9 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "spider webbing"	"A swatch of tough spider webbing. It seems pretty sticky."	1	spider webbing
 
+instead of sniffing spider webbing:
+	say "The spider webbing has a faintly enticing scent.";
+
 spider webbing is a grab object.
 the usedesc of spider webbing is "[spider webbing use]";
 

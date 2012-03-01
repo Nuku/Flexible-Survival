@@ -8,6 +8,9 @@ Museum Foyer is a room. It is fasttravel.
 
 The description of Museum Foyer is "You find yourself standing in the foyer of a large museum, apparently one equipped with an emergency generator of some sort as the electric lighting while dim, still appears to be functioning.  The dim lighting casts shadows throughout the large area, evoking a sense of danger and mystery.  Along the walls near you are several paintings and small bits of history that would probably be priceless if you had time to worry about such things right now.  More disturbing perhaps is the empty pedestal in the center of the entryway, its name plaque proudly proclaiming a preserved woolly mammoth cub to be displayed in the empty spot.  Looking further into the area you can see a circular desk marked 'Information'.";
 
+instead of sniffing Museum Foyer:
+	say "The museum smells of ancient things come to life oncemore.";
+
 Museum entry is a door. "The museum halls stretch off towards the east.". It is dangerous. 
 
 East of Museum foyer is Museum entry.
@@ -18,6 +21,9 @@ The marea of Museum entry is "Museum".
 Valerie is a woman.
 The description of Valerie is "Lying on part of the information desk is what at first appears to be a large lioness, as you move closer it turns its head towards you revealing the pretty face of a woman with slight feline features atop the long leonine body.  You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back tightly tucked up to her sides, and if the name tag on the counter next to her is any indication, her name is Valerie.";
 Valerie is in Museum Foyer.
+
+instead of sniffing valerie:
+	say "She smells like a sphinx, inscrutible and cryptic.";
 
 The conversation of Valerie is { "[valerietalking]"}
 

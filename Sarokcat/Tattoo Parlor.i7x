@@ -10,6 +10,8 @@ The description of Tattoo parlor is "The painted dragon tattoo parlor stands emp
 
 The invent of Tattoo parlor is { "dirty water" , "dirty water" , "dirty water" };
 
+instead of sniffing Tattoo parlor:
+	say "The tattoo parlor smells of smoke, alcohol and hyenas.";
 
 
 Section 2 - Finding the parlor
@@ -31,12 +33,8 @@ Instead of resolving tattoonpiercing:
 
 
 
-
-
 Findingkara is a situation.
 The sarea of Findingkara is "Red";
-
-
 
 Instead of resolving Findingkara:
 	if tattoohunter is 3:

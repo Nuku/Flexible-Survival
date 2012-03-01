@@ -85,9 +85,10 @@ name	desc	weight	object
 "Ash Dragon Heart"	"Hot to the touch, and still simmering. You have to pay top dollar for hearts like these."	1	Ash Dragon Heart
 
 Ash Dragon Heart is a grab object.
-
 Ash Dragon Heart is infectious. The strain of Ash Dragon Heart is "Ash Dragator".
+the usedesc of Ash Dragon Heart is "With some trepedition you sink your teeth into the flesh of the Dragon heart. Food's food, right?.";
 
-the usedesc of Ash Dragon Heart is "With some trepedition you sink your teeth into the flesh of the Dragon heart. Foods food, right?.";
+instead of sniffing Ash Dragon Heart:
+	say "The meaty heart smells of bloody meat, soot and volcanic ash.";
 
 Ash Dragator For FS ends here.

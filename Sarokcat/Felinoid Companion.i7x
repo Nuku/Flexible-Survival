@@ -12,6 +12,9 @@ The Dexterity of Felinoid companion is 15;
 The summondesc of Felinoid companion is "Turning to look around, you spot the large Felinoid from the park lurking quite a ways behind you, obviously keeping an eye on you from a distance. Feeling a smile tugging at your face, you gesture several times for him to approach, and after a minute, the injured Felinoid seems to get the idea as he pads forward and rubs up against you in greeting, obviously looking forward to exploring with you.";
 The assault of Felinoid companion is "[one of]Your felinoid companion rakes your attacker with his claws![or]The Felinoid rubs up against your opponent, distracting them greatly![or]The Felinoids musk distracts your target, allowing you to get in another strike![or] taking advantage of your foes distraction, your companion strikes out with his claws.[or] Your ally manages to grab onto your opponent,  providing you with an opening![or]The Felinoid companion charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The Felinoid you helped, returns the favor by running in and tripping your opponent up![or]The Felinoid pounces on your opponent, trying to wrestle them to the ground.[at random]";
 
+instead of sniffing Felinoid companion:
+	say "Your felinoid companion smells strong and masculine[if cunts of player > 0].  It is quite arousing[end if].";
+
 An everyturn rule:
 	if companion of player is Felinoid companion:
 		if a random number between one and 20 < 6:

@@ -14,6 +14,18 @@ Onyxfucked is a number that varies. Onyxfucked is usually 0.
 Onyx is a man.[or woman]
 The description of Onyx is "[onyxappearance]";
 
+instead of sniffing Onyx:		[results for currently uncoded outcomes included]
+	if onyxquest is 0:
+		say "The young man smells both human and equine.";
+	otherwise if onyxquest is 1 or onyxquest is 2:
+		say "The young man smells even more of horses than before, with his human scent fading further.";
+	otherwise if onyxquest is 3:
+		say "The young mare smells of arousal and sex, clearly enjoying her new life at the club.";
+	otherwise if onyxquest is 4 or onyxquest is 6:
+		say "The young stallion smells of growing male arousal.";
+	otherwise if onyxquest is 5:
+		say "The slutty mare smells strongly of arousal and equine sex.";
+
 To say onyxappearance:[his description at each stage, comments on what each stage is linked to will be in these brackets]
 	if onyxquest is 0:[onyx is still trapped, or first times you encounter him.]
 		say "Standing behind the barred door to his room is a teenage boy of about the right age for a college student. His body already beginning to show the signs of his equine transformation. The boy is wearing nothing but a tight black thong that easily contains his obviously shrinking manhood. The young mans face is slightly pushed out into a growing equine muzzle and his ears have elongated into points and have started moving to the top of his head. You can see that his legs are becoming longer and thinner, and his ankles have shifted upwards on them, forcing him to stand on the balls of his changing feet, his toes already starting to merge to form a rather horselike hoof.  The half fear half lust crazed look in his eyes makes you shudder slightly as you realize how easily that could have been you behind those bars, and possibly could still be.";

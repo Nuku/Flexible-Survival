@@ -43,6 +43,8 @@ name	desc	weight	object
 
 Electric prod is an armament. It is part of the player. It has a weapon "[one of]shocking stick[or]your electric prod[at random]". The weapon damage of Electric prod is 22. The weapon type of Electric prod is "Melee". It is not temporary.
 
+instead of sniffing Electric prod:
+	say "The electric stun rod smells faintly of ozone.";
 
 An everyturn rule:
 	if the Electric prod is wielded and epcountdown is less than eptarget:

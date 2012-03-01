@@ -81,6 +81,9 @@ Chipped tooth is a grab object. It is part of the player. Understand "tooth" and
 
 The usedesc of Chipped tooth is "Looking at the small chipped piece of tooth, you find yourself rubbing it between your hands slightly, as you enjoy the feel of its strange texture, suddenly you let out a small yelp, as the sharp part of the tooth cuts you, and you drop the piece of tooth as you rub the small cut. Looking around you can[apostrophe]t see where the bit of tooth ended up, and sigh as you give up on your trophy and continue on your way.";
 
+instead of sniffing Chipped tooth:
+	say "The large fang somehow smells quite old despite looking rather new.";
+
 
 
 

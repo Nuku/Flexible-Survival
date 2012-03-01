@@ -149,6 +149,27 @@ name	desc	weight	object
 "Awesome Fruit"	"The most Awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
 "Awesome Bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
+instead of sniffing the Awesome Fruit:
+	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
+		say "The strange fruit smells rancid and turns your stomach just to have close.";
+	otherwise:
+		say "The strange fruit has a strong, manly scent that seems mouthwateringly sweet.";
+
+instead of sniffing the Awesomer Fruit:
+	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
+		say "The strange fruit smells rancid and turns your stomach just to have close.";
+	otherwise:
+		say "The strange fruit has a lovely, feminine scent that seems mouthwateringly sweet.";
+
+instead of sniffing the Awesomest Fruit:
+	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
+		say "The strange fruit smells rancid and turns your stomach just to have close.";
+	otherwise:
+		say "The strange fruit has a rich mix of male and female scents that seems mouthwateringly sweet.";
+
+instead of sniffing the Awesome Bat:
+	say "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.";
+
 to say awesome bat proc:
 	choose row monster from the table of random critters;
 	if hp entry is 60:
@@ -168,23 +189,20 @@ Awesomest Fruit has a usedesc "[awesomest fruit use]";
 
 To say awesomest fruit use:
 	let omonster be monster;
-	if "Male Preferred" is listed in feats of player:
+	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	otherwise:
-		if "Female Preferred" is listed in feats of player:
-			say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
-		otherwise:
-			repeat with Z running from 1 to number of rows in table of random critters:
-				choose row Z from the table of random critters;
-				if name entry matches the text "Awesome":
-					now monster is z;
-					break;
-			now sex entry is "Both";
-			now breasts entry is 2;
-			now breast size entry is 3;
-			say "You bite into the Awesomest Fruit!";
-			now Awesome_forcesex is 1;
-			infect;
+		repeat with Z running from 1 to number of rows in table of random critters:
+			choose row Z from the table of random critters;
+			if name entry matches the text "Awesome":
+				now monster is z;
+				break;
+		now sex entry is "Both";
+		now breasts entry is 2;
+		now breast size entry is 3;
+		say "You bite into the Awesomest Fruit!";
+		now Awesome_forcesex is 1;
+		infect;
 	now monster is omonster;
 
 Awesomer Fruit is a grab object;
@@ -192,7 +210,7 @@ Awesomer Fruit has a usedesc "[awesomer fruit use]";
 
 To say awesomer fruit use:
 	let omonster be monster;
-	if "Male Preferred" is listed in feats of player:
+	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	otherwise:
 		repeat with Z running from 1 to number of rows in table of random critters:
@@ -213,7 +231,7 @@ Awesome Fruit has a usedesc "[awesome fruit use]";
 	
 To say awesome fruit use:
 	let omonster be monster;
-	if "Female Preferred" is listed in feats of player:
+	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	otherwise:
 		repeat with Z running from 1 to number of rows in table of random critters:

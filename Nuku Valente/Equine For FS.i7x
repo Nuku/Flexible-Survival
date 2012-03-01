@@ -87,6 +87,9 @@ name	desc	weight	object
 
 lucky horseshoe is a grab object.
 
+instead of sniffing lucky horseshoe:
+	say "The horseshoe smells of earth and old metal.";
+
 the usedesc of lucky horseshoe is "[lucky horseshoe use]";
 
 to say lucky horseshoe use:
