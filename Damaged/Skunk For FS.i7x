@@ -10,6 +10,7 @@ Section 1 - Monster Responses
 
 skunkready is a number that varies;
 Skunk_type is a number that varies; [if it is 0 it means to pick a new creature type. if it is a 1 it is a skunk girl, if its a 2 its a skunk beast...]
+skunkfight is a number that varies;
 
 to say skunk vict:
 	if skunkready > 2:
@@ -47,12 +48,14 @@ to say skunk bodyshift:
 		say "Your body becomes more feminine, curves building that make it impossible to define you as anything but female despite what equipment you might have";
 
 to say skunkg vict:
+	now skunkfight is 2;
 	say "The female skunk turns, spraying thick, oily musk everywhere!";
 	say "Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery textured fur, even as you feel a tingle at your groin.";
 	infect;
 	increase skunkready by 1;
 
 to say skunkg defeat:
+	now skunkfight is 1;
 	if a random number from 1 to 100 is greater than 2:
 		say "The skunk girl looks up at you, smiling even as her body seems to turn to liquid, 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, disolving completely.";
 	otherwise:
@@ -86,7 +89,7 @@ to say skunk_attack:
 		
 to say skunk_desc:
 	choose row monster from the table of random critters;	
-	if a random number from 1 to 10 > 3: [female skunk]
+	if a random number from 1 to 10 > 3 or skunkfight is 3: [female skunk]
 		say "A very female anthropomorphic skunk with hints of animal, its curves and beasts leave you wanting, without any reservations, to fuck it senseless.";
 		now Skunk_type is 1;
 		now hp entry is 28;            [- How many HP has the monster got? -]
@@ -111,8 +114,8 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Skunk"; [Name of your new Monster]
 	now attack entry is "[skunk_attack]";
-	now defeated entry is "[skunk_defeat]"; 
-	now victory entry is  "[skunk_vict]"; 
+	now defeated entry is "[skunk_defeat]";
+	now victory entry is "[skunk_vict]";
 	now desc entry is "[skunk_desc]";[ Description of the creature when you encounter it.]
 	now face entry is "have a large-muzzled female skunk's head";[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "curvaceous and screams 'female and needs IT', men want to fuck you women want to be you... and fuck you";[ Body Description, format as the text "Your Body is (your text)."]

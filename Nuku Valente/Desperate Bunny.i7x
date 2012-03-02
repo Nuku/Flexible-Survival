@@ -124,7 +124,7 @@ To rabbitfuck:
 						move sandra to Bunker;
 						move player to bunker;
 						now hp of Sandra is 1;
-						if coleenslut > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
+						if coleenalpha > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 						say "'Thank you!' she cries, pressing her abundant front into your side, clinging warmly as she follows you back to the bunker, tail wagging the entire way. When you arrive, you see that she somehow trailed a suitcase of belongings, and she makes herself at home quickly. She even adds two bottles of water to your bunker supplies and a small package of dried meat.";
 						increase score by 5;
 						now the rabbit den is not known;
@@ -194,7 +194,7 @@ To rabbitfuck:
 				move sandra to Bunker;
 				move player to bunker;
 				now hp of Sandra is 1;
-				if coleenslut > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
+				if coleenalpha  > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
 				now the rabbit den is not known;
 				follow turnpass rule;
 			otherwise:
@@ -275,7 +275,7 @@ instead of sniffing Sandra:
 Section 2 - Sandra and Coleen Interplay
 
 An everyturn rule:
-	if lust of Sandra - turns > 15 and hp of Sandra is 1:
+	if lust of Sandra - turns > 15 and hp of Sandra is 1 and ( coleenalpha > 0 or coleencollared > 0 or coleenslut > 0 ) :
 		now hp of Sandra is 2;
 		now lastColeenfucked is turns;
 		now lastrabbitfuck is turns;
