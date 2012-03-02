@@ -17,7 +17,7 @@ Instead of resolving a Hidden Kitty:
 	wait for any key;
 	move player to Sven's Place;
 	now Sven's Place is known;
-	increase score by 1;
+	increase score by 5;
 	Now Hidden Kitty is resolved;
 
 Sven's Place is a room. It is fasttravel. It is private.
