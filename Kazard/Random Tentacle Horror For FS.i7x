@@ -1,5 +1,5 @@
 Version 9 of Random Tentacle Horror For FS by Kazard begins here.
-[ Version 9 update by Shadowkeeper ]
+[ Version 9.1 update by Shadowkeeper ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Tentacle Horror to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -68,29 +68,7 @@ to say horror victory:
 				now lasttentaclebattleoutcome is 3;
 			otherwise:
 				now lasttentaclebattleoutcome is 2;
-			Now gestation of child is a random number from 24 to 48;
-			let x be "Tentacle Horror";
-			let infection be "";
-			if a random number from 1 to 100 is greater than 50:
-				now infection is x;
-			otherwise:
-				now infection is skinname of player;
-			now skinname of child is infection;
-			if a random number from 1 to 100 is greater than 50:
-				now infection is x;
-			otherwise:
-				now infection is bodyname of player;
-			now bodyname of child is infection;
-			if a random number from 1 to 100 is greater than 50:
-				now infection is x;
-			otherwise:
-				now infection is tailname of player;
-			now tailname of child is infection;
-			if a random number from 1 to 100 is greater than 50:
-				now infection is x;
-			otherwise:
-				now infection is facename of player;
-			now facename of child is infection;
+			say "[horror impreg]";
 		otherwise:
 			if tentsubmit is 1:
 				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, right before tearing away your clothes the creature stops. Apparantly sensing the new life growing inside of you the creature sets you down and leaves";
@@ -122,7 +100,13 @@ to say horror victory:
 				if cocks of player is greater than 1:
 					say "The Tentacles quickly bring your multiple dicks to erection, wrapping all around them, and forcing them against each other. The creature's appendages quickly jerks around your members for a few moments, forcing your cocks to rub back and forth against each other. This sensation in addition to the feeling of the tentacles rubbing up and down your multiple members, cause you to quickly explode, launching your seed against the floor. The tentacles continue to jerk against your members long after your balls are empty and a puddle of your seed has collected beneath you.";
 				say "[line break] [line break]  After countless orgasms your body barely responds to the attentions of the tentacles, your mind lost in a haze of pleasure. However your eyes go wide as you feel a watermelon sized bulge traveling up the large tentacle wrapped around your leg and  buried in your abused snatch. The bulge reaches your already over stimulated lips and begins to stretch them far beyond what should be possible, the secretions around the tentacle somehow helping your female gender stretch far more elastically than normal. There's a feeling of surrender as the bulge finally passes its widest point and slips inside of you coming to rest inside your battered womb. [line break] [line break]";
-				say "As the tentacle removes itself from your body the creature seems to [if tentsubmit is 1]hesitate for a moment, then seems to lose interest and sets you down on the ground[otherwise]lose interest and drops you to the ground, leaving you alone to recover[end if], the egg remaining unfertilized.";
+				if a random chance of 95 in 100 succeeds or multicunt is 0: [The tentacles in the other cunt(s) might just explode!]
+					say "As the tentacle removes itself from your body the creature seems to [if tentsubmit is 1]hesitate for a moment, then seems to lose interest and sets you down on the ground[otherwise]lose interest and drops you to the ground, leaving you alone to recover[end if], the egg remaining unfertilized.";
+					now eggplanted is 1;
+				otherwise:
+					say "As the creature starts removing the largest tentacle from you, [if tentsubmit is 1]you are saddened that the creature might not fertilize [otherwise]you believe it might let you go without fertilizing [end if]the egg this time. But just as you think it's about to remove the other tentacles you suddenly feel them shudder, widen, and paint your womb with fertility cream and pushing your tired body to the point of yet another orgasm. Your belly swelling to the point it looks about 4 months pregnant, a great deal of the cream flowing out of the pussy where the big tentacle was before";
+					say "The creature drops you and slithers off, leaving you to recover in the pool of liquids the assault created, as you regain your strength you crawl back out of the basement.";
+					say "[horror impreg]";
 				if cuntsmall is 1:
 					now cunt length of player is 15;
 					now cunt width of player is 12;
@@ -130,7 +114,6 @@ to say horror victory:
 					now lasttentaclebattleoutcome is 3;
 				otherwise:
 					now lasttentaclebattleoutcome is 2;
-				now eggplanted is 1;
 			otherwise:
 				if cunts of player is 0 and cocks of player is 0: [implanted and genderless!? ZOMG!]
 					if tentsubmit is 0: [did not submit]
@@ -147,29 +130,7 @@ to say horror victory:
 							now lasttentaclebattleoutcome is 3;
 							now eggplanted is 0;
 							now thirst of player is 0; [all that liquid should quench your thirst ;) ]
-							Now gestation of child is a random number from 24 to 48;
-							let x be "Tentacle Horror";
-							let infection be "";
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is skinname of player;
-							now skinname of child is infection;
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is bodyname of player;
-							now bodyname of child is infection;
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is tailname of player;
-							now tailname of child is infection;
-							if a random number from 1 to 100 is greater than 50:
-								now infection is x;
-							otherwise:
-								now infection is facename of player;
-							now facename of child is infection;
+							say "[horror impreg]";
 						otherwise:
 							say "The monster drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
 							now lasttentaclebattleoutcome is 4;
@@ -184,7 +145,7 @@ to say horror victory:
 							now lasttentaclebattleoutcome is 3;
 							now thirst of player is 0;
 							stop the action;
-						say "A tentacle finds your sex, the lips glistening with growing need, and plunges inside of you.";
+						say "[if multicunt is 1]Tentacles find each of your female sexes, their lips glistening with your growing need, and plunge[otherwise]A tentacle finds your female sex, the lips glistening with growing need, and plunges[end if] inside of you.";
 					otherwise:
 						say "The tentacles swarm across your body reducing your clothing to a pile of slime soaked tatters and rubbing all over your now nude form. [line break] [line break]";
 						if hascunt is 0:
@@ -194,18 +155,18 @@ to say horror victory:
 							now lasttentaclebattleoutcome is 2;
 							now thirst of player is 0;
 							stop the action;
-						say "Ignoring your male genitalia a tentacle finds your female sex, the lips glistening with growing need, and plunges inside of you.";
-					say "It's quickly joined by 2 others, and all three piston in and out of your pussy for hours, [if cuntsmall is 1]stretching your cunt back to the size it was the last time the horror raped you[otherwise]hardly stretching your [cunt size desc of player] pussy[end if]. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break]";
+						say "Ignoring your male genitalia [if multicunt is 1]tentacles find each of your female sexes, their lips glistening with your growing need, and plunge[otherwise]a tentacle finds your female sex, the lips glistening with growing need, and plunges[end if] inside of you.";
+					say "[if multicunt is 1]Each tentacle is[otherwise]It's[end if] quickly joined by 2 others, and all [if multicunt is 1]of the sets of three piston in and out of your pussies[otherwise]three piston in and out of your pussy[end if] for hours, [if cuntsmall is 1]stretching your cunt back to the size it was the last time the horror raped you[otherwise]hardly stretching your [cunt size desc of player] pussy[end if]. Sexual juices are flowing from around the thrusting tentacles down your legs like a waterfall making an ever growing slick puddle on the floor beneath you.  [line break][line break]";
 					if a random chance of 40 in 100 succeeds: [random assrape! 40% chance]
 						if tentsubmit is 1:
 							say "Suddenly your eyes grow wide as one of the tentacles brushes against the bud of your ass, you squirm trying to move the tentacle away but... Pain burns in your virgin asshole as the beast thrusts deep into your intestines, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
 							say "The tentacle starts an in and out thrusting rhythm quickly building up speed to keep up with the other tentacles allready in you. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
-							say "A few hours later you have three tentacles pumping in and out of your ass alongside with the ones in your [if multicunt is 1]cunts[otherwise]cunt[end if]. The tentacles inside of you shudder and paint your intestines and womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier and makes your belly expand alarmingly as your insides are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw. As the monster pulls out the tentacles, covering you in the sticky substance, and puts you down you feel a sudden release as the cream floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies[otherwise]pussy[end if]";
+							say "A few hours later you have three tentacles pumping in and out of your ass alongside with the ones in your [if multicunt is 1]cunts[otherwise]cunt[end if]. The tentacles inside of you shudder and paint your intestines and womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier and makes your belly expand alarmingly as your insides are filled to the brim with cream, great gobs of it flowing past the tentacles buried in you as they start to withdraw. As the monster pulls out the tentacles, covering you in the sticky substance, and puts you down you feel a sudden release as the cream floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies.[otherwise]pussy.[end if] As you stand up you feel the thick cream move around your insides, looking down you see that the sheer volume still in your intestines makes you look 5 months pregnant.";
 						otherwise:
 							say "Suddenly your eyes grow wide as one of the tentacles brushes against the bud of your ass, you squirm trying to move the tentacle away but... Pain burns in your virgin asshole as the beast thrusts deep into your intestines, the slimy coating of the appendage the only thing that allowed it to get so far in one go without ripping you in two.";
 							say "As the tentacle starts an in and out thrusting rhythm another one wraps around your hardening [if cocks of player is greater than 1]cocks[otherwise]cock[end if] and starts to jerk you off. The slime being secreted by the tentacle inside you is starting to make your ass more elastic, and the pain is quickly receding, being replaced by pleasure... [line break][line break]";
 							say "A few hours later you have three tentacles pumping in and out of your ass alongside with the ones in your [if multicunt is 1]cunts[otherwise]cunt[end if]. The tentacles inside of you shudder and paint your intestines and womb with fertility cream, an action that is sure to jump start the fertilization of the egg the beast placed within you earlier and makes your stomach expand painfully as your insides are filled to the brim with cream.";
-							say "The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies[otherwise]pussy[end if], the taste of it still heavy in your mouth. The creature is nowhere to be seen.";
+							say "The creature, seeming intent to fill you with as much cream as it can (likely as punishment for your resistance earlier), pushes the tentacles even deeper into your ass; effectively plugging you up. Your eyes widen in fear as you feel your stomach swell to dangerous proportions, pain blotting out all other senses. Suddenly something gives way as you feel the thick substance traveling up your throat, flooding out of your mouth in great gobs. Unable to breathe you lose consciousness. [line break][line break] Hours later you wake up lying in a great puddle of cream as it still floods out of your now gaping ass and widely stretched [if multicunt is 1]pussies[otherwise]pussy[end if], the taste of it still heavy in your mouth. Your belly still swolen so that you look 9 months pregnant with triplets, the thick cream sloshing around your insides as you try to get up. The creature is nowhere to be seen.";
 					otherwise:
 						say "A few hours later the puddle beneath you stretches out into the shadows. The tentacles inside of you shudder and paint your womb with fertility cream, an action that that is sure to jump start the fertilization of the egg the beast placed within you earlier, and causes your belly to swell to the point that it looks[if multicunt is 1] 9 months pregnant with twins...[otherwise] 7 months pregnant...[end if]";
 					if cuntsmall is 1:
@@ -216,29 +177,7 @@ to say horror victory:
 					otherwise:
 						now lasttentaclebattleoutcome is 2;
 					now eggplanted is 0;
-					Now gestation of child is a random number from 24 to 48;
-					let x be "Tentacle Horror";
-					let infection be "";
-					if a random number from 1 to 100 is greater than 50:
-						now infection is x;
-					otherwise:
-						now infection is skinname of player;
-					now skinname of child is infection;
-					if a random number from 1 to 100 is greater than 50:
-						now infection is x;
-					otherwise:
-						now infection is bodyname of player;
-					now bodyname of child is infection;
-					if a random number from 1 to 100 is greater than 50:
-						now infection is x;
-					otherwise:
-						now infection is tailname of player;
-					now tailname of child is infection;
-					if a random number from 1 to 100 is greater than 50:
-						now infection is x;
-					otherwise:
-						now infection is facename of player;
-					now facename of child is infection;
+					say "[horror impreg]";
 		otherwise:
 			if tentsubmit is 1:
 				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, right before tearing away your clothes the creature stops. Apparantly sensing the new life growing inside of you the creature sets you down and leaves";
@@ -246,6 +185,31 @@ to say horror victory:
 			otherwise:
 				say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 				now lasttentaclebattleoutcome is 5;
+
+to say horror impreg:
+	Now gestation of child is a random number from 24 to 48;
+	let x be "Tentacle Horror";
+	let infection be "";
+	if a random number from 1 to 100 is greater than 50:
+		now infection is x;
+	otherwise:
+		now infection is skinname of player;
+	now skinname of child is infection;
+	if a random number from 1 to 100 is greater than 50:
+		now infection is x;
+	otherwise:
+		now infection is bodyname of player;
+	now bodyname of child is infection;
+	if a random number from 1 to 100 is greater than 50:
+		now infection is x;
+	otherwise:
+		now infection is tailname of player;
+	now tailname of child is infection;
+	if a random number from 1 to 100 is greater than 50:
+		now infection is x;
+	otherwise:
+		now infection is facename of player;
+	now facename of child is infection;
 
 to say horror description:
 	if lasttentaclebattleoutcome is 0:
@@ -312,7 +276,7 @@ When Play begins:
 	now area entry is "Sealed";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;		[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 6;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 2;		[ Size of balls apparently ;) sneaky Nuku]
+	now cock width entry is 5;		[ Size of balls apparently ;) sneaky Nuku]
 	now breasts entry is 4;		[ Number of Breasts infection will give you. ]
 	now breast size entry is 7;		[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
