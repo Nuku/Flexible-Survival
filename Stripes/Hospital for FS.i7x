@@ -161,7 +161,7 @@ Instead of resolving a Maternity Ward:
 	now Maternity Ward is resolved;
 
 
-Radiology is a situation.
+Radiology is a situation.  The level of Radiology is 5.
 The sarea of Radiology is "Hospital";
 when play begins:
 	add Radiology to badspots of girl;
@@ -208,7 +208,7 @@ to say hospfight2:		[prevents duplicate of raccoon, who is a unique individual]
 		challenge "Jaguar";
 
 
-Pathology is a situation.
+Pathology is a situation.  The level of Pathology is 5.
 The sarea of Pathology is "Hospital";
 when play begins:
 	add Pathology to badspots of girl;

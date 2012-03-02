@@ -71,7 +71,7 @@ to say lostninjahorde:
 
 Section 2 - Outisde Events
 
-Losing It is a situation.
+Losing It is a situation.  The level of Losing It is 7.
 snowmeowfight is a number that varies.
 when play begins:
 	add Losing It to badspots of furry;
@@ -106,7 +106,7 @@ instead of resolving a CatsandDogs:
 	now CatsandDogs is resolved;
 
 
-Tour Bus is a situation.
+Tour Bus is a situation.  The level of Tour Bus is 6.
 when play begins:
 	add Tour Bus to badspots of furry;
 
@@ -154,7 +154,7 @@ Instead of resolving a Dropped Handbag:
 
 Section 3 - Diego Events
 
-Trickster is a situation.
+Trickster is a situation.  The level of Trickster is 4.
 wolffight is a number that varies.
 when play begins:
 	add Trickster to badspots of furry;
@@ -218,7 +218,7 @@ name	desc	weight	object
 combat knife is an armament. It is part of the player. It has a weapon "[one of]your large knife[or]your combat knife[or]the large blade[or]your combat knife with a strong thrust[or]your large blade with a quick slash[at random]". The weapon damage of combat knife is 6. The weapon type of combat knife is "Melee". It is not temporary.
 
 
-Prank Aftermath is a situation.  Prank Aftermath is resolved.
+Prank Aftermath is a situation.  Prank Aftermath is resolved.  The level of Prank Aftermath is 7.
 prankevent is a number that varies.
 when play begins:
 	add Prank Aftermath to badspots of furry;
@@ -228,7 +228,7 @@ instead of resolving a Prank Aftermath:
 	say "     As you travel through the city, you hear some moaning mewls coming from up ahead.  On your guard, you sneak forward and take in the sight of several of those puma creatures playing with what was once a team of six soldiers.  The cougars have the men pinned to the ground and are having their way with them.  As you watch, the cougars force them to nurse from their breasts or suck their cocks until they develop a wet, new pussy for the herm kitties to fuck.  Outnumbered, the soldiers have no chance to escape and there are several felines waiting for their turn to sate their lusts on the transforming humans.";
 	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while it waits for its next turn with the new breedtoys.  Remembering that you told the Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
 	if libido of player - humanity of player < -25:
-		say ".  Being too far gone into your lustful urges and the infection taking over, you feel some remorse for your actions, but are too aroused by it to do anything but watch.";
+		say ".  Being too far gone into your lustful urges and the infection taking over, you feel some remorse for your actions, but are too aroused by what you see to do anything but watch.";
 		decrease humanity of player by 10;
 		decrease morale of player by 5;
 		increase libido of player by 20;
@@ -251,7 +251,7 @@ instead of resolving a Prank Aftermath:
 	say "     Recovering from your encounter with the first feline, you try to get away, but have to deal with another who moves to bar your path.";
 	say "[line break]";
 	challenge "Cougar";
-	say "     With the second battle over, the other pumas move in to capture you.  You manage to dive into a building and bar the door with a filling cabinet.  As they pound at it, you find another exit from the building and weave through some side streets to make sure that you've lost the lustful felines.";
+	say "     With the second battle over, the other pumas move in to capture you.  You manage to dive into a building and bar the door with a filing cabinet.  As they pound at it, you find another exit from the building and weave through some side streets to make sure that you've lost the lustful felines.";
 	now Prank Aftermath is resolved;
 
 
@@ -272,7 +272,7 @@ Instead of resolving a Lovers Bench:
 		increase score by 1;
 		increase loversbench by 1;
 	otherwise:
-		say "     Your meandering through the park brings you back to the lovers['] bench and find them gone, though their scattered clothes remain.  This helps confirm your earlier guess that they'd succumbed.  The bench has quite a few scratches and claw marks on it, clearly having been used by many others since the outbreak, as well as older, carved grafitti hearts.  You suspect this bench has been a make-out spot for quite some time, being in a more secluded areas in the park.  Certainly there is a strong scent of sex hanging around it, even in the open air of the park.  Remembering the lovemaking you witnessed here, you start to get turned on.";
+		say "     Your meandering through the park brings you back to the lovers['] bench and find them gone, though their scattered clothes remain.  This helps confirm your earlier guess that they'd succumbed.  The bench has quite a few scratches and claw marks on it, clearly having been used by many others since the outbreak, as well as older, carved grafitti hearts.  You suspect this bench has been a make-out spot for quite some time, being in a more secluded area in the park.  Certainly there is a strong scent of sex hanging around it, even in the open air of the park.  Remembering the lovemaking you witnessed here, you start to get turned on.";
 		if scenario is "Bunker" or scenario is "Caught Outside":
 			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  It is no better than your own, so you toss it aside.  The woman's jeans do yield a small cannister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
 			say "     Pepperspray obtained.";
@@ -304,7 +304,7 @@ Instead of resolving a Lovers Bench:
 			decrease humanity of player by 5;
 			if "Pure" is listed in feats of player, increase humanity of player by 1;
 			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of pink raccoon by level of pink raccoon + 1;
+			increase xp of pink raccoon by ( level of pink raccoon + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is Gryphoness:
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -325,7 +325,7 @@ Instead of resolving a Lovers Bench:
 			decrease humanity of player by 5;
 			if "Pure" is listed in feats of player, increase humanity of player by 1;
 			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of Gryphoness by level of Gryphoness + 1;
+			increase xp of Gryphoness by ( level of Gryphoness + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is Felinoid companion:
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -334,7 +334,7 @@ Instead of resolving a Lovers Bench:
 					now monster is y;
 					break;
 			if cunts of player > 0:
-				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body.  You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face.  You can see his aroused cock, red and throbbing as it drips precum on your leg.  It seems your companion wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You move to lay back on the bench, putting your hips at one edge so your four-legged feline can mount you.  And he quickly does, lining up his cock with your dripping snatch before slowly sinking into you.  You moan in delight and run your paws over his sides and hips as his large, feline cock eases into you.";
+				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body.  You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face.  You can see his aroused cock, red and throbbing as it drips precum on your leg.  It seems your companion wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You move to lay back on the bench, putting your hips at one edge so your four-legged feline can mount you.  And he quickly does, lining up his cock with your dripping snatch before slowly sinking into you.  You moan in delight and run your hands over his sides and hips as his large, feline cock eases into you.";
 				say "     His large paws dig into the bench beside your head, leaving fresh scratches in the wood while he thrusts into you.  You nuzzle and kiss his feline face, telling him what a good kitty he is and how much you love him.  Something about the bench makes this more than just sex, but instead lovemaking.  Your kitty seems to smile down at you as he lickgrooms your face and chest, running his raspy tongue over your breasts.  You reach back to rub his large balls and squeeze his tightly muscled rear while he thrusts into you.  The sex is somehow both wildly animalistic and tenderly loving as the feline beast mates with you.";
 				say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your pussy, he eases his spent shaft from your cream-filled cunt.  Your companion is extra-snuggly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
 				say "[impregchance]";
@@ -347,7 +347,21 @@ Instead of resolving a Lovers Bench:
 			decrease humanity of player by 5;
 			if "Pure" is listed in feats of player, increase humanity of player by 1;
 			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
-			increase xp of Felinoid companion by level of Felinoid companion + 1;
+			increase xp of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
+			increase score by 20;
+		otherwise if companion of player is bee girl:
+			say "     As you're finishing up yor scavenging, Honey buzzes on over and takes your hand in her.  She smiles up at you and grins playfully.  She gives your arm a gentle tug with her four hands.  'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly.  'I used to see couples here when I was...'  She pauses, remembering her lost sisters.  'But I have you now,' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer.  Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on her offer.";
+			if cocks of player > 0:
+				say "     Honey climbs up onto the bench, raising her bee abdomen up and waving her cute little bottom at you.  The soft, golden puff over her pussy is soaked in her juices and you can see her soft lips parted and ready for you.  The bumblebee drone buzzes excitedly as you move in behind her and get your hard cock lined up with her eager pussy.  She pushes herself back onto your cock slowly, clearly holding back from pushing it all in quickly, wanting to savour this moment.  Once you're stuffed inside her, you wrap your arms around her insect abdomen and start thrusting.  Her wings buzz frantically and her abdomen twitches in your arms.  'Mmm... kiss it.  Please, I want you to kiss me there,' she moans as her pussy quivers and squeezes around you at the thought of it.  So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others.  Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex.  With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
+				say "     After a powerfully long orgasm that pumps your seed into the cute bumblebee girl's pussy while her honeyed juices soak you both, you slide your spent cock from her.  Your companion is extra-snuggly after the lovemaking, nuzzling against your side as she holds your hand in her four small hands and you happily return this affection, feeling closer to her.";
+			otherwise:
+				say "     Honey lays back on the middle of the bench and motions for you to climb atop her.  Bringing your pussy to her lips, she starts licking and kissing at your sex, running her long proboscis over your wet folds before sliding it into you like a flower full of rich nectar.  Her talented tongue delves inside you again and again, licking and teasing at your sensitive inner walls as it slides to your very depths to please you.  You run your hand over her insect abdomen and she buzzes with delight.  'Mmm... kiss it.  Please, I want you to kiss me there,' she moans before diving her tongue into you again.  Her tongue is writhing inside you at the thought of it.  So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others.  Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex.  With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
+				say "     After a powerfully long orgasm that soaks the cute bumblebee girl's face in your female nectar while her honeyed juices soak her crotch as her lower hands finger herself vigorously, you climb slowly off from overtop her.  Your companion is extra-snuggly after the lovemaking, nuzzling against your side as she holds your hand in her four small hands and you happily return this affection, feeling closer to her.";
+			now libido of player is libido of player / 2;
+			decrease humanity of player by 5;
+			if "Pure" is listed in feats of player, increase humanity of player by 1;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
+			increase xp of bee girl by ( level of bee girl + 1 ) * 3;
 			increase score by 20;
 		otherwise:
 			increase libido of player by ( 100 - libido of player ) / 4;
