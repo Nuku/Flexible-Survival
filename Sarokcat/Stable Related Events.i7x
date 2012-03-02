@@ -170,6 +170,7 @@ Instead of Resolving a Waitingcustomer:
 	if T is 3:
 		now battleground is "Red";
 		fight;
+	now battleground is "Stable";
 	say "recovering from the fight with the waiting creature, you sigh as you wonder just what kind of place they are running here. Gathering your wits around you, you glance around the room one last time, before headinb back in the direction of the entryway, though you get the feeling there are plenty of similar waiting rooms likely scattered throughout the hotel...";
 
 Section 10-  Videoshow

@@ -508,7 +508,7 @@ Instead of resolving a Electronics Store:
 
 Section 8 - Cameo
 
-Cameo is a situation.
+Cameo is a situation.  The level of Cameo is 4.
 The sarea of Cameo is "High";
 choclabfight is a number that varies.
 when play begins:
@@ -521,11 +521,11 @@ Instead of resolving a Cameo:
 	now choclabfight is 0;
 	challenge "Chocolate Lab";
 	if choclabfight is 1:
-		say "     After having finished with the lead dog, the others are moving in around the displays to get at you even as you keep moving to try and deal with them one on one.  It is difficult going as you have to avoid those while chocolate cream puddles of what you now know to be chocolate dog cum.  You manage to hop the sales counter and prepare to face the next one.";
+		say "     After having finished with the lead dog, the others are moving in around the displays to get at you even as you keep moving to try and deal with them one on one.  It is difficult going as you have to avoid those white chocolate cream puddles of what you now know to be chocolate dog cum.  You manage to hop the sales counter and prepare to face the next one.";
 		now choclabfight is 0;
 		challenge "Chocolate Lab";
 		if choclabfight is 1:
-			say "     With a second down, you ready yourself to face the last of them.  As you look first to the gap your last opponent took, you catch sight of it out of the corner of your eye.  It quietly flowed up the counter as your last fight ended and makes a leap at you.";
+			say "     With a second down, you ready yourself to face the last of them.  As you look first to the gap your previous opponent took, you catch sight of it out of the corner of your eye.  It quietly flowed up the counter as your last fight ended and makes a leap at you.";
 			let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
 			if "Wary Watcher" is listed in feats of player, increase bonus by 3;
 			if "Bad Luck" is listed in feats of player, decrease bonus by 2;
@@ -541,7 +541,7 @@ Instead of resolving a Cameo:
 			now choclabfight is 0;
 			challenge "Chocolate Lab";
 			if choclabfight is 1:
-				say "     Having defeated the last of them, you pant for breath as the chocolate dogs slink off like beaten curs.  They press themselves to the ground so much that their legs melt away beneath them and flow out as dog-shaped puddles.  With them dispatched, you are free to look around the remains of the store.  It seems that much of the merchandise has already been consumed by the dogs or tainted by them during their lustful gorging.  The boxes of chocolates and cameos on display at the back are thankfully still good, so you snatch them up and exit the store before the strong scent of chocolates and sex arouses you into sampling from the tainted wares.";
+				say "     Having defeated the last of them, you pant for breath as the chocolate dogs slink off like beaten curs.  They press themselves to the ground so much that their legs melt away beneath them and flow out as dog-shaped blobs.  With them dispatched, you are free to look around the remains of the store.  It seems that much of the merchandise has already been consumed by the dogs or tainted by them during their lustful gorging.  The boxes of chocolates and cameos on display at the back are thankfully still good, so you snatch them up and exit the store before the strong scent of chocolates and sex arouses you into sampling from the tainted wares.";
 				if "Junk Food Junky" is listed in feats of player:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack.  The fine chocolates are quite delicious.  You store the rest for later consumption.  Your junk food fueled metabolism finds the chocolates quite satisfying and you still have enough chocolates and almond bark to be equivalent to roughly two more snacks.";
 					decrease hunger of player by 15;
@@ -584,7 +584,7 @@ Instead of resolving a Cameo:
 			increase hunger of player by 12;
 			if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
 			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 10;
-		[puts Chocolate Lab as lead monster in case of impregnation]
+		[puts Chocolate Lab as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Chocolate Lab":

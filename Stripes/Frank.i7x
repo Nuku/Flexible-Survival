@@ -3,7 +3,7 @@ Version 1 of Frank by Stripes begins here.
 
 Section 1 - Event and Comic Store
 
-Mephitness is a situation.
+Mephitness is a situation.  The level of Mephitness is 6.
 The sarea of Mephitness is "High";
 when play begins:
 	add Mephitness to badspots of guy;

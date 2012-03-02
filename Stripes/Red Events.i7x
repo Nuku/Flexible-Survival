@@ -249,11 +249,17 @@ when play begins:
 Instead of resolving a Evangelist:
 	say "     While trying to cross between stopped cars at a large intersection, you are stopped by the sound of someone climbing onto a car.  Still hunkered down, you see a unchanged human.  Unshaven for several days and dressed in dirty clothes, he smells strongly of alcohol.  He is wild-eyed and waves a bible around as he start yelling at no one.  He goes on incoherently about sinners, Babylon, bedding down with animals, damnation and so forth.  You try to calm him down, but he will have none of it.  Clearly overwrought by witnessing the transforming populous from his hiding spot, he[apostrophe]s gone off the deep end.  From some of his rambling, you gather he[apostrophe]s always been upset by the lascivious nature of the neighbourhood around his home.";
 	say "     Before you can get him to be quiet long enough to talk, it[apostrophe]s too late.  Drawn by the ruckus, the nearby monsters have taken notice and approach the intersection from all sides.  Seeing an unchanged human, they go ballistic and charge forward.  With you between them, you are forced to stuggle against the maddened tide of lustful monsters.[line break]";
+	if a random chance of 1 in 3 succeeds, now battleground is "Outside";
 	fight;
+	now battleground is "Red";
 	say "     Looking up during a brief moment of respite, you see the would-be evangelist swinging his hardcover bible like a club, still screaming incessantly about the corruption of the flesh.  Madness has given him strength and he manages to keep the monsters from climbing onto the car roof.  The fact that many of the second ring of monsters around him are trying to mate those closer help him as well.  Before you can consider whether to push forward to help him or try to make your escape, you are drawn into another fight.[line break]";
+	if a random chance of 1 in 3 succeeds, now battleground is "High";
 	fight;
+	now battleground is "Red";
 	say "     Having dealt with the next, you look over just in time to see the man get blasted across the face by a large splatter of cum.  Turning to the side, you see a trio of leather-clad wolves with their arms around the body of one of the large, cock-shaped creatures.  They stroke and tease it again, this time one mounting it from behind as the others aim.  Another volley is shot, striking the man in the chest.  He[apostrophe]s already begun to transform, face taking the smooth shape of a giant glans and torso reshaping into a giant cock.  The press of fur and flesh around you brings another monster to press against you, trying to bear you down to take its pleasure.[line break]";
+	if a random chance of 1 in 3 succeeds, now battleground is "Outside";
 	fight;
+	now battleground is "Red";
 	say "     Taking a quick breath, you look back to what remains of the man, but find him but another piece of the writhing mass of orgiastic sex.  Only the tattered remains of his clothes let you spot him, he is shifting almost constantly as he is spit-roasted by a leopard guy at the front and a raccoon herm at the rear.  Several others stroke their cocks, spraying cum all over him, and he seems to be loving it.  Lost in the release of his long pent-up inhibitions, he has joined the mindlessly infected.";
 	if libido of player > 39:
 		say "     The sights, sounds and scents around you are becoming more and more cloying.  You look around, seeing so many attractive pairings and trios of lustful animals.  You are tempted to join them - to simply give into the lustful mass and join the orgy.";
