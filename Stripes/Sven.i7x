@@ -4,7 +4,7 @@ Version 4 of Sven by Stripes begins here.
 
 Section 1 - Event and Hideaway
 
-Hidden Kitty is a situation.
+Hidden Kitty is a situation.  The level of Hidden Kitty is 5.
 The sarea of Hidden Kitty is "Red";
 when play begins:
 	add Hidden Kitty to badspots of guy;
@@ -198,7 +198,7 @@ An everyturn rule:
 		now hp of Sven is 100;
 		remove Sven from play;
 		say "You briefly remember Sven and have a sinking feeling that something's happened to him.";
-	if hp of Sven is 8 and lastSvendrink - turns > 11:
+	if hp of Sven is 8 and Candy is in Bunker and lastSvendrink - turns > 11:
 		now hp of Sven is 9;
 		if player is in bunker:
 			say "     While taking your break before heading back into the city, you spot Candy prance on over to Sven's bunk.  He sits quite close to the snow leopard and starts chatting with him, as you've seen him do several times before.  But there's something subtly different in his approach this time.  It seems he's going to make his move now and you'll get to watch the show.";
