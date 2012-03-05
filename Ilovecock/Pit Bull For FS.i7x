@@ -16,7 +16,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 
 To say pit bull defeat:
-	if libido of player < 50:
+	if libido of player <= 50:
 		Say "Having taken one too many blows the monster signals her submission and begins to back away.";
 	if libido of player > 50 and cocks of player is greater than 0 and cunts of player is 0:
 		Say "As she falls you advance on her, pulling down your pants. She looks at your [cock of player] cock and says 'I will tear that fucking thing off and shove it down your throat if you come any closer.' You enjoy having it and decide to back down, and by back down you run away, pants around your ankles. You have a wank later.";

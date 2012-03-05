@@ -1,5 +1,5 @@
-Version 3 of Hospital for FS by Stripes begins here.
-[Version 3 - Improved Raccoon/Candy functionality]
+Version 4 of Hospital for FS by Stripes begins here.
+[Version 4 - Sally option for Dr Matt added]
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
 [Description text for this Extension.]
 
@@ -1197,7 +1197,7 @@ to say tlvictory:
 		say "     Pinned to the floor beneath you, the transformed doctor moans and yips as you fuck her good and hard, fulfilling the instinctual needs that are rapidly becoming all she knows.  You grin as you watch her, once a brilliant scientist, become a mindless sextoy as you ride her canine cock.  Her cute, rabbitty face smiles up at you and her husky tail wags happily as she's quite literally fucked senseless.";
 	if susan is visible:
 		wait for any key;
-		say "     Hearing some soft moans behind you, you glance over to find Susan have gotten in on the action and is driving her cock into Orthas.  The black dragoness moans weakly, still largely incapacitated from her fight with you.  The smaller doe pounds away at the dragon's cunt aggressively.  'I've seen you eyeing my mate.  He's mine, you slut.  Take my fucking cum instead, you black bitch.'";
+		say "     Hearing some soft moans behind you, you glance over to find Susan has gotten in on the action and is driving her cock into Orthas.  The black dragoness moans weakly, still largely incapacitated from her fight with you.  The smaller doe pounds away at the dragon's cunt aggressively.  'I've seen you eyeing my mate.  He's mine, you slut.  Take my fucking cum instead, you black bitch.'";
 		say "     You have never known Susan to show any interest in using her cock before, so the sight of her pounding away at the dragon is quite surprising and arousing.  She pinches and squeezes the dragoness's huge breasts, teasing her nipples.  Orthas moans and starts rocking her hips up to meet each thrust, responding to the aggressive mating she's getting from the smaller doe herm.";
 		wait for any key;
 	if cocks of player > 0:
@@ -1208,13 +1208,7 @@ to say tlvictory:
 		say "     Your groin is thoroughly soaked with the huskybunny's feminine juices, as she's already cum several times without even being filled.  You lean down, licking and nibbling at her nipples as you focus on the throb of that thick cock filling you.  It feels so good inside you, stimulating all your sensitive spots and instinctively taking on a rhythm to give you the most pleasure.  Dr Mouse's formula has worked wonders on the scientist, making a wonderful fucktoy that is certainly one of the best fucks you've ever had.";
 		wait for any key;
 		say "     With a final, hard push down into her, you take her cock as deep as you can, moaning as the knot spreads you open and ties with you.  You can feel her heavy balls unleash her cum inside you, flowing up into your vagina and womb in an attempt to breed you.  You arch your back and moan loudly, clamping your vaginal walls firmly around it.  Her earlier spurts were nothing compared to the torrent of cum of her actually attempting to breed you.  It fills your womb and suffuses your body with an arousing warmth.";
-		let baby be 0;
-		if child is born or gestation of child is not 0, now baby is 1;
-		say "[impregchance]";
-		if baby is 0 and gestation of child is not 0:
-			now facename of child is "Huskybunny";
-			now bodyname of child is "Huskybunny";
-			now skinname of child is "Huskybunny";
+		say "[sallyimpreg]";
 		say "     As the knot starts to go down, you pull yourself off of the little slut's cock and grin happily.  You take a quick look around, taking stock of the situation in the lab.";
 	if susan is visible:
 		wait for any key;
@@ -1230,19 +1224,37 @@ to say tlvictory:
 			wait for any key;
 			say "     You and Susan set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again.  As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum.";
 	otherwise:
-		say "     You glance over at Orthas and decide not to leave her out of the action.  Grabbing the little slut, you pull her off the table and over to the dragoness.  Tossing her down onto her black body, you watch as the creature that was once Dr Matt starts to grind her cock against those smooth, hard scales.";
-		say "     'No, doctor.  Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her.  She whimpers a little, but arches her hips up into the thrusts, starting to rut the mindless sextoy whom she's failed to protect.";
-		wait for any key;
-		say "     You set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again[if orthasstart > 1].  As you are heading out, you can see that the dragoness's belly is starting to swell with eggs and her ovipositor is pushing those eggs into the furry slut's womb[otherwise].  As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum[end if].";
-	wait for any key;
-	say "     With Dr Matt in good hands, you [if Susan is visible]and Susan [end if]bring your haul down the stairs in stages and then take it out the door.  Having called for the helicopter pickup earlier, it arrives and you instruct the orderlies to load up the equipment before you all return to the hospital and the laboratory hidden within.";
-	say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there.  It seems that Orthas called in the military to take the transformed doctor and any remaining research material.  They've been dealt a sizeable setback to their plans.";
+		say "     You glance over at Orthas and wonder what to do with her.  You have a lot of work to do and she's starting to recover.  She'll need something to keep her out of your hair.  Perhaps you can let her and the new Dr Matt get reacquainted.  Otherwise, you could try locking her up somewhere to keep her out of trouble, letting you keep the new fucktoy for yourself.  (Y=Use Dr Matt, N=Lock her up)";
+		if the player consents:
+			say "     You glance over at Orthas and decide not to leave her out of the action.  Grabbing the little slut, you pull her off the table and over to the dragoness.  Tossing her down onto her black body, you watch as the creature that was once Dr Matt starts to grind her cock against those smooth, hard scales.";
+			say "     'No, doctor.  Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her.  She whimpers a little, but arches her hips up into the thrusts, starting to rut the mindless sextoy whom she's failed to protect.";
+			wait for any key;
+			say "     You set to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  This work is broken up by occasional glances over at the lustful pair, watching as the huskybunny drives her cock into the muscled dragoness again and again[if orthasstart > 1].  As you are heading out, you can see that the dragoness's belly is starting to swell with eggs and her ovipositor is pushing those eggs into the furry slut's womb[otherwise].  As you are heading out, you can hear the huskybunny yip loudly, cumming hard into dragoness and stuffing her full of even more cum in an attempt to breed with her[end if].";
+			wait for any key;
+		otherwise:
+			now hp of doctor matt is 104;		[Claimed Dr Matt as pet]
+			move Sally to bunker;
+			now lust of Sally is a random number between 0 and 4;
+			decrease humanity of player by 5;
+			increase score by 50;
+			say "     You grab battered dragoness and drag her out into the hall, wondering what you can do with her.  A quick glance at the other labs shows their doors to be just as flimsy as the one she already broke through, so that's no good.  You glance at the stairwell back to the main floor and that is when it hits you.  There is that sealed basement beneath the lab.  The heavy door should keep her contained for a while and the creature down below would certainly keep her occupied until you're done.  Following through on this plan, you toss her down into the sealed basement and call out to draw the monster's attention to the dazed dragoness before fleeing upstairs and barring the door.";
+			wait for any key;
+			say "     With her out of the way, you go back upstairs and find your new fucktoy bent over and sucking her own cock with wet moans of delight.  You grin and fondle her balls until she cums and get her to pump a load down her own throat, then coax her easily to come along with you.  Deciding to call her Sally now, you lead your plaything back to the bunker as quickly as you can.  Once inside, you leash her to one of the bunks to keep her out of trouble until you want to play with her again.";
+			wait for any key;
+			say "     Back at the lab, you can faintly hear the sticky sounds of Orthas and the creature below and grin.  Quite pleased with yourself, you get to work gathering up the research material and nanite adjustment system.  You load the items onto a cart, adding the infection terminal as well.  As you are heading out, you can hear the dragoness's loud, lustful roars as the creature has its way with her.";
+			wait for any key;
+			say "     With Dr Matt, Sally now, locked away for your amusement and Orthas certainly being further corrupted by the monster below, you bring your haul down the stairs in stages and then take it out the door.  Having called for the helicopter pickup earlier, it arrives and you instruct the orderlies to load up the equipment before you all return to the hospital and the laboratory hidden within.";
+			wait for any key;
+			say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there.  It seems that, with no one there to report in, the military has come to investigate the scene and recover any remaining research material.  Despite this major setback, without anyone reason to hold back in the hopes of more research, they will probably not delay their plans.";
+	if hp of doctor matt is not 104:			[Did not claim as pet]
+		now hp of doctor matt is 102;
+		extend game by 56;
+		say "     With Dr Matt in good hands, you [if Susan is visible]and Susan [end if]bring your haul down the stairs in stages and then take it out the door.  Having called for the helicopter pickup earlier, it arrives and you instruct the orderlies to load up the equipment before you all return to the hospital and the laboratory hidden within.";
+		say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there.  It seems that Orthas called in the military to take the transformed doctor and any remaining research material.  They've been dealt a sizeable setback to their plans.";
 	decrease the humanity of player by 5;
 	increase score by 50;
-	extend game by 56;
 	say "[line break]";
 	wait for any key;
-	now hp of doctor matt is 102;
 	move doctor matt to dark basement;
 	move infection terminal to Hidden Lab;
 	if Susan is visible:
@@ -1260,6 +1272,8 @@ instead of going to Trevor Labs Lobby while hospquest > 11:		[Lab unenterable af
 		say "     Having picked up Orthas and the transformed Dr Matt from the lab, it seems the military blasted the inside of the building, preventing any further theft of any sensitive technology and notes they could not take with them.  The building is no longer accessible, not that anything of value could have survived.";
 	otherwise if hp of doctor matt is 103:
 		say "     The self-destruct charges have done their job and much of the inside of the building has collapsed.  It is no longer accessible, not that anything of value could have survived.";
+	otherwise if hp of doctor matt is 104:
+		say "     Having searched the facility and being unable to locate Dr Matt, and possibly even running afoul of a corrupted, lustful dragoness, it seems the military blasted the inside of the building, preventing any further theft of any sensitive technology and notes they could not take with them.  The building is no longer accessible, not that anything of value could have survived.";
 	otherwise:
 		now the player is in Trevor Labs Lobby;
 
@@ -1270,7 +1284,7 @@ to say posttlscene:
 		say "     'While the infection was not complete, the partial effects you described should severely hamper his... ahem... her abilities to continue her research.  At the very least, it will slow down their progress and I can take the lead.  While it is unfortunate that you did not get their nanite adjustment system, its gains would have largely been short term.  I should still be able to provide the same service as Dr Matt did for you.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
 		wait for any key;
 		say "     'Now, I have taken the liberty of perusing the hospital files and preparing a false identity from the patient records when the military finally do move into the city[if susan].  I will prepare one for your friend as well[end if].  They are physically similar to you, have no next of kin and won't be turning up to throw a wrench into things.'  It seems that the good doctor has been thinking ahead for you.";
-	if hp of doctor matt is 102:		[won fight]
+	if hp of doctor matt is 102:		[won fight - did not keep Sally]
 		say "     'From your report, you have done an excellent job.  The complete removal of my rival as competition to discover the nanites['] secrets will make my knowledge all the more valuable.  And these notes and equipment will be of great benefit in the here and now.'";
 		say "     'With them, I can more readily test the parameters of the nanites['] abilities and distribute any improvements I discover much more easily.  Once I have this hooked up, I should be able to provide services like the doctor did, but with many more options to you.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
 		wait for any key;
@@ -1279,6 +1293,12 @@ to say posttlscene:
 	if hp of doctor matt is 103:		[took from empty lab]
 		say "     'You have done an excellent job.  This device just what I need to more readily test the parameters of the nanites['] abilities and distribute any improvements I discover much more easily.  Once I have this hooked up, I should also be able to provide many more options to you with it.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
 		wait for any key;
+		now featunlock is 1;
+	if hp of doctor matt is 104:		[kept Sally]
+		say "     'From your report, you have done an excellent job.  Making my rival into a mindless slut completely removes him as competition to discover the nanites['] secrets and will make my knowledge all the more valuable.  The good doctor is of little use to me in his - or should I say her - current state, so you are welcome to keep her for your own amusement, as agreed.  And these notes and equipment will be of great benefit in the here and now.'";
+		say "     'With them, I can more readily test the parameters of the nanites['] abilities and distribute any improvements I discover much more easily.  Once I have this hooked up, I should be able to provide services like the doctor did, but with many more options to you.  Simply ask to [bold type]volunteer[roman type] for an upgrade and I will take care of it for you.'";
+		wait for any key;
+		say "     'Now, I have taken the liberty of perusing the hospital files and preparing a false identity from the patient records when the military finally do move into the city[if susan].  I will prepare one for your friend as well[end if].  They are physically similar to you, have no next of kin and won't be turning up to throw a wrench into things.'  It seems that the good doctor has been thinking ahead for you.";
 		now featunlock is 1;
 	if susan is visible:
 		say "     'Your friend should stay here for the moment as well.  If this Dr Matt found value in observing her, I should do so also.  It sounds like he left you with nothing to do all day, my dear deer.  Perhaps you would be willing to help me out with a few simple tasks around the lab?'  Susan smiles and nods politely to the little white mouse.";
@@ -1495,7 +1515,7 @@ when play ends:
 		if bodyname of player is not "Wolverine Guard":
 			if hp of doctor matt is 101:				[Dr Matt not defeated]
 				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  You discretely ask a few questions and hear that the military's chief scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder.  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].";
-			otherwise if hp of doctor matt is 102:		[Dr Matt defeated]
+			otherwise if hp of doctor matt is 102 or hp of doctor matt is 104:		[Dr Matt defeated]
 				say "When the military comes through, you are taken in by the army.  The situation at the military base is chaos, with little ability to understand or control the infection.  As such, you receive little scrutiny and your false identity is not questioned.  After you are discharged, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed but helps you in your new life.";
 			otherwise if hp of doctor matt is 103:		[Feat machine stolen]
 				say "When the military comes through, you are taken in by the army.  In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned.  After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed.  He continues his research, selling his enhancements and customized strains to the highest bidder[if Susan is in Hidden Lab].  Susan continues to accompagny him as an assistant and a lover for you[end if].  Occasionally, he has a new one for you.  It is always something subtle that will go unnoticed, but helps you in your new life.";
