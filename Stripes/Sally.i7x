@@ -59,8 +59,8 @@ to say sallycock:
 		say ".  As you ride her shaft, you can feel it changing shaft, gaining stimulating ridges and a curved shape with a pointed glans.  It alters its size and length to fit you perfectly, prodding that spaded tip against your [if cunts of player > 0]cervix[otherwise]prostate[end if] to make you moan loudly.  Her balls swell and swell, becoming the size of cantaloupes.  Your body quivers in delight at the prospect of having this draconic cock pump you full of her hot seed, just what you desire right now.  The ridges of her cock rub against all your sensitive spots as you ride that cock.  When she finally cums, her spaded tip [if cunts of player > 0]pushes past your cervix and into your womb, allowing her to blast her ample semen deep inside[otherwise]presses firmly at your prostate, allowing you to feel each and every powerful blast as those large balls drain themselves into your rump[end if], causing you to orgasm as well.  You quiver in delight as her voluminous load makes your tummy swell before finally stopping, leaving you deliciously fully and sloshing with huskybunny cum.  She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master and seeded [if cunts of player > 0]her[otherwise]him[end if] so well.";
 		say "[sallyimpreg][sallyimpreg]";
 		say "     After a long wait for her throbbing shaft to return to normal, you ease yourself off her and clench down to keep as much of her load inside you.  You scritch her long, bunny ears and she smiles with her long tongue hanging from her muzzle as she pants happily.  As you walk off, she leans over and starts licking her cock clean.";
-	decrease humanity of player a random number between 0 and 2;
-	libido of player is now ( ( libido of player + 1 ) * 2 ) / 3;
+	decrease humanity of player by a random number between 0 and 2;
+	now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
 	increase morale of player by 2;
 
 to say sallypussy:
@@ -71,8 +71,8 @@ to say sallypussy:
 	say "     You pound away at her, enjoying a nice, long lovemaking session.  She hooks her legs around you, freeing up your hands to roam over her sexy body.  Your fingers tease her all over, having so many sensitive spots and such delightful responses to your touches.  Dr Mouse indeed did a fine job with her infection, making her into one of the best fucks you've ever had.  You finally drive hard into her and unleash your hot seed, pushing your glans past her cervix and into eager womb.  Her vaginal walls squeeze and tug at your spurting member, milking you to get as much as she can.  She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master and at having been seeded with his cum.";
 	wait for any key;
 	say "     After a long wait for your afterglow to pass and for your cock to start to soften, you slip out of her with a wet pop.  Her pussy clamps down automatically, wanting to keep all your seed inside.  You scritch her long, bunny ears and she smiles with her long tongue hanging from her muzzle as she pants happily.  As you walk off, she leans over and starts licking her sticky cunt clean.";
-	decrease humanity of player a random number between 0 and 2;
-	libido of player is now ( ( libido of player + 1 ) * 2 ) / 3;
+	decrease humanity of player by a random number between 0 and 2;
+	now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
 	increase morale of player by 2;
 
 

@@ -192,8 +192,7 @@ To Say ratslutwelcome:
 			
 To slutratpatron:
 	say "You advance towards the ominous red light in the otherwise darkened sewers. The smell of sulfur grows thicker as the slick cement walls give way to rougher hewed stone that seems to reflect that malignant red light back like a man laughing at a cruel joke. Your [skin of player] feet can feel the increasingly rough terrain. Stalagmites become sharper and more frequent, slowing your progress, but you can see it now. Situated a few feet ahead is a raised pedastal of some dark stone. Perched on top is a heavy tome.";
-	say "Just looking at that book causes strange whispered to echo in your mind.
-	
+	say "Just looking at that book causes strange whispered to echo in your mind.";
 	say "Scene not written yet.";
 	
  To Say slutratdenscene:
