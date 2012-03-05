@@ -379,6 +379,8 @@ Carry out reciting:
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
 	if mattcollection is 1, add "infection monitor" to invent of player;
+	if hp of doctor matt is 104, move Sally to bunker;
+	if hp of doctor matt is not 104, remove Sally from play;
 	now Sven is in Sven's Place;
 	now Svetlana is in dark basement;
 	now Hidden Kitty is unresolved;
