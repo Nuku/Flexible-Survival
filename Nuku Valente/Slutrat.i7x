@@ -8,7 +8,10 @@ To say slut rat growth:
 		say "Your balls feel like they have become [ball size]!";
  
  to say slut rat victory:
-	say "Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged.[line break][line break]They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
+	if the location of the player is slutrat den:
+		say "The rat grins as she pushes you towards the others, 'Let[']s remind this one how we treat bad people'. Of course, how they treat bad people and how they treat good people can be a bit foggy at times. At the call, the other rats stop their coupling and stroking and other diversions to instead gather around you with hungry expressions.";
+	otherwise:
+		say "Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged.[line break][line break]They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
 	if cocks of player is greater than 0:
 		say "One rat lowers before you and takes your [cock size desc of player] [cock of player] dick into her waiting snout, suckling firmly as her hands caress your [ball size] in eager rubs of her smooth hands.";
 		if cocks of player is greater than 1:
@@ -169,10 +172,29 @@ To Say ratslutwelcome:
 				if lost is 0:
 					if slutratsub is greater than 0:
 						decrease slutratsub by 1;
+						say "You feel more confident about your dealings with the rat after that little battle.";
 		continue the action;
 	if cunts of player is greater than 0:
 		say "Female Scene Pending";
-	say "Not Written Yet.";
+	otherwise:
+		if breasts of player is greater than 0 and breast size of player is greater than 0:
+			say "The rat arrives at the junction of your thighs and seems surprised at what she finds, or does not find. Her teeth are felt, nipping twice at your [skin of player] skin before she looks back up, 'How do you live like that?' she says in an almost accusing tone. She rises to her feet and kisses your cheek, 'Poor thing. We will just have to fix that.'";
+		otherwise:
+			say "She brushes up alongside you, nose twitching lightly as she takes your scent, 'Mmm, something is wrong,' she murmurs, reaching for your flat chest, then grasping your featureless groin openly, 'You have nothing.' She moves around behind you and presses against your back, 'That won't work at all...'";
+		if "female preferred" is not listed in feats of the player:
+			say "She draws out a bottle of strange purple fluid and holds it up to you, 'Drink, as quickly as you can.'";
+			ratslutchug;
+		otherwise:
+			say "Pink fingers curl at your hips as she leans in and nuzzles between your legs, 'You smell like you want to be a woman, but you're missing things.' A soft bite is felt where you should have something, then her warm tongue, slowly working her way back up along your front, 'We have just the thing.' The bite causes a light itching sensation, the demonically tainted rat's strain trying to work at your body.";
+			infect "Slut Rat";
+			say "Another rat hurries forward and seizes one of your hands, hauling you across the room and down a tunnel. Darkness closes in around you and she as you step quickly along the claustrophobic crawlways. Dim red light comes into view from around the corner. The rat guiding you, now that you she slows her steps and gives you a chance to look at her, is a bit more slender than the others. As she looks over her shoulders, you can see glasses balanced on her narrow snout, 'You have to go along from here,' she says, 'Pay proper respect.'";
+			slutratpatron;
+			
+To slutratpatron:
+	say "You advance towards the ominous red light in the otherwise darkened sewers. The smell of sulfur grows thicker as the slick cement walls give way to rougher hewed stone that seems to reflect that malignant red light back like a man laughing at a cruel joke. Your [skin of player] feet can feel the increasingly rough terrain. Stalagmites become sharper and more frequent, slowing your progress, but you can see it now. Situated a few feet ahead is a raised pedastal of some dark stone. Perched on top is a heavy tome.";
+	say "Just looking at that book causes strange whispered to echo in your mind.
+	
+	say "Scene not written yet.";
 	
  To Say slutratdenscene:
 	if lastratvisit - turns is less than 8 and lastratvisit is greater than 0:

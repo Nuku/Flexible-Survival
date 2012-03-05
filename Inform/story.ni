@@ -19,7 +19,7 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
-The release number is 45.
+The release number is 50.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -1232,7 +1232,7 @@ To process (X - a grab object):
 				increase score by 2;
 			decrease hunger of player by 9;
 			if hunger of player is less than 0, now hunger of player is 0;
-			say "The eat the food, feeling a little disappointed it's not junk food!";
+			say "You eat the food, feeling a little disappointed it's not junk food!";
 			if morale of player is less than 0:
 				increase morale of player by 10;
 				if morale of player is greater than 0, now morale of player is 0;
