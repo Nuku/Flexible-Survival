@@ -38,7 +38,7 @@ Instead of fucking the Kara:
 		now lastKarafucked is turns;
 	otherwise:
 		say "'Sorry, but I kind of was hoping for another hyena if you know what I mean,' Kara says with a feral grin as she sizes you up, 'Ever since those wonderful sexy bikers, I haven[apostrophe]t been able to think about much else, especially since I am part of the 'gang' now too,' She says with a shake of her head, 'Though if you were to join the gang as well... well just think how much fun we could have...' The slutty hyena herm says teasingly, as she runs her clawed hand over your body, before planting a deep lusty kiss right on your mouth, her sharp teeth rubbing up against yours as her taste fills your mouth. Her tongue teases your own for a minute, before she breaks the kiss and backs off for a second, leaving you panting with arousal as she shoots you a wink, 'Think about it anyways...' She says as she goes back to what she was doing."; 
-		say "(Content currently incomplete.  No sex for you. :( )";
+		say "(---  Content currently incomplete.  No sex for you. :(  ---)";
 
 
 
