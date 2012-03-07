@@ -88,8 +88,8 @@ Section 3 - Sexxxings
 
 An everyturn rule:
 	if companion of player is bee girl:
-		increase libido of player by 2;
-		let diceroll be a random number from 40 to 160;			[lust check vs 140, player libido 40 or less auto-wins]
+		increase libido of player by 5;
+		let diceroll be a random number from 45 to 200;			[lust check vs 200, player libido 45 or less auto-wins]
 		if diceroll < libido of player:
 			let T be a random number between 1 and 5;
 			if cocks of player > 0:
@@ -109,23 +109,23 @@ An everyturn rule:
 
 to say beesexmale1:
 	say "     Drawn to her by her sweet scent, you take Honey into your arms and run your hands over her body.  She buzzes happily and hugs you tightly.  Lifting her small body up into your arms, you slide your cock into her warm pussy.  Normally hidden under a puff of soft, golden hair, her honeypot is tight and wet around your cock.  Her wings buzz excitedly as she bounces in your arms, riding your cock until you finally pump your thick seed into her.";
-Decrease libido of player by 16;
+	now libido of player is ( libido of player + 1 ) / 3;
 
 to say beesexmale2:
 	say "     Sensing your arousal, Honey snuggles up to you and nuzzles your crotch.  Her tongue, long and thin, wraps around your shaft and wriggles over it.  She takes you into her mouth and starts sucking hungrily while that strange tongue teases you incessantly.  Her upper arms run over your body, stroking and caressing you while her smaller ones cup your balls and knead them until you finally cum.  She drinks down your seed, clearly loving the taste and always happy to repay you for your kindness.";
-	Decrease libido of player by 10;
+	now libido of player is ( libido of player + 1 ) / 2;
 
 to say beesexfemale1:
 	say "     Sensing your arousal, Honey snuggles up to you and nuzzles you crotch.  Her tongue, long and thin, slides out to tease at your wet pussy.  Pressing her lips to your dripping folds, she slides that wriggling tongue down into you, making you moan in delight.  Her tongue, quite skillfully delves to your very depths to taste your nectar.  You cum several times and she happily drinks down your sweet waters until you're both satisfied.";
-	Decrease libido of player by 10;
+	now libido of player is ( libido of player + 1 ) / 2;
 
 to say beesexfemale2:
 	say "     The cute bee girl buzzes over to you and snuggles close.  As you run your hands through her soft hair and caress her sensitive antennae, she runs the small hand from one of her lower arms across your wet pussy, teasing your sensitive folds.  After a little stroking, she slips a finger into you, then another, then the whole of the little hand.  The chitin is firm, but flexes and feels very nice stuffed inside your needy cunt.  She drives it into you again and again until you orgasm loudly.  As you get back on the move, you catch her licking and sucking your juices from her little hand with a grin.";
-	Decrease libido of player by 16;
+	now libido of player is ( libido of player + 1 ) / 3;
 
 to say beesexhoneypot:
 	say "     The bee girl's antennae twitch, sensing you a moment before you pounce her into a hug.  Buzzing playfully, you roll her onto her back and bury your face between her legs.  You nuzzle at the soft, golden hair covering her pussy and start lapping at her honeypot.  And how appropriate that name is for it, for her juices are thick, sweet and rich like honey.  Loving her taste, you drive her to several orgasms before finally stopping.  She hugs you tightly and uses her long, slender tongue to lick away the sticky honey from your face.";
-	Decrease libido of player by 5;
+	now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
 	Decrease hunger of player by 6;
 	If hunger of player < 0, now hunger of player is 0;
 	Increase thirst of player by 1;
