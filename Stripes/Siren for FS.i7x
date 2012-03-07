@@ -75,8 +75,8 @@ to say sirendesc:
 		say "     As the song fills your ears until it is all you can hear, you try all the harder to make it to that jagged rock to find that beautiful singer.  You love it.  You love them.  They are your everything.";
 		let bonus be ( Strength of player + Stamina of player - 20 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus] vs 18 and score [dice plus bonus]:";
-		if dice + bonus is greater than 17:
+		say "You roll 1d20([dice])+[bonus] vs 16 and score [dice plus bonus]:";
+		if dice + bonus is greater than 15:
 			say "     You manage to fight your way through the rough waves and reach the rocky crag tired, but uninjured.  You call out in search of the singer and are shocked as they appear.";
 		otherwise:
 			say "     You are tossed and battered by the rough waters before you finally are bashed up against the rocky crag.  You take 12 damage!  You do manage to hang on and not be pulled away by the next wave and scramble up onto the sharp rock.  You call out in search of the singer and are shocked as they appear.";

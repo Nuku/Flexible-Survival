@@ -53,7 +53,7 @@ Instead of going south from the abandoned lot:
 		say "You knock on the door, and a slat opens up at eye level. ";
 		if the player is not facially human:
 			if Stevenswayed is 1:
-				say "Steven's eyes look at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but I [italic type]really[roman type] can't let you in here looking like that. Try changing your appearance, somehow, okay?' before he closes the slat.";
+				say "Steven's eyes look at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but I [italic type]really[roman type] can't let you in here looking like that. Try changing your appearance somehow, okay?' before he closes the slat.";
 			otherwise:
 				say "You barely see a couple of eyes look back at you when you hear a man cry 'Yikes!' and the slat closes rapidly. Perhaps it was your [facename of player] face.";
 		otherwise:
