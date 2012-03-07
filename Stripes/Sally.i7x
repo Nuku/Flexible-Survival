@@ -25,12 +25,13 @@ instead of fucking the Sally:
 		now lastSallyfucked is turns;
 		say "     Sally, hearing you step up, stops what she was doing and dashes towards you.  She whines softly and tugs at her leash, looking at you longingly.  When you smile down at her, she bounds around happily on all fours, knowing what's coming and needing it badly.  She hops back onto her bunk and rolls over, panting like a dog as she whines again, displaying her hybrid herm body that is available for your enjoyment.  The air around the bunk is saturated in the scent of her arousal and her male and female cum, exciting you greatly";
 		if cocks of player > 0:
-			say ".  As your needy fucktoy is a herm, how would you like to enjoy your your puppy-bun pet?  Do you feel like enjoying her pussy or her cock this time?";
+			say ".  As your needy fucktoy is a herm, how would you like to enjoy your your puppy-bun pet?  Do you feel like enjoying her pussy or her cock this time? (Y=her cock, N=her pussy)";
 			if the player consents:
 				say "[sallycock]";
 			otherwise:
 				say "[sallypussy]";
 		otherwise:
+			say ".";
 			say "[sallycock]";
 
 to say sallycock:

@@ -4027,6 +4027,7 @@ Include High Rise Events by Stripes.
 Include Hyena Bikers by Stripes.
 Include Stable Related Events by Sarokcat.
 Include Red Events by Stripes.
+Include Dry Plains Events by Stripes.
 Include New Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Mall Events by Sarokcat.
@@ -4168,6 +4169,12 @@ Include Rhino For Fs by Stripes.
 Include Siren For Fs by Stripes.
 Include Werewolf Costume For Fs by Stripes.
 Include Hippo Strongman For Fs by Stripes.
+Include Squid For Fs by Stripes.
+Include Centaur Mare For Fs by Stripes.
+Include Centaur Stallion For Fs by Stripes.
+Include Prairie Dog For Fs by Stripes.
+Include Snake For Fs by Stripes.
+Include Bald Eagle For Fs by Stripes.
 Include Candy Striper by Stripes.
 
 
