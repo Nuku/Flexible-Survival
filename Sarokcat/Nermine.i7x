@@ -534,7 +534,7 @@ carry out bargainhunting:
 				Now Entrance to the Red Light District is known;
 				Now Entrance to the High Rise District is known;
 				Now Zoo entrance is known;
-				Now Dry Plain is known;
+				Now Dry Plains is known;
 				Now Museum Foyer is known;
 		otherwise if Z is 22:
 			if "Submissive" is listed in feats of the player:

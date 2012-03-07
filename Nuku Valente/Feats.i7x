@@ -216,7 +216,7 @@ This is the gainfeat rule:
 			Now Entrance to the Red Light District is known;
 			Now Entrance to the High Rise District is known;
 			Now Zoo entrance is known;
-			Now Dry Plain is known;
+			Now Dry Plains is known;
 			Now Museum Foyer is known;
 
 

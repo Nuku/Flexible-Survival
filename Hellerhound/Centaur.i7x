@@ -1,29 +1,68 @@
-Centaur by Hellerhound begins here.
+Version 2 of Centaur by Hellerhound begins here.
+[Version 2 - Update by Stripes]
 
 [converted from FI]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a centaur to Flexible Survivals Wandering Monsters table"
+"Adds a mutant centaur to Flexible Survivals Wandering Monsters table"
 
 [Description text for this Extension.]
 
-Section 1 - Dry Plain
+Section 1 - Dry Plains
 
-understand "plains" as Dry Plain.
+understand "plains" as Dry Plains.
 
 
-Dry Plain is a room. It is fasttravel. "A great plain streches away from you, in the southern east side of the city. It looks like the quake leveled all the buildings, and now all that is left is dirt. Hoofprints are visible in the dust, and clouds of dust, periodically rising into spinners that travel a short distance, reveal dangers here.";
-Plains Door is a door. The marea of plains door is "Plains". "The plains stretch as far as the eye can see here, to the raptor or the human.". Plains Door is dangerous. Plains door is east of dry plain.
+Dry Plains is a room. It is fasttravel. "At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you.  You don't see any kind of military cordon here, making you suspect that the infected already spread out here before the military was mobilized to close it off.  Their lines are probably further back.  Some hoofprints you spot in a sandy patch nearby furthers this assumption.  As for the open grasslands, it looks like the some kind of storm or quake levelled all the scattered buildings further out.  Now all that is left of them among the dirt and grassland are mounds of rubble.  The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.";
+Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
 Plains door is west of wandering the plains.
 Wandering the plains is a room.
 
+Instead of sniffing the dry plains:
+	say "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.";
+
+Section 2 - Tainted Centaur Event
+
+Apple Tree is a situation.  The level of Apple Tree is 6.
+The sarea of Apple Tree is "Plains";
+centaurmate is a number that varies.
+when play begins:
+	add Apple Tree to badspots of guy;
+
+Instead of resolving a Apple Tree:
+	say "     Wandering across the plains, you come to one of the few trees scattered throughout it.  As you approach, you can see a centaur stallion plucking the apples from the tree and stuffing them into his pack and his mouth.  A little wary, but hopeful at the prospect of food, you continue forward cautiously and approach from behind.  As you get nearer, you can see that the centaur has become strange and twisted by the apples he's gathering and eating.  Each time he gobbles one down, fresh green tentacles under his equine belly writhe and his large cock and balls become greener.  Some roots from the tree have started to slide up his legs, moving to further corrupt him.";
+	say "     Shall you call out and continue to approach this tainted centaur?";
+	if the player consents:
+		say "     Noticing you, the centaur whinnies excitedly and pulls away from the tree roots with some effort.  The roots writhe on the ground, as if searching for their prey, before finally slipping back under the earth to await another hungry victim.  The centaur, not noticing what was starting to happen to him, trots over to you, cock swelling and tentacles writhing beside that throbbing, leaf-green meat.  His sheath and ballsac are a dark green in colour.  He looks you over and, with a booming voice, asks: 'Are you going to submit to me?'  You have a feeling that if you don't agree, he'll try to take what he wants by force.";
+		if the player consents:
+			say "You bow down your head and he laughs, approaching you with lust in his eyes.";
+			now centaurmate is 1;
+			say "[centaur attack]";
+			increase score by 20;
+		otherwise:
+			say "The centaur roars 'Fine then, be unwilling, but by the end you will want to be mine anyway!'";
+			now centaurmate is 2;
+			challenge "Mutant Centaur";
+			if lost is 1:
+				say "     'I'm glad you accepted by gifts so willingly,' he says cruelly.  'I must now go off to find others to be my mare.  There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off.  It seems you've unleashed a new blight upon the plains.";
+				decrease score by 5;
+			otherwise:
+				say "     'If you're going to be so mule-headed about accepting my gifts, I will go find others to be my mare.  There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off.  It seems you've unleashed a new blight upon the plains.";
+				increase score by 1;
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Mutant Centaur":
+					now monster is y;
+					break;
+			choose row monster in table of random critters;
+			now area entry is "Plains";
+	otherwise:
+		say "     Deciding not to risk the attention of this corrupted creature, you move back quietly.  As you do, the tree roots sink into his flesh and entwine with his own forming tentacles.  The mutant centaur moans and whinnies in pleasure as tendrils grow and sprout from his back and torso.  When he finally climaxes, it is a thick, sap-like fluid that stains the ground green.  When the tree roots withdraw from him, he staggers off slowly, hooves slowly changing into roots that cling at the ground as he steps.  The growing tendrils reach up and branch out, starting to grow leaves and apple blossoms.  Quite certain that the tainted centaur will take root soon and become another of these strange apple trees, you resolve to stay away from any more of these trees you find.";
+		increase score by 1;
+	Now Apple Tree is resolved;
 
 
-
-
-
-
-Section 2 - Fresh Apple
+Section 3 - Fresh Apple
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -32,13 +71,7 @@ name	desc	weight	object
 fresh apple is a grab object. It is a part of the player. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
 
 
-Section 3 - Monster Insertion
-
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
-
-[ Adds a blank row to the table, this is immediately filled ;) ]
+Section 4 - Monster Responses
 
 To say centaur defeat:
 	if libido of player < 50:
@@ -110,32 +143,10 @@ to say centaur rape female:
 	if a random chance of one in two succeeds:
 		add "Fresh Apple" to the invent of the player;
 	add "Fresh Apple" to the invent of the player;
-	repeat with n running from one to nine:
+	if centaurmate is 1:			[Extra infection for mate]
 		infect "Mutant Centaur";
-
-
-centaurmate is a number that varies.
-to say centaurmeet:
-	say "As you walk in the plain, a dust cloud becomes visible. You look at it with fear, and attempt to run, but fail to escape.";
-	say "The dust cloud engulfs you and settles to the ground, revealing an equine form with a powerful human torso. As it turns to slow down and stop in front of you, you catch a glimpse of a green thing under his belly, as it is very definitely a male.";
-	if centaurmate is 0:
-		say "He details you for a moment, and you get a clear sight of a monstrously huge cock head sliding out of its sheath. Two green tentacle-like things move around, seemingly attached to its base. With a booming voice, he asks: 'Are you going to submit to me?'. You have a feeling that if you don't agree, he will take what he wants by force.";
-		if the player consents:
-			say "You bow down your head, and he laughs.";
-			now centaurmate is 1;
-			say "[centaur attack]";
-			follow the turnpass rule;
-		otherwise:
-			say "The centaur roars 'Fine then, be unwilling, but by the end you will want to be mine anyway!'";
-			now centaurmate is -1;
-			
-
-
-
-
-
-
-
+	if Apple Tree is not resolved:	[Extra infection for event]
+		infect "Mutant Centaur";
 
 
 compressedcock is a number that varies.
@@ -150,13 +161,12 @@ An everyturn rule:
 			say "Your cock keeps bleeding, and shrank a little just now.";
 			decrease the hp of the player by 4;
 			say "The loss of blood is making you feel woozy.";
-			if the cock length of the player < 0:
+			if the cock length of the player < 1:
 				now the cocks of the player is 0;
 				now compressedcock is 0;
 				say "Your cock shrinks until you think it would be one for a mouse, and falls off, to your horror. Seems like that centaur meant what he said.";
 		otherwise:
 			now compressedcock is 0;
-
 
 
 To say centaur attack:
@@ -171,8 +181,6 @@ To say centaur attack:
 		now the cunt length of the player is 2;
 		now the cunt width of the player is 1;
 		infect "Mutant Centaur";
-		
-		[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 
 
 to say centaurgrowtorso:
@@ -188,25 +196,35 @@ to say centaurgrowtorso:
 	say " Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horses";
 
 
+to say centaurmeet:
+	say "As you walk in the plain, a dust cloud becomes visible. You look at it with fear, and attempt to run, but fail to escape.  As the dust cloud engulfs you and settles to the ground, it reveals an equine form with a powerful human torso. As it turns to slow down and stop in front of you, you catch a glimpse of a green thing under his belly, as it is very definitely a male.  It seems you've encountered one of the tainted centaurs created by the one you released.  The creature whinnies lustfully and makes a grab for you.";
+			
+
+Section 5 - Monster Insertion
+
+Table of random critters (continued)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
+
+[ Adds a blank row to the table, this is immediately filled ;) ]
 
 When Play begins:
 	add "Mutant Centaur" to infections of guy;
 	Choose a blank row from Table of random critters;
 	now name entry is "Mutant Centaur"; [Name of your new Monster]
-	now attack entry is "The Centaur[one of] punches your face with its hand[or] headbutts you[or]'s green tentacles rise from under him and slap you[or] rears up and slams you with his front hooves[at random]."; [Text used when the monster makes an Attack]
+	now attack entry is "The Centaur[one of] punches your face with its hand[or] headbutts you[or]'s green tentacles rise from under him and slap you[or] rears up and slams you with his front hooves[at random]!";
 	now defeated entry is "[centaur defeat]";
-	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[centaur attack]";
 	now desc entry is "[centaurmeet]";[ Description of the creature when you encounter it.]
 	now face entry is "human, with horse ears";[ Face description, format as the text "Your face is (your text)"] 
-	now body entry is "distinctively equine, with a muscled human torso where the horse's head should be";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "human, blending smoothly into black fur on your bottom half";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "Your tail is made of spindry fibers that twitch in the still air.";[ Tail description, write a whole Sentence or leave blank. ]  
+	now body entry is "that of a centaur, with a muscled, human upper torso.  Your body has well-defined muscles, but they seem a little strange and don't quite move right.  Your arms are strong and muscular, and roughly human in appearance as well.  Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle green hooves";
+	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your";[ skin Description, format as the text "You have (your text) skin"] 
+	now tail entry is "You have a green, flowing tail like a horse coming from just above your behind.  It wriggles and squirms unlike a horsetail though, moving more like a tentacle.";
 	now cock entry is "green and equine, with bumps covering it and tentacles growing out of two bulges along its sheath";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your body grows muscled at the bottom, and your legs change into those of a horse. Your breasts feel odd, and it seems like most of their girth is inside of you"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "your body grows muscled at the bottom, and your legs change into those of a horse.  Your muscles grow and shift, moving into slightly different positions.  Your breasts feel odd, and it seems like most of their girth is inside of you"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "the skin below your abdomen grows black fur, melding smoothly into the human skin above"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "[centaurgrowtorso]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now ass change entry is "a twitching quiver runs down your spine as it extends and grows a green horse's tail";
 	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 22;
 	now dex entry is 24;
@@ -218,7 +236,7 @@ When Play begins:
 	now hp entry is 45;			[ How many HP has the monster got? ]
 	now lev entry is 6;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
 	now wdam entry is 8;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "nowhere";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 24;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 24;		[ Size of balls apparently ;) sneaky Nuku]
@@ -231,11 +249,9 @@ When Play begins:
 	now libido entry is 0;	[done in the loss/win text]		[ Amount player Libido will go up if defeated ]
 	now loot entry is "Fresh Apple";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
-	
-	
-	
-	
-Section 4 - Centaur Heat
+
+
+Section 6 - Centaur Heat
 	
 Table of infection heat(continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
@@ -249,38 +265,24 @@ to say centheat:
 		say "You don't know what to do. Maybe you could hole up in the bunker until it is over.";
 
 
-
-
-Section 5 - Endings
+Section 7 - Endings
 
 when play ends:
-	if humanity of the player < 40:
-		if centaurmate is 1:
-			say "You return to your mate in the plains, and bear him many children, each time becoming more like him until you look as if you were made for each other. Evntually your growing herd needs more space, and you overthrow one of the nearby herds, turning them all into sex slaves for yours.";
-			say "When the rescue arrives, they section off the plains with electrical fences and try many ways to disarm the nanites remotely, all without effect. A few years later, they just enlose you in a concrete tomb with fake light.";
-			say "You get used to it over time, but it still stinks.";
-		otherwise if the bodyname of the player is "Mutant Centaur":
-			if cunts of player is 1:
-				say "Your odd body attracts attention in the reviving world, as normal humans return, and you eventually give up the struggle to be normal, and offer rides and pulling services to those at a nearby farm. You mate with the horses there when the need arises, but the rejection of the centaurs still weighs on your shoulders for years.";
-			otherwise:
-				say "Your cock everntually shrivels off, much to the surprise of your doctors, and you become the subject of much study, a genderless centaur, and are pampered for the rest of your life.";
-		otherwise if compressedcock is 1:
-			say "Your bleeding cock catches the attention of the authorities, but they are still unable to save it.";
-			if the bodyname of the player is "human" and the cunts of the player is 0:
-				say "You are one of the few genderless humans, and people come to you with opportunities for those who are barely affected by lust and/or will not lose control in a sexual situation. These new clients pay richly for the assurance of your services.";
-	otherwise:
-		if centaurmate is 1:
-			say "You return to your mate, and entice him back home, where you bear him many children, after you change. The neighbors are slightly fearful, but they are also quick to ask for help if they cannot carry something, or if their children want a ride.";
-			say "You are not fully trusted, however, the green growths inside you and on him prevent that. The surveillance goes away after a few years, the mysteries explained to those in charge in some way.";
-	if centaurmate is -1:
-		say "The rejection of the centaurs hurts, especially when one walks over you as if it didn't see you to prove its point.";
+	if bodyname of player is "Mutant Centaur":
+		if humanity of player < 10:
+			say "     As your new, tainted instincts take over, you are drawn back to the plains to join the growing herd of corrupted centaurs in their fight to spread their infection to the others";
+			if centaurmate is 1 and cunts of player > 0:
+				say ".  You are welcomed by your powerful mate, the first and strongest of the herd.  Being the first of his tainted mares, you are given a place above the others and fucked often.  You bear him many children, each time becoming more like him until you look as if you were made for each other, as indeed you were[if cocks of player > 0].  You are allowed to keep your cock and use it often to corrupt captured centaurs or to punish any in the herd who deserve discipline[end if].  Over time, you conquer and corrupt the other herds, turning them into sex slaves of yours.  You then spread your growing people out into the world at large to infest them with your gifts, by force if necessary.";
+			otherwise if centaurmate is 1 and cocks of player > 0:
+				say ".  You are welcomed by the herd's powerful leader, the first and strongest of the herd.  Being the first he corrupted, you are given a pleace above the others and made into his lieutenant.  He is a little disappointed that you did not return to him as a mare, but instead prepares you a special mash of tainted apples and his cum, which makes your cock grow into an impressive stallion's like his.  You are allowed to use it often to corrupt captured centaurs and to punish any in the herd who deserve discipline.  Over time, you conquer and corrupt the other herds, turning them into sex slaves of yours.  You then spread your growing people out into the world at large to infest them with your gifts, by force if necessary.";
+			if centaurmate is 2:
+				say ".  Having initially rejected the first mutant centaur's offer, you are punished for your lack of willingness to accept your place by his side.  You are treated as a lowly breeding mare, mounted and fucked by any herd member who wishes to use you to slake their lusts or simply for want of someone to punish and hurt.  You accept this over time, knowing it is your place[if cunts of player > 0].  You are used by the male foals to train them to mount, fuck and corrupt others.  You grow heavy with foals of your own and they always are taken away to be raised by the herd, denying you even the love of your children[end if][if cocks of player > 0].  You are punished often for having a cock, with the stallions squeezing your penis and balls with their tentacles.  It is never taken away though, instead only used as another means to hurt you for your initial rejection of their leader[end if].";
+			say "     The military, having cordoned off the section of the plains nearest the city, try to keep the corrupted centaurs contained.  The electric fence they initially erected at the edge of their lines does not hold out for long once your people make a concerted effort to cross it.  Many manage to fight through the military barricade and soldiers, escaping to create herds of their own elsewhere.  Eventually, the military manages to contain the rest of your people by using heavy equipment to dig a large trench and build a tall, concrete wall on the other side.  Your people still have the large section of plains inside this wall and can make forays into the city to find more new members to be inducted into the herd.";
+		otherwise:
+			say "     Your odd body attracts some attention from the military scientists when you and the others the soldiers can find are rescued.  Your differences from the standard centaurs are noted and tested briefly, but you are categorized as an anomaly and given little further scrutiny, as there are more important and dangerous things to focus on than a centaur with green genitals.  The other centaurs don't speak to you, always glaring at you or eying you suspiciously.  With your altered body, you have little option of a regular life and take up a life as a farm hand.  You do gardening and normal farm chores as well as give rides and perform pulling services.  Your employer is understanding of your needs and allows you to mate with the horses there when the need arises[if cunts of player > 0].  You bear a few foals over the years, centaurs like yourself with green genitals, but no sign of the tentacles or any further corruption, thankfully[end if].";
 
-	
-	
-	
+
 [ Edit this to have the correct Name as wall]
-
-
 
 
 Centaur ends here.
