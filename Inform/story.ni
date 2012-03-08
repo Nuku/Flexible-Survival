@@ -4061,7 +4061,7 @@ Include Chocolate Lab by Stripes.
 Include Yamato Dragon For FS by Kohryu.
 Include Yamato Dragoness For FS by Kohryu.
 Include Equine for FS by Nuku Valente.
-Include Ashen Breeder For Fs by Auto Translator.
+Include Ashen Breeder For Fs by Stripes.
 Include Lizard Girl For Fs by Damaged.
 Include Skunk For Fs by Damaged.
 Include Random Shemale Smooth Collie For Fs by Voldine.

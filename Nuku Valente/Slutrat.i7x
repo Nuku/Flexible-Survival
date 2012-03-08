@@ -192,7 +192,7 @@ To Say ratslutwelcome:
 			
 To slutratpatron:
 	say "You advance towards the ominous red light in the otherwise darkened sewers. The smell of sulfur grows thicker as the slick cement walls give way to rougher hewed stone that seems to reflect that malignant red light back like a man laughing at a cruel joke. Your [skin of player] feet can feel the increasingly rough terrain. Stalagmites become sharper and more frequent, slowing your progress, but you can see it now. Situated a few feet ahead is a raised pedastal of some dark stone. Perched on top is a heavy tome.";
-	say "Just looking at that book causes strange whispered to echo in your mind.";
+	say "Just looking at that book causes strange whispered to echo in your mind. You can hear the clicking scitter of claws on cement, but a quick glance around shows nothing to produce it. As you approach the pedestal, a hand settles on your shoulder and turns you to face a rat face. This creature looks to have been a rat first, before taking on obscene bits of human sexuality and posture, weaving itself into a strangely attractive visage of oozing overdone lust. Her red fur seemed to smolder in the dark, flickering even as she smiles. With a puff of smoke, she draws you closer to herself, pushing her abundant chest to yours. Her eyes seem to bore into your own. You can't make out the color, you can't even make out the shape. Looking into them causes physical discomfort.";
 	say "Scene not written yet.";
 	
  To Say slutratdenscene:
