@@ -1,4 +1,4 @@
-Version 3 of Ashen Breeder for FS by Auto Translator begins here.
+Version 3 of Ashen Breeder for FS by Stripes begins here.
 [ Version 3 - Victory Sex ]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
  
