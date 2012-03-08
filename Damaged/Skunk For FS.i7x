@@ -85,7 +85,7 @@ to say skunk_attack:
 to say skunk_desc:
 	choose row monster from the table of random critters;	
 	if a random number from 1 to 10 > 3 or skunkfight is 3: [female skunk]
-		say "A very female anthropomorphic skunk with hints of animal, its curves and beasts leave you wanting, without any reservations, to fuck it senseless.";
+		say "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";
 		now Skunk_type is 1;
 		now hp entry is 28;            [- How many HP has the monster got? -]
 		now monsterhp is 28;
