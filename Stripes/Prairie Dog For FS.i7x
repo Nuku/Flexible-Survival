@@ -18,7 +18,7 @@ to say beattheprairiedog:
 
 
 to say prairiedogdesc:
-	say "     You hear a squeaking, barking sound coming from behind you and turn around, but find nothing there.  Soon there are others all around you as the call is answered.  Still seeing nothing, you try to continue on only to have your legs sink into a hole in the ground.  More holes open up around you as prairie dog creatures emerge from the earth.  The sandy, brown rodents are larger than normal and are about three feet tall and walk on their hind legs.  Some have found toy hard hats or plastic shovels to use, but most are nude save for their fur.  Their breasts seem quite large on their small bodies, as do their swollen sheaths and balls.  As you are pulling yourself out of the hole, they charge to attack you!";
+	say "     You hear a squeaking, barking sound coming from behind you and turn around, but find nothing there.  Soon there are others all around you as the call is answered.  Still seeing nothing, you try to continue on only to have your legs sink into a hole in the ground.  More holes open up around you as prairie dog creatures emerge from the earth.  The sandy, brown rodents are larger than normal and are about three feet tall and walk on their hind legs.  Some have found toy hard hats, bandanas or small shovels to use, but most are nude save for their fur.  Their breasts seem quite large on their small bodies, as do their swollen sheaths and balls.  As you are pulling yourself out of the hole, they charge to attack you!";
 
 
 Section 2 - Monster Insertion

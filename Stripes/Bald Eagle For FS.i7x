@@ -27,7 +27,7 @@ to say eagledesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Male";
-	say "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you.  You barely dodge this first swipe as the eagle man screeches in again, this time in anger at missing.  [one of]'I'll get you,' he cries[or]'You won't get away,' he cries[or]'You'll be mine, prey,' he snaps[at random] as he swoops around for another pass at you.  This humanoid avian has a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck.  His wings are long and broad, formed into part of his arms.  His small, talonned hands are at the midpoint of his wings' leading edge, able to be used when the not fully extended.  His feet end in the bird feet with sharp claws.  His beak also looks quite sharp and dangerous.";
+	say "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you.  You barely dodge this first swipe as the eagle man screeches in again, this time in anger at missing.  [one of]'I'll get you,' he cries[or]'You won't get away,' he cries[or]'You'll be mine, prey,' he snaps[at random] as he swoops around for another pass at you.  This humanoid avian has a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck.  His wings are long and broad, formed into part of his arms.  His small, talonned hands are at the midpoint of his wings['] leading edge, able to be used when the not fully extended.  His feet end in the bird feet with sharp claws.  His beak also looks quite sharp and dangerous.";
 
 
 Section 2 - Monster Insertion
