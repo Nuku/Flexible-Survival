@@ -45,7 +45,7 @@ to say beatthecentaurstallion:
 			otherwise:
 				infect "Centaur Stallion";
 		otherwise:
-			say "     Not wanting to risk the large amount of infected semen those big balls contain, you pull your eyes away from his huge loins.  You give the centaur's equire ass a swat, sending him galloping off.";
+			say "     Not wanting to risk the large amount of infected semen those big balls contain, you pull your eyes away from his huge loins.  You give the centaur's equine ass a swat, sending him galloping off.";
 	otherwise:
 		say "     Having defeated the wild stallion, you give his equine ass a swat, sending him galloping off.";
 
@@ -114,7 +114,7 @@ when play ends:
 			otherwise:
 				say ".  As a female centaur, you help gather food and tend to the young foals.  When the time comes and you go into heat, you are mounted often by the stallions, ensuring you bear the herd a foal.";
 			if centaurmate is 1 or centaurmate is 2:
-				say "     Your people are locked in a constant war with the tainted, mutant centaurs.  You are careful not to tell them that you accidentally let the first of these escape the corrupted tree, but you do inform them of the apple tree and its sinister fruits.  Your people irradicate these trees whenever they are found with fiery arrows.  Without the apples, the mutant centaurs are more easily contained if never fully purged from your lands.  The military, having erected a barricade around the plains, strive to contain the centaur menace in their own way.  But the centaurs don't see it that way and instead are happy that it keeps the soldiers off their lands.";
+				say "     Your people are locked in a constant conflict with the tainted, mutant centaurs.  You are careful not to tell them that you accidentally let the first of these escape the corrupted tree, but you do inform them of the apple tree and its sinister fruits.  Your people irradicate these trees whenever they are found with fiery arrows.  Without the apples, the mutant centaurs are more easily contained if never fully purged from your lands.  The military, having erected a barricade around the plains, strive to contain the centaur menace in their own way.  But the pure centaurs don't see it that way and instead are happy that it keeps the soldiers off their lands.";
 		otherwise:
 			say "     Your unusual body makes modern life rather difficult for you, as most building, vehicles and even tools are not designed for a body as different as yours.  You take to living a simpler, country life, making a comfortable home in a barn you buy and renovate with many modern conveniences.  It is roomy and comfortable for someone like you and your home becomes envied by the few other tauric infected in the area, who start to emulate your example.  Becoming friends with them, they provide you with a stable of various lovers to satisfy your lustful, equine passions.";
 
