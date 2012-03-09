@@ -319,7 +319,7 @@ To stevenjunkfuck:
 		say "You start to cuddle up against him, but the flame just isn't lighting for him. Perhaps you should try again later.";
 		stop the action;
 	[fucking in the junkyard; should fill this in with sex]
-	say "You have a jolly good fucking with Steven.";
+	say "***You have a jolly good fucking with Steven.";
 	now laststevenfuck is turns;
 
 Table of random critters (continued)
@@ -348,6 +348,10 @@ When play begins:
 	now int entry is 12;
 	now cha entry is 10;
 	now sex entry is "Both";
+	now hp entry is 35;
+	now lev entry is 4;
+	now wdam entry is 5;
+	now area entry is "nowhere";
 	now cock length entry is 15;
 	now cock width entry is 6;
 	now cocks entry is 1;
