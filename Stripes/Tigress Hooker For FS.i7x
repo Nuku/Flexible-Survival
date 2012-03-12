@@ -1,5 +1,5 @@
 Version 2 of Tigress Hooker For FS by Stripes begins here.
-[Version 2.1 - added exclusions]
+[Version 2.2 - Hard Mode adjustment]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Tigress Hooker creature to Flexible Survivals Wandering Monsters table, With Impreg chance and resource loss"
 [Description text for this Extension.]
@@ -432,26 +432,30 @@ Suddenly, your bowels are filled with a rush of stinging fluid, painful to your 
 
 to say tigress_desc:
 	choose row monster from the table of random critters;
+	let debit be 0;
 	if mqstatus is 3:				[fighting tigresses at the motel]
 		say "     The lovely tigress is quite upset at the intruder to hir motel home.  Shi growls angrily and readies to deal with you soundly so shi can have hir way with you and put you in your place.  Under hir.";
-		now hp entry is 55;
-		now monsterhp is 55;
-		now wdam entry is 7;
-		now lev entry is 5;
+		if hardmode is true and level of player > 5, let debit be level of player - 5;
+		now hp entry is 55 + ( debit * 4 );
+		now monsterhp is 55 + ( debit * 4 );
+		now wdam entry is 7 + ( debit / 3 );
+		now lev entry is 5 + debit;
 		now libido entry is 100;
 	otherwise if mqstatus is 6:				[fighting the matron]
 		say "     The tigress matron of the motel is a larger and more impressive female.  Shi's got an extra foot of height on any of hir girls and a much fuller rack as well.  Hir long, flowing orange hair swishes as shi pulls off the bathrobe shi was wearing, baring hir strong and sensual body to you.  Shi looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of hir girls, but eager to put you in your place.  Hir dark nipples and cock are hard with hir anticipation of enjoying a new plaything.";
-		now hp entry is 90;
-		now monsterhp is 90;
-		now wdam entry is 12;
-		now lev entry is 8;
+		if hardmode is true and level of player > 8, let debit be level of player - 8;
+		now hp entry is 90 + ( debit * 6 );
+		now monsterhp is 90 + ( debit * 6 );
+		now wdam entry is 12 + ( ( 4 * debit ) / 11 );
+		now lev entry is 8 + debit;
 		now libido entry is 100;
 	otherwise:					[standard tigress]
 		say "     Leaning against a building is a striking female feline.  She is wearing a skimpy outfit, a short top and even shorter skirt.  This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes.  Hir bosom and stomach have snowy, white fur that covers them.  Her ears have [one of]large hoop earrings[or]a trio of small studs[or]tattoos of stars on the inside[or]long, dangling earrings[at random].  Her [one of]long, black hair is held in a pony tail.[or]hair is dyed a bright red.[or]orange hair is styled into fiery mane.[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist.[or]hair is a deep blue, with green tips.[at random]     Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly.  'So honey, you lookin[apostrophe] for a little fun?  For a little something, I[apostrophe]ll show you a good time.'  As she steps up, you catch the edge of something extra making a bulge under her skirt.  Clearly this tigress hooker is equipped to pleasure any client shi may find. And shi[apostrophe]s found you!";
-		now hp entry is 55;
-		now monsterhp is 55;
-		now wdam entry is 7;
-		now lev entry is 5;
+		if hardmode is true and level of player > 5, let debit be level of player - 5;
+		now hp entry is 55 + ( debit * 4 );
+		now monsterhp is 55 + ( debit * 4 );
+		now wdam entry is 7 + ( debit / 3 );
+		now lev entry is 5 + debit;
 		now libido entry is 0;
 
 

@@ -1,4 +1,5 @@
-Butterfly for FS by mirumu begins here. 
+Version 1 of Butterfly for FS by mirumu begins here.
+[Version 1.1 - Hard Mode adjustement]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Butterfly to Flexible Survivals Wandering Monsters table"
@@ -141,12 +142,14 @@ To say butterfly defeat:
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
 					if name entry is "Butterfly":
+						let debit be 0;
+						if hardmode is true and level of player > 3, let debit be level of player - 3;
+						now lev entry is 3 + debit;
 						now str entry is 16;
-						now dex entry is 16;
-						now hp entry is 30;
-						now wdam entry is 7;
+						now dex entry is 16 + ( lev entry / 5 );
+						now hp entry is 30 + ( debit * 4 );
+						now wdam entry is 7 + ( debit / 3 );
 						now sex entry is "Male"; 
-						now lev entry is 3;
 						break;
 				if ButterflyCanGetPregnant is True:
 					now the libido of the player is (the libido of the player) / 2;
@@ -209,12 +212,14 @@ To say butterfly defeat:
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
 					if name entry is "Butterfly":
+						let debit be 0;
+						if hardmode is true and level of player > 3, let debit be level of player - 3;
+						now lev entry is 3 + debit;
 						now str entry is 16;
-						now dex entry is 16;
-						now hp entry is 30;
-						now wdam entry is 7;
+						now dex entry is 16 + ( lev entry / 5 );
+						now hp entry is 30 + ( debit * 4 );
+						now wdam entry is 7 + ( debit / 3 );
 						now sex entry is "Male"; 
-						now lev entry is 3;
 						break;
 				if a random number from 1 to 10 is less than ButterflyEncounters:
 					now ButterflyLove is True;
@@ -311,10 +316,13 @@ To say butterfly attack:
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Butterfly":
+				let debit be 0;
+				if hardmode is true and level of player > 3, let debit be level of player - 3;
+				now lev entry is 3 + debit;
 				now str entry is 16;
-				now dex entry is 16;
-				now hp entry is 30;
-				now wdam entry is 7;
+				now dex entry is 16 + ( lev entry / 5 );
+				now hp entry is 30 + ( debit * 4 );
+				now wdam entry is 7 + ( debit / 3 );
 				now sex entry is "Male"; 
 		stop the action;
 	otherwise if ButterflyForeplay is False:
@@ -532,12 +540,14 @@ This is the butterflytreatment choice rule:
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
 					if name entry is "Butterfly":
+						let debit be 0;
+						if hardmode is true and level of player > 4, let debit be level of player - 4;
+						now lev entry is 4 + debit;
 						now str entry is 32;
-						now dex entry is 32;
-						now hp entry is 45;
-						now wdam entry is 14;
+						now dex entry is 32 + ( lev entry / 5 );
+						now hp entry is 45 + ( debit * 5 );
+						now wdam entry is 14 + ( 4 * debit / 11 );		[Strong dmg growth rate]
 						now sex entry is "Female"; 
-						now lev entry is 4;
 						break;
 			now ButterflyLove is False;
 	otherwise:
@@ -696,12 +706,14 @@ to say butterfly grove scene:
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Butterfly":
+				let debit be 0;
+				if hardmode is true and level of player > 3, let debit be level of player - 3;
+				now lev entry is 3 + debit;
 				now str entry is 16;
-				now dex entry is 16;
-				now hp entry is 30;
-				now wdam entry is 7;
+				now dex entry is 16 + ( lev entry / 5 );
+				now hp entry is 30 + ( debit * 4 );
+				now wdam entry is 7 + ( debit / 3 );
 				now sex entry is "Male"; 
-				now lev entry is 3;
 				break;
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy] [line break][line break]";
 		wait for any key;

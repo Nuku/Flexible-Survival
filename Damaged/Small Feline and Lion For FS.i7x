@@ -1,5 +1,5 @@
 Version 8 of Small Feline and Lion For FS by Damaged begins here.
-[ Version 8 - Victory Sex against Female Feline ]
+[ Version 8.1 - Hard Mode adjustments ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Small Feline and Lion to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -45,57 +45,51 @@ to say cat vict:
 	otherwise:
 		say "The bundle in your arms remains firmly attached, drinking hungrily from you and making it hard to concentrate.[line break]It seems no amount of your milk sates the busty feline as she snuggles against you.";
 		now Feline_attached is 1;
-		
+
 to say lion vict:
 	say "The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your new womb, which swells outwards with the volume of it. [line break]As you recover from the pleasure of it, the lion man snuggles, caressing your chest with his broad paws and rocking against you a few moments longer before he rises and releases you to your feet, wobbly though they may be.[impregchance][impregchance]";
 	infect;
 	decrease Feline_meow by 3;
-		
+
 to say feline att:
 	if Feline_type is 1:
 		say "[cat att]";
 	otherwise:
 		say "[lion att]";
-		
+
 to say feline def:
 	if Feline_type is 1:
 		say "[cat def]";
 	otherwise:
 		say "[lion def]";
-		
+
 to say feline vict:
 	if Feline_type is 1:
 		say "[cat vict]";
 	otherwise:
 		say "[lion vict]";
-		
+
 to say feline desc:
 	choose row monster from the table of random critters;
-	if Feline_meow < 5:
+	let debit be 0;
+	if Feline_meow < 5 or cunts of player is 0:
 		say "A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips and seems to be eying you rather provocatively.";
+		if hardmode is true and level of player > 3, let debit be level of player - 3;
 		now Feline_type is 1;
-		now hp entry is 20;	
-		now monsterhp is 20;
-		now wdam entry is 7;
-		now lev entry is 3;
-		now libido entry is 25;	
+		now hp entry is 20 + ( debit * 3 );
+		now monsterhp is 20 + ( debit * 3 );
+		now wdam entry is 7 + ( debit / 3 );
+		now lev entry is 3 + debit;
+		now libido entry is 25;
 	otherwise:
-		if cunts of player > 0:
-			say "A large, strongly muscled and powerful lion/human hybrid. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate.";
-			now Feline_type is 2;
-			now hp entry is 65;	
-			now monsterhp is 65;
-			now wdam entry is 35;
-			now lev entry is 14;
-			now libido entry is 5;	
-		otherwise:
-			say "A small cute girl, about four feet in height, covered in fur with round lion ears and a bright smile. She is quite developed for her size, sporting B cups and wide hips and seems to be eying you rather provocatively.";
-			now Feline_type is 1;
-			now hp entry is 20;	
-			now monsterhp is 20;
-			now wdam entry is 7;
-			now lev entry is 3;
-			now libido entry is 25;		
+		say "A large, strongly muscled and powerful lion/human hybrid. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate.";
+		if hardmode is true and level of player > 14, let debit be level of player - 14;
+		now Feline_type is 2;
+		now hp entry is 65 + ( debit * 5 );
+		now monsterhp is 65 + ( debit * 5 );
+		now wdam entry is 35 + ( ( 4 * debit ) / 11 );
+		now lev entry is 14 + debit;
+		now libido entry is 5;
 
 
 Section 2 - Monster Insertion

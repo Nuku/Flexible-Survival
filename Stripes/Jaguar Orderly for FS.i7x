@@ -1,5 +1,5 @@
 Version 2 of Jaguar Orderly for FS by Stripes begins here.
-[Version 2 - Losing Sex and Endings adding]
+[Version 2.1 - Hard Mode adjustment]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Jaguar Orderly creature to Flexible Survivals Wandering Monsters table with impreg chance"
 [Description text for this Extension.]
@@ -42,21 +42,28 @@ to say beatthejaguar:
 
 to say jaguardesc:
 	choose row monster from the table of random critters;
+	let debit be 0;
+	now hp entry is 80;
+	now lev entry is 8;
+	now wdam entry is 10;
+	now int entry is 10;
+	if lev entry is less than level of player and hardmode is true:
+		now debit is ( level of player ) - lev entry;
+		increase lev entry by debit;
+		increase hp entry by debit * 4;
+		increase wdam entry by ( debit / 3 );
 	if sabtoothed is 1:		[permanent upgrade]
 		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  But unlike the ones you've seen earlier at the hospital, this one is bigger and has large, sabretoothed fangs protruding from its upper jaw.  The devolved jaguarman growls and reaches to grab you with its powerful paws.";
-		now hp entry is 95;
-		now monsterhp is 95;
-		now lev entry is 9;
-		now wdam entry is 12;
+		increase hp entry by 15;
+		increase lev entry by 1;
+		increase wdam entry by ( square root of lev entry ) - 1;		[minor increasing bonus]
 		now int entry is 8;
 	otherwise:
 		say "     Before you is a large, muscled figure in the light blue-green uniform of a hospital orderly.  But no man, this is a large jaguar creature.  He looks you over angrily and reaches to grab you, obviously feeling you are somewhere you don't belong.";
-		now hp entry is 80;
-		now monsterhp is 80;
 	if triclamped is 1:		[permanent upgrade]
 		say "     Getting a closer look at the creature as it charges towards you, you can see traces of toughened scales at the top of its neck and there are three small horns on its head, one at the end of its muzzle and two over its brow.  These poke just a little out from his fur.";
-		increase hp entry by 15;
-		increase monsterhp by 15;
+		increase hp entry by 15 + debit;
+	now monsterhp is hp entry;
 
 Section 2 - Monster Insertion
 

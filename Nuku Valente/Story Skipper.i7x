@@ -358,6 +358,8 @@ Carry out reciting:
 		now Finding a Way in is unresolved;
 	otherwise:
 		now Finding a Way in is resolved;
+	if "Physical Booster" is listed in feats of player, remove "Physical Booster" from the feats of the player;
+	if "Mental Booster" is listed in feats of player, remove "Mental Booster" from the feats of the player;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
 	if hospquest is 8, now Dinosaur Nest is unresolved;
