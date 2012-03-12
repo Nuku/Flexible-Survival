@@ -23,7 +23,7 @@ Instead of resolving Meeting the corgi:
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
 		otherwise:
-			say " After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, din't you, ya little fucker?' he says before stomping hard onto the [slutname][apostrophe]s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here.....you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure , lately these [apostrophe]dominators[apostrophe]' the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout , there[apostrophe]s a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
+			say " After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname][apostrophe]s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here.....you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure , lately these [apostrophe]dominators[apostrophe]' the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout , there[apostrophe]s a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
 			Increase corgitalk by 1;
 			now Meeting the corgi is resolved;
 			
@@ -44,7 +44,7 @@ Instead of resolving pendent hunting:
 		otherwise:
 			say " deciding that it would be better to try again later, you quickly run off";
 	otherwise:
-		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of with is wearing a blue pendent, thankfully there distracted and don’t notice you";	
+		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of with is wearing a blue pendent, thankfully there distracted and don't notice you";	
 		
 
 Section 2-Max
@@ -54,7 +54,7 @@ lastcorgifucked is a number that varies.  lastcorgifucked is usually 130.
 understand "corgi" as Max.
 understand "max" as Max.
 
-The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur whith a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendent hanging from his neck. ";
+The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendent hanging from his neck. ";
 
 The conversation of Max is { "[Corgitalking]" };
 
@@ -83,15 +83,15 @@ To say Corgitalking:
 	otherwise if location of player is Mall Atrium:  [start of normal converce]
 		say "Hey, glad we got out of there [if Mistresswon is 1]and got rid of that demented creature too![end if]";
 		if Mistresswon is 0:
-			say "if you want we can go back and try to attack those sluts and dominator’s again?";
+			say "if you want we can go back and try to attack those sluts and dominatrices again?";
 			if the player consents: 
 				say "lets go then, shall we";
 				move player to Old Lounge;
 			otherwise: 
-				say "thats ok, im still pretty tired anyway, but just ask if you want to try again";	
+				say "That[']s OK, I[']m still pretty tired anyway, but just ask if you want to try again.";	
 		otherwise:
 			if maxq is 2:
-				say " the corgi dances happily as you give him the pendent, hugging it against his chest, rubbing the back of his head and blushing when he realises where he is.['] h'e h'e sorry bout that, here['] he says tossing you a new looking backpack, that should be better then what your currently using and there’s a few items in there that should help you out";			
+				say "The corgi dances happily as you give him the pendant, hugging it against his chest, rubbing the back of his head and blushing when he realizes where he is. 'Heh heh sorry bout that, here,' he says tossing you a new looking backpack, that should be better then what your currently using and there’s a few items in there that should help you out";			
 				Add "durable backpack" to invent of player;
 				Add "water bottle" to invent of player;			
 				Add "strange gem" to invent of player;
@@ -101,17 +101,17 @@ To say Corgitalking:
 				Add "protein shake" to invent of player;
 				Add "protein shake" to invent of player;	
 				Add "kunai" to invent of player;													
-				say "now then since, iv finally got this back, I can go home, feel free to drop by when you have the chance, its that big apartment complex next to the gym  ";
+				say "Now then since I have finally got this back, I can go home, feel free to drop by when you have the chance, its that big apartment complex next to the gym. ";
 				now GYM is known;
 				now Complex is known;
 				move Max to Rec room;
 			otherwise if maxq is 0:
-				say "Max waves you over as you enter the mall, [']how you being doing, good, well i'v got a favour to ask of you.[line break] A while ago i was attacked by the hyena gang and they managed to steal something from me, trouble is, I’m busy with another job that has to be done quickly, would you mind getting it back for me, its a pendent like mine, only its blue instead of red.[']";
+				say "Max waves you over as you enter the mall, [']how you being doing, good, well I've got a favor to ask of you.[line break] A while ago i was attacked by the hyena gang and they managed to steal something from me, trouble is, I'm busy with another job that has to be done quickly, would you mind getting it back for me, its a pendent like mine, only its blue instead of red.[']";
 				now maxq is 1;
 			otherwise if maxq is 1:
-				say "apologising for your lack of progress you quickly head out once again to try and find the corgi's missing pendent, mayby if you hunt for the pendent youll have more luck?";	
+				say "Apologizing for your lack of progress you quickly head out once again to try and find the corgi's missing pendent, maybe if you hunt for the pendent you'll have more luck?";	
 	otherwise if location of player is Rec room:
-		say "'you want to trade some stuff? miles and me have got some goody bags for you if you want them, if you have a bit of water and food to spare, you may find yourself suprised'  how about it do you want to GIVE MAX some of your supplies?";
+		say "'You want to trade some stuff? miles and me have got some goody bags for you if you want them, if you have a bit of water and food to spare, you may find yourself suprised.'  Maybe  you want to GIVE MAX some of your supplies?";
 
 
 Section 3- corgitrading
@@ -137,7 +137,7 @@ carry out corgigiving:
 		delete water bottle;
 		let Z be a random number between 1 and 11;
 		if Z is 1:
-			Say "...... nothing.....absolutly nothing......even the bags useless!";
+			Say "...... nothing.....absolutly nothing... even the bag is useless!";
 		otherwise if Z is 2:
 			say "a bottle of water and some food, seems you get what you paid for after all";
 			Add "food" to invent of player;
@@ -157,11 +157,11 @@ carry out corgigiving:
 			Say "a protein shake";
 			Add "protein shake" to invent of player;
 		otherwise if Z is 6:
-			say "two protein shake[']s";
+			say "two protein shakes";
 			Add "protein shake" to invent of player;
 			Add "protein shake" to invent of player;
 		otherwise If Z is 7:
-			say "alot of protein shake[']s";
+			say "alot of protein shakes";
 			Add "protein shake" to invent of player;
 			Add "protein shake" to invent of player;
 			Add "protein shake" to invent of player;
