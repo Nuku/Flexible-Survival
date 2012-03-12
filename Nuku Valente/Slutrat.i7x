@@ -259,8 +259,8 @@ To slutratpatron:
 	increase Slutratcor by 1;
 	increase slutratsub by 2;
 	if slutratsub > 10, now slutratsub is 10;
-	follow the sex change rule;
 	infect "Slut Rat";
+	follow the sex change rule;
 
 
 To Say slutratdenscene:
@@ -300,7 +300,7 @@ When play ends:
 		if bodyname of player is "Slut Rat":
 			say "You can no longer deny your new basic needs. You flee to the mall and its comforting sewers. Following your instincts, you are soon in the welcoming embrace of your rodent sisters, who take turns fucking and being fucked by you for what feels like days in a celebration of your coming around. Your family remains there, hiding from the rescue, and living out your days together.";
 			if slutratcor is greater than 4:
-				end the game saying "Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It[']s time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords had need of you both.";
+				say "Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It[']s time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords had need of you both.";
 				continue the action;
 			otherwise if visittimes of slutrat den is greater than 0:
 				if slutratsub is 5:
