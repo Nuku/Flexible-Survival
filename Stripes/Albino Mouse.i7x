@@ -1,5 +1,5 @@
 Version 1 of Albino Mouse by Stripes begins here.
-[Version 1]
+[Version 1.1 - Hard Mode Variant added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds Dr Mouse the Albino Mouse opponent to Flexible Survivals Monsters table"
 [Description text for this Extension.]
@@ -32,19 +32,32 @@ to say beatdrmouse:
 
 
 to say drmousedesc:
+	choose row monster from the table of random critters;
+	let debit be 0;
 	if hospfight is 1:
 		say "     Dr Mouse, barely four feet tall, intends to fight you.  With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak.  But the musine doctor snarls angrily and charges at you, tiny paws clenched into fists.  You ready to strike, prepared to deal with the mad doctor once and for all.";
+		if hardmode is true and level of player > 4, let debit be level of player - 4;
+		now hp entry is 30 + ( debit * 2 );
+		now monsterhp is 30 + ( debit * 2 );
+		now wdam entry is 3 + ( debit / 4 );
+		now lev entry is 4 + ( debit / 2 );
+		now libido entry is 20;
+		now str entry is 8;
+		now dex entry is 12 + ( lev entry / 6 );
+		now sta entry is 12;
 	if hospfight is 2:
 		say "     The now monstrous mouse is attacking you.  His altered body is huge, almost nine feet tall and bristling with sharp claws, teeth, horns and spikes.  He has managed to give himself a powerful physique and seems to have retained his twisted mind.  His hide is toughened, making it much harder to harm the mutated hybrid he's become.";
-		choose row monster from the table of random critters;
-		now hp entry is 150;
-		now monsterhp is 150;
+		let debit be 0;
+		if hardmode is true and level of player > 12, let debit be level of player - 12;
+		now hp entry is 150 + ( debit * 6 );
+		now monsterhp is 150 + ( debit * 6 );
 		now wdam entry is 10;
-		now lev entry is 12;
+		if hardmode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
+		now lev entry is 12 + debit;
 		now libido entry is 100;
 		now str entry is 20;
-		now dex entry is 24;
-		now sta entry is 20;                    
+		now dex entry is 24 + ( ( debit + 2 ) / 5 );
+		now sta entry is 20;
 
 
 Section 2 - Monster Insertion

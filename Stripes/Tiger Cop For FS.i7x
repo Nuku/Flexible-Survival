@@ -1,5 +1,5 @@
 Version 3 of Tiger Cop For FS by Stripes begins here.
-[Version 3.0 - Added midpoint location and 24 hour time limit]
+[Version 3.1 - Hard Mode adjustment]
 
 Section 1 - Key Hunt Quest
 
@@ -526,10 +526,17 @@ To say beattigercop:
 
 
 to say tigercopdesc:
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if hardmode is true and level of player > 8, let debit be level of player - 8;	[Boss hard mode growth rates]
+	now hp entry is 90 + ( debit * 6 );
+	now monsterhp is 90 + ( debit * 6 );
+	now wdam entry is 12 + ( ( 4 * debit ) / 11 );
+	now lev entry is 8 + debit;
 	if mqstatus is 98:
-		say "     The feline policeman growls as he looms over you, ready to take another swing.  The large tigerman appears to be done with talking and is quite intent on fighting.  You dodge back a step and ready your weapon to try and deal with the animalistic cop.  Unlike your other foes, he[apostrophe]s not fallen into being an instinctual creature of lust, so you[apostrophe]re unsure what to expect.";
+		say "     The feline policeman growls as he looms over you, ready to take another swing.  The large tigerman appears to be done with talking and is quite intent on fighting.  You dodge back a step and ready your weapon to try and deal with the animalistic cop.  Unlike your other foes, he's not fallen into being an instinctual creature of lust, so you're unsure what to expect.";
 	otherwise:
-		say "     As you travel through the city, you come across the corrupted cop once again.  His open police jacket cannot contain his broad chest and his seven foot height leaves his pants covering only two-thirds of his legs.  He growls at the back of his throat as he moves up quickly and raises his nightstick.  The corrupted cop, enhanced with the strength and agility of a predator, but still sane, is a force to be reckoned with.  [one of]'I was wonderin[apostrophe] if when I[apostrophe]d find you again, punk.  Time for a little police brutality.'[or]'I will teach you to respect my authority here, punk.'[or]'I was just thinkin[apostrophe] I could use a little [apostrophe]stress relief[apostrophe].  Come[apostrophe]re, little toy.'[or]'I am the law here, punk.'[at random]";
+		say "     As you travel through the city, you come across the corrupted cop once again.  His open police jacket cannot contain his broad chest and his seven foot height leaves his pants covering only two-thirds of his legs.  He growls at the back of his throat as he moves up quickly and raises his nightstick.  The corrupted cop, enhanced with the strength and agility of a predator, but still sane, is a force to be reckoned with.  [one of]'I was wonderin['] if when I'd find you again, punk.  Time for a little police brutality.'[or]'I will teach you to respect my authority here, punk.'[or]'I was just thinkin['] I could use a little [']stress relief['].  Come're, little toy.'[or]'I am the law here, punk.'[at random]";
 
 
 Section 8 - Monster Insertion

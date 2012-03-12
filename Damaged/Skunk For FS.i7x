@@ -1,5 +1,5 @@
 Version 8 of Skunk For FS by Damaged begins here.
-[ Version 8.1 - Additional sexings added by Stripes ]
+[ Version 8.2 - Hard Mode adjustments by Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds male and female Skunks to Flexible Survivals Wandering Monsters table"
@@ -84,18 +84,20 @@ to say skunk_attack:
 
 to say skunk_desc:
 	choose row monster from the table of random critters;	
+	let debit be 0;
+	if hardmode is true and level of player > 5, let debit be level of player - 5;
 	if a random number from 1 to 10 > 3 or skunkfight is 3: [female skunk]
 		say "A very female anthropomorphic skunk with hints of animal, its curves and breasts leave you wanting, without any reservations, to fuck it senseless.";
 		now Skunk_type is 1;
-		now hp entry is 28;            [- How many HP has the monster got? -]
-		now monsterhp is 28;
-		now wdam entry is 6;            [-Amount of Damage monster Does when attacking.-]
+		now hp entry is 28 + ( debit * 4 );			[- How many HP has the monster got? -]
+		now monsterhp is 28 + ( debit * 4 );
+		now wdam entry is 6 + ( debit / 3 );		[-Amount of Damage monster Does when attacking.-]
 	otherwise: [male skunk]
 		say "This Skunk Beast would easily pass for a normal animal, if it weren't for two things.  One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours.  Which is a bit less than comforting, with the way it looks into your eyes.";
 		now Skunk_type is 2;
-		now hp entry is 64;            [- How many HP has the monster got? -]
-		now monsterhp is 64;
-		now wdam entry is 10;            [-Amount of Damage monster Does when attacking.-]
+		now hp entry is 64 + ( debit * 5 );			[- How many HP has the monster got? -]
+		now monsterhp is 64 + ( debit * 5 );
+		now wdam entry is 10 + ( ( 4 * debit ) / 11 );		[-Amount of Damage monster Does when attacking.-]
 
 
 Section 2 - Monster Insertion
