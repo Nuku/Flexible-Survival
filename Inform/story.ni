@@ -4192,7 +4192,7 @@ Include Centaur Stallion For Fs by Stripes.
 Include Prairie Dog For Fs by Stripes.
 Include Snake For Fs by Stripes.
 Include Bald Eagle For Fs by Stripes.
-Include Wildcat For Fs by Stripes.
+[Include Wildcat For Fs by Stripes.]
 Include Candy Striper by Stripes.
 
 
