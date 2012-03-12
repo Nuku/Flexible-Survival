@@ -9,7 +9,7 @@ when play begins:
 	add { "Hippo" } to infections of guy;
 	add { "Hippo" } to infections of furry;
 
-to say losetotemplate:
+to say losetohippo:
 	say "     The victorious strongman cheers his own success and slams you to your knees.  Holding you in place with one meaty hand, the other brushes aside his loincloth to release his throbbing cock.  At about 16 inches, his grey cock is quite huge, as are the balls beneath it.  The hippo's cock is quite thick as well and bulges with throbbing veins.  As his precum dribbles out from that impressive cock, you find yourself longing for a taste and lick the dribbling tip.  His pre is quite invigorating and you start licking and sucking at his cock for more.  He pushes you to take more and more of his cock into your mouth until finally he's managed to stuff the full, monstrous thing into you.  With it stuffed down your throat, you have trouble breathing, but that doesn't seem to matter now, only sucking at that muscled male's meat does.  When he finally cums, you are quite light-headed, but enjoy the feel of that ample load pumping into your belly so much that you cum as well.  Still coming, he pulls his cock free and you gasp for breath even as he paints your face with the other half of his big load.";
 	say "     Feeling quite satisfied from the ample load in your belly, you wander off without direction before finally ending back where you started.  You feel a little better from the effects of his powerful, steroid-filled cum, but also hornier as well.";
 	increase hp of player by ( Stamina of player / 2 ) + a random number between 2 and 4;
@@ -22,10 +22,10 @@ to say losetotemplate:
 	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
-to say beatthetemplate:
+to say beatthehippo:
 	say "     Your last blow sends the big hippo staggering back.  'Impossible!  None is stronger than the Great [one of]Crusher[or]Giganticus[or]Monstro[or]Ultro[or]Steelfist[or]Ivan[or]Samson[in random order]!' he yells, grabbing up his show items with ease and running off with them.  'You've not seen the last of me!' he yells.  Wait... didn't he have a different name earlier?";
 
-to say templatedesc:
+to say hippodesc:
 	say "     Travelling through the fairgrounds, your path is suddenly blocked by the appearance of a large, muscled figure.  The hippo-headed man flexes his bare muscles.  'I am the Mighty [one of]Bruno[or]Maximus[or]Supremo[or]Atlas[or]Gigantus[or]Goliath[or]Granite[in random order]!' he exclaims.  'Strongest of the strong, mightiest of the mighty!' he cries out, flexing again.  As this bizarre strongman continues his showman spiel, he flexes to display his impressive muscles.  You spot his stall nearby and see that a crude hippo head has been painted onto the strongman poster and the name has been re-written a few times already.  He's even given the crudely drawn face the same little moustache and chin beard.  Aside from his hippo head and big muscles, he has grey skin and is wearing nothing but a few leather straps and a ill-fitting loincloth that cannot contain his infection-enhanced maleness.  As his babbling comes to an end, you catch him saying something about fighting you to prove his strength before he charges.";
 
 
@@ -40,9 +40,9 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Hippo";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[one of]The hippo strongman crushes you with his muscly arms![or]The strongman delivers a pair of powerful blows with his meaty fists![or]The hippo strongman grabs you roughly and slams you down so hard onto his strength test that he rings the bell... or maybe that's just the ringing in your head![or]The big hippo bashes you with the large mallet for his strength test![or]Grabbing one of his heavy barbells, he heaves it at you.  You manage to get partially out of the way, but are still struck hard by one of the metal ends![or]The strongman lobs several of his dumbbells at you, painfully slamming the weights into you![or]The muscled hippoman strikes your jaw with a fist as hard as stone![at random]";	[Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthetemplate]";				[ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetotemplate]";					[ Text when monster wins.  Change 'template' as above. ]
-	now desc entry is "[templatedesc]";						[ Description of the creature when you encounter it. ]
+	now defeated entry is "[beatthehippo]";				[ Text when monster loses.  Change 'template' as above. ]
+	now victory entry is "[losetohippo]";					[ Text when monster wins.  Change 'template' as above. ]
+	now desc entry is "[hippodesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "the broad head and large mouth of a hippo";
 	now body entry is "big and muscled, with oversized definition and impressive muscle tone.  Your fingers have become short and meaty, making it a little harder for you to do delicate work with them";
 	now skin entry is "a thick, grey hide and glistens as if some body oil has been spread across your";
