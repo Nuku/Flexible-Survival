@@ -1,5 +1,5 @@
 Version 1 of Cat Ninjas by Stripes begins here.
-[Version 1]
+[Version 1.1 - Hard Mode adjustment]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds cat ninjas as a creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -31,11 +31,13 @@ to say beattheninja:
 
 
 to say ninjaattack:
+	choose row monster from the table of random critters;
 	if a random chance of 3 in 10 succeeds:
 		say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you.  The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random].  There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you.  As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
 		increase libido of player by a random number between 2 and 5;
 		if libido of player > 100, now libido of player is 100;
 		let dammy be a random number between 2 and 3;
+		if hardmode is true, increase dammy by ( square root of lev entry );
 		decrease the hp of player by dammy;
 		say "You take [dammy] damage from the ninja star.";
 	let T be a random number between 1 and 6;
@@ -56,6 +58,7 @@ to say ninjaattack:
 
 
 to say ninjadesc:
+	choose row monster from the table of random critters;
 	let bonus be ( perception of player + dexterity of player - 20 ) divided by 2;
 	let featbonus be 0;
 	if "Experienced Scout" is listed in feats of player, increase featbonus by 1;
@@ -63,13 +66,15 @@ to say ninjadesc:
 	if "Wary Watcher" is listed in feats of player, increase featbonus by 3;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20: [dice]+[bonus]+[featbonus] = [dice + bonus + featbonus][line break]";
-	if dice + bonus + featbonus is greater than 16:
+	if dice + bonus + featbonus is greater than 12 + ( dex entry - 10 ) / 2:
 		say "     As you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly.  You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you.  There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours.  Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you.  The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 	otherwise:
-		decrease hp of player by 8;
+		let dammy be 8;
+		if hardmode is true, increase dammy by ( square root of lev entry );
+		decrease hp of player by dammy;
 		increase libido of player by 10;
 		if libido of player > 100, now libido of player is 100;
-		say "     As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing 8 damage.  This is quickly replaced by a warm rush of lustful excitement.  You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back.  There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours.  Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you.  The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
+		say "     As you move down the halls of the museum, you hear the soft whizz of something flying through the air too late, as a pain fills your back, causing [dammy] damage.  This is quickly replaced by a warm rush of lustful excitement.  You turn quickly to face your attacker as you reach back to pull the trio of poisoned shuriken from your back.  There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours.  Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you.  The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 
 
 Section 2 - Monster Insertion

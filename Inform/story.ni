@@ -2445,10 +2445,7 @@ To fight:
 			break;
 		choose row monster from the table of random critters;
 		if lev entry is less than level of player and hardmode is true:
-			let debit be ( level of player ) - lev entry;
-			increase lev entry by debit;
-			increase hp entry by debit * 2;
-			increase wdam entry by debit ;
+			hardmodeboost;
 		say "You run into a [name entry].[line break][desc entry].";
 		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
@@ -2489,7 +2486,10 @@ To fight:
 	rule succeeds;
 
 To challenge:
+	let debit be 0;
 	choose row monster from the table of random critters;
+	if lev entry is less than level of player and hardmode is true:
+		hardmodeboost;
 	now monsterhp is hp entry;
 	say "You run into a [name entry].[line break][desc entry].";
 	now lost is 0;
@@ -2507,7 +2507,23 @@ To challenge:
 		level up;
 	[try looking;]
 	rule succeeds;
-	
+
+to hardmodeboost:			[Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
+	let debit be 0;
+	choose row monster from the table of random critters;
+	if lev entry is less than level of player and hardmode is true:
+		now debit is ( level of player ) - lev entry;
+		increase lev entry by debit;
+		increase hp entry by debit * 4;
+		repeat with D running from 1 to debit:
+			if remainder after dividing ( lev entry + 1 - D ) by 3 is 0, increase wdam entry by 1;
+			[This provides + 1 dmg to the creature for every time it reaches a level divisible by 2 ABOVE its base level]
+			[This keeps the damage level of lower monsters more sane as they progress to match higher monsters]
+		repeat with D running from 1 to debit:
+			if remainder after dividing ( lev entry + 1 - D ) by 5 is 0, increase dex entry by 1;
+			[This provides + 1 dex to the creature for every time it reaches a level divisible by 5 ABOVE its base level]
+			[This equates to a player putting only two of his points into Dex for every 10 levels to keep pace with them]
+
 Playing on is an action applying to nothing.
 understand "play on" as playing on.
 
@@ -4176,6 +4192,7 @@ Include Centaur Stallion For Fs by Stripes.
 Include Prairie Dog For Fs by Stripes.
 Include Snake For Fs by Stripes.
 Include Bald Eagle For Fs by Stripes.
+Include Wildcat For Fs by Stripes.
 Include Candy Striper by Stripes.
 
 

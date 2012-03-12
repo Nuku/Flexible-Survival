@@ -1,5 +1,5 @@
 Version 2 of Deer by Nuku Valente begins here.
-[Version 2 - Bug fix, oversized 'One Way' result and removed unused deer den code]
+[Version 2.1 - Adjusted growth to coincide with hard mode at high levels - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a deer to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -86,10 +86,16 @@ To say doestats:
 			break;
 	choose row monster in table of random critters;
 	now lev entry is level of player minus 1;
-	now hp entry is lev entry times 10;
-	now dex entry is lev entry minus 3 plus 9; 
-	now wdam entry is ( ( lev entry minus 3 ) times 2 divided by 3 ) plus 8;
-	say "There are [lev entry divided by 2] other does with her, following her dutifully and gazing at you with their hungry eyes. They look very similar, but lack the antlers.";
+	if lev entry < 15:
+		now dex entry is lev entry + 6;								[quick dex and hp growth early on]
+		now hp entry is lev entry times 10;
+		now wdam entry is ( ( lev entry minus 3 ) times 2 divided by 3 ) plus 8;
+	otherwise:
+		now dex entry is 18 + ( lev entry / 5 );							[normal hard mode dex growth at lvl 15+]
+		now hp entry is 60 + ( lev entry times 6 );						[boss hard mode hp growth at lvl 15+]
+		now wdam entry is ( ( 4 * lev entry ) / 11 ) + 11;					[strong dmg growth for lvl 15+]
+	now monsterhp is hp entry;
+	say "There are [if lev entry < 21][lev entry divided by 2][otherwise]numerous[end if] other does with her, following her dutifully and gazing at you with their hungry eyes. They look very similar, but lack the antlers.";
 
 
 When Play begins:

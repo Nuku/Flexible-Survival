@@ -1,5 +1,5 @@
 Version 2 of Mismatched Chimera for FS by Stripes begins here.
-[Version 2 - Endings added]
+[Version 2.1 - Hard Mode Variant]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Mismatched Chimera creature to Flexible Survivals Wandering Monsters table with impreg chance"
 [Description text for this Extension.]
@@ -75,11 +75,22 @@ to say mixnmatch:
 	choose row monster from the table of random critters;
 	let qq be a random number between 5 and 9;
 	let zz be a random number between 1 and 15;
-	now hp entry is ( ( 8 times qq ) plus zz );
-	now monsterhp is hp entry;
-	now wdam entry is ( ( ( qq minus 1 ) times 3 ) divided by 2 );
-	now lev entry is qq;
-	now dex entry is ( ( ( ( qq minus 1 ) times 4 ) divided by 3 ) plus 10 );
+	if hardmode is true and level of player > 7:		[Hard Mode Version!]
+		increase qq by level of player - 7;
+		now hp entry is 27 + ( ( 5 * qq ) + zz + a random number between 0 and qq );
+		now monsterhp is hp entry;
+		now lev entry is qq;
+		if lev entry > 9:
+			now wdam entry is 9 + ( qq / 3 );
+		otherwise:
+			now wdam entry is ( ( ( qq - 1 ) * 3 ) / 2 );
+		now dex entry is 15 + ( qq / 6 ) + ( square root of ( qq + 8 ) );		[faster initial growth, but slows down more]
+	otherwise:								[Normal Play Version!]
+		now hp entry is ( ( 8 times qq ) plus zz );
+		now monsterhp is hp entry;
+		now wdam entry is ( ( ( qq minus 1 ) times 3 ) divided by 2 );
+		now lev entry is qq;
+		now dex entry is ( ( ( ( qq minus 1 ) times 4 ) divided by 3 ) plus 10 );
 	[testing values achieved]
 [	say "Lvl is [qq].  Variable is [zz].";
 	say "HP is [hp entry].";
@@ -134,7 +145,7 @@ to say mischimdesc:
 	say "[mixnmatch]     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest.  Somehow, it is a strange, cobbled-together mish-mash of other creatures.  The body parts don't match and you can see stitchmarks in several places where they were grafted together.  Several other spots have scars from what may have been medical procedures or experiments.";
 	say "     This unfortunate creature has the head of a [headdata] sewn onto its [torsodata] body.  Its body has several smaller mismatched patches and scars.  The strange chimera's right arm and shoulder are that of a [rarmdata], ending in a clawed human hand while its left forearm has that of a [larmdata] grafted on.  Its left leg is fully that of a [llegdata] attached on at the hip while its right leg is that of a [rlegdata] from the knee down.  Stitched to its chest are [breastdata] mismatched breasts while a [cockdata] dick hangs between its legs over a large, stitched-up scrotum.  It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
 	choose row monster from the table of random critters;
-	if lev entry is 8 or lev entry is 9:
+	if hardmode is false and ( lev entry is 8 or lev entry is 9 ):
 		say "     This particular hybrid seems especially powerful and dangerous.  Best be careful.";
 
 Section 2 - Monster Insertion

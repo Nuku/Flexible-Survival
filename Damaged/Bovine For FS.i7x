@@ -1,4 +1,5 @@
 Version 7 of Bovine For FS by Damaged begins here.
+[ Version 7.1 - Hard mode adjustment by Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Bovine to Flexible Survivals Wandering Monsters table"
@@ -34,14 +35,14 @@ to say cow vict:
 		now thirst of player is 0;
 		now hunger of player is 0;
 		infect;
-		
+
 To say mooplus:
 	if Mooing < 8:
 		increase Mooing by 1;		
-			
+
 to say infect:
 	infect;
-	
+
 to say bull vict:
 	if CowKiller > 0:
 		if cunts of player > 0:
@@ -72,15 +73,14 @@ to say bull vict:
 To say mooplus:
 	if Mooing < 16:
 		increase Mooing by 1;	
-	
 
 to say Deadcow:
 	increase CowKiller by 1;
-	
+
 To say dessicate:
 	decrease hunger of player by 10;
 	decrease thirst of player by 10;
-	
+
 to say cow attack:
 	if a random number from 1 to 20 is 1:
 		say "The cow sprays wildly with milk, drenching you, making you cry out as it seems to soak your clothing. All of a sudden a precise follow up spray hits you in the mouth, the pressure forcing you to swallow or drown in it.[line break] With a gulp you get a tingling feeling from your belly and are suddenly washed in contentment.";
@@ -96,7 +96,7 @@ to say cow desc:
 		say "A twelve foot tall cow beast stands before you, 'Mmmmoooo' it says, 'Are you thirsty? I have all the milk you will ever want.' it exclaims, holding one of its four large breasts, milk slowly dribbling from its teat-like nipple.";
 	otherwise:
 		say "A twelve foot tall cow beast stands before you, 'Mmmmoooo' it says, 'Oh he found you then? Come here little one, I have all the milk you will ever want.' it exclaims, holding one of its four large breasts, milk slowly dribbling from its teat-like nipple.";
-		
+
 to say bull attack:
 	if CowKiller > 0:
 		say "[one of]The bull lowers its horns, bellowing wildly and charges at you, raking your side painfully.[or]Screaming and bucking around you the huge animal lashes out with its back hooves, knocking you aside like a tin can.[or]Shaking its huge head as it bolts around wildly, it catches you with a horn, dragging you for a while before swinging its head up and throwing you into the air. As you hit the ground you feel real pain blossom into your legs.[at random]";
@@ -108,7 +108,6 @@ to say bull attack:
 			increase monsterhp by 25;
 		say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce its tough hide.";
 
-		
 to say bull desc:
 	if CowKiller is 0:
 		say "A huge bull stands before you, 'Mmmmoooo' is all it says.";
@@ -116,47 +115,42 @@ to say bull desc:
 		say "A monstrous bull stands in front of you grazing. As you watch it sniffs the air and you witness the creature figuratively transform from docile to murderous rage in moments.";
 	if Mooing > 0:
 		say "You do notice a member of truly epic proportions slowly start to slide out from beneath the animals belly.";
-	
-		
-		
+
 to say bovine attack:
 	if Bovine_type is 1:
 		say "[cow attack]";
 	otherwise:
 		say "[bull attack]";
-		
+
 to say bovine defeat:
 	if Bovine_type is 1:
 		say "[Deadcow]The large female cow suddenly bursts into tears mooing, 'All I wanted was for you to be happy. Don't you think you could be happy with me?' before you finish it off.";
 	otherwise:
 		say "The large bull collapses to the ground, causing a slight shake as its mass settles.";
 
-		
 to say bovine vict:
 	if Bovine_type is 1:
 		say "[cow vict]";
 	otherwise:
 		say "[bull vict]";
-	
+
 to say bovine desc:
+	let debit be 0;
+	if hardmode is true and level of player > 6, let debit be level of player - 6;
 	choose row monster from the table of random critters;
-	if a random number from 1 to 10 > 3: [female cow]
+	if a random number from 1 to 10 > 3:	[FEMALE COW]
 		say "[cow desc]";
 		now Bovine_type is 1;
-		now wdam entry is 2;            [-Amount of Damage cow Does when attacking.-]
-	otherwise: [male skunk]
+		now wdam entry is 2 + ( debit / 4 );	[-Amount of Damage cow Does when attacking.-]
+	otherwise:						[MALE BULL]
 		say "[bull desc]";
 		now Bovine_type is 2;
 		if CowKiller is 0:
-			now wdam entry is 0;
+			now wdam entry is 0;			[Passive bull is 0, even in hard mode]
 		otherwise:
-			now wdam entry is 28;			[check for if the player has killed a cow (female bovine), if they have, its time to roll out the punishment]
+			now wdam entry is 28 + ( ( 2 * debit ) / 5 );		[check for if the player has killed a cow (female bovine), if they have, its time to roll out the punishment]
 
-	
-	
-	
-	
-		
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Bovine"; [Name of your new Monster]

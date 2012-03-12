@@ -1,5 +1,5 @@
 Version 2 of Naughty Nurse by Stripes begins here.
-[Version 2 - Victory Sex and Endings added]
+[Version 2.1 - Hard Mode adjustment]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Naughty Nurse Vixen creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -30,10 +30,7 @@ to say losetovixennurse:
 			say "     Having nicely seeded your ass, she pulls out and wipes her shaft clean on your rear end before getting up and leaving you there, slowly leaking out her plentiful cum onto the floor.";
 	[value reset]
 	choose row monster from the table of random critters;
-	now hp entry is 36;
 	now lev entry is 4;
-	now wdam entry is 5;
-	now dex entry is 14;
 
 to say beatthevixennurse:
 	if libido of player > 33:
@@ -56,14 +53,12 @@ to say beatthevixennurse:
 		say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big trouble now.  I'm going to have to send the orderlies down here to deal with you.'  With that, she turns and runs away.";
 	[value reset]
 	choose row monster from the table of random critters;
-	now hp entry is 36;
 	now lev entry is 4;
-	now wdam entry is 5;
-	now dex entry is 14;
 
 
 to say vixennursedesc:
 	choose row monster from the table of random critters;
+	let debit be 0;
 	now vixgender is 0;
 	if hermaphrodite is banned:			[always female if herm banned]
 		now vixgender is 0;
@@ -72,19 +67,24 @@ to say vixennursedesc:
 			now vixgender is 1;		[now a herm]
 	if vixgender is 0:
 		say "     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit.  She has a short cut, white apron with a black top under it.  There's even a traditional, white nurse's cap with a red cross on it on the vixen's head.  She has lustrous, gray fur, indicating that her infection originated from a silver fox.  Glancing down those long, slender legs you see they end in digitigrade paws.  To her ample chest, she holds a large clipboard.  You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard.  She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient[']s gotten out of bed[or]Bend over, sweety.  It[']s time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area.  The doctor will see you shortly.  Until then, let me take care of you[at random].'  She raises her clipboard, seemingly intent on clubbing you with it.";
-		now hp entry is 36;
-		now monsterhp is 36;
-		now lev entry is 4;
-		now wdam entry is 5;
-		now dex entry is 14;
+		if hardmode is true and level of player > 4, let debit be level of player - 4;
+		now hp entry is 36 + ( debit * 4 );
+		now monsterhp is 36 + ( debit * 4 );
+		now lev entry is 4 + debit;
+		now wdam entry is 5 + ( debit / 3 );
+		now dex entry is 14 + ( lev entry / 5 );
 	otherwise:
 		say "     You find yourself face to face with one of those sensually curved vixen in the tight, little nurse's outfit.  She has lustrous, gray fur, indicating that her infection originated from a silver fox.  She has a traditional, white nurse's cap with a red cross on it on the vixen's head.  She is wearing a short cut, white apron with a black top under it.";
 		say "     And there your eyes stop, finding that something is amiss with this naughty nurse.  Her tight dress has a rather sizeable bulge in it and it is growing larger as you watch.  It's a trap!  Grinning, she rubs the firm lump and says, '[one of]It looks like one patient[']s gotten out of bed.  I'll tuck you in good and tight[or]Bend over, sweety.  Mmm... I want to take your temperature[or]You look like you need a dose of my medicine[or]Let me give you a thorough examination, my pretty patient[at random].'  She rubs her four breasts and moans lustfully before charging at you.";
-		now hp entry is 72;
-		now monsterhp is 72;
-		now lev entry is 7;
-		now wdam entry is 8;
-		now dex entry is 18;
+		if hardmode is true and level of player > 6, let debit be level of player - 6;
+		now hp entry is 72 + ( debit * 4 );
+		now monsterhp is 72 + ( debit * 4 );
+		if hardmode is true and debit > 0:
+			now lev entry is 6 + debit;
+		otherwise:
+			now lev entry is 7;
+		now wdam entry is 8 + ( debit / 3 );
+		now dex entry is 18 + ( ( lev entry - 7 ) / 5 );
 
 Section 2 - Monster Insertion
 

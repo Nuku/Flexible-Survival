@@ -1,5 +1,5 @@
 Version 2 of Siamese Cats by Stripes begins here.
-[Version 2 - Sven special endings added]
+[Version 2.1 - Hard Mode adjustment]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a conjoined pair of Siamese Cats as a creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
@@ -212,8 +212,8 @@ to say swaptomale:
 	now monsterhp is malecathp;		[male hp made current]
 	now siamesegender is "male";		[male now current cat]
 	now sex entry is "Female";		[male cat seeks to make player female]
-	now dex entry is 16;
-	if hardmode is false, now wdam entry is 6;
+	decrease dex entry by 4;
+	increase wdam entry by 2;
 	say "     The [bold type]male[roman type] cat is now your opponent![line break]";
 
 
@@ -223,34 +223,50 @@ to say swaptofemale:
 	now monsterhp is femalecathp;		[female hp made current]
 	now siamesegender is "female";	[female now current cat]
 	now sex entry is "Male";		[female cat seeks to make player male]
-	now dex entry is 20;
-	if hardmode is false, now wdam entry is 4;
+	increase dex entry by 4;
+	decrease wdam entry by 2;
 	say "     The [bold type]female[roman type] cat is now your opponent![line break]";
 
 
 to say siamesecatdesc:
-	now monsterhp is 39;
-	now malecathp is 39;
-	now femalecathp is 39;
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if hardmode is true and level of player > 5, let debit be level of player - 5;
+	now dex entry is 18 + ( debit / 5 );			[set to midpoint]
+	now wdam entry is 5 + ( debit / 3 );			[set to midpoint]
+	now malecathp is hp entry;
+	now femalecathp is hp entry;
 	say "     As you are moving along, a pair of felines drop down in front of you.  They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender.  They have cream coloured fur with darker fur around their faces and at the ends of their limbs.  They are both quite naked, except for the red, belled collars they have around their necks.  As you look them over, you notice that they are joined together at the end of their tails.";
 	if "Male Preferred" is listed in feats of player:			[MALE-PREF PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The female speaks to her twin, 'I think I'll play with this one, if I may.'  And with that, she takes the lead and attacks.";
+		decrease dex entry by 2;						[as if male before swap]
+		increase wdam entry by 1;
 		say "[swaptofemale]";
 	otherwise if "Female Preferred" is listed in feats of player:	[FEMALE-PREF PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The male speaks to his twin, 'I think I'll play with this one, if I may.'  And with that, he takes the lead and attacks.";
+		increase dex entry by 2;						[as if female before swap]
+		decrease wdam entry by 1;
 		say "[swaptomale]";
 	otherwise if cocks of player > 0 and cunts of player is 0:		[MALE PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The female speaks to her twin, 'I think I'll play with this one, if I may.'  And with that, she takes the lead and attacks.";
+		decrease dex entry by 2;						[as if male before swap]
+		increase wdam entry by 1;
 		say "[swaptofemale]";
 	otherwise if cunts of player > 0 and cocks of player is 0:		[FEMALE PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  The male speaks to his twin, 'I think I'll play with this one, if I may.'  And with that, he takes the lead and attacks.";
+		increase dex entry by 2;						[as if female before swap]
+		decrease wdam entry by 1;
 		say "[swaptomale]";
 	otherwise:										[HERM/NEUTER PLAYER]
 		let flip be a random number from 1 to 2;
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch.  They both start to speak up at once, wanting to be the first to go.  They argue for a moment, but decide to flip for it before you can try sneaking away[if flip is 1].  It comes up heads and the male steps forward to confront you[otherwise].  It comes up tails and the female steps forward to confront you[end if].";
 		if flip is 1:
+			increase dex entry by 2;					[as if female before swap]
+			decrease wdam entry by 1;
 			say "[swaptomale]";
 		otherwise:
+			decrease dex entry by 2;					[as if male before swap]
+			increase wdam entry by 1;
 			say "[swaptofemale]";
 
 Section 2 - Monster Insertion
