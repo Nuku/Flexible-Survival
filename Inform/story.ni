@@ -4011,6 +4011,7 @@ Include Stablemasters by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
 Include Training center by Zero.
 Include GYM by Zero.
+Include Complex by Zero.
 Include Underwater Zone For Fs by Hellerhound.
 Include Power Plant by Hellerhound.
 Include Zoo by Hellerhound.
@@ -4050,7 +4051,7 @@ Include Addiction by Hellerhound.
 Include Smell by Hellerhound.
 Include Inventory Management Enhancements for FS by mirumu.
 Include Story Skipper by Nuku Valente.
-Include items by zero.
+Include items by Zero.
 Include Feats by Nuku Valente.
 Include Pepperspray by Stripes.
 
@@ -4208,6 +4209,7 @@ Include Orthas by Nuku Valente.
 Include Sven by Stripes.
 Include Frank by Stripes.
 Include Sally by Stripes.
+Include Max by Zero.
 
 
 [Pets]
