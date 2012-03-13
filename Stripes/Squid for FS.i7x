@@ -12,6 +12,7 @@ squidcolour is a number that varies.
 
 when play begins:
 	add { "Squid" } to infections of girl;
+	add ( "Squid" ) to infections of tailweapon;
 
 to say losetosquid:
 	say "     The squid girl moves over your defeated form and smoothly settles in above you.  Her tentacles effortlessly shed your clothes and caress your flesh[if cocks of player > 0].  She moans and slides her pussy over your cock and you shiver at her cold, wet embrace[end if][if cunts of player > 1].  A wriggling tentacle slides inside each of your pussies and starts stroking your insides with amazing precision[otherwise if cunts of player is 1].  One of her tentacles slides inside you and starts stroking your insides with amazing precision[end if][if breasts of player > 0].  Her arms wrap around your tits and start to knead and milk them gently[end if].  Her remaining limbs settle in over the rest of your body, their suckers pulling at your flesh here and there like the kisses of a hundred lovers.  Soon, you're both crying out in bliss as she brings you both to orgasm.  As her tentacles slowly pull away, she leans down to give you a gentle kiss. 'Come back soon,' she whispers.  'I'll be waiting.'  The tips of her tentacles slide slowly off of you, as it drawing out the contact as long as possible as she starts to swim off.";

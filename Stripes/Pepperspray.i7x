@@ -144,10 +144,14 @@ to say enhancedattack:
 						now z is y;
 						break;
 				choose row z in table of random critters;
-				let dammy be 2;
-				if wdam entry > 3:					[nerfed for very high damage critters]
-					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				increase dam by a random number between 1 and dammy;
+				if z is 0:		[creature not listed - give a low default boost]
+					increase dam by a random number between 0 and 2;
+				otherwise:
+					choose row z in table of random critters;
+					let dammy be 2;
+					if wdam entry > 3:					[nerfed for very high damage critters]
+						now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
+					increase dam by a random number between 1 and dammy;
 				choose row monster from table of random critters;
 		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
 			let numnum be level of player + ( (intelligence of player - 10 ) / 2 ) + 105;

@@ -10,7 +10,7 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 750000.
 Use MAX_OBJ_PROP_COUNT of 128.
-use MAX_SYMBOLS of 50000.
+use MAX_SYMBOLS of 55000.
 use MAX_NUM_STATIC_STRINGS of 30000.
 use ALLOC_CHUNK_SIZE of 75000.
 use MAX_OBJECTS of 1000.
@@ -659,7 +659,7 @@ marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness" } to infections of Tailweapon;
+	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness", "Naga", "lizard girl" } to infections of Tailweapon;
 
 
 Part 2 - Rules
@@ -2140,6 +2140,9 @@ This is the flee rule:
 		if tailname of player is "Skunk" or tailname of player is "Skunk Girl" or tailname of player is "Skunk Taur":
 			say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
 			increase gascloud by 5;
+		if tailname of player is "Squid":
+			say "Turning around, you spray an inky cloud at your enemy before trying to escape.";
+			increase gascloud by 5;
 		otherwise:
 			say "You release your cover cloud and try to escape.";
 			increase gascloud by 3;
@@ -2209,11 +2212,14 @@ This is the player attack rule:
 					if name entry is bodyname of player:
 						now z is y;
 						break;
-				choose row z in table of random critters;
-				let dammy be 2;
-				if wdam entry > 3:					[nerfed for very high damage critters]
-					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				increase dam by a random number between 1 and dammy;
+				if z is 0:		[creature not listed]
+					increase dam by a random number between 0 and 2;
+				otherwise:
+					choose row z in table of random critters;
+					let dammy be 2;
+					if wdam entry > 3:					[nerfed for very high damage critters]
+						now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
+					increase dam by a random number between 1 and dammy;
 				choose row monster from table of random critters;
 		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
 			let numnum be level of player + ( (intelligence of player - 10 ) / 2 ) + 105;
@@ -4194,7 +4200,6 @@ Include Snake For Fs by Stripes.
 Include Bald Eagle For Fs by Stripes.
 [Include Wildcat For Fs by Stripes.]
 Include Candy Striper by Stripes.
-
 
 
 [NPCs]
