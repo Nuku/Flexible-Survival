@@ -33,6 +33,13 @@ Instead of resolving a Apple Tree:
 	say "     Wandering across the plains, you come to one of the few trees scattered throughout it.  As you approach, you can see a centaur stallion plucking the apples from the tree and stuffing them into his pack and his mouth.  A little wary, but hopeful at the prospect of food, you continue forward cautiously and approach from behind.  As you get nearer, you can see that the centaur has become strange and twisted by the apples he's gathering and eating.  Each time he gobbles one down, fresh green tentacles under his equine belly writhe and his large cock and balls become greener.  Some roots from the tree have started to slide up his legs, moving to further corrupt him.";
 	say "     Shall you call out and continue to approach this tainted centaur?";
 	if the player consents:
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Mutant Centaur":
+				now monster is y;
+				break;
+		choose row monster in table of random critters;
+		now area entry is "Plains";
 		say "     Noticing you, the centaur whinnies excitedly and pulls away from the tree roots with some effort.  The roots writhe on the ground, as if searching for their prey, before finally slipping back under the earth to await another hungry victim.  The centaur, not noticing what was starting to happen to him, trots over to you, cock swelling and tentacles writhing beside that throbbing, leaf-green meat.  His sheath and ballsac are a dark green in colour.  He looks you over and, with a booming voice, asks: 'Are you going to submit to me?'  You have a feeling that if you don't agree, he'll try to take what he wants by force.";
 		if the player consents:
 			say "You bow down your head and he laughs, approaching you with lust in his eyes.";
@@ -49,13 +56,7 @@ Instead of resolving a Apple Tree:
 			otherwise:
 				say "     'If you're going to be so mule-headed about accepting my gifts, I will go find others to be my mare.  There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off.  It seems you've unleashed a new blight upon the plains.";
 				increase score by 1;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Mutant Centaur":
-					now monster is y;
-					break;
-			choose row monster in table of random critters;
-			now area entry is "Plains";
+		extend game by 8;
 	otherwise:
 		say "     Deciding not to risk the attention of this corrupted creature, you move back quietly.  As you do, the tree roots sink into his flesh and entwine with his own forming tentacles.  The mutant centaur moans and whinnies in pleasure as tendrils grow and sprout from his back and torso.  When he finally climaxes, it is a thick, sap-like fluid that stains the ground green.  When the tree roots withdraw from him, he staggers off slowly, hooves slowly changing into roots that cling at the ground as he steps.  The growing tendrils reach up and branch out, starting to grow leaves and apple blossoms.  Quite certain that the tainted centaur will take root soon and become another of these strange apple trees, you resolve to stay away from any more of these trees you find.";
 		increase score by 1;
