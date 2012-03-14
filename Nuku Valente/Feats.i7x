@@ -78,7 +78,7 @@ instead of addfeating the fun feats:
 	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
 		addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership";
 	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
-		addfeat "One Way" with "You can only grow larger, not smaller, sexually, barring specific effects.";
+		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects.";
 	if "One Way" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
 		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits, barring specific effects.";
 	if "Modest Organs" is not listed in feats of player or "One Way" is not listed in feats of player:
@@ -147,7 +147,7 @@ instead of addfeating the basic feats:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% xp needed to level.";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
 	if intelligence of player is greater than 12 and ( bodyname of player is not "human" or facename of player is not "human" ):
-		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round.  Thingking with your other head gradually gets your infected loins more excited as well.  You gain more xp from these fights as well.";
+		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round.  Thinking with your other head gradually gets your infected loins more excited as well.  You gain more xp from these fights as well.";
 	if intelligence of player > 15 and level of player > 5:
 		addfeat "Weaponsmaster" with "Your experience and knowledge allow you to assess a weapon's worth and wield it better.";
 	addfeat "Wary Watcher" with "Always on guard, creatures won't gain first strike on you.";
@@ -166,7 +166,7 @@ instead of addfeating the basic feats:
 			addfeat "Natural Armaments" with "You gain additional power based on the mutation of your body, borrowing the natural weapons of your infection.";
 	if featunlock is 1:	[available after hospital quest]
 		if dexterity of player > 14:
-			addfeat "Tail Strike" with "If available, you may randomply score an additional hit with your monstrous tail.";
+			addfeat "Tail Strike" with "If available, you may randomly score an additional hit with your monstrous tail.";
 		if strength of player > 14:
 			addfeat "Powerful" with "Boosts your potential damage by up to 25%.";
 		if dexterity of player > 16 and "Powerful" is listed in feats of player:

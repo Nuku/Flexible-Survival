@@ -5,6 +5,9 @@ Version 1 of Snake For FS by Stripes begins here.
 
 Section 1 - Monster Responses
 
+when play begins:
+	add ( "Snake" ) to infections of tailweapon;
+
 to say losetosnake:
 	if hp of player > 0:
 		say "     Giving in, you sag to your knees and submit to the giant serpent";

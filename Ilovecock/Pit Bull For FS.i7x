@@ -1,5 +1,5 @@
 Version 2 of Pit Bull For FS by Ilovecock begins here. 
-[ Version 2 - Endings added by Stripes ]
+[ Version 2.1 - Moved to Junkyard ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Pit Bull to Flexible Survivals Wandering Monsters table"
@@ -64,7 +64,7 @@ When Play begins:
 	now hp entry is 30;			[ How many HP has the monster got? ]
 	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
 	now wdam entry is 7;			[Amount of Damage monster Does when attacking.]
-	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now area entry is "Junkyard";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku]

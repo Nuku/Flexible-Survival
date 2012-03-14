@@ -604,7 +604,8 @@ to say svetlanatrio:
 Section 5 - Endings
 
 when play ends:
-	if Sven is in the bunker and bodyname of player is not "Snow Leopard" and bodyname of player is not "Siamese Cat":	[Sven special cases]
+	[Sven special cases]
+	if Sven is in the bunker and bodyname of player is not "Snow Leopard" and bodyname of player is not "Siamese Cat" and bodyname is not "Snow Cat":
 		if humanity of player < 10:
 			if ( bodyname of player is "Pantherherm" and angiearoused is 3 ) or ( felinoid companion is tamed and bodyname of player is "Felinoid" ) or bodyname of player is "Rubber tigress" or bodyname of player is "Plush lion":
 				let tempnum be 1;		[blank - Special Sven succumb endings as per species of player]
@@ -635,7 +636,7 @@ when play ends:
 				if pink raccoon is tamed:		[pink raccoon pet]
 					say "     Your coon pet gets along well with Sven, snuggling up to him often and after some initial trepidation on the kitty's part, gets them to have sex together.  The beautiful snowmeow becomes the pink coonboi's preferred lover, after yourself, loving the feel of the kitty's big cock in him or filling the snow leopard's ass with his sweet-scented seed.  The girly raccoon spends hours doting over your kitty, scritching, brushing and petting him, attention that your pretty pet enjoys so much and always rewards the coon by another gay romp to satisfy their lusts for cock.";
 				if felinoid companion is tamed and hermaphrodite is not banned:	[felinoid companion w/o herm blocked]
-					say "     Sven soon draws the attention of your felinoid companion, who nuzzles and snuggles up with the other feline.  Over the next few days, they grow closer and closer, spending more time nuzzling and grooming one another.  On the evening of the third day, you come home to find the feral feline mounted atop Sven, pounding away at him.  Glad they're getting along so well, you take a seat to watch the show, but soon realize that there things are not quite as they were.  Growing breasts sway from Sven's chest and the felinoid is driving his cock into your snow leopard's new, virgin pussy.  Their mating is repeated several times, until Sven, now a sexy snowmeow herm, is well bred and filled with kittens.  She bears him many litters of [if hp of Sven is 10]colourful [end if]snow leopard kittens and is fucked often, used to slake his lusts between the new playtoys you lure home for him to enjoy.";
+					say "     Sven soon draws the attention of your felinoid companion, who nuzzles and snuggles up with the other feline.  Over the next few days, they grow closer and closer, spending more time nuzzling and grooming one another.  On the evening of the third day, you come home to find the feral feline mounted atop Sven, pounding away at him.  Glad they're getting along so well, you take a seat to watch the show, but soon realize that things are not quite as they were.  Growing breasts sway from Sven's chest and the felinoid is driving his cock into your snow leopard's new, virgin pussy.  Their mating is repeated several times, until Sven, now a sexy snowmeow herm, is well bred and filled with kittens.  She bears him many litters of [if hp of Sven is 10]colourful [end if]snow leopard kittens and is fucked often, used to slake his lusts between the new playtoys you lure home for him to enjoy.";
 
 [ Edit this to have the correct Name as well ]
 Sven ends here.
