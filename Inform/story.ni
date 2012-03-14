@@ -4051,6 +4051,7 @@ Include Hyena Bikers by Stripes.
 Include Stable Related Events by Sarokcat.
 Include Red Events by Stripes.
 Include Dry Plains Events by Stripes.
+Include Junkyard Events by Stripes.
 Include New Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Mall Events by Sarokcat.
@@ -4076,7 +4077,6 @@ Include Story Skipper by Nuku Valente.
 Include items by Zero.
 Include Feats by Nuku Valente.
 Include Pepperspray by Stripes.
-
 
 
 [Monsters/Infections]
@@ -4198,7 +4198,11 @@ Include Centaur Stallion For Fs by Stripes.
 Include Prairie Dog For Fs by Stripes.
 Include Snake For Fs by Stripes.
 Include Bald Eagle For Fs by Stripes.
-[Include Wildcat For Fs by Stripes.]
+Include Wildcat For Fs by Stripes.
+Include Goblin For FS by Stripes.
+Include Junkman For FS by Stripes.
+Include Trash Coon For FS by Stripes.
+Include Snow Bat For Fs by Stripes.
 Include Candy Striper by Stripes.
 
 
