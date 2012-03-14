@@ -18,6 +18,7 @@ tigressfucked is a number that varies.	[marked as having lost last time - used l
 tigressclient is a number that varies.	[marked as having submitted last time - used later]
 stiffedpayment is a number that varies.   [marked as having failed to pay the fee - used later]
 mqfightresult is a number that varies.    [ 1 = win / 2 = lose / 3 = fled (unchanged) ]
+junknum is a number that varies.
 
 to say losetotigress:
 	if mqstatus is 3:				[if on the motel run, set variable and prevent the regular scene]
