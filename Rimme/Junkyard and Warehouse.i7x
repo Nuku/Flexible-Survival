@@ -371,7 +371,7 @@ Section 1 - The environment
 Junkyard Entrance is east of the Abandoned Lot. "In this dirty part of the town you stand on the road to an even dirtier place. The smells of the city junkyard, of rotting food and fetid water, reek from the north. The dirt road curves to the west, back to the abandoned warehouse complex."
 
 instead of sniffing Junkyard Entrance:
-	say "The junkyard smells predominantly of old machinery and oil, though there's a faint smell of normal trash as well.";
+	say "The junkyard smells predominantly of old machinery and oil, though there's a faint smell of normal trash as well from piles of that scattered around.";
 
 Junkyard Gate is a door. "The junkyard to the north appears threatening and dangerous, but there's probably plenty of loot for the taking." Junkyard Gate is dangerous.
 
@@ -384,10 +384,10 @@ Section 2 - Junkyard Digups
 
 Junkyard digups is a situation. The printed name of Junkyard digups is "a pile of garbage".
 The sarea of junkyard digups is "Junkyard".
-
-After resolving the junkyard digups, try looking;
+jdigup is a number that varies.
 
 Instead of resolving junkyard digups:
+	increase jdigup by 1;
 	say "There are plenty of piles in the junkyard to look through. You pick one and search it.";
 	if a random chance of 1 in 3 succeeds:
 		if a random chance of 1 in 2 succeeds:
@@ -397,7 +397,8 @@ Instead of resolving junkyard digups:
 			say "You find a bottle of dirty water!";
 			add "dirty water" to invent of player;
 	otherwise:
-		say "Alas, you do not find anything in this pile. You should try again."
+		say "Alas, you do not find anything in this pile. You should try again.";
+	if jdigup is 3, now junkyard digups is resolved;
 
 Section 3 - Steven's home
 
@@ -413,7 +414,6 @@ The sarea of a junkyard home is "Junkyard".
 Instead of resolving a junkyard home:
 	if Stevenremoved is 0:
 		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
-		stop the action;
 	otherwise:
 		say "You turn around a corner and find a quaint little cove in the stacks of junk. A familiar-looking person is tidying up the floor, and looks up as you approach.";
 		say "'Ah, hello,' Steven says. 'Didn't know if I'd see you again.' He looks down at near-naked equine body, wearing only a belt and a loincloth. 'As you can tell, I was permanently disbarred and exiled. My old clothes don't fit me anymore. This loincloth was part of a curtain. There is a lot of useful stuff out here, but it's not like it was in the shelter. I'm sure we'll make it through, though.'";
@@ -464,8 +464,10 @@ Section 5 - Find a random infected object
 
 signs of a scuffle is a situation.
 The sarea of signs of a scuffle is "Junkyard".
+scufflecount is a number that varies.
 
 Instead of resolving signs of a scuffle:
+	increase scufflecount by 1;
 	say "It looks like two infected creatures were fighting each other out here. You search the area for any fallen loot:[line break]";
 	let opportunity be 0;
 	let firstbeast be a random number from 1 to number of filled rows in the table of random critters;
@@ -483,6 +485,7 @@ Instead of resolving signs of a scuffle:
 			say "You found 1 x [loot entry]!";
 			now opportunity is 1;
 	if opportunity is 0:
-		say "Alas, you found nothing but dirt, dust, and junk."
+		say "Alas, you found nothing but dirt, dust, and junk.";
+	if scufflecount is 3, now signs of a scuffle is resolved;
 
 Junkyard and Warehouse ends here.
