@@ -27,6 +27,8 @@ the usedesc of durable backpack is "[durable backpack use]";
 the usedesc of small pouch is "[small pouch use]";
 the usedesc of protein shake is "[protein shake use]";
 the usedesc of strange gem is "[strange gem use]";
+the usedesc of strange gem is "[dominator chain use]";
+
 
 latex milk is a grab object. It is a part of the player. Understand "milk" as latex milk. latex milk is infectious. The strain of latex milk is "Latex Fox";
 
@@ -46,10 +48,10 @@ strange gem is a grab object. It is a part of the player. Understand "gem" as st
 
 kunai is a armament. It is a part of the player. It has a weapon "[one of]your kunai[or]your blade[or]your ninja knife[at random]". The weapon damage of kunai is 6. The weapon type of kunai is "Melee". It is not temporary.
 
-bloody sword is a armament. It is a part of the player. It has a weapon "you swing your[one of]evil [or]bloodthirsty 
+bloody sword is a armament. It is a part of the player. It has a weapon "[one of]evil [or]bloodthirsty 
 [or]demonic [or]bloody [at random]sword". The weapon damage of bloody sword is 11. The weapon type of bloody sword is "Melee". It is not temporary.
 
-demonic sword is a armament. It is a part of the player. It has a weapon "you swing your[one of]evil [or]possessed 
+demonic sword is a armament. It is a part of the player. It has a weapon "[one of]evil [or]possessed 
 [or]demonic [or]bloody [at random]sword". The weapon damage of demonic sword is 13. The weapon type of demonic sword is "Melee". It is not temporary.
 
 
@@ -176,7 +178,7 @@ an everyturn rule:
 an everyturn rule:
 	if weapon object of player is demonic sword:
 		if swrdtm is 1:
-			increase humanity of player by 10;
+			increase humanity of player by 3;
 		otherwise if swrdtm is 0:	
 			decrease humanity of player by 5;
 

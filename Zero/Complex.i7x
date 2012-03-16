@@ -10,7 +10,7 @@ The description of Complex is "a appartment complex, max the corgi[if maxq is 1]
 
 
 The invent of Max's room is { "small pouch", "protein shake" };
-The invent of Miles room is { "small pouch" , "strange gem" };
+The invent of Miles' room is { "small pouch" , "strange gem" };
 The invent of Rec room is { "food" , "medkit" , "water bottle" , "water bottle" , "protein shake" , "protein shake" , "food"  };
 
 Max's room is a room.
