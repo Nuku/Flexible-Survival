@@ -27,7 +27,7 @@ the usedesc of durable backpack is "[durable backpack use]";
 the usedesc of small pouch is "[small pouch use]";
 the usedesc of protein shake is "[protein shake use]";
 the usedesc of strange gem is "[strange gem use]";
-the usedesc of strange gem is "[dominator chain use]";
+the usedesc of dominator chain is "[dominator chain use]";
 
 
 latex milk is a grab object. It is a part of the player. Understand "milk" as latex milk. latex milk is infectious. The strain of latex milk is "Latex Fox";
