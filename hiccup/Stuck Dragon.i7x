@@ -45,6 +45,7 @@ NoIntroduction is a number that varies. NoIntroduction is usually 0.
 
 dragoness is in Old Building.  dragoness is a person.
 The description of dragoness is "[dragonessdesc]";
+dragonessfuck is a number that varies.
 
 instead of sniffing dragoness:
 	say "The scent coming off this large, fecund dragoness and her huge pussy is very arousing.";
@@ -134,6 +135,7 @@ to say dragonesssex:
 	otherwise:
 		say "     With a prize like this, she just looks too tempting to leave alone.  You set aside your clothes and gear and move up to her large rump.  Holding her large, wet lips against your cock, you grind against them to get yourself slick.  The dragoness moans before realizing what's happening and shrieking";
 		if lust of Christy is 0:
+			now dragonessfuck is 1;
 			say ".  'Oh, no! You ARE one of those mindless beasts and you ARE going to violate me! Please don't put your big... throbbing... manhood in my defenseless... and wet... pussy!' she moans as you keep grinding against her wet, sensitive pussy lips.  You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries over her half-hearted protests.  Her cries and her body's reaction clearly tells you she wants and needs this and you shove your [cock size desc of player] [cock of player] shaft into her huge pussy with a loud, lustful groan.";
 		otherwise:
 			say ".  'Oh, no!  Don't violate me again!' the dragoness shrieks.  'Laying those eggs was an unbelievably pleasurable... I mean uncomfortable experience!' she cries out even as her body grinds back against you.  You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries and ignoring her clearly false protests.  As before, you know what her body wants and you'll make sure to give it to her.  You shove your [cockname of player] [cock of player] shaft into her huge pussy with a loud, lustful groan as you start fucking her again.";
@@ -445,16 +447,6 @@ Section 8 - Endings
 When play ends:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
 	if NoIntroduction is 1:
-		if hp of Christy is 0 or hp of Christy is 1:
-			if lust of Christy > 2:
-				say "     The dragoness you found trapped in a doorway is freed by her offspring after they hatch.  She never discovers the identity of the father.  Her offspring begin to worship her as a diety, then they conquer a large part of the country and make her the queen of it.";
-			otherwise:
-				say "The dragoness you found trapped in a doorway is discovered by the military.  They examined her until they discovered that she was no longer infectious, then they left... without freeing her from the doorway.  Eventually, the trapped dragoness became a tourist attraction and her exposed pussy gets fucked by almost every male tourist that visits the city.";
-		otherwise:
-			if lust of Christy > 2:
-				say "     After you freed her from the doorway where you found her, Christy[apostrophe]s eggs eventually hatch.  Caring for her children helps to mellow out her lust enough for her to learn how to control it.  Her children grow up to be fine dragons and she loves them dearly, even after they start kidnapping princesses.  She never discovers that you were the one who knocked her up.";
-			otherwise:
-				say "     After you freed her from the doorway where you found her, Christy was eventually found by the military.  They examined her until they discovered that she was no longer infectious, then they left her alone. Christy struggled for months to control the extreme lust that the infection gave her, but in the end she decided to embrace her new, slutty nature and she became a very famous porn star.";
 		if bodyname of player is "Slutty Dragoness":
 			if humanity of player is less than 10:
 				say "     With your humanity gone, you aimlessly wander the city streets until the military arrives and captures you.  They examine you until they discover that you[apostrophe]re no longer infectious, then they sell you to a zoo.  Since they feed you well and provide you with a nice, warm cave to be your home, you decide to stay there for a time.  But when an anthro dragon comes to the zoo one day and catches your eye, you decide it's time to move on.  With a hop and a flap, you leap onto the bars of the cage over your enclosure and bend them apart easily.  As the other patrons scream and run, the dragon remains, locked in your gaze.  You scoop him up in your large paw and, after a few false starts, fly off with him to set up a love nest of your own.";
@@ -465,5 +457,15 @@ When play ends:
 				say "     Following a compulsion, you spread your wings and fly away from the city.  You find a nice cave to live in, then you set about fulfilling your instinctive urge to kidnap princesses and accumulate a horde of treasure.  The occasional hero who comes wanting to play the brave knight to slay the dragon and save the princess make for an enjoyable divertisment as well.  These princesses are eventually returned full of eggs and, after a few times, start looking forward to their next kidnapping.";
 			otherwise:
 				say "     Although you survived with your humanity intact, you still have trouble controlling the lust of your Horny Dragon body. Over time, you learn to control the lust with meditation... and orgies, lots and lots of orgies.  With that under at least partial control, you are able to focus on making a living in this changed world with your changed body.  Succeeding at learning to fly, you take up a job as a courier.  With your strong dragon body, you are able to transport large packages, often bringing them into infected areas.  And once there, there are always plenty of excited people to satisfy your lusts by fucking them.";
+		if hp of Christy is 0 or hp of Christy is 1:
+			if lust of Christy > 2:
+				say "     The dragoness you found trapped in a doorway is freed by her offspring after they hatch.  She never discovers the identity of the father.  Her offspring begin to worship her as a diety, then they conquer a large part of the country and make her the queen of it.";
+			otherwise:
+				say "The dragoness you found trapped in a doorway is discovered by the military.  They examined her until they discovered that she was no longer infectious, then they left... without freeing her from the doorway.  Eventually, the trapped dragoness became a tourist attraction and her exposed pussy gets fucked by almost every male tourist that visits the city.";
+		otherwise:
+			if lust of Christy > 2:
+				say "     After you freed her from the doorway where you found her, Christy[apostrophe]s eggs eventually hatch.  Caring for her children helps to mellow out her lust enough for her to learn how to control it.  Her children grow up to be fine dragons and she loves them dearly, even after they start kidnapping princesses[if dragonessfuck is 1].  She never discovers that you were the one who knocked her up before freeing her[end if][if humanity of player > 9 and hp of Christy > 3].  Her dragon offspring permit you to visit the dragoness from time to time and she eagerly accepts your lustful advances now[end if].";
+			otherwise:
+				say "     After you freed her from the doorway where you found her, Christy was eventually found by the military.  They examined her until they discovered that she was no longer infectious, then they left her alone. Christy struggled for months to control the extreme lust that the infection gave her, but in the end she decided to embrace her new, slutty nature and she became a very famous porn star[if humanity of player > 9 and hp of Christy > 3].  You visit the dragoness from time to time and enjoy the company of her and her lustful co-stars[end if].";
 
 Stuck Dragon ends here.
