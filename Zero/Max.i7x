@@ -27,24 +27,24 @@ Instead of resolving Meeting the corgi:
 			Increase corgitalk by 1;
 			now Meeting the corgi is resolved;
 			
-pendent hunting is a situation.
-The sarea of pendent hunting is "Outside";
+pendant hunting is a situation.
+The sarea of pendant hunting is "Outside";
 	
-Instead of resolving pendent hunting:
+Instead of resolving pendant hunting:
 	if maxq is 1:
-		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of which is warring the pendent Max was looking for, do you try to get it back?";
+		say "As you continue to search the city you find yourself looking at a group of 3 hyenas, one of which is wearing the pendant Max was looking for, do you try to get it back?";
 		if the player consents:
 			say "as you approach the hyenas catch sight of you and charge towards you!";
 			challenge "Herm Hyena";
 			challenge "Herm Hyena";
 			challenge "Herm Hyena";
-			say "having beating the gang, you retrieve the pendent, as well as anything else you think could be useful";
+			say "having beating the gang, you retrieve the pendant, as well as anything else you think could be useful";
 			Increase maxq by 1;
-			now pendent hunting is resolved;
+			now pendant hunting is resolved;
 		otherwise:
 			say " deciding that it would be better to try again later, you quickly run off";
 	otherwise:
-		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of with is wearing a blue pendent, thankfully there distracted and don't notice you";	
+		say "as you continue to search the city you find yourself looking at a group of 3 hyenas, one of with is wearing a blue pendant, thankfully there distracted and don't notice you";	
 		
 
 Section 2-Max
@@ -54,7 +54,7 @@ lastcorgifucked is a number that varies.  lastcorgifucked is usually 130.
 understand "corgi" as Max.
 understand "max" as Max.
 
-The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendent hanging from his neck. ";
+The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendant hanging from his neck. ";
 
 The conversation of Max is { "[Corgitalking]" };
 
@@ -106,10 +106,10 @@ To say Corgitalking:
 				now Complex is known;
 				move Max to Rec room;
 			otherwise if maxq is 0:
-				say "Max waves you over as you enter the mall, [']how you being doing, good, well I've got a favor to ask of you.[line break] A while ago i was attacked by the hyena gang and they managed to steal something from me, trouble is, I'm busy with another job that has to be done quickly, would you mind getting it back for me, its a pendent like mine, only its blue instead of red.[']";
+				say "Max waves you over as you enter the mall, [']how you being doing, good, well I've got a favor to ask of you.[line break] A while ago i was attacked by the hyena gang and they managed to steal something from me, trouble is, I'm busy with another job that has to be done quickly, would you mind getting it back for me, its a pendant like mine, only its blue instead of red.[']";
 				now maxq is 1;
 			otherwise if maxq is 1:
-				say "Apologizing for your lack of progress you quickly head out once again to try and find the corgi's missing pendent, maybe if you hunt for the pendent you'll have more luck?";	
+				say "Apologizing for your lack of progress you quickly head out once again to try and find the corgi's missing pendant, maybe if you hunt for the pendant you'll have more luck?";	
 	otherwise if location of player is Rec room:
 		say "'You want to trade some stuff? miles and me have got some goody bags for you if you want them, if you have a bit of water and food to spare, you may find yourself suprised.'  Maybe  you want to GIVE MAX some of your supplies?";
 
@@ -192,14 +192,14 @@ lastkitsufucked is a number that varies.  lastkitsufucked is usually 130.
 understand "kitsune" as Miles.
 understand "miles" as Miles.
 
-The description of Miles is "     Miles is a kitsune, he looks like a fox but with two tails, his fur is normally red but it seems like he can control its colour, he is wearing a plain t-shirt and black joggers, he also has and a blue diamond pendent hanging from his neck. ";
+The description of Miles is "     Miles is a kitsune, he looks like a fox but with two tails, his fur is normally red but it seems like he can control its colour, he is wearing a plain t-shirt and black joggers, he also has and a blue diamond pendant hanging from his neck. ";
 
 The conversation of Miles is { "[Kitsutalking]" };		
 
 To say Kitsutalking:
 	if location of player is Rec room:
 		if maxq is 2:
-			say "the kitsune bounds over to you as you approach, 'hi there, Max’s been talking bout you, all good i a sure you' [line break]'anyway thanks for helping him out he looked so guilty when he said he'd lost my gift' he says fingering the blue pendent around his neck, 'your free to hang around here whenever you want, and there’s a gym next-door if your interested, its empty at the minute though'";
+			say "The kitsune bounds over to you as you approach, 'hi there, Max's been talking bout you, all good i a sure you' [line break]'anyway thanks for helping him out he looked so guilty when he said he'd lost my gift' he says fingering the blue pendant around his neck, 'your free to hang around here whenever you want, and there’s a gym next-door if your interested, its empty at the minute though'";
 			now maxq is 3;
 			stop the action;
 		otherwise if maxq is 3:	
