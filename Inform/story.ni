@@ -1614,7 +1614,7 @@ instead of trading the demon seed when the current action involves the ronda:
 			break;
 	extend game by 16;
 	increase score by 20;
-	
+
 
 To Rest:
 	if "cot" is listed in invent of player or "cot" is listed in invent of location of player:
@@ -1707,10 +1707,10 @@ This is the sex change rule:
 			if cock length of player is less than 1 or cock width of player is less than 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
 				now the cocks of the player is 0;
-		if cocks of player > 1 and a random chance of 2 in 5 succeeds:
+		if cocks of player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of player:
 			say "Sudden pleasure runs through one of your doomed [cock of player] cock as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 			decrease cocks of player by 1;
-	otherwise if cocks of player > cocks entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Male" or sex entry is "Both" ):
+	otherwise if cocks of player > cocks entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Male" or sex entry is "Both" ) and "All The Things" is not listed in feats of player:
 		say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 		decrease cocks of player by 1;
 	if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt length of player is less than cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
@@ -1786,10 +1786,10 @@ This is the sex change rule:
 			if cunt length of player is less than 1 or cunt width of player is less than 1:
 				say "With a sickening noise, you cease to be female all together.";
 				now the cunts of the player is 0;
-		if cunts of player > 1 and a random chance of 2 in 5 succeeds:
+		if cunts of player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of player:
 			say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
 			decrease cunts of player by 1;
-	otherwise if cunts of player > cunts entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Female" or sex entry is "Both" ):
+	otherwise if cunts of player > cunts entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Female" or sex entry is "Both" ) and "All The Things" is not listed in feats of player:
 		say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
 		decrease cunts of player by 1;
 
@@ -1889,13 +1889,13 @@ To Infect:
 			now tailname of player is name entry;
 			now tail of player is tail entry;
 	if x is 4:
-		if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
+		if breasts of player is not breasts entry:
 			decrease breast size of player by 2;
 			follow the breast descr rule;
-			if breasts entry is greater than breasts of player:
+			if ( breasts entry is greater than breasts of player and "One Pair" is not listed in feats of player ) or breasts of player is 0:
 				increase breasts of player by 2;
 				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
-			otherwise:
+			otherwise if breasts entry < breasts of player and "Bouncy Bouncy" is not listed in feats of player:
 				decrease breasts of player by 2;
 				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
 			increase breast size of player by 2;
@@ -1991,13 +1991,13 @@ To Infect:
 				now tailname of player is name entry;
 				now tail of player is tail entry;
 		if x is 4:
-			if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
+			if breasts of player is not breasts entry:
 				decrease breast size of player by 2;
 				follow the breast descr rule;
-				if breasts entry is greater than breasts of player:
+				if ( breasts entry is greater than breasts of player and "One Pair" is not listed in feats of player ) or ( breasts entry > 0 and breasts of player is 0 ):
 					increase breasts of player by 2;
 					say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
-				otherwise:
+				otherwise if breasts entry < breasts of player and "Bouncy Bouncy" is not listed in feats of player:
 					decrease breasts of player by 2;
 					say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
 				increase breast size of player by 2;
