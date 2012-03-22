@@ -3,7 +3,7 @@ Shifting by Hellerhound begins here.
 
 Section 1 - Secure Area Situation
 
-Secure Area is a situation.
+Secure Area is a situation.  The level of Secure Area is 10.
 halodestroyed is a number that varies.
 dragatordefeated is a number that varies.
 
@@ -151,17 +151,15 @@ To transform:
 		say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 		now tailname of player is name entry;
 		now tail of player is tail entry;
-	if breasts of player is not breasts entry and "One Pair" is not listed in feats of player:
+	if breasts of player is not breasts entry:
 		decrease breast size of player by 2;
 		follow the breast descr rule;
-		if breasts entry is greater than breasts of the player:
-			if breasts entry is greater than breasts of player:
-				increase breasts of player by 2;
-				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
-		otherwise:
-			if breasts entry is less than breasts of player:
-				decrease breasts of player by 2;
-				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
+		if ( breasts entry is greater than breasts of player and "One Pair" is not listed in feats of player ) or breasts of player is 0:
+			increase breasts of player by 2;
+			say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
+		otherwise if breasts entry < breasts of player and "Bouncy Bouncy" is not listed in feats of player:
+			decrease breasts of player by 2;
+			say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
 		increase breast size of player by 2;
 	if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
 		follow the breast descr rule;
