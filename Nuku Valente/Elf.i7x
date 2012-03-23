@@ -1,4 +1,5 @@
-Elf by Nuku Valente begins here. 
+Version 2 of Elf by Nuku Valente begins here.
+[Version 2 - victory sex - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Elf to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -6,26 +7,45 @@ Elf by Nuku Valente begins here.
 
 Section 1 - Monster Responses
 
+elfloss is a number that varies.
+
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 Elfdefeat is a number that varies.
 to say Elf attack:
 	if hp of player is greater than 0:
-		say "'Scum,' she sneers as she shoves you over and slides on top of you, 'You are no good for anything but a pet at best. A true warrior never surrenders.' She raises a slender hand to brush over your cheek a moment, 'And I[apostrophe]m not even sure you are good for that.'";
+		say "     'Scum,' she sneers as she shoves you over and slides on top of you, 'You are no good for anything but a pet at best. A true warrior never surrenders.' She raises a slender hand to brush over your cheek a moment, 'And I[apostrophe]m not even sure you are good for that.'";
 		if cocks of player is greater than 0 and cock length of player is less than 10 and a random chance of 1 in 2 succeeds:
-			say "She appraises you carefully for a few moments before making up her mind. She pins you down with a foot as she strips you down. When you try to speak, she gives you a harsh look. Slender fingers curl around your [cock of player] member, slowly stroking it to firmness, 'Please me well and maybe I will think more of you.' she says as she settles down, plunging your firm member into her waiting tightness. Her naked vulva spreads wetly across the end of your cock as she settles on your groin. Her hands move to your shoulders, holding you down as she starts to rock against you.";
+			say "     She appraises you carefully for a few moments before making up her mind. She pins you down with a foot as she strips you down. When you try to speak, she gives you a harsh look. Slender fingers curl around your [cock of player] member, slowly stroking it to firmness, 'Please me well and maybe I will think more of you.' she says as she settles down, plunging your firm member into her waiting tightness. Her naked vulva spreads wetly across the end of your cock as she settles on your groin. Her hands move to your shoulders, holding you down as she starts to rock against you.";
 			wait for any key;
-			say "'Oh, good stud, I...' She bites her lip as her body trembles with obvious climax. Her tunnel goes hot and tight around your shaft and you explode forcefully, filling her with your creamy offering. She gives a sharp cry as she feels you filling her, scowling a moment before her expression warms and she leans in, brushing her lips to yours, 'You[apostrophe]re good for something.' she says before she slips back up to her feet, glowing with satisfaction. She leaves you laying on the ground as she wanders off.";
+			say "     'Oh, good stud, I...' She bites her lip as her body trembles with obvious climax. Her tunnel goes hot and tight around your shaft and you explode forcefully, filling her with your creamy offering. She gives a sharp cry as she feels you filling her, scowling a moment before her expression warms and she leans in, brushing her lips to yours, 'You[apostrophe]re good for something.' she says before she slips back up to her feet, glowing with satisfaction. She leaves you laying on the ground as she wanders off.";
 		wait for any key;
 	otherwise:
-		say "She shoves you powerfully against a tree and rushes up against you, pressing a knife to your throat, 'You fought bravely, but you are not powerful enough, yet. Keep that fire in your eyes and we may yet be sisters.' She then leans in and presses her lips to yours in a powerful kiss as her free hand reaches down, grabbing you between the legs a little roughly, inspecting you as she rubs her curvaceous front against your own a moment.";
+		say "     She shoves you powerfully against a tree and rushes up against you, pressing a knife to your throat, 'You fought bravely, but you are not powerful enough, yet. Keep that fire in your eyes and we may yet be sisters.' She then leans in and presses her lips to yours in a powerful kiss as her free hand reaches down, grabbing you between the legs a little roughly, inspecting you as she rubs her curvaceous front against your own a moment.";
 		wait for any key;
-		say "'I will find you, later.' she promises, shoving you once more before she vanishes into the foliage.";
+		say "     'I will find you, later.' she promises, shoving you once more before she vanishes into the foliage.";
 
 [ [Elf loss] ]
 To say Elf loss:
-	say "You knock the elf back and she topples to her bottom. You advance on her, but a sudden breeze of forest air whisks her away in a blur.";
-	
-	
+	increase elfloss by 1;
+	if elfloss < 3:
+		say "     You knock the elf back and she topples to her bottom. You advance on her, but a sudden breeze of forest air whisks her away in a blur.";
+	otherwise if elfloss is 3 or elfloss is 4:
+		say "     Frustrated by her earlier escapes, you are ready for her this time and grab her the moment you strike the final blow, pulling her dazed body into your arms before she can get away on the wind.  Despite her strong blows, she's quite light and easily held now that she's defeated.  Having caught her, you smile and push her to the ground on a pile of leaves and move atop her, always careful to keep a grip on her, lest she escape again.";
+		say "     Laying back against the foliage, the elf woman is a beautiful, lovely sight and one you'll enjoy bespoiling with your lustful intentions for her";
+		if cocks of player > 0:
+			say ".  Stroking your cock until it's nice and hard, you move into position at her wet folds.  She moans softly as you brush it against her damp lips, then thrust into her lovely pussy, enjoying her moan of pleasure even as she tries to hide it[if cock length of player > 15].  Your penis is quite large for her and she whimpers a few times as well, though the moans of pleasure far outnumber those until it is all lustful cries as she's fully stuffed to the back of her smaller cunt[otherwise if cock length of player > 7].  With a few pushes that make her moan aloud, you sink your cock into her until she's fully stuffed to the back of her cunt[otherwise].  You manage to slide your full length into the elf's cunt easily enough, drawing more moans of pleasure from her[end if].  Holding her by the wrists, you thrust into your elven prize again and again with your [cockname of player] cock until finally you groan and cum into her.  She bites her lip and tries to fight it back, but ends up crying out as she climaxes as well, having enjoyed the rough fucking immensely.  Grinning, you let her up and watch as she's whisked away by the wind, leaking your cum as she goes.";
+		otherwise:
+			say ".  Bringing a hand between her legs, you get her to spread them and let you at her wet snatch.  She moans softly as you brush against it, then slip a pair of fingers into her, enjoying her moan of pleasure even as she tries to hide it.  Holding her down by one shoulder, you keep fingering her cunt to watch her squirm and moan beneath you.  You pump them in and out of her hard and fast, feeling her cunt quiver around your digits.  She bites her lip and tries to fight it back, but ends up crying out as she climaxes, having enjoyed the rough fingering immensely.  Greatly aroused, you grab her head and press her face to your pussy, forcing her to lick you until you cum as well, soaking her face in your juices even as you lick hers from your hand.  Grinning, you let her up and watch as she's whisked away by the end, still dripping female juices from her cunt.";
+	otherwise:
+		say "     Beating the elf woman again, she drops to her knees as you grab her wrist, but submits to you this time.  'You have bested me, warrior, time and again.  I must accept my fate,' she says, head bowed.  Grinning and quite pleased, you run your hand through her lovely hair as you guide her head between your legs";
+		if cocks of player > 0:
+			say ".  With your growing erection before her, she whimpers softly before giving it a few licks, then kiss and suck at it more eagerly.";
+			say "     You run your fingers through her hair and stroke her pointed, and very sensitive, ears.  She blushes as you tell her how lovely she looks with your penis in her mouth and what a fine cocksucker she is, embarrased by your words as well as her own eagerness to continue.  After you've gotten quite excited and given her a good taste of your [cockname of player] precum, you let her release it and have her climb into your lap instead.  She whimpers a little, in both reluctance and anticipation, but does as ordered.  Her cunt [if cock length of player > 15]is a tight fit for your huge cock, so you let her take her time and enjoy watching her moan and struggle to take you in, eventually stuffing as much as she can fit into her much smaller vagina[otherwise if cock length of player > 8]is a little bit small for you, but she eventually ends up stuffing as much as she can fit into her smaller vagina[otherwise]takes your cock's full length in easily enough[end if].  Gripping her ass, you lick and suck at her lovely large breasts while she rides in your lap, whimpering and moaning in pleasure.  You suck and nibble at her big, pink nipples while pumping your [cock size desc of player] [cock of player] shaft into her until finally climaxing and sending your hot seed into her.  Not bothering to hold back any more, the lustful elf woman arches her back and cums hard as well.  Both spent, you relax your hold on her and lean back, resting on your hands as she's taken up by the wind, lightly easing off your cock as she rises into the air.  She drifts off on the breeze, leaking a trail of your cum from her recently filled cunt.";
+		otherwise:
+			say ".  With your damp pussy before her, she slides her tongue slowly over it with a soft moan before diving in eagerly.";
+			say "     You run your fingers through her hair and stroke her pointed, and very sensitive, ears.  She blushes as you tell her how lovely she looks between your legs where she belongs and what a fine job she's doing eating you out, embarrased by your words as well as her own eagerness to continue.  And your words are not just to tease her, her tongue is quite artful in its approach, clearly having had considerable practice before.  She alternates between licking and nibbling your folds, playing with your clit and just straight diving deep into you to lap up your juices.  You grin as you notice her hands drift between her legs to play with herself while she lavishes attention upon you.  After a lovely session of her tonguework, you can take no more and have a powerful climax, crying out in delight.  You grin and cum all the harder as you hear the elf woman moan as she cums as well, unable to contain her pleasure any longer as well.  Both spent, you release her head and stroke your fingers lightly across her cheek she is picked up by the air and drifts away from you.  As she rides away on the breeze, she dribbles female juices from her wet cunt.";
+
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -78,10 +98,9 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Elf":
 		if humanity of player is less than 10:
-			say "Feeling no more attachment to this boring world, you speak the words of a spell that you suddenly remember. The air ripples and shudders as a great portal opens before you, shimmering with heat. You step through without hesitation and a great feline beast waits patiently in a jungle. You mount the beast and he carries you back to your people swiftly. Play time was over, but you would not forget your time amongst the humans. You would suggest to the queen that your people take over a city of them. They would make delightful pets...";
+			say "     Feeling no more attachment to this boring world, you speak the words of a spell that you suddenly remember.  The air ripples and shudders as a great portal opens before you, shimmering with heat.  You step through without hesitation and a great feline beast waits patiently in a jungle.  You mount the beast and he carries you back to your people swiftly.  Play time was over, but you would not forget your time amongst the humans.  You would suggest to the queen that your people take over a city of them.  They would make delightful pets...";
 		otherwise:
-			say "You return to human society, but remain above it. Your graceful figure cuts powerfully through a crowd, and you have little issue commanding your way. As you grow accustomed to your new self, your confidence builds, and you become the owner of an upper class night club. While you ignore most who come through its halls, you do play favorites, claiming the prettiest of the lost for your personal needs and to satiate the itch that develops in your loins.";
-			
+			say "     You return to human society, but remain above it.  Your graceful figure cuts powerfully through a crowd, and you have little issue commanding your way.  As you grow accustomed to your new self, your confidence builds, and you become the owner of an upper class night club.  While you ignore most who come through its halls, you do play favorites, claiming the prettiest of the lot for your personal needs and to satiate the itch that develops in your loins.";
 
 
 [ Edit this to have the correct Name as wall]
