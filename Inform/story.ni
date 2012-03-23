@@ -4042,6 +4042,7 @@ Include Hospital For Fs by Stripes.
 Include Medical Checkups by Hellerhound.
 Include Junkyard and Warehouse by Rimme.
 Include State Fair by Sarokcat.
+Include Down Under Pub by Stripes.
 
 
 [Quests & Events]
