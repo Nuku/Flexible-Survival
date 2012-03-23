@@ -4002,6 +4002,20 @@ Carry out milking:
 			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 				add "egg nog" to the invent of the player;
 		now lastmilking is turns;
+	otherwise if the bodyname of the player is "Bovine":
+		say "Squeezing your soft bovine breasts, you moan and moo as you coax out a nice stream of bovine milk.";
+		repeat with T running from one to the breasts of the player:
+			add "cow milk" to invent of the player;
+		if breast size of player > 6:
+			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+				add "cow milk" to invent of the player;
+		if breast size of player > 12:
+			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+				add "cow milk" to invent of the player;
+		if breast size of player > 18:
+			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+				add "cow milk" to invent of the player;
+		now lastmilking is turns;
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
 
