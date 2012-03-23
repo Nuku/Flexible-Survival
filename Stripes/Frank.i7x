@@ -1,4 +1,5 @@
-Version 1 of Frank by Stripes begins here.
+Version 2 of Frank by Stripes begins here.
+[Version 2 - M/M fun now possible]
 "Adds a Skunk NPC named Frank to the Flexible Survival game"
 
 Section 1 - Event and Comic Store
@@ -64,6 +65,7 @@ Frank is a man.  Frank is in Comic Shop.
 The description of Frank is "[frankdesc]";
 lastFrankfucked is a number that varies.  lastFrankfucked is normally 555.
 franksex is a number that varies.
+frankmalesex is a number that varies.
 
 instead of sniffing the Frank:
 	say "The large skunk fellow smells of musty comics, Cheetohs and male skunk.";
@@ -81,23 +83,83 @@ instead of fucking the Frank:
 		if name entry is "Skunk":
 			now monster is y;
 			break;
-	if cunts of player is 0:
-		say "     Frank seems a little flustered by your request.  'Oh... ahhh... That sounds nice and all, but... umm... ladies only, bro,' he says.  'Here, you can borrow a couple of my comics,' he adds, passing you some comics from under the counter with animal characters in adult situations.  'Just don't get them all sticky,' he cautions you.";
+	if cunts of player is 0 and cocks of player > 0:
+		if lastFrankfucked - turns < 8:
+			say "     You don't want to rush things with him.  Maybe you should wait a little longer before having another go with him.";
+		otherwise if frankmalesex is 0:
+			say "     Frank seems a little flustered by your request.  'Oh... ahhh... That sounds nice and all, but... umm... ladies only, bro,' he says.  'Here, you can borrow a couple of my comics,' he adds, passing you some comics from under the counter with animal characters in adult situations.  'Just don't get them all sticky,' he cautions you.  Looking over the issues of Genus Male he's passed you and the male on male content within them, perhaps there's still hope for a little fun with the male skunk.";
+			increase score by 1;
+			increase frankmalesex by 1;
+			now lastFrankfucked is turns;
+		otherwise if frankmalesex is 1:
+			say "     While the skunk is reshelving in the back area by the gaming table, you bring up the subject of playing around again.  The skunk seems a little flustered by your renewed request, but you quickly tell him you're just enjoying the comics he showed you.  You add that you just want to have a little fun and wanted to know if he minded if you whipped it out, as it were.  Trying to act nonchalant, the skunk mumbles that you can go ahead, turning back to his shelves.  You slide up onto the sturdy table and stretch out after putting aside your clothes and gear, making sure the skunk's got a good view as he peeks at you occasionally.";
+			say "     Running your hands over your [bodyname of player] body, you caress your [skinname of player] flesh with a soft moan before letting a hand drift down between your legs.  You run your fingers lightly over your cock at first, coaxing it from a semi-flacid state to full erection slowly.  After flipping one pages in the comic maintain the illusion you're reading it, you take your [cock size desc of player] [cock of player] penis firmly in hand and start stroking, releasing another moan for the skunk's benefit.  This gets him to taking a longer glance, before nervously turning away again, his paw drifting down to his groin to rub his sheath.  Eyeing his ass and not the comic, you pump your meat faster.";
+			say "     After flipping unseen pages again, you move your free hand to your backside and start fingering your tight pucker.  Growing rather excited from your masturbation show, you leave dribbles of precum on the table.  Frank's stroking himself as well, clearly aroused by your show and forgetting to hide it.  You lick your lips slowly as you watch his paw pumping over his lovely cock, imagining it inside you as your tease your back entrance.  The large skunk steps a little closer, coming within reach, and you slowly reach over to take a hold of his ebon cock.  Too excited to pull away, he allows you to take his meat in hand.  And moments later, into your mouth.  You lick and suck on it firmly, getting the excited skunk to cum down your throat.  It is surprisingly sweet and delicious.  The excitement of your successful plan sets you off and you spray your hot load across the table.  As the skunk's climax fades into the afterglow, he realizes what's happened and dashes back to the front of the store.";
+			increase score by 5;
+			increase frankmalesex by 1;
+			now lastFrankfucked is turns;
+			say "[maleskunkinfect]";
+		otherwise if frankmalesex is 2:
+			say "     Deciding to try again with the skunk, you lean across his counter and run a hand through his chestfur.  While the skunk is startled, you whisper that you really liked playing with him earlier and would like to have some more.  As you say this, you slide your fingers down to his sheath and start rubbing it.  He groans softly and squirms in his seat.  'But I'm not... I mean... guys don't do it for me...' he mumbles a little, trying to deny it even as his sheath starts to swell and grow.";
+			say "     'Oh, I know,' you lie, 'but this is just foolin['] around.  Just a couple of guys helping each other out.'  Moving over the counter, you slide back his white sheath as he grows hard, then drop to your knees in front of him.  You take his cock into your mouth, licking and sucking at it.  You grin as he groans in pleasure and start slathering his tongue with your spit, preparing him for what you're planning next.  You fondle his balls and weigh those full orbs in your hand, eager for the cum they contain.";
+			say "     Once he's well and truly worked up, you ease your mouth back, getting a groan of disappointment from him.  Getting back up, you slide into his lap, moving over his erection.  As he starts to voice an objection, you kiss him to silence the big skunk.  'We're just playing around.  Besides, a hole's a hole, sweetie.  And you're just the guy to fill mine,' you moan as you sink yourself down onto his cock, letting it spread open your back door.  Frank groans again and grips your ass, helping to guide you down his shaft.  You reward him with another kiss and squeeze of your anus around his penis.  The skunk doesn't last long in fucking his first ass, but cums quite hard, pumping a nice, thick load into you.  You cum hard as well, aroused by the act of getting this obstensibly straight skunk to fuck you.  Quite pleased with yourself as you rise from his lap, you make sure to give the sexy skunk a nice view of his cum leaking from your stretched pucker before walking off.";
+			increase score by 15;
+			increase morale of player by 5;
+			increase frankmalesex by 1;
+			now lastFrankfucked is turns;
+			say "[maleskunkinfect]";
+		otherwise if remainder after dividing frankmalesex by 3 is 0:
+			say "     Coming back to Frank for more, this time there are no objections and he leads you back to the gaming table where you first coaxed him into playing with you.  His paws slide down to your sides and stroke your hips as he starts kissing you.  Despite his awkward conversation habits and earlier protests, he turns out to be a good lover, attentive to your needs and seeking out sensitive spots to caress and please you.  He lays you back on the table, legs hanging over the side and gets his cock lined up with your [tailname of player] backside.  His black shaft throbs and slides against your cheeks, dribbling precum against your tight hole in anticipation before he slowly sinks his thick meat into you.  He pumps into you steadily, causing you to moan in delight as he fucks you.";
+			say "     His paws take hold of your hips and squeeze your ass, gripping it firmly as he thrusts.  As he mates you, his musky scent grows stronger in the air, but it grows increasingly arousing to you until finally you clench down firmly around his cock and cum hard.  You blast your load across your chest and the skunk grins happily at the sight of this.  He growls softly in the back of his throat and drives his cock deep inside you, pumping his hot skunk seed into your bowels.  Finished, he withdraws slowly and kneels down, licking your spent shaft a few times, blushing as he does, to get those last few drops of cum leaking out.  You remain there, resting on the hard table, enjoying the wonderful afterglow as he continues on, licking your semen from your chest.";
+			increase frankmalesex by 1;
+			now lastFrankfucked is turns;
+			say "[maleskunkinfect]";
+		otherwise if remainder after dividing frankmalesex by 3 is 1:
+			say "     The big skunk grins and strokes his stiffening member at the prospect of more fun with you.  You kneel down in front of him and start licking at his ebon shaft.  Precum dribbles from its tip to be quickly lapped up by you.  As his excitement builds, his musky scent grows and your arousal increases until licking isn't enough and you stuff his thick rod into you mouth.  You lick and suck at it hungrily, making the large fellow moan in pleasure.  He runs his paws over your head and rubs your ears while bundling his big, fluffy tail around you like a warm, furry hug.  You lavish attention on his cock and balls until finally he growls and pumps his thick seed down your throat.  It is surprisingly sweet and delicious, and you lick it all up before swallowing it down.  The skunk, not wanting to leave you unsatisfied, boosts you up onto one of the glass counters and wraps his paw around your cock while nuzzling at your neck.  His soft fur brushes against you while his small, pointed teeth nibble along your throat and shoulder.  As you moan that you're getting close, he tilts his head to watch and moves his fluffy tail into position.  As you cum, you spray your hot seed onto his fluffy, striped tail, adding more streaks of white to it.  After helping you down, he pats your ass and brushes your cum into his fur, mixing your scent into his.";
+			increase frankmalesex by 1;
+			now lastFrankfucked is turns;
+			say "[maleskunkinfect]";
+		otherwise if remainder after dividing frankmalesex by 3 is 2:
+			say "     The hefty skunk smiles at your proposition and comes around the counter again.  He wraps his arms around you and bundles you up in his fluffy tail, guiding you back to the game table as he kisses you repeatedly.  This time he puts face down on the table and climbs atop you.  He nuzzles and nips at your ears, chirring softly to you as he whispers words of affection and love for his rescuer.  He lines up his throbbing shaft, then slowly sinks his thick meat into you, making you both moan in pleasure.  His black cock pumps into you steadily, causing you to moan repeatedly as his paws wander over your body and caress your sides before moving around to take hold of your cock and balls.  As always, he is an attentive lover, seeking to pleasure you as best he can by timing his thrusts and running those nimble fingers over your sensitive spots.  As he mates with you, his musky scent grows thick in the air, a scent you're finding more and more arousing each time you take the big fellow into you.  The wonderful fucking and his arousing scent eventually become too much for you and you cum hard, clamping your asshole down around his throbbing shaft and spraying your seed onto the floor.  Your tight, clenched hole pushes him over the edge and soon you're rewarded with heavy spurts of his hot, skunk cum to fill your bowels.";
+			say "     He remains atop you, pressing down on you with his body, which you find soft and comforting, as if its where you belong.  He nuzzles you and nibbles your ear some more, telling you again how wonderful you are for showing him how enjoyable this could be, then kisses you again.  Long after his erection has gone down, he withdraws from you and gets off you.  Helping you up, he bundles you up in his arms and uses his fluffy tail to wipe your leaking hole clean, making you shiver in delight at the soft touch of his fur.  His paws drift to your belly and rub it gently over your warm, cum-filled tummy.";
+			increase frankmalesex by 1;
+			now lastFrankfucked is turns;
+			say "[maleskunkinfect]";
 	otherwise if lastFrankfucked - turns is less than 8:
 		say "     The large skunk smiles and brushes his paws over his fluffy chair to straighten it out a little.  'Mmm... that sounds nice, but I could you a bit more of a break.  Besides, I want to finish the last of these issues,' he adds, pointing to the large pile he's set out.";
-	otherwise:
+	otherwise if cunts of player > 0:
 		increase franksex by 1;
 		now lastFrankfucked is turns;
 		if remainder after dividing franksex by 3 is 1:
 			say "     Frank grins at your offer and moves around the counter to wrap his arms around you.  He buries you in the soft, musky fur of his chest and wraps his fluffy tail around you.  His paws slide down to your sides and stroke your hips as he starts kissing you.  Despite his awkward conversation habits, he turns out to be a good lover, attentive to your needs and seeking out sensitive spots to caress and please you.  He guides you to another section of the store where the large gaming table sits.  He lays you back on it, legs hanging over the side and gets his cock lined up with your eager pussy.  His black shaft throbs and slides against your wet folds before he slowly sinks his thick meat into you.  He pumps into you steadily, causing you to moan in delight as he fucks you.  His paws drift up your chest to play with your breasts and tease your nipples.  As he mates you, his musky scent grows stronger in the air, but it grows increasingly arousing to you until finally you quiver around his cock and cum hard.  He growls softly in the back of his throat and drives his cock deep inside you, pumping his hot skunk seed into your womb.  Finished, he withdraws slowly and kneels down, licking your wet pussy and thighs until you're clean of any juices and cum that leaked out.  You remain there, resting on the hard table, enjoying the wonderful afterglow.";
 			say "[impregchance]";
 		otherwise if remainder after dividing franksex by 3 is 2:
-			say "     The big skunk grins and strokes his stiffening member at the prospect of more fun with you.  You kneel down in front of him and start licking at his ebon shaft.  Precum dribbles from its tip to be quickly lapped up by you.  As his excitement builds, his musky scent grows and your arousal increases until licking isn't enough and you stuff his thick rod into you mouth.  You lick and suck at it hungrily, making the large fellow moan in pleasure.  He runs his paws over your head and rubs your ears while bundling his big, fluffy tail around you like a warm, furry hug.  You lavish attention on his cock and balls until finally he growls and pumps his thick seed down your throat.  It is surprisingly sweet and delicious, and you lick it all up before swallowing it down.  The skunk, not wanting to leave you unsatisfied, boosts you up onto one of the glass counters and buries two fingers into your pussy while nuzzling and licking at your breasts.  His soft muzzle brushes over them before he starts licking and sucking your nipples.  He keeps his up, pumping those fingers and teasing your nipples until you cum hard with a lustful moan that makes him smile.  After helping you down, he pats your ass and wipes the wet glass with his fluffy tail.";
+			say "     The big skunk grins and strokes his stiffening member at the prospect of more fun with you.  You kneel down in front of him and start licking at his ebon shaft.  Precum dribbles from its tip to be quickly lapped up by you.  As his excitement builds, his musky scent grows and your arousal increases until licking isn't enough and you stuff his thick rod into you mouth.  You lick and suck at it hungrily, making the large fellow moan in pleasure.  He runs his paws over your head and rubs your ears while bundling his big, fluffy tail around you like a warm, furry hug.  You lavish attention on his cock and balls until finally he growls and pumps his thick seed down your throat.  It is surprisingly sweet and delicious, and you lick it all up before swallowing it down.  The skunk, not wanting to leave you unsatisfied, boosts you up onto one of the glass counters and buries two fingers into your pussy while nuzzling and licking at your breasts.  His soft muzzle brushes over them before he starts licking and sucking your nipples.  He keeps this up, pumping those fingers and teasing your nipples until you cum hard with a lustful moan that makes him smile.  After helping you down, he pats your ass and wipes the wet glass with his fluffy tail.";
 		otherwise if remainder after dividing franksex by 3 is 0:
 			say "     The hefty skunk smiles at your proposition and comes around the counter again.  He wraps his arms around you and bundles you up in his fluffy tail, guiding you back to the game table as he kisses you repeatedly.  This time he puts face down on the table and climbs atop you.  He nuzzles and nips at your ears, chirring softly to you as he whispers words of affection and love for his rescuer.  He lines up his throbbing shaft, then slowly sinks his thick meat into you, making you both moan in pleasure.  His black cock pumps into you steadily, causing you to moan repeatedly as his paws wander over your body and caress your sensitive nipples.  As always, he is an attentive lover, seeking to pleasure you as best he can by timing his thrusts and running those nimble fingers over your sensitive spots.  As he mates with you, his musky scent grows thick in the air, a scent you're finding more and more arousing each time you take the big fellow into you.  The wonderful fucking and his arousing scent eventually become too much for you and you cum hard, clamping your pussy down around his throbbing shaft.  Your quivering, milking vagina pushes him over the edge and soon you're rewarded with heavy spurts of his hot, skunk cum for your womb.";
 			say "[impregchance]";
 			say "     He remains atop you, pressing down on you with his body, which you find soft and comforting, as if its where you belong.  He nuzzles you and nibbles your ear some more, telling you again how lovely you are, then kisses you again.  Long after his erection has gone down, he withdraws from you and gets off you.  Helping you up, he bundles you up in his arms and uses his fluffy tail to wipe your wet, dripping pussy clean, making you shiver in delight at the soft touch of his fur.  His paws drift to your belly and rub it gently over that warm spot deep inside you where your cum-filled womb is.";
 		infect "Skunk";
+	otherwise:
+		say "     Having no sexual organs of your own, there seems to be little point in trying to have sex with the skunk.";
+
+
+to say maleskunkinfect:
+	[puts Skunk as lead monster for possible impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Skunk":
+			now monster is y;
+			break;
+	now sex entry is "Male";		[make target gender male]
+	now cocks entry is 1;
+	now cock length entry is 9;
+	now cock width entry is 5;
+	infect;
+	now sex entry is "Female";		[now back to female]
+	now cocks entry is 0;
+	now cock length entry is 0;
+	now cock width entry is 0;
 
 
 Section 3 - Endings
@@ -105,7 +167,7 @@ Section 3 - Endings
 [NOTE: For all skunk-related endings, see the 'Skunk Pet' file by Sarokcat]
 
 when play ends:
-	if franksex > 2 and bodyname of player is not "Skunk" and bodyname of player is not "Skunk Taur":
+	if ( franksex > 2 or frankmalesex > 2 ) and bodyname of player is not "Skunk" and bodyname of player is not "Skunk Taur":
 		if humanity of player > 9:
 			say "     When the soldiers come through the city to rescue you and the others, you tell them about Frank secure in his comic shop.  But then they go to retrieve him, he opts not to leave, unable to part with his precious store and collection.  You remain in contact with Frank through correspondence from time to time carried by those brave enough to enter the infected city.  He has reopened the store, stocking his shelves with more books he scavenges from his one-time competitors' abandoned locations and private collections left among the fallen city.  He only has a few customers, as most of the people living there now have little interest in such pursuits, but it makes him happy just to be open again.  He does remember his time with you fondly.  From his letters, he seems a little lonely, though he does have a few [']special customers['] who come to enjoy his company as well as his wares.  You are happy that he at least has some company as well as his books.";
 
