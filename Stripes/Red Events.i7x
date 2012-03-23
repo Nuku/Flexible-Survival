@@ -1,5 +1,5 @@
 Version 2 of Red Events by Stripes begins here.
-[version 2.1 - exclusions added]
+[version 2.2 - Aussie Pub moved to Down Under Pub file]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the Red Light District."
 
@@ -79,51 +79,7 @@ Instead of resolving a Raided Corner Store:
 
 Section 4- Aussie Pub
 
-Aussie Pub is a situation.
-The sarea of Aussie Pub is "Red";
-when play begins:
-	add Aussie Pub to badspots of girl;
-	add Aussie Pub to badspots of guy;
-	add Aussie Pub to badspots of hermaphrodite;
-	add Aussie Pub to badspots of furry;
-
-Instead of resolving a Aussie Pub:
-	say "     While exploring the area, you come across an Australian themed pub previously called 'Down Under'.  Some bright blue paint has been used to add 'TAKE ME' to the front of its name.  Through the windows, you can see there are lots of carousing and arousing kangaroos in the pub.  You can see them eating, drinking and/or fucking with uproarious enjoyment inside.";
-	if the bodyname of player is "red kangaroo":
-		say "     You feel a longing to join them.  Do you enter? (Y/N)";
-		if player consents:
-			say "     Giving into the urge, you step over to the door and go in.  There is a brief lull in the sound at your entrance, but it quickly picks up again.  You are one of them and welcome.  Some beer and food are put in front of you by a sexy kangaroo doe in a tight top.  Seeming eager to greet the newcomer, she[apostrophe]s soon under the table and lapping at your groin.";
-			if cocks of player > 0:				[ MALE/HERM! ]	
-				say "     After a long bout of teasing while you enjoy the meal you[apostrophe]ve been given, you pull the doe up to sit in your lap, driving your cock into her and plowing her good and hard.  You run your hands over each other[apostrophe]s body while she bounces on your cock, using her strong roo legs.  You play with her breasts and suck her nipples while she moans lustily.  The other patrons near you slap your back in encouragement, joking about how she likes to break in every newcomer.  From what you can gather, seeing how your focus is always drawn back to the buxom doe in your lap, is that you[apostrophe]re managing to last longer than most.  You do eventually pop off, blasting your hot seed into her gripping tunnel.";
-			otherwise:						[ FEMALE! ]
-				say "     After a long bout of teasing while you enjoy the meal you[apostrophe]ve been given, you pull the doe up into your arms.  You run your hands over each other[apostrophe]s body, playing with her breasts and sucking her nipples.  She calls over to the bartender for something she calls her 'double-duty', which turns out to be a double-ended dildo that she[apostrophe]s soon sharing with you, much to the enjoyment of the crowd.  The other patrons near you slap your back in encouragement, joking about how she likes to break in every newcomer.  From what you can gather, seeing how your focus is always drawn back to the buxom doe in your lap, is that you[apostrophe]re managing to last longer than most.  You are eventually struck by a thunderous orgasm that leaves you spinning for a few minutes.";
-			say "     Once she[apostrophe]s done with you, she gives you a kiss and heads off to deal with the other patrons, who seem to be happy to trade a delay in service for her usual sex show.  You[apostrophe]re informed by a friendly joey in the next booth that they have a generator hooked up for power and they[apostrophe]ve syphoned gas from the nearby station to run it.  'Just like Mad Max', he says with a laugh.  You carouse with them for hours, a romp of drinking, sinking and sex.";
-			say "     The main attraction comes as you[apostrophe]re finishing up a fulfilling fuck under a strong, masculine boomer who plows you good and hard. From somewhere in the back, probably having been locked in a store room, a dog-eared man is dragged out.  He[apostrophe]s got a collar and leash on and nothing else.  He[apostrophe]s spread across a table and held down, with many of the roos taking turns to fuck him, changing him more and more into another kangaroo like yourselves.  Once the buck atop you has filled you with his cream, you[apostrophe]re off like a shot to screw the increasingly willing hybrid, caught up in the moment with the lascivious roos.";
-			if cocks of player > 0:				[ MALE/HERM! ]	
-				say "     You get lucky, getting there just as he gets a new pussy, which you quickly fill with your cock.  You lick and kiss the rising breasts on the new jill[apostrophe]s chest, taking perverse satisfaction in helping to change the mostly human-male into a herm doe for you and the others to fuck.  Eventually, after you and many others have filled her with your seed, shi[apostrophe]s released from the table.  Shi eagerly joins the first buck who took hir in his booth, showing hir appreciation by sucking him off.";
-			otherwise:						[ FEMALE! ]
-				say "     Having just finished with the boomer, you bring you messy pussy above the playtoy[apostrophe]s lips, letting it drip down onto him.  He has his tongue up in your pussy almost immediately, seeking that thick, virile taste.  He licks and teases your pussy aggressively as he seeks out every drop of roo cum he can get.  From your vantage point above him, you get to watch as a new, wet slit forms under his balls, wet and dripping with need.  You lick and finger hir in return, taking perverse satisfaction in helping to change the mostly-human male into a herm doe for you and the others to enjoy.  Eventually, after you and many others have finished playing with hir, shi[apostrophe]s released from the table. Shi eagerly joins the first buck who took hir in his booth, showing hir appreciation by sucking him off.";
-			say "     Eventually, the party winds down, appetites (both carnal and more mundane) are sated and you head off with several of the others.  Part of you feels quite drawn to the rambunctious roos and you look forward to finding more to have fun with in the future.";
-			infect "red kangaroo";
-			infect "red kangaroo";
-			decrease humanity of player by 18;
-			decrease thirst of player by 30;
-			decrease hunger of player by 12;
-			increase score by 25;
-			if hunger of player is less than 0:
-				now hunger of player is 0;
-			if thirst of player < 0:
-				now thirst of player is 0;
-		otherwise:
-			say "You resist the temptation and head off with a little more resolve.";
-			increase score by 1;
-			increase humanity of player by 5;
-	otherwise:
-		say "You decide it[apostrophe]d probably be best to head for sneak away before you[apostrophe]re noticed.";
-		increase score by 1;
-	Now Aussie Pub is resolved;
-
-
+[ Moved to Down Under Pub ]
 
 Section 5- Flooded Street
 
