@@ -150,8 +150,11 @@ Carry out reciting:
 							now weapon of player is weapon of Y;
 							now weapon damage of player is weapon damage of Y;
 							now weapon type of player is weapon type of Y;
-							if y is not owned:
-								add printed name of y to invent of player;
+							repeat with t running from 1 to number of filled rows in table of game objects:
+								choose row t in table of random critters;
+								if object entry is y:
+									add name entry to invent of player;
+									break;
 							say "You ready your [Y].";
 			-- 28:
 				repeat with Y running through rooms:
