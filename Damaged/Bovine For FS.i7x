@@ -189,7 +189,7 @@ to say bovine desc:
 		say "[cow desc]";
 		now Bovine_type is 1;
 		now wdam entry is 2 + ( debit / 4 );	[-Amount of Damage cow Does when attacking.-]
-		now lootchance is 20;
+		now lootchance entry is 20;
 	otherwise:						[MALE BULL]
 		say "[bull desc]";
 		now Bovine_type is 2;
@@ -197,7 +197,7 @@ to say bovine desc:
 			now wdam entry is 0;			[Passive bull is 0, even in hard mode]
 		otherwise:
 			now wdam entry is 28 + ( ( 2 * debit ) / 5 );		[check for if the player has killed a cow (female bovine), if they have, its time to roll out the punishment]
-		now lootchance is 20;
+		now lootchance entry is 20;
 
 
 When Play begins:

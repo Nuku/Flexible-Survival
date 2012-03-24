@@ -150,6 +150,8 @@ Carry out reciting:
 							now weapon of player is weapon of Y;
 							now weapon damage of player is weapon damage of Y;
 							now weapon type of player is weapon type of Y;
+							if y is not owned:
+								add printed name of y to invent of player;
 							say "You ready your [Y].";
 			-- 28:
 				repeat with Y running through rooms:
