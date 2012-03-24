@@ -29,9 +29,7 @@ The description of Tristian is "Approaching one of the dim booths a rather cute 
 instead of sniffing Tristian:
 	say "The stallion boy smells of leather and lust.  The scent of gay sex with various other males clings to him.";
 
-The conversation of Tristian is { "[Tristiantalking]" };
-
-To say Tristiantalking:
+instead of conversing the Tristian:
 	if Tristiantalk is 0:[first time you encounter the npc text]
 		say "'Hey there, it[apostrophe]s nice to see a new face around here! Welcome to the Palomino nightclub!' The goth like stallion says with a welcoming smile on his equine face 'The names Tristian, at its a real pleasure to meet you.' He says as he looks you up and down appreciatively, before sitting back down in the well padded booth and gesturing for you to join him. Once you settle yourself into the large comfortable booth, the somewhat handsome goth horse continues. 'I suppose you are wondering a bit about how such a diverse group of people ended up here?' The palomino stud says with a slightly amused tilt to his head as he gestures to the dance floor filled with various different species of dancers, as well as the stripper poles where a black swan is demonstrating their new bodies flexibility as the twine around the pole erotically.[line break]"; 
 		say "'Well it was different for a lot of people. but for me, well i was headed down here to the red light district so i could get a new outfit for clubbing and dancing in.' Tristian says with an amused smile, as he gestures to his black leather and spiked cuffs, 'That[apostrophe]s what i was doing when things started going crazy around here, of course i never thought about the fact that the zoo was so close to this area until i saw some animals starting to run around.' Tristian says with a soft nickering chuckle, 'Of course some of them weren[apostrophe]t quite so animal like anymore... I tried to grab one of the nice looking ponies that was running around and well...' The palomino[apostrophe]s voice trails off slightly as a smile tugs at the edges of his muzzle. [line break]"; 

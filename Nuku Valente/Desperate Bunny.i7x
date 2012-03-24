@@ -16,12 +16,12 @@ Lastrabbitfuck is a number that varies. Lastrabbitfuck is usually 250.
 rabbitmulticock is a number that varies. rabbitmulticock is usually 0.
 rabbitfucked is a number that varies. Rabbitfucked is usually 0.
 rabbitsister is a number that varies. Rabbitsister is usually 0.
-lust of sandra is 555.
+lust of Sandra is 555.
 hp of Sandra is 0.
 
 Rabbitfucking is an action applying to nothing.
 
-understand "fuck sandra" as rabbitfucking;
+understand "fuck Sandra" as rabbitfucking;
 understand "fuck rabbit" as rabbitfucking;
 
 check rabbitfucking:
@@ -114,14 +114,14 @@ To rabbitfuck:
 				now rabbitfucked is 1;
 				increase score by 5;
 			otherwise:
-				if sandra is in rabbit den:
+				if Sandra is in rabbit den:
 					say "Finished and getting dressed, you feel a hand tugging at you and turn to Sandra, 'Look... Being a rabbit makes me kind of nervous, but I'm not infectious, right? I mean, god that was a stupid way to put it. I like you, ok? I want to come with you, please?";
 					say "Do you let her?";
 					if player consents:
 						add "water bottle" to invent of bunker;
 						add "water bottle" to invent of bunker;
 						add "food" to invent of bunker;
-						move sandra to Bunker;
+						move Sandra to Bunker;
 						move player to bunker;
 						now hp of Sandra is 1;
 						if coleenalpha > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;
@@ -180,7 +180,7 @@ To rabbitfuck:
 				now lastrabbitfuck is 250;
 				stop the action;
 		otherwise:
-			if ( gestation of child is not 0 or child is born ) and sandra is not in bunker:
+			if ( gestation of child is not 0 or child is born ) and Sandra is not in bunker:
 				say "'Oh, sister, you need my help!' exclaims Sandra as she comes up to you.";
 				if child is born:
 					say "She looks over your [bodyname of child] child and reaches to pet them lightly, then hug them close, 'Hello, my... you grew up fast. I will help take care of you.'";
@@ -191,7 +191,7 @@ To rabbitfuck:
 				add "water bottle" to invent of bunker;
 				add "water bottle" to invent of bunker;
 				add "food" to invent of bunker;
-				move sandra to Bunker;
+				move Sandra to Bunker;
 				move player to bunker;
 				now hp of Sandra is 1;
 				if coleenalpha  > 0 or coleencollared > 0 or coleenslut > 0, now lust of Sandra is turns;

@@ -1484,7 +1484,7 @@ Instead of conversing the Nermine while nerminepackage is 3:
 	repeat with x running through invent of player:
 		if x is "spear", increase spearfound by 1;
 	if spearfound is 1:
-		say "     'And you appear to be most lucky, little helper,' she adds, taking note of the spear you have.  'That is spear of great Viking chief who commanded the boat.  A rare fine, such a thing,' she says with a little greed in her eye, as if trying to come up with a suitable trade to tempt it away from you.";
+		say "     'And you appear to be most lucky, little helper,' she adds, taking note of the spear you have.  'That is spear of great Viking chief who commanded the boat.  A rare find, such a thing,' she says with a little greed in her eye, as if trying to come up with a suitable trade to tempt it away from you.";
 	increase score by 10;
 	now nerminepackage is 4;
 

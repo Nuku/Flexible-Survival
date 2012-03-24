@@ -56,9 +56,7 @@ to say Nerminedescribing:
 		say "You spot what must be the store owner, her strange countenance making you blink several times in surprise.  Leaning up against the store counter next to the register is a lovely Female Jackaless, her soft black fur shining softly as she is framed in the soft light from the candles on the counter.  The rather Anubis like figure seems to be currently dressed in a rather loose fitting white t – shirt and a very short black skirt, as she leans forward on the counter, her face is brushed with soft swirls of silver paint as she grins at you.";
 
 
-The conversation of Nermine is { "[Nerminetalking]" };
-
-To say Nerminetalking:
+instead of conversing the Nermine:
 	if Nerminetalk is 0:
 		say "'Ah a new customer!' The strange jackal says with a grin as you approach the counter, her voice soft and beautiful though tinged with a strange accent you don[apostrophe]t quite recognize. 'My name is Nermine, and I will be happy to help you out with whatever you need!' The jackal woman continues, the candlelight shining off her eyes and her silver makeup as she tilts her head to get a better look at you. 'You look like you have plenty of problems, well don[apostrophe]t worry! Whatever the problem, Nermine[apostrophe]s shop probably has some solution for it.' Nermine says with a small smile, 'Of course use solution at own risk and all that, and some of my items might not come that cheaply..' She continues, her light voice seeming tinged with amusement as she gestures around at the strange array of items scattered around the shop, 'Or perhaps you just wish to try your luck yes? Nermine has several items that might be fun for you to try out relatively cheaply...' She gestures at the small bin near the counter marked 'Bargain bin', 'Either way, you let Nermine know what she can do for you, or with you.' The sexy Jackaless says with a wink of her silver painted eye, making you wonder if she meant that last comment to be quite as suggestive as it sounded...";
 		increase Nerminetalk by 1;
@@ -633,7 +631,7 @@ carry out bargainhunting:
 			let minorbargain be a random number from 1 to number of filled rows in the table of random critters;
 			choose row minorbargain from the table of random critters;
 			if there is a loot entry:
-				if loot entry is not " ":
+				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry]![line break]";
 					add "dirty water" to invent of player;

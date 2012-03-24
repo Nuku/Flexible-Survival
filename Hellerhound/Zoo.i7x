@@ -182,11 +182,9 @@ to say Catnip use:
 instead of sniffing catnip:
 	process catnip;
 
-The conversation of Angie is { "[angietalking]" };
-
 angietold is a number that varies.
 
-To say angietalking:
+instead of conversing the Angie:
 	if angietalk is 0:
 		say "'Hey again, it[apostrophe]s sad to see this place is in such a state, still it[apostrophe]s no surprise considering what the rest of the Zoo is like.'She sighs wistfully as she looks around the devastated shop before turning her golden eyes back to you, 'Thanks again for your help out there, I really appreciate it,' Angie says, a grateful smile crossing her muzzle. 'I[apostrophe]m still getting used to all the changes, both in me and in the Zoo itself, but I[apostrophe]ll help you out any way I can to pay you back for earlier.  There might still be some useful supplies out in the zoo as well, and I recovered a couple medkits from the employees room.  You should take this kit' She says, as she hands you a medkit [line break]";
 		add "medkit" to invent of player;

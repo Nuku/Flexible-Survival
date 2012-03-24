@@ -13,9 +13,7 @@ Gang members is a man.
 The description of Gang members is "A number of hyena gang members are lounging around the large open area, some of them lounging on the couches or the mattresses, while others move around chatting or showing off their hyena fur patterns. Several of the gang members have obviously gone mostly feral though, and their cackling laughter from the other rooms provides an almost comforting background to the noise of the area.";
 Gang members is in Hyena hideout.
 
-The conversation of Gang members is { "[memberstalking]" };
-
-to say memberstalking:
+instead of conversing the gang members:
 	if matriarchowned is 1:
 		say "[one of]The gang members all nod and acknowledge your dominance as you walk around the area,  keeping an eye on your subjects.[or] Several of your gang take the opprotunity to fill you in on recent events in the city.[or] You find several of the hyenas using the former matriarch like the whore you turned her into, a large hyenalike grin crosses your face as you walk away, leaving them to their fun.[or] Running across some of your scouts in an animated conversation, you pause to listen, seeing your interest they quickly fill you in on the military[apostrophe]s activity in and around the city.[or] Finding some of your scouts in an urgent discussion, you check in to see if anything is wrong.  They quickly reassure you that things are proceeding quite well, and they are still working on securing several more routes out of the city just in case.[or] Seeing your interest, a number of your hyena pack take this opportunity to chat with their matriarch, getting to know you and whats expected of them better. [at random].Walking away from the gang members, you realize just being in their proximity has helped reinforce your hyena status.";
 		hyenaify;
@@ -95,9 +93,7 @@ Gina is a woman.
 The description of Gina is "The hyena who recruited you into the gang is lounging around on a pile of cushions nearby, you think her name was Gina.";
 Gina is in Hyena hideout.
 
-The conversation of Gina is { "[ginatalking]" };
-
-To say ginatalking:
+instead of conversing the Gina:
 	if ginatalk is 0:
 		say "'Well this is the place hun, welcome to the pack hideout, though most of us just call it the Hyena Den nowadays.' Gina says with a lazy gesture at the cavernous space around you, filled with the low conversations and hyena laughter of some of the other gang members.  'We have a pretty nice set up here if I do say so myself. Lots of room and a pretty good location in the city too, course there isn[apostrophe]t a lot of modern amenities, but hey, there arent many of those anywhere else in the city either.' Gina says with a shrug as she sprawls on her pile of cushions.  'Got a good thing goin here though, no plenty of room for most of us to hang out, and we have a separate space next warehouse over.' Seeing your look of puzzlement she explains. 'Thats what we call those who give in totally, all they want to do is fight, fuck, and feed, really cant tell much difference between that and what the rest of want though.' Gina says before breaking into a hyenalike chuckle. 'They make great fighters and hunters though, help us track down anyone entering the territory we don[apostrophe]t invite.' Gina pauses for a minute before continuing, 'I think you[apostrophe]ll like it here if you give it a chance, I[apostrophe]m pretty high up the pecking order right now cause I got a good eye for new recruits. So everyone should give ya the benefit of the doubt while you try to find your place around here. At least until we finally get us a matriarch to take charge of things around here,' she says, as a frown crosses her hyena muzzle, 'Once the dominants finally figure out whos on top of the pecking order, my status could change depending on the new matriarch, hopefully you[apostrophe]ll be all settled in by then.  In the meantime, feel free to pull up a cot and bunk over here with me.'";
 		add "cot" to invent of Hyena hideout;

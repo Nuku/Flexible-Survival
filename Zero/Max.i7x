@@ -19,7 +19,7 @@ Instead of resolving Meeting the corgi:
 		say "[line break] Before the dominator can get very far, a small furry missile rams into him, and begins to beat the life out of him.";
 		say "Do you attack the [']small furry missile['] while it's distracted?";
 		if the player consents:
-			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind [line break] The now relieved  corgi blocks your attacks with ease and glares at you. [']And here I thought you weren’t stupid, guess I was wrong!['] Before you can do anything else the corgi slams a fist into your jaw, knocking you out,[line break] leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
+			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind [line break] The now relieved  corgi blocks your attacks with ease and glares at you. [']And here I thought you weren't stupid, guess I was wrong!['] Before you can do anything else the corgi slams a fist into your jaw, knocking you out,[line break] leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
 		otherwise:
@@ -56,42 +56,40 @@ understand "max" as Max.
 
 The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendant hanging from his neck. ";
 
-The conversation of Max is { "[Corgitalking]" };
-
-To say Corgitalking:
+instead of conversing the Max:
 	if location of player is Old Lounge:
-		say "Do you want to fight the master? (y) or get out of here (n)";
+		say "'Do you want to fight the master? (y) or get out of here (n)?'";
 		if the player consents: 
-			say "You sure you're ready to fight?";
+			say "'You sure you're ready to fight?'";
 			if the player consents: 
 				say "Nodding, the corgi begins walking towards the sound of moaning, and you quickly follow behind him.";
 				now corgihelp is 1;
 				challenge "The Mistress";
 			otherwise:
-				say "Just give me a shout when you're ready. ";	
+				say "'Just give me a shout when you're ready.'";	
 			stop the action;		
 		otherwise:
-			say "You sure you're ready to go?";
+			say "'You sure you're ready to go?'";
 			if the player consents: 
-				say "Although you do run into a lot of enemies along the way, you do eventually get out of the demented place and to the relative safety of the mall";
+				say "'Although you do run into a lot of enemies along the way, you do eventually get out of the demented place and to the relative safety of the mall.'";
 				move Max to Mall Atrium;	
 				move player to Mall Atrium;	
 				stop the action;
 			otherwise:
-				say "Just give me a shout when you're ready to go.";	
+				say "'Just give me a shout when you're ready to go.'";	
 			stop the action;	
 	otherwise if location of player is Mall Atrium:  [start of normal converce]
-		say "Hey, glad we got out of there [if Mistresswon is 1]and got rid of that demented creature too![end if]";
+		say "'Hey, glad we got out of there [if Mistresswon is 1]and got rid of that demented creature too![end if]'";
 		if Mistresswon is 0:
-			say "if you want we can go back and try to attack those sluts and dominatrices again?";
+			say "'If you want, we can go back and try to attack those sluts and dominatrices again?'";
 			if the player consents: 
-				say "lets go then, shall we";
+				say "'Let's go then, shall we?'";
 				move player to Old Lounge;
 			otherwise: 
-				say "That[']s OK, I[']m still pretty tired anyway, but just ask if you want to try again.";	
+				say "'That[']s OK, I[']m still pretty tired anyway, but just ask if you want to try again.'";	
 		otherwise:
 			if maxq is 2:
-				say "The corgi dances happily as you give him the pendant, hugging it against his chest, rubbing the back of his head and blushing when he realizes where he is. 'Heh heh sorry bout that, here,' he says tossing you a new looking backpack, that should be better then what your currently using and there’s a few items in there that should help you out";			
+				say "The corgi dances happily as you give him the pendant, hugging it against his chest, rubbing the back of his head and blushing when he realizes where he is. 'Heh heh sorry bout that, here,' he says tossing you a new looking backpack.  'That should be better then what your currently using and there's a few items in there that should help you out.'";			
 				Add "durable backpack" to invent of player;
 				Add "water bottle" to invent of player;			
 				Add "strange gem" to invent of player;
@@ -101,17 +99,17 @@ To say Corgitalking:
 				Add "protein shake" to invent of player;
 				Add "protein shake" to invent of player;	
 				Add "kunai" to invent of player;													
-				say "Now then since I have finally got this back, I can go home, feel free to drop by when you have the chance, its that big apartment complex next to the gym. ";
+				say "'Now then since I have finally got this back, I can go home, feel free to drop by when you have the chance, its that big apartment complex next to the gym.'";
 				now GYM is known;
 				now Complex is known;
 				move Max to Rec room;
 			otherwise if maxq is 0:
-				say "Max waves you over as you enter the mall, [']how you being doing, good, well I've got a favor to ask of you.[line break] A while ago i was attacked by the hyena gang and they managed to steal something from me, trouble is, I'm busy with another job that has to be done quickly, would you mind getting it back for me, its a pendant like mine, only its blue instead of red.[']";
+				say "Max waves you over as you enter the mall.  'How you being doing, good, well I've got a favor to ask of you.'[line break] 'A while ago i was attacked by the hyena gang and they managed to steal something from me, trouble is, I'm busy with another job that has to be done quickly, would you mind getting it back for me, its a pendant like mine, only its blue instead of red.'";
 				now maxq is 1;
 			otherwise if maxq is 1:
-				say "Apologizing for your lack of progress you quickly head out once again to try and find the corgi's missing pendant, maybe if you hunt for the pendant you'll have more luck?";	
+				say "'Apologizing for your lack of progress you quickly head out once again to try and find the corgi's missing pendant, maybe if you hunt for the pendant you'll have more luck?'";	
 	otherwise if location of player is Rec room:
-		say "'You want to trade some stuff? miles and me have got some goody bags for you if you want them, if you have a bit of water and food to spare, you may find yourself suprised.'  Maybe  you want to GIVE MAX some of your supplies?";
+		say "'You want to trade some stuff? miles and me have got some goody bags for you if you want them, if you have a bit of water and food to spare, you may find yourself suprised.'  Maybe  you want to GIVE MAX some of your supplies?'";
 
 
 Section 3- corgitrading
@@ -183,7 +181,7 @@ carry out corgigiving:
 			Say "a pack of chips";
 			Add "chips" to invent of player;						
 	Otherwise:
-		say "Sorting through your pack, you realise you don’t actually have the food and water to trade";
+		say "Sorting through your pack, you realise you don't actually have the food and water to trade";
 		
 Section 4-Miles
 
@@ -194,16 +192,14 @@ understand "miles" as Miles.
 
 The description of Miles is "     Miles is a kitsune, he looks like a fox but with two tails, his fur is normally red but it seems like he can control its colour, he is wearing a plain t-shirt and black joggers, he also has and a blue diamond pendant hanging from his neck. ";
 
-The conversation of Miles is { "[Kitsutalking]" };		
-
-To say Kitsutalking:
+instead of conversing the Miles:
 	if location of player is Rec room:
 		if maxq is 2:
-			say "The kitsune bounds over to you as you approach, 'hi there, Max's been talking bout you, all good i a sure you' [line break]'anyway thanks for helping him out he looked so guilty when he said he'd lost my gift' he says fingering the blue pendant around his neck, 'your free to hang around here whenever you want, and there’s a gym next-door if your interested, its empty at the minute though'";
+			say "The kitsune bounds over to you as you approach, 'hi there, Max's been talking bout you, all good I assure you' [line break]'anyway thanks for helping him out he looked so guilty when he said he'd lost my gift' he says fingering the blue pendant around his neck, 'your free to hang around here whenever you want, and there's a gym next-door if your interested, it's empty at the minute though.'";
 			now maxq is 3;
 			stop the action;
 		otherwise if maxq is 3:	
-			say "when you approach the kitsune, you find he is crouched over a pair of swords, when you inquire about them he tells you there for a quest that’s not finished but if you want he'll give you them now......with a warning, [line break] the bloody sword drains health each turn, and while slightly stronger the demonic sword drains sanity, in there future there will be away of changing the effects but for now...good luck[line break] n for bloody y for demonic";
+			say "When you approach the kitsune, you find he is crouched over a pair of swords, when you inquire about them he tells you there for a quest that's not finished but if you want he'll give you them now......with a warning, [line break] the bloody sword drains health each turn, and while slightly stronger the demonic sword drains sanity, in there future there will be away of changing the effects but for now...good luck[line break] n for bloody y for demonic";
 			if the player consents:
 				add "demonic sword" to invent of player;
 				now maxq is 4;
@@ -213,7 +209,7 @@ To say Kitsutalking:
 				now maxq is 4;
 				stop the action;
 		otherwise if maxq is 4:
-			say "this city’s got existing hasn’t it, and crazy......defiantly crazy"	
+			say "'This city's got existing hasn't it, and crazy......defiantly crazy.'"	
 		
 		
 
