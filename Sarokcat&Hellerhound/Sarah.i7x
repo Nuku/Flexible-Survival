@@ -113,17 +113,17 @@ to say sarahslutstate:
 			say "She smiles faintly, all pretenions of humanity gone from her mind, as she rubs her needy slit and large breasts. Her fur is matted from the many sex acts without cleaning, and her leash, reading 'slut' on either side, is a testament to her state of mind.";
 
 
-to say sarahtalking:
+instead of conversing the Sarah:
 	increase sarahtalk by 1;
 	if sarahtalk is 1:
-		say "Hello. My name is Sarah, and thanks for rescuing me form those darn huskies back there. I used to be a medic,[bold type] so if you happen to find any medkit parts I could put them together for you.[roman type] I really do appreciate the help, and I hope I can provide you with a lot of help in the meantime, until the rescue comes. 'Please fill my cunt!' She moans, then regains control of herself. 'Damn those huskies.'. Regaining her train of thought, she loks up at you and smiles. 'I used to work at the hospitol, in the ER general ward, where they treated those who hadn't hurt themselves so badly they needed a specialist.' She says as she runs her new pawlike hands down her body, 'So I[apostrophe]m sure I can be of great help to you as well.'";
+		say "'Hello. My name is Sarah, and thanks for rescuing me form those darn huskies back there. I used to be a medic,[bold type] so if you happen to find any medkit parts I could put them together for you.[roman type] I really do appreciate the help, and I hope I can provide you with a lot of help in the meantime, until the rescue comes. Please fill my cunt!' She moans, then regains control of herself. 'Damn those huskies.' Regaining her train of thought, she looks up at you and smiles. 'I used to work at the hospital, in the ER general ward, where they treated those who hadn't hurt themselves so badly they needed a specialist,' she says as she runs her new paw-like hands down her body, 'so I[apostrophe]m sure I can be of great help to you as well.'";
 	otherwise:
 		if sarahslut < 4:
 			if hasparts is 0:
 				if sarahslut < 3:
-					say "[one of]Please fuck me, I need Oh sorry. Lost control of myself there.[or]Mmmm huskys.[or]I guess you are the alpha here.[or]I can make some medkits if you had parts.[or]Have you seen any spare medkit parts out there?[or]This place is wonderful. Why didn't I come here?[or]Thanks for saving me![or](Sarah moans, rubbing her dripping slit)[at random]";[todo]
+					say "[one of]'Please fuck me, I need Oh sorry. Lost control of myself there.'[or]'Mmmm huskys.'[or]'I guess you are the alpha here.'[or]'I can make some medkits if you had parts.'[or]'Have you seen any spare medkit parts out there?'[or]'This place is wonderful. Why didn't I come here?'[or]'Thanks for saving me!'[or]Sarah moans, rubbing her dripping slit.[at random]";	[todo]
 				otherwise:
-					say "[one of]Fuck me again master![or]Please take me now![or](Sarah moans, rubbing her slit and dripping everywhere.)[or]Fill me![or]Use me like the bitch I am.[or]Master please use your slut![or]I just love being your bitch.[at random]";
+					say "[one of]'Fuck me again master!'[or]'Please take me now!'[or]Sarah moans, rubbing her slit and dripping everywhere.[or]'Fill me!'[or]'Use me like the bitch I am.'[or]'Master, please use your slut!'[or]'I just love being your bitch.'[at random]";
 			otherwise:
 				if hasparts is 1:
 					say "Sarah coos in delight, running her white paws over some of the more unusual parts you found. 'This will make a great medkit' She exclaims, and manages to fit them back together. She hands you a medkit in return.";
@@ -139,11 +139,9 @@ to say sarahtalking:
 				say "The sight of medkit parts does little to free her submitted mind, and she ignores them to keep rubbing her dripping slit.";
 				now hasparts is 0;
 			otherwise:
-				say "[one of]Fuck me again master![or]Please take me now![or](Sarah moans, rubbing her slit and dripping everywhere.)[or]Fill me![or]Use me like the bitch I am.[or]Master please use your slut![or]I just love being your bitch.[at random]";
+				say "[one of]'Fuck me again master!'[or]'Please take me now!'[or]Sarah moans, rubbing her slit and dripping everywhere.[or]'Fill me!'[or]'Use me like the bitch I am.'[or]'Master, please use your slut!'[or]'I just love being your bitch.'[at random]";
 
 
-
-the conversation of sarah is {"[sarahtalking]" }.
 
 lastsarahfucked is a number that varies. lastsarahfucked is usually 250.
 

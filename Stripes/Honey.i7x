@@ -135,7 +135,11 @@ Section 4 - Endings
 
 when play ends:
 	if bee girl is tamed:
-		if humanity of player is less than 10:
+		if humanity of player is less than 10 and bodyname of player is "black equinoid":
+			now tempnum is 0;		[content in black equinoid]
+		if humanity of player is less than 10 and bodyname of player is "Drone Wasp":
+			now tempnum is 0;		[content in black equinoid]
+		otherwise if humanity of player is less than 10:
 			say "     When you succumb and end up giving in to your instincts, Honey ends up leaving you.  She buzzes off sadly into the city to find a new hive.";
 		otherwise:
 			say "     When the military comes to rescue you and the other survivors they can find, Honey is able to come with you.  Her small, girlish looks and her cute offer of honey from her precious bag wins over the gruff soldiers.  As you're heading off, she grins and winks playfully to you, acting like an innocent little girl in front of the soldiers.  A sample of the honey is tested just to be safe, but it is clean and non-infectious, as you already know.  Honey keeps up her little girl act, claiming to be orphaned (which is true enough), and is released into your custody.";

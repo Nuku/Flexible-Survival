@@ -93,7 +93,7 @@ The description of Hyena Shack is "A small looking wooden shack that she apparen
 Hadiya is a person.
 The description of Hadiya is "A tall, obviously intimidating hyena. The sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other Hyenas that you've met in the past.. Her shaggy fur about as well groomed as you can expect it to be in a situation like this. Just reclining against one of benches in her home and giving the intruder a curious look. She towers over you, and by the sharp claws and various weapons, knives, and other objects on her belt she definitely could give you a hard time if she wanted to. Though for now doesn't seem like she's in any hurry to actually use any of them right now.";
 Hadiya is in Hyena Shack.
-The conversation of Hadiya is { "'So you actually came? That didn[apostrophe]t take long.'" };
+The conversation of Hadiya is { "So you actually came? That didn[apostrophe]t take long." };
 
 instead of sniffing Hyena Shack:
 	say "This places smells quite strongly of hyena herm and male sex.";

@@ -4,18 +4,18 @@ State Fair by Sarokcat begins here.
 
 Section 1- State Fair enviornment
 
-State fair is a room. It is fasttravel. 
+State Fair is a room. It is fasttravel. 
 
-The description of State fair is "The entrance to the state fair, colourful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up, it looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.";
+The description of State Fair is "The entrance to the state fair, colourful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up, it looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.";
 
-instead of sniffing State fair:
+instead of sniffing State Fair:
 	say "The scents of popcorn and cotton candy and other treats fill the air.  Beneath those enticing scents there lies the strange scents of arousal, as if those musky scents are trying to hide beneath them.  Among those scents, you catch the whiff of [one of]several felines[or]a rubbery scent[or]plush toys[or]male arousal[or]female heat[or]manly sweat[or]lupine cum[at random]";
 
 Midway is a room.
 Midway entry is a door. "The midway stretches to the west.". It is dangerous.
 
 West of Midway entry is Midway.
-West of State fair is Midway entry.
+West of State Fair is Midway entry.
 
 The marea of Midway entry is "Midway".
 
@@ -28,14 +28,12 @@ borisfucked is a number that varies. borisfucked is usually 0.
 
 Boris the lion is a man.
 The description of Boris the lion is "Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair.  Even you recognize that the person is dressed up as  the (semi)famous Boris the lion suit.  Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic then any you suit you have ever seen before, a closer look shows there is no loose areas of skin on the costume, and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn[apostrophe]t a suit anymore, its Boris the lion!";
-Boris the lion is in State fair.
+Boris the lion is in State Fair.
 
 instead of sniffing Boris:
 	say "Boris smells faintly of funfur and lions[if borisquest is 5].  The scent of his new maleness is strong around him[end if].";
 
-The conversation of Boris the lion is { "[boristalking]" };
-
-To say boristalking:
+instead of conversing the Boris:
 	if boristalk is 0:
 		say "'Hey there and welcome to the... oh who am I kidding,' the lion costumed man says with a sigh, before raising one of his overlarge paws to rub at his face. 'Look I don[apostrophe]t know who you are, or what you are doing here, but trust me, you probably don[apostrophe]t want to be here. Heck I don[apostrophe]t really want to be here anymore, but its not like I can just leave.'  Seeing your slightly confused look he sighs and explains. 'Look it[apostrophe]s like this, you see me?' he gestures at his plush furred form. 'I showed up for work early the other day, put on the costume, and now well. This is what I am, I can[apostrophe]t even really remember my old name anymore, and I have a strange desire to hunt down that bastard Arthur the Antelope,' He growls for a minute, staring off into space, before seeming to come back to himself. [line break]";
  		say "'Gah see? I know and you know that there isn[apostrophe]t really an Arthur the antelope out there for me to hunt down, but It still gets to me.' the lion sighs heavily, 'So yeah you might as well just call me Boris now, seems more appropriate then anything else these days.' He pauses for a minute in thought, before shaking himself and continuing. 'So yeah, if you think this is strange, you really don[apostrophe]t want to see what the rest of the fair is like.  Things have gotten wild in there, I swear I saw some sort of latex creatures hanging out near the house of wax, the fun house was taken over by some kind of crazy animalistic clowns,' Boris pauses for a minute to shudder at the thought of clowns, 'And to top it all off some of the fair prizes are running around on their own attacking people. Giant stuffed animals running around and jumping on people is definitely one of the weirder things I ever saw, course the fact that the people turned into more stuffed animals as well is pretty damn weird too if you ask me.'  Boris pauses for a second, before shaking his overlarge furred head, 'Just trust me on this, you really don't want to go out there.' His warning delivered, Boris the lion returns to leaning against the ticket booth and staring off into space, occasionally sighing.";
@@ -165,7 +163,7 @@ when play ends:
 
 Carnival game is a man.
 The description of Carnival game is "standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.";
-Carnival game is in State fair.
+Carnival game is in State Fair.
 
 instead of sniffing Carnival game:
 	say "The automated carnival game smells of cheap wiring and strange prizes.";

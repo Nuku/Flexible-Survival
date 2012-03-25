@@ -16,9 +16,7 @@ instead of sniffing Kara:
 	say "Kara smells like an aroused hyena herm.";
 
 
-The conversation of Kara is { "[Karatalking]" };
-
-To say Karatalking:
+instead of conversing the Kara:
 	if Karatalk is 0:[first time you encounter the npc text]
 		say "'Hey again!' Kara says with a happy grin on her hyenalike muzzle, her enticing sexual aroma filling the air and distracting you slightly even as she rubs her body up against yours teasingly. 'It looks like my favorite rescuer came back to check on me, though as you can see I am doing fine so far.' She says as she gestures at the shop, 'I even have gotten some of the machinery back up and running on generator power now that I have supplies, so I can ink and pierce again.' The hyena herm says with a fond smile on her predatory muzzle as she traces one of the designs on the wall with her claw lovingly. 'I really owe you for your help too, so once I get a few more things together I hope you will let me give you a tattoo on the house,' Kara says with a smile, 'Not a piercing though... well not yet, I only have a small supply of those, and I kinda promised most of them to the rest of the hyena gang... maybe if you joined we could have some real fun and get you pierced up nice and sexy though.' She says with a dreamy smile on her muzzle as she traces her claw down your chest, obviously picturing you as a sexy herm hyena as she strokes her cock happily with her other hand and moans.  She seems to catch herself and pulls back a bit and seems slightly embarrassed by her reaction as she shrugs and looks away for a minute. 'Well anyways, if you need anything like that, you be sure to come back and talk to me anytime ok? Or just stop in if you are in the neighborhood, I would love to hear more about how harold is doing and whats going on out in the city.' She says as she looks back at you with a sexy grin on her muzzle even as the light twinkles off her piercings, giving the hyena tattooist a rather exotic look as she stares at you happily.";
 		increase Karatalk by 1;

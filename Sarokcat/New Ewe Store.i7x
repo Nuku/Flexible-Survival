@@ -182,18 +182,16 @@ instead of sniffing Mary:
 	say "Mary smells like a female sheep and has traces of the city's scents in her wool.";
 
 
-The conversation of Leon is { "[leonchat]" };
-
-To say leonchat:
+INstead of conversing the Leon:
 	if ewefucked > 0:
-		say "Hey there, good to see you,' Leon says, 'But I'm not the one you should be talking to. You wouldn't want your little lamb over there to get lonely, would you?";
+		say "'Hey there, good to see you,' Leon says, 'But I'm not the one you should be talking to. You wouldn't want your little lamb over there to get lonely, would you?";
 	otherwise:
 		if ramfucked > 0:
-			say  "[one of]Welcome back to our store![or]'Ah you came back to the flock like a good little ewe.'[or]'Be careful out there, i wouldn't want to see one of my flock get hurt'[or]'Are you sure all you want to do is talk?'[or]'IF you don't want to go back out into the city you can stay here anytime'[or] 'I heard there was a big wolf out there, you be careful'[or] 'How is it out there today?'[or]'Almost shearing time again.'[or]Leon bleats at you absentmindedly, before blushing when he realizes what happened.[or] 'If you need your ram to 'take care' of you, just let me know.'[or]'Want to head back to the break(ing) room with me?'[or]'I Wonder when rescue will arrive.'[at random] ";
+			say  "[one of]'Welcome back to our store![or]'Ah you came back to the flock like a good little ewe.'[or]'Be careful out there, i wouldn't want to see one of my flock get hurt'[or]'Are you sure all you want to do is talk?'[or]'If you don't want to go back out into the city you can stay here anytime'[or]'I heard there was a big wolf out there, you be careful'[or]'How is it out there today?'[or]'Almost shearing time again.'[or]Leon bleats at you absentmindedly, before blushing when he realizes what happened.[or]'If you need your ram to 'take care' of you, just let me know.'[or]'Want to head back to the break(ing) room with me?'[or]'I Wonder when rescue will arrive.'[at random]";
 		otherwise:
-			Say "Ah great, I'm glad you came to talk to me, I assume this means you'd like to join our little flock here?";
+			Say "'Ah great, I'm glad you came to talk to me, I assume this means you'd like to join our little flock here?'";
 			if player consents:
-				say " 'Wonderful!' he says, rubbing his rough hooflike hands together.  'I was hoping you'd decide to join us, and we could definitely use someone like you around here!' quickly calling over another of his ewes to watch the storefront, he takes your unresisting arm and leads you through a door with a sign someone had recently changed from employees only to  marked 'flock only'  Entering a short narrow hallway, Leon leads you to the left where the same person has changed the break room sign to 'the breaking room', making you feel a little nervous as he leads you inside.";
+				say "'Wonderful!' he says, rubbing his rough hooflike hands together.  'I was hoping you'd decide to join us, and we could definitely use someone like you around here!' quickly calling over another of his ewes to watch the storefront, he takes your unresisting arm and leads you through a door with a sign someone had recently changed from employees only to  marked 'flock only'  Entering a short narrow hallway, Leon leads you to the left where the same person has changed the break room sign to 'the breaking room', making you feel a little nervous as he leads you inside.";
 				wait for any key;
 				say "The room is well lit from the overhead lights, though that seems to be the only constants with most other break rooms you've seen. At some point most of the furniture seems to have been replaced with low benches, and the rest of the room is stuffed with what appears to be fresh piles of wool made into bedding. The room is covered in a strong musk of sheep and sex, making your head swim and your body tingle. Your attention is once more drawn back to Leon as he runs his hand along your neck, before carefully helping you remove your clothes, leaving you blushing as all of your [skin of player] skin is exposed for him to see." ;
 				wait for any key;
@@ -212,10 +210,7 @@ To say leonchat:
 			otherwise:
 				say  "Ah well, I thought you would make a great addition to the flock, think it over some more would you?";
 
-
-The conversation of Mary is { "[marychat]" };
-
-To say marychat:
+instead of conversing the Mary:
 	if marytalked is 0:
 		say "'Hi there again! I want to thank you again for all your help.  I can't really do much to repay you except by giving you some tips for finding stuff out in the city.'  The little ewe speaks softly, nervous next to her hero.  'It's mostly a matter of keeping your eyes open and knowing where to look,' she says, continuing on to give you some anecdotes from her searching, though you do pick up a few ideas which may be helpful.  As she starts to go on about nimbly climbing some rubble, stops herself.  'I'm sorry.  I was rambling a little.'";
 		say "You have gained the [']Three Bags Full['] feat, which confers +1 to all scavenging rolls and checks.";
@@ -225,13 +220,13 @@ To say marychat:
 		say "Mary smiles at you happily as you greet her. 'It's always good to see you here, but i think the flock leader will be even happier to see you, if you know what I mean,' she says as she gives you a nudge in Leon's direction.";
 	otherwise:
 		if ewefucked > 0:
-			say  "[One of]Your little ewe only responds by throwing her arms around you in a big woolen hug.[or]'Be careful near the capitol building, i think something is going on over there.'[or] 'Have you seen any wolves out there?'[or]'Be careful if you go back down into the sewers, i heard a lot of strange things moving around down there'[or]'I mostly stay in the downtown area when i go scavenging, maybe i'll see you there sometime.'[or] 'I heard some strange howling and baying noises near the beach at night the other day, if the church is still there someone might have posted a warning.'[or]'Being a sheep isn't bad, especially if i get to  be your sheep.'[or] 'Don't tell the others, but sometimes i trade some of my food or water at the mall, the rats there are great scavengers.'[or]'I can't wait for you to rub your [skin of player] body over my fleece again.'[at random]";
+			say "[One of]Your little ewe only responds by throwing her arms around you in a big woolen hug.[or]'Be careful near the capitol building.  I think something is going on over there.'[or]'Have you seen any wolves out there?'[or]'Be careful if you go back down into the sewers, i heard a lot of strange things moving around down there'[or]'I mostly stay in the downtown area when i go scavenging, maybe i'll see you there sometime.'[or]'I heard some strange howling and baying noises near the beach at night the other day, if the church is still there someone might have posted a warning.'[or]'Being a sheep isn't bad, especially if i get to  be your sheep.'[or]'Don't tell the others, but sometimes i trade some of my food or water at the mall, the rats there are great scavengers.'[or]'I can't wait for you to rub your [skin of player] body over my fleece again.'[at random]";
 		otherwise:
 			Say "'But I'm glad you came over to talk to me. I was kind of hoping I would get a chance to thank you properly,' she says while blushing. 'I really thought we worked well together out there, and you were so brave and strong keeping me safe. I've been thinking, and I'd really like it if we could be part of the same flock, then we could be together all the time. What do you say?'";
 			if player consents:
 				say "'Really? You mean it?  That's wonderful!' she says with a smile, before grabbing the sides of your face and giving you another big kiss.  As she breaks the kiss you stare at her slightly bemused as she blushes, realizing every eye in the store is on the two of you. Glancing around at all the staring eyes she quickly grabs your arm and nearly drags your unprotesting body outside, slamming the door behind you. Pausing for a moment in the street, she quickly makes her way to one of the abandoned buildings next to the store, motioning you to follow as she quickly unlocks the door and slips inside.";
 				wait for any key;
-				say "Following mary into the dimly lit building, you realize someone has gone to some effort to keep it looking abandoned, but out of sight of the front windows it has actually been furnished as a nice little hideaway.  Mary is standing there blushing again as she admits 'I found this place a while back, and i cleaned it up for when i needed to get away from the rest of the flock. You[apostrophe]re the only other person who knows about it now.' Before you can respond to her surprising statement, she reaches up and kisses you again, taking her time to rub her sheeplike muzzle along your [facename of player] face, and exploring your mouth with her tounge.";
+				say "Following mary into the dimly lit building, you realize someone has gone to some effort to keep it looking abandoned, but out of sight of the front windows it has actually been furnished as a nice little hideaway.  Mary is standing there blushing again as she admits 'I found this place a while back, and I cleaned it up for when i needed to get away from the rest of the flock. You[apostrophe]re the only other person who knows about it now.' Before you can respond to her surprising statement, she reaches up and kisses you again, taking her time to rub her sheeplike muzzle along your [facename of player] face, and exploring your mouth with her tounge.";
 				say "Breaking the kiss, her face flushed in embarrassment and a bit of desire she moves over to the makeshift couch and gestures for you to come sit next to her. Smiling as you do so, she cuddles up next to you and rests her head on your shoulder. Seeming somewhat embarrassed she begins telling you about her life from before, as a teenager working her way through college at her parents store, and asking questions about your life and what it was like.";
 				wait for any key;
 				say "She eventually talks about the infection sweeping the city, and how everyone at the store both employees and customers alike began to change, and all the males fought until Leon was the only male left, and the rest had become ewes like everyone else. Not really wanting to end up like some of the rest of the flock who seemed to lose most of their intelligence the more they stayed there, she volunteered to do much of the scouting and scavenging for the rest.  She was able to put Leon off of claiming her personally so far, but she figured it was only a matter of time before he got to her, until she met you. She says with a yawn, staring up at you adoringly, she thinks she could really like being part of your flock instead.";
@@ -245,11 +240,4 @@ To say marychat:
 				say  "'Oh, that's ok then, I understand if you have other things you[apostrophe]d rather do, but i'd really like it if you thought about it some more.'";
 
 
-
-
-
-
-
-
 New Ewe Store ends here.
-

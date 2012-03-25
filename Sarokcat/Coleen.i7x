@@ -104,15 +104,7 @@ to say Collenstatus:
 
 
 
-
-
-
-
-	
-
-The conversation of Coleen is { "[Coleentalking]" };
-
-To say Coleentalking:
+instead of conversing the coleen:
 	if Coleentalk is 0:
 		if Sarah is in the bunker:
 			if sarahslut is greater than 2:

@@ -151,7 +151,7 @@ Carry out reciting:
 							now weapon damage of player is weapon damage of Y;
 							now weapon type of player is weapon type of Y;
 							repeat with t running from 1 to number of filled rows in table of game objects:
-								choose row t in table of random critters;
+								choose row t in table of game objects;
 								if object entry is y:
 									add name entry to invent of player;
 									break;

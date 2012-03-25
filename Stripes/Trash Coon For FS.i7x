@@ -42,7 +42,7 @@ to say trashcoondesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Female";
-	say "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumble over[at random], revealing a large, female raccoon underneath.  Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask.  This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body.  Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs.  She has a strong odor about her, a mix of arousal and trash from her recent dumpster diving.";
+	say "     As you wander along, a [one of]large dumpster opens up[or]mound of trash shifts[or]pile of garbage bags tumble over[at random], revealing a large, female raccoon underneath.  Her nimble paws brush over one another as she stares at you with bright eyes within her dark mask.  This large, scruffy raccoon woman has dirty fur and nothing else on to cover her heavy-set body.  Her wide hips and ample breasts are plain to see, as is the wet pussy between her legs.  She has a strong odour about her, a mix of arousal and trash from her recent dumpster diving.";
 
 
 Section 2 - Monster Insertion

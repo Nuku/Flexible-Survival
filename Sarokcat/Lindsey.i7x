@@ -17,9 +17,7 @@ Lindsey is in Bathrooms;
 instead of sniffing Lindsey:
 	say "Lindsey has a strong, masculine scent.  It is powerful and arousing, making you long to submit to this beast[if Lindseyaroused > 5].  As you should, for you are his bitch to use[end if].";
 
-The conversation of Lindsey is { "[Lindseytalking]" };
-
-To say Lindseytalking:
+instead of conversing the Lindsey:
 	if Lindseytalk is 0:[first time you encounter the npc text]
 		say "'Well hey there,' The large beast says with a small smile tugging at his muzzle. 'Fancy seeing someone like you here in the zoo, must just be my good luck I guess.' The creature says with a wolflike grin as he moves his gaze up and down your body. 'Oh I suppose I haven[apostrophe]t introduced myself yet, the name is Lindsey, and me and a few friends decided to have some fun breaking into the zoo when all the crazy stuff started going down.' The male wolf with a female name says, a look of fond rememberance seeming to cross his lupine face as he thinks about the events. 'Lets just say it was a wonderful night to remember.' He says as he pads towards you slowly, the musky smell in the room seeming to intensify as he draws close to you. 'I actually come by here occassionally just for the lovely memories, I had such a lovely time here that night with the wolftaur that used to be my boyfriend... He makes such a lovely bitch now.'  The beast says with a grin, as he reaches out and strokes your face with one of his clawed fingers, his strong masculine musk flooding your nose and making you feel slightly weak at the knees. 'Hmmm, I think you could make a fine little bitch too, all you need to do is ask and I can help you with that..' The beast says with a lupine grin, before lowering its face to yours to give your cheek a lick. 'Just say the word and you could be enjoying yourself as much as I am.' Lindsey says in a teasing tone of voice as he saunters back over to the mirrors, his tail wagging happily for some reason as you stand there and try to recover your wits.";
 		increase Lindseytalk by 1;

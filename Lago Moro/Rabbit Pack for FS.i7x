@@ -70,7 +70,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "rabbit pack"; [Name of your new Monster]
 	now attack entry is "[one of]They pounce on you all at the same time![or]One of them crawls on your back and hits you in the head. More than once.[or]You lose your balance and fall on the ground! They try to pin you down![or]One of them manages to flank you and attack by surprise.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "You finall manage to incapacitate most of them. You go away while those still conscious are dragging their comrades to safety."; [ Text or say command used when Monster is defeated.]
+	now defeated entry is "You finally manage to incapacitate most of them. You go away while those still conscious are dragging their comrades to safety."; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[rabpackvictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[rabpackdesc]";[ Description of the creature when you encounter it.]
 	now face entry is "rabbit ears sprouting from the top of your head and flopping around the sides of your";[ Face description, format as the text "Your have a (your text) face."] 
