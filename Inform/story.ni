@@ -175,8 +175,8 @@ after looking:
 
 Book 2 - Places
 
-Grey Abbey Library is a room. "Books, and a computer or two. The computers would be more useful if there was power in the building. You're still not entirely sure what knocked them out, but they're very out now. You came here because you knew there was a bunker in the basement. It's kept you alive, so far.".
-Grey Abbey Library is fasttravel.
+Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.
+The description of Grey Abbey Library is "[abbey desc]".
 Bunker is a room. "Sparsely appointed, the bunker was built back during the cold war, then abandoned to a curiosity at best. Its walls are solid concrete and the shelves are at least in good repair. The small sink seems to be broken, producing no water no matter how much the knob is turned. There is a secure looking door leading [bold type]outside[roman type]".
 The invent of Bunker is { "medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
@@ -185,6 +185,11 @@ East of library door is Grey Abbey Library.
 Inside of Grey Abbey Library is Bunker.
 The player is in Bunker.
 The marea of library door is "Outside";
+
+to say abbey desc:
+	say "Books, and a computer or two. The computers would be more useful if there was power in the building. You're still not entirely sure what knocked them out, but they're very out now. You came here because you knew there was a bunker in the basement. It's kept you alive, so far.";
+	if Fang is in the Grey Abbey Library:
+		say "Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
 
 Smith Haven Mall Lot is a room. "A vast and sprawling parking lot puts you within walking distance of a large mall to the north. You remember coming here a lot more often when you were in school. It was 'the place' to be. Ah well, it's a fine [time of day], may as well go shopping."
 It is fasttravel.
@@ -4267,6 +4272,7 @@ Include Sven by Stripes.
 Include Frank by Stripes.
 Include Sally by Stripes.
 Include Max by Zero.
+Include Fang by Stripes.
 
 
 [Pets]
