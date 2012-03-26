@@ -104,6 +104,7 @@ The sarea of Unidentified sex scene is "Zoo";
 Instead of Resolving a Unidentified sex scene:
 	say "Traveling through the zoo area, you come to one of the resting areas, and thinking to take a short break you move closer.  Unfortunately it seems several other people or creatures were here before you, and it was obvious not much 'resting' occurred, although several of the participants were probably horizontal at one point.  Looking around you take in the splatters of cum from several unidentified participants, several articles of shed clothing tossed around haphazardly, and a variety of mixed animal prints tracked in the dirt.  You really aren[apostrophe]t sure just who all or what all enjoyed themselves here, but they definitely had lots of fun.  Sighing you leave without taking a rest, the scene making you too nervous, and aroused, to stay there any longer.";
 	increase libido of player by 20;
+	if libido of player > 100, now libido of player is 100;
 	Now Unidentified sex scene is resolved;
 
 
@@ -340,8 +341,16 @@ Instead of Resolving a Picture striping:
 	say "Traveling through the mostly deserted zoo, you find yourself next to one of those old fashioned photo kiosks, this one proudly displaying several various animal themed backgrounds you can choose from. Smiling you pull the curtain to step inside, only to find your nose assaulted with the scent of sex and musk, letting the curtain fall, you gasp for some clean air. As you do so you notice that the slot that dispenses pictures seems to have a strip already in it, curious you pull the strip of pictures out.  Blinking you stare down as a handsome young teenager poses against an african background, a zebra close behind him, the next picture shows the young man turning as the zebra puts its head on his shoulder, an actual zebraman that appears to have been hiding in the booth. The next several shots show in full colour detail the zebra stallion pinning the changing man up against the side of the photo booth, as his body lengthens and is covered in stripes.  The final photo is a wonderfully done photo of a zebra stallion mounting an eager zebra mare with a lewd smile on his snout. You shudder as you realize what a narrow escape you just had, if you had been the first person into that booth, there would have been no way for you to escape or fight in such a confined space. Sighing you prop the pictures up against the photo booth, leaving them there in case the zebras involved want to come back for a momento, you continue your trip through the zoo.";
 	now Picture striping is resolved;
 
+Section 20- Lazy River		[Event by Shadowwolf94]
+
+Lazy River is a situation.
+The sarea of Lazy River is "Zoo";
+
+Instead of Resolving a Lazy River:
+	say "Traveling through the zoo area, you spot something odd in the hippo enclosure.  Sneaking up to the fence and peaking over, you spot a large hippo man relaxing on his back in the water. Your eyes are soon drawn to what he[']s doing though.  One of his large hands is wrapped around his massive shaft, gently stroking it[']s thick length while his other kneads his large ballsac.  Floating lazily along, he pumps and strokes his throbbing shaft.  You can[']t seem to look away from this arousing scene, your knees feeling weak as your mind is filled with thoughts of sex with this beast.  You are shaken out of your fantasy when the large beast man roars out in orgasm, painting his belly and filling the nearby water with his white seed.  Afterwards, he flops around in the water, looking relaxed and content as he bobs along.  You shake your head clear and slip away quietly before something notices you, feeling quite aroused by the whole voyeuristic experience.";
+	increase libido of player by 30;
+	if libido of player > 100, now libido of player is 100;
+	Now Lazy River is resolved;
 
 
 Zoo Events ends here.
-
-
