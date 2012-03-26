@@ -1,18 +1,100 @@
 Version 2 of Mouse Taur by Nuku Valente begins here.
-[Version 2 - Added mechanics for Sven/Svetlana]
+[Version 2.1 - Find Porn Store event added by Shadowwolf94]
 
 "Adds a situation to Flexible Survival with a mouse taur living in a porn store."
 
 
-Section 1 - The Situation
+Section 1 - The Situations	[two ways to meet Lisa now]
 
 Mouse Taur is a situation.
 The sarea of Mouse Taur is "Red";
+When play begins:
+	add "Mouse Taur" to infections of Furry;
+	add "Mouse Taur" to infections of Girl;
+
+After resolving a Mouse Taur, try looking;
+
+Instead of Resolving a Mouse Taur:
+	if mtrp is 0:
+		say "A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth, 'Hello', she says, 'I was watching you roam around and thought you might like some company.'";
+		wait for any key;
+		if cocks of player is greater than 0 and cunts of player is less than 1:
+			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit, 'I was hoping for something a little more...' she trails off, then shakes her head, 'Nevermind that, I am being rude. You will be just fine, I[apostrophe]m sure, with some work.' She smiles brilliantly and offers a hand, 'Lisa, you are?'";
+		if cunts of player is greater than 0 and cocks of player is greater than 0:
+			say "'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression, 'Glad to run into someone who can talk. My name is Lisa. What's your name?";
+		if cunts of player is greater than 0 and cocks of player is less than 1:
+			say "She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment, 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
+		if cunts of player is less than 0 and cocks of player is less than 1:
+			say "She sniffs the air lightly and looks at you with some confusion, 'You must have had such a hard time of it,' she says with some sympathy, 'I am Lisa, nice to meet you.'";
+		wait for any key;
+		say "You give your name and begin idly chatting about time before everything went bad. You settle with her and she pulls out some snacks, sharing with you as you talk with her. She was a recently graduated major in education, 'I planned to be a teacher,' she explained, 'Grade school, but then this happened.' It seems that some mice that lived in her house became infected. 'They never bit me or anything,' she explained, 'I'm pretty certain their fur got onto a bit of my food. It took a long time to change.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself, 'Or so I did. Hey, here's my address. You come by anytime, say hello, ok?'[line break] Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off into the red light area, long furry tail swaying behind her.";
+		increase mtrp by 1;
+		decrease hunger of player by 20;
+		if hunger of player is less than 0, now hunger of player is 0;
+		now Porn Store is known;
+		now mouse taur is resolved;
+		now find porn store is resolved;
+
+[ New event added by Shadowwolf94]
+Find Porn Store is a situation.  The level of Find Porn Store is 5.
+The sarea of Find Porn Store is "Red";
+When play begins:
+	add "Find Porn Store" to infections of Furry;
+	add "Find Porn Store" to infections of Girl;
+
+After resolving a Find Porn Store, try looking;
+
+Instead of Resolving a Find Porn Store:
+	if mtrp is 0:
+		say "You come across an odd looking store that still seems intact. After checking the exterior, you figure out that it[']s some sort of pornographic material based store. You walk over to the door and grab hold of the handle, twisting it and turning it in an attempt to open it. Scowling at your failure, you back up and get ready to ram the door.[line break]As you dash forward the door swings open and a large mouse taur steps out. Unable to slow down in time you ram into the taur, sending you both crashing to the floor. Your head a little dizzy, you stand up and lean against a wall to recover. Hearing the mouse taur shift, you look over as she gets up. Shaking her head clear she looks over and glares at you. 'What the hell were you thinking, you idiot?  Do you know how long it took me to properly secure that door? Then you come along and just plan to smash it down! Who the hell do you think you are!' You blink and splutter in response, trying to explain that you were simply looking for supplies, but it appears that she[']ll have none of your excuses. Unknown to the both of you, it seems that the crash and your loud argument have attracted some attention from one of the locals.";
+		challenge "Tigress Hooker";
+		say "After the encounter with the tigress in the alley, the mouse taur come out with a long pole and squirt gun filled with foul liquid, chasing off the tigress with angry yells about staying away from her store. You turn around and begin profusely apologizing to the mouse taur before you get the same treatment. She eventually just sighs and accepts your that you really didn't mean any harm. 'Well, I guess I might as well introduce myself then, I'm Lisa, I live here. I suppose you can come and visit sometimes, if you want. Maybe the two of us could have some proper fun, eh.' she adds with a wink.";
+		increase mtrp by 1;
+		move the player to the Porn Store;
+		now mouse taur is resolved;
+		now find porn store is resolved;
+
+
+Section 2 - Porn Store and Lisa
+
+Porn Store is a room. It is fasttravel. It is private.
+The description of Porn Store is "[pornstoredesc]";
+
+Lisa is a person.  Lisa is in Porn Store.
+The description of Lisa is "A mouse taur. Her mouse like body is six feet long and about three feet tall where it flows into the curvy form of a well built, mostly human, female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.";
 
 mtrp is a number that varies.
 Lastmousefuck is a number that varies. Lastmousefuck is usually 250.
 mousefucked is a number that varies. mousefucked is usually 0.
 mousespot is a number that varies. mousespot is usually 0.
+
+instead of sniffing Lisa:
+	say "The mousetaur smells very feminine and musine.  She wears a soft perfume and scented oils.  There is a strong scent of females and sex about her person.";
+
+instead of sniffing Porn Store:
+	say "The porn store smells of scented oils and candles, lube, latex toys, secret desires and backroom sex.  There is also the smell of mouse[if hp of Sven > 49 and hp of Sven < 99] and snow leopard from its residents[otherwise] from its resident[end if].";
+
+to say pornstoredesc:
+	say "     It was once a [']den of sin['], now mostly quiet. It smells fresh and clean. A small picture on the counter shows a familiar looking female, presumably before she became a mouse creature. She is quite recognizable, at least in the face and general build. Most of the pictures show her alone. The porn is still present, stacked in neat piles or arranged on the shelves. Only a few are out of place. Girls on Girls 23, Lesbone 7 and Cunning Linguist Part 4.";
+	if hp of Sven is 52:
+		say "[line break]     Upon your return to the porn store, you find a new feline here.  This female snow leopard has pink markings on her white fur and is wearing a red bathing suit that struggles to hold in her ample bosom of six breasts.  You smile to her and ask if she's a friend of Sven's.  The snowmeow blushes and hides her face behind her fluffy tail.  Your brain roughly switches gears as you realize that this buxom kitty IS Sven.  Fortunately, Lisa returns from the back, having heard the door and greets you.  'Ah!  I see you've been getting reacquainted with my dear Svetlana,' she says, running a paw playfully up the feline's side.";
+		say "     Sven, or Svetlana as she is now, mews softly at the pleasant touch and watches you nervously to see your reaction to her change.  You smile politely and she relaxes a little, purring as the mouse's paws move over her body.  Her swimsuit, being quite tight over her large rack, has a perceptible camel toe showing between her legs, which is where Lisa has let one of her paws wander.  She teases over the snowmeow's covered pussy, rubbing and teasing her until there's a growing wet patch in her swimwear.  'She's so much more fun now that my pet kitty's got a nice, wet pussy.  You should give her a try sometime.'  She teases the snowmeow like this for a little while before eventually tiring of the game for now to tend to the store.";
+		now hp of Sven is 53;
+
+instead of conversing the Lisa:
+	if hp of Sven is 50:
+		say "[one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by.  He's very sweet.  And don't worry, I think we'll get along famously.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Sven's back, grinning as he purrs.  He tries to hide his blushing face behind his tail.[or]Lisa gives Sven's ears another scritch, getting the shy fellow to purr a little from behind his tail.[at random]";
+	otherwise if hp of Sven is 51:
+		say "[one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by.  He's very sweet.  And don't worry, I think we'll get along famously.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Sven's back, grinning as he purrs and arches his back into her touch.  He still blushes a little, but is not nearly so red.[or]Lisa gives Sven's ears another scritch, getting the shy fellow to purr a little from behind his tail.[or]Lisa puts her arms around Sven from behind and runs them over his chest.  He notices you watching and blushes profusely.  He tries to conceal the bulge in his shorts with his tail.[or]'Sven is turning into such a nice kitty.  He's always so polite and quiet.  Not a bother at all.  I'm glad to help him out in any way I can,' she adds with a little grin.[at random]";
+	otherwise if hp of Sven is 52:
+		say "ERROR-LISA-52T: You should not be able to speak to me at this point!";
+	otherwise if hp of Sven is 53 or hp of Sven is 54:
+		say "[one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by.  He's made a very lovely girl.  And don't worry, I'll be keeping good care of her.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Svetlana's back, grinning as she purrs and arches his back into her touch.  The shy snowmeow blushes a little at the ears, but nuzzles up against the mousetaur affectionately.[or]Lisa gives Svetlana's ears another scritch, getting the shy girl to purr happily.[or]Lisa puts her arms around Svetlana from behind and runs them along her sides.  She smiles bashfully to you when she notices you watching.[or]'Svetlana has become such a fine kitty.  She's always so polite and quiet.  And so much fun snuggle up to at night,' she adds with a little grin.[or]'I hope you're pleased with my pretty kitty, Svetlana.'[or]Lisa runs a paw along Svetlana's side before cupping her rear.  'Feel free to play with my pet kitty any time you like, sweety,' she tells you, making the snowmeow hide her face behind her fluffy tail.  But you can hear her purring and catch a glimpse of her smiling as well.[at random]";
+	otherwise:
+		say "[one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you visited. I was getting lonely.'[or]'How are you?'[at random]";
+
+
+Section 3 - Fucking
 
 mousefucking is an action applying to nothing.
 
@@ -122,64 +204,8 @@ To mousefuck:
 	increase morale of player by 15;
 	increase mousefucked by 1;
 
-After resolving a Mouse Taur, try looking;
 
-Instead of Resolving a Mouse Taur:
-	if mtrp is 0:
-		say "A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth, 'Hello', she says, 'I was watching you roam around and thought you might like some company.'";
-		wait for any key;
-		if cocks of player is greater than 0 and cunts of player is less than 1:
-			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit, 'I was hoping for something a little more...' she trails off, then shakes her head, 'Nevermind that, I am being rude. You will be just fine, I[apostrophe]m sure, with some work.' She smiles brilliantly and offers a hand, 'Lisa, you are?'";
-		if cunts of player is greater than 0 and cocks of player is greater than 0:
-			say "'I get the feeling you are what I want and some extra, huh... Life sure has gotten more interesting since the lights went out,' she says with a friendly expression, 'Glad to run into someone who can talk. My name is Lisa. What's your name?";
-		if cunts of player is greater than 0 and cocks of player is less than 1:
-			say "She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment, 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
-		if cunts of player is less than 0 and cocks of player is less than 1:
-			say "She sniffs the air lightly and looks at you with some confusion, 'You must have had such a hard time of it,' she says with some sympathy, 'I am Lisa, nice to meet you.'";
-		wait for any key;
-		say "You give your name and begin idly chatting about time before everything went bad. You settle with her and she pulls out some snacks, sharing with you as you talk with her. She was a recently graduated major in education, 'I planned to be a teacher,' she explained, 'Grade school, but then this happened.' It seems that some mice that lived in her house became infected. 'They never bit me or anything,' she explained, 'I'm pretty certain their fur got onto a bit of my food. It took a long time to change.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself, 'Or so I did. Hey, here's my address. You come by anytime, say hello, ok?'[line break] Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off into the red light area, long furry tail swaying behind her.";
-		increase mtrp by 1;
-		decrease hunger of player by 20;
-		if hunger of player is less than 0, now hunger of player is 0;
-		now Porn Store is known;
-		now mouse taur is resolved;
-				
-Porn Store is a room. It is fasttravel. It is private.
-
-The description of Porn Store is "[pornstoredesc]";
-Lisa is a person.
-The description of Lisa is "A mouse taur. Her mouse like body is six feet long and about three feet tall where it flows into the curvy form of a well built, mostly human, female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.";
-Lisa is in Porn Store.
-
-instead of sniffing Lisa:
-	say "The mousetaur smells very feminine and musine.  She wears a soft perfume and scented oils.  There is a strong scent of females and sex about her person.";
-
-instead of sniffing Porn Store:
-	say "The porn store smells of scented oils and candles, lube, latex toys, secret desires and backroom sex.  There is also the smell of mouse[if hp of Sven > 49 and hp of Sven < 99] and snow leopard from its residents[otherwise] from its resident[end if].";
-
-to say pornstoredesc:
-	say "     It was once a [']den of sin['], now mostly quiet. It smells fresh and clean. A small picture on the counter shows a familiar looking female, presumably before she became a mouse creature. She is quite recognizable, at least in the face and general build. Most of the pictures show her alone. The porn is still present, stacked in neat piles or arranged on the shelves. Only a few are out of place. Girls on Girls 23, Lesbone 7 and Cunning Linguist Part 4.";
-	if hp of Sven is 52:
-		say "[line break]     Upon your return to the porn store, you find a new feline here.  This female snow leopard has pink markings on her white fur and is wearing a red bathing suit that struggles to hold in her ample bosom of six breasts.  You smile to her and ask if she's a friend of Sven's.  The snowmeow blushes and hides her face behind her fluffy tail.  Your brain roughly switches gears as you realize that this buxom kitty IS Sven.  Fortunately, Lisa returns from the back, having heard the door and greets you.  'Ah!  I see you've been getting reacquainted with my dear Svetlana,' she says, running a paw playfully up the feline's side.";
-		say "     Sven, or Svetlana as she is now, mews softly at the pleasant touch and watches you nervously to see your reaction to her change.  You smile politely and she relaxes a little, purring as the mouse's paws move over her body.  Her swimsuit, being quite tight over her large rack, has a perceptible camel toe showing between her legs, which is where Lisa has let one of her paws wander.  She teases over the snowmeow's covered pussy, rubbing and teasing her until there's a growing wet patch in her swimwear.  'She's so much more fun now that my pet kitty's got a nice, wet pussy.  You should give her a try sometime.'  She teases the snowmeow like this for a little while before eventually tiring of the game for now to tend to the store.";
-		now hp of Sven is 53;
-
-instead of conversing the Lisa:
-	if hp of Sven is 50:
-		say "[one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by.  He's very sweet.  And don't worry, I think we'll get along famously.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Sven's back, grinning as he purrs.  He tries to hide his blushing face behind his tail.[or]Lisa gives Sven's ears another scritch, getting the shy fellow to purr a little from behind his tail.[at random]";
-	otherwise if hp of Sven is 51:
-		say "[one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by.  He's very sweet.  And don't worry, I think we'll get along famously.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Sven's back, grinning as he purrs and arches his back into her touch.  He still blushes a little, but is not nearly so red.[or]Lisa gives Sven's ears another scritch, getting the shy fellow to purr a little from behind his tail.[or]Lisa puts her arms around Sven from behind and runs them over his chest.  He notices you watching and blushes profusely.  He tries to conceal the bulge in his shorts with his tail.[or]'Sven is turning into such a nice kitty.  He's always so polite and quiet.  Not a bother at all.  I'm glad to help him out in any way I can,' she adds with a little grin.[at random]";
-	otherwise if hp of Sven is 52:
-		say "ERROR-LISA-52T: You should not be able to speak to me at this point!";
-	otherwise if hp of Sven is 53 or hp of Sven is 54:
-		say "[one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you brought your cute friend by.  He's made a very lovely girl.  And don't worry, I'll be keeping good care of her.'[or]'How are you?'[or]While you chat with Lisa, she scritches a paw along Svetlana's back, grinning as she purrs and arches his back into her touch.  The shy snowmeow blushes a little at the ears, but nuzzles up against the mousetaur affectionately.[or]Lisa gives Svetlana's ears another scritch, getting the shy girl to purr happily.[or]Lisa puts her arms around Svetlana from behind and runs them along her sides.  She smiles bashfully to you when she notices you watching.[or]'Svetlana has become such a fine kitty.  She's always so polite and quiet.  And so much fun snuggle up to at night,' she adds with a little grin.[or]'I hope you're pleased with my pretty kitty, Svetlana.'[or]Lisa runs a paw along Svetlana's side before cupping her rear.  'Feel free to play with my pet kitty any time you like, sweety,' she tells you, making the snowmeow hide her face behind her fluffy tail.  But you can hear her purring and catch a glimpse of her smiling as well.[at random]";
-	otherwise:
-		say "[one of]'Why a porn store? Well, no one else cared about it, so why not?'[or]'I used to work here part-time before this all started, so I figured it'd be a fun place to stay.'[or]'I guess I won't be a teacher now, you think?'[or]'Did you do something with your hair?'[or]'Don't mind the porn, unless you want to watch some of it.'[or]'I am glad you visited. I was getting lonely.'[or]'How are you?'[at random]";
-
-
-When play begins:
-	add "Mouse Taur" to infections of Furry;
-	add "Mouse Taur" to infections of Girl;
+Section 4 - Endings
 
 When play ends:
 	if mousefucked is greater than 1 and humanity of the player > 9:

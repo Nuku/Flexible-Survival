@@ -8,7 +8,7 @@ Shrine is a room. "How odd for an American city. A Japanese style shrine lays ne
 Northwest of Park Trail is Shrine.
 
 instead of sniffing Shrine:
-	say "The shrine smells faintly of cherry blossoms and spring.  The scent puts you as ease.";
+	say "The shrine smells faintly of cherry blossoms and spring.  The scent puts you at ease.";
 
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shrine has a Grab Object called Demand.
