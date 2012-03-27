@@ -457,7 +457,7 @@ Instead of conversing the Doctor Mouse:
 	if hospquest is 1:
 		say "ERROR 1:     'My dear boy/girl, I don't believe you should be here yet.'";
 	if hospquest is 2:
-		say "     The white mouse looks up from his work.  'I need you to find that device for me.  Significant portions of my research are at a standstill without it.'";
+		say "     The white mouse looks up from his work.  'I need you to find that device for me.  Significant portions of my research are at a standstill without it.  Please try searching within other labs in the city.'";
 	if hospquest is 3:
 		let devicefound be 0;
 		repeat with x running through invent of player:
@@ -473,7 +473,7 @@ Instead of conversing the Doctor Mouse:
 			say "     (Unable to proceed with current creature blocks.  Girl, guy, herm and furry are all needed for subsequent segments.)";
 		otherwise if progress of doctor mouse minus turns is less than 8:
 			say "     Please leave me to my research for the moment.  I believe I shall have more need for you once I am done.";
-		otherwise:					[need to apply a block here to guy/girl/furry/herm]
+		otherwise:
 			extend game by 16;
 			say "[hospquestpt3]";
 	otherwise if hospquest is 5:
@@ -625,7 +625,7 @@ to say hospquestpt6:
 	repeat with x running through invent of player:
 		if x is "Tiger patch", increase tigpatchfound by 1;
 	if tigpatchfound < 3:
-		say "     Please remember, I need you to obtain three samples, so I can be certain to have enough to obtain results.";
+		say "     Please remember, I need you to obtain three samples from those rubbery felines, so I can be certain to have enough to obtain results.  Please make your way to the State Fair and try to collect some.";
 	if tigpatchfound > 2:
 		delete Tiger patch;
 		delete Tiger patch;
@@ -644,7 +644,7 @@ to say hospquestpt7:
 		repeat with x running through invent of player:
 			if x is "lava lamp", increase tricllfound by 1;
 		if tricllfound is 0:
-			say "     If you are not able to obtain a usable sample from this creature, be sure to go to its nest and search there.  There may be eggs or something else with enough nanites to act as a proper sample.  They were very clear that it was female.";
+			say "     If you are not able to obtain a usable sample from this dinosaur creature, be sure to go to its nest and search there.  There may be eggs or something else with enough nanites to act as a proper sample.  They were very clear that it was female.";
 		if tricllfound is 1:
 			delete lava lamp;
 			say "     The mouse dubiously looks at the lava lamp you[']ve pulled out, but goes to take it.  As you explain what you suspect it[']s been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands.  Only then does he handle it, setting it on the lab table.  'I... this is a rather ingenious way to obtain a sample.  I... uhh... commend you.  Please continue,' he says.";
@@ -664,7 +664,7 @@ to say hospquestpt7:
 		repeat with x running through invent of player:
 			if x is "package", increase nermpack by 1;
 		if nermpack is 0:
-			say "     The shop keeper at the mall has a collection of... ahh... [']occult and mystical items[']', he says with a bit of disdain.  'But she does have some historically significant items and I wanted to obtain something from her.  She may want something of similar value in return,' he adds.";
+			say "     The shopkeeper at the mall has a collection of... ahh... [']occult and mystical items[']', he says with a bit of disdain.  'But she does have some historically significant items and I wanted to obtain something from her.  She may want something of similar value in return,' he adds.";
 		if nermpack is 1:
 			say "     The mouse takes the package from you with a smile and puts it on his sample table quietly.";
 			delete package;
@@ -1326,7 +1326,7 @@ Instead of conversing the Valerie while hospquest is 8 and valhosp is 0 and valt
 	if triclamped is 0:
 		say "     The triceratops woman is dancing around the halls to the music in her head all the time, but she doesn't wander too far from her nest in the dinosaur wing.  She's got lots of stuff in there.  She raided several of the modern history displays and probably a few stores in the neighbourhood as well for that stuff.  She's very possessive of her collection.  Having it around keeps her happy, so I don't bother the silly girl about it.  If you want to take any of it, she'll show you her moves.";
 	if nerminepackage is 2:
-		say "     The Viking great longboat?  It's a brand new exhibit.  One of the museum's archeologists found it a year ago and it's finally ready and on display.  It dates back about a thousand years and is the only [italic type]drekar[roman type] ever found.  They were the largest of the Viking ships and feared by all.  I can certainly understand why you'd want to see it while you're here.  It's in the Medieval History wing.";
+		say "     The Viking great longboat?  It's a brand new exhibit.  One of the museum's archeologists found it a year ago and it's finally ready and on display.  It dates back about a thousand years and is the only [italic type]drekar[roman type] ever found.  They were the largest of the Viking ships and feared by all.  I can certainly understand why you'd want to see it while you're here.  It's in the Medieval History wing.  Just follow the signs for the Viking Longboat.";
 	now valhosp is 1;
 
 Dinosaur Nest is a situation.
