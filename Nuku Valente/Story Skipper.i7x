@@ -357,12 +357,14 @@ Carry out reciting:
 			-- 73:
 				if the player's command matches "[number]":
 					now hp of Fang is the number understood;
-					if hp of Fang is 0 or hp of Fang is 100;
+					if hp of Fang is 0 or hp of Fang is 100:
 						now Fang is in the dark basement;
 					if hp of Fang > 0 and hp of Fang < 100:
 						now Fang is in the Grey Abbey Library;
-		if upit is 1:
-			decrease z by 58;
+		if upit is 1, decrease z by 58;
+	if hospquest is 3, now hospquest is 2;
+	now progress of Doctor Mouse is turns;
+	if hospquest is 8, now Dinosaur Nest is unresolved;
 	now the score is -9999;
 	repeat with counter running from lev + 1 to level of player:
 		if the remainder after dividing counter by 6 is 0:
@@ -373,9 +375,6 @@ Carry out reciting:
 		now Finding a Way in is resolved;
 	if "Physical Booster" is listed in feats of player, remove "Physical Booster" from the feats of the player;
 	if "Mental Booster" is listed in feats of player, remove "Mental Booster" from the feats of the player;
-	if hospquest is 3, now hospquest is 2;
-	now progress of Doctor Mouse is turns;
-	if hospquest is 8, now Dinosaur Nest is unresolved;
 	if hospquest is 8, now nerminepackage is 1;
 	if hospquest > 9, add "Rapid Healing" to feats of the player;
 	if hospquest > 13, add "Physical Booster" to the feats of the player;
