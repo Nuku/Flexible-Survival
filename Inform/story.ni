@@ -1214,6 +1214,15 @@ To say short time of day:
 	if remainder after dividing turns by 8 is -8:
 		say "morning";
 
+daytime is a truth state that varies.	[True/False variable for to indicate if day or night]
+
+to say daynightcheck:
+	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
+		now daytime is true;
+	otherwise:
+		now daytime is false;
+
+
 To process (X - a grab object):
 	if x is temporary:
 		say "You eagerly use up the [x]! ";
@@ -4239,6 +4248,7 @@ Include Goblin For FS by Stripes.
 Include Junkman For FS by Stripes.
 Include Trash Coon For FS by Stripes.
 Include Snow Bat For Fs by Stripes.
+Include Bottlenose Toy For Fs by Stripes.
 Include Candy Striper by Stripes.
 
 

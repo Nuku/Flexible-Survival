@@ -39,7 +39,7 @@ to say drmousedesc:
 		if hardmode is true and level of player > 4, let debit be level of player - 4;
 		now hp entry is 30 + ( debit * 2 );
 		now monsterhp is 30 + ( debit * 2 );
-		now wdam entry is 3 + ( debit / 4 );
+		now wdam entry is 3 + ( debit / 8 );
 		now lev entry is 4 + ( debit / 2 );
 		now libido entry is 20;
 		now str entry is 8;
