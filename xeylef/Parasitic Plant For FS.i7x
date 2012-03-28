@@ -1,5 +1,5 @@
-Version 5 of Parasitic Plant For FS by xeylef begins here.
-[Version 5 - Update to heat]
+Version 6 of Parasitic Plant For FS by xeylef begins here.
+[Version 6 - Boss fight version added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Parasitic Plant creature to Flexible Survivals Wandering Monsters table, With multiple vaginas!"
 [Description text for this Extension.]
@@ -13,7 +13,10 @@ plantdefeat is a number that varies.
 plantwin is a number that varies.
 
 to say plantwin:
-	if plantdefeat is 0: [ first time losing to a horse ]
+	if joannafight is 3:
+		now joannafight is 2;
+		say "     As your struggles cease, the vines truss you up tightly.  Captured, you have become a second victim for this giant plant monster.";
+	otherwise if plantdefeat is 0: [ first time losing to a horse ]
 		if didsubmit is 1: [submited check]
 			if cunts of player > 0:		
 				say "The plant seems to sense your willingness to submit to it and lightly pulls on the vine inside your pussy like a leash, inviting you to walk into the dense bush of vines. Your legs are pulled apart and a second cock headed vine pushes aginst your ass, soon working its way inside your willing body where its tip expands just as the first had, locking itself inside you. Even if you wanted to get away, the size of the cock vines makes it impossible to remove them. A final vine lifts itself to your mouth as it leaks a musky smelling liquid which it presses to your mouth, allowing you to suckle on it to your heart's content. There is no mistaking that the liquid is cum. The hot, musky fluid seems to be absorbed into your body as you drink it. The plant fills you with the stuff, making you addicted to the cum of all creatures, creating a permanent physical need to drink cum that will stay with you forever.[line break]After some time you awaken from your daze due to a sudden pain from your pussy! Looking down, you see a large bulge being forced into you, stretching your pussy out until the seed finally comes to a rest deep in your womb. Your entire body seems to flush with heat as the seed takes root inside of you. The plant lets you go, the vines shrinking in size and finally slipping free from your tender holes. All the cum the plant has fed you seems to have eased your hunger and thrist as well. ";
@@ -40,16 +43,38 @@ to say feeded:
 		now thirst of player is 0;
 
 to say plantorseed:
-	if plantdefeat is 0: [encounter yet to fight it]
-		if cunts of player > 0:	[cunt yes, bush]
-			say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully,as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A vine somehow managed to sneak up to your pussy as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your cunt! You grab at it and pull, only to find the cock like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!";
-		otherwise:	[cunt no, bush]
-			say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully, as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A hidden vine somehow managed to sneak up to your ass as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your ass! You grab at it and pull, only to find the cock like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!";
-	otherwise:[seed]
-		if cunts of player > 0:	[cunt yes, seed]
-			say "A pain from your womb suddenly forces you to the ground. It almost feels like you are giving birth but whatever it is feels more like a long cock pushing at the inside of your pussy! Looking down, you see a large vine-like root slide out of your pussy, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you to move around some. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
-		otherwise:	[cunt no, seed]
-			say "A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+	choose row monster from the table of random critters;
+	let debit be 0;
+	if joannafight is 3:					[special boss plant]
+		if hardmode is true and level of player > 10, let debit be level of player - 10;
+		now dex entry is 16 + ( debit / 5 );
+		now hp entry is 100 + ( debit * 6 );
+		now monsterhp is 100 + ( debit * 6 );
+		now lev entry is 10 + debit;
+		now wdam entry is 9 + ( ( 2 * debit ) / 5 );
+		if plantdefeat is 0: [encounter yet to fight it]
+			say "     This odd vegetation has spread its vines and tentacles across the garden and is hanging its phallic fruit and flowers from the large tree as temptation for its victims.  It is quite large, making you wonder how this horrifying plant grew so large.  You try to push your way past the vines to get at the cluster at its base, but one of the large vines manages to grab you and hold you briefly.  Another one bursts from the soft soil and strikes, forcing itself into your [if cunts of player > 0]cunt[otherwise]ass[end if]!  You grab at it and pull, only to find the cock-like tip swelling inside you like a knot.  It is soon large enough that you can't dislodge it without a fight, or a good running start might let you break the vine if you try to flee.  You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
+		otherwise:	[already seeded by another]
+			say "     This odd vegetation has spread its vines and tentacles across the garden as is hanging its phallic fruit and flowers from the large tree as temptation to its victims.  It is much larger than the others you've seen and faced in the past for some reason.  You try to push your way past the vines to get at the cluster at its base when you suddenly feel another twist in your belly and the seed in your [if cunts of player > 0]womb[otherwise]gut[end if] pushes out a root of its own, burrowing into the soil as it responds to the larger plant.  It squirms inside you, fighting to pull you down even as you fight the tentacles, severely hampering you in this fight.  You will have a hard fight ahead of you if you don't pull out the vine and make a run for it.  You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
+			now hp of player is 3 * ( hp of player + 1 / 4 );
+	otherwise:							[regular park plant]
+		if hardmode is true and level of player > 4, let debit be level of player - 4;
+		now dex entry is 16 + ( ( debit + 4 ) / 5 );
+		now hp entry is 40 + ( debit * 4 );
+		now monsterhp is 40 + ( debit * 4 );
+		now lev entry is 4 + debit;
+		now wdam entry is 6 + ( debit / 3 );
+		if plantdefeat is 0: [encounter yet to fight it]
+			if cunts of player > 0:	[cunt yes, bush]
+				say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully,as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A vine somehow managed to sneak up to your pussy as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your cunt! You grab at it and pull, only to find the cock-like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!";
+			otherwise:	[cunt no, bush]
+				say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully, as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A hidden vine somehow managed to sneak up to your ass as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your ass! You grab at it and pull, only to find the cock like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!";
+		otherwise:[seed]
+			if cunts of player > 0:	[cunt yes, seed]
+				say "A pain from your womb suddenly forces you to the ground. It almost feels like you are giving birth but whatever it is feels more like a long cock pushing at the inside of your pussy! Looking down, you see a large vine-like root slide out of your pussy, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you to move around some. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+			otherwise:	[cunt no, seed]
+				say "A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+
 to say submitcheck:
 	now didsubmit is 1;
 
@@ -60,6 +85,13 @@ to say facerape use:
 	say "You begin to suck on the cock in the center of the flower. It surprises you as the flower part closes, taking hold of your face and gripping impossibly tight! It thrusts in and out, raping you for a while before pumping a load of cum-like liquid down your thoat!";
 	decrease hunger of player by 5;
 	increase libido of player by 20;
+
+to say beattheplant:
+	if joannafight is 3:
+		now joannafight is 1;
+		say "     Fighting off the plant's vines, you are able to break off the one buried deep inside you, allowing you to press onwards.";
+	otherwise:
+		say "[if plantdefeat is 1]You finally manage to break the vine that grew out of you. Getting as far away as you can from the area, you begin attempting to remove the vine that grew from inside you. It seems almost like it were attached to something deep in your body, but with one final tug it comes free with a loud *POP*. Unfortunately, the seed it grew from didn't come with it, and is still rooted deep inside your body. [otherwise] You finally manage to break the vine that forced its way inside of you. Getting far away from the vine-like bushes, you begin attempting to remove the vine that still dangles from between your legs. The inflated cock end of the plant makes it very difficult to remove, forcing you to stretch around it painfully as you pull on the vine. With one final tug, it comes free with a loud *POP*.[end if]"; [ Text or say command used when Monster is defeated.]
 
 
 Section 2 - Monster Insertion
@@ -73,7 +105,7 @@ When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Parasitic Plant"; [Name of your new Monster]
    now attack entry is "[didnotsubmit][one of]The vine inside of you inflates suddenly, causing your belly to expand due to its size.[or]With a sudden pull, the vine gives a mighty tug, forcing you to fall to the ground with a thud.[or]The vine lifts up into the air, taking you with it and causing you to hang painfully from the tendril before it drops you.[at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[if plantdefeat is 1]You finally manage to break the vine that grew out of you. Getting as far away as you can from the area, you begin attempting to remove the vine that grew from inside you. It seems almost like it were attached to something deep in your body, but with one final tug it comes free with a loud *POP*. Unfortunately, the seed it grew from didn't come with it, and is still rooted deep inside your body. [otherwise] You finally manage to break the vine that forced its way inside of you. Getting far away from the vine-like bushes, you begin attempting to remove the vine that still dangles from between your legs. The inflated cock end of the plant makes it very difficult to remove, forcing you to stretch around it painfully as you pull on the vine. With one final tug, it comes free with a loud *POP*.[end if]"; [ Text or say command used when Monster is defeated.]
+   now defeated entry is "[beattheplant]"; [ Text or say command used when Monster is defeated.]
    now victory entry is "[plantwin][feeded]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[plantorseed][submitcheck]";[ Description of the creature when you encounter it.]
    now face entry is "beautiful, feminine face with vine-like hair and a vertical slit, looking much like a very wet pussy, replacing your mouth";[ Face description, format as the text "Your face is (your text)"]
@@ -88,7 +120,7 @@ When Play begins:
    now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like color, while small green tendrils spread over your groin like roots."; [ cock change text. format as "Your cock feels funny as (your text)" ]
    now str entry is 16;
    now dex entry is 16;
-   now sta entry is 12;                    
+   now sta entry is 12;
    now per entry is 16;
    now int entry is 10;
    now cha entry is 18;
