@@ -1179,7 +1179,7 @@ To say time of day:
 		say "midnight";
 	if remainder after dividing turns by 8 is -8:
 		say "pre dawn";
-		
+
 To say short time of day:
 	if remainder after dividing turns by 8 is 7:
 		say "morning";
@@ -1188,7 +1188,7 @@ To say short time of day:
 	if remainder after dividing turns by 8 is 5:
 		say "day";
 	if remainder after dividing turns by 8 is 4:
-		say "day";
+		say "afternoon";
 	if remainder after dividing turns by 8 is 3:
 		say "evening";
 	if remainder after dividing turns by 8 is 2:
@@ -1214,13 +1214,15 @@ To say short time of day:
 	if remainder after dividing turns by 8 is -8:
 		say "morning";
 
-daytime is a truth state that varies.	[True/False variable for to indicate if day or night]
+[Seems to be working now]
 
-to say daynightcheck:
+daytimer is a truth state that varies.  daytimer is normally true.	[True/False variable for to indicate if day or night]
+
+to say dayornightcheck:
 	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
-		now daytime is true;
+		now daytimer is true;
 	otherwise:
-		now daytime is false;
+		now daytimer is false;
 
 
 To process (X - a grab object):
@@ -4283,6 +4285,7 @@ Include Frank by Stripes.
 Include Sally by Stripes.
 Include Max by Zero.
 Include Fang by Stripes.
+Include Joanna by Stripes.
 
 
 [Pets]
