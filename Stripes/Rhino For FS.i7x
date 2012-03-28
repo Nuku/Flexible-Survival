@@ -14,10 +14,10 @@ to say losetorhino:
 		say ".  After a few strokes while he forces you into the right position, he pulls back and lines his cock with your dripping pussy and drives it hard into you.  You moan and gasp as the big rod pushes its way into you.  Keeping you pinned down, he pumps and thrusts his pulsing cock into you repeatedly as he grunts and snorts until he finally cums hard, blasting his thick semen into you.  His prodigious output fills your womb and swells your tummy before he's finally done.  Sated for now, he gets up and pushes you over, then walks off with a final grunt.";
 		say "[impregchance]";
 	otherwise:
-		say ".  After a few strokes while he forces you into the right position, he pulls back and lines his cock with your tight pucker and drives hard into you.  You release a muffled scream at the sudden intrusion as the big rod pushes its way into you.  Keeping you pinneddown, he pumps and thrusts into you repeatedly as he grunts and snorts until he finally cums hard, blasting his thick semen into you.  His prodigious output fills your bowels and swells your tummy before he's finally done.  Sated for now, he gets up and pushes you over, then walks off with a final grunt.";
+		say ".  After a few strokes while he forces you into the right position, he pulls back and lines his cock with your tight pucker and drives hard into you.  You release a muffled scream at the sudden intrusion as the big rod pushes its way into you.  Keeping you pinned down, he pumps and thrusts into you repeatedly as he grunts and snorts until he finally cums hard, blasting his thick semen into you.  His prodigious output fills your bowels and swells your tummy before he's finally done.  Sated for now, he gets up and pushes you over, then walks off with a final grunt.";
 
 to say beattherhino:
-	say "     Managing to finally wear down the powerful creature, you pant for breath and wipe the sweat from your brow before heading off to continue your searching.";
+	say "     Managing to finally wear down the powerful creature, you [one of]get him to charge blindly past you and tumble into a nearby enclosure.  Glancing down, you see him laying there, exhausted[or]dodge his final, blind charge and get him to bash right into a wall and pass out[or]breathe a sigh of relief as he finally passes out, completely exhausted[or]avoid his last charge and he plows off into the bushes.  When he doesn't come back out, you conclude he's passed out, exhausted[at random].  You pant for breath and wipe the sweat from your brow before heading off to continue your searching.";
 
 to say rhinodesc:
 	say "     The large, grey rhinoman spots you and charges.  You only have a moment to take stock of him before he's upon you to fight.  He's seems rather strongly built, a very tough hide of grey skin and a large horn rising from his pointed face.  A second, even larger horn is equally hard between his legs.";
@@ -54,7 +54,7 @@ When Play begins:
 	now int entry is 6;
 	now cha entry is 8;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 65;			[ The monster's starting hit points. ]
+	now hp entry is 77;			[ The monster's starting hit points. ]
 	now lev entry is 5;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 9;			[ Monster's average damage when attacking. ]
 	now area entry is "Zoo";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]

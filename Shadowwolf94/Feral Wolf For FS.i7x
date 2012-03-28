@@ -32,7 +32,7 @@ to say beatferalwolf:
 	increase fangcount by 40;
 	if wolffight is not 3 and hp of Fang is 0:		[Checking to add Fang before running the regular wolf scenes]
 		if a random number between 1 and 100 < ( fangcount - 95 ):			[3rd to 5th wolf]
-			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you.  He even pisses a little to show his submission to you.  From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves.  This wolf, clearly a lowly member of his pack, might make a obedient, if still somewhat feral, pet.  You could take him off with you, if you're willing to risk bringing such a beast back with you.  Shall you try to tame this beastly wolf creature?";
+			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you.  He even pisses a little to show his submission to you.  From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves.  This wolf, clearly a lowly member of his pack, might make a obedient, if still somewhat feral, pet.  You could take him off with you, if you're willing to risk bringing such a beast back with you.  Shall you try to [bold type]tame[roman type] this beastly wolf creature?";
 			if the player consents:
 				say "     Against your better judgement, you take pity on this battered wolf and decide to take him as your own.  You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
 				if cocks of player > 0 and cunts of player > 0:
