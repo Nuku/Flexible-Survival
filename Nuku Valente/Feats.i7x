@@ -83,8 +83,14 @@ instead of addfeating the fun feats:
 		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits, barring specific effects.";
 	if "Modest Organs" is not listed in feats of player or "One Way" is not listed in feats of player:
 		addfeat "Passing Grade Chest" with "Your breasts will never fail a test, and will remain D cupped or smaller, barring specific effects. If they do become too large, they will shrink rapidly back into line.";
-	addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";
-	addfeat "One Pair" with "You will not grow more than two breasts.";
+	if "All The Things" is not listed in feats of player:
+		addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";
+	if "Bouncy Bouncy" is not listed in feats of player:
+		addfeat "One Pair" with "You will not grow more than two breasts.";
+	if "Just One" is not listed in feats of player or "One Way" is listed in feats of player:
+		addfeat "All The Things" with "Your groin seems to believe [']the more the merrier['].  Outside of a gender change, you will keep any [']extras['] you pick up.";
+	if "One Pair" is not listed in feats of player:
+		addfeat "Bouncy Bouncy" with "It seems that your body likes breasts a lot.  You won't be loosing any that you might gain.";
 	addfeat "Singular" with "You are not one to go in half way. Whatever form your torso takes, the rest tends to follow.";
 	addfeat "Like Attracts Like" with "You will attract more monsters similar to yourself.";
 	addfeat "Bad Luck" with "You may end up in back-to-back fights occasionally.";
@@ -156,6 +162,13 @@ instead of addfeating the basic feats:
 		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases.";
 		if "Expert Hunter" is listed in feats of player:
 			addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature.";
+	if dexterity of player > 11:
+		if cock length of player >= 12:
+			addfeat "Cock Slap" with "Smack around your foes with your oversized meat to show them who's boss.";
+		if cock width of player >= 16:
+			addfeat "Ball Crush" with "Slam your heavy ballsac down onto your enemy to show them who's a real man.";
+		if breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7:
+			addfeat "Boob Smother" with "Smother your foes in your pillowy rack.";
 	if dexterity of player is greater than 14:
 		if "Stealthy" is listed in feats of player or "Wary Watcher" is listed in feats of player or perception of player > 14:
 			addfeat "Experienced Scout" with "You have a chance of avoiding a random fight altogether if you so wish it.";

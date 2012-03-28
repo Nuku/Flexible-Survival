@@ -1,5 +1,5 @@
-Version 1 of Pepperspray by Stripes begins here.
-[version 1]
+Version 2 of Pepperspray by Stripes begins here.
+[version 2 - New feats added]
 
 
 battleitem is a number that varies.
@@ -182,6 +182,32 @@ to say enhancedattack:
 				say "[line break]You make an additional attack using your tail's natural abilities for [dammy] damage!";
 				increase dam by dammy;
 				choose row monster from table of random critters;
+		if a random chance of 5 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12:
+			follow the cock descr rule;
+			let dammy be 0;
+			let z be cock length of player + ( 2 * cocks of player ) - 12;
+			now dammy is ( square root of ( 2 * z ) ) + 1;
+			if dammy > 8, now dammy is 8;
+			increase dammy by a random number between 0 and 1;
+			if cocks of player >= 3, increase dammy by a random number between 0 and 1;
+			say "[line break]You give your opponent a hard swat with your [cock size desc of player] wang for [dammy] additional damage!";
+			increase dam by dammy;
+		if a random chance of 5 in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16:
+			let dammy be 0;
+			now dammy is ( square root of ( 2 * ( cock width of player - 13 ) ) ) + 1;
+			if dammy > 8, now dammy is 8;
+			increase dammy by a random number between 0 and 1;
+			say "[line break]You tackle your opponent, slamming your [ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [dammy] additional damage!";
+			increase dam by dammy;
+		if a random chance of 5 in 20 succeeds and "Boob Smother" is listed in feats of player and breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7:
+			let dammy be 0;
+			let z be breast size of player + breasts of player;
+			now dammy is square root of ( z - 1 ) + 1;
+			if dammy > 7, now dammy is 7;
+			increase dammy by a random number between 0 and 1;
+			if breasts of player > 4, increase dammy by a random number between 0 and 1;
+			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [dammy] additional damage!";
+			increase dam by dammy;
 		if a random chance of 3 in 10 succeeds and "Spirited Youth" is listed in feats of player:		[+5% chance of Spirited Youth attack]
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [y] damage!";
