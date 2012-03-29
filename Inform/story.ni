@@ -1216,13 +1216,17 @@ To say short time of day:
 
 [Seems to be working now]
 
-daytimer is a truth state that varies.  daytimer is normally true.	[True/False variable for to indicate if day or night]
+daytimer is a thing.
+daytimer can be day or night.  [daytimer is normally true.	[True/False variable for to indicate if day or night] ]
+
+definition: Daytimer is day:
+	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
+		yes;
+	otherwise:
+		no;
 
 to say dayornightcheck:
-	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
-		now daytimer is true;
-	otherwise:
-		now daytimer is false;
+	let x be 0;
 
 
 To process (X - a grab object):
