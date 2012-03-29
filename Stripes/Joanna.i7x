@@ -28,6 +28,7 @@ Instead of resolving a Overrun Garden:
 		challenge "Parasitic Plant";
 		if joannafight is 1:
 			move the player to Flower Garden;
+			now Flower Garden is known;
 			now hp of Joanna is 1;
 			say "     Your struggle with the plant is quite difficult, but you persist, tearing roots and smashing flowers as you struggle to get reach the main body of the plant.  During your fight, the kinkajou is able to break free because you've destroyed enough of the vines and she makes a break for it.  For a moment, you think she's left you all alone, but you hear a small engine choking to start.  Looking away from the large, torn bags of fertilizer at the plant's base as you make it there, you spot her coming out of a small gardening shed wielding a gas powered hedge trimmer with a wild look in her eyes.  You tackle the vines, holding them taut as she slashes through them, splattering their green juices out.  She slashes at the plant's base, slowly cutting through it as you keep the last of the vines off her until it's sawed clean through and you both collapse, panting for breath after your life or death fight.";
 			wait for any key;
