@@ -53,7 +53,7 @@ to say Nerminedescribing:
 	otherwise if jackalboytf is 4:
 		say "You smile happily as you look at your lovely mistress, her strong dominant form making you feel protected and safe as she moves around the shop straightening things.  You find yourself almost instinctively moving forward to ask if you can help, only to stop as she turns and gives you a soft knowing smile, the sight of your mistresses silver painted face as she looks at you makes you smile as well, as you know you couldn[apostrophe]t find a better or more beautiful canine mistresses to serve anywhere else.";
 	otherwise:
-		say "You spot what must be the store owner, her strange countenance making you blink several times in surprise.  Leaning up against the store counter next to the register is a lovely Female Jackaless, her soft black fur shining softly as she is framed in the soft light from the candles on the counter.  The rather Anubis like figure seems to be currently dressed in a rather loose fitting white t – shirt and a very short black skirt, as she leans forward on the counter, her face is brushed with soft swirls of silver paint as she grins at you.";
+		say "You spot what must be the store owner, her strange countenance making you blink several times in surprise.  Leaning up against the store counter next to the register is a lovely Female Jackaless, her soft black fur shining softly as she is framed in the soft light from the candles on the counter.  The rather Anubis like figure seems to be currently dressed in a rather loose fitting white t-shirt and a very short black skirt, as she leans forward on the counter, her face is brushed with soft swirls of silver paint as she grins at you.";
 
 
 instead of conversing the Nermine:
@@ -310,10 +310,15 @@ carry out nerminehelping:
 	if jackalboytf is 0:
 		say "'Indeed say no more!' The Jackal woman says with a smile as you ask her for some help, 'Nermine can obviously see that you need much help indeed, looking like that.' She says as she gestures to your body.  'Nermine have just the items to help you out, and maybe in return you could help Nermine out with a few chores she has to take care of yes?' The jackal asks with a sly look in her eye, making you wonder if agreeing is a good idea.";
 		if player consents:
-			say "'Excellent!' The jackaless says as she claps her hands happily, before reaching underneath the counter. 'Nermine loves to help out her customers!' She says as she brings a small item up from beneath the counter and holds it out to you.  Closer inspection reveals the item to be a small black statue of a jackalman with his arms crossed across his chest, glancing up at Nermine you see the Jackalwoman give you a sly wink, 'Nermine thinks this will help you look much better, get in touch with the power of the Jackal, go on, give it a try!' She says as she hands you the small totem, 'Is no charge for this one, is Nermaine[apostrophe]s way of helping you get started.' The canine shopkeeper says with a grin on her muzzle, as you look down at the little item in your hands with curiosity.";
-			add "Jackal totem" to invent of player;
-			Now Nerminehelpstatus is 1;
-			stop the action;
+			if guy is banned or furry is banned or girl is banned:
+				say "'Oh, Nermine is seeing now that she looks at you that you will not be able to help her.  I am feeling most sorry for you, restricting your fun so.  You should not be so picky, I am thinking.'  Nermine shakes her jackal head sadly.";
+				say "(The helping quest requires guy, girl and furry content to be available.)";
+				stop the action;
+			otherwise:
+				say "'Excellent!' The jackaless says as she claps her hands happily, before reaching underneath the counter. 'Nermine loves to help out her customers!' She says as she brings a small item up from beneath the counter and holds it out to you.  Closer inspection reveals the item to be a small black statue of a jackalman with his arms crossed across his chest, glancing up at Nermine you see the Jackalwoman give you a sly wink, 'Nermine thinks this will help you look much better, get in touch with the power of the Jackal, go on, give it a try!' She says as she hands you the small totem, 'Is no charge for this one, is Nermaine[apostrophe]s way of helping you get started.' The canine shopkeeper says with a grin on her muzzle, as you look down at the little item in your hands with curiosity.";
+				add "Jackal totem" to invent of player;
+				Now Nerminehelpstatus is 1;
+				stop the action;
 		otherwise:
 			say "'This is too bad,' The Jackal shopkeeper says with a sigh, 'Nermine does so enjoy helping people find themselves, and she had such very high hopes for you.  If you change your mind though, you just come see Nermine again, and she will help you find who you want to be.' Nermine says with a soft wink as she goes back to watching the store.";
 			stop the action;
@@ -858,9 +863,12 @@ Instead of Resolving a Strangeshop:
 	Now The Mysterious Shop is known;
 	now Strangeshop is resolved;
 
-Bacchus wine is a situation.
+
+Bacchus wine is a situation.  The level of Bacchus wine is 4.
 The Sarea of Bacchus wine is "Museum";
 winefound is a number that varies;
+when play begins:
+	add Bacchus wine to badspots of guy;
 
 Instead of resolving a Bacchus wine:
 	if winefound is 0:
@@ -922,8 +930,11 @@ Instead of conversing the Valerie while Hyenatrailing is 1:
 	say "'Hyenas? In the museum?' The sphinx says with a confused look as she looks around the foyer incredulously. 'If the city wasn[apostrophe]t in the state its currently in, I would say you were going crazy, as it is though, they didn[apostrophe]t come by here.' The sphinx like woman says haughtily, when you explain why you are asking however, she seems to be much more willing to help. 'Stealing from the museum? How horrible, of course I[apostrophe]ll help, although I am not sure what help I can be since I didn[apostrophe]t see them come through here... although.' She pauses to think for a minute, 'You know that could be your clue right there, if they didn[apostrophe]t come through here, they must have found a way in elsewhere, maybe you should try tracking them that way, all you need to do is look around the museum until you find where the stinky beasts got inside.' Valerie says with amusement as she crosses her forepaws on the information desk, obviously pleased with herself";
 	now Hyenatrailing is 2;
 
- Alternative entry is a situation.
+Alternative entry is a situation.  The level of Alternative entry is 8.
 The Sarea of Alternative entry is "Museum";
+when play begins:
+	add Alternative entry to badspots of guy;
+	add Alternative entry to badspots of furry;
 
 Instead of resolving a Alternative entry:
 	if hyenatrailing is 2:
@@ -946,7 +957,7 @@ Instead of resolving a Alternative entry:
 			say "After several hours wandering the halls, you are forced to admit that you have completely lost the trail of the thieves, and sigh as you set out to try to find your way back to the museum foyer so you can try again.";
 			stop the action;
 	otherwise:
-		say "Wandering through the halls of the museum, you hear a faint rumbling noise from nearby, looking around you realize it is coming from one of the nearby employees only doors. your curiosity getting the better of you, you slowly open the door a crack and peek inside. You are startled to find yourself peeking right into the face of a large sabretooth cat! After a second of panic, the rumbling noise comes again, and you realize that the sound is the cats soft snoring, the beast obviously having not gotten a good nights sleep in years, you decide to slowly close the door and let sleeping giant man eating pussycats lie...";
+		say "Wandering through the halls of the museum, you hear a faint rumbling noise from nearby, looking around you realize it is coming from one of the nearby employees only doors. your curiosity getting the better of you, you slowly open the door a crack and peek inside. You are startled to find yourself peeking right into the face of a large sabretooth cat! After a second of panic, the rumbling noise comes again, and you realize that the sound is the cat's soft snoring, the beast obviously having not gotten a good nights sleep in years, you decide to slowly close the door and let sleeping giant man-eating pussycats lie...";
 
 
 
@@ -956,8 +967,10 @@ Instead of conversing the Mary while Hyenatrailing is 3:
 
 
 
-Hyena Challenging is a situation.
-
+Hyena Challenging is a situation.  The level of Hyena Challenging is 12.
+when play begins:
+	add Hyena Challenging to badspots of hermaphrodite;
+	add Hyena Challenging to badspots of furry;
 
 Instead of resolving a Hyena Challenging:
 	if hyenatrailing is 4:
@@ -974,17 +987,17 @@ Instead of resolving a Hyena Challenging:
 		otherwise:
 			say "Following the trail of clues leads you to the edges of the territory claimed by the gang of herm hyenas and though you are pretty sure they have what you are looking for somewhere in their territory, you have no clue where to begin your search, it seems pretty obvious that you are going to need to ask some of the gang members for help in that regards, although you doubt they will cooperate without a fight.  After some searching you do manage to find a pair of gang members lounging around the area, and while they seem friendly enough at first as they try to convince you to join their gang, their mood swiftly changes when they realize you are trying to retrieve something from their gang, as they quickly turn and attack, striking at you before you can respond!";
 			decrease hp of player by 15;
-			Challenge “Herm Hyena”;
-			Challenge “Herm Hyena”;
+			Challenge "Herm Hyena";
+			Challenge "Herm Hyena";
 			if lost is 0:
 				say "After defeating the hyenas, they are more then willing to admit your dominance, and with a pair of matching grins easily agree to lead you to their hideout.  Given how cheerful the tricky beasts are about the whole situation, you suspect you are walking right into a trap, but since it is probably the only way you will find out what happened to the items Nermine wants, you have no choice but to follow along.  Eventually after quite a bit of walking, you find yourself outside one of the large warehouses in the area, and looking around you realize you could have been here much quicker if they had brought you directly here.  You realize with a sigh that all the extra walking was just buying time so that a large number of hyenas could gather around the area, all of them grinning at chuckling at you as the two hyenas you beat earlier quickly duck away from you to join the crowd.  Sighing as you look around, you realize there is no way you could beat all of these hyenas in combat, so you try calling out and telling them you are only looking for 3 very specific pieces of jewelry from the museum, and hoping they are in the mood to listen. [line break]";
 				say "The air is filled with the laughter of the hyenas at your bold questioning, the noise making you feel somewhat less human as it echoes throughout the area, the laughter quiets suddenly as if someone had flicked a switch. And you blink as a much larger hyena adorned with many loops of jewelry and necklaces steps through the crowd to stand in front of you sizing you up, looking closer at her adornments, you realize that the hyena is wearing the items you came here for! The large hyena grins as she sees you have recognized her jewelery, and in a mocking tone of voice introduces herself as the matriarch of the gang, and that while the items you want are only the least part of her treasure, they are still hers. You sigh and almost turn away, before she lifts an eyebrow and continues, and you listen eagerly as she explains that since you have come this far, and she has no particular attachment to the items. That if you can put on a good enough show against her guards, she will let you challenge her to dominance combat for the items. Looking around at the array of grins showing on the many faces in the area, you realize that you have no choice but to agree to her terms, and prepare yourself for a grueling series of fights as the gang closes in around you forming an impromptu arena with you in the center."; 
-				Challenge “Herm Hyena”;
-				Challenge “Herm Hyena”;
+				Challenge "Herm Hyena";
+				Challenge "Herm Hyena";
 				if lost is 0:
 					if cocks of player is greater than 0:
 						say "Looking down at the matriarchs defeated guards, you are surprised to hear the crowd of hyenas cheer your victory as loudly as they cheered for their own kind, their praise making you feel slightly more dominant as straighten up and stretch from your hard won victory.  After several minutes of cheering, and jesting, the crowd grows silent again in anticipation as the matriarch herself steps forward with a grin, and looking around you realize that win or lose, this particular fight is definitely a unique opportunity, if you lose now, you are pretty sure you won[apostrophe]t have another chance at getting the items back for Nermine, and so you resolve to fight your hardest to prove your dominance over the powerful matriarch.";
-						Challenge “Hyena matriarch”;
+						Challenge "Hyena matriarch";
 						if lost is 0:
 							say "Lying there proudly as you enjoy your victory over the formerly proud matriarch, you grin as the hyenas party around you, celebrating your victory as they make you honorary matriarch for a time.  You are treated to your pick of everything the gang has, and the hyenas definitely throw one hell of a party.  Eventually though, it is time for you to go, the former matriarch handing over the items you wanted easily enough, while the rest of the gang begins to settle down to the rough task of deciding who gets to be the next matriarch. As you walk away down the city streets, you find yourself almost wishing you could go back and claim the matriarchs throne from them on a more permanent basis...";
 							now matriarchowned is 0;
@@ -998,7 +1011,7 @@ Instead of resolving a Hyena Challenging:
 							stop the action;
 					otherwise:
 						say "Looking down at the matriarchs defeated guards, you are surprised to hear the crowd of hyenas cheer your victory as loudly as they cheered for their own kind, their praise making you feel slightly more dominant as straighten up and stretch from your hard won victory.  After several minutes of cheering, and jesting, the crowd grows silent again in anticipation as the matriarch herself steps forward with a grin, and looking around you realize that win or lose, this particular fight is definitely a unique opportunity, if you lose now, you are pretty sure you won[apostrophe]t have another chance at getting the items back for Nermine, and so you resolve to fight your hardest to prove your dominance over the powerful matriarch. You shift your stance as you prepare for combat, only to jump back in shock as a black knotted dildo bounces off your head. As the crowd around you explodes once more into laughter, you pick up the strange thing and stare at it, realizing it is come kind of strap on. Glancing up at the matriarch, where she grins at you as she strokes her own thick knotted cock, you blush as you realize exactly what kind of dominance battle is in front of you, even as you slip the item on. You gasp as it grows warm and seems to become almost real as you settle it into place, your body growing even hornier as fondle the realistic toy, after a minute you hear the matriarch chuckle at your distraction, and shaking your head, you brace yourself and prepare to fight In however pornographic a way you need to.";
-						Challenge “Hyena matriarch”;
+						Challenge "Hyena matriarch";
 						if lost is 0:
 							say "Lying there proudly as you enjoy your victory over the formerly proud matriarch, you grin as the hyenas party around you, celebrating your victory as they make you honorary matriarch for a time.  And you get to put your new temporary cock to good use several more times, before one of the hyenas shows you how to take it off, your body feeling kind of empty at the loss of your new member, though when you ask about maybe keeping the strap on around, the hyenas warn you that prolonged use of the item makes it permanent, which while it doesn[apostrophe]t sound too bad to you right now, is probably something to consider for later, as you turn your attention back to the forming party. You are treated to your pick of everything the gang has, and the hyenas definitely throw one hell of a party.  Eventually though, it is time for you to go, the former matriarch handing over the items you wanted easily enough, while the rest of the gang begins to settle down to the rough task of deciding who gets to be the next matriarch. As you walk away down the city streets, you find yourself almost wishing you could go back and claim the matriarchs throne from them on a more permanent basis...";
 							now matriarchowned is 0;
@@ -1017,11 +1030,6 @@ Instead of resolving a Hyena Challenging:
 				say "Defeated by the hyenas, you have no choice but to slink back off down the streets of the city, wondering how you could lose to just a couple hyenas after having come this far successfully... and resolving to try again as soon as you have recovered.";			
 	otherwise:
 		say "Traveling through the streets of the mostly deserted city, you come across an area completely painted in some kind of strange gang signs placed one on top of the other, noticing that the paint is still fresh in some places, you decide it might be best to leave the area as quietly and quickly as possible, before one of the strange gang members returns and finds you here.";
-
-
-
-
-
 
 
 
@@ -1052,9 +1060,12 @@ Instead of resolving a Anubis statue:
 
 
 
-Beastial Pheromones is a situation.
+Beastial Pheromones is a situation.  The level of Beastial Pheromones is 4.
 The Sarea of Beastial Pheromones is "Zoo";
 anubisrequest is a number that varies;
+when play begins:
+	add Beastial Pheromones to badspots of girl;
+	add Beastial Pheromones to badspots of furry;
 
 Instead of resolving a Beastial Pheromones:
 	if anubisrequest is 0:
@@ -1084,10 +1095,12 @@ Instead of resolving a Beastial Pheromones:
 
 
 
-Twisted fruit grove is a situation.
+Twisted fruit grove is a situation.  The level of twisted fruit grove is 4.
 The Sarea of Twisted fruit grove is "Park";
 Felinoidrescued is a number that varies.
 Vinetrapped is a number that varies.
+when play begins:
+	add Twisted fruit grove to badspots of hermaphrodite;
 
 Instead of resolving a Twisted fruit grove:
 	if felinoidrescued is 1:
@@ -1243,9 +1256,14 @@ To say rarecountertalking:
 	if rarequesting is 0:
 		say "'Ah Nermine notes you are interested in the very rare items!' The jackal shopkeeper says happily as she rubs a polishing cloth over the glass countertop happily. 'Some of these I have worked very hard to acquire, although there are several items in this city that Nermine would love to add to her collection,' The Jackaless says wistfully as she eyes the empty spots in the case. You think there could be an opportunity here to get on the shopkeepers good side, Do you offer to help her acquire the items?";
 		if player consents:
-			say "'You are offering to help Nermine acquire some of these rare items?' The jackal woman says with surprise, before looking at you appreciatively, 'Well if you can help Nermine out like that, she would certainly have a nice reward waiting for you when you do.' Nermine says as she reaches into the case and pulls out a small golden ankh with the image of a jackal man stamped on the base. 'If you help Nermine out, she will pay you back with gold, and perhaps if you are very helpful, a bit more then gold.' The sexy jackal woman says with a wink as she sets the ankh carefully back into the cabinet. 'First though, if you want to help, Nermine could use some items from around town, and it should be good start for you to get a feel for helping me on the easy things to find.' She says as she vanishes into the back room, and returns with a small basket. 'Go to park, Nermine has heard there is strange plants there now, and if things are as she thinks, you should find some special fruit if you can find the right grove of these plants. Bring her back a basket full of fruit and she will let you know what comes next.' The jackaless says as she hands you the basket. Sending you on your way.";
-			now rarequesting is 1;
-			stop the action;
+			if guy is banned or furry is banned or girl is banned:
+				say "'Oh, Nermine is seeing now that she looks at you that you will not be able to help her in this regard.  I am feeling most sorry for you, restricting your fun so.  You should not be so picky, I am thinking.'  Nermine shakes her jackal head sadly.";
+				say "(The rare item quest requires hermaphrodite, guy, girl and furry content to be available.  Sorry.)";
+				stop the action;
+			otherwise:
+				say "'You are offering to help Nermine acquire some of these rare items?' The jackal woman says with surprise, before looking at you appreciatively, 'Well if you can help Nermine out like that, she would certainly have a nice reward waiting for you when you do.' Nermine says as she reaches into the case and pulls out a small golden ankh with the image of a jackal man stamped on the base. 'If you help Nermine out, she will pay you back with gold, and perhaps if you are very helpful, a bit more then gold.' The sexy jackal woman says with a wink as she sets the ankh carefully back into the cabinet. 'First though, if you want to help, Nermine could use some items from around town, and it should be good start for you to get a feel for helping me on the easy things to find.' She says as she vanishes into the back room, and returns with a small basket. 'Go to park, Nermine has heard there is strange plants there now, and if things are as she thinks, you should find some special fruit if you can find the right grove of these plants. Bring her back a basket full of fruit and she will let you know what comes next.' The jackaless says as she hands you the basket. Sending you on your way.";
+				now rarequesting is 1;
+				stop the action;
 		otherwise:
 			say "Deciding any item that Nermine is unable to acquire herself, is certainly going to be far to difficult for you to acquire, you decide to not say anything right now, and just watch as she admires her already fine collection."; 
 

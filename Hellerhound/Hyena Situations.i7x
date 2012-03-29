@@ -13,6 +13,9 @@ instead of resolving Hyena Kill:
 Section 2 - Panther Trap
 
 panther trap is a situation.
+when play begins:
+	add panther trap to badspots of hermaphrodite;
+	add panther trap to badspots of furry;
 
 instead of resolving a panther trap:
 	say "You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately the grey and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you would swear would be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";
@@ -75,27 +78,27 @@ instead of resolving an intact fountain:
 		say "You avoid the fountain like it was another nanite plague.";
 	if a random chance of one in three succeeds:
 		let S be a random number between one and 7;
-		if S is 1:
+		if S is 1 and guy is not banned and hellspawn is not banned:
 			say "You identify some demon seed on the side of the fountain. Do you wish to collect it?";
 			if the player consents:
 				add "demon seed" to the invent of the player;
-		otherwise if S is 2:
+		otherwise if S is 2 and hermaphrodite is not banned and furry is not banned:
 			say "You find some Gryphon Milk on the fountain. Collect it?";
 			if the player consents:
 				add "gryphon milk" to the invent of the player;
-		otherwise if S is 3:
+		otherwise if S is 3 and girl is not banned:
 			say "You find a glob of goo floating in the fountain water. It appears to be unaffected by the clamor of nanites around it. Collect?";
 			if the player consents:
 				add "glob of goo" to the invent of the player;
-		otherwise if S is 4:
+		otherwise if S is 4 and hermaphrodite is not banned and furry is not banned:
 			say "You find a bunch of identifiably dog milk on the spray nozzle, currently off. Collect?";
 			if the player consents:
 				add "dog milk" to the invent of the player;
-		otherwise if S is 5:
+		otherwise if S is 5 and girl is not banned and furry is not banned:
 			say "There is skunk goo floating in the cloudy water. Collect?";
 			if the player consents:
 				add "Skunk Goo" to the invent of player;
-		otherwise if S is 6:
+		otherwise if S is 6 and hermaphrodite is not banned and girl is not banned:
 			say "There is some webbing across sections of the fountain. Do you want to collect it?";
 			if the player consents:
 				add "spider webbing" to the invent of the player;

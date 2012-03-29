@@ -359,8 +359,6 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
 
 When play begins:
-	add "red horse" to infections of furry;
-	add "red horse" to infections of hermaphrodite;
 	Choose a blank row from Table of random critters;
 	now name entry is "red horse";
 	now face entry is "flat-toothed, prehensile-lipped equine";

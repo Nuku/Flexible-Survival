@@ -48,7 +48,10 @@ Instead of Resolving a Military presence:
 
 Section 2- Cream truck
 
-Cream truck is a situation
+Cream truck is a situation.
+when play begins:
+	add Cream truck to badspots of hermaphrodite;
+	add Cream truck to badspots of furry;
 
 Instead of Resolving a Cream truck:
 	say "An abandoned ice cream truck lies sitting here lonesomely in the middle of the street, you quickly investigate to see if any of the delicious treats are left.  Looking in the cooler in back you are disappointed to find all the ice cream has melted all over the place, covering the inside of the ice cream truck in sticky white stuff. Taking a whiff of a strange smell you investigate further, and Closer investigation determines that the sticky white stuff may not be ice cream after all, but just plain someone or something cream...  You might be able to find something useful here, but it would be messy, do you try?";
@@ -85,6 +88,9 @@ Instead of Resolving a Abandoned player:
 Section 5- Hyena Gang
 
 Hyena Gang is a situation.
+when play begins:
+	add Hyena Gang to badspots of hermaphrodite;
+	add Hyena Gang to badspots of furry;
 
 HYG is a number that varies.
 
@@ -137,9 +143,11 @@ Instead of Resolving a Hyena Gang:
 Section 6- Locked utility room
 
 Locked utility room is a situation.
-The sarea of Locked utility room is "mall";
+The sarea of Locked utility room is "Mall";
 LURM is a number that varies.
-
+when play begins:
+	add Locked utility room to badspots of guy;
+	add Locked utility room to badspots of hellspawn;
 
 Instead of Resolving a Locked utility room:
 	if lurm is 0:
@@ -151,9 +159,6 @@ Instead of Resolving a Locked utility room:
 		Add "demon seed" to invent of player;
 		Add "demon seed" to invent of player;
 		Now Locked utility room is resolved;
-
-
-
 
 
 
@@ -189,6 +194,7 @@ Instead of Resolving a Dolphin lotion:
 	say "traveling along the beach you come across a large blanket set up on the sand, next to an overturned beach umbrella.  Moving closer you find no sign of the occupant, though you do spy a pair of sunglasses and some sunblock lying in the sand.  Deciding some extra protection couldn't hurt, you bend over to take the sunblock only to notice what from this position looks like something was dragged along the sand to the water. Looking closer at the bottle of sunblock you notice it is called 'happy dolphin' Suntan lotion, and shows the picture of a grinning dolphin woman on the front, her large tail resting on the sand behind her. Deciding that on second thought you don't need any sun protection right now, you hurry along, on leaving it behind.";
 	Now Dolphin lotion is resolved;
 
+
 Section 10-  Broken fountain
 
 Broken fountain is a situation.
@@ -218,6 +224,9 @@ Section 11-  Twisted grove
 
 Twisted grove is a situation.
 The sarea of Twisted grove is "Park";
+when play begins:
+	add Twisted grove to badspots of girl;
+	add Twisted grove to badspots of furry;
 
 
 Instead of Resolving a Twisted grove:
@@ -237,7 +246,7 @@ Instead of Resolving a Ominous hole:
 Section 13- squatters den
 
 squatters den is a situation.
-The sarea of squatters den is "mall";
+The sarea of squatters den is "Mall";
 
 Instead of resolving a squatters den:
 	say "exploring the sewers underneath the mall, you find signs of a recent struggle.  Investigating more closely you see where something came across what appears to be a recently inhabited squatters den, piles of junk and blankets and even an old shopping cart have been dragged down here and set up in a small alcove.  From the looks of the recent struggle the den isn't inhabited any longer, carefully picking through the piles of junk looking for anything that might be of use.  Finding some food and a bottle of none to clean water, you head on about your business";
@@ -249,7 +258,7 @@ Instead of resolving a squatters den:
 Section 14- Leaking pipe
 
 leaking pipe is a situation.
-The sarea of leaking pipe is "mall";
+The sarea of leaking pipe is "Mall";
 
 Instead of resolving a leaking pipe:
 	say "as you travel the sewers and utility corridors under the mall, you hear a steady trickling noise coming from down one of the passageways, the sound grows louder as you move closer, eventually discovering a leaking water pipe. You apparently aren't the only person to have discovered this source of water though, as someone has set up a couple small containers under the steady leak.  As the containers are definitely overflowing whoever set them up obviously hasn't been back in a while. Sensing an opportunity you quickly gather up a couple of the full containers and place them in your pack, you then hurry along before someone comes looking for them. ";
@@ -305,7 +314,7 @@ Instead of Resolving a library visitor:
 Section 16- ruined supplies
 
 ruined supplies is a situation.
-The sarea of ruined supplies is "mall";
+The sarea of ruined supplies is "Mall";
 
 
 Instead of resolving a ruined supplies:
@@ -329,10 +338,13 @@ Instead of resolving a ruined supplies:
 
 Section 17- Strange preacher
 
-Strange preacher is a situation
+Strange preacher is a situation.
+when play begins:
+	add Strange preacher to badspots of hermaphrodite;
+	add Strange preacher to badspots of furry;
 
 Instead of Resolving a Strange preacher:
-	say "Wandering the deserted streets, you hear what sounds like a loud voice from down the street a ways. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street.  Moving closer in case this is some kind of trick, you get a better look at the creature and finding yourself shaking your head in astonishment.  With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her legs spread giving you a good look at hir erect feline cock.  Behind hir though a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred panther lower body. Her torso seems to be covered in rough brown dog fur, with a cowlike udder hanging off her upper body’s stomach, Her arms are twisted around and pulled up into almost wyvernlike wings, obviously not strong enough to lift her even an inch of the ground.  It is almost startling to see the rather humanlike head sitting on the shoulders of the creature, her eyes closed as she continues to speak. [line break] You realize as you have been staring at the strangeness of her form, you have hardly paid any attention to what she was actually saying, you pause to listen for a minute.  Listening to her speak, it quickly becomes obvious she is singing the praises of something called the church of the maternal beast, and someone she calls the Great Mother.  She appears to be trying to appeal to the infected by telling them to embrace the changes, and the new sexuality sweeping the city, but not to let it overwhelm them. She continues on in lewd detail about the things that one should be careful of doing, or else you might give in and lose yourself completely, her body shaking as she depicts several strange lewd acts to be avoided, and you can see her hind legs pumping her erect cock in the empty air eagerly as she continues to get more and more explicit in her descriptions. Shaking your head at the absurdity of it all, you leave the strange thing to its preaching, unsure if it even noticed you stopping to listen for a minute.";
+	say "Wandering the deserted streets, you hear what sounds like a loud voice from down the street a ways. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street.  Moving closer in case this is some kind of trick, you get a better look at the creature and finding yourself shaking your head in astonishment.  With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her legs spread giving you a good look at hir erect feline cock.  Behind hir though a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred panther lower body. Her torso seems to be covered in rough brown dog fur, with a cowlike udder hanging off her upper body's stomach, Her arms are twisted around and pulled up into almost wyvernlike wings, obviously not strong enough to lift her even an inch of the ground.  It is almost startling to see the rather humanlike head sitting on the shoulders of the creature, her eyes closed as she continues to speak. [line break] You realize as you have been staring at the strangeness of her form, you have hardly paid any attention to what she was actually saying, you pause to listen for a minute.  Listening to her speak, it quickly becomes obvious she is singing the praises of something called the church of the maternal beast, and someone she calls the Great Mother.  She appears to be trying to appeal to the infected by telling them to embrace the changes, and the new sexuality sweeping the city, but not to let it overwhelm them. She continues on in lewd detail about the things that one should be careful of doing, or else you might give in and lose yourself completely, her body shaking as she depicts several strange lewd acts to be avoided, and you can see her hind legs pumping her erect cock in the empty air eagerly as she continues to get more and more explicit in her descriptions. Shaking your head at the absurdity of it all, you leave the strange thing to its preaching, unsure if it even noticed you stopping to listen for a minute.";
 	Now Strange preacher is resolved;
 
 

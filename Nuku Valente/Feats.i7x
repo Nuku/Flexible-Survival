@@ -162,6 +162,15 @@ instead of addfeating the basic feats:
 		addfeat "Expert Hunter" with "Your chances of hunting a specific critter with the hunt command increases.";
 		if "Expert Hunter" is listed in feats of player:
 			addfeat "Master Baiter" with "You are virtually assured victory when hunting a specific creature.";
+	if dexterity of player is greater than 14:
+		if "Stealthy" is listed in feats of player or "Wary Watcher" is listed in feats of player or perception of player > 14:
+			addfeat "Experienced Scout" with "You have a chance of avoiding a random fight altogether if you so wish it.";
+	if dexterity of player is greater than 14:
+		addfeat "Stealthy" with "Your chance of running into a monster is decreased while you are scavenging or exploring.";
+		addfeat "Martial Artist" with "You have basic martial arts training, increasing the damage you cause when you have no weapon.";
+		if "Martial Artist" is listed in feats of player:
+			addfeat "Black Belt" with "Your martial artistry is amazing. Your damage increases further while unarmed, and you have a small (10%) chance of avoiding hits that would otherwise have landed.";
+			addfeat "Natural Armaments" with "You gain additional power based on the mutation of your body, borrowing the natural weapons of your infection.";
 	if dexterity of player > 11:
 		if cock length of player >= 12:
 			addfeat "Cock Slap" with "Smack around your foes with your oversized meat to show them who's boss.";
@@ -169,14 +178,6 @@ instead of addfeating the basic feats:
 			addfeat "Ball Crush" with "Slam your heavy ballsac down onto your enemy to show them who's a real man.";
 		if breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7:
 			addfeat "Boob Smother" with "Smother your foes in your pillowy rack.";
-	if dexterity of player is greater than 14:
-		if "Stealthy" is listed in feats of player or "Wary Watcher" is listed in feats of player or perception of player > 14:
-			addfeat "Experienced Scout" with "You have a chance of avoiding a random fight altogether if you so wish it.";
-		addfeat "Stealthy" with "Your chance of running into a monster is decreased while you are scavenging or exploring.";
-		addfeat "Martial Artist" with "You have basic martial arts training, increasing the damage you cause when you have no weapon.";
-		if "Martial Artist" is listed in feats of player:
-			addfeat "Black Belt" with "Your martial artistry is amazing. Your damage increases further while unarmed, and you have a small (10%) chance of avoiding hits that would otherwise have landed.";
-			addfeat "Natural Armaments" with "You gain additional power based on the mutation of your body, borrowing the natural weapons of your infection.";
 	if featunlock is 1:	[available after hospital quest]
 		if dexterity of player > 14:
 			addfeat "Tail Strike" with "If available, you may randomly score an additional hit with your monstrous tail.";

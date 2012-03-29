@@ -104,6 +104,9 @@ Section 4- Strange wave
 
 Strange wave is a situation.
 The sarea of Strange wave is "Beach";
+when play begins:
+	add Strange wave to badspots of girl;
+	add Strange wave to badspots of furry;
 
 Instead of resolving a Strange wave:
 	say "walking along the beach, all of a sudden you hear a strange noise, almost like a loud groaning noise, causing you to look towards the water.  You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don[apostrophe]t get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more then you would expect.";
@@ -130,6 +133,11 @@ Section 6- Dragon voyeurism
 
 Dragon voyeurism is a situation.
 The sarea of Dragon voyeurism is "Beach";
+when play begins:
+	add Dragon voyeurism to badspots of girl;
+	add Dragon voyeurism to badspots of guy;
+	add Dragon voyeurism to badspots of furry;
+
 
 Instead of resolving a Dragon voyeurism:
 	say "Moving along the beach, you hear strange noises from up ahead, causing you to move cautiously as you look around the upcoming dune.  You gasp at the strange sight before you, of a male sea dragon in the shallows mounting what looks to be a mixture of a human and sea dragoness, shreds of a divers wetsuit still cling to her expanding body as he fucks her roughly. The expression on the womans face is screwed up into one of the purest ecstasy as he thrusts into her, her happy cries and the strong musk of their mating causing you to grow excited as well. You find yourself unable to move on your eyes locked to the strangely erotic scene in front of you even as your hands begin to roam your body.  The woman cooing and writhing wantonly under the dragon, even as her changes continue sweeping over her, until finally the sea dragon roars as he spills his seed into what used to be a human diver, and is now indistinguishable from just another sea dragon. The dragons stay there in the low surf for a minute, shuddering in pleasure, before the male sea dragon pulls out, and drags himself back out into the surf. The newly made dragoness looks around for a minute as if confused by something, before fixating on his retreating form, she quickly dives into the surf after him, swimming along quickly to catch up to the beast that changed her, and now owns her.  You gasp in relief tinged with disappointment as they move away, your body tingling both from the sheer erotic nature of the sight you just witnessed, as well as the strong scent of sea dragon mating that covers the area and seems to cling to you strongly.";
@@ -165,6 +173,9 @@ Section 9- Tainted yacht
 
 Tainted yacht is a situation.
 The sarea of Tainted yacht is "Beach";
+when play begins:
+	add Tainted yacht to badspots of hermaphrodite;
+	add Tainted yacht to badspots of furry;
 
 Instead of resolving a Tainted yacht:
 	say "While moving along the nearly deserted coast, you spot a small 60 foot yacht anchored nearby, you think with a bit of effort you might be able to swim out to the anchored boat, do you try?";
@@ -196,6 +207,8 @@ Section 11- otter view
 
 otter view is a situation.
 The sarea of otter view is "Beach";
+when play begins:
+	add otter view to badspots of furry;
 
 Instead of resolving a otter view:
 	say "As you wander along the beach, you hear some laughter and splashing from the cove up ahead.  Moving forward to take a closer look, you spy a small group of otters, laughing and frolicking in the shallow water.  You smile at the innocently playful creatures for a while, until their play starts to get a bit more 'hands on' with each other.  At which point you continue on your journey before they notice you.";
@@ -204,8 +217,11 @@ Instead of resolving a otter view:
 
 Section 12- Cream stand
 
-Cream stand is a situation.
+Cream stand is a situation.  The level of Cream stand is 2.
 The sarea of Cream stand is "Beach";
+when play begins:
+	add Cream stand to badspots of hermaphrodite;
+	add Cream stand to badspots of furry;
 
 Instead of resolving a Cream stand:
 	say "Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, looking around curiously though you don[apostrophe]t spot anyone nearby.  It is something of a hot day, perhaps you should go help yourself to some ice cream?";

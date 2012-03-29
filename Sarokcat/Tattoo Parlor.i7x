@@ -33,7 +33,7 @@ Instead of resolving tattoonpiercing:
 
 
 
-Findingkara is a situation.
+Findingkara is a situation.  The level of findingkara is 9.
 The sarea of Findingkara is "Red";
 
 Instead of resolving Findingkara:

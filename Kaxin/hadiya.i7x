@@ -74,6 +74,9 @@ To hadiyafuck:
 
 Annoyed Hyena is a situation.
 The sarea of Annoyed Hyena is "Outside";
+when play begins:
+	add Annoyed Hyena to badspots of hermaphrodite;
+	add Annoyed Hyena to badspots of furry;
 
 After resolving a Annoyed Hyena, try looking;
 

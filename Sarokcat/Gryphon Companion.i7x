@@ -59,8 +59,16 @@ An everyturn rule:
 			
 
 Lonely Gryphoness is a situation.
+The sarea of Lonely Gryphoness is "Outside";
+when play begins:
+	add Lonely Gryphoness to badspots of hermaphrodite;
+	add Lonely Gryphoness to badspots of furry;
+
 Gryphoness nest is a situation.
 The sarea of Gryphoness nest is "Beach";
+when play begins:
+	add Gryphoness nest to badspots of hermaphrodite;
+	add Gryphoness nest to badspots of furry;
 
 
 gryphoncomforted is a number that varies.

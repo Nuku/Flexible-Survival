@@ -2,7 +2,7 @@ Sarah by Sarokcat&Hellerhound begins here.
 
 Section 1 - Sarah and the Husky pack
 
-Husky Pack is a situation.
+Husky Pack is a situation.  The level of Husky Pack is 8.
 the sarea of Husky Pack is "Outside".
 when play begins:
 	add Husky Pack to badspots of girl;
@@ -303,6 +303,4 @@ when play ends:
 
 
 
-Sarah ends here.	 
-
-
+Sarah ends here.

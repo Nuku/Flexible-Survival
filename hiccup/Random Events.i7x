@@ -66,6 +66,9 @@ Instead of Resolving a Another Survivor:
 
 Masturbating Fox is a situation.
 the sarea of Masturbating Fox is "Outside";
+when play begins:
+	add Masturbating Fox to badspots of guy;
+	add Masturbating Fox to badspots of furry;
 
 After resolving a masturbating fox, try looking;
 

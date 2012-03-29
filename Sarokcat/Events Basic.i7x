@@ -1,4 +1,5 @@
 Events basic by Sarokcat begins here.
+[This file is for Flexible Society]
 
 Tribal Skirmish is a situation.
 

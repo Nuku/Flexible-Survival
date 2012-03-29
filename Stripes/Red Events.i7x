@@ -12,7 +12,6 @@ when play begins:
 	add Leather Wolves to badspots of girl;
 	add Leather Wolves to badspots of guy;
 	add Leather Wolves to badspots of furry;
-	add Leather Wolves to badspots of humorous;
 
 Instead of resolving a Leather Wolves:
 	say "     Some noise up ahead attracts your attention and you creep closer.  Hunkering down behind a pair of cars, you look at the small pack of wolfmen gathered in front of a leather store.  At some point, several of the mannequins have been stripped of their outfits and the wolves seem to be wearing them.  Somehow they leather gear is shaped to cover large parts of their lupine faces and transformed bodies.  A pair of them are indulging in sex on the leather harness they[apostrophe]ve hung from a building-side flagpole.  Others are stroking themselves off or fingering their pussies while they watch.  As you study the pack more closely, you come to realize that they are not merely wearing the leather, but that it is part of them at the same time.";
@@ -44,7 +43,7 @@ instead of sniffing the riding crop:
 
 Section 3- Raided Corner Store
 
-Raided Corner Store is a situation.
+Raided Corner Store is a situation.  The level of Raided Corner Store is 3.
 The sarea of Raided Corner Store is "Red";
 when play begins:
 	add Raided Corner Store to badspots of hermaphrodite;
@@ -83,7 +82,7 @@ Section 4- Aussie Pub
 
 Section 5- Flooded Street
 
-Flooded Street is a situation.
+Flooded Street is a situation.  The level of Flooded Street is 3.
 The sarea of Flooded Street is "Red";
 when play begins:
 	add Flooded Street to badspots of guy;

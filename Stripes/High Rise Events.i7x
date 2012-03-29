@@ -21,7 +21,7 @@ Instead of resolving a Rabid Lawyers:
 
 Section 2- Pigging Out
 
-Pigging Out is a situation.
+Pigging Out is a situation.  The level of Pigging Out is 3.
 The sarea of Pigging Out is "High";
 restaurantpig is a number that varies.	[to be used at a later date]
 when play begins:
