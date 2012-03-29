@@ -1231,10 +1231,6 @@ definition: Daytimer is day:
 	otherwise:
 		yes;
 		
-to say dayornightcheck:
-	let x be 0;
-
-
 To process (X - a grab object):
 	if x is temporary:
 		say "You eagerly use up the [x]! ";
