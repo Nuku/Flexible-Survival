@@ -1224,7 +1224,13 @@ definition: Daytimer is day:
 		yes;
 	otherwise:
 		no;
-
+ 
+ definition: Daytimer is night:
+	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
+		no;
+	otherwise:
+		yes;
+		
 to say dayornightcheck:
 	let x be 0;
 
