@@ -5,7 +5,6 @@ underwater zone for fs by Hellerhound begins here.
 Section 1 - Gill Fruit Tree
 
 Gill Fruits Tree is a situation.
-
 the sarea of Gill Fruits Tree is "Beach";
 
 Instead of resolving a Gill Fruits Tree:
@@ -19,9 +18,9 @@ Instead of resolving a Gill Fruits Tree:
 		say "You leave the tree alone.";
 
 
+gill fruit is a grab object;
+gill fruit has a usedesc "[gill fruit use]";
 hasgills is a number that varies.
-
-
 
 Table of Game Objects(continued)
 name	desc	weight	object
@@ -44,14 +43,7 @@ instead of sniffing gill fruit:
 	say "The strange fruit has a faint, fishy scent.";
 	
 
-gill fruit is a grab object;
-gill fruit has a usedesc "[gill fruit use]";
-
-
-
-
 Section 2 - Underwater Beach
-
 
 swimtoing is an action applying to one thing.
 
@@ -145,21 +137,21 @@ instead of sniffing sea dragon cum:
 
 to say sea dragon cum use:
 	if the cunts of the player > 0:
-		say "Do you wish to eat the seed (y), or impregnate yourself with it(n)?";
+		say "Do you wish to eat the seed (y), or impregnate yourself with it (n)?";
 		if the player consents:
-			if a random chance of one in two succeeds:
+			if a random chance of one in two succeeds and guy is not banned:
 				infect "feral sea dragon";
 			otherwise:
 				infect "feral sea dragoness";
 		otherwise:
 			say "You rub the thick stuff into your waiting cunt, massaging it in.  You moan in pleasure as you work the thick cum deep inside you.";
-			if a random chance of one in two succeeds:
+			if a random chance of one in two succeeds and guy is not banned:
 				infect "feral sea dragon";
 			otherwise:
 				infect "feral sea dragoness";
 			impregnate with "feral sea dragon[one of][or]ess[at random]";
 	otherwise:
-		if a random chance of one in two succeeds:
+		if a random chance of one in two succeeds and guy is not banned:
 			infect "feral sea dragon";
 		otherwise:
 			infect "feral sea dragoness";		

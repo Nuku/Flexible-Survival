@@ -1,6 +1,6 @@
 Toy Store by Hellerhound begins here.
 
-Toy Store is a situation.
+Toy Store is a situation.  The level of Toy Store is 1.
 when play begins:
 	add Toy Store to badspots of guy;
 	add Toy Store to badspots of furry;

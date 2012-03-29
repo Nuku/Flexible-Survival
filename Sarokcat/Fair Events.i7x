@@ -59,6 +59,8 @@ The sarea of Salty taffy is "Midway";
 
 Instead of Resolving a Salty taffy:
 	say "Wandering through the cheerful midway of the fair, you come across a stand selling old fashioned salt water taffy, the fresh sticky stuff set up on the counter with a sign next to them saying 'free samples'.  Deciding to take a chance, you help yourself to one of the pieces of sticky candy, chewing and chewing as you go on your way, you find the salty and sweet treat to be a wonderful accompaniment to the fair itself. Unfortunately though, the sticky stuff gums up your mouth and dries it out as you chew, and the salty part of the taste seems to make you even thirstier then before.";
+	decrease hunger of player by 6;
+	if hunger of player < 0, now hunger of player is 0;
 	increase thirst of player by 20;
 	Now Salty taffy is resolved;
 
@@ -105,8 +107,11 @@ Instead of Resolving a Ferris fun time:
 
 Section 12-  Rubber tiger chase
 
-Rubber tigerchase is a situation.
+Rubber tigerchase is a situation.  The level of Rubber tigerchase is 6.
 The sarea of Rubber tigerchase is "Midway";
+when play begins:
+	add Rubber tigerchase to badspots of girl;
+	add Rubber tigerchase to badspots of furry;
 
 Instead of Resolving a Rubber tigerchase:
 	say "Wandering through the cheerful midway of the fair, you spot one of those rubber tigresses hanging around doing something at one of the prize booths, unfortunately it seems to spot you at the same time. Somewhat unusually for one of the rubber beasts, it squeaks and flees down towards one of the nearby buildings, do you give chase?";
@@ -125,6 +130,11 @@ Section 13-  Lion modifying
 
 Lion modifying is a situation.
 The sarea of Lion modifying is "Midway";
+[ Quest requires all three ]
+when play begins:
+	add Lion modifying to badspots of guy;
+	add Lion modifying to badspots of girl;
+	add Lion modifying to badspots of furry;
 
 Instead of conversing the Lisa while borisquest is 3:
 	say "'Your looking for a what?' Lisa says in surprise, 'Um I don[apostrophe]t think we have that brand of condom right now, would another brand suffice?' [line break]";
@@ -150,8 +160,13 @@ Instead of Resolving a Lion modifying:
 
 Section 14- Locked lockers
 
-Locked lockers is a situation.
+Locked lockers is a situation.  The level of Locked lockers is 6.
 The sarea of Locked lockers is "Midway";
+[ Quest requires all three ]
+when play begins:
+	add Lion modifying to badspots of guy;
+	add Lion modifying to badspots of girl;
+	add Lion modifying to badspots of furry;
 
 Instead of Resolving a Locked lockers:
 	if christyquest is 0:

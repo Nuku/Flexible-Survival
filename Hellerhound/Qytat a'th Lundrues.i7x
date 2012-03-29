@@ -6,6 +6,10 @@ Section 1 - Guard Gryphon Event
 	
 Guard Gryphon is a situation.
 findablestairs is a number that varies.
+when play begins:
+	add Guard Gryphon to badspots of hermaphrodite;
+	add Guard Gryphon to badspots of furry;
+
 
 Instead of resolving a Guard Gryphon:
 	say "     You come across a hermaphrodite gryphon, this one with a red banner with an 8-pointed silver star in the center.  Shi is watching the sky from a rooftop, as if watching for others of hir kind in the air.";

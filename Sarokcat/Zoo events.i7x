@@ -4,7 +4,8 @@ Zoo Events by Sarokcat begins here.
 
 Section 1- Electric shockers
 
-Electric shockers is a situation.
+Electric shockers is a situation.  The level of electric shockers is 10.
+[This is to restrict low-level players from unknowingly finding the superweapon.]
 The sarea of Electric shockers is "Zoo";
 
 Electricprodstatus is a number that varies.
@@ -32,7 +33,7 @@ Instead of Resolving a Electric shockers:
 		add "Electric prod" to invent of player;
 		now epcountdown is 0;
 		now eptarget is a random number between 9 and ( 27 - eprecharge);	[repairs are increasingly less effective]
-		if eprecharge is 4:
+		if eprecharge >= 4:
 			now Electric Shockers is resolved;
 		now Electricprodstatus is 2;		
 
@@ -47,13 +48,14 @@ instead of sniffing Electric prod:
 	say "The electric stun rod smells faintly of ozone.";
 
 An everyturn rule:
-	if the Electric prod is wielded and epcountdown is less than eptarget:
+	if the Electric prod is wielded and epcountdown <= eptarget:	[added equality to stop a Trixie-loaded prod to need recharging in a fresh game]
 		increase epcountdown by 1;
-		if epcountdown is eptarget:
+		if epcountdown >= eptarget:
 			say "With one last electric fizz and pop, the electric prod dies in your hands, its battery obviously drained by the damaged circuits burning out.  Sighing you take a look at your broken weapon, before sticking it in the back of your pack to throw away later... At least you got to have some fun with it while it lasted...";
 			now Electricprodstatus is 3;
 			process Electric prod;
 			delete Electric prod;
+
 
 Section 2-  Hyena cages
 
@@ -64,13 +66,17 @@ Instead of Resolving a Hyena cages:
 	say "You come across an enclosure that looks like it was burst open from the inside, taking a closer look you notice it looks almost like some of the bars were bitten clean through!  Taking a careful look at the plaque you find that this was actually once the hyena enclosure! Well now you know where all the hyena[apostrophe]s wandering the city came from, and here you thought it was just the natural evolution of scavengers into scavenging hyenas.... still as you are about to leave you note from the 'fun facts' section that the hyena has one of the most powerful bites in the animal kingdom, strong enough even to chew through metal.... you resolve to be more careful next time you face one of the cackling beasts.";
 	Now Hyena cages is resolved;
 
+
 Section 3-  Pachyderm predicament
 
 Pachyderm predicament is a situation.
 The sarea of Pachyderm predicament is "Zoo";
+when play begins:
+	add Pachyderm predicament to badspots of hermaphrodite;
+	add Pachyderm predicament to badspots of furry;
 
 Instead of Resolving a Pachyderm predicament:
-	say "Wandering through the zoo, you hear some shouting in the distance, moving closer you find one of the zoo employees, that obviously hasn[apostrophe]t succumbed fully to the changes yet. Unfortunately he is stranded in the middle of one of the more open enclosures, on a rock in what appears to be a lake of cum.  You blink at the sheer amount of the stuff coating the area, but are distracted by some rough slapping sounds underneath the hoarse cries of the trapped employee.  Looking around you are shocked to spot two massive mounds of grey flesh going at it not far away, their sheer size making it hard to recgonize them as humanlike elephants instead of say, small buildings.  You find yourself gaping at the riduclous size of the one on the bottoms cock, then clap your hands to your ears as they both trumpet, the one on top erupting into the one on bottom, and the one on bottom erupting everywhere.  The trapped employee moans, as the lake of seed around him rises even higher, the elephant herms take a minute to rest, before switching positions and starting up again.  Sadly you really don[apostrophe]t see any way you could reach the employee to help with anything short of a helicopter, and you certainly aren[apostrophe]t up to taking on two large foes that size.  Shaking your head you move off into the zoo, trying not to shudder at the soon to be elephantine employees cries.";
+	say "Wandering through the zoo, you hear some shouting in the distance, moving closer you find one of the zoo employees, that obviously hasn[apostrophe]t succumbed fully to the changes yet. Unfortunately he is stranded in the middle of one of the more open enclosures, on a rock in what appears to be a lake of cum.  You blink at the sheer amount of the stuff coating the area, but are distracted by some rough slapping sounds underneath the hoarse cries of the trapped employee.  Looking around you are shocked to spot two massive mounds of grey flesh going at it not far away, their sheer size making it hard to recgonize them as human-like herm elephants instead of say, small buildings.  You find yourself gaping at the ridiculous size of the one on the bottom's cock, then clap your hands to your ears as they both trumpet, the one on top erupting into the one on bottom, and the one on bottom erupting everywhere.  The trapped employee moans, as the lake of seed around him rises even higher, the elephant herms take a minute to rest, before switching positions and starting up again.  Sadly, you really don[apostrophe]t see any way you could reach the employee to help with anything short of a helicopter, and you certainly aren[apostrophe]t up to taking on two large foes that size.  Shaking your head you move off into the zoo, trying not to shudder at the soon to be elephantine employees cries.";
 	Now Pachyderm predicament is resolved;
 
 Section 4-  Snake knot
@@ -137,6 +143,9 @@ Section 9-  AngieTrapped
 
 AngieTrapped is a situation.
 The sarea of AngieTrapped is "Zoo";
+when play begins:
+	add AngieTrapped to badspots of hermaphrodite;
+	add AngieTrapped to badspots of furry;
 
 angiehappy is a number that varies.
 
@@ -160,13 +169,14 @@ Instead of Resolving a AngieTrapped:
 		now angietalk is 2;
 		Now AngieTrapped is resolved;
 
+
 Section 10-  Panda parade
 
 Panda parade is a situation.
 The sarea of Panda parade is "Zoo";
 
 Instead of Resolving a Panda parade:
-	say "Traveling through the zoo, you stop as you see a white and black coloured bearlike man, tottering down one of the other paths, a zookeepers hat still sitting jauntily atop the very well endowed pandas head.  You back off out of sight of the panda as it trots past, seemingly intent on moving as fast as it can down the path.  You are about to come out of hiding, when another more beastial panda comes trotting down the path moving quickly, this one is obviously female and it quickly chases after the retreating male panda.  The second panda is swiftly followed by two more female pandas, each batting at each other as they try to get ahead, and finally one last slightly pandalike female trailing along after everyone else, the final one still kicking off its encumbering clothing as it continues to change into a full panda.  Slightly amused at the strange situation, you wait to be sure there arent any more girl pandas chasing after the obviously very popular guy panda, before coming out of hiding and continuing on your way.";
+	say "Traveling through the zoo, you stop as you see a white and black coloured bearlike man, tottering down one of the other paths, a zookeeper's hat still sitting jauntily atop the very well-endowed panda's head.  You back off out of sight of the panda as it trots past, seemingly intent on moving as fast as it can down the path.  You are about to come out of hiding, when another more beastial panda comes trotting down the path moving quickly, this one is obviously female and it quickly chases after the retreating male panda.  The second panda is swiftly followed by two more female pandas, each batting at each other as they try to get ahead, and finally one last slightly pandalike female trailing along after everyone else, the final one still kicking off its encumbering clothing as it continues to change into a full panda.  Slightly amused at the strange situation, you wait to be sure there aren't any more girl pandas chasing after the obviously very popular guy panda, before coming out of hiding and continuing on your way.";
 	Now Panda parade is resolved;
 
 
@@ -192,6 +202,7 @@ Instead of Resolving a Instructional video:
 	say "Coming across one of the zoo buildings in your wanderings, you try taking a look inside, and find a small open class like area, with several desks set up and a projector hooked up to a vcr.  Taking a look at the vcr it is labeled 'Animal Handling Training', feeling curious you push play and settle down to watch a bit.  Soon you are caught up in all the tips and tricks the training tape teaches to aspiring zookeepers on how to handle the animals and deal with any trouble.  An hour later when the tape clicks off, you find yourself feeling much more confidant about your ability to deal with any animals or beasts that you might come across.";
 	increase xp of player by 30;
 	Now Instructional video is resolved;
+
 
 Section 13- Vet supplies
 
@@ -269,8 +280,11 @@ Instead of Resolving a Vet supplies:
 
 Section 14- Feeding time
 
-Feeding time is a situation.
+Feeding time is a situation.  The level of feeding time is 9.
 The sarea of Feeding time is "Zoo";
+when play begins:
+	add Feeding time to badspots of hermaphrodite;
+	add Feeding time to badspots of furry;
 
 Instead of Resolving a Feeding time:
 	say "Traveling through the twisting paths of the zoo, you come across a rather strange sight, someone has left several cans of food and a bottle of water out in one of the animal feeding areas. Looking around you can[apostrophe]t see any reason for someone to have done so, and the food and water could be pretty useful, still it is rather suspicious, do you try to take it?";
@@ -292,16 +306,22 @@ Instead of Resolving a Feeding time:
 		say "Deciding that anything that looks this suspicious is probably some form of trap, you continue along your way, leaving the food and water behind.";
 		now Feeding time is resolved;
 
+
 Section 15- Security Station
 
 Security Station is a situation.
 The sarea of Security Station is "Zoo";
+when play begins:
+	add Security Station to badspots of guy;
+	add Security Station to badspots of girl;
+	add Security Station to badspots of furry;
 
 Instead of Resolving a Security Station:
 	say "Traveling through the deserted zoo, you come across the entrance to a security station. While normally the doors to such areas are locked tightly, this one seems to have been broken down at some point during the recent troubles. Deciding to take a look inside, you can see the security station has several monitors that appear to be working at a glance, although some of them appear to be playing on a loop.  Moving into the small security area, you note that it smells like beastial sex in here, leaving no doubt as to why the security station was broken into, the rich musky scent makes your body tingle with lust, and you realize you can[apostrophe]t stay in here for long without becoming even more aroused then usual. Still there might be something of use in here, you think as you search the small monitoring room, you find your eyes continually drawn to the monitors however, as the action on the screen repeats itself over and over.  Soon you stop even trying to search the area, and are just watching intently, as a cheetah woman teases a zoo intruder into becoming her male mate, and the scene as a pair of wolftaurs burst out of the bathroom and run down some of the zoo paths, before the male catches the female and begins to mate her like an animal. Other scenes of sex and transformation are played out on the monitors in front of you, but you manage to pull yourself away from the sexual scene and scents, and stagger out of the Security booth. Somehow sure that if you had stayed much longer, you would have stayed there watching the sexual scenes and growing increasingly aroused until one of the beasts in the zoo managed to find you in there, and given how aroused you already are.. by that point you might not even have fought whatever strong sexual beast came to take you...  Shaking your head to try to clear it of the increasingly lewd thoughts you continue on your way through the zoo.";
 	now libido of player is 100;
 	decrease humanity of player by 10;
 	Now Security Station is resolved;
+
 
 Section 16- Broken fences
 
@@ -323,6 +343,7 @@ Instead of Resolving a Wandering beasts:
 	fight;
 	Now Wandering beasts is resolved;
 
+
 Section 18- Roaming spots
 
 Roaming spots is a situation.
@@ -332,19 +353,28 @@ Instead of Resolving a Roaming spots:
 	say "Wandering through the zoo, you find yourself alongside one of the small stands of trees set up against the sides of the zoo. You freeze as you hear a noise come from the branches up ahead, and slowly look up, not seeing anything for a minute, before suddenly realizing that a large Leopardman is slowly moving across the branches.  You feel your cheeks heating up even as you try to hold your breath, your eyes fixed on his large sheath even as the spotted Leopardman slowly shifts into the next tree.  You watch with a mixture of fascination and a strange desire as the sleek feline stretches up from his position in his newest tree, until he can grip the top of the zoo wall easily. You blink as in one swift movement the lithe Leopard hauls himself onto the top of the wall, before sliding down out of sight on the other side.  You let out a soft gasp of relief as you realize you are safe from the large feline for now, although for some strange reason you find yourself almost wishing the powerful male cat had noticed you standing there..."; 
 	now Roaming spots is resolved;
 
+
 Section 19- Picture striping
 
 Picture striping is a situation.
 The sarea of Picture striping is "Zoo";
+when play begins:
+	add Picture striping to badspots of guy;
+	add Picture striping to badspots of girl;
+	add Picture striping to badspots of furry;
 
 Instead of Resolving a Picture striping:
 	say "Traveling through the mostly deserted zoo, you find yourself next to one of those old fashioned photo kiosks, this one proudly displaying several various animal themed backgrounds you can choose from. Smiling you pull the curtain to step inside, only to find your nose assaulted with the scent of sex and musk, letting the curtain fall, you gasp for some clean air. As you do so you notice that the slot that dispenses pictures seems to have a strip already in it, curious you pull the strip of pictures out.  Blinking you stare down as a handsome young teenager poses against an african background, a zebra close behind him, the next picture shows the young man turning as the zebra puts its head on his shoulder, an actual zebraman that appears to have been hiding in the booth. The next several shots show in full colour detail the zebra stallion pinning the changing man up against the side of the photo booth, as his body lengthens and is covered in stripes.  The final photo is a wonderfully done photo of a zebra stallion mounting an eager zebra mare with a lewd smile on his snout. You shudder as you realize what a narrow escape you just had, if you had been the first person into that booth, there would have been no way for you to escape or fight in such a confined space. Sighing you prop the pictures up against the photo booth, leaving them there in case the zebras involved want to come back for a momento, you continue your trip through the zoo.";
 	now Picture striping is resolved;
 
+
 Section 20- Lazy River		[Event by Shadowwolf94]
 
 Lazy River is a situation.
 The sarea of Lazy River is "Zoo";
+when play begins:
+	add Lazy River to badspots of guy;
+	add Lazy River to badspots of furry;
 
 Instead of Resolving a Lazy River:
 	say "Traveling through the zoo area, you spot something odd in the hippo enclosure.  Sneaking up to the fence and peaking over, you spot a large hippo man relaxing on his back in the water. Your eyes are soon drawn to what he[']s doing though.  One of his large hands is wrapped around his massive shaft, gently stroking it[']s thick length while his other kneads his large ballsac.  Floating lazily along, he pumps and strokes his throbbing shaft.  You can[']t seem to look away from this arousing scene, your knees feeling weak as your mind is filled with thoughts of sex with this beast.  You are shaken out of your fantasy when the large beast man roars out in orgasm, painting his belly and filling the nearby water with his white seed.  Afterwards, he flops around in the water, looking relaxed and content as he bobs along.  You shake your head clear and slip away quietly before something notices you, feeling quite aroused by the whole voyeuristic experience.";

@@ -33,6 +33,7 @@ instead of resolving a loaded catapult:
 		if the player consents:
 			say "Overcoming your disgust, you dip your [face of player] head into the mess, slurping it up.";
 			decrease the thirst of the player by 25;
+			decrease humanity of player by 10;
 			sort table of random critters in random order;
 			now monster is 1;
 			if "Iron Stomach" is not listed in feats of player, infect;

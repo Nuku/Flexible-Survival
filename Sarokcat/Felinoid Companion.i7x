@@ -1,5 +1,5 @@
 Version 2 of Felinoid companion by Sarokcat begins here.
-[ Version 2 - Sven specific endings added ]
+[ Version 2.1 - Event leveled and flagged ]
 
 "Adds a special event to Flexible Survival with a potential pet."
 
@@ -66,8 +66,11 @@ An everyturn rule:
 				if libido of player > 100, now libido of player is 100;
 
 
-Injured Felinoid companion is a situation.
+Injured Felinoid companion is a situation.  The level of Injured Felinoid is 6.
 The sarea of Injured Felinoid companion is "Park";
+when play begins:
+	add Injured Felinoid to badspots of guy;
+	add Injured Felinoid to badspots of furry;
 
 Instead of resolving Injured Felinoid companion:
 	if felinoidrescued is 2:
@@ -173,5 +176,3 @@ when play ends:
 
 
 Felinoid companion ends here.
-
-

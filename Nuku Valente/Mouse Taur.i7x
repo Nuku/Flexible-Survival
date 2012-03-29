@@ -9,8 +9,8 @@ Section 1 - The Situations	[two ways to meet Lisa now]
 Mouse Taur is a situation.
 The sarea of Mouse Taur is "Red";
 When play begins:
-	add "Mouse Taur" to infections of Furry;
-	add "Mouse Taur" to infections of Girl;
+	add "Mouse Taur" to infections of furry;
+	add "Mouse Taur" to infections of girl;
 
 After resolving a Mouse Taur, try looking;
 
@@ -39,8 +39,9 @@ Instead of Resolving a Mouse Taur:
 Find Porn Store is a situation.  The level of Find Porn Store is 5.
 The sarea of Find Porn Store is "Red";
 When play begins:
-	add "Find Porn Store" to infections of Furry;
-	add "Find Porn Store" to infections of Girl;
+	add "Find Porn Store" to infections of furry;
+	add "Find Porn Store" to infections of girl;
+	add "Find Porn Store" to infections of hermaphrodite;
 
 After resolving a Find Porn Store, try looking;
 

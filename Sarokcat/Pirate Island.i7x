@@ -159,7 +159,7 @@ carry out treasurehunt:
 					say "Wandering through the caves of the island, you hear a strange rhythmic noise coming from one of the caverns up ahead, do you want to investigate?";
 					if player consents:
 						say "Moving ahead you find yourself in a large open beach cave, a strange pleasant scent filling your nostrils as you move into the cave.  The noise continues, before a loud roar lets out behind you.  Jumping you turn around swiftly to see a sea dragon and dragoness panting together in the far back of the cave, this must be their lair, and the rhythmic sound was the sound of their mating!  The two large beasts stare at you for a second, and you stare back at them as well, before they can react you break into a run, leaving the cave to the two large beasts before they can get around to punishing you for trespassing.  Still after the encounter you find yourself feeling slightly strange and woozy, your head still filled with the scent of their mating as you realize it is trying to change you...";
-						if cunts of player is greater than 0:
+						if cunts of player is greater than 0 or girl is banned:
 							infect "feral sea dragon";
 							infect "feral sea dragon";
 						otherwise:
@@ -192,21 +192,22 @@ Instead of resolving a Noteinbottle:
 	if player consents:
 		fight;
 		fight;
-		say "having braved the waves you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside!  More then a bit curious at this point you quickly open the bottle up and fish the message out.  Spreading it out on the sand beside you, you puzzle over the hastily scrawled message, looking almost like a rat scribbled on the page. Unable to make it out fully, it seems to be a warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference or a boat it is totally useless to you right now.  Still if there is pirates their might be treasure right?  Just to be on the safe side you roll the map up and stick it in your pocket anyways.";
-		now tmapfound is 1;
-		Now Noteinbottle is resolved;
-		stop the action;
+		if guy is banned or furry is banned or hermaphrodite is banned:
+			say "Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside!  More then a bit curious at this point, you quickly open the bottle up and fish the message out.  But it seems water leaked into the bottle and the message is unreadable except for a short scrawl at the bottom that says: 'The treasure hunt requires guy, hermaphrodite and furry content to be available.  Please try again.  No purchase necessary.  Void where prohibited.  May cause unexpected priapism.'  Hmmm... very strange.";
+		otherwise:
+			say "Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside!  More then a bit curious at this point you quickly open the bottle up and fish the message out.  Spreading it out on the sand beside you, you puzzle over the hastily scrawled message.  It is very difficult to read, but something about 'rats' and 'missing the food court' can be made out.  There also seems to be some kind of warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference or a boat, it is totally useless to you right now.  Still if there are pirates, there might be treasure, right?  Just to be on the safe side, you brush some short, gray hairs from the mape, roll it up and stick it in your pocket anyway.  Perhaps you should do some more investigating.";
+			now tmapfound is 1;
+			Now Noteinbottle is resolved;
 	otherwise:
 		say "Deciding not to bother with the strange bobbing object, you continue your nice walk along the beach.";
-		stop the action; 
 
 
 
-Findingboat is a situation.
+Findingboat is a situation.  The level of Findingboat is 7.
 the sarea of Findingboat is "Beach"
 
 Instead of conversing the Rod while tmapfound is 1:
-	say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I[apostrophe]ll be right, I wanna show this to the others!' The well dressed mall rat calls back over his shoulder.   You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' He says as he hands you the two pieces of paper. 'Turns out that[apostrophe]s some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that aint too far away actually. No clue whats on the island though,  but the scratchings on the front part are definitely a warning about pirates!'  Rod says with a shrug, then grins. 'Turns out there are some sea rats out there somewhere too, some of the other mall rats are thinking about hitting the beach sometime to find em, not me though, but hey whatever your doing it sounds kinda exciting, let us know how it all turns out ok? And if ya see any sea rats, say hi for us.' Rod finishes, before he goes back to his being cool and hanging around the foodcourt, while you look down at your original map, and the translated map with a small speck of land not far off the coast circled, with this you might be able to find the pirates! And maybe some treasure too!";
+	say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I[apostrophe]ll be right, I wanna show this to the others!' The well dressed mall rat calls back over his shoulder.   You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' He says as he hands you the two pieces of paper. 'Turns out that[apostrophe]s some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that aint too far away actually. No clue whats on the island though,  but the scratchings on the front part are definitely a warning about pirates[if level of player < (7 - levelwindow)]!  You'd best toughen yourself up before trying to find a way over there[otherwise]!  Best be careful[end if].'  Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too.  Some of the other mall rats are thinking about hitting the beach sometime to find [']em.  Not me though, but hey whatever your doing it sounds kinda exciting, let us know how it all turns out ok? And if ya see any sea rats, say hi for us.' Rod finishes, before he goes back to his being cool and hanging around the food court, while you look down at your original map, and the translated map with a small speck of land not far off the coast circled, with this you might be able to find the pirates! And maybe some treasure too!";
 	increase tmapfound by 1;
 
 Instead of resolving Findingboat:
@@ -237,10 +238,6 @@ Instead of resolving Findingboat:
 			stop the action;
 	otherwise:
 		say "Traveling along the beach, you come across a large jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, but they probably wouldn[apostrophe]t be able to take you very far, so you end up continuing on your way, forced to look for another method of getting out of the city.";
-
-
-
-
 
 
 

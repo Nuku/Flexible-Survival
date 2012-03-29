@@ -6,6 +6,9 @@ Section 1- Poppies field
 
 Poppies field is a situation.
 The sarea of Poppies field is "Park";
+when play begins:
+	add Poppies field to badspots of hermaphrodite;
+
 
 Instead of Resolving a Poppies field:
 	say "Traveling through the park you stumble into a less used area, where some strange flowers appear to have taken root, looking closer at the brilliant blooms, you feel a sense of peace and tranquility wash over you, for some reason you feel like stopping to relax here for a while, do you take a rest?";
@@ -22,8 +25,6 @@ Instead of Resolving a Poppies field:
 		now Poppies field is resolved;
 
 
-
-
 Section 2- Empty jeep
 
 Empty jeep is a situation.
@@ -32,6 +33,7 @@ The sarea of Empty jeep is "Park";
 Instead of Resolving a Empty jeep:
 	say "While traveling through the park, you come across what is obviously a caretakers jeep, the offroad vehicle just sitting there in the middle of the area with its drivers side door wide open. Moving closer to investigate you realize a strange and powerful smell is coming from within the jeep, it smells like whoever was in the vehicle got sprayed by one of those wandering skunks.  Sadly you realize, with as much of the musk as was sprayed into the jeep, if you tried to take the vehicle, even if it worked you probably wouldn[apostrophe]t get far before turning into a skunk beast like you assume must have happened to the vehicles former owner. Sighing you continue on your way. ";
 	now Empty jeep is resolved;
+
 
 Section 3- small fire
 
@@ -42,10 +44,14 @@ Instead of Resolving a small fire:
 	say "While traveling through the park,  you come across an area where someone seems to have recently set a small fire, the fire is slowly burning in a pit of stones in what looks to be the start of a small campsite. Sadly it seems like the fire has almost burned itself out, but you see no signs of whoever or whatever started the fire in the first place.  Figuring it would probably be best to keep moving, just in case the fire attracts something dangerous, you continue along your way.";
 	now small fire is resolved;
 
+
 Section 4 - fallen tree
 
-fallen tree is a situation.
+fallen tree is a situation.  The level of fallen tree is 4.
 The sarea of fallen tree is "Park";
+when play begins:
+	add fallen tree to badspots of girl;
+	add fallen tree to badspots of furry;
 
 Instead of Resolving a fallen tree:
 	say "While traveling along one of the hiking paths in the park, you note a tree seems to have fallen across the path, it isn[apostrophe]t in the best location for just going around either, as the thick undergrowth could conceal just about anything.  You can continue onwards if you choose, but something seems slightly suspicious about this, maybe it would be safer to head back...  Do you go on?";
@@ -59,10 +65,14 @@ Instead of Resolving a fallen tree:
 		say "deciding the whole situation is far to suspicious for your liking, you heft your pack and head back down the way you came.";
 	now fallen tree is resolved;
 
+
 Section 5- Poke trap
 
-Poke trap is a situation.
+Poke trap is a situation.  The level of Poke trap is 4.
 The sarea of Poke trap is "Park";
+when play begins:
+	add Poke trap to badspots of girl;
+	add Poke trap to badspots of furry;
 
 Instead of Resolving a Poke trap:
 	say "Minding your own buisness as you wander the park, you start to hear a strange noise from off to the side, when you turn to look you see a flash of yellow fur, like on some small creature, and a soft pi pi pi noise, Do you investigate further? ";
@@ -81,10 +91,14 @@ Instead of Resolving a Poke trap:
 		say "your paranoia getting the best of you, you continue minding your own business.";
 	now Poke trap is resolved;
 
+
 Section 6- Felinoid lair
 
 Felinoid lair is a situation.
 The sarea of Felinoid lair is "Park";
+when play begins:
+	add Felinoid lair to badspots of girl;
+	add Felinoid lair to badspots of furry;
 
 lairconsent is a number that varies.
 
@@ -98,11 +112,9 @@ Instead of Resolving a Felinoid lair:
 			increase lairconsent by 1;
 			infect "Felinoid";
 			infect "Felinoid";
-			stop the action;
 		otherwise:
 			say "You decide not to venture inside the cave this time, though you make a note of its location just in case you decide to return later.";
-			stop the action;
-	if lairconsent is 1:
+	otherwise if lairconsent is 1:
 		say "Traveling along the park trail, you find your feet have brought you back once more to the strange hollow in the hill you visited before, looking around you see that once more the area seems unoccupied for now.  You remember both the stash of food and water you recovered here before, as well as that wonderfully musky scent that even now makes you want more.  But do you dare venturing inside again?";
 		if player consents:
 			say "Moving down onto all fours, you crawl back into the small cave again, the wonderful musky odor once more filling your brain with its intoxicating odor. As your eyes adjust to the dim interior, you notice immediately that the owner of the cave has repleaced its stash of food and water, as you can see some sitting right in plain sight in the deepest part of the hollow.  Quickly moving forward on all fours, you snag your new loot, amazed at it just sitting there for you to take, and realize as you pause for a minute that the musk all around you is even stronger here. You find yourself pausing and just enjoying the wonderful scent for who knows how long before you snap out of it and recall that the owner of the cave could be back any minute. Strangely the thought of waiting for the cave owners return, is an extremely tempting one right now, and you can almost feel your body shifting and changing so you could greet him properly....  Managing to shake yourself out of it somehow, you pad out of the cave on all fours, the position seeming almost natural after visiting the small cave, and head back out into the park. Somehow though, you know you will end up back here at the cave again... and maybe this time its owner will be there to...";
@@ -112,10 +124,9 @@ Instead of Resolving a Felinoid lair:
 			infect "Felinoid";
 			infect "Felinoid";
 			infect "Felinoid";
-			stop the action;
 		otherwise:
 			say " with some effort you manage to draw yourself away from the welcoming cave entry, and stagger on your way through the park, though for some reason you find yourself hoping you run across the place again soon.";
-	if lairconsent is 2:
+	otherwise if lairconsent is 2:
 		say "As you travel through the walking trails, you look up to find your wandering feet have taken you back once again to that familiar hollow in the side of the hill. Looking around again you still see no signs of the occupant anywhere around, though it is obvious that it still returns here fairly often.  You try to decide whether or not to venture inside again, only to have your body decide for you, as before you know it, you are on all fours again and crawling into the hollow cave. Looking around the now familiar interior, you think you spot something in the back corner, and quickly crawl over to that area. The strong musk in the cave seems to be making you even hornier then before now, but you manage to hold yourself together until you reach the small object you saw which seems to be a soda can stuffed in the corner.  As you tug at it, it comes away in your hand, causing you to realize it was empty, but even as you realize that, a stronger wave of musk from the corner washes over you, making you realize with your already fuzzy head that the occupant must have marked this area extensively with its strong masculine scent for when you came back.";
 		If humanity of player is less than 40:
 			say "Unable to help yourself, your animalistic impulses take over and you find yourself rolling around in the strong masculine scent, the scent overwhelming you with instinctual needs and desires. You love the strong masculine musk of the beasts lair, and find yourself burying your muzzle into the scent and inhaling deeply, groaning as it sends shivers through your body of purest need.  You realize that your body is shifting and changing, but you can[apostrophe]t help but enjoy the sensations and embrace the changes, as on some level you realize they are making you better, making you a more suitable mate for the strong male owner of the lair.  You can[apostrophe]t help but purr slighly at that thought, your body shuddering at the thought of the lairs owner, wondering what it would be like to be owned by such an obviously strong and masculine beast yourself, to prostrate yourself before his strong dominant form and beg him to use you as he wishes. [line break]";
@@ -128,7 +139,6 @@ Instead of Resolving a Felinoid lair:
 			challenge "Felinoid";
 			say " Sighing you crawl out of the lair, exhausted from the ordeal, and feeling even less like yourself and more like a beast then ever before, you slowly pad away from the feline creatures lair, though with the temptation to return this strong, you feel like you might not be able to stay gone for long...";
 			decrease humanity of player by 10;
-			stop the action;
 		otherwise:
 			say "You realize that you can[apostrophe]t stay here any longer, even as you can feel your body changing from the musk, changing you to be a better mate for the strong masculine beast who[apostrophe]s lair this is, you find yourself moaning at that thought before you manage to snap yourself out of it. You crawl outside desperately gasping for some air not scented by his powerful and dominating scent, that makes you want to moan and lift your body up for his strong touch. Groaning you realize your mind was once more back on being nothing more then the fucktoy of the lairs owner, submitting to him again and again in a wonderfully pleasurable night of beastial sex. Yowling out with need, you manage to drag yourself further away, until you can start to think somewhat clearly again, you know you need to get out of here quickly before the caves owner returns.  Even as you leave you find your mind returning to the thought of waiting helplessly for the caves owner having him take you again and again, and know that you can[apostrophe]t afford to come back here again, not unless you want to be reduced to just another animal.  Still you realize that deep down the experience has changed you already, made you less human and more beastial on some level, and you really aren[apostrophe]t sure if you regret the change either.";
 			decrease humanity of player by 20;
@@ -157,6 +167,7 @@ Instead of Resolving a Abandoned picnic:
 	Add "Chips" to invent of player;
 	now Abandoned picnic is resolved;
 
+
 Section 9- Groundskeepers cabin
 
 Groundskeepers cabin is a situation.
@@ -165,6 +176,7 @@ The sarea of Groundskeepers cabin is "Park";
 Instead of Resolving a Groundskeepers cabin:
 	say "While traveling through the park, you come across a small locked building set back in the vegetation, closer investigation allows you to find a small sign that someone knocked over, declaring it to be one of the park buildings and employees only.  Deciding that under the circumstances you really don[apostrophe]t care about the employees only rule, you search around the small building to try to find a way in, only to be frustrated at the way the building is locked up tight. Sighing you are eventually forced to go on your way, but maybe you will be back to try again later.";
 	now Groundskeepers cabin is resolved;
+
 
 Section 10- Badger sighting
 
@@ -176,5 +188,3 @@ Instead of Resolving a Badger sighting:
 	now Badger sighting is resolved;
 
 Park Events ends here.
-
-
