@@ -460,6 +460,8 @@ When play ends:
 	if hellHoundLevel > 0:
 		if bodyname of player is "Reindeer" and facename of player is "Reindeer" and cockname of player is "Reindeer" and skinname of player is "Reindeer" and tailname of player is "Reindeer":								[gave into the holiday spirit]
 			say "     Having given in to the magic of the holidays, you are freed from the Hellhound's curse.";
+		if bodyname of player is "Bottlenose Toy" and facename of player is "Bottlenose Toy" and cockname of player is "Bottlenose Toy" and skinname of player is "Bottlenose Toy" and tailname of player is "Bottlenose Toy":								[gave into the holiday spirit]
+			say "     Having become an innocent creature living only for happiness and playtime breaks the Hellhound's curse upon you.";
 		otherwise if bodyname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and cockname of player is "Tigress Hooker" and skinname of player is "Tigress Hooker" and tailname of player is "Tigress Hooker":		[claimed at the tigress motel]
 			let T be 0;			[do nothing statement]
 		otherwise if bodyname of player is "Big Tiger" and facename of player is "Big Tiger" and cockname of player is "Big Tiger" and skinname of player is "Big Tiger" and tailname of player is "Big Tiger":						[victory at tigress motel]

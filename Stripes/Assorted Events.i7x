@@ -1,5 +1,5 @@
-Version 3 of Assorted Events by Stripes begins here.
-[version 3 - Diego-related events added ]
+Version 4 of Assorted Events by Stripes begins here.
+[version 4 - Beach Party event added ]
 
 "Adds a batch of random events to Flexible Survival scattered around the city."
 
@@ -470,6 +470,73 @@ when play ends:
 			otherwise:
 				say ".  The fel beasts breed you incessantly, filling your womb with litters of their spawn.  Regardless of your form, they are always pure hellspawn like their brethren.  They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time.";
 		stop the action;
+
+
+Section 6 - Beach Events
+
+Beach Party is a situation.  The level of Beach Party is 5.
+The sarea of Beach Party is "Beach";
+when play begins:
+	add Beach Party to badspots of furry;
+	add Beach Party to badspots of girl;
+
+Instead of resolving a Beach Party:
+	say "     Travelling along the beach, you crest a small dune to find a group of bright pink, dolphin girls splashing around in the water.  They seem to be throwing a [if daytimer is day]sunny[otherwise]nighttime[end if] beach party for themselves, giggling and playing around a large dolphin pooltoy.  One runs over to a small cooler and pulls out a can of soda.  After shaking it up, she sprays it wildly across her friend's body, causing her to squeak and laugh as she tries to block the foamy spray[if thirst of player > 30].  Feeling rather thirsty yourself, you find it disappointing they'd waste a drink like that[end if].  As the foam slides down her body, you notice that something is odd about their appearance[if daytimer is day].  In the sunlight, you can see that the dark cola running down her back can be seen through her[otherwise].  In the moonlight, you can see the foam cola running smoothly down her body[end if].  These dolphin girls are inflatable creatures and completely empty save for air.";
+	say "     It is at this point that you are spotted.  And, eager for more fun, the dolphin girl on the beach tosses down the empty can and bounds her way towards you with a vapid smile on her face.";
+	now dolphinflatablefight is 3;
+	challenge "Bottlenose Toy";
+	if dolphinflatablefight is 1:
+		say "     With the first dolphin girl sent back to the water, she giggles and gets in a splashing fight with her friend who got the soda treatment to help clean her off.  As this goes on, another of the dolphin girls prances out of the water with loud giggles to play with you as well.";
+		now dolphinflatablefight is 3;
+		challenge "Bottlenose Toy";
+		if dolphinflatablefight is 1:
+			say "     As the second is returning to the water, the one you believe was sprayed with the soda comes towards you.  You don't really know how you can tell the identical dolphin girls apart, but you're fairly certain its her coming towards you with a big smile on her bottlenose snout.";
+			now dolphinflatablefight is 3;
+			challenge "Bottlenose Toy";
+			if dolphinflatablefight is 1:
+				say "     As she prances back into the water, the girls giggle and whisper amongst themselves.  They grab onto the dolphin pooltoy floating in the water around them and together toss it towards you.  It floats lazily in the air, drifting all the way up the dune to land near your feet.";
+				now dolphinflatablefight is 4;
+				challenge "Bottlenose Toy";
+				if dolphinflatablefight is 1:
+					say "     With the green dolphin sent back into the water, the girls start playing around with it.  Some start fingering themselves and each other, rather worked after their amusement with you.  With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks";
+					add "soda" to invent of player;
+					add "soda" to invent of player;
+	if dolphinflatablefight is 2:
+		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once.  One has the last of the sodas.  But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily.  The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you.  Their rubber tongue glide across your skin and seek to tease you all over.  Two set to work on your nipples[if breast size of player > 0], squeezing your breasts[end if].  Others kiss and lick at your face and nibble at your ears.  Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin.  Her tongue plays over your [if cocks of player > 1]sticky, throbbing [cockname of player] cocks[otherwise if cocks of player is 1]sticky, throbbing [cockname of player] cock[otherwise if cunts of player > 1]sticky, juicy pussies[otherwise if cunts of player is 1]sticky, juicy pussy[otherwise]sticky thighs and barren crotch[end if].  Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills.  All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you[if cocks of player is 0 and cunts of player is 0].  Once you're finally all cleaned up,[otherwise].  When you finally cum,[end if] the pink dolphins release you, heading back to frolic in the water again.";
+		say "     Having the airheaded dolphin girls lavish so much attention onto you, you can't help but feel yourself fading away some, as if you're becoming more empty-headed and giggly like them.  You rise to your feet easily, feeling as if bouyed by your own happy feelings and look over your body, fully that of an inflatable dolphin like those pretty girls";
+		decrease humanity of player by 20;
+		increase morale of player by 5;
+		[puts Bottlenose Toy as lead monster for infection and impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Chocolate Lab":
+				now monster is y;
+				break;
+		now tailname of player is "Bottlenose Toy";
+		now facename of player is "Bottlenose Toy";
+		now skinname of player is "Bottlenose Toy";
+		now bodyname of player is "Bottlenose Toy";
+		now cockname of player is "Bottlenose Toy";
+		now tail of player is tail entry;
+		now face of player is face entry;
+		now skin of player is skin entry;
+		now body of player is body entry;
+		now cock of player is cock entry;
+		if hellHoundLevel is 0:
+			follow the sex change rule;
+			follow the sex change rule;
+		wait for any key;
+		if libido of player < 60, now libido of player is 60;
+		if humanity of player < 10:
+			say ".  With your mind fading away, you giggle happily and bound off into the water to play with your new friends as you forget yourself enterily and become a fun-loving beach toy.";
+			end the game saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
+			wait for any key;
+			follow the turnpass rule;
+			stop the action;
+		otherwise:
+			say ".  You manage to keep your mind together enough to leave the dolphin girls and with their large dolphin toy to continue their partying.  As you walk back along the beach, you can hear a few cries of disappointement, but the giggling and playing starts up again moments afterwards.  You're quite sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
+	if dolphinflatablefight is 3 or dolphinflatablefight is 4:
+		say "     You manage to make a break for it, running away from the waterfront.  You can hear a few cries of disappointment, but the giggling and playing starts up moments afterwards.  You're sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
 
 
 Assorted Events ends here.

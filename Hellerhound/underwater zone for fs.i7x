@@ -62,15 +62,39 @@ check swimtoing:
 
 carry out swimtoing:
 	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
-		let T be a random number between one and 4;
+		let T be a random number between one and 10;
 		if T is 1:
-			say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-			challenge "feral sea dragon"; [duh case, all three ways]
-		otherwise if T is 2:
-			say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-			challenge "feral sea dragoness";
-		otherwise if T is 3:
-			challenge "hermaphrodite dolphin";
+			if furry is banned or guy is banned:
+				increase T by 1;
+			otherwise:
+				say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+				challenge "feral sea dragon"; [duh case, all three ways]
+		if T is 2:
+			if furry is banned or girl is banned:
+				increase T by 1;
+			otherwise:
+				say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+				challenge "feral sea dragoness";
+		if T is 3:
+			if furry is banned or hermaphrodite is banned:
+				increase T by 1;
+			otherwise:
+				challenge "hermaphrodite dolphin";
+		if T is 4:
+			if furry is banned or guy is banned:
+				increase T by 1;
+			otherwise:
+				challenge "Killer Whale";
+		if T is 5:
+			if furry is banned:
+				increase T by 1;
+			otherwise:
+				challenge "Otter";
+		if T is 6:
+			if guy is banned:
+				increase T by 1;
+			otherwise:
+				challenge "Siren";
 	otherwise:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;
