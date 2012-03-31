@@ -69,9 +69,9 @@ to say dolphinflatabledesc:
 		now dolphinmode is 1;
 	otherwise if dolphinflatablefight is 4:	[event pre-set to toy mode]
 		now dolphinmode is 2;
-	otherwise if ( hardmode is false and level of player < ( 5 - levelwindow ) ) or a random chance of 2 in 3 succeeds:	[girl only at low level]
+	otherwise if ( hardmode is false and level of player < ( 5 - levelwindow ) ) or a random chance of 3 in 4 succeeds:	[girl only at low level]
 		now dolphinmode is 1;
-	otherwise:																			[33% of toy mode]
+	otherwise:																			[25% of toy mode]
 		now dolphinmode is 2;
 	if dolphinmode is 1:
 		if hardmode is true and level of player > 1, let debit be level of player - 1;
@@ -85,8 +85,8 @@ to say dolphinflatabledesc:
 		if hardmode is true and level of player > 5, let debit be level of player - 5;
 		now hp entry is 38 + ( debit * 4 );
 		now monsterhp is 38 + ( debit * 4 );
-		now wdam entry is 4 + ( lev entry / 3 );
 		now lev entry is 5 + debit;
+		now wdam entry is 3 + ( lev entry / 3 );
 		now dex entry is 16 + ( lev entry / 5 );
 		say "     Resting peacefully on the beach is what looks at first to be a normal, child's inflatable beach toy.  Aside from being a bigger model than most, nearly a man's height in length from nose to tail, it seems like others you've seen before.  It is a bright green dolphin with a white underbelly and a cartoony grin on its bottlenose face.  There is a darker section of textured rubber designed like a big scarf to provide better grip as well as a pair of small handles at its side for a child to hold.   It seems innocent enough, until it starts to move on its own.  With an airy giggle, it floats up into the air and does a playful backwards flip.  This flip lets you see there's a slick slit towards the rear its underbelly, showing that this is no pure children's toy but another of the unusual creatures that have come into being.  As it playful swims through the air past you, you try to push it away, finding the inflated creature's skin surprisingly durable for a beach toy.  Turning around, it pulls its scarf off, fusing it to the tip of its fin and spins it in the air like a large, green towel to strike at you.";
 

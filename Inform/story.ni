@@ -3038,10 +3038,12 @@ To say ball size:
 			say "[one of]baseball sized[or]orange sized[or]hand filling[at random]";
 		otherwise if cock width of player is less than 20:
 			say "[one of]grapefruit sized[or]massive[at random]";
-		otherwise:
+		otherwise if cock width of player is less than 25:
 			say "[one of]cantaloupe sized[or]giant[or]knee knocking[at random]";
+		otherwise:
+			say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
 		say " [one of]balls[or]testicles[or]gonads[at random]";
-	
+
 This is the cunt descr rule:
 	if cunt length of player is less than 3:
 		now descr is "[one of]infantile[or]extremely small[or]puny[at random]";

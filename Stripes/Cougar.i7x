@@ -3,11 +3,14 @@ Version 1 of Cougar by Stripes begins here.
 
 Section 1 - Monster Responses
 
+cougarfight is a number that varies.
+
 when play begins:
 	add { "Cougar" } to infections of hermaphrodite;
 	add { "Cougar" } to infections of furry;
 
 to say losetocougar:
+	now cougarfight is 2;
 	say "     Falling to your knees in front of the cougar herm, she growls triumphantly and climbs atop you.  Her strong body holds you down as she rubs herself against you.  Her soft fur and lovely breasts slide against your chest, and you can feel the firm press of her throbbing cock against you";
 	if cocks of player > 0 and cunts of player is 0:
 		say "[cougarride]";
@@ -27,6 +30,7 @@ to say cougartop:
 		say "[impregchance]";
 
 to say beatthecougar:
+	now cougarfight is 1;
 	say "     Managing to beat the cougar herm, you stand over her slumped, panting form.  The fight has gone out of her, but she still looks quite aroused";
 	if a random number between 30 and 125 > libido of player:
 		say ".  You ponder having a little fun with the aroused feline, now that she's calmed down a little.  Shall you sex up the poor, aroused puma?";
