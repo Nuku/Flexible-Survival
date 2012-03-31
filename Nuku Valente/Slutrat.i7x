@@ -381,7 +381,7 @@ to say poolhallvictoryorgy:
 	move Pool Table to slutrat den;
 	now pooltable of slutrat den is 3;
 	decrease humanity of player by 15;
-	increase morale by 5;
+	increase morale of player by 5;
 	increase score by 25;
 	decrease slutratsub by 3;
 	if slutratsub < 0, now slutratsub is 0;
