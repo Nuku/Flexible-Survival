@@ -479,9 +479,6 @@ instead of conversing the Pool Table:
 			now lastpoolgame is turns;
 			say "[slutratdomsex]";
 
-[temporary testing]
-Pool Table is in the slutrat den.
-
 
 Section 8 - Endings
 
