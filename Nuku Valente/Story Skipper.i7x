@@ -440,8 +440,8 @@ Carry out reciting:
 		now Comic Shop is unknown;
 		now Mephitness is unresolved;
 	otherwise:
-		now Comic Shop is unknown;
-		now Mephitness is unresolved;
+		now Comic Shop is known;
+		now Mephitness is resolved;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
 
