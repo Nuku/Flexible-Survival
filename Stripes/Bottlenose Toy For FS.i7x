@@ -13,7 +13,7 @@ when play begins:
 	add { "Bottlenose Toy" } to infections of furry;
 
 to say losetodolphinflatable:
-	now dolphinflatablefight is 1;
+	now dolphinflatablefight is 2;
 	if dolphinmode is 1:		[lose to girl form]
 		say "     The bottlenose girl giggles again as she wraps her towel around your neck and wrists.  It squeezes around your forearms, binding them tightly behind your back.  Pushing you to the sandy ground, she climbs atop you, always keeping in contact with the towel, which rebonds to her wherever she's holding it so she always knows her towel is";
 		if cocks of player > 0:
