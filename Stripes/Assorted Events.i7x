@@ -510,7 +510,7 @@ Instead of resolving a Beach Party:
 		[puts Bottlenose Toy as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
-			if name entry is "Chocolate Lab":
+			if name entry is "Bottlenose Toy":
 				now monster is y;
 				break;
 		now tailname of player is "Bottlenose Toy";
