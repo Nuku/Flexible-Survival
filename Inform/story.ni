@@ -150,6 +150,18 @@ Definition: A person(called X) is male:
 
 Definition: A person(called X) is female:
 	if cunts of x is greater than 0, yes;
+	
+A person can be booked. A person can be bunkered. A person is usually not booked. A person is usually not bunkered.
+
+Definition: A person(Called X) is booked:
+	If x is the player, no;
+	if the location of x is Grey Abbey Library, yes;
+	no;
+
+Definition: A person(Called X) is bunkered:
+	If x is the player, no;
+	if the location of x is Bunker, yes;
+	no;
 
 
 A thing can be rooted in place. A thing is usually not rooted in place.
