@@ -284,7 +284,7 @@ To Say slutratdenscene:
 		if name entry is "Slut Rat":
 			now monster is y;
 			break;
-	if lastratvisit - turns is less than 8 and lastratvisit is greater than 0:
+	if lastratvisit - turns is less than 8 and visittimes of slutrat den > 0:
 		continue the action;
 	now lastratvisit is turns;
 	if visittimes of SlutRat Den is 0:
@@ -316,7 +316,7 @@ To Say slutratdenscene:
 			let the dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: vs 16.";
 			if dice plus bonus < 16:
-				say "     Despite your attempts to get them moving, the rats as a whole are too complacent.  The prospect of getting into a big fight with those felines doesn't appeal to them.  When a distracted pair at the back start making out, their attention wanes.  Soon there's a little small orgy in that corner of the room and the opportunity is lost.  You'll have to come back and try again later.";
+				say "     Despite your attempts to get them moving, the rats as a whole are too complacent.  The prospect of getting into a big fight with those felines doesn't appeal to them.  When a distracted pair at the back start making out, their attention wanes.  Soon there's a little small orgy in that corner of the room and the opportunity is lost.  You'll have to come back and try again another day.";
 			otherwise if dice plus bonus >= 16:
 				say "     You manage to get the rats worked up, a growing enthusiasm running through the group.  One voice complains about the prospect of fighting those felines, but you manage to curtail the spreading discord by emphasizing that they're sexy, herm kitties.  You go on about how big and sexy the slut rats are and you girl will be able to out-sexy those stupid cats until they don't know what hit them.  The crowd starts to roar and pours out of the den, dragging you along, off to set your plan into motion right away.  You'd better be ready for it, because there's no turning back now.";
 				say "[poolhallattack]";
@@ -334,6 +334,7 @@ The sarea of Pool Hall is "High";
 Instead of resolving a Pool Hall:
 	if pooltable of slutrat den is 1:
 		say "     Passing down a side street between the high rises, you spot a pool hall.  Recalling the request from the rats, you head on over to check the place out.  It is a rather upscale looking place, probably used by business managers, bankers and lawyers working in the area.  A place to go and have [']meetings['] while charging their clients.  Looking inside, you find that it's been taken over by a group of pumas.  They seem to have polished off most of the contents of the bar and are now playing pool or fucking on the tables.  A pair of the herm cougars are even trying to do both a once, lining up a shot on the side pocket while her competitor gets ready to drive her cock into back hole to make her scratch.  Even with this kind of enthusiatic playing going on, some of the tables appear to still be in good condition.  Surely the rats could find one to make off with down the subway tunnels to add to the den.  The cats are too numerous for you to take on alone.  You should go back to the rats and let them know about your find.";
+	now lastratvisit is turns + 8;
 	now pooltable of slutrat den is 2;
 	now Pool Hall is resolved.
 
