@@ -1,5 +1,5 @@
 Version 3 of Zoo People by SarokCat begins here.
-[ Version 3 - Linked to Diego Events ]
+[ Version 3.1 - Typo fixes and book enhancement]
 
 "Adds a large group of scattered npcs to Flexible Survival with a variety of responses and goals..."
 
@@ -71,7 +71,7 @@ Instead of conversing the Diego:
 		increase Diegotalk by 1;
 		stop the action;
 	if Diegochanged is 2:
-		say "[one of]'I think I[apostrophe]m in heat!'[or]'God what I wouldn[apostrophe]t give for a nice, thick, coyote cock right about now... to fill my empty pussy...'[or]'Hell I[apostrophe]m almost too horny to think about tricking anyone... almost'[or]'This was the best trick I ever had played on me!' Diego says with a happy grin on her muzzle as she rubs her new body.[or]'You know, I hear there is an alpha wolf out there in the city looking for bitches... maybe we should go check it out together?' She asks with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways? Not that I won[apostrophe]t be making some milk of my own as soon as I can find a nice stud to knock me up...' Diego says with a smile as she rubs her breasts eagerly.[or]'I wonder if there is any nice canine studs around who want to play hide the knot?'[or]'If you play with the felinoids in the park, you could end up a slutty little pussy for their amusement, doesn[apostrophe]t that sound fun?'[or]'The skunk girls are all pets of the larger skunkbeasts.  Nice little submissive pets for the strong skunks to fill up with their fertile seed... mmm' Diego moans and rubs herself, obviously aroused by the thought of being a beasts pet.[or]The coyote bitch pants and yips softly, obviously too busy masturbating to bother talking to a boring person like yourself.[or]'I saw a woman riding a horse go by here a while back, I[apostrophe]m pretty sure though the horse would be the one doing the riding eventually though, if you know what I mean.'[or]'God I never knew being a bitch was so much fun, I[apostrophe]m so glad this happened!'[or]'I wonder if any of those nice German Shepherds in town would like to play with a coyote.' she says with a speculative look on her face.[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch.  I can kind of envy her now,' she says with a smile.[at random]";
+		say "[one of]'I think I[apostrophe]m in heat!'[or]'God what I wouldn[apostrophe]t give for a nice, thick, coyote cock right about now... to fill my empty pussy...'[or]'Hell I[apostrophe]m almost too horny to think about tricking anyone... almost.'[or]'This was the best trick I ever had played on me!' Diego says with a happy grin on her muzzle as she rubs her new body.[or]'You know, I hear there is an alpha wolf out there in the city looking for bitches... maybe we should go check it out together?' She asks with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways? Not that I won[apostrophe]t be making some milk of my own as soon as I can find a nice stud to knock me up...' Diego says with a smile as she rubs her breasts eagerly.[or]'I wonder if there is any nice canine studs around who want to play hide the knot?'[or]'If you play with the felinoids in the park, you could end up a slutty little pussy for their amusement, doesn[apostrophe]t that sound fun?'[or]'The skunk girls are all pets of the larger skunkbeasts.  Nice little submissive pets for the strong skunks to fill up with their fertile seed... mmm' Diego moans and rubs herself, obviously aroused by the thought of being a beasts pet.[or]The coyote bitch pants and yips softly, obviously too busy masturbating to bother talking to a boring person like yourself.[or]'I saw a woman riding a horse go by here a while back, I[apostrophe]m pretty sure though the horse would be the one doing the riding eventually though, if you know what I mean.'[or]'God I never knew being a bitch was so much fun, I[apostrophe]m so glad this happened!'[or]'I wonder if any of those nice German Shepherds in town would like to play with a coyote.' she says with a speculative look on her face.[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch.  I can kind of envy her now,' she says with a smile.[at random]";
 		stop the action;
 	if Diegochanged is 1:
 		if "dog milk" is listed in invent of player:
@@ -119,11 +119,12 @@ Check Diegotricking:
 
 carry out Diegotricking:
 	if lastDiegotricked - turns is less than 6:
-		say "'Sorry bud, only so much time for tricking people in the day,' Diego says as he shakes his head sadly, 'Trick people too much and it just gets stale, so come back and try again later.'";
+		say "'Sorry bud, only so much time for tricking people in the day,' Diego says as [if diegochanged is 0]he shakes his[otherwise]she shakes her[end if] head sadly, 'Trick people too much and it just gets stale, so come back and try again later.'";
 		stop the action;
 	now lastDiegotricked is turns;
 	say "Oh so you think a new little trickster like you can pull one over on me? Lets see what you got!";
 	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
@@ -136,7 +137,7 @@ carry out Diegotricking:
 			now prankevent is 1;
 		stop the action;
 	if diceroll is greater than 12:
-		say "'Dang that was a good one! Not quite up to my usual standards of course, but pretty damn good!' Diego says with a happy grin on his face, 'I think I might be willing to try that one out on some of their scouts, might earn ya a bit of time ya see.";
+		say "'Dang that was a good one! Not quite up to my usual standards of course, but pretty damn good!' Diego says with a happy grin on [if diegochanged is 0]his[otherwise]her[end if] face, 'I think I might be willing to try that one out on some of their scouts, might earn ya a bit of time ya see.";
 		extend game by 6;
 		increase Coyotetricks by 1;
 		if Coyotetricks > 3 and prankevent is 0:
@@ -144,7 +145,7 @@ carry out Diegotricking:
 			now prankevent is 1;
 		stop the action;
 	otherwise:
-		say "'You call that a trick?' Diego says derisively, snickering at your pathetic attempt, 'Now this is a trick!' He says as he swiftly whips out a trick that makes you stagger back in shock and makes you feel slightly less human.";
+		say "'You call that a trick?' Diego says derisively, snickering at your pathetic attempt, 'Now this is a trick!' [if diegochanged is 0]he says as he[otherwise]she says as she[end if] swiftly whips out a trick that makes you stagger back in shock and makes you feel slightly less human.";
 		decrease humanity of player by 10;
 
 

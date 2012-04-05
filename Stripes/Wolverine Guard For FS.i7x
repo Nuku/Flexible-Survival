@@ -1,5 +1,5 @@
-Version 1 of Wolverine Guard For FS by Stripes begins here.
-[Version 1.1 - added exclusions]
+Version 2 of Wolverine Guard For FS by Stripes begins here.
+[Version 2 - Central Library content added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Wolverine Guard creature to Flexible Survivals Wandering Monsters table, with Impreg chance"
 [Description text for this Extension.]
@@ -17,7 +17,7 @@ wolvfightresult is a number that varies.
 
 to say losetowolverine:
 	now wolvfightresult is 2;
-	if lbfight is 0:
+	if lbfight is 0 and libfight is not 1:
 		if cunts of player > 0:
 			if a random chance of 2 in 3 succeeds:
 				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you.  Soon, he[apostrophe]s buried his muzzle between your legs and sniffing your crotch.  He grabs you roughly and drags you back towards the [wolvloc] he was protecting so aggressively.";
@@ -41,11 +41,12 @@ to say losetowolverine:
 				say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the Medieval History wing of the museum.";
 		otherwise:
 			say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again.  His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you.  He batters you until he[apostrophe]s satisfied that you won[apostrophe]t dare return and then finally drives you off from the Medieval History wing of the museum.";
-
+	otherwise if libfight is 1:
+		say "     The obsessed wolverine knocks you firmly to the ground, leaving you unable to keep fighting.";
 
 to say beatthewolverine:
 	now wolvfightresult is 1;
-	if lbfight is 0:
+	if lbfight is 0 and libfight is not 1:
 		if cunts of player > 0 and libido of player > 39 and bodyname of player is "Wolverine Guard":
 			say "     Having managed to beat the wolverine until you finally knocked him down, you look over the powerful male and you feel a yearning inside you.  The excitement of the fight has gotten your wolverine body quite aroused.  Your eyes wander down to the hefty package between his legs and you see that his cock is half-hard as well, aroused by the scent of a strong female.  Do you give in to your urges and ride that thick monster?";
 			if the player consents:
@@ -60,16 +61,20 @@ to say beatthewolverine:
 			say "     Having managed to beat the wolverine until you finally knocked him down, you give him a final blow to put him unconscious.  You move past him to look at the [wolvloc] was guarding.  You search around carefully, but can[apostrophe]t seem to find anything to warrant the aggressive defense of this location.  Any food around here has already been consumed by the mad creature and there is nothing of material interest for you to use.  You shake your head at the poor fellow, driven by strange instincts to uselessly guard this spot.";
 	otherwise if lbfight is 1:
 		say "     Having managed to beat the wolverine until you finally knocked him down, you give him a finally blow to put him unconscious.  You move past him to look up at the longship he was guarding, ready to continue with your mission.";
+	otherwise if libfight is 1:
+		say "     You manage to knock the wolverine out.";
 
 
 to say wolverinedesc:
-	if lbfight is 0:
+	if lbfight is 0 and libfight is not 1:
 		say "[wolverinelocation]";
 		say "     As you travel through the streets, you are spotted by a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company [one of]jacket on his animalistic body[or]hat on his animalistic head[at random].  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you.  You spot the company logo on his clothing - Wolverine Security.";
 		say "     He is prowling around a [wolvloc], his instincts having locked him into aggressively guarding it.  You seem to have come too close and set him off.  Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
-	otherwise if lbfight is 1:
+	otherwise if lbfight is 1:			[Viking Longboat - Hospital Quest]
 		say "     You find yourself facing off with a large, muscled beast.  Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle.  He has a battered security company jacket on his animalistic body.  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He growls angrily as he watches you.  You spot the company logo on his clothing - Wolverine Security.";
 		say "     He has moved himself between you and the boat and is approaching to expel the intruder, his instincts having locked him into aggressively guarding his post at the museum.  Stepping over the ropes into the display area seems to have set him off.  Before you can back away, he charges at you aggressively, powerful paws raised to strike.";
+	otherwise if libfight is 1:			[Central Library]
+		say "     James, the wolverine guard protecting the Central Library, growls angrily at you having turned on him.  He is a large, muscular beast.  Were he not so tall, you'd call him stocky, nearly as wide as he is tall, but all muscle.  He still wears his battered security company jacket, bearing the Wolverine Security logo on it, on his animalistic body.  He is covered in dark fur with a few lighter patches.  His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders.  He has moved himself between you and the steps up to the library, his instincts locked on protecting his post here.  Before you can back away, he charges at you with another growl.";
 
 to say wolverinelocation:							[sets random location for the wolverine]
 	let T be a random number between 1 and 16;
@@ -158,11 +163,25 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Wolverine Guard":
 		if humanity of player is less than 10:
-			say "     You find your growing urge to protect and defend your post increasing.  Cutting short your wandering, you head back to the bunker at the Abbey to clear your head.  Once there, you decide to scout around from top to bottom, making sure it[apostrophe]s secure before you relax.  You find nothing, but still remain on edge, and patrol on guard for any disturbances.  You keep at your post, staying on watch without rest, protecting it from the monsters of the city and the soldiers who later arrive.  You keep it, and its contents, safe from interlopers day after day.";
-		otherwise if hp of doctor matt <= 100:
-			say "     You hold out until the rescue comes and you are taken in by the military.  You wait impatiently for your release, always on edge and feeling that there[apostrophe]s something you should be doing.  You are eventually moved into the care of Dr. Matt, who has you alternate with Orthas as his personal guard at the research station the military sets him up at to combat the spreading infection.  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
+			if jamessex is 3 and cunts of player > 0:
+				say "     You find your growing urge to protect and defend your post increasing.  Joining James at the Central Library, you become his mate and share the duty with him.  He accepts him place now, no longer fighting his powerful body.  Most of the time, you both guard it together, though occasionally alone so the other can get a brief nap.  As with that first time, you rut often on the library steps.  The lustful growls of your animalistic sex carry far, warning any would be interlopers away.  You eventually bear him some kits, who grow big and strong like their parents and take up the duty to protect the library as well.  You live peacibly with the librarians inside, guarding their home and leaving them undisturbed.  There is some commotion when the soldiers come through the city, but you, your mate and your offspring are able to drive them off, protecting your post.";
+			otherwise:
+				say "     You find your growing urge to protect and defend your post increasing.  Cutting short your wandering, you head back to the bunker at the Abbey to clear your head.  Once there, you decide to scout around from top to bottom, making sure it[apostrophe]s secure before you relax.  You find nothing, but still remain on edge, and patrol on guard for any disturbances.  You keep at your post, staying on watch without rest, protecting it from the monsters of the city and the soldiers who later arrive.  You keep it, and its contents, safe from interlopers day after day.";
 		otherwise:
-			say "     You hold out until the rescue comes and you are taken in by the military.  With your false identity never questioned, you wait impatiently for your release, always on edge and feeling that there[apostrophe]s something you should be doing.  One day, you are released and are quickly picked up by a large van.  You are quietly taken to where Dr Mouse is hiding, apparently having funnelled some bribes through a third party to gain custody of you.  He takes you on as his private security guard, watching over him as he conducts his secret research.  He works for a variety of foreign countries and infected factions[if susan is in hidden lab].  Susan continues to accompagny him as an assistant and a lover for you when off duty[end if].  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
+			if centrallib is 5:
+				say "     When the military enters the city and rescue you and the other survivors, you recall another wolverine you met.  Telling them about James, you give them information on how to take him calmly, with a soldier disguised in a company jacket and a call from the security company's headquarters relayed through the military network, they convince him to switch assignments.  He joins you in one of the military staging camps, happy to see a friendly face[if cunts of player > 0].  You share a good romp with him that evening[end if].";
+				say "     The security company, now involved, helps to get you both cleared.  Your idea was able to rescue several of their employees and they offer to hire you on as well.  You and James get partnered with ";
+				if cocks of player > 0 and cunts of player > 0:
+					say "a female wolverine and are stationed to guard a nuclear power plant.  You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue.  If anything, its another strong deterant for any unwanted visitors.    Your trio makes a fine partnership, with the off-duty pair eager to spend time with one another";
+				otherwise if cocks of player > 0:
+					say "a female wolverine and are stationed to guard a nuclear power plant.  You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue.  If anything, its another strong deterant for any unwanted visitors.    Your trio makes a fine partnership, with the female eager to spend time with either of you when off duty";
+				otherwise:
+					say "another female wolverine and are stationed to guard a nuclear power plant.  You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue.  If anything, its another strong deterant for any unwanted visitors.    Your trio makes a fine partnership, with James eager to spend time with either of you when off duty";
+				say ".  Your wild romps get rather loud and vicious sounding at times, so eventually the guardhouse you all share as home gets soundproofed.";
+			otherwise if hp of doctor matt <= 100:
+				say "     You hold out until the rescue comes and you are taken in by the military.  You wait impatiently for your release, always on edge and feeling that there's something you should be doing.  You are eventually moved into the care of Dr. Matt, who has you alternate with Orthas as his personal guard at the research station the military sets him up at to combat the spreading infection.  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
+			otherwise:
+				say "     You hold out until the rescue comes and you are taken in by the military.  With your false identity never questioned, you wait impatiently for your release, always on edge and feeling that there[apostrophe]s something you should be doing.  One day, you are released and are quickly picked up by a large van.  You are quietly taken to where Dr Mouse is hiding, apparently having funnelled some bribes through a third party to gain custody of you.  He takes you on as his private security guard, watching over him as he conducts his secret research.  He works for a variety of foreign countries and infected factions[if susan is in hidden lab].  Susan continues to accompagny him as an assistant and a lover for you when off duty[end if].  While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
 
 [ Edit this to have the correct Name as well]
 Wolverine Guard For FS ends here.
