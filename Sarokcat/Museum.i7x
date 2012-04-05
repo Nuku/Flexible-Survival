@@ -68,6 +68,7 @@ carry out riddlesphinxing:
 	now lastriddlesphinx is turns;
 	say "Ooooh you think you can beat me in a riddle contest? Lets find out shall we? I might even have a prize for you if you win... of course if you lose....";
 	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;

@@ -458,21 +458,25 @@ When Play begins:
 
 When play ends:
 	if hellHoundLevel > 0:
-		if bodyname of player is "Reindeer" and facename of player is "Reindeer" and cockname of player is "Reindeer" and skinname of player is "Reindeer" and tailname of player is "Reindeer":								[gave into the holiday spirit]
+		if bodyname of player is "Reindeer" and facename of player is "Reindeer" and cockname of player is "Reindeer" and skinname of player is "Reindeer" and tailname of player is "Reindeer":									[gave into the holiday spirit]
 			say "     Having given in to the magic of the holidays, you are freed from the Hellhound's curse.";
-		if bodyname of player is "Bottlenose Toy" and facename of player is "Bottlenose Toy" and cockname of player is "Bottlenose Toy" and skinname of player is "Bottlenose Toy" and tailname of player is "Bottlenose Toy":								[gave into the holiday spirit]
+		otherwise if bodyname of player is "Bottlenose Toy" and facename of player is "Bottlenose Toy" and cockname of player is "Bottlenose Toy" and skinname of player is "Bottlenose Toy" and tailname of player is "Bottlenose Toy":			[gave into fun in the sun]
 			say "     Having become an innocent creature living only for happiness and playtime breaks the Hellhound's curse upon you.";
-		otherwise if bodyname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and cockname of player is "Tigress Hooker" and skinname of player is "Tigress Hooker" and tailname of player is "Tigress Hooker":		[claimed at the tigress motel]
+		otherwise if bodyname of player is "Wolverine Guard" and facename of player is "Wolverine Guard" and cockname of player is "Wolverine Guard" and skinname of player is "Wolverine Guard" and tailname of player is "Wolverine Guard":		[succumbed to wolverine sex]
+			say "     Your bond as guardian to the Central Library and to your new mate is too strong for the Hellhound's curse, breaking it and allowing you to become a new protector for the library.";
+		otherwise if bodyname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and cockname of player is "Tigress Hooker" and skinname of player is "Tigress Hooker" and tailname of player is "Tigress Hooker":			[claimed at the tigress motel]
 			let T be 0;			[do nothing statement]
-		otherwise if bodyname of player is "Big Tiger" and facename of player is "Big Tiger" and cockname of player is "Big Tiger" and skinname of player is "Big Tiger" and tailname of player is "Big Tiger":						[victory at tigress motel]
+		otherwise if bodyname of player is "Big Tiger" and facename of player is "Big Tiger" and cockname of player is "Big Tiger" and skinname of player is "Big Tiger" and tailname of player is "Big Tiger":							[victory at tigress motel]
 			let T be 0;			[do nothing statement]
-		otherwise if bodyname of player is "Big Tigress" and facename of player is "Big Tigress" and cockname of player is "Big Tigress" and skinname of player is "Big Tigress" and tailname of player is "Big Tigress":				[victory at tigress motel]
+		otherwise if bodyname of player is "Big Tigress" and facename of player is "Big Tigress" and cockname of player is "Big Tigress" and skinname of player is "Big Tigress" and tailname of player is "Big Tigress":					[victory at tigress motel]
 			let T be 0;			[do nothing statement]
-		otherwise if bodyname of player is "Chocolate Lab" and facename of player is "Chocolate Lab" and cockname of player is "Chocolate Lab" and skinname of player is "Chocolate Lab" and tailname of player is "Chocolate Lab":			[made into Chocolate Lab]
+		otherwise if bodyname of player is "Chocolate Lab" and facename of player is "Chocolate Lab" and cockname of player is "Chocolate Lab" and skinname of player is "Chocolate Lab" and tailname of player is "Chocolate Lab":				[made into Chocolate Lab]
 			let T be 0;			[do nothing statement]
-		otherwise if vinetrapped is 1 or vinetrapped is 2:
-			let T be 0;
-		otherwise if foodvendor is 4:
+		otherwise if vinetrapped is 1 or vinetrapped is 2:							[full plant TF]
+			let T be 0;			[do nothing statement]
+		otherwise if foodvendor is 4:											[food vendor's sex slave]
+			let T be 0;			[do nothing statement]
+		otherwise if centrallib is 7:											[captured by librarian harpies]
 			let T be 0;			[do nothing statement]
 		otherwise if hp of the player is greater than 0:
 			follow the check hellhound rule;

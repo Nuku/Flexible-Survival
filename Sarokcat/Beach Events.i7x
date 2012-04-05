@@ -83,7 +83,7 @@ Instead of resolving a Flotsam bits:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"flotsam club"	"A rough log of driftwood, polished smooth by the waves and hardened in the salt water.  Were it not lightened by its time in the sea, it would be too heavy to wield at all."	10	flotsam club
+"flotsam club"	"A rough log of driftwood, polished smooth by the waves and somehow hardened in the salt water.  Were it not lightened by its time in the sea, it would be too heavy to wield at all."	15	flotsam club
 
 flotsam club is an armament. It is part of the player. It has a weapon "[one of]your giant club[or]your rough club[or]your flotsam log[or]your length of sea hardened wood[at random]". The weapon damage of flotsam club is 10. The weapon type of flotsam club is "Melee". It is not temporary.
 

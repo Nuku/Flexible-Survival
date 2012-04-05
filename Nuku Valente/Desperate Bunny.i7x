@@ -36,7 +36,7 @@ To rabbitfuck:
 		stop the action;
 	now lastrabbitfuck is turns;
 	if hp of Sandra is 3:
-		say "Coleen's ears perk up as she notices you heading over to the bunny's.  It seems the perceptive puppy's picked up on your intent and has taken an interest in the upcoming show";
+		say "Coleen's ears perk up as she notices you heading over to the bunny's bunk.  It seems the perceptive puppy's picked up on your intent and has taken an interest in the upcoming show";
 		if lastColeenfucked - turns < 4:
 			say ".  The husky girl rolls onto her back and slides a paw between her legs, seemingly content to watch what she hopes will be a nice show.";
 		otherwise:
@@ -318,7 +318,7 @@ to say sandracoleentrio:
 
 to say sctriomale:
 	say "     Taking a seat on her bunk, you slide the bunny girl into your lap, rubbing your stiff [if cocks of player > 1]members[otherwise]member[end if] against her ass and fluffy tail.  She moans softly as you tease her nipples while hops up to give her another doggy kiss.  You grind against her softly-furred bottom, leaking precum onto her [if cock length of player > 12]back[otherwise]tail[end if] until you can't wait any longer and want more.";
-	say "     Boosting her up, you get your [if cocks of player > 1]cocks[otherwise]cock[end if] into position and enjoy her needy moan into the kiss with husky girl.  You lowering her down, Coleen's paws have moved to help get you lined up.  You can feel her wet pussy [if cocks of player > 1]and tight tailhole [end if]pressed against your glans before spreading open allowing you entrance into the busty bunny's beautiful body.";
+	say "     Boosting her up, you get your [if cocks of player > 1]cocks[otherwise]cock[end if] into position and enjoy her needy moan into the kiss with the husky girl.  You lowering her down, Coleen's paws have moved to help get you lined up.  You can feel her wet pussy [if cocks of player > 1]and tight tailhole [end if]pressed against your glans before spreading open allowing you entrance into the busty bunny's beautiful body.";
 	say "     Coleen breaks the kiss and drops back to the floor on all fours, burying her muzzle in Sandra's fluffy muff to nuzzle at your genitals.  Her cold, wet nose against the bunny's clit makes her shiver before that warm, wet tongue sets to work.  She laps at your thrusting cock and the bunny's quivering folds as you drive into her against and again.  Bunny juices run down your shaft for the playful husky to lick up[if cock length of player < 12 or cock width of player < 10].  As your cock is not quite enough to fully satisfy the bunny's large pussy, the husky yips and slides a few fingers in as well, rubbing along your penis and the sensitive vaginal walls[end if].";
 	say "     The bunny has a long and enjoyable ride in your lap, cumming several times from the combined action of her lustful friends.  When finally it gets to be too much, you drive hard into her one last time and pump your hot load deep into her, earning one last moan and orgasm from Sandra, which Coleen is eager to lap up the juices and jizz from.  Coleen, fingering herself with one paw, is sitting in an extensive puddle of her own juices as well, clearly having cum repeated as well.  When your erection finally starts to go down, you slip Sandra off your lap.  Coleen hops up onto her bunk to join her for a nap while you get up and head off quietly to take care of other matters.";
 
