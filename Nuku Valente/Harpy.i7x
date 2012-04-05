@@ -1,4 +1,5 @@
-Harpy by Nuku Valente begins here. 
+Version 2 of Harpy by Nuku Valente begins here.
+[Version 2 - Central Library content by Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Harpy to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -9,17 +10,23 @@ Section 1 - Monster Responses
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 Harpydefeat is a number that varies.
 Harpyconsent is a number that varies.
+
 to say Harpy attack:
-	if hp of player is greater than 0:
+	if hp of player is greater than 0 and harpyfight is not 3:
 		say "She swoops down and grabs you up, pressing her lips to yours. Peace sweeps through this form even as your heart hammers in your chest. You pull her tight as she draws you closer, swept away in the fierce exchange. You are unsure how long you remain like that, but eventually she sets you down and shakes her head, 'We will meet again, I hope.' and she takes off.";
 		now Harpyconsent is 1;
+		wait for any key;
+	if hp of player is greater than 0 and harpyfight is 3:
+		say "The harpy swoops in and grabs you, running her talonned hands over your body as the others close in around you.";
 		wait for any key;
 	otherwise:
 		say "She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her fustration, she flaps her wings and retreats.";
 		wait for any key;
+	now harpyfight is 2;
 
 [ [Harpy loss] ]
 To say Harpy loss:
+	now harpyfight is 1;
 	say "Emitting a sudden foul curse, the young woman takes to the air, fleeing before her wounds can ground her.";
 	
 	
@@ -75,14 +82,18 @@ When Play begins:
 when play ends:
 	if bodyname of player is "harpy":
 		if humanity of player is less than 10:
-			say "You take flight and are rejoined with other harpies high in a secluded mountain. You are content with one another except when heat strikes. Once a year, each of you feels a 'special' need that cannot be met by your sisters and you descend on the small city below, plucking up a male to satisfy you and give you an egg to care for, until the next year. Most men prove to be pliable enough, and a few even stay, helping to tend to the aeries while the females do business and hunt.";
+			if centrallib is 7:
+				say "     As a harpy in the library, you quietly tend to the stacks as do the others.  The guard outside makes sure that you are rarely disturbed, leaving you and your sisters to quietly read most of the time.  On occasion, you fly out into the city to pluck up a [if cunts of player > 0]male to satisfy your needs and give you an egg for the season.  Sometimes, if he's cute enough, smart enough and quiet enough, you [']allow['] him to stay, making him into the newest harpy of the aerie[otherwise]female or herm to satisfy your lusts, screwing her until you're sure she'll grow round with a harpy egg.  Sometimes, if she's cute enough, smart enough and quiet enough, you [']allow['] her to stay, making her into the newest harpy of the aerie[end if][if cocks of player > 0].  The other harpies also enjoy your cock often, many of them getting eggs from you[end if][if cocks of player > 0 and cunts of player is 0].  You have become an unusual creature of myth and legend, the rare male librarian[end if].";
+			if hellHoundLevel > 0:			[Hellhound while taken by the librarians]
+				say "[line break]     Lost to your new fate as a harpy at the library, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream or an uncomfortable feeling when reading stories about deals with the devil.  But he does not forget; your foul contract was only delayed to better prepare you for your coming, unending fate.";
+				say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave to the countless foul hellhounds who guard the gates of Hell.  You're chained down, never to fly freely again and made to mate with the hellish dogs.  The fel beasts breed you incessantly[if cunts of player > 0], filling your womb with corrupted eggs[otherwise], forcing you to mount bitches while the males climb atop you[end if].  The blood-red eggs hatch to release more hellhounds, but these have large, raven wings on their backs, allowing the hounds to fly.  The flying hounds add to the dark forces of the underworld.  They nurse from your [if cunts of player > 0]tits[otherwise]cock[end if]and grow strong, eventually joining the others in mating you until the ends of time.";
+			otherwise:
+				say "     You take flight and are rejoined with other harpies high in a secluded mountain. You are content with one another except when heat strikes. Once a year, each of you feels a 'special' need that cannot be met by your sisters and you descend on the small city below, plucking up a male to satisfy you and give you an egg to care for, until the next year. Most men prove to be pliable enough, and a few even stay, helping to tend to the aeries while the females do business and hunt.";
 		otherwise:
 			if Harpyconsent is 1:
-				say "You are rescued and taken back to civilization. Though you greatly enjoy having access to flowing water and easy food, you never forget the tingle of her lips on your own. Eventually, driven by longing, you take flight back to that great city, and eventually find her. Convincing her to leave with you would be a whole other adventure...";
+				say "     You are rescued and taken back to civilization. Though you greatly enjoy having access to flowing water and easy food, you never forget the tingle of her lips on your own. Eventually, driven by longing, you take flight back to that great city, and eventually find her. Convincing her to leave with you would be a whole other adventure...";
 			otherwise:
-				say "Adjusting to life as a harpy takes some getting use to. You find that a good perch works better than a couch, and your diet has a lot more nuts and berries than your old diet ever had. Still, you're mostly human, and getting by proves easy enough for such a young, pretty, looking thing.";
-
-			
+				say "     Adjusting to life as a harpy takes some getting use to. You find that a good perch works better than a couch, and your diet has a lot more nuts and berries than your old diet ever had. Still, you're mostly human, and getting by proves easy enough for such a young, pretty, looking thing.";
 
 
 [ Edit this to have the correct Name as wall]

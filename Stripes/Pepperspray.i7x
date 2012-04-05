@@ -1,5 +1,5 @@
 Version 2 of Pepperspray by Stripes begins here.
-[version 2 - New feats added]
+[version 2.1 - New feats added]
 
 
 battleitem is a number that varies.
@@ -223,7 +223,23 @@ to say enhancedattack:
 		say "[Name entry] is [descr].";
 	otherwise:
 		say "You miss!";
-	if player is not lonely and a random chance of 1 in 5 succeeds:
+	if player is not lonely and a random chance of 2 in 25 succeeds and "The Horde" is listed in feats of player:
+		say "[line break]";
+		say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
+		say "[line break]";
+		repeat with z running through tamed pets:
+			now attack bonus is ( ( dexterity of z minus 4 ) divided by 2 ) plus level of z;	[+3 to hit for each pet]
+			let the combat bonus be attack bonus minus defense bonus;
+			if hardmode is true and combat bonus is greater than 12:	[pepperspray increases hardmode bonus limit to +12]
+				now combat bonus is 12;
+			now roll is a random number from 1 to 20;
+			if roll plus the combat bonus is greater than 8:
+				let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
+				say "[z]: [assault of z] [dam] damage inflicted!";
+				decrease monsterhp by dam;
+			otherwise:
+				say "Your [z] misses!";
+	otherwise if player is not lonely and a random chance of 3 in 10 succeeds:
 		now attack bonus is ( ( dexterity of companion of player minus 4 ) divided by 2 ) plus level of companion of player;	[+3 to hit for pet]
 		let the combat bonus be attack bonus minus defense bonus;
 		if hardmode is true and combat bonus is greater than 12:		[pepperspray increases hardmode bonus limit to +12]

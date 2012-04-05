@@ -2325,7 +2325,23 @@ This is the player attack rule:
 		say "[Name entry] is [descr].";
 	otherwise:
 		say "You miss!";
-	if player is not lonely and a random chance of 1 in 5 succeeds:
+	if player is not lonely and a random chance of 1 in 20 succeeds and "The Horde" is listed in feats of player:
+		say "[line break]";
+		say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
+		say "[line break]";
+		repeat with z running through tamed pets:
+			now attack bonus is ( ( dexterity of z minus 10 ) divided by 2 ) plus level of z;
+			let the combat bonus be attack bonus minus defense bonus;
+			if hardmode is true and combat bonus is greater than 10:
+				now combat bonus is 10;
+			now roll is a random number from 1 to 20;
+			if roll plus the combat bonus is greater than 8:
+				let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
+				say "[z]: [assault of z] [dam] damage inflicted!";
+				decrease monsterhp by dam;
+			otherwise:
+				say "Your [z] misses!";
+	otherwise if player is not lonely and a random chance of 1 in 5 succeeds:
 		now attack bonus is ( ( dexterity of companion of player minus 10 ) divided by 2 ) plus level of companion of player;
 		let the combat bonus be attack bonus minus defense bonus;
 		if hardmode is true and combat bonus is greater than 10:
@@ -3500,13 +3516,20 @@ carry out vetcheat:
 	increase vetcheater by 1;
 	increase xp of player by 200;
 	if level of player is less than 5:
-		level up;
-		level up;
-		level up;
-		level up;
-		level up;
+		if xp of player is greater than ( level of player plus one ) times 10:
+			level up;
+		if xp of player is greater than ( level of player plus one ) times 10:
+			level up;
+		if xp of player is greater than ( level of player plus one ) times 10:
+			level up;
+		if xp of player is greater than ( level of player plus one ) times 10:
+			level up;
+		if xp of player is greater than ( level of player plus one ) times 10:
+			level up;
+		otherwise if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:
+			level up;
 	decrease score by 400;
-	
+
 
 When play ends:
 	follow the self examine rule;
@@ -3532,7 +3555,22 @@ When play ends:
 	otherwise:
 		say "Ultimate Master";
 	if the score is greater than 999:
-		say "Your performance was so excellent, we'll give you a little... help, for your next run through. Type 'I am a pro' to gain 200 XP. It only works once per character.";
+		say "Your performance was so excellent, we'll give you a little... help, for your next run through. Type 'I am a pro' to gain 200 XP. It only works once per character";
+		if bookfound is not 0:
+			let tempnum be 0;
+			sort table of library books in booknum order;
+			repeat with y running from 1 to number of rows in table of library books:
+				choose row y in table of library books;
+				if booknum entry is bookfound:
+					now tempnum is y;
+					break;
+			choose row tempnum from table of library books;
+			if humanity of player < 10:
+				say ".  Your confused, instinctual thoughts are sometimes broken by strange throughs or images from a book you once read";
+			otherwise:
+				say ".  With all the excitement you went through at the library, the book you found remains firmly in your mind";
+			say ".  In the Abbey, type [']dewey [bookcode entry]['] to find it again in your next game";
+		say ".";
 	say "[line break]";
 	if the score is greater than 9000:
 		say "What, 9000?!";
@@ -3639,6 +3677,10 @@ Doctor Matt is in Primary Lab.
 understand "Matt" as doctor matt.
 
 Instead of conversing the doctor matt:
+	if hp of testerbot is 0 and testerbot is in Primary Lab:
+		now hp of testerbot is 1;
+		say "I have finished work on a new device to help with the analysis of affects of the infection upon a person's lustful urges and sexual proclivities.  The testing robot has been built for the use in this regard.  Please feel free to use it as you see fit.  I want a wide sample of data, so come back often.  The robot will only be available for use this week though before I have to send it off to the military's scientists so  they may analyze the data.";
+		wait for any key;
 	if hp of doctor matt is 100:
 		say "'If you are listening to this, you are probably still in the city. My condolences. I have left behind some facilities for you. You will find they can enhance your abilities due to the nanite infection.";
 		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
@@ -4170,6 +4212,7 @@ Include Story Skipper by Nuku Valente.
 Include items by Zero.
 Include Feats by Nuku Valente.
 Include Pepperspray by Stripes.
+Include Central Library by Stripes.
 
 
 [Monsters/Infections]
