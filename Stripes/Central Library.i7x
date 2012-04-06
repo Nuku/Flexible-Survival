@@ -524,7 +524,7 @@ Instead of conversing the Doctor Matt while 5 is listed in bookcollection and ma
 		say "     Deciding not to help the military in this way, you take a moment to reorganize your thoughts before speaking to Dr Matt on other matters.";
 		now mattintel is 100;
 
-Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mouseintel is 0:
+Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and mouseintel is 0:
 	say "     As you're about to talk with Dr. Mouse further, you recall your book on military intelligence.  As he's receiving assistance from the hospital staff in gathering samples, perhaps your information may be of benefit to them.  If the teams he sends out were better informed, they'd likely be more successful, thereby helping the mouse with his research.  Shall you make the offer to him?";
 	if the player consents:
 		say "     Showing Dr. Mouse the book, you suggest to him that you can act as reconnaissance for him.  You tell him that since you're been facing the creatures and finding where they're located, it may help his gathering of samples.  The mouse's eyes flash and he grins widely at this offer.  'Oh yes!  That would be a great boon indeed.  Thank you very much for the offer.  Please write up any information you can provide on the creatures.  Be sure to include any details about the military as well.  We don't want to run into trouble with them.  Accidentally bump into them and have a problem.'  You nod and provide the information to the delighted mouse, filling a stack of papers with notes, maps and more.";

@@ -164,7 +164,7 @@ check ginafucking:
 
 Carry out ginafucking:
 	if lastginafucked - turns is less than 8:
-		say "'Sorry hun, still recovering from our last little romp.' She says with a wink";
+		say "'Sorry, hun.  Still recovering from our last little romp,' she says with a wink.";
 		stop the action;
 	now lastginafucked is turns;
 	if matriarchowned is 1:

@@ -3679,7 +3679,7 @@ understand "Matt" as doctor matt.
 Instead of conversing the doctor matt:
 	if hp of testerbot is 0 and testerbot is in Primary Lab:
 		now hp of testerbot is 1;
-		say "I have finished work on a new device to help with the analysis of affects of the infection upon a person's lustful urges and sexual proclivities.  The testing robot has been built for the use in this regard.  Please feel free to use it as you see fit.  I want a wide sample of data, so come back often.  The robot will only be available for use this week though before I have to send it off to the military's scientists so  they may analyze the data.";
+		say "'I have finished work on a new device to help with the analysis of affects of the infection upon a person's lustful urges and sexual proclivities,' he says, pointing to the boxy robot slumped against the wall.  'The testing robot has been built for the use in this regard.  Please feel free to use it as you see fit.  I want a wide sample of data, so come back often.  The robot will only be available for use this week though before I have to send it off to the military's scientists so they may analyze the data.'";
 		wait for any key;
 	if hp of doctor matt is 100:
 		say "'If you are listening to this, you are probably still in the city. My condolences. I have left behind some facilities for you. You will find they can enhance your abilities due to the nanite infection.";
