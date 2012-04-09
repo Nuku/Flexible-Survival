@@ -400,6 +400,10 @@ Section 8-  technicalbookstore
 technicalbookstore is a situation.
 
 Instead of resolving a technicalbookstore:
+	if generatorfixing is 1:
+		say "You spend a while hunting through several of the electrical texts there, and while they do appear to be helpful, strangely enough the library appears to be lacking a 'Connecting large generators to old wiring for dummies.' Book. Which just goes to show you the sad state of literature in this current age, you would think no one really expected to be overrun with strange nanomachines which turn people into sex crazed monsters or something, and failed to prepare adequately for the situation. Which is rather unfair when you think about it, though you do find quite a bit of helpful information here anyways, but perhaps you could find some more specialized information out in the city itself?";
+		now generatorfixing is 2;
+		stop the action;
 	if generatorfixing is 2:
 		say "Poking around the overrun city, you find yourself outside of a rather small technical bookstore, which obviously caters to the colleges and professional market. Considering your need for some practical and advanced books on electrical wiring, this seems like the perfect time to go inside and have a look around. Unfortunately, it seems you aren[apostrophe]t the only one who thought the bookstore would be a nice place to visit, and you are jumped almost as soon as you enter!";
 		fight;
