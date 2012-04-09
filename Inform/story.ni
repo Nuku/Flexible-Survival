@@ -707,6 +707,18 @@ carry out hunting:
 	let Q be a list of numbers;
 	let found be 0;
 	let sitfound be 0;
+	if bodyname of player is "Mental Mouse" or mousecurse is 1:		[hunted by the mouse collective]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Mental Mouse":
+				add y to q;
+				add y to q;
+				if "Like Attracts Like" is listed in feats of player:
+					add y to q;
+				if humanity of player < 85:
+					repeat with x running from 1 to ( ( 100 - humanity of player ) / 16 ):
+						add y to q;
+				break;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is no area entry, next;
@@ -725,6 +737,14 @@ carry out hunting:
 				if "Master Baiter" is listed in feats of player:
 					repeat with N running from 1 to ( perception of player / 3 ):
 						add x to q;
+				if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
+					add x to q;
+				if "Like Attracts Like" is listed in the feats of the player and bodyname of player is name entry and a random chance of 1 in 2 succeeds:
+					add x to q;
+				if "Like Attracts Like" is listed in the feats of the player and cockname of player is name entry and a random chance of 1 in 2 succeeds:
+					add x to q;
+				if "Like Attracts Like" is listed in the feats of the player and facename of player is name entry and a random chance of 1 in 2 succeeds:
+					add x to q;
 			otherwise:
 				if there is a lev entry:
 					if lev entry is greater than level of player plus levelwindow, next;
@@ -736,6 +756,14 @@ carry out hunting:
 					otherwise:
 						next;
 				add x to q;
+				if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
+					add x to q;
+				if "Like Attracts Like" is listed in the feats of the player and bodyname of player is name entry and a random chance of 1 in 2 succeeds:
+					add x to q;
+				if "Like Attracts Like" is listed in the feats of the player and cockname of player is name entry and a random chance of 1 in 2 succeeds:
+					add x to q;
+				if "Like Attracts Like" is listed in the feats of the player and facename of player is name entry and a random chance of 1 in 2 succeeds:
+					add x to q;
 	if the number of entries in q is not 0 and found is 1:
 		sort Q in random order;
 		repeat with Z running through q:
@@ -2503,6 +2531,18 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 To fight:
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	let Q be a list of numbers;
+	if bodyname of player is "Mental Mouse" or mousecurse is 1:		[hunted by the mouse collective]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Mental Mouse":
+				add y to q;
+				add y to q;
+				if "Like Attracts Like" is listed in feats of player:
+					add y to q;
+				if humanity of player < 85:
+					repeat with x running from 1 to ( ( 100 - humanity of player ) / 16 ):
+						add y to q;
+				break;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is a lev entry:
@@ -4340,6 +4380,7 @@ Include Junkman For FS by Stripes.
 Include Trash Coon For FS by Stripes.
 Include Snow Bat For Fs by Stripes.
 Include Bottlenose Toy For Fs by Stripes.
+Include Mental Mouse For Fs by Stripes.
 Include Candy Striper by Stripes.
 
 
