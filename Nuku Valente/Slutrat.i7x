@@ -328,7 +328,7 @@ To Say slutratdenscene:
 
 Section 6 - Pool Hall
 
-Pool Hall is a situation.
+Pool Hall is a situation.  Pool Hall is resolved.
 The sarea of Pool Hall is "High";
 
 Instead of resolving a Pool Hall:

@@ -89,7 +89,7 @@ To say doestats:
 	if lev entry < 15:
 		now dex entry is lev entry + 6;								[quick dex and hp growth early on]
 		now hp entry is lev entry times 10;
-		now wdam entry is ( ( lev entry minus 3 ) times 2 divided by 3 ) plus 8;
+		now wdam entry is ( ( lev entry * 2 ) / 3 ) plus 6;
 	otherwise:
 		now dex entry is 18 + ( lev entry / 5 );							[normal hard mode dex growth at lvl 15+]
 		now hp entry is 60 + ( lev entry times 6 );						[boss hard mode hp growth at lvl 15+]
