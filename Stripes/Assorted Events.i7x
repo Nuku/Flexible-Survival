@@ -444,6 +444,7 @@ Instead of resolving a Concession Stand:
 				now bodyname of player is "Shifting Pet";
 				now cockname of player is "Shifting Pet";
 				end the game saying "You submitted to the shifting man at the fair, becoming his slutty pet.";
+				now battleground is "void";
 				wait for any key;
 				follow the turnpass rule;
 				stop the action;
@@ -531,6 +532,7 @@ Instead of resolving a Beach Party:
 		if humanity of player < 10:
 			say ".  With your mind fading away, you giggle happily and bound off into the water to play with your new friends as you forget yourself enterily and become a fun-loving beach toy.";
 			end the game saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
+			now battleground is "void";
 			wait for any key;
 			follow the turnpass rule;
 			stop the action;

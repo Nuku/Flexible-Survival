@@ -175,6 +175,7 @@ to say nogging:
 		now body of player is body entry;
 		now cock of player is cock entry;
 		end the game saying "You gave in to the holiday spirit.";
+		now battleground is "void";
 
 
 Section 4 - Holiday Madness

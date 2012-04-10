@@ -277,6 +277,7 @@ to say mqlostfight:
 	now humanity of player is 0;
 	follow the turnpass rule;
 	end the game saying "You become another whore for the corrupt cop.";
+	now battleground is "void";
 
 
 to say totalTH:
@@ -375,6 +376,7 @@ to say mqsuccess:
 	follow the turnpass rule;
 	wait for any key;
 	end the game saying "You become the muscled guard for the tigresses.";
+	now battleground is "void";
 
 to say MQvictory:						[Victory]
 	if cocks of player > 0 and cunts of player > 0:		[herm]
