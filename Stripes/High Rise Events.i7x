@@ -610,6 +610,7 @@ Instead of resolving a Cameo:
 		if humanity of player < 10:
 			say ".  You flow into the shape of a flowing, chocolate dog and head out after them with a wet yip, having lost too much of yourself to them and succumbing to the bizarre, confectionary infection.  When you catch up to them, they grin and give you slobbery, chocolatey licks and nuzzles, welcoming you into the pack.";
 			end the game saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
+			now battleground is "void";
 			wait for any key;
 			follow the turnpass rule;
 			stop the action;
