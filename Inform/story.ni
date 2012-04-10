@@ -707,7 +707,7 @@ carry out hunting:
 	let Q be a list of numbers;
 	let found be 0;
 	let sitfound be 0;
-	if bodyname of player is "Mental Mouse" or mousecurse is 1:		[hunted by the mouse collective]
+	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Mental Mouse":
@@ -2438,8 +2438,10 @@ to Pet level up:
 	if "Good Teacher" is listed in feats of player:
 		increase xp of companion of player by ( level of companion of player minus 1 ) times 4;
 	say "Your [companion of player] has gained level [level of companion of player]! Congratulations!";
-	if remainder after dividing level of player by 2 is 0:
+	if remainder after dividing level of companion of player by 2 is 0:
 		increase weapon damage of companion of player by 1;
+	if remainder after dividing level of companion of player by 5 is 0:
+		increase dexterity of companion of player by 1;
 
 To level up:
 	increase level of player by 1;
@@ -4424,6 +4426,7 @@ Include Felinoid Companion by Sarokcat.
 Include Kitty Cat by Sarokcat.
 Include Skunk Pet by Sarokcat.
 Include Exotic Bird by Sarokcat.
+Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
 
 
