@@ -80,6 +80,7 @@ to say losejoannafight:
 	now thirst of player is 0;
 	now hunger of player is 0;
 	end the game saying "You were consumed by the giant parasitic plant.";
+	now battleground is "void";
 	now vinetrapped is 2;
 	wait for any key;
 	follow the turnpass rule;
