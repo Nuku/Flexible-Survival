@@ -49,7 +49,7 @@ check treasurehunt:
 
 carry out treasurehunt:
 	if lasttreasurehunt - turns is less than 8:
-		say "approaching the dark caves that dot the island, you realize that you still haven[apostrophe]t fully recovered from your last trip down into the darkness, and decide to come back again later...";
+		say "Approaching the dark caves that dot the island, you realize that you still haven[apostrophe]t fully recovered from your last trip down into the darkness, and decide to come back again later...";
 		stop the action;
 	otherwise:
 		if treasurefound is 0:

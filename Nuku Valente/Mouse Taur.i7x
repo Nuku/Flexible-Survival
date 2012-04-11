@@ -52,6 +52,7 @@ Instead of Resolving a Find Porn Store:
 		say "After the encounter with the tigress in the alley, the mouse taur come out with a long pole and squirt gun filled with foul liquid, chasing off the tigress with angry yells about staying away from her store. You turn around and begin profusely apologizing to the mouse taur before you get the same treatment. She eventually just sighs and accepts your that you really didn't mean any harm. 'Well, I guess I might as well introduce myself then, I'm Lisa, I live here. I suppose you can come and visit sometimes, if you want. Maybe the two of us could have some proper fun, eh.' she adds with a wink.";
 		increase mtrp by 1;
 		move the player to the Porn Store;
+		now Porn Store is known;
 		now mouse taur is resolved;
 		now find porn store is resolved;
 
