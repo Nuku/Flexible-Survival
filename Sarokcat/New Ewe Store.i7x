@@ -5,8 +5,9 @@ New Ewe Store by Sarokcat begins here.
 Section 1- the situation
 
 New Ewe Store is a situation.
-
 The sarea of New Ewe Store is "Outside";
+when play begins:
+	add New Ewe Store to badspots of furry;
 
 NES is a number that varies.
 Lastramfuck is a number that varies. Lastramfuck is usually 250.
@@ -76,7 +77,7 @@ Instead of Resolving a New Ewe Store:
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll is greater than 10:
-				say "After convincing the voice that you arent a threat, the door is quickly opened and you are hurried inside, the door closing rapidly behind you.  Looking around you find yourself being stared at by a small herd of rather sheeplike people, most of their bodies covered in soft wool, with rather sheeplike faces.  As you stare around you in astonishment one of them steps forward and introduces themselves as Leon, and wonders if you can help them with a small problem. Apparently one of their small flock was out gathering supplies and hasn't returned yet, if you can help find her then they would be happy to help you out in return.";
+				say "After convincing the voice that you arent a threat, the door is quickly opened and you are hurried inside, the door closing rapidly behind you.  Looking around you find yourself being stared at by a small herd of rather sheeplike people, most of their bodies covered in soft wool, with rather sheeplike faces.  As you stare around you in astonishment, one of them steps forward and introduces himself as Leon, and wonders if you can help them with a small problem. Apparently one of their small flock was out gathering supplies and hasn't returned yet, if you can help find her then they would be happy to help you out in return.";
 				If player consents:
 					say " 'Thank you very much, We've all been worried sick about her. It's not good for someone to be away from the flock for to long' The watching sheep nod at this statement.";
 					increase nes by 1;

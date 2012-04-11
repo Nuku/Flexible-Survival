@@ -377,7 +377,9 @@ Carry out reciting:
 	if "Mental Booster" is listed in feats of player, remove "Mental Booster" from the feats of the player;
 	if hospquest is 8, now nerminepackage is 1;
 	if hospquest > 9, add "Rapid Healing" to feats of the player;
-	if hospquest > 13, add "Physical Booster" to the feats of the player;
+	if hospquest > 13:
+		add "Physical Booster" to the feats of the player;
+		now infection terminal is in Hidden Lab;
 	if hospquest > 13 and deerhappy is 2:
 		 move Susan to Hidden Lab;
 	if hp of doctor matt > 11 and hp of doctor matt < 100, add "Mental Booster" to the feats of the player;
