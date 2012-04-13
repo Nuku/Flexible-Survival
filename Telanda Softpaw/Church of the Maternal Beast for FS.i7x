@@ -93,7 +93,7 @@ part 3.2 - Notice Board
 
 Table of board entries
 entry text	entry trigger
-"The Church would like to issue a warning to all Roaming the district at night, Strange flickering green light has been seen behind the sheds north of the beach. It is advised no one visit this area."	"[hellhoundtoggle]"
+"The Church would like to issue a warning to all roaming the district at night. Strange flickering green light has been seen behind the sheds north of the beach. It is advised no one visit this area."	"[hellhoundtoggle]"
 
 Instead of examining the Notice Board:
 	say "Covering the notice board are many scraps of paper, most worse for wear. but at the same time most seem relatively new, huh, Guess paper is a tad hard to come by.  Most of them seem to be personal ads, should those be on a church notice board?! [line break]Anyways, here are a few that catch your attention.[line break] [line break]";
@@ -190,7 +190,7 @@ to say meetHellhound:
 				else : [ You poor neuter]
 					say "*snorts* *you're no use to me mortal";
 			else:
-				say "The Hell hounds tongue lolls out of it's muzzle, yellow slime dripping from it as it gives a derisive snort. [line break]'Such self deception... oh well. I will return when you realise it is what you truly want!' [line break]With that green flames flicker at its paws then suddenly shoot up in a column of fel fire before vanishing, nothing left there but a ashen circle.";
+				say "The Hell hound's tongue lolls out of it's muzzle, yellow slime dripping from it as it gives a derisive snort. [line break]'Such self deception... oh well. I will return when you realise it is what you truly want!' [line break]With that green flames flicker at its paws then suddenly shoot up in a column of fel fire before vanishing, nothing left there but a ashen circle.";
 		else:  [ If male prefered do the Male TF, Check female prefered as well silly >.<]
 			say "As you glance behind they way you came a large wall of greenish fire leaps up, making a crackling noise as it sets the grass beneath it alight, even though you can feel no heat.  A soft lusty growl drags your attention back to the infernal four legged beast you are now trapped with.";
 			say "'oooh, what have we here? a mortal? how delicious!'"; [Gender detect line Removed]

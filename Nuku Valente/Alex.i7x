@@ -138,6 +138,7 @@ Instead of resolving Find Lorenda:
 	increase score by 50;
 	extend game by 8;
 	now progress of alex is 2;
+	now battleground is "void";
 	now find lorenda is resolved;
 
 

@@ -506,7 +506,7 @@ Wild Animals is a grab object.  It is part of the player.  It is not temporary.
 instead of using Wild Animals:
 	say "     You pull out the book and flip through it, letting yourself become excited by the photos and scenes of wild, animal sex described within.  You feel hornier after reading it, but also a little less human, having sunk further into the infection's untamed desires.";
 	increase libido of player by 12;
-	decrease humanity of player by a random number between 2 and 6;
+	decrease humanity of player by a random number between 2 and 5;
 	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
 	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if "Horny Bastard" is listed in feats of player, increase libido of player by 2;

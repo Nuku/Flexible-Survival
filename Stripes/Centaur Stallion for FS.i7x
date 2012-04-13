@@ -73,9 +73,9 @@ When Play begins:
 	now cock entry is "[one of]black, equine[or]flared, equine[or]sheathed, equine[or]horse-like[at random]";
 	now face change entry is "it takes on a human appearance with hard, masculine features.  As the changes continue to progress, your nose flares wide and your ears taper up into points";
 	now body change entry is "your torso becomes strong and muscled, with broad, manly shoulders.  The muscles on your arm and chest become well-defined, as if having had years worth of muscle training within a matter of moments.  But as the changes progress, your legs and hips become unsteady and you are no longer able to stand as they twitch uncontrollably.  Spots fill your eyes as the rush of this transformation overwhelms your senses.  When your vision finally clears, your lower body has become that of a horse";
-	now skin change entry is "a sudden itching from below your waist brings to your attention the short brown hairs completely covering you from your waist down.  However, from the waist up your skin is tanned and smooth human skin.";
+	now skin change entry is "a sudden itching from below your waist brings to your attention the short brown hairs completely covering you from your waist down.  However, from the waist up your skin is tanned and smooth human skin";
 	now ass change entry is "a twitching quiver runs down your spine as it extends and grows a horse's tail";
-	now cock change entry is "it twitches and throbs as it stiffens and reshapes itself.  The head flares like a horse's and releases several spurts of cum on the ground as it turns a glossy black.  As your member grows soft again, a sheath forms around the base to keep the swollen member safe and secure.";
+	now cock change entry is "it twitches and throbs as it stiffens and reshapes itself.  The head flares like a horse's and releases several spurts of cum on the ground as it turns a glossy black.  As your member grows soft again, a sheath forms around the base to keep the swollen member safe and secure";
 	now str entry is 16;
 	now dex entry is 14;
 	now sta entry is 16;

@@ -54,7 +54,7 @@ to say bull vict:
 				say "[impregchance]";
 			now Mooed is 1;
 		otherwise:
-			say "The huge beast bellows one last time and flies at you, its head crashing hard into your side. Your cry then, reminds you of the Cow you remember striking down.[line break][infect][line break]The bull seems to have calmed, it wanders off to graze.";
+			say "The huge beast bellows one last time and flies at you, its head crashing hard into your side. Your cry then reminds you of the Cow you remember striking down.[line break][infect][line break]The bull seems to have calmed, it wanders off to graze.";
 			say "your blood seems to have covered the scent of the bovine cow attack from earlier.";
 			decrease CowKiller by 1;
 	otherwise:
