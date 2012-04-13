@@ -25,7 +25,7 @@ The maximum score is 2500.
 
 include Glulx Entry Points by Emily Short.
 Include Text Capture by Eric Eve.
-Include Inline Hyperlinks by Erik Temple.
+Include Inline Hyperlinks by Nuku Valente.
 
 Table of Basic Help Options (continued)
 title	description 
