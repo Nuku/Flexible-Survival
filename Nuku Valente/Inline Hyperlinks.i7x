@@ -86,7 +86,9 @@ To say set link (N - a number):
 To say terminate link:
 	(-  if (glk_gestalt(gestalt_Hyperlinks, 0)) glk_set_hyperlink(0); -)
 
-To cancel line input in main window: (- glk_cancel_line_event(gg_mainwin, GLK_NULL); -)
+To cancel line input in main window: 
+	(- glk_cancel_line_event(gg_mainwin, GLK_NULL);
+	glk_cancel_char_event(gg_mainwin); -)
 
 
 Section - Processing hyperlinks
