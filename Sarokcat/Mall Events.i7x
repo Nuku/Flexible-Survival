@@ -82,7 +82,7 @@ when play begins:
 Instead of resolving a Captive rat:
 	say "Traveling the sewers, you hear a strange chanting noise in the distance, and you almost think you hear a call for help. Do you want to investigate?";
 	if player consents:
-		say "Carefully heading down a side passageway, you find it opens up into a small room where a Demon Brute seems to have captured a struggling mall rat.  The demon brute is chanting over the bound rat, and the rat is begging and pleading for someone to help free it.  Before you can do anything more, the brutes chant finishes and it shoots its seed all over the trapped rat. The beast then turns to look directly at you, 'Did you like watching?' it asks sarcastically as it charges. 'You can be next!'";
+		say "Carefully heading down a side passageway, you find it opens up into a small room where a Demon Brute seems to have captured a struggling mall rat.  The demon brute is chanting over the bound rat, and the girl is begging and pleading for someone to help free it.  Before you can do anything more, the brutes chant finishes and it shoots its seed all over the trapped rat. The beast then turns to look directly at you, 'Did you like watching?' it asks sarcastically as it charges. 'You can be next!'";
 		challenge "Demon Brute";
 		say "Driving off the foul demon, you turn to free the captive mall rat, only to discover that it has not only managed to free itself, but it seems to have undergone a suprising transformation as well!";
 		challenge "Slut Rat";
