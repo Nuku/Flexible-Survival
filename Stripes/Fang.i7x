@@ -1,4 +1,6 @@
-Version 2 of Fang by Stripes begins here.
+Version 3 of Fang by Stripes begins here.
+[Version 3 - Sandra added to roster of options]
+
 "Adds Fang the Feral Wolf to the Flexible Survival game"
 
 Section 1 - Fang the Feral Wolf
@@ -68,7 +70,7 @@ to say fangsex:
 	if libido of fang > 2 and lastrabbitfuck - turns >= 8 and Sandra is in the Bunker :
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
-		now sortorder entry is 3;
+		now sortorder entry is 5;
 		now description entry is "See if Sandra wants to play with the big, bad wolf again.";
 		now toggle entry is fangsexy rule;
 	sort the table of fucking options in sortorder order;
