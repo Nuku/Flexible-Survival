@@ -4457,9 +4457,11 @@ Include Honey by Stripes.
 Book 10 - Let the Games Begin
 
 to say promptsay:
+	say "Exits: ";
 	repeat with nam running through valid directions:
-		say "[link][printed name of nam][end link], ";
-	say "[if location of player is fasttravel][bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket][end if]>";
+		say "[link][printed name of nam][end link] ";
+	say "[if location of player is fasttravel][bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket][end if]";
+	say " [link]Inventory[end link], [link]Myself[as]look me[end link]>";
 
  When play begins:
 	repeat with x running through situations:
