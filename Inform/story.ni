@@ -23,6 +23,10 @@ The release number is 50.
 The story creation year is 2010.
 The maximum score is 2500.
 
+include Glulx Entry Points by Emily Short.
+Include Text Capture by Eric Eve.
+Include Inline Hyperlinks by Erik Temple.
+
 Table of Basic Help Options (continued)
 title	description 
 "Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://nukuv.blogspot.com/" 
@@ -641,12 +645,15 @@ To say level up needed:
 Table of Fancy Status
 left	central	right
 "Location: [the player's surroundings]"	"XP:[xp of player]/[level up needed] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
-"Exits: [List of Valid Directions]"	"Hunger: [hunger of player] Thirst: [thirst of player]"	"Score:[score]/[maximum score]"
+"Exits: [exitlist]"	"Hunger: [hunger of player] Thirst: [thirst of player]"	"Score:[score]/[maximum score]"
 "Sanity: [humanity of player]/100"	"Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours"	"[if number of entries in childrenfaces is greater than 0]Children: [number of entries in childrenfaces][end if]"
 "[if menu depth > 0]N = Next[end if]"	"[if menu depth > 0]ENTER = Select[end if]"	"[if menu depth > 0]P = Previous[end if]"
 [" You are:[Player_Status],[Player_Gender_Status]"	""	""]
 
 
+to say exitlist:
+	repeat with nam running through valid directions:
+		say "[link][printed name of nam][end link] ";
 
 
 
@@ -4433,12 +4440,17 @@ Include Honey by Stripes.
 
 Book 10 - Let the Games Begin
 
-When play begins:
+to say promptsay:
+	repeat with nam running through valid directions:
+		say "[link][printed name of nam][end link], ";
+	say "[if location of player is fasttravel][bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket][end if]>";
+
+ When play begins:
 	repeat with x running through situations:
 		now x is a part of the player;
 	repeat with x running through grab objects:
 		now x is a part of the player;
-	now the command prompt is "[list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";
+	now the command prompt is "[promptsay]";
 [	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
 
 
