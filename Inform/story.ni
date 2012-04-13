@@ -1018,6 +1018,8 @@ understand "i" as Inventorying.
 understand "inv" as Inventorying.
 understand "inventory" as Inventorying.
 
+does the player mean doing something with the medkit: it is very likely.
+
 carry out Inventorying:
 	sort invent of player;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
@@ -1036,6 +1038,10 @@ carry out Inventorying:
 				repeat with  y running through invent of player:
 					if y is name entry, increase number by 1;
 				say "[number]([weight entry times number] lbs)";
+				say " [link]-Use-[as]use [name entry][end link]";
+				say " [link]-Look-[as]look [name entry][end link]";
+				say " [link]-Smell-[as]smell [name entry][end link]";
+				say " [link]-Drop-[as]drop [name entry][end link]";
 				increase weight by weight entry times number;
 				say "[line break]";
 		if the player is overburdened, say "*OVERBURDENED*";
