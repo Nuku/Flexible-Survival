@@ -1,4 +1,5 @@
-Version 1 of Joanna by Stripes begins here.
+Version 2 of Joanna by Stripes begins here.
+[Version 2 - More conversation & more sex]
 
 "Adds a Kinkajou-Plant NPC named Joanna to the Flexible Survival game"
 
@@ -32,9 +33,10 @@ Instead of resolving a Overrun Garden:
 			now hp of Joanna is 1;
 			say "     Your struggle with the plant is quite difficult, but you persist, tearing roots and smashing flowers as you struggle to get reach the main body of the plant.  During your fight, the kinkajou is able to break free because you've destroyed enough of the vines and she makes a break for it.  For a moment, you think she's left you all alone, but you hear a small engine choking to start.  Looking away from the large, torn bags of fertilizer at the plant's base as you make it there, you spot her coming out of a small gardening shed wielding a gas powered hedge trimmer with a wild look in her eyes.  You tackle the vines, holding them taut as she slashes through them, splattering their green juices out.  She slashes at the plant's base, slowly cutting through it as you keep the last of the vines off her until it's sawed clean through and you both collapse, panting for breath after your life or death fight.";
 			wait for any key;
-			say "     After a short rest, she rolls over beside you and hugs you tightly, then kisses you softly on the cheek.  'Oh, thanks for coming to save me.  I... that plant... plant?' she starts upright, noticing her changes.  The plant's assault on her has left her partially a plant, with green fur over her body and her feet growing tendrils and roots.  Her large eyes, like her face and the flowers blossoming in her hair, are a vibrant red, beautifully contrasting with her verdant fur.  There is a little green around her eyes, much like eye shadow.  Her groin, as you saw earlier, has quite dramatically changed, now having a quartet of long cock tendrils with a swollen pair of bulbs for balls.  Beneath those, she has a trio of slick pussies shaped like lovely orchids[if daytimer is day].  She stretches her arms wide and sighs in pleasure, taking in the sunlight, turning slowly as her roots automatically dig into the soil and have to be pulled out with each step[end if].";
+			say "     After a short rest, she rolls over beside you and hugs you tightly, then kisses you softly on the cheek.  'Oh, thanks for coming to save me.  I... that plant... plant?' she starts upright, noticing her changes.  The plant's assault on her has left her partially a plant, with green fur over her body and her feet growing tendrils and roots.  Her large eyes, like her face and the flowers blossoming in her hair, are a vibrant red, beautifully contrasting with her verdant fur.  There is a little green around her eyes, much like eye shadow.  Her groin, as you saw earlier, has quite dramatically changed, now having a quartet of long cock tendrils with a swollen pair of bulbs for balls.  Beneath those, she has a trio of slick pussies shaped like lovely orchids[if daytimer is day].  She stretches her arms wide and sighs in pleasure, taking in the sunlight, turning slowly as her roots automatically dig into the soft soil and have to be pulled out with each step[end if].";
 			wait for any key;
 			say "     'And I was just getting used to being a kinkajou,' she says with a soft giggle, walking slowly around the garden, smelling the large flowers and diving her tongue into them to enjoy their nectar.  'Mmm... this looks like a lovely garden.  The perfect place for a lovely flower like me, don't you think?' she asks with a grin.  'My name is Joanna.  You're welcome to visit here again whenever you like, my brave hero,' she adds, running a green finger slowly down your chest and smiling as she sensually runs her foot-long tongue across your neck.";
+			now battleground is "void";		[blocks a post-event fight]
 		otherwise if joannafight is 2:
 			say "[losejoannafight]";
 		otherwise:
@@ -80,7 +82,7 @@ to say losejoannafight:
 	now thirst of player is 0;
 	now hunger of player is 0;
 	end the game saying "You were consumed by the giant parasitic plant.";
-	now battleground is "void";
+	now battleground is "void";		[blocks a post-event fight]
 	now vinetrapped is 2;
 	wait for any key;
 	follow the turnpass rule;
@@ -90,7 +92,7 @@ to say losejoannafight:
 Section 2 - Flower Garden
 
 Flower Garden is a room. It is fasttravel. It is private.
-The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care.  Cleaning away the remains of the monstrous plant, she's taken its place at the center of the garden.  She uproots herself from time to time to walk around and tend to her flowers.  There is a stone path to walk that weaves through the various beds and bushes.";
+The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care.  Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden.  She uproots herself from time to time to walk around and tend to her flowers.  There is a stone path to walk that weaves through the various beds and bushes.";
 lastflowersmell is a number that varies.  lastflowersmell is normally 555;
 Skyscrapers2 is a door.  "Leaving here to the east heads back into the High Rise District.".
 Skyscrapers2 is west of Financial Sector and east of Flower Garden.  It is dangerous.
@@ -103,6 +105,8 @@ instead of sniffing Flower Garden:
 	otherwise:
 		say ".  Stopping to smell the roses cheers you up a little.";
 		increase morale of player by 5;
+		increase libido of player by 5;
+		if libido of player > 100, now libido of player is 100;
 		now lastflowersmell is turns;
 
 
@@ -111,6 +115,7 @@ Section 3 - Joanna the Kinkajou-Plant
 Joanna is a woman.  Joanna is in Flower Garden.
 The description of Joanna is "[joannadesc]";
 lastjoannafucked is a number that varies.  lastjoannafucked is normally 555.
+joannatalk is a number that varies.
 
 instead of sniffing the Joanna:
 	say "Moving up close to her, you stroke Joanna's hair and bring one of the blossoms to your nose.  It has a lovely fragrance, uniquely lovely and perhaps the best flower you've ever smelled";
@@ -119,6 +124,8 @@ instead of sniffing the Joanna:
 	otherwise:
 		say ".  Stopping to smell the roses cheers you up a little.";
 		increase morale of player by 5;
+		increase libido of player by 5;
+		if libido of player > 100, now libido of player is 100;
 		now lastflowersmell is turns;
 
 to say joannadesc:
@@ -127,7 +134,16 @@ to say joannadesc:
 
 
 Instead of conversing the Joanna:
-	say "     [one of]'I should be safe enough here.  The trimmer should scare off anyone who comes looking for trouble,' she says, patting the gas-powered tool.[or]'Don't you love my beautiful garden?'[or]'I'm really liking the new me,' she says, running her paws over her verdant body.[or]'Life is so peaceful here.'[or]'I'm glad you stopped by.'[or]'Thanks for the help.  Being a plant is wonderful, but I don't think there'd have been anything left of me if you hadn't come to my rescue.'[or]'I have so many beautiful flowers to tend to in my garden.'[or]'I think I like these ones best,' she says, walking over to one flowering bush.  She brings one of the large, vaginal flowers to her muzzle and dives her long, red tongue into it, licking slowly as she grins at you.[or][if daytimer is day]'Doesn't the warm sun feel so good?' she asks, spreading her arms to take in the light[otherwise]'Oh, I get so sleepy when the sun's down.  I can hardly wait for morning,' she says[end if].[or]'Be sure to come back and visit my garden again.'[or]Joanna tills the soil, mixing in some more fertilizer from the shed before setting down her roots with a soft sigh of satisfaction.[at random]";
+	if joannatalk is 0:
+		say "     Joanna [if daytimer is day]turns away from stretching herself to the sun to smile at you[otherwise]stretches, a little sluggish at night and turns to smile at you[end if].  'That was quite the little adventure we had, wasn't it?  I had just been getting used to being a kinkajou and spent a lot of my time at night scurrying around.  Now I've got to switch my schedule around again,' she says with a soft chuckle, trying to put a brave face on what is a very dramatic change.  'At least a plant's calender's pretty simple: get some sunshine.  Should be easy enough to handle,' she adds, smiling weakly.";
+		say "     She steps over to one of the nearby plants and strokes its enlarged flowers, almost sensually so.  Cupping it in her paw gently, she brings it to her lips and dives her long tongue inside, lapping up the nectar with a soft sigh of satisfaction.  'This is such a lovely garden.  These giant flowers are very beautiful, and so delicious.  Now that the big parasite is gone, it should be much more peaceful and grow even more lovely.'  She heads over to its remains, giving the remaining roots a few angry stabs with a spade before working in some of the fertilizer from the torn bags and getting you to put the rest away for now.  With her new spot prepared at the center of the garden, she digs her feet into it with a little trepidation, but sighs softly in delight as her roots dig into the rich earth.";
+		increase joannatalk by 1;
+	otherwise if hp of joanna is 1:
+		say "     [one of]'I should be safe enough here.  The trimmer should scare off anyone who comes looking for trouble,' she says, patting the gas-powered tool.[or]'Don't you love my beautiful garden?'[or]'It's... really strange being a plant,' she says, running her paws over her altered body.[or]'You should remember to take a moment to smell my lovely flowers,' she says.  While she probably means her garden, there's the possibility she could mean her own flowers as well.[or]'I'm glad you stopped by.'[or]'Thanks for the help.  I don't think there'd have been anything left of me if you hadn't come to my rescue.'[or]'I have so many beautiful flowers to tend to in my new garden.'[or]'I think I like these ones best,' she says, walking over to one flowering bush.  She brings one of the large, vaginal flowers to her muzzle and dives her long, red tongue into it, licking slowly as she grins at you.[or][if daytimer is day]'Doesn't the warm sun feel so good?' she asks, spreading her arms to take in the light[otherwise]'Oh, I get so sleepy when the sun's down.  I can hardly wait for morning,' she says[end if].[or]'Be sure to come back and visit my garden again.'[or]Joanna tills the soil, mixing in some more fertilizer from the shed before setting down her roots with a soft sigh of satisfaction.[or]'I'm still kinkajou enough to want to be active at night, but I just don't have the energy.  It's a little confusing,' she confesses.[at random]";
+	otherwise if hp of joanna is 2:
+		say "     [one of]'I should be safe enough here.  The trimmer should scare off anyone who comes looking for trouble,' she says, patting the gas-powered tool.[or]'Don't you love my beautiful garden?'[or]'I'm starting to like the new me,' she says, running her paws over her verdant body.[or]'You should remember to take a moment to smell my lovely flowers,' she says.  While she probably means her garden, there's the possibility she could mean her own flowers as well.[or]'Life is so peaceful here.'[or]'I'm glad you stopped by.'[or]'Thanks for the help.  I don't think there'd have been anything left of me if you hadn't come to my rescue.'[or]'I have so many beautiful flowers to tend to in my garden.'[or]'I think I like these ones best,' she says, walking over to one flowering bush.  She brings one of the large, vaginal flowers to her muzzle and dives her long, red tongue into it, licking slowly as she grins at you.[or][if daytimer is day]'Doesn't the warm sun feel so good?' she asks, spreading her arms to take in the light[otherwise]'Oh, I get so sleepy when the sun's down.  I can hardly wait for morning,' she says[end if].[or]'Be sure to come back and visit my garden again.'[or]Joanna tills the soil, mixing in some more fertilizer from the shed before setting down her roots with a soft sigh of satisfaction.[or]'I'm still kinkajou enough to want to be active at night, but I just don't have the energy.'[or]'This plant body of mine has such... strange urges,' she whispers, her tendrils stirring a little.[at random]";
+	otherwise if hp of joanna > 2:
+		say "     [one of]'I should be safe enough here.  The trimmer should scare off anyone who comes looking for trouble,' she says, patting the gas-powered tool.[or]'Don't you love my beautiful garden?'[or]'I'm really liking the new me,' she says, running her paws over her verdant body.[or]'You should remember to take a moment to smell my lovely flowers,' she says.  While she probably means her garden, she does grin and run a finger along the soft petals of her pussies.[or]'Life is so peaceful here.'[or]'Thanks for the help.  Being a plant is wonderful, but I don't think there'd have been anything left of me if you hadn't come to my rescue.'[or]'I think I like these ones best,' she says, walking over to one flowering bush.  She brings one of the large, vaginal flowers to her muzzle and dives her long, red tongue into it, licking slowly as she grins at you.[or][if daytimer is day]'Doesn't the warm sun feel so good?' she asks, spreading her arms to take in the light[otherwise]'Oh, I get so sleepy when the sun's down.  I can hardly wait for morning,' she says[end if].[or]'Be sure to come back and visit my garden again.'[or]Joanna tills the soil, mixing in some more fertilizer from the shed before setting down her roots with a soft sigh of satisfaction.[or]'I'm still kinkajou enough to want to be active at night, but I just don't have the energy.'[or]'This plant body of mine has such... strange urges,' she whispers, her tendrils stirring a little.[at random]";
 
 
 Section 4 - Joanna Sex
@@ -137,8 +153,13 @@ instead of fucking the Joanna:
 		say "     Having played with Joanna recently, perhaps you should wait a bit before having another romp with her.  She could use a little more time in the sun to recharge and refill on her sweet juices.";
 	otherwise if daytimer is night:	[night]
 		say "     You make the suggestion to Joanna, but she smiles and shakes her head.  'Sorry, with the sun down, I'm just a little too sleepy to play around.  Please ask again during the daytime and I'd be happy to show you how much I appreciate all your help.'";
+	otherwise if hp of Joanna is 1:
+		say "     You move up to the unusual plant girl and run a hand lightly over her soft fur.  She chirrs softly and leans into your touch, not really aware of what she's doing right away.  You put your arms around her from behind, holding her close to you, watching her tendril cocks start to stir to life.  You whisper softly in her ear that you like to make love to her, and she somehow blushes even more red in the face.  'You... you can't really mean that,' she says, moving her paws to try to cover her swelling cocks.  'Who'd want a strange plant creature like me?' she mumbles softly.  Sliding your hands down to hers, you rub over them and thereby the growing cocks they're trying to conceal, telling her that you want her and want her now.";
+		say "     Unable to hold back her growing desires any longer, she turns around quickly, if a little unsteadily as she uproots her feet with the sudden maneuver.  Once she steadies herself, blushing a vibrant red again, she pulls you into a passionate kiss.  Her long tongue slides into your mouth.  You both are taken a bit by surprise from this, but find it very enjoyable.  It tastes sweet and slides around in your mouth before diving deeper and going down your throat.  Fluid leaks from it and you find yourself growing all the more aroused because of its effects.  You struggle to decide how you'd best enjoy your first time with this nervous flower.";
+	otherwise if hp of Joanna is 2:
+		say "     Joanna smiles a little at your sensual touch and blushes a bit, but leans into your arms.  Her arms drift down to her groin, as if trying to cover up her excited body.  But as you run your hands across her breasts and caress her petaled nipples, her paws begin to touch herself instead.  Nuzzling you, she whispers softly that she'd like to try more this time, stroking her cocks and fingering her pussies as she asks to have sex with you this time.  Tilting her head to yours, she presses her muzzle to your lips.  As you kiss, her tendril tongue slips into your mouth to slide around.  As you taste the sweet nectar leaking from it, it is clearly an aphrodisiac meant to arouse her lovers and it makes you quite aroused to consider what you want.";
 	otherwise:
-		say "     The green kinkajou grins happily as you offer to have some fun in the sun with her.  She wraps her arms around you and kisses you passionately, diving her long tongue into your mouth.  It tastes sweet and slides around in your mouth before diving deeper and going down your throat.  As it starts leaking more of that sweetly arousing fluid, you try to decide exactly what you'd like to do to enjoy your time with your flowery lover.";
+		say "     The green kinkajou grins happily as you offer to have some more fun in the sun with her.  She wraps her arms around you and kisses you passionately, diving her long tongue into your mouth.  It tastes sweet and slides around in your mouth before diving deeper and going down your throat.  As it starts leaking more of that sweetly arousing fluid, you try to decide exactly what you'd like to do to enjoy your time with your flowery lover.";
 		wait for any key;
 		say "[joannaselection]";
 
@@ -146,27 +167,28 @@ instead of fucking the Joanna:
 to say joannaselection:
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
-	now title entry is "Bukkake";
-	now sortorder entry is 1;
-	now description entry is "Lavish attention on her numerous genitalia to get a messy finish.";
-	now toggle entry is joannasexy rule;
-	if cocks of player > 0:
+	if hp of joanna is not 2:
+		now title entry is "Bukkake";
+		now sortorder entry is 1;
+		now description entry is "Lavish attention on her numerous genitalia to get a messy finish.";
+		now toggle entry is joannasexy rule;
+	if cocks of player > 0 and hp of joanna is not 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Fellatio";
 		now sortorder entry is 2;
 		now description entry is "Have her suck you off.";
 		now toggle entry is joannasexy rule;
-[	if cocks of player > 0 and hp of Joanna > 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Fuck Joanna";
-		now sortorder entry is 4;
-		now description entry is "Stuff her lovely flowers with your cock(s).";
-		now toggle entry is joannasexy rule;								]
-	if cunts of player > 0:
+	if cunts of player > 0 and hp of joanna is not 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 3;
 		now description entry is "Get that wonderous tongue in your womanly flower.";
+		now toggle entry is joannasexy rule;
+	if cocks of player > 0 and hp of Joanna > 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck Joanna";
+		now sortorder entry is 4;
+		now description entry is "Stuff her lovely flowers with your cock(s).";
 		now toggle entry is joannasexy rule;
 	if cunts of player > 0 and hp of Joanna > 1:
 		choose a blank row in table of fucking options;
@@ -174,12 +196,12 @@ to say joannaselection:
 		now sortorder entry is 5;
 		now description entry is "Go for a ride on those tentacle cocks of hers.";
 		now toggle entry is joannasexy rule;
-[	if cunts of player is 0 and hp of Joanna > 1:
+	if cunts of player is 0 and hp of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 6;
 		now description entry is "Try one of those squirming tentacle cocks up your ass.";
-		now toggle entry is joannasexy rule;										]
+		now toggle entry is joannasexy rule;
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;
@@ -211,10 +233,13 @@ This is the joannasexy rule:
 			if hp of Joanna is 1, now hp of Joanna is 2;
 		otherwise if nam is "Fuck Joanna":
 			say "[joannasex4]";
+			if hp of Joanna is 2, now hp of Joanna is 3;
 		otherwise if nam is "Pussy fucked":
 			say "[joannasex5]";
+			if hp of Joanna is 2, now hp of Joanna is 3;
 		otherwise if nam is "Anal":
 			say "[joannasex6]";
+			if hp of Joanna is 2, now hp of Joanna is 3;
 		say "     You can feel an oddly pleasant sensation as Joanna's sweet saliva and fluids seep further into your body, warming your groin and exciting you.";
 		say "[line break]";
 		follow the sex change rule;
@@ -226,18 +251,24 @@ to say joannasex1:
 	increase libido of player by 15;
 	if libido of player > 100, now libido of player is 100;
 
+
 to say joannasex2:
 	say "     Reaching down, you stroke your throbbing [cockname of player] [if cocks of player > 1]cocks[otherwise]cock[end if] and slowly break the deep-throating kiss.  You stroke her softly furred muzzle and ask her if she's like a taste of it.  Grinning, she's on her knees right away.  Her long, agile tongue slides over your tongue and then wraps completely around your penis, stroking and squeezing as she starts sucking hungrily.  You moan in pleasure and run your fingers through her green hair, being careful not to pluck her flowers, then move to scritch her round ears.  Rumbling and chirring in pleasure, rubbing your [ball size] orbs, eager for the thick nectar within[if cunts of player > 1].  Her paws run along your legs and then move to start stroking and teasing your pussies, slipping a few fingers into them to further excite you and get more of your juices[otherwise if cunts of player is 1].  Her paws run along your legs and then move to start stroking and teasing you pussy, slipping a few fingers into your cunt to further excite you and get more of your juices[end if][if cocks of player > 1].  Having several cocks to pick from, she swaps between them from time to time, doing her best to get you worked up for a big blast[end if].  When your climax finally hits, she gulps down your seed hungrily, moaning around her muzzleful of throbbing cock[if cocks of player > 2] while your other cocks spurt your semen onto her face.  She swaps quickly from one to the other, [otherwise if cocks of player is 2] while your other cock spurts your semen onto her face.  She swaps quickly between them, [otherwise], [end if]trying to get as much as she can to satisfy her body's cravings.  Once your balls are drained, she gets up, running her foot long tongue over her face and paws, licking away every drop of your juices.";
 	increase libido of player by 10;
 	if libido of player > 100, now libido of player is 100;
+
 
 to say joannasex3:
 	say "     Reaching down, you stroke your leaking [cunt size desc of player] [if cunts of player > 1]cunts[otherwise]cunt[end if] and slowly pull away from the deep-throating kiss.  You stroke her softly furred muzzle with your damp fingers and ask her if she'd to put that tongue of hers to work getting more.  Grinning, she's on her knees right away.  Her long, agile tongue slides across your groin, licking at your damp folds before diving into your vagina.  The red flesh pumps and wriggles inside you, sending shivers of delight up your spine[if cunts of player > 1].  She swaps back and forth between your cunts, lavishing them with attention[end if].  Your [if cunts of player > 1]pussies orgasm[otherwise]pussy orgasms[end if] several times, giving your sweet nectar to the lustful and thirsty kinkajou.  Her paws don't remain idle either, moving to [if cocks of player > 1]stroke your cocks until they finally cum as well[otherwise if cocks of player is 1]stroke your cock until it finally cums as well[otherwise]knead your ass until finally your body is wracked with one last, powerful orgasm[end if].  Moving back after that, she makes a show of sliding her messy tongue all over her face, licking away all your juices with that flexible and talented organ.";
 	increase libido of player by 10;
 	if libido of player > 100, now libido of player is 100;
 
+
 to say joannasex4:
-	say "Fuck Joanna - not yet written";
+	say "     Reaching down between her legs, you run your fingers over her feminine petals, making her shiver.  You pull away from the deep throating kiss and ask your verdant lover if you may fill her lovely flower[if hp of joanna is 2].  Blushing a little, she nods and moans.  'I've been needing this.  This body wants it soooo much[otherwise].  Grinning, she moans and licks your ear.  'Oh, my body wants it so much[end if].'  You stretch yourself out on the ground so she can move atop you, basking in the sun as you fuck her[if hp of joanna is 2] for the first time[end if].";
+	say "     Running your hands along her hips, you caress her as she lowers herself down onto your [if cocks of player > 1]cocks, taking them into her wet pussies[otherwise]cock, taking them into her wet pussy[end if].  She chirrs in delight at the sensation of having you inside her needy body and rides you slowly at first, savouring the pleasure.  From the way she's nibbling her lip and the twitches of her flowery folds and writhing cocks, its clear it's taking some effort to hold back her urges.  Deciding to help her along, you take a pair of her slick tendrils in each hand and stroke them.  She tilts her head back and moans loudly, spreading her arms wide into the sun and rides you faster.";
+	say "     Her altered body, craving your semen, milks and squeezes at your [if cocks of player > 1]cocks[otherwise]cock[end if] until you can finally take no more and cum hard into her[if cock width of player > 12].  Your oversized balls blast a giant load of sticky cum[otherwise].  You pump your load of sticky cum[end if] into her [if cocks of player > 1]pussies[otherwise]pussy[end if], making her moan in satisfaction.  As you bounce the green kinkajou girl in your lap while cumming, you keep working her cocks until she climaxes as well, spraying her sticky, sweet-scented semen onto you both, one pair blasting you and the other her.  Sliding off your spent shaft, she moans and leans over, flopping out on the grass and chirring softly as she soaks up the sun while her body absorbs the nutrient-rich cum it desires.";
+
 
 to say joannasex5:
 	say "     Reaching down, you stroke Joanna's throbbing cocks, spreading her leaking juices over them until they're nice and slick.  Slowly pulling away from the deep-throating kiss, you ask if she'd like to fill you with them.  Her response is to give you another kiss with that wild tongue of hers, making you moan.  You lay down on the grass with her atop you, laying in a sunny patch.  She spreads your legs and brings her numerous cocks into position";
@@ -245,11 +276,13 @@ to say joannasex5:
 		say ".  Having a hole for each of her four cocks, she moans loudly in appreciation as each one of the sinks into your waiting vaginas in turn[if cunts of player is 3], pushing the final one into your tight pucker to plow your ass[end if].  The feeling of having four cocks in you at once is grand, making your body shiver and writhe in waves of delight.  Kissing you again, her slick tongue pumps down your throat, filling your taste buds with her sweet flavour once again.  You run your hands through her soft fur and stroke her breasts, your motions a little ragged and uncoordinated from the overwhelming stimuli, but Joanna is doing little better, clearly enjoying filling you so much she hardly notices your fumbling hands.  She keeps her own locked at your hips, gripping you firmly.";
 	otherwise:
 		say ".  With [if cunts of player is 1]some[otherwise]one[end if] of her cocks left out, she slides her cocks into your [if cunts of player is 1]cunt[otherwise]cunts[end if] and tight pucker each in turn.  The remaining [if cunts of player is 1]cock tendrils slide[otherwise]cock tendril slides[end if] around on your body, stroking against your [skinname of player] flesh[if cocks of player > 1] and entwining with your cocks[otherwise if cocks of player is 1] and entwining around your cock, squeezing and pumping over your throbbing flesh[end if].  Kissing you again, her slick tongue pumps down your throat, filling your taste buds with her sweet flavour once again.  You run your hands through her soft fur and stroke her breasts, playing with her nipples and the soft petals which surround them.  Joanna keeps her paws locked your hips, gripping you firmly.";
-	say "     Her various cocks move independently, each pumping into you [if cunts of player < 3]and sliding over body [end if]at their own pace.  But there is a harmonious rhythm to their motion as well, with larger overall patterns, like a beautiful concert for the body from her separate instruments.  And like a concert, the rhythm and patterns build and swell until finally reaching their peak and she sends her cocks as deep into you as they'll go, blasting his thick, gooey cum deep inside you.  You arch your back and cum hard at the sudden influx[if cocks of player > 0], spraying your own seed across you both[end if].  You become aware that more of her sweet juices flow from her tongue as well, leaving you in a haze of pleasure as she slowly withdraws from you[if cunts of player > 2].  You are left quite full and bloated from the flow from having so many cocks all cumming inside you at once, but wonderfully so[end if].[impregchance]";
+	say "     Her various cocks move independently, each pumping into you [if cunts of player < 3]and sliding over body [end if]at their own pace.  But there is a harmonious rhythm to their motion as well, with larger overall patterns, like a beautiful concert for the body from her separate instruments.  And like a concert, the rhythm and patterns build and swell until finally reaching their peak and she sends her cocks as deep into you as they'll go, blasting his thick, gooey cum deep inside you.  You arch your back and cum hard at the sudden influx[if cocks of player > 0], spraying your own seed across you both[end if].  You become aware that more of her sweet juices flow from her tongue as well, leaving you in a haze of pleasure as she slowly withdraws from you[if cunts of player > 2].  You are left quite full and bloated from the flow from having so many cocks all cumming inside you at once, but wonderfully so[end if].  Spent and satisfied, Joanna lays atop you with the warm sun on her back and her penises still inside you.[impregchance]";
 	now libido of player is ( 3 * libido of player ) / 5;
 
 to say joannasex6:
-	say "Anal - not yet written";
+	say "     Reaching down, you stroke over Joanna's throbbing cocks, spreading her leaking juices over one of them to get it extra-slick.  Slowly pulling away from the deep-throating kiss, you ask if she'd like to sink it into you[if hp of joanna is 2].  Joanna runs a paw between your legs, but finds no waiting pussy there.  She starts to ask how, then blushes as she realizes what you mean.  'I've never... I mean of course I haven't... but, if you really want to,' she says softly[otherwise].  Joanna blushes a little at the offer to fuck your ass this time[end if], but from the way her cock has been throbbing in your hand, it's clear the idea's gotten her quite turned on.  You get onto all fours facing the sun and wiggle your backside invitingly at her[if hp of Joanna > 3].  She leans in behind you, paws on your ass and spreading them as she lowers her muzzle in, sliding her slick tongue along your ass crack before slathering over your tight pucker.  Already starts to relax in anticipation of being mounted, you have to moan as she slides her long tendril into your hole to get you slick.  The hormone-rich fluids take effect quickly, making you even more lustful and needy until you're almost begging the plant girl to ravage you[end if].";
+	say "     [if hp of Joanna > 3]Withdrawing her tongue from your slick hole, [end if]Joanna moves up behind you and lines up the glistening tendril with your waiting back entrance.  You press back against it and moan as it slides into you quite easily.  The long, slender penis wriggles its way inside you, rubbing at your inner walls[if cocks of player is 1] and pressing against your prostate, making your cock throb[otherwise if cocks of player > 1] and pressing against your prostate, making your cock throb[end if].  While the one tendril worms its way deeper, two others wrap around your thighs, gripping you tightly.  The final one [if cocks of player is 1]reaches around beneath you and coils around your cock, squeezing and stroking it against its slick flesh[otherwise if cocks of player > 1]reaches around beneath you and coils around your cocks, squeezing and stroking them against one another and against its slick flesh[otherwise]keeps itself short, rubbing and stroking as your ass and lower back as you're fucked[end if].  With a good grip on you with her tendril cocks, she leans back and spreads her arms to bask in the sun as her writhing tentacles fuck you.";
+	say "     The kinkajou-plant rocks her hips a little, slapping the swollen bulbs holding her balls against you, but largely lets her flexible shaft do the work on its own.  It squirms and wriggles around inside you like a snake, sending shivers of delight through you as it delves deep inside you, leaking slick juices as it goes[if cocks of player > 0].  The one around your maleness strokes and pumps, eager to get you to cum, and cum hard[otherwise].  The one rubbing at your lower spine moves agilely, leaking precum that flows out onto your back and down between your spread cheeks[end if].  Those around your legs throb and pulse as they grip you.  Eventually and with a cry of ecstacy, the plant creature's cocks throb and unleash blasts of her slick, sweet juices.  Your bowels, thighs and [if cocks of player > 1]penises[otherwise if cocks of player is 1]penis[otherwise]back[end if] are coated in it as she cums.  The feel of all this sensual fluid filling and coating you sets you off, causing you to orgasm moments later, blasting your seed [if hp of Joanna > 2]onto Joanna's long tail, which the green kinkajou moved into position in anticipation of this[otherwise]onto the green grass beneath you[end if].  Once you are both spent, Joanna's tendrils release you and she flops back onto the warm grass, basking in the afterglow and the sunlight[if hp of Joanna > 2] while licking your semen from her tail with her foot long tongue[end if].";
 
 
 Section 4 - Endings
