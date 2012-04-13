@@ -285,6 +285,7 @@ Instead of resolving a Lovers Bench:
 			add "pepperspray" to invent of player;
 			increase score by 10;
 		if companion of player is pink raccoon:
+			wait for any key;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Raccoon":
@@ -307,6 +308,7 @@ Instead of resolving a Lovers Bench:
 			increase xp of pink raccoon by ( level of pink raccoon + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is Gryphoness:
+			wait for any key;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Hermaphrodite Gryphon":
@@ -328,6 +330,7 @@ Instead of resolving a Lovers Bench:
 			increase xp of Gryphoness by ( level of Gryphoness + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is Felinoid companion:
+			wait for any key;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Felinoid":
@@ -350,6 +353,7 @@ Instead of resolving a Lovers Bench:
 			increase xp of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
 			increase score by 20;
 		otherwise if companion of player is bee girl:
+			wait for any key;
 			say "     As you're finishing up yor scavenging, Honey buzzes on over and takes your hand in her.  She smiles up at you and grins playfully.  She gives your arm a gentle tug with her four hands.  'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly.  'I used to see couples here when I was...'  She pauses, remembering her lost sisters.  'But I have you now,' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer.  Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on her offer.";
 			if cocks of player > 0:
 				say "     Honey climbs up onto the bench, raising her bee abdomen up and waving her cute little bottom at you.  The soft, golden puff over her pussy is soaked in her juices and you can see her soft lips parted and ready for you.  The bumblebee drone buzzes excitedly as you move in behind her and get your hard cock lined up with her eager pussy.  She pushes herself back onto your cock slowly, clearly holding back from pushing it all in quickly, wanting to savour this moment.  Once you're stuffed inside her, you wrap your arms around her insect abdomen and start thrusting.  Her wings buzz frantically and her abdomen twitches in your arms.  'Mmm... kiss it.  Please, I want you to kiss me there,' she moans as her pussy quivers and squeezes around you at the thought of it.  So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others.  Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex.  With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";

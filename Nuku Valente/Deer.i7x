@@ -35,10 +35,11 @@ Instead of resolving unusual creature:
 		otherwise if libido of player is greater than 50 and cocks of player is greater than 0:
 			say "Unsure what to do, you obey the urgings of your [cock of player] cock. You grab her and push her to the ground, belly up. Your hands grab at her generous breasts as you slip into her wet, grasping, cunt. She squeals, at first withs surprise, then increasingly with pleasure, rising her hips to meet your powerful thrusts. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her. Her cunt tightens like a vice around you before she arches her back and bleats in delight. You can feel your balls clenching in response, and you fill her belly with hot gushes of seed.";
 			wait for any key;
-			say "Sated, she hugs tightly to you, and agrees to accompany you to the lab, blushing and satisfied looking the whole way";
+			say "Sated, she hugs tightly to you, and agrees to accompany you to the lab, blushing and satisfied looking the whole way.";
 			now deerconsent is 1;
 		otherwise:
 			say "Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you[apostrophe]d like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
+	now battleground is "void";		[blocks a random fight after this event]
 	now a unusual creature is resolved;
 	move susan to primary lab;
 	move player to primary lab;
