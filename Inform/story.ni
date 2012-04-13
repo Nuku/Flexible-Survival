@@ -189,7 +189,8 @@ Book 2 - Places
 
 Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.
 The description of Grey Abbey Library is "[abbey desc]".
-Bunker is a room. "Sparsely appointed, the bunker was built back during the cold war, then abandoned to a curiosity at best. Its walls are solid concrete and the shelves are at least in good repair. The small sink seems to be broken, producing no water no matter how much the knob is turned. There is a secure looking door leading [bold type]outside[roman type]".
+Bunker is a room.  The description of Bunker is "[bunker desc]";
+
 The invent of Bunker is { "medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
@@ -198,10 +199,17 @@ Inside of Grey Abbey Library is Bunker.
 The player is in Bunker.
 The marea of library door is "Outside";
 
+to say bunker desc:
+	say "     Sparsely appointed, the bunker was built back during the Cold War, then abandoned to become a forgotten curiosity at best.  Its walls are solid concrete and the shelves are at least in good repair.  There are several cots bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
+	if "cot" is listed in invent of Bunker:
+		say ".  One of the cots was poorly installed and the bolts attaching it to the floor have come loose.  You could take along if you'd like";
+	say ".  The small sink seems to be broken, producing no water no matter how much the knob is turned. There is a secure looking door leading [bold type]outside[roman type].";
+
+
 to say abbey desc:
-	say "Books, and a computer or two. The computers would be more useful if there was power in the building. You're still not entirely sure what knocked them out, but they're very out now. You came here because you knew there was a bunker in the basement. It's kept you alive, so far.";
+	say "     This converted abbey has been made into a small library and the architecture and design shows its origins despite the renovations made.  The simple columns, the wall sconces and several of the original features have been kept to give the library some 'character'.  The central room houses the stacks and a few desks, with side rooms set aside for reading and a couple of computers.  The computers would be more useful if there was power in the building.  You're still not entirely sure what knocked them out, but they're very out now.  You came here because you remembered there was a disused bunker in the basement.  It's kept you alive, so far.";
 	if Fang is in the Grey Abbey Library:
-		say "Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
+		say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
 
 Smith Haven Mall Lot is a room. "A vast and sprawling parking lot puts you within walking distance of a large mall to the north. You remember coming here a lot more often when you were in school. It was 'the place' to be. Ah well, it's a fine [time of day], may as well go shopping."
 It is fasttravel.
@@ -240,7 +248,6 @@ The marea of Faint Trail is "Park".
 
 Part 2 - Things
 
-There is a bed in the bunker. "[if cot is present]Laying over in the corner is a small, simple, cot. Just the thing for a little [bold type]rest[roman type].[otherwise]There is an empty spot where a cot once sat, cleaner than the rest.".
 The cot is rooted in place. The cot is restful.
 There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
 Cola Vending Machine has a number called dispensed.
@@ -1679,7 +1686,7 @@ instead of trading the demon seed when the current action involves the ronda:
 
 
 To Rest:
-	if "cot" is listed in invent of player or "cot" is listed in invent of location of player:
+	if "cot" is listed in invent of player or "cot" is listed in invent of location of player or the player is in the Bunker:
 		increase the hp of the player by (the stamina of the player times 2) plus the level of the player;
 	otherwise if "Roughing It" is listed in feats of player:
 		increase the hp of the player by maxhp of the player divided by 4;
@@ -2684,6 +2691,9 @@ check resting:
 		continue the action;
 	otherwise if "cot" is listed in invent of location of player:
 		say "You rest on the cot.";
+		continue the action;
+	otherwise if the player is in the bunker:
+		say "You rest on one of the cots available.";
 		continue the action;
 	otherwise if "Roughing It" is listed in feats of player:
 		say "You hunker down somewhere secluded for a quick nap...";
@@ -3812,7 +3822,7 @@ Instead of conversing the doctor matt:
 		say "'Up for another task? Good. Orthas spotted something interesting while hunting. A singular creature. You must understand, one of the standard impulses the infection seems to give on its infectees is the desire to spread the infection. To see just one is unusual. A trait I have only seen in Orthas so far. Go to the park and find this creature, bring it to me for study.'";
 		now unusual creature is unresolved;
 		now hp of doctor matt is 6;
-	if hp of doctor matt is 6 and unusual creature is unresolved:
+	otherwise if hp of doctor matt is 6 and unusual creature is unresolved:
 		say "'Did you forget already?' asks Matt, 'Go to the park, find the unusual creature. Bring it here. Orthas said it was intersexed, if that helps.'";
 	otherwise if hp of doctor matt is 6:
 		say "'Ah ha, yes, she is an interesting creature, is she not?' he says, looking at the deer through his face plate. 'She says her name is Susan, just so you know.'";
@@ -3971,7 +3981,7 @@ Instead of conversing the doctor matt:
 		say "     'I don't currently have any tasks for you,' the doctor states.  'Please check back later after I've had a chance to take stock of our situation.'";
 	otherwise if hp of doctor matt is 12:
 		say "     'Given the situation in the city escalating from the recent interference, the military's final move has been delayed much more than anticipated.  While this gives me more time to hopefully give them the tools they'll need, this does mean our supplies will run dangerously low before the end if more cannot be obtained.'";
-		say "     'Now, while Orthas assures me she will be able negotiate some exchange with the occasional sane survivor that passes by, this is unreliable.  I would prefer to give us a wider margin of error.  I do not wish to inform the military of our needs, as they may foolishly try advancing the timetable or sending a team in to extract us beforehand.  As such, I want you to collect some food and water supplies for us.  Perhaps a half-dozen of each.  As you can freely roam the city, you may be able to scavenge additional supplies or find others who are willing to pay you in supplies for services.  Just take care to choose this allies more carefully this time,' he adds with a meaningful gaze.";
+		say "     'Now, while Orthas assures me she will be able negotiate some exchange with the occasional sane survivor that passes by, this is unreliable.  I would prefer to give us a wider margin of error.  I do not wish to inform the military of our needs, as they may foolishly try advancing the timetable or sending a team in to extract us beforehand.  As such, I want you to collect some food and water supplies for us.  Perhaps a half-dozen of each.  As you can freely roam the city, you may be able to scavenge additional supplies or find others who are willing to pay you in supplies for services.  Just take care to choose your allies more carefully this time,' he adds with a meaningful gaze.";
 		say "     'As you already have to deal with feeding yourself, this task will not go unrewarded.  I will prepare an enhancement injection of your choice once the supplies are obtained and given to me.  Oh, and don't tell Orthas I'm having you do this,' he adds as he turns back to his workbench.";
 		now waterneed is 6;
 		now foodneed is 6;
@@ -4007,7 +4017,7 @@ Instead of conversing the doctor matt:
 			otherwise:
 				say "     'I'll add that water to our supplies to raise our stocks,' the doctor says, taking the water from you.  'We still need [waterneed] more liters through.'  You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 		if foodneed is 0 and waterneed is 0:
-			say "     Having safely stored away the supplies, Dr Matt turns back to you as if wondering why you're still here when there's work to be done[if susan is present].  Susan politely coughs and nods towards the nanite enhancement device while tapping her hoofed foot on the floor[otherwise].  You glare at the doctor for a few seconds before finally pointing to the nanite enhancement device[end if], at which point Dr Matt brushs his gloved hands together and nods, heading over to it as if that was his intention all along.";
+			say "     Having safely stored away the supplies, Dr Matt turns back to you as if wondering why you're still here when there's work to be done[if susan is present].  Susan politely coughs and nods towards the nanite enhancement device while tapping her hoofed foot on the floor[otherwise].  You glare at the doctor for a few seconds before finally pointing to the nanite enhancement device[end if], at which point Dr Matt brushes his gloved hands together and nods, heading over to it as if that was his intention all along.";
 			wait for any key;
 			now foodwaterbonus is 1;
 			featget;
