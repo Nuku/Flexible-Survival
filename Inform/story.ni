@@ -975,7 +975,7 @@ carry out destinationcheck:
 		say "Nowhere.";
 	otherwise:
 		repeat with q running through L:
-			say "[Q][line break]";
+			say "[link][Q][as]nav [Q][end link][line break]";
 	
 navigating is an action applying to one thing.
 
