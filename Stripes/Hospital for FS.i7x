@@ -580,7 +580,7 @@ to say hospquestpt3:
 	repeat with x running through invent of player:
 		if x is "dog milk", increase dogmilkfound by 1;
 	if dogmilkfound is 0:
-		say "     'I can only make assumptions on why that creature is unique, but each possible reason has different implications and applications.  Proper testing is required to learn more.  Going forward without that knowledge make affect the results of my other experiments.'";
+		say "     'I can only make assumptions on why that creature is unique, but each possible reason has different implications and applications.  Proper testing is required to learn more.  Going forward without that knowledge may adversely bias the results of my other experiments.'";
 		now hospquest is 5;
 		increase score by 5;
 	if dogmilkfound > 0:
