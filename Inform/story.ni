@@ -4485,6 +4485,7 @@ to say promptsay:
 	say " [link]Inventory[end link]";
 	say ", Visible Things: ";
 	repeat with y running through the things in the location of the player:
+		if y is a door, next;
 		say "[link][y][as]look [y][end link] ";
 	say " [link]area[as]look[end link]";
 	say ">";
