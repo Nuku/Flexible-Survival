@@ -93,9 +93,6 @@ A person has a text called weapon type. Weapon type is usually "Melee";
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
 
-
-
-
 playon is a number that varies.
 A object has a list of text called invent. 
 The player has a list of text called feats.
@@ -652,7 +649,7 @@ To say level up needed:
 Table of Fancy Status
 left	central	right
 "Location: [the player's surroundings]"	"XP:[xp of player]/[level up needed] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
-"Exits: [List of valid directions]"	"Hunger: [link][hunger of player][as]east food[end link] Thirst: [link][thirst of player][as]drink water[end link]"	"Score:[score]/[maximum score]"
+"Exits: [List of valid directions]"	"Hunger: [hunger of player] Thirst: [thirst of player]"	"Score:[score]/[maximum score]"
 "Sanity: [humanity of player]/100"	"Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours"	"[if number of entries in childrenfaces is greater than 0]Children: [number of entries in childrenfaces][end if]"
 "[if menu depth > 0]N = Next[end if]"	"[if menu depth > 0]ENTER = Select[end if]"	"[if menu depth > 0]P = Previous[end if]"
 [" You are:[Player_Status],[Player_Gender_Status]"	""	""]
@@ -3164,7 +3161,9 @@ instead of examining a person(called x):
 		follow the self examine rule;
 		follow the afterexamine rules;
 	otherwise:
-		say "[The description of x]";
+		say "[The description of x][line break]";
+		if the number of entries in the conversation of x is greater than 0:
+			say "Possible Action: [link]talk[as]talk [x][end link][line break]";
 	
 Showstatting is an action applying to nothing.
 
@@ -4455,6 +4454,7 @@ Include Honey by Stripes.
 
 
 Book 10 - Let the Games Begin
+
 
 to say promptsay:
 	say "Exits: ";
