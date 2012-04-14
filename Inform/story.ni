@@ -3297,6 +3297,7 @@ This is the location choice rule:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
+			now the description of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
 			now the hp of doctor matt is 100;
 			remove orthas from play;
 			increase score by 600;
@@ -3306,6 +3307,7 @@ This is the location choice rule:
 			add "cot" to invent of bunker;
 			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 			now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
+			now the description of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
 			now the hp of doctor matt is 100;
 			remove orthas from play;
 			increase score by 900;
@@ -3749,6 +3751,7 @@ Doctor Matt is a person. "A figure in a full hazmat suit is busily working at th
 The description of Doctor Matt is "[if hp of doctor matt is 100]There is a small tape recorder with a sticky note on it, labeled as [']Doctor Matt['] on one of the lab tables[otherwise]Doctor Matt is working away at the various terminals, wandering from one to another when not working at his lab table or seated in his comfy chair.  He has a full environment suit on, covering his whole body, with only a glass visor to show his human face[end if].";
 Doctor Matt is in Primary Lab.
 understand "Matt" as doctor matt.
+understand "Left Behind Recording of Doctor Matt " as doctor matt.
 
 Instead of conversing the doctor matt:
 	if hp of testerbot is 0 and testerbot is in Primary Lab:
