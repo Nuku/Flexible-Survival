@@ -184,7 +184,9 @@ after looking:
 	let x be the location of the player;
 	let z be the number of entries in invent of x;
 	if z is greater than 0:
-		say "Visible Objects: [invent of x]";
+		say "Visible Objects: ";
+		repeat with q running through invent of x:
+			say "[link][q][as]get [q][end link] ";
 
 Book 2 - Places
 
@@ -1035,10 +1037,15 @@ carry out Inventorying:
 				repeat with  y running through invent of player:
 					if y is name entry, increase number by 1;
 				say "[number]([weight entry times number] lbs)";
-				say " [link]-Use-[as]use [name entry][end link]";
-				say " [link]-Look-[as]look [name entry][end link]";
-				say " [link]-Smell-[as]smell [name entry][end link]";
-				say " [link]-Drop-[as]drop [name entry][end link]";
+				say " [link]Use[as]use [name entry][end link]";
+				say " [link]Look[as]look [name entry][end link]";
+				say " [link]Smell[as]smell [name entry][end link]";
+				say " [link]Drop[as]drop [name entry][end link]";
+				if trade of object entry is "":
+					let notval be 0;
+				otherwise if the number of trader in the location of the player is greater than 0:
+					let tradeguy be a random trader in the location of the player;
+					say " [link]Trade[as]give [name entry] to [tradeguy][end link]";
 				increase weight by weight entry times number;
 				say "[line break]";
 		if the player is overburdened, say "*OVERBURDENED*";
