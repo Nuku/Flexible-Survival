@@ -652,7 +652,7 @@ To say level up needed:
 Table of Fancy Status
 left	central	right
 "Location: [the player's surroundings]"	"XP:[xp of player]/[level up needed] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
-"Exits: [List of valid directions]"	"Hunger: [hunger of player] Thirst: [thirst of player]"	"Score:[score]/[maximum score]"
+"Exits: [List of valid directions]"	"Hunger: [link][hunger of player][as]east food[end link] Thirst: [link][thirst of player][as]drink water[end link]"	"Score:[score]/[maximum score]"
 "Sanity: [humanity of player]/100"	"Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours"	"[if number of entries in childrenfaces is greater than 0]Children: [number of entries in childrenfaces][end if]"
 "[if menu depth > 0]N = Next[end if]"	"[if menu depth > 0]ENTER = Select[end if]"	"[if menu depth > 0]P = Previous[end if]"
 [" You are:[Player_Status],[Player_Gender_Status]"	""	""]
@@ -4461,7 +4461,13 @@ to say promptsay:
 	repeat with nam running through valid directions:
 		say "[link][printed name of nam][end link] ";
 	say "[if location of player is fasttravel][bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket][end if]";
-	say " [link]Inventory[end link], [link]Myself[as]look me[end link]>";
+	say " [link]Inventory[end link]";
+	let x be the number of things in the location of the player;
+	if x is greater than 0:
+		say ", Visible Things: ";
+		repeat with y running through the things in the location of the player:
+			say "[link][y][as]look [y][end link] ";
+	say ">";
 
  When play begins:
 	repeat with x running through situations:
