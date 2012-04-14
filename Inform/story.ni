@@ -1683,7 +1683,7 @@ Carry out trading:
 			break;
 	
 instead of trading the demon seed when the current action involves the ronda:
-	say "Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy, groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
+	say "Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
 	remove ronda from play;
 	now hp of ronda is -1;
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -3717,18 +3717,19 @@ When play ends:
 Book  8 - People
 
 Rod Mallrat is a person. "A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]Mcdonalds[or]one of the tables[or]the broken sewer drain[at random].".
-The description of rod mallrat is "Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.".
+The description of rod mallrat is "Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium].  He's looking a little dishevelled of late. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.".
 Rod is a trader.
-The conversation of rod is { "Did I introduce myself yet? I'm Rod, Rod Mallrat.", "You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.", "Dude, you see those nagas? They hunt us mall rats, you know, scary shit, no joke.", "Like the threads? The girl picked them out for me.", "Dude, just chillin.", "Sup?" }
-
-
-	
 Rod Mallrat is in Mall FoodCourt.
 
+instead of conversing Rod Mallrat:
+	if ronda is in Mall Atrium:
+		say "[one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
+	otherwise:
+		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Watch out for those infected rats.   Dunno where they came from, but they're bad news.  The rats they get don't come back.'[or]'Sup?'[at random]";
 
-Ronda Mallrat  is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
+Ronda Mallrat is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
 The description of Ronda Mallrat is "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.".
-The conversation of Ronda is { "Hey there, sugar, you just call me Ronda.", "You meet Rod? He's my boy. You be nice to him, or I will be very... upset.", "Those clothes are out of date hon, you should update your wardrobe.", "Being a mall rat is way better than being a human, no offense or anything to humans.", "We can find anything we need here in the mall, it is our Eden." }.
+The conversation of Ronda is { "Hey there, sugar, you just call me Ronda.", "You meet Rod? He's my boy. You be nice to him, or I will be very... upset.", "Those clothes are out of date hon, you should update your wardrobe.", "Being a mall rat is way better than being a human, no offense or anything to humans.", "We can find anything we need here in the mall; it is our Eden." }.
 Ronda Mallrat is in Mall Atrium.
 
 Orthas is a person. "A dragon person, clearly female, is watching the area. If her name badge is accurate, her name is 'Orthas'.".
@@ -3736,7 +3737,7 @@ The description of Orthas is "A black scaled dragon woman. She stands about six 
 The conversation of Orthas is { "[if orthasstart is greater than 3]Hey there, how's momma?[otherwise]Hello there.[end if]", "[if orthasstart is greater than 2]Hey there, hot stuff.[otherwise]The good doctor is upstairs. You can see him. Don't cause trouble.[end if]", "You are pretty brave to wander the city right now.", "I would explore too if I wasn't guarding the doctor.", "What is it like out there?" }.
 Orthas is in Trevor Labs Lobby.
 
-Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be 'Doctor Matt'";
+Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be [']Doctor Matt['].";
 The description of Doctor Matt is "[if hp of doctor matt is 100]There is a small tape recorder with a sticky note on it, labeled as [']Doctor Matt['] on one of the lab tables[otherwise]Doctor Matt is working away at the various terminals, wandering from one to another when not working at his lab table or seated in his comfy chair.  He has a full environment suit on, covering his whole body, with only a glass visor to show his human face[end if].";
 Doctor Matt is in Primary Lab.
 understand "Matt" as doctor matt.

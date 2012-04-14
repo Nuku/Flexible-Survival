@@ -1,5 +1,5 @@
 Version 2 of Fucking by Nuku Valente begins here.
-[Version 2 adds the reusable 'Table of fucking options' and the 'Testerbot' demo character]
+[Version 2.1 - No sex messages for certain NPCs]
 
 Section 1 - Fucking action and table
 
@@ -14,6 +14,20 @@ check fucking:
 	
 Carry out fucking:
 	say "They don't seem very interested.";
+
+
+[No sex responses for some NPCs]
+instead of fucking Doctor Matt:
+	say "Doctor Matt recognizes the glint of arousal in your eyes as you imagine peeling him out of the suit.  He takes a few steps towards the back wall of the room, hovering his hand over the intercom.  'You're not going feral on me, are you?  Control yourself, or I'll have to call Orthas!'";
+
+instead of fucking Rod Mallrat:
+	if Ronda Mallrat is in the Mall Atrium:
+		say "'Dude!  I'm already taken.  Ronda would kill us me if I fooled around.  Besides,' he adds with a wink, 'she's quite the sweet ride in the sack.  I'm covered.";
+	otherwise:
+		say "Rod just sighs sadly and shakes his head.";
+
+instead of fucking Ronda Mallrat:
+	say "Hey now, I ain't no floozy rat like some.  I've already got me a sexy guy wrapped around my finger.  Why would I need you?' she says, making the other girls nearby giggle.";
 
 [Fucking v2.0 table]
 

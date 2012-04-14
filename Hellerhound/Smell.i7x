@@ -32,7 +32,11 @@ before sniffing:
 			let z be 1;
 		otherwise:
 			say "I don't see any [Noun] around here to sniff.";
-	say "You sniff the [noun].";
+			stop the action;
+	if the noun is a person:
+		say "You sniff [noun].";
+	otherwise:
+		say "You sniff the [noun].";
 
 
 carry out sniffing:
@@ -55,17 +59,17 @@ carry out heresniffing:
 
 Section 2 - The player
 
-instead of sniffing the player:
+instead of sniffing yourself:
 	say "You smell like a [if the cocks of the player > 0 and the cunts of the player > 0]hermaphrodite[otherwise if the cunts of the player > 0]female[otherwise if the cocks of the player > 0]male[otherwise]neuter[end if] [bodyname of the player].";
 	if animal heat is True:
 		say "There is a animalistic musk around you.";
 	if child is not born and gestation of child is greater than 0:
 		say "You smell pregnant.";
 
-
-after examining the player:
-	try sniffing the player;
-
+[
+after examining yourself:
+	try sniffing yourself;
+]
 
 Section 3 - overrides for included places
 
@@ -77,10 +81,10 @@ instead of sniffing Doctor Matt:
 	otherwise:
 		say "The doctor isn't here, and his tape recorder smells like old plastic.";
 
-instead of sniffing the Rod:
+instead of sniffing Rod:
 	say "Rod smells of rats and his mall home.";
 
-instead of sniffing the Ronda:
+instead of sniffing Ronda:
 	say "Ronda smells of cheap perfume, rats and her mall home.";
 
 instead of sniffing grey abbey library:
