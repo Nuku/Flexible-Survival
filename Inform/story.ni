@@ -11,7 +11,7 @@ Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 750000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 55000.
-use MAX_NUM_STATIC_STRINGS of 30000.
+use MAX_NUM_STATIC_STRINGS of 40000.
 use ALLOC_CHUNK_SIZE of 75000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 250.
@@ -19,7 +19,7 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
-The release number is 50.
+The release number is 51.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -187,6 +187,7 @@ after looking:
 		say "Visible Objects: ";
 		repeat with q running through invent of x:
 			say "[link][q][as]get [q][end link] ";
+		say " [link]get everything[as]get all[end link]";
 
 Book 2 - Places
 
@@ -4465,16 +4466,24 @@ Book 10 - Let the Games Begin
 
 
 to say promptsay:
+	say "Status: ";
+	if hunger of player is greater than 30:
+		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";
+	if thirst of player is greater than 30:
+		say "[link][bracket]THIRSTY[close bracket][as]drink water[end link] ";
+	if humanity of player is less than 50:
+		say "[link][bracket]UNHINGED[close bracket][as]use journal[end link] ";
+	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
+	say "[line break]";
 	say "Exits: ";
 	repeat with nam running through valid directions:
 		say "[link][printed name of nam][end link] ";
 	say "[if location of player is fasttravel][bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket][end if]";
 	say " [link]Inventory[end link]";
-	let x be the number of things in the location of the player;
-	if x is greater than 0:
-		say ", Visible Things: ";
-		repeat with y running through the things in the location of the player:
-			say "[link][y][as]look [y][end link] ";
+	say ", Visible Things: ";
+	repeat with y running through the things in the location of the player:
+		say "[link][y][as]look [y][end link] ";
+	say " [link]area[as]look[end link]";
 	say ">";
 
  When play begins:
