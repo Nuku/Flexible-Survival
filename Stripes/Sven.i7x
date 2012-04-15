@@ -45,7 +45,7 @@ The description of Sven is "[svendesc]";
 lastSvenfucked is a number that varies.  lastSvenfucked is normally 555.
 lastSvendrink is a number that varies.  lastSvendrink is normally 555.
 
-instead of sniffing the Sven:
+instead of sniffing Sven:
 	if hp of Sven < 5 or hp of Sven is 50:
 		say "Sven smells faintly of male snow leopard and growing arousal.";
 	otherwise if hp of Sven < 8:
@@ -250,7 +250,7 @@ Instead of fucking the Sven:
 	if hp of Sven < 4:
 		say "     Sven squirms a little in his seat and blushes as you start to bring up the subject of sex.  He nibbles at the end of his tail and mumbles something about how he doesn't think that'd be a good idea.  You do spot that telltale bulge in his shorts though, which makes you hopeful you can coax him into some fun once he settles down.";
 	if hp of Sven is 4:
-		say "     Sven squirms a little in his seat and blushes cutely as you bring up having sex with him.  He nibbles at the end of his tail and eyes your crotch, mumbling something about suddenly getting thirsty again.  A hand drifts to his crotch and rubs the bulge there.  'I... I don't know... I mean, I haven't yet' he says shyly, blushing even redder.  'But if it was with you,' he adds with audible longing and admiration in his quiet voice.  You spot a little happy trail of white fur that you don't remember seeing before as he continues to unconsciously fondle himself.  You suspect the shy fellow will continue changing if you start playing with him.  Do you want to proceed?";
+		say "     Sven squirms a little in his seat and blushes cutely as you bring up having sex with him.  He nibbles at the end of his tail and eyes your crotch, mumbling something about suddenly getting thirsty again.  A hand drifts to his crotch and rubs the bulge there.  'I... I don't know... I mean, I haven't yet' he says shyly, blushing even redder.  'But if it was with you,' he adds with audible longing and admiration in his quiet voice.  You spot a little happy trail of white fur that you don't remember seeing before as he continues to subconsciously fondle himself.  You suspect the shy fellow will continue changing if you start playing with him.  Do you want to proceed?";
 		if the player consents:
 			now hp of Sven is 5;
 			now lastSvenfucked is turns;
@@ -313,6 +313,7 @@ Instead of fucking the Sven:
 				say "     Deciding to exert your dominance over your new pet, you motion for him to get on his knees in front of you.  When you bring your sticky pussy to his muzzle, he presses his muzzle to it readily and starts licking it clean.  Stroking his ears, you hold his head in place and tell him to be a good kitty and to drink it all down.  He mewls softly and blushes as you release your bladder, letting your hot urine flow across and into his muzzle.";
 				say "     Being the thirsty kitty that he is, he can't help but drink it down.  His ears dip down submissively and he blushes brightly, but doesn't try to pull away as most flows down his throat.  The rest runs down his neck and chest, marking him as yours.  He even licks away the last few drops before you release him.  Once you're done, he leans back against the cot and purrs contentedly, licking his lips as he strokes a paw over his wet fur.";
 		otherwise:
+			now lust of sven is 1;
 			say "     You put aside those thoughts and focus on the plan at hand of moulding the cute fellow into a proper playtoy for your amusement.  You gently press him back onto the cot and run your hands up his chest, scritching as you go and making him shiver in delight.  When you reach his collar, you trace your fingers along it, then scritch the underside of his muzzle.  He purrs loudly at this, eyes closed in feline pleasure.  You whisper in his ear again what a sexy kitty he's become and how pleased you are with your new fucktoy before ending with a promise to play with him again soon.  As he drifts off into a contented catnap, you get up and leave him on the cot soaked in the scents of sex.";
 		increase score by 50;
 	otherwise if ( hp of Sven is 8 or hp of Sven is 10 ) and lastSvenfucked - turns < 6:

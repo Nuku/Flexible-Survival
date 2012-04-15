@@ -22,12 +22,12 @@ instead of fucking Doctor Matt:
 
 instead of fucking Rod Mallrat:
 	if Ronda Mallrat is in the Mall Atrium:
-		say "'Dude!  I'm already taken.  Ronda would kill us me if I fooled around.  Besides,' he adds with a wink, 'she's quite the sweet ride in the sack.  I'm covered.";
+		say "'Dude!  I'm already taken.  Ronda would kill us me if I fooled around.  Besides,' he adds with a wink, 'she's quite the sweet ride in the sack.  I'm covered.'";
 	otherwise:
 		say "Rod just sighs sadly and shakes his head.";
 
 instead of fucking Ronda Mallrat:
-	say "Hey now, I ain't no floozy rat like some.  I've already got me a sexy guy wrapped around my finger.  Why would I need you?' she says, making the other girls nearby giggle.";
+	say "'Hey now, I ain't no floozy rat like some.  I've already got me a sexy guy wrapped around my finger.  Why would I need you?' she says, making the other girls nearby giggle.";
 
 [Fucking v2.0 table]
 

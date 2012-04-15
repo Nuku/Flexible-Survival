@@ -269,7 +269,7 @@ instead of sniffing Rabbit Den:
 	say "This basement hidey-hole has a soft, musky scent in the air.  It smells of female rabbit, heather and clover.";
 
 instead of sniffing Sandra:
-	say "Sandra smells of female rabbit, with hints of heather and clover in her scent[if hp of Sandra is 3].  You can smell Sandra's scent upon her as well[end if].";
+	say "Sandra smells of female rabbit, with hints of heather and clover in her scent[if hp of Sandra is 3].  You can smell Coleen's scent upon her as well[end if][if libido of Fang > 3].  Fang's scent lingers a little upon her as well[end if].";
 
 
 Section 2 - Sandra and Coleen Interplay
