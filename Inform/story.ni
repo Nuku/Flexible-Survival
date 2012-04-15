@@ -4505,7 +4505,7 @@ to say promptsay:
 		if y is a door, next;
 		say "[link][y][as]look [y][end link] ";
 	say " [link]area[as]look[end link]";
-	say ">";
+	say "[line break]>";
 
  When play begins:
 	repeat with x running through situations:
