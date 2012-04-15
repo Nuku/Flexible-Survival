@@ -19,6 +19,9 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
+To wait for any key:
+	say "Hi";
+
 The release number is 51.
 The story creation year is 2010.
 The maximum score is 2500.
@@ -180,14 +183,6 @@ instead of examining a grab object(called x):
 	if "Weaponsmaster" is listed in feats of player and x is an armament:
 		say "  Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 
-after looking:
-	let x be the location of the player;
-	let z be the number of entries in invent of x;
-	if z is greater than 0:
-		say "Visible Objects: ";
-		repeat with q running through invent of x:
-			say "[link][q][as]get [q][end link] ";
-		say " [link]get everything[as]get all[end link]";
 
 Book 2 - Places
 
@@ -2216,6 +2211,7 @@ To lose:
 	decrease the score by 1;
 	decrease the morale of the player by 3;
 	decrease the menu depth by 1;
+	try looking;
 
 
 This is the flee rule:
@@ -2242,6 +2238,7 @@ This is the flee rule:
 		say "You manage to evade [name entry] and slip back into the city.";
 		wait for any key;
 		decrease the menu depth by 1;
+		try looking;
 	otherwise:
 		say "You fail to get away.";
 		Retaliate;
@@ -2453,6 +2450,7 @@ This is the player attack rule:
 	clear the screen;
 	[if the menu depth is greater than 0, carry out the displaying activity;]
 	[if the menu depth is 0, try looking;]
+	try looking;
 	rule succeeds;
 
 predestiny is a number that varies.
@@ -4469,6 +4467,14 @@ Book 10 - Let the Games Begin
 
 
 to say promptsay:
+	let x be the location of the player;
+	let z be the number of entries in invent of x;
+	if z is greater than 0:
+		say "Visible Objects: ";
+		repeat with q running through invent of x:
+			say "[link][q][as]get [q][end link] ";
+		say " [link]get everything[as]get all[end link]";
+		say "[line break]";
 	say "Status: ";
 	if hunger of player is greater than 30:
 		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";
