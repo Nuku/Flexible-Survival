@@ -2216,7 +2216,6 @@ To lose:
 	decrease the score by 1;
 	decrease the morale of the player by 3;
 	decrease the menu depth by 1;
-	try looking;
 
 
 This is the flee rule:
@@ -2250,6 +2249,7 @@ This is the flee rule:
 		wait for any key;
 		if the hp of the player is less than 1:
 			decrease the menu depth by 1;
+			try looking;
 
 This is the submit rule:
 	choose row monster from the table of random critters;
@@ -2259,6 +2259,7 @@ This is the submit rule:
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 	wait for any key;
+	try looking;
 	decrease the menu depth by 1;
 
 combat abort is a number that varies.	
@@ -2416,6 +2417,7 @@ This is the player attack rule:
 		if the hp of the player is less than 1 or combat abort is 1:
 			now combat abort is 0;
 			decrease the menu depth by 1;
+			try looking;
 	otherwise:
 		follow the cock descr rule;
 		follow the breast descr rule;
@@ -2452,10 +2454,10 @@ This is the player attack rule:
 			decrease lootchance entry by z;
 		decrease the menu depth by 1;
 		if ok is 1, wait for any key;
+		try looking;
 	clear the screen;
 	[if the menu depth is greater than 0, carry out the displaying activity;]
 	[if the menu depth is 0, try looking;]
-	try looking;
 	rule succeeds;
 
 predestiny is a number that varies.
