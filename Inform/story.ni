@@ -3736,13 +3736,15 @@ The description of rod mallrat is "Rod is a tall handsome figure of a man, if yo
 Rod is a trader.
 Rod Mallrat is in Mall FoodCourt.
 
-instead of conversing Rod Mallrat:
+The conversation of Rod Mallrat is { "empty" };
+ 
+ instead of conversing Rod Mallrat:
 	if ronda is in Mall Atrium:
 		say "[one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
 	otherwise:
 		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Watch out for those infected rats.   Dunno where they came from, but they're bad news.  The rats they get don't come back.'[or]'Sup?'[at random]";
 
-Ronda Mallrat is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
+h Ronda Mallrat is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
 The description of Ronda Mallrat is "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.".
 The conversation of Ronda is { "Hey there, sugar, you just call me Ronda.", "You meet Rod? He's my boy. You be nice to him, or I will be very... upset.", "Those clothes are out of date hon, you should update your wardrobe.", "Being a mall rat is way better than being a human, no offense or anything to humans.", "We can find anything we need here in the mall; it is our Eden." }.
 Ronda Mallrat is in Mall Atrium.
@@ -3758,6 +3760,8 @@ Doctor Matt is in Primary Lab.
 understand "Matt" as doctor matt.
 understand "Left Behind Recording of Doctor Matt " as doctor matt.
 
+the conversation of Doctor Matt is { "empty" };
+ 
 Instead of conversing the doctor matt:
 	if hp of testerbot is 0 and testerbot is in Primary Lab:
 		now hp of testerbot is 1;
