@@ -20,7 +20,12 @@ Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
 To wait for any key:
-	say "Hi";
+	say "[link]more[as] [end link]";
+	keypause;
+
+To keypause:
+	(- KeyPause(); -)
+
 
 The release number is 51.
 The story creation year is 2010.
