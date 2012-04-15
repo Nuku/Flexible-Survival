@@ -153,7 +153,5 @@ to matriarchify:
 	Infect "Hyena matriarch";
 
 
-
-
 [ Edit this to have the correct Name as wall]
 Hyena matriarch ends here.

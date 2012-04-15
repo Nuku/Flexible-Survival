@@ -398,6 +398,9 @@ name	desc	weight	object
 
 tire iron is an armament. It is part of the player. It has a weapon "[one of]your tire iron[or]the tire iron[or]your metal tire iron[at random]". The weapon damage of tire iron is 6. The weapon type of tire iron is "Melee". It is not temporary.
 
+instead of sniffing tire iron:
+	say "The tire iron smells of metal and motor oil.";
+
 
 Section 5 - Grant
 
@@ -412,6 +415,9 @@ bikedest is a number that varies.
 
 to say grantdesc:
 	say "     The leader of the hyena bikers is here, sitting on a wooden crate and watching the others milling about.  His pose is casual, but his eyes watch them intently, as if sizing them up and evaluating them.  He is a strong, fully male hyena wearing a leather jacket and jeans.  He has a pair of sunglasses that have been adjusted to fit on his muzzle.";
+
+instead of sniffing Grant:
+	say "Grant smells of male hyena, strong and virile.  His scent also contains the scent of old leather, grease and motorcycle exhaust[if matriarchdefeated is 2].  His dominant, masculine scent makes you the hyena bitch inside you want to bend over for him[end if].";
 
 instead of conversing the Grant:
 	if matriarchdefeated is 2:

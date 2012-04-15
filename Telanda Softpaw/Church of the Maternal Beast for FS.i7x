@@ -41,7 +41,7 @@ instead of sniffing Public Beach:
 Church Hall is a room. "The inside of the Church is dim but not dark, relaxing one could say.  It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here, and there, there's definitely no lack of space.  There are some signs that whatever religion is practiced here, it's not anything you recognise. There are no crosses or other recognisable religious symbols.  There are several freshly painted motifs however and they all seem to depict some great stylised beast offering protection and shelter to those near it.[Line Break] [line break] At the far end of the Church there seems to be recessed door that based on the outside of the building must lead down some stairs.".
 North of Beach Plaza is Church Hall.
 There is a Notice Board in the Church Hall. It is Rooted in place.
-There is a Confession Booth in the Church Hall. "Standing against one wall, the dark wood of the Large confession booth catches the eye... It's been modified to allow even a large creature such of those Panther Taurs to Fit inside.".
+There is a Confession Booth in the Church Hall. "Standing against one wall, the dark wood of the large confession booth catches the eye... It's been modified to allow even a large creature such of those Panther Taurs to Fit inside.".
 It is Rooted in place.
 
 instead of sniffing Church Hall:
@@ -105,13 +105,13 @@ part 3.3 - Confession Booth
 lastconfession is a number that varies. lastconfession is 248;
 
 This is the church description rule:
-	say "As you ask about the church you hear a friendly little laugh from the other side of the booth, [line break]'Indeed! that truly is the question we are asked most!' you sense the Priestess smiling even though you cannot see her.[line break]'This is the place of the Great mother, The church of the maternal beast.  Following her will we have re-purposed this place to try and help those who suffer under the weight of the infection that run rampant in the city, we try to offer peace and comfort, and to help other learn that while overwhelming, it does not need to control you.'[line break]";
+	say "As you ask about the church you hear a friendly little laugh from the other side of the booth, [line break]'Indeed! That truly is the question we are asked most!' you sense the Priestess smiling even though you cannot see her.[line break]'This is the place of the Great mother, The church of the maternal beast.  Following her will we have re-purposed this place to try and help those who suffer under the weight of the infection that run rampant in the city, we try to offer peace and comfort, and to help other learn that while overwhelming, it does not need to control you.'[line break]";
 	wait for any key;
 	clear the screen;
 	rule succeeds;
 
 this is the lustconfession rule:
-	say "You hear a soft sigh, 'Indeed, you speak of one of the most dangerous aspects of the infection, for it leads towards loosing yourself.' [line break]'Please just listen, and i will attempt to help you overcome it's controlling nature.";
+	say "You hear a soft sigh, 'Indeed, you speak of one of the most dangerous aspects of the infection, for it leads towards loosing yourself.' [line break]'Please just listen, and I will attempt to help you overcome it's controlling nature.'";
 	if ( lastconfession - 7 ) is greater than turns:
 		say "[line break] The Priestess words and advice do indeed help, granting you better control over your lusts, at least for now.";
 		Decrease libido of player by 20;
@@ -124,7 +124,7 @@ this is the lustconfession rule:
 	rule succeeds;
 
 this is the leaveconfession Rule:
-	say "You mumbles a soft goodbye and thank-you. then leave the Confessional stepping back out into the church.";
+	say "You mumble a soft goodbye and thank-you, then leave the confessional stepping back out into the church.";
 	wait for any key;
 	decrease the menu depth by 1;
 
@@ -141,7 +141,7 @@ instead of entering the Confession Booth:
 	enterConfessional;
 
 to enterConfessional:
-	say "As you close the door of the booth and kneel the best you can. A voice speaks slowly, Warm, comforting, and unmistakably female.[line break]'Welcome my child, you may not know but we do not follow the Christian tradition here, we simply are making use of what they left in place. please feel free to ask questions, and if you have any troubles weighing heavily on your mind, please voice them. And i will do my best to put you mind and spirit at ease.'[line break]";
+	say "As you close the door of the booth and kneel the best you can. A voice speaks slowly, warm, comforting, and unmistakably female.[line break]'Welcome my child, you may not know but we do not follow the Christian tradition here, we simply are making use of what they left in place. Please feel free to ask questions, and if you have any troubles weighing heavily on your mind, please voice them. And I will do my best to put you mind and spirit at ease.'[line break]";
 	wait for any key;
 	change the current menu to Table of confession entries;
 	carry out the displaying activity;

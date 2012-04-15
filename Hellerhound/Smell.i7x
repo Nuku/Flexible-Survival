@@ -120,6 +120,9 @@ instead of sniffing Park Entrance:
 instead of sniffing Park Trail:
 	say "Now in the park, the scents of the creatures are stronger.  You can tell that there are many different ones around.  You manage to catch a whiff of [one of]some felines[or]a lupine creature[or]an equine scent[or]the farm scent of dairy cows[or]a strong, female scent[or]the sharp scent of skunk spray[at random].  You'd best be careful.";
 
+instead of sniffing Faint Trail:
+	say "The scents of the creatures roaming the park are stronger this way.  You can tell that there are many different ones around.  You manage to catch a whiff of [one of]some felines[or]a lupine creature[or]an equine scent[or]the farm scent of dairy cows[or]a strong, female scent[or]the sharp scent of skunk spray[at random].  You'd best be careful.";
+
 instead of sniffing Cola Vending Machine:
 	say "The vending machine smells of burnt electronics and is busted.  Guess you'll have to hit it to get anything out.";
 
