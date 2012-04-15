@@ -4527,7 +4527,6 @@ When play begins:
 	carry out the displaying activity;
 	repeat with x running through featsets:
 		now x is a part of the player;
-	featget;
 	funfeatget;
 	clear the screen;
 	if scenario is "Rescuer Stranded":
@@ -4574,4 +4573,10 @@ When play begins:
 	wait for any key;
 	say "Welcome to...";
 	wait for any key;
+	firstfeat rule in 1 turn from now;
+	
+This is the firstfeat rule:
+	say "Select your first, free, feat, by clicking one of the below:[line break]";
+	featget;
+
 

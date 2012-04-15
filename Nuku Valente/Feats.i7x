@@ -34,7 +34,10 @@ carry out featgetting:
 		change the current menu to table of Gainable Feats;
 		carry out the displaying activity;
 
-To Featget:
+Featqualified is a number that varies.
+Featqualified is usually 0.
+ 
+ To Featget:
 	blank out the whole of table of gainable feats;
 	repeat with x running through functional featsets:
 		try addfeating x;
@@ -42,8 +45,30 @@ To Featget:
 		say "There are no feats to gain!";
 		wait for any key;
 	otherwise:
-		change the current menu to table of Gainable Feats;
-		carry out the displaying activity;
+		[change the current menu to table of Gainable Feats;
+		carry out the displaying activity;]
+		now featqualified is 1;
+		repeat with y running from 1 to number of filled rows in table of gainable feats:
+			choose row y from the table of gainable feats;
+			say "[link][title entry][as]featgrab [title entry][end link] ";
+				
+featgrabbing is an action applying to one topic.
+
+understand "featgrab [text]" as featgrabbing.
+ 
+ Check featgrabbing:
+	if featqualified is 0:
+		say "You are not ready to learn a new feat." instead;
+
+Carry out featgrabbing:
+	repeat with y running from 1 to number of filled rows in table of gainable feats:
+		choose row y from the table of gainable feats;
+		if the topic understood in lower case matches the text title entry in lower case:
+			now current menu selection is y;
+			follow the gainfeat rule;
+			stop the action;
+	say "Invalid Feat";
+
 
 To FunFeatget:
 	blank out the whole of table of gainable feats;
@@ -216,6 +241,7 @@ This is the gainfeat rule:
 		increase featgained of player by 1;
 		if nam is "Automatic Survival", decrease score by 600;
 		if nam is "More Time", extend game by 24;
+		now Featqualified is 0;
 		if nam is "Hardy":
 			increase maxhp of player by 8;
 			increase hp of player by 8;
