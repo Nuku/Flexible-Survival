@@ -11,7 +11,8 @@ The sarea of Mouse Taur is "Red";
 When play begins:
 	add "Mouse Taur" to infections of furry;
 	add "Mouse Taur" to infections of girl;
-mtrp is a number that varies.
+ 
+ mtrp is a number that varies.
 
 After resolving a Mouse Taur, try looking;
 
