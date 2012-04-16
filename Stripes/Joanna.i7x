@@ -114,6 +114,7 @@ Section 3 - Joanna the Kinkajou-Plant
 
 Joanna is a woman.  Joanna is in Flower Garden.
 The description of Joanna is "[joannadesc]";
+The conversation of Joanna is { "Sunshine!" }.
 lastjoannafucked is a number that varies.  lastjoannafucked is normally 555.
 joannatalk is a number that varies.
 

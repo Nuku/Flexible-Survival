@@ -45,6 +45,7 @@ Coleenspray is a number that varies.
 
 Coleen is a woman.
 The description of Coleen is "[Collenstatus]";
+The conversation of Coleen is { "Woof!" }.
 
 instead of sniffing Coleen:
 	if coleenalpha > 0:

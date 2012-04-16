@@ -28,14 +28,12 @@ Slutslavefucked is a number that varies. Slutslavefucked is usually 0.
 
 Slutslave is a man.[or woman]
 The description of Slutslave is "Your sexy black mare slave is kneeling meekly in the corner, her blazing red hair and tail shifting slightly with her every movement as she watches you coyly with obvious arousal. The slave collar you put on her has seemingly bonded with her skin, and now can only be seen as a thin line of gold with some strange patterns around her neck, though your new tag fits on it nicely, hanging down between her new ample breasts and proudly proclaiming her to be your 'slut' though eventually she may earn a proper name instead. Her tight well formed body is made specifically for pleasure, as you know all too well, and you can see her naked pussy is already damp with anticipation as you look your new slave over with some amusement. She certainly makes a better slave after all then a master... and she seems to enjoy her new lot in life quite a bit as well.";
+The conversation of Slutslave is { "Fuck me!" }.
 
 
 instead of conversing the Slutslave:
 	if Slutslavetalk is 0:		[Normal short messages the npc will say each time you talk to them]
 		say "[one of]'Welcome back master!'[or]'You make such a handsome owner.'[or]'I don[apostrophe]t know how a little slut like me could have ever thought to challenge someone as masterful as you...'[or]'Has master decided on a name for his slut yet?'[or]'Your slave never knew how wonderful being a pet could be before, thank you so much for showing me!'[or]'I love my new collar so much...' She moans happily.[or]Your slave just stares up at you adoringly from her kneeling position.[at random]";
-
-
-
 
 
 Instead of fucking the Slutslave:

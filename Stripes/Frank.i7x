@@ -63,6 +63,7 @@ Section 2 - Frank the Skunk
 
 Frank is a man.  Frank is in Comic Shop.
 The description of Frank is "[frankdesc]";
+The conversation of Frank is { "NERD!" }.
 lastFrankfucked is a number that varies.  lastFrankfucked is normally 555.
 franksex is a number that varies.
 frankmalesex is a number that varies.

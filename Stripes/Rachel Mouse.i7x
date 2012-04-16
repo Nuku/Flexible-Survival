@@ -137,9 +137,11 @@ to say racheldesc:
 	say "     This short, grey mouse is cute and sexy, with an idealized feminine body in miniature.  While only three feet tall, the bosom and cock on this rodent herm are above average for a normal human.  She has long, grey hair that flows down her back and her round, mouse ears poke out from it.  She has found a cute sundress somewhere.  It is a light blue that goes well with her fur colour, but does little to hide her large tits or erection when aroused.  That's probably why she chose it.";
 	say "     Despite her small size, this mouse girl has considerable psychic powers.  From what you've seen and sensed, she's probably one of the strongest among them.  Having been selected by the mouse collective's hive mind as your intended mate, you sensed her powerful mind and can't help but feel a strong attachment to her.  Intent on coaxing you back to them, she has chosen to accompany you to show you the pleasures of mousedom to convince you to return.  You'll have to keep her close by if you want to avoid having the mice constantly tracking you down.";
 	say "     As if sensing your mind focused on her, the mouse girl [one of]bends over to pick something up, swishing her tail to lift the back of her dress and flash her pussy at you[or]runs her paws along her feminine body[or]teases her nipples in a little show for you[or]brushes the front of her dress, making the growing erection under it more prominent[or]grins coquettishly[or]sends a fresh wave of her love for you into your mind[or]nibbles at some cheese and crackers she found, somehow making it seem sexy[at random].  You can't help but think as you look at her that joining the mouse collective wouldn't be so bad if it means being with her.";
+	if a random chance of 2 in 5 succeeds, decrease humanity of player by 1;
 
 instead of sniffing the mouse girl:
 	say "Rachel smells faintly of mice and arousal, and you find yourself thinking back on the wonderful experience you had with them.";
+	if a random chance of 1 in 3 succeeds, decrease humanity of player by 1;
 
 
 Section 3 - Sexxxings

@@ -5,7 +5,6 @@ Version 1 of Hadiya by Kaxin begins here.
 
 Section 1 - The Situation
 
-mtrp is a number that varies.
 Lasthadiyafuck is a number that varies. Lasthadiyafuck is usually 250.
 hadiyafucked is a number that varies. hadiyafucked is usually 0.
 

@@ -11,6 +11,7 @@ The sarea of Mouse Taur is "Red";
 When play begins:
 	add "Mouse Taur" to infections of furry;
 	add "Mouse Taur" to infections of girl;
+mtrp is a number that varies.
 
 After resolving a Mouse Taur, try looking;
 
@@ -65,8 +66,8 @@ The description of Porn Store is "[pornstoredesc]";
 
 Lisa is a person.  Lisa is in Porn Store.
 The description of Lisa is "A mouse taur. Her mouse like body is six feet long and about three feet tall where it flows into the curvy form of a well built, mostly human, female. Her hands are somewhat paw like and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse grey fur, except for the end of the faint snout she has, twitching pinkly.";
+The conversation of Lisa is { "Squeak!" }.
 
-mtrp is a number that varies.
 Lastmousefuck is a number that varies. Lastmousefuck is usually 250.
 mousefucked is a number that varies. mousefucked is usually 0.
 mousespot is a number that varies. mousespot is usually 0.

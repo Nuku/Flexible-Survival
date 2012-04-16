@@ -235,6 +235,7 @@ Section 4 - Raccoon at Bunker
 
 Candy is a man.
 The description of Candy is "[coondesc]";
+The conversation of Candy is { "Cock!" }.
 candytalk is a number that varies.
 lastCandyfucked is a number that varies.  lastCandyfucked is normally 555.
 coonsex is a number that varies.

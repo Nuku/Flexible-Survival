@@ -13,6 +13,7 @@ Brianfucked is a number that varies. Brianfucked is usually 0.
 
 Brian is a man.
 The description of Brian is "You see an exceptionally large and well built Rhino man, obviously heavily infected, over by a series of cracks in the border wall. Easily eight feet tall or more, his body is covered in thick rough looking grey skin, he balances rather uneasily on his large hooflike feet, a large thick cock hangs rather limply between his legs, swaying slightly as he moves. His face is a cross between a humans and a rhinos, though it seems to lean more towards that of a beasts, especially with the large thick bony horn that protrudes from the top of his rhinolike muzzle.  He doesn[apostrophe]t seem to be the brightest of the infected, whatever he might have been before, this is emphasized by him lowering his his head so his horn is facing the wall... and charging forward at the thick concrete wall. There is a resounding impact as he staggers backwards slightly, holding his head, although you do think there are a few new cracks in the wall where he hit...";
+The conversation of Brian is { "Ouch!" }.
 Brian is in Border Wall.
 
 instead of sniffing Brian:
@@ -52,6 +53,7 @@ Diegofucked is a number that varies. Diegofucked is usually 0.
 
 Diego is a man.
 The description of Diego is "[Diegodescribed]";
+The conversation of Diego is { "Fooled you!" }.
 Diego is in Park Entrance.
 
 instead of sniffing Diego:
@@ -242,6 +244,7 @@ Timothyfucked is a number that varies. Timothyfucked is usually 0.
 
 Timothy is a man.
 The description of Timothy is "Lying on a rather large pile of stolen cushions, is a rather striking blue furred gryphon, her attractive blue feathered wings half spread out behind her as she reclines back. The creatures talon like hands are absently rubbing its large white furred belly, obviously quite pregnant and unable to move quickly, its large breasts are slowly dribbling milk as it shifts its body slightly, giving you a good look at both its thick black cock resting up against the gryphons distended belly, and the rather large and obviously well used passage resting between the gryphons leonine thighs.  Its lionlike tail twitches where it is lying between her slightly spread legs, as the Hemaphrodite gryphon cocks her avian head to look at you, her tongue hanging out the side of her beak slightly as she pants and rubs herself a bit more. You notice a small collar with a tag hanging around her neck, the tag just reads 'Pet'";
+the conversation of Timothy is { "EggsEggsEggs!" }.
 
 instead of sniffing timothy:
 	say "She smells like a hermaphrodite gryphon.  The scent of pregancy, egg-laying and sex hang thick around her.";

@@ -7,6 +7,7 @@ Section 1 - Fang the Feral Wolf
 
 Fang is a person.
 The description of Fang is "[fangdesc]";
+The conversation of Fang is { "Grrrr!" }.
 lastFangfucked is a number that varies.  lastFangfucked is normally 555.
 libido of Fang is normally 0.
 [See Feral Wolf file for collecting Fang.]

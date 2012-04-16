@@ -15,6 +15,7 @@ instead of sniffing Janice:
 
 Janice is a woman.
 The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eying you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.";
+The conversation of Janice is { "Foxy!" }.
 
 
 instead of conversing the Janice:

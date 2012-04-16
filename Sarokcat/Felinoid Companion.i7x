@@ -66,13 +66,13 @@ An everyturn rule:
 				if libido of player > 100, now libido of player is 100;
 
 
-Injured Felinoid companion is a situation.  The level of Injured Felinoid is 6.
-The sarea of Injured Felinoid companion is "Park";
+Injured Felinoid is a situation.  The level of Injured Felinoid is 6.
+The sarea of Injured Felinoid is "Park";
 when play begins:
 	add Injured Felinoid to badspots of guy;
 	add Injured Felinoid to badspots of furry;
 
-Instead of resolving Injured Felinoid companion:
+Instead of resolving Injured Felinoid:
 	if felinoidrescued is 2:
 		say "Traveling through the park trails, keeping a wary eye out for any more strange glades, you notice a small damp red spot on the ground ahead. Moving forward carefully to look at it, you realize with some surprise that it is somethings blood! Looking around you see several other spots of blood leaving a trail heading deeper into the underbrush, whatever went that way was definitely injured pretty badly and might need some help... Do you investigate?";
 		If player consents:
@@ -120,7 +120,7 @@ Instead of resolving Injured Felinoid companion:
 					now Felinoid companion is tamed;
 					infect "Felinoid";
 					say "[bold type](The Felinoid companion is now tamed! You can make it your active pet by typing pet Felinoid companion. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
-					now Injured Felinoid companion is resolved;
+					now Injured Felinoid is resolved;
 					stop the action;
 				otherwise:
 					say "Deciding that having one of the large felines follow you around would be far too dangerous, in spite of any help it might be in surviving in the city, you pet the golden furred felines head for a minute, before leaving it behind, the Felinoid trying to stagger after you as you leave, but its injuries leaving it unable to actually catch up. You idly find yourself wondering if you will encounter that particular Felinoid again, as it certainly seems to have fixated on you somehow.";
@@ -134,7 +134,7 @@ Instead of resolving Injured Felinoid companion:
 			now Felinoid companion is tamed;
 			infect "Felinoid";
 			say "[bold type](The Felinoid companion is now tamed! You can make it your active pet by typing pet Felinoid companion. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
-			now Injured Felinoid companion is resolved;
+			now Injured Felinoid is resolved;
 			stop the action;
 	otherwise:
 		say "Traveling through the twisting trails of the park, you notice the soft sound of water trickling over rocks from nearby, and leave the path to investigate. Pushing through the undergrowth, you blink as you come across a small spring in a rather nice looking glade, moving into the small glade, you notice that it looks like an excellent secluded place to rest, and begin to set your pack down. As you begin to set your pack down, you notice the numerous tracks in the soft earth at your feet, and blink as you look around and realize the glade is full of other similar tracks. Kneeling down you look closer you see that most of the tracks are those of the large felinoids wandering the park, and some of them even have soft spots of blood resting next to them.  Sighing you realize the large feline creatures found this nice pristine glade first, and are likely using it as a place to rest and lick their wounds. Not wanting to be here in case one of the feline beasts shows up, you pick your pack up and head back out into the park, feeling a little sad at not being able to rest near the nice spring.";	

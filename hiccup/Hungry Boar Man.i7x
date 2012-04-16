@@ -7,11 +7,46 @@ Section 1 - The Situation
 
 Hungry Piggy is a situation.
 
+After resolving a hungry piggy, try looking;
+
+Instead of Resolving a Hungry Piggy:
+	if hbmr is 0:
+		say "While exploring the city, you stumble upon an odd sight in the basement of one of the buildings. A water pipe must have burst at some point, because the floor of the entire room is covered in mud. What[apostrophe]s even stranger is that it looks like someone is living down here despite all the mud.[line break][line break]You spot a strange boar man rolling in the mud on the floor. He[apostrophe]s enjoying himself so much that it takes him awhile to realize that someone is in the room. When he finally does, he stares at you with his beady pig eyes for a moment. Not knowing if he[apostrophe]s friendly or not, you mentally brace yourself for a fight.[line break][line break]You relax a little when he smiles and says, 'Hello there! My name is Philip. Don[apostrophe]t worry, I[apostrophe]m not like those other creatures that are roaming the streets, humping everything in sight. I am really hungry though, could you please FEED me?'";
+		increase hbmr by 1;
+		move the player to Pig Pen;
+		now the pig pen is known;
+		increase the score by 1;
+		now Hungry Piggy is Resolved;
+
+
+Section 2 - Pig Pen
+
+Pig Pen is a room. It is fasttravel. It is private.
+
+The description of Pig Pen is "Not a literal pig pen, a basement actually. The floor is covered in a thick layer of mud. It seems whomever lives here is well stocked with small bottles of water, but there is no food anywhere, just a bunch of empty wrappers. There is a foul odor in the air.";
+
+instead of sniffing Pig Pen:
+	say "This place smells like a sty.  Oh... wait... yeah.";
+
+
+Section 3 - Philip the Piggy
+
 HBMR is a number that varies.
 Lastpigfed is a number that varies. Lastpigfed is usually 800.
 Pigfed is a number that varies. Pigfed is usually 0.
 Pigfucked is a number that varies. Pigfucked is usually 0.
 lastPhilipfucked is a number that varies.  lastPhilipfucked is usually 800.
+
+Philip is a man.
+The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker].  He's made a mudhole of his own in one corner of the bunker by breaking a whole in the wall and cracking a pipe.  He and spends much of his time lounging in it[end if].";
+Philip is in Pig Pen.
+The conversation of Philip is { "Hello, oink!", "Snort!", "Do you think the people who come to rescue us will have lots of food?", "How did I end up like this? Some jerk zapped me with a strange ray gun that turned me into this.", "I love the feeling of mud against my skin."};
+
+instead of sniffing Philip:
+	say "Philip has the strong scent of a male hog[if pigfucked > 3].  You've become quite used to his musky scent and find it quite arousing now[end if].";
+
+
+Section 4 - Feeding the Piggy
 
 Pigfeeding is an action applying to nothing.
 
@@ -131,6 +166,9 @@ To pigfeed:
 			say "He groans and rubs his gut, 'I'm still digesting the food you gave me earlier. Come back later.'";
 			stop the action;
 
+
+Section 5 - Sexxxing the Piggy
+
 instead of fucking the philip:
 	if Philip is not visible:
 		say "Who?";
@@ -200,31 +238,7 @@ instead of fucking the philip:
 	now lastPhilipfucked is turns;
 
 
-After resolving a hungry piggy, try looking;
-
-Instead of Resolving a Hungry Piggy:
-	if hbmr is 0:	
-		say "While exploring the city, you stumble upon an odd sight in the basement of one of the buildings. A water pipe must have burst at some point, because the floor of the entire room is covered in mud. What[apostrophe]s even stranger is that it looks like someone is living down here despite all the mud.[line break][line break]You spot a strange boar man rolling in the mud on the floor. He[apostrophe]s enjoying himself so much that it takes him awhile to realize that someone is in the room. When he finally does, he stares at you with his beady pig eyes for a moment. Not knowing if he[apostrophe]s friendly or not, you mentally brace yourself for a fight.[line break][line break]You relax a little when he smiles and says, 'Hello there! My name is Philip. Don[apostrophe]t worry, I[apostrophe]m not like those other creatures that are roaming the streets, humping everything in sight. I am really hungry though, could you please FEED me?'";
-		increase hbmr by 1;
-		move the player to Pig Pen;
-		now the pig pen is known;
-		increase the score by 1;
-		now Hungry Piggy is Resolved;
-									
-Pig Pen is a room. It is fasttravel. It is private.
-
-The description of Pig Pen is "Not a literal pig pen, a basement actually. The floor is covered in a thick layer of mud. It seems whomever lives here is well stocked with small bottles of water, but there is no food anywhere, just a bunch of empty wrappers. There is a foul odor in the air.";
-
-instead of sniffing Pig Pen:
-	say "This place smells like a sty.  Oh... wait... yeah.";
-
-Philip is a man.
-The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker].  He's made a mudhole of his own in one corner of the bunker by breaking a whole in the wall and cracking a pipe.  He and spends much of his time lounging in it[end if].";
-Philip is in Pig Pen.
-The conversation of Philip is { "Hello, oink!", "Snort!", "Do you think the people who come to rescue us will have lots of food?", "How did I end up like this? Some Jerk zapped me with a strange ray gun that turned me into this.", "I love the feeling of mud against my skin."};
-
-instead of sniffing Philip:
-	say "Philip has the strong scent of a male hog[if pigfucked > 3].  You've become quite used to his musky scent and find it quite arousing now[end if].";
+Section 6 - Ending the Piggy
 
 When play ends:
 	if bodyname of player is not "Messy Pig" and bodyname of player is not "Piggy":

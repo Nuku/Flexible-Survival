@@ -42,7 +42,8 @@ Nerminehelpstatus is a number that varies.
 angryhorguth is a number that varies.
 
 Nermine is a woman.
-The description of Nermine is " [Nerminedescribing] ";
+The description of Nermine is "[Nerminedescribing]";
+The conversation of Nermine is { "Mysteeerious!" }.
 
 instead of sniffing Nermine:
 	say "Nermine smells like a female jackal.  Her scent is subtle and alluring.";
@@ -1182,6 +1183,7 @@ Section 6- Rare Item case
 
 Rare Counter is a man.
 The description of Rare Counter is "This Glass counter seems to hold several of the finer pieces in the store, some very fancy bits of art and some finely carved gems resting next to unusual porcelain dolls and ancient looking scrolls. It also seems to be missing several pieces, or at least there are several empty spots sitting open and waiting for something to be placed there, maybe you should Talk over it to Nermine for some more information about it...";
+The conversation of Rare Counter is { "Treasure!" }.
 Rare Counter is in The Mysterious Shop.
 
 instead of sniffing Rare Counter:
@@ -1189,9 +1191,7 @@ instead of sniffing Rare Counter:
 
 Rarequesting is a number that varies.
 
-The conversation of Rare Counter is { "[rarecountertalking]" };
-
-To say rarecountertalking:
+instead of conversing the rare counter:
 	if jackalboytf is greater than 0:
 		say "'Ah Nermine sees her little helper has noticed her rare item counter!' The jackal shopkeeper beams happily at your interest, 'Sadly Nermine isn[apostrophe]t needing your help with anything in the counter right now, she has other things waiting for you to help her with though...' Nermine says with a teasing smile on her dark muzzle.";
 		stop the action;

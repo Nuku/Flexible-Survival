@@ -3738,7 +3738,7 @@ Rod Mallrat is in Mall FoodCourt.
 
 The conversation of Rod Mallrat is { "empty" };
  
- instead of conversing Rod Mallrat:
+instead of conversing Rod Mallrat:
 	if ronda is in Mall Atrium:
 		say "[one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
 	otherwise:

@@ -45,6 +45,7 @@ NoIntroduction is a number that varies. NoIntroduction is usually 0.
 
 dragoness is in Old Building.  dragoness is a person.
 The description of dragoness is "[dragonessdesc]";
+The conversation of dragoness is { "Poot!" }.
 dragonessfuck is a number that varies.
 
 instead of sniffing dragoness:
@@ -190,6 +191,7 @@ instead of sniffing Back Room:
 Section 4 - Trapped Dragon Front
 
 Christy is a woman.  Christy is in Back Room.  The description of Christy is "[christydesc]";
+The conversation of Christy is { "Rawr!" }.
 
 to say christydesc:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]

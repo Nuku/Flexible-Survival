@@ -13,6 +13,7 @@ Onyxfucked is a number that varies. Onyxfucked is usually 0.
 
 Onyx is a man.[or woman]
 The description of Onyx is "[onyxappearance]";
+The conversation of Onyx is { "Help me!" }.
 
 instead of sniffing Onyx:		[results for currently uncoded outcomes included]
 	if onyxquest is 0:

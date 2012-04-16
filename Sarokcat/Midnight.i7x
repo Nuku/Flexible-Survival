@@ -14,6 +14,7 @@ Midnightfucked is a number that varies. Midnightfucked is usually 0.
 
 Midnight is a man.[or woman]
 The description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.";
+The conversation of Midnight is { "Mrowl!" }.
 
 instead of sniffing Midnight:
 	say "Midnight has a strong scent of herm panther arousal and hot, feline sex clinging to him.";
