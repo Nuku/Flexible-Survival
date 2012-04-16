@@ -34,6 +34,7 @@ medeaget is a number that varies.
 
 
 The description of Doctor Medea is "[if medeaget is 0]Doctor Medea is a relatively human lizard, clothed, with multicolored scales. You suspect she got caught in the park initially[otherwise]Doctor Medea is a relatively human lizard, clothed, with multicolored scales. You suspect she got caught in the park initially. There is now a stream of darkness forms a line down her skirt to where some whitish cum is dripping. Looks like she came in herself, since the door was dust covered except for your marks[end if].";
+The conversation of Doctor Medea is { "Babies!" }.
 
 
 instead of conversing the Doctor Medea:
