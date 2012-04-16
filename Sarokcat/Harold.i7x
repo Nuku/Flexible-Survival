@@ -13,6 +13,7 @@ Harold is in The PALOMINO.
 
 Harold is a man.[or woman]
 The description of Harold is "Standing behind the bar is a well built rather horse like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons, his slightly hooflike hands not seeming to slow him down at all. A black leather vest resting against his pure white fur and making him look even more striking due to the sharp contrast of colours. Even more striking however, is the spiraling horn emerging from the center of the equines forehead, it[apostrophe]s pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking his direction, the equine barkeep winks at you, and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers";
+The conversation of Harold is { "Glug glug!" }.
 
 instead of sniffing Harold:
 	say "Harold has an equine scent laced faintly with that of several fine alcohols.";

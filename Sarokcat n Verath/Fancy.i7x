@@ -14,6 +14,7 @@ Nightmaremastery is a number that varies.
 
 Fancy is a man.[or woman]
 The description of Fancy is "A rather sexy looking mare eyes you with amusement from where she is seated at the small table she is using as a desk, wearing only her soft pelt of white horse fur and a set of white panties that reveal far more then they conceal. Her body is well built, and nicely rounded in all the right places, the horsewoman has nice strong thighs, and her powerful hooves stretch out in front of her, her legs slightly parted teasingly as she gives you a good view of her tightly stretched panties. She rests her equine muzzle on her slightly hooflike hands as she looks at you with anticipation, her deep blue eyes twinkling with amusement as she cocks her ears forward to hear what you have to say.";
+the conversation of Fancy is { "Grumble!" }.
 
 instead of sniffing Fancy:
 	say "Fancy smells like a strong, willful mare.  She smells strongly of sex and arousal, clearly an experienced lover.";

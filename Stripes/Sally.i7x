@@ -5,6 +5,7 @@ Section 1 - Sally the Huskybunny
 
 Sally is a woman.
 The description of Sally is "[sallydesc]";
+The conversation of Sally is { "Fuck me!" }.
 lastSallyfucked is a number that varies.  lastSallyfucked is normally 555.
 
 instead of sniffing the Sally:

@@ -12,6 +12,7 @@ Daisyfucked is a number that varies. Daisyfucked is usually 0.
 
 Daisy is a woman.[or woman]
 The description of Daisy is "[Daisydescribing]";
+The conversation of Daisy is { "Ooo!" }.
 
 to say Daisydescribing:
 	if Daisy is in the Masters office:

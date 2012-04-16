@@ -140,6 +140,7 @@ angiefucked is a number that varies. angiefucked is usually 0.
 
 Angie is a woman.
 The description of Angie is "[angieappearance]";
+The conversation of Angie is { "Mewl!" }.
 
 to say angieappearance:
 	if angiearoused is 3:

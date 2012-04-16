@@ -42,6 +42,7 @@ Section 2 - Sven the Snowmeow
 
 Sven is a man.  Sven is in Sven's Place.  The hp of Sven is normally 0.
 The description of Sven is "[svendesc]";
+The conversation of Sven is { "Mew!" }.
 lastSvenfucked is a number that varies.  lastSvenfucked is normally 555.
 lastSvendrink is a number that varies.  lastSvendrink is normally 555.
 
@@ -471,6 +472,7 @@ to say sventriocoonsex:
 Section 4 - Svetlana
 
 Svetlana is a woman.  The description of Svetlana is "[svetlanadesc]".
+The conversation of Svetlana is { "Mew!" }.
 [uses same variables as Sven for easier saving and restoration.]
 
 instead of sniffing the svetlana:

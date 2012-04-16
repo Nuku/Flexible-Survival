@@ -56,6 +56,8 @@ understand "max" as Max.
 
 The description of Max is "     Max is a Pembroke Welsh corgi, he has a short but strong, sturdily built and is covered in a coat of light auburn fur with a white underside and a black diamond on his back, Max is wearing a pair of black ripped jeans that reach his knees, his forearms and legs are tapped up with white bandages. He also has a black whip/bracelet tied round his right forearm and a red diamond pendant hanging from his neck. ";
 
+The conversation of Max is { "Stuff!" }.
+
 instead of conversing the Max:
 	if location of player is Old Lounge:
 		say "'Do you want to fight the master? (y) or get out of here (n)?'";
@@ -191,6 +193,8 @@ understand "kitsune" as Miles.
 understand "miles" as Miles.
 
 The description of Miles is "     Miles is a kitsune, he looks like a fox but with two tails, his fur is normally red but it seems like he can control its colour, he is wearing a plain t-shirt and black joggers, he also has and a blue diamond pendant hanging from his neck. ";
+
+The conversation of Miles is { "Stuff!" }.
 
 instead of conversing the Miles:
 	if location of player is Rec room:

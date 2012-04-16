@@ -4,6 +4,7 @@ Version 2 of Alex by Nuku Valente begins here.
 Section 1 - Alex & Alex's Condo
 
 Alex is a person. Alex is in Alex's Condo.
+The conversation of alex is { "Poing!" }.
 lastAlexfucked is a number that varies.  lastAlexfucked is usually 500.
 alexbrunch is a number that varies.
 alexdiego is a number that varies.

@@ -13,6 +13,7 @@ instead of sniffing Hyena Hideout:
 
 Gang members is a man.
 The description of Gang members is "A number of hyena gang members are lounging around the large open area, some of them lounging on the couches or the mattresses, while others move around chatting or showing off their hyena fur patterns. Several of the gang members have obviously gone mostly feral though, and their cackling laughter from the other rooms provides an almost comforting background to the noise of the area.";
+The conversation of gang members is { "Yap!" }.
 Gang members is in Hyena hideout.
 
 instead of sniffing Gang members:
@@ -96,6 +97,7 @@ Carry out memberfucking:
 
 Gina is a woman.
 The description of Gina is "The hyena who recruited you into the gang is lounging around on a pile of cushions nearby, you think her name was Gina.";
+The conversation of Gina is { "Stare!" }.
 Gina is in Hyena hideout.
 
 instead of sniffing Gina:

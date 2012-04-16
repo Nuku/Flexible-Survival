@@ -21,6 +21,7 @@ chasefucked is a number that varies. chasefucked is usually 0.
 
 Chase is a man.
 The description of Chase is "The large striped tiger man you helped out earlier is hanging around near the side of the den, watching as several of the other Tigerlike people here go about their business.";
+The conversation of Chase is { "Mrowl, baby!" }.
 Chase is in Tiger den.
 
 instead of sniffing Chase:

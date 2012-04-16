@@ -419,6 +419,8 @@ Doctor Mouse has a number called progress.
 
 The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears.  He's only about four feet tall, and that's to the top of his ears.  He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it.  He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.";
 
+The conversation of Doctor Mouse is { "Squeak!" }.
+
 instead of sniffing Doctor Mouse:
 	say "The small lab mouse looks at you sternly as you sniff him.  He smells of mouse, chemicals and sleepless nights in the lab.";
 

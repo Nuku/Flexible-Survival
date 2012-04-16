@@ -170,9 +170,11 @@ The invent of New Ewe Storeroom is { "chips" , "food" , "water bottle" , "soda" 
 
 Leon is a man.
 The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you, You recall his name was Leon.";
+The conversation of Leon is { "Baa, baby!" }.
 Leon is in New Ewe Storeroom.
 Mary is a woman.
 The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around, You remember her introducing herself as Mary.";
+The conversation of Mary is { "Baa, honey!" }.
 Mary is in New Ewe Storeroom.
 
 instead of sniffing New Ewe Storeroom:
