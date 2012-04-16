@@ -10,9 +10,9 @@ The description of trixie is "Look, it[apostrophe]s Trixie, the story fairy! She
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" };
 
 To say magic word:
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}[progress of alex]}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]";
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
-	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}[progress of alex]}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]";
+	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}[progress of alex]}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]";
 	say "[line break]'You'll need to recite that part on its own after telling me the first one.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin.'";
 
 Reciting is an action applying to [16 things]one topic.
@@ -70,6 +70,7 @@ Carry out reciting:
 					now the score is the number understood;
 			-- 11:
 				if the player's command matches "[number]":
+					now unusual creature is resolved;
 					now the hp of doctor matt is the number understood;
 					if hp of doctor matt is greater than 4 and hp of doctor matt is less than 100:
 						move the microwave to the location of doctor matt;
@@ -182,6 +183,7 @@ Carry out reciting:
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
 						now Coleen is in Y;
+					if coleen is in bunker:
 						now Womanfruittree is resolved;
 			-- 33:
 				if the player's command matches "[number]":
@@ -223,9 +225,19 @@ Carry out reciting:
 					now gryphoncomforted is the number understood;
 					if gryphoncomforted is greater than 0:
 						now lonely gryphoness is resolved;
+						now gryphoness nest is resolved;
+					otherwise:
+						now Lonely Gryphoness is unresolved;
+						now Gryphoness Nest is unresolved;
 			-- 46:
 				if the player's command matches "[number]":
 					now shiftable is the number understood;
+					now Secure Area is unresolved;
+					if shiftable > 0:
+						now Secure Area is resolved;
+					if shiftable is 2:
+						now Guard Gryphon is resolved;
+						now findablestairs is 1;
 			-- 47:
 				if the player's command matches "[number]":
 					now medeastuff is the number understood;
@@ -261,10 +273,8 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now progress of alex is the number understood;
 					if progress of alex is greater than 0:
-						now Alex's Condo is known;
-					if progress of alex is 1:
-						now find lorenda is unresolved;
-					if progress of alex > 1:
+						now meet alex is resolved;
+					if progress of alex is greater than 1:
 						now find lorenda is resolved;
 			-- 55:
 				if the player's command matches "[number]":
@@ -308,10 +318,12 @@ Carry out reciting:
 			-- 61:
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
-				if fancyquest is greater than 4:
-					now findinghardware is resolved;
-				if fancyquest is greater than 0:
-					now ignoredmemo is resolved;
+					now findinghardware is unresolved;
+					now ignoredmemo is unresolved;
+					if fancyquest is greater than 4:
+						now findinghardware is resolved;
+					if fancyquest is greater than 0:
+						now ignoredmemo is resolved;
 			-- 62:
 				if the player's command matches "[number]":
 					now hp of Sven is the number understood;
@@ -329,11 +341,7 @@ Carry out reciting:
 					now sarahpups is the number understood;
 			-- 67:
 				if the player's command matches "[number]":
-					now progress of alex is the number understood;
-					if progress of alex is greater than 0:
-						now meet alex is resolved;
-					if progress of alex is greater than 1:
-						now find lorenda is resolved;
+					now tempnum is 0;		[Duplicate removed]
 			-- 68:
 				if the player's command matches "[number]":
 					now alexbrunch is the number understood;
@@ -343,6 +351,8 @@ Carry out reciting:
 			-- 70:
 				if the player's command matches "[number]":
 					now tmapfound is the number understood;
+					now noteinbottle is unresolved;
+					now findingboat is unresolved;
 					if tmapfound is greater than 0:
 						now noteinbottle is resolved;
 					if tmapfound is greater than 2:
@@ -361,6 +371,101 @@ Carry out reciting:
 						now Fang is in the dark basement;
 					if hp of Fang > 0 and hp of Fang < 100:
 						now Fang is in the Grey Abbey Library;
+			-- 74:
+				if the player's command matches "[number]":
+					now libido of Fang is the number understood;
+			-- 75:
+				if the player's command matches "[number]":
+					now pigfed is the number understood;
+					now Philip is in Pig Pen;
+					now Pig Pen is unknown;
+					now HBMR is 0;
+					if pigfed > 0:
+						now Pig Pen is known;
+						now lastpigfed is turns;
+						now Hungry Piggy is resolved;
+						now HBMR is 1;
+					if pigfed is 3:
+						now Philip is in the bunker;
+			-- 76:
+				if the player's command matches "[number]":
+					now pigfucked is the number understood;
+					now lastPhilipfucked is turns;
+			-- 77:
+				if the player's command matches "[number]":
+					if the number understood is 1:
+						now Lost Crab is resolved;
+						now cute crab is tamed;
+					otherwise:
+						now Lost Crab is not resolved;
+						now cute crab is not tamed;
+			-- 78:
+				if the player's command matches "[number]":
+					if the number understood is 1:
+						now Scared Bird is resolved;
+						now Exotic Bird is tamed;
+					otherwise:
+						now Scared Bird is not resolved;
+						now Exotic Bird is not tamed;
+			-- 79:
+				if the player's command matches "[number]":
+					if the number understood is 1:
+						now Injured Felinoid is resolved;
+						now Felinoid companion is tamed;
+					otherwise:
+						now Injured Felinoid is not resolved;
+						now Felinoid companion is not tamed;
+			-- 80:
+				if the player's command matches "[number]":
+					if the number understood is 1:
+						now Smashed Hive is resolved;
+						now bee girl is tamed;
+					otherwise:
+						now Smashed Hive is unresolved;
+						now bee girl is not tamed;
+			-- 81:
+				if the player's command matches "[number]":
+					if the number understood is 1:
+						now Lost house cat is resolved;
+						now house cat is tamed;
+					otherwise:
+						now Lost house cat is not resolved;
+						now house cat is not tamed;
+			-- 82:
+				if the player's command matches "[number]":
+					if the number understood is 1:
+						now Abandoned Fox is resolved;
+						now little fox is tamed;
+					otherwise:
+						now Abandoned Fox is not resolved;
+						now little fox is not tamed;
+			-- 83:
+				if the player's command matches "[number]":
+					if the number understood is 1:
+						now Lost Skunk Kit is resolved;
+						now skunk kit is tamed;
+					otherwise:
+						now Lost Skunk Kit is unresolved;
+						now skunk kit is not tamed;
+			-- 84:
+				if the player's command matches "[number]":
+					if the number understood is 1:
+						now Mournful Dog is resolved;
+						now helper dog is tamed;
+					otherwise:
+						now Mournful Dog is not resolved;
+						now helper dog is not tamed;
+						now hdog is 0;
+						now dogfoodcount is 0;
+			-- 85:
+				if the player's command matches "[number]":
+					now mousecurse is the number understood;
+					if mousecurse is 1:
+						now Quiet Apartment Building is resolved;
+						now mouse girl is tamed;
+					otherwise:
+						now Quiet Apartment Building is unresolved;
+						now mouse girl is not tamed;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
@@ -444,6 +549,8 @@ Carry out reciting:
 	otherwise:
 		now Comic Shop is known;
 		now Mephitness is resolved;
+	if Fang is not in the Grey Abbey Library and Sandra is not in the Bunker:
+		now libido of Fang is 0;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
 
