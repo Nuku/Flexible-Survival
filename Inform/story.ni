@@ -2488,7 +2488,7 @@ To level up:
 	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
 	increase maxhp of player by 2;
 	now hp of player is maxhp of player;
-	if the remainder after dividing level of the player by 6 is 0:
+	if the remainder after dividing level of the player by 5 is 0:
 		funfeatget;
 	increase score by level of the player times level of the player;
 	

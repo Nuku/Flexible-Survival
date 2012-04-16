@@ -472,7 +472,7 @@ Carry out reciting:
 	if hospquest is 8, now Dinosaur Nest is unresolved;
 	now the score is -9999;
 	repeat with counter running from lev + 1 to level of player:
-		if the remainder after dividing counter by 6 is 0:
+		if the remainder after dividing counter by 5 is 0:
 			funfeatget;
 	if hospquest is 1:
 		now Finding a Way in is unresolved;
