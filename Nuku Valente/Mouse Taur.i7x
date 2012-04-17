@@ -8,11 +8,10 @@ Section 1 - The Situations	[two ways to meet Lisa now]
 
 Mouse Taur is a situation.
 The sarea of Mouse Taur is "Red";
+mtrp is a number that varies.
 When play begins:
 	add "Mouse Taur" to infections of furry;
 	add "Mouse Taur" to infections of girl;
- 
- mtrp is a number that varies.
 
 After resolving a Mouse Taur, try looking;
 
