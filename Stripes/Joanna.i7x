@@ -297,7 +297,7 @@ This is the joannasexy rule:
 			say "[joannasex7]";
 		otherwise if nam is "Multi-stuff Joanna":
 			say "[joannasex8]";
-		otherwise if nam is "Multi-stuff Player":
+		otherwise if nam is "Multi-stuff player":
 			say "[joannasex9]";
 		wait for any key;
 		if hp of Joanna < 5, increase hp of Joanna by 1;
