@@ -1,5 +1,5 @@
 Version 3 of Desperate Bunny by Nuku Valente begins here.
-[Version 3 - Sandra and Coleen interaction by Stripes]
+[Version 3.1 - Fang-specific ending]
 
 "Adds a situation to Flexible Survival with a needy, but uninfectious, rabbit."
 
@@ -330,7 +330,10 @@ to say sctriofemale:
 
 When play ends:
 	if Sandra is in the Bunker:
-		if hp of the player is greater than 0:
+		if Fang is in the Grey Abbey Library and hp of Fang is 3 and coleenalpha is 0 and humanity of player < 10:
+			[succumb: alpha Fang takes uncontested Sandra ]
+			let tempnum be 1;			[do nothing statement]
+		otherwise if hp of the player is greater than 0:
 			if humanity of the player < 10 and coleenalpha > 0:
 				say "Sandra ends up going off with Coleen, the dominant husky taking her to be the pack's bunny slut and to be bred full of adorable husky-bunny hybrid pups.  On the occasions the alpha female husky allows her to spend time with you, the bunny tells you how much she is enjoying her new life, falling into her role as a plaything for the horny canines.  ";
 			otherwise if humanity of the player is less than 10:
