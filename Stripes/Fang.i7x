@@ -9,7 +9,8 @@ Fang is a person.
 The description of Fang is "[fangdesc]";
 The conversation of Fang is { "Grrrr!" }.
 lastFangfucked is a number that varies.  lastFangfucked is normally 555.
-libido of Fang is normally 0.
+libido of Fang is normally 0.		[represents status w/fucking Sandra - saved]
+lust of Fang is normally 0.		[number of threesomes w/Sandra in this play through]
 [See Feral Wolf file for collecting Fang.]
 
 instead of sniffing the Fang:
@@ -185,9 +186,10 @@ to say fangsandratongue:
 
 to say fangsandrasex:
 	now lastrabbitfuck is turns;
+	increase lust of Fang by 1;
 	say "     Recalling that you haven't spent time with Sandra in a while, you lead Fang over to one of the side rooms before poking your head in the bunker long enough to call the bunny girl over[if number of booked people > 2 and libido of Fang > 5].  The others smile, having picked up on what's going on, but saying nothing as she heads out to join you[otherwise if number of booked people > 2].  The others inside glance over for a moment, but largely ignore the brief intrusion and the bunny girl's exit[otherwise].  The bunny girl exits the bunker to come join you[end if].  Once in the side room, the bunny girl [if libido of Fang > 5]grins playfully and[otherwise]blushes a little to find Fang there, but[end if] rushes over to hug the big wolf around the neck.  You slip off your pack and clothes, smiling to see that Sandra's already got her paw at the wolf's hard cock.  Clearly she's been looking forward to this as much as your guard wolf has.";
 	wait for any key;
-	if libido of Fang is 5 and hp of Fang is 1:
+	if lust of Fang is 3 and hp of Fang is 1:			[3rd threesome w/Fang in this playthrough w/basic Fang]
 		say "     As Sandra strokes the wolf's cock, she spreads his precum over it, getting it nice and slick.  'Mmm... would you like a turn under this sexy beast.  I'd love to see you bent over for this big wolf[if cunts of player is 0] and taking it up the ass.  That'd be really hot,'[otherwise], getting bred as his bitch.   That'd be really sexy,'[end if] she moans, fingering herself.  Looking at that throbbing, red cock, you find yourself tempted by the idea of letting the wolf ravage you as he did with Sandra.  Fang, as if sensing your momentary lapse in control, moves up to you and begins trying to mount you.  Shall you let him (Y) or reassert your dominance (N) ?";
 		if the player consents:
 			say "[fangsub]";
