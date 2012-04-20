@@ -1,5 +1,5 @@
 Version 4 of Feral Wolf For FS by Shadowwolf94 begins here.
-[Version 4 - Victory can earn pet wolf]
+[Version 4.1 - Fang-specific endings]
 
 "Adds a Feral Wolf to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
@@ -142,11 +142,19 @@ When Play begins:
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
 
 when play ends:
-	if bodyname is "Feral Wolf":
-		if humanity of player is less than 10:
-			say "Giving in to your feral nature, you prowl the city street, looking for females to mount and dominate. Your mind is gone and now only the most primal of instincts remain.";
-		otherwise:
-			say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for your to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you[']re a grey muzzle.";
+	if bodyname of player is "Feral Wolf":
+		if hp of Fang is 3:				[alpha Fang]
+			if humanity of player < 10:
+				say "     Giving in to your feral nature, you return to the Library and submit yourself to Fang again, letting him take you as he pleases.  After a wild fucking, he leads you off into the city to form a pack of his own with you as his [if cunts of player > 0]alpha bitch[otherwise]slutty beta[end if][if coleenalpha is 0].  Taking Sandra with him, she becomes his special bunny fucktoy, a role that she enjoys greatly.  She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
+			otherwise:
+				say "     When the military comes, you worry about how they'll react to you and Fang.  Secretly your lupine alpha, you keep that fact hidden when speaking to the military.  But you are surprised as they move towards him and he slowly stretches and stands upright, resembling the larger alpha wolves you've seen in the city than the feral wolf he once was.  Despite a little unsteadiness on his reformed legs, he speaks confidently, telling a tale about how you rescued him from a fate of being an omega in a wolf pack and brought him here to safety.  He alludes in passing that your current form is a result of the rescue, but doesn't elaborate.  Having heard many tales from those barely able to escape after being transformed, the soldiers don't question this rather loosely accurate story.  You pad over to your alpha and lean against him while he scritches your ears.";
+				say "     Still having some humanity, despite your more animal form, Fang takes charge of you once your release from the military.  He moves in with another female wolf and soon becomes the master of her ranch house as she submits as his newest bitch.  You live with him in his newly acquired home, to which he adds a few others with lupine infections, adding them to his little pack of lovers.  While the others quickly become nothing but slutty pets, he does keep you as the beta among them, letting you lead your life outside the home and with your other friends and lovers.  You sometimes even get to partake in some fun with the other slutty packmates.  Fang, being a virile alpha, soon has the females growing round with his pups.";
+				say "     Sandra, lustful for the big wolf, comes over to visit often.  Fang fucks her like a wild animal, stuffing his throbbing cock into her and keeping her coming back for more.  The kinky bunny also enjoys watching the wolf ravage you as well, finding the sight of it very arousing between her own turns beneath the alpha wolf.  The bunny's tummy grows large after one of these visits and Fang has her move in, adding her to his harem of lovers.  She eventually gives birth to a pair of wolf cubs with bunny ears and a tail.  These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
+		otherwise:						[no Alpha Fang]
+			if humanity of player is less than 10:
+				say "Giving in to your feral nature, you prowl the city street, looking for females to mount and dominate. Your mind is gone and now only the most primal of instincts remain.";
+			otherwise:
+				say "Returning to modern society proves to be hard for you. Your feral tendencies make it hard for your to be accepted in large urban areas, so you move out to a more secluded area in the mountains. You make your living by hunting deer and the like, your wolf senses giving you a major edge over anything else, and soon enough you have a comfortable and stable life to live till you[']re a grey muzzle.";
 			
 Table of Game Objects(continued)
 name	desc	weight	object
