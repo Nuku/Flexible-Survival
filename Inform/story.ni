@@ -1105,6 +1105,19 @@ To Birth:
 	now the child is not born;
 	now the gestation of child is 0;
 
+To get an input:
+	(-VM_ReadKeyboard(buffer, parse);-)
+
+To decide whether player consents:
+	say "[link]yes[end link] or [link]no[end link][line break]";
+	While 1 is 1:
+		get an input;
+		if the player's command matches "yes":
+			decide on true;
+		if the player's command matches "no":
+			decide on false;
+		say "Please choose yes or no. >"
+
 To impregnate with (x - text):
 	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player:
 		stop the action;
