@@ -15,7 +15,7 @@ use MAX_NUM_STATIC_STRINGS of 40000.
 use ALLOC_CHUNK_SIZE of 75000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 250.
-Use maximum indexed text length of at least 10000. 
+Use maximum indexed text length of at least 5000. 
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
