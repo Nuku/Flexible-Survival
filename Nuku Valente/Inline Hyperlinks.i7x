@@ -19,14 +19,18 @@ When play begins:
 Section - Event handling
 
 A glulx hyperlink rule (this is the default inline hyperlink handling rule):
+	say "Woof";
 	now the current hyperlink ID is the link number of the selected hyperlink;
 	unless the current hyperlink ID is 0:
 		cancel glulx hyperlink request in main window;[just to be safe]
 		cancel glulx hyperlink request in status window;[just to be safe]
+		cancel line input in main window;
 		follow the hyperlink processing rules;
 	if the status window is the hyperlink source:
+		cancel line input in main window;
 		request glulx hyperlink event in status window;
 	otherwise:
+		cancel line input in main window;
 		request glulx hyperlink event in main window.
 
 To request glulx hyperlink event in the/-- main window:
@@ -88,7 +92,10 @@ To say terminate link:
 
 To cancel line input in main window: 
 	(- glk_cancel_line_event(gg_mainwin, GLK_NULL);
-	glk_cancel_char_event(gg_mainwin); -)
+	glk_cancel_char_event(gg_mainwin); 
+	glk_cancel_char_event(gg_statuswin); 
+	glk_cancel_line_event(gg_statuswin, GLK_NULL);
+	-)
 
 
 Section - Processing hyperlinks
@@ -101,6 +108,7 @@ The current hyperlink ID is a number that varies.
 Section - Selecting replacement command
 
 A hyperlink processing rule (this is the default command replacement by hyperlinks rule):  
+	say "I have ceived a command! it is[entry (current hyperlink ID) of the hyperlink list]!";
 	cancel line input in main window;
 	now the glulx replacement command is entry (current hyperlink ID) of the hyperlink list;
 	rule succeeds.
@@ -150,6 +158,7 @@ To say terminate link:
 Section - Code for selecting the replacement command (replaces Section - Selecting the replacement command in Flexible Windows by Jon Ingold)
 
 A hyperlink processing rule (this is the default command replacement by hyperlinks rule):  
+	cancel line input in main window;
 	now the glulx replacement command is entry (current hyperlink ID) of the hyperlink list;
 	rule succeeds.
 
