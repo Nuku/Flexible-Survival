@@ -3177,7 +3177,7 @@ instead of examining a person(called x):
 	otherwise:
 		say "[The description of x][line break]";
 		if the number of entries in the conversation of x is greater than 0:
-			say "Possible Action: [link]talk[as]talk [x][end link][line break]";
+			say "Possible Action: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][line break]";
 	
 Showstatting is an action applying to nothing.
 
