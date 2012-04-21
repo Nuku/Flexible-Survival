@@ -19,7 +19,6 @@ When play begins:
 Section - Event handling
 
 A glulx hyperlink rule (this is the default inline hyperlink handling rule):
-	say "Woof";
 	now the current hyperlink ID is the link number of the selected hyperlink;
 	unless the current hyperlink ID is 0:
 		cancel glulx hyperlink request in main window;[just to be safe]
@@ -108,7 +107,6 @@ The current hyperlink ID is a number that varies.
 Section - Selecting replacement command
 
 A hyperlink processing rule (this is the default command replacement by hyperlinks rule):  
-	say "I have ceived a command! it is[entry (current hyperlink ID) of the hyperlink list]!";
 	cancel line input in main window;
 	now the glulx replacement command is entry (current hyperlink ID) of the hyperlink list;
 	rule succeeds.
