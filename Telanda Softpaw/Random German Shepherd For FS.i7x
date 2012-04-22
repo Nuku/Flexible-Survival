@@ -25,7 +25,7 @@ To say male shepherd rape:
 			now fuckable is 0;
 			infect; [Trigger an infection Roll]
 		else:
-			say "Your alpha just grins as you give in to him and pounces with a mock growl. He play wrestles with you for a few minutes before sitting down and pulling you against himself, nuzzling at the top of your head and licking your ears [line break]'Good boy, your learning. Grow strong, always treat me with respect, and you will become a powerful pack member.'[line break]He gives a tight hug and licks you, tongue rasping over your lips and leaving a familiar burning sensation before he stands and walks off once again leaving you alone to learn and grow stronger.[line break]";
+			say "Your alpha just grins as you give in to him and pounces with a mock growl. He play wrestles with you for a few minutes before sitting down and pulling you against himself, nuzzling at the top of your head and licking your ears [line break]'Good boy, you're learning. Grow strong, always treat me with respect, and you will become a powerful pack member.'[line break]He gives a tight hug and licks you, tongue rasping over your lips and leaving a familiar burning sensation before he stands and walks off once again leaving you alone to learn and grow stronger.[line break]";
 			now Shepherdslut is 1;
 			now fuckable is 0;
 			infect; [Trigger an infection Roll]
@@ -35,7 +35,7 @@ To say male shepherd rape:
 		say "The German Shepherd growls and pushes you back into a wall as you surrender, bearing his teeth and making sure you know he's in control. Slowly his hackles drop and he stops growling, while continuing to hold you up against the wall.";
 		now Shepherdslut is 1;
 		if cunts of the player is 0: 
-			say "'Rrrrrf, not stupid at least, you're willing to give in when you can't win.'  [line break]He seems to consider you carefully for a moment then makes a decision,  keeping you pinned against the wall he begins to firmly lick at your injuries, causing a slight burning sensation spread from them before fading.   After tending to a few of your superficial injuries he steps back from the wall, a large grin on his muzzle and his tail wagging. [line break]'You'll make a good pack-mate to run with, or will soon at least' [line break]With that he turns and simply walks away, leaving you leaning up against the wall while you feel the male shepherd's blessing and infection slowly spreading.";
+			say "'Rrrrrf, not stupid at least, you're willing to give in when you can't win.'  [line break]He seems to consider you carefully for a moment then makes a decision,  keeping you pinned against the wall he begins to firmly lick at your injuries, causing a slight burning sensation spread from them before fading.   After tending to a few of your superficial injuries, he steps back from the wall, a large grin on his muzzle and his tail wagging. [line break]'You'll make a good pack-mate to run with, or will soon at least' [line break]With that he turns and simply walks away, leaving you leaning up against the wall while you feel the male shepherd's blessing and infection slowly spreading.";
 			now fuckable is 0;
 			set male shepherd;
 		else:
@@ -47,7 +47,7 @@ To say male shepherd rape:
 			say "He gives an extra little sniff, taking in your male scent then chuckles as he licks your cheek. [line break]'mmm bitch in spirit and mind, but not in body it seems. Don't worry, I can help solve that for you, make you into what you really are.' [line break]He slowly breaks off the hug, turning you around and pushing your shoulders down to make you get on all fours, then moving behind you.";
 			now fuckable is 2;
 		else:
-			say "He presses his muzzles against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump. Then satisfied that the 'foreplay' has been accomplished he breaks the embrace and turns your around, gently but firmly pushing you down onto all fours.";
+			say "He presses his muzzles against your lips, canine tongue pressing in as he forces the kiss, paws slipping around to squeeze your rump. Then satisfied that the 'foreplay' has been accomplished he breaks the embrace and turns you around, gently but firmly pushing you down onto all fours.";
 	if fuckable > 0:
 		say "Unable to look back all you can hear is the Shepherds eager panting while he manoeuvres you into the position he wants, leathery paw pads running over your [skin of player] flesh as he checks what he has to enjoy before you feel a warm weight on your back and wet slickness press against you from behind, the pointed canine tip pressing against your body, starting to slide in.";
 		[ Now do a gender check. ]
