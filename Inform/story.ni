@@ -4246,7 +4246,13 @@ Carry out milking:
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
 
+The parser error count is a number that varies. The parser error count is 0.
 
+After printing a parser error when the parser error count is at least 0:
+	increment the parser error count;
+	if the turn count divided by the parser error count is less than three:
+		say "(If you are feeling lost, try typing [italic type]help[roman type] for suggestions.)";
+		now the parser error count is -1. [This ensures that we don't keep printing the message.]
 
 Book 9 - Add-Ons
 
