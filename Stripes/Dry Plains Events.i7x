@@ -230,7 +230,7 @@ Instead of resolving a Watering Hole:
 				say "     Lowering you onto all fours in the water, he lines up his cock with your waiting pucker and slowly sinks his shaft into you.  You moan in pleasure and push into his thrusts, aroused by the idea of fucking in this pond the birds have been using as their bath.  And you're quite certain many of them have been cumming in it as well, tasting their semen in the water as you take that drink you wanted while getting fucked.  The strong eagle rubs his feathered hands along your back and over your ass as he keep plowing his throbbing, leaking prick into you.  'Isn't that nice, my little chick?  A big eagle cock to fuck you right.  Stuff that slutty ass of yours.'  You moan and nod, lost in the lustful mating.  When he finally cums, he blasts his thick load into you and you cum moments later.";
 			say "     Finished his bath and his fuck, he helps you out of the water and rubs his feathered hand across your stuffed tummy, nipping at your neck with his beak.  As you prepare to go, he flies off.  Looking up as he gains altitude, you spot several other eagles soaring over the pond and head on your way, as the others may not be so friendly about an intruder at their bathing spot.  Both soaked and filled with eagle-tainted fluids, you quickly start to change, fully changing into an eagle creature like your lover.  Still awash in the pleasures of the mating and the overdose on tainted fluids, you are quite pleased with the feeling of the infection spreading through you.";
 			say "[eaglefulltf]";
-			increase morale by 3;
+			increase morale of player by 3;
 			decrease humanity of player by 15;
 			now thirst of player is 0;
 			increase score by 25;
