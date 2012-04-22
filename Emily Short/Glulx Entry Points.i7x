@@ -1,9 +1,24 @@
-Version 6 of Glulx Entry Points (for Glulx only) by Emily Short begins here.
+Version 10 of Glulx Entry Points (for Glulx only) by Emily Short begins here.
 
 "Provides hooks to allow the author to write specialized multimedia behavior that would normally go through HandleGlkEvent. This is a rather dull utility library that will be of most use to authors wanting to write Glulx extensions compatible with other Glulx extensions already in use."
 
+"with contributions by Erik Temple"
+
 Use authorial modesty.
 
+Section - Use option
+[As of version 10, Glulx Entry Points has a somewhat more flexible approach to event handling than did earlier versions: Whereas the latter consulted one of eight separate rulebooks depending on the event type, Glulx Input Loops passes the event type into a single parametrized rulebook. This means, for example, that we can have a general rule for event handling that fires no matter what the event, alongside the usual event-based rules.
+
+Many existing extensions are based on the older system, however, and we would break those extensions if we simply removed the older event-handling rulebooks. So, we retain those rulebooks. By default, Glulx Entry Points will still pass event-handling to those rulebooks. This means that existing code will continue to work as before, and we can also use the new parameterized rulebook if we like.
+
+This use option disables the old rulebooks, and should be used only when we know that we are not using an extension that depends on the old rulebooks.]
+
+Use direct event handling translates as (- Constant DIRECT_GLK_EVENT_HANDLING; -).
+
+
+Section - New rulebooks
+
+[This first set of rulebooks--the event-handling rulebooks--are now deprecated in favor of the "glulx input handling rulebook".]
 The glulx timed activity rules is a rulebook.
 The glulx redrawing rules is a rulebook.
 The glulx arranging rules is a rulebook.
@@ -19,13 +34,30 @@ The glulx resetting-streams rules is a rulebook.
 The glulx resetting-filerefs rules is a rulebook.
 The glulx object-updating rules is a rulebook.
 
+
+Section - Global variables
+
 Current glulx rock is a number that varies.
 Current glulx rock-ref is a number that varies.
 
-Glulx replacement command is some indexed text that varies. 
+Glulx replacement command is some indexed text that varies.
+
+Library input context is a number variable. [This describes the event context in which input was received, e.g. whether the Inform library was awaiting line input or char input. If 0, the library was awaiting line input, if 0, char input. This is not as useful as an event-typed value would be; with such a value, we could detect any input context--e.g., we are waiting for hyperlink input.]
+
+
+Section - Gestalts
+
+To decide whether glulx character input is supported:
+	(- ( glk_gestalt(gestalt_CharInput, 0) ) -)
 
 To decide whether glulx mouse input is supported:
-	(- ( glk_gestalt(gestalt_MouseInput, 0) ) -)
+	(- ( glk_gestalt(gestalt_MouseInput, winType_AllTypes) ) -)
+
+To decide whether glulx graphic-window mouse input is supported:
+	(- ( glk_gestalt(gestalt_MouseInput, winType_Graphics) ) -)
+
+To decide whether glulx text-grid mouse input is supported:
+	(- ( glk_gestalt(gestalt_MouseInput, winType_TextGrid) ) -)
 
 To decide whether glulx timekeeping is supported:
 	(- ( glk_gestalt(gestalt_Timer, 0) ) -)
@@ -58,8 +90,10 @@ To decide whether glulx hyperlinks are supported:
 	(- ( glk_gestalt(gestalt_Hyperlinks, 0) ) -)
 
 
-Include (-
+Section - IdentifyGlkObject routine
 
+
+Include (-
 
    [ IdentifyGlkObject phase type ref rock;
       if (phase == 0) { ! Zero out references to our objects.
@@ -86,49 +120,122 @@ Include (-
 
    ];
 
+-) before "Glulx.i6t".
+
+
+Section - Event types
+
+A g-event is a kind of value. The g-events are timer-event, char-event, line-event, mouse-event, arrange-event, redraw-event, sound-notify-event, and hyperlink-event.
+
+Definition: A g-event is independent of the player if it is timer-event or it is sound-notify-event or it is arrange-event or it is redraw-event.
+
+Definition: A g-event is dependent on the player if it is not independent of the player.
+
+To decide which g-event is null-event: (- 0 -)
+
+
+Section - Wrappers for event structure, return values, etc
+
+To wait for glk input:
+	(- glk_select(gg_event); -)
+
+To decide whether the current input context is line input:
+	if the library input context is 0, decide yes;
+	decide no.
+
+To decide whether the current input context is char/character input:
+	if the library input context is 1, decide yes;
+	decide no.
+	
+To decide which g-event is the current glk event:
+	(- gg_event-->0 -)
+	
+To decide what number is the window of the current glk event:
+	(- gg_event-->1 -)
+	
+To decide what number is the character code returned:
+	(- gg_event-->2 -)
+
+To return input replacement:
+	(- return 2; -)
+
+To return input continuation:
+	(- return -1; -)
+
+
+Section - Event Handling
+[This is an I7 version of the event handling that was included in the I6 HandleGlkEvent routine in previous versions of Glulx Entry Points, with minor changes to allow any event type to provide a replacement command. Converted to I7 code in version 10.]
+
+To decide what number is the value returned by glk event handling (this is the handle glk event rule):
+	now glulx replacement command is "";
+	follow the glulx input handling rules for the current glk event;
+	if the outcome of the rulebook is the replace player input outcome:
+		return input replacement;
+	if the outcome of the rulebook is the require input to continue outcome:
+		return input continuation;
+	follow the command-counting rules;
+	if the rule succeeded:
+		follow the input-cancelling rules;
+		follow the command-showing rules;
+		follow the command-pasting rules;
+		if the [command-pasting] rule succeeded:
+			return input replacement.
+
+
+Section - HandleGlkEvent routine
+
+Include (- 
 
   [ HandleGlkEvent ev context abortres newcmd cmdlen  ;
-      context = 0; ! suppress ignored warning
-      switch (ev-->0) {
-	evtype_Redraw:
-		if (FollowRulebook( (+glulx redrawing rules+) ) && RulebookSucceeded()) { rtrue; }
-
-	evtype_Arrange:
-		if (FollowRulebook( (+glulx arranging rules+) ) && RulebookSucceeded()) { rtrue; }
-
-	evtype_Timer:
-		if (FollowRulebook( (+glulx timed activity rules+) ) && RulebookSucceeded()) { rtrue; }
-
-	evtype_SoundNotify:
-		if (FollowRulebook( (+glulx sound notification rules+) ) && RulebookSucceeded()) { rtrue; }
-
-	evtype_Hyperlink: 
-		FollowRulebook( (+glulx hyperlink rules+) );
-		if ( FollowRulebook( (+command-counting rules +) ) && RulebookSucceeded())
-		{ 
-			FollowRulebook( (+command-showing rules+) );
-			if ( FollowRulebook( (+command-pasting rules+) ) ) 	return 2;
-		} 
-	
-	evtype_CharInput:
-		if (FollowRulebook( (+glulx character input rules+) ) && RulebookSucceeded()) { rtrue; }
-
-	evtype_LineInput:
-		if (FollowRulebook( (+glulx line input rules+) ) && RulebookSucceeded()) { return 2; }
-
-	evtype_MouseInput:
-		FollowRulebook( (+glulx mouse input rules+) );
-		if ( FollowRulebook( (+command-counting rules +) ) && RulebookSucceeded())
-		{ 
-			FollowRulebook( (+command-showing rules+) );
-			if ( FollowRulebook( (+command-pasting rules+) ) ) 	return 2;
-		}  
-
-	}
-
-   ];
+      (+ library input context +) = context;
+      return (+ value returned by glk event handling +) ;
+  ];
 
 -) before "Glulx.i6t".
+
+
+Section - Useful function wrappers
+
+To update the status line:
+	(- DrawStatusLine(); -)
+
+To print prompt:
+	(- PrintPrompt(); -)
+
+
+Section - The glulx input handling rulebook
+[These rules route to the ]
+
+The glulx input handling rules are a g-event based rulebook. The glulx input handling rules have outcomes replace player input (success) and require input to continue (success).
+
+Last glulx input handling rule for a timer-event when the direct event handling option is not active (this is the redirect to GEP timed activity rule):
+	abide by the glulx timed activity rules.
+
+Last glulx input handling rule for a char-event when the direct event handling option is not active (this is the redirect to GEP character input rule):
+	abide by the glulx character input rules.
+
+Last glulx input handling rule for a line-event when the direct event handling option is not active (this is the redirect to GEP line input rule):
+	follow the glulx line input rules;
+	if the rule succeeded:
+		replace player input.
+
+Last glulx input handling rule for a mouse-event when the direct event handling option is not active (this is the redirect to GEP mouse input rule):
+	abide by the glulx mouse input rules.
+
+Last glulx input handling rule for an arrange-event when the direct event handling option is not active (this is the redirect to GEP arranging rule):
+	abide by the glulx arranging rules.
+
+Last glulx input handling rule for a redraw-event when the direct event handling option is not active (this is the redirect to GEP redrawing rule):
+	abide by the glulx redrawing rules.
+
+Last glulx input handling rule for a sound-notify-event when the direct event handling option is not active (this is the redirect to GEP sound notification rule):
+	abide by the glulx sound notification rules.
+
+Last glulx input handling rule for a hyperlink-event when the direct event handling option is not active (this is the redirect to GEP hyperlink rule):
+	abide by the glulx hyperlink rules.
+
+
+Section - Command-counting rules
 
 The command-counting rules are a rulebook.
 
@@ -136,6 +243,23 @@ A command-counting rule (this is the ordinary checking for content rule):
 	if the number of characters in the glulx replacement command is 0, rule fails;
 	rule succeeds.
 
+
+Section - Input-cancelling rules
+	
+The input-cancelling rules are a rulebook.
+
+An input-cancelling rule (this is the cancelling input in the main window rule):
+	cancel line input in the main window;
+	cancel character input in the main window;
+	
+To cancel line input in the/-- main window:
+	(- glk_cancel_line_event(gg_mainwin, GLK_NULL); -)
+	
+To cancel character input in the/-- main window:
+	(- glk_cancel_char_event(gg_mainwin); -)
+
+
+Section - Command showing rules
 
 The command-showing rules are a rulebook.
 
@@ -148,51 +272,14 @@ To say input-style-for-Glulx:
 	(- glk_set_style(style_Input); -)
  
 
+Section - Command pasting rules
+
 The command-pasting rules are a rulebook. 
 
 A command-pasting rule (this is the glue replacement command into parse buffer rule): 
 	change the text of the player's command to the Glulx replacement command;
 	rule succeeds.
 
+
+
 Glulx Entry Points ends here.
-
----- Documentation ----
-
-Glulx allows the author to set responses to certain events:
-
-	Timer       - event repeated at fixed intervals
-	CharInput   - keystroke input in a window
-	LineInput   - full line of input in a window
-	MouseInput  - mouse input in a window
-	Arrange     - some windows sizes have changed
-	Redraw      - graphic windows need redrawing
-	SoundNotify - sound finished playing
-	Hyperlink   - selection of a hyperlink in a window
-
-Glulx Entry Points provides a set of rulebooks so that the author can add responses to these events without himself having to include any Inform 6 code. These are
-
-	The glulx timed activity rules is a rulebook.
-	The glulx redrawing rules is a rulebook.
-	The glulx arranging rules is a rulebook.
-	The glulx mouse input rules is a rulebook.
-	The glulx character input rules is a rulebook.
-	The glulx line input rules is a rulebook.
-	The glulx hyperlink rules is a rulebook.
-
-One of the things we may want to do -- especially with mouse input or hyperlinks -- is generate a command for the player. To do this, we set the value of Glulx replacement command to whatever string of text we want to turn into the player's command. If we do this, Inform will treat whatever command we issued in "Glulx replacement command" as though the player had typed it at the command prompt. The extension Basic Hyperlinks builds on this infrastructure and provides an example of how to make use of these features. 
-
-Because the Glulx replacement command is indexed text, it is possible to build on to the string automatically, if for some reason we need to auto-generate our recommended commands. 
-
-We also have a series of rulebooks for handling the stages of IdentifyGlkObject:
-	
-	The glulx zeroing-reference rules is a rulebook.
-	The glulx resetting-windows rules is a rulebook.
-	The glulx resetting-streams rules is a rulebook.
-	The glulx resetting-filerefs rules is a rulebook.
-	The glulx object-updating rules is a rulebook.
-
-Examples of the use of these can be seen in the extension Simple Graphics Windows.
-
-Please note that this extension is provided as a framework and as a basis for other extensions, but that currently Inform is not designed to support sound output properly.
-
-Thanks to Eliuk Blau and Jon Ingold for pointing out some bugs in version 5.

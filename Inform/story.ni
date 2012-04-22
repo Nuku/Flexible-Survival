@@ -49,6 +49,26 @@ title	description
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 
+To get an input:
+	(-VM_ReadKeyboard(buffer, parse);-)
+
+
+[
+To decide whether player consents:
+	say "[link]yes[end link] or [link]no[end link][line break]";
+	While 1 is 1:
+		get an input;
+		if the player's command matches "yes":
+			decide on true;
+		if the player's command matches "no":
+			decide on false;
+		if the player's command matches "y":
+			decide on true;
+		if the player's command matches "n":
+			decide on false;
+		say "Please choose yes or no. >";
+] [ This is commented out until Quixe bug is fixed.]
+
 Book 1 - Variable Definitions
 
 The file of flexiblestory is called "flexible1".
@@ -3177,7 +3197,7 @@ instead of examining a person(called x):
 	otherwise:
 		say "[The description of x][line break]";
 		if the number of entries in the conversation of x is greater than 0:
-			say "Possible Action: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][line break]";
+			say "Possible Action: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][end link][line break]";
 	
 Showstatting is an action applying to nothing.
 
