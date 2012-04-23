@@ -43,9 +43,9 @@ instead of conversing the Boris:
 	if boristalk is 1:
 		say "[one of]'Back again? don't say I didn't warn you.'[or]Seeming startled out of some inner fantasy, Boris looks around for a second before his eyes manage to focus on you, 'Hey kid, you seen an evil antelope go by here? Name of Arthur?'[or]'Heeey there! I'm Boris the lion! How can I help you today!'[or]'Hey there and welcome to the fair, please enjoy your stay with us.' he says absentmindedly.[or]'There's  poachers in the pride-lands again!'[or]'Strangely enough, it's cooler out here in fur then it was when it was a damn suit'[or]'I knew I should have quit this job last month when I had the chance....'[or]'Watch out for the stuffed prizes, well unless you have some strange fantasy about being a plush toy,' Boris warns, 'If you do though... well you came to the right place,'[or]'You know, it's funny,' Boris says with a thoughtful expression 'I can't really remember the last time the fair was this busy.'[or]'There's plenty of food and stuff lying around in the fair' Boris comments, waving a half eaten hot dog at you, 'Just stay away from the cotton candy if you know what's good for you.'[or]'If you find a way out of this place, mind letting me know?' Boris says with a sigh, 'Got to be plenty of places that could use a new mascot out there.'[or] 'Pride life is the best!' Boris exclaims, before catching himself and sighing.[or]'Suffering Savannah!'[or]'Man I wish someone had been wearing the Christy the Lioness suit the other day...' he mutters to himself, before blushing and looking embarrassed.[or]'You aren't a poacher are you? I hate poachers' Boris says with a growl.[at random]";
 	if boristalk is 2:
-		say "'Any luck with helping me out with my little, 'problem'?' Boris asks you hopefully";
+		say "'Any luck with helping me out with my little [']problem[']?' Boris asks you hopefully.";
 	if boristalk is 3:
-		say "'You are definitely the best friend ever, I can't believe how much better I feel now that you helped me out, if I can ever do anything to help you out you just let me know!' The happy lion says with a smile on his muzzle'";
+		say "'You are definitely the best friend ever, I can't believe how much better I feel now that you helped me out, if I can ever do anything to help you out you just let me know!' The happy lion says with a smile on his muzzle.";
 
 
 

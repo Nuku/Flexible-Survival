@@ -91,7 +91,7 @@ every turn (This is the check heat rule): [ May need to change this so that it o
 					now inheat is False;
 			else:
 				if animal heat is True:
-					say "As your body shifts you feel a cool sensation deep within, you will no longer be at the mercy of an animal heat anymore";
+					say "As your body shifts you feel a cool sensation deep within, you will no longer be at the mercy of an animal heat anymore.";
 					now turns in heat is 0;
 					now animal heat is False;
 					now inheat is False;
