@@ -137,11 +137,11 @@ to say domvictory:
 					
 to say domdef:
 	if massdomfightwin is 1:
-		say "exhausted the dominator falls to the ground unconscious";
+		say "exhausted the dominator falls to the ground unconscious.";
 	otherwise if slutmaster is greater than 0:
-		say "Feeling its masters presence, the [slutname] salutes to you before walking off to spread you influence further[line break]";
+		say "Feeling its masters presence, the [slutname] salutes to you before walking off to spread your influence further.";
 	otherwise:	
-		say "The [slutname] suddenly stops and pats you on the back saying 'good fight, my master will be watching you', before he walks off grinning[line break] ";
+		say "The [slutname] suddenly stops and pats you on the back saying 'Good fight, my master will be watching you', before he walks off grinning.";
 		
 					
 Section 2 - Monster Insertion
