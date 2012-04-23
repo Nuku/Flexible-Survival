@@ -49,24 +49,52 @@ title	description
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 
+Include (-
+
+[ YesOrNo i j;
+	PrintText((+ yes or no message +));
+	for (::) {
+	#Ifdef TARGET_ZCODE;
+	      if (location == nothing || parent(player) == nothing) read buffer parse;
+	      else read buffer parse DrawStatusLine;
+	      j = parse->1;
+	      #Ifnot; ! TARGET_GLULX;
+	      KeyboardPrimitive(buffer, parse);
+	      j = parse-->0;
+	      #Endif; ! TARGET_
+	      if (j) { ! at least one word entered
+			i = parse-->1;
+			if (i == YES1__WD or YES2__WD or YES3__WD) rtrue;
+			if (i == NO1__WD or NO2__WD or NO3__WD) rfalse;
+	      }
+	      PrintText((+ yes or no message +));
+	}
+];
+
+-) instead of "Yes/No Questions" in "Parser.i6t".
+
+The yes or no message is a text that varies. The yes or no message is "[link]yes[end link] or [link]no[end link]> [run paragraph on]".
+
 To get an input:
 	(-VM_ReadKeyboard(buffer, parse);-)
 
 
 
-To decide whether player consents:
+[To decide whether player consents:
 	say "[link]yes[end link] or [link]no[end link]>[line break][run paragraph on]";
 	While 1 is 1:
 		get an input;
-		if the player's command matches "yes":
+		say "Your command is: [player's command].";
+		if the player's command in lower case matches the text "yes":
 			decide on true;
-		if the player's command matches "no":
+		if the player's command in lower case matches the text "no":
 			decide on false;
-		if the player's command matches "y":
+		if the player's command in lower case matches the text "y":
 			decide on true;
-		if the player's command matches "n":
+		if the player's command in lower case matches the text "n":
 			decide on false;
 		say "[link]yes[end link] or [link]no[end link]>[line break][run paragraph on]";
+]
 
 Book 1 - Variable Definitions
 
@@ -4559,6 +4587,8 @@ When play begins:
 	carry out the displaying activity;
 	repeat with x running through featsets:
 		now x is a part of the player;
+	say "Select your first, free, feat, by clicking one of the below:[line break]";
+	featget;
 	funfeatget;
 	clear the screen;
 	if scenario is "Rescuer Stranded":
@@ -4605,10 +4635,5 @@ When play begins:
 	wait for any key;
 	say "Welcome to...";
 	wait for any key;
-	firstfeat rule in 1 turn from now;
-	
-This is the firstfeat rule:
-	say "Select your first, free, feat, by clicking one of the below:[line break]";
-	featget;
 
 

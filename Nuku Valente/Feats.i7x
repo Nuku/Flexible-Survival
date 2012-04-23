@@ -50,7 +50,23 @@ Featqualified is usually 0.
 		now featqualified is 1;
 		repeat with y running from 1 to number of filled rows in table of gainable feats:
 			choose row y from the table of gainable feats;
-			say "[link][title entry][as]featgrab [title entry][end link] ";
+			say "[link][title entry][end link] ";
+		say "[line break]";
+		while 1 is 1:
+			say "Type the name of the feat you want> [run paragraph on]";
+			get an input;
+			let q be the player's command;
+			say "Q is [q].";
+			let found be 0;
+			repeat with y running from 1 to number of filled rows in table of gainable feats:
+				choose row y from the table of gainable feats;
+				if q in lower case matches the text title entry in lower case:
+					now current menu selection is y;
+					follow the gainfeat rule;
+					now found is 1;
+					break;
+			if featqualified is 0, break;
+			if found is 0, say "Invalid Feat";
 				
 featgrabbing is an action applying to one topic.
 
@@ -61,13 +77,7 @@ understand "featgrab [text]" as featgrabbing.
 		say "You are not ready to learn a new feat." instead;
 
 Carry out featgrabbing:
-	repeat with y running from 1 to number of filled rows in table of gainable feats:
-		choose row y from the table of gainable feats;
-		if the topic understood in lower case matches the text title entry in lower case:
-			now current menu selection is y;
-			follow the gainfeat rule;
-			stop the action;
-	say "Invalid Feat";
+	say "I think you are trying to grab the feat of [topic understood in lower case].";
 
 
 To FunFeatget:
