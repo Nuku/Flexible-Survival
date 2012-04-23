@@ -53,9 +53,9 @@ To get an input:
 	(-VM_ReadKeyboard(buffer, parse);-)
 
 
-[
+
 To decide whether player consents:
-	say "[link]yes[end link] or [link]no[end link][line break]";
+	say "[link]yes[end link] or [link]no[end link]>[line break][run paragraph on]";
 	While 1 is 1:
 		get an input;
 		if the player's command matches "yes":
@@ -66,8 +66,7 @@ To decide whether player consents:
 			decide on true;
 		if the player's command matches "n":
 			decide on false;
-		say "Please choose yes or no. >";
-] [ This is commented out until Quixe bug is fixed.]
+		say "[link]yes[end link] or [link]no[end link]>[line break][run paragraph on]";
 
 Book 1 - Variable Definitions
 
