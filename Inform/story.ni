@@ -205,9 +205,11 @@ The player is wearing a watch.
 The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.";
 
 instead of examining a grab object(called x):
-	say "[the desc corresponding to a object of  x in the table of game objects]";
+	say "[the desc corresponding to a object of x in the table of game objects]";
 	if "Weaponsmaster" is listed in feats of player and x is an armament:
 		say "  Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
+
+Does the player mean examining a situation: it is very unlikely.
 
 
 Book 2 - Places
@@ -2983,7 +2985,7 @@ This is the turnpass rule:
 	if corruption is greater than 0:
 		decrease the humanity of the player by corruption;
 		follow the brain descr rule;
-		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr].([humanity of the player]/100)[line break]";
+		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr] ([humanity of the player]/100)[line break]";
 		if humanity of the player is less than 50:
 			say "Maybe you should [bold type]use[roman type] that [bold type]journal[roman type] to help collect your thoughts.";
 	if child is not born and gestation of child is greater than 0:
@@ -3113,7 +3115,7 @@ This is the brain descr rule:
 	otherwise if libido of player is greater than 40:
 		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
 	otherwise if libido of player is greater than 20:
-		now lusting is " thoughts. You are riddled with occasionally dirty lapses";
+		now lusting is " thoughts. You are riddled with occasionally dirty lapses.";
 
 This is the breast descr rule:
 	if breast size of player is less than 1:
@@ -3197,8 +3199,12 @@ instead of examining a person(called x):
 	otherwise:
 		say "[The description of x][line break]";
 		if the number of entries in the conversation of x is greater than 0:
-			say "Possible Action: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][end link][line break]";
-	
+			say "Possible Actions: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][end link][line break]";
+		otherwise if x is companion of player:
+			say "Possible Actions: [link]smell[as]smell [x][end link], [link]dismiss[as]dismiss[end link][line break]";
+		otherwise:
+			say "Possible Action: [link]smell[as]smell [x][end link][line break]";
+
 Showstatting is an action applying to nothing.
 
 Understand "stat" as showstatting.
@@ -3285,7 +3291,7 @@ This is the self examine rule:
 					say "One is a pure blood [facename of child].";
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
-		say "Accompanying you, you have a level [level of companion of player] [companion of player]. [initial appearance of companion of player]";
+		say "Accompanying you, you have a level [level of companion of player] [link][companion of player][as]look [companion of player][end link]. [initial appearance of companion of player]";
 	now looknow is 0;
 	rule succeeds;
  
