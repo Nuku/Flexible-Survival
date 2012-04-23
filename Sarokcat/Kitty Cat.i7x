@@ -4,7 +4,7 @@ Kitty Cat by Sarokcat begins here.
 
 Section 1-house cat
 
-house cat is a pet. "The house cat is covered in soft calico fur, and seems to be happy enough to just follow you along and see what happens, and perhaps take care of any extra milk you might come across. It[apostrophe]s whiskers twitching as it scents the area for anything of interest.". house cat is a part of the player;
+house cat is a pet. The description of the house cat is "The house cat is covered in soft calico fur, and seems to be happy enough to just follow you along and see what happens, and perhaps take care of any extra milk you might come across. It[apostrophe]s whiskers twitching as it scents the area for anything of interest.". house cat is a part of the player;
 The weapon damage of house cat is 5;
 The level of house cat is 1;
 The Dexterity of house cat is 9;
@@ -29,7 +29,7 @@ Instead of resolving Lost house cat:
 				say "Having finished the milk, the cat looks up at you as if to see if you have any more moving a bit closer as it does so, cautiously you extend your hand to it, which it thoroughly sniffs with its soft nose before sneezing.  Apparently reaching some decision about you, the cat then walks right up to where you are sitting, and begins rubbing itself against your legs.  You begin stroking its fur as it does, and manage to get the worst of the dirt and grime off of it before it gets tired of being petted and begins to examine your pack for signs of more milk.  Stretching as you sit up, you are surprised when you look around and realize how much time has passed while you took care of the little cat.  Deciding you should be heading back, you realize after a few steps that you seem to have a feline following you, after thinking about it a second, you realize that the little cat probably wouldn[apostrophe]t last much longer out here on the streets alone, you let the little house cat follow you all the way back to the library.";
 				delete gryphon milk;
 				now house cat is tamed;
-				say "[bold type](The house cat is now tamed! You can make it your active pet by typing pet house cat. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
+				say "(The house cat is now tamed! You can make it your active pet by typing [bold type][link]pet house cat[as]pet house cat[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 				now Lost house cat is resolved;
 			otherwise:
 				say "Deciding to keep ahold of your hard earned supplies instead, you leave the cat alone and resolve not to stop by here again.";
