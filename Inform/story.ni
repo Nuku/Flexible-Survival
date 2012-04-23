@@ -1044,13 +1044,29 @@ does the player mean doing something with the medkit: it is very likely.
 
 carry out Inventorying:
 	sort invent of player;
+	let dseed be 0;
+	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
 	if the number of entries in invent of player is greater than 0:
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop[if the number of trader in the location of the player > 0 or ( Ronda is in the location of the player and dseed is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
 		let weight be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			if object entry is owned:
-				say "[name entry]";
+				say "[link][bracket][bold type]U[roman type][close bracket][as]use [name entry][end link]";
+				say " [link][bracket][bold type]L[roman type][close bracket][as]look [name entry][end link]";
+				say " [link][bracket][bold type]S[roman type][close bracket][as]smell [name entry][end link]";
+				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
+				if trade of object entry is "":
+					let notval be 0;
+					if Ronda is in the location of the player and name entry is "demon seed":
+						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Ronda[end link]";
+				otherwise if the number of trader in the location of the player is greater than 0:
+					let tradeguy be a random trader in the location of the player;
+					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
+				if object entry is armament and object entry is not improved and the number of smither in the location of the player is greater than 0:
+					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [name entry][end link]";
+				say " [name entry]";
 				if object entry is wielded and object entry is armament:
 					say "(wielded)";
 					if object entry is improved:
@@ -1060,19 +1076,10 @@ carry out Inventorying:
 				repeat with  y running through invent of player:
 					if y is name entry, increase number by 1;
 				say "[number]([weight entry times number] lbs)";
-				say " [link]Use[as]use [name entry][end link]";
-				say " [link]Look[as]look [name entry][end link]";
-				say " [link]Smell[as]smell [name entry][end link]";
-				say " [link]Drop[as]drop [name entry][end link]";
-				if trade of object entry is "":
-					let notval be 0;
-				otherwise if the number of trader in the location of the player is greater than 0:
-					let tradeguy be a random trader in the location of the player;
-					say " [link]Trade[as]give [name entry] to [tradeguy][end link]";
 				increase weight by weight entry times number;
 				say "[line break]";
-		if the player is overburdened, say "*OVERBURDENED*";
-		say "Total Weight: [weight]/[capacity of player] lbs";
+		if the player is overburdened, say "*OVERBURDENED* ";
+		say "Total Weight: [weight]/[capacity of player] lbs.";
 
 strongbacked is a number that varies.
 
@@ -1711,7 +1718,7 @@ Carry out trading:
 		if q matches the regular expression printed name of the noun, case insensitively:
 			remove entry number from invent of the player;
 			break;
-	
+
 instead of trading the demon seed when the current action involves the ronda:
 	say "Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
 	remove ronda from play;
@@ -3770,7 +3777,7 @@ instead of conversing Rod Mallrat:
 	otherwise:
 		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Watch out for those infected rats.   Dunno where they came from, but they're bad news.  The rats they get don't come back.'[or]'Sup?'[at random]";
 
-h Ronda Mallrat is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
+Ronda Mallrat is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
 The description of Ronda Mallrat is "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.".
 The conversation of Ronda is { "Hey there, sugar, you just call me Ronda.", "You meet Rod? He's my boy. You be nice to him, or I will be very... upset.", "Those clothes are out of date hon, you should update your wardrobe.", "Being a mall rat is way better than being a human, no offense or anything to humans.", "We can find anything we need here in the mall; it is our Eden." }.
 Ronda Mallrat is in Mall Atrium.
@@ -4608,7 +4615,7 @@ When play begins:
 	firstfeat rule in 1 turn from now;
 	
 This is the firstfeat rule:
-	say "Select your first, free, feat, by clicking one of the below:[line break]";
+	say "Select your first, free feat by clicking one of the below or typing 'featgrab <Exact Name>':[line break]";
 	featget;
 
 
