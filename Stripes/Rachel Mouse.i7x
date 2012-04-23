@@ -92,7 +92,7 @@ to say mouseapts:
 			say "     Rachel stares at your [companion of player], who had been hiding outside since you got here, and it slinks off.  She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
 		now the companion of the player is mouse girl;
-		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type]pet mouse girl[roman type].  You can see all the pets you have tamed with the [bold type]pet[roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type], but then the mouse collective will be tracking you again.)";
+		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type]pet mouse girl[roman type].  You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
 		increase score by 20;
 		wait for any key;
 

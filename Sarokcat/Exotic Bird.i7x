@@ -4,7 +4,7 @@ Exotic Bird by Sarokcat begins here.
 
 Section 1-Exotic Bird
 
-Exotic Bird is a pet. "This Exotic Bird is nice and happy now! You aren[apostrophe]t sure just what kind of exotic bird your new friend is, but it has brilliantly coloured feathers, and lovely plumage on the back of its head. The bird is only slightly larger then a parrot, but it seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time it is flying nearby.". Exotic Bird is a part of the player;
+Exotic Bird is a pet. The description of the exotic bird is "This Exotic Bird is nice and happy now! You aren[apostrophe]t sure just what kind of exotic bird your new friend is, but it has brilliantly coloured feathers, and lovely plumage on the back of its head. The bird is only slightly larger then a parrot, but it seems to have taken a liking to you, and will occasionally stop and rest on your shoulder, though the rest of the time it is flying nearby.". Exotic Bird is a part of the player;
 The weapon damage of Exotic Bird is 2;
 The level of Exotic Bird is 1;
 The Dexterity of Exotic Bird is 15;
@@ -29,7 +29,7 @@ Instead of resolving Scared bird:
 			say "Your honeyed words and sweet tones eventually manage to coax the scared bird down out of the tree, where you feed it a bit of food as it begins to get used to your presence.  Given a closer look you are impressed by the birds wonderfully bright feathers, but you still have no clue exactly what type of bird it is. Sighing you decide your knowledge of birds is just too insufficient for what is obviously a rare species of bird, and resolve to try to find out just what kind of bird it is if you ever manage to get out of this crazy city.  After several hours of coaxing and calming the bird, it seems quite happy to go along with you as you head back into the city, obviously happy not to be alone any longer.";
 			delete food;
 			now Exotic Bird is tamed;
-			say "[bold type](The Exotic Bird is now tamed! You can make it your active pet by typing pet Exotic Bird. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
+			say "(The exotic bird is now tamed! You can make it your active pet by typing [bold type][link]pet exotic bird[as]pet exotic bird[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 			now Scared bird is resolved;
 		otherwise:
 			say "Sadly the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occassionally letting out a soft piteous cry.  You obviously aren[apostrophe]t going to convince it to trust you right now, maybe you should try again later.";

@@ -232,8 +232,7 @@ An everyturn rule:
 		move Sven to dark basement;
 		move Svetlana to Porn Store;
 
-instead of going to Bunker while hp of Sven is 9:
-	now the player is in Bunker;
+after of going to Bunker while hp of Sven is 9:
 	now hp of Sven is 10;
 	say "     You return to find Candy snuggled up beside Sven on the kitty's bunk.  He is chatting with the [if lust of Sven is 1]baby blue[otherwise if lust of Sven is 2]golden[end if] snowmeow, tracing over his markings.  Waitaminit!  It seems that Sven's markings have become coloured and it's clearly somehow the pink raccoon's doing.  You stride over to them, not really upset with the change since you find it makes your pet even more lovely and unique, but wanting to confirm your suspicions.  Sven blushes behind his tail a little, but glances coyly up at you, giving you a flash of his now [if lust of Sven is 1]blue[otherwise if lust of Sven is 2]yellow[end if] cock poking from his sheath.";
 	say "     Candy, as brazen as ever, runs his paw through Sven's chestfur and smiles up at you.  'Sweet Sven and I were just getting better acquainted.  He's such a lovely kitty,' he churrs, scritching under Sven's chin, getting him to purr and relax further.  'I want to thank you so much for finding me such a beautiful playmate to keep me company while you're out.  And don't worry, I know he's your special kitty pet, so I'll keep good care of him for you.'  He traces over one of Sven's colourful rosettes again.  'He's much prettier with a bit of colour now, don't you think?'  You have to agree, both because it's true and to set your pet's mind at ease.";

@@ -4,7 +4,7 @@ Little Fox by Sarokcat begins here.
 
 Section 1-Little fox
 
-Little fox is a pet. "The little fox is so cute and friendly! It has a cute little fox face with eyes that shine with love as they stare at you. Its lithe and quick body is almost constantly in motion as it explores the world around you.". little fox is a part of the player;
+Little fox is a pet. The description of the little fox is "The little fox is so cute and friendly! It has a cute little fox face with eyes that shine with love as they stare at you. Its lithe and quick body is almost constantly in motion as it explores the world around you.". little fox is a part of the player;
 The weapon damage of little fox is 4;
 The level of little fox is 1;
 The Dexterity of little fox is 10;
@@ -24,10 +24,10 @@ Instead of resolving Abandoned Fox:
 			delete food;
 			say "unable to bear hearing the poor things crys going unanswered, you carefully kneel down and pull out some food(-1 food), cautiously at first, then with increasing enthusiasm the half starved fox cub tears at the food, ripping and playing with it until it is all gone.  You smile at the cute sight before standing up and getting ready to leave, though you haven't gone more then a few steps when you hear something behind you.  Turning you see the fox cub you helped is valiantly trying to keep up with you, its large canine eyes staring at you adoringly. Trying to shoo it back to the empty den seems pointless, and the cute little fox seems to have taken a strong fancy to you now, shrugging you give in and let it come with you.  The little fox cub bouncing along in your wake and occassionly darting off to pounce on and threaten one of the nearby leaves on the ground, it looks like you[apostrophe]ve acquired a little pet. As you head back to the park trail, you Make it a little nest in your backpack, making sure it will be comfortable while you travel. ";
 			now little fox is tamed;
-			say "[bold type](The little fox is now tamed! You can make it your active pet by typing pet little fox. You can see all the pets you have tamed with the pet command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
+			say "(The little fox is now tamed! You can make it your active pet by typing [bold type][link]pet little fox[as]pet little fox[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 			now Abandoned Fox is resolved;
 		otherwise:
-			say "hardening your heart to its plainitive cries, you move back from the abandoned fox den and leave nature to take its course.).";
+			say "Hardening your heart to its plainitive cries, you move back from the abandoned fox den and leave nature to take its course.";
 			now Abandoned Fox is resolved;
 	otherwise:
 		say "Worried that you might be walking into some kind of trap, you turn your back on the noise and continue your walk through the park.";
