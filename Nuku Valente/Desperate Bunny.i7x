@@ -287,8 +287,7 @@ An everyturn rule:
 			now hp of Sandra is 3;
 			increase score by 10;
 
-instead of going to Bunker while hp of Sandra is 2:
-	now the player is in Bunker;
+after going to Bunker while hp of Sandra is 2:
 	now hp of Sandra is 3;
 	say "     After entering the bunker and taking a look around, you spot Coleen resting with her head in Sandra's lap.  The bunny girl is stroking the husky gently and you smile.  It's good to see those two becoming more at ease.  It takes you a little bit to notice that they both seem particularly happy and that the scent of female husky and bunny arousal hang in the air.  And that's when it clicks that Sandra's blouse is open and her skirt is sitting beside her.  After being out and seeing all the wanton sex and nudity in the city, it took you a moment to notice what must have been going on while you were out.";
 	now lastColeenfucked is turns;
