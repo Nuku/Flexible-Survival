@@ -72,7 +72,7 @@ When Play begins:
 	now tail entry is "[peacocktail]";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]thin red[or]ondulated[or]avian-like[at random]";
 	now face change entry is "your entire head gets reshaped in the shape of a bird head."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your legs became bird-like, including a painful double joint, and your arms trasforms into wings. You feel really light... you can[apostrophe]t fly, though. "; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "your legs became bird-like, including a painful double joint, and your arms transform into wings. You feel really light... you can[apostrophe]t fly, though. "; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "lots of feather sprouts, until you are completely covered."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "[peacockasschange]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it becomes slim and ondulated. It retracts into a new, just formed, slit; your balls are permanently absorbed in your body, instead."; [ cock change text. format as "Your cock feels funny as (your text)" ]

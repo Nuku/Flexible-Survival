@@ -90,7 +90,7 @@ instead of resolving sword nest:
 	if the humanity of the player is less than 60: [falling to the nanites]
 		say "Your mind feels fuzzy, and you have a strange desire to roll in the muck. Do you submit?";
 		if the player consents:
-			say "You run and jump into the slimy muck, a sick splot sounding and echoeing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
+			say "You run and jump into the slimy muck, a sick splot sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
 			decrease the humanity of the player by 15;
 			say "[randominfect]";
 			say "[randominfect]";
@@ -128,7 +128,7 @@ instead of resolving sword nest:
 					say "You grab the slime in your hands and pour it over your head, and then grab some more, and think about what to do with it next.";
 					if the cunts of the player is 1:
 						say "You take your slime-filled hands and shove them up your waiting cunt, filling it with the sludge.";
-						say "You feel a palpatable wave of contentment from your lower belly.";
+						say "You feel a palpable wave of contentment from your lower belly.";
 						say "You then shove them up your rear, filling it as well.";
 					otherwise:
 						say "You decide to try and drink all of the slime you can, tasting its deliciously dirty flavor.";
@@ -185,7 +185,7 @@ numwater is a number that varies;
 gotwhip is a number that varies.
 
 instead of resolving Destroyed bushes:
-	say "You come across a circle of bushes crushed flat against the ground, large pools of cum and  juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that soemone was overtaken by one of the equines.";
+	say "You come across a circle of bushes crushed flat against the ground, large pools of cum and  juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
 	if the humanity of the player is less than 50:
 		say "Do you want to drink from the puddles?";
 		if the player consents:
