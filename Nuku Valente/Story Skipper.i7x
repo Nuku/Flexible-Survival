@@ -223,12 +223,13 @@ Carry out reciting:
 			-- 45:
 				if the player's command matches "[number]":
 					now gryphoncomforted is the number understood;
+					now lonely gryphoness is unresolved;
+					now Gryphoness Nest is unresolved;
 					if gryphoncomforted is greater than 0:
 						now lonely gryphoness is resolved;
-						now gryphoness nest is resolved;
-					otherwise:
-						now Lonely Gryphoness is unresolved;
-						now Gryphoness Nest is unresolved;
+					if gryphoncomforted is greater than 2:
+						now gryphoness is tamed;
+						now Gryphoness Nest is resolved;
 			-- 46:
 				if the player's command matches "[number]":
 					now shiftable is the number understood;
@@ -502,7 +503,7 @@ Carry out reciting:
 				break;
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
-	if mattcollection is 1, add "infection monitor" to invent of player;
+	if mattcollection is 1 and "infection monitor" is not listed in invent of player, add "infection monitor" to invent of player;
 	if hp of doctor matt is 104, move Sally to bunker;
 	if hp of doctor matt is not 104, remove Sally from play;
 	now Sven is in Sven's Place;

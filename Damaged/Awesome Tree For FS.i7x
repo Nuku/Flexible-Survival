@@ -68,7 +68,7 @@ to say awesome defeat:
 	
 to say awesome vict:
 	say "You proudly look up at the tree, standing still, and curse under your breath. All of a sudden, a crack sounds in the canopy above you and a single fruit drops down and smashes against the back of your head, knocking you out. The juice seeps down over your skin and almost seems to be absorbed by your body.[infect]";
-	say "As you wake up, you look arouand and wonder how the tree got away. Guess thats just another awesome mystery for this messed up new world.";
+	say "As you wake up, you look around and wonder how the tree got away. Guess that's just another awesome mystery for this messed up new world.";
 		
 to say awesome desc:
 	now Awesome_boredom is 0;

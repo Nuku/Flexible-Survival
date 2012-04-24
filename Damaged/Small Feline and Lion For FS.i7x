@@ -18,7 +18,7 @@ to say cat att:
 	say "[one of]The Small Felinoid launches an attack, claws and teeth flying![or]The diminutive lioness attacks you, tripping you down and raking at your groin with her razor sharp claws.[at random]";
 
 to say lion att:
-	say "[one of]The big cat-man roars and lashes out with talon like retractable claws![or]In a show of viscousness the lion man leaps at your neck, clamping down his jaw. Only by poking at his eyes do you force him to let go.[at random]";
+	say "[one of]The big cat-man roars and lashes out with talon like retractable claws![or]In a show of viciousness the lion man leaps at your neck, clamping down his jaw. Only by poking at his eyes do you force him to let go.[at random]";
 
 to say cat def:
 	if libido of player > 33:

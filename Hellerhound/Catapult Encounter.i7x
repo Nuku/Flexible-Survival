@@ -54,7 +54,7 @@ instead of resolving a loaded catapult:
 		if the player consents:
 			say "You begin to wriggle into the tangle of ropes.";
 			if a random number between one and catadiff is greater than the dexterity of the player:[the catapult fires]
-				say "You accidentaly bump a trigger rope, and the contraption begins to swing. You get out of there fast. [catapult fire]";
+				say "You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast. [catapult fire]";
 			otherwise:
 				say "You manage to get the resources without touching the ropes.";
 				repeat with T running from one to three:

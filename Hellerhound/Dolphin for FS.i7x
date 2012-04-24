@@ -28,12 +28,12 @@ to say dolphin attack:
 			say "She seems put of by your denial, and screams 'you will be brought down'";
 			decrease dolphinwantmate by 1;
 	otherwise if dolphinwantmate is -2:
-		say "She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard agaist you back. she then bends back, and slams forward, ripping open your ass. You pass out from the pain.";
-		say "When you are conscious again, it seems the nanites have repaired the damage to yur body, but there is still piss floating out of your ass, along with clumps of blood. You aren't feeling well.";
+		say "She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against you back. she then bends back, and slams forward, ripping open your ass. You pass out from the pain.";
+		say "When you are conscious again, it seems the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You aren't feeling well.";
 		now the hp of the player is -40;
 		say "You can't be her mate any longer, it looks like she is still too pissed to even think in that direction.";
 	wait for any key;
-	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her fliiperlike hands.";
+	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
 	infect "hermaphrodite dolphin";
 	wait for any key;
 	now dolphinconsent is 0;
@@ -68,7 +68,7 @@ to say dolphin fuck:
 		otherwise:
 			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you.";
 		if the cunt length of the player is less than 10:[wont go in far, must extend you]
-			say "She slams her cock into you with a cry of sucess, by it is cut off as she realizes she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles, and decides. She tells you 'I am going to have to lengthen you cunt, small one. It may hurt'";
+			say "She slams her cock into you with a cry of success, by it is cut off as she realizes she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles, and decides. She tells you 'I am going to have to lengthen you cunt, small one. It may hurt'";
 			say "She begins to slam her cock into you, and grunts when it smashes open your cervix.";
 			if the humanity of the player is less than 60:
 				say "You wince and hope your infected body can repair the damage she, no it, is doing so you may have children.";
@@ -76,7 +76,7 @@ to say dolphin fuck:
 				say "You wince and hope the damage can be fixed if you wish not to miscarry.";
 			increase the cunt length of the player by 3;
 		if the cunt length of the player is less than 24:[wont go in far enough, will pry open womb for more space]
-			say "She then slams her overley long member into the wall of your womb, stretching your womb and pussy as deep as they can go, and further. The pain mixes with the pleasure of her inside of you, bringing you to climax as she keeps fucking.";
+			say "She then slams her overly long member into the wall of your womb, stretching your womb and pussy as deep as they can go, and further. The pain mixes with the pleasure of her inside of you, bringing you to climax as she keeps fucking.";
 			increase the cunt length of the player by 3;
 			if the cunt length of the player is less than 10:
 				say "She then pulls out of you, and you look at her, disappointed. you were halfway to another orgasm. ";
@@ -116,7 +116,7 @@ to say dolphin strike:
 		say "She puts her feet together into what resembles a dolphins tail, and whacks you over the head.";
 		now dolphindmg is 18;
 	otherwise if n is 3:
-		say "She lets off a really loud pulse of high pitched clicks, which paralize you and leave her open to her next attack.";
+		say "She lets off a really loud pulse of high pitched clicks, which paralyze you and leave her open to her next attack.";
 		say "[dolphin strike]";
 	otherwise if n is 4:
 		say "She takes her fist and punches you with her immense strength.";
@@ -170,7 +170,7 @@ When Play begins:
 	now body change entry is "you swell with the appearance of muscles under your flesh, and a nice-looking dorsal fin sprouts out of your back"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "your flesh becomes tougher and thicker, yet somehow still supple and soft as blubber forms and it turns gray and silver"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "your legs feel odd as they seem to change in shape. Your ass pinches with pain as it extends into what looks like the top half of a dolphin tail. The rest appears to be your legs. You could place all three of your appendages together to make what looks to be a dolphins tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it twists and writhes in a strange dance, growing longer and pinker as the top tapers off. Your balls grow as they are absorbed into your body, and a slit forms as your cock withdraws as well. Your anus also moves forward as your ass cheeks dissapear, forming a second slit below the first"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it twists and writhes in a strange dance, growing longer and pinker as the top tapers off. Your balls grow as they are absorbed into your body, and a slit forms as your cock withdraws as well. Your anus also moves forward as your ass cheeks disappear, forming a second slit below the first"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 23;
 	now dex entry is 26;
 	now sta entry is 24;					

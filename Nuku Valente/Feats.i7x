@@ -182,8 +182,9 @@ instead of addfeating the basic feats:
 		addfeat "Rapid Healing" with "Increased healing during recovery time and minor increase to healing items.";
 		if stamina of player > 16 and "Rapid Healing" is listed in feats of player:
 			addfeat "Regeneration" with "Further increased healing based on level and from healing items.";
-	if stamina of player is greater than 14:
+	if stamina of player is greater than 14 and "Automatic Survival" is not listed in feats of player:
 		addfeat "Spartan Diet" with "You don't need 2 liters of water and great feasts to keep you going! You become thirsty and hungry slower.";
+	if stamina of player is greater than 14:
 		addfeat "Iron Stomach" with "Your belly has nano resistance! Eating or drinking infectious items fails to change you.";
 		addfeat "Toughened" with "You take less damage than others(-20% damage)";
 	if intelligence of player is greater than 14:

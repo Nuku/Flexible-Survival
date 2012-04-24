@@ -47,6 +47,7 @@ Section 2 - Demonstration Example
 
 Testerbot is a person.
 The description of Testerbot is "[testerbotdesc]";
+The conversation of Testerbot is { "Disgusting!" }.
 lastfuck of Testerbot is normally 555.
 
 to say testerbotdesc:				[Description]
