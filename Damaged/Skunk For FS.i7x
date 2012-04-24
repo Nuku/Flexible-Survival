@@ -58,7 +58,7 @@ to say skunkg vict:
 to say skunkg defeat:
 	now skunkfight is 1;
 	if a random number from 1 to 100 is greater than 2:
-		say "The skunk girl looks up at you, smiling even as her body seems to turn to liquid, 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, disolving completely.";
+		say "The skunk girl looks up at you, smiling even as her body seems to turn to liquid, 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, dissolving completely.";
 	otherwise:
 		say "The skunk girl turns to run from you and you relax thinking the fight over, suddenly you realise your error as one last gob of oily musk hits you.  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
 
@@ -78,7 +78,7 @@ to say skunk_vict:
 
 to say skunk_attack:
 	if Skunk_type is 1:
-		say "[one of]Runs up, bringing her feet forward in a flying kick.[or]Leaps in and bites at your arm.[or]Claws at you woth her slender paws.[at random]";
+		say "[one of]Runs up, bringing her feet forward in a flying kick.[or]Leaps in and bites at your arm.[or]Claws at you with her slender paws.[at random]";
 	otherwise:
 		say "[one of]Leaps, batting you aside.[or]Leaps in and bites at your arm.[or]Claws at you viciously.[at random]";
 

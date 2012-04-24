@@ -25,7 +25,7 @@ instead of resolving a gryphons plot:
 						add "food" to the invent of the player;
 						add "food" to the invent of the player;
 					otherwise:
-						say "You fly into the air on your wings, screeching a challenge at the gryphons. One, flying low, is startled and crahses into a nearby building, spraying milk all over. The other two come on to attack.";
+						say "You fly into the air on your wings, screeching a challenge at the gryphons. One, flying low, is startled and crashes into a nearby building, spraying milk all over. The other two come on to attack.";
 						challenge "Hermaphrodite Gryphon";
 						say "The next attacks.";
 						challenge "Hermaphrodite Gryphon";
@@ -52,7 +52,7 @@ instead of resolving a gryphons plot:
 							say "You leave the soldiers in a state of sexual frenzy, fucking and being fucked by the three gryphons.";
 							now milsave is -1;
 					otherwise:
-						say "As you refuse to act, the gryphons pound the soldiers, whipping their guns away and shredding thier clothes. Almost immediately the gryphons begin to feed the soldiers.";
+						say "As you refuse to act, the gryphons pound the soldiers, whipping their guns away and shredding their clothes. Almost immediately the gryphons begin to feed the soldiers.";
 						say "Do you join the soldiers in their submission?";
 						if the player consents:
 							say "You run towards the soldiers, removing any clothing, and jumping right in.";
@@ -60,7 +60,7 @@ instead of resolving a gryphons plot:
 							say "[gryphon fuck]";
 							say "[gryphon fuck]";
 							say "[gryphon fuck]";
-							say "The orgie lasted a long time, and by the time you wake, the others are long gone. Trails of cum lead off.";
+							say "The orgy lasted a long time, and by the time you wake, the others are long gone. Trails of cum lead off.";
 							say "Do you gather some of the remained fluids?";
 							if the player consents:
 								say "You manage to get several bottles of gryphon milk out of the carnage.";
