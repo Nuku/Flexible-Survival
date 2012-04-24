@@ -55,7 +55,7 @@ Featqualified is usually 0.
 		while 1 is 1:
 			say "Type the name of the feat you want> [run paragraph on]";
 			get an input;
-			let q be the player's command;
+			let q be playerinput;
 			say "Q is [q].";
 			let found be 0;
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
@@ -66,7 +66,7 @@ Featqualified is usually 0.
 					now found is 1;
 					break;
 			if featqualified is 0, break;
-			if found is 0, say "Invalid Feat";
+			if found is 0, say "Invalid Feat.";
 				
 featgrabbing is an action applying to one topic.
 
