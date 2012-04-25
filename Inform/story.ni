@@ -2508,6 +2508,21 @@ To Combat Menu:
 		repeat through table of basic combat:
 			say "[link][title entry][end link][line break][run paragraph on]";
 		get typed command as playerinput;
+		if playerinput in lower case exactly matches the text "a":
+			follow the player attack rule;
+			next;
+		if playerinput in lower case exactly matches the text "i":
+			follow the combat item rule;
+			next;
+		if playerinput in lower case exactly matches the text "p":
+			follow the combat pass rule;
+			next;
+		if playerinput in lower case exactly matches the text "s":
+			follow the submit rule;
+			next;
+		if playerinput in lower case exactly matches the text "f":
+			follow the flee rule;
+			next;
 		if playerinput in lower case matches the text "attack":
 			follow the player attack rule;
 			next;
