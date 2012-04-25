@@ -8,7 +8,7 @@ Gill Fruits Tree is a situation.
 the sarea of Gill Fruits Tree is "Beach";
 
 Instead of resolving a Gill Fruits Tree:
-	say "You come across an odd tree, half in and half out of the water, with slitted fruits on the branches. This must be the elusie gill fruit tree.";
+	say "You come across an odd tree, half in and half out of the water, with slitted fruits on the branches. This must be the elusive gill fruit tree.";
 	say "Do you wish to pick some?";
 	if the player consents:
 		add "Gill Fruit" to the invent of the player;

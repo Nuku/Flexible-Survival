@@ -9,7 +9,7 @@ The weapon damage of Exotic Bird is 2;
 The level of Exotic Bird is 1;
 The Dexterity of Exotic Bird is 15;
 The summondesc of Exotic Bird is "Hearing you whistle, the exotic bird flaps over and takes up position overhead, keeping an eye out for any threats.";
-The assault of Exotic Bird is "[one of]The Exotic Bird dive bombs your opponent![or]the exotic bird flaps its wings in your adversarys face, blinding it![or]diving down to engage, your bird friend scratches at your opponent with its talons![or]Your oppenent jumps and twists around in pain with an exotic bird pecking at its scalp.[or] taking advantage of your foes momentary distraction, your pet bird manages to land a few quick attacks.[or] Your bird friend takes a moment to relieve itself, fortuitously right on your opponent.[at random]";
+The assault of Exotic Bird is "[one of]The Exotic Bird dive bombs your opponent![or]the exotic bird flaps its wings in your adversary's face, blinding it![or]diving down to engage, your bird friend scratches at your opponent with its talons![or]Your opponent jumps and twists around in pain with an exotic bird pecking at its scalp.[or] taking advantage of your foes momentary distraction, your pet bird manages to land a few quick attacks.[or] Your bird friend takes a moment to relieve itself, fortuitously right on your opponent.[at random]";
 
 instead of sniffing Exotic Bird:
 	say "It smells like an exotic bird with a faint, tropical scent to it.";
@@ -29,10 +29,10 @@ Instead of resolving Scared bird:
 			say "Your honeyed words and sweet tones eventually manage to coax the scared bird down out of the tree, where you feed it a bit of food as it begins to get used to your presence.  Given a closer look you are impressed by the birds wonderfully bright feathers, but you still have no clue exactly what type of bird it is. Sighing you decide your knowledge of birds is just too insufficient for what is obviously a rare species of bird, and resolve to try to find out just what kind of bird it is if you ever manage to get out of this crazy city.  After several hours of coaxing and calming the bird, it seems quite happy to go along with you as you head back into the city, obviously happy not to be alone any longer.";
 			delete food;
 			now Exotic Bird is tamed;
-			say "(The exotic bird is now tamed! You can make it your active pet by typing [bold type][link]pet exotic bird[as]pet exotic bird[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+			say "(The exotic bird is now tamed! You can make it your active pet by typing [bold type][link]pet exotic bird[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 			now Scared bird is resolved;
 		otherwise:
-			say "Sadly the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occassionally letting out a soft piteous cry.  You obviously aren[apostrophe]t going to convince it to trust you right now, maybe you should try again later.";
+			say "Sadly the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry.  You obviously aren[apostrophe]t going to convince it to trust you right now, maybe you should try again later.";
 	otherwise:
 		say "Deciding that you would[apostrophe]t have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate, at least it has wings right?";
 		now Scared bird is resolved;
@@ -43,6 +43,6 @@ when play ends:
 		if humanity of player is less than 10:
 			say "When you give in to your feral instincts, the exotic bird you rescued seems to sense your new state of mind, and keeps at a safe distance, though it never strays to far, often helping you out of trouble or calling out to warn you of danger.  In thanks you often leave it little offerings of whatever is handy, it makes for a strange sort of partnership, but a happy enough one.";
 		otherwise:
-			say "After your rescue, you take the bird you rescued to several specialists, who are amazed to find that a member of its rare species survived the city, and they thank you profusely for your help in bringing it back safely.  Impressed at your ability to get the bird to trust you, not only do they offer you a reward for saving your bird friend, but they ask you to stop by occassionally not just to visit your now happy bird friend, but also to ask questions about any other strange birds and species you might have encountered in the city.";
+			say "After your rescue, you take the bird you rescued to several specialists, who are amazed to find that a member of its rare species survived the city, and they thank you profusely for your help in bringing it back safely.  Impressed at your ability to get the bird to trust you, not only do they offer you a reward for saving your bird friend, but they ask you to stop by occasionally not just to visit your now happy bird friend, but also to ask questions about any other strange birds and species you might have encountered in the city.";
 
 Exotic Bird ends here.

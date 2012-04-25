@@ -83,7 +83,7 @@ the sarea of Giant Egg is "Outside";
 After resolving a giant egg, try looking;
 
 Instead of Resolving a Giant Egg:
-	say "You seach through the city streets, until you come across a giant egg. The egg is the size of a beach ball and it looks freashly laid. You quickly leave the area before its Mommy returns.";
+	say "You search through the city streets, until you come across a giant egg. The egg is the size of a beach ball and it looks freshly laid. You quickly leave the area before its Mommy returns.";
 	increase the score by 1;
 	now Giant Egg is Resolved;
 	

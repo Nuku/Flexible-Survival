@@ -5,7 +5,7 @@ Section 1 - Hyena Kill
 Hyena Kill is a situation.
 
 instead of resolving Hyena Kill:
-	say "You come across a murder scene in the corner of one of the streets, blood spattered everywhere, on the walls, the sidewalk, the parked cars, and black spotted hair also. Powdered segmenst of bone are also scattered. It looks like one of the hyenas didn't go for the rape, but for the kill. Ouch. They must have really hated the person.";
+	say "You come across a murder scene in the corner of one of the streets, blood spattered everywhere, on the walls, the sidewalk, the parked cars, and black spotted hair also. Powdered segments of bone are also scattered. It looks like one of the hyenas didn't go for the rape, but for the kill. Ouch. They must have really hated the person.";
 	say "You hope that isn't what they think of you.";
 	now hyena kill is resolved;
 
@@ -59,7 +59,7 @@ instead of resolving an intact fountain:
 	say "You find a fountain, intact among the wreckage of the city. However it looks like the water's purity did not survive, nor did the fountains appearance. The fountain is covered with the sexual fluids, milk, and urine of (you suspect) all the creatures in the city. The water is cloudy and murky, many different strains of stain swirling in the water. You can drink or collect it, but it is at your own risk.";
 	say "Do you drink?";
 	if the player consents:
-		say "You drink deeply from the fountain, qunching your thirst no matter what the cost.";
+		say "You drink deeply from the fountain, quenching your thirst no matter what the cost.";
 		while the thirst of the player >= 10:
 			say "You feel less thirsty and hungry after guzzling some thick, infected, tasty water, yum!";
 			decrease thirst of player by 10;

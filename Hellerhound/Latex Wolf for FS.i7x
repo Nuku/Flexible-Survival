@@ -14,7 +14,7 @@ Section 1 - Monster Responses
 
 To say latex wolf defeat:
 	if libido of player < 50:
-		Say "The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby stormdrain.";
+		Say "The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby storm drain.";
 	if libido of player > 50 and cocks of player is greater than 0:
 		Say "The wolf collapses, and you move forward, lifting its rear before it begins to melt, and shove your [cock of player] cock inside its behind. The wolf moans, and continues melting. You pull out before the melting happens near your precious cock, afraid of what might happen.";
 	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
@@ -128,10 +128,10 @@ to say lwmast2:
 when play ends:
 	if the bodyname of the player is "Latex Wolf":
 		if humanity of player < 10:
-			say "     As the infection runs its course, it spreads through your body, changing you more and more into a non-anthro, latex wolf.  When the resuce begins, you can hear a strange, ultrasonic siren off in the distance with your improved hearing and are drawn to it.  Fire trucks arrive, sirens blaring with teams of soldiers around them.  They are spraying down several other latex wolves and foxes who have arrived.  You run up to one, yipping and wagging your tail in the hopes of a cure.  As you move closer to the truck, you are pointed out and sprayed with a strange chemical";
+			say "     As the infection runs its course, it spreads through your body, changing you more and more into a non-anthro, latex wolf.  When the rescue begins, you can hear a strange, ultrasonic siren off in the distance with your improved hearing and are drawn to it.  Fire trucks arrive, sirens blaring with teams of soldiers around them.  They are spraying down several other latex wolves and foxes who have arrived.  You run up to one, yipping and wagging your tail in the hopes of a cure.  As you move closer to the truck, you are pointed out and sprayed with a strange chemical";
 			if intelligence of player < 16 or dexterity of player < 24:
 				if a random chance of 2 in 3 succeeds:
-					say ".  You turn your head back and watch as the latex melts off of your body leaving fur underneath. You fall down and whimper as you realize that you are no longer a latex wolf, but instead trapped as a real one even as you feel what remains of your mind fading.  The soldiers exclaim in surprise at your imcomplete destruction and startling transformation, but you dash off into the city before they can prevent your escape.  Under the cover of night, you slink off into the wilderness, mind that of a semi-intelligent wolf.";
+					say ".  You turn your head back and watch as the latex melts off of your body leaving fur underneath. You fall down and whimper as you realize that you are no longer a latex wolf, but instead trapped as a real one even as you feel what remains of your mind fading.  The soldiers exclaim in surprise at your incomplete destruction and startling transformation, but you dash off into the city before they can prevent your escape.  Under the cover of night, you slink off into the wilderness, mind that of a semi-intelligent wolf.";
 				otherwise:
 					say ".  You gurgle wetly as you feel yourself starting the melt.  You struggle to escape, but another truck turns its hose on you and you melt away into another messy stain of latex goo in the wake of the deadly trucks.";
 					stop the action;

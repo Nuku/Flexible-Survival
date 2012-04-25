@@ -114,11 +114,11 @@ Section 4 - Qytat a'th Lundrues - The City of the Flying
 
 Staircase Entry is a room. "     Now that you stand upon the staircase, you can see it much more clearly and it becomes solid to your eyes.  The staircase stands before you, the legendary path to Qytat a'th Lundrues, the city of the flying.  It is a blue silver of some higher element, and the stairs are floating, sliding a little with the slight breeze, but maintaining their orderly position. The stairs glow, and the warmth radiating from them makes you comforted and happy.  You can feel a faint, unseen wall around them which grows a translucent blue as the steps spiral up into the sky.  You have a feeling that this strange material is completely invisible from the outside.".
 
-Stairs is a room. "     The glowing steps extend above and behind you, spiralling upwards.  The faint blue material forming the concealling walls provides something to rest your hand against as you travers the long staircase to the heavens.  Looking through it, everything has a faint, bluish glow that makes everything below seem misty and unfocused, as if it is not quite real.".
+Stairs is a room. "     The glowing steps extend above and behind you, spiralling upwards.  The faint blue material forming the concealing walls provides something to rest your hand against as you traverse the long staircase to the heavens.  Looking through it, everything has a faint, bluish glow that makes everything below seem misty and unfocused, as if it is not quite real.".
 
 Up from Staircase Entry is Stairs.
 
-City Plaza is a room. "     The ground here is the same blue as the stairs, and warm underfoot. There is a great spiral pattern on the blocks and it seems to change when you aren't looking.  There are no buildings here, instead ropes hang down from tents, glowing like the rest, and seemingly usupported.  These ropes are all out of reach and there is nobody here that you can see.".
+City Plaza is a room. "     The ground here is the same blue as the stairs, and warm underfoot. There is a great spiral pattern on the blocks and it seems to change when you aren't looking.  There are no buildings here, instead ropes hang down from tents, glowing like the rest, and seemingly unsupported.  These ropes are all out of reach and there is nobody here that you can see.".
 
 instead of sniffing City Plaza:
 	say "This area is strong with the scent of those herm gryphons.  It seems you have indeed found their home.";

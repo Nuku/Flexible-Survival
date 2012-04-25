@@ -110,7 +110,7 @@ To pigfeed:
 		say "'I[apostrophe]m still digesting the food you gave me before. However, I did find some other food a few minutes ago. You fed me, so I want to pay you back by feeding you. You can eat it if you want.' He says as he holds out a strange box.[line break][line break]You take a look at the box and notice that it is different from all the other packages of food that you've found. There is a picture of a cartoon pig on the front. The name of the product is too faded for you to read.";
 		say "Will you accept his offer and eat the food?";
 		if player consents:
-			say "'Here you go,' He oinks as he hands you the box, then he rolls over and promptly falls asleep in the mud.[line break][line break]You open the box and start chowing down on the food inside. As soon as you finish eating, you notice that the food didn't dull your hunger at all. That's when your entire head begins to feel strange. All the hair on your head falls out as your ears stretch out then flop downwards. Your nose aches for a second as the tip bends upwards until you're left with the nose of a pig. Your cheaks and face plump up with fat, making you look like you have beady little eyes and making it a little harder for you to see.";
+			say "'Here you go,' He oinks as he hands you the box, then he rolls over and promptly falls asleep in the mud.[line break][line break]You open the box and start chowing down on the food inside. As soon as you finish eating, you notice that the food didn't dull your hunger at all. That's when your entire head begins to feel strange. All the hair on your head falls out as your ears stretch out then flop downwards. Your nose aches for a second as the tip bends upwards until you're left with the nose of a pig. Your cheeks and face plump up with fat, making you look like you have beady little eyes and making it a little harder for you to see.";
 			now face of player is "has porcine with big and plump cheeks surrounding your upturned pig nose.  Your head is bald with big, floppy pig ears atop it.  Your face is rather hog-like now, with the occasional piggish snort to go along with it";
 			now facename of player is "Piggy";
 			increase stamina of player by 1;
@@ -151,7 +151,7 @@ To pigfeed:
 				otherwise:
 					say "'Well... alright, I'll stay here for now,' He oinks.";							
 			otherwise:
-				say "'You don't have any food,' he oinks saddly.";
+				say "'You don't have any food,' he oinks sadly.";
 				now lastpigfed is 250;
 				stop the action;
 		otherwise:
