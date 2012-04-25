@@ -2506,7 +2506,7 @@ To Combat Menu:
 			continue the action;
 		say "Choose your action: [line break]";
 		repeat through table of basic combat:
-			say "[link][title entry][end link][line break]";
+			say "[link][title entry][end link][line break][run paragraph on]";
 		get typed command as playerinput;
 		if playerinput in lower case matches the text "attack":
 			follow the player attack rule;
