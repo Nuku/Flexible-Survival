@@ -9,7 +9,7 @@ Museum Foyer is a room. It is fasttravel.
 The description of Museum Foyer is "You find yourself standing in the foyer of a large museum, apparently one equipped with an emergency generator of some sort as the electric lighting while dim, still appears to be functioning.  The dim lighting casts shadows throughout the large area, evoking a sense of danger and mystery.  Along the walls near you are several paintings and small bits of history that would probably be priceless if you had time to worry about such things right now.  More disturbing perhaps is the empty pedestal in the center of the entryway, its name plaque proudly proclaiming a preserved woolly mammoth cub to be displayed in the empty spot.  Looking further into the area you can see a circular desk marked 'Information'.";
 
 instead of sniffing Museum Foyer:
-	say "The museum smells of ancient things come to life oncemore.";
+	say "The museum smells of ancient things come to life once more.";
 
 Museum entry is a door. "The museum halls stretch off towards the east.". It is dangerous. 
 
@@ -24,7 +24,7 @@ The conversation of Valerie is { "Riddle me this!" }.
 Valerie is in Museum Foyer.
 
 instead of sniffing valerie:
-	say "She smells like a sphinx, inscrutible and cryptic.";
+	say "She smells like a sphinx, inscrutable and cryptic.";
 
 instead of conversing the Valerie:
 	if valtalk is 0:

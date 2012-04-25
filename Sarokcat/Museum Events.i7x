@@ -20,7 +20,7 @@ Moving painting is a situation.
 The sarea of Moving painting is "Museum";
 
 Instead of Resolving a Moving painting:
-	say "Wandering the museum hallways, you stop for a minute as a painting seems to catch your eye, the characters in the painting being chased by some sort of wild hunt. After admiring the painting for a minute, you turn to leave, only catch a glimpse of movement out of the corner of your eye, looking around you don[apostrophe]t see anything that could have made the movement, though as your eye falls on the painting, you swear the hunt is closer to catching the fleeing people, and was the huntleader staring right at you with his glowing red eyes before?  Deciding it might be better not to think about that, you continue quickly on your way, feeling almost hunted yourself.";
+	say "Wandering the museum hallways, you stop for a minute as a painting seems to catch your eye, the characters in the painting being chased by some sort of wild hunt. After admiring the painting for a minute, you turn to leave, only catch a glimpse of movement out of the corner of your eye, looking around you don[apostrophe]t see anything that could have made the movement, though as your eye falls on the painting, you swear the hunt is closer to catching the fleeing people, and was the hunt leader staring right at you with his glowing red eyes before?  Deciding it might be better not to think about that, you continue quickly on your way, feeling almost hunted yourself.";
 	Now Moving painting is resolved;
 
 
@@ -60,7 +60,7 @@ Missing Sabretooth is a situation.
 The sarea of Missing Sabretooth is "Museum";
 
 Instead of Resolving a Missing Sabretooth:
-	say "Wandering around the museum, you come to the section on primitive lifestyles, deciding to take a look in, you see several displays with primitive man fighting things, but nothing is there for him to fight. Reading the little plaque you realize that the sabretooth tigers are missing, glancing around you note that all the sabretooths from the area appear to be missing. You quickly hurry to leave the area, just as a strange thought hits you, weren[apostrophe]t the sabrelike teeth a primarily male characteristic, like a lions mane? If that[apostrophe]s the case, you worry about what they will do to get a female....";
+	say "Wandering around the museum, you come to the section on primitive lifestyles, deciding to take a look in, you see several displays with primitive man fighting things, but nothing is there for him to fight. Reading the little plaque you realize that the sabretooth tigers are missing, glancing around you note that all the sabretooths from the area appear to be missing. You quickly hurry to leave the area, just as a strange thought hits you, weren[apostrophe]t the sabre-like teeth a primarily male characteristic, like a lions mane? If that[apostrophe]s the case, you worry about what they will do to get a female....";
 	Now Missing Sabretooth is resolved;
 
 
@@ -91,7 +91,7 @@ Night Watchmen Uniform is a situation.
 The sarea of Night watchmen uniform is "Museum";
 
 Instead of Resolving a Night watchmen uniform:
-	say "Wandering along the museum hallways, you notice a scrap of gray in an alcove and take a closer look.  Upon closer inspection you find that the gray is scraps of cloth from what were once a night watchmans uniform.  Looking around you can[apostrophe]t find any clues as to what might have happened to the guard, but something obviously did.";
+	say "Wandering along the museum hallways, you notice a scrap of gray in an alcove and take a closer look.  Upon closer inspection you find that the gray is scraps of cloth from what were once a night watchman's uniform.  Looking around you can[apostrophe]t find any clues as to what might have happened to the guard, but something obviously did.";
 	Now Night watchmen uniform is resolved;
 
 

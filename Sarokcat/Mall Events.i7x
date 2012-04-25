@@ -9,7 +9,7 @@ The sarea of Tight space is "Mall";
 
 
 Instead of resolving Tight space:
-	say "You come across a very narrow opening in the sewers underneath the city, you think you see something gleaming in the back of it, but it would be a really tight squeeze to fit in there, and might leave you vunerable to attack.  Do you try to enter the tight space anyways?";
+	say "You come across a very narrow opening in the sewers underneath the city, you think you see something gleaming in the back of it, but it would be a really tight squeeze to fit in there, and might leave you vulnerable to attack.  Do you try to enter the tight space anyways?";
 	If player consents:
 		let T be a random number between one and five;
 		if T is 1:
@@ -84,7 +84,7 @@ Instead of resolving a Captive rat:
 	if player consents:
 		say "Carefully heading down a side passageway, you find it opens up into a small room where a Demon Brute seems to have captured a struggling mall rat.  The demon brute is chanting over the bound rat, and the girl is begging and pleading for someone to help free it.  Before you can do anything more, the brutes chant finishes and it shoots its seed all over the trapped rat. The beast then turns to look directly at you, 'Did you like watching?' it asks sarcastically as it charges. 'You can be next!'";
 		challenge "Demon Brute";
-		say "Driving off the foul demon, you turn to free the captive mall rat, only to discover that it has not only managed to free itself, but it seems to have undergone a suprising transformation as well!";
+		say "Driving off the foul demon, you turn to free the captive mall rat, only to discover that it has not only managed to free itself, but it seems to have undergone a surprising transformation as well!";
 		challenge "Slut Rat";
 		say "After that last fight, you definitely have more questions than answers. Maybe you should ask Rod or Ronda back in the mall about the strange demon[apostrophe]s seed.";
 		stop the action;
@@ -178,7 +178,7 @@ B&R is a situation.
 The sarea of B&R is "Mall";
 
 Instead of resolving a B&R:
-	say "     While roaming around through the sewers, you hear the sound of arguing voices coming towards you.  Being cautious, you duck into the shadows and watch the pair approach.  They are an odd pair of big, muscled brutes carrying large weapons.  The first is a warthog wearing shoulderpads and a torn, red vest, with several hand grenades within easy reach on it.  His sharp, white tusks, hoop snoot-ring and bone necklace give him a menacing appearance despite the purple mohawk and sunglasses.  The other is a rhino in a yellow wife-beater and cargo pants with a bandolier of bullets across his chest, as well as a grenade of his own.  While he clearly has a bit of a gut on him, his arms are even more muscled than his companion[apostrophe]s.";
+	say "     While roaming around through the sewers, you hear the sound of arguing voices coming towards you.  Being cautious, you duck into the shadows and watch the pair approach.  They are an odd pair of big, muscled brutes carrying large weapons.  The first is a warthog wearing shoulder pads and a torn, red vest, with several hand grenades within easy reach on it.  His sharp, white tusks, hoop snoot-ring and bone necklace give him a menacing appearance despite the purple mohawk and sunglasses.  The other is a rhino in a yellow wife-beater and cargo pants with a bandolier of bullets across his chest, as well as a grenade of his own.  While he clearly has a bit of a gut on him, his arms are even more muscled than his companion[apostrophe]s.";
 	say "     It[apostrophe]s hard to follow what exactly they[apostrophe]re arguing about as they pause near your hiding place.  Most of the time, it sounds like they[apostrophe]re searching for turtles, intent on violence, but the rest of the time they[apostrophe]re trying to remember an old cartoon they watched as kids.  Eventually, they make a decision on which way to go next and continue on.  Rather than interrupt the well-armed, volatile and clearly crazy duo, you quietly let them pass before moving on.";
 	Now B&R is resolved;
 
