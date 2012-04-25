@@ -137,10 +137,10 @@ To addfeat (x - text) with (y - text):
 
 
 instead of addfeating the fun feats:
-	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player:
-		addfeat "Male Preferred" with "You will reject female mutation";
 	if "Male Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player:
 		addfeat "Female Preferred" with "You will reject male mutation";
+	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player:
+		addfeat "Male Preferred" with "You will reject female mutation";
 	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
 		addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership";
 	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
