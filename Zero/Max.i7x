@@ -16,16 +16,18 @@ corgitalk is a number that varies. corgitalk is usually 0.
 Instead of resolving Meeting the corgi:
 	if corgitalk is 1:
 		challenge "Male Dominator";
-		say "[line break] Before the dominator can get very far, a small furry missile rams into him, and begins to beat the life out of him.";
+		say "[line break]Before the dominator can get very far, a small furry missile rams into him, and begins to beat the life out of him.";
 		say "Do you attack the [']small furry missile['] while it's distracted?";
 		if the player consents:
 			say "Deciding that such a aggressive creature could become a problem later on, you try to knock it out from behind [line break] The now relieved  corgi blocks your attacks with ease and glares at you. [']And here I thought you weren't stupid, guess I was wrong!['] Before you can do anything else the corgi slams a fist into your jaw, knocking you out,[line break] leaving you stunned but conscious, and leaving the very ticked off corgi to walk off.";
 			Now corgitalk is -1;
 			now Meeting the corgi is resolved;
 		otherwise:
-			say " After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname][apostrophe]s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here.....you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure , lately these [apostrophe]dominators[apostrophe]' the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout , there[apostrophe]s a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
+			say "After the dominator is reduced to a quivering mess, [']the small furry missile['] now revealed to be the corgi from before, removes the shoulder bag the dominator was carrying and turns towards you, 'Hey there, thanks for holding him off, stupid [slutname] tried to steal my bag, almost got away too, didn't you, ya little fucker?' he says before stomping hard onto the [slutname][apostrophe]s groin, resulting in a pained shout of the now awake dominator. 'Anyway, name's Max, glad to see another sane one 'round here.....you are sane right?' Quickly nodding, the corgi gives a sigh and continues on. 'Just had to be sure , lately these [apostrophe]dominators[apostrophe]' the corgi says sarcastically 'have been trying everything to get me for the last week or so, and it's getting pretty annoying. Well whatever, if you drop by the gym any time soon give me a shout , there[apostrophe]s a bunch of us holed up there if ya need any help.' The corgi walks off, dragging a very distressed [slutname] behind him[line break]";
 			Increase corgitalk by 1;
 			now Meeting the corgi is resolved;
+	otherwise:
+		say "Looking around, you spot the remains of some recent activity in the form of sticky messes littered about.  Their scent is strong, making you think of those strong dominators you've seen around.  It seems a few of them found and made more of those strange sluts out of their victims.  There is something strange about their behaviour.  Perhaps you should have a couple of encounters with them to investigate further.  Some 'domincounters' as it were.";
 			
 pendant hunting is a situation.
 The sarea of pendant hunting is "Outside";
