@@ -9,7 +9,7 @@ North of Pediatrics door is pediatrics Lobby.
 South of Pediatrics door is Wandering the City.
 The marea of pediatrics door is "Outside".
 North of Pediatrics Lobby is Doctors Office.
-Doctors Office is a room. "A doctor's office, this one is a wreck.  There are stains everywhere and food and water stockpiled in the cabinets.  The clock is no longer running, and an oil lamp stands on the blue marble counter, on and buring.  It fills the air with smoke.  You idly wonder what happened to the smoke detectors.".
+Doctors Office is a room. "A doctor's office, this one is a wreck.  There are stains everywhere and food and water stockpiled in the cabinets.  The clock is no longer running, and an oil lamp stands on the blue marble counter, on and burning.  It fills the air with smoke.  You idly wonder what happened to the smoke detectors.".
 
 instead of sniffing the Doctors Office:
 	say "The doctor's office smells of antiseptic and aroused lizard scents.";

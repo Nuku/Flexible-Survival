@@ -33,7 +33,7 @@ To say nymph defeat:
 	if libido of player > 50 and cocks of player is greater than 0:
 		Say "You move closer to the nymph, stroking your [cock of player] cock, the entry is deceptively easy, and you start as you feel vines creeping along her inner walls. You try to pull out, but they grab hold and pull you all the way in. 'Silly you, thinking you could rape me.', well, let me teach you a thing or two.";
 		say "She leans into you, vines stroking your cock as it is massaged against her inner walls. You come to climax surprisingly quickly, spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind begin to suckle.";
-		say "Thats good, have a drink, she says, as you roll over onto the ground, and she walks away, the tree disguise forming once more.";
+		say "That's good, have a drink, she says, as you roll over onto the ground, and she walks away, the tree disguise forming once more.";
 	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
 		say "The nymph screams in rage, and her skin turns barklike. In an instant she has become a true tree, unmoving, covered in vines.";
 		
@@ -80,7 +80,7 @@ When Play begins:
 	now cock entry is "wooden, cum-reeking";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is " it becomes cuter, more feminine. Your hair turns green, and branches begin to grow from behind your ears."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it becomes cuter. Green, tentacle-like vines grow from a new hole forming above your clit as they wrap around your body"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "blemishes dissapear, and the vines fully wrap around your figure, forming a green cloak that opens at will"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now skin change entry is "blemishes disappear, and the vines fully wrap around your figure, forming a green cloak that opens at will"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it becomes human again"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it shrinks and slides down into your clit. You appear female, but by concentrating, your clit can turn into full-sized, wooden-looking cock, with reeking cum leaking from it"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
@@ -110,13 +110,13 @@ When Play begins:
 
 when play ends:
 	if the bodyname of the player is "Tree Nymph":
-		say "Life as a nymph is hard, your naked stature and vines, not to mention fear of clothes, keep you seperate from the normal humans, and keep you in trouble with the law, who are still trying to cope with your kind's breach of public nudity.";
+		say "Life as a nymph is hard, your naked stature and vines, not to mention fear of clothes, keep you separate from the normal humans, and keep you in trouble with the law, who are still trying to cope with your kind's breach of public nudity";
 		if the humanity of the player < 10:
-			say "The revival of the city des you no good, and shortly you are behind bars for several acts of misconduct. You end up with a life sentence, and spend the rest of your time attempting to control the impulses the nanites wired into you.";
+			say ".  The revival of the city does you no good, and shortly you are behind bars for several acts of misconduct. You end up with a life sentence, and spend the rest of your time attempting to control the impulses the nanites wired into you.";
 		otherwise if the humanity of the player < 50:
-			say "A few days into the revival of the city, you decide to become another one of the tree's on the road where you found the original, growing bark and leaves, you form a new tree, and a new puzzle for the city council, who had not authorized the planting of new trees in their budget. You and your fellow trees take payments from those who wish your services, and retrun to your lot at night. Altogehter, it isn't a bporing life, with all the odd clients that come around, and the food they bring.";
+			say ".  A few days into the revival of the city, you decide to become another one of the tree's on the road where you found the original, growing bark and leaves, you form a new tree, and a new puzzle for the city council, who had not authorized the planting of new trees in their budget. You and your fellow trees take payments from those who wish your services, and return to your lot at night. Altogether, it isn't a boring life, with all the odd clients that come around, and the food they bring.";
 		otherwise:
-			say "you overcome your fear of clothing, and become relatively normal to those who don't see you without it, or your hat. you are able to resume life as normal, but have to get a different lover as your old one is unhappy with the changes.";
+			say ".  You overcome your fear of clothing, and become relatively normal to those who don't see you without it, or your hat. you are able to resume life as normal, but have to get a different lover as your old one is unhappy with the changes.";
 
 
 

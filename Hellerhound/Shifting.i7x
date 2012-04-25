@@ -222,9 +222,9 @@ when play ends:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind, that do not spread.";
 		otherwise:
 			say "Your feral impulses prevent the concentration required for shifting, and the knowledge doesn't return until the rescue comes.";
-			say "You are unable to choose a form, and spend your days changing to whatever suits you. Within a few days of the revivation of the city, the spy force contacts you, ringing your phone off the hook for hours until you finaly return home. They offer you work, and give such bonuses and pay that you couldn't resist. Your ability helps, and the only work you have to do is mimicking the knowledge of who you are impersonating, training yourself for future success.";
+			say "You are unable to choose a form, and spend your days changing to whatever suits you. Within a few days of the revitalization of the city, the spy force contacts you, ringing your phone off the hook for hours until you finally return home. They offer you work, and give such bonuses and pay that you couldn't resist. Your ability helps, and the only work you have to do is mimicking the knowledge of who you are impersonating, training yourself for future success.";
 		now body of player is "nothing"; 
 		now bodyname of player is "nothing";
-		say "((Being a shapeshifter, your normal ending for your body type is supressed))";
+		say "((Being a shapeshifter, your normal ending for your body type is suppressed))";
 
 Shifting ends here.

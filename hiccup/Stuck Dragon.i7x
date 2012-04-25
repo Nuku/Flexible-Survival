@@ -22,7 +22,7 @@ Old Building is a room.
 The description of Old Building is "[dragonessbldg]";
 
 to say dragonessbldg:
-	say "[dragonessupdate]     There are small piles of useless junk and debris scattered around inside the old builing.  There is a fine layer of dust is on almost every surface in sight";
+	say "[dragonessupdate]     There are small piles of useless junk and debris scattered around inside the old building.  There is a fine layer of dust is on almost every surface in sight";
 	if hp of Christy is 0 or hp of Christy is 1:
 		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by the rear of a large dragoness. The rest of its body is on the other side of the doorway so it can't see you";
 		if lust of Christy > 2:
@@ -174,7 +174,7 @@ Back Room is a room.  The description of Back Room is "[backroomdesc]";
 
 to say backroomdesc:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
-	say "     There are small piles of useless junk and debris scattered around inside the old builing.  A fine layer of dust is on almost every surface in sight";
+	say "     There are small piles of useless junk and debris scattered around inside the old building.  A fine layer of dust is on almost every surface in sight";
 	if hp of Christy is 0 or hp of Christy is 1:
 		say ".  Other than the door you entered through, the only other doorway you can see is completely blocked by the front half of a large dragoness. You can't see the rear of her body, because it's on the other side of the doorway.  There are several bottles of water and packages of food next to the dragoness, which explains why she didn't die of hunger or thirst while being trapped here.";
 	otherwise:
@@ -208,14 +208,14 @@ Instead of conversing the Christy:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
 	if hp of Christy is 0:
 		if lust of Christy is 0 and libido of Christy is 0:
-			say "     'Finally, someone is here to fuck me... I mean, save me!' the dragoness cheers when she sees you.  'My name is Christy.  I've been trapped here for a while now.  I think I can get free if I had something slimey to grease myself with.  If you have something like that, could you please FREE me?'";
+			say "     'Finally, someone is here to fuck me... I mean, save me!' the dragoness cheers when she sees you.  'My name is Christy.  I've been trapped here for a while now.  I think I can get free if I had something slimy to grease myself with.  If you have something like that, could you please FREE me?'";
 		otherwise:
 			say "     'Finally, someone is here to fuck me... I mean, save me!' the dragoness cheers when she sees you.  'My name is Christy.  I've been trapped here for a while now and some horrible monster on the other side of the door raped my vulnerable pussy.'";
 			say "     'Really? That sounds horrible!' you exclaim, playing dumb.";
-			say "     'Anyway, I think I can get free if I had something slimey to grease myself with. If you have something like that, could you please FREE me?' Christy asks.";
+			say "     'Anyway, I think I can get free if I had something slimy to grease myself with. If you have something like that, could you please FREE me?' Christy asks.";
 		now hp of Christy is 1;
 	otherwise if hp of Christy is 1:
-		say "     'Did you find something slimey I can use to free myself with? If you have something like that, please FREE me.' Christy says.";
+		say "     'Did you find something slimy I can use to free myself with? If you have something like that, please FREE me.' Christy says.";
 	otherwise if hp of Christy > 1:
 		say "     'Thanks again for freeing me, can you fuck me now? Gah! I didn't mean to say that! [one of]Damn it, it feels like my body has been constantly in heat since I got infected!'[or]If the other girls saw me like this, I'd become the laughing stock of the nunnery.'[or]Must think of anything except... hot... wonderful... sex.'[or]None of this would have happened if I hadn't drunk that strange bottle of hot sauce that I found in the food court.'[at random]";
 
@@ -254,7 +254,7 @@ Carry out dragonfreeing:
 			say "     Christy finally orgasms and she lets out an ear-splitting roar.  Her pussy lips suddenly grip the sides of your head and yank it all the way into her pussy.  The muscles of her love canal squeeze your head tightly and start to quickly pull more of your body inside as Christy's body is hit by one orgasm after another.  Alarmed by this new development, you finally start yelling at Christy to try to get her to stop.  Unfortunately, Christy is so overcome by the pleasure that she is oblivious.  Christy's huge pussy pulls and tugs your body until your feet are pulled inside with a wet slurp noise, then you're forced to curl up inside her womb.  You're not sure how much time passes, but eventually you wake up in a small, dark, and cramped room.";
 			move player to Small Dark Room;
 	otherwise:
-		say "     You don't have something slimey to free her with.";
+		say "     You don't have something slimy to free her with.";
 
 
 Section 5 - Small Dark Room and Egg
@@ -290,7 +290,7 @@ to say dragonchange:
 		now bodyname of player is "Slutty Dragoness";
 		now cockname of player is "Slutty Dragoness";
 		now skinname of player is "Slutty Dragoness";
-		now tail of player is "You have a long, thick, and scaley dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[otherwise if cunts of player > 0] and gaping pussy lips[otherwise if cocks of player > 0] and pendulous balls[end if] beneath it.";
+		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[otherwise if cunts of player > 0] and gaping pussy lips[otherwise if cocks of player > 0] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body.  There are large bat like wings on your back";
 		now face of player is "reptilian shape with a long snout.  Your mouth is full of sharp teeth that peek out past your thin lips.  Your head is bald except for two backwards facing horns";
 		now skin of player is "blue coloured dragon scales covering your";
@@ -329,7 +329,7 @@ to say dragonchange:
 		now bodyname of player is "Horny Dragon";
 		now cockname of player is "Horny Dragon";
 		now skinname of player is "Horny Dragon";
-		now tail of player is "You have a long, thick, and scaley dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[otherwise if cunts of player > 0] and gaping pussy lips[otherwise if cocks of player > 0] and pendulous balls[end if] beneath it.";
+		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[otherwise if cunts of player > 0] and gaping pussy lips[otherwise if cocks of player > 0] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body.  There are large bat like wings on your back";
 		now face of player is "reptilian shape with a long snout.  Your mouth is full of sharp teeth that peek out past your thin lips.  Your head is bald except for two backwards facing horns";
 		now skin of player is "blue coloured dragon scales covering your";
@@ -371,7 +371,7 @@ Instead of fucking the Christy:
 	otherwise if remainder after dividing lust of Christy by 3 is 2:
 		say "     Christy, plump with eggs, isn't really up for any fun right now.  As it is, her pussy's too high up for any kind of satisfying fun.  Besides, you shouldn't do that while she's pregnant.  You may wish to come back again later to see how her [if lust of Christy > 3]new [end if]clutch is coming along.";
 	otherwise if hp of Christy is 2:
-		say "     You move up beside the large dragoness and rub against her, making her moan softly. You scritch over her scaley side, exciting her further.  'Mmm... that feels so good, but I've got another itch you can scratch,' she says before catching herself.  'Oh, I mean... ah, I really shouldn't...' she says, trailing off as you continue, watching her wide hips wiggle and tail raise up in response.  You nuzzle her and whisper that you could make her feel much better, give her the relief she needs.";
+		say "     You move up beside the large dragoness and rub against her, making her moan softly. You scritch over her scaly side, exciting her further.  'Mmm... that feels so good, but I've got another itch you can scratch,' she says before catching herself.  'Oh, I mean... ah, I really shouldn't...' she says, trailing off as you continue, watching her wide hips wiggle and tail raise up in response.  You nuzzle her and whisper that you could make her feel much better, give her the relief she needs.";
 		say "     With a little coaxing, soon she's moaning and rumbling with lust.  'Oh, I really shouldn't, but I need it so bad,' she groans as she turns around in the large room and waves her gaping slit at you.  'And you did save me, so I guess I owe you,' she says, clearly making excuses for herself[if libido of Christy > 0 and lust of Christy > 0].  'And this time it won't be those strange, sexy beasts, but my sexy hero,' she says, unknowing you are all one in the same[otherwise if libido of Christy > 0 or lust of Christy > 0].  'And this time it won't be that strange, sexy beast, but my sexy hero,' she says, unknowing you're both one in the same[end if].  You move in behind her and run your hand over her huge slit, making her moan loudly.";
 		say "[christysex]";
 		increase hp of Christy by 1;
@@ -456,12 +456,12 @@ When play ends:
 				say "     Although you survived with your humanity intact, you still have trouble controlling the lust of your slutty dragoness body.  Over time, you learn to control the lust with meditation... and orgies, lots and lots of orgies.  With that under at least partial control, you are able to focus on making a living in this changed world with your changed body.  Succeeding at learning to fly, you take up a job as a courier.  With your strong dragon body, you are able to transport large packages, often bringing them into infected areas.  And once there, there are always plenty of excited people to satisfy your lusts by fucking your needy body.";
 		otherwise if bodyname of player is "Horny Dragon":
 			if humanity of player is less than 10:
-				say "     Following a compulsion, you spread your wings and fly away from the city.  You find a nice cave to live in, then you set about fulfilling your instinctive urge to kidnap princesses and accumulate a horde of treasure.  The occasional hero who comes wanting to play the brave knight to slay the dragon and save the princess make for an enjoyable divertisment as well.  These princesses are eventually returned full of eggs and, after a few times, start looking forward to their next kidnapping.";
+				say "     Following a compulsion, you spread your wings and fly away from the city.  You find a nice cave to live in, then you set about fulfilling your instinctive urge to kidnap princesses and accumulate a horde of treasure.  The occasional hero who comes wanting to play the brave knight to slay the dragon and save the princess make for an enjoyable divertissement as well.  These princesses are eventually returned full of eggs and, after a few times, start looking forward to their next kidnapping.";
 			otherwise:
 				say "     Although you survived with your humanity intact, you still have trouble controlling the lust of your Horny Dragon body. Over time, you learn to control the lust with meditation... and orgies, lots and lots of orgies.  With that under at least partial control, you are able to focus on making a living in this changed world with your changed body.  Succeeding at learning to fly, you take up a job as a courier.  With your strong dragon body, you are able to transport large packages, often bringing them into infected areas.  And once there, there are always plenty of excited people to satisfy your lusts by fucking them.";
 		if hp of Christy is 0 or hp of Christy is 1:
 			if lust of Christy > 2:
-				say "     The dragoness you found trapped in a doorway is freed by her offspring after they hatch.  She never discovers the identity of the father.  Her offspring begin to worship her as a diety, then they conquer a large part of the country and make her the queen of it.";
+				say "     The dragoness you found trapped in a doorway is freed by her offspring after they hatch.  She never discovers the identity of the father.  Her offspring begin to worship her as a deity, then they conquer a large part of the country and make her the queen of it.";
 			otherwise:
 				say "The dragoness you found trapped in a doorway is discovered by the military.  They examined her until they discovered that she was no longer infectious, then they left... without freeing her from the doorway.  Eventually, the trapped dragoness became a tourist attraction and her exposed pussy gets fucked by almost every male tourist that visits the city.";
 		otherwise:

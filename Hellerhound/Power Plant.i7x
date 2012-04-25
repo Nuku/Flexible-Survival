@@ -2,7 +2,7 @@ Power Plant by Hellerhound begins here.
 
 Include Computers by Hellerhound.
 
-[nuku: to add, make sure you delete the line taht adds a library computer to the Grey Abbey Library, or there will be interference]
+[nuku: to add, make sure you delete the line that adds a library computer to the Grey Abbey Library, or there will be interference]
 
 
 
@@ -33,7 +33,7 @@ instead of sniffing Plant Lobby:
 	say "The power plant lobby smells of smoke, ash and cum.";
 
 instead of sniffing Control Room:
-	say "The control room smells of burn electonics and ozone along with the harsh, sulfurous scents from the magna.";
+	say "The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.";
 
 instead of sniffing Plant Overview:
 	say "There is a faint scent of smoke coming from the power plant.";
@@ -99,7 +99,7 @@ to say catwalkstuff:
 			say "The generator begins to hum, and the green lights indicating that power is flowing begin to flash. Hooray!";
 			increase score by 200;
 		otherwise:
-			say "The generator is not running, so maybe there is nothing for it to power? Maybe you should check the contrl panels.";
+			say "The generator is not running, so maybe there is nothing for it to power? Maybe you should check the control panels.";
 	otherwise if fixedgens is 2:
 		say "The hum of the fixed generator sounds like music to your ears.";
 	otherwise:
@@ -125,7 +125,7 @@ carry out activating:
 	if findwires is 2 and fixedgens is 2:
 		say "The power light for the library is on! Yay! Maybe the computers work?";
 	otherwise if fixedgens is 0:
-		say "The power light is still off, and a malfunction light for the genrator is on. Looks like you will have to fix it.";
+		say "The power light is still off, and a malfunction light for the generator is on. Looks like you will have to fix it.";
 	otherwise if fixedgens is 1:
 		say "The malfunction light is on, and you have the missing parts. You'll have to go out on the catwalk to fix it.";
 		

@@ -51,7 +51,7 @@ to say stop wyvern:
 			if the Perception of the player is greater than 12:
 				decrease perception of the player by 4;
 				say "The blast damages your eardrums. (perception -4)";
-			say "Then the wyvern blows its load into the pool, clouding the water and dissapating the clean smell about the area.";
+			say "Then the wyvern blows its load into the pool, clouding the water and dissipating the clean smell about the area.";
 			now purpol is 4;
 
 
@@ -74,7 +74,7 @@ instead of resolving a pure pool:
 						if a random chance of one in 2 succeeds:
 							say "They begin stroking as well, rushing to come before you.";
 						otherwise:
-							say "They watch as you continue, stunned that someone would have the prococity to subvert their efforts.";
+							say "They watch as you continue, stunned that someone would have the precocity to subvert their efforts.";
 						say "You blow your load into the pool, thick streams of seed coming from your [cock length of player] inch long [cock of player] [if the cocks of player > 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] and scream as well. The seed sprays into the pool, making the water murky and infecting the whole thing. The water becomes cloudy and the clean smell in the air disappears.";
 						now purpol is 4;
 						now purpolu is 1;
