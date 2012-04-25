@@ -989,9 +989,9 @@ this is the combat item process rule:
 		choose row N in the table of game objects;
 		if name entry is nam:
 			process object entry;
-			wait for any key;
 			break;
 	if battleitem is 0 and monsterhp is greater than 0:
+		wait for any key;
 		retaliate;
 	
 destinationcheck is an action applying to nothing.
@@ -2498,6 +2498,19 @@ This is the player attack rule:
 
 predestiny is a number that varies.
 
+calcnumber is a number that varies.
+
+To get a number:
+	get typed command as playerinput;
+	numberfy playerinput;
+
+to numberfy (x - a snippet):
+	change the text of the player's command to x;
+	if the player's command matches "[number]":
+		now calcnumber is the number understood;
+	otherwise:
+		now calcnumber is 0;
+	
 To Combat Menu:
 	while hp of player is greater than 1 and monsterhp is greater than 1:
 		if combat abort is 1:
