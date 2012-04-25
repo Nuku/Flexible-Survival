@@ -78,6 +78,7 @@ Carry out featgrabbing:
 	say "I think you are trying to grab the feat of [topic understood in lower case].";
 
 
+[
 To FunFeatget:
 	blank out the whole of table of gainable feats;
 	repeat with x running through not functional featsets:
@@ -89,6 +90,38 @@ To FunFeatget:
 		change the current menu to table of Gainable Feats;
 		carry out the displaying activity;
 	decrease featgained of player by 1;
+]
+
+ To FunFeatget:
+	blank out the whole of table of gainable feats;
+	repeat with x running through not functional featsets:
+		try addfeating x;
+	if there is no title in row 1 of table of gainable feats:
+		say "There are no feats to gain!";
+		wait for any key;
+	otherwise:
+		[change the current menu to table of Gainable Feats;
+		carry out the displaying activity;]
+		now featqualified is 1;
+		repeat with y running from 1 to number of filled rows in table of gainable feats:
+			choose row y from the table of gainable feats;
+			say "[link][title entry][end link] ";
+		say "[line break]";
+		while 1 is 1:
+			say "Type the name of the feat you want> [run paragraph on]";
+			get typed command as playerinput;
+			let found be 0;
+			repeat with y running from 1 to number of filled rows in table of gainable feats:
+				choose row y from the table of gainable feats;
+				if playerinput in lower case matches the text title entry in lower case:
+					now current menu selection is y;
+					follow the gainfeat rule;
+					now found is 1;
+					break;
+			if featqualified is 0:
+				decrease featgained of player by 1;
+				break;
+			if found is 0, say "Invalid Feat.";
 
 Addfeating is an action applying to one thing.
 

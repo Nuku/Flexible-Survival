@@ -973,27 +973,26 @@ This is the combat item rule:
 	say "[Z].";]
 	if there is no title in row 1 of table of combat items:
 		say "You have no combat ready items to use!";
-		wait for any key;
 	otherwise:
 		change the current menu to table of Combat Items;
 		carry out the displaying activity;
 
 This is the combat pass rule:
 	retaliate;
-	wait for any key;
+
 	
 this is the combat item process rule:
+	decrease the menu depth by 1;
 	choose row Current Menu Selection in table of combat items;
 	let nam be title entry;
 	repeat with N running from 1 to the number of rows in the table of game objects:
 		choose row N in the table of game objects;
 		if name entry is nam:
 			process object entry;
+			wait for any key;
 			break;
 	if battleitem is 0 and monsterhp is greater than 0:
 		retaliate;
-		wait for any key;
-	decrease the menu depth by 1;
 	
 destinationcheck is an action applying to nothing.
 
@@ -2281,15 +2280,13 @@ This is the flee rule:
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
 		say "You manage to evade [name entry] and slip back into the city.";
-		wait for any key;
-		decrease the menu depth by 1;
-		try looking;
+		now combat abort is 1;
+[		decrease the menu depth by 1;]
 	otherwise:
 		say "You fail to get away.";
 		Retaliate;
-		wait for any key;
 		if the hp of the player is less than 1:
-			decrease the menu depth by 1;
+[			decrease the menu depth by 1;]
 			try looking;
 
 This is the submit rule:
@@ -2300,8 +2297,8 @@ This is the submit rule:
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 	wait for any key;
-	try looking;
-	decrease the menu depth by 1;
+	now combat abort is 1;
+[	decrease the menu depth by 1;]
 
 combat abort is a number that varies.	
 
@@ -2453,11 +2450,10 @@ This is the player attack rule:
 	say "[line break]";
 	if monsterhp is greater than 0:
 		Retaliate;
-		wait for any key;
-		change the current menu to table of Basic Combat;
+[		change the current menu to table of Basic Combat;]
 		if the hp of the player is less than 1 or combat abort is 1:
-			now combat abort is 0;
-			decrease the menu depth by 1;
+[			now combat abort is 0;
+			decrease the menu depth by 1;]
 			try looking;
 	otherwise:
 		follow the cock descr rule;
@@ -2496,12 +2492,39 @@ This is the player attack rule:
 		decrease the menu depth by 1;
 		if ok is 1, wait for any key;
 		try looking;
-	clear the screen;
 	[if the menu depth is greater than 0, carry out the displaying activity;]
 	[if the menu depth is 0, try looking;]
 	rule succeeds;
 
 predestiny is a number that varies.
+
+To Combat Menu:
+	while hp of player is greater than 1 and monsterhp is greater than 1:
+		if combat abort is 1:
+			now combat abort is 0;
+			try looking;
+			continue the action;
+		say "Choose your action: [line break]";
+		repeat through table of basic combat:
+			say "[link][title entry][end link][line break]";
+		get typed command as playerinput;
+		if playerinput in lower case matches the text "attack":
+			follow the player attack rule;
+			next;
+		if playerinput in lower case matches the text "item":
+			follow the combat item rule;
+			next;
+		if playerinput in lower case matches the text "pass":
+			follow the combat pass rule;
+			next;
+		if playerinput in lower case matches the text "submit":
+			follow the submit rule;
+			next;
+		if playerinput in lower case matches the text "flee":
+			follow the flee rule;
+			next;
+		say "Invalid action.";
+		
 
 to Pet level up:
 	increase level of companion of player by 1;
@@ -2665,9 +2688,10 @@ To fight:
 				retaliate;
 				if hp of player is less than 1 or lost is 1, stop the action;
 		wait for any key;
-		change the current menu to table of Basic Combat;
+[		change the current menu to table of Basic Combat;
 		carry out the displaying activity;
-		clear the screen;
+		clear the screen;]
+		Combat Menu;
 		let needed be ( level of player plus one ) times 10;
 		if "Fast Learner" is listed in feats of player:
 			now needed is ( level of player plus one ) times 8;
@@ -2694,9 +2718,9 @@ To challenge:
 		rule succeeds;
 		stop the action;
 	wait for any key;
-	change the current menu to table of Basic Combat;
-	carry out the displaying activity;
-	clear the screen;
+[	change the current menu to table of Basic Combat;
+	carry out the displaying activity;]
+	Combat Menu;
 	if xp of player is greater than ( level of player plus one ) times 10:
 		level up;
 	if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:
