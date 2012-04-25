@@ -54,13 +54,11 @@ Featqualified is usually 0.
 		say "[line break]";
 		while 1 is 1:
 			say "Type the name of the feat you want> [run paragraph on]";
-			get an input;
-			let q be playerinput;
-			say "Q is [q].";
+			get typed command as playerinput;
 			let found be 0;
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
-				if q in lower case matches the text title entry in lower case:
+				if playerinput in lower case matches the text title entry in lower case:
 					now current menu selection is y;
 					follow the gainfeat rule;
 					now found is 1;

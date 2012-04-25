@@ -70,56 +70,15 @@ Include (-
 	      PrintText((+ yes or no message +));
 	}
 ];
-
 -) instead of "Yes/No Questions" in "Parser.i6t".
 
 The yes or no message is a text that varies. The yes or no message is "[link]yes[end link] or [link]no[end link]> [run paragraph on]".
 
-playerinput is a text that varies.
-To get an input:
-	(- 
-	for (::) {
-		PrintText( "Hi!" );
-		#Ifdef TARGET_ZCODE;
-		if (location == nothing || parent(player) == nothing) read buffer parse;
-		else read buffer parse DrawStatusLine;
-		#Ifnot; ! TARGET_GLULX;
-		KeyboardPrimitive(buffer, parse);
-		#Endif; ! TARGET_
-		(+ playerinput +) =buffer;
-		PrintText( parse-->0);
-		PrintText(" - ");
-		PrintText( buffer-->1);
-		PrintText( "Bye!" );
-		break;
-	}
-	-)
-[	(-VM_ReadKeyboard(buffer, parse);-)]
+playerinput is a snippet variable that varies.
 
-[
-		for ( (+ i +) =1 : (+ i +) <=parse->0 : (+ i +) = (+ i +) + 1) {
-			print (char) parse->(+ i +);
-			(+ playerinput +) =(+ playerinput +) + parse->(+ i +);
-		};
-]
-
-
-
-[To decide whether player consents:
-	say "[link]yes[end link] or [link]no[end link]>[line break][run paragraph on]";
-	While 1 is 1:
-		get an input;
-		say "Your command is: [player's command].";
-		if the player's command in lower case matches the text "yes":
-			decide on true;
-		if the player's command in lower case matches the text "no":
-			decide on false;
-		if the player's command in lower case matches the text "y":
-			decide on true;
-		if the player's command in lower case matches the text "n":
-			decide on false;
-		say "[link]yes[end link] or [link]no[end link]>[line break][run paragraph on]";
-]
+To get typed command as (S - a snippet): (-
+        KeyboardPrimitive(buffer, parse);
+        {S} = 100 + WordCount();  -)
 
 Book 1 - Variable Definitions
 
