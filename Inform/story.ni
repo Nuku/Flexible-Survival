@@ -2251,11 +2251,12 @@ To lose:
 	say "[victory entry]";
 	infect;
 	if hp of player is less than 1, now hp of player is 1;
+	now combat abort is 1;
 	increase the XP of the player by lev entry divided by two;
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	decrease the score by 1;
 	decrease the morale of the player by 3;
-	decrease the menu depth by 1;
+[	decrease the menu depth by 1;]
 
 
 This is the flee rule:
@@ -2297,7 +2298,6 @@ This is the submit rule:
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 	wait for any key;
-	now combat abort is 1;
 [	decrease the menu depth by 1;]
 
 combat abort is a number that varies.	
