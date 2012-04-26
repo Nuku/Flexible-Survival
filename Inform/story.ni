@@ -3597,8 +3597,12 @@ This is the finish stats rule:
 	now started is 1;
 	say "You have decided your physical talents, but are you a man or a woman?";
 	wait for any key;
-	change the current menu to table of Sex Choice;
-	carry out the displaying activity;
+	say "Do you want to be [link]m[end link](ale) or [link]f[end link](emale)?>[run paragraph on]";
+	get typed command as playerinput;
+	if playerinput matches "m":
+		follow male choice rule;
+	otherwise:
+		follow female choice rule;
 	clear the screen;
 [	try looking;]
 	rule succeeds;
@@ -4641,8 +4645,10 @@ When play begins:
 		if calcnumber > 0 and calcnumber <= 6:
 			now current menu selection is calcnumber;
 			follow the finish stats rule;
-			if the rule succeeded:
+			if rule succeeded:
 				break;
+			otherwise:
+				clear the screen;
 		otherwise if calcnumber is 8:
 			follow the prerestore the game rule;
 			break;
