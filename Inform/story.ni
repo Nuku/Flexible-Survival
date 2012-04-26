@@ -3628,7 +3628,7 @@ This is the finish stats rule:
 			now tempnum is 1;
 			follow female choice rule;
 		otherwise:
-			say "Type "m" or "f".> [run paragraph on]";
+			say "Type 'm' or 'f'.> [run paragraph on]";
 	clear the screen;
 [	try looking;]
 	rule succeeds;
