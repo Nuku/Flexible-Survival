@@ -3371,7 +3371,7 @@ This is the self examine rule:
 	rule succeeds;
  
 This is the location choice rule:
-	choose row current menu selection in the current menu;
+	choose row current menu selection in the table of starting location;
 	if title entry is "Bunker":
 		say "You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.";
 	otherwise if title entry is "Caught Outside":
@@ -3435,8 +3435,18 @@ This is the final stats rule:
 	now the capacity of the player is five times the strength of the player;
 	now the menu depth is 0;
 	clear the screen;
-	change the current menu to table of Starting Location;
-	carry out the displaying activity;
+	while 1 is 1:
+		repeat with y running from 1 to number of filled rows in table of Starting Location:
+			choose row y from the table of Starting Location;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "Type the number corresponding to the scenario you want to play> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of Starting Location:
+			now current menu selection is calcnumber;
+			follow the location choice rule;
+			if rule succeeded, break;
+		otherwise:
+			say "Invalid Selection.";
 	clear the screen;
 [	try looking;]
 	try looking;
@@ -4656,8 +4666,10 @@ When play begins:
 			say "Invalid Selection.";
 	repeat with x running through featsets:
 		now x is a part of the player;
+	clear the screen;
 	say "Select your first two, free, feats, by clicking one of the below:[line break]";
 	featget;
+	clear the screen;
 	say "And now the second.";
 	funfeatget;
 	clear the screen;
@@ -4673,10 +4685,6 @@ When play begins:
 	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
 	if the player consents:
 		ban menu;
-[		repeat with n running through flags:
-			say "Would you like to ban [N] flagged creatures from the game?";
-			if the player consents:
-				now n is banned;]
 	repeat through the table of random critters:
 		let bad be 0;
 		repeat with n running through all banned flags:
