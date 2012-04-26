@@ -2515,6 +2515,7 @@ To Combat Menu:
 	while hp of player is greater than 1 and monsterhp is greater than 1:
 		if combat abort is 1:
 			now combat abort is 0;
+			wait for any key;
 			try looking;
 			continue the action;
 		say "Choose your action: [line break]";

@@ -58,7 +58,7 @@ Featqualified is usually 0.
 			let found be 0;
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
-				if playerinput in lower case matches the text title entry in lower case:
+				if the title entry matches the text playerinput:
 					now current menu selection is y;
 					follow the gainfeat rule;
 					now found is 1;
@@ -113,7 +113,7 @@ To FunFeatget:
 			let found be 0;
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
-				if playerinput in lower case matches the text title entry in lower case:
+				if the title entry matches the text playerinput:
 					now current menu selection is y;
 					follow the gainfeat rule;
 					now found is 1;
