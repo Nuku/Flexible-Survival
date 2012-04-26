@@ -280,7 +280,7 @@ This is the gainfeat rule:
 		add nam to feats of player;
 		say "You have gained '[nam]'!";
 		wait for any key;
-		decrease menu depth by 1;
+[		decrease menu depth by 1;			]
 		increase featgained of player by 1;
 		if nam is "Automatic Survival", decrease score by 600;
 		if nam is "More Time", extend game by 24;
