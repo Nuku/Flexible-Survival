@@ -3618,11 +3618,17 @@ This is the finish stats rule:
 	say "You have decided your physical talents, but are you a man or a woman?";
 	wait for any key;
 	say "Do you want to be [link]m[end link](ale) or [link]f[end link](emale)?>[run paragraph on]";
-	get typed command as playerinput;
-	if playerinput matches "m":
-		follow male choice rule;
-	otherwise:
-		follow female choice rule;
+	now tempnum is 0;
+	while tempnum is 0:
+		get typed command as playerinput;
+		if playerinput matches "m":
+			now tempnum is 1;
+			follow male choice rule;
+		otherwise if playerinput matches "f":
+			now tempnum is 1;
+			follow female choice rule;
+		otherwise:
+			say "Type "m" or "f".> [run paragraph on]";
 	clear the screen;
 [	try looking;]
 	rule succeeds;
@@ -3891,7 +3897,8 @@ the conversation of Doctor Matt is { "empty" };
 Instead of conversing the doctor matt:
 	if hp of testerbot is 0 and testerbot is in Primary Lab:
 		now hp of testerbot is 1;
-		say "'I have finished work on a new device to help with the analysis of affects of the infection upon a person's lustful urges and sexual proclivities,' he says, pointing to the boxy robot slumped against the wall.  'The testing robot has been built for the use in this regard.  Please feel free to use it as you see fit.  I want a wide sample of data, so come back often.  The robot will only be available for use this week though before I have to send it off to the military's scientists so they may analyze the data.'";
+		say "'The military has returned my testing robot, wanting more data on the affects of the infection upon a person's lustful urges and sexual proclivities,' he says, pointing to the boxy robot slumped against the wall.  'The testing robot has been built for the use in this regard.  Please feel free to use it as you see fit.  I want a wide sample of data, so come back often.  The robot will only be available briefly though before I have to send it off to the military's scientists so they may analyze the data.'";
+		say "'When they returned it, they also included a note about its [']unfriendly disposition['].  So I've given it a nice smile,' he says, pointing to the poorly aligned smile on the robot's boxy face.  The edges of the large sticker seem scratched and frayed, as if the robot tried to pull it off, but couldn't with its pincher hands.  Either ordered to stop or resigned to leave it there, the robot now has a big, friendly grin stuck to its face.";
 		wait for any key;
 	if hp of doctor matt is 100:
 		say "'If you are listening to this, you are probably still in the city. My condolences. I have left behind some facilities for you. You will find they can enhance your abilities due to the nanite infection.";
@@ -4659,7 +4666,6 @@ When play begins:
 		repeat with y running from 1 to number of filled rows in table of start game:
 			choose row y from the table of start game;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - ABORT[as]0[end link][line break]";
 		say "Type the number corresponding to the stat you want +5 in> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= 6:
