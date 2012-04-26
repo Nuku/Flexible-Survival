@@ -2451,10 +2451,6 @@ This is the player attack rule:
 	if monsterhp is greater than 0:
 		Retaliate;
 [		change the current menu to table of Basic Combat;]
-		if the hp of the player is less than 1 or combat abort is 1:
-[			now combat abort is 0;
-			decrease the menu depth by 1;]
-			try looking;
 	otherwise:
 		follow the cock descr rule;
 		follow the breast descr rule;
@@ -2512,7 +2508,7 @@ to numberfy (x - a snippet):
 		now calcnumber is 0;
 	
 To Combat Menu:
-	while hp of player is greater than 1 and monsterhp is greater than 1:
+	while hp of player is greater than 0 and monsterhp is greater than 0:
 		if combat abort is 1:
 			now combat abort is 0;
 			wait for any key;
@@ -2557,7 +2553,6 @@ To Combat Menu:
 			follow the flee rule;
 			next;
 		say "Invalid action.";
-		
 
 to Pet level up:
 	increase level of companion of player by 1;
