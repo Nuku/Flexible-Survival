@@ -4631,12 +4631,28 @@ When play begins:
 	follow the random stats rule;
 	increase the score by 10;
 [	follow the finish stats rule;]
-	change the current menu to the table of Start Game;
-	carry out the displaying activity;
+	while 1 is 1:
+		repeat with y running from 1 to number of filled rows in table of start game:
+			choose row y from the table of start game;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - ABORT[as]0[end link][line break]";
+		say "Type the number corresponding to the stat you want +5 in> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= 6:
+			now current menu selection is calcnumber;
+			follow the finish stats rule;
+			if the rule succeeded:
+				break;
+		otherwise if calcnumber is 8:
+			follow the prerestore the game rule;
+			break;
+		otherwise:
+			say "Invalid Selection.";
 	repeat with x running through featsets:
 		now x is a part of the player;
-	say "Select your first, free, feat, by clicking one of the below:[line break]";
+	say "Select your first two, free, feats, by clicking one of the below:[line break]";
 	featget;
+	say "And now the second.";
 	funfeatget;
 	clear the screen;
 	if scenario is "Rescuer Stranded":
