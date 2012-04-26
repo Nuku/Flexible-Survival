@@ -2518,7 +2518,7 @@ To Combat Menu:
 			wait for any key;
 			try looking;
 			continue the action;
-		say "Choose your action: [line break]";
+		say "Choose your action: A(ttack), I(tem), P(ass), S(ubmit), F(lee)[line break]";
 		repeat through table of basic combat:
 			say "[link][title entry][end link][line break][run paragraph on]";
 		get typed command as playerinput;
