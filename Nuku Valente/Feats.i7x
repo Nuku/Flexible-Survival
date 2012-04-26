@@ -24,6 +24,9 @@ Check featgetting:
 		if doctor mouse is not visible, say "You should see Dr Mouse about that." instead;
 
 carry out featgetting:
+	featget;
+
+[
 	blank out the whole of table of gainable feats;
 	repeat with x running through functional featsets:
 		try addfeating x;
@@ -33,6 +36,7 @@ carry out featgetting:
 	otherwise:
 		change the current menu to table of Gainable Feats;
 		carry out the displaying activity;
+]
 
 Featqualified is a number that varies.
 Featqualified is usually 0.
@@ -112,6 +116,7 @@ To FunFeatget:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
 				now current menu selection is calcnumber;
 				follow the gainfeat rule;
+				decrease featgained of player by 1;
 				if featqualified is 0, break;
 			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
