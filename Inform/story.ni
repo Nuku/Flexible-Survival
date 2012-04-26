@@ -24,6 +24,10 @@ To wait for any key:
 	say "[link]more[as] [end link]";
 	keypause;
 
+to clear the screen and hyperlink list:
+	clear the screen;
+	now hyperlink list is {}.
+
 To keypause:
 	(- KeyPause(); -)
 
@@ -1589,8 +1593,8 @@ To process (X - a grab object):
 			otherwise:
 				delete medkit;
 	if x is a pepperspray:
-		if current menu is table of combat items:
-			say "[usepepperspray]";
+		if inafight is 1:
+			say "[line break][usepepperspray]";
 		otherwise:
 			say "It would not be good idea to use that on yourself.  Spicy eyes!";
 	if x is a healing booster:
@@ -2317,8 +2321,7 @@ This is the flee rule:
 		say "You fail to get away.";
 		Retaliate;
 		if the hp of the player is less than 1:
-[			decrease the menu depth by 1;]
-			try looking;
+			lose;
 
 This is the submit rule:
 	choose row monster from the table of random critters;
@@ -2482,49 +2485,52 @@ This is the player attack rule:
 		Retaliate;
 [		change the current menu to table of Basic Combat;]
 	otherwise:
-		follow the cock descr rule;
-		follow the breast descr rule;
-		let ok be 1;
-		if "Control Freak" is listed in feats of player:
-			say "Do you want to perform after combat scene?";
-			if the player consents:
-				now ok is 1;
-			otherwise:
-				now ok is 0;
-		if ok is 1, say "[defeated entry] ";
-		increase the XP of the player by lev entry times two;
-		if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by (lev entry divided by 2);
-		if the player is not lonely:
-			increase the xp of the companion of the player by lev entry times two;
-			if "Ringmaster" is not listed in feats of player:
-				decrease the xp of the player by ( lev entry times 2 ) divided by 3;
-		increase the morale of the player by 1;
-		let z be 0;
-		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
-			now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
-			increase lootchance entry by z;
-		otherwise if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
-			now z is lootchance entry divided by 3;
-			increase lootchance entry by z;
-		let yy be ( ( ( perception of player - 10 ) / 2 ) * 3 );	[minor perception bonus to looting, maxed at 30 PER]
-		if yy > 30, now yy is 30;
-		if lootchance entry > 50, now yy is ( yy * ( 100 - lootchance entry ) ) divided by 100;
-		if lootchance entry <= 50, now yy is ( yy * lootchance entry ) divided by 100;
-		if a random chance of ( lootchance entry + yy ) in 100 succeeds:
-			say "You gain 1 x [loot entry]!";
-			add loot entry to invent of player;
-		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
-			decrease lootchance entry by z;
-		decrease the menu depth by 1;
-		if ok is 1, wait for any key;
-		try looking;
-	[if the menu depth is greater than 0, carry out the displaying activity;]
-	[if the menu depth is 0, try looking;]
+		win;
+
+to win:
+	choose row monster from table of random critters;
+	follow the cock descr rule;
+	follow the breast descr rule;
+	let ok be 1;
+	if "Control Freak" is listed in feats of player:
+		say "Do you want to perform after combat scene?";
+		if the player consents:
+			now ok is 1;
+		otherwise:
+			now ok is 0;
+	if ok is 1, say "[defeated entry]";
+	increase the XP of the player by lev entry times two;
+	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by (lev entry divided by 2);
+	if the player is not lonely:
+		increase the xp of the companion of the player by lev entry times two;
+		if "Ringmaster" is not listed in feats of player:
+			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
+	increase the morale of the player by 1;
+	let z be 0;
+	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
+		now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
+		increase lootchance entry by z;
+	otherwise if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+		now z is lootchance entry divided by 3;
+		increase lootchance entry by z;
+	let yy be ( ( ( perception of player - 10 ) / 2 ) * 3 );	[minor perception bonus to looting, maxed at 30 PER]
+	if yy > 30, now yy is 30;
+	if lootchance entry > 50, now yy is ( yy * ( 100 - lootchance entry ) ) divided by 100;
+	if lootchance entry <= 50, now yy is ( yy * lootchance entry ) divided by 100;
+	if a random chance of ( lootchance entry + yy ) in 100 succeeds:
+		say "You gain 1 x [loot entry]!";
+		add loot entry to invent of player;
+	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+		decrease lootchance entry by z;
+	if ok is 1, wait for any key;
+	clear the screen and hyperlink list;
 	rule succeeds;
 
 predestiny is a number that varies.
 
 calcnumber is a number that varies.
+
+inafight is a number that varies.	[used to detect if player is in a fight (item use)]
 
 To get a number:
 	get typed command as playerinput;
@@ -2536,13 +2542,14 @@ to numberfy (x - a snippet):
 		now calcnumber is the number understood;
 	otherwise:
 		now calcnumber is 0;
-	
+
 To Combat Menu:
+	now inafight is 1;
 	while hp of player is greater than 0 and monsterhp is greater than 0:
 		if combat abort is 1:
 			now combat abort is 0;
 			wait for any key;
-			try looking;
+			clear the screen and hyperlink list;
 			continue the action;
 		say "Choose your action: A(ttack), I(tem), P(ass), S(ubmit), F(lee)[line break]";
 		repeat through table of basic combat:
@@ -2750,6 +2757,7 @@ To fight:
 		carry out the displaying activity;
 		clear the screen;]
 		Combat Menu;
+		now inafight is 0;
 		let needed be ( level of player plus one ) times 10;
 		if "Fast Learner" is listed in feats of player:
 			now needed is ( level of player plus one ) times 8;
@@ -2779,6 +2787,7 @@ To challenge:
 [	change the current menu to table of Basic Combat;
 	carry out the displaying activity;]
 	Combat Menu;
+	now inafight is 0;
 	if xp of player is greater than ( level of player plus one ) times 10:
 		level up;
 	if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:

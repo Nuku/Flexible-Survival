@@ -279,7 +279,6 @@ This is the gainfeat rule:
 	if player consents:
 		add nam to feats of player;
 		say "You have gained '[nam]'!";
-		wait for any key;
 [		decrease menu depth by 1;			]
 		increase featgained of player by 1;
 		if nam is "Automatic Survival", decrease score by 600;
@@ -303,6 +302,7 @@ This is the gainfeat rule:
 			Now Zoo entrance is known;
 			Now Dry Plains is known;
 			Now Museum Foyer is known;
-
+	wait for any key;
+	clear the screen and hyperlink list;
 
 Feats ends here.

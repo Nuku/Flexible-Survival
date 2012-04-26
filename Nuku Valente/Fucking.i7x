@@ -152,10 +152,6 @@ to say testerbotselection:
 			wait for any key;
 		clear the screen;
 
-to clear the screen and hyperlink list:
-	clear the screen;
-	now hyperlink list is {}.
-
 [This is the section to put the chosen option into effect, playing out the sex scene.]
 
 This is the testerbotsexy rule:
