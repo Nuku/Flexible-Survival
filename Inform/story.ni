@@ -2522,6 +2522,7 @@ To Combat Menu:
 		repeat through table of basic combat:
 			say "[link][title entry][end link][line break][run paragraph on]";
 		get typed command as playerinput;
+		clear the screen;
 		if playerinput in lower case exactly matches the text "":
 			follow the player attack rule;
 			next;
