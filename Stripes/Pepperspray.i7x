@@ -1,5 +1,5 @@
-Version 2 of Pepperspray by Stripes begins here.
-[version 2.1 - New feats added]
+Version 3 of Pepperspray by Stripes begins here.
+[version 3 - Hyperlinked]
 
 
 battleitem is a number that varies.
@@ -20,8 +20,7 @@ to say pepperspraydrain:
 
 
 to say usepepperspray:
-	change the current menu to table of pepperspraychoice;
-	carry out the displaying activity;
+	select an option from the table of pepperspraychoice;
 
 this is the peppersprayflee rule:
 	[Perform an attempt to flee at +4 from the weakened enemy]
@@ -38,16 +37,15 @@ this is the peppersprayflee rule:
 	if the roll plus the attack bonus minus the defense bonus is greater than 8:
 		say "Using the pepperspray to briefly disable the [name entry], you manage to make your escape.";
 		say "[pepperspraydrain]";
-		wait for any key;
-		decrease the menu depth by 1;
+		now combat abort is 1;
 	otherwise:
 		say "You try to escape using the pepperspray, but fail.";
 		say "[pepperspraydrain]";
 		say "[weakretaliate]";
 		wait for any key;
 		if the hp of the player is less than 1:
-			decrease the menu depth by 1;
-	decrease the menu depth by 1;		[move an extra level back up to the overworld]
+			lose;
+	rule succeeds;
 
 
 this is the peppersprayattack rule:
@@ -66,48 +64,12 @@ this is the peppersprayattack rule:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
 		say "[weakretaliate]";
 		wait for any key;
-		decrease the menu depth by 1;
-		change the current menu to table of Basic Combat;
-		if the hp of the player is less than 1 or combat abort is 1:
-			now combat abort is 0;
-			decrease the menu depth by 1;
+		if the hp of the player is less than 1:
+			lose;
 	otherwise:
-		follow the cock descr rule;
-		follow the breast descr rule;
-		let ok be 1;
-		if "Control Freak" is listed in feats of player:
-			say "Do you want to perform after combat scene?";
-			if the player consents:
-				now ok is 1;
-			otherwise:
-				now ok is 0;
-		if ok is 1, say "[defeated entry] ";
-		increase the XP of the player by lev entry times two;
-		if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by (lev entry divided by 2);
-		if the player is not lonely:
-			increase the xp of the companion of the player by lev entry times two;
-			if "Ringmaster" is not listed in feats of player:
-				decrease the xp of the player by ( lev entry times 2 ) divided by 3;
-		increase the morale of the player by 1;
-		let z be 0;
-		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
-			now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
-			increase lootchance entry by z;
-		otherwise if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
-			now z is lootchance entry divided by 3;
-			increase lootchance entry by z;
-		if a random chance of lootchance entry in 100 succeeds:
-			say "You gain 1 x [loot entry]!";
-			add loot entry to invent of player;
-		if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
-			decrease lootchance entry by z;
-		decrease the menu depth by 1;
-		decrease the menu depth by 1;		[move up an extra menu level back to overworld]
-		if ok is 1, wait for any key;
-	clear the screen;
-	[if the menu depth is greater than 0, carry out the displaying activity;]
-	[if the menu depth is 0, try looking;]
+		win;
 	rule succeeds;
+
 
 to say enhancedattack:
 	choose row monster from the table of random critters;
@@ -288,12 +250,6 @@ to say weakretaliate:
 			say "You are [descr].";
 		otherwise:
 			say "[Name Entry] misses!";
-	if hp of the player is greater than 0:
-		say "";
-		[wait for any key;]
-		[carry out the displaying activity;]
-	otherwise:
-		Lose;
 	rule succeeds;
 
 to say enhancedavoidance:
