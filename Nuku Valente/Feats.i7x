@@ -37,7 +37,7 @@ carry out featgetting:
 Featqualified is a number that varies.
 Featqualified is usually 0.
  
- To Featget:
+To Featget:
 	blank out the whole of table of gainable feats;
 	repeat with x running through functional featsets:
 		try addfeating x;
@@ -48,24 +48,23 @@ Featqualified is usually 0.
 		[change the current menu to table of Gainable Feats;
 		carry out the displaying activity;]
 		now featqualified is 1;
-		repeat with y running from 1 to number of filled rows in table of gainable feats:
-			choose row y from the table of gainable feats;
-			say "[link][title entry][end link] ";
-		say "[line break]";
 		while 1 is 1:
-			say "Type the name of the feat you want> [run paragraph on]";
-			get typed command as playerinput;
-			let found be 0;
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
-				if the title entry matches the text playerinput, case insensitively:
-					now current menu selection is y;
-					follow the gainfeat rule;
-					now found is 1;
-					break;
-			if featqualified is 0, break;
-			if found is 0, say "Invalid Feat.";
-				
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - ABORT[as]0[end link][line break]";
+			say "Type the number corresponding to the feat you want> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
+				now current menu selection is calcnumber;
+				follow the gainfeat rule;
+				if featqualified is 0, break;
+			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				say "Selection aborted.";
+				continue the action;
+			otherwise:
+				say "Invalid Feat.";
+
 featgrabbing is an action applying to one topic.
 
 understand "featgrab [text]" as featgrabbing.
@@ -103,25 +102,22 @@ To FunFeatget:
 		[change the current menu to table of Gainable Feats;
 		carry out the displaying activity;]
 		now featqualified is 1;
-		repeat with y running from 1 to number of filled rows in table of gainable feats:
-			choose row y from the table of gainable feats;
-			say "[link][title entry][end link] ";
-		say "[line break]";
 		while 1 is 1:
-			say "Type the name of the feat you want> [run paragraph on]";
-			get typed command as playerinput;
-			let found be 0;
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
-				if the title entry matches the text playerinput, case insensitively:
-					now current menu selection is y;
-					follow the gainfeat rule;
-					now found is 1;
-					break;
-			if featqualified is 0:
-				decrease featgained of player by 1;
-				break;
-			if found is 0, say "Invalid Feat.";
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - ABORT[as]0[end link][line break]";
+			say "Type the number corresponding to the feat you want> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
+				now current menu selection is calcnumber;
+				follow the gainfeat rule;
+				if featqualified is 0, break;
+			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				say "Selection aborted.";
+				continue the action;
+			otherwise:
+				say "Invalid Feat.";
 
 Addfeating is an action applying to one thing.
 
