@@ -76,6 +76,21 @@ The yes or no message is a text that varies. The yes or no message is "[link]yes
 
 playerinput is a snippet variable that varies.
 
+To select an option from (curtable - a table name):
+	while 1 is 1:
+		repeat with y running from 1 to number of filled rows in curtable:
+			choose row y from curtable;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "Type the number corresponding to the choice you want> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in curtable:
+			now current menu selection is calcnumber;
+			choose row calcnumber from curtable;
+			follow the toggle entry;
+			break;
+		otherwise:
+			say "Invalid Selection.";
+			
 To get typed command as (S - a snippet): (-
         KeyboardPrimitive(buffer, parse);
         {S} = 100 + WordCount();  -)

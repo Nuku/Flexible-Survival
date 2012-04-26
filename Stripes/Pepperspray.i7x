@@ -322,6 +322,5 @@ Table of pepperspraychoice
 title	subtable	description	toggle
 "Spray and Attack"	--	"Spicy Eyes!!!"	peppersprayattack rule
 "Spray and Flee"	--	"Run Away!"	peppersprayflee rule
-"Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters]"	--	"I am fit as a fiddle"	--
 
 Pepperspray ends here.
