@@ -974,8 +974,23 @@ This is the combat item rule:
 	if there is no title in row 1 of table of combat items:
 		say "You have no combat ready items to use!";
 	otherwise:
-		change the current menu to table of Combat Items;
-		carry out the displaying activity;
+		while 1 is 1:
+			clear the screen;
+			repeat with y running from 1 to number of filled rows in table of combat items:
+				choose row y from the table of combat items;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - ABORT[as]0[end link][line break]";
+			say "Type the number corresponding to the item to be used> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of combat items:
+				now current menu selection is calcnumber;
+				follow the combat item process rule;
+				break;
+			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				say "Selection aborted.";
+				continue the action;
+			otherwise:
+				say "Invalid Choice.";
 
 This is the combat pass rule:
 	retaliate;
