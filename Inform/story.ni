@@ -4,8 +4,7 @@ Book 0 - Pre game prep stuff
 
 Release along with an interpreter. 
 Use memory economy.
-Use fast route-finding.
-Use fast route-finding.
+Use slow route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 950000.
@@ -143,6 +142,10 @@ The player has a text called bodyname. Bodyname is usually "human";
 The player has a text called facename. Facename is usually "human";
 The player has a text called skinname. Skinname is usually "human";
 The player has a text called cockname. cockname is usually "human";
+The child has a text called bodyname. Bodyname is usually "human";
+The child has a text called facename. Facename is usually "human";
+The child has a text called skinname. Skinname is usually "human";
+The child has a text called cockname. cockname is usually "human";
 The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
