@@ -32,7 +32,7 @@ To keypause:
 	(- KeyPause(); -)
 
 
-The release number is 51.
+The release number is 52.
 The story creation year is 2010.
 The maximum score is 2500.
 
