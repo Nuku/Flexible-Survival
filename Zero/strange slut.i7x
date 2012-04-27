@@ -286,14 +286,14 @@ When Play begins:
 	now desc entry is "[slutydesc]";
 	now face entry is "is that a rabbit's, complete with a pair of long ears and twitching nose.  A slut's collar has also formed around your neck.  Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "Your have a (your text)."] 
 	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."] 
-	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur";[ skin Description, format as the text "You have (your text)."] 
-	now tail entry is "You have a short and fluffy rabbit tail";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "constently dribbling bunny";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."] 
+	now tail entry is "You have a short and fluffy rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ] 
+	now cock entry is "constantly dribbling bunny";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "it stretches out into a rabbit's muzzle, two long rabbit ears sprouting from the top of your head a second later.  A slut's collar forms around your neck"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you rapidly loses fat, your body becoming that of a sexy bunny"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft and silky, white fur covers your body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a soft and fluffy rabbit's tail sprouts"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes that of a rabbit's, uncontrolibly dribbling cum"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it becomes that of a rabbit's, uncontrollably dribbling cum"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 3;
 	now dex entry is 15;
 	now sta entry is 5;					
