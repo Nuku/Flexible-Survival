@@ -257,16 +257,16 @@ When Play begins:
 	now defeated entry is "[beattheMistress]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[losetoMistress]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[Mistressdesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "many sluty heads";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "many sluty bodies";	[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "mismatched  fur";	[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have many mismatched tails.";	[ Tail desc., written as a full sentence or left blank for none. ] 
-	now cock entry is "slutty cock";						[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "impossible";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "impossible";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "impossible";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "impossible";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "impossible";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "is that a rabbit's, complete with a pair of long ears and twitching nose.  A slut's collar has also formed around your neck.  Any time you start to remove it, you are distracted by a need to play with yourself";[ Face description, format as the text "Your have a (your text)."] 
+	now body entry is "that of a sexy rabbit's, with large bunny paws and strong, shapely legs";[ Body Description, format as the text "Your Body is (your text)."] 
+	now skin entry is "short, [one of]velvety, [or]soft, [or]shiny, [at random]white fur all over your";[ skin Description, format as the text "You have (your text)."] 
+	now tail entry is "You have a short and fluffy rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ] 
+	now cock entry is "constantly dribbling bunny";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face change entry is "it stretches out into a rabbit's muzzle, two long rabbit ears sprouting from the top of your head a second later.  A slut's collar forms around your neck"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you rapidly loses fat, your body becoming that of a sexy bunny"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "soft and silky, white fur covers your body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a soft and fluffy rabbit's tail sprouts"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it becomes that of a rabbit's, uncontrollably dribbling cum"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;			[ The player's stats will move towards these values through infection. ]
 	now dex entry is 25;			[ Only the monster's dexterity has any effect in combat. ]
 	now sta entry is 15;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
@@ -277,7 +277,7 @@ When Play begins:
 	now hp entry is 200;			[ The monster's starting hit points. ]
 	now lev entry is 15;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 15;			[ Monster's average damage when attacking. ]
-	now area entry is "Nowere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
@@ -293,7 +293,6 @@ When Play begins:
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
-
 
 		     
 Training center ends here.
