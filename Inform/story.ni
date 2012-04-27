@@ -107,7 +107,7 @@ The player has text called name.
 The player has a number called Energy.
 A person has a number called HP.
 The player has a number called MaxHP.
-The player has a number called XP.
+A person has a number called XP.
 A person has a number called Level.
 The player has a number called Strength.
 A person has a number called Dexterity.
