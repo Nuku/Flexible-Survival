@@ -4640,6 +4640,14 @@ Include Honey by Stripes.
 Book 10 - Let the Games Begin
 
 
+understand "saveword" as savewording;
+
+savewording is an action applying to nothing.
+
+Carry out savewording:
+	say "You can hear Trixies voice in your mind, whispering the reality spell for the world as it is...";
+	say "[magic word]";
+
 to say promptsay:
 	let x be the location of the player;
 	let z be the number of entries in invent of x;
@@ -4657,6 +4665,7 @@ to say promptsay:
 	if humanity of player is less than 50:
 		say "[link][bracket]UNHINGED[close bracket][as]use journal[end link] ";
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
+	say "[link][bracket]Save[close bracket][as]saveword[end link] ";
 	say "[line break]";
 	say "Exits: ";
 	repeat with nam running through valid directions:
