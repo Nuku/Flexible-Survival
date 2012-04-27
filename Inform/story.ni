@@ -2282,7 +2282,7 @@ To lose:
 	follow the cock descr rule;
 	follow the breast descr rule;
 	now lost is 1;
-	say "[victory entry]";
+	say "[victory entry][line break]";
 	infect;
 	if hp of player is less than 1, now hp of player is 1;
 	now combat abort is 1;
