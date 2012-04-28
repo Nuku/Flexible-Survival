@@ -2606,6 +2606,7 @@ to win:
 		now reward is reward * 2;
 	if lev entry is greater than 8:
 		now reward is reward * 2;
+	increase freecred by reward;
 	say "A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
 	if ok is 1, wait for any key;
 	clear the screen and hyperlink list;
