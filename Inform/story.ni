@@ -157,6 +157,7 @@ A person has a list of text called conversation.
 
 playon is a number that varies.
 the player has a list of text called invent. 
+the player has a list of text called vials. 
 Rooms has a list of text called invent. 
 The player has a list of text called feats.
 A person can be a trader.
@@ -449,6 +450,7 @@ title	subtable	description	toggle
 "Caught Outside"	--	--	location choice rule
 "Rescuer Stranded"	--	--	location choice rule
 "Forgotten"	--	--	location choice rule
+"Researcher"	--	--	location choice rule
 "Hard mode"	--	--	location choice rule
 
 
@@ -1078,7 +1080,30 @@ carry out navigating:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;
 	follow turnpass rule;
-	
+
+understand "vial [text]" as vialing.
+
+Vialing is an action applying to one topic.
+
+carry out vialing:
+	let t be the topic understood;
+	let target be text;
+	let found be 0;
+	let z be 1;
+	let q be a topic;
+	repeat with x running through vials of player:
+		now q is x;
+		if t in lower case is x in lower case:
+			now target is x;
+			now found is 1;
+			break;
+		increase z by 1;
+	if found is 0:
+		say "You don't seem to have any such vial.";
+		continue the action;
+	say "What harm could a terribly infectious bio nanite be? Down the hatch!";
+	infect target;
+	remove entry z from vials of player;
 
 understand the command "i" and "inv" and "inventory" as something new.
 
@@ -1093,6 +1118,17 @@ does the player mean doing something with the medkit: it is very likely.
 
 carry out Inventorying:
 	sort invent of player;
+	sort vials of player;
+	if the number of entries in vials of player is greater than 0:
+		say "Your infection vial collection consists of(Type vial name to use a vial without clicking):[line break]";
+		let norepeat be a list of text;
+		repeat with x running through vials of player:
+			if x is listed in norepeat, next;
+			add x to norepeat;
+			let count be 0;
+			repeat with z running through vials of player:
+				if z is x, increase count by 1;
+			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] [X] x [count][line break]";
 	let dseed be 0;
 	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
@@ -2287,7 +2323,10 @@ To lose:
 	follow the breast descr rule;
 	now lost is 1;
 	say "[victory entry][line break]";
-	infect;
+	if scenario is "Researcher":
+		say "";
+	otherwise:
+		infect;
 	if hp of player is less than 1, now hp of player is 1;
 	now combat abort is 1;
 	increase the XP of the player by lev entry divided by two;
@@ -2526,6 +2565,9 @@ to win:
 		add loot entry to invent of player;
 	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
 		decrease lootchance entry by z;
+	if scenario is "Researcher" and ( a random chance of 1 in 3 succeeds or "Expert Researcher" is listed in feats of player):
+		say "You manage to extract a vial of [name entry] nanites for study and use.";
+		add name entry to vials of player;
 	if ok is 1, wait for any key;
 	clear the screen and hyperlink list;
 	rule succeeds;
@@ -3420,6 +3462,8 @@ This is the location choice rule:
 		say "You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
 	otherwise if title entry is "Hard mode":
 		say "You always had a desire to challenge yourself so purposely waited for some stronger opponents to appear before venturing out. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
+	otherwise if title entry is "Researcher":
+		say "You are not stranded at all. You came to explore, catalog, and interact with this absoluately fascinating outbreak. You've been given immunizations to casual infection(You won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[line break]";
 	say "Continue?";
 	if the player consents:
 		now looknow is 0;
@@ -4766,10 +4810,16 @@ When play begins:
 		process dirty water;
 		process dirty water;
 	clear the screen;
-	say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
-	wait for any key;
-	say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.";
-	wait for any key;
+	if scenario is "Researcher":
+		say "The helicopter brought you into the devestated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
+		wait for any key;
+		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
+		wait for any key;
+	otherwise:
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
+		wait for any key;
+		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.";
+		wait for any key;
 	say "Welcome to...";
 	wait for any key;
 
