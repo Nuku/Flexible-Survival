@@ -161,10 +161,10 @@ to say roopubsex5:
 
 to say roofloorshow:
 	let randomgender be a random number between 1 and 2;
-	if randomgender is 1, say "[randomdesc]";			[male creature list from Strange Sluts]
-	if randomgender is 2, say "[randomdesc2]";		[female creature list from Strange Sluts]
+[	if randomgender is 1, say "[randomdesc]";			[male creature list from Strange Sluts]
+	if randomgender is 2, say "[randomdesc2]";		[female creature list from Strange Sluts]]
 	let newgender be a random number between 1 and 5;
-	say "     It seems you've picked a fortunate time to come as another floor show starts up shortly after you finish up.  Another partially changed human is brought in for the group, this one a [if randomgender is 1]man[otherwise]woman[end if] with the head and paws of a [slutname].  [if randomgender is 1]He[otherwise]She[end if] is naked and trying to cover up with [if randomgender is 1]his paws as best he can[otherwise]her paws as best she can[end if], but the roos bringing in the new playtoy don't allow it, showing their prize off before laying [if randomgender is 1]him[otherwise]her[end if] down on the fucking table and taking turns.";
+	say "     It seems you've picked a fortunate time to come as another floor show starts up shortly after you finish up.  Another partially changed human is brought in for the group, this one a [if randomgender is 1]man[otherwise]woman[end if].  [if randomgender is 1]He[otherwise]She[end if] is naked and trying to cover up with [if randomgender is 1]his paws as best he can[otherwise]her paws as best she can[end if], but the roos bringing in the new playtoy don't allow it, showing their prize off before laying [if randomgender is 1]him[otherwise]her[end if] down on the fucking table and taking turns.";
 	say "     After several boomers and jills have had their chance, you get to move in and take a turn, finding they're well on their way to becoming another [if newgender < 4]sexy boomer[otherwise if newgender > 4]sexy jill[otherwise]sexy roo herm[end if].  Caught up in the excitement as you are, ";
 	if cocks of player > 0 and newgender > 3:
 		say "you eagerly move in to take your turn riding her.  Lining your cock up, you sink it into the increasingly eager roo slut's dripping and well-used snatch, pounding away at her.  She moans and writhes on the pleasure, changing further as you add your thick seed to the mix already filling her.  When finished, you move around to let her lick you clean even as the next boomer moves up to take your place.";

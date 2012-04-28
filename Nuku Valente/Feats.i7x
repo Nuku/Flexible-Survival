@@ -181,6 +181,8 @@ instead of addfeating the fun feats:
 	addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
 
 instead of addfeating the basic feats:
+	if scenario is "Researcher":
+		addfeat "Expert Researcher" with "Your expert skills allow you to always get an infection vial from victories.";
 	addfeat "Survivalist" with "You are great at scavenging. When doing such, you get a +4 to finding things.";
 	addfeat "Roughing It" with "You can take a quick nap w/o a cot anywhere... just sleep with one eye open.";
 	if featunlock is 1:	[available after hospital quest]
