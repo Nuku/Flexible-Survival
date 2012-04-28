@@ -1108,6 +1108,8 @@ Carry out vialdropping:
 
 Vialing is an action applying to one topic.
 
+Researchbypass is a number that varies. Researchbypass is normally 0.
+
 carry out vialing:
 	let t be the topic understood;
 	let target be text;
@@ -1125,7 +1127,9 @@ carry out vialing:
 		say "You don't seem to have any such vial.";
 		continue the action;
 	say "What harm could a terribly infectious bio nanite be? Down the hatch!";
+	now researchbypass is 1;
 	infect target;
+	now researchbypass is 0;
 	remove entry z from vials of player;
 
 understand the command "i" and "inv" and "inventory" as something new.
@@ -2038,6 +2042,9 @@ To Infect:
 		if there is no name entry:
 			next;
 		break;
+	if scenario is "Researcher" and researchbypass is 0:
+		vialchance name entry;
+		continue the action;
 	let x be a random number from 1 to 5;
 	let bodyparts be { 1, 2, 3, 4, 5 };
 	sort bodyparts in random order;
@@ -2596,6 +2603,12 @@ to win:
 	if ok is 1, wait for any key;
 	clear the screen and hyperlink list;
 	rule succeeds;
+
+To Vialchance (x - a text):
+	if scenario is "Researcher" and ( a random chance of 1 in 3 succeeds or "Expert Researcher" is listed in feats of player):
+		say "You manage to extract a vial of [x] nanites for study and use.";
+		add x to vials of player;
+
 
 predestiny is a number that varies.
 
@@ -3777,6 +3790,9 @@ To Challenge (x - text):
 			break;
 
 To Infect (x - text):
+	if scenario is "Researcher" and researchbypass is 0:
+		vialchance x;
+		continue the action;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is x:
