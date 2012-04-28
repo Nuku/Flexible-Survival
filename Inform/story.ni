@@ -3254,7 +3254,7 @@ This is the turnpass rule:
 			extend game by 4;
 		otherwise:
 			if gestation of child is less than 0, now gestation of child is 1;
-	if the humanity of the player is less than 1:
+	if the humanity of the player is less than 1 and Scenario is not "Researcher":
 		end the game saying "Your mind is lost to the infection.";
 	decrease turns by 1;
 	if ( turns minus targetturns ) is 0 and playon is 0:
