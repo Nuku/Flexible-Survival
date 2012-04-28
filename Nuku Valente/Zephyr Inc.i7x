@@ -49,7 +49,7 @@ Larissa is a woman. "Manning the counter is a female human with no clear signs o
 Table of Zephyr Goods
 name	price	object	allowed
 "medkit"	30	medkit	true rule
-"water"		10	water	true rule
+"water bottle"		10	water bottle	true rule
 
 This is the true rule:
 	rule succeeds;
