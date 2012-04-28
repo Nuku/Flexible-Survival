@@ -79,9 +79,11 @@ fellforward is a number that varies.
 
 
 to say randominfect:
+	now researchbypass is 1;
 	sort table of random critters in random order;
 	now monster is 1;
 	infect;
+	now researchbypass is 0;
 
 
 instead of resolving sword nest:
