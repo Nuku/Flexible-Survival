@@ -4502,6 +4502,7 @@ Include Computers by Hellerhound.
 
 
 [Locations]
+Include Zephyr Inc by Nuku Valente.
 Include Red Light by Hiccup.
 Include High Rise District by Batroo.
 Include Stables by Sarokcat.
@@ -4873,5 +4874,8 @@ When play begins:
 		wait for any key;
 	say "Welcome to...";
 	wait for any key;
+	zephyrad rule in 1 turn from now;
+	
+
 
 
