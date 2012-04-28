@@ -4690,11 +4690,17 @@ to say promptsay:
 	now the command prompt is "[promptsay]";
 [	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
 
+hypernull is a number that varies. Hypernull is usually 0.
 
 When play begins:
 	repeat with q running from 1 to the number of rows in the table of game objects:
 		add name in row Q of table of game objects to allobjs;
 	change the right hand status line to "[list of valid directions]";
+	say "Do you want hyperlinks? [link]yes[end link] or [link]no[end link][run paragraph on]";
+	get typed command as playerinput;
+	if playerinput matches "no" or playerinput matches "n":
+		now hypernull is 1;
+		say "Hyperlinks disabled.";
 	follow the random stats rule;
 	increase the score by 10;
 [	follow the finish stats rule;]
