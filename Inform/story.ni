@@ -31,7 +31,7 @@ To keypause:
 	(- KeyPause(); -)
 
 
-The release number is 52.
+The release number is 53.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -1081,7 +1081,30 @@ carry out navigating:
 	move the player to the noun;
 	follow turnpass rule;
 
-understand "vial [text]" as vialing.
+understand "vialdrop [text]" as vialdropping.
+
+Vialdropping is an action applying to one topic.
+
+Carry out vialdropping:
+ 	let t be the topic understood;
+	let target be text;
+	let found be 0;
+	let z be 1;
+	let q be a topic;
+	repeat with x running through vials of player:
+		now q is x;
+		if t in lower case is x in lower case:
+			now target is x;
+			now found is 1;
+			break;
+		increase z by 1;
+	if found is 0:
+		say "You don't seem to have any such vial.";
+		continue the action;
+	say "You chuck the [target] vial away.";
+	remove entry z from vials of player;
+
+ understand "vial [text]" as vialing.
 
 Vialing is an action applying to one topic.
 
@@ -1120,7 +1143,7 @@ carry out Inventorying:
 	sort invent of player;
 	sort vials of player;
 	if the number of entries in vials of player is greater than 0:
-		say "Your infection vial collection consists of(Type vial name to use a vial without clicking):[line break]";
+		say "Your infection vial collection consists of:[line break](Type vial name to use a vial without clicking)[line break](type vialdrop vial name to destroy a vial)[line break]";
 		let norepeat be a list of text;
 		repeat with x running through vials of player:
 			if x is listed in norepeat, next;
@@ -1128,7 +1151,9 @@ carry out Inventorying:
 			let count be 0;
 			repeat with z running through vials of player:
 				if z is x, increase count by 1;
-			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] [X] x [count][line break]";
+			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] ";
+			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [x][end link] ";
+			say "[X] x [count][line break]";
 	let dseed be 0;
 	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
@@ -3979,7 +4004,10 @@ Instead of conversing the doctor matt:
 		stop the action;
 	if hp of doctor matt is 0:
 		say "'Welcome to Trevor Labs,' says the man in the hazmat suit, 'I am Doctor Salacious, but most just call me Doctor Matt. Since I didn't hear any scuffling, I presume Orthas let you in, so you are probably not a crazy mutant.'";
-		say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn[apostrophe]t know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I[apostrophe]m not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
+		if scenario is "Researcher":
+			say "He looks you over a moment, 'You don[']t look nearly as lost and confused as most.' He turns back to his computer a moment, tapping quickly, 'Are you another researcher? Excellent. I[']m looking into a cure for this plague, but I haven[']t made much progress. But I did find something else...";
+		otherwise:
+			say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn[apostrophe]t know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I[apostrophe]m not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
 		wait for any key;
 		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don[apostrophe]t look at me like that. Anyone not in a fully sealed environment is infected by now.[if humanity of player is less than 80] In fact I'd say you[apostrophe]ve already been pretty badly infected, interesting...[end if] But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself, 'Only one catch...'";
 		wait for any key;
