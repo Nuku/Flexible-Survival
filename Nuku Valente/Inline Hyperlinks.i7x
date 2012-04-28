@@ -59,6 +59,8 @@ The hyperlinked text is an indexed text variable. The hyperlinked text is "".
 The hyperlinked command is an indexed text variable. The hyperlinked command is "".
 
 To say link:
+	if hypernull is 1:
+		continue the action;
 	now the hyperlinked text is "";
 	now the hyperlinked command is "";
 	start capturing text.
@@ -71,6 +73,8 @@ To say as:
 To say end link:
 	let hyperlink index be a number;
 	stop capturing text;
+	if hypernull is 1:
+		continue the action;
 	if the hyperlinked text is "":
 		now the hyperlinked text is "[captured text]";
 	now the hyperlinked command is "[captured text]";
