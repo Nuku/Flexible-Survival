@@ -4417,9 +4417,9 @@ Include Pirate Island by Sarokcat.
 Include Tattoo Parlor by Sarokcat.
 Include Stablemasters by Sarokcat.
 Include Approaching the Capitol Building for FS by Sweraptor.
-Include Training center by Zero.
+[Include Training center by Zero.]
 Include GYM by Zero.
-Include Complex by Zero.
+[Include Complex by Zero.]
 Include Underwater Zone For Fs by Hellerhound.
 Include Power Plant by Hellerhound.
 Include Zoo by Hellerhound.
@@ -4564,8 +4564,8 @@ Include Albino Mouse by Stripes.
 Include Cat Ninjas by Stripes.
 Include Reindeer by Stripes.
 Include Snow Leopard for FS by Stripes.
-Include Strange Slut by Zero.
-Include Dominator by Zero.
+[Include Strange Slut by Zero.
+Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.
 Include Messy Pig for Fs by anonymous.
 Include Elf by Nuku Valente.
@@ -4625,7 +4625,7 @@ Include Orthas by Nuku Valente.
 Include Sven by Stripes.
 Include Frank by Stripes.
 Include Sally by Stripes.
-Include Max by Zero.
+[Include Max by Zero.]
 Include Fang by Stripes.
 Include Joanna by Stripes.
 
