@@ -156,7 +156,8 @@ A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
 
 playon is a number that varies.
-A object has a list of text called invent. 
+the player has a list of text called invent. 
+Rooms has a list of text called invent. 
 The player has a list of text called feats.
 A person can be a trader.
 Scenario is a text that varies.
