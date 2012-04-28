@@ -155,6 +155,7 @@ The player has a text called weapon type. Weapon type is usually "Melee";
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
 
+freecred is a number that varies.
 playon is a number that varies.
 the player has a list of text called invent. 
 the player has a list of text called vials. 
@@ -2600,6 +2601,12 @@ to win:
 	if scenario is "Researcher" and ( a random chance of 1 in 3 succeeds or "Expert Researcher" is listed in feats of player):
 		say "You manage to extract a vial of [name entry] nanites for study and use.";
 		add name entry to vials of player;
+	let reward be level entry * 2;
+	if level entry is greater than 4:
+		now reward is reward * 2;
+	if level entry is greater than 8:
+		now reward is reward * 2;
+	say "A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
 	if ok is 1, wait for any key;
 	clear the screen and hyperlink list;
 	rule succeeds;
