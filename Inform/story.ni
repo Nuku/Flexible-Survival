@@ -714,7 +714,7 @@ left	central	right
 "Location: [the player's surroundings]"	"XP:[xp of player]/[level up needed] Lvl: [level of player]"	"HP:[hp of player]/[maxhp of player]"
 "Exits: [List of valid directions]"	"Hunger: [hunger of player] Thirst: [thirst of player]"	"Score:[score]/[maximum score]"
 "Sanity: [humanity of player]/100"	"Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours"	"[if number of entries in childrenfaces is greater than 0]Children: [number of entries in childrenfaces][end if]"
-"[if menu depth > 0]N = Next[end if]"	"[if menu depth > 0]ENTER = Select[end if]"	"[if menu depth > 0]P = Previous[end if]"
+"Freecred: [freecred]"
 [" You are:[Player_Status],[Player_Gender_Status]"	""	""]
 
 
@@ -2601,10 +2601,10 @@ to win:
 	if scenario is "Researcher" and ( a random chance of 1 in 3 succeeds or "Expert Researcher" is listed in feats of player):
 		say "You manage to extract a vial of [name entry] nanites for study and use.";
 		add name entry to vials of player;
-	let reward be level entry * 2;
-	if level entry is greater than 4:
+	let reward be lev entry * 2;
+	if lev entry is greater than 4:
 		now reward is reward * 2;
-	if level entry is greater than 8:
+	if lev entry is greater than 8:
 		now reward is reward * 2;
 	say "A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
 	if ok is 1, wait for any key;
