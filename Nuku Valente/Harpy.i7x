@@ -12,12 +12,12 @@ Harpydefeat is a number that varies.
 Harpyconsent is a number that varies.
 
 to say Harpy attack:
-	if hp of player is greater than 0 and harpyfight is not 3:
+	if harpyfight is 3:
+		say "The harpy swoops in and grabs you, running her talonned hands over your body as the others close in around you.";
+		wait for any key;
+	otherwise if hp of player is greater than 0:
 		say "She swoops down and grabs you up, pressing her lips to yours. Peace sweeps through this form even as your heart hammers in your chest. You pull her tight as she draws you closer, swept away in the fierce exchange. You are unsure how long you remain like that, but eventually she sets you down and shakes her head, 'We will meet again, I hope.' and she takes off.";
 		now Harpyconsent is 1;
-		wait for any key;
-	if hp of player is greater than 0 and harpyfight is 3:
-		say "The harpy swoops in and grabs you, running her talonned hands over your body as the others close in around you.";
 		wait for any key;
 	otherwise:
 		say "She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her fustration, she flaps her wings and retreats.";

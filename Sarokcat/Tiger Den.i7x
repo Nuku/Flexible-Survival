@@ -82,7 +82,7 @@ Instead of Resolving a TigerVSTaur:
 		if the player consents:
 			say "Deciding to side with the obviously winning side, you immediately move to cut off the Tiger mans escape, he stares at you hopelessly, as with your help the tigertaur soon manages to pin him down.  His attitude soon changes, as the strong tigertaur rubs up against his body, causing him to moan in pleasure as it massages him with its pawlike hands, his body changing into a more suitable one under its lustful attentions. Soon, the tigerlike man has acquired a brand new set of female genetalia, which the taur above the new herm is happy to put to use.  You watch, unable to look away and panting in lust at the erotic scene before you, as the tigertaur fucks the tiger underneath her, even while his body changes and shifts, its middle elongating into a tauric form of its own, as large breasts sprout on the newest tigertaurs chest. Soon they both explode into a messy climax, roaring out their pleasure for all to hear, and the first taur pulls herself off the newest tigertaur, it is only as they both turn to look at you that you realize you are still standing there out in the open now next to two very horny tigertaurs.  And it looks like they both want to thank you personally for your help in the recent scuffle....";
 			challenge "tigertaur";
-			stop the action;
+			now TigerVSTaur is resolved;
 		otherwise:
 			say "Deciding to aid the slightly more human like creature, you quickly engage the tigertaur in combat, as the tiger man falls back and tries to recover!";
 			challenge "tigertaur";
@@ -93,8 +93,10 @@ Instead of Resolving a TigerVSTaur:
 			move player to Tiger den;
 			now Tiger den is known;
 			now TigerVSTaur is resolved;
+			now battleground is "void";		[blocks a post-event fight]
 	otherwise:
 		say "Deciding to let the two infected beasts finish their little dominance battle in privacy, you continue along your way without stopping to see what happens.";
+		now TigerVSTaur is resolved;
 
 		
 
