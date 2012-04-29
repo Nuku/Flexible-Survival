@@ -2083,9 +2083,11 @@ To Infect:
 		if there is no name entry:
 			next;
 		break;
-	if scenario is "Researcher" and researchbypass is 0:
 		vialchance name entry;
+	if scenario is "Researcher" and researchbypass is 0:
 		continue the action;
+	if scenario is "Researcher" or nanite collector is equipped:
+		vialfy;
 	let x be a random number from 1 to 5;
 	let bodyparts be { 1, 2, 3, 4, 5 };
 	sort bodyparts in random order;

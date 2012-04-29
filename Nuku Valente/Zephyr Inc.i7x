@@ -48,12 +48,26 @@ Larissa is a woman. "Manning the counter is a female human with no clear signs o
 
 The description of Larissa is "She is about five and a half feet, with sun tanned flash. She seems perfectly human, and oddness in this city. Her namebadge, worn on her generous chest, reads 'Larissa'. She had brown straight hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It looks cute on her. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
 
+Table of Game Objects(continued)
+name	desc	weight	object
+"nanite collector"	"A great and ponderous object that is worn on the back and can draw in nanites to produce infection vials. Interesting."	25	nanite collector
+
+nanite collector is equipment. It is not temporary.
+
 Table of Zephyr Goods
 name	price	object	allowed
+"nanite collector"	1000	nanite collector	noresearch rule
 "medkit"	300	medkit	true rule
 "water bottle"		100	water bottle	true rule
 
+
+
 This is the true rule:
+	rule succeeds;
+
+This is the noresearch rule:
+	if scenario is "Researcher":
+		rule fails;
 	rule succeeds;
 
 Zephyr Inc ends here.
