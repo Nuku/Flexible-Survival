@@ -170,6 +170,8 @@ A armament is a kind of grab object.
 A armament has a text called weapon.
 A armament has a text called weapon type.
 A armament has a number called Weapon Damage.
+Equipment is a kind of grab object.
+Equipment can be equipped or not equipped. Equipment is usually not equipped.
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious. 
@@ -254,7 +256,7 @@ Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.
 The description of Grey Abbey Library is "[abbey desc]".
 Bunker is a room.  The description of Bunker is "[bunker desc]";
 
-The invent of Bunker is { "medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
+The invent of Bunker is { "face mask", "medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
@@ -396,7 +398,9 @@ name	desc	weight	object
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A matress. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
 "dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
+"face mask"	"A simple, flimsy, thing you wear on your face. Maybe it will help? Probably not."	3	face mask
 
+face mask is equipment. It is a part of the player. It is not temporary.
 journal is a grab object. It is a part of the player. It is not temporary.
 cot is a grab object. It is a part of the player. It is not temporary.
 understand "Bed" as cot.
@@ -1173,6 +1177,9 @@ carry out Inventorying:
 					say "(wielded)";
 					if object entry is improved:
 						say "(improved)";
+				if object entry is equipment:
+					if object entry is equipped:
+						say "(equipped)";
 				say " x ";
 				let number be 0;
 				repeat with  y running through invent of player:
@@ -1658,6 +1665,13 @@ To process (X - a grab object):
 			now weapon damage of player is weapon damage of x;
 			now weapon type of player is weapon type of x;
 			say "You ready your [x].";
+	if x is equipment:
+		if x is equipped:
+			say "You stop using the [x].";
+			now x is not equipped;
+		otherwise:
+			say "You start using the [x].";
+			now x is equipped;
 	if x is a medkit:
 		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
 		if "Expert Medic" is listed in the feats of the player:
@@ -1755,6 +1769,15 @@ carry out littering something(called x):
 	if x is wielded:
 		say "You're wielding that, take it off first.";
 		stop the action;
+	repeat with Q running through invent of the the player:
+		increase number by 1;
+		if q exactly matches the text printed name of x, case insensitively:
+			increase found by 1;
+	if x is an equipment:
+		if x is equipped:
+			if found is less than 2:
+				say "You're using that right now. Stop using it before you drop it.";
+				continue the action;
 	repeat with Q running through invent of the the player:
 		increase number by 1;
 		if q exactly matches the text printed name of x, case insensitively:
