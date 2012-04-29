@@ -2026,13 +2026,15 @@ This is the sex change rule:
 
 
 To grow breasts by (x - a number):
-		follow the breast descr rule;
-		let oldbreast be descr;
-		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-		increase breast size of player by a random number from 1 to x;
-		if breast size of player is greater than 26, now breast size of player is 26;
-		follow the breast descr rule;
-		say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+	if "Flat Chested" is listed in feats of player:
+		continue the action;
+	follow the breast descr rule;
+	let oldbreast be descr;
+	say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+	increase breast size of player by a random number from 1 to x;
+	if breast size of player is greater than 26, now breast size of player is 26;
+	follow the breast descr rule;
+	say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
 
 
 To Infect:
@@ -2133,7 +2135,7 @@ To Infect:
 				decrease breasts of player by 2;
 				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
 			increase breast size of player by 2;
-		if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
+		if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and ( ( "Male Preferred" is not listed in feats of player and "Flat Chested" is not listed in feats of player )  or "Breasts" is listed in feats of player ):
 			follow the breast descr rule;
 			let oldbreast be descr;
 			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
@@ -2235,7 +2237,7 @@ To Infect:
 					decrease breasts of player by 2;
 					say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
 				increase breast size of player by 2;
-			if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and "Male Preferred" is not listed in feats of player:
+			if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and ( "Male Preferred" is not listed in feats of player or "Breasts" is listed in feats of player):
 				follow the breast descr rule;
 				let oldbreast be descr;
 				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
