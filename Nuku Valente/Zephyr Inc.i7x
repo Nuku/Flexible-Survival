@@ -46,6 +46,8 @@ Carry out zephbuying:
 
 Larissa is a woman. "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.". She is in Zephyr Lobby.
 
+The description of Larissa is "She is about five and a half feet, with sun tanned flash. She seems perfectly human, and oddness in this city. Her namebadge, worn on her generous chest, reads 'Larissa'. She had brown straight hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It looks cute on her. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
+
 Table of Zephyr Goods
 name	price	object	allowed
 "medkit"	300	medkit	true rule
