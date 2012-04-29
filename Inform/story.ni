@@ -1777,6 +1777,7 @@ carry out littering something(called x):
 		increase number by 1;
 		if q exactly matches the text printed name of x, case insensitively:
 			increase found by 1;
+	now number is 0;
 	if x is an equipment:
 		if x is equipped:
 			if found is less than 2:
