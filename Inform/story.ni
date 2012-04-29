@@ -1146,19 +1146,6 @@ does the player mean doing something with the medkit: it is very likely.
 
 carry out Inventorying:
 	sort invent of player;
-	sort vials of player;
-	if the number of entries in vials of player is greater than 0:
-		say "Your infection vial collection consists of:[line break](Type vial name to use a vial without clicking)[line break](type vialdrop vial name to destroy a vial)[line break]";
-		let norepeat be a list of text;
-		repeat with x running through vials of player:
-			if x is listed in norepeat, next;
-			add x to norepeat;
-			let count be 0;
-			repeat with z running through vials of player:
-				if z is x, increase count by 1;
-			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] ";
-			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [x][end link] ";
-			say "[X] x [count][line break]";
 	let dseed be 0;
 	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
@@ -1195,6 +1182,34 @@ carry out Inventorying:
 				say "[line break]";
 		if the player is overburdened, say "*OVERBURDENED* ";
 		say "Total Weight: [weight]/[capacity of player] lbs.";
+	if scenario is "Researcher":
+		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vint[roman type][end link] for short.)";
+
+understand the command "vint" and "vial inventory" and "vial inv" as something new.
+
+VialInventorying is an action applying to nothing.
+
+understand "vint" as VialInventorying.
+understand "vial inventory" as VialInventorying.
+understand "vial inv" as VialInventorying.
+
+carry out VialInventorying:
+	sort vials of player;
+	if the number of entries in vials of player is 0:
+		say "Your collection of infection vials is empty.";
+	if the number of entries in vials of player is greater than 0:
+		say "Your infection vial collection consists of:[line break](Type [bold type]vial <name>[roman type] to use a vial without clicking)[line break](type [bold type]vialdrop <name>[roman type] to destroy a vial)[line break]";
+		let norepeat be a list of text;
+		repeat with x running through vials of player:
+			if x is listed in norepeat, next;
+			add x to norepeat;
+			let count be 0;
+			repeat with z running through vials of player:
+				if z is x, increase count by 1;
+			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] ";
+			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [x][end link] ";
+			say "[X] x [count][line break]";
+
 
 strongbacked is a number that varies.
 
@@ -2604,10 +2619,12 @@ to win:
 		say "You manage to extract a vial of [name entry] nanites for study and use.";
 		add name entry to vials of player;
 	let reward be lev entry * 2;
-	if lev entry is greater than 4:
+[	if lev entry is greater than 4:
 		now reward is reward * 2;
 	if lev entry is greater than 8:
-		now reward is reward * 2;
+		now reward is reward * 2;	]
+	if lev entry > 4, increase reward by ( lev entry / 4 );
+	if lev entry > 8, increase reward by ( lev entry / 3 );
 	increase freecred by reward;
 	say "A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
 	if ok is 1, wait for any key;
@@ -4767,6 +4784,9 @@ to say promptsay:
 		say "[link][bracket]THIRSTY[close bracket][as]drink water[end link] ";
 	if humanity of player is less than 50:
 		say "[link][bracket]UNHINGED[close bracket][as]use journal[end link] ";
+	say "[link][bracket]Inv[close bracket][as]inventory[end link] ";
+	if scenario is "Researcher":
+		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
 	say "[link][bracket]Save[close bracket][as]saveword[end link] ";
 	say "[line break]";
@@ -4774,7 +4794,6 @@ to say promptsay:
 	repeat with nam running through valid directions:
 		say "[link][printed name of nam][end link] ";
 	say "[if location of player is fasttravel][bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket][end if]";
-	say " [link]Inventory[end link]";
 	say ", Visible Things: ";
 	repeat with y running through the things in the location of the player:
 		if y is a door, next;
