@@ -172,6 +172,8 @@ A armament has a text called weapon type.
 A armament has a number called Weapon Damage.
 Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
+Equipment has a text called descmod. The descmod of equipment is usually "";
+Equipment has a text called placement. The placement of equipment is usually "end";
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious. 
@@ -401,6 +403,8 @@ name	desc	weight	object
 "face mask"	"A simple, flimsy, thing you wear on your face. Maybe it will help? Probably not."	3	face mask
 
 face mask is equipment. It is a part of the player. It is not temporary.
+The descmod of face mask is "A mask covers nose and mouth, made popular during the swine flu scare. ";
+The placement of face mask is "face";
 journal is a grab object. It is a part of the player. It is not temporary.
 cot is a grab object. It is a part of the player. It is not temporary.
 understand "Bed" as cot.
@@ -3483,7 +3487,24 @@ This is the self examine rule:
 			now cunttext is " have [cunts of the player] [descr] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. ";
 		otherwise:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [descr], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. ";
-	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player]. Your body is [body of the player]. [tail of the player]";
+	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "face":
+			say " [descmod of x][run paragraph on]";
+	say " Your body is [body of the player].[run paragraph on]";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "body":
+			say " [descmod of x][run paragraph on]";
+	if tail of player is "":
+		say "";
+	otherwise:
+		say " [tail of the player][run paragraph on]";
+	repeat with x running through equipped owned equipment:
+		if descmod of x is "", next;
+		if placement of x is "end":
+			say " [descmod of x]";
 	if cocktext is not "":
 		if cunttext is "":
 			follow the cock descr rule;
