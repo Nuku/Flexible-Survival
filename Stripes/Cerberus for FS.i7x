@@ -71,7 +71,7 @@ to say beatthecerberus:
 			otherwise:
 				say "[cerberusride]";
 		otherwise:									[FEMALE]
-			say ".  As you continue to stroke hir tailcock while kissing hir, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer.  Do you want to slake your urges by having those slobbery dog tonges in your [if cunts of player is 1]cunt[otherwise]cunts[end if] or if you want hir meatier cock to fill you?";
+			say ".  As you continue to stroke hir tailcock while kissing hir, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer.  Do you want to slake your urges by having those slobbery dog tongues in your [if cunts of player is 1]cunt[otherwise]cunts[end if] or if you want hir meatier cock to fill you?";
 			if the player consents:
 				say "[cerberusfemmeoral]";
 			otherwise:
