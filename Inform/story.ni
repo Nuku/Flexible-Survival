@@ -1193,7 +1193,7 @@ carry out Inventorying:
 				say "[line break]";
 		if the player is overburdened, say "*OVERBURDENED* ";
 		say "Total Weight: [weight]/[capacity of player] lbs.";
-	if scenario is "Researcher":
+	if scenario is "Researcher" or nanitemeter is 1:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vint[roman type][end link] for short.)";
 
 understand the command "vint" and "vial inventory" and "vial inv" as something new.
@@ -1206,10 +1206,17 @@ understand "vial inv" as VialInventorying.
 
 carry out VialInventorying:
 	sort vials of player;
+	if scenario is not "Researcher" and nanitemeter is not 1:
+		say "You don't possess anything of that nature.";
+		continue the action;
 	if the number of entries in vials of player is 0:
 		say "Your collection of infection vials is empty.";
 	if the number of entries in vials of player is greater than 0:
-		say "Your infection vial collection consists of:[line break](Type [bold type]vial <name>[roman type] to use a vial without clicking)[line break](type [bold type]vialdrop <name>[roman type] to destroy a vial)[line break]";
+		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial";
+		if ( scenario is "Researcher" or nanitemeter is 1 ) and Larissa is visible:
+			say " or [bold type]vialsell[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
+		say ".";
+		say "Your infection vial collection consists of:[line break]";
 		let norepeat be a list of text;
 		repeat with x running through vials of player:
 			if x is listed in norepeat, next;
@@ -1219,6 +1226,8 @@ carry out VialInventorying:
 				if z is x, increase count by 1;
 			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] ";
 			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [x][end link] ";
+			if ( scenario is "Researcher" or nanitemeter is 1 ) and Larissa is visible:
+				say "[link][bracket][bold type]S[roman type][close bracket][as]vialsell [x][end link] ";
 			say "[X] x [count][line break]";
 
 
@@ -2088,10 +2097,10 @@ To Infect:
 		if there is no name entry:
 			next;
 		break;
-	if scenario is "Researcher" and researchbypass is 0:
-		continue the action;
 	if scenario is "Researcher" or nanite collector is equipped:
 		vialchance name entry;
+	if scenario is "Researcher" and researchbypass is 0:
+		continue the action;
 	let x be a random number from 1 to 5;
 	let bodyparts be { 1, 2, 3, 4, 5 };
 	sort bodyparts in random order;
@@ -2644,9 +2653,7 @@ to win:
 		add loot entry to invent of player;
 	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
 		decrease lootchance entry by z;
-	if scenario is "Researcher" and ( a random chance of 1 in 3 succeeds or "Expert Researcher" is listed in feats of player):
-		say "You manage to extract a vial of [name entry] nanites for study and use.";
-		add name entry to vials of player;
+	vialchance (name entry);
 	let reward be lev entry * 2;
 [	if lev entry is greater than 4:
 		now reward is reward * 2;
@@ -2661,9 +2668,18 @@ to win:
 	rule succeeds;
 
 To Vialchance (x - a text):
-	if scenario is "Researcher" and ( a random chance of 1 in 3 succeeds or "Expert Researcher" is listed in feats of player):
-		say "You manage to extract a vial of [x] nanites for study and use.";
-		add x to vials of player;
+	if scenario is "Researcher" or "nanite collector" is listed in Invent of player:
+		let vialcollectible be 10 + ( 2 * intelligence of player );
+		if vialcollectible > 70, now vialcollectible is 70;
+		let vcoll be 0;
+		if a random number between 1 and 100 <= vialcollectible:
+			now vcoll is 1;
+		otherwise if "Expert Researcher" is listed in feats of player and a random number between 1 and 100 <= vialcollectible:
+			now vcoll is 1;
+		if vcoll is 1:
+			say "You manage to extract a vial of [x] nanites for study and use.";
+			add x to vials of player;
+			now vcoll is 0;
 
 
 predestiny is a number that varies.
@@ -3305,6 +3321,7 @@ This is the turnpass rule:
 			if gestation of child is less than 0, now gestation of child is 1;
 	if the humanity of the player is less than 1 and Scenario is not "Researcher":
 		end the game saying "Your mind is lost to the infection.";
+	if the humanity of the player < 1 and scenario is "Researcher", now humanity of player is 1;
 	decrease turns by 1;
 	if ( turns minus targetturns ) is 0 and playon is 0:
 		end the game saying "You survived until the rescue came.";
@@ -4831,7 +4848,7 @@ to say promptsay:
 	if humanity of player is less than 50:
 		say "[link][bracket]UNHINGED[close bracket][as]use journal[end link] ";
 	say "[link][bracket]Inv[close bracket][as]inventory[end link] ";
-	if scenario is "Researcher":
+	if scenario is "Researcher" or nanitemeter is 1:
 		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
 	say "[link][bracket]Save[close bracket][as]saveword[end link] ";

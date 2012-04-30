@@ -185,8 +185,6 @@ instead of addfeating the fun feats:
 	addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
 
 instead of addfeating the basic feats:
-	if scenario is "Researcher":
-		addfeat "Expert Researcher" with "Your expert skills allow you to always get an infection vial from victories.";
 	addfeat "Survivalist" with "You are great at scavenging. When doing such, you get a +4 to finding things.";
 	addfeat "Roughing It" with "You can take a quick nap w/o a cot anywhere... just sleep with one eye open.";
 	if featunlock is 1:	[available after hospital quest]
@@ -225,6 +223,8 @@ instead of addfeating the basic feats:
 	if stamina of player is greater than 14:
 		addfeat "Iron Stomach" with "Your belly has nano resistance! Eating or drinking infectious items fails to change you.";
 		addfeat "Toughened" with "You take less damage than others(-20% damage)";
+	if scenario is "Researcher" and ( intelligence of player > 14 or level of player >= 9 ):
+		addfeat "Expert Researcher" with "Your expert skills allow you a second opportunity to get an infection vial.";
 	if intelligence of player is greater than 14:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% xp needed to level.";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
