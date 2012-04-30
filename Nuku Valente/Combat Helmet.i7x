@@ -1,0 +1,42 @@
+Combat Helmet by Nuku Valente begins here.
+
+"Adds a combat helmet, and a situation to find it."
+
+
+Table of Game Objects(continued)
+name	desc	weight	object
+"combat helmet"	"A basic army helmet. It should provide some minor protection while worn."	1	combat helmet
+
+combat helmet is equipment. 
+It is not temporary. 
+The AC of combat helmet is 1. 
+The placement of combat helmet is "face". 
+The descmod of combat helmet is "A green and brown camo army helmet rests atop them.".
+The slot of combat helmet is "head". 
+
+lost gear is a situation.
+
+instead of resolving lost gear:
+	say "You happen across an old army surplus store. Your heart swells at the possibilities, only to sink as you notice that the door's been forced open. The place has already been looted, likely by other, desperate, but faster, survivors. It might be worth a look anyway?";
+	if the player consents:
+		say "You enter the store and begin to forage around. There has to be something worth having in here. A sudden noise comes from behind a rack of rotting clothes. A mutant!";
+		fight;
+		if lost is 1:
+			say "When you recover, it looks like the store has been emptied of what little it had to start. This is a loss. You make your way back to safer places.";
+			now lost gear is resolved;
+			continue the action;
+		say "With the way clear, you begin your search in earnest...";
+		let dice be a random number from 1 to 20;
+		let the bonus be (( the perception of the player minus 10 ) divided by 2);
+		if "Scavenger" is listed in feats of the player:
+			increase bonus by 4;
+		say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
+		if dice + bonus is greater than 20:
+			say "Hidden under the counter, you find an old army helmet. You snatch it up and tuck it into your backpack before leaving the, otherwise empty, store.";
+			add "combat helmet" to invent of player;
+			increase score by 5;
+		otherwise:
+			say "You come up empty for your efforts. Dejected, you return to safer places.";
+	now lost gear is resolved;
+
+Combat Helmet ends here.

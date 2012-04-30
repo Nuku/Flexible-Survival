@@ -4648,6 +4648,7 @@ Include Catapult Encounter by Hellerhound.
 Include Toy Store by Hellerhound.
 Include Assorted Events by Stripes.
 Include Food and Water Finding by Nuku Valente.
+Include Combat Helmet by Nuku Valente.
 Include Odd Weapons for FS by Hellerhound.
 Include Control Pills by Hellerhound.
 Include giving in by Hellerhound.
