@@ -174,6 +174,7 @@ Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
 Equipment has a text called descmod. The descmod of equipment is usually "";
 Equipment has a text called placement. The placement of equipment is usually "end";
+Equipment has a text called slot. The slot of equipment is usually "";
 Equipment has a number called AC. The AC of equipment is usually 0.
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
@@ -1684,6 +1685,13 @@ To process (X - a grab object):
 			say "You stop using the [x].";
 			now x is not equipped;
 		otherwise:
+			if slot of x is "":
+				let zq be 0;
+			otherwise:
+				repeat with z running through equipped equipment:
+					if slot of z is slot of object entry:
+						say "Your [z] is in the way!";
+						continue the action;
 			say "You start using the [x].";
 			now x is equipped;
 	if x is a medkit:
