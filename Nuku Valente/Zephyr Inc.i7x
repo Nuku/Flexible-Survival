@@ -40,13 +40,78 @@ Carry out zephbuying:
 		continue the action;
 	say "You purchase [name entry] for [price entry] creds.";
 	add name entry to invent of player;
+	if name entry is "nanite collector", now nanitemeter is 1;
 	decrease freecred by price entry;
 	decrease score by price entry divided by 5;
-	
+
+understand "vialsell [text]" as vialselling.
+
+Larissa has a list of text called vials.
+
+Vialselling is an action applying to one topic.
+
+check vialselling:
+	if Larissa is not visible, say "There's no one here who's buying." instead;
+
+Carry out vialselling:
+	let basevalue be 0;
+	let t be the topic understood;
+	let target be text;
+	let found be 0;
+	let z be 1;
+	let q be a topic;
+	repeat with x running through vials of player:
+		now q is x;
+		if t in lower case is x in lower case:
+			now target is x;
+			now found is 1;
+			break;
+		increase z by 1;
+	if found is 0:
+		say "You don't seem to have any such vial.";
+		continue the action;
+	say "Pulling out the sample vial, you offer to sell it to Larissa";
+	now found is 0;
+	repeat with x running through vials of Larissa:
+		if t in lower case is x in lower case:
+			increase found by 1;
+			if found > 4:
+				say ", but she shakes her head.  'We have no interest in further samples of that kind.  Try hunting for different game.'";
+				continue the action;
+	[locates target within the table of random critters]
+	now monster is 0;
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is target:
+			now monster is y;
+			break;
+	if monster is 0:
+		say ", but she shakes her head.  'I'm not really sure where you got that, but it's not on our acquisition list so we can't take it.'";
+		continue the action;
+	choose row monster in table of random critters;
+	now basevalue is ( lev entry * 2 );
+	if found is 1:
+		now basevalue is ( basevalue * 2 ) / 3;
+	otherwise if found > 1:
+		now basevalue is ( basevalue / ( found + 1 ) );
+	if basevalue < 1:
+		say ", but she shakes her head.  'We have met our quota for that sample and have no more interest nanites from [name entry] creatures.  Try hunting for bigger game.'";
+		continue the action;
+	if found is 0:
+		say " and she smiles, taking it from you.  'We were hoping to get one of these samples for your bureau's collection.'  She credits you for [basevalue] freecreds.";
+	otherwise if found is 1:
+		say " and she smiles, taking it from you.  'Thanks for another sample.  I can give you an okay price for that.'  She credits you for [basevalue] freecred(s).";
+	otherwise if found >= 2:
+		say " and she nods, taking it from you.  'We have a few of these already, so I can't pay you as much for more.'  She only credits you with [basevalue] freecred(s) for it.";
+	increase freecred by basevalue;
+	remove entry z from vials of player;
+	add name entry to vials of Larissa;
+
 
 Larissa is a woman. "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.". She is in Zephyr Lobby.
+The conversation of Larissa is { "We are looking for extracted vial samples.  If you obtain some, please bring it to me to '[bold type]vialsell <name>[roman type]' for a credited reward." }.
 
-The description of Larissa is "She is about five and a half feet, with sun tanned flash. She seems perfectly human, and oddness in this city. Her namebadge, worn on her generous chest, reads 'Larissa'. She had brown straight hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It looks cute on her. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
+The description of Larissa is "She is about five and a half feet, with suntanned flesh. She seems perfectly human - an oddness in this city. Her name badge, worn on her generous chest, reads 'Larissa'. She had brown straight hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It certainly looks cute on her though. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
 
 Table of Game Objects(continued)
 name	desc	weight	object
@@ -56,10 +121,13 @@ nanite collector is equipment. It is not temporary.
 The placement of it is "body".
 The descmod of it is " A great contraption rests across their back, with many valves and pipes, it looks more like a steampunk jetpack than anything else. Still, it has the Zephyr logo displayed boldly."
 
+nanitemeter is a number that varies.  nanitemeter is normally 0.	[marks if player bought a nanite collector]
+
 Table of Zephyr Goods
 name	price	object	allowed
 "nanite collector"	1000	nanite collector	noresearch rule
 "medkit"	300	medkit	true rule
+[ "pepperspray"	400	pepperspray	true rule	]
 "water bottle"		100	water bottle	true rule
 
 
@@ -68,7 +136,7 @@ This is the true rule:
 	rule succeeds;
 
 This is the noresearch rule:
-	if scenario is "Researcher":
+	if scenario is "Researcher" or nanitemeter is 1:
 		rule fails;
 	rule succeeds;
 
