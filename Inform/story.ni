@@ -31,7 +31,7 @@ To keypause:
 	(- KeyPause(); -)
 
 
-The release number is 53.
+The release number is 54.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -174,6 +174,7 @@ Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
 Equipment has a text called descmod. The descmod of equipment is usually "";
 Equipment has a text called placement. The placement of equipment is usually "end";
+Equipment has a number called AC. The AC of equipment is usually 0.
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious. 
@@ -2790,6 +2791,10 @@ To Retaliate:
 			let absorb be 0;
 			if "Toughened" is listed in feats of player:
 				increase absorb by dam divided by 5;
+			repeat with x running through equipped equipment:
+				increase absorb by ac of x;
+			if absorb is greater than dam:
+				now absorb is dam;
 			if absorb is greater than 0:
 				say "You prevent [absorb] damage!";
 			decrease hp of the player by dam;
