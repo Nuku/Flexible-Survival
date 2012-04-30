@@ -2669,7 +2669,7 @@ to win:
 	rule succeeds;
 
 To Vialchance (x - a text):
-	if scenario is "Researcher" or "nanite collector" is listed in Invent of player:
+	if scenario is "Researcher" or nanite collector is equipped:
 		let vialcollectible be 10 + ( 2 * intelligence of player );
 		if vialcollectible > 70, now vialcollectible is 70;
 		let vcoll be 0;
