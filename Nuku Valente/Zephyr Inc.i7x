@@ -2,51 +2,37 @@ Zephyr Inc by Nuku Valente begins here.
 
 "It[']s about time for Zephyr to show up around here."
 
+Section 1 - Zephyr Office
+
 This is the zephyrad rule:
 	say "A voice suddenly chimes out from your radio, 'Good day, wastelander. This is Zephyr Incorporated. After much demand, we have moved a branch office into your fine city. Coordinates follow. We here are Zephyr Inc are dedicated to the betterment of mankind through science. To start, we are rewarding all with a bounty on defeated hostiles. You will be alerted to your winnings. Put your money away. The US Government has collapsed,' the announcement goes on to claim, 'so we use a currency of our own devising, Free credits, also known as freecred or just creds. When you have some, swing on by and spend them on useful survival gear. We look forward to meeting you shortly.'";
 	now zephyr lobby is known;
 	
 Zephyr Lobby is a room. "This is a small Zephyr Inc branch. Their power is hard to argue with, as they actually have power, with brightly lit flourescents shining down from above. The floor is clean and swept. To the left are some chairs next to a table with old magazines on it. A few people loiter around, eating doughnuts and chatting, all in various stages of mutation. Your eyes are drawn to a [link]price sign[as]look price sign[end link] that hangs above the counter." It is fasttravel. It is private.
 
-The price sign is a backdrop. It is in Zephyr Lobby. The description of the price sign is "[price list]";
+instead of sniffing the Zephyr Lobby:
+	say "The office that Zephyr's set up here smells rather clean.  There is only a faint smell of sex and creatures in the air, probably wafting in from outside.";
 
-to say price list:
-	say "To buy an item, type buy (name here)";
-	repeat through table of zephyr goods:
-		follow allowed entry;
-		if rule failed:
-			next;
-		say "[link]Buy[as]buy [name entry][end link] ";
-		say "[name entry] - [price entry] Creds[line break]";
 
-understand the command "buy" as something new.
-ZephBuying is an action applying to one thing.
+Section 2 - Larissa
 
-Understand "buy [grab object]" as zephbuying.
-
-Does the player mean zephbuying the dirty water: It is very unlikely.
-
-Carry out zephbuying:
-	if the price sign is not visible:
-		say "I see no store here.";
-		continue the action;
-	if the noun is an object listed in the table of zephyr goods:
-		say "";
-	otherwise:
-		say "That doesn't seem to be sold here.";
-		continue the action;
-	if price entry is greater than freecred:
-		say "You can't afford the [name entry], it costs [price entry] freecred.";
-		continue the action;
-	say "You purchase [name entry] for [price entry] creds.";
-	add name entry to invent of player;
-	if name entry is "nanite collector", now nanitemeter is 1;
-	decrease freecred by price entry;
-	decrease score by price entry divided by 5;
-
-understand "vialsell [text]" as vialselling.
+Larissa is a woman. "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.". She is in Zephyr Lobby.
+The conversation of Larissa is { "We are looking for extracted vial samples.  If you obtain some, please bring it to me to '[bold type]vialsell <name>[roman type]' for a credited reward." }.
 
 Larissa has a list of text called vials.
+
+The description of Larissa is "She is about five and a half feet, with suntanned flesh. She seems perfectly human - an oddness in this city. Her name badge, worn on her generous chest, reads 'Larissa'. She had brown straight hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It certainly looks cute on her though. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
+
+instead of sniffing Larissa:
+	say "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer.  You do catch a faint hint of lilacs, probably a perfume.";
+
+instead of fucking Larissa:
+	say "Larissa pulls a spritz bottle out of the a drawer under the counter, spraying you with diluted vinegar.  You are driven back.  'Is everyone a horny freak now?  Why can't they just all leave me alone so I can work in peace?' she grumbles.";
+
+
+Section 3 - Selling Vials
+
+understand "vialsell [text]" as vialselling.
 
 Vialselling is an action applying to one topic.
 
@@ -108,10 +94,47 @@ Carry out vialselling:
 	add name entry to vials of Larissa;
 
 
-Larissa is a woman. "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.". She is in Zephyr Lobby.
-The conversation of Larissa is { "We are looking for extracted vial samples.  If you obtain some, please bring it to me to '[bold type]vialsell <name>[roman type]' for a credited reward." }.
+Section 4 - Purchasing from Zephyr
 
-The description of Larissa is "She is about five and a half feet, with suntanned flesh. She seems perfectly human - an oddness in this city. Her name badge, worn on her generous chest, reads 'Larissa'. She had brown straight hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It certainly looks cute on her though. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
+The price sign is a backdrop. It is in Zephyr Lobby. The description of the price sign is "[price list]";
+
+Instead of smelling the price sign:
+	say "The price sign has little in the way of scent of its own.";
+
+to say price list:
+	say "To buy an item, type buy (name here)";
+	repeat through table of zephyr goods:
+		follow allowed entry;
+		if rule failed:
+			next;
+		say "[link]Buy[as]buy [name entry][end link] ";
+		say "[name entry] - [price entry] Creds[line break]";
+
+understand the command "buy" as something new.
+ZephBuying is an action applying to one thing.
+
+Understand "buy [grab object]" as zephbuying.
+
+Does the player mean zephbuying the dirty water: It is very unlikely.
+
+Carry out zephbuying:
+	if the price sign is not visible:
+		say "I see no store here.";
+		continue the action;
+	if the noun is an object listed in the table of zephyr goods:
+		say "";
+	otherwise:
+		say "That doesn't seem to be sold here.";
+		continue the action;
+	if price entry is greater than freecred:
+		say "You can't afford the [name entry], it costs [price entry] freecred.";
+		continue the action;
+	say "You purchase [name entry] for [price entry] creds.";
+	add name entry to invent of player;
+	if name entry is "nanite collector", now nanitemeter is 1;
+	if name entry is "pepperspray", increase pepped by 1;
+	decrease freecred by price entry;
+	decrease score by price entry divided by 5;
 
 Table of Game Objects(continued)
 name	desc	weight	object
@@ -121,22 +144,26 @@ nanite collector is equipment. It is not temporary.
 The placement of it is "body".
 The descmod of it is " A great contraption rests across their back, with many valves and pipes, it looks more like a steampunk jetpack than anything else. Still, it has the Zephyr logo displayed boldly."
 
-nanitemeter is a number that varies.  nanitemeter is normally 0.	[marks if player bought a nanite collector]
-
 Table of Zephyr Goods
 name	price	object	allowed
-"nanite collector"	1000	nanite collector	noresearch rule
+"nanite collector"	500	nanite collector	noresearch rule
 "medkit"	300	medkit	true rule
-[ "pepperspray"	400	pepperspray	true rule	]
+"pepperspray"	350	pepperspray	pepper rule
 "water bottle"		100	water bottle	true rule
 
-
+nanitemeter is a number that varies.  nanitemeter is normally 0.	[marks if player bought a nanite collector]
+pepped is a number that varies.  pepped is normally 0.	[marks how many pepperspray a player's bought]
 
 This is the true rule:
 	rule succeeds;
 
 This is the noresearch rule:
 	if scenario is "Researcher" or nanitemeter is 1:
+		rule fails;
+	rule succeeds;
+
+This is the pepper rule:
+	if ( level of player / 4 ) > pepped:
 		rule fails;
 	rule succeeds;
 
