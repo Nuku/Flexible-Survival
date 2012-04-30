@@ -131,7 +131,7 @@ carry out activating:
 		
 
 
-Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. You remember how this tower was constructed to give power to the library. You could probably try to [bold type]fix[roman type] it.[otherwise]. The perimeter fence is melted and the ground is blackened, but the top is on and a green light is blinking above.[end if]".
+Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. You remember how this tower was constructed to give power to the library. You could probably try to [bold type]fix[roman type] it.[otherwise if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but the top is on and a green light is blinking above.[otherwise].  The perimeter fence is melted and the ground is blackened, but the top is on and the amber light is blinking, awaiting power.[end if]".
 Power Lines is fasttravel.
 
 
@@ -155,8 +155,10 @@ carry out towerfixing:
 	if a random number between one and 20 is greater than the strength of the player:
 		say "The tower top slips, and falls. Maybe you could try to fix it again?";
 	otherwise:
-		say "The tower top slides into place, and the stress on the wires is released. A green light begins blinking on top of the tower.";
-		now findwires is 2;
+		say "The tower top slides into place, and the stress on the wires is released. An amber light begins blinking on top of the tower.";
+		if fixedgens is 2:
+			say "The blinking light flashes a few times, then turns green, indicating power is up and running. Hooray!";
+			increase score by 200;
 		activatecomputers;
 
 computeron is a number that varies.
