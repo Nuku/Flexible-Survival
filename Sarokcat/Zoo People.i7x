@@ -131,21 +131,19 @@ carry out Diegotricking:
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll is greater than 18:
-		say "'Woah amazing!' Diego exclaims happily, 'Are you sure you aren[apostrophe]t part coyote? I mean Damn that was an impressive trick!' The coyote says as he shakes his head in admiration. 'That kinda trick will get some extra effort on my part, should take those silly military types ages to get it all sorted out!'";
+		say "'Woah amazing!' Diego exclaims happily, 'Are you sure you aren[apostrophe]t part coyote? I mean, Damn that was an impressive trick!' The coyote says as [if diegochanged is 0]he shakes his[otherwise]she shakes her[end if] head in admiration. 'That kinda trick will get some extra effort on my part.  Should take those silly military types ages to get it all sorted out!'";
 		increase Coyotetricks by 2;
 		extend game by 18; 
 		if Coyotetricks > 3 and prankevent is 0:
 			now Prank Aftermath is not resolved;
 			now prankevent is 1;
-		stop the action;
-	if diceroll is greater than 12:
+	otherwise if diceroll is greater than 12:
 		say "'Dang that was a good one! Not quite up to my usual standards of course, but pretty damn good!' Diego says with a happy grin on [if diegochanged is 0]his[otherwise]her[end if] face, 'I think I might be willing to try that one out on some of their scouts, might earn ya a bit of time ya see.";
 		extend game by 6;
 		increase Coyotetricks by 1;
 		if Coyotetricks > 3 and prankevent is 0:
 			now Prank Aftermath is not resolved;
 			now prankevent is 1;
-		stop the action;
 	otherwise:
 		say "'You call that a trick?' Diego says derisively, snickering at your pathetic attempt, 'Now this is a trick!' [if diegochanged is 0]he says as he[otherwise]she says as she[end if] swiftly whips out a trick that makes you stagger back in shock and makes you feel slightly less human.";
 		decrease humanity of player by 10;

@@ -87,6 +87,7 @@ name	desc	weight	object
 Ash Dragon Heart is a grab object.
 Ash Dragon Heart is infectious. The strain of Ash Dragon Heart is "Ash Dragator".
 the usedesc of Ash Dragon Heart is "With some trepedition you sink your teeth into the flesh of the Dragon heart. Food's food, right?.";
+The purified of Ash Dragon Heart is "food".
 
 instead of sniffing Ash Dragon Heart:
 	say "The meaty heart smells of bloody meat, soot and volcanic ash.";
