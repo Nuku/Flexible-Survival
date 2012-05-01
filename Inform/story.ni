@@ -20,7 +20,8 @@ Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
 To wait for any key:
-	say "[link]more[as] [end link]";
+	if hypernull is 0:
+		say "[link]more[as] [end link]";
 	keypause;
 
 to clear the screen and hyperlink list:
@@ -4647,6 +4648,7 @@ Include Catapult Encounter by Hellerhound.
 Include Toy Store by Hellerhound.
 Include Assorted Events by Stripes.
 Include Food and Water Finding by Nuku Valente.
+Include Combat Helmet by Nuku Valente.
 Include Odd Weapons for FS by Hellerhound.
 Include Control Pills by Hellerhound.
 Include giving in by Hellerhound.
