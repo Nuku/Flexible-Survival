@@ -2669,6 +2669,7 @@ to win:
 		now reward is reward * 2;
 	if lev entry is greater than 8:
 		now reward is reward * 2;	]
+	if lev entry > 2, increase reward by 1;
 	if lev entry > 4, increase reward by ( lev entry / 4 );
 	if lev entry > 8, increase reward by ( lev entry / 3 );
 	increase freecred by reward;
@@ -4788,6 +4789,7 @@ Include Trash Coon For FS by Stripes.
 Include Snow Bat For Fs by Stripes.
 Include Bottlenose Toy For Fs by Stripes.
 Include Mental Mouse For Fs by Stripes.
+Include Vulpogryph For Fs by Stripes.
 Include Candy Striper by Stripes.
 
 
@@ -4823,6 +4825,7 @@ Include Sally by Stripes.
 [Include Max by Zero.]
 Include Fang by Stripes.
 Include Joanna by Stripes.
+Include Solstice by Stripes.
 
 
 [Pets]

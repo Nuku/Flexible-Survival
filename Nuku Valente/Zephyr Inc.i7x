@@ -75,7 +75,7 @@ Carry out vialselling:
 		say ", but she shakes her head.  'I'm not really sure where you got that, but it's not on our acquisition list so we can't take it.'";
 		continue the action;
 	choose row monster in table of random critters;
-	now basevalue is ( lev entry * 2 );
+	now basevalue is ( ( lev entry * 7 ) / 4 );
 	if found is 1:
 		now basevalue is ( basevalue * 2 ) / 3;
 	otherwise if found > 1:
@@ -146,10 +146,10 @@ The descmod of it is " A great contraption rests across their back, with many va
 
 Table of Zephyr Goods
 name	price	object	allowed
-"nanite collector"	500	nanite collector	noresearch rule
+"nanite collector"	400	nanite collector	noresearch rule
 "medkit"	300	medkit	true rule
 "pepperspray"	350	pepperspray	pepper rule
-"water bottle"		100	water bottle	true rule
+"water bottle"		120	water bottle	true rule
 
 nanitemeter is a number that varies.  nanitemeter is normally 0.	[marks if player bought a nanite collector]
 pepped is a number that varies.  pepped is normally 0.	[marks how many pepperspray a player's bought]
@@ -163,7 +163,7 @@ This is the noresearch rule:
 	rule succeeds;
 
 This is the pepper rule:
-	if ( level of player / 4 ) > pepped:
+	if ( level of player / 4 ) < pepped:
 		rule fails;
 	rule succeeds;
 
