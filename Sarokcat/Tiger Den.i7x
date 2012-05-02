@@ -36,16 +36,8 @@ instead of conversing the Chase:
 	if Chasetalk is 1:
 		say "[one of]Hey good to see you came by again[or]'Hey I[apostrophe]m glad your back, I was starting to get worried about you out there.'[or]'I don[apostrophe]t know why we seem to still be pretty much our normal selves, and the tigertaurs aren[apostrophe]t'[or]I[apostrophe]m glad you came along when you did, I may love being a tigerman, but I don[apostrophe]t think I would enjoy being a tigertaur nearly as much[or]After all this is over, what do you think will happen to those of us who can still think clearly?[or]I wonder if they will put us infected people in some kind of large infected zoo when they finally retake the city, spending all your time sleeping and eating and fucking for an audience might not be pretty fun, but I wonder if they will let us have internet connections...[or]I swear the zoo is a mess now, but its still one of the safer places to forage it seems, there is some REALLY crazy stuff in other parts of the city that tries to grab ya.[or]Did you see those small packs of rabbits roaming around? God they always make my mouth water..[or]You should try sticking around down here with us until help arrives, sure you would probably end up a tiger like the rest of us, but that[apostrophe]s kinda a good thing to my mind.[or]I always loved tigers before all this, now I find I REALLY love tigers, if you know what I mean.[or]'While the tigertaurs can convert anyone it seems, us tigers seem especially vulnerable to them'[or]I used to be called Alex before all this, everyone just calls me Chase now though,' He says with a shrug, 'It seems more appropriate anyways.[at random]";  
 
-chasefucking is an action applying to nothing.
 
-Understand "fuck Chase" as chasefucking;
-
-check chasefucking:
-	if chase is not visible, say "who?" instead;
-
-
-
-carry out chasefucking:
+instead of fucking Chase:
 	if lastchasefucked - turns is less than 6:
 		say "'Sorry, I would love to spend some more time with you, but it looks like neither of us really are ready for that,' Chase says apologetically, 'Maybe we should take it slow and you should come back and visit me again later.'";
 		stop the action;
