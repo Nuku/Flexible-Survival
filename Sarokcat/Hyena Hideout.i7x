@@ -39,20 +39,7 @@ instead of conversing the gang members:
 Lastmemberfucked is a number that varies. Lastmemberfucked is usually 250.
 memberfucked is a number that varies. memberfucked is usually 0.
 
-memberfucking is an action applying to nothing.
-
-Understand "fuck Gang" as memberfucking;
-Understand "fuck Gang members" as memberfucking;
-Understand "fuck members" as memberfucking;
-Understand "fuck hyenas" as memberfucking;
-
-
-
-check memberfucking:
-	if gang members is not visible, say "who?" instead;
-
-
-Carry out memberfucking:
+instead of fucking the gang members:
 	if lastmemberfucked - turns is less than 4:
 		say "While several of the hyena gang members seem interested in what your offering, it seems most of the ones still hanging out here in the den are still recovering from their last romp, perhaps you should try to excite them later.'.";
 		stop the action;
@@ -165,14 +152,7 @@ Lastginafucked is a number that varies. Lastginafucked is usually 250.
 ginafucked is a number that varies. ginafucked is usually 0.
 
 
-ginafucking is an action applying to nothing.
-
-Understand "fuck Gina" as ginafucking;
-
-check ginafucking:
-	if gina is not visible, say "who?" instead;
-
-Carry out ginafucking:
+instead of fucking Gina:
 	if lastginafucked - turns is less than 8:
 		say "'Sorry, hun.  Still recovering from our last little romp,' she says with a wink.";
 		stop the action;
@@ -219,7 +199,6 @@ Carry out ginafucking:
 			say "'Lets play a little shall we?' Gina says as her hand reaches down to massage your warm wetness, causing you to gasp in surprise and immediate arousal.  She quickly takes advantage of your open mouth, covering it with her own rough muzzle in a very through and deep kiss, her tongue tangling with your own as the taste of her fills your mouth. You moan in pleasure as her fingers slip inside you, rubbing against your inner walls with her rough fingers as she begins to slowly rub them back and forth in you.  You moan in desperation and need as she teases your clit with her thumb, and her coarse fur rubs against your naked body as she grinds herself against your side.  Soon enough she brings you to the peak of orgasm, your body begging for just that last little bit of stimulation to push you over the edge, Gina stops for a minute, leaving you panting right at the edge, as her other hand goes down to her stiff cock, and begins stroking it.  Your unsure what she is doing until she begins moving her hand into you again in time with each stroke of her cock, within seconds you are crying out in orgasm, your tight folds gripping her wonderful fingers, even as she brings herself with her hand, her hot seed shooting all over your body as you both shudder in orgasm together.  You collapse bonelessly on the mattress, as she snuggles up next to you, her hands idly rubbing her seed into your skin as you both curl up together for a time.";
 		hyenaify;
 		increase ginaslut by 1;
-		stop the action;		
 
 
 
@@ -228,5 +207,3 @@ Carry out ginafucking:
 
 
 Hyena Hideout ends here.
-
-

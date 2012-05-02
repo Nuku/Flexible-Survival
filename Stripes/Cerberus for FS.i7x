@@ -6,12 +6,14 @@ Version 1 of Cerberus for FS by Stripes begins here.
 
 "Adds Cerberus to Flexible Survival."
 
+cerbfight is a number that varies.
 cerberusarousal is a number that varies.
 when play begins:
 	add { "Cerberus" } to infections of furry;
 	add { "Cerberus" } to infections of hermaphrodite;
 
 to say losetocerberus:
+	now cerbfight is 2;
 	if hp of player > 0:			[submit]
 		say "     Drawn in by this herm canine's exotic body, you give in to hir and offer yourself for hir amusement.  Shi runs hir paws over hir body and releases a chuckle that is partially a howl from all three heads.  Shi takes you into hir arms and runs hir paws over your body, groping and fondling you as shi slips off your clothes and backpack to better see what hir new bitch has brought hir to play with.";
 	otherwise:					[beaten]
@@ -36,6 +38,7 @@ to say beatthecerberus:
 	choose row monster from the table of random critters;
 	now cerberusarousal is 0;
 	let godoggygo be 0;
+	now cerbfight is 1;
 	say "     After your hard-fought battle, you manage to knock the triple-headed herm to the ground.  Shi moans and pants, tailcock leaking precum and pussy dripping juices from hir pent-up and unsatisfied arousal.  You look hir over, trying to decide what to do with hir now that you've knocked the fight out of hir";
 	if facename of player is "Cerberus":
 		say ".  Your other two heads end up making the decision for you, wresting control of your body from you and pushing you into hir arms.  You share slobbery, canine kisses with hir, quickly losing yourself in the pleasure as you somehow share in the sense of them all.  You soon give in as your three brains of you become of like mind and seek to sate your collective lusts with this attractive herm.";
