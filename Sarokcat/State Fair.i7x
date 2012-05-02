@@ -48,19 +48,7 @@ instead of conversing the Boris:
 		say "'You are definitely the best friend ever, I can't believe how much better I feel now that you helped me out, if I can ever do anything to help you out you just let me know!' The happy lion says with a smile on his muzzle.";
 
 
-
-
-borisfucking is an action applying to nothing.
-
-Understand "fuck boris the lion" as borisfucking;
-Understand "fuck boris" as borisfucking;
-
-check borisfucking:
-	if boris is not visible, say "who?" instead;
-
-
-
-carry out borisfucking:
+instead of fucking boris:
 	if borisquest is 0:
 		say "'Sorry hun, it[apostrophe]s not that I might not want to, but well, you see this WAS intended to be a family friendly fair.' Boris says with a sigh, 'And since we couldn't have the kiddies asking questions about things like that... well lets just say I[apostrophe]m currently ill equipped to do much of anything with you.' he says with a sad gesture to his featureless furred crotch.";
 		if furry is banned or girl is banned or guy is banned:

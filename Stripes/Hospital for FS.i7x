@@ -407,6 +407,7 @@ Instead of resolving a Finding a Way in:
 		now the player is in Hidden Lab;
 		now locked stairwell is unlocked;
 		now Finding a Way in is resolved;
+		now battleground is "void";		[prevents a post-event fight]
 	otherwise:
 		say "     You continue searching the hospital, but are unable to find your way through, reaching another dead end.  It seems you will have to continue to explore the hospital further to learn your way around.";
 
