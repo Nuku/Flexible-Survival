@@ -207,8 +207,8 @@ instead of fucking the Joanna:
 
 to say joannaselection:
 	blank out the whole of table of fucking options;
-	choose a blank row in table of fucking options;
 	if hp of joanna is not 2:
+		choose a blank row in table of fucking options;
 		now title entry is "Bukkake";
 		now sortorder entry is 1;
 		now description entry is "Lavish attention on her numerous genitalia to get a messy finish.";
@@ -262,8 +262,7 @@ to say joannaselection:
 		now description entry is "Take those tendrils all in one hole.";
 		now toggle entry is joannasexy rule;
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
+	select an option from table of fucking options;
 	clear the screen;
 
 This is the joannasexy rule:
@@ -451,5 +450,11 @@ when play ends:
 			say "     With your mind almost completely erased by your transformation into a plant, you forget about your pact with the hellhound.  But he does not forget.  Having given into your life as a corrupting plant creature infecting others, your dark contract has only been delayed to prepare you for a new role in the afterlife.";
 			say "     When that times comes at the end of your long life as a plant, you are pulled into the pits of Hades and given a life of as a foul tree there.  Having spent centuries growing and corrupting others in life, your body is now twisted and turned to new, dark aims on your unending task to satisfy the lustful urges of the demonic hounds.  They mark your large trunk with their foul, burning urine, letting its corruption seep into you.  Your vaginal flowers are fucked by the hound's cocks and your tendrils made to pump your tainted fluids into their bitches.  Your branches grow dark fruit which break open and release plant-like hounds to add to Hell's numbers.";
 		stop the action;
+
+when play ends:
+	say "     Joanna remains in the infected city when the military rolls through, happy with her new life in her garden.  It becomes a safe rest stop for visitors and explorers of the city.  She always welcomes them and makes many friends among them, sharing her beautiful and lustful body with them to satisfy their urges[if hp of Joanna >= 5].  She soon gets the nickname of [']Kinky Jo['], notorious for being up for pretty much any kind of fun imaginable with those who come to share in her garden's beauty[otherwise if hp of Joanna > 2].  Being a lustful plant herm, she's happy to please any guests to her lovely garden in numerous ways[end if]";
+	if humanity of player >= 10:
+		say ".  These visitors help you keep in touch with her, carrying the occasional letter to her.  She writes about her peaceful, happy life and the various visitors and friends she's made, always thankful for your timely rescue and continued friendship[if player is plantbodied and plantdefeat is 1].  She particularly enjoys hearing about your happy life as a lustful plant and sharing the plant seeds with your orgy group[end if].";
+
 
 Joanna ends here.
