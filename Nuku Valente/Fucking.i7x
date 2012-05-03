@@ -48,7 +48,7 @@ Section 2 - Demonstration Example
 [To build your own, the various Testerbot components would have to be renamed to prevent duplication.]
 
 Testerbot is a person.
-Testerbot is in Primary Lab.
+[ Testerbot is in Primary Lab.	]			[Removed again - testing over]
 The description of Testerbot is "[testerbotdesc]";
 The conversation of Testerbot is { "Disgusting!" }.
 lastfuck of Testerbot is normally 555.
