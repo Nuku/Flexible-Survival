@@ -12,7 +12,7 @@ when play begins:
 	add { "Centaur Mare" } to infections of girl;
 
 to say losetocentaurmare:
-	say "[if cocks of player > 0]Seeing exactly what she wants, the centaur mare turns around and flicks her tail aside, giving you a clear view of her dripping, winking, equine cunt.  Unable to help yourself, you dive forward and plunge your cock into the large centaur's equine body repeatedly.  She whinnies and moans in pleasure as you fuck her.  Lost in the excitment of the scent of her heat, it is only after a few wild thrusts that you cum inside her.  Snorting at the disappointingly short fuck, she gives a violent kick to your gut and she gallops off while you're stunned[otherwise]Not seeing what she wants, the centaur mare turns around and delivers a solid kick to your midsection before galloping off.[end if].";
+	say "[if cocks of player > 0]Seeing exactly what she wants, the centaur mare turns around and flicks her tail aside, giving you a clear view of her dripping, winking, equine cunt.  Unable to help yourself, you dive forward and plunge your cock into the large centaur's equine body repeatedly.  She whinnies and moans in pleasure as you fuck her.  Lost in the excitement of the scent of her heat, it is only after a few wild thrusts that you cum inside her.  Snorting at the disappointingly short fuck, she gives a violent kick to your gut and she gallops off while you're stunned[otherwise]Not seeing what she wants, the centaur mare turns around and delivers a solid kick to your midsection before galloping off.[end if].";
 	decrease hp of player by 10;
 	if "Male Preferred" is listed in feats of player and guy is not banned:		[change target to Stallion for infection]
 		repeat with y running from 1 to number of filled rows in table of random critters:
@@ -39,7 +39,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Centaur Mare";
-	now attack entry is "[one of]The centaur mare fires her bow at you, piercing your side with an arrow![or]The centaur mare charges at you, knocking you to the ground roughly![or]The centaur rears up and manages to land a heavy hoof on your shoulder![or]The centaur swings a punch at you, bashing you in the jaw![or]The mare turns around and whinnies, flicking her tail and winking her equine pussy at you tantilizingly![at random]";
+	now attack entry is "[one of]The centaur mare fires her bow at you, piercing your side with an arrow![or]The centaur mare charges at you, knocking you to the ground roughly![or]The centaur rears up and manages to land a heavy hoof on your shoulder![or]The centaur swings a punch at you, bashing you in the jaw![or]The mare turns around and whinnies, flicking her tail and winking her equine pussy at you tantalizingly![at random]";
 	now defeated entry is "[beatthecentaurmare]";
 	now victory entry is  "[losetocentaurmare]";
 	now desc entry is "[centaurmaredesc]";

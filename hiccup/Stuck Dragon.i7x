@@ -63,7 +63,7 @@ Instead of conversing the Dragoness:
 
 to say dragonessdesc:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]
-	say "     All you can see of this huge dragoness is the back half of her body.  She has beautiful, scarlet scales.  Her large body is firmly wedged in the double doorway, trapping her securely.  The infection must have caused her to rapidly grow to a huge size as she was trying to get through the doorway and became stuck before making it.  The concrete wall around the doorframe has cracked, but not given way yet.  Trapped as she is, her large legs are spread apart and pressed to the floor, keeping her pinned.  Under her large tail is her huge, dripping pussy is exposed... and vulnerable";
+	say "     All you can see of this huge dragoness is the back half of her body.  She has beautiful, scarlet scales.  Her large body is firmly wedged in the double doorway, trapping her securely.  The infection must have caused her to rapidly grow to a huge size as she was trying to get through the doorway and became stuck before making it.  The concrete wall around the doorframe has cracked, but not given way yet.  Trapped as she is, her large legs are spread apart and pressed to the floor, keeping her pinned.  Under her large tail is her huge, dripping pussy - exposed... and vulnerable";
 	if NoIntroduction is 0:									[before any intro/sex]
 		say ".  She would be helpless if you wanted to fuck her, but you wouldn't do that, would you?";
 	otherwise if lust of Christy is 0:							[talked, no sex]
@@ -71,7 +71,7 @@ to say dragonessdesc:
 	otherwise if remainder after dividing lust of Christy by 3 is 1:		[recently fucked]
 		say ".  You can still see the cum you left in her before dripping from her well-used cunt[if lust of Christy is not 1].  Nearby, there are several huge eggs on the ground next to her from fucking her earlier[end if].";
 	otherwise if remainder after dividing lust of Christy by 3 is 2:		[egg-stuffed]
-		say ".  Her belly has swollen up, pressing her even more tightly into the doorway and raising her pussy out of rear.  Touching it, you can feel the bumps of several large, hard forms inside her waiting to come out.  She moans in pleasure at your touch and squirms a little.  It looks like you've impregnated her[if lust of Christy is not 2] again.  Nearby, there are several huge eggs on the ground next to her from fucking her earlier[end if].";
+		say ".  Her belly has swollen up, pressing her even more tightly into the doorway and raising her pussy out of reach.  Touching her, you can feel the bumps of several large, hard forms inside her waiting to come out.  She moans in pleasure at your touch and squirms a little.  It looks like you've impregnated her[if lust of Christy is not 2] again.  Nearby, there are several huge eggs on the ground next to her from fucking her earlier[end if].";
 	otherwise if remainder after dividing lust of Christy by 3 is 0:		[ready for fucking]
 		say ".  Her belly has gone back to her normal size and there [if lust of Christy > 5]is another clutch of[otherwise]are several[end if] huge eggs on the ground next to her from fucking her earlier.";
 	if NoIntroduction is not 0:
@@ -259,7 +259,7 @@ Carry out dragonfreeing:
 
 Section 5 - Small Dark Room and Egg
 
-Small Dark Room is a room.  The description of Small Dark Room is "     You're curled up in a ball inside a dark room that is so small that the curved walls and ceiling are pressing against your body from all sides.  You should try to STRUGGLE to get out.";
+Small Dark Room is a room.  The description of Small Dark Room is "     You're curled up in a ball inside a dark room that is so small that the curved walls and ceiling are pressing against your body from all sides.  You should try to [link]STRUGGLE[end link] to get out.";
 dragontype is a number that varies.
 
 instead of sniffing Small Dark Room:

@@ -464,12 +464,9 @@ Instead of conversing the Doctor Mouse:
 	if hospquest is 2:
 		say "     The white mouse looks up from his work.  'I need you to find that device for me.  Significant portions of my research are at a standstill without it.  Please try searching within other labs in the city.'";
 	if hospquest is 3:
-		let devicefound be 0;
-		repeat with x running through invent of player:
-			if x is "scientific device", increase devicefound by 1;
-		if devicefound is 0:
+		if "scientific device" is not listed in invent of player:
 			say "     'What do you mean you found the device but haven't brought it with you?  What fools I have to wo...'  He sighs and rubs his brow.  'Please, I need you to go back where you left it and get it for me.'";
-		if devicefound is 1:
+		otherwise:
 			say "     'Yes!  That is it,' Doctor Mouse says as he hops down from his stool to grab for it before thinking better of it.  'Uh, would you be so kind as to put it over there for me?' he asks, pointing to an open spot on the central work area.";
 			say "[hospquestpt2]";
 	if hospquest is 4:
@@ -562,6 +559,9 @@ It is not temporary.
 
 instead of using scientific device:
 	say "     You don't really know what it's for, but Dr Mouse says he needs it for something.";
+
+instead of sniffing the scientific device:
+	say "     The large electronic device smells faintly of ozone and magic smoke.  Hopefully it still works.";
 
 
 to say hospquestpt2:
