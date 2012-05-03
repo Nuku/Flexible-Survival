@@ -175,32 +175,37 @@ to say meetHellhound:
 		say "     'So, will you let me change you, mortal?  I do promise I don't want anything foolish or incorporeal like your soul.  I am just a gate keeper after all.  I have no use for such things.'";
 		say "     Shall you accept the Hellhound's dark offer?";
 		if player consents:
-			now isHellhound is true;
+			if "Herm Preferred" is listed in feats of player:
+				remove "Herm Preferred" from feats of the player;
 			if "Male Preferred" is listed in feats of player:
+				now isHellhound is true;
 				now maleHound is True;
 				now hellHoundLevel is 1;
 				Hellhound infect male;
 			otherwise if "Female Preferred" is listed in feats of player:
+				now isHellhound is true;
 				now maleHound is false;
 				now hellHoundLevel is 1;
 				Hellhound infect female;
-			otherwise if "Herm Preferred" is listed in feats of player:
-				remove "Herm Preferred" from feats of the player;
 			otherwise if cunts of player > 0 and cocks of player > 0:  [ Herm ]
 				say "     The hellhound seems to let out a indecisive 'hrrm,' sitting back on his haunches.  'Well, this causes something of a dilemma, which of your sexes do I make use of?'  The beast cocks his head sideways.  'You would probably rather be a male, yes?'";	[Prompt cock or pussy]
 				if player consents:
+					now isHellhound is true;
 					now maleHound is True;
 					now hellHoundLevel is 1;
 					Hellhound infect male;
 				else:	
+					now isHellhound is true;
 					now maleHound is false;
 					now hellHoundLevel is 1;
 					Hellhound infect female;
 			otherwise if cunts of player > 0:	[ Female]
+				now isHellhound is true;
 				now maleHound is false;
 				now hellHoundLevel is 1;
 				Hellhound infect female;
 			otherwise if cocks of player > 0:	[ Male]
+				now isHellhound is true;
 				now maleHound is True;
 				now hellHoundLevel is 1;
 				Hellhound infect male;
