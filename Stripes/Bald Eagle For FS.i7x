@@ -14,7 +14,7 @@ to say losetoeagle:
 	if cunts of player > 0 and a random chance of 2 in 3 succeeds:
 		say ".  He roughly turns you over onto all fours and climbs atop you, sinking his slick cock into your pussy.  You moan and quickly grow excited despite yourself as his soft feathers slide over your body while his hard rod drives into you.  He nips at your shoulder and neck with his pointed beak while mating you.  After a few minutes of steady pounding, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you.  Even as you're cumming, he pushes you off his spent cock and onto the ground before soaring away.";
 	otherwise:
-		say ".  Tucking his wings in, he grabs your head with his talonned fingers, pulling you to his cock.  He grinds his throbbing shaft against you, leaking his pre until the scent of it gets to be too much and you take it into your mouth and start sucking.  You lick and suck at his cock, moaning in pleasure as you do until finally he cums, spurting his thick seed down your throat, filling your belly with his semen.  Finished, he pushes you back and soars away.";
+		say ".  Tucking his wings in, he grabs your head with his taloned fingers, pulling you to his cock.  He grinds his throbbing shaft against you, leaking his pre until the scent of it gets to be too much and you take it into your mouth and start sucking.  You lick and suck at his cock, moaning in pleasure as you do until finally he cums, spurting his thick seed down your throat, filling your belly with his semen.  Finished, he pushes you back and soars away.";
 
 to say beattheeagle:
 	say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds.";
@@ -27,7 +27,7 @@ to say eagledesc:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Male";
-	say "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you.  You barely dodge this first swipe as the eagle man screeches in again, this time in anger at missing.  [one of]'I'll get you,' he cries[or]'You won't get away,' he cries[or]'You'll be mine, prey,' he snaps[at random] as he swoops around for another pass at you.  This humanoid avian has a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck.  His wings are long and broad, formed into part of his arms.  His small, talonned hands are at the midpoint of his wings['] leading edge, able to be used when the not fully extended.  His feet end in the bird feet with sharp claws.  His beak also looks quite sharp and dangerous.";
+	say "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you.  You barely dodge this first swipe as the eagle man screeches in again, this time in anger at missing.  [one of]'I'll get you,' he cries[or]'You won't get away,' he cries[or]'You'll be mine, prey,' he snaps[at random] as he swoops around for another pass at you.  This humanoid avian has a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck.  His wings are long and broad, formed into part of his arms.  His small, taloned hands are at the midpoint of his wings['] leading edge, able to be used when the not fully extended.  His feet end in the bird feet with sharp claws.  His beak also looks quite sharp and dangerous.";
 
 
 Section 2 - Monster Insertion
@@ -45,12 +45,12 @@ When Play begins:
 	now victory entry is "[losetoeagle]";
 	now desc entry is "[eagledesc]";
 	now face entry is "now that of a bald eagle, having a long, yellow beak and piercing eyes on a snow white head";
-	now body entry is "partially avian, with wings built into your arms and a light, powerful frame.  Your hands are small and talonned, placed at the midpoint of the leading edge of your wing, allowing them to be used by partially folding in the wing.  Your legs are like a bird's, ending in sharp talons on your four grasping toes";
+	now body entry is "partially avian, with wings built into your arms and a light, powerful frame.  Your hands are small and taloned, placed at the midpoint of the leading edge of your wing, allowing them to be used by partially folding in the wing.  Your legs are like a bird's, ending in sharp talons on your four grasping toes";
 	now skin entry is "dark brown feathers across your body, covering your";
 	now tail entry is "You have a short, feathered tail that is dark brown at the back and white in front";
 	now cock entry is "[one of]slick[or]avian[at random]";
 	now face change entry is "your mouth and nose stretch forward and harden into a sharp and pointed beak.  Your eyes move to the side as your head completes it transformation into an eagle's";
-	now body change entry is "you gain a light, powerful frame with strong shoulders.  These changes spread down your arms, forcing the bones to shift and grow long and thin.  As your hand bends and extends out, growing into a wing, a second, smaller hand with talonned claws forms at your wrist.  Your legs change into those of a bird with sharp talons on your four grasping toes.  You are left panting and sweating after such extensive changes, but get up feeling lighter after you recover";
+	now body change entry is "you gain a light, powerful frame with strong shoulders.  These changes spread down your arms, forcing the bones to shift and grow long and thin.  As your hand bends and extends out, growing into a wing, a second, smaller hand with taloned claws forms at your wrist.  Your legs change into those of a bird with sharp talons on your four grasping toes.  You are left panting and sweating after such extensive changes, but get up feeling lighter after you recover";
 	now skin change entry is "ripples flow across your skin in waves.  As these waves pass, small points first rise, then small tufts pop up from them.  They surge and grow with each passing ripple, extending out to form a downy coat of dark brown feathers";
 	now ass change entry is "you gain a short tail of feathers";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "becomes slick and smooth, sliding into a slit in your groin when not in use";
