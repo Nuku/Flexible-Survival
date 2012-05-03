@@ -1,5 +1,5 @@
 Version 3 of Joanna by Stripes begins here.
-[Version 3 - more sex, mild plant-sex variants and plant tf begins]
+[Version 3.1 - Started endings]
 
 "Adds a Kinkajou-Plant NPC named Joanna to the Flexible Survival game"
 
@@ -451,7 +451,7 @@ when play ends:
 			say "     When that times comes at the end of your long life as a plant, you are pulled into the pits of Hades and given a life of as a foul tree there.  Having spent centuries growing and corrupting others in life, your body is now twisted and turned to new, dark aims on your unending task to satisfy the lustful urges of the demonic hounds.  They mark your large trunk with their foul, burning urine, letting its corruption seep into you.  Your vaginal flowers are fucked by the hound's cocks and your tendrils made to pump your tainted fluids into their bitches.  Your branches grow dark fruit which break open and release plant-like hounds to add to Hell's numbers.";
 		stop the action;
 
-when play ends:
+when play ends:		[See Parasitic Plant for player specific endings]
 	say "     Joanna remains in the infected city when the military rolls through, happy with her new life in her garden.  It becomes a safe rest stop for visitors and explorers of the city.  She always welcomes them and makes many friends among them, sharing her beautiful and lustful body with them to satisfy their urges[if hp of Joanna >= 5].  She soon gets the nickname of [']Kinky Jo['], notorious for being up for pretty much any kind of fun imaginable with those who come to share in her garden's beauty[otherwise if hp of Joanna > 2].  Being a lustful plant herm, she's happy to please any guests to her lovely garden in numerous ways[end if]";
 	if humanity of player >= 10:
 		say ".  These visitors help you keep in touch with her, carrying the occasional letter to her.  She writes about her peaceful, happy life and the various visitors and friends she's made, always thankful for your timely rescue and continued friendship[if player is plantbodied and plantdefeat is 1].  She particularly enjoys hearing about your happy life as a lustful plant and sharing the plant seeds with your orgy group[end if].";
