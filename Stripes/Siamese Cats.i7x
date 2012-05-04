@@ -84,7 +84,7 @@ to say losetosiamesecat:
 			say "     Watching the male cumming and feeling you set off moments later, shooting your hot seed into her eager pussy.  She grinds down onto your firmly and squeezes her pussy around you tightly, climaxing as well.  Her inner walls flutter around you, milking your shaft for as much as you'll give.  Your hips buck, thrusting into her until you're drained.";
 		otherwise:
 			say "     Watching the male cumming and feeling you set off moments later, she grinds herself against your quivering pussy, moaning happily in response.  Your crotch is soaked moments later as she arches her back and cums hard, murrrowling as her orgasm shoots through her.  Your hot juices intermingle with hers in an arousing scent of lust hanging around you and the two felines.";
-		say "     The three of you continue to thrust and grind against one another until you are all satisfied and your orgasms wind down.  The male slides himself slowly from you, some cum dribbling out onto your lips, which you quickly lap up.  He strokes a paw across your cheek before getting up.  As the female gets up, they wrap their arms around one another, smiling down at their exhaused plaything.  You lay there, enjoying the afterglow as they walk off, hand in hand.";
+		say "     The three of you continue to thrust and grind against one another until you are all satisfied and your orgasms wind down.  The male slides himself slowly from you, some cum dribbling out onto your lips, which you quickly lap up.  He strokes a paw across your cheek before getting up.  As the female gets up, they wrap their arms around one another, smiling down at their exhausted plaything.  You lay there, enjoying the afterglow as they walk off, hand in hand.";
 
 
 to say beatthesiamesecat:
@@ -289,7 +289,7 @@ When Play begins:
    now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ] 
    now cock entry is "russet brown"; [ Cock Description, format as you have a 'size' (your text) cock]
    now face change entry is "it shifts into a feline muzzle.  Your ears become large and dark coloured, as does your muzzle and much of your face"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "it becomes slender and vaguely feline in form.  Your arms end in dextrous paws with sharp, retractible claws"; [ body change text. format as "Your body feels funny as (your text)." ]
+   now body change entry is "it becomes slender and vaguely feline in form.  Your arms end in dexterous paws with sharp, retractable claws"; [ body change text. format as "Your body feels funny as (your text)." ]
    now skin change entry is "it grows a coat of smooth, glossy fur.  This fur is a cream colour on most of your body, but darker at the ends of your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
    now ass change entry is "a slender, feline tail covered in dark brown fur extends from your spine"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
    now cock change entry is "it takes on a russet brown hue, but otherwise human-like"; [ cock change text. format as "Your cock feels funny as (your text)." ]

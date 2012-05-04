@@ -38,14 +38,14 @@ When Play begins:
 	now defeated entry is "[beatthesnake]";
 	now victory entry is "[losetosnake]";
 	now desc entry is "[snakedesc]";
-	now face entry is "now a snake's head, with beedy eyes and a forked tongue slipping from your jaws to sniff the air";
+	now face entry is "now a snake's head, with beady eyes and a forked tongue slipping from your jaws to sniff the air";
 	now body entry is "a strange mix of man and serpent, having a slender, flexible body capable of slithering across the ground, but you still retain your arms and legs.  They are slender and flexible as well, ending in clawed digits.  You have a slit which automatically conceals your genitals when you begin to slither, but leaves them out and exposed otherwise";
-	now skin entry is "smooth, silver-gray scales across your back and sides.  Your chest and inner thighs are a bright, caution-yellow with droplets of black bleeding into the colouful, scaley";
+	now skin entry is "smooth, silver-gray scales across your back and sides.  Your chest and inner thighs are a bright, caution-yellow with droplets of black bleeding into the colourful, scaly";
 	now tail entry is "You have a long, snake's tail extending from your hips.  It has silvery scales with a bright orange underside.  When you are frightened or aggressive, it curls tightly and flashes the bright underside in warning.";
 	now cock entry is "[one of]hemipenis[or]serpentine[at random]";
-	now face change entry is "your head flattens and gains an extended jaw.  Your ears disappear down to small holes and your eyes move to the sides of your serpent head to form beedy, black orbs.  There is a band of bright colour around your neck and on the underside of your jaw";
+	now face change entry is "your head flattens and gains an extended jaw.  Your ears disappear down to small holes and your eyes move to the sides of your serpent head to form beady, black orbs.  There is a band of bright colour around your neck and on the underside of your jaw";
 	now body change entry is "your spine pops repeatedly, extending and growing at it becomes more flexible.  As your body becomes more serpentine, you retain your limbs, but they become slender and flexible as well.  You are able to tuck against your sides to allow your snake body to slither across the ground or walk, as you prefer at any moment.  Your hands and feet gain sharp claws at the end of their digits";
-	now skin change entry is "it is shed from your body, sliding off of you like a snake's skin, revealing scaley hide underneath.  Your new skin is silver in colour, with a bright patch of yellow from your jaw down to your inner thighs";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "it is shed from your body, sliding off of you like a snake's skin, revealing scaly hide underneath.  Your new skin is silver in colour, with a bright patch of yellow from your jaw down to your inner thighs";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your hips shift and pop, your ass almost disappearing away as a long snake tail extends in its place";
 	now cock change entry is "becomes slick and pointed as it bifurcates into hemipenes, like a snake or lizard.  While not two cocks, the pair can wriggle or slide against one another for stimulation while thrusting into a lover's hole";
 	now str entry is 8;			[ The player's stats will move towards these values through infection. ]

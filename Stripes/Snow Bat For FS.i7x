@@ -24,7 +24,7 @@ to say losetosnowbat:
 
 to say beatthesnowbat:
 	now snowbatfight is 1;		[victory]
-	say "     With your final blow, your enemy takes to the air again and releases a screaching mrowl of frustration, flying off to find easier prey.";
+	say "     With your final blow, your enemy takes to the air again and releases a screeching mrowl of frustration, flying off to find easier prey.";
 
 
 to say daynightcheck:
@@ -72,7 +72,7 @@ When Play begins:
 	now tail entry is "You have the thickly furred, luxuriously beautiful tail of a snow leopard.";
 	now cock entry is "[one of]grey feline[or]barbed[or]grey[or]feline[at random]";
 	now face change entry is "your face pushes out to form a pointed muzzle with an upturned nose.  Large fangs grow in at the front of your muzzle to sink into your prey and... No!  You shake your head, pushing back those thoughts even as your changes continue and your ear grow very large and bat-like, able to hear minute sounds.  A pattern of spots forms on your face as it becomes a hybrid of a bat's and a snow leopard's";
-	now body change entry is "your body is wracked with painful snaps.  Your body becomes slender, but with a strong chest and shoulders, where the pain is now centering.  Large growths at your back swell up under your shoulder as it feels like some pressure inside them building, fighting to get out.  As a pair of big bat wings burst from your back, you scream in a mix of pain and pleasure as they are freed.  Your hards warp and reform into feline paws with clawed digits while your feet become more bat-like with grasping toes";
+	now body change entry is "your body is wracked with painful snaps.  Your body becomes slender, but with a strong chest and shoulders, where the pain is now centering.  Large growths at your back swell up under your shoulder as it feels like some pressure inside them building, fighting to get out.  As a pair of big bat wings burst from your back, you scream in a mix of pain and pleasure as they are freed.  Your hands warp and reform into feline paws with clawed digits while your feet become more bat-like with grasping toes";
 	now skin change entry is "you gain a lovely coat of snow leopard fur, soft and light";
 	now ass change entry is "a fluffy, feline tail forms.  It is covered in thick, soft fur and takes on the beautiful pattern of a snow leopard";
 	now cock change entry is "takes on an even, grey hue and becomes feline with stimulating barbs to please even unwilling partners";
@@ -133,7 +133,7 @@ when play ends:
 				say "     Candy rushes over to see what has happened to his friend, little realizing that you are the cause.  As you help him lower Sven to the ground, the pink raccoon leans overtop the snow leopard, leaving himself vulnerable.  Moving softly at first, like a concerned friend, you move in behind him and put an arm around him.  Nuzzling at his neck, you bite him, sinking your fangs into him and making him moan[if coonsex > 0 and cocks of player > 0].  With a firm grip on him, you slide your cock under his skirt and start fucking him as you feed to keep him submissive[end if].  As he passes out as well, you are left to struggle with getting them both back to your new home.";
 				say "     You fly off with them into the night, taking them to your hidden lair in a high-rise tower.  The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping.  Sven and Candy, unable to escape even if they wanted to, becomes your to play with and feed upon[if cunts of player > 0].  Sven fills you with hybrid spawn even as his transformation into a snow bat is completed[otherwise].  You fuck the sexy snowmeow even as his transformation into a snow bat is completed[end if].  While Candy doesn't change much physically, his pink colour becomes a little darker and he gains a taste for blood as well, lustfully fucking and feeding upon any male prey you and Sven bring back to the lair.";
 		otherwise:
-			say "     You manage to survive your time in the city and are rescued by the military's forces.  Once out of the city, you are better able to deal with your body's dark urges and manage to supress them.  You hide the true nature from the scientists, fearful of their reaction and pass yourself off as having run into a bat creature somewhere.";
+			say "     You manage to survive your time in the city and are rescued by the military's forces.  Once out of the city, you are better able to deal with your body's dark urges and manage to suppress them.  You hide the true nature from the scientists, fearful of their reaction and pass yourself off as having run into a bat creature somewhere.";
 			if facename of player is "Snow Bat":
 				say "     After your release, you take to working night jobs, as you find the daytime uncomfortably bright.  When you do have to go out during daylight hours, you wear dark sunglasses and rely on your echolocation to make up for it, slowly getting the hang of it.  Flying unfortunately eludes you, but you do manage a little gliding during your attempts.  Your exotic body attracts several other winged lovers and while you often lick and nibble along their necks, you are always careful never to bite as those lightly slumbering instincts would have you do to them.";
 			otherwise:

@@ -34,7 +34,7 @@ to say beatthefluffyowl:		[WIN]
 
 
 to say fluffyowldesc:
-	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner  She has soft, fluffy looking feathers covering her bre... body.  Her arms are partially wings, but have taloned hands at the end.  Her feet end in large, taloned bird's feet.  Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp.  As she swoops in close, you can't ignore them any longer.  On her chest are an enormous, simply titanic pair of boobs.  Each the size of a large pumpkin, you have no idea how she can fly with them, let along stand upright and walk.  But somehow she does, moving with a strange lightness and grace despite her ample assets.  She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantilizingly at you.";
+	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner  She has soft, fluffy looking feathers covering her bre... body.  Her arms are partially wings, but have taloned hands at the end.  Her feet end in large, taloned bird's feet.  Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp.  As she swoops in close, you can't ignore them any longer.  On her chest are an enormous, simply titanic pair of boobs.  Each the size of a large pumpkin, you have no idea how she can fly with them, let along stand upright and walk.  But somehow she does, moving with a strange lightness and grace despite her ample assets.  She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
 
 
 Section 2 - Monster Insertion
@@ -92,11 +92,11 @@ when play ends:
 		if humanity of player is less than 10:
 			say "     Losing yourself to your new instincts and a renewed wave of changes because of it, you head out into the city.  You make your way to the roof of a small office building and with only a little trepidation, leap off into the air.  You glide clumsily at first, but somehow manage to fly soon enough.  You soar through the night air, drawn back to the hospital.  There, you join the other fluffy owls in the nest that they have set up in one wing";
 			if cocks of player > 0 and cunts of player > 0:
-				say ", enjoying a life of mating with the many females and being mated to lay more eggs for the parliment.";
+				say ", enjoying a life of mating with the many females and being mated to lay more eggs for the parliament.";
 			otherwise if cocks of player > 0:
-				say ", enjoying a life of mating with the many females so they may lay more eggs for the parliment.";
+				say ", enjoying a life of mating with the many females so they may lay more eggs for the parliament.";
 			otherwise:
-				say ", enjoying a life of being mated by one of the group's few males so you may lay more eggs for the parliment.";
+				say ", enjoying a life of being mated by one of the group's few males so you may lay more eggs for the parliament.";
 		otherwise:
 			say "     You manage to survive your time in the city, but not unchanged by the strange infection.  With your bird-like body, you are quite an unusual sight and it makes your life back in society difficult.  With avian infections being rarer and with your wing-like arms, you stand out all the more.  You do manage to find a career that you can be satisfied with when ";
 			if facename of player is "Fluffy Owl" and skinname of player is "Fluffy Owl" and tailname of player is "Fluffy Owl" and cockname of player is "Fluffy Owl" and breast size of player > 5:

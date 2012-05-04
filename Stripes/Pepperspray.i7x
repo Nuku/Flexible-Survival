@@ -6,12 +6,12 @@ battleitem is a number that varies.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"pepperspray"	"A small cannister of pepperspray."	1	pepperspray
+"pepperspray"	"A small canister of pepperspray."	1	pepperspray
 
 pepperspray is a grab object. It is a part of the player. It is fast. It is not temporary.
 
 instead of sniffing the pepperspray:
-	say "Smelling the pepperspray cannister makes your eyes water.";
+	say "Smelling the pepperspray canister makes your eyes water.";
 
 to say pepperspraydrain:
 	if a random chance of 3 in 10 succeeds:		[average 3-4 uses]
