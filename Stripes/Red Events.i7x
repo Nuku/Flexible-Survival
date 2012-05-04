@@ -228,7 +228,7 @@ Instead of resolving a Evangelist:
 			increase score by 50;
 			Now Evangelist is resolved;
 			stop the action;
-	say "     You resist the urge to give in and join the orgy that has formed after the battle and scan around the sea of fur and flesh surrounding you.  You notice the leather wolves are still at it with the cock cannon and one of them points towards you, trying to get the attention of his lustful breathren.  You need to get out of here soon.  Finding a path between several mating pairs, you try to dash to safety before things cascade further.  You run, making it most of the way out of the crowd before being blocked by another monster.[line break]";
+	say "     You resist the urge to give in and join the orgy that has formed after the battle and scan around the sea of fur and flesh surrounding you.  You notice the leather wolves are still at it with the cock cannon and one of them points towards you, trying to get the attention of his lustful brethren.  You need to get out of here soon.  Finding a path between several mating pairs, you try to dash to safety before things cascade further.  You run, making it most of the way out of the crowd before being blocked by another monster.[line break]";
 	fight;
 	say "     Pushing your way free, you move to the relative safety of a nearby alcove, panting to catch your breath and to recover you energy.  You look back at the top of the car, seeing that the leopard has prevailed against the other prospective lovers and is now plowing into the newly corrupted leopardess beneath him.  They both yowl in feline ecstacy as he pumps his heavy load into her womb, seeking to breed his new mate.";
 	increase score by 50;

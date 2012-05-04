@@ -76,7 +76,7 @@ Stripped Car is a situation.
 The sarea of Stripped Car is "Junkyard";
 
 Instead of resolving a Stripped Car:
-	say "     You come across a stripped car that has been pulled across the pathway between the piles.  Wary of an ambush, you look around, but it seems no one is here.  Taking a closer look, stripped is the proper way to describe this car.  It's hub caps, hood, side panels, front grill and many other parts seem to have all been recently and forceably removed.  There are deep gouges from feline claw marks and twisted metal all over it where parts where torn off.  Even the stereo is gone.  You will have to be careful to avoid any felines strong enough to drag around a car and tear parts off by hand.";
+	say "     You come across a stripped car that has been pulled across the pathway between the piles.  Wary of an ambush, you look around, but it seems no one is here.  Taking a closer look, stripped is the proper way to describe this car.  It's hub caps, hood, side panels, front grill and many other parts seem to have all been recently and forcibly removed.  There are deep gouges from feline claw marks and twisted metal all over it where parts where torn off.  Even the stereo is gone.  You will have to be careful to avoid any felines strong enough to drag around a car and tear parts off by hand.";
 	increase score by 1;
 	now Stripped Car is resolved;
 

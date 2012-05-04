@@ -183,7 +183,7 @@ to say losetotigress:
 		let diceroll be a random number from 1 to 125;				[lust check vs 125]
 		if diceroll < libido of player:						[scored under libido, too horny to wait]
 			say "     This gives the tigress a moment to release the easy straps on hir street clothes before pouncing atop you.  Shi pulls your backpack off and tosses it aside, all thoughts of payment lost after watching your lustful writhing on the bed.  As shi grinds hirself against your [bodyname of player] body, shi helps you out of your remaining clothes, eager to get right to it.  As the firm cheeks of your ass press around it, you can feel its pointed glans and small, stimulating bumps. You can tell it[apostrophe]a larger than average cock, but not massive like many you[apostrophe]ve seen since the outbreak.  You can feel the tigress[apostrophe]s pre leaking down between your cheeks and you find yourself longing for hir to take you with it.";
-		otherwise:										[scored over libido, remebers to get paid]
+		otherwise:										[scored over libido, remembers to get paid]
 			say "     Shi grins down at you as you writhe on the mattress, losing yourself in the rich scent of sex pervading it.  Shi takes a moment to release the easy straps on hir street clothes before helping you with yours.  Shi sets your backpack aside, and then removes your remaining clothes.  Once naked, shi runs a paw down your back and between your legs to fondle and tease your equipment while hir other paw rummages through your backpack for something to take as payment.";
 			say "[paymentcheck]";
 			if tempnum is 1:
@@ -238,7 +238,7 @@ to say losetotigress:
 						decrease humanity of player by 2;		[...and give in a little more]
 						if libido of player > 100:
 							now libido of player is 100;
-						if a random chance of 1 in 3 succeeds:	[third as liekly to impreg on 3rd try]
+						if a random chance of 1 in 3 succeeds:	[third as likely to impreg on 3rd try]
 							say "     [impregchance]";
 		otherwise if cunts of player is 0 and cocks of player > 0:		[Yes = MALE Identified!]			
 			say "     With one paw between your shoulders, shi holds you down as the other grabs your hip firmly.  After shifting hir position a little, you can feel the tigress[apostrophe]s hard cock nudge at your anal ring before easing slowly into you.  You groan softly and try to relax as you feel the firm piece of meat pushing in, its pointed tip and hir flowing pre helping it push into you.  As it sinks in further, you are teased by those delightful, soft barbs.  Hir hips rock slowly at first, letting hir unusually shaped penis stimulate your sensitive walls.  You push your rear back against hir thrusting, matching hir pace.  As you moan and press your face into the scent-filled mattress, you lose track of time, only knowing the joy of that softly-barbed cock inside you.  Surely it was sculpted to please any lover and you love having it in you.";
