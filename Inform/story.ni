@@ -472,7 +472,6 @@ title	subtable	description	toggle
 "Pass"	--	"Hey look, a distraction!"	combat pass rule
 "Flee"	--	"Run away!!!"	flee rule
 "Submit"	--	"Maybe it isn't so bad"	submit rule
-"Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters]"	--	"I am fit as a fiddle"	--
 
 Table of combat items
 title(indexed text)	subtable	description	toggle
@@ -2717,28 +2716,31 @@ To Combat Menu:
 			wait for any key;
 			clear the screen and hyperlink list;
 			continue the action;
-		say "Choose your action: A(ttack), I(tem), P(ass), S(ubmit), F(lee)[line break]";
+		say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee[line break]";
+		let combatopt be 0;
 		repeat through table of basic combat:
-			say "[link][title entry][end link][line break][run paragraph on]";
+			increase combatopt by 1;
+			say "[bold type][combatopt][roman type] - [link][title entry][end link][line break][run paragraph on]";
+		say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >";
 		get typed command as playerinput;
 		clear the screen;
 		if playerinput in lower case exactly matches the text "":
 			follow the player attack rule;
 			next;
-		if playerinput in lower case exactly matches the text "a":
+		if playerinput in lower case exactly matches the text "a" or playerinput in lower case exactly matches the text "1":
 			follow the player attack rule;
 			next;
-		if playerinput in lower case exactly matches the text "i":
+		if playerinput in lower case exactly matches the text "i" or playerinput in lower case exactly matches the text "2":
 			follow the combat item rule;
 			next;
-		if playerinput in lower case exactly matches the text "p":
+		if playerinput in lower case exactly matches the text "p" or playerinput in lower case exactly matches the text "3":
 			follow the combat pass rule;
 			next;
-		if playerinput in lower case exactly matches the text "s":
-			follow the submit rule;
-			next;
-		if playerinput in lower case exactly matches the text "f":
+		if playerinput in lower case exactly matches the text "f" or playerinput in lower case exactly matches the text "4":
 			follow the flee rule;
+			next;
+		if playerinput in lower case exactly matches the text "s" or playerinput in lower case exactly matches the text "5":
+			follow the submit rule;
 			next;
 		if playerinput in lower case matches the text "attack":
 			follow the player attack rule;
