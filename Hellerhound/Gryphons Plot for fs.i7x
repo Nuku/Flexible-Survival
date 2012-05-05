@@ -56,7 +56,7 @@ instead of resolving a gryphons plot:
 						say "Do you join the soldiers in their submission?";
 						if the player consents:
 							say "You run towards the soldiers, removing any clothing, and jumping right in.";
-							wait for any key;
+							if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 							say "[gryphon fuck]";
 							say "[gryphon fuck]";
 							say "[gryphon fuck]";

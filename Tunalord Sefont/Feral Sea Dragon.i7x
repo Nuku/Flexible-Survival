@@ -14,7 +14,7 @@ to say dragon attack:
 	if bodyname of player is "feral sea dragon" or bodyname of player is "feral sea dragoness":
 		if cunts of player is greater than 0:
 			say "The dragon sniffs at you as he approaches you.  He walks up next to your defeated form and says 'Ah, a dragoness.'  Chuckling as he stands you up and mounts you.";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if cunt length of player is less than 12:
 				say "He presses the head of his cock to your cunt and presses lightly.  After a moment he stops and dismounts.  He circles around you and says 'I don[apostrophe]t want to break my new breeder. Climbing onto you and guiding your head to his dripping cock.  You feel a wave of submission wash over you and can no longer resist if you tried.  Opening your jaws you take his member into your mouth.  Being careful with your teeth you begin to suckle the shaft.  Avoiding letting your teeth touch it when you pull your head back.  Then letting them rest gently against it as you press forward.  You make a song like sound as you begin to enjoy serving the male.  Your dragoness urges making you submissive to this male.  Thought comes only vaguely as you focus solely on pleasing the male.  You pick up speed as the male begins to rumble happily.  His claws digging into your shoulders.  Suddenly he roars out and your mouth is filled by a sudden blast of cum.  He pulls his cock free and the last of his cum lands on your face.  You find yourself licking at it in a lustful haze.";
 				say "Padding off to the waters edge he says 'I will see you again.'  Then he dives in and swims off.";
@@ -25,12 +25,12 @@ to say dragon attack:
 			say "The dragon gives a sudden hiss and glares at you saying 'These waters are MINE!  You are not welcome here.' before he claws your side and returns to the water.";
 	otherwise:
 		say "The beast viciously snaps at you with its jaws.  Throwing you to the ground while only leaving minor cuts as all your clothes tear free from your form.  He then lowers his large head towards you.  Making you close your eyes in fear.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cunts of player is greater than 0:
 			if cocks of player is greater than zero:
 				say "He lets out a hiss as he reaches your [cock of player] cock.  His lips pull back for a moment before he sniffs again and lowers his head just a little further and sniffs at your cunt.";
 			say "He nuzzles and licks at your [cunt size desc of player] pussy.  Shocking you out of your fear of being eaten.  Suddenly he presses the forked end of his tongue inside your cunt.  Seemingly checking for something.  His thick and slimy drool beginning to coat your lower half.";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if cunt length of player is greater than 11:
 				say "The beast huffs and rips his tongue free of your cunt. Then he repositions himself over you. His massive cock looks as if it could tear you apart! The  spade shaped tip presses against your entrance for a moment before the beast suddenly begins to piss IN you.  You womb filling up in seconds before the beast drops its head near yours.  It remains motionless for a few seconds before speaking in a strange language that you can somehow understand! 'You will be mine.'  He then backs away from you and gives you a knowing look before he rushes back into the water.";
 				wait for any key;

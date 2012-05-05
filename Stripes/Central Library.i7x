@@ -310,7 +310,7 @@ Section 3 - Inside the Central Library
 to say libraryexplore:
 	wait for any key;
 	say "     Inside the library, you start looking around quickly, passing through the stacks.  You spot a few signs of transformed victims - clothes and cum stains mostly - but not many.  Clearly only a few people were here when the outbreak started.  You scan through the stacks, looking for anything that might be helpful to your situation.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	let randomlist be a list of numbers;
 	if 1 is not listed in bookcollection, add 1 to randomlist;
 	if 2 is not listed in bookcollection, add 2 to randomlist;
@@ -342,7 +342,7 @@ to say libraryexplore:
 	otherwise if entry 1 of randomlist is 5:
 		say "[libbook5]";			[military reconnaissance]
 		now bookfound is 5;
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if xp of player is greater than ( level of player plus one ) times 10:
 		level up;
 	otherwise if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:
@@ -404,7 +404,7 @@ to say libraryexplore:
 				if cunt width of player < 4, now cunt width of player is 4;
 				if breasts of player is 0, now breasts of player is 2;
 				if breast size of player < 3, now breast size of player is 3;
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if libido of player < 60, now libido of player is 60;
 		now humanity of player is 0;
 		end the game saying "You have joined the librarian harpies in their home at the Central Library.";

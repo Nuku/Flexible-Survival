@@ -104,7 +104,7 @@ instead of resolving sword nest:
 			say "[randominfect]";
 			say "[line break]";
 			say "...";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "The sludge covering you releases that desire, as you orgasm intensely in the muck.";
 			say "You feel another desire rear its head, to drink from the giant puddle.";
 			say "Do you submit?";

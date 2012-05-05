@@ -9,16 +9,16 @@ dragonessdefeat is a number that varies.
 dragonessmemory is a number that varies.
 to say dragoness attack:
 	say "She shoves you over with a forceful push from her head.  Then circling around you a few times before she walks over you.  The dragoness steps over you as you stare up at her.  Her [one of]seafoam[or]sky blue[at random] colored underbelly passing over you.  She lowers her head and sniffs your face.  Exhaling through her nostrils before drawing her head down along your body as she inhales your scent.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if cocks of player is greater than 0:
 		say "The dragon begins to sniff more eagerly the lower her head goes.  Suddenly she eagerly calls out.  The sound high pitched and similar to the song of a whale.  She then lifts her head for a moment before rapidly nipping at you.  Any clothes present are quickly torn apart.  She then sits rather awkwardly and begins to lap at your [cock size desc of player] cock.";
 		follow the sex change rule;
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cock length of player is less than 8:
 			say "Suddenly the dragon lifts her head and stares at your cock for a moment before keening to the air.  Thrashing her head about.  Obviously upset about something before she flops onto her side as she tries to jump up.  Throwing sand everywhere she scrambles back up to her four feet and sprints into the water.  The horrid sound of her keens could be heard on and off for a few moments before finally disappearing.";
 		otherwise:
 			say "The dragoness chirps as she finishes her licking.  She just sits there and stares at you expectantly.  Tilting her head for a moment she licks her lips before rising from her sitting position. Her form moves over you.  Making you uneasy with this massive creatures body beginning to grind against you.  Her body continues to brush past you.  Her warm and delicately scaled underbelly brushing across you until you feel her cunt touch the head of your [cock of player] cock.";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cock length of player is less than 15:
 			say "She pushes herself down onto your cock but doesn[apostrophe]t rise back up.  She stares down at you and makes an inquisitive noise.";
 			if dragonessmemory is 1:

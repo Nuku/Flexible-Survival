@@ -24,7 +24,7 @@ After resolving a unusual creature, try looking;
 
 Instead of resolving unusual creature:
 	say "Your ears pick up a faint sound in your searchings and you approach carefully. Peeking through the bushes, you see a deer, bipedal, female if not for the thick black shaft that dangles between her legs. She is crying quietly, face buried in her palms, body curled against a tree. She doesn[apostrophe]t react as you slip in closer, not even noticing you until you're almost on top of you. She gasps loudly when she does notice you, throwing herself back against the tree with wide eyes.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "'Don[apostrophe]t look at me!' she cries, falling in against herself, hugging herself to hide her alien form.";
 	say "Do you grab her?";
 	if the player consents:
@@ -36,7 +36,7 @@ Instead of resolving unusual creature:
 			now deerconsent is 1;
 		otherwise if libido of player is greater than 50 and cocks of player is greater than 0:
 			say "Unsure what to do, you obey the urgings of your [cock of player] cock. You grab her and push her to the ground, belly up. Your hands grab at her generous breasts as you slip into her wet, grasping, cunt. She squeals, at first withs surprise, then increasingly with pleasure, rising her hips to meet your powerful thrusts. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her. Her cunt tightens like a vice around you before she arches her back and bleats in delight. You can feel your balls clenching in response, and you fill her belly with hot gushes of seed.";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "Sated, she hugs tightly to you, and agrees to accompany you to the lab, blushing and satisfied looking the whole way.";
 			now deerconsent is 1;
 		otherwise:
@@ -49,7 +49,7 @@ Instead of resolving unusual creature:
 
 to say deer attack:
 	say "She approaches your fallen form with a smile on her cervine face. 'Little doe, this is where you belong, as part of my herd. You had your chance to be the stag,' she says, tongue rolling across her snout as she reaches to rub over your [skin of player] [breast size desc of player] chest.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if cunts of player is greater than 0:
 		say "Wrestling your hips up into position, she pinches your bottom with her hard fingertips, 'Naughty doe, playing so hard to get. See what you[apostrophe]re missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
 		if breasts of player is greater than 0:
@@ -67,7 +67,7 @@ to say deer attack:
 			say "She grunts in fustration, 'You refuse to be a proper doe for me,' she complains darkly before rolling you onto your belly, 'No matter, even a man can be made a doe.' she says with a disturbing smile as she hikes your ass up and aligns her heavy block cock to you. She roughly mounts, plunging the thick plug of a member into your poor ass, showing her dominance with her punishing motions. Her hands show her softer side, caressing your front in slow circular rubs, promise of a better future, if you can get past the searing pain and humiliation you are suffering.";
 			if cocks of player is greater than 0:
 				say "Her soft palm brushes against your [cock of player] member, starting to stroke it in time with her deep pushes into your body. Possible despite yourself, pleasure builds in your loins and spreads through you. You want to release so badly all of a sudden, [cock size desc of player] pole throbbing needfully as she strokes it faster and faster.";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "She pulls you back suddenly, body rigid as heat begins to spread inside of you from her twitching member.";
 			if cocks of player is greater than 0:
 				say "Your [ball size] balls lurch and you spray into the air, coaxed on by gentle squeezes of her hand, milking you even as she fills you with her thick seed.";
@@ -275,17 +275,17 @@ instead of conversing the susan:
 							say "The pleasure haze ebbs just slightly as she pulls free of you and returns to slow stroking, 'Still not quite large enough to sate me, my virile stallion. We will just wait a little longer.' Her tail wags behind her excitedly as she leans in to lap over the head of your shaft, insufficiently sized or not, and her strokes become firm and fast. Your groans mix with her own as if she could feel your pleasure as if it were within her own body. She squeezes at your entire member with her softly furred paws and your balls clench. Your seed sprays in great milky shots across her long snout, drawing a soft bleat of approval from her. Her long tongue darts to collect the treasure as she raises to her feet, 'Come back later, we can try again.'";
 						otherwise:
 							say "With your [cock size desc of player] member now large enough to please, she pushes you back, popping free of you with a lick over her lips. She turns slowly, hands running over her athletic breasts, her wide hips, bending over as she completes the turn away from you. Thick but short tail flits upwards to expose her damp and dewy lips to your view, hot, flush with her mounting arousal. Mounting is just what you had in mind, and you waste no time grabbing her and pulling her back onto your thick member, starting to drive harder and faster as your hands settle on her hips to pull her back against your eager pounds.";
-							wait for any key;
+							if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 							say "She is no idle partner, driving herself back against every hungry push, groaning, gasping with rising bliss. The feel of her wet, grasping cunt wrapped snugly around your [cock of player] member has you almost dizzy as you rock smoothly against her. Your balls pull up sharply, starting to fill her womb with thick gushes of hot seed, making her belly swell forward with the precious load, her body trembling under your own as she shares in the climax with you, squeaking once before a full bleat escapes her.";
-							wait for any key;
+							if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 							say "You settle down with her, kissing her and licking across her snout as she returns the affections to your face, hugging close. As the lust drains from you both, you eventually get up together. Sharing one last hug,  you return to the task of surviving.";
 					otherwise:
 						say "She grabs directly for your [cock size desc of player] [cock of player] cock and grins up at you as she strokes it, 'It is just right,' she declares as she pushes you back to the ground, guiding you to lay down and slipping up on top of you. Her warm frame presses softly as it goes and she lines herself up, one hand holding the thick tip of your member, the other parting her nethers. She sinks down along your member, shuddering as it fills her grasping tunnel perfectly. Her wet labia sink down to your groin as she settles on you, breathing hard and just enjoying the feelings for the moment as she gazes into your eyes with a burning affection.";
-						wait for any key;
+						if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 						say "You reach for her sides, trailing upwards and caressing her chest. Fingers catch thick black teats and her back arches towards you as you flick and tease at them. Her hips raise and fall a few inches at a time, wetly sliding across your excited member, wedged deep inside of her.  Her own member stands stiff and proud, twitching with her pleasure and dripping thick bits of clear precum along its length even as she rides against you, taking your cock deeper with every drop of her curvy form against you. Your hips are soon moving faster, driving up, bouncing her in firm shuddering motions. Her breasts heave against your grasping hands are you hold her, drawing her down against your increasingly frantic ruts.";
-						wait for any key;
+						if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 						say "She leans back away from your hands, her hands settling on the ground as she bends almost backwards, rutting in a bent position. Your hands find her belly and sides, rubbing and caressing her, hungry eyes taking in the bulge that your own cock creates along her belly, stretched taut in her new position. She moans softly as her shaft tenses, and begins to fire, splattering herself with her seed as it arcs through the air in powerful streams. A small part of yourself wonders what it would feel like to be filled with that same seed, but that part is quieted for the moment as your own shaft tenses and lurches, filling the willing doe with your fertile offering.";
-						wait for any key;
+						if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 						say "She straightens, then flops on top of you, squirming as you round her with your cum. Her messy front presses stickily to your [skin of player] front as she hugs tightly to you, heedless of the sticky warmth she shares with you. When your shaft has calmed and lays half firm within her, she leans up to kiss you on either cheek. 'I love you.' she whispers. You smile, grabbing her at the bottom and squeezing her close to snuggle for a moment, enjoying the peace before you are forced to return to other tasks.";
 
 	

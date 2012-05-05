@@ -80,7 +80,7 @@ To say centaur defeat:
 		add "Fresh Apple" to the invent of the player;
 	if libido of player > 50 and cocks of player is greater than 0:
 		Say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [cock of player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
 		if the humanity of the player > 90:
 			say "You instantly pull out, looking at the tentacles like the abomination they are. You kick dirt over the centaur as you leave, stealing an apple from its pack.";
@@ -193,7 +193,7 @@ to say centaurgrowtorso:
 	increase the hunger of the player by 10;
 	say "You feel hungry, the energy being sapped out of you by the new growth.";
 	say "[line break]";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say " Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horses";
 
 

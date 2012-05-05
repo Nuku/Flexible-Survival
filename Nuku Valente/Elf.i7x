@@ -16,12 +16,12 @@ to say Elf attack:
 		say "     'Scum,' she sneers as she shoves you over and slides on top of you, 'You are no good for anything but a pet at best. A true warrior never surrenders.' She raises a slender hand to brush over your cheek a moment, 'And I[apostrophe]m not even sure you are good for that.'";
 		if cocks of player is greater than 0 and cock length of player is less than 10 and a random chance of 1 in 2 succeeds:
 			say "     She appraises you carefully for a few moments before making up her mind. She pins you down with a foot as she strips you down. When you try to speak, she gives you a harsh look. Slender fingers curl around your [cock of player] member, slowly stroking it to firmness, 'Please me well and maybe I will think more of you.' she says as she settles down, plunging your firm member into her waiting tightness. Her naked vulva spreads wetly across the end of your cock as she settles on your groin. Her hands move to your shoulders, holding you down as she starts to rock against you.";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "     'Oh, good stud, I...' She bites her lip as her body trembles with obvious climax. Her tunnel goes hot and tight around your shaft and you explode forcefully, filling her with your creamy offering. She gives a sharp cry as she feels you filling her, scowling a moment before her expression warms and she leans in, brushing her lips to yours, 'You[apostrophe]re good for something.' she says before she slips back up to her feet, glowing with satisfaction. She leaves you laying on the ground as she wanders off.";
 		wait for any key;
 	otherwise:
 		say "     She shoves you powerfully against a tree and rushes up against you, pressing a knife to your throat, 'You fought bravely, but you are not powerful enough, yet. Keep that fire in your eyes and we may yet be sisters.' She then leans in and presses her lips to yours in a powerful kiss as her free hand reaches down, grabbing you between the legs a little roughly, inspecting you as she rubs her curvaceous front against your own a moment.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "     'I will find you, later.' she promises, shoving you once more before she vanishes into the foliage.";
 
 [ [Elf loss] ]

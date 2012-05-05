@@ -51,7 +51,7 @@ to say sarahrescue:
 		challenge "Female Husky";
 	if lost is 0:
 		say "Standing victorious, you grab Sarah, and carry her back to the bunker, and proceed to treat her wound. She changes under you, but with the medkit and a bit of skill manage to save her life.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You don't feel sorry for the huskies you left lying in the street. You think getting caught by some of the more dangerous beasts out there would be a fit punishment for what they tried to do.";
 		now Sarah is in the bunker;
 	otherwise:

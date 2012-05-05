@@ -14,7 +14,7 @@ to say Yamato Dragon attack:
 	say "The male dragon lowers his head to sniff at you.";
 	if cocks of player is not greater than 0 and cunts of player is greater than 0:
 		Say "After he finishes sniffing you he starts to speak, though he doesn't open his mouth so you're not sure how he is speaking.  'A woman, good.  My body has been...needy, lately.'  He then breathes a plume of blue fire over you, it doesn't burn or hurt, but your clothing disintegrates, revealing all of your body for him to see.  The male dragon then grabs you and lifts you into the air as he stands up on his hind legs.  You look down to see what the dragon has in store for you, and your gaze is met by a massively huge dragon cock, pulsing with it's engorgement.  There's no way you could possibly take that monster of a cock...could you?";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cunt width of player is less than 10:
 			say "The dragon lowers you toward his huge cock and you brace yourself for the pain, but as the cock enters your cunt is quickly stretched to it's limit, and the head of the cock is barely more then half in.  The dragon can see that you're just not big enough for him, and he knows that forcing it would tear you in half.  With a sigh the dragon puts you down as his cock slips back into his body.  Without a word the dragon flies away to look for another female, leaving you relieved that you didn't die by dragon rape today.";
 		otherwise:
