@@ -50,7 +50,7 @@ Cute Crab is a pet. The description of Cute Crab is "It's so cute! It has huge e
 The weapon damage of cute crab is 6;
 The level of cute crab is 1;
 The Dexterity of cute crab is 8;
-The summondesc of cute crab is "Bursting from the ground near you, your cute crab appears. It clacks its pincers together in an excited fashion like a castinet player.";
+The summondesc of cute crab is "Bursting from the ground near you, your cute crab appears. It clacks its pincers together in an excited fashion like a castanet player.";
 The assault of cute crab is "[one of]Your crab snaps with his great pincers![or]Scuttling crazily, you are not even entirely sure when your crab landed a blow.[at random]";
 
 instead of sniffing the Cute Crab:
@@ -80,7 +80,7 @@ Latex Vixen is a pet. The description of Latex Vixen is "Sleek latex lines run o
 The weapon damage of latex vixen is 10;
 The level of latex vixen is 4;
 The dexterity of latex vixen is 12;
-The summondesc of latex vixen is "You feel hands settle on your midsection from behind as soft brests press against your back. The shiny vixen steps into view from behind, ready to follow you wherever you go and see to your various 'needs'.";
+The summondesc of latex vixen is "You feel hands settle on your midsection from behind as soft breasts press against your back. The shiny vixen steps into view from behind, ready to follow you wherever you go and see to your various 'needs'.";
 The assault of latex vixen is "[Vixattack]";
 
 instead of sniffing the Latex Vixen:
