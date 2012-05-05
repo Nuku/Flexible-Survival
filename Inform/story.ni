@@ -51,6 +51,7 @@ title	description
 "Socializing"	"You can talk (person) to chat it up. If they are of more personal interest with you, you can also fuck (person)"
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
+"Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]i hate to wait[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]i love to wait[roman type] to return to the default."
 
 Include (-
 
