@@ -98,6 +98,10 @@ To select an option from (curtable - a table name):
 To get typed command as (S - a snippet): (-
         KeyboardPrimitive(buffer, parse);
         {S} = 100 + WordCount();  -)
+        
+To get next key as (S - a snippet): (-
+        {S} = VM_KeyChar();  -)
+
 
 Book 1 - Variable Definitions
 
@@ -2740,7 +2744,7 @@ To Combat Menu:
 			increase combatopt by 1;
 			say "[bold type][combatopt][roman type] - [link][title entry][end link][line break][run paragraph on]";
 		say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
-		get typed command as playerinput;
+		get next key as playerinput;
 		if playerinput in lower case exactly matches the text "":
 			follow the player attack rule;
 			next;
