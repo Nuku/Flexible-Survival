@@ -264,7 +264,7 @@ instead of addfeating the basic feats:
 	if strength of player is greater than 14:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";
 	if level of player is greater than 1:
-		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Wierdo!";
+		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Weirdo!";
 	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";
 	if hp of doctor matt is greater than 4:
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";

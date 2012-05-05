@@ -13,7 +13,7 @@ Harpyconsent is a number that varies.
 
 to say Harpy attack:
 	if harpyfight is 3:
-		say "The harpy swoops in and grabs you, running her talonned hands over your body as the others close in around you.";
+		say "The harpy swoops in and grabs you, running her taloned hands over your body as the others close in around you.";
 		wait for any key;
 	otherwise if hp of player is greater than 0:
 		say "She swoops down and grabs you up, pressing her lips to yours. Peace sweeps through this form even as your heart hammers in your chest. You pull her tight as she draws you closer, swept away in the fierce exchange. You are unsure how long you remain like that, but eventually she sets you down and shakes her head, 'We will meet again, I hope.' and she takes off.";

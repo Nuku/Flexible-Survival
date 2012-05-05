@@ -4,7 +4,7 @@ Version 1 of Tanuki by Nuku Valente begins here.
 
 Section 1 - The Situation
 
-Shrine is a room. "How odd for an American city. A Japanese style shrine lays nestled in the forest, tucked just off a faint trail and looking reasonably well upkept. There is a small box for donations, and a small mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
+Shrine is a room. "How odd for an American city. A Japanese style shrine lays nestled in the forest, tucked just off a faint trail and looking reasonably well kept. There is a small box for donations, and a small mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
 Northwest of Park Trail is Shrine.
 
 instead of sniffing Shrine:
@@ -21,7 +21,7 @@ understand "rung" and "ring" and "ring bell" and "ring bell with hammer" as ring
 There is a donation box and hammer and and bell in shrine.
 
 The description of bell is "A small ornate bell.";
-The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever upkeeps this place.";
+The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.";
 The description of hammer is "A tiny black mallet on a string.";
 
 Instead of taking the bell:
@@ -39,7 +39,7 @@ check ringing:
 	
 Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
-	say "A spirit takes form before you, looking like some kind of strange racoon like being. It studies you a moment before it speaks:";
+	say "A spirit takes form before you, looking like some kind of strange raccoon like being. It studies you a moment before it speaks:";
 	if the demand of the shrine is journal:
 		now the demand of shrine is a random temporary grab object;
 	say "'Bring me a [demand of shrine]! [bold type]sacrifice[roman type] it before me and I will be appeased!'";
@@ -61,7 +61,7 @@ carry out sacrificing:
 	increase score by 10;
 	if SatisfiedTanuki is 0:
 		extend game by 40;
-		say "The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistant mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your, new, true form.' With that said, the spirit folds up on itself and is soon gone.";
+		say "The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistent mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your, new, true form.' With that said, the spirit folds up on itself and is soon gone.";
 	otherwise:
 		now the demand of the shrine is journal;
 		try ringing;
@@ -191,12 +191,12 @@ When Play begins:
 	now defeated entry is ""; 
 	now victory entry is  ""; 
 	now desc entry is "";[ Description of the creature when you encounter it.]
-	now face entry is "sleek muzzled with a racoon's mask and large expressive ears over your";[ Face description, format as the text "Your face is (your text)"]
+	now face entry is "sleek muzzled with a raccoon's mask and large expressive ears over your";[ Face description, format as the text "Your face is (your text)"]
 	now body entry is "somewhat pudgy and oddly animal like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "[one of]tanuki colored[or]stripe furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]";[- Cock Description, format as you have a "size" (your text) cock-]
-	now face change entry is "it draws into a narrow snout and a racoon mask of black appears on your face."; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it becomes fatter and a little shorter as you take on the stereotypical stature of a tanuki."; [- body change text. format as "Your body feels funny as (your text)" -]
 	now skin change entry is "Brown and black fur explodes across you in tanuki like patterns as your skin is left tingling."; [- skin change text. format as "Your skin feels funny as (your text)" -]
 	now ass change entry is "a thick and fluffy looking tail emerges from your bottom."; [- ass/tail change text. format as "Your ass feels funny as (your text)" -]
