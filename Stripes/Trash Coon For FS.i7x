@@ -102,7 +102,7 @@ when play ends:
 			if cunts of player > 0:
 				say "     The cook remains with you and you get a house together, having rough, messy sex all over your home whenever you can.  Soon enough, your belly grows full with kits and your have lots of scruffy coons running around the place.  You are happy to stay home and raise them while your mate runs a greasy diner.";
 			otherwise:
-				say "     You and the cook remain friends, roommates and occasional lovers to satisfy your lusts.  That is, until you meet a big, sexy coon woman.  After a few dates, she moves in with you and you have wild, messy sex with her all over your home.  When you come home from work at the recycling facility one day, you find your roommate fucking your girlfriend.  A loud fistfight ensures that reminds you of your fights back in the city, the three of you collapse into a heap and it devolves into a lustful threesome.  From that point on, you have a messy [italic type]menage a trois[roman type], filling her with litters of kits from both of you.";
+				say "     You and the cook remain friends, roommates and occasional lovers to satisfy your lusts.  That is, until you meet a big, sexy coon woman.  After a few dates, she moves in with you and you have wild, messy sex with her all over your home.  When you come home from work at the recycling facility one day, you find your roommate fucking your girlfriend.  A loud fistfight ensues that reminds you of your fights back in the city, the three of you collapse into a heap and it devolves into a lustful threesome.  From that point on, you have a messy [italic type]menage a trois[roman type], filling her with litters of kits from both of you.";
 
 [ Edit this to have the correct creature name as well]
 Trash Coon For FS ends here.
