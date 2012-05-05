@@ -11,21 +11,21 @@ gatordefeat is a number that varies.
 gatorconsent is a number that varies.
 to say gator attack:
 	say "'Weak little thing, too bad. I thought you had more in you,' She growls as she pushes you to the ground roughly, 'I suppose I can still have some fun with you...' She crawls up on top of you, peeling off your clothes as she goes. You try to wriggle free, but a soft but painful bite to your shoulder stills you. She wraps her arms around you and hefts your ass up into the air. Her angry looking manhood juts up from her groin, dripping thin streams of lubricant as she moves you into position.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if cunts of player is greater than 0:
 		say "She smoothly presses into your exposed cunt as you try to wriggle from her, but she just draws you back fully onto her powerful spear, starting to breed you urgently, 'Gonna fill a little slut up with little squealing gator pups', she hisses in an ear, 'Little weak cunts are no good for anything but mothering and being fucked'. She pulls you back firmly against each powerful stroke into your yielding form, balls slapping up against your bottom with each movement. Her breath grows faster and faster as she works at you, her generous breasts rubbing along your [skin of player] back.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "Her cock goes stiff inside of you as she squeezes you in a tight hug, hands grasping at your chest as she begins to fill you with thick sprays of her eager seed, filling your womb with her seed as she groans in satisfaction. As the waves of warmth begin to fade, she draws free of you, and swats you smartly on the rump, 'You come back for a rematch, if you have the guts.' she invites, laughing as she rises to her feet and saunters off, still erect shaft wagging.[impregchance]";
 	otherwise:
 		say "You give a last ditch pull from her, but she snarls and wrenches you back right onto her. Your tender back door howls in the pain of it as she mounts you fully, starting to rock firmly atop you, soft leathery hands holding you still as she takes advantage of you, 'Girl has her needs,' she croons as she rocks, 'Maybe next time, we try something else.' The motions become smoother as you relax, and the pain ebbs, and pleasure begins. You wonder if it is the nanites or her lovemaking skills, but soon your own body is pulsing with arrousal and pleasure, apexing with every powerful thrust into your sensitive ass.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "Your forms shudder together as her balls slap against you once more, and rest against you as she unloads into your bowels, filling you with her hot cream. Quite suddenly, she shoves you forward.  Your head hits the ground, and when you come to, she has departed, probably to hunt something, or someone, else.";
 
 
 To say gator loss:
 	if gator den is unknown:
 		say "Successfully subduing the great green beast, you stand over her as she pants and heaves. 'You put up a good fight,' she says, smiling with her sharp teeth, 'Kind of turns me on... I could use a nice, strong, partner.' She slowly gets to her feet, but makes no immediate motion to resume the battle. Her reptillian dick wags under her at half mast as she stretches out, 'We could have so much fun.' She approaches you slowly and leans in, whispering the location of her den, then slipping her arms around you. You can feel the warm soft curves of her front pressed against you even as her cock nudges against a thigh, 'We don[apostrophe]t have to fight. I can be very accomodating.'";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cocks of player is greater than 0:
 			say "Your own member stiffens unconsciously, responding to the obvious signals of readiness this beast is sending.";
 		say "You wrap your hands around her in return in a brief exchange. Your hands find that, despite her thick looking scales, the gator is soft to the touch, and quite round. If you closed your eyes, she is nothing but a full bodied woman, with a few extras. Her fertile form gently squirms from you with a snap of her great jaws, 'Visit, soon. I will be waiting,' she promises, slipping away into the darkness with a sway of her thick tail.";
@@ -122,9 +122,9 @@ to say gator den scene:
 		say "'You are still looking mighty fine. Come over here and let me give you a kiss,' she beckons. As you slip up onto the bed to join her, she wraps her arms around you, pressing her soft warm scales to your [skin of player] front, grinding gently as she presses her snout to you and gives a slow kiss, quiet for long moments as her hands wander across your back eagerly. Your body grows warm, responding to her desire for a mate, changing to be more like her ideal catch.";
 	otherwise:
 		say "'You are still missing a little something,' she chastises gently, patting the bed for you. When you slip up beside her, she slips in against you, one hand reaching between your legs, rubbing slowly as she begins to nuzzle across your neck and cheek, nipping carefully with those large teeth. As she cuddles in closer, your body grows warm, nanites rushing to modify you towards her ideal lover.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	gatorfy;
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "Seemingly satisfied, at least for the moment, she rolls up on top of you with a smile, 'Now what to do...'";
 	if a random chance of 1 in 3 succeeds: [ She just talks ]
 		say "'I want to talk, get to know you,' she says, leaning in and snuggling against your front. She chats with you quietly as she gropes and fondles at you, drawing out your name and your old job, and telling you about her old life as a bus driver. She confides that she loves her new body. 'I just want someone to share it with,' she says, nuzzling you with her great snout as she speaks, 'We can be together, have little alligatorettes. It would be nice....' she assures in a sultry whisper.";
@@ -147,7 +147,7 @@ to say gator den scene:
 			otherwise: [ just right! ]
 				say "You pull back, tool glistening with the generous lubricants of the reptile woman. She pushes back against you, sinking you back into herself as she gives a soft hissing growl. You begin to dance with her, rocking smoothly against one another. She mates like a wild animal at first, as if desperate to prove what is going on to the world itself, slamming her deliciously soft cheeks into your thighs. Her own cock wags with each movement, dripping onto the bed with her excitement as you moan softly together.";
 				say "You reach for one of her legs and lift it up, thrusting up into her and making her frame jiggle with every slam into her, feeling yourself sink all the deeper for the new angle. She groans and praises you, tail rubbing against your chest as she flexes powerfully around your [cock of player] shaft. All too suddenly, your [ball size] orbs contract, and you can feel your vital fluid rushing up into the scaled female. She hisses, and sprays up into the air even as her passage clamps like a vice around you, drawing out the seed towards her hungry womb.";
-				wait for any key;
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		otherwise if a random chance of 1 in 2 succeeds: [ She fucks]
 			if cunts of player is greater than 0:
 				say "She presses firmly to your front, rubbing chests together in slow circles as her firmness grows against you, poking into your belly lightly, 'Gonna make you squeal,' she says with a smile, reaching for your hips and pulling up, she shimmies to light herself up to enter your moist cavern without delay.";
@@ -158,27 +158,27 @@ to say gator den scene:
 				otherwise if cunt length of player is greater than 12:
 					say "She sinks easily into your gaping hole, thrusting with loud lewd slurps as she grinds and groans with the pleasure of your hot tunnel around her eager shaft, not minding your large nature at all.";
 				say "She wraps her arms around you in a fond embrace, rubbing her scaley cheek against your own as she cooes soft delightful things to you, her words echoing in erotic tingles in your body even as she starts to piston against you, filling you with her urgent and virile pole. Her thick tail thrashes about with every movement even as your own hips start to rise to meet her, crashing together in a dance of love and lust.";
-				wait for any key;
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				say "Your belly grows warm as she ruts harder, her soft words seeming to make your womb tingle fiercely with a strange but deliriously wonderful sensation. You are not even sure when she spilled over the top, but you are being filled with thick seed and give out a deep sluttish moan as she clings to you, keeping her shaft plugged tight as the thick gator seed flows.[impregchance]";
 				say "Satisfied, she draws from you with a wet pop, 'Perfect, my lovely mate. You should stay... But you don[apostrophe]t have to, think about it, come back.' She blows a kiss at you and leans back on her bed, looking content for the moment as your cunt tingles with lingering pleasure.";
-				wait for any key;
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if cunts of player is less than 1:
 				say "'I want to be on top,' she says as she rubs over your belly and chest slowly, 'But you are missing the part I want to fuck most. How about I let you choose?' She leans in close, rubbing her nose to yours, 'Want me to take that pretty ass of yours?'";
 				if the player consents:
 					say "With your approval, she grins and flips you right over. She runs her soft scaly palms over your rump as she rumbles appreciatively, 'Don[apostrophe]t you worry one bit. Mother will be gentle.' She licks a finger, running it across the wet surface of her tongue before pressing the dangerously sharp tip of her claw to your puckered back door. She gently nudges your ring apart, wriggling the finger into your tight flesh as she leans in over you, 'Open up for mother, relax...' Her voice soothes you, and you find yourself relaxing at her command, allowing her digit to slowly push past, embedded fully in you. You can feel it moving inside of you as she insures your readiness.";
-					wait for any key;
+					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 					say "She draws the finger back, then clambers up behind you fully, her hot member rubbing against your ass cheeks as she leans over you. She hugs you from behind, snuggling against your back, her breasts rubbing slowly against you as she nudges herself into position, and begins to slowly rock her ready tool into your loosened doughnut. She slips in almost painlessly, and what little discomfort is soon forgotten as her rod begins to stroke into you, teasing sensitive portions of you as she pulls you back into her eager motions. She licks at your ears from behind as she couples, growling soft appreciations. Her balls slap up against you with each, increasingly fast, thrust.";
-					wait for any key;
+					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 					say "With a load groan, you feel her body stiffen over your own, and her shaft swell and explode powerfully into you. Pleasure explodes abruptly, causing you to seize in a climax of your own, echoing her in tremble and timber as she holds you preciously close, clutching almost desperately as the feelings pass. As composure returns, she pulls free of you and swats you smartly on the bottom, 'Good, you made momma really happy. You come back, any time. Momma always has time for you.' she insists, sending you on your way.";
 				otherwise:
 					say "'Well then, we still have one other option.' She flashes her teeth, and scoothes up along your body until her groin is at your face, already firm cock bumping against you and the scent of her balls close, 'Put your mouth to work for me,' she bids, thick tail swaying back and forth eagerly. Before you can muster up much argument one way or the other, her slick member nudges past your lips and she draws you forward by the back of the head, gently petting at you as she gives reptilian purrs. Her cock is salty at first, but becomes clean as you suck at it. Your reservations seem to fade like vapor as she whispers encouragement, rocking and fucking your face.";
-					wait for any key;
+					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 					say "Your tongue explores the alien textures of her smooth member, teasing it, to her vocal approval. She rubs along the back of your head as she presses forward, shaft twitching as you feel the seed splatter hotly across tongue and mouth. It tastes a little bitter and salty, but you loyally swallow the offering, soft tingles rewarding you in addition to her gentle words of encouragement. She pulls away and slips down to sit beside you, 'Good. I needed that. Maybe next time, you get a turn,' she winks, then reclines, looking ready to relax.";
 		otherwise: [She makes the player pleasure her orally]
 			say "'Well then, I know just what to do.' She flashes her teeth, and scoothes up along your body until her groin is at your face, already firm cock bumping against you and the scent of her balls close, 'Put your mouth to work for me,' she bids, thick tail swaying back and forth eagerly. Before you can muster up much argument one way or the other, her slick member nudges past your lips and she draws you forward by the back of the head, gently petting at you as she gives reptilian purrs. Her cock is salty at first, but becomes clean as you suck at it. Your reservations seem to fade like vapor as she whispers encouragement, rocking and fucking your face.";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "Your tongue explores the alien textures of her smooth member, teasing it, to her vocal approval. She rubs along the back of your head as she presses forward, shaft twitching as you feel the seed splatter hotly across tongue and mouth. It tastes a little bitter and salty, but you loyally swallow the offering, soft tingles rewarding you in addition to her gentle words of encouragement. She pulls away and slips down to sit beside you, 'Good. I needed that. Maybe next time, you get a turn,' she winks, then reclines, looking ready to relax.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	decrease the humanity of the player by 5;
 	if the humanity of the player is less than 10:
 		end the game saying "You decide against leaving after all.";

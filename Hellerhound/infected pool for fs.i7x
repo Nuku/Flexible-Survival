@@ -32,7 +32,7 @@ to say stop wyvern:
 		challenge "Wyvern";
 		say "After your ferocity in defending the pool, the wyverns decide they have had enough and leave, crashing a path through the park. It seems to head in the direction of the city.";
 		say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "[line break] Yo drink away your thirst.";
 		now thirst of the player is 0;
 	otherwise:
@@ -43,7 +43,7 @@ to say stop wyvern:
 			wait for any key;
 			challenge "Wyvern";
 			say "After freeing the pool from the danger of infection, you decide it owes you a good drink.";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "[line break] You drink away your thirst.";
 			now thirst of player is 0;                       
 		otherwise:

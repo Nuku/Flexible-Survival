@@ -53,7 +53,7 @@ instead of conversing the Doctor Medea:
 			say "It buzzes, and she looks at the results.";
 			if the gestation of the child is greater than 0:
 				say "'You are pregnant.'";
-				wait for any key;
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				say "'It has [skinname of child] skin, a [bodyname of child] body, and a [facename of child] face.'";
 			otherwise:
 				say "'You are not pregnant.'";

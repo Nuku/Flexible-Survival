@@ -27,7 +27,7 @@ instead of resolving a Secure Area:
 	if a random number between 10 and 20 is less than the perception of the player:
 		say "Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
 	say "[line break][line break][line break]";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "Do you wish to get to the door?";
 	if the player consents:
 		say "You run towards the barriers, determined to get inside.";
@@ -36,7 +36,7 @@ instead of resolving a Secure Area:
 			if a random number between one and 35 < the strength of the player: [breaks halo]
 				now halodestroyed is 1;
 				say "You slam the halo with all your might, and feel it crumble beneath you, revealing the rest of the way.";
-				wait for any key;
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				say "The shimmering dissipated, you look towards the guards at the door, and with a shock realize they are of the Ash Dragator infection. You could turn back now, or maybe you want to challenge them?";
 				if the player consents:
 					say "You march froward, and they attack.";

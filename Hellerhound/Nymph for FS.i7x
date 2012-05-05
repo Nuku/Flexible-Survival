@@ -41,10 +41,10 @@ To say nymph defeat:
 To say nymph attack:
 	if cunts of player > 0:
 		Say "As you go limp from the beating, greenish vines wrap around your body, spreading your legs and lifting you off the ground. The nymph steps forward and rubs her clit, grinning evilly.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "As you watch in horror, it turns a wooden brown, with a barklike texture and grows longer and thicker, becoming a small, six inch cock.";
 		say "The vines bend, and your entire body tilts backward, placing your [cunt size desc of player] cunt right in front of her cock. 'Sweet carryings', she smirks, as she pushes inside, causing you to scream in pain from the rough bark. The nymph pumps in and out, and by the time you realize her cock is absorbing the lubrication, the pain causes you to lose consciousness.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent. [impregchance]";
 		say "You manage to collect some of the cum, placing it in an empty water bottle.";
 		add "Nymph Cum" to the invent of the player;

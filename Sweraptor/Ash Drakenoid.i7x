@@ -9,14 +9,14 @@ Section 1 - Monster Responses
 
 to say Ash Drakenoid attack:
 	say "'Yes, YEs! YES!!!' She cries out in victory as you finally collapse to the ground exhausted. As you begin to desperately crawl away you expect to feel her scaly weight immediately press down on your [skin of player] back. Yet this is not the case. Tits wobbling and erect cock flailing the Drakenoid runs in a wide circle around you apparently checking for other creatures. She is quickly satisfied and saunters over to your beaten form. 'Apologies for keeping you waiting, nothing more embarrassing than being mounted while, well, mounted.' She grins exposing her wickedly sharp teeth.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if cunts of player is greater than 0:
 		say "She drops to her knees beside you and forcefully moves you onto all fours before positioning herself behind. 'Thank the Ash God, I have not fathered a whelpling in a whole three days...' she mutters. She slaps her glowing member across your buttocks a few times as she grips your hips with her other  clawed hand. Ignoring your pleading whimpers she forcefully sinks the shaft into your cunt. You gasp and shudder in pain from the temperature of her tool, like a heated iron rod it is. She leans over you pressing her body down atop yours, breasts mashing into your back. Finally securing you in a vice like grip around your waist, she begins to rock her hips back and forth with earnest. You begin to tear up from the painful heat as she coos softly in your ear, urging you to bear it.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "'Oh baby, I know it hurts, it always hurts with us... sshhh...' She increases her tempo against your body as the minutes tick by at an agonizingly slow pace. Looking down  under your torso you see a the faint glow of her member through your skin, it appears to glow brighter suddenly as she ruts against you harder and faster than before. 'Oh, please. A Whelp, pleeeeaasee.' She moans in ecstasy atop you. Her shaft swells in size, the glow within you shining brighter than before. Then you feel it, and you open your mouth to scream.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "Prepared for this she quickly claps a hand over your mouth. Within you her cock swells in both beat and size, the barbs around its tip and undercarriage swell and stiffen within you digging into your flesh. The barbs only allow her to move the shaft one way, deeper within you, and as she presses against your cervix she lets out a hiss of her own, her whole face contorted in effort and concentration. Semen as hot as scalding water is fired into you with powerful pulses.[impregchance]";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "Before long her shaft begins to deflate, thankfully the barbs are the first to recede, and she pulls cleanly from you. Panting she stretches and then stands, stretching. She gives your recovering shaky form a backwards glance then heads off in the direction of the capitol tower at a brisk pace.";
 	otherwise:
 		say "Looking you over she notices the distinct lack of a vagina and her expression immediately darkens. You prepare yourself to suffer the consequences of this sudden change in her mood, yet she simply turns around and wanders away from you. Headed away from the city center and out into the districts proper.";

@@ -32,10 +32,10 @@ to say dolphin attack:
 		say "When you are conscious again, it seems the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You aren't feeling well.";
 		now the hp of the player is -40;
 		say "You can't be her mate any longer, it looks like she is still too pissed to even think in that direction.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
 	infect "hermaphrodite dolphin";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	now dolphinconsent is 0;
 	say "[dolphin fuck]";
 
@@ -46,11 +46,11 @@ To say dolphin loss:
 	otherwise:
 		now dolphinconsent is 1;
 		say "You uncover your tools and swim closer.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "Closer";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "[bold type] AND closer[roman type]";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "She then whips her body up, and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' She mutters.";
 		say "[dolphin fuck]";
 

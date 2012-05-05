@@ -14,7 +14,7 @@ to say Yamato Dragoness attack:
 	say "The female dragon lowers her head to sniff at you.";
 	if cocks of player is greater than 0 and cunts of player is not greater than 0:
 		Say "After she finishes sniffing you she starts to speak, though she doesn't open her mouth so you're not sure how she is speaking.  'You smell like an interesting male, lets see what you have.'  She then breathes a plume of blue fire over you, it doesn't burn or hurt, but your clothing disintegrates, revealing all of your body for her to see.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cock length of player is less than 15:
 			say "The dragoness looks at your [cock of player] cock in disappointment and says 'You're just not big enough, come back when you've sized up ok.' and then flies off, leaving you naked in the middle of the park.";
 		otherwise:

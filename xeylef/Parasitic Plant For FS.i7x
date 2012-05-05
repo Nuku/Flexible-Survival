@@ -189,7 +189,7 @@ to say parasiticlust:
 		increase libido of player by addedlibido;
 		if (libido of player is greater than 90) and (location of player is fasttravel) and (timetillrampage is greater than 3):
 			say "As you pant and feverously massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rushes to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.";
-			wait for any key;
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if skinname of player is "Parasitic Plant", now keepskin is 1;
 			if facename of player is "Parasitic Plant", now keepface is 1;
 			if tailname of player is "Parasitic Plant", now keeptail is 1;
@@ -217,7 +217,7 @@ to say parasiticlust:
 				now didsubmit is 1;
 				say "[victory entry]";
 				infect;
-				wait for any key;
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "[line break][line break]";
 			say "The sex rampage finally ends and you regain control of your urges.  You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes.  You can feel the seed deep inside you throb as your plant-like infection reasserts itself as it soaks up the sexual juices it so desired.  If seeps through your infected body, reclaiming your altered flesh and spreading further.[line break]";
 			repeat with y running from 1 to number of filled rows in table of random critters:

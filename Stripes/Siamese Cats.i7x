@@ -38,7 +38,7 @@ to say losetosiamesecat:
 			say "     The female takes advantage of your position to move underneath you and start licking and kissing your cock, making you moan.  Her raspy tongue plays across your shaft before she wraps her lips around it and takes it into her warm muzzle.  She begins to slowly work over it, licking and sucking while you're getting fucked.";
 		otherwise:
 			say "     The female takes advantage of your position to move in front of you.  Taking your head in her paws, she presses your face between her legs, pushing it against her wet pussy.  The fight clearly got her excited and her scent fills your nose, further arousing you.  She moans and purrs loudly as you start to lick her.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "     The male behind you slides his hard shaft in and out of you.  His paws stroke over your hips, sharp claws against your skin as if to keep you in place, but by this point, you are lost to the lust and have no interest in removing that cock that's fucking you so nicely.  His pace is measured and disciplined, hitting all your sensitive spots and steadily building your arousal, making you moan and press back into each firm thrust.";
 		if cocks of player > 0:
 			say "     The female beneath you works at your cock with zeal, giving it almost unending attention.  She only slides her muzzle off it occasionally to lick further back over your balls and spread hole as the male fucks you.  You can hear him moan softly and poke you with his claws a little harder whenever her tongue is back there and brushes against his cock while licking you.";
@@ -48,7 +48,7 @@ to say losetosiamesecat:
 			say "     You can feel that cock drive into your pussy again and again, making your hips quiver as you get closer to your climax.  His paws knead at your ass, claws poking at it as he thrusts.  Your vaginal walls squeeze around his hard meat as your juices leak out over his balls and your thighs.";
 		otherwise:
 			say "     You can feel that hard cock drive into your ass again and again, making your hips quiver as you get closer to cumming.  His paws knead at your ass, claws poking at it as he thrusts.  Your tight ring squeezes around his hard meat as his penis presses against your prostate with each firm push into your rear.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cocks of player > 0:
 			say "     The feline's rough tongue continues licking and sucking at your cock, lapping your precum from your tip.  Glancing over, you can see her fingering herself as she does so.  The sight of her fingers sinking into her wet pussy is enough to push you over the edge and your cock throbs in her muzzle, unleashing shot after shot of your hot seed into her waiting mouth.  From the loud moans she's making under you, you suspect that she's quite pleased with her treat and cumming as well.";
 		otherwise:
@@ -68,7 +68,7 @@ to say losetosiamesecat:
 			say "     The tom mewls softly as he eyes your pussy, but cannot have it while his female partner is playing with you.  His stiff cock, human-like and a russet brown in colour, throbs as he moves to your head.  His precum drips down onto your lips as he brings it over your mouth.  You lick away the pre from your lips, moaning softly at its enticing flavour.  When he brings it down to your lips, they part easily, letting him slide it into your mouth.";
 		otherwise:
 			say "     The tom mewls softly as he watches his interlinked partner riding your hard cock.  Not wanting to be left out, he moves to your head, positioning his stiff cock, human-like and russet brown, over you.  His precum drips down onto your lips as he brings it over your mouth.  You lick away the pre from your lips, moaning softly at its enticing flavour.  When he brings it down to your lips, they part easily, letting him slide it into your mouth.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cocks of player > 0:
 			say "     Riding your cock slowly, the female runs her paws over your chest and kneads at it with her paws.  You can feel her sharp claws against your skin, making you shiver a little.  Her wet puss squeezes firmly around your cock each time she pushes her hips down and takes it into her, your hips thrusting up in response.";
 		otherwise:
@@ -78,7 +78,7 @@ to say losetosiamesecat:
 			say "     The female rides you harder and faster now, picking up the pace as her excitement builds.  She wraps her arms around her male partner, partially for support and partially so she can start nibbling at his neck.  He purrs softly at that and tilts his head to the side.";
 		otherwise:
 			say "     The female's hips grind against you harder and faster as her excitement builds.  You can feel her claws and teeth along your leg as she scritches and nibbles along it.  Her wet puss and soft folds feel so nice against you, making you moan all the louder.";
-		wait for any key;
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "     The tom's thrusts pick up, pumping himself between your wet lips faster.  His paws hold your head steady as he thrusts into you again and again.  His precum flows steadily into you until finally he throws his head back and mrowls in ecstacy, shooting thick cum into your mouth and down your throat.  You gulp it down greedily, lustfully eager to have this kitty's seed in your tummy, moaning loudly as you cum as well.";
 		if cocks of player > 0:
 			say "     Watching the male cumming and feeling you set off moments later, shooting your hot seed into her eager pussy.  She grinds down onto your firmly and squeezes her pussy around you tightly, climaxing as well.  Her inner walls flutter around you, milking your shaft for as much as you'll give.  Your hips buck, thrusting into her until you're drained.";
@@ -125,7 +125,7 @@ to say beatthesiamesecat:
 to say siamsex1:	[ride cock]
 	say "     Having come to the decision that you want something hard to fill you, you roll the male over onto his back and straddle him.  With a hand on his chest and the other at his cock, you start to stroke him to erection.  You grind your wet pussy down onto his shaft before lining it up so you can take him in.  With a soft moan of pleasure, you ease down, feeling that russet brown shaft sliding inside you.";
 	say "     You rock your hips and start to ride the feline's cock, making him mewl cutely beneath you.  Your hands stroke his chest, petting him to get him to purr louder.  His cock throbs inside you as he starts to thrust up into you, starting to recover from the fight enough to join in.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     And speaking of recovering, his female twin starts to rouse as well and moves closer.  You reach over and start to play with her pussy with one paw while continuing to stroke the tom's chest with the other.  They purr happily, nuzzling and kissing until finally the cute male has had enough and his hot seed shoots into you.  At almost the same point, the female's pussy quivers around your fingers and her hot juices flow.  Your own climax quickly follows, milking at the kitty's cock as you watch the conjoined pair orgasm.[impregchance]";
 	say "      After a moment to rest and recover, you pull off and gather your clothes and gear, leaving the exhausted felines snuggled up against one another.";
 
@@ -133,7 +133,7 @@ to say siamsex1:	[ride cock]
 to say siamsex2:	[fuck ass]
 	say "     Wanting to have your way with the cute kitty's bottom, you head over to the male and roll him over onto all fours.  He mewls cutely and squirms a little, but doesn't pull away as you line up your cock with his tailhole.  You rock your hips, grinding against his cheeks and leaking precum between them.";
 	say "     After a little teasing like this, you start to sink into his tight rump.  He releases a soft mewl and stretches his paws forward, kneading reflexively.  You pet his back and squeeze his rump, calling him a good kitty.  Once you're hilted in his ass, you pause for a few breaths before starting to thrust.  Reaching around, you can feel his cock has gotten quite hard as his excitement builds and he is soon pushing back into your thrusts.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     The female twin has also started to recover and she comes closer.  You reach over and start to play with her pussy with one hand while continuing to stroke the tom's back and bottom.  They purr happily, nuzzling and kissing until finally you reach your peak and drive your cock deep inside him.  Unleashing your hot seed, you pump is bottom full of your thick cum.";
 	say "     The male mrowls as he feels your cum shooting into his bowels.  You feel his ass tighten around you, spasming as he cums moments later, shooting his seed onto the ground beneath him.  At that same time, his female partner moans and clenches her pussy around your fingers as her orgasm strikes alongside his.";
 	say "     Once you are spent, you take a moment to rest and recover before pulling your cock free.  You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
@@ -142,7 +142,7 @@ to say siamsex2:	[fuck ass]
 to say siamsex3:	[FF oral]
 	say "     Deciding to put that feline's raspy tongue to good use, you guide her face between your legs and press her muzzle to your pussy.  She mewls softly and squirms, but quickly sets her tongue to work.  You moan softly as you feel her licking along your wet folds.";
 	say "     You run your fingers through her headfur and scritch her large ears, making her purr all the more.  She also gets more and more into the task before her, showing that she's clearly had some practice at this.  Her tongue is playful and talented, while her lips kiss and suck at your pussy lips and clit as well.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     The male twin has also started to recover and he comes closer.  You reach over and start to play with his cock with one hand while continuing to pet the good kitty femme with the other.  They purr happily, the male nuzzling and kissing his partner until you finally reach your peak and press her face to your pussy as you cum.  Your hot juices flow out over her tongue and across her muzzle[if cocks of player > 0].  Your cock throbs and shoots its hot load across the back of her head and down her body[end if].";
 	say "     As your orgasm rushes through you, you can feel the tom's cock throb in your hand, spraying his seed across the ground while the female's rear trembles.  It seems she's been fingering herself while playing with you and the conjoined pair mrowl in delight as they cum.";
 	say "     Once your orgasm passes, you take a moment to rest and recover before pushing the female back.  You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
@@ -151,7 +151,7 @@ to say siamsex3:	[FF oral]
 to say siamsex4:	[fuck pussy]
 	say "     Wanting a crack at that feline's tight cunt, you roll her onto her back and spread her legs.  She mewls cutely and squirms a little, but doesn't pull away as you line up your cock with her wet folds.  You stroke your cock against her, then tease her pussy's lips with your tip.";
 	say "     After a little teasing like this, you start to sink into her snug, wet hole.  She releases a soft mewl and wiggles her back against the ground, paws kneading in the air.  You pet her tummy, then move your hand up to caresses her breasts.  Her nipples poke lightly from her soft fur and you tease them as well, getting another soft mewl from her.";
-	wait for any key;
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     The male twin has also started to recover and he comes closer.  You reach over and start to play with his cock with one hand while continuing to play with her breasts with the other.  They purr happily, nuzzling and kissing until you finally reach your peak and thrust hard into her.  With that last thrust, your cock throbs inside her, unleashing your hot seed into her.";
 	say "     The female mrowls as she feels your cum shooting into her vagina and flowing into her womb.  You feel her pussy spasm around you, trembling all around you as her orgasm hits.  The tom's cock throbs in your hand as well, shooting his white seed across both their bodies as his orgasm hits alongside hers.";
 	say "     Once you are spent, you take a moment to rest and recover before pulling your cock free.  You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
