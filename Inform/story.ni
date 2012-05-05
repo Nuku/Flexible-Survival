@@ -2738,7 +2738,7 @@ To Combat Menu:
 		repeat through table of basic combat:
 			increase combatopt by 1;
 			say "[bold type][combatopt][roman type] - [link][title entry][end link][line break][run paragraph on]";
-		say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >";
+		say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
 		get typed command as playerinput;
 		if playerinput in lower case exactly matches the text "":
 			follow the player attack rule;
