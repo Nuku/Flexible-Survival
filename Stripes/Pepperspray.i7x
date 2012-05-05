@@ -42,7 +42,6 @@ this is the peppersprayflee rule:
 		say "You try to escape using the pepperspray, but fail.";
 		say "[pepperspraydrain]";
 		say "[weakretaliate]";
-		wait for any key;
 		if the hp of the player is less than 1:
 			lose;
 	rule succeeds;
@@ -59,11 +58,9 @@ this is the peppersprayattack rule:
 		say "[enhancedattack]";
 		if gascloud > 0:
 			decrease gascloud by 1;
-	wait for any key;
 	if monsterhp is greater than 0:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
 		say "[weakretaliate]";
-		wait for any key;
 		if the hp of the player is less than 1:
 			lose;
 	otherwise:
@@ -250,6 +247,7 @@ to say weakretaliate:
 			say "You are [descr].";
 		otherwise:
 			say "[Name Entry] misses!";
+	wait for any key;
 	rule succeeds;
 
 to say enhancedavoidance:

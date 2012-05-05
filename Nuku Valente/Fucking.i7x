@@ -3,7 +3,7 @@ Version 4 of Fucking by Nuku Valente begins here.
 
 Section 1 - Fucking action and table
 
-A person has a number called lastfuck.
+A person has a number called lastfuck.  lastfuck is normally 255.
 
 Fucking is an action applying to one thing.
 
