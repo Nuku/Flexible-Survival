@@ -5029,7 +5029,7 @@ When play begins:
 	repeat with q running from 1 to the number of rows in the table of game objects:
 		add name in row Q of table of game objects to allobjs;
 	change the right hand status line to "[list of valid directions]";
-	say "Do you want hyperlinks? [link]yes[end link] or [link]no[end link][run paragraph on]";
+	say "Do you want hyperlinks? (Y/n)";
 	get typed command as playerinput;
 	if playerinput matches "no" or playerinput matches "n":
 		now hypernull is 1;
