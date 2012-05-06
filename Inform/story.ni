@@ -1012,6 +1012,7 @@ This is the combat item rule:
 	say "[Z].";]
 	if there is no title in row 1 of table of combat items:
 		say "You have no combat ready items to use!";
+		wait for any key;
 	otherwise:
 		while 1 is 1:
 			clear the screen;
@@ -2729,6 +2730,88 @@ to numberfy (x - a snippet):
 	otherwise:
 		now calcnumber is 0;
 
+keychar is a text that varies.
+
+To translate (k - a number):
+	if k is 13:
+		now keychar is "return";
+	otherwise if k is 31 or k is 32:
+		now keychar is " ";
+	otherwise if k is 48:
+		now keychar is "0";
+	otherwise if k is 49:
+		now keychar is "1";
+	otherwise if k is 50:
+		now keychar is "2";
+	otherwise if k is 51:
+		now keychar is "3";
+	otherwise if k is 52:
+		now keychar is "4";
+	otherwise if k is 53:
+		now keychar is "5";
+	otherwise if k is 54:
+		now keychar is "6";
+	otherwise if k is 55:
+		now keychar is "7";
+	otherwise if k is 56:
+		now keychar is "8";
+	otherwise if k is 57:
+		now keychar is "9";
+	otherwise if k is 65 or k is 97:
+		now keychar is "a";
+	otherwise if k is 66 or k is 98:
+		now keychar is "b";
+	otherwise if k is 67 or k is 99:
+		now keychar is "c";
+	otherwise if k is 68 or k is 100:
+		now keychar is "D";
+	otherwise if k is 69 or k is 101:
+		now keychar is "E";
+	otherwise if k is 70 or k is 102:
+		now keychar is "F";
+	otherwise if k is 71 or k is 103:
+		now keychar is "G";
+	otherwise if k is 72 or k is 104:
+		now keychar is "H";
+	otherwise if k is 73 or k is 105:
+		now keychar is "I";
+	otherwise if k is 74 or k is 106:
+		now keychar is "J";
+	otherwise if k is 75 or k is 107:
+		now keychar is "K";
+	otherwise if k is 76 or k is 108:
+		now keychar is "L";
+	otherwise if k is 77 or k is 109:
+		now keychar is "M";
+	otherwise if k is 78 or k is 110:
+		now keychar is "N";
+	otherwise if k is 79 or k is 111:
+		now keychar is "O";
+	otherwise if k is 80 or k is 112:
+		now keychar is "P";
+	otherwise if k is 81 or k is 113:
+		now keychar is "Q";
+	otherwise if k is 82 or k is 114:
+		now keychar is "R";
+	otherwise if k is 83 or k is 115:
+		now keychar is "S";
+	otherwise if k is 84 or k is 116:
+		now keychar is "T";
+	otherwise if k is 85 or k is 117:
+		now keychar is "U";
+	otherwise if k is 86 or k is 118:
+		now keychar is "V";
+	otherwise if k is 87 or k is 119:
+		now keychar is "W";
+	otherwise if k is 88 or k is 120:
+		now keychar is "X";
+	otherwise if k is 89 or k is 121:
+		now keychar is "Y";
+	otherwise if k is 90 or k is 122:
+		now keychar is "Z";
+	otherwise:
+		now keychar is "INVALID";
+
 To Combat Menu:
 	now inafight is 1;
 	while hp of player is greater than 0 and monsterhp is greater than 0:
@@ -2742,40 +2825,50 @@ To Combat Menu:
 		let combatopt be 0;
 		repeat through table of basic combat:
 			increase combatopt by 1;
-			say "[bold type][combatopt][roman type] - [link][title entry][end link][line break][run paragraph on]";
+			say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link][line break][run paragraph on]";
 		say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
-		get next key as playerinput;
-		if playerinput in lower case exactly matches the text "":
+		let k be 0;
+		now keychar is "INVALID";
+		change the text of the player's command to "";
+		while keychar is "INVALID":
+			now k is the chosen letter;
+			translate k;
+			if the player's command matches "[number]":
+				now keychar is "[number understood]";
+		if keychar in lower case exactly matches the text " ":
 			follow the player attack rule;
 			next;
-		if playerinput in lower case exactly matches the text "a" or playerinput in lower case exactly matches the text "1":
+		if keychar in lower case exactly matches the text "return":
 			follow the player attack rule;
 			next;
-		if playerinput in lower case exactly matches the text "i" or playerinput in lower case exactly matches the text "2":
+		if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "1":
+			follow the player attack rule;
+			next;
+		if keychar in lower case exactly matches the text "i" or keychar in lower case exactly matches the text "2":
 			follow the combat item rule;
 			next;
-		if playerinput in lower case exactly matches the text "p" or playerinput in lower case exactly matches the text "3":
+		if keychar in lower case exactly matches the text "p" or keychar in lower case exactly matches the text "3":
 			follow the combat pass rule;
 			next;
-		if playerinput in lower case exactly matches the text "f" or playerinput in lower case exactly matches the text "4":
+		if keychar in lower case exactly matches the text "f" or keychar in lower case exactly matches the text "4":
 			follow the flee rule;
 			next;
-		if playerinput in lower case exactly matches the text "s" or playerinput in lower case exactly matches the text "5":
+		if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "5":
 			follow the submit rule;
 			next;
-		if playerinput in lower case matches the text "attack":
+		if keychar in lower case matches the text "attack":
 			follow the player attack rule;
 			next;
-		if playerinput in lower case matches the text "item":
+		if keychar in lower case matches the text "item":
 			follow the combat item rule;
 			next;
-		if playerinput in lower case matches the text "pass":
+		if keychar in lower case matches the text "pass":
 			follow the combat pass rule;
 			next;
-		if playerinput in lower case matches the text "submit":
+		if keychar in lower case matches the text "submit":
 			follow the submit rule;
 			next;
-		if playerinput in lower case matches the text "flee":
+		if keychar in lower case matches the text "flee":
 			follow the flee rule;
 			next;
 		say "Invalid action.";
