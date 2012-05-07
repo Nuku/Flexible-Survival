@@ -55,6 +55,7 @@ Instead of resolving Adventurer:
 				vulpogryphinfect;
 				now Adventurer is resolved;
 				now hp of Solstice is 4;
+				now lastfuck of Solstice is turns;
 				increase score by 25;
 			otherwise:
 				say "     Feeling rather uncertain about having sex with the recently-transformed Solstice, you quickly change the subject, pointing out that something has to be done about the statue.  She seems a little disappointed, but nods and gets up.  Using the cloths she had them bundled in, you gather up each piece and wrap them up again.  While the vulpogryph doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble.  That done, you remind her about your payment and take the food and water from her.  It's not much, but it'll certainly help.  She also passes you a small voucher card labelled [']50 credits['], saying its some kind of new money.";
@@ -68,6 +69,7 @@ Instead of resolving Adventurer:
 				vulpogryphinfect;
 				now Adventurer is resolved;
 				now hp of Solstice is 3;
+				now lastfuck of Solstice is turns;
 		otherwise:
 			say ", but frowns as you shake your head, telling her you had to leave it somewhere.  'Look, there's no deal until you bring it to me.'  She growls a little and grinds her teeth before disappearing back between the buildings.";
 	otherwise:
@@ -120,13 +122,30 @@ Crow Artifact is a grab object.  It is part of the player.  It is not temporary.
 instead of using Crow Artifact:
 	say "     You probably shouldn't be fiddling around with an expensive, and stolen, artifact.  You'd best bring it back to that vulpine adventurer.";
 
+[
+an everyturn rule:
+	if ( hp of Solstice is 3 or hp of Solstice is 4 ) and Solstice is not in Grey Abbey Library:
+		if lastfuck of Solstice - turns >= 12:
+			move Solstice to Grey Abbey Library;
+			if the player is not in Grey Abbey Library:
+				say "You get this odd feeling and consider checking back at the abbey.";
+
+
+an everyturn rule:
+	if ( hp of Solstice is 3 or hp of Solstice is 4 ) and Solstice is in Grey Abbey Library:
+		move Solstice to Grey Abbey Library;
+		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you.  Solstice is here, leaning against one of the bookshelves, glancing through a book.  The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if hp of Fang is 1 or hp of Fang is 2].  Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[otherwise if hp of Fang is 3].  Fang growls a little from his post at the door, clearly upset the this intruder somehow managed to get past him unnoticed[end if].";
+		say "     'Hey there.  Pretty nice setup [if ( number of booked people + number of bunkered people ) > 2]you and your pals have[otherwise]you've[end if] got going here.  Not much interest to the critters out there and a reinforced bunker in case things get really bad.  Definitely need to get some more supplies for that, though.  Things got rather hectic back at my old place, so I figured I could move in here with you, sweety.'  She runs a taloned paw along your side.";
+		if hp of Solstice is 3:
+			say "     Still upset with her about the feather, you push her hand away.  'What?  Oh, I'm so sorry, hon.  I didn't mean for anything like that to happen.  It must've fallen out,' she says apologetically[if the player is partvg].  'It certainly looks good on you though,' she adds with a grin and another stroke to your altered body[end if].  You calm down, accepting that it could very well have been an accident.";
+		say "     You also don't recall telling her where you've been staying and, as if sensing your upcoming question, the vulpogryph grins.  'Oh, I was just keeping an eye on you and followed you back to your clubhouse.  You should be a little more careful about that.  And I can certainly be of help to you as well, sweety.  Being a professional treasure hunter, I'm very good at finding stuff.  I could give you some tips... for a price.'  She continues running her paw over you.  'A little playtime with my special sweety sounds fair.  Though, if you want to skip the lesson and get straight to the fun, that'd be even better,' she says with a grin at the corner of her long beak.";
+]
 
 Section 2 - Solstice the Vulpogryph		[coming soon]
 
 Solstice is a woman.
 The description of Solstice is "[solsticedesc]";
 The conversation of Solstice is { "Treasure!" }.
-lastSolsticefucked is a number that varies.  lastSolsticefucked is normally 555.
 
 to say solsticedesc:
 	say "***";
@@ -140,8 +159,46 @@ Instead of conversing Solstice:
 instead of fucking Solstice:
 	say "***";
 
+[	hp of Solstice		]
+[ 0 - Never met			]
+[ 1 - Wants artifact		]
+[ 2 - Playet got artifact	]
+[ 3 - Played didn't sex		]
+[ 4 - Player sexed		]
+[ 5 - Booked and met		]
 
-Section 3 - Endings
+
+Section 3 - Definitions
+
+Definition: a person is vgfaced:
+	if the facename of the player is "Vulpogryph", yes;
+	no;
+
+Definition: a person is vgskinned:
+	if the skinname of the player is "Vulpogryph", yes;
+	no;
+
+Definition: a person is vgbodied:
+	if the bodyname of the player is "Vulpogryph", yes;
+	no;
+
+Definition: a person is vgcocked:
+	if the cockname of the player is "Vulpogryph", yes;
+	no;
+
+Definition: a person is vgtailed:
+	if the tailname of the player is "Vulpogryph", yes;
+	no;
+
+Definition: a person is partvg:
+	if the facename of the player is "Vulpogryph", yes;
+	if the skinname of the player is "Vulpogryph", yes;
+	if the bodyname of the player is "Vulpogryph", yes;
+	if the cockname of the player is "Vulpogryph", yes;
+	if the tailname of the player is "Vulpogryph", yes;
+	no;
+
+Section 4 - Endings
 
 
 
