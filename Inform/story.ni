@@ -2425,10 +2425,10 @@ To Infect:
 		let oldlib be libido of player;
 		increase libido of player by 1;
 		increase libido of player by ( libido entry minus libido of player ) divided by 3;
-		if oldlib is less than 50 and libido of player is greater than 49:
-			say "Your thoughts have sunk to almost constant depravity!";
 		if oldlib is less than 80 and libido of player is greater than 79:
-			say "You now have trouble thinking of anything but sexual satisfaction!";
+			say "You now have trouble thinking of anything but sexual satisfaction![no line break][if cocks of player is 1]  Your cock is fully erect constantly and drools precum steadily.[no line break][otherwise if cocks of player > 1]  Your cocks is fully erect constantly and drools precum steadily.[no line break][end if][if cunts of player is 1]  Your cunt overflows with hot juices that run down your thighs.[no line break][otherwise if cunts of player > 1]  Your cunts overflow with hot juices that run down your thighs.[no line break][end if][line break]";
+		otherwise if oldlib is less than 50 and libido of player is greater than 49:
+			say "Your thoughts have sunk to almost constant depravity![no line break][if cocks of player is 1]  Your cock remains perpetually hard and leaking precum.[no line break][otherwise if cocks of player > 1]  Your cocks remain perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1]  Your cunt is hot and dripping juices as your arousal builds.[no line break][otherwise if cunts of player > 1]  Your cunts are hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 
 To lose:
 	choose row monster from the table of random critters;
@@ -2917,6 +2917,7 @@ To fight:
 		choose row monster from the table of random critters;
 		if lev entry is less than level of player and hardmode is true:
 			hardmodeboost;
+		now monsterhp is hp entry;
 		say "You run into a [name entry].[line break][desc entry].";
 		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
@@ -2927,8 +2928,7 @@ To fight:
 		if combat abort is 1:
 			now combat abort is 0;
 			rule succeeds;
-			stop the action;
-		now monsterhp is hp entry;
+			continue the action;
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		decrease bonus by ( dex entry minus 10 ) divided by 2;
 		increase bonus by a random number from 1 to 20;
@@ -2939,7 +2939,7 @@ To fight:
 				say "The creature gets the drop on you!";
 				retaliate;
 				if hp of player is less than 1 or lost is 1, stop the action;
-		wait for any key;
+[		wait for any key;	]
 [		change the current menu to table of Basic Combat;
 		carry out the displaying activity;
 		clear the screen;]
@@ -3112,19 +3112,28 @@ check exploring:
 carry out exploring:
 	let l be a random visible dangerous door;
 	if l is not nothing, now battleground is the marea of l;
+	if l is nothing, now battleground is "Outside";	[***]
 	follow the explore rule;
 
+
 restoration is a number that varies.
+balloversize is a number that varies.
 
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
 	now gascloud is 0;
 	if breast size of player is greater than 26, now breast size of player is 26;
-	if libido of player is less than 96 and "Horny Bastard" is listed in feats of player:
-		increase libido of player by 5;
-	if libido of player is greater than 10 and "Cold Fish" is listed in feats of player:
-		decrease libido of player by ( ( libido of player divided by 12 ) + 1 );
+	let oldlib be libido of player;
+	if libido of player is less than 100 and "Horny Bastard" is listed in feats of player:
+		increase libido of player by square root of ( 55 - ( libido of player / 2 ) );
+		if libido of player > 100, now libido of player is 100;
+	if libido of player is greater than 20 and "Cold Fish" is listed in feats of player and libido of player is not 100:
+		decrease libido of player by square root of ( libido of player - 15 );
+	if oldlib is less than 80 and libido of player is greater than 79:
+		say "You now have trouble thinking of anything but sexual satisfaction![no line break][if cocks of player is 1]  Your cock is fully erect constantly and drools precum steadily.[no line break][otherwise if cocks of player > 1]  Your cocks is fully erect constantly and drools precum steadily.[no line break][end if][if cunts of player is 1]  Your cunt overflows with hot juices that run down your thighs.[no line break][otherwise if cunts of player > 1]  Your cunts overflow with hot juices that run down your thighs.[no line break][end if][line break]";
+	otherwise if oldlib is less than 50 and libido of player is greater than 49:
+		say "Your thoughts have sunk to almost constant depravity![no line break][if cocks of player is 1]  Your cock remains perpetually hard and leaking precum.[no line break][otherwise if cocks of player > 1]  Your cocks remain perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1]  Your cunt is hot and dripping juices as your arousal builds.[no line break][otherwise if cunts of player > 1]  Your cunts are hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 	if the hunger of player is less than 0, now the hunger of player is 0;
 	if the thirst of player is less than 0, now the thirst of player is 0;
 	if the hp of the player is less than the maxhp of the player:
@@ -3169,6 +3178,25 @@ This is the turnpass rule:
 	if "Passing Grade Chest" is listed in feats of player and breast size of player is greater than 4:
 		now breast size of player is 4;
 		say "You feel the pressure in your chest suddenly abate with a rush of relief.";
+	if cock width of player >= 32 and balloversize is 0 and cockname of player is not "Tanuki":	[super-sized balls]
+		decrease Dexterity of player by 1 + (dexterity of player / 10 );
+		now balloversize is 1 + (dexterity of player / 10 );
+		say "     Your balls, so huge they hang to the ground, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
+	if balloversize > 0 and cock width of player < 32:
+		increase dexterity of player by balloversize;
+		now balloversize is 0;
+		say "     Your balls, having shrunk down somewhat, no longer hinder you.  Your legs definitely feel better for not having to drag them around anymore.";
+	otherwise if balloversize > 0 and cockname of player is "Tanuki":
+		increase dexterity of player by balloversize;
+		now balloversize is 0;
+		say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
+	if libido of player is 100 and humanity of player > 0:
+		say "[spontaneousorgasm]";
+		decrease humanity of player by a random number between 1 and 2;
+		if "Pure" is listed in feats of player, increase humanity by a random number between 0 and 1;
+		now libido of player is 75;
+		if "Horny Bastard" is listed in feats of player, now libido of player is 80;
+		if "Cold Fish" is listed in feats of player, now libido of player is 60;
 	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
 	if a random number from 1 to 20 is greater than ( ( the stamina of the player divided by 2 ) minus 1 ):
 		increase hunger of player by 1;
@@ -3361,6 +3389,17 @@ This is the turnpass rule:
 	follow the everyturn rules;
 	rule succeeds;
 
+to say spontaneousorgasm:
+	if cocks of player > 0 and cunts of player > 0:
+		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cocks of player is 1]cock[otherwise]cocks[end if] spray your hot seed across your clothes and the ground while your hot, feminine juices soak your thighs.  You leave a [if cock width of player + ( 2 * cunt width of player ) < 18]messy splotch[otherwise if cock width of player + ( 2 * cunt width of player ) < 25]messy puddle[otherwise]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+	otherwise if cocks of player > 0:
+		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cocks of player is 1]cock[otherwise]cocks[end if] spray your hot seed across your clothes and the ground.  Your blasted cum leaves a [if cock width of player < 18]messy splotch[otherwise if cock width of player < 25]messy puddle[otherwise]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+	otherwise if cunts of player > 0:
+		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cunts of player is 1]cunt[otherwise]cunts[end if] overflows with hot, feminine juices that soak your thighs.  You leave a [if ( 2 * cunt width of player ) < 18]messy splotch[otherwise if ( 2 * cunt width of player ) < 25]messy puddle[otherwise]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+	otherwise:		[neuter]
+		say "     Your body, consummed with a lust it is unable to satisfy, drops to its knees and trembles with an painful, aching need.  Lacking any other means, you rub over your body until it finally passes, leaving you weak, tired and largely unsatisfied.";
+		now hp of player is ( 3 * hp of player ) / 4;
+
 This is the monster injury rule:
 	choose row monster from the table of random critters;
 	let per be ( monsterhp times 100 ) divided by hp entry;
@@ -3453,19 +3492,21 @@ This is the cock descr rule:
 To say ball size:
 	if cock width of player is greater than 0:
 		if cock width of player is less than 3:
-			say "[one of]marble sized[or]tiny[or]very small[at random]";
+			say "[one of]marble-sized[or]tiny[or]very small[at random]";
 		otherwise if cock width of player is less than 6:
-			say "[one of]plum sized[or]golf ball sized[or]apricot sized[or]average[at random]";
+			say "[one of]plum-sized[or]golf-ball-sized[or]apricot-sized[or]average[at random]";
 		otherwise if cock width of player is less than 12:
-			say "[one of]lemon sized[or]large[at random]";
+			say "[one of]lemon-sized[or]large[at random]";
 		otherwise if cock width of player is less than 16:
-			say "[one of]baseball sized[or]orange sized[or]hand filling[at random]";
+			say "[one of]baseball-sized[or]orange-sized[or]hand-filling[at random]";
 		otherwise if cock width of player is less than 20:
-			say "[one of]grapefruit sized[or]massive[at random]";
+			say "[one of]grapefruit-sized[or]massive[at random]";
 		otherwise if cock width of player is less than 25:
-			say "[one of]cantaloupe sized[or]giant[or]knee knocking[at random]";
-		otherwise:
+			say "[one of]cantaloupe-sized[or]giant[or]knee-knocking[at random]";
+		otherwise if cock width of player is less than 32:
 			say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
+		otherwise:
+			say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
 		say " [one of]balls[or]testicles[or]gonads[at random]";
 
 This is the cunt descr rule:
@@ -3483,7 +3524,7 @@ This is the cunt descr rule:
 		now descr is "[one of]titanic[or]seemingly bottomless[or]elephantine[at random]";
 	now cunt size desc of player is descr;
 	rule succeeds;
-	
+
 
 looknow is a number that varies.
 
@@ -3524,18 +3565,19 @@ This is the self examine rule:
 	now looknow is 1;
 	showstats player;
 	let cocktext be "";
+	follow the cock descr rule;
 	if the cocks of the player is greater than 0:
 		if the cocks of the player is greater than 1:
-			now cocktext is "have [cocks of the player] [descr] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. Underneath them hang [ball size]. ";
+			now cocktext is "have [cocks of the player] [descr] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drolling precum steadily[end if].  Underneath them hang [ball size]. ";
 		otherwise:
-			now cocktext is "have a [descr] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. Underneath it hang [ball size]. ";
+			now cocktext is "have a [descr] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drolling precum steadily[end if].  Underneath it hang [ball size]. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if the cunts of the player is greater than 0:
 		if the cunts of the player is greater than 1:
-			now cunttext is " have [cunts of the player] [descr] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. ";
+			now cunttext is " have [cunts of the player] [descr] [one of]cunts[or]pussies[or]vaginas[at random].  Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around.  They are [if libido of player <= 25]a little damp at the moment[otherwise if libido of player <= 50]wet with your juices[otherwise if libido of player <= 75]hot and dripping juices[otherwise]drooling musky nectar down your thighs[end if]. ";
 		otherwise:
-			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [descr], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. ";
+			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [descr], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around.  It is [if libido of player <= 25]a little damp at the moment[otherwise if libido of player <= 50]wet with your juices[otherwise if libido of player <= 75]hot and dripping juices[otherwise]drooling musky nectar down your thighs[end if]. ";
 	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
@@ -3554,17 +3596,14 @@ This is the self examine rule:
 		if descmod of x is "", next;
 		if placement of x is "end":
 			say " [descmod of x]";
+	say "[line break]";
 	if cocktext is not "":
 		if cunttext is "":
-			follow the cock descr rule;
 			say "A private peek shows that you [cocktext]";
 		otherwise:
-			follow the cock descr rule;
-			say "A private peek shows that you [cocktext].";
-			follow the cunt descr rule;
+			say "A private peek shows that you [cocktext]";
 			say " Also, you[cunttext]";
 	otherwise if cunttext is not "":
-		follow the cunt descr rule;
 		say " You[cunttext]";
 	follow the breast descr rule;
 	if breasts of player is greater than 0:
@@ -4613,6 +4652,9 @@ Include Needy Heat for FS by Telanda Softpaw.
 Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
 Include Pets by Nuku Valente.
 Include Computers by Hellerhound.
+Include Feats by Nuku Valente.
+Include Pepperspray by Stripes.
+Include Masturbate by Stripes.
 
 
 [Locations]
@@ -4674,8 +4716,6 @@ Include Smell by Hellerhound.
 Include Inventory Management Enhancements for FS by mirumu.
 Include Story Skipper by Nuku Valente.
 [Include items by Zero.]
-Include Feats by Nuku Valente.
-Include Pepperspray by Stripes.
 Include Central Library by Stripes.
 
 
