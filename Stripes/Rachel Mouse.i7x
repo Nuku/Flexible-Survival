@@ -179,7 +179,9 @@ An everyturn rule:
 					say "[rachelsexfemale2]";
 				if T is 5:
 					say "[racheloral]";
+			if a random chance of 1 in 2 succeeds, now researchbypass is 1;
 			infect "Mental Mouse";
+			now researchbypass is 0;
 			if mousecounter is even, increase mousecounter by 1;
 
 to say rachelsexmale1:
