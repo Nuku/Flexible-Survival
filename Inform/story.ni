@@ -151,6 +151,7 @@ The child has a text called bodyname. Bodyname is usually "human";
 The child has a text called facename. Facename is usually "human";
 The child has a text called skinname. Skinname is usually "human";
 The child has a text called cockname. cockname is usually "human";
+The child has a text called tailname. Tailname is usually "human";
 The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
