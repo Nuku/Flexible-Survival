@@ -4005,7 +4005,7 @@ This is the finish stats rule:
 	now started is 1;
 	say "You have decided your physical talents, but are you a man or a woman?";
 	wait for any key;
-	say "Do you want to be [link]m[end link](ale) or [link]f[end link](emale)?>[run paragraph on]";
+	say "Do you want to be [link][bracket]m[close bracket][as]m[end link]ale or [link][bracket]f[close bracket][as]f[end link]emale?>[run paragraph on]";
 	now tempnum is 0;
 	while tempnum is 0:
 		get typed command as playerinput;
