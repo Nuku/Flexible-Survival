@@ -25,7 +25,7 @@ To wait for any key:
 	keypause;
 
 to clear the screen and hyperlink list:
-	clear the screen;
+	if automaticcombatcheck is 0, clear the screen; [skips clearing if in autocombat]
 	now hyperlink list is {}.
 
 To keypause:
@@ -51,6 +51,7 @@ title	description
 "Socializing"	"You can talk (person) to chat it up. If they are of more personal interest with you, you can also fuck (person)"
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
+"Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]i hate to wait[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]i love to wait[roman type] to return to the default."
 
 Include (-
 
@@ -97,6 +98,10 @@ To select an option from (curtable - a table name):
 To get typed command as (S - a snippet): (-
         KeyboardPrimitive(buffer, parse);
         {S} = 100 + WordCount();  -)
+        
+To get next key as (S - a snippet): (-
+        {S} = VM_KeyChar();  -)
+
 
 Book 1 - Variable Definitions
 
@@ -146,6 +151,7 @@ The child has a text called bodyname. Bodyname is usually "human";
 The child has a text called facename. Facename is usually "human";
 The child has a text called skinname. Skinname is usually "human";
 The child has a text called cockname. cockname is usually "human";
+The child has a text called tailname. Tailname is usually "human";
 The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
@@ -1007,6 +1013,7 @@ This is the combat item rule:
 	say "[Z].";]
 	if there is no title in row 1 of table of combat items:
 		say "You have no combat ready items to use!";
+		wait for any key;
 	otherwise:
 		while 1 is 1:
 			clear the screen;
@@ -2446,6 +2453,7 @@ To lose:
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
 	decrease the score by 1;
 	decrease the morale of the player by 3;
+	now automaticcombatcheck is 0; [combat is over, reset to zero]
 [	decrease the menu depth by 1;]
 
 
@@ -2690,6 +2698,7 @@ to win:
 	say "A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
 	if ok is 1, wait for any key;
 	clear the screen and hyperlink list;
+	now automaticcombatcheck is 0; [combat is over, reset to zero]
 	rule succeeds;
 
 To Vialchance (x - a text):
@@ -2711,6 +2720,7 @@ predestiny is a number that varies.
 
 calcnumber is a number that varies.
 
+automaticcombatcheck is a number that varies. [used to mark if combat actions are not being chosen by the player]
 inafight is a number that varies.	[used to detect if player is in a fight (item use)]
 
 To get a number:
@@ -2724,56 +2734,164 @@ to numberfy (x - a snippet):
 	otherwise:
 		now calcnumber is 0;
 
+keychar is a text that varies.
+
+To translate (k - a number):
+	if k is 13:
+		now keychar is "return";
+	otherwise if k is 31 or k is 32:
+		now keychar is " ";
+	otherwise if k is 48:
+		now keychar is "0";
+	otherwise if k is 49:
+		now keychar is "1";
+	otherwise if k is 50:
+		now keychar is "2";
+	otherwise if k is 51:
+		now keychar is "3";
+	otherwise if k is 52:
+		now keychar is "4";
+	otherwise if k is 53:
+		now keychar is "5";
+	otherwise if k is 54:
+		now keychar is "6";
+	otherwise if k is 55:
+		now keychar is "7";
+	otherwise if k is 56:
+		now keychar is "8";
+	otherwise if k is 57:
+		now keychar is "9";
+	otherwise if k is 65 or k is 97:
+		now keychar is "a";
+	otherwise if k is 66 or k is 98:
+		now keychar is "b";
+	otherwise if k is 67 or k is 99:
+		now keychar is "c";
+	otherwise if k is 68 or k is 100:
+		now keychar is "D";
+	otherwise if k is 69 or k is 101:
+		now keychar is "E";
+	otherwise if k is 70 or k is 102:
+		now keychar is "F";
+	otherwise if k is 71 or k is 103:
+		now keychar is "G";
+	otherwise if k is 72 or k is 104:
+		now keychar is "H";
+	otherwise if k is 73 or k is 105:
+		now keychar is "I";
+	otherwise if k is 74 or k is 106:
+		now keychar is "J";
+	otherwise if k is 75 or k is 107:
+		now keychar is "K";
+	otherwise if k is 76 or k is 108:
+		now keychar is "L";
+	otherwise if k is 77 or k is 109:
+		now keychar is "M";
+	otherwise if k is 78 or k is 110:
+		now keychar is "N";
+	otherwise if k is 79 or k is 111:
+		now keychar is "O";
+	otherwise if k is 80 or k is 112:
+		now keychar is "P";
+	otherwise if k is 81 or k is 113:
+		now keychar is "Q";
+	otherwise if k is 82 or k is 114:
+		now keychar is "R";
+	otherwise if k is 83 or k is 115:
+		now keychar is "S";
+	otherwise if k is 84 or k is 116:
+		now keychar is "T";
+	otherwise if k is 85 or k is 117:
+		now keychar is "U";
+	otherwise if k is 86 or k is 118:
+		now keychar is "V";
+	otherwise if k is 87 or k is 119:
+		now keychar is "W";
+	otherwise if k is 88 or k is 120:
+		now keychar is "X";
+	otherwise if k is 89 or k is 121:
+		now keychar is "Y";
+	otherwise if k is 90 or k is 122:
+		now keychar is "Z";
+	otherwise:
+		now keychar is "INVALID";
+
 To Combat Menu:
 	now inafight is 1;
+	now automaticcombatcheck is 0; [sets to zero as combat starts, just in case]
 	while hp of player is greater than 0 and monsterhp is greater than 0:
-		if combat abort is 1:
-			now combat abort is 0;
-			wait for any key;
-			clear the screen and hyperlink list;
-			continue the action;
-		clear the screen;
-		say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee[line break]";
-		let combatopt be 0;
-		repeat through table of basic combat:
-			increase combatopt by 1;
-			say "[bold type][combatopt][roman type] - [link][title entry][end link][line break][run paragraph on]";
-		say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
-		get typed command as playerinput;
-		if playerinput in lower case exactly matches the text "":
+		if "Unrelenting Assault" is listed in feats of player: [always attacks in combat, no player input needed]
+			now automaticcombatcheck is 1;
+			if combat abort is 1:
+				now combat abort is 0;
+				rule succeeds;
+				stop the action;
 			follow the player attack rule;
-			next;
-		if playerinput in lower case exactly matches the text "a" or playerinput in lower case exactly matches the text "1":
-			follow the player attack rule;
-			next;
-		if playerinput in lower case exactly matches the text "i" or playerinput in lower case exactly matches the text "2":
-			follow the combat item rule;
-			next;
-		if playerinput in lower case exactly matches the text "p" or playerinput in lower case exactly matches the text "3":
-			follow the combat pass rule;
-			next;
-		if playerinput in lower case exactly matches the text "f" or playerinput in lower case exactly matches the text "4":
+		otherwise if "Coward" is listed in feats of player: [always flees in combat, no player input needed]
+			now automaticcombatcheck is 1;
+			if combat abort is 1:
+				now combat abort is 0;
+				rule succeeds;
+				stop the action;
 			follow the flee rule;
-			next;
-		if playerinput in lower case exactly matches the text "s" or playerinput in lower case exactly matches the text "5":
-			follow the submit rule;
-			next;
-		if playerinput in lower case matches the text "attack":
-			follow the player attack rule;
-			next;
-		if playerinput in lower case matches the text "item":
-			follow the combat item rule;
-			next;
-		if playerinput in lower case matches the text "pass":
-			follow the combat pass rule;
-			next;
-		if playerinput in lower case matches the text "submit":
-			follow the submit rule;
-			next;
-		if playerinput in lower case matches the text "flee":
-			follow the flee rule;
-			next;
-		say "Invalid action.";
+		otherwise:
+			if combat abort is 1:
+				now combat abort is 0;
+				wait for any key;
+				clear the screen and hyperlink list;
+				continue the action;
+			clear the screen;
+			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee[line break]";
+			let combatopt be 0;
+			repeat through table of basic combat:
+				increase combatopt by 1;
+				say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link][line break][run paragraph on]";
+			say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
+			let k be 0;
+			now keychar is "INVALID";
+			change the text of the player's command to "";
+			while keychar is "INVALID":
+				now k is the chosen letter;
+				translate k;
+				if the player's command matches "[number]":
+					now keychar is "[number understood]";
+			if keychar in lower case exactly matches the text " ":
+				follow the player attack rule;
+				next;
+			if keychar in lower case exactly matches the text "return":
+				follow the player attack rule;
+				next;
+			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "1":
+				follow the player attack rule;
+				next;
+			if keychar in lower case exactly matches the text "i" or keychar in lower case exactly matches the text "2":
+				follow the combat item rule;
+				next;
+			if keychar in lower case exactly matches the text "p" or keychar in lower case exactly matches the text "3":
+				follow the combat pass rule;
+				next;
+			if keychar in lower case exactly matches the text "f" or keychar in lower case exactly matches the text "4":
+				follow the flee rule;
+				next;
+			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "5":
+				follow the submit rule;
+				next;
+			if keychar in lower case matches the text "attack":
+				follow the player attack rule;
+				next;
+			if keychar in lower case matches the text "item":
+				follow the combat item rule;
+				next;
+			if keychar in lower case matches the text "pass":
+				follow the combat pass rule;
+				next;
+			if keychar in lower case matches the text "submit":
+				follow the submit rule;
+				next;
+			if keychar in lower case matches the text "flee":
+				follow the flee rule;
+				next;
+			say "Invalid action.";
 
 to Pet level up:
 	increase level of companion of player by 1;
@@ -2939,7 +3057,7 @@ To fight:
 				say "The creature gets the drop on you!";
 				retaliate;
 				if hp of player is less than 1 or lost is 1, stop the action;
-[		wait for any key;	]
+		wait for any key;
 [		change the current menu to table of Basic Combat;
 		carry out the displaying activity;
 		clear the screen;]
@@ -4952,7 +5070,7 @@ When play begins:
 	repeat with q running from 1 to the number of rows in the table of game objects:
 		add name in row Q of table of game objects to allobjs;
 	change the right hand status line to "[list of valid directions]";
-	say "Do you want hyperlinks? [link]yes[end link] or [link]no[end link][run paragraph on]";
+	say "Do you want hyperlinks? (Y/n)";
 	get typed command as playerinput;
 	if playerinput matches "no" or playerinput matches "n":
 		now hypernull is 1;
