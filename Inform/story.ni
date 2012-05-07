@@ -3057,7 +3057,7 @@ To fight:
 				say "The creature gets the drop on you!";
 				retaliate;
 				if hp of player is less than 1 or lost is 1, stop the action;
-[		wait for any key;	]
+		wait for any key;
 [		change the current menu to table of Basic Combat;
 		carry out the displaying activity;
 		clear the screen;]
