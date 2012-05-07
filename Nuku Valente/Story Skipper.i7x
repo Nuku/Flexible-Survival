@@ -234,6 +234,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now shiftable is the number understood;
 					now Secure Area is unresolved;
+					now Guard Gryphon is unresolved;
 					if shiftable > 0:
 						now Secure Area is resolved;
 					if shiftable is 2:

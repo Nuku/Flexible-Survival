@@ -33,6 +33,7 @@ Red Apartment is a room. "     This tall, red building has a fire escape on this
 to say redflight:
 	if staircaselocation is 1:
 		say "There appears to be a ghostly staircase on top of the building, almost unnoticeable unless you were searching for it.  Maybe you could go up?";
+		now Red Apartment is known;
 	otherwise:
 		say "There is nothing else interesting about it at the moment.";
 
@@ -42,6 +43,7 @@ Green Apartment is a room. "     A green building, almost identical to your apar
 to say greenflight:
 	if staircaselocation is 2:
 		say "There appears to be a ghostly staircase on top of the building, which you would have missed if you weren't looking for it.  Maybe you could go up?";
+		now Green Apartment is known;
 	otherwise:
 		say "There is nothing else interesting about it at the moment.";
 
@@ -51,6 +53,7 @@ Bright Alley is a room. "     A dark alley, with a silvery blue glow coming from
 to say brightflight:
 	if staircaselocation is 3:
 		say "There appears to be a ghostly staircase at the top of the hill past the alley.  You would not have spotted it if you didn't know to look.  Maybe you could go check it out?";
+		now Bright Alley is known;
 	otherwise:
 		say "There is nothing else interesting about it at the moment.";
 
