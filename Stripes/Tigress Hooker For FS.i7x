@@ -271,7 +271,7 @@ to say beattigress:
 		say "Hurray! You beat the tigress matron, time to celebrate.";
 		stop the action;
 	say "     As you strike a final blow to the tigress, you drive hir back into the shaded alley, sending hir to collapse onto a dirty mattress in the shadows of the buildings.  From the smell, shi[apostrophe]s used it for hir clients before.  Shi mewls with lustful need, looking up at you with hir feline eyes as shi releases the easy straps of hir street clothes.  The slutty tigress bares hir striped body for you, lost to hir lustful desires but too weakened to pounce you to sate them.";
-	say "     The tigress whore is available for your amusement. Do you wish to give in have some fun with hir?";
+	say "     The tigress whore is available for your amusement. Do you wish to give in and have some fun with hir?";
 	if the player consents:									[Decides to fuck tigress]
 		if cunts of player > 0 and cocks of player > 0:				[Yes = HERM Identified!]
 			increase libido of player by 10;					[Oral submission increases Libido]
