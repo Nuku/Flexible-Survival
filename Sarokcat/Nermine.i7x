@@ -45,6 +45,9 @@ Nermine is a woman.
 The description of Nermine is "[Nerminedescribing]";
 The conversation of Nermine is { "Mysteeerious!" }.
 
+instead of linkactioning Nermine when nerminetalk > 0 and rarequesting is 0:
+	say "Possible Actions: [link]talk[as]talk Nermine[end link], [link]smell[as]smell Nermine[end link], [link]fuck[as]fuck Nermine[end link], [link]help[as]help Nermine[end link][line break]";
+
 instead of sniffing Nermine:
 	say "Nermine smells like a female jackal.  Her scent is subtle and alluring.";
 
@@ -239,6 +242,9 @@ carry out nerminehelping:
 	if jackalmantf is greater than 0:
 		say "'Oh my, with those fine looks you are getting there, it is certainly not you that needs the help here, but Nermine!' the Jackaless says with a smile as she looks you up and down. 'Why doesn[apostrophe]t handsome person finish up their questing and wandering in city so they can 'help' Nermine into her bed in her back room?' She says as she winks at you and licks her soft black muzzle in anticipation.";
 		stop the action;
+	if rarequesting > 0:
+		say "'Do not be backing out of promise to be helping Nermine with the rare items she needs.  You should be focusing on that instead.";
+		stop the action;
 	if jackalboytf is 4:
 		say "'Ah handsome little Jackal toy is offering to help Nermine some more? Or is it they want Nermine to help them out?' The sultry Jackal woman says as she runs her clawed hands over your soft and sleek body, your eyes closing in pleasure as she gives you a soft scratch behind your canine ears.  'It is good to have an eager little Jackal pet around the place to help Nermine out whenever she needs it, she is glad you are accepting your new place here as happily as she knew you would.'  She says as she pets you a few more times, her soft words music to your submissive jackal soul, 'And her little helper doesn[apostrophe]t need to worry about any of the other infections in the city any more now, Nermine has made sure that your lovely new form is nice and permanent, so you can be her lusty little pet from now on! Isn[apostrophe]t that nice?'  Your mistress asks you as she rubs your head a few more times, and you find yourself nodding happily at her question, glad to be able to please your lovely dominant mistress in whatever way she wants.  'Nermine doesn[apostrophe]t need any more help in store right now, but maybe if she has time later, you can help her in back room sometime,' The wonderful jackal says as she stops petting you and goes back to leaning on the store counter, and you realize you can[apostrophe]t wait for another chance to help her out, whether  in the back room or doing whatever else she asks of you!";
 		now Nerminetalk is 1;
@@ -330,6 +336,9 @@ Section 3- Magic Bargain Bin
 Bargain Bin is a man.
 The description of Bargain Bin is "This large bin seems filled with a number of small packets, bottles, and charms, who knows what you could find in there? Above the bin someone has posted a recently drawn sign reading, 'You try bargain bin? You pull it out and you bought it, one pick for one packet of food and one bottle of water.' Reading the sign you aren[apostrophe]t exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try HUNTing a bargain, or SORTing through the bin?";
 
+instead of linkactioning Bargain Bin:
+	say "Possible Actions: [link]smell[as]smell Bargain Bin[end link], [link]sort[as]sort Bargain Bin[end link][line break]";
+
 instead of sniffing bargain bin:
 	say "The bargain bin smells like omens and mysteries... at a discount price.";
 
@@ -341,6 +350,8 @@ understand "hunt bargain" as bargainhunting;
 understand "hunt bin" as bargainhunting;
 understand "buy bargain" as bargainhunting;
 understand "sort bin" as bargainhunting;
+understand "sort bargain bin" as bargainhunting;
+understand "sort bargain" as bargainhunting;
 understand "hunting bargain" as bargainhunting;
 
 check bargainhunting:
@@ -533,6 +544,7 @@ carry out bargainhunting:
 				now City Hospital is known;			
 				Now State fair is known;
 				Now Approaching the Capitol Building is known;
+[				Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]	]
 				Now Plant Overview is known;
 				now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
 				Now Entrance to the Red Light District is known;

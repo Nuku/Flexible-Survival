@@ -43,7 +43,7 @@ SlutRat Den is a room. "This little slice of 'heaven' is a cleaned out section o
 
 Section 3 - Dart Board
 
-There is a ratdartboard in SlutRat Den. "The dart board looks like anyone could [bold type]throw darts[roman type] if they felt like it.".
+There is a ratdartboard in SlutRat Den. "The dart board looks like anyone could [bold type][link]throw darts[end link][roman type] if they felt like it.".
 
 ratdarts is an action applying to nothing.
 understand "throw darts" as ratdarts.

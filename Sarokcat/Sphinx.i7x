@@ -45,10 +45,10 @@ When Play begins:
 	now dex entry is 18;
 	now sta entry is 12;					
 	now per entry is 20;
-	now int entry is 28;
-	now cha entry is 16;
+	now int entry is 25;
+	now cha entry is 15;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 100;			[ How many HP has the monster got? ]
+	now hp entry is 160;			[ How many HP has the monster got? ]
 	now lev entry is 20;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 18;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Foyer";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
@@ -62,7 +62,7 @@ When Play begins:
 	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Chipped tooth";			[ Loot monster drops, ]
+	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 
 when play ends:

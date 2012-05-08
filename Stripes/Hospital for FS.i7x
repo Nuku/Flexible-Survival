@@ -425,6 +425,9 @@ The conversation of Doctor Mouse is { "Squeak!" }.
 instead of sniffing Doctor Mouse:
 	say "The small lab mouse looks at you sternly as you sniff him.  He smells of mouse, chemicals and sleepless nights in the lab.";
 
+instead of linkactioning Doctor Mouse when hospquest >= 14:
+	say "Possible Actions: [link]talk[as]talk Doctor Mouse[end link], [link]smell[as]smell Doctor Mouse[end link], [link]fuck[as]fuck Doctor Mouse[end link], [link]volunteer[end link][line break]";
+
 
 to say meetdrmouse:
 	say "     Unable to see more than a few work tables and testing equipment, you slip through the open door to get a better look.  Inside is more of the same, through part of the room has been cleared away.  Some of it seems to be in active use, with several beakers simmering over burners or sitting on running auto-stirrers.";

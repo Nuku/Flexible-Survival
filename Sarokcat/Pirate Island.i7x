@@ -13,12 +13,12 @@ instead of sniffing Pirate Island:
 
 
 
-
-
-
 Treasure cave is a man.
 The description of Treasure cave is "Not just one cave but a large series of caves that dot the shores of the island, they look like the perfect place for some suspicious pirate to have hidden some treasure.  Still the dark openings look ominous, and you can hear water sloshing within some of them occassionally, it will take a lot of bravery to explore these caves.  You will have to [']hunt for treasure['] in them.";
 Treasure cave is in Pirate Island.
+
+instead of linkactioning Treasure Cave when treasurefound is 0:
+	say "Possible Actions: [link]hunt for treasure[end link], [link]smell[as]smell treasure cave[end link][line break]";
 
 instead of sniffing Treasure cave:
 	say "The sea cases smell of stagnant sea air.";
@@ -39,6 +39,7 @@ understand "hunt for treasure" as treasurehunt;
 understand "explore treasure caves" as treasurehunt;
 understand "find treasure" as treasurehunt;
 understand "find the treasure" as treasurehunt;
+understand "search cave" as treasurehunt;
 understand "search caves" as treasurehunt;
 understand "search the caves" as treasurehunt;
 

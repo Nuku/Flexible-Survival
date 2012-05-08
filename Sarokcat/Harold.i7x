@@ -2,7 +2,7 @@ Harold by Sarokcat begins here.
 
 "Adds a npc to Flexible Survival with a well stocked bar and a problem..."
 
-section 1- 
+section 1-
 
 Haroldtalk is a number that varies.
 Haroldaroused is a number that varies.[not a needed number, but used to set different arousal states if they aren't automatically willing to just hop into bed.]
@@ -11,8 +11,8 @@ Haroldfucked is a number that varies. Haroldfucked is usually 0.
 tattoohunter is a number that varies.
 Harold is in The PALOMINO.
 
-Harold is a man.[or woman]
-The description of Harold is "Standing behind the bar is a well built rather horse like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons, his slightly hooflike hands not seeming to slow him down at all. A black leather vest resting against his pure white fur and making him look even more striking due to the sharp contrast of colours. Even more striking however, is the spiraling horn emerging from the center of the equines forehead, it[apostrophe]s pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking his direction, the equine barkeep winks at you, and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers";
+Harold is a man.
+The description of Harold is "Standing behind the bar is a well built rather horse like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons, his slightly hooflike hands not seeming to slow him down at all. A black leather vest resting against his pure white fur and making him look even more striking due to the sharp contrast of colours. Even more striking however, is the spiraling horn emerging from the center of the equines forehead, it[apostrophe]s pearlescent sheen catching and reflecting the coloured lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking his direction, the equine barkeep winks at you, and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.";
 The conversation of Harold is { "Glug glug!" }.
 
 instead of sniffing Harold:
@@ -90,7 +90,11 @@ Drink bar is in The PALOMINO.
 
 
 Drink bar is a man.
-The description of Drink bar is "This well stocked bar is full of a number of drinks you have never seen before, some of them obviously made on site or probably nearby, as they are stored in all sorts of different bottles obviously scavenged and cleaned for the purpose with their labels removed. A small Sign on the bar lists the available drinks. To order a specific drink from the bar, merely 'Order 'drink name'', although a small notation on the drink sign does say that there is a daily drink limit. The list of drinks is as follows.  Equestrian Ale. Black wolf beer. Cheetah Chaser. Succubi Delight. Gryphon gulp. Satyr Special. Panda Pint. Harpy heaven. Jaguar Lager. Sabre Savager. Chocolate Rum. Tigress Tequila. And Zebra Vodka.  ";
+The description of Drink bar is "[drinkbardesc]";
+
+to say drinkbardesc:
+	say "     This well-stocked bar is full of a number of drinks you have never seen before.  Some of them obviously were made on site or probably nearby, as they are stored in all sorts of different bottles that were clearly scavenged and cleaned for the purpose with their labels removed.  A small sign on the bar lists the available drinks.  To order a specific drink from the bar, merely [']Order <drink name>['], although a small notation on the drink sign does say that there is a daily drink limit.  The list of drinks is as follows:";
+	say "     [link]Equestrian Ale[as]order Equestrian Ale[end link], [link]Black Wolf Beer[as]order Black Wolf Beer[end link], [link]Cheetah Chaser[as]order Cheetah Chaser[end link], [link]Succubi Delight[as]order Succubi Delight[end link], [link]Gryphon Gulp[as]order Gryphon Gulp[end link], [link]Satyr Special[as]order Satyr Special[end link], [link]Panda Pint[as]order Panda Pint[end link], [link]Harpy Heaven[as]order Harpy Heaven[end link], [link]Jaguar Lager[as]order Jaguar Lager[end link], [link]Sabre Savager[as]order Sabre Savager[end link], [link]Chocolate Rum[as]order Chocolate Rum[end link], [link]Tigress Tequila[as]order Tigress Tequila[end link], and [link]Zebra Vodka[as]order Zebra Vodka[end link].";
 
 instead of sniffing Drink bar:
 	say "The drink bar smells of a myriad of alcoholic drinks.  Past the regular scents of booze, there are faint traces of several of the creatures you've seen in the city in the air here.";

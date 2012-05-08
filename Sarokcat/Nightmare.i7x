@@ -42,11 +42,11 @@ When Play begins:
 	now skin change entry is "your body once more burns with that strange inner fire, as it seems to crackle over and under your skin, the strange power within you sweeping over your form until once again you are completely covered in a shadowy midnight black coating of fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear, its soft sexy strands feel rather comforting as they overwhelm your more recent infection"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "power seems to flow into it and it becomes equine in form"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 40;
+	now str entry is 28;
 	now dex entry is 26;
 	now sta entry is 24;					
-	now per entry is 20;
-	now int entry is 20;
+	now per entry is 18;
+	now int entry is 18;
 	now cha entry is 20;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 225;			[ How many HP has the monster got? ]

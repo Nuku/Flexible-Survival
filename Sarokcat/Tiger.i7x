@@ -46,12 +46,12 @@ When Play begins:
 	now skin change entry is "it shudders and seems to shift on its own, thick orange and black tiger fur pushing out in soft pleasurable waves of change all over your body."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "your ass grows powerfully muscled, and a long sleek tiger tail erupts outwards from your tailbone, soon it is lashing around behind you in long natural motions, almost feeling as if it had always been a part of you."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it shifts and tapers to a soft point, short barbs slowly sprouting along its length, as the  skin of your belly stretches out to pull it up close to your body, and wraps it in a proper furry tigers sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 22;
+	now str entry is 20;
 	now dex entry is 22;
 	now sta entry is 16;					
-	now per entry is 18;
+	now per entry is 16;
 	now int entry is 12;
-	now cha entry is 20;
+	now cha entry is 16;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 80;			[ How many HP has the monster got? ]
 	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 

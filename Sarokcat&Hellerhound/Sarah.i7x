@@ -32,7 +32,6 @@ to say sarahrescue:
 	say "You struggle for breath, gasping as you stand, and the husky pays you no notice, dragging his sharp claws along Sarah's side. Blood wells up from the fearsome wound, and you are terrified that the husky just sentenced her death.";
 	increase morale of the player by 10;
 	say "You jump forwards and challenge the husky, and the pack closes in behind you.";
-	wait for any key;
 	challenge "Female Husky";
 	if lost is 1:
 		say "You fall to the huskies, and the alpha snorts at you, amazed that you would dare challenge him. He drags Sarah off, and the pack follows. [line break]It is a while before you manage to get up and walk away.";

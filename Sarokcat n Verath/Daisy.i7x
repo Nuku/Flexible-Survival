@@ -56,7 +56,7 @@ Instead of fucking the Daisy:
 		say "'.";
 		stop the action;
 	otherwise:
-		say "'Sorry, but I have to pass on that, while it would be kind of nice to be used like a proper mare, i haven[apostrophe]t managed to finish my training yet, and they say I can[apostrophe]t work with any customers until I know how to properly service them.' Daisy says with a shy smile, 'Though maybe you could come back once they say I am ready and you could ride me then?' She continues as she looks at you hopefully."; 
+		say "'Sorry, but I have to pass on that, while it would be kind of nice to be used like a proper mare, I haven[apostrophe]t managed to finish my training yet, and they say I can[apostrophe]t work with any customers until I know how to properly service them.' Daisy says with a shy smile, 'Though maybe you could come back once they say I am ready and you could ride me then?' She continues as she looks at you hopefully."; 
 
 
 
