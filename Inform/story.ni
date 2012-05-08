@@ -2820,7 +2820,15 @@ To Combat Menu:
 	now inafight is 1;
 	now automaticcombatcheck is 0; [sets to zero as combat starts, just in case]
 	while hp of player is greater than 0 and monsterhp is greater than 0:
-		if "Unrelenting Assault" is listed in feats of player: [always attacks in combat, no player input needed]
+		if "Submissive" is listed in feats of player and a random chance of 1 in 30 succeeds: [chance to sumbit in combat if you have the submissive feat, feel free to adjust odds]
+			now automaticcombatcheck is 1;
+			if combat abort is 1:
+				now combat abort is 0;
+				rule succeeds;
+				stop the action;
+			say "Your submissive nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
+			follow the submit rule;
+		otherwise if "Unrelenting Assault" is listed in feats of player: [always attacks in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			if combat abort is 1:
 				now combat abort is 0;
