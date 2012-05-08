@@ -452,9 +452,10 @@ when play ends:
 		stop the action;
 
 when play ends:		[See Parasitic Plant for player specific endings]
-	say "     Joanna remains in the infected city when the military rolls through, happy with her new life in her garden.  It becomes a safe rest stop for visitors and explorers of the city.  She always welcomes them and makes many friends among them, sharing her beautiful and lustful body with them to satisfy their urges[if hp of Joanna >= 5].  She soon gets the nickname of [']Kinky Jo['], notorious for being up for pretty much any kind of fun imaginable with those who come to share in her garden's beauty[otherwise if hp of Joanna > 2].  Being a lustful plant herm, she's happy to please any guests to her lovely garden in numerous ways[end if]";
-	if humanity of player >= 10:
-		say ".  These visitors help you keep in touch with her, carrying the occasional letter to her.  She writes about her peaceful, happy life and the various visitors and friends she's made, always thankful for your timely rescue and continued friendship[if player is plantbodied and plantdefeat is 1].  She particularly enjoys hearing about your happy life as a lustful plant and sharing the plant seeds with your orgy group[end if].";
+	if hp of Joanna > 0:
+		say "     Joanna remains in the infected city when the military rolls through, happy with her new life in her garden.  It becomes a safe rest stop for visitors and explorers of the city.  She always welcomes them and makes many friends among them, sharing her beautiful and lustful body with them to satisfy their urges[if hp of Joanna >= 5].  She soon gets the nickname of [']Kinky Jo['], notorious for being up for pretty much any kind of fun imaginable with those who come to share in her garden's beauty[otherwise if hp of Joanna > 2].  Being a lustful plant herm, she's happy to please any guests to her lovely garden in numerous ways[end if]";
+		if humanity of player >= 10:
+			say ".  These visitors help you keep in touch with her, carrying the occasional letter to her.  She writes about her peaceful, happy life and the various visitors and friends she's made, always thankful for your timely rescue and continued friendship[if player is plantbodied and plantdefeat is 1].  She particularly enjoys hearing about your happy life as a lustful plant and sharing the plant seeds with your orgy group[end if].";
 
 
 Joanna ends here.
