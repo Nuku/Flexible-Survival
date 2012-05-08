@@ -375,8 +375,8 @@ every turn (This is the check Hellhound rule):
 				now the cunt length of the player is 6;
 				now the cunt width of the player is 4;
 				now the breasts of the player is 2;
-				now the breast size of the player is 2;	
-			now the libido of player is 100;
+				now the breast size of the player is 2;
+			if libido of player < 90, now libido of player is 90;
 		else if humanity of the player > 15:	[Bipedal Hellhound]
 			if hellHoundLevel  < 2:
 				now hellHoundLevel is 2;
@@ -478,7 +478,7 @@ every turn (This is the check Hellhound rule):
 				now the cunt width of the player is 4;
 				now the breasts of the player is 8;
 				now the breast size of the player is 4;
-		now the libido of player is 100;
+		if libido of player < 90, now libido of player is 90;
 
 
 Table of infection heat (continued)
