@@ -48,16 +48,16 @@ When Play begins:
 	now skin change entry is "a strange comforting warmth spreads over your body, soft black fur pushing out of your skin and settling into place all over your body, covering you completely with its silken softness."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a your spine seems to extend outwards, a long feline tail quickly forming behind you, and lashing happily from side to side."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it narrows down, soft feline barbs forming along its slightly more pointed length as it draws up between your legs, a soft panther like sheath forming around it and holding it up closer to your body, leaving just the tip of your cock poking out teasingly."; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 26;
+	now str entry is 18;
 	now dex entry is 24;
-	now sta entry is 30;					
-	now per entry is 24;
+	now sta entry is 18;
+	now per entry is 16;
 	now int entry is 15;
-	now cha entry is 30;
+	now cha entry is 20;
 	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 300;			[ How many HP has the monster got? ]
-	now lev entry is 30;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 38;			[Amount of Damage monster Does when attacking.]
+	now hp entry is 100;			[ How many HP has the monster got? ]
+	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 20;			[Amount of Damage monster Does when attacking.]
 	now area entry is "None";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10;		[ Length infection will make cock grow to if cocks]

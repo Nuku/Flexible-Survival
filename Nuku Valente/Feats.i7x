@@ -303,6 +303,7 @@ This is the gainfeat rule:
 			now City Hospital is known;			
 			Now State fair is known;
 			Now Approaching the Capitol Building is known;
+[			Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]	]
 			Now Plant Overview is known;
 			now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
 			Now Entrance to the Red Light District is known;

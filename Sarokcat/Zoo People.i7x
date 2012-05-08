@@ -56,6 +56,9 @@ The description of Diego is "[Diegodescribed]";
 The conversation of Diego is { "Fooled you!" }.
 Diego is in Park Entrance.
 
+instead of linkactioning Diego when diegotalk > 0:
+	say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link], [link]trick[as]trick Diego[end link][line break]";
+
 instead of sniffing Diego:
 	say "Diego smells like a [if diegochanged is 0]male[otherwise if diegochanged is 1]herm[otherwise]female[end if] coyote.";
 
@@ -243,6 +246,9 @@ Timothyfucked is a number that varies. Timothyfucked is usually 0.
 Timothy is a man.
 The description of Timothy is "Lying on a rather large pile of stolen cushions, is a rather striking blue furred gryphon, her attractive blue feathered wings half spread out behind her as she reclines back. The creatures talon like hands are absently rubbing its large white furred belly, obviously quite pregnant and unable to move quickly, its large breasts are slowly dribbling milk as it shifts its body slightly, giving you a good look at both its thick black cock resting up against the gryphons distended belly, and the rather large and obviously well used passage resting between the gryphons leonine thighs.  Its leonine tail twitches where it is lying between her slightly spread legs, as the Hemaphrodite gryphon cocks her avian head to look at you, her tongue hanging out the side of her beak slightly as she pants and rubs herself a bit more. You notice a small collar with a tag hanging around her neck, the tag just reads 'Pet'";
 the conversation of Timothy is { "EggsEggsEggs!" }.
+
+instead of linkactioning Timothy when Timothytalk > 0:
+	say "Possible Actions: [link]talk[as]talk Timothy[end link], [link]smell[as]smell Timothy[end link], [link]fuck[as]fuck Timothy[end link], [link]milk[as]milk Timothy[end link][line break]";
 
 instead of sniffing timothy:
 	say "She smells like a hermaphrodite gryphon.  The scent of pregnancy, egg-laying and sex hang thick around her.";

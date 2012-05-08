@@ -47,6 +47,9 @@ Coleen is a woman.
 The description of Coleen is "[Collenstatus]";
 The conversation of Coleen is { "Woof!" }.
 
+instead of linkactioning Coleen:
+	say "Possible Actions: [link]talk[as]talk Coleen[end link], [link]smell[as]smell Coleen[end link], [link]fuck[as]fuck Coleen[end link], [link]spray[as]spray coleen[end link][line break]";
+
 instead of sniffing Coleen:
 	if coleenalpha > 0:
 		say "Coleen smells of aroused female husky.  The scents of her roaming the city for sex linger on her.  Something in her scent makes you consider submitting to the lustful husky.";
@@ -60,7 +63,6 @@ instead of sniffing Coleen:
 		say "Coleen smells mostly human, though faintly female husky as well.";
 	otherwise:
 		say "Coleen smells like a human female.";
-
 
 to say Collenstatus:
 	if coleenalpha is greater than 0:
@@ -159,7 +161,7 @@ Understand "Coleen spray" as Coleenspraying;
 Understand "Spray Coleen" as Coleenspraying;
 
 check Coleenspraying:
-	if Coleen is not visible, say "how?" instead;
+	if Coleen is not visible, say "How?" instead;
 
 
 

@@ -16,14 +16,14 @@ Midnight is a man.[or woman]
 The description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.";
 The conversation of Midnight is { "Mrowl!" }.
 
+instead of linkactioning Midnight:
+	say "Possible Actions: [link]talk[as]talk Midnight[end link], [link]smell[as]smell Midnight[end link], [link]fuck[as]fuck Midnight[end link], [link]mimic[as]mimic Midnight[end link][line break]";
+
 instead of sniffing Midnight:
 	say "Midnight has a strong scent of herm panther arousal and hot, feline sex clinging to him.";
 
 instead of conversing the Midnight:
 	say "[one of]'Isn[apostrophe]t he amazing?' Angie says.[or]'Just being near him makes me feel so... submissive...' Angie says with a rumbling purr.[or]The large cat makes a soft rumbling purr at you.[or]You find your eyes locking with the panther's strong, golden eyes for a second, and you find yourself dropping to all fours almost automatically as you meet his dominant stare.[or]The large, black panther ignores your feeble attempt at communication as beneath him.[or]The large cat reaches out and licks your hand with his rough tongue, making you shudder in pleasure.[or]The large panther's erotic musk fills the air as you try to talk to him, and you find yourself less and less interested in speech as the handsome cat smiles at you knowingly.[or]'He only knew a few commands,' Angie says as you try to talk to the large cat.  'Though I am definitely thinking about teaching him a few more,' she adds with a teasing grin.  'Or maybe we should let him teach us a few commands instead,' she purrs happily, as you stare at the obviously amused large panther.[or]'You know, you could learn a lot from a powerful panther like him,' Angie says with a happy purr.  'Maybe you should try acting like him sometime.'[or]'Sometimes I find myself mimicking Midnight[apostrophe]s movements,' Angie says as you watch the large cat eye you with amusement.  'It makes me feel much more like a proper feline.  Maybe you should try [link]MIMIC[as]mimic midnight[end link]king Midnight sometime, too.'[at random]";
-
-
-
 
 Midnightmimicking is an action applying to nothing
 
@@ -50,8 +50,9 @@ carry out Midnightmimicking:
 	if diceroll is greater than 15:
 		say "Watching the large cat closely, you think you begin to realize just how to achieve the same kind of fluid movement, and Angie grins and even Midnight gives you a chuff of approval as you try to move through some of the same tricks Angie put the large cat through. Angie helps by calling out some suggestions as you do, and soon you find yourself stalking around the store with an almost predatory grace, feeling more spry and nimble then ever before, almost feeling a bit like a large cat yourself.'";
 		infect "Pantherherm";
-		increase dexterity of player by 1;
-		say "your dexterity has increased by 1!";
+		if dexterity of player < 24:
+			increase dexterity of player by 1;
+			say "your dexterity has increased by 1!";
 		stop the action;
 	otherwise:
 		say "You sigh as Angie snickers at your pathetic attempts to mimic the way the large feline moves, Midnight giving you a disgusted sniff as you trip and stumble and trip into several displays, obviously having not grasped something important in your studies. Giving up your attempts, you resolve to try to mimic the powerful felines movements again later.";

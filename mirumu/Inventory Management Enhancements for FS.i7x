@@ -46,8 +46,9 @@ Carry out criminallittering:
 	let x be a text;
 	add the invent of the player to the invent of the location of the player;
 	now the invent of the player is {};
-	add "journal" to the invent of the player;
-	remove "journal" from invent of the location of the player;
+	if "journal" is listed in invent of the location of the player:
+		add "journal" to the invent of the player;
+		remove "journal" from invent of the location of the player;
 	if the weapon object of the player is not the journal:
 		now x is the name corresponding to an object of weapon object of the player in the table of game objects;
 		add x to the invent of the player;

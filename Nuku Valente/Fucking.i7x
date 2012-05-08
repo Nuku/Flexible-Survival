@@ -22,7 +22,7 @@ instead of fucking Doctor Matt:
 
 instead of fucking Rod Mallrat:
 	if Ronda Mallrat is in the Mall Atrium:
-		say "'Dude!  I'm already taken.  Ronda would kill us me if I fooled around.  Besides,' he adds with a wink, 'she's quite the sweet ride in the sack.  I'm covered.'";
+		say "'Dude!  I'm already taken.  Ronda would kill me if I fooled around.  Besides,' he adds with a wink, 'she's quite the sweet ride in the sack.  I'm covered.'";
 	otherwise:
 		say "Rod just sighs sadly and shakes his head.";
 

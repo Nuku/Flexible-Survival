@@ -17,7 +17,7 @@ instead of sniffing the Zephyr Lobby:
 Section 2 - Larissa
 
 Larissa is a woman. "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.". She is in Zephyr Lobby.
-The conversation of Larissa is { "We are looking for extracted vial samples.  If you obtain some, please bring it to me to '[bold type]vialsell <name>[roman type]' for a credited reward." }.
+The conversation of Larissa is { "We are looking for extracted vial samples.  If you obtain some, please bring it to me to ['][bold type]vialsell <name>[roman type]['] for a credited reward." }.
 
 Larissa has a list of text called vials.
 

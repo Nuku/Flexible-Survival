@@ -10,13 +10,15 @@ Janicequest is a number that varies.[often used for quests or renamed to Janiceq
 LastJanicefucked is a number that varies. LastJanicefucked is usually 800.
 Janicefucked is a number that varies. Janicefucked is usually 0.
 
-instead of sniffing Janice:
-	say "Janice smells of vixen and lust, perfume and sex, longing and regret.";
-
 Janice is a woman.
 The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eying you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.";
 The conversation of Janice is { "Foxy!" }.
 
+instead of sniffing Janice:
+	say "Janice smells of vixen and lust, perfume and sex, longing and regret.";
+
+instead of linkactioning Janice when janicetalk is 4:
+	say "Possible Actions: [link]talk[as]talk Janice[end link], [link]smell[as]smell Janice[end link], [link]fuck[as]fuck Janice[end link], [link]pose[as]pose for Janice[end link][line break]";
 
 instead of conversing the Janice:
 	if Janicetalk is 0:[first time you encounter the npc text]
@@ -129,8 +131,9 @@ carry out Vixenposing:
 		if diceroll is greater than 16:
 			say "'That[apostrophe]s it! Now you are getting it!' Janice exclaims happily, as you begin to move and sway your body with an increasing amount of control, the new positions becoming much more natural as she makes a few small corrections to your form, before pulling you to her in a happy kiss. Soon you find yourself grinning as she settles back down on her couch to watch you strut your new stuff, and as you strike an increasingly slutty and sexy pose for the lusty vixen, you find yourself sure that it will be hard for anyone to resist your charms now!";
 			infect "Arctic fox";
-			increase charisma of player by 2;
-			say "your charisma has increased by 2!";
+			if charisma of player < 24:
+				increase charisma of player by 2;
+				say "your charisma has increased by 2!";
 			stop the action;
 		otherwise:
 			say "You sigh as your sad attempt to pose and shift your body like a properly sexy fox fails miserably, and while Janice manages not to laugh at you outright, you can see the twinkle of amusement in her eyes as you once more trip over your own feet before giving up the attempt for now....";

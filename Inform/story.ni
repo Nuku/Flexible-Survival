@@ -3653,13 +3653,30 @@ instead of examining a person(called x):
 		follow the self examine rule;
 		follow the afterexamine rules;
 	otherwise:
-		say "[The description of x][line break]";
-		if the number of entries in the conversation of x is greater than 0:
-			say "Possible Actions: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][end link][line break]";
-		otherwise if x is companion of player:
-			say "Possible Actions: [link]smell[as]smell [x][end link], [link]dismiss[as]dismiss[end link][line break]";
-		otherwise:
-			say "Possible Action: [link]smell[as]smell [x][end link][line break]";
+		say "[The description of x]";
+		if hypernull is 0:
+			try linkactioning x;
+
+linkactioning is an action applying to one thing.
+
+understand "linkaction [person]" as linkactioning.
+
+carry out linkactioning:
+	linkaction noun;
+
+to linkaction (x - Person):
+	if the number of entries in the conversation of x is greater than 0:
+		say "Possible Actions: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][end link][line break]";
+	otherwise if x is companion of player:
+		say "Possible Actions: [link]smell[as]smell [x][end link], [link]dismiss[as]dismiss[end link][line break]";
+	otherwise:
+		say "Possible Action: [link]smell[as]smell [x][end link][line break]";
+
+[NOTE: For characters w/different action options, use a 'instead of linkactioning <name>' clause.]
+
+instead of linkactioning Doctor Matt when hp of Doctor Matt > 0:
+	say "Possible Actions: [link]talk[as]talk Doctor Matt[end link], [link]smell[as]smell Doctor Matt[end link], [link]fuck[as]fuck Doctor Matt[end link], [link]volunteer[end link][line break]";
+
 
 Showstatting is an action applying to nothing.
 

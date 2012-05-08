@@ -46,16 +46,16 @@ When Play begins:
 	now skin change entry is "it is slowly covered in beautiful short white horse fur, your new hide of pure white hair shining brightly as it reflects the light with every move you make."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a shimmering silken tail seems to sprout behind you, its beautiful white strands falling like a waterfall down from your ass, until the tip of your new unicorn tail hangs barely a few inches above the floor.."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it seems to thicken as a sexy looking sheath begins to form around the base of your increasingly equine looking new cock.."; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 24;
-	now dex entry is 24;
-	now sta entry is 14;					
-	now per entry is 14;
+	now str entry is 15;
+	now dex entry is 18;
+	now sta entry is 15;
+	now per entry is 12;
 	now int entry is 12;
-	now cha entry is 34;
+	now cha entry is 20;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 20;			[ How many HP has the monster got? ]
 	now lev entry is 2;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 34;			[Amount of Damage monster Does when attacking.]
+	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
 	now area entry is "None";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]

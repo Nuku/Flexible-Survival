@@ -47,15 +47,15 @@ When Play begins:
 	now ass change entry is "your rear seems to tighten, and a soft tail begins to push its way out of your body, you find yourself moaning with pleasure as your new appendage stretches out behind you, and you swish it experimentally as soft puffy white fur covers your new foxlike brushtail."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it tapers to a soft point, your skin distending slightly at the base as a sheath begins to form around your increasingly canine cock, and you find yourself groaning slightly as the base of your cock bulges out as a knot forms, then slips into its new waiting sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 12;
-	now dex entry is 20;
+	now dex entry is 19;
 	now sta entry is 12;					
-	now per entry is 18;
-	now int entry is 24;
-	now cha entry is 30;
+	now per entry is 15;
+	now int entry is 15;
+	now cha entry is 25;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 22;			[ How many HP has the monster got? ]
-	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 22;			[Amount of Damage monster Does when attacking.]
+	now hp entry is 40;			[ How many HP has the monster got? ]
+	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 4;			[Amount of Damage monster Does when attacking.]
 	now area entry is "None";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]

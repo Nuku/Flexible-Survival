@@ -105,9 +105,11 @@ Steven is a person in the Storage Room. "A guard who you recognize as the doorke
 The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?"
 The conversation of Steven is {"[steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.", "I haven't washed this uniform in so long. I could really go for a non-infected shower."}.
 
+instead of linkactioning Steven when steventrust > 0 and the player is in Storage Room:
+	say "Possible Actions: [link]talk[as]talk Steven[end link], [link]smell[as]smell Steven[end link], [link]fuck[as]fuck Steven[end link][if stevenfood < 5], [link]food[as]ask for food[end link][end if][if stevenwater < 5], [link]water[as]ask for water[end link][end if][line break]";
+
 instead of sniffing Steven:
 	say "Steven smells strong and manly, reminding you of old cowboy movies for some reason.";
-
 
 Before conversing Steven:
 	if the player is in Storage Room:
@@ -174,7 +176,9 @@ Waterrequest is an action applying to nothing.
 Understand "ask for water" as waterrequest.
 
 Lastfoodrun is a number that varies. Lastfoodrun is usually 250.
+stevenfood is a number that varies.
 Lastwaterrun is a number that varies. Lastwaterrun is usually 250.
+stevenwater is a number that varies.
 
 Check foodrequest:
 	if Steven is not visible:
@@ -185,6 +189,8 @@ Check foodrequest:
 		say "'I don't keep anything in here, you know,' he says." instead;
 	if the player is not in Storage Room:
 		say "He shakes his head. 'No, it's too late for that.'" instead;
+	if stevenwater is 5:
+		say "He shakes his head.  'I can't.  Our supplies are too low.  Any more will definitely be noticed.'";
 	if lastfoodrun - turns is less than 4:
 		say "'Not all at once,' he whispers. 'The longest the guards will tolerate a missing food ration is 12 hours. Ask me then.'" instead;
 
@@ -192,6 +198,9 @@ Carry out foodrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a packet of food.";
 	add "food" to invent of player;
 	now lastfoodrun is turns;
+	increase stevenfood by 1;
+	if stevenfood is 5:
+		say "That's as much food as I can give you.  I'm really sorry.";
 
 Check waterrequest:
 	if Steven is not visible:
@@ -202,6 +211,8 @@ Check waterrequest:
 		say "'I don't keep anything in here, you know,' he says." instead;
 	if the player is not in Storage Room:
 		say "He shakes his head. 'No, it's too late for that.'" instead;
+	if stevenwater is 5:
+		say "He shakes his head.  'I can't.  Our supplies are too low.  Any more will definitely be noticed.'";
 	if lastwaterrun - turns is less than 8:
 		say "'Sorry,' he hushes you, 'but water is even stricter than food here. I can sneak you some water once every 24 hours, but any more than that, and the boss'll chew everyone's head off for stealing water.'" instead;
 
@@ -209,6 +220,9 @@ Carry out waterrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a bottle of water.";
 	add "water bottle" to invent of player;
 	now lastwaterrun is turns;
+	increase stevenwater by 1;
+	if stevenfood is 5:
+		say "That's as much water as I can give you.  I'm really sorry.";
 
 Chapter 3 - The Office and Stevenfucking
 
