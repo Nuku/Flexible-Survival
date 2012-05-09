@@ -85,35 +85,55 @@ When Play begins:
 	
 to sharethebliss:
 	infect "Anthro Shaft Beast";
-	increase libido of player by 80;
+	increase libido of player by 25;
+	if "Horny Bastard" is listed in feats of player, increase libido of player by 4;
+	if "Cold Fish" is listed in feats of player, decrease libido of player by 4;
+	decrease humanity of player by a random number between 0 and 1;
+	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+
 
 an everyturn rule:
-	if bodyname of player is "Anthro Shaft Beast":
+	if bodyname of player is "Anthro Shaft Beast" or bodyname of player is "Feral Shaft Beast":
 		say "[broodmother call]";
 	
 to say broodmother call:
 	if humanity of player is greater than 90:
-		say "You hear a beautful song in the distance";
-		increase libido of player by 5;
+		say "You hear a beautful song in the distance.";
+		increase libido of player by 4;
 		decrease humanity of player by 1;
+		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	otherwise if humanity of player is greater than 70:
+		say "Your legs feel weak, a soft tender voice speaks to you, the beautiful sound caresses your body, the back of your mind pulsing with joy, you smile.. enraptured by the strong entity speaking to you in unknown tongues.. then you snap out of it with a loud gasp, looking around with worry.. you had never felt such thing, you felt as if you were being watched from every corner.. and moved quickly to another spot, the feeling of being stared at never going away...[line break]";
+		increase libido of player by 6;
+		if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
+		if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
+		decrease humanity of player by 2;
+		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	otherwise if humanity of player is greater than 50:
+		say "The voice continues drilling slowly into your mind, you feel helpless, unable to ignore it, but why would you?... it was so beautiful.. so powerful and it felt as if it was speaking to you and only you.. as if this entity from nowhere had eyes only for you, you couldn't help but lay down and smile, caressing your wonderful, sexy, strong body.. stroking your tendrils, making them coil and rub all over yourself.. it took hours for you to regain your control and leave.. you were dripping with arousal, part of you just wanted to give in and follow the voice's instructions.. you could understand the voice sometimes...[line break]";
+		increase libido of player by 8;
+		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
+		if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
+		decrease humanity of player by 3;
+		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
+		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
+	otherwise if humanity of player is greater than 20:
+		say "You cannot help but hissss in delight as you feel a tender caress run across your spine, the voice is at it again, but now.. you feel hands.. and kisses spreading all over your body.. invisble lips pressing against your most sensitive parts. invisible.. tender fingers caressing every inch of your body, your arousal burning like the sun, your body so warm, you feel those fingers dig into you.. caressing your insides.. touching.. your mind, then bliss, endless bliss lighting every fiber of your body, by the time you wake up, you let a silent cry escape your lips, you had hoped it would never end... your head hurts badly, you want more.. The Broodmother's call.. you cannot wait for the next one...[line break]";
+		increase libido of player by 10;
+		if "Horny Bastard" is listed in feats of player, increase libido of player by 3;
+		if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
+		decrease humanity of player by 5;
+		if "Pure" is listed in feats of player, increase humanity of player by a random number between 1 and 3;
+		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 1 and 2;
 	otherwise:
-		if humanity of player is greater than 70:
-			say "Your legs feel weak, a soft tender voice speaks to you, the beautiful sound caresses your body, the back of your mind pulsing with joy, you smile.. enraptured by the strong entity speaking to you in unknown tongues.. then you snap out of it with a loud gasp, looking around with worry.. you had never felt such thing, you felt as if you were being watched from every corner.. and moved quickly to another spot, the feeling of being stared at never going away...[line break]";
-			increase libido of player by 10;
-			decrease humanity of player by 2;
-		otherwise:
-			if humanity of player is greater than 50:
-				say "The voice continues drilling slowly into your mind, you feel helpless, unable to ignore it, but why would you?... it was so beautiful.. so powerful and it felt as if it was speaking to you and only you.. as if this entity from nowhere had eyes only for you, you couldn't help but lay down and smile, caressing your wonderful, sexy, strong body.. stroking your tendrils, making them coil and rub all over yourself.. it took hours for you to regain your control and leave.. you were dripping with arousal, part of you just wanted to give in and follow the voice's instructions.. you could understand the voice sometimes...[line break]";
-				increase libido of player by 20;
-				decrease humanity of player by 3;
-			otherwise:
-				if humanity of player is greater than 20:
-					say "You cannot help but hissss in delight as you feel a tender caress run across your spine, the voice is at it again, but now.. you feel hands.. and kisses spreading all over your body.. invisble lips pressing against your most sensitive parts. invisible.. tender fingers caressing every inch of your body, your arousal burning like the sun, your body so warm, you feel those fingers dig into you.. caressing your insides.. touching.. your mind, then bliss, endless bliss lighting every fiber of your body, by the time you wake up, you let a silent cry escape your lips, you had hoped it would never end... your head hurts badly, you want more.. The Broodmother's call.. you cannot wait for the next one...[line break]";
-					increase libido of player by 40;
-					decrease humanity of player by 5;
-				otherwise:
-					say "[one of]'Come to me, my beautiful child.. we await for your offering...'[or]'Join usssssss...'[or]'Resssssist no further...'[or]'We are waiting for you...'[at random] said the Broodmother from hir hive, reaching out at you with waves of lust, places.. experiences from the past.. and the present flash before your eyes, the Broodmother giving you a mental map, preparing you for the long trip and your joining to hir blissful Hive...[line break]";
-					sharethebliss;
+		say "[one of]'Come to me, my beautiful child.. we await for your offering...'[or]'Join usssssss...'[or]'Resssssist no further...'[or]'We are waiting for you...'[at random] said the Broodmother from hir hive, reaching out at you with waves of lust, places.. experiences from the past.. and the present flash before your eyes, the Broodmother giving you a mental map, preparing you for the long trip and your joining to hir blissful Hive...[line break]";
+		if bodyname of player is "Anthro Shaft Beast":
+			sharethebliss;
+		otherwise if bodyname of player is "Feral Shaft Beast":
+			sharethelust;
 
 when play ends:
 	if bodyname of player is "Anthro Shaft Beast":

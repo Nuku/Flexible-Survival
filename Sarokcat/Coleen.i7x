@@ -47,7 +47,7 @@ Coleen is a woman.
 The description of Coleen is "[Collenstatus]";
 The conversation of Coleen is { "Woof!" }.
 
-instead of linkactioning Coleen:
+instead of linkactioning Coleen when coleentalk > 0:
 	say "Possible Actions: [link]talk[as]talk Coleen[end link], [link]smell[as]smell Coleen[end link], [link]fuck[as]fuck Coleen[end link], [link]spray[as]spray coleen[end link][line break]";
 
 instead of sniffing Coleen:
