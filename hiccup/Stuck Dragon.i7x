@@ -283,7 +283,7 @@ Carry out dragonhatching:
 	say "[dragonchange]";
 
 to say dragonchange:
-	now libido of player is 100;
+	now libido of player is 99;
 	if "Male Preferred" is not listed in feats of player:
 		now tailname of player is "Slutty Dragoness";
 		now facename of player is "Slutty Dragoness";
