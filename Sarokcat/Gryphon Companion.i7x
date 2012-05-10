@@ -14,6 +14,8 @@ The summondesc of Gryphoness is "[summongryphoness]";
 The assault of Gryphoness is "[gryphonessassault]";
 gryphoness has a number called knowpreg.
 
+understand "Denise" as gryphoness.
+
 to say gryphonessdesc:
 	now tempnum is the remainder after dividing libido of gryphoness by 4;
 	let T be ( libido of gryphoness / 4 );
