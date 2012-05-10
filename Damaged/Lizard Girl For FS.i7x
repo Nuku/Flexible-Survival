@@ -77,6 +77,10 @@ to say lizgirl defeat:
 			say "'Why did you not want this? Was the canvas too flawed?' she murmurs before collapsing on the ground.";
 		otherwise:
 			say "With a whine she says, 'I only wanted what was best for you, now another artist must finish my work' before collapsing.";
+	if hp of ronda is 4:
+		say "     Remembering that the lizard girl has part of the cure for Ronda, you run your hands over her body and slip a finger into her wet pussy.  You start to rub and finger her cunt, making her moan and squirm in pleasure.  She grips your shoulders firmly and bucks her hips as you pump a pair of fingers into her again and again.  As her excitement builds and her vaginal walls quiver around your digits, she moans and bucks her hips almost as if thrusting before finally climaxing loudly.  She sags against you, panting for breath after her orgasm.  Still holding her up with one arm, you place a small vial under her pussy to gather the leaking juices, a little surprised to find them a thick and creamy white instead of clear juices.  Sealing up the unusual sample, you resist the urge to lick your fingers clean and instead wipe them off after taking a moment to enjoy her thick, musky scent.";
+		add "lizard juice" to invent of player;
+		now hp of ronda is 5;
 	if libido of player > 33:
 		if cocks of player > 0:
 			say "[lizdefmale]";
@@ -125,7 +129,7 @@ When Play begins:
 	now name entry is "lizard girl"; [Name of your new Monster]
 	now attack entry is "[one of]She rakes you with her sharp claws.[or]A spinning scaled form precludes the tail that smacks into your face, knocking you down.[or]Laughing the reptile lances her head forward to bite you on the arm[at random][line break][lizgirl check angry]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[lizgirl defeat]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[lizgirl attack]"; 
+	now victory entry is "[lizgirl attack]"; 
 	now desc entry is "[lizgirl desc]";	[ Description of the creature when you encounter it.]
 	now face entry is "longer and thinner as soft dark colored scales cover your short muzzle, lending your ear less features a very reptilian air";	[ Face description, format as the text "Your face is (your text)."]
 	now body entry is "compact and solid, yet showing off every curve to perfection, heavy compact muscles belay strength despite their small representation";[ Body Description, format as the text "Your Body is (your text)."]
@@ -191,7 +195,8 @@ When Play begins:
 	now trigger text entry is "";
 	now description text entry is "";	
 	now inheat entry is "[liz impreg]";			[The lizard girls seed effectively internalised the male organs, leaving the poor character impregnating themselves every heat cycle. This will be much more 'fun' once repeated births are in :3 ]
-	
+
+
 	
 [ Edit this to have the correct Name as wall]
 Lizard Girl For FS ends here.
