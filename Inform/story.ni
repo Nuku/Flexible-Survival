@@ -25,8 +25,11 @@ To wait for any key:
 	keypause;
 
 to clear the screen and hyperlink list:
-	if automaticcombatcheck is 0, clear the screen; [skips clearing if in autocombat]
+	if clearnomore is 0: [skips clearing if clears are turned off]
+		if automaticcombatcheck is 0: [skips clearing if in autocombat]
+			clear the screen;
 	now hyperlink list is {}.
+
 
 To keypause:
 	(- KeyPause(); -)
@@ -52,6 +55,7 @@ title	description
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]i hate to wait[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]i love to wait[roman type] to return to the default."
+"Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?[line break]Type [bold type]the clears are gone[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]the clears are back[roman type] to return to the default."
 
 Include (-
 
@@ -1016,7 +1020,7 @@ This is the combat item rule:
 		wait for any key;
 	otherwise:
 		while 1 is 1:
-			clear the screen;
+			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 			repeat with y running from 1 to number of filled rows in table of combat items:
 				choose row y from the table of combat items;
 				say "[link][y] - [title entry][as][y][end link][line break]";
@@ -1775,6 +1779,24 @@ understand "i love to wait" as waitlove.
 carry out waitlove:
 	now waiterhater is 0; [returns waiting to normal]
 	say "You are patient once again.";
+
+Section Clearless
+
+[creates (and sets) flag for skipping most(all?) clear the screen]
+clearless is an action applying to nothing.
+understand "the clears are gone" as clearless.
+
+clearnomore is a number that varies.
+carry out clearless:
+	now clearnomore is 1; [turns off clears]
+	say "Your vision is cluttered, no more clearing.";
+
+clearmore is an action applying to nothing.
+understand "the clears are back" as clearmore.
+
+carry out clearmore:
+	now clearnomore is 0; [returns clearing to normal]
+	say "You can see clearly, the clears are back.";
 
 Part 3 - Item Code
 
@@ -2848,7 +2870,7 @@ To Combat Menu:
 				wait for any key;
 				clear the screen and hyperlink list;
 				continue the action;
-			clear the screen;
+			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee[line break]";
 			let combatopt be 0;
 			repeat through table of basic combat:
@@ -2923,7 +2945,7 @@ To level up:
 		wait for any key;
 		change the current menu to Table of Start Game;
 		carry out the displaying activity;
-		clear the screen;
+		if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
 	increase maxhp of player by 2;
 	now hp of player is maxhp of player;
@@ -3846,7 +3868,7 @@ This is the location choice rule:
 			now levelwindow is 99999;
 	now scenario is title entry;
 	now the menu depth is 0;
-	clear the screen;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	rule succeeds;
 	
 This is the final stats rule:
@@ -3857,7 +3879,7 @@ This is the final stats rule:
 	now the humanity of the player is 100;
 	now the capacity of the player is five times the strength of the player;
 	now the menu depth is 0;
-	clear the screen;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	while 1 is 1:
 		repeat with y running from 1 to number of filled rows in table of Starting Location:
 			choose row y from the table of Starting Location;
@@ -3870,7 +3892,7 @@ This is the final stats rule:
 			if rule succeeded, break;
 		otherwise:
 			say "Invalid Selection.";
-	clear the screen;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 [	try looking;]
 	try looking;
 	rule succeeds;
@@ -4042,7 +4064,7 @@ This is the finish stats rule:
 			follow female choice rule;
 		otherwise:
 			say "Type 'm' or 'f'.> [run paragraph on]";
-	clear the screen;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 [	try looking;]
 	rule succeeds;
 	
@@ -5092,6 +5114,8 @@ to say promptsay:
 hypernull is a number that varies. Hypernull is usually 0.
 
 When play begins:
+	now waiterhater is 0; [initialize to 0 for start of game, waiting occurs as normal]
+	now clearnomore is 0; [initialize to 0 for start of game, clearing occurs as normal]
 	repeat with q running from 1 to the number of rows in the table of game objects:
 		add name in row Q of table of game objects to allobjs;
 	change the right hand status line to "[list of valid directions]";
@@ -5115,7 +5139,7 @@ When play begins:
 			if rule succeeded:
 				break;
 			otherwise:
-				clear the screen;
+				if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 		otherwise if calcnumber is 8:
 			follow the prerestore the game rule;
 			break;
@@ -5123,13 +5147,13 @@ When play begins:
 			say "Invalid Selection.";
 	repeat with x running through featsets:
 		now x is a part of the player;
-	clear the screen;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	say "Select your first two, free, feats, by clicking one of the below:[line break]";
 	featget;
-	clear the screen;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	say "And now the second.";
 	funfeatget;
-	clear the screen;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	if scenario is "Rescuer Stranded":
 		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
 		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
@@ -5163,7 +5187,7 @@ When play begins:
 		process dirty water;
 		process dirty water;
 		process dirty water;
-	clear the screen;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	if scenario is "Researcher":
 		say "The helicopter brought you into the devestated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
