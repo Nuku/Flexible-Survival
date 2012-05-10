@@ -108,15 +108,15 @@ When Play begins:
 	now victory entry is  "[Feral Wolf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "A large canine on all fours. A feral looking wolf on four feet, almost three quarts your height, with great muscles under dense black fur. He has dark [one of]red[or]yellow[or]blue[at random] eyes and white, sharp, canine, teeth. His legs a thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is matted with grime, muck, and some other substance, giving him a very rugged look. When He sees you, her lips peel in a snarl, expose those deadly teeth, '[one of]Grrrrrrrr[or]Barks aggressively[or]Roars at you[at random],' He says, charging at you with feral rage in his eyes.";[ Description of the creature when you encounter it.]
 	now face entry is "feral wolf face, with an long canine snout willed with the sharp teeth of a predator filling your maw";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "that of an average sized and well muscled wolf, with large canine features that give you a wild and deadly appearance.";[ Body Description, format as the text "Your Body is (your text)"] 
+	now body entry is "that of an average sized and well muscled wolf, with large canine features that give you a wild and deadly appearance";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long black tail that trails behind you. The wolf tail showing your emotions quite clearly.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]feral canine[or]wolf[or]pitch black[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "your face stretches and creaks as it warps into a long canine snout."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a feral wolf."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a feral wolf"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "rough black fur spreads rapidly over your form, leaving you more capable to endure the elements."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a long, bushy, black tail emerges from above your ass, twitching about lightly."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length turning pitch black."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now ass change entry is "a long, bushy, black tail emerges from above your ass, twitching about lightly"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length turning pitch black"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 15;
 	now dex entry is 16;
 	now sta entry is 12;					
