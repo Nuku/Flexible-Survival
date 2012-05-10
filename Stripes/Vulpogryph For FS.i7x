@@ -56,7 +56,7 @@ When Play begins:
 	now str entry is 13;			[ The player's stats will move towards these values through infection. ]
 	now dex entry is 17;			[ Only the monster's dexterity has any effect in combat. ]
 	now sta entry is 11;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
-	now per entry is 18;
+	now per entry is 20;
 	now int entry is 14;
 	now cha entry is 10;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]

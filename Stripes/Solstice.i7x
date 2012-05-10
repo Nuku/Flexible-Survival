@@ -1,8 +1,8 @@
-Version 1 of Solstice by Stripes begins here.
-[Version 1 - ]
+Version 2 of Solstice by Stripes begins here.
+[Version 2 - NPC form added]
 "Adds the NPC adventurer Solstice to the Flexible Survival game"
 
-[6.5 hrs]
+[10 hrs]
 
 Section 1 - Treasure Hunting
 
@@ -41,7 +41,7 @@ Instead of resolving Adventurer:
 			say "     You raise the pipe, ready to strike it again, but find that the end of it has been so blackened by the dark power that it's crumbling away.  There are a few clicks and the three parts unlock and fall apart, once again trapping whatever that was.  With the pipe still falling apart, you bump the three sections to opposite ends of the room and turn your attention to Solstice.";
 			say "     Whatever just happened, whether some bizarre effect of the infection or some strange, magical power, it has left a profound impact on the vixen.  Her upper body has been turned into that of a crow, with a largely corvid head, taloned hands like a bird's foot and black feathers across her upper half.  There are still some subtle signs of her previous vulpine nature as well, with foxish ears on her head and mammalian breasts filling her red shirt.  Her lower body is largely unchanged, though the tips of her tails now end in black plumage.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-			say "     She groans and rubs her head.  'Stupid, stupid fox.  Rule number one of treasure hunting: Artifacts are _always_ cursed.'  She gets back to her feet slowly, looking over her body.  Her talons run through her feathers and she moans softly, clearly finding sensual pleasure in her new form.  Stretching her wings and stroking her breasts, she turns back to you.  'Now, I do believe I promised you a reward, sweety,' she purrs sensually, a lustful glint in her eyes that wasn't there before.'  Do you want to take her up on her offer?";
+			say "     She groans and rubs her head.  'Stupid, stupid fox.  Rule number one of treasure hunting: Artifacts are _always_ cursed.'  She gets back to her feet slowly, looking over her body.  Her talons run through her feathers and she moans softly, clearly finding sensual pleasure in her new form.  Stretching her wings and stroking her breasts, she turns back to you.  'Now, I do believe I promised you a reward, sweety,' she purrs sensually, a lustful glint in her eyes that wasn't there before.  Do you want to take her up on her offer?";
 			if the player consents:
 				say "     Deciding not to miss out on this chance, you agree to the new vulpogryph's offer and she grins happily.  Moving over to the small bedroll she's set up here, she shucks her top and shorts quickly, spreading her intriguing body out for you to see.  Her lovely breasts are covered in soft, black feathers and her nipples are silvery spots half-hidden beneath that soft down.  Looking lower, the feathers transition back to fur at her slender waist.  As your eyes travel further, she spreads her legs and teases her wet pussy with a moan.  The soft, gray fur of her muff parts to show the dark lips of her waiting sex.  She grins at the corners of her beak, crooking a finger for you to approach and get your [']reward['].";
 				say "     Drawn in by her alluring body, you move between her legs, kissing along one thigh until you reach her wet folds.  You slide your tongue along it, lapping at her pussy.  'Mmm... I should really have let myself have some fun earlier.  Though it'll be much nicer now that I've waited for someone special,' she says as she runs her avian talons over your head.";
@@ -122,7 +122,7 @@ Crow Artifact is a grab object.  It is part of the player.  It is not temporary.
 instead of using Crow Artifact:
 	say "     You probably shouldn't be fiddling around with an expensive, and stolen, artifact.  You'd best bring it back to that vulpine adventurer.";
 
-[
+
 an everyturn rule:
 	if ( hp of Solstice is 3 or hp of Solstice is 4 ) and Solstice is not in Grey Abbey Library:
 		if lastfuck of Solstice - turns >= 12:
@@ -132,14 +132,14 @@ an everyturn rule:
 
 
 an everyturn rule:
-	if ( hp of Solstice is 3 or hp of Solstice is 4 ) and Solstice is in Grey Abbey Library:
-		move Solstice to Grey Abbey Library;
+	if ( hp of Solstice is 3 or hp of Solstice is 4 ) and Solstice is in Grey Abbey Library and the player is in the Grey Abbey Library:
 		say "     Returning to the central room of the library, you are startled to find a new person casually waiting for you.  Solstice is here, leaning against one of the bookshelves, glancing through a book.  The vulpogryph smiles and tucks the book back on the shelf as you come striding over[if hp of Fang is 1 or hp of Fang is 2].  Sparing a quick glance to Fang, who seems as surprised to find the intruder here, the guard wolf dips his ears and slinks back, clearly having failed in his guard duties somehow[otherwise if hp of Fang is 3].  Fang growls a little from his post at the door, clearly upset the this intruder somehow managed to get past him unnoticed[end if].";
 		say "     'Hey there.  Pretty nice setup [if ( number of booked people + number of bunkered people ) > 2]you and your pals have[otherwise]you've[end if] got going here.  Not much interest to the critters out there and a reinforced bunker in case things get really bad.  Definitely need to get some more supplies for that, though.  Things got rather hectic back at my old place, so I figured I could move in here with you, sweety.'  She runs a taloned paw along your side.";
 		if hp of Solstice is 3:
 			say "     Still upset with her about the feather, you push her hand away.  'What?  Oh, I'm so sorry, hon.  I didn't mean for anything like that to happen.  It must've fallen out,' she says apologetically[if the player is partvg].  'It certainly looks good on you though,' she adds with a grin and another stroke to your altered body[end if].  You calm down, accepting that it could very well have been an accident.";
-		say "     You also don't recall telling her where you've been staying and, as if sensing your upcoming question, the vulpogryph grins.  'Oh, I was just keeping an eye on you and followed you back to your clubhouse.  You should be a little more careful about that.  And I can certainly be of help to you as well, sweety.  Being a professional treasure hunter, I'm very good at finding stuff.  I could give you some tips... for a price.'  She continues running her paw over you.  'A little playtime with my special sweety sounds fair.  Though, if you want to skip the lesson and get straight to the fun, that'd be even better,' she says with a grin at the corner of her long beak.";
-]
+		say "     You also don't recall telling her where you've been staying and, as if sensing your upcoming question, the vulpogryph grins.  'Oh, I was just keeping an eye on you and followed you back to your clubhouse.  You should be a little more careful about that.  And I can certainly be of help to you as well, sweety.  Being a professional treasure hunter, I'm very good at finding stuff.  I could give you some tips... for a price.'  She continues running her paw over you.  'A little playtime with my special sweety sounds fair.  Though, if you want to skip the [bold type][link]lesson[as]Solstice lesson[end link][roman type] and get straight to the fun, that'd be even better,' she says with a grin at the corner of her long beak.";
+		now hp of Solstice is 5;
+
 
 Section 2 - Solstice the Vulpogryph		[coming soon]
 
@@ -148,16 +148,97 @@ The description of Solstice is "[solsticedesc]";
 The conversation of Solstice is { "Treasure!" }.
 
 to say solsticedesc:
-	say "***";
+	say "     Transformed by the strange artifact you helped her recover, Solstice has become an unusual, gryphon-like creature.  Her upper body is decidedly avian in nature, with black feathers and a crow's head and beak.  Her eyes are sharp and have a lustful glint as they look at you.  She has a pair of broad, black wings attached to her back as well.  Her paws resemble bird-like talons.  There are some hints of her previous, vulpine nature as well, with foxish ears and mammalian breasts filling her red shirt.  Her lower body is largely unchanged and is that of a sexy, multi-tailed vixen, though those tails now in in black plumage.  Her fur is a silvery gray in stark contrast to her darker feathers.  Along with her red, sleeveless top, the vulpogryph wears a pair of khaki shorts with attached pouches.  She's even set up her bedroll in one of the reading rooms to the side of the library and is keeping her small backpack there as well.";
+
+instead of linkactioning Solstice:
+	say "Possible Actions: [link]talk[as]talk Solstice[end link], [link]smell[as]smell Solstice[end link], [link]fuck[as]fuck Solstice[end link], [link]lesson[as]lesson Solstice[end link][line break]";
 
 instead of sniffing Solstice:
-	say "***";
+	say "Solstice smells of dusty tombs and ancient secrets under a thick layer of arousal.";
 
 Instead of conversing Solstice:
-	say "***";
+	say "[one of]'It's so nice being here with you, my sweety,' she rumbles, running a paw across your chest.[or]'We should spend more time together, hon.[or]'I'd love to tell you about my adventures.  We could make a sexy [link]lesson[as]lesson Solstice[end link] out of them,' she says, nibbling your ear.[or][if player is fullyvg]'You make such a sexy vulpogryph, my dear.  I knew you'd make a wonderful mate,' she purrs sensually as she runs her taloned paws over you.[otherwise if player is partvg]'You will be such a sexy vulpogryph when I'm done, my dear.  You'll be my perfect mate,' she purrs sensually as she runs her taloned paws over you.[otherwise]'I think you'd look much better as a sexy vulpogryph like me, hon,' she purrs sensually as she runs her taloned paws over you.[end if][or]'Mmm... you should stay here with me, sexy.  We could so much fun together.'[or]'I think I'd prefer to stay out here than in the bunker, if it's all the same with you.'[in random order]";
+
+
+Section 3 - Lesson Time
+
+lessontiming is an action applying to nothing.
+lessontime is a number that varies.
+solsticefsex is a number that varies.
+solsticemsex is a number that varies.
+Understand "learn Solstice" as lessontiming.
+Understand "learn from Solstice" as lessontiming.
+Understand "lesson Solstice" as lessontiming.
+Understand "Solstice lesson" as lessontiming.
+
+check lessontiming:
+	If Solstice is not visible, say "You can't listen to her stories if she's not around." instead;
+
+carry out lessontiming:
+	if lastfuck of Solstice - turns is less than 8:
+		say "     'As much as I'd enjoy that,' Solstice replies, running her taloned paws over you.  'I'm not quite up for claiming my special payment afterwards for your lesson time.  And we don't want to miss out on that, do we?'";
+	otherwise:
+		now lessontime is 1;
+		say "     At your offer to hear some of her stories, she smiles leads you off to the side room where she's set up her bedroll.  Sitting side by side on it, she snuggles you close, enfolding you in her wings.  As she tells you about the time she [one of]went in search of Incan gold[or]excavated a Mayan temple[or]searched for a lost city in the African jungle[or]evaded the Chinese police while hunting for an ancient temple[or]traveled across Europe in search of Roman treasures[or]wandered the Arabian deserts in search of treasure[or]followed a map to undersea treasure[or]fought villainous raiders trying to steal her prize[or]circumventing traps and puzzles centuries old in a lost tomb[in random order], her paws alternate between re-enacting the adventure and fondling you.  The story is also broken up by nuzzles and nips from her pointed beak.  While the story ends with the adventurer [one of]snagging a golden treasure[or]barely making it out alive[or]with some minor artifact[or]making an archeological discovery, but gaining no actual treasure[or]escaping as the whole place collapses[or]holding a handful of gemstones and jewelry[or]finding a few trinkets to barely meet her expenses[purely at random], you do get the feeling that it was at least a little exaggerated.  Regardless, you do find yourself growing closer to the affectionate woman";
+		if perception of player < 20:
+			let bonus be (( the intelligence of the player minus 10 ) divided by 2);
+			let diceroll be a random number from 1 to 20;
+			increase diceroll by bonus;
+			if diceroll is greater than 10:
+				say " and also picking up a few tips and pointers on how to be a good treasure hunter.";
+				increase perception of player by 1;
+				say "     Your perception has increased by 1!";
+				increase libido of player by 10;
+				decrease humanity of player by 5;
+				if "Pure" is listed in feats of player, increase humanity by 2;
+				if "Corrupt" is listed in feats of player, decrease humanity by 1;
+			otherwise:
+				say " even if you didn't manage to learn anything useful from her [']lesson['] this time.";
+		otherwise:
+			say " even if you don't think you'll be able to learn more from her [']lessons['].";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		say "[solsticesex]";
+
+
+Section 4 - Fucking Solstice
 
 instead of fucking Solstice:
-	say "***";
+	if lastfuck of Solstice - turns is less than 8:
+		say "     'As much as I'd enjoy that,' Solstice replies, running her taloned paws over you.  'I'm not quite up for claiming my special payment afterwards for your lesson time.  And we don't want to miss out on that, do we?'";
+	otherwise:
+		say "     Solstice grins at your offer and takes your hand in hers, rushing you off to the reading room she's claimed as her own.  She wraps her wings and tails around you.  Her taloned paws run over your body, kneading lightly.  They move down to your hips and then around to your ass, gripping it as she pulls you tightly to her.  'Mmm... I've been looking forward to spending some quality time with you, sweety.'  She nuzzles her beak against your cheek and nips lightly at your neck.";
+		say "[solsticesex]";
+
+to say solsticesex:
+	if cocks of player is 0:
+		say "     Solstice runs her paws between your legs and walks her fingers across your wet folds.  She seems a little disappointed that you don't have a penis to fill her, but continues to snuggle up to her chosen mate";
+		if solsticefsex is even:
+			say ".  The vulpogryph lowers you onto your back and slips [if cunt width of player is 1]a finger[otherwise if cunt width of player < 4]a pair of fingers[otherwise if cunt width of player < 6]a trio of fingers[otherwise]a trio of fingers and eventually her whole hand[end if] into your wet cunt.  Meanwhile, you play with her feathered breasts, teasing her nipples as you kiss and nuzzle at her beak.  She fingers herself with her other paw, but occasionally switches between them, spreading her hot juices onto you and rubbing your pussy juices onto hers.  You feel a warm, pleasant tingle  every time she does this as if part of her is flowing into you.  She pays particular attention to your clit, perhaps rubbing it in the hopes it will grow into a lovely cock for her.";
+			say "     Eventually, the vulpogryph's playful fingers eventually send you over the edge as she switches again.  You cum hard, soaking her hand in your juices as you climax.  You moan and kiss her passionately over and over again as your cunt quivers in delight.  As your climax wanes, she moves the soaked paw to her pussy and fingers herself hard and fast, soon peeking as your juices are rubbed into her vaginal walls.  She caws loudly in pleasure and her sweet waters drip down onto your already sticky crotch.  She gives you a few last playful nips and rolls over onto her back beside you, moaning softly after her powerful release.";
+			say "     'Mmmm... that was very nice, my dear.  It felt so good to share myself with you like that.  Though think how much better it would be if you had a nice, hard cock to fill me.  You should get on that, sweety,' she purrrs, running a feather across your sensitive pussy and flicking it across your clit.  She rests her head on your chest and you put your arms around her, holding the lovely vulpogryph while feeling much closer to her after your time together.";
+		otherwise if solsticefsex is 1:
+			say ".  After lowering you to the ground and snuggling up beside you, she reaches over for her pack.  'I have something in her to help us, my dear,' she says as she rummages through it.  'I found it while investigating an medieval nunnery.  It seems one of the sisters was not as chaste as she should have been.'  Pulling it out, she reveals a phallis made of hard, polished wood.  'It's very smooth and was such a nice fit that I decided just to keep it for myself.  Though I wouldn't mind sharing it with my special sweety,' she adds, nipping at your neck as she brushes the dildo's glans across your pussy.";
+			say "     You moan and spread your legs slowly, tensing just a little.  But when she slides it into you, it feels very pleasant and is indeed quite smooth and polished, sliding with ease into your wanton folds.  The toy is quite arousing, shaped perfectly to please a woman and the thoughts of chaste, virginal sisters of the cloth using this sends lustful shivers along your spine.  You bury your face in Solstice's downy bosom, nuzzling her breasts before moving your lips to her silvery nipple.  You lick, kiss and suckle at it and are surprised when it starts to give a little milk.  Her taste is exciting, but very hard to describe.  You can find no comparison for it, but find it wonderfully unique and made just for you.";
+			say "     Solstice works the toy into you for a few minutes, then slowly withdraws it, wanting to take her turn as well.  She moans lustfully as she presses it between her wet folds with a mini-orgasm of her own.  You stroke your wet folds and finger yourself as you await your turn again, keeping yourself excited, but saving your climax for the wonderful toy.  When she returns it to your cunt, you get her to fuck you thoroughly with it, bucking and moaning loudly until finally you have a crashing climax that leaves you panting on your back.  Moments later, the toy stuffed back into her, Solstice orgasms as well.  You cuddle in each other's arms, panting and soaked in musky, female cum.";
+		otherwise if solsticefsex is odd:
+			say ".  After lowering you to the ground and snuggling to to you, she rummages through her bag once again.  Pulling out the shapely toy, she grins at you and you nod happily and spread your legs.  You nuzzle and kiss one another while taking turns with the smooth dildo inside your gripping cunts.  You alternate several times, spreading your pussy juices across it and with each other as you fuck yourselves and each other with it.  Nuzzling at her bosom, you nurse for her milk, getting her to moan as you enjoy her unique taste flowing across your tongue.  You share the toy back and forth until you both come to a wild, crashing orgasm.  Panting after your lovemaking, you cuddle together and she nuzzles you, musing about how much nice it'd be with the real thing.";
+		increase solsticefsex by 1;
+	otherwise:
+		say "     Solstice runs her paws between your legs and across your throbbing cock and full balls.  She releases a caw of pleasure and rubs your erection with a lustful moan";
+		if solsticemsex is even:
+			say ".  She gently guides you down to rest on your back and runs her paws over your body as she leans in to give you a peck.  Plucking a feather from her plumage, she grins and slides it teasingly across your inner thigh, then across your balls and over your cock.  You groan softly and your cock twitches at the delicate touch of the soft feather teasing you.  Solstice nuzzles at your chest while continuing to tickle your thigh and caress your throbbing erection with it.";
+			say "     After a few minutes of playful teasing, you are quite hard and leaking and she can wait no longer.  Moving atop you, she rubs her vulpine hips down onto yours, grinding her wet folds over your cock before letting you sink into her.  She moans and kneads her paws at your chest as she starts riding your pulsing member.  Your hands run through her soft plumage and move up to her breasts, caressing the lovely globes of feathered flesh and teasing her nipples to make her release sweet caws of delight.";
+			say "     You thrust up into her in time with her bouncing body, pounding her good and hard until you both climax.  Your throbbing cock pumps blast after blast of thick seed into her, filling her eager womb with your semen as she caws loudly while cumming.  She collapses atop you and snuggles you close, nipping and nuzzling at you.  'Mmm... that was wonderful, my precious mate[if the player is fullyvg].  Aren't you much happier now as a lovely vulpogryph?' she purrs as she rubs her body against yours[otherwise if the player is partvg].  And won't it be even better when you're fully a vulpogryph?' she purrs as she rubs her body against yours[otherwise].  I knew there was something special about you.  And won't it be even better when you start turning into a lovely vulpogryph to be my mate?' she purrs as she rubs her body against yours[end if].  Overcome by the pleasure of your lovemaking, you can't help but feel closer to the sex vulpogryph, your mate.";
+		otherwise if solsticemsex is odd:
+			say ".  She stretches herself out on the bedroll, showing off her sensually-shaped body for you.  Her paws run over her lovely breasts, through her soft feathers as it transitions to fur, then down to her hips.  She spreads her legs and brushes her fingers across her pussy, spreading those wet lips in clear invitation to fill her wanton hole.";
+			say "     After her lovely display, you move atop her right away, lining up your cock with her cunt and sinking slowly into her, enjoying her lovely moans as she squirms beneath you.  You kiss and nuzzle at one another lustfully as you start thrusting, pumping into her lovely body.  Her soft fur and feathers feel wonderful against your body as each thrust has you rub against them.  She wraps her fluffy tails around you and enfolds you both in her wings, making you feel as if she's cuddling you with her whole body.";
+			say "     As you fuck the sexy vulpogryph, she nips at your neck and brushes her beak against your cheek.  Your cock throbs and pulses, leaking precum steadily as you pound into her.  Her vulpine cunt grips and squeezes at your cock, milking at it[if player is vgcocked] and clamping down around your swelling knot[end if].  Feeling your coming climax, you switch to hard, fast strokes, making her release caws of pleasure with each one.";
+			say "     When you do cum, you thrust deep inside her and unleash your hot, thick load into her eager cunt.  You pump blast after blast of your hot seed into her, making her caw loudly one last time as she orgasms[if cock width of player >= 20].  Her slender, vulpine tummy bloats up considerably as your excessively large balls drain into her.  She moans happily at the sight of this and rubs her taloned paws over she overstuffed womb[otherwise if cock width of player >= 12].  Her slender, vulpine tummy gains a plump bulge from the considerable output of your large balls.  She smiles at the sight of this and rubs her taloned paws over the bulge of her filled womb[otherwise].  She smiles in pleasure as she feels you drain your balls into her womb[end if].  Once your cock stops pulsing and your balls are empty, you slide your softening shaft from her and snuggle up beside her.";
+		increase solsticemsex by 1;
+	now lastfuck of Solstice is turns;
+	if lessontime is 1, vulpogryphinfect;	[double-infection from lesson-time]
+	vulpogryphinfect;
+	now lessontime is 0;
 
 [	hp of Solstice		]
 [ 0 - Never met			]
@@ -168,7 +249,7 @@ instead of fucking Solstice:
 [ 5 - Booked and met		]
 
 
-Section 3 - Definitions
+Section 5 - Definitions
 
 Definition: a person is vgfaced:
 	if the facename of the player is "Vulpogryph", yes;
@@ -198,7 +279,12 @@ Definition: a person is partvg:
 	if the tailname of the player is "Vulpogryph", yes;
 	no;
 
-Section 4 - Endings
+Definition: a person is fullyvg:
+	if the facename of the player is "Vulpogryph" and the skinname of the player is "Vulpogryph" and the bodyname of the player is "Vulpogryph" and the cockname of the player is "Vulpogryph" and the tailname of the player is "Vulpogryph", yes;
+	no;
+
+
+Section 6 - Endings
 
 
 
