@@ -2759,7 +2759,7 @@ to numberfy (x - a snippet):
 keychar is a text that varies.
 
 To translate (k - a number):
-	if k is 13:
+	if k is 13 or k is -6:
 		now keychar is "return";
 	otherwise if k is 31 or k is 32:
 		now keychar is " ";
@@ -2891,7 +2891,7 @@ To Combat Menu:
 			if keychar in lower case exactly matches the text "return":
 				follow the player attack rule;
 				next;
-			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "1":
+			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return":
 				follow the player attack rule;
 				next;
 			if keychar in lower case exactly matches the text "i" or keychar in lower case exactly matches the text "2":
