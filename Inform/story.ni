@@ -3725,7 +3725,7 @@ To showstats (x - Person):
 	say "Level: [level of x], XP: [xp of x]/[z]";
 	if the number of entries in the feats of the x is greater than 0:
 		say ", Feats: [feats of the x][line break]";
- 
+
 This is the self examine rule:
 	now looknow is 1;
 	showstats player;
@@ -4152,7 +4152,7 @@ carry out levelcheat:
 		decrease xp of player by ( level of player times 2 );
 	level up;
 	decrease score by level of the player times level of the player; 
-	
+
 Book 7 - Endings
 
 vetcheat is an action applying to nothing.

@@ -482,7 +482,47 @@ instead of conversing the Pool Table:
 			say "[slutratdomsex]";
 
 
-Section 8 - Endings
+Section 8 - Ronda
+
+instead of going to Mall FoodCourt while ( hp of Ronda is 1 and lastfuck of rod - turns >= 16 ):
+	move player to Mall FoodCourt;
+	if furry is banned or girl is banned or hermaphrodite is banned or humorous is banned or guy is banned:
+		say "     Rod seems particularly down and you go over to talk to him.  He sighs sadly and tells you about how he went to the mysterious shop in the mall to look for a cure for Ronda.  'But the spooky dog-woman said nothing could be done for her.  She had some wierd, mumbo-jumbo explanation.  Something about needing the creatures that have been banned or something.  So, I guess nothing can be done for her.'  With that, he slumps off to be alone at one of the tables in the far corner of the food court.";
+		now hp of ronda is 2;
+	otherwise:
+		now hp of ronda is 3;
+		say "     Rod comes up to you as you arrive.  He seems a little more animate than he's been of late, if still rather disheveled.  'Hey, can I ask a favour?  I was, like, you know, totally missing Ronda.  You know about Ronda, dontcha?  She was there when those infected rats popped up and swarmed the place.  You must've missed it, but it was a bad scene, dude.'  You keep quiet, thinking it best that Rod and the other rats not know about your part in that incident.  'But yeah, there I was, totally bummed, when I went [']Dude!['] and got this brainwave to talk to that wierd dog-girl at the shop.  She was all spooky and stuff, but she said there might be a way to help Ronda.  But that's when she told me that I'd need to get some stuff out in the city, and I'm not to keen on leaving the mall, you know.  So brainwave number two comes and I'm thinking my friend can help me with it.  So that's where you come in.'  Feeling a little guilty about what happened, you agree to visit the shop on the west side of the Atrium and see what needs to be done.";
+
+instead of conversing the Nermine while ( hp of Ronda is 3 and nerminetalk > 0 ):
+	now hp of Ronda is 4;
+	say "     Nermine smiles as you bring up the topic of Ronda and the slut rats.  'Ahh... I was wondering who the rat boy would find to be helping him.  Ironic that he should be picking you, eh?' she says, leaning across her counter.  'Well, perhaps you will be learning not to play around with things you are not understanding.  Now, as I told the rat boy, I should be needing some things to be making a cure for his love.  He is bound too tightly to the mall and cannot be leaving, even for the girl he loves.  But you are not having this problem.";
+	say "     First, there are some lizards running around the park who are thinking they are artists.  Be finding one of them and be getting a sample of the juices from their womanly flower.  This should not be too hard a task.  More difficult is the fruit needed.  There are grand trees roaming the streets, moving around on their own power.  These are producing fruits capable of restoring a person.  Eating these fruits, they are changing to become human again, or at least appearing to be human.  I am needing the best and shiniest of these fruits to be fighting the corruption affecting the Ronda-rat.";
+
+
+
+before conversing the Nermine while hp of Ronda is 5:
+	if "lizard juice" is listed in invent of player and "Awesomest Fruit" is listed in invent of player:
+		say "[rondaitems]" instead;
+
+to say rondaitems:
+	say "     Pulling out the items Nermine needed to help Ronda, you place them on the counter.  She smiles happily and takes them.  'And now it is time to be talking about Nermine's payment for this.  The last items Nermine is needing complete the cure are to be found in a private collection in the city.  Downtown, there is condo of a private art collector.  He is keeping veil and staff in his penthouse suite.  Nermine is wanting you to be collecting them for her.  Veil needed to complete cure, staff is payment.  One trip for both.  Easy for one working so hard to make amends.";
+	say "     Sadly, penthouse is not to be found yet.  Be trying again later.  (Content not yet coded)[line break]";
+	now hp of Ronda is 6;
+	delete lizard juice;
+	delete Awesomest Fruit;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"lizard juice"	"A small vial of the creamy, white cum from one of those lizard girls."	1	lizard juice
+
+lizard juice is a grab object.  It is part of the player.  It is not temporary.
+
+instead of using lizard juice:
+	say "You need to save that to help Ronda.";
+
+
+Section 9 - Endings
 
 When play ends:
 	if humanity of the player is less than 10 and hp of the player is greater than 0:
