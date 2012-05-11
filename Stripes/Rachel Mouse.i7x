@@ -126,6 +126,8 @@ The summondesc of mouse girl is "Walking up to join you before you even call out
 The assault of mouse girl is "[rachelattack]";
 rachelfuck is a number that varies.
 
+understand "Rachel" as mouse girl.
+
 to say rachelattack:
 	choose row monster from table of random critters;
 	if name entry is "Mental Mouse":
