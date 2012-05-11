@@ -100,9 +100,9 @@ When Play begins:
 	now int entry is 10;
 	now cha entry is 10;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 42;			[ The monster's starting hit points. ]
-	now lev entry is 5;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 5;			[ Monster's average damage when attacking. ]
+	now hp entry is 45;			[ The monster's starting hit points. ]
+	now lev entry is 6;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 6;			[ Monster's average damage when attacking. ]
 	now area entry is "Hospital";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
@@ -113,7 +113,7 @@ When Play begins:
 	now cunts entry is 0;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
-	now libido entry is 55;			[ Target libido the infection will rise towards. ]
+	now libido entry is 58;			[ Target libido the infection will rise towards. ]
 	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 
