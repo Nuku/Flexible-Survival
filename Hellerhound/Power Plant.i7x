@@ -159,6 +159,7 @@ carry out towerfixing:
 		if fixedgens is 2:
 			say "The blinking light flashes a few times, then turns green, indicating power is up and running. Hooray!";
 			increase score by 200;
+			now findwires is 2;
 		activatecomputers;
 
 computeron is a number that varies.
