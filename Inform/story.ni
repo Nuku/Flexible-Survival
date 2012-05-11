@@ -2729,6 +2729,7 @@ to win:
 	rule succeeds;
 
 To Vialchance (x - a text):
+	if researchbypass is 1, continue the action;
 	if scenario is "Researcher" or nanite collector is equipped:
 		let vialcollectible be 10 + ( 2 * intelligence of player );
 		if vialcollectible > 70, now vialcollectible is 70;
