@@ -31,7 +31,7 @@ Instead of resolving a potential resources:
 	if x is 1:
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
 		add y to invent of the player;
-	if x is 2:
+	otherwise if x is 2:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is up high, forcing you to climb up after it. It looks ";
@@ -57,11 +57,10 @@ Instead of resolving a potential resources:
 		if difficulty is greater than dice:
 			say "You try your best to scale up, but only end up hurting yourself in the process.";
 			decrease hp of player by 10;
-			stop the action;
 		otherwise:
 			say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
 			add y to invent of the player;
-	if x is 3:
+	otherwise if x is 3:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is up stuck under something heavy. It looks ";
@@ -84,11 +83,10 @@ Instead of resolving a potential resources:
 		increase dice by bonus;
 		if difficulty is greater than dice:
 			say "You try your best to lift up the barrier, but to no avail, denying you the [y].";
-			stop the action;
 		otherwise:
 			say "Successfully hoisting the obstacle up, you snag the [y] triumphantly and stuff it into your backpack.";
 			add y to invent of the player;
-	if x is 4:
+	otherwise if x is 4:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "It is in the hands of a sentient! Though mutant, Perhaps you could convince them to give it up, it looks like they have enough for themselves. They appear ";
@@ -111,11 +109,10 @@ Instead of resolving a potential resources:
 		increase dice by bonus;
 		if difficulty is greater than dice:
 			say "Your arguments fall on deaf ears. Wait, does this guy even have ears?";
-			stop the action;
 		otherwise:
 			say "After working out the specifics, you are handed the [y] and you stuff it into your backpack.";
 			add y to invent of the player;
-	wait for any key;
+	say "[line break]";
 	
 
 Food and Water Finding ends here.
