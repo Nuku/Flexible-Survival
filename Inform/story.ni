@@ -1967,15 +1967,6 @@ instead of trading the demon seed when the current action involves the ronda:
 	now lastfuck of Rod is turns;
 
 
-To Rest:
-	if "cot" is listed in invent of player or "cot" is listed in invent of location of player or the player is in the Bunker:
-		increase the hp of the player by (the stamina of the player times 2) plus the level of the player;
-	otherwise if "Roughing It" is listed in feats of player:
-		increase the hp of the player by maxhp of the player divided by 4;
-	follow the turnpass rule;
-	follow the player injury rule;
-	say "You are [descr]([hp of player]/[maxhp of player]).";
-
 This is the sex change rule:
 	choose row monster from the table of random critters;
 	if "Just One" is listed in feats of player:
@@ -3202,7 +3193,6 @@ check resting:
 	otherwise if "Roughing It" is listed in feats of player:
 		say "You hunker down somewhere secluded for a quick nap...";
 		if there is a dangerous door in the location of the player:
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if a random chance of 3 in 20 succeeds:
 				say "...but your nap is interrupted by the arrival of a creature.";
 				fight;
@@ -3219,6 +3209,22 @@ check resting:
 
 carry out resting:
 	Rest;
+
+To Rest:
+	if "cot" is listed in invent of player or "cot" is listed in invent of location of player or the player is in the Bunker:
+		let num1 be maxhp of the player divided by 4;
+		let num2 be ( stamina of the player * 2 ) + level of the player;
+		if num1 >= num2, increase hp of player by num1;		[best value chosen]
+		if num2 > num1, increase hp of player by num2;
+		increase the hp of the player by (the stamina of the player times 2) plus the level of the player;
+	otherwise if "Roughing It" is listed in feats of player:
+		let num1 be maxhp of the player divided by 4;
+		let num2 be ( stamina of the player * 2 ) + level of the player;
+		increase hp of player by ( num1 + num2 ) / 2;		[average value chosen]
+	follow the turnpass rule;
+	follow the player injury rule;
+	say "You are [descr]([hp of player]/[maxhp of player]).";
+
 
 This is the explore rule:
 	let something be 0;
@@ -4064,8 +4070,7 @@ This is the finish stats rule:
 		otherwise:
 			rule fails;
 	now started is 1;
-	say "You have decided your physical talents, but are you a man or a woman?";
-	wait for any key;
+	say "[line break]You have decided your physical talents, but are you a man or a woman?";
 	say "Do you want to be [link][bracket]m[close bracket][as]m[end link]ale or [link][bracket]f[close bracket][as]f[end link]emale?>[run paragraph on]";
 	now tempnum is 0;
 	while tempnum is 0:
