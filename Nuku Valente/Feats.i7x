@@ -177,8 +177,7 @@ instead of addfeating the fun feats:
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
 	addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.";
-	if "Unrelenting Assault" is not listed in feats of player, addfeat "Coward" with "You find the monsters so terrifying you flee at every opportunity.";
-	if "Coward" is not listed in feats of player, addfeat "Unrelenting Assault" with "Never give up, Never surrender.  You always attack in combat."; [this and coward: put next to submissive because that seemed logical.  move elsewhere if so desired.]
+	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight.  You may choose [bold type]auto attack normal/berserk/coward[roman type].";[put next to submissive because that seemed logical.  move elsewhere if so desired.]
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Perky" with "You are of positive spirits, regaining morale gradually and +20% max morale.";
 	if "Pure" is not listed in feats of player, addfeat "Corrupt" with "You have a weaker grip on your humanity.";
