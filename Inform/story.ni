@@ -1,4 +1,4 @@
-t s"Flexible Survival" by Nuku Valente
+"Flexible Survival" by Nuku Valente
 
 Book 0 - Pre game prep stuff
 
