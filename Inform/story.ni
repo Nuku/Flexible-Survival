@@ -1,4 +1,4 @@
-"Flexible Survival" by Nuku Valente
+t s"Flexible Survival" by Nuku Valente
 
 Book 0 - Pre game prep stuff
 
@@ -2131,11 +2131,13 @@ This is the sex change rule:
 		if cunts of player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of player:
 			say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
 			decrease cunts of player by 1;
+			follow the cock descr rule;
+			follow the cunt descr rule;
 	otherwise if cunts of player > cunts entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Female" or sex entry is "Both" ) and "All The Things" is not listed in feats of player:
 		say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
 		decrease cunts of player by 1;
-	follow the cock descr rule;
-	follow the cunt descr rule;
+		follow the cock descr rule;
+		follow the cunt descr rule;
 
 
 To grow breasts by (x - a number):
@@ -2606,6 +2608,7 @@ This is the player attack rule:
 				choose row monster from table of random critters;
 		if a random chance of 4 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12:
 			follow the cock descr rule;
+			follow the cunt descr rule;
 			let dammy be 0;
 			let z be cock length of player + ( 2 * cocks of player ) - 12;
 			now dammy is ( square root of ( 2 * z ) ) + 1;
