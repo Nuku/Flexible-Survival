@@ -974,7 +974,7 @@ Instead of resolving a Alternative entry:
 
 
 
-Instead of conversing the Mary while Hyenatrailing is 3:
+Instead of conversing the Mary while ( Hyenatrailing is 3 and nes is 5 ):
 	say "'You want to know about hyenas in the subways?' The lamb asks you as she blinks in surprise, 'Actually come to think of it I do think I heard some of them while I was down there.' The little sheep says with a shy smile, 'The way they were talking I was kind of scared to say anything, but I am pretty sure there were several small groups that were moving around down there, I think they actually all belonged to some kind of gang though, or at least they kept talking about one.' The ewe says as she eyes you hopefully, resting her hooflike hand on your soft black furred side as she looks up at you eagerly, 'I do hope that helps you somehow, I[apostrophe]m always happy to help you out after all you[apostrophe]ve done for me.' She says, and you assure her that her words were a big help. She seems happy with that as she goes back to working on cleaning up the store, and you sigh as you realize that the thing you were afraid of is now the most likely possibility, somehow the items you are looking for have probably ended up in the hands of the Hyena gang that is taking over much of the territory of the city... sadly if you want to find the items, you will probably need to go outside and into their territory..";
 	now hyenatrailing is 4;
 
