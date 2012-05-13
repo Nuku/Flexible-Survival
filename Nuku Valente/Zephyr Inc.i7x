@@ -142,7 +142,7 @@ name	desc	weight	object
 
 nanite collector is equipment. It is not temporary.
 The placement of it is "body".
-The descmod of it is " A great contraption rests across their back, with many valves and pipes, it looks more like a steampunk jetpack than anything else. Still, it has the Zephyr logo displayed boldly."
+The descmod of it is " A great contraption rests across your back, with many valves and pipes.  It looks more like a steampunk jetpack than anything else.  Still, it has the Zephyr logo displayed boldly."
 
 Table of Zephyr Goods
 name	price	object	allowed
