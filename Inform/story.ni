@@ -56,6 +56,8 @@ title	description
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]i hate to wait[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]i love to wait[roman type] to return to the default."
 "Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?[line break]Type [bold type]the clears are gone[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]the clears are back[roman type] to return to the default."
+"Auto Attack"  "If you have the Instinctive Combat feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat."
+
 
 Include (-
 
@@ -74,8 +76,7 @@ Include (-
 			i = parse-->1;
 			if (i == YES1__WD or YES2__WD or YES3__WD or '1//') rtrue;
 			if (i == NO1__WD or NO2__WD or NO3__WD or '2//') rfalse;
-	      }
-	      PrintText((+ yes or no message +));
+	      }	      PrintText((+ yes or no message +));
 	}
 ];
 -) instead of "Yes/No Questions" in "Parser.i6t".
@@ -1774,6 +1775,51 @@ carry out conversing:
 	repeat with comment running through conversation of the noun:
 		say "[Noun] says, '[Comment]'";
 		break;
+
+Section Automatic Combat
+
+
+[creates flag for automatic combat, from "Instinctive Combat" feat]
+autoattacknormal is an action applying to nothing.
+understand "auto attack normal" as autoattacknormal.
+
+autoattackberserk is an action applying to nothing.
+understand "auto attack berserk" as autoattackberserk.
+
+autoattackcoward is an action applying to nothing.
+understand "auto attack coward" as autoattackcoward.
+
+autoattackmode is a number that varies.
+[0 is normal]
+[1 is attack]
+[2 could be item? but probably not...]
+[3 could be pass?]
+[4 is flee]
+[5 could be submit?]
+
+
+carry out autoattacknormal:
+	if "Instinctive Combat" is listed in feats of player:
+		now autoattackmode is 0; [default combat, make choices at normal]
+		say "You calm your instincts and regain control of your actions.";
+	otherwise:
+		say "You feel you are missing the instincts to do this.";
+
+
+carry out autoattackberserk:
+	  if "Instinctive Combat" is listed in feats of player:
+		now autoattackmode is 1; [autoattack, no choice, always attack]
+		say "You let your aggressive instincts take the forfront, knowing you will attack at any chance.";
+	  otherwise:
+		say "You feel you are missing the instincts to do this.";
+
+
+carry out autoattackcoward:
+	if "Instinctive Combat" is listed in feats of player:
+		now autoattackmode is 4; [autoflee, no choice, always flee]
+		say "You focus on the need to escape the monsters, the need to run away.";
+	otherwise:
+		say "You feel you are missing the instincts to do this.";
 
 Section Waithate
 
