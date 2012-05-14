@@ -151,6 +151,7 @@ to say centaur rape female:
 
 
 compressedcock is a number that varies.
+
 to say compresscock:
 	now compressedcock is 1;
 
@@ -177,11 +178,13 @@ To say centaur attack:
 	if cunts of player > 0:
 		Say "[centaur rape female]";
 	if cocks of player is 0 and cunts of player is 0 and "Male Preferred" is not listed in feats of player:
-		say "The Centaur looks at you with apprehension. 'Nothing at all?' He groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
+		say "The centaur looks at you with apprehension. 'Nothing at all?' He groans, and kicks his front hoof, opening a hole in your body, which quickly heals into a vagina. 'See me next time, and don't lose it.'";
 		now the cunts of the player is 1;
 		now the cunt length of the player is 2;
 		now the cunt width of the player is 1;
 		infect "Mutant Centaur";
+	otherwise if cocks of player is 0 and cunts of player is 0:
+		say "The centaur looks at you with apprehension. 'Nothing at all?' He groans, and kicks his front hoof, knocking you over.  He looks at you as if expecting something to happen, but it doesn't.  He huffs and turns around, kicking dirt and dry grass onto you before riding off.  'Useless creature.'";
 
 
 to say centaurgrowtorso:
@@ -193,8 +196,7 @@ to say centaurgrowtorso:
 	increase the hunger of the player by 10;
 	say "You feel hungry, the energy being sapped out of you by the new growth.";
 	say "[line break]";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say " Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horses";
+	say "Your feet grow hooves, large and noisy as they clatter on the road. They also change direction and stature as they begin to look truly like those of a horses";
 
 
 to say centaurmeet:
