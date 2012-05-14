@@ -28,7 +28,7 @@ to say losetoreindeer:
 	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
 	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
-	now libido of player is ( libido of player * 67 ) divided by 100;
+	now libido of player is ( libido of player * 3 ) divided by 4;
 	increase hp of player by ( maxhp of player / 5 );
 	if hp of player > maxhp of player, now hp of player is maxhp of player;
 
@@ -45,8 +45,7 @@ to say reindeerattack:
 		choose row monster from the table of random critters;
 		increase lootchance entry by a random number between 3 and 10;
 		if lootchance entry > 80, now lootchance entry is 80;
-		if libido of player > 110:
-			now libido of player is 100;
+		if libido of player >= 110:
 			say "grabs you and rubs his cock against your hip.  You find yourself too aroused to resist the sexy reindeer further and give in to his lustful holiday spirit!";
 			now hp of player is 0;
 			continue the action;
