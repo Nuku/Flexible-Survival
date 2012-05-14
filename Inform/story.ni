@@ -73,8 +73,8 @@ Include (-
 	      #Endif; ! TARGET_
 	      if (j) { ! at least one word entered
 			i = parse-->1;
-			if (i == YES1__WD or YES2__WD or YES3__WD) rtrue;
-			if (i == NO1__WD or NO2__WD or NO3__WD) rfalse;
+			if (i == YES1__WD or YES2__WD or YES3__WD or "1") rtrue;
+			if (i == NO1__WD or NO2__WD or NO3__WD or "2") rfalse;
 	      }
 	      PrintText((+ yes or no message +));
 	}
