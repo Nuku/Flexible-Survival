@@ -1,11 +1,11 @@
-Ash Drakenoid by Sweraptor begins here. 
+Ash Drakenoid by Sweraptor begins here.
 
 "Adds an Ash Drakenoid to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [This will add the medium level Ash Dragon Mob. Acting as footsoldiers for the "Ash Gods" army]
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
+[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 
 to say Ash Drakenoid attack:
 	say "'Yes, YEs! YES!!!' She cries out in victory as you finally collapse to the ground exhausted. As you begin to desperately crawl away you expect to feel her scaly weight immediately press down on your [skin of player] back. Yet this is not the case. Tits wobbling and erect cock flailing the Drakenoid runs in a wide circle around you apparently checking for other creatures. She is quickly satisfied and saunters over to your beaten form. 'Apologies for keeping you waiting, nothing more embarrassing than being mounted while, well, mounted.' She grins exposing her wickedly sharp teeth.";
@@ -21,7 +21,7 @@ to say Ash Drakenoid attack:
 	otherwise:
 		say "Looking you over she notices the distinct lack of a vagina and her expression immediately darkens. You prepare yourself to suffer the consequences of this sudden change in her mood, yet she simply turns around and wanders away from you. Headed away from the city center and out into the districts proper.";
 
-	
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -33,7 +33,7 @@ When Play begins:
 	add { "Ash Drakenoid" } to infections of hermaphrodite;
 	Choose a blank row from Table of random critters;
 	now name entry is "Ash Drakenoid";
-	now attack entry is "[one of]The Drakenoid lets out a deafening shriek before charging you, claws outstretched. Once in close the herm savages you with her talon like hands.[or]The Drakenoid ducks under one of your blows and springs forth arms outstretched. Taking you full on you are slammed to the ground, and visciously clawed.[or] She braces herself against the ground debris and takes a deep breath. You throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned.[or]Managing to pin the Drakenoid you try to force its face down to the round, but the lithe female twists and squirms in ways which should not be possible. She quickly turns the tables on you and you find yourself struggling to now get free of her grip! She bites down sharply on your neck as her unnaturally warm member digs painfully into your side.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]The Drakenoid lets out a deafening shriek before charging you, claws outstretched. Once in close the herm savages you with her talon like hands.[or]The Drakenoid ducks under one of your blows and springs forth arms outstretched. Taking you full on you are slammed to the ground, and viciously clawed.[or] She braces herself against the ground debris and takes a deep breath. You throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned.[or]Managing to pin the Drakenoid you try to force its face down to the round, but the lithe female twists and squirms in ways which should not be possible. She quickly turns the tables on you and you find yourself struggling to now get free of her grip! She bites down sharply on your neck as her unnaturally warm member digs painfully into your side.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "The Drakenoid groans in pain and she slumps over onto the ground. Immediately she begins to try and crawl away from you towards rubble where she may be able to hide.";
 	now victory entry is  "[Ash Drakenoid attack]";
 	now desc entry is "There is little warning as one of the fearsome herm Drakenoids seems to suddenly appear on some nearby debris. With a supernatural howl she expertly navigates through the wreckage towards you'[one of]Another breeder for his lords army?[or]You are not prepared![at random],' she shrieks. Her humanoid dragon form is fearsome to behold. Shining obsidian scales contrasting the bright red magma blood which glows through her viens. The nude body serves as natural armour, there are spikes growing along her limbs and think plating on her joints. She has reptilian horns jutting from her head. A fiendishly barbed, behemoth of a cock hangs semi erect from between her thighs, a loss to this creature would not only be painful, but judging by the size of her large glowing testes, a defeat will also carry consequences."; 
@@ -49,7 +49,7 @@ When Play begins:
 	now cock change entry is "it engorges itself with molten blood. It now glows a deep orange and the viens of it glow brightly. There are evil looking barbs along its tip and along its belly, when ejaculating you know they will engorge and harden, making it impossible to pull away from your partner. Your balls also ignite with an inner light and a painful fire begins to brew within them.";
 	now str entry is 18;
 	now dex entry is 14;
-	now sta entry is 18;					
+	now sta entry is 18;	
 	now per entry is 15;
 	now int entry is 15;
 	now cha entry is 15;
@@ -64,7 +64,7 @@ When Play begins:
 	now breasts entry is 2;
 	now breast size entry is 8;
 	now male breast size entry is 0;
-	now cunts entry is 1;	
+	now cunts entry is 1;
 	now cunt length entry is 10;
 	now cunt width entry is 10;
 	now libido entry is 50;

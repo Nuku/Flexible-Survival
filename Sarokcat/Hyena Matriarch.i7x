@@ -124,7 +124,7 @@ when play ends:
 			if humanity of player is less than 10:
 				say "The hyena gang looks for its new matriarch throughout the city, constantly fighting all comers and trying to recover their leader until the military eventually comes in and drives them into hiding. Still those that remain form a prophecy about your eventual return and wait for you to lead them to a greatness that never comes.";
 			otherwise:
-				say "You occasionaly think of the gang of hyenas you joined for a time, and eventually ended up leading.  You often find yourself wondering how they survived without your leadership when the military moved in, and if perhaps you should have stayed with them instead.";
+				say "You occasionally think of the gang of hyenas you joined for a time, and eventually ended up leading.  You often find yourself wondering how they survived without your leadership when the military moved in, and if perhaps you should have stayed with them instead.";
 	otherwise if matriarchdefeated is 1:
 		if bodyname of player is "Herm Hyena":
 			if humanity of player is less than 10:

@@ -18,7 +18,7 @@ to say dragator attack:
 				increase cunt length of player by 1;
 		otherwise: [ Prefer female action]
 			say "The Dragator lets out a primordial roar, the noise shakes you to your core and makes you whimper involuntarily. The Dragator seizes one of your legs and pulls it out from under you, you hit the ground with an unceremonious thud. Roughly the mutant dragon flips you onto your stomach and flops his own bulk atop your [bodyname of player] back. For the next minute you both remain very still, you catch your breath under his crushing weight. Then you feel it, the growing heat of his ludicrously large prick. The best you can tell without seeing it is that it is a double dick, shaped like a double barreled shotgun, with the length and girth of two forearms pressed together. You whimper as you realize that the massive tool is headed straight for your body. Hellbent on siring spawn within you the Dragator begins to hump  in search of your hole...[line break][line break] The Dragator finds the only hole you have, your anus and pushes his virile member inside. You grimace in pain, since the member exudes a hellish heat. Having lined up his cock he begins humping against you, crunching his body like a dog to get as much penetration as possible into your prone form. Soon his breathing becomes ragged and he pants lewdly in pain. You immediately feel that there are two bulges slowly inching up both his urethra! You wiggle under him but find no purchase to escape  as the two bulges stretch your ass even further, entering you with much effort on part of the dragon. You know they are eggs, what else would they be? With a titanic effort the Dragator pushes the eggs out of his own body, and they are deposited deep within yours. The beast dismounts you unceremoniously leaving you lying on the ground dreading the fact you will have to 'lay' these lumps eventually.";
-	
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -45,30 +45,29 @@ When Play begins:
 	now cock change entry is "it engorges itself with molten blood. It now glows a deep orange and the veins of it glow brightly. There are evil looking barbs along its tip and along its belly, when ejaculating you know they will stiffen, making it impossible to pull away from your partner. Your balls also ignite with an inner light and a painful fire begins to brew within them.";
 	now str entry is 15;
 	now dex entry is 18;
-	now sta entry is 16;					
+	now sta entry is 16;		
 	now per entry is 13;
 	now int entry is 9;
 	now cha entry is 8;
-	now sex entry is "Both"; 	
-	now hp entry is 70;			
-	now lev entry is 10;		
-	now wdam entry is 40;		
-	now area entry is "Outside";	
-	now cocks entry is 1;			
-	now cock length entry is 15;	
-	now cock width entry is 15;		
-	now breasts entry is 2;			
-	now breast size entry is 14;		
-	now male breast size entry is 0;	
-	now cunts entry is 1;			
-	now cunt length entry is 16;	
-	now cunt width entry is 17;		
-	now libido entry is 40;	
+	now sex entry is "Both";
+	now hp entry is 70;
+	now lev entry is 10;
+	now wdam entry is 40;
+	now area entry is "Outside";
+	now cocks entry is 1;
+	now cock length entry is 15;
+	now cock width entry is 15;
+	now breasts entry is 2;
+	now breast size entry is 14;
+	now male breast size entry is 0;
+	now cunts entry is 1;
+	now cunt length entry is 16;
+	now cunt width entry is 17;
+	now libido entry is 40;
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
 	now loot entry is "Ash Dragon Heart";
-		
-	
-			
+
+
 when play ends:
 	if bodyname of player is "Ash Dragator":
 		if humanity of player is less than 10:
@@ -76,7 +75,7 @@ when play ends:
 			if cocks of player is greater than 0:
 				say "As you wander through the wastes of the city central you are attacked by several Drakenoids. You handily defeat them each in turn and always leave a dishonoured female with a bloated glowing belly in your wake. Using your 'double barreled' tool you even manage to hunt a few of the -normal- creatures from the surrounding city as you circle the capitol building. Each time you pin some squealing female or male you revel in the exquisite pain the eggs travelling up your penis and into your partner.As much as you would like, you have no time to wait and see your squealing dragon offspring be born from your victims. Eventually manage to build up an underground nest in an abandoned subway tunnel and trap enough females to build a suitable harem. Your new home is naturally lit by the round glowing bellies of your repeatedly impregnated partners.";
 			if cunts of player is greater than 0:
-				say "Unable to fend off the mental strain of the infection your mind goes feral and you adopt the body of an Ash Scout, a humanoid ash dragon. As you make your way back into the territory of the Ash brood you are once more caught and pinned by a familiar Dragator. He drags you down a nearby tunnel and you find yourself as part of his new nest. The nest is lit by other females of varying races who lie scattered about trapped by their own glowing fecundency. The dragator pins you in the prone position and lines up his double dick with your cunt. With a savage snarl he barrels forth spearing you on his length. After nearly an hour of of ecstatic spasms on your part, he finally reaches his peak. Your uterus balloons outward into a huge gravid sphere the size of a beach ball. The dimly lit nest now highly illuminated by your bellies molten contents. Trapped now and forever by an endless stream of this beasts virility you pass out, finally satisfied. You bear the spawn of the Ash Brood for the rest of your life, never again seeing natural sunlight in the dark underground tunnels.";
+				say "Unable to fend off the mental strain of the infection your mind goes feral and you adopt the body of an Ash Scout, a humanoid ash dragon. As you make your way back into the territory of the Ash brood you are once more caught and pinned by a familiar Dragator. He drags you down a nearby tunnel and you find yourself as part of his new nest. The nest is lit by other females of varying races who lie scattered about trapped by their own glowing fecundity. The dragator pins you in the prone position and lines up his double dick with your cunt. With a savage snarl he barrels forth spearing you on his length. After nearly an hour of of ecstatic spasms on your part, he finally reaches his peak. Your uterus balloons outward into a huge gravid sphere the size of a beach ball. The dimly lit nest now highly illuminated by your bellies molten contents. Trapped now and forever by an endless stream of this beasts virility you pass out, finally satisfied. You bear the spawn of the Ash Brood for the rest of your life, never again seeing natural sunlight in the dark underground tunnels.";
 		otherwise:
 			say "Having retained your sanity as an Ash Dragon you manage to escape the city. However civilization proves to much for your new urges and after a short span of time in which you spread many wild oats you find yourself fleeing to the east. A dark presence has emerged from the infected city, it is rumoured, and seems to be headed in your general direction.";
 
@@ -86,7 +85,7 @@ name	desc	weight	object
 
 Ash Dragon Heart is a grab object.
 Ash Dragon Heart is infectious. The strain of Ash Dragon Heart is "Ash Dragator".
-the usedesc of Ash Dragon Heart is "With some trepedation you sink your teeth into the flesh of the Dragon heart. Food's food, right?.";
+the usedesc of Ash Dragon Heart is "With some trepidation you sink your teeth into the flesh of the Dragon heart. Food's food, right?.";
 The purified of Ash Dragon Heart is "food".
 
 instead of sniffing Ash Dragon Heart:

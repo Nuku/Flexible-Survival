@@ -98,7 +98,7 @@ To say status of the player:
 	otherwise if x is at most 30:
 		say "have taken quite a beating";
 	otherwise if x is at most 60:
-		say "have definately been better, but you could be worse";
+		say "have definitely been better, but you could be worse";
 	otherwise if x is at most 70:
 		say "are a little beaten up";
 	otherwise if x is at most 80:
@@ -134,13 +134,13 @@ Check shooting something (called the target) with something (called the boomstic
 
 Check shooting something (called the target) with something (called the boomstick) (this is the you can't shoot something with itself rule):
 	if the target is the boomstick begin;
-		say "You try to riccochet the shot so that. . . Wait, you can't shoot [the boomstick] with itself!";
+		say "You try to ricochet the shot so that. . . Wait, you can't shoot [the boomstick] with itself!";
 		stop the action;
 	end if.
 
 Check shooting something (called the target) with something (called the boomstick) (this is the suicide rule):
 	if the target is the player:
-		end the game saying "You have commited suicide!".
+		end the game saying "You have committed suicide!".
 
 Carry out an actor shooting something (called the target) with something (this is the standard carry out shooting rule):
 	if the target is a person begin;
@@ -240,7 +240,7 @@ Check stabbing something (called the target) with something (called the pigstick
 
 Check stabbing something (called the target) with something (called the pigsticker) (this is the harikari rule):
 	if the target is the player:
-		end the game saying "You have commited suicide!".
+		end the game saying "You have committed suicide!".
 
 Carry out an actor stabbing something (called the target) with something (this is the standard carry out stabbing rule):
 	if the target is a person begin;

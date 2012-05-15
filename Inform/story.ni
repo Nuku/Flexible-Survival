@@ -515,7 +515,7 @@ title	subtable	description	toggle
 To say gryphon fuck:
 	if cocks of player is greater than 0:
 		if cock length of player is less than 7:
-			say "[one of]The gryphon shoves you to the ground roughly and seems dissappointed about something. She sniffs at you once more before snorting loudly. With a disdainful kick of a foot, she leaves some dust on you, then departs.[or]The gryphon pushes you back with one hand while the other grabs at you, removing any clothing you may have. She speaks haltingly, as if she is not used to speaking anymore, 'You are too small, but maybe, later. For now, a gift.' She kneels before you and takes your [cock size desc of player] [cock of player] member into her beak, lapping over it with soft, wet, tongue. Her firm paw hands hold to your ass as she begins to bob slowly against you, making your flesh tingle with delight as she works at you expertly. All too soon you are spilling seed across that tongue, grunting with your own satisfaction. She rises, licking her beak. With a wink, she saunters off.[at random]";
+			say "[one of]The gryphon shoves you to the ground roughly and seems disappointed about something. She sniffs at you once more before snorting loudly. With a disdainful kick of a foot, she leaves some dust on you, then departs.[or]The gryphon pushes you back with one hand while the other grabs at you, removing any clothing you may have. She speaks haltingly, as if she is not used to speaking anymore, 'You are too small, but maybe, later. For now, a gift.' She kneels before you and takes your [cock size desc of player] [cock of player] member into her beak, lapping over it with soft, wet, tongue. Her firm paw hands hold to your ass as she begins to bob slowly against you, making your flesh tingle with delight as she works at you expertly. All too soon you are spilling seed across that tongue, grunting with your own satisfaction. She rises, licking her beak. With a wink, she saunters off.[at random]";
 		otherwise:
 			say "Eyeing something she wants, the gryphon pushes you back a little before turning around and raising her tail high into the air, exposing her pouting lips to your view. Unable to resist, you move up and seize her well muscled hips and are soon pushing against her. With every sink of your [cock size desc of player] [cock of player] meat into her, she gives a pleasured,  keening sound. Her cunt squeezes around your hefty member, encouraging it until you blow your load deep inside of her dripping snatch. Your bodies tremble against one another as passions ebb and she lets you slide off to the ground. Before leaving, she turns to gently lick over your face, then cleans your [cock size desc of player] tool dutifully.";
 	otherwise:
@@ -1809,7 +1809,7 @@ carry out autoattacknormal:
 carry out autoattackberserk:
 	  if "Instinctive Combat" is listed in feats of player:
 		now autoattackmode is 1; [autoattack, no choice, always attack]
-		say "You let your aggressive instincts take the forfront, knowing you will attack at any chance.";
+		say "You let your aggressive instincts take the forefront, knowing you will attack at any chance.";
 	  otherwise:
 		say "You feel you are missing the instincts to do this.";
 
@@ -2901,7 +2901,7 @@ To Combat Menu:
 	now inafight is 1;
 	now automaticcombatcheck is 0; [sets to zero as combat starts, just in case]
 	while hp of player is greater than 0 and monsterhp is greater than 0:
-		if "Submissive" is listed in feats of player and a random chance of 1 in 30 succeeds: [chance to sumbit in combat if you have the submissive feat, feel free to adjust odds]
+		if "Submissive" is listed in feats of player and a random chance of 1 in 30 succeeds: [chance to submit in combat if you have the submissive feat, feel free to adjust odds]
 			now automaticcombatcheck is 1;
 			if combat abort is 1:
 				now combat abort is 0;
@@ -3340,6 +3340,7 @@ carry out exploring:
 
 restoration is a number that varies.
 balloversize is a number that varies.
+skipturnblocker is a number that varies.
 
 Everyturn rules is a rulebook.
 
@@ -3412,7 +3413,7 @@ This is the turnpass rule:
 		increase dexterity of player by balloversize;
 		now balloversize is 0;
 		say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
-	if libido of player >= 100 and humanity of player > 0:
+	if libido of player >= 100 and humanity of player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
 		decrease humanity of player by a random number between 1 and 2;
 		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
@@ -3557,7 +3558,7 @@ This is the turnpass rule:
 				increase breast size of player by 1;
 				follow breast descr rule;
 				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
-		if gestation of child is less than 1 and cunts of player is greater than 0:
+		if gestation of child is less than 1 and cunts of player is greater than 0 and skipturnblocker is 0:
 			say "With a sudden pouring of fluids, birth is upon you. You settle  without much choice, breathing quickly as your body spasms in readiness. ";
 			let z be 1;
 			let fer be 0;
@@ -3600,13 +3601,13 @@ This is the turnpass rule:
 			extend game by 4;
 		otherwise:
 			if gestation of child is less than 0, now gestation of child is 1;
-	if the humanity of the player is less than 1 and Scenario is not "Researcher":
+	if the humanity of the player is less than 1 and Scenario is not "Researcher" and skipturnblocker is 0:
 		end the game saying "Your mind is lost to the infection.";
 	if the humanity of the player < 1 and scenario is "Researcher", now humanity of player is 1;
 	decrease turns by 1;
-	if ( turns minus targetturns ) is 0 and playon is 0:
+	if ( turns minus targetturns ) <= 0 and playon is 0 and skipturnblocker is 0:
 		end the game saying "You survived until the rescue came.";
-	otherwise if ( turns minus targetturns ) is less than 20 and a random chance of 1 in 3 succeeds:
+	otherwise if ( turns minus targetturns ) is less than 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0:
 		say "[one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
 	follow the everyturn rules;
 	rule succeeds;
@@ -3619,7 +3620,7 @@ to say spontaneousorgasm:
 	otherwise if cunts of player > 0:
 		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cunts of player is 1]cunt[otherwise]cunts[end if] overflows with hot, feminine juices that soak your thighs.  You leave a [if ( 2 * cunt width of player ) < 18]messy splotch[otherwise if ( 2 * cunt width of player ) < 25]messy puddle[otherwise]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	otherwise:		[neuter]
-		say "     Your body, consummed with a lust it is unable to satisfy, drops to its knees and trembles with an painful, aching need.  Lacking any other means, you rub over your body until it finally passes, leaving you weak, tired and largely unsatisfied.";
+		say "     Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with an painful, aching need.  Lacking any other means, you rub over your body until it finally passes, leaving you weak, tired and largely unsatisfied.";
 		now hp of player is ( 3 * hp of player ) / 4;
 
 This is the monster injury rule:
@@ -5271,7 +5272,7 @@ When play begins:
 		process dirty water;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	if scenario is "Researcher":
-		say "The helicopter brought you into the devestated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
+		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]

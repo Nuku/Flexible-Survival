@@ -87,10 +87,7 @@ When Play begins:
 	now victory entry is  "[Shemale Smooth Collie attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "This canine beast looks quite a bit like Lassie, if Lassie were twelve feet tall, and walked upright and had the general shape of an attractive woman, and had eight rather large breasts and a dick that would probably cause a stallion some envy...oh, and much shorter fur. You know, I guess she doesn't look much like Lassie after all.";[ Description of the creature when you encounter it.]
 	now face entry is "drawn forward into a long muzzle that leads back into a flat canine skull. Your ears now stick straight up from your head most of the time, only shifting when you hear a particularly loud noise. New muscles easily change which way they";[ Face description, format as the text "Your face is (your text)"] 
-	if "Male Preferred" is listed in feats of player:
-		now body entry is "reminiscient of a female bodybuilder, with defined muscles and only slightly wider hips with a thin waist and digitigrade legs ending in paws";[ Body Description, format as the text "Your Body is (your text)"]
-	otherwise:
-		now body entry is "that of a voluptuous woman with digitigrade legs ending in paws"; 
+	now body entry is "[rsscbodyentry]";
 	now skin entry is "[if looknow is 1] short, soft, dense fur in the sable pattern of a collie, completely covering your [otherwise]short furred, sable patterned[end if]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "Your tail, it's still strange to think about it that way even if it is true, is covered in short, soft, golden fur from your ass right up to the last inch or so, where it abruptly turns white.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[if looknow is 1]bright red canine/human hybrid in shape, complete with a knot and sheath, [otherwise]canine hybrid[end if]";[ Cock Description, format as you have a 'size' (your text) cock] 
@@ -129,6 +126,11 @@ When Play begins:
 [ Edit this to have the correct Name as wall]
 Random Shemale Smooth Collie For FS ends here.
 
+to say rsscbodyentry:
+	if "Male Preferred" is listed in feats of player:
+		say "reminiscent of a female bodybuilder, with defined muscles and only slightly wider hips with a thin waist and digitigrade legs ending in paws";
+	otherwise:
+		say "that of a voluptuous woman with digitigrade legs ending in paws";
 
 [Dog Milk is a drinkable item that reduces thirst but causes breast size to increase as well as up to 6 breasts (total, not additional) to grow on the player with no other transformative effects. Growth is limited to one inch at a time. I have no idea how to code this in though.
 This could be a good item to use to further progress the 'sister' plotline with Sandra. Say that she thinks one more thing needs to be done, but she needs some milk, and since it's already been established by her prior dialogue that she dislikes the feral gryphons, she refuses gryphon milk. She'll take the Dog Milk though, drink it herself and then give you a drink the same way she does when you visit her and are thirsty enough, except with the fresh nanites involved she gives you 6 instantly, and can do this to forms that don't normally allow it like the gryphon body.]

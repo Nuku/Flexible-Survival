@@ -19,7 +19,7 @@ givingupton is a number that varies.
 
 carry out givingup:
 	if givingupton is 0:
-		say "Your mind begins to release its grasp on humanity, but your insticts refuse to give up immediately.";
+		say "Your mind begins to release its grasp on humanity, but your instincts refuse to give up immediately.";
 		now givingupton is 1;
 	otherwise:
 		say "Do you want to take control of your desires again, or not?";

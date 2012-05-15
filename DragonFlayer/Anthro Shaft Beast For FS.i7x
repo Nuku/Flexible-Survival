@@ -99,7 +99,7 @@ an everyturn rule:
 	
 to say broodmother call:
 	if humanity of player is greater than 90:
-		say "You hear a beautful song in the distance.";
+		say "You hear a beautiful song in the distance.";
 		increase libido of player by 4;
 		decrease humanity of player by 1;
 		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
