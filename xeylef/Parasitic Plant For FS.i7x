@@ -188,7 +188,7 @@ to say parasiticlust:
 	if plantdefeat is 1:
 		increase libido of player by addedlibido;
 		if (libido of player is greater than 90) and (location of player is fasttravel) and (timetillrampage is greater than 3):
-			say "As you pant and feverously massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rushes to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.";
+			say "As you pant and feverishly massage your clit, trying to suppress the need for sex caused by the seed, you suddenly smell male pheromones and your mind snaps. You rushes to its source and fuck it frantically, not caring about what or who the cock belongs to. As your needy nethers obtain at last the cum they so craved, you smell another cock, and proceed to fuck it as well, lost in mad lust. You enter a sex rampage.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if skinname of player is "Parasitic Plant", now keepskin is 1;
 			if facename of player is "Parasitic Plant", now keepface is 1;

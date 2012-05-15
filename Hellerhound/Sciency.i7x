@@ -2,7 +2,7 @@ Sciency by Hellerhound begins here.
 
 
 Researchers is a research.
-the description of it is "It is not enough to prepare for today. We must teach our people to prepare for tommorow. This research will let us train them to be scientists.".
+the description of it is "It is not enough to prepare for today. We must teach our people to prepare for tomorrow. This research will let us train them to be scientists.".
 the cost of it is 50.
 
 

@@ -119,7 +119,7 @@ to say givekeys:
 	Now Policeman is resolved;
 	increase score by 40;
 	increase xp of player by 10;
-	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passanger's seat.  'Here, take this.  You're gonna need it,' he says meaningfully as he passes you a nightstick.  'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto.  I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out.  And if somethin['] holds you up, there'll be a key in the lip of the bumper.  I should be able to leave somethin['] for ya in the trunk and I[']ll get in touch after the heat dies down.'";
+	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat.  'Here, take this.  You're gonna need it,' he says meaningfully as he passes you a nightstick.  'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto.  I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out.  And if somethin['] holds you up, there'll be a key in the lip of the bumper.  I should be able to leave somethin['] for ya in the trunk and I[']ll get in touch after the heat dies down.'";
 	say "     Nightstick obtained.";
 	add "nightstick" to invent of player;
 

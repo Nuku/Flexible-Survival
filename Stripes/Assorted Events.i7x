@@ -69,7 +69,7 @@ to say lostninjahorde:
 	infect "Ninja Cat";
 
 
-Section 2 - Outisde Events
+Section 2 - Outside Events
 
 Losing It is a situation.  The level of Losing It is 7.
 snowmeowfight is a number that varies.
