@@ -1,11 +1,12 @@
 Alpha Fang Scenes by Nuku Valente begins here.
 "Adds another scene to Fang"
 
-Every turn when in Grey Abbey Library:
-	if fang is not visible, continue the action;
+Every turn when in Grey Abbey Library and fang is visible:
 	if hp of fang is 3:
 		let x be 0;
 	otherwise:
+		continue the action;
+	if ( lastFangfucked - turns is less than ( 9 - hp of Fang ) ):
 		continue the action;
 	let qualify be 0;
 	let playerlust be 0;
@@ -30,12 +31,29 @@ Every turn when in Grey Abbey Library:
 		say "[fangmutuallust]";
 		continue the action;
 	say "[fangplayerlust]";
+	follow the turnpass rule;
 	
 to say fangplayerlust:
-	say "Scene to be written.";
+	say "Aching with need, you look around for Fang. He[']s laying by the door, watching the room with his usual alertness. As you walk towards him, he sits up on his haunches. When you reach for him, he lightly nips at your hand and chuffs disapproval. He remains seated, watching you penetratingly as you consider how to approach. A second reach to pat him gets another nip, then he suddenly rears up and knocks you over backwards flat. He clambers up on top of you, his shaggy coat rubbing against your belly as he takes superior position. He licks your throat twice as he parts your legs and gets into comfortable position. [run paragraph on]";
+	let anal be 1;
+	if cunt length of player is greater than 0 and cunts of player is greater than 0:
+		if a random chance of 2 in 3 succeeds, now anal is 0;
+	if anal is 0:
+		say "He rolls his hips forward, pressing the thin tip of his wolf cock to your [cunt size desc of player] nethers, then sinking in with a long smooth thrust. His paws pull you down against his thrust as he bites into your throat, holding you still. He begins to rock, driving his slick red member through the wet hot tunnel, pushing in with easy and vigorous rocking. Above, his tail lifts and wags lightly at the end of every movement, growling around your throat as he breeds you as his bitch.";
+		say "You raise your hands to his powerful sides, feeling the play of his muscles as he ruts into you with feral intensity. Your sounds of delight mix with his eager growls as his claws scrape against the library floor. His knot is forced into you and he hunches against you. Liquid heat spreads through your body as you[']re filled with his thick cream. The sensation is enough to send your cunt into spasms of release, clamping wetly around the twitching member. He sags against you, spent and content, and as the haze lifts, you realise the raging heat inside of you has ebbed a little, leaving you clear headed and thankful to your alpha.";
+		say "[impregchance]";
+	otherwise:
+		say "He hunkers down and nudges forward, pressing the point of his shaft to your pucker, easing his way into your back door carefully. You can feel that canine member spreading you and can[']t hold back a groan of pleasure at it as he gets more than half way in. He licks over your throat again, then presses forward, losing another inch to the heat of your body as he rocks his way forward bit by bit, burying his sword into your eager flesh. You lift your [body of player] legs as high as you can to raise your ass into better position, allowing Fang to move more easily as he builds up to a soft pounding.";
+		say "Fattened wolf knot rams against your entrance, demanding past as Fang gives a low growl. He locks his teeth at your throat, drawing you as he gives a powerful push, forcing it in and securing it. Though his movement is much more limited, he resumes thrusting, becoming short sharp motions back and forth between sheath and knot. Shortly, he hits top and explodes into your form with thick offerings to your bowels, filling you with the fertile essence as he howls out.";
+		say "You relax with Fang as his climax ebbs, your own maddening lust feeling less urgent for the play. When he draws from you, you get to your feet and collect your things, feeling much more ready to tackle the wastelands.";
+	infect "Feral Wolf";
+	now lastfangfucked is turns;
+	decrease lust of player by 20;
+	if lust of player is less than 0, now lust of player is 0;
+	
 
 to say fangrapeplayer:
-	say "'Late', says Fang as he approaches you. His scent is intoxicatingly strong and his [one of]puppy pecker[or]doggy dong[at random] is jutting from his sheath, heavy and ready. Any word of complaint you may have had is lost as the wolf gives you a penetrating look, brokering no argument. There was a punishment to be had and a service to be rendered, and that was all there was to it. He grabs at you with his teeth, tugging you along and bringing you to a desk, pushing you against it so you're bent over it.";
+	say "'Late', says Fang as he approaches you. His scent is intoxicatingly strong and his [one of]puppy pecker[or]doggy dong[at random] is jutting from his sheath, heavy and ready. Any word of complaint you may have had is lost as the wolf gives you a penetrating look, brokering no argument. There was a punishment to be had and a service to be rendered, and that was all there was to it. He grabs at you with his teeth, tugging you along and bringing you to a desk, pushing you against it so you[']re bent over it.";
 	if breast size of player is greater than 0 and breasts of player is greater than 0:
 		say "Your [skin of player] [breast size desc of player] breasts are squished against the smooth wood of the desk as he moves you into position, rubbing your nipples against the grain.";
 	say "He reaches around and removes any barrier to your bottom, tossing it aside for later with a soft, eager, growl. Though you weren['] very aroused when you walked in, his intense scent sends warm tingles through your form now, making you pant as you begin to warm up. [run paragraph on]";
