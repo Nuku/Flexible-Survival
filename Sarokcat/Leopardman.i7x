@@ -9,6 +9,8 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
+artleopardfight is a number that varies.
+
 to say Leopardman attack:
 	if artleopardfight is 3:
 		now artleopardfight is 2;
