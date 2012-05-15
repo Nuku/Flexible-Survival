@@ -2775,7 +2775,7 @@ to win:
 	if lev entry > 4, increase reward by ( lev entry / 4 );
 	if lev entry > 8, increase reward by ( lev entry / 3 );
 	increase freecred by reward;
-	say "A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
+	say "[line break]A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
 	if ok is 1, wait for any key;
 	clear the screen and hyperlink list;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
@@ -4376,7 +4376,7 @@ When play ends:
 Book  8 - People
 
 Rod Mallrat is a person. "A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the broken sewer drain[at random].".
-The description of rod mallrat is "Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium].  He's looking a little dishevelled of late. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.".
+The description of rod mallrat is "Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium].  He's looking a little dishevelled of late[end if]. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.".
 Rod is a trader.
 Rod Mallrat is in Mall FoodCourt.
 
@@ -4392,7 +4392,14 @@ instead of conversing Rod Mallrat:	[***]
 	otherwise if hp of Ronda is 4 or hp of Ronda is 5:
 		say "     [one of]'Don't give up.  Please keep looking for the stuff Nermine needs.'[or]'Thanks for helping me out.'[or]'Have you had any luck in finding the stuff to help Ronda?'[or]'Remember, she wanted something from a lizard girl at the park and the awesomest fruit you can find.'[at random]";
 	otherwise if hp of Ronda is 6:
-		say "     'Thanks for helping me out.  Now we just gotta wait for the rest to be ready.' (Content not yet coded)[line break]";
+		say "     'Thanks for helping me out.  Good luck finding that other stuff.'[line break]";
+	otherwise if hp of Ronda is 7:
+		say "     'Dude!  Bring that to Nermine.";
+	otherwise if hp of Ronda is 8:
+		if Slutrat den is unknown:
+			say "     'Now comes the tough part.  You'll need to find the nest of those infected rats.  They drag off anyone they beat, so the best way would be to let them catch you and see if you can learn the way there.  I'd totally do it myself, but no rat they take ever makes it back.'";
+		otherwise:
+			say "     'Well, since you know how to find them, now we need to figure out which one of them is Ronda.  That'll be trickier.  (content not written yet)[line break]";
 
 Ronda Mallrat is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
 The description of Ronda Mallrat is "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.".
