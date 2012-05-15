@@ -4,7 +4,7 @@ Version 3 of Ashen Breeder for FS by Stripes begins here.
  
 "Adds Ashen Breeder to Flexible Survival."
 
- Section 1 - Monster Reponses
+ Section 1 - Monster Responses
  
  [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
  to say ashen breeder attack:

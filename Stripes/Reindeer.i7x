@@ -61,7 +61,7 @@ to say reindeerattack:
 	if T is 4:
 		say "tries to push you to the ground with a loud tinkling of bells!";
 	if T is 5:
-		say "banks sharply, getting behind you.  He grinds firmly against your rear while his hooved paws grope your chest.  You can feel his precum leaking out as he tries to cum on you, but you shake him off.  The scent of his egg-nog flavoured precum hangs in the air, arousing you further!";
+		say "banks sharply, getting behind you.  He grinds firmly against your rear while his hoofed paws grope your chest.  You can feel his precum leaking out as he tries to cum on you, but you shake him off.  The scent of his egg-nog flavoured precum hangs in the air, arousing you further!";
 		increase libido of player by a random number from 2 to 5;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
@@ -91,7 +91,7 @@ When Play begins:
 	now victory entry is "[losetoreindeer]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[reindeerdesc]";						[ Description of the creature when you encounter it. ]
 	now face entry is "transformed into that of a reindeer, with a ruminant's muzzle, cute ears and arching antlers";		[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of an anthropomorphic reindeer with long, slender limbs.  You have hoof-like hands and full-hooved feet";	[ Body Description, format as the text "Your body is (your text)." ]
+	now body entry is "that of an anthropomorphic reindeer with long, slender limbs.  You have hoof-like hands and fully hoofed feet";	[ Body Description, format as the text "Your body is (your text)." ]
 	now skin entry is "warm, brown fur";	[ Skin desc., format as the text "Your body is covered in (your text)." ]
 	now tail entry is "Atop your ass, you have a cute, flagged caribou tail of white and brown fur.";	[ Tail desc., written as a full sentence or left blank for none. ] 
 	now cock entry is "[one of]caribou[or]deer-like[or]reindeer[at random]";						[ Cock desc., format as "You have a 'size' (your text) cock." ]

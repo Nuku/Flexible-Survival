@@ -73,7 +73,7 @@ Instead of resolving lost crab:
 			say "The crab scuttles away sadly.";
 		now lost crab is resolved;
 	otherwise:
-		say "The crab peers at you for several quiet moments before scuttling away, mildly dissapointed for some reason.";
+		say "The crab peers at you for several quiet moments before scuttling away, mildly disappointed for some reason.";
 
 
 Latex Vixen is a pet. The description of Latex Vixen is "Sleek latex lines run over hir bright green and black form. Shi has a narrow snout with oddly solid looking teeth, often bared in a grin or smile. She has ripe C cupped breasts, a long shiny tail and a cock that stands out against her black belly, as pink as the belly is deep black.". Latex Vixen is a part of the player;

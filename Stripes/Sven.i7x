@@ -213,14 +213,14 @@ An everyturn rule:
 			say "     The two pass off into slumber still cuddled atop one another, quite spent from their wild romp.  Sven and Candy's fluffy tails intertwine as the coon nuzzles at the snowmeow's shoulder.  The coon's semi-hard cock remains buried in the kitty's slick, cum-filled bottom.  As you watch them sleep, you are surprised to see a little colour start to creep into Sven's monochrome pelt as he takes on a [if lust of Sven is 1]baby blue tint[otherwise if lust of Sven is 2]golden hue[end if] to his spotted markings.";
 			now hp of Sven is 10;
 			increase score by 10;
-	if hp of Sven is 50 and lastSvendrink - turns is 12:
+	if hp of Sven is 50 and lastSvendrink - turns >= 12:
 		now hp of Sven is 51;
 		if player is in Porn Store:
 			say "     Waiting around at the porn store while you debate your next move, you notice Lisa come up to Sven.  She puts her arms around him and nibbles at his ear.  As she does, she whispers something to him and lets a paw wander down to his shorts.  You grin as she pulls him gently towards the back room.  Having seen this coming and knowing how bashful the kitty is, you pretend to be watching out the window while watching their faint reflections in it.  He wrings his tail nervously and fidgets for a bit as she keeps scritching him, but follows her along.  From inside, you can half-hear some moan, mewls and squeaks coming from the pair.";
 			say "     When Sven emerges some time later, he blushes considerably as he runs his paws over his new coat of snow leopard fur.  He's taken off his shirt now, probably too hot with his plush fur, and adjusts his shorts.  His hands are more paw-like and his face has a distinctly feline muzzle.  Noticing you looking, he grins shyly before turning away to act busy.  When Lisa comes out a few minutes later, she gives his rump a squeeze before taking her usual spot.";
 			increase score by 10;
 		now lastSvendrink is turns;
-	if hp of Sven is 51 and lastSvendrink - turns is 12:
+	if hp of Sven is 51 and lastSvendrink - turns >= 12:
 		now hp of Sven is 52;
 		now lust of Sven is 3;
 		if player is in Porn Store:
