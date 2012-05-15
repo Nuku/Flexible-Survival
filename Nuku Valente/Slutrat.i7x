@@ -185,7 +185,7 @@ To ratslutchug:
 		follow the cock descr rule;
 		decrease humanity of the player by 10;
 		say "     Those strange crawling sensations run from the tip of your [cock of player] [if cocks of player is greater than 1]cocks[otherwise]cock[end if] down to your swelling [ball size]. Your hips buck forward against your will, bits of prefluid splattering across the floor as arousal mounts in your sensitive flesh. You clench your hands, gasping for breath as the growth begins to ebb, with a light stream of pearly fluids running down the underside of your [cock of player] equipment to pool between your legs on the floor. One of the two rats leans forward and flicks her tongue, wet and so warm, across the mess at the end, cleaning you with soft slurps. The other rat presses against your side, 'That is looking much better.'";
-		say "     As the excitement fades from you, the rats abandon you to your arrousal, moving to retake their places and watch you, ever so curiously, as if to see what you might do next.";
+		say "     As the excitement fades from you, the rats abandon you to your arousal, moving to retake their places and watch you, ever so curiously, as if to see what you might do next.";
 	if humanity of the player is less than 1:
 		now lost is 1;
 	otherwise:
@@ -487,17 +487,16 @@ Section 8 - Ronda
 instead of going to Mall FoodCourt while ( hp of Ronda is 1 and lastfuck of rod - turns >= 16 ):
 	move player to Mall FoodCourt;
 	if furry is banned or girl is banned or hermaphrodite is banned or humorous is banned or guy is banned:
-		say "     Rod seems particularly down and you go over to talk to him.  He sighs sadly and tells you about how he went to the mysterious shop in the mall to look for a cure for Ronda.  'But the spooky dog-woman said nothing could be done for her.  She had some wierd, mumbo-jumbo explanation.  Something about needing the creatures that have been banned or something.  So, I guess nothing can be done for her.'  With that, he slumps off to be alone at one of the tables in the far corner of the food court.";
+		say "     Rod seems particularly down and you go over to talk to him.  He sighs sadly and tells you about how he went to the mysterious shop in the mall to look for a cure for Ronda.  'But the spooky dog-woman said nothing could be done for her.  She had some weird, mumbo-jumbo explanation.  Something about needing the creatures that have been banned or something.  So, I guess nothing can be done for her.'  With that, he slumps off to be alone at one of the tables in the far corner of the food court.";
 		now hp of ronda is 2;
 	otherwise:
 		now hp of ronda is 3;
-		say "     Rod comes up to you as you arrive.  He seems a little more animate than he's been of late, if still rather disheveled.  'Hey, can I ask a favour?  I was, like, you know, totally missing Ronda.  You know about Ronda, dontcha?  She was there when those infected rats popped up and swarmed the place.  You must've missed it, but it was a bad scene, dude.'  You keep quiet, thinking it best that Rod and the other rats not know about your part in that incident.  'But yeah, there I was, totally bummed, when I went [']Dude!['] and got this brainwave to talk to that wierd dog-girl at the shop.  She was all spooky and stuff, but she said there might be a way to help Ronda.  But that's when she told me that I'd need to get some stuff out in the city, and I'm not to keen on leaving the mall, you know.  So brainwave number two comes and I'm thinking my friend can help me with it.  So that's where you come in.'  Feeling a little guilty about what happened, you agree to visit the shop on the west side of the Atrium and see what needs to be done.";
+		say "     Rod comes up to you as you arrive.  He seems a little more animate than he's been of late, if still rather disheveled.  'Hey, can I ask a favour?  I was, like, you know, totally missing Ronda.  You know about Ronda, dontcha?  She was there when those infected rats popped up and swarmed the place.  You must've missed it, but it was a bad scene, dude.'  You keep quiet, thinking it best that Rod and the other rats not know about your part in that incident.  'But yeah, there I was, totally bummed, when I went [']Dude!['] and got this brainwave to talk to that weird dog-girl at the shop.  She was all spooky and stuff, but she said there might be a way to help Ronda.  But that's when she told me that I'd need to get some stuff out in the city, and I'm not to keen on leaving the mall, you know.  So brainwave number two comes and I'm thinking my friend can help me with it.  So that's where you come in.'  Feeling a little guilty about what happened, you agree to visit the shop on the west side of the Atrium and see what needs to be done.";
 
 instead of conversing the Nermine while ( hp of Ronda is 3 and nerminetalk > 0 ):
 	now hp of Ronda is 4;
 	say "     Nermine smiles as you bring up the topic of Ronda and the slut rats.  'Ahh... I was wondering who the rat boy would find to be helping him.  Ironic that he should be picking you, eh?' she says, leaning across her counter.  'Well, perhaps you will be learning not to play around with things you are not understanding.  Now, as I told the rat boy, I should be needing some things to be making a cure for his love.  He is bound too tightly to the mall and cannot be leaving, even for the girl he loves.  But you are not having this problem.";
-	say "     First, there are some lizards running around the park who are thinking they are artists.  Be finding one of them and be getting a sample of the juices from their womanly flower.  This should not be too hard a task.  More difficult is the fruit needed.  There are grand trees roaming the streets, moving around on their own power.  These are producing fruits capable of restoring a person.  Eating these fruits, they are changing to become human again, or at least appearing to be human.  I am needing the best and shiniest of these fruits to be fighting the corruption affecting the Ronda-rat.";
-
+	say "     First, there are some lizards running around the park who are thinking they are artists.  Be finding one of them and be getting a sample of the juices from their womanly flower.  This should not be too hard a task.  More difficult is the fruit needed.  There are grand trees roaming the streets, moving around on their own power.  These are producing fruits capable of restoring a person.  Eating these fruits, they are changing to become human again, or at least appearing to be human.  I am needing the best and shiniest of these fruits to be fighting the corruption affecting the Ronda-rat.  Most of the other herbs and holy items I am having already.";
 
 
 before conversing the Nermine while hp of Ronda is 5:
@@ -506,11 +505,18 @@ before conversing the Nermine while hp of Ronda is 5:
 
 to say rondaitems:
 	say "     Pulling out the items Nermine needed to help Ronda, you place them on the counter.  She smiles happily and takes them.  'And now it is time to be talking about Nermine's payment for this.  The last items Nermine is needing complete the cure are to be found in a private collection in the city.  Downtown, there is condo of a private art collector.  He is keeping veil and staff in his penthouse suite.  Nermine is wanting you to be collecting them for her.  Veil needed to complete cure, staff is payment.  One trip for both.  Easy for one working so hard to make amends.";
-	say "     Sadly, penthouse is not to be found yet.  Be trying again later.  (Content not yet coded)[line break]";
 	now hp of Ronda is 6;
+	now Art Collector is unresolved;
+	increase score by 10;
 	delete lizard juice;
 	delete Awesomest Fruit;
 
+before conversing the Nermine while hp of Ronda is 7:
+	say "[rondaitems2]" instead;
+
+to say rondaitems2:
+     say "     Nermine smiles as you hand over the items to her, examining them with a critical eye.  'You are being most helpful in this.  The staff of Tiresias will be looking good in my collection,' she says, placing the seemingly ordinary stick in the case.  'It is unfortunate I am to be burning the veil, but having one is better than none.'  With that, she takes takes it and the other items you gathered into the back to prepare them.  When she finally emerges some time later, she hands a vial of grey fluid to you.  'You are to be giving this to the Ronda-rat.  It will be purging the dark power within her.  Be careful, is only having one chance at this.  I can be making no more with what is available here.";
+	now hp of Ronda is 8;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -521,6 +527,57 @@ lizard juice is a grab object.  It is part of the player.  It is not temporary.
 instead of using lizard juice:
 	say "You need to save that to help Ronda.";
 
+
+Art Collector is a situation.  The level of Art Collector is 9.
+Art Collector is resolved.
+The sarea of Art Collector is "High";
+
+artleopardfight is a number that varies.
+artattempt is a number that varies.
+
+Instead of resolving a Art Collector:
+	if artattempt is 0:
+		say "     Managing to follow Nermine's directions through the available paths through the chaotic city, you manage to circumvent other creatures and obstacles to make it to the address she's provided you.  Looking up at the high rise building, your legs ache at the thought of scaling its stairs to reach the penthouse, but there is no other option.  You move quietly inside and carefully make your way to the stairwell to begin your ascent.  It is long and tiring, but you press on, not wanting to risk being found in such a confined space with the countless creatures which probably enhabit this building.  You can see several wet splotches on the stairs, many quite fresh.";
+		say "     After an ascent which leaves you hungry, thirsty and aching, you make it to the access to the penthouse suite.  Opening the door, you step into the antechamber connecting to the inoperative elevator and the large doors to the suite.  Finding them unlocked, you slip quietly into the spacious foyer and living room, looking at the various pieces on display.  One of them, a veil and simple staff are held in a glass case.  The veil is a simple band of old, greyed cloth and the staff is little more than a wooden walking stick made from a straight branch, neither having anything remarkable about them.  As you look over the case, you try to decide how best to get at the contents, but are interrupted by an angry growl behind you.  Turning, you find a large leopardman stalking out of the nearby bedroom and spot several sexy leopardesses on the bed waiting for his return after dealing with the would-be thief.  This creature was once likely the art collector and has since gathered a harem of horny females to add to his collection.";
+	otherwise:
+		say "     Managing to make your way back to the high rise with the art collector's suite atop it, you pause, reluctant to head up and possibly face the powerful leopardman again.  Gathering your resolve, you make your way inside and begin your arduous ascent anew.   It is long and tiring, but you press on, not wanting to risk being found in such a confined space with the countless creatures which probably enhabit this building.  You can see several wet splotches on the stairs, many quite fresh.";
+		say "     After an ascent which leaves you hungry, thirsty and aching, you find yourself in front of the penthouse suite again.  Opening the door, you step into the antechamber connecting to the inoperative elevator and the large doors to the suite.  Finding them still unlocked, you slip quietly into the spacious foyer and living room, looking at the various pieces on display before heading over to the one containing the veil and simple staff.  As you approach it, but are again interrupted by an angry growl from the large leopardman stalking out of the nearby bedroom.  The several sexy leopardesses are still spread out on and around the bed waiting for his return after dealing with the would-be thief.";
+	increase thirst of player by 12;
+	increase hunger of player by 6;
+	decrease hp of player by ( hp of player divided by 6 );
+	now artleopardfight is 3;
+	challenge "Leopardman";
+	if artleopardfight is 3:		[fled]
+		say "     You manage to feint past the enraged, aroused feline and charge out of the suite.  You rush for the stairs with him in hot pursuit, but the lustful moans of the heat-ridden females draw him back inside, letting you escape.  You run down as quick as you can for the first several flights, just in case, then slow to a more reasonable pace for your long defeated descent.  You'll have to recover and try coming back another time.";
+		now artattempt is 1;
+	otherwise if artleopardfight is 2:	[lost]
+		say "     The powerful leopard grabs you and runs his paws over you, as if trying to decide what to do with the thief he's caught.  But before he can come to a decision, the heat-ridden females on his bed start to yowl in lustful need, longing for the strong male to rejoin them.  The muscled feline grabs you roughly and drags you out onto his large patio.  While the impressive view of the skyline would normally draw your attention, it is the ground that soon fills your view as he hurls you over the side of the building.  You scream as you plummet quickly, spreading yourself out as best you can to slow your fall, but with little effect as the pavement seems to rush up at you.  As you are about to strike the ground, everything mercifully goes black.";
+		now artattempt is 1;
+		wait for any key;
+		clear the screen;
+		say "Splud!";
+		wait for any key;
+		now heat enabled is false;	[temporarily turning off heat effects]
+		now skipturnblocker is 1;	[temporarily turns off several other end of turn effects]
+		if "Rapid Healing" is not listed in feats of player, follow the turnpass rule;
+		if "Regeneration" is not listed in feats of player, follow the turnpass rule;
+		follow the turnpass rule;
+		follow the turnpass rule;
+		follow the turnpass rule;
+		follow the turnpass rule;
+		now heat enabled is true;	[heat effects turned back on]
+		now skipturnblocker is 0;	[restores normal end of turn functions for the final turn skip after the scene]
+		now hp of player is 1;
+		increase hunger of player by 5;
+		increase thirst of player by 5;
+		decrease morale of player by 20;
+		decrease humanity of player by 8;
+		say "     When you finally awaken, sore and aching all over but somehow alive, you give thanks to the powerful healing abilities of the infection.  You slowly struggle to rise, the healing process having taken much out of you.  You have left a noticeable dent and several cracks in the pavement where you landed, as well as a sizable red stain.  Looking at it as you struggle to get up, you notice that something else is off - the lighting very different now.  Looking up, you see that it's [short time of day] now, many hours since your ill-fated fight with the leopardman.  After what feels like a Herculean effort, you make it to your feet and stagger off to find someplace to heal in peace.";
+	otherwise if artleopardfight is 1:	[victory]
+		say "     With the leopardman driven off, you can hear the lustful yowls of the felines get louder as they start to climb off the bed.  Unwilling to face down a pack of heat-ridden females, you quickly smash the case, grab the items and make a run for it.  You dash to the antechamber and into the stairwell, rushing down the first couple of flights.  When you don't hear any pursuit, you relax a little and cautiously slow down, hoping the decided to coax the defeated male from the other room to satisfy them.  You look over the strange, unassuming items and hope they are worth the effort as you stow them away carefully and make your way back outside.";
+		increase score by 20;
+		now hp of Ronda is 7;
+		now Art Collector is resolved;
 
 Section 9 - Endings
 
