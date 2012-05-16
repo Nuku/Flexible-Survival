@@ -2443,6 +2443,8 @@ To Infect:
 				now cockname of player is name entry;
 				now cock of player is cock entry;				[** end of addition for 'Mutable']
 	now x is a random number from 1 to 6;
+	if "Mighty Mutation" is not listed in feats of player:
+		now x is 0;
 	if x is 1:
 		if strength of player is not str entry:
 			if strength of player is greater than str entry and a random chance of 1 in 10 succeeds:
@@ -5322,6 +5324,5 @@ When play begins:
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	zephyrad rule in 1 turn from now;
 	
-
 
 

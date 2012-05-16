@@ -274,7 +274,7 @@ instead of addfeating the basic feats:
 			addfeat "Resistant" with "You are more resistant to random physical changes from infection.";
 		if "Resistant" is not listed in feats of player:
 			addfeat "Mutable" with "You are more prone to physical changes from mutation.";
-		addfeat "Mighty Mutation" with "More resistant to decreasing stats from random mutation.";
+		addfeat "Mighty Mutation" with "You can gain(and lose) stats from mutants.";
 		if "Mighty Mutation" is listed in feats of player:
 			addfeat "Bestial Power" with "Your body will no longer drop in stats from random mutation.";
 
