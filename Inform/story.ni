@@ -181,6 +181,7 @@ A armament is a kind of grab object.
 A armament has a text called weapon.
 A armament has a text called weapon type.
 A armament has a number called Weapon Damage.
+An armament can be ranged or melee. An armament is usually melee.
 Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
 Equipment has a text called descmod. The descmod of equipment is usually "";
@@ -2742,7 +2743,8 @@ This is the player attack rule:
 			say "Your [companion of player] misses!";
 	say "[line break]";
 	if monsterhp is greater than 0:
-		Retaliate;
+		if before combat is 0:
+			Retaliate;
 [		change the current menu to table of Basic Combat;]
 	otherwise:
 		win;
@@ -3115,6 +3117,8 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 		say "You nimbly avoid the attack at the last moment!";
 		now avoidance is 1;
 
+Before combat is a number that varies.
+
 To fight:
 	if battleground is "void", stop the action;
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
@@ -3178,6 +3182,15 @@ To fight:
 				say "The creature gets the drop on you!";
 				retaliate;
 				if hp of player is less than 1 or lost is 1, stop the action;
+		if weapon object of player is ranged:
+			now bonus is ( perception of player minus 10 ) divided by 2;
+			decrease bonus by ( dex entry minus 10 ) divided by 2;
+			increase bonus by a random number from 1 to 20;
+			if bonus is greater than 15:
+				say "You manage to fire your [weapon object of player] quickly before the melee can begin!";
+				now before combat is 1;
+				follow the player attack rule;
+				now before combat is 0;
 		wait for any key;
 [		change the current menu to table of Basic Combat;
 		carry out the displaying activity;
