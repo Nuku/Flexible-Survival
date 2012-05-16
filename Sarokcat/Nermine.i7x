@@ -1174,8 +1174,7 @@ Instead of resolving a Twisted fruit grove:
 			now felinoidrescued is 1;
 			stop the action;
 	otherwise:
-		say "Traveling through the twists and turns of the park, you notice that the scenery is starting to change and becoming more and more twisted and vine covered with every step. Eventually you reach a thin curtain of vines blocking entry to an overgrown glade, you can see a number of those strange twisted plants moving around through the vines, seeming to congregate around some kind of warped tree. You can smell a soft tempting odor coming from within the glade, and almost find yourself stepping through the vines to investigate closer. Backing off you shake your head to try to clear it, and quickly turn and run down the path back the way you came, somehow sure that the entire situation is some kind of trap";
-		stop the action;
+		say "Traveling through the twists and turns of the park, you notice that the scenery is starting to change and becoming more and more twisted and vine covered with every step. Eventually you reach a thin curtain of vines blocking entry to an overgrown glade, you can see a number of those strange twisted plants moving around through the vines, seeming to congregate around some kind of warped tree. You can smell a soft tempting odor coming from within the glade, and almost find yourself stepping through the vines to investigate closer. Backing off you shake your head to try to clear it, and quickly turn and run down the path back the way you came, somehow sure that the entire situation is some kind of trap.";
 
 When play ends:
 	if Vinetrapped is 1:
