@@ -1703,6 +1703,8 @@ To process (X - a grab object):
 			now weapon of player is weapon of x;
 			now weapon damage of player is weapon damage of x;
 			now weapon type of player is weapon type of x;
+			if weapon is ranged:
+				now weapon type of player is "Ranged";
 			say "You ready your [x].";
 	if x is equipment:
 		if x is equipped:
@@ -2652,6 +2654,8 @@ This is the player attack rule:
 			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
+		if weapon type of player is "Ranged":
+			increase dam by (( the Perception of the player minus 10 ) divided by 2);
 		if a random chance of the morale of the player in 200 succeeds:
 			say "Filled with sudden motivation, your attack scores particularly well!";
 			increase dam by dam;
