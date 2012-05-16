@@ -34,7 +34,7 @@ to clear the screen and hyperlink list:
 To keypause:
 	(- KeyPause(); -)
 
-The release number is 54.
+The release number is 55.
 The story creation year is 2010.
 The maximum score is 2500.
 
