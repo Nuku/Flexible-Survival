@@ -1703,7 +1703,7 @@ To process (X - a grab object):
 			now weapon of player is weapon of x;
 			now weapon damage of player is weapon damage of x;
 			now weapon type of player is weapon type of x;
-			if weapon is ranged:
+			if x is ranged:
 				now weapon type of player is "Ranged";
 			say "You ready your [x].";
 	if x is equipment:
