@@ -56,7 +56,7 @@ title	description
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]i hate to wait[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]i love to wait[roman type] to return to the default."
 "Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?[line break]Type [bold type]the clears are gone[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]the clears are back[roman type] to return to the default."
-"Auto Attack"	"If you have the Instinctive Combat feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat."
+"Auto Attack"	"If you have the Instinctive Combat feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
 
 
 Include (-
@@ -1778,7 +1778,6 @@ carry out conversing:
 
 Section Automatic Combat
 
-
 [creates flag for automatic combat, from "Instinctive Combat" feat]
 autoattacknormal is an action applying to nothing.
 understand "auto attack normal" as autoattacknormal.
@@ -1786,17 +1785,22 @@ understand "auto attack normal" as autoattacknormal.
 autoattackberserk is an action applying to nothing.
 understand "auto attack berserk" as autoattackberserk.
 
+autoattackpass is an action applying to nothing.
+understand "auto attack pass" as autoattackpass.
+
 autoattackcoward is an action applying to nothing.
 understand "auto attack coward" as autoattackcoward.
+
+autoattacksubmit is an action applying to nothing.
+understand "auto attack submit" as autoattacksubmit.
 
 autoattackmode is a number that varies.
 [0 is normal]
 [1 is attack]
 [2 could be item? but probably not...]
-[3 could be pass?]
+[3 is pass]
 [4 is flee]
-[5 could be submit?]
-
+[5 is submit]
 
 carry out autoattacknormal:
 	if "Instinctive Combat" is listed in feats of player:
@@ -1805,19 +1809,31 @@ carry out autoattacknormal:
 	otherwise:
 		say "You feel you are missing the instincts to do this.";
 
-
 carry out autoattackberserk:
-	  if "Instinctive Combat" is listed in feats of player:
+	if "Instinctive Combat" is listed in feats of player:
 		now autoattackmode is 1; [autoattack, no choice, always attack]
 		say "You let your aggressive instincts take the forefront, knowing you will attack at any chance.";
-	  otherwise:
+	otherwise:
 		say "You feel you are missing the instincts to do this.";
 
+carry out autoattackpass:
+	if "Instinctive Combat" is listed in feats of player:
+		now autoattackmode is 3; [autopass, no choice, always pass]
+		say "You feel calm.  Your sure everything will work out in the end.  Don't mind the monsters attacking you.";
+	otherwise:
+		say "You feel you are missing the instincts to do this.";
 
 carry out autoattackcoward:
 	if "Instinctive Combat" is listed in feats of player:
 		now autoattackmode is 4; [autoflee, no choice, always flee]
 		say "You focus on the need to escape the monsters, the need to run away.";
+	otherwise:
+		say "You feel you are missing the instincts to do this.";
+
+carry out autoattacksubmit:
+	if "Instinctive Combat" is listed in feats of player:
+		now autoattackmode is 5; [autosubmit, no choice, always submit]
+		say "Your increased libido clouds your thinking, wouldn't it be fun to let the monsters play with you.";
 	otherwise:
 		say "You feel you are missing the instincts to do this.";
 
@@ -2909,20 +2925,34 @@ To Combat Menu:
 				stop the action;
 			say "Your submissive nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
 			follow the submit rule;
-		otherwise if "Unrelenting Assault" is listed in feats of player: [always attacks in combat, no player input needed]
+		otherwise if autoattackmode is 1: [always attacks in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			if combat abort is 1:
 				now combat abort is 0;
 				rule succeeds;
 				stop the action;
 			follow the player attack rule;
-		otherwise if "Coward" is listed in feats of player: [always flees in combat, no player input needed]
+		otherwise if autoattackmode is 3: [always pass in combat, no player input needed]
+			now automaticcombatcheck is 1;
+			if combat abort is 1:
+				now combat abort is 0;
+				rule succeeds;
+				stop the action;
+			follow the combat pass rule;
+		otherwise if autoattackmode is 4: [always flees in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			if combat abort is 1:
 				now combat abort is 0;
 				rule succeeds;
 				stop the action;
 			follow the flee rule;
+		otherwise if autoattackmode is 5: [always submit in combat, no player input needed]
+			now automaticcombatcheck is 1;
+			if combat abort is 1:
+				now combat abort is 0;
+				rule succeeds;
+				stop the action;
+			follow the submit rule;
 		otherwise:
 			if combat abort is 1:
 				now combat abort is 0;
