@@ -3060,6 +3060,7 @@ To Retaliate:
 			decrease combat bonus by 3;
 		if hardmode is true and the combat bonus is less than -10:
 			now the combat bonus is -10;
+		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
 		let the roll be a random number from 1 to 20;
 		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 		if the roll plus the combat bonus is greater than 8:
