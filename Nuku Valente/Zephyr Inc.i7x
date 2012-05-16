@@ -152,7 +152,7 @@ Table of Zephyr Goods
 name	price	object	allowed
 "nanite collector"	400	nanite collector	noresearch rule
 "medkit"	300	medkit	true rule
-"pistol"	600	medkit	true rule
+"pistol"	600	pistol	true rule
 "pepperspray"	350	pepperspray	pepper rule
 "water bottle"		120	water bottle	true rule
 
