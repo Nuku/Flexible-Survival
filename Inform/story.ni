@@ -4192,9 +4192,22 @@ This is the finish stats rule:
 	rule succeeds;
 	
 scavenging is an action applying to nothing.
+tscavenging is an action applying to one topic.
+Scavengetarget is an indexed text that varies.
 
 understand "Scavenge" as scavenging.
 understand "Scav" as scavenging.
+understand "Scavenge [text]" as tscavenging.
+understand "Scav [text]" as tscavenging.
+
+check tscavenging:
+	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
+	
+Carry out tscavenging:
+	now scavengetarget is the topic understood;
+	try scavenging;
+	now scavengetarget is "";
+
 
 check scavenging:
 	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
