@@ -1,5 +1,5 @@
-Version 4 of Fang by Stripes begins here.
-[Version 4.1 - Alpha Fang + Sandra scenes]
+Version 5 of Fang by Stripes begins here.
+[Version 5 - Alpha Fang w/o Sandra]
 
 "Adds Fang the Feral Wolf to the Flexible Survival game"
 
@@ -14,19 +14,19 @@ lust of Fang is normally 0.		[number of threesomes w/Sandra in this play through
 [See Feral Wolf file for collecting Fang.]
 
 instead of sniffing the Fang:
-	if hp of Fang is 3:
+	if hp of Fang is 3 or hp of Fang is 4:
 		say "The scent of your alpha wolf is strong and exciting.";
 	otherwise:
 		say "The scarred wolf has an arousing male scent.";
 
 to say fangdesc:
-	if hp of Fang is 3:
+	if hp of Fang is 3 or hp of Fang is 4:
 		say "     The feral wolf creature is now prowling around freely in the Library, unchained and without a collar.  Your beastly wolf has a mix of black and dark grey fur that blends into the shadows as he stands on watch.  You feel a rush of excitement as you look at him, your alpha wolf, feral instincts making you want to submit to him again.";
 	otherwise:
 		say "     The feral wolf creature seems to be doing better in his new home.  Looking more confident and strong as he sits obediently on watch.  His fur is a mix of black and dark grey fur that blends into the shadows as he watches the door with his bright, yellow eyes.  You are pleased with how he's turning out so far.  He's not made a mess around the Library and remains on his long, rope leash.  The fact that he cleverly unties and reties its anchoring point to get around when you're not looking doesn't bother you very much, as the fact he still wears it shows he recognizes your authority as his [if cocks of player > 0]master[otherwise]mistress[end if].";
 
 Instead of conversing the Fang:
-	if hp of Fang is 3:
+	if hp of Fang is 3 or hp of Fang is 4:
 		say "     The wolf creature listens attentively as you tell him what happening out in the city while you stroke and scritch your lupine master.";
 	otherwise:
 		say "     The wolf creature listens attentively as you speak to him.";
@@ -47,6 +47,10 @@ instead of fucking the Fang:
 		say "[fangalphasex]";
 		infect "Feral Wolf";
 		now lastFangfucked is turns;
+	otherwise if hp of Fang is 4:
+		say "[fangalphasex2]";
+		infect "Feral Wolf";
+		now lastFangfucked is turns;
 	otherwise if cocks of player > 0 or cunts of player > 0:
 		say "     What kind of fun were you looking to have with your big, bad wolf?";
 		wait for any key;
@@ -54,7 +58,7 @@ instead of fucking the Fang:
 		now lastFangfucked is turns;
 	otherwise:
 		say "     Lacking any sexual organs of your own, you content yourself with snuggling the wolf and scritching his ears.  He nuzzles you in return and licks your face.";
-		if hp of Fang is 3:
+		if hp of Fang is 3 or hp of Fang is 4:
 			infect "Feral Wolf";
 			now lastFangfucked is turns;
 
@@ -141,7 +145,7 @@ to say fangsex4:		[assfuck Fang]
 
 Section 3 - Fang and Sandra
 
-instead of going outside from Bunker while ( lastrabbitfuck - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 and libido of Fang < 2 ):
+instead of going outside from Bunker while ( lastrabbitfuck - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastFangfucked - turns > 7 and libido of Fang < 2 and ( hp of Fang is 1 or hp of Fang is 2 ) ):
 	now lastrabbitfuck is turns;
 	now lastfangfucked is turns;
 	move player to Grey Abbey Library;
@@ -272,6 +276,14 @@ to say fangsandracloser1:
 	wait for any key;
 
 
+[ hp of Fang			]
+[ 0 - not found			]
+[ 1 - at Library			]
+[ 2 - locked as Beta		]
+[ 3 - Alpha w/Sandra		]
+[ 4 - Alpha w/o Sandra		]
+[ 100 - Fang refused		]
+
 [ Libido of Fang (Sandra)	]
 [ 0 - normal			]
 [ 1 - watched once		]
@@ -285,6 +297,8 @@ to say fangsandracloser1:
 
 
 Section 5 - Fang Dominance
+
+Chapter 1 - w/Sandra
 
 to say fangsub:
 	say "     With a moan, you lower yourself onto all fours, offering yourself to the wolf.  He growls and climbs atop you, rubbing his stiff member against your rear, leaking precum onto you.  Sandra grins happily and rubs her paw over the wolf's shaft, helping to guide it to your ";
@@ -317,7 +331,7 @@ to say fangdomfuck:
 to say fangdomride:
 	say "     Deciding the wolf needs to be shown who's in charge, you push him roughly over onto his back.  His feral legs squirm in the air as you hold him there and climb atop him, keeping a grip on his balls to rein him in while the other grips his throat.  You grind your pussy down over his cock, teasing his throbbing shaft and leaking your juices over it, but you keep him from thrusting into you.  Sandra, watching the surprise dominance fight, moans in pleasure as she watches rubbing against the big wolf's cock, fingering her pussy wildly.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "     'You be a good beta now and submit to your alpha,' you growl in his ear as you slide your aroused pussy across this throbbing penis.  'You get fucked when I say you do.  You top when I say you do.  And if you forget that again, I'll go out there and find a strap-on for Sandra and we'll take turns pounding you until you're nothing but a slutty omega bitch,' you snarl, giving Sandra a wink and a grin that Fang can't see.  Sandra smiles and replies, 'That sounds really hot, too.'  The bunny girl, finding that mental image enjoyable, fingers herself all the faster.  Fang, meanwhile, whimpers submissively and tilts his head back, baring is throat to you, accepting him place beneath you with a soft rumble of 'You are alpha.'  You shift your position and slide slowly down his cock, your cunt quivering in delight after having the thick wolf cock so tantalizingly close.";
+	say "     'You be a good beta now and submit to your alpha,' you growl in his ear as you slide your aroused pussy across this throbbing penis.  'You get fucked when I say you do.  You top when I say you do.  And if you forget that again, I'll go out there and find a strap-on for Sandra and we'll take turns pounding you until you're nothing but a slutty omega bitch,' you snarl, giving Sandra a wink and a grin that Fang can't see.  Sandra smiles and replies, 'That sounds really hot, too.'  The bunny girl, finding that mental image enjoyable, fingers herself all the faster.  Fang, meanwhile, whimpers submissively and tilts his head back, baring his throat to you, accepting him place beneath you with a soft rumble of 'You are alpha.'  You shift your position and slide slowly down his cock, your cunt quivering in delight after having the thick wolf cock so tantalizingly close.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     You ride him hard and fast, needing this almost as much as he does after all that teasing.  His hard shaft throbs inside you, leaking precum into your hot pussy.  You knead the wolf's ballsac and push yourself down hard onto his knot, pushing it into you.  'These are mine,' you growl as you fondle his balls.  'And I'm going to take what I want from them when I want,' you rumble, clamping your pussy down firmly around his knot, enjoying his lustful howl as he blasts his thick semen into you, filling your womb with his load.  Sandra, fingering herself frantically during all this, cumming repeatedly.  Panting for breath, you nibble along the wolf's throat while waiting for his knot to go down.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -325,16 +339,9 @@ to say fangdomride:
 
 to say fangalphasex:
 	if the remainder after dividing lust of Fang by 3 is 0:
-		say "     You snuggle up to your big alpha wolf and nuzzle him while moving a hand to stroke his warm sheath.  He rumbles softly and rolls onto his side, pressing your face to his maleness as his red cock starts to slide from his furred sheath.  You moan softly as his strong scent floods your nose and you start licking at his shaft, letting it slide directly from its furry home into your mouth.  Your tongue plays over it as the big wolf presses his paws at your back urging you to suck your alpha harder and you eagerly do so.  You tease yourself with one hand and move the other to his hefty balls, stroking and kneading them, eager for their virile seed.  He rocks his hips, thrusting into your mouth and down your throat until he finally cums with a howl, almost choking you with a flood of thick, rich wolf cum.  The taste of your alpha's semen fills your senses and you moan wetly around the spurting shaft, cumming hard as you [if cocks of player > 0]stroke yourself off[otherwise]finger your pussy wildly[end if].  His orgasm done and his balls drained into his slutty beta, he gets up and pads off, leaving you on the floor with a tummy full of wolf cum and reeking of his scent.";
-		increase libido of player by 15;
-		decrease humanity of player by 3;
+		say "[fangalphaoral]";
 	otherwise if the remainder after dividing lust of Fang by 3 is 1:
-		say "     You snuggle up to your big alpha wolf and nuzzle him while moving a hand to stroke his warm sheath.  He rumbles softly and nudges you to move onto all fours.  You moan softly in anticipation and strip off your clothes and pack.  Once in position, the wolf comes up behind you and sniffs at you [if cunts of player > 0]pussy and [end if]rear, as if checking what his slutty pet's been up to out in the city.  He [one of]growls and nips at your thigh[or]slides his tongue across your [if cunts of player > 0]wet folds and [end if]between your cheeks[or][if cunts of player > 0]dives his cock into your pussy to lap at your juices[otherwise]slathers his tongue over your waiting pucker[end if][at random] before climbing atop you.  His pointed tip bumps against you once before finding your eager hole and sinking into you, making you both growl lustfully.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "     He pounds into you hard and fast while your needy [if cunts of player > 0]cunt[otherwise]hole[end if] grips and squeezes around that feral wolf cock.  You moan about how strong your big alpha is, how virile, how you are his bitch to use.  Clearly pleased by your words, he licks at your cheek before taking the nape of your neck in his teeth and fucking you even harder, slamming his swollen knot against your sore [if cunts of player > 0]pussy[otherwise]anus[end if] until it stretches open enough to let that knot pop in and tie with you.  Fang howls triumphantly when this happens, unleashing a hot rush of semen into you, filling your [if cunts of player > 0]womb[otherwise]tummy[end if] with his ample load.  You writhe beneath him in ecstasy, cumming hard as well from taking your master's seed.  When his knot goes down, he pops his cock from you, letting his excess semen flow out to soak your crotch, leaving the scent of it upon you to be a reminder to you and others that you belong to him now.";
-		wait for any key;
-		now libido of player is ( ( libido of player * 4 ) / 5 );
-		decrease humanity of player by 3;
+		say "[fangalphafucked]";
 	otherwise if the remainder after dividing lust of Fang by 3 is 2:
 		say "[fangalphatrio]";
 	increase lust of fang by 1;
@@ -371,28 +378,145 @@ to say fangalphatrio:
 	now libido of player is libido of player / 4;
 	wait for any key;
 
+Chapter 2 - w/o Sandra	[Only available if 'girl' is banned, removing Sandra from the game]
 
-Section 6 - Endings
+instead of going outside from Bunker while ( lastFangfucked - turns >= 24 and hp of Fang is 1 and girl is banned):	[ignored for 3+ days]
+	now lastFangfucked is turns;
+	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something.  As you start to struggle, you are surprised to find that it's Fang atop you.  From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around.  It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not.  As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing.  It could be fun to just give in and let the big wolf have his way with you.  Shall you let him (Y) or reassert your dominance (N)?";
+	if the player consents:
+		say "[fangsub2]";
+		now hp of Fang is 4;			[Alpha Fang w/o Sandra]
+		now libido of player is libido of player / 2;
+		infect "Feral Wolf";
+	otherwise:
+		say "     Momentarily tempted by idea of submitting to the wolf, you manage to shake it off and grab the wolf roughly by the neck.  'No Fang, I'm the alpha and that's the way it stays,' you growl, forcing him to the floor.  He growls a little in frustration, but you hold him firm.  'Don't you get uppity because I made you wait.  I'm still the one on top here,' you add grabbing his balls firmly, making him whine and dip his ears.  'I have more important things to deal with than you.  Just because you're guarding the place doesn't mean you're in charge, beta.'";
+		if cocks of player > 0 and cunts of player > 0:
+			say "     It seems Fang will need a reminder of his place beneath you.  Being both male and female, there are options open to you.  Would you prefer to fuck the wolf (Y) or ride his lupine cock (N)?";
+			if the player consents:
+				say "[fangdomfuck2]";
+			otherwise:
+				say "[fangdomride2]";
+		otherwise if cocks of player > 0:
+			say "[fangdomfuck2]";
+		otherwise:
+			say "[fangdomride2]";
+		now hp of Fang is 2;			[Fang locked into beta-mode]
+		now libido of player is libido of player / 4;
+
+to say fangsub2:
+	say "     With a moan, you lower yourself onto all fours, offering yourself to the wolf.  He growls and climbs atop you, rubbing his stiff member against your rear, leaking precum onto you.  You, with the help of the aggressive wolf's teeth, quickly pull off your pack and clothes so his throbbing cock can bump against your ";
+	if cunts of player > 0:
+		say "wet cunt.  Fang's sharp fangs nip at your shoulders as he drives himself hard and fast into your pussy.  As he does, he growls one word softly in your ear.  'Mine!'";
+		say "     You moan lustfully as the wolf thrusts into you hard and fast, over and over again, taking you with wild abandon.  The large wolf growls possessively and nips at your neck.  You can feel his heavy balls slapping against your clit and your eager body longs more and more for the feral wolf's hot seed inside you.  You grow increasingly aroused by the idea of letting this wolf claim you, simply submitting yourself to being his.  You can feel his swelling knot pressing at your stretched folds as Fang tries to tie with you.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		say "     As Fang's knot pops fully into you, you groan loudly and cum hard, begging him to make you his bitch.  He growls another soft, but firm, 'Mine!' in your ear before taking the nape of your neck in his teeth and pounding his knotted cock in short, fast thrusts as he blasts his hot load deep inside you, flooding your womb with his strong, dominant seed.  You cum again from the pleasure of giving yourself over to him and receiving his cum.  It may just be your imagination, but it feels as if his load is bigger, the wolf stronger and more virile than you once believed.[impregchance]";
+		say "     The wild wolf fills you with so much cum that it starts to overflow, some managing to escape around his knot to flow down your thighs.  It feels so good, having given yourself up to the sexy beast.  Fang seems to grin and licks your cheek.  You know that your relationship with the wolf has changed, but you can't help but feel pleased about it, having enjoyed your place beneath him so much.  When the knot softens and pops free, the wolf has you roll onto your back.  He eagerly laps up the overflowing semen and brings his slick, dripping cock over your lips.  You eagerly take your new alpha's hard rod into your mouth, licking and sucking at it.  He only clears away the excess cum, letting the rest linger inside you as a reminder that you're his now.  But you lavish attention on his lupine penis, cleaning away the semen and juices covering it and sucking him until he blows another load down your throat.  Sated, for now, the wolf leaves you there on the floor, stuffed wonderfully full of his seed and covered in your new alpha's scent.";
+	otherwise:
+		say "tight asshole.  Fang's sharp fangs nip at your shoulders as he drives himself hard and fast into your rear.  As he does, he growls one word softly in your ear.  'Mine!'";
+		say "     You moan lustfully as the wolf thrusts into you hard and fast, over and over again, taking you with wild abandon.  The large wolf growls possessively and nips at your neck.  You can feel his heavy balls slapping against yours and your eager body longs more and more for the feral wolf's hot seed inside you.  You grow increasingly aroused by the idea of letting this wolf claim you, simply submitting yourself to being his.  You can feel his swelling knot pressing at your stretched pucker as Fang tries to tie with you.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		say "     As Fang's knot pops fully into you, you groan loudly and cum hard, begging him to make you his bitch.  He growls another soft, but firm, 'Mine!' in your ear before taking the nape of your neck in his teeth and pounding his knotted cock in short, fast thrusts as he blasts his hot load deep inside you, flooding your bowels with his strong, dominant seed.  You cum again from the pleasure of giving yourself over to him and receiving his cum.  It may just be your imagination, but it feels as if his load is bigger, the wolf stronger and more virile than you once believed.[impregchance]";
+		say "     The wild wolf fills you with so much cum that it starts to overflow, some managing to escape around his knot to flow over your balls and down your thighs.  It feels so good, having given yourself up to the sexy beast.  Fang seems to grin and licks your cheek.  You know that your relationship with the wolf has changed, but you can't help but feel pleased about it, having enjoyed your place beneath him so much.  When the knot softens and pops free, the wolf has you roll onto your back.  He brings his slick, dripping cock over your lips and eagerly take the hard rod into your mouth, licking and sucking at it.  You can feel the warmth of his hot seed lingering inside you, reminding you that you're his now.  You lavish attention on his lupine penis, cleaning away the semen and juices covering it and sucking him until he blows another load down your throat.  Sated, for now, the wolf leaves you there on the floor, stuffed wonderfully full of his seed and covered in your new alpha's scent.";
+
+to say fangdomfuck2:
+	say "     Deciding the wolf needs a good lesson to remind him that his place is beneath you, you keep him pinned down and climb atop him.  He whimpers softly, but raises his tail as you slide your hard cock under it.  He squirms a little, so you grip his neck harder and drive your shaft into his tailhole, spreading it open.  With him properly pinned and stuffed, you fuck the big wolf hard and fast.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	say "     'You be a good beta now and submit to your alpha,' you growl in his ear as you pound away at him.  'You get fucked when I say you do.  You top when I say you do.  And if you forget that again, I'll go out there and find the tightest cock ring I can and I won't even let you cum unless I- say- so-!' you snarl, punctuating those final words with hard thrusts of your cock into him.  'I'll make you my slutty, omega bitch and then leave you with blue balls for weeks on end.'  Fang whimpers submissively and starts pushing into your thrusts, accepting him place beneath you with a soft rumble of 'You are alpha.'  You relax your grip of him, but keep pounding him hard and fast, until finally you cum hard, blasting your load into his bowels and the wolf cums hard in response, staining the floor with another puddle of sticky cum.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	say "     Pleased with his submission to you again, you scritch his ears and ease your cock from his ass.  He pads around and nuzzles you, giving you affectionate licks on the cheek before dipping his head and licking your cock [if cunts of player > 0]and cunt[end if] clean while you rub his ears.  Deciding to have a little more fun, you grab the wolf's head and drive your shaft into his fanged muzzle, ordering him to suck you off.  The wolf dips his ears and whines softly, finding the task difficult with his lupine muzzle, but does his best for his alpha.  He is soon rewarded with a messy blast of your hot semen down his throat, which he laps up and swallows down obediently.  Satisfied, you scritch his ears and let him resume his post.";
+
+to say fangdomride2:
+	say "     Deciding the wolf needs to be shown who's in charge, you push him roughly over onto his back.  His feral legs squirm in the air as you hold him there and climb atop him, keeping a grip on his balls to rein him in while the other grips his throat.  You grind your pussy down over his cock, teasing his throbbing shaft and leaking your juices over it, but you keep him from thrusting into you.  With him properly pinned, you grind down onto him, further taunting the aroused wolf.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	say "     'You be a good beta now and submit to your alpha,' you growl in his ear as you slide your aroused pussy across this throbbing penis.  'You get fucked when I say you do.  You top when I say you do.  And if you forget that again, I'll go out there and find tightest cock ring I can and I won't even let you cum unless I- say- so-!' you snarl, slapping your dripping pussy against the wolf's swollen balls to emphasize those final words.  'I'll make you my slutty, omega bitch and then leave you with blue balls for weeks on end.'  Fang whimpers submissively and tilts his head back, baring his throat to you, accepting him place beneath you with a soft rumble of 'You are alpha.'  You shift your position and slide slowly down his cock, your cunt quivering in delight after having the thick wolf cock so tantalizingly close.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	say "     You ride him hard and fast, needing this almost as much as he does after all that teasing.  His hard shaft throbs inside you, leaking precum into your hot pussy.  You knead the wolf's ballsac and push yourself down hard onto his knot, pushing it into you.  'These are mine,' you growl as you fondle his balls.  'And I'm going to take what I want from them when I want,' you rumble, clamping your pussy down firmly around his knot, enjoying his lustful howl as he blasts his thick semen into you, filling your womb with his load.  Panting for breath, you nibble along the wolf's throat while waiting for his knot to go down.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	say "     Pleased with his submission to you again, you scritch his ears and ease yourself off his spent shaft.  He pads around and nuzzles you, giving you affectionate licks on the cheek before dipping his head and licking your leaking pussy clean while you rub his ears.  Deciding to have a little more fun, you grab the wolf's head and press his muzzle to your cunt, ordering him to lick it all up.  The wolf dips his ears obediently and sets his tongue to work, diving it into your hot, sticky muff.  His long, lupine tongue feels wonderful inside you and soon you're cumming again as he licks up as much of the load he filled you with as he can get.  Satisfied, you scritch his ears and let him resume his post.";
+
+to say fangalphasex2:
+	if lust of Fang is even:
+		say "[fangalphaoral]";
+	otherwise:
+		say "[fangalphafucked]";
+	increase lust of fang by 1;
+
+
+Chapter 3 - Alpha Sex
+
+to say fangalphaoral:
+	say "     You snuggle up to your big alpha wolf and nuzzle him while moving a hand to stroke his warm sheath.  He rumbles softly and rolls onto his side, pressing your face to his maleness as his red cock starts to slide from his furred sheath.  You moan softly as his strong scent floods your nose and you start licking at his shaft, letting it slide directly from its furry home into your mouth.  Your tongue plays over it as the big wolf presses his paws at your back urging you to suck your alpha harder and you eagerly do so.  You tease yourself with one hand and move the other to his hefty balls, stroking and kneading them, eager for their virile seed.  He rocks his hips, thrusting into your mouth and down your throat until he finally cums with a howl, almost choking you with a flood of thick, rich wolf cum.  The taste of your alpha's semen fills your senses and you moan wetly around the spurting shaft, cumming hard as you [if cocks of player > 0]stroke yourself off[otherwise]finger your pussy wildly[end if].  His orgasm done and his balls drained into his slutty beta, he gets up and pads off, leaving you on the floor with a tummy full of wolf cum and reeking of his scent.";
+	increase libido of player by 15;
+	decrease humanity of player by 3;
+
+to say fangalphafucked:
+	say "     You snuggle up to your big alpha wolf and nuzzle him while moving a hand to stroke his warm sheath.  He rumbles softly and nudges you to move onto all fours.  You moan softly in anticipation and strip off your clothes and pack.  Once in position, the wolf comes up behind you and sniffs at you [if cunts of player > 0]pussy and [end if]rear, as if checking what his slutty pet's been up to out in the city.  He [one of]growls and nips at your thigh[or]slides his tongue across your [if cunts of player > 0]wet folds and [end if]between your cheeks[or][if cunts of player > 0]dives his cock into your pussy to lap at your juices[otherwise]slathers his tongue over your waiting pucker[end if][at random] before climbing atop you.  His pointed tip bumps against you once before finding your eager hole and sinking into you, making you both growl lustfully.";
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	say "     He pounds into you hard and fast while your needy [if cunts of player > 0]cunt[otherwise]hole[end if] grips and squeezes around that feral wolf cock.  You moan about how strong your big alpha is, how virile, how you are his bitch to use.  Clearly pleased by your words, he licks at your cheek before taking the nape of your neck in his teeth and fucking you even harder, slamming his swollen knot against your sore [if cunts of player > 0]pussy[otherwise]anus[end if] until it stretches open enough to let that knot pop in and tie with you.  Fang howls triumphantly when this happens, unleashing a hot rush of semen into you, filling your [if cunts of player > 0]womb[otherwise]tummy[end if] with his ample load.  You writhe beneath him in ecstasy, cumming hard as well from taking your master's seed.  When his knot goes down, he pops his cock from you, letting his excess semen flow out to soak your crotch, leaving the scent of it upon you to be a reminder to you and others that you belong to him now.";
+	wait for any key;
+	now libido of player is ( ( libido of player * 4 ) / 5 );
+	decrease humanity of player by 3;
+
+
+Section 6 - The Rivalry
+
+ffrivalry is a number that varies.
+
+an everyturn rule:
+	if the player is in the Grey Abbey Library and ( hp of Fang is 3 or hp of Fang is 4 ) and felinoid companion is the companion of player:
+		increase ffrivalry by 1;
+		if a random number between 5 and 20 >= ffrivalry:
+			say "[one of]Fang locks his steely gaze on your felinoid companion and growls softly.[or]Your felinoid companion rubs up against you, pushing you away from Fang in a possessive manner.[or]The felinoid at your side growls at Fang.[or]Your felinoid companion and your alpha wolf growl and snap at one another from a few feet away for a minute.[or]Your alpha wolf and the felinoid exchange angry glares at one another and possessives stares at you.[or]Fang growls at the felinoid as he moves between you and him.  They glare at each other like that for a few moments before breaking off, both clearly angry at the other's presence near you.[or]The feral wolf and large felinoid growl and hiss and one another as they circle around you like you're some kind of prize.[at random]";
+			now ffrivalry is 0;
+
+
+Section 7 - Endings
 
 when play ends:
-	if Fang is in the Grey Abbey Library and hp of Fang is not 3:			[ Fang the guard wolf ]
+	if Fang is in the Grey Abbey Library and hp of Fang is not 3 and hp of Fang is not 4:			[ Fang the guard wolf ]
 		if humanity of player < 10:
 			say "     Having had his alpha succumb to the infection, Fang leaves behind his rope leash and heads back into the city to find his fortune elsewhere.";
 		otherwise:
 			say "     When the military comes, you worry about how they'll react to Fang.  He's been quite loyal and not caused any trouble, but his beastial form distresses the soldiers.  As the squad leader moves up to tell you the wolf can't come, Fang pads quietly in front of you and sits down.  Clearing his throat, he starts talking with some difficulty.  In anticipation of this moment, it's clear to you he's spent some time among the library stacks reading in preparation.   With his clearly rational arguments (albeit cribbed from the philosophy section), he's able to plead his case well enough to join you.  While two soldiers remain with guns trained on him, the rest of the squad moves on to inspect and search the rest of the building.  You quietly pat the wolf's head before going along to show them the rest of the place.  Needing no more recognition, his tail wags once and he sits patiently waiting to join you in your new life as you home's loyal guardian and your secret lover.";
 			if Sandra is in the bunker:
 				say "     Sandra, thankful to the big wolf for helping to keep everyone safe in the bunker, is always very kind to the big wolf when she comes to visit.  Often, during visits or get-togethers at your place, you'll find that the bunny's quietly slipped away.  Always knowing where you'll find her, you'll check and see her safely beneath the big wolf, getting his large, red cock stuffed into her cunt.  The bunny's tummy grows large after one of these visits and she eventually gives birth to a pair of wolf cubs with bunny ears and a tail.  These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
-	if Fang is in the Grey Abbey Library and hp of Fang is 3:				[ alpha Fang ]
+	otherwise if hp of Fang is 3 or hp of Fang is 4:				[ alpha Fang ]
 		if bodyname of player is "Feral Wolf":
 			[ see Feral Wolf file for this ending ]
 			now tempnum is 0;
 		otherwise:
 			if humanity of player < 10:
-				say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker.  With his newfound confidence, he forms a small pack of his own[if coleenalpha is 0].  Taking Sandra with him, he leads her off to be his special bunny fucktoy, a role that she enjoys greatly.  She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
+				if hp of Fang is 3:
+					say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker.  With his newfound confidence, he forms a small pack of his own[if coleenalpha is 0].  Taking Sandra with him, he leads her off to be his special bunny fucktoy, a role that she enjoys greatly.  She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
+				otherwise if hp of Fang is 4:
+					say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker.  With his newfound confidence, he forms a small pack of his own.";
 			otherwise:
 				say "     When the military comes, you worry about how they'll react to Fang.  Secretly your lupine alpha, you keep that fact hidden when speaking to the military.  His beastial form distresses the soldiers, but you do your best to appease them.  As the squad leader tries to move you out of the way, telling you the wolf can't come, Fang pads confidently in front of you growls for him to let you go.  Clearing his throat, he starts talking with some difficulty.  In anticipation of this moment, it's clear your clever master has spent some time among the library stacks reading in preparation.   With his clearly rational arguments (albeit cribbed from the philosophy section), he's able to articulate clearly his points and that he WILL be going with you.  While two soldiers remain with guns trained on him, the rest of the squad moves on to inspect and search the rest of the building.  You hug your wonderful alpha's head before going along to show them the rest of the place.  He gives your cheek a lick and ignores the soldiers guarding him as inconsequential, having impressed their alpha, and strides back to his favourite resting spot to await departure.";
-				say "     After your release from the military, you settle into your new life with Fang coming along.  In public, he's passed off as your guard wolf, but privately he remains your alpha and fucks you like his sexy bitch whenever it pleases him to do so.  You accept your role readily, having become the wolf's fucktoy.";
+				if bodyname of player is "Felinoid" and felinoid companion is tamed:
+					[ see Felinoid Companion file for this ending ]
+					now tempnum is 0;
+				otherwise if Felinoid companion is tamed and cunts of player > 0:
+					say "     At the military's camp, Fang and the felinoid are given a quick examination, but somehow manage to avoid closer scrutiny.  You suspect the one female aid who left their examination room with a rather musky scent on her played a part in it somehow[if lust of Fang > level of Felinoid companion].  Fang seems particularly pleased with himself[otherwise if lust of Fang < level of Felinoid companion].  The felinoid seems particularly pleased with himself[otherwise].  They both seem particularly pleased with themselves[end if] as well, but that may just have been your imagination.  Regardless, given how bad things are getting the city, they don't get around to fully testing your seemingly obedient pair of companions, accepting your word that they're loyal guardians you found and nothing more.";
+					if lust of Fang > level of Felinoid companion:			[Fang victor]
+						say "     After your release from the military, you settle into your new life with the two of them coming along.  They snap and growl at one another, but things remain civil enough at first.  In public, Fang's passed off as your guard wolf, but privately he remains your alpha and fucks you like his sexy bitch whenever it pleases him to do so.  You accept your role readily, having become the wolf's fucktoy.  But one day, your felinoid companion takes exception to this and the two have a great fight that devastates your living room.  In the end, your alpha wolf is victorious and forces the big feline to submit to him as well.";
+						say "     The big wolf celebrates his victory by mounting you while the felinoid is left to watch, breeding you with a loud howl.  Once finished with you, he forces the male cat to lick his cock clean, which he does reluctantly at first.  Over time, Fang trains him well, keeping his lustful urges reined in around you though several other females are drawn in by the felinoid's musk.  The wolf generously allows the cat to breed some of them, turning them into a small harem of felinoid females to keep him satisfied and spread his cubs into the area.  The others he keeps for himself, giving the big wolf a sizable stable of bitches among the local women.  Even as these wolf and felinoid cubs spread out, they always respect Fang's ownership of you.";
+					otherwise if lust of Fang < level of Felinoid companion:	[felinoid victor]
+						say "     After your release from the military, you settle into your new life with the two of them coming along.  They snap and growl at one another, but things remain civil enough at first.  In public, Fang's passed off as your guard wolf, but privately he remains your alpha and fucks you like his sexy bitch whenever it pleases him to do so.  You accept your role readily, having become the wolf's fucktoy.  But one day, your felinoid companion takes exception to this and the two have a great fight that devastates your living room.  In the end, your felinoid companion is victorious and forces the big wolf to submit to him as well.";
+						say "     The felinoid celebrates his victory by mounting you while the wolf is left to watch, breeding you with a powerful roar.  Once finished with you, he forces himself onto the defeated wolf, fucking him as well";
+						if hermaphrodite is not banned:
+							say ".  As you watch, Fang gains a wet, bitch pussy to go along with his cock and balls and is then bred by the victorious felinoid.  The felinoid trains the wolf well, breeding cubs in both your bellies.  Fang may still be your alpha wolf, but the felinoid owns you both now.";
+						otherwise:
+							say ".  As you watch, Fang is fucked repeatedly until he's made submissive to the stronger cat.  The felinoid trains the wolf well, always making sure the wolf knows his place beneath him.  Fang may still be your alpha wolf, but the felinoid owns you both now.";
+						say "     The strong musk of the powerful cat lingers on you, making you very alluring to others, man and woman alike, allowing you to bring them back to your place.  There, the big feline has his way with them, turning them into lustful female felinoids for him to breed.  You are forced to move a couple of times before you finally settle down someplace to stay for good, you and your companion settling in happily, while a strange explosion of pregnant female felinoids hits the area.";
+					otherwise:		[evenly matched]
+						say "     After your release from the military, you settle into your new life with the two of them coming along.  They snap and growl at one another, but things remain civil enough at first.  In public, Fang's passed off as your guard wolf, but privately he remains your alpha and fucks you like his sexy bitch whenever it pleases him to do so.  You accept your role readily, having become the wolf's fucktoy.  But one day, your felinoid companion takes exception to this and the two have a great fight that devastates your living room.  In the end, your two are evenly matched and must eventually relent in their conflict and share you.";
+						say "     And share you they do.  You are fucked back and forth for the rest of the day by the two of them, as if the new competition is one to see who can outlast the other and fuck you more times.  Again, it seems like they're evenly matched and the two gain a grudging respect for each other even as your belly is bloated fuller and fuller of their animal seed and you eventually pass out before a winner is decided.";
+						say "     From that point on, the two get along much better, sharing you.  Their combined musk lingers on you and is a very powerful and alluring aphrodisiac, drawing in men and women alike.  Following their orders, you entice numerous people back to your place while living your normal life.  There, the felinoid and wolf have their way with them, ravaging them lustuflly until they become horny females, wolves or felinoids, for them to breed.  Before long, thanks to their powerful allure, every family in the neighbourhood soon has at least one felinoid or wolf member in their household.  You, like all those they share, become pregnant with felinoid-wolf hybrid cubs who go on to form a new and powerful race that spreads much further thanks to its physical might and alluring scent.";
+				otherwise:
+					say "     After your release from the military, you settle into your new life with Fang coming along.  In public, he's passed off as your guard wolf, but privately he remains your alpha and fucks you like his sexy bitch whenever it pleases him to do so.  You accept your role readily, having become the wolf's fucktoy.";
+			if Sandra is in the bunker and humanity of player >= 10:
 				say "     Sandra, thankful to the big wolf for helping to keep everyone safe in the bunker, is always very kind to the big wolf when she comes to visit.  Often, during visits or get-togethers at your place, you'll find that the bunny's quietly slipped away.  Always knowing where you'll find her, you'll check and see her safely beneath your alpha, getting his large, red cock stuffed into her cunt.  The bunny's tummy grows large after one of these visits and she eventually gives birth to a pair of wolf cubs with bunny ears and a tail.  These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 
+[Connection summary: Fang's endings have ties to: Sandra, Felinoid companion]
 
 Fang ends here.
