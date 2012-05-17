@@ -233,7 +233,7 @@ to say angiertfun:
 	Infect "Pantherherm";
 	Infect "Pantherherm";
 	Infect "Pantherherm";
-	Say "[line break]As your bones settle back into place Angie cuddles up to you, licking your new fur. 'Oh that was wonderful.' she purrs, 'I've never been sucked off before you know, let alone deep throated.  Tiger[apostrophe]s aren[apostrophe]t as sexy as panthers but they[apostrophe]ll do in a pinch, right?'  She laughs as you rub your throat, which still feels stretched. 'Was I a little rough?  It's funny, you know.  You touch my cock, then suddenly I'm all dominate and growly.  You lick my pussy and I'm a needy little whore. It's a switch.' She sighs and leans her head onto you chest, 'Thanks for being my toy, felt good to be in charge for once, Midnight[apostrophe]s a very top cat panther.  Here, you can take this from Midnight and my stash.";
+	Say "[line break]As your bones settle back into place Angie cuddles up to you, licking your new fur. 'Oh that was wonderful.' she purrs, 'Tiger[apostrophe]s aren[apostrophe]t as sexy as panthers but they[apostrophe]ll do in a pinch, right?'  She laughs as you rub your throat, which still feels stretched. 'Was I a little rough?  It's funny, you know.  You touch my cock, then suddenly I'm all dominate and growly.  You lick my pussy and I'm a needy little whore. It's a switch.' She sighs and leans her head onto you chest, 'Thanks for being my toy, felt good to be in charge for once, Midnight[apostrophe]s a very top cat panther.  Here, you can take this from Midnight and my stash.";
 	Add "catnip" to the invent of the player;
 	now angietold is 2;
 	now lastangiefucked is turns;
