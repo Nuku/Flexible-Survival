@@ -555,7 +555,7 @@ Instead of resolving a Art Collector:
 		now artattempt is 1;
 		wait for any key;
 		clear the screen;
-		say "Splud!";
+		say "[bold type]Splud![roman type]";
 		wait for any key;
 		now heat enabled is false;	[temporarily turning off heat effects]
 		now skipturnblocker is 1;	[temporarily turns off several other end of turn effects]
