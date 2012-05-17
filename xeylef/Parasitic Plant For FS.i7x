@@ -292,8 +292,11 @@ when play ends:
 					say "     Your manage to restrain your lustful urges until you're released.  Once you're free, you celebrate with a fine orgy with several of the others released at the same time as you.  Your body soaks up their sexual fluids as they cum in and over you repeatedly, revitalizing you.  These orgies become a regular affair for you and the others of that group, a special thing you share with them once a month.";
 					say "     You get work as a gardener for the city, tending to several small parks.  It is a pleasant life for a plant like you.  The work comes naturally, knowing what the plants need and doing your best to provide for them, making the parks flourish, earning you several awards and a job as a gardener at a lavish private estate.";
 					say "     Your monthly orgies continue and while several of the attendees offer to become mates with you, you prefer sharing yourself with all of them.  They are all precious to you and you could never be happy picking one over another even if your open group is always open to sharing.";
+		otherwise if plantdefeat is 1 and hp of Joanna >= 7:
+			if humanity of player >= 10:
+				say "     When rescue arrives, you decide to hide the existence of Joanna's seed resting within you, deciding that it is now a part of what you are.  You live a rather normal life, except for the very, very frequent sex, of course.  Nymphomania is not really high on the list of mental illnesses you get locked up for and it's certainly a lot more common these days.";
 		otherwise if plantdefeat is 1 and cockname of player is "Parasitic Plant":	[non-plant, but plant groin w/seed]
-			if humanity of the player < 40:
+			if humanity of the player < 40 and humanity of player >= 10:
 				say "     When rescue arrives, you decide to hide the existence of the plant seed resting within you, deciding that it is now a part of what you are.  You live a rather normal life, except for the very, very frequent sex, of course.  Nymphomania is not really high on the list of mental illnesses you get locked up for and it's certainly a lot more common these days.";
 			otherwise:
 				say "     When rescue arrives, you have the seed removed from your belly, glad to have the lust-inducing parasite removed.";
