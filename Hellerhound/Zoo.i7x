@@ -219,6 +219,10 @@ instead of conversing the Angie:
 			say "Angie sighs as you cover the small bundle up more securely, 'Maybe, maybe that[apostrophe]s for the best,' She says, her feline eyes still fixed on where you put the packet, 'That scent is very... distracting,' She says, half panting as her nipples press out, spreading her vest open even farther. Still no matter how relieved at your decision she tries to act, she still seems somewhat disappointed, though you decide not to press her on that, for now at least.";
 
 
+[Angie + Panthress fun]
+to say angierpfun:
+	say "Scene to come";
+
 [Angie + Rubber tigress fun]
 to say angiertfun:
 	If cunts of the player is greater than 0:
@@ -243,6 +247,9 @@ to say angiertfun:
 Instead of fucking the Angie:
 	if lastangiefucked - turns is less than 6:
 		say "'Sorry, I know you want to try that again just as much as I do,' Angie says with a soft purr of remembrance, 'But it seems like I still need a bit of time to recover before I can do anything like that again.' Angie says with a disappointed sigh, before giving you a hug and going back to what she was doing.";
+		stop the action;
+	if angiearoused is 3 and angietold is 2 and bodyname of player is "Panther Taur" and facename of player is "Panther Taur" and skinname of player is "Panther Taur" and tailname of player is "Panther Taur" and cockname of player is "Panther Taur":
+		say "[angierpfun]";
 		stop the action;
 	if angiearoused is 3 and angietold is 1 and bodyname of player is "Rubber tigress" and facename of player is "Rubber tigress" and skinname of player is "Rubber tigress" and tailname of player is "Rubber tigress" and cockname of player is "Rubber tigress":
 		say "[angiertfun]";
