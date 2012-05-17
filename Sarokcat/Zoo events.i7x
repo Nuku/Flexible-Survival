@@ -96,7 +96,7 @@ Instead of Resolving a Useful pamphlet:
 	say "Wandering around the zoo, you come across an area dedicated to visitor information, you browse through the few remaining pamphlets and find a couple that seem to be very pertinent on how to defend yourself from wild animals. Useful information indeed under the current circumstances!";
 	increase xp of player by 5;
 	Say "Your xp increases slightly due to the helpful pamphlet!";
-	if a random chance of 1 in 10 succeeds:
+	if a random chance of 1 in 6 succeeds:
 		now Useful pamphlet is resolved;
 
 
