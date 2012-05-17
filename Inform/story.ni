@@ -945,8 +945,12 @@ carry out hunting:
 						if "Bad Luck" is listed in feats of player, increase dice by 1;
 						if "Curious" is listed in feats of player, increase dice by 2;
 						if dice is greater than 14:
+							now combat abort is 0;
+							now lost is 0;
 							Fight;
 							if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
+								now combat abort is 0;
+								now lost is 0;
 								say "As you are trying to recover from your last encounter, another roving creature finds you.";
 								Fight;
 					otherwise:
