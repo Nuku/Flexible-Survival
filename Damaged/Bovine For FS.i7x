@@ -251,8 +251,8 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 --	--	--	--	--	--	--	--
 
 to say bovineheat:	
-	say "You feel your throat go drier and drier, it seems only milk fresh from the cow will fill your growing stomach.";
-	increase thirst of player by 8 minus (Mooing divided by 2);
+	say "You feel your throat go drier and drier, it seems only milk fresh from the cow will fill your growling stomach.";
+	increase thirst of player by 6 minus (Mooing divided by 3);
 	if Mooing is greater than 0:
 		decrease Mooing by 1;
 
