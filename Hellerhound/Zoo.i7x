@@ -221,7 +221,45 @@ instead of conversing the Angie:
 
 [Angie + Panthress fun]
 to say angierpfun:
-	say "Scene to come";
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Pantherherm":
+			now monster is y;
+			break;
+	say "Angie rears up in place as you approach before the poofed fur on  her tail settles down, 'Oh! I thought you were one of the mutants for a moment there.' She pauses, then laughs a little, 'I guess you are. You look...' she approaches you and begins to circle around you, eyeing your every contour. A soft purr announces Midnight's approach as he joins the inspection, sniffing at you curiously a moment. [run paragraph on]";
+	if cocks of player is greater than 0:
+		say "Angie turns around and flags her tail, 'I have to have it,' she says in a needy tone, almost begging. 'I want to be under a panther with hands.' Midnight gives a sudden loud huff, as if insulted somehow, and hops up onto your back with his forepaws, grabbing at your hips even as you stumble forward onto Angie. 'Bad kitty!' calls Angie, but he doesn[']t seem to be minding her anymore, jabbing at you with a pointed feline shaft. [run paragraph on]";
+		if cunts of player is greater than 0:
+			say "His shaft sinks into your black furred cunt, sinking deep as he grabs at your feline hips to draw you back into his powerful breeding motion, growling with delight. You[']re nudged forward with each slam as he starts to rapidly piston against your hot panther cunt. [run paragraph on]";
+		otherwise:
+			say "He aligns his heavy tool with your ass and penetrates you in a bright flash of pain. He draws back and the barbs pull lightly at your innards, sending strange trembles of pleasure through you as he begins thrusting with wild abandon. [run paragraph on]";
+		say "Despite Midnight[']s attention, you rear up enough to grab Angie[']s firm tauric ass and draw her under yourself to shove your [cock size desc of player] shaft into her. She yowls as it spreads her heated vulva, trembling with increasing desire. Each time you draw back, you can feel those barbs tugging lightly at her sensitive walls, playing her like a fine instrument as you begin to rock between your two lovers, taking and being taken like a well oiled machine of eroticism.";
+		say "You slide up against Angie[']s back, pressing your furry chest against her as you reach around and take hold of her lovely curves. Your greedy fingers cup and explore across each hill, taking time to tug lightly at the thick teat, half hidden in the dense black fur on your way to the next. Under your eager rutting motions, Angie screeches like the cat she is, moans mixed with feline roar as she flexes powerfully around you.";
+		say "Midnight, not to be outdone, begins to pull you back more urgently as he grinds his sheath against your rump, tail arched up over his back as he pistons gracefully in time with your withdrawals from Angie, pushing you between being sorrounded by wet heat and having the feral beast's firmness sunk deep inside your sensitive body. It starts to feel like too much, the tension growing higher and higher before it breaks like a dam before the flood. You fill Angie[']s waiting cunt with seed as your cock barbs dig into the sensitive flesh, holding you still for a moment. The sensation of your fluttering passage around Midnight[']s shaft pushes him to the edge and his teeth find your back, nipping harshly  even as he buries to the hilt and begins to fill you with thick blasts of his feline cream.";
+		if cunts of player is greater than 0:
+			say "[impregchance]";
+		say "As the moment of fulfillment passes, you draw from Angie, and Midnight dismounts from your back, both falling back to fours on the store room floor. Midnight moves up between your legs, nuzzling your belly affectionately. Angie turns to face you, reaching for your cheeks and pulling you in for a fierce, purring, kiss. 'It was everything I hoped for.' she whispers to you, before finally getting back to work with a smile on her face.";
+	otherwise:
+		say "Angie circles you once more before she rears up and sets her paws on your furry back, pulling your lower body towards herself. 'Mine', she says, nudging at your bottom with her increasingly firm feline shaft. A soft growl comes from her, and, looking over your shoulder, you can see her tail lashing agitatedly with her building lust.";
+		if cunts of player is greater than 0:
+			say "Without waiting for your leave, she sinks her thick shaft into you, testing your ability to contain it as she half steps, half hops forward, sinking that meat into your body in a swift slide.";
+			if cunt length of player is greater than 15:
+				say "Your large feline cunt accepts the shaft without problem, though it is a massive pole, it slides wetly along your sensitive, trembling, passage, forcing a cooing purr from your depths. [run paragraph on]";
+			otherwise:
+				say "You feel your cunt being stretched painfully around the shaft, pain and pleasure mixing in sharp tingly spikes as she works her way to the hilt regardless, stretching you without reservation in her goal to embed herself fully in your sleek panther body. [run paragraph on]";
+				increase cunt length of player by 3;
+			say "As she rocks against you, her barbs tug harshly at you, at first sending shivers of displeasure, but with each tug, the sensation seems to shift subtly, until you are rocking against her, trying to get more of it. Your cunt weeps your fluids with a maddening arousal as you and she rock together intently.";
+			say "A soft meow distracts you from the pleasure behind, and Midnight rears up, placing his paws on your fore shoulders and leaning up to give you a licking across your black snout and nose. You lick back at him, reaching to hug the beast in close as you rise higher and higher in pleasure. Midnight scootches closer, draping his paws over you as he grinds upwards, driving his erection between your low hanging breasts, starting to tit fuck you eagerly. Bits of pre dripping across your black pelt like pearls.";
+			say "Behind you, Angie drives home powerfully, and her shaft swells several inches at the base, a ripple that flows up into you, bursting into a jet of seed that is soon followed by several fresh offerings of creamy fluid, filling you to capacity with her hot fluids. Those barbs lock into your tender flesh, and you wobble in place, only held up by Angie and Midnight[']s paws as your womb cries out in purest delight. A fresh warmth across your front alerts you to the fact that Midnight found his own satisfaction, painting your front with his grey spunk with a sudden roar of release. He slips loose of you and curls up close by, suddenly disinterested.";
+			say "[impregchance]";
+			say "Angle relaxes against your back, snuggling against you, 'You were just what I needed. I wanted to mount a nice kitty for so long.' Her forelegs squeeze against your barrel of a lower body and she reaches under herself to get at your tail, tugging lightly before she pulls free wetly and settles down behind you, purring like a motor with satisfaction and leaving you to drip her fluid.";
+		otherwise:
+			say "She finishes her inspection and seems a little dissapointed, 'You[']re missing a little something there, hon, why don[']t you get a little... something, and come back. I really want to give that a test run if you know what I mean.";
+			continue the action;
+	Infect "Pantherherm";
+	now angietold is 3;
+	now lastangiefucked is turns;
+	now lastMidnightfucked is turns;
 
 [Angie + Rubber tigress fun]
 to say angiertfun:
