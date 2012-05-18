@@ -161,7 +161,7 @@ The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
 The player has a text called tailname. Tailname is usually "human";
-The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your body[or]impromptu wrestling[at random]";
+The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
 The player has a text called weapon type. Weapon type is usually "Melee";
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
@@ -1692,7 +1692,7 @@ To process (X - a grab object):
 		follow turnpass rule;
 	if x is a armament:
 		if weapon of player is weapon of x: [ unequip]
-			now weapon of player is "[one of]your fists[or]quick kick[or]impromptu wrestling[at random]";
+			now weapon of player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
 			now weapon damage of player is 4;
 			now weapon type of player is "Melee";
 			now weapon object of player is journal;
@@ -2621,6 +2621,8 @@ This is the player attack rule:
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
+		let wmstrike be 0;
+		let z be 0;
 		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100;
 		if weapon object of player is journal:		[unarmed combat]
 			if "Martial Artist" is listed in feats of player:
@@ -2628,7 +2630,6 @@ This is the player attack rule:
 			if "Black Belt" is listed in feats of player:
 				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
 			if "Natural Armaments" is listed in feats of player and bodyname of player is not "human":
-				let z be 0;
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
 					if name entry is bodyname of player:
@@ -2644,7 +2645,8 @@ This is the player attack rule:
 					increase dam by a random number between 1 and dammy;
 				choose row monster from table of random critters;
 		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
-			let numnum be level of player + ( (intelligence of player - 10 ) / 2 ) + 105;
+			now wmstrike is 1;
+			let numnum be level of player + ( ( intelligence of player - 10 ) / 2 ) + 105;
 			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if "Powerful" is listed in feats of player:
 			now dam is ( ( dam times a random number from 105 to 125 ) divided by 100 );
@@ -2656,9 +2658,19 @@ This is the player attack rule:
 		if weapon type of player is "Ranged":
 			increase dam by (( the Perception of the player minus 10 ) divided by 2);
 		if a random chance of the morale of the player in 200 succeeds:
-			say "Filled with sudden motivation, your attack scores particularly well!";
+			say "Filled with sudden motivation, your attack scores particularly well!  ";
 			increase dam by dam;
-		say "You [one of]strike with[or]attack with[or]use your[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		if wmstrike is 1:			[Weaponsmaster used]
+			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		otherwise if weapon object of player is journal:
+			if z is not 0:	[Natural Armaments used]
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player], you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [dam] damage!";
+			otherwise if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
+				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [dam] damage!";
+			otherwise:
+				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		otherwise:
+			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
 		if a random chance of 4 in 20 succeeds and "Tail Strike" is listed in feats of player:
 			if tailname of player is listed in infections of Tailweapon:
 				let z be 0;
@@ -2671,7 +2683,7 @@ This is the player attack rule:
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				say "[line break]You make an additional attack using your tail's natural abilities for [dammy] damage!";
+				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [dammy] damage!";
 				increase dam by dammy;
 				choose row monster from table of random critters;
 		if a random chance of 4 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12:
