@@ -31,7 +31,7 @@ to say dolphin attack:
 	otherwise if dolphinwantmate is -2:
 		say "She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against you back. she then bends back, and slams forward, ripping open your ass. You pass out from the pain.";
 		say "When you are conscious again, it seems the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You aren't feeling well.";
-		now decrease hp of player by 40;
+		decrease hp of player by 40;
 		say "You can't be her mate any longer, it looks like she is still too pissed to even think in that direction.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
