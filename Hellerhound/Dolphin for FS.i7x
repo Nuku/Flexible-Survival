@@ -16,6 +16,7 @@ Section 1 - Monster Responses
 dolphindefeat is a number that varies.
 dolphinconsent is a number that varies.
 dolphinwantmate is a number that varies.
+dolphintricked is a number that varies.
 
 
 to say dolphin attack:
@@ -30,7 +31,7 @@ to say dolphin attack:
 	otherwise if dolphinwantmate is -2:
 		say "She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against you back. she then bends back, and slams forward, ripping open your ass. You pass out from the pain.";
 		say "When you are conscious again, it seems the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You aren't feeling well.";
-		now the hp of the player is -40;
+		now decrease hp of player by 40;
 		say "You can't be her mate any longer, it looks like she is still too pissed to even think in that direction.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
@@ -43,7 +44,8 @@ To say dolphin loss:
 	say "You hit the blue dolphinoid human over the head with your weapon, and she floats in the water, unmoving. From here, however, you can see all, three? of her slits. It looks like she wants you to take her.";
 	if the libido of the player is less than 80:
 		say "You do not have the desire to mate with her, and leave her there.";
-	otherwise:
+	otherwise if dolphintricked < 2:
+		increase dolphintricked by 1;
 		now dolphinconsent is 1;
 		say "You uncover your tools and swim closer.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -53,6 +55,8 @@ To say dolphin loss:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "She then whips her body up, and sprays you with a different bunch of clicks, totally stunning your body. 'Now it is my turn to play with you...' She mutters.";
 		say "[dolphin fuck]";
+	otherwise:
+		say "You are tempted by the sight of the prone dolphin, but manage to hold yourself back, wise to their tricks.  Leaving it before before it can make it's final, sonic strike, you head off in search of another means to quell your raging hormones.";
 
 to say dolphin fuck:
 	if the cunts of the player is not 0: [prefer male action]
@@ -60,9 +64,8 @@ to say dolphin fuck:
 		if the cunt width of the player is less than 6:
 			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. You're cunt can't be that tight. Lets fix it.";
 			say "She starts slamming her pointed cock into your small pussy, widening it by a bunch every smash, at the expense of your pleasure. Your mind is so full of pain you are having trouble staying conscious, and as she finally manages to slam inside you, you feel a twinge as the nanites 'fix' your cunt.";
-			infect "hermaphrodite dolphin";
 			now the cunt width of the player is 6;
-		if the cunt width of the player is less than 8:
+		otherwise if the cunt width of the player is less than 8:
 			say "She shoves her cock head into you, but it is rough going, giving you much pleasure as she moans and groans, shoving and turning and wriggling the beginning of her large member inside of you.";
 			increase the cunt width of the player by 1;
 		otherwise:
@@ -75,20 +78,19 @@ to say dolphin fuck:
 			otherwise:
 				say "You wince and hope the damage can be fixed if you wish not to miscarry.";
 			increase the cunt length of the player by 3;
-		if the cunt length of the player is less than 24:[wont go in far enough, will pry open womb for more space]
+		if cunt length of the player is less than 10:[god, still too small]
+			say "She pulls out of you, looking saddened. You are too small still. You will have to come back again later.";
+		otherwise if the cunt length of the player is less than 24:[wont go in far enough, will pry open womb for more space]
 			say "She then slams her overly long member into the wall of your womb, stretching your womb and pussy as deep as they can go, and further. The pain mixes with the pleasure of her inside of you, bringing you to climax as she keeps fucking.";
-			increase the cunt length of the player by 3;
-			if the cunt length of the player is less than 10:
+			increase the cunt length of the player by 2;
+			if the cunt length of the player is less than 14:
 				say "She then pulls out of you, and you look at her, disappointed. you were halfway to another orgasm. ";
 				say "She tells you 'You are still too small. I will have to 'fix' you later as well. Any more stretching and you will rip. Since I need to do more, you can't have my child.";
 				say "She then blows here load all over your front, the thick cum spraying through the water as if in slow motion, and landing and sticking to you.";
-				infect "hermaphrodite dolphin";
 			otherwise:
 				say "She then moans, and slams extra hard, as she manages to fit the rest of her member inside by doubling back and forming a ring in your womb. Her gargantuan cock seems to be making a huge ring-shaped bulge in your belly, visible from the outside, as she begins to orgasm.";
 				say "She lets out a chittering scream as she cums hard inside of you, stunning you and leaving you floating in the water. You can only watch, unreasoningly as your belly gets bigger and bigger until you look positively bloated. A little while and expansion later, she begins to remove her cock with much wriggling and squirming, to watch the cum inside of you get forced out into a cloud in the water once your entrance is clear.";
 				say "[impregchance]";
-		otherwise if cunt length of the player is less than 10:[god, still too small]
-			say "She pulls out of you, looking saddened. You are too small still. You will have to come back again later.";
 		otherwise:[cunt is finally big enough]
 			say "She shrieks with joy 'Your pussy is finally big enough for me. I bet that took a lot of doing.'";
 			say "She then proceeds to push deeper, slowly wriggling and twisting her prehensile member into your wet cunt. She bottoms out before she can get to your cervix, and looks relieved. 'I am so big, none of the others in my pod can totally cover me, without assistance, but you...' she says, awed and relieved. She begins to wriggle her cock, pulling in and out and forming rings inside of you, causing immense pleasure. As you start humping back, she screams in climax, the sound carrying you to yours. After what seems like hours of her filling you, she begins to pull out, cum flowing around her now shrinking cock out of your cunt and into the water. [impregchance]";
@@ -107,44 +109,40 @@ to say dolphin fuck:
 
 dolphindmg is a number that varies;
 
+[*** currently broken!  Damage is calculated before the dolphin strike is run, invalidating the results]
+
 to say dolphin strike:
+	choose row monster from table of random critters;
 	let n be a random number between one and six;
 	if n is 1:
 		say "She bites your hand with her sharp little teeth. It hurts!";
-		now dolphindmg is 8;
+		now wdam entry is 8;
 	otherwise if n is 2:
 		say "She puts her feet together into what resembles a dolphins tail, and whacks you over the head.";
-		now dolphindmg is 18;
+		now wdam entry is 18;
 	otherwise if n is 3:
-		say "She lets off a really loud pulse of high pitched clicks, which paralyze you and leave her open to her next attack.";
+		say "She lets off a really loud pulse of high pitched clicks, which weaken ([level of player] dmg) and paralyze you, leaving you open to her next attack.";
+		decrease hp of player by level of player;
 		say "[dolphin strike]";
 	otherwise if n is 4:
 		say "She takes her fist and punches you with her immense strength.";
-		now dolphindmg is 12;
+		now wdam entry is 12;
 	otherwise if n is 5:
 		say "She takes her small breasts and shoves your face into them roughly. You struggle, and she slams you harder before you manage to escape.";
-		now dolphindmg is 14;
+		now wdam entry is 14;
 	otherwise if n is 6:
 		say "She headbutts you is the stomach, causing bubbles to rise from your mouth.";
-		now dolphindmg is 6;
+		now wdam entry is 6;
 	otherwise if n is 7:
 		if the cocks of the player is greater than 0:
 			say "She darts down to your nethers and grabs your cock, and TWISTS IT OMG THAT HURT!";
-			now dolphindmg is 18;
+			now wdam entry is 18;
 		otherwise if the cunts of the player is greater than 0:
 			say "She darts down to you nethers and chomps on your clit. YOWCH.";
-			now dolphindmg is 10;
+			now wdam entry is 10;
 		otherwise:
 			say "She darts down to your nethers, and is shocked to see nothing there. She bites you anyway.";
-			now dolphindmg is 4;
-	say "[dolphin amg]";
-to say dolphin amg:
-	repeat with Z running from 1 to number of filled rows in table of random critters:
-		choose row Z from the table of random critters;
-		let zed be "hermaphrodite dolphin";
-		if name entry matches the text zed, case insensitively:
-			now wdam entry is dolphindmg;
-			break;
+			now wdam entry is 4;
 		
 
 Section 2 - Monster Insertion
