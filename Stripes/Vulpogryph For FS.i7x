@@ -96,15 +96,9 @@ to vulpogryphinfect:			[Solstice's magic infection bypasses researcher immunity]
 		now sex entry is "Male";
 		now libido entry is 55;
 	infect;
+	decrease humanity of player by 3;
 	now researchbypass is 0;
 
-
-when play ends:
-	if bodyname of player is "vulpogryph":
-		if humanity of player is less than 10:
-			say "";
-		otherwise:
-			say "";
 
 
 [ Edit this to have the correct creature name as well]

@@ -188,14 +188,15 @@ carry out lessontiming:
 				say " and also picking up a few tips and pointers on how to be a good treasure hunter.";
 				increase perception of player by 1;
 				say "     Your perception has increased by 1!";
-				increase libido of player by 10;
-				decrease humanity of player by 5;
-				if "Pure" is listed in feats of player, increase humanity by 2;
-				if "Corrupt" is listed in feats of player, decrease humanity by 1;
 			otherwise:
 				say " even if you didn't manage to learn anything useful from her [']lesson['] this time.";
 		otherwise:
 			say " even if you don't think you'll be able to learn more from her [']lessons['].";
+		increase libido of player by 10;
+		decrease humanity of player by 5;
+		increase morale of player by 2;
+		if "Pure" is listed in feats of player, increase humanity by 2;
+		if "Corrupt" is listed in feats of player, decrease humanity by 1;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "[solsticesex]";
 
@@ -286,6 +287,27 @@ Definition: a person is fullyvg:
 
 Section 6 - Endings
 
-
+when play ends:
+	if hp of Solstice >= 5:
+		if bodyname of player is "Vulpogryph":
+			if humanity of player < 10:
+				if cocks of player > 0:
+					say "     As you give in to your new, vulpogryph instincts, Solstice is there for you.  She runs her paws over your body and leads you off with her in search of adventure in the wild, changing world.  It all soon becomes clear to you.  She is your special mate, the one you were meant to be with.  Using her knowledge of ancient ruins, you travel to a Mayan temple and make it your new home, intent on nesting there.";
+					say "     You are also in luck, able to capture an archeological team that was there before the outbreak struck.  Watching for a few days from the jungle, make your plans.  Such ideas come easily to you both, being a mix of clever corvid and sly fox.  You trick and infect the others through judicious application of infectious feathers and fluids.  You end up starting your nest of vulpogryphs with a big team of sexy hybrids eager to raise a healthy brood of vulpogryph pups with their mates... between expeditions to search for more relics and set up new nests in ancient cities and temples.  But that is a story for another day.";
+				otherwise:
+					say "     As you give in to your new, vulpogryph instincts, Solstice is there for you.  She runs her paws over your body and leads you off with her in search of adventure in the wild, changing world.  It all soon becomes clear to you.  She is your special lover, the one you are meant to be with.  Using her knowledge of ancient ruins, you travel to one a Mayan temple and make it your new home, intent on nesting there.";
+					say "     You are also in luck, able to capture an archeological team that was there before the outbreak struck.  Watching for a few days from the jungle, you each pick one from the supply of unchanged humans and make your plans.  After snagging your chosen males one night to make into your mates, you trick and infect the others through judicious application of infectious feathers and fluids.  You end up starting your nest of vulpogryphs with a big team of sexy hybrids eager to raise a healthy brood of vulpogryph pups with their mates... between expeditions to search for more relics and set up new nests in ancient cities and temples.  But that is a story for another day.";
+			otherwise:
+				say "     As the soldiers are moving into the city to rescue those they can, Solstice comes up and tells you that she'll need to split for a bit and meet up with you later.  As an 'adventurer', she explains, some people in authority may not take to kindly to her track record with certain international governments or legal technicalities.  She flashes you the contents of her backpack, filled with so many shinies that your half-corvid heart flutters with excitement.  With that, she gives you a loving kiss and a grope, promising to get in touch with you once you're released.";
+				if cocks of player > 0:
+					say "     After you're cleared by the military and given a treatment that you can already feel fading against your magically-enhanced infection, you set yourself up in a temporary household, knowing that your mate will be coming once the heat's died down.  And true enough, she ends up at your doorstep a few weeks later.  After some lustful lovemaking to celebrate your happy reunion, you start making plans and move into Solstice's lovely home.  While not quite a mansion, it's certainly quite luxurious and has plenty of space for her new mate to move in, as well as any guests you may wish to have over to enjoy your company.";
+				otherwise:
+					say "     After you're cleared by the military and given a treatment that you can already feel fading against your magically-enhanced infection, you set yourself up in a temporary household, knowing that your friend will be coming once the heat's died down.  And true enough, she ends up at your doorstep a few weeks later.  After some lustful lovemaking to celebrate your happy reunion, you start making plans and move into Solstice's lovely home.  While not quite a mansion, it's certainly quite luxurious and has plenty of space for her new friend, as well as the two cute researchers you manage to snag from a university.  These are made into your mates, sexy vulpogryphs with throbbing cocks to fill your needy bodies.";
+				say "     You start accompanying Solstice on her expeditions, making them much more successful with someone to watch her back.  It doesn't hurt as well that the protection of archeological sites and musuems are rather low on most authority's lists in the new, chaotic world.  Your home is soon filled with lovely antiquities and you are quite rich from the funds you gain from private sales to interested collectors.  You always have loads of fun on these expeditions and always celebrate the wonderful sex when you get home.  Soon, there's a healthy nest of vulpogryph pups running through the halls.";
+		otherwise:
+			if humanity of player < 10:
+				say "     When you succumb to your infection, Solstice sadly packs up her stuff from the library and heads back out into the city.  She slips past the military cordon and returns to her life as a treasure hunter.";
+			otherwise:
+				say "     As the soldiers are moving into the city to rescue those they can, Solstice comes up and tells you that she'll need to split.  As an 'adventurer', she explains, some people in authority may not take to kindly to her track record with certain international governments or legal technicalities.  She catch a glimpse of something gold inside her backpack and suspect she's gathered quite a few precious items from around the city.  The vulpogryph gives to a tight hug and nuzzles you with her beak, saying she'd really wished it'd worked out better with you[if diegochanged < 2], but also that she's met a cute, sneaky coyote who's promised to help her trick her way past the authorities on her expeditions from now on[otherwise], but that she's got plans to snag a sexy archeologist she knows into being her mate and adventuring partner[end if].";
 
 Solstice ends here.

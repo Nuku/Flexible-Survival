@@ -1,5 +1,5 @@
 Version 3 of Pepperspray by Stripes begins here.
-[version 3 - Hyperlinked]
+[version 3.1 - More varied combat messages]
 
 
 battleitem is a number that varies.
@@ -89,6 +89,8 @@ to say enhancedattack:
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
+		let wmstrike be 0;
+		let z be 0;
 		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100;
 		if weapon object of player is journal:
 			if "Martial Artist" is listed in feats of player:
@@ -96,7 +98,6 @@ to say enhancedattack:
 			if "Black Belt" is listed in feats of player:
 				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
 			if "Natural Armaments" is listed in feats of player and bodyname of player is not "human":
-				let z be 0;
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
 					if name entry is bodyname of player:
@@ -113,6 +114,7 @@ to say enhancedattack:
 					increase dam by a random number between 1 and dammy;
 				choose row monster from table of random critters;
 		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
+			now wmstrike is 1;
 			let numnum be level of player + ( (intelligence of player - 10 ) / 2 ) + 105;
 			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
 		if "Powerful" is listed in feats of player:
@@ -123,9 +125,19 @@ to say enhancedattack:
 		if weapon type of player is "Melee":
 			increase dam by (( the strength of the player minus 10 ) divided by 2);
 		if a random chance of the morale of the player in 200 succeeds:
-			say "Filled with sudden motivation, your attack scores particularly well!";
+			say "Filled with sudden motivation, your attack scores particularly well!  ";
 			increase dam by dam;
-		say "You [one of]strike with[or]attack with[or]use your[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		if wmstrike is 1:			[Weaponsmaster used]
+			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		otherwise if weapon object of player is journal:
+			if z is not 0:	[Natural Armaments used]
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player], you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [dam] damage!";
+			otherwise if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
+				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [dam] damage!";
+			otherwise:
+				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		otherwise:
+			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
 		if a random chance of 5 in 20 succeeds and "Tail Strike" is listed in feats of player:		[+5% of tail attack w/pepperspray]
 			if tailname of player is listed in infections of Tailweapon:
 				let z be 0;
@@ -138,7 +150,7 @@ to say enhancedattack:
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				say "[line break]You make an additional attack using your tail's natural abilities for [dammy] damage!";
+				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [dammy] damage!";
 				increase dam by dammy;
 				choose row monster from table of random critters;
 		if a random chance of 5 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12:
