@@ -31,7 +31,7 @@ Instead of resolving a potential resources:
 			let lol be 1;
 		otherwise:
 			if a random chance of 1 in 3 succeeds:
-				now y is "[scavengetarget]";
+				now y is "[scavengetarget in lower case]";
 				say "Your specific hunting leads you towards your target.";
 	say "While wandering about, you're certain you see some [y] and move to get it.";
 	now x is a random number from 1 to 4;
