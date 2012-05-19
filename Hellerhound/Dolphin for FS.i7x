@@ -33,7 +33,6 @@ to say dolphin attack:
 		say "When you are conscious again, it seems the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You aren't feeling well.";
 		decrease hp of player by 40;
 		say "You can't be her mate any longer, it looks like she is still too pissed to even think in that direction.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
 	infect "hermaphrodite dolphin";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -41,7 +40,7 @@ to say dolphin attack:
 	say "[dolphin fuck]";
 
 To say dolphin loss:
-	say "You hit the blue dolphinoid human over the head with your weapon, and she floats in the water, unmoving. From here, however, you can see all, three? of her slits. It looks like she wants you to take her.";
+	say "You hit the blue dolphinoid human over the head with a final blow, and she floats in the water, unmoving. From here, however, you can see all, three? of her slits. It looks like she wants you to take her.";
 	if the libido of the player is less than 80:
 		say "You do not have the desire to mate with her, and leave her there.";
 	otherwise if dolphintricked < 2:
@@ -105,45 +104,7 @@ to say dolphin fuck:
 	otherwise:
 		say "'You genderless freak!' She screams. 'Make sure you have something for me to use later', she reprimands.";
 		decrease the HP of the player by 10;
-		
 
-dolphindmg is a number that varies;
-
-[*** currently broken!  Damage is calculated before the dolphin strike is run, invalidating the results]
-
-to say dolphin strike:
-	choose row monster from table of random critters;
-	let n be a random number between one and six;
-	if n is 1:
-		say "She bites your hand with her sharp little teeth. It hurts!";
-		now wdam entry is 8;
-	otherwise if n is 2:
-		say "She puts her feet together into what resembles a dolphins tail, and whacks you over the head.";
-		now wdam entry is 18;
-	otherwise if n is 3:
-		say "She lets off a really loud pulse of high pitched clicks, which weaken ([level of player] dmg) and paralyze you, leaving you open to her next attack.";
-		decrease hp of player by level of player;
-		say "[dolphin strike]";
-	otherwise if n is 4:
-		say "She takes her fist and punches you with her immense strength.";
-		now wdam entry is 12;
-	otherwise if n is 5:
-		say "She takes her small breasts and shoves your face into them roughly. You struggle, and she slams you harder before you manage to escape.";
-		now wdam entry is 14;
-	otherwise if n is 6:
-		say "She headbutts you is the stomach, causing bubbles to rise from your mouth.";
-		now wdam entry is 6;
-	otherwise if n is 7:
-		if the cocks of the player is greater than 0:
-			say "She darts down to your nethers and grabs your cock, and TWISTS IT OMG THAT HURT!";
-			now wdam entry is 18;
-		otherwise if the cunts of the player is greater than 0:
-			say "She darts down to you nethers and chomps on your clit. YOWCH.";
-			now wdam entry is 10;
-		otherwise:
-			say "She darts down to your nethers, and is shocked to see nothing there. She bites you anyway.";
-			now wdam entry is 4;
-		
 
 Section 2 - Monster Insertion
 
@@ -155,7 +116,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "hermaphrodite dolphin"; [Name of your new Monster]
-	now attack entry is "[dolphin strike]"; [Text used when the monster makes an Attack]
+	now attack entry is "She takes her fist and punches you with her immense strength."; [Text used when the monster makes an Attack]
 	now defeated entry is "[dolphin loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[dolphin attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "As you [if the location of the player is not Public Beach] swim along[otherwise]walk on the beach[end if], you see a dark shadow following your progress. You move towards it, and a dolphin-like human shoots out of the gloom, saying 'Another for my pod! Yes!'";[ Description of the creature when you encounter it.]
@@ -192,8 +153,44 @@ When Play begins:
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Dolphin Milk";			[ Loot monster drops, ]
 	now lootchance entry is 75;		[ Chance of loot dropping 0-100 ]
+	now altcombat entry is "hdol";	[ Alternate critter combat row to follow, "default" or "" for standard ]
 
 
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)
+"hdol"	retaliation rule	dolattack rule	--	--	--	--	--	--	--
+
+this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
+	choose row monster from table of random critters;
+	if a random chance of 1 in 6 succeeds:
+		say "The dolphin lets off a really loud pulse of high pitched clicks, which weakens you ([ ( 6 + level of player ) / 2 ] dmg) and stuns you just long enough for her to attack again.";
+		decrease hp of player by ( ( 6 + level of player ) / 2 );
+	now tempnum is a random number between 1 and 5;		[picks one of the attacks]
+	if tempnum is 1:
+		now attack entry is "She bites your hand with her sharp little teeth. It hurts!";
+		now wdam entry is 8;
+	otherwise if tempnum is 2:
+		now attack entry is "She puts her feet together into what resembles a dolphins tail, and whacks you over the head.";
+		now wdam entry is 18;
+	otherwise if tempnum is 3:
+		now attack entry is "She headbutts you is the stomach, causing bubbles to rise from your mouth.";
+		now wdam entry is 6;
+	otherwise if tempnum is 4:
+		now attack entry is "She takes her fist and punches you with her immense strength.";
+		now wdam entry is 12;
+	otherwise if tempnum is 5:
+		now attack entry is "She takes her small breasts and shoves your face into them roughly. You struggle, and she slams you harder before you manage to escape.";
+		now wdam entry is 14;
+	otherwise if tempnum is 6:		[was closed in the original version, left closed]
+		if the cocks of the player is greater than 0:
+			now attack entry is "She darts down to your nethers and grabs your cock, and TWISTS IT OMG THAT HURT!";
+			now wdam entry is 18;
+		otherwise if the cunts of the player is greater than 0:
+			now attack entry is "She darts down to you nethers and chomps on your clit. YOWCH.";
+			now wdam entry is 10;
+		otherwise:
+			now attack entry is "She darts down to your nethers, and is shocked to see nothing there. She bites you anyway.";
+			now wdam entry is 4;
 
 
 when play ends:
