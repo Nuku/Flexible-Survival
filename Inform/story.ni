@@ -1875,6 +1875,27 @@ carry out clearmore:
 	now clearnomore is 0; [returns clearing to normal]
 	say "You can see clearly, the clears are back.";
 
+Section Dirty Cheater
+
+dirtycheat is an action applying to nothing.
+understand "i am a dirty cheater" as dirtycheat.
+levelupneeded is a number that varies.
+
+carry out dirtycheat:
+	increase xp of player by 200;
+	if player is fastlearning:
+		now levelupneeded is (level of player plus 1) times 8;
+	otherwise:
+		now levelupneeded is (level of player plus 1) times 10;
+	while xp of player is greater than levelupneeded:
+		level up;
+		if player is fastlearning:
+			now levelupneeded is (level of player plus 1) times 8;
+		otherwise:
+			now levelupneeded is (level of player plus 1) times 10;
+	decrease score by 400;
+
+
 Part 3 - Item Code
 
 Understand the command "get" as something new.

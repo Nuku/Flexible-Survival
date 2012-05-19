@@ -333,6 +333,9 @@ carry out nerminehelping:
 
 Section 3- Magic Bargain Bin
 
+when play begins:
+	now bargainbinusagetotal is 0;
+
 Bargain Bin is a man.
 The description of Bargain Bin is "This large bin seems filled with a number of small packets, bottles, and charms, who knows what you could find in there? Above the bin someone has posted a recently drawn sign reading, 'You try bargain bin? You pull it out and you bought it, one pick for one packet of food and one bottle of water.' Reading the sign you aren[apostrophe]t exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try HUNTing a bargain, or SORTing through the bin?";
 
@@ -343,6 +346,7 @@ instead of sniffing bargain bin:
 	say "The bargain bin smells like omens and mysteries... at a discount price.";
 
 strangebottledrink is a number that varies.
+bargainbinusagetotal is a number that varies.
 
 bargainhunting is an action applying to nothing.
 
@@ -363,6 +367,7 @@ carry out bargainhunting:
 		say "Pulling out a small bit of food and a water bottle you set them out on the counter where Nermine quickly makes them disappear. Having paid your fee you eagerly begin to sort through the bargain bin to see what you can find...[line break]";
 		delete food;
 		delete water bottle;
+		increase bargainbinusagetotal by 1;
 		let Z be a random number between 1 and 30;
 		if Z is 1:
 			Say "You pull out a small urn of some sort, and look at it curiously.  Nermine sighs behind you as she sees what you are holding. 'Is funeral urn. Very old, and very bad luck. Nermine is not sure how it found its way into bargain bin again, but she will try to find a better place to put it this time.' Nermine says as she takes the small urn from your hands, and places it down on a shelf somewhere behind the counter.  'Nermine only hopes bad luck hasn[apostrophe]t rubbed off on you already, she will give you kiss for luck to make sure,' the jackal says as she leans over the counter even further, her black muzzle brushing over your mouth even as you open it to respond.  Before you know it, her tongue is exploring your mouth even as her muzzle rubs up against your face, in what is actually a surprisingly pleasant kiss.  After a second, she pulls her tongue out of your mouth, leaving you standing there slightly stunned as she gives you another soft lick across the cheek. 'There.  That should counter any bad luck urn might have given you.  Be letting me know if you find the sneaky thing in bin again,' the sexy jackaless says with a wink as she returns to her normal place at the counter.  After a second, you realize that you now don[apostrophe]t have anything to show for your hunt through the bargain bin, but at least you got a nice kiss for your efforts?  That[apostrophe]s something of a bargain, isn[apostrophe]t it?";
@@ -686,6 +691,11 @@ carry out bargainhunting:
 				say "You acquired some dirty water!";
 	Otherwise:
 		say "Sorting through your pack, you are ashamed to realize you can[apostrophe]t afford to draw something out of the bargain bin right now.  You blush under Nermine[apostrophe]s curious gaze, as you casually move off to look through the rest of the store instead.";
+	if bargainbinusagetotal is greater than 41: [ie 42 or greater, arbitrary number chosen to limit bin usage.  should allow most (possible all) things to be found.]
+		say "With the removal of your latest findings, the Bargain Bin appears oddly empty.  The few things left in it are one's you have rejected already.  Won't be any more bargains from this bin."; [feel free to replace this text with anything that makes more sense]
+		move Bargain Bin to dark basement;
+		remove Bargain Bin from play;
+
 
 
 [ Plush lion / rubber tigress / chocolate lab in bin ]
