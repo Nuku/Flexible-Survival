@@ -25,10 +25,9 @@ To wait for any key:
 	keypause;
 
 to clear the screen and hyperlink list:
-	if clearnomore is 0: [skips clearing if clears are turned off]
-		if automaticcombatcheck is 0: [skips clearing if in autocombat]
-			clear the screen;
+	clear the screen;
 	now hyperlink list is {}.
+[This must remain whole or errors from cleared hyperlinks can occur!]
 
 
 To keypause:
@@ -209,7 +208,6 @@ Child can be born. Child is not born.
 Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
-gascloud is a number that varies.
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -716,7 +714,7 @@ to say huskywinner:
 
 
 Table of random critters
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non infectious (truth state)	nocturnal (truth state)	
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non infectious (truth state)	nocturnal (truth state)	altcombat (text)
 "Drone Wasp"	"[one of]The drone attacks with its small claws, leaving tiny furrows that sting slightly.[or]The drone dive bombs through the air with its stinger at the ready, spreading its venom into your body causing you to shudder in pain and lust.[or]The drone flies in close and hugs you, not harming you but seeming to gaze longingly into your eyes.[at random]"	"[one of]The drone flutters off with a tattered wing, crying as she flies away, leaving you with a slight sense of guilt.[or]The drone falls to the ground and begins to cry, as you hear buzzing nearby you think its best to get away as you run quickly.[at random]"	"[one of]The drone slips her lips onto yours, kissing deeply as she lets a small amount of honey in her mouth slip into your own.[or]The drone flies around happily before flying off to brag to its sisters.[or]The drone pins you down to the ground as she grins forcing your lips onto her sex as she rubs her small mound against you, moaning softly before she finally cums, and giggles flying off as quickly as she came.[at random]"	"A small , shy of four feet, wasp like girl, small delicate buzzing wings on her back, her skin colored in yellow and brown marking. Her hands only having three fingers and small claws. Out of her rear extends her wasp like abdomen with a small stinger on the end. Her face seeming cute with her short brown/blond hair. She looks at you with a soft smile on her lips buzzing left and right.[line break][line break]Written by asani."	"charmingly human"	"largely human, except for the new abdomen protruding from your rump, sporting a new stinger. You are also a lot shorter, shy of four feet at best."	"black and brown striped"	""	""	"Your face tingles softly, but not much physically changes from the human norm, except that it is now cute, and female looking."	"You feel a bulging from your bottom that expands out to a whole new segment of body, a stinger slipping free."	"Your skin changes colour as it changes to yellow and brown, the striped markings covering your body."	"You feel something internal shifting around."	"You feel something internal shifting around."	10	10	14	12	10	10	"Female"	20	1	3	"Park"	0	0	0	2	3	0	1	6	4	50	--	0
 "Dragoness"	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	--	--	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	--	0
 "Panther Taur"	"[one of]She leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had.[or]She rears up and plants her forward lower paws on your shoulders while her hind paws kick up, cutting into you with sharp claws in a painful rake.[or]She lashes out with a powerful set of sharp claws.[or]She rushes right at you, forcing you to back against a wall.[at random]"	"[one of]The cat looks entirely irritated at the constant abuse on her perfect body. With a haughty harumph, she suddenly turns tail, raising it to expose her thick, furry, netherlips, then bolts off.[or]The cat mewls sadly, backing away before she raises her hands to her heavy breasts, pressing them together as she gives you a smoldering look. Wouldn't it be nice to make love instead of war?[felitaur tempt][at random]"	"[felitaur rape][line break]"	"An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her pretty [one of]blue[or]brown[or]green[at random] slitted eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.[line break][line break]Commissioned by AsureaSkie"	"feline face, with blunt snout, wet black nose and pointed ears above your"	"is bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws.[if breasts of player is greater than 2] All your breasts except the first two rest on the chest of that lower torso, swaying with each step.[end if]"	"[one of]furry[or]black furred[at random]"	"You have a long, black, feline tail that likes to curl and uncurl at its own whim. "	"[one of]black sheathed[or]barbed[at random]"	"You can feel warmth as your face begins to reshape into a muzzle, long teeth filling your new mouth, tongue becoming rougher. Your ears are tugged as if by an angry mother, soon perched at the top of your head, pointed and twitching."	"You stagger in place, almost toppling backwards as new legs sprout out, ruining your balance. Fortunately, those new legs dig into the ground, helping to restore your equilibrium as you rapidly grow the torso of a panther from the hips down. Your hands become somewhat paw like, claws sliding free.[if breasts of player is greater than 2] Your breasts quiver as all but the top two migrate downward, settling on the undercarriage of your new torso.[end if]"	"soft ticklish sensation greets the arrival of a thick pelt of pure black fur across your body."	"you shake it, a new limb extending from it, becoming a long [skin of player] tail, clearly feline in build."	"Your cock draws up against your belly as a [skin of player] sheath wraps around it. It also grows soft barbs around the head, sure to stimulate any partner."	12	18	10	12	10	10	"Both"	20	3	6	"Outside"	1	14	15	6	8	0	1	14	8	90	--	0
@@ -792,7 +790,6 @@ descr is text that varies.
 cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 battleground is a text that varies.
 Lusting is a text that varies.
-monsterhp is a number that varies.
 
 Hunting is an action applying to one topic.
 
@@ -1013,60 +1010,7 @@ This is the flag ban rule:
 	decrease the menu depth by 1;
 	ban menu;
 
-This is the combat item rule:
-	now battleitem is 0;
-	blank out the whole of table of combat items;
-	let X be 1;
-	repeat with Q running through invent of player:
-		let z be journal;
-		repeat with y running through grab objects:
-			if q matches the regular expression printed name of y, case insensitively:
-				let z be y;
-				break;
-		if z is not fast, next;
-		choose a blank row in table of combat items;
-		now title entry is Q;
-		now toggle entry is combat item process rule;
-[	let z be the number of rows in table of combat items;
-	say "[Z].";]
-	if there is no title in row 1 of table of combat items:
-		say "You have no combat ready items to use!";
-		wait for any key;
-	otherwise:
-		while 1 is 1:
-			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-			repeat with y running from 1 to number of filled rows in table of combat items:
-				choose row y from the table of combat items;
-				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]0 - ABORT[as]0[end link][line break]";
-			say "Type the number corresponding to the item to be used> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of combat items:
-				now current menu selection is calcnumber;
-				follow the combat item process rule;
-				break;
-			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
-				say "Selection aborted.";
-				continue the action;
-			otherwise:
-				say "Invalid Choice.";
 
-This is the combat pass rule:
-	retaliate;
-
-	
-this is the combat item process rule:
-	decrease the menu depth by 1;
-	choose row Current Menu Selection in table of combat items;
-	let nam be title entry;
-	repeat with N running from 1 to the number of rows in the table of game objects:
-		choose row N in the table of game objects;
-		if name entry is nam:
-			process object entry;
-			break;
-	if battleitem is 0 and monsterhp is greater than 0:
-		wait for any key;
-		retaliate;
 	
 destinationcheck is an action applying to nothing.
 
@@ -1494,7 +1438,7 @@ definition: Daytimer is day:
 	otherwise:
 		no;
  
- definition: Daytimer is night:
+definition: Daytimer is night:
 	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
 		no;
 	otherwise:
@@ -2555,287 +2499,6 @@ To Infect:
 		otherwise if oldlib is less than 50 and libido of player is greater than 49:
 			say "Your thoughts have sunk to almost constant depravity![no line break][if cocks of player is 1]  Your cock remains perpetually hard and leaking precum.[no line break][otherwise if cocks of player > 1]  Your cocks remain perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1]  Your cunt is hot and dripping juices as your arousal builds.[no line break][otherwise if cunts of player > 1]  Your cunts are hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 
-To lose:
-	choose row monster from the table of random critters;
-	follow the cock descr rule;
-	follow the cunt descr rule;
-	follow the breast descr rule;
-	now lost is 1;
-	say "[victory entry][line break]";
-	if scenario is "Researcher":
-		say "";
-	otherwise:
-		infect;
-	if hp of player is less than 1, now hp of player is 1;
-	now combat abort is 1;
-	increase the XP of the player by lev entry divided by two;
-	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
-	decrease the score by 1;
-	decrease the morale of the player by 3;
-	now automaticcombatcheck is 0; [combat is over, reset to zero]
-[	decrease the menu depth by 1;]
-
-
-This is the flee rule:
-	choose row monster from the table of random critters;
-	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 20 ) divided by 2) plus level of the player;
-	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
-	let the combat bonus be attack bonus minus defense bonus;
-	if "Gas Cloud" is listed in feats of player and gascloud is 0:
-		if tailname of player is "Skunk" or tailname of player is "Skunk Girl" or tailname of player is "Skunk Taur":
-			say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
-			increase gascloud by 5;
-		if tailname of player is "Squid":
-			say "Turning around, you spray an inky cloud at your enemy before trying to escape.";
-			increase gascloud by 5;
-		otherwise:
-			say "You release your cover cloud and try to escape.";
-			increase gascloud by 3;
-		increase combat bonus by gascloud;
-	if hardmode is true and the combat bonus is less than -10:
-		now the combat bonus is -10;
-	let the roll be a random number from 1 to 20;
-	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the combat bonus is greater than 8:
-		say "You manage to evade [name entry] and slip back into the city.";
-		now combat abort is 1;
-[		decrease the menu depth by 1;]
-	otherwise:
-		say "You fail to get away.";
-		Retaliate;
-		if the hp of the player is less than 1:
-			lose;
-
-This is the submit rule:
-	choose row monster from the table of random critters;
-	let temp be the hp of the player;
-	Lose;
-	if "Submissive" is listed in feats of the player, increase the XP of the player by 2;
-	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
-	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
-[	decrease the menu depth by 1;]
-
-combat abort is a number that varies.	
-
-to say combat abort:
-	now combat abort is 1;
-
-speciesbonus is a number that varies.
-
-This is the player attack rule:
-	choose row monster from the table of random critters;
-	let the attack bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
-	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
-	let the combat bonus be attack bonus minus defense bonus;
-	if "Know Thyself" is listed in feats of player:
-		now speciesbonus is 0;
-		if bodyname of player is name entry, increase speciesbonus by a random number from 0 to 2;
-		if facename of player is name entry, increase speciesbonus by a random number from 0 to 1;
-		if cockname of player is name entry, increase libido of player by a random number from 0 to 1;
-		if speciesbonus > 2, now speciesbonus is 2;
-		increase combat bonus by speciesbonus;
-	if hardmode is true:
-		if the combat bonus is greater than 10:
-			now combat bonus is 10;
-		otherwise if the combat bonus is less than -10:
-			now combat bonus is -10;
-	let the roll be a random number from 1 to 20;
-	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the combat bonus is greater than 8:
-		let wmstrike be 0;
-		let z be 0;
-		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100;
-		if weapon object of player is journal:		[unarmed combat]
-			if "Martial Artist" is listed in feats of player:
-				increase dam by 1;
-			if "Black Belt" is listed in feats of player:
-				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
-			if "Natural Armaments" is listed in feats of player and bodyname of player is not "human":
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
-					if name entry is bodyname of player:
-						now z is y;
-						break;
-				if z is 0:		[creature not listed]
-					increase dam by a random number between 0 and 2;
-				otherwise:
-					choose row z in table of random critters;
-					let dammy be 2;
-					if wdam entry > 3:					[nerfed for very high damage critters]
-						now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-					increase dam by a random number between 1 and dammy;
-				choose row monster from table of random critters;
-		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
-			now wmstrike is 1;
-			let numnum be level of player + ( ( intelligence of player - 10 ) / 2 ) + 105;
-			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
-		if "Powerful" is listed in feats of player:
-			now dam is ( ( dam times a random number from 105 to 125 ) divided by 100 );
-		if "Mayhem" is listed in feats of player:
-			let numnum be ( ( level of player * 5 ) / 2 ) + 100;
-			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
-		if weapon type of player is "Melee":
-			increase dam by (( the strength of the player minus 10 ) divided by 2);
-		if weapon type of player is "Ranged":
-			increase dam by (( the Perception of the player minus 10 ) divided by 2);
-		if a random chance of the morale of the player in 200 succeeds:
-			say "Filled with sudden motivation, your attack scores particularly well!  ";
-			increase dam by dam;
-		if wmstrike is 1:			[Weaponsmaster used]
-			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
-		otherwise if weapon object of player is journal:
-			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player], you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [dam] damage!";
-			otherwise if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
-				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [dam] damage!";
-			otherwise:
-				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
-		otherwise:
-			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
-		if a random chance of 4 in 20 succeeds and "Tail Strike" is listed in feats of player:
-			if tailname of player is listed in infections of Tailweapon:
-				let z be 0;
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
-					if name entry is tailname of player:
-						now z is y;
-						break;
-				choose row z in table of random critters;
-				let dammy be 2;
-				if wdam entry > 3:					[nerfed for very high damage critters]
-					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [dammy] damage!";
-				increase dam by dammy;
-				choose row monster from table of random critters;
-		if a random chance of 4 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12:
-			follow the cock descr rule;
-			follow the cunt descr rule;
-			let dammy be 0;
-			let z be cock length of player + ( 2 * cocks of player ) - 12;
-			now dammy is ( square root of ( 2 * z ) ) + 1;
-			if dammy > 8, now dammy is 8;
-			increase dammy by a random number between 0 and 1;
-			if cocks of player >= 3, increase dammy by a random number between 0 and 1;
-			say "[line break]You give your opponent a hard swat with your [cock size desc of player] wang[if cocks of player > 1]s[end if] for [dammy] additional damage!";
-			increase dam by dammy;
-		if a random chance of 4 in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16:
-			let dammy be 0;
-			now dammy is ( square root of ( 2 * ( cock width of player - 13 ) ) ) + 1;
-			if dammy > 8, now dammy is 8;
-			increase dammy by a random number between 0 and 1;
-			say "[line break]You tackle your opponent, slamming your [ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [dammy] additional damage!";
-			increase dam by dammy;
-		if a random chance of 4 in 20 succeeds and "Boob Smother" is listed in feats of player and breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7:
-			let dammy be 0;
-			let z be breast size of player + breasts of player;
-			now dammy is square root of ( z - 1 ) + 1;
-			if dammy > 7, now dammy is 7;
-			increase dammy by a random number between 0 and 1;
-			if breasts of player > 4, increase dammy by a random number between 0 and 1;
-			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [dammy] additional damage!";
-			increase dam by dammy;
-		if a random chance of 5 in 20 succeeds and "Spirited Youth" is listed in feats of player:
-			let y be a random number from 4 to 6;
-			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [y] damage!";
-			increase dam by y;
-		otherwise if a random chance of 1 in 20 succeeds and "Youthful Tides" is listed in feats of player:
-			let y be 0;
-			repeat with s running from 1 to number of entries in childrenfaces:
-				increase y by a random number from 2 to 4;
-			increase dam by y;
-			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [y] damage!";
-		decrease monsterhp by dam;
-		follow the monster injury rule;
-		say "[Name entry] is [descr].";
-	otherwise:
-		say "You miss!";
-	if player is not lonely and a random chance of 1 in 20 succeeds and "The Horde" is listed in feats of player:
-		say "[line break]";
-		say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
-		say "[line break]";
-		repeat with z running through tamed pets:
-			now attack bonus is ( ( dexterity of z minus 10 ) divided by 2 ) plus level of z;
-			let the combat bonus be attack bonus minus defense bonus;
-			if hardmode is true and combat bonus is greater than 10:
-				now combat bonus is 10;
-			now roll is a random number from 1 to 20;
-			if roll plus the combat bonus is greater than 8:
-				let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-				say "[z]: [assault of z] [dam] damage inflicted!";
-				decrease monsterhp by dam;
-			otherwise:
-				say "Your [z] misses!";
-	otherwise if player is not lonely and a random chance of 1 in 5 succeeds:
-		now attack bonus is ( ( dexterity of companion of player minus 10 ) divided by 2 ) plus level of companion of player;
-		let the combat bonus be attack bonus minus defense bonus;
-		if hardmode is true and combat bonus is greater than 10:
-			now combat bonus is 10;
-		now roll is a random number from 1 to 20;
-		if roll plus the combat bonus is greater than 8:
-			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
-			say "[assault of companion of player] [dam] damage inflicted!";
-			decrease monsterhp by dam;
-		otherwise:
-			say "Your [companion of player] misses!";
-	say "[line break]";
-	if monsterhp is greater than 0:
-		if before combat is 0:
-			Retaliate;
-[		change the current menu to table of Basic Combat;]
-	otherwise:
-		win;
-
-to win:
-	choose row monster from table of random critters;
-	follow the cock descr rule;
-	follow the cunt descr rule;
-	follow the breast descr rule;
-	let ok be 1;
-	if "Control Freak" is listed in feats of player:
-		say "Do you want to perform after combat scene?";
-		if the player consents:
-			now ok is 1;
-		otherwise:
-			now ok is 0;
-	if ok is 1, say "[defeated entry]";
-	increase the XP of the player by lev entry times two;
-	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by (lev entry divided by 2);
-	if the player is not lonely:
-		increase the xp of the companion of the player by lev entry times two;
-		if "Ringmaster" is not listed in feats of player:
-			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
-	increase the morale of the player by 1;
-	let z be 0;
-	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
-		now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
-		increase lootchance entry by z;
-	otherwise if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
-		now z is lootchance entry divided by 3;
-		increase lootchance entry by z;
-	let yy be ( ( ( perception of player - 10 ) / 2 ) * 3 );	[minor perception bonus to looting, maxed at 30 PER]
-	if yy > 30, now yy is 30;
-	if lootchance entry > 50, now yy is ( yy * ( 100 - lootchance entry ) ) divided by 100;
-	if lootchance entry <= 50, now yy is ( yy * lootchance entry ) divided by 100;
-	if a random chance of ( lootchance entry + yy ) in 100 succeeds:
-		say "You gain 1 x [loot entry]!";
-		add loot entry to invent of player;
-	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
-		decrease lootchance entry by z;
-	vialchance (name entry);
-	let reward be lev entry * 2;
-[	if lev entry is greater than 4:
-		now reward is reward * 2;
-	if lev entry is greater than 8:
-		now reward is reward * 2;	]
-	if lev entry > 2, increase reward by 1;
-	if lev entry > 4, increase reward by ( lev entry / 4 );
-	if lev entry > 8, increase reward by ( lev entry / 3 );
-	increase freecred by reward;
-	say "[line break]A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
-	if ok is 1, wait for any key;
-	clear the screen and hyperlink list;
-	now automaticcombatcheck is 0; [combat is over, reset to zero]
-	rule succeeds;
 
 To Vialchance (x - a text):
 	if researchbypass is 1, continue the action;
@@ -2853,12 +2516,9 @@ To Vialchance (x - a text):
 			now vcoll is 0;
 
 
-predestiny is a number that varies.
+predestiny is a number that varies.		[use unknown]
 
 calcnumber is a number that varies.
-
-automaticcombatcheck is a number that varies. [used to mark if combat actions are not being chosen by the player]
-inafight is a number that varies.	[used to detect if player is in a fight (item use)]
 
 To get a number:
 	get typed command as playerinput;
@@ -2953,104 +2613,6 @@ To translate (k - a number):
 	otherwise:
 		now keychar is "INVALID";
 
-To Combat Menu:
-	now inafight is 1;
-	now automaticcombatcheck is 0; [sets to zero as combat starts, just in case]
-	while hp of player is greater than 0 and monsterhp is greater than 0:
-		if "Submissive" is listed in feats of player and a random chance of 1 in 30 succeeds: [chance to submit in combat if you have the submissive feat, feel free to adjust odds]
-			now automaticcombatcheck is 1;
-			if combat abort is 1:
-				now combat abort is 0;
-				rule succeeds;
-				stop the action;
-			say "Your submissive nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
-			follow the submit rule;
-		otherwise if autoattackmode is 1: [always attacks in combat, no player input needed]
-			now automaticcombatcheck is 1;
-			if combat abort is 1:
-				now combat abort is 0;
-				rule succeeds;
-				stop the action;
-			follow the player attack rule;
-		otherwise if autoattackmode is 3: [always pass in combat, no player input needed]
-			now automaticcombatcheck is 1;
-			if combat abort is 1:
-				now combat abort is 0;
-				rule succeeds;
-				stop the action;
-			follow the combat pass rule;
-		otherwise if autoattackmode is 4: [always flees in combat, no player input needed]
-			now automaticcombatcheck is 1;
-			if combat abort is 1:
-				now combat abort is 0;
-				rule succeeds;
-				stop the action;
-			follow the flee rule;
-		otherwise if autoattackmode is 5: [always submit in combat, no player input needed]
-			now automaticcombatcheck is 1;
-			if combat abort is 1:
-				now combat abort is 0;
-				rule succeeds;
-				stop the action;
-			follow the submit rule;
-		otherwise:
-			if combat abort is 1:
-				now combat abort is 0;
-				wait for any key;
-				clear the screen and hyperlink list;
-				continue the action;
-			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee[line break]";
-			let combatopt be 0;
-			repeat through table of basic combat:
-				increase combatopt by 1;
-				say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link][line break][run paragraph on]";
-			say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
-			let k be 0;
-			now keychar is "INVALID";
-			change the text of the player's command to "";
-			while keychar is "INVALID":
-				now k is the chosen letter;
-				translate k;
-				if the player's command matches "[number]":
-					now keychar is "[number understood]";
-			if keychar in lower case exactly matches the text " ":
-				follow the player attack rule;
-				next;
-			if keychar in lower case exactly matches the text "return":
-				follow the player attack rule;
-				next;
-			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return":
-				follow the player attack rule;
-				next;
-			if keychar in lower case exactly matches the text "i" or keychar in lower case exactly matches the text "2":
-				follow the combat item rule;
-				next;
-			if keychar in lower case exactly matches the text "p" or keychar in lower case exactly matches the text "3":
-				follow the combat pass rule;
-				next;
-			if keychar in lower case exactly matches the text "f" or keychar in lower case exactly matches the text "4":
-				follow the flee rule;
-				next;
-			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "5":
-				follow the submit rule;
-				next;
-			if keychar in lower case matches the text "attack":
-				follow the player attack rule;
-				next;
-			if keychar in lower case matches the text "item":
-				follow the combat item rule;
-				next;
-			if keychar in lower case matches the text "pass":
-				follow the combat pass rule;
-				next;
-			if keychar in lower case matches the text "submit":
-				follow the submit rule;
-				next;
-			if keychar in lower case matches the text "flee":
-				follow the flee rule;
-				next;
-			say "Invalid action.";
 
 to Pet level up:
 	increase level of companion of player by 1;
@@ -3082,78 +2644,6 @@ To level up:
 		funfeatget;
 	increase score by level of the player times level of the player;
 	
-Retaliating is an action applying to nothing.
-
-To Retaliate:
-	now avoidance is 0;
-	say "[avoidancecheck]";
-	if gascloud > 0, decrease gascloud by 1;
-	if avoidance is 1:
-		say "";
-	otherwise:
-		choose row monster from the table of random critters;
-		let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
-		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
-		let the combat bonus be attack bonus minus defense bonus;
-		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
-			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
-			decrease combat bonus by 3;
-		if hardmode is true and the combat bonus is less than -10:
-			now the combat bonus is -10;
-		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
-		let the roll be a random number from 1 to 20;
-		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-		if the roll plus the combat bonus is greater than 8:
-			let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
-			if hardmode is true and a random chance of 1 in 10 succeeds:
-				now dam is (dam * 150) divided by 100;
-				say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-			say "[Attack entry] You take [dam] damage!";
-			let absorb be 0;
-			if "Toughened" is listed in feats of player:
-				increase absorb by dam divided by 5;
-			repeat with x running through equipped equipment:
-				increase absorb by ac of x;
-			if absorb is greater than dam:
-				now absorb is dam;
-			if absorb is greater than 0:
-				say "You prevent [absorb] damage!";
-			decrease hp of the player by dam;
-			increase hp of player by absorb;
-			follow the player injury rule;
-			say "You are [descr].";
-		otherwise:
-			say "[Name Entry] misses!";
-	if hp of the player is greater than 0:
-		wait for any key;
-		[carry out the displaying activity;]
-	otherwise:
-		Lose;
-	rule succeeds;
-
-avoidance is a number that varies.
-
-to say avoidancecheck:					[collection of all enemy attack avoidance checks]
-	choose row monster from the table of random critters;
-	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
-		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
-		say "[Name Entry] misses!";
-		now avoidance is 1;
-	otherwise if weapon object of player is bo staff:		[defensive combat]
-		let boblock be 5;
-		if "Martial Artist" is listed in feats of player, increase boblock by 3;
-		if "Black Belt" is listed in feats of player, increase boblock by 4;
-		if "Weaponsmaster" is listed in feats of player, increase boblock by 6;
-		let numnum be ( (strength of player + dexterity of player + stamina of player - 36 ) / 3 );
-		if numnum > 0, increase boblock by numnum;
-		increase boblock by gascloud;
-		if boblock > a random number between 0 and 100:
-			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
-			now avoidance is 1;
-	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
-		say "You nimbly avoid the attack at the last moment!";
-		now avoidance is 1;
-
 Before combat is a number that varies.
 
 To fight:
@@ -3217,7 +2707,11 @@ To fight:
 				say "The creature is about to get the drop on you, but your vigilance spots it just in time!  You ready yourself for battle.";
 			otherwise:
 				say "The creature gets the drop on you!";
-				retaliate;
+				follow the monster combat mode rule;		[select the combat mode for first-strike]
+				choose row monstercom from table of Critter Combat;
+				if there is a continuous in row monstercom of the table of Critter Combat:
+					follow the continuous entry;
+				follow the combat entry;
 				if hp of player is less than 1 or lost is 1, stop the action;
 		if weapon object of player is ranged:
 			now bonus is ( perception of player minus 10 ) divided by 2;
@@ -3229,9 +2723,6 @@ To fight:
 				follow the player attack rule;
 				now before combat is 0;
 		wait for any key;
-[		change the current menu to table of Basic Combat;
-		carry out the displaying activity;
-		clear the screen;]
 		Combat Menu;
 		now inafight is 0;
 		let needed be ( level of player plus one ) times 10;
@@ -3244,7 +2735,6 @@ To fight:
 			now needed is ( level of companion of player ) times 6;
 		if xp of companion of player is greater than needed and level of companion of player is less than level of player:
 			pet level up;
-		[try looking;]
 	rule succeeds;
 
 To challenge:
@@ -3260,8 +2750,6 @@ To challenge:
 		rule succeeds;
 		stop the action;
 	wait for any key;
-[	change the current menu to table of Basic Combat;
-	carry out the displaying activity;]
 	Combat Menu;
 	now inafight is 0;
 	if xp of player is greater than ( level of player plus one ) times 10:
@@ -5011,6 +4499,7 @@ Include Computers by Hellerhound.
 Include Feats by Nuku Valente.
 Include Pepperspray by Stripes.
 Include Masturbate by Stripes.
+Include Alt Combat by Stripes.
 
 
 [Locations]
