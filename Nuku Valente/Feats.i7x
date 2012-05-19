@@ -146,6 +146,8 @@ instead of addfeating the fun feats:
 		if "Flat Chested" is not listed in feats of player, addfeat "Breasts" with "Despite being all male, you still grow breasts, curious.";
 	otherwise:
 		if "Breasts" is not listed in feats of player, addfeat "Flat Chested" with "Your chest tends to remain flat.";
+	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
+		addfeat "Single Sexed" with "You can be male, or female, but not both.";
 	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
 		addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership";
 	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
