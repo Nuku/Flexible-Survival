@@ -67,7 +67,7 @@ When Play begins:
 	now ass change entry is "your center of balance tips dangerously as a tremendously long yet narrow tail explodes from your ass. A small sail forming along the top."; [ Reference "Your ass feels funny as (your text)" ]
 	now cock change entry is "your cock turns black as it gradually tapers towards the tip.  As the tapering reaches the tip it spreads out into a spade shape.";
 	now str entry is 30;
-	now dex entry is 8;
+	now dex entry is 14;
 	now sta entry is 28;					
 	now per entry is 12;
 	now int entry is 6;
