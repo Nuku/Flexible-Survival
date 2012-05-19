@@ -4821,8 +4821,9 @@ When play begins:
 		add name in row Q of table of game objects to allobjs;
 	change the right hand status line to "[list of valid directions]";
 	say "Do you want hyperlinks? (Y/n)";
-	get typed command as playerinput;
-	if playerinput matches "no" or playerinput matches "n":
+	if the player consents:
+		let x be 0;
+	otherwise:
 		now hypernull is 1;
 		say "Hyperlinks disabled.";
 	follow the random stats rule;
