@@ -19,6 +19,15 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
+To say a/an (T - text):
+	let Txt be indexed text;
+	let Txt be T;
+	if Txt matches the regular expression "^<aeiouAEIOU>":
+		say "an ";
+	otherwise:
+		say "a ";
+	say T.
+   
 To wait for any key:
 	if hypernull is 0:
 		say "[link]more[as] [end link]";
