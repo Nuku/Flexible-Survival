@@ -41,7 +41,7 @@ instead of conversing the Boris:
 		increase boristalk by 1;
 		stop the action;
 	if boristalk is 1:
-		say "[one of]'Back again? don't say I didn't warn you.'[or]Seeming startled out of some inner fantasy, Boris looks around for a second before his eyes manage to focus on you, 'Hey kid, you seen an evil antelope go by here? Name of Arthur?'[or]'Heeey there! I'm Boris the lion! How can I help you today!'[or]'Hey there and welcome to the fair, please enjoy your stay with us.' he says absentmindedly.[or]'There's  poachers in the pride-lands again!'[or]'Strangely enough, it's cooler out here in fur then it was when it was a damn suit'[or]'I knew I should have quit this job last month when I had the chance....'[or]'Watch out for the stuffed prizes, well unless you have some strange fantasy about being a plush toy,' Boris warns, 'If you do though... well you came to the right place,'[or]'You know, it's funny,' Boris says with a thoughtful expression 'I can't really remember the last time the fair was this busy.'[or]'There's plenty of food and stuff lying around in the fair' Boris comments, waving a half eaten hot dog at you, 'Just stay away from the cotton candy if you know what's good for you.'[or]'If you find a way out of this place, mind letting me know?' Boris says with a sigh, 'Got to be plenty of places that could use a new mascot out there.'[or] 'Pride life is the best!' Boris exclaims, before catching himself and sighing.[or]'Suffering Savannah!'[or]'Man I wish someone had been wearing the Christy the Lioness suit the other day...' he mutters to himself, before blushing and looking embarrassed.[or]'You aren't a poacher are you? I hate poachers' Boris says with a growl.[at random]";
+		say "[one of]'Back again? don't say I didn't warn you.'[or]Seeming startled out of some inner fantasy, Boris looks around for a second before his eyes manage to focus on you, 'Hey kid, you seen an evil antelope go by here? Name of Arthur?'[or]'Heeey there! I'm Boris the lion! How can I help you today!'[or]'Hey there and welcome to the fair, please enjoy your stay with us.' he says absentmindedly.[or]'There's  poachers in the pride-lands again!'[or]'Strangely enough, it's cooler out here in fur than it was when it was a damn suit.'[or]'I knew I should have quit this job last month when I had the chance....'[or]'Watch out for the stuffed prizes, well unless you have some strange fantasy about being a plush toy,' Boris warns, 'If you do though... well you came to the right place,'[or]'You know, it's funny,' Boris says with a thoughtful expression 'I can't really remember the last time the fair was this busy.'[or]'There's plenty of food and stuff lying around in the fair' Boris comments, waving a half eaten hot dog at you, 'Just stay away from the cotton candy if you know what's good for you.'[or]'If you find a way out of this place, mind letting me know?' Boris says with a sigh, 'Got to be plenty of places that could use a new mascot out there.'[or] 'Pride life is the best!' Boris exclaims, before catching himself and sighing.[or]'Suffering Savannah!'[or]'Man I wish someone had been wearing the Christy the Lioness suit the other day...' he mutters to himself, before blushing and looking embarrassed.[or]'You aren't a poacher are you? I hate poachers' Boris says with a growl.[at random]";
 	if boristalk is 2:
 		say "'Any luck with helping me out with my little [']problem[']?' Boris asks you hopefully.";
 	if boristalk is 3:
@@ -96,10 +96,16 @@ instead of fucking boris:
 					say "Something seeming totally wrong about this picture, even to your confused mind, you open your mouth to protest, only to have Boris begin pressing the point of his large cock painfully into your empty crotch making you gasp.  'Now don[apostrophe]t worry, this might sting a bit at first,' You hear Boris say with amusement behind you, as his hands grip you tightly keeping you in place bent over the table.  You gasp and cry out in pain as his hard member presses into you roughly, you writhe underneath him in resistance. But just as you are about to beg for him to stop, you feel strange changes in your body, and you feel your crotch seem to split open around his member, which is now pressing directly into your body!  You moan as all the painful sensations you were feeling explode into pleasureable ones instead, your chest seeming to explode in two spots of pleasure as well, as you brace yourself against the table, positioning yourself better for that wonderful cock. [line break]";
 					say "As your new female passage finishes forming around him, Boris shifts and grips your hips tightly as he begins to fuck you in earnest, causing you to gasp and moan as the intense pleasure shoots through you.  Without hesitation you find yourself giving yourself over to these new feelings, and find your eyes closing as you picture the handsome Boris fucking you in your mind.  Your mind wanders in a sea of pleasure, as your new sensitive breasts brush across the table with each thrust, and you find yourself recalling all your other wonderful times with Boris as you grew up and chased villains together, and how you almost caught that awful Arthur the Antelope red handed several times.  But of all your strangely fuzzy memories you think this one is definitely the best ever, you find yourself deciding as the pleasure builds up inside you, and you cry out as your body shudders with an intense orgasm.  Boris roars behind you, as  your new pussy which was literally made for his new organ convulses tightly around it, bringing him to orgasm as his he shoots his hot seed deep into your body.  Yes you find yourself thinking, your body tingling as his seed fills you, the memory of when Boris the lion finally took his lioness Christy and made her his, now and forever... is definitely going to be your favorite memory for a long time to come, though you look forward to making many more pleasureable memories with Boris as soon as you both have recovered...";
 					now christyquest is 4;
-					decrease humanity of player by 100;
+					now humanity of player is 0;
 					now body of player is "nothing";
 					now bodyname of player is "nothing";
+					now scalevalue of player is 3;
+					now bodydesc of player is "plump";
+					now bodytype of player is "[one of]plush[or]leonine[or]costume-like[at random]";
+					now the daycycle of player is 0;
+					end the game saying "You lose yourself to your new identity.";
 					follow the turnpass rule;
+					stop the action;
 				otherwise:
 					say "'That[apostrophe]s too bad,' Boris says with a sigh as he lowers the costume back into the box and carefully packs it away.  'I was really looking forward to putting the new cock you got for me to good use.' He says as he pats his new large sheath teasingly.";
 					Now christyquest is 3;
@@ -116,9 +122,15 @@ instead of fucking boris:
 					decrease humanity of the player by 100;
 					now body of player is "nothing";
 					now bodyname of player is "nothing";
+					now scalevalue of player is 3;
+					now bodydesc of player is "plump";
+					now bodytype of player is "[one of]plush[or]leonine[or]costume-like[at random]";
+					now the daycycle of player is 0;
+					end the game saying "You lose yourself to your new identity.";
 					follow the turnpass rule;
+					stop the action;
 				otherwise:
-					Say "'Well now your just teasing me,' Boris says as once more puts the costume up, sighing, 'And I was so looking forward to having some fun too.' The costumed lion says as he rubs his newly acquired package with a large paw.";
+					Say "'Well, now you're just teasing me,' Boris says as once more puts the costume up, sighing, 'And I was so looking forward to having some fun too.' The costumed lion says as he rubs his newly acquired package with a large paw.";
 					stop the action;
 		otherwise:
 			if borismate is 0:

@@ -45,7 +45,7 @@ When Play begins:
 	now cock change entry is "it engorges itself with molten blood. It now glows a deep orange and the veins of it glow brightly. There are evil looking barbs along its tip and along its belly, when ejaculating you know they will stiffen, making it impossible to pull away from your partner. Your balls also ignite with an inner light and a painful fire begins to brew within them.";
 	now str entry is 15;
 	now dex entry is 18;
-	now sta entry is 16;		
+	now sta entry is 16;
 	now per entry is 13;
 	now int entry is 9;
 	now cha entry is 8;

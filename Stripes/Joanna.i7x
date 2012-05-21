@@ -68,6 +68,7 @@ to say losejoannafight:
 	now skinname of player is "Parasitic Plant";
 	now bodyname of player is "Parasitic Plant";
 	now cockname of player is "Parasitic Plant";
+	attributeinfect;
 	now tail of player is tail entry;
 	now face of player is face entry;
 	now skin of player is skin entry;

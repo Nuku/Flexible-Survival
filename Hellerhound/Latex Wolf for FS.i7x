@@ -154,6 +154,7 @@ when play ends:
 				now skin of player is skin entry;
 				now body of player is body entry;
 				now cock of player is cock entry;
+				attributeinfect "Latex Wolf";
 				now cock length of player is cock length of player * 10;
 				now cock width of player is cock width of player * 10;
 				now cunt length of player is cunt length of player * 10;
@@ -186,6 +187,7 @@ when play ends:
 					now skin of player is skin entry;
 					now body of player is body entry;
 					now cock of player is cock entry;
+					attributeinfect "Latex Wolf";
 					now cock length of player is cock length of player * 10;
 					now cock width of player is cock width of player * 10;
 					now cunt length of player is cunt length of player * 10;

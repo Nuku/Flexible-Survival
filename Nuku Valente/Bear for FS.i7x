@@ -1,5 +1,5 @@
-Bear for FS by Nuku Valente begins here. 
-[ Really v1.01 of Bear for FS by Illpill from Nuku Valente's Equine extension as it were, but who likes a pedant?]
+Version 2 of Bear for FS by Nuku Valente begins here. 
+[ Version 2 - New critter table entries added and Alt Combat enabled ]
 
 "Adds a Bear to Flexible Survivals Wandering Monsters table."
 [Description text for this Extension.]
@@ -47,7 +47,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Bear"; [Name of your new Monster]
-	now attack entry is "[one of] She slams you with one of her great clawed hands. As you are sent flying you wonder where she gets her red nail polish.[or]With terrifying ease she picks you up and throws you into a pile of rubbish.[or] With a great sweep of her fur covered arm she knocks you flying.[or]She squeezes you, only letting go when you bite at her coarse furred chest.[or] Teeth that can shear your head off close around your neck, before being withdrawn.  She smiles embarrassed, 'sorry!' before punching the wind out of you.'[or] As she flattens you again you wonder if your plan needs changing. [at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She slams you with one of her great clawed hands. As you are sent flying you wonder where she gets her red nail polish.[or]With terrifying ease she picks you up and throws you into a pile of rubbish.[or]With a great sweep of her fur covered arm she knocks you flying.[or]Teeth that can shear your head off close around your neck, before being withdrawn.  She smiles embarrassed, 'sorry!' before punching the wind out of you.'[or]As she flattens you again you wonder if your plan needs changing. [at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[one of]The beaten bear comes back to her senses. 'Oh.  That's better.' and then slumps over, apparently peacefully asleep.[or] You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]. "; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[ursine attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "A huge towering figure comes into view.  At first you see a wild bear on its hind legs but on closer inspection you realise that it's legs are somewhat long and its black claws are painted with nail polish, and she is absently rubbing herself... another infected citizen of this crazy world.  It must be the influence of the infection on you, but the longer you watch the more you see she is quite attractive in a uniquely bear kind of way. She has bright [one of]brown[or]blue[or]green[at random] eyes and behind what might be a smile a  row of terrifying huge pointed teeth. She is naked but covered in dense shaggy fur that covers her tall and wide body completely. . Her muscular chest is padded with three rows of flattish breasts and long nipples peek through her fur.  On seeing you, she speaks and exposes more of those teeth, '[one of]Run! I don't want to break another one![or]Not now, you dummy![or] Are you stalking me?[at random],'";[ Description of the creature when you encounter it.]
@@ -84,6 +84,15 @@ When Play begins:
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Honeycomb";			[ Loot monster drops, ]
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table ]
+	now scale entry is 4;				[ Number 1-5, rough approx of infected PC body size/height.  1=small, 3=avg, 5=huge ]
+	now body descriptor entry is "burly";	[ one-word adjective descriptor of monster/infected PC's body for use in scenes ]
+	now type entry is "ursine";			[ one-word creature type. Ex: feline, bovine, robotic, cyborg, lupine, canine, human... ]
+	now magic entry is false;			[ Is this a magic creature? true/false ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? True/False (should almost invariably be false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "bearhugger";	[ Uses the 'bearhugger' entry from the Table of Critter Combat ]
 
 when play ends:
 	if bodyname is "Bear":

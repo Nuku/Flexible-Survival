@@ -595,6 +595,7 @@ Instead of resolving a Cameo:
 		now skinname of player is "Chocolate Lab";
 		now bodyname of player is "Chocolate Lab";
 		now cockname of player is "Chocolate Lab";
+		attributeinfect;
 		now tail of player is tail entry;
 		now face of player is face entry;
 		now skin of player is skin entry;

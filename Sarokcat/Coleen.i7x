@@ -181,6 +181,10 @@ carry out Coleenspraying:
 					now bodyname of player is "human";
 					now skin of player is "human";
 					now skinname of player is "human";
+					now scalevalue of player is 3;
+					now bodydesc of player is "unchanged";
+					now bodytype of player is "human";
+					now the daycycle of player is 0;
 					increase humanity of player by 20;
 					increase Coleenspray by 1;
 					stop the action;
@@ -197,6 +201,10 @@ carry out Coleenspraying:
 					now bodyname of player is "human";
 					now skin of player is "human";
 					now skinname of player is "human";
+					now scalevalue of player is 3;
+					now bodydesc of player is "unchanged";
+					now bodytype of player is "human";
+					now the daycycle of player is 0;
 					increase humanity of player by 20;
 					increase Coleenspray by 1;
 					stop the action;
@@ -219,6 +227,10 @@ carry out Coleenspraying:
 					now bodyname of player is "human";
 					now skin of player is "human";
 					now skinname of player is "human";
+					now scalevalue of player is 3;
+					now bodydesc of player is "unchanged";
+					now bodytype of player is "human";
+					now the daycycle of player is 0;
 					increase humanity of player by 20;
 					increase Coleenspray by 1;
 					stop the action;				
@@ -230,6 +242,10 @@ carry out Coleenspraying:
 			now bodyname of player is "human";
 			now skin of player is "human";
 			now skinname of player is "human";
+			now scalevalue of player is 3;
+			now bodydesc of player is "unchanged";
+			now bodytype of player is "human";
+			now the daycycle of player is 0;
 			increase humanity of player by 20;
 			increase Coleenspray by 1;
 			stop the action;
@@ -237,16 +253,20 @@ carry out Coleenspraying:
 		say "'Ok lets try that again! I only have about enough for one more dose after this,' Coleen warns you as she once again sprays you with the foul smelling liquid again, the tingling feeling spreading through you again, although strangely it seems to be much less strong this time, perhaps the chemicals are losing their effectiveness?";
 		now body of player is "human";
 		now bodyname of player is "human";
+		now scalevalue of player is 3;
+		now bodydesc of player is "unchanged";
+		now bodytype of player is "human";
+		now the daycycle of player is 0;
 		increase humanity of player by 20;
 		increase Coleenspray by 1;
 		stop the action;
 	if Coleenspray is 2:
-		say "'Well alright, it didn[apostrophe]t seem to help as much last time though. And there isn[apostrophe]t much left either.' Coleen says as she once again sprays that strange liquid on you, making your body tingle slightly, though you cant seem to notice any real changes, you still somehow feel slightly more human afterwards.";
+		say "'Well alright, it didn[apostrophe]t seem to help as much last time though. And there isn't much left either.' Coleen says as she once again sprays that strange liquid on you, making your body tingle slightly, though you can't seem to notice any real changes, you still somehow feel slightly more human afterwards.";
 		increase humanity of player by 10;
 		increase Coleenspray by 1;
 		stop the action;
 	otherwise:
-		say "'Sorry, but that[apostrophe]s it,' She says as she shakes the empty can helplessly, 'It[apostrophe]s all gone now sadly, and I don[apostrophe]t think it was working all that well there at the end anyways.' Coleen says with a sigh."; 
+		say "'Sorry, but that's it,' She says as she shakes the empty can helplessly, 'It[apostrophe]s all gone now sadly, and I don[apostrophe]t think it was working all that well there at the end anyways.' Coleen says with a sigh."; 
 
 
 LastColeenfucked is a number that varies. LastColeenfucked is usually 250.
