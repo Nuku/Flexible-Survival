@@ -238,6 +238,7 @@ to say parasiticlust:
 			if keepbody is 1:
 				now bodyname of player is "Parasitic Plant";
 				now body of player is body entry;
+				attributeinfect;
 			if keepcock is 1:
 				now cockname of player is "Parasitic Plant";
 				now cock of player is cock entry;

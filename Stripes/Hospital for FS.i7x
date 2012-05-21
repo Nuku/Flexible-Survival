@@ -392,7 +392,6 @@ to say hospprogress:
 				say ", but you still need to find a way to get upstairs if you're going to get into those rooms.  You should look around for an accessible [bold type]stairwell[roman type].";
 			if hospstairs is 1:
 				say ".  Between that and the open stairwell you've found to get upstairs, you should now be successful at [bold type]finding a way in[roman type] to reach those illuminated upper rooms with a little searching.";
-		wait for any key;
 
 
 Finding a Way in is a situation.
@@ -477,7 +476,7 @@ Instead of conversing the Doctor Mouse:
 			say "     'I had hoped to obtain some samples, but the creatures cannot be located.  I don't have anything further for you,' the mouse says, shaking his head.";
 			say "     (Unable to proceed with current creature blocks.  Girl, guy, herm and furry are all needed for subsequent segments.)";
 		otherwise if progress of doctor mouse minus turns is less than 8:
-			say "     Please leave me to my research for the moment.  I believe I shall have more need for you once I am done.";
+			say "     'Please leave me to my research for the moment.  I believe I shall have more need for you once I am done,' Doctor Mouse says as he waves you off dismissively while standing one of the lab stools to use one of the microscopes to examine a sample.";
 		otherwise:
 			extend game by 16;
 			say "[hospquestpt3]";
@@ -592,7 +591,7 @@ to say hospquestpt3:
 		now hospquest is 5;
 		increase score by 5;
 	if dogmilkfound > 0:
-		say "     'What is this?' he exclaims as you pull out the bottle of dog milk.  'You already have some?  Astonishing!  I knew you would make a fine assistant, but this is most impressive.  There are numerous possibilities for why that dog creature is unique and some of them could affect the results of my other experiments.  Ascertaining or removing certain variables will greatly increase the likelihood of gaining meaningful results.";
+		say "     'What is this?' he exclaims as you pull out the bottle of dog milk.  'You already have some?  Astonishing!  I knew you would make a fine assistant, but this is most impressive.  There are numerous possibilities for why that dog creature is unique and some of them could affect the results of my other experiments.  Ascertaining or removing certain variables will greatly increase the likelihood of gaining meaningful results.'";
 		delete dog milk;
 		now progress of Doctor Mouse is turns;
 		extend game by 6;
@@ -1018,6 +1017,7 @@ to say hosptfscene:
 		break;
 	now bodyname of player is name entry;
 	now body of player is body entry;
+	attributeinfect;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     Satiated, the mouse straightens up and regains his composure.  'Ahem!  Now that the... intermission is over, let us proceed to the final stages.'  He grabs another syringe, the largest yet by far.  His paw feels along your body, finding a sensitive spot before jabbing the needle into it, making you wince in pain before the warm tingles of pleasant change flow through you.  The jaguar orderly adjusts the various straps as your body alters itself.  Continuing to comment, Dr Mouse observes your body as [body change entry].";
 	[below section copied from infect algorithm, update as that is updated]

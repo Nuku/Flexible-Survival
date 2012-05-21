@@ -77,6 +77,10 @@ To pigfeed:
 		say "As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.[line break][line break]";
 		now bodyname of player is "Piggy";
 		now body of player is "You have a big, fat body and you have pig hooves instead of feet. ";
+		now scalevalue of player is 3;
+		now bodydesc of player is "[one of]fat[or]overweight[or]plump[at random]";
+		now bodytype of player is "[one of]porcine[or]piggish[at random]";
+		now the daycycle of player is 0;
 	if lastpigfed - turns is less than 8:
 		if pigfed is 3:
 			say "'That's okay, I finally figured out how to scavenge safely on my own. You don't have to get food for me any more.' He oinks.";
@@ -137,6 +141,10 @@ To pigfeed:
 				say "Thank you,' He shouts as he snatches the food from you and starts to gobble it down.[line break][line break]The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and once again splash on you. Your body immediately begins to feel strange. Your body plumps up and your feet ache for a moment as they harden into pig hooves.[line break][line break]When he finishes eating, he eyes you appreciatively, then says, 'You seem to know how to find food. Can I come with you?'";
 				now bodyname of player is "Piggy";
 				now body of player is "big and fat and you have pig hooves instead of feet";
+				now scalevalue of player is 3;
+				now bodydesc of player is "[one of]fat[or]overweight[or]plump[at random]";
+				now bodytype of player is "[one of]porcine[or]piggish[at random]";
+				now the daycycle of player is 0;
 				say "Do you let him?";
 				if player consents:
 					add "water bottle" to invent of bunker;
@@ -192,6 +200,10 @@ instead of fucking the philip:
 		say "As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.[line break][line break]";
 		now bodyname of player is "Piggy";
 		now body of player is "You have a big, fat body and you have pig hooves instead of feet. ";
+		now scalevalue of player is 3;
+		now bodydesc of player is "[one of]fat[or]overweight[or]plump[at random]";
+		now bodytype of player is "[one of]porcine[or]piggish[at random]";
+		now the daycycle of player is 0;
 	if cunts of player > 0:
 		say "Philip takes you by the hand and gently lays you down on the ground. He massages your tits as he positions his bulk on top of you. His huge gut rests on top of you, pinning you down. When he finally has his huge boar cock in position, he takes a moment to rub the tip against the puffy and moist lips of your pussy. Then, without warning, he thrusts his tool past your [cunt size desc of player] nether lips and deep into your pussy. You gasp in surprise and pleasure as he begins to gyrate his chubby hips, sending his cock in and out of you. You can feel his huge balls slapping against your inner thighs with each thrust. Philip oinks and squeals as he ruts you and soon you join in. Finally you experience a thundering orgasm and Philip lets out one loud, long squeal then thrusts his cock as far into you as he can, as he spews his hot pig seed into you.";
 		let baby be 0;

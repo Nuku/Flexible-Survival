@@ -108,6 +108,7 @@ to say fullmousification:
 	now skinname of player is "Mental Mouse";
 	now bodyname of player is "Mental Mouse";
 	now cockname of player is "Mental Mouse";
+	attributeinfect;
 	now tail of player is tail entry;
 	now face of player is face entry;
 	now skin of player is skin entry;

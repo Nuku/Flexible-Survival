@@ -10,9 +10,9 @@ Section 1 - Cum Vial
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Nymph Cum"	"A bottle of nymph cum? Man you will scavenge anything."	3	nymph cum
+"nymph cum"	"A bottle of nymph cum? Man you will scavenge anything."	3	nymph cum
 
-nymph cum is a grab object. It is a part of the player. Understand "cum" and "seed" and "spunk" as nymph cum. nymph cum is infectious. The strain of nymph cum is "Tree Nymph". The purified of nymph cum is "water bottle".
+nymph cum is a grab object. It is a part of the player. nymph cum is infectious. The strain of nymph cum is "Tree Nymph".  The purified of nymph cum is "water bottle".
 
 
 
@@ -47,7 +47,7 @@ To say nymph attack:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent. [impregchance]";
 		say "You manage to collect some of the cum, placing it in an empty water bottle.";
-		add "Nymph Cum" to the invent of the player;
+		add "nymph cum" to the invent of the player;
 		infect "Tree Nymph";	
 	if cocks of player is greater than 0 and cunts of player is 0:
 		say "You collapse under the pain of your beating, and the nymph approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body and immobilizing you. ";
@@ -57,7 +57,7 @@ To say nymph attack:
 		say "After you finish, she shoves one of her breasts into your face. 'still not had a drink, eh?', she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
 		infect "Tree Nymph";
 		say "You collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
-		add "Nymph Cum" to the invent of the player;
+		add "nymph cum" to the invent of the player;
 	if cocks of player is 0 and cunts of player is 0:
 		say "She looks at you with horror. 'Nothing? Nothing for me to play with?' She exclaims. Well, you will just have to fix that and come back later.";
 		infect "Tree Nymph";
@@ -104,7 +104,7 @@ When Play begins:
 	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Nymph Cum";			[ Loot monster drops, ]
+	now loot entry is "nymph cum";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 
 

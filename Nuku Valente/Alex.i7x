@@ -371,6 +371,10 @@ to say brunchtimechange:
 		now body of player is "the slender and flexible form of a ferret.  You constantly have the urge to weave and bob about playfully as you move";
 		now cockname of player is "Ferret";
 		now cock of player is "ferret";
+		now scalevalue of player is 3;
+		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
+		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
+		now the daycycle of player is 0;
 		increase dexterity of player by 2;
 		decrease stamina of player by 1;
 		say "[bold type]Your dexterity has increased by 2 while your stamina has dropped by 1.[roman type][line break]";
@@ -393,6 +397,10 @@ to say alexbodyreset:
 		say ".  Alex rubs his slinky body against yours, chirring as your body becomes slender and ferret-like once more";
 		now bodyname of player is "Ferret";
 		now body of player is "the slender and flexible form of a ferret.  You constantly have the urge to weave and bob about playfully as you move";
+		now scalevalue of player is 3;
+		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
+		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
+		now the daycycle of player is 0;
 	if alexbrunch is greater than 3 and cockname of player is not "Ferret":
 		say ".  Rubbing his stiff cock against your loins, his precum leaks onto you.  You can feel pleasant tingles as they are restored to their mustelid nature";
 		now cockname of player is "Ferret";

@@ -270,6 +270,7 @@ to say eaglefulltf:
 	now skinname of player is "Bald Eagle";
 	now bodyname of player is "Bald Eagle";
 	now cockname of player is "Bald Eagle";
+	attributeinfect;
 	now tail of player is tail entry;
 	now face of player is face entry;
 	now skin of player is skin entry;

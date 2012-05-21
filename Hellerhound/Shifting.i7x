@@ -178,6 +178,25 @@ To transform:
 		say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 		now bodyname of player is name entry;
 		now body of player is body entry;
+		if there is a scale in row monster of the table of random critters:
+			now scalevalue of player is scale entry;
+		otherwise:
+			now scalevalue of player is 3;
+		if there is a body descriptor in row monster of the table of random critters:
+			now bodydesc of player is body descriptor entry;
+		otherwise:
+			now bodydesc of player is name entry;
+		if there is a type in row monster of the table of random critters:
+			now bodytype of player is type entry;
+		otherwise:
+			now bodytype of player is name entry;
+		if there is a nocturnal in row monster of the table of random critters:
+			if nocturnal entry is true:
+				now the daycycle of player is 2;		[night-preferred]
+			if nocturnal entry is false:
+				now the daycycle of player is 1;		[day-preferred]
+		otherwise:
+			now the daycycle of player is 0;			[standard]
 	follow the sex change rule;
 	follow the sex change rule;
 	if cockname of player is not name entry:
@@ -218,6 +237,10 @@ when play ends:
 			say "You are unable to choose a form, and spend your days changing to whatever suits you. Within a few days of the revitalization of the city, the spy force contacts you, ringing your phone off the hook for hours until you finally return home. They offer you work, and give such bonuses and pay that you couldn't resist. Your ability helps, and the only work you have to do is mimicking the knowledge of who you are impersonating, training yourself for future success.";
 		now body of player is "nothing"; 
 		now bodyname of player is "nothing";
+		now scalevalue of player is 3;
+		now bodydesc of player is "shapeshifting";
+		now bodytype of player is "shapeshifter";
+		now the daycycle of player is 0;
 		say "((Being a shapeshifter, your normal ending for your body type is suppressed))";
 
 Shifting ends here.

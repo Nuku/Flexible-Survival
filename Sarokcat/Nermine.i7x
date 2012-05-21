@@ -728,6 +728,7 @@ to say plrtcl:
 			now skin of player is the skin entry;
 			now body of player is the body entry;
 			now cock of player is the cock entry;
+			attributeinfect "Plush lion";
 		otherwise if tempnum is 2:
 			say "Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange, inflatable tiger.  Pulling out the small, rubber toy, you grin in bemusement at what a silly little thing like this was doing in such a strange place.  Looking it over quickly, it seems to have surprisingly survived its time in the bargain bin unpunctured.  You give it a light squeeze between your hands and it pops with an odd, meow-like bang, causing you to jump back in surprise.  The popped balloon toy hangs limply in your hands... which start to tingle.  Looking down, you realize that the toy's rubber skin is melting into your own and spreading all over your body!  Panicking slightly, you try to shake the stuff off of you.  As your head shifts an inflates into a more feline form, you blink your plasticky eyes as you realize that having such lovely, smooth skin could be a good thing.  Now, if only you could find another rubber kitty to play with you...";
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -745,6 +746,7 @@ to say plrtcl:
 			now skin of player is the skin entry;
 			now body of player is the body entry;
 			now cock of player is the cock entry;
+			attributeinfect "Rubber tigress";
 		otherwise:
 			say "Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange, chocolate treat.  Held in a rather plain box, this two pound chocolate hound is small, but solid.  You presume it must be left from Easter and pop the top to take a better look.  Certainly, you feel, this would make a tastier treat than some of your recent meals.  Your mouth waters as the scent of delicious, quality cocoa chocolate fills the air.  You pull it out and look it over, telling yourself you'll just take a nibble and save the rest for the next time you're hungry.  The canine confectionary seems well molded at first, with considerable attention to detail, further instilling the idea that it's a quality product in your mind.  You then you start to notice flaws and few details as you go.  As you get back to the front you realize that it's not a lack of detail, it's that the chocolate is rapidly growing soft and is soon flowing down over your hands.  You can't help yourself and start gobbling down the chocolate, moaning in pleasure as its smooth sweetness flows down your through even as your hands gets stickier and the brown starts to spread up your arms.  As you lick up the last of the flowing chocolate, you realize that your hands have become chocolate paws!  Panicking slightly, you try to shake the stuff off of you, before blinking your dark chocolate eyes as the chocolate sinks deeper and you become solid chocolate like the dog you found.  Now, if only you could find another confectionary to play with you...";
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -762,6 +764,7 @@ to say plrtcl:
 			now skin of player is the skin entry;
 			now body of player is the body entry;
 			now cock of player is the cock entry;
+			attributeinfect "Chocolate Lab";
 
 
 
@@ -814,6 +817,7 @@ To say jackaltotemmagic:
 		say "Looking down at yourself as the tingling begins to fade, you realize that you seem to be rather lean and skinny now, and perhaps a little shorter, your body obviously more built for grace and speed instead of combat.  The sight of your new form makes you smile happily though, as you realize that this new form is just what you needed for serving your mistress, its silky soft skin, and sensitive body obviously perfect for pleasuring and serving the larger and stronger jackal woman.   Thinking about Nermine you realize you can hardly wait to get back and show her your new perfect form, and thank her for all her help in helping you become the submissive little jackaltoy she wanted you to be. Wasting no time, you quickly run towards the shop, unable to wait as thoughts of the pretty and dominant shopkeeper run through your head, maybe if you are lucky she will even have another job or two for you to do, and if you are really lucky maybe she will even play with you some! You find yourself panting happily at the new thoughts, even as you run through the city on your swifter and surer legs.  ";
 		now bodyname of player is "jackalboy";
 		now body of player is "slim and sleek, only lightly muscled with slightly digigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal toy like yourself.";
+		attributeinfect "jackalboy";
 		now cockname of player is "jackalboy";
 		now cock of player is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
 		decrease strength of player by 2;
@@ -868,6 +872,7 @@ An everyturn rule:
 			say "Your body seems to twist and warp, making you convulse as your body fights off the intrusive new infection, soon you can see your body slimming back down into the sleek soft lines of the jackal boy your mistress likes so much.  The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you would[apostrophe]t want to make your mistress unhappy by being anything less than the lovely submissive jackal she helped mold you into.";
 			now bodyname of player is "jackalboy";
 			now body of player is "slim and sleek, only lightly muscled with slightly digigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal toy like yourself.";
+			attributeinfect "jackalboy";
 		if cockname of player is not "jackalboy":
 			now cockname of player is "jackalboy";
 			now cock of player is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
@@ -1150,6 +1155,7 @@ Instead of resolving a Twisted fruit grove:
 					decrease humanity of player by 100;
 					now body of player is "Parasitic Plant";
 					now bodyname of player is "Parasitic Plant";
+					attributeinfect "Parasitic Plant";
 					follow the turnpass rule;			
 			otherwise:
 				say "Unable to bring yourself to face another series of fights, for a creature that would probably only try to convert you later anyways, you quickly turn and run down the path you came in by, feeling vaguely guilty as you put the strange glade and the trapped feline behind you.";
@@ -1162,6 +1168,7 @@ Instead of resolving a Twisted fruit grove:
 			decrease humanity of player by 100;
 			now body of player is "Parasitic Plant";
 			now bodyname of player is "Parasitic Plant";
+			attributeinfect "Parasitic Plant";
 			follow the turnpass rule;			
 	if rarequesting is 1:
 		say "Traveling through the twists and turns of the park, you notice the scenery seems to slowly be twisting and changing, becoming even more vine covered and lewd with every step you take. Remembering the quest Nermine sent you on, you take this to be a sign you are headed in the right direction, and hurry quickly down the path eager to get this over with. The landscape seems to grow increasingly disturbing as you travel, until eventually the path ahead is blocked by a thin curtain of vines sporting strange flowers. Looking through the thin curtain of vines you can see what appears to be a quiet glade with a strangely warped tree in the center, a number of strange small viney bushes scattering the area around it. Looking closely at the tree you can see several large flesh coloured fruits hanging on the tree, and you notice a strong enticing smell emanating almost drawing you forward. You find yourself moving forward, only to halt as you notice a movement from the other side of the glade, The vines on that side being pushed aside as one of the golden furred Felinoids roaming the area slowly stalks into the area, his head held high as he sniffs the air, obviously as entranced by the teasing scent as you were.  You freeze as you watch the beast slowly cross the glade, your hand poised to draw the vines aside as he approaches the tree.[line break]";
@@ -1377,6 +1384,7 @@ To say jackalankhmagic:
 		say "The changes finally finished, you look down at yourself as the warm pleasant sensation finally fades, a grin stretching over your muzzle as you realize that your body seems to have become both lean and powerful now, your whipcord like muscles rippling over your new beastman like body with every movement. You stretch yourself out, shaking the kinks out of your new muscles, enjoying the feel of a powerful predatory body built for speed and strength both in and out of combat.  You notice thin tracings of gold patterns adorn the fur of your body now as well as your face, accentuating your well toned look, stretching again, you enjoy how natural and proper your new form feels on you. The thought of Nermine crosses your mind as you admire yourself, and you can hardly wait to see just what the lovely jackal shopkeeper thinks about your new form as well. A grin crosses your muzzle as you wonder if what the jackal man said about your 'irresistible' new attraction is true, and you find yourself growing aroused at the very thought of the proper little jackal woman panting and begging you for more. You decide you will have to investigate that possibility at some point soon, as you stretch out your new more canine legs, before heading out into the city again with confidence.";
 		now bodyname of player is "jackalman";
 		now body of player is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself..";
+		attributeinfect "jackalman";
 		now cockname of player is "jackalman";
 		now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 		increase strength of player by 4;
@@ -1432,6 +1440,7 @@ An everyturn rule:
 			say "Your body seems to twist and warp, your muscles heating up again as your body fights the outside infection. Soon enough you can feel your form twisting and warping back into the proper and powerful shape of a predatory jackal.";
 			now bodyname of player is "jackalman";
 			now body of player is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself..";
+			attributeinfect "jackalman";
 		if cockname of player is not "jackalman":
 			now cockname of player is "jackalman";
 			now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
