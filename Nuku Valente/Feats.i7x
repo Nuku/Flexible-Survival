@@ -154,7 +154,7 @@ instead of addfeating the fun feats:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects.";
 	if "One Way" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
 		addfeat "Modest Organs" with "Your growth is restricted, preventing wildly overgrown bits, barring specific effects.";
-	if "Modest Organs" is not listed in feats of player or "One Way" is not listed in feats of player:
+	if ("Modest Organs" is not listed in feats of player or "One Way" is not listed in feats of player ) and "Flat Chested" is not listed in feats of player:
 		addfeat "Passing Grade Chest" with "Your breasts will never fail a test, and will remain D cupped or smaller, barring specific effects. If they do become too large, they will shrink rapidly back into line.";
 	if "All The Things" is not listed in feats of player:
 		addfeat "Just One" with "You will only grow one cock, and only one cunt, never more. Possibly less.";

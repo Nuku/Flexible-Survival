@@ -19,6 +19,15 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
+To say a/an (T - text):
+	let Txt be indexed text;
+	let Txt be T;
+	if Txt matches the regular expression "^<aeiouAEIOU>":
+		say "an ";
+	otherwise:
+		say "a ";
+	say T.
+   
 To wait for any key:
 	if hypernull is 0:
 		say "[link]more[as] [end link]";
@@ -1087,6 +1096,31 @@ Carry out vialdropping:
 		continue the action;
 	say "You chuck the [target] vial away.";
 	remove entry z from vials of player;
+ 
+ understand "vialalldrop [text]" as vialalldropping.
+
+Vialalldropping is an action applying to one topic.
+
+Carry out vialalldropping:
+ 	let t be the topic understood;
+	let target be text;
+	let found be 0;
+	let z be 1;
+	let q be a topic;
+	let y be a list of numbers;
+	repeat with x running through vials of player:
+		now q is x;
+		if t in lower case is x in lower case:
+			add z to y;
+			now found is 1;
+		increase z by 1;
+	if found is 0:
+		say "You don't seem to have any such vial.";
+		continue the action;
+	otherwise:
+		repeat with cur running through y:
+			say "You chuck [an target] vial away.";
+			remove entry cur from vials of player;
 
  understand "vial [text]" as vialing.
 
@@ -1187,7 +1221,7 @@ carry out VialInventorying:
 	if the number of entries in vials of player is 0:
 		say "Your collection of infection vials is empty.";
 	if the number of entries in vials of player is greater than 0:
-		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial";
+		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy [bracket]A[close bracket]ll of a vial";
 		if ( scenario is "Researcher" or nanitemeter is 1 ) and Larissa is visible:
 			say " or [bold type]vialsell[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
 		say ".";
@@ -1201,6 +1235,7 @@ carry out VialInventorying:
 				if z is x, increase count by 1;
 			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] ";
 			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [x][end link] ";
+			say "[link][bracket][bold type]DA[roman type][close bracket][as]vialalldrop [x][end link] ";
 			if ( scenario is "Researcher" or nanitemeter is 1 ) and Larissa is visible:
 				say "[link][bracket][bold type]S[roman type][close bracket][as]vialsell [x][end link] ";
 			say "[X] x [count][line break]";
@@ -4772,8 +4807,6 @@ Include Skunk Pet by Sarokcat.
 Include Exotic Bird by Sarokcat.
 Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
-
-Include Cheat Box For Fs by Stripes.
 
 
 
