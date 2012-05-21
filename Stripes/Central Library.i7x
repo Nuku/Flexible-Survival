@@ -281,6 +281,7 @@ to say libguard4:
 			now skinname of player is "Wolverine Guard";
 			now bodyname of player is "Wolverine Guard";
 			now cockname of player is "Wolverine Guard";
+			attributeinfect "Wolverine Guard";
 			now tail of player is tail entry;
 			now face of player is face entry;
 			now skin of player is skin entry;
@@ -388,6 +389,7 @@ to say libraryexplore:
 		now skinname of player is "harpy";
 		now bodyname of player is "harpy";
 		now cockname of player is "harpy";
+		attributeinfect "harpy";
 		now tail of player is tail entry;
 		now face of player is face entry;
 		now skin of player is skin entry;

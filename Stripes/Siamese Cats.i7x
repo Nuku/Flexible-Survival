@@ -10,14 +10,19 @@ Section 1 - Monster Responses
 
 siamesegender is a text that varies.
 Siamgender is a thing.
+Siamgender can be male or female.
 Definition: Siamgender is male:
-	if siamesegender is "male", yes;
-	no;
+	if siamesegender is "male":
+		yes;
+	otherwise:
+		no;
 
 Definition: Siamgender is female:
-	if siamesegender is "female", yes;
-	no;
-	
+	if siamesegender is "female":
+		yes;
+	otherwise:
+		no;
+
 malecathp is a number that varies.
 femalecathp is a number that varies.
 

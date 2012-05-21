@@ -168,6 +168,7 @@ to say nogging:
 		now skinname of player is "Reindeer";
 		now bodyname of player is "Reindeer";
 		now cockname of player is "Reindeer";
+		attributeinfect;
 		now tail of player is tail entry;
 		now face of player is face entry;
 		now skin of player is skin entry;

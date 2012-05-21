@@ -65,6 +65,16 @@ When Play begins:
 	now libido entry is 50;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Chipped tooth";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table ]
+	now scale entry is 4;				[ Number 1-5, rough approx of infected PC body size/height.  1=small, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]powerful[or]muscled[or]chiseled[at random]";
+	now type entry is "[one of]equine[or]horse-like[at random]";
+	now magic entry is true;			[ Is this a magic creature? true/false ]
+	now resbypass entry is true;			[ Bypasses Researcher bonus? True/False (should almost invariably be false) ]
+	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False ]
+	now nocturnal entry is true;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";	[ Uses the 'bearhugger' entry from the Table of Critter Combat ]
+
 
 when play ends:
 	if bodyname of player is "Nightmare":

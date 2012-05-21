@@ -299,6 +299,7 @@ to say totalTH:
 	now skinname of player is "Tigress Hooker";
 	now bodyname of player is "Tigress Hooker";
 	now cockname of player is "Tigress Hooker";
+	attributeinfect;
 	now tail of player is tail entry;			[...to make for quicker and accurate copying of TH appearance.]
 	now face of player is face entry;
 	now skin of player is skin entry;
@@ -448,6 +449,10 @@ to say BTchangeover:
 		now skinname of player is "Big Tigress";
 		now bodyname of player is "Big Tigress";
 		now cockname of player is "Big Tigress";
+		now scalevalue of player is 4;
+		now bodydesc of player is "powerful";
+		now bodytype of player is "feline";
+		now the daycycle of player is 0;
 		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur.  It flicks behind you with excitement.";
 		now face of player is "a feminine tiger face and long, flowing hair.  Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your steely-blue eyes";
 		now skin of player is "ivory white fur streaked with tiger stripes that covers your";
@@ -459,6 +464,10 @@ to say BTchangeover:
 		now skinname of player is "Big Tiger";
 		now bodyname of player is "Big Tiger";
 		now cockname of player is "Big Tiger";
+		now scalevalue of player is 4;
+		now bodydesc of player is "powerful";
+		now bodytype of player is "feline";
+		now the daycycle of player is 0;
 		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur.  It flicks behind you with excitement.";
 		now face of player is "a male tiger head with a strong jaw and a predatory gaze.  With a fully feline head, you have fur, stripes and whiskers cover your stern muzzle";
 		now skin of player is "ivory white fur streaked with tiger stripes that covers your";

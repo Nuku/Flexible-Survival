@@ -311,6 +311,7 @@ to say totalcoonification:		[version 1 - direct shift, no gender controls]
 	now skinname of player is "Raccoon";
 	now bodyname of player is "Raccoon";
 	now cockname of player is "Raccoon";
+	attributeinfect "Raccoon";
 	now tail of player is tail entry;			[...to make for quicker and accurate copying of Raccoon appearance.]
 	now face of player is face entry;
 	now skin of player is skin entry;

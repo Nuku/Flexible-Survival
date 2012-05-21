@@ -290,6 +290,10 @@ to say dragonchange:
 		now bodyname of player is "Slutty Dragoness";
 		now cockname of player is "Slutty Dragoness";
 		now skinname of player is "Slutty Dragoness";
+		now scalevalue of player is 5;
+		now bodydesc of player is "[one of]fecund[or]beastial[at random]";
+		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
+		now the daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[otherwise if cunts of player > 0] and gaping pussy lips[otherwise if cocks of player > 0] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body.  There are large bat like wings on your back";
 		now face of player is "reptilian shape with a long snout.  Your mouth is full of sharp teeth that peek out past your thin lips.  Your head is bald except for two backwards facing horns";
@@ -329,6 +333,10 @@ to say dragonchange:
 		now bodyname of player is "Horny Dragon";
 		now cockname of player is "Horny Dragon";
 		now skinname of player is "Horny Dragon";
+		now scalevalue of player is 5;
+		now bodydesc of player is "beastial";
+		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
+		now the daycycle of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if cocks of player > 0 and cunts of player > 0], gaping pussy lips and pendulous balls[otherwise if cunts of player > 0] and gaping pussy lips[otherwise if cocks of player > 0] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over 6 feet tall and 9 feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body.  There are large bat like wings on your back";
 		now face of player is "reptilian shape with a long snout.  Your mouth is full of sharp teeth that peek out past your thin lips.  Your head is bald except for two backwards facing horns";

@@ -447,6 +447,10 @@ Instead of resolving a Concession Stand:
 				now skinname of player is "Shifting Pet";
 				now bodyname of player is "Shifting Pet";
 				now cockname of player is "Shifting Pet";
+				now scalevalue of player is 3;
+				now bodydesc of player is "malleable";
+				now bodytype of player is "ever-changing";
+				now the daycycle of player is 0;
 				end the game saying "You submitted to the shifting man at the fair, becoming his slutty pet.";
 				now battleground is "void";
 				wait for any key;
@@ -523,6 +527,7 @@ Instead of resolving a Beach Party:
 		now skinname of player is "Bottlenose Toy";
 		now bodyname of player is "Bottlenose Toy";
 		now cockname of player is "Bottlenose Toy";
+		attributeinfect;
 		now tail of player is tail entry;
 		now face of player is face entry;
 		now skin of player is skin entry;
