@@ -4808,8 +4808,6 @@ Include Exotic Bird by Sarokcat.
 Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
 
-Include Cheat Box For Fs by Stripes.
-
 
 
 Book 10 - Let the Games Begin
