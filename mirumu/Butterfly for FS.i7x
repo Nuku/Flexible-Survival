@@ -997,8 +997,9 @@ To recite butterflymagic(x - text):
 	change the text of the player's command to character number 6 in bmagic;
 	if the player's command matches "[number]":
 		now Gestation of ButterflyBaby is the number understood;
-		now ButterflyPregnant is True;
-		now butterfly grove is known;
+		if Gestation of ButterflyBaby is greater than 0:
+			now ButterflyPregnant is True;
+			now butterfly grove is known;
 	if character number 7 in bmagic is "C":
 		now ButterflyBreastDesc is "full and firm C-cup";
 	otherwise if character number 7 in bmagic is "D":
