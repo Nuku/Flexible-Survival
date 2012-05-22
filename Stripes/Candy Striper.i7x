@@ -89,6 +89,14 @@ When Play begins:
    now libido entry is 50;            [ Set to zero in this monster to control elsewhere ]
    now loot entry is "healing booster";            [ Dropped item.  Key will be used later ]
    now lootchance entry is 10;        [ Chance of loot dropping 0-100 ]
+   now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now body descriptor entry is "[one of]girly[or]effeminate[or]slender[at random]";
+   now type entry is "[one of]coon-like[or]raccoon[at random]";
+   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+   now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Raccoon Pet

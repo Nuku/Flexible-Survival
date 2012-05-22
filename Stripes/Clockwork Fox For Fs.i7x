@@ -110,7 +110,7 @@ When Play begins:
 	now body entry is "thin and muscled, resembling that of one of the clockwork fox beings.  Your arms are thin and vulpine, leading down to small clawed paws.  Your legs are thin but filled with a mix of muscles and clockwork mechanisms, leading down to a pair of foxy paws";
 	now skin entry is "[one of]brass wire fur with gears poking through your metallic[or]lush wire fur over your[or]gears sticking through brass wire fur to cover your metallic[at random]";
 	now tail entry is "You have a mechanical fox tail that is covered in soft, metallic fur.  It whirrs and clicks softly with the sounds of the cogs and gears inside to make it move so beautifully.";
-	now cock entry is "[one of]clockwork[or]knotted[or]clockwork knotted[or]mechanically driven[at random]";
+	now cock entry is "[one of]clockwork[or]knotted[or]clockwork knotted[or]mechanically-driven[at random]";
 	now face change entry is "your nose and mouth pull forward into a foxy muzzle, but one filled with clockwork mechanics instead of flesh and bone.  Your teeth become small, clicking gears to chew your food or nibble at playmates.  You can feel your ears rise up the side of your head, becoming pointed cups of shiny brass";
 	now body change entry is "it slims down, becoming strong yet compact, almost exactly like that of a Clockwork Fox.  You feel your arms and legs change, muscles bunching, becoming more dense and gaining gears and cogs to drive them.  Your limbs end in vaguely fox-like paws that quite nimble despite being mechanical inside";
 	now skin change entry is "you feel your whole body go cold as suddenly you are left covered in patches of gears, cogs and shafts in clusters of gearworks that poke through a brass wire coat of fur over your metal";
@@ -139,6 +139,14 @@ When Play begins:
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]clockwork[or]mechanical[or]compact[at random]";
+	now type entry is "vulpine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Endings

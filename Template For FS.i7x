@@ -73,9 +73,9 @@ When Play begins:
 	now skin change entry is "you gain fur/scales/skin/patterns described herein";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your tail or ass changes in the manner described by this text";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it takes on a new, kinky form";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 8;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 12;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 15;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 8;			[ These are now the creature's stats... ]
+	now dex entry is 12;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 15;			[ These values may be used as part of alternate combat.]
 	now per entry is 10;
 	now int entry is 16;
 	now cha entry is 14;

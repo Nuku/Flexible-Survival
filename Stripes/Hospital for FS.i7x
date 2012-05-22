@@ -417,7 +417,7 @@ understand "Mouse" as Doctor Mouse.
 understand "Dr Mouse" as Doctor Mouse.
 Doctor Mouse has a number called progress.
 
-The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears.  He's only about four feet tall, and that's to the top of his ears.  He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it.  He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.";
+The description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears.  He's only about three feet tall, and that's to the top of his ears.  He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it.  He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.";
 
 The conversation of Doctor Mouse is { "Squeak!" }.
 
@@ -434,7 +434,7 @@ to say meetdrmouse:
 	say "     You start to take another slow step into the room when a noise to one side startles you.  There is a pair of those mismatched chimeras in here.  They moan lustfully and try to crawl towards you, but are held back by collars around their necks.  They are chained to a workbench in the far corner.";
 	say "     You breathe a sigh of relief and turn back to the room, startled again by the sight of a white mouse poking his large head up over one of the tables.  This creature stares at you with blood red eyes as you are both frozen in surprise.  You start to raise your weapon slowly, but the mouse smiles happily and claps his hands together with glee.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "     'This is such an unexpected surprise.  Do please come in.  The creatures of this hospital rarely provide good company.'  As the mouse moves around the work table, you can see his head barely clears it at all, only about four feet tall at the ears.  He grabs a wooden stool and pulls it over, scraping it across the floor.  As he climbs up to get a seat, he adds, 'you should call me Doctor Mouse, I guess.  A new name for a new me,' he chuckles as he scrambles into the seat with some effort and motions for you to pull one up as well.";
+	say "     'This is such an unexpected surprise.  Do please come in.  The creatures of this hospital rarely provide good company.'  As the mouse moves around the work table, you can see his head barely clears it at all, only about three feet tall at the ears.  He grabs a wooden stool and pulls it over, scraping it across the floor.  As he climbs up to get a seat, he adds, 'you should call me Doctor Mouse, I guess.  A new name for a new me,' he chuckles as he scrambles into the seat with some effort and motions for you to pull one up as well.";
 	say "     'I'm quite surprised you made it up here.  It's quite a mess downstairs and the creatures stop anyone from venturing in.  You should tell me what is happening out in the city.  I've not been able to leave here since the infection struck.  Far too dangerous for a little guy like me out there.  And so much to do here, studying the nanite infection.  It has such a capacity for healing.'  He starts to babble a little, perhaps from being isolated in here.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if scenario is "Researcher":

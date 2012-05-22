@@ -38,7 +38,7 @@ Pigfucked is a number that varies. Pigfucked is usually 0.
 lastPhilipfucked is a number that varies.  lastPhilipfucked is usually 800.
 
 Philip is a man.
-The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker].  He's made a mudhole of his own in one corner of the bunker by breaking a whole in the wall and cracking a pipe.  He and spends much of his time lounging in it[end if].";
+The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Bunker].  He's made a mudhole of his own in one corner of the bunker by breaking a hole in the wall and cracking a pipe.  He spends much of his time lounging in it[end if].";
 Philip is in Pig Pen.
 The conversation of Philip is { "Hello, oink!", "Snort!", "Do you think the people who come to rescue us will have lots of food?", "How did I end up like this? Some jerk zapped me with a strange ray gun that turned me into this.", "I love the feeling of mud against my skin."};
 
@@ -76,7 +76,7 @@ To pigfeed:
 	if pigfed is greater than 2 and bodyname of player is not "Piggy":
 		say "As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.[line break][line break]";
 		now bodyname of player is "Piggy";
-		now body of player is "You have a big, fat body and you have pig hooves instead of feet. ";
+		now body of player is "quite big, plump and fat with pig hooves instead of feet. ";
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]fat[or]overweight[or]plump[at random]";
 		now bodytype of player is "[one of]porcine[or]piggish[at random]";
@@ -199,7 +199,7 @@ instead of fucking the philip:
 	if pigfed is greater than 2 and bodyname of player is not "Piggy":
 		say "As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.[line break][line break]";
 		now bodyname of player is "Piggy";
-		now body of player is "You have a big, fat body and you have pig hooves instead of feet. ";
+		now body of player is "quite big, plump and fat with pig hooves instead of feet. ";
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]fat[or]overweight[or]plump[at random]";
 		now bodytype of player is "[one of]porcine[or]piggish[at random]";

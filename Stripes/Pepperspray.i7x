@@ -3,6 +3,7 @@ Version 3 of Pepperspray by Stripes begins here.
 
 
 battleitem is a number that varies.
+peppereyes is a number that varies.
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -14,6 +15,7 @@ instead of sniffing the pepperspray:
 	say "Smelling the pepperspray canister makes your eyes water.";
 
 to say pepperspraydrain:
+	now peppereyes is 3;
 	if a random chance of 3 in 10 succeeds:		[average 3-4 uses]
 		say "Uh oh! That used up the last of that can and you drop it to the ground, empty.[line break]";
 		delete pepperspray;
@@ -41,7 +43,7 @@ this is the peppersprayflee rule:
 	otherwise:
 		say "You try to escape using the pepperspray, but fail.";
 		say "[pepperspraydrain]";
-		say "[weakretaliate]";
+		follow the retaliation rule;
 		if the hp of the player is less than 1:
 			lose;
 	rule succeeds;
@@ -60,7 +62,7 @@ this is the peppersprayattack rule:
 			decrease gascloud by 1;
 	if monsterhp is greater than 0:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
-		say "[weakretaliate]";
+		follow the retaliation rule;
 		if the hp of the player is less than 1:
 			lose;
 	otherwise:
@@ -223,8 +225,9 @@ to say enhancedattack:
 		otherwise:
 			say "Your [companion of player] misses!";
 
+[
 
-to say weakretaliate:
+to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Combat]
 	now avoidance is 0;
 	say "[enhancedavoidance]";
 	if gascloud > 0, decrease gascloud by 1;
@@ -262,7 +265,7 @@ to say weakretaliate:
 	wait for any key;
 	rule succeeds;
 
-to say enhancedavoidance:
+to say enhancedavoidance:		[no longer used, incorporated into avoidance in Alt Combat]
 	choose row monster from the table of random critters;
 	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
 		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
@@ -283,6 +286,8 @@ to say enhancedavoidance:
 	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in 8 succeeds:
 		say "You nimbly avoid the attack at the last moment!";
 		now avoidance is 1;
+
+]
 
 Table of pepperspraychoice
 title	subtable	description	toggle

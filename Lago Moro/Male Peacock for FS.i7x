@@ -1,5 +1,5 @@
 Version 1 of Male Peacock For FS by Lago Moro begins here. 
-[Version 1.1 - formatting corrections]
+[Version 1.2 - New data and alt combat mode]
 
 "Adds a Male Peacock to Flexible Survivals Wandering Monsters table."
 
@@ -17,39 +17,39 @@ to say peacockskin:
 
 to say peacocktail:
 	if cock length of player > cunt length of player:
-		say "You have a beautiful fan of feathers for tail. They are decorated with hypnotic eyes.";
+		say "You have a beautiful fan of feathers for tail.  They are decorated with hypnotic eyes.";
 	otherwise:
 		say "A feathered tail encircles decorates your rear, like half of a long skirt.";
 
 to say peacockasschange:
 	if cock length of player > cunt length of player:
-		say "feathers emerges from it. They form a peacock tail, that you are able to fan with ease";
+		say "feathers emerges from it.  They form a peacock tail, that you are able to fan with ease";
 	otherwise:
-		say "brown feathers emerge from it. They form a tail that comes down to your knees";
+		say "brown feathers emerge from it.  They form a tail that comes down to your knees";
 
 to say peacockdesc:
-	say "A tall blue bird emerges from an alley. He has a pretty blue and green plumage, and he greets you by fanning its tail. He doesn't seems to be aggressive, though. Maybe you could just relax... and have some friendly chat... those feathers are so...beau - wait, what the hell? You don't know why you were thinking that! Surely he must be the cause of this dizziness, you[apostrophe]d better end this battle quickly...";
+	say "A tall blue bird emerges from an alley.  He has a pretty blue and green plumage, and he greets you by fanning its tail.  He doesn't seems to be aggressive, though.  Maybe you could just relax... and have some friendly chat... those feathers are so...beau - wait, what the hell?  You don't know why you were thinking that!  Surely he must be the cause of this dizziness, you[apostrophe]d better end this battle quickly...";
 	now peacockcontrol is 0;
 
 to say peacockattack:
-	say "[one of]While you are trying to hit the feathered enemy, he trips you! You fall flat to the ground.[or]He pushes you and flees back out of range, laughing.[or]He jumps on your shoulders as you try to grab him, and then he jumps back on the ground. Is he mocking you?[at random]";
+	say "[one of]While you are trying to hit the feathered enemy, he trips you!  You fall flat to the ground.[or]He pushes you and flees back out of range, laughing.[or]He jumps on your shoulders as you try to grab him, and then he jumps back on the ground.  Is he mocking you?[at random]";
 	increase peacockcontrol by a random number between 1 and 5;
 	if peacockcontrol is greater than intelligence of player:
 		now hp of player is 0;
 
 to say peacockvictory:
 	now peacockcontrol is 0;
-	say "You are not able to think clearly anymore. You find yourself standing up and facing the avian, your thoughts mixed in a blur. He beckons you to follow him; you have no choice but to walk with him into what seems a well-maintained apartment.";
+	say "You are not able to think clearly anymore.  You find yourself standing up and facing the avian, your thoughts mixed in a blur.  He beckons you to follow him; you have no choice but to walk with him into what seems a well-maintained apartment.";
 	if cunts of player > 0:
-		say "You feel a bit better now...you can think more clearly, as if the leash in your brain has been loosened.You don't think you would be able to actually oppose what is about to happen, though...";
-		say "He motions towards the bed in the middle of the room. You obediently lie on the mattress, while he looks at your body with unmistakable lust, his cock already poking out of his slit. He slides over your body... it feels like a light, warm blanket. You think that maybe this won't be SO bad after all...";
+		say "You feel a bit better now... you can think more clearly, as if the leash in your brain has been loosened.  You don't think you would be able to actually oppose what is about to happen, though...";
+		say "He motions towards the bed in the middle of the room.  You obediently lie on the mattress, while he looks at your body with unmistakable lust, his cock already poking out of his slit.  He slides over your body... it feels like a light, warm blanket.  You think that maybe this won't be SO bad after all...";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "After you don't know how much pleasant time, you find yourself back in the city, no idea how or when. You quickly realize that finding him will be practically impossible by now...then you realize just now that your body may have changed...";
+		say "After you don't know how much pleasant time, you find yourself back in the city, no idea how or when.  You quickly realize that finding him will be practically impossible by now... then you realize just now that your body may have changed...";
 	otherwise:
-		say "He orders you to sit on the bed. You have no choice but to obey, your body out of your control. He examines you and, to your surprise, he sighs, mildly irritated. 'Look - he says - it will be better for both of us if you won[apostrophe]t remember this...'. Before you can reply, he fans his tail again...";
+		say "He orders you to sit on the bed.  You have no choice but to obey, your body out of your control.  He examines you and, to your surprise, he sighs, mildly irritated.  'Look,' he says, 'it will be better for both of us if you won[apostrophe]t remember this...'. Before you can reply, he fans his tail again...";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "...then you find yourself back in the city? You don't remember how did you come here, or what happened in the apartment, or even where that was... and then it occurs to you that you should check what happened to your body.";
-			
+		say "...then you find yourself back in the city?  You don't remember how did you come here, or what happened in the apartment, or even where that was... and then it occurs to you that you should check what happened to your body.";
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -64,7 +64,7 @@ When Play begins:
 	now name entry is "peacock"; 
 	now attack entry is "[peacockattack]";
 	now defeated entry is "The last hit knocks the blue bird on the ground; he gets up quickly and flees away, is pride completely stomped."; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[peacockvictory]";
+	now victory entry is "[peacockvictory]";
 	now desc entry is "[peacockdesc]";
 	now face entry is "bird-like head. You pass quite a bit of your time admiring your";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers";[ Body Description, format as the text "Your Body is (your text)"] 
@@ -76,9 +76,9 @@ When Play begins:
 	now skin change entry is "lots of feather sprouts, until you are completely covered"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "[peacockasschange]"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it becomes slim and ondulated. It retracts into a new, just formed, slit.  Your balls are permanently absorbed in your body instead"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 6;
-	now dex entry is 16;
-	now sta entry is 10;					
+	now str entry is 6;			[ These are now the creature's stats... ]
+	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10;			[ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 20;
 	now cha entry is 12;
@@ -99,6 +99,14 @@ When Play begins:
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Peacock feather";			[ Loot monster drops, ]
 	now lootchance entry is 35;		[ Chance of loot dropping 0-100 ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]slender[or]winged[as decreasingly likely outcomes]";
+	now type entry is "avian";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "hypno";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname is "peacock":
