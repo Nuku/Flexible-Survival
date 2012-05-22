@@ -163,27 +163,18 @@ to say stripbarsearch:
 		challenge "Shemale Smooth Collie";
 	if T is 5:
 		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum.  It seems that this place was struck rather hard when the infection took hold.  Despite outer appearances, the inside has been quite devastated.  You decide to head back out, but not in time.  A large glob of cum which was stuck to the ceiling comes down right on top of you.  You try your best to wipe it off, but you can feel the tingles of the infection."; [random infection]
-		sort table of random critters in random order;
-		now monster is 1;
-		infect;
+		weakrandominfect;
 	if T is 6:
 		say "		Searching through the strip bar, you navigate cautiously around the tables and puddles of cum.  A quick check shows that the bar area has been already picked clean of anything that survived the initial damage.  You turn to head out, but step on an empty bottle.  Rolling away, it sends your foot out from under you and you fall.  Your hand feels wet and sticky, having landed in a puddle of cum.  You try to shake it off, but you can feel the tingles of the infection.";  [random infection]
-		sort table of random critters in random order;
-		now monster is 1;
-		infect;
+		weakrandominfect;
 	if T is 7:
 		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum.  Clearly this place was open when the infection struck and the patrons and staff fell quickly.  You head over to check the bar, but find that it was destroyed during the outbreak and even partially burned.  Did the bartender try to ward off the monsters with fire or did something else occur?  Seeing how there is nothing usable left, you decide not to investigate further and instead head to leave.  As you[apostrophe]re heading to leave, you spot the backstage door decide to check it out before you go.";
 		say "     This turns out to be your undoing, as a bucketful of sticky, musky cum and juices falls onto you.  An array of scents fill your nose, the bucket clearly having been filled by a variety of creatures, possibly the ex-staff of this establishment.  Their combined fluids have soaked you and you can feel the tingles of the infection.";  [triple unrelated random]
-		sort table of random critters in random order;
-		now monster is 1;
-		infect;
-		sort table of random critters in random order;
-		now monster is 1;
-		infect;
-		sort table of random critters in random order;
-		now monster is 1;
-		infect;
+		weakrandominfect;
+		weakrandominfect;
+		randominfect;		[researcher still gets one]
 		decrease score by 5;
+		decrease humanity of player by 5;
 	if T > 7:
 		say "Searching through the strip bar, you have to avoid cum puddles.  You head over to check the bar, but find that it was destroyed during the outbreak.  Clearly someone became something large and aggressive.  The booze rack has been knocked completely over and the bottles are shattered.  There are large patches of cum all around that area, so you have no inclination to search it more closely for any goods which may have survived.  Well, better luck next time.";
 		increase score by 1;
@@ -253,19 +244,36 @@ to say orgyoutcome:
 	decrease libido of player by 40;
 	if libido of player < 0:
 		now libido of player is 0;
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from the table of random critters;
+	randominfect;
+	now researchbypass is 1;
+	increase monster by 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
 	infect;
-	now monster is 2;
-	choose row monster from the table of random critters;
+	increase monster by 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
 	infect;
-	now monster is 3;
-	choose row monster from the table of random critters;
+	increase monster by 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
 	infect;
-	now monster is 4;
-	choose row monster from the table of random critters;
-	infect;
+	now researchbypass is 0;
 
 
 

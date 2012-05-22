@@ -2211,7 +2211,7 @@ To Infect:
 		break;
 	if scenario is "Researcher" or nanite collector is equipped:
 		vialchance name entry;
-	if scenario is "Researcher" and researchbypass is 0:
+	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row monster of the table of random critters or resbypass entry is false ):
 		continue the action;
 	let x be a random number from 1 to 5;
 	let bodyparts be { 1, 2, 3, 4, 5 };
@@ -2554,7 +2554,9 @@ To attributeinfect (x - text):
 
 
 To Vialchance (x - a text):
+	choose row monster from table of random critters;
 	if researchbypass is 1, continue the action;
+	if there is a non-infectious in row monster of table of random critters and non-infectious entry is true, continue the action;
 	if scenario is "Researcher" or nanite collector is equipped:
 		let vialcollectible be 10 + ( 2 * intelligence of player );
 		if vialcollectible > 70, now vialcollectible is 70;
@@ -3846,6 +3848,38 @@ To Infect (x - text):
 			now monster is y;
 			infect;
 			break;
+
+to randominfect:				[bypasses researcher protection]
+	now researchbypass is 1;
+	weakrandominfect;
+	now researchbypass is 0;
+
+to weakrandominfect:			[does not bypass researcher protection]
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	infect;
+
+
+
+to say randomimpreg:
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	say "     [Impregchance]";
+
 
 Section x - Debug Commands - Not for release
 
