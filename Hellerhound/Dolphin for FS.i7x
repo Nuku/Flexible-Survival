@@ -157,8 +157,8 @@ When Play begins:
 
 
 Table of Critter Combat (continued)
-name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)
-"hdol"	retaliation rule	dolattack rule	--	--	--	--	--	--	--
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"hdol"	retaliation rule	dolattack rule	--	--	--	--	--	--	--	--
 
 this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 	choose row monster from table of random critters;

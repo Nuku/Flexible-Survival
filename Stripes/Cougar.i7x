@@ -75,9 +75,9 @@ When Play begins:
 	now skin change entry is "golden brown fur spreads all over your body.  Your colouration is uniform over most of your body, lacking elaborate markings or patterns and only a shift to a creamy colour at your belly and groin";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a feline tail grows into place, swishing as it becomes more distinctly puma-like in form and pattern";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "your balls churn and your cock reshapes itself into a vaguely human form, but with the stimulating spines of a feline penis.  Your shaft changes colour, becoming a deep brown as these changes complete themselves";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 16;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 18;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 14;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 16;			[ These are now the creature's stats... ]
+	now dex entry is 18;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 14;			[ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 10;

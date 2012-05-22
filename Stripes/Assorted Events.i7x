@@ -141,7 +141,7 @@ Instead of resolving a Dropped Handbag:
 			sort table of random critters in random order;
 			repeat with X running from 1 to number of filled rows in table of random critters:
 				choose row X from the table of random critters;
-				if area entry matches the text battleground:
+				if area entry matches the text battleground and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
 					now monster is X;
 					break;
 			choose row monster from the table of random critters;
@@ -387,10 +387,8 @@ Instead of resolving a Concession Stand:
 		if the player consents:
 			say "     As you take the strange salesman's, you can feel a tingle run up through your arm.  The guy grins and hops onto his counter, sitting in front of you as he unzips his pants.  He whips out his cock, and like the rest of him, it is difficult to discern its features.  At times, you think it more feline, others more equine.  Even as you wrap your lips around it and start sucking, the feel and taste on your tongue changes over and over again.  You momentarily find yourself wondering when you started sucking his cock and why, but your mind can't hold onto it and instead you start puzzling over the form of his cock again.  You felt a knot there for a few bobs of your head, but now it seems more like a pair of hemipenises instead.  You keep sucking at his shifting cock, your hazy mind focused on its ever-changing shape and taste.  Eventually, he grips your head and holds you down into his lap as his cock gets quite long and is stuffed down your throat, unleashing a thick rush of cum into your belly.";
 			say "     The vendor releases you and flips back behind the counter.  With a broad grin that seems momentarily feline, he passes you a tray of snacks and a can of soda.  You head off, still in a bit of a daze, licking your lips as you try to figure out the flavour of cum you just guzzled down.";
-			sort table of random critters in random order;
-			now monster is 1;
-			infect;
-			infect;
+			randominfect;		[first one picks a valid critter while infecting]
+			infect;			[second one gives the same infection]
 			add "chips" to invent of player;
 			add "soda" to invent of player;
 			decrease humanity of player by a random number between 8 and 6;
@@ -406,10 +404,8 @@ Instead of resolving a Concession Stand:
 		if the player consents:
 			if foodvendor is 1:
 				say "     As you walk up to the stand, the gentleman sets another tray of fried treats and a can of soda on the counter, then leaps over it.  You don't say a word as he whips out his cock again.  Any thoughts of discussion or dealing with the man fade as you again bury his throbbing meat in your mouth and suck away at it.  He chuckles softly and rubs your head, pumping into your mouth.  You run your tongue over some feline barbs, then across a pointed, canine glans.  It is thick, then long, then almost human, then unnaturally ridged.  These changes continue as you try to figure out each new one, loving the ever-changing delight more and more.  You put a hand to his ballsac and find it changing as well.  The orbs inside always remain quite large and heavy, though their shape shifts subtly.  But more apparent is the soft fur, no the hard scales, no the smooth skin, that covered his scrotum.  This time your lustful cocksucking is rewarded when you feel a knot briefly locking his cock in your mouth and he sprays thick cum into your mouth.  When the knot fades away as if never there, you pull your mouth back and swallow down the semen.  You take your purchased wares with a lustfully clouded mind that lingers as you wander back into the flashy fair.";
-				sort table of random critters in random order;
-				now monster is 1;
-				infect;
-				infect;
+				randominfect;		[first one picks a valid critter while infecting]
+				infect;			[second one gives the same infection]
 				add "chips" to invent of player;
 				add "soda" to invent of player;
 				decrease humanity of player by a random number between 10 and 20;
@@ -419,10 +415,8 @@ Instead of resolving a Concession Stand:
 			otherwise if foodvendor is 2:
 				say "     Knowing what is coming, you help the gentleman open his bright green pants when he moves over the counter.  Pulling out his cock, you stuff it into your mouth with a soft moan, taking delight at having it in your mouth again.  You love how it keeps changing for you, giving you a myriad of delightful tastes and sensations.  He rubs your head and moans softly as you bob over it, running your tongue over it.  You plunge it down your throat as it becomes thick and donkey-like, then suck firmly at it becomes small and lapine.  Its draconic knobs and ridges stimulate your throat as he switches to thrusting into your mouth.  'Oh, you're so good at this,' he moans.  'You should come back again.  Since you're my favorite customer, I'll give you something really special.'";
 				say "     Rubbing his balls and sucking his cock, you lavish attention upon him, becoming more and more eager to please him.  When he finally cums, his thick seed comes blasts from a large, leonine cock and you gulp it all down, rubbing your belly as his semen fills it.  You get up and lick your lips, barely remembering to take the food items.  You were so focused on getting the cum, you barely remembered the purchase at all this time.";
-				sort table of random critters in random order;
-				now monster is 1;
-				infect;
-				infect;
+				randominfect;		[first one picks a valid critter while infecting]
+				infect;			[second one gives the same infection]
 				add "chips" to invent of player;
 				add "soda" to invent of player;
 				decrease humanity of player by a random number between 12 and 24;

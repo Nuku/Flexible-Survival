@@ -35,8 +35,8 @@ instead of resolving a loaded catapult:
 			decrease the thirst of the player by 25;
 			decrease humanity of player by 10;
 			if "Iron Stomach" is not listed in feats of player:
-				say "[randominfect]";
-				say "[randominfect]";
+				weakrandominfect;	
+				weakrandominfect;
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		otherwise:
 			say "You leave the bag where it is.";

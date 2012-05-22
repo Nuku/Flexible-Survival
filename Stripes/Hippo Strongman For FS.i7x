@@ -53,9 +53,9 @@ When Play begins:
 	now skin change entry is "it turns rough and grey in colour";
 	now ass change entry is "a small tail forms behind you.  It is short and thick, with a clump of ragged hair at its tip";
 	now cock change entry is "becomes a dark, purplish-gray in colour but is mostly human in shape";
-	now str entry is 24;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 12;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 16;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 24;			[ These are now the creature's stats... ]
+	now dex entry is 12;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 16;			[ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 8;
 	now cha entry is 14;
