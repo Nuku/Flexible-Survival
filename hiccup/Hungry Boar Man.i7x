@@ -115,7 +115,7 @@ To pigfeed:
 		say "Will you accept his offer and eat the food?";
 		if player consents:
 			say "'Here you go,' He oinks as he hands you the box, then he rolls over and promptly falls asleep in the mud.[line break][line break]You open the box and start chowing down on the food inside. As soon as you finish eating, you notice that the food didn't dull your hunger at all. That's when your entire head begins to feel strange. All the hair on your head falls out as your ears stretch out then flop downwards. Your nose aches for a second as the tip bends upwards until you're left with the nose of a pig. Your cheeks and face plump up with fat, making you look like you have beady little eyes and making it a little harder for you to see.";
-		now face of player is "has porcine features, giving you plump, rounded cheeks surrounding your upturned pig nose.  Your head is bald with big, floppy pig ears atop it.  Your face is rather hog-like now, with the occasional piggish snort to go along with it";
+			now face of player is "has porcine features, giving you plump, rounded cheeks surrounding your upturned pig nose.  Your head is bald with big, floppy pig ears atop it.  Your face is rather hog-like now, with the occasional piggish snort to go along with it";
 			now facename of player is "Piggy";
 			increase stamina of player by 1;
 			decrease perception of player by 1;
