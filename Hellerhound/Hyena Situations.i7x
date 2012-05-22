@@ -53,8 +53,6 @@ Section 3 - Intact Fountain
 
 Intact Fountain is a situation.
 
-
-
 instead of resolving an intact fountain:
 	say "You find a fountain, intact among the wreckage of the city. However it looks like the water's purity did not survive, nor did the fountains appearance. The fountain is covered with the sexual fluids, milk, and urine of (you suspect) all the creatures in the city. The water is cloudy and murky, many different strains of stain swirling in the water. You can drink or collect it, but it is at your own risk.";
 	say "Do you drink?";
@@ -63,16 +61,24 @@ instead of resolving an intact fountain:
 		while the thirst of the player >= 10:
 			say "You feel less thirsty and hungry after guzzling some thick, infected, tasty water, yum!";
 			decrease thirst of player by 10;
-			decrease hunger of player by 10;
+			decrease hunger of player by 4;
 			if thirst of player is less than 0, now thirst of player is 0;
 			if hunger of player is less than 0, now hunger of player is 0;
 			if morale of player is less than 0:
 				increase morale of player by 62;
 				if morale of player is greater than 0, now morale of player is 0;
 				say "After drinking something, you feel better.";
-			sort table of random critters in random order;
-			now monster is 1;
-			if "Iron Stomach" is not listed in feats of player, infect;
+			if "Iron Stomach" is not listed in feats of player:
+				if a random chance of 1 in 3 succeeds:
+					randominfect;
+		 		otherwise:
+					weakrandominfect;
+			break;
+		if "Iron Stomach" is not listed in feats of player:
+			if a random chance of 1 in 3 succeeds:
+				randominfect;
+			otherwise:
+				weakrandominfect;
 			wait for any key;
 	otherwise:
 		say "You avoid the fountain like it was another nanite plague.";

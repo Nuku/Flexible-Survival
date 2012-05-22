@@ -78,14 +78,6 @@ washerenest is a number that varies.
 fellforward is a number that varies.
 
 
-to say randominfect:
-	now researchbypass is 1;
-	sort table of random critters in random order;
-	now monster is 1;
-	infect;
-	now researchbypass is 0;
-
-
 instead of resolving sword nest:
 	say "You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here.. or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
 	now washerenest is 1;
@@ -94,14 +86,14 @@ instead of resolving sword nest:
 		if the player consents:
 			say "You run and jump into the slimy muck, a sick splot sounding and echoing between the nearby buildings. The slime coats you as you roll with enthusiasm, losing your mind to the infection faster by the minute.";
 			decrease the humanity of the player by 15;
-			say "[randominfect]";
-			say "[randominfect]";
-			say "[randominfect]";
-			say "[randominfect]";
-			say "[randominfect]";
-			say "[randominfect]";
-			say "[randominfect]";
-			say "[randominfect]";
+			weakrandominfect;			[most of first set don't affect researcher]
+			weakrandominfect;
+			weakrandominfect;
+			weakrandominfect;
+			weakrandominfect;
+			weakrandominfect;
+			randominfect;
+			randominfect;
 			say "[line break]";
 			say "...";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -111,34 +103,38 @@ instead of resolving sword nest:
 			if the player consents:
 				decrease the humanity of the player by 15;
 				say "You dip your [face of player] head into the slime and suck greedily. It sates your hunger and thirst.";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
-				say "[randominfect]";
+				weakrandominfect;		[more from second batch affect researcher]
+				weakrandominfect;
+				weakrandominfect;
+				weakrandominfect;
+				weakrandominfect;
+				weakrandominfect;
+				weakrandominfect;
+				weakrandominfect;
+				randominfect;
+				randominfect;
+				randominfect;
+				randominfect;
 				say "Another desire roars inside your head, causing you to start pulling the sludge up into your hands.";
-				say "you manage to stop it, but will you let it continue?";
+				say "You manage to stop it, but will you let it continue?";
 				if the player consents:
 					say "You lose the will to resist and proceed to follow every desire and lust.";
 					say "You grab the slime in your hands and pour it over your head, and then grab some more, and think about what to do with it next.";
 					if the cunts of the player is 1:
 						say "You take your slime-filled hands and shove them up your waiting cunt, filling it with the sludge.";
-						say "You feel a palpable wave of contentment from your lower belly.";
+						say "[randomimpreg][randomimpreg][randomimpreg]";
 						say "You then shove them up your rear, filling it as well.";
 					otherwise:
 						say "You decide to try and drink all of the slime you can, tasting its deliciously dirty flavor.";
 					say "After a short while, you collapse, corrupt pleasure roaring through your body.";
 					repeat with T running from one to 15:
-						say "[randominfect]";
-					decrease the humanity of the player by 100;
+						randominfect;
+					now the humanity of the player is 0;
 					end the game saying "Your humanity submits to the sludge nanites, and you go feral.";
+					now battleground is "void";
+					wait for any key;
+					follow the turnpass rule;
+					stop the action;
 				otherwise:
 					say "You rein in your lusts and desires almost too late.";
 			otherwise:
@@ -149,18 +145,18 @@ instead of resolving sword nest:
 		say "You spot a sword in the middle of the mess, coated so thoroughly with the juices that you suspect it was the target for the raids, and the source of the jubilation of victory. Its metal is cloudy and coated with thick slime, and the pommel is dried cum of some unknown creature, glowing white. It looks like a powerful, but dangerous weapon. Do you want to walk into the mess and take it?";
 		if the player consents: 
 			say "You slosh through the mess, leaving a trail that fill after a couple of seconds. You get to the sword, and place it in your backpack, and trudge back.";
+			now fellforward is 1;
 			if a random number between 1 and 25 > the dexterity of the player:
 				say "On the way, you fall headlong into the slime, and it takes a while to get up. After you emerge, you cough up slime and wipe it off your body.";
-				now fellforward is 1;
+				increase fellforward by 2;
 			otherwise:
 				say "You successfully navigate the mess and emerge where you entered.";
 			[now infect with the slime]
-			if fellforward is 0:
-				now fellforward is 4;
-			otherwise:
-				now fellforward is 12;
 			repeat with X running from 0 to fellforward:
-				say "[randominfect]";
+				weakrandominfect;		[some affects researcher]
+				weakrandominfect;
+				weakrandominfect;
+				randominfect;
 				say "The infected slime changes you.";
 				wait for any key;
 			add "infected sword" to the invent of the player;
@@ -174,7 +170,7 @@ instead of resolving sword nest:
 An everyturn rule:
 	if the infected sword is wielded:
 		say "[line break]The sword feels slimy in your hand. Maybe you shouldn't be using it. [line break]";
-		say "[randominfect]";
+		randominfect;
 		say "The infected sword changes you.[line break]";
 
 

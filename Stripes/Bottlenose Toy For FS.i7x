@@ -116,9 +116,9 @@ When Play begins:
 	now skin change entry is "your skin becomes shiny and smooth, turning into flexible vinyl.  Your front and inner thighs become a smooth, glossy white while the rest is a [if cocks of player > 0 and cunts of player > 0]royal purple[otherwise if cocks of player > 0]sky blue[otherwise]bright pink[end if]";
 	now ass change entry is "you feel a pressure building before releasing with a soft squeak.  For a moment you think you farted, but the squeaking sound continues as a plump dolphin tail grows from your ass.  But it is not made of flesh, but is made of plastic and is inflated with air, yet moves all the same";
 	now cock change entry is "feels like its swelling and growing wildly.  A quick look shows that it's not growing, but instead filling with air and becoming an inflatable cock, but still sensitive and fully functional, leaking a slick lubricant from its tip";
-	now str entry is 8;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 15;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 10;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 8;			[ These are now the creature's stats... ]
+	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10;			[ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 16;

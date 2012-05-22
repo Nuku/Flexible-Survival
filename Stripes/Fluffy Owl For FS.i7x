@@ -61,9 +61,9 @@ When Play begins:
 	now skin change entry is "you feel goosebumps all over your body which spread to feel like pinpricks all over.  From these countless points, small feathers start to grow in, soon covering your body in soft, fluffy feathers.  Your downy coat is mainly a mix of browns and cream colours, with lighter fluff on your chest";
 	now ass change entry is "it reshapes itself into a pert, little bottom covered by a broad tail of long, light brown feathers";
 	now cock change entry is "it slips away inside you, becoming hidden within a cloacal vent which forms to house your genitals";
-	now str entry is 12;			[ The player's stats will move towards these values through infection. ]
-	now dex entry is 16;			[ Only the monster's dexterity has any effect in combat. ]
-	now sta entry is 14;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
+	now str entry is 12;			[ These are now the creature's stats... ]
+	now dex entry is 16;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 14;			[ These values may be used as part of alternate combat.]
 	now per entry is 18;
 	now int entry is 10;
 	now cha entry is 14;
