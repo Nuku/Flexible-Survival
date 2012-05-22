@@ -1,5 +1,7 @@
 Version 1 of Alt Combat by Stripes begins here.
-[Version 1 - Creation of table and basic variations]
+[Version 1.1 - Addition of Alternate Strike attempts & beginning to link in Pepperspray]
+
+"Oh my God!  Who gave them super-powers?!"
 
 Section 1 - Basic variables
 
@@ -14,6 +16,7 @@ gascloud is a number that varies.		[ Tracks the ongoing strength of a player's a
 monsterhp is a number that varies.		[ Remaining monster hit points. ]
 monsterpowerup is a number that varies.	[ Used to track if a monster got a powerup that needs to be monitored or later removed. ]
 missskip is a number that varies.		[ Used to indicate if the default monster miss message should be omitted. ]
+monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
 
 Section 2 - Combat
 
@@ -408,24 +411,92 @@ This is the flee rule:
 
 Section 3 - Monster Counterattack
 
+Book 0 - Retaliation Rule
+
 this is the retaliation rule:
-	retaliate;
+	choose row monstercom from table of Critter Combat;
+	if name entry is "default":
+		standardretaliate;		[follows the basic model if default]
+	otherwise:
+		retaliate;				[follows the advanced model if alternate]
+
+Book 1 - Standard Retaliate
+
+[ Since it's default, it skips checking the alternates. ]
+
+to standardretaliate:
+	choose row monster from table of Random Critters;
+	now monsterhit is false;
+	standardstrike;
+	if monsterhit is true:
+		standardhit;
+	otherwise:
+		say "[Name Entry] misses!";
+	now peppereyes is 0;
+	if hp of the player is greater than 0:
+		wait for any key;
+	otherwise:
+		Lose;
+	rule succeeds;
+
+Book 2 - Alternate Retaliation
+
+[ Non-standard rules apply ]
 
 Retaliating is an action applying to nothing.
 
 to retaliate:
 	choose row monstercom from table of Critter Combat;
+	now monsterhit is false;
 	if there is a preattack in row monstercom of the table of Critter Combat:
-		follow the preattack entry;
+		follow the preattack entry;								[perform a pre-attack, if it exists]
+	if there is a altstrike in row monstercom of the table of Critter Combat:
+		follow the altstrike entry;								[use an alternate striking method, if it exists]
+	otherwise:
+		standardstrike;
+	if monsterhit is true:
+		now altattackmade is 0;
+		choose row monstercom from table of Critter Combat;
+		if there is a altattack1 in row monstercom of the table of Critter Combat and there is a alt1chance in row monstercom of the table of Critter Combat:
+			if a random chance of ( alt1chance in row monstercom of Table of Critter Combat ) in 100 succeeds:
+				now altattackmade is 1;
+				follow the altattack1 entry;						[use altattack1, if rolled successfully and exists]
+			otherwise if there is a altattack2 in row monstercom of the table of Critter Combat and there is a alt2chance in row monstercom of the table of Critter Combat:
+				if a random chance of ( alt2chance in row monstercom of Table of Critter Combat ) in 100 succeeds:
+					now altattackmade is 1;
+					follow the altattack2 entry;					[use altattack1, if rolled successfully and exists]
+		if altattackmade is 0:
+			standardhit;									[use a normal hit, if no alternate was used]
+		choose row monstercom from table of Critter Combat;
+		if there is a postattack in row monstercom of the table of Critter Combat:
+			follow the postattack entry;							[perform a post-attack, if it exists]
+	otherwise:
+		choose row monstercom from table of Critter Combat;
+		if there is a monmiss in row monstercom of the table of Critter Combat:
+			follow the monmiss entry;							[perform an alternate miss scene, if it exists]
+		if missskip is 0:
+			choose row monster from the table of random critters;
+			say "[Name Entry] misses!";
+	now peppereyes is 0;										[pepperspray wears off]
+	if hp of the player is greater than 0:
+		wait for any key;
+	otherwise:
+		Lose;
+	rule succeeds;
+
+Book 3 - Striking and Avoidance
+
+to standardstrike:
+	choose row monstercom from table of Critter Combat;
 	now avoidance is 0;
 	say "[avoidancecheck]";
 	if gascloud > 0, decrease gascloud by 1;
 	if avoidance is 1:
-		say "";
+		now monsterhit is false;
 	otherwise:
 		choose row monster from the table of random critters;
 		let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
-		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry - peppereyes;
 		let the combat bonus be attack bonus minus defense bonus;
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
@@ -436,38 +507,37 @@ to retaliate:
 		let the roll be a random number from 1 to 20;
 		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 		if the roll plus the combat bonus is greater than 8:
-			now altattackmade is 0;
-			choose row monstercom from table of Critter Combat;
-			if there is a altattack1 in row monstercom of the table of Critter Combat and there is a alt1chance in row monstercom of the table of Critter Combat:
-				if a random chance of ( alt1chance in row monstercom of Table of Critter Combat ) in 100 succeeds:
-					now altattackmade is 1;
-					follow the altattack1 entry;
-				otherwise if there is a altattack2 in row monstercom of the table of Critter Combat and there is a alt2chance in row monstercom of the table of Critter Combat:
-					if a random chance of ( alt2chance in row monstercom of Table of Critter Combat ) in 100 succeeds:
-						now altattackmade is 1;
-						follow the altattack2 entry;
-			if altattackmade is 0:
-				standardhit;
-			choose row monstercom from table of Critter Combat;
-			if there is a postattack in row monstercom of the table of Critter Combat:
-				follow the postattack entry;
+			now monsterhit is true;
 		otherwise:
-			choose row monstercom from table of Critter Combat;
-			if there is a monmiss in row monstercom of the table of Critter Combat:
-				follow the monmiss entry;
-			if missskip is 0:
-				choose row monster from the table of random critters;
-				say "[Name Entry] misses!";
-	if hp of the player is greater than 0:
-		wait for any key;
-	otherwise:
-		Lose;
-	rule succeeds;
+			now monsterhit is false;
+
+to say avoidancecheck:					[collection of all enemy attack avoidance checks]
+	choose row monster from the table of random critters;
+	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
+		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
+		now avoidance is 1;
+	otherwise if weapon object of player is bo staff:		[defensive combat]
+		let boblock be 5 + ( 2 * peppereyes );
+		if "Martial Artist" is listed in feats of player, increase boblock by 3;
+		if "Black Belt" is listed in feats of player, increase boblock by 4;
+		if "Weaponsmaster" is listed in feats of player, increase boblock by 6;
+		let numnum be ( (strength of player + dexterity of player + stamina of player - 36 ) / 3 );
+		if numnum > 0, increase boblock by numnum;
+		increase boblock by gascloud;
+		if boblock > a random number between 0 and 100:
+			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
+			now avoidance is 1;
+	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in ( 10 - peppereyes ) succeeds:
+		say "You nimbly avoid the attack at the last moment!";
+		now avoidance is 1;
+
+Book 4 - Standard Hit and Damage
 
 to standardhit:
 	choose row monster from the table of random critters;
-	let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
-	if hardmode is true and a random chance of 1 in 10 succeeds:
+	let rangenum be ( 80 - ( peppereyes * 4 ) );
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "[Attack entry] You take [dam] damage!";
@@ -484,28 +554,6 @@ to standardhit:
 	increase hp of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
-
-
-to say avoidancecheck:					[collection of all enemy attack avoidance checks]
-	choose row monster from the table of random critters;
-	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
-		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
-		say "[Name Entry] misses!";
-		now avoidance is 1;
-	otherwise if weapon object of player is bo staff:		[defensive combat]
-		let boblock be 5;
-		if "Martial Artist" is listed in feats of player, increase boblock by 3;
-		if "Black Belt" is listed in feats of player, increase boblock by 4;
-		if "Weaponsmaster" is listed in feats of player, increase boblock by 6;
-		let numnum be ( (strength of player + dexterity of player + stamina of player - 36 ) / 3 );
-		if numnum > 0, increase boblock by numnum;
-		increase boblock by gascloud;
-		if boblock > a random number between 0 and 100:
-			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
-			now avoidance is 1;
-	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
-		say "You nimbly avoid the attack at the last moment!";
-		now avoidance is 1;
 
 
 Section 4 - Loss and Victory
@@ -584,8 +632,6 @@ To lose:
 
 Section 5 - Critter Combat
 
-[ "Oh my God!  Who gave them super-powers?!" ]
-
 Chapter 0 - Definition of entries
 
 [ DEFINITIONS OF ENTRIES:
@@ -606,6 +652,7 @@ alt2chance:		The likelihood the second alternate attack will be chosen (if the f
 monmiss:		This rule replaces the regular miss statement and may contain necessary code for counting/resetting/etc...
 continuous:		This rule takes place before any and all combat rules.  It is much like the pre-attack, but happens regardless of the attack method
 			being used.  Good for enemy regen, player hp drain, player libido boosting, etc... that happens every turn.
+altstrike:		This rule replaces the standard dexterity to-hit attempt by the monster (ex: using Int, Char, etc...)
 
 While most anything can be created by placing it all in the combat rule, that requires duplication of all the code whereas using the subsets would save a lot of hassle and would ensure basic combat adaptations could more accurately be carried over (new player feats relating to defence, for example).  As well, with the rules broken out, they can more easily be repeated in the table in other combinations.  The 'retaliation rule' is the standard combat option, designed to call all the others at the appropriate time, except for the continuous entry (which is run independantly before any combat rule).  A combat rule may branch between picking to do the 'retaliate' action as normal or doing something special instead (like a non-dexterity attack).
 
@@ -619,12 +666,13 @@ A note on alternates: This is the 'damage' portion of a dexterity strike replace
 Chapter 1 - The Table of Critter Combat
 
 Table of Critter Combat
-name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)
-"default"	retaliation rule	--	--	--	--	--	--	--	--
-"aura1"	retaliation rule	--	--	--	--	--	--	--	aura1 rule
-"bearhugger"	retaliation rule	--	--	bearhug rule	20	--	--	--	--
-"braggart"	retaliation rule	--	brag rule	--	--	--	--	--	--
-"powerstrike1"	retaliation rule	ps1charge rule	--	ps1attack rule	100	--	--	ps1miss rule	--
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"default"	retaliation rule	--	--	--	--	--	--	--	--	--
+"aura1"	retaliation rule	--	--	--	--	--	--	--	aura1 rule	--
+"bearhugger"	retaliation rule	--	--	bearhug rule	20	--	--	--	--	--
+"braggart"	retaliation rule	--	brag rule	--	--	--	--	--	--	--
+"powerstrike1"	retaliation rule	ps1charge rule	--	ps1attack rule	100	--	--	ps1miss rule	--	--
+"hypno"	retaliation rule	--	--	--	--	--	--	--	--	intstrike rule	
 
 
 Chapter 2 - Sample/Basic Rules
@@ -692,18 +740,18 @@ this is the ps1charge rule:
 	choose row monster from table of random critters;
 	if a random chance of 1 in 5 succeeds:
 		say "The creature strikes an impressive DBZ-pose and roars, preparing to show you its true power!";
-		increase wdam entry by 5;
+		increase wdam entry by ( ( lev entry + 7 ) / 4 );
 		decrease dex entry by 2;
 		now monsterpowerup is 1;
 
 this is the ps1attack rule:
 	choose row monster from table of random critters;
 	if monsterpowerup is 0:
-		standardhit;			[if not a charged attack, act as normal]
+		standardhit;							[if not a charged attack, act as normal]
 	if monsterpowerup is 1:
 		say "The enhanced attack strikes!  [run paragraph on]";
-		standardhit;			[standard attack w/enhanced stats]
-		decrease wdam entry by 5;	[then restore stats to normal]
+		standardhit;							[standard attack w/enhanced stats]
+		decrease wdam entry by ( ( lev entry + 7 ) / 4 );	[then restore stats to normal]
 		increase dex entry by 2;
 		now monsterpowerup is 0;
 
@@ -711,10 +759,38 @@ this is the ps1miss rule:
 	choose row monster from table of random critters;
 	if monsterpowerup is 1:
 		say "Your opponent's ultimate attack fails as they miss!";
-		decrease wdam entry by 5;	[restore stats to normal]
+		decrease wdam entry by ( ( lev entry + 7 ) / 4 );	[restore stats to normal]
 		increase dex entry by 2;
 		now monsterpowerup is 0;
-		now missskip is 1;		[tells the game to skip the regular miss message]
+		now missskip is 1;						[tells the game to skip the regular miss message]
+
+Part 5 - Alternate Strike Example - Intelligence Strike - used for Hypno attacks, Mental powers, etc
+
+this is the intstrike rule:
+	choose row monstercom from table of Critter Combat;
+	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:		[physical dodging doesn't apply]
+		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
+		now avoidance is 1;
+	if gascloud > 0, decrease gascloud by 1;
+	if avoidance is 1:
+		now monsterhit is false;
+	otherwise:
+		choose row monster from the table of random critters;
+		let the defense bonus be (( the intelligence of the player - 10 ) / 2) + level of the player;
+		let the attack bonus be (( the int entry minus 10 ) divided by 2) plus lev entry - peppereyes;
+		let the combat bonus be attack bonus minus defense bonus;
+		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
+			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
+			decrease combat bonus by 3;
+		if hardmode is true and the combat bonus is less than -10:
+			now the combat bonus is -10;
+		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
+		let the roll be a random number from 1 to 20;
+		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		if the roll plus the combat bonus is greater than 8:
+			now monsterhit is true;
+		otherwise:
+			now monsterhit is false;
 
 
 Alt Combat ends here.
