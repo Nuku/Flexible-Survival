@@ -36,6 +36,8 @@ to say Alpha Husky attack:
 			now sex entry is "Female";
 			say "'I think,' He says as he draws back to the pointed tip, then drives the thick knot of his member into you, 'That I will keep you like this.' The words stop, replaced with a howl of release as he begins to fill your body with hot gushes of seed. Your grasp of your old save feels weak for a moment as strange new adoration for this husky tries to displace them and your body is rocked with powerful climax. By the time you can even see again, the Alpha has departed, leaving you sticky with a reminder of how much better it could be the next time.";
 			decrease humanity of player by 20;
+			if humanity of player is less than 10:
+				end the game saying "[alpha husky bitch]";
 		otherwise if sex entry is "Female":
 			say "'My favorite little bitch male', he says as he approaches you, licking at your face and throat in slow motions. His warm, strong, paws rub over your chest as he pushes you back to the ground, laying belly up. His paws caress downwards and he looks into your eyes, staring. The power of his commanding gaze forces you to look away, which only makes him laugh in pleasure at your submissiveness.";
 			say "'That[']s right,' He Draws away and slides down, lifting one of your [body of player] legs up and sliding up between. His already rock hard shaft presses up against your back door without preperation. Despite this, he enters as smooth as silk, and begins to mate with you in slow, deep motions, rocking you against the ground with soft growls of affection and ownership.";
@@ -43,11 +45,11 @@ to say Alpha Husky attack:
 			say "Soft but firm paw rubs slowly at you, in varying circles that seems to enhance the pressure and pleasure of his dick pressing deep into your bowels, driving you ever faster towards climax as he tenses. The sensations are too intense, as if you should have already cum, but simply cannot, waiting for some que. He locks to you, motions becoming faster, but shorter, as the tight ring of your ass holds firm to his knot, only allowing him precious little motion to jerk back and forth. Each pull flashes stars before your eyes in the ever building intensity.";
 			say "He explodes powerfully into you, and your body unwinds along with your mind. Everything melts away as you are washed away in the pleasure of it, unloading yourself entirely in his caring grasp. This time he waits for you, and kisses you once before he departs, 'Just think how much nicer it will be.'";
 			decrease humanity of player by 20;
+			if humanity of player is less than 10:
+				end the game saying "[alpha husky bitch]";
 		otherwise:
 			say "'You think someone like you can stand up to alpha?' The victorious husky growls at you, snapping his teeth in your face and making you cringe backwards in submission. 'Better you know your place, as the lowly little bitch you should be,' He says with a grin full of canine amusement as he pounces on you, pinning you down with his teeth on your neck until he is satisfied with your increasingly nervous bodies surrender. Backing off, he sniffs in your direction several times, before stalking off with his tail held high in the air behind him, 'Come back and see me when you are ready to be a proper bitch,' The alpha male calls over his shoulder, as you lie there panting, feeling like you just had a rather narrow escape.";
 		infect "Female Husky";
-		if humanity of player is less than 10 and sex entry is "Female":
-			end the game saying "[alpha husky bitch]";
 			
 to say alpha husky bitch:
 	say "You surrender to the sensations and take off at a run until the object of your obession comes into view. That handsome alpha husky is perched on a rock, looking out over the quiet city. He doesn[']t even see you until you are on him, hugging him from behind.";
