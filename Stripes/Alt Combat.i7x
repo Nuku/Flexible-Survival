@@ -197,16 +197,16 @@ This is the player attack rule:
 			say "Filled with sudden motivation, your attack scores particularly well!  ";
 			increase dam by dam;
 		if wmstrike is 1:			[Weaponsmaster used]
-			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		otherwise if weapon object of player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player], you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [dam] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player], you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 			otherwise if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
-				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [dam] damage!";
+				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [special-style-2][dam][roman type] damage!";
 			otherwise:
-				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		otherwise:
-			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		if a random chance of 4 in 20 succeeds and "Tail Strike" is listed in feats of player:
 			if tailname of player is listed in infections of Tailweapon:
 				let z be 0;
@@ -274,7 +274,7 @@ This is the player attack rule:
 			now roll is a random number from 1 to 20;
 			if roll plus the combat bonus is greater than 8:
 				let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-				say "[z]: [assault of z] [dam] damage inflicted!";
+				say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
 				decrease monsterhp by dam;
 			otherwise:
 				say "Your [z] misses!";
@@ -286,7 +286,7 @@ This is the player attack rule:
 		now roll is a random number from 1 to 20;
 		if roll plus the combat bonus is greater than 8:
 			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
-			say "[assault of companion of player] [dam] damage inflicted!";
+			say "[assault of companion of player] [special-style-2][dam][roman type] damage inflicted!";
 			decrease monsterhp by dam;
 		otherwise:
 			say "Your [companion of player] misses!";
@@ -540,7 +540,7 @@ to standardhit:
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "[Attack entry] You take [dam] damage!";
+	say "[Attack entry] You take [special-style-2][dam][roman type] damage!";
 	let absorb be 0;
 	if "Toughened" is listed in feats of player:
 		increase absorb by dam divided by 5;
@@ -604,7 +604,7 @@ to win:
 	if lev entry > 4, increase reward by ( lev entry / 4 );
 	if lev entry > 8, increase reward by ( lev entry / 3 );
 	increase freecred by reward;
-	say "[line break]A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
+	say "[line break]A soft chime informs you that you have received [special-style-1][reward][roman type] freecreds, and now have [freecred] creds.";
 	if ok is 1, wait for any key;
 	clear the screen and hyperlink list;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
@@ -708,9 +708,9 @@ this is the bearhug rule:
 		[ignores AC dampened damage]
 		decrease hp of player by ( dam - absorb );
 		if absorb is 0:
-			say "You suffer [dam] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
+			say "You suffer [special-style-2][dam][roman type] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
 		otherwise:
-			say "You suffer [dam - absorb] ([dam] - [absorb]) damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
+			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
 		if hp of player > 0:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			let bonus be ( Strength of player - str entry + level of player - lev entry ) / 2;  [level equally important as str]
