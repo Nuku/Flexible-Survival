@@ -17,6 +17,7 @@ monsterhp is a number that varies.		[ Remaining monster hit points. ]
 monsterpowerup is a number that varies.	[ Used to track if a monster got a powerup that needs to be monitored or later removed. ]
 missskip is a number that varies.		[ Used to indicate if the default monster miss message should be omitted. ]
 monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
+chargeup is a number that varies.		[ Used to track an attack that charges across several turns. ]
 
 Section 2 - Combat
 
