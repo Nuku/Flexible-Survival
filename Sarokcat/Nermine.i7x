@@ -620,16 +620,9 @@ carry out bargainhunting:
 				say "Poking through the rather unusual bargain bin cautiously, you come across a rather strange looking stone statue, which looks rather like some kind of primitive idol of some kind. Pulling the idol out of the bin for a better look, you see that it appears to be a squat humanoid made up of many different animals mixed together, the strange melding of the different beasts seeming remarkably smoothly done for such a sculpture. As you look it over, you are suddenly surprised to see that its visage has changed to one of displeasure.  You yelp softly and push the thing away out of fear to see as the small stone figuring stretches its misshapen limbs out, before seeming to fade away as a small nimbus of dark haze envelops the idol.  The sensation of oncoming changes builds in your hands as the strange idol's effects causes several random changes in you.  'Ah! It seems to Nermine that Horguth the Changeable is upset with you trying to avoid his influence.' The jackaless says with no little amusement, as you stare at your now empty hand in disbelief as the tingles spread up your arms.";
 				decrease humanity of player by a random number between 8 and 15;
 				now angryhorguth is 1;
-				sort table of random critters in random order;
-				now monster is 1;
-				choose row monster from the table of random critters;
-				infect;
-				now monster is 2;
-				choose row monster from the table of random critters;
-				infect;
-				now monster is 3;
-				choose row monster from the table of random critters;
-				infect;
+				randominfect;
+				randominfect;
+				randominfect;
 			otherwise:
 				say "Poking through the rather unusual bargain bin cautiously, you come across a rather strange looking stone statue, which looks rather like some kind of primitive idol of some kind. Pulling the idol out of the bin for a better look, you see that it appears to be a squat humanoid made up of many different animals mixed together, the strange melding of the different beasts seeming remarkably smoothly done for such a sculpture. As you turn it from side to side to get a better look, you are surprised and nearly drop the small idol when its head turns and winks one reptilian eye at you, while its other feline eye watches you closely. Your mouth drops open in shock as you hold the idol out for Nermine to see as the small stone figuring stretches its misshapen limbs out, before seeming to fade away as a small nimbus of rainbow light envelops the idol.  'Ah! Nermine sees you have been blessed by Horguth the Changeable.  He does not show himself to just anyone you know! One often considers such a blessing to be mixed, for surely change shall come much more easily to you now, both good and bad.' The jackaless says with no little amusement, as you stare at your now empty hand in disbelief.";
 				add "Mutable" to feats of the player;	

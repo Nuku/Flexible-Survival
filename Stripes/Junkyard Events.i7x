@@ -1,4 +1,5 @@
 Version 1 of Junkyard Events by Stripes begins here.
+[ Version 1.1 - Update to Stray Cat event ]
 
 "Adds a batch of random events in the Junkyard area to Flexible Survival."
 
@@ -154,8 +155,8 @@ to say dirtysnow:
 		if name entry is "Snow Bat":
 			now monster is y;
 			break;
-	choose row monster in table of random critters;
 	now area entry is "Junkyard";
+	now non-infectious entry is false;
 	now snowbatfight is 3;
 	challenge "Snow Bat";
 	if snowbatfight is 1:

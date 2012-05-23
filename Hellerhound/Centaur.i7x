@@ -1,5 +1,5 @@
 Version 2 of Centaur by Hellerhound begins here.
-[Version 2 - Update by Stripes]
+[Version 2.1 - Update to new creature data ]
 
 [converted from FI]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
@@ -40,6 +40,7 @@ Instead of resolving a Apple Tree:
 				break;
 		choose row monster in table of random critters;
 		now area entry is "Plains";
+		now non-infectious entry is false;
 		say "     Noticing you, the centaur whinnies excitedly and pulls away from the tree roots with some effort.  The roots writhe on the ground, as if searching for their prey, before finally slipping back under the earth to await another hungry victim.  The centaur, not noticing what was starting to happen to him, trots over to you, cock swelling and tentacles writhing beside that throbbing, leaf-green meat.  His sheath and ballsac are a dark green in colour.  He looks you over and, with a booming voice, asks: 'Are you going to submit to me?'  You have a feeling that if you don't agree, he'll try to take what he wants by force.";
 		if the player consents:
 			say "You bow down your head and he laughs, approaching you with lust in his eyes.";
@@ -252,6 +253,15 @@ When Play begins:
 	now libido entry is 0;	[done in the loss/win text]		[ Amount player Libido will go up if defeated ]
 	now loot entry is "Fresh Apple";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
+	now type entry is "[one of]centaur[or]mutant[at random]";
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 6 - Centaur Heat
