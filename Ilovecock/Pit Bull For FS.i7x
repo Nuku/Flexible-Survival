@@ -77,6 +77,51 @@ When Play begins:
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "dirty water";			[ Loot monster drops, ]
 	now lootchance entry is 20;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]tough[or]muscled[or]lean-and-mean[at random]";
+	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "pbull";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"pbull"	retaliation rule	--	--	balltit rule	18	--	--	--	--	--
+
+
+this is the balltit rule:
+	choose row monster from the table of random critters;
+	let multiplier be 0;
+	let rangenum be ( 90 - ( peppereyes * 4 ) );
+	let dam be ( ( wdam entry times a random number from rangenum to 130 ) / 100 );
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		now dam is (dam * 150) divided by 100;
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+	if cocks of player > 0:			[powerful ball kick]
+		now multiplier is ( 120 + ( square root of ( cock width of player + 6 ) ) * 20 );
+		now dam is ( dam * multiplier ) / 100;
+		say "The [name entry] decides to play dirty and drives their foot into your groin, kicking you square in the nuts!  You clutch your aching [ball size] testes, having taken [dam] damage!";
+	otherwise:					[strong tit punch]
+		now multiplier is ( 110 + ( square root of ( breast size of player + 1 ) ) * 6 );
+		now dam is ( dam * multiplier ) / 100;
+		say "The [name entry] decides to fight dirty and punches you hard in the tit.  Ouch!  You have taken [dam] damage!";
+	let absorb be 0;
+	if "Toughened" is listed in feats of player and cocks of player is 0:	[Toughened cannot block ball kick aspect]
+		increase absorb by dam divided by 5;
+	repeat with x running through equipped equipment:
+		increase absorb by ac of x;
+	if absorb is greater than dam:
+		now absorb is dam;
+	if absorb is greater than 0:
+		say "You prevent [absorb] damage!";
+	decrease hp of the player by dam;
+	increase hp of player by absorb;
+	follow the player injury rule;
+	say "You are [descr].";
+
 
 when play ends:
 	if bodyname of player is "Pit bull":

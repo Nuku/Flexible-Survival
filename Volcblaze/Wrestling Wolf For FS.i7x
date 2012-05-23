@@ -12,6 +12,7 @@ when play begins:
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 wrestlingwolfdefeat is a number that varies.
+wwheal is a number that varies.
 
 to say wrestlingwolfattack:
 	if wrestlingwolfdefeat is 0: [ first time losing to wrestling wolf ]
@@ -58,7 +59,12 @@ to say wrestlingwolfattack:
 			otherwise:
 				say "Unable to stand up against the Wrestling Wolf[apostrophe]s might you collapse to your knees in front of him. Before you the Wrestling Wolf is covered in sweat and panting quite a bit. 'Not bad! I mean you lost, but at least ya put up more of a fight than last time' he said as he approached you. His sweaty masculine scent washing over you fueling your arousal. The Wolf catches the scent of your arousal and smiles 'Heh, smells like someone could use a little attention' he said as he squats down in front of you. He pushes you onto your back and pulls off your clothes. Only to sigh in disappointment not seeing what he hoped for.";
 				say "'Tch, looks like ya haven[apostrophe]t the right type of equipment for this,' he sighs pulling down his Wrestling Briefs revealing his erect shaft. 'Guess the last time wasn[apostrophe]t enough,' he said as he began to rub his shaft above you. 'Ya see, I[apostrophe]ve notice that whenever my seed get[apostrophe]s onto or into someone they grow a nice little pussy for me to use,' he says pumping his shaft even harder. With a howl the Wrestler Wolf unloads his load all over your [bodyname of player]body.  The wrestler grins in satisfaction as he watches as some of his cum seeps through your [skinname of player].";
-				say "'There we go. Maybe now you[apostrophe]ll grow a nice little pussy for me,' the wrestler said pulling back up his briefs. He picks you up and tosses you out of his makeshift ring. 'I[apostrophe]ll be expecting a little something from ya, the next time we fight,' the Wrestler Wolf said eyeing you lustfully as you walked away still a bit sore and covered in his hot seed."				
+				say "'There we go. Maybe now you[apostrophe]ll grow a nice little pussy for me,' the wrestler said pulling back up his briefs. He picks you up and tosses you out of his makeshift ring. 'I[apostrophe]ll be expecting a little something from ya, the next time we fight,' the Wrestler Wolf said eyeing you lustfully as you walked away still a bit sore and covered in his hot seed."
+
+to say wrwolfdesc:
+	say "You are grabbed from behind and carried not too far off to what appears to be a makeshift wrestling ring. You are tossed into the ring. You quickly turn to find a tall male wolf. His thick black fur a bit rugged and unkempt. He stands at least two feet taller than you. He wears what appears to be a wrestling mask and a pair of wrestling briefs, you figure he was some kind of wrestler before the infection took place. '[one of]Sorry ta treat ya like that, but I just couldn[apostrophe]t wait any longer I have ta fight ya[or] Ya looked strong. Maybe you can make this fight not a bore[or] Finally someone to fight. Everyone else around here is too much of a coward to fight me again[at random],' he says before getting into a fighting position, his wolf tail swinging excitedly behind him.";
+	now chargeup is 0;
+	now wwheal is 0;
    
 Section 2 - Monster Insertion
 
@@ -70,10 +76,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Wrestling Wolf"; [Name of your new Monster]
-   now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck performing a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Supplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it was like tackling a brick wall, causing you to stumbles back a bit but not before he kicks you hard in your gut.[or] He grabs hold of your waist before lifting you up and slamming you back hard onto the mat. You[apostrophe]re on your stomach a bit disoriented and don[apostrophe]t notice him climbing up the nearby ring post. By the time your head stops spinning the Wrestling Wolf has already jumped off of the top of the post and lands right on top of you with a bone crushing Body Slam.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee performing a devastating BackBreaker[or]He charges at you unsuspectingly and wraps his arms around you. Effortlessly lifting you into the air he tightens his hold as he shakes you around like a ragdoll. Burying  you into his furry yet hard chest as you feel your spine reaching it[apostrophe]s limits from his BearHug. Getting bored he drops you back onto the floor.[or]The Wrestling Wolf delivers a powerful punch to your gut causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you up-side down, you begin to scream as he jumps a bit into into the air landing on his ass as your head is slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together slamming your head in between. You start to fall to your knees from the attack only to be caught by the wolf. Who places you sitting ontop the nearest post where he proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he could into the air and comes crashing down delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
+   now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck performing a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Supplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it was like tackling a brick wall, causing you to stumbles back a bit but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee performing a devastating BackBreaker[or]He charges at you unsuspectingly and wraps his arms around you. Effortlessly lifting you into the air he tightens his hold as he shakes you around like a ragdoll. Burying you into his furry yet hard chest as you feel your spine reaching it[apostrophe]s limits from his BearHug. Getting bored he drops you back onto the floor.[or]The Wrestling Wolf delivers a powerful punch to your gut causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you up-side down, you begin to scream as he jumps a bit into into the air landing on his ass as your head is slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together slamming your head in between. You start to fall to your knees from the attack only to be caught by the wolf. Who places you sitting ontop the nearest post where he proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he could into the air and comes crashing down delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
    now defeated entry is "'HAHAHA! Now that was a fight!' he shouts as he continues to laugh hysterically while lying on the ground in defeat. 'You[apostrophe]r not to shabby there,' he says as he sprang himself right back up almost as if he wasn't hurt at all. 'Heh, maybe next time I won[apostrophe]t have ta hold back on ya. So make sure ta comeback when you[apostrophe]re ready to have another go.' he call out to you as you walk away from the ring."; [ Text or say command used when Monster is defeated.]
    now victory entry is  "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "You are grabbed from behind and carried not too far off to what appears to be a makeshift wrestling ring. You are tossed into the ring. You quickly turn to find a tall male wolf. His thick black fur a bit rugged and unkempt. He stands at least two feet taller than you. He wears what appears to be a wrestling mask and a pair of wrestling briefs, you figure he was some kind of wrestler before the infection took place. '[one of]Sorry ta treat ya like that, but I just couldn[apostrophe]t wait any longer I have ta fight ya[or] Ya looked strong. Maybe you can make this fight not a bore[or] Finally someone to fight. Everyone else around here is too much of a coward to fight me again[at random],' he says before getting into a fighting position, his wolf tail swinging excitedly behind him.";[ Description of the creature when you encounter it.]
+   now desc entry is "[wrwolfdesc]";
    now face entry is "a long canine muzzle sticking out of your wolf-like head your mouth hangs open in a lupine grin revealing your new sharp teeth";[ Face description, format as the text "Your face is (your text)"]
    now body entry is "lean and well muscled, your canine form stands easily on its new digigrade legs, your somewhat surprised that your pawlike hands are still able to do the things as when they were human";[ Body Description, format as the text "Your Body is (your text)"]
    now skin entry is "[one of]black furred[or]rugged furred[or]furry[at random]";[ skin Description, format as the text "You have (your text) skin"]
@@ -82,7 +88,7 @@ When Play begins:
    now face change entry is "your face stretches out into a large lupine muzzle, at first a bit overwhelmed at the new scents your experiencing, but soon come to terms with it"; [ face change text. format as "Your face feels funny as (your text)" ]
    now body change entry is "your feet and hands become paw like, your body becoming well toned as well"; [ body change text. format as "Your body feels funny as (your text)" ]
    now skin change entry is "thick, rugged, black fur spreads rapidly over your form"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-   now ass change entry is "a thick and large wolf like tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+   now ass change entry is "a thick and large lupine tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
    now cock change entry is "your member grows thicker as the top of it grows to a sharp point, a large canine knot forming at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
    now str entry is 20;
    now dex entry is 14;
@@ -107,6 +113,76 @@ When Play begins:
    now libido entry is 35;            [ Amount player Libido will go up if defeated ]
    now loot entry is "";            [ Loot monster drops, ]
    now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
-   
+   [ These represent the new additions to the table of random critters ]
+   now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+   now body descriptor entry is "[one of]muscular[or]muscly[or]chiseled[at random]";
+   now type entry is "lupine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+   now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+   now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+   now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+   blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+   now altcombat entry is "wrwolf";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
    [ Edit this to have the correct Name as wall]
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"wrwolf"	wrestlew rule	--	wrwolfpose rule	--	--	--	--	--	--	--
+
+
+this is the wrestlew rule:
+	if chargeup is 1:
+		now chargeup is 0;
+		wwpowerslam;
+	otherwise if a random chance of 1 in 5 succeeds:
+		now chargeup is 1;
+		say "[one of]The wolf gets on the turnbuckles and howls, shaking his fists in the air as he eggs on the non-existant crowd.[or]The wrestler rushes from side to side in the ring, bouncing himself off the ropes, passing up opportunities to try hitting you.[or]The giant wolf growls and flexes, then mimes listening to the cheering crowd with exaggerated sweeps of his muscled arms.[at random]";
+	otherwise:
+		retaliate;				[follows the advanced model if alternate]
+
+to wwpowerslam:
+	choose row monster from table of random critters;
+	standardstrike;
+	if monsterhit is true:		[ boosted dmg, dampened by pepperspray, also small humanity loss ]
+		let boostdam be ( str entry + dex entry + ( lev entry * 2 ) - ( peppereyes * 6 ) ) * 3;
+		let dam be ( ( wdam entry times ( ( a random number from 80 to 120 ) + boostdam ) ) / 100 );
+		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+			now dam is (dam * 150) divided by 100;
+			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+		say "The Wrestling Wolf suddenly moves in, grabbing you to execute his signature maneuver.  Hefting you high above his head with both arms, you are given a brief view of the [if daytimer is day]sunny sky[otherwise]night sky[end if] as you are held aloft on your back.  He howls and slams you powerfully onto the mat.  You are slammed down with great force, rattling your brains so hard you'd swear you can feel the infection buzzing in your ringing ears.  But you only have a moment to listen to this before a great shadow passes over you and the big wolf comes slamming down atop you, having jumped off the top rope to land on you.  You take a massive [dam] damage and lose a grip on a corner of your battered mind.";
+		let absorb be 0;
+		if "Toughened" is listed in feats of player:
+			increase absorb by dam divided by 5;
+		repeat with x running through equipped equipment:
+			increase absorb by ac of x;
+		now absorb is ( absorb * 50 ) / 100;		[ defense half as effective ]
+		if absorb is greater than dam:
+			now absorb is dam;
+		if absorb is greater than 0:
+			say "Your defences are only able to prevent [absorb] damage from the devastating attack!";
+		decrease hp of the player by dam;
+		increase hp of player by absorb;
+		decrease humanity of player by a random number between 8 and 12;
+		if "Pure" is listed in feats of player, increase humanity of player by a random number between 2 and 4;
+		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 3;
+		follow the player injury rule;
+		say "You are [descr].";
+	otherwise:
+		say "The Wrestling Wolf rushes in to grab you, clearly ready to unleash a crowd-pleasing maneuver, but you barely manage to squirm out of his reach and whip him into the ropes.  That was a close one.";
+	now peppereyes is 0;										[pepperspray wears off]
+	if hp of the player is greater than 0:
+		wait for any key;
+	otherwise:
+		Lose;
+	rule succeeds;
+
+this is the wrwolfpose rule:
+	choose row monster from table of random critters;
+	if hp entry > ( monsterhp * 5 ) and a random chance of 3 in 5 succeeds and wwheal < 4:
+		say "    After his successful attack, [one of]the big wolf howls for the crowd[or]the powerful wolf makes a show of struggling to stay standing, ears perked as if listening to the crowd[or]the wrestler finds a shirt from somewhere to tear from his body[or]the lupine wrestler's body shakes with the power of the Wolfamaniacs cheering him on in his mind[at random], helping him draw on a hidden reserve of strength.";
+		increase monsterhp by ( hp entry / 12 );
+		increase wwheal by 1;
+
+
+
 Wrestling Wolf For FS ends here.
