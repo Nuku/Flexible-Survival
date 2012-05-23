@@ -2040,6 +2040,10 @@ This is the sex change rule:
 			if cock length of player is less than 4, now cock length of player is 4;
 		if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
 			now cock length of player is 8;
+		if "Single Sexed" is listed in feats of player:
+			now cock length of player is 0;
+			now cocks of player is 0;
+			now cock width of player is 0;
 		if prevcock > cock length of player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your impressive [cockname of player] [one of]cock[or]penis[or]shaft[or]pole[at random] begins to diminish somewhat to better suit your new infection. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
@@ -2060,6 +2064,10 @@ This is the sex change rule:
 			if cock width of player is less than 2, now cock width of player is 2;
 		if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
 			now cock width of player is 4;
+		if "Single Sexed" is listed in feats of player:
+			now cock length of player is 0;
+			now cocks of player is 0;
+			now cock width of player is 0;
 		if prevcock > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your impressive [cockname of player] [one of]balls[or]testes[or]gonads[or]cum factories[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
@@ -2092,6 +2100,10 @@ This is the sex change rule:
 		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 			if cock length of player is less than 4, now cock length of player is 4;
 			if cock width of player is less than 2, now cock width of player is 2;
+		if "Single Sexed" is listed in feats of player:
+			now cock length of player is 0;
+			now cocks of player is 0;
+			now cock width of player is 0;
 		if prevcock > cock length of player or prevcock2 > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cock[or]man meat[or]shaft[or]pole[at random] begins to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while your [one of]balls[or]testes[or]cum factories[or]gonads[at random] become [ball size]. ";
@@ -2121,6 +2133,10 @@ This is the sex change rule:
 			if cunt length of player is less than 4, now cunt length of player is 4;
 		if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
 			now cunt length of player is 8;
+		if "Single Sexed" is listed in feats of player:
+			now cunt length of player is 0;
+			now cunts of player is 0;
+			now cunt width of player is 0;
 		if prevcunt > cunt length of player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
 			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to diminish somewhat to better suit your new infection. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
@@ -2141,6 +2157,10 @@ This is the sex change rule:
 			if cunt width of player is less than 2, now cunt width of player is 2;
 		if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
 			now cunt width of player is 4;
+		if "Single Sexed" is listed in feats of player:
+			now cunt length of player is 0;
+			now cunts of player is 0;
+			now cunt width of player is 0;
 		if prevcunt > cunt width of player:		[did cock actually shrink?]
 			follow the cunt descr rule;
 			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [one of]cunt[or]pussy[or]vagina[or]cleft[at random] as you are hit by an unexpected orgasm.  The squeezing does not release fully as your wet hole shrinks somewhat to better suit your new infection by becoming tighter.";
@@ -2171,6 +2191,10 @@ This is the sex change rule:
 		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 			if cunt length of player is less than 4, now cunt length of player is 4;
 			if cunt width of player is less than 2, now cunt width of player is 2;
+		if "Single Sexed" is listed in feats of player:
+			now cunt length of player is 0;
+			now cunts of player is 0;
+			now cunt width of player is 0;
 		if prevcunt > cunt length of player or prevcunt2 > cunt width of player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
 			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[or]pussy[or]vagina[or]cleft[at random] begins to shrink. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr]. ";
