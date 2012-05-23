@@ -1716,7 +1716,7 @@ To process (X - a grab object):
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
 			now hp of player is maxhp of player;
-		say "Using your medkit, [one of]You spray your cuts with anesthetic[or]You bandage your worst wounds[at random]. You regain [healed] hit points.";
+		say "Using your medkit, [one of]You spray your cuts with anesthetic[or]You bandage your worst wounds[at random]. You regain [special-style-1][healed][roman type] hit points.";
 		if a random chance of 1 in 10 succeeds:
 			say "You have used up the last of the medkit.";
 			if "Expert Medic" is listed in the feats of the player and a random chance of 2 in 10 succeeds:
@@ -1740,7 +1740,7 @@ To process (X - a grab object):
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
 			now hp of player is maxhp of player;
-		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate.  You regain [healed] hit points.";
+		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate.  You regain [special-style-1][healed][roman type] hit points.";
 		delete healing booster;
 
 
@@ -1859,6 +1859,42 @@ understand "the clears are back" as clearmore.
 carry out clearmore:
 	now clearnomore is 0; [returns clearing to normal]
 	say "You can see clearly, the clears are back.";
+
+Section Color
+
+Include Glulx Text Effects by Emily Short.
+To say special-style-1: [name can be changed if desired, just adjust calls to it as well]
+	(- glk_set_style(style_User1); -)
+
+To say special-style-2: [name can be changed if desired, just adjust calls to it as well]
+	(- glk_set_style(style_User2); -)
+
+Table of Common Color Values (continued)
+glulx color value	assigned number
+g-pure-blue	255		[== $0000FF] 
+g-bright-cyan	39423		[== $0099FF]
+g-pure-green	65280		[== $00FF00]
+g-pure-cyan	65535		[== $00FFFF]
+g-peach	15645627		[== $EEBBBB] 
+g-pure-yellow	16776960		[== $FFFF00]
+g-pure-magenta	16711935		[== $FF00FF]
+g-pure-red	16711680		[== $FF0000]
+g-dark-red	11141120		[== $AA0000]
+[names can be changed if desired, also need to change matching name in table below.  changing numbers changes color.]
+
+Table of User Styles (continued)
+style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
+special-style-1	left-justified	no-obliquity	0	0	bold-weight	proportional-font	0	g-pure-green
+special-style-2	left-justified	no-obliquity	0	0	bold-weight	proportional-font	0	g-pure-red
+fixed-letter-spacing-style	left-justified	no-obliquity	0	0	regular-weight	proportional-font	0	g-pure-blue [allows redifining of fixed letter spacing style, will change anywhere it is already in use][appears unused in game currently, would allow a third color.]
+[italic-style	--	--	--	--	--	--	-1	g-pure-blue] [allows redifining of italic style, will change anywhere it is already in use]
+[bold-style	--	--	--	--	--	--	2	g-pure-yellow] [allows redifining of bold style, will change anywhere it is already in use]
+[header-style	--	--	--	--	--	--	10	g-pure-yellow
+alert-style	--	--	--	--	--	--	5	g-pure-red
+note-style	--	--	--	--	--	--	--	g-pure-green
+blockquote-style	--	--	--	--	--	--	--	g-pure-yellow
+input-style	--	--	--	--	--	--	-1	g-pure-magenta]
+[can't figure out how to use header through input styles.  in theory, they could also be used (like fixed letter spacing).]
 
 Part 3 - Item Code
 
