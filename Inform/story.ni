@@ -1871,6 +1871,7 @@ carry out clearmore:
 Section Color
 
 Include Glulx Text Effects by Emily Short.
+
 To say special-style-1: [name can be changed if desired, just adjust calls to it as well]
 	(- glk_set_style(style_User1); -)
 
@@ -1881,19 +1882,21 @@ Table of Common Color Values (continued)
 glulx color value	assigned number
 g-pure-blue	255		[== $0000FF] 
 g-bright-cyan	39423		[== $0099FF]
+g-dark-green	43520		[== $00FF00] 
 g-pure-green	65280		[== $00FF00]
 g-pure-cyan	65535		[== $00FFFF]
+g-dark-red	11141120		[== $AA0000]
+g-medium-red	13369344		[== $CC0000]
 g-peach	15645627		[== $EEBBBB] 
 g-pure-yellow	16776960		[== $FFFF00]
 g-pure-magenta	16711935		[== $FF00FF]
 g-pure-red	16711680		[== $FF0000]
-g-dark-red	11141120		[== $AA0000]
 [names can be changed if desired, also need to change matching name in table below.  changing numbers changes color.]
 
 Table of User Styles (continued)
 style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
-special-style-1	left-justified	no-obliquity	0	0	bold-weight	proportional-font	0	g-pure-green
-special-style-2	left-justified	no-obliquity	0	0	bold-weight	proportional-font	0	g-pure-red
+special-style-1	left-justified	no-obliquity	0	0	bold-weight	proportional-font	1	g-dark-green
+special-style-2	left-justified	no-obliquity	0	0	bold-weight	proportional-font	1	g-medium-red
 fixed-letter-spacing-style	left-justified	no-obliquity	0	0	regular-weight	proportional-font	0	g-pure-blue [allows redifining of fixed letter spacing style, will change anywhere it is already in use][appears unused in game currently, would allow a third color.]
 [italic-style	--	--	--	--	--	--	-1	g-pure-blue] [allows redifining of italic style, will change anywhere it is already in use]
 [bold-style	--	--	--	--	--	--	2	g-pure-yellow] [allows redifining of bold style, will change anywhere it is already in use]
