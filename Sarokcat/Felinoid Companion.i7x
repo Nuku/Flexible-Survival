@@ -26,6 +26,58 @@ An everyturn rule:
 				if name entry is "Felinoid":
 					now monster is y;
 					break;
+			if bodyname of player is "Felinoid" and player is pure and child is not born and gestation of child is 0: [ player must not already be pregnant]
+				if cunts of player is greater than 0:
+					say "Your companion becomes increasingly agitated and begins to rub against your furry legs with loud purrs and insistent mewls. His broad snout pushes up between your thighs to lap at your tender places without so much as a request. The sway of his tail and the increasing length of his dick leaves little confusion to his desire.";
+					if libido of player is greater than 50 or humanity of player is less than 40:
+						say "You can think of no reason to turn away your faithful companion. The sight of his virility is more than reason enough to say yes. Your mouth waters at the thought of receiving it, and you offer no objection to his insistent advances.";
+					otherwise:
+						say "You aren't sure if you should submit to his advances. Should you?";
+						if the player consents:
+							say "Well, what could the harm be? Besides, it[']s all for a little bit of fun, right?";
+						otherwise:
+							say "You push your companion away firmly, despite the soft tingling in your needy feline cunt. There[']s no time for this right now!";
+							increase libido of player by 10;
+							continue the action;
+					say "The feline gives a delighted mrowl and rears up to knock you forward onto all fours, then circles hungrily. [run paragraph on]";
+					if breast size of player is greater than 0 and breasts of player is greater than 0:
+						say "The feline nuzzles up underneath you, burying snout against your soft [breast size desc of player] breasts, nuzzling slowly from one to the next before he traps a firm teat in his mouth and begins to nurse hungrily at you. Loud slurping sounds fill the area as he bites lightly and pulls at your firm teat, coaxing all the milk that you can produce.";
+						now lastmilking is turns;
+					otherwise:
+						say "He moves around to your front and presses lips to lips, kissing you firmly as rough tongue extends to dance against your own. He gazes into your eyes with unhidden lust and something that could be easily confused for love as he holds you captive in the exchange.";
+					say "He draws away, licking his lips, and moves swiftly behind you, but you are faster. Soft fingers grab at his erect shaft and give it a tug, holding him in place for a moment. He looks at you questioningly, but you continue teasing sensitive flesh with the fur of your fingers, making his hips rock out against you. The sensitive flesh of your fingertips can feel the faint feline barbs near the tip of his alien member, and your cunt spasms with desire for it.";
+					say "Willing to wait no longer, he gently extracts himself from you and circles to grab at your hips, biting at your back and sides a moment as he shuffles into position. His feline cock nudges against your [cunt size desc of player] pussy before easing into its heat. The barbs pull lightly as he withdraws, sending sparks of fire through your form. The rocking begins in earnest, driving deep into your fertile form and slamming his cock against your cervix. You aren[']t sure how, but it seems he[']s just large enough, filling you so perfectly with every motion.";
+					say "Pawhands close about your chest, rubbing across and below to your belly, petting and stroking in time with his manic shoves into your prone body. His teeth nip at your ears with every twitch they make when his rough tongue isn't teasing the sensitive flaps. Something wraps around your leg, squeezing at it in sharp tight constrictions in the same, rapid, tempo of his love making. You can barely concentrate enough to look back and see his tail lashed about you, squeezing and pulling as he goes.";
+					say "Your partner[']s climax strikes before you are even fully aware of it, splashing hotly across your insides. The first two squirts are normal, almost every day, before the true flood comes. Your womb bloats as the felinoid roars with satisfaction, dumping his fertile offering into your waiting factory, eager to fill you with a litter of his kittens. The sensation of stretching and filling sets your tunnel to fluttering powerfully, milking that shaft for every little bit of seed, even as it begins to back wash, splashing out across his balls and both of your thighs, making a mess all around the area.";
+					say "His orgasm fading, he gives a firm nip and drives your front against the ground before his feet change stance, then he pulls out in a swift, brutal, motion. The barbs catch firmly in your sensitive flesh and all you can feel is dizzying intensity, as if your entire form were made of fire for what feels like forever. As your trembling limbs return to your control, you can see him quietly licking himself clean, satisfied and content again.";
+					now libido of player is libido of player / 3;
+					say "[impregchance]";
+					follow the turnpass rule;
+				otherwise: [ player is not female]
+					if cocks of player is greater than 0:
+						say "The great feline beside you gently nudges against you a few times, then nuzzles upwards into your groin, teasing at a [cock size desc of player] [cock of player] shaft. A rough tongue flicks out across sensitive flesh, taking special care to get up under spines and tease the sensitive flesh under the head of the feline cock.";
+						if libido of player is less than 40:
+							say "Do you really have time to spend indulging the cat's lusts? Well that does feel really damn nice. Maybe...(y/n)";
+							if the player consents:
+								let x be 0;
+							otherwise:
+								say "You carefully extract yourself from your companion's eager mouth and push him back. Not right now! He looks a little dissapointed at your reaction, but doesn't push the matter, at least for the moment.";
+								continue the action;
+						say "He pushes you back to a seated position with strong nuzzlings against your groin. He never leaves your crotch. Rough tongue lashes across your thighs, down across your taint and up across your [ball size] balls before returning to that [cock size desc of player] feline cock of yours. His tongue curls around it at the base and runs slowly up towards the tip, purrs sending soft bits of pleasure through the delighted flesh.";
+						say "You reach and run your feline claws through his head and across the back of his ears, encouraging him as he works deeper against you. [if cock length of player is greater than 6]Your shaft penetrates straight through his muzzle, being deep throated down his flexing throat and subjecting to to the delightful sensations of a purry mouth pussy for your aching member.[end if]";
+						say "You can hold back no longer and, grab his head, squeezing at his ears as you begin to fill him with your cum. Each twitch is responded to in kind in him, wriggling in pleasure as he suckles up the treat. [if cock width of player is greater than 12]Your massive balls unload so much seed that he seems to have trouble getting it all down. His belly swells with it and he mewls around the shaft in his mouth, pushing at your balls with a paw as you flex and fire into the captive feline.[end if]";
+						say "When your climax tapers off, he carefully extracts himself from your shaft, licking it clean as he goes. With a last, fond, nuzzle at you, he sits and begins to preen himself. [if cocks of player is greater than 1]This is all the more needed with the seed your extra male meat produced. Streaks of grey fluid against his pelt, being cleaned and swallowed with motions of his cat tongue. [end if]He is soon cleaned and ready to continue, leaving you to straighten yourself up.";
+						now the libido of player is libido of player / 2;
+					otherwise: [ the player is neuter, omg]
+						say "You almost trip, stumbling across a furry blockade to your path. Your feline companion is on his back, paws in the air and pawing in your direction. Between his hind legs, his shaft is flagged in the air, hard and ready. Your sexual urges feel a bit muted without the usual organs to express them, but you don[']t want to dissapoint your companion, do you?(y to decline the invitation, n to go along)";
+						if the player consents:
+							say "You step over the cat and continue on your way. He rolls back to his feet and is soon following again, if dissapointed.";
+							continue the action;
+						say "The feline wriggles his hips and mewls as you crouch down. Your soft furry fingers tease across the feline member from base to tip before trailing back down to heft his large nuts. He purrs with pleasure at the examination, but clearly wants more, pawing at your side lightly with a soft paw.";
+						say "Thinking of no better way to satisfy your companion, you get lower and flick your tongue across the tip, tasting the first bits of prefluid that he is already leaking freely in his rut. He loses patience with your slowness and coils on himself, grabbing your head to guide you down onto the member fully, pressing that barbed feline cock across your rough tongue with a loud roar of dominance.";
+						say "Tail thrashing, he starts to fuck your face in earnest. His paws rub at your cheeks, but also keep a firm grip, giving no room to consider escape, not while he's rutting. His crotch fills your vision as he bumps up into it with that musky groin, sliding his cock back and forth across your wet tongue in increasingly desperate motions.";
+						say "Salty cum sprays across your mouth, making you almost gag for a moment before you get to swallowing it as best as you can, but there's just so much of it. It overflows, dripping across your chin and chest as you labor to get as much of it down as you can. The cat draws his now sated shaft from you and helpfully laps his tongue across your lips, then nuzzles against your cheek. At least he[']s happy.";
+				continue the action;
 			if cunts of player is greater than 0:
 				if libido of player is greater than 70:
 					let T be a random number between one and five;

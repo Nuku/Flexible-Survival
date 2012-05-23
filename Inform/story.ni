@@ -241,6 +241,14 @@ Definition: A situation(called X) is close:
 		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):
 			yes;
 	no;
+	
+Definition: A person(Called X) is pure:
+	if bodyname of x is facename of X:
+		if bodyname of x is tailname of X:
+			if bodyname of x is skinname of X:
+				if bodyname of x is cockname of X:
+					yes;
+	no;
 
 Definition: A person(called X) is male:
 	if cocks of x is greater than 0, yes;
