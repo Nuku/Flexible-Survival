@@ -96,18 +96,18 @@ this is the balltit rule:
 	choose row monster from the table of random critters;
 	let multiplier be 0;
 	let rangenum be ( 90 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 130 ) / 100 );
+	let dam be ( wdam entry times ( a random number from rangenum to 135 ) ) / 100;
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	if cocks of player > 0:			[powerful ball kick]
-		now multiplier is ( 120 + ( square root of ( cock width of player + 6 ) ) * 20 );
+		now multiplier is 120 + ( ( square root of ( cock width of player + 6 ) ) * 20 );
 		now dam is ( dam * multiplier ) / 100;
-		say "The [name entry] decides to play dirty and drives their foot into your groin, kicking you square in the nuts!  You clutch your aching [ball size] testes, having taken [dam] damage!";
+		say "The [name entry] decides to play dirty and drives their foot into your groin, kicking you square in the nuts!  You clutch your aching [ball size] testes, having taken [special-style-2][dam][roman type] damage!";
 	otherwise:					[strong tit punch]
-		now multiplier is ( 110 + ( square root of ( breast size of player + 1 ) ) * 6 );
+		now multiplier is 110 + ( ( square root of ( breast size of player + 1 ) ) * 6 );
 		now dam is ( dam * multiplier ) / 100;
-		say "The [name entry] decides to fight dirty and punches you hard in the tit.  Ouch!  You have taken [dam] damage!";
+		say "The [name entry] decides to fight dirty and punches you hard in the tit.  Ouch!  You have taken [special-style-2][dam][roman type] damage!";
 	let absorb be 0;
 	if "Toughened" is listed in feats of player and cocks of player is 0:	[Toughened cannot block ball kick aspect]
 		increase absorb by dam divided by 5;

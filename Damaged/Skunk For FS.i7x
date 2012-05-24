@@ -61,6 +61,7 @@ to say skunkg defeat:
 		say "The skunk girl looks up at you, smiling even as her body seems to turn to liquid, 'I may be gone, but you can still carry His kittens...' she mutters cryptically as she collapses, dissolving completely.";
 	otherwise:
 		say "The skunk girl turns to run from you and you relax thinking the fight over, suddenly you realise your error as one last gob of oily musk hits you.  Sticky as it is, it doesn't remain on your skin for long as it smooths out in places, leaving behind a soft almost rubbery-textured fur, even as you feel a tingle at your groin.";
+		infect "Skunk";
 
 to say skunk_defeat:
 	if Skunk_type is 1:
@@ -147,6 +148,63 @@ When Play begins:
 	now libido entry is 10;            [- Amount player Libido will go up if defeated -]
 	now loot entry is "Skunk Goo";            [- Loot monster drops, -]
 	now lootchance entry is 70;        [- Chance of loot dropping 0-100 -]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]sultry[or]slender[or]sensual[or]curvaceous[at random]";
+	now type entry is "[one of]skunk[or]mephit[at random]";
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "parkskunk";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"parkskunk"	skunkspray rule	--	--	--	--	--	--	--	--	--
+
+
+this is the skunkspray rule:
+	if a random chance of 1 in 10 succeeds:
+		skspray;
+	otherwise:
+		retaliate;				[follows the advanced model if alternate]
+
+
+to skspray:						[ignores defences, requires no hit, hum/lib check instead to resist]
+	choose row monster from table of random critters;
+	let checknum be ( humanity of player - libido of player + ( level of player * 2 ) ) * 2;
+	if checknum > 180, now checknum is 180;
+	if a random chance of checknum in 200 succeeds:
+		say "The skunk turns around and flashes its tail moments before releasing its spray at you.  You move out of the way of the thick, oily musk and cover your mouth and nose, blocking out the strangely tempting scent.";
+	otherwise:
+		now tempnum is 0;
+		if bodyname of player is "Skunk" or bodyname of player is "Skunk Taur", increase tempnum by 1;
+		if facename of player is "Skunk" or facename of player is "Skunk Taur", increase tempnum by 1;
+		if skinname of player is "Skunk" or skinname of player is "Skunk Taur", increase tempnum by 1;
+		if cockname of player is "Skunk" or cockname of player is "Skunk Taur", increase tempnum by 1;
+		if tailname of player is "Skunk" or tailname of player is "Skunk Taur", increase tempnum by 1;
+		if skunk kit is tamed, increase tempnum by 1;
+		if companion of player is skunk kit, increase tempnum by 1;
+		let randomizer be ( a random number from 67 to 80 ) + ( tempnum * tempnum * 2 ) + lev entry;
+		let dam be ( wdam entry times randomizer ) / 100;
+		let libdam be 3 + lev entry + tempnum;
+		if libdam > 16, now libdam is 16;
+		if face mask is equipped:
+			let dam be ( dam * 3 ) / 4;
+			let libdam be libdam / 2;
+		say "The skunk turns around and flashes its tail moments before releasing its spray at you.  You move away from the thick, oily musk, but end up breathing in the rich scent[if face mask is equipped].  Your mask helps block some of it, dampening the effects, though you still find[otherwise], finding[end if] it very arousing.  You find yourself tempted by the creature's alluring body and consider just stopping fighting.  Your will to keep fighting drops ( [special-style-2][dam][roman type] ) and your lustful, instinctual urges become more powerful.";
+		decrease hp of player by dam;
+		increase libido of player by a random number between 3 and libdam;
+		decrease humanity of player by a random number between 2 and ( ( libdam + 1 ) / 2 );
+		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	now peppereyes is 0;										[pepperspray wears off]
+	if libido of player >= 110 or hp of player <= 0 or humanity of player < 10:
+		lose;
+	otherwise:
+		wait for any key;
+	rule succeeds;
 
 
 Section 3 - Skunk heat and Skunk goo
