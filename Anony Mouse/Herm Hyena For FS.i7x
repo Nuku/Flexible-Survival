@@ -41,7 +41,7 @@ When Play begins:
 	now attack entry is "[one of]rakes her claws across your midsection, leaving bloody gashes in their wake[or]suddenly clocks you with one hell of a haymaker, you kind of want to sit down for a moment now [or] leaps at you bringing her knee to your face with alarming speed [or] sweepkicks your legs out from under you, then swiftly and painfully drops herself elbow first directly onto your sternum [at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthehyena]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Herm Hyena attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "An anthropomorphic hyena. She has bright [one of] brown [or] amber [or] green [at random] eyes and a grinning mouth full of saber-like teeth. She is wearing jeans and a leather jacket with no shirt whatsoever leaving her full breasts exposed to the world. When she spots you a low chuckling begins to emanate from her throat and her mouth opens into a toothy smile as she begins to run toward you. As she approaches it becomes very clear that 'she' is also a he, a large bulge in her pants growing ever larger";[ Description of the creature when you encounter it.]
+	now desc entry is "An anthropomorphic hyena. She has bright [one of]brown[or]amber[or]green[at random] eyes and a grinning mouth full of saber-like teeth. She is wearing jeans and a leather jacket with no shirt whatsoever leaving her full breasts exposed to the world. When she spots you a low chuckling begins to emanate from her throat and her mouth opens into a toothy smile as she begins to run toward you. As she approaches it becomes very clear that 'she' is also a he, a large bulge in her pants growing ever larger";[ Description of the creature when you encounter it.]
 	now face entry is "brown-furred, hyena-like";[ Face description, format as the text 'Your face is (your text)'] 
 	now body entry is "lean and tightly muscled.";[ Body Description, format as the text 'Your Body is (your text)'] 
 	now skin entry is "brown furred";[ skin Description, format as the text "You have (your text) skin"] 
@@ -75,6 +75,16 @@ When Play begins:
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lean[or]muscled[at random]";
+	now type entry is "hyena";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
 
 When play ends:
 	if bodyname of player is "Herm Hyena" and matriarchdefeated is 0 and matriarchowned is 0:

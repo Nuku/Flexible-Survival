@@ -109,7 +109,7 @@ When Play begins:
 	now face entry is "the cute head of a small lioness";[ Face description, format as the text "Your face is (your text)."] 
 	now body entry is "a female lioness. You are only about four feet tall, though you have huge breasts for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream that runs down into your fur if it isn't being drunk constantly";[ Body Description, format as the text "Your Body is (your text)."] 
 	now skin entry is "[if looknow is 1]tawny brown fur, covering pliable[otherwise]tawny brown fur covered[end if]";[ skin Description, format as the text "You have (your text) skin."] 
-	now tail entry is "You have a long tufted  lion's tail.";[ Tail description, write a whole Sentence or leave blank. ] 
+	now tail entry is "You have a long, tufted lion's tail.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "leonine";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "your head shrinks and, as you gasp, you notice your voice has lightened, gaining you the face of a small female feline. For some reason, the scents of the groins of all around you become enticing and you can feel arousal building"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "urge to giggle becomes powerful as you shrink and gain the softness of a small lioness"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -139,12 +139,19 @@ When Play begins:
 	now libido entry is 25;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]petite[or]girlish[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "[one of]leonine[or]feline[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
 
 
 Section 3 - Monster Heat
-
-[ IMPORTANT READ ME  - Thiss section is compleately optional. if you do NOT want to go through the trouble of adding a particular heat text of events to your creature, just delete between the two marker comments, for clarity i have included the German shepard entry. +++++]	
-[ +++++ ]
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
