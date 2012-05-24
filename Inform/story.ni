@@ -30,7 +30,7 @@ To say a/an (T - text):
    
 To wait for any key:
 	if hypernull is 0:
-		say "[link]more[as] [end link]";
+		say "[link]more[as] [end link][run paragraph on]";
 	keypause;
 
 to clear the screen and hyperlink list:
