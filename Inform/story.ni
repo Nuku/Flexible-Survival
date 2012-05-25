@@ -829,6 +829,7 @@ carry out hunting:
 	let Q be a list of numbers;
 	let found be 0;
 	let sitfound be 0;
+	let foundbadtime be 0;
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
@@ -845,6 +846,11 @@ carry out hunting:
 		choose row X from the table of random critters;
 		if there is no area entry, next;
 		if area entry matches the text battleground, case insensitively:
+			if there is a nocturnal in row X of table of random critters:
+				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
+					if name entry matches the text topic understood, case insensitively:
+						now foundbadtime is 1;
+					next;		[skips if day/night doesn't match]
 			if name entry matches the text topic understood, case insensitively:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
@@ -980,8 +986,12 @@ carry out hunting:
 								Fight;
 					break;
 		if found is 0:
-			if sitfound is 0, say "[bold type]You don't think what you're looking for can be found here...[roman type]";
-			if sitfound is 1, say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type]";
+			if foundbadtime is 1:
+				say "[bold type]There doesn't seem to be any of them around right now...[roman type]";
+			otherwise if sitfound is 0:
+				say "[bold type]You don't think what you're looking for can be found here...[roman type]";
+			otherwise if sitfound is 1:
+				say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type]";
 			let dice be a random number from 1 to 20;
 			if "Bad Luck" is listed in feats of player, increase dice by 1;
 			if "Curious" is listed in feats of player, increase dice by 2;
@@ -2796,6 +2806,9 @@ To fight:
 		otherwise:
 			next;
 		if area entry matches the text battleground:
+			if there is a nocturnal in row X of table of random critters:
+				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
+					next;		[skips if day/night doesn't match]
 			add x to q;
 			if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry:
 				add x to q;
