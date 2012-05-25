@@ -41,18 +41,23 @@ To Combat Menu:
 			say "[line break]Your submissive nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			follow the submit rule;
+			next;
 		if autoattackmode is 1: [always attacks in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the player attack rule;
+			next;
 		otherwise if autoattackmode is 3: [always pass in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the combat pass rule;
+			next;
 		otherwise if autoattackmode is 4: [always flees in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the flee rule;
+			next;
 		otherwise if autoattackmode is 5: [always submit in combat, no player input needed]
 			now automaticcombatcheck is 1;
 			follow the submit rule;
+			next;
 		otherwise:
 			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee[line break]";
