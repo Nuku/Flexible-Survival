@@ -27,8 +27,8 @@ To say Pantherherm loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -38,16 +38,16 @@ When Play begins:
 	now defeated entry is "[Pantherherm loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Pantherherm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "Angie pounces you happily, mmmm angiepouncing!";[ Description of the creature when you encounter it.]
-	now face entry is "short panther like muzzle on your changed face, with bright golden panther eyes, your face is a perfect and erotic blend of Panther and human features, a feline grin tugging at your muzzle as you stare out at the world from your new";["Your have a (your text) face."] 
-	now body entry is "powerful and predatory, your large frame balances easily on your rather pawlike feet, your changed legs giving you the impression of always being ready to pounce forward on an opponent, and your clawed hands have soft pads on the palms for easier pouncing."; [Your Body is (your text)"] 
+	now face entry is "short panther like muzzle on your changed face, with bright golden panther eyes.  Your face is a perfect and erotic blend of panther and human features, a feline grin tugging at your muzzle as you stare out at the world from your new";["Your have a (your text) face."] 
+	now body entry is "powerful and predatory, your large frame balances easily on your rather paw-like feet, your changed legs giving you the impression of always being ready to pounce forward on an opponent, and your clawed hands have soft pads on the palms for easier pouncing"; [Your Body is (your text)"] 
 	now skin entry is "[one of]black furred[or]black with purple tints[or]dark furred[or]panther-like[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long feline tail extending down from your spine, the tail lashes back and forth in a predatory manner with every step you take.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]feline[or]Panther[or]barbed[or]pointed feline[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "your muscles shift and crack, your jaw stretching out slightly as your teeth take on a sharper more feline form, your face pushing out slightly into a small muzzle as all your senses seem to sharpen, the world coming into a bright new focus through your slit pupiled golden feline eyes.."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it seems to stretch and lengthen, your spine cracking slightly as you stretch instinctively with the changes, your body becoming more lithe and flexible even as your hands and feet seem to shift slightly, your legs shifting so that you now can balance easily on the pads of your new hindpaws, and soft velvety pads covering your palms even as sharp claws push out of your slightly thicker fingers. Finished stretching, you smile as you realize you seem to have put on several inches of height, and a decent amount of extra muscle as well.."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "a strange comforting warmth spreads over your body, soft black fur pushing out of your skin and settling into place all over your body, covering you completely with its silken softness."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a your spine seems to extend outwards, a long feline tail quickly forming behind you, and lashing happily from side to side."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it narrows down, soft feline barbs forming along its slightly more pointed length as it draws up between your legs, a soft panther like sheath forming around it and holding it up closer to your body, leaving just the tip of your cock poking out teasingly."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "your muscles shift and crack, your jaw stretching out slightly as your teeth take on a sharper more feline form, your face pushing out slightly into a small muzzle as all your senses seem to sharpen, the world coming into a bright new focus through your slit pupiled golden feline eyes"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "it seems to stretch and lengthen, your spine cracking slightly as you stretch instinctively with the changes, your body becoming more lithe and flexible even as your hands and feet seem to shift slightly, your legs shifting so that you now can balance easily on the pads of your new hindpaws, and soft velvety pads covering your palms even as sharp claws push out of your slightly thicker fingers. Finished stretching, you smile as you realize you seem to have put on several inches of height, and a decent amount of extra muscle as well"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "a strange comforting warmth spreads over your body, soft black fur pushing out of your skin and settling into place all over your body, covering you completely with its silken softness"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "a your spine seems to extend outwards, a long feline tail quickly forming behind you, and lashing happily from side to side"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it narrows down, soft feline barbs forming along its slightly more pointed length as it draws up between your legs, a soft panther like sheath forming around it and holding it up closer to your body, leaving just the tip of your cock poking out teasingly"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 18;
 	now dex entry is 24;
 	now sta entry is 18;
@@ -69,8 +69,17 @@ When Play begins:
 	now cunt length entry is 12;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 6;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Chipped tooth";			[ Loot monster drops, ]
+	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]sleek[or]powerful[or]sultry[at random]";
+	now type entry is "feline";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if Angiearoused is 3:

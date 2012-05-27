@@ -174,8 +174,8 @@ To say Alpha Husky loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -188,15 +188,15 @@ When Play begins:
 	now victory entry is  "[Alpha Husky attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "You blink in surprise as a large handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely husky fur, and a nice perky husky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. '[one of]You look like you will make a fine bitch for me...[or]Let[apostrophe]s see if you know how to submit to an alpha[or]Another soon to be husky bitch for me I see![or]Hello, my lovely little bitch. Time to get fucked![or]You look like you need a pack to belong to. Let me help you with that..[or]It doesn[apostrophe]t look like you have embraced your inner slut yet. Here let me help you with that..[or]C[apostrophe]mere Bitch![or]Let[apostrophe]s see now, do you want to do it the hard way, or the doggystyle way...[or]I can[apostrophe]t wait to get my paws on you![or]Time to show you what an alpha can do![at random]' the alpha husky says as he rubs his very canine paws together. His thick, erect, canine cock bobs with excitement and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";[ Description of the creature when you encounter it.]
 	now face entry is "slim masculine canine muzzle, a soft grin tugging at the edges of it, and your perky husky ears resting happily on top of your canine"; [Your have a (your text) face."] 
-	now body entry is "that of a bipedal canine, very much resembling that of a male husky, with digitigrade legs ending in soft powerful paws, and extremely paw like hands."; [Your Body is (your text)"] 
+	now body entry is "that of a bipedal canine, very much resembling that of a male husky, with digitigrade legs ending in soft powerful paws, and extremely paw-like hands"; [Your Body is (your text)"] 
 	now skin entry is "[one of]soft furred[or]husky furred[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long and fluffy husky tail swaying happily behind you.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]canine[or]Husky[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "it tingles and draws forward, pushing out into a proper canine muzzle, your newly elongated tongue slipping free of your new lips, and lolling wetly in the air for a minute."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it vibrates with increasing pleasure, your legs bending and twisting into a proper digitgrade form with soft snapping sounds as the bones flow and change. You look down to see your feet becoming entirely paw like, even as your hands shift and change as well to become almost as pawlike, barely able to still handle your equipment..."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "  it vibrates with odd pleasure as your skin prickles from your head to your toes as fur begins to push through from underneath, soon covering you in a soft, almost comforting, layer of fluffy white husky fur."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your ass vibrates with sensual pleasure as a long tail canine tail pushes out from your spine, lifting up in a stiff curve as it begins to sway slowly behind you without any conscious input."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it draws up closer to your body, the skin stretching around your crotch to cover your new knotted canine member completely in a soft furry sheath of husky fur."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now body change entry is "it vibrates with increasing pleasure, your legs bending and twisting into a proper digitgrade form with soft snapping sounds as the bones flow and change. You look down to see your feet becoming entirely paw-like, even as your hands shift and change as well to become almost as paw-like, barely able to still handle your equipment..."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "it vibrates with odd pleasure as your skin prickles from your head to your toes as fur begins to push through from underneath, soon covering you in a soft, almost comforting, layer of fluffy white husky fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "your ass vibrates with sensual pleasure as a long tail canine tail pushes out from your spine, lifting up in a stiff curve as it begins to sway slowly behind you without any conscious input"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it draws up closer to your body, the skin stretching around your crotch to cover your new knotted canine member completely in a soft furry sheath of husky fur"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 22;
 	now dex entry is 17;
 	now sta entry is 21;					
@@ -218,8 +218,17 @@ When Play begins:
 	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Chipped tooth";			[ Loot monster drops, ]
+	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]altered[or]animalistic[at random]";
+	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 

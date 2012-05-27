@@ -81,6 +81,7 @@ carry out leafing:
 		if name entry is "Tanuki":
 			now monster is y;
 			break;
+	now non-infectious entry is false;	[swap to allow infection...]
 	infect;
 	infect;
 	infect;
@@ -88,9 +89,7 @@ carry out leafing:
 	infect;
 	infect;
 	infect;
-	infect;
-	infect;
-	infect;
+	now non-infectious entry is true;	[...then close to prevent random infection]
 	say "With the changes complete, you feel you could [bold type]expand balls[roman type] and [bold type]contract balls[roman type] and also grow or contract your cock or breasts!";
 	
 ballgrowing is an action applying to nothing.
@@ -180,8 +179,8 @@ carry out breastshrinking:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -198,7 +197,7 @@ When Play begins:
 	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]";[- Cock Description, format as you have a "size" (your text) cock-]
 	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it becomes fatter and a little shorter as you take on the stereotypical stature of a tanuki."; [- body change text. format as "Your body feels funny as (your text)" -]
-	now skin change entry is "Brown and black fur explodes across you in tanuki like patterns as your skin is left tingling."; [- skin change text. format as "Your skin feels funny as (your text)" -]
+	now skin change entry is "brown and black fur explodes across you in tanuki-like patterns as your skin is left tingling."; [- skin change text. format as "Your skin feels funny as (your text)" -]
 	now ass change entry is "a thick and fluffy looking tail emerges from your bottom."; [- ass/tail change text. format as "Your ass feels funny as (your text)" -]
 	now cock change entry is "it grows a [skin of player] sheath."; [- cock change text. format as "Your cock feels funny as (your text)" -]
 	now str entry is 12;
@@ -222,9 +221,18 @@ When Play begins:
 	now cunt length entry is 14;        [- Length of female sex  infection will attempt to give you. -]
 	now cunt width entry is 5;        [- Width of female sex  infection will try and give you -]
 	now libido entry is 10;            [- Amount player Libido will go up if defeated -]
-	now loot entry is "Skunk Goo";            [- Loot monster drops, -]
+	now loot entry is "";            [- Loot monster drops, -]
 	now lootchance entry is 0;        [- Chance of loot dropping 0-100 -]
-	
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]plump[or]chubby[or]fat[at random]";
+	now type entry is "[one of]raccoon[or]tanuki[at random]";
+	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is true;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
 when play ends:
 	if SatisfiedTanuki is 0:
 		say "Your tanuki blood serves you well. They say Tanuki are shapeshifters as well, but you never quite get past size shifting. A handy enough trick on its own? The ability to at least transition from tanuki form to human is quite useful at least!";
