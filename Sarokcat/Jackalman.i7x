@@ -25,8 +25,8 @@ To say jackalman loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -36,16 +36,16 @@ When Play begins:
 	now defeated entry is "[jackalman loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[jackalman attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "The jackalman is watching you!!";[ Description of the creature when you encounter it.]
-	now face entry is "narrow canine face, with a long sleek muzzle full of sharp teeth and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. Your powerful jaws pull your lips back in a feral grin as you admire your new"; [Your have a (your text) face."] 
-	now body entry is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself.";[ Body Description, format as the text "Your Body is (your text)"] 
+	now face entry is "narrow canine face, with a long sleek muzzle full of sharp teeth and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. Your powerful jaws pull your lips back in a feral grin as you admire your new face"; [Your have a (your text) face."] 
+	now body entry is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long sleek jackal[apostrophe]s tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "as your mouth stretches and pushes forward in a massive yawning motion, the muscles reforming as it pushes out into a sleek black muzzle, while your eyes blur as they shift in both colour and position, new sounds and smells explode through your enhanced senses as your new jackal[apostrophe]s muzzle finishes forming and your ears finish shifting into proper canine ears, swiveling around on top of your head like a proper jackals."; [ face change text. format as "Your face feels funny as (your text)" ]
+	now face change entry is "as your mouth stretches and pushes forward in a massive yawning motion, the muscles reforming as it pushes out into a sleek black muzzle, while your eyes blur as they shift in both colour and position, new sounds and smells explode through your enhanced senses as your new jackal[apostrophe]s muzzle finishes forming and your ears finish shifting into proper canine ears, swiveling around on top of your head like a proper jackal's"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your shape changes and seems to grow slightly more powerful, the muscles moving around under the skin as it becomes both stronger and sleeker. You can feel your legs shift and change as well, causing you to stumble forward slightly as your heels seem to shift upwards on your legs, shifting your weight forward onto the balls of your changing feet as they shift into a more powerful predatory stance. Soon your feet finish changing and you find yourself balancing easily on your new jackal like paws, as you stand on your new digigrade jackal legs, and flex your new strong clawed hands"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "A soft tingling sensation spreads across your skin as soft, sleek, black jackal fur begins to push its way out of your body, swiftly covering your body in a sexy coat of thick dark fur."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a strange tingling sensation seems to come from your rear, as it tightens somewhat, then you can feel a strong pulling sensation as a thick black canine tail pushes out from your rear, lengthening until it is down past your knees before your new appendage is finished growing."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your shaft thins and changes, its tip tapering to a point while its base seems to swell up slightly before being covered in a soft black sheath of fur. Your balls tingle slightly as they swell with strongly fertile jackal seed."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now skin change entry is "A soft tingling sensation spreads across your skin as soft, sleek, black jackal fur begins to push its way out of your body, swiftly covering your body in a sexy coat of thick dark fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "a strange tingling sensation seems to come from your rear, as it tightens somewhat, then you can feel a strong pulling sensation as a thick black canine tail pushes out from your rear, lengthening until it is down past your knees before your new appendage is finished growing"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "your shaft thins and changes, its tip tapering to a point while its base seems to swell up slightly before being covered in a soft black sheath of fur. Your balls tingle slightly as they swell with strongly fertile jackal seed"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 22;
 	now dex entry is 18;
 	now sta entry is 20;					
@@ -67,8 +67,28 @@ When Play begins:
 	now cunt length entry is 9;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
+	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]strong[or]powerful[at random]";
+	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is true;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+to jackalmanify:
+	repeat with y running from 1 to number of rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "jackalman":
+			now monster is y;
+			break;
+	now non-infectious entry is false;	[swap to allow infection...]
+	infect;
+	now non-infectious entry is true;	[...then close to prevent random infection]
+
 
 when play ends:
 	if bodyname of player is "jackalman":

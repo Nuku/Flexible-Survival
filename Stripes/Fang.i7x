@@ -1,5 +1,5 @@
 Version 5 of Fang by Stripes begins here.
-[Version 5 - Alpha Fang w/o Sandra]
+[Version 5.1 - Alpha Fang scene w/Candy]
 
 "Adds Fang the Feral Wolf to the Flexible Survival game"
 
@@ -10,7 +10,7 @@ The description of Fang is "[fangdesc]";
 The conversation of Fang is { "Grrrr!" }.
 lastFangfucked is a number that varies.  lastFangfucked is normally 555.
 libido of Fang is normally 0.		[represents status w/fucking Sandra - saved]
-lust of Fang is normally 0.		[number of threesomes w/Sandra in this play through]
+lust of Fang is normally 0.		[tracks sex w/Fang in this play through (controls Sandra variations)]
 [See Feral Wolf file for collecting Fang.]
 
 instead of sniffing the Fang:
@@ -296,6 +296,8 @@ to say fangsandracloser1:
 [ 8, rolled back to 6		]
 
 
+
+
 Section 5 - Fang Dominance
 
 Chapter 1 - w/Sandra
@@ -456,6 +458,33 @@ to say fangalphafucked:
 	wait for any key;
 	now libido of player is ( ( libido of player * 4 ) / 5 );
 	decrease humanity of player by 3;
+
+
+Chapter 4 - Alpha Fang and Candy
+
+an everyturn rule:
+	if ( hp of Fang is 3 or hp of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang is 2 and girl is banned ) ) and lust of Candy is 0 and coonstatus is 2:
+		now lust of Candy is 1;
+		now lastCandyfucked is turns;
+		now lastFangfucked is turns;
+		say "     As you're adjusting your gear, you hear the door to the bunker open.  Glancing over, you spot Candy sashaying out.  He smiles and waves at you, giving his tail a playful flick.  'I'm going to borrow your big, bad wolf, sweetie[if hp of Fang is 3].  Sandra spilled the beans to me about how much fun she's been having, so I thought I'd give the big boy a test drive[otherwise].  You mentioned how much fun you'd been having with him, so I thought I'd give the big boy a test drive[end if].  I hope you don't mind.'  And with that said, he continues over to Fang.  He seems hesitant to approach the big wolf for only a moment before moving up to offer himself to the wolf.";
+		say "     It seems like things are about to get started here.  Do you want to stick around?";
+		if the player consents:
+			now lust of Candy is 2;
+			say "     Sliding your gear aside for the moment, you shift in your seat to better view the upcoming show.  You watch as Candy chats briefly with the large wolf before sliding down his panties and moving onto all fours.  With a flick of his tail, he flashes his bare ass at you, raising his skirt.  Fang strides around the coon, sniffing at him with increasing interest, then licks under his tail.  He seems to find the coon's cotton candy flavour interesting and lashes his tongue over the proffered tailhole.  The coon releases some girlish moans as the long, broad tongue laps at his asshole and even slips into it a little.";
+			say "     Once he's gotten his playmate ready, Fang moves atop him, nudging his throbbing wolf cock against the coon's back door before slowly sliding in into him.  Candy releases a sensual moan of delight and pushes back, easily taking the wolf's big girth into his practiced hole.  His bubble bottom bounces with each thrust of his feral lover.";
+			if cocks of player > 0:
+				say "     Enjoying the impromptu show, you take your cock in hand and slowly stroke yourself, sliding over your [cock of player] dick.  As you watch the pair continue to go at it, precum dribbles down your length, allowing you to get nice and slick[if cunts of player > 0].  Your free hand moves down to your pussy, slipping a few fingers into it to pleasure your female sex as well[otherwise].  Your free hand moves down to your balls, rubbing over them for further pleasure[end if].  With such a sexy show, you start to moan softly in pleasure, getting quite excited rather quickly.  Your pace settles to match that of the powerful wolf banging away quickly at the girly coon's ass.";
+			otherwise:
+				say "     Enjoying the impromptu show, you slide a hand between your legs and slide them across your pussy, teasing yourself.  As your fingers get damp from your juices, you push [if cunt width of player > 3]a trio of fingers[otherwise if cunt width of player > 1]a pair of fingers[otherwise]a finger[end if] into your needy hole.  Your other hand teases at your clit and sensitive folds while you fingerfuck yourself while watching the pair.  With such a sexy show, you start to moan softly in pleasure, getting quite excited rather quickly.  Your pace settles to match that of the thick wolf cock sinking into the girly coon's ass.";
+			say "     Fang's setting a fast pace, pounding hard and deep into the coon, who happily takes the vigorous pounding with moans and chirrs of delight.  The powerful beast's jaws latch onto Candy's dress, tugging hard on it and drives his cock hard into the coon, pushing to stretch his accommodating hole open around his knot.  The coon's pink hole spreads open and slides over the knot with a particularly loud moan and Candy cums hard, blasting his seed onto the floor in a wave of cotton candy scent as they become tied.  You can see Fang's ballsac tighten up and twitch, knowing he's pumping his ample load deep into the needy coon's butt.  Seeing the pair reach the climax of their fucking, you masturbate furiously and cum hard, [if cocks of player > 0]blasting your seed across the ground[otherwise]soaking your hands and crotch in your juices[end if].";
+			say "     After a delay while the wolf's knot goes down (during which Candy strokes himself off again), Fang climbs off the coon and pops his knot free.  Some wolf cum flows from the coon's stuffed hole before he clamps it shut to keep the rest of the warm treat inside himself and gets up.  He looks rather scruffy and wild-eyed after their romp and the shoulder of his outfit is torn from the rough fucking he received.  You get up slowly, concerned the girly coon may have regressed further and ask if he's okay as you shift into a fighting stance.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			say "     'Aieee!  My dress!' Candy shrieks, spotting the torn shoulder as your words prompt him to check himself.  He immediately slides it off, pausing only a moment to tease his nipples and straighten his fur.  He turns angrily to face Fang, who's starting to move back to his usual spot.  'You big brute,' the coon shrieks and whaps the wolf with his dress.  'Bad dog.'  With that, he turns around quickly, snatches up his panties and strides back towards the bunker.  At the door, he gives a little giggle, swishes his tail up to show his creamy bottom and goes inside.  Fang, who was stunned by the swat, seems to grin at the final teasing peek and relaxes, laying down and licking his messy cock clean.";
+			if libido of player > 60, decrease libido of player by ( ( libido of player - 60 ) / 4 );
+		otherwise:
+			say "     Grabbing your pack, you toss the rest of the stuff back into it and head into the bunker to give the two some privacy.  You putter around in there for a while, Candy eventually returning.  His fur is rather scruffy and his dress has got a tear in it.  He's got a wild look in his eyes that you haven't seen since his time at the hospital and snarls a little[if the number of bunkered people > 3].  The others seem a little concerned at this and you[otherwise].  You[end if] get up slowly, concerned the girly coon may have regressed further and shift into a fighting stance.";
+			say "     'Aieee!  My dress!' Candy shrieks, spotting the torn shoulder.  He immediately slides it off, pausing only a moment to tease his nipples and straighten his fur.  He runs over to grab his little sewing kit and gets to work repairing his outfit, clearly making a show of grumbling about [']such brutish behaviour['] and the like between commenting about how the wolf was [']at least a good fuck['] and [']quite the beast in the sack['].  As this goes on, Candy recounts his romp in increasingly graphic detail and you slip back into the library.";
 
 
 Section 6 - The Rivalry

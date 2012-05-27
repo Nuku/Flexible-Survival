@@ -139,8 +139,8 @@ to say otterdesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -156,7 +156,7 @@ When Play begins:
 	now tail entry is "You have a thick rudder of a tail, [skin of player] and swaying lightly behind you. It could help a lot while swimming. ";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "otter";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "your face reforms as you gain a short otterish snout and round [skin of player] ears."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is " you get the urge to stretch, reaching for the heavens as your body becomes slimmer and more streamlined. Your outspread fingers tickle fiercely as new flesh grows between each of them and short sharp claws sprout. Below, your feet become animal like paws, lifting partially from the ground even as your toes gain that same sensitive webbing."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "you get the urge to stretch, reaching for the heavens as your body becomes slimmer and more streamlined. Your outspread fingers tickle fiercely as new flesh grows between each of them and short sharp claws sprout. Below, your feet become animal like paws, lifting partially from the ground even as your toes gain that same sensitive webbing."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "an oily sensation runs across your entire body, followed shortly by a dense layer of waterproof fur that coats your body perfectly."; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a thick limb bursts from your back end, forcing you to lean back a moment as [skin of player] flesh covers it. You peek over your shoulder to see it slowly swaying, your sense of balance returning."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it tingles and quivers with renewed lust. The shaft turns a soft pink color as it develops bumps not seen on human members, oozing softly with excitement."; [ cock change text. format as "Your cock feels funny as (your text)" ]
@@ -183,6 +183,15 @@ When Play begins:
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Fish";			[ Loot monster drops, ]
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]sleek[or]athletic[at random]";
+	now type entry is "[one of]otter[or]lutrine[at random]";
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Game Objects(continued)

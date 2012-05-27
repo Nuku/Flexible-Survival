@@ -44,8 +44,8 @@ to say leopardman desc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -57,16 +57,16 @@ When Play begins:
 	now defeated entry is "[Leopardman loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Leopardman attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[leopardman desc]";[ Description of the creature when you encounter it.]
-	now face entry is "broad sexy feline muzzle, with golden slit pupiled eyes and rounded feline ears sitting atop your new leopardlike";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "powerful and lean, your well muscled form is carried easily on your powerful legs, their muscles designed for leaping and climbing, which rest easily on your rather pawlike feet. Your hands are tipped with sharp claws, easily suited for both combat and climbing.";[ Body Description, format as the text "Your Body is (your text)"] 
+	now face entry is "broad sexy feline muzzle, with golden slit pupiled eyes and rounded feline ears sitting atop your new leopard-like face";[ Face description, format as the text "Your have a (your text) face."] 
+	now body entry is "powerful and lean, your well muscled form is carried easily on your powerful legs, their muscles designed for leaping and climbing, which rest easily on your rather pawlike feet. Your hands are tipped with sharp claws, easily suited for both combat and climbing";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]leopard spotted[or]leopard furred[or]Black and yellow spotted[or]soft furred[or]short fur covered[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a long thin feline tail lashing teasingly behind you, its eager movements showing off your well rounded ass, even as it twitches eagerly as if begging someone to pin it down and fuck you.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]feline[or]leopard[or]barbed[or]pointed[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it stretches forward, your nose flattening and your mouth spreading out as they merge together and begin to form a proper feline muzzle. Your eyes seem to blur for a second, and then the world sharpens around you as they become the slit pupils of a hunting cat, and as your changes finish with your new leopardlike ears coming to rest on the top of your head, you can feel your new feline muzzle stretching in a lewd grin as lustful thoughts fill your mind."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your muscles shift under the skin, your feet shifting and the bones cracking as they become powerful feline paws and your legs shift to allow you to balance easily on your new paw like feet. Your hands feel strange as they shift and powerful leopardlike climbing claws push out of the tips of your slightly thicker and more powerful fingers.."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "a soft wave of short leopard spotted fur begins to cover your body, the fur rubbing against your skin softly as it grows in, making you shudder with pleasure as a proper coat of fur covers your body completely."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a thick feline tail begins to stretch out behind you, the increasingly sexy looking new appendage lashing back and forth teasingly with every step, as if inviting some sexy beast to come play with it."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it is drawn up closer to your body by a feline sheath forming around it, your cock itself continues to stretch and change as well, becoming pointed and small barbs growing out of it, both for your feline mates pleasure and your own."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "it stretches forward, your nose flattening and your mouth spreading out as they merge together and begin to form a proper feline muzzle. Your eyes seem to blur for a second, and then the world sharpens around you as they become the slit pupils of a hunting cat, and as your changes finish with your new leopardlike ears coming to rest on the top of your head, you can feel your new feline muzzle stretching in a lewd grin as lustful thoughts fill your mind"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "your muscles shift under the skin, your feet shifting and the bones cracking as they become powerful feline paws and your legs shift to allow you to balance easily on your new paw like feet. Your hands feel strange as they shift and powerful leopardlike climbing claws push out of the tips of your slightly thicker and more powerful fingers"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "a soft wave of short leopard spotted fur begins to cover your body, the fur rubbing against your skin softly as it grows in, making you shudder with pleasure as a proper coat of fur covers your body completely"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "a thick feline tail begins to stretch out behind you, the increasingly sexy looking new appendage lashing back and forth teasingly with every step, as if inviting some sexy beast to come play with it"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it is drawn up closer to your body by a feline sheath forming around it, your cock itself continues to stretch and change as well, becoming pointed and small barbs growing out of it, both for your feline mates pleasure and your own"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 18;
 	now dex entry is 26;
 	now sta entry is 16;					
@@ -90,13 +90,22 @@ When Play begins:
 	now libido entry is 50;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Spotted fur";			[ Loot monster drops, ]
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]sleek[or]powerful[at random]";
+	now type entry is "[one of]feline[or]leopard-like[or]pardine[as decreasingly likely outcomes]";
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Spotted fur"	"A small tuft of black and yellow fur, it is very soft and seems like it would feel nice against your skin."	1	  Spotted fur
 
-Spotted fur is a grab object. It is part of the player. Understand "fur" as Spotted fur. Spotted fur is infectious. The strain of Spotted fur  is "Leopardman".
+Spotted fur is a grab object. It is part of the player. Understand "fur" as Spotted fur. Spotted fur is infectious. The strain of Spotted fur is "Leopardman".
 
 instead of sniffing Spotted fur:
 	say "The tuft of fur smells faintly of the powerful feline it came from.";
