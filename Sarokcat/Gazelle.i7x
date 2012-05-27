@@ -29,8 +29,8 @@ To say gazelle loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -41,15 +41,15 @@ When Play begins:
 	now victory entry is  "[gazelle attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "Wandering down the zoo paths, you come across a small group of rather human-like gazelles   their short muzzles and sharp horns moving happily as they graze on the topiary with thin cocks sprouting from between their legs, above their obviously female openings, with soft pert breasts resting on their chests.  Spotting you they immediately freeze. Before you can even open your mouth to speak, most of them bolt in different directions, although one of them charges right at you, intent on protecting the rest of the herd!  You have no choice but to brace yourself for battle!";[ Description of the creature when you encounter it.]
 	now face entry is "short gazelle like muzzle, your face a blend of gazelle and human features, with large bright eyes and sharp backwards pointing horns rising above your"; [Your have a (your text) face."] 
-	now body entry is "lean and lithe, your legs are well built for leaping and jumping as you balances on your hooflike feet, your arms narrow and slender and the tips of your fingers covered in hooflike nails.";[ Body Description, format as the text "Your Body is (your text)"] 
+	now body entry is "lean and lithe, your legs are well built for leaping and jumping as you balances on your hooflike feet, your arms narrow and slender and the tips of your fingers covered in hooflike nails";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]brown and white patterned[or]spotted[or]soft furred[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a small fluffy tail sticking out from your backside, its shape helping to pull your ass up slightly giving your backside a happy perky appearance.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]equine[or]gazelle[or]thick thin[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "it pushes forward into a short narrow muzzle, filling up with thick herbivore teeth.  Sharp pressure shoots through your skull as two new gazelle like horns slowly press out of your skull, adding some weight to your head."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it seems to grow more lithe and lean, your feet changing into sharp hooves, as your legs shift and change to help you balance better on your new hooves.  Your hands grow slightly shorter as your fingernails cover the tips, giving them a slightly hooflike appearance, and your form becomes better suited to swift fast movements and leaps.."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now cock entry is "[one of]gazelle[or]sheathed[or]bovine[as decreasingly likely outcomes]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face change entry is "it pushes forward into a short narrow muzzle, filling up with thick herbivore teeth.  Sharp pressure shoots through your skull as two new gazelle like horns slowly press out of your skull, adding some weight to your head"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "it seems to grow more lithe and lean, your feet changing into sharp hooves, as your legs shift and change to help you balance better on your new hooves.  Your hands grow slightly shorter as your fingernails cover the tips, giving them a slightly hoof-like appearance, and your form becomes better suited to swift fast movements and leaps"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft brown and white patterned fur covers your body, your skin itching slightly as it settles into place."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your ass tightens to for better running and jumping, as a soft gazelle tail sprouts behind you."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it draws up tighter between your legs, becoming wrapped in a proper gazelle like sheath."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now ass change entry is "your ass tightens to for better running and jumping, as a soft gazelle tail sprouts behind you"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it draws up tighter between your legs, becoming wrapped in a proper gazelle-like sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 14;
 	now dex entry is 18;
 	now sta entry is 12;					
@@ -73,6 +73,15 @@ When Play begins:
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lithe[or]lean[or]slender[at random]";
+	now type entry is "gazelle";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "gazelle":

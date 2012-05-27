@@ -2290,7 +2290,7 @@ To Infect:
 		if there is no name entry:
 			next;
 		break;
-	if scenario is "Researcher" or nanite collector is equipped:
+	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
 		vialchance name entry;
 	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row monster of the table of random critters or resbypass entry is false ):
 		continue the action;
@@ -2638,6 +2638,7 @@ To Vialchance (x - a text):
 	choose row monster from table of random critters;
 	if researchbypass is 1, continue the action;
 	if there is a non-infectious in row monster of table of random critters and non-infectious entry is true, continue the action;
+	if there is a resbypass in row monster of table of random critters and resbypass entry is true, continue the action;
 	if scenario is "Researcher" or nanite collector is equipped:
 		let vialcollectible be 10 + ( 2 * intelligence of player );
 		if vialcollectible > 70, now vialcollectible is 70;

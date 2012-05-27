@@ -35,8 +35,8 @@ To say ewe loss:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -44,20 +44,20 @@ When Play begins:
 	add "ewe" to infections of furry;
 	Choose a blank row from Table of random critters;
 	now name entry is "ewe"; [Name of your new Monster]
-	now attack entry is "[one of]She moves forward and rubs her soft wool over your body[or]She lowers her head down and charges, knocking you back.[or]The ewe eyes you carefully, before striking at your weak spots!.[or]The naked ewe pauses and strokes her soft wool teasingly, distracting you from the fight![or]The ewe windmills her arms as she charges forward, somehow managing to land a lucky blow.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She moves forward and rubs her soft wool over your body[or]She lowers her head down and charges, knocking you back.[or]The ewe eyes you carefully, before striking at your weak spots![or]The naked ewe pauses and strokes her soft wool teasingly, distracting you from the fight![or]The ewe windmills her arms as she charges forward, somehow managing to land a lucky blow.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[ewe loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[ewe attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "Travelling through the streets of the city, you come across a strange sheep-like person wandering around aimlessly, running her hands absently over her soft fleece covered body as she looks around. Before you can do more than wonder what a ewe is doing out here all alone, the female sheep spots you, and bleats eagerly before charging right at you, her slightly crazed eyes full of lust.";[ Description of the creature when you encounter it.]
-	now face entry is "short blunt muzzle on your flattened face, your sheep-like ears sticking straight out from the side of your head, and two small horns extending from your forehead and curling backwards.";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "strong and rugged, equally well built for fighting other rams or keeping predators at bay, your strong leg muscles giving you extra power when charging forward. Though your sheep-like hands and hoofed feet can make handling items and climbing things difficult.";[ Body Description, format as the text "Your Body is (your text)"] 
+	now desc entry is "Travelling through the streets of the city, you come across a strange sheep-like person wandering around aimlessly, running her hands absently over her soft fleece covered body as she looks around. Before you can do more than wonder what a ewe is doing out here all alone, the female sheep spots you, and bleats eagerly before charging right at you, her slightly crazed eyes full of lust";[ Description of the creature when you encounter it.]
+	now face entry is "short blunt muzzle on your flattened face, your sheep-like ears sticking straight out from the side of your head, and two small horns extending from your forehead and curling backwards";[ Face description, format as the text "Your have a (your text) face."] 
+	now body entry is "strong and rugged, equally well built for fighting other rams or keeping predators at bay, your strong leg muscles giving you extra power when charging forward. Though your sheep-like hands and hoofed feet can make handling items and climbing things difficult";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]thickly wooled[or]wool covered[or]thick fleeced[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "A short round sheep-like nub of a tail sits right over your ass, occasionally flicking one way or another in response to some stimulus. ";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]beastial[or]ram[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "your face pushes forward into a short blunt muzzle, like a Rams, as two small horns push their way out of the sides of your forehead."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "[one of]your frame grows larger and more bulky, and your hands and feet fuse into darker and more hoof-like versions of themselves, though they still seem more then adequate for manipulating objects.[or]it grows thicker and more muscular, your hands and feet becoming more like a sheep's hooves, as your leg muscles bunch and shift, perfect for propelling yourself forward quickly[at random]"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "a strong itching seems to spread underneath the skin, as before your eyes a thick coat of coarse woolly hair begins to cover your body.."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your ass expands into a more rounded shape. A short round nub of a tail startling you as it pushes its way out above your ass."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it twists and warps between your legs, growing thicker as it takes on a black and pink tint, before drawing up into a new sheath between your legs."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now body change entry is "[one of]your frame grows larger and more bulky, and your hands and feet fuse into darker and more hoof-like versions of themselves, though they still seem more then adequate for manipulating objects[or]it grows thicker and more muscular, your hands and feet becoming more like a sheep's hooves, as your leg muscles bunch and shift, perfect for propelling yourself forward quickly[at random]"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "a strong itching seems to spread underneath the skin, as before your eyes a thick coat of coarse woolly hair begins to cover your body"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "your ass expands into a more rounded shape. A short round nub of a tail startling you as it pushes its way out above your ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it twists and warps between your legs, growing thicker as it takes on a black and pink tint, before drawing up into a new sheath between your legs"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 20;
 	now dex entry is 12;
 	now sta entry is 18;					
@@ -81,6 +81,15 @@ When Play begins:
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "food";			[ Loot monster drops, ]
 	now lootchance entry is 33;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]strong[or]muscled[at random]";
+	now type entry is "ovine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:

@@ -25,7 +25,7 @@ To Skunkform:
 	now tail of player is "You have a broad, striped, skunk tail. ";
 	now bodyname of player is "Skunk Taur";
 	now tailname of player is "Skunk Taur";
-	now scalevalue of player is 3;
+	now scalevalue of player is 4;
 	now bodydesc of player is "tauric";
 	now bodytype of player is "[one of]mephit[or]skunk-like[or]mustelid[at random]";
 	now the daycycle of player is 0;
