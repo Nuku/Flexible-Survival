@@ -259,7 +259,7 @@ instead of conversing the timothy:
 		increase Timothytalk by 1;
 		stop the action;
 	if Timothytalk is 1:
-		if player is pure and body of player is "Hermaphrodite Gryphon" and cunts of player is greater than 0 and ( gestation of child is less than 1 or child is born ):
+		if player is pure and bodyname of player is "Hermaphrodite Gryphon" and cunts of player is greater than 0 and ( gestation of child is less than 1 or child is born ):
 			say "Timothy looks up at you and sniffs at the air before she smiles, beak creased with intense interest. 'You are ready for the next step,' she says, bouncing to her feet and stepping over towards you. Your eyes wander towards her jiggling assets as she reaches for your hips. Her claws softly scratch through the fur there, leaning closer, 'I can let you join me now. Would you like that? You could be a breeder griffon just like me.'";
 			say "The thought of it is tempting, and you can feel your body stirring in reply to it, but what about trying to regain a normal life? What about your other friends? Could you give it all up?";
 			if the player consents:
