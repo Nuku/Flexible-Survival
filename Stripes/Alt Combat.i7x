@@ -206,7 +206,7 @@ This is the player attack rule:
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		otherwise if weapon object of player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player], you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player] body, you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 			otherwise if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
 				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [special-style-2][dam][roman type] damage!";
 			otherwise:
@@ -679,7 +679,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "braggart"	retaliation rule	--	brag rule	--	--	--	--	--	--	--
 "powerstrike1"	retaliation rule	ps1charge rule	--	ps1attack rule	100	--	--	ps1miss rule	--	--
 "hypno"	retaliation rule	--	--	--	--	--	--	--	--	intstrike rule	
-
+"hump"	retaliation rule	--	--	humping rule	100	--	--	--	--	--
 
 Chapter 2 - Sample/Basic Rules
 
@@ -797,6 +797,33 @@ this is the intstrike rule:
 			now monsterhit is true;
 		otherwise:
 			now monsterhit is false;
+
+Part 6 - Conditional Alternate Strike Example - Humping
+
+this is the humping rule:
+	choose row monster from table of random critters;
+	if bodyname of player is name entry and a random chance of 1 in 5 succeeds:
+		let rangenum be ( 80 - ( peppereyes * 4 ) );
+		let dam be ( ( wdam entry times ( ( a random number from rangenum to 120 ) + 30 + ( 2 * lev entry ) ) ) / 100 );
+		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+			now dam is (dam * 150) divided by 100;
+			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+		say "You are grabbed by the [name entry], which grinds its throbbing cock against your [bodytype of player] body.  Precum dribbles from it onto you, the scent of which momentarily entices your infected body, making you press back against their [body descriptor entry] form as the [cock entry] shaft is humped against you.  It takes an effort of will to resist giving into the alurring creature, but you manage to push it away.  Your drive to continue resisting has waned somewhat after the arousing attack.  You take [special-style-2][dam][roman type] damage!";
+		increase libido of player by a random number from 2 to 6;
+		if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
+		if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
+		decrease hp of the player by dam;
+		follow the player injury rule;
+		say "You are [descr].";
+	otherwise:
+		standardhit;							[if not a charged attack, act as normal]
+	if monsterpowerup is 1:
+		say "The enhanced attack strikes!  [run paragraph on]";
+		standardhit;							[standard attack w/enhanced stats]
+		decrease wdam entry by ( ( lev entry + 7 ) / 4 );	[then restore stats to normal]
+		increase dex entry by 2;
+		now monsterpowerup is 0;
+
 
 
 Alt Combat ends here.
