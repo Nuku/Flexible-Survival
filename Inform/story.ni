@@ -1888,11 +1888,26 @@ To say special-style-1: [name can be changed if desired, just adjust calls to it
 To say special-style-2: [name can be changed if desired, just adjust calls to it as well]
 	(- glk_set_style(style_User2); -)
 
+To say alert-style: [already used for end game text]
+	(- glk_set_style(style_Alert); -)
+
+To say header-style: [already used for game title at start]
+	(- glk_set_style(style_Header); -)
+
+To say note-style: [already used for score changes]
+	(- glk_set_style(style_Note); -)
+
+To say blockquote-style:
+	(- glk_set_style(style_BlockQuote); -)
+
+To say input-style:
+	(- glk_set_style(style_Input); -)
+
 Table of Common Color Values (continued)
 glulx color value	assigned number
 g-pure-blue	255		[== $0000FF] 
 g-bright-cyan	39423		[== $0099FF]
-g-dark-green	43520		[== $00FF00] 
+g-dark-green	43520		[== $00CC00] 
 g-pure-green	65280		[== $00FF00]
 g-pure-cyan	65535		[== $00FFFF]
 g-dark-red	11141120		[== $AA0000]
@@ -1901,21 +1916,24 @@ g-peach	15645627		[== $EEBBBB]
 g-pure-yellow	16776960		[== $FFFF00]
 g-pure-magenta	16711935		[== $FF00FF]
 g-pure-red	16711680		[== $FF0000]
-[names can be changed if desired, also need to change matching name in table below.  changing numbers changes color.]
+[names can be changed if desired, also need to change matching name in table below.  choose color in hex, then convert to decimal for assigned number.]
 
 Table of User Styles (continued)
 style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
-special-style-1	left-justified	no-obliquity	0	0	bold-weight	proportional-font	1	g-dark-green
-special-style-2	left-justified	no-obliquity	0	0	bold-weight	proportional-font	1	g-medium-red
-fixed-letter-spacing-style	left-justified	no-obliquity	0	0	regular-weight	proportional-font	0	g-pure-blue [allows redifining of fixed letter spacing style, will change anywhere it is already in use][appears unused in game currently, would allow a third color.]
-[italic-style	--	--	--	--	--	--	-1	g-pure-blue] [allows redifining of italic style, will change anywhere it is already in use]
-[bold-style	--	--	--	--	--	--	2	g-pure-yellow] [allows redifining of bold style, will change anywhere it is already in use]
-[header-style	--	--	--	--	--	--	10	g-pure-yellow
-alert-style	--	--	--	--	--	--	5	g-pure-red
-note-style	--	--	--	--	--	--	--	g-pure-green
-blockquote-style	--	--	--	--	--	--	--	g-pure-yellow
-input-style	--	--	--	--	--	--	-1	g-pure-magenta]
-[can't figure out how to use header through input styles.  in theory, they could also be used (like fixed letter spacing).]
+special-style-1	--	--	--	--	bold-weight	--	1	g-dark-green
+special-style-2	--	--	--	--	bold-weight	--	1	g-medium-red
+blockquote-style	--	--	--	--	--	--	--	--[appears to be unused]
+input-style	--	--	--	--	--	--	--	--[appears to be unused]
+fixed-letter-spacing-style	--	--	--	--	--	--	--	--[appears to be unused]
+alert-style	--	--	--	--	--	--	--	--[also does end game text]
+header-style	--	--	--	--	--	--	--	--[also does starting title]
+note-style	--	--	--	--	--	--	--	--[also does scores]
+italic-style	--	--	--	--	--	--	--	--[allows redefining of italic style]
+bold-style	--	--	--	--	--	--	--	--[allows redefining of bold style]
+[to change style: replace -- with desired change.  see Glulx Text Effects.i7x for options]
+[blockquote, input, and fixed letter appear to be unused.  they could be redefined as desired for more colors/formating.]
+[alert, header, and note are used for a few game functions.  if you wanted to change those you could]
+[italics and bold are currently in a variety of places.  just a few italics, but bold is all over the place.  be aware if you choose to change them]
 
 Part 3 - Item Code
 
