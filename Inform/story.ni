@@ -4897,6 +4897,7 @@ Include Mental Mouse For Fs by Stripes.
 Include Vulpogryph For Fs by Stripes.
 Include Psycho Weasel For Fs by Stripes.
 Include Incubus For Fs by Stripes.
+Include Elven Hunter For Fs by Wahn.
 Include Candy Striper by Stripes.
 
 
