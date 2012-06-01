@@ -63,7 +63,7 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 every turn (This is the check heat rule): [ May need to change this so that it only procs when theres a 'time' change]
 	if heat enabled is true:
 		if lastturn is not turns:	[This is used so that we only trigger events once per GAME turn (3 hr period) rather then each event turn.]
-			if cunts of player is greater than 0 and (cockname of player is not "human") and gestation of child is 0:	[Only run if female. and has groin infection]
+			if cunts of player is greater than 0 and (cockname of player is not "human") and gestation of child is 0 and larvaegg is not 2:	[Only run if female. and has groin infection]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more Tainted Sexuality.";
 					now turns in heat is 0;

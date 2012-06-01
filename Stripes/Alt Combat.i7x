@@ -439,7 +439,7 @@ to standardretaliate:
 	otherwise:
 		say "[Name Entry] misses!";
 	now peppereyes is 0;
-	if hp of the player is greater than 0:
+	if hp of the player is greater than 0 and libido of player < 110:
 		wait for any key;
 	otherwise:
 		Lose;
@@ -484,7 +484,7 @@ to retaliate:
 			choose row monster from the table of random critters;
 			say "[Name Entry] misses!";
 	now peppereyes is 0;										[pepperspray wears off]
-	if hp of the player is greater than 0:
+	if hp of the player is greater than 0 and libido of player < 110:
 		wait for any key;
 	otherwise:
 		Lose;

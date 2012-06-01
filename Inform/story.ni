@@ -842,6 +842,20 @@ carry out hunting:
 					repeat with x running from 1 to ( ( 100 - humanity of player ) / 16 ):
 						add y to q;
 				break;
+	if insectlarva is true and larvaegg is 1 and gestation of child is 0 and battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum":		[hunted by wasp hive anywhere outdoors]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Black Wasp":
+				add y to q;
+				if "Like Attracts Like" is listed in feats of player:
+					add y to q;
+				if libido of player > 30:
+					repeat with x running from 1 to ( libido of player / 30 ):
+						add y to q;
+				if larvacounter > 3:
+					repeat with x running from 1 to ( larvacounter / 3 ):
+						add y to q;
+				break;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is no area entry, next;
@@ -1312,7 +1326,7 @@ To Birth:
 	now the gestation of child is 0;
 
 To impregnate with (x - text):
-	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player:
+	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2:
 		stop the action;
 	if "Selective Mother" is listed in feats of player:
 		say "Do you wish to be impregnated with a [x] child?";
@@ -1346,13 +1360,14 @@ To impregnate with (x - text):
 	say "[line break]You have an odd feeling, a palpable wave of contentment from within your lower belly.";
 	
 to say impregchance:
-	if cunts of player > 0 and "Sterile" is not listed in feats of player:
+	if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
+		let target be 10;
+		if insectlarva is true:
+			increase target by 2 + larvaegg;
+		if "Fertile" is listed in feats of player, decrease target by 3;
+		if inheat is true, decrease target by 3;
 		choose row monster from the table of random critters;
-		if a random chance of 1 in 5 succeeds, impregnate with name entry;
-		if "Fertile" is listed in feats of the player:
-			if a random chance of 1 in 5 succeeds, impregnate with name entry;
-		if inheat is True:
-			if a random chance of 1 in 5 succeeds, impregnate with name entry;
+		if a random chance of 2 in target succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
 
 
@@ -2306,10 +2321,10 @@ To grow breasts by (x - a number):
 
 To Infect:
 	choose row monster from the table of random critters;
-	while there is no name entry:
+	while there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ):
 		now monster is a random number from 1 to number of filled rows in table of random critters;
 		choose row monster from the table of random critters;
-		if there is no name entry:
+		if there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ):
 			next;
 		break;
 	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
@@ -3291,7 +3306,7 @@ This is the turnpass rule:
 				follow breast descr rule;
 				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
 		if gestation of child is less than 1 and cunts of player is greater than 0 and skipturnblocker is 0:
-			say "With a sudden pouring of fluids, birth is upon you. You settle  without much choice, breathing quickly as your body spasms in readiness. ";
+			say "With a sudden pouring of fluids, birth is upon you. You settle without much choice, breathing quickly as your body spasms in readiness. ";
 			let z be 1;
 			let fer be 0;
 			if "Fertile" is listed in feats of player:
@@ -4708,6 +4723,7 @@ Include Pepperspray by Stripes.
 Include Masturbate by Stripes.
 Include Alt Combat by Stripes.
 Include BFandI by Stripes.
+Include Parasite by Stripes.
 
 
 [Locations]
