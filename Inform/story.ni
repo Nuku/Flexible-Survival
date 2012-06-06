@@ -4762,6 +4762,7 @@ Include Stable Related Events by Sarokcat.
 Include Red Events by Stripes.
 Include Dry Plains Events by Stripes.
 Include Junkyard Events by Stripes.
+Include Campus Events by Stripes.
 Include New Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Mall Events by Sarokcat.
