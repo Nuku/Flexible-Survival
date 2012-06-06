@@ -4746,6 +4746,7 @@ Include Underwater Zone For Fs by Hellerhound.
 Include Power Plant by Hellerhound.
 Include Zoo by Hellerhound.
 Include Qytat a'th Lundrues by hellerhound.
+Include Campus For Fs by Stripes.
 Include Hospital For Fs by Stripes.
 Include Medical Checkups by Hellerhound.
 Include Junkyard and Warehouse by Rimme.
@@ -4917,6 +4918,7 @@ Include Mental Mouse For Fs by Stripes.
 Include Vulpogryph For Fs by Stripes.
 Include Psycho Weasel For Fs by Stripes.
 Include Incubus For Fs by Stripes.
+Include Bunny Jock For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Candy Striper by Stripes.
 
