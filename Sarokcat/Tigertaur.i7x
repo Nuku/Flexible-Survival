@@ -8,6 +8,8 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
+campuswanderfight is a number that varies.
+
 to say tigertaur attack:
 	say "Unable to resist the strong advances of the tiger like beast, you swiftly find yourself knocked to the ground, as she rubs herself up against your increasingly excited body.";
 	if cunts of player is greater than 0:
