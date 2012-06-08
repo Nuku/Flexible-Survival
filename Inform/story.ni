@@ -50,22 +50,29 @@ The maximum score is 2500.
 Include Text Capture by Eric Eve.
 Include Inline Hyperlinks by Nuku Valente.
 
+Section Help Menu
+
 Table of Basic Help Options (continued)
 title	description 
 "Contacting the author"	"If you have any difficulties with [story title], please contact me at: http://nukuv.blogspot.com/" 
 "Hunting"	"You can hunt for specific creatures. Go to a place you can explore from, like the library.[line break][line break]You there? Ok, now type [bold type]hunt (creature)[roman type].[line break][line break]You are not assured success, but a critter is 3 times more likely to show up when actively looked for.[line break][line break]You can also hunt for locations, if you know their name."
-"Trading"	"You can trade with certain denizens of the city. Simple give x to y, like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
+"Trading"	"You can trade with certain denizens of the city. Simple [bold type]give x to y[roman type], like give soda to bob. If they want it, they'll give you something back for it. Trades are final, but usually worth it."
 "Scoring"	"Staying alive, making friends, and unearthing the mysteries of the city get you points. Losing battles saps points. See how high a score you can manage!"
 "Items"	"You will come to have a variety of items. Here are some useful commands.[line break][line break]Item: See a list of items you own.[line break]look (item): Look at a specific item.[line break]use (item): Use an item[line break]get (item): grab a specific item.[line break]get all: get everything in the room."
-"Weapons"	"Some items you find make good weapons! Be sure to use them before a battle to have them at hand."
-"Scavenging"	"Type [bold type]Scavenge[roman type] in any room you can fast travel from to look hunt for food and water."
-"Socializing"	"You can talk (person) to chat it up. If they are of more personal interest with you, you can also fuck (person)"
+"Weapons"	"Some items you find make good weapons! Be sure to [bold type]use (weapon)[roman type] before a battle to have them at hand."
+"Scavenging"	"Type [bold type]scavenge[roman type] in any room you can fast travel from to hunt for food and water."
+"Socializing"	"You can [bold type]talk (person)[roman type] to chat it up. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type]"
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]i hate to wait[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]i love to wait[roman type] to return to the default."
-"Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?[line break]Type [bold type]the clears are gone[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]the clears are back[roman type] to return to the default."
+"Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?  Type [bold type]the clears are gone[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]the clears are back[roman type] to return to the default."
 "Auto Attack"	"If you have the Instinctive Combat feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
 
+To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to better fit this game, without changing that extension, as it may be used by other games]
+	now the title in row 2 of Table of Instruction Options is "What to do with >";
+	now the description in row 2 of Table of Instruction Options is "The > sign is where the game says, 'Okay, what do you want to do now?'  You may respond by typing an instruction -- usually an imperative verb, possibly followed by prepositions and objects.  So, for instance, LOOK, LOOK AT FISH, TAKE FISH.";
+	now the title in row 1 of Table of Basic Help Options is "Q to quit help, enter to select entry";
+	now the description in row 1 of Table of Basic Help Options is "Use arrows to navigate the help menu.[line break]Enter selects the entry that is marked with the >[line break]Q will take you back one level of help, or leave the help system if your at the top.";
 
 Include (-
 
@@ -5031,9 +5038,11 @@ hypernull is a number that varies. Hypernull is usually 0.
 When play begins:
 	now waiterhater is 0; [initialize to 0 for start of game, waiting occurs as normal]
 	now clearnomore is 0; [initialize to 0 for start of game, clearing occurs as normal]
+	adjustdefaulthelp; [adjusts help menu]
 	repeat with q running from 1 to the number of rows in the table of game objects:
 		add name in row Q of table of game objects to allobjs;
 	change the right hand status line to "[list of valid directions]";
+	say "Some questions before getting into the game...";[warn the player what to expect next]
 	say "Do you want hyperlinks? (Y/n)";
 	if player consents:
 		let x be 0;
@@ -5070,15 +5079,6 @@ When play begins:
 	say "And now the second.";
 	funfeatget;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	if scenario is "Rescuer Stranded":
-		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
-		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
-		say "You awake in what appears to be a disused bunker. You have no idea how you even got here, but you are uninfected. In your panicked flight you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack, and your watch.";
-		say "Heaven only knows what awaits you outside but, you have to find a way back.";
-		say "Taking a deep breath you open the door to your sanctuary...";
-	otherwise:
-		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type look backpack, and type look watch. Also, try look me! Your description will probably change as you play.))[line break][line break]";
-	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 	say "[line break]Would you like to select types of creatures to NOT appear in the game?";
 	if the player consents:
 		ban menu;
@@ -5098,6 +5098,16 @@ When play begins:
 		if bad is 1:
 			now n is resolved;
 	sort table of random critters in lev order;
+	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------[line break][line break]";[moved to after start questions and before ingame text]
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if scenario is "Rescuer Stranded":
+		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
+		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
+		say "You awake in what appears to be a disused bunker. You have no idea how you even got here, but you are uninfected. In your panicked flight you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack, and your watch.";
+		say "Heaven only knows what awaits you outside but, you have to find a way back.";
+		say "Taking a deep breath you open the door to your sanctuary...";
+	otherwise:
+		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type [bold type]look backpack[roman type], and type [bold type]look watch[roman type]. Also, try [bold type]look me[roman type]! Your description will probably change as you play.  Or [bold type]help[roman type] for more detailed help.))[line break][line break]";
 	if scenario is "Caught Outside":
 		process dirty water;
 		process dirty water;
@@ -5114,9 +5124,8 @@ When play begins:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "Welcome to...";
+	say "[line break]Welcome to...";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	zephyrad rule in 1 turn from now;
-	
 
 
