@@ -327,11 +327,12 @@ Mall Foodcourt is a room. "Just inside the exit to the parking lot to the south 
 The invent of Mall FoodCourt is { "chair","food" }.
 North of Smith Haven Mall Lot is Mall FoodCourt. 
 Mall Atrium is a room. "A large open area, oppressively gloomy without the light. Furtive movements can be seen. When one focuses, the mall rats are not hard to spot. They are harmless enough at least, even offering a nod or wave at times. There are some benches laid out for sitting on, half the time occupied by several mall rats. There is also a fountain, but no water gurgles, and what is left looks too dirty to drink.".
-North of Mall Foodcourt is Mall Atrium.]
+North of Mall Foodcourt is Mall Atrium.
 Sewer Grating is a door. Sewer Grating is dangerous. 
 Down of Mall Foodcourt is Sewer Grating.
 Down of sewer grating is Sewers A7.
 The marea of Sewer Grating is "Mall". The sewer grating is open. The description of sewer grating is "A sewer grate, broken open with bits of somewhat rusted iron strewn everywhere, some slime splattered about. Looks dangerous down there, but nothing ventured, nothing gained, right?"; understand "grate" and "grating" as the sewer grating.
+]
 
 Outside Trevor Labs is a room. "You[apostrophe]ve heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here[apostrophe]s the headquarters, rising as a sleek and tall glass building to your west. You[apostrophe]re not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
 understand "lab" or "labs" as Outside Trevor Labs.
