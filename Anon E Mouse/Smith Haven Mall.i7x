@@ -10,7 +10,7 @@ Smith Haven Mall Lot South is a room.
 Smith Haven Mall Lot West is a room.
 Mall Foyer is a room. Mall Foyer entrance is a door. It is north of Mall Foyer and south of Smith Haven Mall Lot North.
 Mall Atrium is a room.
-Mall Food Court is a room. Mall Food Court entrance is a door. It is south of Mall Food Court and north of Smith Haven Mall Lot South.
+Mall Foodcourt is a room. Mall Food Court entrance is a door. It is south of Mall Foodcourt and north of Smith Haven Mall Lot South.
 Mall East Wing is a room.
 Mall West Wing is a room.
 Mall Restroom is a room.
@@ -144,7 +144,7 @@ To say daycheckatrium:
 		say "            The dark, spacious, atrium is barely lit by the few lanterns some rats have set up on the edges of the large fountain sitting in the middle of the rotunda. Their quite chatter can be heard echoing off the domed roof as they idly sit by the silent fountain, though you don[’]t want to seem rude by eaves dropping on their conversation. With the HVAC system down, the air is stuffy and you can smell the light stench of stagnant water coming from the fountain[’]s pool. To the north is the mall foyer. To the south is the entrance to the food court. To the east and west are the main wings of the mall.";
 
 East of Mall Atrium is Mall East Wing.
-South of Mall Atrium is Mall Food Court.
+South of Mall Atrium is Mall Foodcourt.
 West of Mall Atrium is Mall West Wing.
 
 instead of sniffing Mall Atrium:
@@ -171,7 +171,7 @@ To say daycheckeast:
 	
 Section 9 - Mall Food Court
 
-The description of Mall Food Court is "[mfcourt]";
+The description of Mall Foodcourt is "[mfcourt]";
 
 To say mfcourt:
 	If findwires is 2 and fixedgens is 2:
@@ -185,9 +185,9 @@ To say daycheckmfcourt:
 	Otherwise:
 		say "            With it currently dark outside, a few lanterns have been set up in just the center of the food court close to a small fountain. There are a few mallrats occupying a couple of the tables, [one of]talking among themselves[or]playing chess[or]playing poker[at random]. To the east there is a glow of a single lantern coming from the restroom facilities.";
 
-East of Mall Food Court is Mall Food Court Restroom.
+East of Mall Foodcourt is Mall Foodcourt Restroom.
 
-instead of sniffing the Mall Food Court:
+instead of sniffing the Mall Foodcourt:
 	say "It smells a little like old, rotting food.";
 	
 Section 10 - Mall West Wing
@@ -211,7 +211,7 @@ instead of sniffing Mall West Wing:
 	
 Section 11 - Mall Restroom
 
-Before going from Mall Food Court to Mall Restroom, say "            A wolverine sitting on a chair outside of the restroom facility looks up at you when you approach, his hackles standing on end. When you show him you[']re no harm, he calms and settles back into his seat. [one of]'I would suggest that you don[']t go in there. Part of the floor gave way and opened up into the sewers. Now we need to stand guard against anything coming up out of there and getting into the mall. If you[']re still determined to go looking around in there, I won[']t stop you.' When you tell him you[']re still going in, he shrugs and hands you a lantern. 'Go ahead and take this then and be careful.'[or]'It[']s a right mess in thar. Part of tha['] floor opened up to the sew[']rs so we hafta watch fer anythin['] poppin['] up from them. Ya[']ll sure you wanna go scurryin['] about in thar?' When you nod your head, he shrugs then hands you a lantern. ‘Don[']t say ah didn['] warn ya…'[at random] Taking the lantern, you head into the restroom and find that it[']s in shambles. It seems a portion of it has been destroyed, what were once walls now just piles of rubble. From some of the broken faucets, water dribbles down the pipes and drips to the floor, forming small puddles. Curiosity driving you, you carefully make your way deeper inside until finding a fairly large hole in the floor.";
+Before going from Mall Foodcourt to Mall Restroom, say "            A wolverine sitting on a chair outside of the restroom facility looks up at you when you approach, his hackles standing on end. When you show him you[']re no harm, he calms and settles back into his seat. [one of]'I would suggest that you don[']t go in there. Part of the floor gave way and opened up into the sewers. Now we need to stand guard against anything coming up out of there and getting into the mall. If you[']re still determined to go looking around in there, I won[']t stop you.' When you tell him you[']re still going in, he shrugs and hands you a lantern. 'Go ahead and take this then and be careful.'[or]'It[']s a right mess in thar. Part of tha['] floor opened up to the sew[']rs so we hafta watch fer anythin['] poppin['] up from them. Ya[']ll sure you wanna go scurryin['] about in thar?' When you nod your head, he shrugs then hands you a lantern. ‘Don[']t say ah didn['] warn ya…'[at random] Taking the lantern, you head into the restroom and find that it[']s in shambles. It seems a portion of it has been destroyed, what were once walls now just piles of rubble. From some of the broken faucets, water dribbles down the pipes and drips to the floor, forming small puddles. Curiosity driving you, you carefully make your way deeper inside until finding a fairly large hole in the floor.";
 
 Before going from Mall Restroom to Sewers A7, say "You peek through the hole into the sewers to see if there is anything waiting for you. Seeing nothing, you climb down into the hole.";
 
