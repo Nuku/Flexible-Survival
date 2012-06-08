@@ -16,6 +16,7 @@ To say bstonebooks:
 		say "            The store seems bright and cheery with all of the lights on. You remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are mall rats and other infected reading a book while either standing near a bookshelf or occupying a chair.";
 	Otherwise:
 		say "            You head into the bookstore, attracted by the light of lanterns inside. As you walk in, you remember needing to come here on occasion to find an odd book or two. What it lacked in size in comparison to the big chain of bookstores, it made up for it in the wealth of older, hard to find, and out of print books and magazines in addition to newer releases. All the shelves in the store are crammed to capacity with books as well as the tables scattered around the store. Milling about are a mall rat or three reading a book while either standing near a bookshelf or occupying a chair. Of what you can see from the glow of several candles and lanterns, all the books seem to still be in good condition.";
+
 Beverly is in Brookstone Books.
 Bookshelves is in Brookstone Books.
 
