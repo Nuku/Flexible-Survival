@@ -93,11 +93,11 @@ instead of sniffing grey abbey library:
 instead of sniffing Bunker:
 	say "The air in the bunker smells a little stale from being sealed so long, but is quite breathable[if philip is in the bunker].  The strong scent of Philip's improvised sty lingers in the air as well[end if].";
 
-instead of sniffing Smith Haven Mall Lot:
-	say "The parking lot smells of the smashed cars and the sticky remains left when their drivers were infected.";
+[instead of sniffing Smith Haven Mall Lot:
+	say "The parking lot smells of the smashed cars and the sticky remains left when their drivers were infected.";]
 
-instead of sniffing Mall Foodcourt:
-	say "The food court smells of fast food from a little restaurant some of the rats are running to feed themselves.  It doesn't smell very appetizing to you, but they seem to like the garbagy smell.  A similar stink rises up from the small grate in one corner that leads to the underground tunnels.";
+[instead of sniffing Mall Foodcourt:
+	say "The food court smells of fast food from a little restaurant some of the rats are running to feed themselves.  It doesn't smell very appetizing to you, but they seem to like the garbagy smell.  A similar stink rises up from the small grate in one corner that leads to the underground tunnels.";]
 
 instead of sniffing Mall Atrium:
 	say "The air smells of fake plants and excessive perfume from the female rats.";
