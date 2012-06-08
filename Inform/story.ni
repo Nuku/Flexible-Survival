@@ -109,11 +109,11 @@ To select an option from (curtable - a table name):
 			say "Invalid Selection.";
 			
 To get typed command as (S - a snippet): (-
-		KeyboardPrimitive(buffer, parse);
-		{S} = 100 + WordCount();  -)
+	KeyboardPrimitive(buffer, parse);
+	{S} = 100 + WordCount();  -)
 		
 To get next key as (S - a snippet): (-
-		{S} = VM_KeyChar();  -)
+	{S} = VM_KeyChar();  -)
 
 
 Book 1 - Variable Definitions
