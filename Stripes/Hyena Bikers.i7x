@@ -149,8 +149,8 @@ This is the bikeride rule:
 			now ridemessage is "     You decide to get dropped off at the Smith Haven Mall.  He gives a rough, hyena laugh.  'Planning on doing some shopping?  Be sure to take advantage of the five-finger discount sale going on.' [line break][postridesex]";
 		otherwise:
 			now ridemessage is "     You decide to get dropped off at the Smith Haven Mall.  He gives a rough, hyena laugh.  'Planning on doing some shopping?  Be sure to take advantage of the five-finger discount sale going on.' [line break]";
-		Move player to Smith Haven Mall Lot, without printing a room description;
-		Now Smith Haven Mall Lot is known;
+		Move player to Smith Haven Mall Lot South, without printing a room description;
+		Now Smith Haven Mall Lot South is known;
 		now Hyena Bikers is resolved;
 	otherwise if title entry is "Park":
 		if bikedest is 0:

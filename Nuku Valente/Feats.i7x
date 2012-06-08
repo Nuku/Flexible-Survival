@@ -299,7 +299,7 @@ This is the gainfeat rule:
 		if nam is "City Map":
 			now Beach Plaza is known;			
 			now Outside Trevor Labs is known;			
-			Now Smith Haven Mall Lot is known;
+			Now Smith Haven Mall Lot South is known;
 			now Park Entrance is known;			
 			now City Hospital is known;			
 			Now State fair is known;
