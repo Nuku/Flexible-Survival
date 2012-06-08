@@ -19,30 +19,19 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short. 
 
-To say a/an (T - text):
-	let Txt be indexed text;
-	let Txt be T;
-	if Txt matches the regular expression "^<aeiouAEIOU>":
-		say "an ";
-	otherwise:
-		say "a ";
-	say T.
-   
 To wait for any key:
 	if hypernull is 0:
-		say "[link]more[as] [end link][run paragraph on]";
+		say "[link]more[as] [end link]";
 	keypause;
 
 to clear the screen and hyperlink list:
 	clear the screen;
 	now hyperlink list is {}.
-[This must remain whole or errors from cleared hyperlinks can occur!]
-
 
 To keypause:
 	(- KeyPause(); -)
 
-The release number is 55.
+The release number is 54.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -63,9 +52,6 @@ title	description
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
 "Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]i hate to wait[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]i love to wait[roman type] to return to the default."
-"Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?[line break]Type [bold type]the clears are gone[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]the clears are back[roman type] to return to the default."
-"Auto Attack"	"If you have the Instinctive Combat feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
-
 
 Include (-
 
@@ -82,9 +68,10 @@ Include (-
 	      #Endif; ! TARGET_
 	      if (j) { ! at least one word entered
 			i = parse-->1;
-			if (i == YES1__WD or YES2__WD or YES3__WD or '1//') rtrue;
-			if (i == NO1__WD or NO2__WD or NO3__WD or '2//') rfalse;
-	      }	      PrintText((+ yes or no message +));
+			if (i == YES1__WD or YES2__WD or YES3__WD) rtrue;
+			if (i == NO1__WD or NO2__WD or NO3__WD) rfalse;
+	      }
+	      PrintText((+ yes or no message +));
 	}
 ];
 -) instead of "Yes/No Questions" in "Parser.i6t".
@@ -164,21 +151,14 @@ The child has a text called bodyname. Bodyname is usually "human";
 The child has a text called facename. Facename is usually "human";
 The child has a text called skinname. Skinname is usually "human";
 The child has a text called cockname. cockname is usually "human";
-The child has a text called tailname. Tailname is usually "human";
 The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
 The player has a text called tailname. Tailname is usually "human";
-The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
+The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your body[or]impromptu wrestling[at random]";
 The player has a text called weapon type. Weapon type is usually "Melee";
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
-
-[See the BFandI extension for an explanation on these new variables.]
-The player has a number called scalevalue.  The scalevalue is usually 3.						[value for body size]
-The player has a text called bodydesc.  The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]";	[adjective for body type/appearance]
-The player has a text called bodytype.  The bodytype is usually "human";						[broad adjective for species]
-The player has a number called daycycle.												[day/night bias]
 
 freecred is a number that varies.
 playon is a number that varies.
@@ -195,7 +175,6 @@ A armament is a kind of grab object.
 A armament has a text called weapon.
 A armament has a text called weapon type.
 A armament has a number called Weapon Damage.
-An armament can be ranged or melee. An armament is usually melee.
 Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
 Equipment has a text called descmod. The descmod of equipment is usually "";
@@ -223,6 +202,7 @@ Child can be born. Child is not born.
 Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
+gascloud is a number that varies.
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -240,14 +220,6 @@ Definition: A situation(called X) is close:
 			yes;
 		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):
 			yes;
-	no;
-	
-Definition: A person(Called X) is pure:
-	if bodyname of x is facename of X:
-		if bodyname of x is tailname of X:
-			if bodyname of x is skinname of X:
-				if bodyname of x is cockname of X:
-					yes;
 	no;
 
 Definition: A person(called X) is male:
@@ -313,7 +285,7 @@ to say abbey desc:
 	if Fang is in the Grey Abbey Library:
 		say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
 
-Smith Haven Mall Lot is a room. "A vast and sprawling parking lot puts you within walking distance of a large mall to the north. You remember coming here a lot more often when you were in school. It was 'the place' to be. Ah well, it's a fine [time of day], may as well go shopping."
+[Smith Haven Mall Lot is a room. "A vast and sprawling parking lot puts you within walking distance of a large mall to the north. You remember coming here a lot more often when you were in school. It was 'the place' to be. Ah well, it's a fine [time of day], may as well go shopping."
 It is fasttravel.
 Mall Foodcourt is a room. "Just inside the exit to the parking lot to the south is the food court. There are many metal tables with uncomfortable looking plastic chairs. There are also many tiny eateries here, with the smaller stores arrayed out from them, beckoning your eyes towards them in consumeristic joy.".
 The invent of Mall FoodCourt is { "chair","food" }.
@@ -323,7 +295,7 @@ North of Mall Foodcourt is Mall Atrium.
 Sewer Grating is a door. Sewer Grating is dangerous. 
 Down of Mall Foodcourt is Sewer Grating.
 Down of sewer grating is Sewers A7.
-The marea of Sewer Grating is "Mall". The sewer grating is open. The description of sewer grating is "A sewer grate, broken open with bits of somewhat rusted iron strewn everywhere, some slime splattered about. Looks dangerous down there, but nothing ventured, nothing gained, right?"; understand "grate" and "grating" as the sewer grating.
+The marea of Sewer Grating is "Mall". The sewer grating is open. The description of sewer grating is "A sewer grate, broken open with bits of somewhat rusted iron strewn everywhere, some slime splattered about. Looks dangerous down there, but nothing ventured, nothing gained, right?"; understand "grate" and "grating" as the sewer grating.]
 
 Outside Trevor Labs is a room. "You[apostrophe]ve heard of Trevor Labs. They are, or is that were? a biopharm setup. Kind of new on the block, made a big stink over the local news with their willingness to skirt as close to the edge of most laws in the name of science. Well here[apostrophe]s the headquarters, rising as a sleek and tall glass building to your west. You[apostrophe]re not certain but you think you can see some light in one of the windows, visible in the [time of day] light. Curious.".
 understand "lab" or "labs" as Outside Trevor Labs.
@@ -339,7 +311,7 @@ There is an Infection Terminal in Primary Lab. "A glowing infection terminal qui
 
 Park Entrance is a room. "Ah, the city park. Smell that fresh pine air, and the scent of, wait no, that grass has not been mowed for a while. Just how long were you in that bunker anyway? The grass is just starting to creep up onto the pavement that leads further into the park, Northwards. The wall remains largely intact, with a sign that welcomes you into the park, except during night hours, not that anyone is enforcing this rule at the moment.".
 Park Entrance is fasttravel.
-Park Trail is a room. "Following this North/South trail, you can see dense woods to either side. You could easily become lost in them, though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
+Park Trail is a room. "Following this North/South trail, you can see dense woods to either side. You could easily become lost in them, though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [time of day] sky".
 North of Park Entrance is Park Trail.
 East of Park Trail is Faint Trail.
 East of Faint Trail is Lost in the Woods.
@@ -351,7 +323,7 @@ The marea of Faint Trail is "Park".
 Part 2 - Things
 
 The cot is rooted in place. The cot is restful.
-There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
+There is a Cola Vending Machine in Mall Foyer. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
 Cola Vending Machine has a number called dispensed.
 understand "vending machine" as Cola Vending machine.
 Microwave is a thing. "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something."
@@ -537,7 +509,7 @@ title	subtable	description	toggle
 To say gryphon fuck:
 	if cocks of player is greater than 0:
 		if cock length of player is less than 7:
-			say "[one of]The gryphon shoves you to the ground roughly and seems disappointed about something. She sniffs at you once more before snorting loudly. With a disdainful kick of a foot, she leaves some dust on you, then departs.[or]The gryphon pushes you back with one hand while the other grabs at you, removing any clothing you may have. She speaks haltingly, as if she is not used to speaking anymore, 'You are too small, but maybe, later. For now, a gift.' She kneels before you and takes your [cock size desc of player] [cock of player] member into her beak, lapping over it with soft, wet, tongue. Her firm paw hands hold to your ass as she begins to bob slowly against you, making your flesh tingle with delight as she works at you expertly. All too soon you are spilling seed across that tongue, grunting with your own satisfaction. She rises, licking her beak. With a wink, she saunters off.[at random]";
+			say "[one of]The gryphon shoves you to the ground roughly and seems dissappointed about something. She sniffs at you once more before snorting loudly. With a disdainful kick of a foot, she leaves some dust on you, then departs.[or]The gryphon pushes you back with one hand while the other grabs at you, removing any clothing you may have. She speaks haltingly, as if she is not used to speaking anymore, 'You are too small, but maybe, later. For now, a gift.' She kneels before you and takes your [cock size desc of player] [cock of player] member into her beak, lapping over it with soft, wet, tongue. Her firm paw hands hold to your ass as she begins to bob slowly against you, making your flesh tingle with delight as she works at you expertly. All too soon you are spilling seed across that tongue, grunting with your own satisfaction. She rises, licking her beak. With a wink, she saunters off.[at random]";
 		otherwise:
 			say "Eyeing something she wants, the gryphon pushes you back a little before turning around and raising her tail high into the air, exposing her pouting lips to your view. Unable to resist, you move up and seize her well muscled hips and are soon pushing against her. With every sink of your [cock size desc of player] [cock of player] meat into her, she gives a pleasured,  keening sound. Her cunt squeezes around your hefty member, encouraging it until you blow your load deep inside of her dripping snatch. Your bodies tremble against one another as passions ebb and she lets you slide off to the ground. Before leaving, she turns to gently lick over your face, then cleans your [cock size desc of player] tool dutifully.";
 	otherwise:
@@ -638,9 +610,9 @@ to say latexfoxrape:
 	otherwise:
 		say "With a sadistic grin you point your gargantuan [cock of player] missile at its target. The Foxes eyes go wide when it realizes how large you are and starts trying to crawl away. Having none of that, you grab the Fox by its ankles and start pulling him towards you. The Foxes legs stretch elastically as you pull, his poor little asshole straining against your rod. Finally the Foxes rubbery sphincter relaxes enough to let you in, and like a slingshot the Fox is instantly impaled on your gigantic penis, obscenely stretching the poor creature all the way to his head. You realize the Fox is just fine as he lets out a euphoric yelp and his eyes glaze over lost in the pleasurable fullness.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "As you start sliding your [cock size desc of player] shaft in and out you notice the Fox's ass seems to be adjusting to you, stretching and tightening in just the right places to fit your [cock of player] penis perfectly. As this is happening the Fox switches from whimpers and yelps to long low moans of pleasure as you press your [bodydesc of player] body over his and pound away, his red knotted shaft starts growing and leaking rubbery precum.";
+	say "As you start sliding your [cock size desc of player] shaft in and out you notice the Foxes ass seems to be adjusting to you, stretching and tightening in just the right places to fit your [cock of player] penis perfectly. As this is happening the Fox switches from whimpers and yelps to long low moans of pleasure, his red knotted shaft starts growing and leaking rubbery precum.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "Nearing orgasm you pick up the pace, your little red toy drooling in bliss. Fucking the Fox like a wild man, you let out a roar as torrents of cum pour forth from your tool, lewdly distending the belly of your victim. Not to be left out, the Fox starts shooting gobs of thick rubbery cum onto the ground, pooling around him. With some effort you pull your cock out of the little Fox with an audible pop. The seed you just planted come spilling out of the abused hole adding the the already large pool of cum the Fox is laying in.";
+	say "Nearing orgasm you pick up the pace, your little red toy drooling in bliss. Fucking the Fox like a wild man you let out a roar as torrents of cum pour forth from your tool, lewdly distending the belly of your victim. Not to be left out, the Fox starts shooting gobs of thick rubbery cum onto the ground, pooling around him. With some effort you pull your cock out of the little Fox with an audible pop. The seed you just planted come spilling out of the abused hole adding the the already large pool of cum the Fox is laying in.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "With your lust sated you put on your clothes. Walking away you smile as you see the little Fox lustily wallows in the pool of cum, occasionally dipping its head to the pool and taking loud slurpy gulps of semen, coo-ing with satisfaction.";
 	decrease libido of player by 30;
@@ -648,7 +620,7 @@ to say latexfoxrape:
 
 
 to say latexfoxrapee:
-	say "The Latex Fox slumps to the ground defeated. The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity you straddle the fox and slowly ease yourself down.  His paws move to your hips, then up to your [bodytype of player] body as you get into position.";
+	say "The Latex Fox slumps to the ground defeated. The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity you straddle the fox and slowly ease yourself down.";
 	if cunt length of player is less than 6:
 		say "As the tip of the Foxes shaft reaches your opening, you realize it is far too big for you to accommodate. Seeing your frustration the Fox lets out a long hissing sigh, and seems to shrink in size, You now easily take him right down to the knot.";
 	otherwise if cunt length of player is less than 10:
@@ -721,31 +693,23 @@ To say gryphon lose:
 			say "Spent and exhausted you get dressed and walk away, leaving the Hermaphroditic Gryphon to lie in a pool of her own milk.";
 			decrease libido of player by 30;
 			if libido of player is less than 0, now libido of player is 0;
-
-to say huskybeaten:
-	if cocks of player is greater than 0 and libido of player is greater than 40:
-		say "Having bested her, you shove her back. She yelps as she falls and twists, landing on all fours. You grab her wide hips and, without hesitation, slam your [cock size desc of player] [cock of player] pole into her hot depths and begin to breed her on the spot. She barks and shudders with pleasure, rocking against you as you pump into her round form, caressing her large breasts greedily as you rock her forward. Her furry flesh rubs against your [skin of player] skin, sending tingles through your body.";
-		say "You feel climax strike like a lightning bolt, and you fill her wanting womb with thick squirts of hot fertile seed. She arches under you, trembling in pleasure. Satisfied, you pull from her, slapping her furry ass before leaving.";
-	otherwise:
-		say "[one of]She whimpers and falls back, stumbling onto her ass as she looks up at you fearfully. Her wide, doe like eyes glisten with terror before she squeezes them shut, and spreads her thighs. Despite temptation, you decide to not take on her offer, and leave her there, whining[or]Exhausted, she slumps against you, tears streaming along her furry cheeks. Her paws gently brush at you as she mutters something of an apology. You push her away, but decide against hurting her further, simply leaving her there[at random].";
-
-to say huskywinner:
-	if cocks of player is greater than 0:
-		say "[one of]Having defeated you, the husky begins to pant heavily. She rolls you onto your back and clambers on top of you. Her deft fingers soon have you free of your clothing, tossed to the side as she barks in your face. She slips up and waves her excited furry snatch in your face before settling back, pressing your [cock size desc of player] [cock of player] shaft into her quivering cunt. She howls and yips as she rises and falls against you, her many breast jiggling about with every pound down against you. Her sex is a hot, wet, oven, clenching powerfully and pulling you right over the edge.[line break][line break]As you catch your breath, she rubs over her softly furred belly, glowing with satisfaction at your seeding. Finally, she draws up from you with a wet sucking noise from her sated cunt, and she prowls off, leaving you in a puddle of sweat to recover at your own pace[or]She kneels down and nuzzles into your crotch, biting at you until she has direct access, then running her long, wet, tongue across your increasingly excited [cock size desc of player] [cock of player] cock. Her long snout descends, taking it in entirely as she bobs slowly, suckling and milking your balls with a softly furred hand. It is not long before you are filling her snout, watching her swallow most of it, a little dribbling down her black lips, just to be lapped right back up. She sits up, smiles at you, and quietly departs[at random].";
-	otherwise:
-		say "She lays down on top of you and grinds lustfully, but you lack the parts she so urgently needs. She does think of one part you have she can use and slides up against you, pressing her hot, musky, snatch against your face, grinding insistently, grunting and whimpering with need. Her hot juices flow down across your nose and mouth, though you are unable to participate much in your current state. Suddenly she arcs her back and howls, almost drowning you in thick husky honeys as she hits peak. She slumps back, panting loudly, and slowly rolls off of you, slinking off into the city.";
-
+		
 
 Table of random critters
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
+"Slut Rat"	"[one of]She slices at your face with a sudden swipe of her claws.[or]She draws you close with a loud rumble and presses your lips to a breast, holding you still until you start drinking from her, intense warmth rushing through your body, though you are left drained and tired as well.[if cock width of player is greater than 0] Your balls sing with pleasure as they grow heavier by the moment![otherwise] You squirm in shock as you feel a new set of balls erupt from your body![end if][slut rat growth] [or]Her tail loops around and tickles at you between the legs even as she shoves you back against the ground.[or]She suddenly turns, and a flying furry breasts crashes into you painfully.[at random]"	"She gives a final hiss of defiance, then scurries away out of sight, leaving you with an image of her perfect rump and twitching tail to remind her by."	"[slut rat victory]"	"Towering over most, a tall intimidating wall of fur and leather. It appears female at first glance. Piercing its large directed ears are one ring a piece, one a golden hue, and another silvery shade. It's covered from top to bottom in ebony black fur, that is, where clothing is not apparent. Her eyes are the same black shade as her hair, the left eye having a scar that runs an inch above downwards in a slicing motion to an inch or two below.
+         She wears a rather large leather collar with a bell attached, the bell portion resting between the massive pillows of her chest, resting on top of them like some sort of sacred artifact. The bell makes no sound. Her breasts are restrained by her leather suit, the two upside down V's struggling mightily with small buckles between them just to keep them fastened and avoid falling apart. They might be seven or so inches in radius, and the leather doesn't do much to hide the details from the front, indents visible in the leather, revealing more than it ought to.[line break]
+         Her arms are long and slender, with black fur, and bright pink shaded paws. The paws have clearly defined fingers, looking quite capable of grasping things, or clawing, with sharp black shaded tips to them. Her midsection is slim and trim, and also concealed fully by the leather bodice she wears, clinging tightly to her contours.[line break]
+         Gazing at her from the back, it can be seen that the leather doesn't cover much back there beyond decency. Her furred buttocks and thighs are visible, though calves are again covered in the suit. From the front, an odd sight greets the eyes. The contours of the leather shape outwards from her thighs and along her belly, the shape is distinct and hard to miss, as if this bizarre furred female were in the possession of monstrously large male genitalia. She makes no move to be discreet or hide this abnormality, seeming perfectly at ease with its existence, probably having been the one to modify the suit in the first place to cope with such an unwieldy intruder.[line break]
+         Glancing back down to her feet, they are garbed in simple shoes, looking dated and worn from far too much overuse and abuse."	"furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"	"bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you."	"[one of]black furred[or]rat furred[or]softly furred[at random]"	"You have a long, [skin of player] tail. It is segmented, like a rat tail should be, thin and whip like, moving about in long motions."	"[one of][skin of player] sheathed[or]leaking[or]human like[at random]"	"your face draws forward into a long snout as hair spills to your shoulders"	"you can feel your entire body changing configuration to emphasize your fertile signals, ass and hips pushing outwards as waist slims. Short claws forming on your hands, which remain smooth. The rest of you [skin of player]"	"a wave of erotic satisfaction forces you to your knees, your genitals releasing their fluids across thighs as fur explodes out across your form"	"A long slithering sensation is felt in your pants. A quick check reveals it to be a naked pink rat tail."	"it swells and throbs and refuses to calm down. It is soon leaking prefluids all over the place in constant readiness."	10	16	10	10	12	10	"Both"	45	6	13	"Unknown"	1	12	10	2	10	0	1	12	7	100	"soda"	20
 "Drone Wasp"	"[one of]The drone attacks with its small claws, leaving tiny furrows that sting slightly.[or]The drone dive bombs through the air with its stinger at the ready, spreading its venom into your body causing you to shudder in pain and lust.[or]The drone flies in close and hugs you, not harming you but seeming to gaze longingly into your eyes.[at random]"	"[one of]The drone flutters off with a tattered wing, crying as she flies away, leaving you with a slight sense of guilt.[or]The drone falls to the ground and begins to cry, as you hear buzzing nearby you think its best to get away as you run quickly.[at random]"	"[one of]The drone slips her lips onto yours, kissing deeply as she lets a small amount of honey in her mouth slip into your own.[or]The drone flies around happily before flying off to brag to its sisters.[or]The drone pins you down to the ground as she grins forcing your lips onto her sex as she rubs her small mound against you, moaning softly before she finally cums, and giggles flying off as quickly as she came.[at random]"	"A small , shy of four feet, wasp like girl, small delicate buzzing wings on her back, her skin colored in yellow and brown marking. Her hands only having three fingers and small claws. Out of her rear extends her wasp like abdomen with a small stinger on the end. Her face seeming cute with her short brown/blond hair. She looks at you with a soft smile on her lips buzzing left and right.[line break][line break]Written by asani."	"charmingly human"	"largely human, except for the new abdomen protruding from your rump, sporting a new stinger. You are also a lot shorter, shy of four feet at best."	"black and brown striped"	""	""	"Your face tingles softly, but not much physically changes from the human norm, except that it is now cute, and female looking."	"You feel a bulging from your bottom that expands out to a whole new segment of body, a stinger slipping free."	"Your skin changes colour as it changes to yellow and brown, the striped markings covering your body."	"You feel something internal shifting around."	"You feel something internal shifting around."	10	10	14	12	10	10	"Female"	20	1	3	"Park"	0	0	0	2	3	0	1	6	4	50	--	0
 "Dragoness"	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	--	--	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	--	0
 "Panther Taur"	"[one of]She leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had.[or]She rears up and plants her forward lower paws on your shoulders while her hind paws kick up, cutting into you with sharp claws in a painful rake.[or]She lashes out with a powerful set of sharp claws.[or]She rushes right at you, forcing you to back against a wall.[at random]"	"[one of]The cat looks entirely irritated at the constant abuse on her perfect body. With a haughty harumph, she suddenly turns tail, raising it to expose her thick, furry, netherlips, then bolts off.[or]The cat mewls sadly, backing away before she raises her hands to her heavy breasts, pressing them together as she gives you a smoldering look. Wouldn't it be nice to make love instead of war?[felitaur tempt][at random]"	"[felitaur rape][line break]"	"An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her pretty [one of]blue[or]brown[or]green[at random] slitted eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.[line break][line break]Commissioned by AsureaSkie"	"feline face, with blunt snout, wet black nose and pointed ears above your"	"is bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws.[if breasts of player is greater than 2] All your breasts except the first two rest on the chest of that lower torso, swaying with each step.[end if]"	"[one of]furry[or]black furred[at random]"	"You have a long, black, feline tail that likes to curl and uncurl at its own whim. "	"[one of]black sheathed[or]barbed[at random]"	"You can feel warmth as your face begins to reshape into a muzzle, long teeth filling your new mouth, tongue becoming rougher. Your ears are tugged as if by an angry mother, soon perched at the top of your head, pointed and twitching."	"You stagger in place, almost toppling backwards as new legs sprout out, ruining your balance. Fortunately, those new legs dig into the ground, helping to restore your equilibrium as you rapidly grow the torso of a panther from the hips down. Your hands become somewhat paw like, claws sliding free.[if breasts of player is greater than 2] Your breasts quiver as all but the top two migrate downward, settling on the undercarriage of your new torso.[end if]"	"soft ticklish sensation greets the arrival of a thick pelt of pure black fur across your body."	"you shake it, a new limb extending from it, becoming a long [skin of player] tail, clearly feline in build."	"Your cock draws up against your belly as a [skin of player] sheath wraps around it. It also grows soft barbs around the head, sure to stimulate any partner."	12	18	10	12	10	10	"Both"	20	3	6	"Outside"	1	14	15	6	8	0	1	14	8	90	--	0
 "Goo Girl"	"[one of][if cocks of player is greater than 0]With a swipe of a flexible hand she bypasses your clothes, slithering under them to grab at your [cock size desc of player] [cock of player] shaft and starts squeezing, causing pain and pleasure in equal parts.[otherwise if cunts of player is greater than 0 and cunt length of player is less than 12]She surges towards you and grabs at your crotch. Her fluid body flows through creases and cracks, finding your [cunt size desc of player] pussy and diving into it with great zeal, stretching and buzzing harshly, almost making you dizzy with forced pleasure.[otherwise if cunts of player is greater than 0 and cunt length of player is greater than 11]The goo girl grabs at your crotch, and suddenly seems to be shrinking. Your [cunt size desc of player] cunt suddenly sings in pleasure as she flows into you rapidly, making your belly bloat wide for a moment as she fully inhabits your womb before she spills back out in a great warm rush of thick fluids.[otherwise]She swats at you with a flexible hand, bruising you between the legs.[end if][or]She hugs you into her soft bosom. It would be kind of nice if you could breathe![or]A thousand tiny tendrils suddenly spread from her body, slapping at you wildly. It's fortunate they are not too hard.[at random]"	"[one of]The gooey girl falls back onto her bottom, panting, or just quivering, it's hard to tell. Her thighs are parted, exposing her gently undulating folds to your eyes. [gootemp][or]The girl loses cohesion with a gurgling cry of dismay, becoming a pool of unmoving ichor at your feet.[or]The goo girl suddenly dives for a nearby liquid and vanishes into it instantly, gone.[at random]"	"[one of]The girl laughs in soft bubbles at your defeat, but takes mercy on you, leaving you to peace.[or]The goo girl moves up to you and hugs you suddenly, drawing you into a firm embrace against her soft body. She shakes her head silently, then spreads her semi solid nethers before your eyes, leaning back and offering herself. [gootemp][or]Victorious, the goo creature lashes you a few times with a whip like hand for good measure, then loses interest.[at random]"	"A jiggling girl of [one of]blue[or]green[or]purple[at random] color. You can see through her, mostly, her gelatin like flesh tinting the area behind her with its lustrous shade. Her upper torso is well defined, with large breasts somehow jiggling just a little more noticeably than the rest of her. Her lower body seems to meld into a grand base of goop just past her thighs, her legs permanently held together. She seems to notice you and turns to you. With soft slurping sounds, she propels herself at you like an incoming wave, hands outstretched for you with an unwavering smile."	"curiously disquieting smile on a pretty human face"	"melded together just at your thighs, flowing together into a large and bulbous base of [skin of player] flesh"	"[one of]jellied[or]gelatin like[or]translucent[at random] [one of]blue[or]red[or]purple[sticky random]"	""	"[one of]partially fluid[or]flexibly semi-solid[or]jellied[at random]"	"you can feel your face reshaping into rather pretty proportions. An urge overtakes you and you smile, and never stop"	"you feel your feet drawn to one another as strange throbbing builds in your shins. Your lower legs flow into one another, creating a [skin of player] base of flesh that goes up to your lower thighs"	"a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh"	"you get an odd feeling, but see no change"	"your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done"	8	10	10	10	10	5	"Both"	30	2	3	"Mall"	0	6	4	2	3	0	1	20	20	40	"glob of goo"	100
 "Naga"	"[one of]The snake swipes at you with its pipe with alarming accuracy.[or]With a loud hiss, the snake lashes at you, sinking a few fangs painfully into your [skin of player] body.[or]The snake lashes out with its tail, striking you solidly with the heavy mass.[at random]"	"[one of]The snake staggers from its many wounds and collapses to the ground, unmoving.[or]Your last blow draws a shuddering hiss before the snake falls to the ground and ceases fighting.[or]Detecting the fight lost, the snake suddenly flees on quick scales, abandoning the struggle.[at random]"	"[first time]The snake laughs, like a dry hiss, tongue flicking as it moves over your defeated form, 'You should go back to where you came from, human, your kind is finished in this city. Remember it or you will be punished fresh.' [only][one of]The snake prods you with its club to ensure the fight has left you before slithering off, seemingly satisfied with its victory.[or]The great naga throws its coils about you in a warm, soft, crushing embrace. Breathing becomes hard as it constricts. Consciousness fades to black. When you awaken, the snake man has departed.[or]With a cruel sounding laugh, the naga grabs you and throws you over a coil, wrenching free your clothes to expose your bottom to it. It coils about you, warm and trapping, as it becomes a he, twice so, two thick human like shafts sliding free of some internal sheath. Intent on punishment over breeding, he grabs you to pull you back as he thrusts firmly into your back door, lancing you on the thick tool and rocking without concern for your comfort.[line break][line break]Your ass sends guilty pangs of pain and pleasure through you as the snake keeps your wriggling form under control, pounding eagerly at your [skin of player] flesh. The tool within you swells suddenly, then begins to explode, filling your bowels with thick gouts of snake seed. Satisfied, the snake rolls you off of himself to the ground, and slithers away.[at random] "	"Human and snake blended together in an intimidating mixture. It has [one of]brown and black[or]bright red and yellow[or]grey and tan[at random] scales, fine and soft looking. Two muscular arms are its only limbs, if one discounts the great tail that makes up most of its body. Clenched in its right hand is a pipe. A crude, but likely effective, makeshift weapon. Of course, it also has great jaws that likely contain sharp, possible venomous, teeth. Its human torso is well muscled and sleek, well built all around and lacking in blemish. Its head and face is entirely that of a huge snake, staring unblinkingly and tasting the air with flickering forked tongue.[line break][line break][line break]Commissioned by AsureaSkie."	"a snake's head, with unblinking eyes and huge venomous fangs. Your [skin of player] hide is sleek across your majestic hood, flaring wide when excited or worked up, framing your head from behind your face"	"extremely long. You can feel the powerful rings of your muscles drawing you forward quietly across the ground. It almost feels like you're floating along, moving with a sublime confidence in your snake like body"	"[one of]scaly[or]softly scaled[or]scaled[at random]"	""	""	"you feel your [skin of player] skin stretching out as your skull flattens out into a snake-like face. Your eyes blink for the last time before the lids become clear. You find you can now taste the air"	"your legs snap together, almost toppling you as they flow together quickly. Strange numbing pleasure radiates down along your torso as you can feel your spine extending down along your fused legs, then beyond, forming a powerful tube-like body that trails along behind you"	"soft [one of]brown and black[or]bright red and yellow[or]gray and tan[at random] scales begin to spread quickly from your palms. As they settle, soft itching warmth follows, then fades, leaving you with a new hide to admire"	"you feel something settle in your lower torso, but nothing physically changes that you can see"	"your cock becomes achingly erect for a moment before settling down, seemingly unchanged."	14	10	12	12	12	8	"Male"	25	3	6	"Mall"	2	16	9	2	3	0	0	0	0	20	--	0
-"Hermaphrodite Gryphon"	"[one of]She throws her impressive, and somewhat jiggly, bulk against you.[or]She snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body.[or]She presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully.[or]She charges at you, wings pulling her free of the ground just moments before she crashes bodily into you.[at random]"	"[gryphon lose]"	"[gryphon fuck]"	"She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted, black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade, and sport huge wicked claws that clack on hard surfaces."	"powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered"	"dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"	"[one of]soft, blue, and furry[or]softly furred[at random]"	"You have a thin leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."	"[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"	"your ears are drawn upwards to the top of your head and a wicked beak pushes forward"	"you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"	"a flush of arousal stirs through you as a dense carpet of blue fur engulfs you in its warm, encouraging, presence"	"you feel a new weight. A glance shows a long [skin of player] tube growing over your ass. The end blossoms out into a blue, furry, tuft. You have a tail"	"pleasure builds in your cock as it deepens to a midnight black, a large swollen knot forming towards the base and a [skin of player] sheath overtaking the very base of it"	12	10	12	14	10	12	"Both"	22	2	5	"Outside"	1	13	7	2	8	0	1	13	7	80	"gryphon milk"	50	3	"[one of]winged[or]alluring[or]curvaceous[at random]"	"[one of]gryphon[or]feline[or]hybrid[at random]"	false	false	false	--	"hump"
-"Female Husky"	"[one of]The sex crazed husky manages to pin you against some debris as she gnaws at your shoulder. You're sure she means it as a come on, but it just hurts.[or]The husky howls in frustration and slices with her dull claws. It seems awkward, but it stings![or]She manages to get her hands on you and squeezes tightly, pressing her delightful assets to you even as she denies you breath in the tight embrace.[at random]"	"[huskybeaten]"	"[huskywinner]"	"A slutty husky, a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. Her chest bears two firm and grope-able C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. Her creamy colored tummy is slightly swollen as if she is barely pregnant, though that will probably change soon due to the aching need oozing from her swollen slit as it's obvious she's become nothing more than a needy whore."	"slim, feminine muzzle and perky, overlarge ears over a canine"	"that of a bipedal dog, with digitigrade legs and paw-like hands"	"[one of]soft white fur[or]dense white fur[at random]"	"You have a long and fluffy dog[apostrophe]s tail swaying behind you"	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face draws forward into a slender canine snout. Your elongated tongue slips free of your new lips, lolling in the air wetly a moment"	"your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw-like"	"your skin prickles from head to toes as fur begins to push through from underneath, soon covering you in a soft, almost comforting, layer of fluffy white fur"	"a long tail pushes from your spine, uplifting in a stiff arc, it begins to sway slowly without your input"	"your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago"	6	12	6	6	2	16	"Female"	15	1	3	"Outside"	0	0	0	4	6	0	1	10	6	90	--	0
-"Latex Fox"	"[one of]The latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so.[or]The fox leaps on you, raking several bloody lines with its claws.[or]The fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth.[at random]"	"[latexfoxrape]"	"[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at your [bodydesc of player] body with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up and wander back to the bunker, defeated.[or]The fox rolls you over and clambers up on top of your [bodytype of player] form with a feral snarl.[if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes.[impregchance] Sated, he rises and departs into the city.[otherwise] He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and flees, leaving a trail of rubbery looking seed.[end if][at random]"	"You encounter a creature made of glistening latex. It is largely red in color, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry."	"mixture of canine and human, in a perpetual sneer of exposed teeth, making for an interesting"	"mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous."	"red, black, and white latex"	"You have a long tail, shaped like a fox tail, but made entirely of rubber. It squeaks as it sways back and forth. "	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face reforms, vision blocked by a narrow fox like snout, and new ears twitching on top of your head"	"a wave of itching runs through the meat of your body as your legs pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely paws. Your fingers are still itching as sharp little claws slip free of them"	"smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush"	"a sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically"	"your cock grows steel hard as it begins to throb urgently. It grows increasingly red as it becomes slightly more slender. Soon a [cock width of player] inch knot forms at the base, ready to tie you to a willing, or not, partner"	10	12	8	10	6	6	"Male"	15	1	4	"Outside"	1	8	6	2	5	0	4	8	6	20	""	0	3	"[one of]altered[or]animalistic[or]sexy[at random]"	"vulpine"	false	false	false	--	"hump"
+"Hermaphrodite Gryphon"	"[one of]She throws her impressive, and somewhat jiggly, bulk against you.[or]She snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [skin of player] body.[or]She presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully.[or]She charges at you, wings pulling her free of the ground just moments before she crashes bodily into you.[at random]"	"[gryphon lose]"	"[gryphon fuck]"	"She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted, black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade, and sport huge wicked claws that clack on hard surfaces."	"powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered"	"dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [skin of player] feetpaws. Behind you, two large feathery wings flutter on occasion"	"[one of]soft, blue, and furry[or]softly furred[at random]"	"You have a thin leonine tail swaying over your ass. Its [skin of player] length has a tuft of blue fur at the end."	"[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"	"your ears are drawn upwards to the top of your head and a wicked beak pushes forward"	"you feel surges of alien power building in your thighs as they grow with new muscles. The oddly pleasant sensation flows downwards into your shins as they smoothly shift to a digitigrade stance. Your feet become [skin of player] paws, large, with dangerous looking curved claws. You glance back as your back itches, then in a burst of brief pain, parts to admit two large, feathery, wings"	"a flush of arousal stirs through you as a dense carpet of blue fur engulfs you in its warm, encouraging, presence"	"you feel a new weight. A glance shows a long [skin of player] tube growing over your ass. The end blossoms out into a blue, furry, tuft. You have a tail"	"pleasure builds in your cock as it deepens to a midnight black, a large swollen knot forming towards the base and a [skin of player] sheath overtaking the very base of it"	12	10	12	14	10	12	"Both"	22	2	5	"Outside"	1	13	7	2	8	0	1	13	7	80	"gryphon milk"	50
+"Female Husky"	"[one of]The sex crazed husky manages to pin you against some debris as she gnaws at your shoulder. You're sure she means it as a come on, but it just hurts.[or]The husky howls in frustration and slices with her dull claws. It seems awkward, but it stings![or]She manages to get her hands on you and squeezes tightly, pressing her delightful assets to you even as she denies you breath in the tight embrace.[at random]"	"[if cocks of player is greater than 0 and libido of player is greater than 40]Having bested her, you shove her back. She yelps as she falls and twists, landing on all fours. You grab her wide hips and, without hesitation, slam your [cock size desc of player] [cock of player] pole into her hot depths and begin to breed her on the spot. She barks and shudders with pleasure, rocking against you as you pump into her round form, caressing her large breasts greedily as you rock her forward. Her furry flesh rubs against your [skin of player] skin, sending tingles through your body.[line break][line break]You feel climax strike like a lightning bolt, and you fill her wanting womb with thick squirts of hot fertile seed. She arches under you, trembling in pleasure. Satisfied, you pull from her, slapping her furry ass before leaving.[otherwise][one of]She whimpers and falls back, stumbling onto her ass as she looks up at you fearfully. Her wide, doe like eyes glisten with terror before she squeezes them shut, and spreads her thighs. Despite temptation, you decide to not take on her offer, and leave her there, whining.[or]Exhausted, she slumps against you, tears streaming along her furry cheeks. Her paws gently brush at you as she mutters something of an apology. You push her away, but decide against hurting her further, simply leaving her there.[at random][end if]"	"[if cocks of player is greater than 0][one of]Having defeated you, the husky begins to pant heavily. She rolls you onto your back and clambers on top of you. Her deft fingers soon have you free of your clothing, tossed to the side as she barks in your face. She slips up and waves her excited furry snatch in your face before settling back, pressing your [cock size desc of player] [cock of player] shaft into her quivering cunt. She howls and yips as she rises and falls against you, her many breast jiggling about with every pound down against you. Her sex is a hot, wet, oven, clenching powerfully and pulling you right over the edge.[line break][line break]As you catch your breath, she rubs over her softly furred belly, glowing with satisfaction at your seeding. Finally, she draws up from you with a wet sucking noise from her sated cunt, and she prowls off, leaving you in a puddle of sweat to recover at your own pace.[or]She kneels down and nuzzles into your crotch, biting at you until she has direct access, then running her long, wet, tongue across your increasingly excited [cock size desc of player] [cock of player] cock. Her long snout descends, taking it in entirely as she bobs slowly, suckling and milking your balls with a softly furred hand. It is not long before you are filling her snout, watching her swallow most of it, a little dribbling down her black lips, just to be lapped right back up. She sits up, smiles at you, and quietly departs.[at random][otherwise]She lays down on top of you and grinds lustfully, but you lack the parts she so urgently needs. She does think of one part you have she can use and slides up against you, pressing her hot, musky, snatch against your face, grinding insistently, grunting and whimpering with need. Her hot juices flow down across your nose and mouth, though you are unable to participate much in your current state. Suddenly she arcs her back and howls, almost drowning you in thick husky honeys as she hits peak. She slumps back, panting loudly, and slowly rolls off of you, slinking off into the city.[end if]"	"A slutty husky, a beautiful anthro canine covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. Her chest bears two firm and grope-able C cup breasts along with two B cup pairs of breasts underneath them, all of them oozing small droplets of milk. Her creamy colored tummy is slightly swollen as if she is barely pregnant, though that will probably change soon due to the aching need oozing from her swollen slit as it's obvious she's become nothing more than a needy whore."	"slim, feminine muzzle and perky, overlarge ears over a canine"	"that of a bipedal dog, with digitigrade legs and paw like hands."	"[one of]soft white fur[or]dense white fur[at random]"	"You have a long and fluffy dog[apostrophe]s tail swaying behind you."	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face draws forward into a slender canine snout. Your elongated tongue slips free of your new lips, lolling in the air wetly a moment"	"your legs bend and twist into digitigrade form with soft subtle snaps of flowing bones. You look down to see your feet becoming entirely paw like and your hands become somewhat paw like"	"your skin prickles from head to toes as fur begins to push through from underneath, soon covering you in a soft, almost comforting, layer of fluffy white fur"	"a long tail pushes from your spine, uplifting in a stiff arc, it begins to sway slowly without your input"	"your shaft tapers out, becoming slender, though a huge swelling comes into being towards the base, a knot. The skin turns reddish before the whole thing slowly withdraws into a sheath you didn't have a moment ago."	6	12	6	6	2	16	"Female"	15	1	3	"Outside"	0	0	0	4	6	0	1	10	6	90	--	0
+"Latex Fox"	"[one of]The latex fox lunges at you with gleaming rubber fangs and sinks them into your body, growling as it does so.[or]The fox leaps on you, raking several bloody lines with its claws.[or]The fox bowls into you, knocking you back painfully as it snarls, exposing sharp rubber teeth.[at random]"	"[latexfoxrape]"	"[one of]Yipping victoriously, the fox chews at you with loud squeaky noises. It would be adorable if you weren't in pain everywhere. Eventually the beast tires of chewing at you with its suddenly soft and noisy teeth, and wanders off, leaving you to pick yourself up and wander back to the bunker, defeated.[or]The fox rolls you over and clambers up on top of you with a feral snarl.[if the cunts of the player is greater than 0]The fox slips his suddenly erect rubber cock into you without further delay, rutting into your [one of]cunt[or]pussy[or]passage[at random] with eager pumps of his hips. You feel something warm and tingling rushing into your body as he knots to your abused gender, remaining on top of you, holding you still until it diminishes.[impregchance] Sated, he rises and departs into the city.[otherwise] He thrusts up against your ass, probing with his hard canine rubber pecker until he finds his target and sends a whole new pain into your already abused form, starting to claim his dominance over you with happy yelps and growls. He floods your bowels with thick, tingling, seed, but does not knot with you. He draws back and flees, leaving a trail of rubbery looking seed.[end if][at random]"	"You encounter a creature made of glistening latex. It is largely red in color, but white along its belly and groin. A fox, making squeaking sounds as it moves. It looks happy to see you. By happy we mean hungry."	"mixture of canine and human, in a perpetual sneer of exposed teeth, making for an interesting"	"mostly human, except for the digitigrade stance of your feet, er, or is that paws? And those claws look dangerous."	"red, black, and white latex"	"You have a long tail, shaped like a fox tail, but made entirely of rubber. It squeaks as it sways back and forth. "	"[one of]canine[or]knotted[or]bright red doggy[or]bestial[at random]"	"your face reforms, vision blocked by a narrow fox like snout, and new ears twitching on top of your head"	"a wave of itching runs through the meat of your body as your legs pop into a new, digitigrade, configuration. Your feet begin to feel cramped before they snap loudly, becoming entirely paws. Your fingers are still itching as sharp little claws slip free of them"	"smooth latex seems to rush out over your body, covering every inch of you, inside and out, leaving you shivering and somewhat flush"	"a sudden loud FWOOMF has you looking over your shoulder just in time to see a new, large, fox like tail curling and flicking energetically"	"your cock grows steel hard as it begins to throb urgently. It grows increasingly red as it becomes slightly more slender. Soon a [cock width of player] inch knot forms at the base, ready to tie you to a willing, or not, partner"	10	12	8	10	6	6	"Male"	15	1	4	"Outside"	1	8	6	2	5	0	4	8	6	20	""	32
 
 
 understand the command "feed" as something new.
@@ -813,6 +777,7 @@ descr is text that varies.
 cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 battleground is a text that varies.
 Lusting is a text that varies.
+monsterhp is a number that varies.
 
 Hunting is an action applying to one topic.
 
@@ -829,7 +794,6 @@ carry out hunting:
 	let Q be a list of numbers;
 	let found be 0;
 	let sitfound be 0;
-	let foundbadtime be 0;
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
@@ -842,29 +806,10 @@ carry out hunting:
 					repeat with x running from 1 to ( ( 100 - humanity of player ) / 16 ):
 						add y to q;
 				break;
-	if insectlarva is true and larvaegg is 1 and gestation of child is 0 and battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum":		[hunted by wasp hive anywhere outdoors]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Black Wasp":
-				add y to q;
-				if "Like Attracts Like" is listed in feats of player:
-					add y to q;
-				if libido of player > 30:
-					repeat with x running from 1 to ( libido of player / 30 ):
-						add y to q;
-				if larvacounter > 3:
-					repeat with x running from 1 to ( larvacounter / 3 ):
-						add y to q;
-				break;
 	repeat with X running from 1 to number of filled rows in table of random critters:
 		choose row X from the table of random critters;
 		if there is no area entry, next;
 		if area entry matches the text battleground, case insensitively:
-			if there is a nocturnal in row X of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					if name entry matches the text topic understood, case insensitively:
-						now foundbadtime is 1;
-					next;		[skips if day/night doesn't match]
 			if name entry matches the text topic understood, case insensitively:
 				say "You are almost certain you saw some [name entry] tracks...";
 				now found is 1;
@@ -980,12 +925,8 @@ carry out hunting:
 						if "Bad Luck" is listed in feats of player, increase dice by 1;
 						if "Curious" is listed in feats of player, increase dice by 2;
 						if dice is greater than 14:
-							now combat abort is 0;
-							now lost is 0;
 							Fight;
 							if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
-								now combat abort is 0;
-								now lost is 0;
 								say "As you are trying to recover from your last encounter, another roving creature finds you.";
 								Fight;
 					otherwise:
@@ -1000,12 +941,8 @@ carry out hunting:
 								Fight;
 					break;
 		if found is 0:
-			if foundbadtime is 1:
-				say "[bold type]There doesn't seem to be any of them around right now...[roman type]";
-			otherwise if sitfound is 0:
-				say "[bold type]You don't think what you're looking for can be found here...[roman type]";
-			otherwise if sitfound is 1:
-				say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type]";
+			if sitfound is 0, say "[bold type]You don't think what you're looking for can be found here...[roman type]";
+			if sitfound is 1, say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type]";
 			let dice be a random number from 1 to 20;
 			if "Bad Luck" is listed in feats of player, increase dice by 1;
 			if "Curious" is listed in feats of player, increase dice by 2;
@@ -1057,7 +994,59 @@ This is the flag ban rule:
 	decrease the menu depth by 1;
 	ban menu;
 
+This is the combat item rule:
+	now battleitem is 0;
+	blank out the whole of table of combat items;
+	let X be 1;
+	repeat with Q running through invent of player:
+		let z be journal;
+		repeat with y running through grab objects:
+			if q matches the regular expression printed name of y, case insensitively:
+				let z be y;
+				break;
+		if z is not fast, next;
+		choose a blank row in table of combat items;
+		now title entry is Q;
+		now toggle entry is combat item process rule;
+[	let z be the number of rows in table of combat items;
+	say "[Z].";]
+	if there is no title in row 1 of table of combat items:
+		say "You have no combat ready items to use!";
+	otherwise:
+		while 1 is 1:
+			clear the screen;
+			repeat with y running from 1 to number of filled rows in table of combat items:
+				choose row y from the table of combat items;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - ABORT[as]0[end link][line break]";
+			say "Type the number corresponding to the item to be used> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of combat items:
+				now current menu selection is calcnumber;
+				follow the combat item process rule;
+				break;
+			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				say "Selection aborted.";
+				continue the action;
+			otherwise:
+				say "Invalid Choice.";
 
+This is the combat pass rule:
+	retaliate;
+
+	
+this is the combat item process rule:
+	decrease the menu depth by 1;
+	choose row Current Menu Selection in table of combat items;
+	let nam be title entry;
+	repeat with N running from 1 to the number of rows in the table of game objects:
+		choose row N in the table of game objects;
+		if name entry is nam:
+			process object entry;
+			break;
+	if battleitem is 0 and monsterhp is greater than 0:
+		wait for any key;
+		retaliate;
 	
 destinationcheck is an action applying to nothing.
 
@@ -1128,31 +1117,6 @@ Carry out vialdropping:
 		continue the action;
 	say "You chuck the [target] vial away.";
 	remove entry z from vials of player;
- 
- understand "vialalldrop [text]" as vialalldropping.
-
-Vialalldropping is an action applying to one topic.
-
-Carry out vialalldropping:
- 	let t be the topic understood;
-	let target be text;
-	let found be 0;
-	let z be 1;
-	let q be a topic;
-	let y be a list of numbers;
-	repeat with x running through vials of player:
-		now q is x;
-		if t in lower case is x in lower case:
-			add z to y;
-			now found is 1;
-		increase z by 1;
-	if found is 0:
-		say "You don't seem to have any such vial.";
-		continue the action;
-	otherwise:
-		repeat with cur running through y:
-			say "You chuck [an target] vial away.";
-			remove entry cur from vials of player;
 
  understand "vial [text]" as vialing.
 
@@ -1199,7 +1163,7 @@ carry out Inventorying:
 	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
 	if the number of entries in invent of player is greater than 0:
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop[if the number of trader in the location of the player > 0 or ( Ronda is visible and dseed is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop[if the number of trader in the location of the player > 0 or ( Ronda is in the location of the player and dseed is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
 		let weight be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
@@ -1210,7 +1174,7 @@ carry out Inventorying:
 				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
 				if trade of object entry is "":
 					let notval be 0;
-					if Ronda is visible and name entry is "demon seed":
+					if Ronda is in the location of the player and name entry is "demon seed":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Ronda[end link]";
 				otherwise if the number of trader in the location of the player is greater than 0:
 					let tradeguy be a random trader in the location of the player;
@@ -1253,7 +1217,7 @@ carry out VialInventorying:
 	if the number of entries in vials of player is 0:
 		say "Your collection of infection vials is empty.";
 	if the number of entries in vials of player is greater than 0:
-		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy [bracket]A[close bracket]ll of a vial";
+		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial";
 		if ( scenario is "Researcher" or nanitemeter is 1 ) and Larissa is visible:
 			say " or [bold type]vialsell[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
 		say ".";
@@ -1267,7 +1231,6 @@ carry out VialInventorying:
 				if z is x, increase count by 1;
 			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] ";
 			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [x][end link] ";
-			say "[link][bracket][bold type]DA[roman type][close bracket][as]vialalldrop [x][end link] ";
 			if ( scenario is "Researcher" or nanitemeter is 1 ) and Larissa is visible:
 				say "[link][bracket][bold type]S[roman type][close bracket][as]vialsell [x][end link] ";
 			say "[X] x [count][line break]";
@@ -1326,7 +1289,7 @@ To Birth:
 	now the gestation of child is 0;
 
 To impregnate with (x - text):
-	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2:
+	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player:
 		stop the action;
 	if "Selective Mother" is listed in feats of player:
 		say "Do you wish to be impregnated with a [x] child?";
@@ -1360,14 +1323,13 @@ To impregnate with (x - text):
 	say "[line break]You have an odd feeling, a palpable wave of contentment from within your lower belly.";
 	
 to say impregchance:
-	if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
-		let target be 10;
-		if insectlarva is true:
-			increase target by 2 + larvaegg;
-		if "Fertile" is listed in feats of player, decrease target by 3;
-		if inheat is true, decrease target by 3;
+	if cunts of player > 0 and "Sterile" is not listed in feats of player:
 		choose row monster from the table of random critters;
-		if a random chance of 2 in target succeeds, impregnate with name entry;
+		if a random chance of 1 in 5 succeeds, impregnate with name entry;
+		if "Fertile" is listed in feats of the player:
+			if a random chance of 1 in 5 succeeds, impregnate with name entry;
+		if inheat is True:
+			if a random chance of 1 in 5 succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
 
 
@@ -1512,7 +1474,7 @@ definition: Daytimer is day:
 	otherwise:
 		no;
  
-definition: Daytimer is night:
+ definition: Daytimer is night:
 	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
 		no;
 	otherwise:
@@ -1710,7 +1672,7 @@ To process (X - a grab object):
 		follow turnpass rule;
 	if x is a armament:
 		if weapon of player is weapon of x: [ unequip]
-			now weapon of player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
+			now weapon of player is "[one of]your fists[or]quick kick[or]impromptu wrestling[at random]";
 			now weapon damage of player is 4;
 			now weapon type of player is "Melee";
 			now weapon object of player is journal;
@@ -1720,8 +1682,6 @@ To process (X - a grab object):
 			now weapon of player is weapon of x;
 			now weapon damage of player is weapon damage of x;
 			now weapon type of player is weapon type of x;
-			if x is ranged:
-				now weapon type of player is "Ranged";
 			say "You ready your [x].";
 	if x is equipment:
 		if x is equipped:
@@ -1749,7 +1709,7 @@ To process (X - a grab object):
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
 			now hp of player is maxhp of player;
-		say "Using your medkit, [one of]You spray your cuts with anesthetic[or]You bandage your worst wounds[at random]. You regain [special-style-1][healed][roman type] hit points.";
+		say "Using your medkit, [one of]You spray your cuts with anesthetic[or]You bandage your worst wounds[at random]. You regain [healed] hit points.";
 		if a random chance of 1 in 10 succeeds:
 			say "You have used up the last of the medkit.";
 			if "Expert Medic" is listed in the feats of the player and a random chance of 2 in 10 succeeds:
@@ -1773,7 +1733,7 @@ To process (X - a grab object):
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
 			now hp of player is maxhp of player;
-		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate.  You regain [special-style-1][healed][roman type] hit points.";
+		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate.  You regain [healed] hit points.";
 		delete healing booster;
 
 
@@ -1796,67 +1756,6 @@ carry out conversing:
 		say "[Noun] says, '[Comment]'";
 		break;
 
-Section Automatic Combat
-
-[creates flag for automatic combat, from "Instinctive Combat" feat]
-autoattacknormal is an action applying to nothing.
-understand "auto attack normal" as autoattacknormal.
-
-autoattackberserk is an action applying to nothing.
-understand "auto attack berserk" as autoattackberserk.
-
-autoattackpass is an action applying to nothing.
-understand "auto attack pass" as autoattackpass.
-
-autoattackcoward is an action applying to nothing.
-understand "auto attack coward" as autoattackcoward.
-
-autoattacksubmit is an action applying to nothing.
-understand "auto attack submit" as autoattacksubmit.
-
-autoattackmode is a number that varies.
-[0 is normal]
-[1 is attack]
-[2 could be item? but probably not...]
-[3 is pass]
-[4 is flee]
-[5 is submit]
-
-carry out autoattacknormal:
-	if "Instinctive Combat" is listed in feats of player:
-		now autoattackmode is 0; [default combat, make choices at normal]
-		say "You calm your instincts and regain control of your actions.";
-	otherwise:
-		say "You feel you are missing the instincts to do this.";
-
-carry out autoattackberserk:
-	if "Instinctive Combat" is listed in feats of player:
-		now autoattackmode is 1; [autoattack, no choice, always attack]
-		say "You let your aggressive instincts take the forefront, knowing you will attack at any chance.";
-	otherwise:
-		say "You feel you are missing the instincts to do this.";
-
-carry out autoattackpass:
-	if "Instinctive Combat" is listed in feats of player:
-		now autoattackmode is 3; [autopass, no choice, always pass]
-		say "You feel calm.  Your sure everything will work out in the end.  Don't mind the monsters attacking you.";
-	otherwise:
-		say "You feel you are missing the instincts to do this.";
-
-carry out autoattackcoward:
-	if "Instinctive Combat" is listed in feats of player:
-		now autoattackmode is 4; [autoflee, no choice, always flee]
-		say "You focus on the need to escape the monsters, the need to run away.";
-	otherwise:
-		say "You feel you are missing the instincts to do this.";
-
-carry out autoattacksubmit:
-	if "Instinctive Combat" is listed in feats of player:
-		now autoattackmode is 5; [autosubmit, no choice, always submit]
-		say "Your increased libido clouds your thinking, wouldn't it be fun to let the monsters play with you.";
-	otherwise:
-		say "You feel you are missing the instincts to do this.";
-
 Section Waithate
 
 [creates (and sets) flag for skipping many wait for any key;]
@@ -1874,81 +1773,6 @@ understand "i love to wait" as waitlove.
 carry out waitlove:
 	now waiterhater is 0; [returns waiting to normal]
 	say "You are patient once again.";
-
-Section Clearless
-
-[creates (and sets) flag for skipping most(all?) clear the screen]
-clearless is an action applying to nothing.
-understand "the clears are gone" as clearless.
-
-clearnomore is a number that varies.
-carry out clearless:
-	now clearnomore is 1; [turns off clears]
-	say "Your vision is cluttered, no more clearing.";
-
-clearmore is an action applying to nothing.
-understand "the clears are back" as clearmore.
-
-carry out clearmore:
-	now clearnomore is 0; [returns clearing to normal]
-	say "You can see clearly, the clears are back.";
-
-Section Color
-
-Include Glulx Text Effects by Emily Short.
-
-To say special-style-1: [name can be changed if desired, just adjust calls to it as well]
-	(- glk_set_style(style_User1); -)
-
-To say special-style-2: [name can be changed if desired, just adjust calls to it as well]
-	(- glk_set_style(style_User2); -)
-
-To say alert-style: [already used for end game text]
-	(- glk_set_style(style_Alert); -)
-
-To say header-style: [already used for game title at start]
-	(- glk_set_style(style_Header); -)
-
-To say note-style: [already used for score changes]
-	(- glk_set_style(style_Note); -)
-
-To say blockquote-style:
-	(- glk_set_style(style_BlockQuote); -)
-
-To say input-style:
-	(- glk_set_style(style_Input); -)
-
-Table of Common Color Values (continued)
-glulx color value	assigned number
-g-pure-blue	255		[== $0000FF] 
-g-bright-cyan	39423		[== $0099FF]
-g-dark-green	43520		[== $00CC00] 
-g-pure-green	65280		[== $00FF00]
-g-pure-cyan	65535		[== $00FFFF]
-g-dark-red	11141120		[== $AA0000]
-g-medium-red	13369344		[== $CC0000]
-g-peach	15645627		[== $EEBBBB] 
-g-pure-yellow	16776960		[== $FFFF00]
-g-pure-magenta	16711935		[== $FF00FF]
-g-pure-red	16711680		[== $FF0000]
-[names can be changed if desired, also need to change matching name in table below.  choose color in hex, then convert to decimal for assigned number.]
-
-Table of User Styles (continued)
-style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
-special-style-1	--	--	--	--	bold-weight	--	1	g-dark-green
-special-style-2	--	--	--	--	bold-weight	--	1	g-medium-red
-blockquote-style	--	--	--	--	--	--	--	--[appears to be unused]
-input-style	--	--	--	--	--	--	--	--[appears to be unused]
-fixed-letter-spacing-style	--	--	--	--	--	--	--	--[appears to be unused]
-alert-style	--	--	--	--	--	--	--	--[also does end game text]
-header-style	--	--	--	--	--	--	--	--[also does starting title]
-note-style	--	--	--	--	--	--	--	--[also does scores]
-italic-style	--	--	--	--	--	--	--	--[allows redefining of italic style]
-bold-style	--	--	--	--	--	--	--	--[allows redefining of bold style]
-[to change style: replace -- with desired change.  see Glulx Text Effects.i7x for options]
-[blockquote, input, and fixed letter appear to be unused.  they could be redefined as desired for more colors/formating.]
-[alert, header, and note are used for a few game functions.  if you wanted to change those you could]
-[italics and bold are currently in a variety of places.  just a few italics, but bold is all over the place.  be aware if you choose to change them]
 
 Part 3 - Item Code
 
@@ -2095,7 +1919,7 @@ Carry out trading:
 instead of trading the demon seed when the current action involves the ronda:
 	say "Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
 	remove ronda from play;
-	now hp of ronda is 1;
+	now hp of ronda is -1;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Slut Rat":
@@ -2103,8 +1927,16 @@ instead of trading the demon seed when the current action involves the ronda:
 			break;
 	extend game by 16;
 	increase score by 20;
-	now lastfuck of Rod is turns;
 
+
+To Rest:
+	if "cot" is listed in invent of player or "cot" is listed in invent of location of player or the player is in the Bunker:
+		increase the hp of the player by (the stamina of the player times 2) plus the level of the player;
+	otherwise if "Roughing It" is listed in feats of player:
+		increase the hp of the player by maxhp of the player divided by 4;
+	follow the turnpass rule;
+	follow the player injury rule;
+	say "You are [descr]([hp of player]/[maxhp of player]).";
 
 This is the sex change rule:
 	choose row monster from the table of random critters;
@@ -2130,10 +1962,6 @@ This is the sex change rule:
 			if cock length of player is less than 4, now cock length of player is 4;
 		if "Modest Organs" is listed in feats of player and cock length of player is greater than 8:
 			now cock length of player is 8;
-		if "Single Sexed" is listed in feats of player:
-			now cock length of player is 0;
-			now cocks of player is 0;
-			now cock width of player is 0;
 		if prevcock > cock length of player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your impressive [cockname of player] [one of]cock[or]penis[or]shaft[or]pole[at random] begins to diminish somewhat to better suit your new infection. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
@@ -2154,10 +1982,6 @@ This is the sex change rule:
 			if cock width of player is less than 2, now cock width of player is 2;
 		if "Modest Organs" is listed in feats of player and cock width of player is greater than 4:
 			now cock width of player is 4;
-		if "Single Sexed" is listed in feats of player:
-			now cock length of player is 0;
-			now cocks of player is 0;
-			now cock width of player is 0;
 		if prevcock > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your impressive [cockname of player] [one of]balls[or]testes[or]gonads[or]cum factories[at random] as they begin to diminish somewhat to better suit your new infection.  You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
@@ -2190,18 +2014,12 @@ This is the sex change rule:
 		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 			if cock length of player is less than 4, now cock length of player is 4;
 			if cock width of player is less than 2, now cock width of player is 2;
-		if "Single Sexed" is listed in feats of player:
-			now cock length of player is 0;
-			now cocks of player is 0;
-			now cock width of player is 0;
 		if prevcock > cock length of player or prevcock2 > cock width of player:		[did cock actually shrink?]
 			follow the cock descr rule;
 			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cock[or]man meat[or]shaft[or]pole[at random] begins to shrink. [if cocks of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr] while your [one of]balls[or]testes[or]cum factories[or]gonads[at random] become [ball size]. ";
 			if cock length of player is less than 1 or cock width of player is less than 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
 				now the cocks of the player is 0;
-			otherwise:
-				say "[line break]";
 		if cocks of player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of player:
 			say "Sudden pleasure runs through one of your doomed [cock of player] cock as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 			decrease cocks of player by 1;
@@ -2225,10 +2043,6 @@ This is the sex change rule:
 			if cunt length of player is less than 4, now cunt length of player is 4;
 		if "Modest Organs" is listed in feats of player and cunt length of player is greater than 8:
 			now cunt length of player is 8;
-		if "Single Sexed" is listed in feats of player:
-			now cunt length of player is 0;
-			now cunts of player is 0;
-			now cunt width of player is 0;
 		if prevcunt > cunt length of player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
 			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to diminish somewhat to better suit your new infection. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr].";
@@ -2249,10 +2063,6 @@ This is the sex change rule:
 			if cunt width of player is less than 2, now cunt width of player is 2;
 		if "Modest Organs" is listed in feats of player and cunt width of player is greater than 4:
 			now cunt width of player is 4;
-		if "Single Sexed" is listed in feats of player:
-			now cunt length of player is 0;
-			now cunts of player is 0;
-			now cunt width of player is 0;
 		if prevcunt > cunt width of player:		[did cock actually shrink?]
 			follow the cunt descr rule;
 			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [one of]cunt[or]pussy[or]vagina[or]cleft[at random] as you are hit by an unexpected orgasm.  The squeezing does not release fully as your wet hole shrinks somewhat to better suit your new infection by becoming tighter.";
@@ -2283,28 +2093,18 @@ This is the sex change rule:
 		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 			if cunt length of player is less than 4, now cunt length of player is 4;
 			if cunt width of player is less than 2, now cunt width of player is 2;
-		if "Single Sexed" is listed in feats of player:
-			now cunt length of player is 0;
-			now cunts of player is 0;
-			now cunt width of player is 0;
 		if prevcunt > cunt length of player or prevcunt2 > cunt width of player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
 			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[or]pussy[or]vagina[or]cleft[at random] begins to shrink. [if cunts of player is greater than 1]They dwindle[otherwise]It dwindles[end if] in size, becoming [descr]. ";
 			if cunt length of player is less than 1 or cunt width of player is less than 1:
 				say "With a sickening noise, you cease to be female all together.";
 				now the cunts of the player is 0;
-			otherwise:
-				say "[line break]";
 		if cunts of player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of player:
 			say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
 			decrease cunts of player by 1;
-			follow the cock descr rule;
-			follow the cunt descr rule;
 	otherwise if cunts of player > cunts entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Female" or sex entry is "Both" ) and "All The Things" is not listed in feats of player:
 		say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
 		decrease cunts of player by 1;
-		follow the cock descr rule;
-		follow the cunt descr rule;
 
 
 To grow breasts by (x - a number):
@@ -2321,15 +2121,15 @@ To grow breasts by (x - a number):
 
 To Infect:
 	choose row monster from the table of random critters;
-	while there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ):
+	while there is no name entry:
 		now monster is a random number from 1 to number of filled rows in table of random critters;
 		choose row monster from the table of random critters;
-		if there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ):
+		if there is no name entry:
 			next;
 		break;
-	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
+	if scenario is "Researcher" or nanite collector is equipped:
 		vialchance name entry;
-	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row monster of the table of random critters or resbypass entry is false ):
+	if scenario is "Researcher" and researchbypass is 0:
 		continue the action;
 	let x be a random number from 1 to 5;
 	let bodyparts be { 1, 2, 3, 4, 5 };
@@ -2438,7 +2238,6 @@ To Infect:
 			say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now bodyname of player is name entry;
 			now body of player is body entry;
-		attributeinfect;			[sets the new attributes]
 		follow the sex change rule;
 	if x is 5:
 		follow the sex change rule;
@@ -2541,7 +2340,6 @@ To Infect:
 				say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 				now bodyname of player is name entry;
 				now body of player is body entry;
-			attributeinfect;			[sets the new attributes]
 			follow the sex change rule;
 		if x is 5:
 			follow the sex change rule;
@@ -2550,8 +2348,6 @@ To Infect:
 				now cockname of player is name entry;
 				now cock of player is cock entry;				[** end of addition for 'Mutable']
 	now x is a random number from 1 to 6;
-	if "Mighty Mutation" is not listed in feats of player:
-		now x is 0;
 	if x is 1:
 		if strength of player is not str entry:
 			if strength of player is greater than str entry and a random chance of 1 in 10 succeeds:
@@ -2634,48 +2430,274 @@ To Infect:
 		let oldlib be libido of player;
 		increase libido of player by 1;
 		increase libido of player by ( libido entry minus libido of player ) divided by 3;
+		if oldlib is less than 50 and libido of player is greater than 49:
+			say "Your thoughts have sunk to almost constant depravity!";
 		if oldlib is less than 80 and libido of player is greater than 79:
-			say "You now have trouble thinking of anything but sexual satisfaction![no line break][if cocks of player is 1]  Your cock is fully erect constantly and drools precum steadily.[no line break][otherwise if cocks of player > 1]  Your cocks is fully erect constantly and drools precum steadily.[no line break][end if][if cunts of player is 1]  Your cunt overflows with hot juices that run down your thighs.[no line break][otherwise if cunts of player > 1]  Your cunts overflow with hot juices that run down your thighs.[no line break][end if][line break]";
-		otherwise if oldlib is less than 50 and libido of player is greater than 49:
-			say "Your thoughts have sunk to almost constant depravity![no line break][if cocks of player is 1]  Your cock remains perpetually hard and leaking precum.[no line break][otherwise if cocks of player > 1]  Your cocks remain perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1]  Your cunt is hot and dripping juices as your arousal builds.[no line break][otherwise if cunts of player > 1]  Your cunts are hot and dripping juices as your arousal builds.[no line break][end if][line break]";
+			say "You now have trouble thinking of anything but sexual satisfaction!";
 
-
-to attributeinfect:		[sets the player values from the new attributes]
+To lose:
 	choose row monster from the table of random critters;
-	if there is a scale in row monster of the table of random critters:
-		now scalevalue of player is scale entry;
+	follow the cock descr rule;
+	follow the breast descr rule;
+	now lost is 1;
+	say "[victory entry][line break]";
+	if scenario is "Researcher":
+		say "";
 	otherwise:
-		now scalevalue of player is 3;
-	if there is a body descriptor in row monster of the table of random critters:
-		now bodydesc of player is body descriptor entry;
-	otherwise:
-		now bodydesc of player is name entry;
-	if there is a type in row monster of the table of random critters:
-		now bodytype of player is type entry;
-	otherwise:
-		now bodytype of player is name entry;
-	if there is a nocturnal in row monster of the table of random critters:
-		if nocturnal entry is true:
-			now the daycycle of player is 2;		[night-preferred]
-		if nocturnal entry is false:
-			now the daycycle of player is 1;		[day-preferred]
-	otherwise:
-		now the daycycle of player is 0;			[standard]
+		infect;
+	if hp of player is less than 1, now hp of player is 1;
+	now combat abort is 1;
+	increase the XP of the player by lev entry divided by two;
+	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
+	decrease the score by 1;
+	decrease the morale of the player by 3;
+[	decrease the menu depth by 1;]
 
-To attributeinfect (x - text):
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is x:
-			now monster is y;
-			attributeinfect;
-			break;
 
+This is the flee rule:
+	choose row monster from the table of random critters;
+	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 20 ) divided by 2) plus level of the player;
+	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if "Gas Cloud" is listed in feats of player and gascloud is 0:
+		if tailname of player is "Skunk" or tailname of player is "Skunk Girl" or tailname of player is "Skunk Taur":
+			say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
+			increase gascloud by 5;
+		if tailname of player is "Squid":
+			say "Turning around, you spray an inky cloud at your enemy before trying to escape.";
+			increase gascloud by 5;
+		otherwise:
+			say "You release your cover cloud and try to escape.";
+			increase gascloud by 3;
+		increase combat bonus by gascloud;
+	if hardmode is true and the combat bonus is less than -10:
+		now the combat bonus is -10;
+	let the roll be a random number from 1 to 20;
+	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 8:
+		say "You manage to evade [name entry] and slip back into the city.";
+		now combat abort is 1;
+[		decrease the menu depth by 1;]
+	otherwise:
+		say "You fail to get away.";
+		Retaliate;
+		if the hp of the player is less than 1:
+			lose;
+
+This is the submit rule:
+	choose row monster from the table of random critters;
+	let temp be the hp of the player;
+	Lose;
+	if "Submissive" is listed in feats of the player, increase the XP of the player by 2;
+	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
+	if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+[	decrease the menu depth by 1;]
+
+combat abort is a number that varies.	
+
+to say combat abort:
+	now combat abort is 1;
+
+speciesbonus is a number that varies.
+
+This is the player attack rule:
+	choose row monster from the table of random critters;
+	let the attack bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
+	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+	let the combat bonus be attack bonus minus defense bonus;
+	if "Know Thyself" is listed in feats of player:
+		now speciesbonus is 0;
+		if bodyname of player is name entry, increase speciesbonus by a random number from 0 to 2;
+		if facename of player is name entry, increase speciesbonus by a random number from 0 to 1;
+		if cockname of player is name entry, increase libido of player by a random number from 0 to 1;
+		if speciesbonus > 2, now speciesbonus is 2;
+		increase combat bonus by speciesbonus;
+	if hardmode is true:
+		if the combat bonus is greater than 10:
+			now combat bonus is 10;
+		otherwise if the combat bonus is less than -10:
+			now combat bonus is -10;
+	let the roll be a random number from 1 to 20;
+	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 8:
+		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100;
+		if weapon object of player is journal:		[unarmed combat]
+			if "Martial Artist" is listed in feats of player:
+				increase dam by 1;
+			if "Black Belt" is listed in feats of player:
+				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
+			if "Natural Armaments" is listed in feats of player and bodyname of player is not "human":
+				let z be 0;
+				repeat with y running from 1 to number of filled rows in table of random critters:
+					choose row y in table of random critters;
+					if name entry is bodyname of player:
+						now z is y;
+						break;
+				if z is 0:		[creature not listed]
+					increase dam by a random number between 0 and 2;
+				otherwise:
+					choose row z in table of random critters;
+					let dammy be 2;
+					if wdam entry > 3:					[nerfed for very high damage critters]
+						now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
+					increase dam by a random number between 1 and dammy;
+				choose row monster from table of random critters;
+		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
+			let numnum be level of player + ( (intelligence of player - 10 ) / 2 ) + 105;
+			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
+		if "Powerful" is listed in feats of player:
+			now dam is ( ( dam times a random number from 105 to 125 ) divided by 100 );
+		if "Mayhem" is listed in feats of player:
+			let numnum be ( ( level of player * 5 ) / 2 ) + 100;
+			now dam is ( ( dam times a random number from 105 to numnum ) divided by 100 );
+		if weapon type of player is "Melee":
+			increase dam by (( the strength of the player minus 10 ) divided by 2);
+		if a random chance of the morale of the player in 200 succeeds:
+			say "Filled with sudden motivation, your attack scores particularly well!";
+			increase dam by dam;
+		say "You [one of]strike with[or]attack with[or]use your[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+		if a random chance of 4 in 20 succeeds and "Tail Strike" is listed in feats of player:
+			if tailname of player is listed in infections of Tailweapon:
+				let z be 0;
+				repeat with y running from 1 to number of filled rows in table of random critters:
+					choose row y in table of random critters;
+					if name entry is tailname of player:
+						now z is y;
+						break;
+				choose row z in table of random critters;
+				let dammy be 2;
+				if wdam entry > 3:					[nerfed for very high damage critters]
+					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
+				say "[line break]You make an additional attack using your tail's natural abilities for [dammy] damage!";
+				increase dam by dammy;
+				choose row monster from table of random critters;
+		if a random chance of 4 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12:
+			follow the cock descr rule;
+			let dammy be 0;
+			let z be cock length of player + ( 2 * cocks of player ) - 12;
+			now dammy is ( square root of ( 2 * z ) ) + 1;
+			if dammy > 8, now dammy is 8;
+			increase dammy by a random number between 0 and 1;
+			if cocks of player >= 3, increase dammy by a random number between 0 and 1;
+			say "[line break]You give your opponent a hard swat with your [cock size desc of player] wang[if cocks of player > 1]s[end if] for [dammy] additional damage!";
+			increase dam by dammy;
+		if a random chance of 4 in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16:
+			let dammy be 0;
+			now dammy is ( square root of ( 2 * ( cock width of player - 13 ) ) ) + 1;
+			if dammy > 8, now dammy is 8;
+			increase dammy by a random number between 0 and 1;
+			say "[line break]You tackle your opponent, slamming your [ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [dammy] additional damage!";
+			increase dam by dammy;
+		if a random chance of 4 in 20 succeeds and "Boob Smother" is listed in feats of player and breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7:
+			let dammy be 0;
+			let z be breast size of player + breasts of player;
+			now dammy is square root of ( z - 1 ) + 1;
+			if dammy > 7, now dammy is 7;
+			increase dammy by a random number between 0 and 1;
+			if breasts of player > 4, increase dammy by a random number between 0 and 1;
+			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [dammy] additional damage!";
+			increase dam by dammy;
+		if a random chance of 5 in 20 succeeds and "Spirited Youth" is listed in feats of player:
+			let y be a random number from 4 to 6;
+			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [y] damage!";
+			increase dam by y;
+		otherwise if a random chance of 1 in 20 succeeds and "Youthful Tides" is listed in feats of player:
+			let y be 0;
+			repeat with s running from 1 to number of entries in childrenfaces:
+				increase y by a random number from 2 to 4;
+			increase dam by y;
+			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [y] damage!";
+		decrease monsterhp by dam;
+		follow the monster injury rule;
+		say "[Name entry] is [descr].";
+	otherwise:
+		say "You miss!";
+	if player is not lonely and a random chance of 1 in 20 succeeds and "The Horde" is listed in feats of player:
+		say "[line break]";
+		say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
+		say "[line break]";
+		repeat with z running through tamed pets:
+			now attack bonus is ( ( dexterity of z minus 10 ) divided by 2 ) plus level of z;
+			let the combat bonus be attack bonus minus defense bonus;
+			if hardmode is true and combat bonus is greater than 10:
+				now combat bonus is 10;
+			now roll is a random number from 1 to 20;
+			if roll plus the combat bonus is greater than 8:
+				let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
+				say "[z]: [assault of z] [dam] damage inflicted!";
+				decrease monsterhp by dam;
+			otherwise:
+				say "Your [z] misses!";
+	otherwise if player is not lonely and a random chance of 1 in 5 succeeds:
+		now attack bonus is ( ( dexterity of companion of player minus 10 ) divided by 2 ) plus level of companion of player;
+		let the combat bonus be attack bonus minus defense bonus;
+		if hardmode is true and combat bonus is greater than 10:
+			now combat bonus is 10;
+		now roll is a random number from 1 to 20;
+		if roll plus the combat bonus is greater than 8:
+			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
+			say "[assault of companion of player] [dam] damage inflicted!";
+			decrease monsterhp by dam;
+		otherwise:
+			say "Your [companion of player] misses!";
+	say "[line break]";
+	if monsterhp is greater than 0:
+		Retaliate;
+[		change the current menu to table of Basic Combat;]
+	otherwise:
+		win;
+
+to win:
+	choose row monster from table of random critters;
+	follow the cock descr rule;
+	follow the breast descr rule;
+	let ok be 1;
+	if "Control Freak" is listed in feats of player:
+		say "Do you want to perform after combat scene?";
+		if the player consents:
+			now ok is 1;
+		otherwise:
+			now ok is 0;
+	if ok is 1, say "[defeated entry]";
+	increase the XP of the player by lev entry times two;
+	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by (lev entry divided by 2);
+	if the player is not lonely:
+		increase the xp of the companion of the player by lev entry times two;
+		if "Ringmaster" is not listed in feats of player:
+			decrease the xp of the player by ( lev entry times 2 ) divided by 3;
+	increase the morale of the player by 1;
+	let z be 0;
+	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 50:
+		now z is ( 100 - lootchance entry ) divided by 3;		[scaled increase above 50, prevents numbers over 100]
+		increase lootchance entry by z;
+	otherwise if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+		now z is lootchance entry divided by 3;
+		increase lootchance entry by z;
+	let yy be ( ( ( perception of player - 10 ) / 2 ) * 3 );	[minor perception bonus to looting, maxed at 30 PER]
+	if yy > 30, now yy is 30;
+	if lootchance entry > 50, now yy is ( yy * ( 100 - lootchance entry ) ) divided by 100;
+	if lootchance entry <= 50, now yy is ( yy * lootchance entry ) divided by 100;
+	if a random chance of ( lootchance entry + yy ) in 100 succeeds:
+		say "You gain 1 x [loot entry]!";
+		add loot entry to invent of player;
+	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
+		decrease lootchance entry by z;
+	vialchance (name entry);
+	let reward be lev entry * 2;
+[	if lev entry is greater than 4:
+		now reward is reward * 2;
+	if lev entry is greater than 8:
+		now reward is reward * 2;	]
+	if lev entry > 2, increase reward by 1;
+	if lev entry > 4, increase reward by ( lev entry / 4 );
+	if lev entry > 8, increase reward by ( lev entry / 3 );
+	increase freecred by reward;
+	say "A soft chime informs you that you have received [reward] freecreds, and now have [freecred] creds.";
+	if ok is 1, wait for any key;
+	clear the screen and hyperlink list;
+	rule succeeds;
 
 To Vialchance (x - a text):
-	choose row monster from table of random critters;
-	if researchbypass is 1, continue the action;
-	if there is a non-infectious in row monster of table of random critters and non-infectious entry is true, continue the action;
-	if there is a resbypass in row monster of table of random critters and resbypass entry is true, continue the action;
 	if scenario is "Researcher" or nanite collector is equipped:
 		let vialcollectible be 10 + ( 2 * intelligence of player );
 		if vialcollectible > 70, now vialcollectible is 70;
@@ -2690,9 +2712,11 @@ To Vialchance (x - a text):
 			now vcoll is 0;
 
 
-predestiny is a number that varies.		[use unknown]
+predestiny is a number that varies.
 
 calcnumber is a number that varies.
+
+inafight is a number that varies.	[used to detect if player is in a fight (item use)]
 
 To get a number:
 	get typed command as playerinput;
@@ -2705,88 +2729,56 @@ to numberfy (x - a snippet):
 	otherwise:
 		now calcnumber is 0;
 
-keychar is a text that varies.
-
-To translate (k - a number):
-	if k is 13 or k is -6:
-		now keychar is "return";
-	otherwise if k is 31 or k is 32:
-		now keychar is " ";
-	otherwise if k is 48:
-		now keychar is "0";
-	otherwise if k is 49:
-		now keychar is "1";
-	otherwise if k is 50:
-		now keychar is "2";
-	otherwise if k is 51:
-		now keychar is "3";
-	otherwise if k is 52:
-		now keychar is "4";
-	otherwise if k is 53:
-		now keychar is "5";
-	otherwise if k is 54:
-		now keychar is "6";
-	otherwise if k is 55:
-		now keychar is "7";
-	otherwise if k is 56:
-		now keychar is "8";
-	otherwise if k is 57:
-		now keychar is "9";
-	otherwise if k is 65 or k is 97:
-		now keychar is "a";
-	otherwise if k is 66 or k is 98:
-		now keychar is "b";
-	otherwise if k is 67 or k is 99:
-		now keychar is "c";
-	otherwise if k is 68 or k is 100:
-		now keychar is "D";
-	otherwise if k is 69 or k is 101:
-		now keychar is "E";
-	otherwise if k is 70 or k is 102:
-		now keychar is "F";
-	otherwise if k is 71 or k is 103:
-		now keychar is "G";
-	otherwise if k is 72 or k is 104:
-		now keychar is "H";
-	otherwise if k is 73 or k is 105:
-		now keychar is "I";
-	otherwise if k is 74 or k is 106:
-		now keychar is "J";
-	otherwise if k is 75 or k is 107:
-		now keychar is "K";
-	otherwise if k is 76 or k is 108:
-		now keychar is "L";
-	otherwise if k is 77 or k is 109:
-		now keychar is "M";
-	otherwise if k is 78 or k is 110:
-		now keychar is "N";
-	otherwise if k is 79 or k is 111:
-		now keychar is "O";
-	otherwise if k is 80 or k is 112:
-		now keychar is "P";
-	otherwise if k is 81 or k is 113:
-		now keychar is "Q";
-	otherwise if k is 82 or k is 114:
-		now keychar is "R";
-	otherwise if k is 83 or k is 115:
-		now keychar is "S";
-	otherwise if k is 84 or k is 116:
-		now keychar is "T";
-	otherwise if k is 85 or k is 117:
-		now keychar is "U";
-	otherwise if k is 86 or k is 118:
-		now keychar is "V";
-	otherwise if k is 87 or k is 119:
-		now keychar is "W";
-	otherwise if k is 88 or k is 120:
-		now keychar is "X";
-	otherwise if k is 89 or k is 121:
-		now keychar is "Y";
-	otherwise if k is 90 or k is 122:
-		now keychar is "Z";
-	otherwise:
-		now keychar is "INVALID";
-
+To Combat Menu:
+	now inafight is 1;
+	while hp of player is greater than 0 and monsterhp is greater than 0:
+		if combat abort is 1:
+			now combat abort is 0;
+			wait for any key;
+			clear the screen and hyperlink list;
+			continue the action;
+		clear the screen;
+		say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee[line break]";
+		let combatopt be 0;
+		repeat through table of basic combat:
+			increase combatopt by 1;
+			say "[bold type][combatopt][roman type] - [link][title entry][end link][line break][run paragraph on]";
+		say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
+		get next key as playerinput;
+		if playerinput in lower case exactly matches the text "":
+			follow the player attack rule;
+			next;
+		if playerinput in lower case exactly matches the text "a" or playerinput in lower case exactly matches the text "1":
+			follow the player attack rule;
+			next;
+		if playerinput in lower case exactly matches the text "i" or playerinput in lower case exactly matches the text "2":
+			follow the combat item rule;
+			next;
+		if playerinput in lower case exactly matches the text "p" or playerinput in lower case exactly matches the text "3":
+			follow the combat pass rule;
+			next;
+		if playerinput in lower case exactly matches the text "f" or playerinput in lower case exactly matches the text "4":
+			follow the flee rule;
+			next;
+		if playerinput in lower case exactly matches the text "s" or playerinput in lower case exactly matches the text "5":
+			follow the submit rule;
+			next;
+		if playerinput in lower case matches the text "attack":
+			follow the player attack rule;
+			next;
+		if playerinput in lower case matches the text "item":
+			follow the combat item rule;
+			next;
+		if playerinput in lower case matches the text "pass":
+			follow the combat pass rule;
+			next;
+		if playerinput in lower case matches the text "submit":
+			follow the submit rule;
+			next;
+		if playerinput in lower case matches the text "flee":
+			follow the flee rule;
+			next;
+		say "Invalid action.";
 
 to Pet level up:
 	increase level of companion of player by 1;
@@ -2810,7 +2802,7 @@ To level up:
 		wait for any key;
 		change the current menu to Table of Start Game;
 		carry out the displaying activity;
-		if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+		clear the screen;
 	increase maxhp of player by ( stamina of player minus 10 ) divided by 2;
 	increase maxhp of player by 2;
 	now hp of player is maxhp of player;
@@ -2818,7 +2810,76 @@ To level up:
 		funfeatget;
 	increase score by level of the player times level of the player;
 	
-Before combat is a number that varies.
+Retaliating is an action applying to nothing.
+
+To Retaliate:
+	now avoidance is 0;
+	say "[avoidancecheck]";
+	if gascloud > 0, decrease gascloud by 1;
+	if avoidance is 1:
+		say "";
+	otherwise:
+		choose row monster from the table of random critters;
+		let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
+		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
+		let the combat bonus be attack bonus minus defense bonus;
+		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
+			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
+			decrease combat bonus by 3;
+		if hardmode is true and the combat bonus is less than -10:
+			now the combat bonus is -10;
+		let the roll be a random number from 1 to 20;
+		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		if the roll plus the combat bonus is greater than 8:
+			let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
+			if hardmode is true and a random chance of 1 in 10 succeeds:
+				now dam is (dam * 150) divided by 100;
+				say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+			say "[Attack entry] You take [dam] damage!";
+			let absorb be 0;
+			if "Toughened" is listed in feats of player:
+				increase absorb by dam divided by 5;
+			repeat with x running through equipped equipment:
+				increase absorb by ac of x;
+			if absorb is greater than dam:
+				now absorb is dam;
+			if absorb is greater than 0:
+				say "You prevent [absorb] damage!";
+			decrease hp of the player by dam;
+			increase hp of player by absorb;
+			follow the player injury rule;
+			say "You are [descr].";
+		otherwise:
+			say "[Name Entry] misses!";
+	if hp of the player is greater than 0:
+		wait for any key;
+		[carry out the displaying activity;]
+	otherwise:
+		Lose;
+	rule succeeds;
+
+avoidance is a number that varies.
+
+to say avoidancecheck:					[collection of all enemy attack avoidance checks]
+	choose row monster from the table of random critters;
+	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
+		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
+		say "[Name Entry] misses!";
+		now avoidance is 1;
+	otherwise if weapon object of player is bo staff:		[defensive combat]
+		let boblock be 5;
+		if "Martial Artist" is listed in feats of player, increase boblock by 3;
+		if "Black Belt" is listed in feats of player, increase boblock by 4;
+		if "Weaponsmaster" is listed in feats of player, increase boblock by 6;
+		let numnum be ( (strength of player + dexterity of player + stamina of player - 36 ) / 3 );
+		if numnum > 0, increase boblock by numnum;
+		increase boblock by gascloud;
+		if boblock > a random number between 0 and 100:
+			say "[one of]Using your bo staff, you are able to deflect the enemy's blow, preventing any damage.[or]Making a skillful vault with your staff, you leap out of the enemy's path and thereby avoid their attack.[or]Just as your opponent is about to strike, you sweep with your staff, causing them to stumble.[or]Taking advantage of your weapon's long reach, you keep your enemy at bay as you prepare to make your next move.[at random]";
+			now avoidance is 1;
+	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in 10 succeeds:
+		say "You nimbly avoid the attack at the last moment!";
+		now avoidance is 1;
 
 To fight:
 	if battleground is "void", stop the action;
@@ -2844,9 +2905,6 @@ To fight:
 		otherwise:
 			next;
 		if area entry matches the text battleground:
-			if there is a nocturnal in row X of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					next;		[skips if day/night doesn't match]
 			add x to q;
 			if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry:
 				add x to q;
@@ -2864,7 +2922,6 @@ To fight:
 		choose row monster from the table of random critters;
 		if lev entry is less than level of player and hardmode is true:
 			hardmodeboost;
-		now monsterhp is hp entry;
 		say "You run into a [name entry].[line break][desc entry].";
 		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
@@ -2875,7 +2932,8 @@ To fight:
 		if combat abort is 1:
 			now combat abort is 0;
 			rule succeeds;
-			continue the action;
+			stop the action;
+		now monsterhp is hp entry;
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		decrease bonus by ( dex entry minus 10 ) divided by 2;
 		increase bonus by a random number from 1 to 20;
@@ -2884,22 +2942,12 @@ To fight:
 				say "The creature is about to get the drop on you, but your vigilance spots it just in time!  You ready yourself for battle.";
 			otherwise:
 				say "The creature gets the drop on you!";
-				follow the monster combat mode rule;		[select the combat mode for first-strike]
-				choose row monstercom from table of Critter Combat;
-				if there is a continuous in row monstercom of the table of Critter Combat:
-					follow the continuous entry;
-				follow the combat entry;
+				retaliate;
 				if hp of player is less than 1 or lost is 1, stop the action;
-		if weapon object of player is ranged:
-			now bonus is ( perception of player minus 10 ) divided by 2;
-			decrease bonus by ( dex entry minus 10 ) divided by 2;
-			increase bonus by a random number from 1 to 20;
-			if bonus is greater than 15:
-				say "You manage to fire your [weapon object of player] quickly before the melee can begin!";
-				now before combat is 1;
-				follow the player attack rule;
-				now before combat is 0;
 		wait for any key;
+[		change the current menu to table of Basic Combat;
+		carry out the displaying activity;
+		clear the screen;]
 		Combat Menu;
 		now inafight is 0;
 		let needed be ( level of player plus one ) times 10;
@@ -2912,6 +2960,7 @@ To fight:
 			now needed is ( level of companion of player ) times 6;
 		if xp of companion of player is greater than needed and level of companion of player is less than level of player:
 			pet level up;
+		[try looking;]
 	rule succeeds;
 
 To challenge:
@@ -2927,6 +2976,8 @@ To challenge:
 		rule succeeds;
 		stop the action;
 	wait for any key;
+[	change the current menu to table of Basic Combat;
+	carry out the displaying activity;]
 	Combat Menu;
 	now inafight is 0;
 	if xp of player is greater than ( level of player plus one ) times 10:
@@ -2994,6 +3045,7 @@ check resting:
 	otherwise if "Roughing It" is listed in feats of player:
 		say "You hunker down somewhere secluded for a quick nap...";
 		if there is a dangerous door in the location of the player:
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if a random chance of 3 in 20 succeeds:
 				say "...but your nap is interrupted by the arrival of a creature.";
 				fight;
@@ -3010,22 +3062,6 @@ check resting:
 
 carry out resting:
 	Rest;
-
-To Rest:
-	if "cot" is listed in invent of player or "cot" is listed in invent of location of player or the player is in the Bunker:
-		let num1 be maxhp of the player divided by 4;
-		let num2 be ( stamina of the player * 2 ) + level of the player;
-		if num1 >= num2, increase hp of player by num1;		[best value chosen]
-		if num2 > num1, increase hp of player by num2;
-		increase the hp of the player by (the stamina of the player times 2) plus the level of the player;
-	otherwise if "Roughing It" is listed in feats of player:
-		let num1 be maxhp of the player divided by 4;
-		let num2 be ( stamina of the player * 2 ) + level of the player;
-		increase hp of player by ( num1 + num2 ) / 2;		[average value chosen]
-	follow the turnpass rule;
-	follow the player injury rule;
-	say "You are [descr]([hp of player]/[maxhp of player]).";
-
 
 This is the explore rule:
 	let something be 0;
@@ -3081,29 +3117,19 @@ check exploring:
 carry out exploring:
 	let l be a random visible dangerous door;
 	if l is not nothing, now battleground is the marea of l;
-	if l is nothing, now battleground is "Outside";	[***]
 	follow the explore rule;
 
-
 restoration is a number that varies.
-balloversize is a number that varies.
-skipturnblocker is a number that varies.
 
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
 	now gascloud is 0;
 	if breast size of player is greater than 26, now breast size of player is 26;
-	let oldlib be libido of player;
-	if libido of player is less than 100 and "Horny Bastard" is listed in feats of player:
-		increase libido of player by square root of ( 55 - ( libido of player / 2 ) );
-		if libido of player > 100, now libido of player is 100;
-	if libido of player is greater than 20 and "Cold Fish" is listed in feats of player and libido of player is not 100:
-		decrease libido of player by square root of ( libido of player - 15 );
-	if oldlib is less than 80 and libido of player is greater than 79:
-		say "You now have trouble thinking of anything but sexual satisfaction![no line break][if cocks of player is 1]  Your cock is fully erect constantly and drools precum steadily.[no line break][otherwise if cocks of player > 1]  Your cocks is fully erect constantly and drools precum steadily.[no line break][end if][if cunts of player is 1]  Your cunt overflows with hot juices that run down your thighs.[no line break][otherwise if cunts of player > 1]  Your cunts overflow with hot juices that run down your thighs.[no line break][end if][line break]";
-	otherwise if oldlib is less than 50 and libido of player is greater than 49:
-		say "Your thoughts have sunk to almost constant depravity![no line break][if cocks of player is 1]  Your cock remains perpetually hard and leaking precum.[no line break][otherwise if cocks of player > 1]  Your cocks remain perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1]  Your cunt is hot and dripping juices as your arousal builds.[no line break][otherwise if cunts of player > 1]  Your cunts are hot and dripping juices as your arousal builds.[no line break][end if][line break]";
+	if libido of player is less than 96 and "Horny Bastard" is listed in feats of player:
+		increase libido of player by 5;
+	if libido of player is greater than 10 and "Cold Fish" is listed in feats of player:
+		decrease libido of player by ( ( libido of player divided by 12 ) + 1 );
 	if the hunger of player is less than 0, now the hunger of player is 0;
 	if the thirst of player is less than 0, now the thirst of player is 0;
 	if the hp of the player is less than the maxhp of the player:
@@ -3148,25 +3174,6 @@ This is the turnpass rule:
 	if "Passing Grade Chest" is listed in feats of player and breast size of player is greater than 4:
 		now breast size of player is 4;
 		say "You feel the pressure in your chest suddenly abate with a rush of relief.";
-	if cock width of player >= 32 and balloversize is 0 and cockname of player is not "Tanuki":	[super-sized balls]
-		decrease Dexterity of player by 1 + (dexterity of player / 10 );
-		now balloversize is 1 + (dexterity of player / 10 );
-		say "     Your balls, so huge they hang to the ground, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
-	if balloversize > 0 and cock width of player < 32:
-		increase dexterity of player by balloversize;
-		now balloversize is 0;
-		say "     Your balls, having shrunk down somewhat, no longer hinder you.  Your legs definitely feel better for not having to drag them around anymore.";
-	otherwise if balloversize > 0 and cockname of player is "Tanuki":
-		increase dexterity of player by balloversize;
-		now balloversize is 0;
-		say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
-	if libido of player >= 100 and humanity of player > 0 and skipturnblocker is 0:
-		say "[spontaneousorgasm]";
-		decrease humanity of player by a random number between 1 and 2;
-		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-		now libido of player is 75;
-		if "Horny Bastard" is listed in feats of player, now libido of player is 80;
-		if "Cold Fish" is listed in feats of player, now libido of player is 60;
 	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
 	if a random number from 1 to 20 is greater than ( ( the stamina of the player divided by 2 ) minus 1 ):
 		increase hunger of player by 1;
@@ -3305,8 +3312,8 @@ This is the turnpass rule:
 				increase breast size of player by 1;
 				follow breast descr rule;
 				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
-		if gestation of child is less than 1 and cunts of player is greater than 0 and skipturnblocker is 0:
-			say "With a sudden pouring of fluids, birth is upon you. You settle without much choice, breathing quickly as your body spasms in readiness. ";
+		if gestation of child is less than 1 and cunts of player is greater than 0:
+			say "With a sudden pouring of fluids, birth is upon you. You settle  without much choice, breathing quickly as your body spasms in readiness. ";
 			let z be 1;
 			let fer be 0;
 			if "Fertile" is listed in feats of player:
@@ -3348,27 +3355,16 @@ This is the turnpass rule:
 			extend game by 4;
 		otherwise:
 			if gestation of child is less than 0, now gestation of child is 1;
-	if the humanity of the player is less than 1 and Scenario is not "Researcher" and skipturnblocker is 0:
+	if the humanity of the player is less than 1 and Scenario is not "Researcher":
 		end the game saying "Your mind is lost to the infection.";
 	if the humanity of the player < 1 and scenario is "Researcher", now humanity of player is 1;
 	decrease turns by 1;
-	if ( turns minus targetturns ) <= 0 and playon is 0 and skipturnblocker is 0:
+	if ( turns minus targetturns ) is 0 and playon is 0:
 		end the game saying "You survived until the rescue came.";
-	otherwise if ( turns minus targetturns ) is less than 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0 and playon is 0:
+	otherwise if ( turns minus targetturns ) is less than 20 and a random chance of 1 in 3 succeeds:
 		say "[one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
 	follow the everyturn rules;
 	rule succeeds;
-
-to say spontaneousorgasm:
-	if cocks of player > 0 and cunts of player > 0:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cocks of player is 1]cock[otherwise]cocks[end if] spray your hot seed across your clothes and the ground while your hot, feminine juices soak your thighs.  You leave a [if cock width of player + ( 2 * cunt width of player ) < 18]messy splotch[otherwise if cock width of player + ( 2 * cunt width of player ) < 25]messy puddle[otherwise]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
-	otherwise if cocks of player > 0:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cocks of player is 1]cock[otherwise]cocks[end if] spray your hot seed across your clothes and the ground.  Your blasted cum leaves a [if cock width of player < 18]messy splotch[otherwise if cock width of player < 25]messy puddle[otherwise]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
-	otherwise if cunts of player > 0:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cunts of player is 1]cunt[otherwise]cunts[end if] overflows with hot, feminine juices that soak your thighs.  You leave a [if ( 2 * cunt width of player ) < 18]messy splotch[otherwise if ( 2 * cunt width of player ) < 25]messy puddle[otherwise]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
-	otherwise:		[neuter]
-		say "     Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with an painful, aching need.  Lacking any other means, you rub over your body until it finally passes, leaving you weak, tired and largely unsatisfied.";
-		now hp of player is ( 3 * hp of player ) / 4;
 
 This is the monster injury rule:
 	choose row monster from the table of random critters;
@@ -3462,21 +3458,19 @@ This is the cock descr rule:
 To say ball size:
 	if cock width of player is greater than 0:
 		if cock width of player is less than 3:
-			say "[one of]marble-sized[or]tiny[or]very small[at random]";
+			say "[one of]marble sized[or]tiny[or]very small[at random]";
 		otherwise if cock width of player is less than 6:
-			say "[one of]plum-sized[or]golf-ball-sized[or]apricot-sized[or]average[at random]";
+			say "[one of]plum sized[or]golf ball sized[or]apricot sized[or]average[at random]";
 		otherwise if cock width of player is less than 12:
-			say "[one of]lemon-sized[or]large[at random]";
+			say "[one of]lemon sized[or]large[at random]";
 		otherwise if cock width of player is less than 16:
-			say "[one of]baseball-sized[or]orange-sized[or]hand-filling[at random]";
+			say "[one of]baseball sized[or]orange sized[or]hand filling[at random]";
 		otherwise if cock width of player is less than 20:
-			say "[one of]grapefruit-sized[or]massive[at random]";
+			say "[one of]grapefruit sized[or]massive[at random]";
 		otherwise if cock width of player is less than 25:
-			say "[one of]cantaloupe-sized[or]giant[or]knee-knocking[at random]";
-		otherwise if cock width of player is less than 32:
-			say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
+			say "[one of]cantaloupe sized[or]giant[or]knee knocking[at random]";
 		otherwise:
-			say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
+			say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
 		say " [one of]balls[or]testicles[or]gonads[at random]";
 
 This is the cunt descr rule:
@@ -3494,19 +3488,7 @@ This is the cunt descr rule:
 		now descr is "[one of]titanic[or]seemingly bottomless[or]elephantine[at random]";
 	now cunt size desc of player is descr;
 	rule succeeds;
-
-to say body size of ( x - a person ):
-	if scalevalue of x is 1:			[~3 ft in height or less]
-		say "tiny";
-	otherwise if scalevalue of x is 2:		[4-5 ft in height]
-		say "small";
-	otherwise if scalevalue of x is 3:		[5-7 ft in height]
-		say "average";
-	otherwise if scalevalue of x is 4:		[8-12 ft in height]
-		say "large";
-	otherwise:						[12+ ft in height]
-		say "huge";
-
+	
 
 looknow is a number that varies.
 
@@ -3517,30 +3499,13 @@ instead of examining a person(called x):
 		follow the self examine rule;
 		follow the afterexamine rules;
 	otherwise:
-		say "[The description of x]";
-		if hypernull is 0:
-			try linkactioning x;
-
-linkactioning is an action applying to one thing.
-
-understand "linkaction [person]" as linkactioning.
-
-carry out linkactioning:
-	linkaction noun;
-
-to linkaction (x - Person):
-	if the number of entries in the conversation of x is greater than 0:
-		say "Possible Actions: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][end link][line break]";
-	otherwise if x is companion of player:
-		say "Possible Actions: [link]smell[as]smell [x][end link], [link]dismiss[as]dismiss[end link][line break]";
-	otherwise:
-		say "Possible Action: [link]smell[as]smell [x][end link][line break]";
-
-[NOTE: For characters w/different action options, use a 'instead of linkactioning <name>' clause.]
-
-instead of linkactioning Doctor Matt when hp of Doctor Matt > 0:
-	say "Possible Actions: [link]talk[as]talk Doctor Matt[end link], [link]smell[as]smell Doctor Matt[end link], [link]fuck[as]fuck Doctor Matt[end link], [link]volunteer[end link][line break]";
-
+		say "[The description of x][line break]";
+		if the number of entries in the conversation of x is greater than 0:
+			say "Possible Actions: [link]talk[as]talk [x][end link], [link]smell[as]smell [x][end link], [link]fuck[as]fuck [x][end link][line break]";
+		otherwise if x is companion of player:
+			say "Possible Actions: [link]smell[as]smell [x][end link], [link]dismiss[as]dismiss[end link][line break]";
+		otherwise:
+			say "Possible Action: [link]smell[as]smell [x][end link][line break]";
 
 Showstatting is an action applying to nothing.
 
@@ -3559,24 +3524,23 @@ To showstats (x - Person):
 	say "Level: [level of x], XP: [xp of x]/[z]";
 	if the number of entries in the feats of the x is greater than 0:
 		say ", Feats: [feats of the x][line break]";
-
+ 
 This is the self examine rule:
 	now looknow is 1;
 	showstats player;
 	let cocktext be "";
-	follow the cock descr rule;
 	if the cocks of the player is greater than 0:
 		if the cocks of the player is greater than 1:
-			now cocktext is "have [cocks of the player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random].  They are [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  Underneath them hang [ball size]. ";
+			now cocktext is "have [cocks of the player] [descr] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. Underneath them hang [ball size]. ";
 		otherwise:
-			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random].  It is [if libido of player <= 25]only somewhat aroused at the moment[otherwise if libido of player <= 50]partially hard and dribbling a little pre[otherwise if libido of player <= 75]erect and leaking precum[otherwise]fully erect and drooling precum steadily[end if].  Underneath it hang [ball size]. ";
+			now cocktext is "have a [descr] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. Underneath it hang [ball size]. ";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if the cunts of the player is greater than 0:
 		if the cunts of the player is greater than 1:
-			now cunttext is " have [cunts of the player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random].  Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around.  They are [if libido of player <= 25]a little damp at the moment[otherwise if libido of player <= 50]wet with your juices[otherwise if libido of player <= 75]hot and dripping juices[otherwise]drooling musky nectar down your thighs[end if]. ";
+			now cunttext is " have [cunts of the player] [descr] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. ";
 		otherwise:
-			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around.  It is [if libido of player <= 25]a little damp at the moment[otherwise if libido of player <= 50]wet with your juices[otherwise if libido of player <= 75]hot and dripping juices[otherwise]drooling musky nectar down your thighs[end if]. ";
+			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [descr], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. ";
 	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
@@ -3595,14 +3559,17 @@ This is the self examine rule:
 		if descmod of x is "", next;
 		if placement of x is "end":
 			say " [descmod of x]";
-	say "[line break]";
 	if cocktext is not "":
 		if cunttext is "":
+			follow the cock descr rule;
 			say "A private peek shows that you [cocktext]";
 		otherwise:
-			say "A private peek shows that you [cocktext]";
+			follow the cock descr rule;
+			say "A private peek shows that you [cocktext].";
+			follow the cunt descr rule;
 			say " Also, you[cunttext]";
 	otherwise if cunttext is not "":
+		follow the cunt descr rule;
 		say " You[cunttext]";
 	follow the breast descr rule;
 	if breasts of player is greater than 0:
@@ -3702,7 +3669,7 @@ This is the location choice rule:
 			now levelwindow is 99999;
 	now scenario is title entry;
 	now the menu depth is 0;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	clear the screen;
 	rule succeeds;
 	
 This is the final stats rule:
@@ -3713,7 +3680,7 @@ This is the final stats rule:
 	now the humanity of the player is 100;
 	now the capacity of the player is five times the strength of the player;
 	now the menu depth is 0;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	clear the screen;
 	while 1 is 1:
 		repeat with y running from 1 to number of filled rows in table of Starting Location:
 			choose row y from the table of Starting Location;
@@ -3726,7 +3693,7 @@ This is the final stats rule:
 			if rule succeeded, break;
 		otherwise:
 			say "Invalid Selection.";
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	clear the screen;
 [	try looking;]
 	try looking;
 	rule succeeds;
@@ -3884,8 +3851,9 @@ This is the finish stats rule:
 		otherwise:
 			rule fails;
 	now started is 1;
-	say "[line break]You have decided your physical talents, but are you a man or a woman?";
-	say "Do you want to be [link][bracket]m[close bracket][as]m[end link]ale or [link][bracket]f[close bracket][as]f[end link]emale?>[run paragraph on]";
+	say "You have decided your physical talents, but are you a man or a woman?";
+	wait for any key;
+	say "Do you want to be [link]m[end link](ale) or [link]f[end link](emale)?>[run paragraph on]";
 	now tempnum is 0;
 	while tempnum is 0:
 		get typed command as playerinput;
@@ -3897,27 +3865,14 @@ This is the finish stats rule:
 			follow female choice rule;
 		otherwise:
 			say "Type 'm' or 'f'.> [run paragraph on]";
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	clear the screen;
 [	try looking;]
 	rule succeeds;
 	
 scavenging is an action applying to nothing.
-tscavenging is an action applying to one topic.
-Scavengetarget is an indexed text that varies.
 
 understand "Scavenge" as scavenging.
 understand "Scav" as scavenging.
-understand "Scavenge [text]" as tscavenging.
-understand "Scav [text]" as tscavenging.
-
-check tscavenging:
-	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
-	
-Carry out tscavenging:
-	now scavengetarget is the topic understood;
-	try scavenging;
-	now scavengetarget is "";
-
 
 check scavenging:
 	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
@@ -3971,38 +3926,6 @@ To Infect (x - text):
 			infect;
 			break;
 
-to randominfect:				[bypasses researcher protection]
-	now researchbypass is 1;
-	weakrandominfect;
-	now researchbypass is 0;
-
-to weakrandominfect:			[does not bypass researcher protection]
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	infect;
-
-
-
-to say randomimpreg:
-	sort table of random critters in random order;
-	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	say "     [Impregchance]";
-
-
 Section x - Debug Commands - Not for release
 
 [ Since 'not for release' is in the heading, these commands will not be included in Release versions! great for debugging & testing commands]
@@ -4030,8 +3953,7 @@ carry out levelcheat:
 		decrease xp of player by ( level of player times 2 );
 	level up;
 	decrease score by level of the player times level of the player; 
-
-
+	
 Book 7 - Endings
 
 vetcheat is an action applying to nothing.
@@ -4180,45 +4102,23 @@ When play ends:
 				
 Book  8 - People
 
-Rod Mallrat is a person. "A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the broken sewer drain[at random].".
-The description of rod mallrat is "Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium].  He's looking a little dishevelled of late[end if]. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.".
+Rod Mallrat is a person. "A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[at random].".
+The description of rod mallrat is "Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium].  He's looking a little dishevelled of late. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.".
 Rod is a trader.
-Rod Mallrat is in Mall FoodCourt.
+Rod Mallrat is in Mall Food Court.
 
 The conversation of Rod Mallrat is { "empty" };
-
+ 
 instead of conversing Rod Mallrat:
-	if hp of Ronda is 0:
-		say "[one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
-	otherwise if hp of Ronda is 1 or hp of Ronda is 2:
-		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Watch out for those infected rats.   Dunno where they came from, but they're bad news.  The rats they get don't come back.'[or]'Sup?'[at random]";
-	otherwise if hp of Ronda is 3:
-		say "     [one of]'So, will you help me out?'[or]'Have you gone to find out what the dog-woman in the shop needs to help Ronda?'[or]'You should go visit Nermine and see what she needs.  You promised you'd help fix Ronda.'[at random]";
-	otherwise if hp of Ronda is 4 or hp of Ronda is 5:
-		say "     [one of]'Don't give up.  Please keep looking for the stuff Nermine needs.'[or]'Thanks for helping me out.'[or]'Have you had any luck in finding the stuff to help Ronda?'[or]'Remember, she wanted something from a lizard girl at the park and the awesomest fruit you can find.'[at random]";
-	otherwise if hp of Ronda is 6:
-		say "     'Thanks for helping me out.  Good luck finding that other stuff.'[line break]";
-	otherwise if hp of Ronda is 7:
-		say "     'Dude!  Bring that to Nermine.";
-	otherwise if hp of Ronda is 8:
-		if Slutrat den is unknown:
-			say "     'Now comes the tough part, dude.  You'll need to find the nest of those infected rats and all like black-ops infiltrate the place.  They drag off anyone they beat, so the best way would be to let them catch you and see if you can learn the way there.  I'd totally do it myself, but no rat they take ever makes it back.'";
-		otherwise:
-			say "     'Well, since you know how to find them, now we need to figure out which one of them is Ronda.  That'll be trickier.  She's got a tattoo of a red heart on her thigh right by her... you know.  She did it back when we started going out, before we became professional mall rats instead of just human ones.  But the tattoo's still there, giving her a red patch of fur[if pooltable of slutrat den is 3].'  Having gotten well acquainted with both Eight-Ball and Skeeball, you know neither of them have a mark like that.  Nor have any of the others you've spotted.  But that's only a handful of slut rats out of a few dozen[otherwise].'  Having spent some time with several of the slut rats, you've not spotted any of them with a mark like that yet.  But that's only a handful out of a few dozen[end if].";
-			say "     'You'll need to cozy up to the rats until you find Ronda,' he continues.  'Once you find her, get her somewhere alone and give her the stuff.  Use these chocolates, bud.  They're her fave.  Just be careful.  We'll only get one shot at this.'";
-			now hp of Ronda is 9;
-	otherwise if hp of Ronda is 9:
-		say "     'Please keep looking for my dear, sweet Ronda.  She's got a heart-shaped mark right here,' he says, tapping at his inner thigh.";
+	if ronda is in Mall Atrium:
+		say "[one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[or]'Have you seen the bathroom? It’s a really bad scene in there man. Like totally topsy-turvy. The floor, it just vanished… poof, and in its place a rabbit hole appeared.'[at random]";
 	otherwise:
-		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Sup?'[at random]";
+		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Watch out for those infected rats.   Dunno where they came from, but they're bad news.  The rats they get don't come back.'[or]'Sup?'[at random]";
 
-
-
-Ronda Mallrat is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
+Ronda Mallrat is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
 The description of Ronda Mallrat is "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.".
 The conversation of Ronda is { "Hey there, sugar, you just call me Ronda.", "You meet Rod? He's my boy. You be nice to him, or I will be very... upset.", "Those clothes are out of date hon, you should update your wardrobe.", "Being a mall rat is way better than being a human, no offense or anything to humans.", "We can find anything we need here in the mall; it is our Eden." }.
 Ronda Mallrat is in Mall Atrium.
-
 
 Orthas is a person. "A dragon person, clearly female, is watching the area. If her name badge is accurate, her name is 'Orthas'.".
 The description of Orthas is "A black scaled dragon woman. She stands about six and a half feet tall, with wings that are about three feet long each folded to her back. She watches the area intently, her arms crossed half the time. Behind her, a slender reptilian tail sways slowly. Her overall shape is human, especially those huge, F cup knockers that heave distractingly with every breath she takes.".
@@ -4718,12 +4618,6 @@ Include Needy Heat for FS by Telanda Softpaw.
 Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
 Include Pets by Nuku Valente.
 Include Computers by Hellerhound.
-Include Feats by Nuku Valente.
-Include Pepperspray by Stripes.
-Include Masturbate by Stripes.
-Include Alt Combat by Stripes.
-Include BFandI by Stripes.
-Include Parasite by Stripes.
 
 
 [Locations]
@@ -4746,12 +4640,20 @@ Include Underwater Zone For Fs by Hellerhound.
 Include Power Plant by Hellerhound.
 Include Zoo by Hellerhound.
 Include Qytat a'th Lundrues by hellerhound.
-Include Campus For Fs by Stripes.
 Include Hospital For Fs by Stripes.
 Include Medical Checkups by Hellerhound.
 Include Junkyard and Warehouse by Rimme.
 Include State Fair by Sarokcat.
 Include Down Under Pub by Stripes.
+Include Brookstone Books by Anon E Mouse.
+Include Smith Haven Mall by Anon E Mouse.
+
+
+
+
+
+
+
 
 
 [Quests & Events]
@@ -4762,7 +4664,6 @@ Include Stable Related Events by Sarokcat.
 Include Red Events by Stripes.
 Include Dry Plains Events by Stripes.
 Include Junkyard Events by Stripes.
-Include Campus Events by Stripes.
 Include New Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Mall Events by Sarokcat.
@@ -4787,6 +4688,8 @@ Include Smell by Hellerhound.
 Include Inventory Management Enhancements for FS by mirumu.
 Include Story Skipper by Nuku Valente.
 [Include items by Zero.]
+Include Feats by Nuku Valente.
+Include Pepperspray by Stripes.
 Include Central Library by Stripes.
 
 
@@ -4917,10 +4820,6 @@ Include Snow Bat For Fs by Stripes.
 Include Bottlenose Toy For Fs by Stripes.
 Include Mental Mouse For Fs by Stripes.
 Include Vulpogryph For Fs by Stripes.
-Include Psycho Weasel For Fs by Stripes.
-Include Incubus For Fs by Stripes.
-Include Bunny Jock For Fs by Stripes.
-Include Elven Hunter For Fs by Wahn.
 Include Candy Striper by Stripes.
 
 
@@ -4957,7 +4856,9 @@ Include Sally by Stripes.
 Include Fang by Stripes.
 Include Joanna by Stripes.
 Include Solstice by Stripes.
-Include Alpha Fang Scenes by Nuku Valente.
+Include Brittany by Anon E Mouse.
+
+
 
 
 [Pets]
@@ -4968,7 +4869,6 @@ Include Skunk Pet by Sarokcat.
 Include Exotic Bird by Sarokcat.
 Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
-
 
 
 Book 10 - Let the Games Begin
@@ -5026,15 +4926,12 @@ to say promptsay:
 hypernull is a number that varies. Hypernull is usually 0.
 
 When play begins:
-	now waiterhater is 0; [initialize to 0 for start of game, waiting occurs as normal]
-	now clearnomore is 0; [initialize to 0 for start of game, clearing occurs as normal]
 	repeat with q running from 1 to the number of rows in the table of game objects:
 		add name in row Q of table of game objects to allobjs;
 	change the right hand status line to "[list of valid directions]";
-	say "Do you want hyperlinks? (Y/n)";
-	if player consents:
-		let x be 0;
-	otherwise:
+	say "Do you want hyperlinks? [link]yes[end link] or [link]no[end link][run paragraph on]";
+	get typed command as playerinput;
+	if playerinput matches "no" or playerinput matches "n":
 		now hypernull is 1;
 		say "Hyperlinks disabled.";
 	follow the random stats rule;
@@ -5052,7 +4949,7 @@ When play begins:
 			if rule succeeded:
 				break;
 			otherwise:
-				if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+				clear the screen;
 		otherwise if calcnumber is 8:
 			follow the prerestore the game rule;
 			break;
@@ -5060,13 +4957,13 @@ When play begins:
 			say "Invalid Selection.";
 	repeat with x running through featsets:
 		now x is a part of the player;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	clear the screen;
 	say "Select your first two, free, feats, by clicking one of the below:[line break]";
 	featget;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	clear the screen;
 	say "And now the second.";
 	funfeatget;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	clear the screen;
 	if scenario is "Rescuer Stranded":
 		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
 		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
@@ -5100,9 +4997,9 @@ When play begins:
 		process dirty water;
 		process dirty water;
 		process dirty water;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	clear the screen;
 	if scenario is "Researcher":
-		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
+		say "The helicopter brought you into the devestated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -5115,5 +5012,6 @@ When play begins:
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	zephyrad rule in 1 turn from now;
 	
+
 
 
