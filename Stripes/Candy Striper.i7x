@@ -117,6 +117,12 @@ An everyturn rule:
 		increase libido of player by 5;
 		let diceroll be a random number from 40 to 180;			[lust check vs 180, player libido 40 or less auto-wins]
 		if diceroll < libido of player:
+			[puts Raccoon as lead monster in case of impregnation]
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Raccoon":
+					now monster is y;
+					break;
 			if cocks of player > 0 and cunts of player is 0:
 				let T be a random number between one and five;
 				if T is 1:
@@ -230,13 +236,13 @@ to say coonpetsex11:		[f paw him off]
 	now libido of player is ( libido of player + 1 ) / 2;
 
 to say coonpreg:
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
+	[puts Raccoon as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Raccoon":
+			now monster is y;
+			break;
 	say "[impregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Raccoon";
-		now bodyname of child is "Raccoon";
-		now skinname of child is "Raccoon";
 
 
 Section 4 - Raccoon at Bunker
