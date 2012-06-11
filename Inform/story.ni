@@ -4969,9 +4969,11 @@ Include Fang by Stripes.
 Include Joanna by Stripes.
 Include Solstice by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
+Include Elijah by Wahn.
 
 
 [Pets]
+Include Gryphon Companion by Sarokcat.
 Include Little Fox by Sarokcat.
 Include Felinoid Companion by Sarokcat.
 Include Kitty Cat by Sarokcat.

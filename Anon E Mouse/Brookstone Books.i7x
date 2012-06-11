@@ -167,7 +167,7 @@ carry out browsebooks:
 			Increase humanity of player by 1;
 			Stop the action;
 		Otherwise:
-			say "     When you pass by a table you notice what looks like a large three ring binder. Thinking it[']s something Beverly has left out accidently, you pick it up with the intent to ask her when the hand written title catches your eyes, [bold type]Flexible Survival[roman type]. Thumbing through some of the pages, you see that it[']s a novel made up of short stories, and as you continue reading some of the pages of each story you soon start to wonder that with the way things currently are, is life now imitating art or some gigantic cosmic joke. With a wry smile you close the binder and return it to the pile of books you found it on.";
+			say "     When you pass by a table you notice what looks like a large three ring binder. Thinking it[']s something Beverly has left out accidentally, you pick it up with the intent to ask her when the hand written title catches your eyes, [bold type]Flexible Survival[roman type]. Thumbing through some of the pages, you see that it[']s a novel made up of short stories, and as you continue reading some of the pages of each story you soon start to wonder that with the way things currently are, is life now imitating art or some gigantic cosmic joke. With a wry smile you close the binder and return it to the pile of books you found it on.";
 			if fsnovel is 1, Increase score by 75;
 			Now fsnovel is 1;
 			Follow the turnpass rule;
