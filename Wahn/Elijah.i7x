@@ -104,7 +104,7 @@ to say chapelplacedesc:
 
 Section 2 - Elijah the Seraphim
 
-[Smells, Desctiption, Conversation and NPC Interaction]
+[Smells, Description, Conversation and NPC Interaction]
 
 Elijah is a man.  Elijah is in Burned-Out Chapel.  The hp of Elijah is normally 0.
 The description of Elijah is "[Elijahdesc]";
@@ -368,8 +368,8 @@ An everyturn rule:
 				now lastElijahfucked is turns;
 		otherwise if (helper dog is tamed) and (character number 5 in npcEint is "0" or character number 5 in npcEint is "1" or character number 5 in npcEint is "2"):
 			if (player is in bunker):
-				say "     While taking your break before heading back into the city, you see Elijah get your helper dog all excited by having him fetch a thrown tennis ball several times. Then, he pulls out something else and throws the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.' The helper dog rushes after it, catching up with the black rod as it rolls out on the floor. He opens his mouth to grab it, then suddenly stops, sniffing at it instead. With an annoyed bark at the fallen angel, the helper dog pads away.";
-				say "     Elijah snarls 'Stupid beast - go on and grab it! It's a lot of work to talk a succubus out of a dildo - and you won't even fetch it for me just this once. You'd be a much more fun pet as a hellhound!'";
+				say "     While taking your break before heading back into the city, you see Elijah get your helper dog casually fetch a ball for him a few times.  The dog seems more interested in keeping an eye on him than the ball, but does go retrieve it each time.  After a few throws, Elijah pulls something and chucks the black oblong object across the room, where it bounces off the wall, shouting 'Go fetch, doggie.'  The helper dog seems into it this time, chasing after it, but then stops and detours to grab a towel from one of the cots.  Confused by your dog's actions, you watch as the shepherd carries it over to where the black rod is rolling to a stop.  The dog drops the cloth over it before picking it up in his mouth with care.  Padding over to the nearby trash chute, Hobo depresses the foot lever with one paw and drops the towel-wrapped thing into the garbage while Elijah yells from across the room.";
+				say "     'Stupid beast!' Elijah snarls.  'It's a lot of work to talk a succubus out of a dildo - and you won't even fetch it for me just this once.  Gah!  Don't throw it out, you mutt!  You'd be a much more fun pet as a hellhound!'";
 				replace character number 5 in npcEint with "4";
 				now NPCintCounter is turns;
 		otherwise if (little fox is tamed) and (character number 6 in npcEint is "0" or character number 6 in npcEint is "1" or character number 6 in npcEint is "2"):
@@ -571,7 +571,7 @@ to say ElijahSex2:    [cock sucked by Elijah]
 		say "     You take off your clothing, then softly push Elijah to his knees in front of you. With your cock already half hard in anticipation it doesn't take him long to take its head into his mouth and start sucking, running his tongue over your shaft as he takes it in. Your sexy angel is a natural at cocksucking, making you pant and moan with his talented lips[if cock length of player > 7] and even managing to deep-throat your cock once or twice[end if].";
 		say "     Although you'd wish Elijah would go on forever, all too soon your body tingles with an approaching orgasm. You slide out a bit until just the tip is inside Elijah's mouth, then blast your cum onto his tongue. Pulling the angel back to his feet, you then give him a deep kiss, sharing a taste of your seed as your tongue playfully fights with his.";
 	otherwise:  [evil Elijah]
-		say "     You take off your clothing, then push Elijah to his knees in front of you. With your cock already half hard in anticipation he gets right to work and starts sucking, running his tongue over your shaft as he takes it in. He's a natural at cocksucking, making you pant and moan with his talented lips[if cock length of player > 7] and effortlessy managing to deep-throat your cock once or twice[end if].";
+		say "     You take off your clothing, then push Elijah to his knees in front of you. With your cock already half hard in anticipation he gets right to work and starts sucking, running his tongue over your shaft as he takes it in. He's a natural at cocksucking, making you pant and moan with his talented lips[if cock length of player > 7] and effortlessly managing to deep-throat your cock once or twice[end if].";
 		say "     Although you'd wish Elijah would go on forever, all too soon your body tingles with an approaching orgasm. You slide out a bit until just the tip is inside Elijah's mouth, then blast your cum onto his tongue. He just keeps on sucking, milking you for all you're able to give and swallowing it down greedily. With a satisfied grin, he pulls off, remarking how tasty your cum is.";
 
 to say ElijahSex3:    [fucked by Elijah - ass or pussy]
@@ -662,7 +662,14 @@ to say de-demonify:
 Section 4 - Losing to the Demons at the Church
 
 to say losetochurchdemons:
-	say "*** (This scene has yet to be written.) ***";
+	say "     As you fall to your knees under the last attack, the mob howls in laughter at your failed attempt of saving their prisoner. An incubus and succubus step up besides you, grabbing your arms and pull you away from the angel leaning semi-consciously against the cross. The incubus snakes his long tail around your neck, saying 'Pathetic little do-good-er trying to make off with out prize! Now you'll have to watch him lose his virginity and be powerless to stop us!'";
+	say "     You're pulled to the side of the chapel, making room for a whole group of incubi and succubi and a large demon brute who parade around the altar. They peel off the angel's ripped tunic and try to shake him awake. The members of the mob lewdly fondle his body and cock, but don't have much luck getting either consciousness or arousal out of him. Switching to another tactic, a succubus grabs the dented silver chalice of the chapel from the ground and holds it up for her male brethren, becoming the center of a group of feverishly masturbating demons. Soon, the now cum-splattered succubus steps up to the angel, triumphantly raising the cup and pouring its contents into his mouth and over his body.";
+	say "     It works as intended - the angel's cock fills out and hardens almost instantly, inducing a satisfied moans and chuckles from the demon mob. The succubus throws the chalice aside and moves over to sit on the altar, waving over to the demon brute to bring the angel. As she leans back and spreads her legs eagerly to receive some angel cock, the large demon brute impales their semi-conscious captive on his massive erection, then carries him over to her. With the help of many grabby hands, the angel's cock gets aligned with the succubus's cunt. Then the demon brute thrusts forward, moving the angel's hips too and sinking his virgin manhood into the damning embrace of her folds. Lustful moans and roars get louder and louder as they start fucking hard and deep with their angel cock-sleeve between them. The demon mob closes in around the altar area, jostling for better positions.";
+	say "     The two demons holding you look almost spellbound at the action around the altar, then suddenly realize they're still holding you and not taking part themselves. You're quickly and unceremoniously dumped outside the chapel, its doors slammed shut behind you as the demons rush to join the orgy.";
+	say "     [line break]";
+	say "     You don't think you'll see that angel ever again after this, as the demons are very likely gonna take him home to hell with them, to use and abuse for all eternity.";
+	now hp of Elijah is 100;
+	remove Elijah from play;
 
 
 Section 5 - Endings
