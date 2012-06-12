@@ -4932,6 +4932,7 @@ Include Psycho Weasel For Fs by Stripes.
 Include Incubus For Fs by Stripes.
 Include Bunny Jock For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
+Include Hulking Cheerleader by Wahn.
 Include Candy Striper by Stripes.
 
 
@@ -4981,7 +4982,6 @@ Include Skunk Pet by Sarokcat.
 Include Exotic Bird by Sarokcat.
 Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
-
 
 
 Book 10 - Let the Games Begin
