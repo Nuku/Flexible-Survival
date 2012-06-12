@@ -187,7 +187,7 @@ instead of conversing the Elijah:
 				otherwise:
 					say "     Where did that thought come from? You shake it off, your mind returning to the gryphon milk you need for the your angel revival milkshake.";
 		otherwise:
-			if ("honeycomb" is not listed in invent of player):
+			if ("Honeycomb" is not listed in invent of player):
 				say "     You got the milk as base for your angel revival shake. Now to gather some honey to mix into it... maybe you can find some somewhere in the park.";
 			otherwise:
 				if ("healing booster" is not listed in invent of player):
