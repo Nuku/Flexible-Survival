@@ -74,7 +74,7 @@ when play begins:
 Instead of resolving a Angel vs Demons:
 	say "     While exploring this seedy district of town, you hear a terrible racket and disconcerting shrieks from inside an adult-only movie theatre you're just passing. Then suddenly a section of its front wall explodes outward as a creature gets thrown right through it, sending bricks flying all over the street. You catch a glimpse of its horned, demonic form sailing past, then everything goes black as a brick hits you in the head.";
 	say "     [line break]";
-	say "     When you open your eyes again a short while later, the street around you is a battlefield of shattered and burning buildings. Sitting up makes you goo woozy again for a moment, then thankfully your vision clears. Center of the destruction surrounding you is a humanoid figure with large white wings, garbed in shimmering plate-mail and wielding a flaming sword. It is surrounded by a golden halo of energy, making it difficult to discern any more. Surrounding the apparition there is a mid-sized flock of demons, incubi, succubi and hellhounds. Several of them are hurt and you see ...pieces... of others on the ground, but they still hold a circle around the angel in their midst, waiting for the time to strike while dodging strikes of his sword.";
+	say "     When you open your eyes again a short while later, the street around you is a battlefield of shattered and burning buildings. Sitting up makes you go woozy again for a moment, then thankfully your vision clears. Center of the destruction surrounding you is a humanoid figure with large white wings, garbed in shimmering plate-mail and wielding a flaming sword. It is surrounded by a golden halo of energy, making it difficult to discern any more. Surrounding the apparition there is a mid-sized flock of demons, incubi, succubi and hellhounds. Several of them are hurt and you see ...pieces... of others on the ground, but they still hold a circle around the angel in their midst, waiting for the time to strike while dodging strikes of his sword.";
 	say "     Your revival hasn't gone unnoticed and brings some movement into the standoff, as a hellhound turns towards you. It decides you might serve as a good mid-combat snack and rushes forward. You feel its foul breath as it opens its snout to tear out your throat - then, there is a flash of fire in the air and the creature collapses lifelessly on top of you, a flaming sword sticking in its side. The angel must have thrown it to save you.";
 	say "     That was just the moment the other demons have waited for. They pile on top of the now disarmed angel, clawing and biting, and wrestle him to the ground. You're still busy wriggling out from under the dead hound when they carry him off towards a ruined chapel at the far end of the street.";
 	say "     [line break]";
@@ -94,8 +94,8 @@ instead of sniffing Burned-Out Chapel:
 	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if hp of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
 
 to say chapelplacedesc:
-	if (hp of Elijah < 0):   [Starting state - Elijah chained up]
-		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. A winged humanoid is chained to the wooden cross standing behind a cracked altar. Surprisingly, there are no demons in sight.";
+	if (hp of Elijah is 0):   [Starting state - Elijah chained up]
+		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other than kindling. A winged humanoid is chained to the wooden cross standing behind a cracked altar. Surprisingly, there are no demons in sight.";
 	if (hp of Elijah > 0) and (hp of Elijah < 100):   [Elijah rescued]
 		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. Behind a cracked altar, you see a wooden cross with chains dangling down from it.";
 	if (hp of Elijah is 100):   [after the demons had an orgy there]
@@ -111,7 +111,7 @@ The description of Elijah is "[Elijahdesc]";
 The conversation of Elijah is { "Mew!" }.
 lastElijahfucked is a number that varies.  lastElijahfucked is normally 555.
 NPCintCounter is a number that varies.  NPCintCounter is normally 555.
-npcEint is a text that varies. npcEint is normally "0000000000000N";  
+npcEint is an indexed text that varies. npcEint is normally "0000000000000N";
 
 instead of sniffing Elijah:
 	if hp of Elijah is 0:   [chained up in the chapel]
@@ -146,17 +146,17 @@ instead of conversing the Elijah:
 			say "     The chains are too sturdy for you to break or damage, but luckily you find the key for the manacles not too far away - lying in a puddle of caustic hellhound urine. Dragging it out with a piece of wood (that immediately starts smoking), you wipe it off with a shred of the altar-cloth and take it. Then you unlock the shackles holding the angel, carefully supporting him so he doesn't fall down.";
 			say "     You manage that well, but don't have another hand free to take hold of the chain, so it noisily clatters against the wall and other chains as it falls away from the angel's arm. Oh-oh, you hear some growls, then spot glowing red eyes open up in the darkness behind several doorways on the sides of the chapel.";
 			say "     Leading the mob of demons rushing at you is a busty succubus, who shrieks angrily.  'He's ours, you little thief.  You'll become a bitch in the hellhound kennels for trying to steal him!'";
-			challenge "succubus";
+			challenge "Succubus";
 			if lost is 1:
 				say "[losetochurchdemons]";
 			otherwise:
 				say "     The succubus shrieks in pain, falling back from you and fleeing through one of the doorways. That's one down - instantly replaced by a snarling incubus lunging at you.";
-				challenge "incubus";
+				challenge "Incubus";
 				if lost is 1:
 					say "[losetochurchdemons]";
 				otherwise:
 					say "     As the incubus falls down beaten and is pulled away by one of his brethren, the other demons take a step back, not wanting to be the next one to take you on. All except one that is - a massive brutish beast who roars at you in fury.  He pushes the others aside and comes at you.";
-					challenge "demon brute";
+					challenge "Demon Brute";
 					if lost is 1:
 						say "[losetochurchdemons]";
 					otherwise:
@@ -498,7 +498,7 @@ Instead of fucking the Elijah:
 			otherwise:
 				say "[ElijahSexMenu]";
 				now lastElijahfucked is turns;
-	otherwise if (hp of Elijah is 5): [evil repeats]
+	otherwise if (hp of Elijah is 99): [evil repeats]
 		if (lastElijahfucked - turns < 6):
 			say "     Elijah disinterestedly waves you off and keeps lounging around on his bunk as you proposition him. 'I'm not your pet - go grab yourself a husky or some other critter from the streets to fuck.'";    
 		otherwise:

@@ -298,6 +298,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now progress of alex is the number understood;
 					if progress of alex is greater than 0:
+						now Alex's Condo is known;
 						now meet alex is resolved;
 					if progress of alex is greater than 1:
 						now find lorenda is resolved;
