@@ -37,7 +37,7 @@ Instead of resolving a Cheerleader Initiation:
 Section 2 - Monster Responses
 
 to say Cheerleader wins:
-	if hp of player <= 0 and if bodyname of player is "Hulking Cheerleader":   [she's a good winner, giving hints to other players in their 'game']
+	if hp of player <= 0 and bodyname of player is "Hulking Cheerleader":   [she's a good winner, giving hints to other players in their 'game']
 		say "     The hulking cheerleader steps over you, then gives you a hand and pulls you to your feet. 'I won - all the pussies in the area are mine. But still, you didn't do too bad. You should take on Alice or Jenny - they aren't too tough and while their areas aren't as good as mine, you should still be able to make good some points on the pussy hunt there.'";
 	otherwise:
 		if hp of player is greater than 0:   [player submitted]
