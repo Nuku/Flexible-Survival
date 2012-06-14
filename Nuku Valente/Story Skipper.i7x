@@ -10,10 +10,10 @@ The description of trixie is "Look, it[apostrophe]s Trixie, the story fairy! She
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" };
 
 To say magic word:
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
-	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}[progress of alex]}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]";
-	say "[line break]'You'll need to recite that part on its own after telling me the first one.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin.'";
+	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]";
+	say "[line break]'You'll need to recite that part on its own after telling me the first one using a second recite command.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin.'";
 
 Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
@@ -580,6 +580,51 @@ Carry out reciting:
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
 
+Section X - Debugging - Not for Release
+
+trixiecheck1 is an action applying to nothing.
+trixiecheck2 is an action applying to nothing.
+
+understand "tcheck" as trixiecheck1.
+understand "tcheck1" as trixiecheck1.
+understand "tcheck2" as trixiecheck2.
+
+carry out Trixiecheck1:
+	say "Basic player stats:[line break]";
+	say "STR: [strength of player]   DEX: [dexterity of player]   STM: [stamina of player][line break]";
+	say "CHR: [charisma of player]   PER: [perception of player]   INT: [intelligence of player][line break]";
+	say "LVL: [level of player]   HP: [maxhp of player]   Hum: [humanity of player]   Score: [score][line break]";
+	say "HP of Dr Matt: [hp of doctor matt][line break]";
+	say "Body: [bodyname of player]  Face: [facename of player]  Skin: [skinname of player][line break]";
+	say "Tail: [tailname of player]  Cock: [cockname of player][line break]";
+	say "Tanuki: [SatisfiedTanuki]   Hospquest: [hospquest][line break]";
+	say "Cocks x [cocks of player]   Breasts x [breasts of player]   Cunts x [cunts of player]   Breast size: [breast size of player][line break]";
+	say "COCK:   Length: [cock length of player]   Width: [cock width of player][line break]";
+	say "CUNT:   Length: [cunt length of player]   Width: [cunt width of player][line break]";
+	say "Weapon: [weapon object of player]   Snow: [location of Snow]   Sandra: [location of Sandra][line break]";
+	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[otherwise]0[end if][line break]";
+	say "COLEEN: Location: [location of coleen]   Talk: [coleentalk]   Found: [coleenfound]   Collared: [coleencollared]   Alpha: [coleenalpha]   Slut: [coleenslut]   Spray: [coleenspray][line break]";
+	say "HP of Dr Mouse: [hp of doctor mouse]   Candy: [coonstatus]   featunlock: [featunlock]   Butterfly: [butterflymagic][line break]";
+	say "Catnum: [catnum]   Mateable: [mateable]   gryphoncomforted: [gryphoncomforted]   shiftable: [shiftable]   Medea: [medeastuff][line break]";
+	say "MTP: [mtp]   HYG: [hyg]   NES: [nes]   MTRP: [mtrp]   Boristalk: [boristalk]   Borisquest: [borisquest]   Alex: [progress of alex][line break]";
+	say "Angiehappy: [angiehappy]   Angietalk: [angietalk]   Deerconsent: [deerconsent]   Deerhappy: [deerhappy][line break]";
+	say "Mattcollection: [mattcollection]   Orthas: [orthasstart][line break]";
+	say "Fancy: [fancyquest]   HP of Sven: [hp of sven]  Lust of Sven: [lust of sven][line break]";
+	say "SARAH: Slut: [sarahslut]   Talk: [sarahtalk]   Pups: [sarahpups][line break]";
+	say "VOIDED: 0   Alexbrunch: [alexbrunch]   Treasure found: [treasurefound]   Treasure map: [tmapfound][line break]";
+	say "Sandra: [hp of Sandra]   Frank: [franksex]   Fang: [hp of Fang][line break]";
+
+carry out Trixiecheck2:
+	say "<Repetition of section>   Orthas: [orthasstart][line break]";
+	say "Fancy: [fancyquest]   HP of Sven: [hp of sven]  Lust of Sven: [lust of sven][line break]";
+	say "SARAH: Slut: [sarahslut]   Talk: [sarahtalk]   Pups: [sarahpups][line break]";
+	say "VOIDED: 0   Alexbrunch: [alexbrunch]   Treasure found: [treasurefound]   Treasure map: [tmapfound][line break]";
+	say "Sandra: [hp of Sandra]   Frank: [franksex]   Fang: [hp of Fang]   <end repetition>[line break]";
+	say "Libido of Fang: [libido of Fang]   Pigfed: [pigfed]   Pigfucked: [pigfucked][line break]";
+	say "PETS:[line break]";
+	say "Cute crab: [if cute crab is tamed]1[otherwise]0[end if]   Exotic bird: [if exotic bird is tamed]1[otherwise]0[end if]   Felinoid: [if Felinoid companion is tamed]1[otherwise]0[end if][line break]";
+	say "Bee girl: [if bee girl is tamed]1[otherwise]0[end if]   House cat: [if house cat is tamed]1[otherwise]0[end if]   Little fox: [if little fox is tamed]1[otherwise]0[end if][line break]";
+	say "Skunk kit: [if skunk kit is tamed]1[otherwise]0[end if]   Helper dog: [if helper dog is tamed]1[otherwise]0[end if]   Rachel: [mousecurse][line break]";
 
 
 Story Skipper ends here.
