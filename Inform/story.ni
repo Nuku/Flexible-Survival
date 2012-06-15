@@ -630,10 +630,13 @@ to say latexfoxrape:
 	otherwise:
 		say "With a sadistic grin you point your gargantuan [cock of player] missile at its target. The Foxes eyes go wide when it realizes how large you are and starts trying to crawl away. Having none of that, you grab the Fox by its ankles and start pulling him towards you. The Foxes legs stretch elastically as you pull, his poor little asshole straining against your rod. Finally the Foxes rubbery sphincter relaxes enough to let you in, and like a slingshot the Fox is instantly impaled on your gigantic penis, obscenely stretching the poor creature all the way to his head. You realize the Fox is just fine as he lets out a euphoric yelp and his eyes glaze over lost in the pleasurable fullness.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "As you start sliding your [cock size desc of player] shaft in and out you notice the Fox's ass seems to be adjusting to you, stretching and tightening in just the right places to fit your [cock of player] penis perfectly. As this is happening the Fox switches from whimpers and yelps to long low moans of pleasure as you press your [bodydesc of player] body over his and pound away, his red knotted shaft starts growing and leaking rubbery precum.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "Nearing orgasm you pick up the pace, your little red toy drooling in bliss. Fucking the Fox like a wild man, you let out a roar as torrents of cum pour forth from your tool, lewdly distending the belly of your victim. Not to be left out, the Fox starts shooting gobs of thick rubbery cum onto the ground, pooling around him. With some effort you pull your cock out of the little Fox with an audible pop. The seed you just planted come spilling out of the abused hole adding the the already large pool of cum the Fox is laying in.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "With your lust sated you put on your clothes. Walking away you smile as you see the little Fox lustily wallows in the pool of cum, occasionally dipping its head to the pool and taking loud slurpy gulps of semen, coo-ing with satisfaction.";
 	decrease libido of player by 30;
 	if libido of player is less than 0, now libido of player is 0;
@@ -648,10 +651,13 @@ to say latexfoxrapee:
 	otherwise:
 		say "The fox's little erection slides into you easily, a bit too easily for your liking as it seems too small to give you any real pleasure. Seeing your frustration the Fox takes a large breath and seems to grow in size, filling you completely.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "Resting comfortably on the fox's knot you start sliding up and down on his red latex shaft, gradually increasing speed. You feel the knot trying to sneak in on every thrust, but it seems like the knot is just too big to tie to you. You start to think it's a lost cause when suddenly a sharp blinding pain, and a yelp from the Fox lets you know that the knot made it inside and you are indeed tied.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "As the pain subsides you are left with an amazing feeling of fullness, as gob after gob of thick rubbery jism starts filling you. The feeling of the thick cum churning inside you is too much and sends you into a screaming orgasm.[impregchance]";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "Eventually the swollen knot starts to shrink and the fox's spent member slides out of you. Still not satisfied you position your swollen moist pussy over the fox's face and descend slowly dribbling his own cum onto his face. To your surprise the Fox starts eagerly lapping it up burying his face in your crotch. Bolts of lightning travel through your body as the rubbery tongue seems to find all the right places to lick you. His bright red nose rubbing against your clit is all it takes to send you into another earth shattering orgasm, spilling the last of the rubbery Fox seed into his waiting mouth.";
 	say "Letting out happy little chirps the Fox bounds away, as you stand knees still shaking from your multiple orgasms. You get dressed and head off on your way.";
 	decrease libido of player by 30;
@@ -671,30 +677,39 @@ To say gryphon lose:
 		if cunt length of player is greater than 5 and cock length of player is greater than 7:
 			say "Your opponent hits the ground with a loud *thud* and a squawk. Lying defeated and on her back, the Gryphon awaits her fate with more than a little anticipation. You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips. You feel every inch as you slide all the way down to the knot. Unable to take the cock in any further you start to move your hips, grinding against the Gryphons mighty black knot. The Gryphons eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low rolling squawk.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "Realizing that knot is not going in without a bit more force than gravity can provide, you get an idea. Taking your large [cock of player] rod you push it down between your lovers massive blue furred tits. You take the Gryphons arms and have her cross her chest, under her breasts but over your cock, effectively locking you in place. 'Hold on tight!' you say as you lean back, using the leverage your giant cock provides to force the knot inside. you both moan loudly as the pain quickly transforms to intense pleasure, the Gryphon starting to rock back and forth as you become accustomed to her size.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "Enjoying the sensation you join in, rocking your hips back and forth, causing your cock to start fucking the Gryphons ample cleavage. You feel something moist start rubbing the tip of your rock hard shaft, you look down to see the Gryphons beak encasing the head of your cock. Worrying that the Gryphons impressive beak is about to take a bite our of your favorite organ you start to withdraw, but you quickly realize there is nothing to worry about as her tongue starts to dance across the head of your engorged member. You feel the your [ball size] sized balls start to contract as you near orgasm. Sensing your near the Gryphon pick up the pace of her fucking, pounding your abused pussy mercilessly.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "'HARDER, FASTER!' you scream as you feel your orgasm approaching. With a guttural yell you climax, releasing gob after gob of hot thick cum straight down the Gryphons throat. Not to be left out the Gryphon gives one last hard thrust and starts dumping what feels like gallons of hot seed into your belly. Knowing that you are tied on that knot and not going anywhere until the Gryphon is done cumming you ease yourself forward and rest your head on one of her bountiful blue breasts.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "You absentmindedly start sucking on one of your lovers dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the Gryphons magnificent nectar. once your thirst has been quenched you notice that the Gryphons cock has shrunk down and can now be easily removed. As you rise to your feet the Gryphons cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying Gryphon seed everywhere.";
 			decrease thirst of player by 5;
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "'Call me!' the Gryphon squawks plaintively as you stumble away, dressing yourself as you go.";
 		if cock length of player is less than 8 and cunts of player is greater than 0:
 			say "Your opponent hits the ground with a loud *thud* and a squawk. Lying defeated and on her back, the Gryphon awaits her fate with more than a little anticipation. You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips. You feel every inch as you slide all the way down to the knot. Unable to take the cock in any further you start to move your hips, grinding against the Gryphons mighty black knot. The Gryphons eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low rolling squawk.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "As you increase your pace, you see what appears to be milk dribbling from the beast's large nipples. You bend down and take one of the nipples into your mouth. As you greedily suck up all the milk these wonderful teats will produce a hot wave of desire floods through you, and you start to really want that knot inside you. Grinding harder and harder, faster and faster, you try and get that bulb to pass your slick pink lips. You feel climax approaching, so you pull down as hard as you can trying to force that knot inside.";
 			decrease thirst of player by 5;
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			if cunt length of player is less than 6:
 				say "It's no use, you are just too small to take it all in. The Gryphon chirps soothingly understanding your frustration. Suddenly you let out a startled yelp as you feel an electrifying tickling sensation on your clit, you look down to see the puffed end of a blue tail to be the cause.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				say "'Perhaps this will help ease your suffering' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on the tasty milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.";
 			otherwise:
 				say "Seeing what your are trying to do, your blue lover waits for the right moment and with one masterful thrust, she firmly wedges her massive black knot deep inside your trembling pussy. The mixed feelings of pain and pleasure overcome you, your knees buckle and you collapse into the soft furry warmth of the Gryphon's bosom. You are still conscious, but you are too overwhelmed to do anything but enjoy the ride.";
 				say "'It's alright baby, mama's here' the Gryphon coos as she softly wraps her furry blue arms around you, placing her leaking nipple back into your mouth. As you resume suckling the Gryphon starts to rock her hips back and forth, causing her knot to stretch you to your limits. The pleasure is so intense that you barely notice as you achieve orgasm after orgasm thanks to your lover's exceptional skills. After what seems like seconds (although you realize it's more like half an hour) the Hermaphroditic Gryphon lets out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partners massive furry blue breasts. Eventually the Gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on Gryphon cock. You start gingerly sliding the bulbous black shaft out and as it passes your abused nether lips a torrent of cum spills out, drenching the almost unconscious Gryphon below. You get dressed and leave, the Gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.";
 			decrease libido of player by 30;
 			if libido of player is less than 0, now libido of player is 0;
@@ -705,11 +720,14 @@ To say gryphon lose:
 			otherwise:
 				say "With what almost sounds like a combination of a squawk and purring the Gryphon spreads her legs further apart, her blue lips trembling against your [cock of player] manhood. She stares up at you expectantly, as you slowly enter her accommodating tunnel. A look of absolute pleasure crosses the Gryphons face as you start to slide in and out. You pick up speed, your balls slapping against her on every thrust.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "As your rhythmic fucking continues, your victim starts to squeeze her gigantic blue breasts. You see a small dribble of milk escape both of her nipples as she roughly fondles herself. Continuing with your assault, you start to get annoyed by her massive erection. Its so big that it manages to slap your chin on each thrust. On one thrust a bit of precum escapes the Gryphons cock and hits your tongue, the taste is magical, and you need more. Shifting a bit, you manage to take the tip of the Gryphons knotted black cock into your mouth, and your start wildly pumping away at it with both hand's, while still fucking her abused hole furiously. ";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "The combined stimulation is too much for the Gryphon as her body is wracked with orgasm. Gob after gob of the most delicious cum starts pouring down your throat, while at the same time milk gushes from the Gryphons massive breasts, soaking the both of you. Your blue partners orgasm causes her muscles to involuntarily clamp down on your throbbing cock, this increased friction is all it takes as you start to pump her full of your seed.";
 			decrease hunger of player by 5;
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "Spent and exhausted you get dressed and walk away, leaving the Hermaphroditic Gryphon to lie in a pool of her own milk.";
 			decrease libido of player by 30;
 			if libido of player is less than 0, now libido of player is 0;
@@ -2995,6 +3013,7 @@ check resting:
 				continue the action;
 		otherwise:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "...and you complete your nap in peace.";
 			continue the action;
 	say "You have nothing to rest on.";
@@ -3662,10 +3681,12 @@ This is the location choice rule:
 		say "What luck. After looking around desperately, you come across a library with a mostly intact bunker in it. This will serve well as a refuge while you wait for rescue.";
 		if title entry is "Caught Outside":
 			add "Spartan Diet" to feats of player;
-			process dirty water; [was commented out and moved into 'when play begins' block] 
+			[belongs in 'when play begins' block, as waiting prevents banned infections from being placed upon a player]
+			[also lets feat choices like the gender preference ones be in effect]
+			[ process dirty water;
 			process dirty water;
 			process dirty water;
-			process dirty water; [moved back here to prevent text from appearing and confusing people]
+			process dirty water; ]
 		if title entry is "Rescuer Stranded":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
@@ -3881,10 +3902,10 @@ This is the finish stats rule:
 	now tempnum is 0;
 	while tempnum is 0:
 		get typed command as playerinput;
-		if playerinput matches "m":
+		if playerinput matches "m" or playerinput matches "1":
 			now tempnum is 1;
 			follow male choice rule;
-		otherwise if playerinput matches "f":
+		otherwise if playerinput matches "f" or playerinput matches "2":
 			now tempnum is 1;
 			follow female choice rule;
 		otherwise:
@@ -4231,6 +4252,7 @@ Instead of conversing the doctor matt:
 		say "'The military has returned my testing robot, wanting more data on the affects of the infection upon a person's lustful urges and sexual proclivities,' he says, pointing to the boxy robot slumped against the wall.  'The testing robot has been built for the use in this regard.  Please feel free to use it as you see fit.  I want a wide sample of data, so come back often.  The robot will only be available briefly though before I have to send it off to the military's scientists so they may analyze the data.'";
 		say "'When they returned it, they also included a note about its [']unfriendly disposition['].  So I've given it a nice smile,' he says, pointing to the poorly aligned smile on the robot's boxy face.  The edges of the large sticker seem scratched and frayed, as if the robot tried to pull it off, but couldn't with its pincher hands.  Either ordered to stop or resigned to leave it there, the robot now has a big, friendly grin stuck to its face.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if hp of doctor matt is 100:
 		say "'If you are listening to this, you are probably still in the city. My condolences. I have left behind some facilities for you. You will find they can enhance your abilities due to the nanite infection.";
 		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
@@ -4243,8 +4265,10 @@ Instead of conversing the doctor matt:
 		otherwise:
 			say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn[apostrophe]t know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I[apostrophe]m not much closer to a cure... but I did find something you're probably interested in,' he says, pausing for effect.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "'I can manipulate existing strains, just a little, for those already infected, like you. Don[apostrophe]t look at me like that. Anyone not in a fully sealed environment is infected by now.[if humanity of player is less than 80] In fact I'd say you[apostrophe]ve already been pretty badly infected, interesting...[end if] But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself, 'Only one catch...'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "'I haven[apostrophe]t had any test subjects. Until you. So you come in here, [bold type]volunteer[roman type], and we[apostrophe]ll make you better than when you started. In return, you can help us save the city. A fair deal, right?' he says, but he[apostrophe]s already turning back to his monitors, not actually listening for your reply.";
 		now hp of doctor matt is 1;
 		say "[bold type]((Every 3 levels, starting at level 3, you may gain one feat by coming here and typing volunteer))[roman type]";
@@ -4252,8 +4276,10 @@ Instead of conversing the doctor matt:
 	if hp of doctor matt is 1:
 		say "'Alright, we have a limited amount of time. I have been doing my best to delay the military, but without something concrete to report, they will be here soon, and they will pave this thing as hard as they can, leaving all mysteries unsolved. Now that you are here, we can get to work and keep them off our backs,' explains the hazmat suited man as he pushes his chair towards another terminal and starts typing.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "'The first problem is a lack of test subjects. I can[apostrophe]t send Orthas out to collect samples, that would leave me unprotected. You, on the other hand, are not so limited. Go to the mall and get some samples from the amorphous transformatives there, and some nutritive secretions from one of those raptor slash panthera leo transformatives. I would prefer two of each, enough to be able to experiment without risking the whole of the subject matter,' he explains, turning to face you.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "'Once you have them, just come back here and we will be that much closer to solving this.'";
 		say "You get the idea you[apostrophe]ve been dismissed, as he goes quiet, and eventually turns back to his work. Not much of a socialite.";
 		now hp of doctor matt is 2;
@@ -4311,8 +4337,10 @@ Instead of conversing the doctor matt:
 		increase score by 5;
 		say "'Simply amazing. There is no other word for it,' says Doctor matt, looking excited through his hazmat faceplate, 'The adaptability of the nanites is simply... I would have said it was impossible if I hadn't laid my own eyes on it. I sent out my results and the military have grudgingly agreed to a three day extension on their plans.'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "'The nanites seem to come in a few varieties that cooperate. The most important ones, the ones that allow the miracle work, are the... brain... nanites, for lack of better word. They link with neighboring brain nanites like nerve endings and seem capable of forming neural patterns of astonishing complexity! The nanites stopped receiving directives a long time ago, but they can adjust and make up their own choices independently. It is little wonder this is causing so much trouble,' he gushes with bubbling enthusiasm, like a young boy having caught a creepy looking insect.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		now hp of doctor matt is 4;
 	if hp of doctor matt is 4:
 		say "'Oh, one thing of more immediate use. I discovered how to neutralize the nanites. A limited area of them at least. They do not like being microwaved. I have one in the corner there, feel free to [bold type]microwave[roman type] anything you want to bake the infection out.'";
@@ -5139,6 +5167,7 @@ To start button: [options are set, begin game]
 	startfreefeats; [gives free feats]
 	startcreatureban; [bans creatures, as requested]
 	if waiterhater is 0, wait for any key; [waits so status text is shown.  could be removed?]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	introstorytext; [plays intro text and starts game]
 
 To startstatbonus: [apply stat bonus]
@@ -5226,14 +5255,16 @@ To startcreatureban: [bans creatures, as requested]
 Section Story Start Text
 
 To introstorytext: [plays intro text and starts game.  also applies most (all?) of the scenario relayed settings]
+	if scenario is "Caught Outside":	[processes infection data first, then clears so intro text can remain intact]
+		randominfect;
+		randominfect;
+		randominfect;
+		randominfect;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	if scenario is "Bunker":
 		say "You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.";
 	otherwise if scenario is "Caught Outside":
 		say "You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you.(Gain Spartan Diet)[line break]";
-		process dirty water;
-		process dirty water;
-		process dirty water;
-		process dirty water;
 	otherwise if scenario is "Rescuer Stranded":
 		say "You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive!(Start with no supplies, an iron man mode, can you survive?)[line break]";
 	otherwise if scenario is "Forgotten":
@@ -5281,23 +5312,20 @@ To introstorytext: [plays intro text and starts game.  also applies most (all?) 
 	otherwise:
 		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type [bold type]look backpack[roman type], and type [bold type]look watch[roman type]. Also, try [bold type]look me[roman type]! Your description will probably change as you play.  Or [bold type]help[roman type] for more detailed help.))[line break][line break]";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if scenario is "Researcher":
 		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.[line break][line break]";
 	otherwise:
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.[line break][line break]";
 	zephyrad rule in 1 turn from now;
 
 To regularstart: [normal start method]
-	say "Do you want hyperlinks? (Y/n)";
-	if player consents:
-		let x be 0;
-	otherwise:
-		now hypernull is 1;
-		say "Hyperlinks disabled.";
 	follow the random stats rule;
 	increase the score by 10;
 [	follow the finish stats rule;]
@@ -5347,8 +5375,15 @@ To regularstart: [normal start method]
 		if bad is 1:
 			now n is resolved;
 	sort table of random critters in lev order;
+	if scenario is "Caught Outside":
+		randominfect;
+		randominfect;
+		randominfect;
+		randominfect;
+	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------[line break][line break]";[moved to after start questions and before ingame text]
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if scenario is "Rescuer Stranded":
 		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
 		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
@@ -5358,18 +5393,24 @@ To regularstart: [normal start method]
 	otherwise:
 		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type [bold type]look backpack[roman type], and type [bold type]look watch[roman type]. Also, try [bold type]look me[roman type]! Your description will probably change as you play.  Or [bold type]help[roman type] for more detailed help.))[line break][line break]";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if scenario is "Researcher":
 		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	otherwise:
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "[line break]Welcome to...";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	zephyrad rule in 1 turn from now;
 
 Book 10 - Let the Games Begin
@@ -5433,6 +5474,12 @@ When play begins:
 		add name in row Q of table of game objects to allobjs;
 	change the right hand status line to "[list of valid directions]";
 	say "Some questions before getting into the game...";[warn the player what to expect next]
+	say "Do you want hyperlinks? (Y/n)";
+	if player consents:
+		let x be 0;
+	otherwise:
+		now hypernull is 1;
+		say "Hyperlinks disabled.";
 	say "Do you want to use the alternate (experimental) start method? (y/n)";
 	if player consents:
 		follow the random stats rule;
