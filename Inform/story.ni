@@ -313,6 +313,8 @@ to say bunker desc:
 	if "cot" is listed in invent of Bunker:
 		say ".  One of the cots was poorly installed and the bolts attaching it to the floor have come loose.  You could take along if you'd like";
 	say ".  The small sink seems to be broken, producing no water no matter how much the knob is turned. There is a secure looking door leading [bold type]outside[roman type].";
+	if "old boombox" is listed in invent of Bunker:
+		say "     You have set up the old boombox in one corner where it continues to play without power, providing a mix of tunes and the occasional weather report on the continuing heat wave.  Fiddling with the dials can get different songs and genres of music, but no actual news or broadcast radio.  The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station['].  Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
 
 
 to say abbey desc:
@@ -4799,6 +4801,8 @@ Include Story Skipper by Nuku Valente.
 Include Central Library by Stripes.
 Include Smith Haven Mall by Anon E Mouse.
 Include Brookstone Books by Anon E Mouse.
+Include Kitsune by Kaleem mcintyre.
+Include Old BoomBox by Kaleem mcintyre.
 
 
 [Monsters/Infections]
@@ -4933,6 +4937,7 @@ Include Incubus For Fs by Stripes.
 Include Bunny Jock For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
+Include Gargoyle by Kaleem mcintyre.
 Include Candy Striper by Stripes.
 
 
