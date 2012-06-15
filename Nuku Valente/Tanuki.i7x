@@ -18,7 +18,7 @@ ringing is an action applying to nothing.
 
 understand "rung" and "ring" and "ring bell" and "ring bell with hammer" as ringing.
 
-There is a donation box and hammer and and bell in shrine.
+There is a donation box and hammer and bell in shrine.
 
 The description of bell is "A small ornate bell.";
 The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.";
