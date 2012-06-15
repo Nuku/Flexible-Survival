@@ -94,11 +94,11 @@ Instead of Resolving a Kitsune:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"starbell"	"A strange 'bell' with stars on it. Just holding it close to you makes you remember fond dreams you had as a child."	1	starbell
+"star bell"	"A strange 'bell' with stars on it. Just holding it close to you makes you remember fond dreams you had as a child."	1	star bell
 
-starbell is a grab object. It is part of the player.  It is not temporary.
+star bell is a grab object. It is part of the player.  It is not temporary.
 
-instead of sniffing starbell:
+instead of sniffing star bell:
 	say "The smell of sweet dreams fills the bell and you as well hold it close to your nose.";
 
 strange bell is a situation.  strange bell is resolved.
@@ -108,7 +108,7 @@ instead of resolving a strange bell:
 	if ktp is 6:
 		say "You come across a star bell glowing dimly along the bushes of the ground. A feeling of both elation and wonder comes across you as you kneel next to the softly tinkling item.  Shall you take it?";
 		if the player consents:
-			add "starbell" to the invent of the player;
+			add "star bell" to the invent of the player;
 			now strange bell is resolved;
 			now Kitsune is unresolved;
 			now ktp is 7;
