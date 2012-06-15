@@ -388,7 +388,6 @@ Instead of attacking the Cola Vending machine:
 		say "The machine gives a final spark of defeat. You are certain there is no more soda to be had.";
 		remove Cola Vending machine from play;
 
-
 Book 3 - Definitions
 
 Definition: a direction (called D) is valid if the room D from the location of the player is a room.
@@ -407,24 +406,6 @@ before examining the grab object(called x):
 	if x is owned, now good is 1;
 	if x is present, now good is 1;
 	if good is 0, say "I don't see any [x] around here..." instead;
-
-Book 4 - Start the Game
-
-	
-instead of going somewhere while player is overburdened:
-	say "You are too over burdened to move. Drop some of that junk!";
-	
-instead of going through a dangerous door(called X):
-	if the hp of the player is less than 1:
-		say "You are too injured to go far. You rest instead.";
-		Rest;
-	otherwise:
-		now battleground is marea of x;
-		follow the explore rule;
-[		change the current menu to the table of Basic Actions;
-		carry out the displaying activity;
-		clear the screen;]
-	[try looking.]
 
 Book 5 - Tables
 
@@ -3679,10 +3660,10 @@ This is the location choice rule:
 		say "What luck. After looking around desperately, you come across a library with a mostly intact bunker in it. This will serve well as a refuge while you wait for rescue.";
 		if title entry is "Caught Outside":
 			add "Spartan Diet" to feats of player;
-[			process dirty water;
+			process dirty water; [was commented out and moved into 'when play begins' block] 
 			process dirty water;
 			process dirty water;
-			process dirty water;	]
+			process dirty water; [moved back here to prevent text from appearing and confusing people]
 		if title entry is "Rescuer Stranded":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
@@ -4187,7 +4168,7 @@ When play ends:
 		otherwise:
 			say "You are completely lost to your urges, an alpha predator, stalking the ruins of the city. Ah, but you are not alone, a pack coalesces around you, a dozen of so like minded canines, howling their madness and need to an uncaring sky. Superior numbers and ferocity make you more than a match for the other beasts loose in the city. It doesn't take long before the echoing howls, calling your fellows to hunt, causing even the most ferocious mutants and monsters to look for a place to hide. Those caught were either devoured, or subdued and dragged back to your dens, their bodies changed and their minds worn down by a furious night of animal passion. Thick cum filled their every hole, the slick passion of the females coating their cocks and muzzles. Any female captured is pregnant by dawn, the high birth rate needed to keep up with the attrition rate, the city is not safe. You are the absolute ruler of your domain, a pity your mind is too far gone to appreciate it.";
 				
-Book  8 - People
+Book 8 - People
 
 Rod Mallrat is a person. "A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the broken sewer drain[at random].".
 The description of rod mallrat is "Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium].  He's looking a little dishevelled of late[end if]. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.".
@@ -4984,68 +4965,328 @@ Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
 
 
-Book 10 - Let the Games Begin
+Book Start the Game
 
+instead of going somewhere while player is overburdened:
+	say "You are too over burdened to move. Drop some of that junk!";
+	
+instead of going through a dangerous door(called X):
+	if the hp of the player is less than 1:
+		say "You are too injured to go far. You rest instead.";
+		Rest;
+	otherwise:
+		now battleground is marea of x;
+		follow the explore rule;
+[		change the current menu to the table of Basic Actions;
+		carry out the displaying activity;
+		clear the screen;]
+	[try looking.]
 
-understand "saveword" as savewording;
+Section Starting Variables
 
-savewording is an action applying to nothing.
+[variables used for start settings, changing them changes defaults]
+hypernull is a number that varies. Hypernull is usually 0. [links on]
+startgenderchoice is a number that varies. startgenderchoice is usually 0. [male]
+startstatbonus is a number that varies.  startstatbonus is usually 1. [strength]
+startscenariochoice is a number that varies.  startscenariochoice is usually 1. [bunker]
+freefeatgeneral is a text that varies.  freefeatgeneral is usually "Survivalist". [default feat]
+freefeatfun is a text that varies. freefeatfun is usually "Curious". [default fun feat]
 
-Carry out savewording:
-	say "You can hear Trixie's voice in your mind, whispering the reality spell for the world as it is...";
-	say "[magic word]";
+Part Game Options
 
-to say promptsay:
-	let x be the location of the player;
-	let z be the number of entries in invent of x;
-	if z is greater than 0:
-		say "Visible Objects: ";
-		repeat with q running through invent of x:
-			say "[link][q][as]get [q][end link] ";
-		say " [link]get everything[as]get all[end link]";
-		say "[line break]";
-	say "Status: ";
-	if hunger of player is greater than 30:
-		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";
-	if thirst of player is greater than 30:
-		say "[link][bracket]THIRSTY[close bracket][as]drink water[end link] ";
-	if humanity of player is less than 50:
-		say "[link][bracket]UNHINGED[close bracket][as]use journal[end link] ";
-	say "[link][bracket]Inv[close bracket][as]inventory[end link] ";
-	if scenario is "Researcher" or nanitemeter is 1:
-		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
-	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
-	say "[link][bracket]Save[close bracket][as]saveword[end link] ";
-	say "[line break]";
-	say "Exits: ";
-	repeat with nam running through valid directions:
-		say "[link][printed name of nam][end link] ";
-	say "[if location of player is fasttravel][bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket][end if]";
-	say ", Visible Things: ";
-	repeat with y running through the things in the location of the player:
-		if y is a door, next;
-		say "[link][y][as]look [y][end link] ";
-	say " [link]area[as]look[end link]";
-	say "[line break]>";
+Game Options is a room.  The description of Game Options is "Choose the settings to start game with:[line break][starthyperstatus][line break][startstatsstatus][line break][startgenderstatus][line break][startscenariostatus][line break][startfeatsstatus][line break][startbannedstatus][line break]Then [bold type][link]push start button[end link][roman type] when ready.";
 
- When play begins:
-	repeat with x running through situations:
-		now x is a part of the player;
-	repeat with x running through grab objects:
-		now x is a part of the player;
-	now the command prompt is "[promptsay]";
-[	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
+Hyperlinks is in Game Options. The description of Hyperlinks is "[starthyperstatus][starthyperoptions]";
+Stat Bonus is in Game Options. The description of Stat Bonus is "[startstatsstatus][startstatsoptions]";
+Gender is in Game Options. The description of Gender is "[startgenderstatus][startgenderoptions]";
+Scenario Choice is in Game Options. The description of Scenario Choice is "[startscenariostatus][startscenariooptions]";
+Free Feats is in Game Options. The description of Free Feats is "[startfeatsstatus][startfeatsoptions]";
+Banned Creatures is in Game Options. The description of Banned Creatures is "[startbannedstatus][startbannedoptions]";
+Start Button is in Game Options.  The description of Start Button is "[bold type][link]Push start button[end link][roman type] when ready to begin, using current settings.";
 
-hypernull is a number that varies. Hypernull is usually 0.
+Section Option Says
 
-When play begins:
-	now waiterhater is 0; [initialize to 0 for start of game, waiting occurs as normal]
-	now clearnomore is 0; [initialize to 0 for start of game, clearing occurs as normal]
-	adjustdefaulthelp; [adjusts help menu]
-	repeat with q running from 1 to the number of rows in the table of game objects:
-		add name in row Q of table of game objects to allobjs;
-	change the right hand status line to "[list of valid directions]";
-	say "Some questions before getting into the game...";[warn the player what to expect next]
+To say starthyperstatus:
+	say "Hyperlinks are currently: [if hypernull is 0]On[otherwise if hypernull is 1]Off[end if]";
+To say starthyperoptions:
+	say "[line break]Type [bold type][link]set Hyperlinks to On[end link][roman type] or [bold type][link]set Hyperlinks to Off[end link][roman type]";
+
+To say startstatsstatus:
+	say "Stat bonus is currently: [if startstatbonus is 1]Strength[otherwise if startstatbonus is 2]Dexterity[otherwise if startstatbonus is 3]Stamina[otherwise if startstatbonus is 4]Charisma[otherwise if startstatbonus is 5]Perception[otherwise if startstatbonus is 6]Intelligence[end if]";
+To say startstatsoptions:
+	say "[line break]Type [bold type][link]set Stat Bonus to Strength[end link][roman type] or [bold type][link]set Stat Bonus to Dexterity[end link][roman type] or [bold type][link]set Stat Bonus to Stamina[end link][roman type] or [bold type][link]set Stat Bonus to Charisma[end link][roman type] or [bold type][link]set Stat Bonus to Perception[end link][roman type] or [bold type][link]set Stat Bonus to Intelligence[end link][roman type]";
+	
+To say startgenderstatus:
+	say "Player gender is currently: [if startgenderchoice is 0]Male[otherwise if startgenderchoice is 1]Female[end if]";
+To say startgenderoptions:
+	say "[line break]Type [bold type][link]set Gender to Male[end link][roman type] or [bold type][link]set Gender to Female[end link][roman type]";
+	
+To say startscenariostatus:
+	say "Scenario is currently: [if startscenariochoice is 1]Bunker[otherwise if startscenariochoice is 2]Caught Outside[otherwise if startscenariochoice is 3]Rescuer Stranded[otherwise if startscenariochoice is 4]Forgotten[otherwise if startscenariochoice is 5]Researcher[otherwise if startscenariochoice is 6]Hard mode[end if]";
+To say startscenariooptions:
+	say "[line break]Type [bold type][link]set Scenario Choice to Bunker[end link][roman type] or [bold type][link]set Scenario Choice to Caught Outside[end link][roman type] or [bold type][link]set Scenario Choice to Rescuer Stranded[end link][roman type] or [bold type][link]set Scenario Choice to Forgotten[end link][roman type] or [bold type][link]set Scenario Choice to Researcher[end link][roman type] or [bold type][link]set Scenario Choice to Hard mode[end link][roman type]";
+
+To say startfeatsstatus:
+	say "Free feats are currently: [freefeatgeneral]  [freefeatfun]";
+To say startfeatsoptions:
+	say "[line break]Type [bold type][link]set Free Feats to general[end link][roman type] or [bold type][link]set Free Feats to fun[end link][roman type]";
+
+To say startbannedstatus:
+	say "The following creatures types are currently banned: [startbannedflags]";
+To say startbannedflags:
+	blank out the whole of table of combat items;
+	let X be 1;
+	repeat with Q running through flags:
+		choose a blank row in table of combat items;
+		now title entry is printed name of Q;
+		now description entry is printed name of Q;
+		if q is banned:
+			say title entry;
+			say "  ";
+		now toggle entry is flag ban rule;
+To say startbannedoptions:
+	say "[line break]Type [bold type][link]set Banned Creatures to configure[end link][roman type]";
+
+Section Setting Options
+
+Understand "set [something] to [text]" as setting it to.
+
+Instead of setting Hyperlinks to "On": now hypernull is 0; say "Hyperlinks enabled.";
+Instead of setting Hyperlinks to "Off": now hypernull is 1; say "Hyperlinks disabled.";
+Instead of setting Stat Bonus to "Strength": now startstatbonus is 1; say "Your strength is your specialty.";
+Instead of setting Stat Bonus to "Dexterity": now startstatbonus is 2; say "Your dexterity is your specialty.";
+Instead of setting Stat Bonus to "Stamina": now startstatbonus is 3; say "Your stamina is your specialty.";
+Instead of setting Stat Bonus to "Charisma": now startstatbonus is 4; say "Your charisma is your specialty.";
+Instead of setting Stat Bonus to "Perception": now startstatbonus is 5; say "Your perception is your specialty.";
+Instead of setting Stat Bonus to "Intelligence": now startstatbonus is 6; say "Your intelligence is your specialty.";
+Instead of setting Gender to "Male": now startgenderchoice is 0; say "Gender is now Male.";
+Instead of setting Gender to "Female": now startgenderchoice is 1; say "Gender is now Female.";
+Instead of setting Scenario Choice to "Bunker": now startscenariochoice is 1; say "Scenario is now Bunker.";
+Instead of setting Scenario Choice to "Caught Outside": now startscenariochoice is 2; say "Scenario is now Caught Outside.";
+Instead of setting Scenario Choice to "Rescuer Stranded": now startscenariochoice is 3; say "Scenario is now Rescuer Stranded.";
+Instead of setting Scenario Choice to "Forgotten": now startscenariochoice is 4; say "Scenario is now Forgotten.";
+Instead of setting Scenario Choice to "Researcher": now startscenariochoice is 5; say "Scenario is now Researcher.";
+Instead of setting Scenario Choice to "Hard mode": now startscenariochoice is 6; say "Scenario is now Hard mode.";
+Instead of setting Free Feats to "general": startFeatget; say "General Feat chosen?.";
+Instead of setting Free Feats to "fun": startFunFeatget; say "Fun Feat chosen?.";
+Instead of setting Banned Creatures to "configure": ban menu; say "Banned Creatures configured.";
+Instead of pushing Start Button: start button;
+
+Section Alternate Start
+
+To startFeatget: [alternate featget used for start]
+	blank out the whole of table of gainable feats;
+	repeat with x running through functional featsets:
+		try addfeating x;
+	if there is no title in row 1 of table of gainable feats:
+		say "There are no feats to gain!";
+		wait for any key;
+	otherwise:
+		now featqualified is 1;
+		while 1 is 1:
+			repeat with y running from 1 to number of filled rows in table of gainable feats:
+				choose row y from the table of gainable feats;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "Type the number corresponding to the feat you want> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
+				now current menu selection is calcnumber;
+				now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
+				now featqualified is 0;
+				break; [if featqualified is 0, ]
+			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				say "Selection aborted.";
+				continue the action;
+			otherwise:
+				say "Invalid Feat.";
+
+ To startFunFeatget: [alternate funfeatget used for start]
+	blank out the whole of table of gainable feats;
+	repeat with x running through not functional featsets:
+		try addfeating x;
+	if there is no title in row 1 of table of gainable feats:
+		say "There are no feats to gain!";
+		wait for any key;
+	otherwise:
+		now featqualified is 1;
+		while 1 is 1:
+			repeat with y running from 1 to number of filled rows in table of gainable feats:
+				choose row y from the table of gainable feats;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "Type the number corresponding to the feat you want> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of gainable feats:
+				now current menu selection is calcnumber;
+				now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
+				now featqualified is 0;
+				break; [if featqualified is 0, ]
+			otherwise if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+				say "Selection aborted.";
+				continue the action;
+			otherwise:
+				say "Invalid Feat.";
+
+To start button: [options are set, begin game]
+	move player to bunker; [relocate for start]
+	startstatbonus; [apply stat bonus]
+	startgender; [apply gender stats]
+	startscenario; [sets scenario for use in introstorytext]
+	startfreefeats; [gives free feats]
+	startcreatureban; [bans creatures, as requested]
+	if waiterhater is 0, wait for any key; [waits so status text is shown.  could be removed?]
+	introstorytext; [plays intro text and starts game]
+
+To startstatbonus: [apply stat bonus]
+	if startstatbonus is 1:
+		increase strength of player by 5;
+	if startstatbonus is 2:
+		increase dexterity of player by 5;
+	if startstatbonus is 3:
+		increase stamina of player by 5;
+	if startstatbonus is 4:
+		increase charisma of player by 5;
+	if startstatbonus is 5:
+		increase perception of player by 5;
+	if startstatbonus is 6:
+		increase intelligence of player by 5;
+	say "[line break]You have decided your physical talents.";
+[	follow the prerestore the game rule;] [for loading?]
+
+To startgender: [apply gender stats]
+	if startgenderchoice is 0:
+		now the cocks of the player is 1;
+		now the cock length of the player is 6;
+		now the cock width of the player is 4;
+		now the breasts of the player is 2;
+		now the breast size of the player is 0;
+		say "You are a man.";
+	if startgenderchoice is 1:
+		now the cunts of the player is 1;
+		now the cunt length of the player is 6;
+		now the cunt width of the player is 4;
+		now the breasts of the player is 2;
+		now the breast size of the player is 2;
+		say "You are a woman.";
+	now the morale of the player is the charisma of the player plus the perception of the player;
+	now the HP of the player is the stamina of the player times two;
+	increase the HP of the player by 5;
+	now the maxhp of the player is the hp of the player;
+	now the humanity of the player is 100;
+	now the capacity of the player is five times the strength of the player;
+	now the menu depth is 0;[unneded?]
+[	follow the location choice rule;][unneded?]
+
+To startscenario: [sets scenario for use in introstorytext]
+	if startscenariochoice is 1:
+		now scenario is "Bunker";
+	if startscenariochoice is 2:
+		now scenario is "Caught Outside";
+	if startscenariochoice is 3:
+		now scenario is "Rescuer Stranded";
+	if startscenariochoice is 4:
+		now scenario is "Forgotten";
+	if startscenariochoice is 5:
+		now scenario is "Researcher";
+	if startscenariochoice is 6:
+		now scenario is "Hard mode";
+
+To startfreefeats: [gives free feats]
+	say "Adding general feat [freefeatgeneral] to player.";	
+	add freefeatgeneral to feats of player;
+	say "Adding fun feat [freefeatfun] to player.";
+	add freefeatfun to feats of player;
+	decrease featgained of player by 1; [to compensate for fun feat?]
+
+To startcreatureban: [bans creatures, as requested]
+	say "Banning creatures...";
+	repeat through the table of random critters:
+		let bad be 0;
+		repeat with n running through all banned flags:
+			if name entry is listed in infections of n:
+				now bad is 1;
+		if bad is 1:
+			blank out the whole row;
+	say "Banning situations...";
+	repeat with n running through situations:
+		let bad be 0;
+		repeat with q running through all banned flags:
+			if n is listed in badspots of q:
+				say "[n] removed due to [q].";
+				now bad is 1;
+		if bad is 1:
+			now n is resolved;
+	say "Sorting creatures...";
+	sort table of random critters in lev order;
+
+Section Story Start Text
+
+To introstorytext: [plays intro text and starts game.  also applies most (all?) of the scenario relayed settings]
+	if scenario is "Bunker":
+		say "You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.";
+	otherwise if scenario is "Caught Outside":
+		say "You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you.(Gain Spartan Diet)[line break]";
+		process dirty water;
+		process dirty water;
+		process dirty water;
+		process dirty water;
+	otherwise if scenario is "Rescuer Stranded":
+		say "You arrived late, looking for survivors, when you got cut off from your team mates, now you just want to survive!(Start with no supplies, an iron man mode, can you survive?)[line break]";
+	otherwise if scenario is "Forgotten":
+		say "You stayed in hiding too long. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
+	otherwise if scenario is "Hard mode":
+		say "You always had a desire to challenge yourself so purposely waited for some stronger opponents to appear before venturing out. Your supplies have run dry, and the rescue already came and left. It will be a long time before any more arrive![line break]";
+	otherwise if scenario is "Researcher":
+		say "You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection(You won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[line break]";
+	if scenario is not "Bunker":
+		say "What luck. After looking around desperately, you come across a library with a mostly intact bunker in it. This will serve well as a refuge while you wait for rescue.";
+		if scenario is "Caught Outside":
+			add "Spartan Diet" to feats of player;
+		if scenario is "Rescuer Stranded":
+			now invent of bunker is { };
+			add "cot" to invent of bunker;
+			increase score by 300;
+		if scenario is "Forgotten":
+			now invent of bunker is { };
+			add "cot" to invent of bunker;
+			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
+			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now the hp of doctor matt is 100;
+			remove orthas from play;
+			increase score by 600;
+			extend game by 240;
+		if scenario is "Hard mode":
+			now invent of bunker is { };
+			add "cot" to invent of bunker;
+			now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
+			now the initial appearance of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
+			now the hp of doctor matt is 100;
+			remove orthas from play;
+			increase score by 900;
+			extend game by 240;
+			now hardmode is true;
+			now levelwindow is 99999;
+	if scenario is "Rescuer Stranded":
+		say "Hours after the outbreak, you had been part of the military's fast response team. Your initial task was reconnaissance with the hopes of setting up a rally point for helicopter evacuation of any non-infected survivors.";
+		say "Your team was moving on foot through the streets of downtown when you were set upon by creatures out of a pervert's nightmare. All discipline was lost as your team disintegrated into panic and fled unthinkingly into the city, pursued by the nightmares...";
+		say "You awake in what appears to be a disused bunker. You have no idea how you even got here, but you are uninfected. In your panicked flight you lost all of your supplies. No food. No water. No weapons. No radio. At least you have your backpack, and your watch.";
+		say "Heaven only knows what awaits you outside but, you have to find a way back.";
+		say "Taking a deep breath you open the door to your sanctuary...";
+	otherwise:
+		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type [bold type]look backpack[roman type], and type [bold type]look watch[roman type]. Also, try [bold type]look me[roman type]! Your description will probably change as you play.  Or [bold type]help[roman type] for more detailed help.))[line break][line break]";
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if scenario is "Researcher":
+		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		say "You're let down beside an old bunker. It would serve as your base of operations, and would be where they[']d pick you up when it was over. You should be scared, but you just can[']t seem to muster that sensation. They gave you booster shots against the nanites. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.[line break][line break]";
+	otherwise:
+		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.[line break][line break]";
+	zephyrad rule in 1 turn from now;
+
+To regularstart: [normal start method]
 	say "Do you want hyperlinks? (Y/n)";
 	if player consents:
 		let x be 0;
@@ -5111,11 +5352,6 @@ When play begins:
 		say "Taking a deep breath you open the door to your sanctuary...";
 	otherwise:
 		say "Phew, you barely made it in here, then the lights went out. You waited, in the dark. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type], and your [bold type]watch[roman type]. How bad could it be?[line break][line break]((Hey there! Some tips for you. Type [bold type]look backpack[roman type], and type [bold type]look watch[roman type]. Also, try [bold type]look me[roman type]! Your description will probably change as you play.  Or [bold type]help[roman type] for more detailed help.))[line break][line break]";
-	if scenario is "Caught Outside":
-		process dirty water;
-		process dirty water;
-		process dirty water;
-		process dirty water;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if scenario is "Researcher":
 		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
@@ -5131,4 +5367,76 @@ When play begins:
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	zephyrad rule in 1 turn from now;
 
+Book 10 - Let the Games Begin
 
+understand "saveword" as savewording;
+
+savewording is an action applying to nothing.
+
+Carry out savewording:
+	say "You can hear Trixie's voice in your mind, whispering the reality spell for the world as it is...";
+	say "[magic word]";
+
+to say promptsay:
+	let x be the location of the player;
+	let z be the number of entries in invent of x;
+	if z is greater than 0:
+		say "Visible Objects: ";
+		repeat with q running through invent of x:
+			say "[link][q][as]get [q][end link] ";
+		say " [link]get everything[as]get all[end link]";
+		say "[line break]";
+	say "Status: ";
+	if hunger of player is greater than 30:
+		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";
+	if thirst of player is greater than 30:
+		say "[link][bracket]THIRSTY[close bracket][as]drink water[end link] ";
+	if humanity of player is less than 50:
+		say "[link][bracket]UNHINGED[close bracket][as]use journal[end link] ";
+	say "[link][bracket]Inv[close bracket][as]inventory[end link] ";
+	if scenario is "Researcher" or nanitemeter is 1:
+		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
+	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
+	say "[link][bracket]Save[close bracket][as]saveword[end link] ";
+	say "[line break]";
+	say "Exits: ";
+	repeat with nam running through valid directions:
+		say "[link][printed name of nam][end link] ";
+	say "[if location of player is fasttravel][bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket][end if]";
+	say ", Visible Things: ";
+	repeat with y running through the things in the location of the player:
+		if y is a door, next;
+		say "[link][y][as]look [y][end link] ";
+	say " [link]area[as]look[end link]";
+	say "[line break]>";
+
+ When play begins:
+	repeat with x running through situations:
+		now x is a part of the player;
+	repeat with x running through grab objects:
+		now x is a part of the player;
+	now the command prompt is "[promptsay]";
+[	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
+
+hypernull is a number that varies. Hypernull is usually 0.
+
+When play begins:
+	now waiterhater is 0; [initialize to 0 for start of game, waiting occurs as normal]
+	now clearnomore is 0; [initialize to 0 for start of game, clearing occurs as normal]
+	adjustdefaulthelp; [adjusts help menu]
+	repeat with q running from 1 to the number of rows in the table of game objects:
+		add name in row Q of table of game objects to allobjs;
+	change the right hand status line to "[list of valid directions]";
+	say "Some questions before getting into the game...";[warn the player what to expect next]
+	say "Do you want to use the alternate (experimental) start method? (y/n)";
+	if player consents:
+		follow the random stats rule;
+		increase the score by 10;
+		repeat with x running through featsets:
+			now x is a part of the player;
+		now the humanity of the player is 100; [prevents endgame from sanity before game starts]
+		say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
+		say "[line break]Welcome to...";
+		move the player to Game Options; [puts player in room for options]
+	otherwise:
+		regularstart; [original start method.  easier to move everything then leave here]
