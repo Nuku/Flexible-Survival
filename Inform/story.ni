@@ -5116,7 +5116,7 @@ When play begins:
 		process dirty water;
 		process dirty water;
 		process dirty water;
-	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if scenario is "Researcher":
 		say "The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they[']d take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
