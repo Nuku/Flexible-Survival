@@ -5160,6 +5160,7 @@ To startFeatget: [alternate featget used for start]
 				say "Invalid Feat.";
 
 To start button: [options are set, begin game]
+	now started is 1;
 	move player to bunker; [relocate for start]
 	startstatbonus; [apply stat bonus]
 	startgender; [apply gender stats]
