@@ -4983,6 +4983,7 @@ Include Sally by Stripes.
 Include Fang by Stripes.
 Include Joanna by Stripes.
 Include Solstice by Stripes.
+Include Leonard by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 
@@ -5160,6 +5161,7 @@ To startFeatget: [alternate featget used for start]
 				say "Invalid Feat.";
 
 To start button: [options are set, begin game]
+	now started is 1;
 	move player to bunker; [relocate for start]
 	startstatbonus; [apply stat bonus]
 	startgender; [apply gender stats]
