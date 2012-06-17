@@ -5101,12 +5101,21 @@ Instead of setting Scenario Choice to "Rescuer Stranded": now startscenariochoic
 Instead of setting Scenario Choice to "Forgotten": now startscenariochoice is 4; say "Scenario is now Forgotten.";
 Instead of setting Scenario Choice to "Researcher": now startscenariochoice is 5; say "Scenario is now Researcher.";
 Instead of setting Scenario Choice to "Hard mode": now startscenariochoice is 6; say "Scenario is now Hard mode.";
-Instead of setting Free Feats to "general": startFeatget; say "General Feat chosen?.";
-Instead of setting Free Feats to "fun": startFunFeatget; say "Fun Feat chosen?.";
+Instead of setting Free Feats to "general": startFeatget; say "General Feat chosen.";
+Instead of setting Free Feats to "fun": startFunFeatget; say "Fun Feat chosen.";
 Instead of setting Banned Creatures to "configure": ban menu; say "Banned Creatures configured.";
 Instead of pushing Start Button: start button;
 
 Section Alternate Start
+
+To prealternatestartstats: [set any stats that need to be set to keep the players time in the options room working]
+	now the strength of the player is 17; [sets stats high to allow more feats in start]
+	now the Dexterity of the player is 17;
+	now the Stamina of the player is 17;
+	now the Charisma of the player is 17;
+	now the Perception of the player is 17;
+	now the Intelligence of the player is 17; [should be reset to proper value when room is left]
+	now the humanity of the player is 100; [prevents endgame from sanity before game starts]
 
 To startFeatget: [alternate featget used for start]
 	blank out the whole of table of gainable feats;
@@ -5161,7 +5170,8 @@ To startFeatget: [alternate featget used for start]
 				say "Invalid Feat.";
 
 To start button: [options are set, begin game]
-	now started is 1;
+	now started is 1; [make start as being done.  makes leveling/etc work right]
+	follow the random stats rule; [set stats to base for game]
 	move player to bunker; [relocate for start]
 	startstatbonus; [apply stat bonus]
 	startgender; [apply gender stats]
@@ -5484,11 +5494,10 @@ When play begins:
 		say "Hyperlinks disabled.";
 	say "Do you want to use the alternate (experimental) start method? (y/n)";
 	if player consents:
-		follow the random stats rule;
 		increase the score by 10;
 		repeat with x running through featsets:
 			now x is a part of the player;
-		now the humanity of the player is 100; [prevents endgame from sanity before game starts]
+		prealternatestartstats; [sets stats to prevent oddities from alternate start]
 		say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 		say "[line break]Welcome to...";
 		move the player to Game Options; [puts player in room for options]
