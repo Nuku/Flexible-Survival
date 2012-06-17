@@ -102,7 +102,7 @@ to say dolphin fuck:
 	otherwise:
 		say "The dolphin places her large, pink cock at your waiting entrance, and rubs it back and forth, without touching it. You are horrified and fascinated by it.";
 		if scalevalue of player is 1:
-			say "She shoves her cock into your ass, more coming out of her top slit, but it is unable to go further than the tapered head. She briefly looks at you with horror before realizing the obvious, you're way too small! 'I think we should wait until you're in a form suited for me for a lady of my... 'Needs.'' And with that she departs, dejected and disappointed.";
+			say "She shoves her cock into your ass, more coming out of her top slit, but it is unable to go further than the tapered head. She briefly looks at you with horror before realizing the obvious, you're way too small! 'I think we should wait until you're in a form suited for a lady of my... 'Needs.'' And with that she departs, dejected and disappointed.";
 		otherwise if scalevalue of player is 2:
 			say "She slams her cock into your ass rather carelessly, but her endeavors are cut off when she realizes she can't go any more than halfway inside. She--rather rashly--continues to ram you in vain as it just won't go any deeper. She thinks for a moment, but it doesn't take her long to figure out what the problem. She tells you 'I'm afraid you need to a much larger form to be able to take me, small one.' She then disengages from you, leaving you to your own devices for the time being.";
 		otherwise if scalevalue of player is 3:
@@ -113,7 +113,7 @@ to say dolphin fuck:
 			say "She then departs from you, clearly satisfied with her work on your poor soul, leaving you to float in the water, a mess of a person.";
 		otherwise:
 			say "She eagerly slams her cock into your ass. In spite her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first.";
-			say "Her prehensile member worms its way into the depths of your bowels, but even this sizeable intruder can only wander so far into your labyrinth of flesh. She seems a little surprised by this, suggesting she might not be used to handling a beast of your magnitude. You get the impression that she might be a little disappointed by this as well, perhaps used to the 'Challenge' of contenting with much smaller victims.";
+			say "Her prehensile member worms its way into the depths of your bowels, but even this sizeable intruder can only wander so far into your labyrinth of flesh. She seems a little surprised by this, suggesting she might not be used to handling a beast of your magnitude. You get the impression that she might be a little disappointed by this as well, perhaps used to the 'Challenge' of contending with much smaller victims.";
 			say "Regardless, she continues fervently ramming with her impressive dick. It's not long before she lets out a chittering scream in climax, unloading her cum into you. You feel her passionate fluids flood your inner depths, though her equally impressive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release, and rather unceremoniously pulls her length from you in brisk departure.";
 		
 
