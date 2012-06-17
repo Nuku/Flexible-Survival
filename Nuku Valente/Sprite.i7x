@@ -38,6 +38,11 @@ to say Sprite attack:
 [ [Sprite loss] ]
 To say Sprite loss:
 	say "The sprites disperse in an unhappy cloud of defeated fae kind, taking off in all directions.";
+	if libido of player is greater than 50 or humanity of player is less than 30:
+		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";
+		say "You strip off your clothes, revealing your throbbing [cock size desc of player] [cock of player] dick. You peer back into your pack, and catch three of the pixie-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I’m going to let you out, but your friends don’t go free until you finish the job.'";
+		say "With the bag opened, the captured sprites fly out and circle around you.  They coax you to sit on a nearby crate, spreading your legs for easier access to your [cock of player] shaft. Their wings tease your erect phallus as they flit around, examining your groin before getting to work. They start licking at you as they dart around your cock, leaving thin trails of saliva up and down your shaft. The largest one licks at your tip and giggles as you twitch and start to moan from their attentions. She manages to take your whole tip into her mouth and begins massaging your glans with rolling movements of her tongue. Others hold on to your shaft and start flapping their wings rapidly. It feels like your cock is covered in a bunch of vibrators. [if cock width of player is greater than 0]The last two tend to your [ball size] balls, licking and buzzing until you are lost in a haze of pleasure. [end if]After what feels like an hour, but was really only a few minutes, you can’t take any more. You climax, covering the largest sprite from head to toe in your seed.";
+		say "After you recover, you open your pack and release the still-trapped sprites. One of the smaller fairies flies up to your ear as the rest fly away. 'If that was all you wanted, why didn’t you just ask?' She circles your head once more before flying off.";
 	
 	
 Section 2 - Monster Insertion
