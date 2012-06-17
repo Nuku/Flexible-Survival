@@ -4812,6 +4812,11 @@ Include Smith Haven Mall by Anon E Mouse.
 Include Brookstone Books by Anon E Mouse.
 Include Kitsune by Kaleem mcintyre.
 Include Old BoomBox by Kaleem mcintyre.
+Include Little Old Woman by Kaleem mcintyre.
+Include Extra Added Scenes by Kaleem mcintyre.
+Include More Misc Events by Kaleem mcintyre.
+Include How High by Kaleem mcintyre.
+Include Disorganization by Kaleem mcintyre.
 
 
 [Monsters/Infections]
