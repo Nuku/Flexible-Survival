@@ -60,6 +60,11 @@ To say dolphin loss:
 to say dolphin fuck:
 	if the cunts of the player is not 0: [prefer male action]
 		say "The dolphin places her large, pink cock at your waiting entrance, and rubs it back and forth, without touching it. You are horrified and fascinated by it.";
+		if scalevalue of player is greater than 3:
+			say "She eagerly slams her cock into your cunt. In spite her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first.";
+			say "She continues to ram your eager hole, you can feel her prehensile member worming around in the depths of your cunt, but even this impressive rod can only barely fill your expansive hole. At hilt she can only just barely tickle your cervix. She seems a little surprised by this, suggesting she might not be used to handling a beast of your magnitude. 'I should be--unf--enjoying this, it's--urgh--rare for someone--Ah!--to handle me so well…' She trails off. You get the impression that, while she is certainly enjoying the ride, she's likely used to the 'challenge' of far less accommodating females.”;
+			say "Regardless, her assault on your hole reaches a fever pitch, and it's not long before she lets out a chittering scream in climax, unloading her cum into you womb [impregchance]. You feel her passionate fluids flood the depths of you cunt, though her equally expansive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release; she's quick to yank her rod from your snatch and tends to you and her potential offspring only briefly before departing.";		
+			continue the action;
 		if the cunt width of the player is less than 6:
 			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. You're cunt can't be that tight. Lets fix it.";
 			say "She starts slamming her pointed cock into your small pussy, widening it by a bunch every smash, at the expense of your pleasure. Your mind is so full of pain you are having trouble staying conscious, and as she finally manages to slam inside you, you feel a twinge as the nanites 'fix' your cunt.";
@@ -114,7 +119,7 @@ to say dolphin fuck:
 		otherwise:
 			say "She eagerly slams her cock into your ass. In spite her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first.";
 			say "Her prehensile member worms its way into the depths of your bowels, but even this sizeable intruder can only wander so far into your labyrinth of flesh. She seems a little surprised by this, suggesting she might not be used to handling a beast of your magnitude. You get the impression that she might be a little disappointed by this as well, perhaps used to the 'Challenge' of contending with much smaller victims.";
-			say "Regardless, she continues fervently ramming with her impressive dick. It's not long before she lets out a chittering scream in climax, unloading her cum into you. You feel her passionate fluids flood your inner depths, though her equally impressive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release, and rather unceremoniously pulls her length from you in brisk departure.";
+			say "Regardless, she continues fervently ramming you with her impressive dick. It's not long before she lets out a chittering scream in climax, unloading her cum into you. You feel her passionate fluids flood your inner depths, though her equally impressive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release, and rather unceremoniously pulls her length from you in brisk departure.";
 		
 
 Section 2 - Monster Insertion
