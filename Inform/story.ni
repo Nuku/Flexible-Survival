@@ -4815,6 +4815,7 @@ Include Old BoomBox by Kaleem mcintyre.
 Include Little Old Woman by Kaleem mcintyre.
 Include Extra Added Scenes by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
+Include Misc 3 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 
