@@ -97,7 +97,7 @@ instead of going down from Volcanic Crater:
 			delete phoenix egg;
 			now lastfuck of Athanasia is turns;
 			now hp of Athanasia is 3;
-			increase score of player by 25;
+			increase score by 25;
 			increase thirst of player by 12;
 			decrease hp of player by ( hp of player / 5 );
 		otherwise:
