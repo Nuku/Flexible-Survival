@@ -92,7 +92,7 @@ instead of going down from Volcanic Crater:
 	otherwise if hp of Athanasia is 2:
 		say "     Looking down into the fiery pit, you are reluctant to go down there, but this is certainly the hottest place around for the phoenix's egg.  Deciding to take a look, you begin to very carefully scale down into the crater.  The great heat makes this a terrible struggle, but you manage to persevere, feeling a need to see it through for Athanasia.  Reaching the tunnels down there, you enter the cave.";
 		move the player to Volcanic Cave;
-		if "phoenix egg" is listed in feats of player:
+		if "phoenix egg" is listed in invent of player:
 			say "     You look around the cave and its open magma pools, deciding this place certainly meets the requirements.  Short of throwing it into the volcanic crater itself, this is probably the hottest spot you'll find.  It should also be quite safe down here.  There's no reason anything should venture into this infernal cave to disturb it.  Unpacking it, you bring the egg to one of the magma pools and, hoping you're doing the right thing, lower the egg onto the semi-solid crust covering it.  The soft layer dips and cracks a little, letting some of the lava flow up and pool around the egg.  It seems unharmed by this and even seems to become more golden and lustrous.  You sigh in relief and step away, reminding yourself to return to check on it later.  You feel thirsty and drained after your climb and stay down here.";
 			delete phoenix egg;
 			now lastfuck of Athanasia is turns;
