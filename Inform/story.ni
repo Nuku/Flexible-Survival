@@ -4990,6 +4990,7 @@ Include Fang by Stripes.
 Include Joanna by Stripes.
 Include Solstice by Stripes.
 Include Leonard by Stripes.
+Include Athanasia by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 
