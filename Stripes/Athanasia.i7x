@@ -21,7 +21,7 @@ Instead of resolving a Captured Bird:
 			say "     Leaving the other two to try and secure their struggling prey, the second feline moves in to try and deal with this interloper.";
 			challenge "Panther Taur";
 			if lost is 0:
-				say "     With the second one dealt with, you charge forward.  The other two are each at opposite sides of the net, struggling to keep it down.  The net has been partially burned away, through the bird's wing and one of its feet are still caught.  Closer now, you can see that it is not only the net, but also the hawk-like bird, which is aflame.  But the flames and fire seem almost to be part of this bird, as if eminating from its feathers.  In your confusion, you almost ram into the next panther, who growls menacingly at you before deciding that you might make a suitable replacement should their bird get away.";
+				say "     With the second one dealt with, you charge forward.  The other two are each at opposite sides of the net, struggling to keep it down.  The net has been partially burned away, through the bird's wing and one of its feet are still caught.  Closer now, you can see that it is not only the net, but also the hawk-like bird, which is aflame.  But the flames and fire seem almost to be part of this bird, as if emanating from its feathers.  In your confusion, you almost ram into the next panther, who growls menacingly at you before deciding that you might make a suitable replacement should their bird get away.";
 				challenge "Panther Taur";
 				if lost is 0:
 					say "     With only the last panther holding onto the net, it cannot keep the bird down.  It manages to flap its wings and take to the air.  With its wings spread wide, the fire bird shrieks one last time before unleashing a wave of fire towards the last of the cats.  This burst of fire incinerates the remains of the net and sends the feline running, fleeing with her tail aflame.";
@@ -101,7 +101,7 @@ instead of going down from Volcanic Crater:
 			increase thirst of player by 12;
 			decrease hp of player by ( hp of player / 5 );
 		otherwise:
-			say "     You look around the cave and its open magma pools, deciding this place certainly meets the requirements.  Short of throwing it into the volcanic crater itself, this is probably the hottest spot you'll find.  It should also be quite safe down here.  There's no reason anyting should venture into this infernal cave to disturb it.  You'd best leave this place and collect the egg now that you've found a safe spot for it.  You feel thirsty and drained after your climb and stay down here.";
+			say "     You look around the cave and its open magma pools, deciding this place certainly meets the requirements.  Short of throwing it into the volcanic crater itself, this is probably the hottest spot you'll find.  It should also be quite safe down here.  There's no reason anything should venture into this infernal cave to disturb it.  You'd best leave this place and collect the egg now that you've found a safe spot for it.  You feel thirsty and drained after your climb and stay down here.";
 			increase thirst of player by 12;
 			decrease hp of player by ( hp of player / 5 );
 	otherwise if hp of Athanasia is 3:
