@@ -50,7 +50,7 @@ to say Alpha Husky attack:
 		otherwise:
 			say "'You think someone like you can stand up to alpha?' The victorious husky growls at you, snapping his teeth in your face and making you cringe backwards in submission. 'Better you know your place, as the lowly little bitch you should be,' He says with a grin full of canine amusement as he pounces on you, pinning you down with his teeth on your neck until he is satisfied with your increasingly nervous bodies surrender. Backing off, he sniffs in your direction several times, before stalking off with his tail held high in the air behind him, 'Come back and see me when you are ready to be a proper bitch,' The alpha male calls over his shoulder, as you lie there panting, feeling like you just had a rather narrow escape.";
 		infect "Female Husky";
-	if husky packs is resolved and fertile pill is owned:
+	if husky gathering is resolved and fertile pill is owned:
 		say "You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers and you proceed back to safer grounds.";
 		let number be 0;
 		repeat with Q running through invent of the the player:
@@ -58,11 +58,11 @@ to say Alpha Husky attack:
 			if q matches the regular expression printed name of fertile pill, case insensitively:
 				remove entry number from invent of the player;
 				break;
-		now husky packs is unresolved;
+		now husky gathering is unresolved;
 			
-husky packs is a situation. It is resolved.
+husky gathering is a situation. It is resolved.
 		
-Instead of resolving husky packs:
+Instead of resolving husky gathering:
 	say "A sudden chorus of barks and shouts catches your attention. Just emerging from around the bend is a group, no, pack of huskies. Most appear male, and those males catch sight of you, approaching with a joyous war cry, they move to try and cut off your escape.";
 	Challenge "Alpha Husky";
 	if lost is 1:
