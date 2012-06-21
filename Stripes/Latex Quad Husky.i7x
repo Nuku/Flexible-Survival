@@ -61,7 +61,8 @@ Instead of resolving a Shipping Container:
 				now libido entry is 90;
 				now monm is monster;
 			if ( "Female Preferred" is listed in feats of player and girl is not banned ) or guy is banned:
-				choose row monf from table of random critters;				now breasts entry is 6;
+				choose row monf from table of random critters;
+				now breasts entry is 6;
 				now breast size entry is 3;
 				now cunt length entry is 12;
 				now cunt width entry is 6;
