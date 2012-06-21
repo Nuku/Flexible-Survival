@@ -1,4 +1,4 @@
-Version 1 of RexxyEvent by GentlemanB begins here.
+Version 1 of RexxyEvent by AGentlemanCalledB begins here.
 "Adds a Adds an Alpha Retrevier NPC and associated scenarios to the Flexible Survival game"
 
 Section 1 - Event

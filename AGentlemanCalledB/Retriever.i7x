@@ -1,4 +1,4 @@
-Version 1 of Retriever by GentlemanB begins here.
+Version 1 of Retriever by AGentlemanCalledB begins here.
 
 "Adds a retriever creature to Flexible Survivals Wandering Monsters table"
 

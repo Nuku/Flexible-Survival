@@ -4930,7 +4930,7 @@ Include Bunny Jock For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Gargoyle by Kaleem mcintyre.
-Include Retriever by GentlemanB.
+Include Retriever by AGentlemanCalledB.
 Include Candy Striper by Stripes.
 
 
@@ -4971,7 +4971,7 @@ Include Leonard by Stripes.
 Include Athanasia by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
-Include RexxyEvent by GentlemanB.
+Include RexxyEvent by AGentlemanCalledB.
 
 
 [Pets]
