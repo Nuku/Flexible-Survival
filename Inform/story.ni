@@ -11,7 +11,7 @@ use MAX_STATIC_DATA of 950000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 65000.
 use MAX_NUM_STATIC_STRINGS of 40000.
-use ALLOC_CHUNK_SIZE of 75000.
+use ALLOC_CHUNK_SIZE of 85000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 250.
 Use maximum indexed text length of at least 5000. 
@@ -4930,6 +4930,7 @@ Include Bunny Jock For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Gargoyle by Kaleem mcintyre.
+Include Retriever by GentlemanB.
 Include Candy Striper by Stripes.
 
 
@@ -4970,6 +4971,7 @@ Include Leonard by Stripes.
 Include Athanasia by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
+Include RexxyEvent by GentlemanB.
 
 
 [Pets]
