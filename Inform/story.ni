@@ -5032,9 +5032,9 @@ To say starthyperoptions:
 	say "[line break]Type [bold type][link]set Hyperlinks to On[end link][roman type] or [bold type][link]set Hyperlinks to Off[end link][roman type]";
 
 To say startstatsstatus:
-	say "Stat bonus is currently: [if startstatbonus is 1]Strength[otherwise if startstatbonus is 2]Dexterity[otherwise if startstatbonus is 3]Stamina[otherwise if startstatbonus is 4]Charisma[otherwise if startstatbonus is 5]Perception[otherwise if startstatbonus is 6]Intelligence[end if]";
+	say "Stat bonus is currently: [if startstatbonus is 1]Strength[otherwise if startstatbonus is 2]Dexterity[otherwise if startstatbonus is 3]Stamina[otherwise if startstatbonus is 4]Charisma[otherwise if startstatbonus is 5]Perception[otherwise if startstatbonus is 6]Intelligence[otherwise if startstatbonus is 7]Randomized stats[end if]";
 To say startstatsoptions:
-	say "[line break]Type [bold type][link]set Stat Bonus to Strength[end link][roman type] or [bold type][link]set Stat Bonus to Dexterity[end link][roman type] or [bold type][link]set Stat Bonus to Stamina[end link][roman type] or [bold type][link]set Stat Bonus to Charisma[end link][roman type] or [bold type][link]set Stat Bonus to Perception[end link][roman type] or [bold type][link]set Stat Bonus to Intelligence[end link][roman type]";
+	say "[line break]Type [bold type][link]set Stat Bonus to Strength[end link][roman type] or [bold type][link]set Stat Bonus to Dexterity[end link][roman type] or [bold type][link]set Stat Bonus to Stamina[end link][roman type] or [bold type][link]set Stat Bonus to Charisma[end link][roman type] or [bold type][link]set Stat Bonus to Perception[end link][roman type] or [bold type][link]set Stat Bonus to Intelligence[end link][roman type] or [bold type][link]set Stat Bonus to Random[end link][roman type]";
 	
 To say startgenderstatus:
 	say "Player gender is currently: [if startgenderchoice is 0]Male[otherwise if startgenderchoice is 1]Female[end if]";
@@ -5073,12 +5073,13 @@ Understand "set [something] to [text]" as setting it to.
 
 Instead of setting Hyperlinks to "On": now hypernull is 0; say "Hyperlinks enabled.";
 Instead of setting Hyperlinks to "Off": now hypernull is 1; say "Hyperlinks disabled.";
-Instead of setting Stat Bonus to "Strength": now startstatbonus is 1; say "Your strength is your specialty.";
-Instead of setting Stat Bonus to "Dexterity": now startstatbonus is 2; say "Your dexterity is your specialty.";
-Instead of setting Stat Bonus to "Stamina": now startstatbonus is 3; say "Your stamina is your specialty.";
-Instead of setting Stat Bonus to "Charisma": now startstatbonus is 4; say "Your charisma is your specialty.";
-Instead of setting Stat Bonus to "Perception": now startstatbonus is 5; say "Your perception is your specialty.";
-Instead of setting Stat Bonus to "Intelligence": now startstatbonus is 6; say "Your intelligence is your specialty.";
+Instead of setting Stat Bonus to "Strength": now startstatbonus is 1; say "Your strength is your specialty."; prealternatestartstats;
+Instead of setting Stat Bonus to "Dexterity": now startstatbonus is 2; say "Your dexterity is your specialty."; prealternatestartstats;
+Instead of setting Stat Bonus to "Stamina": now startstatbonus is 3; say "Your stamina is your specialty."; prealternatestartstats;
+Instead of setting Stat Bonus to "Charisma": now startstatbonus is 4; say "Your charisma is your specialty."; prealternatestartstats;
+Instead of setting Stat Bonus to "Perception": now startstatbonus is 5; say "Your perception is your specialty."; prealternatestartstats;
+Instead of setting Stat Bonus to "Intelligence": now startstatbonus is 6; say "Your intelligence is your specialty."; prealternatestartstats;
+Instead of setting Stat Bonus to "Random": now startstatbonus is 7; say "Your stats will be randomized.  If you no longer qualify for your selected feat, you'll be given the option to take a new one after starting the game."; prealternatestartstats;
 Instead of setting Gender to "Male": now startgenderchoice is 0; say "Gender is now Male.";
 Instead of setting Gender to "Female": now startgenderchoice is 1; say "Gender is now Female.";
 Instead of setting Scenario Choice to "Bunker": now startscenariochoice is 1; say "Scenario is now Bunker.";
@@ -5094,14 +5095,16 @@ Instead of pushing Start Button: start button;
 
 Section Alternate Start
 
-To prealternatestartstats: [set any stats that need to be set to keep the players time in the options room working]
-	now the strength of the player is 17; [sets stats high to allow more feats in start]
-	now the Dexterity of the player is 17;
-	now the Stamina of the player is 17;
-	now the Charisma of the player is 17;
-	now the Perception of the player is 17;
-	now the Intelligence of the player is 17; [should be reset to proper value when room is left]
-	now the humanity of the player is 100; [prevents endgame from sanity before game starts]
+To prealternatestartstats: [set any stats that need to be set to keep the player's time in the options room working]
+	now the strength of the player is 12;		[sets all to 12, then applies selected bonus]
+	now the Dexterity of the player is 12;
+	now the Stamina of the player is 12;
+	now the Charisma of the player is 12;
+	now the Perception of the player is 12;
+	now the Intelligence of the player is 12;
+	now the humanity of the player is 100;		[prevents endgame from sanity before game starts]
+	startstatbonus;						[applies the current, pre-selected stat boost]
+
 
 To startFeatget: [alternate featget used for start]
 	blank out the whole of table of gainable feats;
@@ -5129,7 +5132,7 @@ To startFeatget: [alternate featget used for start]
 			otherwise:
 				say "Invalid Feat.";
 
- To startFunFeatget: [alternate funfeatget used for start]
+To startFunFeatget: [alternate funfeatget used for start]
 	blank out the whole of table of gainable feats;
 	repeat with x running through not functional featsets:
 		try addfeating x;
@@ -5181,8 +5184,80 @@ To startstatbonus: [apply stat bonus]
 		increase perception of player by 5;
 	if startstatbonus is 6:
 		increase intelligence of player by 5;
-	say "[line break]You have decided your physical talents.";
+	if startstatbonus is 7 and started is 1:
+		randomstatstart;
+	if started is 1, say "[line break]You have decided your physical talents.";
 [	follow the prerestore the game rule;] [for loading?]
+
+to randomstatstart:	[same total points, but spread randomly between 10 to 18]
+	now the strength of the player is 10;
+	now the Dexterity of the player is 10;
+	now the Stamina of the player is 10;
+	now the Charisma of the player is 10;
+	now the Perception of the player is 10;
+	now the Intelligence of the player is 10;
+	[Boost two stats for increased spread in results]
+	let T be a random number between 1 and 6;
+	if T is 1:
+		increase strength of player by 3;
+	if T is 2:
+		increase dexterity of player by 3;
+	if T is 3:
+		increase stamina of player by 3;
+	if T is 4:
+		increase charisma of player by 3;
+	if T is 5:
+		increase perception of player by 3;
+	if T is 6:
+		increase intelligence of player by 3;
+	now T is a random number between 1 and 6;
+	if T is 1:
+		increase strength of player by 2;
+	if T is 2:
+		increase dexterity of player by 2;
+	if T is 3:
+		increase stamina of player by 2;
+	if T is 4:
+		increase charisma of player by 2;
+	if T is 5:
+		increase perception of player by 2;
+	if T is 6:
+		increase intelligence of player by 2;
+	now tempnum is 12;	[remaining 12 points applied randomly one at a time]
+	while tempnum is not 0:
+		now T is a random number between 1 and 6;
+		decrease tempnum by 1;
+		if T is 1:
+			increase strength of player by 1;
+			if strength of player > 18:
+				now strength of player is 18;
+				increase tempnum by 1;
+		if T is 2:
+			increase dexterity of player by 1;
+			if dexterity of player > 18:
+				now dexterity of player is 18;
+				increase tempnum by 1;
+		if T is 3:
+			increase stamina of player by 1;
+			if stamina of player > 18:
+				now stamina of player is 18;
+				increase tempnum by 1;
+		if T is 4:
+			increase charisma of player by 1;
+			if charisma of player > 18:
+				now charisma of player is 18;
+				increase tempnum by 1;
+		if T is 5:
+			increase perception of player by 1;
+			if perception of player > 18:
+				now perception of player is 18;
+				increase tempnum by 1;
+		if T is 6:
+			increase intelligence of player by 1;
+			if intelligence of player > 18:
+				now intelligence of player is 18;
+				increase tempnum by 1;
+
 
 To startgender: [apply gender stats]
 	if startgenderchoice is 0:
@@ -5223,11 +5298,46 @@ To startscenario: [sets scenario for use in introstorytext]
 		now scenario is "Hard mode";
 
 To startfreefeats: [gives free feats]
-	say "Adding general feat [freefeatgeneral] to player.";	
-	add freefeatgeneral to feats of player;
-	say "Adding fun feat [freefeatfun] to player.";
-	add freefeatfun to feats of player;
-	decrease featgained of player by 1; [to compensate for fun feat?]
+	now autofeatloading is true;			[temporarily skips asking permission to add preset feats]
+	say "Attempting to add general feat [freefeatgeneral] to player.";
+	now current menu selection is 0;
+	blank out the whole of table of gainable feats;
+	repeat with x running through functional featsets:
+		try addfeating x;
+	now featqualified is 1;
+	[chooses the row with the selected feat]
+	repeat with y running from 1 to number of filled rows in table of gainable feats:
+		choose row y in table of gainable feats;
+		if title entry is freefeatgeneral:
+			now current menu selection is y;
+			follow the gainfeat rule;
+			break;
+	if current menu selection is 0:
+		say "Invalid Feat: Select a new choice now.";
+		now autofeatloading is false;
+		featget;		[reverts to standard method]
+		now autofeatloading is true;
+	say "Attempting to add fun feat [freefeatfun] to player.";
+	now current menu selection is 0;
+	blank out the whole of table of gainable feats;
+	repeat with x running through not functional featsets:
+		try addfeating x;
+	now featqualified is 1;
+	[chooses the row with the selected feat]
+	repeat with y running from 1 to number of filled rows in table of gainable feats:
+		choose row y in table of gainable feats;
+		if title entry is freefeatfun:
+			now current menu selection is y;
+			follow the gainfeat rule;
+			decrease featgained of player by 1;
+			break;
+	if current menu selection is 0:
+		say "Invalid Feat: Select a new choice now.";
+		now autofeatloading is false;
+		funfeatget;		[reverts to standard method]
+		now autofeatloading is true;
+	now autofeatloading is false;
+
 
 To startcreatureban: [bans creatures, as requested]
 	say "Banning creatures...";
