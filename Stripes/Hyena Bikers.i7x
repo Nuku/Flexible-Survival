@@ -105,6 +105,7 @@ title		subtable	description	sortorder	toggle
 "Red Light District"		--	--	9	bikeride rule
 "Capitol Bldg"		--	--	11	bikeride rule
 "Power Plant"		--	--	12	bikeride rule
+"College Campus"		--	--	13	bikeride rule
 "Stay"		--	--	100	bikeride rule
 with two blank rows.
 
@@ -221,6 +222,15 @@ This is the bikeride rule:
 		Move player to Plant Overview, without printing a room description;
 		Now Plant Overview is known;
 		now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+		now Hyena Bikers is resolved;
+	otherwise if title entry is "College Campus":
+		if bikedest is 0:
+			now ridemessage is "     You decide to get dropped off at the city's college campus.  'We kept our distance from that spot.  It doesn't look like those jocks and their steroids reacted well to this whole mess.  You be careful.' [line break][postridesex]";
+		otherwise:
+			now ridemessage is "     You decide to get dropped off at the city's college campus.  'We kept our distance from that spot.  It doesn't look like those jocks and their steroids reacted well to this whole mess.  You be careful.' [line break]";
+		Move player to College Campus, without printing a room description;
+		Now College Campus is known;
+		now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
 		now Hyena Bikers is resolved;
 	otherwise if title entry is "Stay":
 		now ridemessage is "     You decide to decline the ride, telling him that you still have some searching to do around here.  He nods and wishes you well, adding that he hopes to see you back at the gang hideout soon.";
