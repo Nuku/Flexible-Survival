@@ -9,6 +9,7 @@ A featset can be functional. A featset is usually not functional.
 basic feats is functional.
 fun feats is a featset.
 featunlock is a number that varies.	[linked to Dr Matt/Dr Mouse hospital quest]
+autofeatloading is a truth state that varies. autofeatloading is usually false.
 
 The player has a number called featgained.
 
@@ -284,8 +285,8 @@ instead of addfeating the basic feats:
 This is the gainfeat rule:
 	choose row Current Menu Selection in table of gainable feats;
 	let nam be title entry;
-	say "Are you sure you want '[title entry]': [description entry][line break]?";
-	if player consents:
+	if autofeatloading is false, say "Are you sure you want '[title entry]': [description entry][line break]?";
+	if autofeatloading is true or player consents:
 		add nam to feats of player;
 		say "You have gained '[nam]'!";
 [		decrease menu depth by 1;			]
@@ -307,12 +308,14 @@ This is the gainfeat rule:
 [			Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]	]
 			Now Plant Overview is known;
 			now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+			now College Campus is known;
+			now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
 			Now Entrance to the Red Light District is known;
 			Now Entrance to the High Rise District is known;
 			Now Zoo entrance is known;
 			Now Dry Plains is known;
 			Now Museum Foyer is known;
-	wait for any key;
-	clear the screen and hyperlink list;
+	if autofeatloading is false, wait for any key;
+	if autofeatloading is false, clear the screen and hyperlink list;
 
 Feats ends here.
