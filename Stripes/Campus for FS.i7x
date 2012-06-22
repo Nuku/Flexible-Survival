@@ -9,7 +9,7 @@ Reaching the College is a situation.  The level of Reaching the College is 6.
 The sarea of Reaching the College is "Outside";
 
 Instead of Resolving a Reaching the College:
-	say "     Your meandering path through the city brings you into some new territory.  What was previously blockaded by monster activity and traffic accidents has been circumvented by following a few footpaths you'd missed earlier.  Exiting from one of these, you step into an area that's a little less densely packed and has some patches of green between the buildings.  Just as you're recogn...";
+	say "     Your meandering path through the city brings you into some new territory.  What was previously blockaded by monster activity and traffic accidents has been circumvented by following a few footpaths you'd missed earlier.  Exiting from one of these, you step into an area that's a little less densely packed and has some patches of green between the buildings.  Just as you're recogn-";
 	say "     'Think fast!' comes the yell from one side and you turn to see a brown blur flying at you!";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0, say "[line break]"; [skips waiting if it's not wanted]

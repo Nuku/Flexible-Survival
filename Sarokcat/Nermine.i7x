@@ -543,6 +543,8 @@ carry out bargainhunting:
 [				Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]	]
 				Now Plant Overview is known;
 				now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+				now College Campus is known;
+				now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
 				Now Entrance to the Red Light District is known;
 				Now Entrance to the High Rise District is known;
 				Now Zoo entrance is known;
