@@ -24,6 +24,7 @@ Section 2 - Combat
 Chapter 0 - Combat Menu
 
 To Combat Menu:
+	now combat abort is 0;
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
