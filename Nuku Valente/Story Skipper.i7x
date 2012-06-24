@@ -12,7 +12,7 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 To say magic word:
 	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
-	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]";
+	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]";
 	say "[line break]'You'll need to recite that part on its own after telling me the first one using a second recite command.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin.'";
 
 Reciting is an action applying to [16 things]one topic.
@@ -72,6 +72,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now unusual creature is resolved;
 					now the hp of doctor matt is the number understood;
+					if hp of doctor matt is 3, now level of doctor matt is turns;
 					if hp of doctor matt is greater than 4 and hp of doctor matt is less than 100:
 						move the microwave to the location of doctor matt;
 					if hp of doctor matt is 6:
@@ -489,9 +490,74 @@ Carry out reciting:
 					if mousecurse is 1:
 						now Quiet Apartment Building is resolved;
 						now mouse girl is tamed;
+						now the companion of the player is mouse girl;
+						say "Rachel smiles as she rejoins you at your side, gently holding your hand in hers.";
 					otherwise:
 						now Quiet Apartment Building is unresolved;
 						now mouse girl is not tamed;
+			-- 86:
+				if the player's command matches "[number]":
+					now hp of Elijah is the number understood;
+					now NPCintCounter is turns;
+					move Elijah to Burned-Out Chapel;
+					now Angel vs Demons is unresolved;
+					now Burned-Out Chapel is unknown;
+					if hp of Elijah > 0:
+						now Angel vs Demons is resolved;
+						now Burned-Out Chapel is known;
+					if hp of Elijah > 0 and hp of Elijah < 100:
+						move Elijah to Bunker;
+					if hp of Elijah is 100:
+						remove Elijah from play;
+			-- 87:
+				now npcEint is "[the player's command]";
+			-- 88:
+				if the player's command matches "[number]" and the number understood is 1:
+					now latexhuskymode is true;
+				otherwise:
+					now latexhuskymode is false;
+			-- 89:
+				now larvaegg is 0;
+				now larvacounter is 0;
+				if the player's command matches "[number]" and the number understood is 1:
+					now Insect Hive is resolved;
+					now insectlarva is true;
+					repeat with y running from 1 to number of filled rows in table of random critters:
+						choose row y in table of random critters;
+						if name entry is "Black Wasp":
+							now area entry is "High";
+							now non-infectious entry is false;	[Wasps unlocked]
+				otherwise:
+					repeat with y running from 1 to number of filled rows in table of random critters:
+						choose row y in table of random critters;
+						if name entry is "Black Wasp":
+							now area entry is "nowhere";
+							now non-infectious entry is true;	[Wasps locked]
+					now insectlarva is false;
+			-- 90:
+				if the player's command matches "[number]":
+					now hp of Leonard is the number understood;
+					if hp of Leonard > 0:
+						now Lion's Den is known;
+						now Feline Friend is resolved;
+					otherwise:
+						now Lion's Den is unknown;
+						now Feline Friend is unresolved;
+			-- 91:
+				if the player's command matches "[number]":
+					remove Solstice from play;
+					now hp of Solstice is the number understood;
+					now Adventurer is resolved;
+					now Onyx Crow is resolved;
+					if hp of Solstice is 1:
+						now Onyx Crow is unresolved;
+					if hp of Solstice is 2:
+						add "Crow Artifact" to invent of player;
+						now Adventurer is unresolved;
+					if hp of Solstice is 3 or hp of Solstice is 4:
+						now lastfuck of Solstice is turns;
+					if hp of Solstice > 4:
+						move Solstice to Grey Abbey Library;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
