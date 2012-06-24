@@ -99,7 +99,6 @@ to say feline cleanup:  [post-battle reset of stats to catgirl values]
 	if hardmode is false and Feline_type is 2 and monsterhp <= 0, increase xp of player by 22;	[xp difference for beating the male]
 	now Feline_type is 1;
 	now hp entry is 20 + ( debit * 3 );
-	now monsterhp is 20 + ( debit * 3 );
 	now wdam entry is 7 + ( debit / 3 );
 	now lev entry is 3 + debit;
 	now libido entry is 25;

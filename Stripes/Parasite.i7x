@@ -113,7 +113,6 @@ an everyturn rule:
 				say "Your belly protrudes in a firm dome of pregnancy, but a rather unusual one.  Rubbing your belly, you can feel the bulge of round eggs stuffed inside you.  The size of your egg-filled tummy should hinder you, but it doesn't, perhaps due to the nanites or the larva inside you.";
 			otherwise if larvacounter >= 22:
 				say "Your belly is somewhat rounded now, swollen with the rapid growth of something inside you.  You should be worried, but there is a warm sense of fulfillment coming along with it as the larva inside you rubs itself happily against your inner walls or releases more chemicals into you.";
-				say "***showing more.";
 			otherwise if larvacounter >= 15:
 				say "You feel a pleasant warmth from deep inside you as tingles run through your lower tummy.";
 		otherwise if gestation of child > 0:
