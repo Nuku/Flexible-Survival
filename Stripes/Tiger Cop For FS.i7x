@@ -77,7 +77,7 @@ Instead of resolving a Policeman:
 				challenge "Tiger Cop";
 			now mqstatus is 99;		[set to refused quest]
 			Now Policeman is resolved;
-			stop the action;
+			continue the action;
 	otherwise:
 		let T be a random number between one and four;
 		if T is 1:

@@ -2317,12 +2317,14 @@ To grow breasts by (x - a number):
 
 To Infect:
 	choose row monster from the table of random critters;
-	while there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ):
+	if there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true):
+		continue the action;
+[	while there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ):
 		now monster is a random number from 1 to number of filled rows in table of random critters;
 		choose row monster from the table of random critters;
 		if there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ):
 			next;
-		break;
+		break;	]
 	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
 		vialchance name entry;
 	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row monster of the table of random critters or resbypass entry is false ):
