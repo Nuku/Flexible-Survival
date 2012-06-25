@@ -1,5 +1,4 @@
 Version 1 of Athanasia by Stripes begins here.
-[2:45]
 "Adds a non-anthro Phoenix named Athanasia."
 
 Section 1 - Events
@@ -110,7 +109,7 @@ instead of going down from Volcanic Crater:
 	otherwise if hp of Athanasia is 4:
 		move the player to Volcanic Cave;
 		say "     Inside the cave, you find the broken remains of the phoenix egg blackened and crumbling scattered around the lava pool.  Fearing the worst, you start calling out Athanasia's name while searching the alcoves and crevices of the cavern.  You find nothing and are about to give up hope when there is a loud, triumphant shriek from outside the cave.  Running to its mouth, you see a large, fiery plume of lava boil up before unfolding a pair of wide wings.  The lava pours off the reborn phoenix like water and she comes swooping into the cave.";
-		say "     Still aflame, the firebird wraps its wings around you, holding you to her fiery breast, but you are unharmed.  You can feel the inferno of heat, but it does not harm you, only feeling warm and soothing as the red and gold bird nuzzles you.  'You did wonderful,' the bird says cheerfully, spinning you around in its wings, giving an affectionate nip on the shoulder before setting you down.";
+		say "     Still aflame, the firebird wraps its wings around you, holding you to her fiery breast, but you are unharmed.  You can feel the inferno of heat, but it does not harm you, only feeling warm and soothing as the red and gold bird nuzzles you.  'You did wonderfully,' the bird says cheerfully, spinning you around in its wings, giving an affectionate nip on the shoulder before setting you down.";
 		say "     The bird spreads its wings for you, showing off its reborn body.  'I was just having a refreshing bath when I heard you calling out for me.  Isn't my new body lovely?' the phoenix asks, preening its rich red and gold plumage.  'And I have changed like I needed to.  Now I'm reborn for this w... this place,' the firebird adds, turning around and raising her tail to show off a plump and wet cloacal pussy which you don't recall being there before.  'Mmmm... and it feels so good,' she adds with a coy glance at you and a shake of her tailfeathers.";
 		now hp of Athanasia is 5;
 	otherwise:
@@ -141,12 +140,82 @@ to say athanasiadesc:
 	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as as tall as a normal human being when upright.  She has rich red and golden plumage over her hawk-like body.  The edges of her wings and the end of tail ripple like the tongue of a flame, but do not harm you as you touch them.  Her golden eyes shine with intelligence and warmth for you and while her sharp, raptor beak looks dangerous, it nuzzles tenderly against your side.  Between her legs is a wet slit, something between a woman's pussy and a bird's cloacal vent.";
 
 Instead of conversing the Athanasia:
-	say "     [one of]Athanasia smiles and nuzzles her golden beak against you.  'I want to thank you again for helping me.  I don't know if I would have ever woken up without your help.'[or]The phoenix nips at your shoulder.  'I want to [']repay['] you for all you've done soon.'[or]The phoenix rubs her thighs together.  'Mmm... I never felt this way before.  It's so nice.'[or]'I was here before, a long time ago.  Things have certainly changed since then.'[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[at random]";
+	if hp of Athanasia < 5:
+		say "     ERROR-Athanasia-5T: You should not be able to speak to me at this point!";
+	if hp of Athanasia is 5:
+		say "     [one of]Athanasia smiles and nuzzles her golden beak against you.  'I want to thank you again for helping me.  I don't know if I would have ever woken up without your help.'[or]The phoenix nips at your shoulder.  'I want to [']repay['] you for all you've done soon.'[or]The phoenix rubs her thighs together.  'Mmm... I never felt this way before.  It's so nice.'[or]'I was here before, a long time ago.  Things have certainly changed since then.'[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[at random]";
+	if hp of Athanasia is 6:
+		say "     [one of]Athanasia smiles and nuzzles her golden beak against you.  'I want to thank you again for helping me.  I don't know if I would have ever woken up without your help.'[or]The phoenix nips at your shoulder.  'I hope you'll let me [']repay['] you again soon for all you've done soon.'[or]The phoenix rubs her thighs together.  'Mmm... I can hardly wait to return home and share this gift with the others.'[or]'I was here before, a long time ago.  Things have certainly changed since then.'[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[or]'I've never done anything before in my existence like that.  I want to do it again soon.'[or]'This [']sex['] thing is strange to me, but such a delight.  I'm sure, with a little encouragement, the others will love it to,' she muses.[at random]";
+
 
 instead of fucking the Athanasia:
-	say "     We'll get to that eventually.  (content not yet available)";
+	follow the cock descr rule;
+	if hp of Athanasia < 5:
+		say "     ERROR-Athanasia-5F: You should be able to proposition me at this point!";
+	otherwise if lastfuck of Athanasia - turns < 8:
+		say "     'As wonderful as that would be, I want to savour the new pleasures my changed body brings, so let's not rush things too much,' the lovely bird says, nuzzling your side.";
+	otherwise:
+		if hp of Athanasia is 5:
+			now lastfuck of Athanasia is turns;
+			now hp of Athanasia is 6;
+			say "     Deciding it's pretty clear what the new and improved Athanasia wants, you run your hands over her soft feathers, sliding them down under her tail and stroking over her wet pussy.  It feels so hot to the touch, but does no harm.  Your nerves can tell it is burning, but there is no pain or discomfort that you'd expect with such a heat.  The pheonix moans at your touch, pressing her hindquarters back against your touch and raising her tail.  'Mmm... yes, that feels so good.'";
+			if cocks of player > 0:
+				say "     Finding yourself increasingly aroused by the red and gold bird, you press your face to her cloacal vagina and start licking and kisses at it, enjoying her mix of bird-like singing and moans of delight.  'This is so nice.  I've never felt like this before.  Oh, I... I need more...' she cries out as you give her clit a nibble.  As your tongue plays across those juicy folds, you toss aside your gear and clothes, stroking your rapidly stiffening cock.";
+				say "     Deciding to give her the [']more['] she's looking for, you move in behind her, lining up your cock with her feathered vent.  She moans loudly and shivers in delight as your cock sinks into her wonderfully hot hole.  The heat of her loins fills you, filling you with vigour that drives you to pound into her hard and fast.  She takes this with unabashed ecstasy, revelling in the wild rutting.  You run your hands through her soft, downy feathers as you mate her.  Her flames wash over your painlessly, almost as if they are holding you lovingly.";
+				if cock width of player < 12:
+					say "     You can feel the heat of her loins flowing into you, pooling inside your groin and seeping into your balls.  They swell a little from this power and feel as if they're filled with magma-hot cum.  This pressure builds and builds until finally you drive your cock deep inside her and release your hot load, blasting wonderfully hot semen deep inside the firebird.  She cries out in a shriek of delight, cumming hard as well as your cum floods her womb.  Once you're drained, you climb off of her and snuggle up with her, enjoying some loving nips from her large beak.";
+					increase cock width of player by 1;
+				otherwise:
+					say "     You can feel the heat of her loins flowing into you, pooling inside your groin and seeping into your balls.  They feel as if they're filled with magma-hot cum.  This pressure builds and builds until finally you drive your cock deep inside her and release your hot load, blasting wonderfully hot semen deep inside the firebird.  She cries out in a shriek of delight, cumming hard as well as your cum floods her womb.  Once you're drained, you climb off of her and snuggle up with her, enjoying some loving nips from her large beak.";
+			otherwise:
+				say "     Finding yourself increasingly aroused by the red and gold bird, you press your face to her cloacal vagina and start licking and kisses at it, enjoying her mix of bird-like singing and moans of delight.  'This is so nice.  I've never felt like this before.  Oh, I... I need more...' she cries out as you give her clit a nibble.  As your tongue plays across those juicy folds, you bring your hand up to start caressing them.";
+				say "     Not equipped to mount the needy bird, you slide several fingers into her instead, giving her a good finger-fucking.  She moans loudly and shivers in delight as your digits sinks into her wonderfully hot hole.  The heat of her loins fills you, filling you with vigour that flows up your arm and drives you to pound into her hard and fast.  She takes this with unabashed ecstasy, revelling in it all the more as you press another finger into her and soon your entire hand.  You stroke your free hand through her soft, downy feathers as you work to please her.  You can feel the heat of her loins flowing into you until finally she can't hold back any longer and cries out in delight, cumming hard with a shriek of pleasure.  Her hot juices wash over you, tasting delicious as you lick up as much as you can get will continuing to thrust through her climax.  After slipping your hand free, you snuggle up with her, enjoying some loving nips from her large beak.";
+		otherwise if hp of Athanasia is 6:
+			if cocks of player > 0 and a random chance of 2 in 5 succeeds:
+				say "     Deciding to have some more fun with the fiery bird, you run your hands across her body, ruffling her feathers to get her excited.  She nuzzles her large head against your side as you divest yourself of your clothes and gear.  'I want to try it this way, my friend,' she says, nuzzling her sharp beak down towards your cock.  Eying her sharp beak, you stroke her head feathers and remind her to be careful.  She gives your side a playful nip and releases a chirping chuckle.";
+				say "     Opening her beak, Athanasia lets your [cock size desc of player] [cock of player] shaft slide into it before closing it just enough to hold it gently while her broad, thick tongue slides across it.  You can't help but moan as that strong tongue slides across your cock and her seering hot breath blows sensually across your flesh, filling you with a warmth that soaks into you.  You stroke her head, complimenting her on how well she's doing and how quickly she's learning.  You thrust gently into her mouth, but mostly let the giant bird take care of it.";
+				if cock width of player < 12:
+					say "     You can feel the heat of her mouth flowing into you, pooling inside your groin and seeping into your balls.  They swell a little from this power and feel as if they're filled with magma-hot cum.  This pressure increases until finally you grip her head and your cock throbs in her maw, releasing shot after shot of your hot seed deep down her throat, which she happily swallows down.  Her tongue works you over until you've given every drop you can, then she cuddles you up in her flaming wings.";
+					increase cock width of player by 1;
+				otherwise:
+					say "     You can feel the heat of her mouth flowing into you, pooling inside your groin and seeping into your balls.  They almost feel as if they're filled with magma-hot cum.  This pressure increases until finally you grip her head and your cock throbs in her maw, releasing shot after shot of your hot seed deep down her throat, which she happily swallows down.  Her tongue works you over until you've given every drop you can, then she cuddles you up in her flaming wings.";
+			otherwise if cocks of player > 0 and a random chance of 3 in 5 succeeds:
+				say "     Deciding to enjoy more intimate time with the phoenix, you run your hands across her body and then down to her hot loins when the turns and presents her tail to you.  'Oh yes, I want you inside me again, my friend,' she calls out, shifting her taloned feat and grabbing for purchase.  You move in behind her, sinking your hard, throbbing cock into her wet, dripping cloacal pussy.  Feeling her heat flowing into you again, you rut her hard and fast, much to her delight.";
+				if cock width of player < 12:
+					say "     You can feel the heat of her loins flowing into you, centering at your groin and seeping into your balls.  They swell a little from this power and feel as if they're filled with molten lava.  This pressure builds and builds until finally you push your cock deep inside her and cum loudly, blasting wonderfully hot semen deep inside the firebird.  She cries out with a loud, avian shriek of delight, cumming hard as well as your seed floods her womb.  Once you're drained, you climb off of her and snuggle up with her, enjoying some loving nips from her large beak.";
+					increase cock width of player by 1;
+				otherwise:
+					say "     You can feel the heat of her loins flowing into you, pooling inside your groin and seeping into your balls.  They feel as if they're filled with molten lava.  This pressure builds and builds until finally you drive your cock deep inside her and release your hot load, blasting wonderfully hot semen deep inside the firebird.  She cries out in a shriek of delight, cumming hard as well as your cum floods her womb.  Once you're drained, you climb off of her and snuggle up in the bird's downy feathers, enjoying some loving nips from her large beak.";
+			otherwise if cunts of player > 0 and a random chance of 2 in 3 succeeds:
+				say "     Deciding to have some more fun with the fiery bird, you run your hands across her body, ruffling her feathers to get her excited.  She nuzzles her large head against your side as you divest yourself of your clothes and gear.  'Now it's my turn to please your sexual organs, my friend,' she says, nuzzling her sharp beak down towards your groin.  Eying her sharp beak, you stroke her head feathers and remind her to be careful.  She gives your side a playful nip and releases a chirping chuckle.";
+				say "     Opening her beak, Athanasia lets her broad, thick tongue slide across your wet folds.  It is exquisitely warm, like a bonfire that doesn't burn and only further stokes the heat in your loins.  Aside from the occasional nip at your side, she keeps her beak out of the way while her tongue works to pleasure you[if cunt width of player > 5].  She even manages to push some of it into you, fucking your loose cunny with that thick, wet organ[end if].  Her tongue keeps working you until you are finally sent over the edge in a crashing orgasm while her wings safely hold you in their fiery embrace[if cocks of player > 0].  Your cock throbs and pulses against her hard beak, spraying your thick seed across her face as it boils over from your overflowing balls[end if].";
+			otherwise:
+				say "     Deciding to enjoy more intimate time with the phoenix, you run your hands across her body and then down to her hot loins when the turns and presents her tail to you.  Getting down on your knees behind her, you bury your face in those soft feathers, licking and kissing her pussy.  She moans and chirps musically in pleasure especially loudly when you suck at her hard clit.  'Oh yes.  Just like that.  I love this new form of mine so much thanks to you.'  You lavish attention on her cloacal pussy, alternating between your mouth and several fingers, getting her to quiver and moan again and again before she reaches a crashing, fiery climax that sends her hot juices across your face.  You lap up her delicious juices, getting the giant bird clean before letting her roll over onto her back so you can snuggle up in her warm wings.";
+		[puts Snow Leopard as lead monster for sex change (appropriate size)]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Snow Leopard":
+				now monster is y;
+				break;
+		choose row monster from table of random critters;
+		if "Female Preferred" is listed in feats of player:
+			now sex entry is "Female";
+			if cunt length of player < cunt length entry and scenario is not "Researcher", follow the sex change rule;
+		otherwise if "Herm Preferred" is listed in feats of player:
+			now sex entry is "Both";
+			if cunt length of player < cunt length entry and cock length of player < cock length entry and scenario is not "Researcher", follow the sex change rule;
+		otherwise:
+			now sex entry is "Male";
+			if cock length of player < cock length entry and scenario is not "Researcher", follow the sex change rule;
 
 
-Section 5 - Endings (coming soon)
+Section 5 - Endings
+
+when play ends:
+	if hp of Athanasia >= 5:
+		if humanity of player < 10:
+			say "     Not long after your mind falls and you are lost to the infection, there is a fiery column which rises into air.  There is a triumphant ring to it, though also a hint of sadness.  You do not notice this event, too caught up in your new, lustful existence.";
+		otherwise:
+			say "     As you are being taken out of the city the by the military forces, everything stops for a moment as a fiery column erupts in the distance, shooting off into the sky.  You watch as the pillar of flame continues to ascend with a triumphant cry filled with ecstasy and joy.  You watch as the column briefly unfolds a broad pair of fiery wings before curling them back in and the blaze seems to implode upon itself.  The soldiers are in chaos at this sight, yelling over their radios to report in and demand orders while you watch with a smile, knowing that Athanasia the Phoenix is on her way home, off to share her precious gift with the rest of her people, probably changing them forever.";
 
 Athanasia ends here.
