@@ -60,7 +60,7 @@ When Play begins:
 	now area entry is "Zoo";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
+	now cock width entry is 7;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]

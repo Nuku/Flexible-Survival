@@ -372,6 +372,73 @@ Instead of resolving a Lovers Bench:
 		now Lovers Bench is resolved;
 
 
+Peach Tree is a situation.
+The sarea of Peach Tree is "Park";
+
+when play begins:
+	add Peach Tree to badspots of hermaphrodite;
+
+Instead of resolving a Peach Tree:
+	say "     Straying down a disused path, you find yourself approaching a large peach tree.  The tree is laden with large, juicy fruit.  Your mouth salivates just from the scent coming from it";
+	if hp of Joanna >= 7 and hp of Joanna < 90:		[Joanna's seed]
+		say ".  As you start to step towards the tree, intent on having your fill of its fruit, your belly stirs.  You stifle a groan as Joanna's seed inside you squirms in an uncomfortable way.  Having not felt that reaction from it before, you stop yourself short and realize that you were about to rush up to the tree without pausing to check if it was safe.  Now that you look, you can see that the earth around the base of the tree has been disturbed and proper scrutiny of the canopy shows some half-hidden vines.";
+		say "     The fruit is still quite tempting, but it seems to not be as free as it first appeared.  Shall you still try to gather some?";
+		if the player consents:
+			say "     Deciding to risk it, you get ready and approach the tree.  As you near the trunk, the seed inside you stirs again, stimulated by the scent of the other plant nearby until it cannot help but push its vine out and burrow into the soil.  The vines from the canopy take this opportunity to make a grab for you, but you are ready for them and prevent them from latching onto you by surprise.";
+			challenge "Parasitic Plant";
+			if lost is 0:
+				say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit.  You snag a couple of them and then make a run for it as more vines rustle in the canopy.  As you move further from the tree, Joanna's seed settles down again.  You stroke your belly as if petting it, thankful for the warning it tried to give before its instincts took over.";
+				add "peach" to invent of player;
+				add "peach" to invent of player;
+				add "peach" to invent of player;
+			otherwise:
+				infect "Parasitic Plant";
+				say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you.  The plant's semen has a distinct peach flavour to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices.  Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home.  Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released.  Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
+				now libido of player is libido of player / 2;
+				decrease humanity of player by 10;
+		otherwise:
+			say "     Deciding not to risk it, you cover your nose and head back the way you came.";
+	otherwise:
+		if plantdefeat is 1:
+			say ".";
+			say "     As you approach the peach tree, there is a squirming sensation from your belly before the slumbering plant inside you pushes free.  It digs its main vine into the soil near the tree, trapping you there as other vines start to descent from the canopy.  Tricked by the plant's alluring scent and tempting fruit, you are now caught in a fight with the vines.  Between those from the tree and the one inside you, you will have a struggle on your hands.";
+			decrease hp of player by hp of player / 4;
+		otherwise:
+			say ".";
+			say "     As you approach the peach tree, your mind is intent only on those delicious, juicy fruit and blind to all else until it is too late.  As you reach up to grab some of the peaches, vines whip out from the canopy, wrapping around your wrists and grabbing you tightly.  As you struggle against this, another tendril erupts from the soil at the base of the tree, driving itself into your [if cunts of player > 0]pussy[otherwise]anus[end if] and swelling to try and lock itself inside you.  You groan in a mix of discomfort and pleasure at this unusual intrusion and struggle to break free, but you will be fighting at a disadvantage this time as the plant's taken you by surprise.";
+			decrease hp of player by hp of player / 5;
+		challenge "Parasitic Plant";
+		if lost is 0:
+			say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit.  You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
+			add "peach" to invent of player;
+			add "peach" to invent of player;
+			add "peach" to invent of player;
+		otherwise:
+			infect "Parasitic Plant";
+			say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you.  The plant's semen has a distinct peach flavour to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices.  Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home.  Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released.  Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
+			now libido of player is libido of player / 2;
+			decrease humanity of player by 10;
+	now Peach Tree is resolved;
+
+
+Table of Game Objects(continued)
+name	desc	weight	object
+"peach"	"A very plump and juicy peach.  It is much larger than a typical peach, but smells all the more delicious."	1	peach
+
+peach is a grab object.
+
+the usedesc of peach is "[yummypeach]";
+
+to say yummypeach:
+	say "You decide to take a bite out of the juicy peach, savouring its soft flesh as you eat it.  The fruit slakes your hunger and thirst a little, though you can't help but become a little aroused as well.  Peaches have been called aphrodisiacs by some, after all.";
+	decrease thirst of player by 6;
+	decrease hunger of player by 3;
+	increase libido of player by 10;
+
+instead of sniffing peach:
+	say "The oversized peach smells delicious and tempting.";
+
+
 Section 5 - State Fair Events
 
 Concession Stand is a situation.
