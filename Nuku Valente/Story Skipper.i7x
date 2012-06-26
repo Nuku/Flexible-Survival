@@ -40,6 +40,7 @@ Carry out reciting:
 			-- 1:
 				if the player's command matches "[number]":
 					now the strength of player is the number understood;
+					now capacity of player is strength of player * 5;
 			-- 2:
 				if the player's command matches "[number]":
 					now the dexterity of player is the number understood;
@@ -72,7 +73,9 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now unusual creature is resolved;
 					now the hp of doctor matt is the number understood;
-					if hp of doctor matt is 3, now level of doctor matt is turns;
+					now level of doctor matt is turns;
+					if hp of doctor matt > 0 and hp of doctor matt < 100:
+						now Outside Trevor Labs is known;
 					if hp of doctor matt is greater than 4 and hp of doctor matt is less than 100:
 						move the microwave to the location of doctor matt;
 					if hp of doctor matt is 6:
@@ -691,6 +694,9 @@ carry out Trixiecheck2:
 	say "Cute crab: [if cute crab is tamed]1[otherwise]0[end if]   Exotic bird: [if exotic bird is tamed]1[otherwise]0[end if]   Felinoid: [if Felinoid companion is tamed]1[otherwise]0[end if][line break]";
 	say "Bee girl: [if bee girl is tamed]1[otherwise]0[end if]   House cat: [if house cat is tamed]1[otherwise]0[end if]   Little fox: [if little fox is tamed]1[otherwise]0[end if][line break]";
 	say "Skunk kit: [if skunk kit is tamed]1[otherwise]0[end if]   Helper dog: [if helper dog is tamed]1[otherwise]0[end if]   Rachel: [mousecurse][line break]";
+	say "Rachel: [mousecurse]     Elijah: [hp of Elijah]    Elijah interactions: [npcEint]";
+	say "Latex Husky Mode: [if latexhuskymode is true]ON[otherwise]OFF[end if]     Parasite?: [if insectlarva is true]YES[otherwise]NO[end if]";
+	say "Leonard: [hp of Leonard]     Solstice: [hp of Solstice]";
 
 
 Story Skipper ends here.
