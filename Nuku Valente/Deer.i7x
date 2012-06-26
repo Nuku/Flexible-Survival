@@ -300,7 +300,7 @@ instead of conversing the susan:
 	
 [Susan is in primary lab.]
 
-deer Den is a room. "You should not be here.". It is unknown. It is fasttravel. It is private.
+deer Den is a room. "You should not be here.". It is unknown. It is private.
 
 After examining deer den:
 	say "Stuff happens, then you go home.";
