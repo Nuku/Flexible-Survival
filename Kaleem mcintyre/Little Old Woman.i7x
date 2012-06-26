@@ -16,6 +16,7 @@ Instead of resolving a Defenseless old lady:
 		add "chips" to invent of player;
 		increase strength of player by 1;
 		say "Your strength has increased by 1!";
+		increase capacity of player by 5;
 		increase humanity of player by 25;
 		if humanity of player > 100, now humanity of player is 100;
 		decrease libido of player by 15;

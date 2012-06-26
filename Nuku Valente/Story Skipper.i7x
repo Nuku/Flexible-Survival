@@ -40,6 +40,7 @@ Carry out reciting:
 			-- 1:
 				if the player's command matches "[number]":
 					now the strength of player is the number understood;
+					now capacity of player is strength of player * 5;
 			-- 2:
 				if the player's command matches "[number]":
 					now the dexterity of player is the number understood;
