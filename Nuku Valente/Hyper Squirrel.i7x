@@ -77,7 +77,7 @@ Instead of Resolving a Hyper Squirrel Girl:
 
 Section 2 - Snow
 				
-Squirrel Den is a room. It is fasttravel. It is private.	[This is just a holding spot and not a real room]
+Squirrel Den is a room. It is private.	[This is just a holding spot and not a real room]
 
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.";
 Snow is a person.

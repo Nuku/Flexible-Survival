@@ -107,7 +107,7 @@ Instead of resolving Find Lorenda:
 			now found is 1;
 		otherwise:
 			say "Despite your search and Lisa's information, you fail to find her.  She has to be around here somewhere.";
-			stop the action;
+			continue the action;
 	if lisacheat is 0:
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
@@ -117,7 +117,7 @@ Instead of resolving Find Lorenda:
 			now found is 1;
 		otherwise:
 			say "Despite your search, you fail to find her.  She has to be around here somewhere.";
-			stop the action;
+			continue the action;
 	if humorous is banned or guy is banned:
 		say "     You follow a hopeful trail and you suddenly realize there are other tracks following the same trail.  You rush forward and arrive to find a pair of creatures bearing down on a woman screaming frantically down one of the alleyways.  She is pinned to the wall, between the pair of them.  Thinking quickly, you rush to her aid!";
 		now battleground is "Outside";
