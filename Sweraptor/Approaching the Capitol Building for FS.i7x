@@ -11,7 +11,7 @@ Government Assistance is a situation.  The level of Government Assistance is 6.
 
 Instead of Resolving the Government Assistance:
 	say "     As you are travelling through the city, you recognize a couple of government buildings and offices, largely in ruin.  The air is heavy with smoke and soot, but you start to run regardless.  You recall that you're close to the State Capitol Building.  If there's anywhere they'll know what's going on and where you can get assistance, it'll be there.  You cough as you keep pushing through the smokey air, turning a corner to see what has become of the Capitol Building and the surrounding area, dashing your hopes instantly.";
-	say "     The devastation here is extensive, with burnt out and smashed buildings all around.  Several of the streets are cracked and broken, spewing flames.  It looks almost like some twisted war zone.  The creatures here must be particularly dangerous and devastating.  From the look of de destruction, these creatures are probably roaming around the whole area, making travelling here quite risky.  You'd best be extra cautious if you plan on looking around here.";
+	say "     The devastation here is extensive, with burnt out and smashed buildings all around.  Several of the streets are cracked and broken, spewing flames.  It looks almost like some twisted war zone.  The creatures here must be particularly dangerous and devastating.  From the look of the destruction, these creatures are probably roaming around the whole area, making travelling here quite risky.  You'd best be extra cautious if you plan on looking around here.";
 	now The Approaching the Capitol Building is known;
 	move the player to Approaching the Capitol Building;
 	now Government Assistance is resolved;
@@ -93,7 +93,7 @@ instead of going east from Rusty Walkways:
 
 this is the capitol wandering rule:
 	now battleground is "Capitol";
-	let bonus be 20;		[base 20% chance of random fight while simply moving]
+[	let bonus be 20;		[base 20% chance of random fight while simply moving]
 	if "Curious" is listed in feats of player, increase bonus by 4;
 	if "Stealthy" is listed in feats of player, decrease bonus by 4 + (( perception of player - 10 ) / 2);
 	if "Bad Luck" is listed in feats of player, increase bonus by 4;
@@ -105,7 +105,7 @@ this is the capitol wandering rule:
 			fight;
 		say "     After that delay, you continue on your way, hoping to find someplace to a little safer, if at least only for the moment.";
 		follow the turnpass rule;
-
+]
 
 Section 4 - Situations
 
