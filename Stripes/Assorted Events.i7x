@@ -423,11 +423,11 @@ Instead of resolving a Peach Tree:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"peach"	"A very plump and juicy peach.  It is much larger than a typical peach, but smells all the more delicious."	1	peach
+"tasty peach"	"A very plump and juicy peach.  It is much larger than a typical peach, but smells all the more delicious."	1	peach
 
-peach is a grab object.
+tasty peach is a grab object.
 
-the usedesc of peach is "[yummypeach]";
+the usedesc of tasty peach is "[yummypeach]";
 
 to say yummypeach:
 	say "You decide to take a bite out of the juicy peach, savouring its soft flesh as you eat it.  The fruit slakes your hunger and thirst a little, though you can't help but become a little aroused as well.  Peaches have been called aphrodisiacs by some, after all.";
@@ -435,7 +435,7 @@ to say yummypeach:
 	decrease hunger of player by 3;
 	increase libido of player by 10;
 
-instead of sniffing peach:
+instead of sniffing tasty peach:
 	say "The oversized peach smells delicious and tempting.";
 
 
