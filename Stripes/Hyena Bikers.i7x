@@ -213,6 +213,7 @@ This is the bikeride rule:
 			now ridemessage is "     You decide to get dropped off at the Capitol Building.  He gives a rough, hyena laugh.  'Are you looking for some help from the governor?  Ain[apostrophe]t gonna happen.  That place is all torn up.  Some kinda volcano or meteor strike or something has made a mess of it.  I[apostrophe]ll drop you off as close as I can, but don[apostrophe]t expect to find much.'[line break]";
 		Move player to Approaching the Capitol Building, without printing a room description;
 		Now Approaching the Capitol Building is known;
+		Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
 		now Hyena Bikers is resolved;
 	otherwise if title entry is "Power Plant":
 		if bikedest is 0:
