@@ -372,13 +372,13 @@ Instead of resolving a Lovers Bench:
 		now Lovers Bench is resolved;
 
 
-Peach Tree is a situation.
-The sarea of Peach Tree is "Park";
+PeachTree is a situation.
+The sarea of PeachTree is "Park";
 
 when play begins:
-	add Peach Tree to badspots of hermaphrodite;
+	add PeachTree to badspots of hermaphrodite;
 
-Instead of resolving a Peach Tree:
+Instead of resolving a PeachTree:
 	say "     Straying down a disused path, you find yourself approaching a large peach tree.  The tree is laden with large, juicy fruit.  Your mouth salivates just from the scent coming from it";
 	if hp of Joanna >= 7 and hp of Joanna < 90:		[Joanna's seed]
 		say ".  As you start to step towards the tree, intent on having your fill of its fruit, your belly stirs.  You stifle a groan as Joanna's seed inside you squirms in an uncomfortable way.  Having not felt that reaction from it before, you stop yourself short and realize that you were about to rush up to the tree without pausing to check if it was safe.  Now that you look, you can see that the earth around the base of the tree has been disturbed and proper scrutiny of the canopy shows some half-hidden vines.";
@@ -418,7 +418,7 @@ Instead of resolving a Peach Tree:
 			say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you.  The plant's semen has a distinct peach flavour to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices.  Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home.  Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released.  Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 10;
-	now Peach Tree is resolved;
+	now PeachTree is resolved;
 
 
 Table of Game Objects(continued)
