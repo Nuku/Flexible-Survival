@@ -245,6 +245,7 @@ instead of resolving a Prank Aftermath:
 		if libido of player > 100, now libido of player is 100;
 	say "[line break]";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     As you watch, the last of the soldiers is made into a herm with a pair of swelling breasts on her chest and a pair of feline ears.  She is pushed into the arms of two of her former teammates.  Too far gone in their own infection, they push her onto all fours, one taking her virgin pussy with her feline cock and the other forces her cock into his mouth.  As they fuck her, all three continue to change until they are full puma herms, fucking with mrowls of lustful delight.  The former soldiers cum hard into their ex-teammate, filling her new pussy and feline muzzle with their hot cum.  Watching this arousing show, you can't help but get turned on and start masturbating.  As you climax, you groan loudly and cum hard, unable to stop yourself.  But this doesn't go unheard and several of the powerful felines come after you.  Having just cum, you barely manage to get yourself back on your feet and ready to fight by the time the first one reaches you.";
 	say "[line break]";
 	challenge "Cougar";
@@ -286,6 +287,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 10;
 		if companion of player is pink raccoon:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Raccoon":
@@ -309,6 +311,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		otherwise if companion of player is Gryphoness:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Hermaphrodite Gryphon":
@@ -331,6 +334,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		otherwise if companion of player is Felinoid companion:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Felinoid":
@@ -354,6 +358,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		otherwise if companion of player is bee girl:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "     As you're finishing up your scavenging, Honey buzzes on over and takes your hand in her.  She smiles up at you and grins playfully.  She gives your arm a gentle tug with her four hands.  'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly.  'I used to see couples here when I was...'  She pauses, remembering her lost sisters.  'But I have you now,' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer.  Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on her offer.";
 			if cocks of player > 0:
 				say "     Honey climbs up onto the bench, raising her bee abdomen up and waving her cute little bottom at you.  The soft, golden puff over her pussy is soaked in her juices and you can see her soft lips parted and ready for you.  The bumblebee drone buzzes excitedly as you move in behind her and get your hard cock lined up with her eager pussy.  She pushes herself back onto your cock slowly, clearly holding back from pushing it all in quickly, wanting to savour this moment.  Once you're stuffed inside her, you wrap your arms around her insect abdomen and start thrusting.  Her wings buzz frantically and her abdomen twitches in your arms.  'Mmm... kiss it.  Please, I want you to kiss me there,' she moans as her pussy quivers and squeezes around you at the thought of it.  So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others.  Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex.  With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
@@ -366,6 +371,35 @@ Instead of resolving a Lovers Bench:
 			if "Pure" is listed in feats of player, increase humanity of player by 1;
 			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
 			increase xp of bee girl by ( level of bee girl + 1 ) * 3;
+			increase score by 20;
+		otherwise if companion of player is mouse girl:
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Mental Mouse":
+					now monster is y;
+					break;
+			say "     As you're finishing up your scavenging, Rachel moves up beside you, running her paws over your [bodytype of player] body and taking your hand in her little paws.  She smiles up at you, looking deep into your eyes.  'You want to spend some time with me on the bench, don't you?' she says softly and you nod, the heavy scent of lust in the air and her mental powers  you long to play with the sexy mousie on it.  'Just some persomal time for you and I, none of the others listening in this time.'  The idea to resist doesn't even pop into your mind and you [if scalevalue of player >= 3]scoop her up into your arms and onto[otherwise]rush her over to[end if] the bench.";
+			if cocks of player > 0:
+				if scalevalue of player >= 3:
+					say "     You set Rachel down on the lovers bench and she stands on it with her hands gripping the back rest.  Now elevated for easier mounting, the small mouse raises her tail and wiggles her rear with a needy squeak.  Her exposed pussy is dripping wet and her musine cock is hard and dribbling precum, her body as aroused by the lustful scents as yours is.  You move in behind her and get your hard cock lined up with her wet cunt.  She pushes herself back onto your cock quickly, releasing another squeak as she grips the bench.  Leaning overtop of the smaller mouse girl, you grab the back of the bench as well and give her ears a nibble as you start pounding into her.  She shivers in pleasure at the nibbles and slides her slender tail around your waist.";
+					say "     As you continue thrusting into her, you can feel her pleasure as well as your own, sharing your growing love for each other.  You can feel the quivers of her pussy around your cock as well as the intense sensations this gives her.  You can feel the pulse of her cock as well as the growing pressure inside her balls as you stroke her maleness.  You can even sense her gripping the wood tightly and her small claws digging into it to leave fresh marks on the bench.  'Oh, my love.  It feels so good to be with you.  We should be together forever,' the busty little herm squeaks.  'Accept your place with me and it will always be like this.'  You moan and nuzzle at her neck, feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+				otherwise:
+					say "     You and Rachel climb up onto the bench, getting onto all fours atop it.  Both being rather small, you can easily both fit on the bench.  The small mouse raises her tail and wiggles her rear with a needy squeak.  Her exposed pussy is dripping wet and her musine cock is hard and dribbling precum, her body as aroused by the lustful scents as yours is.  You move in behind her and get your hard cock lined up with her wet cunt.  She pushes herself back onto your cock quickly, releasing another squeak as she grips the bench.  Leaning overtop of the smaller mouse girl, you place a hand on the back of the bench for support as the other moves to your sexy lover's cock as you start pounding into her.  She shivers in pleasure at the stroking and slides her slender tail around your waist.";
+					say "     As you continue thrusting into her, you can feel her pleasure as well as your own, sharing your growing love for each other.  You can feel the quivers of her pussy around your cock as well as the intense sensations this gives her.  You can feel the pulse of her cock as well as the growing pressure inside her balls as you stroke her maleness.  You can even sense her gripping the wood tightly and her small claws digging into it to leave fresh marks on the bench.  'Oh, my love.  It feels so good to be with you.  We should be together forever,' the busty little herm squeaks.  'Accept your place with me, with all of us, and it will always be like this.'  You moan and nuzzle at her neck, feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+				say "     After a powerfully long orgasm that pumps your seed into the cute mouse girl's pussy while her own seed blasts to splatter across the backrest, you slide your cock from her.  Your companion is extra-snugly after the lovemaking, nuzzling at your side as she holds your hand in hers and wraps her tail around your wrist, and you happily return this affection, feeling much closer to her.";
+			otherwise:
+				say "     Running your hands over each other, you can feel the mousie's stiff cock pressing against you and you can sense what she wants of you.  Unwilling to deny the needs of your sexy little lover, you lay your [bodytype of player] across the bench with your hips and legs hanging off the edge, offering up your [if cunts of player > 0]pussy[otherwise]your ass[end if] to the mouse girl.  She runs her little paws over your backside and squeaks happily, pleased that this puts you at the perfect height for her cock.  Moving in behind you, she lines up her throbbing maleness with your waiting hole and slowly sinks into you.  You can't help but moan and squeak in delight as you're penetrated, gripping the wood firmly as she starts pounding into you.";
+				say "     As she continues thrusting into you, you can feel her pleasure as well as your own, sharing your growing love for each other.  You can feel her cock inside you as well as the intense pleasure of your [if cunts of player > 0]wet vagina[otherwise]tight hole[end if] sliding across her hard flesh as well as the growing pressure inside her balls.  You can feel the quivering of her aroused pussy and the wet juices running down her thighs, as well as the slap of her own balls against her clit as she thrusts.  Sharing in all of this, you moan loudly and grip the bench firmly, digging fresh marks into it with your nails.  'Oh, my love.  It feels so good to be with you.  We should be together forever,' the busty little herm squeaks.  'Accept your place with me, with all of us, and it will always be like this.'  You moan and nod eagerly, pressing back into her thrusts and feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+				say "     After a powerfully long orgasm that sends her hot seed into your [if cunts of player > 0]waiting womb and your synchronous climax[otherwise]stuffed bottom[end if], she slides her cock slowly from you, caressing your ass.  Your companion is extra-snugly after the lovemaking, nuzzling at your side as she holds your hand in hers and wraps her tail around your wrist, and you happily return this affection, feeling much closer to her.";
+				say "[impregchance]";
+			infect "Mental Mouse";
+			now libido of player is libido of player / 2;
+			decrease humanity of player by 20;
+			if "Pure" is listed in feats of player, increase humanity of player by 5;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by 5;
+			increase xp of mouse girl by ( level of mouse girl + 1 ) * 3;
 			increase score by 20;
 		otherwise:
 			increase libido of player by ( 100 - libido of player ) / 4;
@@ -388,9 +422,9 @@ Instead of resolving a PeachTree:
 			challenge "Parasitic Plant";
 			if lost is 0:
 				say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit.  You snag a couple of them and then make a run for it as more vines rustle in the canopy.  As you move further from the tree, Joanna's seed settles down again.  You stroke your belly as if petting it, thankful for the warning it tried to give before its instincts took over.";
-				add "peach" to invent of player;
-				add "peach" to invent of player;
-				add "peach" to invent of player;
+				add "tasty peach" to invent of player;
+				add "tasty peach" to invent of player;
+				add "tasty peach" to invent of player;
 			otherwise:
 				infect "Parasitic Plant";
 				say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you.  The plant's semen has a distinct peach flavour to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices.  Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home.  Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released.  Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
@@ -410,9 +444,9 @@ Instead of resolving a PeachTree:
 		challenge "Parasitic Plant";
 		if lost is 0:
 			say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit.  You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
-			add "peach" to invent of player;
-			add "peach" to invent of player;
-			add "peach" to invent of player;
+			add "tasty peach" to invent of player;
+			add "tasty peach" to invent of player;
+			add "tasty peach" to invent of player;
 		otherwise:
 			infect "Parasitic Plant";
 			say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you.  The plant's semen has a distinct peach flavour to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices.  Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home.  Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released.  Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
@@ -423,7 +457,7 @@ Instead of resolving a PeachTree:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"tasty peach"	"A very plump and juicy peach.  It is much larger than a typical peach, but smells all the more delicious."	1	peach
+"tasty peach"	"A very plump and juicy peach.  It is much larger than a typical peach, but smells all the more delicious."	1	tasty peach
 
 tasty peach is a grab object.
 
@@ -493,13 +527,16 @@ Instead of resolving a Concession Stand:
 			otherwise if foodvendor is 3:
 				say "     Your friend the vendor smiles very happily as you come over again.  He doesn't bother to put out any food this time and hops fully over the counter.  Putting his shifting hands (paws?) on you, he leans you over the counter and unzip his fly.  Feeling him move to grope your ass, you moan softly and get your clothes and gear off.  He runs his fingers (talons?) down your back and rubs his throbbing shaft against your rear, making you moan again.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				if cunts of player > 0:
 					say "     The vendor lines up his cock to your pussy, then sinks it into you while it is small and musine in form.  It then shifts and becomes thick and equine, filling you deeply.  This sudden change leaves you gasping in pleasure, writhing over his meat.  It changes inside you again and again as he pounds away at you.  His penis drives into you with a canine knot that pops tightly into you, then pulls out with feline barbs that stimulate you walls deliciously.  It rubs your vaginal folds with draconic ridges, then pushes past your cervix as a slimy tendril[if cocks of player > 1].  His hands, feeling like velvety paws for a moment, grip your cocks and stroke them as he fucks you good and hard[otherwise if cocks of player is 1].  His hand, feeling like a velvety paw for a moment, grips your cock and strokes it as he fucks you good and hard[end if].  You writhe under this ever-changing rutting, loving every unique moment of pleasure it gives you.";
 				otherwise:
 					say "     The vendor lines up his cock to your tight asshole, then sinks it into you while it is small and musine in form.  It then shifts and becomes thick and equine, filling you deeply.  This sudden change leaves you gasping in pleasure, writhing over his meat.  It changes inside you again and again as he pounds away at you.  His penis drives into you with a canine knot that pops tightly into you, then pulls out with feline barbs that stimulate you walls deliciously.  It rubs against your spread anus with draconic ridges, then pushes deep into your bowels as a slimy tendril[if cocks of player > 1].  His hands, feeling like velvety paws for a moment, grip your cocks and stroke them as he fucks you good and hard[otherwise].  His hand, feeling like a velvety paw for a moment, grips your cock and strokes it as he fucks you good and hard[end if].  You writhe under this ever-changing rutting, loving every unique moment of pleasure it gives you.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				say "     'You love that, don't you?' he says in a soft, alluringly feline voice as ear while pounding a new cock into you with each thrust.  You respond by nodding your head eagerly.  'Of course, you'll want it again and again, won't you?'  You can only nod all the more, agreeing with his virile, lapine tone.  'You want to stay here and be my slutty pet to get it all the time.  Just think of it, being my slut, changing into different creatures for me to fuck.  Always new pleasures to be had.  You want that, don't you?' he rumbles in your ear, sounding strong and lupine now.  Lost in the haze of his enthralling power, you can't help but nod vigorously, agreeing to become his, wanting to be used like this over and over again.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				say "     Having given in to him, you can feel the last of your will draining away, succumbing to being your master's slutty pet.  His to change.  His to fuck[if cunts of player > 0].  His to breed[end if].  And he rewards you by driving his cock deep inside you, feeling like an equine's, but so much larger, perhaps an elephant?  With his giant cock thrust deep inside you, he blasts his hot load into you, filling your [if cunts of player > 0]womb[otherwise]ass[end if] with his virile seed.  You moan and pant in delight as its volume bloats your tummy a little, making you feel so full and happy with so much of your new master's cum inside you.";  
 				now humanity of player is 9;
 				increase foodvendor by 1;
@@ -598,6 +635,7 @@ Instead of resolving a Beach Party:
 			follow the sex change rule;
 			follow the sex change rule;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if libido of player < 60, now libido of player is 60;
 		if humanity of player < 10:
 			say ".  With your mind fading away, you giggle happily and bound off into the water to play with your new friends as you forget yourself entirely and become a fun-loving beach toy.";
