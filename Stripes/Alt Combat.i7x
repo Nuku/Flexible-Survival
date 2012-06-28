@@ -19,18 +19,24 @@ missskip is a number that varies.		[ Used to indicate if the default monster mis
 monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
 chargeup is a number that varies.		[ Used to track an attack that charges across several turns. ]
 
+
 Section 2 - Combat
 
 Chapter 0 - Combat Menu
 
 To Combat Menu:
-	now combat abort is 0;
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	now inafight is 1;
 	now automaticcombatcheck is 0; [sets to zero as combat starts, just in case]
 	follow the monster combat mode rule;
+	if hp of player < 1 and combat abort is 0:
+		say "     You are too injured to resist the creature.";
+		lose;
+	otherwise if libido of player >= 110 and combat abort is 0:
+		say "     You are too aroused to consider resisting the creature.";
+		lose;
 	while hp of player is greater than 0 and monsterhp is greater than 0:
 		if combat abort is 1:
 			now combat abort is 0;

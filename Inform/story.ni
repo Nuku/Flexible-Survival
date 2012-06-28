@@ -9,7 +9,7 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 950000.
 Use MAX_OBJ_PROP_COUNT of 128.
-use MAX_SYMBOLS of 65000.
+use MAX_SYMBOLS of 70000.
 use MAX_NUM_STATIC_STRINGS of 40000.
 use ALLOC_CHUNK_SIZE of 85000.
 use MAX_OBJECTS of 1000.
@@ -1317,7 +1317,7 @@ To Birth:
 	add bodyname of child to childrenbodies;
 	add skinname of child to childrenskins;
 	increase score by 5;		[15 base +5/child]
-	increase perception of player by 1;
+	if perception of player < 24, increase perception of player by 1;
 	now the child is not born;
 	now the gestation of child is 0;
 
@@ -2819,6 +2819,7 @@ To level up:
 Before combat is a number that varies.
 
 To fight:
+	now combat abort is 0;
 	if battleground is "void", stop the action;
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	let Q be a list of numbers;
@@ -2913,6 +2914,7 @@ To fight:
 	rule succeeds;
 
 To challenge:
+	now combat abort is 0;
 	let debit be 0;
 	choose row monster from the table of random critters;
 	if lev entry is less than level of player and hardmode is true:
@@ -3169,11 +3171,11 @@ This is the turnpass rule:
 	if the hp of the player is greater than the maxhp of the player, now the hp of the player is the maxhp of the player;
 	if a random number from 1 to 20 is greater than ( ( the stamina of the player divided by 2 ) minus 1 ):
 		increase hunger of player by 1;
-		if child is born and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
+		if number of entries in childrenfaces is greater than 0 and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
 		if "Spartan Diet" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease hunger of player by 1;
 	if a random number from 1 to 20 is greater than ( ( the stamina of the player divided by 3 ) minus 1 ):
 		increase thirst of player by 3;
-		if child is born, increase thirst of player by 1;
+		if number of entries in childrenfaces is greater than 0, increase thirst of player by 1;
 		if "Spartan Diet" is listed in feats of player, decrease thirst of player by 1;
 	if "Automatic Survival" is listed in feats of player:
 		now thirst of player is 0;
