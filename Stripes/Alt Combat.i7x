@@ -397,10 +397,10 @@ This is the flee rule:
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
 	if "Gas Cloud" is listed in feats of player and gascloud is 0:
-		if tailname of player is "Skunk" or tailname of player is "Skunk Girl" or tailname of player is "Skunk Taur":
+		if tailname of player is "Skunk" or tailname of player is "Skunkbeast Lord" or tailname of player is "Skunk Taur":
 			say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
 			increase gascloud by 5;
-		if tailname of player is "Squid":
+		otherwise if tailname of player is "Squid":
 			say "Turning around, you spray an inky cloud at your enemy before trying to escape.";
 			increase gascloud by 5;
 		otherwise:

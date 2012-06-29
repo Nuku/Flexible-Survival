@@ -936,7 +936,7 @@ carry out hunting:
 					now dice is a random number from 1 to 20;
 					if "Bad Luck" is listed in feats of player, increase dice by 1;
 					if "Curious" is listed in feats of player, increase dice by 2;
-					if dice is greater than 14:
+					if dice is greater than 14 and battleground is not "void":
 						Fight;
 						if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
 							say "As you are trying to recover from your last encounter, another roving creature finds you.";
@@ -946,7 +946,7 @@ carry out hunting:
 					now dice is a random number from 1 to 20;
 					if "Bad Luck" is listed in feats of player, increase dice by 1;
 					if "Curious" is listed in feats of player, increase dice by 2;
-					if dice is greater than 14:
+					if dice is greater than 14 and battleground is not "void":
 						Fight;
 						if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
 							say "As you are trying to recover from your last encounter, another roving creature finds you.";
@@ -975,7 +975,7 @@ carry out hunting:
 						now dice is a random number from 1 to 20;
 						if "Bad Luck" is listed in feats of player, increase dice by 1;
 						if "Curious" is listed in feats of player, increase dice by 2;
-						if dice is greater than 14:
+						if dice is greater than 14 and battleground is not "void":
 							now combat abort is 0;
 							now lost is 0;
 							Fight;
@@ -989,7 +989,7 @@ carry out hunting:
 						now dice is a random number from 1 to 20;
 						if "Bad Luck" is listed in feats of player, increase dice by 1;
 						if "Curious" is listed in feats of player, increase dice by 2;
-						if dice is greater than 14:
+						if dice is greater than 14 and battleground is not "void":
 							Fight;
 							if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
 								say "As you are trying to recover from your last encounter, another roving creature finds you.";
@@ -1005,7 +1005,7 @@ carry out hunting:
 			let dice be a random number from 1 to 20;
 			if "Bad Luck" is listed in feats of player, increase dice by 1;
 			if "Curious" is listed in feats of player, increase dice by 2;
-			if dice is greater than 14:
+			if dice is greater than 14 and battleground is not "void":
 				Fight;
 				if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
 					say "As you are trying to recover from your last encounter, another roving creature finds you.";
@@ -2820,7 +2820,6 @@ Before combat is a number that varies.
 
 To fight:
 	now combat abort is 0;
-	if battleground is "void", stop the action;
 	now monster is a random number from 1 to number of filled rows in the table of random critters;
 	let Q be a list of numbers;
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
@@ -4429,6 +4428,7 @@ Include Disorganization by Kaleem mcintyre.
 
 [Monsters/Infections]
 Include Chocolate Lab by Stripes.
+Include Skunkbeast Lord by Stripes.
 Include Female Husky by Nuku Valente.
 Include Yamato Dragon For FS by Kohryu.
 Include Yamato Dragoness For FS by Kohryu.
