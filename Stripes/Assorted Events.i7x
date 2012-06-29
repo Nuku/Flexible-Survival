@@ -406,7 +406,7 @@ Instead of resolving a Lovers Bench:
 		now Lovers Bench is resolved;
 
 
-PeachTree is a situation.
+PeachTree is a situation.  The level of PeachTree is 4.
 The sarea of PeachTree is "Park";
 
 when play begins:

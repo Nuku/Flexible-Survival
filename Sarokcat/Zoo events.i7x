@@ -1,4 +1,5 @@
-Zoo Events by Sarokcat begins here.
+Version 2 of Zoo Events by Sarokcat begins here.
+[Version 2 - Adjustments to Vet Supplies event]
 
 "Adds a series of random events to Flexible Survival set in the zoo area."
 
@@ -209,10 +210,13 @@ The sarea of Vet supplies is "Zoo";
 
 Instead of Resolving a Vet supplies:
 	say "Traveling down some of the zoo maintenance pathways, you come across a small veterinary bag, obviously used by one of the employees to treat the animals. Unfortunately for the employee involved, from the torn vegetation and scent of animal sex in the area, it looks like they were the one who got their 'treatment' today instead. Still deciding there might be something useful to you in the bag, you begin to sort through the various supplies inside. Strangely most of what seems to be contained within is a variety of animal hormone shots, and treatments for either male or female animals depending.  You think you could probably inject yourself with some of the animal hormone boosters, and the extra hormones could help you maintain your gender identity... but should you really be using medicine designed for animals? Do you inject yourself?";
-	if player consents:
+	if isHellhound is true:
+		say "But before you can even come to any sort of decision, you feel the burning pain of hellfire within you.  Your hellhound tainted body clearly will not allow you to use such measures to potentially alter your pact with the fel beast.";
+		Now Vet supplies is resolved;
+	otherwise if player consents:
 		say "Deciding to try your luck with the animal drugs, you sort them out until you have male and female hormone shots and treatments fully laid out, as well as having figured out just how to apply them properly.  Now that leaves you with just one last decision... which shots do you want to take?  Female, male or both?  Do you take the female shots?";
 		if player consents:
-			say "Examining the female shots you have laid out before you, you decide to discard the male  shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things..";
+			say "Examining the female shots you have laid out before you, you decide to discard the male  shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things...";
 			if "Female Preferred" is listed in feats of the player:
 				say "While the chemicals running through your body rushes to your head, you groan as your instincts surge and makes you feel even more beastial then ever, you seem to feel as if your body could not truly be even more female oriented, and all the shots seem to do is make you feel more animalistic and feral then ever.";
 				decrease humanity of player by 40; 
