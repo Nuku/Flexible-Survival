@@ -534,7 +534,7 @@ lastchurchattempt is a number that varies.  lastchurchattempt is normally 248.
 
 instead of going north from the Beach Plaza while hellhoundlevel > 0:
 	if churchenter is 0:
-		say "     You move to enter the church, but you find it increasingly difficult to move closer to it as you approach.  Stubbornly, you try to advance, but are filled with increasing pain as you press onwards.  Eventually, you reach a point where the pain is unbearable and you are moving a centimeter closer despite pushing with all your might.  Exhausted and frustrated, you howl like a beast and leap back.  Clearly something, or someone, is preventing you from entering this holy place.  Perhaps you should try again later to enter.";
+		say "     You move to enter the church, but you find it increasingly difficult to move closer to it as you approach.  Stubbornly, you try to advance, but are filled with increasing pain as you press onwards.  Eventually, you reach a point where the pain is unbearable and you aren't moving a centimeter closer despite pushing with all your might.  Exhausted and frustrated, you howl like a beast and leap back.  Clearly something, or someone, is preventing you from entering this holy place.  Perhaps you should try again later to enter.";
 		now hp of player is hp of player / 3;
 		now churchenter is 1;
 	otherwise if lastchurchattempt - turns < 8 or churchenter is 2 and daytimer is night:
@@ -574,6 +574,8 @@ When play ends:
 		otherwise if foodvendor is 4:											[food vendor's sex slave]
 			let T be 0;			[do nothing statement]
 		otherwise if centrallib is 7:											[captured by librarian harpies]
+			let T be 0;			[do nothing statement]
+		otherwise if skunkbeaststatus is 2:										[lost to Skunkbeast Lord]
 			let T be 0;			[do nothing statement]
 		otherwise if mousecurse is 1:											[chosen by the mouse-collective]
 			say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body.  But then Rachel is there, holding you tightly in her small arms, somehow her weak arms able to hold back the powerful force of your infernal pact.  As your mate clutches to you, you can feel her mind pushing against that dark power.  Soon you can feel somewhere above her mind, greater than it, the collective hive-mind of all the mice, focused on this.  Your body starts changing again, becoming more mouse-like this time until you are fully a mouse like your loving mate and the other mice of the collective, though of the same gender as you were before.  The darkness fades as the bond of the dark pact is shattered by their mental might, freeing you to become fully one of them instead.";

@@ -128,6 +128,11 @@ Section 3 - Black Wasp creature
 
 Chapter 1 - Monster Responses
 
+when play begins:
+	add { "Black Wasp" } to infections of guy;
+	add { "Black Wasp" } to infections of tailweapon;
+
+
 to say losetoblackwasp:
 	if hp of player > 0:
 		say "     Giving into the urges coming from your [if cunts of player > 0]womb[otherwise]belly[end if] and the parasite within, you moan lustfully and bare yourself to the creature, dropping to your knees.  The insect buzzes happily and moves atop you, running its insectile legs over your [bodytype of player] body.  Soon, it brings its abdomen into position and drives its stinger-cock into your [if cunts of player > 0]cunt[otherwise]ass[end if] and starts fucking you wildly";

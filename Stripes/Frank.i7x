@@ -1,5 +1,5 @@
-Version 2 of Frank by Stripes begins here.
-[Version 2 - M/M fun now possible]
+Version 3 of Frank by Stripes begins here.
+[Version 3 - Tie-in for Skunkbeast Lord content]
 "Adds a Skunk NPC named Frank to the Flexible Survival game"
 
 Section 1 - Event and Comic Store
@@ -15,28 +15,43 @@ Instead of resolving a Mephitness:
 	say "     As you travel the city streets, you hear some commotion up ahead and getting closer.  Taking cover, you watch as a hefty fellow with a skunk head and tail wheezes as he runs past you with a trio of skunk girls in hot pursuit.  He staggers and drops his pack as he scrambles to keep going[if park entrance is known].  Given how your distance from the park, it's clear the chase has been going on for a while[end if].  The skunk girls move in, giggling at their panting, exhausted prey.  They seem reinvigorated by their chase coming to a close and their prize ready for the taking.";
 	say "     They all seem quite distracted and haven't spotted you.  And that backpack is just sitting there.  Given how much he's already changed, there may not be much point in trying to help him and it may be best to get the supplies.  Do you take this opportunity to charge to the rescue or do you grab the backpack and make a run for it? (Y=Fight, N=Backpack)[line break]";
 	if player consents:
-		say "     Yelling for their attention, you charge the skunks.  The one at the back turns to face you while the others tackle their fallen prey.  He yells and screams, trying to push them back and get back up while they try to kiss and fondle him.";
-		now skunkfight is 3;
-		challenge "Skunk";
-		if skunkfight is 1:
+		if bodyname of player is "Skunkbeast Lord":
+			say "     Yelling for their attention, you charge the skunks.  Seeing their skunkbeast [if cocks of player is 0 and cunts of player is 0]lady[otherwise]lord[end if] approaching and demanding their attention, the girls quickly shove the poor fellow away.  Running up to you, they start to lavish attention upon you, kissing and stroking you in welcome while telling you proudly how they caught a big meanie who tried to make fun of one of your skunkbeasts.  To placate them, you tell the girls how pleased you are with them and that you'll enjoy dealing with him shortly, but first you you want to reward them all for their fine service.  They giggle happily at this, giving you more passionate kisses.";
+			if cocks of player > 0:
+				say "     Picking one of the girls, you get her to lie on her back.  Lining up your cock, you drive it into her wet pussy and fuck her.  Her cries of pleasure are lustful and loud as you pound into her with an animalist need[if skrp is 1].  The skunk head joined to you happily french-kisses the girl at you drive your leaking shaft into her muff[end if][if cunts of player > 0].  The other girls lavish attention upon your pussy and balls, licking your dripping folds and stroking your cum-filled orbs[otherwise].  The other girls lavish attention upon your balls, rubbing your cum-filled orbs[end if].";
+				say "     After blasting your hot load into her, anothere swaps into position, this time on all fours and stuff her full of a fresh load of skunk semen as well.  As you're mounting the third, you notice the first two have returned to their original victim and are having some fun with him.  One girl's riding his cock while the other has pressed his growing muzzle to her creamy muff, forcing him to eat your hot load from her overflowing pussy.  You are too lost in your lustful, skunkbeast instincts to stop this and are even proud of them as you watch him continue to change, skunk fur spreading across his body and his cock turning a lustruous ebon.";
+				say "     It's only once you finish with the third girl that you come to your senses enough to order the girls off of him and back to the park.  They seem a little disappointed, but you growl firmly, reminding them that you said you'd wanted him for yourself.  They scurry off, still leaking skunkbeast cum from their pussies as they leave.  Once they're out of sight, you turn your attention to their victim.  He is a little wary at first, but smiles and thanks you for your help as he recognizes that you don't mean him any harm.  He seems to still be at least partially in control of his faculties.  He looks down at his discarded clothes and shrugs, deciding they're unneeded now.  He tosses his pack over his shoulder and motions for you to follow him.";
+			otherwise:
+				say "     Picking one of the girls, you get her to lick and stroke your dripping pussy, lavishing attention upon your needy sex.  The other two latch onto nipples and start nursing, licking and suckling to get their fill of your milk.  You moan in pleasure, telling your sexy girls again how pleased you are with them and their wonderful, talented paws and muzzles, riding through several orgasms as they nurse from you.  Eventually you realize that there's a fourth muzzle, the girls having brought over their victim to nurse from you as well.  You are too lost in your lustful, skunkbeast instincts to stop this and moan loudly as he continues to change, skunk fur spreading across his body and his cock turning a lustruous ebon.";
+				say "     It's only once you have another crashing orgasm that you come to your senses enough to order the girls off of him pull his muzzle away from your dripping nipple.  They seem a little disappointed, but you growl firmly, reminding them that you said you'd wanted him for yourself.  They scurry off, still leaking skunkbeast cum from their pussies as they leave.  Once they're out of sight, you turn your attention to their victim.  He is a little wary at first, but smiles and thanks you for your help as he recognizes that you didn't mean him any harm.  He seems to still be at least partially in control of his faculties.  He looks down at his discarded clothes and shrugs, deciding they're unneeded now.  He tosses his pack over his shoulder and motions for you to follow him.";
+			say "     'Thanks again for the help back there.  They got a little upset when I threw a can of tomato juice onto one of those big beasts.  Stupid coyote didn't know what he was talking about.  Been chasing and throwing goo at me almost the whole way back to my store.  Almost made it, too.  Never would have been able to run that far before this whole crazy thing started.'  He only stops talking when he pulls a big bottle of cola from his pack and starts downing it.  He leads you over a few more streets and ushers you into a comic shop, chatting the whole time.  The stairwell is a little difficult for your large body to navigate, but you manage to get inside.";
+			wait for any key;
+			move player to Comic Shop;
+			now Comic Shop is known;
+			increase score by 20;
+		otherwise:
+			say "     Yelling for their attention, you charge the skunks.  The one at the back turns to face you while the others tackle their fallen prey.  He yells and screams, trying to push them back and get back up while they try to kiss and fondle him.";
 			now skunkfight is 3;
-			say "     With the first of them finished, you move in on the other two.  They notice you coming, and after some shoving between the pair, one gets up and heads to deal with you while the other keeps at their prey.  He's become much more skunk-like now, with black and white fur starting to grow in over his body as the femme starts bobbing her muzzle over his stiff cock.  His struggles have stopped and he's moaning in pleasure.  You pull your eyes away from the erotic sight and focus on the one coming at you.";
 			challenge "Skunk";
 			if skunkfight is 1:
 				now skunkfight is 3;
-				say "     The last skunk girl releases the now ebon flesh of her prey's cock to face you.  The large fellow moans softly in disappointment, trying to reach for her.  She presses her foot down on his chest.  'Oh, I'll be back for you shortly, sweetie.'  Grinning, she licks her gooey lips and turns to face you.";
+				say "     With the first of them finished, you move in on the other two.  They notice you coming, and after some shoving between the pair, one gets up and heads to deal with you while the other keeps at their prey.  He's become much more skunk-like now, with black and white fur starting to grow in over his body as the femme starts bobbing her muzzle over his stiff cock.  His struggles have stopped and he's moaning in pleasure.  You pull your eyes away from the erotic sight and focus on the one coming at you.";
 				challenge "Skunk";
 				if skunkfight is 1:
-					say "     With the final skunk girl defeated, you turn to the large skunk fellow, weapon at the ready just in case.  But he smiles and thanks you for your help, seeming still at least partially in control of his faculties.  He looks down at his discarded clothes and shrugs, deciding they're unneeded now.  He tosses his pack over his shoulder and motions for you to follow him.";
-					say "     'Thanks again for the help back there.  They got a little upset when I threw a can of tomato juice onto one of those big beasts.  Stupid coyote didn't know what he was talking about.  Been chasing and throwing goo at me almost the whole way back to my store.  Almost made it, too.  Never would have been able to run that far before this whole crazy thing started.'  He only stops talking when he pulls a big bottle of cola from his pack and starts downing it.  He leads you over a few more streets and ushers you into a comic shop, chatting the whole time.";
-					wait for any key;
-					move player to Comic Shop;
-					now Comic Shop is known;
-					increase score by 20;
-		if skunkfight is 3:
-			say "     Deciding you've had enough of this, not really being your fight in the first place, you break away from the skunk girl and make a run for it.  As you are not their intended prize, the skunk doesn't pursue you and instead heads back to the rapidly-changing fellow who is well on his way to becoming and other skunk girl.";
-		if skunkfight is 2:
-			say "     Defeated, the skunk girl grinds her body against yours, dripping goo onto your crotch and fondling you.  'Mmm... I wish we had more time to play, but we need to get this fool back to receive his just punishment.  He'll make a fine skunk girl for our sexy master to breed.'  She kisses your cheek and runs a paw down your chest.  'You should come see him at the park.  I'd enjoy seeing you made into another slut for him to breed, too.'  With that, she gets up and starts dragging off the sex-dazed skunk.  He's already started to gain a shapely, feminine figure and will likely be another skunk slut soon enough.";
+					now skunkfight is 3;
+					say "     The last skunk girl releases the now ebon flesh of her prey's cock to face you.  The large fellow moans softly in disappointment, trying to reach for her.  She presses her foot down on his chest.  'Oh, I'll be back for you shortly, sweetie.'  Grinning, she licks her gooey lips and turns to face you.";
+					challenge "Skunk";
+					if skunkfight is 1:
+						say "     With the final skunk girl defeated, you turn to the large skunk fellow, weapon at the ready just in case.  But he smiles and thanks you for your help, seeming still at least partially in control of his faculties.  He looks down at his discarded clothes and shrugs, deciding they're unneeded now.  He tosses his pack over his shoulder and motions for you to follow him.";
+						say "     'Thanks again for the help back there.  They got a little upset when I threw a can of tomato juice onto one of those big beasts.  Stupid coyote didn't know what he was talking about.  Been chasing and throwing goo at me almost the whole way back to my store.  Almost made it, too.  Never would have been able to run that far before this whole crazy thing started.'  He only stops talking when he pulls a big bottle of cola from his pack and starts downing it.  He leads you over a few more streets and ushers you into a comic shop, chatting the whole time.";
+						wait for any key;
+						move player to Comic Shop;
+						now Comic Shop is known;
+						increase score by 20;
+			if skunkfight is 3:
+				say "     Deciding you've had enough of this, not really being your fight in the first place, you break away from the skunk girl and make a run for it.  As you are not their intended prize, the skunk doesn't pursue you and instead heads back to the rapidly-changing fellow who is well on his way to becoming and other skunk girl.";
+			if skunkfight is 2:
+				say "     Defeated, the skunk girl grinds her body against yours, dripping goo onto your crotch and fondling you.  'Mmm... I wish we had more time to play, but we need to get this fool back to receive his just punishment.  He'll make a fine skunk girl for our sexy master to breed.'  She kisses your cheek and runs a paw down your chest.  'You should come see him at the park.  I'd enjoy seeing you made into another slut for him to breed, too.'  With that, she gets up and starts dragging off the sex-dazed skunk.  He's already started to gain a shapely, feminine figure and will likely be another skunk slut soon enough.";
 	otherwise:
 		say "     More enticed by the backpack and its potential contents than the certainty of a fight with the trio of skunk girls, you slip out and grab the backpack before making your escape.  You can hear the excited moans of their prey getting louder and more feminine as they transform him into another sultry skunk girl like themselves.  Once you have some safe distance between you and them, you open up the pack to find a collection of snack foods and drinks, through there is a tin of ravioli as well.  A side pocket has a canister of pepperspray which may be useful.";
 		say "     Food, chips, soda x2 and pepperspray obtained.";
@@ -59,6 +74,7 @@ instead of sniffing Comic Shop:
 to say comicshopdesc:
 	say "     The shadowy comic shop is on the second floor of a run down building at the edge of the neighbourhood.  It is wedged between other similarly decrepit looking establishments.  Being behind a barred door and upstairs seems to have saved it from the lustful hordes of monsters.  The shop itself is fairly large, but there is little space to move.  There are shelves and displays everywhere for comics, manga and games, making it very difficult to navigate around inside.";
 
+
 Section 2 - Frank the Skunk
 
 Frank is a man.  Frank is in Comic Shop.
@@ -79,12 +95,20 @@ Instead of conversing the Frank:
 
 instead of fucking the Frank:
 	follow the cock descr rule;
-	[puts Skunk as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Skunk":
-			now monster is y;
-			break;
+	if skunkbeaststatus is 1:
+		[puts Skunkbeast Lord as lead monster for possible impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Skunkbeast Lord":
+				now monster is y;
+				break;
+	otherwise:
+		[puts Skunk as lead monster for possible impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Skunk":
+				now monster is y;
+				break;
 	if cunts of player is 0 and cocks of player > 0:
 		if lastFrankfucked - turns < 8:
 			say "     You don't want to rush things with him.  Maybe you should wait a little longer before having another go with him.";
@@ -141,27 +165,44 @@ instead of fucking the Frank:
 			say "     The hefty skunk smiles at your proposition and comes around the counter again.  He wraps his arms around you and bundles you up in his fluffy tail, guiding you back to the game table as he kisses you repeatedly.  This time he puts face down on the table and climbs atop you.  He nuzzles and nips at your ears, chirring softly to you as he whispers words of affection and love for his rescuer.  He lines up his throbbing shaft, then slowly sinks his thick meat into you, making you both moan in pleasure.  His black cock pumps into you steadily, causing you to moan repeatedly as his paws wander over your body and caress your sensitive nipples.  As always, he is an attentive lover, seeking to pleasure you as best he can by timing his thrusts and running those nimble fingers over your sensitive spots.  As he mates with you, his musky scent grows thick in the air, a scent you're finding more and more arousing each time you take the big fellow into you.  The wonderful fucking and his arousing scent eventually become too much for you and you cum hard, clamping your pussy down around his throbbing shaft.  Your quivering, milking vagina pushes him over the edge and soon you're rewarded with heavy spurts of his hot, skunk cum for your womb.";
 			say "[impregchance]";
 			say "     He remains atop you, pressing down on you with his body, which you find soft and comforting, as if its where you belong.  He nuzzles you and nibbles your ear some more, telling you again how lovely you are, then kisses you again.  Long after his erection has gone down, he withdraws from you and gets off you.  Helping you up, he bundles you up in his arms and uses his fluffy tail to wipe your wet, dripping pussy clean, making you shiver in delight at the soft touch of his fur.  His paws drift to your belly and rub it gently over that warm spot deep inside you where your cum-filled womb is.";
-		infect "Skunk";
+		if skunkbeaststatus is 1:
+			sblinfect;
+		otherwise:
+			infect "Skunk";
 	otherwise:
 		say "     Having no sexual organs of your own, there seems to be little point in trying to have sex with the skunk.";
 
 
 to say maleskunkinfect:
-	[puts Skunk as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Skunk":
-			now monster is y;
-			break;
-	now sex entry is "Male";		[make target gender male]
-	now cocks entry is 1;
-	now cock length entry is 9;
-	now cock width entry is 5;
-	infect;
-	now sex entry is "Female";		[now back to female]
-	now cocks entry is 0;
-	now cock length entry is 0;
-	now cock width entry is 0;
+	if skunkbeaststatus is 1:
+		[puts Skunkbeast Lord as lead monster]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Skunkbeast Lord":
+				now monster is y;
+				break;
+		now sex entry is "Male";		[Temporarily forced to 'Male'... will result in no gender change occurring if F-Pref]
+		infect "Skunkbeast Lord";
+		if "Female Preferred" is listed in feats of player:
+			now sex entry is "Female";
+		otherwise if "Herm Preferred" is listed in feats of player:
+			now sex entry is "Both";
+	otherwise:
+		[puts Skunk as lead monster for possible impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Skunk":
+				now monster is y;
+				break;
+		now sex entry is "Male";		[temporarily make target gender male]
+		now cocks entry is 1;
+		now cock length entry is 9;
+		now cock width entry is 5;
+		infect;
+		now sex entry is "Female";		[now back to female]
+		now cocks entry is 0;
+		now cock length entry is 0;
+		now cock width entry is 0;
 
 
 Section 3 - Endings
@@ -169,7 +210,7 @@ Section 3 - Endings
 [NOTE: For all skunk-related endings, see the 'Skunk Pet' file by Sarokcat]
 
 when play ends:
-	if ( franksex > 2 or frankmalesex > 2 ) and bodyname of player is not "Skunk" and bodyname of player is not "Skunk Taur":
+	if ( franksex > 2 or frankmalesex > 2 ) and bodyname of player is not "Skunk" and bodyname of player is not "Skunk Taur" and bodyname is not "Skunkbeast Lord":
 		if humanity of player > 9:
 			say "     When the soldiers come through the city to rescue you and the others, you tell them about Frank secure in his comic shop.  But when they go to retrieve him, he opts not to leave, unable to part with his precious store and collection.  You remain in contact with Frank through correspondence from time to time carried by those brave enough to enter the infected city.  He has reopened the store, stocking his shelves with more books he scavenges from his one-time competitors' abandoned locations and private collections left among the fallen city.  He only has a few customers, as most of the people living there now have little interest in such pursuits, but it makes him happy just to be open again.  He does remember his time with you fondly.  From his letters, he seems a little lonely, though he does have a few [']special customers['] who come to enjoy his company as well as his wares.  You are happy that he at least has some company as well as his books.";
 
