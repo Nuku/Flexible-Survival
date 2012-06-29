@@ -2888,6 +2888,7 @@ To fight:
 					follow the continuous entry;
 				follow the combat entry;
 				if hp of player is less than 1 or lost is 1, stop the action;
+		choose row monster from table of random critters;
 		if weapon object of player is ranged:
 			now bonus is ( perception of player minus 10 ) divided by 2;
 			decrease bonus by ( dex entry minus 10 ) divided by 2;
