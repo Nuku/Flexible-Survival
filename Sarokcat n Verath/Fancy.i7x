@@ -268,7 +268,7 @@ The usedesc of Nightmare Vial is "[nightmaremagic].";
 
 To say nightmaremagic:
 	if jackalmantf is greater than 0:
-		say "For some reason your body seems to fight with itself for a minute as you ingest the vial of strange liquid, and you get flashes of dark images and strange places in your eyes as your body convulses helplessly. Eventually though the tremors fade, and you lie there panting on the ground for several minutes before you are able to move again, though looking yourself over you can[apostrophe]t see that the strange vial of liquid changed any of your nice and sexy jackal like features...";
+		say "For some reason your body seems to fight with itself for a minute as you ingest the vial of strange liquid, and you get flashes of dark images and strange places in your eyes as your body convulses helplessly. Eventually though the tremors fade, and you lie there panting on the ground for several minutes before you are able to move again, though looking yourself over you can[apostrophe]t see that the strange vial of liquid changed any of your nice and sexy jackal-like features...";
 		stop the action;
 	if jackalboytf is greater than 0:
 		now nerminetalk is 1;

@@ -814,30 +814,33 @@ To say jackaltotemmagic:
 
 
 An everyturn rule:
-	if jackalboytf >= 1:
-		if tailname of player is not "jackalboy":
-			say "Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body, as your jackal like tail reforms.  Its sleek dark presence behind you proving that its form is stronger then your more recent infection.";
-			now tailname of player is "jackalboy";
-			now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
-	if jackalboytf >= 2:
-		if skinname of player is not "jackalboy":
-			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
-			now skinname of player is "jackalboy";
-			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
-	if jackalboytf >= 3:
-		if facename of player is not "jackalboy":
-			say "Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem.  You can feel the pressure inside your head building, until finally something inside your head seems to snap, and you let out a loud low moan of pleasure as your face seems to snap and reshape itself.  Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
-			Now facename of player is "jackalboy";
-			now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[apostrophe]t help but enjoy how much your mistress seems to like your new jackal's head";
-	if jackalboytf >= 4:
-		if bodyname of player is not "jackalboy":
-			say "Your body seems to twist and warp, making you convulse as your body fights off the intrusive new infection, soon you can see your body slimming back down into the sleek soft lines of the jackal boy your mistress likes so much.  The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you would[apostrophe]t want to make your mistress unhappy by being anything less than the lovely submissive jackal she helped mold you into.";
-			now bodyname of player is "jackalboy";
-			now body of player is "slim and sleek, only lightly muscled with slightly digigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal toy like yourself";
-			attributeinfect "jackalboy";
-		if cockname of player is not "jackalboy":
-			now cockname of player is "jackalboy";
-			now cock of player is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
+	if jackalboytf is 5:
+		let t be 0;		[do nothing statement]
+	otherwise:
+		if jackalboytf >= 1:
+			if tailname of player is not "jackalboy":
+				say "Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body, as your jackal like tail reforms.  Its sleek dark presence behind you proving that its form is stronger then your more recent infection.";
+				now tailname of player is "jackalboy";
+				now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
+		if jackalboytf >= 2:
+			if skinname of player is not "jackalboy":
+				say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
+				now skinname of player is "jackalboy";
+				now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
+		if jackalboytf >= 3:
+			if facename of player is not "jackalboy":
+				say "Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem.  You can feel the pressure inside your head building, until finally something inside your head seems to snap, and you let out a loud low moan of pleasure as your face seems to snap and reshape itself.  Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
+				Now facename of player is "jackalboy";
+				now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[apostrophe]t help but enjoy how much your mistress seems to like your new jackal's head";
+		if jackalboytf >= 4:
+			if bodyname of player is not "jackalboy":
+				say "Your body seems to twist and warp, making you convulse as your body fights off the intrusive new infection, soon you can see your body slimming back down into the sleek soft lines of the jackal boy your mistress likes so much.  The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you would[apostrophe]t want to make your mistress unhappy by being anything less than the lovely submissive jackal she helped mold you into.";
+				now bodyname of player is "jackalboy";
+				now body of player is "slim and sleek, only lightly muscled with slightly digigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal toy like yourself";
+				attributeinfect "jackalboy";
+			if cockname of player is not "jackalboy":
+				now cockname of player is "jackalboy";
+				now cock of player is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
 
 
 Section 5 Nermine quests
@@ -1303,6 +1306,7 @@ instead of sniffing Strange ankh:
 To say jackalankhmagic:
 	if Nightmaretf is greater than 0:
 		say "You rub the small golden ankh curiously, only to feel a strange burning sensation in your body as if two great forces were warring within you. You let out a short whinny of surprise as the ankh seems to heat up and burn your hand, and you drop the item instinctively. Feeling almost immediately  better, you look down at the ankh, only to stare in some surprise at the small puddle of molten gold lying there on the floor.... Somehow you don[apostrophe]t think that was what was supposed to happen.";
+		delete Strange ankh;
 		now jackalmantf is 5;
 		now Nerminetalk is 1;
 		stop the action;
@@ -1358,30 +1362,33 @@ To say jackalankhmagic:
 
 
 An everyturn rule:
-	if jackalmantf >= 1:
-		if tailname of player is not "jackalman":
-			say "Your ass tingles as it shifts and changes while you watch, a pleasant sensation stealing over you as the power of the ankh you used returns your body to a proper form, your jackal-like tail reforming behind you.  Its sleek dark presence behind you proving that its power is stronger then your more recent infection.";
-			now tailname of player is "jackalman";
-			now tail of player is "You have a long sleek jackal[apostrophe]s tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
-	if jackalmantf >= 2:
-		if skinname of player is not "jackalman":
-			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
-			now skinname of player is "jackalman";
-			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
-	if jackalmantf >= 3:
-		if facename of player is not "jackalman":
-			say "You feel a strange discontent building in your head, as your face seems to burn and flex, its external form not matching that of your internal jackal, causing you to snap and snarl even as the bones in you face begin to shift and stretch again, and you let out a loud howl of triumphant pleasure as your face reshape itself back into a proper jackals visage, your grin once more stretching your muzzle as your gold dusted black fur settles in once more over your handsome jackals countenance.";
-			Now facename of player is "jackalman";
-			now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seeming both predatory, and strangely sexy at the same time";
-	if jackalmantf >= 4:
-		if bodyname of player is not "jackalman":
-			say "Your body seems to twist and warp, your muscles heating up again as your body fights the outside infection. Soon enough you can feel your form twisting and warping back into the proper and powerful shape of a predatory jackal.";
-			now bodyname of player is "jackalman";
-			now body of player is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself";
-			attributeinfect "jackalman";
-		if cockname of player is not "jackalman":
-			now cockname of player is "jackalman";
-			now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
+	if jackalmantf is 5:
+		let t be 0;
+	otherwise:
+		if jackalmantf >= 1:
+			if tailname of player is not "jackalman":
+				say "Your ass tingles as it shifts and changes while you watch, a pleasant sensation stealing over you as the power of the ankh you used returns your body to a proper form, your jackal-like tail reforming behind you.  Its sleek dark presence behind you proving that its power is stronger then your more recent infection.";
+				now tailname of player is "jackalman";
+				now tail of player is "You have a long sleek jackal[apostrophe]s tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
+		if jackalmantf >= 2:
+			if skinname of player is not "jackalman":
+				say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
+				now skinname of player is "jackalman";
+				now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
+		if jackalmantf >= 3:
+			if facename of player is not "jackalman":
+				say "You feel a strange discontent building in your head, as your face seems to burn and flex, its external form not matching that of your internal jackal, causing you to snap and snarl even as the bones in you face begin to shift and stretch again, and you let out a loud howl of triumphant pleasure as your face reshape itself back into a proper jackals visage, your grin once more stretching your muzzle as your gold dusted black fur settles in once more over your handsome jackals countenance.";
+				Now facename of player is "jackalman";
+				now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seeming both predatory, and strangely sexy at the same time";
+		if jackalmantf >= 4:
+			if bodyname of player is not "jackalman":
+				say "Your body seems to twist and warp, your muscles heating up again as your body fights the outside infection. Soon enough you can feel your form twisting and warping back into the proper and powerful shape of a predatory jackal.";
+				now bodyname of player is "jackalman";
+				now body of player is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself";
+				attributeinfect "jackalman";
+			if cockname of player is not "jackalman":
+				now cockname of player is "jackalman";
+				now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 
 
 Section 8- Strange doll
