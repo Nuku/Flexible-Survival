@@ -51,7 +51,7 @@ Instead of resolving a Pharmaceutical Storage:
 	now Pharmaceutical Storage is resolved;
 
 to say drugsearch:
-	let T be a random number between 1 and 10;
+	let T be a random number between 1 and 11;
 	if T is 1:
 		say "     You find a medkit.";
 		add "medkit" to invent of player;
@@ -76,6 +76,9 @@ to say drugsearch:
 	if T is 9 or T is 10:
 		say "     You find a small syringe with clear, blue fluid in it and labeled as a [']healing booster['].";
 		add "healing booster" to invent of player;
+	if T is 11:
+		say "     You find a small syringe with cloudy, orange fluid in it and labeled as a [']libido suppressant['].";
+		add "libido suppressant" to invent of player;
 
 
 Ambulance Dock is a situation.
@@ -182,7 +185,7 @@ Instead of resolving a Radiology:
 	now Radiology is resolved;
 
 
-to say hospfight1:
+to say hospfight1:		[staff fight]
 	let T be a random number between 1 and 7;
 	if T is 1:
 		challenge "Raccoon";
@@ -205,6 +208,20 @@ to say hospfight2:		[prevents duplicate of raccoon, who is a unique individual]
 	if T is 4:
 		challenge "Mismatched Chimera";
 	if T is 5 or T is 6:
+		challenge "Jaguar";
+
+
+to say hospfight3:		[no Raccoon, Psycho Weasel instead... generic fight]
+	let T be a random number between 1 and 7;
+	if T is 1:
+		challenge "Psycho Weasel";
+	if T is 2:
+		challenge "Fluffy Owl";
+	if T is 3 or T is 4:
+		challenge "Vixen Nurse";
+	if T is 5 or T is 6:
+		challenge "Mismatched Chimera";
+	if T is 7:
 		challenge "Jaguar";
 
 
@@ -231,20 +248,6 @@ Instead of resolving a Pathology:
 	now Pathology is resolved;
 
 
-Stairwell is a situation.
-The sarea of Stairwell is "Hospital";
-
-Instead of resolving a Stairwell:
-	if a random chance of 1 in 2 succeeds:
-		say "     You manage to reach one to the stairwells, but find the door blocked and unable to open.  Glancing through the small window, you see that its been barricaded from the inside as well as jammed with a heavy metal bar.  You will have to continue searching to find another way to the upper floors.";
-	otherwise:
-		say "     In a far corner of the hospital, you come to one of the stairwells and find the door stuck half-open.  There are several large and heavy items scattered behind it, including the overturned gurney which is keeping the door open.  From the mess of clothes and sticky stains among the mess, it looks like some people were trying to barricade the door, but the creatures forced their way in before the job could be completed.  You are able to slip through the mess and go up the stairs to explore the upper rooms.";
-		increase hospstairs by 1;
-		say "[hospprogress]";
-		increase score by 5;
-		now Stairwell is resolved;
-
-
 Cafeteria is a situation.
 The sarea of Cafeteria is "Hospital";
 
@@ -258,6 +261,48 @@ Instead of resolving a Cafeteria:
 		say "     You turn away from the decadent meal and move back down the hall quietly, eager to get some distance between you and such a large group of creatures.";
 	increase score by 1;
 	now Cafeteria is resolved;
+
+
+Chaplaincy is a situation.
+The sarea of Chaplaincy is "Hospital";
+
+instead of resolving Chaplaincy:
+	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members.  Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here.  Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else.  You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-ladden clothes.  You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused.  He must have decided to give into his urges rather than keep denying them.  You pick it up and store it away.  Perhaps it will be useful for you in a moment of need.";
+	add "libido suppressant" to invent of player;
+	increase score by 5;
+	now Chaplaincy is resolved;
+
+
+Records Room is a situation.
+The sarea of Records Room is "Hospital";
+when play begins:
+	add Radiology to badspots of girl;
+	add Radiology to badspots of guy;
+	add Radiology to badspots of hermaphrodite;
+	add Radiology to badspots of furry;
+
+instead of resolving Records Room:
+	say "     You come across the hospital's records room, where all the patient files are stored.  It is tightly packed with ceiling high filing cabinets and shelves.  There are a few files set out that seem to have been recently updated to include post-infection data, making you wonder who's still performing medical tests at the hospital.  Setting them aside, you move around the room, searching for anything of use and almost bump into a creature as it emerges from a door to another filing room.";
+	if coonstatus is 0:
+		say "[hospfight1]";
+	otherwise:
+		say "[hospfight3]";
+	say "     After your encounter with the creature, you turn to leave the records room before any others come to check on the noise.  As you make your way to the door, you spot a syringe of orange liquid on a desk.  It is labeled as [']libido suppressant['], possibly left behind by whoever was trying to focus on their records work.";
+	increase score by 5;
+
+
+Stairwell is a situation.
+The sarea of Stairwell is "Hospital";
+
+Instead of resolving a Stairwell:
+	if a random chance of 1 in 2 succeeds:
+		say "     You manage to reach one to the stairwells, but find the door blocked and unable to open.  Glancing through the small window, you see that its been barricaded from the inside as well as jammed with a heavy metal bar.  You will have to continue searching to find another way to the upper floors.";
+	otherwise:
+		say "     In a far corner of the hospital, you come to one of the stairwells and find the door stuck half-open.  There are several large and heavy items scattered behind it, including the overturned gurney which is keeping the door open.  From the mess of clothes and sticky stains among the mess, it looks like some people were trying to barricade the door, but the creatures forced their way in before the job could be completed.  You are able to slip through the mess and go up the stairs to explore the upper rooms.";
+		increase hospstairs by 1;
+		say "[hospprogress]";
+		increase score by 5;
+		now Stairwell is resolved;
 
 
 Section 3 - Helper Dog Event & Pet
@@ -569,10 +614,10 @@ instead of sniffing the scientific device:
 to say hospquestpt2:
 	say "     'I have a lot of samples and tests I would like to run.  Many of my projects and analyses have been unable to progress without proper instrumentation.  I will need some time to run more tests before I can gain more information. I'm all abuzz with excitement; I want to tackle it all right away.  No sleep for me tonight,' he adds with a chuckle.";
 	say "     'But as I promised, I do have a few things for you.'  He heads over to one of the cabinets under the work bench and digs around, pushing some of the items aside as he digs around.  'I set this aside for you if you were successful.  I know it's not much, but I expect to deliver better once my results start reaching fruition.'  From the back, he pulls out a large beaker with a bottle of water and two syringes sitting in it.";
-	say "     'These are healing boosters that I created some time ago.  They provide important nutrients and stimulate the nanites to bring about a surge in their healing rate for a brief time, resulting in rapid repair of injuries.  Most helpful for you out there, I expect.  And a bottle of water as well, as you're probably thirsty after lugging that thing across the city.";
+	say "     'These are healing boosters and a libido suppressant that I created some time ago.  The healing booster provides important nutrients and stimulate the nanites to bring about a surge in their healing rate for a brief time, resulting in rapid repair of injuries.  The other contains a cocktail of anaphrodiasiacs meant to help curb your arousal, for at time at least.  They should both be most helpful for you out there, I expect.  And a bottle of water as well, as you're probably thirsty after lugging that thing across the city.";
 	delete scientific device;
 	add "healing booster" to invent of player;
-	add "healing booster" to invent of player;
+	add "libido suppressant" to invent of player;
 	add "water bottle" to invent of player;
 	now progress of Doctor Mouse is turns;
 	extend game by 6;
