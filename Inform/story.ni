@@ -4380,6 +4380,7 @@ Include Down Under Pub by Stripes.
 
 
 [Quests & Events]
+Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
 Include Random Events by Hiccup.
 Include High Rise Events by Stripes.
