@@ -1,5 +1,5 @@
 Version 1 of Alt Combat by Stripes begins here.
-[Version 1.1 - Addition of Alternate Strike attempts & beginning to link in Pepperspray]
+[Version 1.2 - Minor tweaks]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -72,7 +72,7 @@ To Combat Menu:
 			repeat through table of basic combat:
 				increase combatopt by 1;
 				say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link][line break][run paragraph on]";
-			say "Your HP: [hp of player]/[maxhp of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
+			say "Your HP: [hp of player]/[maxhp of player]  Libido: [libido of player]      [name in row monster of table of random critters] HP: [monsterhp]/[hp in row monster of table of random critters] >[run paragraph on]";
 			let k be 0;
 			now keychar is "INVALID";
 			change the text of the player's command to "";
@@ -484,6 +484,7 @@ to retaliate:
 		if there is a postattack in row monstercom of the table of Critter Combat:
 			follow the postattack entry;							[perform a post-attack, if it exists]
 	otherwise:
+		now missskip is 0;
 		choose row monstercom from table of Critter Combat;
 		if there is a monmiss in row monstercom of the table of Critter Combat:
 			follow the monmiss entry;							[perform an alternate miss scene, if it exists]

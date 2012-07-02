@@ -1,5 +1,5 @@
-Version 7 of Parasitic Plant For FS by xeylef begins here.
-[Version 7 - Proper endings]
+Version 8 of Parasitic Plant For FS by xeylef begins here.
+[Version 8 - Alt Combat]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Parasitic Plant creature to Flexible Survivals Wandering Monsters table, With multiple vaginas!"
 [Description text for this Extension.]
@@ -57,6 +57,14 @@ to say plantorseed:
 		otherwise:	[already seeded by another]
 			say "     This odd vegetation has spread its vines and tentacles across the garden as is hanging its phallic fruit and flowers from the large tree as temptation to its victims.  It is much larger than the others you've seen and faced in the past for some reason.  You try to push your way past the vines to get at the cluster at its base when you suddenly feel another twist in your belly and the seed in your [if cunts of player > 0]womb[otherwise]gut[end if] pushes out a root of its own, burrowing into the soil as it responds to the larger plant.  It squirms inside you, fighting to pull you down even as you fight the tentacles, severely hampering you in this fight.  You will have a hard fight ahead of you if you don't pull out the vine and make a run for it.  You are quite certain you'll share the girl's fate should you lose, fed to and transformed by this giant plant.";
 			now hp of player is ( 3 * ( hp of player + 1 ) ) / 4;
+	otherwise if peachtreefight is 3:
+		if hardmode is true and level of player > 7, let debit be level of player - 7;
+		now dex entry is 16 + ( debit + 2 / 5 );
+		now hp entry is 60 + ( debit * 5 );
+		now monsterhp is 60 + ( debit * 5 );
+		now lev entry is 7 + debit;
+		now wdam entry is 7 + ( ( 2 * debit ) / 5 );
+		say "     This strange plant has spread its vines through the branches of the peach tree and bonded itself to it.  You, as many others probably been before, were lured in by the temptation presented by the juicy fruit.  The sweet scent of peaches accompanies the dribbling juices that leak from the tips of the vines.  The tendril inside you pulses and throbs as those in the tree come down to restrain you so it may complete its tentacular assault upon you.  You'll need to break free of the vine locked inside you if you are to escape.";
 	otherwise:							[regular park plant]
 		if hardmode is true and level of player > 4, let debit be level of player - 4;
 		now dex entry is 16 + ( ( debit + 4 ) / 5 );
@@ -66,25 +74,20 @@ to say plantorseed:
 		now wdam entry is 6 + ( debit / 3 );
 		if plantdefeat is 0: [encounter yet to fight it]
 			if cunts of player > 0:	[cunt yes, bush]
-				say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully,as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A vine somehow managed to sneak up to your pussy as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your cunt! You grab at it and pull, only to find the cock-like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!";
+				say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully,as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A vine somehow managed to sneak up to your pussy as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your cunt! You grab at it and pull, only to find the cock-like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
 			otherwise:	[cunt no, bush]
-				say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully, as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A hidden vine somehow managed to sneak up to your ass as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your ass! You grab at it and pull, only to find the cock like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!";
+				say "You happen upon some very odd looking vegetation. It seems to be some kind of bush or mass of vines, but what makes it stand out is the definite cock-like shape to the end of each vine. They seem to be immobile and unmoving, thankfully, as it seems even plant life is not immune to the infection spreading through the area. All the sexual activity in the area probably caused the plant to come up with new ways to spread its pollen or seed. Not wanting to find first hand, you start to back away. Unfortunately your decision wasn't soon enough! A hidden vine somehow managed to sneak up to your ass as you were distracted looking at the bushes!  The thin slimy vine strikes suddenly, forcing itself into your ass! You grab at it and pull, only to find the cock like tip swelling inside of you like a knot. It is soon so large you can't dislodge the vine without a fight, or a good running start might let you break the vine if you try to flee!  Other vines are moving in, intent on further violating you.";
 		otherwise:[seed]
 			if cunts of player > 0:	[cunt yes, seed]
-				say "A pain from your womb suddenly forces you to the ground. It almost feels like you are giving birth but whatever it is feels more like a long cock pushing at the inside of your pussy! Looking down, you see a large vine-like root slide out of your pussy, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you to move around some. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+				say "A pain from your womb suddenly forces you to the ground. It almost feels like you are giving birth but whatever it is feels more like a long cock pushing at the inside of your pussy! Looking down, you see a large vine-like root slide out of your pussy, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you to move around some, but other vines are emerging from the soil. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
 			otherwise:	[cunt no, seed]
-				say "A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+				say "A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some, but other vines are emerging from the soil. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
 
 to say submitcheck:
 	now didsubmit is 1;
 
 to say didnotsubmit:
 	now didsubmit is 0;
-
-to say facerape use:
-	say "You begin to suck on the cock in the center of the flower. It surprises you as the flower part closes, taking hold of your face and gripping impossibly tight! It thrusts in and out, raping you for a while before pumping a load of cum-like liquid down your throat!";
-	decrease hunger of player by 5;
-	increase libido of player by 20;
 
 to say beattheplant:
 	if joannafight is 3:
@@ -102,45 +105,117 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Parasitic Plant"; [Name of your new Monster]
-   now attack entry is "[didnotsubmit][one of]The vine inside of you inflates suddenly, causing your belly to expand due to its size.[or]With a sudden pull, the vine gives a mighty tug, forcing you to fall to the ground with a thud.[or]The vine lifts up into the air, taking you with it and causing you to hang painfully from the tendril before it drops you.[at random]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beattheplant]"; [ Text or say command used when Monster is defeated.]
-   now victory entry is "[plantwin][feeded]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[plantorseed][submitcheck]";[ Description of the creature when you encounter it.]
-   now face entry is "beautiful, feminine face with vine-like hair and a vertical slit, looking much like a very wet pussy, replacing your mouth";[ Face description, format as the text "Your face is (your text)"]
-   now body entry is "undeniably feminine with root-like legs, your needy cunt exuding a musky substance meant to attract males";[ Body Description, format as the text "Your Body is (your text)"]
-   now skin entry is "[one of]green plant-like[or]beautiful plant-like[at random]";[ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "A very moist vagina replaced your anus, concealed by a dress made of long petals which extend down to the floor. ";[ Tail description, write a whole Sentence or leave blank. ] 
-   now cock entry is "[if looknow is 1]tentacle cock[otherwise][one of]vine-like[or]tentacle[or]green tendril[at random][end if]";[ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is " as long tendrils covered with leaves sprout like long green hair. A strange sensation spreads through your mouth as it seals up and your teeth disappear. A new slit forms just below your nose, ending at your chin, leaving you with a vagina for a mouth. It feels moist and fills your mind with an unending need for cum! At the same time, your face becomes rounder, and more feminine."; [ face change text. format as "Your face feels funny as (your text)" ]
-   now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts, leaving you much shorter, with feminine curves and a gorgeous body. Your pussy starts drooling a musky substance which arouses you"; [ body change text. format as "Your body feels funny as (your text)" ]
-   now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body  before sinking into your skin turning your entire body a dark plant-like green color!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-   now ass change entry is " a very strange sensation spreads around your waist and your anus seems to stretch almost painfully! Reaching back you find it is now shaped like a pussy. It feels so empty, practically begging you to fill it with a nice, hard cock! Around your waist, long petals sprout like a dress extending down to the floor"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-   now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like color, while small green tendrils spread over your groin like roots."; [ cock change text. format as "Your cock feels funny as (your text)" ]
-   now str entry is 16;
-   now dex entry is 16;
-   now sta entry is 12;
-   now per entry is 16;
-   now int entry is 10;
-   now cha entry is 18;
-   now sex entry is "Both";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 40;            [ How many HP has the monster got? ]
-   now lev entry is 4;            [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
-   now wdam entry is 6;            [Amount of Damage monster Does when attacking.]
-   now area entry is "Park";    [ Current options are 'Outside' and 'Mall'  Case sensitive]
-   now cocks entry is 4;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 20;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 6;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 8;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
-   now cunts entry is 3;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 15;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 5;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 40;            [ Amount player Libido will go up if defeated ]
-   now loot entry is "Musky Cock Flower";            [!!!!!!!!!!!! can it be made to increase libido when used and reduce hunger?!!!!!!!!!!!!!!!!!!!!!]
-   now lootchance entry is 50;        [ Chance of loot dropping 0-100 ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Parasitic Plant"; [Name of your new Monster]
+	now attack entry is "[didnotsubmit][one of]With a sudden pull, the vine gives a mighty tug, forcing you to fall to the ground with a thud.[or]The vine lifts up into the air, taking you with it and causing you to hang painfully from the tendril before it drops you.[or]One of the vines constricts around you waist like a boa, trying to squeeze the resistance out of you.[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air.[at random]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[beattheplant]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[plantwin][feeded]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[plantorseed][submitcheck]";[ Description of the creature when you encounter it.]
+	now face entry is "beautiful, feminine face with vine-like hair and a vertical slit, looking much like a very wet pussy, replacing your mouth";[ Face description, format as the text "Your face is (your text)"]
+	now body entry is "undeniably feminine with root-like legs, your needy cunt exuding a musky substance meant to attract males";[ Body Description, format as the text "Your Body is (your text)"]
+	now skin entry is "[one of]green plant-like[or]beautiful plant-like[at random]";[ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "A very moist vagina replaced your anus, concealed by a dress made of long petals which extend down to the floor. ";[ Tail description, write a whole Sentence or leave blank. ] 
+	now cock entry is "[if looknow is 1]tentacle cock[otherwise][one of]vine-like[or]tentacle[or]green tendril[at random][end if]";[ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is " as long tendrils covered with leaves sprout like long green hair. A strange sensation spreads through your mouth as it seals up and your teeth disappear. A new slit forms just below your nose, ending at your chin, leaving you with a vagina for a mouth. It feels moist and fills your mind with an unending need for cum! At the same time, your face becomes rounder, and more feminine"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts, leaving you much shorter, with feminine curves and a gorgeous body. Your pussy starts drooling a musky substance which arouses you"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "thin vines suddenly force their way out of your ass spreading outward over your skin from some unseen seed inside your body. They cover every inch and work their way into any orifice of your body  before sinking into your skin turning your entire body a dark plant-like green color!"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is " a very strange sensation spreads around your waist and your anus seems to stretch almost painfully! Reaching back you find it is now shaped like a pussy. It feels so empty, practically begging you to fill it with a nice, hard cock! Around your waist, long petals sprout like a dress extending down to the floor"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is " followed by a sudden pain at your groin! Your cock seems to swell into an odd bulb-like shape and turn a green plant-like color, while small green tendrils spread over your groin like roots."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now str entry is 12;
+	now dex entry is 16;
+	now sta entry is 14;
+	now per entry is 16;
+	now int entry is 10;
+	now cha entry is 18;
+	now sex entry is "Both";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 40;            [ How many HP has the monster got? ]
+	now lev entry is 4;            [ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ]
+	now wdam entry is 6;            [Amount of Damage monster Does when attacking.]
+	now area entry is "Park";    [ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 4;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 20;        [ Length infection will make cock grow to if cocks]
+	now cock width entry is 6;        [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;            [ Number of Breasts infection will give you. ]
+	now breast size entry is 8;        [Size of breasts infection will try to attain ]
+	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 3;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 15;        [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 5;        [ Width of female sex  infection will try and give you ]
+	now libido entry is 40;            [ Amount player Libido will go up if defeated ]
+	now loot entry is "Musky Cock Flower";
+	now lootchance entry is 50;        [ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "feminine";
+	now type entry is "plant";
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "parplant";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Section 3 - Alt Combat
+
+ppatt is a truth state that varies.
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"parplant"	retaliation rule	--	--	ppattack rule	100	--	--	ppmiss rule	--	ppstrike rule
+
+this is the ppstrike rule:		[possible sonic attack and sets upcoming strike]
+	if a random chance of 3 in 4 succeeds:	[performs regular attacks 75% of the time]
+		now ppatt is true;
+		standardstrike;
+	otherwise:
+		choose row monster from the table of random critters;
+		let the defense bonus be (( the stamina of the player - 10 ) / 2) + level of the player;
+		if gascloud > 0, decrease gascloud by 1;
+		let the attack bonus be (( the sta entry minus 10 ) divided by 2) plus lev entry;
+		let the combat bonus be attack bonus minus defense bonus;
+		if hardmode is true and the combat bonus is less than -10:
+			now the combat bonus is -10;
+		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
+		let the roll be a random number from 1 to 20;
+		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		if the roll plus the combat bonus is greater than 8:
+			now monsterhit is true;
+		otherwise:
+			now monsterhit is false;
+
+this is the ppattack rule:
+	choose row monster from table of random critters;
+	if ppatt is true:
+		standardhit;
+	otherwise:
+		let dam be ( ( wdam entry times a random number from 80 to ( 120 + lev entry ) ) / 100 );
+		if hardmode is true and a random chance of 1 in 10 succeeds:
+			now dam is (dam * 150) divided by 100;
+			say "The plant pulses and writhes energetically - Critical Hit![line break]";
+		say "[didnotsubmit][one of]The bulb inside of you inflates suddenly, causing your belly to expand due to its size[or]The vine inside you wriggles and squirms in an arousing manner[or]The knot inside you pulses as the plant spurts a mind numbing fluid that makes you more aroused[at random]!  You take [special-style-2][dam][roman type] damage and grow more aroused!";
+		let absorb be 0;
+		if "Toughened" is listed in feats of player:	[feat less effective, armour useless]
+			increase absorb by dam divided by 8;
+		if absorb is greater than dam:
+			now absorb is dam;
+		if absorb is greater than 0:
+			say "You prevent [absorb] damage!";
+		decrease hp of the player by dam;
+		increase hp of player by absorb;
+		let libinc be a random number between 1 and dam;
+		if "Horny Bastard" is listed in feats of player, increase libinc by 1;
+		if "Cold Fish" is listed in feats of player, decrease libinc by 1;
+		if libinc > 8, now libinc is 8;
+		increase libido of player by libinc;
+		follow the player injury rule;
+		say "You are [descr].";
+
+this is the ppmiss rule:
+	if ppatt is false:
+		now missskip is 1;
+		say "The vine inside you squirms with activity, but you manage to resist.";
+
+Section 4 - Musky Cock Flower
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -153,8 +228,13 @@ Musky Cock Flower is infectious. The strain of Musky Cock Flower is "Parasitic P
 instead of sniffing Musky Cock Flower:
 	say "The strange blossom smells strongly of cum and male musk.";
 
+to say facerape use:
+	say "You begin to suck on the cock in the center of the flower. It surprises you as the flower part closes, taking hold of your face and gripping impossibly tight! It thrusts in and out, raping you for a while before pumping a load of cum-like liquid down your throat!";
+	decrease hunger of player by 5;
+	increase libido of player by 20;
 
-Section 4 - Heat
+
+Section 5 - Heat
 
 timetillrampage is a number that varies. timetillrampage is usually 0.
 addedlibido is a number that varies. addedlibido is usually 0.
@@ -171,9 +251,9 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 to say parasiticluststart:
 	if plantdefeat is 1:
-		 say "You feel a torrent of carnal lust washing over you, seemingly coming from the seed embedded deep in your belly.";
+		say "You feel a torrent of carnal lust washing over you, seemingly coming from the seed embedded deep in your belly.";
 		now addedlibido is 10;
-		 if cunts of player is 1, say "Your vagina begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough for long. You need a cock in it. Preferably one able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
+		if cunts of player is 1, say "Your vagina begins to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough for long. You need a cock in it. Preferably one able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
 		if cunts of player > 1:
 			say "Your vaginas begin to drool juices abundantly, which start to run down your legs. You try to relieve some sexual need with your hand, but you already know it won't be enough. You need cocks in them. Preferably cocks able to cum gallons. Your eyes open wide as you realize this last thought wasn't yours! It is using your body for its own ends!";
 			now addedlibido is addedlibido + 2 times ( cunts of player minus 1 );
@@ -259,13 +339,13 @@ to say parasiticlust:
 			now timetillrampage is 0;
 
 
-Section 5 - Endings
+Section 6 - Endings
 
 when play ends:
 	if vinetrapped is 0:
 		if bodyname of player is "Parasitic Plant":
 			if humanity of player < 10:			[succumb]
-				if hp of Joanna > 0:			[Joanna saved]
+				if hp of Joanna > 0 and hp of Joanna < 90:			[Joanna saved]
 					say "     As your plant-like urges take the fore, you sink into a passive state.  You are a peaceful, bliss-filled plant creature, wandering the city in search of sex.  You feel a thirst, a hunger for the sexual fluids of others and give yourself to them whenever you can.  Many are quite willing to indulge your needs, sometimes repeatedly, filling you with cum or soaking you in their juices until you are briefly satisfied.  You experience a life of varied lust, seeking out as many different creatures as you can.";
 					say "     You are always drawn back to the flowery garden of the kinkajou, who welcomes you with open arms and tendrils[if plantdefeat is 1].  Having removed the plant seed within you on your first visit, the fluids you've been collecting are all hers to enjoy[otherwise].  The collected semen and juices you've been collecting are all hers to enjoy[end if].  Her tongue and fresh vines delve into you, drawing the nourishing fluids from you to help satisfy her cravings.  You are her lustful servant plant, going out into the city to gather so many different and delicious delights for her to later lap from you like nectar with her sensual tongue.";
 					if cunts of player > 0:
@@ -293,7 +373,7 @@ when play ends:
 					say "     Your manage to restrain your lustful urges until you're released.  Once you're free, you celebrate with a fine orgy with several of the others released at the same time as you.  Your body soaks up their sexual fluids as they cum in and over you repeatedly, revitalizing you.  These orgies become a regular affair for you and the others of that group, a special thing you share with them once a month.";
 					say "     You get work as a gardener for the city, tending to several small parks.  It is a pleasant life for a plant like you.  The work comes naturally, knowing what the plants need and doing your best to provide for them, making the parks flourish, earning you several awards and a job as a gardener at a lavish private estate.";
 					say "     Your monthly orgies continue and while several of the attendees offer to become mates with you, you prefer sharing yourself with all of them.  They are all precious to you and you could never be happy picking one over another even if your open group is always open to sharing.";
-		otherwise if plantdefeat is 1 and hp of Joanna >= 7:
+		otherwise if plantdefeat is 1 and hp of Joanna >= 7 and hp of Joanna < 90:
 			if humanity of player >= 10:
 				say "     When rescue arrives, you decide to hide the existence of Joanna's seed resting within you, deciding that it is now a part of what you are.  You live a rather normal life, except for the very, very frequent sex, of course.  Nymphomania is not really high on the list of mental illnesses you get locked up for and it's certainly a lot more common these days.";
 		otherwise if plantdefeat is 1 and cockname of player is "Parasitic Plant":	[non-plant, but plant groin w/seed]
