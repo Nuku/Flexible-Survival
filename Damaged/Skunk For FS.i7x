@@ -304,7 +304,7 @@ instead of sniffing skunk goo:
 
 Section 4 - Endings
 
-[For endings, see the 'Skunk Pet' file by Sarokcat.]
+[For endings, see the 'Skunkbeast Lord' file by Stripes.]
 
 [ Edit this to have the correct Name as wall]
 Skunk For FS ends here.
