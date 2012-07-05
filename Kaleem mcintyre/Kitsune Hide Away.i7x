@@ -99,7 +99,7 @@ Instead of fucking Kitsune:
 		say "Pulling back from the other you can see that Kitsune's muzzle is slightly matted down with the leftover drool of your shared kiss and without thinking you find your lips and tongue ghosting along the side of the vulpine's snout to clean him up. A happy whimper comes from the other at this and on the inside you feel as though you've done a good thing.";
 		now Kitsunearoused is 1;
 		now lastKitsunefucked is turns;
-	otherwise if Kitsunearoused > 1:
+	otherwise if Kitsunearoused >= 1:
 		say "'Well I see that some has gotten a little feisty at the moment.' Kitsune snickers as he looks at you with smoldering azure eyes glowing with lustful intent. How would you like to play with me today? (Y=Kitsune Submissive, N=Kitsune Dominant)";
 		if player consents:
 			let pick be 0;

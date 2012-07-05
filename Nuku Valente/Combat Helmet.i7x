@@ -15,40 +15,44 @@ The descmod of combat helmet is "A green and brown camo army helmet rests atop t
 The slot of combat helmet is "head". 
 
 lost gear is a situation.
+lgnumber is a number that varies.
 
 instead of resolving lost gear:
 	say "You happen across an old army surplus store. Your heart swells at the possibilities, only to sink as you notice that the door's been forced open. The place has already been looted, likely by other, desperate, but faster, survivors. It might be worth a look anyway?";
 	if the player consents:
 		say "You enter the store and begin to forage around. There has to be something worth having in here. A sudden noise comes from behind a rack of rotting clothes. A mutant!";
-		while 1 is 1:
+		now lgnumber is 0;
+		while lgnumber is 0:
 			fight;
 			if lost is 1:
 				say "When you recover, it looks like the store has been emptied of what little it had to start. This is a loss. You make your way back to safer places.";
 				now lost gear is resolved;
-				continue the action;
-			say "With the way clear, you begin your search in earnest...";
-			let dice be a random number from 1 to 20;
-			let the bonus be (( the perception of the player minus 10 ) divided by 2);
-			if "Scavenger" is listed in feats of the player:
-				increase bonus by 4;
-			say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
-			if dice + bonus is greater than 20:
-				say "Hidden under the counter, you find an old army helmet. You snatch it up and tuck it into your backpack before leaving the, otherwise empty, store.";
-				add "combat helmet" to invent of player;
-				increase score by 5;
-				now lost gear is resolved;
-				continue the action;
+				now lgnumber is 1;
 			otherwise:
-				say "You come up empty for your efforts. There has to be something here! Do you want to look further?";
-				if the player consents:
-					say "You restart your search, time passes as you dig around the store...";
-					follow the turnpass rule;
-					wait for any key;
-					say "Your activity draws the attention of a local mutant!";
-					next;
-				otherwise:
+				say "With the way clear, you begin your search in earnest...";
+				let dice be a random number from 1 to 20;
+				let the bonus be (( the perception of the player minus 10 ) divided by 2);
+				if "Scavenger" is listed in feats of the player:
+					increase bonus by 4;
+				say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
+				if dice + bonus is greater than 20:
+					say "Hidden under the counter, you find an old army helmet. You snatch it up and tuck it into your backpack before leaving the, otherwise empty, store.";
+					add "combat helmet" to invent of player;
+					increase score by 5;
 					now lost gear is resolved;
-					say "Dejected, you head for safer places.";
-					continue the action;
+					now lgnumber is 1;
+				otherwise:
+					say "You come up empty for your efforts. There has to be something here! Do you want to look further?";
+					if the player consents:
+						say "You restart your search, time passes as you dig around the store...";
+						follow the turnpass rule;
+						wait for any key;
+						say "Your activity draws the attention of a local mutant!";
+						next;
+					otherwise:
+						now lost gear is resolved;
+						say "Dejected, you head for safer places.";
+						now lgnumber is 1;
+
 
 Combat Helmet ends here.
