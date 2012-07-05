@@ -4377,7 +4377,7 @@ Include Medical Checkups by Hellerhound.
 Include Junkyard and Warehouse by Rimme.
 Include State Fair by Sarokcat.
 Include Down Under Pub by Stripes.
-
+Include Kitsune Hide Away by Kaleem mcintyre.
 
 [Quests & Events]
 Include Misc 4 by Kaleem mcintyre.

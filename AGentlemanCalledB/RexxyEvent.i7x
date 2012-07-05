@@ -1,5 +1,5 @@
 Version 1 of RexxyEvent by AGentlemanCalledB begins here.
-"Adds a Adds an Alpha Retrevier NPC and associated scenarios to the Flexible Survival game"
+"Adds a Adds an Alpha Retriever NPC and associated scenarios to the Flexible Survival game"
 
 Section 1 - Event
 
@@ -291,16 +291,16 @@ Instead of fucking the Rex:
 		decrease humanity of player by a random number between 5 and 8;
 		now lastRexfucked is turns;
 	if humanity of player < 10:
-		say "As you begin to rise you see Rex has left that damned blue collar laying out on a nearby counter for you too see again, but this time somthing clicks inside you, his 'training' seamingly finally have taken hold you reach out and pick up the collar, fastening it around your neck without a second thought.";
-		say "All your other concerns seam to drain away as the retrevier infection takes full control of your mind and body, shaping you into another perfect sexpet for you new owner. Eagerly you retun too him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up aganst him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right descision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
+		say "As you begin to rise you see Rex has left that damned blue collar laying out on a nearby counter for you too see again, but this time somthing clicks inside you, his [']training['] seemingly finally having taken hold you reach out and pick up the collar, fastening it around your neck without a second thought.";
+		say "All your other concerns seam to drain away as the retriever infection takes full control of your mind and body, shaping you into another perfect sexpet for you new owner. Eagerly you return too him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up against him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right decision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
 		say "[fullRetrieverTF]";
 		now rexpet is 1;
-		end the game saying "Your mind is lost to the retrievier infection, submitting to life as Rex's newest happy sexpet.";
+		end the game saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
 		wait for any key;
 		follow the turnpass rule;
 		stop the action;
 	otherwise:
-		say "You eventually return too your senses, the fog seaming to have lifted from your mind once again and you note the burning desires within you seam to have deminished, but so has some of your resistance to Rex and the retrevier infection.";
+		say "You eventually return too your senses, the fog seaming to have lifted from your mind once again and you note the burning desires within you seam to have diminished, but so has some of your resistance to Rex and the retriever infection.";
 
 
 

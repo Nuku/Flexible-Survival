@@ -118,7 +118,7 @@ When Play begins:
 
 Section 3 - Monster Heat
 
-[ IMPORTANT READ ME  - Thiss section is compleately optional. if you do NOT want to go through the trouble of adding a particular heat text of events to your creature, just delete between the two marker comments, for clarity i have included the German shepard entry. +++++]	
+[ IMPORTANT READ ME  - This section is completely optional. if you do NOT want to go through the trouble of adding a particular heat text of events to your creature, just delete between the two marker comments, for clarity i have included the German shepard entry. +++++]	
 [ +++++ ]
 
 Table of infection heat (continued)
@@ -136,16 +136,16 @@ to say felinoidheat end:
 		decrease libido of player by 40;
 	otherwise:
 		now libido of player is 0;
-		
+
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "Felinoid";	[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 5;					[ This is the number of days a heat 'cycle' lasts, usualy 7 ]
-	now heat duration entry is 2;					[ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.] 
+	now heat cycle entry is 5;					[ This is the number of days a heat 'cycle' lasts, usually 7 ]
+	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
 	now trigger text entry is "His hips connecting again and again, pounding into your depths, you feel him bite down on your neck and you are roaring in bliss moments later. Gasping, you shake your head, trying to clear the mental images and scenes that kept replaying over and over. You lift your hand up to your nose and pull it away again quickly, your mind connecting that smell with one thing, 'I'm in heat...' you murmur under your breath and try to hold the images at bay.";  [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is "Swollen and slowly dripping fluids, your entrance aches for a lion to fill it, you find yourself, nose in the air, slowly following a scent before you regain some control and stop.";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
 	now heat end entry is "[felinoidheat end]";		
-	now inheat entry is "[felinoidheat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat riaises libido value by 5 every 3 hours. ]
+	now inheat entry is "[felinoidheat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
 	
 
 
