@@ -210,7 +210,7 @@ Section 3 - Endings
 [NOTE: For all skunk-related endings, see the 'Skunkbeast Lord' file by Stripes.]
 
 when play ends:
-	if ( franksex > 2 or frankmalesex > 2 ) and bodyname of player is not "Skunk" and bodyname of player is not "Skunk Taur" and bodyname is not "Skunkbeast Lord":
+	if ( franksex > 2 or frankmalesex > 2 ) and bodyname of player is not "Skunk" and bodyname of player is not "Skunk Taur" and bodyname of player is not "Skunkbeast Lord":
 		if humanity of player > 9:
 			say "     When the soldiers come through the city to rescue you and the others, you tell them about Frank secure in his comic shop.  But when they go to retrieve him, he opts not to leave, unable to part with his precious store and collection.  You remain in contact with Frank through correspondence from time to time carried by those brave enough to enter the infected city.  He has reopened the store, stocking his shelves with more books he scavenges from his one-time competitors' abandoned locations and private collections left among the fallen city.  He only has a few customers, as most of the people living there now have little interest in such pursuits, but it makes him happy just to be open again.  He does remember his time with you fondly.  From his letters, he seems a little lonely, though he does have a few [']special customers['] who come to enjoy his company as well as his wares.  You are happy that he at least has some company as well as his books.";
 

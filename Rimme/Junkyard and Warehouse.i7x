@@ -22,24 +22,29 @@ Section 2 - Entering the Warehouse
 Definition: a person is facially human:
 	if the facename of the player is "human", yes;
 	if the facename of the player is "Awesome tree", yes;
-	if the facename of the player is "city sprite", yes;
 	if the facename of the player is "Siren", yes;
+	if the facename of the player is "Greek Nymph", yes;
 	no;
 
 Definition: a person is skintone human:
 	if the skinname of the player is "human", yes;
 	if the skinname of the player is "Awesome tree", yes;
-	if the skinname of the player is "elf", yes;
 	if the skinname of the player is "city sprite", yes;
+	if the skinname of the player is "elf", yes;
+	if the skinname of the player is "Elven Hunter", yes;
 	if the skinname of the player is "harpy", yes;
 	if the skinname of the player is "Siren", yes;
 	if the skinname of the player is "Succubus", yes;
 	if the skinname of the player is "Incubus", yes;
+	if the skinname of the player is "Greek Nymph", yes;
 	no;
 
 Definition: a person is bodily human:
 	if the bodyname of the player is "human", yes;
+	if the bodyname of the player is "elf", yes;
+	if the bodyname of the player is "Elven Hunter", yes;
 	if the bodyname of the player is "Awesome tree", yes;
+	if the bodyname of the player is "Greek Nymph", yes;
 	no;
 
 Instead of entering the Storage Room:

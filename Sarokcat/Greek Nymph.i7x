@@ -41,7 +41,7 @@ When Play begins:
 	now face entry is "beautiful female face, with lovely golden eyes and long flowing hair, the only thing marking it is as different from a normal woman's, is the near perfection of your nymph-like";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "that of an extremely perky young woman, with long lithe legs made for running and dancing, and curves so impossibly perfect they are almost obviously unnatural, or supernatural as the case may be.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]nymph-like[or]soft and sleek[or]beautiful[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is " ";[ Tail description, write a whole Sentence or leave blank. ] 
+	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]Satyr-like[or]goat-like[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "it seems to smooth out, and all the tiny little imperfections vanish, leaving you with a pretty nymph-like countenance and a strange desire to giggle and play."; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "you become more slim and nimble, your legs lengthening and your body acquiring more feminine curves, you find yourself skipping and dancing along as you move around on your new slender legs."; [ body change text. format as "Your body feels funny as (your text)" ]
