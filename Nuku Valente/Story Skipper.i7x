@@ -12,8 +12,8 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 To say magic word:
 	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
-	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]";
-	say "[line break]'You'll need to recite that part on its own after telling me the first one using a second recite command.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin.'";
+	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]";
+	say "[line break]'You'll need to recite that part on its own (including the continuedchant part) after telling me the first one using a second recite command.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.";
 
 Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
@@ -82,6 +82,27 @@ Carry out reciting:
 						now unusual creature is unresolved;
 					if hp of doctor matt is 7:
 						now susan is in the location of doctor matt;
+					if hp of doctor matt is 13:
+						now foodneed is 6;
+						now waterneed is 6;
+					if hp of doctor matt >= 16:
+						increase freecred by 100 + ( 2 * number of fasttravel rooms );	[awards to minimum 50%]
+						now Zephyr Lobby is known;
+					if hp of doctor matt is 17:
+						add "nanite density monitor" to invent of player;
+						now beach detector site is unresolved;
+						now red light detector site is unresolved;
+						now high rise detector site is unresolved;
+						now park detector site is unresolved;
+						now ndmlist is { "Beach", "Red Light District", "High Rise District", "Park" };
+					if hp of doctor matt is 18:
+						if "nanite density monitor" is listed in invent of player, delete nanite density monitor;
+						now beach detector site is resolved;
+						now red light detector site is resolved;
+						now high rise detector site is resolved;
+						now park detector site is resolved;
+						now ndmlist is { };
+						increase freecred by 200;
 					otherwise if hp of doctor matt is 100:
 						remove orthas from play;
 						now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
@@ -90,8 +111,10 @@ Carry out reciting:
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
+						now monster is Y;
 						now body is body entry;				
 						now bodyname is name entry;
+						attributeinfect;
 			-- 13:
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
@@ -561,6 +584,102 @@ Carry out reciting:
 						now lastfuck of Solstice is turns;
 					if hp of Solstice > 4:
 						move Solstice to Grey Abbey Library;
+			-- 92:
+				if the player's command matches "[number]":
+					now hp of Ronda is the number understood;
+					now Art Collector is resolved;
+					if hp of Ronda > 0 and hp of Ronda < 10:
+						remove Ronda Mallrat from play;
+					if hp of Ronda is 0 or hp of Ronda is 10:
+						move Ronda Mallrat to Mall Atrium;
+					if hp of Ronda > 0:
+						repeat with y running from 1 to number of filled rows in table of random critters:
+							choose row y in table of random critters;
+							if name entry is "Slut Rat":
+								now area entry is "Mall";
+								break;
+					if hp of Ronda is 5:
+						add "lizard juice" to invent of player;
+					if hp of Ronda is 6:
+						now Art Collector is unresolved;
+					if hp of Ronda >= 8:
+						now SlutRat Den is known;
+			-- 93:
+				if the player's command matches "[number]":
+					now hp of Athanasia is the number understood;
+					remove Athanasia from play;
+					if hp of Athanasia is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned:
+						now Captured Bird is unresolved;
+					otherwise:
+						now Captured Bird is resolved;
+					if hp of Athanasia is 1 and guy is not banned:
+						now FireAndIce is unresolved;
+					otherwise:
+						now FireAndIce is resolved;
+					if hp of Athanasia is 2:
+						add "phoenix egg" to invent of player;
+					if hp of Athanasia >= 3:
+						now lastfuck of Athanasia is turns;
+						if "phoenix egg" is listed in invent of player, delete phoenix egg;
+						now Government Assistance is resolved; 
+						now Approaching the Capitol Building is known;
+					if hp of Athanasia >= 4:
+						now lastfuck of Athanasia is turns + 8;
+			-- 94:
+				if the player's command matches "[number]":
+					now skunkbeaststatus is the number understood;
+					if skunkbeaststatus is 1 and guy is not banned and girl is not banned and furry is not banned:
+						repeat with y running from 1 to number of filled rows in table of random critters:
+							choose row y in table of random critters;
+							if name entry is "Skunk":
+								now monster is y;
+								break;
+						now non-infectious entry is true;		[reg. Skunk infection closed]
+						[puts Skunkbeast Lord as lead monster for infection and impregnation]
+						repeat with y running from 1 to number of filled rows in table of random critters:
+							choose row y in table of random critters;
+							if name entry is "Skunkbeast Lord":
+								now monster is y;
+								break;
+						now non-infectious entry is false;		[Skunkbeast Lord infection now open]
+						now the strain of skunk goo is "Skunkbeast Lord";
+						if tailname of player is "Skunk":
+							now tailname of player is "Skunkbeast Lord";
+							now tail of player is tail entry;
+						if facename of player is "Skunk":
+							now facename of player is "Skunkbeast Lord";
+							now face of player is face entry;
+						if skinname of player is "Skunk":
+							now skin of player is skin entry;
+							now skinname of player is "Skunkbeast Lord";
+						if bodyname of player is "Skunk":
+							now bodyname of player is "Skunkbeast Lord";
+							now body of player is body entry;
+							attributeinfect;
+						if cockname of player is "Skunk":
+							now cock of player is cock entry;
+							now cockname of player is "Skunkbeast Lord";
+						now Skunkbeast Battle is resolved;
+					otherwise if guy is banned or girl is banned or furry is banned:
+						now skunkbeaststatus is 0;
+						now Skunkbeast Battle is resolved;
+					otherwise:
+						now skunkbeaststatus is 0;
+						now Skunkbeast Battle is unresolved;
+			-- 95:
+				if the player's command matches "[number]":
+					now ktp is the number understood;
+					now Strange Fox is unresolved;
+					now Strange Bell is resolved;
+					if ktp is 6:
+						now Strange Fox is resolved;
+						now Strange Bell is unresolved;
+					if ktp is 7:
+						add "star bell" to the invent of the player;
+					if ktp is 8:
+						if "star bell" is listed in invent of the player, delete star bell;
+						now Strange Fox is resolved;
+						now Foxy Hideaway is known;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
@@ -696,7 +815,8 @@ carry out Trixiecheck2:
 	say "Skunk kit: [if skunk kit is tamed]1[otherwise]0[end if]   Helper dog: [if helper dog is tamed]1[otherwise]0[end if]   Rachel: [mousecurse][line break]";
 	say "Rachel: [mousecurse]     Elijah: [hp of Elijah]    Elijah interactions: [npcEint]";
 	say "Latex Husky Mode: [if latexhuskymode is true]ON[otherwise]OFF[end if]     Parasite?: [if insectlarva is true]YES[otherwise]NO[end if]";
-	say "Leonard: [hp of Leonard]     Solstice: [hp of Solstice]";
+	say "Leonard: [hp of Leonard]     Solstice: [hp of Solstice]     Ronda: [hp of Ronda]";
+	say "Skunkbeast Lord: [if skunkbeaststatus is 1]YES[otherwise]NO[end if]     Kitsune: [ktp]";
 
 
 Story Skipper ends here.
