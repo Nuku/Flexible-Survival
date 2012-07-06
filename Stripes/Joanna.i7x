@@ -1,6 +1,5 @@
 Version 4 of Joanna by Stripes begins here.
 [Version 4 - Pre-plant Joanna content]
-[3.25 hrs]
 
 "Adds a Kinkajou-Plant NPC named Joanna to the Flexible Survival game"
 
