@@ -687,7 +687,7 @@ To say gryphon lose:
 			say "'HARDER, FASTER!' you scream as you feel your orgasm approaching. With a guttural yell you climax, releasing gob after gob of hot thick cum straight down the Gryphons throat. Not to be left out the Gryphon gives one last hard thrust and starts dumping what feels like gallons of hot seed into your belly. Knowing that you are tied on that knot and not going anywhere until the Gryphon is done cumming you ease yourself forward and rest your head on one of her bountiful blue breasts.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-			say "You absentmindedly start sucking on one of your lovers dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the Gryphons magnificent nectar. once your thirst has been quenched you notice that the Gryphons cock has shrunk down and can now be easily removed. As you rise to your feet the Gryphons cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying Gryphon seed everywhere.";
+			say "You absentmindedly start sucking on one of your lover's dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the Gryphons magnificent nectar. Once your thirst has been quenched you notice that the Gryphons cock has shrunk down and can now be easily removed. As you rise to your feet the Gryphons cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying Gryphon seed everywhere.[impregchance]";
 			decrease thirst of player by 5;
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -704,13 +704,13 @@ To say gryphon lose:
 				say "It's no use, you are just too small to take it all in. The Gryphon chirps soothingly understanding your frustration. Suddenly you let out a startled yelp as you feel an electrifying tickling sensation on your clit, you look down to see the puffed end of a blue tail to be the cause.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-				say "'Perhaps this will help ease your suffering' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on the tasty milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.";
+				say "'Perhaps this will help ease your suffering' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on the tasty milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[impregchance]";
 			otherwise:
 				say "Seeing what your are trying to do, your blue lover waits for the right moment and with one masterful thrust, she firmly wedges her massive black knot deep inside your trembling pussy. The mixed feelings of pain and pleasure overcome you, your knees buckle and you collapse into the soft furry warmth of the Gryphon's bosom. You are still conscious, but you are too overwhelmed to do anything but enjoy the ride.";
 				say "'It's alright baby, mama's here' the Gryphon coos as she softly wraps her furry blue arms around you, placing her leaking nipple back into your mouth. As you resume suckling the Gryphon starts to rock her hips back and forth, causing her knot to stretch you to your limits. The pleasure is so intense that you barely notice as you achieve orgasm after orgasm thanks to your lover's exceptional skills. After what seems like seconds (although you realize it's more like half an hour) the Hermaphroditic Gryphon lets out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-			say "You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partners massive furry blue breasts. Eventually the Gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on Gryphon cock. You start gingerly sliding the bulbous black shaft out and as it passes your abused nether lips a torrent of cum spills out, drenching the almost unconscious Gryphon below. You get dressed and leave, the Gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.";
+			say "You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partners massive furry blue breasts. Eventually the Gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on Gryphon cock. You start gingerly sliding the bulbous black shaft out and as it passes your abused nether lips a torrent of cum spills out, drenching the almost unconscious Gryphon below. You get dressed and leave, the Gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.[impregchance]";
 			decrease libido of player by 30;
 			if libido of player is less than 0, now libido of player is 0;
 		if cocks of player is greater than 0 and cunt length of player is less than 6:
@@ -1195,7 +1195,7 @@ carry out Inventorying:
 	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
 	if the number of entries in invent of player is greater than 0:
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop[if the number of trader in the location of the player > 0 or ( Ronda is visible and dseed is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop[if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
 		let weight be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
@@ -1206,7 +1206,7 @@ carry out Inventorying:
 				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
 				if trade of object entry is "":
 					let notval be 0;
-					if Ronda is visible and name entry is "demon seed":
+					if Ronda is visible and hp of Ronda is 0 and name entry is "demon seed":
 						say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to Ronda[end link]";
 				otherwise if the number of trader in the location of the player is greater than 0:
 					let tradeguy be a random trader in the location of the player;
@@ -2089,18 +2089,21 @@ Carry out trading:
 			break;
 
 instead of trading the demon seed when the current action involves the ronda:
-	say "Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
-	remove ronda from play;
-	now hp of ronda is 1;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Slut Rat":
-			now area entry is "Mall";
-			break;
-	extend game by 16;
-	increase score by 20;
-	now lastfuck of Rod is turns;
-
+	if hp of Ronda is 0:
+		say "     Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
+		delete demon seed;
+		remove ronda from play;
+		now hp of ronda is 1;
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Slut Rat":
+				now area entry is "Mall";
+				break;
+		extend game by 16;
+		increase score by 20;
+		now lastfuck of Rod is turns;
+	otherwise:
+		say "     You think it'd probably be best if you didn't give that to Ronda.  It could start this whole mess over again.";
 
 This is the sex change rule:
 	choose row monster from the table of random critters;
@@ -4169,7 +4172,8 @@ When play ends:
 				say "You have your fair share of male suitors, most filled with empty praise and grabbing hands. They are pleasing for satisfying itches but little else. It is not until one arrives with the strength to topple you that you feel the stirrings of something close to love. You welcome the man to your bosom, and at your side, for the rest of your lives, producing a large, healthy, family of cats.";
 		if bodyname of player is "Dragoness":
 			say "Your dragon like body proves as much a curiosity as repulsion in those around you. You find gainful employment as a mascot for a theme park, where you are paid to wander the park and entertain the clients within. The job proves largely enjoyable, especially since the more annoying people are intimidated by your bulk and claws.";
-				
+
+			
 Book 8 - People
 
 Rod Mallrat is a person. "A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the broken sewer drain[at random].".
@@ -4181,9 +4185,9 @@ The conversation of Rod Mallrat is { "empty" };
 
 instead of conversing Rod Mallrat:
 	if hp of Ronda is 0:
-		say "[one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
+		say "     [one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
 	otherwise if hp of Ronda is 1 or hp of Ronda is 2:
-		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Watch out for those infected rats.   Dunno where they came from, but they're bad news.  The rats they get don't come back.'[or]'Sup?'[at random]";
+		say "     [one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Watch out for those infected rats.   Dunno where they came from, but they're bad news.  The rats they get don't come back.'[or]'Sup?'[at random]";
 	otherwise if hp of Ronda is 3:
 		say "     [one of]'So, will you help me out?'[or]'Have you gone to find out what the dog-woman in the shop needs to help Ronda?'[or]'You should go visit Nermine and see what she needs.  You promised you'd help fix Ronda.'[at random]";
 	otherwise if hp of Ronda is 4 or hp of Ronda is 5:
@@ -4196,21 +4200,40 @@ instead of conversing Rod Mallrat:
 		if Slutrat den is unknown:
 			say "     'Now comes the tough part, dude.  You'll need to find the nest of those infected rats and all like black-ops infiltrate the place.  They drag off anyone they beat, so the best way would be to let them catch you and see if you can learn the way there.  I'd totally do it myself, but no rat they take ever makes it back.'";
 		otherwise:
-			say "     'Well, since you know how to find them, now we need to figure out which one of them is Ronda.  That'll be trickier.  She's got a tattoo of a red heart on her thigh right by her... you know.  She did it back when we started going out, before we became professional mall rats instead of just human ones.  But the tattoo's still there, giving her a red patch of fur[if pooltable of slutrat den is 3].'  Having gotten well acquainted with both Eight-Ball and Skeeball, you know neither of them have a mark like that.  Nor have any of the others you've spotted.  But that's only a handful of slut rats out of a few dozen[otherwise].'  Having spent some time with several of the slut rats, you've not spotted any of them with a mark like that yet.  But that's only a handful out of a few dozen[end if].";
+			say "     'Well, since you know how to find them, now we need to figure out which one of them is Ronda.  That'll be trickier.  She's got a tattoo of a red heart on her thigh right by her... you know.  She did it back when we started going out, before we became professional mall rats instead of just human ones.  But the tattoo's still there, giving her a red patch of fur[if pooltable of slutrat den is 3].'  Having gotten well acquainted with both Eight-Ball and Skeeball, you know neither of them have a mark like that.  Nor have any of the others you've spotted.  But that's only a handful of slut rats out of a few dozen who come and go[otherwise].'  Having spent some time with several of the slut rats, you've not spotted any of them with a mark like that yet.  But that's only a handful out of a few dozen who come and go[end if].";
 			say "     'You'll need to cozy up to the rats until you find Ronda,' he continues.  'Once you find her, get her somewhere alone and give her the stuff.  Use these chocolates, bud.  They're her fave.  Just be careful.  We'll only get one shot at this.'";
 			now hp of Ronda is 9;
 	otherwise if hp of Ronda is 9:
 		say "     'Please keep looking for my dear, sweet Ronda.  She's got a heart-shaped mark right here,' he says, tapping at his inner thigh.";
+	otherwise if hp of Ronda is 10:
+		say "     [one of]'Thanks for helping out with Ronda.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, keep an eye on those rats.  They're still down there.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[or]'It's good to have Ronda back, but man! does she ever play rough now,' he says, rubbing his backside.[or]'Ronda and I really appreciate all your help getting us back together.'[or]'It's so nice having Ronda back.  Though her new... ummm... you know... Got to get used to that.'[or]'I'm so happy that Ronda's back safe and sound.'[at random]";
+	otherwise if hp of Ronda is 99:
+		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I could use something to tinker with to take my mind off things.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Please be careful.  We don't want to lose you too.'[or]'Sup?'[at random]";
 	otherwise:
 		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Sup?'[at random]";
 
 
-
-Ronda Mallrat is a person. "A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note."
-The description of Ronda Mallrat is "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.".
-The conversation of Ronda is { "Hey there, sugar, you just call me Ronda.", "You meet Rod? He's my boy. You be nice to him, or I will be very... upset.", "Those clothes are out of date hon, you should update your wardrobe.", "Being a mall rat is way better than being a human, no offense or anything to humans.", "We can find anything we need here in the mall; it is our Eden." }.
+Ronda Mallrat is a person. "[if hp of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note.[otherwise]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]."
+The description of Ronda Mallrat is "[rondadesc]";
+The conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
 
+instead of conversing Ronda Mallrat:
+	if hp of Ronda is 0:
+		say "[one of]'Hey there, sugar, you just call me Ronda.'[or]'You meet Rod? He's my boy. You be nice to him, or I will be very... upset.'[or]'Those clothes are out of date, hon.  You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[at random]";
+	otherwise if hp of Ronda > 0 and hp of Ronda < 10:
+		say "ERROR-Ronda-[hp of Ronda]T: You should not be able to converse with Ronda at this point.";
+	otherwise if hp of Ronda is 10:
+		say "[one of]'Those clothes are out of date, hon.  You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[or]'Thanks again for the assist,' she says.[or]'Me and the girls are getting along really well since I got back.  [']Really['] well,' she says with a wink and a grin.[or]'Have you met Lucy?' she asks, hugging one of the rat girls nearby.  'We've become good friends since I got back.'  Lucy smiles and runs her paw discretely over Ronda's lap.[or]'Rod's such a good boy.  Knows his place.'[at random]";
+
+
+to say rondadesc:
+	if hp of Ronda is 0:
+		say "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.";
+	otherwise if hp of Ronda is 10:
+		say "Ronda is mostly back to her old self, outwardly lookning much the same, if perhaps a few inches taller.  She has wide hips, a narrow waist and a good-sized bust, all covered in the latest of mall rat fashions.  She wears a bright button that says 'Large and in charge!'  Hmmm.  Her naked, pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.  If anything, she seems even sexier than before her disappearance.  She certainly seems more popular, with a gaggle of giggling girls around her at all times as she [one of]talks about fashion[or]talks about boys[or]talks about her exciting adventure under the mall[or]talks about music[or]gossips with them[at random].";
+	otherwise:
+		say "ERROR-Ronda-[hp of Ronda]L: You should not be able to converse with Ronda at this point.";
 
 
 To Extend game by (x - a number):
@@ -4424,6 +4447,7 @@ Include Little Old Woman by Kaleem mcintyre.
 Include Extra Added Scenes by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
+Include Misc Scene 5 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 
@@ -4563,6 +4587,7 @@ Include Bunny Jock For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Gargoyle by Kaleem mcintyre.
+Include Manticore by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
 Include Candy Striper by Stripes.
 
