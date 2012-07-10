@@ -727,12 +727,14 @@ this is the bearhug rule:
 			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
 		if hp of player > 0:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			let num1 be a random number between 0 and ( Strength of player + level of player );
+			let num2 be a random number between 2 and ( str entry + lev entry + 2 );
 			let bonus be ( Strength of player - str entry + level of player - lev entry ) / 2;  [level equally important as str]
 			let dice be a random number from 1 to 20;
 			if bonus > 8, now bonus is 8;		[min 10% chance either way]
 			if bonus < -8, now bonus is -8;
-			say "You roll 1d20([dice])+[bonus] vs 11 and score [dice plus bonus]: ";
-			if dice + bonus >= 11:
+			say "As your opponent continues to crush you with its powerful arms, you struggle to break free: ";
+			if num1 > num2:
 				say "You manage to fight your way out of your opponent's grip.";
 				now freedom is 1;
 			otherwise:
