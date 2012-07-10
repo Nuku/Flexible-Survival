@@ -72,16 +72,16 @@ Check Slavelearning:
 	If Slutslave is not visible, say "huh?" instead;
 
 Carry out Slavelearning:
-	if LastSlutslavelearned – turns is less than 10:
-		say "Your slave glances down at the ground sadly, and shakes her head slightly apologetically. 'Your Slut is truly sorry master, but she doesn[']t think either of us are ready for another training session so soon... maybe her gorgeous master should come back a little later? And maybe even punish their slut for not being ready sooner?' She says in a rather sad tone, though you can see from the slight dampness on her black thighs that the idea of being punished has already made your little pet hot and needy...";
 	[puts Nightmare as lead monster for comparison]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Nightmare":
 			now monster is y;
 			break;
+	if LastSlutslavelearned minus turns is less than 10:
+		say "Your slave glances down at the ground sadly, and shakes her head slightly apologetically. 'Your Slut is truly sorry master, but she doesn[']t think either of us are ready for another training session so soon... maybe her gorgeous master should come back a little later? And maybe even punish their slut for not being ready sooner?' She says in a rather sad tone, though you can see from the slight dampness on her black thighs that the idea of being punished has already made your little pet hot and needy...";
 	otherwise:
-		let T be a random number between 1 and 6:
+		let T be a random number between 1 and 6;
 		if T is 1:
 			say "Looking at your slave, you ponder just what to do with your lusty little slut today, only to notice that the gleam in her eyes as she stares back at you seems almost defiant for some reason. Feeling a grin spread over your muzzle, you realize that perhaps it is time to once more prove your dominance over your slutty little pet, and you enjoy the feel of your powerful equine form as you stalk over to teach your slut a lesson once again. Her fiery equine eyes widen slightly as you approach, as if realizing just what you are about to do, just before you grab the new mare by her fiery hair and begin to wrestle her down to the ground.  The former stablemaster puts up a bit of a struggle as you pin her to the ground, though you can hear her moaning with desire even as she tries to resist your dominance. After several enjoyable minutes of wrestling with your slave, your strong muscles straining against her lithe form as you hold her down, you hear the sweet sound of her voice crying out for you in submission, The sound of her surrender echoing sweetly through your head, you continue to enjoy proving your strength and power to your little slut for several minutes more, even as her cries of pleasure and surrender grow ever more passionate. Finally when you have exhausted your little pet, and you yourself are feeling more then a bit winded from all the exertion, you stand back up and stretch leisurely, feeling more powerful then ever after your lovely little workout with your pet.";
 			if Strength of player < str entry:
