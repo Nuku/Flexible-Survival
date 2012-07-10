@@ -100,7 +100,7 @@ Instead of fucking Kitsune:
 		now Kitsunearoused is 1;
 		now lastKitsunefucked is turns;
 	otherwise if Kitsunearoused >= 1:
-		say "'Well, I see that some has gotten a little feisty at the moment,' Kitsune snickers as he looks at you with smoldering azure eyes glowing with lustful intent. 'How would you like to play with me today?' ([link]Y=Kitsune Submissive[as]yes[end link], [link]N=Kitsune Dominant[as]no[end link])[run paragraph on]";
+		say "'Well, I see that someone has gotten a little feisty at the moment,' Kitsune snickers as he looks at you with smoldering azure eyes glowing with lustful intent. 'How would you like to play with me today?' ([link]Y=Kitsune Submissive[as]yes[end link], [link]N=Kitsune Dominant[as]no[end link])[run paragraph on]";
 		if player consents:
 			let pick be 0;
 			if cocks of player > 0 and cunts of player > 0:

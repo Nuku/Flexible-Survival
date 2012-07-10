@@ -76,7 +76,7 @@ When Play begins:
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stuffed[or]padded[or]plush[at random]";
-	now type entry is "[one of]feline[or]leonine[at random]";
+	now type entry is "[one of]feline[or]leonine[or]toy-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]

@@ -73,7 +73,7 @@ When Play begins:
 	now resbypass entry is true;			[ Bypasses Researcher bonus? True/False (should almost invariably be false) ]
 	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False ]
 	now nocturnal entry is true;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";	[ Uses the 'bearhugger' entry from the Table of Critter Combat ]
+	now altcombat entry is "bearhugger";	[ Uses the 'bearhugger' entry from the Table of Critter Combat ]
 
 
 when play ends:
