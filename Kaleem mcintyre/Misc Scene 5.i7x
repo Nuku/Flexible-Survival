@@ -15,7 +15,7 @@ Instead of resolving a Helping the Helpless:
 			say "The whines of hunger that comes out of the other are almost heartbreaking for you to hear. Setting the food down in front of the anthro and then taking a step back you watch as the spotted creature quickly gobbles up the food as though it hadn't eaten in days. Knowing how rough things are here in this city, the Dal probably hadn't. When the other finishes, it turns its muzzle to look up at you adoringly and then gives you a happy bark before trotting off. You suddenly feel good about yourself for what you have done, even though you're slightly lacking on provisions as of now.";
 			increase morale of player by 5;
 			increase humanity of player by 12;
-			if humanity of player > 100, now humanity is 100;
+			if humanity of player > 100, now humanity of player is 100;
 			delete food;
 			increase score by 10;
 		otherwise:
@@ -27,7 +27,7 @@ Instead of resolving a Helping the Helpless:
 			increase morale of player by 2;
 			increase humanity of player by 6;
 			delete chips;
-			if humanity of player > 100, now humanity is 100;
+			if humanity of player > 100, now humanity of player is 100;
 			increase score by 5;
 		otherwise:
 			say "Knowing that you yourself are doing without you move along down the street, completely ignoring the black spotted mutant rustling through the garbage bin.";
@@ -86,7 +86,7 @@ The sarea of Lady Surrounded by Butterflies is "Plains";
 Instead of resolving a Lady Surrounded by Butterflies:
 	say "While making your way across the dry plains, you come across the mystical sight of a woman with long black hair being surrounded by butterflies. When her stray tresses begin to flutter through the air you lower your mouth in awe as you watch the woman stroke a tanned hand back behind her billowing hair. Then, before you can move some of the butterflies come over to playful dance alongside her hair. None of the insect-like creatures seem to be remotely interested in sexually trying to entice the woman into relieving herself from the black cowl she has wrapped around her figure. Instead the butterflies seem to be almost trying to make the woman smile as they circle around her, making her eyes track their movements as they move quickly back and forth before her face. This doesn't make the woman's lip rise from their downcast frowning, but her eyes do begin to twinkle slightly. The sight of several other butterflies coming over to aid their friends's efforts makes you feel something at peace on the inside as you continue to watch the other for several minutes before blinking as you notice the woman turning to start walking away. Thankfully though the woman and her butterfly entourage are moving opposite of where you are. Gulping and feeling like a voyeur you make your way about your business as swiftly as you can. The sight of the woman will stay with you a long while after though.";
 	increase humanity of player by 10;
-	if humanity of player > 100, now humanity is 100;
+	if humanity of player > 100, now humanity of player is 100;
 	increase score by 1;
 	now Lady Surrounded by Butterflies is resolved;
 
