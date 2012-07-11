@@ -10,7 +10,7 @@ The description of Masters office is "This large and rather spacious room was on
 Slutslave is in Masters office.
 South of Masters office is Employee Access.
 
-instead of linkactioning Kara when karatalk > 0:
+instead of linkactioning Slutslave:
 	say "Possible Actions: [link]talk[as]talk Slutslave[end link], [link]smell[as]smell Slutslave[end link], [link]fuck[as]fuck Slutslave[end link], [link]train[as]train slave[end link][line break]";
 
 instead of sniffing Masters Office:
