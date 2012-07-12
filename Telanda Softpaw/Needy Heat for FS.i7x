@@ -20,7 +20,8 @@ Book 2 - Logic & Rules
 
 to say defaultheat:
 	[say "You shift uncomfortably. still being driven by the swollen needy heat between your legs.";]
-	if libido of player is less than 96, increase libido of player by 5;
+	increase libido of player by 5;
+	if libido of player > 100, now libido of player is 100;
 	
 to say huskyheatstart:
 	increase Cunt length of player by 2;
