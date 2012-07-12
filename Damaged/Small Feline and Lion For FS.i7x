@@ -218,12 +218,18 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 --	--	--	--	--	--	--	--
 
 to say feline heat end:
-	say "You manage to force yourself to set the feline down. She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
+	if feline_status is 2:
+		say "Leonard nuzzles the newest member of his pride and has her remain waiting on his bed, promising he'll be back to spend more time with her soon.";
+	otherwise if feline_status is 3:
+		say "Leonard nuzzles the feline who came in with you, telling her what a fine job she did.  He pats her ass, sending her on her way.";
+	otherwise:
+		say "You manage to force yourself to set the feline down. She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
 	now Feline_attached is 0;
+	now feline_status is 0;		[reset to new kitty]
 
 to say feline heat:	
 	if Feline_attached is greater than 0:
-		if libido of player is less than humanity of player:
+		if libido of player is less than humanity of player and feline_status is not 2 and feline_status is not 3:
 			increase Feline_meow by 1;
 			say "The bundle in your arms remains firmly attached, drinking hungrily from you and making it hard to concentrate.[line break]It seems no amount of your milk sates the busty feline as she snuggles against you. As she suckles you feel your mind start to wander and you gaze, mouth watering slightly, at the cocks, breasts and moist slits of all the creatures you can see. Soon you know your animal urges will overcome your humanity and you will lose control.";
 			increase libido of player by 4;

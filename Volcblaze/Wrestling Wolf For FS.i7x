@@ -76,7 +76,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
    Choose a blank row from Table of random critters;
    now name entry is "Wrestling Wolf"; [Name of your new Monster]
-   now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck performing a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Supplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it was like tackling a brick wall, causing you to stumbles back a bit but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee performing a devastating BackBreaker[or]He charges at you unsuspectingly and wraps his arms around you. Effortlessly lifting you into the air he tightens his hold as he shakes you around like a ragdoll. Burying you into his furry yet hard chest as you feel your spine reaching it[apostrophe]s limits from his BearHug. Getting bored he drops you back onto the floor.[or]The Wrestling Wolf delivers a powerful punch to your gut causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you up-side down, you begin to scream as he jumps a bit into into the air landing on his ass as your head is slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together slamming your head in between. You start to fall to your knees from the attack only to be caught by the wolf. Who places you sitting ontop the nearest post where he proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he could into the air and comes crashing down delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
+   now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck performing a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Supplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it was like tackling a brick wall, causing you to stumbles back a bit but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee performing a devastating BackBreaker[or]The Wrestling Wolf delivers a powerful punch to your gut causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you up-side down, you begin to scream as he jumps a bit into into the air landing on his ass as your head is slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together slamming your head in between. You start to fall to your knees from the attack only to be caught by the wolf. Who places you sitting ontop the nearest post where he proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he could into the air and comes crashing down delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
    now defeated entry is "'HAHAHA! Now that was a fight!' he shouts as he continues to laugh hysterically while lying on the ground in defeat. 'You[apostrophe]r not to shabby there,' he says as he sprang himself right back up almost as if he wasn't hurt at all. 'Heh, maybe next time I won[apostrophe]t have ta hold back on ya. So make sure ta comeback when you[apostrophe]re ready to have another go.' he call out to you as you walk away from the ring."; [ Text or say command used when Monster is defeated.]
    now victory entry is  "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
    now desc entry is "[wrwolfdesc]";
@@ -127,7 +127,7 @@ When Play begins:
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"wrwolf"	wrestlew rule	--	wrwolfpose rule	--	--	--	--	--	--	--
+"wrwolf"	wrestlew rule	--	wrwolfpose rule	bearhug rule	12	--	--	--	--	--
 
 
 this is the wrestlew rule:
@@ -142,7 +142,9 @@ this is the wrestlew rule:
 
 to wwpowerslam:
 	choose row monster from table of random critters;
+	increase dex entry by 6;	[temporary +3 to hit]
 	standardstrike;
+	decrease dex entry by 6;
 	if monsterhit is true:			[ boosted dmg, dampened by pepperspray, also small humanity loss ]
 		let boostdam be ( str entry + dex entry + ( lev entry * 2 ) - ( peppereyes * 6 ) ) * 3;
 		let dam be ( ( wdam entry times ( ( a random number from 80 to 120 ) + boostdam ) ) / 100 );
@@ -164,7 +166,7 @@ to wwpowerslam:
 		increase hp of player by absorb;
 		decrease humanity of player by a random number between 8 and 12;
 		if "Pure" is listed in feats of player, increase humanity of player by a random number between 2 and 4;
-		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 3;
+		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 		follow the player injury rule;
 		say "You are [descr].";
 	otherwise:

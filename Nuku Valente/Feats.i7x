@@ -315,6 +315,8 @@ This is the gainfeat rule:
 			Now Zoo entrance is known;
 			Now Dry Plains is known;
 			Now Museum Foyer is known;
+		if nam is "Instinctive Combat":
+			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the "Auto Attack" command.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 	if autofeatloading is false, wait for any key;
 	if autofeatloading is false, clear the screen and hyperlink list;
 
