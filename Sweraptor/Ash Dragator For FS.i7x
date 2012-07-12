@@ -33,16 +33,16 @@ When Play begins:
 	now defeated entry is "The Dragator begins to limp away on its six limbs, but as it attempts to escape you catch up to it. Leaping onto its back you deliver the killing blow.";
 	now victory entry is  "The Dragator takes in a deep breath. With a mighty roar he unleashes a torrent of hellfire from his maw, engulfing everything in his path, including you.[dragator attack]";
 	now desc entry is "From amidst the ruins a beast crawls forth on its belly. A feral crocodile would have been your first guess but the thing becomes more alien the longer you stare at it. The hard bony scales are [one of]dark grey[or]black[or]Dark speckled with red[at random] and covered in soot, In the divots between each scale you can just discern a faint glow of orange light. The creature is propelled forward by six stubby legs. With its four beady eyes fixated upon it lunges forward. Fearing being caught from behind by such a beast you ready yourself for a fight.";[ Description of the creature when you encounter it.]
-		now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your veins. You have an Ash Dragon"; 
-	now body entry is "Tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forearms and joints. Your Ash Dragon Body is a fearsome sight."; 
+	now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your veins. You have an Ash Dragon head"; 
+	now body entry is "tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forearms and joints. Your Ash Dragon body is a fearsome sight"; 
 	now skin entry is "[one of]obsidian black scales for[or]ashen colored scales for[at random]";
 	now tail entry is "You have a long prehensile tail trailing behind you. Despite its flexibility it is extremely tough and it ends with a sharp point.";
 	now cock entry is "[one of]cruelly barbed ash dragon[or]glowing ash dragon impregnator[at random]";
-	now face change entry is "strange sensations which build beneath your skin. Black shining scales form beneath your features and your old face sloughs off like a mask leaving a semi-recognizable version of your old self. You grab your cranium as a splitting headache erupts, new demonic horns lancing out from your head, oddly enough they look different from the reptilian horns most of the Ash Dragons sport. They almost seem to form a crown...";
-	now body change entry is "pain wracks throughout it in spasms. Curling into a ball you feel your spine cracking, and from the soreness in your legs and limbs you are adding significant height to your frame. Overcome with a burning sensation, you double over, feeling sick. Your old skin peels away and falls off to reveal the black scales of the Ashen Dragon Brood. The blood in your very veins seems to swell with heat and soon you can see a glowing molten layout of your blood circulation. It forms an ornate eerie pattern over your body.";
+	now face change entry is "strange sensations which build beneath your skin. Black shining scales form beneath your features and your old face sloughs off like a mask leaving a semi-recognizable version of your old self. You grab your cranium as a splitting headache erupts, new demonic horns lancing out from your head, oddly enough they look different from the reptilian horns most of the Ash Dragons sport. They almost seem to form a crown";
+	now body change entry is "pain wracks throughout it in spasms. Curling into a ball you feel your spine cracking, and from the soreness in your legs and limbs you are adding significant height to your frame. Overcome with a burning sensation, you double over, feeling sick. Your old skin peels away and falls off to reveal the black scales of the Ashen Dragon Brood. The blood in your very veins seems to swell with heat and soon you can see a glowing molten layout of your blood circulation. It forms an ornate eerie pattern over your body";
 	now skin change entry is "your flesh hardens as it's modified into a scaly hide. It is burned black from the inside as your blood ignites.";
-	now ass change entry is "a long prehensile tail forms from your backside. You find you can sweep it powerfully behind you. It takes some getting used too, however, soon you are using it almost like a third limb.";
-	now cock change entry is "it engorges itself with molten blood. It now glows a deep orange and the veins of it glow brightly. There are evil looking barbs along its tip and along its belly, when ejaculating you know they will stiffen, making it impossible to pull away from your partner. Your balls also ignite with an inner light and a painful fire begins to brew within them.";
+	now ass change entry is "a long prehensile tail forms from your backside. You find you can sweep it powerfully behind you. It takes some getting used too, however, soon you are using it almost like a third limb";
+	now cock change entry is "it engorges itself with molten blood. It now glows a deep orange and the veins of it glow brightly. There are evil looking barbs along its tip and along its belly, when ejaculating you know they will stiffen, making it impossible to pull away from your partner. Your balls also ignite with an inner light and a painful fire begins to brew within them";
 	now str entry is 15;
 	now dex entry is 18;
 	now sta entry is 16;
@@ -66,6 +66,15 @@ When Play begins:
 	now libido entry is 40;
 	now lootchance entry is 25;		[ Chance of loot dropping 0-100 ]
 	now loot entry is "Ash Dragon Heart";
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]mutated[or]altered[or]powerful[or]fearsome[at random]";
+	now type entry is "draconic";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:
