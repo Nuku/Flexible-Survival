@@ -25,7 +25,7 @@ Instead of resolving a Captured Bird:
 				challenge "Panther Taur";
 				if lost is 0:
 					say "     With only the last panther holding onto the net, it cannot keep the bird down.  It manages to flap its wings and take to the air.  With its wings spread wide, the fire bird shrieks one last time before unleashing a wave of fire towards the last of the cats.  This burst of fire incinerates the remains of the net and sends the feline running, fleeing with her tail aflame.";
-					say "     With an unearthly grace, the phoenix turns about to face you as it hovers.  You are scared you'll receive the same treatment as the cat, but the bird's eyes shine with intelligence.  It nods its head to you, then takes back to the air, her fire fading quickly after that outburst.  You are left with a sense of awe and wonder at the majesty of the creature you helped save.";
+					say "     With an unearthly grace, the phoenix turns about to face you as it hovers.  You are scared you'll receive the same treatment as the cat, but the bird's eyes shine with intelligence.  It nods its head to you, then takes back to the air, the fire fading quickly after that outburst.  You are left with a sense of awe and wonder at the majesty of the creature you helped save.";
 					now hp of Athanasia is 1;
 					if guy is not banned, now FireAndIce is unresolved;
 		if lost is 1:

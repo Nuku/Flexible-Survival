@@ -169,6 +169,7 @@ this is the ppstrike rule:		[possible sonic attack and sets upcoming strike]
 		standardstrike;
 	otherwise:
 		choose row monster from the table of random critters;
+		now ppatt is false;
 		let the defense bonus be (( the stamina of the player - 10 ) / 2) + level of the player;
 		if gascloud > 0, decrease gascloud by 1;
 		let the attack bonus be (( the sta entry minus 10 ) divided by 2) plus lev entry;
