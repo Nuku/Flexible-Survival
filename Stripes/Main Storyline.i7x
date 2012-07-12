@@ -17,7 +17,7 @@ the conversation of Doctor Matt is { "empty" };
 Section 1 - Talking w/Dr Matt (this drives the Main Storyline quests)
  
 Instead of conversing the doctor matt:
-	if hp of testerbot is 0 and testerbot is in Primary Lab:
+	if hp of testerbot is 0 and testerbot is in Primary Lab and hp of doctor matt is not 100:
 		now hp of testerbot is 1;
 		say "'The military has returned my testing robot, wanting more data on the affects of the infection upon a person's lustful urges and sexual proclivities,' he says, pointing to the boxy robot slumped against the wall.  'The testing robot has been built for the use in this regard.  Please feel free to use it as you see fit.  I want a wide sample of data, so come back often.  The robot will only be available briefly though before I have to send it off to the military's scientists so they may analyze the data.'";
 		say "'When they returned it, they also included a note about its [']unfriendly disposition['].  So I've given it a nice smile,' he says, pointing to the poorly aligned smile on the robot's boxy face.  The edges of the large sticker seem scratched and frayed, as if the robot tried to pull it off, but couldn't with its pincher hands.  Either ordered to stop or resigned to leave it there, the robot now has a big, friendly grin stuck to its face.";
@@ -241,17 +241,20 @@ Instead of conversing the doctor matt:
 			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Unable to defeat the mouse, you were not able to stop him, but survived the encounter and have returned to assist the scientist.";
 			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him.  I shall inform the military of these events, as well as the increased threat level at the hospital.  They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion.  He seems too intelligent to not have an exit strategy already formulated.'";
 		now hp of doctor matt is 12;
+		now level of doctor matt is turns;
 	otherwise if hp of doctor matt is 9 and hospquest is 13:		[Doc partially unawares, hospital finished]
 		say "     As you start to tell Dr Matt about the recent events at the hospital, at first he believes you to simply be reporting again on another request for samples.  But as you tell him about Dr Mouse's plan to have you infected and steal his research, he is quite stunned.  He stammers some thanks for your decision to side with him over the mouse doctor.";
 		if susan is visible:
 			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn't say anything, only listening and being there for her chosen mate.";
 		if hp of doctor mouse is 2:
-			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Dr Matt seems unsurprised by the doctor's monstrous transformation, given what you related about his research, and is pleased to hear that he was dispatched so thoroughly.  You pull dump out the accumulated research you were able to abscond from the lab, offering it all to the scientist to help him deal with the infection.";
+			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Dr Matt seems unsurprised by the doctor's monstrous transformation, given what you related about his research, and is pleased to hear that he was dispatched so thoroughly.  You pull out the accumulated research you were able to abscond from the lab, offering it all to the scientist to help him deal with the infection.";
 			say "     Dr Matt is quite intrigued by what he sees in the documents and samples he glances over.  'This is quite a substantial find, my brave assistant.  I can see several results that I can put into place immediately and will be able to offer you several more options, should you wish to [bold type]volunteer[roman type] for nanite adjustments.'";
 			now featunlock is 1;
 		otherwise:
 			say "     You relate to Dr Matt the events of the fight that began as you refused to help the mouse and incurred his wrath.  Unable to defeat the mouse, you were not able to stop him, but survived the encounter and have returned to assist the scientist.";
 			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him.  I shall inform the military of these events, as well as the increased threat level at the hospital.  They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion.  He seems too intelligent to not have an exit strategy already formulated.'";
+		now hp of doctor matt is 12;
+		now level of doctor matt is turns;
 	if hp of doctor matt is 11:
 		if susan is visible:
 			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly.  She doesn't say anything, only listening and being there for her chosen mate.";
@@ -387,7 +390,7 @@ to monitor:
 		otherwise:
 			say "Cock status:  [cockname of player]     Gender: Male[line break]";
 	otherwise if cunts of player > 0:
-		say "Gender: Female[line break]";
+		say "Groin status:  [cockname of player]     Gender: Female[line break]";
 	otherwise:
 		say "ERROR!: Neuter[line break]";
 	follow the self examine rule;

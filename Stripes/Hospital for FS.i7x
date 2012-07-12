@@ -1020,6 +1020,8 @@ to say hosptfscene:
 		choose row monster from the table of random critters;
 		if there is no name entry:
 			next;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
 		break;
 	now tailname of player is name entry;
 	now tail of player is tail entry;
@@ -1029,6 +1031,8 @@ to say hosptfscene:
 		now monster is 1;
 		choose row monster from the table of random critters;
 		if there is no name entry:
+			next;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
 			next;
 		break;
 	now facename of player is name entry;
@@ -1040,6 +1044,8 @@ to say hosptfscene:
 		now monster is 1;
 		choose row monster from the table of random critters;
 		if there is no name entry:
+			next;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
 			next;
 		break;
 	now skinname of player is name entry;
@@ -1059,6 +1065,8 @@ to say hosptfscene:
 		now monster is 1;
 		choose row monster from the table of random critters;
 		if there is no name entry:
+			next;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
 			next;
 		break;
 	now bodyname of player is name entry;
@@ -1103,12 +1111,14 @@ to say hosptfscene:
 			choose row monster from the table of random critters;
 			if there is no name entry:
 				next;
+			if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+				next;
 			break;
 		say "     The mouse doctor grins viciously as he looks over your changed form, then turns to the audience.  'There is one final injection to make, my colleagues.  And I'm sure this is the one you've all been anxiously awaiting.  He moves his paw to your cock(s), quite aroused by the earlier teasing, and gives it a squeeze.  Those watching are quite pleased by this and many shift forward in their seats to get a better look.";
 		say "     The doctor fondles your balls teasingly and slides the syringe across your cock and balls, making you involuntarily whimper.  You sigh in relief as he moves the needle down further and injects your inner thigh close to your groin.  As the mouse observes the changes, an arousing heat flows up into your groin as [cock change entry].";
-		follow the sex change rule;
 		now cockname of player is name entry;
 		now cock of player is cock entry;
+		follow the sex change rule;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cocks of player is 0:	[now female]
 			say "     The mouse doctor smiles as your final changes set in and you are left with only a wet pussy between your legs.  He teases your wet folds and turns to the audience.  'It seems I was mistaken.  There is one more injection to make,' he announces, slipping a pair of fingers into your vagina, making you moan in response despite yourself.  His other paw is at his groin, stroking his stiffening cock back to erection.  Many in the audience cheer or laugh at that.";
@@ -1156,9 +1166,9 @@ to say hospvictory:
 		say "     Feeling that the doctor is in good hands, you quickly look around the room, grabbing what notes and samples you can from the doctor's work area.  Worried that someone may notice the commotion and come up to investigate, you rush to find as much as you can carry.  You take several interesting vials and concoctions from the storage case, carefully stowing them in some padding.  The doctor's laptop and research notebook go in there as well.";
 		say "     Having gathered what you could and breaking or spilling chemicals onto the other stuff to keep anyone from following Dr Mouse's research, you turn back to see take another look at the mad doctor and his mismatched lovers.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "     The chimeras have continued to feed and fuck him, resulting in a seemingly random array of changes to his body starting to arise.  His head loses its mouse-like qualities entirely and becomes leonine.  While his right arm becomes that of some kind of lizard, his left one bifurcates into a pair of smaller limbs, one an avian wing and the other a monkey's arm.  One leg gains a horse's hoof while the other has a goat's.  His tail becomes long and serpentine, covered in red scales.";
+	say "     The chimeras have continued to feed and fuck him, resulting in a seemingly random array of changes to his body starting to arise.  His head has lost its mouse-like qualities entirely and becomes leonine.  While his right arm becomes that of some kind of lizard, his left one bifurcates into a pair of smaller limbs, one an avian wing and the other a monkey's arm.  One leg gains a horse's hoof while the other has a goat's.  His tail becomes long and serpentine, covered in red scales.";
 	say "     When breasts start to form on what was once the mouse's chest, the chimera riding him pulls off his cock, which is now wholly canine in form, and drives its cock into the new pussy under his balls.  That is enough to stir Dr Mouse to wakefulness, but what little intelligence there is in those eyes is fading rapidly as the infection takes over fully.  The new herm moans lustfully and wraps her mismatched legs around the chimera's waist, yowling with mindless need.";
-	say "     The second hybrid pulls its breast from their captive's muzzle and replaces it with its cock instead.  The ex-mouse takes it into its mouth eagerly, licking and sucking with need.  As the new hybrid continues to be mated by the fractured creatures of its own creation, there nothing but lust in those vacant eyes as she succumbs fully.";
+	say "     The second hybrid pulls its breast from their captive's muzzle and replaces it with its cock instead.  The ex-mouse takes it into its mouth eagerly, licking and sucking with need.  As the new hybrid continues to be mated by the fractured creatures of its own creation, there is nothing but lust in those vacant eyes as she succumbs fully.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     Satisfied that the mouse is no longer a threat, you step over to the worktable and break off the anchor points for the chains.  The trio, too engrossed in sex, don't react more than looking up at you and mewling enticingly for you to join them.  Now freed, you are satisfied that the two unfortunate creatures will not be trapped to starve, and that they and their new companion can instead join the others like them in the hospital, where the doctor will never be heard from again.";
 	say "     Your task done, you decide to linger no longer and quickly go down the stairs.  Acting as if nothing is amiss, you walk past the jaguar guarding the stairwell and exit the hospital.";

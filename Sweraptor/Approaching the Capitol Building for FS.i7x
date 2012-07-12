@@ -43,7 +43,7 @@ East of The Path of Ashes is A Volcanic Crater.
 instead of sniffing A Volcanic Crater:
 	say "The smell of smoke, soot and volcanic gasses is particularly strong here.";
 
-The Rusty Walkways is a Room. "     Rusty, makeshift bridges hang between the tall buildings here.  Constructed from scavenged metal and parts, there are scattered little shelters inside the buildings or on the street.  As you walk down the road, the bridges cast an ominous web-like shadow over you. Occasionally, you swear you see something or someone darting out of view each time you turn a corner.  Whatever feral civilization exists here, it may be based out of the more intact building to the west of here.".
+The Rusty Walkways is a Room. "     Rusty, makeshift bridges hang between the tall buildings here.  Constructed from scavenged metal and parts, there are scattered little shelters inside the buildings or on the street.  As you walk down the road, the bridges cast an ominous web-like shadow over you. Occasionally, you swear you see something or someone darting out of view each time you turn a corner.  Whatever feral civilization exists here, it may be based out of the more intact building to the west of here.[line break]     (Please note: This hunting area is still incomplete and has only a few minimal events and no creatures.  Explore elsewhere for now.)[line break]".
 West of The Path of Ashes is Rusty Walkways.
 
 instead of sniffing Rusty Walkways:

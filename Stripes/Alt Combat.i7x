@@ -43,7 +43,7 @@ To Combat Menu:
 			wait for any key;
 			clear the screen and hyperlink list;
 			continue the action;
-		if "Submissive" is listed in feats of player and a random chance of ( ( libido of player + 20 ) / 3 ) in 1000 succeeds:
+		if "Submissive" is listed in feats of player and a random chance of ( ( libido of player + 20 ) / 4 ) in 1000 succeeds:
 		[chance to submit in combat if you have the submissive feat, feel free to adjust odds]
 			say "[line break]Your submissive nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
