@@ -40,16 +40,16 @@ When Play begins:
 	now defeated entry is "The Drakenoid groans in pain and she slumps over onto the ground. Immediately she begins to try and crawl away from you towards rubble where she may be able to hide.";
 	now victory entry is  "[Ash Drakenoid attack]";
 	now desc entry is "There is little warning as one of the fearsome herm Drakenoids seems to suddenly appear on some nearby debris. With a supernatural howl she expertly navigates through the wreckage towards you'[one of]Another breeder for his lords army?[or]You are not prepared![at random],' she shrieks. Her humanoid dragon form is fearsome to behold. Shining obsidian scales contrasting the bright red magma blood which glows through her viens. The nude body serves as natural armour, there are spikes growing along her limbs and think plating on her joints. She has reptilian horns jutting from her head. A fiendishly barbed, behemoth of a cock hangs semi erect from between her thighs, a loss to this creature would not only be painful, but judging by the size of her large glowing testes, a defeat will also carry consequences."; 
-	now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your viens. You have an Ash Dragon"; 
-	now body entry is "Tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forarms and joints. Your Ash Dragon Body is a fearsome sight."; 
-	now skin entry is "[one of]obsidian black scaled[or]ashen colored scaled[at random]";
-	now tail entry is "You have a long prehensile tail trailing behind you. Despite its flexibility it is extremly tough and it ends with a sharp point.";
+	now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your veins. You have an Ash Dragon head"; 
+	now body entry is "tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forearms and joints. Your Ash Dragon body is a fearsome sight"; 
+	now skin entry is "[one of]obsidian black scales for[or]ashen colored scales for[at random]";
+	now tail entry is "You have a long prehensile tail trailing behind you. Despite its flexibility it is extremely tough and it ends with a sharp point.";
 	now cock entry is "[one of]cruelly barbed ash dragon[or]glowing ash dragon impregnator[at random]";
-	now face change entry is "strange sensations which build beneath your skin. Black shining scales form beneath your features and your old face sloughs off like a mask leaving a semi-recognizable version of your old self. You grab your cranium as a splitting headache erupts, new demonic horns lancing out from your head, oddly enough they look different from the reptilian horns most of the Ash Dragons sport. They almost seem to form a crown...";
-	now body change entry is "pain wracks throughout it in spasms. Curling into a ball you feel your spine cracking, and from the soreness in your legs and limbs you are adding signifigant hieght to your frame. Overcome with a burning sensation, you double over, feeling sick. Your old skin peels away and falls off to reveal the black scales of the Ashen Dragon Brood. The blood in your very viens seems to swell with heat and soon you can see a glowing molten layout of your blood circulation. It forms an ornate eerie pattern over your body.";
-	now skin change entry is "your flesh hardens and mollifys. It is burned black from the inside as your blood ignites.";
-	now ass change entry is "a long prehensile tail forms from your backside. You find you can sweep it powerfully behind you. It takes some getting used too, however, soon you are using it almost like a third limb.";
-	now cock change entry is "it engorges itself with molten blood. It now glows a deep orange and the viens of it glow brightly. There are evil looking barbs along its tip and along its belly, when ejaculating you know they will engorge and harden, making it impossible to pull away from your partner. Your balls also ignite with an inner light and a painful fire begins to brew within them.";
+	now face change entry is "strange sensations which build beneath your skin. Black shining scales form beneath your features and your old face sloughs off like a mask leaving a semi-recognizable version of your old self. You grab your cranium as a splitting headache erupts, new demonic horns lancing out from your head, oddly enough they look different from the reptilian horns most of the Ash Dragons sport. They almost seem to form a crown";
+	now body change entry is "pain wracks throughout it in spasms. Curling into a ball you feel your spine cracking, and from the soreness in your legs and limbs you are adding significant height to your frame. Overcome with a burning sensation, you double over, feeling sick. Your old skin peels away and falls off to reveal the black scales of the Ashen Dragon Brood. The blood in your very veins seems to swell with heat and soon you can see a glowing molten layout of your blood circulation. It forms an ornate eerie pattern over your body";
+	now skin change entry is "your flesh hardens as it's modified into a scaly hide. It is burned black from the inside as your blood ignites.";
+	now ass change entry is "a long prehensile tail forms from your backside. You find you can sweep it powerfully behind you. It takes some getting used too, however, soon you are using it almost like a third limb";
+	now cock change entry is "it engorges itself with molten blood. It now glows a deep orange and the veins of it glow brightly. There are evil looking barbs along its tip and along its belly, when ejaculating you know they will stiffen, making it impossible to pull away from your partner. Your balls also ignite with an inner light and a painful fire begins to brew within them";
 	now str entry is 18;
 	now dex entry is 14;
 	now sta entry is 18;
@@ -73,6 +73,15 @@ When Play begins:
 	now libido entry is 50;
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]mutated[or]altered[or]powerful[or]fearsome[at random]";
+	now type entry is "draconic";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "Ash Drakenoid":
@@ -83,7 +92,7 @@ when play ends:
 			if cunts of player is greater than 0:
 				say "As you ascend the capitol tower you feel your belly tingle with something akin to electricity. You know, somehow, that your body is preparing to bear a dragon brood of epic proportions.";
 			if cocks of player is 0 and cunts of player is 0:
-				say "Before you finally ascend to the roof of the capitol building you reflect on your infected adventures. The people you met, the places you saw. Having left your children (if you had any) safely at the library. Taking a deep breath you continue to ascend the building towards whatever beings massive willpower has summoned you.";
+				say "Before you finally ascend to the roof of the capitol building you reflect on your infected adventures. The people you met, the places you saw. Having left your children (if you had any) safely at the library. Taking a deep breath you continue to ascend the building towards whatever being's massive willpower has summoned you.";
 		otherwise:
 			say "Having retained your sanity as an Ash Dragon you manage to escape the city. However civilization proves to much for your new urges and after a short span of time in which you spread many wild oats you find yourself fleeing to the east. A dark presence has emerged from the infected city, it is rumoured, and seems to be headed in your general direction.";
 			

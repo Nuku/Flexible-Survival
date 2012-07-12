@@ -449,13 +449,13 @@ When Play begins:
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
 	now area entry is "High";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 3;		[ Size of balls apparently ;) sneaky Nuku]
 	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
 	now breast size entry is 0;		[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 3;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
@@ -562,7 +562,7 @@ This is the butterflytreatment choice rule:
 						now dex entry is 32 + ( lev entry / 5 );
 						now hp entry is 45 + ( debit * 5 );
 						now wdam entry is 14 + ( 4 * debit / 11 );		[Strong dmg growth rate]
-						now sex entry is "Female"; 
+						now sex entry is "Female";
 						break;
 			now ButterflyLove is False;
 	otherwise:
@@ -648,24 +648,42 @@ to say testosterone pill use:
 		now cocktext is "[cock size desc of player] [cock of player] ";
 	otherwise:
 		now cocktext is "[cock size desc of player] ";
-	if cunts of player is greater than 0:
-		if cocks of player is greater than 0:
-			now cunts of player is 0;
-			say "With a burst of intense pain the lips of your cunts[if cocks of player is greater than 1]s[end if] fuse together and flatten. Within seconds nothing remains of your former femininity. ";
-		otherwise:
-			now cunts of player is 0;
-			now cocks of player is 1;
-			now cock length of player is 6;
-			now cock width of player is 4;
-			follow the cock descr rule;
-			say "With your body in shock you feel your cunt[if cunts of player is greater than 1]s[end if] tighten, push out of your body and form into a [cocktext ]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
-	if cocks of player is greater than 0:
+	if cunts of player > 0 and cocks of player > 0:		[HERM]
+		now cunts of player is 0;
+		now cunt width of player is 0;
+		now cunt length of player is 0;
+		say "With a burst of intense pain the lips of your cunts[if cocks of player is greater than 1]s[end if] fuse together and flatten. Within seconds nothing remains of your former femininity. ";
 		increase cock length of player by 2;
-		follow the cock descr rule;
-		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player is greater than 1]they[otherwise]it[end if] gains in length, becoming [descr]! ";
 		increase cock width of player by 2;
 		follow the cock descr rule;
-		say "You can see your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
+		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player is greater than 1]they gain[otherwise]it gains[end if] in length, becoming [descr]! ";
+		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
+	otherwise if cunts of player > 0:				[FEMALE]
+		now cunts of player is 0;
+		now cunt width of player is 0;
+		now cunt length of player is 0;
+		now cocks of player is 1;
+		now cock length of player is 6;
+		now cock width of player is 4;
+		follow the cock descr rule;
+		say "With your body in shock, you feel your cunt[if cunts of player is greater than 1]s[end if] tighten, push out of your body and form into a [cocktext ]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
+	otherwise if cocks of player > 0:				[MALE]
+		now cunts of player is 0;
+		now cunt width of player is 0;
+		now cunt length of player is 0;
+		increase cock length of player by 2;
+		increase cock width of player by 2;
+		follow the cock descr rule;
+		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player is greater than 1]they gain[otherwise]it gains[end if] in length, becoming [descr]! ";
+		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
+	otherwise:								[NEUTER]
+		now cunts of player is 0;
+		now cunt width of player is 0;
+		now cunt length of player is 0;
+		now cocks of player is 1;
+		now cock length of player is 6;
+		now cock width of player is 4;
+		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext ]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
 	if breast size of player is greater than 0:
 		now breast size of player is 0;
 		say "With the feel of a popping balloon your breasts deflate leaving you with a flat yet muscular chest. ";
