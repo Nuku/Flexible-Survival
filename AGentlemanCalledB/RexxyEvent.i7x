@@ -1,5 +1,6 @@
 Version 1 of RexxyEvent by AGentlemanCalledB begins here.
 "Adds a Adds an Alpha Retriever NPC and associated scenarios to the Flexible Survival game"
+[Version 1.1 - Male Bone use progression, improved formatting, spelling/grammar]
 
 Section 1 - Event
 
@@ -16,6 +17,8 @@ Instead of Resolving a ForcedAdoption:
 	if rexeventmode is 0:
 		say "As you walk down the street of what remains of an upscale neighborhood on the outskirts of the high rise district, you spot a figure up ahead and duck out of sight before they spot you. As the figure gets closer you see that she is an attractive female canine with a thick coat of golden fur, much like the other retriever girls you've seen around the district. From your hiding place you can see she is clutching something against her ample chest with both hands.";
 		say "She glances around nervously as she walks, when suddenly another figure, a large powerful looking male retriever, steps out of a nearby alley into her path, cutting her off. The retriever girl runs into him and stumbles backward, falling to the ground and dropping whatever she was carrying. Without even acknowledging the male's presence, she begins scrambling around on all fours, looking for her prize, until she comes face to face with his erect canine cock. Slowly she looks up over his body until she is staring lustfully into his eyes. The large male then reaches down and picks up the entranced girl, carrying her back down the alley he emerged from as she whimpers needfully.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "Once you are certain the pair is gone you get up from your hiding place and walk over to where they were standing. as you glance around you spot the object the retriever girls was so obsessed with, an unusual sex toy shaped like a canine cock on one end with a bone shaped handle on the other. Against your better judgment, you feel compelled to pick the strange toy up, examining it more closely momentarily before slipping it into your bag and heading on your way, even as faint thoughts of doggie sex begin to creep into your mind.";
 		add "Dog Bone" to invent of player;
 		now rexeventmode is 1;
@@ -26,15 +29,18 @@ Instead of Resolving a ForcedAdoption:
 			if Dog Bone is owned:
 				say "As you once again find yourself passing through a familiar neighborhood you are suddenly stuck with concern for you favorite toy. pulling it from your bag you hold it tightly too your chest. In a moment of clarity you realize this is the very same place you first acquired the toy... and saw its previous owner captured by a large male retriever. ";
 				say "You ponder just how similar a position you are in too hers when you are suddenly grabbed from behind. You are spun around to see the large, sexy, male canine face to face before he presses his muzzle to your face, drawing you into a deep kiss.  Your mind is flooded with the thoughts and desires of the retriever bitch you have been becoming, your infection driven to new a new lust fueled high by the his deep kiss and powerful male scent.";
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more]
 				say "The large male breaks off the kiss and starts to introduce himself.  You try to reign in your mind, struggling to control the growing urges of the retriever bitch clawing at your thoughts, but in doing so you barely managed to hear any of what he says, other than his name, Rex. While he looks you over, a smile crossing his muzzle as he spots the doggie dildo clenched in both hands against your chest.";
 				say "'I see that wonderful bone has brought another lovely bitch right to my doorstep.  Why don't you come inside so we can start training you to be a proper pet?' he says, wrenching the bone from your grasp as he finishes. He then turns to a nearby house, motioning you towards the large doggy door as he enters through the front.";
 				delete Dog Bone;
 				now Rex's Place is known;
+				say "REX'S PLACE IS NOW KNOWN";
 				now ForcedAdoption is resolved;
 			Otherwise:
 				Say "Once again you find yourself in the neighborhood where you saw the golden retriever girl being abducted by the large male. As you walk by nervously you find your thoughts once again drawn to your beloved doggie sex toy, feeling an overwhelming urge to return to where you left it and play with it again.";
 				increase bonelust by 1;
-				
+
 
 Section 2 - Rex's Place
 
@@ -89,7 +95,10 @@ instead of sniffing Dog Bone:
 To say DogBoneUse:
 	if doggyboned is 0:
 		say "You pull the unusual doggy bone from your bag, intending to get a better look at it now that you're in a more secure location, but as you turn the realistic looking cock in your hands you soon find your thoughts consumed with a desire to taste it.";
-		say "Tentatively at first, you give the tip of the shaft a few small licks but soon you've graduated to broadly licking across its entire length. As strange new thoughts of doggy sex start filling your fogged mind, you find yourself with most of the rod in your mouth, happily sucking away like a good bitch. You come to your senses some time later, blushing sheepishly over what you've done.  You slip the toy back into your bag, not even noticing the changes your fun has caused until some time later.";
+		say "Tentatively at first, you give the tip of the shaft a few small licks but soon you've graduated to broadly licking across its entire length. As strange new thoughts of doggy sex start filling your fogged mind, you find yourself with most of the rod in your mouth, happily sucking away like a good bitch."; 
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		say "You come to your senses some time later, blushing sheepishly over what you've been doing you slip the toy back into your bag, not even noticing the changes your fun has caused until some time later.";
 		infect "Retriever";
 		decrease humanity of player by 3;
 		now doggyboned is 1;
@@ -98,22 +107,33 @@ To say DogBoneUse:
 			say "You pull the bone from your bag again and your mind is already flooded with thoughts and images of doggy sex. Without a second thought, you quickly strip you gear off, intent on using the toy as it was obviously intended to be used.";
 			say "Slowly at first you begin to push the tip of the doggy dildo into your moistening folds, savoring this feeling of the first penetration as long as you can, but as the familiar warm tingling feeling begins to overtake you again the pace steadily quickens.";
 			say "In your mind, you imagine yourself being taken by a handsome retriever stud. Driving his large canine cock into you again and again as you bark and yip in pleasure beneath him.";
-			say "When your orgasm finally strikes you are snapped back to reality by the rush of liquids soaking your hands and thighs.  As you lay there recovering, a part of you wonders, even worries, about the power this simple sex toy seems to be taking over you.";
+			say "When your orgasm finally strikes you are snapped back to reality by the rush of liquids soaking your hands and thighs.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "As you lay there recovering, a part of you wonders, even worries, about the power this simple sex toy seems to be taking over you.";
 			say "You wonder if continuing to use it is a good idea as you take stock of the new changes it has caused in your body, but those worries are soon pushed away when your mind begins to wander to dreams of doggy sex once again while you gather your things to leave.";
 			infect "Retriever";
 			decrease humanity of player by 3;
 			now doggyboned is 2;
 		otherwise:
-			say "As you pull the doggy bone from you bag you hold no false pretenses about what you intend to do, happily sliding it's length into your mouth again. Almost welcoming the warm feelings and arousing mental imagery that rapidly begin to envelope your mind and body, you slip into the same haze trance as before.";
-			say "Once again you come to your senses some time later, you reluctantly put your toy back in your bag for safekeeping, already dreaming of your next chance to play with it. As you return to your tasks at hand, you take stock of the changes it has caused in your body this time.";
+			say "You eagerly dig your doggy dildo from your bag once again as you look for a safe place to stop and enjoy yourself.";
+			say "Despite the desire burning inside you, you lack the equipment to use the toy the way it was intended. Deciding to go with the next best thing, you lick and suck at on the artificial shaft until it is well lubricated by your saliva before bringing the pointed tip towards your eager ass";
+			say "You can't help but whimper and moan as you slowly push the canine member into yourself, a familiar warm tingling sensation begins to overtake your body and mind, filling your head with lewd imagery of canine sex.";
+			say "One image in particular begins to come into focus above all the others, that of yourself under a large male Retriever. Soon you begin to lose track of reality, focusing only on the image of yourself being taken by this large canine, when he finally drives his length home, forcing his swollen knot into your tight pucker you do the same, forcing full length of the dildo into yourself with a howl of pleasure before finally passing out.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "You awaken some time later, the bone shaped sex toy still buried in your ass. As you pull  the toy from yourself with a whimper you can't help but wonder if it's a good idea to continue using it. Taking stock of the new changes it has caused in your body you ponder the powerful effect it seems to have over your body and mind, but by the time you've gathered your things and prepared to venture out into the city again your concerns have already started giving way to familiar daydreams of canine sex.";
 			infect "Retriever";
-			decrease humanity of player by 4;
+			decrease humanity of player by 3;
+			now doggyboned is 2;
 	otherwise if doggyboned is 2:
 		if cunts of player > 0:
-			say "Eagerly, you dig your canine sex toy from your bag once again and find a safe spot to stop and enjoy yourself, without even considering the consequences you are quickly naked and once again teasing your female passage with the pointed tip of the canine cock once again.";
+			say "Eagerly, you dig your canine sex toy from your bag once again and find a safe spot to stop and enjoy yourself, without even considering the consequences you are quickly naked and once again teasing your female passage with the pointed tip of the canine cock.";
 			say "You slip into the trance-like state again as you being dreaming about the same handsome canine stud, only this time the figure beneath him is indistinguishable from the retriever bitch your originally acquired the bone from. In a moment of clarity you realize you're even beginning to identify yourself as just another retriever bitch.";
 			say "Despite this moment of resistance you are soon overwhelmed by the burning need between your legs once again, and despite your fear of how it will affect you, you drive the entire length of the dildo into yourself, hilting the bone shaped handle against your nether lips.";
 			say "Your world shatters in the intense pleasure and having given into it your retriever infection kicks into overdrive. The last of your concerns about this wonderful bone are washed away as it rapidly reshapes your body to better suit your new self image.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "Once you recover from your intense orgasm you pull the dildo from your  cunt with a wet slurp and begin licking it clean of your juices. All the while telling yourself how glad you are that you decided to pick it up after that other silly bitch left it behind, as it's definitely the best toy you've ever had.";
 			say "Eventually you gather your things and set out on your way again, carefully stashing your bone back in your bag as you put your equipment back on your wonderful new retriever body.";
 			say "[fullRetrieverTF]";
@@ -121,25 +141,35 @@ To say DogBoneUse:
 			now doggyboned is 3;
 			now bonelust is 1;
 		otherwise:
-			say "You eagerly dig your doggy dildo from your bag once again as you look for a safe place to stop and enjoy yourself.";
-			say "You settle on a secluded enough location, but as you make yourself comfortable you realize that despite the burning need in your body you no longer have the proper equipment to make use of the toy.";
-			say "Dejectedly you settle once again on sucking on the toy as the familiar warmth and tingling overtakes your body and mind once again.";
-			infect "Retriever";
-			decrease humanity of player by 4;
+			say "Eagerly, you dig your canine sex toy from your bag once again and find a safe spot to stop and enjoy yourself, without even considering the consequences you are quickly naked and once again teasing your back door with the pointed shaft.";
+			say "As you begin driving the dildo into yourself again, your free has is drawn too [if cocks of player > 0]own erect cock, slowly working it's length at the same pace.[otherwise] featureless crotch, rubbing against it futilely as you moan in pleasure[end if].";
+			say "You welcome the familiar warmth as dreams of large canine studs begin too flood you mind, the same image of a large male retriever mounting a smaller figure beneath him once again comes to the forefront, only this time you realize the figure beneath him is indistinguishable from the retriever bitch your originally acquired the bone from.";
+			say "You are struck with a moment of clarity, realizing even your own self image is beginning too shift towards that of a retriever bitch, but despite this resistance you are soon overwhelmed again by the need burning within your and you find yourself howling in pleasure as you drive the canine cock into yourself.";
+			say "With one final powerful thrust you push the entire length of the canine shaft into yourself, hilting the handle against your cheeks [if cocks of player > 0]pushing your over the edge into the ecstasy of orgasm, your own twitching member unleashing your hot, thick seed into the air[end if]. As you bask in the afterglow of your [if cocks of player > 0]climax[otherwise]fun[end if] you feel the warm tingling throughout your body intensify, the retriever infection working rapidly to reshape your body to match your new self image, washing away the last of your concerns about this wonderful bone in the process.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "After you come to your senses some time later you can't help but wonder how that other silly bitch could have let this wonderful bone slip from her grasp, while your clean up and gather your things. It's definitely the best toy you've ever had you tell yourself, admiring your perfect new retriever body as you slip the toy back into your bag and head back out into to the city.";
+			say "[fullRetrieverTF]";
+			decrease humanity of player by 6;
+			now doggyboned is 3;
+			now bonelust is 1;
 	otherwise if doggyboned is 3:
 		if cunts of player > 0:
 			say "You begin panting eagerly when you realize you have another free moment to play with your favorite sextoy. By the time you've stripped off your clothes and dug the bone from your bag, you already feel the familiar warmth filling your body.";
 			say "As you being driving the pointed tip of the dildo into your moist, needy slit your mind quickly returns to the same fantasies of yourself being taken over and over by that handsome retriever alpha. Soon, your pace driving the dildo into your body is perfectly synchronized with that of the stud in your fantasy and as he makes that final powerful thrust, forcing his large knot into you howling in the pleasure of his orgasm you do the same, pushing the entire length of the cock into yourself, your own howls of pleasure echoing through the streets around you.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "After cleaning yourself up and gathering your equipment once again, you set out into the city, the burning need between your legs having been curbed again for now.";
-			infect "Retriever";
 			infect "Retriever";
 			now bonelust is 1;
 			decrease humanity of player by 4;
 		otherwise:
-			say "You eagerly dig your doggy dildo from your bag once again as you look for a safe place to stop and enjoy yourself.";
-			say "You settle on a secluded enough location, but as you make yourself comfortable you realize that despite the burning need in your body you no longer have the proper equipment to make use of the toy.";
-			say "Dejectedly you settle once again on sucking on the toy as the familiar warmth and tingling overtakes your body and mind once again.";
-			infect "Retriever";
+			say "A familiar dull fog beings too cloud your mind as your draw the canine dildo from your bag once again, your already sucking on it happily by the time you find a safe place to stop and have your fun.";
+			say "You eagerly begin forcing the already wet shaft into your ass as the familiar warm tingling and lewd dreams begin to fill your body and mind. Your moans and howling echo in the streets around you as you work the toy in and out of your tight hole matching the pace of the canine stud in your fantasy.";
+			say "Before long the pleasure overwhelms you, and with one final howl the handle of the canine dildo is once again hilted against your cheeks before you slip out of consciousness once again.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "you awaken shortly afterward and after cleaning yourself up you gathering your equipment once again before you set out into the city, the burning need inside you curbed again for now.";
 			infect "Retriever";
 			now bonelust is 1;
 			decrease humanity of player by 4;
@@ -151,7 +181,7 @@ An everyturn rule:
 		decrease humanity of player by 15;
 	otherwise if bonelust > 6:
 		if a random chance of 1 in 2 succeeds:
-			say "You struggle to resist the will of the retriever bitch the infection is trying to make you it's grip on your mind tightens. Your body burns with desire as the lewd daydreams of doggy sex dominate your thoughts. Perhaps you could relieve some of this lust with some playtime with [if rextalk is 1] Rex? [otherwise] your beloved dog bone sex toy?[end if]";
+			say "You struggle to resist the will of the retriever bitch the infection is trying to make you it's grip on your mind tightens. Your body burns with desire as the lewd daydreams of doggy sex dominate your thoughts. Perhaps you could relieve some of this lust with some playtime with [if rextalk is 1]Rex[otherwise] your beloved dog bone sex toy[end if]?";
 			increase bonelust by 1;
 			decrease humanity of player by 9;
 	otherwise if bonelust > 3:
@@ -164,7 +194,7 @@ An everyturn rule:
 			say "You feel the retriever infection pawing at the back of your mind and a warm tingling deep within you as your mind drifts too thoughts of Large male canines and their rigid knotted cocks.";
 			increase bonelust by 1;
 			decrease humanity of player by 3;
-		
+
 to say fullRetrieverTF:
 	[puts Retriever as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -218,7 +248,7 @@ instead of conversing the Rex:
 			say " 'But enough of that, let me show you around our home,' Rex says as he begins touring you around the small house.  Finally he introduces you too Karen, the other retriever in the home, who you quickly recognize as the girl you saw Rex grab earlier and the original owner of the bone that drew you here. As Rex introduces you properly she smiles at you knowingly, apparently somehow recognizing you as well.";
 		increase rextalk by 1;
 	otherwise if rextalk is 1:
-		say "[one of]'Karen is so much happier now that she's become my pet rather than the other way around. You really should give in and join her.'[or]'Would you like a treat?' Rex says, gesturing to the large jar of cookies beside him.[or]'Why don't you come over here and let me show you how nice life as a retriever sexpet can be?'[or]'It must be difficult finding relief without that dog bone sex toy huh?' the large male says with a mischievous grin.[or]Rex doesn't seam to notice you as he twirls a small blue collar in his paw like hand, looking up he spots you, and waves the collar towards you, trying to entice you to put it on.[or]'Are you sure you don't want to stay here with Karen and I? Life as a pet is so much easier, and I'll even be sure to give you some lovely pups too play with.'[or]'Rex doesn't seam to be interesting in talking as he rolls around on the floor, playing with Karen.'[or]'Rex lies sleeping on the couch with Karen in his arms, she smiles at you vacantly, almost making you jealous of the simple happy life she must now lead.'[or]'Why don't you just stay a while with us, I'm sure you'll come to enjoy your time here.'[at random]";
+		say "[one of]'Karen is so much happier now that she's become my pet rather than the other way around. You really should give in and join her.'[or]'Would you like a treat?' Rex says, gesturing to the large jar of cookies beside him.[or]'Why don't you come over here and let me show you how nice life as a retriever sexpet can be?'[or]'It must be difficult finding relief without that dog bone sex toy huh?' the large male says with a mischievous grin.[or]Rex doesn't seem to notice you as he twirls a small blue collar in his paw like hand, looking up he spots you, and waves the collar towards you, trying to entice you to put it on.[or]'Are you sure you don't want to stay here with Karen and I? Life as a pet is so much easier, and I'll even be sure to give you some lovely pups too play with.'[or]'Rex doesn't seem to be interesting in talking as he rolls around on the floor, playing with Karen.'[or]'Rex lies sleeping on the couch with Karen in his arms, she smiles at you vacantly, almost making you jealous of the simple happy life she must now lead.'[or]'Why don't you just stay a while with us, I'm sure you'll come to enjoy your time here.'[at random]";
 
 Instead of fucking the Rex:
 	[puts Retriever as lead monster for possible impregnation]
@@ -231,15 +261,19 @@ Instead of fucking the Rex:
 		say "'Back again ready? Are you sure you're here because you really need it or are you just starting to enjoy my company?' Rex says with a mischievous grin. 'either way, I don't think I'm ready to go again, so I guess you'll just have to wait' He continues, his smirk broadening even more.";
 	otherwise if bonelust > 6:
 		if cunts of player > 0:
-			say "Wanting too maintain some semblance of yourself you struggle to control your bodies urges at you approach Rex. The mental battle to control the overpowering urges is a difficult one, requiring all your willpower just too keep yourself from leaping into his arms, begging him too fuck you senseless.";
+			say "Wanting to maintain some semblance of yourself you struggle to control your bodies urges at you approach Rex. The mental battle to control the overpowering urges is a difficult one, requiring all your willpower just too keep yourself from leaping into his arms, begging him too fuck you senseless.";
 			say "Apparently recognizing your struggle Rex watches intently, a smug smirk across his muzzle, obviously amused by your losing battle against powerful need caused by the retriever infection and that strange bone.";
 			say "Finally you can take no more, falling to your hands and knees, giving in to your bodies desires once again. You crawl forward too Rex, begging him to help sate the fiery desire consuming you. He draws his response out for what seems like a lifetime, clearly still enjoying watching you squirm under the influence of the infection. Your already trying to take the edge off yourself, two fingers working deep into your dripping cunt with no avail by the time Rex finally agrees.";
-			say "Standing up the motions towards the back bedroom, but before he even begins to step away you grab his leg, holding him back. Not wishing to wait any longer You look up at him pleadingly. 'Or I could take you here and now, on the floor like a proper bitch.' he says looking down into your eyes, still grinning fiendishly. You've already bobbed your head in agreement before he's even finished speaking and release his leg, turning to prevent yourself eagerly as soon as he's made the offer.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "Standing up he motions towards the back bedroom, but before he even begins to step away you grab his leg, holding him back. Not wishing to wait any longer You look up at him pleadingly. 'Or I could take you here and now, on the floor like a proper bitch.' he says looking down into your eyes, still grinning fiendishly. You've already bobbed your head in agreement before he's even finished speaking and release his leg, turning to prevent yourself eagerly as soon as he's made the offer.";
 			say "Without another word Rex moves behind you, stroking your hips softly as he begins teasing your already soaked slit. You can't help but yip loudly as he thrusts into you the first time without warning, but when he pulls back and prepares to drive into you again you are prepared for him, bucking back to meet him. With each thrust you feel his swelling knot teasing your outer folds and, eager to have him fill you completely, you push back with increased vigor matching every thrust he makes while the pace quickens";
 			say "You howl in pleasure as your cunt finally stretches enough to allow his wonderful know inside you, the rush of your feminine juices soaks your thighs as it gushes out around Rex's rod but he leaves you little time to recover from your first climax, beginning to hump you in earnest again moments later.";
 			say "Each movement pulls and teases the knot inside you, quickly bringing you towards a second climax. With one final powerful thrust he pushes both of you over the edge, howling in unison as his throbbing members fills your womb with virile retriever seed, finally quenching the fire inside you, for now.";
-			say "Exhausted, you both collapse to the floor, still tied together by his know. Rex begins stroking the back of your head softly as he lay atop you, both of you still basking in the afterglow of your intense orgasms. 'isn't this nice?' he whispers into your ear, ' Are you sure this isn't the life you want to live?'";
-			say "Eventually Rex's knot has softened enough that he can pull himself free, leaving you whimpering for a moment at the sudden empty feeling. he slowly climbs to his feet, taking a moment too stretch with a low groan before returning to his business, leaving you to finish recovering on your own.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "Exhausted, you both collapse to the floor, still tied together by his knot. Rex begins stroking the back of your head softly as he lay atop you, both of you still basking in the afterglow of your intense orgasms. 'isn't this nice?' he whispers into your ear, ' Are you sure this isn't the life you want to live?'";
+			say "Eventually Rex's knot has softened enough that he can pull himself free, leaving you whimpering for a moment at the sudden empty feeling. He slowly climbs to his feet, taking a moment too stretch with a low groan before returning to his business, leaving you to finish recovering on your own.";
 			say "[fullRetrieverTF]";
 			say "[impregchance]";
 			now bonelust is 1;
@@ -248,7 +282,7 @@ Instead of fucking the Rex:
 		otherwise:
 			say "Rex looks deep into your eyes as you stumble towards him, struggling to not lose yourself entirely too the overwhelming urges welling up inside you. Seeing the pleading look in your eyes he smiles knowingly and places an arm around your shoulder, leading you off towards his bed in the back room. By the time you reach your destination your mind is made up, you can't resist the powerful need burning inside you any longer, and as your resistance slips away once again you lean heavily against Rex, taking a deep breath of his powerful male scent as you reach the bed.";
 			say "Eagerly you climb onto the bed in front of him, panting heavily as you turn to present your rear too him. Soon you feel his weight atop you reaching around your chest as he mounts you like a proper bitch, forcing his thick canine shaft into your ass with a low groan. He fucks you hard and fast, each thrust teasing your pucker as his knot rubs against you. He quickens too an almost frantic pace as you buck back against him, meeting every push with a push of your own before he suddenly pulls out.";
-			say "You look back in confusion too see him stroking his dripping rod with a low growl before he grabs your shoulder with his free hand, forcefully turning your body too face him just as he erupts, thick streams of his hot seed coating your chest and face as he howls in pleasure. Once his twitching canine cock stops spurting the thick seed he brings his crotch in close to your face, allowing you to lick and suck his length clean. You happily lap up the last droplets of cum from him before he rolls off you, panting happily as the lick the last of the salty deposit from your lips. idly he scratches your head as he basks in the afterglow of his climax, not saying a word before he slowly drifts off to sleep";
+			say "You look back in confusion too see him stroking his dripping rod with a low growl before he grabs your shoulder with his free hand, forcefully turning your body too face him just as he erupts, thick streams of his hot seed coating your chest and face as he howls in pleasure. Once his twitching canine cock stops spurting the thick seed he brings his crotch in close to your face, allowing you to lick and suck his length clean. You happily lap up the last droplets of cum from him before he rolls off you, panting happily as the lick the last of the salty deposit from your lips. Idly he scratches your head as he basks in the afterglow of his climax, not saying a word before he slowly drifts off to sleep.";
 			infect "Retriever";
 			infect "Retriever";
 			now bonelust is 1;
@@ -258,6 +292,8 @@ Instead of fucking the Rex:
 		if cunts of player > 0:
 			say "As you approach Rex you become keenly aware of the powerful need burning inside you, and Rex's powerful male musk only serves to increase the desire to submit too him. You know giving in to these urges is exactly what Rex wants you to do, but at the same time the need only seams too becomes more unbearable the longer you resist.";
 			say "As if sensing your internal struggle Rex steps forward, placing his paw like hand on your shoulders he leans in close to whisper in your ear, his soft touch sending shivers through your body. 'It's alright,' he whispers. 'You don't need to resist these feelings.' His overwhelming scent is almost intoxicating too your lust addled mind at this proximity, you barely manage a weak nod before falling into his embrace.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "After a few moments, Rex breaks the hug and bends down to pick you up, carrying you to the back room where his bed awaits while you bury your face in the soft fur of his powerful chest, bathing yourself in his arousing scent. By the time you've reached the bed the last of your resistance has long since slipped away and your bodies urges have taken full control, leaving you panting in anticipation as Rex gently lays you on the bed.";
 			say "Slowly at first, he begins petting and stroking your body, each touch sending electric shivers through your already aroused body. He progresses slowly up your body, rubbing, petting and even scratching in all the right places, eventually reaching your head. he reaches back and begins scratching behind your ears softly as he leans in close once again and licks you cheek.";
 			say "By this point you realize he's laying almost completely on top of you and without stopping the delicious doggy kisses he reaches down and begins guiding his rod too tease the outer folds of your feminine passage. You can't help but moan in delight as he begins to slowly push himself deeper into you, your legs wrapping around his body trying to speed up his slow, deliberate thrusting. As his pace quickens your body begin to match his rhythm, matching each of his thrusts, trying to force as much of him into you as possible.";
@@ -270,7 +306,7 @@ Instead of fucking the Rex:
 			decrease humanity of player by a random number between 5 and 9;
 			now lastRexfucked is turns;
 		otherwise:
-			say "Slowly you approach Rex, still struggling your decision to have him help you sate the need burning in your body. Rex smiles broadly as you finally give in to the urges and ask for his 'help'in the matter. 'I'd love to show you more of what it's like to be a proper pet. You seem to be lacking the proper equipment, but I suppose we make due though.' he says as he smacks your ass firmly before heading off to the back bedroom.";
+			say "Slowly you approach Rex, still struggling your decision to have him help you sate the need burning in your body. Rex smiles broadly as you finally give in to the urges and ask for his 'help' in the matter. 'I'd love to show you more of what it's like to be a proper pet. You seem to be lacking the proper equipment, but I suppose we make due though.' he says as he smacks your ass firmly before heading off to the back bedroom.";
 			say "You follow close behind him until he pauses and turns to face you. Without warning he leans in and gives you a quick peck on the cheek before scooping you up off the floor and placing you on the bed, He maneuvers you onto all fours 	with your rear facing him before he climbs onto the bed behind you. you can't help but moan softly as he teases your tight pucker with one finger before gripping your ass firmly with both hands. He strokes his erect dripping canine cock up and down your rear a few times, lubing you up with his dribbling pre before slowly but firmly pushing into you. The feeling of your insides being spread before him easily overwhelms your lust fogged mind and your already moaning deeply under him before he starts humping in earnest.";
 			say "Rex's pace increases steadily, driving more and more of his shaft into your bowels with each thrust and soon his deep groans are mingling with your own sharp yips, marking each push he makes into you.  Finally he can take no more and with one last thrust he forces most of his length into you, his large knot pressing against the outer lips of your asshole. His throbbing member begins pouring his hot load deep into your bowels, filling you with the warmth of his canine seed.";
 			say "After finally draining his balls Rex gives the back of your head a soft pat and your ass another firm smack before pulling his still dripping shaft from your body. You collapse onto the bed as he dismounts you leaving the room with a small chuckle. He calls back to you as he reaches the door. 'Maybe next time we do this I can show you what it's like to be a proper bitch? I know you must be looking forward to that.' He says before stepping back out into the living room, closing the door behind him. You find a part of yourself agreeing silently as you lay on the bed with a vapid smile, enjoying the warm tingling sensation deep inside you.";
@@ -291,7 +327,9 @@ Instead of fucking the Rex:
 		decrease humanity of player by a random number between 5 and 8;
 		now lastRexfucked is turns;
 	if humanity of player < 10:
-		say "As you begin to rise you see Rex has left that damned blue collar laying out on a nearby counter for you too see again, but this time somthing clicks inside you, his [']training['] seemingly finally having taken hold you reach out and pick up the collar, fastening it around your neck without a second thought.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		say "As you begin to rise you see Rex has left that damned blue collar laying out on a nearby counter for you to see again, but this time something clicks inside you, his 'training' seemingly finally have taken hold you reach out and pick up the collar, fastening it around your neck without a second thought.";
 		say "All your other concerns seam to drain away as the retriever infection takes full control of your mind and body, shaping you into another perfect sexpet for you new owner. Eagerly you return too him, finding him waiting for you on his couch at the back of the room, the broad smile on his face as he see you in the collar filling you with pride. He motions for you to join him laying on the couch, and you happily snuggle up against him. You begin to drift off to sleep as he scratches your ears, telling you that you made the right decision, and you can't help but agree as you drift off into slumber, dreaming off all the wonderful times in your new life ahead of you.";
 		say "[fullRetrieverTF]";
 		now rexpet is 1;
@@ -300,7 +338,9 @@ Instead of fucking the Rex:
 		follow the turnpass rule;
 		stop the action;
 	otherwise:
-		say "You eventually return too your senses, the fog seaming to have lifted from your mind once again and you note the burning desires within you seam to have diminished, but so has some of your resistance to Rex and the retriever infection.";
+		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		say "You eventually return to your senses, the fog seaming to have lifted from your mind once again and you note the burning desires within you seem to have diminished, but so has some of your resistance to Rex and the retriever infection.";
 
 
 
