@@ -652,7 +652,7 @@ to say testosterone pill use:
 		now cunts of player is 0;
 		now cunt width of player is 0;
 		now cunt length of player is 0;
-		say "With a burst of intense pain the lips of your cunts[if cocks of player is greater than 1]s[end if] fuse together and flatten. Within seconds nothing remains of your former femininity. ";
+		say "With a burst of intense pain the lips of your cunts[if cunts of player is greater than 1]s[end if] fuse together and flatten. Within seconds nothing remains of your former femininity. ";
 		increase cock length of player by 2;
 		increase cock width of player by 2;
 		follow the cock descr rule;
