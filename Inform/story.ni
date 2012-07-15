@@ -9,7 +9,7 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 950000.
 Use MAX_OBJ_PROP_COUNT of 128.
-use MAX_SYMBOLS of 70000.
+use MAX_SYMBOLS of 80000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 40000.
 use ALLOC_CHUNK_SIZE of 85000.
 use MAX_OBJECTS of 1000.
@@ -1856,38 +1856,58 @@ carry out autoattacksubmit:
 Section Waithate
 
 [creates (and sets) flag for skipping many wait for any key;]
-waithate is an action applying to nothing.
-understand "i hate to wait" as waithate.
-
+[i had difficulty setting it so that the player could directly toggle this, as well as have other chunks of code do the same thing.  made a command, which is for when the player types it out, and a function, which is for when code calls it.  the command just calls the code.  i'm sure there is a better way to do this, but it seems to work properly.]
 waiterhater is a number that varies.
-carry out waithate:
+
+WaitHateFunction is an action applying to nothing.
+WaitHateCommand is an action applying to nothing.
+understand "i hate to wait" as WaitHateCommand.
+
+carry out WaitHateCommand:
+	WaitHateFunction;
+
+To WaitHateFunction:
 	now waiterhater is 1; [yes, you do hate to wait]
-	say "Your impatience has paid off, you no longer wait.";
+	say "The text rarely waits for you to press a key...[line break]... before continuing.";
 
-waitlove is an action applying to nothing.
-understand "i love to wait" as waitlove.
+WaitLoveFunction is an action applying to nothing.
+WaitLoveCommand is an action applying to nothing.
+understand "i love to wait" as WaitLoveCommand.
 
-carry out waitlove:
+carry out WaitLoveCommand:
+	WaitLoveFunction;
+
+To WaitLoveFunction:
 	now waiterhater is 0; [returns waiting to normal]
-	say "You are patient once again.";
+	say "Delays waiting for a key stroke to occur.";
 
 Section Clearless
 
 [creates (and sets) flag for skipping most(all?) clear the screen]
-clearless is an action applying to nothing.
-understand "the clears are gone" as clearless.
-
+[same as for waithate, both command and function.]
 clearnomore is a number that varies.
-carry out clearless:
+
+ClearLessFunction is an action applying to nothing.
+ClearLessCommand is an action applying to nothing.
+understand "the clears are gone" as ClearLessCommand.
+
+carry out ClearLessCommand:
+	ClearLessFunction;
+
+To ClearLessFunction:
 	now clearnomore is 1; [turns off clears]
-	say "Your vision is cluttered, no more clearing.";
+	say "The screen clears less often.";
 
-clearmore is an action applying to nothing.
-understand "the clears are back" as clearmore.
+ClearMoreFunction is an action applying to nothing.
+ClearMoreCommand is an action applying to nothing.
+understand "the clears are back" as ClearMoreCommand.
 
-carry out clearmore:
+carry out ClearMoreCommand:
+	ClearMoreFunction;
+
+To ClearMoreFunction:
 	now clearnomore is 0; [returns clearing to normal]
-	say "You can see clearly, the clears are back.";
+	say "Screen clearing occurs frequently.";
 
 Section Color
 
@@ -4664,7 +4684,9 @@ instead of going through a dangerous door(called X):
 Section Starting Variables
 
 [variables used for start settings, changing them changes defaults]
-hypernull is a number that varies. Hypernull is usually 0. [links on]
+hypernull is a number that varies. Hypernull is usually 0. [links on.  0 for links on, 1 for links off.  set default to off to avoid problems for those that can't handle them?]
+waiterhater is usually 0; [initialize to 0 for start of game, waiting occurs as normal]
+clearnomore is usually 0; [initialize to 0 for start of game, clearing occurs as normal]
 startgenderchoice is a number that varies. startgenderchoice is usually 0. [male]
 startstatbonus is a number that varies.  startstatbonus is usually 1. [strength]
 startscenariochoice is a number that varies.  startscenariochoice is usually 1. [bunker]
@@ -4673,9 +4695,11 @@ freefeatfun is a text that varies. freefeatfun is usually "Curious". [default fu
 
 Part Game Options
 
-Game Options is a room.  The description of Game Options is "Choose the settings to start game with:[line break][starthyperstatus][line break][startstatsstatus][line break][startgenderstatus][line break][startscenariostatus][line break][startfeatsstatus][line break][startbannedstatus][line break]Then [bold type][link]push start button[end link][roman type] when ready.";
+Game Options is a room.  The description of Game Options is "     Game start settings:[roman type][line break][startstatsstatus][line break][startgenderstatus][line break][startscenariostatus][line break][startfeatsstatus][line break][startbannedstatus][line break]Game start settings take effect when you [bold type][link]push start button[end link].[line break][roman type]     [header-style]Display settings:[roman type][line break][starthyperstatus][line break][startwaitsstatus][line break][startclearsstatus][line break]Display settings take effect instantly and can be toggled on and off as you see fit.";
 
 Hyperlinks is in Game Options. The description of Hyperlinks is "[starthyperstatus][starthyperoptions]";
+Waits is in Game Options. The description of Waits is "[startwaitsstatus][startwaitoptions]";
+Clears is in Game Options. The description of Clears is "[startclearsstatus][startclearoptions]";
 Stat Bonus is in Game Options. The description of Stat Bonus is "[startstatsstatus][startstatsoptions]";
 Gender is in Game Options. The description of Gender is "[startgenderstatus][startgenderoptions]";
 Scenario Choice is in Game Options. The description of Scenario Choice is "[startscenariostatus][startscenariooptions]";
@@ -4689,6 +4713,16 @@ To say starthyperstatus:
 	say "Hyperlinks are currently: [if hypernull is 0]On[otherwise if hypernull is 1]Off[end if]";
 To say starthyperoptions:
 	say "[line break]Type [bold type][link]set Hyperlinks to On[end link][roman type] or [bold type][link]set Hyperlinks to Off[end link][roman type]";
+
+To say startwaitsstatus:
+	say "Waiting for input is currently: [if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if]";
+To say startwaitoptions:
+	say "[line break]Type [bold type][link]set Waits On[end link][roman type] or [bold type][link]set Waits Off[end link][roman type]";
+
+To say startclearsstatus:
+	say "Screen clears are currently: [if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if]";
+To say startclearoptions:
+	say "[line break]Type [bold type][link]set Clears On[end link][roman type] or [bold type][link]set Clears Off[end link][roman type]";
 
 To say startstatsstatus:
 	say "Stat bonus is currently: [if startstatbonus is 1]Strength[otherwise if startstatbonus is 2]Dexterity[otherwise if startstatbonus is 3]Stamina[otherwise if startstatbonus is 4]Charisma[otherwise if startstatbonus is 5]Perception[otherwise if startstatbonus is 6]Intelligence[otherwise if startstatbonus is 7]Randomized stats[end if]";
@@ -4729,9 +4763,9 @@ To say startbannedoptions:
 Section Setting Options
 
 Understand "set [something] to [text]" as setting it to.
+Understand "set [something] [text]" as setting it to.
 
-Instead of setting Hyperlinks to "On": now hypernull is 0; say "Hyperlinks enabled.";
-Instead of setting Hyperlinks to "Off": now hypernull is 1; say "Hyperlinks disabled.";
+[start settings]
 Instead of setting Stat Bonus to "Strength": now startstatbonus is 1; say "Your strength is your specialty."; prealternatestartstats;
 Instead of setting Stat Bonus to "Dexterity": now startstatbonus is 2; say "Your dexterity is your specialty."; prealternatestartstats;
 Instead of setting Stat Bonus to "Stamina": now startstatbonus is 3; say "Your stamina is your specialty."; prealternatestartstats;
@@ -4751,6 +4785,13 @@ Instead of setting Free Feats to "general": startFeatget; say "General Feat chos
 Instead of setting Free Feats to "fun": startFunFeatget; say "Fun Feat chosen.";
 Instead of setting Banned Creatures to "configure": ban menu; say "Banned Creatures configured.";
 Instead of pushing Start Button: start button;
+[display settings]
+Instead of setting Hyperlinks to "On": now hypernull is 0; say "Hyperlinks enabled.";
+Instead of setting Hyperlinks to "Off": now hypernull is 1; say "Hyperlinks disabled.";
+Instead of setting Waits to "On": WaitLoveFunction;
+Instead of setting Waits to "Off": WaitHateFunction;
+Instead of setting Clears to "On": ClearMoreFunction;
+Instead of setting Clears to "Off": ClearLessFunction;
 
 Section Alternate Start
 
@@ -5231,11 +5272,7 @@ to say promptsay:
 	now the command prompt is "[promptsay]";
 [	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
 
-hypernull is a number that varies. Hypernull is usually 0.
-
 When play begins:
-	now waiterhater is 0; [initialize to 0 for start of game, waiting occurs as normal]
-	now clearnomore is 0; [initialize to 0 for start of game, clearing occurs as normal]
 	adjustdefaulthelp; [adjusts help menu]
 	repeat with q running from 1 to the number of rows in the table of game objects:
 		add name in row Q of table of game objects to allobjs;
@@ -5255,6 +5292,6 @@ When play begins:
 		prealternatestartstats; [sets stats to prevent oddities from alternate start]
 		say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 		say "[line break]Welcome to...";
-		move the player to Game Options; [puts player in room for options]
+		move the player to Game Options, without printing a room description. ; [puts player in room for options, prevents displaying of look text?]
 	otherwise:
 		regularstart; [original start method.  easier to move everything then leave here]
