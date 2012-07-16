@@ -7,7 +7,7 @@ Version 1 of Candy Shop by Stripes begins here.
 Section 1 - Candy Shop event
 
 CandyShop is a situation.  The level of CandyShop is 9.
-The sarea of CandyShop is "Outside";
+The sarea of CandyShop is "Midway";
 sugarferretfight is a number that varies.
 
 when play begins:
