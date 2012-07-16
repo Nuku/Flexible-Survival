@@ -241,8 +241,8 @@ to say feline heat:
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "Feline";	[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 400;					[ This is the number of days a heat 'cycle' lasts, usualy 7 ]
-	now heat duration entry is 400;					[ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.] 
+	now heat cycle entry is 400;					[ This is the number of days a heat 'cycle' lasts, usually 7 ]
+	now heat duration entry is 400;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
 	now trigger text entry is "";  [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is "";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
 	now heat start entry is "";		[this is a to say block that causes things to happen when the player enters heat. for example: the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
@@ -274,7 +274,7 @@ when play ends:
 				otherwise:
 					say ".  You are treated in a friendly manner by the felines of the park.  The lions allow you to visit and play with their prides and service any members who want it.  But lacking any distinct gender of your own, you're never allowed to join a pride of your own.  You have an enjoyable life though, sharing in the company of the sexy lions and lovely lionesses, preferring your life as a free-roaming plaything for them all.";
 		otherwise:
-			say "     You survive and are taken to the military's holding facility.  Many of the soldiers treat you like a little girl and not like an adult.  This allows you a few privieges you wouldn't otherwise have.  And if you get caught roaming around the base to meet up with another feline there for a little fun, you simply act like you got lost and you're off the hook.";
+			say "     You survive and are taken to the military's holding facility.  Many of the soldiers treat you like a little girl and not like an adult.  This allows you a few privileges you wouldn't otherwise have.  And if you get caught roaming around the base to meet up with another feline there for a little fun, you simply act like you got lost and you're off the hook.";
 			say "     After your release, you continue to take advantage of your appearance like this, playing off people's sympathies or making them underestimate you";
 			if cocks of player > 0 and cunts of player is 0:	[MALE]
 				say ".  You take more and more to cross-dressing, often using it as a means to slip into girls-only areas or luring in a new playmate-to-be before revealing your throbbing cock.";

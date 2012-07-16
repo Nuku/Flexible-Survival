@@ -1645,7 +1645,7 @@ To process (X - a grab object):
 					decrease score by ( thirst of player minus 30 ) divided by 3;
 			decrease thirst of player by 30;
 			if thirst of player is less than 0, now thirst of player is 0;
-			say "Awesome!  Soda!  You it down, a delicious can of [one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random].  YUM!";
+			say "Awesome!  Soda!  You it down, a delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][otherwise][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if].  YUM!";
 			if morale of player is less than 0:
 				increase morale of player by 75;
 				if morale of player is greater than 0, now morale of player is 0;
@@ -1658,11 +1658,12 @@ To process (X - a grab object):
 					decrease score by ( thirst of player minus 12 ) divided by 3;
 			decrease thirst of player by 12;
 			if thirst of player is less than 0, now thirst of player is 0;
-			say "You feel less thirsty after guzzling some soda, [one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random] yum!";
+			say "You feel less thirsty after guzzling some soda, [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][otherwise][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if] yum!";
 			if morale of player is less than 0:
 				increase morale of player by 30;
 				if morale of player is greater than 0, now morale of player is 0;
 				say "You feel better having drunken something.";
+		sfsodadrink;
 	if x is gryphon milk:
 		say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
 		decrease thirst of player by 15;
@@ -1696,7 +1697,10 @@ To process (X - a grab object):
 		follow the brain descr rule;
 		say "You settle down and start scribbling in your journal about your [descr]. ";
 		if the humanity of the player is less than 100:
-			let healed be 10 + level of player + ( ( perception of player minus 10 ) divided by 2 );
+			let healed be 10 + ( ( level of player + perception of player - 10 ) / 2 );
+			if caffeinehigh of player > 0:
+				now healed is healed / 2;
+				say " Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
 			increase humanity of player by healed;
 			if humanity of player is greater than 100:
 				decrease healed by humanity of player minus 100;
@@ -3005,6 +3009,8 @@ Resting is an action applying to nothing.
 understand "Rest" as resting;
 
 check resting:
+	if caffeinehigh of player > 0:
+		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest.  Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink." instead;
 	if "cot" is listed in invent of player:
 		say "You pull out your cot and lay it out before resting for a while.";
 		continue the action;
@@ -4425,6 +4431,7 @@ Include Kitsune Hide Away by Kaleem mcintyre.
 [Quests & Events]
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
+Include Candy Shop by Stripes.
 Include Random Events by Hiccup.
 Include High Rise Events by Stripes.
 Include Hyena Bikers by Stripes.
@@ -4610,6 +4617,7 @@ Include Hulking Cheerleader by Wahn.
 Include Gargoyle by Kaleem mcintyre.
 Include Manticore by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
+Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
 
 
