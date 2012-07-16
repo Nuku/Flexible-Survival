@@ -107,8 +107,8 @@ to say Sweet Tooth scene:
 		say "     As you munch on the candies you were given, the yellow ferret and a few others snuggle up to you.  They chirr happily at having their new friend back and run their paws over your body.  'Let us make it up to you,' one of the hobs says, which is followed by a chorus of yeah's from the others.  When a paw slips between your legs to fondle you, you open your mouth to say something, but a pink jill pushes her muzzle to your lips, kissing you.  The sweet taste of her kiss makes you moan and momentarily forget what you were going to say.  The soft paws roaming your body help you slip your clothes off.  As you're fondled, several of the pastel ferrets take turns kissing you while the others nuzzle and kiss you all over.";
 		say "     You grow increasingly excited as the ferrets play with you, soon eagerly sliding your tongue into each fresh muzzle that's presented to you for a kiss[if cocks of player is 1].  During one deep kiss, you feel another muzzle slide down over your cock, licking and sucking at it eagerly[otherwise if cocks of player > 1].  During one deep kiss, you feel warm muzzles slide down over your cocks, licking and sucking at them[otherwise if cunts of player is 1].  You feel a soft muzzle nuzzle at your pussy and a tongue start licking your folds[otherwise if cunts of player > 1].  You feel a soft muzzle nuzzle at your pussies and a tongue start licking your folds[otherwise].  You feel a soft muzzle nuzzle at your bare crotch, licking it with soft, tender motions.  'Oh, you poor sprite!' the ferret down there says[end if].  Reaching down, you rub a hands over the ferret's head and chirr happily.";
 		say "     As all this attention continues, you can feel a pleasant giddiness spreading through you.  The ferret head you're stroking starts to feel different.  At first you think it's changing, but you soon realize that it is your hand changing shape, becoming a cute little paw like those of your friends.  This change spreads up your arm and to your body.  Your proportions change, becoming under five feet tall, but with an elongated, tubular body on short limbs.  The pleasant sensations spread down to your groin.";
-		now body of player is "Sugar Ferret";
-		now bodyname of player is body entry;
+			now bodyname of player is "Sugar Ferret";
+			now body of player is body entry;
 		follow the sex change rule;
 		if "soda" is listed in invent of player:
 			delete soda;
@@ -174,8 +174,8 @@ to say Sweet Tooth scene:
 			say "[candyshopsex7]";
 		if bodyname of player is not "Sugar Ferret":
 			say "     Losing yourself in the lustful fun with the ferrets, you can feel your body changing, becoming more ferret-like once again.  You become a short, five foot tall ferret with short limbs, cute paws and a flexible, tube-like body.  As you're changing, several of the ferrets around you snuggle and kiss you, clearly pleased to see you looking more like them again.  Like you should look, a part of you feels.";
-			now body of player is "Sugar Ferret";
-			now bodyname of player is body entry;
+			now bodyname of player is "Sugar Ferret";
+			now body of player is body entry;
 			follow the sex change rule;
 		otherwise:
 			say "     Losing yourself in the lustful fun with the ferrets, you can feel your body changing, becoming more ferret-like.  The ferrets around you are clearly pleased by this, snuggling and kissing you as you can feel the tingles of the activated infection.";
