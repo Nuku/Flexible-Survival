@@ -30,7 +30,7 @@ to say Feral Wolf attack:
 
 to say beatferalwolf:
 	increase fangcount by 40;
-	if inasituation is false and wolffight is not 3 and hp of Fang is 0:		[Checking to add Fang before running the regular wolf scenes]
+	if [ inasituation is false and ]( wolffight is less than 3 or wolffight is greater than 3 ) and hp of Fang is 0:		[Checking to add Fang before running the regular wolf scenes]
 		if a random number between 1 and 100 < ( fangcount - 95 ):			[3rd to 5th wolf]
 			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you.  He even pisses a little to show his submission to you.  From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves.  This wolf, clearly a lowly member of his pack, might make a obedient, if still somewhat feral, pet.  You could take him off with you, if you're willing to risk bringing such a beast back with you.  Shall you try to [bold type]tame[roman type] this beastly wolf creature?";
 			if the player consents:
