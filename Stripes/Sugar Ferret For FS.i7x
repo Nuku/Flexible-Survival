@@ -14,7 +14,7 @@ sugferretjoke is truth state that varies.  sugferretjoke is normally false.
 
 to say losetosugarferret:
 	if sugarferretfight is 3:
-		now sugarferretfight is 1;
+		now sugarferretfight is 2;
 		if hp of player > 0:
 			say "     Unwilling to keep fighting, you give yourself over to the manic ferrets.  Cheering, they bounce onto you, grabbing your limbs and body, pulling you down by sheer numbers.  Even as you're going down, you're groped and fondled by the over-excited ferrets.";
 		otherwise:
