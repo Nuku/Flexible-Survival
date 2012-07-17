@@ -31,6 +31,7 @@ Every turn when in Grey Abbey Library and fang is visible:
 		say "[fangmutuallust]";
 		continue the action;
 	say "[fangplayerlust]";
+	decrease humanity of player by 3;
 	follow the turnpass rule;
 	
 to say fangplayerlust:
@@ -45,7 +46,7 @@ to say fangplayerlust:
 	otherwise:
 		say "He hunkers down and nudges forward, pressing the point of his shaft to your pucker, easing his way into your back door carefully. You can feel that canine member spreading you and can[']t hold back a groan of pleasure at it as he gets more than half way in. He licks over your throat again, then presses forward, losing another inch to the heat of your body as he rocks his way forward bit by bit, burying his sword into your eager flesh. You lift your [body of player] legs as high as you can to raise your ass into better position, allowing Fang to move more easily as he builds up to a soft pounding.";
 		say "Fattened wolf knot rams against your entrance, demanding past as Fang gives a low growl. He locks his teeth at your throat, drawing you as he gives a powerful push, forcing it in and securing it. Though his movement is much more limited, he resumes thrusting, becoming short sharp motions back and forth between sheath and knot. Shortly, he hits top and explodes into your form with thick offerings to your bowels, filling you with the fertile essence as he howls out.";
-		say "You relax with Fang as his climax ebbs, your own maddening lust feeling less urgent for the play. When he draws from you, you get to your feet and collect your things, feeling much more ready to tackle the wastelands.";
+	say "You relax with Fang as his climax ebbs, your own maddening lust feeling less urgent for the play. When he draws from you, you get to your feet and collect your things, feeling much more ready to tackle the wastelands.";
 	infect "Feral Wolf";
 	now lastfangfucked is turns;
 	decrease libido of player by 20;
@@ -71,7 +72,8 @@ to say fangrapeplayer:
 	infect "Feral Wolf";
 	if cock length of player is greater than 0 and cocks of player is greater than 0:
 		say "With dizzying force, you suddenly spray your own seed out against the desk, splattering its smooth surface with your seed as you groan with pleasure alongside Fang. His paws support you as you go weak kneed from the stimulation. [run paragraph on]";
-	say "Satisfied, Fang pants lightly as he relaxes on top of you for a few quiet minutes, gently stroking your sides and back with his hands. He gives a soft chuff in your ear, then pulls free of you with a wet pop, allowing some of the seed to run free as he goes to clean up.";
+	say "Satisfied, Fang pants lightly as he relaxes on top of you for a few quiet minutes, gently nuzzling your back and sides with his muzzle. He gives a soft chuff in your ear, then pulls free of you with a wet pop, allowing some of the seed to run free as he goes to clean up while you sag to the floor, enjoying the feel of his semen filling you.";
+	say "[fangwscontent]";
 	now lastfangfucked is turns;
 	decrease libido of player by 20;
 	if libido of player is less than 0, now libido of player is 0;
@@ -96,8 +98,9 @@ to say fangmutuallust:
 			otherwise:
 				say "He seems to appraise your [cock size desc of player] [cock of player] dick a moment before he buries his snout at your crotch at the base, delivering a soft caress of tongue. The pearl of a tooth runs across the sensitive [skin of player] flesh before he runs wet tongue up towards the tip and engulfs it, sinking it into his accommodating snout as he bucks his hips up towards your face, rocking face and hips in counter point as the tension within you raises towards release. [run paragraph on]";
 		say "Your body locks as climax arrives powerfully, trembling atop Fang as his skilled tongue works and cleans you even as you release. His knot swells, bumping against your lips before it starts to spray the creamy wolf spunk across your tongue. The rich taste pours smoothly as you swallow down his injection. Even after the shaft stops powerfully twitching, a thin trickle continues to pour out. You draw back, letting the shaft pops free of your mouth and kiss the tip before reaching to caress his swollen knot. You are rewarded with a loud yip as the sensitive organ is jostled and a final spurt of seed across your lips.";
-		infect "Feral Wolf";
-		say "Both satisfied, Fang squirms out from under you and licks your face before moving to sit by the door and curl up watchfully.";
+	infect "Feral Wolf";
+	say "Both satisfied, Fang squirms out from under you and licks your face before moving back towards the door to resume his watch.";
+	say "[fangwscontent]";
 	now lastfangfucked is turns;
 	now libido of player is libido of player / 2;
 		
