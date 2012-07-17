@@ -2,7 +2,7 @@
 
 Book 0 - Pre game prep stuff
 
-Release along with an interpreter. 
+Release along with an interpreter.
 Use memory economy.
 Use slow route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
@@ -14,10 +14,10 @@ use MAX_NUM_STATIC_STRINGS of 40000.
 use ALLOC_CHUNK_SIZE of 85000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 250.
-Use maximum indexed text length of at least 5000. 
+Use maximum indexed text length of at least 5000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
-Include Basic Screen Effects by Emily Short. 
+Include Basic Screen Effects by Emily Short.
 
 To say a/an (T - text):
 	let Txt be indexed text;
@@ -27,7 +27,7 @@ To say a/an (T - text):
 	otherwise:
 		say "a ";
 	say T.
-   
+
 To wait for any key:
 	if hypernull is 0:
 		say "[link]more[as] [end link][run paragraph on]";
@@ -236,6 +236,7 @@ A situation can be resolved or unresolved. A situation is usually unresolved.
 A situation has a text called sarea. The sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0.
 A featset is a kind of thing.
+inasituation is a truth state that varies.  inasituation is normally false.
 
 Definition: A grab object(called X) is wielded:
 	if weapon object of player is x, yes;
@@ -970,8 +971,10 @@ carry out hunting:
 					if "Curious" is listed in feats of player, increase bonus by 2;
 					increase dice by bonus;
 					if dice is greater than 15:
+						now inasituation is true;
 						say "You manage to find your way to [z]!";
 						try resolving z;
+						now inasituation is false;
 						now dice is a random number from 1 to 20;
 						if "Bad Luck" is listed in feats of player, increase dice by 1;
 						if "Curious" is listed in feats of player, increase dice by 2;
@@ -985,6 +988,7 @@ carry out hunting:
 								say "As you are trying to recover from your last encounter, another roving creature finds you.";
 								Fight;
 					otherwise:
+						now inasituation is false;
 						say "Despite your searches, you fail to find it.[line break]";
 						now dice is a random number from 1 to 20;
 						if "Bad Luck" is listed in feats of player, increase dice by 1;
@@ -3076,8 +3080,11 @@ This is the explore rule:
 		If L is not nothing:
 			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
 			now something is 1;
+			now inasituation is true;
 			try resolving L;
+			now inasituation is false;
 			wait for any key;
+	now inasituation is false;
 	if something is 0 and a random number from 1 to 20 is less than 6 plus bonus and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:
 		let L be a random unknown fasttravel not private room;
 		if L is not nothing:
@@ -3967,9 +3974,11 @@ carry out scavenging:
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
 	if dice plus bonus is greater than 10:
+		now inasituation is true;
 		try resolving potential resources;
 	otherwise:
 		say "Your search turns up empty.";
+	now inasituation is false;
 	if battleground is "", now battleground is "Outside";
 	let z be 7;
 	if "Stealthy" is listed in feats of player, decrease z by 2;
