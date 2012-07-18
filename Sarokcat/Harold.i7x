@@ -53,6 +53,12 @@ instead of conversing the Harold:
 
 
 Instead of fucking the Harold:
+	[puts Unicorn as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Unicorn":
+			now monster is y;
+			break;
 	if lastHaroldfucked - turns is less than 4:
 		say "'Hey now, I know we both had a lot of fun, but I do need to actually serve drinks sometimes as well.' Harold says with an amused grin, 'Don[apostrophe]t worry, I am sure I will find time for another 'Unicorn ride' soon enough, and I[apostrophe]m sure the club members would appreciate another show as well.' He says with a chuckle, the thought making you blush even as your body grows warm with anticipation of another lovely exhibitionistic round with the handsome unicorn.";
 	otherwise if Haroldaroused is 1:

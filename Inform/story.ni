@@ -2992,12 +2992,14 @@ carry out playing on:
 
 Early Birding is an action applying to nothing.
 understand "end now" and "end game" as early birding.
+quitter is a number that varies.
 
 carry out early birding:
 	if playon is 1:
 		say "You are already in play on mode. There is no rescue to wait for.";
 		stop the action;
 	decrease the score by 100;
+	now quitter is 1;
 	end the game saying "You waited for rescue.";
 
 Punying is an action applying to nothing.

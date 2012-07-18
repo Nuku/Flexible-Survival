@@ -35,6 +35,12 @@ instead of sniffing Boris:
 	say "Boris smells faintly of funfur and lions[if borisquest is 5].  The scent of his new maleness is strong around him[end if].";
 
 instead of conversing the Boris:
+	[puts Plush lion as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Plush lion":
+			now monster is y;
+			break;
 	if boristalk is 0:
 		say "'Hey there and welcome to the... oh who am I kidding,' the lion costumed man says with a sigh, before raising one of his overlarge paws to rub at his face. 'Look I don't know who you are, or what you are doing here, but trust me, you probably don't want to be here. Heck I don't really want to be here anymore, but it's not like I can just leave.'  Seeing your slightly confused look he sighs and explains. 'Look it's like this, you see me?' he gestures at his plush furred form. 'I showed up for work early the other day, put on the costume, and now well. This is what I am, I can't even really remember my old name anymore, and I have a strange desire to hunt down that bastard Arthur the Antelope,' He growls for a minute, staring off into space, before seeming to come back to himself.";
 		say "'Gah see? I know and you know that there isn't really an Arthur the Antelope out there for me to hunt down, but it still gets to me,' the lion sighs heavily, 'So yeah you might as well just call me Boris now, seems more appropriate then anything else these days.' He pauses for a minute in thought, before shaking himself and continuing. 'So yeah, if you think this is strange, you really don't want to see what the rest of the fair is like.  Things have gotten wild in there, I swear I saw some sort of latex creatures hanging out near the house of wax, the fun house was taken over by some kind of crazy animalistic clowns,' Boris pauses for a minute to shudder at the thought of clowns, 'And to top it all off some of the fair prizes are running around on their own attacking people. Giant stuffed animals running around and jumping on people is definitely one of the weirder things I ever saw, course the fact that the people turned into more stuffed animals as well is pretty damn weird too if you ask me.'  Boris pauses for a second, before shaking his overlarge furred head, 'Just trust me on this, you really don't want to go out there.' His warning delivered, Boris the lion returns to leaning against the ticket booth and staring off into space, occasionally sighing.";
@@ -49,6 +55,12 @@ instead of conversing the Boris:
 
 
 instead of fucking boris:
+	[puts Plush lion as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Plush lion":
+			now monster is y;
+			break;
 	if borisquest is 0:
 		say "'Sorry hun, it[apostrophe]s not that I might not want to, but well, you see this WAS intended to be a family friendly fair.' Boris says with a sigh, 'And since we couldn't have the kiddies asking questions about things like that... well lets just say I[apostrophe]m currently ill equipped to do much of anything with you.' he says with a sad gesture to his featureless furred crotch.";
 		if furry is banned or girl is banned or guy is banned:
