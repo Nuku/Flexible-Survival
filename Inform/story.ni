@@ -4396,6 +4396,7 @@ After printing a parser error when the parser error count is at least 0:
 Book 9 - Add-Ons
 
 [Special]
+Include Presets by Default Settings.
 Include Shifting by Hellerhound.
 Include Qytat Shifters by Hellerhound.
 Include Fucking by Nuku Valente.
@@ -4702,28 +4703,21 @@ instead of going through a dangerous door(called X):
 
 Section Starting Variables
 
-[variables used for start settings, changing them changes defaults]
-hypernull is a number that varies. Hypernull is usually 0. [links on.  0 for links on, 1 for links off.  set default to off to avoid problems for those that can't handle them?]
-waiterhater is usually 0; [initialize to 0 for start of game, waiting occurs as normal]
-clearnomore is usually 0; [initialize to 0 for start of game, clearing occurs as normal]
-startgenderchoice is a number that varies. startgenderchoice is usually 0. [male]
-startstatbonus is a number that varies.  startstatbonus is usually 1. [strength]
-startscenariochoice is a number that varies.  startscenariochoice is usually 1. [bunker]
-freefeatgeneral is a text that varies.  freefeatgeneral is usually "Survivalist". [default feat]
-freefeatfun is a text that varies. freefeatfun is usually "Curious". [default fun feat]
+[ See the Default Settings/Presets.i7x file ]
+
 
 Part Game Options
 
 Game Options is a room.  The description of Game Options is "     Game start settings:[roman type][line break][startstatsstatus][line break][startgenderstatus][line break][startscenariostatus][line break][startfeatsstatus][line break][startbannedstatus][line break]Game start settings take effect when you [bold type][link]push start button[end link].[line break][roman type]     [header-style]Display settings:[roman type][line break][starthyperstatus][line break][startwaitsstatus][line break][startclearsstatus][line break]Display settings take effect instantly and can be toggled on and off as you see fit.";
 
-Hyperlinks is in Game Options. The description of Hyperlinks is "[starthyperstatus][starthyperoptions]";
-Waits is in Game Options. The description of Waits is "[startwaitsstatus][startwaitoptions]";
-Clears is in Game Options. The description of Clears is "[startclearsstatus][startclearoptions]";
 Stat Bonus is in Game Options. The description of Stat Bonus is "[startstatsstatus][startstatsoptions]";
 Gender is in Game Options. The description of Gender is "[startgenderstatus][startgenderoptions]";
 Scenario Choice is in Game Options. The description of Scenario Choice is "[startscenariostatus][startscenariooptions]";
 Free Feats is in Game Options. The description of Free Feats is "[startfeatsstatus][startfeatsoptions]";
 Banned Creatures is in Game Options. The description of Banned Creatures is "[startbannedstatus][startbannedoptions]";
+Hyperlinks is in Game Options. The description of Hyperlinks is "[starthyperstatus][starthyperoptions]";
+Waits is in Game Options. The description of Waits is "[startwaitsstatus][startwaitoptions]";
+Clears is in Game Options. The description of Clears is "[startclearsstatus][startclearoptions]";
 Start Button is in Game Options.  The description of Start Button is "[bold type][link]Push start button[end link][roman type] when ready to begin, using current settings.";
 
 Section Option Says
@@ -4893,17 +4887,20 @@ To start button: [options are set, begin game]
 To startstatbonus: [apply stat bonus]
 	if startstatbonus is 1:
 		increase strength of player by 5;
-	if startstatbonus is 2:
+	otherwise if startstatbonus is 2:
 		increase dexterity of player by 5;
-	if startstatbonus is 3:
+	otherwise if startstatbonus is 3:
 		increase stamina of player by 5;
-	if startstatbonus is 4:
+	otherwise if startstatbonus is 4:
 		increase charisma of player by 5;
-	if startstatbonus is 5:
+	otherwise if startstatbonus is 5:
 		increase perception of player by 5;
-	if startstatbonus is 6:
+	otherwise if startstatbonus is 6:
 		increase intelligence of player by 5;
-	if startstatbonus is 7 and started is 1:
+	otherwise if startstatbonus is 7 and started is 1:
+		randomstatstart;
+	otherwise if started is 1:
+		say "Invalid stat choice - defaulting to random.";
 		randomstatstart;
 	if started is 1, say "[line break]You have decided your physical talents.";
 [	follow the prerestore the game rule;] [for loading?]
@@ -4986,7 +4983,7 @@ To startgender: [apply gender stats]
 		now the breasts of the player is 2;
 		now the breast size of the player is 0;
 		say "You are a man.";
-	if startgenderchoice is 1:
+	otherwise:
 		now the cunts of the player is 1;
 		now the cunt length of the player is 6;
 		now the cunt width of the player is 4;
@@ -5005,16 +5002,18 @@ To startgender: [apply gender stats]
 To startscenario: [sets scenario for use in introstorytext]
 	if startscenariochoice is 1:
 		now scenario is "Bunker";
-	if startscenariochoice is 2:
+	otherwise if startscenariochoice is 2:
 		now scenario is "Caught Outside";
-	if startscenariochoice is 3:
+	otherwise if startscenariochoice is 3:
 		now scenario is "Rescuer Stranded";
-	if startscenariochoice is 4:
+	otherwise if startscenariochoice is 4:
 		now scenario is "Forgotten";
-	if startscenariochoice is 5:
+	otherwise if startscenariochoice is 5:
 		now scenario is "Researcher";
-	if startscenariochoice is 6:
+	otherwise if startscenariochoice is 6:
 		now scenario is "Hard mode";
+	otherwise:
+		say "Invalid scenario choice, defaulting to [']Bunker[']";
 
 To startfreefeats: [gives free feats]
 	now autofeatloading is true;			[temporarily skips asking permission to add preset feats]
@@ -5280,7 +5279,7 @@ to say promptsay:
 	repeat with y running through the things in the location of the player:
 		if y is a door, next;
 		say "[link][y][as]look [y][end link] ";
-	say " [link]area[as]look[end link]";
+	say "[link]area[as]look[end link]";
 	say "[line break]>";
 
  When play begins:
