@@ -8,7 +8,6 @@ Masters office is a room. It is fasttravel. It is private.
 
 The description of Masters office is "This large and rather spacious room was once the 'office' of the owner of the stables, however now it is your new room and the centerpiece of your new kingdom.  The room itself was obviously once a suite for VIPs and dignitaries and is quite well furnished, though the previous stablemaster obviously did plenty of redecorating during his time here. There are now several large mattresses and piles of cushions around the area, as well as a number of rather nice paintings and hangings adorning the walls, and thick plush carpeting covers the floor which actually makes things quite comfortable for your hooved feet.  Several new furnishings also are now in the public side of the large room however, a functional new desk with an in-box for reports that affect the stables, as well as several overstuffed chairs sized for your new equine staff when you decide to meet them here. Although perhaps your favorite new furnishing is the former stablemaster herself, the lovely little black equine looking especially fetching in her new sexy slave collar as she kneels off to the side of the room.";
 Slutslave is in Masters office.
-South of Masters office is Employee Access.
 
 instead of linkactioning Slutslave:
 	say "Possible Actions: [link]talk[as]talk Slutslave[end link], [link]smell[as]smell Slutslave[end link], [link]fuck[as]fuck Slutslave[end link], [link]train[as]train slave[end link][line break]";

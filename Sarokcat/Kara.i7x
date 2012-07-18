@@ -229,7 +229,7 @@ carry out Pierceplayer:
 			if "Matriarch Piercing" is listed in feats of the player:
 				decrease maxhp of player by 30;
 				decrease charisma of player by 4;
-				Remove "Matriarch piercing" from feats of the player;
+				Remove "Matriarch Piercing" from feats of the player;
 		otherwise:
 			say "'Sounds good to me!' The hyena herm says with a grin as she looks you up and down apprasingly, 'I have to admit, I think it looks damn sexy like that myself.' she says as she strokes her thick knotted hyena cock absently, the sight making your mouth water slightly...";
 	otherwise if piercingquest is 3:

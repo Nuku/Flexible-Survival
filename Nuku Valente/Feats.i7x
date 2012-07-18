@@ -173,8 +173,12 @@ instead of addfeating the fun feats:
 	if "Horny Bastard" is not listed in feats of player:
 		addfeat "Cold Fish" with "Your libido will decrease over time.";
 	addfeat "Control Freak" with "When you win a battle, you may choose if you wish to engage in the post battle activities or not.";
-	addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
-	addfeat "Litter Bearer" with "Greatly increases the chance of multiple children in one birth - twins or more at over 50% chance.";
+	if "Breeding True" is not listed in feats of player and "Sterile" is not listed in feats of player:
+		addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
+	if "They Have Your Eyes" is not listed in feats of player and "Sterile" is not listed in feats of player:
+		addfeat "Breeding True" with "All new children you have will resemble their father.";
+	if "Sterile" is not listed in feats of player:
+		addfeat "Litter Bearer" with "Greatly increases the chance of multiple children in one birth - twins or more at over 50% chance.";
 	if "Fertile" is listed in feats of player:
 		addfeat "Selective Mother" with "You can decide if you want to become pregnant.";
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";

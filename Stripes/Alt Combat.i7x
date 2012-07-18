@@ -631,7 +631,7 @@ To lose:
 	follow the breast descr rule;
 	now lost is 1;
 	say "[victory entry][line break]";
-	if scenario is "Researcher":
+	if scenario is "Researcher" and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
 		say "";
 	otherwise:
 		infect;

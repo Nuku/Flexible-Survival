@@ -725,7 +725,7 @@ Carry out reciting:
 			-- 99:
 				if the player's command matches "[number]":
 					now piercesave is the number understood;
-					remove { "NippleandChain Piercing", "Hyenastyle Piercings", "Nipple Piercing", "Matriarch piercing" } from feats of the player, if present;
+					remove { "NippleandChain Piercing", "Hyenastyle Piercings", "Nipple Piercing", "Matriarch Piercing" } from feats of the player, if present;
 					if piercesave is 0:
 						now piercestatus is 0;
 					otherwise:

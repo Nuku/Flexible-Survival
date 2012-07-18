@@ -1296,22 +1296,22 @@ To Birth:
 	let infection be "";
 	if "Maternal" is listed in feats of player:
 		increase morale of player by 3;
-	if a random number from 1 to 100 is greater than 50 and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is skinname of child;
 	otherwise:
 		now infection is skinname of player;
 	now skinname of child is infection;
-	if a random number from 1 to 100 is greater than 50 and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is bodyname of child;
 	otherwise:
 		now infection is bodyname of player;
 	now bodyname of child is infection;
-	if a random number from 1 to 100 is greater than 50 and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is tailname of child;
 	otherwise:
 		now infection is tailname of player;
 	now tailname of child is infection;
-	if a random number from 1 to 100 is greater than 50 and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is facename of child;
 	otherwise:
 		now infection is facename of player;
@@ -1337,22 +1337,22 @@ To impregnate with (x - text):
 			stop the action;
 	now gestation of child is a random number from 24 to 48;
 	let infection be "";
-	if a random number from 1 to 100 is greater than 50:
+	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is x;
 	otherwise:
 		now infection is skinname of player;
 	now skinname of child is infection;
-	if a random number from 1 to 100 is greater than 50:
+	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is x;
 	otherwise:
 		now infection is bodyname of player;
 	now bodyname of child is infection;
-	if a random number from 1 to 100 is greater than 50:
+	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is x;
 	otherwise:
 		now infection is tailname of player;
 	now tailname of child is infection;
-	if a random number from 1 to 100 is greater than 50:
+	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is x;
 	otherwise:
 		now infection is facename of player;
@@ -2992,12 +2992,14 @@ carry out playing on:
 
 Early Birding is an action applying to nothing.
 understand "end now" and "end game" as early birding.
+quitter is a number that varies.
 
 carry out early birding:
 	if playon is 1:
 		say "You are already in play on mode. There is no rescue to wait for.";
 		stop the action;
 	decrease the score by 100;
+	now quitter is 1;
 	end the game saying "You waited for rescue.";
 
 Punying is an action applying to nothing.
