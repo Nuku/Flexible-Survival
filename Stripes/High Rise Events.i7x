@@ -577,13 +577,13 @@ Instead of resolving a Cameo:
 			decrease humanity of player by a random number between 25 and 35;
 			increase hunger of player by 12;
 			if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 10;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		otherwise:
 			say ".  It feels like you are simultaneously filled and drained over and over again as your lovers mate you.  You seem to flow into them as they flow into you in an orgasmic melding of pleasure.";
 			decrease humanity of player by a random number between 20 and 30;
 			increase hunger of player by 12;
 			if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 10;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		[puts Chocolate Lab as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
