@@ -3182,7 +3182,9 @@ This is the turnpass rule:
 				if name entry is bodyname of player:
 					now monster is y;
 					say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
+					now researchbypass is 1;
 					infect;
+					now researchbypass is 0;
 					break;
 	if "Passing Grade Chest" is listed in feats of player and breast size of player is greater than 4:
 		now breast size of player is 4;
@@ -4488,6 +4490,7 @@ Include More Misc Events by Kaleem mcintyre.
 Include Misc 3 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
 Include Misc 6 by Kaleem mcintyre.
+Include Misc 7 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 

@@ -402,7 +402,7 @@ Section 4 - The Hidden Lab & Dr Mouse
 An everyturn rule:
 	if hospquest is 0 and hp of doctor matt > 7:	[Not started hospital quest & found susan (regardless of outcome) _or_ Dr Matt is only a recording]
 		increase hospcountdown by 1;
-		if hospcountdown is 8:				[Will activate 'random' event in 8 turns]
+		if hospcountdown >= 8 and skipturnblocker is 0:				[Will activate 'random' event in 8 turns]
 			say "     You hear an unusual, loud noise and reflexively take cover, peeking out from a window.  As you watch, you can see some large jaguar men in hospital scrubs carrying an insensate husky girl.  They seem to be led by a silver-furred vixen in a nurse's uniform as she directs them to put her in the ambulance helicopter, the source of the unusual noise in the otherwise quiet city.  'Perhaps this bears looking into further,' you think as you watch it head off in the direction of the city hospital.";
 			extend game by 4;
 			increase score by 10;
@@ -571,6 +571,7 @@ nerminepackagematt is a number that varies.
 sabtoothedmatt is a number that varies.
 triclampedmatt is a number that varies.
 mattcollection is a number that varies.
+hospbattlelost is a number that varies.
 
 instead of going to 2F Trevor Labs while hospquest is 2:		[Examining other labs]
 	now the player is in 2F Trevor Labs;
@@ -956,6 +957,7 @@ to say hospranaway:
 	now hospquest is 13;
 
 to say hosploss:
+	now hospbattlelost is 1;
 	say "     Your head is pounding and your vision is hazy even before you open your eyes.  Struggling to remember what happened, you try to look around.  As you attempt to open them, bright lights blind you and force them shut again, causing you to wince in pain.  You try to pull a hand to cover your eyes, but your arm won't move, tightly restrained.";
 	say "     'Ahh, the patient is now awake.  We may begin,' you hear from one side.  The sound of Dr Mouse's voice rushes reality back to you and you struggle to get up.  At his point, you discover that you are tightly strapped down and cannot move.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -1014,40 +1016,25 @@ to say hosptfscene:
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from the table of random critters;
-	while name entry is tailname of player:
+	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player:
 		sort table of random critters in random order;
 		now monster is 1;
 		choose row monster from the table of random critters;
-		if there is no name entry:
-			next;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
 	now tailname of player is name entry;
 	now tail of player is tail entry;
 	say "     'The first injection will adjust the volunteer's lower spine.  We shall begin there, as the changes may be the least visible, depending on the outcome.'  The mouse the jabs a second needle, quite painfully, into your ass.  As he watches, the doctor comments to the group about how your ass becomes malleable as [ass change entry].";
-	while name entry is tailname of player or name entry is facename of player:
+	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player:
 		sort table of random critters in random order;
 		now monster is 1;
 		choose row monster from the table of random critters;
-		if there is no name entry:
-			next;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
 	now facename of player is name entry;
 	now face of player is face entry;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "          'We shall now move on to the head,' he states, motioning for the orderly to step up.  He grabs your neck and squeezes it painfully as he injects the next formula into your carotid artery, sending the fluid up into your head.  As a burning sensation courses through your head, the doctor discusses how [face change entry].  As your face shifts and changes, the orderly adjusts the various straps as necessary, keeping you restrained.";
-	while name entry is tailname of player or name entry is facename of player or name entry is skinname of player:
+	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player:
 		sort table of random critters in random order;
 		now monster is 1;
 		choose row monster from the table of random critters;
-		if there is no name entry:
-			next;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
 	now skinname of player is name entry;
 	now skin of player is skin entry;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -1060,15 +1047,10 @@ to say hosptfscene:
 		say "     You can see that the monstrous mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure.  Another of the vixen nurses is on her knees, licking and kissing the large cock.  Her muzzle is pulled onto the thick shaft as Dr Mouse gets tired of foreplay and starts facefucking her with a low growl.  She takes it in eagerly, playing with his heavy balls until he cums down her throat.  Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
 	otherwise:		[Dr Mouse is mouse]
 		say "     You can see that the albino mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure.  His cock is small, perhaps about four inches to match his small height.  But his balls are quite large, perhaps each the size of a peach.  One of the vixen nurses is on her knees, licking and kissing his cock before taking it into her muzzle.  She fondles his balls and sucks his shaft obediently until he sends his ample load down her throat.  Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
-	while name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player:
+	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player:
 		sort table of random critters in random order;
 		now monster is 1;
 		choose row monster from the table of random critters;
-		if there is no name entry:
-			next;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
 	now bodyname of player is name entry;
 	now body of player is body entry;
 	attributeinfect;
@@ -1105,15 +1087,10 @@ to say hosptfscene:
 	say "[line break]";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if cocks of player > 0:
-		while name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
+		while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
 			sort table of random critters in random order;
 			now monster is 1;
 			choose row monster from the table of random critters;
-			if there is no name entry:
-				next;
-			if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-				next;
-			break;
 		say "     The mouse doctor grins viciously as he looks over your changed form, then turns to the audience.  'There is one final injection to make, my colleagues.  And I'm sure this is the one you've all been anxiously awaiting.  He moves his paw to your cock(s), quite aroused by the earlier teasing, and gives it a squeeze.  Those watching are quite pleased by this and many shift forward in their seats to get a better look.";
 		say "     The doctor fondles your balls teasingly and slides the syringe across your cock and balls, making you involuntarily whimper.  You sigh in relief as he moves the needle down further and injects your inner thigh close to your groin.  As the mouse observes the changes, an arousing heat flows up into your groin as [cock change entry].";
 		now cockname of player is name entry;
@@ -1133,6 +1110,12 @@ to say hosptfscene:
 		say "[drmousesex]";
 
 to say drmousesex:
+	[puts Albino Mouse as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Albino Mouse":
+			now monster is y;
+			break;
 	if hospfight is 1:	[normal mouse]
 		say "     The small mouse motions for the orderly, who gently lifts him up onto the operating table with you.  The white furred mouse grins down at you, lining up his cock with your pussy, making it clear what final injection he has in mind.  You struggle and try to shake your head, but the restraints keep you locked in place.  He grins and thrusts his cock hard into you.  Thankfully, due to his small size, there is little discomfort and it soon becomes quite pleasurable as mad mouse fucks you zealously.";
 		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and is giving her a lap ride on her cock while playing with those enormous, feathered tits.";
@@ -1145,13 +1128,7 @@ to say drmousesex:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "     The mouse's large paws fondling your breasts brings you back to focusing on him.  His gloved paws tease your nipples and he laughs happily, aroused with his power over you.  His monstrous cock is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the mutated mouse makes.  That spaded tip presses at your cervix, trying to spread it open while the ridges along his shaft feel so delightful against your vaginal walls.";
 		say "     'Mmm... I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  His spaded glans, pressed against your cervix, forces it to spread open, allowing the bulk of his mutated load to flow up into your womb in an attempt to breed you.";
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	say "[impregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Albino Mouse";
-		now bodyname of child is "Albino Mouse";
-		now skinname of child is "Albino Mouse";
 	say "     Panting, the mad doctor withdraws his spent shaft and hops down with a grin.  He raises his arms to the crowd, who manage some dignified clapping despite the major orgy that's broken out across most of the audience section.";
 
 
