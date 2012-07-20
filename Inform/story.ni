@@ -4494,6 +4494,7 @@ Include Misc 7 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Event by Wahn.
+Include Endings by Darthan.
 
 
 [Monsters/Infections]
@@ -4639,6 +4640,7 @@ Include Candy Striper by Stripes.
 
 [NPCs]
 Include Stuck Dragon by Hiccup.
+Include Doctor Moffatt by Stripes.
 Include Tanuki by Nuku Valente.
 Include Mouse Taur by Nuku Valente.
 Include Deer by Nuku Valente.
