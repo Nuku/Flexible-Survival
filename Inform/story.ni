@@ -4494,7 +4494,7 @@ Include Misc 7 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Event by Wahn.
-[Include Endings by Darthan.]
+Include Endings by Darthan.
 
 
 [Monsters/Infections]
