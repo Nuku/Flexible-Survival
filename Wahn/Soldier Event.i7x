@@ -1,4 +1,5 @@
-Version 1 of Soldier Event by Wahn begins here.
+Version 2 of Soldier Event by Wahn begins here.
+[Version 2 - More military madness]
 
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Outside";
@@ -22,5 +23,42 @@ Instead of resolving a Soldier Squad:
 	wait for any key;
 	increase score by 15;
 	Now Soldier Squad is resolved;
+
+
+Red Light Requisition is a situation.
+The sarea of Red Light Requisition is "Red";
+when play begins:		[these exceptions are based on the second half so people aren't left standing]
+	add Red Light Requisition to badspots of guy;
+	add Red Light Requisition to badspots of furry;
+
+Instead of resolving a Red Light Requisition:
+	say "     Moving through a seedier area of the city, you come around a corner and spot two soldiers a bit down the road, lugging around a large sack. When they spot you, their faces flush red with embarrassment and they run off, dashing away from you. You run after them, but then slip on something that must have dropped out of the sack as they jostled it while running. It's... a dark blue rubber dildo?";
+	say "     What's going on here? Why are soldiers looting the red light district and gathering up whole sacks of dildos and who knows what? Maybe you'll find out one of these days...";
+	increase score by 5;
+	Now Red Light Requisition is resolved;
+	Now Trickster's Masterpiece is unresolved;
+
+
+Trickster's Masterpiece is a situation.  Trickster's Masterpiece is resolved;
+The sarea of Trickster's Masterpiece is "Outside";
+when play begins:
+	add Trickster's Masterpiece to badspots of guy;       [male soldiers]
+	add Trickster's Masterpiece to badspots of furry;     [minotaur involved]
+
+Instead of resolving a Trickster's Masterpiece:
+	say "     Following lust-filled grunts and bellows, you come upon a small military encampment on the parking space behind an office building. There you find a strange scene - in the middle of several olive green tents, there is a wooden hitching post - which a buck-naked soldier uses to hold on to. Behind the man is a very tall musclebound humanoid, sporting a horned bull's head and furred legs ending in cloven hooves - a minotaur. He's in a full on mating frenzy, shafting the human in front of him with mighty thrusts of his long cock. A bit to the side, a group of soldiers stands in front of an officer, many of them apprehensively looking over to the rutting minotaur before they turn back to their superior.";
+	say "     Curious what's going on there you sneak forward, staying out of sight behind one of the tents and just peeking around the corner. From your new location, you can hear the briefing the officer shouts at his men to be audible over the grunts and moans of the coupling man and beast.";
+	say "     '...so our local informant identified this creature to us as patient zero. Analyzing its bodily fluids could lead to a cure - but [if Diegochanged is 0]he[otherwise]she[end if] also warned us that samples must be kept at body temperature or they won't be usable after a short while. So since we can't guarantee to capture that -' he waves towards the minotaur, hulking over the soldier in front of it, '- alive, we had to move on to a different plan to get those samples to the scientists. Team up in twos, then grab your new equipment from corpsman Jones and follow his instructions. Dismissed.'";
+	say "     The soldiers form up teams, then move towards the tent you're hiding behind. You peek in through a window flap and see a corpsman standing in front of several large sacks. When the first two soldiers come in, he says 'Here, take this -' (a bottle of lube) '- that -' (a black rubber dildo) '- and these -' (two butt-plugs) '- and get each other ready for Tiny Tim out there. Don't be embarrassed about it - you'll be heroes if they find a cure through your service. Also - really, really take your daily immunity boosters! You'll be carrying around potent stuff, so don't miss ANY injection.'";
+	say "     You spy in on them as group after group get their stuff, then strip and start to finger each other's asses rather sheepishly. Luckily several of the brave soldiers turn out to be gay, stepping in to help their inexperienced fellows out with some tips and hands-on support. Some even get to 'train' the newbies with their own hard shafts, the men preferring another soldier to often brightly colored sex toys.";
+	say "     Hearing the noise from the center of the camp rise, you reluctantly pull your gaze away from a whole tent full of naked men, most experimenting with dildos and some fucking each other with a passion. Looking around the corner of the tent, you see the minotaur thrust in a few more times, then grab the soldier's hips and hold him tightly as he grinds his hips forward and bellows loudly. You can see the creature's large balls pulsate as it deposits its seed inside the man's hole. Then another naked man comes forward and pushes a rubber butt plug into the fucked soldier's gaping hole as he pulls off the thick shaft. He leads the freshly filled and plugged man to a nearby bunk to recuperate, then steps up to the hitching post himself and wiggles his ass at the minotaur. Tireless, the massive creature pushes his hard cock against the man's pucker making them both grunt as he sinks into its tight embrace and starts another round of fucking.";
+	say "     [line break]";
+	say "     You stay quite a while, watching the soldiers take care of each other and then being bred one after another by the minotaur. In the end a whole squad of them gathers at the edge of the camp, fully clothed and with weapons and equipment, but standing and acting a bit strangely from the feeling of loads of cum and butt plugs inside their asses. Then they move out towards the closest checkpoint of the containment barrier around the city. You wonder what their superiors will say about this plan and the 'cargo' each soldier carries with him, should they even make it at all with all that active minotaur cum wearing down whatever defenses they do have[if diegotalk is 0]. And who might the trickster have been who sold them on this improbable tall tale? It would certainly be interesting to meet him - or her - or it[otherwise if diegochanged is 0]. Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing his hand in this, you'd say it's one of the best Diego's done yet[otherwise]. Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing her hand in this, you'd say it's one of the best Diego's done yet[end if].";
+	wait for any key;
+	increase libido of player by 15;
+	if libido of player > 100, now libido of player is 100;
+	increase score by 15;
+	Now Trickster's Masterpiece is resolved;
+
 
 Soldier Event ends here.
