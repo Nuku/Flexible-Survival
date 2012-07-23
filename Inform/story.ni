@@ -2172,7 +2172,7 @@ This is the sex change rule:
 			now cock width of player is 4;
 		if prevcock < cock width of player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can see your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]!";
+			say "You can see your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, your flesh growing taught with the expansion, leaving you with [ball size]!";
 	otherwise if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
 		let prevcock be cock width of player;
 		decrease cock width of player by 1;
@@ -4500,6 +4500,7 @@ Include Endings by Darthan.
 [Monsters/Infections]
 Include Chocolate Lab by Stripes.
 Include Skunkbeast Lord by Stripes.
+Include Hyperskunk for FS by Stripes.
 Include Female Husky by Nuku Valente.
 Include Yamato Dragon For FS by Kohryu.
 Include Yamato Dragoness For FS by Kohryu.
@@ -4633,6 +4634,7 @@ Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Gargoyle by Kaleem mcintyre.
 Include Manticore by Kaleem mcintyre.
+Include Minotaur for FS by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
 Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
