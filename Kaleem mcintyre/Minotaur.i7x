@@ -1,4 +1,4 @@
-Version 1 of Minotaur for FS by Kaleem mcintyre begins here.
+Version 1 of Minotaur by Kaleem mcintyre begins here.
 
 [Adaptation for Flexible Survival by Kaleem M]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
@@ -110,4 +110,4 @@ when play ends:
 				say "You quickly agree and soon come to find yourself making the small dairy much more prosperous as you let yourself be milked along with the rest of the cows as your breasts began to lactate milk all of a sudden one day. Mating with the bulls turns out to be a plus and after your first calf is born you find that life on a farm isn't so bad. Especially given that you breed a new line of shemale Minotaurs into the world that are happy to be bred and milked the same as you.";
 
 
-Minotaur for FS ends here. 
+Minotaur ends here. 

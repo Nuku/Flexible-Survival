@@ -4634,7 +4634,7 @@ Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Gargoyle by Kaleem mcintyre.
 Include Manticore by Kaleem mcintyre.
-Include Minotaur for FS by Kaleem mcintyre.
+Include Minotaur by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
 Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
