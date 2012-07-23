@@ -18,7 +18,7 @@ to say losetocentaurstallion:
 	otherwise:
 		say "     The centaur stallion snorts in frustration at your lack of a pussy for him to fill and presses you to the ground.  He steps overtop you and pounds his hoofs on the hard ground again and again.  As you cringe to avoid them, his huge cock slaps against his equine belly again and again, growing fully and harder.  His pre dribbles down onto you as a warning of what comes soon after.  With a loud whinny, his glans flares and blast after blast of centaur cum splatters onto you, leaving you soaked in his semen.  He snorts again and trots off, frustrated and only a little satisfied.";
 	decrease hp of player by 10;
-	if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Stallion for infection]
+	if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Mare for infection]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
 			if name entry is "Centaur Mare":
@@ -40,7 +40,7 @@ to say beatthecentaurstallion:
 			decrease humanity of player by 5;
 			if "Pure" is listed in feats of player, increase humanity of player by 2;
 			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
-			if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Stallion for infection]
+			if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Mare for infection]
 				infect "Centaur Mare";
 			otherwise:
 				infect "Centaur Stallion";
@@ -97,8 +97,8 @@ When Play begins:
 	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "centaur cum";			[ Loot monster drops, ]
+	now lootchance entry is 33;		[ Chance of loot dropping 0-100 ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[at random]";
 	now type entry is "centaur";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -109,7 +109,48 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-Section 3 - Endings
+Section 3 - Centaur Cum and Centaur Hair
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"centaur cum"	"Some centaur cum you've managed to collect... Why would you do that!?"	1	centaur cum
+"centaur hair"	"Some thick, dark brown hair."	0	centaur hair
+
+centaur cum is a grab object.
+the usedesc of centaur cum is "[centaurcumuse]".
+it is part of the player.
+It is temporary.
+
+centaur hair is a grab object.
+the usedesc of centaur hair is "[centaurhairuse]".
+it is part of the player.
+It is temporary.
+
+to say centaurcumuse:
+	say "With a little shrug, you tilt your head back and slam down the centaur cum, letting the thick, gooey contents of the jar slide down your throat.  While it does slake your thirst a little, it also floods your body with infection.";
+	decrease thirst of player by 6;
+	if thirst of player < 0, now thirst of player is 0;
+	if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Mare for infection]
+		infect "Centaur Mare";
+	otherwise:
+		infect "Centaur Stallion";
+
+to say centaurhairuse:
+	say "You take the long strands of thick horsehair and stare at them.  Feeling a growing compulsion, you place the roots of the tail at [one of]the base of your spine[or]at the back of your head[at random] and feel them start to grow into you.";
+	if "Male Preferred" is listed in feats of player and guy is not banned:			[change target to Stallion for infection]
+		infect "Centaur Stallion";
+	otherwise:
+		infect "Centaur Mare";
+
+instead of sniffing centaur cum:
+	say "The contents of the jar smell of men and horses, and musky, male arousal.";
+
+instead of sniffing centaur hair:
+	say "The hairs smell of women and horses, and the dry plains outside the city.";
+
+
+
+Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Centaur Stallion" or bodyname of player is "Centaur Mare":
