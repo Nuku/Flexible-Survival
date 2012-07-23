@@ -64,9 +64,9 @@ title	description
 "Socializing"	"You can [bold type]talk (person)[roman type] to chat it up. If they are of more personal interest with you, you can also [bold type]fuck (person)[roman type]"
 "Ending Early"	"Type [bold type]end now[roman type] to cause the game to end early."
 "Play On"	"You want to skip that ending? Go for it. Type [bold type]play on[roman type] and time will cease to be a concern. You will not get endings though."
-"Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]i hate to wait[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]i love to wait[roman type] to return to the default."
-"Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?  Type [bold type]the clears are gone[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]the clears are back[roman type] to return to the default."
-"Auto Attack"	"If you have the [']Instinctive Combat['] feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat."
+"Wait Less"	"Tired of having to click more to continue much of the text?. Type [bold type]Waits Off[roman type] to skip many delays.[line break]Don't like the change and want to go back?  Type [bold type]Waits On[roman type] to return to the default."
+"Clear Less"	"Don't like the page clearing of text?  Want the combat interface at the bottom of the screen?  Type [bold type]Clears Off[roman type] to stop screen clearing.[line break]Don't like the change and want to go back?  Type [bold type]Clears On[roman type] to return to the default."
+"Auto Attack"	"If you have the [']Instinctive Combat['] feat you can use different automatic attacks.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type]auto attack normal[roman type] for the default method of combat (choose each action).[line break]Type [bold type]auto attack berserk[roman type] to always attack in combat.[line break]Type [bold type]auto attack pass[roman type] to always pass in combat.[line break]Type [bold type]auto attack coward[roman type] to always flee in combat.[line break]Type [bold type]auto attack submit[roman type] to always submit in combat."
 
 To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to better fit this game, without changing that extension, as it may be used by other games]
 	now the title in row 2 of Table of Instruction Options is "What to do with >";
@@ -1861,6 +1861,29 @@ carry out autoattacksubmit:
 	otherwise:
 		say "You feel you are missing the instincts to do this.";
 
+Section Hyperlinks
+
+[creates method to toggle hyperlinks on/off at any point in game.]
+[HyperToggle is an action applying to nothing.
+understand "Hyper Toggle" as HyperToggle.
+
+carry out HyperToggle:
+	if hypernull is 0:
+		now hypernull is 1;
+	otherwise if hypernull is 1:
+		now hypernull is 0;]
+HyperlinksActivated is an action applying to nothing.
+understand "Hyper On" as HyperlinksActivated.
+
+carry out HyperlinksActivated:
+	now hypernull is 0;
+
+HyperlinksDeactivated is an action applying to nothing.
+understand "Hyper Off" as HyperlinksDeactivated.
+
+carry out HyperlinksDeactivated:
+	now hypernull is 1;
+
 Section Waithate
 
 [creates (and sets) flag for skipping many wait for any key;]
@@ -1869,7 +1892,8 @@ waiterhater is a number that varies.
 
 WaitHateFunction is an action applying to nothing.
 WaitHateCommand is an action applying to nothing.
-understand "i hate to wait" as WaitHateCommand.
+understand "waits off" as WaitHateCommand.
+understand "i hate to wait" as WaitHateCommand. [old command, keep for time being, eventually remove?]
 
 carry out WaitHateCommand:
 	WaitHateFunction;
@@ -1880,7 +1904,8 @@ To WaitHateFunction:
 
 WaitLoveFunction is an action applying to nothing.
 WaitLoveCommand is an action applying to nothing.
-understand "i love to wait" as WaitLoveCommand.
+understand "waits on" as WaitLoveCommand.
+understand "i love to wait" as WaitLoveCommand. [old command, keep for time being, eventually remove?]
 
 carry out WaitLoveCommand:
 	WaitLoveFunction;
@@ -1897,7 +1922,8 @@ clearnomore is a number that varies.
 
 ClearLessFunction is an action applying to nothing.
 ClearLessCommand is an action applying to nothing.
-understand "the clears are gone" as ClearLessCommand.
+understand "clears off" as ClearLessCommand.
+understand "the clears are gone" as ClearLessCommand. [old command, keep for time being, eventually remove?]
 
 carry out ClearLessCommand:
 	ClearLessFunction;
@@ -1908,7 +1934,8 @@ To ClearLessFunction:
 
 ClearMoreFunction is an action applying to nothing.
 ClearMoreCommand is an action applying to nothing.
-understand "the clears are back" as ClearMoreCommand.
+understand "clears on" as ClearMoreCommand.
+understand "the clears are back" as ClearMoreCommand. [old command, keep for time being, eventually remove?]
 
 carry out ClearMoreCommand:
 	ClearMoreFunction;
@@ -4726,24 +4753,24 @@ Banned Creatures is in Game Options. The description of Banned Creatures is "[st
 Hyperlinks is in Game Options. The description of Hyperlinks is "[starthyperstatus][starthyperoptions]";
 Waits is in Game Options. The description of Waits is "[startwaitsstatus][startwaitoptions]";
 Clears is in Game Options. The description of Clears is "[startclearsstatus][startclearoptions]";
-Start Button is in Game Options.  The description of Start Button is "[bold type][link]Push start button[end link][roman type] when ready to begin, using current settings.";
+Start Button is in Game Options.  The description of Start Button is "[bold type][link]Push start button[end link][roman type] will start play, using current settings.";
 
 Section Option Says
 
 To say starthyperstatus:
 	say "Hyperlinks are currently: [if hypernull is 0]On[otherwise if hypernull is 1]Off[end if]";
 To say starthyperoptions:
-	say "[line break]Type [bold type][link]set Hyperlinks to On[end link][roman type] or [bold type][link]set Hyperlinks to Off[end link][roman type]";
+	say "[line break]Type [bold type][link]Hyper On[end link][roman type] or [bold type][link]Hyper Off[end link][roman type]";
 
 To say startwaitsstatus:
 	say "Waiting for input is currently: [if waiterhater is 0]On[otherwise if waiterhater is 1]Off[end if]";
 To say startwaitoptions:
-	say "[line break]Type [bold type][link]set Waits On[end link][roman type] or [bold type][link]set Waits Off[end link][roman type]";
+	say "[line break]Type [bold type][link]Waits On[end link][roman type] or [bold type][link]Waits Off[end link][roman type]";
 
 To say startclearsstatus:
 	say "Screen clears are currently: [if clearnomore is 0]On[otherwise if clearnomore is 1]Off[end if]";
 To say startclearoptions:
-	say "[line break]Type [bold type][link]set Clears On[end link][roman type] or [bold type][link]set Clears Off[end link][roman type]";
+	say "[line break]Type [bold type][link]Clears On[end link][roman type] or [bold type][link]Clears Off[end link][roman type]";
 
 To say startstatsstatus:
 	say "Stat bonus is currently: [if startstatbonus is 1]Strength[otherwise if startstatbonus is 2]Dexterity[otherwise if startstatbonus is 3]Stamina[otherwise if startstatbonus is 4]Charisma[otherwise if startstatbonus is 5]Perception[otherwise if startstatbonus is 6]Intelligence[otherwise if startstatbonus is 7]Randomized stats[end if]";
