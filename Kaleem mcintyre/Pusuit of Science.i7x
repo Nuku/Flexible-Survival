@@ -1,6 +1,11 @@
 Pusuit of Science by Kaleem mcintyre begins here.
 
 Section 3 - Pursuit of Science
+
+gatherwolfcum is a number that varies.
+gatherdemonseed is a number that varies.
+gatherdogmilk is a number that varies.
+Ointerrogate is a number that varies.
 			
 Instead of resolving Pursuit of Science:
 	if omq is 1:
@@ -11,9 +16,9 @@ Instead of resolving Pursuit of Science:
 				if k is "wolf cum", increase wolfcumfound by 1;
 			if wolfcumfound is 0:
 				say "'Please remember that I need those samples as quickly as humanly, or otherwise in this case, possible. I know you have other things to accomplish, but time is really working against us and all.' Omio says with a calm, but commanding tone while watching you with her golden eyes shining pointedly into your face.[line break]";
-			otherwise if wolfcumfound is < 5:
+			otherwise if wolfcumfound < 5:
 				say "'Not quite enough at the moment, but I do commend you ability to gather what I need in  spite of everything that's going on here in the city.' Omio smiles at you and then gives you a playful wink. 'Good luck on your quest[if cunts of player > 0]gorgeous[otherwise if cocks of player > 0]handsome[otherwise if cunts of player > 0 and cocks of player > 0]my friend[end if].[line break]";
-			otherwise if wolfcumfound is > 4:
+			otherwise if wolfcumfound > 4:
 				delete wolf cum;
  				delete wolf cum;
 				delete wolf cum;
@@ -41,10 +46,10 @@ Instead of resolving Pursuit of Science:
 			repeat with k running through invent of player:
 				if k is "dog milk", increase dogmilkfound by 1;
 			if dogmilkfound is 0:
-				say "I know this might be a little strange a request, but please don't try and milk any old dog to bring back it's juice.' Omio giggles slightly. 'What I need is the milk of the mutant collie that's walking around town that stands about twelve feet tall in height. She's really not too hard to miss, but she can be somewhat elusive when she wants to be. Please find and bring me her milk so I can analyze it.'[line brink]";
-			otherwise if dogmilkfound is < 3:
+				say "I know this might be a little strange a request, but please don't try and milk any old dog to bring back it's juice.' Omio giggles slightly. 'What I need is the milk of the mutant collie that's walking around town that stands about twelve feet tall in height. She's really not too hard to miss, but she can be somewhat elusive when she wants to be. Please find and bring me her milk so I can analyze it.'[line break]";
+			otherwise if dogmilkfound < 3:
 				say "'I see you found the collie in question, I hope she wasn't too rough on you. She can be kinda frisky but she honestly doesn't mean any harm.' Omio seems to snicker at this and you have to wonder just if the red head knows the mutant in question.[line break]";
-			otherwise if dogmilkfound is > 2:
+			otherwise if dogmilkfound > 2:
 				delete dog milk;
 				delete dog milk;
 				delete dog milk;
@@ -74,21 +79,20 @@ Instead of resolving Pursuit of Science:
 				extend game by 8;
 				increase score by 50;
 				now omq is 2;
-
 	if omq is 2:
 		say "Coming up to Omio, who happens to be busy working on her computer, you cough to draw the woman from what she is doing and then jump back in surprise when the angry face of the red head greets you. Seeing that's it's just you Omio slowly lets her face settle back into her normally happy façade, however, you make a mental not to be more careful around the other as that former look in the red head's golden eyes spoke of clear intent to bring down retribution onto someone's head. Whatever she was upset about must have had to do with her computer because upon getting up to greet you Omio quickly flips the monitor of the machine off, hiding whatever it was. 'Hey you, so glad you've come right now!'[line break]";
 		say "Omio stretches and then reaches over to hug you tightly into her somewhat modest chest. 'I sooo need your help right now.' You try to ask the other what she needs, but sadly it gets muffled into the red head's warm and comfy feeling bosom. When Omio decides to let you go, some minutes later, you pant slightly as your [facename of player] face is somewhat very sweaty. Despite her size the red head is both very strong and has a very high body temperature. Odd, but then again, what in this strange world can be considered normal anymore? 'If you have some time I need you to do me a big favor.'[line break]";
 		say "Asking the other what she needs you get a very big surprise. 'Well I need to examine a unicorn, but at the moment I don't want to leave my house because of [']circumstances['] beyond my control.' Omio scowls slightly and covers her chest with both of her arms and you get the feeling that something big must be up to make the normally bubbly red head so upset. 'Any who, because of this I would like for you to become a unicorn and then come back here so I can examine you.' At this you blink at Omio, the red head is smiling at you sincerely, and then ask her if she's lost her mind. When the other begins to giggle at you, you realize that – yes – she has indeed lost her mind.[line break]";
 		say "'Nope. I need to draw both blood and other samples from a unicorn, as well as get a few shavings from its horn, so that I collect data on such a rare and mythical creature. Don't worry I know where you can find one to borrow some [']genetic material['] from.' Omio wags her eyes at you lewdly and then tells you about the Palomino where a unicorn barkeeper works. 'I'm sure he'd be very happy to help you out with becoming a unicorn, especially if you were to help him with a problem or two.' The red smiles again and you can only suck on your teeth as you wonder what you've gotten yourself into with this gold eyed harlot.[line break]";
 		if bodyname of player is "Unicorn" and facename of player is "Unicorn":
-			say "Omio nearly squeals, correction, she does squeal, as the red head looks over your impressive unicorn body and face and then gets up from her spot on the sofa to hug you tight. Grunting from the feel of the woman's strong grip you wonder if the other is some kind of behemoth-type mutant in disguise as you feel your ribs starting to creak slightly. Whinnying for the other to let you go you all but collapse as you suck in grateful gulps of air when the red head suddenly releases you. 'Thank you so much for this! I never would have thought that you would make such a [if cocks of player > 0]studly[otherwise if cunts of player > 0]charming[otherwise if cunts of player > 0 and if cocks of player > 0]magnificent[end if]steed.'[line break]";
+			say "Omio nearly squeals, correction, she does squeal, as the red head looks over your impressive unicorn body and face and then gets up from her spot on the sofa to hug you tight. Grunting from the feel of the woman's strong grip you wonder if the other is some kind of behemoth-type mutant in disguise as you feel your ribs starting to creak slightly. Whinnying for the other to let you go you all but collapse as you suck in grateful gulps of air when the red head suddenly releases you. 'Thank you so much for this! I never would have thought that you would make such a [if cocks of player > 0]studly[otherwise if cunts of player > 0]charming[otherwise if cunts of player > 0 and cocks of player > 0]magnificent[end if]steed.'[line break]";
 			say "Omio continues to squeal like a schoolgirl having her first crush while bouncing up and down like mad, but before you can get too weirded out by the red head's behavior the red head has her game face on and is looking at you with a stoic mask of professionalism. 'Now that you've acquired all of the genetic material needed with your transformation please sit down on the sofa while I go and get the tools needed to examine you.'[line break]";
 			say "You find yourself nodding and whickering somewhat in disbelief at the sudden change of the other. Maybe she has some kind of weird personality disorder or something? Something about that woman is odd and looking at where Omio is heading as she disappears into the darkened area of her room you begin to wonder...[line break]";
 			say "A slight shudder goes through you as you speculate over just exactly what the red head is going to do to you. However, you are not prepared for her to come back with a face mask strapped around her tanned nose and chin, a pair of white latex gloves on, a nurse's scrub covering her blue Chinese dress, while carrying an old fashion black leather doctor's bag that look like it had slipped through a time hole from the 1960s. 'Alright,' Omio says and your eyes nearly pop out of your skull when the woman comes over to you and then starts trying to undress you. 'I'm going to need you to get out of these and then prepare for some advance medical testing, the likes of which is not standardized by any health organization in America.'[line break]";
 			say "You try and say something but all you can do is goldfish as the red head continues to try and loosen you from your only decent set of clothing. Sadly enough, you find the thought of being naked in front of Omio somewhat arousing and soon you are helping the golden eyed female to strip you down. Once you are fully naked Omio then proceeds to go about checking your blood pressure, examining both of your eyes and ears, measuring your arms, legs, chest and then shaving away bits of your glimmering horn to place the snippets into a small Petri dish.[line break]";
 			say "Drawing blood and saliva from you and then storing the fluids into small test tubes Omio goes about asking you several questions while at the same time giving you no speculations as to her own thoughts. Some of the questions are a bit...personal...but you don't have much of a problem answering the other because of the strangely disarming nature in which the red head asks them. Once that is done the red head stands up and then looks you over completely. A playful light shimmers inside of Omio's golden eyes as she looks at your crotch.[line break]";
 			if cunts of player > 0:
-				say "'Alright then, just hold still while I conclude the last portion of the examination.' Omio chuckles and quickly you find yourself trying to back away from the other. You fearful retreat only succeeds in pushing yourself further into the red head's plush couch however, as a white gloved hand reaches down to dip to fingers into your open cunt. A whinny of pleasure turns into a moan as you feel Omio's, surprisingly thick digits, slip deeper and deeper into you until the red head has both of her knuckles buried inside of your unicorn pussy. Spreading your legs on instinct you buck and shiver as the wannabe doctor's fingers swirls her fingers around inside of your cunt while pressing a finger over the nub of your clit. Arching and panting your body feels like you're about to go into heat as your honey begins to leak out from the inside of your now gaping folds.[line break";
+				say "'Alright then, just hold still while I conclude the last portion of the examination.' Omio chuckles and quickly you find yourself trying to back away from the other. You fearful retreat only succeeds in pushing yourself further into the red head's plush couch however, as a white gloved hand reaches down to dip to fingers into your open cunt. A whinny of pleasure turns into a moan as you feel Omio's, surprisingly thick digits, slip deeper and deeper into you until the red head has both of her knuckles buried inside of your unicorn pussy. Spreading your legs on instinct you buck and shiver as the wannabe doctor's fingers swirls her fingers around inside of your cunt while pressing a finger over the nub of your clit. Arching and panting your body feels like you're about to go into heat as your honey begins to leak out from the inside of your now gaping folds.[line break]";
 				say "Seeing you in such a intriguing position Omio snickers and then brings the rest of her fingers together to bury all five of her digits into your oozing pussy. Pressing down deeper into you, you can't help but to throw back your head and then shout out a strong [italic type]NEIGH[roman type] when your fleshy lips flutter and then lock up tight around Omio's fingers. Holding the red head's hand down tight you buck and then screech as orgasm washed over you like a wave. Gouts of clearish blue nectar dribbles out of you and onto Omio's gloved hand as you climax powerfully until finally you have nothing left to give.[line break]";
 				say "When you come down from off of your high you drop back down onto the sofa and then begin to pant like an overworked freight train. Mind whirling as though you've gone through an unbelievable experience, which technically you have, you blink your eyes open and then look down just in time to see Omio collecting your colorful nectar into a large jar. When the red head speaks next you can only twitch an eye as Omio's words sink deep into your brain. 'Thanks a lot for this sample! I never would have gotten old Harold to give me anything unless I raised my ass for him. But thankfully I didn't have to do that because you did instead!' The red head holds up the now capped jar and then pulls out a sharpie to label it. 'With this we can test some new theories to see if unicorn cum actually does extend one's life! Maybe if you feel like it you can work we me and my company later on to see if this is true or not?'[line break]";
 				say "You pass out from exhaustion before you can comment on that one and when you wake up you have a hard time remembering what exactly happened, that is, until you find your clothes still in a puddle around you on the floor and your lap sticky with your spilled honey. Blushing slightly as the memories return to you, you listen as Omio rapidly taps onto her computer and then pull yourself up to get dressed before leaving out of the red head's house. In your backpack are several extra supplies that had been given over by Omio.[line break]";
@@ -109,26 +113,25 @@ Instead of resolving Pursuit of Science:
 				now omq is 3; 
 		otherwise:
 			say "'Remember I need your body to be that of a unicorn and your head to be that of a unicorn so that I can collect some samples.' Omio says before winking up at you. 'Oh and also, don't forget, that the guy you are looking for is in the club named the Palomino. The place should be downtown somewhere, if it hasn't been overrun already by the ferals running around.' Omio hums thoughtfully as she says this, her face is tight with contemplation.[line break]";
-
 	if omq is 3:
 		say "A somewhat loud explosion throws you back against the patio door of Omio's research studio. Grunting from the wave of pain spiking through your body you close your eyes just in time for a miasma of black smoke to come rushing out at you. Enveloped by darkness, and slightly injured, you find yourself getting to your feet somewhat slowly while at the same time calling out for Omio. Fanning the front of your nose when the scent of burnt [']feline?['] has you sneezing in reflex you call out again for the red headed researcher to answer you.[line break]"; 
 		say "Glimmering golden orbs shine directly into your face a moment or two later from inside of a large grey cloud of soot and ash. 'Yes? Is everything alright?' The cool tone in the red head researcher's voice has you backing up some as Omio suddenly sounds very...different...for some reason.[line break]"; 
 		say "Telling the other that you worried about her and wanted to know if she was alright, Omio chuckles at you before she sweeps her hand in front of her golden eyes to dispel the black smoke away from her face. Like magic...and mildly you wonder if that is exactly what it is...Omio bats the clouds of darkened smoke out of her house through the open patio door and the chimney, respectfully. A small gale rips through the living room area a second later and soon you and the red head are standing face-to-face in a...slightly...disarrayed household. 'Now then maybe that will make it better for you to see me, wouldn’t you agree?'[line break]";
 		say "You're not sure what to say to the red head as you simply blink in confusion. Wasn't she just in the middle of a large explosion? From the look of her you don't see anything out of place on the red head, well save for her blue Chinese dress being somewhat dirty. Trying to open your mouth to ask Omio how she just did what she did you get a raised hand and then a single wag of a tanned finger. 'Don't worry about the little things right now.' The red head smiles before winking. Obviously she must be okay because her former teasing mannerisms have returned. 'So what can I do for you today?'[line break]";
 		say " Shaking your head and regaining your wits you ask Omio if there was something you could do to help her clean up the place, as you have totally forgotten why you have come to see her in the first place. Omio hums pensively to herself at your open offer. 'Well, you know I could use some more materials now that I've wasted my own on my little failure of a [']project[']. Do you think you could do go out and bring me back several pieces of spotted fur from the Leopardmen running around the high rise district and some tainted wool from the rams that should be running around outside of that bunker of yours? Five pieces of material each would be nice.'[line break]";
-		say "You find yourself nodding and turning to fetch what the other had just asked for, but before you can take too many steps you stop dead as you go over what Omio said. Whipping back around you ask the red head how she knew about the bunker where[if Sarah is in bunker and if Fang is in bunker]your companions are staying[otherwise]Trixie is hiding[end if]safely out of harm's way, you find Omio waving you off somewhat whimsically. 'I know everything there is to know about the people I deal with. I couldn't be a successful researcher any other way.' The flippant air coming from off of Omio has you narrowing your eyes at the red head. Again, that strange feeling that you need to be careful around the woman surges up throughout you.[line break]";
+		say "You find yourself nodding and turning to fetch what the other had just asked for, but before you can take too many steps you stop dead as you go over what Omio said. Whipping back around you ask the red head how she knew about the bunker where[if Sarah is in bunker and Fang is in bunker]your companions are staying[otherwise]Trixie is hiding[end if]safely out of harm's way, you find Omio waving you off somewhat whimsically. 'I know everything there is to know about the people I deal with. I couldn't be a successful researcher any other way.' The flippant air coming from off of Omio has you narrowing your eyes at the red head. Again, that strange feeling that you need to be careful around the woman surges up throughout you.[line break]";
 		say "Yet despite this feel of uncertainty surrounding the other gathering the materials Omio has requested is more important...for now.[line break]";
-		if "Spotted fur" in invent of player < 5:
+		if Spotted fur is fiveowned:
 			say "You get the feeling that you don't have the right amount of material Omio needs to complete -- whatever it is – the red head was working on. You realize that you'll have to do some more hunting in order to gather the five pieces of Spotted fur before you can hand over what Omio needs.[line break]";
-		otherwise if "Spotted fur" in invent of player > 5 and if "Tainted wool" in invent of player < 5:
+		otherwise if Spotted fur is fiveowned and Tainted wool is fiveowned:
 			say "With the five pieces of spotted fur in hand you feel good inside about giving the red head the materials she needs, but then you stop as you remember that you have to fetch some tainted wool.[line break]"; 
-		if "Tainted wool" in invent of player < 5:
+		if Tainted wool is fiveowned:
 			say "Remembering that you need to get five pieces of tainted wool for Omio you recall that the red head said something about there being sheep outside in the city[if nes >= 1]. You bear in mind that there were rams running around outside looking for one of their lost flock, so maybe hunting some of them down would be wise[otherwise]? But where in the world would sheep hide in the middle of a city infested with roving mutants?[end if][line break]";
-		if "Tainted wool" in invent of player > 5 and if "Spotted fur" in invent of player < 5:
+		if Tainted wool is fiveowned and Spotted fur is fiveowned:
 			say "With the tainted wool in your backpack now would be a good time to head back to Omio to give the red head the materials she had requested. Oh, but wait! Didn't she need some spotted fur as well?[line break]";
-		if "Spotted fur" in invent of player < 5 and "Tainted wool" in invent of player < 5 and omq is 3:
+		if Spotted fur is fiveowned and Tainted wool is fiveowned and omq is 3:
 			say "Omio chuckles at you and then politely reminds you of what she needs, her golden eyes shine coolly as looks into your [facename of player] face. 'I need five pieces of spotted Leopardman fur and five pieces of tainted wool from those rams outside. Please make sure to bring them back and in a timely fashion, ok?' The red head winks at you and you get the disturbing feeling as though she's up to something.[line break]";
-		otherwise if "Spotted fur" in invent of player > 5 and "Tainted wool" in invent of player > 5:
+		otherwise if Spotted fur is fiveowned and Tainted wool is fiveowned:
 			say "Omio nods to you in a calculated manner as she takes the materials off of your hand and then moves over to the cauldron she always has boiling inside of her fireplace. 'Thank you so much for this, because of you I can now create the thing that I was trying to craft earlier.' Asking her what she is planning to do with the fur and wool you collected you find yourself stepping up next to Omio's side when the researcher waves you over. Your eyes widen in some confusion as the red head nonchalantly dumps the fur and wool into the steaming broth of pinkish-purple liquid that is bubbling inside of her cauldron. 'It might not be very scientific, but watch this,'[line break]";
 			say "You say nothing as Omio takes a wooden ladle and then plunks it into the pot to start stirring the contents around. From what you can see the tainted wool and spotted fur seem to be mixing together like spices being put into a soup, but that couldn't be possible, right? 'Could you hand me the red vial off of my computer table?' Doing so without question you run over to the desk, look over the several assorted vials standing together inside of a small black case, and then grab the red vial as asked. Taking it back over to Omio you watch as she looks over the liquid and then uncorks the vial before dumping the crimson solution into the cauldron.[line break]";
 			say "Upon touching the pinkish-purple pool the red liquid immediately transforms the mixture a sickly green color. You have to take a step back as white smoke fills up the area around both you and Omio. Covering your nose as the smell of sulfur cloys at your nose you cough slightly while wondering how the red head can stand such a detestable smell. You don't have long to wonder because soon Omio is chirping, rather loudly at that, as she looks over the fur and wool flowing together to become one large mass. Returning to looking at the mixture you find your jaw almost hitting the floor when you see Omio pull out a large mass of...[']spotted cotton[']?[line break]";
@@ -158,7 +161,7 @@ Instead of resolving Pursuit of Science:
 				add "food" to invent of player;
 				add "peach" to invent of player;
 				extend game by 8;
-				increase score by 20 points;
+				increase score by 20;
 				now omq is 4;
 			otherwise:
 				say "Asking the red head about the future you watch as a tiny smile blossoms onto Omio's tanned face. 'It's my hope that the Prometheans will be able to do much better with my research than what the government tried to do. I [italic type]pray[roman type], and I don't usually pray for a lot, that their leader will have the wisdom and intelligence to know how to deal with this situation to turn it into something that will benefit everyone instead of just a select few.' Omio snorts as though in vexation about something. 'Though, then again I might be getting my hopes up for nothing. Not that this would be a first for me.' The red head shrugs. 'But what can I say, I'm a hopeful idiot.'[line break]";
@@ -180,12 +183,11 @@ Instead of resolving Pursuit of Science:
 				add "food" to invent of player;
 				add "peach" to invent of player;
 				extend game by 8;
-				increase score by 20 points;
+				increase score by 20;
 				now omq is 4;
-
 	if omq is 4:
 		say "Going to speak to Omio you find yourself jumping slightly when a sharp noise out in front catches onto the edge of your hearing. A flash of red and blue shoots pass you and before you know it you're heading outside to see what the commotion is on about. What you find when you get outside is Omio screeching as the red head kicks the furry hides of several prairie dogs that have happened into her garden. 'GET OUT YOU PESTS!' From the way Omio is going about her business it would seem as though she's had to deal with the rodents trying to take bits and pieces of her garden before. With viper like quickness the red head expertly grabs the furry critters by the neck when they pop out of their little hiding holes and then literally gives them the boot to send them back across the plains.[line break]";
-		say "Not wanting to get in the other's way you watch for several minutes as Omio displays a certain level of ferocity you wouldn't have expected out of the normally playful, if not somewhat silly, researcher. Right up to the point when you notice more prairie dogs coming inbound towards you."
+		say "Not wanting to get in the other's way you watch for several minutes as Omio displays a certain level of ferocity you wouldn't have expected out of the normally playful, if not somewhat silly, researcher. Right up to the point when you notice more prairie dogs coming inbound towards you.";
 		challenge " Prairie Dog";
 		challenge " Prairie Dog";
 		challenge " Prairie Dog";
@@ -197,7 +199,7 @@ Instead of resolving Pursuit of Science:
 				say "Omio's attack is so great that you are lifted up off of the ground and then sent hurdling through the sky back towards the city as pain screams throughout your jaw. Feeling your body floating as light as a feather you find yourself looking down at the world below as you slowly sail past the plains. Blinking and then looking down you find that the grassy knoll is kind of beautiful from this distance, though you'd never have thought that you'd see it in this sort of way before, and for a moment you feel your breath catch into your throat as you take a new appreciating of the world beneath your feet.[line break]"; 
 				say "Floating, or rather flying as you are, isn't so bad, you come to realize, however that though soon gets put on hold as you notice your path leading you directly into a flock of wyverns. Trying to angle your body to stop you only succeed in making the situation worse as impact head-on into one of the flying scalies.[line break]"; 
 				say "Slamming into one of the wyverns both you and the flying reptile squawk in pain at your star-crossed gathering. However, the worst part doesn't exactly come until two seconds later when you and your impromptu mount end up spiraling down onto the ground when the wyvern loses its focus and forgets to flap its massive wings on a coming updraft. Screaming as the ground hurriedly grows larger in front of your eyes you hang onto to your traveling companion in vain hopes that, you'll at least, survive the jarring impact you know is coming.[line break]";
-				if a random chance of 2 out of 5 succeeds:
+				if a random chance of 2 in 5 succeeds:
 					say "Thankfully the wyvern ends up breaking both of your falls as it crashes onto a large truck. Well more so for you than the reptile because by breaking your fall the flying scalie has given you the time to both to collect yourself and then jump off of its backside. Deciding that this adventure is over for today you hurry on your way back to your bunker at top speeds. Good thing to because five seconds after you start to beat feet several of the fallen wyvern's companions are flying overhead to have a look-see over at their dazed and slightly moaning cohort.[line break]";
 					decrease hp of player by 15;
 					Move player to Bunker;
@@ -233,8 +235,7 @@ Instead of resolving Pursuit of Science:
 			extend game by 8;
 			increase score by 15;
 			now omq is 5;
-			
-	if omq 5:
+	if omq is 5:
 		say "Omio quickly hands you off something after saying 'think fast'.[line break]";
 		let bonus be (( the Dexterity of the player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -268,11 +269,10 @@ Instead of resolving Pursuit of Science:
 			extend game by 8;
 			increase score by 10;
 			now omq is 6;
-
 	if omq is 6:
 		say "'Hey, I need you to do me a favor today.' You take a sudden step back at the forwardness of the red head, but nod all the same as Omio gazes straight into your face. 'I need you to pick up a package for me from someone in the red light district. Don't worry,' Omio stops you before you can start to ask anything with a raised hand. 'It's just some supplies and equipment that I need from a black market dealer. She's waiting for you somewhere near the Aussie pub near the downtown red light district, so could you please go and get them for me.[line break]";
 		say "I [bold type]really[roman type] need those things. Like, yesterday.' Omio looks to you with an almost demanding glower in her eyes and quickly you get the message that it's time to be off. Though a part of you wonders what she could need so badly, you figure that you'll find out when you hunt down this mysterious woman. Wait, what does this person even look like again?[line break]";
-		now opcl is 1;
+		[now opcl is 1;]
 		now Ointerrogate is 1;
 	if "lumpy box" is not listed in invent of player and Ointerrogate is 1 and omq is 6:
 		say "'I know that I may not have given you explicit instructions, but please head to the red light district to go and pick up my parcel.' You ask Omio to give you some more details about the person you are supposed to be picking the package up from. The red head blushes as she realizes she hadn't told you much about the other. 'Oh, sorry, the woman is a blonde with a scar across her face. If she still has some of her humanity left, which, knowing her she does, then you'll be looking for someone with a long white coat and hood on. Think something like one of those assassins from that game...what was it...something Creed? You should get the idea.[line break]";
@@ -282,26 +282,25 @@ Instead of resolving Pursuit of Science:
 		say "'Don't worry, if you just go and pick up my package then all will be well. You have nothing to do with her, on either a personal or business level, and the police are idiots for even trying to sequester you for information since you, technically, don't know anything relevant about the blonde.' You let Omio know that you don't appreciate being dragged into all of this. 'I know, and I'm sorry, but you're the only one who I can ask. So please,' The red head takes your hand and then stares up at you with shining golden eyes that seem to grow moist all of a sudden. 'Do bring back my package for me.'[line break]"; 
 		say "You remove your hand from the red head's grasp when her eyes start to flutter and then ask her why she wants the parcel so badly. 'It's filled with chemicals and other materials I need for my experiments.' Omio says offhandedly. 'Most of them are illegal to ship into this country and the blonde is the only one who can supply what I need. So, it's kinda vital that I get them ASAP, otherwise my experiments might come to a screeching halt!' Omio playfully smiles before winking at you.[line break]"; 
 		say "Why are you friends with this crazy woman again?[line break]";
-	if "lumpy box" is in invent of player:
+	if "lumpy box" is listed in invent of player:
 		say "'Oh!! Thank you so much!' Omio takes the offered package and then quickly darts off into her room to check over it. Too tired to bother chasing after the red head you simply move over to Omio's sofa and then crash onto the soft cushions. Minutes later find Omio coming back out of her room and then dancing around merrily while humming somewhat upbeat into the pit of her throat. Turning to look at you the red head can't help but grin like a lunatic as she comes over to sit down next to you.[line break]";
-		say "You'll never know how grateful I am for all of this, but I do so seriously appreciate all you have done for me! Those chemicals will keep me going for a long while to come and my reports will be perfectly documented and written now that I have the parts to upgrade my laptop with! 'Omio cheerfully smiles at you and you can't help, but not passively at the other woman. 'What's wrong? You seem kinda beat.' Giving the red head a look you recap your adventure with the blonde and the two lizards[if Lizard Parlor is known]. You retell your adventure with the two reptiles to Omio and watch as her face goes through a multitude of expressions. Most of these said reactions range from amazed to outright shocked[otherwise]. Letting Omio know what the blonde told you after she handed you the parcel you find yourself almost tumbling off the couch as the red headed research gets up all of a sudden. 'So what are you doing here, don't you have someplace to be!' Omio says heatedly.[line break]";  
+		say "You'll never know how grateful I am for all of this, but I do so seriously appreciate all you have done for me! Those chemicals will keep me going for a long while to come and my reports will be perfectly documented and written now that I have the parts to upgrade my laptop with! 'Omio cheerfully smiles at you and you can't help, but not passively at the other woman. 'What's wrong? You seem kinda beat.' Giving the red head a look you recap your adventure with the blonde and the two lizards[run paragraph on]";
+		[[if Lizard Parlor is known]. You retell your adventure with the two reptiles to Omio and watch as her face goes through a multitude of expressions. Most of these said reactions range from amazed to outright shocked[otherwise]]
+		say ". Letting Omio know what the blonde told you after she handed you the parcel you find yourself almost tumbling off the couch as the red headed research gets up all of a sudden. 'So what are you doing here, don't you have someplace to be!' Omio says heatedly.[line break]";  
 		say "Getting up and then stretching you figure that maybe it would be a good time to get going. Especially if the somewhat wide eyed look the other woman is giving you says anything about her current mood.[line break]";
-		delete lumpy box from invent of player; 
+		delete lumpy box;
 		add "peach" to invent of player;
-		add "food" to invent of player"
+		add "food" to invent of player;
 		add "water bottle" to invent of player;
 		extend game by 8; 
 		increase score by 25;
 		now omq is 7;
-		
-	
 	if omq is 7:
 		say "Try to get her attention you find that Omio is almost completely resolute in her work as she rapidly taps her fingers along the keyboard of her computer. 'Hold on, I'm looking for something.' Figuring that the red head is not about to give you the attention you desire you head over to her sofa and then flop down onto the beige cushions. Cuddling up to your backpack and looking out to the open patio door allowing the warm winds of the plains to flow into the room you find yourself slowly closing your eyes.[line break]";
-		say "'And so I need you to make sure that these samples arrive into the hands of the director as soon as possible, is that understood?' Omio's voice reaches out to you in your haze of sleep. You want to rise and ask what's going on, but you're suddenly just too tired to fight off the need to sleep. 'And what of this one?' Another voice, this one unfamiliar to you, asks[if cocks of player > 0]. 'He's my pet project. He's not to be touched or harmed by any of your operatives, otherwise they deal with me personally[otherwise is cunts of player > 0]. 'She's my pet project. She's not to be touched or harmed by any of your operatives, otherwise they deal with me personally[end if]. Am I clear, Siegfried?' Omio growls with a rumble strong enough that small fixtures tremble around inside of the room while she taps her foot impatiently across the floor.[line break]";
+		say "'And so I need you to make sure that these samples arrive into the hands of the director as soon as possible, is that understood?' Omio's voice reaches out to you in your haze of sleep. You want to rise and ask what's going on, but you're suddenly just too tired to fight off the need to sleep. 'And what of this one?' Another voice, this one unfamiliar to you, asks[if cocks of player > 0]. 'He's my pet project. He's not to be touched or harmed by any of your operatives, otherwise they deal with me personally[otherwise if cunts of player > 0]. 'She's my pet project. She's not to be touched or harmed by any of your operatives, otherwise they deal with me personally[end if]. Am I clear, Siegfried?' Omio growls with a rumble strong enough that small fixtures tremble around inside of the room while she taps her foot impatiently across the floor.[line break]";
 		say "Crystal.' The last you hear of the other, before darkness and unconsciousness takes you back into its embrace, is the sounds of shoes stepping off from the hardwood floor and then crunching onto grass before. When next you wake Omio is typing away on her computer with the same focused intensity she had been using before you fell asleep. Trying to converse with to the red head only nets a grunt of mild irritation from the female.[line break]";
 		say "Not seeing much else you can at the moment you take your leave. Maybe she'll be in better spirits later on.[line break]";
 		now omq is 8;
-	
 	if omq is 8:
 		say "'OK, so here's the deal,' Omio speaks up out of the blue. 'At present I have all of the materials needed to make some really nifty items here within the studio, however, I don't have an [']energy conduit['] necessary to transmute the raw bits and pieces into suitable alchemical compounds and reagents.' The red head says as if you had a clue about what she's talking about. 'While I could make a conduit from scratch that would take days and personally, I just don't want to waste that kind of time since I've already found one here within the city.' A bad feeling slowly creeps its way down your spine as you look at the Cheshire smile growing on Omio's tanned face. Would the red head really ask you to...[line break]";
 		say "'Somewhere within the museum,' Yep, she would. 'there's a certain artifact that bears the pattern of a serpent coiled around itself and biting at its own tail crafted onto the front of a bronze amulet. I need you to retriever this medallion for me, by either fair of foul means. I don't particular care which, just please bring me back that objet d'art.' Omio says while placing both of her hands onto your [bodyname of player] shoulders and then gripping you somewhat tightly as if to stress her point.[line break]";
@@ -319,7 +318,7 @@ Instead of resolving Pursuit of Science:
 					say "With the collapse of the former government and rise of such a concepts like individual responsibility, something this country has been rather weak at fostering in the past, we have to be ready for both the mental collapse of minds not ready to cope with such burdens and those who are not emotionally stable enough to stand up and take care of themselves.'[line break]";
 					say "'For now though,' Omio says catching you just as you are about to go too deep into your own thoughts. 'Don't worry about it. Just know that there is a going to be a safe enough haven for you to go, if you feel that the world is becoming too much, provided that you are willing to do you share enough to help out the collective whole.' Omio glares at you while saying this. 'We're not running a charity site for people looking to just get over, we're running a place where everyone helps everyone else. All for one and one for all, as you could say.'[line break]";
 					say "Anyway,' The red head smiles and then giggles in her normal girlish way. The heavy air around the room from the previous conversation is now dispelled in the face of a more uplifting feeling. 'Thank you for helping me out just now. I'm going to be working more on my experiments so please, continue to help me out as much as you can. It will go a long way towards making this so much better for everyone involved.' Omio winks and you breathe out a sigh of disbelief at the golden eyed woman's sudden personality flip. [line break]";
-					delete medallion from invent of player;
+					delete medallion;
 					add "food" to invent of player;
 					add "water bottle" to invent of player;
 					add "peach" to invent of player;
@@ -333,7 +332,7 @@ Instead of resolving Pursuit of Science:
 					say "With the collapse of the former government and the rise of such a concepts like individual responsibility, something this country has been rather weak at fostering in the past, we have to be ready for both the mental collapse of minds not ready to cope with such burdens and those who are not emotionally stable enough to stand up and care for themselves.'[line break]";
 					say "'For now though,' Omio says catching you just as you are about to go deep into thoughts of[if cocks of player > 0]nice juicy cunts dribbling with sweet honey[otherwise]hard and thick cocks leaking pre cum like slow flowing rivers[end if]. A tea kettle smacks you across the head all of a sudden. 'Don't worry about it. Just know that there is a going to be a safe enough haven for you to go, if you feel that the world is becoming too much, provided that you are willing to do you share enough to help out the whole.' Omio glares at you as the tea kettle rolls on the floor back into the kitchen. 'We're not running a charity site for people just looking to get over on someone else. We're running a place where everyone helps everyone else. All for one and one for all, as you could say.'[line break]";
 					say "Anyway,' The red head smiles and then giggles in her normal girlish way signifying that the conversation's focus has now changed. 'Thank you for helping me out just now. I'm going to be working more on my experiments so please, continue to help me out as much as you can. It will go a long way towards making this so much better for everyone involved.' Omio winks and you breathe out a sigh of disbelief at the golden eyed woman's sudden personality flip. [line break]";
-					delete medallion from invent of player;
+					delete medallion;
 					add "food" to invent of player;
 					add "water bottle" to invent of player;
 					add "peach" to invent of player;
@@ -342,7 +341,7 @@ Instead of resolving Pursuit of Science:
 					now omq is 9;				
 			otherwise:
 				say "'Alright.' Omio giggles good-naturedly. It seems the red head is not bothered by your lack of interest in her people in the slightest. Maybe that's proof she trusts you? Or maybe not? 'Any who, thanks for all of your hard word. Please, accept these as a gift for all of your trouble, my sweet little bandit in disguise.' The thought of your past capper makes you roll your eyes to the ceiling.[line break]";
-				delete medallion from invent of player;
+				delete medallion;
 				add "food" to invent of player;
 				add "water bottle" to invent of player;
 				add "peach" to invent of player;
@@ -351,19 +350,17 @@ Instead of resolving Pursuit of Science:
 				now omq is 9;				
 		otherwise:
 			say "'Please do obtain that medallion for me. It's really integral to my research.' Omio pleads[one of]while trying away at her computer[or]as she lounges on her sofa[or]as she sips at her warm cup of tea [or]while walking back and forth in a circle and humming something unintelligent to herself[at random]. 'If you've forgotten the artifact I need you to [']take possession of['] is at the museum. Oh don't breathe a word of this to Valeria. She's still mad about the time I tried to [']commandeer['] that painting of the sanctified Chinese pantheon that was on display in the museum two years back.'[line break]";		
-	
 	if omq is 9:
 		say "You find Omio sitting at her desk and going over something on her computer. Nothing unusual there, however, when the red head jumps up out of the blue and then dashes off to her room you find yourself somewhat perplexed by the strangeness of the golden eyed woman's antics. Blinking and then looking as the red head returns with something bundled into her hands you have little time to think over what is happening before Omio is stuffing the thing into your arms.[line break]";
 		say "'Get this to the warehouse district and into the arms of one captain Red-eyes, please and thank you.' Omio says without a hint of explanation. Trying to ask the red head what exactly is going on Omio rapidly shakes her red head side to side as her lips tighten into a scowling frown all of a sudden. 'Please, just get this to Red-eyes. You can't miss him, he's a giant blue hydra with two heads who'll, knowing him, will be barking orders along the south dock area of the warehouse district at one of his workers.'[line break]";
 		say "Omio says little else after this as she makes her way back to her computer desk without another word spoken.";
 		add "undisclosed case" to invent of player;
 		increase score by 2;
-	if omq is 9 and if "undisclosed case" is in invent of player:
+	if omq is 9 and undisclosed case is owned:
 		say "'I won't say much, but [italic type]please[roman type], get this package to captain Red-eyes, ASAP.' Omio seems bothered by something. When you try to ask the red head what's the matter Omio just shakes her head while buttoning her lips almost impossibly tight. What the heck...?[line break]";
-		
 	if omq is 10:
 		say "Currently, Omio is busing herself with stirring at the cauldron she keeps forever bubbling and brewing with unknown mixtures within her fireplace. At seeing you, or rather hearing you step up next to her, Omio jumps a bit before settling down. 'You scared me there for a second.' The red head admits, though she sounds somewhat more startled than she tries to let on. 'I don't have much for you for today, but, if you have a flotsam club that you wouldn't mind parting with then I think I can make you a little gift.[line break]"; 
-		if "flotsam club" is listed within invent of player;
+		if flotsam club is owned:
 			say "Remembering that you have on hand you wonder if you should let Omio have it. Knowing the red head, anything might happen if she gets her claws onto the piece of wood. But then again, has she ever let you down before? You can live without a piece of driftwood, right?(Y=Yes, N=No)[line break]";
 			if player consents:
 				say "Handing Omio over your flotsam club you watch as the red head takes the piece of wood, looks it over twice with relaxed golden eyes and then dumps the club into her cauldron. Trying to keep your cool at seeing your weapon tossed into the hot pot like a vegetable you find yourself staring in awe as the piece of driftwood simply melts into the brewing yellowish orange mixture before disappearing completely.[line break]";
@@ -382,7 +379,7 @@ Instead of resolving Pursuit of Science:
 					add "water bottle " to invent of player;
 					add "food" to invent of player;
 					increase score by 50;
-					now Pursuit for Science is resolved;
+					now Pursuit of Science is resolved;
 			otherwise:
 				say "Telling the red head that you'll be okay, you decide not to go ahead with her plan. 'Ok, well anyway I wanted to thank you for all you've done for me. It has really been a big help. If you ever need anything then please stop by, I'll be more than happy to help you out with whatever you may need.' Omio says, though for some reason you get the funniest notion that you may never see the other woman after the events within the city get under some kind of control. But that's not possible...is it?[line break]";
 				say "Omio's posture reveals nothing of her thoughts as she continues stirring her cauldron. It's times like these that you wish you knew the red head better, but then again, you've got some time to learn a bit more about her, right? Maybe sharing some tea with her whenever you aren't busy elsewhere would be fitting to bring the both of you closer together?[line break]";
@@ -390,7 +387,7 @@ Instead of resolving Pursuit of Science:
 				add "water bottle" to invent of player;
 				add "food" to invent of player;
 				increase score by 50;
-				now Pursuit for Science is resolved;
+				now Pursuit of Science is resolved;
 		otherwise:
 			say "'Oh, you don't have one?' You shake your head negatively at Omio. 'Well I think you can find one somewhere on the beach. Maybe if you scout around for a piece of driftwood you may turn up something.' Omio says good-naturedly while continuing to stare into her cauldron. Not knowing if you have time to go to the beach with the city under such duress you don't make any promises to the red head as you simply continue watching her work.";
 
@@ -399,17 +396,17 @@ Instead of resolving Pursuit of Science:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Leopard shirt and pants"	"A leopard fur tailored shirt and pair of pants that Omio, a slightly whacky researcher made for you. The material is very flexible and adjusts well onto your body."	5	Leopard shirt and pants
+"leopard suit"	"A leopard fur tailored shirt and pair of pants that Omio, a slightly whacky researcher made for you. The material is very flexible and adjusts well onto your body."	5	leopard suit
 
-Leopard shirt and pants is equipment. 
-It is not temporary. 
-The AC of combat helmet is 6. 
-Increase dexterity of player by 1. Increase strength of player by 1. Increased charisma of player by 2.
-The placement of Leopard shirt and pants is "body". 
-The descmod of Leopard shirt and pants is "A shirt and pair of pants made from both leopard fur and wool covers them.".
-The slot of Leopard shirt and pants is "body".
+leopard suit is equipment. 
+leopard suit is not temporary. 
+The AC of leopard suit is 6. 
+[Increase dexterity of player by 1. Increase strength of player by 1. Increased charisma of player by 2.]
+The placement of leopard suit is "body". 
+The descmod of leopard suit is "A shirt and pair of pants made from both leopard fur and wool covers them.".
+The slot of leopard suit is "body".
 
-Instead of smelling Leopard shirt and pants:
+Instead of smelling leopard suit:
 	say "A strong scent of Leopard lingers over both the shirt and pants. A feeling of ferocity surges throughout your spine from the warm and comforting scent.";
 
 
@@ -424,9 +421,9 @@ instead of sniffing the Stun bomb:
 	say "The smell of ozone lingers around the bomb. Placing your nose too close causes your face to tingle slightly.";
 
 this is the Stun bomb rule:
-	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
+[	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
 	choose row monster from the table of random critters;
-let dam be ( a number between 15 and 25 plus ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100;
+	now dam is ( a random number from 15 to 25 plus ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100; ]
 	rule succeeds;
 
 

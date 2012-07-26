@@ -11,7 +11,7 @@ use MAX_STATIC_DATA of 950000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 80000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 40000.
-use ALLOC_CHUNK_SIZE of 85000.
+use ALLOC_CHUNK_SIZE of 95000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 250.
 Use maximum indexed text length of at least 5000.
@@ -1238,6 +1238,15 @@ carry out Inventorying:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vint[roman type][end link] for short.)";
 
 understand the command "vint" and "vial inventory" and "vial inv" as something new.
+
+Definition: A grab object (called D) is fiveowned:
+	let count be 0;
+	if there is a name corresponding to a object of d in the table of game objects:
+		if the name corresponding to a object of d in the table of game objects is listed in the invent of the player:
+			repeat with  y running through invent of player:
+				if y is the name corresponding to a object of d in the table of game objects, increase count by 1;
+			if count > 4, yes;
+	no;
 
 VialInventorying is an action applying to nothing.
 
@@ -4470,6 +4479,9 @@ Include Down Under Pub by Stripes.
 Include Kitsune Hide Away by Kaleem mcintyre.
 
 [Quests & Events]
+Include Researcher Studio by Kaleem Mcintyre.
+Include Warehouse District by Kaleem Mcintyre.
+Include Pusuit of Science by Kaleem Mcintyre.
 Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
