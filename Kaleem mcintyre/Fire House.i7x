@@ -2,7 +2,8 @@ Fire House by Kaleem mcintyre begins here.
 
 "Adds a new area to Flexible Survival with a NPC…"
 
-Section 1 – Firehouse Station.
+Section 1 – Firehouse Station
+
 Firehouse Station is a room. It is fasttravel. 
 
 The description of Firehouse Station is "At the far end of the downtown red light district area stands a red brick firehouse rising up almost virtuously in protest of the depravity that has currently taken hold of the once prominent metropolis. Immaculate as the day she had been first opened the numbers 86 gleam almost smugly across the front side of the building. From the way the garage doors are void of the usual sticky messy of cum, milk and other fluids it would seem as though someone has been taking especially good care of the place. Wondering if that said someone is still inside, and hoping that if they are they have kept some of their humanity intact, you walk over to the single garage door and then bang on the front to try and get somebody's attention. A minute or two later the large metal door rolls up allowing you entrance. Entering into the cool building you find that the firehouse is exactly as you would have imagined it to be. Dominating the main area of the firehouse there sit two bright red fire trucks waiting to be used by their servicemen with a large golden pole gleaming off to the left side the building leading up to an open hole in the ceiling. A small flight of stairs positioned are in position right next to said pole. A darkened office sits off to the side by one of the unused fire trucks while a bunch of chairs have been set up next to the garage doors surrounding a large table covered with playing cards. Over by the right side of the building a number of firefighter suits are hanging off of coat hooks next to several metal lockers. The entire area is kept lit by some of those Japanese lanterns that you sometime see during summer festivals at the State Fair, so that would explain why everything is so bright despite the power of the city not working properly. Because of the light it's easy to see a large number of rolled up hoses being kept in place along an empty expanse of wall while right above the coiled tubes there lay several ladders have been stacked together on a high end metal shelf. All in all the place looks rather normal, if somewhat creepy with the lack of any people around, but if that's the case...then who opened the front garage door?";
@@ -17,10 +18,11 @@ Instead of sniffing Firehouse Station:
 Up of Firehouse Station is Sleeping Quarters.
 
 
-
 Section 2 – LowerFirePole
+
 Instead of sniffing:
 	say "The fire pole smells like sweat, nervousness, excitement and above all else hardworking diligence.";
+
 Firepolescaling is an action applying to nothing. 
 Understand "go up" as Firepolescaling.
 Understand "climb up" as Firepolescaling.
@@ -32,16 +34,16 @@ Check Firepolescaling:
 
 carry out Firepolescaling:
 	say "Figuring that you could do with a light workout you decide to climb the fire pole.";
-		let bonus be (( the strength of the player minus 10 ) divided by 2);
-		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
-		increase diceroll by bonus;
-		if diceroll is greater than 14:
-			say "Managing to climb the golden pole you make your way up to the sleeping area of the fire house.";
-			Move player to Sleeping Quarters;
-			increase score by 2;
-		otherwise:
-			say "Not being able to grip the slick pole to pull yourself up correctly you end up sliding back down in dismay.";
+	let bonus be (( the strength of the player minus 10 ) divided by 2);
+	let diceroll be a random number from 1 to 20;
+	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+	increase diceroll by bonus;
+	if diceroll is greater than 14:
+		say "Managing to climb the golden pole you make your way up to the sleeping area of the fire house.";
+		Move player to Sleeping Quarters;
+		increase score by 2;
+	otherwise:
+		say "Not being able to grip the slick pole to pull yourself up correctly you end up sliding back down in dismay.";
 
 
 
@@ -51,18 +53,8 @@ Down of Sleeping Quarters is Firehouse Station.
 
 Sleeping Quarters is a room. 
 
-If Kenazquest is 0:
-The description of Sleeping Quarters is "The upper area of the firehouse has several beds lined up together in neat rows extending from the doorway to the far wall where a large entertainment system has been set up. From the looks of things it would seem as though most of the beds have been unused as of late, save for one in particular. Though that's not to say that the sleeping area is in any sort of disarray as that the floor looks to have recently been swept and mopped, the footlockers at the end of the beds have been waxed, and the only set of chairs and table in here look to have been dusted and buffed to keep the wood pristine looking. Over by the side of the entertainment system the station's fire pole extends up from a hole in the floor all the way to the white wall ceiling. Just looking at the golden pipe you feel as though you should jump onto the pole and slide down to the main room of the firehouse.";
+The description of Sleeping Quarters is "[if kenazquest is less than 4]The upper area of the firehouse has several beds lined up together in neat rows extending from the doorway to the far wall where a large entertainment system has been set up. From the looks of things it would seem as though most of the beds have been unused as of late, save for one in particular. Though that's not to say that the sleeping area is in any sort of disarray as that the floor looks to have recently been swept and mopped, the footlockers at the end of the beds have been waxed, and the only set of chairs and table in here look to have been dusted and buffed to keep the wood pristine looking. Over by the side of the entertainment system the station's fire pole extends up from a hole in the floor all the way to the white wall ceiling. Just looking at the golden pipe you feel as though you should jump onto the pole and slide down to the main room of the firehouse.[otherwise if kenazquest is 8]Unlike before, with how the sleeping area had once been in disarray, now the sleeping area looks like it did from before when Kenaz was here by himself. The beds are neat, the floor has been swept and mopped, there are no toys – of any sort – anywhere on the floor and the smell of musky Dal boy is less oppressive than it once had been. Kenaz must have seriously put a foot up some of the other firefighter's tails to get them straightened out enough to clean up in here. The mixed smell of herm Dalmatian and Dal boy cum pervades the area giving the sleeping den a unique musky scent that is not too harsh on the senses. So Kenaz does take some of the others up here to fuck them it would seem.[otherwise]Unlike before when the sleeping area once looked somewhat kept under well maintenance the area now looks like a combination between a puppy's play pen and a bachelor pad. Most of the beds are unkempt and somewhat musky with the scent of male Dalmatians covering them, there are toys – mostly rubber balls and squeak toys and a couple of dildos, butt plugs and anal beads – littered around the floor, and the floor seems to be almost pervasively sticky with...something or the other. You halfway hope it's just spilled soda. It looks as though Kenaz, and maybe one or two others, have been trying to keep the place clean, but it seems to have become a lost effort as the transformed firefighters seem to all but be focused on rutting and playing around to bother keeping the place neat. However, it's easy to see that, despite the disarray, the room has been kept free from any firefighting equipment lying around where it doesn't belong. Looks like the spirit of the firehouse still burns bright, even through this disheveled mess.[end if]";
 UpperFirepole is in Sleeping Quarters.
-
-otherwise if Kenazquest is > 3:
-	The description of Sleeping Quarters is "Unlike before when the sleeping area once looked somewhat kept under well maintenance the area now looks like a combination between a puppy's play pen and a bachelor pad. Most of the beds are unkempt and somewhat musky with the scent of male Dalmatians covering them, there are toys – mostly rubber balls and squeak toys and a couple of dildos, butt plugs and anal beads – littered around the floor, and the floor seems to be almost pervasively sticky with...something or the other. You halfway hope it's just spilled soda. It looks as though Kenaz, and maybe one or two others, have been trying to keep the place clean, but it seems to have become a lost effort as the transformed firefighters seem to all but be focused on rutting and playing around to bother keeping the place neat. However, it's easy to see that, despite the disarray, the room has been kept free from any firefighting equipment lying around where it doesn't belong. Looks like the spirit of the firehouse still burns bright, even through this disheveled mess.";
-UpperFirepole is in Sleeping Quarters.
-
-otherwise if Kenazquest is 8:
-	The description of Sleeping Quarters is "Unlike before, with how the sleeping area had once been in disarray, now the sleeping area looks like it did from before when Kenaz was here by himself. The beds are neat, the floor has been swept and mopped, there are no toys – of any sort – anywhere on the floor and the smell of musky Dal boy is less oppressive than it once had been. Kenaz must have seriously put a foot up some of the other firefighter's tails to get them straightened out enough to clean up in here. The mixed smell of herm Dalmatian and Dal boy cum pervades the area giving the sleeping den a unique musky scent that is not too harsh on the senses. So Kenaz does take some of the others up here to fuck them it would seem.";
-UpperFirepole is in Sleeping Quarters.
-
 
 Instead of sniffing Sleeping Quarters:
 	If Kenazquest < 4:
@@ -94,14 +86,16 @@ carry out Firepolesliding:
 
 
 Section 4 – Kenaz 
+
 Kenaztalk is a number that varies.
 Kenazaroused is a number that varies.
 Kenazquest is a number that varies.
 LastKenazfrisky is a number that varies. LastKenazfrisky is usually 550.
 Kenazfrisky is a number that varies. Kenazfrisky is usually 0.
+smf is a number that varies.
 
 Kenaz is a man.
-The description of Kenaz is "[Kenazcurrentform]";
+The description of Kenaz is "[Kenazcurentform]";
 The conversation of Kenaz is { "Be on alert!" }.
 
 instead of sniffing Kenaz:	
@@ -113,7 +107,7 @@ instead of sniffing Kenaz:
 		say "The firefighter smells somewhat like Dalmatian now.";
 	otherwise if Kenazquest is 4:
 		say "The half human/half Dalmatian smells of steadily rising lusts.";
-	otherwise if Kenazquest is 5 or Kenazquest 6 or Kenazquest 7:
+	otherwise if Kenazquest is 5 or Kenazquest is 6 or Kenazquest is 7:
 		say "The pervasive scent of horny Dalmatian covers the former human firefighter almost completely. His humanity is still present however.";
 	otherwise if Kenazquest is 8:
 		say "The former vigilant firefighter smells virile and dominant, but at the same time shi also has the musky tang of a well used Dalmatian herm that's been used hard and put away wet.";
@@ -129,7 +123,7 @@ To say Kenazcurentform:[his description at each stage, comments on what each sta
 		say "Having been attacked by the Shemale Smooth Collie from before, and subsequently taken forcefully by the twelve foot tall canine while out on the street, Kenaz now supports a new pussy to go along with his former masculine body. However, instead of this making the new herm into a slutty submissive bitch Kenaz seems to have gained a bit more ire about himself as he clearly has taken over dominating all of the other Dal boys inside of the firehouse. It's easy to tell that the former passive male is now a force to be reckoned with as whenever the other passes by the tails of the rest of the firefighters all go to curling downwards. Not to say that this is a bad thing though, because the fire station looks as though it has never been cleaner. The floors both smell and look newly mopped, the fire trucks are waxed to perfection and most of the other Dal's are now wearing jeans to cover their lower ends. Maybe this transformation has been a good thing for Kenaz? Yet at the same time it's easy to see that Kenaz has been ridden hard by the members of his pack as the dominant Dal herm walks with a slight limp to his new gait. The pants the other is wearing hides anything from dripping onto the recently mopped floor though.";
 
 
-instead of conversing with Kenaz:
+instead of conversing the Kenaz:
 	if Kenaztalk is 0:
 		say "Looking at you with a hard, but not exactly unfriendly stare the young half-Asian firefight gazes into your face as though in search for something[if humanity of player > 25]. Nodding when he finds that you have your humanity intact, or at least enough of it to feel comfortable with, the auburn haired man reaches out to offer you one of his tanned hands in greeting[otherwise]. Somewhat unsure of the lustful gleam in your eyes the firefighter gives you a nervous nod while bracing his legs in preparation to dart away from you if he has to[end if]. 'Pleasure to meet you stranger, name's Kenaz and I'm the last firefighter her at station 86. Who are you?'[line break]"; 
 		say "You give Kenaz a strong handshake and then tell him a little about yourself. This makes the firefighter smile despite the uncertainty you can sense he's feeling as he surveys your [bodyname of player] form and [facename of player] eyes blinking back at him. 'It's a good thing that you knocked because if you hadn't I'd have never let you in here.' Kenaz chuckles some, but you get the strangest suspicion that there is something more the other man wants to add to that statement.[line break]";
@@ -138,10 +132,10 @@ instead of conversing with Kenaz:
 			say "Deciding not to let the offer of free food go by you tell Kenaz that you'd be happy to eat right now. 'Ok. You can go have a seat while I put the food on the makeshift grill I've got setup.' Doing as asked you head over to the only empty table in the room and then look around the fire station while waiting for Kenaz to return. From what you can see Kenaz has kept the place up to code as far as cleanliness goes, however, over by the other side of the garage you notice that the firefighter has blockade the front door of the building off with various pieces of paraphernalia around the station. Your host comes back minutes later with something hot and steaming and you can feel your stomach rumbling from hunger. 'It's not much but I have some soup that we can share. I hope you don't mind chicken noodle.'[line break]";
 			say "Telling the other man that [']food is food['] during these trying times you get a tiny smile out of Kenaz as he sets down the two bowls onto the table. When Kenaz places a spoon in front of you, you take only a second to thank the man before grabbing the utensil and then digging into your soup. 'Whoa, whoa, slow down there soldier, I have more if you want some extra to eat.' You look up to tell the firefighter that it's been a while since you've had something so good before lowering your eyes back to the yellow broth as you finish off your meal.[line break]";
 			say "Kenaz laughs at this and then takes his own spoon to start in on his own meal. Ten minutes later, after a second helping, both of you Kenaz sit back and then begin sharing exploits. Laughing at some of the things the other man has to tell you about his life, both before this current crisis as well as during, you come to find yourself liking Kenaz more and more as the firefighter speaks to you in soft, even tones while letting his green eyes twinkle at you almost teasingly. 'So in the end we're both basically been dealt a bad hand by lady luck'. Kenaz says as he looks to you somewhat resignedly.[line break]";
-				if humanity of player > 45:
-					say "Letting the other man know that everything will be alright because you've both survived, thus far, with your minds intact you watch as Kenaz smiles with satisfaction over at you.[line break]";
-				otherwise:
-					say "Telling Kenaz that submitting to the happenings outside isn't such a bad thing you watch as the firefighter grows uncomfortably hot under the collar as he blushes nervously over at you.[line break]";
+			if humanity of player > 45:
+				say "Letting the other man know that everything will be alright because you've both survived, thus far, with your minds intact you watch as Kenaz smiles with satisfaction over at you.[line break]";
+			otherwise:
+				say "Telling Kenaz that submitting to the happenings outside isn't such a bad thing you watch as the firefighter grows uncomfortably hot under the collar as he blushes nervously over at you.[line break]";
 			say "Kenaz sigh wistfully all of a sudden. 'I wish my team were here right now, not that it would make things any better with what's going on outside, but still...' Kenaz rushes a hand through his through his shaggy auburn mop top and then starts to play with the ponytail at the back of his head. 'This big place is kinda creepy without the usual banter of everyone either talking, yelling, or horsing around, ya know? Well technically I guess you wouldn't since you're not a...never mind.'[line break]";
 			say "Kenaz tries not to show it but it's easy to see that the other man is in deep discontent without his teammates around. Idly you wonder if any of them could have survived the epidemic with their minds intact, and, if at all possible, if any of them were still within the city. On the fly you ask Kenaz about his coworkers. 'Well, there's not much to tell. We were all taking a small vacation before our [italic type]reassignment[roman type] to other departments at the behest of the [italic type]oh so intelligent[roman type] mayor and his fatass cohort, who just so happens to be our captain.'[line break]"; 
 			say "A nearly inaudible rumble of a growl pours out of Kenaz's throat making you smile somewhat nervously over at the green eyed man as you listen to the deep sounding grumble of displeasure. It's only when you cough in your own throat that Kenaz quickly picks up on what he's doing. 'S-sorry, that's been happening a lot as of late. I think the virus or whatever is getting to me, but thankfully it's not that bad. Not unless I get upset or...' Kenaz shrugs somewhat helplessly. 'Anyway, Birch and I were the last guys here who stuck around to see about the place before the station got closed down. But, as cliché as it sounds, Birch did stop showing up a few days before the crisis hit the city. [line break]"; 
@@ -165,7 +159,7 @@ instead of conversing with Kenaz:
 				fight;
 				fight;
 				fight;
-				say "After dealing with the small group of mutates you shudder from the exertion of the hard-won fight and then sigh before knocking on the somewhat battered garage doors of the firehouse. A second later the doors slowly open to allow you entrance. At seeing your worn and slightly[if player lost is 1]cum soaked[otherwise]sweat soaked[end if][bodyname of player] body Kenaz hurries off to get you a towel. A second or two later the half Asian firefighter is by your side handing you the towel and a bottle of water.[line break]";
+				say "After dealing with the small group of mutates you shudder from the exertion of the hard-won fight and then sigh before knocking on the somewhat battered garage doors of the firehouse. A second later the doors slowly open to allow you entrance. At seeing your worn and slightly[if lost is 1]cum soaked[otherwise]sweat soaked[end if][bodyname of player] body Kenaz hurries off to get you a towel. A second or two later the half Asian firefighter is by your side handing you the towel and a bottle of water.[line break]";
 				say "'Man, it's times like these when I wish the other's were here.' You pop open the water bottle and down your drink before asking Kenaz what he means. 'Before this [']epidemic['] or whatever came about most of the other guys had all gone off to take a vacation. The only ones left around here was me and Birch, but a little while before thing started to get crazy he went out and didn't come back. I went to his girlfriend's place to look for him, but the landlady at the apartment complex said that she hadn't seen either of them in days. I hope he got out before anything happened...otherwise...' Kenaz goes quiet at that. Seeing the other man's distress you ask Kenaz about the others, but the firefighter's only response is a sigh and a slow shake of his head.[line break]";
 				say "'I'm sorry, I...I just don't want to even think about, much less speak on it. As far as I know, everyone was supposed to be heading out of town...or whatever. That's all I know.' Asking what happened to the captain over the firehouse you raise an eyebrow when Kenaz snorts all of a sudden. 'That fatass is the one who gave everyone the paid time off! Of course, that was right after he told us that this station was going to be shut down in a few months and everyone would be relocated elsewhere. Something about a decision the mayor made or some such nonsense.'[line break]";
 				say "A growl from Kenaz has you stepping back from the other as he sounds all too canine right about now. 'Oops, sorry about that. I think whatever's in the air here has gotten to me.' Kenaz laughs, but it sounds way too forced to be real. 'Anyway, I don't have much to tell you. Just that everyone's gone and I'm the only one left around.' At that Kenaz shuts down all conversation...for the moment anyway.[line break]";
@@ -196,15 +190,15 @@ instead of conversing with Kenaz:
 				increase score by 10;
 
 
-if Kenaztalk is 1: [Normal short messages the npc will say each time you talk to them]
-	say "[One of]'Oh hey! How've you been?'[or]'Are you alright? You look a little tired.'[or]'Kenaz simply waves at you as he goes about sweeping the floor.[or]'Could you...maybe stand over there for a second?' Kenaz asks while pausing his mop right at your feet.[or]'I hope the other guys are safe somewhere.' Kenaz says wistfully.[or]Where oh where has my little...what the hell am I saying? Kenaz blinks as he stops himself.[or]'Maybe I should go out and try to see if there is somebody I can help?'[or]You may not know it but I signed up for firefighter duty because I felt that it was destiny for me.'[or]'Is it strange for a half-Asian to have a name that means torch in the language of the Anglo-Saxons?'[or]'To this day I'm not sure why my sire named me Kenaz. He did say it was because of the burning spirit he saw in my eyes as a babe, though I think he was drunk at the time when I asked him.' Kenaz patiently shakes his head after saying this.[or]'My mother is a enduring woman by birth. Both demure and refined as a rose in may. I really hate that she and I can never see eye to eye on much though.' Kenaz chuckles sadly.[at random]";
+[if Kenaztalk is 1: [Normal short messages the npc will say each time you talk to them]
+	say "[One of]'Oh hey! How've you been?'[or]'Are you alright? You look a little tired.'[or]'Kenaz simply waves at you as he goes about sweeping the floor.[or]'Could you...maybe stand over there for a second?' Kenaz asks while pausing his mop right at your feet.[or]'I hope the other guys are safe somewhere.' Kenaz says wistfully.[or]Where oh where has my little...what the hell am I saying? Kenaz blinks as he stops himself.[or]'Maybe I should go out and try to see if there is somebody I can help?'[or]You may not know it but I signed up for firefighter duty because I felt that it was destiny for me.'[or]'Is it strange for a half-Asian to have a name that means torch in the language of the Anglo-Saxons?'[or]'To this day I'm not sure why my sire named me Kenaz. He did say it was because of the burning spirit he saw in my eyes as a babe, though I think he was drunk at the time when I asked him.' Kenaz patiently shakes his head after saying this.[or]'My mother is a enduring woman by birth. Both demure and refined as a rose in may. I really hate that she and I can never see eye to eye on much though.' Kenaz chuckles sadly.[at random]";]
 
-Kenazfirsky is a number that varies.
+Kenazfrisky is a number that varies.
 
 Instead of fucking Kenaz:
-	if Kenazquest is 4 and if last Kenazfrisky – turns < 6:
+	if Kenazquest is 4 and Kenazfrisky – turns < 6:
 		say "'S-sorry friend.' Kenaz pants while wagging his tail both tiredly as well as happily up at you. 'I think this Dal boy is going to need a rest before he's got anything left to shoot through his fire hose.' The playful firefighter gives you a lick across the cheek before going back to what he was doing.";
-	otherwise if Kenazquest is 8 and if last Kenazfrisky – turns < 6:
+	otherwise if Kenazquest is 8 and Kenazfrisky – turns < 6:
 		say "'I know you might want to take a ride right about now, or maybe have a nice foot-long Dalmatian hot dog underneath your tail, but you're going to have to wait.' Kenaz chuckles before patting you on the ass and then sending you off with a dismissive wave of his hand.";
 
 
