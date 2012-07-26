@@ -8,7 +8,7 @@ Resevquest is a number that varies
 
 Reservoir Entrance is a room. It is fasttravel.
 
-The description of Reservoir Entrance is ''[reservoirdesc]''.
+The description of Reservoir Entrance is "[reservoirdesc]".
 
 To say reservoirdesc:
 	say "At the entrance to the reservoir you find yourself disgusted at the sight before you. Where once there had been a clean and somewhat pristine work facility distributing water throughout the city there now stands a festering nest of cum, urine, musk and other associated fluids lining almost every corner of the building. Machines that had once been kept in top condition to preserve the city's water supply now stand in slight disrepair and dysfunction as globs of… unknown 'substance' cover their surfaces, not to mention sides, panels and up onto the ceiling above.";
@@ -17,13 +17,13 @@ To say reservoirdesc:
 instead of sniffing Reservoir Entrance: 
 say "The reservoir reeks of the scents of too many odors to discern one by one who or what left them behind. However, the pervasive smell of musk and sexual fluids is not hard to miss in the least.";
 
-Reservoir entryway is a door.  "The reservoir pathways are lined with all manner of gunk and sticky goop, and yet the pathway continues north. Danger lurks further ahead as you feel yourself entering the proverbial belly of the beast.". The level of Reservoir is 18;
+Reservoir entryway is a door. It is north of Reservoir tunnel. It is dangerous.  "The reservoir pathways are lined with all manner of gunk and sticky goop, and yet the pathway continues north. Danger lurks further ahead as you feel yourself entering the proverbial belly of the beast.".
 
 North of the Reservoir entrance is Reservoir pathway.
 North of the Reservoir pathway is Reservoir tunnel.
 East of the Reservoir tunnel is Reservoir Main station.
 
-The marea of Reservoir Main station is "Reservoir".
+The marea of Reservoir entryway is "Reservoir".
 
 Section 2 – Reservoir Events
 
@@ -51,7 +51,7 @@ Instead of resolving a Technical Assistance:
 		let diceroll be a random number from 1 to 20;
 		say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll if greater than 10:
+		if diceroll is greater than 10:
 			say "Ten minutes of searching leads you to an instruction manual, somehow kept perfectly clean and intact despite the creature that dominated the room having taken over and defiled just about everything in the place, and eagerly you find yourself flipping through the instruction book to read its contents. A few minutes later -- thankfully without further incidence -- and you feel that you would be successful in working with the machines in the Reservoir to clean up the water supply. Now you just have to deal with some other…minor…nuisances.";
 			say "[resevfight1]";
 			say "[resevfight1]";
@@ -74,7 +74,7 @@ to say resevfight1:
 		challenge "Dominator";
 
 
-Slight Sidetracked is a situation.
+Slightly Sidetracked is a situation.
 The sarea of Slightly Sidetracked is "Reservoir";
 
 Instead of resolving Slightly Sidetracked:
@@ -93,19 +93,19 @@ Instead of resolving Slightly Sidetracked:
 
 
 To say resevfight2:
-	let T be a random number between 1 and 4:
+	let T be a random number between 1 and 4;
 	if T is 1:
 		challenge "Goblin";
 	if T is 2:
 		challenge "Goo Girl";
 	if T is 3:
 		challenge "Demon Brute";
-	if T is 4
+	if T is 4:
 		challenge "Dominator";
 
 
 Flight of stairs is a situation.
-The saera of Flight of stairs is "Reservoir".
+The sarea of Flight of stairs is "Reservoir".
 
 Instead of resolving a Flight of stairs:
 	If resevquest is 3:
@@ -116,10 +116,11 @@ Instead of resolving a Flight of stairs:
 		now Flight of stairs is resolved;
 
 
-Three doors is a situation;
-The sarea Three doors is "Reservoir";
+ThreeDoors is a situation;
 
-Instead of Resolving Three doors:
+The sarea of ThreeDoors is "Reservoir";
+
+Instead of Resolving ThreeDoors:
 	If resevquest is 4:
 		say "Before you stands three doors, each of them lined together perfectly in a row. Suspicion wells within you as all three are covered in slimy mucous, yet you are sure that one of the doors must be the main terminal room for the Reservoir. The problem is if 'one' of them is the main room…then just what's behind the other two? A small bud of fear wells inside of your belly as you try not to imagine just what could be waiting in store for you behind the other two false doorways. The terror at what might be waiting on the other side of the correct entryway already making you nervous enough as is."; 
 		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before you find yourself coming up blank as to which path to take. You can only guess that the workers here must have been trained for this on day one and didn't need a constant reminder. Yet sadly enough you really can't go back and ask one of the creatures here for help, well not and expect to get a useful answer anyway. Dilemma. Dilemma. What to do?";
@@ -135,12 +136,12 @@ to say Leftmost door:
 		let diceroll be a random number from 1 to 20;
 		say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
-		if diceroll if greater than 10:
+		if diceroll is greater than 10:
 			say "A firm push and then a resound crack and you're in. Stumbling into the room and then looking around you find that there's very little of interest to you as you see look around at the cum stained and ruined break room that had once been a resting place for tired and overworked employees within the facility. All across the floor you can see that cum has stained just about everything from one side of the room to another, though thankfully not the ceiling. You mildly wonder then, if others had been in here, why, or rather how the door got jammed. Your answer comes when you turn to see dried cum crusted onto the sides of wood barrier."; 
 			say "Ignoring this you try to look around to find something useful to your quest. Nose quivering at the smells coming from in here you find your eyes widening slightly as you spot an intact refrigerator that seems to have missed the carnage that had dominated the 20' x 15' foot room. Going over and listening to the sounds of the machine still working, a surprise you really hadn't been expecting – what luck you're having today – you quickly open the fridge door and peek your head in to have a look at the contents. Most of the contents have been cleaned out, no small shocker there, but upon looking onto the side shelves you find both food, chips, and water waiting for you. Lady luck really does smile on the foolish sometimes…or was that the brave?";
-			add bottle of water to invent of player;
-			add bag of chips to invent of player;
-			add food to invent of player;
+			add "bottle of water" to invent of player;
+			add "bag of chips" to invent of player;
+			add "food" to invent of player;
 		otherwise:
 			say "Bumping into the door with your miniscule effort only serves in bruising your shoulder. You growl into the depths of your throat as you suddenly curse your lack of strength. You can do better than this, right?";
 			follow the turnpass rule;
@@ -154,7 +155,7 @@ to say Rightmost door:
 	let diceroll be a random number from 1 to 20;
 	say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
-	if diceroll if greater than 8:
+	if diceroll is greater than 8:
 		say "You manage to knock the unknown person away from you with an elbow and then duck into a defensive crouch as you wonder what to expect next. What you come to find is that your 'captor' is actually a German Shepherd that seems to be looking at you in confusion. All the standard markings apply to this creature and you guess that it must have been someone's pet before the canine changed into the bipedal creature it is now. Growling at you in aggression as it sees that you are not willing to cooperate the German Shepherd is soon stalking over to you. The intent to dominant you shines clearly in the mutants dark eyes."; 
 		challenge "German Shepherd";
 		say "Having driven the creature off you to begin looking around the room. Nothing of interest pops out at you, or anything else for that matter. The room actually looks as though it were some manner of storage closet that happened to have modified into a makeshift doggy room for 'Rover' back there. You see a standard doggy bed set in the corner, a dish with some drinking water, though no food, a TV on a stand, some chairs and a desk dominating the center of the room. Mops, buckets, and brooms lie around on the floor and you can't help but wonder what the janitor, or other figure that dressed up the room as such, was like before things all went to hell. Giving a shrug you decide that it doesn't matter. Time won't come back or change the fact that the world as it is no longer how it once was. Shaking your head you decide to leave."; 
@@ -176,12 +177,12 @@ to say Center door:
 	say "A sudden slam of the massive flesh into the glass has you scrambling away for safety. Your good fortune is holding as you notice that the fiber glass is standing strong, but it won't be long before the window gives way, if the splintering of the glass is anything to go by, and the creature finds a way in. However, the system hasn't fully activated itself yet! If the creature destroys the machinery in here then the reservoir might never get cleaned…and if that happens then who knows what might become of the people in the town, supposing the military doesn't come, or the cubs and other patients in the hospital. This city cannot survive indefinitely without some form of running water. Hygiene alone demands that something other than rainwater has to flow throughout the town in order to keep the place at least moderately clean."; 
 	say "Can you really turn tail and run from this situation? Looking at the monster still batting at the window can you say yes with your eyes open as you see it continue to batter the creaking and straining glass?";
 	now resevquest is 5;
-	now Three doors down is resolved;
+	now ThreeDoors is resolved;
 
-
+[
 If turns > 20:
 	say "Having let the beast of ooze do what it wishes you have left the main terminal become destroyed beyond repair, at least with you limited skills with working with machines. Sighing and shaking your head you realize that there is little you can do as the Blob monster has disappeared, probably haven sunken back into its watery home, and there is now way to currently fix the area. Defeated by this all you can do is turn your head and walk away out of the reservoir.";
-
+]
 
 The beast of the tainted waters is a situation.
 The sarea of The beast of the tainted waters is "Reservoir";
@@ -220,9 +221,9 @@ Instead of resolving a Fight to Remember:
 				say "You find yourself dodging out of the way just in time not to be hurt. Obviously, even if your mind has turned to jelly your feet haven't and you dance skillfully out of the way of the creature's oozing appendages.";
 			otherwise:
 				say "You find yourself meeting the wall and losing some of your health as the lashing tentacle knocks you back into the concrete. Your breath wisps out from your mouth at an alarming speed because of this. So much so in fact that you can actually see much of it very clearly as it forms into a cloud of diamond dust in front of your face. Coughing to try and absorb some of the cold air into your lungs you shakily get back up onto your feet and then growl fiercely at the monster. Oh there's no way you're going to take that lying down! A savage battle cry roars free from your lips and soon you are charging right at the BLOB!";
-				hp of player minus 10;
-				challenge Blob; 
-				if fight lost is 0:
+				decrease hp of player by 10;
+				challenge "Blob"; 
+				if lost is 0:
 					say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. … Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 					now resevquest is 7;
 					now Fight to Remember is resolved;
@@ -232,10 +233,10 @@ Instead of resolving a Fight to Remember:
 						say "Rising up from out of your watery home you find yourself rising up and attacking the newcomers without thought. The sheer need to survive has you moving to try to either engulf the newcomers or disembowel them with your tentacles. There's much shouting and noise coming from all around but when the [']new ones['] begin to retreat you feel a sense of nervousness about yourself that makes you hesitant to return back into the reservoir. Perhaps it's time to move into deeper waters outsider. The faint memory of the ocean has you warbling in glee and quickly you sink down into the waters to try and plan your escape.";
 
 
-Passion after the battle is a situation.
-The sarea of Passion after the battle is "Reservoir";
+PassionAfterTheBattle is a situation.
+The sarea of Passionafterthebattle is "Reservoir";
 
-Instead of resolving a Passion after the battle:
+Instead of resolving a PassionAfterTheBattle:
 	If resevquest is 7:
 		say "Having rested up and finished unthawing the reservoir you go about treating and filtering the water, after cleaning up the facility of the frozen Blob monster, and then proceed to set the system to run on automatic just as it had been done before. While there might be a strong possibility that more mutants could show up you make a plan to inform the local soldiers in this area of the sanctity of the reservoir in hopes that they will send a unit here to protect the place. After all, you've basically done their job for them with cleaning up the mutants and the facility.";
 		say "Taking no never mind about the possibilities to come in the near future you go ahead and prepare to leave out of the facility with pride burning deep inside of your chest. Holding yourself up just a little bit more proudly you realize that you've done something that no one else probably could have done, singlehandedly, as you had. Congratulations.";
@@ -244,7 +245,7 @@ Instead of resolving a Passion after the battle:
 		say "Cold as a winter's morning, blue as the sky during a clear afternoon, sharp with twin lethal edges that beckons to be used against any who stand before you, you see a pair of curved knives gleaming at you somewhat in an otherworldly manner. Not understanding you aren't prepared for the twin weapons to float over to you and then stand in front of you. However, a sense of awe makes you reach out for the frozen hilts of the knives before you can stop yourself and then shudder as a pervasive chill runs through your spine. The daggers rest gently into your hand but possess a weight to them that has you recalling all of those who got trapped inside of the Blob and then flash frozen with the creature.";
 		say "There are no words that can help you to understand what is going on here, but you have a good feeling that you just received a kind gift that comes around only once in a lifetime. Taking them firmly into hand you clutch the twin knives close to your chest before turning to head out of the reservoir.";
 		add "icicle knives" to invent of player;
-		now Passion after the battle is resolved;
+		now PassionAfterTheBattle is resolved;
 
 
 Table of Game Objects(continued)
@@ -253,7 +254,7 @@ name	desc	weight	object
 
 icicle knives is an armament. 
 It is part of the player.
-It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 12. The weapon type of icicle knives id "Melee". It is not temporary. 
+It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 12. The weapon type of icicle knives is "Melee". It is not temporary. 
 
 Instead of sniffing icicle knives:
 	Say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir."; 

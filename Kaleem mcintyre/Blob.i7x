@@ -16,7 +16,7 @@ to say beattheBlob:
 
 
 to say Blobattack:
-	say "Grabbing you with a tentacle the Blob throws you into a nearby wall![or]Spiking the outer shell of itself like a porcupine protective itself the Blob charges at you![or]Warbling with a loud cry the Blob lets out an ear piercing shriek![or]Hovering slightly the Blob throws out several tentacles wildly in your direction![or]Sensing your attack the Blob curls in on itself to block your attack and then lashes out wildly at you![or]Spreading itself out into a large mass the Blob surges like a wave towards you![or]Becoming like that of a large funnel the Blob sucks you into itself and then spins you around before spitting you back out onto the floor![at random]";
+	say "[one of]Grabbing you with a tentacle the Blob throws you into a nearby wall![or]Spiking the outer shell of itself like a porcupine protective itself the Blob charges at you![or]Warbling with a loud cry the Blob lets out an ear piercing shriek![or]Hovering slightly the Blob throws out several tentacles wildly in your direction![or]Sensing your attack the Blob curls in on itself to block your attack and then lashes out wildly at you![or]Spreading itself out into a large mass the Blob surges like a wave towards you![or]Becoming like that of a large funnel the Blob sucks you into itself and then spins you around before spitting you back out onto the floor![at random]";
 
 
 to say Blobdesc:
