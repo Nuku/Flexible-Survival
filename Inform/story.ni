@@ -4470,6 +4470,7 @@ Include Down Under Pub by Stripes.
 Include Kitsune Hide Away by Kaleem mcintyre.
 
 [Quests & Events]
+Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
 Include Candy Shop by Stripes.
@@ -4525,6 +4526,7 @@ Include Endings by Darthan.
 
 
 [Monsters/Infections]
+Include Blob by Kaleem Mcintyre.
 Include Chocolate Lab by Stripes.
 Include Skunkbeast Lord by Stripes.
 Include Hyperskunk for FS by Stripes.
