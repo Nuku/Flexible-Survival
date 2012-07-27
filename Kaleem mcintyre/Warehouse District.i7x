@@ -30,7 +30,7 @@ The description of Northern Docks is "The northern side of the docks sit quietly
 Instead of sniffing Northern Docks:
 	Say "The north end docks smell like fish and otters and cum and musk and too much sex to be pass any kind of inspection code.";
 
-South of Packaging Warehouse is Gloomy Warehouse.
+South of Warehouse District is Gloomy Warehouse.
 
 The description of Gloomy Warehouse is "Standing off by its lonesome a sad looking warehouse seems to call out mournfully to anyone passing through the area. And though you're not exactly sure why, but just from looking at the place a sudden feeling of [']depression['] creeps over your soul like a quiet curse. It's odd though, considering the massive change in the city this one building seems to have been kept well enough alone as there are neither stains of cum nor piss nor milk anywhere alongside the gray ashen walls of the towering edifice. Just what sort of place is this strange building?";
 
