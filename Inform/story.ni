@@ -13,7 +13,7 @@ use MAX_SYMBOLS of 80000. [increase if "Translating the Source - Failed " and "C
 use MAX_NUM_STATIC_STRINGS of 40000.
 use ALLOC_CHUNK_SIZE of 95000.
 use MAX_OBJECTS of 1000.
-use MAX_ACTIONS of 250.
+use MAX_ACTIONS of 300.
 Use maximum indexed text length of at least 5000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
@@ -3877,13 +3877,15 @@ Instead of examining the infection terminal:
 			increase z by 1;
 			say "[Name Entry]: Danger Level: [lev entry], Typical Environment: [area entry][line break]";
 			if z is 15:
-				say "Press any key to continue.";
-				wait for any key;
+				[say "Press any key to continue.";] [unneeded with 'more' link]
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				now z is 0;
-	say "End List.";
-	wait for any key;
+	say "End Infection list.[line break]";
+	wait for any key; [don't apply waiterhater, used to seperate monsters from credits]
 	say "Under it is something called a 'credit' list, how odd.";
 	say "[complete list of extension credits]";
+	say "End Credit list.[line break]";
 
 To Plot:
 	let x be the location;
