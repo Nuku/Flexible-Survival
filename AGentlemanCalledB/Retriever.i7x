@@ -1,6 +1,6 @@
 Version 2 of Retriever by AGentlemanCalledB begins here.
 "Adds a retriever creature to Flexible Survivals Wandering Monsters table"
-[Version 2 - Rex Pet endings, modified description for Rex pet player, additional enteries for updated table of random critters]
+[Version 2 - Rex Pet endings, modified description for Rex pet player, additional entries for updated table of random critters]
 
 Section 1 - Monster Responses
 
@@ -65,7 +65,7 @@ When Play begins:
 	now defeated entry is "[beattheRetriever]";
 	now victory entry is "[losetoRetriever]";
 	now desc entry is "[Retrieverdesc]";
-	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle [if rexpet > 0]. fastened around your neck you have a thin blue leather studded collar, declairing your status as Rex's pet too the world. There's even a small silver bone shaped tag with you name engraved on it[End if]";
+	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle [if rexpet > 0]. fastened around your neck you have a thin blue leather studded collar, declaring your status as Rex's pet too the world. There's even a small silver bone shaped tag with you name engraved on it[End if]";
 	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitgrade legs and large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
 	now skin entry is "a thick, shiny coat of golden fur over your";
 	now tail entry is "Your tail is that of a golden retriever, long and covered with soft golden fur. It wags happily constantly without your input unless you make a conscious effort to stop it.";
@@ -140,7 +140,7 @@ when play ends:
 					say "You enjoy your time with the other various creatures in the city, particularly the huskies and their handsome alphas, yet you always feel something is missing. Deep down you know you will never be truly satisfied until you find a strong alpha of your own breed, to take you in and fill you with his pups like those lucky huskies.";
 		otherwise:
 			if rexpet > 0:
-				say "	Despite having submitted yourself to a life as Rex's pet, you manage too maintian some part of your mind, and because of this your relationship with your master eventually developes beyond him simply being your owner. Before long you are much more akin too lovers then master and pet. However, Rex makes certian you always remember how your relationship started, expecting you too continue wearing your collar and occasionally giving your a refresher 'lesson' too ensure your training hasn't been forgotten.";
+				say "	Despite having submitted yourself to a life as Rex's pet, you manage too maintain some part of your mind, and because of this your relationship with your master eventually develops beyond him simply being your owner. Before long you are much more akin to lovers then master and pet. However, Rex makes certain you always remember how your relationship started, expecting you too continue wearing your collar and occasionally giving you a refresher 'lesson' too ensure your training hasn't been forgotten.";
 			otherwise:
 				say "Once the military moves into the city you are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city.";
 				if rextalk is 1:
@@ -154,9 +154,9 @@ when play ends:
 	otherwise:
 		if rexpet > 0:
 			if humanity of player is less than 10:
-				say "	With your mind lost too another infection out in the city, you quickly forget your submission too Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid any other surivivor then can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able too find you amoung the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
+				say "	With your mind lost too another infection out in the city, you quickly forget your submission too Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid any other survivor then can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
 			otherwise:
-				say "	When the military finally moves into the city and the retrevier infection still hasn't taken hold Rex takes you aside for a privite moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasant managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free too leave and do what you wish in this new world, but you will always have a place in his home should you every truely desire it.";
+				say "	When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it.";
 		otherwise if doggyboned is 3:
 			say "As the last of the retriever infection is worked out of your system you find the powerful urges caused by that strange bone seam to diminish as well.";
 
