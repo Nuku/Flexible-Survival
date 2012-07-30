@@ -6,7 +6,13 @@ gatherwolfcum is a number that varies.
 gatherdemonseed is a number that varies.
 gatherdogmilk is a number that varies.
 Ointerrogate is a number that varies.
-			
+
+Pursuit of Science is a situation.  Pursuit of Science is resolved.
+when play begins:
+	add Pursuit of Science to badspots of furry;
+	add Pursuit of Science to badspots of girl;
+	add Pursuit of Science to badspots of guy;
+
 Instead of resolving Pursuit of Science:
 	if omq is 1:
 		say "Omio lowers her head, mumbles something to herself and then nods somewhat cautiously before returning her gaze back up to yours. 'If you will, then please bring me five samples of wolf cum, four samples of demon seed, and three samples of dog milk.' Omio asks somewhat indecisively. 'If you can manage that then I can move forward with my research and perhaps give you a reward that you may be able to use on your own journey throughout the city.' You tightly nod at Omio and then prepare yourself mentally for what's to come next.[line break]";

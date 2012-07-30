@@ -417,6 +417,7 @@ Section 5 - Grant
 
 Grant is a man.
 The description of Grant is "[grantdesc]";
+The conversation of Grant is { "Cool!" }.
 granttalk is a number that varies.
 lastGrantfucked is a number that varies. lastGrantfucked is normally 800.
 grantbitch is a number that varies.

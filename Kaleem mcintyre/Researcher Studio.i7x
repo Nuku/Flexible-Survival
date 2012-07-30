@@ -23,12 +23,7 @@ instead of sniffing MainRoom:
 	say "The living area smells faintly of the warm homey scent that one could come to expect from a regular suburban room.";
 
 Omiotalk is a number that varies.
-Pursuit of Science is a situation.
 Omq is a number that varies.
-when play begins:
-	add Pursuit of Science to badspots of furry;
-	add Pursuit of Science to badspots of girl;
-	add Pursuit of Science to badspots of guy;
 
 Omio is a woman.
 The description of Omio is "Humming to herself while puttering around the main room of her home is the strawberry red head you met on the plains earlier. Five foot five inches tall, with golden eyes and wearing a blue Chinese-like dress that covers her frame from neck down to her feet, the human-like woman mutters to herself while walking around in circles. Her skin is tanned giving her the appearance of someone who is probably native to a southern island somewhere below the equator. Her face is somewhat sharp with clearly defined angles, yet instead of making her seem manly these lines make her more...cute in a girlish like way.";
@@ -67,16 +62,17 @@ instead of conversing the Omio:
 		say "You feel somewhat apprehensive about this entire affair, but Omio's gold eyes don't seem to be lying, but then again when does a liar ever falter when telling a lie? You ask her what she plans to do when the military comes around to clean up the city. At that the red head starts to chuckle, though somewhat darkly. 'The military doesn't have a clue with what they're dealing with. The people at top manipulating the events happening here are just throwing more men and women into the proverbial fire in hopes that by doing so they will pacify the rising problem. It won't. Only the Prome...only the people I represent can truly handle this situation.' Her slight slip makes you narrow your eyes. 'Please, just trust my intentions on this, if not my words.' Omio looks up at you somewhat pleadingly.'[line break]";
 		say "You're not sure what to do or what to believe, however, you do notice that there is a strong conviction in the red head's golden eyes. You tell Omio that you'll think over what's she said and that you'll get back with her on it later. 'That's fine.' The red head then gets up at seeing you do the same. 'I'll be here even after the military rolls in with the rest of their troops. If you think you want to help then come back by and talk to me.' You nod to Omio and then move to leave.[line break]";
 		now Omiotalk is 1;
-	if Omiotalk is 1:
+	otherwise if Omiotalk is 1:
 		say "Omio looks at you somewhat curiously as you step up to her. Her golden eyes blink twice before the red head finds the will to speak. 'Oh, did you come back because you wanted to help me out or did you come to just say hi?' There is a polite tease in her words, but her posture speaks of something altogether serious.(Y=Help out, N=Just passing through)[line break]";
 		if player consents:
 			say "Give the other woman an unsure nod you let Omio know that you'll be willing to help, but stipulate that you need to know everything that's going on and what things she and this mysterious [']Prome['] organization are up to. 'I told you, I can't tell you much, but if you help me then I'll tell you as much as I can based on what my employers say. Is that alright?' Omio seems both elated and unsure at the same time. At this point you feel that it might be best to go ahead and help the other, if just to see where this whole thing leads, and nod before asking the red head where to begin.[line break]"; 
 			say "'Thank you. You have eternal gratitude for your support.' The red head takes a small bow and then lifts herself up to look at you with bright conviction shining in her golden orbs 'For now I just need you to bring me back some sample of different strains of the virus so I can analyze them and then send them back to be researched by my employers.'[line break]";
 			now omq is 1;
 			now Omiotalk is 2;
+			now Pursuit of Science is unresolved;
 		otherwise:
 			say "[one of]'Oh, ok. Well we can have some tea together later if you'd like.'[or]'I see. That is disappointing, but then again...'[or]'Awww, are you sure you don't want to help adorable little 'ole me? Omie pouts cutely.'[or]'Well, I can't force you to, but please consider it, won't you?'[or]'Perhaps you'll change your mind later on, but please make sure you do so before the military rolls in. Otherwise things will get [']complicated['] later on.'[or]'Please, with sugar and sprinkles on top.'[or]So why did you come here then, if not to help?[or]'Ok. That is somewhat...disappointing though.'[or]'Meanie!' Omie stamps her foot against the carpet of the floor.'[or]'Understood.' The red head says somewhat robotically.[at random].";
-	if Omiotalk is 2:
+	otherwise if Omiotalk is 2:
 		say "[one of]'I'm so glad that you've decided to stop by and pay me a little visit. It does get a little lonesome out here.'[or]'Would you care for some tea? I have a different blend than the one you had before.'[or]Omio is busy typing on her computer so she pays little attention to you except to nod her head when you call her name.[or]'I have no reason for you to be here now.'[or]'Won't you do something for me to help my research? Pretty please?'[or]Omio is busy relaxing on her sofa while listening to the wind play through her open patio screen.[or]'It would be nice if this all happened in a much more calm and controlled sort of way.' Omio says offhandedly while chuckling to herself.[or]Omio sits on the floor in a meditation position with her eyes closed and her legs crossed.[or]'The world is made up of fools, beast and men now. I wonder what the future will tell from this strange and trying history left for others to tell.' Omio chuckles darkly.[or]'One day I'll have what I'm seeking, and then...[or]'It's always a good time for tea, don't you think?' Omio asks while sipping a cup of warm brew while at her computer desk.[or]'Time...I won't let it pass me by like before. This [']time['] I'll be the victor![at random]";
 		
 
