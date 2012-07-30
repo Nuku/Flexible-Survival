@@ -20,6 +20,12 @@ when play begins:
 instead of resolving a panther trap:
 	say "You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately the grey and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you would swear would be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";
 	if a random number between one and 20 < 12:
+		[puts Panther Taur as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Panther Taur":
+				now monster is y;
+				break;
 		[the felitaur heard]
 		say "A panther taur comes up behind you, its trap having fallen on you, and proceeds to use you.";
 		say "[felitaur rape]";
@@ -41,9 +47,7 @@ instead of resolving a panther trap:
 				break;
 			say "A nearby monster catches you in the felitaur's trap, and proceeds to fight you, in the process disrupting the rubble and freeing you.";
 			decrease the HP of the player by 10;
-			choose row monster from the table of random critters;
-			now monsterhp is hp entry;
-			challenge;
+			fight;
 			follow the turnpass rule;
 		otherwise:
 			say "Nobody shows up before you succeed at freeing yourself. Phew.";
