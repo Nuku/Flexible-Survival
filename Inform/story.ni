@@ -1129,7 +1129,7 @@ Carry out vialdropping:
 	say "You chuck the [target] vial away.";
 	remove entry z from vials of player;
  
- understand "vialalldrop [text]" as vialalldropping.
+understand "vialalldrop [text]" as vialalldropping.
 
 Vialalldropping is an action applying to one topic.
 
@@ -1137,24 +1137,22 @@ Carry out vialalldropping:
  	let t be the topic understood;
 	let target be text;
 	let found be 0;
-	let z be 1;
 	let q be a topic;
 	let y be a list of numbers;
-	repeat with x running through vials of player:
-		now q is x;
-		if t in lower case is x in lower case:
-			add z to y;
+	let number be 0;
+	repeat with x running from 1 to the number of entries in vials of player:
+		if t in lower case is entry x in vials of player in lower case:
+			now target is entry x in vials of player;
+			remove entry x from vials of player;
+			decrease x by 1;
 			now found is 1;
-		increase z by 1;
 	if found is 0:
 		say "You don't seem to have any such vial.";
-		continue the action;
 	otherwise:
-		repeat with cur running through y:
-			say "You chuck [an target] vial away.";
-			remove entry cur from vials of player;
+		say "You chuck all your [target] vials away.";
 
- understand "vial [text]" as vialing.
+
+understand "vial [text]" as vialing.
 
 Vialing is an action applying to one topic.
 
@@ -1239,22 +1237,23 @@ carry out Inventorying:
 		if the player is overburdened, say "*OVERBURDENED* ";
 		say "Total Weight: [weight]/[capacity of player] lbs.";
 	if scenario is "Researcher" or nanitemeter is 1:
-		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vint[roman type][end link] for short.)";
-
-understand the command "vint" and "vial inventory" and "vial inv" as something new.
+		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
 
 Definition: A grab object (called D) is fiveowned:
 	let count be 0;
 	if there is a name corresponding to a object of d in the table of game objects:
 		if the name corresponding to a object of d in the table of game objects is listed in the invent of the player:
-			repeat with  y running through invent of player:
+			repeat with y running through invent of player:
 				if y is the name corresponding to a object of d in the table of game objects, increase count by 1;
 			if count > 4, yes;
 	no;
 
+understand the command "vint" and "vial inventory" and "vial inv" and "vinv" as something new.
+
 VialInventorying is an action applying to nothing.
 
 understand "vint" as VialInventorying.
+understand "vinv" as VialInventorying.
 understand "vial inventory" as VialInventorying.
 understand "vial inv" as VialInventorying.
 
@@ -2754,7 +2753,7 @@ To Vialchance (x - a text):
 		otherwise if "Expert Researcher" is listed in feats of player and a random number between 1 and 100 <= vialcollectible:
 			now vcoll is 1;
 		if vcoll is 1:
-			say "You manage to extract a vial of [x] nanites for study and use.";
+			say "You manage to extract a vial of [special-style-1][x][roman type] nanites for study and use.";
 			add x to vials of player;
 			now vcoll is 0;
 
