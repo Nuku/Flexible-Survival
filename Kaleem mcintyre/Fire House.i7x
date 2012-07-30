@@ -2,7 +2,7 @@ Fire House by Kaleem mcintyre begins here.
 
 "Adds a new area to Flexible Survival with a NPC…"
 
-Section 1 – Firehouse Station
+Section 1 - Firehouse Station
 
 Firehouse Station is a room. It is fasttravel. 
 
@@ -18,9 +18,9 @@ Instead of sniffing Firehouse Station:
 Up of Firehouse Station is Sleeping Quarters.
 
 
-Section 2 – LowerFirePole
+Section 2 - LowerFirePole
 
-Instead of sniffing:
+Instead of sniffing the lowerfirepole:
 	say "The fire pole smells like sweat, nervousness, excitement and above all else hardworking diligence.";
 
 Firepolescaling is an action applying to nothing. 
@@ -53,7 +53,7 @@ Down of Sleeping Quarters is Firehouse Station.
 
 Sleeping Quarters is a room. 
 
-The description of Sleeping Quarters is "[if kenazquest is less than 4]The upper area of the firehouse has several beds lined up together in neat rows extending from the doorway to the far wall where a large entertainment system has been set up. From the looks of things it would seem as though most of the beds have been unused as of late, save for one in particular. Though that's not to say that the sleeping area is in any sort of disarray as that the floor looks to have recently been swept and mopped, the footlockers at the end of the beds have been waxed, and the only set of chairs and table in here look to have been dusted and buffed to keep the wood pristine looking. Over by the side of the entertainment system the station's fire pole extends up from a hole in the floor all the way to the white wall ceiling. Just looking at the golden pipe you feel as though you should jump onto the pole and slide down to the main room of the firehouse.[otherwise if kenazquest is 8]Unlike before, with how the sleeping area had once been in disarray, now the sleeping area looks like it did from before when Kenaz was here by himself. The beds are neat, the floor has been swept and mopped, there are no toys – of any sort – anywhere on the floor and the smell of musky Dal boy is less oppressive than it once had been. Kenaz must have seriously put a foot up some of the other firefighter's tails to get them straightened out enough to clean up in here. The mixed smell of herm Dalmatian and Dal boy cum pervades the area giving the sleeping den a unique musky scent that is not too harsh on the senses. So Kenaz does take some of the others up here to fuck them it would seem.[otherwise]Unlike before when the sleeping area once looked somewhat kept under well maintenance the area now looks like a combination between a puppy's play pen and a bachelor pad. Most of the beds are unkempt and somewhat musky with the scent of male Dalmatians covering them, there are toys – mostly rubber balls and squeak toys and a couple of dildos, butt plugs and anal beads – littered around the floor, and the floor seems to be almost pervasively sticky with...something or the other. You halfway hope it's just spilled soda. It looks as though Kenaz, and maybe one or two others, have been trying to keep the place clean, but it seems to have become a lost effort as the transformed firefighters seem to all but be focused on rutting and playing around to bother keeping the place neat. However, it's easy to see that, despite the disarray, the room has been kept free from any firefighting equipment lying around where it doesn't belong. Looks like the spirit of the firehouse still burns bright, even through this disheveled mess.[end if]";
+The description of Sleeping Quarters is "[if kenazquest is less than 4]The upper area of the firehouse has several beds lined up together in neat rows extending from the doorway to the far wall where a large entertainment system has been set up. From the looks of things it would seem as though most of the beds have been unused as of late, save for one in particular. Though that's not to say that the sleeping area is in any sort of disarray as that the floor looks to have recently been swept and mopped, the footlockers at the end of the beds have been waxed, and the only set of chairs and table in here look to have been dusted and buffed to keep the wood pristine looking. Over by the side of the entertainment system the station's fire pole extends up from a hole in the floor all the way to the white wall ceiling. Just looking at the golden pipe you feel as though you should jump onto the pole and slide down to the main room of the firehouse.[otherwise if kenazquest is 8]Unlike before, with how the sleeping area had once been in disarray, now the sleeping area looks like it did from before when Kenaz was here by himself. The beds are neat, the floor has been swept and mopped, there are no toys - of any sort - anywhere on the floor and the smell of musky Dal boy is less oppressive than it once had been. Kenaz must have seriously put a foot up some of the other firefighter's tails to get them straightened out enough to clean up in here. The mixed smell of herm Dalmatian and Dal boy cum pervades the area giving the sleeping den a unique musky scent that is not too harsh on the senses. So Kenaz does take some of the others up here to fuck them it would seem.[otherwise]Unlike before when the sleeping area once looked somewhat kept under well maintenance the area now looks like a combination between a puppy's play pen and a bachelor pad. Most of the beds are unkempt and somewhat musky with the scent of male Dalmatians covering them, there are toys - mostly rubber balls and squeak toys and a couple of dildos, butt plugs and anal beads - littered around the floor, and the floor seems to be almost pervasively sticky with...something or the other. You halfway hope it's just spilled soda. It looks as though Kenaz, and maybe one or two others, have been trying to keep the place clean, but it seems to have become a lost effort as the transformed firefighters seem to all but be focused on rutting and playing around to bother keeping the place neat. However, it's easy to see that, despite the disarray, the room has been kept free from any firefighting equipment lying around where it doesn't belong. Looks like the spirit of the firehouse still burns bright, even through this disheveled mess.[end if]";
 UpperFirepole is in Sleeping Quarters.
 
 Instead of sniffing Sleeping Quarters:
@@ -85,7 +85,7 @@ carry out Firepolesliding:
 
 
 
-Section 4 – Kenaz 
+Section 4 - Kenaz 
 
 Kenaztalk is a number that varies.
 Kenazaroused is a number that varies.
@@ -196,9 +196,9 @@ instead of conversing the Kenaz:
 Kenazfrisky is a number that varies.
 
 Instead of fucking Kenaz:
-	if Kenazquest is 4 and Kenazfrisky – turns < 6:
+	if Kenazquest is 4 and Kenazfrisky - turns < 6:
 		say "'S-sorry friend.' Kenaz pants while wagging his tail both tiredly as well as happily up at you. 'I think this Dal boy is going to need a rest before he's got anything left to shoot through his fire hose.' The playful firefighter gives you a lick across the cheek before going back to what he was doing.";
-	otherwise if Kenazquest is 8 and Kenazfrisky – turns < 6:
+	otherwise if Kenazquest is 8 and Kenazfrisky - turns < 6:
 		say "'I know you might want to take a ride right about now, or maybe have a nice foot-long Dalmatian hot dog underneath your tail, but you're going to have to wait.' Kenaz chuckles before patting you on the ass and then sending you off with a dismissive wave of his hand.";
 
 
