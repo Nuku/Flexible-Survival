@@ -1196,6 +1196,7 @@ does the player mean doing something with the medkit: it is very likely.
 carry out Inventorying:
 	sort invent of player;
 	let dseed be 0;
+	sort table of game objects in name order;
 	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
 	if the number of entries in invent of player is greater than 0:
