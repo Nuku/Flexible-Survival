@@ -421,7 +421,7 @@ Carry out FabKnownList:
 	say "Nanofabricator knows how to make the following items:[line break]";
 	sort Table of Fabbable Items in object order;
 	repeat with X running from 1 to number of filled rows in Table of Fabbable Items:
-		choose row X from the table of game objects;
+		choose row X from the Table of Fabbable Items;
 		if there is a object entry:
 			say "Name: [object entry][line break]";
 	say "End of list.[line break]";
