@@ -363,10 +363,13 @@ The marea of Faint Trail is "Park".
 Part 2 - Things
 
 The cot is rooted in place. The cot is restful.
+Microwave is a thing. "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something."
+
+Section - Vending Machine
+
 There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
 Cola Vending Machine has a number called dispensed.
 understand "vending machine" as Cola Vending machine.
-Microwave is a thing. "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something."
 
 Vending is an action applying to one thing.
 understand "use [cola vending machine]" as vending.
@@ -390,6 +393,129 @@ Instead of attacking the Cola Vending machine:
 	if ( a random chance of 5 in 100 succeeds ) or dispensed of noun is greater than 9:
 		say "The machine gives a final spark of defeat. You are certain there is no more soda to be had.";
 		remove Cola Vending machine from play;
+
+Section - Nanofab
+
+[Nanofabricator: fabbing, consuming, stats, etc]
+
+Table of Fabbable Items
+object
+water bottle
+food
+with 100 blank rows.
+[this table is a work around, eventually a better fix should to be found.  perhaps a new column in the table of game objects? ]
+
+There is a Nanofabricator in dark basement. [should be safely out of the way here until activated.  by a quest? gathering stuff? whatever]["The library computer is wired into the infection scanner and nanite transmitter.  All of which are spliced to the Zephyr Sanity Containment Module (patent pending).  Generous amounts of duct tape cover the contraption." unneeded text?] It is fixed in place. It has a description "The nanofabricator.  You can barely identify the parts that went into it, covered as they are in the layers of duct tape which holds the monstrosity together.  But at least it works, sort of, mostly, once in a while.[line break]Material stockpile is currently: [bold type][GenericNanoPastePool][roman type][line break]To increase stockpile: [bold type]Consume {item name}[roman type][line break]To make a known item: [bold type]Fab {item name}[roman type][line break]To list all known items: [bold type]Fablist[roman type][line break]".
+understand "nanofab" as Nanofabricator.
+GenericNanoPastePool is a number that varies.  GenericNanoPastePool is usually 0. [pool of material used for fabricating, starts empty]
+FabricatingRateMultiplier is a number that varies.  FabricatingRateMultiplier is usually 11. [base cost of making things, should be above breaking cost \/]
+FeedingRateMultiplier is a number that varies.  FeedingRateMultiplier is usually 9. [base cost of breaking things, should be below making cost ^]
+nanofabnumtemp is a number that varies. [temporary number used to simplify fabricator logic]
+nanofabrowtemp is a number that varies. [needed to know a row number later, so held here]
+nanofabnametemp is a text that varies. [temporary name used to simplify fabricator logic]
+
+FabKnownList is an action applying to nothing.
+Understand "Fablist" as FabKnownList.
+
+Carry out FabKnownList:
+	say "Nanofabricator knows how to make the following items:[line break]";
+	sort Table of Fabbable Items in object order;
+	repeat with X running from 1 to number of filled rows in Table of Fabbable Items:
+		choose row X from the table of game objects;
+		if there is a object entry:
+			say "Name: [object entry][line break]";
+	say "End of list.[line break]";
+
+SuperSecretNanoFabCheat is an action applying to nothing. [test command, do not list in help. eventually move to debug?]
+understand "Cheat Me A NanoFab" as SuperSecretNanoFabCheat.
+
+carry out SuperSecretNanoFabCheat:
+	Move Nanofabricator to Grey Abbey Library;
+	increase GenericNanoPastePool by 50;
+	say "Nanofabricator created in library, GNP set to 50.  Happy fabbing :)";
+
+Nanofabbing is an action applying to one thing.
+understand "Fab [grab object]" as Nanofabbing.
+
+[ Letter variables and what they mean (at least for nanofab stuff)
+x = grab object input by player
+y = object entry from table of game objects
+z = row of object from table of game objects
+]
+
+Before Nanofabbing:
+	if the Nanofabricator is not visible:
+		say "You can't find a Nanofabricator here.";
+		stop the action; [fails if no fabricator][to test]
+
+Carry out Nanofabbing something(called x):
+	say "You tell the nanofabricator to make you a [x].[line break]";
+	if x is an object listed in the Table of Fabbable Items: [it knows how to make this item]
+		repeat with z running from 1 to the number of rows in the table of game objects:
+			choose row z in the table of game objects;
+			if name entry matches the regular expression printed name of x, case insensitively:
+				let y be object entry;
+				break;
+		now nanofabnumtemp is weight entry times [fabvalue entry of y times] FabricatingRateMultiplier;
+		if GenericNanoPastePool is less than nanofabnumtemp: [GNP too low to fab, error message]
+			say "The nanofabricator gives off an angry ding, as the computer screen displays the message: [line break][bold type]ERRORCODE: 51 (insuffienct matter in pool, unable to fabricate)[roman type][line break]";
+			say "Stockpile currently at [bold type][GenericNanoPastePool][roman type].  [special-style-2][nanofabnumtemp][roman type] material needed for requested action.";
+		otherwise if a random chance of 1 in nanofabnumtemp succeeds: [random failure makes dirty water]
+			say "The nanofabricator starts chugging away.  It creaks and groans for a few minutes, before dinging as bottle falls out.  The computer screen displays the message: [line break][bold type]ERRORCODE: 13 (transmitter calibration failure, improper fabrication)[roman type][line break]";
+			say "[special-style-2][nanofabnumtemp][roman type] material removed from stockpile.  Stockpile currently at [bold type][GenericNanoPastePool][roman type].";
+			decrease GenericNanoPastePool by (1[weight entry of dirty water] times [fabvalue entry of dirty water times] FabricatingRateMultiplier);
+			add "dirty water" to the invent of the player;
+		otherwise: [everything works as it's supposed to]
+			say "The nanofabricator starts chugging away.";
+			decrease GenericNanoPastePool by nanofabnumtemp;
+			say "[special-style-2][nanofabnumtemp][roman type] material removed from stockpile.  Stockpile currently at [bold type][GenericNanoPastePool][roman type].";
+			say "An off humming gradual increases before the nanofabricator gives off a happy ding.  Your [x] falls out as the computer displays the message: [line break][bold type][x] Fabricated Successfully[roman type][line break]";
+			add name entry to the invent of the player;
+	otherwise: [item not known by fabber, error message]
+		say "The nanofabricator gives off an angry ding, as the computer screen displays the message: [line break][bold type]ERRORCODE: 27 ([x] unknown, unable to fabricate)[roman type][line break]";
+	say "It's work completed, the nanofabricator shuts down."; [message to confirm all done]
+
+Nanofeeding is an action applying to one thing.
+understand "Consume [grab object]" as Nanofeeding.
+
+Before Nanofeeding:
+	if the Nanofabricator is not visible:
+		say "You can't find a Nanofabricator here.";
+		stop the action; [fails if no fabricator]
+	if noun is not owned:
+		say "You do not have a [noun], therefore you cannot put it in the Nanofabricator.";
+		stop the action; [fails if item not in inventory]
+
+Carry out Nanofeeding something(called x):
+	say "You feed a [noun] into the nanofabricator.";
+	repeat with z running from 1 to the number of rows in the table of game objects:
+		choose row z in the table of game objects;
+		now nanofabrowtemp is z;
+		if name entry matches the regular expression printed name of x, case insensitively:
+			let y be name entry;
+			break;
+	if x is an object listed in the Table of Fabbable Items: [it knows how to make this item]
+		say "The computer screen displays the message: [line break][bold type][x] is a known item.  Consuming input for raw material.[roman type][line break]";
+		delete x;
+		choose row nanofabrowtemp in the table of game objects;
+		now nanofabnumtemp is weight entry [in row nanofabrowtemp of table of game objects] times [fabvalue entry of nanofabnametemp times] FeedingRateMultiplier;
+		increase GenericNanoPastePool by nanofabnumtemp;
+		say "[special-style-1][nanofabnumtemp][roman type] material added to stockpile.  Stockpile currently at [bold type][GenericNanoPastePool][roman type].";
+[	otherwise if a random chance of 1 in 4 succeeds: [attempt to learn new item]
+		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Scanning...[roman type][line break]";
+		Choose a blank row from Table of Fabbable Items;
+		now object entry is the noun;[important bit, adds new stuff to fabbable item list]
+		say "The computer screen displays the message: [line break][bold type]Scan successful.  Make up of [x] is now known.  More can be frabricated with sufficent material.[roman type][line break]";
+		delete x;]
+	otherwise: [learning failed, consume item]
+		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Consuming input for raw material.[roman type][line break]";
+		choose row nanofabrowtemp in the table of game objects;
+		now nanofabnumtemp is weight entry times [fabvalue entry of nanofabnametemp times] FeedingRateMultiplier;
+		increase GenericNanoPastePool by nanofabnumtemp;
+		[say "The computer screen displays the message: [line break][bold type]ERRORCODE: 3 (Failure of sensor array.  Please try again.).  Consuming input for raw material.[roman type][line break]";]
+		delete x;
+		say "[special-style-1][nanofabnumtemp][roman type] material added to stockpile.  Stockpile currently at [bold type][GenericNanoPastePool][roman type].";
+	say "It's work completed, the nanofabricator shuts down."; [message to confirm all done]
 
 Book 3 - Definitions
 
