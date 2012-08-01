@@ -400,11 +400,12 @@ Section - Nanofab
 
 Table of Fabbable Items
 object
---
+water bottle
+food
 with 100 blank rows.
 [this table is a work around, eventually a better fix should to be found.  perhaps a new column in the table of game objects? ]
 
-There is a Nanofabricator in dark basement. [should be safely out of the way here until activated.  by a quest? gathering stuff? whatever]["The library computer is wired into the infection scanner and nanite transmitter.  All of which are spliced to the Zephyr Sanity Containment Module (patent pending).  Generous amounts of duct tape cover the contraption." unneeded text?] It is fixed in place. It has a description "The nanofabricator.  You can barely identify the parts that went into it, covered as they are in the layers of duct tape which holds the monstrosity together.  But at least it works, sort of, mostly, once in a while.[line break]Material stockpile is currently: [bold type][GenericNanoPastePool][roman type][line break]To increase stockpile: [bold type]Consume {item name}[roman type][line break]Unknown items can be learned during consumption.[line break]To make a known item: [bold type]Fab {item name}[roman type][line break]To list all known items: [bold type]Fablist[roman type][line break]".
+There is a Nanofabricator in dark basement. [should be safely out of the way here until activated.  by a quest? gathering stuff? whatever]["The library computer is wired into the infection scanner and nanite transmitter.  All of which are spliced to the Zephyr Sanity Containment Module (patent pending).  Generous amounts of duct tape cover the contraption." unneeded text?] It is fixed in place. It has a description "The nanofabricator.  You can barely identify the parts that went into it, covered as they are in the layers of duct tape which holds the monstrosity together.  But at least it works, sort of, mostly, once in a while.[line break]Material stockpile is currently: [bold type][GenericNanoPastePool][roman type][line break]To increase stockpile: [bold type]Consume {item name}[roman type][line break]To make a known item: [bold type]Fab {item name}[roman type][line break]To list all known items: [bold type]Fablist[roman type][line break]".
 understand "nanofab" as Nanofabricator.
 GenericNanoPastePool is a number that varies.  GenericNanoPastePool is usually 0. [pool of material used for fabricating, starts empty]
 FabricatingRateMultiplier is a number that varies.  FabricatingRateMultiplier is usually 11. [base cost of making things, should be above breaking cost \/]
@@ -500,18 +501,18 @@ Carry out Nanofeeding something(called x):
 		now nanofabnumtemp is weight entry [in row nanofabrowtemp of table of game objects] times [fabvalue entry of nanofabnametemp times] FeedingRateMultiplier;
 		increase GenericNanoPastePool by nanofabnumtemp;
 		say "[special-style-1][nanofabnumtemp][roman type] material added to stockpile.  Stockpile currently at [bold type][GenericNanoPastePool][roman type].";
-	otherwise if a random chance of 1 in 4 succeeds: [attempt to learn new item]
+[	otherwise if a random chance of 1 in 4 succeeds: [attempt to learn new item]
 		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Scanning...[roman type][line break]";
 		Choose a blank row from Table of Fabbable Items;
 		now object entry is the noun;[important bit, adds new stuff to fabbable item list]
 		say "The computer screen displays the message: [line break][bold type]Scan successful.  Make up of [x] is now known.  More can be frabricated with sufficent material.[roman type][line break]";
-		delete x;
+		delete x;]
 	otherwise: [learning failed, consume item]
-		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Scanning...[roman type][line break]";
+		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Consuming input for raw material.[roman type][line break]";
 		choose row nanofabrowtemp in the table of game objects;
 		now nanofabnumtemp is weight entry times [fabvalue entry of nanofabnametemp times] FeedingRateMultiplier;
 		increase GenericNanoPastePool by nanofabnumtemp;
-		say "The computer screen displays the message: [line break][bold type]ERRORCODE: 3 (Failure of sensor array.  Please try again.).  Consuming input for raw material.[roman type][line break]";
+		[say "The computer screen displays the message: [line break][bold type]ERRORCODE: 3 (Failure of sensor array.  Please try again.).  Consuming input for raw material.[roman type][line break]";]
 		delete x;
 		say "[special-style-1][nanofabnumtemp][roman type] material added to stockpile.  Stockpile currently at [bold type][GenericNanoPastePool][roman type].";
 	say "It's work completed, the nanofabricator shuts down."; [message to confirm all done]
