@@ -10,8 +10,6 @@ Section 1 - Monster Responses
 
 to say sphinx attack:
 	say "'Not so tough now are you, silly little thief.' Valerie says with a grin as she knocks you backwards, her paw reaching out and deftly swiping the item you were trying to steal back from you, 'Now I am going to go put this back on display, and we will forget this little incident ever happened... because I don[apostrophe]t think even someone as silly as you will be making the same mistake twice now will they?' The sphinx asks with amusement, before vanishing off down the museum halls, likely to return the item to its proper place before she returns to her perch at her desk... Well at least you are still alive and allowed in the museum, though trying again certainly seems a bit dangerous right now...";
-	infect "sphinx";
-
 
 
 To say sphinx loss:
