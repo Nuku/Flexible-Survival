@@ -413,7 +413,7 @@ before examining the grab object(called x):
 Book 5 - Tables
 
 Table of Game Objects
-name	desc	weight	object
+name	desc	weight	object	sortname (text)
 "medkit"	"A small white plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
 "water bottle"	"A bottle of water. Good for slaking thirst."	1	water bottle
 "dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
@@ -1194,6 +1194,10 @@ does the player mean doing something with the medkit: it is very likely.
 carry out Inventorying:
 	sort invent of player;
 	let dseed be 0;
+	repeat with x running from 1 to the number of rows in the table of game objects:
+		choose row x in the table of game objects;
+		now sortname entry is name entry;
+	sort the table of game objects in sortname order;
 	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
 	if the number of entries in invent of player is greater than 0:
