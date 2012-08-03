@@ -122,8 +122,8 @@ to say Sweet Tooth scene:
 			while found is not 0:
 				delete soda;
 				increase caffeinehigh of player by 2;
-				if a random chance of 2 in 5 succeeds, increase caffeinehigh by 1;
-				if a random chance of 2 in 5 succeeds, decrease caffeinehigh by 1;
+				if a random chance of 2 in 5 succeeds, increase caffeinehigh of player by 1;
+				if a random chance of 2 in 5 succeeds, decrease caffeinehigh of player by 1;
 				decrease lastcaffeine of Sweet Tooth by 2;
 				decrease thirst of player by 3;
 				decrease humanity of player by 3;
@@ -191,8 +191,8 @@ to say Sweet Tooth scene:
 			while found is not 0:
 				delete soda;
 				increase caffeinehigh of player by 2;
-				if a random chance of 2 in 5 succeeds, increase caffeinehigh by 1;
-				if a random chance of 2 in 5 succeeds, decrease caffeinehigh by 1;
+				if a random chance of 2 in 5 succeeds, increase caffeinehigh of player by 1;
+				if a random chance of 2 in 5 succeeds, decrease caffeinehigh of player by 1;
 				decrease lastcaffeine of Sweet Tooth by 2;
 				decrease thirst of player by 3;
 				decrease humanity of player by 3;
