@@ -27,7 +27,6 @@ Carry out reciting:
 	replace the text " " in X with "`";
 	let lev be the level of the player;
 	let upit be 0;
-	now the score is -9999;
 	repeat with z running from 1 to number of words in x:
 		let b be word number z in x;
 		replace the text "`" in b with " ";
@@ -69,7 +68,7 @@ Carry out reciting:
 					now the humanity of player is the number understood;
 			-- 10:
 				if the player's command matches "[number]":
-					now the score is the number understood;
+					now the score is the score;
 			-- 11:
 				if the player's command matches "[number]":
 					now unusual creature is resolved;
