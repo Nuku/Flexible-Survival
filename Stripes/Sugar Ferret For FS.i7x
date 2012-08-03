@@ -48,8 +48,8 @@ to say losetosugarferret:
 				decrease lastcaffeine of Sweet Tooth by 2;
 				if caffeinehigh of player > 0 and bodyname of player is "Sugar Ferret":
 					increase caffeinehigh of player by 2;
-					if a random chance of 2 in 5 succeeds, increase caffeinehigh by 1;
-					if a random chance of 2 in 5 succeeds, decrease caffeinehigh by 1;
+					if a random chance of 2 in 5 succeeds, increase caffeinehigh of player by 1;
+					if a random chance of 2 in 5 succeeds, decrease caffeinehigh of player by 1;
 					decrease thirst of player by 3;
 					decrease humanity of player by 3;
 					increase libido of player by 3;
