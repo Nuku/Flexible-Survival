@@ -591,8 +591,13 @@ Carry out reciting:
 					now Art Collector is resolved;
 					if hp of Ronda > 0 and hp of Ronda < 10:
 						remove Ronda Mallrat from play;
+						move Rod Mallrat to Mall FoodCourt;
 					if hp of Ronda is 0 or hp of Ronda is 10:
 						move Ronda Mallrat to Mall Atrium;
+						move Rod Mallrat to Mall FoodCourt;
+					if hp of Ronda is 100:
+						move Ronda Mallrat to SlutRat Den;
+						move Rod Mallrat to SlutRat Den
 					if hp of Ronda > 0:
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
@@ -604,7 +609,7 @@ Carry out reciting:
 					if hp of Ronda is 6:
 						now Art Collector is unresolved;
 					if hp of Ronda >= 8:
-						now SlutRat Den is known;
+						now SlutRat Den is known;	
 			-- 93:
 				if the player's command matches "[number]":
 					now hp of Athanasia is the number understood;
