@@ -7,7 +7,7 @@ Use memory economy.
 Use slow route-finding.
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 500000.
-use MAX_STATIC_DATA of 950000.
+use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 80000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 40000.
@@ -539,7 +539,7 @@ before examining the grab object(called x):
 Book 5 - Tables
 
 Table of Game Objects
-name	desc	weight	object	sortname (text)
+name	desc	weight	object	sortname (indexed text)
 "medkit"	"A small white plastic box with a red cross on it. It has all the things needed for basic medical needs on the go! Using it will restore a lot of HP, more with good intelligence."	3	medkit
 "water bottle"	"A bottle of water. Good for slaking thirst."	1	water bottle
 "dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
@@ -1317,9 +1317,11 @@ does the player mean doing something with the medkit: it is very likely.
 carry out Inventorying:
 	sort invent of player;
 	let dseed be 0;
+	let tempname be indexed text;
 	repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
-		now sortname entry is name entry;
+		now tempname is name entry in lower case;
+		now sortname entry is tempname;
 	sort the table of game objects in sortname order;
 	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
@@ -2277,23 +2279,6 @@ Carry out trading:
 		if q matches the regular expression printed name of the noun, case insensitively:
 			remove entry number from invent of the player;
 			break;
-
-instead of trading the demon seed when the current action involves the ronda:
-	if hp of Ronda is 0:
-		say "     Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
-		delete demon seed;
-		remove ronda from play;
-		now hp of ronda is 1;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Slut Rat":
-				now area entry is "Mall";
-				break;
-		extend game by 16;
-		increase score by 20;
-		now lastfuck of Rod is turns;
-	otherwise:
-		say "     You think it'd probably be best if you didn't give that to Ronda.  It could start this whole mess over again.";
 
 This is the sex change rule:
 	choose row monster from the table of random critters;
@@ -4379,65 +4364,7 @@ When play ends:
 			
 Book 8 - People
 
-Rod Mallrat is a person. "A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the broken sewer drain[at random].".
-The description of rod mallrat is "Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium].  He's looking a little dishevelled of late[end if]. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.".
-Rod is a trader.
-Rod Mallrat is in Mall FoodCourt.
-
-The conversation of Rod Mallrat is { "empty" };
-
-instead of conversing Rod Mallrat:
-	if hp of Ronda is 0:
-		say "     [one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
-	otherwise if hp of Ronda is 1 or hp of Ronda is 2:
-		say "     [one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Watch out for those infected rats.   Dunno where they came from, but they're bad news.  The rats they get don't come back.'[or]'Sup?'[at random]";
-	otherwise if hp of Ronda is 3:
-		say "     [one of]'So, will you help me out?'[or]'Have you gone to find out what the dog-woman in the shop needs to help Ronda?'[or]'You should go visit Nermine and see what she needs.  You promised you'd help fix Ronda.'[at random]";
-	otherwise if hp of Ronda is 4 or hp of Ronda is 5:
-		say "     [one of]'Don't give up.  Please keep looking for the stuff Nermine needs.'[or]'Thanks for helping me out.'[or]'Have you had any luck in finding the stuff to help Ronda?'[or]'Remember, she wanted something from a lizard girl at the park and the awesomest fruit you can find.'[at random]";
-	otherwise if hp of Ronda is 6:
-		say "     'Thanks for helping me out.  Good luck finding that other stuff.'[line break]";
-	otherwise if hp of Ronda is 7:
-		say "     'Dude!  Bring that to Nermine.";
-	otherwise if hp of Ronda is 8:
-		if Slutrat den is unknown:
-			say "     'Now comes the tough part, dude.  You'll need to find the nest of those infected rats and all like black-ops infiltrate the place.  They drag off anyone they beat, so the best way would be to let them catch you and see if you can learn the way there.  I'd totally do it myself, but no rat they take ever makes it back.'";
-		otherwise:
-			say "     'Well, since you know how to find them, now we need to figure out which one of them is Ronda.  That'll be trickier.  She's got a tattoo of a red heart on her thigh right by her... you know.  She did it back when we started going out, before we became professional mall rats instead of just human ones.  But the tattoo's still there, giving her a red patch of fur[if pooltable of slutrat den is 3].'  Having gotten well acquainted with both Eight-Ball and Skeeball, you know neither of them have a mark like that.  Nor have any of the others you've spotted.  But that's only a handful of slut rats out of a few dozen who come and go[otherwise].'  Having spent some time with several of the slut rats, you've not spotted any of them with a mark like that yet.  But that's only a handful out of a few dozen who come and go[end if].";
-			say "     'You'll need to cozy up to the rats until you find Ronda,' he continues.  'Once you find her, get her somewhere alone and give her the stuff.  Use these chocolates, bud.  They're her fave.  Just be careful.  We'll only get one shot at this.'";
-			now hp of Ronda is 9;
-	otherwise if hp of Ronda is 9:
-		say "     'Please keep looking for my dear, sweet Ronda.  She's got a heart-shaped mark right here,' he says, tapping at his inner thigh.";
-	otherwise if hp of Ronda is 10:
-		say "     [one of]'Thanks for helping out with Ronda.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, keep an eye on those rats.  They're still down there.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[or]'It's good to have Ronda back, but man! does she ever play rough now,' he says, rubbing his backside.[or]'Ronda and I really appreciate all your help getting us back together.'[or]'It's so nice having Ronda back.  Though her new... ummm... you know... Got to get used to that.'[or]'I'm so happy that Ronda's back safe and sound.'[at random]";
-	otherwise if hp of Ronda is 99:
-		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I could use something to tinker with to take my mind off things.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Please be careful.  We don't want to lose you too.'[or]'Sup?'[at random]";
-	otherwise:
-		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Sup?'[at random]";
-
-
-Ronda Mallrat is a person. "[if hp of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note.[otherwise]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]."
-The description of Ronda Mallrat is "[rondadesc]";
-The conversation of Ronda is { "empty" }.
-Ronda Mallrat is in Mall Atrium.
-
-instead of conversing Ronda Mallrat:
-	if hp of Ronda is 0:
-		say "[one of]'Hey there, sugar, you just call me Ronda.'[or]'You meet Rod? He's my boy. You be nice to him, or I will be very... upset.'[or]'Those clothes are out of date, hon.  You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[at random]";
-	otherwise if hp of Ronda > 0 and hp of Ronda < 10:
-		say "ERROR-Ronda-[hp of Ronda]T: You should not be able to converse with Ronda at this point.";
-	otherwise if hp of Ronda is 10:
-		say "[one of]'Those clothes are out of date, hon.  You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[or]'Thanks again for the assist,' she says.[or]'Me and the girls are getting along really well since I got back.  [']Really['] well,' she says with a wink and a grin.[or]'Have you met Lucy?' she asks, hugging one of the rat girls nearby.  'We've become good friends since I got back.'  Lucy smiles and runs her paw discretely over Ronda's lap.[or]'Rod's such a good boy.  Knows his place.'[at random]";
-
-
-to say rondadesc:
-	if hp of Ronda is 0:
-		say "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.";
-	otherwise if hp of Ronda is 10:
-		say "Ronda is mostly back to her old self, outwardly looking much the same, if perhaps a few inches taller.  She has wide hips, a narrow waist and a good-sized bust, all covered in the latest of mall rat fashions.  She wears a bright button that says 'Large and in charge!'  Hmmm.  Her naked, pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.  If anything, she seems even sexier than before her disappearance.  She certainly seems more popular, with a gaggle of giggling girls around her at all times as she [one of]talks about fashion[or]talks about boys[or]talks about her exciting adventure under the mall[or]talks about music[or]gossips with them[at random].";
-	otherwise:
-		say "ERROR-Ronda-[hp of Ronda]L: You should not be able to converse with Ronda at this point.";
-
+[Rod and Ronda Mallrat have been moved to the RodAndRonda file]
 
 To Extend game by (x - a number):
 	decrease targetturns by x;
@@ -4607,9 +4534,9 @@ Include Down Under Pub by Stripes.
 Include Kitsune Hide Away by Kaleem mcintyre.
 
 [Quests & Events]
-[ Include Researcher Studio by Kaleem Mcintyre.]
+[Include Researcher Studio by Kaleem Mcintyre.]
 Include Warehouse District by Kaleem Mcintyre.
-[ Include Pursuit of Science by Kaleem Mcintyre.]
+[Include Pursuit of Science by Kaleem Mcintyre.]
 Include Fire House by Kaleem Mcintyre.
 [Include Important Research Quests by Kaleem Mcintyre.]
 [Include Reservoir by Kaleem Mcintyre.]
@@ -4814,6 +4741,7 @@ Include Candy Striper by Stripes.
 [NPCs]
 Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
+Include RodAndRonda by Stripes.
 Include Tanuki by Nuku Valente.
 Include Mouse Taur by Nuku Valente.
 Include Deer by Nuku Valente.
