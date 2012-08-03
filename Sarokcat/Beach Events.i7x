@@ -19,18 +19,17 @@ Instead of resolving a Beach bum:
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
 			choose row bumtrade from the table of random critters;
 			if there is a loot entry:
-				if loot entry is not " ":
+				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "you acquired 1 [loot entry]";
 				otherwise:
 					add "dirty water" to invent of player;
 					say "you acquired some dirty water.";
 			increase bbum by 1;
-			stop the action;
 		otherwise:
-			say "The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably wont be seeing him around here much longer...";
+			say "The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably won't be seeing him around here much longer...";
 			Now Beach bum is resolved;
-	if bbum is 1:
+	otherwise if bbum is 1:
 		say "Traveling along the long beach you once again see the strange pile of junk and bits of ship wreckage that mark the location of the strange beach bum.  Recalling your bargain with the strange person, you trudge over to see if you have anything he might want to trade for.";
 		if "chips" is listed in invent of player:
 			say "Spying something he definitely wants, the beach bum moves more swiftly then you would normally have given him credit for, snatching your package of chips, and ripping it open before you can say a word.  In seconds it is stuffing chips into its mouth, pieces of chips flying everywhere and covering its cloth wrappings in bits of chip and grease.  Glancing up from its gruesome feast, the bum seems almost embarrassed as it offers you several items from its strange hoard.";
@@ -38,7 +37,7 @@ Instead of resolving a Beach bum:
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
 			choose row bumtrade from the table of random critters;
 			if there is a loot entry:
-				if loot entry is not " ":
+				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "you acquired 1 [loot entry]";
 				otherwise:
@@ -47,26 +46,24 @@ Instead of resolving a Beach bum:
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
 			choose row bumtrade from the table of random critters;
 			if there is a loot entry:
-				if loot entry is not " ":
+				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "you acquired 1 [loot entry]";
 				otherwise:
 					add "dirty water" to invent of player;
 					say "you acquired some dirty water.";
-			stop the action;
-		if "food" is listed in invent of player:	
+		otherwise if "food" is listed in invent of player:	
 			say "Glancing through your stuff, the bum seems somewhat happy to have found some spare food, which they quickly swipe, before offering you a small item from their beach findings.";
 			delete food;
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
 			choose row bumtrade from the table of random critters;
 			if there is a loot entry:
-				if loot entry is not " ":
+				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "you acquired 1 [loot entry]";
 				otherwise:
 					add "dirty water" to invent of player;
 					say "you acquired some dirty water.";
-			stop the action;
 		otherwise:
 			say " After taking a look at what you have available, the strange bum sighs and shakes its cloth wrapped head sadly,  apparently finding nothing edible amongst your offerings.  The strange creature waves you away, and feeling somewhat relieved you continue along the beach";
 
