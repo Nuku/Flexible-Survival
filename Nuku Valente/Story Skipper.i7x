@@ -596,7 +596,7 @@ Carry out reciting:
 						move Rod Mallrat to Mall FoodCourt;
 					if hp of Ronda is 100:
 						move Ronda Mallrat to SlutRat Den;
-						move Rod Mallrat to SlutRat Den
+						move Rod Mallrat to SlutRat Den;
 					if hp of Ronda > 0:
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
