@@ -81,12 +81,6 @@ instead of sniffing Doctor Matt:
 	otherwise:
 		say "The doctor isn't here, and his tape recorder smells like old plastic.";
 
-instead of sniffing Rod:
-	say "Rod smells of rats and his mall home.";
-
-instead of sniffing Ronda:
-	say "Ronda smells of cheap perfume, rats and her mall home.";
-
 instead of sniffing grey abbey library:
 	say "The smell of books permeates the air in the library.  Smelling outside the doors, you can smell the scents of the city.  You catch numerous scents of lust and arousal on the breeze, including that of [one of]several lupine creatures[or]some sulfurous stink[or]a variety of canines[or]something like latex[or]a feline in heat[at random].";
 
