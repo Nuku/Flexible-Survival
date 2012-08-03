@@ -481,7 +481,7 @@ instead of sniffing Organi Rod:
 
 
 
-
+[  -  trigger unknown, temporarily removed
 when play ends:
 	if humanity of player < 9: 
 		say "Even though your mind is all but gone you do remember a red headed female with golden eyes that you helped out before. Taking some time to go back to the plains in an effort to relocate the other you end up finding an abandoned house right where you were sure the red head once lived. Sniffing the place and going inside to find no trace of anyone you leave without a second thought as you come to the conclusion that you must have imagined the entire thing.";
@@ -489,7 +489,7 @@ when play ends:
 		say "After the military rolls into town you find yourself going back to Omio's studio to look for the red head. What you find upon crossing the plains is an empty studio that looks as though it hadn't seen much use in maybe ten years? Odd since the garden outside seems as though it has been watered very recently. Not understanding this you search around the place, calling out for Omio as you do so, without much success in locating the red head.[line break]"; 
 		say "When you finally decide to give up almost thirty minutes later you stumble across something shining on the ground several steps away from the house. Kneeling down and picking up the thing you realize that you've found a mini GPS unit. Turning on the power of the little machine you blink in awe as a set of directions flash in front of your face with the destination name 'Prometheus Prison' glowing faintly above the coordinates.[line break]";
 		say "Could Omio have left this behind for you? And if so, what happened to the red head to make her neutralize her presence here so efficiently?";
-
+]
 
 
 Pusuit of Science ends here.
