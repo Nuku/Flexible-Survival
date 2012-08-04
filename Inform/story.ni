@@ -3042,7 +3042,7 @@ To fight:
 			hardmodeboost;
 		now monsterhp is hp entry;
 		say "You run into a [name entry].[line break][desc entry].";
-		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1:
+		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1 and inasituation is false:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
 			if the player consents:
 				now combat abort is 1;
@@ -4734,6 +4734,7 @@ Include Gargoyle by Kaleem mcintyre.
 Include Manticore by Kaleem mcintyre.
 Include Minotaur by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
+Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
 
