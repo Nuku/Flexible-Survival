@@ -294,6 +294,16 @@ instead of examining a grab object(called x):
 
 Does the player mean examining a situation: it is very unlikely.
 
+Section Starting Variables
+
+[ See the Default Settings/Presets.i7x file for personalizing your defaults. ]
+
+startgenderchoice is a number that varies.
+startstatbonus is a number that varies.
+startscenariochoice is a number that varies.
+freefeatgeneral is a text that varies.
+freefeatfun is a text that varies.
+hypernull is a number that varies. 
 
 Book 2 - Places
 
@@ -4809,11 +4819,6 @@ instead of going through a dangerous door(called X):
 		clear the screen;]
 	[try looking.]
 
-Section Starting Variables
-
-[ See the Default Settings/Presets.i7x file ]
-
-
 Part Game Options
 
 Game Options is a room.  The description of Game Options is "     Game start settings:[roman type][line break][startstatsstatus][line break][startgenderstatus][line break][startscenariostatus][line break][startfeatsstatus][line break][startbannedstatus][line break]Game start settings take effect when you [bold type][link]push start button[end link].[line break][roman type]     [header-style]Display settings:[roman type][line break][starthyperstatus][line break][startwaitsstatus][line break][startclearsstatus][line break]Display settings take effect instantly and can be toggled on and off as you see fit.";
@@ -4982,7 +4987,7 @@ To startFunFeatget: [alternate funfeatget used for start]
 To start button: [options are set, begin game]
 	now started is 1; [make start as being done.  makes leveling/etc work right]
 	follow the random stats rule; [set stats to base for game]
-	move player to bunker; [relocate for start]
+	move player to bunker, without printing a room description.; [relocate for start]
 	startstatbonus; [apply stat bonus]
 	startgender; [apply gender stats]
 	startscenario; [sets scenario for use in introstorytext]
@@ -5121,7 +5126,8 @@ To startscenario: [sets scenario for use in introstorytext]
 	otherwise if startscenariochoice is 6:
 		now scenario is "Hard mode";
 	otherwise:
-		say "Invalid scenario choice, defaulting to [']Bunker[']";
+		now scenario is "Bunker";
+		say "Invalid scenario choice, defaulting to [']Bunker['][line break]";
 
 To startfreefeats: [gives free feats]
 	now autofeatloading is true;			[temporarily skips asking permission to add preset feats]
@@ -5418,6 +5424,6 @@ When play begins:
 		prealternatestartstats; [sets stats to prevent oddities from alternate start]
 		say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 		say "[line break]Welcome to...";
-		move the player to Game Options, without printing a room description. ; [puts player in room for options, prevents displaying of look text?]
+		move the player to Game Options, without printing a room description.; [puts player in room for options, prevents displaying of look text]
 	otherwise:
 		regularstart; [original start method.  easier to move everything then leave here]
