@@ -173,6 +173,8 @@ instead of addfeating the fun feats:
 	if "Horny Bastard" is not listed in feats of player:
 		addfeat "Cold Fish" with "Your libido will decrease over time.";
 	addfeat "Control Freak" with "When you win a battle, you may choose if you wish to engage in the post battle activities or not.";
+	if "Female Preferred" is not listed in feats of player and "Sterile" is not listed in feats of player:
+		addfeat "MPreg" with "You can now be impregnated and give birth as a male/neuter (egg laying).";
 	if "Breeding True" is not listed in feats of player and "Sterile" is not listed in feats of player:
 		addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
 	if "They Have Your Eyes" is not listed in feats of player and "Sterile" is not listed in feats of player:

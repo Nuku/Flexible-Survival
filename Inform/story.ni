@@ -294,6 +294,7 @@ instead of examining a grab object(called x):
 
 Does the player mean examining a situation: it is very unlikely.
 
+
 Section Starting Variables
 
 [ See the Default Settings/Presets.i7x file for personalizing your defaults. ]
@@ -304,6 +305,7 @@ startscenariochoice is a number that varies.
 freefeatgeneral is a text that varies.
 freefeatfun is a text that varies.
 hypernull is a number that varies. 
+
 
 Book 2 - Places
 
@@ -1327,12 +1329,12 @@ does the player mean doing something with the medkit: it is very likely.
 carry out Inventorying:
 	sort invent of player;
 	let dseed be 0;
-	let tempname be indexed text;
+[	let tempname be indexed text;
 	repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
 		now tempname is name entry in lower case;
 		now sortname entry is tempname;
-	sort the table of game objects in sortname order;
+	sort the table of game objects in sortname order;	]
 	if "demon seed" is listed in invent of player, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
 	if the number of entries in invent of player is greater than 0:
@@ -1443,27 +1445,34 @@ To Birth:
 	let infection be "";
 	if "Maternal" is listed in feats of player:
 		increase morale of player by 3;
-	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is skinname of child;
 	otherwise:
 		now infection is skinname of player;
 	now skinname of child is infection;
-	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is bodyname of child;
 	otherwise:
 		now infection is bodyname of player;
 	now bodyname of child is infection;
-	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is tailname of child;
 	otherwise:
 		now infection is tailname of player;
 	now tailname of child is infection;
-	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is facename of child;
 	otherwise:
 		now infection is facename of player;
 	now facename of child is infection;
-	say "Your child suckles at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your body. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+	if cunts of player > 0:
+		say "Your child suckles at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+	otherwise if breasts of player > 0:
+		say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body.  Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+	otherwise:
+		say "Your child pushes free of the shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child.  It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring.  As it feeds, it grows rapidly against you as strange sensations sweep over your body.  Not only nutrition but personality and knowledge seep through the nipple into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+		increase hunger of player by 3;
+		increase thirst of player by 3;
 	add facename of child to childrenfaces;
 	add bodyname of child to childrenbodies;
 	add skinname of child to childrenskins;
@@ -1473,7 +1482,7 @@ To Birth:
 	now the gestation of child is 0;
 
 To impregnate with (x - text):
-	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2:
+	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
 		stop the action;
 	if "Selective Mother" is listed in feats of player:
 		say "Do you wish to be impregnated with a [x] child?";
@@ -1484,30 +1493,34 @@ To impregnate with (x - text):
 			stop the action;
 	now gestation of child is a random number from 24 to 48;
 	let infection be "";
-	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is x;
 	otherwise:
 		now infection is skinname of player;
 	now skinname of child is infection;
-	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is x;
 	otherwise:
 		now infection is bodyname of player;
 	now bodyname of child is infection;
-	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is x;
 	otherwise:
 		now infection is tailname of player;
 	now tailname of child is infection;
-	if ( a random number from 1 to 100 is greater than 50 or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
+	if ( a random chance of 1 in 2 succeeds or "Breeding True" is listed in feats of player ) and "They Have Your Eyes" is not listed in feats of player:
 		now infection is x;
 	otherwise:
 		now infection is facename of player;
 	now facename of child is infection;
-	say "[line break]You have an odd feeling, a palpable wave of contentment from within your lower belly.";
-	
+	if cunts of player > 0:
+		say "[line break]You have an odd feeling, a palpable wave of contentment from within your lower belly.";
+	otherwise:
+		say "[line break]There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
+
+
 to say impregchance:
-	if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
+	if ( cunts of player > 0 or "MPreg" is listed in feats of player ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
@@ -3284,10 +3297,14 @@ carry out exploring:
 restoration is a number that varies.
 balloversize is a number that varies.
 skipturnblocker is a number that varies.
+mpregcount is a number that varies.
 
 Everyturn rules is a rulebook.
 
 This is the turnpass rule:
+	follow the cock descr rule;
+	follow the cunt descr rule;
+	follow the breast descr rule;
 	now gascloud is 0;
 	if breast size of player is greater than 26, now breast size of player is 26;
 	let oldlib be libido of player;
@@ -3485,26 +3502,74 @@ This is the turnpass rule:
 		if "Fertile" is listed in feats of player and a random chance of 1 in 2 succeeds, decrease gestation of child by 1;
 		if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds, decrease gestation of child by 1;
 		if gestation of child is less than 5:
-			say "Your belly protrudes in a firm dome of pregnancy, full of some unborn being, waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
-			if a random chance of 1 in 10 succeeds:
+			if cunts of player > 0:
+				say "Your [bodytype of player] belly protrudes in a firm dome of pregnancy, full of some unborn being, waiting to see the world, such as it is. Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
+			otherwise:				[MPreg]
+				say "Your [bodytype of player] belly protrudes in a firm dome from your [if cocks of player > 0]male[otherwise]neuter[end if] pregnancy, full with growing life which will soon emerge into the world.  Somehow, perhaps due to the nanites, you don't feel at all hindered despite being bloated.";
+			if a random chance of 1 in 10 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
 				increase breast size of player by 1;
 				follow breast descr rule;
-				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
+				if cunts of player > 0:
+					say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
+				otherwise:
+					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.  Pinching your nipples causes a little of the milk to feed the child growing inside you to dribble out.";
 		otherwise if gestation of child is less than 10:
-			say "Your body is somewhat rounded with the effects of your oncoming pregnancy. It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
+			if cunts of player > 0:
+				say "Your [bodydesc of player] body is somewhat rounded with the effects of your oncoming pregnancy. It is progressing with worrying speed, but a warm sense of fulfillment keeps fear at bay.";
+			otherwise:
+				say "Your [bodydesc of player] body is somewhat enlarged by the effects of your unusual pregnancy.  It is progressing with worrying speed, but a strange sense of fulfillment keeps fear at bay.";
 			increase morale of player by 1;
-			if a random chance of 1 in 20 succeeds:
+			if a random chance of 1 in 20 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
 				increase breast size of player by 1;
 				follow breast descr rule;
-				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
+				if cunts of player > 0:
+					say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
+				otherwise:
+					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts on your [bodytype of player] body.";
 		otherwise if gestation of child is less than 30:
-			if a random chance of 1 in 2 succeeds, say "Warm tingles gently run through your lower belly.";
-			if a random chance of 1 in 30 succeeds:
+			if a random chance of 1 in 2 succeeds:
+				if cunts of player > 0:
+					say "Warm tingles gently run through your lower belly.";
+				otherwise:
+					say "You feel a soft shifting of something inside your lower belly.";
+			if a random chance of 1 in 30 succeeds and ( cunts of player > 0 or breast size of player > 0 ):
 				increase breast size of player by 1;
 				follow breast descr rule;
-				say "Your breasts feel especially tender, swollen with your condition, now [descr], the [skin of player] flesh stretched lightly.";
-		if gestation of child is less than 1 and cunts of player is greater than 0 and skipturnblocker is 0:
-			say "With a sudden pouring of fluids, birth is upon you. You settle without much choice, breathing quickly as your body spasms in readiness. ";
+				if cunts of player > 0:
+					say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of player], the mammary flesh stretched lightly.";
+				otherwise:
+					say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if cocks of player > 0]male[otherwise]neuter[end if], now [breast size desc of player] breasts.";
+		if gestation of child is less than 1 and ( cunts of player is greater than 0 or "MPreg" is listed in feats of the player ) and skipturnblocker is 0:
+			if cunts of player > 0:
+				say "With a sudden pouring of fluids, birth is upon you. You settle without much choice, breathing quickly as your body spasms in readiness. ";
+			otherwise:
+				say "There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels.  With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
+			follow cunt descr rule;
+			if cunts of player > 0:
+				if cunt width of player is greater than 10:
+					say "Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated [bodytype of player] body easily slipping the child free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
+					increase morale of player by 5;
+				otherwise if cunt width of player is greater than 3:
+					say "You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the newborn from your [descr] birthing canal. It is not as painful as the movies make out, and after about twenty minutes, the child is ready to be held by you. You feel tired, but whole, and satisfied.";
+					increase morale of player by 5;
+				otherwise:
+					say "Horrible pain lances through your body as your [descr] sex disgorges the child only after what feels like hours of struggle. Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
+					now hp of player is 1;
+					decrease morale of player by 10;
+			otherwise if cunts of player > 0:
+				if mpregcount < 3:			[First few times, painful]
+					say "Shifting the large mass through your lower colon and sends horrible pain through your body as it struggles to adapt to this method of birthing.  You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg.  Your body squeezes and pushes as your [bodydesc of player] body is covered in sweat and you have a grimace of pain on your [facename of player] face with each painful shifting inside you.  By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the soccer-ball-sized egg from your ass.  Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
+					now hp of player is 1;
+					decrease morale of player by 10;
+					increase mpregcount by 1;
+				otherwise if mpregcount < 6:		[Next few times, struggle]
+					say "As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labour, working to nudge the large egg onwards, working to expell it from your anus.  It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process.  After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if cocks of player > 0]male[otherwise]neuter[end if] body feels a rush of pride at having created a new life.  You hold the big egg in your arms, cradling it as the shell starts to crack.";
+					increase morale of player by 5;
+					increase mpregcount by 1;
+				otherwise:					[After that, easy]
+					say "Your well-practiced body has little trouble with the shifting and releasing of the egg within you.  You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus.  The egg pops free with some effort at the last step, but process actually comes with considerable pleasure[if cocks of player > 0], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if].  As you pull the rocking, cracking egg into your arms, you can't help but feel considerable pride at what your [if cocks of player > 0]male[otherwise]neuter[end if] body has accomplished.";
+					increase morale of player by 5;
+					increase mpregcount by 1;
 			let z be 1;
 			let fer be 0;
 			if "Fertile" is listed in feats of player:
@@ -3522,23 +3587,14 @@ This is the turnpass rule:
 			if a random chance of fer in 100 succeeds:
 				increase z by 1;
 			if z > 4, now z is 4;		[extra chance, still limited to 4]
-			follow cunt descr rule;
-			if cunt width of player is greater than 10:
-				say "Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated body easily slipping the child free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
-				increase morale of player by 5;
-			otherwise if cunt width of player is greater than 3:
-				say "You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the newborn from your [descr] birthing canal. It is not as painful as the movies make out, and after about twenty minutes, the child is ready to be held by you. You feel tired, but whole, and satisfied.";
-				increase morale of player by 5;
-			otherwise:
-				say "Horrible pain lances through your body as your [descr] sex disgorges the child only after what feels like hours of struggle. Your [skin of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
-				now hp of player is 1;
-				decrease morale of player by 10;
 			if z is 2:
 				say "Twins![line break]";
 			otherwise if z is 3:
 				say "Triplets![line break]";
+				if cunts of player is 0, increase mpregcount by 1;	[more mpreg practice]
 			otherwise if z is 4:
 				say "Quadruplets![line break]";
+				if cunts of player is 0, increase mpregcount by 1;	[more mpreg practice]
 			repeat with y running from 1 to z:
 				now child is born;
 				Birth;
@@ -4819,6 +4875,7 @@ instead of going through a dangerous door(called X):
 		clear the screen;]
 	[try looking.]
 
+
 Part Game Options
 
 Game Options is a room.  The description of Game Options is "     Game start settings:[roman type][line break][startstatsstatus][line break][startgenderstatus][line break][startscenariostatus][line break][startfeatsstatus][line break][startbannedstatus][line break]Game start settings take effect when you [bold type][link]push start button[end link].[line break][roman type]     [header-style]Display settings:[roman type][line break][starthyperstatus][line break][startwaitsstatus][line break][startclearsstatus][line break]Display settings take effect instantly and can be toggled on and off as you see fit.";
@@ -4987,7 +5044,7 @@ To startFunFeatget: [alternate funfeatget used for start]
 To start button: [options are set, begin game]
 	now started is 1; [make start as being done.  makes leveling/etc work right]
 	follow the random stats rule; [set stats to base for game]
-	move player to bunker, without printing a room description.; [relocate for start]
+	move player to bunker, without printing a room description; [relocate for start]
 	startstatbonus; [apply stat bonus]
 	startgender; [apply gender stats]
 	startscenario; [sets scenario for use in introstorytext]
@@ -5126,8 +5183,8 @@ To startscenario: [sets scenario for use in introstorytext]
 	otherwise if startscenariochoice is 6:
 		now scenario is "Hard mode";
 	otherwise:
-		now scenario is "Bunker";
 		say "Invalid scenario choice, defaulting to [']Bunker['][line break]";
+		now scenario is "Bunker";
 
 To startfreefeats: [gives free feats]
 	now autofeatloading is true;			[temporarily skips asking permission to add preset feats]
@@ -5262,7 +5319,8 @@ To introstorytext: [plays intro text and starts game.  also applies most (all?) 
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.[line break][line break]";
+		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and prepare to set out.[line break][line break]";
+	try looking;
 	zephyrad rule in 1 turn from now;
 
 To regularstart: [normal start method]
@@ -5345,7 +5403,7 @@ To regularstart: [normal start method]
 		say "You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot. Some fought back. You did what you could, but you managed to get here, to safety. The bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and set out.";
+		say "No one else ever arrived. Ah well, you're an American of the 21st century. What's a little Apocalypse to keep you down? Steeling your nerves and readying what little supplies you have, you break the seal and prepare to set out.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "[line break]Welcome to...";
@@ -5396,7 +5454,7 @@ to say promptsay:
 	say "[link]area[as]look[end link]";
 	say "[line break]>";
 
- When play begins:
+When play begins:
 	repeat with x running through situations:
 		now x is a part of the player;
 	repeat with x running through grab objects:
@@ -5404,10 +5462,16 @@ to say promptsay:
 	now the command prompt is "[promptsay]";
 [	now the command prompt is "Location: [the player's surroundings] XP:[xp of player]/[level up needed] Lvl: [level of player] HP:[hp of player]/[maxhp of player][line break]Exits: [List of Valid Directions] Hunger: [hunger of player] Thirst: [thirst of player] Score:[score]/[maximum score][line break][list of valid directions][if location of player is fasttravel], [bracket]nav, scavenge, explore[close bracket][end if]>";]
 
+
 When play begins:
 	adjustdefaulthelp; [adjusts help menu]
+	let tempname be indexed text;
 	repeat with q running from 1 to the number of rows in the table of game objects:
 		add name in row Q of table of game objects to allobjs;
+		choose row q in the table of game objects;
+		now tempname is name entry in lower case;
+		now sortname entry is tempname;
+	sort the table of game objects in sortname order;
 	change the right hand status line to "[list of valid directions]";
 	say "Some questions before getting into the game...";[warn the player what to expect next]
 	say "Do you want hyperlinks? (Y/n)";
@@ -5424,6 +5488,6 @@ When play begins:
 		prealternatestartstats; [sets stats to prevent oddities from alternate start]
 		say "Want more details on the game and updates? ----- [bold type]http://nukuv.blogspot.com/[roman type]  ------";
 		say "[line break]Welcome to...";
-		move the player to Game Options, without printing a room description.; [puts player in room for options, prevents displaying of look text]
+		move the player to Game Options, without printing a room description; [puts player in room for options, prevents displaying of look text?]
 	otherwise:
 		regularstart; [original start method.  easier to move everything then leave here]
