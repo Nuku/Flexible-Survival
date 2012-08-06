@@ -610,10 +610,6 @@ to win:
 		decrease lootchance entry by z;
 	vialchance (name entry);
 	let reward be lev entry * 2;
-[	if lev entry is greater than 4:
-		now reward is reward * 2;
-	if lev entry is greater than 8:
-		now reward is reward * 2;	]
 	if lev entry > 2, increase reward by 1;
 	if lev entry > 4, increase reward by ( lev entry / 4 );
 	if lev entry > 8, increase reward by ( lev entry / 3 );

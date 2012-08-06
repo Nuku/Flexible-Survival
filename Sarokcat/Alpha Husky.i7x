@@ -43,7 +43,7 @@ to say Alpha Husky attack:
 			say "'That[']s right.' He draws away and slides down, lifting one of your [body of player] legs up and sliding up between. His already rock hard shaft presses up against your back door without preperation. Despite this, he enters as smooth as silk, and begins to mate with you in slow, deep motions, rocking you against the ground with soft growls of affection and ownership.";
 			say "The rest of the world feels less important then, just that you are satisfying the alpha, your alpha, and that you are being the best pack bitch you could be. His words say as much, whispering just how good of a bitch you are as he gives a sudden slam up into you, filling you with his hungry husky cock. His hands move to your belly again, one settling there as the other cradles your hips, holding you up against his potent strokes.";
 			say "Soft but firm paw rubs slowly at you, in varying circles that seems to enhance the pressure and pleasure of his dick pressing deep into your bowels, driving you ever faster towards climax as he tenses. The sensations are too intense, as if you should have already cum, but simply cannot, waiting for some que. He locks to you, motions becoming faster, but shorter, as the tight ring of your ass holds firm to his knot, only allowing him precious little motion to jerk back and forth. Each pull flashes stars before your eyes in the ever building intensity.";
-			say "He explodes powerfully into you, and your body unwinds along with your mind. Everything melts away as you are washed away in the pleasure of it, unloading yourself entirely in his caring grasp. This time he waits for you, and kisses you once before he departs, 'Just think how much nicer it will be.'";
+			say "He explodes powerfully into you, and your body unwinds along with your mind. Everything melts away as you are washed away in the pleasure of it, unloading yourself entirely in his caring grasp. This time he waits for you, and kisses you once before he departs, 'Just think how much nicer it will be once you give in and be a proper bitch for me.'";
 			decrease humanity of player by 20;
 			if humanity of player is less than 10:
 				end the game saying "[alpha husky bitch]";
@@ -52,12 +52,7 @@ to say Alpha Husky attack:
 		infect "Female Husky";
 	if husky gathering is resolved and fertile pill is owned:
 		say "You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers and you proceed back to safer grounds.";
-		let number be 0;
-		repeat with Q running through invent of the the player:
-			increase number by 1;
-			if q matches the regular expression printed name of fertile pill, case insensitively:
-				remove entry number from invent of the player;
-				break;
+		delete Fertile Pill;
 		now husky gathering is unresolved;
 			
 husky gathering is a situation. It is resolved.
