@@ -88,6 +88,8 @@ understand "look through books" as browsebooks;
 understand "read books" as browsebooks;
 understand "read a book" as browsebooks;
 
+lastbookshelves is a number that varies.
+
 check browsebooks:
 	If bookshelves is not visible, say "Nani desu ka?" instead;
 	if lastbookshelves - turns < 8, say "You should really go take care of other stuff instead of spending all your time reading." instead;

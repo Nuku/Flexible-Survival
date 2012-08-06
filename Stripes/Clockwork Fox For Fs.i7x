@@ -59,7 +59,7 @@ to say beatthecfguy:
 	say "     The defeated clockwork fox guy winds down further and collapses to the floor.  He moans weakly with a few clicks and whirrs as he tries to get back up, but is too run down to do so";
 	if cockname of player is "Clockwork Fox" and cunts of player > 0:
 		say ".  Your mechanically driven pussy responds to the poor creature's need and grows wet with oily lubricant.  You climb atop him and guide his metallic member into your pussy, enjoying the soft, music box chimes he releases.  You ride your hips up and down over his metallic flesh, sliding your well-lubricated mechanism over it.  You can feel his member growing warmer as you fuck him.  His internal mechanism meshes with yours and your motions and his come into synch and move with a gradually increasing pace.  As you wind the weakened fox back up, he smiles up at you and runs his paws over your body, caressing you in thanks.  Once his mainspring is taut and your mechanism is wound back up, you and he mesh fully and you reach your peak together.  Your wet lubricant flows out, coating his semi-mechanical groin as he pumps his oily seed deep inside to fill you.  You both release chiming, music box tones intermixed with your moans and groans of lustful pleasure, then separate.  Fully wound once more, the mechanical fox guy gives you a peck on the cheek and heads down the halls, moving with smooth, mechanical grace that he lacked when you first encountered him.[impregchance]";
-		increae morale of player by 2;
+		increase morale of player by 2;
 		decrease humanity of player by 2;
 	otherwise:
 		say ".  You decide to take this opportunity to make your escape, leaving him to be enjoyed by the mechanical vixens (or any of the other creatures) you've seen around the museum.";
