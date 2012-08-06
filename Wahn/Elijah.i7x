@@ -1,5 +1,5 @@
 Version 1 of Elijah by Wahn begins here.
-[Version 1.3: New sex w/Elijah+Sven M/F/M]
+[Version 1.4: New sex w/Elijah+Candy M/F/M]
 "Adds an NPC named Elijah to the Flexible Survival game"
 
 [ HP states of Elijah                                                ]
