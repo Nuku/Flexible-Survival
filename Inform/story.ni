@@ -1514,13 +1514,37 @@ To impregnate with (x - text):
 		now infection is facename of player;
 	now facename of child is infection;
 	if cunts of player > 0:
-		say "[line break]You have an odd feeling, a palpable wave of contentment from within your lower belly.";
+		say "[line break]     You have an odd feeling, a palpable wave of contentment from within your lower belly.";
 	otherwise:
-		say "[line break]There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
+		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
 
 
-to say impregchance:
+to say impregchance:		[to be used when either female or MPreg would work]
 	if ( cunts of player > 0 or "MPreg" is listed in feats of player ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
+		let target be 10;
+		if insectlarva is true:
+			increase target by 2 + larvaegg;
+		if "Fertile" is listed in feats of player, decrease target by 3;
+		if inheat is true, decrease target by 3;
+		choose row monster from the table of random critters;
+		if a random chance of 2 in target succeeds, impregnate with name entry;
+		now the libido of the player is (the libido of the player) / 2;
+
+
+to say mimpregchance:		[to be used when only MPreg would work]
+	if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player and larvaegg is not 2:
+		let target be 10;
+		if insectlarva is true:
+			increase target by 2 + larvaegg;
+		if "Fertile" is listed in feats of player, decrease target by 3;
+		if inheat is true, decrease target by 3;
+		choose row monster from the table of random critters;
+		if a random chance of 2 in target succeeds, impregnate with name entry;
+		now the libido of the player is (the libido of the player) / 2;
+
+
+to say fimpregchance:		[to be used when only female pregnancy would work]
+	if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
@@ -4249,8 +4273,7 @@ to weakrandominfect:			[does not bypass researcher protection]
 	infect;
 
 
-
-to say randomimpreg:
+to say randomimpreg:		[Use when either would work]
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from table of random critters;
@@ -4261,6 +4284,32 @@ to say randomimpreg:
 			next;
 		break;
 	say "     [Impregchance]";
+
+
+to say randommimpreg:		[Use when only MPreg would work]
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	say "     [mimpregchance]";
+
+
+to say randomfimpreg:		[Use when only female pregnancy would work]
+	sort table of random critters in random order;
+	now monster is 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
+	say "     [fimpregchance]";
 
 
 Section x - Debug Commands - Not for release

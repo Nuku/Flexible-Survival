@@ -41,8 +41,7 @@ instead of conversing the Beverly:
 		if house cat is tamed:
 			say "     Beverly looks up from her book and smiles as you walk into the store. 'How are you doing out there?' Telling her you are doing fine, she sighs softly. 'I wish I was strong like you. Then I could go back to my place and find Turtle. I hate thinking about him being all alone...' Just as you are about to ask her who is she talking about, your pet cat appears out of nowhere, hops up onto the counter, and sits down with his tail curled around his legs. Blinking for a moment, Beverly tips her head and stares at him for a bit, her whiskers twitching in thought. 'Is that you Turtle?' she finally asks. When the cat turns to blink at Beverly, she claps her paws and happily laughs. 'It is you Turtle! Where did you find him?' You tell Beverly you found him wandering around outside then watch as she hesitantly reaches out to Turtle. He sniffs her paw a couple times before rubbing his head against it and purring loudly. Smiling wide, Beverly coos softly as she scratches his ears then laughs gently. 'I should have known my clever kitty would figure a way outside. You always did...' She scratches the bridge of Turtle[']s muzzle, his purring growing in volume, before turning her attention back to you. 'I think it[']d be best if he stayed with you.' Asking her if she is really fine with that, she nods and chuckles gently. 'He loves being outside so it wouldn[']t be fair to keep him cooped up in here. Besides, I don[']t think I could if I wanted to.' Smiling as you pet Turtle[']s back, you promise Beverly that you will take good care of him.";
 			now bevkitty is 1;
-			stop the action;
-	if bevsad is 1:
+	otherwise if bevsad is 1:
 		say  "     Getting the feeling you are being watched as you browse the books, you turn and look. With wide eyes, Beverly quickly turns back to the book she has in front of her when you glance her way. Do you go over to talk with her?";
 		if player consents:
 			say "     Feeling bad, you go over to the counter and gently clear your throat. When Beverly looks up, you apologize about earlier and ask if she wants to talk now. Her eyes brighten and she nods with a small smile. 'Yes... yes I would.' When she sees you[']re listening, she continues. 'I was an elementary school teacher that was working part-time in the evening here at the bookstore, when I could, to make ends meet.' She sighs softly, rests an elbow on the counter, and then rests her cheek in the palm of her dainty paw. 'I was closing one night when there was a commotion coming from the mall. Peeking out the door, I saw what looked like a small group of, at my first thought, was people dressed in animal costumes attacking customers and committing unspeakable acts with them.'";
@@ -50,11 +49,9 @@ instead of conversing the Beverly:
 			say "     'I felt all alone locked back there as my body continued to transform, made even worse when the power went out. Only when it felt like I had finished changing did I try to feel my way around, eventually finding my purse and digging out the mini-flashlight I had.' She returns her attention to you and smiles gently. 'Of course it was a bit of a shock when I first looked into a mirror and saw what was looking back at me. I looked like the mouse that had attacked me. After I recovered from my initial surprise, I got up enough nerve to come out of the storage room, to find humanoid rats wandering the mall. When they didn[']t attack me and genuinely asked if I was ok, did I calm enough to take stock of my situation. While I was getting things together I noticed that my tail was fur covered, so I got curious to see what I actually was, and found out after perusing a few books that I[']m actually a gerbil.' Beverly shakes her head slowly as she chuckles ruefully. 'Ever since my transformation I[']ve been here, too afraid to go outside the mall after hearing about some of the things running loose in the city. The rats have been nice enough to share some food and water they manage to scavenge since they know how hard it is out there right now.' She looks at you with a small smile. 'Thanks for listening to me. I feel better now. Do you want to tell me your story?' You shake your head with a smile and chuckle, telling her maybe later.";
 			now bevsad is 0;
 			now bevtalk is 1;
-			Stop the action;
 		Otherwise:
 			Say "     Looking at Beverly a moment more, you return to browsing through the books when she doesn[']t look back up.";
-			Stop the action;
-	if bevtalk is 0:
+	otherwise if bevtalk is 0:
 		say "     Behind a register counter is what looks like a mouse intently reading a book, her green eyes rapidly moving, not having noticed you yet. As you continue to stand there and watch them, their whiskers and gray ears eventually twitch and they look up, blushing with a squeak when seeing you. 'Oh, hello there.' The mouse[']s voice is quiet, demure, and sounds feminine. As they continue to blush, they look like they drop down behind the counter then walk around it to stand before you. 'I[']m sorry. I didn[']t notice when you walked in. Sometimes I get a little lost in the books.' Now that they were from behind the counter, you see that the mouse standing before you is definitely female, a voluptuous one at that. She is dressed in a blue blouse that is stretched taut around breasts that are almost as large as her head while hugging her wide hips is a mid-length blue skirt. Her thick locks of golden hair flows around her ears, down her back, and stops just short of her full, bubble butt. You can see swaying slowly behind her a fur covered tail, with a thicker tuft of fur adorning the end of it.";
 		say "     'Welcome to my home, Brookstone Books. Feel free to browse around, but because the way things are right now, I ask that you don[']t remove any books from here, considering some of them are irreplaceable.' Nodding, you begin to look around for any book that might be helpful. After a minute of browsing, you hear a soft sigh behind you. Turning around, Beverly is looking at you. When seeing you are looking at her, she pushes a forefinger against the bridge of her muzzle, as if adjusting a pair of invisible glasses, then gently smiles while brushing a lock of hair from in front of an eye. 'Would you mind terribly if I talked to you? It[']s been awhile since a new face has shown up around here and it will help to break up the monotony.'";
 		if player consents:
@@ -62,22 +59,17 @@ instead of conversing the Beverly:
 			say "     Beverly grows quiet for a moment, the inside of her ears growing red while her tail twitches a few times. Snapping out of her thoughts, she smiles and continues. 'Ummm... Where was I? Oh yes... When I saw what was going on I quickly dropped the security gate. As I was locking it, a humanoid mouse reached through the gate and managed to grab some of my hair. I was able to struggle free, but not before...' She stops again and seems to visibly shudder before continuing. 'Not before it managed to ejaculate on me.' Her breathing starts to grow more labored. 'When he, I figured out it was a guy, saw that he couldn[']t reach me, he left. I didn[']t wait around to see if he would come back and locked myself in the back room.' Beverly suddenly hugs her arms under her ample breasts while looking away and speaks a little softer.";
 			say "     'I felt all alone locked back there as my body continued to transform, made even worse when the power went out. Only when it felt like I had finished changing did I try to feel my way around, eventually finding my purse and digging out the mini-flashlight I had.' She returns her attention to you and smiles gently. 'I was shocked, at first, when I looked in a mirror and saw what was looking back at me. I looked like the mouse that had attacked me. After I recovered from my initial surprise, I got up enough nerve to come out of the storage room, to find humanoid rats wandering the mall. When they didn[']t attack me and genuinely asked if I was ok, did I calm enough to take stock of my situation. While I was getting things together I noticed that my tail was fur covered, so I got curious to see what I actually was, and found out after perusing a few animal books that I[']m actually a gerbil.' Beverly shakes her head slowly as she chuckles ruefully. 'Ever since my transformation I[']ve been here, too afraid to go outside the mall after hearing about some of the things running around out there in the city. The rats have been nice enough to share some food and water they manage to scavenge since they know how hard it is out there right now.' She looks at you with a small smile. 'Thanks for listening to me. I feel better now. Do you want to tell me your story?' You shake your head with a smile and chuckle, telling her maybe later.";
 			now bevtalk is 1;
-			stop the action;
 		Otherwise:
 			Say "     The mouse[']s ears droop and she looks at you sadly for a moment before sighing softly. 'Th... that[']s ok... My name is Beverly,' she says, her voice so quiet it[']s barely a whisper. 'If you need any help, let me know.' Finishing, Beverly walks back behind the counter to continue reading her book. Out the corner of your eye, you see a mallrat giving you a dirty look.";
 		now bevsad is 1;
-		Stop the action;
-	Otherwise:
+	otherwise:
 		say "     [one of]'I hope Turtle is behaving himself.'[or]'I would like to resume teaching, even if I can[']t be transformed back.'[or]'It[']s good to see you safe and sane.'[or]'I heard the rats talk about seeing weird things below the mall. Is it true?'[or]'Turtle has always been a pretty smart kitty.'[or]'I remembered there was a class field trip planned for the zoo.'[or]'The jackal lady down the way is beautiful, but kind of strange don[']t you think?'[or]'How are things going for you out there?'[or]'Maybe when you have some time we can try one of the role playing games.'[or]'I hope Turtle is alright.'[or]'I have a lot of interesting books. You might find something useful among them.'[or]She smiles at you. 'This new look of mine is growing on me... What do you think?'[at random]";
-		stop the action;
 		
 Instead of fucking the Beverly:
 	if bevtalk is 1:
 		say "     'You[']re a nice person and all, but I[']m not up for any kind of relationship right now. Do you mind if we just stick to platonic love?'";
-		stop the action;
 	otherwise:
 		say "     'You look like a nice person and all, but I[']m not ready for any kind of relationship.'";
-		stop the action;
 
 Section 3 - Book Browsing
 
@@ -98,6 +90,7 @@ understand "read a book" as browsebooks;
 
 check browsebooks:
 	If bookshelves is not visible, say "Nani desu ka?" instead;
+	if lastbookshelves - turns < 8, say "You should really go take care of other stuff instead of spending all your time reading." instead;
 
 carry out browsebooks:
 	say "     In no particular hurry you decide to browse through a few books in the hopes of finding something interesting to read. Who knows, you may end up finding some information that will help you out in the wilds of the city.";
@@ -113,8 +106,7 @@ carry out browsebooks:
 				If diceroll >= 12:
 					say "With a chuckle, you nod in agreement. After helping complete the complex crossword, you feel a little bit more intelligent.";
 					Increase intelligence of player by 1;
-					say "[line break]";
-					say "You[']re intelligence has increased by one!";
+					say "Your intelligence has increased by one!";
 					Follow the turnpass rule;
 					Follow the turnpass rule;
 					Stop the action;
@@ -163,7 +155,7 @@ carry out browsebooks:
 			Stop the action;
 	If X is 5:
 		If fsnovel is 1:
-			say "     While passing a table loaded with children's books you notice one titled [bold type]Boris the Lion's African Adventure[roman type], and not even knowing why, you pause to read it. It’s a simple tale, like any preschooler book, about Boris['] misadventure of trying to capture Andy the Antelope with no success. But the words at the end manage to inspire you. 'He may be faster. He may be smarter. But I always, always will try harder. One day, one day he will be too slow. One day, one day I will catch him, I know.' You close the book with a smile, your mood lightened.";
+			say "     While passing a table loaded with children's books you notice one titled [bold type]Boris the Lion's African Adventure[roman type], and not even knowing why, you pause to read it. It's a simple tale, like any preschooler book, about Boris['] misadventure of trying to capture Andy the Antelope with no success. But the words at the end manage to inspire you. 'He may be faster. He may be smarter. But I always, always will try harder. One day, one day he will be too slow. One day, one day I will catch him, I know.' You close the book with a smile, your mood lightened.";
 			Increase humanity of player by 1;
 			Stop the action;
 		Otherwise:
@@ -250,7 +242,7 @@ hfgbread is a number that varies. hfgbread is normally 255.
 
 To say afsm:
 	If afsmread - turns < 18 and survfeat is 1:
-		say "     Feeling that you are ready for another go at the Army survival manual, you head back to the table you had left it on. Not seeing it immediately, you search through the stack of books and still don’t find it. You are about to ask Beverly if she had seen it when you spot a rat sitting in a large chair and reading the book. With a shrug, you figure they will be done with it soon enough and go to the magazine rack to find a magazine to read instead.";
+		say "     Feeling that you are ready for another go at the Army survival manual, you head back to the table you had left it on. Not seeing it immediately, you search through the stack of books and still don't find it. You are about to ask Beverly if she had seen it when you spot a rat sitting in a large chair and reading the book. With a shrug, you figure they will be done with it soon enough and go to the magazine rack to find a magazine to read instead.";
 		Follow the turnpass rule;
 		Stop the action;
 	Otherwise:
@@ -284,7 +276,7 @@ To say myse:
 			say "     You head back to the self-improvement section to pull the self-help book off the shelf, find an unoccupied chair to sit in, and pick up where you left off. Only when Beverly comes over to check on you do you look up. After blinking a couple times, you chuckle quietly and tell her you[']re ok. Spending a little more time with the book, you gleam as much info as you can from it until you feel that you have more of a mental grip of your current situation.";
 			Add "Pure" to feats of the player;
 		Otherwise:
-			say "     You wander the store for a few minutes until you come across the self-improvement section. Shrugging your shoulders, you peruse the titles until one seems promising, simply titled [bold type]Maintaining your Self-esteem[roman type]. Pulling it off the shelf, you begin to leaf through it, and though informative, find it quickly getting dull. Putting it back on the shelf, you promise to yourself that you’ll make an effort to finish it.";
+			say "     You wander the store for a few minutes until you come across the self-improvement section. Shrugging your shoulders, you peruse the titles until one seems promising, simply titled [bold type]Maintaining your Self-esteem[roman type]. Pulling it off the shelf, you begin to leaf through it, and though informative, find it quickly getting dull. Putting it back on the shelf, you promise to yourself that you'll make an effort to finish it.";
 			Now myseread is turns;
 			Now purfeat is 1;
 To say hfgb:

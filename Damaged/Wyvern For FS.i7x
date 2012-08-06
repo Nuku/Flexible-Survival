@@ -105,7 +105,8 @@ When Play begins:
 
 when play ends:
 	if bodyname is "Wyvern":
-		say "Your wings finally strong enough, you take to the air and leave behind the city, your old life. Over the following year your body grows more and more, eventually leaving you massive, but not nearly as massive as your majestic mate. She is around half as big again as you are, almost ninety feet long, and you mate again and again with her, no heat driving you, just both your raw lust for each other. Eventually raising clutch after clutch of eggs, your children teach man a new fear of flying.";
+		if humanity of player < 10:
+			say "Your wings finally strong enough, you take to the air and leave behind the city, your old life. Over the following year your body grows more and more, eventually leaving you massive, but not nearly as massive as your majestic mate. She is around half as big again as you are, almost ninety feet long, and you mate again and again with her, no heat driving you, just both your raw lust for each other. Eventually raising clutch after clutch of eggs, your children teach man a new fear of flying.";
 	otherwise:
 		if Wyvern_eat is 1:
 			say "Despite other changes, your eyes never did change to anything else. Slitted, the outer part is a light blue bordering on sky blue, the slitted pupil is a dark black. Every time you look in the mirror you think of that majestic creature, a part of you wanting to be with her, another part wanting to be her child.";
