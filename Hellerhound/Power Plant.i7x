@@ -9,7 +9,7 @@ Include Computers by Hellerhound.
 Ravaged power plant is a situation.
 
 instead of resolving a Ravaged Power Plant:
-	say "On your walk, you pass a building that was the power station for before. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
+	say "On your walk, you pass a building that was the power station for the city. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
 	now Plant Overview is known;
 	say "The power plant lobby is nearby, maybe you could return?";
 	now ravaged power plant is resolved;
