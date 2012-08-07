@@ -234,6 +234,7 @@ Instead of resolving a Sweet Surprise:
 	say "     As you're searching through the park, you come across the remains of a picnic site that's been quite torn up.  There's some shreds of clothes and sticky pools of sexual fluids scattered around the torn blanket.  The dishes and cutlery are scattered and all that remains of the food is crumbs.  An overturned bottle of wine's left a large stain on the blanket and you spot an empty ring case beside it.  It seems things did not go quite as planned for this romantic picnic, but you hope that the couple are still together in whatever new forms they've gained.  You're about to leave when you spot their wicker basket knocked into the nearby bushes.  Whatever dessert was once in there has spoiled and become a suspicious green mass, but next to it is a sealed container holding a large honeycomb, probably meant to be used to top the dessert with fresh honey[if hp of Elijah is 2].  Remembering that you're looking for some to possibly heal the angel, you pack it away[end if].";
 	add "Honeycomb" to invent of player;
 	increase score by 5;
+	now Sweet Surprise is resolved;
 
 
 Section 4 - NPC Interactions

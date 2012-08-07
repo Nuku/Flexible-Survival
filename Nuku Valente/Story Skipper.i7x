@@ -535,6 +535,7 @@ Carry out reciting:
 						move Elijah to Bunker;
 					if hp of Elijah is 100:
 						remove Elijah from play;
+					if hp of Elijah is 2, now Sweet Surprise is unresolved;
 			-- 87:
 				now npcEint is "[the player's command]";
 			-- 88:
