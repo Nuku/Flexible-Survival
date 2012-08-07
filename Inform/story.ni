@@ -4893,6 +4893,7 @@ Include Leonard by Stripes.
 Include Athanasia by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
+Include Eric by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 
 
