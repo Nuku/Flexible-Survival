@@ -535,7 +535,7 @@ To say beattigercop:
 		add "nightstick" to invent of player;
 		now nsgained is 1;
 		increase score by 5;
-	if a random chance of 1 in 5 succeeds and nsgained is 1:
+	otherwise if a random chance of 1 in 5 succeeds and nsgained is 1:
 		say "     When the gas clears, you see that the tiger had dropped a can of pepperspray during the course of the fight.  You pick it up and add it to your arsenal.";
 		say "     Pepperspray obtained.";
 		add "pepperspray" to invent of player;

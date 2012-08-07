@@ -504,7 +504,7 @@ instead of sniffing the crowbar:
 instead of sniffing the mallet:
 	say "The mallet smells faintly of the junkyard where you found it.";
 
-instead of sniffing the beach plaza:
+instead of sniffing the iron pipe:
 	say "The iron pipe smells like old rust and whatever that hard, dry gunk inside was.";
 
 
