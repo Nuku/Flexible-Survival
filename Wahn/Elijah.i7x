@@ -1,5 +1,5 @@
 Version 1 of Elijah by Wahn begins here.
-[Version 1.4: New sex w/Elijah+Candy M/F/M]
+[Version 1.5: Elijah now available if girls are banned]
 "Adds an NPC named Elijah to the Flexible Survival game"
 
 [ HP states of Elijah                                                ]
@@ -105,7 +105,7 @@ to say chapelplacedesc:
 
 Section 2 - Elijah the Seraphim
 
-[Smells, Description, Conversation and NPC Interaction]
+[Smells, Description, Conversation]
 
 Elijah is a man.  Elijah is in Burned-Out Chapel.  The hp of Elijah is normally 0.
 The description of Elijah is "[Elijahdesc]";
@@ -146,12 +146,19 @@ instead of conversing the Elijah:
 		if the player consents:   [freeing him - should lead to a demon orgy scene (see section 4) if you get beaten]
 			say "     The chains are too sturdy for you to break or damage, but luckily you find the key for the manacles not too far away - lying in a puddle of caustic hellhound urine. Dragging it out with a piece of wood (that immediately starts smoking), you wipe it off with a shred of the altar-cloth and take it. Then you unlock the shackles holding the angel, carefully supporting him so he doesn't fall down.";
 			say "     You manage that well, but don't have another hand free to take hold of the chain, so it noisily clatters against the wall and other chains as it falls away from the angel's arm. Oh-oh, you hear some growls, then spot glowing red eyes open up in the darkness behind several doorways on the sides of the chapel.";
-			say "     Leading the mob of demons rushing at you is a busty succubus, who shrieks angrily.  'He's ours, you little thief.  You'll become a bitch in the hellhound kennels for trying to steal him!'";
-			challenge "Succubus";
+			if girl is banned:
+				say "     Leading the mob of demons rushing at you is a incubus.  Its normally handsome face is distorted into one of demonic anger with twisted features, sharp teeth and burning eyes as it cries out.  'That's our prize, you thieving mortal.  When I'm done with you, you'll be begging for the hellhounds to take you!";
+				challenge "Incubus";
+			otherwise:
+				say "     Leading the mob of demons rushing at you is a busty succubus, who shrieks angrily.  'He's ours, you little thief.  You'll become a bitch in the hellhound kennels for trying to steal him!'";
+				challenge "Succubus";
 			if lost is 1:
 				say "[losetochurchdemons]";
 			otherwise:
-				say "     The succubus shrieks in pain, falling back from you and fleeing through one of the doorways. That's one down - instantly replaced by a snarling incubus lunging at you.";
+				if girl is banned:
+					say "     The defeated incubus is driven away, fleeing through one of the doorways.  That's one down - instantly replaced by another snarling incubus lunging at you.";
+				otherwise:
+					say "     The succubus shrieks in pain, falling back from you and fleeing through one of the doorways. That's one down - instantly replaced by a snarling incubus lunging at you.";
 				challenge "Incubus";
 				if lost is 1:
 					say "[losetochurchdemons]";
@@ -172,8 +179,9 @@ instead of conversing the Elijah:
 		otherwise:   [try it later, 32 turns time to save him]
 			say "     The demons might not be here right at this very moment, but they'd surely notice you making off with their prized catch. So you'll bide your time for the moment. Let's hope their captive will hold out a bit longer...";
 	otherwise if (hp of Elijah is 1):  [wounded + unconscious in the bunker - starting the revival quest]
-		say "     He's alive but still very weak and still not ready for communicating in any great length. Hell, he's barely conscious at all. There might be some things out there in the city that could possibly help him... perhaps you could try milk and honey, that's supposed to be good for you. And if you mix in something to boost his healing ability, your resident angel will be back on his feet in no time.";
+		say "     He's alive but still very weak and still not ready for communicating in any great length. Hell, he's barely conscious at all. There might be some things out there in the city that could possibly help him... perhaps you could try milk and honey, that's supposed to be good for you. And if you mix in something to boost his healing ability, your resident angel should be back on his feet in no time.";
 		now hp of Elijah is 2;
+		now Sweet Surprise is unresolved;
 	otherwise if (hp of Elijah is 2):  [wounded + unconscious in the bunker - revival quest started already]
 		if ("gryphon milk" is not listed in invent of player):
 			say "     To mix together something to cure the injured angel, you need a good base to start with. Some gryphon milk should do the trick nicely...";
@@ -213,6 +221,23 @@ instead of conversing the Elijah:
 		say "     Elijah says [one of]'I need something to fuck. Time to go hunting again.'[or]'You should have seen that succubus last night - she was begging me for to go again and again.'[or][if lastElijahfucked - turns > 6]'I'm horny, wanna fuck?'[end if][or]nothing, he just smirks at you, stroking the growing bulge at the front of his pants.[or]'All those creatures in the city look so tiny and weak from above - and they still do so when I swoop down and grab one to fuck.'[or]'You should get a few incubi in here. Best cocksuckers ever.'[at random]"; 
 	otherwise if (hp of Elijah is 100):   [lost to demons]
 		say "ERROR-Elijah-1B: He shouldn't be available to talk any longer! Please report how you got to this message.";
+
+
+Section 3 - Sweet Surprise
+
+[This event exists mainly to allow players with girl banned to have a means to find a Honeycomb.]
+
+Sweet Surprise is a situation. Sweet Surprise is resolved.
+The sarea of Sweet Surprise is "Park";
+
+Instead of resolving a Sweet Surprise:
+	say "     As you're searching through the park, you come across the remains of a picnic site that's been quite torn up.  There's some shreds of clothes and sticky pools of sexual fluids scattered around the torn blanket.  The dishes and cutlery are scattered and all that remains of the food is crumbs.  An overturned bottle of wine's left a large stain on the blanket and you spot an empty ring case beside it.  It seems things did not go quite as planned for this romantic picnic, but you hope that the couple are still together in whatever new forms they've gained.  You're about to leave when you spot their wicker basket knocked into the nearby bushes.  Whatever dessert was once in there has spoiled and become a suspicious green mass, but next to it is a sealed container holding a large honeycomb, probably meant to be used to top the dessert with fresh honey[if hp of Elijah is 2].  Remembering that you're looking for some to possibly heal the angel, you pack it away[end if].";
+	add "Honeycomb" to invent of player;
+	increase score by 5;
+	now Sweet Surprise is resolved;
+
+
+Section 4 - NPC Interactions
 
 An everyturn rule:
 	if (hp of Elijah is 0) and (Burned-Out Chapel is known) and (lastElijahfucked - turns > 32):  [time till demon orgy, after which Elijah will be dragged to hell]
@@ -410,18 +435,21 @@ An everyturn rule:
 				now NPCintCounter is turns;
 
 
-Section 3 - Fucking Elijah
+Section 5 - Fucking Elijah
 
 Instead of fucking the Elijah:
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
-	if (hp of Elijah is 0): [in the chapel, losing him to the demons]
+	if (hp of Elijah is 0): [in the chapel, losing him to the demons]	[***]
 		say "     The poor angel is hurt and chained up, with an unknown number of demons surely not too far away. Are you sure you want to do this right now?";
 		if player consents:
 			say "     The need for instant satisfaction of your urges wins out over the alarm bells your rational mind rings. You move over to the chained angel and pull the shreds of his tunic off his body, revealing his well-shaped and muscular physique to your lustful gaze. He's quite well equipped, the manhood dangling between his legs respectably long without even being hard. You can't wait to see how big it'll get, so you step up and start rubbing your [bodytype of player] body up against the angel, fondling his cock and balls.";
 			say "     As enthralled as you have become, you don't even notice anything amiss until suddenly a long red tail snakes around your neck, choking you. An incubus and succubus step up besides you, grabbing your arms and pull you away from the chained angel. The incubus tightens his tail around your neck a bit more and says, 'Tztz - an uninvited guest wanting to grab some angel ass. That's OUR new plaything! But if you're here already, why don't you watch him lose his virginity.'";
 			say "     You're pulled to the side of the chapel, making room for a whole group of incubi and succubi and a large demon brute who parade around the altar. They take the angel down, peel off his ripped tunic and try to shake him awake. The members of the mob lewdly fondle his body and cock, but don't have much luck getting either consciousness or arousal out of him. Switching to another tactic, a succubus grabs the dented silver chalice of the chapel from the ground and holds it up for her male brethren, becoming the center of a group of feverishly masturbating demons. Soon, the now cum-splattered succubus steps up to the angel, triumphantly raising the cup and pouring its contents into his mouth and over his body.";
-			say "     It works as intended - the angel's cock fills out and hardens almost instantly, inducing a satisfied moans and chuckles from the demon mob. The succubus throws the chalice aside and moves over to sit on the altar, waving over to the demon brute to bring the angel. As she leans back and spreads her legs eagerly to receive some angel cock, the large demon brute impales their semi-conscious captive on his massive erection, then carries him over to her. With the help of many grabby hands, the angel's cock gets aligned with the succubus's cunt. Then the demon brute thrusts forward, moving the angel's hips too and sinking his virgin manhood into the damning embrace of her folds. Lustful moans and roars get louder and louder as they start fucking hard and deep with their angel cock-sleeve between them. The demon mob closes in around the altar area, jostling for better positions.";
+			if girl is banned:
+				say "     It works as intended - the angel's cock fills out and hardens almost instantly, inducing a satisfied moans and chuckles from the demon mob. The succubus throws the chalice aside and an incubus climbs onto the altar, waving over to the demon brute to bring the angel. As the incubus moves onto all fours, offering up his ass to recieve some angel cock, the large demon brute impales their semi-conscious captive on his massive erection, then carries him over to the desecrated altar. With the help of many grabby hands, the angel's cock gets aligned with the incubus's asshole. Then the demon brute thrusts forward, moving the angel's hips too and sinking his virgin manhood into the damning embrace of his dark hole. Lustful moans and roars get louder and louder as they start fucking hard and deep with their angel cock-sleeve between them. The demon mob closes in around the altar area, jostling for better positions.";
+			otherwise:
+				say "     It works as intended - the angel's cock fills out and hardens almost instantly, inducing a satisfied moans and chuckles from the demon mob. The succubus throws the chalice aside and moves over to sit on the altar, waving over to the demon brute to bring the angel. As she leans back and spreads her legs eagerly to receive some angel cock, the large demon brute impales their semi-conscious captive on his massive erection, then carries him over to her. With the help of many grabby hands, the angel's cock gets aligned with the succubus's cunt. Then the demon brute thrusts forward, moving the angel's hips too and sinking his virgin manhood into the damning embrace of her folds. Lustful moans and roars get louder and louder as they start fucking hard and deep with their angel cock-sleeve between them. The demon mob closes in around the altar area, jostling for better positions.";
 			say "     The two demons holding you look almost spellbound at the action around the altar, then suddenly realize they're still holding you and not taking part themselves. You're quickly and unceremoniously dumped outside the chapel, its doors slammed shut behind you as the demons rush to join the orgy.";
 			say "     [line break]";
 			say "     You don't think you'll see that angel ever again after this, as the demons are very likely gonna take him home to hell with them, to use and abuse for all eternity.";
@@ -914,7 +942,7 @@ to say de-demonify:
 		say "     Elijah sags onto his bunk with a sad, exhausted sigh, looking pale and tired.  'I tried, my friend, but I do not have the strength to break the pact you entered into with that fel beast.  I wish I could help you further, but it is beyond my abilities now.  Your reprieve from the effects of the curse will be brief.  You shall have to seek proper absolution from your dark choice elsewhere.";
 
 
-Section 4 - Losing to the Demons at the Church
+Section 6 - Losing to the Demons at the Church
 
 to say losetochurchdemons:
 	say "     As you fall to your knees under the last attack, the mob howls in laughter at your failed attempt of saving their prisoner. An incubus and succubus step up besides you, grabbing your arms and pull you away from the angel leaning semi-consciously against the cross. The incubus snakes his long tail around your neck, saying 'Pathetic little do-good-er trying to make off with out prize! Now you'll have to watch him lose his virginity and be powerless to stop us!'";
@@ -927,7 +955,7 @@ to say losetochurchdemons:
 	remove Elijah from play;
 
 
-Section 5 - Endings
+Section 7 - Endings
 
 when play ends:
 	if (Elijah is in the bunker) and (hp of Elijah is 99): [evil Elijah]
