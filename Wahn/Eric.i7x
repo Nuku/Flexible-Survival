@@ -1,6 +1,6 @@
 Version 1 of Eric by Wahn begins here.
-[Version 0.4: Sex scenes now written]
-[Todo: endings, possibly npc interactions & more conversation]
+[Version 0.5: Endings]
+[Todo: possibly npc interactions & more conversation]
 "Adds an NPC named Eric to the Flexible Survival game"
 
 [ HP states of Eric                                                  ]
@@ -28,7 +28,7 @@ Section 1 - Meeting Event
 Barricaded Lockerroom is a situation. The level of Barricaded Lockerroom is 8.
 The sarea of Barricaded Lockerroom is "Campus";
 when play begins:
-	add Barricaded Lockerroom to badspots of hermaphrodite;      [cuntboy]
+	add Barricaded Lockerroom to badspots of hermaphrodite;      [cuntboy, later a fight against a hulking cheerleader]
 
 Instead of resolving a Barricaded Lockerroom:
 	say "     While exploring the sports arena on the campus, you come upon the closed door to the men's locker room, looking rather battered with lots of claw scratches on it. When you try the doorhandle, it opens only a crack before bumping into something heavy - accompanied by a loud clanking noise. A man's voice can be heard from inside a moment later: 'Stay away you crazy critters! I'm warning you - I've got a baseball bat and am willing to use it. You're not getting another bite out of me!'";
@@ -42,6 +42,7 @@ Instead of resolving a Barricaded Lockerroom:
 			say "[line break]     After some quick talking, you manage to convince the person inside the lockerroom that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
 			say "     'Hi, I'm Eric,' the man says, shaking your hand. 'Nice to see not everyone has gone totally bonkers in this city. I couldn't believe the stuff going on out there at first... saw my roommate transform into a big furry thing right in front of my eyes. There wasn't anything human left in him - he even bit me!' He shows you his bandaged arm.";
 			move player to Campus Arena Lockerroom;
+			now Campus Arena Lockerroom is known;
 			Now Barricaded Lockerroom is resolved;
 		otherwise:
 			say "[line break]     As you're trying to explain, the person behind the door shouts 'I don't believe you. You're just one of those strange creatures who wants to trick me!' Then the door is pushed closed from the other side.";
@@ -116,7 +117,7 @@ to say ericdesc:
 instead of conversing the Eric:
 	if (hp of Eric is 0):   [starting state]
 		say "     Eric tells you what happened to him when the plague hit - with people shifting all around and his best friend taking a bite out of his arm, he moved in here and barricaded himself in. Since then, he's only left a few times, sneaking outside at night when most creatures are sleeping to gather some supplies. You in turn tell him of all the things you've seen and witnessed out in the city, making him go pale as he listens.";
-		say "     When you finish, Eric asks you 'You're a pretty resilient person from your stories... could you maybe help me save Stacy, my girlfriend? Well, ex-girlfriend I guess - she broke up with me a day before the plague hit... but that doesn't matter now. I've tried to find her and bring her here, but there was a massive green creature moving around her dorm building every time I checked. I just couldn't fight something that big, so I snooker off before it noticed me. Please, help me save her from there!";
+		say "     When you finish, Eric asks you 'You're a pretty resilient person from your stories... could you maybe help me save Stacy, my girlfriend? Well, ex-girlfriend I guess - she broke up with me a day before the plague hit... but that doesn't matter now. I've tried to find her and bring her here, but there was a massive green creature moving around her dorm building every time I checked. I just couldn't fight something that big, so I sneaked away before it noticed me. Please, help me save her from there!";
 		if the player consents:   [going on a rescue mission]
 			say "     Eric arms himself with a baseball bat and you move out together, mostly staying behind buildings and sneaking through the bushes. It goes pretty well, until you arrive at one of the main thoroughfare of the campus and have to step onto a large open area to move on. You almost make it, then hear a female voice behind you. Turning around, you see a succubus and incubus stand there, eying you like pieces of meat.";
 			say "     'It's just like you promised Aidan - a whole campus of pretty young things ripe for the plucking. How about you take that one,' she says with a nod to you, '- and I ride the redhead.'";
@@ -134,7 +135,7 @@ instead of conversing the Eric:
 			say "     Your head clears a bit and the stars in front of your eyes vanish. With Stacy the cheerleader hulk distracted, now would be a good time to take her on and save Eric from the tender mercies of the girlfriend he intended to rescue. Or you could just stay right here and watch - on the floor right behind Stacy, you got a ringside seat for the action. Her cock is long enough that you could reach out and touch it, and you got a nice sight of Eric's pussy at the edge of the bed from here. (Y = save him; N = watch them)";
 			if the player consents:   [save him]
 				say "     You wait a moment longer, watching Stacy as she fingers Eric's pussy, making him gasp and moan and open his legs wide as new instincts take over. She continues to rub and stroke him until she's pretty wet, putting her fingers in her mouth to taste his female juices. 'Yes, you're ready. Now I'll show you what it means to be a woman!' she says, stroking her cock and moving closer to Eric. Then, as she's completely distracted, holding up her long erection close to Eric's folds, you rush at her and attack.";	     	
-				challenge "Cheerleader Hulk";
+				challenge "Hulking Cheerleader";
 				if lost is 1:
 					say "     With another hard slap, the hulking cheerleader sends you flying against the wall of the room, putting you in a world of hurt. You can only lie there and hold your aching body when she turns back to Eric.";	      
 					say "     Stacy pushes her massive erection against her ex-boyfriends folds, groaning as they spread and she sinks inside. You see her stop for a moment, presumably at his hymen, and say 'Ssh, hold still. It'll be over soon.' to him. There is a small pained yelp from Eric as she breaks through, but soon his lustful moans start up again as her hard shaft rubs against his insides. Going slow at first, then faster and faster, the gender-switched cheerleader starts fucking him in earnest, giving satisfied grunts each time she bottoms out in Eric's pussy. ";
@@ -157,7 +158,6 @@ instead of conversing the Eric:
 							say " [line break]";
 							say "     Such a nice little cuntboy, you decide to take Eric along to the bunker to have some fun with again later. After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping your cum and female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male german shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
 						otherwise:
-							say "     This is an opportunity you don't want to miss - the cuntboy is hot and ready, lying there on the bed with spread legs and just waiting for it...";
 							say "     A quick search through Stacy's dresser reveals a long pink dildo - and a vibrating one too. You take it and climb on the bed with Eric, rubbing his moist pussy lips slowly with your fingers, then spreading them to have a look. Ah, perfect - he really is a virgin. The thought of taking his cherry on the bed of his former girlfriend makes you grin in anticipation. You rub the dildo's tip against his pussy lips for a moment, then push forward, sinking it slowly into his body until you reach his maidenhead.";
 							say "     Running your hands over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go. He whimpers at your forceful intrusion in his innermost being, but as you flip the switch and move the vibrating dildo in and out of him, pleasure able feelings soon outweigh the pain and he starts moaning again with lust. Running a hand over his lithe body as you fuck him with the dildo, you revel in his pants and gasps as you make a real woman - or rather cuntboy - out of him.";
 							say "     Not much later, Eric gasps as he has his first female orgasm, his pussy getting really wet around the dildo and leaking female juices on the mattress. You stop for a moment and look down at the writhing cuntboy you're made cum, then start up again, harder and faster than before.";
@@ -166,12 +166,16 @@ instead of conversing the Eric:
 							say "     Such a nice little cuntboy, you decide to take Eric along to the bunker to have some fun with again later. After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male german shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
 						say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. You soon reach the lockerroom and give Eric some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Ten minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Departing towards the bunker, Eric walks with you but a step apart, silently thinking about what you did to him.";
 						now hp of Eric is 99;
+						now thirst of Eric is 1;
 						move Eric to bunker;
+						move player to bunker;
 					otherwise:                [really save him]
 						say "     After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male german shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
 						say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer. You give him some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Twenty minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent besides you as he thinks about what happened to him.";	      
 						now hp of Eric is 1;
+						now thirst of Eric is 1;
 						move Eric to bunker;
+						move player to bunker;
 			otherwise:                [watch them fuck]
 				say "     Having been hit by her once already, you decide you want to avoid that from happening again - and have some fun in the meantime. You silently crawl a bit closer and sit on the floor from where you have a nice view.";	      
 				say "     [line break]";
@@ -182,7 +186,7 @@ instead of conversing the Eric:
 				say "     [line break]";
 				say "     You crawl out of the room and make your escape while she's still busy with Eric, having no choice but to concede him to her. With him having accepted being her girlfriend and likely already pregnant from her, there won't be any reason to come back here.";
 				now hp of Eric is 100;
-				remove Eric from play;          
+				remove Eric from play;       
 		otherwise:   [try it later]
 			say "     Eric looks visibly deflated as you decline. 'Oh... if you change your mind, I'll be here. But we really should hurry - who knows what's happening to Stacy...'";
 	otherwise if (hp of Eric is 1):   [virgin in the bunker]
@@ -206,6 +210,7 @@ instead of conversing the Eric:
 			say "     You hand your bottle of centaur stallion cum to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his bunk until he relaxes s short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";
 			say "     Opening the zipper of his shorts, you pull them down to reveal his crotch - now pussy-less, but with a new blunt-tipped horse's cock and large balls. To help Eric accept being an - almost human - male again, you grab his erect newly grown member with both hands and pump them up and down on it. Encouraged by his lustful moans, you keep jerking him off and play with his balls with one hand. Pretty soon, his thick shaft pulses in your hand, and large globs of white seed blast out of the tip of his horsecock and all over Eric's chest. As he lies back on his bunk, you hear him pant 'Thank you.'";
 			now hp of Eric is 21;
+			now thirst of Eric is 21;
 	otherwise if (hp of Eric is 21):   [now with a horsecock]
 		say "     He says 'Man, this cock is something else. A bit strange that it's not human, but it's thicker and longer than my old one was. Thank you for this. Would you maybe want to try it out with me?'";
 	otherwise if (hp of Eric is 22):   [now with a horsecock, had sex with the player]
@@ -218,6 +223,12 @@ instead of conversing the Eric:
 Section 3 - Fucking Eric
 
 Instead of fucking the Eric:
+	[puts Centaur Stallion as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Centaur Stallion":
+			now monster is y;
+			break;
 	if (hp of Eric is 0):   [virgin - in the lockerroom]
 		if(cocks of player > 0):
 			say "     As you approach Eric and ask him if he wants some fun, his gaze drops down to your crotch and he hesitates. Swallowing hard and turning rather red in the face, he then shakes his head, saying 'I - I can't - I mean - I'm not gay. But thanks for the offer.'";
@@ -238,12 +249,18 @@ Instead of fucking the Eric:
 			say "     You rest your hard shaft inside Eric for a moment to allow him to get used to it, then start moving in and out, moaning in unison with your handsome athlete. His legs wrap around your hips and pull you tight against him with each of your thrusts. Fucking this tight virgin pussy has you incredibly aroused and you have to control yourself pretty hard to last a bit longer. And you're not the only one - soon Eric's moans and groans rise to a pretty noisy climax and you feel the femcum in his pussy around your cock. He pulls you down on top of him, going for a breathtaking kiss, then whispers 'Finish it - come inside me.'";
 			say "     Giving him another quick kiss on the lips, you eagerly follow his request and pump your hips up and down rapidly, thrusting hard and deep into his body. With your cock already primed and ready to go, it takes just a few more thrusts for the cum to boil up from your balls and pulse through your cock in spurt after spurt. You fill Eric's pussy with your fertile seed, feeling a deep satisfaction as you imagine the millions of little swimmers invading his womb in search of an egg.";
 			say "     Your cock still inside him, the two of you move to lie on your sides on the bunk, holding each other and reveling in post-coital bliss. Lying there, Eric softly strokes your side and says 'That was amazing - thank you.'";
+			now hp of Eric is 11;
+			now thirst of Eric is 11;
 		otherwise:  
-			say "     Stepping up to Eric, you embrace him and give him a deep kiss. He practically melts into your arms as you hold him, eagerly returning your attentions with more kisses while his hands roam over your body. Looks like he's ready and willing to lose his virginity now - too bad you don't have the right 'equipment' for that right now... better try again later once you've gotten a cock to fuck him with.";
+			say "     Stepping up to Eric, you embrace him and give him a deep kiss. He practically melts into your arms as you hold him, eagerly returning your attentions with more kisses while his hands roam over your body. Looks like he's ready and willing to lose his virginity now - too bad you don't have the right 'equipment' for that at the moment... better try again later once you've gotten a cock to fuck him with.";
 	otherwise if (hp of Eric is 11):   [cuntboy repeat sex]
-		say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
-		say "[EricSexMenu]";
-		now lastEricfucked is turns; 
+		if (lastEricfucked - turns < 6):
+			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Running a hand up the side of your arm and stroking your cheek, he says 'I love you baby, but I need some rest in between. Can we play another time?' He gives you a soft kiss on the lips as you nod, already thinking about what you want to do with him later.";
+		otherwise:
+			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
+			wait for any key;
+			say "[EricSexMenu]";
+			now lastEricfucked is turns; 
 	otherwise if (hp of Eric is 20):   [virgin, hoping for a cure]
 		say "     Eric is rather evasive as you offer to take him to bed, his face getting red in embarrassment about his situation. 'I- I thought you were going to get me a cure? Or did you check and there no way to fix this? I worry I might get stuck like this if I - you know - use it...'";
 		say "     Do you want to tell Eric to hold out a little longer and that you'll find him something to make him a man again? Or should he learn to accept his new shape? (Y = hold out; N = accept the pussy)";
@@ -291,13 +308,21 @@ Instead of fucking the Eric:
 			say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bunk together. In between panting for breath, he gives you another kiss on the neck and says 'That was... wow. Thank you so much for helping me fix this.' followed by a last little thrust of his manhood into you.";
 		now hp of Eric is 22;
 	otherwise if (hp of Eric is 22):   [male with horse-cock repeats]
-		say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
-		say "[EricSexMenu]";
-		now lastEricfucked is turns; 
+		if (lastEricfucked - turns < 6):
+			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes. Pulling you close against his body, he gives you a deep kiss, playfully wrestling your tongue with his. But then as you lower your hands to stroke the bulge in his shorts, he pulls away, taking your hand in his and giving you an apologetic look. 'I'd love to, baby... but honestly, I need a break. With the size of this bad boy you've gotten me, I get a bit woozy if I use it too many hours a day. There's only so much blood to go around in a man, you know...'";
+		otherwise:
+			say "     You walk over to Eric, who immediately starts smiling as he sees the lust-filled twinkle in your eyes. Throwing his arms around you, his lips find yours for a quick kiss, then he suggestively nods over to his bunk.";
+			wait for any key;
+			say "[EricSexMenu]";
+			now lastEricfucked is turns; 
 	otherwise if (hp of Eric is 99):   [moderately unwilling cuntboy repeats]
-		say "     'Time to have sex with your personal gender-switched freak again?' Eric says, looking at you in disdain. 'I should hate you for making me do this - but my pussy gets wet just thinking about it...' With a sigh, he strips off his clothing and looks to you, waiting for orders.";
-		say "[EricSexMenu]";
-		now lastEricfucked is turns;    
+		if (lastEricfucked - turns < 3):
+			say "     As you approach Eric, he immediately sees the lust-filled twinkle in your eyes and takes a step back, an annoyed look on his face. 'Again? Can't you at least let me have some breaks? I'm not a blow-up-doll you can use any time you like, you know...' He stomps off to his bunk to sulk.";
+		otherwise:
+			say "     'Time to have sex with your personal gender-switched freak again?' Eric says, looking at you in disdain. 'I should hate you for making me do this - but my pussy gets wet just thinking about it...' With a sigh, he strips off his clothing and looks to you, waiting for orders.";
+			wait for any key;
+			say "[EricSexMenu]";
+			now lastEricfucked is turns;    
 
 to say EricSexMenu:
 	blank out the whole of table of fucking options;
@@ -395,7 +420,7 @@ to say EricSex1:    [cock sucked by Eric]
 		say "     Staying right where you are, you push down on Eric's shoulders and make him kneel in front of you. Pulling down your rapidly hardening cock, you stroke it a few times and then hold it out for him.";		  
 		say "     He looks hesitantly at it until you reach out and grab his head, pulling him towards your crotch. You push against his lips with the tip of your cock, then hear a soft sigh as he opens his mouth and takes you in. You don't think he had any gay encounters before all this and you have to remind him not to touch your rod with his teeth, but soon you got him sucking on your cock correctly. Seeing your manhood sliding in and out of his mouth gives you a sense of power that fuels your rising lust, making you grab his head tightly with both your hands and start face-fucking him. Pulling his mouth deeper onto your shaft, there is a moment or two in which he gags for air, but soon he gets used to it and you can slide deep inside his throat.";		  
 		say "     His soft lips and warm mouth around your cock give you an amazing feeling, making you moan in lust. He might be new to sucking cocks, but he'll learn over time and you get off on making him do it.";		  
-		say "     It doesn't take long until your balls tighten and your cock pulses with burst after burst of cum it's depositing onto Eric's tongue. He starts turning his head to spit it out, but you grab him and order him to swallow it all. After having him stick out his tongue so you can check it's all gone, you give him a pat on his head, saying 'Good boy.'";		  
+		say "     It doesn't take long until your balls tighten and your cock pulses with burst after burst of cum it's depositing onto Eric's tongue. He starts turning his head to spit it out, but you grab him and order him to swallow it all. After having him stick out his tongue so you can check it's all gone, you give him a pat on his head, saying 'Good boy. I'll teach you to behave properly yet.'";		  
 	otherwise:
 		say "ERROR-Eric-1C: He isn't in one of the states he should be in! Please report how you got to this message.";
 			
@@ -447,7 +472,7 @@ to say EricSex5:    [Eric's pussy fucked by player]
 	otherwise if(hp of Eric is 99):   [moderately unwilling cuntboy]
 		say "     Deciding it's time to fuck your cuntboy, you pull him along to the bunk and fondle his body, playing with his sensitive nipples. Then you push him backwards so he falls down onto the bunk on his back and tell him to spread his legs. Between them, his pussy comes into sight, moisture glistening between its swollen lips. Looks like your cuntboy is about ready to be used...";
 		say "     Quickly stripping off your own clothing, you climb on the bunk with him and kneel between his spread legs. He just looks so delicious, lying before you with his athletic body and that inviting pussy open to you. A thought of going slow quickly evaporates before your boiling lust and you aim your shaft and then plunge into Eric's body in one go, making him groan as your cock suddenly spreads his pussy lips. He whimpers a bit as you slide deeper, but soon starts to moan in lust as you bottom out and start going in and out, rubbing against his inner walls.";
-		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his womb with your fertile seed, then rest a moment on top of him until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bunk side by side, your softening erection still inside him. Eric murmurs to himself 'I can't believe how much this gets me off. Three times. What does he want to do - use me as a breeding bitch?' before dozing off. Not a bad idea, you think for yourself before sleep claims you too.";
+		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his womb with your fertile seed, then rest a moment on top of him until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bunk side by side, your softening erection still inside him. Eric murmurs to himself 'I can't believe how much this gets me off. Three times he's made me cum and filled me. What does he want to do - use me as a breeding bitch?' before dozing off. Not a bad idea, you think for yourself before sleep claims you too.";
 	otherwise:
 		say "ERROR-Eric-1C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	
@@ -480,7 +505,7 @@ to say EricSex7:    [fucking Eric's ass]
 	otherwise if(hp of Eric is 99):   [moderately unwilling cuntboy]
 		say "     Deciding it's time to fuck your cuntboy, you pull him along to the bunk and fondle his body, playing with his sensitive nipples. Then you push him backwards so he falls down onto the bunk on his back and tell him to spread his legs. Between them, his pussy comes into sight, moisture glistening between its swollen lips - and below, a tight pucker winks invitingly at you. Looks like your cuntboy is about ready to be used...";
 		say "     Quickly stripping off your own clothing, you climb on the bunk with him and kneel between his spread legs. He just looks so delicious, lying before you with his athletic body and that tight ass ready for you. A thought of going slow quickly evaporates before your boiling lust and you aim your shaft and then plunge into Eric's body in one go, making him groan as your cock suddenly pops through his pucker and invades his asshole. He whimpers a bit as you slide deeper, but soon starts to moan in lust as you bottom out and start going in and out, rubbing against his inner walls.";
-		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his ass with your seed, then rest a moment on top of him until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bunk side by side, your softening erection still inside him. Eric murmurs to himself 'I can't believe how much this gets me off. Three times.' before dozing off. You grind your hips against his one last time, then fall asleep yourself soon afterwards..";
+		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his ass with your seed, then rest a moment on top of him until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bunk side by side, your softening erection still inside him. Eric murmurs to himself 'I can't believe how much this gets me off. Three times he's made me cum.' before dozing off. You grind your hips against his one last time, then fall asleep yourself soon afterwards.";
 	otherwise:
 		say "ERROR-Eric-1C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	
@@ -497,9 +522,59 @@ to say EricSex8:    [player's ass fucked by Eric]
 
 Section 4 - Endings
 
-[
 when play ends:
-	say "     ...";
-]
+	if (hp of Eric is 0) and Campus Arena Lockerroom is known and humanity of player > 9:
+		say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. There you meet Eric again, still rather distraught that he couldn't save or even find his girlfriend. Later, when it's time for prodding and probing you survivors, there's a bit of a commotion after Eric gets called into the examination room. Several doctors and scientists are called in and Eric gets moved to another wing of the facility and you don't see him again after that. You wonder what's so special about him.";	
+	otherwise if ((Eric is in the bunker) and (hp of Eric is 1 or hp of Eric is 10 or hp of Eric is 20)): [cuntboy virgin Eric]
+		if (humanity of player < 10):
+			if (cocks of player > 0): 
+				say "     When you succumb to your infection, you make your way back to the bunker, and jump the virgin Eric you know is waiting there for you. Coming in at night, you're on his bunk and plunge your shaft inside him before he even knows you're there. You keep fucking him for hours, filling his pussy with load after load of your potent cum until you finally have to rest and fall into an exhausted sleep. Slowly inching out from under you so you don't wake up, Eric flees out into the city, carrying with him your offspring already developing in his womb.";
+			otherwise:
+				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, scavenging the area around it for food. On one of the trips, a pack of huskies sniff him out and he's wrestled down by several females and brought before their alpha male. The horny dog-morph forcefully takes his virginity, then breeds him at least three times a day for weeks. When some soldiers finally come by and save Eric from captivity, he's already showing a quite visible baby bump from the litter of four half-human puppies growing inside him.";
+		otherwise:
+			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding, and it's several weeks after you're released until you hear from him again. He meets you at a bar for a drink, thanking you again for saving him and taking him in during the time in the city. Then he moves back to his family's farm in the hinterland to take some quiet time to come to terms with being a woman now.";
+	otherwise if ((Eric is in the bunker) and (hp of Eric is 11)): [cuntboy Eric]
+		if (humanity of player < 10):
+			if (cocks of player > 0): 
+				say "     When you succumb to your infection, you make your way back to the bunker, and jump Eric before he realizes anything is amiss. You keep fucking him for hours, filling his pussy with load after load of your potent cum until you finally have to rest and fall into an exhausted sleep. Having fallen in love with you before the infection wiped away your sanity, he hesitates a long time but finally decides he can't stay with you. Slowly inching out from under you so you don't wake up, Eric flees out into the city, carrying with him your offspring already developing in his womb.";
+			otherwise:
+				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, searching for you and scavenging the area around it for food. On one of the trips, a pack of huskies sniff him out and he's wrestled down by several females and brought before their alpha male. The horny dog-morph forcefully takes his pussy, then breeds him at least three times a day for weeks. When some soldiers finally come by and save Eric from captivity, he's already showing a quite visible baby bump from the litter of four half-human puppies growing inside him.";
+		otherwise:
+			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding for several weeks in an isolated environment, only allowing you to speak over the phone.";
+			say "     When he's finally released, he throws his arms around you and kisses you deeply as he comes out of the exit where you're waiting for him. Taking your hand and guiding it to his belly, he says 'I didn't want to say it on the phone, so... you're going to be a father. I'm pregnant.' He look of apprehension at your reaction quickly vanishes as you smile happily and give him another kiss. You walk away from the holding facility hand in hand, thoughts wandering to where to put a nursery in a shared home.";
+	otherwise if ((Eric is in the bunker) and (hp of Eric is 21)): [horsecocked virgin Eric]
+		if (humanity of player < 10):
+			if (cocks of player > 0): 
+				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, scavenging the area around it for food. On one of the trips, he runs into a succubus who uses her alluring shape to draw Eric in and bind him to her will. Riding his cock till he fills her with his seed, she then calls in some friends and soon a whole pack of demons takes the thick horsecock into their pussies and asses. Not satisfied to wait for a ride on his manhood, several Incubi take Eric's ass and mouth instead. When the whole gang-bang ebbs out and everyone is in a sweaty pile on the floor, the demons decide they want to keep Eric - permanently - and carry him off to their infernal realm.";
+			otherwise:
+				say "     When you succumb to your infection, you make your way back to the bunker, and jump the Eric before he realizes anything is amiss. Rubbing up against his quickly hardening horsecock, you take away his ability to resist and fuck him for hours, filling your pussy with load after load of his potent cum. You're relentless in riding him, stroking him to hardness even as he begs for a break. He might have loved it at first, but when you fall asleep in exhaustion later, he slowly inches away from you so you don't wake up, then flees out into the city.";
+		otherwise:
+			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding, and it's several weeks after you're released until you hear from him again. He meets you at a bar for a drink, thanking you again for saving him and taking him in during the time in the city. Then he moves back to his family's farm in the hinterland to take some quiet time to come to terms with what happened in the city.";
+			say "     He invites you to visit a while later and spend some peaceful time out in the countryside. It's quite nice out there and Eric even shows you how to ride. When you two later go for a riding and camping trip in a nearby forest, you awake in the middle of the night when you hear one of the horses whinny. Curious, you step out of the tent and look around in the moonlight, finding Eric behind some nearby trees, fucking one of the two mares you rode out here with his long horsecock. Looks like he inherited a few urges from the centaur donor of his 'cure'. You step out behind the trees, tilling him you understand and continue to watch them until he breeds the mare with a huge load of his cum.";
+			say "     You visit Eric and the farm from time to time after that and see several horses bellies bulge with pregnancies over the coming months. Most are the results of normal equine couplings, but the two mares you had with you on that camping trip later give birth to two beautiful centaur foals, a boy and a girl, making Eric a very proud father.";
+	otherwise if ((Eric is in the bunker) and (hp of Eric is 22)): [horsecocked Eric]
+		if (humanity of player < 10):
+			if (cunts of player > 0): 
+				say "     When you succumb to your infection, you make your way back to the bunker, and jump the Eric before he realizes anything is amiss. Rubbing up against his quickly hardening horsecock, you take away his ability to resist and fuck him for hours, filling your pussy with load after load of his potent cum. You're relentless in riding him, stroking him to hardness even as he begs for a break. He might have loved it at first, but when you fall asleep in exhaustion later, he slowly inches away from you so you don't wake up, then flees out into the city.";
+			otherwise:
+				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, searching for you and scavenging the area around it for food. On one of the trips, he runs into a succubus who uses her alluring shape to draw Eric in and bind him to her will. Riding his cock till he fills her with his seed, she then calls in some friends and soon a whole pack of demons takes the thick horsecock into their pussies and asses. Not satisfied to wait for a ride on his manhood, several Incubi take Eric's ass and mouth instead. When the whole gang-bang ebbs out and everyone is in a sweaty pile on the floor, the demons decide they want to keep Eric - permanently - and carry him off to their infernal realm.";
+		otherwise:
+			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding for several weeks in an isolated environment, only allowing you to speak over the phone.";
+			say "     When he's finally released, he throws his arms around you and kisses you deeply as he comes out of the exit where you're waiting for him. After some hot and heavy sex in celebration of your reunion, you drive out to his family's farm out in the countryside to get some peace and quiet for a while. It's quite nice out there and Eric even shows you how to ride.";
+			say "     A while later, you two go for a riding and camping trip in a nearby forest, during which you're awoken in the middle of the night by Eric. Sporting an almost painfully hard cock, he confesses that he just can't stop thinking about fucking the mares you two rode out there. Looks like he inherited a few urges from the centaur donor of his 'cure'. You tell him you understand and accompany him outside, where he fucks both horses and fills them with his seed.";
+			say "     From then on, you return to the farm from time to time, having amazing sex as the mare's pheromones put Eric's libido into overdrive. He also keeps on fucking both Claire and Brenda, your 'special' mares from that first night. After a while, their bellies start swelling in obvious pregnancies, and about ten months later, two beautiful little centaur foals are born. With Eric's son and daughter joining the family, you think it's about time to add a stable to your own house back home and move them and their mothers there...";
+	otherwise if ((Eric is in the bunker) and (hp of Eric is 99)): [moderately unwilling cuntboy]
+		if (humanity of player < 10):
+			if (cocks of player > 0): 
+				say "     When you succumb to your infection, you make your way back to the bunker, and jump Eric. Coming in at night, you're on his bunk and plunge your shaft inside him before he even knows you're there. You keep fucking him for hours, filling his pussy with load after load of your potent cum until you finally have to rest and fall into an exhausted sleep. Slowly inching out from under you so you don't wake up, Eric flees out into the city, carrying with him your offspring already developing in his womb.";
+			otherwise:
+				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, scavenging the area around it for food. On one of the trips, a hermaphrodite gryphon spots him from the air and swoops down on him. Quickly overpowering the cuntboy, sie then takes him to her nest on top of a nearby building and fucks him hard and often, filling his womb with hir eggs. When some soldiers finally come by several weeks later and save Eric from captivity, he's holding two speckled eggs warm with a few blankets, another one almost ready inside his bulging belly.";
+		otherwise:
+			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding, and it's several weeks after you're released until you hear from him again. He seeks you out one night, knocking at your door. A bit hesitantly he says 'Please fuck me, I - I need it - and you.' and opens up his coat, showing he's naked beneath. You wave him inside, then close the door and guide your submissive cuntboy towards the bedroom...";
+	otherwise if (hp of Eric is 100): [Stacy's girlfriend now]
+		say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. While waiting for the doctors to examine and clear you, you hear soldiers talk about a huge green humanoid in the campus area accompanied by a massively pregnant human. Sounds like Stacy and Eric. Apparently she took out a full squad of soldiers when they wanted to 'rescue' her boy/girl-friend, adding two female soldiers to her breeding partners and leaving the rest to be picked up by horny bunny jocks.";
+	otherwise if Campus Arena Lockerroom is known:
+		say "ERROR-Eric-1E: He should have had one of the other endings by now. Please report under which circumstances you got to see this.";
+			
 
 Eric ends here.
