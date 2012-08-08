@@ -112,7 +112,7 @@ to say ericdesc:
 		say "[line break]";
 		say "     He's taken the bunk farthest from yours in the bunker and does his best not to attract your attention.";
 	otherwise if (hp of Eric is 100):
-		say "ERROR-Eric-1A: He should be being impregnated by his hulk girlfriend by now! Please report what you did to see this.";
+		say "ERROR-Eric-100A: He should be being impregnated by his hulk girlfriend by now! Please report what you did to see this.";
 
 instead of conversing the Eric:
 	if (hp of Eric is 0):   [starting state]
@@ -218,7 +218,7 @@ instead of conversing the Eric:
 	otherwise if (hp of Eric is 99):   [cuntboy, taken advantage of]
 		say "     He looks at you with a resigned expression, saying [one of]'I won't struggle if you fuck me - just please don't throw me out on the street.'[or]'I should hate you for what you did to me - but it felt so good. My traitor body constantly sends me urges to be fucked.'[at random]";
 	otherwise if (hp of Eric is 100):   [lost to cheerleader girlfriend]
-		say "ERROR-Eric-1B: He shouldn't be available to talk any longer! Please report how you got to this message.";
+		say "ERROR-Eric-100B: He shouldn't be available to talk any longer! Please report how you got to this message.";
 
 Section 3 - Fucking Eric
 
@@ -422,7 +422,7 @@ to say EricSex1:    [cock sucked by Eric]
 		say "     His soft lips and warm mouth around your cock give you an amazing feeling, making you moan in lust. He might be new to sucking cocks, but he'll learn over time and you get off on making him do it.";		  
 		say "     It doesn't take long until your balls tighten and your cock pulses with burst after burst of cum it's depositing onto Eric's tongue. He starts turning his head to spit it out, but you grab him and order him to swallow it all. After having him stick out his tongue so you can check it's all gone, you give him a pat on his head, saying 'Good boy. I'll teach you to behave properly yet.'";		  
 	otherwise:
-		say "ERROR-Eric-1C: He isn't in one of the states he should be in! Please report how you got to this message.";
+		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 			
 to say EricSex2:    [sucking Eric's cock]
 	if(hp of Eric is 22):   [male with horse-cock repeats]
@@ -431,7 +431,7 @@ to say EricSex2:    [sucking Eric's cock]
 		say "     At some point, Eric takes over and holds your head while face-fucking his cock in and out of you - but you don't really care, totally concentrated on the feeling of him sliding in and out of your throat and the taste of him. You reach up, taking hold of his large balls with your hands and massage them softly, making Eric grunt in pleasure. After a short while and a bit of oral attention more, you feel the balls pulse in your hands as Eric blows his load deep into your moth, the first blast going right down your throat into your stomach. Then he pulls back a bit and shoots thick ropes of cum onto your tongue, filling your mouth with its animalistic taste.";		  
 		say "     You softly suck on him and run your tongue over his cock as it shoots more cum, then pull off it when he stops and stand up. Running a hand through Eric's red hair, you pull him close and start making out with him. His eyes widen a bit when you push some of his cum into his mouth with your tongue, but he takes it in stride, continuing your kissing and wrestling your tongue with his own. As you pull back for some air, he smiles at you, pushing out his cum-covered tongue then demonstratively swallows what you gave him. Looks like he likes the taste himself."; 
 	otherwise:
-		say "ERROR-Eric-1D: He shouldn't have a cock right now! Please report how you got to this message.";
+		say "ERROR-Eric-[hp of Eric]D: He shouldn't have a cock right now! Please report how you got to this message.";
 	
 to say EricSex3:    [cunt licked by Eric]
 	if(hp of Eric is 11):   [cuntboy repeat sex]
@@ -444,7 +444,7 @@ to say EricSex3:    [cunt licked by Eric]
 		say "     Strolling towards the bunk you slide off your clothing, then lie down on it and spread your legs, ordering Eric to come over and get licking. He reluctantly kneels down in front of the bunk, looking at your pussy. Not wanting for him to make up his mind, you just grab his head, pushing him down to your crotch and holding him there until he opens up and starts licking your folds.";
 		say "     Despite the slow start, he gets more into servicing you pretty soon, licking and fondling your female sex. And he's rather good at it too - looks like becoming a woman has given him an insight on the whole matter. After a quite pleasurable time where he rubs erogenous zones inside your pussy you barely knew existed, you moan loudly and orgasm, dripping female juices over his fingers. Eric keeps going, fondling your lips as you shiver in pleasure and slurps up your femcum. You look down at him kneeling in front of you, then run a hand over your cunt and rub in the female juices all over Eric's face. 'Just admit to yourself that you like it.'";
 	otherwise:
-		say "ERROR-Eric-1C: He isn't in one of the states he should be in! Please report how you got to this message.";
+		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	
 to say EricSex4:    [Eric's cunt licked/fingered]
 	if(hp of Eric is 11):   [cuntboy repeat sex]
@@ -458,7 +458,7 @@ to say EricSex4:    [Eric's cunt licked/fingered]
 		say "     Between them, his pussy comes into sight, moisture glistening between its swollen lips. Looks like your cuntboy is about ready... ";
 		say "     Kneeling down, you give him a lick and taste his juices, then really go to town on him - licking and fondling his female bits until he's panting and squirming in arousal, his hands grabbing the sheets tightly. You keep going for quite a bit until suddenly he gives a lustful scream and orgasms, dripping femcum from his spread pussy. You sit beside him on the bunk, fondling his lithe body as he rides out the sexual high. When he finally comes down to normal a while later, he says 'Damn, it shouldn't feel so good when you use me like this. I can't believe I came like that.'";
 	otherwise:
-		say "ERROR-Eric-1C: He isn't in one of the states he should be in! Please report how you got to this message.";
+		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 to say EricSex5:    [Eric's pussy fucked by player]
 	if(hp of Eric is 11):   [cuntboy repeat sex]
@@ -468,13 +468,13 @@ to say EricSex5:    [Eric's pussy fucked by player]
 		say "     Following your handsome cuntboy's needful request, you aim your shaft and push forward, giving both your bodies the unity they craved for. As you sink deeper inside him, you lean down and make out with Eric, moaning into each other's mouth when you bottom out inside him. With the warm, tight hole around your cock, all restraint is soon forgotten and you start fucking him hard and deep. Eric gives lustful grunts to accompany the sound of your hips slapping against his crotch and wraps his arms and legs around you in an intimate embrace.";
 		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his womb with your fertile seed, then make out a bit until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bunk together in each other's arms. Eric gives you a soft kiss on the lips, murmuring 'I love you.' before dozing off. You kiss his forehead and wish you could stay like this forever, your arms around him and your softening cock still inside his cum-filled pussy. With a last thought you imagine your cum exploring his womb for an egg to create life with, then fall asleep yourself.";
 	otherwise if(hp of Eric is 22):   [male with horse-cock repeats]
-		say "ERROR-Eric-1D: This option shouldn't be available since he has no cunt in the current form. Please report how you got to this message.";
+		say "ERROR-Eric-[hp of Eric]D: This option shouldn't be available since he has no cunt in the current form. Please report how you got to this message.";
 	otherwise if(hp of Eric is 99):   [moderately unwilling cuntboy]
 		say "     Deciding it's time to fuck your cuntboy, you pull him along to the bunk and fondle his body, playing with his sensitive nipples. Then you push him backwards so he falls down onto the bunk on his back and tell him to spread his legs. Between them, his pussy comes into sight, moisture glistening between its swollen lips. Looks like your cuntboy is about ready to be used...";
 		say "     Quickly stripping off your own clothing, you climb on the bunk with him and kneel between his spread legs. He just looks so delicious, lying before you with his athletic body and that inviting pussy open to you. A thought of going slow quickly evaporates before your boiling lust and you aim your shaft and then plunge into Eric's body in one go, making him groan as your cock suddenly spreads his pussy lips. He whimpers a bit as you slide deeper, but soon starts to moan in lust as you bottom out and start going in and out, rubbing against his inner walls.";
 		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his womb with your fertile seed, then rest a moment on top of him until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bunk side by side, your softening erection still inside him. Eric murmurs to himself 'I can't believe how much this gets me off. Three times he's made me cum and filled me. What does he want to do - use me as a breeding bitch?' before dozing off. Not a bad idea, you think for yourself before sleep claims you too.";
 	otherwise:
-		say "ERROR-Eric-1C: He isn't in one of the states he should be in! Please report how you got to this message.";
+		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	
 to say EricSex6:    [player's pussy fucked by Eric]
 	if(hp of Eric is 22):   [male with horse-cock repeats]
@@ -485,7 +485,7 @@ to say EricSex6:    [player's pussy fucked by Eric]
 		say "     [fimpregchance]";
 		say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bunk together. In between panting for breath, he gives you another kiss on the neck and says 'Wow. You're the best.' followed by a last little thrust of his manhood into you.";
 	otherwise:
-		say "ERROR-Eric-1D: He shouldn't have a cock right now! Please report how you got to this message.";
+		say "ERROR-Eric-[hp of Eric]D: He shouldn't have a cock right now! Please report how you got to this message.";
 	
 to say EricSex7:    [fucking Eric's ass]
 	if(hp of Eric is 11):   [cuntboy repeat sex]
@@ -507,7 +507,7 @@ to say EricSex7:    [fucking Eric's ass]
 		say "     Quickly stripping off your own clothing, you climb on the bunk with him and kneel between his spread legs. He just looks so delicious, lying before you with his athletic body and that tight ass ready for you. A thought of going slow quickly evaporates before your boiling lust and you aim your shaft and then plunge into Eric's body in one go, making him groan as your cock suddenly pops through his pucker and invades his asshole. He whimpers a bit as you slide deeper, but soon starts to moan in lust as you bottom out and start going in and out, rubbing against his inner walls.";
 		say "     You fuck each other like sex-starved bunnies for at least an hour, only stopping for a moment when you cum inside him and fill his ass with your seed, then rest a moment on top of him until you're ready to go on. It's a wild ride, but finally - after him and you coming three times - you come to lie on the bunk side by side, your softening erection still inside him. Eric murmurs to himself 'I can't believe how much this gets me off. Three times he's made me cum.' before dozing off. You grind your hips against his one last time, then fall asleep yourself soon afterwards.";
 	otherwise:
-		say "ERROR-Eric-1C: He isn't in one of the states he should be in! Please report how you got to this message.";
+		say "ERROR-Eric-[hp of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 	
 to say EricSex8:    [player's ass fucked by Eric]
 	if(hp of Eric is 22):   [male with horse-cock repeats]
@@ -518,7 +518,7 @@ to say EricSex8:    [player's ass fucked by Eric]
 		say "     [mimpregchance]";
 		say "     With the thick shaft of his cock still pulsing softly inside you as it spurts more cum, Eric pulls you down to lie on your sides on the bunk together. In between panting for breath, he gives you another kiss on the neck and says 'Wow. You're the best.' followed by a last little thrust of his manhood into you.";
 	otherwise:
-		say "ERROR-Eric-1D: He shouldn't have a cock right now! Please report how you got to this message.";
+		say "ERROR-Eric-[hp of Eric]D: He shouldn't have a cock right now! Please report how you got to this message.";
 
 Section 4 - Endings
 
@@ -572,9 +572,10 @@ when play ends:
 		otherwise:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding, and it's several weeks after you're released until you hear from him again. He seeks you out one night, knocking at your door. A bit hesitantly he says 'Please fuck me, I - I need it - and you.' and opens up his coat, showing he's naked beneath. You wave him inside, then close the door and guide your submissive cuntboy towards the bedroom...";
 	otherwise if (hp of Eric is 100): [Stacy's girlfriend now]
-		say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. While waiting for the doctors to examine and clear you, you hear soldiers talk about a huge green humanoid in the campus area accompanied by a massively pregnant human. Sounds like Stacy and Eric. Apparently she took out a full squad of soldiers when they wanted to 'rescue' her boy/girl-friend, adding two female soldiers to her breeding partners and leaving the rest to be picked up by horny bunny jocks.";
+		if humanity of player > 9:
+			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. While waiting for the doctors to examine and clear you, you hear soldiers talk about a huge green humanoid in the campus area accompanied by a massively pregnant human. Sounds like Stacy and Eric. Apparently she took out a full squad of soldiers when they wanted to 'rescue' her boy/girl-friend, adding two female soldiers to her breeding partners and leaving the rest to be picked up by horny bunny jocks.";
 	otherwise if Campus Arena Lockerroom is known:
-		say "ERROR-Eric-1E: He should have had one of the other endings by now. Please report under which circumstances you got to see this.";
+		say "ERROR-Eric-[hp of Eric]E: He should have had one of the other endings by now. Please report under which circumstances you got to see this.";
 			
 
 Eric ends here.
