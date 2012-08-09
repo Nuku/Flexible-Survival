@@ -69,7 +69,6 @@ Angel vs Demons is a situation. The level of Angel vs Demons is 10.
 The sarea of Angel vs Demons is "Red";
 when play begins:
 	add Angel vs Demons to badspots of guy;       [Elijah is male]
-	add Angel vs Demons to badspots of girl;      [some succubi around when you free him or he's lost to the demons]
 	add Angel vs Demons to badspots of hellspawn; [demons everywhere - he might even become one]
 
 Instead of resolving a Angel vs Demons:
