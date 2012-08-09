@@ -1,5 +1,5 @@
 Version 1 of Elijah by Wahn begins here.
-[Version 1.5: Elijah now available if girls are banned]
+[Version 1.6: Mpreg]
 "Adds an NPC named Elijah to the Flexible Survival game"
 
 [ HP states of Elijah                                                ]
@@ -53,7 +53,7 @@ Version 1 of Elijah by Wahn begins here.
 [   4: Denise running off done                                       ]
 [ Character H - Crab Pet Interaction:                                ]
 [   0: Nothing happened                                              ]
-[   2: Grabbing a wingtip done (same for hp statee 3+4               ]
+[   2: Grabbing a wingtip done (same for hp state 3+4)               ]
 [   4: Thrown off the bunk done                                      ]
 
 [ NPC Connection summary for endings (hp state 4 only) :             ] 
@@ -61,7 +61,7 @@ Version 1 of Elijah by Wahn begins here.
 [ - Takes pet-Sarah for walks as a dog                               ]
 [ - Immune to Felinoid, but likes petting him                        ]
 [ - Playful sex with Sven                                            ]
-                  
+
 
 Section 1 - Meeting Event
 
@@ -86,7 +86,7 @@ Instead of resolving a Angel vs Demons:
 	now npcEint is "0000000000000N";  
 	increase score by 15;
 	Now Angel vs Demons is resolved;
-  
+
 Burned-Out Chapel is a room. It is fasttravel. It is private. 
 The description of Burned-Out Chapel is "[chapelplacedesc]";
 
@@ -446,7 +446,7 @@ Instead of fucking the Elijah:
 			say "     As enthralled as you have become, you don't even notice anything amiss until suddenly a long red tail snakes around your neck, choking you. An incubus and succubus step up besides you, grabbing your arms and pull you away from the chained angel. The incubus tightens his tail around your neck a bit more and says, 'Tztz - an uninvited guest wanting to grab some angel ass. That's OUR new plaything! But if you're here already, why don't you watch him lose his virginity.'";
 			say "     You're pulled to the side of the chapel, making room for a whole group of incubi and succubi and a large demon brute who parade around the altar. They take the angel down, peel off his ripped tunic and try to shake him awake. The members of the mob lewdly fondle his body and cock, but don't have much luck getting either consciousness or arousal out of him. Switching to another tactic, a succubus grabs the dented silver chalice of the chapel from the ground and holds it up for her male brethren, becoming the center of a group of feverishly masturbating demons. Soon, the now cum-splattered succubus steps up to the angel, triumphantly raising the cup and pouring its contents into his mouth and over his body.";
 			if girl is banned:
-				say "     It works as intended - the angel's cock fills out and hardens almost instantly, inducing a satisfied moans and chuckles from the demon mob. The succubus throws the chalice aside and an incubus climbs onto the altar, waving over to the demon brute to bring the angel. As the incubus moves onto all fours, offering up his ass to recieve some angel cock, the large demon brute impales their semi-conscious captive on his massive erection, then carries him over to the desecrated altar. With the help of many grabby hands, the angel's cock gets aligned with the incubus's asshole. Then the demon brute thrusts forward, moving the angel's hips too and sinking his virgin manhood into the damning embrace of his dark hole. Lustful moans and roars get louder and louder as they start fucking hard and deep with their angel cock-sleeve between them. The demon mob closes in around the altar area, jostling for better positions.";
+				say "     It works as intended - the angel's cock fills out and hardens almost instantly, inducing a satisfied moans and chuckles from the demon mob. The succubus throws the chalice aside and an incubus climbs onto the altar, waving over to the demon brute to bring the angel. As the incubus moves onto all fours, offering up his ass to receive some angel cock, the large demon brute impales their semi-conscious captive on his massive erection, then carries him over to the desecrated altar. With the help of many grabby hands, the angel's cock gets aligned with the incubus's asshole. Then the demon brute thrusts forward, moving the angel's hips too and sinking his virgin manhood into the damning embrace of his dark hole. Lustful moans and roars get louder and louder as they start fucking hard and deep with their angel cock-sleeve between them. The demon mob closes in around the altar area, jostling for better positions.";
 			otherwise:
 				say "     It works as intended - the angel's cock fills out and hardens almost instantly, inducing a satisfied moans and chuckles from the demon mob. The succubus throws the chalice aside and moves over to sit on the altar, waving over to the demon brute to bring the angel. As she leans back and spreads her legs eagerly to receive some angel cock, the large demon brute impales their semi-conscious captive on his massive erection, then carries him over to her. With the help of many grabby hands, the angel's cock gets aligned with the succubus's cunt. Then the demon brute thrusts forward, moving the angel's hips too and sinking his virgin manhood into the damning embrace of her folds. Lustful moans and roars get louder and louder as they start fucking hard and deep with their angel cock-sleeve between them. The demon mob closes in around the altar area, jostling for better positions.";
 			say "     The two demons holding you look almost spellbound at the action around the altar, then suddenly realize they're still holding you and not taking part themselves. You're quickly and unceremoniously dumped outside the chapel, its doors slammed shut behind you as the demons rush to join the orgy.";
@@ -550,7 +550,7 @@ Instead of fucking the Elijah:
 		otherwise:
 			say "[ElijahSexMenu]";
 			now lastElijahfucked is turns;
-      
+
 to say ElijahSexMenu:
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
@@ -660,7 +660,7 @@ to say ElijahSex1:    [suck angel cock]
 		say "     Starting with a tentative lick over his balls, you run your tongue along the side of Elijah's long shaft, circling the head of his cock as you get to it. You stroke his dick with your hand a few times, then take its tip between your lips. Elijah moans as you slowly slide his manhood deeper into your mouth, running your tongue over its sensitive skin. Soon he hits the back of your mouth and pushes on your head to encourage you to keep going. Taking a deep breath, you continue to slide more of his shaft past your lips. When your nose bumps into the skin under his navel, you have Elijah halfway down your throat and moaning about the sensations you're giving him.";
 		say "     Pulling off his cock to get some air, you stroke his saliva-coated manhood some more, then start sucking him in earnest, pumping your lips up and down on his hard shaft. You keep him going for a while, bringing him to the brink of an orgasm several times, stopping each time to let him cool down a bit. Then finally you go all out, sucking on his cock hard and pumping it in and out of your throat. After you building up his arousal all this time, Elijah doesn't last much longer. A mind-blowing orgasm shakes his body, his cock pulsing as spurt after spurt of his seed shoot directly into your stomach.";
 		say "     'Good job, cocksucker. You're better at this than most incubi.' Elijah says as he pulls out a bit, blasting the last shots of cum onto your tongue and giving you a taste of his seed.";  
-    
+
 to say ElijahSex2:    [cock sucked by Elijah]
 	if (hp of Elijah < 99): [good guy]
 		say "     You take off your clothing, then softly push Elijah to his knees in front of you. With your cock already half hard in anticipation it doesn't take him long to take its head into his mouth and start sucking, running his tongue over your shaft as he takes it in. Your sexy angel is a natural at cocksucking, making you pant and moan with his talented lips[if cock length of player > 7] and even managing to deep-throat your cock once or twice[end if].";
@@ -680,7 +680,7 @@ to say ElijahSex3:    [fucked by Elijah - ass or pussy]
 			say "     You climb on the bed too, kneeling over your handsome angel's body with your legs to both sides of his hips. You take hold of his manhood, rubbing it first against your pussy lips and then lowering yourself on it, sinking the embrace of your folds down over his shaft. It just feels heavenly as he slides up inside you, rubbing against all the right spots. You gasp in lust as your hips touch, all of Elijah now deep inside your body. After a short moment's rest, you start pumping your pussy up and down, gyrating your hips a bit to cause all kinds of pleasant sensations for both of you.";
 			say "     Riding him is fun, but you want Elijah to spread his wings a little (metaphorically). So after a while you lean down to him, kissing him deeply - then pull him up with you and lean backwards, further and further until you're on your back at the other end of the bed with him on top. Giving his tight ass a little squeeze, you whisper 'Fuck me.' to him and can almost feel him growing a bit more inside of you at being given the reins. Not wanting to disappoint, he starts thrusting deep and hard into you, using all kinds of tricks to make you gasp and moan in pleasure. It makes you wonder if he's found a copy of the Kama Sutra somewhere in the library or if he's just a natural.";
 			say "     Elijah indulges your body's needs for a long time, keeping you in a pleasant lustful buzz, but at some point his self-control is at an end. With a final satisfied moan, he drives his cock into your pussy as deep as he can and fills your womb with spurt after spurt of his fertile seed.";
-			say "[impregchance]";
+			say "[fimpregchance]";
 			if baby is 0 and gestation of child is not 0:
 				now facename of child is "Seraphim";
 				now bodyname of child is "Seraphim";
@@ -691,6 +691,11 @@ to say ElijahSex3:    [fucked by Elijah - ass or pussy]
 			say "     You climb on the bed too, kneeling over your handsome angel's body with your legs to both sides of his hips. You take hold of his manhood, rubbing it between the buns of your ass and then lower yourself on it, your sphincter giving way to his cockhead after a bit of pressure. It just feels heavenly as he slides up inside you, rubbing against all the right spots. You gasp in lust as your hips touch, all of Elijah now deep inside your body. After a short moment's rest, you start pumping up and down on him, gyrating your hips a bit to cause all kinds of pleasant sensations for both of you.";
 			say "     Riding him is fun, but you want Elijah to spread his wings a little (metaphorically). So after a while you lean down to him, kissing him deeply - then pull him up with you and lean backwards, further and further until you're on your back at the other end of the bed with him on top. Giving his tight ass a little squeeze, you whisper 'Fuck me.' to him and can almost feel him growing a bit more inside of you at being given the reins. Not wanting to disappoint, he starts thrusting deep and hard into you, using all kinds of tricks to make you gasp and moan in pleasure. It makes you wonder if he's found a copy of the Kama Sutra somewhere in the library or if he's just a natural.";
 			say "     Elijah indulges your body's needs for a long time, pausing when you're about to come, but at some point his self-control is at an end. With a final satisfied moan, he drives his cock into your ass as deep as he can and starts shooting spurt after spurt of his fertile seed. As close as you're to the edge yourself, the pulsing of his hard shaft inside you is enough to make you come too, shooting cum all over yourself, one shot even hitting your own chin.";
+			say "[mimpregchance]";
+			if baby is 0 and gestation of child is not 0:
+				now facename of child is "Seraphim";
+				now bodyname of child is "Seraphim";
+				now skinname of child is "Seraphim";
 			say "     [line break]";
 			say "     Both rather out of breath you just lie there on the bunk for a while, then drift off to sleep, comforted by each other's presence.";
 	otherwise:  [evil Elijah]
@@ -701,7 +706,7 @@ to say ElijahSex3:    [fucked by Elijah - ass or pussy]
 			say "     You climb on the bed too, kneeling over your handsome angel's body with your legs to both sides of his hips. You take hold of his manhood, rubbing it first against your pussy lips and then lowering yourself on it, sinking the embrace of your folds down over his shaft. It just feels heavenly as he slides up inside you, rubbing against all the right spots. You gasp in lust as your hips touch, all of Elijah now deep inside your body. After a short moment's rest, you start pumping your pussy up and down, gyrating your hips a bit to cause all kinds of pleasant sensations for both of you.";
 			say "     Riding him is lots of fun, but Elijah seems to prefer a more dominant role. So after a while with you on top, he pulls you down for a hot kiss - then grabs you tightly, turning the two of you around so your back is on the mattress now. You can almost feel him growing a bit more inside of you when he takes over, thrusting forcefully into your body. You're overwhelmed, reduced to gasping and moaning in pleasure as he starts using all kinds of tricks, stroking your body in just the right spots while his cock finds pleasure zones you didn't even know you had. Must be something he learned up from all those incubi and succubi he picks up out in the city.";
 			say "     Elijah indulges his lusts with your body for a long time, keeping you in a pleasant lustful buzz, but at some point his self-control is at an end. With a final satisfied moan, he drives his cock into your pussy as deep as he can and fills your womb with spurt after spurt of his fertile seed.";
-			say "[impregchance]";
+			say "[fimpregchance]";
 			if baby is 0 and gestation of child is not 0:
 				now facename of child is "Seraphim";
 				now bodyname of child is "Seraphim";
@@ -712,9 +717,14 @@ to say ElijahSex3:    [fucked by Elijah - ass or pussy]
 			say "     You climb on the bed too, kneeling over your handsome angel's body with your legs to both sides of his hips. You take hold of his manhood, rubbing it between the buns of your ass and then lower yourself on it, your sphincter giving way to his cockhead after a bit of pressure. It just feels heavenly as he slides up inside you, rubbing against all the right spots. You gasp in lust as your hips touch, all of Elijah now deep inside your body. After a short moment's rest, you start pumping up and down on him, gyrating your hips a bit to cause all kinds of pleasant sensations for both of you.";
 			say "     Riding him is lots of fun, but Elijah seems to prefer a more dominant role. So after a while with you on top, he pulls you down for a hot kiss - then grabs you tightly, turning the two of you around so your back is on the mattress now. You can almost feel him growing a bit more inside of you when he takes over, thrusting forcefully into your body. You're overwhelmed, reduced to gasping and moaning in pleasure as he starts using all kinds of tricks, stroking your body in just the right spots while his cock finds pleasure zones you didn't even know you had. Must be something he learned up from all those incubi and succubi he picks up out in the city.";
 			say "     Elijah indulges his lusts with your body for a long time, keeping you in a pleasant lustful buzz, but at some point his self-control is at an end. With a final satisfied moan, he drives his cock into your ass as deep as he can and starts shooting spurt after spurt of his fertile seed. As close as you're to the edge yourself, the pulsing of his hard shaft inside you is enough to make you come too, shooting cum all over yourself, one shot even hitting your own chin.";
+			say "[mimpregchance]";
+			if baby is 0 and gestation of child is not 0:
+				now facename of child is "Seraphim";
+				now bodyname of child is "Seraphim";
+				now skinname of child is "Seraphim";
 			say "     [line break]";
 			say "     After resting with you on the bunk for a moment, Elijah pulls out with a plop. He says, 'Nice tight ass, can't wait for the next time.', then saunters off to the bathroom to clean himself up.";
-  
+
 to say ElijahSex4:    [assfuck Elijah]
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
@@ -747,7 +757,6 @@ to say ElijahSex5:    [assfuck Elijah + Sven]
 		say "     As you spit-roast Sven with one cock in his ass and one in his mouth, you soon hear Sven groan around your shaft in his muzzle and feel his body shudder as he sprays his cum onto the bunk. Your own orgasm doesn't feel too far off either, so before your restraint is overwhelmed, you decide on a certain place to spend your seed and pull out of Sven's mouth. Then you move over to the other side again, pushing against Elijah's back to make him bend over and rubbing your cock against his ass. He eagerly bends forward, readying himself for your entrance. You thrust deep inside his tight ass, gasping at the feelings of need and lust coming over you from the tightness and warmth around your cock. And Elijah seems to be quite aroused by being taken from behind while fucking, as it doesn't take much longer until you hear him moan as he fills Sven with his seed. His spasming anal muscles around your cock take you over the edge with him, making you shoot spurt after spurt of your seed into his ass.";
 		say "     With his needs satisfied, Elijah pulls out and gives Sven's ass a last quick squeeze, then walks off towards the bathroom. You're left with a rather sticky bunk from Sven cumming all over it while being fucked so you pull some blankets from several others nearby and throw them on the floor to make a comfy pile. Then you lie down on them and cuddle a bit with Sven.";
 
-
 to say ElijahSex6:    [Take Elijah and Sven in your pussy]
 	[puts Snow Leopard as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -762,7 +771,7 @@ to say ElijahSex6:    [Take Elijah and Sven in your pussy]
 		say "     You watch for a while as Sven licks and sucks Elijah's cock, causing your handsome angel to moan in lust. Then you decide it's about time to put his angelic spear to some use yourself and tell them to come over to you. Sven pulls off Elijah's boots and helps him step out of his pants, then follows him to the side of your bunk. You open your legs, fingers spreading open the wet lips of your cunt and moan 'Fuck me, Elijah.'";
 		say "     He readily complies, aligning his long shaft with your pussy, then sinks himself deep into your folds and starts to thrust in and out. Sven seems to be content just watching your coupling, but you decide to give your pet a treat and reach out for his dick. You stroke your snowmeow, then pull him closer and take his feline shaft in your mouth, sucking on it and playing with it with your tongue.";
 		say "     Your mind goes into a kind of lustful haze as your angelic friend fucks you with swift and deep strokes and you're making your soft-furred pet gasp and moan with your mouth and tongue. You can't really say how long the amazing fucking session lasts, but you orgasm several times in its course, your pussy getting drippingly wet around Elijah's thrusting cock[if cocks of player is 1] and your own maleness spurting long arches of cum into the air and all over your chest and bunk[otherwise if cocks of player > 1] and your own maleness spurting long arches of cum into the air and all over your chest and bunk[end if]. Then at some point, Elijah's willpower is finally worn out and he can't hold back any longer, grinding his hips against yours to get as deep inside you as possible and burying his hands in the bunk's blanket. You feel his shaft pulse against the inner walls of your pussy as spurt after spurt of fertile seed gets deposited right in your womb.";
-		say "[impregchance]";
+		say "[fimpregchance]";
 		if baby is 0 and gestation of child is not 0:
 			now facename of child is "Seraphim";
 			now bodyname of child is "Seraphim";
@@ -770,9 +779,9 @@ to say ElijahSex6:    [Take Elijah and Sven in your pussy]
 		say "     After the last blast of cum, Elijah sinks down on top of you, taking a deep breath and then giving you a long kiss. You let him rest against you for a moment, then push him softly to the side to lie on your bunk. Time to give your faithful pet his release too - Sven's still standing next to the bunk, a hopeful expression on his face and his feline cock ready to go. Do you want to let him finish in your pussy, or rather suck him off? (Y for pussy, N for sucking)";
 		if player consents:
 			say "     You tell Sven to fuck you, spreading your legs for him. Your snowmeow pet eagerly sinks his feline cock into your pussy's depths, finding it very well lubricated with Elijah's massive load and your own juices. You pull him down on you as he thrusts rapidly in and out with his hips, giving him a kiss on the muzzle. It's amazing how nice his soft fur feels against the insides of your legs and your chest. You wrap your arms and legs around him, pulling him tightly against you to make him rub against your skin as he fucks you. All too soon, you feel him stiffen against you, gasping in satisfaction as his cock twitches and fills you with his seed, mingling inside your womb with Elijah's earlier deposition.";
-			say "[impregchance]";
+			say "[fimpregchance]";
 			say "     As exhaustion claims Sven and you, you shift a bit on the bunk to make room for the three of you, softly pushing the snowmeow off your body to rest between yourself and Elijah. Like that, you three fall asleep, resting together in a slightly sweaty and sticky, but very satisfied group on the bunk.";
- 		otherwise:
+		otherwise:
 			say "     You shift your body a bit so your head is dangling over the side of the bunk, looking at the world upside-down from your position on your back. Smiling at Sven, you wave him closer, then guide his cock into your waiting mouth. He pumps in and out, first slowly, then faster and faster as his urges tell him to. You relax as good as you can, allowing him to face-fuck you deeply, his feline shaft halfway down your throat often and his furry balls rubbing against your nose. With you sucking him before and the show of your coupling with Elijah, it doesn't take too long until he orgasms, spurting his come directly into your stomach.";
 			say "     After the last spurt of cum from his cock, Sven pulls out of your moth and you see him waver a bit with exhaustion. You shift a bit on the bunk to make room, then softly pull him down to lie between you and Elijah. Like that, you three fall asleep, resting together in a slightly sweaty and sticky, but very satisfied group on the bunk.";
 	otherwise:  [evil Elijah]
@@ -780,7 +789,7 @@ to say ElijahSex6:    [Take Elijah and Sven in your pussy]
 		say "     You watch for a while as Sven licks and sucks Elijah's cock, causing your handsome angel to moan in lust. Then Elijah decides to go for some pussy, pulling out of Sven's muzzle and telling the snowmeow to pull off his boots and help him out of his pants. Now fully naked, he steps over to your bunk, stroking his long shaft. You open your legs, fingers spreading open the wet lips of your cunt and moan 'Fuck me, Elijah.'";
 		say "     He readily complies, aligning his long shaft with your pussy, then sinks himself deep into your folds and starts to thrust in and out. Sven seems to be content just watching your coupling, but you decide to give your pet a treat and reach out for his dick. You stroke your snowmeow, then pull him closer and take his feline shaft in your mouth, sucking on it and playing with it with your tongue.";
 		say "     Your mind goes into a kind of lustful haze as the fallen angel fucks you with swift and deep strokes and you're making your soft-furred pet gasp and moan with your mouth and tongue. You can't really say how long the amazing fucking session lasts, but you orgasm several times in its course, your pussy getting drippingly wet around Elijah's thrusting cock[if cocks of player is 1] and your own maleness spurting long arches of cum into the air and all over your chest and bunk[otherwise if cocks of player > 1] and your own maleness spurting long arches of cum into the air and all over your chest and bunk[end if]. Then at some point, Elijah's willpower is finally worn out and he can't hold back any longer, grinding his hips against yours to get as deep inside you as possible and burying his hands in the bunk's blanket. You feel his shaft pulse against the inner walls of your pussy as spurt after spurt of fertile seed gets deposited right in your womb.";
-		say "[impregchance]";
+		say "[fimpregchance]";
 		if baby is 0 and gestation of child is not 0:
 			now facename of child is "Seraphim";
 			now bodyname of child is "Seraphim";
@@ -789,12 +798,11 @@ to say ElijahSex6:    [Take Elijah and Sven in your pussy]
 		say "     Time to give your faithful pet his release too - Sven's still standing next to the bunk, a hopeful expression on his face and his feline cock ready to go. Do you want to let him finish in your pussy, or rather suck him off? (Y for pussy, N for sucking)";
 		if player consents:
 			say "     You tell Sven to fuck you, spreading your legs for him. Your snowmeow pet eagerly sinks his feline cock into your pussy's depths, finding it very well lubricated with Elijah's massive load and your own juices. You pull him down on you as he thrusts rapidly in and out with his hips, giving him a kiss on the muzzle. It's amazing how nice his soft fur feels against the insides of your legs and your chest. You wrap your arms and legs around him, pulling him tightly against you to make him rub against your skin as he fucks you. All too soon, you feel him stiffen against you, gasping in satisfaction as his cock twitches and fills you with his seed, mingling inside your womb with Elijah's earlier deposition.";
-			say "[impregchance]";
+			say "[fimpregchance]";
 			say "     As exhaustion claims Sven and you, you shift a bit on the bunk to make room for him, softly pushing the snowmeow off your body to lie beside you. Like that, you fall asleep, resting together in a slightly sweaty and sticky, but very satisfied couple on the bunk.";
 		otherwise:
 			say "     You shift your body a bit so your head is dangling over the side of the bunk, looking at the world upside-down from your position on your back. Smiling at Sven, you wave him closer, then guide his cock into your waiting mouth. He pumps in and out, first slowly, then faster and faster as his urges tell him to. You relax as good as you can, allowing him to face-fuck you deeply, his feline shaft halfway down your throat often and his furry balls rubbing against your nose. With you sucking him before and the show of your coupling with Elijah, it doesn't take too long until he orgasms, spurting his come directly into your stomach.";
 			say "     After the last spurt of cum from his cock, Sven pulls out of your moth and you see him waver a bit with exhaustion. You shift a bit on the bunk to make room, then softly pull him down to lie besides you. Like that, you fall asleep, resting together in a slightly sweaty and sticky, but very satisfied couple on the bunk.";
-
 
 to say ElijahSex7:    [assfuck Elijah+Felinoid]
 	if (hp of Elijah < 99): [good guy]
@@ -833,7 +841,6 @@ to say ElijahSex7:    [assfuck Elijah+Felinoid]
 			say "     You just keep going, the feelings of the non-human asshole of your felinoid companion around your manhood building up your lust further and further. Then you finally reach the point of no return and pulse after pulse of your seed blasts into the felinoid's insides, filling him up with your cum. You pant loudly, your whole body twitching with each shot, then collapse onto Elijah's back.";
 			say "     After resting there for a moment, you take a deep breath and pull out with a small plop, standing up on a bit shaky legs. Elijah follows suit, climbing off the felinoid and rubbing his cock against the sticky patch where he shot a load while you were fucking him. Then the dark angel steps around to the felinoid's front and presents his cock to be licked clean. Grinning at you while his manhood is licked by your felinoid companion, he then saunters off to his bunk and lies down to rest.";
 
-
 to say ElijahSex8:    [Take Elijah and the Felinoid in your pussy - at the same time]
 	[puts Felinoid as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -853,13 +860,13 @@ to say ElijahSex8:    [Take Elijah and the Felinoid in your pussy - at the same 
 			increase cunt width of player by 6;
 		say "     Roaring in pleasure as he bottoms out inside you, the felinoid then starts to fuck you with deep, forceful thrusts, rocking your whole body back and forth. You have to grab his forelegs to hold on to so he doesn't push you too far up. With two cocks sliding in and out of your pussy and against each other, Elijah moaning below you and the felinoid purring and growling above, your mind gets lost in a lustful haze. You can't say how long this relentless animalistic mating takes, but who cares about such things when two mind-blowing orgasms rock your body in the meantime. Your pussy leaks a copious amount of female juices, lubricating the unending in-out movement of the felinoid's cock and dripping down onto Elijah's balls and crotch. [if cocks of player is 1]And your own cock spasms and shoots long strands of cum all over Elijah's muscular chest.[otherwise if cocks of player > 1]And your own cocks spasm and shoot long strands of cum all over Elijah's muscular chest.[end if]";
 		say "     Soon it's Elijah's turn to cum, driven over the edge by your tightness and the felinoid's hard shaft rubbing against his own. He gasps, pulling you down for a deep kiss as his balls pulse with spurt after spurt of fertile seed that erupts into your womb.";
-		say "[impregchance]";
+		say "[fimpregchance]";
 		if baby is 0 and gestation of child is not 0:
 			now facename of child is "Seraphim";
 			now bodyname of child is "Seraphim";
 			now skinname of child is "Seraphim";
 		say "     The felinoid redoubles his fucking speed as he feels Elijah's angelic cum around his feline cock, trying to get his own sperm into the race for your eggs as fast as possible. After several more deep thrusts, he gives a satisfied roar and you feel forceful blasts of fertile felinoid seed fill your womb, mingling with Elijah's cum.";
-		say "[impregchance]";
+		say "[fimpregchance]";
 		say "     Waiting until the last spurt of cum has leaked from his feline cock, the felinoid stays on top of you a moment longer. Then you feel the soft touch of his fur lift from your back, followed by the bunk shaking a bit as the large feline sprawls out against it on the floor. Elijah meanwhile holds you against his chest, softly stroking your body in post-coital bliss. 'That was amazing.' he sighs, and gives you a soft kiss on the lips. Content to lie in the arms of your angel lover, the bunk vibrating slightly with the purrs of the felinoid sprawled against it on the floor, you rest there peacefully for a while.";
 	otherwise:  [evil Elijah]
 		say "     When your felinoid companion comes over to you and rubs his shoulder against your hips, you decide to have a bit of fun today. You call over Elijah, who looks from the felinoid to you, then grins and strips off his boots and leather pants, revealing a rapidly hardening erection. He lets himself be led to a nearby bunk, where you have him sit on the end of it, then step back and do a little striptease with your clothes for him to watch. Bending over, you take his rapidly hardening cock into your mouth and bob your head up and down on it. From behind you, you hear an approving growl, followed by the felinoid's large, rough tongue licking over your exposed pussy.";
@@ -871,15 +878,14 @@ to say ElijahSex8:    [Take Elijah and the Felinoid in your pussy - at the same 
 			increase cunt width of player by 6;
 		say "     Roaring in pleasure as he bottoms out inside you, the felinoid then starts to fuck you with deep, forceful thrusts, rocking your whole body back and forth. You have to grab his forelegs to hold on to so he doesn't push you too far up. With two cocks sliding in and out of your pussy and against each other, Elijah moaning below you and the felinoid purring and growling above, your mind gets lost in a lustful haze. You can't say how long this relentless animalistic mating takes, but who cares about such things when two mind-blowing orgasms rock your body in the meantime. Your pussy leaks a copious amount of female juices, lubricating the unending in-out movement of the felinoid's cock and dripping down onto Elijah's balls and crotch. [if cocks of player is 1]And your own cock spasms and shoots long strands of cum all over Elijah's muscular chest.[otherwise if cocks of player > 1]And your own cocks spasm and shoot long strands of cum all over Elijah's muscular chest.[end if]";
 		say "     Soon it's Elijah's turn to cum, driven over the edge by your tightness and the felinoid's hard shaft rubbing against his own. He gasps, grabbing your hips tightly and grinding his crotch up against you as his balls pulse with spurt after spurt of fertile seed that erupts into your womb.";
-		say "[impregchance]";
+		say "[fimpregchance]";
 		if baby is 0 and gestation of child is not 0:
 			now facename of child is "Seraphim";
 			now bodyname of child is "Seraphim";
 			now skinname of child is "Seraphim";
 		say "     The felinoid redoubles his fucking speed as he feels Elijah's angelic cum around his feline cock, trying to get his own sperm into the race for your eggs as fast as possible. After several more deep thrusts, he gives a satisfied roar and you feel forceful blasts of fertile felinoid seed fill your womb, mingling with Elijah's cum.";
-		say "[impregchance]";
+		say "[fimpregchance]";
 		say "     Waiting until the last spurt of cum has leaked from his feline cock, the felinoid stays on top of you a moment longer. Then you feel the soft touch of his fur lift from your back, followed by the bunk shaking a bit as the large feline sprawls out against it on the floor. Elijah meanwhile gives your ass a slight squeeze, then holds you tightly as he rolls over, leaving you to lie on your back on the bunk. He pulls out of your body, smiling at the cum still dripping from his shaft, then stands up. Looking down on the felinoid, he says 'Not bad fucking, you big furball. But don't think I won't be back to fuck your ass only because we were in a pussy together.' He leans down and shoves three fingers in the feline's asshole a few times, then laughs to himself and walks off to his own bunk. You're left lying there alone, your womb filled with cum. Then you feel a vibration going through you, coming from the felinoid's purring as he lies against the bunk on the floor. With how exhausted you are and the soothing purr suffusing your body, you soon fall asleep, giving you some much needed rest.";
-
 
 to say ElijahSex9:    [Fuck Elijah as he's balls deep inside Candy]
 	if (hp of Elijah < 99): [good guy]
@@ -897,7 +903,6 @@ to say ElijahSex9:    [Fuck Elijah as he's balls deep inside Candy]
 		say "     Grabbing Candy's softly furred legs raised up besides Elijah's hips to hold on to, you take out all the stops and thrust forcefully forward, burying your cock to the hilt and driving Elijah's own maleness deeper into Candy's ass. You fuck Elijah - and through him Candy - hard and deep, filling the bunk room with loud moans and groans. It's an amazing feeling to have not one but two handsome males on a bunk for your pleasure - you wish it could last forever, but what ever does?";
 		say "     The first to go is Candy, loudly moaning in his girlish voice as he sprays pink jets of cum all over his chestfur, filling the air with the smell of cotton candy. Not far behind, Elijah stiffens below you as his cock starts pulsing, filling Candy's ass with a torrent of his creamy cum. As he orgasms, his anal muscles spasm and contract around your cock, taking you over the edge right with him. With a satisfied groan, you plunge yourself in as deep as possible, then start unloading jet after jet of your seed inside his ass. As the last spurt leaves your body and gets deposited in Elijah, the overpowering urge to rut him vanishes, leaving you exhausted and out of breath. The fallen angel pulls his cock out of Candy, then softly pushes you off his back to lie on the bunk and walks off. Too exhausted to go to your own bunk, you just snuggle up to Candy and fall asleep, your face buried in the warm fur of his side.";
 
-
 to say ElijahSex10:    [Let Fuck Elijah you as he's being shafted by Candy]
 	if (hp of Elijah < 99): [good guy]
 		say "     Deciding you're in the mood for some entertainment, you sit back comfortably on your bunk and call over Candy and Elijah. As they come over to stand side by side before you, you smile mischievously at them and say 'I'd like a little show from you two. Why don't you start with kissing each other...'";
@@ -907,6 +912,7 @@ to say ElijahSex10:    [Let Fuck Elijah you as he's being shafted by Candy]
 		say "     A very eager Elijah steps up to your bunk, climbing up to kneel on it and taking hold of your legs as you spread them for him. Then you feel his hard shaft rubbing against your crotch until it finds the opening of your folds. You moan deeply as Elijah pierces your body, sinking himself inside your tight passage. Reaching up, you pull him down onto you, going for a lustful kiss as he bottoms out and his balls touch your skin. With Elijah's upper body leaned down in your embrace, Candy takes the opportunity to go for his ass as it is raised in the air. The girly coon smiles at you over Elijah's shoulder, aiming his manhood and then pushes in against Elijah's pucker. As he penetrates your angel friend, you feel Elijah's cock switch a bit in your pussy, getting even harder at the sensations from his ass.";
 		say "     Candy then starts pushing in and out of Elijah, moaning as your friend's asshole grips his cock tightly. With each of his thrusts he drives deep into Elijah, rocking him forward and making Elijah's cock rub against your insides. Elijah joins him with his own hip movements, sometimes thrusting back to meet Candy for an especially deep penetration of his ass, at other times moving forward to combine their thrusts and slam into you together.";
 		say "     Over the next thirty minutes or so you're fucked hard and fast, your mind flooded with pleasure at Elijah's manhood inside you, his hands caressing your body and several more kisses you share between each other. You have two orgasms in that time, pussy juices flowing freely around Elijah's thrusting cock[if cocks of player is 1] and your own erection shooting long strands of cum all over yourself[otherwise if cocks of player > 1] and your own erections shooting long strands of cum all over yourself[end if]. Then it's Elijah's turn - he leans down to hold you tight against himself and kiss you as his shaft pulses with each blast of fertile seed filling your womb. From behind him, you hear Candy gasping loudly as he creams your angel's insides, the contracting and twitching ass muscles of Elijah having driven him over the edge.";
+		say "[fimpregchance]";
 		say "     Satisfied at your very pleasurable threesome, you whisper to Elijah to stay with you, then roll over a bit on the bunk. Your angel friend stretches out besides you, holding you to him with one strong arm over your chest. With a nice feeling of security, you fall asleep in his arms.";
 	otherwise:  [evil Elijah]
 		say "     Deciding you're in the mood for some entertainment, you sit back comfortably on your bunk and call over Candy and Elijah. As they come over to stand side by side before you, you smile mischievously at them and say 'I'd like a little show from you two. Why don't you start with kissing each other...'";
@@ -914,6 +920,7 @@ to say ElijahSex10:    [Let Fuck Elijah you as he's being shafted by Candy]
 		say "     Then at one point, Elijah pushes Candy off his cock, stroking along its length. 'Time for some pussy!' he says, then walks over to you and quickly strips and rips your clothing from you. With barely contained lust Elijah steps up to your bunk, climbing up to kneel on it and taking hold of your legs as you spread them for him. Then you feel his hard shaft rubbing against your crotch until it finds the opening of your folds. You moan deeply as Elijah pierces your body, sinking himself inside your tight passage. He moans deeply as he bottoms out and his balls touch your skin. Then he turns around, with his upper body telling Candy 'Nice job, cocksucker. I'll let you fuck my ass as a reward.' Candy excitedly takes the offered opportunity, aiming his manhood and pushing in against Elijah's pucker. As he penetrates your angel friend, you feel Elijah's cock switch a bit in your pussy, getting even harder at the sensations from his ass.";
 		say "     Then, Candy starts pushing in and out of Elijah, moaning as the dark angel's asshole grips his cock tightly. With each of his thrusts he drives deep into Elijah, rocking him forward and making Elijah's cock rub against your insides. Elijah joins him with his own hip movements, sometimes thrusting back to meet Candy for an especially deep penetration of his ass, at other times moving forward to combine their thrusts and slam into you together.";
 		say "     Over the next thirty minutes or so you're fucked hard and fast, your mind flooded with pleasure at Elijah's manhood inside you and his hands fondling your body. You have two orgasms in that time, pussy juices flowing freely around Elijah's thrusting cock[if cocks of player is 1] and your own erection shooting long strands of cum all over yourself[otherwise if cocks of player > 1] and your own erections shooting long strands of cum all over yourself[end if]. Then it's Elijah's turn - he leans down to hold you tight against himself as his shaft pulses with each blast of fertile seed filling your womb. From behind him, you hear Candy gasping loudly as he creams your angel's insides, the contracting and twitching ass muscles of Elijah having driven him over the edge.";
+		say "[fimpregchance]";
 		say "     His own lusts satisfied, Elijah pulls out of you a bit unceremoniously. He pushes a finger inside your pussy, grinning broadly as it comes out wet with his own cum and a small runnel of seed starts to seep out. Then he walks off, back to his own bunk.";
 
 
