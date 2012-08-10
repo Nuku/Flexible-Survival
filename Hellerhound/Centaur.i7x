@@ -224,12 +224,12 @@ When Play begins:
 	now body entry is "that of a centaur, with a muscled, human upper torso.  Your body has well-defined muscles, but they seem a little strange and don't quite move right.  Your arms are strong and muscular, and roughly human in appearance as well.  Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle green hooves";
 	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a green, flowing tail like a horse coming from just above your behind.  It wriggles and squirms unlike a horsetail though, moving more like a tentacle.";
-	now cock entry is "green and equine, with bumps covering it and tentacles growing out of two bulges along its sheath";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now cock entry is "[one of]green and equine[or]equine and tentacled[or]bumped and tentacled[or]bumped and equine[or]green and bump-covered[at random]";
 	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your body grows muscled at the bottom, and your legs change into those of a horse.  Your muscles grow and shift, moving into slightly different positions.  Your breasts feel odd, and it seems like most of their girth is inside of you"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "the skin below your abdomen grows black fur, melding smoothly into the human skin above"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a twitching quiver runs down your spine as it extends and grows a green horse's tail";
-	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be.  Your cock becomes twisted and deformed as its infested by the strange infection.  It turns green and equine in shape with bumps covering it and tentacles growing out of two bulges along its sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 22;
 	now dex entry is 24;
 	now sta entry is 20;					
@@ -268,7 +268,7 @@ When Play begins:
 	now type entry is "centaur";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
