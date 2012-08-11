@@ -31,6 +31,8 @@ to say gill fruit use:
 	now hasgills is 1;
 	decrease the thirst of the player by 10;
 	decrease the hunger of the player by 10;
+	if thirst of player < 0, now thirst of player is 0;
+	if hunger of player < 0, now hunger of player is 0;
 	increase score by 10;
 	say "Your neck feels odd as gills seem to sprout, tiny folds of skin flat in the air.";
 	follow the turnpass rule;
@@ -62,44 +64,46 @@ check swimtoing:
 
 carry out swimtoing:
 	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
-		let T be a random number between one and 10;
-		if T is 1:
-			if furry is banned or guy is banned:
-				increase T by 1;
-			otherwise:
-				say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-				challenge "feral sea dragon"; [duh case, all three ways]
-		if T is 2:
-			if furry is banned or girl is banned:
-				increase T by 1;
-			otherwise:
-				say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-				challenge "feral sea dragoness";
-		if T is 3:
-			if furry is banned or hermaphrodite is banned:
-				increase T by 1;
-			otherwise:
-				challenge "hermaphrodite dolphin";
-		if T is 4:
-			if furry is banned or guy is banned:
-				increase T by 1;
-			otherwise:
-				challenge "Killer Whale";
-		if T is 5:
-			if furry is banned:
-				increase T by 1;
-			otherwise:
-				challenge "Otter";
-		if T is 6:
-			if guy is banned:
-				increase T by 1;
-			otherwise:
-				challenge "Siren";
+		swimmingfight;
 	otherwise:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;
 	follow turnpass rule;
 
+to swimmingfight:
+	let T be a random number between one and 10;
+	if T is 1:
+		if furry is banned or guy is banned:
+			increase T by 1;
+		otherwise:
+			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+			challenge "feral sea dragon"; [duh case, all three ways]
+	if T is 2:
+		if furry is banned or girl is banned:
+			increase T by 1;
+		otherwise:
+			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+			challenge "feral sea dragoness";
+	if T is 3:
+		if furry is banned or hermaphrodite is banned:
+			increase T by 1;
+		otherwise:
+			challenge "hermaphrodite dolphin";
+	if T is 4:
+		if furry is banned or guy is banned:
+			increase T by 1;
+		otherwise:
+			challenge "Killer Whale";
+	if T is 5:
+		if furry is banned:
+			increase T by 1;
+		otherwise:
+			challenge "Otter";
+	if T is 6:
+		if guy is banned:
+			increase T by 1;
+		otherwise:
+			challenge "Siren";
 
 
 after looking when the player is in the public beach:

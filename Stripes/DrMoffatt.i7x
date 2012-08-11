@@ -34,6 +34,7 @@ Instead of resolving a Another Doctor:
 		increase hospnav by 1;
 		say "[hospprogress]";
 		increase score by 5;
+	now Another Doctor is resolved;
 
 
 Section 2 - Psych Department
