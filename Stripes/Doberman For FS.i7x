@@ -1,4 +1,5 @@
-Doberman For FS by Stripes begins here.
+Version 2 of Doberman For FS by Stripes begins here.
+[Version 2.0 - 2nd wave of player victory sex and weapon confiscation activated.]
 [This file is a co-product of Stripes and Kaleem.]
 
 "Adds a Doberman infection and creature.  This file pulls double-duty, with the creature/combat portions written by Stripes to run the Doberwoman Cop.  The infection and ending portions of this file were written by Kaleem to deal with the Doberman NPC for the Firehouse content."
@@ -7,6 +8,7 @@ Doberman For FS by Stripes begins here.
 Section 1 - Monster Responses		[Note: Combat related portions deal with the Doberwoman Cop.]
 
 dobieresist is a number that varies.
+dobielibido is a number that varies.
 
 when play begins:
 	add { "Doberman" } to infections of furry;
@@ -14,7 +16,37 @@ when play begins:
 to say losetoDoberman:
 	choose row monster from the table of random critters;
 	if dobieresist is 0:
-		say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly.  'It's good to see that you've still got some control in there.  Things are really crazy out there right now.  Do you still remember your name?  Where you lived and worked?'  She asks you some basic questions, not to get the information but to make sure you can still remember it.  'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder.  'I want you to return to your home, take cover and wait this thing out.'  And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if].";
+		say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly.  'It's good to see that you've still got some control in there.  Things are really crazy out there right now.  Do you still remember your name?  Where you lived and worked?'  She asks you some basic questions, not to get the information but to make sure you can still remember it.  'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder.  'I want you to return to your home, take cover and wait this thing out";
+		if "dirty whip" is listed in invent of player or "infected sword" is listed in invent of player:
+			say ".'";
+			say "     The policewoman's canine nose twitches and she quickly grabs you by the wrist, twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.  As you start to protest, she twists your arm harder and pushes you down with a growl";
+			if "dirty whip" is listed in invent of player and "infected sword" is listed in invent of player:
+				say ".  She takes your whip and sword away, making sure to grab them using an evidence bag.  'I appreciate your cooperation, but I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
+				if weapon object of player is dirty whip:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				if weapon object of player is infected sword:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				delete dirty whip;
+				delete infected sword;
+			otherwise if "dirty whip" is listed in invent of player:
+				say ".  She takes your whip away, making sure to grab them using an evidence bag.  'I appreciate your cooperation, but I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
+				if weapon object of player is dirty whip:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				delete dirty whip;
+			otherwise if "infected sword" is listed in invent of player:
+				say ".  She takes your sword away, making sure to grab them using an evidence bag.  'I appreciate your cooperation, but I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
+				if weapon object of player is infected sword:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				delete infected sword;
+		say ".'  And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if].";
 		increase humanity of player by 12;
 		if humanity of player > 100, now humanity of player is 100;
 	otherwise if libido of player >= 110:
@@ -30,7 +62,37 @@ to say losetoDoberman:
 		let fine be 4 + ( dobieresist * 2 ) + ( hp entry - monsterhp );
 		let timepenalty be 2;
 		if dobieresist > 4, increase timepenalty by 1;
-		say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms.  She growls and keeps a close eye on you.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she looks you over sternly.  'I can see that you've at least still got a little control in there.  Still, you were resisting arrest.  You need to get a grip on yourself and hold on until rescue comes.'  She pulls out a pad and quickly writes something out.  'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home.  You need to keep it together, take cover and wait this mess out until rescue comes.'  She shoves the ticket into your hand, turns and heads off.  More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket.  It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
+		say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms.  She growls and keeps a close eye on you.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she looks you over sternly.  'I can see that you've at least still got a little control in there.  Still, you were resisting arrest.  You need to get a grip on yourself and hold on until rescue comes.'  She pulls out a pad and quickly writes something out.  'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home.  You need to keep it together, take cover and wait this mess out until rescue comes";
+		if "dirty whip" is listed in invent of player or "infected sword" is listed in invent of player:
+			say ".'";
+			say "     The policewoman's canine nose twitches and she quickly grabs you by the wrist, twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.  As you start to protest, she twists your arm harder and pushes you down with a growl";
+			if "dirty whip" is listed in invent of player and "infected sword" is listed in invent of player:
+				say ".  She takes your whip and sword away, making sure to grab them using an evidence bag.  'Just think about the damage you could have caused with these.  You're too much of a loose cannon to be trusted with them.  I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
+				if weapon object of player is dirty whip:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				if weapon object of player is infected sword:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				delete dirty whip;
+				delete infected sword;
+			otherwise if "dirty whip" is listed in invent of player:
+				say ".  She takes your whip away, making sure to grab it using an evidence bag.  'Just think about the damage you could have caused with this.  You're too much of a loose cannon to be trusted with it.  I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
+				if weapon object of player is dirty whip:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				delete dirty whip;
+			otherwise if "infected sword" is listed in invent of player:
+				say ".  She takes your sword away, making sure to grab it using an evidence bag.  'Just think about the damage you could have caused with this.  You're too much of a loose cannon to be trusted with it.  I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
+				if weapon object of player is infected sword:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				delete infected sword;
+		say ".'  She shoves the ticket into your hand, turns and heads off.  More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket.  It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
 		decrease freecred by fine;
 		if freecred < 0, now freecred is 0;
 		increase humanity of player by 10;
@@ -40,42 +102,112 @@ to say losetoDoberman:
 		let timepenalty be 3;
 		if dobieresist > 4, increase timepenalty by 1;
 		say "     After the Doberman cop strikes her final blow, she knocks you to the ground and presses her nightstick at the back of your neck to hold you down firmly.  She growls deeply and knees you in the kidneys for good measure.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she looks you over sternly.  'I'm not sure if you can understand me in there,' she growls as she holds you down, 'but you need to keep it together and hold out until rescue can come.  I know things are crazy out there, but you can't give into it.'  You are too sore from the fight to do more than groan in response as she gets off you and nudges you onto your back with her foot while pulling out a notepad.";
-		say "     'Since I can't really detail you right now, I'm giving you a ticket and ordering you back to your home.  You need to get your head on straight or you'll end up a sex monster like the others out there.  The police band stated that the National Guard would be called in, so rescue is on the way.  You need to get a grip, take cover and wait this mess out until rescue comes.'  She tosses the ticker onto your prone body, turns and heads off.  More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket.  It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
+		say "     'Since I can't really detail you right now, I'm giving you a ticket and ordering you back to your home.  You need to get your head on straight or you'll end up a sex monster like the others out there.  The police band stated that the National Guard would be called in, so rescue is on the way.  You need to get a grip, take cover and wait this mess out until rescue comes";
+		if "dirty whip" is listed in invent of player or "infected sword" is listed in invent of player:
+			say ".'";
+			say "     The policewoman's canine nose twitches and she quickly grabs you by the wrist, twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.  As you start to protest, she twists your arm harder and pushes you down with a growl";
+			if "dirty whip" is listed in invent of player and "infected sword" is listed in invent of player:
+				say ".  She takes your whip and sword away, making sure to grab them using an evidence bag.  'I can't let a half-crazed fool like you run around with something like this.  You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
+				if weapon object of player is dirty whip:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				if weapon object of player is infected sword:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				delete dirty whip;
+				delete infected sword;
+			otherwise if "dirty whip" is listed in invent of player:
+				say ".  She takes your whip away, making sure to grab it using an evidence bag.  'I can't let a half-crazed fool like you run around with something like this.  You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
+				if weapon object of player is dirty whip:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				delete dirty whip;
+			otherwise if "infected sword" is listed in invent of player:
+				say ".  She takes your sword away, making sure to grab it using an evidence bag.  'I can't let a half-crazed fool like you run around with something like this.  You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
+				if weapon object of player is infected sword:
+					now weapon damage of player is 4;
+					now weapon type of player is "Melee";
+					now weapon object of player is journal;
+				delete infected sword;
+		say ".'  She tosses the ticker onto your prone body, turns and heads off.  More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket.  It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
 		decrease freecred by fine;
 		if freecred < 0, now freecred is 0;
 		increase humanity of player by 10;
 		extend game by ( 0 - timepenalty );
+	decrease dobielibido by 5;
+	if dobielibido < 0, now dobielibido is 0;
 
 
 to say beattheDoberman:
 	say "     Your last attack knocks away the policewoman's nightstick, sending it skittering across the ground as she's knocked down.  She releases a canine whimper that she quickly stiffles as she fails to get back up";
-	if cocks of player > 0 or cunts of player > 0 and libido of player > 25:
-		say ".  Looking her over, you can't help but find the canine woman's body more than a little sexy, especially in that cop uniform.  Shall you take advantage of his opportunity to have some fun with the hot policewoman?";
-		if the player consents:
-			say "     Grabbing her firmly, you pin her down with one arm while the other roams over her body, groping her ass and breasts before sliding under her skirt to pull her panties down.  She bites her lip, but soon starts to moan despite herself as her canine body starts to respond as you pump a pair of fingers into her increasingly wet pussy.  Soon she's panting lustfully and unable to resist your further advances.  Now that you've got her worked up, shall you [if cocks of player > 0]fuck her[otherwise]keep fingering her[end if] (Y) or get that muzzle and long tongue of hers to work pleasing you (N)?";
+	if dobielibido < 50:		[low-lust cop]
+		if ( cocks of player > 0 or cunts of player > 0 ) and libido of player > 25:
+			say ".  Looking her over, you can't help but find the canine woman's body more than a little sexy, especially in that cop uniform.  Shall you take advantage of his opportunity to have some fun with the hot policewoman?";
 			if the player consents:
-				if cocks of player > 0:
-					say "     You grab the dog-woman's hip and pull her ass up as you move atop her.  A small part of her seems to still want to resist for a moment before giving in and she grinds her sexy bottom against your throbbing cock, her tail wagging excitedly.  She moans and yips as you thrust into her, pounding away at her doggy cunt.  Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released.  You fuck the policewoman bitch, making her cum repeatedly before you blast your hot load deep inside her.  As her final, powerful orgasm washes through her, she collapse to the ground, passing out after her much needed release.";
+				say "     Grabbing her firmly, you pin her down with one arm while the other roams over her body, groping her ass and breasts before sliding under her skirt to pull her panties down.  She bites her lip, but soon starts to moan despite herself as her canine body starts to respond as you pump a pair of fingers into her increasingly wet pussy.  Soon she's panting lustfully and unable to resist your further advances.  Now that you've got her worked up, shall you [if cocks of player > 0]fuck her[otherwise]keep fingering her[end if] (Y) or get that muzzle and long tongue of hers to work pleasing you (N)?";
+				if the player consents:
+					if cocks of player > 0:
+						say "     You grab the dog-woman's hip and pull her ass up as you move atop her.  A small part of her seems to still want to resist for a moment before giving in and she grinds her sexy bottom against your throbbing cock, her tail wagging excitedly.  She moans and yips as you thrust into her, pounding away at her doggy cunt.  Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released.  You fuck the policewoman bitch, making her cum repeatedly before you blast your hot load deep inside her.  As her final, powerful orgasm washes through her, she collapse to the ground, passing out after her much needed release.";
+						increase dobielibido by 20;
+					otherwise:
+						say "     You grab the dog-woman's hip and pump your fingers into her faster.  As a small part of her seems to want to resist for a moment before giving in and she presses her sexy bottom back against your stroking digits, her tail wagging excitedly.  She moans and yips as you alternate between pumping your fingers into her doggy cunt and teasing her clit.  Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released.  You finger-fuck the policewoman bitch, making her cum repeatedly while working a few fingers into yourself with your free hand.  As her final, powerful orgasm washes through her, she collapse to the ground, passing out after her much needed release.";
+						increase dobielibido by 12;
 				otherwise:
-					say "     You grab the dog-woman's hip and pump your fingers into her faster.  As a small part of her seems to want to resist for a moment before giving in and she presses her sexy bottom back against your stroking digits, her tail wagging excitedly.  She moans and yips as you alternate between pumping your fingers into her doggy cunt and teasing her clit.  Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released.  You finger-fuck the policewoman bitch, making her cum repeatedly while working a few fingers into yourself with your free hand.  As her final, powerful orgasm washes through her, she collapse to the ground, passing out after her much needed release.";
+					if cocks of player > 0:
+						say "     You grab the dog-woman's head and press her muzzle between your legs, forcing her to take in the scent of your arousal.  As a small part of her seems to want to resist for a moment before giving in and she slides her mouth over your throbbing cock, her tail wags excitedly.  She moans wetly around your penis and slides a paw between her legs, plunging her own fingers into herself to replace yours.  You stroke her ears and tell her what a good bitch she is as you make her suck you off.  Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released.  You face-fuck the policewoman bitch, making her cum repeatedly while her long muzzle and doggy tongue slide over your cock.  When you finally cum, you pull out and blast your load across her face and open muzzle.  As her final, powerful orgasm washes through her, she collapse to the ground, passing out after her much needed release.";
+						increase dobielibido by 15;
+					otherwise:
+						say "     You grab the dog-woman's head and press her muzzle between your legs, forcing her to take in the scent of your arousal.  As a small part of her seems to want to resist for a moment before giving in and she slides her long tongue tentatively across your wet pussy before diving in, her tail wags excitedly.  She moans wetly and yips between licks, sliding a paw between her legs and plunging her own fingers into herself to replace yours.  You stroke her ears and tell her what a good bitch she is as you make her eat you out.  Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released.  You grind your pussy against policewoman bitch's muzzle, making her cum repeatedly while her long, doggy tongue laps up your juices.  When you cum in pleasure, you soak her muzzle and spill your hot juices over her tongue, which she laps up lustfully.  As her final, powerful orgasm washes through her, she collapse to the ground, passing out after her much needed release.";
+						increase dobielibido by 12;
 			otherwise:
-				if cocks of player > 0:
-					say "     You grab the dog-woman's head and press her muzzle between your legs, forcing her to take in the scent of your arousal.  As a small part of her seems to want to resist for a moment before giving in and she slides her mouth over your throbbing cock, her tail wags excitedly.  She moans wetly around your penis and slides a paw between her legs, plunging her own fingers into herself to replace yours.  You stroke her ears and tell her what a good bitch she is as you make her suck you off.  Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released.  You face-fuck the policewoman bitch, making her cum repeatedly while her long muzzle and doggy tongue slide over your cock.  When you finally cum, you pull out and blast your load across her face and open muzzle.  As her final, powerful orgasm washes through her, she collapse to the ground, passing out after her much needed release.";
-				otherwise:
-					say "     You grab the dog-woman's head and press her muzzle between your legs, forcing her to take in the scent of your arousal.  As a small part of her seems to want to resist for a moment before giving in and she slides her long tongue tentatively across your wet pussy before diving in, her tail wags excitedly.  She moans wetly and yips between licks, sliding a paw between her legs and plunging her own fingers into herself to replace yours.  You stroke her ears and tell her what a good bitch she is as you make her eat you out.  Having been resisting her sexual instincts for so long, she can't help but respond powerfully once they're released.  You grind your pussy against policewoman bitch's muzzle, making her cum repeatedly while her long, doggy tongue laps up your juices.  When you cum in pleasure, you soak her muzzle and spill your hot juices over her tongue, which she laps up lustfully.  As her final, powerful orgasm washes through her, she collapse to the ground, passing out after her much needed release.";
+				say "     Resisting the temptation to have sex with the canine cop, you give her a final kick to make sure she won't bother you further for the moment before walking away.";
 		otherwise:
-			say "     Resisting the temptation to have sex with the canine cop, you give her a final kick to make sure she won't bother you further for the moment before walking away.";
+			say ".  Satisfied that she won't bother you further for the moment, you give her a final kick before walking away.";
 	otherwise:
-		say ".  Satisfied that she won't bother you further for the moment, you give her a final kick before walking away.";
+		say ".  The female Doberman moans and sags to the ground, her increased lust taking hold.  She hikes up her skirt, revealing her lack of panties as she starts fingering herself.  She looks up at you with a mix of apprehension and longing.  Pleased with what you've done to the stuffy cop, you consider fooling around with her further.  Clearly she needs some more attention";
+		if cocks of player > 0 or cunts of player > 0:
+			say ".  Shall you [if cocks of player > 0]fuck[otherwise]finger[end if] that juicy cunt of hers [link](1)[as]1[end link], [if cocks of player > 0]give her a titty-fuck[otherwise]get the doggy tongue of hers to please you[end if] [link](2)[as]2[end link] or just leave her [link](3)[as]3[end link] to her own lusts?";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				otherwise:
+					say "Invalid choice.  Type [link]1[end link] to get some pussy, [link]2[end link] for [if cocks of player > 0]a titty-fuck[otherwise]oral[end if] and [link]3[end link] to leave.";
+			if calcnumber is 1:
+				if cocks of player > 0:
+					say "     Stroking your stiff cock, you grab the Doberman and pull her up.  With her eyes locked hungrily on your hard penis, she obediently lets you push her over to a nearby wall.  You get her to spread herself against the wall like a criminal and are pleased as she does so and even offers her ass to you, tail raised and tongue lolling out of her mouth.  You take a few moments to tease her, fingering her hot, wet folds and even teasing her dark pucker with a slick finger.  She yips and wags her tail, grinding back against your touch.  Deciding she's had enough and that you'd rather get on to the main event, you line your cock up with her dripping slit and drive your throbbing cock into her.  The canine officer barks and moans as you fuck her, lost in her lust for sex.  You take perverse delight in seeing the once upstanding policewoman debase herself in her need for your cock.  And you don't disappoint, cumming hard into you, pumping a hot and heavy load into the increasingly slutty bitch.  When you're finished, you pull out, leaving her slumped against the wall in a pool of sexual fluids.";
+					increase dobielibido by 24;
+				otherwise:
+					say "     Grabbing the Doberman female roughly, you pull her up and over to a nearby well, moaning in need as she lets you manhandle her.  You order her up against the wall, spreading her arms and legs and telling her it's time for her cavity search.  You are pleased as she lets you spread her like a criminal and even offers her ass to you, tail raised and tongue lolling out of her mouth.  You take a few moments to tease her, fingering her hot, wet folds and even teasing her dark pucker with a slick finger.  She yips and wags her tail, grinding back against your touch.  Deciding she's had enough teasing and that you'd rather get on to the main event, you slide your fingers back down across her taint then dive a pair of them into her dripping snatch.  The canine officer barks and moans as you finger-fuck her, lost in her lust for sex.  You take perverse delight in seeing the once upstanding policewoman debase herself in response to you, working to make her cum repeatedly while working a few fingers into yourself with your other hand.  After a powerful, final orgasm overwhelms her, she slides down to the ground and you leave her slumped against the wall in a pool of sexual fluids.";
+					increase dobielibido by 20;
+			otherwise if calcnumber is 2:
+				if cocks of player > 0:
+					say "     In the mood for something a little different, you pull out your cock and move overtop of the Doberman woman.  With her eyes locked hungrily on your cock, she does not resist as you grab her shirt and pull it down off her shoulders, uncovering her bosom and pinning her arms in place.  You put your legs to either side of her, making sure she can't get away, not that she looks at all like she wants to.  With what little movement you've allowed them, she's moved her paws to her crotch so she can continue to finger herself vigorously.  She pants and yips lustfully as you press your throbbing cock between her breasts and start sliding them between her lovely, softly furred mounds.  You may be mistaken, but they seem a little larger than when you first met her.  Between the warm flesh and soft fur, it makes for a very pleasant tittyfuck.  You take a twisted pleasure in having this once upstanding policewoman debase herself in response to you as you make her give into the lustful instincts she's been resisting for so long.  The Doberwoman's long tongue licks at your glans each time it slides with reach.  Eventually she receives the reward she's eagerly licking for when you climax, blasting your hot load across her face and muzzle, as well as that licking tongue of hers.  She drives her fingers hard into her pussy, frigging herself to a loud climax that leaves her almost passed out.  You grin and give her ears a scritch, telling her she looks much better with your cum marking her fur.";
+					increase dobielibido by 18;
+				otherwise:
+					say "     Taking the dog-woman's head in both hands, you press her canine muzzle to your crotch and order her to get licking like a good bitch.  She yips happily and slathers her long, doggy tongue over your pussy before diving it into your cunt.  As she eats you out eagerly, her fingers continue to pump into her dripping snatch and her tail wags excitedly.  She works her tongue inside you with increasing skill, using its long length to added advantage to dive deep into your cunt to lap up your juices.  You scritch her ears, telling her all the while what a good, obedient doggy she is as does.  You take twisted pleasure in having this once upstanding policewoman debase herself in response to you as you bring out the lustful instincts she's been fighting.  You grind your pussy against the Doberwoman's muzzle and spill your hot female cum onto her tongue repeatedly.  As her final, powerful orgasm washes through her, she collapse to the ground, passing out after her much needed release.";
+					increase dobielibido by 15;
+			otherwise:
+				say "     You smile down at the lust-crazed Doberman policewoman, deciding to leave her to her own lusts.  A dark corner of you is quite pleased with what's become of her.";
+		otherwise:
+			say ".  Having little interest in sex yourself, you watch the formerly strong policewoman moan and pant as she lustfully frigs herself, soaking her paws and groin with her juices.";
 
 
 to say Dobermandesc:
 	now dobieresist is 0;
-	say "A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched.  In the brief moment before she's upon you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet.  Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed.  She is wearing a light blue shirt, darker skirt and a policeman's hat.  She has an average sized rack on her under her shirt.";
-	if the player is bodily human and the player is facially human and the player is skintone human and the tail of the player is "":
-		say "     [one of]'Halt, citizen[or]'Freeze!  Police[or]'Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
+	if dobielibido < 50:
+		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched.  In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet.  Her head is fully that of a Doberman Pinscher, with a long muzzle and her short fur has the two-tone black and tan markings of the breed.  She is wearing a light blue shirt, darker skirt and a policeman's hat.  She has an average sized rack on her under her shirt.";
+		if the player is bodily human and the player is facially human and the player is skintone human and the tail of the player is "":
+			say "     [one of]'Halt, citizen[or]'Freeze!  Police[or]'Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
+		otherwise:
+			say "     [one of]'Halt, mutant[or]'Freeze!  Police[or]'Surrender, creature[or]'Come quietly[or]'I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
 	otherwise:
-		say "     [one of]'Halt, mutant[or]'Freeze!  Police[or]'Surrender, creature[or]'Come quietly[or]'I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
+		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick.  She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her.  She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs.  Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
 
 
 Section 2 - Monster Insertion
@@ -88,7 +220,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Doberman";
-	now attack entry is "[one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman hooks her nightstick behind your knee and causes you to fall![or]The policewoman snaps at you with her vicious, canine muzzle![or]The police dog gives you a firm knock on the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![at random]";
+	now attack entry is "[if dobielibido < 50][one of]The Doberman cop fakes with her nightstick and clubs you in the jaw with her off hand![or]The canine cop jabs her nightstick into your gut, making you double over![or]The nightstick strikes your arm with a painful blow![or]The Doberwoman hooks her nightstick behind your knee and causes you to fall![or]The policewoman snaps at you with her vicious, canine muzzle![or]The police dog gives you a firm knock on the head with her nightstick![or]Knocking your arm aside with her nightstick, she steps in and rams her knee into your gut![at random][otherwise]***[end if]";
 	now defeated entry is "[beattheDoberman]";				
 	now victory entry is "[losetoDoberman]";
 	now desc entry is "[Dobermandesc]";
