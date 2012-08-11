@@ -69,6 +69,8 @@ carry out swimtoing:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;
 	follow turnpass rule;
+	
+rowing is a truth state that varies.
 
 to swimmingfight:
 	let T be a random number between one and 10;

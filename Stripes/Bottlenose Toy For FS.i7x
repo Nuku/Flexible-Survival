@@ -8,6 +8,8 @@ Section 1 - Monster Responses
 dolphinmode is a number that varies.
 dolphinflatablefight is a number that varies.
 dolinfloss is a number that varies.
+dolcastle is a number that varies.
+dolcastlefight is a number that varies.
 
 when play begins:
 	add { "Bottlenose Toy" } to infections of girl;
