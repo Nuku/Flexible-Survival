@@ -4658,6 +4658,7 @@ Include Fire House by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
 Include Candy Shop by Stripes.
+Include Bouncy Castle by Stripes.
 Include Random Events by Hiccup.
 Include High Rise Events by Stripes.
 Include Hyena Bikers by Stripes.
