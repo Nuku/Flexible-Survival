@@ -54,7 +54,7 @@ to say sirenattack:
 				say "     The siren's song drains the last of your will to fight and you collapse before it, submitting to the creature's beautiful melody as it knocks you to the ground.";
 				continue the action;
 			otherwise:
-				say "     As you continue to fight the siren, it continues to sing at you, clouding your mind and making it harder and harder for you to keep fighting.  You take [tempnum] additional damage as your will to struggle is drained by the siren's song.  It grows more difficult for you to continue to fight the creature.  While dazed by the song, ";
+				say "     As you continue to fight the siren, it continues to sing at you, clouding your mind and making it harder and harder for you to keep fighting.  You take [special-style-2][tempnum][roman type] additional damage as your will to struggle is drained by the siren's song.  It grows more difficult for you to continue to fight the creature.  While dazed by the song, ";
 		otherwise:
 			say "     As you continue to fight the siren, it continues to sing at you, but you manage to block it out and keep fighting.  As you try to keep your head clear, ";
 	if charcounter > 0:
@@ -79,7 +79,7 @@ to say sirendesc:
 		if dice + bonus is greater than 15:
 			say "     You manage to fight your way through the rough waves and reach the rocky crag tired, but uninjured.  You call out in search of the singer and are shocked as they appear.";
 		otherwise:
-			say "     You are tossed and battered by the rough waters before you finally are bashed up against the rocky crag.  You take 12 damage!  You do manage to hang on and not be pulled away by the next wave and scramble up onto the sharp rock.  You call out in search of the singer and are shocked as they appear.";
+			say "     You are tossed and battered by the rough waters before you finally are bashed up against the rocky crag.  You take [special-style-2]12[roman type] damage!  You do manage to hang on and not be pulled away by the next wave and scramble up onto the sharp rock.  You call out in search of the singer and are shocked as they appear.";
 			decrease hp of player by 12;
 		say "     The figure, despite their beauty and lovely face, is male and not entirely human as they first appeared.  With the spell of the song breaking as they stop singing for a moment, you shake your head and look the creature over.  This siren has a beautifully feminine face, but is otherwise entirely male.  His body is mostly human and covered in smooth, perfect skin.  But behind his back are a pair of white, feathery wings capable of supporting him in flight.  His feet are taloned and bird-like, covered in golden-brown scales.  Between his legs, he has a twin pair of very long cocks with a pair of football sized balls to accompany them.  He grins viciously at you, his teeth a little too pointed and his eyes flashing menacingly.";
 		increase sirenfight by 1;
@@ -91,7 +91,7 @@ to say sirendesc:
 		if dice + bonus + sirenfight is greater than 15:
 			say ".  Your will is strong and you are able to resist the haunting tune calling you into the sea.  From afar, you hear the angry screech of the siren.  They launch themselves off their rocky home and fly across the water, swooping in to attack you moments later.";
 		otherwise:
-			say ".  With that lovely song filling your mind, you head out into the water towards the rocky outcropping in the sea, heedless of the danger.  As you start swimming out, the siren swoops down from the air to attack you, catching its entranced prey by surprise.  You take 8 damage before you can struggle to land to fight the siren.";
+			say ".  With that lovely song filling your mind, you head out into the water towards the rocky outcropping in the sea, heedless of the danger.  As you start swimming out, the siren swoops down from the air to attack you, catching its entranced prey by surprise.  You take [special-style-2]8[roman type] damage before you can struggle to land to fight the siren.";
 			decrease hp of player by 8;
 		say "     He has a mostly-human body with lovely, feminine features and beautiful, smooth skin.  His eyes are sharp and menacing, as are his pointed teeth.  Attached to his back are a pair of white, feathered wings and his feet end in bird-like talons.  This well-endowed male has a pair of giant cocks and a huge ballsac to go with them.  From the way those pricks are growing hard, it's clear he intends to use them on you.";
 
