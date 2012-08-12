@@ -1,5 +1,5 @@
-Version 2 of Soldier Event by Wahn begins here.
-[Version 2 - More military madness]
+Version 3 of Soldier Event by Wahn begins here.
+[Version 3 - More soldier shenanigans]
 
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Outside";
@@ -61,5 +61,51 @@ Instead of resolving a Trickster's Masterpiece:
 	extend game by 24;
 	Now Trickster's Masterpiece is resolved;
 
+
+Human Urges is a situation.
+The sarea of Human Urges is "Outside";
+when play begins:
+	add Human Urges to badspots of guy;      [male soldier]
+	add Human Urges to badspots of girl;     [female soldier]
+
+Instead of resolving a Human Urges:
+	say "     As you move through the empty streets of the city, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans.";
+	say "     Their city-camouflage clothing strewn about on the floor and rifles leaned against the opposite wall, you see two soldiers in intimate embrace on a bed. It's a man and a woman, with his hips pumping up and down as he fucks her with fast strokes and her arms holding him close to her body. One doesn't have to be infected with nanites to feel the basic urges of human existence - and with what's going on around all of you, those two turned to each other to let off some steam.";
+	say "     You silently watch them go at it, sliding your hand down to your own crotch to stroke yourself. Both of the soldiers look pretty good, sweat glistening on their trained bodies as they move in unison. Soon, the woman's moans rise as she gets closer and closer, then turn into full-fledged lustful screams as she orgasms. Her partner isn't far behind, plunging his shaft deep into her pussy and grunting with each shot of semen he cums into her.";
+	say "     They lie on the bed in each other's arms for a moment, then the man pulls his cum-dripping cock out of her and stands up, going for a pack of cigarettes lying on a dresser nearby. The woman just lies there, softly stroking her wet pussy lips as she rides out the last bit of her orgasm. Unseen, but deep inside her, her partner's sperm race onwards, doing their duty in the battle to keep humanity going. The fastest of them soon finds a fertile egg, burrowing into it and starts a new life. Only time will tell if its parents succeed in their mission to protect humanity of if it and they will become something different in the end.";
+	increase score by 5;
+	now Human Urges is resolved;
+
+
+Captured Demon is a situation.
+The sarea of Captured Demon is "Red";
+when play begins:
+	add Captured Demon to badspots of guy;            [male soldier, demon brute]
+	add Captured Demon to badspots of hellspawn;      [demon brute]
+
+Instead of resolving a Captured Demon:
+	say "     Moving through an alley in the seedier part of town, you hear voices from the smashed window of a nearby bar. Careful not to step on anything and make a sound, you slowly walk closer and listen.";
+	say "     'The brute smashed our only working radio. Now we got the mission objective locked down, but can't call in the retrieval team. Anderson's dead and that claw-slash on Kowalski's leg doesn't look good.' You peek over the window-still and see a mid-sized bar, its interior devastated by a fight. In the midst of bullet-holed walls and smashed furniture, there is a demon brute slumped down on a chair, bound with leather straps and chains. Near him, there are four soldiers, one of them just being bandaged on the thigh.";
+	say "     The apparent leader watches the wounded man being patched up, then says 'It can't be helped. No way a man supporting a wounded comrade can make it through the streets alone. I'll have to go with them. Private Jackson, guard the captive until the retrieval team arrives. If need be, give him more sedatives.' He nods to a young-looking soldier, who salutes and says 'Yes sir!' You don't want to get shot by stressed out soldiers, so you have to hurry down the alley a bit to hide behind a dumpster not to get spotted as they move out."; 
+	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	say "     After waiting some minutes so be sure they're gone, you go back to the window and look in. Now there's only that one soldier in there, looking from the demon to the entrance door and back again. While you're still wondering if you could perhaps go in and talk to him, the demon brute makes a snorting sound, startling the soldier and you as a slight movement runs through his bound body. Private Jackson raises his weapon and steps closer, poking the demon in the chest to check if he's still unconscious.";
+	say "     ...which is exactly what the brute has been waiting for. With a metallic screech the chains holding him rip apart as he flexes his muscles, then grips the barrel of the rifle and bends it to a right angle. His other hand quickly grabs the young soldier around the throat and stops any attempt to escape."; 
+	say "     Chuckling in a deep gravelly voice, the demon says 'Did you really think it'd be that easy to capture a soldier of the infernal legion? You'll pay for your insolence!' and rips the soldier's uniform off his body. Carrying the man to the bar, the demon bends him over it and gives his ass a hard slap, leaving a reddening hand-print on the pale flesh of the young soldier's right bun. 'If you try running, I'll disembowel you. But feel free to struggle and scream - I like it.' the demon says, then grabs his massive erection and strokes it."; 
+	say "     Seeing the demon prepare to rape the young soldier, you wonder if you should step in and stop him. The safer option would be to just watch it happen, but can you just leave Private Jackson to his fate?";
+	if player consents:   [just watch]
+		say "     The demon smacks his manhood against the human's ass several times, creating slapping noises and making him grunt in pain. Looking down at the reddened cheeks and the deeper red hand-print on them, the demon aims his cock at Private Jackson's virgin pucker and plunges it right in. His victim whimpers in pain as the infernal cock forces his asshole to open and the tick shaft of the demon's cock sinks inside his body. You watch the otherworldly beast fuck the poor man without restraint, slamming in and out and just getting more and more aroused as the soldier begs and struggles weakly to push him off.";
+		say "     Then finally, the demon brute slams his whole shaft inside, roaring in satisfaction as the contents of his balls erupt into his human captive. He keeps pumping blast after blast of cum into the young man, pumping slowly in and out of his hole with squishy noises as cum starts to squirt out around his shaft from the overfilled ass. Pulling Private Jackson's head up by the hair, the demon licks his cheek slowly, then says 'Feel my infernal seed fill your innermost being, little man. You're mine now - now and forever!' With that, he pulls the soldier up against his chest, holding him against his body with his cock still inside the man. Then black-purple smoke starts forming around them both, obscuring them from sight. When it spreads out in the room and slowly blows away, there's nothing to be seen of the demon or his newest slave.";
+	otherwise:            [fight]
+		say "     Your decision to rush into the bar almost comes too late. The demon already has the tip of his cock poised at the soldier's virgin pucker as you throw the nearest item - a cracked beer glass - at his back to distract him. He turns with an annoyed grunt, growling 'Another mortal who wants to ride my shaft? Bring it on, weakling.'";
+		challenge "Demon Brute";
+		if lost is 1:
+			say "     Having dealt with you, the demon turns back to Private Jackson, who's tried to crawl off in the meantime. He picks the man up by his neck, choking him a bit and runs a clawed hand down his side, leaving shallow but long lines bloody in his pale flesh. 'Don't try to flee again. You're taxing my patience.' With that, he throws his captive back on the bar, bent over and his rear sticking out at the right height.";
+			say "     The demon smacks his manhood against the human's ass several times, creating slapping noises and making him grunt in pain. Looking down at the reddened cheeks and the deeper red hand-print on them, he aims his cock at Private Jackson's virgin pucker and plunges it right in. His victim whimpers in pain as the infernal cock forces his asshole to open and the tick shaft of the demon's cock sinks inside his body. You watch the otherworldly beast fuck the poor man without restraint, slamming in and out and just getting more and more aroused as the soldier begs and struggles weakly to push him off.";
+			say "     Then finally, the demon brute slams his whole shaft inside, roaring in satisfaction as the contents of his balls erupt into his human captive. He keeps pumping blast after blast of cum into the young man, pumping slowly in and out of his hole with squishy noises as cum starts to squirt out around his shaft from the overfilled ass. Pulling Private Jackson's head up by the hair, the demon licks his cheek slowly, then says 'Feel my infernal seed fill your innermost being, little man. You're mine now - now and forever!' With that, he pulls the soldier up against his chest, holding him against his body with his cock still inside the man. Then black-purple smoke starts forming around them both, obscuring them from sight. When it spreads out in the room and slowly blows away, there's nothing to be seen of the demon or his newest slave.";
+		otherwise:
+			say "     After the demon vanishes, you take care of Private Jackson, who's still rather groggy from being choked and manhandled like that. He dresses as good as he can with the remains of his uniform and ends up looking more like a male stripper than a soldier, with all the naked skin he's showing. Looks rather hot, but since his thoughts are anywhere but at sex right now, you wish him the best as he moves out to rejoin his unit.";	  
+			increase score by 5;
+	now Captured Demon is resolved;
 
 Soldier Event ends here.
