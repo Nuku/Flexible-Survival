@@ -1,5 +1,5 @@
 Version 1 of Eric by Wahn begins here.
-[Version 0.5: Endings]
+[Version 0.6: Corrected clauses in the sex menu]
 [Todo: possibly npc interactions & more conversation]
 "Adds an NPC named Eric to the Flexible Survival game"
 
@@ -342,7 +342,7 @@ to say EricSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
-		now description entry is "Put your pussyboy's mouth to good use.";
+		now description entry is "Put his mouth to good use.";
 		now toggle entry is EricSex rule;
 	if (hp of Eric is 11):		
 		choose a blank row in table of fucking options;
@@ -350,13 +350,13 @@ to say EricSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Eric's pussy to make him cum.";
 		now toggle entry is EricSex rule;		
-	if (cocks of player > 0):
+	if (hp of Eric is 11 and cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 5;
 		now description entry is "Fill the pussyboy with your cock.";
 		now toggle entry is EricSex rule;
-	if (hp of Eric is 22):
+	if (hp of Eric is 22 and cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 6;
