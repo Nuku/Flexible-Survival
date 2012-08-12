@@ -129,7 +129,7 @@ instead of navigating Bouncy Castle:
 	now dolcastleturn is 0;
 
 
-The Bouncy Castle is a room. "[bouncycastledesc]".  It is fasttravel.  It is unknown.
+The Bouncy Castle is a room. "[bouncycastledesc]".  It is fasttravel.  It is unknown.  It is private.
 
 instead of sniffing Bouncy Castle:
 	say "This place smells of rubber and the ocean.";
@@ -336,6 +336,8 @@ to say dolcheckE:		[vixen]
 	increase score by 50;
 	now Bouncy Castle is unknown;
 	now vixdol is 3;
+	move player to Public Beach;
+	follow the turnpass rule;
 
 
 Instead of exploring while player is in Bouncy Castle:
