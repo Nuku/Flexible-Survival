@@ -129,7 +129,7 @@ instead of navigating Bouncy Castle:
 	now dolcastleturn is 0;
 
 
-The Bouncy Castle is a room. "[bouncycastledesc]".  It is fasttravel.  It is unknown.
+The Bouncy Castle is a room. "[bouncycastledesc]".  It is fasttravel.  It is unknown.  It is private.
 
 instead of sniffing Bouncy Castle:
 	say "This place smells of rubber and the ocean.";
@@ -232,7 +232,7 @@ to say dolcheckA:		[empty]
 			say "     With you partially pulled into its inflatable body, the strange suit's material stretches itself over you as it works to enclose your [bodydesc of player] body.  It feels very good and quite arousing, squeezing and rubbing against you as it does.  It seems to stretch and adjust itself to be just the right shape and size to contain you";
 			let playernum be ( 150 + humanity of player - libido of player + ( level of player * 2 ) );
 			let playernum be a random number between 1 and playernum;
-			let dolphinnum be a random number between 1 and ( 120 + lev entry );
+			let dolphinnum be a random number between 1 and ( 150 + lev entry );
 			if playernum >= dolphinnum:
 				say ".  You manage to block out the pleasure that comes from the rubbery material rubbing and sliding agaisnt you and remain focused.  Sliding your hands along the slick inner surface, you reach outward and grab both sides of the seal and start pulling it back open.  You get the opening wide enough to pull yourself from its grip.  You push it back off of you, forcing the air out of it until it starts to sag down, unable to continue holding you.  You pant from breath and toss it aside, looking over the others as you try and decide what to do next.";
 				now dolescape is 1;
@@ -250,7 +250,7 @@ to say dolcheckA:		[empty]
 		increase dolphinbundle by 1;
 		now dolcastleturn is 0;
 		follow the turnpass rule;
-	otherwise if dolphinbundle is 3:
+	otherwise if dolphinbundle is 2 and dolescape is 0:
 		say ".";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -336,6 +336,8 @@ to say dolcheckE:		[vixen]
 	increase score by 50;
 	now Bouncy Castle is unknown;
 	now vixdol is 3;
+	move player to Public Beach;
+	follow the turnpass rule;
 
 
 Instead of exploring while player is in Bouncy Castle:
