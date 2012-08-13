@@ -4649,9 +4649,9 @@ Include Down Under Pub by Stripes.
 Include Kitsune Hide Away by Kaleem mcintyre.
 
 [Quests & Events]
-[Include Researcher Studio by Kaleem Mcintyre.]
+Include Researcher Studio by Kaleem Mcintyre.
 Include Warehouse District by Kaleem Mcintyre.
-[Include Pursuit of Science by Kaleem Mcintyre.]
+Include Pursuit of Science by Kaleem Mcintyre.
 Include Fire House by Kaleem Mcintyre.
 [Include Important Research Quests by Kaleem Mcintyre.]
 [Include Reservoir by Kaleem Mcintyre.]
