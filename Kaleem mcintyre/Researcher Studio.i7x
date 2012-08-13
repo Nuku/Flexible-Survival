@@ -272,7 +272,7 @@ Instead of Resolving a For the Future:
 
 
 when play ends:
-	if omq > 2:
+	if omq > 2 and omq is not 100:
 		if humanity of player < 9:
 			say "Even though your mind is all but gone you do remember a ed female with golden eyes that you helped out before. Taking some time to go back to the plains in an effort to relocate the other you end up finding an abandoned house right where you were sure the  once lived. Sniffing the place and going inside to find no trace of anyone you leave without a second thought as you come to the conclusion that you must have imagined the entire thing.";
 		otherwise:
