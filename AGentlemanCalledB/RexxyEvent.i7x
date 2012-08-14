@@ -181,7 +181,7 @@ An everyturn rule:
 		decrease humanity of player by 15;
 	otherwise if bonelust > 6:
 		if a random chance of 1 in 2 succeeds:
-			say "You struggle to resist the will of the retriever bitch the infection is trying to make you it's grip on your mind tightens. Your body burns with desire as the lewd daydreams of doggy sex dominate your thoughts. Perhaps you could relieve some of this lust with some playtime with [if rextalk is 1]Rex[otherwise] your beloved dog bone sex toy[end if]?";
+			say "You struggle to resist the urges of the retriever bitch which the infection is trying to make of you, but its grip on your mind tightens. Your body burns with desire as the lewd daydreams of doggy sex dominate your thoughts. Perhaps you could relieve some of this lust with some playtime with [if rextalk is 1]Rex[otherwise]your beloved dog bone sex toy[end if]?";
 			increase bonelust by 1;
 			decrease humanity of player by 9;
 	otherwise if bonelust > 3:
