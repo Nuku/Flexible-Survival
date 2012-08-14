@@ -1,5 +1,5 @@
-Version 2 of Jaguar Orderly for FS by Stripes begins here.
-[Version 2.2 - Special ending]
+Version 3 of Jaguar Orderly for FS by Stripes begins here.
+[Version 3 - Player Victory Sex]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Jaguar Orderly creature to Flexible Survivals Wandering Monsters table with impreg chance"
 [Description text for this Extension.]
@@ -35,8 +35,45 @@ to say losetojaguar:
 
 
 to say beatthejaguar:
-	now fightstatus is 1;		[required for hospital fight]
-	say "     You manage to knock the muscled jaguar out, at least for the moment.";
+	if fightstatus is 3:
+		now fightstatus is 1;		[required for hospital fight]
+		say "     You manage to knock the muscled jaguar out, at least for the moment.";
+	otherwise if libido of player >= 50 or ( ( bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist ) and libido of player >= 25 ):
+		say "     Looking over the powerful feline, you find yourself considering taking advantage of the situation to have some quick fun";
+		if cocks of player > 0:
+			say ".  Looking over the big male and the bulge in his crotch, you could either fuck him [link](1)[as]1[end link], get his cock inside you [link](2)[as]2[end link] or just leave[link](3)[as]3[end link].";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				otherwise:
+					say "Invalid choice.  Type [link]1[end link] to fuck him, [link]2[end link] to ride his cock or [link]3[end link] to leave.";
+			if calcnumber is 1:
+				say "[jagfuck]";
+			otherwise if calcnumber is 2:
+				say "[jagride]";
+			otherwise:
+				say "     Deciding you should focus on more important stuff right now, you turn away from the defeated orderly and return to the matter at hand.";
+		otherwise:
+			say ".  You consider getting a ride on that cock of hers (Y) or just letting her go (N).";
+			if the player consents:
+				say "[jagride]";
+			otherwise:
+				say "     Deciding you should focus on more important stuff right now, you turn away from the defeated orderly and return to the matter at hand.";
+
+
+to say jagfuck:
+	say "     Pulling down the front of the orderly's scrubs, roll the big kitty onto his belly and raise up his rear.  Flipping up his spotted tail, you grind your stiff erection against his fuzzy bottom before lining it up with his tailhole.  He moans softly as you start pushing your [cock size desc of player] prick into his ass.  You can tell from the tightness of his hole that he's not used to this kind of treatment so it takes you [if cock width of player > 6]quite some time[otherwise]a little while[end if] to work your rod into him and really start fucking at his meaty backside.  He releases soft moans and mewls as you fuck him.  Reaching around, you can feel his erection throbbing and pulsing, letting you know the kitty's enjoying the ride despite being unconscious from the battle.  Determined to give the big, manly kitty a sticky wet dream while being buggered, you tease his cock and balls as you thrust into him, making sure to grind your glans hard against his prostate each time you push into him.  Eventually you manage to get him to cum, clenching his muscled ass down deliciously over your cock as his load is blasted across the floor.  This is enough to set you off after the long, drawn out fucking and you paint the kitty's insides with your hot semen.  After draining most of your load, you pull out and paint the rest of it across his fuzzy ass.  Finished and feeling quite proud of yourself, you leave him like that to display your handywork.";
+
+
+to say jagride:
+	say "     Pulling down the front of the orderly's scrubs, you roll the big kitty onto his back and stroke his sheath, coaxing out his feline erection.  As you run your hand over it, spreading his precum over it, you decide to grab a quick taste before getting onto the main event.  You lick slowly up those thick nine inches of manmeat before plunging your mouth down over it, getting the unconscious jaguar to moan softly.  Bobbing your head over it, you find his taste strong, but pleasant and you're tempted to finish him off like that.  Shall you continue with your original plan (Y) or switch to sucking him off (N)?";
+	if the player consents:
+		say "     Focusing yourself on your original goal, you pull your head back and climb atop him.  Getting your ass overtop of his slick prick, you lower yourself down onto it with a moan of pleasure with your defeated foe echoes.  As you settle down into his lap, you run your hands through his rough fur, enjoying the feeling of having that feline cock stuffed inside your [if cunts of player > 0]cunt[otherwise]anus[end if].  You start riding up and down the kitty's meat, working to get the strong feline to cum for you[if cocks of player is 1].  You bring a hand to your cock and stroke it while stuffing yourself over and over with the jaguar's[otherwise if cocks of player > 1].  You bring your hands to your cocks and stroke them while stuffing yourself over and over with the jaguar's[otherwise if cunts of player is 1].  You bring your hand to your clit and rub it vigorously while stuffing yourself over and over with the jaguar's cock[otherwise if cunts of player > 1].  You bring your hand to your clits and rub them vigorously while occasionally alternating which dripping pussy you have the jaguar's cock fill[otherwise].  You knead your paws into the strong feline's fur as you stuff yourself over and over with the jaguar's cock[end if].  After a nice, enjoyable ride on the feline's hard manmeat, you smile as he groans and his penis twitches inside you, blasting hot spurts of jaguar cum into you[if cocks of player > 0 or cunts of player > 0], giving you a wonderful orgasm in response[end if].  Once his balls are drained and his prick has softened, you ease yourself off of him, dripping some cum from your well-used hole and feeling much better for it.[impregchance]";
+	otherwise:
+		say "     Liking your new plan better, you knead and rub his ballsac while your lips and tongue work up and down his throbbing cock.  Your unconscious foe moans in pleasure and leaks more precum.  It has a strong taste, virile and arousing, that makes you want more.  You bob your head up and down while lavishing attention upon the kitty's cock and eventually earning your reward.  The jaguar releases another growling moan and his cock pulses in your mouth, sending shot after shot of his thick seed onto your tongue.  Like his pre, it has a strong taste, but not unpleasantly so, speaking of the powerful feline's virility and strength as a breeder[if cunts of player is 1].  Your cunt quivers in response and you find yourself longing to have him fill your needy puss next time[otherwise if cunts of player > 1].  Your cunts quiver in response and you find yourself longing to have him fill your needy pussies next time[otherwise].  You find yourself longing to take his meaty cock into you next time as you'd originally planned[end if].  Licking your lips as you enjoy the lingering traces of his taste in your mouth, you get up and leave the unconscious and spent kitty there.";
 
 
 to say jaguardesc:
@@ -100,8 +137,8 @@ When Play begins:
    now wdam entry is 10;            [Amount of Damage monster Does when attacking.]
    now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
    now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 8;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 4;        [ Size of balls apparently ;) sneaky Nuku]
+   now cock length entry is 9;        [ Length infection will make cock grow to if cocks]
+   now cock width entry is 5;        [ Size of balls apparently ;) sneaky Nuku]
    now breasts entry is 2;            [ Number of Breasts infection will give you. ]
    now breast size entry is 3;        [Size of breasts infection will try to attain ]
    now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]

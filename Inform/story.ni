@@ -936,6 +936,14 @@ Tailweapon is a marker.
 when play begins:
 	add { "Drone Wasp", "red kangaroo", "Skunk", "Wyvern", "Anthro Shaft Beast", "Feral Shaft Beast", "hermaphrodite dolphin", "Dragon", "Dragoness", "Yamato Dragon", "Yamato Dragoness", "sewer gator", "pirate shark", "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "spidergirl", "feral sea dragon", "feral sea dragoness", "Naga", "lizard girl" } to infections of Tailweapon;
 
+Felinelist is a marker.	[list of feline infections]
+when play begins:
+	add { "Cheetah", "cheetah woman", "Cougar", "Feline", "Felinoid", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Siamese Cat", "sphinx", "Snow Leopard", "Tiger", "tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
+
+Caninelist is a marker.	[list of canine/lupine infections]
+when play begins:
+	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Female Husky", "Feral Wolf", "German Shepherd", "jackalboy", "jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
+
 
 Part 2 - Rules
 
@@ -3330,6 +3338,7 @@ This is the turnpass rule:
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	now gascloud is 0;
+	now fightstatus is 0;
 	if breast size of player is greater than 26, now breast size of player is 26;
 	let oldlib be libido of player;
 	if libido of player is less than 100 and "Horny Bastard" is listed in feats of player:
