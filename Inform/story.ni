@@ -4846,6 +4846,7 @@ Include Incubus For Fs by Stripes.
 Include Bunny Jock For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
+Include Pegasus by Kaleem mcintyre.
 Include Gargoyle by Kaleem mcintyre.
 Include Manticore by Kaleem mcintyre.
 Include Minotaur by Kaleem mcintyre.
