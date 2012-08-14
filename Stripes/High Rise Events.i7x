@@ -1,5 +1,5 @@
 Version 2 of High Rise Events by Stripes begins here.
-[version 2.2 - Veterinary Hospital update]
+[version 2.3 - Veterinary Hospital update]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the High Rise District."
 
@@ -316,163 +316,16 @@ to say vetsearch:
 		increase score by 1;
 
 
-to say doggycheck:		[add new canids when they arise]
+to say doggycheck:		[See the Flags section of story.ni file for Caninelist/Felinelist]
 	now doggyness is 0;
-	if the bodyname of player is "Alpha Husky":
-		now doggyness is 1;
-	if the facename of player is "Alpha Husky":
-		now doggyness is 1;
-	if the bodyname of player is "Alpha Wolf":
-		now doggyness is 1;
-	if the facename of player is "Alpha Wolf":
-		now doggyness is 1;
-	if the bodyname of player is "Ashen Breeder":
-		now doggyness is 1;
-	if the facename of player is "Ashen Breeder":
-		now doggyness is 1;
-	if the bodyname of player is "Cerberus":
-		now doggyness is 1;
-	if the facename of player is "Cerberus":
-		now doggyness is 1;
-	if the bodyname of player is "Chocolate Lab":
-		now doggyness is 1;
-	if the facename of player is "Chocolate Lab":
-		now doggyness is 1;
-	if the bodyname of player is "Female Husky":
-		now doggyness is 1;
-	if the facename of player is "Female Husky":
-		now doggyness is 1;
-	if the bodyname of player is "Feral Wolf":
-		now doggyness is 1;
-	if the facename of player is "Feral Wolf":
-		now doggyness is 1;
-	if the bodyname of player is "German Shepherd":
-		now doggyness is 1;
-	if the facename of player is "German Shepherd":
-		now doggyness is 1;
-	if the bodyname of player is "jackalboy":
-		now doggyness is 1;
-	if the facename of player is "jackalboy":
-		now doggyness is 1;
-	if the bodyname of player is "jackalman":
-		now doggyness is 1;
-	if the facename of player is "jackalman":
-		now doggyness is 1;
-	if the bodyname of player is "Latex Wolf":
-		now doggyness is 1;
-	if the facename of player is "Latex Wolf":
-		now doggyness is 1;
-	if the bodyname of player is "Painted Wolf Herm":
-		now doggyness is 1;
-	if the facename of player is "Painted Wolf Herm":
-		now doggyness is 1;
-	if the bodyname of player is "Pit bull":
-		now doggyness is 1;
-	if the facename of player is "Pit bull":
-		now doggyness is 1;
-	if the bodyname of player is "Retriever":
-		now doggyness is 1;
-	if the facename of player is "Retriever":
-		now doggyness is 1;
-	if the bodyname of player is "Shemale Smooth Collie":
-		now doggyness is 1;
-	if the facename of player is "Shemale Smooth Collie":
-		now doggyness is 1;
-	if the bodyname of player is "Werewolf Costume":
-		now doggyness is 1;
-	if the facename of player is "Werewolf Costume":
-		now doggyness is 1;
-	if the bodyname of player is "Wolftaur":
-		now doggyness is 1;
-	if the facename of player is "Wolftaur":
-		now doggyness is 1;
-	if the bodyname of player is "Wrestling Wolf":
-		now doggyness is 1;
-	if the bodyname of player is "Wrestling Wolf":
+	if bodyname of player is listed in the infections of Caninelist or facename of player is listed in infections of Caninelist:
 		now doggyness is 1;
 
-to say kittycheck:		[add new felines when they arise]
+to say kittycheck:
 	now kittyness is 0;
-	if the bodyname of player is "Cheetah":
+	if bodyname of player is listed in the infections of Felinelist or facename of player is listed in infections of Felinelist:
 		now kittyness is 1;
-	if the facename of player is "Cheetah":
-		now kittyness is 1;
-	if the bodyname of player is "cheetah woman":
-		now kittyness is 1;
-	if the facename of player is "cheetah woman":
-		now kittyness is 1;
-	if the bodyname of player is "Cougar":
-		now kittyness is 1;
-	if the facename of player is "Cougar":
-		now kittyness is 1;
-	if the bodyname of player is "Feline":
-		now kittyness is 1;
-	if the facename of player is "Feline":
-		now kittyness is 1;
-	if the bodyname of player is "Felinoid":
-		now kittyness is 1;
-	if the facename of player is "Felinoid":
-		now kittyness is 1;
-	if the bodyname of player is "Jaguar":
-		now kittyness is 1;
-	if the facename of player is "Jaguar":
-		now kittyness is 1;
-	if the bodyname of player is "Leopardman":
-		now kittyness is 1;
-	if the facename of player is "Leopardman":
-		now kittyness is 1;
-	if the bodyname of player is "Margay":
-		now kittyness is 1;
-	if the facename of player is "Margay":
-		now kittyness is 1;
-	if the bodyname of player is "Ninja Cat":
-		now kittyness is 1;
-	if the facename of player is "Ninja Cat":
-		now kittyness is 1;
-	if the bodyname of player is "Pantherherm":
-		now kittyness is 1;
-	if the facename of player is "Pantherherm":
-		now kittyness is 1;
-	if the bodyname of player is "Panther Taur":
-		now kittyness is 1;
-	if the facename of player is "Panther Taur":
-		now kittyness is 1;
-	if the bodyname of player is "Plush lion":
-		now kittyness is 1;
-	if the facename of player is "Plush lion":
-		now kittyness is 1;
-	if the bodyname of player is "Rubber tigress":
-		now kittyness is 1;
-	if the facename of player is "Rubber tigress":
-		now kittyness is 1;
-	if the bodyname of player is "Sabretooth":
-		now kittyness is 1;
-	if the facename of player is "Sabretooth":
-		now kittyness is 1;
-	if the bodyname of player is "Siamese Cat":
-		now kittyness is 1;
-	if the facename of player is "Siamese Cat":
-		now kittyness is 1;
-	if the bodyname of player is "sphinx":
-		now kittyness is 1;
-	if the facename of player is "sphinx":
-		now kittyness is 1;
-	if the bodyname of player is "Snow Leopard":
-		now kittyness is 1;
-	if the facename of player is "Snow Leopard":
-		now kittyness is 1;
-	if the bodyname of player is "Tiger":
-		now kittyness is 1;
-	if the facename of player is "Tiger":
-		now kittyness is 1;
-	if the bodyname of player is "tigertaur":
-		now kittyness is 1;
-	if the facename of player is "tigertaur":
-		now kittyness is 1;
-	if the bodyname of player is "Tigress Hooker":
-		now kittyness is 1;
-	if the facename of player is "Tigress Hooker":
-		now kittyness is 1;
+
 
 to say randomvetfight:				[more suitable pets can be added]
 	let tempnum be a random number between one and ten;
