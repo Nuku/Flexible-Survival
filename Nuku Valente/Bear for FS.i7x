@@ -1,5 +1,5 @@
-Version 2 of Bear for FS by Nuku Valente begins here. 
-[ Version 2 - New critter table entries added and Alt Combat enabled ]
+Version 3 of Bear for FS by Nuku Valente begins here.
+[ Version 3 - Restructered player loss scenes and added missing features]
 
 "Adds a Bear to Flexible Survivals Wandering Monsters table."
 [Description text for this Extension.]
@@ -16,26 +16,47 @@ Section 1 - Monster Responses
 ursinedefeat is a number that varies.
 to say ursine attack:
 	if ursinedefeat is 0: [ first time losing to a bear ]
-		say "You realise she has been holding back on you as she easily hefts you up towards her broad well padded chest, pressing your face into her coarse thick fur. The pressure of her huge furry grip engulfs you and you fear you are about to be crushed out of existence.  As your consciousness fades you realise it's not the worst way to go, and you feel oddly comfortable as the pressure decreases.  While you are wondering what next, you realise you are being rocked back and forth against the bear's increasingly hardening nipples.  She begins to rumble low in her throat with pleasure. 'No, Phyllis you mustn't...' she says to herself as she gets increasingly aroused. Her strong paws irresistibly rub you through the thick sweetly musky  fur covering her muscular body. 'Oh..feels so good...'You feel a heat and dampness covering your lower half.  The sweet smell of sex fills the air and with some small feeling of horror you realise she is masturbating herself with you.  The bear begins to talk to itself more as it gets more aroused  becoming increasingly incoherent and noisy as her orgasm approaches.  In the throes of her mighty roaring orgasm the pressure again increases and you pass out to awaken bruised, tingling and soaked in the juices of the bear's orgasm.   ";
+		say "You realise she has been holding back on you as she easily hefts you up towards her broad well padded chest, pressing your face into her coarse thick fur. The pressure of her huge furry grip engulfs you and you fear you are about to be crushed out of existence.  As your consciousness fades you realise it's not the worst way to go, and you feel oddly comfortable as the pressure decreases.  While you are wondering what next, you realise you are being rocked back and forth against the bear's increasingly hardening nipples.  She begins to rumble low in her throat with pleasure. 'No, Phyllis you mustn't...' she says to herself as she gets increasingly aroused. Her strong paws irresistibly rub you through the thick sweetly musky  fur covering her muscular body. 'Oh..feels so good...'You feel a heat and dampness covering your lower half.  The sweet smell of sex fills the air and with some small feeling of horror you realise she is masturbating herself with you.  The bear begins to talk to itself more as it gets more aroused  becoming increasingly incoherent and noisy as her orgasm approaches.  In the throes of her mighty roaring orgasm the pressure again increases and you pass out to awaken bruised, tingling and soaked in the juices of the bear's orgasm.";
 		now ursinedefeat is 1;
-	otherwise if a random chance of 2 in 3 succeeds: 
-		if cunts of player > 0:
-			say "She towers over your stricken form. You can see her shaggy thighs are already damp with her massive arousal.  Her long hard nipples peek through her fur. 'I feel naughty. Help me.'  For a moment she pauses before straddling your face.  The warm juices of arousal splatter on your face before your whole world grows dark and your vision is filled with dripping bear snatch.  With surprising delicacy she squats over your head and begins to grind your face into her pussy. It gets hard to breathe.[line break][line break]  Unable to struggle you drive your tongue deep into her addictive, sweet cleft in the hope you can make her cum and let you go.   After a few desperate breathless minutes of tongue aching exercise, you  feel her shuddering orgasm drench you and with one last irresistible thrust she lets you go.   Rolling free you run off, disturbed not least by the way you find yourself repeatedly licking your lips, terribly aroused and unable to forget the honey taste of her.";
+	otherwise if ursinedefeat is 1 or a random chance of 1 in 4 succeeds:
+		say "She towers over your stricken form. You can see her shaggy thighs are already damp with her massive arousal.  Her long hard nipples peek through her fur. 'I feel naughty. Help me.'  For a moment she pauses before straddling your face.  The warm juices of arousal splatter on your face before your whole world grows dark and your vision is filled with dripping bear snatch.  With surprising delicacy she squats over your head and begins to grind your face into her pussy. It gets hard to breathe.[line break][line break]Unable to struggle you drive your tongue deep into her addictive, sweet cleft in the hope you can make her cum and let you go.  After a few desperate breathless minutes of tongue aching exercise, you feel her shuddering orgasm drench you and with one last irresistible thrust she lets you go.  Rolling free you run off, disturbed not least by the way you find yourself repeatedly licking your lips, terribly aroused and unable to forget the honey taste of her.";
 		if "Microwaved" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
-			increase cunt width of player by 2; 
-			increase breast size of player by 2; 
+			if cunts of player is 0:
+				now cunts of player is 1;
+				say "You feel a wetness between your legs as the bear woman's honey creates a new juicy cunt between your legs.  You release a moan as pleasure runs through your body from it as its first orgasm washes through you.";
+				now cunt length of player is 1;
+				now cunt width of player is 0;	[these will be increased momentarily]
+			if cunt length of player < 8, increase cunt length of player by 3;
+			if cunt width of player < 11, increase cunt width of player by 2;
+			if breast size of player < 5, increase breast size of player by 2; 
 		Now ursinedefeat is 2;
-	otherwise	if a random chance of 1 in 5 succeeds:
-		say "That last blow was a doozy. You feel your limp self picked up bodily and find yourself helplessly carried to the shade.  The bear watches over you with an odd mixture of concern and barely restrained lust. 'It's hard some times.' she says absently and pats you on the head affectionately. Despite the way her huge paw jars your aching head, you cannot help but feel warmly towards the bear before passing out.  You awaken to find the tattered remains of your clothes feeling odd.  With a start you realise they have been washed and ironed.  Of all the messed up things in the world, that small gesture affects you deeply.";
-						[**				increase morale of player by 3; reduce libido by 1; restore HPs]
-	otherwise if ursinedefeat is 2:
-		if a random chance of 2 in 3 succeeds:
-			if cocks of the player  > 0:
-				say "She licks her lips as her favorite survivor  is once again at her mercy. 'Oh why did You came back?'   The smell of her arouses you and she sees your hardening maleness. 'Oh.  I guess we all have needs now. let me help you with that.' and  she reaches down and puts her huge mouth around your almost painfully swollen cock.  You stay motionless as you see her lethal teeth not inches from your straining member, but the fear is soon forgotten as her skillful lips and tongue work you to an orgasm that has you [one of]spurting until your balls ache.[or] moaning in pleasure. [or]fighting unsuccessfully to avoid cumming over and over.[at random].  After an age of being pleasured  until your straining cock relaxes, you lay back and begin to doze. After a while the honey scented bear departs saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Hotshot.[or]Honey.[at random] Come back when you're ready for more fun.'  Hearing the moaning of the bear as she pleasures herself you realise it's time to move. "; 
-			now ursinedefeat is 3; 	[decrease player libido by 2; restore HPs.]
+	otherwise if a random chance of 1 in 5 succeeds:
+		say "That last blow was a doozy. You feel your limp self picked up bodily and find yourself helplessly carried to the shade.  The bear watches over you with an odd mixture of concern and barely restrained lust. 'It's hard sometimes,' she says absently and pats you on the head affectionately.  Despite the way her huge paw jars your aching head, you cannot help but feel warmly towards the bear before passing out.  You awaken to find the tattered remains of your clothes feeling odd.  With a start you realise they have been washed and ironed.  Of all the messed up things in the world, that small gesture affects you deeply.";
+		increase morale of player by 2;
+		decrease libido of player by 4;
+		increase hp of player by 5;
+		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		if libido of player < 0, now libido of player is 0;
+	otherwise if ( ursinedefeat is 2 or ursinedefeat is 3 ) and a random chance of 2 in 3 succeeds and ( cocks of player > 0 or cunts of player > 0 ):
+		if cocks of the player  > 0 and ( cunts of player is 0 or a random chance of 2 in 5 succeeds ):
+			say "She licks her lips as her favorite survivor is once again at her mercy. 'Oh why did you came back?'  The smell of her arouses you and she sees your hardening maleness. 'Oh.  I guess we all have needs now. let me help you with that.' and she reaches down and puts her huge mouth around your almost painfully swollen cock.  You stay motionless as you see her lethal teeth not inches from your straining member, but the fear is soon forgotten as her skillful lips and tongue work you to an orgasm that has you [one of]spurting until your balls ache[or]moaning in pleasure[or]fighting unsuccessfully to avoid cumming over and over[at random].  After an age of being pleasured until your straining cock relaxes, you lay back and begin to doze. After a while the honey-scented bear departs saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Hotshot[or]Honey[at random]. Come back when you're ready for more fun.'  Hearing the moaning of the bear as she pleasures herself you realise it's time to move.";
+		otherwise:
+			say "She licks her lips as her favorite survivor is once again at her mercy. 'Oh why did you came back?'  The smell of her arouses you and she sees licks her lips at scent of your wet pussy.  'Oh, I guess you just miss me and need some more attention.  Mmm... let me help you with that, [one of]sweetie[or]honey[at random].'  And with that, she pushes you down onto the grass and brings her bruin muzzle to your juicy slit, which has gotten wet and dripping in her presence.  Her big, broad tongue slathers attention on your pussy, lapping up your juices before diving into you to make you moan loudly through a series of increasingly powerful female orgasms[if cocks of player > 0].  One of her large bear paws strokes and pumps at your cock throughout this, getting you to blast your load onto yourself repeatedly as well[end if].  The bear licks it all up lustfully, clearly enjoying the taste of your sweet pussy.  After an age of being pleasured until you're about to pass out, you lay back and begin to doze.  After a while, the honey-scented bear departs saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Sweetie[or]Honey[at random]. Come back when you're ready for more fun.'  Hearing the moaning of the bear as she pleasures herself you realise it's time to move.";
+		now ursinedefeat is 3;
+		increase morale of player by 2;
+		decrease libido of player by 6;
+		increase hp of player by 5;
+		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		if libido of player < 0, now libido of player is 0;
 	otherwise: 
-		say "She hugs you against her honey-scented body and presses you deep into her warm dark fur. Through the dark fur you hear her 'why must we always fight so?' You feel  her nipples leaking honey and it feels natural to suck at them.  Incredibly sweet milk flows into your mouth and into your body, each sweet spurt making you more and more aroused.  You feel if you can just get enough milk you can cum over and over.  You move from one dark nipple to the next and  suck and suck to get more milk.  You can hear the bear purring deeply with pleasure.  Your hand snakes down between the bears huge thighs as yous suckle and you rub her drenched slippery pussy increasing the flow of milk.  You can feel and taste her orgasm approaching.  With one last big spurt of milk into your mouth you both orgasm hard.  Feeling  somewhat refreshed and with a feeling of great satisfaction, you head on your way.";
-			[decrease thirst of the player by 1; decrease player hunger by 2; increase moral by 2;]
+		say "She hugs you against her honey-scented body and presses you deep into her warm dark fur. Through the dark fur you hear her sigh.  'Why must we always fight so?' You feel her nipples leaking honeyed milk and it feels natural to suck at them.  Incredibly sweet milk flows into your mouth and into your body, each sweet spurt making you more and more aroused.  You feel if you can just get enough milk you can cum over and over.  You move from one dark nipple to the next and  suck and suck to get more milk.  You can hear the bear purring deeply with pleasure.  Your hand snakes down between the bears huge thighs as yous suckle and you rub her drenched slippery pussy increasing the flow of milk.  You can feel and taste her orgasm approaching.  With one last big spurt of milk into your mouth you both orgasm hard.  Feeling somewhat refreshed and with a feeling of great satisfaction, you head on your way.";
+		decrease thirst of player by 3;
+		decrease hunger of player by 2;
+		increase morale of player by 2;
+		decrease libido of player by 6;
+		increase hp of player by 5;
+		if hp of player > maxhp of player, now hp of player is maxhp of player;
+		if libido of player < 0, now libido of player is 0;
 
 Section 2 - Monster Insertion
 
