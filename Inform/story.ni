@@ -4283,7 +4283,7 @@ to say randomimpreg:		[Use when either would work]
 		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
 			next;
 		break;
-	say "     [Impregchance]";
+	say "[Impregchance]";
 
 
 to say randommimpreg:		[Use when only MPreg would work]
@@ -4296,7 +4296,7 @@ to say randommimpreg:		[Use when only MPreg would work]
 		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
 			next;
 		break;
-	say "     [mimpregchance]";
+	say "[mimpregchance]";
 
 
 to say randomfimpreg:		[Use when only female pregnancy would work]
@@ -4309,7 +4309,7 @@ to say randomfimpreg:		[Use when only female pregnancy would work]
 		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
 			next;
 		break;
-	say "     [fimpregchance]";
+	say "[fimpregchance]";
 
 
 Section x - Debug Commands - Not for release
