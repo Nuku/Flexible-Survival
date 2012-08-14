@@ -26,7 +26,7 @@ to say losetovixennurse:
 			say "     [impregchance]";
 			say "     Having nicely seeded your womb, she pulls out and wipes her shaft clean on your rear end before getting up and leaving you there, slowly leaking out her plentiful cum onto the floor.";
 		if cocks of player > 0:
-			say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your ass, making you groan in pain.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing increasingly aroused and start to submit to her as it becomes more and more pleasurable.  You are soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed.";
+			say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your ass, making you groan in pain.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing increasingly aroused and start to submit to her as it becomes more and more pleasurable.  You are soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed.[mimpregchance]";
 			say "     Having nicely seeded your ass, she pulls out and wipes her shaft clean on your rear end before getting up and leaving you there, slowly leaking out her plentiful cum onto the floor.";
 	[value reset]
 	choose row monster from the table of random critters;

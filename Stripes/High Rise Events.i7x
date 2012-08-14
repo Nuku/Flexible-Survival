@@ -130,9 +130,9 @@ when play begins:
 	add Small Park to badspots of humorous;
 
 Instead of resolving a Small Park:
-	say "     While searching the area, you come across a small park.  It is only about a hundred meters in each direction.  From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed.  You don[apostrophe]t spot any danger at the moment, so perhaps it[apostrophe]s safe.  Shall you enter the park and investigate further? (Y/N)";
+	say "     While searching the area, you come across a small park.  It is only about a hundred meters in each direction.  From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed.  You don[apostrophe]t spot any danger at the moment, so perhaps it[apostrophe]s safe.  Shall you enter the park and investigate further? (Y/N)[line break]";
 	if player consents:
-		say "[line break][dogparksearch]";
+		say "[dogparksearch]";
 	otherwise:
 		say "     You go off, deciding to find a safer place to search.";
 		increase score by 1;
@@ -199,20 +199,21 @@ to say dogparksearch:
 
 
 to say doggyinfect:
-	let tempnum  be a random number between one and six;  [adjust this for new dogs]
-	if tempnum  is 1:
+	let tempnum  be a random number between one and seven;  [adjust this for new dogs]
+	if tempnum is 1:
 		infect "Female Husky";
-	if tempnum  is 2:
+	if tempnum is 2:
 		infect "German Shepherd";
-	if tempnum  is 3:
+	if tempnum is 3:
 		infect "Shemale Smooth Collie";
-	if tempnum  is 4:
+	if tempnum is 4:
 		infect "Pit bull";
-	if tempnum  is 5:
+	if tempnum is 5:
 		infect "Ashen Breeder";
-	if tempnum  is 6:
+	if tempnum is 6:
 		infect "Chocolate Lab";
-
+	if tempnum is 7:
+		infect "Alpha Husky";
 
 
 Section 4- Corporate Fat Cats
@@ -243,9 +244,9 @@ when play begins:
 	add Veterinary Hospital to badspots of furry;
 
 Instead of resolving a Veterinary Hospital:
-	say "     You find a veterinary hospital at the ground level of one of the high rises.  You don[apostrophe]t hear any monsters within and consider entering.  There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.  Shall you enter? (Y/N)";
+	say "     You find a veterinary hospital at the ground level of one of the high rises.  You don[apostrophe]t hear any monsters within and consider entering.  There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.  Shall you enter? (Y/N)[line break]";
 	if player consents:
-		say "[line break][vetsearch]";
+		say "[vetsearch]";
 	otherwise:
 		say "     You go off, deciding to find a safer place to search.";
 		increase score by 1;
@@ -317,41 +318,37 @@ to say vetsearch:
 
 to say doggycheck:		[add new canids when they arise]
 	now doggyness is 0;
-	if the bodyname of player is "Female Husky":
+	if the bodyname of player is "Alpha Husky":
 		now doggyness is 1;
-	if the facename of player is "Female Husky":
-		now doggyness is 1;
-	if the bodyname of player is "German Shepherd":
-		now doggyness is 1;
-	if the facename of player is "German Shepherd":
-		now doggyness is 1;
-	if the bodyname of player is "Shemale Smooth Collie":
-		now doggyness is 1;
-	if the facename of player is "Shemale Smooth Collie":
-		now doggyness is 1;
-	if the bodyname of player is "Pit bull":
-		now doggyness is 1;
-	if the facename of player is "Pit bull":
-		now doggyness is 1;
-	if the bodyname of player is "Latex Wolf":
-		now doggyness is 1;
-	if the facename of player is "Latex Wolf":
-		now doggyness is 1;
-	if the bodyname of player is "Ashen Breeder":
-		now doggyness is 1;
-	if the facename of player is "Ashen Breeder":
-		now doggyness is 1;
-	if the bodyname of player is "Painted Wolf Herm":
-		now doggyness is 1;
-	if the facename of player is "Painted Wolf Herm":
+	if the facename of player is "Alpha Husky":
 		now doggyness is 1;
 	if the bodyname of player is "Alpha Wolf":
 		now doggyness is 1;
 	if the facename of player is "Alpha Wolf":
 		now doggyness is 1;
-	if the bodyname of player is "Wolftaur":
+	if the bodyname of player is "Ashen Breeder":
 		now doggyness is 1;
-	if the facename of player is "Wolftaur":
+	if the facename of player is "Ashen Breeder":
+		now doggyness is 1;
+	if the bodyname of player is "Cerberus":
+		now doggyness is 1;
+	if the facename of player is "Cerberus":
+		now doggyness is 1;
+	if the bodyname of player is "Chocolate Lab":
+		now doggyness is 1;
+	if the facename of player is "Chocolate Lab":
+		now doggyness is 1;
+	if the bodyname of player is "Female Husky":
+		now doggyness is 1;
+	if the facename of player is "Female Husky":
+		now doggyness is 1;
+	if the bodyname of player is "Feral Wolf":
+		now doggyness is 1;
+	if the facename of player is "Feral Wolf":
+		now doggyness is 1;
+	if the bodyname of player is "German Shepherd":
+		now doggyness is 1;
+	if the facename of player is "German Shepherd":
 		now doggyness is 1;
 	if the bodyname of player is "jackalboy":
 		now doggyness is 1;
@@ -361,96 +358,124 @@ to say doggycheck:		[add new canids when they arise]
 		now doggyness is 1;
 	if the facename of player is "jackalman":
 		now doggyness is 1;
-	if the bodyname of player is "Chocolate Lab":
+	if the bodyname of player is "Latex Wolf":
 		now doggyness is 1;
-	if the facename of player is "Chocolate Lab":
+	if the facename of player is "Latex Wolf":
 		now doggyness is 1;
-	if the bodyname of player is "Feral Wolf":
+	if the bodyname of player is "Painted Wolf Herm":
 		now doggyness is 1;
-	if the facename of player is "Feral Wolf":
+	if the facename of player is "Painted Wolf Herm":
+		now doggyness is 1;
+	if the bodyname of player is "Pit bull":
+		now doggyness is 1;
+	if the facename of player is "Pit bull":
+		now doggyness is 1;
+	if the bodyname of player is "Retriever":
+		now doggyness is 1;
+	if the facename of player is "Retriever":
+		now doggyness is 1;
+	if the bodyname of player is "Shemale Smooth Collie":
+		now doggyness is 1;
+	if the facename of player is "Shemale Smooth Collie":
+		now doggyness is 1;
+	if the bodyname of player is "Werewolf Costume":
+		now doggyness is 1;
+	if the facename of player is "Werewolf Costume":
+		now doggyness is 1;
+	if the bodyname of player is "Wolftaur":
+		now doggyness is 1;
+	if the facename of player is "Wolftaur":
+		now doggyness is 1;
+	if the bodyname of player is "Wrestling Wolf":
+		now doggyness is 1;
+	if the bodyname of player is "Wrestling Wolf":
 		now doggyness is 1;
 
 to say kittycheck:		[add new felines when they arise]
 	now kittyness is 0;
-	if the bodyname of player is "Panther Taur":
+	if the bodyname of player is "Cheetah":
 		now kittyness is 1;
-	if the facename of player is "Panther Taur":
+	if the facename of player is "Cheetah":
 		now kittyness is 1;
 	if the bodyname of player is "cheetah woman":
 		now kittyness is 1;
 	if the facename of player is "cheetah woman":
 		now kittyness is 1;
-	if the bodyname of player is "Tigress Hooker":
+	if the bodyname of player is "Cougar":
 		now kittyness is 1;
-	if the facename of player is "Tigress Hooker":
-		now kittyness is 1;
-	if the bodyname of player is "Felinoid":
-		now kittyness is 1;
-	if the facename of player is "Felinoid":
+	if the facename of player is "Cougar":
 		now kittyness is 1;
 	if the bodyname of player is "Feline":
 		now kittyness is 1;
 	if the facename of player is "Feline":
 		now kittyness is 1;
-	if the bodyname of player is "Rubber tigress":
+	if the bodyname of player is "Felinoid":
 		now kittyness is 1;
-	if the facename of player is "Rubber tigress":
+	if the facename of player is "Felinoid":
 		now kittyness is 1;
-	if the bodyname of player is "Tiger":
+	if the bodyname of player is "Jaguar":
 		now kittyness is 1;
-	if the facename of player is "Tiger":
-		now kittyness is 1;
-	if the bodyname of player is "Tiger Cop":
-		now kittyness is 1;
-	if the facename of player is "Tiger Cop":
-		now kittyness is 1;
-	if the bodyname of player is "Plush lion":
-		now kittyness is 1;
-	if the facename of player is "Plush lion":
-		now kittyness is 1;
-	if the bodyname of player is "Sabretooth":
-		now kittyness is 1;
-	if the facename of player is "Sabretooth":
-		now kittyness is 1;
-	if the bodyname of player is "tigertaur":
-		now kittyness is 1;
-	if the facename of player is "tigertaur":
-		now kittyness is 1;
-	if the bodyname of player is "sphinx":
-		now kittyness is 1;
-	if the facename of player is "sphinx":
-		now kittyness is 1;
-	if the bodyname of player is "Cheetah":
-		now kittyness is 1;
-	if the facename of player is "Cheetah":
-		now kittyness is 1;
-	if the bodyname of player is "Pantherherm":
-		now kittyness is 1;
-	if the facename of player is "Pantherherm":
+	if the facename of player is "Jaguar":
 		now kittyness is 1;
 	if the bodyname of player is "Leopardman":
 		now kittyness is 1;
 	if the facename of player is "Leopardman":
 		now kittyness is 1;
+	if the bodyname of player is "Margay":
+		now kittyness is 1;
+	if the facename of player is "Margay":
+		now kittyness is 1;
 	if the bodyname of player is "Ninja Cat":
 		now kittyness is 1;
 	if the facename of player is "Ninja Cat":
 		now kittyness is 1;
-	if the bodyname of player is "Cougar":
+	if the bodyname of player is "Pantherherm":
 		now kittyness is 1;
-	if the facename of player is "Cougar":
+	if the facename of player is "Pantherherm":
+		now kittyness is 1;
+	if the bodyname of player is "Panther Taur":
+		now kittyness is 1;
+	if the facename of player is "Panther Taur":
+		now kittyness is 1;
+	if the bodyname of player is "Plush lion":
+		now kittyness is 1;
+	if the facename of player is "Plush lion":
+		now kittyness is 1;
+	if the bodyname of player is "Rubber tigress":
+		now kittyness is 1;
+	if the facename of player is "Rubber tigress":
+		now kittyness is 1;
+	if the bodyname of player is "Sabretooth":
+		now kittyness is 1;
+	if the facename of player is "Sabretooth":
+		now kittyness is 1;
+	if the bodyname of player is "Siamese Cat":
+		now kittyness is 1;
+	if the facename of player is "Siamese Cat":
+		now kittyness is 1;
+	if the bodyname of player is "sphinx":
+		now kittyness is 1;
+	if the facename of player is "sphinx":
 		now kittyness is 1;
 	if the bodyname of player is "Snow Leopard":
 		now kittyness is 1;
 	if the facename of player is "Snow Leopard":
 		now kittyness is 1;
-	if the bodyname of player is "Margay":
+	if the bodyname of player is "Tiger":
 		now kittyness is 1;
-	if the facename of player is "Margay":
+	if the facename of player is "Tiger":
+		now kittyness is 1;
+	if the bodyname of player is "tigertaur":
+		now kittyness is 1;
+	if the facename of player is "tigertaur":
+		now kittyness is 1;
+	if the bodyname of player is "Tigress Hooker":
+		now kittyness is 1;
+	if the facename of player is "Tigress Hooker":
 		now kittyness is 1;
 
 to say randomvetfight:				[more suitable pets can be added]
-	let tempnum be a random number between one and seven;
+	let tempnum be a random number between one and ten;
 	if tempnum is 1:
 		challenge "Female Husky";
 	if tempnum is 2:
@@ -465,6 +490,14 @@ to say randomvetfight:				[more suitable pets can be added]
 		challenge "rabbit pack";
 	if tempnum is 7:
 		challenge "Feline";
+	if tempnum is 7:
+		challenge "Alpha Husky";
+	if tempnum is 8:
+		challenge "Ninja Cat";
+	if tempnum is 9:
+		challenge "Siamese Cat";
+	if tempnum is 10:
+		challenge "Retriever";
 
 
 Section 6- Golf Store
@@ -616,8 +649,7 @@ Instead of resolving a Cameo:
 			follow the turnpass rule;
 			stop the action;
 		otherwise:
-			say ".  You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form.  Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival.  You do feel a strong longing for more sex or more chocolate.  Or best of all, more chocolate sex.  You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.";
-			say "[impregchance][impregchance]";
+			say ".  You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form.  Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival.  You do feel a strong longing for more sex or more chocolate.  Or best of all, more chocolate sex.  You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.[impregchance][impregchance]";
 	now Cameo is resolved;
 
 

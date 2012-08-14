@@ -37,7 +37,7 @@ to say lion def:
 		if the player consents:
 			now tempnum is 0;
 			if cocks of player > 0 and Feline_meow < 8:
-				say "     Looking over the defeated lion, you wonder if you'd prefer to have a ride on that feline cock (Y) or stuff his furry ass. (N)";
+				say "     Looking over the defeated lion, you wonder if you'd prefer to stuff his furry ass (Y) or have a ride on that feline cock. (N)";
 				if the player consents:
 					now tempnum is 1;
 					decrease Feline_meow by 1;
@@ -47,8 +47,7 @@ to say lion def:
 				decrease Feline_meow by 3;
 				say "     Deciding you can't let such a lovely, hard cock go to waste, you shove the big kitty onto his back.  He tries to struggle, thinking you intend to keep fighting, but you grab his wrists and pin him down.  Once you start grinding your ass down onto waning erection, his attitude changes and his angry growls turn to a rumble of pleasure.  His cock quickly stiffens back to full hardness, ready for you.";
 				say "     With the throbbing need for lion cock overwhelming you, you don't delay any longer and lower yourself down onto his hard rod, releasing a mrowl of pleasure.  His shaft feels so good inside you, filling a need that had been growing inside you.  You run your paws through his thick chestfur and ride his cock hard and fast, giving yourself over those feline urges[if cocks of player > 0].  Your cock is quite hard from your arousal, but you have no desire to tend to it, focusing purely on your pussy's need for lion cum[end if].  His paws rub over your [bodytype of player] body and play with your tits.";
-				say "     Eventually, your efforts are rewarded as that leonine penis pulses inside you, blasting his ample load deep inside you, stuffing you so wonderfully full of feline cum that your belly swells with its large output.  Feeling deliciously full and satisfied, at least for now, you roll off of the big kitty.  The lion man snuggles you, caressing your stuffed tummy before helping you up onto your feet, wobbly though they may be, before padding off.";
-				say "     [impregchance]";
+				say "     Eventually, your efforts are rewarded as that leonine penis pulses inside you, blasting his ample load deep inside you, stuffing you so wonderfully full of feline cum that your belly swells with its large output.  Feeling deliciously full and satisfied, at least for now, you roll off of the big kitty.  The lion man snuggles you, caressing your stuffed tummy before helping you up onto your feet, wobbly though they may be, before padding off.[impregchance]";
 				infect "Feline";
 	otherwise:
 		say ", passing out shortly afterwards.";
