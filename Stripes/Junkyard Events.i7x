@@ -165,6 +165,7 @@ to say dirtysnow:
 		say "     You get up unsteadily, woozy from the blood loss and look around.  Some time has passed and the bat-feline has departed.  You brush your fingers lightly over your sore neck, the wound slowly closing, and shudder at what you've unleashed.";
 	otherwise:
 		say "     Managing to slip past him, you make a run for it again.  But this time, after making a few turns, you dive onto the seats of a wrecked car in the scrapyard.  You remain as still and as quiet as you can, knowing those sensitive ears are searching for you.  Eventually you hear those large wings flap off into the distance.  You release a shudder at what you've unleashed.";
+	now snowbatfight is 0;
 	increase score by 20;
 	extend game by 8;
 
