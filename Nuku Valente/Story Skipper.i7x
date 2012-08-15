@@ -12,7 +12,7 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 To say magic word:
 	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeastuff]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
-	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]";
+	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]";
 	say "[line break]'You'll need to recite that part on its own (including the continuedchant part) after telling me the first one using a second recite command.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.";
 
 Reciting is an action applying to [16 things]one topic.
@@ -37,39 +37,39 @@ Carry out reciting:
 		if upit is 1:
 			increase z by 58;
 		if Z is:
-			-- 1:
+			-- 1:		[Strength]
 				if the player's command matches "[number]":
 					now the strength of player is the number understood;
 					now capacity of player is strength of player * 5;
-			-- 2:
+			-- 2:		[Dexterity]
 				if the player's command matches "[number]":
 					now the dexterity of player is the number understood;
-			-- 3:
+			-- 3:		[Stamina]
 				if the player's command matches "[number]":
 					now the stamina of player is the number understood;
-			-- 4:
+			-- 4:		[Charisma]
 				if the player's command matches "[number]":
 					now the charisma of player is the number understood;
-			-- 5:
+			-- 5:		[Perception]
 				if the player's command matches "[number]":
 					now the perception of player is the number understood;
-			-- 6:
+			-- 6:		[Intelligence]
 				if the player's command matches "[number]":
 					now the Intelligence of player is the number understood;
-			-- 7:
+			-- 7:		[Level]
 				if the player's command matches "[number]":
 					now the Level of player is the number understood;
-			-- 8:
+			-- 8:		[HP]
 				if the player's command matches "[number]":
 					now the maxhp of player is the number understood;
 					now the hp of player is the maxhp of player;
-			-- 9:
+			-- 9:		[Humanity]
 				if the player's command matches "[number]":
 					now the humanity of player is the number understood;
-			-- 10:
+			-- 10:	[Score]
 				if the player's command matches "[number]":
 					now the score is the score;
-			-- 11:
+			-- 11:	[Dr Matt]
 				if the player's command matches "[number]":
 					now unusual creature is resolved;
 					now the hp of doctor matt is the number understood;
@@ -107,7 +107,7 @@ Carry out reciting:
 						remove orthas from play;
 						now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
 						now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
-			-- 12:
+			-- 12:	[Body infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
@@ -115,61 +115,61 @@ Carry out reciting:
 						now body is body entry;				
 						now bodyname is name entry;
 						attributeinfect;
-			-- 13:
+			-- 13:	[Face infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
 						now face is face entry;				
 						now facename is name entry;
-			-- 14:
+			-- 14:	[Skin infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
 						now skin is skin entry;				
 						now skinname is name entry;
-			-- 15:
+			-- 15:	[Tail infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
 						now tail is tail entry;				
 						now tailname is name entry;
-			-- 16:
+			-- 16:	[Cock infection]
 				repeat with Y running from 1 to number of filled rows in table of random critters:
 					choose row Y from the table of random critters;
 					if name entry matches the text b, case insensitively:
 						now cock is cock entry;				
 						now cockname is name entry;
-			-- 17:
+			-- 17:	[Tanuki]
 				if the player's command matches "[number]":
 					now SatisfiedTanuki is the number understood;
-			-- 18:
+			-- 18:	[Hospital Quest]
 				if the player's command matches "[number]":
 					now hospquest is the number understood;
-			-- 19:
+			-- 19:	[player cock]
 				if the player's command matches "[number]":
 					now the cocks of player is the number understood;
-			-- 20:
+			-- 20:	[player breasts]
 				if the player's command matches "[number]":
 					now the breasts of player is the number understood;
-			-- 21:
+			-- 21:	[player cunt]
 				if the player's command matches "[number]":
 					now the cunts of player is the number understood;
-			-- 22:
+			-- 22:	[player cock]
 				if the player's command matches "[number]":
 					now the breast size of player is the number understood;
-			-- 23:
+			-- 23:	[player cock]
 				if the player's command matches "[number]":
 					now the cock length of player is the number understood;
-			-- 24:
+			-- 24:	[player cock]
 				if the player's command matches "[number]":
 					now the cock width of player is the number understood;
-			-- 25:
+			-- 25:	[player cunt]
 				if the player's command matches "[number]":
 					now the cunt length of player is the number understood;
-			-- 26:
+			-- 26:	[player cunt]
 				if the player's command matches "[number]":
 					now the cunt width of player is the number understood;
-			-- 27:
+			-- 27:	[equipped weapon]
 				repeat with Y running through grab objects:
 					if the printed name of Y matches the text b, case insensitively:
 						if printed name of y is not listed in invent of player, add printed name of Y to invent of player;
@@ -184,62 +184,62 @@ Carry out reciting:
 									add name entry to invent of player;
 									break;
 							say "You ready your [Y].";
-			-- 28:
+			-- 28:	[Snow]
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
 						now snow is in Y;
-			-- 29:
+			-- 29:	[Sandra]
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
 						now Sandra is in Y;
-			-- 30:
+			-- 30:	[Snow]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now hyper squirrel girl is resolved;
 						now squirrel den is known;
 					otherwise:
 						now hyper squirrel girl is not resolved;
-			-- 31:
+			-- 31:	[Sandra]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now needy rabbit girl is resolved;
 						now rabbit den is known;
 					otherwise:
 						now needy rabbit girl is not resolved;
-			-- 32:
+			-- 32:	[Coleen]
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
 						now Coleen is in Y;
 					if coleen is in bunker:
 						now Womanfruittree is resolved;
-			-- 33:
+			-- 33:	[Coleen]
 				if the player's command matches "[number]":
 					now coleentalk is the number understood;
-			-- 34:
+			-- 34:	[Coleen]
 				if the player's command matches "[number]":
 					now coleenfound is the number understood;
-			-- 35:
+			-- 35:	[Coleen]
 				if the player's command matches "[number]":
 					now coleencollared is the number understood;
-			-- 36:
+			-- 36:	[Coleen]
 				if the player's command matches "[number]":
 					now coleenalpha is the number understood;
-			-- 37:
+			-- 37:	[Coleen]
 				if the player's command matches "[number]":
 					now coleenslut is the number understood;
-			-- 38:
+			-- 38:	[Coleen]
 				if the player's command matches "[number]":
 					now coleenspray is the number understood;
-			-- 39:
+			-- 39:	[Dr. Mouse]
 				if the player's command matches "[number]":
 					now hp of doctor mouse is the number understood;
-			-- 40:
+			-- 40:	[Candy / raccoon pet]
 				if the player's command matches "[number]":
 					now coonstatus is the number understood;
-			-- 41:
+			-- 41:	[Feat unlock]
 				if the player's command matches "[number]":
 					now featunlock is the number understood;
-			-- 42:
+			-- 42:	[Butterfly]
 				recite butterflymagic "[the player's command]";
 			-- 43:
 				if the player's command matches "[number]":
@@ -247,7 +247,7 @@ Carry out reciting:
 			-- 44:
 				if the player's command matches "[number]":
 					now mateable is the number understood;
-			-- 45:
+			-- 45:	[Timothy]
 				if the player's command matches "[number]":
 					now gryphoncomforted is the number understood;
 					now lonely gryphoness is unresolved;
@@ -257,7 +257,7 @@ Carry out reciting:
 					if gryphoncomforted is greater than 2:
 						now gryphoness is tamed;
 						now Gryphoness Nest is resolved;
-			-- 46:
+			-- 46:	[Shifting]
 				if the player's command matches "[number]":
 					now shiftable is the number understood;
 					now Secure Area is unresolved;
@@ -267,19 +267,22 @@ Carry out reciting:
 					if shiftable is 2:
 						now Guard Gryphon is resolved;
 						now findablestairs is 1;
-			-- 47:
+			-- 47:	[Dr. Medea]
 				if the player's command matches "[number]":
 					now medeastuff is the number understood;
-			-- 48:
+					if medeastuff > 0:
+						now Pediatrics Lobby is known;
+			-- 48:	[Military events]
 				if the player's command matches "[number]":
 					now mtp is the number understood;
-			-- 49:
+					if mtp is 4, now Military presence is resolved;
+			-- 49:	[Hyena Gang]
 				if the player's command matches "[number]":
 					now hyg is the number understood;
 					if hyg is 4:
 						now Hyena hideout is known;
 						now hyena gang is resolved;
-			-- 50:
+			-- 50:	[New Ewe Store]
 				if the player's command matches "[number]":
 					now nes is the number understood;
 					now New Ewe Store is unresolved;
@@ -305,23 +308,23 @@ Carry out reciting:
 						now New Ewe Store is resolved;
 					if nes is 5:
 						if "Three Bags Full" is not listed in feats of player, add "Three Bags Full" to feats of the player;
-			-- 51:
+			-- 51:	[Lisa]
 				if the player's command matches "[number]":
 					now mtrp is the number understood;
 					if mtrp is 1:
 						now Porn Store is known;
 						now mouse taur is resolved;
 						now find porn store is resolved;
-			-- 52:
+			-- 52:	[Boris]
 				if the player's command matches "[number]":
 					now boristalk is the number understood;
-			-- 53:
+			-- 53:	[Boris]
 				if the player's command matches "[number]":
 					now borisquest is the number understood;
 					if borisquest is greater than 4:
 						if christyquest is 0:
 							now christyquest is 1;
-			-- 54:
+			-- 54:	[Alex]
 				if the player's command matches "[number]":
 					now progress of alex is the number understood;
 					if progress of alex is greater than 0:
@@ -329,21 +332,21 @@ Carry out reciting:
 						now meet alex is resolved;
 					if progress of alex is greater than 1:
 						now find lorenda is resolved;
-			-- 55:
+			-- 55:	[Angie]
 				if the player's command matches "[number]":
 					now angiehappy is the number understood;
 					if angiehappy is greater than 0:
 						now angiefound is 1;
 						now zoo entrance is known;
-			-- 56:
+			-- 56:	[Angie]
 				if the player's command matches "[number]":
 					now angietalk is the number understood;
 					if angietalk is greater than 1:
 						Now AngieTrapped is resolved;
-			-- 57:
+			-- 57:	[Susan]
 				if the player's command matches "[number]":
 					now deerconsent is the number understood;
-			-- 58:
+			-- 58:	[Susan]
 				if the player's command matches "[number]":
 					now deerhappy is the number understood;
 					move Susan to dark basement;
@@ -362,13 +365,13 @@ Carry out reciting:
 						if deerhappy is 2:
 							move susan to Primary Lab;
 							now unusual creature is resolved;
-			-- 59:
+			-- 59:	[Hospital Quest]
 				if the player's command matches "[number]":
 					now mattcollection is the number understood;
-			-- 60:
+			-- 60:	[Orthas]
 				if the player's command matches "[number]":
 					now orthasstart is the number understood;
-			-- 61:
+			-- 61:	[Stables - Fancy Quest]
 				if the player's command matches "[number]":
 					now fancyquest is the number understood;
 					now findinghardware is unresolved;
@@ -377,31 +380,31 @@ Carry out reciting:
 						now findinghardware is resolved;
 					if fancyquest is greater than 0:
 						now ignoredmemo is resolved;
-			-- 62:
+			-- 62:	[Sven]
 				if the player's command matches "[number]":
 					now hp of Sven is the number understood;
-			-- 63:
+			-- 63:	[Sven]
 				if the player's command matches "[number]":
 					now lust of Sven is the number understood;
-			-- 64:
+			-- 64:	[Sarah]
 				if the player's command matches "[number]":
 					now sarahslut is the number understood;
-			-- 65:
+			-- 65:	[Sarah]
 				if the player's command matches "[number]":
 					now sarahtalk is the number understood;
-			-- 66:
+			-- 66:	[Sarah]
 				if the player's command matches "[number]":
 					now sarahpups is the number understood;
-			-- 67:
+			-- 67:	[-nothing-]
 				if the player's command matches "[number]":
 					now tempnum is 0;		[Duplicate removed]
-			-- 68:
+			-- 68:	[Brunch w/Alex]
 				if the player's command matches "[number]":
 					now alexbrunch is the number understood;
-			-- 69:
+			-- 69:	[Treasure found]
 				if the player's command matches "[number]":
 					now treasurefound is the number understood;
-			-- 70:
+			-- 70:	[Treasure hunt]
 				if the player's command matches "[number]":
 					now tmapfound is the number understood;
 					now noteinbottle is unresolved;
@@ -412,23 +415,23 @@ Carry out reciting:
 						now pirate island is known;
 						now findingboat is resolved;
 						now boatfound is 3;
-			-- 71:
+			-- 71:	[Sandra + Coleen]
 				if the player's command matches "[number]":
 					now hp of Sandra is the number understood;
-			-- 72:
+			-- 72:	[Frank]
 				if the player's command matches "[number]":
 					now franksex is the number understood;
-			-- 73:
+			-- 73:	[Fang]
 				if the player's command matches "[number]":
 					now hp of Fang is the number understood;
 					if hp of Fang is 0 or hp of Fang is 100:
 						now Fang is in the dark basement;
 					if hp of Fang > 0 and hp of Fang < 100:
 						now Fang is in the Grey Abbey Library;
-			-- 74:
+			-- 74:	[Fang + Sandra]
 				if the player's command matches "[number]":
 					now libido of Fang is the number understood;
-			-- 75:
+			-- 75:	[Philip]
 				if the player's command matches "[number]":
 					now pigfed is the number understood;
 					now Philip is in Pig Pen;
@@ -441,11 +444,11 @@ Carry out reciting:
 						now HBMR is 1;
 					if pigfed is 3:
 						now Philip is in the bunker;
-			-- 76:
+			-- 76:	[Philip - sex]
 				if the player's command matches "[number]":
 					now pigfucked is the number understood;
 					now lastPhilipfucked is turns;
-			-- 77:
+			-- 77:	[cute crab - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now Lost Crab is resolved;
@@ -453,7 +456,7 @@ Carry out reciting:
 					otherwise:
 						now Lost Crab is not resolved;
 						now cute crab is not tamed;
-			-- 78:
+			-- 78:	[exotic bird - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now Scared Bird is resolved;
@@ -461,7 +464,7 @@ Carry out reciting:
 					otherwise:
 						now Scared Bird is not resolved;
 						now Exotic Bird is not tamed;
-			-- 79:
+			-- 79:	[Felinoid companion - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now Injured Felinoid is resolved;
@@ -469,7 +472,7 @@ Carry out reciting:
 					otherwise:
 						now Injured Felinoid is not resolved;
 						now Felinoid companion is not tamed;
-			-- 80:
+			-- 80:	[bee girl - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now Smashed Hive is resolved;
@@ -477,7 +480,7 @@ Carry out reciting:
 					otherwise:
 						now Smashed Hive is unresolved;
 						now bee girl is not tamed;
-			-- 81:
+			-- 81:	[house cat - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now Lost house cat is resolved;
@@ -485,7 +488,7 @@ Carry out reciting:
 					otherwise:
 						now Lost house cat is not resolved;
 						now house cat is not tamed;
-			-- 82:
+			-- 82:	[little fox - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now Abandoned Fox is resolved;
@@ -493,7 +496,7 @@ Carry out reciting:
 					otherwise:
 						now Abandoned Fox is not resolved;
 						now little fox is not tamed;
-			-- 83:
+			-- 83:	[skunk kit - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now Lost Skunk Kit is resolved;
@@ -501,7 +504,7 @@ Carry out reciting:
 					otherwise:
 						now Lost Skunk Kit is unresolved;
 						now skunk kit is not tamed;
-			-- 84:
+			-- 84:	[helper dog - pet]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now Mournful Dog is resolved;
@@ -511,7 +514,7 @@ Carry out reciting:
 						now helper dog is not tamed;
 						now hdog is 0;
 						now dogfoodcount is 0;
-			-- 85:
+			-- 85:	[Rachel Mouse - pet]
 				if the player's command matches "[number]":
 					now mousecurse is the number understood;
 					if mousecurse is 1:
@@ -522,7 +525,7 @@ Carry out reciting:
 					otherwise:
 						now Quiet Apartment Building is unresolved;
 						now mouse girl is not tamed;
-			-- 86:
+			-- 86:	[Elijah]
 				if the player's command matches "[number]":
 					now hp of Elijah is the number understood;
 					now NPCintCounter is turns;
@@ -537,14 +540,14 @@ Carry out reciting:
 					if hp of Elijah is 100:
 						remove Elijah from play;
 					if hp of Elijah is 2, now Sweet Surprise is unresolved;
-			-- 87:
+			-- 87:	[Elijah's interactions]
 				now npcEint is "[the player's command]";
-			-- 88:
+			-- 88:	[Latex Husky Mode]
 				if the player's command matches "[number]" and the number understood is 1:
 					now latexhuskymode is true;
 				otherwise:
 					now latexhuskymode is false;
-			-- 89:
+			-- 89:	[Parasitic Larva]
 				now larvaegg is 0;
 				now larvacounter is 0;
 				if the player's command matches "[number]" and the number understood is 1:
@@ -562,7 +565,7 @@ Carry out reciting:
 							now area entry is "nowhere";
 							now non-infectious entry is true;	[Wasps locked]
 					now insectlarva is false;
-			-- 90:
+			-- 90:	[Leonard]
 				if the player's command matches "[number]":
 					now hp of Leonard is the number understood;
 					if hp of Leonard > 0:
@@ -571,7 +574,7 @@ Carry out reciting:
 					otherwise:
 						now Lion's Den is unknown;
 						now Feline Friend is unresolved;
-			-- 91:
+			-- 91:	[Solstice]
 				if the player's command matches "[number]":
 					remove Solstice from play;
 					now hp of Solstice is the number understood;
@@ -586,7 +589,7 @@ Carry out reciting:
 						now lastfuck of Solstice is turns;
 					if hp of Solstice > 4:
 						move Solstice to Grey Abbey Library;
-			-- 92:
+			-- 92:	[Ronda the Slut Rat]
 				if the player's command matches "[number]":
 					now hp of Ronda is the number understood;
 					now Art Collector is resolved;
@@ -611,7 +614,7 @@ Carry out reciting:
 						now Art Collector is unresolved;
 					if hp of Ronda >= 8:
 						now SlutRat Den is known;	
-			-- 93:
+			-- 93:	[Athanasia]
 				if the player's command matches "[number]":
 					now hp of Athanasia is the number understood;
 					remove Athanasia from play;
@@ -633,7 +636,7 @@ Carry out reciting:
 					if hp of Athanasia >= 4:
 						now lastfuck of Athanasia is turns + 8;
 						move Athanasia to Volcanic Cave;
-			-- 94:
+			-- 94:	[Skunkbeast Lord]
 				if the player's command matches "[number]":
 					now skunkbeaststatus is the number understood;
 					if skunkbeaststatus is 1 and guy is not banned and girl is not banned and furry is not banned:
@@ -674,7 +677,7 @@ Carry out reciting:
 					otherwise:
 						now skunkbeaststatus is 0;
 						now Skunkbeast Battle is unresolved;
-			-- 95:
+			-- 95:	[Kitsune]
 				if the player's command matches "[number]":
 					now ktp is the number understood;
 					now Strange Fox is unresolved;
@@ -688,11 +691,11 @@ Carry out reciting:
 						if "star bell" is listed in invent of the player, delete star bell;
 						now Strange Fox is resolved;
 						now Foxy Hideaway is known;
-			-- 96:
+			-- 96:	[Release number]
 				if the player's command matches "[number]":
 					if release number is greater than the number understood:
 						if score is less than 0, now score is 0;
-			-- 97:
+			-- 97:	[Kara]
 				if the player's command matches "[number]":
 					now tattoohunter is the number understood;
 					if tattoohunter is 1, now tattoohunter is 0;
@@ -706,7 +709,7 @@ Carry out reciting:
 						now Kara is in the Tattoo Parlor;
 					if tattoohunter >= 5:
 						now Haroldaroused is 1;
-			-- 98:
+			-- 98:	[Kara's tattoos]
 				if the player's command matches "[number]":
 					now tatsave is the number understood;
 					remove { "Hyena Tattoo", "Dragon Tattoo", "Feline Tattoo", "Wolf Tattoo", "Unicorn Tattoo", "Gryphon Tattoo" } from feats of the player, if present;
@@ -729,7 +732,7 @@ Carry out reciting:
 					otherwise:		[error or unlisted tattoo]
 						now tatstatus is 0;
 						now tatsave is 0;
-			-- 99:
+			-- 99:	[Kara's piercings]
 				if the player's command matches "[number]":
 					now piercesave is the number understood;
 					remove { "NippleandChain Piercing", "Hyenastyle Piercings", "Nipple Piercing", "Matriarch Piercing" } from feats of the player, if present;
@@ -745,6 +748,27 @@ Carry out reciting:
 						add "NippleandChain Piercing" to feats of the player;
 					if piercesave is 4:
 						add "Hyenastyle Piercings" to feats of player;
+			-- 100:	[Diego]
+				if the player's command matches "[number]":
+					now diegochanged is the number understood;
+					if diegochanged > 0:
+						now diegotalk is 1;
+			-- 101:	[Eric]
+				if the player's command matches "[number]":
+					now hp of Eric is the number understood;
+					move Eric to Campus Arena Lockerroom;
+					if hp of Eric > 0:
+						now Barricaded Lockerroom is resolved;
+						now Campus Arena Lockerroom is known;
+					if hp of Eric is 100:
+						remove Eric from play;
+					otherwise if hp of Eric > 0:
+						move Eric to Bunker;
+						now thirst of Eric is 1;
+					if hp of Eric is 21 or hp of Eric is 22:
+						now thirst of Eric is 21;
+					if hp of Eric is 11:
+						now thirst of Eric is 11;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
@@ -877,10 +901,10 @@ carry out Trixiecheck2:
 	say "Cute crab: [if cute crab is tamed]1[otherwise]0[end if]   Exotic bird: [if exotic bird is tamed]1[otherwise]0[end if]   Felinoid: [if Felinoid companion is tamed]1[otherwise]0[end if][line break]";
 	say "Bee girl: [if bee girl is tamed]1[otherwise]0[end if]   House cat: [if house cat is tamed]1[otherwise]0[end if]   Little fox: [if little fox is tamed]1[otherwise]0[end if][line break]";
 	say "Skunk kit: [if skunk kit is tamed]1[otherwise]0[end if]   Helper dog: [if helper dog is tamed]1[otherwise]0[end if]   Rachel: [mousecurse][line break]";
-	say "Rachel: [mousecurse]     Elijah: [hp of Elijah]    Elijah interactions: [npcEint]";
-	say "Latex Husky Mode: [if latexhuskymode is true]ON[otherwise]OFF[end if]     Parasite?: [if insectlarva is true]YES[otherwise]NO[end if]";
-	say "Leonard: [hp of Leonard]     Solstice: [hp of Solstice]     Ronda: [hp of Ronda]";
-	say "Skunkbeast Lord: [if skunkbeaststatus is 1]YES[otherwise]NO[end if]     Kitsune: [ktp]";
-
+	say "Rachel: [mousecurse]     Elijah: [hp of Elijah]    Elijah interactions: [npcEint][line break]";
+	say "Latex Husky Mode: [if latexhuskymode is true]ON[otherwise]OFF[end if]     Parasite?: [if insectlarva is true]YES[otherwise]NO[end if][line break]";
+	say "Leonard: [hp of Leonard]     Solstice: [hp of Solstice]     Ronda: [hp of Ronda][line break]";
+	say "Skunkbeast Lord: [if skunkbeaststatus is 1]YES[otherwise]NO[end if]     Kitsune: [ktp][line break]";
+	say "Diego: [if Diegochanged is 0]Male[otherwise if Diegochanged is 1]Herm[otherwise]Female[end if]     Eric: ???[line break]";
 
 Story Skipper ends here.
