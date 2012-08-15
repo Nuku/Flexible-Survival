@@ -49,7 +49,7 @@ to say beattheRetriever:
 
 to say Retrieverdesc:
 	say "As you walk down the street you suddenly hear the sound of paws on pavement approaching you from behind. You turn towards the source just in time to avoid the golden furred canine rushing towards you from behind.";
-	say "When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitgrade legs and paw-like hand and feet as well as four firm breasts. her canine tail wags happily behind her, obviously looking forward to playing with you.";
+	say "When the retriever circles around you get a clearer look at your assailant, she is a curvaceous female golden retriever with digitigrade legs and paw-like hand and feet as well as four firm breasts. her canine tail wags happily behind her, obviously looking forward to playing with you.";
 
 Section 2 - Monster Insertion
 

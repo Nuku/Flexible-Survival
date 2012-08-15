@@ -893,18 +893,22 @@ to say hospbigfight1:
 	now fightstatus is 3;	[set to run away by default]
 	challenge "Jaguar";
 	if fightstatus is 3:
+		now fightstatus is 0;
 		say "[hospranaway]";
 		stop the action;
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[hosploss]";
 		stop the action;
 	now fightstatus is 3;
 	say "     The second jaguar moves around the worktables steps past his fallen comrade to attack you as well.";
 	challenge "Jaguar";
 	if fightstatus is 3:	[reset to run away by default]
+		now fightstatus is 0;
 		say "[hospranaway]";
 		stop the action;
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[hosploss]";
 		stop the action;
 	say "     The two guards dealt with, you barely dodge in time as the mouse tries to jab you with a syringe.  You knock it from his paw, sending it to shatter on the floor.  The powerful scent of an array of hormones fills the air, having clearly intended to change you into a mindless sex beast before you could attack him.  That option gone, the little mouse strikes out at you with his fists.";
@@ -915,9 +919,11 @@ to say hospbigfight2:
 	now fightstatus is 3;	[set to run away by default]
 	challenge "Albino Mouse";
 	if fightstatus is 3:
+		now fightstatus is 0;
 		say "[hospranaway]";
 		stop the action;
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[hosploss]";
 		stop the action;
 	say "     Battered and bloodied, the mad doctor turns and runs.  For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
@@ -933,11 +939,14 @@ to say hospbigfight2:
 	now fightstatus is 3;	[set to run away by default]
 	challenge "Albino Mouse";
 	if fightstatus is 3:
+		now fightstatus is 0;
 		say "[hospranaway]";
 		stop the action;
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[hosploss]";
 		stop the action;
+	now fightstatus is 0;
 	say "[hospvictory]";
 
 to say hospranaway:
@@ -1183,10 +1192,13 @@ to say tlabsbigfight:
 	now fightstatus is 3;
 	challenge "Dragon";
 	if fightstatus is 3:
+		now fightstatus is 0;
 		say "[tlranaway]";
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[tlloss]";
 	if fightstatus is 1:
+		now fightstatus is 0;
 		say "[tlvictory]";
 
 

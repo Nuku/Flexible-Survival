@@ -172,7 +172,7 @@ to say dogparksearch:
 		[random canine infection]
 		say "[doggyinfect]";
 	if T is 9:
-		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While you walk through the park, you pass near the large tree at the center of the park and the dog smell is the strongest here.  It is very thick in the air around it and you can see the truck discoloured with markings and thick cum splashes.  Despite its origins, the scent is very attractive, drawing you in.  Do you want to examine it more closely? (Y/N)";
+		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While you walk through the park, you pass near the large tree at the center of the park and the dog smell is the strongest here.  It is very thick in the air around it and you can see the trunk discoloured with markings and thick cum splashes.  Despite its origins, the scent is very attractive, drawing you in.  Do you want to examine it more closely? (Y/N)";
 		if player consents:
 			say "     You move in closer to the tree and start to sniff around it.  The heady scent of dogs, both males and females, fill your nostrils.  You pant a little, tasting the scent of heat as well from many of them.  Your mind grows hazy and you roll on the ground in front of the tree, through several cum puddles, letting their scent get on you.  Getting up, you shamelessly add your scent to the base of the tree before heading off, leaving the dog park now that you[apostrophe]ve marked that you[apostrophe]ve been there.";
 			[triple random canine infection]
@@ -199,7 +199,7 @@ to say dogparksearch:
 
 
 to say doggyinfect:
-	let tempnum  be a random number between one and seven;  [adjust this for new dogs]
+	let tempnum  be a random number between one and nine;  [adjust this for new dogs]
 	if tempnum is 1:
 		infect "Female Husky";
 	if tempnum is 2:
@@ -214,7 +214,10 @@ to say doggyinfect:
 		infect "Chocolate Lab";
 	if tempnum is 7:
 		infect "Alpha Husky";
-
+	if tempnum is 8:
+		infect "Retriever";
+	if tempnum is 9:
+		infect "Cerberus";
 
 Section 4- Corporate Fat Cats
 

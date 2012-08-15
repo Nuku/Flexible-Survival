@@ -12,6 +12,7 @@ dobielibido is a number that varies.
 
 when play begins:
 	add { "Doberman" } to infections of furry;
+	add { "Doberman" } to infections of girl;
 
 to say losetoDoberman:
 	choose row monster from the table of random critters;
