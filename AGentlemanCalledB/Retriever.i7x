@@ -65,7 +65,7 @@ When Play begins:
 	now defeated entry is "[beattheRetriever]";
 	now victory entry is "[losetoRetriever]";
 	now desc entry is "[Retrieverdesc]";
-	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle [if rexpet > 0]. fastened around your neck you have a thin blue leather studded collar, declaring your status as Rex's pet too the world. There's even a small silver bone shaped tag with you name engraved on it[End if]";
+	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if rexpet > 0].  Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small silver bone shaped tag with you name engraved on it[end if]";
 	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitgrade legs and large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
 	now skin entry is "a thick, shiny coat of golden fur over your";
 	now tail entry is "Your tail is that of a golden retriever, long and covered with soft golden fur. It wags happily constantly without your input unless you make a conscious effort to stop it.";

@@ -411,6 +411,7 @@ Carry out reciting:
 					if tmapfound is greater than 2:
 						now pirate island is known;
 						now findingboat is resolved;
+						now boatfound is 3;
 			-- 71:
 				if the player's command matches "[number]":
 					now hp of Sandra is the number understood;
@@ -631,6 +632,7 @@ Carry out reciting:
 						now Approaching the Capitol Building is known;
 					if hp of Athanasia >= 4:
 						now lastfuck of Athanasia is turns + 8;
+						move Athanasia to Volcanic Cave;
 			-- 94:
 				if the player's command matches "[number]":
 					now skunkbeaststatus is the number understood;
