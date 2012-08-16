@@ -23,7 +23,7 @@ to say cannon fire:
 	otherwise if cannonprep is 1:
 		[Wind direction]
 		now cannonprep is 2;
-		say "The Cock Cannon moves its mushroom shaped head to the [one of]right [or]left [at random]inorder to adjust for wind direction.";
+		say "The Cock Cannon moves its mushroom shaped head to the [one of]right[or]left[at random] in order to adjust for wind direction.";
 	otherwise if cannonprep is 2:
 		[Masturbate]
 		now cannonprep is 3;

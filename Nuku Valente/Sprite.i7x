@@ -9,7 +9,9 @@ Section 1 - Monster Responses
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 Spritedefeat is a number that varies.
 Spriteconsent is a number that varies.
+
 to say Sprite attack:
+	if fightstatus is 3, now fightstatus is 2;
 	if hp of player is greater than 0:
 		say "Noticing that you've stopped resisting their efforts, the swarm gives a collective 'YAY!' and dances around you in an ecstatic dance of welcoming before they buzz in all the closer, getting to work.";
 		now Spriteconsent is 1;
@@ -17,6 +19,8 @@ to say Sprite attack:
 	if a random chance of 1 in 2 succeeds and cunts of player is greater than 0:
 		say "You look down to see [(cunt length of player divided by 4) plus one] sprites working their way into you, one after the other. Despite their forms, they slip in smoothly, wings buzzing inside of you, exciting your tunnel and clit and sensing pleasure pulsing through your form as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[impregchance]";
 		wait for any key;
+	otherwise if "MPreg" is listed in feats of player and cunts of player is 0 and a random chance of 1 in 2 succeds:
+		say "One of the sprites caresses your rear, nuzzling and kissing at it.  'Mmm... there's something special about this spritely boy, girls.  There's a nice, warm womb in him,' she giggles.  That said, she starts rubbing at your back passage, working your anus open.  You moan softly as she starts squirming her way inside.  She's followed by [if scalevalue of player is 1]another[otherwise][scalevalue] others[end if].  They slip in smoothly, wings buzzing[if cocks of player > 0] and fluttering against your prostate[end if] as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[mimpregchance]";
 	if a random chance of 1 in 2 succeeds:
 		say "Your body is swarmed with the cloud, lifted up into the air and caressed from all sides. It's like sleeping on a cloud as they hold you up with hundreds of tiny hands while another hundred work on rubbing your every erogenous zone in alternating waves that has you paralyzed with pleasure.";
 		wait for any key;
@@ -37,6 +41,7 @@ to say Sprite attack:
 
 [ [Sprite loss] ]
 To say Sprite loss:
+	if fightstatus is 3, now fightstatus is 1;
 	say "The sprites disperse in an unhappy cloud of defeated fae kind, taking off in all directions.";
 	if (libido of player is greater than 50 or humanity of player is less than 30) and cocks of player is greater than 0:
 		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";
