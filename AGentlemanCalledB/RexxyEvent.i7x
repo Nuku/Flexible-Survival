@@ -66,7 +66,7 @@ Check Treatbegging:
 	If Treat jar is not visible, say "eh?" instead;
 
 Carry out Treatbegging:
-	say "Unable to deny your hunger for the bone-shaped treats any longer, you quickly find yourself on all fours in front of Rex, Whimpering and begging for one of the small cookies. He smiles intently as he pulls one of the treats from the jar, telling you to like a good doggy. As you sit patiently in front of him Rex reaches out and places the treat on the end of your nose, the delicious scent of it making your mouth water even more. When Rex finally signals you to eat the treat, you drop it to the floor and pounce on it instantly, eating the entire thing in one bite. As you lick the final crumbs from your chops, you begin to think how much you'd like another even as you realize how much of yourself you are losing to the happy retriever sexpet Rex is training you too be.";
+	say "Unable to deny your hunger for the bone-shaped treats any longer, you quickly find yourself on all fours in front of Rex, Whimpering and begging for one of the small cookies. He smiles intently as he pulls one of the treats from the jar, telling you to sit like a good doggy. As you sit patiently in front of him Rex reaches out and places the treat on the end of your nose, the delicious scent of it making your mouth water even more. When Rex finally signals you to eat the treat, you drop it to the floor and pounce on it instantly, eating the entire thing in one bite. As you lick the final crumbs from your chops, you begin to think how much you'd like another even as you realize how much of yourself you are losing to the happy retriever sexpet Rex is training you too be.";
 	decrease hunger of player by 10;
 	if hunger of player < 0, now hunger of player is 0;
 	infect "Retriever";
@@ -244,7 +244,7 @@ instead of conversing the Rex:
 			follow the turnpass rule;
 			stop the action;
 		otherwise:
-			say "You realize Rex's intent immediately and push the collar away, informing him that you have no intention of submitting too him. 'That's too bad,' Rex replies. 'It really would be much easier for both of us if you just gave in now, but I'm sure I'll have plenty of opportunity to change your mind,' he says with a smirk as he glances back at your bone sitting in the back of the room. 'After all, who else is going to help you control those urges your struggling with?'";
+			say "You realize Rex's intent immediately and push the collar away, informing him that you have no intention of submitting to him. 'That's too bad,' Rex replies. 'It really would be much easier for both of us if you just gave in now, but I'm sure I'll have plenty of opportunity to change your mind,' he says with a smirk as he glances back at your bone sitting in the back of the room. 'After all, who else is going to help you control those urges your struggling with?'";
 			say " 'But enough of that, let me show you around our home,' Rex says as he begins touring you around the small house.  Finally he introduces you too Karen, the other retriever in the home, who you quickly recognize as the girl you saw Rex grab earlier and the original owner of the bone that drew you here. As Rex introduces you properly she smiles at you knowingly, apparently somehow recognizing you as well.";
 		increase rextalk by 1;
 		now doggyboned is 0;
