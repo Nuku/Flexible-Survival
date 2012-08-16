@@ -15,7 +15,7 @@ to say Shemale Smooth Collie attack:
 		now colliedefeat is 1;
 	otherwise:
 		if gestation of child > 0:
-			say "     The bitch moves in as if to pounce on top of you before her nose begins twitching.  She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your crotch as she inhales deeply.  She gives a single lick across your folds, followed by a comforting growl as she nuzzles your stomach.
+			say "     The bitch moves in as if to pounce on top of you before her nose begins twitching.  She crouches down close to the ground after pushing you gently onto your back, her nostrils rubbing against your crotch as she inhales deeply.  She gives a single lick across your folds, followed by a comforting growl as she nuzzles your stomach.";
 			say "     'I'll have to paw off later, you're carrying a child and I don't want to risk hurting you.  I can offer you something to drink though, you do look thirsty.'  She doesn't waste a second before pressing a breast you your face and forcing her nipple into your mouth.  Milk begins flowing almost instantly, filling your stomach quite quickly as she forces you to suckle.";
 			if thirst of the player > 30:
 				decrease thirst of the player by 30;
@@ -26,8 +26,8 @@ to say Shemale Smooth Collie attack:
 				say "     'Ohhh, I knew I smelled a fresh bitch in town, and you smell absolutely delicious.'  She removes your clothes easily and her tongue flicks out to lick your folds, slipping in after a couple licks to probe and prime your depths, stretching them a bit as her prick engorges and begins to drip thick pre onto the ground.  You can feel your walls begin dripping with juices as she stimulates them masterfully, her tongue finding all the right places to almost make you feel like a bitch in heat.";
 				say "     'Mmmm, hope you're ready, because I'm going to leave you walking funny for hours honey.'  She immediately mounts you, her odd-shaped prick stretching your walls, but in a way that actually feels good even as her thrusts begin to stretch your tunnel out, making your passage even deeper as her two-foot battering ram tries to breach your inner gate.  Within a minute she's unable to last any longer, and you feel a sense of blessed relief as her hot cum begins flooding your passage, her swollen knot presses against your lips because she simply couldn't fit. 'Ooohhh YES! Feel that, bitch? I'm going to give you so many puppies as soon as I can squeeze this thing into you completely.'";
 				say "     She pulls out without wasting another second, her cock still gushing out her rich sperm as she turns to walk away. You, your clothes, and much of the local plants end up splashed with her hot seed. Your abused passage throbs from the fierceness of her short pounding [impregchance]";
-				if cunt width < 10, increase cunt width of player by 1;
-				if cunt length < 24, increase cunt length of player by 2;
+				if cunt width of player < 10, increase cunt width of player by 1;
+				if cunt length of player < 24, increase cunt length of player by 2;
 			otherwise:
 				if cunts of player is 0:
 					say "     She growls as she removes your clothes only to find out that you lack the equipment to do what she really wants to you.  Nevertheless, she quickly covers you and uses one broad hand to hold you in place as her cock begins to nudge up against your ass.  'All you had to do was grow a cunt for me, that's all I wanted you to do.  This would have been so much nicer for the both of us if you had done that.'  And with that said she thrusts in HARD, her tool sinking in three inches on the first thrust, not even giving her precum a chance to lube up your hole or anything.  'I'm just so horny, I keep smelling bitches in heat in this city but they all run away from me.'";
