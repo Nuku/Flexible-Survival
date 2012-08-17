@@ -159,6 +159,8 @@ East of Mall Foodcourt is Mall Restroom.
 
 instead of sniffing the Mall Foodcourt:
 	say "It smells a little like old, rotting food.";
+
+The invent of Mall FoodCourt is { "chair", "food" }.
 	
 Section 10 - Mall West Wing
 
