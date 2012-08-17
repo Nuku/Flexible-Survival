@@ -1,4 +1,5 @@
-Version 1 of Rabbit Pack For FS by Lago Moro begins here. 
+Version 2 of Rabbit Pack For FS by Lago Moro begins here.
+[Version 2 - refined blocks & prepped for event fight - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Rabbit Pack to Flexible Survivals Wandering Monsters table."
@@ -14,16 +15,22 @@ when play begins:
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
 to say rabpackdesc:
+	choose row monster from the table of random critters;
 	say "A little humanoid rabbit appears in front of you! Less than three feet tall and completely naked,it looks like a young human, except for the ears and the short coat of fur covering [one of]his body. He[or]her body. She[at random] is smelling something from you, and you back away quickly.";
 	if "One Pair" is listed in feats of player:
+		now area entry is "nowhere";		[removes from random intercounters and infection]
+		now non-infectious entry is true;
 		say "However, something in your scent sends the critter away from you. (They won't attack you if you have the One Pair feat.)[combat abort]";
 	otherwise if "Just One" is listed in feats of player:
+		now area entry is "nowhere";		[removes from random intercounters and infection]
+		now non-infectious entry is true;
 		say "However, something in your scent sends the critter away from you. (They won't attack you if you have the Just One feat.)[combat abort]";
 	otherwise:
 		say "However, the creature is not alone. In an instant, you are surrounded by about ten rabbit-like creatures, some females, other males, all wanting YOU!";
 
 
 to say rabpackvictory:
+	if fightstatus is 3, now fightstatus is 2;
 	if bodyname of player is "rabbit pack":
 		say "The rabbit creatures take all of you into a nearby abandoned building. They...no, it has plans for you, and it doesn[apostrophe]t wants unwanted guests.[line break] After laying you to the ground, they step back, sitting or crouching around you. Instinctively, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -46,8 +53,6 @@ to say rabpackb:
 			say "Meanwhile, you feel someone grabbing your cock and pressing it against its body. It must be a[one of]he, as you can feel his own penis and balls being rubbed against your member[or]she, since you feel two soft breasts being pressed against it[at random]. Sure it feels good...";
 		otherwise:
 			say "Meanwhile, you feel someone grabbing your cock and slowly jerking it while [one of]licking across its length[or]sucking its tip[or]massaging your balls[at random]. Sure it feels good...";
-	otherwise:
-		say "";
 
 to say rabpackc:
 	if cunts of player > 0:
@@ -55,9 +60,11 @@ to say rabpackc:
 			say "At the same time you feel at least a pair of tongues licking your feminine folds. You can't see what exactly is going on, but the increasing moistness of your groin is a sure indication...";
 		otherwise:
 			say "At the same time you feel someone gently licking your feminine folds. It[apostrophe]s not invasive, but constant and agonizingly slow, just like everything else they are doing to you...";
-	otherwise:
-		say "";
 
+
+to say rabpackbeaten:
+	if fightstatus is 3, now fightstatus is 1;
+	say "You finally manage to incapacitate most of them. You go away while those still conscious are dragging their comrades to safety.";
 
 Section 2 - Monster Insertion
 
@@ -70,7 +77,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "rabbit pack"; [Name of your new Monster]
 	now attack entry is "[one of]They pounce on you all at the same time![or]One of them crawls on your back and hits you in the head. More than once.[or]You lose your balance and fall on the ground! They try to pin you down![or]One of them manages to flank you and attack by surprise.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "You finally manage to incapacitate most of them. You go away while those still conscious are dragging their comrades to safety."; [ Text or say command used when Monster is defeated.]
+	now defeated entry is "[rabpackbeaten]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[rabpackvictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[rabpackdesc]";[ Description of the creature when you encounter it.]
 	now face entry is "rabbit ears sprouting from the top of your head and flopping around the sides of your";[ Face description, format as the text "Your have a (your text) face."] 
