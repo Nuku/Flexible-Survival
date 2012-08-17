@@ -574,6 +574,10 @@ Carry out reciting:
 					otherwise:
 						now Lion's Den is unknown;
 						now Feline Friend is unresolved;
+					if hp of Leonard is 5:
+						now Music Store is unresolved;
+						now Concert Hall is unresolved;
+						now violinfound is 0;
 			-- 91:	[Solstice]
 				if the player's command matches "[number]":
 					remove Solstice from play;
