@@ -4656,12 +4656,15 @@ Include Junkyard and Warehouse by Rimme.
 Include State Fair by Sarokcat.
 Include Down Under Pub by Stripes.
 Include Kitsune Hide Away by Kaleem mcintyre.
+Include Dog House by Kaleem mcintyre.
+Include Tyr's Club by Kaleem mcintyre.
 
 [Quests & Events]
 Include Researcher Studio by Kaleem Mcintyre.
 Include Warehouse District by Kaleem Mcintyre.
 Include Pursuit of Science by Kaleem Mcintyre.
 Include Fire House by Kaleem Mcintyre.
+Include Apartment 319 by Kaleem Mcintyre.
 [Include Important Research Quests by Kaleem Mcintyre.]
 [Include Reservoir by Kaleem Mcintyre.]
 Include Misc 4 by Kaleem mcintyre.
@@ -4721,6 +4724,7 @@ Include Endings by Darthan.
 
 [Monsters/Infections]
 Include Blob by Kaleem Mcintyre.
+Include Great Dane Rouge by Kaleem Mcintyre.
 Include Chocolate Lab by Stripes.
 Include Skunkbeast Lord by Stripes.
 Include Hyperskunk for FS by Stripes.
@@ -4872,6 +4876,7 @@ Include RodAndRonda by Stripes.
 Include Tanuki by Nuku Valente.
 Include Mouse Taur by Nuku Valente.
 Include Deer by Nuku Valente.
+Include Informant by Kaleem mcintyre.
 Include Lance by Verath.
 Include Palomino by Verath.
 Include Tristian by Verath.

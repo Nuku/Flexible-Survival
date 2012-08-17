@@ -1,5 +1,5 @@
 Version 2 of gazelle by Sarokcat begins here.
-[Version 2 - Victory sex every 3rd time - Stripes]
+[Version 2.l - Auto-Victory sex now with slow libido adj - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a gazelle to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -38,6 +38,7 @@ To say gazelle loss:
 			otherwise:
 				say ".  In your highly aroused state, you decide right away to get her cock inside you.";
 				say "[gazelleride]";
+			now libido of player is ( libido of player + libido of player + 30 ) / 3;
 		otherwise:
 			if cocks of player > 0:
 				say ".  Drawn to her dual-gendered groin, you wonder if you should fuck her [link](1)[as]1[end link], get her cock inside you [link](2)[as]2[end link] or just let her go [link](3)[as]3[end link].";
