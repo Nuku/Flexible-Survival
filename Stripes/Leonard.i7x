@@ -1,5 +1,5 @@
-Version 1 of Leonard by Stripes begins here.
-[Version 1]
+Version 2 of Leonard by Stripes begins here.
+[Version 2 - Violin hunt]
 "Adds a Male Feline NPC named Leonard to the Flexible Survival game"
 
 Section 1 - Event and Lion's Den
@@ -39,6 +39,7 @@ The description of Leonard is "[Leonarddesc]";
 The conversation of Leonard is { "Tut Tut!" }.
 lastfuck of Leonard is normally 555.
 feline_status is a number that varies.
+violinfound is a number that varies.
 
 instead of sniffing the Leonard:
 	say "The feline smells strong and manly.";
@@ -68,6 +69,49 @@ Instead of conversing the Leonard:
 		say "     The handsome lion [one of]runs his paws along your sides[or]strokes a strong paw over your ass[or]rubs his body against yours[or]slides his tail across your hip[or]scritches down your back[at random][one of].  'I look forward to having you underneath me,' he rumbles in your ear[or].  'You'll make a lovely, sexy kitty for me,' he purrs[or].  'You're looking forward to having the big kitty mount you, aren't you?' he rumbles[or][if cunts of player > 0].  'Your hot, little pussy's wet for your big lion, isn't it?' he purrs in your ear[otherwise].  'You're longing to let a proper male like me to mount you and show you your place, aren't you?' he purrs in your ear[end if][or].  'You know, deep down, you're nothing but my horny girl,' he rumbles[in random order].  Surrounded by the lion's arousing scent, you find yourself nodding, part of you agreeing with the sexy male.";
 	otherwise if hp of Leonard is 3:
 		say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of].  'I look forward to having you underneath me again soon,' he rumbles in your ear[or].  'You'll fit right in with my other horny, kitty girls,' he purrs, nibbling your ear[or].  'You need the big kitty to mount you again soon, don't you?' he rumbles[or][if cunts of player > 0].  'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[otherwise].  'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or].  'You know you're nothing but my horny girl, my mewling kitty slut,' he rumbles[in random order].  With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
+	otherwise if hp of Leonard is 4:
+		say "     The handsome lion moves up beside you, holding you close as he runs a paw over your [if cunts of player > 0]breast[otherwise]ass[end if], making you moan softly.  'I have a small favour I'd like to ask of you, my dear[if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist] kitty[end if].  The other girls have been so helpful in trying to help make my meager accommodations somewhat more suitable, but I have found myself needing something to occupy my time.'  He nuzzles at your neck and slides a finger between your legs.  'When I'm not taking care of my lovely kitties and their needs, that is,' he amends, purring in your ear.";
+		say "     'I used to be an accomplished violinist in my old life, but had to set my practicing aside to deal with other obligations,' he says with remorse.  'But I have found myself thinking that it would be a fine hobby for a proper gentlelion such as myself.'  Running his paws over your hips, he continues.  'Would you not like to hear me play, my dear?'  You mewl in response to his touch and nod in agreement, longing to hear the handsome lion play something just for you.  'Unfortunately, I have no violin to play.  Perhaps one could be found in the city though,' he rumbles thoughtfully.  Finding yourself eager to please the handsome male, you quickly promise him that you'll find one for him, not even pausing to consider the matter.  He smiles and caresses your cheek.  'Oh, you are such a kind and thoughtful [if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]kitty[otherwise]lover[end if] to offer doing that for me.'  He runs his other paw across your thigh, giving a light squeeze.  'I would be most grateful if you were to bring me one.'";
+		now hp of Leonard is 5;
+	otherwise if hp of Leonard is 5 and "violin" is not listed in invent of player:
+		if a random chance of 2 in 3 succeeds:
+			say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of].  'I look forward to having you underneath me again soon,' he rumbles in your ear[or].  'You'll fit right in with my other horny, kitty girls,' he purrs, nibbling your ear[or].  'You need the big kitty to mount you again soon, don't you?' he rumbles[or][if cunts of player > 0].  'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[otherwise].  'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or].  'You know you're nothing but my horny girl, my mewling kitty slut,' he rumbles[in random order].  With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
+		otherwise:
+			say "     The handsome lion holds you close as he [one of]strokes a paw along your hip[or]gives your ass a possessive squeeze[or]caresses a paw across your cheek[or]lets his warm, full sheath rub against you[or]nuzzles at your ear[at random].  '[one of]I hope you haven't forgotten about your promise, my dear[or]I do hope you'll be able to find a nice violin for me[or]You might be able to find a violin for me at a concert hall or perhaps even in a music store[or]Please keep looking for me, my dear[if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist] kitty[end if][at random].  I would so like to play something special for you,' he purrs, [one of]running a finger across your groin[or]caressing your inner thigh[or][if cunts of player > 0]rubbing your breast[otherwise]patting your bottom[end if][at random].  You moan and nod in response, [if violinfound is 1 or violinfound is 2][otherwise]eager to rush out and find one to please your sexy lion[end if].";
+	otherwise if hp of Leonard is 5 and "violin" is listed in invent of player:
+		delete violin;
+		now hp of Leonard is 6;
+		now lastfuck of Leonard is turns;
+		say "     Pulling the violin you found out of your pack, you bring it over to the handsome lion with a swell of excitement in your heart.  Catching sight of what you've brought him, he smiles wraps an arm around you, hugging you tightly to him and running his paw along your side and down to your rear before taking the case from you with the other paw.  'Oh, I knew you were the one to speak to about this.  You seem like such a resourceful [if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]kitty[otherwise if cunts of player > 0]girl[otherwise]girly boy[end if].'";
+		if violinfound is 10:			[apprentice]
+			say "     He opens the case and examines the violin carefully, letting his pawpads slide gingerly over it.  Taking a few moments, he adjusts the tuning pegs and listens.  'You've done a fine job, my dear.  While this is a... rather common violin, I did have one much like it when I first started learning.  It should do well enough for now.'  Eager to improve his opinion of your gift, you dig out all the other supplies and sheet music you were able to find for him, which does indeed improve his dispostion.  'Oh, very resourceful,' he says with a smile as you reveal one item after the next.  'I wish more of my girls were as foreward-thinking as you are.  This should give me plenty of enjoyment out of this fine gift you've given me,' he purrs as he caresses your cheek and leans in to give you a kiss.  You moan softly into it as his paw slides down your side.";
+			increase score by 50;
+			increase morale by 3;
+		otherwise if violinfound is 20:	[good]
+			say "     He opens the case and examines the violin carefully, letting his pawpads slide gingerly over it.  Taking a few moments, he adjusts adjusts the tuning pegs and listens.  'You've done an exceptional job, my dear.  This is a very old and finely crafted instrument you've been able to find.  It has such wonderful tone and depth to its music.  Such fine music I will be able to play with it.'  You are filled with warmth at his praise, so very pleased to have made your wonderful lion happy.  Eager for more praise, you show him the other supplies and the sheet music you have for him.  'Nicely done, my dear,' he rumbles, still plucking at the violin to hear its pure notes.  'I shall have several lovely pieces to play with this excellent instrument,' he purrs as he caresses your cheek and leans in to give you a kiss.  You moan softly into it as his paw slides down your side.";
+			increase score by 75;
+			increase morale by 5;
+		otherwise if violinfound is 21:	[excellent]
+			say "     He opens the case and examines the violin carefully, letting his pawpads slide gingerly over it.  Taking a few moments, he adjusts adjusts the tuning pegs and listens.  'You've done a very good job, my dear.  This is a refined instrument you've been able to find for me.  It is very well crafted and should be a fine violin for one such as myself,' he purrs, looking your gift over with a smile.  Eager for more praise, you show him the few other supplies and the sheet music you were able to grab for him.  'Hmm... I'm glad you were able to get this.  They should do me for a little while.  He flips through the pages you've brought him.  'You don't have much music, but I guess that's understandable.  They are lovely pieces though and I should be able to play a few others from memory.'  Turning his attention back to the violin, he looks it over again.  'Still, when one is presented with a fine instrument such as this, one should be grateful.  And I am so grateful to you, my dear,' he purrs as he caresses your cheek and leans in to give you a kiss.  You moan softly into it as his paw slides down your side.";
+			increase score by 40;
+			increase morale by 3;
+		say "     After breaking the kiss, the handsome lion smiles down at you.  'And would you care to hear me play, my dear,' he purrs.  'I believe I promised I would play for you if you found me one.'  You nod eagerly, almost begging to hear him play for you.  Smiling, he holds the violin in one paw and runs the other over your body, making you release a soft mewl of need.  'Very well, then.  I shall need a moment to prepare,' he says, working to set up the stand and music, then makes some final adjustments to the tuning.  He takes a seat on what appears to be a vintage Chippendale chair, a new addition that one of the other girls probably found for him.  Seeing such an opulent gift, you get butterflies in your stomach, hoping all the more to have pleased your lover.  After making a few attempts to push his mane aside and properly position the violin with his new facial structure, he begins to play.";
+		say "     The song, as is the playing, is hesitant at first, as it tentatively exploring.  The notes are few, but clear, with just enough of a pause between each stroke to convey the increasing confidence.  In time, short but excited measures are played, followed by a silence as if worried of reprisal.  The acoustics of the tunnel only add to the effect, as if the violin's music itself is testing out the space where it will now live.  As the song continues, the playing grows bolder, with fewer and shorter pauses until finally it breaks into a long and joyous ballad, full of tones and shifts, but still carrying that earlier, tentative playing with it, but not united in the fullness of its freedom.  When the last, powerful strokes send triumphant notes through the tunnel room and out into the surrounding park, you begin to clap, moved almost to tears by your handsome and talented master's playing.  He bows to you and gently sets his instrument aside.";
+		say "     Spreading his arms wide, he welcomes you into a hug, holding you close as you tell him repeatedly how wonderful his playing was and how moved you were.  He humbly accepts your praise, saying he's out of practice and that he should be able to do something better for you later.  You start another rush of praise for him, but he smiles and puts a finger across your lips.  'Now, my dear, I believe you deserve a special reward for finding such a nice present for me,' he purrs.  His paw slides across your cheek and down your neck to [if cunts of player > 0]cup your breast[otherwise if cocks of player > 0]cup your stiffening cock[otherwise]your rear and squeezing it[end if].  You moan lustfully, feeling incredibly turned on now.  Leading you back to his large bed, he tosses you onto it and growls lustfully[if cunts of player > 0], making you wet between your thighs[otherwise if cocks of player > 0], making you rigidly hard[otherwise], getting you even more excited for what's to come[end if].";
+		[***copied from fucking for now... new scene needed here.***]
+		if bodyname of player is "Feline":
+			say "     'Mmm... your cute, feline body looks lovely.  Just right for a submissive girl like you,' he rumbles as he cradles you in his arms and lowers you onto the bed.  You mewl softly and knead your paws at his chest, your cat girl body longing to let the sexy lion mount you.  His paws move to your breasts, stroking and caressing them, making you mewl all the more.  As he plays with your nipples, he leans in and gives you a kiss, running his raspy tongue across your lips before sliding it into your [facename of player] mouth.";
+		otherwise if cunts of player > 0:
+			say "     'Mmm... my sexy girl,' he rumbles, nuzzling at your neck and nibbling along it.  'A good, submissive girl looking for her big lion stud to fill her,' he continues, sliding his arms around you.  He cradles you in his arms and lowers you onto the bed.  Caught up in your arousal and desires for the lion, you mewl softly.  You can feel the truth in his words, the longing inside you to let the sexy lion mount you.  His paws move to your breasts, stroking and caressing them, making you moan in pleasure.  As he plays with your nipples, he leans in and gives you a kiss, running his raspy tongue across your lips before sliding it into your [facename of player] mouth.";
+		otherwise:
+			say "     'Mmm... that's a good boy,' he rumbles, nuzzling at your neck and nibbling along it.  'Deep down, you're nothing but a submissive slut.  A girly-boy looking for his big lion stud to fill him,' he continues, sliding his arms around you.  He cradles you in his arms and lowers you onto the bed.  Caught up in your arousal and desires for the lion, you mewl softly.  You can feel the truth in his words, the growing longing inside you to let the sexy lion mount you.  His paws knead your ass, making you moan in pleasure.  He leans overtop you and runs his raspy tongue up your [bodydesc of player] chest.";
+		say "     With his paws at your hips, he tells you to move onto all fours.  You move readily into position, raising your ass and offering yourself to the big, strong male you desire[if cunts of player > 0].  He smiles and kneads your bottom[otherwise].  He smiles and spreads your cheeks[end if] before moving his throbbing, leonine cock into position.  Teasingly, he eases just the tip into you as he leans overtop of you, making you mrowl with need and push your hips back as your lustful body demands more.  'That's a good, eager [if cunts of player > 0]girl[otherwise]girly-boy[end if].  You were made to take lion-cock, weren't you?' he rumbles, nibbling your ear.  'A horny slut like you wants all the lion cock you can get.'";
+		say "     As he continues to tell you what an eager, needy, submissive kitty you are, he pounds his throbbing rod into you.  You can feel the pulsing of his maleness with his power, dribbling a steady supply of precum into your [if cunts of player > 0]hot pussy[otherwise]needy hole[end if][if player is felinebodied].  His strong, muscled body keeps you pinned to the bed as he takes the nape of your neck in his teeth.  They hold you firmly, but gently, making your feline body relax and submit to the big male.  Not that you would consider resisting your handsome lover, but it feels so good to have him in control[otherwise].  His strong, muscled body keeps you pinned to the bed, not that you would consider resisting your handsome lover[end if].  Aside from pushing your hips back into each thrust, you hold yourself steady, letting Leonard use you as he pleases and loving it[if inheat is true and player is felinecocked and Feline_attached > 0].  Glancing over as you hear some moaning mewls, you spot the small lioness working a [one of]pink[or]black[or]ridged[or]vibrating[at random] dildo into her cunt as she watches the sexy lion mating you[end if].";
+		say "     After a good, long fucking[if cunts of player > 0] that's had you cum several times[end if], the lion drives his stiff cock deep inside you a final time and roars loudly.  You can feel his hot seed blasting into you, splashing against your [if cunts of player > 0]cervix and flowing into your womb[otherwise]prostate and filling your bowels[end if].  You release a feline yowl of pleasure[if cunts of player > 0] and cum hard, soaking your crotch in a fresh flow of your juices and his semen[end if] as he continues breeding you like the horny [if cunts of player > 0]girl[otherwise]girly-boy[end if] you are.  By the time his large balls are drained, you've got a pleasant, warm, full feeling in your belly that makes you feel fulfilled.[impregchance]";
+		say "     Dismounting, he pulls you close and guides your head down to his cock.  You take it into your mouth and lick it clean while he strokes your head and scritches your ears.  'That's right, lick your lion master clean.  Mmm... you'll make a fine kitty girl like the others,' he rumbles.  You blush with pride and clean him attentively[if inheat is true and the player is felinecocked and Feline_attached > 0].  The other kitty purrs softly and snuggles back up to your chest, taking your nipple into her muzzle and resumes nursing from you.  For a moment you think that will be all, but then you feel her slide the slick toy she was using into your well-used hole, ensuring the lion's seed stays stopped up nicely inside you[end if].  Eventually you both drift off with his half-hard cock still in your mouth as you nurse softly at it, taking a quick catnap on the soft bed.";
+	otherwise if hp of Leonard is 6:
+		say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of].  'I look forward to having you underneath me again soon,' he rumbles in your ear[or].  'You'll fit right in with my other horny, kitty girls,' he purrs, nibbling your ear[or].  'You need the big kitty to mount you again soon, don't you?' he rumbles[or][if cunts of player > 0].  'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[otherwise].  'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or].  'You know you're nothing but my horny girl, my mewling kitty slut,' he rumbles[in random order].  With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
+		[***update conversation later]
 
 
 Section 3 - Sexy Times
@@ -118,6 +162,7 @@ instead of fucking the Leonard:
 	otherwise if hp of Leonard >= 3 and inheat is true and player is felinecocked and Feline_attached > 0 and feline_status is 0 and a random chance of 1 in 2 succeeds:
 		[not one of Leonard's girls... yet.]
 		now lastfuck of Leonard is turns;
+		if hp of Leonard < 4, now hp of Leonard is 4;
 		say "     'Oh my!  It seems you've brought a special treat, my dear,' he says with a rumble as he runs his paw down your body and over your ass.  'This cute kitty girl you've found isn't one from my pride.  Perhaps you'd like to help me invite her to join us.  What do you say?'";
 		if the player consents:
 			say "     Smiling and nodding to Leonard as you suddenly feel quite turned on by this idea, you run your hand along the kitty's back, scritching her ears.  She rumbles in pleasure as she roused from the nap she was taking to resume nursing from your bosom.  Heading towards the back of the cave with Leonard right behind you, he strokes your sides and rear as he guides you towards the four-poster bed.  There your feline lover strips you down and has you lie back on the bed, still cradling the other feline to your chest.  She gives a soft mewl of inquiry, unsure what's going on, but you press her muzzle back to your nipple and she settles down to enjoy her feeding.";
@@ -139,6 +184,7 @@ instead of fucking the Leonard:
 		follow the turnpass rule;
 	otherwise if hp of Leonard >= 3 and inheat is true and player is felinecocked and Feline_attached > 0:
 		now lastfuck of Leonard is turns - 4;	[longer delay after fucking you both]
+		if hp of Leonard < 4, now hp of Leonard is 4;
 		say "     Feeling drawn to the masculine lion's body, you moan in pleasure as he runs his paws over you.  Walking close behind you, his paws stroke your sides and rear as he guides you further into his cave home towards the four-poster bed.  Divesting you of your gear and clothes, he presses his manly chest to your [bodytype of player] body.  You moan in pleasure and nuzzle at his mane, taking in his strong scent.";
 		say "     'Mmmm... I must say, you look so pretty with one of pride nursing from your bosom,' he says with a rumble as he runs a paw down the kitty's back to scritch her ears and draw a rumble from her.  His paw then drifts over to stroke your other breast.  Walking close behind you, his paws stroke your sides and rear as he guides you further into his cave home towards the four-poster bed.  Divesting you of your gear and clothes, helps the small kitty onto his bed to wait eagerly while he presses his manly chest to your [bodytype of player] body.  You moan in pleasure and nuzzle at his mane, taking in his strong scent.";
 		say "     After the lioness kitty helps you onto the bed with her, Leonard pads onto it with a hungry, lustful look in his eyes as he smiles at having you both there to play with.  'Mmm... you're both such lovely treasures.  Such sexy creatures here to get what they need from the sexy lion,' he rumbles as he runs a paw over each of you and you both respond to his touch, growing more eager for the male's attention.  He rumbles and pads over to you, guiding you onto all fours and mounting you quickly.  You release a mewling groan as he takes you quickly, getting right to the action this time, much to your body's pleasure.";
@@ -156,6 +202,7 @@ instead of fucking the Leonard:
 		follow the turnpass rule;
 	otherwise if hp of Leonard >= 3 and bodyname of player is "Feline" and player is pure and a random chance of 1 in 2 succeeds:
 		now lastfuck of Leonard is turns;
+		if hp of Leonard < 4, now hp of Leonard is 4;
 		say "     Feeling drawn to the masculine lion's body, you moan in pleasure as he runs his paws over you.  Walking close behind you, his paws stroke your sides and rear before taking hold of your leonine tail and raising it.  You shiver in delight and mewl, showing off your ass to the strong lion.  Kneeling down, he nuzzles and nibbles at your ear.  'Mmm... I knew you'd make a fine, submissive kitty girl... they always do,' he purrs, roaming his paws over your body before he picks you up bodily and carries you to the bed.";
 		say "     Your feline lover strips you down, leaving your diminutive, cute body all on display for him to enjoy as he sits on the edge of the bed.  You feel a warmth inside as he looks you over, proud that it pleases him so";
 		if cunts of player > 0:
@@ -189,11 +236,163 @@ instead of fucking the Leonard:
 		infect "Feline";
 		decrease libido of player by libido of player / 4;
 		decrease humanity of player by 4;
-		now hp of Leonard is 3;
+		if hp of Leonard < 3, now hp of Leonard is 3;
 		follow the turnpass rule;
 
 
-Section 4 - Definitions
+Section 4 - Finding a Violin
+
+[	violinfound			]
+[ 0 = started quest		]
+[ 1 = failed CH only		]
+[ 2 = failed MS only		]
+[ 3 = failed MS and CH		]
+[ 10 = learner's violin		]
+[ 20 = quality violin + music	]
+[ 21 = quality violin		]
+
+Part 1 - Music Store		[perhaps add another instrument for a bunker NPC]
+
+Music Store is a situation.  The level of Music Store is 2.
+The sarea of Music Store is "Outside";
+Music Store is resolved.
+
+Instead of resolving Music Store:
+	if violinfound is 0 or violinfound is 1:
+		say "     With Leonard's request lingering at the back of your mind as you travel through the city, you stop dead in your tracks when you spot a music store.  It seems to have been largely undamaged.  You quickly head over to it, failing to notice the signs of activitiy inside in your eagerness.  Pulling the door open, you hear the buzz of little wings from inside the dark store.  Suddenly on guard, there's a cry of 'Get 'em, girls!' from a small, high-pitched voice.  The volume of the buzzing grows louder and a wave of little, elfin sprites charge out of the doorway, swarming all around you excitedly, forcing you to stumble backwards into the street.";
+	otherwise if violinfound is 2 or violinfound is 3:	[returning]
+		say "     With Leonard's request lingering at the back of your mind, you find yourself back in front of the Music Store you found earlier.  Longing to please the handsome lion with a gift, you ready yourself for another fight with the sprites and pull open the door.  The buzz inside picks up inside as they notice the intruder.  'Back for more, eh?' one of them giggles playfully before the swarm surges towards you, forcing you back into the street to fight them.";
+	now fightstatus is 3;
+	challenge "City Sprite";
+	if fightstatus is 3:
+		say "     Forced to flee by the horde of provocative and precocious pixies, you make a run for it down the street and through some alleys, eventually losing them.  Or so you think.  As you stop to catch your breath, you hear some giggling above you.  'Don't come back or you'll get more of the same!'  'Yeah!'  'Or wait, do come back and we'll all have fun giving you more of the same!'  'Teehee!'  There's then the buzz of wings as the sprites fly off, presumably back to their home in the music store.";
+		if violinfound is 0, now violinfound is 2;
+		if violinfound is 1, now violinfound is 3;
+	otherwise if fightstatus is 2:
+		say "     After the sprites have had their fun, you are left deposited outside their store.  'Oh!  You should come back again so we can play some more,' one of them giggles.  'Yeah!  I want a turn playing with your [if cocks of player > 0 and cunts of player > 0][one of]cock[or]pussy[at random][otherwise if cocks of player > 0]cock[otherwise if cunts of player > 0]cunt[otherwise]feet[end if] next time' another pipes in.  'Ooo!  Dibs!' another says with a giggle.  They playfully squabble as they buzz off, flying back inside and closing the door behind them, leaving you to stumble off.";
+		if violinfound is 0, now violinfound is 2;
+		if violinfound is 1, now violinfound is 3;
+	otherwise:
+		say "     Having driven off the sprites from their home, you head inside and start looking around eagerly for a violin.  There are examples of a lot of other instruments around and it seems like the sprites have been playing around with a lot of them.  Most of the inventory does seem to be guitars, drums and keyboards.  The drums seem to have gotten the worst of the play, with lots of stick footprints on the skins from them bouncing on them.  A few of them even have cum angels smeared onto them.  From the glistening on the ends of the drumsticks you see scattered about, you decide it'd be best not to handle those either, [if libido of player < 50]preferring not to imagine what uses the diminutive females put them to[otherwise]having a good idea how those naughty female sprites have been putting those smooth, polished sticks to use[end if].";
+		say "     Not really interested right now in the more modern rock and roll instruments, you move on.  Spotting the section behind one counter.  You see they have their smaller selection of classical instruments.  There are several brass and woodwind instruments of different quality.  Some of these have been knocked around or played with by the flightly sprites, requiring you to step carefully and sift through those on the floor behind the counter to make sure a violin is not beneath one of the others.  You are about to give up hope by the time you make it to the far corner, but luckily manage to find one.  It is intact and still displayed on the wall, probably because of its placement at the end of the display area.";
+		say "     Not really a judge of quality and just happy to have one at all, you take the violin and search among the cases beneath it, soon finding the one belonging to it.  You pack it away, along with some packets of replacement strings, a couple of bows and a packet of wax, knowing at least that much.  You also remember to head over to the racks with books of sheet music and grab all those you can find for violins.  There aren't that many and they are mostly trainers and for beginners, but a few of them have more advanced pieces as well.  With the last minute addition of a music stand, you believe you have everything your handsome lion will need.";
+		say "     With all this tucked away into your pack, you glance over and spot a few of the sprites looking in the window at you.  They duck away as you turn at them, but you know they're awaiting your departure to return to their haven.  Rather than keep them waiting now that you've got your spoils, you head out.  As you leave, you hear the flutter and buzz of their wings as they swoop in from the surrounding roofs to go back to hiding inside the music store.  A few of them blow raspberries at you or make crude gestures, but you ignore them, the desire to rush back of Leonard foremost in your mind.";
+		add "violin" to invent of player;
+		now violinfound is 10;
+		now Music Store is resolved;
+		now Concert Hall is resolved;
+	now fightstatus is 0;
+
+
+Part 2 - Concert Hall
+
+Concert Hall is a situation.  The level of Concert Hall is 4.
+The sarea of Concert Hall is "High";
+Concert Hall is resolved.
+
+Instead of resolving Concert Hall:
+	now fightstatus is 0;
+	say "     You come across a large theater and concert hall in this affluent portion of the city.  There are crude drawings on the glass covering the posters for the upcoming shows, but you can see that a classical concert was planned during the time period around when the outbreak began.  Very hopeful that you'll find a violin in there for Leonard, you try the doors.  Locked.  Barricaded even.  Searching around the perimeter, you eventually find a back door that's been left open and you slip inside without delay or thought of caution, the needs of the handsome lion more important than the potential risk.";
+	if "One Pair" is listed in feats of player or "Just One" is listed in feats of player:
+		say "     You make your way through the backstage area to the orchestra pit.  As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain.  But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies around you.  They don't move in to approach, but begin to speak.";
+		say "     'Disappointing.' 'Restrained.' 'Unsuitable.' 'Indivisible.' 'Go.' 'Leave.' 'Unwanted.' 'Begone.'  They speak in unison in an even tone, but you still feel considerable disdain from their words.  You find yourself quite ill at ease as they keep it up unrelentingly.  You try to tell them you just want a violin for a friend and that you don't mean them any harm, but they hardly seem to take any notice aside from occasionally adding words like 'Thief' and 'Scavenger' to their repertoire.";
+		say "     Thankfully they don't seem to advance upon you, but there is an increasing sense of menace from them.  Worried they could snap and try to mob you at any time, you make your way as quickly as you can to the string section, almost stumbling over some of the chairs, resulting in them adding 'Oaf' and 'Uncooth' to their insults.  Not wanting to waste time, you grab one of the violins that have been set out, its case and the assorted sheet music and supplies around it, hoping it will enough for Leonard.  You consider looking further, but you can see many more of the bunnies around, some even approaching across the lighting gantries.  Deciding you've overstayed your welcome, you apologize and promise to leave them alone even as you shove an unfolded music stand under your arm.   You get out of the pit and heading to the exit as quickly as you can.  You are watched by them on your whole way out, their strange mix of dirisive admonishments and odd insults following you the whole way.  No sooner are you outside then the door is slammed shut loudly and barred from the inside.";
+		say "     You are left feeling strangely disconcerted by the whole affair, unsure what that was all about, but thankful to be out of there.  Your spirits are quickly bouyed by your realization that you've gotten the violin that your handsome lion so wanted.  The desire to rush back to Leonard becomes foremost in your mind.";
+		if morale of player > 0, now morale of player is morale of player / 2;
+		add "violin" to invent of player;
+		now violinfound is 21;
+	otherwise:
+		say "     You make your way through the backstage area to the orchestra pit.  As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain.  But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies moving in to surround you despite no alarm having been raised.";
+		now fightstatus is 3;
+		challenge "Rabbit Pack";
+		if fightstatus is 1:
+			now fightstatus is 3;
+			challenge "Rabbit Pack";
+			if fightstatus is 1:
+				say "     Having beaten the large group of bizarre bunnies and driven them back, you start searching the orchestra pit for a violin.  Thankfully the instruments are actually in the pit and do not appear to have been damaged by the creatures.  If anything, it seems like they have been well maintained.  Perhaps those teams of bunnies have been playing them?  It takes some fumbling around to navigate through the camped space, but you eventually find the string section and locate the violins.";
+				say "     Hopeful that one of these will make a fine instrument for your handsome lion, you look them over.  Not really a judge of quality, you take the violin from the stand labeled as '1st violin' in the hopes it will be the best of them all.  Putting it in its case, you check the other cases and folders, taking sets of spare strings, bows and wax, as well as as much different sheet music as you can find.  Spotting one of the bunnies watching you nervously from behind the curtain, you kindly decide to not just take it all.  Certainly several replacements will be enough for Leonard for quite some time.";
+				say "     After storing the case and supplies away in your case, you fold up one of the music stands and start heading back out.  The bunny watches you leave the room but doesn't move.  There's another watching you from elsewhere before you leave her line of sight, and another safely watching from the distance as you turn the corner.  They quietly watch you depart, clearly wary of the intruder who managed to fight them all off.";
+				add "violin" to invent of player;
+				now violinfound is 20;
+	if fightstatus is 2:
+		say "     Unable to hold out against the bunny horde, you find yourself surrounded by the strange group of lustful, longing bunnies.  They fuck you repeatedly, with so many of them there to share you that you always have several lovers at a time, drawing you further and further into the lustful needs of your body as it starts to change, gaining bunny ears and a tail.  But as the changes continue, ";
+		if "Male Preferred" is listed in feats of player:
+			say "you gain more cocks, more balls, more arms and legs as well?  Even more heads?  Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself.  At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and male genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly male.";
+		otherwise if "Female Preferred" is listed in feats of player:
+			say "you gain more pussies, more breasts, more arms and legs as well?  Even more heads?  Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself.  At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and female genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly female.";
+		otherwise:
+			say "you gain more cocks, more pussies, more breasts, more arms and legs as well?  Even more heads?  Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself.  At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly either male or female.";
+		say "     You become like the other rabbits living here, several who are one.  In truth, there are only a few individuals living here, but each having several bodies all with one same mind.  You are welcomed into the group, joining their orchestra as you and your several bodies learn to play from the others.  And outside of practice comes the pleasure of lustful sex shared with so many bodies, so many lovers, all at once.";
+		now humanity of player is 0;
+		[puts Rabbit Pack as lead monster for infection and impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Rabbit Pack":
+				now monster is y;
+				break;
+		now tailname of player is "Rabbit Pack";
+		now facename of player is "Rabbit Pack";
+		now skinname of player is "Rabbit Pack";
+		now bodyname of player is "Rabbit Pack";
+		now cockname of player is "Rabbit Pack";
+		attributeinfect;
+		now tail of player is tail entry;
+		now face of player is face entry;
+		now skin of player is skin entry;
+		now body of player is body entry;
+		now cock of player is cock entry;
+		if "Male Preferred" is listed in feats of player:
+			now cunts of player is 0;
+			now cunt length of player is 0;
+			now cunt width of player is 0;
+			now breasts of player is 0;
+			now breast size of player is 0;
+		otherwise:
+			if cunts of player < 5, now cunts of player is 5;
+			if cunt length of player < 4, now cunt length of player is 4;
+			if cunt width of player < 4, now cunt width of player is 4;
+			if breasts of player < 10, now breasts of player is 10;
+			if breast size of player < 3, now breast size of player is 3;
+		if "Female Preferred" is listed in feats of player:
+			now cocks of player is 0;
+			now cock length of player is 0;
+			now cock width of player is 0;
+		otherwise:
+			if cocks of player < 5, now cocks of player is 5;
+			if cock length of player < 4, now cock length of player is 4;
+			if cock width of player < 4, now cock width of player is 4;
+		if libido of player < 10, now libido of player is 10;
+		end the game saying "Your mind has been subsumed into your new bunny pack, a life of music and lust in your new warren.";
+		now battleground is "void";
+		wait for any key;
+		follow the turnpass rule;
+		stop the action;
+	if fightstatus is 3:
+		say "     Unwilling or unable to continue to stand up to the bunny horde, you make a break for it, weaving between several of them to head for the exit.  They follow you, calling out stuff like 'Stay.' 'Join.' 'Play.' 'Divide.' 'Unity.' 'Remain.' 'Expand.' 'Many.' 'One.'  They strangely speak in unison and calmly, but there is a longing to it as well.  You manage to get away, running from the concert hall, from which the rabbits choose not to pursue you, instead slamming the back door shut and latching it from the inside.  You probably won't be able to get back in there and should try looking elsewhere for a violin for Leonard.";
+		if violinfound is 0, now violinfound is 1;
+		if violinfound is 2, now violinfound is 3;
+	now Music Store is resolved;
+	now Concert Hall is resolved;
+
+
+Part 3 - Violin
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"violin"	"     It's a violin.  You're no judge of quality, but it seems in good shape.  Along with its case, you have some spare strings, wax, bows and music to go along with it.  Most of the weight comes from the music stand you also snagged."	5	violin
+
+violin is a grab object.
+it is part of the player.
+It is not temporary.
+
+instead of using violin:
+	say "     You don't know how to play.  Besides, you don't want to risk damaging your gift for your lion lover.";
+
+instead of sniffing the violin:
+	say "     The violin smells of polished wood.";
+
+
+Section 8 - Definitions
 
 Definition: a person is felinefaced:
 	if the facename of the player is "Feline", yes;
@@ -217,7 +416,7 @@ Definition: a person is felinetailed:
 
 
 
-Section 5 - Endings
+Section 9 - Endings
 
 [See Small Feline and Lion file by Damaged for endings.]
 
