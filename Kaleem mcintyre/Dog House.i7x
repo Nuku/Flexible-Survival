@@ -1,6 +1,6 @@
 Dog House by Kaleem mcintyre begins here.
 
-Section 1 – The Dog House
+Section 1 - The Dog House
 
 The DogHouse is a situation.
 Fin is a number that varies.
@@ -39,7 +39,7 @@ Instead of resolving DogHouse:
 				say "'Not a bad show, but I wish the next guy up would be a Doberman. You know what I mean?' The Dobie behind you whispers into your ears and you can only grunt to answer to him. When the pit bull has finished his work a large wolfhound steps into the cage and then growls something to the other mutant. From what you can see the other appears to be the boss around here as the pit hastily, but reluctantly, pulls out from the girl and then wipes his soaked cock off onto the back of the human-looking woman. The female shudders and then slumps down onto the ground, but has little time for a reprieve as the pit bull swiftly picks her up and then throws her over his shoulder to walk back behind a door that you hadn't seen earlier.[line break]";
 				say "All around you listen in mild amusement as the crowd cheers while jeering at the now gaping folds of the woman's pussy. 'Hot stuff, but I prefer my bitches to be a little bit more willing.' The Doberman licks you across your nap and then croons slightly into your ear. 'You gonna stick around for the next show?' Telling the other that you have something to deal with you listen as the Dobie whines slightly before releasing your from his hold. 'Ok, oh and hey, my names Tyr. I hope I get to see you again.[line break]";
 				say "Playfully you take the Dobie's hand and then lick over his fingers before telling him that you might, if he's ever wandering around town. Your playful move has the Tyr growing hard in an instant once again as the half erect cock belong to the canid firms back up to half-mast, particularly so when you suck on the other's index finger. 'Oh yes, definitely going to have to meet you again.' The Doberman makes no effort to hide his lust as he grumbles wantonly while arching up to hump at the air.[line break]";
-				say "Pulling away from the Dobie you give the other a seductive wink before moving down the bleachers to go off about your way. You don't become aware of Tyr reaching out to stroke at his second hard on of the hour as you are too busy noticing another dog mutant coming out with a new bitch in tow – this pair being a male husky with a female wolf-human hybrid from the look of them. If what you remember is correct from what Homaru said then it means that you have little time to waste if you're going to rescue Birch.[line break][line break]";
+				say "Pulling away from the Dobie you give the other a seductive wink before moving down the bleachers to go off about your way. You don't become aware of Tyr reaching out to stroke at his second hard on of the hour as you are too busy noticing another dog mutant coming out with a new bitch in tow - this pair being a male husky with a female wolf-human hybrid from the look of them. If what you remember is correct from what Homaru said then it means that you have little time to waste if you're going to rescue Birch.[line break][line break]";
 				increase libido of player by 19;
 				if libido of player > 100, now libido of player is 100;
 				now fin is 2;
