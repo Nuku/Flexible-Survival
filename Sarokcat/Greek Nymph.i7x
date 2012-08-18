@@ -1,10 +1,13 @@
-Greek Nymph by Sarokcat begins here.
+Version 2 of Greek Nymph by Sarokcat begins here.
+[Version 2 - Victory Sex - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Greek Nymph to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
+
+beatgrnymph is a number that varies.
 
 when play begins:
 	add { "Greek Nymph" } to infections of girl;
@@ -21,7 +24,17 @@ to say Greek Nymph attack:
 		infect "Greek Nymph";
 
 To say Greek Nymph loss:
-	say "Knocking the naked nymph backwards, she slips and falls down with a cry.  'Your no fun!' The nymph proclaims pouting, 'Why don[apostrophe]t you want to play with us?' She whines pathetically at you, before bursting into tears. Not knowing what to do with a crying nymph, you just stop and stare as she picks herself up, and runs off down the hallway in tears, you feel vaguely guilty at having reduced one of the perpetually happy creatures to tears, though the feeling fades when at the end of the halls, she stops crying looks around for a minute, and takes off laughing again, a satyr in hot pursuit.'";
+	let t1 be a random number between ( 50 - beatgrnymph ) and 125;
+	let t2 be a random number between ( 50 - beatgrnymph ) and 125;
+	if beatgrnymph > 10 and ( t1 < libido of player ) and cocks of player > 0:
+		say "     You feel a rush of lust wash over you after having been teased too much by these sexy nymphs.  You grab her wrist before she can get up and flee, tired of their games.  Pushing her down, she squirms a little, but only playfully so, starting to giggle as you nuzzle at her neck and nibble along it.  'Oh, so now you want to play,' she laughs.  She moans and spreads her legs as you run your hand along her thigh, letting you get your cock lined up with her wet pussy.  She grips your hips tightly and giggles lustfully as you drive your hard shaft into her[if cock length of player > 24].  Her beautiful body, even practiced on the well hung satyrs, has some difficulty with your massive length, but the lustful nymph's cunt and body stretch to take you[otherwise if cock length of player > 12].  Her beautiful body, having practiced on the well hung satyrs, takes your large cock with ease, making her a wonderful fuck for someone of your size.  She seems quite delighted by your ample meat as well[otherwise].  Her beautiful body, having practiced on the well hung satyrs, has no difficult taking your [cock size desc of player] cock into her wet pussy.  But her delightful cunt squeezes and tugs at your meat deliciously, and she still seems to be having a good time despite it being smaller than she's used to[end if].  You have a wild, passionate romp with the sexy woman before finally pumping a hot load into her.  She giggles and dances off as your seed [if cock width of player > 20]flows[otherwise if cock width of player > 12]runs[otherwise if cock width of player > 6]leaks[otherwise]trickles[end if] out of her recently creamed cunt.";
+		now beatgrnymph is beatgrnymph / 2;
+	otherwise if beatgrnymph > 10 and ( t2 < libido of player ) and cocks of player is 0:
+		say "     You feel a rush of lust wash over you after having been teased too much by these sexy nymphs.  You grab her wrist before she can get up and flee, tired of their games.  Pushing her down, she squirms a little, but only playfully so, starting to giggle as you nuzzle at her neck and nibble along it.  'Oh sister, I thought you didn't want to play,' she laughs.  'But shouldn't we find some satyrs to fill us?' she asks.  Feeling playful and already having gotten your prize, you turn around, bringing your wet pussy over her face and diving your own face between her legs.  She squeals happily in surprise and pleasure as you start eating out her juicy box, coaxing her to do the same for you.  You both stroke, lick, kiss and nibble one another through a series of small orgasms before building up to one final, large climax that leaves you both panting and moaning with your faces soaked in womanly juices.  Releasing her, you give her a playful spank and send her on her way, giggling down the halls.";
+		now beatgrnymph is beatgrnymph / 2;
+	otherwise:
+		say "     Knocking the naked nymph backwards, she slips and falls down with a cry.  'You're no fun!' the nymph proclaims, pouting.  'Why don't you want to play with us?' she whines pathetically at you, before bursting into tears.  Not knowing what to do with a crying nymph, you just stop and stare as she picks herself up, and runs off down the hallway in tears, you feel vaguely guilty at having reduced one of the perpetually happy creatures to tears, though the feeling fades when at the end of the halls, she stops crying looks around for a minute, and takes off laughing again, a satyr in hot pursuit.";
+		if cocks of player > 0 or cunts of player > 0, increase beatgrnymph by 10;
 
 	
 Section 2 - Monster Insertion
