@@ -6,9 +6,9 @@ name	desc	weight	object
 
 old boombox is a grab object. It is part of the player.  It is not temporary.
 
-Old Music Store is a situation.
+Old Record Store is a situation.
 
-Instead of Resolving Old Music Store:
+Instead of Resolving Old Record Store:
 	say "Walking along and scouting for danger around every other turn you find your steps taking you to someplace that you aren[apostrophe]t particularly familiar with. Surprised by the fact that your body has suddenly gained an awareness all its own you don[apostrophe]t think to stop yourself as follow an unseen path to an old music store that looks as though it has seen much, much better days. Even before the so-called apocalypse you don[apostrophe]t actually remember having seen a music shop in the neighborhood where you lived, not even in the big city really. After ipods, cell phones and the likes started to come out and the internet became a hospice for people pirating bootleg music via unsecure web links music stores like this one had become a relic of a past no one remembered or care about. A queer smile slips across your [facename of player] face as you make your way over to the window of the shop. Trying to peek to the best of your ability you can[apostrophe]t really get a good look of what's inside of the building, despite having restored power to the city. Grunting and then shrugging you prepare to turn away from the music store when you hear the telltale -click- of the front door being opened. Hastily you get crouch down to get on your guard as you wonder if this is about to turn into some kind of devious mutant trick.";
 	say "When nothing happens after several seconds you feel your nerves start to calm and your muscles unclench as a sense of safety washes over you. Not knowing what is going on you find yourself wondering if you should take a chance and go into the darkened storefront.";
 	if player consents: 
@@ -24,6 +24,6 @@ Instead of Resolving Old Music Store:
 			say "You get the creeps from this place and decide to go back home, or well to the bunker at least. The whispers around you seem somewhat saddened by your departure and the music playing in the background slows down until it finally falls silent. You don't notice any of this as you're out the door and down the street before the local mutants can spot your dust trail. Not that you're scared of course. Behind you the door to the music shop closes with an audible click.";
 	otherwise:
 		say "Deciding to err on the side of caution you spin on your heel and then march straightaway from the creepy music store. And though you don't notice it during your posthaste retreat another -click- resounds throughout the air. The building door having shut tight once again.";
-	now Old Music Store is resolved;
+	now Old Record Store is resolved;
 
 Old BoomBox ends here.
