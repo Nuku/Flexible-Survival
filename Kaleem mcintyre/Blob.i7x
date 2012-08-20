@@ -12,7 +12,7 @@ to say losetoBlob:
 
 
 to say beattheBlob:
-	say "Having struck at the creature enough to draw its attention to you rather than to the main control terminal the Blob is quick to solidify solid as the reservoir freezes up. Now much smaller than it had been in the beginning the amorphous creature seems almost harmless as it sits there both Still and compliant before you. However, knowing that this might not be true when the reservoir heats back up, you don't wait as you charge for the creature again and then slam into it with a vicious kick. The first few splinters in the shell of the creature appear like cracks on a frozen pond about to break. Moving back after dropping back down onto the ground you watch in fascination as the monster's body fragments more and more until finally exploding into crystalline shards."; 
+	say "Having fought the creature enough to wear it down, not to mention draw its attention to you rather than to the main control terminal, the Blob is quick to solidify solid as the reservoir freezes to close to below 0. Now much smaller than it had been in the beginning the amorphous creature seems almost harmless as it sits there both [italic type]still[roman type] and compliant before you. However, knowing that this might not be true when the reservoir heats back up, you don't wait as you charge for the creature again and then slam into it with a vicious kick. When you flip back from you attack you watch as tiny splinters in the shell of the creature appear like cracks on a frozen pond about to break. Moving back a little further you watch in fascination as the monster's body fragments more and more until finally exploding into crystalline shards."; 
 
 
 to say Blobattack:
@@ -20,7 +20,7 @@ to say Blobattack:
 
 
 to say Blobdesc:
-	say "The Blob is a large amorphous mass of green and orange good that has collected together from the slime and organic matter of other creatures it has absorbed. Large and unwieldy the mass seems to be somewhat aware of itself, and you by turn, the gel-like creature prepares to defend itself from the biting cold by lashing at everything around it. Out sizing you by almost three times your length, tough enough to break fiber glass, and floating somewhat because of bioelectrical power of the living beings it assembled into itself, the Blob is ready to fight for its life.";
+	say "The Blob is a large amorphous mass of green and orange good that has collected together from the slime and organic matter of other creatures it has absorbed. Large and unwieldy the mass seems to be somewhat aware of itself, and you by turn, the gel-like creature prepares to defend itself from the biting cold by lashing at everything around it. Out sizing you by almost six times your length, tough enough to break fiber glass, and floating somewhat because of bioelectrical power of the living beings it assembled into itself, the Blob is ready to fight for its life.";
 
 
 Section 2 - Monster Insertion
@@ -53,11 +53,11 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 0;
-	now sex entry is "";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "nochange";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 180;			[ The monster's starting hit points. ]
-	now lev entry is 15;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now lev entry is 18;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 25;			[ Monster's average damage when attacking. ]
-	now area entry is "Reservoir";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
@@ -72,8 +72,8 @@ When Play begins:
 	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 1;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "";
-	now type entry is "";
+	now body descriptor entry is "gooey";
+	now type entry is "blob";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]

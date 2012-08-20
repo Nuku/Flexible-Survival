@@ -182,7 +182,7 @@ Section 4 - Random Sluts
 [reclaimed from Strange Sluts]
 slutname is a text that varies. slutname is usually "hound dog".
 
-to say randomdesc:
+to say randomdesc:	[male]
 	let T be a random number between 1 and 15;
 	if T is 1:
 		now slutname is "husky";
@@ -215,7 +215,7 @@ to say randomdesc:
 	if T is 15:
 		now slutname is "wolf";
 
-to say randomdesc2:
+to say randomdesc2:	[female]
 	let T be a random number between 1 and 15;
 	if T is 1:
 		now slutname is "husky";
