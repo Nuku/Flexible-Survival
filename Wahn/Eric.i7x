@@ -46,6 +46,9 @@ Instead of resolving a Barricaded Lockerroom:
 			Now Barricaded Lockerroom is resolved;
 		otherwise:
 			say "[line break]     As you're trying to explain, the person behind the door shouts 'I don't believe you. You're just one of those strange creatures who wants to trick me!' Then the door is pushed closed from the other side.";
+	otherwise:
+		say "     Deciding not to bother with the crazed fellow further, you head off before anything else notices you poking around.";
+		now Barricaded Lockerroom is resolved;
 	
 Campus Arena Lockerroom is a room. It is fasttravel. It is private. 
 The description of Campus Arena Lockerroom is "[lroomdesc]";

@@ -202,7 +202,8 @@ this is the leoninelust rule:		[continuous lustful weakening of player]
 		say "     [one of]Something inside you makes you long to give in to the sexy lion, draining your resolve[or]Just looking at the sexy lion makes your pussy quiver with need[or]You can't help but imagine yourself underneath this handsome feline, taking his throbbing cock[or]Affected by buried, feline urges, you find it hard to focus on the battle in the face of the strong, male cat[or]Some part of you pushes you to just give in so your aching cunt can get stuffed full of lion meat[at random].  You take [special-style-2][dam][roman type] damage";
 		if hp of player <= 0:
 			say "!  You mewl and stagger, about to give into those urges as the feline comes in for a final strike.";
-		if ( ( hp of player * 100 ) / maxhp of player ) < 25:
+			now fightoutcome is 20;
+		otherwise if ( ( hp of player * 100 ) / maxhp of player ) < 25:
 			say "!  With your will to fight fading fast, you'd best end this soon.";
 		otherwise if ( ( hp of player * 100 ) / maxhp of player ) < 50:
 			say "!  Your will to keep fighting is waning in the presence of this lion stud.";

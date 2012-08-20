@@ -39,6 +39,7 @@ to say wyvern vict:
 		infect;
 		say "Waking, you feel renewed and happy, but you realize you need to break out of the shell covering you. It takes all your strength to tear out as, gasping for breath, you sit there, watching as your new 'mother' is capturing another person. As you watch, she coats them again and again, forming an ovoid shape, finally sealing the casing with the hard shell. As you watch the beast, you realize it is pushing the 'egg' closer and closer to its tail, where a slitted opening forms. Pushing with her blunt muzzle you watch as she stuffs the egg into her giant depths. Deep down inside, you can't help but be proud of and feel love for your new mother.";
 		say "[wyvern goop][wyvern goop]";
+
 to say wyvern desc:
 	if "Female Preferred" is listed in feats of player:
 		now Wyvern_annoyed is 1;
