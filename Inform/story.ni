@@ -3050,7 +3050,6 @@ To level up:
 	increase score by level of the player times level of the player;
 	
 Before combat is a number that varies.
-fightoutcome is a number that varies.
 
 To fight:
 	now combat abort is 0;
