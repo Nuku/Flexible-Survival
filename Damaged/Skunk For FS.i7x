@@ -93,6 +93,7 @@ to say skunk_attack:
 		say "[one of]Leaps, batting you aside.[or]Leaps in and bites at your arm.[or]Claws at you viciously.[at random]";
 
 to say sblvictorysex:
+	now fightoutcome is 11;
 	say "     Feeling the instinctual urges of your skunkbeast side, you cannot resist and growl lustfully, welcoming the advances of the buxom skunk.  Her beautiful body presses against yours and she runs her paws across your beastial form.  Her nimble paws roam around, lavishing attention upon every sensitive spot they can find as she seeks to please her skunkbeast [if cocks of player is 0 and cunts of player > 0]lady[otherwise]lord[end if][if skrp is 1].  Your lower head is given several kisses as well, the two skunk girls diving their tongues into each other's muzzle[end if][if cocks of player is 0 and cunts of player is 0].  The skunk girl snuggles with you, grooming your body, running her paws all over it and grinding her dripping crotch against your bare groin[end if].";
 	if cocks of player > 0 or cunts of player > 0:		[not neuter]
 		let randomskunksex be a list of numbers;
@@ -254,6 +255,8 @@ to skspray:						[ignores defences, requires no hit, hum/lib check instead to re
 		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 	now peppereyes is 0;										[pepperspray wears off]
 	if libido of player >= 110 or hp of player <= 0 or humanity of player < 10:
+		if hp of player <= 0, now fightoutcome is 20;
+		if libido of player >= 110, now fightoutcome is 21;
 		lose;
 	otherwise:
 		wait for any key;

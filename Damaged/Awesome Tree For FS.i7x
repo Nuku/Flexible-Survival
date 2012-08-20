@@ -39,6 +39,7 @@ to say awesome attack:
 				add "Awesome Bat" to invent of player;
 				say "You get an awesome piece of wood that could be used as, an Awesome Bat!";
 		say "[Give Awesome][combat abort]";
+		now fightoutcome is 20;
 	otherwise:
 		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
 		now monsterhp is 60;
@@ -54,7 +55,7 @@ to say awesome defeat:
 			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
 		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
-		say "[combat abort]";
+		now fightoutcome is 19;
 	otherwise:	
 		say "Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
 		if Awesome_noreward > 2:

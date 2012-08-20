@@ -45,12 +45,12 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "panda"; [Name of your new Monster]
-	now attack entry is "[one of]She charges at you eagerly![or]Lowering her head, she rams it into you, knocking you on your ass.[or]She slaps you with her big bearlike paw![or]Charging forward, she manages to trip, and goes rolling out of control right into you![or]She grabs you and squeezes you in a big panda bear hug.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She charges at you eagerly![or]Lowering her head, she rams it into you, knocking you on your ass.[or]She slaps you with her big bearlike paw![or]Charging forward, she manages to trip, and goes rolling out of control right into you![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[panda loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[panda attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[panda appears].";
 	now face entry is "short panda like muzzle, your face a blend of panda and human features, with large dark eyes surrounded by black rings, your short round ears swivel around nimbly on top of your";   ["Your have a (your text) face."] 
-	now body entry is "Stocky and somewhat rounded, you have a slightly bearlike body, though obviously still with some human influences, your legs are however slightly shorter, as are your arms, giving you a rather rounded, appearance. Though your hands are tipped with panda like claws, they are still easily able to grip and manipulate objects..";[ Body Description, format as the text "Your Body is (your text)"] 
+	now body entry is "Stocky and somewhat rounded, you have a slightly ursine body, though obviously still with some human influences, your legs are however slightly shorter, as are your arms, giving you a rather rounded, appearance. Though your hands are tipped with panda-like claws, they are still easily able to grip and manipulate objects..";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]black and white patterned[or]panda furred[or]soft furred[or]short panda furred[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a small fluffy panda tail hanging down your ample backside.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]bearlike[or]panda[or]thick black[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
@@ -82,6 +82,14 @@ When Play begins:
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]plump[or]rounded[or]padded[or]stocky[or]chubby[at random]";
+	now type entry is "[one of]panda[or]ursine[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "bearhugger";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "panda":

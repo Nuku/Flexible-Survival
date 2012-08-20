@@ -41,7 +41,7 @@ to say lizgirl check angry:
 	if lizgirlangry is 1:
 		if hp of player < 11:
 			say "The lizard girl draws away from the fight. [line break][line break]'Useless useless useless, your blood is tainted and weak!' she screams. With a final sigh she regains her composure and paces away.[combat abort]";
-
+			now fightoutcome is 19;
 		
 to say lizgirl attack:
 	if lizgirlmarked is 0:

@@ -1,5 +1,5 @@
 Version 1 of Male Peacock For FS by Lago Moro begins here. 
-[Version 1.2 - New data and alt combat mode]
+[Version 1.4 - Improved altcombat mode]
 
 "Adds a Male Peacock to Flexible Survivals Wandering Monsters table."
 
@@ -32,10 +32,12 @@ to say peacockdesc:
 	now peacockcontrol is 0;
 
 to say peacockattack:
-	say "[one of]While you are trying to hit the feathered enemy, he trips you!  You fall flat to the ground.[or]He pushes you and flees back out of range, laughing.[or]He jumps on your shoulders as you try to grab him, and then he jumps back on the ground.  Is he mocking you?[at random]";
+	say "[one of]While you are trying to hit the feathered enemy, he trips you!  You fall flat to the ground.[or]He pushes you and flees back out of range, laughing.[or]He jumps on your shoulders as you try to grab him, and then he jumps back on the ground.  Is he mocking you?[or]The bird flaps a few feet back and fans his tail wide, waving his colourful plumage.[at random]";
+	say "You take no damage.";
 	increase peacockcontrol by a random number between 1 and 5;
 	if peacockcontrol is greater than intelligence of player:
-		now hp of player is 0;
+		now fightoutcome is 22;
+		lose;
 
 to say peacockvictory:
 	now peacockcontrol is 0;
@@ -106,21 +108,35 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "hypno";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "pchypno";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-when play ends:
-	if bodyname is "peacock":
-		if humanity of player is less than 10:
-			if cock length of player > cunt length of player:
-				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different...ahem...[apostrophe][apostrophe]fruits[apostrophe][apostrophe] to taste.";
-			otherwise:
-				say "You decide to remain in the quarantined city. You become the mate of a male peacock...or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
-		otherwise:
-			say "You decide to leave and join civilization. Your pretty look and overall self controlled behaviour gives you a job in what is considered the high society. You still have your...[apostrophe]teeny sins[apostrophe], you could say...";
-			if cunt length of player > cock length of player:
-				if intelligence of player > 18:
-					say "One day, however, your mind clicks. You manage to recall everything that the hypnosis altered or blocked completely... and it was actually really pleasant times. Still, you make bag and baggage and set off immediately to the quarantined city. You are determined to find him, and make clear that YOU are going to be in charge now...";
 
+Section 3 - Alt Combat
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"pchypno"	peacockhypno rule	--	--	--	--	--	--	--	--	intstrike rule	
+
+
+this is the peacockhypno rule:
+	choose row monster from table of Random Critters;
+	now monsterhit is false;
+	follow the intstrike rule;
+	if monsterhit is true:
+		say "[peacockattack]";
+	otherwise:
+		say "The peacock tries to distract you with his plumage, but is forced to dodge away!";
+	now peppereyes is 0;
+	if hp of the player is greater than 0 and libido of player < 110:
+		wait for any key;
+	otherwise:
+		if hp of player <= 0, now fightoutcome is 20;
+		if libido of player >= 110, now fightoutcome is 21;
+		Lose;
+	rule succeeds;
+
+
+Section 4 - Peacock Feather
 
 peacock feather is a grab object.
 
@@ -137,6 +153,22 @@ Peacock feather is infectious. The strain of Peacock feather is "peacock".
 
 instead of sniffing Peacock feather:
 	say "The long feather smells of an avian male and makes your mind foggy momentarily.";
+
+
+Section 5 - Endings
+
+when play ends:
+	if bodyname is "peacock":
+		if humanity of player is less than 10:
+			if cock length of player > cunt length of player:
+				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different...ahem...[apostrophe][apostrophe]fruits[apostrophe][apostrophe] to taste.";
+			otherwise:
+				say "You decide to remain in the quarantined city. You become the mate of a male peacock...or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
+		otherwise:
+			say "You decide to leave and join civilization. Your pretty look and overall self controlled behaviour gives you a job in what is considered the high society. You still have your...[apostrophe]teeny sins[apostrophe], you could say...";
+			if cunt length of player > cock length of player:
+				if intelligence of player > 18:
+					say "One day, however, your mind clicks. You manage to recall everything that the hypnosis altered or blocked completely... and it was actually really pleasant times. Still, you make bag and baggage and set off immediately to the quarantined city. You are determined to find him, and make clear that YOU are going to be in charge now...";
 
 
 Male Peacock For FS ends here.
