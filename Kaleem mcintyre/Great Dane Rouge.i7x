@@ -109,7 +109,7 @@ When Play begins:
 	now sex entry is "Female";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 118;			[ The monster's starting hit points. ]
 	now lev entry is 13;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 22;			[ Monster's average damage when attacking. ]
+	now wdam entry is 20;			[ Monster's average damage when attacking. ]
 	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks. ]
@@ -131,7 +131,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "powerstrike1";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Table of Game Objects (continued)

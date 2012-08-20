@@ -59,15 +59,15 @@ When Play begins:
 	now victory entry is "[hermaphrodite latex vixen victory]";
 	now desc entry is "[hermaphrodite latex vixen desc]";
 	now face entry is "short muzzle filled with very sharp carnivorous teeth set below deep brilliant green eyes and pointed fox like ears, all giving you a slightly intimidating yet very alluring";
-	now body entry is "tall and nimble, with ample curves.  You have fox like digitigrade legs that end in sharp claws.";
+	now body entry is "tall and nimble, with ample curves.  You have fox-like digitigrade legs that end in sharp claws.";
 	now skin entry is "shiny white rubber latex skin running from just above your nose all the way down your inner thighs, just covering your stomach.  Glistening black latex covers your hands up to your elbows, and you feet up to your knees, giving you the appearance of long black gloves and boots.  The rest of your body is covered in a bright rubbery red";
 	now tail entry is "You have a long red bushy fox tail. The most remarkable thing about the tail is the fur that covers it, instead of being fine strands of fur it is actually fine strands of rubber.  Even though it must weigh over 20 pounds you find it doesn't affect your balance, in fact it seems to help.";
 	now cock entry is  "[one of]bright pink[or]knotted[or]black sheathed[at random]";
-	now face change entry is "it starts to contort, drawing into a short muzzle.  Your ears migrate to the top of your head pointing straight up, while your eyes change to a deep green.";
-	now body change entry is "you start to lose muscle definition, accentuating your curves.  You feel a tingling in your legs as you hear bone cracking and reshaping leaving you with digitigrade legs ending in sharp claws.";
-	now skin change entry is "it starts to change color, a bright red spot that seemed to start on your back slowly covers your entire body. A white spot appears on your chest spreading out, and your hands and feet start to darken. As your color changes you also realize your skin is becoming shiny and very stretchy.";
-	now ass change entry is "a heavy bright red bushy tail springs forth.";
-	now cock change entry is "it is engulfed by a black sheath.  You are assaulted by wave after wave of pleasure as your tool starts to shift and writhe from within the sheath.  In between moans you see a bright pink pointed tip start to make its way out, and once fully erect you see the large pink knot at the base, just aching to tie with someone.";
+	now face change entry is "it starts to contort, drawing into a short muzzle.  Your ears migrate to the top of your head pointing straight up, while your eyes change to a deep green";
+	now body change entry is "you start to lose muscle definition, accentuating your curves.  You feel a tingling in your legs as you hear bone cracking and reshaping leaving you with digitigrade legs ending in sharp claws";
+	now skin change entry is "it starts to change color, a bright red spot that seemed to start on your back slowly covers your entire body. A white spot appears on your chest spreading out, and your hands and feet start to darken. As your color changes you also realize your skin is becoming shiny and very stretchy";
+	now ass change entry is "a heavy bright red bushy tail springs forth";
+	now cock change entry is "it is engulfed by a black sheath.  You are assaulted by wave after wave of pleasure as your tool starts to shift and writhe from within the sheath.  In between moans you see a bright pink pointed tip start to make its way out, and once fully erect you see the large pink knot at the base, just aching to tie with someone";
 	now str entry is 10;
 	now dex entry is 16;
 	now sta entry is 8;
@@ -91,6 +91,15 @@ When Play begins:
 	now libido entry is 30;
 	now loot entry is "cock pill";
 	now lootchance entry is 10;
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]curvy[or]feminine[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "vulpine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname is "hermaphrodite latex vixen":

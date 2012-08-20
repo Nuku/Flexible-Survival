@@ -21,10 +21,12 @@ to say rabpackdesc:
 		now area entry is "nowhere";		[removes from random intercounters and infection]
 		now non-infectious entry is true;
 		say "However, something in your scent sends the critter away from you. (They won't attack you if you have the One Pair feat.)[combat abort]";
+		now fightoutcome is 19;
 	otherwise if "Just One" is listed in feats of player:
 		now area entry is "nowhere";		[removes from random intercounters and infection]
 		now non-infectious entry is true;
 		say "However, something in your scent sends the critter away from you. (They won't attack you if you have the Just One feat.)[combat abort]";
+		now fightoutcome is 19;
 	otherwise:
 		say "However, the creature is not alone. In an instant, you are surrounded by about ten rabbit-like creatures, some females, other males, all wanting YOU!";
 

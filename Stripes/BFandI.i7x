@@ -14,9 +14,9 @@ understand "bfandi [text]" as bfanditesting.
 
 carry out bfanditesting:
 	say "You begin the test by looking over yourself.";
-	say "Your scalevalue is set to [scalevalue].  Your body size for this is [body size of player].";
-	say "Your bodydesc value is set to [bodydesc], resulting in such fine prose as: 'The studly wolf climbs atop your [bodydesc] body and fucks you wildly.'  Stirring.";
-	say "Your bodytype value is set to [bodytype], usable in scenes like: 'You press your [bodytype] body against the slutty catgirl as you stuff her wet snatch.'  Wonderous!";
+	say "Your scalevalue is set to [scalevalue of player].  Your body size for this is [body size of player].";
+	say "Your bodydesc value is set to [bodydesc of player], resulting in such fine prose as: 'The studly wolf climbs atop your [bodydesc] body and fucks you wildly.'  Stirring.";
+	say "Your bodytype value is set to [bodytype of player], usable in scenes like: 'You press your [bodytype of player] body against the slutty catgirl as you stuff her wet snatch.'  Wonderous!";
 	say "-----";
 	say "[line break]";
 	repeat with y running from 1 to number of filled rows in table of random critters:

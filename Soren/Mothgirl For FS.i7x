@@ -82,7 +82,7 @@ When Play begins:
 	now victory entry is  "[Moth attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "You see a girl with butterfly wings and fur around her neck, she has [one of]blonde[or]red[or]black[or]Auburn[at random] hair. Her [one of]blue[or]grey[or]hazel[or]green[or]lavender[or]brown[at random] eyes seem to gleam like a jewel as she looks at you. Her skin is grey in color and has perky C cup breasts. She is about 5 feet in height despite the fact of being a mothgirl she still retains most of her height.";[ Description of the creature when you encounter it.]
 	now face entry is "feminine visage looking with bright eyes";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "has been reduced down to about 5 feet tall and has a light, curvy form.  You have moth wings with each flap you leave a trail of small dust behind you";[ Body Description, format as the text "Your Body is (your text)"] 
+	now body entry is "has been reduced down to about 5 feet tall and has a light, curvy form.  You have moth that, wings with each flap, leave a trail of small dust behind you";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "glimmering grey";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]gray[or]ashen[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
@@ -114,6 +114,15 @@ When Play begins:
 	now libido entry is 50;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "cock pill";			[ Loot monster drops, ]
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]winged[or]light[or]slender[or]feminine[at random]";
+	now type entry is "[one of]insectile[or]lepidopterous[or]moth-like[at random]";
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname is "Mothgirl":

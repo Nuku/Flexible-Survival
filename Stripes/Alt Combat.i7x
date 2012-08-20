@@ -1,5 +1,5 @@
 Version 1 of Alt Combat by Stripes begins here.
-[Version 1.2 - Minor tweaks]
+[Version 1.3 - fightoutcome measured ]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -7,7 +7,7 @@ Section 1 - Basic variables
 
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
-combat abort is a number that varies.	[ 0 = combat continues  /  1 = combat will be aborted. ]	
+combat abort is a number that varies.	[ 0 = combat continues  /  1 = combat will be aborted. ]
 speciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
 automaticcombatcheck is a number that varies. [ Used to mark if combat actions are not being chosen by the player. ]
 inafight is a number that varies.		[ Used to detect if player is in a fight (item use) ]
@@ -17,7 +17,30 @@ monsterhp is a number that varies.		[ Remaining monster hit points. ]
 monsterpowerup is a number that varies.	[ Used to track if a monster got a powerup that needs to be monitored or later removed. ]
 missskip is a number that varies.		[ Used to indicate if the default monster miss message should be omitted. ]
 monsterhit is a truth state that varies.	[ Used to denote if the monster hit ]
+bonusattack is a number that varies.	[ Used to track how many bonus attacks a player's earned in a round. ]
 chargeup is a number that varies.		[ Used to track an attack that charges across several turns. ]
+fightoutcome is a number that varies.	[ Used to track the different outcomes of a fight. ]
+
+
+[		fightoutcome			]
+[ 100 *	starting value			]
+[							]
+[ 	10 - 19 Plaver Victory			]
+[ 10 *	victory				]
+[ 11		v. (submit to player master)	]
+[ 18		v. (monster flee)			]
+[ 19		neutral peace			]
+[							]
+[	20 - 29 Player Loss			]
+[ 20 *	loss (dmg)				]
+[ 21 *	loss (libido)			]
+[ 22 *	loss (submit)			]
+[ 23		loss (vored)			]
+[							]
+[	30+ Player Flees				]
+[ 30 *	player flee				]
+[ NOTES: Alt-Combat will only award the basic values marked with an asterisk.						]
+[ Most events should only concern themselves with those results, often lumping all losses into one group.	]
 
 
 Section 2 - Combat
@@ -33,9 +56,11 @@ To Combat Menu:
 	follow the monster combat mode rule;
 	if hp of player < 1 and combat abort is 0:
 		say "     You are too injured to resist the creature.";
+		now fightoutcome is 20;
 		lose;
 	otherwise if libido of player >= 110 and combat abort is 0:
 		say "     You are too aroused to consider resisting the creature.";
+		now fightoutcome is 21;
 		lose;
 	while hp of player is greater than 0 and monsterhp is greater than 0:
 		if combat abort is 1:
@@ -220,8 +245,10 @@ This is the player attack rule:
 				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		otherwise:
 			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
-		if a random chance of 4 in 20 succeeds and "Tail Strike" is listed in feats of player:
+		let bonusattacks be 0;		[max 2 bonus attacks in a round]
+		if a random chance of 4 in 20 succeeds and "Tail Strike" is listed in feats of player and bonusattacks < 2:
 			if tailname of player is listed in infections of Tailweapon:
+				increase bonusattack by 1;
 				let z be 0;
 				repeat with y running from 1 to number of filled rows in table of random critters:
 					choose row y in table of random critters;
@@ -232,44 +259,47 @@ This is the player attack rule:
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [dammy] damage!";
+				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
 				increase dam by dammy;
 				choose row monster from table of random critters;
-		if a random chance of 4 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12:
+		if a random chance of 4 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12 and bonusattacks < 2:
+			increase bonusattack by 1;
 			let dammy be 0;
 			let z be cock length of player + ( 2 * cocks of player ) - 12;
 			now dammy is ( square root of ( 2 * z ) ) + 1;
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
 			if cocks of player >= 3, increase dammy by a random number between 0 and 1;
-			say "[line break]You give your opponent a hard swat with your [cock size desc of player] wang[if cocks of player > 1]s[end if] for [dammy] additional damage!";
+			say "[line break]You give your opponent a hard swat with your [cock size desc of player] wang[if cocks of player > 1]s[end if] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
-		if a random chance of 4 in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16:
+		if a random chance of 4 in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16 and bonusattacks < 2:
+			increase bonusattack by 1;
 			let dammy be 0;
 			now dammy is ( square root of ( 2 * ( cock width of player - 13 ) ) ) + 1;
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
-			say "[line break]You tackle your opponent, slamming your [ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [dammy] additional damage!";
+			say "[line break]You tackle your opponent, slamming your [ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
-		if a random chance of 4 in 20 succeeds and "Boob Smother" is listed in feats of player and breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7:
+		if a random chance of 4 in 20 succeeds and "Boob Smother" is listed in feats of player and breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7 and bonusattacks < 2:
+			increase bonusattack by 1;
 			let dammy be 0;
 			let z be breast size of player + breasts of player;
 			now dammy is square root of ( z - 1 ) + 1;
 			if dammy > 7, now dammy is 7;
 			increase dammy by a random number between 0 and 1;
 			if breasts of player > 4, increase dammy by a random number between 0 and 1;
-			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [dammy] additional damage!";
+			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of 5 in 20 succeeds and "Spirited Youth" is listed in feats of player:
 			let y be a random number from 4 to 6;
-			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [y] damage!";
+			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [special-style-2][y][roman type] damage!";
 			increase dam by y;
 		otherwise if a random chance of 1 in 20 succeeds and "Youthful Tides" is listed in feats of player:
 			let y be 0;
 			repeat with s running from 1 to number of entries in childrenfaces:
 				increase y by a random number from 2 to 4;
 			increase dam by y;
-			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [y] damage!";
+			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [special-style-2][y][roman type] damage!";
 		decrease monsterhp by dam;
 		follow the monster injury rule;
 		say "[Name entry] is [descr].";
@@ -311,6 +341,7 @@ This is the player attack rule:
 				follow the continuous entry;
 			if combat abort is 0, follow the combat entry;
 	otherwise:
+		now fightoutcome is 10;
 		win;
 
 
@@ -383,6 +414,7 @@ Chapter 4 - Submit
 This is the submit rule:
 	choose row monster from the table of random critters;
 	let temp be the hp of the player;
+	now fightoutcome is 22;
 	Lose;
 	if "Submissive" is listed in feats of the player, increase the XP of the player by 2;
 	if "Know Thyself" is listed in feats of player and (bodyname of player is name entry or facename of player is name entry), increase the XP of the player by 1;
@@ -413,6 +445,7 @@ This is the flee rule:
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
 		say "You manage to evade [name entry] and slip back into the city.";
+		now fightoutcome is 30;
 		now combat abort is 1;
 	otherwise:
 		say "You fail to get away.";
@@ -449,6 +482,8 @@ to standardretaliate:
 	if hp of the player is greater than 0 and libido of player < 110:
 		wait for any key;
 	otherwise:
+		if hp of player <= 0, now fightoutcome is 20;
+		if libido of player >= 110, now fightoutcome is 21;
 		Lose;
 	rule succeeds;
 
@@ -495,6 +530,8 @@ to retaliate:
 	if hp of the player is greater than 0 and libido of player < 110:
 		wait for any key;
 	otherwise:
+		if hp of player <= 0, now fightoutcome is 20;
+		if libido of player >= 110, now fightoutcome is 21;
 		Lose;
 	rule succeeds;
 
@@ -554,7 +591,7 @@ to standardhit:
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "[Attack entry] You take [special-style-2][dam][roman type] damage!";
+	say "[Attack entry]You take [special-style-2][dam][roman type] damage!";
 	let absorb be 0;
 	if "Toughened" is listed in feats of player:
 		increase absorb by dam divided by 5;
@@ -668,7 +705,7 @@ While most anything can be created by placing it all in the combat rule, that re
 
 As there are all rules, they need not be resticted for one creature.  Several creatures could use the same 'bearhug rule' with their own stats in effect.
 
-A note on alternates: This is the 'damage' portion of a dexterity strike replaced.  If you need non-dexterity attacks, go to the combat entry.  If you need more than 2 alternates, you can break them up as sub-selections of alt1 and alt2 or just make a combat entry for it all and be done with it.
+A note on alternate attacks: This is the 'damage' portion of a dexterity strike replaced.  If you need non-dexterity attacks, go to the combat entry/altstrike entry.  If you need more than 2 alternate attacks, you can break them up as sub-selections of alt1 and alt2 or just make a combat entry for it all and be done with it.
 
 ]
 
@@ -702,6 +739,8 @@ this is the aura1 rule:		[weak aura]
 		say "You suffer [ ( lev entry + 4 ) / 4 ] damage.";
 		say "[line break]";
 		if hp of player < 1:
+			if hp of player <= 0, now fightoutcome is 20;
+			if libido of player >= 110, now fightoutcome is 21;
 			lose;
 
 Part 2 - Alternate Attack Example - Bearhug
@@ -814,7 +853,7 @@ this is the humping rule:
 		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-		say "You are grabbed by the [name entry], which grinds its throbbing cock against your [bodytype of player] body.  Precum dribbles from it onto you, the scent of which momentarily entices your infected body, making you press back against their [body descriptor entry] form as the [cock entry] shaft is humped against you.  It takes an effort of will to resist giving into the alurring creature, but you manage to push it away.  Your drive to continue resisting has waned somewhat after the arousing attack.  You take [special-style-2][dam][roman type] damage!";
+		say "You are grabbed by the [name entry], which grinds its throbbing cock against your [bodytype of player] body.  Precum dribbles from it onto you, the scent of which momentarily entices your infected body, making you press back against their [body descriptor entry] form as the [cock entry] shaft is humped against you.  It takes an effort of will to resist giving into the alluring creature, but you manage to push it away.  Your drive to continue resisting has waned somewhat after the arousing attack.  You take [special-style-2][dam][roman type] damage!";
 		increase libido of player by a random number from 2 to 6;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
