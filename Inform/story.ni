@@ -10,7 +10,7 @@ Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 80000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
-use MAX_NUM_STATIC_STRINGS of 40000.
+use MAX_NUM_STATIC_STRINGS of 45000.
 use ALLOC_CHUNK_SIZE of 95000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 300.
@@ -4910,6 +4910,7 @@ Include Joanna by Stripes.
 Include Solstice by Stripes.
 Include Leonard by Stripes.
 Include Athanasia by Stripes.
+Include Andrew by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
