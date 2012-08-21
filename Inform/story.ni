@@ -243,7 +243,15 @@ Definition: A grab object(called X) is wielded:
 	no;
 
 Definition: A situation(called X) is close:
-	if sarea of X matches the text battleground, case insensitively:
+	if ( sarea of X matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of X is "Allzones" or the sarea of x is "allzones" ) ):
+		if hardmode is true:
+			yes;
+		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):
+			yes;
+	no;
+	
+Definition: A scavevent(called X) is scavable:
+	if ( sarea of X matches the text battleground, case insensitively ) or ( sarea of X is "Allzones" or the sarea of X is "allzones" ):
 		if hardmode is true:
 			yes;
 		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):
@@ -4197,6 +4205,7 @@ This is the finish stats rule:
 scavenging is an action applying to nothing.
 tscavenging is an action applying to one topic.
 Scavengetarget is an indexed text that varies.
+A scavevent is a kind of situation.
 
 understand "Scavenge" as scavenging.
 understand "Scav" as scavenging.
@@ -4229,7 +4238,18 @@ carry out scavenging:
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
 	if dice plus bonus is greater than 10:
 		now inasituation is true;
-		try resolving potential resources;
+		if a random chance of 3 in 4 succeeds:
+			try resolving potential resources;
+		otherwise:
+			now tempnum is 1;
+			let L be a random scavable unresolved scavevent;
+			If L is not nothing:
+				say "[one of]During your search for supplies, you end up at[or]Searching systematically for resources, you locate[or]Following signs of recent activity, you end up at[or]Doing a slow circuit while scavenging, you manage to find[or]Wandering around aimlessly in search of supplies, you locate[at random] [L].";
+				try resolving L;
+			otherwise if L is nothing:
+				try resolving potential resources;
+		now inasituation is false;
+		say "[line break]";
 	otherwise:
 		say "Your search turns up empty.";
 	now inasituation is false;
@@ -4697,6 +4717,7 @@ Include Catapult Encounter by Hellerhound.
 Include Toy Store by Hellerhound.
 Include Assorted Events by Stripes.
 Include Food and Water Finding by Nuku Valente.
+Include Scavevents by Stripes.
 Include Combat Helmet by Nuku Valente.
 Include Odd Weapons for FS by Hellerhound.
 Include Control Pills by Hellerhound.

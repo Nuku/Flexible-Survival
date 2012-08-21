@@ -1,10 +1,12 @@
-Version 3 of Food and Water Finding by Nuku Valente begins here.
+Version 4 of Food and Water Finding by Nuku Valente begins here.
+[ Version 4 - Upgrade to scavenging events]
 
 "Allows finding food and water while roaming the city."
 
 Section 1 - The Situation
 
-potential resources is a situation.
+potential resources is a scavevent.
+The sarea of potential resources is "Allzones";
 
 Instead of resolving a potential resources:
 	let y be "food";
@@ -59,21 +61,32 @@ Instead of resolving a potential resources:
 			say "very difficult";
 		otherwise:
 			say "extremely difficult";
-		say " to climb";
-		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
-		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
-		if "Three Bags Full" is listed in feats of the player and bodyname of player is "ewe", increase bonus by 1;
-		if "Three Bags Full" is listed in feats of the player and bodyname of player is "ram", increase bonus by 1;
-		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
-		increase dice by bonus;
-		if difficulty is greater than dice:
-			say "You try your best to scale up, but only end up hurting yourself in the process.";
-			decrease hp of player by 10;
+		say " to climb.";
+		if companion of player is bee girl:
+			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back.  'Don't risk it.  I can get it for you, honeybunch.'  And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and bring it to you with a happy smile.";
+			add y to invent of player;
+		otherwise if companion of player is Exotic Bird:
+			say "As you prepare to make the dangerous climb, your bird pet calls out and swooping in.  Its dive takes it past the [y], which it grabs in its talons and drops into your hands, saving you from having to make the climb yourself.";
+			add y to invent of player;
+		otherwise if companion of player is Gryphoness:
+			let gryphlets be libido of gryphoness / 4;
+			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings.  'I can get that for you easily, sweetie,' she says as she takes to the air.  The gryphoness's wings lift her up alongside the [y], letting her take it with ease and brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[otherwise if gryphlets is 2]from you and your gryphlet children[end if].";
+			add y to invent of player;
 		otherwise:
-			say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
-			add y to invent of the player;
+			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
+			if hardmode is true and bonus > 10, now bonus is 10;
+			if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+			if "Three Bags Full" is listed in feats of the player and bodyname of player is "ewe", increase bonus by 1;
+			if "Three Bags Full" is listed in feats of the player and bodyname of player is "ram", increase bonus by 1;
+			let dice be a random number from 1 to 20;
+			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+			increase dice by bonus;
+			if difficulty is greater than dice:
+				say "You try your best to scale up, but only end up hurting yourself in the process.";
+				decrease hp of player by 10;
+			otherwise:
+				say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
+				add y to invent of the player;
 	otherwise if x is 3:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;

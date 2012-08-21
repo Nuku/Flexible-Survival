@@ -153,8 +153,7 @@ Instead of Resolving a Locked utility room:
 	if lurm is 0:
 		say "While exploring underneath the mall you come across a locked utility room, hoping for the best you search for some manner of prying the door open, only to notice the sticky white stuff leaking out from underneath the door. Deciding discretion is the better part of survival, you move quickly on your way.";
 		increase lurm by 1;
-		stop the action;
-	if lurm is 1:
+	otherwise if lurm is 1:
 		say "Exploring the sewers further, you stumble across a large trail of dried cum. Feeling a sense of perverse curiosity you begin to backtrack to see where the large trail came from.  To your surprise the trail seems to lead you right back to the utility room you came across earlier, only this time the door appears to be open.  Carefully peeking around the side of the door, you see that this area hasn't been used as a simple utility room for quite some time. The tool racks are filled with strange and mildly disturbing looking skulls and other items, and the machinery is covered in strange symbols and writing that hurts your eyes to look at it.  [Line break] In the center of the room is a large black pentagram, surrounded by occult symbols, part of the pentagram is obscured by what appears to be a large pool of cum. Lying in their own smaller pools of seed are five empty black robes, probably worn by whoever was in here at the time.  The intense musky odor trapped in the room is starting to make your eyes water and your body heat up in response, deciding it would be a good idea to get out of there before you end up doing something you might (or might not!) regret. You quickly grab a couple items lying around and duck back outside.";
 		Add "demon seed" to invent of player;
 		Add "demon seed" to invent of player;

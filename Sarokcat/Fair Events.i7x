@@ -24,7 +24,7 @@ Instead of Resolving a Game crazy:
 
 Section 3-  fair food cart
 
-fair food cart is a situation.
+fair food cart is a scavevent.
 The sarea of fair food cart is "Midway";
 
 Instead of Resolving a fair food cart:
@@ -54,7 +54,7 @@ Instead of Resolving a Flashing fair lights:
 
 Section 6-  Salty taffy
 
-Salty taffy is a situation.
+Salty taffy is a scavevent.
 The sarea of Salty taffy is "Midway";
 
 Instead of Resolving a Salty taffy:
