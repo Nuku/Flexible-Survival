@@ -1,5 +1,5 @@
 Version 4 of Assorted Events by Stripes begins here.
-[version 4 - Beach Party event added ]
+[version 4.1 - Dropped Handbag moved to Scavevents ]
 
 "Adds a batch of random events to Flexible Survival scattered around the city."
 
@@ -115,40 +115,6 @@ instead of resolving a Tour Bus:
 	challenge "Cougar";
 	say "     Your encounter with the cougar creature over, you continue on your way, leaving it and its unusual den behind.";
 	now Tour Bus is resolved;
-
-
-Dropped Handbag is a situation.
-
-Instead of resolving a Dropped Handbag:
-	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it.  Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.  Do you want to search it?  It doesn't seem like they'll be needing it anymore.";
-	if the player consents:
-		let T be a random number between 1 and 100;
-		if T < 41:
-			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  You do manage a lucky find and dig out a small canister of pepperspray.";
-			add "pepperspray" to invent of player;
-			increase score by 5;
-		otherwise if T < 81:
-			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  But aside from the bottle of water at the top of the bag, you don't get anything of use.";
-			add "water bottle" to invent of player;
-			increase score by 1;
-		otherwise if T < 91:
-			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  But that's about all you find of use in the dropped handbag.";
-			increase score by 1;
-		otherwise:
-			say "     You open the bag and put your hand in to rummage through its contents, but are met with a sticky surprise.  Pulling it out, you find your hand covered in wet, sticky cum.  You can feel the tingles from the infected cum on your hand.  Someone, possibly the bag's original owner, filled it with their cum and left it for someone like you to find.";
-			say "[line break]";
-			sort table of random critters in random order;
-			repeat with X running from 1 to number of filled rows in table of random critters:
-				choose row X from the table of random critters;
-				if area entry matches the text battleground and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
-					now monster is X;
-					break;
-			choose row monster from the table of random critters;
-			infect;
-			decrease humanity of player by 5;
-	otherwise:
-		say "     Deciding not to bother, you continue on your way.";
-	now Dropped Handbag is resolved;
 
 
 Section 3 - Diego Events

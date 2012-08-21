@@ -4,7 +4,7 @@ Version 2 of Red Events by Stripes begins here.
 "Adds a series of random events to Flexible Survival located at or focusing on the Red Light District."
 
 
-Section 1- Leather Wolves
+Section 1 - Leather Wolves
 
 Leather Wolves is a situation.
 The sarea of Leather Wolves is "Red";
@@ -20,7 +20,7 @@ Instead of resolving a Leather Wolves:
 	Now Leather Wolves is resolved;
 
 
-Section 2- Fetish Store
+Section 2 - Fetish Store
 
 Fetish Store is a situation.
 The sarea of Fetish Store is "Red";
@@ -41,7 +41,7 @@ riding crop is an armament. It is part of the player. It has a weapon "[one of]y
 instead of sniffing the riding crop:
 	say "The riding crop smells of leather and discipline.";
 
-Section 3- Raided Corner Store
+Section 3 - Raided Corner Store
 
 Raided Corner Store is a situation.  The level of Raided Corner Store is 3.
 The sarea of Raided Corner Store is "Red";
@@ -76,11 +76,11 @@ Instead of resolving a Raided Corner Store:
 	Now Raided Corner Store is resolved;
 
 
-Section 4- Aussie Pub
+Section 4 - Aussie Pub
 
 [ Moved to Down Under Pub ]
 
-Section 5- Flooded Street
+Section 5 - Flooded Street
 
 Flooded Street is a situation.  The level of Flooded Street is 3.
 The sarea of Flooded Street is "Red";
@@ -105,7 +105,7 @@ Instead of resolving a Flooded Street:
 
 
 
-Section 6- Strip Bar
+Section 6 - Strip Bar
 
 Strip Bar is a situation.
 The sarea of Strip Bar is "Red";
@@ -181,7 +181,7 @@ to say stripbarsearch:
 
 
 
-Section 7-  Evangelist
+Section 7 - Evangelist
 
 Evangelist is a situation.
 The sarea of Evangelist is "Red";
@@ -278,7 +278,7 @@ to say orgyoutcome:
 	
 
 
-Section 8- Business as Usual
+Section 8 - Business as Usual
 
 Business as Usual is a situation.
 The sarea of Business as Usual is "Red";
