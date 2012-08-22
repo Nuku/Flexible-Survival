@@ -10,7 +10,7 @@ Section 1 - Monster Responses
 beatsatyr is a number that varies.
 
 when play begins:
-	add { "Greek Nymph" } to infections of guy;
+	add { "Satyr" } to infections of guy;
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Satyr attack:
