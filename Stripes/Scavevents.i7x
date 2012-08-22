@@ -1,5 +1,5 @@
-Version 1 of Scavevents by Stripes begins here.
-[version 1 - ]
+Version 2 of Scavevents by Stripes begins here.
+[version 2 - Scavevents 11 and 12 added ]
 
 "Adds a batch of random events which can occur while scavenging around the city."
 
@@ -318,7 +318,7 @@ Instead of resolving a Looted Supermarket:
 		otherwise:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	increase supermarketcount by 1;
-	if supermarketcount is 3, now Dented Bike is resolved;
+	if supermarketcount is 3, now Looted Supermarket is resolved;
 
 
 Section 6 - Abandoned Cars (by Wahn)
@@ -367,8 +367,8 @@ Section 8 - Free Milk (by Wahn)
 Free Milk is a scavevent.
 The sarea of Free Milk is "Outside";
 when play begins:
-	add Gryphon Milkman to badspots of furry;
-	add Gryphon Milkman to badspots of hermaphrodite;
+	add Free Milk to badspots of furry;
+	add Free Milk to badspots of hermaphrodite;
 
 Instead of resolving a Free Milk:
 	say "Your search for edible items leads you into a residential area.  As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full.  Walking over to the house, you take the bottle.  The milk is rather cold and smells delicious.  You wonder where it came from - you'd have thought that with the apocalypse and all, deliveries by the milkman would stop.  And are there even any cows left with these changing infections?";
@@ -501,6 +501,78 @@ Instead of resolving a Plains Scavenging:
 			otherwise:
 				say "You successfully manage to move across the collapsing [one of]store[or]building[or]home[or]structure[at random] and snag the [y], stuffing it into your backpack.";
 				add y to invent of the player;
+
+
+Section 11 - Little Veggies
+
+Garden Veggies is a scavevent.
+The sarea of Garden Veggies is "Outside".
+veggiegardenfight is a number that varies.
+gardenveg is a number that varies.
+lastgardenveg is a number that varies.  lastgardenveg is normally 255.
+when play begins:
+	add Garden Veggies to badspots of furry;
+
+
+Instead of resolving a Garden Veggies:
+	if girl is banned and guy is banned:
+		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil.  Between the heat wave and the dry weather, the plants are withering away.  You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
+		add "food" to invent of player;
+		now Garden Veggies is resolved;
+	if lastgardenveg - turns < 8:
+		say "     Finding yourself back in the neighbourhood where you found the small garden, you decide to check on it again, but none of the produce has ripened yet.  They seem to be growing rather quickly, but you'll have to wait a little longer.";
+	otherwise if gardenveg is 0:
+		say "     As you're searching around the area for supplies, you find a small garden in the back yard of a home.  It's only got a dozen or so plants, but they're surprisingly still alive despite the heat wave and dry weather.  And even better than that, they're fruiting.  Only a little of the produce is ripe, but you snag what's ready to be picked.  You try to remember to return here again once the rest of the veggies have had time to mature.  Between the tomatoes, beans and peas, you should have enough for a meal.  It'll certainly be more nutritious than some of your meals lately.";
+		add "food" to invent of player;
+		now lastgardenveg is turns;
+	otherwise if gardenveg is 1:
+		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to check on it again.  You are very pleased to see that more of the vegetables are ready to be picked.  They seem to be growing unusually quickly, but certainly look normal and safe enough to eat.  You pick some more of the produce, tomatoes and beans mostly this time.  It's enough for another vegetarian meal to keep you fed for another day.";
+		add "food" to invent of player;
+		now lastgardenveg is turns;
+	otherwise if gardenveg is 2:
+		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to check on it again.  Since your last visit, more vegetables have ripened and are ready to be picked.  Very thankful for having found these plants, you gather up another batch of veggies, taking even more this time.  You dig up several of the carrots, having become large enough to pick, another couple of tomatoes and more beans and peas.  With so much of the produce mature and ready, you get enough for two meals this time.";
+		add "food" to invent of player;
+		add "food" to invent of player;
+		now lastgardenveg is turns;
+	otherwise if gardenveg is 3:
+		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to make a quick detour to go check on it.  Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth.  'So you're the thief who's been stealing from my garden!  Oh, you are so fucked now,' the sheep says, launching itself at you.";
+		now veggiegardenfight is 1;
+		if guy is banned:
+			challenge "ewe";
+		otherwise:
+			challenge "ram";
+		now veggiegardenfight is 0;
+		if fightoutcome >= 10 and fightoutcome <= 19:			[player victory]
+			say "     Having beaten the [if guy is banned]ewe[otherwise]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces.  Another sheep, a [if guy is banned]ram[otherwise]ewe[end if] this time, comes out wielding a shotgun.  'Now you back away from my [if guy is banned]husband... er... wife[otherwise]wife... er... husband[end if]... right now, or I won't miss next time.'  You don't need to be told twice and flee the garden.  You'll have to look elsewhere for food from now on.";
+		otherwise if fightoutcome >= 20 and fightoutcome <= 29:	[player loss]
+			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheet, this time a [if guy is banned]ram[otherwise]ewe[end if] comes out wielding a shotgun.  Seeing the gun, you turn and flee before [if guy is banned]her[otherwise]his[end if] angry mate can shoot you.  You'd best not return there... for a whole bunch of reasons.";
+		otherwise if fightoutcome >= 30:					[player fled]
+			say "     As you're making a break for it, you catch a glimpse of another sheep exiting the home, this time with a shotgun.  As you push through the back gate, it goes off.  'You stay away, you veggie thief, or we'll fill you full of lead next time.'";
+		now Garden Veggies is resolved;
+
+
+Section 12 - Free Drink
+
+Free Drink is a scavevent.
+The sarea of Free Drink is "Campus";.
+when play begins:
+	add Free Drink to badspots of guy;
+
+Instead of resolving a Free Drink:
+	say "     As you're searching around the campus for some supplies, you spot a team of Satyr's rolling a heavy cask towards one of the dorm buildings.  They seem in rather good spirits, if a little tired, and wave at you in a friendly manner.  Deciding to risk it, you approach cautiously.  They tell you they're bringing the wine in for an awesome party and are about to grab a quick drink for themselves before they get back to work.  You're offered a swig as well.  Would you like to take a drink to quench your thirst?";
+	if the player consents:
+		say "     Taking the drink, you swallow down the rich, flavourful wine.  It quenches some of your thirst, but leaves you feeling a little strange as well.  They laugh and slap you on the back after taking big drinks of their own.  Their break done, the satyrs cork it back up and resume rolling the large cask.";
+		decrease thirst of player by 10;
+		if thirst of player < 0, now thirst of player is 0;
+		decrease humanity of player by 5;
+		infect "Satyr";
+		infect "Satyr";
+		if winefound is 1:
+			say "     You do manage to save some of the wine in a vial to give to Nermine.";
+			now winefound is 2;
+	otherwise:
+		say "     Deciding it'd be best not to drink, they shrug.  'Your loss,' the laugh and take hefty drinks before getting back to work.";
+	now Free Drink is resolved;
 
 
 Scavevents ends here.

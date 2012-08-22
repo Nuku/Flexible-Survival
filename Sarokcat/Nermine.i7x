@@ -275,6 +275,7 @@ carry out nerminehelping:
 			stop the action;
 	if jackalboytf is 2:
 		say "'Oh my!' Nermine says as she eyes your handsome new coat of fur, 'Nermine thinks you are starting to look absolutely wonderful now!' She exclaims happily, her obvious appreciation of your changing body making you smile happily. 'Nermine almost can[apostrophe]t wait to help you become even an better and sharper person,' She says before pausing slightly to let the idea of becoming even better sink in before she continues. 'Sadly, this is a store after all, and Nermine can only do so much for her handsome little helper without getting something in return...' The Jackal woman says, as she reaches out one of her black, claw-tipped hands to stroke your new fur lightly several times, making your eyes close in pleasure at the sensations.  'I tell you what,' She says as she leans back behind the counter, 'Nermine has easy task you can help her with, and then she can help you out even more!'  Seeing she has your attention, she pulls a small vial out from behind the counter, 'In museum of this city Nermine has heard satyrs are gathering again, and where the goat men are, so too is their unique wine.  Find one of the places they store the wine, and fill the vial up, and then Nermine can help you become an even better handsome helper, doesn[apostrophe]t that sound nice?' She says as she hands you the vial, her sexy voice sending shivers down your spine and making your jackal tail wag as you think about becoming a better helper then ever before!";
+		now winefound is 1;
 		now Nerminehelpstatus is 3;
 		stop the action;
 	if Nerminehelpstatus is 6:
@@ -289,7 +290,6 @@ carry out nerminehelping:
 			delete Wyvern Goop;
 			delete Wyvern Goop;
 			delete Wyvern Goop;
-			now winefound is 1;
 			add "Jackal totem" to invent of player;
 			increase xp of player by 10;
 			now Nerminehelpstatus is 6;
@@ -868,11 +868,14 @@ Instead of resolving a Bacchus wine:
 		say "Wandering through the twisting corridors of the museum, you come across a small cask of some sort placed up against the wall. Investigating closer, you see that the cask seems to be full of some dark red liquid, and a tantalizing fruity smell seems to fill the air around the liquid making your mouth water.  Looking around to see who left this cask here, you spot a small flagon lying up against the wall, it would be perfect for taking a taste of the liquid... Do you indulge?";
 		if player consents:
 			say "The hefty scent of the strange drink filling your nostrils, you dip the nearby flagons into the cask, the rich red liquid smelling delightful as you bring the flagon up to drink. The taste explodes across your tongue in an explosion of sweet tartness, and burns pleasantly on the way down as it fills your head with pleasure and your mind with images of dancing nymphs.  You realize this is some of the pure wine the Satyrs dilute for their drink, but you can[apostrophe]t bring yourself to stop drinking the amazing dark wine. You guzzle the rest of the delicious liquid gold as fast as possible, and stare blearily at your now empty cup, spotting the cask nearby, you move to get a refill, only to hear several satyr loudly carousing as they head this way.  Realizing you are poaching their booze, you quickly drop the flagon and stagger back out into the museum halls.  Eventually your head clears up enough and you manage to find your way back to the museum foyer, feeling much more like partying and drinking wine then you did earlier.";
+			decrease thirst of player by 10;
+			if thirst of player < 0, now thirst of player is 0;
+			decrease humanity of player by 5;
 			infect "Satyr";
 			infect "Satyr";
 		otherwise:
 			say "Deciding it is best not to mess with strange casks and other such things in these dark halls, you continue on your way leaving the drink untouched.";
-	if winefound is 1:
+	otherwise if winefound is 1:
 		say "Traveling down the museum halls, you spot several Satyrs bemoaning their current lack of booze, remembering Nermine[apostrophe]s request for some of the Satyr wine straight from the source, you attempt to stealthily follow the nimble goat men through the halls.";
 		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -881,16 +884,17 @@ Instead of resolving a Bacchus wine:
 		if diceroll is greater than 15:
 			say "Carefully moving through the halls, you have to duck down and hide several times as other creatures pass, but you eventually manage to follow them to a small alcove where they seem to have hidden several dark casks.  The Satyr quickly refill their flagons and flasks and leave, and you take this opportunity to sneak into the alcove and look around, there are several flagons scattered around on the floor, and a few dark casks of wine in the alcove, one cask seems to be even darker and richer smelling then the rest though. Carefully you pry that cask open, and dip the vial into the liquid, pulling it out and stoppering it up when it is completely full.  Staring at the vial, you realize you now have the item Nermine asked for, and a surge of pleasure at the thought of being such a good little dog for your mistress shoots through you and makes your tail wag softly.  After a minute you shake yourself, and realize you should probably get out of here before any of the goat men come back, and quickly head back into the twisting halls of the museum, hoping you don[apostrophe]t encounter too much trouble finding your way back...";	
 			now winefound is 2;
-			stop the action;
 		otherwise:
 			say "Sadly your clumsy feet are not up to following the Nimble beasts quietly, and while the rest continue on, two of them turn back to see what the noise was.";
 			challenge "Satyr";
 			challenge "Satyr";
-			stop the action;
-	if winefound is 2:
+	otherwise if winefound is 2:
 		say "Wandering through the museum halls, you return once more to the casks full of rich dark satyr wine, you realize that while you don[apostrophe]t need any more wine for Nermine, you could still take a drink or two yourself, do you indulge?";
 		if player consents:
 			say "Smelling the hefty scent wafting off the wine, you decide that a flagon or two of wine can[apostrophe]t hurt anything, and dip one of the nearby flagons into the cask, the rich red liquid smelling delightful as you bring the flagon up to drink. The taste of the wine explodes across your tongue, filling your head with pleasure and your mind with images of dancing nymphs.  You guzzle the rest of the delicious liquid gold as fast as possible, and stare blearily at your now empty cup, spotting the cask nearby, you move to get a refill, only to hear several satyr loudly carousing as they head this way.  Realizing you are poaching their booze, you quickly drop the flagon and stagger back out into the museum halls.  Eventually your head clears up enough and you manage to find your way back to the museum foyer, feeling much more like partying and drinking wine then you did earlier.";
+			decrease thirst of player by 10;
+			if thirst of player < 0, now thirst of player is 0;
+			decrease humanity of player by 5;
 			infect "Satyr";
 			infect "Satyr";
 		otherwise:

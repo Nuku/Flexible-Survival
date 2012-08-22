@@ -1,5 +1,5 @@
-Version 1 of Coyote by Darthan begins here.
-
+Version 2 of Coyote by Darthan begins here.
+[ Version 2 - Tweaked target gender shifting ]
 "Adds a Coyote creature to Flexible Survivals Wandering Monsters table for impregchance and infect for Diego."
 
 
@@ -113,6 +113,9 @@ to coyotify: [Used for infection purposes.]
 	now non-infectious entry is false;
 	infect;
 	now non-infectious entry is true;
+	if ( diegochanged is 0 and sex entry is not "Female" ) or ( diegochanged is 2 and sex entry is "Female" ):
+		say "Diego gets a puzzled look on [if diegochanged is 0]his[otherwise]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if diegochanged is 0]he[otherwise]she[end if] meant by that.";
+
 
 [
 when play ends:
