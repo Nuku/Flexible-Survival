@@ -1,5 +1,5 @@
 Version 1 of RodAndRonda by Stripes begins here.
-[ Consolidates Rod and Ronda Mallrat content ]
+[ Version 1.1 - Alternate conversation fixes ]
 
 Section 1 - Rod
 
@@ -21,7 +21,7 @@ instead of sniffing Rod:
 	otherwise:
 		say "Rod smells of slutty rats and sex.  Lots of sex.";
 
-instead of conversing Rod Mallrat:
+instead of conversing Rod Mallrat while tmapfound is not 1 and ( ( hospquest is 8 and rodhosp is not 0 ) or hospquest is not 8 ) and progress of alex is not 2:
 	if hp of Ronda is 0:
 		say "     [one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
 	otherwise if hp of Ronda is 1 or hp of Ronda is 2:
@@ -113,7 +113,7 @@ instead of sniffing Ronda:
 	otherwise:
 		say "Ronda smells of slutty rats, cheap perfume and lots of sex.";
 
-instead of conversing Ronda Mallrat:
+instead of conversing Ronda Mallrat while ( ( hospquest is 8 and rondahosp is not 0 ) or hospquest is not 8 ):
 	if hp of Ronda is 0:
 		say "[one of]'Hey there, sugar, you just call me Ronda.'[or]'You meet Rod? He's my boy. You be nice to him, or I will be very... upset.'[or]'Those clothes are out of date, hon.  You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[at random]";
 	otherwise if hp of Ronda > 0 and hp of Ronda < 10:
@@ -298,7 +298,7 @@ to say rondarescue:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     Eating another chocolate, Ronda pauses for a moment, struggling with her memories.  'I... I remember there was someone... gave me these.  Rod!  Yes, that was his name.  I can't believe I almost forgot him.'  She presses her lips to yours in another kiss, almost making you drop the vial as she pushes her chocolate-coated tongue into your mouth.  'Oh, thanks for helping me remember.  But you should help me bring him here so he can be with us.  He'd be so sexy as a big, slutty rat, don't you think?'";
-		say "( NOTE: Luring Rod down may disrupt some other game content or have odd glitches. - The Mgmt. )[line break]";
+		say "( NOTE: Luring Rod down may disrupt some other game content or have odd glitches.  It is also considered non-canon. - The Mgmt. )[line break]";
 		if the player consents:
 			say "[helpingronda]";
 		otherwise:
@@ -430,24 +430,6 @@ to say helpingrod:
 		add "chips" to invent of player;
 		add "soda" to invent of player;
 		increase score by 100;
-
-Section 9 - Endings
-
-When play ends:
-	if humanity of the player is less than 10 and hp of the player is greater than 0:
-		if bodyname of player is "Slut Rat":
-			say "     You can no longer deny your new basic needs. You flee to the mall and its comforting sewers. Following your instincts, you are soon in the welcoming embrace of your rodent sisters, who take turns fucking and being fucked by you for what feels like days in a celebration of your coming around. Your family remains there, hiding from the rescue, and living out your days together.";
-			if slutratcor is greater than 4:
-				say "     Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It[']s time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords had need of you both.";
-				continue the action;
-			otherwise if visittimes of slutrat den is greater than 0:
-				if slutratsub is 5:
-					say "     You are neither dominant nor submissive of your rat sisters, living as equals. This is not without its frictions, as you do not all have the same ideas, but you always managed to reach an accord, eventually. Sometimes this involves taking or being taken until someone realizes the error of their ways in a pile of sweat and other fluids, but you don't find that to be a disagreeable way to work things out.";
-				if slutratsub > 6:
-					say "     The others call you [']little sister['] when they are very happy with you, and [']bitch['] the rest of the time. You are the omega of the group, made to do the more menial of tasks. Still, their love for you is unquestionable, and they protect you from any and all threats to your sewer lair.";
-	otherwise:
-		if bodyname of player is "Slut Rat":
-			say "     Despite your sanity, you find your thoughts drifting back to your rodent sisters. When the rescue comes, you point them out. They put out a terrific struggle, but, with your help, they are rounded up successfully and brought out of the city. They slowly come around to sentience again, and you all live together, working a massage parlor as a strangely loving family. No customer leaves unhappy.";
 
 
 RodAndRonda ends here.
