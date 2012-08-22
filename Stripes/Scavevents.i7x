@@ -318,7 +318,7 @@ Instead of resolving a Looted Supermarket:
 		otherwise:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	increase supermarketcount by 1;
-	if supermarketcount is 3, now Dented Bike is resolved;
+	if supermarketcount is 3, now Looted Supermarket is resolved;
 
 
 Section 6 - Abandoned Cars (by Wahn)
