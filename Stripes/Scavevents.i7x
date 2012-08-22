@@ -185,7 +185,7 @@ Instead of resolving a Protected Supplies:
 				decrease morale of player by 1;
 		otherwise:
 			say "You back away slowly from the creature, leaving the prize to them.  It's not much good to you if you're not alive to use it.";
-			decrease morale by 1;
+			decrease morale of player by 1;
 	otherwise:
 		say "You come across the scenes of a scuffle between two creatures.  There are tufts of fur, feathers and blood scattered about, as well as other bodily fluids.  In the middle of this mess [one of]are the few crumbs left from whatever food they appear to have been fighting over[or]the empty soda can they appear to have been fighting over[or]the empty and crushed water bottle they appear to have been fighting over[at random].  Unsure if you're disappointed that you got here too late or pleased that you didn't need to fight one or both of these vicious creatures to get it, you move on.";
 

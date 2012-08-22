@@ -12,22 +12,62 @@ Harpydefeat is a number that varies.
 Harpyconsent is a number that varies.
 
 to say Harpy attack:
+	choose row monster from the table of random critters;
 	if harpyfight is 3:
-		say "The harpy swoops in and grabs you, running her taloned hands over your body as the others close in around you.";
-		wait for any key;
+		say "     The harpy swoops in and grabs you, running her taloned hands over your body as the others close in around you.";
 	otherwise if hp of player is greater than 0:
-		say "She swoops down and grabs you up, pressing her lips to yours. Peace sweeps through this form even as your heart hammers in your chest. You pull her tight as she draws you closer, swept away in the fierce exchange. You are unsure how long you remain like that, but eventually she sets you down and shakes her head, 'We will meet again, I hope.' and she takes off.";
-		now Harpyconsent is 1;
-		wait for any key;
+		if harpyconsent is 0:
+			say "     She swoops down and grabs you up, pressing her lips to yours. Peace sweeps through this form even as your heart hammers in your chest. You pull her tight as she draws you closer, swept away in the fierce exchange. You are unsure how long you remain like that, but eventually she sets you down and shakes her head, 'We will meet again, I hope.' and she takes off.";
+			now Harpyconsent is 1;
+		otherwise if harpyconsent is 1 and a random chance of 1 in 2 succeeds:
+			say "     As you give in, the harpy swoops down and grabs you, pressing your lips to hers in another kiss.  You moan in pleasure as happiness fills you, reunited with this wonderful creature in a fierce kiss.  Having found you again, she carries you up to the roof of a nearby building so you two can have a more intimate reunion.";
+			if cocks of player > 0:
+				say "     The harpy woman pushes you down onto the roof and chirps happily a few times as she fondles your cock to full erection.  Moving over your legs, she starts licking and kissing at your shaft, then presses her bosom around your [cock size desc of player] [cock of player] penis.  The soft flesh of her breasts slide against your shaft as she gives you a tittyfuck.  Her tongue and lips move in from time to time to work at your glans.  The whole time you are lost in a wave of adoration for this beautiful creature, eventually crying out in joy as you cum messily across her tits and face.  She grins at you and licks her lips while spreading your seed across your bosom in a wanton display that would make you rock hard again had you not cum so hard for this most lovely of beings.  She grabs you again with her foot talons and carries you back to the ground.";
+				say "     'Mmm... that was wonderful, my dear lover.  I hope we shall meet again soon.'  With that said, she flaps off, leaving you confused and dazed for some time.";
+			otherwise if cunts of player > 0:
+				say "     The harpy woman pushes you down onto the room and chirps happily a few times as she gropes your pussy with her taloned hands.  Spreading your legs and moving overtop of you, she presses her wet pussy over your lips.  Needing no more invitation, you press your lips to her juicy folds and start licking and lapping lustfully, hoping so hard to please this beautiful creature.  She does the same for you, working her tongue and lips with a lustful hunger.  The whole time you are lost in a wave of adoration for this beautiful creature, eventually crying out in joy as you cum messily and her hot juices soak your face.  She grins at you and licks her lips as she spreads the juices that are running down her chin over her hard nipples in slow circles.  Your pussy quivers, almost cumming again from this wanton display from this most lovely of beings.  She grabs you again with her foot talons and carries you back to the ground.";
+				say "     'Mmm... that was wonderful, my dear sister.  I hope we shall meet again soon.'  With that said, she flaps off, leaving you confused and dazed for some time.";
+			otherwise:
+				say "     The harpy woman pushes you down onto the room and chirps sadly as she notices your lack of sexual organs.  Clearly disappointed, she starts to turn way, but you grab her hand, pausing her departure.  Not wanting to lose this lovely creature's affection, you bury your face in her groin and start licking and kissing at her cunt, promising over and over that you can prove yourself to her.  She moans and chirps in increasing pleasure as your eager tongue pleasures her, eventually driving her to a powerful climax that leaves her hot juices running down your face and her feathered legs.  She grins at you and rubs her talon-hands over her wet cunt, then rubs her own juices over her nipples and then at your bare groin.  'Mmm... maybe there's hope for you yet.  Let's see if this will help you along,' she says softly before grabbing you in her foot talons and carrying to back to the ground and flying off.";
+				follow the sex change rule;
+			now harpyconsent is 2;
+			if libido of player < 50, increase libido of player by 10;
+		otherwise if harpyconsent is 2 and a random chance of 1 in 2 succeeds:
+			say "     Having given in to the harpy, she rushes in and kisses you, reawakening to lust and love for this most beautiful of beings.  At first you could not tell, but now you know this to be your feathered lover once again.  Her taloned hands run over your body before she grabs you in her foot talons and carries you up to a rooftop for more private time.";
+			if cocks of player > 0:
+				say "     Once up on the roof, she presses you onto your back and leaps onto your lap.  She grinds her wet pussy down onto your cock, making you moan happily, looking forward to making with this strangely beautiful creature.  Between the wet motion of her hot lips across your shaft and the show she puts on groping her breasts, you are fully hard almost immediately.  Once satisfied you're ready to go, she lifts her feathered rear and lowers herself down onto your shaft with an avian squawk.  Her hot, wet pussy grips and squeezes at your throbbing penis.  'Mmm... yes, my lover... do it... fill me with your eggs...' she cries out as she cums hard and her inner walls grip down tightly on your cock, driving you to cum as well.  Your hot seed rushes into her, filling her needy womb with your semen, breeding the lustful harpy.";
+				say "     After you both recover from your breeding session, she picks you up and carries you back down to the ground, giving you another kiss.  'Mmm... thank you, my precious lover.  You've done well and I have no more need of you,' she says.  Your heart broken, you collapse to your knees as you watch your ex-lover fly away.";
+				decrease morale of player by 10;
+				now harpyconsent is 0;
+			otherwise if cunts of player > 0:
+				say "     Once up on the roof, she presses you down on your back and moves atop you.  She presses her bosom to your face, pushing one of her nipples to your lips.  Still catching the arousing scent of lust from your earlier lovemaking on it and quickly wrap your lips around it, starting to suckle at it.  She slips a taloned hand between your thighs and presses a [if cunt width of player > 10]trio of fingers[otherwise if cunt width of player > 5]pair of fingers[otherwise]finger[end if] into your juicy cunt.  You moan loudly and suckle all the harder, soon rewarded with the harpy's milk.  'Yes, my sweet.  Drink up and soon you'll be another beautiful harpy like me.  Wouldn't that be wonderful,' she says in a crooning voice.  You moan and chirp in response, your besotted mind willing to agree to nearly anything for your feathered lover.  You switch to her other breast for more of her delicious milk.  You nurse from her until she has no more milk to give and you've had several powerful orgasms from her continuous attention to your quivering cunt.  You are still in a daze as she takes you back to the ground and gropes you, urging you to become a lovely harpy quickly so you can join her and the others.";
+				decrease thirst of player by 10;
+				decrease humanity of player by 10;
+				infect "harpy";
+			otherwise:
+				say "     Once she gets you up on the roof, she presses you down on your back, but is disappointed to see your lack of genitalia.  She shrieks in frustration and slashes at you with her claws.  'Ugh!  Why am I wasting my time with you?'  You cry out to her needfully, but she has decided you are no longer worth the bother and flies off, leaving you on the roof to nurse your wounds before climbing down the fire escape, feeling dejected and heartbroken to have been rejected by her.";
+				decrease morale of player by 10;
+				decrease hp of player by wdam entry;
+				now harpyconsent is 0;
+		otherwise:
+			say "     She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her frustration, she flaps her wings and retreats.";
 	otherwise:
-		say "She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her frustration, she flaps her wings and retreats.";
-		wait for any key;
+		say "     She grabs at you with her powerful talons, leaving painful marks even as your body flushes with the warm tingles of nanite infection. She shouts at you angrily, scratching until her anger passes, then, with great pumps born of her frustration, she flaps her wings and retreats.";
 	now harpyfight is 2;
 
 [ [Harpy loss] ]
 To say Harpy loss:
+	if harpyfight is not 3 and cocks of player > 0 and libido of player > 40 and a random chance of 1 in 3 succeeds:
+		say "     Your final blow sends the harpy tumbling to the ground momentarily.  You have a brief moment to decide if you'll take advantage of her while you can.  Shall you fuck the harpy?";
+		if the player consents:
+			say "     You jump atop the harpy, pinning her down before she can take to the air again.  She shrieks, but is too weak to fight you off as you get your cock lined up and thrust into her.  Despite her resistance, she moans in pleasure as you start pounding into her wet pussy.  As her lust builds, you relax your grip so you can fondle her breasts as well.  After an enjoyable ride, you drive deep into her and release your hot seed, making her shriek in delight.  You pump your hot load into her before letting her wet up and leave.";
+			if harpyconsent > 0:
+				say "     When you release her, she slashes at your face angrily with your claws.  'You terrible wretch!  It would have been so wonderful, but you had to turn out to be so horrible,' she shrieks angrily.  You realize that it was the same harpy who made your heart all a flutter before, but she's left you now.  There is a strange sadness in your heart even as the strange spell she had over you fades away.";
+				decrease morale of player by 5;
+				now harpyconsent is 0;
+	otherwise:
+		say "     Emitting a sudden foul curse, the young woman takes to the air, fleeing before her wounds can ground her.";
 	now harpyfight is 1;
-	say "Emitting a sudden foul curse, the young woman takes to the air, fleeing before her wounds can ground her.";
 	
 	
 Section 2 - Monster Insertion
@@ -99,7 +139,7 @@ when play ends:
 			otherwise:
 				say "     You take flight and are rejoined with other harpies high in a secluded mountain. You are content with one another except when heat strikes. Once a year, each of you feels a 'special' need that cannot be met by your sisters and you descend on the small city below, plucking up a male to satisfy you and give you an egg to care for, until the next year. Most men prove to be pliable enough, and a few even stay, helping to tend to the aeries while the females do business and hunt.";
 		otherwise:
-			if Harpyconsent is 1:
+			if Harpyconsent > 0:
 				say "     You are rescued and taken back to civilization. Though you greatly enjoy having access to flowing water and easy food, you never forget the tingle of her lips on your own. Eventually, driven by longing, you take flight back to that great city, and eventually find her. Convincing her to leave with you would be a whole other adventure...";
 			otherwise:
 				say "     Adjusting to life as a harpy takes some getting use to. You find that a good perch works better than a couch, and your diet has a lot more nuts and berries than your old diet ever had. Still, you're mostly human, and getting by proves easy enough for such a young, pretty, looking thing.";
