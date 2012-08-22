@@ -107,7 +107,6 @@ Instead of resolving Find Lorenda:
 			now found is 1;
 		otherwise:
 			say "Despite your search and Lisa's information, you fail to find her.  She has to be around here somewhere.";
-			continue the action;
 	if lisacheat is 0:
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
@@ -117,30 +116,30 @@ Instead of resolving Find Lorenda:
 			now found is 1;
 		otherwise:
 			say "Despite your search, you fail to find her.  She has to be around here somewhere.";
-			continue the action;
-	if humorous is banned or guy is banned:
-		say "     You follow a hopeful trail and you suddenly realize there are other tracks following the same trail.  You rush forward and arrive to find a pair of creatures bearing down on a woman screaming frantically down one of the alleyways.  She is pinned to the wall, between the pair of them.  Thinking quickly, you rush to her aid!";
-		now battleground is "Outside";
-		fight;
-		say "     Dealing with one mutant, you turn your attention to the second before it can reach Lorenda.";
-		fight;
-	otherwise:
-		say "     You follow a trail and you suddenly realize that there's a trickle of cum that follows the same trail.  You arrive to find a pair of Cock Cannons aimed gainfully at a woman screaming frantically down one of the alleyways.  She is pinned to the wall, between the pair of them.  Thinking quickly, you rush to her aid!";
-		challenge "Cock Cannon";
-		say "     Dealing with one mutant, you turn your attention to the second before it can reach Lorenda.";
-		challenge "Cock Cannon";
-	say "     She whimpers, and you pull her up from her spot on the alley concrete.  'Wh-what were those things?' [if humanity of player is less than 100] 'What are you?'[end if] She seems a bit panicked, but has calmed significantly once you dealt with the pair.  She hasn't totally escaped the city's various mutations - her clothes are painfully strained with the size of her inflated breasts and she bears a floofy fox tail likely given to her by one of those latex foxes or another vulpine - but she remains mostly human.  You point out that what they were was patently obvious, which earns you a smirk.  Once you explain that Alex sent you, she nods and gladly follows you back to his condo in the High Rise District.";
-	now the player is in Alex's Condo;
-	say "     Upon arriving, the door is thrown open by the weaselly lawyer who ushers both of you inside.  He shuts it behind him, letting out a sigh of relief as he leans back against it.  First, he shows her to the living room and sets her down with a cup of coffee, then he returns to you.  'Thanks for bringing her in.  You've done me a major favor, so here you go.'  He gives you some food and water.  He even gives you an extra bottle as a bonus for coming through for him despite the danger.";
-	say "     'My next client is an athlete.  He plays for the city's basketball team.  His name's Darrell.  I don't know where he was when the incident happened, but I believe he may have been at the mall.  The team was doing a promotion at the shoe store there some time before the accident.'";
-	add "food" to invent of player;
-	add "water bottle" to invent of player;
-	add "water bottle" to invent of player;
-	increase score by 50;
-	extend game by 8;
-	now progress of alex is 2;
-	now battleground is "void";
-	now find lorenda is resolved;
+	if found is 1:
+		if humorous is banned or guy is banned:
+			say "     You follow a hopeful trail and you suddenly realize there are other tracks following the same trail.  You rush forward and arrive to find a pair of creatures bearing down on a woman screaming frantically down one of the alleyways.  She is pinned to the wall, between the pair of them.  Thinking quickly, you rush to her aid!";
+			now battleground is "Outside";
+			fight;
+			say "     Dealing with one mutant, you turn your attention to the second before it can reach Lorenda.";
+			fight;
+		otherwise:
+			say "     You follow a trail and you suddenly realize that there's a trickle of cum that follows the same trail.  You arrive to find a pair of Cock Cannons aimed gainfully at a woman screaming frantically down one of the alleyways.  She is pinned to the wall, between the pair of them.  Thinking quickly, you rush to her aid!";
+			challenge "Cock Cannon";
+			say "     Dealing with one mutant, you turn your attention to the second before it can reach Lorenda.";
+			challenge "Cock Cannon";
+		say "     She whimpers, and you pull her up from her spot on the alley concrete.  'Wh-what were those things[if humanity of player is less than 100]?  What are you[end if]?'  She seems a bit panicked, but has calmed significantly once you dealt with the pair.  She hasn't totally escaped the city's various mutations - her clothes are painfully strained with the size of her inflated breasts and she bears a floofy fox tail likely given to her by one of those latex foxes or another vulpine - but she remains mostly human.  You point out that what they were was patently obvious, which earns you a smirk.  Once you explain that Alex sent you, she nods and gladly follows you back to his condo in the High Rise District.";
+		now the player is in Alex's Condo;
+		say "     Upon arriving, the door is thrown open by the weaselly lawyer who ushers both of you inside.  He shuts it behind him, letting out a sigh of relief as he leans back against it.  First, he shows her to the living room and sets her down with a cup of coffee, then he returns to you.  'Thanks for bringing her in.  You've done me a major favor, so here you go.'  He gives you some food and water.  He even gives you an extra bottle as a bonus for coming through for him despite the danger.";
+		say "     'My next client is an athlete.  He plays for the city's basketball team.  His name's Darrell.  I don't know where he was when the incident happened, but I believe he may have been at the mall.  The team was doing a promotion at the shoe store there some time before the accident.'";
+		add "food" to invent of player;
+		add "water bottle" to invent of player;
+		add "water bottle" to invent of player;
+		increase score by 50;
+		extend game by 8;
+		now progress of alex is 2;
+		now battleground is "void";
+		now find lorenda is resolved;
 
 
 Instead of conversing the Rod while progress of alex is 2:
