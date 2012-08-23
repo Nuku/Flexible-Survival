@@ -191,15 +191,15 @@ to say gator den scene:
 	decrease the humanity of the player by 5;
 	if the humanity of the player is less than 10:
 		end the game saying "You decide against leaving after all.";
-	say "You head home afterwards.";
-	move the player to grey abbey library;
-	follow the turnpass rule;
+	otherwise:
+		say "You head home afterwards.";
 
 Gator Den is a room. "[gator den scene]". It is unknown. It is fasttravel. It is private.
 
-After examining gator den:
-	say "Stuff happens, then you go home.";
-	move the player to Grey Abbey Library;
+After navigating gator den:
+	if humanity of player > 9:
+		move the player to Grey Abbey Library;
+		follow the turnpass rule;
 
 [ Edit this to have the correct Name as wall]
 Gator ends here.

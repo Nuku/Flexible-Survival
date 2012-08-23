@@ -237,7 +237,10 @@ to say Sweet Tooth scene:
 	increase ferretvisit by 1;
 	say "     With your visit to the Sweet Tooth candy shop over, you head back to the entrance area to the State Fair to decide you next course of action.";
 	wait for any key;
-	move the player to State Fair;
+
+
+after navigating Sweet Tooth:
+	move the player to the State Fair;
 
 
 Section 3 - Various sex scenes

@@ -125,6 +125,9 @@ to say down under pub scene:
 		say "[line break]";
 	say "     With your visit to the Aussie pub over, you head back to the nearby Red Light District to decide where to head next.";
 	wait for any key;
+
+
+after navigating Sweet Tooth:
 	move the player to Entrance to the Red Light District;
 
 
