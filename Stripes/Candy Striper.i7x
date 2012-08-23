@@ -262,9 +262,10 @@ after going to Bunker while coonstatus is 1:
 	now the player is in Bunker;
 	now coonstatus is 2;
 	say "     As you arrive at the bunker, you can see that the pink coon has arrived there as per your directions.  He prances over to you with a grin on his face.  'Thanks for getting me out of there, hon,' he churrs.  'Doc's been going extra-crazy lately.  I mean, I think he was a little odd before the whole mouse thing, but since then, he's been doing more and more experiments on everyone at the hospital.'  He hugs his arms around himself and shudders a little.";
-	say "     'I don't really remember who I am any more.  I'm pretty sure I was volunteering at the hospital and that I was gay before the change.  But aside from that, it's all rather hazy.  Since I don't remember my name, how about you call me Candy, hon?'";
+	say "     'I don't really remember who I am any more.  I'm pretty sure I was volunteering at the hospital and that I was gay before the change.  But aside from that, it's all rather hazy.  Since I don't remember my name, how about you call me Candy, hon?'  He reaches into his pocket and pulls out a small needle, another of the healing boosters.  'I don't really have much to give you to say thanks, but you should probably take this.  You might need it out there.'";
+	add "healing booster" to invent of player;
 	if cocks of player > 0:
-		say "     'I'd really like to show you how much I appreciate your help,' he says, running a finger up your thigh";
+		say "     'What I'd really like to do is show you how much I appreciate your help,' he says, running a finger up your thigh";
 		if bodyname of player is "Raccoon":
 			say ".  'I'm so glad you decided to keep the new look, sweetie,' he adds, rubbing his slender, coon body against yours with a sexy smile";
 		say ".";
