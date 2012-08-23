@@ -58,12 +58,15 @@ to say beatthevixennurse:
 
 to say vixennursedesc:
 	choose row monster from the table of random critters;
+	now lootchance entry is 20;
 	let debit be 0;
 	now vixgender is 0;
 	if hermaphrodite is banned:			[always female if herm banned]
 		now vixgender is 0;
 	otherwise if hospquest > 5:
-		if a random chance of 2 in 5 succeeds:
+		let hermvixchance be 30 + hospquest + hospquest;		[increasingly likely as hospquest progresses]
+		if hermvixchance > 75, now hermvixchance is 75;
+		if a random chance of hermvixchance in 100 succeeds:
 			now vixgender is 1;		[now a herm]
 	if vixgender is 0:
 		say "     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit.  She has a short cut, white apron with a black top under it.  There's even a traditional, white nurse's cap with a red cross on it on the vixen's head.  She has lustrous, gray fur, indicating that her infection originated from a silver fox.  Glancing down those long, slender legs you see they end in digitigrade paws.  To her ample chest, she holds a large clipboard.  You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard.  She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient[']s gotten out of bed[or]Bend over, sweety.  It[']s time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area.  The doctor will see you shortly.  Until then, let me take care of you[at random].'  She raises her clipboard, seemingly intent on clubbing you with it.";
@@ -141,7 +144,28 @@ When Play begins:
    now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
    now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
    blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now altcombat entry is "vixennurse";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"vixennurse"	vixhealboost rule	--	--	--	--	--	--	--	--	--
+
+this is the vixhealboost rule:
+	choose row monster from the table of random critters;
+	if monsterhp <= ( hp entry / 4 ) and lootchance entry > 0 and a random chance of 1 in 4 succeeds:	[weak and not used healing booster]
+		let healed be 25;
+		increase monsterhp by healed;
+		if monsterhp > hp entry:
+			decrease healed by hp entry - monsterhp;
+			now monsterhp is hp entry;
+		say "     The [one of]vixen nurse[or]vulpine nurse[or]silvery vixen[at random] falls back momentarily due to her injuries.  She pulls a small syringe filled with blue fluid out and injects it quickly into her [one of]leg[or]thigh[or]arm[or]side[purely at random] before [one of]throwing the empty needle aside[or]tossing the needle away[or]breaking the empty needle on the ground[at random].  As her injuries start to rapidly heal, she then rushes back into the fray to face you again.  She has recovered [special-style-1][healed][roman type] hit points.";
+		now lootchance entry is 0;		[used up potential healing booster]
+		follow the monster injury rule;
+		say "[Name entry] is [descr].";
+		wait for any key;
+	otherwise:
+		standardretaliate;
 
 
 Table of Game Objects (continued)
