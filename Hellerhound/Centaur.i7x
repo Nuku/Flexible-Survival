@@ -1,5 +1,5 @@
 Version 2 of Centaur by Hellerhound begins here.
-[Version 2.1 - Update to new creature data ]
+[Version 2.2 - Alt Attack]
 
 [converted from FI]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
@@ -216,7 +216,7 @@ When Play begins:
 	add "Mutant Centaur" to infections of guy;
 	Choose a blank row from Table of random critters;
 	now name entry is "Mutant Centaur"; [Name of your new Monster]
-	now attack entry is "The Centaur[one of] punches your face with its hand[or] headbutts you[or]'s green tentacles rise from under him and slap you[or] rears up and slams you with his front hooves[at random]!";
+	now attack entry is "The Centaur[one of] punches your face with its hand[or] headbutts you[or]'s green tentacles rise from under him and slap you[or] rears up and slams you with his one of its hooves[at random]!";
 	now defeated entry is "[centaur defeat]";
 	now victory entry is "[centaur attack]";
 	now desc entry is "[centaurmeet]";[ Description of the creature when you encounter it.]
@@ -270,7 +270,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "hoofstomp";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 6 - Centaur Heat

@@ -106,10 +106,41 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "hoofstomp";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-Section 3 - Centaur Cum and Centaur Hair
+Section 3 - Hoof Stomp
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"hoofstomp"	retaliation rule	--	--	hoofstomp rule	20	--	--	--	--	--
+
+
+this is the hoofstomp rule:		[double-damage hoof stomping]
+	choose row monster from the table of random critters;
+	let rangenum be ( 80 - ( peppereyes * 4 ) );
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );	[Double damage]
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		now dam is (dam * 150) divided by 100;
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+	say "The centaur rears up to attack you, slamming both hooves into [one of]you[or]your chest[purely at random], knocking your over briefly.  [one of]While you're prone,[or]This allows it to use[purely at random] its hard, heavy hooves to [one of]pound at you[or]stomp away at you[or]strike you repeatedly[purely at random] until you manage to get out of the way and get back on your feet.  This [one of]powerful[or]strong[or]devastating[purely at random] attack does [special-style-2][dam][roman type] damage!";
+	let absorb be 0;
+	if "Toughened" is listed in feats of player:
+		increase absorb by dam divided by 5;
+	repeat with x running through equipped equipment:
+		increase absorb by ac of x;
+	if absorb is greater than dam:
+		now absorb is dam;
+	if absorb is greater than 0:
+		say "You prevent [special-style-1][absorb][roman type] damage!";
+	decrease hp of the player by dam;
+	increase hp of player by absorb;
+	follow the player injury rule;
+	say "You are [descr].";
+
+
+
+Section 4 - Centaur Cum and Centaur Hair
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -150,7 +181,7 @@ instead of sniffing centaur hair:
 
 
 
-Section 4 - Endings
+Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Centaur Stallion" or bodyname of player is "Centaur Mare":
