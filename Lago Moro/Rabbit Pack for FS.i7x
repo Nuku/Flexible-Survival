@@ -36,8 +36,9 @@ to say rabpackvictory:
 	if bodyname of player is "rabbit pack":
 		say "The rabbit creatures take all of you into a nearby abandoned building. They...no, it has plans for you, and it doesn[apostrophe]t wants unwanted guests.[line break] After laying you to the ground, they step back, sitting or crouching around you. Instinctively, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "It[apostrophe]s so slow...not lazy or sluggish, but constantly building up your pleasure, a tiny bit at a time. Couples and groups changes constantly, without a pattern, and you weakly realize that a few of your own copies are making out with each other. Even your thoughts are interweaving with...well...hir, and you find your consciousness passing from male to female in a pinkish blur...either by you or to you, cocks are [one of]jerked[or]sucked[or]inserted[at random], breasts[one of]massaged[or]milked[at random], asses[one of]groped[or]prodded[at random], cunts[one of]licked[or]fingered[or]filled[at random]...every often a [one of]sweet[or]warm[or]lovely[at random] kiss...";
-		say "After at least hours, it finally ends. After a little rest, they escort you back to where they ambushed you, worn-out but satisfied.";
+		say "After at least hours, it finally ends. After a little rest, they escort you back to where they ambushed you, worn-out but satisfied.[impregchance]";
 		decrease libido of player by 50;
 	otherwise:
 		say "The rabbit creatures lift you in unison and transport you into a nearby abandoned building, before any unwanted guest shows up.[line break] They lay you gently on the ground and admire your body, obviously pleased by what they got; they crawl on you, caressing, licking gently...[line break][rabpacka][rabpackb][rabpackc]";
