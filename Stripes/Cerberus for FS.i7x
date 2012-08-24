@@ -8,6 +8,7 @@ Version 1 of Cerberus for FS by Stripes begins here.
 
 cerbfight is a number that varies.
 cerberusarousal is a number that varies.
+cerbmaulcount is a number that varies.
 when play begins:
 	add { "Cerberus" } to infections of furry;
 	add { "Cerberus" } to infections of hermaphrodite;
@@ -109,6 +110,7 @@ to say cerberusfemmeoral:
 
 
 to say cerberusdesc:
+	now cerbmaulcount is 0;
 	say "     You find yourself facing a creature of legend, a three-headed hound like Cerberus of Greek myth.  This beast's large, canine body has three heads and its muscled body is covered in a coat of rough fur as black as coal.  The creature pads towards you on all fours, then rises up on its hind legs, displaying its powerful body to you as it growls.  The monster's chest is quite broad, expanded to make room for the three heads as well as the powerful organs to drive its altered body.  It has six rows of breasts.  The uppermost pair are of above-average size and they become progressively smaller until the last row are slight bumps with nipples.  Its arms and legs are muscled and strong to be able to bear the weight of this large creature.  Between the mythic creature's legs is a wet, dripping slit.  Behind it, you catch a glimpse of its long, thick tail.  As you examine the tail, you notice a slit at the very end of it from whence hir male genitals are just now peeking out. Something tells you that hir testicles are in that tail as well.  The cock on the end of hir tail is quite large, with a swelling knot and several large ridges along its canine length.  The three heads growl at you again, drawing your focus back to them in time see the Cerberus herm charge at you with lust in hir six wild eyes.";
 
 
@@ -145,7 +147,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Cerberus"; [Name of your new Monster]
-	now attack entry is "[one of]The Cerberus herm growls and swings hir powerful arms at you, striking you with hir heavy paws![or]The triple-headed canine snaps at you with hir three muzzles, biting you several times before you can stumble back![or]The Cerberus herm presses hir body to yours, leaking milk from hir many nipples across your body.  The scent of that warm milk running across your body and the scent of it filling your nose weakens your resolve to keep fighting hir![or]The canine foe releases spurts of hir pre from hir tail's cock across your face.  You can't help but lick it up and find yourself thirsting for more![or]As shi grapples with you, hir tailcock rubs against you, spurting precum onto your body.  The scent of it excites you, making you want to cease struggling![or]Those three heads snap and bite at you, catching you on your arm and side![or]Dropping briefly to all fours, the Cerberus herm pounces at you and knocks you over, mauling at you with hir heads while grinding hir wet pussy against you until you manage to push away![at random]";
+	now attack entry is "[one of]The Cerberus herm growls and swings hir powerful arms at you, striking you with hir heavy paws![or]The Cerberus herm presses hir body to yours, leaking milk from hir many nipples across your body.  The scent of that warm milk running across your body and the scent of it filling your nose weakens your resolve to keep fighting hir![or]The canine foe releases spurts of hir pre from hir tail's cock across your face.  You can't help but lick it up and find yourself thirsting for more![or]As shi grapples with you, hir tailcock rubs against you, spurting precum onto your body.  The scent of it excites you, making you want to cease struggling![or]Dropping briefly to all fours, the Cerberus herm pounces at you and knocks you over, hir triple heads panting and drooling as shi grinds hir wet pussy against you until you manage to push away![at random]";
 	now defeated entry is "[beatthecerberus]";
 	now victory entry is  "[losetocerberus]";
 	now desc entry is "[cerberusdesc]";
@@ -189,9 +191,90 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "cerberus";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
-Section 3 - Endings
+
+Section 3 - Alt Attack
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"cerberus"	cerberus rule	--	--	--	--	--	--	--	--	--
+
+this is the cerberus rule:
+	choose row monster from the table of random critters;
+	increase cerbmaulcount by 1;
+	if cerbmaulcount is 3:				[tries special attack every third time]
+		now cerbmaulcount is 0;
+		say "Growling, the [one of]Cerberus[or]triple-headed dog[or]three-headed canine[purely at random] starts snapping at you with all three heads trying to [one of]bite onto[or]snap at[or]tear into[purely at random] you at once!";
+		let cmdmg be 0;
+		let cmdmgtotal be 0;
+		standardstrike;			[head 1]
+		if monsterhit is true:
+			choose row monster from the table of random critters;
+			let rangenum be ( 80 - ( peppereyes * 4 ) );
+			now cmdmg is 0;
+			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 );		[dmg/hit at 75%]
+			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+				now cmdmg is (cmdmg * 150) divided by 100;
+				say "Critical Hit!  ";
+			say "The [one of]first[or]right[at random] head [one of]bites[or]chews on[or]latches onto[purely at random] your left [one of]arm[or]shoulder[or]wrist[or]hand[or]side[or]hip[or]thigh[or]leg[at random], doing [special-style-2][cmdmg][roman type] damage!";
+			increase cmdmgtotal by cmdmg;
+		otherwise:
+			say "The [one of]first[or]right[at random] head misses!";
+		standardstrike;			[head 2]
+		if monsterhit is true:
+			choose row monster from the table of random critters;
+			let rangenum be ( 80 - ( peppereyes * 4 ) );
+			now cmdmg is 0;
+			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 );		[dmg/hit at 75%]
+			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+				now cmdmg is (cmdmg * 150) divided by 100;
+				say "Critical Hit!  ";
+			say "The [one of]second[or]middle[or]central[at random] head [one of]bites[or]chews on[or]latches onto[purely at random] your [one of]shoulder[or]chest[or]side[or]hip[or]waist[at random], doing [special-style-2][cmdmg][roman type] damage!";
+			increase cmdmgtotal by cmdmg;
+		otherwise:
+			say "The [one of]second[or]middle[or]central[at random] head misses!";
+		standardstrike;			[head 3]
+		if monsterhit is true:
+			choose row monster from the table of random critters;
+			let rangenum be ( 80 - ( peppereyes * 4 ) );
+			now cmdmg is 0;
+			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 );		[dmg/hit at 75%]
+			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+				now cmdmg is (cmdmg * 150) divided by 100;
+				say "Critical Hit!  ";
+			say "The [one of]second[or]middle[or]central[at random] head [one of]bites[or]sinks its teeth into[or]chomps into[purely at random] your left [one of]arm[or]shoulder[or]wrist[or]hand[or]side[or]hip[or]thigh[or]leg[at random], doing [special-style-2][cmdmg][roman type] damage!";
+			increase cmdmgtotal by cmdmg;
+		otherwise:
+			say "The [one of]first[or]right[at random] head misses!";
+		if cmdmgtotal > 0:
+			let absorb be 0;
+			if "Toughened" is listed in feats of player:
+				increase absorb by cmdmgtotal divided by 5;
+			repeat with x running through equipped equipment:
+				increase absorb by ac of x;
+			if absorb is greater than cmdmgtotal:
+				now absorb is cmdmgtotal;
+			if absorb is greater than 0:
+				say "You prevent [special-style-1][absorb][roman type] damage!";
+			decrease hp of the player by cmdmgtotal;
+			increase hp of player by absorb;
+			follow the player injury rule;
+			say "You are [descr].";
+		now peppereyes is 0;										[pepperspray wears off]
+		if hp of the player is greater than 0 and libido of player < 110:
+			wait for any key;
+		otherwise:
+			if hp of player <= 0, now fightoutcome is 20;
+			if libido of player >= 110, now fightoutcome is 21;
+			Lose;
+		rule succeeds;
+	otherwise:
+		standardretaliate;
+
+
+
+Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Cerberus":

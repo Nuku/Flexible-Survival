@@ -100,7 +100,7 @@ to say sugarferretdesc:
 				say "     'Give us the cola and we'll hurt you!' one says.";
 				say "     'No, _or_ we'll hurt you!' another says, bonking the first on the head.";
 				say "     'Well, maybe it'll hurt a bit, but it'll be fun!' another pipes in.";
-				say "     'Hey, don't tell 'em that.  They won't give up the goods,' the second says, slapping the third.  The trio are reduced to a slapping fight before coming to their senses, yelling 'Cola!' together and charging, trying to catch up with the rest of the ferrets advancing on you.";
+				say "     'Hey, don't tell 'em that.  They won't give up the goods,' the second says, slapping the third.  The trio are reduced to a slapping fight before coming to their senses, yelling 'Cola!' together and charging, trying to catch up with the rest of the ferrets already advancing on you.";
 				now sugferretjoke is true;
 
 

@@ -135,13 +135,14 @@ instead of fucking Snow:
 				say "     You take Snow's cock in hand and stroke it, telling her that you're here for her and that she can satisfy herself with you as much as she needs.  Kissing you passionately again, she moans her thanks and grinds her throbbing meat against you.  'Oh, I really need to get off.  Let's have some fun.'";
 			otherwise:
 				say "[snowsquirrelgivein]";
-				wait for any key;
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				follow the turnpass rule;
 				stop the action;
 	say "     Snow gives a bright giggle as you advance on her and she grabs at your right hand, drawing you tight to her curvy front. She grinds against you, the lump in her pants growing firm as she bites at an ear, 'Want to play? I am in the mood!'[line break]";
 	let squirrelanal be 0;
 	if cock length of player > 4 and cock length of player < 16 and a random chance of 1 in 6 succeeds:		[ 1 in 6 of asking for anal ]
-		say "     Snow looks you over and gives you a coy grin before turning around and slipping down her pants.  She lifts her tail, flashing her ass and pussy at you, giving her rear a wiggle.  'Mmm.. I'm in the mood for something different, hon?  How about you take back door and stuff my tight nut hole?' she asks with a grin.  'What's the problem?  Can't a girl-boy want something a little kinkier?'  She swishes her tail around again while fingering her wet pussy, then spreading her juices over her pucker, getting it slick and glistening.  Will you take her up on her offer?";
+		say "     Snow looks you over and gives you a coy grin before turning around and slipping down her pants.  She lifts her tail, flashing her ass and pussy at you, giving her rear a wiggle.  'Mmm.. I'm in the mood for something different, hon?  How about you take the back door and stuff my tight nut hole?' she asks with a grin.  'What's the problem?  Can't a girl-boy want something a little kinkier?'  She swishes her tail around again while fingering her wet pussy, then spreading her juices over her pucker, getting it slick and glistening.  Will you take her up on her offer?";
 		if the player consents:
 			now squirrelanal is 1;
 			say "     As you move in and grind your stiffening member against her behind, she grins in pleasure and braces herself against the nearby workbench.  Pleased as punch, she moans happily as you press your glans to her slick hole and leak precum onto it, getting her even more wet and ready.  As you sink your throbbing shaft into her, you grip her hips and press yourself to her back.  'Ohhh... that's so [if cock length of player < 10]nice[otherwise]big[end if].  Do me, baby!  Stuff my tight, squirrely ass,' she demands, giving a squeeze around your [cock size desc of player] [cock of player] cock before pushing herself further onto it.  Needing no more encouragement, you start pounding away at the eager herm.";
@@ -241,6 +242,8 @@ Wild Squirrels is a situation.
 Wild Squirrels is resolved.
 
 Instead of resolving a wild squirrels:
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
 	say "As you wander, you get the feeling that you are being watched somehow....";
 	let bonus be (( the Perception of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
@@ -304,7 +307,11 @@ Instead of resolving a wild squirrels:
 				now cock width of player is 4;
 		end the game saying "You lose your mind to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take turns with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
 	otherwise:
-		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled, moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.";
+		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled, moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";
+		if baby is 0 and gestation of child is not 0:
+			now facename of child is "squirrel";
+			now bodyname of child is "squirrel";
+			now skinname of child is "squirrel";
 	now bodyname of player is "squirrel";
 	now skinname of player is "squirrel";
 	now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws.";
