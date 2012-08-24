@@ -43,7 +43,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Wolftaur"; [Name of your new Monster]
-	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed forepaw out, slapping you down like a submissive wolf.[or]His large erect member catches your eye for a minute, noticing he pauses to spray his musk in the area, the scent making you pant with need.[or]He grabs your arm In his teeth, and wrestles you to the ground.[or]charging forward on all fours, the wolftaur snaps and claws at you viciously[or]The masculine wolftaurs strong dominant scent makes you pause for a second, and he takes advantage of that to try to wrestle you down to the ground.[or]He lashes out at you with his clawed hands, leaving small marks on your skin.[or]The large taur charges right at you, knocking you to the ground.[or]The wolf like beast lowers his head and nuzzles you, while his hands play over your body, making you feel aroused and submissive.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed forepaw out, slapping you down like a submissive wolf.[or]His large erect member catches your eye for a minute, noticing he pauses to spray his musk in the area, the scent making you pant with need.[or]He grabs your arm in his teeth, and wrestles you to the ground.[or]charging forward, the wolftaur snaps and claws at you viciously[or]The masculine wolftaurs strong dominant scent makes you pause for a second, and he takes advantage of that to try to wrestle you down to the ground.[or]He lashes out at you with his clawed hands, leaving small marks on your skin.[or]The large taur charges right at you, knocking you to the ground.[or]The wolf like beast lowers his head and nuzzles you, while his hands play over your body, making you feel aroused and submissive.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Wolftaur loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Wolftaur attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "Wandering through the zoo pathways, you begin to get the feeling that something is following you, looking around you in panic, you spot a large Wolftaur following you down the path.  The large beast is making little effort to hide, his wolfish lower body moving swiftly down the trail after you, while his fur covered upper body is flexing its clawed hands in anticipation of getting them on you, and there is a rather lusty look on the beasts canine face as it eyes you. '[one of]I don[apostrophe]t suppose you are on the way to your grandmas house now, because I see the treat I want....[or]Heh heh heh, now the question is, will you submit quietly or struggle? Either way you will be mine.[or]I can[apostrophe]t wait to see you on all fours underneath me[or]How about I show you what a large cock I have, it[apostrophe]s all the better to stick into you my dear...[or] You look like you would make a fine bitch...[or]Why don[apostrophe]t you come join my pack?[at random],' he says, a lusty canine musk filling the air as he abandons  any pretense of stealth and pads forward eagerly, his canine cock bouncing underneath his lower body eagerly.";[ Description of the creature when you encounter it.]
@@ -88,7 +88,39 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "wtaurpounce";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Section 3 - Wolftaur Pounce Alt Attack
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"wtaurpounce"	retaliation rule	--	--	wtaurpounce rule	15	--	--	--	--	--
+
+this is the wtaurpounce rule:		[double-damage pouncing]
+	choose row monster from the table of random critters;
+	let rangenum be ( 80 - ( peppereyes * 4 ) );
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 67 );	[+50% damage]
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		now dam is (dam * 150) divided by 100;
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+	say "The [one of][name entry][of]wolf[or]lupine taur[or]wolf-creature[purely at random] growls and pounces roughly atop you, [one of]knocking[or]sending[or]slamming[purely at random] you down briefly under it.  It's many paws pummel you, trying to knock the resistance out of you while you're surrounded in his strong, musky scent.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
+	let absorb be 0;
+	if "Toughened" is listed in feats of player:
+		increase absorb by dam divided by 5;
+	repeat with x running through equipped equipment:
+		increase absorb by ac of x;
+	if absorb is greater than dam:
+		now absorb is dam;
+	if absorb is greater than 0:
+		say "You prevent [special-style-1][absorb][roman type] damage!";
+	decrease hp of the player by dam;
+	increase hp of player by absorb;
+	follow the player injury rule;
+	say "You are [descr].";
+
+
+Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Wolftaur":

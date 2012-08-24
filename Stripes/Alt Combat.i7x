@@ -561,7 +561,7 @@ to standardstrike:
 			now the combat bonus is -10;
 		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
 		let the roll be a random number from 1 to 20;
-		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
 		if the roll plus the combat bonus is greater than 8:
 			now monsterhit is true;
 		otherwise:
@@ -726,6 +726,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "powerstrike1"	retaliation rule	ps1charge rule	--	ps1attack rule	100	--	--	ps1miss rule	--	--
 "hypno"	retaliation rule	--	--	--	--	--	--	--	--	intstrike rule	
 "hump"	retaliation rule	--	--	humping rule	100	--	--	--	--	--
+"ftaurpounce"	retaliation rule	--	--	ftaurpounce rule	20	--	--	--	--	--
 
 Chapter 2 - Sample/Basic Rules
 
@@ -849,7 +850,7 @@ this is the intstrike rule:
 		otherwise:
 			now monsterhit is false;
 
-Part 6 - Conditional Alternate Strike Example - Humping
+Part 6 - Conditional Alternate Attack Example - Humping
 
 this is the humping rule:
 	choose row monster from table of random critters;
@@ -875,6 +876,29 @@ this is the humping rule:
 		increase dex entry by 2;
 		now monsterpowerup is 0;
 
+Part 7 - Alternate Attack Example - Feline Taur Pounce
+
+this is the ftaurpounce rule:		[double-damage pouncing]
+	choose row monster from the table of random critters;
+	let rangenum be ( 80 - ( peppereyes * 4 ) );
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );	[Double damage]
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		now dam is (dam * 150) divided by 100;
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+	say "The [one of][name entry][of]feline[or]feline taur[or]large cat[purely at random] growls and pounces playfully atop you, [one of]knocking[or]pushing[or]slamming[purely at random] you down briefly.  It's many paws knead and claw at you while the feline rumbles and purrs at having caught its [one of]toy[or]prey[or]plaything[purely at random], rubbing its body against yours.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
+	let absorb be 0;
+	if "Toughened" is listed in feats of player:
+		increase absorb by dam divided by 5;
+	repeat with x running through equipped equipment:
+		increase absorb by ac of x;
+	if absorb is greater than dam:
+		now absorb is dam;
+	if absorb is greater than 0:
+		say "You prevent [special-style-1][absorb][roman type] damage!";
+	decrease hp of the player by dam;
+	increase hp of player by absorb;
+	follow the player injury rule;
+	say "You are [descr].";
 
 
 Alt Combat ends here.
