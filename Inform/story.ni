@@ -4688,7 +4688,7 @@ Include Pursuit of Science by Kaleem Mcintyre.
 Include Fire House by Kaleem Mcintyre.
 Include Apartment 319 by Kaleem Mcintyre.
 [Include Important Research Quests by Kaleem Mcintyre.]
-[Include Reservoir by Kaleem Mcintyre.]
+Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
 Include Candy Shop by Stripes.
