@@ -72,6 +72,7 @@ To Combat Menu:
 		[chance to submit in combat if you have the submissive feat, feel free to adjust odds]
 			say "[line break]Your submissive nature gets the better of you and you offer yourself to your opponent."; [text telling player why they lost the fight]
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			follow the submit rule;
 			next;
 		if autoattackmode is 1: [always attacks in combat, no player input needed]
@@ -270,7 +271,11 @@ This is the player attack rule:
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
 			if cocks of player >= 3, increase dammy by a random number between 0 and 1;
-			say "[line break]You give your opponent a hard swat with your [cock size desc of player] wang[if cocks of player > 1]s[end if] for [special-style-2][dammy][roman type] additional damage!";
+			if tailname of player is "Cerberus":
+				increase dammy by a random number between 0 and 2;
+				say "[line break]Your tailcock swings in to [one of]smack[or]swat[or]slap[or]ejaculate[or]cum[purely at random] at your enemy, splattering a spray of your [one of]seed[or]semen[at random] onto them, for [special-style-2][dammy][roman type] additional damage!";
+			otherwise:
+				say "[line break]You give [one of]your opponent[or]your enemy[or]the [name entry][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of player] [one of]wang[or]cock[or]prick[purely at random][if cocks of player > 1]s[end if] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of 4 in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16 and bonusattacks < 2:
 			increase bonusattack by 1;
@@ -600,7 +605,7 @@ to standardhit:
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:
-		say "You prevent [absorb] damage!";
+		say "You prevent [special-style-1][absorb][roman type] damage!";
 	decrease hp of the player by dam;
 	increase hp of player by absorb;
 	follow the player injury rule;
@@ -762,6 +767,7 @@ this is the bearhug rule:
 			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip!  ([hp of player]/[maxhp of player] hp)[line break]";
 		if hp of player > 0:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			let num1 be a random number between 0 and ( Strength of player + level of player );
 			let num2 be a random number between 2 and ( str entry + lev entry + 2 );
 			let bonus be ( Strength of player - str entry + level of player - lev entry ) / 2;  [level equally important as str]
