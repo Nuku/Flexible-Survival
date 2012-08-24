@@ -74,8 +74,8 @@ instead of conversing the Fancy:
 			now fancyquest is 15;
 			say "'Wow, you look... amazingly good.' The obviously aroused mare says rather dreamily, before shaking herself slightly and smiling back up at you. 'This could actually work I think, you just need to beat the Stablemaster now, and get the collar on him, I take it Nermine explained what it does?' She says with a smile, her smile stretching into a rather predatory grin for a equine as you nod in agreement. 'Excellent, now the only hard part left is actually drawing the Stablemaster out, or getting you in to see him, He has been extremely cautious lately, and with good reason obviously.' Fancy smirks slightly as her eyes linger on your new powerful equine form. 'Now we have a plan for that actually, and we have been keeping her nice and ready just in case things worked out,' She says with a gesture at the almost completely changed mare named Daisy. 'You just me know when you are ready to take him on, and we will get you in to see him! What happens then depends on you... though for my sake at least, I hope you win.' Fancy says with a smile as she looks up at you with a mixture of lust and adoration in her eyes.[line break]";
 			now nightmaretf is 4;
-			now body of player is "Nightmare";
-			now bodyname of player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
+			now bodyname of player is "Nightmare";
+			now body of player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
 			attributeinfect "Nightmare";
 			increase strength of player by 4;
 			increase stamina of player by 4;
@@ -330,8 +330,8 @@ An everyturn rule:
 			now skin of player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
 		if bodyname of player is not "Nightmare":
 			say "Your can feel that strange energy from the vials you drank building up withing you again, and causing your body to burn with energy as it begins to twist and reshape itself as it changes back into your now familiar and comfortable equine form. Flexing your hands and stomping your hooves on the ground, you find yourself grinning with amusement as you throw off the weak and pathetic infection that tried to mar your Nightmarish equine beauty.";
-			now body of player is "Nightmare";
-			now bodyname of player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
+			now bodyname of player is "Nightmare";
+			now body of player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
 			attributeinfect "Nightmare";
 		if cockname of player is not "Nightmare":
 			now cockname of player is "Nightmare";
