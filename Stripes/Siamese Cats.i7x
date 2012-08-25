@@ -289,45 +289,54 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Siamese Cat"; [Name of your new Monster]
-   now attack entry is "[siameseattack]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthesiamesecat]"; [ Text or say command used when Monster is defeated.]
-   now victory entry is "[losetosiamesecat]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[siamesecatdesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as the text "Your face is (your text)."]
-   now body entry is "slender and feline in form, with sharp claws on your paw-like hands"; [ Body Description, format as the text "Your body is (your text)."]
-   now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ] 
-   now cock entry is "russet brown"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it shifts into a feline muzzle.  Your ears become large and dark coloured, as does your muzzle and much of your face"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "it becomes slender and vaguely feline in form.  Your arms end in dexterous paws with sharp, retractable claws"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "it grows a coat of smooth, glossy fur.  This fur is a cream colour on most of your body, but darker at the ends of your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "a slender, feline tail covered in dark brown fur extends from your spine"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it takes on a russet brown hue, but otherwise human-like"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-   now str entry is 14;
-   now dex entry is 16;
-   now sta entry is 10;                    
-   now per entry is 14;
-   now int entry is 12;
-   now cha entry is 14;
-   now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 39;            [ How many HP has the monster got? ]
-   now lev entry is 5;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 6;            [Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
-   now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 7;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 3;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 3;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex=male, usually zero. ]
-   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 7;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 50;            [ Will raise the player's libido towards this amount]
-   now loot entry is "";            [ Dropped item, if any ]
-   now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Siamese Cat"; [Name of your new Monster]
+	now attack entry is "[siameseattack]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[beatthesiamesecat]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[losetosiamesecat]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[siamesecatdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as the text "Your face is (your text)."]
+	now body entry is "slender and feline in form, with sharp claws on your paw-like hands"; [ Body Description, format as the text "Your body is (your text)."]
+	now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ] 
+	now cock entry is "russet brown"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it shifts into a feline muzzle.  Your ears become large and dark coloured, as does your muzzle and much of your face"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes slender and vaguely feline in form.  Your arms end in dexterous paws with sharp, retractable claws"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it grows a coat of smooth, glossy fur.  This fur is a cream colour on most of your body, but darker at the ends of your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a slender, feline tail covered in dark brown fur extends from your spine"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it takes on a russet brown hue, but otherwise human-like"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 14;
+	now dex entry is 16;
+	now sta entry is 10;                    
+	now per entry is 14;
+	now int entry is 12;
+	now cha entry is 14;
+	now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 39;            [ How many HP has the monster got? ]
+	now lev entry is 5;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+	now wdam entry is 6;            [Amount of Damage monster Does when attacking.]
+	now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
+	now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 7;        [ Length infection will make cock grow to if cocks]
+	now cock width entry is 3;        [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;            [ Number of Breasts infection will give you. ]
+	now breast size entry is 3;        [Size of breasts infection will try to attain ]
+	now male breast size entry is 0;    [ Breast size for if Sex=male, usually zero. ]
+	now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 7;        [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
+	now libido entry is 50;            [ Will raise the player's libido towards this amount]
+	now loot entry is "";            [ Dropped item, if any ]
+	now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]agile[or]acrobat's[or]slender[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "feline";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:

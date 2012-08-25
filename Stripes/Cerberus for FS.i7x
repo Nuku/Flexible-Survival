@@ -243,10 +243,10 @@ this is the cerberus rule:
 			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now cmdmg is (cmdmg * 150) divided by 100;
 				say "Critical Hit!  ";
-			say "The [one of]second[or]middle[or]central[at random] head [one of]bites[or]sinks its teeth into[or]chomps into[purely at random] your left [one of]arm[or]shoulder[or]wrist[or]hand[or]side[or]hip[or]thigh[or]leg[at random], doing [special-style-2][cmdmg][roman type] damage!";
+			say "The [one of]last[or]left[or]final[at random] head [one of]bites[or]sinks its teeth into[or]chomps into[purely at random] your left [one of]arm[or]shoulder[or]wrist[or]hand[or]side[or]hip[or]thigh[or]leg[at random], doing [special-style-2][cmdmg][roman type] damage!";
 			increase cmdmgtotal by cmdmg;
 		otherwise:
-			say "The [one of]first[or]right[at random] head misses!";
+			say "The [one of]final[or]left[or]last[at random] head misses!";
 		if cmdmgtotal > 0:
 			let absorb be 0;
 			if "Toughened" is listed in feats of player:
