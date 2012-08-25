@@ -68,7 +68,6 @@ to say incubus fight:
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
 	if libido of player >= 110:
 		say "You find yourself too aroused to keep fighting the handsome seducer and drop to your knees.  Having fallen under the sway of this dark tempter, you long to submit yourself to his lustful desires.";
-		now hp of player is 0;
 
 
 to say incubusdesc:

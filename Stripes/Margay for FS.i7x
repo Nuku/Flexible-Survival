@@ -6,6 +6,7 @@ Version 1 of Margay for FS by Stripes begins here.
 
 "Adds Margay to Flexible Survival."
 
+margaydancecount is a number that varies.
 when play begins:
 	add { "Margay" } to infections of furry;
 	add { "Margay" } to infections of girl;
@@ -44,6 +45,7 @@ to say margayoral:
 
 
 to say margaydesc:
+	now margaydancecount is 0;	[reset alt attack counter]
 	say "     It seems like one of the fair's more hefty attendees has picked up some feline traits.  Looking over the margay, her Rubenesque body is covered in a soft coat of golden fur speckled by leopard-like spots.  The pattern changes on her head where it becomes a pair of stripes that run down the middle of her faces, brushing past the eyes and passing both sides of the nose to stop at the end of said nose.  The whole is decorated with cute little spots.  Her head is a small feline head with large feline eyes and small pointed feline ears.  From the way she moves and stretches, her large body is both quite large and VERY elastic in the belly.  Over her plump belly is three rows of breasts, all fairly small and decreasing slightly in size.  Her arms are motherly feline arms with human-style hands featuring retractable claws.  Her legs are plantigrade legs with plenty of jiggle and firmly toned muscles.  Her legs end with nearly human feet which have clawed toes and whose undersides consist of thick black skin pads. She has wide hips that look big enough to swallow or birth people whole, easily capable of giving painless and effortless births.  Your eyes drawn to there, you can see she has a pair of large, wet vaginas, gaping a little as if in need to be filled.  You can see a fresh trickle of juices from them as her feline eyes stare at you with a hungry desire.";
 
 Section 2 - Monster Insertion
@@ -55,7 +57,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Margay"; [Name of your new Monster]
-	now attack entry is "[one of]The large feline slashes at you with her rending claws![or]The Rubenesque beauty grabs you in her strong arms and grinds her large pussies against you![or]The tropical cat mrowls as she grabs one arm with a clawed paw and keeps the other velveted as she gropes you firmly![or]In a surprising feat of flexibility for one so large, the margay kicks you firmly in the gut, causing you to stumble back![or]The big kitty performs an erotic dance that is quite tantalizing.  She runs her paws over her ample figure, her numerous breasts and then down to her wet cunts, fingering them with a moan of desire.  The entire display drains some of your resistance, tempting you to give in and play with the plump feline![or]The full-figured margay pulls you in close for a warm, tender hug that saps some of your will to resist her increasing tempting body![or]The large feline slams into you and pushes you down, trying to smother you under her ample figure![at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]The large feline slashes at you with her rending claws![or]The Rubenesque beauty grabs you in her strong arms and grinds her large pussies against you![or]The tropical cat mrowls as she grabs one arm with a clawed paw and keeps the other velveted as she gropes you firmly![or]In a surprising feat of flexibility for one so large, the margay kicks you firmly in the gut, causing you to stumble back![or]The full-figured margay pulls you in close for a warm, tender hug that saps some of your will to resist her increasing tempting body![or]The large feline slams into you and pushes you down, trying to smother you under her ample figure![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthemargay]";
 	now victory entry is  "[losetomargay]";
 	now desc entry is "[margaydesc]";
@@ -100,10 +102,66 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "margay";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-Section 3 - Endings
+Section 3 - Alt Combat - Sensual Dance
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"margay"	margaydance rule	--	--	--	--	--	--	--	--	--
+
+this is the margaydance rule:
+	choose row monster from the table of random critters;
+	increase margaydancecount by 1;
+	if margaydancecount is even and a random chance of 2 in 5 succeeds and peppereyes is 0:	[40% of the time on any even round]
+		say "The big kitty performs an erotic dance that is quite tantalizing, seeking to entice you into giving into her rough advances.  She runs her paws over her ample figure, her numerous breasts and then down to her wet cunts, fingering them with a moan of desire.";
+		let playernum be 150 + humanity of player - libido of player + ( level of player * 2 ) + cha entry;
+		let margaynum be 200 + ( lev entry * 2 ) + cha entry;
+		if bodyname of player is "Margay":
+			decrease playernum by 12;
+		otherwise if bodyname of player is listed in infections of Felinelist:
+			decrease playernum by 6;
+		if facename of player is "Margay":
+			decrease playernum by 12;
+		otherwise if facename of player is listed in Infections of Felinelist:
+			decrease playernum by 6;
+[		say "TEST: [playernum] vs [margaynum]:[line break]";		]
+		now playernum is a random number between 1 and playernum;
+		let margaynum be a random number between 1 and margaynum;
+		say "[special-style-1][playernum][roman type] vs [special-style-2][margaynum][roman type]: ";
+		if playernum >= margaynum:
+			say "As captivating and tantalizing as the large feline's movements may be, you manage to avert your eyes and regain your senses.";
+		otherwise:
+			let xx be ( lev entry + 10 ) / 10;			[ xx=1 unless hard mode or otherwise boosted]
+			let rangenum be ( 80 - ( peppereyes * 4 ) );
+			let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
+			increase libido of player by a random number between 5 and 10;
+			if bodyname of player is "Margay":						[Margays take more dmg]
+				increase dam by a random number between 0 and xx;
+			if facename of player is "Margay":
+				increase dam by a random number between 0 and xx;
+			if bodyname of player is listed in infections of Felinelist:	[all felines more aroused]
+				increase libido of player by a random number between 0 and 2;
+			if facename of player is listed in Infections of Felinelist:
+				increase libido of player by a random number between 0 and 2;
+			say "[if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]Your feline nature is particularly captivated by the suddenly alluring cat before you and you mrowl longingly as you watch her move.  [run paragraph on][end if]Unable to look away from the [one of]feline[or]margay[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]snuggle up against that plump body of hers[or]bury your face in her wet crotch[or]curl up in her motherly arms[purely at random].  The entire display drains some of your resistance, arousing you further and tempting you to give in and play with the plump feline!  You take [special-style-2][dam][roman type] damage!";
+			decrease hp of the player by dam;
+			follow the player injury rule;
+			say "You are [descr].";
+		now peppereyes is 0;										[pepperspray wears off]
+		if hp of the player is greater than 0 and libido of player < 110:
+			wait for any key;
+		otherwise:
+			if hp of player <= 0, now fightoutcome is 20;
+			if libido of player >= 110, now fightoutcome is 21;
+			Lose;
+		rule succeeds;
+	otherwise:
+		retaliate;
+
+
+Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Margay":

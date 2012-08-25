@@ -11,6 +11,7 @@ Section 13 - Brute Force Creature Testing (BFandI command) - Not for release
 
 bfanditesting is an action applying to one topic.
 understand "bfandi [text]" as bfanditesting.
+understand "bfandi1 [text]" as bfanditesting.
 
 carry out bfanditesting:
 	say "You begin the test by looking over yourself.";
@@ -119,6 +120,27 @@ These will be used to describe the player during scenes and should be a single a
 [ NOCTURNAL: A truth state to designate whether this creature is nocturnal (true) or diurnal (false).  Nocturnal creatures will only be available for encounters during the night.  Diurnal creatures will only be available for encounters during the night.  An unset creature is treated as the normal case, able to be found both during the day and the night.  As such, this variable will most often remain blank. ]
 
 [ ALTCOMBAT: An entry to detect whether the creature has any special behaviour during combat.  See the 'Alt Combat' document for the updated combat system.  An unset creature is treated as using the 'default' combat system. ]
+
+[-----------------------------------------------------------]
+
+bfanditesting2 is an action applying to one topic.
+understand "bfandi2" as bfanditesting2.
+
+carry out bfanditesting2:
+	sort table of random critters in lev order;
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if there is no altcombat in row y of the table of random critters:
+			say "[name entry]:  [special-style-2]UNSET![roman type]";
+		otherwise:
+			if altcombat entry is "default":
+				say "[name entry]:  DEFAULT[line break]";
+			otherwise:
+				say "[name entry]:  [special-style-1][altcombat entry][roman type][line break]";
+		if the remainder after dividing y by 20 is 0:
+			wait for any key;
+			say "[line break]";
+
 
 
 BFandI ends here.

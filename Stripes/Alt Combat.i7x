@@ -108,39 +108,51 @@ To Combat Menu:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text " ":
+				say "[line break]";
 				follow the player attack rule;
 				next;
 			if keychar in lower case exactly matches the text "return":
+				say "[line break]";
 				follow the player attack rule;
 				next;
 			if keychar in lower case exactly matches the text "a" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return":
+				say "[line break]";
 				follow the player attack rule;
 				next;
 			if keychar in lower case exactly matches the text "i" or keychar in lower case exactly matches the text "2":
+				say "[line break]";
 				follow the combat item rule;
 				next;
 			if keychar in lower case exactly matches the text "p" or keychar in lower case exactly matches the text "3":
+				say "[line break]";
 				follow the combat pass rule;
 				next;
 			if keychar in lower case exactly matches the text "f" or keychar in lower case exactly matches the text "4":
+				say "[line break]";
 				follow the flee rule;
 				next;
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "5":
+				say "[line break]";
 				follow the submit rule;
 				next;
 			if keychar in lower case matches the text "attack":
+				say "[line break]";
 				follow the player attack rule;
 				next;
 			if keychar in lower case matches the text "item":
+				say "[line break]";
 				follow the combat item rule;
 				next;
 			if keychar in lower case matches the text "pass":
+				say "[line break]";
 				follow the combat pass rule;
 				next;
 			if keychar in lower case matches the text "submit":
+				say "[line break]";
 				follow the submit rule;
 				next;
 			if keychar in lower case matches the text "flee":
+				say "[line break]";
 				follow the flee rule;
 				next;
 			say "Invalid action.";
@@ -596,7 +608,7 @@ to standardhit:
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "[Attack entry]You take [special-style-2][dam][roman type] damage!";
+	say "[Attack entry]  You take [special-style-2][dam][roman type] damage!";
 	let absorb be 0;
 	if "Toughened" is listed in feats of player:
 		increase absorb by dam divided by 5;
@@ -756,7 +768,7 @@ this is the bearhug rule:
 	say "The [name entry] manages to grab you in its powerful arms and holds you in a vice-like bear hug!  You will need to break free before it squeezes the fight right out of you.";
 	let freedom be 0;
 	while hp of player > 0 and freedom is 0:
-		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100;
+		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125;	[80% dmg / round]
 		let absorb be 0;
 		if "Toughened" is listed in feats of player:
 			increase absorb by dam divided by 5;
@@ -770,11 +782,7 @@ this is the bearhug rule:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			let num1 be a random number between 0 and ( Strength of player + level of player );
-			let num2 be a random number between 2 and ( str entry + lev entry + 2 );
-			let bonus be ( Strength of player - str entry + level of player - lev entry ) / 2;  [level equally important as str]
-			let dice be a random number from 1 to 20;
-			if bonus > 8, now bonus is 8;		[min 10% chance either way]
-			if bonus < -8, now bonus is -8;
+			let num2 be a random number between 1 and ( str entry + lev entry );
 			say "As your opponent continues to crush you with its powerful arms, you struggle to break free: ";
 			if num1 > num2:
 				say "You manage to fight your way out of your opponent's grip.";
