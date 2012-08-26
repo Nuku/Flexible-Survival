@@ -1,5 +1,5 @@
 Version 1 of Alt Combat by Stripes begins here.
-[Version 1.3 - fightoutcome measured ]
+[Version 1.4 - fightoutcome measured, more alt attacks ]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -765,7 +765,10 @@ Part 2 - Alternate Attack Example - Bearhug
 
 this is the bearhug rule:
 	choose row monster from table of random critters;
-	say "The [name entry] manages to grab you in its powerful arms and holds you in a vice-like bear hug!  You will need to break free before it squeezes the fight right out of you.";
+	if name entry is "Snake" or name entry is "Naga":		[crushing coils]
+		say "The [one of][name entry][or]large serpent[purely at random] manages to wrap its powerful tail around you, holding you in its vice-like constriction!  You will need to break free before squeezes the fight right out of you.";
+	otherwise:									[crushing arms]
+		say "The [name entry] manages to grab you in its powerful arms and holds you in a vice-like bear hug!  You will need to break free before it squeezes the fight right out of you.";
 	let freedom be 0;
 	while hp of player > 0 and freedom is 0:
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125;	[80% dmg / round]
@@ -783,7 +786,10 @@ this is the bearhug rule:
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			let num1 be a random number between 0 and ( Strength of player + level of player );
 			let num2 be a random number between 1 and ( str entry + lev entry );
-			say "As your opponent continues to crush you with its powerful arms, you struggle to break free: ";
+			if name entry is "Snake" or name entry is "Naga":
+				say "As your opponent continues to crush you with its powerful coils, you struggle to break free: ";
+			otherwise:
+				say "As your opponent continues to crush you with its powerful arms, you struggle to break free: ";
 			if num1 > num2:
 				say "You manage to fight your way out of your opponent's grip.";
 				now freedom is 1;
@@ -907,6 +913,9 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 	increase hp of player by absorb;
 	follow the player injury rule;
 	say "You are [descr].";
+
+
+
 
 
 Alt Combat ends here.
