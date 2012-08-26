@@ -34,7 +34,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Snake";
-	now attack entry is "[one of]The snake winds itself around your leg, squeezing as it tries to scale your body![or]The ring-necked snake snaps at your arm as you try to attack it![or]The ringneck hisses and snaps at your leg![or]The serpent manages to wind itself around you, constricting your body![or]As you attack, the snake whips its tail around your arms and latches on, squeezing them powerfully![at random]";
+	now attack entry is "[one of]The snake winds itself around your leg, squeezing as it tries to scale your body![or]The ring-necked snake snaps at your arm as you try to attack it![or]The ringneck hisses and snaps at your leg![or]As you attack, the snake whips its tail around your arms and latches on, squeezing them powerfully![at random]";
 	now defeated entry is "[beatthesnake]";
 	now victory entry is "[losetosnake]";
 	now desc entry is "[snakedesc]";
@@ -79,7 +79,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "bearhugger";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 

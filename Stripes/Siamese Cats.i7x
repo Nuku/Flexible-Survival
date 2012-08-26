@@ -307,7 +307,7 @@ When Play begins:
 	now cock change entry is "it takes on a russet brown hue, but otherwise human-like"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 16;
-	now sta entry is 10;                    
+	now sta entry is 10;
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 14;
