@@ -4748,6 +4748,7 @@ Include Endings by Darthan.
 [Monsters/Infections]
 Include Blob by Kaleem Mcintyre.
 Include Great Dane Rouge by Kaleem Mcintyre.
+Include Wolfman by Wahn.
 Include Chocolate Lab by Stripes.
 Include Skunkbeast Lord by Stripes.
 Include Hyperskunk for FS by Stripes.

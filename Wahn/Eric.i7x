@@ -1,5 +1,5 @@
 Version 1 of Eric by Wahn begins here.
-[Version 0.6: Corrected clauses in the sex menu]
+[Version 0.7: Lowered the Difficulty of the Charisma check at the start]
 [Todo: possibly npc interactions & more conversation]
 "Adds an NPC named Eric to the Flexible Survival game"
 
@@ -37,8 +37,8 @@ Instead of resolving a Barricaded Lockerroom:
 	if the player consents:
 		let bonus be (( charisma of player minus 10 ) divided by 2);
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
-		if dice + bonus is greater than 19:
+		say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]: ";
+		if dice + bonus >= 15:
 			say "[line break]     After some quick talking, you manage to convince the person inside the lockerroom that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
 			say "     'Hi, I'm Eric,' the man says, shaking your hand. 'Nice to see not everyone has gone totally bonkers in this city. I couldn't believe the stuff going on out there at first... saw my roommate transform into a big furry thing right in front of my eyes. There wasn't anything human left in him - he even bit me!' He shows you his bandaged arm.";
 			move player to Campus Arena Lockerroom;
