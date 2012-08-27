@@ -4,13 +4,6 @@ Version 2 of Harold by Sarokcat begins here.
 "Adds a npc to Flexible Survival with a well stocked bar and a problem..."
 
 
-[Testing]
-when play begins:
-	now haroldaroused is 1;
-	add "Male Preferred" to feats of player;
-	increase xp of player by 250;
-	now Palomino is known;
-
 section 1 - Harold
 
 Haroldtalk is a number that varies.
