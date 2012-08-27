@@ -321,7 +321,7 @@ Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.
 The description of Grey Abbey Library is "[abbey desc]".
 Bunker is a room.  The description of Bunker is "[bunker desc]";
 
-The invent of Bunker is { "face mask", "medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
+The invent of Bunker is { "medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
@@ -574,7 +574,6 @@ name	desc	weight	object	sortname (indexed text)
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
 "dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
-"face mask"	"A simple, flimsy, thing you wear on your face. Maybe it will help? Probably not."	3	face mask
 
 face mask is equipment. It is a part of the player. It is not temporary.
 The descmod of face mask is "A mask covers nose and mouth, made popular during the swine flu scare. ";
@@ -644,6 +643,7 @@ title	subtable	description	toggle
 "Pass"	--	"Hey look, a distraction!"	combat pass rule
 "Flee"	--	"Run away!!!"	flee rule
 "Submit"	--	"Maybe it isn't so bad"	submit rule
+"Throw Fight"	--	"Let them think they won."	throw combat rule
 
 Table of combat items
 title(indexed text)	subtable	description	toggle

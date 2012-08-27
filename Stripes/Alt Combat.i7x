@@ -93,7 +93,7 @@ To Combat Menu:
 			next;
 		otherwise:
 			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee[line break]";
+			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee [bold type]T[roman type]hrow the fight[line break],";
 			let combatopt be 0;
 			repeat through table of basic combat:
 				increase combatopt by 1;
@@ -135,6 +135,10 @@ To Combat Menu:
 				say "[line break]";
 				follow the submit rule;
 				next;
+			if keychar in lower case exactly matches the text "t" or keychar in lower case exactly matches the text "6":
+				say "[line break]";
+				follow the throw combat rule;
+				next;
 			if keychar in lower case matches the text "attack":
 				say "[line break]";
 				follow the player attack rule;
@@ -154,6 +158,18 @@ To Combat Menu:
 			if keychar in lower case matches the text "flee":
 				say "[line break]";
 				follow the flee rule;
+				next;
+			if keychar in lower case matches the text "throw":
+				say "[line break]";
+				follow the throw combat rule;
+				next;
+			if keychar in lower case matches the text "throw the fight":
+				say "[line break]";
+				follow the throw combat rule;
+				next;
+			if keychar in lower case matches the text "throw fight":
+				say "[line break]";
+				follow the throw combat rule;
 				next;
 			say "Invalid action.";
 
@@ -470,6 +486,14 @@ This is the flee rule:
 		if there is a continuous in row monstercom of the table of Critter Combat:
 			follow the continuous entry;
 		if combat abort is 0, follow the combat entry;
+
+Chapter 6 - Throw the Fight
+
+This is the throw combat rule:
+	now fightoutcome is 20;
+	now hp of player is -2;
+	say "You allow yourself to be subdued while putting up a token struggle.";
+	Lose;
 
 
 Section 3 - Monster Counterattack
