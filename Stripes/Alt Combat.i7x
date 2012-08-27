@@ -593,8 +593,10 @@ to standardstrike:
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
 			decrease combat bonus by 3;
-		if hardmode is true and the combat bonus is less than -10:
-			now the combat bonus is -10;
+		if combat bonus is less than -11:
+			now the combat bonus is -11;
+		if hardmode is true and the combat bonus is less than -8:
+			now the combat bonus is -8;
 		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
 		let the roll be a random number from 1 to 20;
 		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
