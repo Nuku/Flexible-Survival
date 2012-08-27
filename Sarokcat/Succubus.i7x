@@ -50,7 +50,6 @@ to say succubus fight:
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
 	if libido of player >= 110:
 		say "You find yourself too aroused to keep fighting the sexy seductress and drop to your knees.  Having fallen under the sway of this infernal temptress, you long for her to help relieve the heat in your loins.";
-		now hp of player is 0;
 
 
 
