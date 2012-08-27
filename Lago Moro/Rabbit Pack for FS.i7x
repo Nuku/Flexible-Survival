@@ -84,15 +84,15 @@ When Play begins:
 	now victory entry is  "[rabpackvictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[rabpackdesc]";[ Description of the creature when you encounter it.]
 	now face entry is "rabbit ears sprouting from the top of your head and flopping around the sides of your";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "short but agile.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "short fur covering almost every inch of your body.";[ skin Description, format as the text "You have (your text) skin"] 
+	now body entry is "short but agile";[ Body Description, format as the text "Your Body is (your text)"] 
+	now skin entry is "short fur covering almost every inch of your body";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "humanlike";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you feel your head spin and lose consciousness. When you wake up, you open your eyes...your multiple pair of eyes. To your horror, you see that you have been split into many smaller copies of your previous form! Luckily, you retained your personality and mental sanity... but for how long?"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "a little coating of fur covers you from head to toe. Feels almost like velvet.."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "A little tail sprouts, waggling."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it becomes humanlike, covered with foreskin. A pair of soft balls descends as well."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock entry is "human-like";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "you feel your head spin and lose consciousness. When you wake up, you open your eyes... your multiple pair of eyes. To your horror, you see that you have been split into many smaller copies of your previous form! Luckily, you retained your personality and mental sanity... but for how long?"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "a little coating of fur covers you from head to toe. Feels almost like velvet"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "A little tail sprouts, waggling"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it becomes humanlike, covered with foreskin. A pair of soft balls descends as well"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 6;
 	now dex entry is 15;
 	now sta entry is 10;					
