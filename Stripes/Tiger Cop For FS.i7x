@@ -506,18 +506,24 @@ when play begins:
 
 to say losetotigercop:
 	if mqstatus is 98:
- 		say "     Unable to stand up to the large tiger any longer, he grabs you roughly and shoves you face down onto a mound of rubble. 'You couldn[apostrophe]t just do what you were told.  The world is filled with punks like you these days.  No respect for authority,' he growls as he holds you down with one paw and bares your bottom with the other.";
+		say "     Unable to stand up to the large tiger any longer, he grabs you roughly and shoves you face down onto a mound of rubble. 'You couldn[apostrophe]t just do what you were told.  The world is filled with punks like you these days.  No respect for authority,' he growls as he holds you down with one paw and bares your bottom with the other.";
 		if cunts of player is greater than 0:
- 			say "     'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your pussy, making you shiver.  He teases you with it briefly, getting you wet despite yourself, before sinking it into you.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching pussy.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
+			say "     'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your pussy, making you shiver.  He teases you with it briefly, getting you wet despite yourself, before sinking it into you.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching pussy.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
 		otherwise:
 			say "     'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver.  He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching hole.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
 		infect "Tigress Hooker";
 	otherwise:
 		if cunts of player is greater than 0:
- 			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down onto a nearby car.  Pressing your face to the dirty hood, he growls in your ear.  'I warned you what would happen if I caught you,' he rumbles.  With a strong paw firmly at your neck, the other bares your bottom and moves you into position.";
- 			say "     You hear him unzip, then there[apostrophe]s the feel of a large, hard cock against your bottom.  He grinds against you a few times, getting fully hard before sinking it firmly into you.  Your body shudders from the sudden intrusion, but he pays your discomfort no mind, only pounding you hard and fast.";
- 			say "     You start to moan and grind against him as the powerful male fucks you, losing yourself in the sex.  'That[apostrophe]s a good slut,' he rumbles.  'Take it, you whore.'  Your pussy squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your pussy with his sperm.";
- 			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
+			[puts Tigress Hooker as lead monster in case of impregnation]
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Tigress Hooker":
+					now monster is y;
+					break;
+			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down onto a nearby car.  Pressing your face to the dirty hood, he growls in your ear.  'I warned you what would happen if I caught you,' he rumbles.  With a strong paw firmly at your neck, the other bares your bottom and moves you into position.";
+			say "     You hear him unzip, then there[apostrophe]s the feel of a large, hard cock against your bottom.  He grinds against you a few times, getting fully hard before sinking it firmly into you.  Your body shudders from the sudden intrusion, but he pays your discomfort no mind, only pounding you hard and fast.";
+			say "     You start to moan and grind against him as the powerful male fucks you, losing yourself in the sex.  'That[apostrophe]s a good slut,' he rumbles.  'Take it, you whore.'  Your pussy squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your pussy with his sperm.[impregchance]";
+			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
 		otherwise:
 			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down to your knees.  He wraps his strong paw around your jaw, holding you there while he growls down at you.  'I warned you what would happen if I caught you,' he rumbles.";
 			say "     As you watch, his other paw opens his uniform pants and pull out his large, hard cock.  His shaft is a full foot long and human-like in form, though a deeper red in colour.  Holding your head firmly, he strokes his cock against your face until its fully hard and leaking pre onto you.";

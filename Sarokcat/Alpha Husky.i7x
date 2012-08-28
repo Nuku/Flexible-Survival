@@ -60,18 +60,21 @@ husky gathering is a situation. It is resolved.
 Instead of resolving husky gathering:
 	say "A sudden chorus of barks and shouts catches your attention. Just emerging from around the bend is a group, no, pack of huskies. Most appear male, and those males catch sight of you, approaching with a joyous war cry, they move to try and cut off your escape.";
 	Challenge "Alpha Husky";
-	if lost is 1:
+	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "[alpha huskypack lost]";
 		continue the action;
 	Challenge "Alpha Husky";
-	if lost is 1:
+	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "[alpha huskypack lost]";
 		continue the action;
 	Challenge "Alpha Husky";
-	if lost is 1:
+	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "[alpha huskypack lost]";
 		continue the action;
-	say "[alpha huskypack victory]";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "[alpha huskypack victory]";
+	otherwise if fightoutcome >= 30:
+		say "You manage to make a break for it and flee from the lustful, dominant dogs.";
 			
 to say alpha huskypack lost:
 	if hp of player is less than 1:
@@ -110,7 +113,7 @@ to say alpha huskypack victory:
 			otherwise:
 				say "The dog behind you nuzzles against your [tailname of player] ass a moment before he rears up, placing his pawhands on your shoulders and drawing in for a firm hug from behind, growling in your ear in a way that seems nothing but adoringly. He runs his tongue across your ears and the side of your face, grinding his increasingly hard shaft against your ass as your front is worked.";
 				say "The narrow end of his raging erection nudges against your asshole and he pulls away sharply, making a whine as if he did a bad thing. You give out a growl of your own, reaching back to pull him forward, and into yourself. With a happy yelp, he buries himself into your tight back door, filling you with rapid strokes into you as he yelps and barks with delight at being permitted to mount his alpha.";
-			say "With the pleasure coming from both ends, it is not long before your body siezes in climax. Your cry mixes with those of the wolves, shuddering  and pressing tight together as hot cum flows between. They are eager to clean you, and one volunteers to be your pillow, another, your blanket, all snuggled tight to you until you pass to a restful sleep.";
+			say "With the pleasure coming from both ends, it is not long before your body siezes in climax. Your cry mixes with those of the canines, shuddering  and pressing tight together as hot cum flows between. They are eager to clean you, and one volunteers to be your pillow, another, your blanket, all snuggled tight to you until you pass to a restful sleep.[impregchance]";
 			decrease humanity of player by 20;
 			if humanity of player is less than 10:
 				end the game saying "[alpha pack victory ending]";
@@ -156,7 +159,7 @@ to say alpha husky bitch:
 
 To say Alpha Husky loss:
 	if sarahslut is greater than 3:
-		say "'Your tougher then I thought,' The alpha says as he looks at you speculatively, his husky nose working as he sniffs around you for a second, before a grin crosses his muzzle. 'And it looks like you already have tamed a bitch or two yourself,' He says with a chuckle, obviously scenting your lusty husky pets heat filled odor still clinging to your body. 'If you want I suppose I could give you a few pointers on being a proper alpha to them, one pack leader to another,' The husky says with a wink, his offer sounding surprisingly helpful as you think of how much fun it would be to be a proper alpha for your lusty little pets back in the bunker... Do you take him up on his offer?";
+		say "'You're tougher then I thought,' The alpha says as he looks at you speculatively, his husky nose working as he sniffs around you for a second, before a grin crosses his muzzle. 'And it looks like you already have tamed a bitch or two yourself,' He says with a chuckle, obviously scenting your lusty husky pets heat filled odor still clinging to your body. 'If you want I suppose I could give you a few pointers on being a proper alpha to them, one pack leader to another,' The husky says with a wink, his offer sounding surprisingly helpful as you think of how much fun it would be to be a proper alpha for your lusty little pets back in the bunker... Do you take him up on his offer?";
 		if player consents:
 			say "'Knew you would be interested in that,' he chuckles roughly, and you listen eagerly as he begins you pointers on how to properly train a husky to serve you, his harsh voice interspersed with soft barks and much wagging of his tail as he eagerly describes how an alpha claims their bitch properly. By the time he saunters off into the streets of the city, you feel like you know quite a bit more about what life is like at the top of a husky pack, strangely enough, you even feel much more husky like yourself now too... shrugging the feeling off, you realize any husky changes could only bring you closer to being a proper alpha for your husky bitches, and grin as you saunter back off down the streets of the city yourself...";
 			infect "Alpha Husky";
