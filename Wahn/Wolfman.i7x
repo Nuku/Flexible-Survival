@@ -5,7 +5,7 @@ Version 1 of Wolfman by Wahn begins here.
 
 Section 1 - Events	
 
-Wolfman Talent Scout is a situation. The level of Wolfman Talent Scout is 5.
+Wolfman Talent Scout is a situation. The level of Wolfman Talent Scout is 6.
 The sarea of Wolfman Talent Scout is "Outside";
 when play begins:
 	add Wolfman Talent Scout to badspots of furry;      [wolfman]
@@ -348,7 +348,8 @@ An everyturn rule:
 		say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should go check on Jennifer in Wolfman Lair...";
 		increase Jenniferwolves by 1;
 		increase score by a random number between 5 and 10;
-		now Jenniferpregnant is 0;		
+		now Jenniferpregnant is 0;
+		now thirst of Jennifer is 0;
 	if Jenniferpregnant is 24:
 		now thirst of Jennifer is 2;   [visible pregnancy]
 	if Jenniferpregnant is greater than 1:
