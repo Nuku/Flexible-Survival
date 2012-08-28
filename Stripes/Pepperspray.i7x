@@ -1,5 +1,5 @@
 Version 3 of Pepperspray by Stripes begins here.
-[version 3.1 - More varied combat messages]
+[version 3.2 - Updated: fightoutcomevariable and combat bonus limits]
 
 
 battleitem is a number that varies.
@@ -32,20 +32,21 @@ this is the peppersprayflee rule:
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
 	increase combat bonus by gascloud;								[cannot release gas cloud if pepperspraying, but will still linger]
-	if hardmode is true and the combat bonus is less than -8:				[pepperspray limits hardmode penalty to -8]
+	if hardmode is true and the combat bonus is less than -9:				[pepperspray limits hardmode penalty to -9]
+		now the combat bonus is -9;
+	if hardmode is false and the combat bonus is less than -8:				[pepperspray limits regular penalty to -8]
 		now the combat bonus is -8;
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the attack bonus minus the defense bonus is greater than 8:
 		say "Using the pepperspray to briefly disable the [name entry], you manage to make your escape.";
 		say "[pepperspraydrain]";
+		now fightoutcome is 30;
 		now combat abort is 1;
 	otherwise:
 		say "You try to escape using the pepperspray, but fail.";
 		say "[pepperspraydrain]";
 		follow the retaliation rule;
-		if the hp of the player is less than 1:
-			lose;
 	rule succeeds;
 
 
@@ -58,14 +59,13 @@ this is the peppersprayattack rule:
 	say "[enhancedattack]";
 	if monsterhp is greater than 0:
 		say "[enhancedattack]";
-		if gascloud > 0:
-			decrease gascloud by 1;
+	if gascloud > 0:
+		decrease gascloud by 1;
 	if monsterhp is greater than 0:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
 		follow the retaliation rule;
-		if the hp of the player is less than 1:
-			lose;
 	otherwise:
+		now fightoutcome is 10;
 		win;
 	rule succeeds;
 
