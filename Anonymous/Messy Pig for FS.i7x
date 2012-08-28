@@ -129,7 +129,7 @@ this is the pigpussy rule:
 	if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
 	if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
 	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[caught and fighting]
-		say "TEST: [playernum] vs [messypignum]:[line break]";
+[		say "TEST: [playernum] vs [messypignum]:[line break]";	]
 		let playernum be a random number between 50 and playernum;
 		let messypignum be a random number between 50 and messypignum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
@@ -149,7 +149,7 @@ this is the pigpussy rule:
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 1;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 1;
 	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[caught and fighting]
-		say "TEST: [playernum] vs [messypignum]:[line break]";
+[		say "TEST: [playernum] vs [messypignum]:[line break]";	]
 		let playernum be a random number between 25 and playernum;
 		let messypignum be a random number between 25 and messypignum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
@@ -169,7 +169,7 @@ this is the pigpussy rule:
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 2;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[caught and fighting]
-		say "TEST: [playernum] vs [messypignum]:[line break]";
+[		say "TEST: [playernum] vs [messypignum]:[line break]";	]
 		let playernum be a random number between 10 and playernum;
 		let messypignum be a random number between 10 and messypignum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
@@ -189,7 +189,7 @@ this is the pigpussy rule:
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 3;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 1 and 2;
 	if messypigcaught is 1 and hp of player > 0 and libido of player < 110:							[caught and fighting]
-		say "TEST: [playernum] vs [messypignum]:[line break]";
+[		say "TEST: [playernum] vs [messypignum]:[line break]";	]
 		let playernum be a random number between 10 and playernum;
 		let messypignum be a random number between 10 and messypignum;
 		say "[special-style-1][playernum][roman type] vs [special-style-2][messypignum][roman type]: ";
