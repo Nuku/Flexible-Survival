@@ -69,7 +69,7 @@ When Play begins:
 	now cock change entry is "it is drawn up closer to your body by a feline sheath forming around it, your cock itself continues to stretch and change as well, becoming pointed and small barbs growing out of it, both for your feline mates pleasure and your own"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 18;
 	now dex entry is 26;
-	now sta entry is 16;					
+	now sta entry is 16;
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 18;

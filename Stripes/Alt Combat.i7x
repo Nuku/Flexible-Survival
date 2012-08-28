@@ -93,7 +93,7 @@ To Combat Menu:
 			next;
 		otherwise:
 			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee [bold type]T[roman type]hrow the fight[line break],";
+			say "Choose your action numerically or use: [bold type]A[roman type]ttack, [bold type]I[roman type]tem, [bold type]P[roman type]ass, [bold type]S[roman type]ubmit, [bold type]F[roman type]lee, [bold type]T[roman type]hrow the fight[line break]";
 			let combatopt be 0;
 			repeat through table of basic combat:
 				increase combatopt by 1;
@@ -472,8 +472,10 @@ This is the flee rule:
 			say "You release your cover cloud and try to escape.";
 			increase gascloud by 3;
 		increase combat bonus by gascloud;
-	if hardmode is true and the combat bonus is less than -10:
-		now the combat bonus is -10;
+	if hardmode is true and the combat bonus is less than -11:
+		now the combat bonus is -11;
+	if hardmode is false and the combat bonus is less than -9:
+		now the combat bonus is -9;
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the combat bonus is greater than 8:
@@ -880,8 +882,10 @@ this is the intstrike rule:
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
 			decrease combat bonus by 3;
-		if hardmode is true and the combat bonus is less than -10:
-			now the combat bonus is -10;
+		if combat bonus is less than -11:
+			now the combat bonus is -11;
+		if hardmode is true and the combat bonus is less than -8:
+			now the combat bonus is -8;
 		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
 		let the roll be a random number from 1 to 20;
 		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
