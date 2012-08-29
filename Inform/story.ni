@@ -11,7 +11,7 @@ use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 80000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 45000.
-use ALLOC_CHUNK_SIZE of 95000.
+use ALLOC_CHUNK_SIZE of 100000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 300.
 Use maximum indexed text length of at least 5000.
@@ -4887,6 +4887,7 @@ Include Pegasus by Kaleem mcintyre.
 Include Gargoyle by Kaleem mcintyre.
 Include Manticore by Kaleem mcintyre.
 Include Minotaur by Kaleem mcintyre.
+Include Gels by Darthan.
 Include Coyote by Darthan.
 Include Retriever by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
