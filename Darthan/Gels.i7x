@@ -249,7 +249,7 @@ When Play begins:
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]slender[or]gelatinous[or]feminine[or]curvy[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]slender[or]feminine[or]curvy[or][if player is gelskinned]gelatinous[otherwise]slender[end if][or][if player is gelskinned]jelly[otherwise]feminine[end if][or][if player is gelskinned]transparent[otherwise]curvy[end if][at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "gelatin";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -304,7 +304,7 @@ When Play begins:
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]muscled[or]gelatinous[or]masculine[or]well-toned[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]muscled[or]masculine[or]well-toned[or][if player is gelskinned]gelatinous[otherwise]muscled[end if][or][if player is gelskinned]jelly[otherwise]masculine[end if][or][if player is gelskinned]transparent[otherwise]well-toned[end if][at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "gelatin";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -359,7 +359,7 @@ When Play begins:
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]slender[or]gelatinous[or]feminine[or]curvy[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]slender[or]feminine[or]curvy[or][if player is gelskinned]gelatinous[otherwise]slender[end if][or][if player is gelskinned]jelly[otherwise]feminine[end if][or][if player is gelskinned]transparent[otherwise]curvy[end if][at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "gelatin";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
@@ -502,6 +502,39 @@ to say gel3:
 
 instead of sniffing Purple Jello:
 	say "The jello smells like grapes.";
+
+
+Section 5 - Definitions
+
+Definition: a person is gelfaced:
+	if the facename of the player is "Pink Gel", yes;
+	if the facename of the player is "Blue Gel", yes;
+	if the facename of the player is "Purple Gel", yes;
+	no;
+
+Definition: a person is gelskinned:
+	if the skinname of the player is "Pink Gel", yes;
+	if the skinname of the player is "Blue Gel", yes;
+	if the skinname of the player is "Purple Gel", yes;
+	no;
+
+Definition: a person is gelbodied:
+	if the bodyname of the player is "Pink Gel", yes;
+	if the bodyname of the player is "Blue Gel", yes;
+	if the bodyname of the player is "Purple Gel", yes;
+	no;
+
+Definition: a person is gelcocked:
+	if the cockname of the player is "Pink Gel", yes;
+	if the cockname of the player is "Blue Gel", yes;
+	if the cockname of the player is "Purple Gel", yes;
+	no;
+
+Definition: a person is geltailed:
+	if the tailname of the player is "Pink Gel", yes;
+	if the tailname of the player is "Blue Gel", yes;
+	if the tailname of the player is "Purple Gel", yes;
+	no;
 
 
 Gels ends here.
