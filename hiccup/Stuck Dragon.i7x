@@ -218,7 +218,7 @@ Instead of conversing the Christy:
 		say "     'Did you find something slimy I can use to free myself with? If you have something like that, please FREE me.' Christy says.";
 	otherwise if hp of Christy > 1 and hp of Christy < 5:
 		say "     'Thanks again for freeing me, can you fuck me now? Gah! I didn't mean to say that! [one of]Damn it, it feels like my body has been constantly in heat since I got infected!'[or]If the other girls saw me like this, I'd become the laughing stock of the nunnery.'[or]Must think of anything except... hot... wonderful... sex.'[or]None of this would have happened if I hadn't drunk that strange bottle of hot sauce that I found in the food court.'[at random]";
-	otherwise if hp of Christy >= 5:
+	otherwise if hp of Christy >= 7:
 		say "     'Thanks again for freeing me.  Maybe we could play around again soon.'  She blushes at her words and puts a paw over her draconic muzzle, still a little embarassed by her urges.  'Oh, I really shouldn't have said that.  [one of]Damn it, it feels like my body has been constantly in heat since I got infected!'[or]If the other girls saw me like this, I'd become the laughing stock of the nunnery.'[or]Must think of anything except... hot... wonderful... sex.'[or]Must think of anything except... big... beautiful... eggs.'[or]None of this would have happened if I hadn't drunk that strange bottle of hot sauce that I found in the food court.'[or]I'm glad you enjoyed being my egg again.  Maybe I can make other friends who'll enjoy it too.'[at random]";
 
 
@@ -463,9 +463,9 @@ to say christysex:
 Section 7 - Oral / UB
 
 to say christyoral:
-	if thirst of Christy is 0:
+	if hp of Christy is 4:
 		say "     Looking for more dragonloving, you nuzzle and scritch her head, going to those sensitive spots that feel so good and wear down her resistance.  'Those poundings you gave me earlier felt so good.  Ah!  I mean... oh whatever.  Could we maybe try something a little different this time?' she starts to ask, blushing her red scales to an even deeper crimson.  'I was thinking I might, you know... get a taste this time.' she says, sliding her tongue across her large muzzle at just the thought of it.  Smiling a little at how well this slutty dragoness is coming along, you nod in agreement.";
-	otherwise if thirst of Christy is 3 and ( dragontype is 1 or dragontype is 2 ) and ( bodyname of player is not "Slutty Dragoness" or bodyname of player is not "Horny Dragon" ) and scalevalue of player <= 4:
+	otherwise if hp of Christy is 7 and ( dragontype is 1 or dragontype is 2 ):
 		say "     Looking for more dragonloving, you nuzzle and scritch her head, going to those sensitive spots that feel so good and wear down her resistance.  'Oh baby... I feel so empty inside.  I want you in me again.  ALL of you,' says, emphasizing her desires.  'Wait, I... yes, I want you in me again, stuffed deep inside me as a big, heavy egg,' she admits, letting her tongue slide across your body as her hips quiver in anticipation of fulfilling her lustful needs.  You agree readily, finding yourself longing to experience it again.";
 	otherwise:
 		say "     Looking for more dragonloving, you nuzzle and scritch her head, going to those sensitive spots that feel so good and wear down her resistance.  She starts to rumble and nuzzles her way down to your crotch, moaning as she takes in your scent.  'Mmm... your [if cocks of player > 0]cock[otherwise]cunt[end if] smells so tasty.  Eeep!  I mean... screw it... I'd really like another taste of my sexy hero,' she moans, taking in another deep breath of your sex, which sets her hips aquiver.";
@@ -477,7 +477,7 @@ to say christyoral:
 	otherwise:
 		say "     The dragoness moans in delight at the attention she's receiving and her tonguework becomes more and more eager as well.  Christy slides her long, slender tongue across your [cock size desc of player] [cock of player] cock[if cocks of player > 1]s[end if], enjoying the taste of your maleness.  A little too small from her perspective, she doesn't take [if cocks of player > 1]them[otherwise]it[end if] into her muzzle and instead licks and kisses at [if cocks of player > 1]them[otherwise]it[end if] and your balls.  While you can tell she's inexperienced, she does try very eagerly and her body seems to know what to do, helping her along considerably.  Her flexible tongue is very pleasurable and you start rocking your hips, thrusting against the playful appendage as it alternates between sliding across your shaft[if cocks of player > 1]s[end if] and your balls.";
 	say "     With all of this, you try your best on staying focused on pleasing the lusty dragoness as well, using your hands, mouth and tongue to lavish attention up her juicy cunt.  Her large pussy quivers and her ass and tail twitch as her excitement builds before peaking with the powerful orgasm that sends her pussy juices washing over you as she cums hard.  Washed over by this rush of her orgasmic fluids and its rich, arousing scent, you cum as well, [if cocks of player > 0 and cock length of player > 7]pumping your load into her muzzle[otherwise if cocks of player > 0]spraying your load across her muzzle[end if][if cocks of player > 0 and cunts of player > 0] and [end if][if cunts of player > 0]soaking your crotch and her tongue in your feminine juices[end if].";
-	if thirst of Christy is 2 and ( dragontype is 1 or dragontype is 2 ):
+	if hp of Christy is 6 and ( dragontype is 1 or dragontype is 2 ):
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     Still awash in the afterglow of your orgasm, not don't notice immediately as Christy's paws move in and take a hold of you, pushing your face firmly to her quivering cunt.  You just continue to lick and rub at it as those trembling folds start to slide over your head and hands.  It's not until your shoulders are pulled in that you notice something's amiss and you're once again being pulled back into the dragoness's cunt.  You are torn between struggling and squirming just enough to increase her pleasure, a hidden part of you longing to be inside her again.  Noticing your playful squirming, the dragoness moans and rubs her taloned paws over your [bodytype of player] body.";
@@ -486,9 +486,8 @@ to say christyoral:
 		say "[dragonchange]";
 		now tempnum is 0;
 		follow the turnpass rule;
-		now thirst of Christy is 3;
-		now hp of Christy is 5;
-	otherwise if thirst of Christy is 3 and ( dragontype is 1 or dragontype is 2 ):
+		now hp of Christy is 7;
+	otherwise if hp of Christy is 7 and ( dragontype is 1 or dragontype is 2 ):
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     With the foreplay done, you and Christy get on to the main event when her paws take a hold of you and gently press you against her quivering, still orgasming cunt.  Knowing what's coming and eager for it by now, you lick and kiss eagerly at her pussy before her wet folds start to slip over your head and hands.  You squirm and wriggle about, making her moan and roar in ecstacy.  Her inner walls squeeze and tug at you, drawing you inwards.";
@@ -497,8 +496,8 @@ to say christyoral:
 		say "[dragonchange]";
 		now tempnum is 0;
 		follow the turnpass rule;
-	if thirst of Christy is 0 or thirst of Christy is 1:
-		if thirst of Christy < 2, increase thirst of Christy by 1;
+	otherwise:
+		if hp of Christy < 6, increase hp of Christy by 1;
 		if ( dragontype is 1 and (bodyname of player is not "Slutty Dragoness" or facename of player is not "Slutty Dragoness" or cockname of player is not "Slutty Dragoness" or skinname of player is not "Slutty Dragoness" or tailname of player is not "Slutty Dragoness") ) or ( dragontype is 2 and (bodyname of player is not "Horny Dragon" or facename of player is not "Horny Dragon" or cockname of player is not "Horny Dragon" or skinname of player is not "Horny Dragon" or tailname of player is not "Horny Dragon") ):
 			say "[dragonchange]";
 	increase libido of Christy by 1;
@@ -514,7 +513,9 @@ Section 8 - Guide to Christy Stats
 [ 2 = just freed	]
 [ 3 = sexed once	]
 [ 4 = sexed more	]
-[ 5 = UB'd again	]
+[ 5 = oral once	]
+[ 6 = oral twice	]
+[ 7 = UB'd again	]
 
 [ lust of Christy		]
 [ for M/F sex		]
@@ -524,17 +525,15 @@ Section 8 - Guide to Christy Stats
 [ 3+ = repeats above	]
 
 [ libido of Christy				]
-[ for F/F sex (and tiny cock/oral sex)	]
+[ for non-M/F fucking (F/F, oral, UB)	]
 [ 0 = none						]
 [ 1 = recent sex					]
 [ 2+ = repeats above				]
 
-[ thirst of Christy	]
-[ oral/UB sex		]
-[ 0 = none			]
-[ 1 = oral once		]
-[ 2 = oral 2+		]
-[ 3 = UB again		]
+[ dragontype			]
+[ 1 = F/H: Slutty Dragoness	]
+[ 2 = M: Horny Dragon		]
+
 
 Section 9 - Endings
 
@@ -558,8 +557,8 @@ When play ends:
 				say "The dragoness you found trapped in a doorway is discovered by the military.  They examined her until they discovered that she was no longer infectious, then they left... without freeing her from the doorway.  Eventually, the trapped dragoness became a tourist attraction and her exposed pussy gets fucked by almost every male tourist that visits the city.";
 		otherwise:
 			if lust of Christy > 2:
-				say "     After you freed her from the doorway where you found her, Christy[apostrophe]s eggs eventually hatch.  Caring for her children helps to mellow out her lust enough for her to learn how to control it[if hp of Christy >= 5], more or less[end if].  Her children grow up to be fine dragons and she loves them dearly, even after they start kidnapping princesses[if dragonessfuck is 1].  She never discovers that you were the one who knocked her up before freeing her[end if][if humanity of player > 9 and hp of Christy > 3].  Her dragon offspring permit you to visit the dragoness from time to time and she eagerly accepts your lustful advances now[end if][if humanity of player > 9 and hp of Christy >= 5].  While you don't enter her womb again, preferring to stay as you are, you do help her introduce some [']new friends['] her offspring have found to this unusual pleasure, ensuring the dragoness has a fine collection of lustful lovers of her own[end if].";
+				say "     After you freed her from the doorway where you found her, Christy[apostrophe]s eggs eventually hatch.  Caring for her children helps to mellow out her lust enough for her to learn how to control it[if hp of Christy >= 7], more or less[end if].  Her children grow up to be fine dragons and she loves them dearly, even after they start kidnapping princesses[if dragonessfuck is 1].  She never discovers that you were the one who knocked her up before freeing her[end if][if humanity of player > 9 and hp of Christy > 3].  Her dragon offspring permit you to visit the dragoness from time to time and she eagerly accepts your lustful advances now[end if][if humanity of player > 9 and hp of Christy >= 7].  While you don't enter her womb again, preferring to stay as you are, you do help her introduce some [']new friends['] her offspring have found to this unusual pleasure, ensuring the dragoness has a fine collection of lustful lovers of her own[end if].";
 			otherwise:
-				say "     After you freed her from the doorway where you found her, Christy was eventually found by the military.  They examined her until they discovered that she was no longer infectious, then they left her alone. Christy struggled for months to control the extreme lust that the infection gave her, but in the end she decided to embrace her new, slutty nature and she became a very famous porn star[if humanity of player > 9 and hp of Christy > 3].  You visit the dragoness from time to time and enjoy the company of her and her lustful co-stars[end if][if humanity of player > 9 and hp of Christy >= 5].  You sometimes even get the special treat of helping her intimately introduce one of her eager fans to her womb, ensuring the dragoness has a fine collection of lustful lovers of her own[end if].";
+				say "     After you freed her from the doorway where you found her, Christy was eventually found by the military.  They examined her until they discovered that she was no longer infectious, then they left her alone. Christy struggled for months to control the extreme lust that the infection gave her, but in the end she decided to embrace her new, slutty nature and she became a very famous porn star[if humanity of player > 9 and hp of Christy > 3].  You visit the dragoness from time to time and enjoy the company of her and her lustful co-stars[end if][if humanity of player > 9 and hp of Christy >= 7].  You sometimes even get the special treat of helping her intimately introduce one of her eager fans to her womb, ensuring the dragoness has a fine collection of lustful lovers of her own[end if].";
 
 Stuck Dragon ends here.
