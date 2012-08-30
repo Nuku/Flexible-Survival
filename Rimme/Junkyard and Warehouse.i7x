@@ -309,8 +309,8 @@ To stevenfuck:
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		otherwise:
 			say "He tries to pull away, in one last attempt at freedom, but you grab him with both hands and kiss him hard as you wriggle your whole body up and down his member. He falls against the bookshelf as you hug him more tightly his feet rising up off the ground, hands gradually coming to meet yours.";
-				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "Finally, he pulls his mouth away from yours, but only for a second, as he darts back in, kissing you in the cheek and neck. His moans become whinnies of joy as his face stretches forward, kissing you further and further down your face. You sidle around as he kisses the back of your neck, and inserts his giant horse penis into your ass.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
