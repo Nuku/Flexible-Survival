@@ -40,7 +40,7 @@ When Play begins:
 	now ass change entry is "it tightens and powerful muscles shift around underneath the skin, and your rear seems to lengthen as a long leonine tail presses its way out of your body, causing you to shiver in pleasure at the feel of the air over your new appendage as it lashes behind you eagerly"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it tapers and draws to a point, soft barbs appearing along its length as it takes on a more leonine appearance, the skin shifting around near your groin to wrap it in a proper feline sheath and draw it up close to your body, where it can wait eagerly until an opportunity to use it presents itself"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 18;
-	now dex entry is 18;
+	now dex entry is 22;
 	now sta entry is 12;					
 	now per entry is 20;
 	now int entry is 25;

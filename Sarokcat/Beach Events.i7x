@@ -248,25 +248,20 @@ Instead of resolving a Lucky seashell:
 		say "Finding the shell makes you scour the beach and pay much more attention to your surroundings as you continue on your walk, just in case there are any other such treasures.  And while you don[apostrophe]t actually find any more treasures on your trip down the beach, you do feel as if your eyes have become a bit sharper from the experience.";
 		increase perception of player by 2;
 		say "your perception has increased by 2!";
-		stop the action;
-	if T is 2:
+	otherwise if T is 2:
 		say "Walking along the beach afterwards with a spring in your step, you scan the sands around you just in case something else useful turns up, and after just a short time, you spot a bottle of water! Wow this really must be your lucky day!";
 		Add "water bottle" to invent of player;
-		stop the action;
-	if T is 3:
+	otherwise if T is 3:
 		say "Walking along the beach with the shell in hand, you can[apostrophe]t help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately.  Eventually you manage to drop it into the surf, and no matter how hard you look you don[apostrophe]t find the shining shell again.  Still you resolve to pay a bit more attention to how you move your hands from now on so you don[apostrophe]t drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn[apostrophe]t a total loss";
 		increase dexterity of player by 2;
 		say "your dexterity has increased by 2!";
-		stop the action;
-	If T is 4:
+	otherwise if T is 4:
 		say "Traveling along with the shell, it seems like tripping over it was the least of your worries today!  Your walk turns into a harrowing experience as you slip on the sand and fall several times, the wind blows sand into your face, and your feet seem to find every rock on the beach,  deciding maybe it was the shells fault after the 4th time you are nearly dragged out to sea by a sudden wave, you toss the shining pretty thing into the sea from whence it came. Feeling much more ragged from the experience, though it has taught you a bit about stubbornly enduring things....";
 		increase stamina of player by 2;
 		say "your stamina has increased by 2!";
-		stop the action;
 	otherwise:
 		say "taking the shell along with you, you find that it seems to make the day brighter as you carry it, and make you feel a bit more human just to have it with you, eventually reaching the end of your walk, you set the shell back down on the beach so it can brighten someone else's day up like it did yours'";
 		increase humanity of player by 20;
-		stop the action;
 
 
 Beach Events ends here.

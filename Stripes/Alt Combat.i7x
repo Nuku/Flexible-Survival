@@ -898,7 +898,13 @@ Part 6 - Conditional Alternate Attack Example - Humping
 
 this is the humping rule:
 	choose row monster from table of random critters;
-	if bodyname of player is name entry and a random chance of 1 in 5 succeeds:
+	if monsterpowerup is 1:
+		say "The enhanced attack strikes!  [run paragraph on]";
+		standardhit;							[standard attack w/enhanced stats]
+		decrease wdam entry by ( ( lev entry + 7 ) / 4 );	[then restore stats to normal]
+		increase dex entry by 2;
+		now monsterpowerup is 0;
+	otherwise if bodyname of player is name entry and a random chance of 1 in 5 succeeds:
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
 		let dam be ( ( wdam entry times ( ( a random number from rangenum to 120 ) + 30 + ( 2 * lev entry ) ) ) / 100 );
 		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
@@ -913,12 +919,6 @@ this is the humping rule:
 		say "You are [descr].";
 	otherwise:
 		standardhit;							[if not a charged attack, act as normal]
-	if monsterpowerup is 1:
-		say "The enhanced attack strikes!  [run paragraph on]";
-		standardhit;							[standard attack w/enhanced stats]
-		decrease wdam entry by ( ( lev entry + 7 ) / 4 );	[then restore stats to normal]
-		increase dex entry by 2;
-		now monsterpowerup is 0;
 
 Part 7 - Alternate Attack Example - Feline Taur Pounce
 
