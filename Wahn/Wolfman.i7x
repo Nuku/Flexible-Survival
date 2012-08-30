@@ -100,17 +100,17 @@ When Play begins:
 	now skin change entry is "dense black fur spreads rapidly over your form. Well, mostly black - your chest shows a large '22' on it in blood-red fur, just like your back"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a mid-length lupine tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "your member grows thicker as the top of it grows to a sharp point, a large canine knot forming at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 14;
-	now dex entry is 20;
+	now str entry is 17;
+	now dex entry is 16;
 	now sta entry is 15;   
-	now per entry is 18;
+	now per entry is 12;
 	now int entry is 12;
-	now cha entry is 16;
+	now cha entry is 14;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 70;			[ The monster's starting hit points. ]
+	now hp entry is 50;			[ The monster's starting hit points. ]
 	now lev entry is 6;                 [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 15;               [ Monster's average damage when attacking. ]
-	now area entry is "";               [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now wdam entry is 10;               [ Monster's average damage when attacking. ]
+	now area entry is "nowhere";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;        [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 10;         [ Cock width, more commonly used for ball size. ]

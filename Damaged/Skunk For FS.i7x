@@ -257,6 +257,7 @@ to skspray:						[ignores defences, requires no hit, hum/lib check instead to re
 	if libido of player >= 110 or hp of player <= 0 or humanity of player < 10:
 		if hp of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
+		if humanity of player < 10, now fightoutcome is 21;
 		lose;
 	otherwise:
 		wait for any key;
