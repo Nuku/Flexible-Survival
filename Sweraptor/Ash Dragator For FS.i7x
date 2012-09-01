@@ -1,4 +1,5 @@
-Ash Dragator For FS by Sweraptor begins here.
+Version 2 of Ash Dragator For FS by Sweraptor begins here.
+[ Version 2 - Fire Breath attack added]
 
 "Adds a Dragator to Flexible Survivals Wandering Monsters table, With Impreg chance. Dragators are naturally born feral Ash Drakes that for some magical reason are born underdeveloped"
 
@@ -19,6 +20,11 @@ to say dragator attack:
 		say "The Dragator lets out a primordial roar, the noise shakes you to your core and makes you whimper involuntarily. The beast crawls closer to you placing its head beside yours you see it eye to eye. Slitted pupils contract as they focus on your own. The jaws of the monster snap viciously beside you and its hot lewd breath causes your stomach to churn. Then strangely enough the beast pulls away from you, seemingly unsatisfied. The Ash Dragator crawls off to hide in the debris and wait for more worthy mates to bear its spawn.'";
 		now dragatordefeat is 1;
 
+to say dragator desc:
+	now firebreathcount is 0;
+	now firebreathready is false;
+	say "From amidst the ruins a beast crawls forth on its belly. A feral crocodile would have been your first guess but the thing becomes more alien the longer you stare at it. The hard bony scales are [one of]dark grey[or]black[or]Dark speckled with red[at random] and covered in soot, In the divots between each scale you can just discern a faint glow of orange light. The creature is propelled forward by six stubby legs. With its four beady eyes fixated upon it lunges forward. Fearing being caught from behind by such a beast you ready yourself for a fight.";
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -32,7 +38,7 @@ When Play begins:
 	now attack entry is "[one of]The croc lunges forth, and with a snap of its jaws clamps its horrible teeth down on your leg. He yanks you back and forth, your badly injured by the time you pry yourself free.[or]The Dragator lands a vicious bite on you, then pulls back quickly.[or]The vicious creature knocks you over with a powerful blow and gets its clawed forefeet onto you, clawing and slashing while its weight crushes down on you.  After several slashes, it moves back.[at random]";
 	now defeated entry is "The Dragator begins to limp away on its six limbs, but as it attempts to escape you catch up to it. Leaping onto its back you deliver the killing blow.";
 	now victory entry is  "The Dragator takes in a deep breath. With a mighty roar he unleashes a torrent of hellfire from his maw, engulfing everything in his path, including you.[dragator attack]";
-	now desc entry is "From amidst the ruins a beast crawls forth on its belly. A feral crocodile would have been your first guess but the thing becomes more alien the longer you stare at it. The hard bony scales are [one of]dark grey[or]black[or]Dark speckled with red[at random] and covered in soot, In the divots between each scale you can just discern a faint glow of orange light. The creature is propelled forward by six stubby legs. With its four beady eyes fixated upon it lunges forward. Fearing being caught from behind by such a beast you ready yourself for a fight.";[ Description of the creature when you encounter it.]
+	now desc entry is "[dragator desc]";[ Description of the creature when you encounter it.]
 	now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your veins. You have an Ash Dragon head"; 
 	now body entry is "tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forearms and joints. Your Ash Dragon body is a fearsome sight"; 
 	now skin entry is "[one of]obsidian black scales for[or]ashen colored scales for[at random]";

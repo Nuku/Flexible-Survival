@@ -1,5 +1,5 @@
-Version 2 of Ash Drakenoid by Sweraptor begins here.
-[Version 2 - Drakenoid Oral and Blanche Fight]
+Version 3 of Ash Drakenoid by Sweraptor begins here.
+[Version 3 - Fire Breath attack and Blanche Fight]
 
 "Adds an Ash Drakenoid to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [This will add the medium level Ash Dragon Mob. Acting as footsoldiers for the "Ash Gods" army]
@@ -32,6 +32,8 @@ to say Ash Drakenoid attack:
 
 to say Ash Drakenoid desc:
 	choose row monster from the table of random critters;
+	now firebreathcount is 0;
+	now firebreathready is false;
 	if blanchefight is true:
 		say "     The fearsome herm Drakenoids seems quite upset about the interruption, moving to block you from the wolf, thinking perhaps you want to steal her prize.  Growling and rubbing the surprise blow you managed to deal to it, she rubs the wound and glares at you before charging to attack.  'You won't take what's mine, though I may take you as well,' she shrieks.  Her humanoid dragon form is fearsome to behold.  Shining obsidian scales contrasting the bright red magma blood which glows through her viens.  The nude body serves as natural armour.  There are spikes growing along her limbs and think plating on her joints.  She has reptilian horns jutting from her head. A fiendishly barbed behemoth of a cock hangs semi erect from between her thighs.  A loss to this creature would not only be painful, but judging by the size of her large glowing testes, a defeat will also carry consequences.";
 		let temp1 be hp entry / 8;

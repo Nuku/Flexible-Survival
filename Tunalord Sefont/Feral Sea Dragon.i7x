@@ -1,4 +1,5 @@
-Feral Sea Dragon by Tunalord Sefont begins here. 
+Version 2 of Feral Sea Dragon by Tunalord Sefont begins here.
+[ Version 2 - Water Blast (firebreath) attack added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Feral Sea Dragon to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -52,7 +53,12 @@ to say dragon attack:
 
 
 To say dragon loss:
-		say "You grin in triumph in your success! This mighty beast vanquished under your own power.";
+	say "You grin in triumph in your success! This mighty beast vanquished under your own power.";
+
+to say fsdm desc:
+	now firebreathcount is 0;
+	now firebreathready is false;
+	say "You pause as you notice something in the water.  You stare at it trying to identify it when suddenly a massive beast launches out of the water and lands on the beach near you[one of]. The dragon sniffs the air before looking at you hungrily[or]. The dragon roars its challenge to you as it glares at you[or]. The dragon eyes you unnervingly as it seems to consider you for some purpose[at random]. Suddenly its massive bulk is rushing towards you and the option of escape is looking very tempting.";
 	
 Section 2 - Monster Insertion
 
@@ -66,7 +72,7 @@ When Play begins:
 	now attack entry is "[one of]The dragons massive head slams against you.[or]The dragon slaps you against a cluster of rocks with its rudder like tail.[or]It slams you into the soft sand by hammering you with its narrow tail.[or]He stomps you into the soft sand with its webbed hand like paw.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[dragon loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[dragon attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "You pause as you notice something in the water.  You stare at it trying to identify it when suddenly a massive beast launches out of the water and lands on the beach near you[one of]. The dragon sniffs the air before looking at you hungrily[or]. The dragon roars its challenge to you as it glares at you[or]. The dragon eyes you unnervingly as it seems to consider you for some purpose[at random]. Suddenly its massive bulk is rushing towards you and the option of escape is looking very tempting.";[ Description of the creature when you encounter it.]
+	now desc entry is "[fsdm desc]";[ Description of the creature when you encounter it.]
 	now face entry is "draconic muzzle filled with razor sharp teeth. Rather delicate ridges and fins line the sides of your";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "a sleek streamlined mass of draconic bulk.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]blue smoothly scaled[or]blue softly scaled[or]blue delicately scaled[at random]";[ skin Description, format as the text "You have (your text) skin"] 

@@ -1,4 +1,5 @@
-Feral Sea Dragoness by Tunalord Sefont begins here. 
+Version 2 of Feral Sea Dragoness by Tunalord Sefont begins here.
+[ Version 2 - Water Blast (firebreath) attack added]
 
 "Adds a Feral Sea Dragoness to Flexible Survivals Wandering Monsters table"
 
@@ -40,7 +41,12 @@ to say dragoness attack:
 
 
 To say dragoness loss:
-		say "The dragoness makes a long pleading wail before rushing back into the depths.";
+	say "The dragoness makes a long pleading wail before rushing back into the depths.";
+
+to say fsdf desc:
+	now firebreathcount is 0;
+	now firebreathready is false;
+	say "You pause as you notice something in the water.  You watch it walk onto the sandy coast.  It walks around the beach a moment sniffing the air.  After a moment she turns towards you[one of].  The dragoness coos as she begins to come closer[or].  The dragoness sings briefly sending a jolt of pleasure through you[or].  The dragoness chirps as she tilts her finned head and starts to get closer[at random].  She gets close to you and tries to nip at you.";
 	
 Section 2 - Monster Insertion
 
@@ -55,7 +61,7 @@ When Play begins:
 	now attack entry is "[one of]The dragoness calls out and nips at you.[or]The dragoness slaps you with her narrow tail knocking you across the ground.[or]She tackles you and grinds herself against you before you manage to get free thanks to the loose sand.[or]She sings to you.  Breaking your focus and making you trip over a rock.[at random]";
 	now defeated entry is "[dragoness loss]";
 	now victory entry is  "[dragoness attack]";
-	now desc entry is "You pause as you notice something in the water.  You watch it walk onto the sandy coast.  It walks around the beach a moment sniffing the air.  After a moment she turns towards you[one of].  The dragoness coos as she begins to come closer[or].  The dragoness sings briefly sending a jolt of pleasure through you[or].  The dragoness chirps as she tilts her finned head and starts to get closer[at random].  She gets close to you and tries to nip at you.";
+	now desc entry is "[fsdf desc]";
 	now face entry is "draconic muzzle filled with barb like teeth.  Delicate ridges and fins line the sides of your";[ Reference "You have a (your text) face."] 
 	now body entry is "a sleek streamlined mass of masculine draconic bulk.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]blue smoothly scaled[or]blue softly scaled[or]blue delicately scaled[at random]";[Reference "You have (your text) skin"] 
