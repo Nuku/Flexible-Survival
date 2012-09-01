@@ -44,7 +44,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Yamato Dragon"; [Name of your new Monster]
-	now attack entry is "[one of]snaps it's neck forward like a snake to bite at you.[or]whips it's tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]inhales deeply before breathing a wave of blue fire over you, strangely it doesn't burn but every pain receptor on your body screams in agony.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]The oriental dragon[or]The Yamato Dragon[or]It[purely at random] [one of]snaps it's neck forward like a snake to bite at you.[or]whips it's tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]slams you with one of its clawed paws.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "You finally manage to knock the dragon off balance, but before it falls onto the ground he starts to levitate into the air and says 'You've won this battle, but I will not be slain so easily.' as he flies away."; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Yamato Dragon attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "As you're walking through the park you look up and notice a serpent-like creature flying and coiling it's way through the sky.  As you try to figure out how it's flying with no wings the creature spots you staring at it and within an instant it flies to and lands in front of you.  The massive serpent-like dragon looks down upon you with piercing eyes and you suddenly wish you were anywhere but here.";[ Description of the creature when you encounter it.]
@@ -67,7 +67,7 @@ When Play begins:
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 100;			[ How many HP has the monster got? ]
 	now lev entry is 10;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 35;			[Amount of Damage monster Does when attacking.]
+	now wdam entry is 24;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Park";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
@@ -89,7 +89,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 [ Edit this to have the correct Name as wall]
 Yamato Dragon For FS ends here.

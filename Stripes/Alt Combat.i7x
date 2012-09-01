@@ -767,6 +767,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "hypno"	retaliation rule	--	--	--	--	--	--	--	--	intstrike rule	
 "hump"	retaliation rule	--	--	humping rule	100	--	--	--	--	--
 "ftaurpounce"	retaliation rule	--	--	ftaurpounce rule	20	--	--	--	--	--
+"firebreath"	firebreath rule	--	--	--	--	--	--	--	--	--
 
 Chapter 2 - Sample/Basic Rules
 
@@ -944,7 +945,110 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 	follow the player injury rule;
 	say "You are [descr].";
 
+Part 8 - Alternate Combat Example - Fire Breath
 
+firebreathcount is a number that varies.
+firebreathready is a truth state that varies.  firebreathready is usually false.
+
+this is the firebreath rule:
+	choose row monster from the table of random critters;
+[	say "TEST: firebreathcount = [firebreathcount].";	]
+	if firebreathready is true:								[fire attack!]
+		now firebreathready is false;
+		now firebreathcount is 0;
+		let fbhit be 0;
+		let playernum be 10 + dexterity of player + level of player;
+		let dragonnum be 10 + per entry + lev entry - peppereyes;
+[		say "TEST: player = [playernum] vs dragon = [dragonnum]:[line break]";	]
+		let playernum be a random number between 1 and playernum;
+		let dragonnum be a random number between 1 and dragonnum;
+		say "[special-style-1][playernum][roman type] vs [special-style-2][dragonnum][roman type]: ";
+		let dam be 0;
+		if ( playernum * 2 ) < dragonnum:
+			let dam be ( ( wdam entry times a random number from 80 to 120 ) / 57 );	[+75% damage]
+			let fbhit be 2;		[Direct Hit]
+		otherwise if playernum < dragonnum:
+			let dam be ( ( wdam entry times a random number from 80 to 120 ) / 90 );	[+11% dmg]
+			let fbhit be 1;		[Partial Hit]
+		otherwise:
+			let fbhit be 0;		[Missed]
+		if name entry is "Ash Dragator":
+			if fbhit is 2:
+				say "[special-style-2][one of]The Dragator[or]The creature[or]The croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth.  A bright red wave of fire is spat out at you.  You try to evade, but the fiery blast washes over you.  You suffer [dam] damage![roman type]";
+			otherwise if fbhit is 1:
+				say "[one of]The Dragator[or]The creature[or]The croc-beast[at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth.  A bright red wave of [special-style-2]fire[roman type] is spat out at you.  You move to evade, but are still caught in part of the blast.  You suffer [special-style-2][dam][roman type] damage!";
+			otherwise:
+				say "[one of]The Dragator[or]The creature[or]The croc-beast[purely at random] lets out a primordial roar, energies and chemicals in its belly light up the inside of his mouth.  A bright red fireball is spat out in your direction, but you manage to evade it!";
+		otherwise if name entry is "Ash Drakenoid":
+			if fbhit is 2:
+				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath it took moments ago.  Unable to get out of the way, you throw up your arms to protect yourself as her gaping maw looses a fireball at you.  You are burned for [dam] damage![roman type]";
+			otherwise if fbhit is 1:
+				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago.  You attempt to move out of the way, but are still partially caught in the [special-style-2]fireball[roman type] loosed from her maw.  You are burned for [special-style-2][dam][roman type] damage!";
+			otherwise:
+				say "[one of]She[or]The Drakenoid[or]The dragon creature[purely at random] braces herself against the ground debris and expels the deep breath she took moments ago.  Scrambling, you manage to dive out of the way of the fireball she hurls at you from her maw!";
+		otherwise if name entry is "Ash Whelp":
+			if fbhit is 2:
+				say "[special-style-2][one of]The whelp[or]The creature[or]The Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you.  It strikes you squarely in the [one of]face[or]chest[purely at random].  You take [dam] damage![roman type]";
+			otherwise if fbhit is 1:
+				say "[one of]The whelp[or]The creature[or]The Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small [special-style-2]fireball[roman type] which is lobbed at you.  You try to evade, but it catches you on your [one of]leg[or]arm[or]shoulder[purely at random].  You take [special-style-2][dam][roman type] damage!";
+			otherwise:
+				say "[one of]The whelp[or]The creature[or]The Ash Whelp[purely at random] hiccups, then burps, then finally coughs up a small fireball which is lobbed at you.  You manage to avoid the poorly aimed attack!";
+		otherwise if name entry is "feral sea dragon" or name entry is "feral sea dragoness":
+			if fbhit is 2:
+				say "[one of]The sea dragon[or]The blue dragon[or]The [name entry][purely at random] unleashes a blast of scalding water like a firehose that slams into you.  You are knocked over and scalded badly by the constant stream of steaming sea water.  You take [special-style-2][dam][roman type] damage!";
+			otherwise if fbhit is 1:
+				say "[one of]The sea dragon[or]The blue dragon[or]The [name entry][purely at random] unleashes a blast of scalding water like a firehose that slams into you.  You dodge and weave away from the constant stream of steaming sea water, but are struck and scalded by it a several times.  You take [special-style-2][dam][roman type] damage!";
+			otherwise:
+				say "[one of]The sea dragon[or]The blue dragon[or]The [name entry][purely at random] unleashes a blast of scalding water like a firehose towards you.  You manage to dodge and weave away, rather narrowly at times, from the constant stream of steaming sea water!";
+		otherwise if name entry is "Yamato Dragon" or name entry is "Yamato Dragoness":
+			if fbhit is 2:
+				say "[one of]The oriental dragon[or]The [name entry][or]The serpentine dragon[purely at random] exhales a wave of blue fire over you.  Strangely, it doesn't burn but every pain receptor on your body screams in agony.  You suffer [special-style-2][dam][roman type] damage!";
+			otherwise if fbhit is 1:
+				say "[one of]The oriental dragon[or]The [name entry][or]The serpentine dragon[purely at random] exhales a wave of blue fire towards you.  Thankfully, you're only caught by part of the blast which strangely doesn't burn you, but everywhere the blue flames lick at screams in agony.  You suffer [special-style-2][dam][roman type] damage!";
+			otherwise:
+				say "[one of]The oriental dragon[or]The [name entry][or]It[or]The serpentine dragon[purely at random] exhales a wave of blue fire over you.  You thankfully manage to evade the strange blast which strangely doesn't seem to have damaged the landscape around you.";
+		otherwise:
+			if fbhit is 2:
+				say "[special-style-2][one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you.  The flames wash over you, burning you badly.  You take [dam] damage![roman type]";
+			otherwise if fbhit is 1:
+				say "[one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of [special-style-2]fire[roman type] at you.  You try to evade, but are still partially caught in the flames, burning you.  You take [special-style-2][dam][roman type] damage!";
+			otherwise:
+				say "[one of]Your opponent[or]The [name entry][or]Your enemy[purely at random] unleashes a blast of fire at you.  The flames come close, but you manage to get out of the way barely in time!";
+		if fbhit > 0:
+			let absorb be 0;
+			if "Toughened" is listed in feats of player:
+				increase absorb by dam divided by 5;
+			repeat with x running through equipped equipment:
+				increase absorb by ac of x;
+			now absorb is absorb / 2;	[defense at half effectiveness]
+			if absorb is greater than dam:
+				now absorb is dam;
+			if absorb is greater than 0:
+				say "You prevent [special-style-1][absorb][roman type] damage!";
+			decrease hp of the player by dam;
+			increase hp of player by absorb;
+			follow the player injury rule;
+			say "You are [descr].";
+		now peppereyes is 0;										[pepperspray wears off]
+		if hp of the player is greater than 0 and libido of player < 110:
+			wait for any key;
+		otherwise:
+			if hp of player <= 0, now fightoutcome is 20;
+			if libido of player >= 110, now fightoutcome is 21;
+			Lose;
+		rule succeeds;
+	otherwise if a random chance of firebreathcount in 100 succeeds:		[warning + normal attack]
+		say "[one of]The creature[or]Your opponent[or]The [name entry][purely at random] takes a deep breath and its insides rumble distressingly as it continues its assault.";
+		say "[line break]";
+		now firebreathready is true;
+		retaliate;
+	otherwise:											[normal attack]
+		if firebreathcount is 0:
+			now firebreathcount is 20;
+		otherwise:
+			increase firebreathcount by a random number between 2 and 6;
+			if firebreathcount > 40, now firebreathcount is 40;
+		retaliate;
 
 
 

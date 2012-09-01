@@ -1,7 +1,10 @@
-Ash Drakenoid by Sweraptor begins here.
+Version 2 of Ash Drakenoid by Sweraptor begins here.
+[Version 2 - Drakenoid Oral and Blanche Fight]
 
 "Adds an Ash Drakenoid to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [This will add the medium level Ash Dragon Mob. Acting as footsoldiers for the "Ash Gods" army]
+
+blanchefight is a truth state that varies.
 
 Section 1 - Monster Responses
 
@@ -10,7 +13,8 @@ Section 1 - Monster Responses
 to say Ash Drakenoid attack:
 	say "     'Yes, YEs! YES!!!' She cries out in victory as you finally collapse to the ground exhausted. As you begin to desperately crawl away you expect to feel her scaly weight immediately press down on your [skin of player] back. Yet this is not the case. Tits wobbling and erect cock flailing the Drakenoid runs in a wide circle around you apparently checking for other creatures. She is quickly satisfied and saunters over to your beaten form. 'Apologies for keeping you waiting, nothing more embarrassing than being mounted while, well, mounted.' She grins exposing her wickedly sharp teeth.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if a random chance of 1 in 3 succeeds:
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	if a random chance of 1 in 3 succeeds or blanchefight is true:
 		say "     She grabs your head forcefully and pulls you to your knees, grinding her glowing rock-hard member against your face.  'Mmm... I could use some relief.  Get to work, you whelp...' she growls, grabbing your jaw with her clawed hand, forcing you to open and take the hot shaft into your mouth.  You moan and pant from the scalding heat of her tool, feeling like a red-hot poker down your throat.  Sweat runs down your face as you try to pull away, but her grip is too strong.  She pulls you forward, forcing its full length into you so you can feel her heated balls pressed against your throat as well.  As the painful heat makes your eyes water, she urges you keep going.";
 		say "     'Oh, I know it's too hot for you... it's always so hot inside us... so hot, we've just got to get it out...'  She withdraws a few inches, then thrusts right back in, fucking your face as she rumbles in pleasure.  Each time she pulls back, you catch a glimpse of her glowing cock getting brighter as it grows hotter and hotter.  And glowing even brighter still are her heavy balls beneath that, filling up with fiery seed.  And when the glow becomes too much to even look at directly, her shaft swells up inside your poor, aching mouth.";
 		say "     As her peak strikes, she pulls your face back against her rough, obscidian scales, forcing you to take it all back in as the barbs around its tip and undercarriage swell and stiffen within you digging into your flesh while her cock surges in size, growing longer and thicker. The barbs only allow her to move the shaft one way, deeper within you.  As she presses down into your throat again, she lets out a hiss of her own, her whole face contorted in effort and concentration.  Molten semen heated to the boiling point is fired into you with powerful pulses, filling your belly with her hot, glowing cum.";
@@ -26,6 +30,16 @@ to say Ash Drakenoid attack:
 		say "      Prepared for this she quickly claps a hand over your mouth. Within you her cock swells in beat and size, the barbs around its tip and undercarriage swell and stiffen within you digging into your flesh. The barbs only allow her to move the shaft one way, deeper within you, and whilst fully hilted in you she lets out a hiss of her own, her whole face contorted in effort and concentration. Semen as hot as scalding water is fired into you with powerful pulses.[mimpregchance]";
 		say "      Before long her shaft begins to deflate, thankfully the barbs are the first to recede, and she pulls cleanly from you. Panting she stretches and then stands, stretching once more. She gives your recovering shaky form a backwards glance then heads off in the direction of the capitol tower at a brisk pace.";
 
+to say Ash Drakenoid desc:
+	choose row monster from the table of random critters;
+	if blanchefight is true:
+		say "     The fearsome herm Drakenoids seems quite upset about the interruption, moving to block you from the wolf, thinking perhaps you want to steal her prize.  Growling and rubbing the surprise blow you managed to deal to it, she rubs the wound and glares at you before charging to attack.  'You won't take what's mine, though I may take you as well,' she shrieks.  Her humanoid dragon form is fearsome to behold.  Shining obsidian scales contrasting the bright red magma blood which glows through her viens.  The nude body serves as natural armour.  There are spikes growing along her limbs and think plating on her joints.  She has reptilian horns jutting from her head. A fiendishly barbed behemoth of a cock hangs semi erect from between her thighs.  A loss to this creature would not only be painful, but judging by the size of her large glowing testes, a defeat will also carry consequences.";
+		let temp1 be hp entry / 8;
+		if temp1 > weapon damage of player, decrease monsterhp by weapon damage of player;
+		if temp1 <= weapon damage of player, decrease monsterhp by temp1;
+	otherwise:
+		say "     There is little warning as one of the fearsome herm Drakenoids seems to suddenly appear on some nearby debris.  With a supernatural howl she expertly navigates through the wreckage towards you.  '[one of]Another breeder for his lords army?[or]You are not prepared![at random]' she shrieks.  Her humanoid dragon form is fearsome to behold.  Shining obsidian scales contrasting the bright red magma blood which glows through her viens.  The nude body serves as natural armour, there are spikes growing along her limbs and think plating on her joints.  She has reptilian horns jutting from her head.  A fiendishly barbed behemoth of a cock hangs semi erect from between her thighs.  A loss to this creature would not only be painful, but judging by the size of her large glowing testes, a defeat will also carry consequences.";
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -37,10 +51,10 @@ When Play begins:
 	add { "Ash Drakenoid" } to infections of hermaphrodite;
 	Choose a blank row from Table of random critters;
 	now name entry is "Ash Drakenoid";
-	now attack entry is "[one of]The Drakenoid lets out a deafening shriek before charging you, claws outstretched. Once in close the herm savages you with her talon like hands.[or]The Drakenoid ducks under one of your blows and springs forth arms outstretched. Taking you full on you are slammed to the ground, and viciously clawed.[or] She braces herself against the ground debris and takes a deep breath. You throw up your arms to protect yourself as her gaping maw looses a fireball at you. You are burned.[or]Managing to pin the Drakenoid you try to force its face down to the round, but the lithe female twists and squirms in ways which should not be possible. She quickly turns the tables on you and you find yourself struggling to now get free of her grip! She bites down sharply on your neck as her unnaturally warm member digs painfully into your side.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]The Drakenoid lets out a deafening shriek before charging you, claws outstretched. Once in close the herm savages you with her talon like hands.[or]The Drakenoid ducks under one of your blows and springs forth arms outstretched. Taking you full on you are slammed to the ground, and viciously clawed.[or]Managing to pin the Drakenoid you try to force its face down to the round, but the lithe female twists and squirms in ways which should not be possible. She quickly turns the tables on you and you find yourself struggling to now get free of her grip! She bites down sharply on your neck as her unnaturally warm member digs painfully into your side.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "The Drakenoid groans in pain and she slumps over onto the ground. Immediately she begins to try and crawl away from you towards rubble where she may be able to hide.";
 	now victory entry is  "[Ash Drakenoid attack]";
-	now desc entry is "There is little warning as one of the fearsome herm Drakenoids seems to suddenly appear on some nearby debris. With a supernatural howl she expertly navigates through the wreckage towards you'[one of]Another breeder for his lords army?[or]You are not prepared![at random],' she shrieks. Her humanoid dragon form is fearsome to behold. Shining obsidian scales contrasting the bright red magma blood which glows through her viens. The nude body serves as natural armour, there are spikes growing along her limbs and think plating on her joints. She has reptilian horns jutting from her head. A fiendishly barbed, behemoth of a cock hangs semi erect from between her thighs, a loss to this creature would not only be painful, but judging by the size of her large glowing testes, a defeat will also carry consequences."; 
+	now desc entry is "[Ash Drakenoid desc]"; 
 	now face entry is "set of horns growing out of your head that form a curious crown. The rest of your face is jet black save the molten embroidery of your veins. You have an Ash Dragon head"; 
 	now body entry is "tall and imposing. Glittering black scales illuminated by your own luminescent blood. Cruel barbs and spikes form along your thighs, forearms and joints. Your Ash Dragon body is a fearsome sight"; 
 	now skin entry is "[one of]obsidian black scales for[or]ashen colored scales for[at random]";
@@ -82,7 +96,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "Ash Drakenoid":
