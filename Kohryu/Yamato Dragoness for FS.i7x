@@ -1,4 +1,5 @@
-Version 7 of Yamato Dragoness For FS by Kohryu begins here. 
+Version 2 of Yamato Dragoness For FS by Kohryu begins here.
+[ Version 2 - Fire Breath attack added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Yamato Dragoness to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -21,9 +22,12 @@ to say Yamato Dragoness attack:
 			say "The dragoness sees the size of you [cock of player] cock and exclaims 'Oh!  You're pretty big; this is going to be fun!' She then moves her body over you before lifting her upper-body into the air and kneeling her lower-body around your hips and where your cock is.  You look at where her pussy should be and become aroused as she opens her scaled slit to reveal her dripping wet red pussy.  She lowers her self slowly onto your [cock of player] member, despite her size her pussy is crushingly tight, her powerful inner walls holding you with all there might.  Every inch she works in sends waves of pleasure through you until she finally has all of your cock...And then she starts working her inner muscles, pulling and pushing and twisting around your [cock of player] cock.  It barely takes a minute of this before you are cumming into her depths, but she doesn't stop, she starts to writhe as her pussy abuses your cock more and more.  After what seems like a lifetime she finally stops, lifting herself off of your sore member she closes her pussy tight to seal in all the cum she milked from you and says 'That was fun!  We should do it again sometime.' and flies away.  Leaving you to pick yourself up and walk awkwardly away.";
 	otherwise:
 		Say "The dragoness doesn't seem to like what she smells and says 'What am I supposed to do with you?  Guess I have to find someone else' and flies off."
-                                            
-	
-	
+
+to say yamato dragoness desc:
+	now firebreathcount is 0;
+	now firebreathready is false;
+	say "As you're walking through the park you look up and notice a serpent-like creature flying and coiling it's way through the sky.  As you try to figure out how it's flying with no wings the creature spots you staring at it and within an instant it flies to and lands in front of you.  The massive serpent-like dragon looks down upon you with playful eyes and you can't help but wonder what it wants.";
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -36,7 +40,7 @@ When Play begins:
 	now attack entry is "[one of]The oriental dragon[or]The Yamato Dragoness[or]It[purely at random] [one of]snaps it's neck forward like a snake to bite at you.[or]whips it's tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]slams you with one of its clawed paws.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "You finally manage to knock the dragon off balance, but before it falls onto the ground she starts to levitate into the air and says 'You're pretty tough, I can't wait to fight you again.' as she flies away."; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Yamato Dragoness attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "As you're walking through the park you look up and notice a serpent-like creature flying and coiling it's way through the sky.  As you try to figure out how it's flying with no wings the creature spots you staring at it and within an instant it flies to and lands in front of you.  The massive serpent-like dragon looks down upon you with playful eyes and you can't help but wonder what it wants.";[ Description of the creature when you encounter it.]
+	now desc entry is "[yamato dragoness desc]";[ Description of the creature when you encounter it.]
 	now face entry is "mostly human but with shining silver hair and a mouth-full of bladed teeth";[ Face description, format as the text "Your face is (your text)."] 
 	now body entry is "lean and wiry muscled";[ Body Description, format as the text "Your Body is (your text)."] 
 	now skin entry is "overlapping green scaled";[ skin Description, format as the text "You have (your text) skin."] 
