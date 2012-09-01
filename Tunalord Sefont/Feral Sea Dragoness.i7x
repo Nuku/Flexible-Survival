@@ -75,7 +75,7 @@ When Play begins:
 	now sex entry is "Male"; 	
 	now hp entry is 80;			
 	now lev entry is 7;			
-	now wdam entry is 23;			
+	now wdam entry is 21;
 	now area entry is "Beach";
 	now cocks entry is 1;			
 	now cock length entry is 21;		
@@ -97,7 +97,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "feral sea dragoness":

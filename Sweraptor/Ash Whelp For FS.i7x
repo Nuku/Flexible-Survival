@@ -32,7 +32,7 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	add "Ash Whelp" to infections of guy;
 	now name entry is "Ash Whelp";
-	now attack entry is "[one of]The Whelp hiccups, then burps, then finally coughs up a small fireball which is lobbed at you.[or]The whelp dives at you its snapping jaws catching your arm, he pulls away leaving you with a bloodied bite mark.[at random]"; 
+	now attack entry is "[one of]The whelp rushes at you, clawing and scratching viciously.[or]The whelp dives at you its snapping jaws catching your arm, he pulls away leaving you with a bloodied bite mark.[or]The creature flies at your legs, nipping and biting at them.[at random]"; 
 	now defeated entry is "Crying mournfully the whelp loses its strength to fly and falls to the ground with a thud. where it does not stir again.";
 	now victory entry is  "You sink to your knees, wounded badly. The Whelp chirps in triumph and approaches you slowly...[whelp attack]";
 	now desc entry is "A squealing ball of needle sharp teeth plummets from the sky, clumsily wobbling through the air. The Ash Dragon Whelp's total size is the mass of an average humanoid torso, the dirty [one of]black-red speckled[or]dark ash grey[at random] scales, [one of]white[or]black[or]grey[at random] eyes, add to its fearsome appearance. A lava-like glow emanates from its core and the light seeps between its scales. Between its legs is a small pouch housing its minor genitals. The Ash Whelp appraises your [bodyname of player] form carefully for a time, then finally musters the courage to fly directly towards you!";
@@ -53,7 +53,7 @@ When Play begins:
 	now int entry is 9;
 	now cha entry is 8;
 	now sex entry is "Both";
-	now hp entry is 20;
+	now hp entry is 28;
 	now lev entry is 6;
 	now wdam entry is 6;
 	now area entry is "Outside";
@@ -77,7 +77,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "firebreath";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:
