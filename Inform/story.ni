@@ -4286,7 +4286,13 @@ To Infect (x - text):
 		choose row y in table of random critters;
 		if name entry is x:
 			now monster is y;
+			let reset be 0;
+			if researchbypass is 1 and  non-infectious entry is true:
+				now reset is 1;
+				now non-infectious entry is false;
 			infect;
+			if reset is 1:
+				now non-infectious entry is true;
 			break;
 
 to randominfect:				[bypasses researcher protection]
