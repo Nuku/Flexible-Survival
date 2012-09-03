@@ -2103,6 +2103,31 @@ understand "Hyper Off" as HyperlinksDeactivated.
 
 carry out HyperlinksDeactivated:
 	now hypernull is 1;
+	
+Section AttemptWaitOrClear
+
+To AttemptToWait: [use where you want a wait (which might be turned off by player settings)]
+	if waiterhater is 0:
+		wait for any key; [waits if waiting is active]
+	if waiterhater plus hypernull is 0:
+		say "[line break]"; [adds a break after the 'more']
+
+To AttemptToClearHyper: [use where you want a clear (which might be turned off by player settings)]
+	if clearnomore is 0:
+		clear the screen; [clears if clearing is active]
+	now hyperlink list is {}; [empties hyperlink list regardless of clear status]
+
+To AttemptToWaitBeforeClear: [use where you want a wait, which happens directly before a seperate clear]
+	if clearnomore plus waiterhater is not 2: [waits if either waiting or clearing is active, only skips them if both are turned off]
+		wait for any key;
+	if waiterhater plus hypernull is 0:
+		say "[line break]"; [adds a break after the 'more']
+
+To AttemptToWaitAndClearHyper: [use where you want a wait and clear.  Much like AttemptToWaitBeforeClear, but this includes the clear as part of it]
+	if clearnomore plus waiterhater is not 2: [waits if either waiting or clearing is active, only skips them if both are turned off]
+		wait for any key;
+		clear the screen;
+	now hyperlink list is {}. [empties hyperlink list regardless of clear status]
 
 Section Waithate
 

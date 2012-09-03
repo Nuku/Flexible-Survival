@@ -65,8 +65,9 @@ To Combat Menu:
 	while hp of player is greater than 0 and monsterhp is greater than 0:
 		if combat abort is 1:
 			now combat abort is 0;
-			wait for any key;
-			clear the screen and hyperlink list;
+			[wait for any key;
+			clear the screen and hyperlink list;]
+			AttemptToWaitAndClearHyper;
 			continue the action;
 		if "Submissive" is listed in feats of player and a random chance of ( ( libido of player + 20 ) / 4 ) in 1000 succeeds:
 		[chance to submit in combat if you have the submissive feat, feel free to adjust odds]
@@ -523,7 +524,8 @@ to standardretaliate:
 		say "[Name Entry] misses!";
 	now peppereyes is 0;
 	if hp of the player is greater than 0 and libido of player < 110:
-		wait for any key;
+		[wait for any key;]
+		AttemptToWaitBeforeClear;
 	otherwise:
 		if hp of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
@@ -571,7 +573,8 @@ to retaliate:
 			say "[Name Entry] misses!";
 	now peppereyes is 0;										[pepperspray wears off]
 	if hp of the player is greater than 0 and libido of player < 110:
-		wait for any key;
+		[wait for any key;]
+		AttemptToWaitBeforeClear;
 	otherwise:
 		if hp of player <= 0, now fightoutcome is 20;
 		if libido of player >= 110, now fightoutcome is 21;
@@ -697,8 +700,9 @@ to win:
 	if lev entry > 8, increase reward by ( lev entry / 3 );
 	increase freecred by reward;
 	say "[line break]A soft chime informs you that you have received [special-style-1][reward][roman type] freecreds, and now have [freecred] creds.";
-	if ok is 1, wait for any key;
-	clear the screen and hyperlink list;
+	if ok is 1, AttemptToWaitBeforeClear; [wait for any key;]
+	[clear the screen and hyperlink list;]
+	AttemptToClearHyper;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 	rule succeeds;
 
