@@ -9,7 +9,7 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
-use MAX_SYMBOLS of 80000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
+use MAX_SYMBOLS of 84000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 45000.
 use ALLOC_CHUNK_SIZE of 100000.
 use MAX_OBJECTS of 1000.
@@ -1328,11 +1328,28 @@ carry out vialing:
 	if found is 0:
 		say "You don't seem to have any such vial.";
 		continue the action;
-	say "What harm could a terribly infectious bio nanite be? Down the hatch!";
-	now researchbypass is 1;
-	infect target;
-	now researchbypass is 0;
-	remove entry z from vials of player;
+	say "What harm could a terribly infectious bio-nanite be? Down the hatch!";
+	[puts Herm Hyena as lead monster in case of impregnation]
+	now monster is 0;
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is target:
+			now monster is y;
+			break;
+	if monster is 0:
+		say "ERROR: That creature infection ([target]) could not be found.";
+		now monster is 1;
+	otherwise:
+		choose row monster from the table of random critters;
+		now researchbypass is 1;
+		if non-infectious entry is true:
+			now non-infectious entry is false;
+			infect target;
+			now non-infectious entry is true;
+		otherwise:
+			infect target;
+		now researchbypass is 0;
+		remove entry z from vials of player;
 
 understand the command "i" and "inv" and "inventory" as something new.
 
@@ -4743,6 +4760,7 @@ Include Misc 3 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
 Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
+Include Misc 8 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Event by Wahn.
@@ -4885,6 +4903,7 @@ Include Vulpogryph For Fs by Stripes.
 Include Psycho Weasel For Fs by Stripes.
 Include Incubus For Fs by Stripes.
 Include Bunny Jock For Fs by Stripes.
+Include Mammoth For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Pegasus by Kaleem mcintyre.
