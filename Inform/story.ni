@@ -4707,8 +4707,9 @@ Include Warehouse District by Kaleem Mcintyre.
 Include Pursuit of Science by Kaleem Mcintyre.
 Include Save the Dame by Kaleem Mcintyre.
 Include Fire House by Kaleem Mcintyre.
+Include Lizard Parlor by Kaleem Mcintyre.
 Include Apartment 319 by Kaleem Mcintyre.
-[Include Important Research Quests by Kaleem Mcintyre.]
+Include Important Research Quests by Kaleem Mcintyre.
 Include Reservoir by Kaleem Mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Main Storyline by Stripes.
