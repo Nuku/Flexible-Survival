@@ -9,7 +9,8 @@ name	desc	weight	object
 
 combat helmet is equipment. 
 It is not temporary. 
-The AC of combat helmet is 1. 
+The AC of combat helmet is 1.
+The effectiveness of combat helmet is 50.
 The placement of combat helmet is "face". 
 The descmod of combat helmet is "A green and brown camo army helmet rests atop them.".
 The slot of combat helmet is "head". 
