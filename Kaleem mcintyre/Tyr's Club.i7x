@@ -258,12 +258,12 @@ Check PitBattle:
 	if Receptionist is not visible, say "If you're feeling randy enough for a fight go out and find a random mutant to take on.";
 
 Carry out PitBattle:
-	If gestation of child > 0:
+	If gestation of child > 0 or larvaegg is 2:		[preggers or parasite eggs]
 		say "I'm sorry, but I'm afraid that you'll have to withdraw any thoughts of fighting in the arena for now, with you being so far along in your pregnancy and all.' Kris shakes his head sadly at you before blinking bright gold eyes up into your [facename of player] face. 'In consolation, want me to tell you about my day?' At the heart-melting smile the pup shines up at you, you find yourself nodding, though not because you really want to.[line break]";
 		Say "'Ok, so where to start?! [one of]Oh yeah, did you know that Tyr likes to...[or]I usually start my day of by...[or]I have the most fun when I...[or]All of the pit fighters seem to like me, but...[or]When I grow up I'm going to...[or]I really wish Va and Bra would get along better...[or]I hope that Shimi is doing well. She usually...[at random]' An hour later Kris has just finished his tale and you suddenly feel as though you've learned a lot about how to handle puppies. Maybe this will make you a better parent?";
 		Decrease libido of player by 10;
 		If libido of player < 0, now libido of player is 0;
-		extend game by -2;
+		follow the turnpass rule;
 	otherwise: 
 		say "'Ok, so you want to fight? Well we have several candidates for you.' Kris says while looking over a document on top of his desk. 'Most of them are canines so I hope that's not a problem!' You shake your head at Kris to let him know that you'll be fine with that. A nod of the pup's head and then he is passing a list over to you. 'Chose one and have fun!'[line break]";
 		say "[fightcheck][line break]";
