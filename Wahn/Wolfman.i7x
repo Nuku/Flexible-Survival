@@ -12,6 +12,7 @@ when play begins:
 	add Wolfman Talent Scout to badspots of guy;        [male wolfman]
 	add { "Football Wolfman" } to infections of guy;
 	add { "Football Wolfman" } to infections of furry;
+	add { "Football Wolfman" } to infections of Caninelist;
 
 Instead of resolving a Wolfman Talent Scout:
 	say "     As you explore the ruined city, a tall figure suddenly steps into sight in front of you and gives you a calculating look. It's a well-toned male wolf-morph, standing on two digigrade legs. His fur is almost completely black, except for a blood red section on his chest that forms the number 7.";

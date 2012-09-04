@@ -13,6 +13,7 @@ when play begins:
 [Delete the lines with unneeded flags and replace 'Great Dane Rouge' with your creature's name entry.  Case sensitive.]
 	add { "Great Dane Rouge" } to infections of girl;
 	add { "Great Dane Rouge" } to infections of furry;
+	add { "Great Dane Rouge" } to infections of Caninelist;
 
 [Sample loss and victory text Great Dane Rouges.]
 [Numerous other variations can be found in existing creature files.]

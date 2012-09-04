@@ -532,17 +532,15 @@ Instead of resolving a Dream of a Unicorn:
 
 
 
-
-
-
 Table of Game Objects(continued)
 name	desc	weight	object
-"leopard suit"	"A leopard fur tailored shirt and pair of pants that Omio, a slightly whacky researcher made for you. The material is very flexible and adjusts well onto your body."	5	leopard suit
+"leopard suit"	"A leopard fur tailored shirt and pair of pants that Omio, a slightly whacky researcher made for you. The material is very flexible and adjusts well onto your body.  It seems unusually strong, imparting some protection to you."	5	leopard suit
 
-leopard suit is equipment. 
-leopard suit is not temporary. 
-The AC of leopard suit is 2. 
-The placement of leopard suit is "body". 
+leopard suit is equipment.
+leopard suit is not temporary.
+The AC of leopard suit is 1.
+The effectiveness of leopard suit is 80.
+The placement of leopard suit is "body".
 The descmod of leopard suit is "A shirt and pair of pants made from both leopard fur and wool covers them.".
 The slot of leopard suit is "body".
 

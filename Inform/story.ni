@@ -209,6 +209,7 @@ Equipment has a text called descmod. The descmod of equipment is usually "";
 Equipment has a text called placement. The placement of equipment is usually "end";
 Equipment has a text called slot. The slot of equipment is usually "";
 Equipment has a number called AC. The AC of equipment is usually 0.
+Equipment has a number called effectiveness.  The effectiveness of equipment is usually 67.
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious. 
@@ -321,7 +322,7 @@ Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.
 The description of Grey Abbey Library is "[abbey desc]".
 Bunker is a room.  The description of Bunker is "[bunker desc]";
 
-The invent of Bunker is { "medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
+The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
 East of library door is Grey Abbey Library.
@@ -574,6 +575,7 @@ name	desc	weight	object	sortname (indexed text)
 "chips"	"Not always literally potato chips, but any kind of junk food. Not the best food, but hey, edible."	1	chips
 "cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
 "dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
+"face mask"	"A simple, flimsy, thing you wear on your face. Maybe it will help? Probably not."	3	face mask
 
 face mask is equipment. It is a part of the player. It is not temporary.
 The descmod of face mask is "A mask covers nose and mouth, made popular during the swine flu scare. ";
@@ -1956,7 +1958,7 @@ To process (X - a grab object):
 				let zq be 0;
 			otherwise:
 				repeat with z running through equipped equipment:
-					if slot of z is slot of object entry:
+					if slot of z is slot of x:
 						say "Your [z] is in the way!";
 						continue the action;
 			say "You start using the [x].";
