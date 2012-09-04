@@ -1,5 +1,5 @@
 Version 1 of Alt Combat by Stripes begins here.
-[Version 1.5 - firebreath alt attack added]
+[Version 1.6 - upgraded armour mechanics]
 
 "Oh my God!  Who gave them super-powers?!"
 
