@@ -105,8 +105,10 @@ this is the bruteforce rule:
 	if "Toughened" is listed in feats of player:
 		increase absorb by dam divided by 5;
 	repeat with x running through equipped equipment:
-		if a random chance of ( effectiveness of x ) in 100 succeeds:
-			increase absorb by ac of x;
+		if ac of x > 0:
+			repeat with xyz running from 1 to ac of x:
+				if a random chance of ( effectiveness of x ) in 100 succeeds:
+					increase absorb by 1;
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:

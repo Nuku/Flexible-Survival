@@ -209,7 +209,7 @@ Equipment has a text called descmod. The descmod of equipment is usually "";
 Equipment has a text called placement. The placement of equipment is usually "end";
 Equipment has a text called slot. The slot of equipment is usually "";
 Equipment has a number called AC. The AC of equipment is usually 0.
-Equipment has a number called effectiveness.  The effectiveness of equipment is usually 67.
+Equipment has a number called effectiveness.  The effectiveness of equipment is usually 0.
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious. 
@@ -4940,6 +4940,7 @@ Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
+Include Reptaur by Kaleem mcintyre.
 Include Pegasus by Kaleem mcintyre.
 Include Gargoyle by Kaleem mcintyre.
 Include Manticore by Kaleem mcintyre.

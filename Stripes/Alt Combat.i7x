@@ -1,5 +1,5 @@
 Version 1 of Alt Combat by Stripes begins here.
-[Version 1.5 - firebreath alt attack added]
+[Version 1.6 - upgraded armour mechanics]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -644,7 +644,12 @@ to standardhit:
 	if "Toughened" is listed in feats of player:
 		increase absorb by dam divided by 5;
 	repeat with x running through equipped equipment:
-		increase absorb by ac of x;
+		if ac of x > 0:
+			repeat with xyz running from 1 to ac of x:
+				if a random chance of ( effectiveness of x ) in 100 succeeds:
+					increase absorb by 1;
+[		if a random chance of ( effectiveness of x ) in 100 succeeds:
+			increase absorb by ac of x;	]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:
@@ -939,7 +944,10 @@ this is the ftaurpounce rule:		[double-damage pouncing]
 	if "Toughened" is listed in feats of player:
 		increase absorb by dam divided by 5;
 	repeat with x running through equipped equipment:
-		increase absorb by ac of x;
+		if ac of x > 0:
+			repeat with xyz running from 1 to ac of x:
+				if a random chance of ( effectiveness of x ) in 100 succeeds:
+					increase absorb by 1;
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:
@@ -1023,8 +1031,8 @@ this is the firebreath rule:
 			if "Toughened" is listed in feats of player:
 				increase absorb by dam divided by 5;
 			repeat with x running through equipped equipment:
-				increase absorb by ac of x;
-			now absorb is absorb / 2;	[defense at half effectiveness]
+				increase absorb by ac of x;		[no effectiveness roll]
+			now absorb is ( absorb + 1 ) / 2;	[total defense value halved]
 			if absorb is greater than dam:
 				now absorb is dam;
 			if absorb is greater than 0:
