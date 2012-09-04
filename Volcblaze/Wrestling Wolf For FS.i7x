@@ -196,7 +196,7 @@ to wwpowerslam:
 			increase absorb by dam divided by 5;
 		repeat with x running through equipped equipment:
 			increase absorb by ac of x;			[ no effectiveness roll ]
-		now absorb is absorb / 2;				[ defense halved ]
+		now absorb is ( absorb + 1 ) / 2;			[total defense value halved]
 		if absorb is greater than dam:
 			now absorb is dam;
 		if absorb is greater than 0:
