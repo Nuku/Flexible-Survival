@@ -194,15 +194,7 @@ this is the ppattack rule:
 			now dam is (dam * 150) divided by 100;
 			say "The plant pulses and writhes energetically - Critical Hit![line break]";
 		say "[didnotsubmit][one of]The bulb inside of you inflates suddenly, causing your belly to expand due to its size[or]The vine inside you wriggles and squirms in an arousing manner[or]The knot inside you pulses as the plant spurts a mind numbing fluid that makes you more aroused[at random]!  You take [special-style-2][dam][roman type] damage and grow more aroused!";
-		let absorb be 0;
-		if "Toughened" is listed in feats of player:	[feat less effective, armour useless]
-			increase absorb by dam divided by 8;
-		if absorb is greater than dam:
-			now absorb is dam;
-		if absorb is greater than 0:
-			say "You prevent [absorb] damage!";
-		decrease hp of the player by dam;
-		increase hp of player by absorb;
+		decrease hp of the player by dam;				[damage is unblockable w/armour/feats]
 		let libinc be a random number between 1 and dam;
 		if "Horny Bastard" is listed in feats of player, increase libinc by 1;
 		if "Cold Fish" is listed in feats of player, decrease libinc by 1;

@@ -108,14 +108,9 @@ this is the balltit rule:
 		now multiplier is 110 + ( ( square root of ( breast size of player + 1 ) ) * 6 );
 		now dam is ( dam * multiplier ) / 100;
 		say "The [name entry] decides to fight dirty and punches you hard in the tit.  Ouch!  You have taken [special-style-2][dam][roman type] damage!";
-	let absorb be 0;
-	if "Toughened" is listed in feats of player and cocks of player is 0:	[Toughened cannot block ball kick aspect]
-		increase absorb by dam divided by 5;
-	repeat with x running through equipped equipment:
-		if ac of x > 0:
-			repeat with xyz running from 1 to ac of x:
-				if a random chance of ( effectiveness of x ) in 100 succeeds:
-					increase absorb by 1;
+	now damagein is dam;
+	say "[bodyabsorbancy]";		[body targetted attack]
+	now absorb is ( absorb + 1 ) / 2;
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:

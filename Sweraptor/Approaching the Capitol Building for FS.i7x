@@ -109,14 +109,7 @@ this is the capitol wandering rule:
 
 Section 4 - Situations
 
-Wolfrape is a situation.
-The sarea of Wolfrape is "Capitol".
-
-Instead of resolving Wolfrape:
-	say "     While searching the city, you hear sounds of ecstasy floating from a nearby alleyway.  Cautiously, you approach and peer inside.  An anthro white wolf female has been caught and pinned by one of the herm Drakenoids.  The demonic features of the reptile herm contrast the clean, pure coloration of the white wolf woman.  The wolf moans pitifully, an expression of rapture on her face as the Drakenoid drills into her from behind.  The dragon growls and slams her prick home causing the wolf to yelp then struggle, then become very still.  The lizard cock glows from within the wolf's belly and soon you can tell the canine is being filled with molten sperm.  The white wolf's belly expands as it is filled, and glows red as its new cargo of life shine through her skin.  As quietly as you can, you back away.";
-	increase score by 1;
-	now wolfrape is resolved;
-
+[Wolfrape event moved to Blanche file.]
 
 dragatorspot is a situation.
 The sarea of dragatorspot is "Capitol".
