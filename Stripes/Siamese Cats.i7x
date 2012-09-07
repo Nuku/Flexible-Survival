@@ -177,7 +177,7 @@ to say siameseattack:
 		if hardmode is true and a random chance of 1 in 10 succeeds:
 			now dammy is (dammy * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-		let absorbby be 0;
+		let absorbby be 0;					[***to be fixed***]
 		if "Toughened" is listed in feats of player:
 			increase absorbby by dammy divided by 5;
 		decrease hp of the player by dammy;

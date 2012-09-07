@@ -538,8 +538,8 @@ name	desc	weight	object
 
 leopard suit is equipment.
 leopard suit is not temporary.
-The AC of leopard suit is 1.
-The effectiveness of leopard suit is 80.
+The AC of leopard suit is 16.
+The effectiveness of leopard suit is 70.
 The placement of leopard suit is "body".
 The descmod of leopard suit is "A shirt and pair of pants made from both leopard fur and wool covers them.".
 The slot of leopard suit is "body".

@@ -101,14 +101,8 @@ this is the bruteforce rule:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "[one of]The demonic creature[or]The [name entry][or]Your enemy[or]The demon[purely at random] growls and charges you, pinning you against a wall briefly.  It leans its strong, heavy body against yours and punches you several times in the [one of]gut[or]side[or]solar plexus[or]sternum[or]breadbasket[purely at random].  It then tosses you aside roughly with another growl, sending you tumbling.  You suffer [special-style-2][dam][roman type] damage!";
-	let absorb be 0;
-	if "Toughened" is listed in feats of player:
-		increase absorb by dam divided by 5;
-	repeat with x running through equipped equipment:
-		if ac of x > 0:
-			repeat with xyz running from 1 to ac of x:
-				if a random chance of ( effectiveness of x ) in 100 succeeds:
-					increase absorb by 1;
+	now damagein is dam;
+	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:

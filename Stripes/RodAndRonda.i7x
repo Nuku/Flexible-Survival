@@ -210,6 +210,7 @@ lizard juice is a grab object.  It is part of the player.  It is not temporary.
 instead of using lizard juice:
 	say "You need to save that to help Ronda.";
 
+
 Chapter 2 - The Art Collector Event
 
 Art Collector is a situation.  The level of Art Collector is 9.

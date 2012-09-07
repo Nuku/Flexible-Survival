@@ -248,11 +248,8 @@ this is the cerberus rule:
 		otherwise:
 			say "The [one of]final[or]left[or]last[at random] head misses!";
 		if cmdmgtotal > 0:
-			let absorb be 0;
-			if "Toughened" is listed in feats of player:
-				increase absorb by cmdmgtotal divided by 5;
-			repeat with x running through equipped equipment:
-				increase absorb by ac of x;
+			now damagein is cmdmgtotal;
+			say "[noshieldabsorbancy]";		[unable to use shield while pinned]
 			if absorb is greater than cmdmgtotal:
 				now absorb is cmdmgtotal;
 			if absorb is greater than 0:

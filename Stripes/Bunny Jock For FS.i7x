@@ -126,11 +126,8 @@ this is the powerplay rule:
 			say "'And there was 5 seconds left on the clock in the big game and then Darrell was Woosh!  Woosh! past them and SLAM DUNK!'  As he's excitedly re-enacting the play, he grabs you, leaps 10 feet in the air with his powerful, rabbit legs and dunks you like a ball through an imaginary hoop.  'Dude!  That game was awesome!' he yells as your head rings.  You take [special-style-2][dam][roman type] damage!";
 		otherwise:
 			say "'And so their defensemen were lining up to block our winger and so I came skating across the ice and WHAM!' he cries, barreling his shoulder into you and plowing you into a wall so hard it rattles your teeth.  'I checked both of them in one go.  Got a penalty for that one, but it was so worth it!' he adds.";
-	let absorb be 0;
-	if "Toughened" is listed in feats of player:
-		increase absorb by dam divided by 5;
-	repeat with x running through equipped equipment:
-		increase absorb by ac of x;
+	now damagein is dam;
+	say "[normalabsorbancy]";
 	if absorb is greater than dam:
 		now absorb is dam;
 	if absorb is greater than 0:

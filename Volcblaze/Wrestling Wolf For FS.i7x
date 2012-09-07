@@ -191,11 +191,8 @@ to wwpowerslam:
 			now dam is (dam * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		say "The Wrestling Wolf suddenly moves in, grabbing you to execute his signature maneuver.  Hefting you high above his head with both arms, you are given a brief view of the [if daytimer is day]sunny sky[otherwise]night sky[end if] as you are held aloft on your back.  He howls and slams you powerfully onto the mat.  You are slammed down with great force, rattling your brains so hard you'd swear you can feel the infection buzzing in your ringing ears.  But you only have a moment to listen to this before a great shadow passes over you and the big wolf comes slamming down atop you, having jumped off the top rope to land on you.  You take a massive [special-style-2][dam][roman type] damage and lose a grip on a corner of your battered mind.";
-		let absorb be 0;
-		if "Toughened" is listed in feats of player:
-			increase absorb by dam divided by 5;
-		repeat with x running through equipped equipment:
-			increase absorb by ac of x;			[ no effectiveness roll ]
+		now damagein is dam;
+		say "[noshieldabsorbancy]";		[shield doesn't help against being bodyslammed]
 		now absorb is ( absorb + 1 ) / 2;			[total defense value halved]
 		if absorb is greater than dam:
 			now absorb is dam;
