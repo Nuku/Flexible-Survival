@@ -59,15 +59,12 @@ Instead of Resolving a Hyper Squirrel Girl:
 						say "'Awesome! Let[apostrophe]s go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
 						now snow is in Grey Abbey Library;
 						move player to Grey Abbey Library;
-						try looking;
 						increase score by 5;
 						now hyper squirrel girl is resolved;
 					otherwise:
 						say "'Aw, you don't have what I need. You get some, and you got yourself a girl with talents. Trust me, it will be worth it.' She leans over to kiss either of your cheeks, then dances off into the city in a prance.";
-						stop the action;
 				otherwise:
 					say "'Well fine, play that way. I need a bigger chest. You want me, find me, and bring the goods,' she says, vanishing back into the city.";
-					stop the action;
 			otherwise:
 				say "'Well shoot then, I can do just fine on my own', she insists, and is gone in a trail of hyperactivity.";
 				now hyper squirrel girl is resolved;
@@ -80,6 +77,7 @@ Section 2 - Snow
 Squirrel Den is a room. It is private.	[This is just a holding spot and not a real room]
 
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.";
+
 Snow is a person.
 The description of Snow is "This sexual beauty is about six feet, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons. Type [bold type]upgrade (weapon)[roman type] and she'll give it a working over.";
 Snow is in Squirrel Den.
@@ -93,6 +91,7 @@ instead of sniffing Snow:
 
 A person can be a smither.
 An armament can be improved.
+An equipment can be improved.
 Snow is a smither.
 
 Smithing is an action applying to one thing.
@@ -100,15 +99,32 @@ Smithing is an action applying to one thing.
 Understand "upgrade [owned grab object]" as smithing.
 
 Check smithing:
-	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
-	if the noun is not armament, say "They can only work on weapons." instead;
+	if the noun is not owned, say "You can't offer what you don't have." instead;
+	if the noun is not armament and the noun is not equipment, say "They can only work on weapons or armour." instead;
+	if the noun is equipment and ( AC of noun is 0 or effectiveness of noun is 0 ), say "They can only work on weapons or armour." instead;
 	If the noun is improved, say "It is as good as it gets." instead;
 	if the noun is wielded, say "Stop wielding it first." instead;
+	if the noun is equipped, say "Stop wearing it first." instead;
 	if a smither is not visible, say "Who is going to upgrade it? I see no one here." instead;
 
 Carry out smithing:
 	say "You offer up [the noun] to Snow. Snow smiles and blows you a kiss before moving off with it and tinkering it with a while before offering it back to you, mildly improved.";
-	increase the weapon damage of the noun by 1;
+	if the noun is armament, increase the weapon damage of the noun by 1;
+	if the noun is equipment:
+		if the slot of noun is "shield":
+			let boost be ( AC of noun * 5 ) / 100;
+			if boost < 2, now boost is 2;
+			increase AC of noun by boost;
+			if AC of noun > 100, now AC of noun is 100;
+			let boost be ( effectiveness of noun ) / 10;
+			increase effectiveness of noun by boost;
+		otherwise:
+			let boost be ( AC of noun * 5 ) / 100;
+			if boost < 2, now boost is 2;
+			increase AC of noun by boost;
+			if AC of noun > 100, now AC of noun is 100;
+			let boost be ( effectiveness of noun ) / 10;
+			increase effectiveness of noun by boost;
 	now the noun is improved;
 
 

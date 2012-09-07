@@ -675,7 +675,7 @@ to say normalabsorbancy:		[normal absorbancy]
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				increase totalarmour by ac of x * ac of x;
 			otherwise:
-				let factor be a random number between 1 and effectiveness;
+				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
 				increase totalarmour by ( effectiveac * effectiveac );
 	let denominator be 100 + square root of totalarmour;
@@ -703,7 +703,7 @@ to say highabsorbancy:			[increased chance to block better]
 			if a random chance of ( effectiveness of x ) in 90 succeeds:
 				increase totalarmour by ac of x * ac of x;
 			otherwise:
-				let factor be a random number between 1 and effectiveness;
+				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 90;
 				increase totalarmour by ( effectiveac * effectiveac );
 	let denominator be 100 + square root of totalarmour;
@@ -728,7 +728,7 @@ to say weakabsorbancy:			[only partial absorbancy]
 				if absorb is 0, now absorb is 1;
 				now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
 		if ac of x > 0 and placement of x is targetlocation:
-			let factor be a random number between 1 and effectiveness;
+			let factor be a random number between 1 and effectiveness of x;
 			let effectiveac be ( ac of x * factor ) / 200;			[1/2 effectiveac]
 			increase totalarmour by ( effectiveac * effectiveac );
 	let denominator be 100 + square root of totalarmour;
@@ -755,7 +755,7 @@ to say headabsorbancy:			[targets head]
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				increase totalarmour by ac of x * ac of x;
 			otherwise:
-				let factor be a random number between 1 and effectiveness;
+				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
 				increase totalarmour by ( effectiveac * effectiveac );
 	let denominator be 100 + square root of totalarmour;
@@ -782,7 +782,7 @@ to say bodyabsorbancy:			[targets body]
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				increase totalarmour by ac of x * ac of x;
 			otherwise:
-				let factor be a random number between 1 and effectiveness;
+				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
 				increase totalarmour by ( effectiveac * effectiveac );
 	let denominator be 100 + square root of totalarmour;
@@ -800,7 +800,7 @@ to say areaabsorbancy:			[area of affect attack]
 		now totalarmour is 525;							[25^2]
 	repeat with x running through equipped equipment:
 		if ac of x > 0 and placement of x is "shield":
-			now absorb is ( damagein * ac of x * effectiveness ) / 40000;	[shields help deflect more of these blows]
+			now absorb is ( damagein * ac of x * effectiveness of x) / 40000;	[shields help deflect more of these blows]
 			if absorb is 0, now absorb is 1;
 			now damageout is damagein - absorb;			[reduced dmg used for armour calculation below]
 		if ac of x > 0 and placement of x is "body":
@@ -841,7 +841,7 @@ to say noshieldabsorbancy:		[no shield protection]
 			if a random chance of ( effectiveness of x ) in 100 succeeds:
 				increase totalarmour by ac of x * ac of x;
 			otherwise:
-				let factor be a random number between 1 and effectiveness;
+				let factor be a random number between 1 and effectiveness of x;
 				let effectiveac be ( ac of x * factor ) / 100;
 				increase totalarmour by ( effectiveac * effectiveac );
 	let denominator be 100 + square root of totalarmour;
@@ -869,7 +869,7 @@ to say nofeatabsorbancy:
 				if a random chance of (effectiveness of x) in 100 succeeds:
 					increase totalarmour by ac of x * ac of x;
 				otherwise:
-					let factor be a random number between 1 and effectiveness;
+					let factor be a random number between 1 and effectiveness of x;
 					let effectiveac be ( ac of x * factor ) / 100;
 					increase totalarmour by ( effectiveac * effectiveac );
 	let denominator be 100 + square root of totalarmour;

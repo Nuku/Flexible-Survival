@@ -1116,7 +1116,7 @@ carry out hunting:
 			repeat with z running through situations:
 				[ if hardmode is false and the level of z is greater than (the level of the player plus levelwindow), next; ]
 				if z is resolved, next;
-				if sarea of z matches the text battleground, case insensitively:		[Only situations in this zone can be hunted]
+				if z is close:				[Only situations in this zone can be hunted]
 					let tempnum be 0;			[do-nothing action]
 				otherwise:
 					if printed name of z matches the text topic understood, case insensitively:
@@ -1160,11 +1160,11 @@ carry out hunting:
 					break;
 		if found is 0:
 			if foundbadtime is 1:
-				say "[bold type]There doesn't seem to be any of them around right now...[roman type]";
+				say "[bold type]There doesn't seem to be any of them around right now...[roman type][line break]";
 			otherwise if sitfound is 0:
-				say "[bold type]You don't think what you're looking for can be found here...[roman type]";
+				say "[bold type]You don't think what you're looking for can be found here...[roman type][line break]";
 			otherwise if sitfound is 1:
-				say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type]";
+				say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type][line break]";
 			let dice be a random number from 1 to 20;
 			if "Bad Luck" is listed in feats of player, increase dice by 1;
 			if "Curious" is listed in feats of player, increase dice by 2;
@@ -1392,16 +1392,15 @@ carry out Inventorying:
 				otherwise if the number of trader in the location of the player is greater than 0:
 					let tradeguy be a random trader in the location of the player;
 					say " [link][bracket][bold type]T[roman type][close bracket][as]give [name entry] to [tradeguy][end link]";
-				if object entry is armament and object entry is not improved and the number of smither in the location of the player is greater than 0:
+				if ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved and the number of smither in the location of the player is greater than 0:
 					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [name entry][end link]";
 				say " [name entry]";
 				if object entry is wielded and object entry is armament:
-					say "(wielded)";
-					if object entry is improved:
-						say "(improved)";
-				if object entry is equipment:
-					if object entry is equipped:
-						say "(equipped)";
+					say " (wielded)";
+				if object entry is equipment and object entry is equipped:
+					say " (equipped)";
+				if object entry is improved and ( object entry is armament or object entry is equipment ):
+					say " (improved)";
 				say " x ";
 				let number be 0;
 				repeat with  y running through invent of player:
@@ -1935,7 +1934,7 @@ To process (X - a grab object):
 			now Lastjournaluse is turns;
 		follow turnpass rule;
 	if x is a armament:
-		if weapon of player is weapon of x: [ unequip]
+		if weapon of player is weapon of x:		[unequip]
 			now weapon of player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
 			now weapon damage of player is 4;
 			now weapon type of player is "Melee";
@@ -1950,7 +1949,7 @@ To process (X - a grab object):
 				now weapon type of player is "Ranged";
 			say "You ready your [x].";
 	if x is equipment:
-		if x is equipped:
+		if x is equipped:		[unequip]
 			say "You stop using the [x].";
 			now x is not equipped;
 		otherwise:
@@ -1975,7 +1974,7 @@ To process (X - a grab object):
 		if hp of player is greater than maxhp of player:
 			decrease healed by hp of player minus maxhp of player;
 			now hp of player is maxhp of player;
-		say "Using your medkit, [one of]You spray your cuts with anesthetic[or]You bandage your worst wounds[at random]. You regain [special-style-1][healed][roman type] hit points.";
+		say "Using your medkit, [one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random]. You regain [special-style-1][healed][roman type] hit points.";
 		if a random chance of 1 in 10 succeeds:
 			say "You have used up the last of the medkit.";
 			if "Expert Medic" is listed in the feats of the player and a random chance of 2 in 10 succeeds:
@@ -2001,7 +2000,6 @@ To process (X - a grab object):
 			now hp of player is maxhp of player;
 		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate.  You regain [special-style-1][healed][roman type] hit points.";
 		delete healing booster;
-
 
 
 understand "talk [person]" as conversing.
