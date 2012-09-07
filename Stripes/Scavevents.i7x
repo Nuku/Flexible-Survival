@@ -432,7 +432,7 @@ Instead of resolving a Plains Scavenging:
 					now y is "water bottle";
 				if scavengetarget is "soda":
 					now y is "soda";
-	say "Roaming across the endless field of grass that makes up the plains you find your brushing a hand across your face as a strong and stray breeze passes along your [one of][bodytype of player][or][bodydesc of player][at random] body.  Striding across one giant grassy knoll you happen to notice [y] not too far off in the distance. Looking around to be sure that you're not seeing a mirage you quickly run over to [y] to capture it before something else can.";
+	say "Roaming across the endless field of grass that makes up the plains you find your brushing a hand across your face as a strong and stray breeze passes along your [one of][bodytype of player][or][bodydesc of player][at random] body.  Striding across one giant grassy knoll you happen to notice [y] not too far off in the distance. Looking around to be sure that you're not seeing a mirage, you quickly run over to [y] to capture it before something else can.";
 	now x is a random number from 1 to 3;
 	if x is 1:
 		say "The item in question waits silently for you [one of]on the ground among some tall grass[or]with small bugs crawling over it[or]on top of a large cropping of bushes[or]within the branches of a lonesome tree[or]down in a large hole[or]resting in a dry puddle[or]underneath a pile of straw[or]down the side of a hill[or]right next to a wooden fence[at random].";
@@ -598,6 +598,83 @@ The effectiveness of shoulder pad is 13.
 The placement of shoulder pad is "body".
 The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
 The slot of shoulder pad is "body".
+
+
+Section 14 - Hospital Scavenging
+
+Patient Rooms is a scavevent.
+The sarea of Patient Rooms is "Hospital";
+
+Instead of resolving a Patient Rooms:
+	let y be "food";
+	let x be a random number from 1 to 12;
+	if x is 1 or x is 2:
+		now y is "food";
+	if x is 3 or x is 4:
+		now y is "water bottle";
+	if x is 5:
+		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
+			now y is "medkit";
+		otherwise if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+			now y is "medkit";
+		otherwise:
+			now y is "dirty water";
+	if x is 6:
+		now y is "dirty water";
+	if x is 7:
+		now y is "chips";
+	if x is 8:
+		now y is "soda";
+	if x is 9:
+		if a random chance of 2 in 3 succeeds:
+			now y is "medkit";
+		otherwise:
+			now y is "healing booster";
+	if x is 10:
+		now y is "healing booster";
+	if x is 11:
+		now y is "libido suppressant";
+	if x is 12:
+		if a random chance of 1 in 2 succeeds:
+			now y is "Fertile Pill";
+		otherwise:
+			now y is "Birth Control Pill";
+	if scavengetarget is "food" or scavengetarget is "water bottle" or scavengetarget is "chips" or scavengetarget is "soda":
+		if scavengetarget matches the text y:
+			let lol be 1;
+		otherwise:
+			if a random chance of 1 in 3 succeeds:
+				if scavengetarget is "food":
+					now y is "food";
+				if scavengetarget is "water bottle":
+					now y is "water bottle";
+				if scavengetarget is "chips":
+					now y is "chips";
+				if scavengetarget is "soda":
+					now y is "soda";
+				say "Your specific hunting leads you towards your target.";
+	if hospscavcount is 1 and a random chance of 1 in 3 succeeds:	[blocked room]
+		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside.  Checking carefully, it doesn't appear that anyone is inside there now.  A little puzzled, you risk asking if anyone's there, but get no response.  But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
+		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
+		if hardmode is true and bonus > 10, now bonus is 10;
+		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
+		increase dice by bonus;
+		if dice >= 14:
+			say "     Pushing at the door, you are able to push open the door a little, letting you shove aside part of the makeshift barricade.  With that out of the way, you gain entrance to the room and take the bottle of water.  You also take a quick look around for the occupant.  You find their clothes scattered in the small bathroom and covered in blue goo.  The toilet and a good portion of the floor is similarly covered in this sticky goo.  You grab a sample of that as well.";
+			add "water bottle" to invent of player;
+			add "glob of goo" to invent of player;
+			increase score by 5;
+			now hospscavcount is 1;
+		otherwise:
+			say "     Pushing at the door, you find it too well blocked and you're unable to get inside.  It's unclear what happened to its occupant, but you'll have to move on.  You try more rooms, but find nothing of potential use in them.";
+	otherwise:		[normal scavenging]
+		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you get lucky and find a [y] [one of]sitting on the bed[or]having fallen on the floor[or]forgotten in a closet[or]half-hidden under a hospital gown (and thankfully unsticky)[or]tucked in a drawer[or]sitting on the nightstand by the bed[purely at random].
+		add y to invent of the player;
+		if a random chance of 1 in 3 succeeds:
+			say "     But as you turn to leave, you find that your activity's attracted the attention of one of the creatures roaming the hospital and it now blocks your way out of the patient's room.  You'll have to fight to get past them.";
+			fight;
 
 
 Scavevents ends here.

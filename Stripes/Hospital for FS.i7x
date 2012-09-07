@@ -92,9 +92,7 @@ Instead of resolving a Ambulance Dock:
 			increase hasparts by 1;
 		otherwise:
 			say "     You are successfully able to retrieve a medical kit from the mess.  Having been covered by the shock blanket before the fluids started flying, it is undamaged and still usable.  What luck!  Your search did unfortunately get quite a bit of that cum on you though.";
-		sort table of random critters in random order;		[double infection by one monster]
-		now monster is 1;
-		infect;
+		weakrandominfect;				[random infection, followed by same infection]
 		infect;
 	otherwise:
 		say "     You opt to play it safe and continue your search elsewhere.";
@@ -273,7 +271,7 @@ instead of resolving Chaplaincy:
 	now Chaplaincy is resolved;
 
 
-Records Room is a situation.
+Records Room is a situation.  The level of Records Room is 5.
 The sarea of Records Room is "Hospital";
 when play begins:
 	add Radiology to badspots of girl;
