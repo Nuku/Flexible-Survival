@@ -503,7 +503,7 @@ Instead of resolving a Plains Scavenging:
 				add y to invent of the player;
 
 
-Section 11 - Little Veggies
+Section 11 - Garden Veggies
 
 Garden Veggies is a scavevent.
 The sarea of Garden Veggies is "Outside".
@@ -519,7 +519,7 @@ Instead of resolving a Garden Veggies:
 		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil.  Between the heat wave and the dry weather, the plants are withering away.  You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
 		add "food" to invent of player;
 		now Garden Veggies is resolved;
-	if lastgardenveg - turns < 8:
+	otherwise if lastgardenveg - turns < 8:
 		say "     Finding yourself back in the neighbourhood where you found the small garden, you decide to check on it again, but none of the produce has ripened yet.  They seem to be growing rather quickly, but you'll have to wait a little longer.";
 	otherwise if gardenveg is 0:
 		say "     As you're searching around the area for supplies, you find a small garden in the back yard of a home.  It's only got a dozen or so plants, but they're surprisingly still alive despite the heat wave and dry weather.  And even better than that, they're fruiting.  Only a little of the produce is ripe, but you snag what's ready to be picked.  You try to remember to return here again once the rest of the veggies have had time to mature.  Between the tomatoes, beans and peas, you should have enough for a meal.  It'll certainly be more nutritious than some of your meals lately.";
@@ -545,7 +545,7 @@ Instead of resolving a Garden Veggies:
 		if fightoutcome >= 10 and fightoutcome <= 19:			[player victory]
 			say "     Having beaten the [if guy is banned]ewe[otherwise]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces.  Another sheep, a [if guy is banned]ram[otherwise]ewe[end if] this time, comes out wielding a shotgun.  'Now you back away from my [if guy is banned]husband... er... wife[otherwise]wife... er... husband[end if]... right now, or I won't miss next time.'  You don't need to be told twice and flee the garden.  You'll have to look elsewhere for food from now on.";
 		otherwise if fightoutcome >= 20 and fightoutcome <= 29:	[player loss]
-			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheet, this time a [if guy is banned]ram[otherwise]ewe[end if] comes out wielding a shotgun.  Seeing the gun, you turn and flee before [if guy is banned]her[otherwise]his[end if] angry mate can shoot you.  You'd best not return there... for a whole bunch of reasons.";
+			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if guy is banned]ram[otherwise]ewe[end if] comes out wielding a shotgun.  Seeing the gun, you turn and flee before [if guy is banned]her[otherwise]his[end if] angry mate can shoot you.  You'd best not return there... for a whole bunch of reasons.";
 		otherwise if fightoutcome >= 30:					[player fled]
 			say "     As you're making a break for it, you catch a glimpse of another sheep exiting the home, this time with a shotgun.  As you push through the back gate, it goes off.  'You stay away, you veggie thief, or we'll fill you full of lead next time.'";
 		now Garden Veggies is resolved;
@@ -573,6 +573,31 @@ Instead of resolving a Free Drink:
 	otherwise:
 		say "     Deciding it'd be best not to drink, they shrug.  'Your loss,' the laugh and take hefty drinks before getting back to work.";
 	now Free Drink is resolved;
+
+
+Section 13 - Liefeld's Disease
+
+DbLD is a scavevent.
+The sarea of DbLD is "Allzones";
+
+Instead of resolving a DbLD:
+	say "     While searching through the city for supplies, you come across the corpse of an excessively muscled man with a grizzled face.  It seems that some creature took rather violent exception to him from the signs of destruction all around.  The nearby walls are littered with bullet holes, though you don't spot any blood from his whatever his enemy was.  Whatever strange infection this unlucky person had, it really left him unable to fight.  Given his lack of actual wrists and ankles, it's clear he'd have trouble standing and fighting, let alone supporting his own top-heavy weight on his small, misshapen feet.  Given the hundreds of bullet holes, it seems he had trouble aiming that giant gun of his (now shattered into pieces) thanks to his perpetually squinting eyes.";
+	say "     And while it doesn't seem to have done its previous owner much good, you unbuckle the single, oversized shoulderpad from his malproportioned body and take it with you.  You know it's not really going to help much, but it's better than nothing and isn't doing that guy any good now.";
+	add "shoulder pad" to invent of player;
+	increase score by 5;
+	now DbLD is resolved;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"shoulder pad"	"An oversized, padded shoulderpad that juts out to the side too much.  It won't cover much, but it might help."	2	shoulder pad
+
+shoulder pad is equipment.
+It is not temporary. 
+The AC of shoulder pad is 13.
+The effectiveness of shoulder pad is 13.
+The placement of shoulder pad is "body".
+The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
+The slot of shoulder pad is "body".
 
 
 Scavevents ends here.

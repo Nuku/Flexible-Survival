@@ -1,11 +1,12 @@
-Odd Weapons for FS by Hellerhound begins here.
+Version 2 of Odd Weapons for FS by Hellerhound begins here.
+[ Garbage Can Lid is now equipment as a shield - Stripes ]
 
-Section 1 - Garbage can lid
+Section 0 - Weapons and Shield
 
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"garbage can lid"	"The lid of a garbage can, usable as a weapon."	4	garbage can lid
+"garbage can lid"	"The lid of a garbage can, usable as a shield... more or less."	4	garbage can lid
 "infected sword"	"A sword with cloudy metal found in a sea of slime. It is infectious, and keeps changing you."	10	infected sword
 "dirty whip"	"A whip covered with dripping horse cum. It is infectious, and was found abandoned by its owner."	3	dirty whip
 "horse whip"	"A whip you found and cleaned up.  It has metal studs on the lash."	2	horse whip
@@ -17,9 +18,6 @@ Does the player mean littering the clean whip when the clean whip is owned: it i
 Does the player mean grabbing the dirty whip when the dirty whip is visible: it is likely.
 Does the player mean grabbing the clean whip when the clean whip is visible: it is very likely.]
 
-[When Play begins:
-	now the printed name of clean whip is "whip";]
-
 dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your messy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
 
 instead of sniffing dirty whip:
@@ -29,11 +27,6 @@ horse whip is an armament. It is part of the player. It has a weapon "[one of]yo
 
 instead of sniffing horse whip:
 	say "The horse whip smells of leather and oils.";
-
-garbage can lid is a armament. It is a part of the player. It has a weapon "[one of]your large shield[or]your lid[or]your trusty lid[or]flashing grey circle[at random]". The weapon damage of garbage can lid is 5. The weapon type of garbage can lid is "Melee". It is not temporary.
-
-instead of sniffing garbage can lid:
-	say "A heavy scent of garbage fills your nose as you sniff your makeshift shield.";
 
 infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. the purified of infected sword is "Nothing".
 
@@ -45,18 +38,18 @@ instead of purifying an infected sword:
 	say "I have fixed the damage, but next time it might not be so. Do not do it again!";
 	stop the action;
 
+garbage can lid is equipment. It is not temporary.
+The AC of garbage can lid is 28.
+The effectiveness of garbage can lid is 30.
+The placement of garbage can lid is "body".
+The descmod of garbage can lid is "You hold an aluminum garbage can lid in your off hand as an improvised shield.".
+The slot of garbage can lid is "shield".
 
-perraise is a number that varies.
+instead of sniffing garbage can lid:
+	say "A heavy scent of garbage fills your nose as you sniff your makeshift shield.";
 
-every turn:
-	if the garbage can lid is wielded:
-		if perraise is 0:
-			increase the dexterity of the player by 6;
-			now perraise is 1;
-	otherwise:
-		if perraise is 1:
-			decrease the dexterity of the player by 6;
-			now perraise is 0;
+
+Section 1 - Garbage can lid
 
 Smelly garbage is a situation.
 
@@ -67,7 +60,6 @@ instead of resolving a smelly garbage:
 		now smelly garbage is resolved;
 	otherwise:
 		say "You leave it there.";
-
 
 
 Section 2 - Infected Sword
