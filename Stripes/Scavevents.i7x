@@ -604,6 +604,7 @@ Section 14 - Hospital Scavenging
 
 Patient Rooms is a scavevent.
 The sarea of Patient Rooms is "Hospital";
+hospscavcount is a number that varies.
 
 Instead of resolving a Patient Rooms:
 	let y be "food";
@@ -670,7 +671,7 @@ Instead of resolving a Patient Rooms:
 		otherwise:
 			say "     Pushing at the door, you find it too well blocked and you're unable to get inside.  It's unclear what happened to its occupant, but you'll have to move on.  You try more rooms, but find nothing of potential use in them.";
 	otherwise:		[normal scavenging]
-		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you get lucky and find a [y] [one of]sitting on the bed[or]having fallen on the floor[or]forgotten in a closet[or]half-hidden under a hospital gown (and thankfully unsticky)[or]tucked in a drawer[or]sitting on the nightstand by the bed[purely at random].
+		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you get lucky and find a [y] [one of]sitting on the bed[or]having fallen on the floor[or]forgotten in a closet[or]half-hidden under a hospital gown (and thankfully unsticky)[or]tucked in a drawer[or]sitting on the nightstand by the bed[purely at random].";
 		add y to invent of the player;
 		if a random chance of 1 in 3 succeeds:
 			say "     But as you turn to leave, you find that your activity's attracted the attention of one of the creatures roaming the hospital and it now blocks your way out of the patient's room.  You'll have to fight to get past them.";
