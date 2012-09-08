@@ -1,5 +1,5 @@
-Version 2 of Scavevents by Stripes begins here.
-[version 2 - Scavevents 11 and 12 added ]
+Version 3 of Scavevents by Stripes begins here.
+[version 3 - Scavevents 13 to 15 added ]
 
 "Adds a batch of random events which can occur while scavenging around the city."
 
@@ -604,7 +604,7 @@ Section 14 - Hospital Scavenging
 
 Patient Rooms is a scavevent.
 The sarea of Patient Rooms is "Hospital";
-hospscavcount is a number that varies.
+patrooms is a number that varies.
 
 Instead of resolving a Patient Rooms:
 	let y be "food";
@@ -654,7 +654,7 @@ Instead of resolving a Patient Rooms:
 				if scavengetarget is "soda":
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
-	if hospscavcount is 1 and a random chance of 1 in 3 succeeds:	[blocked room]
+	if patrooms is 1 and a random chance of 1 in 3 succeeds:	[blocked room]
 		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside.  Checking carefully, it doesn't appear that anyone is inside there now.  A little puzzled, you risk asking if anyone's there, but get no response.  But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
@@ -667,7 +667,7 @@ Instead of resolving a Patient Rooms:
 			add "water bottle" to invent of player;
 			add "glob of goo" to invent of player;
 			increase score by 5;
-			now hospscavcount is 1;
+			now patrooms is 1;
 		otherwise:
 			say "     Pushing at the door, you find it too well blocked and you're unable to get inside.  It's unclear what happened to its occupant, but you'll have to move on.  You try more rooms, but find nothing of potential use in them.";
 	otherwise:		[normal scavenging]
@@ -676,6 +676,65 @@ Instead of resolving a Patient Rooms:
 		if a random chance of 1 in 3 succeeds:
 			say "     But as you turn to leave, you find that your activity's attracted the attention of one of the creatures roaming the hospital and it now blocks your way out of the patient's room.  You'll have to fight to get past them.";
 			fight;
+
+
+Section 15 - Shattered House
+
+Shattered House is a scavevent.
+The sarea of Shattered House is "Allzones";
+
+Instead of resolving a Shattered House:
+	say "     As you travel along, you are forced to cut down a side street to avoid a small cluster of creatures lustfully fucking in the road up ahead.  Down this street, you pass a few houses, including one that seems to have been partially blown out from the inside.  Given the lack of fire damage and excessive amounts of sticky fluids, you'd guess that whoever once lived in there became very large very quickly";
+	let x be a random number from 1 to 5;
+	if x is 1 or x is 2:
+		say ".  Taking a quick look inside, you spot the partially destroyed kitchen.  While large sections of it have been crushed, you do get lucky and find some food you can recover and take with you.";
+		add "food" to invent of player;
+	otherwise if x is 3:
+		say ".";
+		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
+		if hardmode is true and bonus > 10, now bonus is 10;
+		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
+		increase dice by bonus;
+		if dice >= 14:
+			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down.  Seeing more underneath, you manage to lift up the rubble with some effort and retrieving a single water bottle that's not been crushed before an ominious creaking sound ends you back before more of the house collapses.";
+			add "water bottle" to invent of player;
+		otherwise:
+			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down.  Seeing more underneath, you try to lift up the rubble to search for more, but it's too heavy to move before an ominious creaking sound ends you back before more of the house collapses.";
+	otherwise if x is 4:
+		say ".";
+		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
+		if hardmode is true and bonus > 10, now bonus is 10;
+		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16:[line break]";
+		increase dice by bonus;
+		if dice >= 16:
+			say "     Taking a quick look inside, you luckily feel the kitchen floor starting to give way out from under you and manage to back away before the middle of the kitchen floor caves in and that section of the damaged house collapses into the basement.  You move on after that unsuccessful venture and remind yourself to be more careful inside damaged buildings from now on.";
+		otherwise:
+			let dam be ( ( hp of player + maxhp of player ) ) / 7;
+			decrease hp of player by dam;
+			say "     Taking a quick look inside, you yell in surprise as the kitchen floor collapses out from under you, dropping you into the basement as more of the room falls in around you.  You avoid a close call as the appliances comes tumbling in.  Once the dust settles, you grab a few items that fell out of the cubbard and climb out before the whole place collapses on top of you, much more wary about damaged buildings now.";
+			add "food" to invent of player;
+	otherwise if x is 5:
+		say ".";
+		let bonus be ( the perception of the player plus level of the player minus 10 ) divided by 2;
+		if hardmode is true and bonus > 10, now bonus is 10;
+		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		let dice be a random number from 1 to 20;
+		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
+		increase dice by bonus;
+		if dice >= 14:
+			say "     As you're searching through the rubble, you luckily notice some creaking and some plaster dust falling out of the corner of your eye.  You get out quickly, avoiding the sudden collapse of the house.  Scared but safe, you leave the place behind before the noise can attract anything dangerous.";
+		otherwise:
+			let dam be ( ( hp of player + maxhp of player ) ) / 7;
+			decrease hp of player by dam;
+			say "     As you're searching through the rubble, you are too focused on looking for something you can take that you don't notice the growing groans of the building until it's too late and it starts collapsing around you.  Debris falls down atop you, hurting you quite a bit and pinning you beneath it.  You eventually dig yourself out, but you're left tired and bruised.";
+			if a random chance of 2 in 3 succeeds:
+				say "     As you're pulling yourself out, you see that the collapse has also attracted one of the local creatures, eager to take advantage of the situation.";
+				fight;
+	now Shattered House is resolved;
 
 
 Scavevents ends here.

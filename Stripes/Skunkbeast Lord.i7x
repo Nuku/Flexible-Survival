@@ -11,6 +11,7 @@ when play begins:
 	add Skunkbeast Battle to badspots of guy;
 	add Skunkbeast Battle to badspots of girl;
 	add Skunkbeast Battle to badspots of furry;
+	add ( "Skunkbeast Lord" ) to infections of tailweapon;
 
 Instead of resolving a Skunkbeast Battle:
 	say "     You can hear a great deal of commotion coming from up ahead.  You take notice that there's a considerable number of black, gooey patches spread around the area as well as torn remnants of camoflaged clothes.  When gunfire breaks out briefly, you duck down and creep forward into the bushes, looking to find out what's happening.  Parting some branches at the edge of the next clearing, you can see a raging battle involving numerous of those sexy skunks you've seen around as well as several larger skunk beasts.  Looking more carefully, you can see that some of the skunks are actually mostly transformed soldiers, their clothes torn and their bodies being ravaged (much to their increasing delight) by skunkbeasts or teams of the other females.  The one still firing the rifle you heard has it torn from her hands by a skunk girl, who tosses it in the nearby creek as two more hold her down to be mounted.";
