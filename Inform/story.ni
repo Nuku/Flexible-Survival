@@ -4943,6 +4943,7 @@ Include Pegasus by Kaleem mcintyre.
 Include Gargoyle by Kaleem mcintyre.
 Include Manticore by Kaleem mcintyre.
 Include Minotaur by Kaleem mcintyre.
+Include Dalmatian by Kaleem mcintyre.
 Include Gels by Darthan.
 Include Coyote by Darthan.
 Include Retriever by AGentlemanCalledB.
