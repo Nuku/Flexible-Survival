@@ -11,7 +11,7 @@ use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 84000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 45000.
-use ALLOC_CHUNK_SIZE of 100000.
+use ALLOC_CHUNK_SIZE of 105000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 300.
 Use maximum indexed text length of at least 5000.
@@ -1644,7 +1644,7 @@ After resolving a situation:
 to delete (X - a grab object):
 	let found be 0;
 	let number be 0;
-	repeat with Q running through invent of the the player:
+	repeat with Q running through invent of the player:
 		increase number by 1;
 		if q matches the regular expression printed name of x, case insensitively:
 			now found is 1;
@@ -4793,6 +4793,7 @@ Include Misc Scene 5 by Kaleem mcintyre.
 Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
 Include Misc 8 by Kaleem mcintyre.
+Include Misc 9 by Kaleem mcintyre.
 Include How High by Kaleem mcintyre.
 Include Disorganization by Kaleem mcintyre.
 Include Soldier Event by Wahn.
@@ -4944,6 +4945,7 @@ Include Gargoyle by Kaleem mcintyre.
 Include Manticore by Kaleem mcintyre.
 Include Minotaur by Kaleem mcintyre.
 Include Dalmatian by Kaleem mcintyre.
+Include Behemoth by Kaleem mcintyre.
 Include Gels by Darthan.
 Include Coyote by Darthan.
 Include Retriever by AGentlemanCalledB.

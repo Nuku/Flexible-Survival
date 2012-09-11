@@ -31,7 +31,7 @@ Instead of resolving a Smashed Hive:
 			add "Honeycomb" to invent of player;
 			add "Honeycomb" to invent of player;
 			increase score by 10;
-	otherwise if "healing booster" is listed in feats of player:
+	otherwise if "healing booster" is listed in invent of player:
 		say "     Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?";
 		if the player consents:
 			say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl.  She buzzes angrily at you, but stumbles and cannot remain upright.  Moving to her side, you inject her with the healing booster, feeling sorry for this lone survivor and hoping it was worth using a booster to save her.";

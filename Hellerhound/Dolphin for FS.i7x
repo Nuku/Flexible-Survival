@@ -167,7 +167,7 @@ When Play begins:
 	now cunt length entry is 28;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Dolphin Milk";			[ Loot monster drops, ]
+	now loot entry is "dolphin milk";			[ Loot monster drops, ]
 	now lootchance entry is 75;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -244,7 +244,7 @@ to dolphinify:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Dolphin Milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
+"dolphin milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
 
 
 dolphin milk is a grab object. It is a part of the player. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "hermaphrodite dolphin". The purified of dolphin milk is "distilled milk".

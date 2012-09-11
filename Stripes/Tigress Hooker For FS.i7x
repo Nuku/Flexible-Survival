@@ -366,9 +366,9 @@ to say paymentcheck:
 	if "gryphon milk" is listed in the invent of the player:
 		say "     Finding a container of gryphon milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Birdy milk at that.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete gryphon milk;
-	otherwise if "Dolphin Milk" is listed in the invent of the player:
+	otherwise if "dolphin milk" is listed in the invent of the player:
 		say "     Finding a container of dolphin milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Fishy milk at that.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
-		delete Dolphin Milk;
+		delete dolphin milk;
 	otherwise if "panther milk" is listed in the invent of the player:
 		say "     Finding a container of panther milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'You brought kitty milk for the kitty.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete panther milk;

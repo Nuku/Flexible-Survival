@@ -28,7 +28,7 @@ title	sortorder	subtable	description	toggle
 with 20 blank rows.
 
 This is the sexytable rule:
-	say "I'm a playholder! :)";
+	say "I'm a placeholder! :)";
 
 sextablerun is a number that varies.  sextablerun is normally 0.
 

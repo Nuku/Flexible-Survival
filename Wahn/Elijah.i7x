@@ -182,8 +182,16 @@ instead of conversing the Elijah:
 		now hp of Elijah is 2;
 		now Sweet Surprise is unresolved;
 	otherwise if (hp of Elijah is 2):  [wounded + unconscious in the bunker - revival quest started already]
-		if ("gryphon milk" is not listed in invent of player):
-			say "     To mix together something to cure the injured angel, you need a good base to start with. Some gryphon milk should do the trick nicely...";
+		let milkchoicelist be a list of text;
+		if "gryphon milk" is listed in invent of player, add "gryphon milk" to milkchoicelist;
+		if "dog milk" is listed in invent of player, add "dog milk" to milkchoicelist;
+		if "panther milk" is listed in invent of player, add "panther milk" to milkchoicelist;
+		if "chocolate milk" is listed in invent of player, add "chocolate milk" to milkchoicelist;
+		if "vixen milk" is listed in invent of player, add "vixen milk" to milkchoicelist;
+		if "dolphin milk" is listed in invent of player, add "dolphin milk" to milkchoicelist;
+		if "cow milk" is listed in invent of player, add "cow milk" to milkchoicelist;
+		if milkchoicelist is empty:
+			say "     To mix together something to cure the injured angel, you need a good base to start with. Some form of milk should do the trick nicely...";
 			if ("demon seed" is listed in invent of player):
 				say "     As you think of getting the milk, you remember the demon seed you still have in your pack. A wicked little thought sneaks into your mind - wouldn't it be interesting to see what the potent liquid might do to the helpless angel you have at your mercy?";
 				if player consents:
@@ -203,13 +211,38 @@ instead of conversing the Elijah:
 				otherwise:
 					say "     You got the milk, honey and even a vial of healing booster. Do you want to mix it all together now and administer the result to Elijah?[line break]";
 					if player consents:
-						say "     An empty soda bottle serves as the container into which you carefully pour your collected ingredients. Holding the bottle closed, you then give it your best bartender impression, shaking it like a martini. The result is a pale blue liquid, smelling pleasantly of honey.";
-						say "     And now to test if it works... you put your hand under patient's head, raising it a bit and guide the bottle to his lips. Slowly, you let some of the liquid flow into his mouth until his swallowing reflex kicks in, continuing in that way until he's drunk all of what was in the bottle.";
-						say "     You sit on the next bunk in line, eagerly watching the angel. And you don't have to wait long - a more healthy color returns to his face pretty quickly and then he opens his azure eyes. Raising his upper body a bit, supported on the bunk by one of his wings, the angel looks around, then smiles brightly at you as he notices you at his side.";
-						say "     'My name is Elijah and I thank you, my friend. I feel much better now. Although rather strange...' he says, his brows knitting as he wiggles his fingers, flexes the muscles in his arms, followed by stretching first one, then the other wing to its fullest extent. Then he lifts the blanket he's under a bit and looks down, his eyes widening suddenly.";
-						say "     'My memories are a bit woozy, but I'm sure THAT wasn't there before. Must have originated with one of the demons, but it doesn't feel evil in of itself. Curious. Oh well, I guess I'll ignore it for now and it'll be taken care of when I get home.'";
-						now hp of Elijah is 3;
-						increase score by 20;
+						let chosenmilk be "empty";
+						if the number of entries in milkchoicelist is 1:
+							now chosenmilk is entry 1 of milkchoicelist;
+						otherwise:
+							sort milkchoicelist;
+							say "Which milk would you prefer to use? (no different results)[line break]";
+							repeat with y running from 1 to number of entries in milkchoicelist:
+								say "[link][bracket][y][close bracket][end link] - [entry y of milkchoicelist][line break]";
+							say "[link][bracket]0[close bracket][end link] - ABORT[line break]";
+							while chosenmilk is "empty":
+								say "Pick the corresponding number> [run paragraph on]";
+								get a number;
+								if calcnumber > 0 and calcnumber <= number of entries in milkchoicelist:
+									now chosenmilk is entry calcnumber in milkchoicelist;
+								otherwise if calcnumber is 0:
+									now chosenmilk is "none";
+						if chosenmilk is not "none":
+							say "     An empty soda bottle serves as the container into which you carefully pour your collected ingredients. Holding the bottle closed, you then give it your best bartender impression, shaking it like a martini. The result is a pale blue liquid, smelling pleasantly of honey.";
+							say "     And now to test if it works... you put your hand under patient's head, raising it a bit and guide the bottle to his lips. Slowly, you let some of the liquid flow into his mouth until his swallowing reflex kicks in, continuing in that way until he's drunk all of what was in the bottle.";
+							say "     You sit on the next bunk in line, eagerly watching the angel. And you don't have to wait long - a more healthy color returns to his face pretty quickly and then he opens his azure eyes. Raising his upper body a bit, supported on the bunk by one of his wings, the angel looks around, then smiles brightly at you as he notices you at his side.";
+							say "     'My name is Elijah and I thank you, my friend. I feel much better now. Although rather strange...' he says, his brows knitting as he wiggles his fingers, flexes the muscles in his arms, followed by stretching first one, then the other wing to its fullest extent. Then he lifts the blanket he's under a bit and looks down, his eyes widening suddenly.";
+							say "     'My memories are a bit woozy, but I'm sure THAT wasn't there before. Must have originated with one of the demons, but it doesn't feel evil in of itself. Curious. Oh well, I guess I'll ignore it for now and it'll be taken care of when I get home.'";
+							repeat with Q running from 1 to number of entries in invent of player:
+								if chosenmilk is entry q in invent of player:
+									remove entry q from invent of player;
+									break;
+							delete Honeycomb;
+							delete healing booster;
+							now hp of Elijah is 3;
+							increase score by 20;
+						otherwise:
+							say "     Maybe this isn't the right thing to do after all.  There is still a small chance he might recover without you dosing him with experimental mixtures of stuff you picked up somewhere.";
 					otherwise:
 						say "     Maybe this isn't the right thing to do after all. There is still a small chance he might recover without you dosing him with experimental mixtures of stuff you picked up somewhere.";
 	otherwise if (hp of Elijah is 3):   [virgin Elijah]
