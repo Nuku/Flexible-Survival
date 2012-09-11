@@ -1,17 +1,21 @@
 Informant by Kaleem mcintyre begins here.
 
-Section 1 – Informant
+Section 1 - Informant
 
-Informant is a situation.
+Informant is a situation.  The level of Information is 9.
 
 The sarea of Informant is "High";
 smf is a number that varies.
+when play begins:
+	add Informant to badspots of furry;
+	add Informant to badspots of guy;
+
 
 Instead of resolving a Informant:
 	if smf is 0:
 		say "Walking through the high rise district you find yourself bumping into a black clad man wearing a hoodie. 'Sorry about that fella.' The man apologizes and then steps around you to go about his way. Not thinking anything of the accidental bump you nod to the retreating back of the other person and then go about your way.";
 	if smf is 1:
-		say "Crossing through the streets of the high rise district you come across the sight of a somewhat black clad figure surrounded by two burly looking mutants. Both mutants seem to be somewhat eager to get at the unknown figure and upon seeing one of them aiming their cock at the person you decide that maybe it's time to do your good deed for the day. Shouting to draw the mutant's attentions you rush the others before they have time to react.";
+		say "Crossing through the streets of the high rise district you come across the sight of a somewhat black clad figure surrounded by two burly looking mutants. Both mutants seem to be somewhat eager to get at the unknown figure and upon seeing one of them aiming their cock at the person, you decide that maybe it's time to do your good deed for the day. Shouting to draw the mutant's attentions you rush the others before they have time to react.";
 		challenge "Shemale Smooth Collie";
 		challenge "Leopardman";
 		say "Taking care of those miscreants you find the black clad figure stepping out from behind an overturned dumpster with slow and nervous movements. 'Jeez, I know things are getting bad, but come on. Really?' The other person sighs before shoving their hoodie down from off of their head. A shock of chestnut colored hair fluffs out from the other's head and upon seeing this you can't help but chuckle. The other person, who proves to be a man by both looks as well as voice, well he almost looks like a rooster with part of his hair sticking up in a spiky sort of way. When the other turns to face you, you quickly school your features as Prussian blue eyes stare at you gratefully.";
@@ -105,8 +109,8 @@ instead of conversing the Homaru:
 				now fin is 1;
 				now Warehouse District is known;
 				increase score by 10;
-		if Homarutalk is 1:
-			say "[One of]'Hey, welcome back'.[or]'I hope things are going well for you.'[or]'Have any new information I can play with?'[or]Homaru is busy eating a sandwich and simply nods to you.[or]'I wish someone strong and daring would figure out a way to infiltrate the military ranks and gather some intel for me.' Homaru looks to you while saying this.[or]'Have you seen a blonde in a white coat running around here lately?'[or]'That blonde woman...just who is she?'[or]Homaru is nibbling on a pen top while going through something on his computer.[or]'I hope you manage to keep yourself from falling victim to the virus running around. It'd be a shame to lose a contact such as you.'[or]Homaru is working on a crossword puzzle.[or]'Where in the world is Carmen Sandiego when I need a good thief/spy?'[or]'Maybe I should think about retiring and settling down with a big Labr...' Homaru shakes his head while shuffling around uncomfortably in his seat.[or]'I can't offer much, but you can spend some time here if you'd like.[or]'Please don't bother the turtles, they're kind of shy.'[or]'Man, what I wouldn't give for a nice thick d...' Homaru shakes his head and then blushes somewhat awkwardly.[or]'What I wouldn't give to have some chocolate milk right about now.' Homaru sighs wistfully.[or]'It'd be nice if I had a nice dil...uhm Dill Pickle right about now! Yeah!' Homaru chuckles nervously at you.[at random]";
+	if Homarutalk is 1:
+		say "[One of]'Hey, welcome back'.[or]'I hope things are going well for you.'[or]'Have any new information I can play with?'[or]Homaru is busy eating a sandwich and simply nods to you.[or]'I wish someone strong and daring would figure out a way to infiltrate the military ranks and gather some intel for me.' Homaru looks to you while saying this.[or]'Have you seen a blonde in a white coat running around here lately?'[or]'That blonde woman...just who is she?'[or]Homaru is nibbling on a pen top while going through something on his computer.[or]'I hope you manage to keep yourself from falling victim to the virus running around. It'd be a shame to lose a contact such as you.'[or]Homaru is working on a crossword puzzle.[or]'Where in the world is Carmen Sandiego when I need a good thief/spy?'[or]'Maybe I should think about retiring and settling down with a big Labr...' Homaru shakes his head while shuffling around uncomfortably in his seat.[or]'I can't offer much, but you can spend some time here if you'd like.[or]'Please don't bother the turtles, they're kind of shy.'[or]'Man, what I wouldn't give for a nice thick d...' Homaru shakes his head and then blushes somewhat awkwardly.[or]'What I wouldn't give to have some chocolate milk right about now.' Homaru sighs wistfully.[or]'It'd be nice if I had a nice dil...uhm Dill Pickle right about now! Yeah!' Homaru chuckles nervously at you.[at random]";
 
 
 Section 3 - Delaying the Military 
@@ -120,16 +124,19 @@ Understand "confuse military" as delaymilitary.
 
 Check delaymilitary:
 	If Homaru is not visible, say "Oh really? And...how would you suggest you go about doing that?" instead;
+	if playon is 1, say "There's no need to use this feature now as you're playing in extended play mode.  The rescue will never come." instead;
+	if delaymilcount is 8, say "'I've done about all I can to try and buy us some more time." instead;
 
 Lastdelaymilitary is a number that varies. Lastdelaymilitary is usually 590.
-Delaymilitary is a number that varies.
+Delaymilcount is a number that varies.
 
 carry out delaymilitary:
 	if lastdelaymilitary - turns is less than 8:
 		say "Homaru shakes his head at you when you ask him to delay the military. 'Sorry, but with information giving and swapping you have to be careful how much and how soon you send out into the world. Too much too soon and confusion can occur, but in this case it could speed up the military's intervention against both of [italic type]our[roman type] affairs. Just give it some time and then I'll go out and see what I can do.";
 		stop the action;
 	now lastDelaymilitary is turns;
-	say "Alright. I'll see what I can do, but just remember, what I tell them will take the military a little longer to come in and rescue those people who actually need help. If you're not looking to help the people here then please don't ask me to make things more difficult for those in need of help.' Homaru says somberly, and despite his willingness to aid you he seems adamant about conviction for the sake of others. An odd thing indeed. 'Also, be aware that things might not go as planned…' Homaru says somewhat cryptically.";
+	increase delaymilcount by 1;
+	say "Alright. I'll see what I can do, but just remember, what I tell them will take the military a little longer to come in and rescue those people who actually need help. If you're not looking to help the people here then please don't ask me to make things more difficult for those in need of help.' Homaru says somberly, and despite his willingness to aid you he seems adamant about conviction for the sake of others. An odd thing indeed. 'Also, be aware that things might not go as planned...' Homaru says somewhat cryptically.";
 	let DEL be a random number between 1 and 7;
 	if DEL is 1:
 		say "Alright! This job was a success!' Homaru shouts. 'I managed to hack into their system computers and rearrange some times and dates. That should keep them away from here for a while!'";
@@ -224,7 +231,9 @@ to say findfirefighter5:
 	say "'Remember, you're looking for a [bold type]Dame[roman type] in the [bold type]high rise[roman type] district with salt and pepper hair. If you [bold type]take on a chocolate Lab body and face[roman type] then you should be able to find her without too much trouble. Saving her after that...well...I hope you're strong enough to face off a bunch of angry doggies!' Homaru chirps with a menacing smile on his face.";
  
 to say findfirefighter6:
-	say "'You've found three firefighters already, congratulations!' Homaru chuckles at you while saying this. 'Now I think it would be a fine time to check on Kenaz and see what's he up to? You might be surprise if you do.' And with that Kenaz waves you off. Maybe going to the firehouse would be wise?";
-	say "Kennaz part coming soon. Please be patient!";
+	say "'You've found three firefighters already, congratulations!' Homaru chuckles at you while saying this. 'There's only one other still here in the city, but he'll be by on his own time.' Homaru says cryptically.  'Anyway why don't you go back and check to see how Kenaz is? You might be surprise if you do.' And with that Kenaz waves you off. Maybe going to the firehouse would be wise?
+	[bold type]There are no more firefighters to find now! So head back to the Fire House![roman type]";
+
 
 Informant ends here.
+
