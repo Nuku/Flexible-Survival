@@ -351,8 +351,11 @@ Carry out reciting:
 					now deerhappy is the number understood;
 					move Susan to dark basement;
 					now unusual creature is resolved;
-					if hp of doctor matt is 6, now unusual creature is unresolved;
-					if hp of doctor matt is greater than 5:
+					if hp of doctor matt is 6:
+						now unusual creature is unresolved;
+						now deerconsent is 0;
+						now deerhappy is 0;
+					if hp of doctor matt is greater than 6:
 						if deerhappy is 1:
 							remove susan from play;
 							now unusual creature is resolved;
