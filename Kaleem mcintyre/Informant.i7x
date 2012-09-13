@@ -121,6 +121,7 @@ Section 3 - Delaying the Military
 
 Delaymilitary is an action applying to nothing.
 
+Understand "delay" as delaymilitary.
 Understand "delay the military" as delaymilitary.
 Understand "delay military" as delaymilitary.
 Understand "give misinformation" as delaymilitary.
@@ -176,6 +177,7 @@ Homarusearch is a number that varies.
 
 Homarusearching is an action applying to nothing.
 
+Understand "find" as Homarusearching.
 Understand "search for firefighters" as Homarusearching.
 Understand "locate firefighters" as Homarusearching.
 Understand "find firefighters" as Homarusearching.
@@ -190,6 +192,7 @@ Understand "locate the firemen" as Homarusearching.
 Understand "find the firemen" as Homarusearching.
 
 Check Homarusearching:
+	if homarusearch is 0, say "Look for who where?" instead;
 	If Homaru is not visible, say "If you're going to look for Kenaz's companions then you're going to need to ask Homaru for help." instead;
 
 Carry out Homarusearching:
