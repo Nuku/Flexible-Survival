@@ -2,7 +2,7 @@ Informant by Kaleem mcintyre begins here.
 
 Section 1 - Informant
 
-Informant is a situation.  The level of Information is 9.
+Informant is a situation.  The level of Informant is 9.
 
 The sarea of Informant is "High";
 smf is a number that varies.
