@@ -3748,12 +3748,14 @@ This is the brain descr rule:
 			now descr is "increasingly [facename of player] perspective[lusting]";
 		otherwise if bodyname of player is not "human":
 			now descr is "increasingly [bodyname of player] perspective[lusting]";
-		if skinname of player is not "human":
+		otherwise if skinname of player is not "human":
 			now descr is "increasingly [skinname of player] perspective[lusting]";
-		if cockname of player is not "human":
+		otherwise if cockname of player is not "human":
 			now descr is "increasingly [cockname of player] perspective[lusting]";
-		if tailname of player is not "human":
+		otherwise if tailname of player is not "human":
 			now descr is "increasingly [tailname of player] perspective[lusting]";
+		otherwise:
+			now descr is "increasingly corrupted perspective[lusting]";
 	otherwise:
 		now descr is "almost entirely subsumed[lusting]";
 	if libido of player is less than 21, now lusting is " thoughts.";
@@ -4988,6 +4990,7 @@ Include Frank by Stripes.
 Include Sally by Stripes.
 [Include Max by Zero.]
 Include Fang by Stripes.
+Include Blanche by Stripes.
 Include Joanna by Stripes.
 Include Solstice by Stripes.
 Include Leonard by Stripes.
