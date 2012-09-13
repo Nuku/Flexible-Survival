@@ -74,11 +74,12 @@ instead of conversing the Homaru:
 		If guy is banned or furry is banned or girl is banned:
 			say "Homaru goes over some of the information highlighted on his screen and then freezes all of a sudden. When the power to the building is cut the brown haired man lets out a line of swear words that might have made a nun blush. 'Unbelievable! Someone's caught onto me!' You ask the other what he means and then get a furious stare in return. 'I think that someone's realized you were trying to find the missing firefighters and have shut me down. I won't be able to find any of them for you now.'";
 			say "Homaru sighs in the darkness and then flops his head down onto his desk in disgust. The lights to the building come back on seconds afterwards, ironically.";
+			say "(This quest requires guy, girl and furry content to advance.)[line break]";
 			Now Homarusearch is 70;
 			Now Homarutalk is 1;
 		Otherwise:
 			say "Rapidly typing on his keyboard Homaru begins to talk to you without looking up into your [facename of player] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it, like ten minutes ago. Unless the other was some kind of fortune teller or prophet that should have been impossible...right? Or maybe he was spying on you?[line break]"; 
-			say "Pulling out a manila folder Homaru leafs through the information and then goes about giving you some of the highlights. 'It seems that when things started to get out of hand around this city some of the people here panicked and started moving into shelters, bunkers, barracks, or what have you. However, from the Intel I have on hand here, it seems as though some small groups of like-minded mutants began popping up when the outbreak became almost impossible to contain in any one place. After that these said groups worked to grab up as many uninfected people as they can to use them for...well let's just say no good purposes.'[line break]";
+			say "Pulling out a manila folder Homaru leafs through the information and then goes about giving you some of the highlights. 'It seems that when things started to get out of hand around this city some of the people here panicked and started moving into shelters, bunkers, barracks, or what have you. However, from the intel I have on hand here, it seems as though some small groups of like-minded mutants began popping up when the outbreak became almost impossible to contain in any one place. After that these said groups worked to grab up as many uninfected people as they can to use them for...well let's just say no good purposes.'[line break]";
 			say "You ask Homaru to elaborate. 'Well,' The other man lowers the folder in front of him and then sweeps a hand through his spiky as looks to try to find the right words to say. 'You know how kinky everything is outside right now?' You nod at this. 'Well, it seems as though there are some people more immune to what's going on than others, or at least partially appear to be so.' You get a feeling for what Homaru is saying as the man starts to flush deep red and bite at his lower lip.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
@@ -110,17 +111,21 @@ instead of conversing the Homaru:
 				now Warehouse District is known;
 				increase score by 10;
 	if Homarutalk is 1:
-		say "[One of]'Hey, welcome back'.[or]'I hope things are going well for you.'[or]'Have any new information I can play with?'[or]Homaru is busy eating a sandwich and simply nods to you.[or]'I wish someone strong and daring would figure out a way to infiltrate the military ranks and gather some intel for me.' Homaru looks to you while saying this.[or]'Have you seen a blonde in a white coat running around here lately?'[or]'That blonde woman...just who is she?'[or]Homaru is nibbling on a pen top while going through something on his computer.[or]'I hope you manage to keep yourself from falling victim to the virus running around. It'd be a shame to lose a contact such as you.'[or]Homaru is working on a crossword puzzle.[or]'Where in the world is Carmen Sandiego when I need a good thief/spy?'[or]'Maybe I should think about retiring and settling down with a big Labr...' Homaru shakes his head while shuffling around uncomfortably in his seat.[or]'I can't offer much, but you can spend some time here if you'd like.[or]'Please don't bother the turtles, they're kind of shy.'[or]'Man, what I wouldn't give for a nice thick d...' Homaru shakes his head and then blushes somewhat awkwardly.[or]'What I wouldn't give to have some chocolate milk right about now.' Homaru sighs wistfully.[or]'It'd be nice if I had a nice dil...uhm Dill Pickle right about now! Yeah!' Homaru chuckles nervously at you.[at random]";
+		if homarusearch < 6 and a random chance of 2 in 5 succeeds:
+			say "When you're ready for more information on the firefighters, just ask and I'll do what I can to help you [bold type]find firefighters[roman type].";
+		otherwise:
+			say "[One of]'Hey, welcome back'.[or]'I hope things are going well for you.'[or]'Have any new information I can play with?'[or]Homaru is busy eating a sandwich and simply nods to you.[or]'I wish someone strong and daring would figure out a way to infiltrate the military ranks and gather some intel for me.' Homaru looks to you while saying this.[or]'Have you seen a blonde in a white coat running around here lately?'[or]'That blonde woman...just who is she?'[or]Homaru is nibbling on a pen top while going through something on his computer.[or]'I hope you manage to keep yourself from falling victim to the virus running around. It'd be a shame to lose a contact such as you.'[or]Homaru is working on a crossword puzzle.[or]'Where in the world is Carmen Sandiego when I need a good thief/spy?'[or]'Maybe I should think about retiring and settling down with a big Labr...' Homaru shakes his head while shuffling around uncomfortably in his seat.[or]'I can't offer much, but you can spend some time here if you'd like.[or]'Please don't bother the turtles, they're kind of shy.'[or]'Man, what I wouldn't give for a nice thick d...' Homaru shakes his head and then blushes somewhat awkwardly.[or]'What I wouldn't give to have some chocolate milk right about now.' Homaru sighs wistfully.[or]'It'd be nice if I had a nice dil...uhm Dill Pickle right about now! Yeah!' Homaru chuckles nervously at you.[at random]";
 
 
 Section 3 - Delaying the Military 
 
 Delaymilitary is an action applying to nothing.
 
-Understand "delay" as delaymilitary.
+Understand "delay the military" as delaymilitary.
 Understand "delay military" as delaymilitary.
 Understand "give misinformation" as delaymilitary.
 Understand "confuse military" as delaymilitary.
+Understand "confuse the military" as delaymilitary.
 
 Check delaymilitary:
 	If Homaru is not visible, say "Oh really? And...how would you suggest you go about doing that?" instead;
@@ -171,10 +176,18 @@ Homarusearch is a number that varies.
 
 Homarusearching is an action applying to nothing.
 
-Understand "search" as Homarusearching.
-Understand "locate" as Homarusearching.
-Understand "find" as Homarusearching.
+Understand "search for firefighters" as Homarusearching.
+Understand "locate firefighters" as Homarusearching.
 Understand "find firefighters" as Homarusearching.
+Understand "search for firemen" as Homarusearching.
+Understand "locate firemen" as Homarusearching.
+Understand "find firemen" as Homarusearching.
+Understand "search for the firefighters" as Homarusearching.
+Understand "locate the firefighters" as Homarusearching.
+Understand "find the firefighters" as Homarusearching.
+Understand "search for the firemen" as Homarusearching.
+Understand "locate the firemen" as Homarusearching.
+Understand "find the firemen" as Homarusearching.
 
 Check Homarusearching:
 	If Homaru is not visible, say "If you're going to look for Kenaz's companions then you're going to need to ask Homaru for help." instead;
