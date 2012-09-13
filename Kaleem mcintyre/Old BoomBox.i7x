@@ -83,8 +83,7 @@ instead of sniffing BoomBox:
  say "The faint scent of good old times seem to waft around the old jam machine. Memories of days gone by, some of them before your time, flitter through your head as you sniff the machine in question. For some reason though, that doesn't bother you much.";
 
 Instead of using BoomBox:
-	say "play";
-
+	say "[bold type]Play[roman type]";
 
 BoomBoxPlay is an action applying to nothing.
 
@@ -93,7 +92,8 @@ Understand "music" as BoomBoxPlay.
 Understand "turn on" as BoomBoxPlay.
 
 Check BoomBoxPlay:
-	if BoomBox is not visible, say "Want music, go to the Bunker! :D";
+	if BoomBox is in the bunker and the BoomBox is not visible, say "Want music, go to the Bunker! :D" instead;
+	if BoomBox is not in the bunker, say "You have nothing to play." instead;
 
 Carry out BoomBoxPlay:
 	say "Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";

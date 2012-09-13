@@ -9,6 +9,11 @@ Fucking is an action applying to one thing.
 
 Understand "fuck [person]" as fucking;
 
+before fucking:
+	follow the cock descr rule;
+	follow the cunt descr rule;
+	follow the breast descr rule;
+
 check fucking:
 	if noun is not visible, say "Who?" instead;
 	
