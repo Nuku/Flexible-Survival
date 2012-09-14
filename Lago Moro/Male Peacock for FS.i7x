@@ -44,12 +44,12 @@ to say peacockvictory:
 	say "You are not able to think clearly anymore.  You find yourself standing up and facing the avian, your thoughts mixed in a blur.  He beckons you to follow him; you have no choice but to walk with him into what seems a well-maintained apartment.";
 	if cunts of player > 0:
 		say "You feel a bit better now... you can think more clearly, as if the leash in your brain has been loosened.  You don't think you would be able to actually oppose what is about to happen, though...";
-		say "He motions towards the bed in the middle of the room.  You obediently lie on the mattress, while he looks at your body with unmistakable lust, his cock already poking out of his slit.  He slides over your body... it feels like a light, warm blanket.  You think that maybe this won't be SO bad after all...";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		say "He motions towards the bed in the middle of the room.  You obediently lie on the mattress, while he looks at your [bodydesc of player] body with unmistakable lust, his cock already poking out of his slit.  He slides over your [bodydesc of player] body... it feels like a light, warm blanket.  You think that maybe this won't be SO bad after all...";
+		attempttowait;
 		say "After you don't know how much pleasant time, you find yourself back in the city, no idea how or when.  You quickly realize that finding him will be practically impossible by now... then you realize just now that your body may have changed...";
 	otherwise:
-		say "He orders you to sit on the bed.  You have no choice but to obey, your body out of your control.  He examines you and, to your surprise, he sighs, mildly irritated.  'Look,' he says, 'it will be better for both of us if you won[apostrophe]t remember this...'. Before you can reply, he fans his tail again...";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		say "He orders you to sit on the bed.  You have no choice but to obey, your [bodytype of player] body out of your control.  He examines you and, to your surprise, he sighs, mildly irritated.  'Look,' he says, 'it will be better for both of us if you won[apostrophe]t remember this...'. Before you can reply, he fans his tail again...";
+		attempttowait;
 		say "...then you find yourself back in the city?  You don't remember how did you come here, or what happened in the apartment, or even where that was... and then it occurs to you that you should check what happened to your body.";
 
 Section 2 - Monster Insertion

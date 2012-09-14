@@ -22,7 +22,7 @@ To say latex wolf defeat:
 
 To say latex wolf attack:[todo]
 	if cunts of player > 0:
-		Say "As you fall, the latex wolf rolls you over and sits up, on your hips, impaling you on his red rubbery cock. He then begins to lean forwards and backwards, sliding his doggy shaft in and out of your cunt, squeaking with every thrust. He thrusts faster, and faster, making slapping noises where his black balls hit your ass cheeks, and finally slams your knot inside with a thrust that causes you to hunch up in pain and pleasure. He keeps trying to thrust, even when he is tied, and finally brings himself to orgasm, filling you with black rubbery seed. [impregchance]";
+		Say "As you fall, the latex wolf rolls you over and sits up, on your hips, impaling you on his red rubbery cock. He then begins to lean forwards and backwards, sliding his doggy shaft in and out of your [cunt size desc of player] cunt, squeaking with every thrust. He thrusts faster, and faster, making slapping noises where his black balls hit your ass cheeks, and finally slams your knot inside with a thrust that causes you to hunch up in pain and pleasure. He keeps trying to thrust, even when he is tied, and finally brings himself to orgasm, filling you with black rubbery seed. [impregchance]";
 		increase the libido of the player by 60;	
 	otherwise:
 		say "You fall to the ground, and the wolf pounces, hoping there is something for him to use. When she reveals your endowments, he sighs in disappointment, and raises one leg over you";

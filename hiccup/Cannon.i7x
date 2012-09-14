@@ -36,7 +36,7 @@ to say cannon fire:
 		
 to say cannon attack:
 	if "Female Preferred" is not listed in feats of player:
-		say " You hear a strange whistling noise in the air, before a huge glob of sticky white cum falls out of the sky and soaks you from head to foot. Its job completed, the Cock Cannon leaves.";
+		say " You hear a strange whistling noise in the air, before a huge glob of sticky white cum falls out of the sky and soaks your [bodytype of player] body from head to foot.  The blast is so large it knocks you to the ground, leaving you dazed and soaked in semen. Its job completed, the Cock Cannon leaves.";
 	
 Section 2 - Monster Insertion
 
