@@ -1,6 +1,6 @@
 Fire House by Kaleem mcintyre begins here.
 
-"Adds a new area to Flexible Survival with a NPC…"
+"Adds a new area to Flexible Survival with an NPC."
 
 Section 1 - FireStation
 
@@ -205,7 +205,7 @@ instead of conversing the Kenaz:
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		Say "'Well you see, with everyone coming back here and all...I've kinda started running low on food.' You nod your head in understanding and then ask Kenaz how much food he thinks he will need. 'Well, between me and the others, and given that we don't know how much longer it will take for the military to come and clean up things...maybe about twenty pounds of food?' Kenaz smiles helplessly as you just blink at him. 'Or maybe about [bold type]ten[roman type] things of food instead? I can make some things stretch and hopefully the military will air drop some more provisions before long.' Kenaz reaches one of his hands up to rub at his chin thoughtfully.";
 		Say "Telling the firefighter that you'll see what you can do, you get a sharp nod from Kenaz. 'Alright. And hey, once again, thanks a lot.' You smile and then give the other man a coy wink before turning to head about your way.";
-		Now HelpKenazOut is 1;
+		if kenaztalk is 0, Now HelpKenazOut is 1;
 		now rsc is 2;
 		Increase score by 2;
 	otherwise if Kenaztalk is 5:
@@ -218,7 +218,6 @@ Section 4 - Helping Kenaz
 
 HelpKenazOut is an action applying to nothing.
 
-Understand "help" as HelpKenazOut.
 Understand "assist" as HelpKenazOut.
 Understand "help Kenaz" as HelpKenazOut.
 Understand "assist Kenaz" as HelpKenazOut.
@@ -264,7 +263,7 @@ To say aidKenaz1:
 	Let foodfound be 0;
 	Repeat with g running through invent of player:
 		If g is "food", increase foodfound by 1;
-	If foodfound >= 1:
+	If foodfound >= 10:
 		Say "'Thanks a lot for this!' Kenaz looks over the food you procured for him and then growls slightly before catching himself. 'Sorry about that. This growling thing seems to be getting worse as time goes by. It probably doesn't help matters much that most of the guys you found are now dogs.' Kenaz chuckles darkly at that thought and without meaning to you raise one eyebrow curiously at the other man. 'Oh, sorry, it's...'";
 		Say "Kenaz looks pensive for a moment but then just shakes his head as though trying to erase his own thoughts before they could become voiced. Tentatively you ask the other what's the matter that's concerning him so much when seconds of silence become minutes in between you. 'Well...' Kenaz licks his lips and then flushes some. 'You see, you know Othala? The salt and pepper haired woman you help saved. Well…you see…that is…' Kenaz lack of a finishing his statement begins to worry you slightly, but not as much as what happens next.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -299,13 +298,11 @@ To say aidKenaz1:
 		Now Pertho is unresolved;
 	Otherwise: 
 		Say "'Hey, if you are wondering where the others are, well they come and go as they please for right now, so don't expect to see them around much.' Kenaz chuckles while [one of]sweeping up the floor[or]mopping up the floor[or]polishing down the fire trucks[or]waxing down the fire engines[at random]. 'Oh, by the way did you ever get that food I asked you about? I still need like [bold type]ten[roman type] parcels to be able to feed everyone with.'";
-		follow the turnpass rule;
 		 
 
 		 
 To say aidKenaz2:
 	Say "'Sorry to make you work like this.' Kenaz rubs the back of his head somewhat nervously. 'But if you could, please try and find [bold type]Pertho[roman type] at the [bold type]red light district[roman type] and then force him back here.' Kenaz smiles abashedly at this and you nod to the other man before turning to head about your way.";
-	follow the turnpass rule;
 
 
 
@@ -320,7 +317,6 @@ To say aidKenaz3:
 	Say "After that, well... Maybe you should try to [italic type]assist[roman type] Kenaz some more since he's probably not in the talking mood at the moment.";
 	now Kenaztalk is 5;
 	Now HelpKenazOut is 4;
-	follow the turnpass rule;
 
 
 
@@ -406,7 +402,6 @@ To say aidKenaz5:
 	Add "firefighter coat" to invent of player;
 	Now HelpKenazout is 6;
 	Now Kenazdes is turns;
-	follow the turnpass rule;
 
 
 
@@ -530,7 +525,6 @@ to say aidKenaz8:
 	say "'Sorry, but I so do not like the idea of what may happen in the future, however, I'm not sure how to go about changing it. Politricks is not my field and I have no idea how to work at making the coming circumstances right...' At this you pat Kenaz onto the shoulder and then tell the other man to do whatever he thinks. After all, living with the consequences of choices is part of the secret to understanding how to make life better. Come what may, you tell Kenaz that you, along with everyone else here, will do what they can to support him. Tipping his head to look down at you Kenaz gives you a strange look before pulling his head back up to stare at the ceiling.";
 	say "When the other doesn't say anything for several seconds you simply pat Kenaz onto one of his muscled arms and then turn to go off about your business. Just as you are about to go you could have almost sworn you heard a 'thank you' come from behind you. But at turning your head to look over the Dalmatian you look to find Kenaz already moving off about his way.";
 	now helpKenazout is 9;
-	follow the turnpass rule;
 
 
 
@@ -541,8 +535,9 @@ to say aidKenaz9:
 		if a random chance of 1 in 20 succeeds:
 			say "The workout with Kenaz proves to be grueling, not to mention exhausting as the hyper sized Dalmatian puts you through the physical course of training that most firefighters have to go through in order to make the grade. By the time you've finished [one of]doing your hundredth push-up[or]running five miles around the city with Kenaz[or]doing your hundredth crunch[or]jumping over the jumping rope Kenaz had given you for the thousandth time[or]being grilled on the course curriculum while having Kenaz spot you on the weight bench the other had rigged from some [italic type]borrowed[roman type] equipment[at random] you puff out of gasp of breath before slumping down into place as utter exhaustion over comes you.";
 			say "'Not bad. Not as good as someone whose spent their formative years training for this sort of thing, but like I said before, not bad. Keep this up and you'll make an excellent firefighter in no time.' Panting and then nodding to Kenaz you lay your head back and close your eyes, right before you snap them open as you think over what Kenaz just said.";
-			increase strength of player by 1;
-			say "Your strength has increased by 1!";
+			if strength of player < 18:
+				increase strength of player by 1;
+				say "Your strength has increased by 1!";
 			increase thirst of player by 16;
 			increase hunger of player by 15;
 			decrease libido of player by 15;
@@ -558,9 +553,9 @@ to say aidKenaz9:
 			follow the turnpass rule;
 	otherwise:
 		say "Shaking your head up at Kenaz you let him know that you have other things to be doing today. 'Alright, but if you change your mind I'll be here.' And with that you turn to go off about your way."; 
-		
 
-	
+
+
 to say aidKenaz10:
 	say "'Thank you so much for before.' Kenaz says and this time you know exactly what the other man means as he comes up to hug you tightly into his muscular chest. 'I don't want to even think about what that collie could have done to me if you had left me alone with it, but at the same time I can't help but think of it.' Kenaz whimpers and woofs in front of your face as he tries to keep from reaching down to rub at his jean covered cock. Smiling to the other you let him know that if he ever wants to try finding out you'll be happy to take him back there to try and find that collie once again.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
