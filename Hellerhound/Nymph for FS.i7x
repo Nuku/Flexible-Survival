@@ -40,18 +40,18 @@ To say nymph defeat:
 
 To say nymph attack:
 	if cunts of player > 0:
-		Say "As you go limp from the beating, greenish vines wrap around your body, spreading your legs and lifting you off the ground. The nymph steps forward and rubs her clit, grinning evilly.";
+		Say "As you go limp from the beating, greenish vines wrap around your [bodydesc of player] body, spreading your legs and lifting you off the ground. The nymph steps forward and rubs her clit, grinning evilly.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "As you watch in horror, it turns a wooden brown, with a barklike texture and grows longer and thicker, becoming a small, six inch cock.";
-		say "The vines bend, and your entire body tilts backward, placing your [cunt size desc of player] cunt right in front of her cock. 'Sweet carryings', she smirks, as she pushes inside, causing you to scream in pain from the rough bark. The nymph pumps in and out, and by the time you realize her cock is absorbing the lubrication, the pain causes you to lose consciousness.";
+		say "The vines bend, and your entire body tilts backward, placing your [cunt size desc of player] cunt right in front of her cock. 'Sweet carryings,' she smirks, as she pushes inside, causing you to scream in pain from the rough bark. The nymph pumps in and out, and by the time you realize her cock is absorbing the lubrication, the pain causes you to lose consciousness.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent. [impregchance]";
+		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent.[impregchance]";
 		say "You manage to collect some of the cum, placing it in an empty water bottle.";
 		add "nymph cum" to the invent of the player;
 		infect "Tree Nymph";	
 	if cocks of player is greater than 0 and cunts of player is 0:
 		say "You collapse under the pain of your beating, and the nymph approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body and immobilizing you. ";
-		say "You watch as she strokes her clit, and stare as it grows into a 6 inch long wooden cock that she begins to stroke. You watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
+		say "You watch as she strokes her clit, and stare as it grows into a 6 inch long wooden cock that she begins to stroke. You watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your [bodydesc of player] body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
 		repeat with n running from one to three:
 			infect "Tree Nymph";
 		say "After you finish, she shoves one of her breasts into your face. 'still not had a drink, eh?', she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";

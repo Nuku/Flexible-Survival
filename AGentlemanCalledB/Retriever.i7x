@@ -11,13 +11,13 @@ when play begins:
 to say losetoRetriever:
 	say "As you collapse, unable to resist the retriever girl's assault any longer she approaches you with an expression somewhere between hunger and lust";
 	if cocks of player > 0:
-		say ".  You find yourself becoming increasingly aroused as she strips you of your cloths and gear, intent on reaching the prize underneath. As soon as she has access the sexy canine starts licking at your cock with her large canine tongue, quickly bringing it to full erection.";
+		say ".  You find yourself becoming increasingly aroused as she strips your clothes and gear from your [bodydesc of player] body, intent on reaching the prize underneath. As soon as she has access, the sexy canine starts licking at your [cock size desc of player] [cock of player] cock with her large canine tongue, quickly bringing it to full erection.";
 		say "Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge you fill her needy body with you seed.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "Afterwards, she collapses atop you, almost as exhausted as you are, the two of you lay there for some time lost in the afterglow of your lovemaking, before she raises herself off your, running her belly contently as she pads away leaving you to recover on your own.";
 	otherwise:
-		say ".  As she strips you of your clothing and gear you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she doesn't get what she wants.";
+		say ".  As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
 		say "As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
