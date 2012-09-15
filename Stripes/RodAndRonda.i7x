@@ -171,7 +171,7 @@ instead of going to Mall FoodCourt while ( hp of Ronda is 1 and lastfuck of rod 
 		now hp of ronda is 2;
 	otherwise:
 		now hp of ronda is 3;
-		say "     Rod comes up to you as you arrive.  He seems a little more animate than he's been of late, if still rather disheveled.  'Hey, can I ask a favour?  I was, like, you know, totally missing Ronda.  You know about Ronda, dontcha?  She was there when those infected rats popped up and swarmed the place.  You must've missed it, but it was a bad scene, dude.'  You keep quiet, thinking it best that Rod and the other rats not know about your part in that incident.  'But yeah, there I was, totally bummed, when I went [']Dude!['] and got this brainwave to talk to that weird dog-girl at the shop.  She was all spooky and stuff, but she said there might be a way to help Ronda.  But that's when she told me that I'd need to get some stuff out in the city, and I'm not to keen on leaving the mall, you know.  So brainwave number two comes and I'm thinking my friend can help me with it.  So that's where you come in.'  Feeling a little guilty about what happened, you agree to visit the shop on the west side of the Atrium and see what needs to be done.";
+		say "     Rod comes up to you as you arrive.  He seems a little more animate than he's been of late, if still rather disheveled.  'Hey, can I ask a favour?  I was, like, you know, totally missing Ronda.  You know about Ronda, dontcha?  She was there when those infected rats popped up and swarmed the place.  You must've missed it, but it was a bad scene, dude.'  You keep quiet, thinking it best that Rod and the other rats not know about your part in that incident.  'But yeah, there I was, totally bummed, when I went [']Dude!['] and got this brainwave to talk to that weird dog-girl at that creepy shop.  She was all spooky and stuff, but she said there might be a way to help Ronda.  But that's when she told me that I'd need to get some stuff out in the city, and I'm not to keen on leaving the mall, you know.  So brainwave number two comes and I'm thinking my friend can help me with it.  So that's where you come in.'  Feeling a little guilty about what happened, you agree to visit the shop on the west side of the Atrium and see what needs to be done.";
 
 instead of conversing the Nermine while ( hp of Ronda is 3 and nerminetalk > 0 ):
 	now hp of Ronda is 4;
@@ -299,7 +299,7 @@ to say rondarescue:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     Eating another chocolate, Ronda pauses for a moment, struggling with her memories.  'I... I remember there was someone... gave me these.  Rod!  Yes, that was his name.  I can't believe I almost forgot him.'  She presses her lips to yours in another kiss, almost making you drop the vial as she pushes her chocolate-coated tongue into your mouth.  'Oh, thanks for helping me remember.  But you should help me bring him here so he can be with us.  He'd be so sexy as a big, slutty rat, don't you think?'";
-		say "( NOTE: Luring Rod down may disrupt some other game content or have odd glitches.  It is also considered non-canon. - The Mgmt. )[line break]";
+		say "( NOTE: Luring Rod down may disrupt some other game content or have odd glitches/inconsistencies.  It is also considered non-canon. - The Mgmt. )[line break]";
 		if the player consents:
 			say "[helpingronda]";
 		otherwise:
