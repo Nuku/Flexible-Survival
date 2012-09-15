@@ -146,7 +146,7 @@ Instead of resolving a Fashion Statement:
 			if "Scavenger" is listed in feats of the player:
 				increase bonus by 4;
 			say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
-			if dice + bonus is greater than 20:
+			if dice + bonus is greater than 15:
 				say "Scrounging up whatever you could you finally manage to find something worth wearing from the leftover inventory back here. Giving the apparel a quick a sniff, just to make sure it's not tainted, you smile approvingly before stuffing the items in question into your backpack. Time to head for home!";
 				add "muscle shirt" to invent of player;
 				increase score by 5;
@@ -178,7 +178,7 @@ name	desc	weight	object
 muscle shirt is equipment. 
 muscle shirt is not temporary. 
 The placement of muscle shirt is "body". 
-The descmod of muscle shirt is "A sexy black muscle shirt and waist hugging pair of pants rests over your body.".
+The descmod of muscle shirt is "A sexy black muscle shirt and waist hugging pair of pants have been slipped over your body.".
 The slot of muscle shirt is "body".
 
 Instead of smelling muscle shirt:
