@@ -251,6 +251,11 @@ This is the player attack rule:
 						now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
 					increase dam by a random number between 1 and dammy;
 				choose row monster from table of random critters;
+		if weapon object of player is bo staff:
+			if "Martial Artist" is listed in feats of player and a random chance of 2 in 3 succeeds:
+				increase dam by 1;
+			if "Black Belt" is listed in feats of player and a random chance of 2 in 3 succeeds:
+				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
 		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
 			now wmstrike is 1;
 			let numnum be level of player + ( ( intelligence of player - 10 ) / 2 ) + 105;

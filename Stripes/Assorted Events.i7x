@@ -24,7 +24,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "bo staff"	"An ornate fighting staff."	2	bo staff
 
-bo staff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of bo staff is 3. The weapon type of bo staff is "Melee". It is not temporary.
+bo staff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of bo staff is 4. The weapon type of bo staff is "Melee". It is not temporary.
 
 
 Suddenly Ninjas is a situation.
