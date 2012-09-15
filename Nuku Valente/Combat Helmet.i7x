@@ -5,12 +5,12 @@ Combat Helmet by Nuku Valente begins here.
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"combat helmet"	"A basic army helmet. It should provide some minor protection while worn."	1	combat helmet
+"combat helmet"	"A basic army helmet. It should provide some minor protection while worn."	4	combat helmet
 
 combat helmet is equipment. 
 It is not temporary. 
-The AC of combat helmet is 1.
-The effectiveness of combat helmet is 33.
+The AC of combat helmet is 25.
+The effectiveness of combat helmet is 60.
 The placement of combat helmet is "face". 
 The descmod of combat helmet is "A green and brown camo army helmet rests atop them.".
 The slot of combat helmet is "head". 
