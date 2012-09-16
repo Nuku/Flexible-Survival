@@ -5014,9 +5014,6 @@ Include Rachel Mouse by Stripes.
 Include Honey by Stripes.
 
 
-Include Cheat Box for FS by Stripes.
-
-
 Book Start the Game
 
 instead of going somewhere while player is overburdened:
