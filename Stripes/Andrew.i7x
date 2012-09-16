@@ -37,10 +37,10 @@ Instead of conversing the Andrew:
 Section 3 - Sexy Times
 
 instead of fucking the Andrew:
-	[puts Alpha Wolf as lead monster for possible impregnation]
+	[puts Black Wolf as lead monster for possible impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "Alpha Wolf":
+		if name entry is "Black Wolf":
 			now monster is y;
 			break;
 	if hp of Andrew is 0:
@@ -53,12 +53,33 @@ instead of fucking the Andrew:
 		say "     Andrew pulls you into the booth to snuggle with him, running his black paws across your [bodydesc of player] body, kneading at your chest.  'Mmm... I'm glad you took up my offer.  I'm always eager to [']meat['] new guys,' he giggles, licking along your ear.  A paw drifts down to your groin, fondling your cock as he grinds his bulging crotch against you.  'But since it's our first time, how about I get a taste for you,' he says, nipping at your neck.  You moan and nod, eager to feel the playful wolf's muzzle and tongue on your dick.";
 		say "     [if scalevalue of player > 3]Shoving the table out of the way of your large body and pushing[otherwise]Pushing[end if] you to the back of the booth, he climbs onto the seat and buries his muzzle between your legs, licking and lapping eagerly at your erection.  You moan softly and run your hands through the wolf's shaggy headfur.  His tongue works up and down your shaft while fondling your nuts.  His warm breath washes over your crotch as he takes you into his mouth eagerly.  His head bobs and his tongue works you over with considerable skill, the wolf being clearly as well-practiced as he claimed.";
 		say "     As he blows you, he undoes his belt and slides down his pants, freeing his large, lupine cock and heavy ballsac.  His meat is a girthy ten inches with an thick knot at its base.  It pulses as he strokes over it, dribbling considerable precum down over his shaft and sheath as well as onto the padded seat.  Even with the sound of the club's music in the background, you start to hear the wet sounds of him sucking you off and stroking his slick cock.";
-		say "     With the gay wolf working your [cock size desc of player] [cock of player] cock and the added show of him playing with himself, you cum quite hard, blasting shot after shot of your hot seed down his throat.  His tongue slathers over your [if cock length of player > 16] shaft[otherwise]balls[end if] as you cum.  As your orgasm is finishing, he moans in pleasure and his ballsac tightens up before shooting large globs of cum from his throbbing dick.  Some splatters onto the you, onto him, the underside of the table and even the back of the booth beside you.  Andrew sits up slowly, licks his muzzle and smiles happily.  'Mmm... very tasty.  Come back for more any time, sweetie.'";
+		say "     With the gay wolf working your [cock size desc of player] [cock of player] cock and the added show of him playing with himself, you cum quite hard, blasting shot after shot of your hot seed down his throat.  His tongue slathers over your [if cock length of player > 16] shaft[otherwise]balls[end if] as you cum.  As your orgasm is finishing, he moans in pleasure and his ballsac tightens up before shooting large globs of cum from his throbbing dick.  Some splatters onto you, onto him, the underside of the table and even the back of the booth beside you.  Andrew sits up slowly, licks his muzzle and smiles happily.  'Mmm... very tasty.  Come back for more any time, sweetie.'";
 		now lastfuck of Andrew is turns;
 		andrewinfect;
 		now hp of Andrew is 2;
-	otherwise:
-		say "     Andrew grins at your offer and runs his paws over your [bodydesc of player] body with obvious lust.  'Mmm... I'm certainly up for some fun again, sweetie.  Now what exactly did you have in mind,' he says with his slightly feminine voice while walking a paw down to your crotch[if cunts of player > 0].  'I'm up for either top or bottom.  But if I top, I'd be taking your back door in, hon,' he says softly to make sure that'd be alright[otherwise].  'I'm up for either top or bottom, sweetie.  What do you feel like?' he asks while nibbling your ear[end if].";
+	otherwise if hp of Andrew is 4 or ( hp of Andrew > 4 and a random chance of 1 in 5 succeeds):	[special - give oral]
+		say "     Andrew grins at your offer and runs a paw down to the bulge in his pants.  'Mmm... How does a tasty treat sound, hot stuff?  I've got something nice and sticky for you all saved up,' he says while hopping up to sit at the edge of the table.  He unzips his fly and pulls out his swelling cock, running his fingers fingers over the throbbing, lupine cock.  A little precum dribbles down his pointed shaft as he slips his pants down  completely.  The scent of aroused wolf grows stronger and you lick your lips, longing to a taste of that thick cock.";
+		say "     Unable to resist the tantalizing offer, you bring your lips to his thick shaft and start licking and kissing at it.  He moans softly and rubs his hands over your head, gently coaxing you to take it into your mouth.  As he stuffs your mouth with his cock and starts thrusting into it, you work your tongue over him, excited by the taste of his precum and musky meat.  You grope his heavy, enlarged balls with one hand, longing to taste their contents soon.  'Mmm... good work.  Keep that up,' he says in his soft, girlish voice.  'You love this, don't you?  Putting on a show for everyone with how much you love cock?'";
+		say "     Awash in your own arousal, you'd agree with him if your mouth weren't stuffed with delicious wolf-cock, wanting to be as much a man-whore as the sexy wolf you're blowing.  You're quite certain there's others around watching the show, probably having some fun of their own.  Imagining all those different, sexy penises around you, being stroked, rubbing together, filling slick holes, turns you on all the more.  You wiggle your rear and suck all the harder, which stimulates his cock to increase its flow of delicious precum.  Grabbing his ass with your free hand, you slip a pair of fingers into his tailhole and prod at his prostate.  This gets the wolf to howl in lustful release as he cums hard, blasting his thick down into your mouth.  His prodigious flow forces its way down your throat and stuffs your belly with hot semen.  Just as your tummy's starting to feel full, he pushes your head back, letting the rest of his load spray onto your face, coating your head in his delicious, musky cum.";
+		say "     A little dazed, but greatly aroused after your tasty meal of wolf cum, you're pushed up onto the table by Andrew.  As you use your hands to wipe his seed into your mouth, he takes a hold of your throbbing [cock size desc of player] erection[if cocks of player > 1]s[end if] and strokes you quickly.  Soon enough you moan and cum as well, spraying your hot load across yourself for everyone around to see what a horny cock slut you are as your [ball size] balls are drained.";
+		now lastfuck of Andrew is turns;
+		andrewinfect;
+		if hp of Andrew is 4, now hp of Andrew is 5;
+	otherwise if hp of Andrew is 6 or ( hp of Andrew > 6 and a random chance of 1 in 5 succeeds):	[special - cummed over]
+		say "[randomdesc]";		[yields 'slutname' - bottom]
+		say "[randombodypart]";		[yields 'bodyselector' - top]
+		while bodyselector is slutname, say "[randombodypart]";
+		say "     Andrew grins at your offer and pulls you in for a kiss.  He strokes a paw across your face and nibbles at your ear.  'Mmm... you looked so sexy before with my cum all over your [if hp of Andrew is 6]face[otherwise]body[end if].  How about we get you nice and messy like that again?' he says with his faintly feminine voice with considerable eagerness.  Clearly the wolf is very turned on by the prospect of getting you nice and sticky like that again.  And remembering how delicious his hot load was, you find yourself aroused by the idea as well and readily agree.  Smiling, he strips you down with his playful, groping paws before unzipping his pants to release his aroused member.";
+		say "     With your hips at the edge of the table and your legs spread, he moves in between them and presses his thick cock down onto yours.  You can feel his warm shaft and weighty balls atop your [cock size desc of player] man meat as his precum flows steadily, getting you both slick.  He rubs his paws over them[if cocks of player is 1] both[end if], sliding them against one another as he masturbates you both.  The feel of his slippery cock against your [cock of player] member[if cocks of player > 1]s[end if] is very arousing.";
+		say "     As your cocks are rubbed and stroked together, you let your hands wander over your [bodydesc of player] body, teasing yourself.  You notice several others gathered around the booth, watching the sexy show you two are putting on, so you increase your wanton display for them.  To one side, you notice a [slutname] leaning over the booth to better watch the fun.  Behind him is a [bodyselector] and it's quite clear that the pair have been inspired to have some fun of their own.  Both pleased and aroused at having gotten the two males excited by your show, you reach over and stroke the [slutname]'s cheek, enjoying his moan as the [bodyselector] behind him thrusts firmly into him again.";
+		say "     Turning your attention back to Andrew, you smile up at the wolf and lick your lips, moaning for him to cum.  Judging by how wet your lower belly, crotch and cock[if cocks of player > 1]s[end if] are, he's certainly getting close.  Grabbing his balls and rubbing them against yours, you beg him to spray his load all over you to show everyone what a big cock slut you are.  His lupine cock twitches at this and releases a big spurt of pre across your [bodytype of player] chest, setting your own orgasm off.";
+		say "     Your [cock size desc of player] [cock of player] shaft pulses beneath his, spraying your seed across your [if cock length of player < 10]belly and the underside of the wolf's cock[otherwise]chest and face[end if].  Andrew strokes and pumps your cock[if cocks of player > 1]s[end if], making sure you have a long and enjoyable orgasm.  Hearing grunts and moans to your side, you can see the couple in the other booth panting hard as the [bodyselector] cums in the [slutname]'s ass.  All this sets your lupine lover off with a lustful howl that sends a big blast of wolfcum into your face.  More delicious globs of his semen spray across your body and face, coating you in large splatters of musky seed.  As you moan and pant while recovering from your powerful orgasm, you gather up globs of his sticky seed and lick them from your fingers.  You even share a sample with the [slutname] and, from the look he and Andrew share, you expect he'll be bending over for the wolf soon.";
+		now lastfuck of Andrew is turns;
+		andrewinfect;
+		if hp of Andrew is 6, now hp of Andrew is 7;
+	otherwise:					[standard anal sex w/Andrew]
+		if hp of Andrew < 6, increase hp of Andrew by 1;
+		say "     Andrew grins at your offer and runs his paws over your [bodydesc of player] body with obvious lust.  'Mmm... I'm certainly up for some fun again, sweetie.  Now what exactly did you have in mind?' he says with his slightly feminine voice while walking a paw down to your crotch[if cunts of player > 0].  'I'm up for either top or bottom.  But if I top, I'd be taking your back door in, hon,' he says softly to make sure that'd be alright[otherwise].  'I'm up for either top or bottom, sweetie.  What do you feel like?' he asks while nibbling your ear[end if].";
 		say "     Do you want to fuck him (Y) or get fucked (N)?";
 		if the player consents:
 			say "     The wolf leans against the table and raises his tail, having gotten out of the cargo pants while you were deciding.  His heavy balls and cock slap down onto the wood as he smiles back at you.  His long tail swishes in slow invitation and you don't wait any longer.  Moving in behind him, you grind your hard [cock of player] shaft against his rear and he moans playfully.  'Come on, honey.  Show me what you can do.'  Not wanting to disappoint, you line your glans up with his tight pucker and slowly sink into him.  His asshole spreads with practiced ease, relaxing enough to take your [cock size desc of player] cock into him, but staying tight enough to squeeze and tug at it nicely.  He moans in pleasure as you penetrate him, then reach around to stroke his lupine cock.";
@@ -72,21 +93,34 @@ instead of fucking the Andrew:
 			andrewinfect;
 
 
+[	hp of Andrew		]
+[ 0 = Nothing			]
+[ 1 = Talked w/him		]
+[ 2 = Recieved oral		]
+[ 3 = Had sex once		]
+[ 4 = Had sex again		]
+[ 5 = Gave oral			]
+[ 6 = Had sex again		]
+[ 7 = Covered in wolf cum	]
+
+
 to andrewinfect:
 	[puts Alpha Wolf as lead monster for possible impregnation]
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
-		if name entry is "Alpha Wolf":
+		if name entry is "Black Wolf":
 			now monster is y;
 			break;
 	let tempvalue be sex entry;
+	now non-infectious entry is false;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	otherwise if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
 	otherwise:
 		now sex entry is "Male";
-	infect "Alpha Wolf";
+	infect "Black Wolf";
+	now non-infectious entry is true;
 	now sex entry is tempvalue;
 
 
