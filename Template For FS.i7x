@@ -1,7 +1,7 @@
-[***This template is not an actual creature, but instead an template for monster creation for FS and should not be added to the game itself.***]
-
 Version 1 of Template For FS by YourName begins here.
 [ Edit the above line, replace 'Template' with your monster's name, and 'YourName' with the name you'd like credited for the mod. ]
+[***This template is not an actual creature, but instead an template for monster creation for FS and should not be added to the game itself.***]
+
 "Adds a Template creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
 
@@ -18,6 +18,10 @@ when play begins:
 	add { "Template" } to infections of furry;
 	add { "Template" } to infections of hellspawn;
 	add { "Template" } to infections of humorous;
+	add { "Template" } to infections of Tailweapon;		[usable for Tail Strike feat]
+	add { "Template" } to infections of Felinelist;		[list of feline infections]
+	add { "Template" } to infections of Caninelist;		[list of canine infections]
+	add { "Template" } to infections of Reptilelist;	[list of reptile infections]
 
 [Sample loss and victory text templates.]
 [Numerous other variations can be found in existing creature files.]
@@ -33,13 +37,13 @@ to say losetotemplate:
 to say beatthetemplate:
 	say "     You were victorious over the creature.";
 	if libido of player > 40:
-		say "     Additional paragraph for a player with a libido greater than 40.  Do they want sex?"
+		say "     Additional paragraph for a player with a libido greater than 40.  Do they want sex?";
 		if the player consents:
 			say "     The player agreed to sex.  Fun times begin.";
 			if cunts of player > 0:
 				say "     The player is female/herm, so sex goes like this for her.";
 			otherwise:
-				say "     The player must be male, so sex goes like this for him."
+				say "     The player must be male, so sex goes like this for him.";
 		otherwise:
 			say "     Awww!  The player refused the sex.  Party pooper.";
 
@@ -52,8 +56,8 @@ to say templatedesc:
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
+name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:

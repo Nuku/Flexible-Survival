@@ -205,7 +205,7 @@ instead of conversing the Kenaz:
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		Say "'Well you see, with everyone coming back here and all...I've kinda started running low on food.' You nod your head in understanding and then ask Kenaz how much food he thinks he will need. 'Well, between me and the others, and given that we don't know how much longer it will take for the military to come and clean up things...maybe about twenty pounds of food?' Kenaz smiles helplessly as you just blink at him. 'Or maybe about [bold type]ten[roman type] things of food instead? I can make some things stretch and hopefully the military will air drop some more provisions before long.' Kenaz reaches one of his hands up to rub at his chin thoughtfully.";
 		Say "Telling the firefighter that you'll see what you can do, you get a sharp nod from Kenaz. 'Alright. And hey, once again, thanks a lot.' You smile and then give the other man a coy wink before turning to head about your way.";
-		if kenaztalk is 0, Now HelpKenazOut is 1;
+		if HelpKenazOut is 0, Now HelpKenazOut is 1;
 		now rsc is 2;
 		Increase score by 2;
 	otherwise if Kenaztalk is 5:
@@ -216,13 +216,13 @@ instead of conversing the Kenaz:
 
 Section 4 - Helping Kenaz
 
-HelpKenazOut is an action applying to nothing.
+HelpingKenazOut is an action applying to nothing.
 
-Understand "assist" as HelpKenazOut.
-Understand "help Kenaz" as HelpKenazOut.
-Understand "assist Kenaz" as HelpKenazOut.
+Understand "assist" as HelpingKenazOut.
+Understand "help Kenaz" as HelpingKenazOut.
+Understand "assist Kenaz" as HelpingKenazOut.
 
-Check HelpKenazOut:
+Check HelpingKenazOut:
 	If Kenaz is not visible, say "Really? Maybe you should go back and ask him what he asked you to do then..." instead;
 
 LastHelpKenazOut is a number that varies. 
@@ -233,28 +233,28 @@ Kenazdes is a number that varies. Kenazdes is usually 0.
 aidKenaz is a number that varies.
 Now Pertho is resolved;
 
-Carry out HelpKenazOut:
+Carry out HelpingKenazOut:
 	If HelpKenazOut is 1:
 		Say "[aidKenaz1]";
-	If HelpKenazOut is 2:
+	otherwise If HelpKenazOut is 2:
 		Say "[aidKenaz2]";
-	If HelpKenazOut is 3:
+	otherwise If HelpKenazOut is 3:
 		Say "[aidKenaz3]";
-	If HelpKenazOut is 4:
+	otherwise If HelpKenazOut is 4:
 		Say "[aidKenaz4]";
-	If HelpKenazOut is 5:
+	otherwise If HelpKenazOut is 5:
 		Say "[aidKenaz5]";
-	If HelpKenazOut is 6:
+	otherwise If HelpKenazOut is 6:
 		Say "[aidKenaz6]";
-	If HelpKenazOut is 7:
+	otherwise If HelpKenazOut is 7:
 		Say "[aidKenaz7]";
-	If HelpKenazOut is 8:
+	otherwise If HelpKenazOut is 8:
 		Say "[aidKenaz8]";
-	If HelpKenazOut is 9:
+	otherwise If HelpKenazOut is 9:
 		Say "[aidKenaz9]";
-	If HelpKenazOut is 10:
+	otherwise If HelpKenazOut is 10:
 		Say "[aidKenaz10]";
-	If HelpKenazOut is 11:
+	otherwise If HelpKenazOut is 11:
 		Say "[aidKenaz11]";
 
 
@@ -297,10 +297,10 @@ To say aidKenaz1:
 		Now HelpKenazOut is 2;
 		Now Pertho is unresolved;
 	Otherwise: 
-		Say "'Hey, if you are wondering where the others are, well they come and go as they please for right now, so don't expect to see them around much.' Kenaz chuckles while [one of]sweeping up the floor[or]mopping up the floor[or]polishing down the fire trucks[or]waxing down the fire engines[at random]. 'Oh, by the way did you ever get that food I asked you about? I still need like [bold type]ten[roman type] parcels to be able to feed everyone with.'";
-		 
+		Say "'Hey, if you are wondering where the others are, well they come and go as they please for right now, so don't expect to see them around much.' Kenaz chuckles while [one of]sweeping up the floor[or]mopping up the floor[or]polishing down the fire trucks[or]waxing down the fire engines[at random]. 'Oh, by the way did you ever get that food I asked you about? I still need like [bold type]ten[roman type] parcels to be able to feed everyone with?'";
 
-		 
+
+
 To say aidKenaz2:
 	Say "'Sorry to make you work like this.' Kenaz rubs the back of his head somewhat nervously. 'But if you could, please try and find [bold type]Pertho[roman type] at the [bold type]red light district[roman type] and then force him back here.' Kenaz smiles abashedly at this and you nod to the other man before turning to head about your way.";
 
