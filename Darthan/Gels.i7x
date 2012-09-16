@@ -245,7 +245,7 @@ When Play begins:
 	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 3;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "Pink Gel";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "pink gel";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -300,7 +300,7 @@ When Play begins:
 	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "Blue Gel";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "blue gel";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -355,7 +355,7 @@ When Play begins:
 	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 3;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 45;			[ Target libido the infection will rise towards. ]
-	now loot entry is "Purple Gel";			[ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "purple gel";			[ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 50;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -421,13 +421,13 @@ Section 4 - Items
 [Pink Gel item.]
 Table of Game Objects (continued)
 name	desc	weight	object
-"Pink Jello"	"A cup of pink jello, it looks like it is strawberry flavored."	1	Pink Jello
+"pink gel"	"A cup of pink jello, it looks like it is strawberry flavored."	1	pink gel
 
-Pink Jello is a grab object.
+pink gel is a grab object.
 It is part of the player. 
 It is temporary.
 
-The usedesc of Pink Jello is "[gel1]";
+The usedesc of pink gel is "[gel1]";
 
 to say gel1:
 	say "Eating the cup of pink jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
@@ -444,19 +444,19 @@ to say gel1:
 	otherwise:
 		infect "Pink Gel";
 
-instead of sniffing Pink Jello:
+instead of sniffing pink gel:
 	say "The jello smells like strawberries.";
 
 [Blue Gel item.]
 Table of Game Objects (continued)
 name	desc	weight	object
-"Blue Jello"	"A cup of blue jello, it looks like it is blueberry flavored."	1	Blue Jello
+"blue gel"	"A cup of blue jello, it looks like it is blueberry flavored."	1	blue gel
 
-Blue Jello is a grab object.
+blue gel is a grab object.
 It is part of the player. 
 It is temporary.
 
-The usedesc of Blue Jello is "[gel2]";
+The usedesc of blue gel is "[gel2]";
 
 to say gel2:
 	say "Eating the cup of blue jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
@@ -473,19 +473,19 @@ to say gel2:
 	otherwise:
 		infect "Blue Gel";
 
-instead of sniffing Blue Jello:
+instead of sniffing blue gel:
 	say "The jello smells like blueberries.";
 
 [Purple Gel item.]
 Table of Game Objects (continued)
 name	desc	weight	object
-"Purple Jello"	"A cup of purple jello, it looks like it is grape flavored."	1	Purple Jello
+"purple gel"	"A cup of purple jello, it looks like it is grape flavored."	1	purple gel
 
-Purple Jello is a grab object.
+purple gel is a grab object.
 It is part of the player. 
 It is temporary.
 
-The usedesc of Purple Jello is "[gel3]";
+The usedesc of purple gel is "[gel3]";
 
 to say gel3:
 	say "Eating the cup of purple jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
@@ -500,7 +500,7 @@ to say gel3:
 	otherwise:
 		infect "Purple Gel";
 
-instead of sniffing Purple Jello:
+instead of sniffing purple gel:
 	say "The jello smells like grapes.";
 
 

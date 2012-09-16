@@ -53,11 +53,13 @@ instead of conversing the Tristian:
 	otherwise if broquest is 2:
 		say "Tristian looks up eagerly as you approach, only to sigh as you shake your head and let him know there is no news on his brother yet. The palomino nods, and the two of you make small talk for a while as you chat on other subjects, but you can tell that his mind is elsewhere, and so you decide to let him be for now... though maybe a roll in the hay with his lovely little pet could help distract him instead....";
 	otherwise if Tristianaroused is greater than 4:
-		if furry is banned or hermaphrodite is banned:
+		if furry is banned or hermaphrodite is banned or guy is banned:
 			say "Tristian looks kind of down as you approach the handsome stud pony, and you are curious enough to lend him an ear and see what is bothering him. 'Well,' He says with a sigh, 'I just got word about my brother, or at least maybe I did, but it's not good. All I know is someone saw some lights and activity at his apartment in the city, but then no longer,' the horse says with a sad look on his long face.";
-			say "(This quest is inaccessible w/o furry/hermaphrodite content available.  Sorry.)";
-		say "Tristian looks kind of down as you approach the handsome stud pony, and you are curious enough to lend him an ear and see what is bothering him. 'Well,' He says with a sigh, 'I just got word about my brother, or at least maybe I did. All I know is someone saw some lights and activity near his apartment in the city.' The horse says with a sad look, making you confused as you ask if he shouldn't be happy to have news of his brother. 'Well I would be,' He admits, 'Except his apartment is pretty much right in the territory the Hyena gang has been claiming, and when I asked around I found out there have been a lot of them sniffing around over there, like way more then anyone here can take.' He says with a sad sigh. 'I even wanted to go myself, but some of the strippers here talked me out of it, so basically if he isn't a hyena yet... He will be soon.' He looks at you with his slightly sad eyes, 'I just, kind of miss him you know? And I know it would be better if he were here with me then as part of some gang...' Feeling sympathy for your gothy playmate, you offer to go take a look yourself. 'Oh would you?' He says seeming surprised and happy at your offer. 'I mean I couldn't ask you to go. but if you do go and see anything, even if its just that hyenas were there, could you let me know?' The palomino asks you earnestly, and you happily agree."; 
-		now broquest is 2;
+			say "(This quest is inaccessible w/o furry/guy/hermaphrodite content available.  Sorry.)";
+			now broquest is 6;
+		otherwise:
+			say "Tristian looks kind of down as you approach the handsome stud pony, and you are curious enough to lend him an ear and see what is bothering him. 'Well,' He says with a sigh, 'I just got word about my brother, or at least maybe I did. All I know is someone saw some lights and activity near his apartment in the city.' The horse says with a sad look, making you confused as you ask if he shouldn't be happy to have news of his brother. 'Well I would be,' He admits, 'Except his apartment is pretty much right in the territory the Hyena gang has been claiming, and when I asked around I found out there have been a lot of them sniffing around over there, like way more then anyone here can take.' He says with a sad sigh. 'I even wanted to go myself, but some of the strippers here talked me out of it, so basically if he isn't a hyena yet... He will be soon.' He looks at you with his slightly sad eyes, 'I just, kind of miss him you know? And I know it would be better if he were here with me then as part of some gang...' Feeling sympathy for your gothy playmate, you offer to go take a look yourself. 'Oh would you?' He says seeming surprised and happy at your offer. 'I mean I couldn't ask you to go. but if you do go and see anything, even if its just that hyenas were there, could you let me know?' The palomino asks you earnestly, and you happily agree."; 
+			now broquest is 2;
 	otherwise if broquest is 1:
 		say "Still no word back on my brother,' Tristian says with a sigh as you approach, 'I keep getting more worried about the guy as time goes on too.' He says, before smiling and looking up at you, 'But enough about that, how about a drink?' The large stallion says, and you do your best to smile and take his mind off his brother for a while as you drink and chat with him.";
 	otherwise if Tristianaroused is greater than 2:
@@ -117,8 +119,9 @@ Section 3-Tristians quest-
 
 Tristbrother is an situation.
 when play begins:
-	add Rabid Lawyers to badspots of hermaphrodite;
-	add Rabid Lawyers to badspots of furry;
+	add Tristbrother to badspots of hermaphrodite;
+	add Tristbrother to badspots of guy;
+	add Tristbrother to badspots of furry;
 
 Instead of resolving Tristbrother:
 	If broquest is 2: 

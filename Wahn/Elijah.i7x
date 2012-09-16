@@ -218,7 +218,7 @@ instead of conversing the Elijah:
 							sort milkchoicelist;
 							say "Which milk would you prefer to use? (no different results)[line break]";
 							repeat with y running from 1 to number of entries in milkchoicelist:
-								say "[link][bracket][y][close bracket][end link] - [entry y of milkchoicelist][line break]";
+								say "[link][bracket][y][close bracket][as][y][end link] - [entry y of milkchoicelist][line break]";
 							say "[link][bracket]0[close bracket][end link] - ABORT[line break]";
 							while chosenmilk is "empty":
 								say "Pick the corresponding number> [run paragraph on]";
