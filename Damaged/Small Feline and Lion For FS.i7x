@@ -1,5 +1,5 @@
 Version 9 of Small Feline and Lion For FS by Damaged begins here.
-[ Version 9 - Alt Combat for male, player victory sex against male, ENDINGS!]
+[ Version 9.1 - Leonard's hunt victory]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Small Feline and Lion to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -27,6 +27,12 @@ to say cat def:
 			say "     Deciding to make use of the pesky catgirl, you push the small, curvy feline to the ground and pounce her.  She mewls softly, but doesn't pull away as you line up your [cock of player] cock and drive it into her[if cock length of player > 16].  Your massive cock makes a huge bulge in the little feline and she moans and mewls uncontrollably, rubbing her paws over her swollen tummy[otherwise if cock length of player > 10].  Your big cock makes an appreciable bump in the little feline's belly and she rubs it, moaning and mewling happily[otherwise].  Your cock stuffs the little feline, cramming her full of throbbing meat, making her moan and mewl happily[end if].  Her pussy quivers around your shaft and her B-cup breasts sway as you pound into her curvy body.  When finally you cum, you pump your thick seed into her, leaving her [if cock width of player > 10]hugely bloated as your ample cum stuffs her small body, flowing out her overstuffed pussy[otherwise if cock width of player > 5]tummy a little plump and her pussy leaking your seed[otherwise]her pussy stuffed full of your semen and slowly leaking cum[end if].  She purrs softly, passed out after getting fucked good and hard.";
 		otherwise:
 			say "     Deciding to make use of this pesky catgirl, you grab the small, curvy feline and press her face between your legs, grinding your pussy into her softly furred muzzle.  She mewls softly and starts timidly licking at your slit, running her raspy little tongue over it.  You moan softly and scritch her ears, telling her she's a good kitty.  As you encourage her, her enthusiasm for her task increases, as does your pleasure.  Her rough tongue is quick stimulating and soon enough you're soaking the little kitty's face in your juices as you cum hard.  Once you're finished with her, you push her to the ground, leaving her to lick and groom herself clean.";
+		if hp of leonard is 7:
+			if Feline_meow is 0, increase Feline_meow by 1;
+			say "     Recalling that Leonard has asked you to track down more of these felines, you pick up the cat girl and cradle her to your chest.  She mewls softly and nuzzles you, wrapping her lips around your nipple and starting to suckle eagerly.  You moan in pleasure as you [if breast size of player is 0]surprisingly [end if]start to lactate, providing warm milk for the needy kitty.  You feel very aroused by the experience and can hardly wait to bring her to Leonard.";
+			infect;
+			if breast size of player is 0, follow the breast change rule;
+			now Feline_attached is 1;
 	otherwise:
 		say "You deliver a final strike to the small feline, knocking her out!";
 
@@ -55,11 +61,11 @@ to say lion def:
 to say cat vict:
 	increase Feline_meow by 1;
 	say "     The small curvy feline approaches and looks up at you imploringly. Against your better judgment, you reach down and pick her up. She leans in and begins to eagerly suckle at your chest";
-	if breasts of player > 0:
+	if breast size of player > 0:
 		say ".  The small cat's teeth chew at your own thick black teats and she begins to drink eagerly. You were not aware you were able to lactate, but she proves it in debilitating waves of delight";
 	otherwise:
 		say ".  Tawny fur explodes over your chest, spreading rapidly across your front and back, slightly lighter on the front. Pleasure builds in your front as two breasts swell into existence, nipples firm and visible through the fur.";
-	infect;
+		follow the breast change rule;
 	if libido of player < 10:
 		say "You manage to force yourself to set the feline down. She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
 	otherwise:
