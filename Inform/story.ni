@@ -415,7 +415,7 @@ Instead of attacking the Cola Vending machine:
 		say "The machine gives a final spark of defeat. You are certain there is no more soda to be had.";
 		remove Cola Vending machine from play;
 
-Section - Nanofab
+Chapter - Nanofab
 
 [Nanofabricator: fabbing, consuming, stats, etc]
 
@@ -429,8 +429,8 @@ with 100 blank rows.
 There is a Nanofabricator in dark basement. [should be safely out of the way here until activated.  by a quest? gathering stuff? whatever]["The library computer is wired into the infection scanner and nanite transmitter.  All of which are spliced to the Zephyr Sanity Containment Module (patent pending).  Generous amounts of duct tape cover the contraption." unneeded text?] It is fixed in place. It has a description "The nanofabricator.  You can barely identify the parts that went into it, covered as they are in the layers of duct tape which holds the monstrosity together.  But at least it works, sort of, mostly, once in a while.[line break]Material stockpile is currently: [bold type][GenericNanoPastePool][roman type][line break]To increase stockpile: [bold type]Consume {item name}[roman type][line break]To make a known item: [bold type]Fab {item name}[roman type][line break]To list all known items: [bold type]Fablist[roman type][line break]".
 understand "nanofab" as Nanofabricator.
 GenericNanoPastePool is a number that varies.  GenericNanoPastePool is usually 0. [pool of material used for fabricating, starts empty]
-FabricatingRateMultiplier is a number that varies.  FabricatingRateMultiplier is usually 11. [base cost of making things, should be above breaking cost \/]
-FeedingRateMultiplier is a number that varies.  FeedingRateMultiplier is usually 9. [base cost of breaking things, should be below making cost ^]
+FabricatingRateMultiplier is a number that varies.  FabricatingRateMultiplier is usually 12. [base cost of making things, should be above breaking cost, see below \/]
+FeedingRateMultiplier is a number that varies.  FeedingRateMultiplier is usually 8. [base cost of breaking things, should be below making cost, see above ^]
 nanofabnumtemp is a number that varies. [temporary number used to simplify fabricator logic]
 nanofabrowtemp is a number that varies. [needed to know a row number later, so held here]
 nanofabnametemp is a text that varies. [temporary name used to simplify fabricator logic]
@@ -447,13 +447,50 @@ Carry out FabKnownList:
 			say "Name: [object entry][line break]";
 	say "End of list.[line break]";
 
-SuperSecretNanoFabCheat is an action applying to nothing. [test command, do not list in help. eventually move to debug?]
+[SuperSecretNanoFabCheat is an action applying to nothing. [test command, do not list in help. eventually move to debug? or remove?]
 understand "Cheat Me A NanoFab" as SuperSecretNanoFabCheat.
 
 carry out SuperSecretNanoFabCheat:
 	Move Nanofabricator to Grey Abbey Library;
 	increase GenericNanoPastePool by 50;
-	say "Nanofabricator created in library, GNP set to 50.  Happy fabbing :)";
+	say "Nanofabricator created in library, GNP set to 50.  Happy fabbing :)";]
+
+Section - Creation of Nanofab
+
+NanofabCreating is an action applying to nothing.
+Understand "build nanofab from simple items for testing purposes only" as NanofabCreating. [change command when integrating with questline, current command obscure to avoid accident activation]
+
+Before NanofabCreating: [checks that you have everything needed to build the nanofab, fails with relevant errors if you don't]
+	if Nanofabricator is in Grey Abbey Library:
+		say "You've already built the Nanofabricator.  It's in the Grey Abbey Library, awaiting your usage.";
+		stop the action; [fails if already made nanofab]
+	if the player is not in Grey Abbey Library:
+		say "This would be a poor location to assemble the Nanofabricator.  Perhaps the Library would be better";
+		stop the action; [fails if not in library]
+	if Library Computer is not visible: [shouldn't happen, since the computer is always in the library, but just in case...]
+		say "One of the required commonents is not available here: Library Computer";
+		stop the action; [fails if no computer][to test]
+	if computeron is not 1: [should indicate computer has power, from power plant quest]
+		say "While the Library Computer is here, it has no power and will not run.  You need to restore power to the computer before you can build the nanofabricator.";
+		stop the action; [fails if no power for computer]
+	if Water Bottle is not owned: [replace with better materials when integrating with questline]
+		say "You do not have one of the required components: ingredient 1 PLACEHOLDER";
+		stop the action; [fails if item not in inventory]
+	if Food is not owned: [replace with better materials when integrating with questline]
+		say "You do not have one of the required components: ingredient 2 PLACEHOLDER";
+		stop the action; [fails if item not in inventory]
+	if Medkit is not owned: [replace with better materials when integrating with questline]
+		say "You do not have one of the required components: ingredient 3 PLACEHOLDER";
+		stop the action; [fails if item not in inventory]
+
+Carry out NanofabCreating:
+	delete food; [removes materials from player]
+	delete water bottle; [currently placeholder materials]
+	delete medkit; [rename once integrated with quests]
+	say "Having gathered the required materials you assemble them into a nanofabricator.";
+	Move Nanofabricator to Grey Abbey Library; [puts nanofab in library]
+
+Section - Nano FABB ing
 
 Nanofabbing is an action applying to one thing.
 understand "Fab [grab object]" as Nanofabbing.
@@ -495,6 +532,8 @@ Carry out Nanofabbing something(called x):
 	otherwise: [item not known by fabber, error message]
 		say "The nanofabricator gives off an angry ding, as the computer screen displays the message: [line break][bold type]ERRORCODE: 27 ([x] unknown, unable to fabricate)[roman type][line break]";
 	say "It's work completed, the nanofabricator shuts down."; [message to confirm all done]
+
+Section - Nano FEED ing
 
 Nanofeeding is an action applying to one thing.
 understand "Consume [grab object]" as Nanofeeding.
