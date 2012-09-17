@@ -1,0 +1,192 @@
+Debugging log of Inform 7
+Inform called as: C:\Program Files (x86)\Inform 7\Compilers\ni -rules C:\Program Files (x86)\Inform 7\Inform7\Extensions -package C:\Users\David\Desktop\FI v3reorder HG.inform -extension=ulx 
+
+
+-----------------------------------------------------
+Phase I ... Lexical analysis
+-----------------------------------------------------
+
+I've now read your source text, which is 118652 words long.
+
+
+-----------------------------------------------------
+Phase II ... Semantic analysis Ia
+-----------------------------------------------------
+
+Req is <chapter - hacking automap> in <Glimmr Automap> by <Erik Temple>
+I've also read Standard Rules by Graham Nelson, which is 39455 words long.
+I've also read Dragon Babe by Nuku Valente, which is 11 words long.
+I've also read Flexible Windows by Jon Ingold, which is 7402 words long.
+I've also read Glulx Status Window Control by Erik Temple, which is 2019 words long.
+I've also read Glimmr Automap by Erik Temple, which is 12932 words long.
+I've also read Glimmr Automap Tileset by Erik Temple, which is 1262 words long.
+I've also read Glimmr Bitmap Font by Erik Temple, which is 3826 words long.
+I've also read Glulx Entry Points by Emily Short, which is 1138 words long.
+I've also read Glulx Text Effects by Emily Short, which is 1918 words long.
+I've also read Automap by Mark Tilford, which is 6834 words long.
+I've also read Glimmr Drawing Commands by Erik Temple, which is 22747 words long.
+I've also read Glimmr Canvas-Based Drawing by Erik Temple, which is 39046 words long.
+I've also read Glimmr Graphic Hyperlinks by Erik Temple, which is 4809 words long.
+I've also read Basic Screen Effects by Emily Short, which is 2155 words long.
+I've also read Fixed Point Maths by Michael Callaghan, which is 7425 words long.
+
+
+-----------------------------------------------------
+Phase III ... Initialise language semantics
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase IV ... Semantic analysis Ib
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase V ... Semantic analysis II
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase VI ... Semantic analysis III
+-----------------------------------------------------
+
+Doing handle glk event rule
+
+
+-----------------------------------------------------
+Phase VII ... First pass through assertions
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase VIII ... Second pass through assertions
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase IX ... Making the model world
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase X ... Tables and grammar
+-----------------------------------------------------
+
+
+
+-----------------------------------------------------
+Phase XI ... Phrases and rules
+-----------------------------------------------------
+
+Doing handle glk event rule
+
+
+-----------------------------------------------------
+Phase XII ... Code generation
+-----------------------------------------------------
+
+
+
+==== Phase XII.1 ... Compiling the storage for the model world ====
+
+
+
+==== Phase XII.2 ... Compiling the tables ====
+
+
+
+==== Phase XII.3 ... Compiling the equations ====
+
+
+
+==== Phase XII.4 ... Compiling the named action patterns ====
+
+
+
+==== Phase XII.5 ... Compiling the action routines ====
+
+
+
+==== Phase XII.6 ... Compiling first block of phrases ====
+
+
+
+==== Phase XII.7 ... Compiling the rulebooks ====
+
+
+
+==== Phase XII.8 ... Compiling scene details ====
+
+
+
+==== Phase XII.9 ... CTNL ====
+
+
+
+==== Phase XII.10 ... Slashing grammar (G1) ====
+
+
+
+==== Phase XII.11 ... Determining grammar (G2) ====
+
+
+
+==== Phase XII.12 ... Compiling GPR tokens for parsing various kinds of value ====
+
+
+
+==== Phase XII.13 ... Compiling noun and scope filter tokens ====
+
+
+
+==== Phase XII.14 ... Compiling second block of phrases ====
+
+
+
+==== Phase XII.15 ... Compiling chronology ====
+
+
+
+==== Phase XII.16 ... Compiling I6 Verb directives ====
+
+
+
+==== Phase XII.17 ... Sorting and compiling non-value grammar (G3, G4) ====
+
+
+
+==== Phase XII.18 ... Compiling routines from predicate calculus ====
+
+Providing for a total heap of 65536, given requirement of 51360
+
+
+-----------------------------------------------------
+Phase XIII ... Compilation now complete
+-----------------------------------------------------
+
+Total of 234 files written as streams.
+
+That concludes the debugging log from this run of Inform.
+Its contents were as follows, and can be changed by placing
+text like 'Include property creations in the debugging log.'
+or 'Omit everything from the debugging log.' in the source.
+
+Included:
+  debugging log contents  debugging log inclusions
+Omitted:
+  action creations   action pattern compilation  action pattern parsing  assemblies    assertions    case insensitive filehandling
+  conditions    constructed past participles  constructed plurals   description compilation   excerpt meanings   excerpt parsing 
+  expressions    extensions census   figure creations   grammar    grammar construction   headings  
+  implications    inferences    kind changes   kind checking   kind creations   lexical output 
+  local variables   matching    meaning list allocation  memory allocation   noun resolution   object compilation 
+  object creations   object tree   phrase comparisons   phrase compilation   phrase creations   phrase registration 
+  phrase usage   predicate calculus   predicate calculus workings  pronouns    property assignments   property creations 
+  property provision   property translations   relation definitions   rule attachments   rulebook compilation   spatial map 
+  spatial map workings  specification permissions   specification usage   specificities    table construction   template reading 
+  text substitutions   time periods   variable creations   verifications    vocabulary  
