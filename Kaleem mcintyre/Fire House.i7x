@@ -27,13 +27,13 @@ To say firehousedesc:
 		say "[firehousedesc1]";
 	otherwise if kto is 2:
 		say "[firehousedesc2]";
-		
+
 to say firehousedesc0:
 	Say "Dominating the main area of the firehouse there sit two bright red fire trucks waiting to be used by their servicemen with a large golden pole gleaming off to the left side the building leading up to an open hole in the ceiling. A small flight of stairs positioned are in position right next to said pole. A darkened office sits off to the side by one of the unused fire trucks while a bunch of chairs have been set up next to the garage doors surrounding a large table covered with playing cards. Over by the right side of the building a number of firefighter suits are hanging off of coat hooks next to several metal lockers. [if findwires is 2 and fixedgens is 2]The entire area is kept lit by some of those Japanese lanterns that you sometime see during summer festivals at the State Fair, so that would explain why everything is so bright despite the power of the city not working properly.[end if] Because of the light it's easy to see a large number of rolled up hoses being kept in place along an empty expanse of wall while right above the coiled tubes there lay several ladders have been stacked together on a high end metal shelf.";
-	
+
 to say firehousedesc1:
 	Say "With Kenaz being turned into a Dalmatian along with the rest of the firefighters the firehouse has fallen in standards slightly. The fire trucks are not as polished as they had once been. The metal lockers stand open with clothing draped on or over them. The floor is slightly gunky with the residue of cum stains on them and there are traces of dog hair all over the place. While not exactly as bad as it could be the firehouse literally screams [bold type]bachelor's pad[roman type] now. Kenaz looks to be trying to keep things straight by sweeping, dusting and moping, but the green eyed firefighter seems to be constantly getting distracted...usually by the way of the others coming over to try and fuck him at the most inopportune times.";
-	
+
 to say firehousedesc2:
 	Say "Unlike the former [']dog house['] the firehouse had been once before when everyone was just settling themselves back into the fire station now the inside of the building now stands with some respect again. The entire building is almost immaculate, save for a few small stray bits of Dalmatian fur littering the floor, a constant given the building's occupants. The red fire engines shine proudly under the lights coming from the [if findwires is 2 and fixedgens is 2] florescent lamps up above[otherwise]Japanese lanterns set into place around the firehouse[end if], having just recently been washed and waxed. The firefighter's lockers have also been washed off, but are now kept shut instead of just dangling open as they once had been. The chairs and table that had been set in front of the firehouse's twin garage doors have been moved over out of the way. And, to top everything off, the other Dalmatians are now mostly running mock drills or otherwise doing something constructive with their time while underneath the guidance of the newly transformed Dalmatian herm.";
 
@@ -75,7 +75,7 @@ To say Kenazcurrentform: [his description at each stage, comments on what each s
 		say "[Kenazform1]";
 	otherwise if kto is 2:
 		say "[Kenazform2]";
-			
+
 to say Kenazform0:
 	say "Walking around the somewhat darkened area of the firehouse is the young firefighter Kenaz. Dark, unruly auburn hair covers the half Asian/half American's tanned head down to neck. Along the back of the firefighter's head a long ponytail sways lightly as Kenaz swings his head back and forth while listening out for trouble. At five foot eleven inches tall, Kenaz possesses bright green eyes, a somewhat thin, but muscled form and is wearing a pair of dark navy jeans, white shirt, and has a firefighter helmet on. The latter is kept on as a good luck charm for the firefighter, or so he says. Unlike many people within the city Kenaz is both completely human and fully male, if the bulge inside of the firefighter's pants and lack of breasts anywhere on him are any indication of things. Odd considering everything that's going on, but then again...";
 
@@ -193,7 +193,10 @@ instead of conversing the Kenaz:
 				now Kenaztalk is 1; 
 				increase score by 10;
 	otherwise if Kenaztalk is 1: [Normal short messages the npc will say each time you talk to them]
-		say "[One of]'Oh hey! How've you been?'[or]'Are you alright? You look a little tired.'[or]'Kenaz simply waves at you as he goes about sweeping the floor.[or]'Could you...maybe stand over there for a second?' Kenaz asks while pausing his mop right at your feet.[or]'I hope the other guys are safe somewhere.' Kenaz says wistfully.[or]'Where oh where has my little...what the hell am I saying?' Kenaz blinks as he stops himself.[or]'Maybe I should go out and try to see if there is somebody I can help?'[or]'You may not know it but I signed up for firefighter duty because I felt that it was destiny for me.'[or]'Is it strange for a half-Asian to have a name that means torch in the language of the Anglo-Saxons?'[or]'To this day I'm not sure why my sire named me Kenaz. He did say it was because of the burning spirit he saw in my eyes as a babe, though I think he was drunk at the time when I asked him.' Kenaz patiently shakes his head after saying this.[or]'My mother is a enduring woman by birth. Both demure and refined as a rose in may. I really hate that she and I can never see eye to eye on much though.' Kenaz chuckles sadly.[at random]";
+		if a random chance of 1 in 2 succeeds:
+			say "[One of]'Oh hey! How've you been?'[or]'Are you alright? You look a little tired.'[or]'Kenaz simply waves at you as he goes about sweeping the floor.[or]'Could you...maybe stand over there for a second?' Kenaz asks while pausing his mop right at your feet.[or]'I hope the other guys are safe somewhere.' Kenaz says wistfully.[or]'Where oh where has my little...what the hell am I saying?' Kenaz blinks as he stops himself.[or]'Maybe I should go out and try to see if there is somebody I can help?'[or]'You may not know it but I signed up for firefighter duty because I felt that it was destiny for me.'[or]'Is it strange for a half-Asian to have a name that means torch in the language of the Anglo-Saxons?'[or]'To this day I'm not sure why my sire named me Kenaz. He did say it was because of the burning spirit he saw in my eyes as a babe, though I think he was drunk at the time when I asked him.' Kenaz patiently shakes his head after saying this.[or]'My mother is a enduring woman by birth. Both demure and refined as a rose in may. I really hate that she and I can never see eye to eye on much though.' Kenaz chuckles sadly.[at random]";
+		otherwise:
+			say "'Please try and [bold type]assist[roman type] me any way you can, if you can.' Kenaz looks at you somewhat helplessly after saying this. Maybe you should try to help the other man out? If you can spare some time, that is.";
 	otherwise if Kenaztalk is 2:
 		say "[one of]'Hey, how are you today?'[or]Kenaz wags his tail happily at you while sweeping the floor.[or]Kenaz barks at you after you startle him by patting him on the rear.[or]Kenaz is busy trying to go over getting the other guys to do some drills...without much luck.[or]'I hope the military or whoever hurries up and helps the city get back to normal. I like this quiet time, but it feels like there's a storm coming.'[or]'Maybe I should go outside and try to find someone to rescue.' Kenaz shakes his head and then grumbles in annoyance at himself.[or]'This being a dog thing isn't quite so bad, once you get used to it.'[or]'I hope that one day I'll be able to take a trip to Asia to see how my mother's home country has fared.'[or]'Perhaps, when this is all over, you'll come back here to be a firefighter with the rest of us?' Kenaz seems to look at you pleadingly as he says this.'[or]'I feel bad for Pertho, being the only feral around here. Maybe I could try and take him for a walk or something?' Kenaz hums quietly while thinking this over.[or]'The other guys seem to not mind the loss of their human form. It's strange, but now that I've gotten used to it...I don't think I've lost very much by not being [']human['] any longer.'[or]'I think my mother is going to freak when she sees me like this. So why does that thought make my tail wag?'[or]'My dad…would he be proud of me now that I'm not human any longer?'[or]'I wonder...'[at random]";
 	otherwise if Kenaztalk is 3:
@@ -234,7 +237,9 @@ aidKenaz is a number that varies.
 Now Pertho is resolved;
 
 Carry out HelpingKenazOut:
-	If HelpKenazOut is 1:
+	if helpkenazout is 0:
+		say "(Message needed here - go find the 'Informant' and help find the firefighters.)[line break]";
+	otherwise if HelpKenazOut is 1:
 		Say "[aidKenaz1]";
 	otherwise If HelpKenazOut is 2:
 		Say "[aidKenaz2]";
@@ -510,7 +515,7 @@ to say aidKenaz7:
 	move DalmatianTroupe to the FireHouse;
 	now helpKenazout is 8;
 	follow the turnpass rule;
-	
+
 
 
 
@@ -848,8 +853,8 @@ carry out Firepolescaling:
 		increase score by 2;
 	otherwise:
 		say "Not being able to grip the slick pole to pull yourself up correctly you end up sliding back down in dismay.";
-		
-		
+
+
 Section 7 - Upstairs
 
 Down of Sleeping Quarters is Firehouse. UpperFirepole is in Sleeping Quarters.
@@ -870,7 +875,7 @@ to say SleepQuarters0:
 
 to say SleepQuarters1:
 	say "Unlike before when the sleeping area once looked somewhat kept under well maintenance the area now looks like a combination between a puppy's play pen and a bachelor pad. Most of the beds are now in some state of dishevel and now possess the musky scent of male Dalmatians covering them. There are toys - mostly rubber balls and squeak toys and a couple of dildos, butt plugs and anal beads - littered around the floor, and the floor seems to be almost pervasively sticky with...something or the other. You halfway hope it's just spilled soda. It looks as though Kenaz, and maybe one or two others, have been trying to keep the place clean, but it seems to have become a lost effort as the transformed firefighters seem to all but be focused on rutting and playing around to bother keeping the place neat. However, it's easy to see that, despite the disarray, the room has been kept free from any firefighting equipment lying around where it doesn't belong. Looks like the spirit of the firehouse still burns bright, even through this disheveled mess.";
-	
+
 to say SleepQuarters2:	
 	say  "It's amazing that, unlike before with how the sleeping area had once been in disarray, now the sleeping area looks like it did from before when Kenaz was here by himself. The beds are neat, the floor has been swept and mopped, there are no toys - of any sort - anywhere on the floor and the smell of musky Dal boy is less oppressive than it once had been. There is a light after tang of mixed herm Dalmatian and Dal boy cum pervading the area giving the sleeping den a unique musky scent, but it's not too harsh on the senses. Kenaz must have seriously put a foot up some of the other firefighter's tails to get them straightened out enough to clean up in here.";
 
@@ -947,8 +952,8 @@ Instead of resolving a Pertho:
 			increase score by 5;
 		otherwise:
 			say "Something goes wrong because quickly Pertho flips an ear up into your direction before turning his head to look at you. Seeing that its [italic type]you[roman type] again the Dalmatian growls and then darts off to head off in the opposite direction you had been coming for it. You curse and try to run after the spotted canine, but you know already that the other has too much of an advantage in distance over you to catch up with the Dalmatian. Looks like you'll have to try again later.";
-			
-			
+
+
 Section 10 - Table of Game Objects
 
 Table of Game Objects (continued)
