@@ -581,6 +581,8 @@ Carry out reciting:
 						now Music Store is unresolved;
 						now Concert Hall is unresolved;
 						now violinfound is 0;
+					if hp of Leonard is 6:
+						now leonardtimer is turns;
 			-- 91:	[Solstice]
 				if the player's command matches "[number]":
 					remove Solstice from play;

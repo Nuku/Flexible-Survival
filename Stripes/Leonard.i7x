@@ -40,6 +40,7 @@ The conversation of Leonard is { "Tut Tut!" }.
 lastfuck of Leonard is normally 555.
 feline_status is a number that varies.
 violinfound is a number that varies.
+leonardtimer is a number that varies.  leonardtimer is normally 255.
 
 instead of sniffing the Leonard:
 	say "The feline smells strong and manly.";
@@ -83,6 +84,7 @@ Instead of conversing the Leonard:
 	otherwise if hp of Leonard is 5 and "violin" is listed in invent of player:
 		delete violin;
 		now hp of Leonard is 6;
+		now leonardtimer is turns;
 		now lastfuck of Leonard is turns;
 		say "     Pulling the violin you found out of your pack, you bring it over to the handsome lion with a swell of excitement in your heart.  Catching sight of what you've brought him, he smiles wraps an arm around you, hugging you tightly to him and running his paw along your side and down to your rear before taking the case from you with the other paw.  'Oh, I knew you were the one to speak to about this.  You seem like such a resourceful [if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]kitty[otherwise if cunts of player > 0]girl[otherwise]girly boy[end if].'";
 		if violinfound is 10:			[apprentice]
@@ -113,9 +115,22 @@ Instead of conversing the Leonard:
 		now libido of player is ( libido of player + libido of player + 30 ) / 3;
 		decrease humanity of player by 5;
 		follow the turnpass rule;
+	otherwise if hp of Leonard is 6 and ( leonardtimer - turns ) < 16:
+		if a random chance of 3 in 4 succeeds:
+			say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of].  'I look forward to having you underneath me again soon,' he rumbles in your ear[or].  'You'll fit right in with my other horny, kitty girls,' he purrs, nibbling your ear[or].  'You need the big kitty to mount you again soon, don't you?' he rumbles[or][if cunts of player > 0].  'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[otherwise].  'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or].  'You know you're nothing but my horny girl, my mewling kitty slut,' he rumbles[in random order].  With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
+		otherwise:
+			say "     The handsome lion [one of]takes up the violin you brought him and plays a few notes[or]carefully cleans and waxes the violin you brought him[or]plays a short tune on his violin[at random][one of].  'I've been enjoying your gift very much, my dear,' he purrs.  You are quite pleased with yourself to hear this and you try to come up with more ideas on how to earn his favour[or].  'I believe my playing's starting to improve now that I've been able to practice again,' he rumbles as you moan softly in response to the manly lion's touch[or].  'I hope to have a new piece composed for the violin soon.  Just a simple little song that I want to put onto paper,' he rumbles.  Despite his casual nature about it, you are filled with a powerful longing to hear what your wonderful feline master will compose[at random].  You feel a sense of warmth and longing for the handsome lion, happy that he's enjoying your gift.";
 	otherwise if hp of Leonard is 6:
-		say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of].  'I look forward to having you underneath me again soon,' he rumbles in your ear[or].  'You'll fit right in with my other horny, kitty girls,' he purrs, nibbling your ear[or].  'You need the big kitty to mount you again soon, don't you?' he rumbles[or][if cunts of player > 0].  'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[otherwise].  'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or].  'You know you're nothing but my horny girl, my mewling kitty slut,' he rumbles[in random order].  With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
-		[***update conversation later]
+		say "     'I was wondering if you might do me another favour, my dear kitty,' Leonard purrs as he runs his paws over you.  You moan and nod eagerly, willinginly agreeing before even hearing the handsome lion's request.  'There are so many other kitty girls out there in the park that haven't come to visit me yet.  Could you find a few more of them and bring them to me?  You're such a good, obedient pet that I know you won't be jealous,' he rumbles, stroking over your groin.  'I'd be most grateful, my precious darling,' he adds with a purr and a firm press of his hard sheath against your side.  You agree readily, wanting to do anything to please your sexy lover and master.";
+		now hp of Leonard is 7;
+	otherwise if hp of Leonard is 7:
+		if a random chance of 3 in 4 succeeds:
+			say "     The handsome lion [one of]gives your ass a possessive squeeze[or]puts an arm around you from behind and strokes over your groin[or]rubs himself against you, pressing his sheath to your body[or]runs his paws along your sides and nibbles at your neck[or]takes your hands in his paws and presses them to his plump balls[or]grinds his half-hard cock against your bottom[at random][one of][if cunts of player > 0].  'Your hot little pussy's wet for the big lion, isn't it?' he purrs as he rubs a finger over it[otherwise].  'You're looking for your big lion stud to mount you and show you your place, aren't you, my horny girly-boy?' he purrs in your ear as he grabs your ass firmly[end if][or].  'Please don't forget your promise to help those other wayward girls find their way here,' he rumbles as he runs a finger down your side[or].  'Please bring me a few more lost feline girls, my dear.  We'll have such a pleasant time welcoming them into the pride together,' he purrs softly as he licks the edge of your ear, making you tremble in delight[or].  'Don't forget that I asked you to lead a few more feline girls here so I could meet them,' he rumbles as he fondles you[in random order].  With the lion's scent filling your senses, your aroused, needy body responds as the part of you longing to be his nods in agreement.";
+		otherwise:
+			say "     The handsome lion [one of]takes up the violin you brought him and plays a few notes[or]carefully cleans and waxes the violin you brought him[or]plays a short tune on his violin[at random][one of].  'I've been enjoying your gift very much, my dear,' he purrs.  You are quite pleased with yourself to hear this and you try to come up with more ideas on how to earn his favour[or].  'I believe my playing's starting to improve now that I've been able to practice again,' he rumbles as you moan softly in response to the manly lion's touch[or].  'I hope to have a new piece composed for the violin soon.  Just a simple little song that I want to put onto paper,' he rumbles.  Despite his casual nature about it, you are filled with a powerful longing to hear what your wonderful feline master will compose[or].  'Please look for more wayward felines to bring back here.  I should like to let them hear me play your wonderful gift,' he says with a smile[at random].  You feel a sense of warmth and longing for the handsome lion, happy that he's enjoying your gift.";
+[	otherwise if hp of Leonard is 8:
+		say "***";					]
+
 
 
 Section 3 - Sexy Times
@@ -128,6 +143,7 @@ instead of fucking the Leonard:
 		if name entry is "Feline":
 			now monster is y;
 			break;
+	if inheat is true and player is felinecocked and Feline_attached > 0 and feline_status is 0 and hp of Leonard is 7, now lastfuck of leonard is 255;		[resets Leonard for immediate fun if the player has a new kitty girl while hunting girls]
 	if hp of Leonard is 0:
 		say "     That's rather forward of you.  Perhaps you should at least talk to him first.";
 	otherwise if lastfuck of Leonard - turns < 8:
@@ -163,11 +179,15 @@ instead of fucking the Leonard:
 			increase libido of player by 5;
 			if libido of player > 100, now libido of player is 100;
 			decrease humanity of player by 4;
-	otherwise if hp of Leonard >= 3 and inheat is true and player is felinecocked and Feline_attached > 0 and feline_status is 0 and a random chance of 1 in 2 succeeds:
+	otherwise if hp of Leonard >= 3 and inheat is true and player is felinecocked and Feline_attached > 0 and feline_status is 0 and ( a random chance of 1 in 2 succeeds or hp of Leonard is 7 ):
 		[not one of Leonard's girls... yet.]
 		now lastfuck of Leonard is turns;
+		increase libido of Leonard by 1;
 		if hp of Leonard < 4, now hp of Leonard is 4;
-		say "     'Oh my!  It seems you've brought a special treat, my dear,' he says with a rumble as he runs his paw down your body and over your ass.  'This cute kitty girl you've found isn't one from my pride.  Perhaps you'd like to help me invite her to join us.  What do you say?'";
+		if hp of Leonard is 7:
+			say "     Leonard looks over the kitty girl you've brought to him and rumbles happily.  'Good work, my dear.  I am always pleased to welcome another of these poor, wayward felines into my home and give them the proper loving care they need.  He gives you a tender kiss even as a paw slides down your back to your ass while the other does the same to the feline nursing from you.  'Shall you help me welcome her to the pride?'";
+		otherwise:
+			say "     'Oh my!  It seems you've brought a special treat, my dear,' he says with a rumble as he runs his paw down your body and over your ass.  'This cute kitty girl you've found isn't one from my pride.  Perhaps you'd like to help me invite her to join us.  What do you say?'";
 		if the player consents:
 			say "     Smiling and nodding to Leonard as you suddenly feel quite turned on by this idea, you run your hand along the kitty's back, scritching her ears.  She rumbles in pleasure as she roused from the nap she was taking to resume nursing from your bosom.  Heading towards the back of the cave with Leonard right behind you, he strokes your sides and rear as he guides you towards the four-poster bed.  There your feline lover strips you down and has you lie back on the bed, still cradling the other feline to your chest.  She gives a soft mewl of inquiry, unsure what's going on, but you press her muzzle back to your nipple and she settles down to enjoy her feeding.";
 			say "     Leonard moves onto the bed slowly with feline grace and stealth, padding slowly overtop of you.  His paw moves in to replace your stroking hand at the feline's back, eventually drifting lower.  When his fingers move to her wet pussy, she mewls again, but you make sure she continues suckling peacefully.  The kitty in your arms starts rumbling and purring excitedly, raising her tail and wiggling her ass.  Leonard smiles at this and bring his cock into position, slowly sinking it into the smaller female's body.  She releases a yowl of pleasure, briefly sinking her claws into you.";
@@ -186,6 +206,7 @@ instead of fucking the Leonard:
 		now feline_status is 2;
 		decrease humanity of player by 8;
 		follow the turnpass rule;
+[	***	if libido of Leonard is 3, now hp of Leonard is 8;	]
 	otherwise if hp of Leonard >= 3 and inheat is true and player is felinecocked and Feline_attached > 0:
 		now lastfuck of Leonard is turns - 4;	[longer delay after fucking you both]
 		if hp of Leonard < 4, now hp of Leonard is 4;
