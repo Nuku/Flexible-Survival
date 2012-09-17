@@ -1138,7 +1138,8 @@ this is the humping rule:
 		now monsterpowerup is 0;
 	otherwise if bodyname of player is name entry and a random chance of 1 in 5 succeeds:
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
-		let dam be ( ( wdam entry times ( ( a random number from rangenum to 120 ) + 30 + ( 2 * lev entry ) ) ) / 100 );
+		let xyz be ( a random number from rangenum to 120 ) + 30 + ( 2 * lev entry );
+		let dam be ( ( wdam entry times xyz ) / 100 );
 		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";

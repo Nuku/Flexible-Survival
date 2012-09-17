@@ -181,6 +181,7 @@ instead of conversing the Elijah:
 		say "     He's alive but still very weak and still not ready for communicating in any great length. Hell, he's barely conscious at all. There might be some things out there in the city that could possibly help him... perhaps you could try milk and honey, that's supposed to be good for you. And if you mix in something to boost his healing ability, your resident angel should be back on his feet in no time.";
 		now hp of Elijah is 2;
 		now Sweet Surprise is unresolved;
+		now Examination Room is unresolved;
 	otherwise if (hp of Elijah is 2):  [wounded + unconscious in the bunker - revival quest started already]
 		let milkchoicelist be a list of text;
 		if "gryphon milk" is listed in invent of player, add "gryphon milk" to milkchoicelist;
@@ -255,7 +256,7 @@ instead of conversing the Elijah:
 		say "ERROR-Elijah-1B: He shouldn't be available to talk any longer! Please report how you got to this message.";
 
 
-Section 3 - Sweet Surprise
+Section 3 - Gathering Events
 
 [This event exists mainly to allow players with girl banned to have a means to find a Honeycomb.]
 
@@ -267,6 +268,24 @@ Instead of resolving a Sweet Surprise:
 	add "Honeycomb" to invent of player;
 	increase score by 5;
 	now Sweet Surprise is resolved;
+
+[This event exists mainly to give players another means to obtain a healing booster.]
+
+Examination Room is a situation. Examination Room is resolved.  The level of Examination Room is 8.
+The sarea of Examination Room is "Hospital";
+
+Instead of resolving a Examination Room:
+	say "     Coming across a set of examination rooms, you start searching them in the hopes of finding some useful supplies.  Unfortunately, it seems that they've already been searched and much of the useful items have already been gathered.  As you're ransacking a third of them in increasing frustration, you hear the door slam open as a jaguar dressed like an orderly comes striding in, clearly upset at having found you snooping around.";
+	challenge "Jaguar";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "     Having beaten the orderly, you give the other rooms a cursory search.  As others may be drawn by the noise of the fight, you go as quick as you can.  The only item of any use you're able to find is a small syringe labelled as a [']healing booster['].  Concerned that you've already tarried too long, you take it and leave.";
+		add "healing booster" to invent of player;
+		increase score by 5;
+	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+		say "     After the jaguar is finished with you, it roughly sends you on your way, driving you off.  He then heads back to the examination rooms, probably to gather up the remaining medical supplies.  You head back to the entrance to rethink your next move.";
+	otherwise:
+		say "     You manage to move around the jaguar and make a run for it, heading back to the relative safety of the hospital entrance to rethink your next move.";
+	now Examination Room is resolved;
 
 
 Section 4 - NPC Interactions

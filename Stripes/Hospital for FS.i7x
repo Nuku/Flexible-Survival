@@ -286,6 +286,7 @@ instead of resolving Records Room:
 	otherwise:
 		say "[hospfight3]";
 	say "     After your encounter with the creature, you turn to leave the records room before any others come to check on the noise.  As you make your way to the door, you spot a syringe of orange liquid on a desk.  It is labeled as [']libido suppressant['], possibly left behind by whoever was trying to focus on their records work.";
+	add "libido suppressant" to invent of player;
 	increase score by 5;
 
 

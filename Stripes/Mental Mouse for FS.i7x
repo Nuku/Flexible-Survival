@@ -134,7 +134,8 @@ to say mousebuff:
 	if battleground is "Red" and ( bodyname of player is "Mental Mouse" or mousecurse is 1 ):
 		increase lev entry by ( ( a random number between 0 and 250 ) / 100 );	[ +0-2 lvls in Red, lower chance of +2 ]
 	if lev entry < 15:
-		now dex entry is ( lev entry / 2 ) + 13;							[quick dex and hp growth early on]
+		now dex entry is ( lev entry / 2 ) + 13;							[quick dex, int and hp growth early on]
+		now int entry is ( lev entry / 2 ) + 10;
 		now hp entry is ( lev entry times 7 );
 		increase hp entry by a random number between 1 and lev entry;
 		increase hp entry by a random number between 1 and lev entry;
@@ -142,6 +143,7 @@ to say mousebuff:
 		now wdam entry is ( ( lev entry * 2 ) / 3 ) plus 4;
 	otherwise:
 		now dex entry is 17 + ( lev entry / 5 );							[normal hard mode dex growth at lvl 15+]
+		now int entry is 14 + ( lev entry / 5 );							[same growth for int at lvl 15+]
 		now hp entry is 55 + ( lev entry times 4 );						[strong hp growth at lvl 15+]
 		increase hp entry by a random number between 1 and lev entry;
 		increase hp entry by a random number between 1 and lev entry;
@@ -175,7 +177,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Mental Mouse";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]While two of the mice, a third jumps onto you, trying to pull you down![or]The mice around you take turns slapping your ass and groping you![or]The herms make a tantalizing display of their bodies, trying to tempt and arouse you with their beautiful, musine forms![or]The horny mice tackle you, trying to pull you into their welcoming arms![or]Being this close to them, you can feel their minds tugging at yours, weakening your resolve![or]You can feel what must be their united thoughts at the edge of your mind, whispering for you to give in and accept mousedom with them![at random]";
+	now attack entry is "[one of]While two of the mice, a third jumps onto you, trying to pull you down![or]The mice around you take turns slapping your ass and groping you![or]The herms make a tantalizing display of their bodies, trying to tempt and arouse you with their beautiful, musine forms![or]The horny mice tackle you, trying to pull you into their welcoming arms![at random]";
 	now defeated entry is "[beatthemouse]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[losetomouse]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[mousedesc]";						[ Description of the creature when you encounter it. ]
@@ -220,8 +222,54 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "mmouse";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
+
+Section 3 - Alt Combat
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"mmouse"	mentalmouse rule	--	--	--	--	--	--	--	--	--	
+
+
+this is the mentalmouse rule:
+	choose row monster from table of Random Critters;
+	if a random chance of 5 in 8 succeeds:	[normal]
+		retaliate;
+	otherwise:						[mental whammy]
+		now monsterhit is false;
+		follow the intstrike rule;
+		if monsterhit is true:
+			let rangenum be ( 80 - ( peppereyes * 5 ) );
+			let rangenum2 be 120 + lev entry;
+			if mousecurse is 1, increase rangenum2 by 20;
+			let dam be ( ( wdam entry times a random number from rangenum to rangenum2 ) / 100 );
+			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+				now dam is (dam * 150) divided by 100;
+				say "The enemy finds a particular vulnerability in your mental defenses - Critical Hit![line break]";
+			say "[one of]Being this close to them, you can feel their minds tugging at yours, weakening your resolve[or]You can feel what must be their united thoughts at the edge of your mind, whispering for you to give in and accept mousedom with them[or]The mice surround you and look at you funny.  You thoughts get cloudy and it becomes harder to stay focused on resisting them[at random]!  You take [special-style-2][dam][roman type] damage[if mousecurse is 1] and you grow more aroused[end if]!";
+			decrease hp of the player by dam;		[No armour protection from the mental whammy]
+			if mousecurse is 1:
+				let libdam be 2;
+				increase libdam by a random number between 0 and ( lev entry / 2 );
+				if libdam > 10, now libdam is 10;
+			if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 2;
+			if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 2;
+			follow the player injury rule;
+			say "You are [descr].";
+		otherwise:
+			say "You can feel the touch of their mousey minds at the edge of yours, but you manage to block them out for the moment!";
+		now peppereyes is 0;
+		if hp of the player is greater than 0 and libido of player < 110:
+			wait for any key;
+		otherwise:
+			if hp of player <= 0, now fightoutcome is 20;
+			if libido of player >= 110, now fightoutcome is 21;
+			Lose;
+		rule succeeds;
+
+
+Section 4 - Continuous Effect (body corruption)
 
 to say mousereset:
 	now mousecounter is 0;
@@ -239,6 +287,8 @@ An everyturn rule:
 				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 				if libido of player < 60, increase libido of player by 3;
 
+
+Section 5 - Endings
 
 when play ends:
 	if bodyname of player is "Mental Mouse" or ( bodyname of player is "Albino Mouse" and mouse girl is tamed ):
