@@ -351,12 +351,12 @@ Instead of resolving a A Fight to remember:
 				say "You shake off your fear as you note that the thing before you was hurt once just recently, by its own ignorance no less, and you feel certain that you can take it on again. Glaring up at the thing you watch as it seems to [italic type]recognize[roman type] you as a threat and then turns its massive gelatinous form in your direction before shooting out tentacles to attack you. You smirk in glee. You're ready for it.";
 				wait for any key;
 				challenge "Blob";
-				if lost is 0:
+				if fightoutcome >= 10 and fightoutcome <= 19:
 					say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. … Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 					now resevquest is 7;
 					now Fight to remember is resolved;
 					now PassionAfterTheBattle is unresolved;
-				otherwise:		[***partially fixed]
+				otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 					now A Fight to remember is resolved;
 					now oozing is 1;
 					now humanity of player is 0;
@@ -373,7 +373,10 @@ Instead of resolving a A Fight to remember:
 					now battleground is "void";
 					wait for any key;
 					follow the turnpass rule;
-					stop the action;		
+					stop the action;
+				otherwise:
+					say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
+					now lastResevoirfix is turns;
 			otherwise:
 				say "You feel a throng of nervousness come over you as you watch the monster [italic type]burble[roman type] and then turn your way, as if sensing that you were the cause of its current distress. Not feeling the courage that you know you possess your body locks up just as your eyes see massive tentacles surge their way towards you."; 
 				let bonus be (( the dexterity of the player minus 8 ) divided by 2);
@@ -384,12 +387,12 @@ Instead of resolving a A Fight to remember:
 					say "You find yourself dodging out of the way just in time not to be hurt. Obviously, even if your mind has turned to jelly your feet haven't and you dance skillfully out of the way of the creature's oozing appendages.";
 					wait for any key;
 					challenge "Blob"; 
-					if lost is 0:
+					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. … Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
 						now A Fight to remember is resolved;
 						now PassionAfterTheBattle is unresolved;
-					otherwise:		[***partially fixed]
+					otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 						now A Fight to remember is resolved;
 						now oozing is 1;
 						now humanity of player is 0;
@@ -406,18 +409,21 @@ Instead of resolving a A Fight to remember:
 						now battleground is "void";
 						wait for any key;
 						follow the turnpass rule;
-						stop the action;		
+						stop the action;
+					otherwise:
+						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
+						now lastResevoirfix is turns;
 				otherwise:
 					say "You find yourself meeting the wall and losing some of your health as the lashing tentacle knocks you back into the concrete. Your breath wisps out from your mouth at an alarming speed because of this. So much so in fact that you can actually see much of it very clearly as it forms into a cloud of diamond dust in front of your face. Coughing to try and absorb some of the cold air into your lungs in order to ease the growing ache building up within you shakily get back up onto your feet and then growl fiercely at the monster. Oh there's no way you're going to take that lying down! A savage battle cry rips free from your lips a second later and soon you are charging right at the BLOB!";
 					decrease hp of player by 10;
 					wait for any key;
 					challenge "Blob"; 
-					if lost is 0:
+					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. … Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
 						now A Fight to remember is resolved;
 						now PassionAfterTheBattle is unresolved;
-					otherwise:		[***partially fixed]
+					otherwise if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 						now A Fight to remember is resolved;
 						now oozing is 1;
 						now humanity of player is 0;
@@ -434,7 +440,10 @@ Instead of resolving a A Fight to remember:
 						now battleground is "void";
 						wait for any key;
 						follow the turnpass rule;
-						stop the action;		
+						stop the action;
+					otherwise:
+						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
+						now lastResevoirfix is turns;
 
 
 Section 5 - Water At Last

@@ -654,7 +654,7 @@ Instead of resolving a Patient Rooms:
 				if scavengetarget is "soda":
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
-	if patrooms is 1 and a random chance of 1 in 3 succeeds:	[blocked room]
+	if patrooms is 0 and a random chance of 1 in 3 succeeds:	[blocked room]
 		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside.  Checking carefully, it doesn't appear that anyone is inside there now.  A little puzzled, you risk asking if anyone's there, but get no response.  But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
