@@ -37,7 +37,7 @@ The reflex of a Dragon Babe  is 15.
 The primary attack description of a Dragon Babe is "[one of]slides up against their victim, pressing their large breasts temptingly while whispering soft nothings in an ear, a hand brushing across[or]leaps at the target of their interest, tackling them to the ground and grinding her groin against[at random]".
 The TF description of a Dragon Babe is "moans softly, falling to their knees as a huge tail erupts from their bottom, rapidly covered in scales. They explode out of their clothes as they gain new curves and height. An intense, but brief, scent of pure lust permeates the area as they rise as a".
 
-Purple Egg is a kind of thing. The description of Purple Egg is "What a curious looking egg, so lustrous and large. The purple shade is a bit odd, but you feel protective of it. Is it still alive?". The TF Table of Purple Egg is table Dragon Babe. 1 Purple Egg is in town border. Purple Egg is infectitem
+Purple Egg is a kind of thing. The description of Purple Egg is "What a curious looking egg, so lustrous and large. The purple shade is a bit odd, but you feel protective of it. Is it still alive?". The TF Table of Purple Egg is table Dragon Babe. 1 Purple Egg is in town border. Purple Egg is infectitem. It is edible.
 
 
 Dragon Babe ends here.
