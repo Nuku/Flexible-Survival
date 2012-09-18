@@ -1,4 +1,4 @@
-"Wave of Change v1.1, Based On Flexible Infection v3 by Shrimpy" by Nuku Valente
+"Wave of Change v1.2, Based On Flexible Infection v3 by Shrimpy" by Nuku Valente
 
 Book 0 - Pre game prep stuff
 
@@ -1512,7 +1512,14 @@ instead of examining a birthing pouch:
 	say "[description of birthing pouch]";
 	stop the action;
 
-Understand the command "give" as something new. 
+Understand the command "end" as something new.
+ ending is an action applying to nothing.
+ understand "end" as ending.
+ 
+ carry out ending:
+	end the game saying "You ended it early.";
+	
+ Understand the command "give" as something new. 
 giving is an action applying to two things.
 understand "give [thing] to [person]" as giving.
 
@@ -1583,7 +1590,10 @@ Before printing the name of a person ( called subject): [used to display infecte
 		if the subject is heavy:
 			say "[bold type]pregnant[roman type] ";
 		if the matron of subject is the player:
-			say "daughter ";
+			if the subject is female:
+				say "daughter ";
+			otherwise:
+				say "son";
 		if the mother of subject is greater than 0:
 			say "mother ";
 			
@@ -2233,6 +2243,18 @@ Check UBng:
 	if the noun is the player:
 		say "That would break a few rules of physics.";
 		reject the player's command;
+	if the tf table of pelvis is table fox taur:
+		if the tf table of noun is table fox taur:
+			say "They're already one of you.";
+			reject the player's command;
+		let x be 0;
+		repeat with cur running through on-stage people:
+			if engulfer of cur is player:
+				increase x by 1;
+		if x is greater than 1:
+			say "You are too full, two is the absolute maximum.";
+			reject the player's command;
+		continue the action;
 	if the centauress torso is not part of the rear:
 		say "You don't have a centauress cunt to stuff them into.";
 		stop the action;
@@ -2889,6 +2911,7 @@ if the tf table of the pelvis is table 1, no;
 if the tf table of the pelvis is table 4, no;
 if the tf table of the pelvis is table 21, no;
 if the tf table of the pelvis is table felitaur, no;
+if the tf table of the pelvis is table Dragon Babe, no;
 if the tf table of the pelvis is table 14, no;
 if the tf table of the pelvis is table 6, no;
 if the tf table of the pelvis is table centauress, no;
@@ -4731,10 +4754,18 @@ To Infection Menu:
 		now x is selected;
 	while 1 is 1:
 		say "Allowed Infection Items: [list of selected on-stage infectitem][line break]";
-		say "Disallowed Infection Items: [list of not selected on-stage infectitem][line break](q to quit)>";
+		say "Disallowed Infection Items: [list of not selected on-stage infectitem][line break]q to quit[line break]a to allow all[line break]d to deny all[line break]>";
 		get typed command as playerinput;
 		let tex be indexed text;
 		now tex is playerinput;
+		if playerinput matches "a":
+			repeat with z running through infectitem things:
+				now z is selected;
+			next;
+		if playerinput matches "d":
+			repeat with z running through infectitem things:
+				now z is not selected;
+			next;
 		if playerinput matches "q", break;
 		change the text of the player's command to playerinput;
 		repeat with z running through infectitem things:
@@ -5452,6 +5483,9 @@ when play ends:
 				otherwise;
 					say "You collect up your small herd of [number of on-stage furry doe] and hurry them out of the city before they can be hurt by armed respone to the outbreak. You live in the forests of the northwest, loving, fucking, and managing your herd dutifully. Your children eventually spawn off new alpha bucks to spread over a modestly impressive area, claiming several state parks for your kind.";
 				end if;
+			end if;
+			if tf table of head is table Dragon Babe begin;
+				say "You flee the city at the sound of the incoming military, taking to the sewers and moving for what feels like a month of migration. You find a new city, still abandoned, mostly. It seems to have a lot of mutants in it, but more interestingly, some untouched humans still holding out. You have learned the sewers well, and your charms and skill keep you fed, too well fed. One day you find yourself stuck running along a familiar passage. For some reason, you don't feel nervous about the situation, knowing someone, despite all logic, will be along shortly to free you, and perhaps something more interesting than that. You can hardly wait.";
 			end if;
 			if tf table of head is table goblin begin;
 				let u be the number of compatible on-stage npc persons;
@@ -6987,4 +7021,5 @@ Report going somewhere when the player is stuck to something draggable:
 	
 	
 Include Dragon Babe by Nuku Valente.
+Include Fox Taur by Nuku Valente.
 
