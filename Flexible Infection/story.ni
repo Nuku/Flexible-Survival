@@ -1593,7 +1593,7 @@ Before printing the name of a person ( called subject): [used to display infecte
 			if the subject is female:
 				say "daughter ";
 			otherwise:
-				say "son";
+				say "son ";
 		if the mother of subject is greater than 0:
 			say "mother ";
 			
