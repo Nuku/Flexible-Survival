@@ -129,7 +129,7 @@ this is the cockcannon rule:
 			let playernum be 12;
 			let ccnum be sta entry + lev entry + 5;
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
-			say "Calling upon your hidden power, you flash brightly with light, [one of]filling the phallic creature's eyes with spots[or]startling the Cock Cannon[or]making it harder for the Cock Cannon to focus on its [if cannonprep is 0 or cannonprep is 1]aiming[otherwise]self-pleasure[purely at random].";
+			say "Calling upon your hidden power, you flash brightly with light, [one of]filling the phallic creature's eyes with spots[or]startling the Cock Cannon[or]making it harder for the Cock Cannon to focus on its [if cannonprep is 0 or cannonprep is 1]aiming[otherwise]self-pleasure[end if][purely at random].";
 			increase playernum by 5;
 [		say "TEST: player = [playernum] vs cock cannon = [ccnum]:[line break]";		]
 		let playernum be a random number between 1 and playernum;

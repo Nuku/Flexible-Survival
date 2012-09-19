@@ -122,7 +122,7 @@ this is the rookick rule:		[+75% dmg cartoonish double-kick]
 
 to say rookickreset:
 	choose row monstercom from table of Critter Combat;
-	now alt1chance is 20;
+	now alt1chance entry is 20;
 
 
 Section 4 - Endings
