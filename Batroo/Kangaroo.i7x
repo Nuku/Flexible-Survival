@@ -45,10 +45,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "red kangaroo"; [Name of your new Monster]
-	now attack entry is "[one of]A left hook catches you in the chin, making you stumble. [or]Dodging a punch, she raises back onto her tail, delivering a hard double kick to your stomach. [or]Sweeping around, the powerful tail, slams into your side knocking the wind out of your lungs [or]Blocking a punch she throws a upper cut into your chin, followed by a left, right jabs to your stomach. [at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]A left hook catches you in the chin, making you stumble.[or]Sweeping around, the powerful tail, slams into your side knocking the wind out of your lungs.[or]Blocking a punch she throws a upper cut into your chin, followed by a left, right jabs to your stomach.[or]The kangaroo hops from one foot to the other as it delivers a series of quick punches.[at random][rookickreset]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[kangaroo loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[kangaroo attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare. Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses. This [apostrophe]roo is dressed for taking [apostrophe]assets[apostrophe] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are. A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves. A thick tail sways behind her, looking to be used as a third leg. Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides. '[one of]What do we have here?'  [or]Eeeee! A new plaything for me!'  [or]You[apostrophe]re going to give me just what I want.'  [at random]Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture. ";[ Description of the creature when you encounter it.]
+	now desc entry is "A flash of rusty red fur catches your eyes, turning to look what you see is something out of some perverted fantasy or nightmare.  Standing around six foot five inches tall is a red kangaroo, harden turquoise eyes stare out at you from behind half lens glasses.  This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits, but making them bigger than they are.  A short skirt going from her hips down to mid thigh, giving glances to what's underneath as she moves.  A thick tail sways behind her, looking to be used as a third leg.  Rusty red fur covers her back and the top of her tail, going to a creamy beige on her belly, with freckles of red along her sides.  '[one of]What do we have here?'  [or]Eeeee! A new plaything for me!'  [or]You[apostrophe]re going to give me just what I want.'  [at random]Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";[ Description of the creature when you encounter it.]
 	now face entry is "medium sized rounded muzzle, black nose pad at the end of your new muzzle at the end of your face";
 	now body entry is "a soft rounded shoulder build with tight stomach, leading down into wide hips, large spring like thighs and feet";
 	now skin entry is "[one of]rusty red furred[or]short furred[or]softly furred[at random]";
@@ -61,14 +61,14 @@ When Play begins:
 	now cock change entry is "it swells adding a more curved, looking like a snake becoming longer and more serpentine";
 	now str entry is 14;
 	now dex entry is 19;
-	now sta entry is 17;					
+	now sta entry is 15;
 	now per entry is 15;
 	now int entry is 14;
 	now cha entry is 11;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 35;			[ How many HP has the monster got? ]
 	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 9;			[Amount of Damage monster Does when attacking.]
+	now wdam entry is 7;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Red";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10;		[ Length infection will make cock grow to if cocks]
@@ -89,8 +89,43 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "redroo";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
+
+Section 3 - Alt-Attack Roo Double-Kick
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"redroo"	retaliation rule	--	--	rookick rule	20	--	--	--	--	--
+
+
+this is the rookick rule:		[+75% dmg cartoonish double-kick]
+	choose row monstercom from table of Critter Combat;
+	now alt1chance entry is 0;	[cannot do two double-kicks in a row]
+	choose row monster from the table of random critters;
+	let rangenum be ( 80 - ( peppereyes * 4 ) );
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 57 );	[+75% dmg]
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		now dam is (dam * 150) divided by 100;
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+	say "Dodging a punch, [one of]she[or]the roo[or]the kangaroo[purely at random] rocks back onto her tail.  As she rocks forward again, she slams both powerful legs into you and kicks hard, sending you flying back several feet.  This [one of]strong[or]violent[or]powerful[purely at random] attack does [special-style-2][dam][roman type] damage!";
+	now damagein is dam;
+	say "[bodyabsorbancy]";
+	if absorb is greater than dam:
+		now absorb is dam;
+	if absorb is greater than 0:
+		say "You prevent [special-style-1][absorb][roman type] damage!";
+	decrease hp of the player by dam;
+	increase hp of player by absorb;
+	follow the player injury rule;
+	say "You are [descr].";
+
+to say rookickreset:
+	choose row monstercom from table of Critter Combat;
+	now alt1chance is 20;
+
+
+Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "red kangaroo":
@@ -98,6 +133,7 @@ when play ends:
 			say "Your mind slips away going into a more peaceful mode, wandering the city for fresh vegetation to eat quickly bounding away from startling events. You quickly find a place among other kangaroos becoming a flyer to the dominant male around.";
 		otherwise:
 			say "You quickly adapt to life outside, using the new found legs to become a track star, getting into the high jumps and long jumps to a very successful career. Your lovers find those legs to have some of the best cowgirl riding moments, with your tail being a great impromptu seat.";
+
 
 to kangaroofy:
 	repeat with y running from 1 to number of rows in table of random critters:
