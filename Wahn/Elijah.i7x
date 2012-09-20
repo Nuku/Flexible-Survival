@@ -60,6 +60,12 @@ Version 1 of Elijah by Wahn begins here.
 [   2: Guard duty done                                               ]
 [   3: Stroking Fang done                                            ]
 [   4: Husky female done                                             ]
+[ Character J - Honey Interaction:                                   ]
+[   0: Nothing happened                                              ]
+[   1: Frets over Elijah done                                        ]
+[   2: Chat done                                                     ]
+[   3: Hive prayer done                                              ]
+[   4: Grabby Elijah done                                            ]
 
 
 [ NPC Connection summary for endings (hp state 4 only) :             ] 
@@ -118,6 +124,7 @@ The conversation of Elijah is { "Mew!" }.
 lastElijahfucked is a number that varies.  lastElijahfucked is normally 555.
 NPCintCounter is a number that varies.  NPCintCounter is normally 555.
 npcEint is an indexed text that varies. npcEint is normally "0000000000000N";
+honeygiven is a truth state that varies.  honeygiven is normally false.
 
 instead of sniffing Elijah:
 	if hp of Elijah is 0:   [chained up in the chapel]
@@ -210,9 +217,11 @@ instead of conversing the Elijah:
 				otherwise:
 					say "     Where did that thought come from? You shake it off, your mind returning to the gryphon milk you need for the your angel revival milkshake.";
 		otherwise:
-			if ("Honeycomb" is not listed in invent of player):
+			if ("Honeycomb" is not listed in invent of player) and bee girl is not tamed:
 				say "     You got the milk as base for your angel revival shake. Now to gather some honey to mix into it... maybe you can find some somewhere in the park.";
 			otherwise:
+				if "Honeycomb" is not listed in invent of player:
+					say "     As you look over your supplies but find no honey, Honey tugs at your arm and offers you one of her precious supply to use instead.  That taken care of, you focus on the next step.";
 				if ("healing booster" is not listed in invent of player):
 					say "     Milk and honey should be a nice start, but you need something more. Maybe you should check out the hospital for something to really boost your patient's healing ability.";
 				otherwise:
@@ -244,7 +253,10 @@ instead of conversing the Elijah:
 								if chosenmilk is entry q in invent of player:
 									remove entry q from invent of player;
 									break;
-							delete Honeycomb;
+							if "Honeycomb" is listed in invent of player:
+								delete Honeycomb;
+							otherwise:
+								now honeygiven is true;
 							delete healing booster;
 							now hp of Elijah is 3;
 							increase score by 20;
@@ -337,6 +349,10 @@ An everyturn rule:
 				say "     While taking your break before heading back into the city, you see hear a beautiful and calming song being sung. It's Denise, the gryphoness sitting on the corner of the injured angel's bunk. He's even somewhat awake, from time to time opening his eyes and smiling up at her before drifting off again.";
 				replace character number 7 in npcEint with "1";
 				now NPCintCounter is turns;
+			otherwise if (bee girl is tamed) and (character number 10 in npcEint is "0"):
+				say "     Honey frets nervously at your side, clutching herself to you tightly as you take a moment to look over the injured angel.";
+				replace character number 10 in npcEint with "1";
+				now NPCintCounter is turns;
 	otherwise if (hp of Elijah is 3) and (NPCintCounter - turns > 2): [virgin-mode]
 		if (player is in bunker):
 			if Candy is in bunker and (character number 1 in npcEint is "0" or character number 1 in npcEint is "1"):
@@ -371,6 +387,10 @@ An everyturn rule:
 			otherwise if (cute crab is tamed) and (character number 8 in npcEint is "0" or character number 8 in npcEint is "1"):
 				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature.' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 				replace character number 8 in npcEint with "2";
+				now NPCintCounter is turns;
+			otherwise if (bee girl is tamed) and (character number 10 in npcEint is "0" or character number 10 in npcEint is "1"):
+				say "     As you're tending to a few odds and ends, you notice the bee girl, Honey, approach Elijah and ask if he's feeling better.  'I am, thank you,' he replies with a nod and a smile.  'Oh, I am told that a cure was made of milk and honey.  Was that honey yours, little one?'  [if honeygiven is true]She nods, saying that it came from her hive[otherwise]She replies that she's not sure, but adds that it probably came from her hive[end if].  He takes her hand in his.  'Then my thanks again to you and your hive,' he says.  Honey gets a sad look in her eyes and buzzes off to be alone for a while, leaving Elijah confused.";
+				replace character number 10 in npcEint with "2";
 				now NPCintCounter is turns;
 		otherwise if player is in Grey Abbey Library:
 			if Fang is in Grey Abbey Library and (character number 9 in npcEint is "0" or character number 9 in npcEint is "1"):
@@ -416,6 +436,17 @@ An everyturn rule:
 			otherwise if (cute crab is tamed) and (character number 8 in npcEint is "0" or character number 8 in npcEint is "1" or character number 8 in npcEint is "2"):
 				say "     While taking your break before heading back into the city, you see Elijah lying on his bunk reading a book. Then suddenly, his brow scrunches up a bit and he slowly raises a wing from where it was hanging over the side of the bunk. Your cute little crab pet is dangling off the wingtip, holding on with one of its claws. 'That's not there for you to pull on, little creature.' Elijah says, looking at it. 'You're lonely, aren't you? Here, let's give you something to play with.' With that, he pulls a small toy crab out of thin air and sets it down on the ground, soon followed by the real one. It takes hold of the toy and scampers off.";
 				replace character number 8 in npcEint with "3";
+				now NPCintCounter is turns;
+			otherwise if (bee girl is tamed) and (character number 10 in npcEint is "0" or character number 10 in npcEint is "1" or character number 8 in npcEint is "2"):
+				say "     While tending to some odds and ends, you see Elijah approach Honey, taking a seat beside her.  'I'm sorry if I upset you before.  Could you tell me what I did to make you so sad?'  She sniffles a little and tells him how her hive was destroyed and all her hive-sisters are dead now.  He takes her hand in his again, stroking it tenderly.  'I'm sorry to have inadvertantly reminded you of your terrible loss.  Would you like to talk to me about them?  If they were as kind-hearted as you, then this world is diminished for their loss.  But perhaps you can take solace that the honey they left behind was able to help another, as it helps you live to see a brighter future.  Let us pray for these hard working souls who continue to help us both even after they are gone,' he says.  They pray for some time, Honey wanting to say a proper fairwell to each of her sisters.  When they're finally done, the bee girl seems drained, but in brighter spirits.";
+				if level of bee girl < level of player:
+					increase level of bee girl by 1;		[Free level]
+					say "     The bee girl has gained level [level of bee girl]! Congratulations!";
+					if remainder after dividing level of bee girl by 2 is 0:
+						increase weapon damage of bee girl by 1;
+					if remainder after dividing level of bee girl by 5 is 0:
+						increase dexterity of bee girl by 1;
+				replace character number 10 in npcEint with "3";
 				now NPCintCounter is turns;
 		otherwise if player is in Grey Abbey Library:
 			if Fang is in Grey Abbey Library and (character number 9 in npcEint is "0" or character number 9 in npcEint is "1" or character number 9 in npcEint is "2") and ( lastfangfucked - turns >= 8 ) and ( lastElijahfucked - turns >= 8 ):
@@ -474,6 +505,27 @@ An everyturn rule:
 			otherwise if (cute crab is tamed) and (character number 8 in npcEint is "0" or character number 8 in npcEint is "1" or character number 8 in npcEint is "2"):
 				say "     While taking your break before heading back into the city, you see Elijah lift the blanket of his bunk and scowl at what he finds below. He grabs your cute crab pet and dumps it on the concrete floor, growling 'Can't you keep your stupid critters in a pen somewhere?'";
 				replace character number 8 in npcEint with "4";
+				now NPCintCounter is turns;
+			otherwise if (bee girl is tamed) and (character number 10 in npcEint is "0" or character number 10 in npcEint is "1" or character number 10 in npcEint is "2"):
+				say "     While tending to some odds and ends, you see Elijah strut over to Honey and grab her.  His hands run over the bee girl's body, fondling her pussy and tender abdomen.  'Mmm... I want to get at your honeypot, cutie,' he says with a lecherous grin.  The bee girl squirms in his grip and smooshes the honeycomb she was snacking on into his face.  She squirms out of his grip as he sputters angrily.";
+				say "     'You're terrible.  I'm sorry I ever felt sad that you got hurt,' she screams, tears in her eyes as she yells at him.  She takes flight as he makes a grab for her, buzzing over to hide behind him, sobbing loudly.";
+				say "     Elijah, meanwhile, is livid, growling about having to get this sticky gunk off his face and that he'll make her pay";
+				if Candy is bunkered:
+					say ".  Candy giggles and puts up his hand, waving it in the air.  'Oh! Oh! Me-me-me! I'm a pro at licking up sticky sweet stuff,' the gay coon jokes.  'I'd be glad to help you out with that.'  As he sashays over, he gives Honey a wink to show he plans on distract the bad boy for her.  From the bathroom where they end up, you can hear the loud cries of lustful pleasure as it sounds like Elijah's taking his frustration and excess libido out on the pink raccoon by being particularly rough with him.";
+					now lastCandyfucked is turns - 2;
+					now lastElijahfucked is turns - 2;
+				otherwise:
+					say ".  'Get over here, you buzzing bitch.  I'm gonna kick that sweet all of yours all across town,' he growls, storming forward.  You keep between them and tell him to calm down and get cleaned up.  He glares at you for a few moments, eyes flashing red with anger, but you stand your ground";
+					if "water bottle" is listed in invent of bunker:
+						say ".  He turns and storms off, grabbing one of the spare bottles of water to use to clean himself up.";
+						repeat with Q running from 1 to number of entries in invent of the bunker:
+							if entry q of invent of the bunker is "water bottle":
+								remove entry q from invent of the bunker;
+								break;
+					otherwise if "water bottle" is listed in invent of player:
+						say ".  He turns and storms off, but not before rummaging through your pack and grabbing one of the spare bottles of water to use to clean himself up.";
+						delete water bottle;
+				replace character number 10 in npcEint with "4";
 				now NPCintCounter is turns;
 		if player is in Grey Abbey Library:
 			if Fang is in Grey Abbey Library and (character number 9 in npcEint is "0" or character number 9 in npcEint is "1" or character number 9 in npcEint is "2") and ( lastfangfucked - turns >= 8 ) and ( lastElijahfucked - turns >= 8 ):
