@@ -22,17 +22,19 @@ to say lion att:
 	say "[one of]The big cat-man roars and lashes out with talon like retractable claws![or]In a show of viciousness the lion man leaps at your neck, clamping down his jaw. Only by poking at his eyes do you force him to let go.[or]The lion man's powerful paws slam into you, knocking you around![or]The powerful feline grabs you and tosses you to the ground, sending you tumbling![at random]";
 
 to say cat def:
+	choose row monster from the table of random critters;
 	if libido of player >= 40:
 		if cocks of player > 0:
 			say "     Deciding to make use of the pesky catgirl, you push the small, curvy feline to the ground and pounce her.  She mewls softly, but doesn't pull away as you line up your [cock of player] cock and drive it into her[if cock length of player > 16].  Your massive cock makes a huge bulge in the little feline and she moans and mewls uncontrollably, rubbing her paws over her swollen tummy[otherwise if cock length of player > 10].  Your big cock makes an appreciable bump in the little feline's belly and she rubs it, moaning and mewling happily[otherwise].  Your cock stuffs the little feline, cramming her full of throbbing meat, making her moan and mewl happily[end if].  Her pussy quivers around your shaft and her B-cup breasts sway as you pound into her curvy body.  When finally you cum, you pump your thick seed into her, leaving her [if cock width of player > 10]hugely bloated as your ample cum stuffs her small body, flowing out her overstuffed pussy[otherwise if cock width of player > 5]tummy a little plump and her pussy leaking your seed[otherwise]her pussy stuffed full of your semen and slowly leaking cum[end if].  She purrs softly, passed out after getting fucked good and hard.";
 		otherwise:
 			say "     Deciding to make use of this pesky catgirl, you grab the small, curvy feline and press her face between your legs, grinding your pussy into her softly furred muzzle.  She mewls softly and starts timidly licking at your slit, running her raspy little tongue over it.  You moan softly and scritch her ears, telling her she's a good kitty.  As you encourage her, her enthusiasm for her task increases, as does your pleasure.  Her rough tongue is quick stimulating and soon enough you're soaking the little kitty's face in your juices as you cum hard.  Once you're finished with her, you push her to the ground, leaving her to lick and groom herself clean.";
-		if hp of leonard is 7:
+		if hp of leonard >= 7 and Feline_attached is 0:
 			if Feline_meow is 0, increase Feline_meow by 1;
 			say "     Recalling that Leonard has asked you to track down more of these felines, you pick up the cat girl and cradle her to your chest.  She mewls softly and nuzzles you, wrapping her lips around your nipple and starting to suckle eagerly.  You moan in pleasure as you [if breast size of player is 0]surprisingly [end if]start to lactate, providing warm milk for the needy kitty.  You feel very aroused by the experience and can hardly wait to bring her to Leonard.";
 			infect;
 			if breast size of player is 0, follow the breast change rule;
 			now Feline_attached is 1;
+			follow the feline nursing rule;
 	otherwise:
 		say "You deliver a final strike to the small feline, knocking her out!";
 
@@ -59,18 +61,24 @@ to say lion def:
 		say ", passing out shortly afterwards.";
 
 to say cat vict:
+	choose row monster from the table of random critters;
 	increase Feline_meow by 1;
-	say "     The small curvy feline approaches and looks up at you imploringly. Against your better judgment, you reach down and pick her up. She leans in and begins to eagerly suckle at your chest";
-	if breast size of player > 0:
-		say ".  The small cat's teeth chew at your own thick black teats and she begins to drink eagerly. You were not aware you were able to lactate, but she proves it in debilitating waves of delight";
+	if Feline_attached is 1:
+		say "     The small, curvy feline approaches you and mewls imploringly.  As you kneal down, the previous feline comes over, mewling as well, but is kicked away as the new one climbs up onto you, taking her place on your chest.  She leans in and begins to eagerly suckle at your chest, leaving the ousted feline to go off in search of a new surrogate";
 	otherwise:
-		say ".  Tawny fur explodes over your chest, spreading rapidly across your front and back, slightly lighter on the front. Pleasure builds in your front as two breasts swell into existence, nipples firm and visible through the fur.";
+		say "     The small curvy feline approaches and looks up at you imploringly.  Against your better judgment, you reach down and pick her up.  She leans in and begins to eagerly suckle at your [bodytype of player] chest as her paws knead";
+	if breast size of player > 0:
+		say ".  The small cat's teeth chew at your nipples and she begins to nurse eagerly.  As milk begins to flow from your now lactating breast, she purrs as she feeds on your fresh milk while you are filled with debilitating waves of delight.";
+	otherwise:
+		say ".  The small cat's teeth chew at your nipples and she starts suckling from one.  Pleasure builds in your front as your body starts to respond to the purring feline's nursing.";
 		follow the breast change rule;
 	if libido of player < 10:
-		say "You manage to force yourself to set the feline down. She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
+		say "     You manage to force yourself to set the feline down.  She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
+		now Feline_attached is 0;
 	otherwise:
-		say "The bundle in your arms remains firmly attached, drinking hungrily from you and making it hard to concentrate.[line break]It seems no amount of your milk sates the busty feline as she snuggles against you.";
 		now Feline_attached is 1;
+		follow the feline nursing rule;
+
 
 to say lion vict:
 	say "The alpha lion approaches and sets a paw on your shoulder. You consider turning him away with your human mind, but the feline one wins out and you lean against him. He bites at your shoulder and neck, moving around you and lifting you. He is soon plunging his hungry shaft deep into your small curvy body, filling you in a way you have never been filled before as a human. You roar in pleasure as his seed fills your new womb, which swells outwards with the volume of it. [line break]As you recover from the pleasure of it, the lion man snuggles, caressing your chest with his broad paws and rocking against you a few moments longer before he rises and releases you to your feet, wobbly though they may be.[impregchance]";
@@ -107,6 +115,12 @@ to say feline cleanup:  [post-battle reset of stats to catgirl values]
 	now wdam entry is 7 + ( debit / 3 );
 	now lev entry is 3 + debit;
 	now libido entry is 25;
+	now str entry is 6;
+	now dex entry is 21 + (debit / 5);
+	now sta entry is 8;
+	now per entry is 18;
+	now int entry is 14;
+	now cha entry is 20;
 
 to say feline desc:
 	choose row monster from the table of random critters;
@@ -124,6 +138,12 @@ to say feline desc:
 		now wdam entry is 7 + ( debit / 3 );
 		now lev entry is 3 + debit;
 		now libido entry is 25;
+		now str entry is 6;
+		now dex entry is 21 + (debit / 5);
+		now sta entry is 8;
+		now per entry is 18;
+		now int entry is 14;
+		now cha entry is 20;
 	otherwise:
 		say "A large, strongly muscled and powerful lion/human hybrid. He has a dark brown mane and slightly lighter fur everywhere else with round ears and sharp looking teeth. He is entirely naked, allowing you to see his thickly furred sheath and the jutting pink lion shaft. It is oozing with precum as he walks and seeks out a mate.  Looking at him, you can feel something inside you, some buried urge, starting to push to let such a big, strong male just have his way with you.";
 		if hardmode is true and level of player > 14, let debit be level of player - 14;
@@ -133,6 +153,12 @@ to say feline desc:
 		now wdam entry is 20 + ( ( 4 * debit ) / 11 );
 		now lev entry is 14 + debit;
 		now libido entry is 5;
+		now str entry is 16;
+		now dex entry is 21 + (debit / 5);
+		now sta entry is 12;
+		now per entry is 14;
+		now int entry is 10;
+		now cha entry is 15;
 
 
 Section 2 - Monster Insertion
@@ -217,6 +243,35 @@ this is the leoninelust rule:		[continuous lustful weakening of player]
 			say "!";
 
 
+Section 4 - Nursing Feline (v2.0)
+
+this is the feline nursing rule:
+	if feline_attached > 0:
+		if libido of player is less than humanity of player and feline_status is not 2 and feline_status is not 3 and breast size of player > 0:
+			increase Feline_meow by 1;
+			say "     The [one of]cute feline in your arms continues to cling to you[or]bundle in your arms remains firmly attached[purely at random], [one of]drinking hungrily from you and making it hard to concentrate[or]nursing thirstily from you[purely at random][if a random chance of 1 in 3 succeeds].  The pleasure from this clouds your mind, making you enjoy the creature's presence[end if].  It seems no amount of your milk sates the busty feline as she snuggles against you.  As she suckles, your mind wanders as [one of]you think of sexy felines[or]images of powerful lions mounting you fill your head[or]your mouth waters at the thought of the dripping cocks, milk-filled breasts and juicy pussies of the various creatures you've seen[or]you stroke and caress the small feline, purring as she nurses from you[or]your eyes continue to gaze longingly at the increasingly sexy forms you see around you[purely at random].  Soon you know your animal urges will overcome your humanity and you will lose control[one of].  Other than briefly relinquishing her position when you have to fight or are having sex, she's clings to you constantly[or].  Aside from when you have to put her down during a fight or when you're having sex, she remains snuggled in your arms and suckling[or].  You feel a growing attachment to the cute feline and keep her in your arms except when absolutely necessary[purely at random].";
+			increase libido of player by 4;
+			decrease humanity of player by 4;
+		otherwise if feline_status is 2:
+			say "Leonard nuzzles the newest member of his pride and has her remain waiting on his bed, promising he'll be back to spend more time with her soon.";
+			now Feline_attached is 0;
+			now feline_status is 0;		[reset to new kitty]
+		otherwise if feline_status is 3:
+			say "Leonard nuzzles the feline who came in with you, telling her what a fine job she did.  He pats her ass, sending her on her way.";
+			now Feline_attached is 0;
+			now feline_status is 0;		[reset to new kitty]
+		otherwise if breast size of player <= 0:
+			say "     The small feline clinging to you mewls and nuzzles at your flat chest.  Kneading her paws, she tries suckling from your nipple.  When it continues to yield no milk, she releases another sad mewl.  With your head growing clearer, you manage to force yourself to put the feline down.  She pouts at you and puts her hands on her hips, looking quite annoyed at you for having changed.";
+		otherwise:
+			say "     You manage to force yourself to set the feline down. She pouts at you and puts her hands on her hips, looking quite annoyed at you.";
+			now Feline_attached is 0;
+			now feline_status is 0;		[reset to new kitty]
+
+an everyturn rule:
+	follow the feline nursing rule;
+
+
+[
 Section 4 - Feline Heat
 
 Table of infection heat (continued)
@@ -255,6 +310,7 @@ When Play begins:
 	now heat end entry is "[feline heat end]";		[this is the same as heat start only it's for ending the cycle. GSD her sex is reduced back to it's previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[feline heat]";
 
+]
 
 Section 5 - Endings
 
