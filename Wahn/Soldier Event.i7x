@@ -103,9 +103,82 @@ Instead of resolving a Captured Demon:
 			say "     Having dealt with you, the demon turns back to Private Jackson, who's tried to crawl off in the meantime. He picks the man up by his neck, choking him a bit and runs a clawed hand down his side, leaving shallow but long lines bloody in his pale flesh. 'Don't try to flee again. You're taxing my patience.' With that, he throws his captive back on the bar, bent over and his rear sticking out at the right height.";
 			say "     The demon smacks his manhood against the human's ass several times, creating slapping noises and making him grunt in pain. Looking down at the reddened cheeks and the deeper red hand-print on them, he aims his cock at Private Jackson's virgin pucker and plunges it right in. His victim whimpers in pain as the infernal cock forces his asshole to open and the tick shaft of the demon's cock sinks inside his body. You watch the otherworldly beast fuck the poor man without restraint, slamming in and out and just getting more and more aroused as the soldier begs and struggles weakly to push him off.";
 			say "     Then finally, the demon brute slams his whole shaft inside, roaring in satisfaction as the contents of his balls erupt into his human captive. He keeps pumping blast after blast of cum into the young man, pumping slowly in and out of his hole with squishy noises as cum starts to squirt out around his shaft from the overfilled ass. Pulling Private Jackson's head up by the hair, the demon licks his cheek slowly, then says 'Feel my infernal seed fill your innermost being, little man. You're mine now - now and forever!' With that, he pulls the soldier up against his chest, holding him against his body with his cock still inside the man. Then black-purple smoke starts forming around them both, obscuring them from sight. When it spreads out in the room and slowly blows away, there's nothing to be seen of the demon or his newest slave.";
-		otherwise:
+		otherwise:  
 			say "     After the demon vanishes, you take care of Private Jackson, who's still rather groggy from being choked and manhandled like that. He dresses as good as he can with the remains of his uniform and ends up looking more like a male stripper than a soldier, with all the naked skin he's showing. Looks rather hot, but since his thoughts are anywhere but at sex right now, you wish him the best as he moves out to rejoin his unit.";	  
+			Now Thankful Soldier is unresolved;		
 			increase score by 5;
 	now Captured Demon is resolved;
+
+	
+Thankful Soldier is a situation. Thankful Soldier is resolved.  [meeting the guy from 'Captured Demon' again - if you saved him]
+The sarea of Thankful Soldier is "Outside";
+when play begins:
+	add Thankful Soldier to badspots of guy;            [male soldier]
+	
+Instead of resolving a Thankful Soldier:   
+	say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young man you saved from that demon brute in the red light district.";
+	say "     At first raising his weapon in alarm, he then lowers it again as he recognizes you in turn. 'Hello there. You saved me from that hellish thing in the bar. Thanks a lot for that - sorry I didn't say anything then, but I was pretty groggy after that beating. I'm David, by the way.'";
+	say "     He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.' Do you graciously accept the supplies (Y) ...or would you rather take the handsome Private as your reward? (N)"; 
+	if player consents:   [accept supplies]
+		say "     You take the items he offers you and stash them in your pack. 'Hope that'll help you a bit. Stay safe - help is coming, it's just a question of time till more troops arrive and the scientists figure out this whole mess.' He nods to you, then continues his patrol route.";
+		say "     Food x3, Water x1 obtained.";
+		add "food" to invent of player;
+		add "food" to invent of player;	
+		add "food" to invent of player;	
+		add "water bottle" to invent of player;	
+	otherwise:            [fuck the soldier]
+		say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
+		say "     As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but his moans as you squeeze his ass and his bulge pressing against your body show that he's quite ready for some action. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
+		if(cocks of player > 0 and cunts of player > 0):
+			say "     Being dual-gendered, which way do you want to enjoy your new soldier friend? (Y = Fuck his Ass, N = Take him in your Pussy)";
+			if player consents:   [fuck his ass]
+				say "[DavidFirstAnal]";
+			otherwise:    [let him fuck your pussy]
+				say "[DavidFirstVaginal]";
+		otherwise if(cocks of player > 0):
+			say "[DavidFirstAnal]";
+		otherwise if(cunts of player > 0):
+			say "[DavidFirstVaginal]";
+		otherwise:
+			say "     Neuter Rubbing"; 
+		say "[DavidFirstRubbing]";	  
+	say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Time will tell when you see him next.";
+	wait for any key;
+	increase score by 5;
+	now Thankful Soldier is resolved;
+	
+to say DavidFirstAnal:	
+	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing."; 
+	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips, then spin him around, your arms around his chest from behind and walk him over to the nearest wall of a building."; 
+	say "     With a moaned 'Stand like this.', you lift his arms up and put them against the wall, the pull his ass towards you a bit. You rub your rock-hard [cock of player] cock up and down between the round buns of his bubble butt, then bring its tip to the tight opening between them. Pushing forward with increasing pressure, David's pucker resists you for a moment, then opens up and allows your cockhead to slide into the tight embrace of his ass. It's virgin territory for sure you're exploring here - and from his lust-filled groans as you slowly slide deeper into him, you're being very well received."; 
+	say "     As you bottom out inside his ass, you give his cock a few strokes, then move your hands back to his hips. Holding on tightly, you start pulling out almost all the way and hammering your shaft back inside him in quick deep strokes, filling the alley with slapping noises as your hips meet his butt. His tightly gripping hole feels just amazing around your thrusting member, filling you with ecstasy as you very thoroughly take his virginity.";
+	say "     Getting shafted like this soon drives your handsome Private over the edge, his cock spraying a huge load of cum all over the stones of the wall he's standing against. David's ass muscles quiver and flex with each shot of seed erupting from his cock, giving you all new sensations as you move in and out of him. Then it's your turn, and with one final deep thrust you push inside David all the way and fill his insides with spurt after spurt of warm seed."; 
+	say "     You keep standing like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex and David's brain starts working again, he looks over his shoulder at you with a questioning expression. 'I like... this,' he says and you feel his asshole tighten for a second around your member. 'Does that mean I'm gay?' With a worried look he adds 'I got a girlfriend back home, you know.'"; 
+	say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that he just might be bisexual and that he should use the opportunity to try out the whole spectrum of possible partners. The girlfriend situation will surely work itself out once he knows what he really wants. Although judging from his load all over the wall, you're pretty certain you left a lasting impression on him, opening him up more man-on-man action..."; 
+		
+to say DavidFirstVaginal:		
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
+	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing."; 
+	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes and putting them down as an improvised blanket, you give him another quick kiss on the lips and lie down on it, pulling him with you by the hand so he ends up on top of you."; 
+	say "     It only takes a helping hand guiding his rod to your pussy lips for the young man's instincts to kick in and his hips plunge downward, thrusting his hard manhood deep into your vagina. He fucks you with smooth strokes, making you moan with the feelings as his shaft hits just the right spots inside you. You run your hands over his chest, feeling his muscles while your legs wrap around his hips to pull him even deeper with each of his thrusts. Soon he speeds up even more, groaning louder and louder as he gets closer to orgasm.";
+	say "     Then he shouts 'I'm coming!' and you feel a shudder run through his body as the first blast of his human cum shoots deep inside your body. You pull him down on top of you, hugging him close and kissing him as his cock twitches again and again, filling you to the brink with his fertile seed."; 
+	say "     [fimpregchance]";
+	if baby is 0 and gestation of child is not 0:
+		now facename of child is "human";
+		now bodyname of child is "human";
+		now skinname of child is "human";     	    
+	say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I got a girlfriend back home, you know.'"; 
+	say "     Pulling his mouth to yours for a quick kiss, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself..."; 
+		
+to say DavidFirstRubbing:	
+	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the something more."; 
+	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips, then start rubbing your naked body against his. Grasping his hard manhood in your hand, you jerk a few times up and down on it, then and stroke the sensitive skin of your flat crotch with its tip. Even though you don't have anything there as a neuter, it still gives you a warm and pleasant feeling to feel the warmth of his shaft against you and hear his lustful moans."; 
+	say "     You switch between grinding against David, fondling his body and making out with him, filling the alley with both of your moans and groans. Not being able to cum yourself, you could keep this up forever, but your horny soldier's urges all too soon have him gasping faster and faster as he gets closer to orgasm. Then it's time - his thick shaft pules in your hand as blasts of cum jet out of its head to splat all over your crotch and stomach."; 
+	say "     Gathering up some cum with your finger, you lick it off, then give your handsome Private a kiss on the lips, making him taste his own cum on your lips. You keep standing like that for a moment, your arms around his chest and slowly making out. As both of you come down from the rush of sex and David's brain starts working again, he says 'That felt amazing - but... what exactly are you?' with a nod to your genderless nether region. With a worried look he adds 'Anyways... maybe this was wrong. I got a girlfriend back home, you know.'"; 
+	say "     Stroking his cheek, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself..."; 
+	
+	
+
 
 Soldier Event ends here.
