@@ -85,6 +85,7 @@ Instead of Resolving a Abandoned player:
 	say "As you search the deserted streets of the city, you hear some noise coming from a nearby alley, cautiously following it you prepare for combat as you move closer.  Gripping your makeshift weapon tightly, you duck around the corner and prepare to engage in epic combat... with an abandoned CD player.  Sighing you lower you weapon before looking around you in embarrassment, fortunately there was no one around to see that.  Checking the music player you decide to leave the instrument of your ridicule where it was so it wont remind you of today, besides, you never liked that artist much anyways.";
 	Now Abandoned player is resolved;
 
+
 Section 5- Hyena Gang
 
 Hyena Gang is a situation.

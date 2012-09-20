@@ -35,6 +35,7 @@ Instead of resolving a Smashed Hive:
 		say "     Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?";
 		if the player consents:
 			say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl.  She buzzes angrily at you, but stumbles and cannot remain upright.  Moving to her side, you inject her with the healing booster, feeling sorry for this lone survivor and hoping it was worth using a booster to save her.";
+			delete healing booster;
 			say "[beegirlsaved]";
 		otherwise:
 			say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
