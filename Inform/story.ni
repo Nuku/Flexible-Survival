@@ -19,6 +19,12 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
 
+Instead of smelling something (called x):
+	if the scent of x is "":
+		say "It smells pretty normal for a [x].";
+	otherwise:
+		say "[scent of x][line break]";
+
 To say a/an (T - text):
 	let Txt be indexed text;
 	let Txt be T;
@@ -158,6 +164,7 @@ The player has a number called Cunt width.
 The player has a number called armor.
 The player has a number called capacity.
 A person has a number called libido.
+
 The player has a text called skin. Skin is usually "smooth";
 The player has a text called Cock. Cock is usually "";
 The player has a text called face. Face is usually "charmingly human";
@@ -197,6 +204,7 @@ A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
 Grab Object is a kind of thing.
+things have a text called scent.
 The player has a grab object called weapon object. A weapon object is usually journal;
 A armament is a kind of grab object.
 A armament has a text called weapon.
