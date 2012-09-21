@@ -2340,6 +2340,50 @@ carry out grabbing something(called x):
 		say "You don't see any [x] around here.";
 		if x is owned, say "You do see one in your backpack though. Did you mean to [bold type]use[roman type] it?";
 
+Understand the command "trash" as something new.
+Understand the command "junk" as something new.
+
+burninating is an action applying to one thing.
+
+understand "trash [owned grab object]" as burninating.
+understand "junk [owned grab object]" as burninating.
+
+carry out burninating something(called x):
+	let found be 0;
+	let number be 0;
+	if x is wielded:
+		say "You're wielding that, take it off first.";
+		stop the action;
+	repeat with Q running through invent of the the player:
+		increase number by 1;
+		if q exactly matches the text printed name of x, case insensitively:
+			increase found by 1;
+	now number is 0;
+	if x is an equipment:
+		if x is equipped:
+			if found is less than 2:
+				say "You're using that right now. Stop using it before you drop it.";
+				continue the action;
+	repeat with Q running through invent of the the player:
+		increase number by 1;
+		if q exactly matches the text printed name of x, case insensitively:
+			now found is 1;
+			remove entry number from invent of the player;
+			say "You destroy the [q].";
+			break;	
+	if found is 0:
+		now number is 0;
+		repeat with Q running through invent of the the player:
+			increase number by 1;
+			if q matches the regular expression printed name of x, case insensitively:
+				now found is 1;
+				remove entry number from invent of the player;
+				say "You destroy the [q].";
+				break;				
+	if found is 0:
+		say "You don't see any [x] in your backpack.";
+ 
+ 
 Understand the command "drop" as something new.
 
 littering is an action applying to one thing.
