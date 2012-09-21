@@ -19,6 +19,12 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
 
+Instead of smelling something (called x):
+	if the scent of x is "":
+		say "It smells pretty normal for a [x].";
+	otherwise:
+		say "[scent of x][line break]";
+
 To say a/an (T - text):
 	let Txt be indexed text;
 	let Txt be T;
@@ -158,6 +164,7 @@ The player has a number called Cunt width.
 The player has a number called armor.
 The player has a number called capacity.
 A person has a number called libido.
+
 The player has a text called skin. Skin is usually "smooth";
 The player has a text called Cock. Cock is usually "";
 The player has a text called face. Face is usually "charmingly human";
@@ -197,6 +204,7 @@ A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
 Grab Object is a kind of thing.
+things have a text called scent.
 The player has a grab object called weapon object. A weapon object is usually journal;
 A armament is a kind of grab object.
 A armament has a text called weapon.
@@ -2332,6 +2340,50 @@ carry out grabbing something(called x):
 		say "You don't see any [x] around here.";
 		if x is owned, say "You do see one in your backpack though. Did you mean to [bold type]use[roman type] it?";
 
+Understand the command "trash" as something new.
+Understand the command "junk" as something new.
+
+burninating is an action applying to one thing.
+
+understand "trash [owned grab object]" as burninating.
+understand "junk [owned grab object]" as burninating.
+
+carry out burninating something(called x):
+	let found be 0;
+	let number be 0;
+	if x is wielded:
+		say "You're wielding that, take it off first.";
+		stop the action;
+	repeat with Q running through invent of the the player:
+		increase number by 1;
+		if q exactly matches the text printed name of x, case insensitively:
+			increase found by 1;
+	now number is 0;
+	if x is an equipment:
+		if x is equipped:
+			if found is less than 2:
+				say "You're using that right now. Stop using it before you drop it.";
+				continue the action;
+	repeat with Q running through invent of the the player:
+		increase number by 1;
+		if q exactly matches the text printed name of x, case insensitively:
+			now found is 1;
+			remove entry number from invent of the player;
+			say "You destroy the [q].";
+			break;	
+	if found is 0:
+		now number is 0;
+		repeat with Q running through invent of the the player:
+			increase number by 1;
+			if q matches the regular expression printed name of x, case insensitively:
+				now found is 1;
+				remove entry number from invent of the player;
+				say "You destroy the [q].";
+				break;				
+	if found is 0:
+		say "You don't see any [x] in your backpack.";
+ 
+ 
 Understand the command "drop" as something new.
 
 littering is an action applying to one thing.
