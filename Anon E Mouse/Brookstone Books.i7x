@@ -20,8 +20,7 @@ To say bstonebooks:
 Beverly is in Brookstone Books.
 Bookshelves is in Brookstone Books.
 
-Instead of sniffing Brookstone Books:
-	Say "The store smells of musty tomes mingling with the burning scented candles.";
+the scent of Brookstone Books is "The store smells of musty tomes mingling with the burning scented candles.";
 
 Section 2 - Beverly
 
@@ -33,8 +32,7 @@ Beverly is a woman.
 The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in color, and seems to shine even in the low light. Pierced in her right grey ear are a couple of medium-sized gold hooped earrings.";
 The conversation of Beverly is { "Squeak!" }.
 
-instead of sniffing Beverly:
-	Say "She smells like the books surrounding her mixed with a hint of hay.";
+the scent of Beverly is "She smells like the books surrounding her mixed with a hint of hay.";
 
 instead of conversing the Beverly:
 	if bevkitty is 0 and bevtalk is 1:
@@ -77,8 +75,7 @@ Bookshelves is a man
 
 The description of bookshelves is "     All around the store are bookshelves and tables loaded with old, used, and new books that run the gamut of subjects. Even after having visited the store in the past, you are still amazed by the amount of books the store has to [bold type]browse[roman type] and [bold type]read[roman type] through.";
 
-Instead of sniffing the bookshelves:
-	say "The books smell of musty tones mingling with the scent of new papers and the burning candles.";
+the scent of the bookshelves is "The books smell of musty tones mingling with the scent of new papers and the burning candles.";
 
 Browsebooks is an action applying to nothing.
 understand "browse books" as browsebooks;

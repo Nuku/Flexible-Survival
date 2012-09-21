@@ -280,8 +280,7 @@ name	desc	weight	object
 
 cow milk is a grab object.
 
-instead of sniffing cow milk:
-	say "The cow milk smells delicious and mouth watering.";
+the scent of cow milk is "The cow milk smells delicious and mouth watering.";
 
 the usedesc of cow milk is "[cow milk use]";
 

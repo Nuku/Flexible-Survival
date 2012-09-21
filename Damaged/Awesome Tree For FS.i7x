@@ -160,26 +160,31 @@ name	desc	weight	object
 "Awesome Fruit"	"The most Awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
 "Awesome Bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
-instead of sniffing the Awesome Fruit:
+the scent of the Awesome Fruit is "[awesomefrscent]";
+
+to say awesomefrscent:
 	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	otherwise:
 		say "The strange fruit has a strong, manly scent that seems mouthwateringly sweet.";
 
-instead of sniffing the Awesomer Fruit:
+the scent of the Awesomer Fruit is "[awesomerfrscent]";
+
+to say awesomerfrscent:
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	otherwise:
 		say "The strange fruit has a lovely, feminine scent that seems mouthwateringly sweet.";
 
-instead of sniffing the Awesomest Fruit:
+the scent of the Awesomest Fruit is "[awesomestfrscent]";
+
+to say awesomestfrscent:
 	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	otherwise:
 		say "The strange fruit has a rich mix of male and female scents that seems mouthwateringly sweet.";
 
-instead of sniffing the Awesome Bat:
-	say "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.";
+the scent of the Awesome Bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.";
 
 to say awesome bat proc:
 	choose row monster from the table of random critters;

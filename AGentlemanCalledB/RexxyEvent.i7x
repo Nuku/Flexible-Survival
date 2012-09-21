@@ -52,8 +52,7 @@ Karen is in Rex's Place.
 Treat Jar is in Rex's Place. 
 
 The description of Treat Jar is "Sitting on the table next to Rex's seat is a large glass jar full of bone shaped cookies. You find your mouth watering and stomach growling as you stare at the doggy treats. Rex spots you eyeing them longingly and a canine smile crosses his muzzle, 'If you want a treat, you're going to have to beg like a good little sexpet,' he informs you.";
-instead of sniffing Treat Jar:
-	say "Between the smell of canine sex pervading Rex's small house and the thick glass, you can't even catch a whiff of the scent from the jar full of doggy treats.";
+the scent of Treat Jar is "Between the smell of canine sex pervading Rex's small house and the thick glass, you can't even catch a whiff of the scent from the jar full of doggy treats.";
 
 treatbegging is an action applying to nothing.
 
@@ -72,8 +71,7 @@ Carry out Treatbegging:
 	infect "Retriever";
 	decrease humanity of player by a random number between 4 and 8;
 
-instead of sniffing Rex's Place:
-	say "The air here is thick with the scent of canine heat and sex.  You find the powerful musk of the large male lounging on a couch in the back especially arousing, thoughts of pleasing him like a proper pet drift into your mind as he eyes you intently.";
+the scent of Rex's Place is "The air here is thick with the scent of canine heat and sex.  You find the powerful musk of the large male lounging on a couch in the back especially arousing, thoughts of pleasing him like a proper pet drift into your mind as he eyes you intently.";
 
 
 Section 3 - Doggy Bone
@@ -89,8 +87,7 @@ Dog Bone is a grab object.
 Dog Bone has a usedesc "[DogBoneUse]";
 Dog Bone is infectious. The strain of Dog Bone is "retriever". It is not temporary.
 
-instead of sniffing Dog Bone:
-	say "The bone shaped doggie dildo smells strongly of canine sex, much like the bitch you acquired it from.";
+the scent of Dog Bone is "The bone shaped doggie dildo smells strongly of canine sex, much like the bitch you acquired it from.";
 
 To say DogBoneUse:
 	if doggyboned is 0:
@@ -229,8 +226,7 @@ lastRexfucked is a number that varies.  lastRexfucked is normally 555.
 to say Rexdescribing:
 	say "Lounging on a couch near the back of the room is a large retriever male. On the table beside him, you spot the doggy bone sextoy he took from you when you first met.  But as you begin to think of a way to get your prize back, you find you attention drawn to his large sheath doggy cock, your goal of getting the toy back slips from your mind as you begin to wonder how much more fun the real thing must be.";
 
-instead of sniffing Rex:
-	say "The large retriever carries the strong musk of a virile male, and the scent of doggy sex clings to his fur constantly thanks to his frequent playtime with his happy retriever sexpet.";
+the scent of Rex is "The large retriever carries the strong musk of a virile male, and the scent of doggy sex clings to his fur constantly thanks to his frequent playtime with his happy retriever sexpet.";
 
 instead of conversing the Rex:
 	if rextalk is 0:
@@ -447,8 +443,7 @@ The conversation of Karen is { "Karentalk" }.
 to say Karendescribing:
 	say "Looking over Karen you recognize her as the same retriever bitch that you saw abducted by Rex some time ago, now wearing a thin pink collar with a heart shaped tag that has her name engraved on it.";
 
-instead of sniffing Karen:
-	say "Karen smells strongly of Rex's powerful musk, mixed with the scent of her own dripping cunt, and strangely a faint hint of strawberry.";
+the scent of Karen is "Karen smells strongly of Rex's powerful musk, mixed with the scent of her own dripping cunt, and strangely a faint hint of strawberry.";
 
 instead of conversing the Karen:
 	if rexpet is 1:

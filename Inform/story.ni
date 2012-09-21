@@ -19,11 +19,12 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
 
-Instead of smelling something (called x):
+Instead of sniffing something (called x):
 	if the scent of x is "":
 		say "It smells pretty normal for a [x].";
 	otherwise:
 		say "[scent of x][line break]";
+
 
 To say a/an (T - text):
 	let Txt be indexed text;
@@ -205,6 +206,7 @@ Scenario is a text that varies.
 Allobjs is a list of text that varies.
 Grab Object is a kind of thing.
 things have a text called scent.
+rooms have a text called scent.
 The player has a grab object called weapon object. A weapon object is usually journal;
 A armament is a kind of grab object.
 A armament has a text called weapon.

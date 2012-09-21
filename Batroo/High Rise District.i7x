@@ -16,8 +16,7 @@ The description of Financial Sector is "These buildings are much smaller, holdin
 
 [This is the location that you encounter the unique high rise district creatures from. i.e. "explore", "hunt", and "scavenge"]
 
-instead of sniffing the Entrance to the High Rise District:
-	say "The high rise district, like much of the city, smells of arousal.  There are traces of several scents in the air: expensive cologne and perfume, high-priced restaurants and luxury boutiques.  You catch [one of]the scents of several felines[or]the scent of several rabbits[or]a chocolatey scent[or]a harsh, musky scent[or]an odd, avian scent[at random] as well as traces of other creatures having passed by here.";
+the scent of the Entrance to the High Rise District is "The high rise district, like much of the city, smells of arousal.  There are traces of several scents in the air: expensive cologne and perfume, high-priced restaurants and luxury boutiques.  You catch [one of]the scents of several felines[or]the scent of several rabbits[or]a chocolatey scent[or]a harsh, musky scent[or]an odd, avian scent[at random] as well as traces of other creatures having passed by here.";
 
 [
 High Rise District is a room.

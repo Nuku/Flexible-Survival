@@ -35,8 +35,7 @@ To say mallnorthlot:
 East of Smith Haven Mall Lot North is Smith Haven Mall Lot East.
 West of Smith Haven Mall Lot North is Smith Haven Mall Lot West.
 
-instead of sniffing Smith Haven Mall Lot North:
-	say "The light breeze blowing around you carries the still lingering scent of messy sex and cum.";
+the scent of Smith Haven Mall Lot North is "The light breeze blowing around you carries the still lingering scent of messy sex and cum.";
 	
 Section 3 - Mall Lot East
 
@@ -52,8 +51,7 @@ To say malleastlot:
 	
 South of Smith Haven Mall Lot East is Smith Haven Mall Lot South.
 
-instead of sniffing Smith Haven Mall Lot East:
-	say "The light breeze blowing around you carries the still lingering scent of messy sex.";
+the scent of Smith Haven Mall Lot East is "The light breeze blowing around you carries the still lingering scent of messy sex.";
 	
 Section 4 - Mall Lot West
 
@@ -69,8 +67,7 @@ To say mallwestlot:
 	
 South of Smith Haven Mall Lot West is Smith Haven Mall Lot South.
 
-instead of sniffing Smith Haven Mall Lot West:
-	say "The light breeze blowing around you carries the lingering scent of messy sex tinged with the light smell of gasoline.";
+the scent of Smith Haven Mall Lot West is "The light breeze blowing around you carries the lingering scent of messy sex tinged with the light smell of gasoline.";
 	
 Section 5 - Mall Lot South
 
@@ -88,8 +85,7 @@ To say mallsouthlot:
 East of Smith Haven Mall Lot South is Smith Haven Mall Lot East.
 West of Smith Haven Mall Lot South is Smith Haven Mall Lot West.
 	
-instead of sniffing Smith Haven Mall Lot South:
-	say "The light breeze blowing around you carries the lingering scent of cum and messy sex.";
+the scent of Smith Haven Mall Lot South is "The light breeze blowing around you carries the lingering scent of cum and messy sex.";
 	
 Section 6 - Mall Foyer
 
@@ -105,8 +101,7 @@ To say mallfoyer:
 		
 South of Mall Foyer is Mall Atrium.
 
-instead of sniffing Mall Foyer:
-	say "The foyer smells heavy of male musk due to the wolverines.";
+the scent of Mall Foyer is "The foyer smells heavy of male musk due to the wolverines.";
 	
 Section 7 - Mall Atrium
 
@@ -124,8 +119,7 @@ East of Mall Atrium is Mall East Wing.
 South of Mall Atrium is Mall Foodcourt.
 West of Mall Atrium is Mall West Wing.
 
-instead of sniffing Mall Atrium:
-	say "The atrium smells of old, standing water coming from the fountain.";
+[the scent of Mall Atrium is "The atrium smells of old, standing water coming from the fountain.";	]
 	
 Section 8 - Mall East Wing
 
@@ -139,8 +133,7 @@ To say malleastwing:
 	Otherwise:
 		say "     With it currently dark outside, the only source of illumination in the mall is from the various candles, lanterns, and occasional computer tablets being used. The warm glow of the lights, while not cheery, is far from being gloomy. But even with the low light it[']s still hard to see very far into the wing. As you carefully walk along, you can see the mallrats either sleeping, cuddling, gathered around some of the lanterns playing varied board and card games, or playing games on the tablets and smartphones some of the rats have.";
 
- Instead of sniffing Mall East Wing:
-	say "It smells like the mallrats.";
+ the scent of Mall East Wing is "It smells like the mallrats.";
 	
 Section 9 - Mall Food Court
 
@@ -157,8 +150,7 @@ To say mfcourt:
 
 East of Mall Foodcourt is Mall Restroom.
 
-instead of sniffing the Mall Foodcourt:
-	say "It smells a little like old, rotting food.";
+the scent of the Mall Foodcourt is "It smells a little like old, rotting food.";
 
 The invent of Mall FoodCourt is { "chair", "food" }.
 	
@@ -174,8 +166,7 @@ To say mallwestwing:
 	Otherwise:
 		say "     With it currently dark outside, the only source of illumination in the mall is from the various candles and lanterns spread about. The warm glow of the lights, while not cheery, is far from being gloomy. But even with the low light it[']s still hard to see very far into the wing. As you carefully walk along, you can see the mallrats either sleeping, cuddling, gathered around some of the lanterns playing varied board and card games, or playing games on the tablets some of the rats have.";
 
-instead of sniffing Mall West Wing:
-	say "It smells like the mall rats milling about.";
+the scent of Mall West Wing is "It smells like the mall rats milling about.";
 	
 Section 11 - Mall Restroom
 
@@ -195,8 +186,7 @@ To say mallrestroom:
 	Otherwise:
 		say "     With just the light of you lantern, it[']s hard to see very far around you, and it[']s hard to shake the feeling that you are not alone in the dark. You hear occasionally coming from the sewers [one of]soft growls[or]the scraping of something hard on concrete[or]what sounds like passionate squeaking[or]a loud splash[or]the squeaking of rusty hinges[at random].";
 
-instead of sniffing Mall Restroom:
-	say "It smells kind of bad in here with the open hole to the sewers.";
+the scent of Mall Restroom is "It smells kind of bad in here with the open hole to the sewers.";
 
 
 
