@@ -79,7 +79,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Psycho Weasel";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The crazed weasel batters at you with the long sleeves of his straightjacket![or]The wild-eyed creature bites you![or]The crazy weasel wraps his arms around you and humps his throbbing cock against your side![or]The weasel punches at you wildly![or]The weasel slams his shoulder into you, knocking you against the wall![or]The wild babble the creature keeps spouting fills you with confusion![at random]";
+	now attack entry is "[one of]The crazed weasel batters at you with the long sleeves of his straightjacket![or]The wild-eyed creature bites you![or]The crazy weasel wraps his arms around you and humps his throbbing cock against your side![or]The weasel punches at you wildly![or]The weasel slams his shoulder into you, knocking you against the wall![or]The wild babble the creature keeps spouting fills you with confusion, giving it an opportunity to strike you![at random]";
 	now defeated entry is "[beatthepsychoweasel]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[losetopsychoweasel]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[psychoweaseldesc]";						[ Description of the creature when you encounter it. ]
