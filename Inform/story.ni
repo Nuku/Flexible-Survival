@@ -4516,6 +4516,115 @@ carry out levelcheat:
 	level up;
 	decrease score by level of the player times level of the player; 
 
+Section Lists of Tables
+
+[intends to list stuff for debuging (or any other activity needing a list of whats in the game).  output is formatted as CSV to simplify exporting.  appears to be working properly.]
+TableListing is an action applying to one topic.
+Understand "tlist [text]" as TableListing.
+
+Carry out tablelisting:
+	let t be the topic understood;
+	if t in lower case is "object":
+		say "Name,Weight:[line break]";
+		sort table of game objects in object order;
+		repeat with X running from 1 to number of filled rows in table of game objects:
+			choose row X from the table of game objects;
+			if there is a name entry:
+				say "[name Entry],[weight entry][line break]";
+		say "End of list of objects.";
+		stop the action;
+	otherwise if t in lower case is "creature":
+		say "Name,Level,Area:[line break]";
+		sort table of random critters in lev order;
+		repeat with X running from 1 to number of filled rows in table of random critters:
+			choose row X from the table of random critters;
+			if there is a lev entry:
+				say "[name entry],[lev entry],[area entry][line break]";
+		say "End of list of random critters.";
+		stop the action;
+	otherwise if t in lower case is "critcombat":
+		say "Critter Combats:[line break]";
+		sort Table of Critter Combat in combat order;
+		repeat with X running from 1 to number of filled rows in Table of Critter Combat:
+			choose row X from the Table of Critter Combat;
+			if there is a name entry:
+				say "[name entry][line break]";
+		say "End of list of critter combats.";
+		stop the action;
+	otherwise if t in lower case is "room":
+		say "Rooms:[line break]";
+		repeat with n running through rooms:
+			say "[n][line break]";
+		say "End of list of rooms.";
+		stop the action;
+	otherwise if t in lower case is "npc":
+		say "NPC: [line break]";
+		repeat with n running through person:
+			say "[n][line break]";
+		say "End of list of NonPlayerCharacters.";
+		stop the action;
+	otherwise if t in lower case is "grab":
+		say "Grab Object:[line break]";
+		repeat with n running through Grab Object:
+			say "[n][line break]";
+		say "End of list of Grab Objects.";
+		stop the action;
+	otherwise if t in lower case is "weapon":
+		say "Weapon:[line break]";
+		repeat with n running through A armament:
+			say "[n][line break]";
+		say "End of list of weapons.";
+		stop the action;
+	otherwise if t in lower case is "equipment":
+		say "Equipment:[line break]";
+		repeat with n running through Equipment:
+			say "[n][line break]";
+		say "End of list of Equipment.";
+		stop the action;
+	otherwise if t in lower case is "heat":
+		say "Name,Heat Cycle,Heat Duration:[line break]";
+		sort Table of infection heat in infect name order;
+		repeat with X running from 1 to number of filled rows in Table of infection heat:
+			choose row X from the Table of infection heat;
+			if there is a infect name entry:
+				say "[infect name entry],[heat cycle entry],[heat duration entry][line break]";
+		say "End of list of heat.";
+		stop the action;
+	otherwise if t in lower case is "zephyr":
+		say "Zephyr Goods,Price[line break]";
+		sort Table of Zephyr Goods in price order;
+		repeat with X running from 1 to number of filled rows in Table of Zephyr Goods:
+			choose row X from the Table of Zephyr Goods;
+			if there is a price entry:
+				say "[name entry],[price entry][line break]";
+		say "End of list of Zephyr Goods.";
+		stop the action;
+	otherwise if t in lower case is "biker":
+		say "Biker Destination,Sort Order[line break]";
+		sort Table of Biker Destinations in sortorder order;
+		repeat with X running from 1 to number of filled rows in Table of Biker Destinations:
+			choose row X from the Table of Biker Destinations;
+			if there is a title entry:
+				say "[title entry],[sortorder entry][line break]";
+		say "End of list of Biker Destinations.";
+		stop the action;
+	otherwise if t in lower case is "loot":
+		say "Creature,Loot,Lootchance:[line break]";
+		sort table of random critters in loot order;
+		repeat with X running from 1 to number of filled rows in table of random critters:
+			choose row X from the table of random critters;
+			if there is a loot entry:
+				say "[name Entry],[loot entry],[lootchance entry][line break]";
+		say "End of list of loot.";
+		stop the action;
+	otherwise if t in lower case is "situation":
+		say "Situations:[line break]";
+		repeat with n running through situations:
+			say "[n][line break]";
+		say "End of list of Situations.";
+		stop the action;
+	otherwise:
+		say "nothing to list, try again.";
 
 Book 7 - Endings
 
