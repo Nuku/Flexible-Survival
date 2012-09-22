@@ -328,9 +328,9 @@ Ouroboros is a situation.
 
 The sarea of Ouroboros is "Museum";
 instead of resolving a Ouroboros:
-	if omq < 8:
+	if omq < 10:
 		say "Walking through the somewhat quiet halls of the museum you find yourself passing by a impressive looking medallion with a snake circled around itself nibbling at its tail. A coy smile tugs at your lips as you wonder why someone would draw a serpent doing such a thing before you shrug and then move on about your way.";
-	otherwise if omq is 8:
+	otherwise if omq is 10:
 		say "Walking through the hallways of the museum you come to find a heavily built wolverine pacing back and forth in front a glass case housing the amulet Omio requested you [']obtain['] for her. When the mutant dressed in a guardsman uniform takes notice you the wolverine growls out something the likes of 'move along now' while coldly glaring at you. With the way the other is standing, with his burly arms crossed over the front of his massive chest and his muzzle wrinkled into an unimpressed scowl, you get the feeling that trying to tangle with the other might not be such a bright idea. But then again wouldn't a good fight make this capper all more interesting? (Y=Fight Wolverine, N=Think up a plan)[line break]";
 		if player consents:
 			say "Deciding just to plow your way through you step up to the wolverine and tell it that you'll be taking that medallion back behind him. The dark eyes of the guard animal narrow at you dangerously and the wolverine is quick to step up to meet your challenge![line break]";
@@ -436,8 +436,9 @@ instead of resolving a Ouroboros:
 					now Ouroboros is resolved;
 			otherwise:
 				say "Perhaps if you were a full wolverine the other guard might let you take his place? Maybe?[line break]";
-				
-				
+	otherwise:
+		say "Noticing that you're approaching the section where the Ouroboros medallion was once stored, you decide to steer clear of the area.";			now Ouroboros is resolved;
+
 
 to say defeatedbycerb:
 	say "Having been defeated by the Cerberus you wind up getting tossed out of the Museum onto your head. Grunting in annoyance you soon find yourself chuckling in triumph as you feel the weight of the medallion shifting inside of your pocket."; 
