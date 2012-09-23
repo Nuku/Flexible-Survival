@@ -16,44 +16,31 @@ understand "door" or "gate" as the cheetah door.
 south of cheetah door is Entryway.
 north of cheetah door is cheetah habitat.
 
-instead of sniffing Zoo entrance:
-	say "The whole area smells strongly of animal scents, arousal and sex.";
+the scent of Zoo entrance is "The whole area smells strongly of animal scents, arousal and sex.";
 
-instead of sniffing Fence Path:
-	say "The whole area smells strongly of animal scents, arousal and sex.";
+the scent of Fence Path is "The whole area smells strongly of animal scents, arousal and sex.";
 
-instead of sniffing Border Wall:
-	say "The whole area smells strongly of animal scents, arousal and sex.";
+the scent of Border Wall is "The whole area smells strongly of animal scents, arousal and sex.";
 
-instead of sniffing Cheetah Habitat:
-	say "Inside the cheetah habitat, it smells very strongly of aroused cheetah.  It makes you excited and weak in the knees.";
+the scent of Cheetah Habitat is "Inside the cheetah habitat, it smells very strongly of aroused cheetah.  It makes you excited and weak in the knees.";
 
-instead of sniffing Entryway:
-	say "The whole area smells strongly of animal scents, arousal and sex.";
+the scent of Entryway is "The whole area smells strongly of animal scents, arousal and sex.";
 
-instead of sniffing Main Path:
-	say "The whole area smells strongly of animal scents, arousal and sex.  The scent of the bird house to the south can faintly be smelled as well.";
+the scent of Main Path is "The whole area smells strongly of animal scents, arousal and sex.  The scent of the bird house to the south can faintly be smelled as well.";
 
-instead of sniffing Guardhouse:
-	say "The scent of lustful animal creatures is lesser in here.";
+the scent of Guardhouse is "The scent of lustful animal creatures is lesser in here.";
 
-instead of sniffing Roundabout:
-	say "The whole area smells strongly of animal scents, arousal and sex.  Close to the lion's den and snake house, those scents are the strongest.";
+the scent of Roundabout is "The whole area smells strongly of animal scents, arousal and sex.  Close to the lion's den and snake house, those scents are the strongest.";
 
-instead of sniffing Lion Pit:
-	say "The lion's den smells strongly of those powerful felines and the scent of their arousal and sex is so thick in the air you can taste it.";
+the scent of Lion Pit is "The lion's den smells strongly of those powerful felines and the scent of their arousal and sex is so thick in the air you can taste it.";
 
-instead of sniffing Snake House:
-	say "The whole area smells strongly of snakes.";
+the scent of Snake House is "The whole area smells strongly of snakes.";
 
-instead of sniffing Bird House:
-	say "This habitat area smells strongly of birds.";
+the scent of Bird House is "This habitat area smells strongly of birds.";
 
-instead of sniffing Gator Pit:
-	say "This enclosure smells strongly of the gators who once lived her.  The scents rising from the sewers make you pinch your nose shut.";
+the scent of Gator Pit is "This enclosure smells strongly of the gators who once lived her.  The scents rising from the sewers make you pinch your nose shut.";
 
-instead of sniffing Bathrooms:
-	say "The bathrooms are thick with the musky scent of arousal and cum.  The air is sharp with the scent of urine from countless animal creatures.  The heavy scents in the air are arousing and make you long to find a beastly lover.";
+the scent of Bathrooms is "The bathrooms are thick with the musky scent of arousal and cum.  The air is sharp with the scent of urine from countless animal creatures.  The heavy scents in the air are arousing and make you long to find a beastly lover.";
 
 
 Entryway is a room. "The entryway of the zoo, it is paved with cobblestones. To the northeast is the rest of the exhibits. The cheetah exhibit is to the north.". Entryway is east of zoo entrance.
@@ -111,7 +98,9 @@ to say cheetahrape:
 Zoo Giftshop is a room.
 Zoo Giftshop is west of Zoo entrance.
 
-instead of sniffing Zoo Giftshop:
+the scent of Zoo Giftshop is "[zoogiftscent]";
+
+to say zoogiftscent:
 	if angiearoused is 3:
 		say "The musky scent of panther sex fills the air in here.";
 	otherwise if angiefound is 1:
@@ -148,11 +137,7 @@ to say angieappearance:
 	otherwise:
 		say "Standing over by the counter eyeing the destruction in the store sadly, is a large six foot tall humanoid black panther.  Her large breasts having torn her shirt, and she has obviously not found anything to replace it in her new size amongst the devastation in the store, she is still wearing her zoo workers vest, though it too is several sizes too small for her new frame.  She has replaced her torn shorts with a short khaki skirt with a little cheerful lion waving on them, though this does little to hide the bulge where her new cock presses against the fabric, and her long black tail lashes idly behind her, lifting the rear of the skirt up for easier access from behind.  She seems to balance easily on her new paws however, her movements swift and smooth like that of the hunting cat she now resembles.";
 
-instead of sniffing Angie:
-	if angiearoused > 1:
-		say "Angie's scent is that of a herm panther, heavy with the smell of sex and arousal.";
-	otherwise:
-		say "Angie's scent is that of a herm panther, with a hidden scent of suppressed arousal.";
+the scent of Angie is "[if angiearoused > 1]Angie's scent is that of a herm panther, heavy with the smell of sex and arousal.[otherwise]Angie's scent is that of a herm panther, with a hidden scent of suppressed arousal.[end if]";
 
 Every turn while angiefound is 1:
 	move Angie to the Zoo Giftshop.
@@ -178,7 +163,6 @@ to say Catnip use:
 		say "You gasp as scent hits you like a sledge hammer, bringing you instantly to full arousal.";
 		increase libido of player by 100;
 		Remove "catnip" from invent of player;
-		Stop the action;
 
 instead of sniffing catnip:
 	process catnip;

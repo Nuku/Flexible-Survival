@@ -249,8 +249,7 @@ name	desc	weight	object
 
 dolphin milk is a grab object. It is a part of the player. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "hermaphrodite dolphin". The purified of dolphin milk is "distilled milk".
 
-instead of sniffing dolphin milk:
-	say "The dolphin milk smells like milk with an odd, fishy scent mixed in.";
+the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.";
 
 [ Edit this to have the correct Name as wall]
 Dolphin for FS ends here.

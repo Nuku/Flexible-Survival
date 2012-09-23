@@ -65,7 +65,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Blood Pill"	"A pill you got from some strange street."	1	blood pill
 
-
+the scent of blood pill is "The strange pill has a harsh, metallic scent.";
 
 
 blood pill is a grab object. It is a part of the player. It is temporary. Understand "pill" as blood pill.

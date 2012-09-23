@@ -10,6 +10,11 @@ name	desc	weight	object
 control pill is a grab object. It is a part of the player. The usedesc of control pill is "You pop the pill into your mouth, and swallow.[controlpilluse]".
 fertile pill is a grab object. It is a part of the player. The usedesc of fertile pill is "You pop the odd pill into your mouth, and swallow.[fertilepilluse]".
 
+[
+the scent of control pill is "";
+the scent of fertile pill is "";
+]
+
 
 understand "Control" and "Birth" and "Pill" as control pill.
 understand "Fertile" and "Pill" as fertile pill.

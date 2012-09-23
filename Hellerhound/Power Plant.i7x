@@ -29,17 +29,13 @@ instead of resolving a Generator Parts:
 		now fixedgens is 1;
 
 [Scents of rooms]
-instead of sniffing Plant Lobby:
-	say "The power plant lobby smells of smoke, ash and cum.";
+the scent of Plant Lobby is "The power plant lobby smells of smoke, ash and cum.";
 
-instead of sniffing Control Room:
-	say "The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.";
+the scent of Control Room is "The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.";
 
-instead of sniffing Plant Overview:
-	say "There is a faint scent of smoke coming from the power plant.";
+the scent of Plant Overview is "There is a faint scent of smoke coming from the power plant.";
 
-instead of sniffing Cat Walk:
-	say "The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.";
+the scent of Cat Walk is "The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.";
 
 
 broken fence is a door. "The flattened fence to the east allows access from the city.".
@@ -76,8 +72,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Cat Key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	Cat key
 
-instead of sniffing pocketknife:
-	say "There is a faint scent of ozone lingering to the key fob.";
+the scent of cat key is "There is a faint scent of ozone lingering to the key fob.";
 
 the invent of Red Light District is {"Cat Key"}.
 

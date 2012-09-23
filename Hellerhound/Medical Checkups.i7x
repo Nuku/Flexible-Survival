@@ -11,11 +11,9 @@ The marea of pediatrics door is "Outside".
 North of Pediatrics Lobby is Doctors Office.
 Doctors Office is a room. "A doctor's office, this one is a wreck.  There are stains everywhere and food and water stockpiled in the cabinets.  The clock is no longer running, and an oil lamp stands on the blue marble counter, on and burning.  It fills the air with smoke.  You idly wonder what happened to the smoke detectors.".
 
-instead of sniffing the Doctors Office:
-	say "The doctor's office smells of antiseptic and aroused lizard scents.";
+the scent of the Doctors Office is "The doctor's office smells of antiseptic and aroused lizard scents.";
 
-instead of sniffing Pediatrics Lobby:
-	say "With the numerous cum stains here, it hard to smell anything but that.";
+the scent of Pediatrics Lobby is "With the numerous cum stains here, it hard to smell anything but that.";
 
 instead of going north from the Pediatrics Lobby while ( hp of doctor medea is 0 and medeastuff is 0 and medeaget is 0 ):
 	say "Examining the door to the north, you can hear some movement behind it and decide to risk knocking, asking if they need any assistance.  'Thank you, no.  I've already been quite thoroughly taken care of, I think,' a female voice responds.  Clarifying that you are a survivor and that you meant if they needed any help in there, you can hear the sounds of heavy objects being pushed aside, allowing you entrance.  'Well, perhaps I can be of assistance to you, then,' the voice responds.  The female voice does seem a little strange and you pick up the sound of clicking claws as she moves around inside, making you reconsider actually going in.";
@@ -26,8 +24,7 @@ Doctor Medea is a person. "A doctor, by the name on the door label, [']Doctor Me
 Doctor Medea is in Doctors Office.
 understand "medea" and "doctor" as Doctor Medea.
 
-instead of sniffing Doctor Medea:
-	say "The doctor smells of female lizard, though there's a hint of male musk in there as well.";
+the scent of Doctor Medea is "The doctor smells of female lizard, though there's a hint of male musk in there as well.";
 
 medeastuff is a number that varies.
 medeaget is a number that varies.

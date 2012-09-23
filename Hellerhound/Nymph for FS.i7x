@@ -14,7 +14,7 @@ name	desc	weight	object
 
 nymph cum is a grab object. It is a part of the player. nymph cum is infectious. The strain of nymph cum is "Tree Nymph".  The purified of nymph cum is "water bottle".
 
-
+the scent of nymph cum is "The nymph cum smells like a mix of semen and tree sap.";
 
 Section 2 - Monster Insertion
 

@@ -18,8 +18,7 @@ Plains Door is a door. The marea of plains door is "Plains". "The plains stretch
 Plains door is west of wandering the plains.
 Wandering the plains is a room.
 
-Instead of sniffing the dry plains:
-	say "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.";
+the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.";
 
 Section 2 - Tainted Centaur Event
 
@@ -72,6 +71,7 @@ name	desc	weight	object
 
 fresh apple is a grab object. It is a part of the player. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
 
+the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, rotten smell hidden beneath that.";
 
 Section 4 - Monster Responses
 
