@@ -545,6 +545,7 @@ Carry out reciting:
 					if hp of Elijah is 2, now Sweet Surprise is unresolved;
 			-- 87:	[Elijah's interactions]
 				now npcEint is "[the player's command]";
+				npcEint-Restore;
 			-- 88:	[Latex Husky Mode]
 				if the player's command matches "[number]" and the number understood is 1:
 					now latexhuskymode is true;
@@ -889,6 +890,51 @@ Carry out reciting:
 		now libido of Fang is 0;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
+
+
+restoreletter is a text that varies.  restoreletter is normally "0";
+
+to npcEint-Restore:
+	npcEint-Read 1;
+	now Char-A of Elijah is restoreletter;
+	npcEint-Read 2;
+	now Char-B of Elijah is restoreletter;
+	npcEint-Read 3;
+	now Char-C of Elijah is restoreletter;
+	npcEint-Read 4;
+	now Char-D of Elijah is restoreletter;
+	npcEint-Read 5;
+	now Char-E of Elijah is restoreletter;
+	npcEint-Read 6;
+	now Char-F of Elijah is restoreletter;
+	npcEint-Read 7;
+	now Char-G of Elijah is restoreletter;
+	npcEint-Read 8;
+	now Char-H of Elijah is restoreletter;
+	npcEint-Read 9;
+	now Char-I of Elijah is restoreletter;
+	npcEint-Read 10;
+	now Char-J of Elijah is restoreletter;
+	npcEint-Read 11;
+	now Char-K of Elijah is restoreletter;
+	npcEint-Read 12;
+	now Char-L of Elijah is restoreletter;
+	npcEint-Read 13;
+	now Char-M of Elijah is restoreletter;
+
+to npcEint-Read (c - a number):	[converts the indexed text back to regular text]
+	now restoreletter is "0";
+	if character number c in npcEint is "0", now restoreletter is "0";
+	if character number c in npcEint is "1", now restoreletter is "1";
+	if character number c in npcEint is "2", now restoreletter is "2";
+	if character number c in npcEint is "3", now restoreletter is "3";
+	if character number c in npcEint is "4", now restoreletter is "4";
+	if character number c in npcEint is "5", now restoreletter is "5";
+	if character number c in npcEint is "6", now restoreletter is "6";
+	if character number c in npcEint is "7", now restoreletter is "7";
+	if character number c in npcEint is "8", now restoreletter is "8";
+	if character number c in npcEint is "9", now restoreletter is "9";
+
 
 Section X - Debugging - Not for Release
 
