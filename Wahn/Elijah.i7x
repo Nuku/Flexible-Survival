@@ -223,7 +223,7 @@ instead of conversing the Elijah:
 		say "     He's alive but still very weak and still not ready for communicating in any great length. Hell, he's barely conscious at all. There might be some things out there in the city that could possibly help him... perhaps you could try milk and honey, that's supposed to be good for you. And if you mix in something to boost his healing ability, your resident angel should be back on his feet in no time.";
 		now hp of Elijah is 2;
 		now Sweet Surprise is unresolved;
-		now Examination Room is unresolved;
+		if furry is not banned, now Examination Room is unresolved;
 	otherwise if (hp of Elijah is 2):  [wounded + unconscious in the bunker - revival quest started already]
 		let milkchoicelist be a list of text;
 		if "gryphon milk" is listed in invent of player, add "gryphon milk" to milkchoicelist;

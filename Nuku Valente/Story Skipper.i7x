@@ -543,6 +543,7 @@ Carry out reciting:
 					if hp of Elijah is 100:
 						remove Elijah from play;
 					if hp of Elijah is 2, now Sweet Surprise is unresolved;
+					if hp of Elijah is 2 and furry is not banned, now Examination Room is unresolved;
 			-- 87:	[Elijah's interactions]
 				now npcEint is "[the player's command]";
 				npcEint-Restore;
