@@ -786,6 +786,7 @@ Carry out reciting:
 					now libido of Christy is 0;
 					now thirst of Christy is 0;
 					now dragoness is in Old Building;
+					now Dragon Prey is resolved;
 					if hp of Christy is 0:
 						now Find Building is unresolved;
 						now Another Ladder is unresolved;
@@ -800,6 +801,11 @@ Carry out reciting:
 						now NoIntroduction is 1;
 					otherwise if hp of Christy >= 2:
 						remove dragoness from play;
+					if hp of Christy is 90:
+						now Dragon Prey is unresolved;
+					if hp of Christy >= 90:
+						now Isolated Street is unknown;
+						now Back Alley is unknown;
 			-- 103:	[Christy: Slutty Dragoness / Horny Dragon]
 				if the player's command matches "[number]":
 					now dragontype is the number understood;
