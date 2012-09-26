@@ -156,6 +156,9 @@ The sarea of Maternity Ward is "Hospital";
 
 Instead of resolving a Maternity Ward:
 	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it.  Inside you find the place busy with vixen nurses.  Several are tending to the bassinets while a few others are nurse feeding little foxcub babies.  The staff dutifully tend over the cubs, cooing and playing with them happily.  You turn and quietly leave, unsure if you are disturbed or relieved that it was not as you feared within.";
+	if hp of Doctor Medea is 3:
+		say "     During your quick peek, you did note that the items of medical equipment Dr. Medea mentioned did not seem to be in there, saving you from having to go in there and deal with the large group vixen nurses in there.  It seems like you'll have to look elsewhere in the hospital.";
+		increase score by 4;
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 1;
@@ -221,6 +224,26 @@ to say hospfight3:		[no Raccoon, Psycho Weasel instead... generic fight]
 		challenge "Mismatched Chimera";
 	if T is 7:
 		challenge "Jaguar";
+
+
+to say hospfight4:		[no Raccoon, flags handled internally]
+	let T be a list of numbers;
+	if guy is not banned:
+		add 1 to T;		[Psycho Weasel]
+		add 2 to T;		[Jaguar]
+	if girl is not banned:
+		add 3 to T;		[Fluffy Owl]
+		add 4 to T;		[Vixen Nurse]
+		add 4 to T;		[Vixen Nurse]
+	if hermaphrodite is not banned:
+		add 5 to T;		[Mismatched Chimera]
+		add 5 to T;		[Mismatched Chimera]
+	sort T in random order;
+	if entry 1 of T is 1, challenge "Psycho Weasel";
+	if entry 2 of T is 1, challenge "Jaguar";
+	if entry 3 of T is 1, challenge "Fluffy Owl";
+	if entry 4 of T is 1, challenge "Vixen Nurse";
+	if entry 5 of T is 1, challenge "Mismatched Chimera";
 
 
 Pathology is a situation.  The level of Pathology is 5.
