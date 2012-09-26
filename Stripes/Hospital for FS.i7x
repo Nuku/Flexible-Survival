@@ -240,10 +240,10 @@ to say hospfight4:		[no Raccoon, flags handled internally]
 		add 5 to T;		[Mismatched Chimera]
 	sort T in random order;
 	if entry 1 of T is 1, challenge "Psycho Weasel";
-	if entry 2 of T is 1, challenge "Jaguar";
-	if entry 3 of T is 1, challenge "Fluffy Owl";
-	if entry 4 of T is 1, challenge "Vixen Nurse";
-	if entry 5 of T is 1, challenge "Mismatched Chimera";
+	if entry 1 of T is 2, challenge "Jaguar";
+	if entry 1 of T is 3, challenge "Fluffy Owl";
+	if entry 1 of T is 4, challenge "Vixen Nurse";
+	if entry 1 of T is 5, challenge "Mismatched Chimera";
 
 
 Pathology is a situation.  The level of Pathology is 5.
