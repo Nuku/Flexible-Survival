@@ -230,7 +230,7 @@ the sarea of Obstetrics Department is "Hospital".
 instead of resolving Obstetrics Department:
 	say "     Making your way through the darkened hospital, you manage to reach the Obstetrics Department and slip inside, searching for the items that Dr. Medea mentioned needing.  This area seems to have been particularly [']active['] during the outbreak, with a lot of sticky fluids of all kinds over everything.  Aside from pools of what must be semen and feminine juices, there's a variety placentae and egg shells scattered around as well.  The scent of lust, fertility and virility is very strong in here, making you somewhat dizzy with growing excitement.";
 	let playernum be a random number between 0 and ( 200 + humanity of player - libido of player );
-	say "[special-style-2][playernum][roman type] vs [special-style-1]120[roman type]:  ";
+	say "     [special-style-1][playernum][roman type] vs [special-style-2]120[roman type]:  ";
 	if playernum >= 120:
 		if furry is banned:
 			say "You manage to block out the smell, at least for the moment, and start searching through the Obstetrics Department for the items that Dr. Medea described.  You gather up the specialized equipment that she's requested and leave as quickly as you can before your activity can draw the attention of one of the hospital's denizens.";
