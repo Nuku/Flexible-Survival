@@ -6,7 +6,7 @@ Version 3 of Skunk Pet by Sarokcat begins here.
 Section 1- Skunk kit
 
 skunk kit is a pet. The description of the skunk kit is "The skunk kit you rescued is obviously the offspring of one of the larger skunk beasts roaming the park, as even as young as it obviously is it is already the size of a regular skunk or perhaps even slightly larger. The creature stares up at you adoringly however, with love in its eyes for its savior, exploring the world around it with the innocence of youth, how long that innocence will last though as it grows is anyone[apostrophe]s guess, but for now its happy skunk-like antics bring a smile to your face.". skunk kit is a part of the player;
-The weapon damage of skunk kit is 8;
+The weapon damage of skunk kit is 6;
 The level of skunk kit is 1;
 The Dexterity of skunk kit is 13;
 The summondesc of skunk kit is "You call out for the little skunk you rescued to come help you out, and it comes trotting up from where it was following you, ready and eager to assist its friend, the smell of skunk filling the area around you.";
@@ -27,6 +27,10 @@ An everyturn rule:
 
 Lost skunk kit is a situation.
 The sarea of Lost skunk kit is "Park";
+when play begins:
+	add Lost skunk kit to badspots of girl;
+	add Lost skunk kit to badspots of furry;
+
 
 littlelostskunk is a number that varies.
 

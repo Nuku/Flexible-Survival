@@ -7,8 +7,8 @@ Version 2 of Gryphon companion by Sarokcat begins here.
 Section 1- Gryphoness
 
 Gryphoness is a pet.  The description of gryphoness is "[gryphonessdesc]". Gryphoness is a part of the player;
-The weapon damage of Gryphoness is 10;
-The level of Gryphoness is 1;
+The weapon damage of Gryphoness is 5;
+The level of Gryphoness is 2;
 The Dexterity of Gryphoness is 10;
 The summondesc of Gryphoness is "[summongryphoness]";
 The assault of Gryphoness is "[gryphonessassault]";

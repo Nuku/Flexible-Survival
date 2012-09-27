@@ -16,6 +16,7 @@ instead of sniffing Little fox:
 
 Abandoned Fox is a situation.
 The sarea of Abandoned Fox is "Park";
+
 Instead of resolving Abandoned Fox:
 	say "Traveling through the park you hear a strange soft noise coming from one of the nearby bushes, it sounds almost like something small calling out. Do you investigate?";
 	If player consents:
