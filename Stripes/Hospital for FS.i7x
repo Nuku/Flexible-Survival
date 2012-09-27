@@ -402,7 +402,7 @@ Instead of resolving a Mournful Dog:
 
 helper dog is a pet.  helper dog is a part of the player;
 The description of helper dog is "The helper dog is a black and white shepherd with soulful and intelligent brown eyes.  He will follow you and loyally assist you with your troubles.";
-The weapon damage of helper dog is 5;
+The weapon damage of helper dog is 6;
 The level of helper dog is 5;
 The Dexterity of helper dog is 15;
 The summondesc of helper dog is "Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.";
