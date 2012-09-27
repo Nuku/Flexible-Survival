@@ -540,7 +540,7 @@ An everyturn rule:
 				say "     'You're terrible.  I'm sorry I ever felt sad that you got hurt,' she screams, tears in her eyes as she yells at him.  She takes flight as he makes a grab for her, buzzing over to hide behind him, sobbing loudly.";
 				say "     Elijah, meanwhile, is livid, growling about having to get this sticky gunk off his face and that he'll make her pay";
 				if Candy is bunkered:
-					say ".  Candy giggles and puts up his hand, waving it in the air.  'Oh! Oh! Me-me-me! I'm a pro at licking up sticky sweet stuff,' the gay coon jokes.  'I'd be glad to help you out with that.'  As he sashays over, he gives Honey a wink to show he plans on distract the bad boy for her.  From the bathroom where they end up, you can hear the loud cries of lustful pleasure as it sounds like Elijah's taking his frustration and excess libido out on the pink raccoon by being particularly rough with him.";
+					say ".  Candy giggles and puts up his hand, waving it in the air excitedly.  'Oh! Oh! Me-me-me! I'm a pro at licking up sticky sweet stuff,' the gay coon jokes.  'I'd be glad to help you out with that.'  As he sashays over, he gives Honey a wink to show he plans on distract the bad boy for her.  From the bathroom where they end up, you can hear the loud cries of lustful pleasure as it sounds like Elijah's taking his frustration and excess libido out on the pink raccoon by being particularly rough with him.";
 					now lastCandyfucked is turns - 2;
 					now lastElijahfucked is turns - 2;
 				otherwise:
@@ -1203,13 +1203,13 @@ when play ends:
 			otherwise:  [living together]
 				say "     When the soldiers come through the city to rescue you and the others, you're all taken to a containment facility for medical evaluation and quarantine. Elijah calmly exclaims that he's not actually infected, but in his natural form and asks to speak to the nearest priest. The military chaplain who gets called in is pretty surprised about Elijah's status report, during which he absolves the angel after an earnest confession of having lost his flaming sword in the line of duty. Then Elijah requests a leave of absence, stating that in his weakened form he can't fight too well, vowing instead to do good in other ways.";
 				say "     When you get released some time after that, Elijah goes with you and you live together as friends and lovers. He takes up a lot of charity work, helping out wherever he can.";
-				if (gryphoness is tamed):   [Denise pet]
+				if gryphoness is tamed:   [Denise pet]
 					say "     Elijah becomes great friends with Denise, happily sharing your house - and bed - with her. They're often soaring through the sky near your home together, doing aerial acrobatics that bring fans and spectators from the surrounding areas. With as much time as they're spending together, it doesn't surprise you much to see Denise lay an[if knowpreg of gryphoness > 0]other[end if] egg pretty soon, from which a beautiful little white gryphlet hatches. The proud couple gives her the name Lailah. Not much time later, Elijah can be seen shepherding [if knowpreg of gryphoness is 2]your own two gryphlets from Denise and [otherwise if knowpreg of gryphoness is 1]your own gryphlet from Denise and [end if]his pretty daughter on flying lessons to show [if knowpreg of gryphoness > 0]them[otherwise]her[end if] some tricks.";
-				if (sarahslut is 4):        [Sarah pet]
+				if sarahslut is 4:        [Sarah pet]
 					say "     While saddened that Sarah lost her humanity so completely, Elijah accepts that most of the blame lies with the husky who originally infected her. Content that you're at least a master who cares for her and fulfills the needs of her husky form, he settles into a comfortable routine with her, often taking her for long walks and always ready to give her some attention and pet her.";
-				if (hp of Sven > 7):        [Sven pet]
+				if hp of Sven > 7:        [Sven pet]
 					say "     Living in the same household, Sven decides to make a sport of getting Elijah aroused whenever he wants. He often hangs around near the angel, stretching his snowmeow body and waving his tail invitingly - especially at inappropriate moments. There are quite a few dinner parties or situations with guests in the house or when Elijah has to excuse himself to take care of a growing problem in his pants - mostly by filling a very eager Sven's ass with his angelic cock. You often use the opportunities to join them for a hot threesome when you see first Sven, then Elijah sneak off into the adjoining rooms.";
-				if (felinoid companion is tamed): [felinoid pet]
+				if felinoid companion is tamed: [felinoid pet]
 					say "     Elijah proves to be immune to the changing influence of your felinoid companion, staying completely unaffected even though he is in the same house every day. He likes the big cat, never hesitating to give the him a good scritch under the chin or behind the ears. Usually when Elijah sits on the sofa in the evenings the felinoid joins him - often ending up sprawled out on the sofa on his back, purring like an idling motor as Elijah strokes his belly fur.";
 
 Elijah ends here.
