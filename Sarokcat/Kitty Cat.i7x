@@ -15,8 +15,8 @@ instead of sniffing house cat:
 	say "Your little kitty smells like a normal tom cat.";
 
 Lost house cat is a situation.
+The sarea of Lost house cat is "Outside";
 
-The sarea of Lost house cat is "outside";
 Instead of resolving Lost house cat:
 	say "Heading through the streets of the city you spy a small form dart down an alleyway ahead of you, the shape moving to quickly for you to get anything more then an impression of four legs and fur.  Curious you pause for a minute trying to decide whether you should investigate the shape further.";
 	If player consents:
