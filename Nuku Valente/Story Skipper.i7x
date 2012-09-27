@@ -247,13 +247,14 @@ Carry out reciting:
 			-- 44:
 				if the player's command matches "[number]":
 					now mateable is the number understood;
-			-- 45:	[Timothy]
+			-- 45:	[Denise]
 				if the player's command matches "[number]":
 					now gryphoncomforted is the number understood;
 					now lonely gryphoness is unresolved;
-					now Gryphoness Nest is unresolved;
+					now Gryphoness Nest is resolved;
 					if gryphoncomforted is greater than 0:
 						now lonely gryphoness is resolved;
+						now Gryphon Nest is unresolved;
 					if gryphoncomforted is greater than 2:
 						now gryphoness is tamed;
 						now Gryphoness Nest is resolved;
