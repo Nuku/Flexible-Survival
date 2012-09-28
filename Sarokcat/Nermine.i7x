@@ -1402,7 +1402,7 @@ strange doll is a pet. "The strange looking doll that you found in the bargain b
 strange doll is a part of the player;
 The weapon damage of strange doll is 7;
 The level of strange doll is 1;
-The Dexterity of strange doll is 8;
+The Dexterity of strange doll is 10;
 The summondesc of strange doll is "You pull the strange little doll from the shop out of your pack, and set it on the ground next to you, the doll lies there for a minute on the ground, before twitching and picking itself up. The little miniature version of you looks around the area, before looking up at you and saluting, obviously ready and willing to help.";
 The assault of strange doll is "[one of]The strange doll picks up something from the ground nearby, and tries to stab your attacker with it![or]Running up under your attacker, your strange plush doll tosses itself at their legs, tangling them up![or]The strange doll of you mimics your attack, striking at your opponent![or]Your opponent suddenly cries out in pain, your little ally having managed to score a hit in a sensitive area.[or] taking advantage of your foes distraction, your little doll gets in several good hits.[or]All of a sudden your opponent stops fighting and begins to try to claw at their face, taking the opportunity to land an extra hit, you notice your little plush doll managed to climb up and put its hands over their eyes.[or]All of a sudden your opponent is startled by a sudden rain of debris tossed at it by your little ally, causing it to fall backwards[or]Imitating you, your little mini me attacks the beast with wild abandon![at random]";
 
