@@ -147,8 +147,7 @@ SlutratSub is a number that varies.  SlutratSub is usually 5.		[0 to 10 range, 5
 Slutratcor is a number that varies.
 lastratvisit is a number that varies.
 
-instead of sniffing SlutRat Den:
-	say "The den is heavy with the musky scents of the lustful rats, which is only slightly masked by the soft incenses.";
+the scent of the SlutRat Den is "The den is heavy with the musky scents of the lustful rats, which is only slightly masked by the soft incenses.";
 
 To Say slutratdenscene:
 	[puts Slut Rat as lead monster for easy use]
@@ -546,8 +545,7 @@ The description of Pool Table is "     This is the pool table that you, Eight-ba
 The conversation of Pool Table is { "Scratch!" }.
 lastpoolgame is a number that varies.  lastpoolgame is normally 555.
 
-instead of sniffing the Pool Table:
-	say "The pool table smalls of the rats that have been playing it and of the stains they've left on it.";
+the scent of the Pool Table is "The pool table smalls of the rats that have been playing it and of the stains they've left on it.";
 
 instead of fucking the Pool Table:
 	say "I know it's got holes, but those aren't the kind of balls you're supposed to put into them.";

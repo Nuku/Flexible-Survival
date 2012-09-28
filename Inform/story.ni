@@ -14,6 +14,7 @@ use MAX_NUM_STATIC_STRINGS of 45000.
 use ALLOC_CHUNK_SIZE of 105000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 300.
+use MAX_VERBS of 300.
 Use maximum indexed text length of at least 5000.
 Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
@@ -3172,7 +3173,7 @@ to Pet level up:
 	if "Good Teacher" is listed in feats of player:
 		increase xp of companion of player by ( level of companion of player minus 1 ) times 4;
 	say "Your [companion of player] has gained level [level of companion of player]! Congratulations!";
-	if remainder after dividing level of companion of player by 2 is 0:
+	if remainder after dividing level of companion of player by 3 is 0:
 		increase weapon damage of companion of player by 1;
 	if remainder after dividing level of companion of player by 5 is 0:
 		increase dexterity of companion of player by 1;
