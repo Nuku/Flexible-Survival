@@ -229,7 +229,7 @@ This is the GuardTalk rule:
 			say "[GuardLie]";
 		if (nam is "Ask if they can spare any supplies."):
 			say "[GuardBeg]";
-		if (nam is "Leave the camp for now.");
+		if (nam is "Leave the camp for now."):
 			say "[GuardLeave]";
 		wait for any key;
 
