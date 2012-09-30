@@ -99,6 +99,7 @@ instead of conversing the Doctor Medea:
 				say "     'You are currently unable to carry a pregnancy as a male.  Would you like me to grant you the ability to become pregnant as a male?' she asks.";
 				if the player consents:
 					say "     She seems pleased at the prospect of helping you become pregnant by granting you this strange ability.  The procedure is swiftly accomplished.  The lizard doctor smiles and strokes over your belly, grinning at the thought of it swelling with life.";
+					add "MPreg" to feats of player;
 					say "[medeaadjustments]";
 				otherwise:
 					say "     The lizard doctor seems a little disappointed in your reply, but nods.  'Until you're able to become pregnant, there's not much more that I can do for you.  If you won't accept to undergo the procedure, you'd best go out into the city and change into a female or herm,' she says.";
