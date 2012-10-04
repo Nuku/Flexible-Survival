@@ -572,6 +572,8 @@ Carry out reciting:
 			-- 90:	[Leonard]
 				if the player's command matches "[number]":
 					now hp of Leonard is the number understood;
+					now level of Hunting Prides is 8;
+					now Hunting Prides is resolved;
 					if hp of Leonard > 0:
 						now Lion's Den is known;
 						now Feline Friend is resolved;
@@ -584,6 +586,19 @@ Carry out reciting:
 						now violinfound is 0;
 					if hp of Leonard is 6:
 						now leonardtimer is turns;
+					if hp of Leonard is 7:
+						now libido of Leonard is 0;
+					if hp of Leonard is 9:
+						now leonardtimer is turns;
+					if hp of Leonard >= 10:
+						now Hunting Prides is unresolved;
+					if hp of Leonard is 11:
+						now level of Hunting Prides is 10;
+					if hp of Leonard is 12 or hp of Leonard is 13:
+						now level of Hunting Prides is 12;
+					if hp of Leonard >= 14:
+						now Hunting Prides is resolved;
+						now level of Hunting Prides is 12;
 			-- 91:	[Solstice]
 				if the player's command matches "[number]":
 					remove Solstice from play;
