@@ -11,7 +11,7 @@ the sarea of Important Treasure is "Red".
 Instead of resolving Important Treasure:
 	if opcl is 0:
 		say "The sight of something white dashing across your vision makes you turn your head just in time to see a short...[']something['] run right past you. Not understanding what you've just seen you try and follow the other as it steadily speeds down the street ahead of you. Moving as fast as you can the white hooded figure turns out to be very fleet of foot and soon they have outpaced you by almost four blocks. You give up trying to follow after them when you find yourself growing short of breath.[line break]"; 
-	if opcl is 1:
+	otherwise if opcl is 1:
 		say "Searching around the red light district you stumble across a beautiful blonde woman standing roughly five and a half feet tall who fits the description Omio had given to you almost to a [']T[']. With an oversized white coat draped over her slim body, a stitched up scar cutting a path over the front of her nose, and black pair of jeans on the woman should have stuck like a sore thumb in the middle of the city's more ill repute area. And yet, for some reason or another, the blonde seems to possess a all-encompassing autonomy about herself that make her almost invisible to naked eye.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
@@ -32,9 +32,9 @@ Instead of resolving Important Treasure:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				say "At that Dan goes silent, which, interestingly enough, makes him somewhat easier for the raptor to dragon along. You take a few moments to go over what just happened in your head and then shrug when you find that none of that made any good sense. Maybe having a talk with Omio would be wise, but then again you still haven't gotten the package from off of the blonde for the red head researcher. Given the raptor's words though, should you continue looking for the white coat wearing female, especially if she could turn out to be dangerous?[line break]";
-				increase score by 10;
 				now opcl is 2; 
-				now Ointerrogate is 2;
+				now Ointerrogate is 1;
+				increase score by 10;
 			otherwise:
 				say "Trying to tell the officer that you don't know anything nets you a feral smirk from the raptor. 'If I said, [']I don't believe you['], would you take offense?' The raptor dark green-brown eyes grow hard as he says this and you feel a chill go across your spine. You suddenly sense that there's something [italic type]dangerous[roman type] about this man, but you're not sure what this feeling could be on about seeing as the other hasn't actually threatened you...yet. 'It's fine. If you say you don't know anything then I guess we have to believe you.' The four armed iguana standing off to the side lets his mouth drop to the floor upon hearing this. 'However, if you just so happened to be lying to me, then do yourself a favor and take this piece of advice with you. Stay away from that woman - she's nothing but trouble.'";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -43,9 +43,9 @@ Instead of resolving Important Treasure:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				say "At that Dan goes silent, which, interestingly enough, makes him somewhat easier for the raptor hybrid to dragon along behind him. You take a few moments to think about what just happened...and then have to shrug when you find that nothing that just happened made any kind of good sense. Maybe having a talk with Omio would be wise, but then again you still haven't gotten the package from off of the blonde for the red head researcher. Given the raptor's words though, should you really continue looking for the white coat wearing female, especially if she could turn out to be dangerous?[line break]";
-				increase score by 10;
 				now opcl is 2;
-				now Ointerrogate is 2;
+				now Ointerrogate is 1;
+				increase score by 10;
 		otherwise:
 			say "Knowing that lying to police is not the right thing to do, and knowing that police brutality is not something uncommon in this and age and in this country, you let the raptor in on the fact that you were coming to pick up a package from the blonde for a friend. 'I...see.' The raptor is somewhat taken aback by your honesty and hums quietly into his throat before flicking his tongue out to taste the scent of the air around you. 'Well, that's...very interesting to know.' The other man backs up and then chuckles some before looking at the direction his partner is pointing. 'Let your arms down Dan. She's gone by now so we can't really do anything about it at the moment.'";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -56,9 +56,9 @@ Instead of resolving Important Treasure:
 			say "'Trust me when I say this [if cocks of player > 0]pal[otherwise]miss[end if], you'll be wanting to stay far away from [']that woman[']. She's nothing but trouble.' And with that the raptor turns away from you and then grunts for his uniformed partner to follow after him as he starts to walk off. The iguana gives you a dirty look, but says nothing as he goes to follow after the older reptile. The last you see of the two are both of their tails swaying in time together as they head down the street.[line break]";
 			say "You stand there for a moment in wonder about what just happened and then decide that maybe having a little talk with Omio would be wise. Then again, you haven't gotten the red head's package as you said you would. Can you really return with a job half done? But with what the raptor just said is it really wise to go after the blonde woman, especially if she's [']dangerous[']? Decisions. Decisions.[line break]";
 			now opcl is 2;
-			now Ointerrogate is 2;
-			increase score by 10; 
-	if opcl is 2:
+			now Ointerrogate is 1;
+			increase score by 10;
+	otherwise if opcl is 2:
 		say "Exploring the red light district you end up finding the blonde haired woman that is supposed to be carrying Omio's package trapped between several lively mutant renegades and a blind alley. From the looks of things though, the blonde seems to be in no need of assistance as she weaves around the small group of four trying to get at her while brandishing a gleaming pair of curved blades with no small amount of skill. Taking a moment to watch the fight play out, after realizing that your help would be more of a detriment than an assistance, you track the blonde's movements as she all but dances around the lustful mutates.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']  
@@ -72,9 +72,7 @@ Instead of resolving Important Treasure:
 		say "The blonde smirks and then nods to you before moving like a shot off about her way. You look to the grunting and groaning figures lying prone on the ground and then chuckle reverently at the ass whoppin' they just received. Seeing that there's nothing more to see here you turn to move off about your way. It's only when you're about five paces away that you realize that you totally missed out on asking the blonde about Lumpy box![line break]";
 		now opcl is 3;
 		increase score by 5;
-		now xp of player is xp of player * 21;
-		now xp of player is xp of player / 20;
-	if opcl is 3:
+	otherwise if opcl is 3:
 		say "Walking through the seedier portion of town you find yourself bumping into someone who suddenly comes flying out of an opened doorway. Grunting from the impact of your two bodies colliding you stagger for a moment before catching yourself. Once you are settled you look to find the face of the four armed iguana from before gazing up at you with a slightly punch-drunk look plastered onto his scaly face. 'Hey! I know you!' The bleary eyed reptile slurs while blinking owlishly up at you. 'You're that suspect I'm supposed to question!' The uniformed iguana chuckles playfully before grabbing you into a strong bear hug and then nuzzling the underside of your [face of player] neck.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']  
@@ -146,44 +144,54 @@ Instead of resolving Important Treasure:
 								say "Minutes later the iguana's partner shows up and you hand the no longer shivering reptile back to the older raptor. You don't stick around to hear what was completely said between the two, but you do hear something about [']choices['] and [']future['] and [']a better way than this['] before  you can no longer hear the voices of the two reptiles.";
 								now opcl is 4;
 								increase score by 20;
-							if fightoutcome >= 20 and fightoutcome <= 29:
+							otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 								say "Getting beaten by the mutant you had just been fighting you wind up getting knocked unconscious by the rest of the gang. Because of this you miss out on the sounds of gunfire coming from the from...somewhere around you...as a pissed of raptor tears into the other mutants who were trying to bother the iguana. Again, because you had been knocked around like a ragdoll you miss out on what happens next.";
 								now opcl is 4;
+								increase score by 10;
 							otherwise:
 								say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards...only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 								now opcl is 4;
-						if fightoutcome >= 20 and fightoutcome <= 29:
+								increase score by 10;
+						otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 							say "Getting beaten by the mutant you had just been fighting you wind up getting knocked unconscious by the rest of the gang. Because of this you miss out on the sounds of gunfire coming from the from...somewhere around you...as a pissed of raptor tears into the other mutants who were trying to bother the iguana. Again, because you had been knocked around like a ragdoll you miss out on what happens next.";
 							now opcl is 4;
+							increase score by 10;
 						otherwise:
 							say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards...only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 							now opcl is 4;
-					if fightoutcome >= 20 and fightoutcome <= 29:
+							increase score by 10;
+					otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 						say "Getting beaten by the mutant you had just been fighting you wind up getting knocked unconscious by the rest of the gang. Because of this you miss out on the sounds of gunfire coming from the from...somewhere around you...as a pissed of raptor tears into the other mutants who were trying to bother the iguana. Again, because you had been knocked around like a ragdoll you miss out on what happens next.";
 						now opcl is 4;
+						increase score by 10;
 					otherwise:
 						say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards...only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 						now opcl is 4;
-				if fightoutcome >= 20 and fightoutcome <= 29:
+						increase score by 10;
+				otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 					say "Getting beaten by the mutant you had just been fighting you wind up getting knocked unconscious by the rest of the gang. Because of this you miss out on the sounds of gunfire coming from the from...somewhere around you...as a pissed of raptor tears into the other mutants who were trying to bother the iguana. Again, because you had been knocked around like a ragdoll you miss out on what happens next.";
 					now opcl is 4;
+					increase score by 10;
 				otherwise:
 					say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards...only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 					now opcl is 4;
-			if fightoutcome >= 20 and fightoutcome <= 29:
+					increase score by 10;
+			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 				say "Getting beaten by the mutant you had just been fighting you wind up getting knocked unconscious by the rest of the gang. Because of this you miss out on the sounds of gunfire coming from the from...somewhere around you...as a pissed of raptor tears into the other mutants who were trying to bother the iguana. Again, because you had been knocked around like a ragdoll you miss out on what happens next.";
 				now opcl is 4;
+				increase score by 10;
 			otherwise:
 				say "Making motions for the iguana to get lost you wind up having the other mutants chase you around the block. Losing them through the twist and turns of the city you find yourself coming back to check on the iguana policeman afterwards...only to find him gone. Did his partner come to pick him up? You can only hope so as you turn to go off about your way back about your business.";
 				now opcl is 4;
-	if opcl is 4:
+				increase score by 10;
+	otherwise if opcl is 4:
 		say "Making your way throughout the red light district you stumble across the trench coat wearing raptor from before talking to the blonde by the side of an overturned pickup truck. 'So, this is it?' The much taller reptile asks while looking over something in his hands. You can't tell exactly what it is from where you are hiding behind a lamp post, but it appears to be a clear white vial...or maybe not. The blonde, who currently has her hood down from off of her head, nods to the man and then reaches out with her open hand, as if expecting something.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 		say "You watch as the raptor gives the female something small and black and then goes about his way without so much as another word to the other. Following the path the raptor's takes until the other disappears out of sight you wonder about what anomalous item the lizard could have received from the blonde. When nothing important comes to mind you turn to find that the little female is gone.[line break]";
 		now opcl is 5;
 		increase score by 7;
-	if opcl is 5:
+	otherwise if opcl is 5:
 		say "A out of place whistle stops you in your tracks. Turning around you find yourself clumsily catching a lumpy package sailing directly at you. Grunting once you get the parcel in your hand under some kind of control you blink in confusion as you notice the form of a familiar golden haired female with the white hooded coat stepping up to you. The woman says nothing as she look at you with deep azure colored eyes that hold one too many secrets for any normal person to have to shoulder the burden of.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
@@ -231,14 +239,14 @@ Instead of resolving a Friendship's Proof:
 		say "Seeing that everything is alright, at least partially so given the spectacle that just happened not more than a moment ago, you decide to let this odd couple pairing be. Turning on your heel and walking away you miss out on the passionate flicking of tongue the raptor showers over the smaller male.[line break]";
 		now tpfs is 1;
 		increase score by 5;
-	if tpfs is 1:
+	otherwise if tpfs is 1:
 		say "Coming across a familiar area of the warehouse district you find the trench coat wearing raptor sitting with his arms full of a slumbering iguana male[if daytimer is day]. The light from the sun seems to almost gleam off of the scales of the two males as they rest on the steps of an abandoned warehouse. A teasing orange and yellow tail tip plays at the end of the iguana's nose, but gets batted out of the way by an unamused dark green hand[otherwise]. The moon shines brightly down on the two as the bigger raptor strokes a scaled hand over the darker jaw line of his shorter companion as the two of the rest with their backs against the ramshackle fishery behind them[end if].";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']  
 		say "Watching as the four armed, green and black mottled lizard hugs himself into the bulk of his bigger companion when the wind sweeps across the two of them you can't help but chuckle wistfully at how easily the taller male falls into the role of [']guardian/protector['] as he hugs the squirming bundle in his lap without complaint. Seeing that there is no need to come into contact with these two men you back away slowly so as not to break the mood surrounding the pair.[line break]";
 		now tpfs is 2;
 		increase score by 5;
-	if tpfs is 2:
+	otherwise if tpfs is 2:
 		say "An arm shoots out of a darkened building and snatches you up before you can think to react. Landing on your butt after being dragged inside of the warehouse you had been walking in front of you grunt from impact only to gasp when something constricts itself around your throat. Clawing at the smooth thing choking just enough air from your lungs to threaten you with unconsciousness, but not actually knock you out, you growl in primal fear for your life before fingers decorated with sharpened claws grab the back of your skull. 'Don't say a word, just yes and shake your head no, understand?";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
@@ -260,25 +268,27 @@ Instead of resolving a Friendship's Proof:
 			say "The sudden impact makes your chest heave, but at getting in much needed air you figure that it's worth the effort. When you turn to look at your captor you find your eyes, which have long adjusted to the gloom, not able to find anyone.";
 			now tpfs is 3;
 			decrease hp of player by 30;
+			increase score by 10;
 		otherwise:
 			say " A final shake of your head and the thing around your neck releases you completely just as the claws at the back of your head move away from you vulnerable cranium. The sound of running feet moving away from you catches the end of your senses, but at the moment you are too glad for air to care about the strangeness of what just happened to you.[line break]";
 			now tpfs is 3;
 			increase score by 4;
-	if tpfs is 3:
+	otherwise if tpfs is 3:
 		say "Finding yourself coming across the orange and yellow raptor from before walking down the street you take a moment to wonder where the other's [']shadow['] is, right before you take notice of the fact that the other man is staring at you somewhat intensely. Shades off from his face and gold-green eyes looking at you somewhat coolly you find yourself staring almost transfixed into the darkened orbs of the raptor. Shaking your head when the other blinks, you find yourself getting a small headache all of a sudden.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 		say "Watching as the trench coat wearing lizard goes off about his way as his partner comes up to him you wonder what that was all about. Not sure of anything at the moment you move along before something else weird can happen to you, like before back at the warehouse. A part of you still wonders who the heck that was who had tried to choke information out of you. Narrowing your eyes as you think about the long reptilian tail of the orange and yellow raptor hybrid you wonder...could it have been him?[line break]";
 		now tpfs is 4;
 		increase score by 3;
-	if tpfs is 4:
+	otherwise if tpfs is 4:
 		say "Coming across the familiar orange and yellow raptor from before you find yourself nodding to the other in quiet deference. The raptor does nothing in return, save for flick his long and thin tongue out in your direction. Thinking that it's time to move on you prepare to take a step away from the other when the sudden intense scent of fresh blood slips its way across your nose. Snapping your head around to look over the raptor your eyes wander up and down the trench coat wearing lizard until you find large spots of sticky red stains covering at the ends of the reptile's trench coat.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']  
 		say "From what you can see the other doesn't appear to be hurt anywhere, so then where did the blood come from? A dark chuckle makes you shiver as your eyes lift up to focus on the[if daytimer is day][one of]unseen orbs of the raptor hidden behind his shades[or]golden-green slit orbs of the raptor[at random][end if] as a almost maniacal smile parts the reptile's lips.[line break]";
 		say "Taking a step away from the other you decide not to stick around to figure this one out you turn to go off about your business. A fleeting hope inside of your heart is that the blood hadn't come from the emotional iguana with the four arms you had seen the other with thrice before. Surely the other man wasn't [italic type]that[roman type] kind of a sadistic son of a bitch. Was he?[line break]";
 		increase score by 2;
-	if tpfs is 5:
+		now tpfs is 8;
+	otherwise if tpfs is 5:
 		say "Running as fast as you can you search around with fervent determination to find the two lizards you come across several times before. Not exactly knowing where they would be at the moment, considering the severity of whatever's probably taking place between them, something you're still somewhat unsure about, you find yourself moving to the most likely of places where someone would want to be alone at a time like this. The sounds of shouting and struggling catch onto the edge of your field of hearing and darting around the corner of an empty building you find yourself just in time to see Greg and Dan going at it. From the looks of things the bigger raptor seems to be getting tired, but the iguana isn't pressing into the advantage he has in front of him.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
@@ -304,7 +314,8 @@ Instead of resolving a Friendship's Proof:
 		increase libido of player by 16;
 		if libido of player > 100, now libido of player is 100;
 		now tpfs is 6;
-	if tpfs is 6:
+		increase the score by 10;
+	otherwise if tpfs is 6:
 		say "When a hand reaches out to grab you by the shoulder your muscles automatically tighten in preparation for a fight. 'Whoa there, friend.' Greg's voice has you calming down as the other releases your shoulder and then goes about stepping in front of you. 'Sorry, I know that might not have been too cool of me to do, but I don't really remember your name to well. What was it again?' You sigh and then tell the other man your name. 'Oh, ok. Well anyway, I...' A grunt from onside of the raptor has your eyes moving over to the side to see Dan standing right next to the taller man with one of his arms casually wrapped around his lover.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
@@ -320,6 +331,8 @@ Instead of resolving a Friendship's Proof:
 		increase score by 20;
 		now Friendship's Proof is resolved;
 		now Lizard Parlor is known;
+	otherwise if tpfs is 8:
+		say "[bold type]You'll need to help Omio first before you can finish this quest-line! Find Omio in the dry plains if you haven't already found her.[roman type]";
 
 
 Section 3 - Ouroboros
@@ -327,7 +340,8 @@ Section 3 - Ouroboros
 Ouroboros is a situation.
 
 The sarea of Ouroboros is "Museum";
-instead of resolving a Ouroboros:
+
+Instead of resolving a Ouroboros:
 	if omq < 10:
 		say "Walking through the somewhat quiet halls of the museum you find yourself passing by a impressive looking medallion with a snake circled around itself nibbling at its tail. A coy smile tugs at your lips as you wonder why someone would draw a serpent doing such a thing before you shrug and then move on about your way.";
 	otherwise if omq is 10:
@@ -337,11 +351,9 @@ instead of resolving a Ouroboros:
 			challenge "Wolverine Guard";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "Pushing the defeated, and coincidentally enough, sleeping, wolverine out of the way you walk up to the glass case and then remove the heavy barrier off and away from your well deserved prize. Grabbing the medallion you turn the bronze artifact over into your hands while wondering why Omio needs such an old looking thing. There's no way that this thing could be an energy conduit, could it? [line break]"; 
-				if perception of player > 15 and intelligence of player > 15:
-					say "A faint memory from some other time and place reminds you that ancient people once used items like these in alchemical experiments or to represent concepts of eternity and equilibrium. Maybe Omio is going to turn some of the material she has back at her studio into gold? Then again, knowing the red head, she'd probably come up with something more conventional like[one of] a previously unheard-of fuel[or]a new fabric[or]a medical reagent[at random] in an effort to help others more than just herself. A chuckle worms its way from your throat at that thought.";
-					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-					if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']  
-					say "While she might be somewhere between a ditz and a mad cap, Omio definitely would not waste anything as important as this on something frivolous. It's only when you think over the possibilities that the red head might be able to make real that you deem that this little theft maybe worth the trouble you had to go through after all. Of course, just as you happen to be getting ready to step a away from the downed wolverine, after pocketing your recently acquired medallion, the sounds of charging feet and barking roars has you freezing in place. Turning around slowly you notice several Cerberus creatures racing directly for you![line break]";
+				say "Before anything significant can come to you however, the sounds of charging feet and barking roars has you freezing in place. Turning around slowly you notice several Cerberus creatures racing directly for you![line break]";
+				challenge "Cerberus";
+				if fightoutcome >= 10 and fightoutcome <= 19:
 					challenge "Cerberus";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						challenge "Cerberus";
@@ -350,68 +362,20 @@ instead of resolving a Ouroboros:
 							if fightoutcome >= 10 and fightoutcome <= 19:
 								challenge "Cerberus";
 								if fightoutcome >= 10 and fightoutcome <= 19:
-									challenge "Cerberus";
-									if fightoutcome >= 10 and fightoutcome <= 19:
-										say "Having dealt with the mob, and kept the medallion tucked safely into one of the hidden pockets of your pants, you grumble tiredly before moving your way out of the Museum.";
-										add "medallion" to invent of player;
-										increase score by 10;
-										now Ouroboros is resolved;
-									if fightoutcome >= 20 and fightoutcome <= 29::
-										say "[defeatedbycerb]"; 
-									otherwise:
-										say "[runforit]";
-								if fightoutcome >= 20 and fightoutcome <= 29::
-									say "[defeatedbycerb]"; 
+									say "Having dealt with the mob, and kept the medallion tucked safely into one of the hidden pockets of your pants, you grumble tiredly before moving your way out of the Museum.";
+									add "medallion" to invent of player;
+									increase score by 10;
+									now Ouroboros is resolved;
 								otherwise:
-									say "[runforit]";
-							if fightoutcome >= 20 and fightoutcome <= 29::
-								say "[defeatedbycerb]"; 
+									say "[defeatedbycerb]"; 
 							otherwise:
-								say "[runforit]";
-						if fightoutcome >= 20 and fightoutcome <= 29::
-							say "[defeatedbycerb]"; 
+								say "[defeatedbycerb]"; 
 						otherwise:
-							say "[runforit]";
-					if fightoutcome >= 20 and fightoutcome <= 29::
-						say "[defeatedbycerb]"; 
+							say "[defeatedbycerb]"; 
 					otherwise:
-						say "[runforit]";
+						say "[defeatedbycerb]"; 
 				otherwise:
-					say "Getting the sense that the medallion is important you try and flip the thing over several times before sighing and then shrugging when nothing comes to mind. Realizing that it doesn't matter anyway in the face of your victory over the shaggy guard you pocket the medallion and then get ready to head out of the museum. Of course, just as you happen to be getting ready to step away from the downed wolverine to go off about your way the sounds of charging feet and barking roars has you freezing in place. Turning around slowly you notice several Cerberus creatures racing directly for you![line break]";
-					challenge "Cerberus";
-					if fightoutcome >= 10 and fightoutcome <= 19:
-						challenge "Cerberus";
-						if fightoutcome >= 10 and fightoutcome <= 19:
-							challenge "Cerberus";
-							if fightoutcome >= 10 and fightoutcome <= 19:
-								challenge "Cerberus";
-								if fightoutcome >= 10 and fightoutcome <= 19:
-									challenge "Cerberus";
-									if fightoutcome >= 10 and fightoutcome <= 19:
-										say "Having dealt with the mob, and kept the medallion tucked safely into one of the hidden pockets of your pants, you grumble tiredly before moving your way out of the Museum.";
-										add "medallion" to invent of player;
-										increase score by 10;
-										now Ouroboros is resolved;
-									if fightoutcome >= 20 and fightoutcome <= 29:
-										say "[defeatedbycerb]"; 
-									otherwise:
-										say "[runforit]";
-								if fightoutcome >= 20 and fightoutcome <= 29:
-									say "[defeatedbycerb]"; 
-								otherwise:
-									say "[runforit]";
-							if fightoutcome >= 20 and fightoutcome <= 29:
-								say "[defeatedbycerb]"; 
-							otherwise:
-								say "[runforit]";
-						if fightoutcome >= 20 and fightoutcome <= 29:
-							say "[defeatedbycerb]"; 
-						otherwise:
-							say "[runforit]";
-					if fightoutcome >= 20 and fightoutcome <= 29:
-						say "[defeatedbycerb]"; 
-					otherwise:
-						say "[runforit]";
+					say "[defeatedbycerb]"; 
 			otherwise:
 				say "Getting your tail kicked by the wolverine you find yourself being escorted out of the museum via a foot to the ass! Grunting and then grumbling you rub your rear as you realize that challenging the guard in a full on fight might not be so wise at the moment. Maybe coming up with a plan would be a better choice?[line break]"; 
 				decrease score by 10;
@@ -437,7 +401,7 @@ instead of resolving a Ouroboros:
 			otherwise:
 				say "Perhaps if you were a full wolverine the other guard might let you take his place? Maybe?[line break]";
 	otherwise:
-		say "Noticing that you're approaching the section where the Ouroboros medallion was once stored, you decide to steer clear of the area.";			now Ouroboros is resolved;
+		say "Noticing that you're approaching the section where the Ouroboros medallion was once stored, you decide to steer clear of the area.";
 
 
 to say defeatedbycerb:
@@ -445,15 +409,7 @@ to say defeatedbycerb:
 	add "medallion" to invent of player;
 	increase score by 10;
 	now Ouroboros is resolved;
-
-to say runforit:
-	say "Running as fast as your legs can take you, you manage to outrun the Cerberus chasing you as you head out of the Museum into the city. The medallion inside of your pocket shifts and thumps against your side reminding you of the worth of the trouble you just experienced.";
-	add "medallion" to invent of player;
-	increase score by 10;
-	now Ouroboros is resolved;
-
-
-				
+			
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -503,8 +459,8 @@ Instead of resolving a Special Delivery:
 			decrease libido of player by 4;
 			if libido of player < 0, now libido of player is 0;
 			increase score by 2;
+			now bch is 1;
 			now Special Delivery is resolved;
-			now omq is 10;
 		otherwise:
 			say "Getting thrashed against the sides of the ship by the VERY powerful hydra you find yourself grunting as your insides start to bitch at you from the ache running throughout your ribs. The pain slowly starts to go in about thirty seconds however, thanks to your advance healing abilities, but that proves to not be quite enough time for you to fully heal as you hear the booted feet of the red eyed scalie sauntering over to you. Gritting your teeth you prepare for another physical altercation, but then, the unexpected happens.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -525,9 +481,9 @@ Instead of resolving a Special Delivery:
 			delete undisclosed case;
 			decrease libido of player by 4;
 			if libido of player < 0, now libido of player is 0;
+			now bch is 1;
 			increase score by 3;
 			now Special Delivery is resolved;
-			now omq is 10;
 
 
 Table of Game Objects (continued)
