@@ -254,12 +254,18 @@ Definition: A grab object(called X) is wielded:
 	if weapon object of player is x, yes;
 	no;
 
-Definition: A situation(called X) is close:
-	if ( sarea of X matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of X is "Allzones" or the sarea of x is "allzones" ) ):
+Definition: A situation(called X) is available:
+	if a situation is unresolved, no;
+	if a situation is close:
 		if hardmode is true:
 			yes;
 		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):
 			yes;
+	no;
+	
+Definition: A situation(called X) is close:
+	if ( sarea of X matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of X is "Allzones" or the sarea of x is "allzones" ) ):
+		yes;
 	no;
 	
 Definition: A scavevent(called X) is scavable:
@@ -269,7 +275,8 @@ Definition: A scavevent(called X) is scavable:
 		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):
 			yes;
 	no;
-	
+
+
 Definition: A person(Called X) is pure:
 	if bodyname of x is facename of X:
 		if bodyname of x is tailname of X:
@@ -1184,15 +1191,12 @@ carry out hunting:
 							Fight;
 				break;
 		if found is 0:
-			repeat with z running through close situations:
-				[ if hardmode is false and the level of z is greater than (the level of the player plus levelwindow), next; ]
-				if z is resolved, next;
-[				if ( sarea of z matches the text battleground, case insensitively ) or ( z is a scavevent and ( sarea of z is "Allzones" or the sarea of z is "allzones" ) ):				[Only situations in this zone can be hunted]
-					let tempnum be 0;			[do-nothing action]
-				otherwise:
-					if printed name of z matches the text topic understood, case insensitively:
-						now sitfound is 1;
-					next;]
+			repeat with z running through unresolved situations:
+				if z is not close:
+					if sitfound is 0:
+						if printed name of z matches the text topic understood, case insensitively:
+							now sitfound is 1;
+					next;
 				if printed name of z matches the text topic understood, case insensitively:
 					say "It should be somewhere....";
 					now found is 1;
@@ -3430,7 +3434,7 @@ This is the explore rule:
 			plot;
 			wait for any key;
 	if something is 0 and a random number from 1 to 20 is less than 6 plus bonus and there is an unresolved situation :
-		let L be a random close unresolved situation;
+		let L be a random available situation;
 		If L is not nothing:
 			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
 			now something is 1;
