@@ -43,13 +43,24 @@ Coat color could be that of a grey fox, a red fox, or artic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
-A Fox Taur is a infection model.  The description of a Fox Taur is "A strange creature that resembles a centaur, except it's covered in rusty red fur all over, and is made of fox, not horse. Her face is vulpine as well, with black coated ears that swivel towards sounds. She has two large breasts that bounce with each step. At a guess, you would put them around F cups, and you think they are nippleless at first, but catch a glimpse of the black flesh hiding under the fur. Under her lower body, things get more interesting. She has four seats of small breasts that run along the front of the lower, and a large "  The TF table of a Fox Taur is Table Fox Taur.  Fox Taur is female. the Fox Taur is not immune. the Fox Taur is horny. the Fox Taur is not benign. The belly of the Fox Taur is the dark belly.
+A Fox Taur is a infection model.  The description of a Fox Taur is "A strange creature that resembles a centaur, except it's covered in rusty red fur all over, and is made of fox, not horse. Her face is vulpine as well, with black coated ears that swivel towards sounds. She has two large breasts that bounce with each step. At a guess, you would put them around F cups, and you think they are nippleless at first, but catch a glimpse of the black flesh hiding under the fur. Under her lower body, things get more interesting. She has four seats of small breasts that run along the front of the lower, and a large ".  The TF table of a Fox Taur is Table Fox Taur.  Fox Taur is female. the Fox Taur is not immune. the Fox Taur is horny. the Fox Taur is not benign. The belly of the Fox Taur is the dark belly.
 
 The move rate of a Fox Taur is 2.
 The attack rate of a Fox Taur is 2.
 The reflex of a Fox Taur  is 15.
 The primary attack description of a Fox Taur is "[one of]slides up against their victim, pressing their large breasts temptingly while whispering soft nothings in an ear, a hand brushing across[or]leaps at the target of their interest, tackling them to the ground and grinding her groin against[at random]".
 The TF description of a Fox Taur is "moans softly, falling to their knees as a huge tail erupts from their bottom, rapidly covered in scales. They explode out of their clothes as they gain new curves and height. An intense, but brief, scent of pure lust permeates the area as they rise as a".
+
+Every turn while the tf table of pelvis is table fox taur and there is a playerheld person:
+	let x be the number of playerheld person;
+	if a random chance of 1 in 4 succeeds:
+		let z be 0;
+	otherwise:
+		continue the action;
+	if x is 1:
+		say "One person in you scene: [list of playerheld person] - [x]";
+	otherwise:
+		say "Multiple people in you scene: [list of playerheld person] - [x]";
 
 [Purple Egg is a kind of thing. The description of Purple Egg is "What a curious looking egg, so lustrous and large. The purple shade is a bit odd, but you feel protective of it. Is it still alive?". The TF Table of Purple Egg is table Fox Taur. 1 Purple Egg is in town border. Purple Egg is infectitem. It is edible.]
 

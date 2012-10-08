@@ -2249,7 +2249,7 @@ Check UBng:
 			reject the player's command;
 		let x be 0;
 		repeat with cur running through on-stage people:
-			if engulfer of cur is player:
+			if cur is playerheld:
 				increase x by 1;
 		if x is greater than 1:
 			say "You are too full, two is the absolute maximum.";
@@ -2877,6 +2877,11 @@ if they are in egg[ and the engulfer is not nothing], yes;
 if they are in Birthing Pouch[ and the engulfer is not nothing], yes;
 if the person is off-stage, no;
 no;
+
+Definition: A thing (Called N) is playerheld:
+	if N is not engulfed, no;
+	if the engulfer of N is the player, yes;
+	no;
 
 definition: A person is an npc if they are not the player;
  
