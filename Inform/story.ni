@@ -1184,15 +1184,15 @@ carry out hunting:
 							Fight;
 				break;
 		if found is 0:
-			repeat with z running through situations:
+			repeat with z running through close situations:
 				[ if hardmode is false and the level of z is greater than (the level of the player plus levelwindow), next; ]
 				if z is resolved, next;
-				if ( sarea of z matches the text battleground, case insensitively ) or ( z is a scavevent and ( sarea of z is "Allzones" or the sarea of z is "allzones" ) ):				[Only situations in this zone can be hunted]
+[				if ( sarea of z matches the text battleground, case insensitively ) or ( z is a scavevent and ( sarea of z is "Allzones" or the sarea of z is "allzones" ) ):				[Only situations in this zone can be hunted]
 					let tempnum be 0;			[do-nothing action]
 				otherwise:
 					if printed name of z matches the text topic understood, case insensitively:
 						now sitfound is 1;
-					next;
+					next;]
 				if printed name of z matches the text topic understood, case insensitively:
 					say "It should be somewhere....";
 					now found is 1;
