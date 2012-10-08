@@ -1,7 +1,12 @@
-Version 1 of BFandI by Stripes begins here.
+Version 3 of BFandI by Stripes begins here.
 
-"Creates the 'Brute Force and Ignorance' debugging command to forcibly check the various new column entries for critters on the table of random critters.  This document also contains various data on the new player variables created to go with these and what the use and possible applications of the new column entries can include.";
+"Creates the 'Brute Force and Ignorance' debugging commands to forcibly check on various data in the game.  This document also contains various data on the new player variables created to go with these and what the use and possible applications of the new column entries can include.";
 
+[ BFandI command list:
+bfandi (or bfandi1) checks the various new column entries for critters on the table of random critters.
+bfandi2 lists all existing creatures in the monster table and displays whether they have an altcombat entry, showing that entry if it exists.
+bfandi3 lists all situations in the current area, whether they're resolved or unresolved and it's level.  It will also mention if it's a scavevent.
+]
 
 Section 13 - Brute Force Creature Testing (BFandI command) - Not for release
 
@@ -141,6 +146,38 @@ carry out bfanditesting2:
 			wait for any key;
 			say "[line break]";
 
+[------------------------------------------------------------]
+
+bfanditesting3 is an action applying to one topic.
+understand "bfandi3" as bfanditesting3.
+
+check bfanditesting3:
+	if there is no dangerous door in the location of the player:
+		say "I don't see any good hunting grounds around here." instead;
+	otherwise:
+		let y be a random dangerous door in the location of the player;
+		now battleground is the marea of y;
+
+carry out bfanditesting3:
+	let totalsit be 0;
+	let zonesit be 0;
+	let unressit be 0;
+	let scavsitnum be 0;
+	say "Current area: [battleground][line break]";
+	repeat with z running through situations:
+		increase totalsit by 1;
+		if ( sarea of z matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ) ):
+			increase zonesit by 1;
+			say "[z] is [if z is resolved][special-style-2]Resolved[roman type][otherwise][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
+			if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
+				say ".  [bold type]Scavevent[roman type] (All-zones)";
+				increase scavsitnum by 1;
+			otherwise if z is a scavevent:
+				say ".  [bold type]Scavevent[roman type]";
+				increase scavsitnum by 1;
+			say ".";
+			if z is unresolved, increase unressit by 1;
+	say "[bold type][zonesit][roman type] ([special-style-1][unressit][roman type]/[special-style-2][zonesit - unressit][roman type]) of [totalsit] total events.  [bold type][scavsitnum][roman type] are scavevents.";
 
 
 BFandI ends here.
