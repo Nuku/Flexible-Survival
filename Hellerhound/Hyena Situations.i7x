@@ -1,4 +1,5 @@
 Hyena Situations by Hellerhound begins here.
+[ Moved Intact Fountain to the College Campus]
 
 Section 1 - Hyena Kill
 
@@ -55,10 +56,10 @@ instead of resolving a panther trap:
 
 Section 3 - Intact Fountain
 
-Intact Fountain is a situation.
+Intact Fountain is a situation. The sarea of Intact Fountain is "Campus".
 
 instead of resolving an intact fountain:
-	say "You find a fountain, intact among the wreckage of the city. However it looks like the water's purity did not survive, nor did the fountains appearance. The fountain is covered with the sexual fluids, milk, and urine of (you suspect) all the creatures in the city. The water is cloudy and murky, many different strains of stain swirling in the water. You can drink or collect it, but it is at your own risk.";
+	say "You find a fountain, intact among the chaos of the infected campus. However it looks like the water's purity did not survive, nor did the fountains appearance. The fountain is covered with the sexual fluids, milk, and urine of (you suspect) all the creatures in the city. The water is cloudy and murky, many different strains of stain swirling in the water. You can drink or collect it, but it is at your own risk.";
 	say "Do you drink?";
 	if the player consents:
 		say "You drink deeply from the fountain, quenching your thirst no matter what the cost.";
