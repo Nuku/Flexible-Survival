@@ -1,8 +1,8 @@
 Version 5 of Soldier Event by Wahn begins here.
-[Version 5 - return to the Minotaur Camp]
+[Version 5.1 - Two events moved to other areas]
 
 Soldier Squad is a situation.
-The sarea of Soldier Squad is "Outside";
+The sarea of Soldier Squad is "Warehouse";
 when play begins:
 	add Soldier Squad to badspots of guy;       [male soldiers]
 	add Soldier Squad to badspots of girl;      [one changes into a female husky]
@@ -66,16 +66,16 @@ Instead of resolving a Trickster's Masterpiece:
 
 
 Human Urges is a situation.
-The sarea of Human Urges is "Outside";
+The sarea of Human Urges is "Red";
 when play begins:
 	add Human Urges to badspots of guy;      [male soldier]
 	add Human Urges to badspots of girl;     [female soldier]
 
 Instead of resolving a Human Urges:
-	say "     As you move through the empty streets of the city, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans.";
-	say "     Their city-camouflage clothing strewn about on the floor and rifles leaned against the opposite wall, you see two soldiers in intimate embrace on a bed. It's a man and a woman, with his hips pumping up and down as he fucks her with fast strokes and her arms holding him close to her body. One doesn't have to be infected with nanites to feel the basic urges of human existence - and with what's going on around all of you, those two turned to each other to let off some steam.";
+	say "     As you wander through one of the residential areas next to this seedy section of town, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans.";
+	say "     Their city-camouflage clothing strewn about on the floor and rifles leaned against the opposite wall, you see two soldiers in intimate embrace on a bed. It's a man and a woman, with his hips pumping up and down as he fucks her with fast strokes and her arms holding him close to her body. One doesn't have to be infected with nanites to feel the basic urges of human existence - and with what's going on around all of you and the sexual sights around here especially, those two turned to each other to let off some steam.";
 	say "     You silently watch them go at it, sliding your hand down to your own crotch to stroke yourself. Both of the soldiers look pretty good, sweat glistening on their trained bodies as they move in unison. Soon, the woman's moans rise as she gets closer and closer, then turn into full-fledged lustful screams as she orgasms. Her partner isn't far behind, plunging his shaft deep into her pussy and grunting with each shot of semen he cums into her.";
-	say "     They lie on the bed in each other's arms for a moment, then the man pulls his cum-dripping cock out of her and stands up, going for a pack of cigarettes lying on a dresser nearby. The woman just lies there, softly stroking her wet pussy lips as she rides out the last bit of her orgasm. Unseen, but deep inside her, her partner's sperm race onwards, doing their duty in the battle to keep humanity going. The fastest of them soon finds a fertile egg, burrowing into it and starts a new life. Only time will tell if its parents succeed in their mission to protect humanity of if it and they will become something different in the end.";
+	say "     They lie on the bed in each other's arms for a moment, then the man pulls his cum-dripping cock out of her and stands up, going for a pack of cigarettes lying on a dresser nearby. The woman just lies there, softly stroking her wet pussy lips as she rides out the last bit of her orgasm. Unseen, but deep inside her, her partner's sperm race onwards, doing their duty in the battle to keep humanity going. The fastest of them soon finds a fertile egg, burrowing into it and starts a new life. Only time will tell if its parents succeed in their mission to protect humanity or if it and they will become something different in the end.";
 	increase score by 5;
 	now Human Urges is resolved;
 

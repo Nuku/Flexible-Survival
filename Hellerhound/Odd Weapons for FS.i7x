@@ -47,7 +47,7 @@ the scent of garbage can lid is "A heavy scent of garbage fills your nose as you
 
 Section 1 - Garbage can lid
 
-Smelly garbage is a situation.
+Smelly garbage is a scavevent.  The sarea of Smelly garbage is "Allzones".
 
 instead of resolving a smelly garbage:
 	say "You come across a garbage pail, obviously not tended since before the infection began. The stuff inside is useless slime, but maybe you could use the lid as a shield?";

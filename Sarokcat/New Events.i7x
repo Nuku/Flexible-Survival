@@ -1,4 +1,5 @@
 New Events by Sarokcat begins here.
+[Abandoned Player moved to Warehouse area]
 
 "Adds a series of random events to Flexible Survival with several different outcomes."
 
@@ -79,10 +80,10 @@ Instead of Resolving a Wyvern Flight:
 
 Section 4- Abandoned player
 
-Abandoned player is a situation
+Abandoned player is a situation.  The sarea of Abandoned player is "Warehouse".
 
 Instead of Resolving a Abandoned player:
-	say "As you search the deserted streets of the city, you hear some noise coming from a nearby alley, cautiously following it you prepare for combat as you move closer.  Gripping your makeshift weapon tightly, you duck around the corner and prepare to engage in epic combat... with an abandoned CD player.  Sighing you lower you weapon before looking around you in embarrassment, fortunately there was no one around to see that.  Checking the music player you decide to leave the instrument of your ridicule where it was so it wont remind you of today, besides, you never liked that artist much anyways.";
+	say "As you search the deserted streets of the area close to the waterfront, you hear some noise coming from a nearby alley, cautiously following it you prepare for combat as you move closer.  Gripping your makeshift weapon tightly, you duck around the corner and prepare to engage in epic combat... with an abandoned CD player.  Sighing you lower you weapon before looking around you in embarrassment, fortunately there was no one around to see that.  Checking the music player you decide to leave the instrument of your ridicule where it was so it wont remind you of today, besides, you never liked that artist much anyways.";
 	Now Abandoned player is resolved;
 
 
@@ -277,23 +278,19 @@ Instead of Resolving a library visitor:
 	if libvis is 0:
 		say "Returning from a rather boring time searching the city, you find the library doors scratched and dented, as if some large creature had attempted to enter... perhaps scenting your recent presence. Fortunately enough it doesn't seem to have found a way in, although its attempt is still worrisome, you should probably keep an eye out in case it comes back.";
 		increase libvis by 1;
-		stop the action;
-	if libvis is 1:
+	otherwise if libvis is 1:
 		say "Returning to the library in a better mood then normal, your foraging having gone well today, you find that some creature has paid the library a visit in your absence again.  The creature seems to have actually tried searching the area around the building this time for other entry points, apparently not able to get in the doors you fortuitously locked behind you.  You wonder if this is the same visitor as last time, as it is showing much more reasoning capability now... still it didn't get in and you came back from the city with some extra food.  That's definitely a good sign isn[apostrophe]t it?";
 		increase libvis by 1;
 		Add "food" to invent of player;
-		stop the action;
-	if libvis is 2:
+	otherwise if libvis is 2:
 		say "returning from your hours of searching the city, you are relieved to see the library up ahead of you, and the chance to rest and relax a little from your scavenging.  However just as soon as you let your guard down to unlock the door and let yourself in, one of the creatures prowling the city springs out of concealment and attacks!'";
 		fight;
 		say "Finally driving away the creature, you quickly duck inside the library to rest and relax, your heart hammering from the  shock of the unexpected fight and the fight itself.  The beast was obviously lying in wait for your return, making you wonder if it was the creature that has been trying to get into the library these past several times. Hopefully its defeat at your hands means it won[apostrophe]t be back this way again anytime soon, then again if it does come back you suppose you will just have to be ready for it.";
 		increase libvis by 1;
-		stop the action;
-	if libvis is 3:
+	otherwise if libvis is 3:
 		say "Returning to the library you are shocked to open the door to find that you appear to have had a visitor again, only this time they somehow made their way inside. You look around at the library entrance and the books knocked over and the obvious signs of someone or something searching the place, probably for you.  Checking carefully you determine that whatever it was and however it got in here, at least now it seems to be long gone, luckily enough.  Following what you can of it's trail, you sigh in relief as it doesn[apostrophe]t seem to have found the entry to the bunker in its searching, of course you still haven[apostrophe]t figured out how it found its way in to begin with...";
 		increase libvis by 1;
-		stop the action;
-	if libvis is 4:
+	otherwise if libvis is 4:
 		say "After another long day searching the abandoned city, you are happy to return to the library to for some hard earned rest. As you go to unlock the door you remember your unwanted visitor from before, and are thus careful when you go to open the door up, just in case. You[apostrophe]re caution seems warranted as as soon as you begin to swing the door open, something inside barrels out and attacks you directly! And from a glimpse of more movement from inside heading this way, apparently this time it isn't alone!";
 		fight;
 		say "Dealing with your first opponent, you barely have time to take a breath before another creature that had been hiding outside around the corner moves in on you!";
