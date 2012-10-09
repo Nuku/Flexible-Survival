@@ -854,6 +854,7 @@ instead of going to Hidden Lab while hospquest > 10:
 		say "     'I did not expect you back.  You did not call for the helicopter.  What has happened?  My orders were for you to only return when you had finished with the scientist.'  Noticing your expression, he stiffens and glares at you angrily with his blood red eyes.  'Unless you have no intention of doing so.  You dare betray me?'";
 		say "     He hops off his stool and rushes towards the intercom button at one corner of the room.  You, already taking advantage of his brief confusion, were already moving in that direction to cut him off.";
 		let bonus be ( dexterity of player minus 10 ) divided by 2;
+		if bonus > 8, now bonus is 8;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
 		if bonus + dice is greater than 9:
