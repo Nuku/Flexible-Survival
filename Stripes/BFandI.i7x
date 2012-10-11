@@ -179,5 +179,43 @@ carry out bfanditesting3:
 			if z is unresolved, increase unressit by 1;
 	say "[bold type][zonesit][roman type] ([special-style-1][unressit][roman type]/[special-style-2][zonesit - unressit][roman type]) of [totalsit] total events.  [bold type][scavsitnum][roman type] are scavevents.";
 
+[------------------------------------------------------------]
+
+bfanditesting4 is an action applying to one topic.
+understand "bfandi4" as bfanditesting4.
+
+carry out bfanditesting4:
+	let choicemade be 0;
+	let unressit be 0;
+	let scavsitnum be 0;
+	let tempsitlist be the list of situations;
+	say "Listing all situations.  Select sort parameter by number:[line break]";
+	say "[link]1 - Hunting area[as]1[end link][line break]";
+	say "[link]2 - Level[as]2[end link][line break]";
+	say "[link]3 - Unsorted[as]3[end link][line break]";
+	say "Option> [run paragraph on]";
+	while choicemade is 0:
+		get a number;
+		if calcnumber < 1 or calcnumber > 3:
+			say "Pick option 1 (Area), 2 (Level) or 3 (Unsorted) by number> [run paragraph on]";
+		otherwise:
+			now choicemade is 1;
+			if calcnumber is 1:
+				sort tempsitlist in sarea order;
+			if calcnumber is 2:
+				sort tempsitlist in level order;
+	repeat with z running through tempsitlist:
+		say "[z] ([sarea of z]) is [if z is resolved][special-style-2]Resolved[roman type][otherwise][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
+		if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
+			say ".  [bold type]Scavevent[roman type] (All-zones)";
+			increase scavsitnum by 1;
+		otherwise if z is a scavevent:
+			say ".  [bold type]Scavevent[roman type]";
+			increase scavsitnum by 1;
+		say ".";
+		if z is unresolved, increase unressit by 1;
+	say "Total: [bold type][number of entries in tempsitlist][roman type] ([special-style-1][unressit][roman type]/[special-style-2][number of entries in tempsitlist - unressit][roman type]).  [bold type][scavsitnum][roman type] are scavevents.";
+
+
 
 BFandI ends here.
