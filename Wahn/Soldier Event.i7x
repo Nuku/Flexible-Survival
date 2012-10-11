@@ -1,5 +1,5 @@
-Version 5 of Soldier Event by Wahn begins here.
-[Version 5.1 - Two events moved to other areas]
+Version 6 of Soldier Event by Wahn begins here.
+[Version 6 - Elaine, Adam and the Radio]
 
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse";
@@ -95,7 +95,8 @@ Instead of resolving a Captured Demon:
 	say "     After waiting some minutes so be sure they're gone, you go back to the window and look in. Now there's only that one soldier in there, looking from the demon to the entrance door and back again. He looks rather nice, slender but muscular and with a handsome face. While you're still wondering if you could perhaps go in and talk to him, the demon brute makes a snorting sound, startling the soldier and you as a slight movement runs through his bound body. Private Jackson raises his weapon and steps closer, poking the demon in the chest to check if he's still unconscious.";
 	say "     ...which is exactly what the brute has been waiting for. With a metallic screech the chains holding him rip apart as he flexes his muscles, then grips the barrel of the rifle and bends it to a right angle. His other hand quickly grabs the young soldier around the throat and stops any attempt to escape."; 
 	say "     Chuckling in a deep gravelly voice, the demon says 'Did you really think it'd be that easy to capture a soldier of the infernal legion? You'll pay for your insolence!' and rips the soldier's uniform off his body. Carrying the man to the bar, the demon bends him over it and gives his ass a hard slap, leaving a reddening hand-print on the pale flesh of the young soldier's right bun. 'If you try running, I'll disembowel you. But feel free to struggle and scream - I like it.' the demon says, then grabs his massive erection and strokes it."; 
-	say "     Seeing the demon prepare to rape the young soldier, you wonder if you should step in and stop him. The safer option would be to just watch it happen, but can you just leave Private Jackson to his fate?";
+	say "     [line break]";
+	say "     Seeing the demon prepare to rape the young soldier, you wonder if you should step in and stop him. The safer option would be to just watch it happen, but can you just leave Private Jackson to his fate? ";
 	if player consents:   [just watch]
 		say "     The demon smacks his manhood against the human's ass several times, creating slapping noises and making him grunt in pain. Looking down at the reddened cheeks and the deeper red hand-print on them, the demon aims his cock at Private Jackson's virgin pucker and plunges it right in. His victim whimpers in pain as the infernal cock forces his asshole to open and the tick shaft of the demon's cock sinks inside his body. You watch the otherworldly beast fuck the poor man without restraint, slamming in and out and just getting more and more aroused as the soldier begs and struggles weakly to push him off.";
 		say "     Then finally, the demon brute slams his whole shaft inside, roaring in satisfaction as the contents of his balls erupt into his human captive. He keeps pumping blast after blast of cum into the young man, pumping slowly in and out of his hole with squishy noises as cum starts to squirt out around his shaft from the overfilled ass. Pulling Private Jackson's head up by the hair, the demon licks his cheek slowly, then says 'Feel my infernal seed fill your innermost being, little man. You're mine now - now and forever!' With that, he pulls the soldier up against his chest, holding him against his body with his cock still inside the man. Then black-purple smoke starts forming around them both, obscuring them from sight. When it spreads out in the room and slowly blows away, there's nothing to be seen of the demon or his newest slave.";
@@ -121,7 +122,7 @@ when play begins:
 Instead of resolving a Thankful Soldier:
 	say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
 	say "     At first raising his weapon in alarm, he then lowers it again as he recognizes you in turn. 'Hello there. You saved me from that hellish thing in the bar. Thanks a lot for that - sorry I didn't say anything then, but I was pretty groggy after that beating. I'm David, by the way.'";
-	say "     He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.' Do you graciously accept the supplies (Y) ...or would you rather take the handsome Private as your reward? (N)";
+	say "     He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.' Do you graciously accept the supplies (Y) ...or would you rather take the handsome Private as your reward? (N) ";
 	if player consents:   [accept supplies]
 		say "     You take the items he offers you and stash them in your pack. 'Hope that'll help you a bit. Stay safe - help is coming, it's just a question of time till more troops arrive and the scientists figure out this whole mess.' He nods to you, then continues his patrol route.";
 		say "     Food x3, Water x1 obtained.";
@@ -133,7 +134,7 @@ Instead of resolving a Thankful Soldier:
 		say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
 		say "     As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but his moans as you squeeze his ass and his bulge pressing against your body show that he's quite ready for some action. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
 		if(cocks of player > 0 and cunts of player > 0):
-			say "     Being dual-gendered, which way do you want to enjoy your new soldier friend? (Y = Fuck his Ass, N = Take him in your Pussy)";
+			say "     Being dual-gendered, which way do you want to enjoy your new soldier friend? (Y = Fuck his Ass, N = Take him in your Pussy) ";
 			if player consents:   [fuck his ass]
 				say "[DavidFirstAnal]";
 			otherwise:    [let him fuck your pussy]
@@ -221,7 +222,7 @@ This is the GuardTalk rule:
 	choose row Current Menu Selection in table of fucking options;
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
+	say "Is this what you want? ";
 	if player consents:
 		decrease menu depth by 1;
 		clear the screen;
@@ -273,7 +274,7 @@ Instead of sniffing Camp Bravo:
 	say "     The heavy scent of cum and a musky minotaur odor hang in the air.";
 
 North of the Camp Bravo is the Major's Tent.
-The description of Major's Tent is "     You're in a sparely furnished military tent, holding only a field desk, several chairs and a field bed. Major Padgett, the camp's commander sits at the desk, reading scout reports and other paperwork.";
+The description of Major's Tent is "     You're in a sparely furnished military tent, holding only a field desk, a small table, several chairs and a field bed. Major Padgett, the camp's commander sits at the desk, reading scout reports and other paperwork. On top of the table at one wall of the tent rests a military radio.";
 
 Instead of sniffing Major's Tent:
 	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since it's been rutting people in the area right before the tent.";
@@ -284,10 +285,12 @@ The description of Quartermaster's Tent is "     You're in the large tent of Cam
 Instead of sniffing Quartermaster's Tent:
 	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since it's been rutting people in the area right before the tent.";
 
-Major Padgett is a man.
+
+
+Major Padgett is a man. Major Padgett is in Major's Tent.
 The description of Major Padgett is "     Major Padgett is an older man in military uniform, sporting a military buzz-cut of greying hair. He looks busy with scouting reports and other paperwork.";
-Major Padgett is in Major's Tent.
 The conversation of Major Padgett is { "Attention!" };
+thirst of Major Padgett usually is 555.  [ The thirst value is used for the turn-number the player last tried to talk the Major into allowing women with the minotaur ]
 
 instead of sniffing Major Padgett:
 	say "     He smells of Old Spice.";
@@ -316,14 +319,20 @@ to say CampBravoMajorTalk:
 		now sortorder entry is 3;
 		now description entry is "Convince him to let the minotaur breed female soldiers.";
 		now toggle entry is MajorTalk rule;
+	if thirst of Military Radio is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask about the radio.";
+		now sortorder entry is 4;
+		now description entry is "Ask him about the strange transmissions.";
+		now toggle entry is MajorTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Ask him to repeat his briefing.";
-	now sortorder entry is 4;
+	now sortorder entry is 5;
 	now description entry is "Another briefing.";
 	now toggle entry is MajorTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Excuse yourself and break off the conversation.";
-	now sortorder entry is 5;
+	now sortorder entry is 6;
 	now description entry is "Stop talking.";
 	now toggle entry is MajorTalk rule;
 	sort the table of fucking options in sortorder order;
@@ -335,7 +344,7 @@ This is the MajorTalk rule:
 	choose row Current Menu Selection in table of fucking options;
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
+	say "Is this what you want? ";
 	if player consents:
 		decrease menu depth by 1;
 		clear the screen;
@@ -345,6 +354,8 @@ This is the MajorTalk rule:
 			say "[MajorPartypooper]";
 		if (nam is "Talk him into letting women fuck the minotaur."):
 			say "[MajorBreeding]";
+		if (nam is "Ask about the radio."):
+			say "[MajorRadio]";
 		if (nam is "Ask him to repeat his briefing."):
 			say "[MajorBriefing]";
 		if (nam is "Excuse yourself and break off the conversation."):
@@ -363,17 +374,26 @@ to say MajorPartypooper:    [try to make the Major see how he's been tricked]
 	move player to bunker;
 
 to say MajorBreeding:
-	say "     You tell the colonel that the researchers urgently need more material and also that getting direct offspring of Patient Zero to examine could be greatly beneficial for their progress. Minotaur calves would surely be easier to manage and move than the creature itself, especially if they inherit the habit of obedience to superiors from their soldier mothers - or of course if said women can be brought outside the city before they even give birth.";
-	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
-	if 2 is listed in bookcollection, increase bonus by 2;
-	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
-	increase diceroll by bonus;
-	if diceroll is greater than 18:
-		say "     He nods at your explanation, clearly accepting it for the truth. 'I see your point. Spreading out the duty of obtaining and transporting research samples to all soldiers under my command would alleviate the shortage of people I can send off. I'll pass along orders to that effect. Thank you for bringing this to my attention.'";
-		now CampBravoWomenAllowed is 1;
+	if (thirst of Major Padgett - turns < 12):
+		say "     Maybe you should let your previous arguments sink in for a while before trying to talk the Major into this again...";
 	otherwise:
-		say "     He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at ly- err, convincing him of the truth and try this again later.";
+		say "     You tell the colonel that the researchers urgently need more material and also that getting direct offspring of Patient Zero to examine could be greatly beneficial for their progress. Minotaur calves would surely be easier to manage and move than the creature itself, especially if they inherit the habit of obedience to superiors from their soldier mothers - or of course if said women can be brought outside the city before they even give birth.";
+		let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+		if 2 is listed in bookcollection, increase bonus by 2;
+		let diceroll be a random number from 1 to 20;
+		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		increase diceroll by bonus;
+		if diceroll is greater than 18:
+			say "     He nods at your explanation, clearly accepting it for the truth. 'I see your point. Spreading out the duty of obtaining and transporting research samples to all soldiers under my command would alleviate the shortage of people I can send off. I'll pass along orders to that effect. Thank you for bringing this to my attention.'";
+			now CampBravoWomenAllowed is 1;
+			now ElainePregnant is 48;      [48h till birth]
+		otherwise:
+			say "     He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at ly- err, convincing him of the truth and try this again later.";
+		now thirst of Major Padgett is turns;
+
+to say MajorRadio:
+	say "     As you ask the Major about the strange transmission you heard over the radio, he grumbles and gives the device a hostile stare.";
+	say "     'Looks like some kind of critter out there has developed the ability to intercept and answer radio broadcasts. We don't even know how many of them are there - might be a whole lot of the bastards, or just the one who can change its voice infernally well. With them - or it - prattling nonsense, impersonating officers and delivering false information and orders almost constantly, I've had to order the men to turn in their receivers so they're not led astray. So we're out of direct communication with the forces quarantining the city for now...'";
 
 to say MajorBriefing:
 	say "     He looks a bit strangely at you, then says 'But I already - oh well, try to remember it this time: We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples...'[otherwise]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...'[end if] He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
@@ -383,10 +403,341 @@ to say MajorLeave:
 	move player to Camp Bravo;
 
 
-Sergeant Alexander is a man.
+[ thirst states of Military Radio                                    ]
+[   0: Starting State - never listened to any broadcast              ]
+[   1: listened at least once                                        ]
+
+Military Radio is a man. Military Radio is in Major's Tent.
+The description of Military Radio is "     The radio is a chunky piece of olive-green equipment with a multitude of buttons and dials. A handheld speaker set is attached to it at the end of a long flexible cord.";
+The conversation of Military Radio is { "Beep!" };
+
+instead of sniffing Military Radio:
+	say "     Doesn't really smell of anything out of the ordinary.";
+
+Instead of fucking Military Radio:
+	say "     Now how do you want to do that? It's a lifeless piece of machinery. No holes in it where you could insert anything, and no part of it will fit in any of your own orifices.";
+
+instead of conversing Military Radio:
+	say "[CampBravoRadioTalk]";
+
+to say CampBravoRadioTalk:
+	say "     As you turn on the radio and try to reach anyone, you hear this in response:[line break]";
+	if thirst of Military Radio is 0:
+		say "     'You're in Camp Bravo? Excellent, we've been trying to reach you for days now. Now listen - this is important - you have to send two squads of men immediately to the capitol building. There they should strip naked and dance around in a circle to pacify the infected in the area. Do you copy those instructions?'";
+		now thirst of Military Radio is 1;
+	otherwise:
+		say "     '[one of]The number you have dialed is busy. If you want to leave a message, please speak after the beep. BEEEP!'[or]New order to everyone - bring all unspoiled food that contains chocolate you can find to the corner building of Main Street and 5th. Deposit it inside the house and leave the area.'[or]What's going on with you in that city? We've had half-changed soldiers stumbling out to the quarantine barrier babbling something about special transport duties...'[or]...then put the turkey in the oven. And don't forget to bast it regularly with the juices collecting in the dish. You don't want the meat to dry out...'[or]Delta squad, proceed through to the end of the street, no hostiles in sight.'[or]Our researchers have figured out how to turn the nanites off. The signal is has already been sent. You can stop injecting your daily immunity boosters now.'[or]You won't believe how good those husky bitches can give head. Absolutely amazing - why don't you go find one and try it?'[at random]";
+
+
+[ thirst states of Elaine                                            ]
+[   0: Starting State - not pregnant                                 ]
+[   1: invisibly pregnant by the minotaur                            ]
+[   2: visibly pregnant by the minotaur                              ]
+[   3: Adam was born                                                 ]
+[ hunger states of Elaine                                            ]
+[   0: hasn't had sex with the player                                ]
+[   1: had sex with the player                                       ]
+[ ElainePregnant - timer for the birth (48h from start)              ]
+
+
+Elaine is a woman. Elaine is in Quartermaster's Tent.
+The description of Elaine is "     Elaine Scott is the quartermaster of this camp, responsible for the regular and... more unusual supplies the soldiers need. She's an attractive woman in her thirties, about 4'9' or so in height, with short-cut black hair. [if thirst of Elaine is 1]She has a healthy glow to her.[otherwise if thirst of Elaine is 2]Her belly bulges outward in obvious pregnancy.[otherwise if thirst of Elaine is 3]She keeps a watchful eye over her son Adam, who's just learning how to manage the inventory here.[end if]";
+The conversation of Elaine is { "Huh?" };
+ElainePregnant is a number that varies.
+lastfuck of Elaine is usually 555.
+
+An everyturn rule:
+	if ElainePregnant is 1:
+		move Adam to Quartermaster's Tent;
+		now ElainePregnant is 0;
+		now thirst of Elaine is 3;
+	if ElainePregnant is 24:
+		now thirst of Elaine is 2;   [visible pregnancy]
+	if ElainePregnant is 36:
+		now thirst of Elaine is 1;   [so there's some time between the player talking to the Major and Elaine first mentioning she got fucked by the minotaur]
+	if ElainePregnant is greater than 1:
+		decrease ElainePregnant by 1;
+
+instead of sniffing Elaine:
+	say "     Smells like a female human[if thirst of Elaine is 1] - with a slight undertone of pregnancy.[otherwise if thirst of Elaine is 2] - a pregnant one.[otherwise].[end if]";
+
+Instead of fucking Elaine:
+	say "[ElaineFucking]";
+
+instead of conversing Elaine:
+	say "[CampBravoElaineTalk]";
+
+to say CampBravoElaineTalk:
+	blank out the whole of table of fucking options;
+	choose a blank row in table of fucking options;
+	now title entry is "Ask her for a status report.";
+	now sortorder entry is 1;
+	now description entry is "Get a report.";
+	now toggle entry is ElaineTalk rule;
+	if thirst of Elaine is 3:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask her about Adam.";
+		now sortorder entry is 2;
+		now description entry is "Talk about Elaine's son with the minotaur.";
+		now toggle entry is ElaineTalk rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Observe the next group of men getting their special supplies.";
+	now sortorder entry is 3;
+	now description entry is "Watch the dildos being handed out and used.";
+	now toggle entry is ElaineTalk rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Proposition Elaine Scott for sex.";
+	now sortorder entry is 4;
+	now description entry is "Fuck her.";
+	now toggle entry is ElaineTalk rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Do Nothing, turn away.";
+	now sortorder entry is 5;
+	now description entry is "Break the conversation off.";
+	now toggle entry is ElaineTalk rule;
+	sort the table of fucking options in sortorder order;
+	change the current menu to table of fucking options;
+	carry out the displaying activity;
+	clear the screen;
+
+This is the ElaineTalk rule:
+	choose row Current Menu Selection in table of fucking options;
+	let nam be title entry;
+	say "[title entry]: [description entry][line break]";
+	say "Is this what you want? ";
+	if player consents:
+		decrease menu depth by 1;
+		clear the screen;
+		if (nam is "Ask her for a status report."):
+			say "[CampBravoElaineReport]";
+		if (nam is "Ask her about Adam."):
+			say "[CampBravoElaineAdamTalk]";
+		if (nam is "Observe the next group of men getting their special supplies."):
+			say "[CampBravoMenPrepping]";
+		if (nam is "Proposition Elaine Scott for sex."):
+			say "[ElaineFucking]";
+		if (nam is "Do Nothing, turn away."):
+			say "     You wave Elaine Scott off as she looks at you inquisitively and turn away.";
+		wait for any key;
+
+to say CampBravoElaineReport:
+	if CampBravoWomenAllowed is 0:
+		say "     She leads you over to the large sacks resting next to her desk and opens one of them up. It's filled to the top with dildos and butt plugs 'As you can see, our scouts did a good job gathering these. They must have loot- erm, checked out every sex shop in the city. With the amount of material we have now, we'll run out of available men in the camp long before anything else.'";
+		say "     'Some of the guys are a bit squeamish at first, but orders are orders - and a lot of them warm up to sticking things up their butts once they try it. I only wish I could do more than just watch them go at it... us women are the only ones not getting any action these days.' She sighs. 'Seeing all those yummy guys parade into this tent and strip sure makes me horny.'";
+	otherwise:
+		say "     She leads you over to the large sacks resting next to her desk and opens one of them up. It's filled to the top with dildos and butt plugs 'As you can see, our scouts did a good job gathering these. They must have loot- erm, checked out every sex shop in the city. With the amount of material we have now, we'll run out of available men in the camp long before anything else.'";
+		say "     'Some of the guys are a bit squeamish at first, but orders are orders - and a lot of them warm up to sticking things up their butts once they try it. Since the new orders came from the Major, the women in the camp have been added to Tiny Tim's schedule too. The things you do for your country - none of us expected to end up as breeding partners for a minotaur, that's for sure...'";
+	if thirst of Elaine is 1:
+		say "     She nods to the outside of the tent in the east. 'My own turn with our horny bull out there came up not too long ago - and I can tell you he's packing a pretty large piece of equipment. And the amount of cum he pumped into me... that was something else.'";
+	otherwise if thirst of Elaine is 2:
+		say "     She nods to the outside of the tent in the east. 'My own turn with our horny bull out there came up not too long ago...' Elaine says as she strokes her bulging belly. 'His kid grows faster than I had imagined - and I'm hornier than ever.'";
+	otherwise if thirst of Elaine is 3:
+		say "     She nods to Adam, who's busy sorting the inventory of a storage box. 'It still amazes me how quickly my boy has grown. I mean - it's been only days from Tiny Tim fucking me to Adam's current size. The aging seems to have slowed down to human levels now, thankfully.'";
+
+to say CampBravoElaineAdamTalk:
+	say "     'My boy's grown up into a quite handsome charmer, hasn't he? And it only took a few hours. You know, I only let that big brute out there shag me to help fight the plague, but... now that I have him, I love my son. I couldn't bear to send him away, so I talked the Major into letting him stay here as my assistant. Wasn't too hard, once I showed him how disorganized things had gotten after he sent my two male subordinates out to the city quarantine barrier filled with minotaur cum a few days back.'";
+
+to say CampBravoMenPrepping:
+	say "     Four two-man teams of soldiers file into the tent and get into line in front of Elaine's desk. She accepts a salute from them, then goes over to the sacks and hands out items from them, saying 'Here, take this -' (a bottle of lube) '- that -' (a rubber dildo) '- and these -' (two butt-plugs) '- and get each other ready for Tiny Tim out there. Don't be embarrassed about it - you'll be heroes if they find a cure through your service. Also - really, really take your daily immunity boosters! You'll be carrying around potent stuff, so don't miss ANY injection.'";
+	say "     One after another the men get their special equipment, then stand around a bit sheepishly, inspecting the often brightly colored rubber toys they're supposed to put up their asses. Only when Elaine gives one of the men a nudge and says 'Go on, strip - you're not shy little girls.' does the ice break and the men start taking off their clothes. Soon eight naked men stand in the tent, with to of them sporting obvious erections as they look at the other men. These two gay - or at least bi - men take point, telling their partners to bend over, then lubing them up and starting on their asses with the dildos. The next team of men shrugs, then start emulating the others, which leaves only the two guys closest to you the odd men out.";
+	say "     [line break]";
+	say "     These two, one slender redhead and his more beefy and muscular partner only hesitantly get going. The redhead bends over a storage crate, while the bigger guy takes out the dildo from its packaging, then just starts pushing it against his partner's asshole without any lube at all.";
+	say "     [line break]";
+	say "     Do you want to keep watching and see if they figure things out for themselves, or step in and help things along? (Y = just watch; N = step in) ";
+	if player consents:   [just watch them figure out the lube, etc.]
+		say "     You wince in shared pain as the muscled guy just tries to shove in the dry dildo several times without much success. Seeing that this isn't working, he throws a look at the other teams, who are by now well into fucking each other with their sex toys. 'Oh...' he murmurs embarrassedly, then grabs the lube bottle from the floor and drenches the whole dildo in the slippery fluid. It almost slips out of his hands several times when he gets back to inserting it into his partner's ass, but after a few tries he finally gets it in and starts to fuck the redhead soldier with it.";
+		say "     Despite the rocky start, it turns out the other guy really likes having his prostrate stimulated, and before too long he shoots a big load all over the side of the crate he's leaning against. After getting his breath back, he says 'That was amazing - come on, your turn... you'll like it.' After the bigger soldier takes his place, the redhead pulls the dildo out of his own ass and starts to push the slippery tip against his partner's opening...";
+	otherwise:	           [get involved]
+		say "     Stepping up to the men, you tell big guy that he can't just shove the toy in dry, especially into a virgin hole. Rather embarrassed at having tried, he listens closely to your instructions and follows them to the letter - warming up some lube in his hands before starting to rub it over and into the redhead's asshole, then massaging his insides with strong fingers. As the redhead's moans at getting fingered get louder and louder, you smile at the man doing the fingering, saying 'And that's how you're supposed to do it.'";
+		if cocks of player > 0:    [male player chars get the choice of fucking]
+			say "     [line break]";
+			say "     Do you want to hand the muscled guy the dildo - or show him how real men go on from here? (Y = Give him the Dildo; N = Fuck the redhead with your own cock) ";
+			if player consents:      [just let them use the dildo]
+				say "     You hand the man the dildo, then walk him through inserting it, going slow so his buddy's relaxed asshole doesn't tighten up again. Soon he's shafting the redhead deeply with the sex toy, encouraged by the man's lustful moans at having his prostrate stimulated. Before too much longer, the slender soldier shoots a big load all over the side of the crate he's leaning against. After getting his breath back, he says 'That was amazing - come on, your turn... you'll like it.' After the bigger soldier takes his place, the redhead pulls the dildo out of his own ass and starts to push the slippery tip against his partner's opening...";
+			otherwise:               [fuck the redhead yourself]
+				say "     You quickly strip off your own clothing, then step up besides the beefy soldier, softly pulling his hands away from his teammate's hole. Lining up your hard shaft with the redhead's ass, you say 'There's something much better than a dildo to stretch a man's hole...', then move forward, touching his pucker with the tip of your cock. Putting your arms around the man's chest, holding him close and stroking his muscles, you whisper 'Just relax and push back a bit.' into his ear as you push forward, slowly spreading his hole around your cock. Then the head is in and moves deeper, exploring this tight tunnel where no man has gone before. And from the red-headed soldier's moans, you're quite well received in his virgin depths.";
+				say "     After bottoming out in him, you give the man a moment to get used to your girth, then fuck his virgin ass, becoming someone he'll never forget - the first guy to fuck him. Your soldier's hole is so warm and tight that you almost forget everything but fucking him - until you hear a moan right next to you and remember the second soldier standing there. The larger, more muscular man has obviously become pretty aroused by watching you shaft his partner and his jerking his own hard-on with his strong hands. Taking a look at his ripped body, long cock and muscled butt, you instantly decide what to do next.";
+				say "     [line break]";
+				say "     Pulling your redhead soldier's lips to yours, you give him a quick kiss, then slowly pull out of his ass and present the ready and slightly gaping opening to the other soldier. 'Your turn.' you say, and the man eagerly takes the spot behind his mate, then sinks himself in him with a satisfied groan. You give him a minute to get really into fucking his teammate, their moans and the slapping noises of one man's hips against the other's ass filling the tent.";
+				say "     And then it's time to take another man's virginity for you. Your eager cock rock-hard, lubed and ready, you step up behind the muscular soldier and thrust forward, penetrating his tight ass in one quick move. He gives a gasp, more in surprise than pain, and looks back at you. Being balls deep in another soldier's ass himself, he can't very well complain, so he just shrugs and starts moving in and out again. Each time he pulls back from his partner's hole, he pushes your shaft deeper in his own ass, giving him quite a bit of extra stimulation that soon has him moaning louder than before.";
+				say "     Your little threesome goes on for a while, until the muscled soldier suddenly shouts 'Aaah - I'm coming!', filling up his buddy's ass with pulse after pulse of his seed. The man's anal muscles spasming around your own shaft push you over the edge right with him, claiming his no longer virgin asshole as yours with a huge load shot deep inside. You pull out of his hole and tell the man to lie down on his back on the crate, then give the red-headed soldier a nudge. As hot and ready as he is, he instantly sinks himself into the larger man's cum-dripping hole, pumping away urgently until his own orgasm approaches. With a last loud moan, he pulls out just in time to cum all over his mate, spraying quite a bit of cum all over his muscled chest.";
+		otherwise:		             [females and neuter just hand over the dildo]
+			say "     You hand the man the dildo, then walk him through inserting it, going slow so his buddy's relaxed asshole doesn't tighten up again. Soon he's shafting the redhead deeply with the sex toy, encouraged by the man's lustful moans at having his prostrate stimulated. Before too much longer, the slender soldier shoots a big load all over the side of the crate he's leaning against. After getting his breath back, he says 'That was amazing - come on, your turn... you'll like it.' After the bigger soldier takes his place, the redhead pulls the dildo out of his own ass and starts to push the slippery tip against his partner's opening...";
+	say "     [line break]";
+	say "     Over the next hour or so, you watch all of the men get fucked in the ass with the dildos - and sometimes their teammates hard shafts. Looks like a successful prepping session for their later encounters with the minotaur to you.";
+
+to say ElaineFucking:
+	if cocks of player is 0:
+		say "     She shakes her head as you proposition her. 'Sorry, I don't swing that way. But I'm sure you'll find a willing man - or beast - out in the camp in a second...'";
+	otherwise:
+		if (lastfuck of Elaine - turns < 12):
+			say "     As you approach Elaine and proposition her for sex, she smiles, but turns you away for now. 'Sorry sweetie, I do have other things to do at the moment. Someone has to keep this whole operations supplied, you know...'";
+		otherwise:
+			if thirst of Elaine is 1: 	[pregnant sex]
+				say "     Delighted at a sexual partner not in her chain of command, the soldier eagerly responds, putting her arms around you and giving you a hungry kiss. Without hesitation she pulls off her top and throws it to the side, quickly followed by boots, pants and underwear. Now fully naked, she makes a quite enticing picture - with her full breasts, trained body and a bulging pregnant belly.";
+				say "     As you stand there, your eyes following her curves, Elaine steps up and runs her hands over you, stroking your body and pulling off your clothing. Soon you're both naked in front of each other, your by now rock-hard cock grasped and stroked by her slender hands. Her eyes wander to a box in a nearby shelf, then she shakes her head softly, murmuring to herself 'No need for condoms today - he can't knock me up twice.'";
+				say "     The horny quartermaster leads you over to her bed and pushes you to lie down on it, running her hands over your body and cock. Not losing any time, she climbs up on the bed with you, holding your proudly erect member up as she lowers herself onto it. Both of you moan deeply as your shaft spreads the moist cunt lips and penetrates her warm and tight opening. With Elaine moving up and down on your shaft, you revel in the incredible feeling of her inner walls rubbing against your shaft. Feels like she's fit and trained all over, even with her inner muscles, which grip and squeeze your cock at just the right moments each time you slide into her.";
+				say "     The two of you spend a long while on the bed, fucking each other and making out, until you feel an urgent feeling rise in your balls. You thrust upwards, burying your cock as far as you can go and grab Elaine's hips to hold her body tight as spurt after spurt of fertile seed shoot upwards into her vagina.";
+				say "     [line break]";
+				say "     Leaning down to you, Elaine gives you a deep kiss, moaning 'Thanks, stud. I really needed that...' After a short rest, she slides off your slowly softening cock and goes to put her clothes back on.";
+			otherwise:                  [normal sex]
+				say "     Delighted at a sexual partner not in her chain of command, the soldier eagerly responds, putting her arms around you and giving you a hungry kiss. Without hesitation she pulls off her top and throws it to the side, quickly followed by boots, pants and underwear. Now fully naked, she makes a quite enticing picture - with her perky breasts, lithe trained body and an attractive face showing a seductive smile.";
+				say "     As you stand there, your eyes following her curves, Elaine steps up and runs her hands over you, stroking your body and pulling off your clothing. Soon you're both naked in front of each other, your by now rock-hard cock grasped and stroked by her slender hands. She measures your length and girth with her hands, then says 'Just a sec.' and goes for one of the many boxes in the shelves, grabbing something out of it. She says [if cock length of player > 9]'Thankfully I have some extra-large ones in stock that will fit even you.' [otherwise]'Time to suit up.' [end if]and hands you a condom. Eager to get into her pussy, you unwrap it and put it on your shaft.";
+				say "     The horny quartermaster leads you over to her bed and lies down on it, spreading her legs and pussy for you. Not losing any time, you join her on the bed, grab your cock and push it against her nether lips, moaning as you penetrate her warm and tight opening. Thrusting in and out of her body, you revel in the incredible feeling of her inner walls rubbing against your shaft. Feels like she's fit and trained all over, even with her inner muscles, which grip and squeeze your cock at just the right moments each time you slide into her.";
+				say "     The two of you spend a long while on the bed, fucking each other and making out, until you feel an urgent feeling rise in your balls. You thrust in all the way one last time and orgasm, with spurt after spurt of fertile seed filling your condom to the brink.";
+				say "     [line break]";
+				say "     Pulling your lips to hers, Elaine gives you a deep kiss, moaning 'Thanks, stud. I really needed that...' After a short rest, she slides out from under you and goes to put her clothes back on.";
+			now lastfuck of Elaine is turns;
+
+
+Adam is a man.
+The description of Adam is "     The offspring of Elaine Scott and the minotaur out in the middle of the camp, Adam is a ...half-minotaur you'd say. While his lower body consists of furred, two-jointed legs and hooves like his father's, from the waist up he's almost completely human, with only small nubby horns poking out from under his shoulder-length black hair. All in all, he's much less bulky than his father, having a more slender build and the upper body of a fit teenager of about nineteen. His handsome, beardless face is very open and he smiles a lot. At the moment he's dressed in a black t-shirt and wide camo-shorts - with a hole in the back to allow for his moderately long flexible tail (which has a larger tuft of black fur at the end).";
+The conversation of Adam is { "Oh, hello." };
+lastfuck of Adam is usually 555.
+
+instead of sniffing Adam:
+	say "     Adam has a nice smell somewhere between the pheromone-laden musk of his father and a clean human teenager's smell. It doesn't have you ripping your clothes off, but sure is attractive.";
+
+Instead of fucking Adam:
+	if(lastfuck of Adam - turns < 6):
+		say "     Adam chuckles as you try to talk him into sex again. 'You're just insatiable, aren't you? Too bad I don't have quite dad's stamina, so I need a break before I'm ready to go again...'";
+	otherwise:
+		say "[AdamSexMenu]";
+		now lastfuck of Adam is turns; 			
+
+instead of conversing Adam:
+	say "     He looks at you attentively as you step up, saying 'Oh, hello... I mean... Provisional Private Adam Scott ready for orders, sir!' Accepting his salute, you chat a bit and find the boy charming and pretty eager to please.";
+
+to say AdamSexMenu:
+	blank out the whole of table of fucking options;
+	choose a blank row in table of fucking options;
+	now title entry is "Suck Adam's cock";
+	now sortorder entry is 1;
+	now description entry is "Taste some half-minotaur seed.";
+	now toggle entry is AdamSex rule;
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Have him blow you";
+		now sortorder entry is 2;
+		now description entry is "Put Adam's mouth to good use.";
+		now toggle entry is AdamSex rule;
+	if (cunts of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Let Adam fuck your pussy";
+		now sortorder entry is 3;
+		now description entry is "Let the boy breed you.";
+		now toggle entry is AdamSex rule;
+	choose a blank row in table of fucking options;
+	now title entry is "Let Adam fuck your ass";
+	now sortorder entry is 4;
+	now description entry is "Let the boy fill your ass with his seed.";
+	now toggle entry is AdamSex rule;
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Take Adam's ass";
+		now sortorder entry is 5;
+		now description entry is "Fill the half-minotaur's ass with your cock.";
+		now toggle entry is AdamSex rule;
+	sort the table of fucking options in sortorder order;
+	change the current menu to table of fucking options;
+	carry out the displaying activity;
+	clear the screen;
+
+This is the AdamSex rule:
+	choose row Current Menu Selection in table of fucking options;
+	let nam be title entry;
+	say "[title entry]: [description entry][line break]";
+	say "Is this what you want? ";
+	if player consents:
+		decrease menu depth by 1;
+		clear the screen;
+		if (nam is "Suck Adam's cock"):
+			say "[AdamSex1]";
+		otherwise if (nam is "Have him blow you"):
+			say "[AdamSex2]";
+		otherwise if (nam is "Let Adam fuck your pussy"):
+			say "[AdamSex3]";
+		otherwise if (nam is "Let Adam fuck your ass"):
+			say "[AdamSex4]";
+		otherwise if (nam is "Take Adam's ass"):
+			say "[AdamSex5]";
+		wait for any key;
+
+to say AdamSex1:    [suck Adam's cock]
+	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by a line of kisses down over his abs until you're crouched in front of the half-minotaur. Stroking the obvious bulge of his cock through the fabric of his shorts, you have him moaning needfully in no time. You smile up at Adam, undoing the zipper of his sorts then pull them down off his legs, freeing his proudly erect human manhood.";
+	say "     Starting with a tentative lick over his balls, you run your tongue along the side of Adam's long shaft, circling the head of his cock as you get to it. You stroke his dick with your hand a few times, then take its tip between your lips. Adam moans as you slowly slide his manhood deeper into your mouth, running your tongue over its sensitive skin. Soon he hits the back of your mouth, but you take a deep breath and continue going, sliding his shaft deeper and deeper. When your nose finally bumps into the skin under his navel, you have Adam halfway down your throat and gasping almost incoherently how good it feels.";
+	say "     Pulling off his cock to get some air, you run your hands through the black fur on his legs and tight buns, delighted in its softness. Then you stroke his saliva-coated manhood some more and start sucking him in earnest, pumping your lips up and down on his hard shaft. You keep Adam going for a while, bringing him to the brink of an orgasm several times, but stopping each time to let him cool down a bit. Then finally you go all out, sucking on his cock hard and pumping it in and out of your throat. With all the built up arousal, Adam doesn't last much longer before a mind-blowing orgasm shakes his body, his cock pulsing as spurt after spurt of his seed shoot directly into your stomach.";
+	say "     Satisfied with pleasing the young half-minotaur, you stand up and give him another deep kiss, playfully exploring his mouth with your tongue.";
+
+to say AdamSex2:    [have Adam suck the player char's cock]
+	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by licking over his chest and neck until you reach the chin and kiss him again. Moaning 'Blow me, beast-boy.', you move back a step and quickly slide off your clothes. Adam watches you undress, then smiles and replies 'My pleasure, sir.' before he licks his lips and kneels down.";
+	say "     Grasping your by now proudly standing erection in one hand, Adam strokes it softly a few times, then holds it up as he gives your balls a tentative lick and runs his tongue up the underside of your shaft, making you pant in pleasure. Arriving at the tip, he circles the head of your cock a few times with his tongue, then takes it between your lips. Your manhood slowly sliding deeper into his mouth, his lips caressing sensitive skin and giving you amazing sensations. Soon your cock hits the back of your mouth, but Adam takes a deep breath and continues going, sliding your shaft deeper and deeper. When his nose finally bumps into the skin under your navel, you moan loudly from the warm and tight feeling that gives you.";
+	say "     Pulling off your cock to get some air, Adam strokes its saliva-coated length some more, then start sucking you off in earnest, pumping his lips up and down on the hard shaft. He keeps going for a while, bringing you to the brink of an orgasm several times, but stopping each time to let you cool down a bit. Then finally he goes all out, sucking on your cock hard and pumping it in and out of his throat. With all the built up arousal, you don't last much longer before a mind-blowing orgasm shakes your body, spurt after spurt of your seed filling Adam's mouth.";
+	say "     Adam sticks out his tongue, showing off your white creamy cum, then demonstratively swallows it all. Then he stands up and gives you a deep kiss, making you taste some of your cum and playfully tongue-wrestling with you.";
+
+to say AdamSex3:    [pussy-fucked by Adam]
+	[puts Minotaur as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Minotaur":
+			now monster is y;
+			break;
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
+	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by licking over his chest and neck until you reach the chin and kiss him again. Moaning 'I want you inside me, beast-boy.', you stroke his cock through the shorts, then move back a step and quickly slide off your clothes. Adam watches you undress with a smile on his face and replies 'My pleasure, Ma'am.' before grabbing a pile of blankets out of the shelf and spreading them on the floor.";
+	say "     Lying down on the improvised bedding, you have a nice view as Adam pulls down his shorts to stand naked before you. His long cock stands proudly erect in your direction, showing an interesting contrast of white skin against the black fur of his legs. Liking what you see, you spread your legs invitingly and stroke the lips of your pussy, moaning 'I'm waiting for you...'. Adam is very eager to follow your invitation, kneeling down and putting his head between your legs to lick your pussy. And what a long and talented tongue he has - after running it over your sensitive lips and clit, he sticks it inside your vagina, wiggling around and poking your inner walls with the tip. Next, he [if cocks of player > 0]runs his tongue up the underside of your cock, [otherwise]puts a line of small kisses up to your belly button, [end if]then moves up to lie on top of you and gives you a hungry kiss.";
+	say "     Yearning for his cock inside you, you reach down and guide it to your opening, then scooch down a bit to get the head in. Adam moans in lust, sliding his manhood deeper, spreading your inner walls around his hard shaft. Soon he's all the way in, with his balls and soft furred hips rubbing against your body. For a moment, he just stays still like that, connected to you as intimately as possible, before starting to slide in and out. Moans rise in both your throats as he starts fucking you in earnest, going faster and faster with his deep strokes and rubbing just the right spots inside you. With the noise of your coupling quite loud now, it doesn't surprise you to see Elaine and a male soldier look behind the storage shelf to check out what's going on. You don't care if they watch, your whole mind focused on the virile half-minotaur fucking you.";
+	say "     Wrapping your legs around him, you pull him towards you with each of his thrusts, making him slam into you harder and deeper. You lose track of time for a while as you're so thoroughly fucked, only few things registering through the lust-filled buzz in your head. One thing you do remember is Elaine pulling the soldier with her out of sight and moans starting up from the direction of her bed. As Adam does another deep thrust into your body, he stops for a moment, gasping 'I'm getting pretty close.'";
+	say "     [line break]";
+	say "     So, where do you want him to cum? (Y = your pussy; N = your mouth) ";
+	if player consents:
+		say "     You moan 'Fill me with your beast-boy cum.' while flexing your inner muscles around his cock. Eager to follow your command, he resumes his deep and hard strokes, only lasting for a few more before his body stiffen in your embrace. Adam holds tight onto you with his arms as spurt after spurt of his fertile seed shoots out of his throbbing cock and into you, filling your womb with warm cum.[fimpregchance]";
+		say "     'That was amazing - you are amazing.' he moans in between kisses as you lie there for a while, making out with each other as you come down from the rush of orgasm.";
+	otherwise:
+		say "     You moan 'Come in my mouth.' and slide your hands down to his hips to softly push him off. Eager to follow your command, Adam pulls out and moves up over you, kneeling down with his legs left and right of your body. His soft fur feels amazing against your chest and... what's still stroking your pussy? You stretch your head far enough to the side to look past Adam and catch a glimpse of his flexible tail stroking you with the bushy tip. Smiling, you pull on Adam's hips so he moves up a bit more, then get to work on his cock, teasing it with your tongue before sucking on it. It doesn't take long before you push him over the edge, gasping in lust as cum boils up from his balls and gushes into your mouth. You fondle his balls as he comes, feeling them twitch with each new blast of seed.";
+		say "     After you milk the last bit of cum out of his cock, Adam moves back to lie down with you on the blankets. 'That was amazing - you are amazing.' he moans as you pull him in for a sloppy kiss, making him taste his own cum from your mouth. You stay there together for a while, making out with each other as you come down from the rush of orgasm.";
+
+to say AdamSex4:    [ass-fucked by Adam]
+	[puts Minotaur as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Minotaur":
+			now monster is y;
+			break;
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
+	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by licking over his chest and neck until you reach the chin and kiss him again. Moaning 'I want you inside me, beast-boy.', you stroke his cock through the shorts, then move back a step and quickly slide off your clothes. Adam watches you undress with a smile on his face and replies 'My pleasure, sir.' before grabbing a pile of blankets out of the shelf and spreading them on the floor.";
+	say "     Adam pulls down his shorts to stand naked before you, his long cock standing proudly erect in anticipation and showing an interesting contrast of white skin against the black fur of his legs. Liking what you see, you kneel down on the improvised bedding and wiggle your ass at him, moaning 'I'm waiting for you...'. Adam is very eager to follow your invitation, getting behind you on his knees, then leaning down to rim you. And what a long and talented tongue he has - after running it over the outside of your hole a few times, he sticks it inside, wiggling around and poking your inner walls with the tip. Next, he puts a line of small kisses up your back until he reaches your neck and softly pulls your head to the side for a quick kiss.";
+	say "     You feel Adam's soft fur against your ass and legs and the warmth of his engorged cock rest on the small of your back. Yearning to feel him inside you, you reach back and stroke his shaft, then scooch forward a bit until it's resting in the crack of your ass. Adam moans in lust as he pushes forward, slowly increasing the pressure against your pucker before it relents and his cockhead enters you. Putting his arms around you from behind, he holds you close as he slides his manhood deeper, spreading your inner walls around his hard shaft. Soon he's all the way in, with his balls and soft furred hips rubbing against your body. For a moment, he just stays still like that, connected to you as intimately as possible, before starting to slide in and out. Moans rise in both your throats as he starts fucking you in earnest, going faster and faster with his deep strokes and rubbing just the right spots inside you.";
+	say "     With the noise of your coupling quite loud now, it doesn't surprise you to see Elaine and a male soldier look behind the storage shelf to check out what's going on. You don't care if they watch, your whole mind focused on the virile half-minotaur fucking you.";
+	say "     You rock backwards against him with each of his thrusts, making him slam into you harder and deeper. Losing track of time for a while as you're so thoroughly fucked, only few things not to do with Adam's movements, smell, etc. register through the lust-filled buzz in your head. One thing you do remember is Elaine pulling the soldier with her out of sight and moans starting up from the direction of her bed. As Adam does another deep thrust into your body, he stops for a moment, gasping 'I'm getting pretty close.'";
+	say "     [line break]";
+	say "     So, where do you want him to cum? (Y = your ass; N = your mouth) ";
+	if player consents:
+		say "     You moan 'Fill me with your beast-boy cum.' while flexing your inner muscles around his cock. Eager to follow your command, he resumes his deep and hard strokes, only lasting for a few more before his orgasm overcomes him. Adam holds on tight with his arms around you as spurt after spurt of his fertile seed shoots out of his throbbing cock and into you, filling your asshole with warm cum.[mimpregchance] [if cocks of player > 0]Feeling your lover's load inside you, your own arousal mounts quickly, and after a moment of rapid stroking you come all over the blankets below.[end if]";
+		say "     Turning you around, Adam says 'That was amazing - you are amazing.' before pulling you down on the blankets to make out and lie there together as come down from the rush of orgasm.";
+	otherwise:
+		say "     You moan 'Come in my mouth.' and slide your hands down to his hips to softly push him off. Eager to follow your command, Adam pulls out and moves around you, holding his hard cock out for you to suck. Smiling, you lean forward a bit and get to work on his cock, teasing it with your tongue before sucking on it. It doesn't take long before you push him over the edge, gasping in lust as his cum gushes into your mouth. You fondle his balls as he comes, feeling them twitch with each new blast of seed they deliver.";
+		say "     After you milk the last bit of cum out of his cock, Adam moves back to lie down with you on the blankets. 'That was amazing - you are amazing.' he moans as you pull him in for a sloppy kiss, making him taste his own cum from your mouth. You stay there together for a while, making out with each other as you come down from the rush of orgasm.";
+
+to say AdamSex5:    [give Adam's tight ass a good fucking]
+	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by licking over his chest and neck until you reach the chin and kiss him again. Moaning 'I'm gonna fuck you, beasty-boy.' you push him to the next shelf and turn him around. Standing close behind him, rubbing your crotch against his ass, you grab his hands and set them on one of the higher shelf boards so he can hold on to it. Then you run your hands down over his defined chest, arriving at his shorts. Quickly undoing the button and zipper, you pull them down, so Adam now is naked and ready for you to fuck him.";
+	say "     Shucking off your own clothes in no time at all, you take your engorged cock in hand and move in position behind your half-minotaur lover. It's an amazingly soft feeling as you slide it up and down along the crack of his ass with his short block fur rubbing against your skin. Yearning to feel his hole around your cock, you lean forward, pressing against his pucker with the tip of your maleness. Adam moans in lust as you pop in, stretching his sphincter around your cock's girth. Putting your arms around him from behind, you hold him close as you slide your manhood deeper, spreading his inner walls around your hard shaft. Soon you're all the way in, with your balls and hips touching the soft fur of Adam's ass. For a moment, you just stay still like that, connected to him as intimately as possible, before starting to slide in and out. Moans rise in both your throats as you start fucking him in earnest, going faster and faster with deep strokes and rubbing just the right spots to make him gasp and moan.";
+	say "     With the noise of your coupling quite loud now, it doesn't surprise you to see Elaine look behind the storage shelf to check out what's going on. You don't care if she or anyone else watch, your whole mind focused on the tight hole of your virile half-minotaur buddy. Grabbing his hips with both hands, you speed up, slamming into Adam harder and deeper. Then suddenly he gasps, a shudder running through his body as the anal stimulation drives him to orgasm, with long spurts of his cum splattering all over the supply chests of the shelf he's holding on to. With his tight hole flexing around your shaft with each of his shots, you're soon getting close to cumming yourself.";
+	say "     [line break]";
+	say "     So, where do you want to spend your load? (Y = in his ass; N = in his mouth) ";
+	if player consents:
+		say "     You just keep going, thrusting into Adam several more times hard enough to create loud slapping noises as your hips meet his ass. Then as you feel your balls tightening, you bottom out in him, holding Adam tightly around the chest while spurt after spurt of your seed shoot into him.";
+		say "     When you pull your cock out of his dripping hole a while later, Adam turns around, saying 'That was amazing - you are amazing.' before pulls you into an embrace, making out with you.";
+	otherwise:
+		say "     You moan 'I'm close - and I want to come in your moth.' and carefully pull out of his ass. Eager to follow your command, Adam turns around and kneels before you, taking hold of your hard cock. Smiling, he runs his tongue over the underside, then goes to work giving you a blow-job. It doesn't take long before he pushes you over the edge, gasping in lust as your load gushes into Adam's mouth. After he milks the last bit of cum out of your cock, Adam looks up at you and sticks out his tongue, showing you the ample load you shot. Pulling him up from the ground, you give him a deep kiss, tasting your own cum as your tongues explore each other's mouths.";
+		say "     Coming back up to breath, Adam moans 'That was amazing - you are amazing.' affectionately stroking your cheek.";
+
+
+Sergeant Alexander is a man. Sergeant Alexander is in Camp Bravo.
 The description of Sergeant Alexander is "     Sergeant Alexander is a tough-looking soldier, who's seen a lot in his time. He's about 5'11' and pretty buff and muscular. Looks like he's responsible for caring for the minotaur, as he carries box after box of vegetables and other foodstuffs to the creature from behind one of the nearby tents.";
-Sergeant Alexander is in Camp Bravo.
 The conversation of Sergeant Alexander is { "Ick!" };
+lastfuck of Alexander is usually 555.
 
 instead of sniffing Sergeant Alexander:
 	say "     He smells a bit of sweat and minotaur cum. Since he's often pretty close to the action on the parade ground, his uniform has a lot of dried cum-splatters responsible for the smell.";
@@ -396,33 +747,6 @@ Instead of fucking Sergeant Alexander:
 
 instead of conversing Sergeant Alexander:
 	say "[CampBravoAlexanderTalk]";
-
-to say AlexanderFucking:
-	if cocks of player > 0 or cunts of player is 0:
-		say "     He shakes his head as you proposition him. 'Sorry, sonny - this man's only here for the ladies. Why don't you do a round at the post, if you're into that stuff...'";
-	otherwise:
-		let baby be 0;
-		if child is born or gestation of child is not 0, now baby is 1;
-		say "     'How could I say no to such an offer', he replies huskily, then leads you to the side and around a tent, out of sight from the minotaur. He says 'Wouldn't want Tiny Tim over there to get any ideas.' with a nod back towards the parade ground. Then he pulls you close to himself, running large hands over your body and giving you a hot and heavy kiss.";
-		say "     Accompanied by lustful groping at your curves, Sergeant Alexander peels you out of your clothing, then lifts you up on a stack of crates roughly hip-height for him. Pulling off his shirt and throwing it aside, he then opens his zipper, freeing a nicely tick piece of hard man-meat.";
-		say "     After moistening its shaft a bit with his spit he steps up spreads your legs wide. As he rubs your sensitive folds softly with the tip of his cock, you moan lustfully, then gasp as he pushes forward, plunging his shaft into your body. The girth of his member rubbing against your inner walls just feels amazing and the man really knows what he's doing, giving you a deep and very satisfying shafting.";
-		say "     He's got good stamina, so your intense coupling takes quite a while before the man's grunts and moans rise to a lust-filled crescendo and he buries his cock all the way in your cunt with one last deep thrust. You can feel his member pulsing as blast after blast of cum paint your insides, giving you a delightfully full feeling. The large man leans over you to make out some more with his shaft still inside your body, depositing spurts of fertile seed as he wrangles your tongue with his.[fimpregchance]";
-		if baby is 0 and gestation of child is not 0:
-			now facename of child is "human";
-			now bodyname of child is "human";
-			now skinname of child is "human";
-		say "     After depositing his full load inside you, he raises his upper body again and gives your naked form an appreciative look, accompanied by a slight twitch of his cock in your pussy. 'You're an awesome fuck, baby. Let's go for round two.' He starts to pump his cock in and out of you again, but before he can get really into it, a deep-voiced bellow of 'I'm hungry.' sounds from the parade ground. With a sigh, Sergeant Alexander pulls out of your pussy and packs his manhood away with some difficulty because of its erect state. 'Sorry to cut this short, but duty calls...' he says, giving you a quick kiss and then hurries back to the minotaur with a crate full of food.";
-
-Tiny Tim is a man.
-The description of Tiny Tim is "     The large minotaur affectionately called 'Tiny Tim' by the soldiers in the camp currently sits on the ground besides the hitching post used in couplings with him. He's a magnificently well-build creature, at least nine feet tall and with large curved horns adoring his bull-like head. His otherwise human upper body shows thick, ropey muscles under bronzed skin. Beginning at the hip downwards, he has dark brown shaggy fur covering strong two-jointed legs that end in hooves. Between his legs dangles a long human-like cock and two large balls. The minotaur almost constantly half-hard, his manhood springing up instantly to its full one and a half feet of erect length every time the creature sees or smells a sexual partner.";
-Tiny Tim is in Camp Bravo.
-The conversation of Tiny Tim is { "[one of]'Alexander is my friend.'[or]'I'm hungry.'[or]'I'm horny. Want to fuck.'[or]'Are you my friend?'[or]'You smell nice.'[or]'Humans are tight. Good.'[or]'Nice place here.'[or]'I like soldiers.'[at random]" };
-
-instead of sniffing Tiny Tim:
-	say "     The minotaur has a heavy musk with an undertone of cum around him. It must be laden with pheromones, as you're getting quite horny just from taking it in.";
-
-Instead of fucking Tiny Tim:
-	say "     As you move purposefully towards the creature, Sergeant Alexander steps in your way. 'Now just a minute there. I'm responsible for caring for our horny beast here, so if you want to do or watch anything around him talk with me.'";
 
 to say CampBravoAlexanderTalk:
 	blank out the whole of table of fucking options;
@@ -461,7 +785,7 @@ This is the AlexanderTalk rule:
 	choose row Current Menu Selection in table of fucking options;
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
+	say "Is this what you want? ";
 	if player consents:
 		decrease menu depth by 1;
 		clear the screen;
@@ -531,5 +855,39 @@ to say CampBravoGetFucked:
 		say "     The hot any heavy coupling with the large beast continues for about twenty minutes, until the feelings of getting fucked drive you over the edge, your body shaking as orgasm grips it. [if cocks of player > 0]Your cock jerks as thick ropes of cum spray from its tip, splattering over the cum-drenched ground.[end if] As you writhe in the throes of lust, your anal muscles flex and spasm around the minotaur's long thrusting cock, giving your beastly fucker the last push to arrive at his own fulfillment. With a last deep shove he buries his cock fully in you as his balls contract with each blast of cum shooting up his shaft. Breathing heavily, he steadies himself with one hand on the wooden post while the other holds your body close until his orgasm subsides.[mimpregchance]";
 		say "     Thoroughly satisfied, the minotaur gives your sweaty back one last lick, then pulls is large cock out, leaving your stretches asshole gaping and with cum running out of it. Sergeant Alexander comes over to you and helps you to the field bed nearby to sit down and rest a bit before you put on your clothes and gear again.";
 		infect "Minotaur";
+
+to say AlexanderFucking:
+	if cocks of player > 0 or cunts of player is 0:
+		say "     He shakes his head as you proposition him. 'Sorry, sonny - this man's only here for the ladies. Why don't you do a round at the post, if you're into that stuff...'";
+	otherwise:
+		if (lastfuck of Alexander - turns < 12):
+			say "     As you approach Alexander, he immediately sees the lust-filled twinkle in your eyes. He gives you an apologetic shrug, saying 'Sorry, I got duties to perform. Can't fuck around all day, even though I'd like to...' He gives you a quick kiss, then goes to grab some more food for the minotaur.";
+		otherwise:
+			let baby be 0;
+			if child is born or gestation of child is not 0, now baby is 1;
+			say "     'How could I say no to such an offer', he replies huskily, then leads you to the side and around a tent, out of sight from the minotaur. He says 'Wouldn't want Tiny Tim over there to get any ideas.' with a nod back towards the parade ground. Then he pulls you close to himself, running large hands over your body and giving you a hot and heavy kiss.";
+			say "     Accompanied by lustful groping at your curves, Sergeant Alexander peels you out of your clothing, then lifts you up on a stack of crates roughly hip-height for him. Pulling off his shirt and throwing it aside, he then opens his zipper, freeing a nicely tick piece of hard man-meat.";
+			say "     After moistening its shaft a bit with his spit he steps up spreads your legs wide. As he rubs your sensitive folds softly with the tip of his cock, you moan lustfully, then gasp as he pushes forward, plunging his shaft into your body. The girth of his member rubbing against your inner walls just feels amazing and the man really knows what he's doing, giving you a deep and very satisfying shafting.";
+			say "     He's got good stamina, so your intense coupling takes quite a while before the man's grunts and moans rise to a lust-filled crescendo and he buries his cock all the way in your cunt with one last deep thrust. You can feel his member pulsing as blast after blast of cum paint your insides, giving you a delightfully full feeling. The large man leans over you to make out some more with his shaft still inside your body, depositing spurts of fertile seed as he wrangles your tongue with his.[fimpregchance]";
+			if baby is 0 and gestation of child is not 0:
+				now facename of child is "human";
+				now bodyname of child is "human";
+				now skinname of child is "human";
+			say "     After depositing his full load inside you, he raises his upper body again and gives your naked form an appreciative look, accompanied by a slight twitch of his cock in your pussy. 'You're an awesome fuck, baby. Let's go for round two.' He starts to pump his cock in and out of you again, but before he can get really into it, a deep-voiced bellow of 'I'm hungry.' sounds from the parade ground. With a sigh, Sergeant Alexander pulls out of your pussy and packs his manhood away with some difficulty because of its erect state. 'Sorry to cut this short, but duty calls...' he says, giving you a quick kiss and then hurries back to the minotaur with a crate full of food.";
+			now lastfuck of Alexander is turns;
+
+
+Tiny Tim is a man.
+The description of Tiny Tim is "     The large minotaur affectionately called 'Tiny Tim' by the soldiers in the camp currently sits on the ground besides the hitching post used in couplings with him. He's a magnificently well-build creature, at least nine feet tall and with large curved horns adoring his bull-like head. His otherwise human upper body shows thick, ropey muscles under bronzed skin. Beginning at the hip downwards, he has dark brown shaggy fur covering strong two-jointed legs that end in hooves. Between his legs dangles a long human-like cock and two large balls. The minotaur almost constantly half-hard, his manhood springing up instantly to its full one and a half feet of erect length every time the creature sees or smells a sexual partner.";
+Tiny Tim is in Camp Bravo.
+The conversation of Tiny Tim is { "[one of]'Alexander is my friend.'[or]'I'm hungry.'[or]'I'm horny. Want to fuck.'[or]'Are you my friend?'[or]'You smell nice.'[or]'Humans are tight. Good.'[or]'Nice place here.'[or]'I like soldiers.'[at random]" };
+
+instead of sniffing Tiny Tim:
+	say "     The minotaur has a heavy musk with an undertone of cum around him. It must be laden with pheromones, as you're getting quite horny just from taking it in.";
+
+Instead of fucking Tiny Tim:
+	say "     As you move purposefully towards the creature, Sergeant Alexander steps in your way. 'Now just a minute there. I'm responsible for caring for our horny beast here, so if you want to do or watch anything around him talk with me.'";
+
+
 
 Soldier Event ends here.
