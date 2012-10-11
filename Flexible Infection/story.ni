@@ -2267,9 +2267,9 @@ Carry out UBng:
 	slurp the noun with the player;
 	if the noun is in the womb:
 		say "The moment they touch your thick vulva, it's all over. They begin to be drawn into you with powerful contractions, soon settling heavily in your womb, the burning ebbing a moment.";
-		if tf table of pelvis is not table centauress:
+		if tf table of pelvis is not table centauress and tf table of pelvis is not fox taur:
 			infect pelvis with centauress torso;
-		otherwise:
+		otherwise if table table of pelvis is not fox taur:
 			let u be a random not compatible touchable body part;
 			if u is not nothing, infect u with centauress torso;
 

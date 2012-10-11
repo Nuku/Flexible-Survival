@@ -59,9 +59,19 @@ Every turn while the tf table of pelvis is table fox taur and there is a playerh
 	otherwise:
 		continue the action;
 	if x is 1:
-		say "One person in you scene: [list of playerheld person] - [x]";
+		if a random chance of 1 in 2 succeeds:
+			say "Maternal satisfaction runs deep as your swollen belly jostle with the soft motions of your child, waiting to be reborn into a glorious future.";
+		otherwise if a random chance of 1 in 2 succeeds:
+			say "You feel a hand press back against your own as you pat your belly. Your child will be so wonderful when they are born. You can hardly wait to greet them with open arms.";
+		otherwise:
+			say "You feel as if you are not working hard enough. Your womb certainly has room for at least one more. Someone around here is just waiting for their turn to enter you and through you, a pleasurable new life.";
 	otherwise:
-		say "Multiple people in you scene: [list of playerheld person] - [x]";
+		if a random chance of 1 in 2 succeeds:
+			say "Your womb churns a moment as its occupants adjust themselves within you. Pleasure gently tickles at your senses, forcing you to pause just a moment, caught between savoring it and questioning your own future.";
+		otherwise if a random chance of 1 in 2 succeeds:
+			say "Your massively swollen womb begins to jump, subtly at first, then more forcefully. Somehow, you know what's going on and put your hands over your belly to feel your unborn fucking wildly in the warm tight confines of your body.";
+		otherwise:
+			say "One of your children seems to have shoved the other, making you wobble as your massive womb is thrown off balance a moment. You gently pet your belly and whisper soft things, calming your occupants for the time being, even if they still may yet desire escape from the pleasurable future you provide for them.";
 
 [Purple Egg is a kind of thing. The description of Purple Egg is "What a curious looking egg, so lustrous and large. The purple shade is a bit odd, but you feel protective of it. Is it still alive?". The TF Table of Purple Egg is table Fox Taur. 1 Purple Egg is in town border. Purple Egg is infectitem. It is edible.]
 
