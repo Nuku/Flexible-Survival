@@ -121,8 +121,6 @@ When Play begins:
 	now heat end entry is "[cheetahwomanheatend]";
 	now inheat entry is "[cheetahwomaninheat]";
 	
-colliechance is a number that varies.
-
 
 to say cheetahwomaninheat:
 	increase libido of player by 5;
@@ -148,7 +146,7 @@ to say cheetahwomaninheat:
 					if name entry is listed in infections of Felinelist:
 						add X to cmonlist;
 			let cheetahchance be 40 + ( perception of player ) * 2;
-			if colliechance > 90, now colliechance is 90;
+			if cheetahchance > 90, now cheetahchance is 90;
 			if cmonlist is not empty and a random chance of cheetahchance in 100 succeeds:
 				now slutfucked is 0;
 				sort cmonlist in random order;
