@@ -189,7 +189,7 @@ to say liz impreg:
 		if cocks of player is 0:
 			say "With a gasp you feel something you thought long lost to you, a male orgasm, but it feels odd, as it should since you have no member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girls earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[impregchance]";
 		otherwise:
-			say "With a gasp you feel a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girls earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[impregchance]";
+			say "With a gasp you feel a male orgasm, but it feels odd, you cannot see any of your seed leaking out of your member, but it feels like you are still ejaculating. A growing fullness in your feminine depths reveals the true purpose of the Lizard Girl's earlier actions, she has reworked your reproductive system quite amazingly. As you look down in wonder, the glow of release still holding you immobile, you notice a small trail of cum leaking from your pussy lips.[impregchance]";
 
 to say toggle heat flag:
 	now lizgirlinheat is 1 minus lizgirlinheat;

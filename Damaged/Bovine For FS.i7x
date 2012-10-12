@@ -1,5 +1,5 @@
-Version 8 of Bovine For FS by Damaged begins here.
-[ Version 8 - Victory sex by Shadowwolf94 ]
+Version 9 of Bovine For FS by Damaged begins here.
+[ Version 9 - Heat repairs - Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Bovine to Flexible Survivals Wandering Monsters table"
@@ -28,17 +28,16 @@ to say cow vict:
 		now thirst of player is 0;
 		now hunger of player is 0;
 		infect;
-		if Mooing < 8:
-			increase Mooing by 1;
+		now Mooing is 6;
 	otherwise:
 		say "[one of]The cow sits down and you run into her waiting arms, mouth reaching to find a spare nipple[or]You see the cow smile down at you, 'You wanted to play a little first. Come on now, it's time for your meal,' she moos softly to you and you race over, leaping into her waiting arms to grip a teat and begin sucking[or]The bovine woman rubs her breasts and gives her teat-like nipples a squeeze, coaxing some of her delicious milk to flow.  Licking your lips, you rush over to her and start suckling[at random].  The flood of pure contentment as the milk begins to flow into your throat causes you to grow sleepy, soon causing you to fall asleep completely, still drinking from her.[line break]You wake up, stomach bulging slightly, the taste of her milk still in your mouth. You let out a breath that sounds more like a [']Moo['] and wander off.";
 		now thirst of player is 0;
 		now hunger of player is 0;
 		infect;
-
-To say mooplus:
-	if Mooing < 8:
-		increase Mooing by 1;		
+		if Mooing < 6:
+			now Mooing is 6;
+		otherwise if Mooing < 15:
+			increase Mooing by 3;
 
 to say infect:
 	infect;
@@ -71,20 +70,24 @@ to say bull vict:
 				say "[mooplus]";
 
 To say mooplus:
-	if Mooing < 16:
-		increase Mooing by 1;	
+	if Mooing < 5:
+		now Mooing is 5;
+	otherwise if Mooing < 15:
+		increase Mooing by 3;
 
 to say Deadcow:
 	increase CowKiller by 1;
 
 To say dessicate:
-	decrease hunger of player by 10;
+	decrease hunger of player by 5;
 	decrease thirst of player by 10;
+	if hunger of player < 0, now hunger of player is 0;
+	if thirst of player < 0, now thirst of player is 0;
 
 to say cow attack:
 	if a random number from 1 to 20 is 1:
 		say "The cow sprays wildly with milk, drenching you, making you cry out as it seems to soak your clothing. All of a sudden a precise follow up spray hits you in the mouth, the pressure forcing you to swallow or drown in it.[line break] With a gulp you get a tingling feeling from your belly and are suddenly washed in contentment.";
-		if Mooing < 3:
+		if Mooing < 5:
 			say "[mooplus][infect]";
 		otherwise:
 			say "[infect][dessicate]";
@@ -131,21 +134,24 @@ to say bovine defeat:
 			If the player consents:
 				If cocks of player > 0:
 					say "You grin and lean forward, taking one of her nipples into your mouth, flicking your tongue across it, the rich taste of milk driving you to begin sucking on it. The cow girl moans and struggles more, begging you to let her go, say that this isn't how her milk is supposed to be taken. You ignore her and keep sucking, shifting your position on top of her so that your now hard cock is resting against her folds.[line break]You pull your hips back, lining the tip of your [cock of player] cock up with her wet folds and then slamming into her, moaning out in pleasure. As you pound away at the cow girl's cunt, she slowly stops resisting as the pleasure of being fucked overrides the disdain of being taken by someone other than her bull. Soon enough you feel your climax building, your balls swelling slightly with cum. With one final thrust, you bury your [cock size desc of player] length in the cow girls depths, flooding her womb with your fertile seed. You barely even notice that she's also peaked and squirming in ecstasy.[line break]After you pump the last of your cum into her, you lie atop the cow girl, nursing from her breast. A warm feeling radiating out from your stomach. After a while you get up and stretch before you head out along the path.";
-					decrease hunger of player by 10;
+					say "[Mooplus]";
+					decrease hunger of player by 5;
 					decrease thirst of player by 10;
 					if thirst of player < 0, now thirst of player is 0;
 					if hunger of player < 0, now hunger of player is 0;
 					infect;
 				otherwise if cunts of player > 0:
 					say "You grin and lean forward, taking one of her nipples into your mouth, flicking your tongue across it, the rich taste of milk driving you to begin sucking on it. The cow girl moans and struggles more, begging you to let her go, say that this isn't how her milk is supposed to be taken. You ignore her and keep sucking, sliding your hand down between her legs and beginning to stroke her wet pussy.[line break]The cow girl shivers and groans as you play with her cunt, first stroking it and then slowly sliding a finger or two into her. Soon enough, the cow girl has stopped resisting you completely, allowing you to tend to your own tender folds, your fingers quickly finding your g-spot and working you up to climax rather quickly. You continue on like this for a while, suckling on the cow girls tits while you finger yourself and her, until she is finally pushed over the edge and into orgasm, cunt clamping down on your fingers, her body shaking in pleasure. Having gotten the cow off, you decide it's time to go. You stand up and rub your belly, a warm tingle coming from your stomach full of milk. You shrug at this and head off along the path."; 
-					decrease hunger of player by 10;
+					say "[Mooplus]";
+					decrease hunger of player by 5;
 					decrease thirst of player by 10;
 					if thirst of player < 0, now thirst of player is 0;
 					if hunger of player < 0, now hunger of player is 0;
 					infect;
 				otherwise:
 					say "You look down at yourself and realize that you don't really have any proper equipment to play with the cow girl, but that doesn't mean you can't still get your drink. You climb up on top of her and take hold of her breasts, clamping your mouth down over one and beginning to suckle from it. You grin slightly as the cow girl twists and moos, struggling in vain to get you off.[line break]You gulp down her milk, teasing her squirting teat with your tongue and teeth, squeezing and pulling on the one not currently in your mouth. When the first one starts to run dry you just switch to the other, happily drinking your fill.[line break]Once your belly is completely full of the cow girls delicious milk, you get up and stretch, a warm fuzzy feeling spreading throughout you. You shrug it off, gather your gear and head back out along the path.";
-					decrease hunger of player by 10;
+					say "[Mooplus]";
+					decrease hunger of player by 5;
 					decrease thirst of player by 10;
 					if thirst of player < 0, now thirst of player is 0;
 					if hunger of player < 0, now hunger of player is 0;
@@ -260,8 +266,9 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 to say bovineheat:	
 	say "You feel your throat go drier and drier, it seems only milk fresh from the cow will fill your growling stomach.";
 	increase thirst of player by 6 minus (Mooing divided by 3);
-	if Mooing is greater than 0:
+	if Mooing is greater than 0 and a random chance of 2 in 5 succeeds:
 		decrease Mooing by 1;
+
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
@@ -270,7 +277,7 @@ When Play begins:
 	now heat duration entry is 1;					[ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.] 
 	now trigger text entry is "";  [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is "";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
-	now heat start entry is "";		[this is a to say block that cuasees things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
+	now heat start entry is "";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
 	now heat end entry is "";		[this is the same as heat start only it's for ending the cycle. GSSD her sex is reduced back to it's previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[bovineheat]";
 
@@ -288,8 +295,10 @@ to say cow milk use:
 	say "You pop the cork off the bottle, tilt your head back and chug the milk down. The taste is sweet and creamy and makes you think of farm life.  You sigh happily and release a soft [']moo['] as you finish it off.";
 	decrease thirst of player by 10;
 	decrease hunger of player by 5;
-	if Mooing < 8:
-		increase Mooing by 1;
+	if Mooing < 5:
+		now Mooing is 5;
+	otherwise if Mooing < 15:
+		increase Mooing by 3;
 
 cow milk is infectious. The strain of cow milk is "Bovine".
 		

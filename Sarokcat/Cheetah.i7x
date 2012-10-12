@@ -1,4 +1,5 @@
-Cheetah by Sarokcat begins here. 
+Version 2 of Cheetah by Sarokcat begins here.
+[ Version 2 - Cheetah Heat ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a cheetah woman to Flexible Survivals Wandering Monsters table"
@@ -88,6 +89,89 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
+
+Section 3 - Heat Table
+
+to say cheetahwomanheatstart:
+	if libido of player < 30:
+		now libido of player is ( 60 + libido of player ) / 3;
+	otherwise:
+		increase libido of player by 6;
+
+to say cheetahwomanheatend:
+	say "You release a soft mrowl as your heat passes, the ache in your loins subsiding somewhat.";
+	now libido of player is ( libido of player * 9 ) / 10;
+	decrease slutfucked by 2;
+	if slutfucked < 0, now slutfucked is 0;
+	if slutfucked > 6, now slutfucked is 6;
+
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
+--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "cheetah woman";
+	now heat cycle entry is 5;
+	now heat duration entry is 2;
+	now trigger text entry is "Feeling a needy throb between your legs and a flow of hot juices from your cunt, you bury your hand between your thighs.  You unleash a very feline yowl as your cheetah cunt goes into heat.  You feminine juices run down your legs and your pheromones fill the air.  Even the scent of them makes you more excited.  You find yourself thinking of the many sexy felines you've seen around, feeling an urge to play with them.";
+	now description text entry is "";
+	now heat start entry is "[cheetahwomanheatstart]";
+	now heat end entry is "[cheetahwomanheatend]";
+	now inheat entry is "[cheetahwomaninheat]";
+
+
+to say cheetahwomaninheat:
+	increase libido of player by 5;
+	if libido of player > 99, now libido of player is 99;
+	if libido of player > 90 and slutfucked > 8:
+		if there are no dangerous doors in the location of the player:
+			if location of player is fasttravel:
+				now battleground is "Outside";
+			otherwise:
+				say "You prowl around uneasily, your body urging you to go somewhere and find some sexy feline to play with you.";
+				increase slutfucked by 1;
+				now battleground is "void";
+		otherwise:
+			let y be a random dangerous door in the location of the player;
+			now battleground is marea of y;
+		if battleground is not "void":
+			let cmonlist be a list of numbers;
+			repeat with X running from 1 to number of filled rows in table of random critters:	[scans for all felines in the area]
+				choose row X from the table of random critters;
+				if there is no area entry, next;
+				if there is no name entry, next;
+				if area entry is battleground:
+					if name entry is listed in infections of Felinelist:
+						add X to cmonlist;
+			let cheetahchance be 40 + ( perception of player ) * 2;
+			if colliechance > 90, now colliechance is 90;
+			if cmonlist is not empty and a random chance of cheetahchance in 100 succeeds:
+				now slutfucked is 0;
+				sort cmonlist in random order;
+				now monster is entry 1 of cmonlist;
+				choose row monster from the table of random critters;
+				say "Catching the scent of a feline on the air, your heat-driven instincts take over and you follow it in search of relief.  You find the [name entry] soon enough, your pheromones having caught its nose.  Immediately upon seeing the creature, you submit yourself, offering your [bodytype of player] body freely in the hopes of satisfying your lustful, heat-fueled needs.";
+				attempttowait;
+				follow the cock descr rule;
+				follow the cunt descr rule;
+				follow the breast descr rule;
+				say "[victory entry]";
+				infect;
+				decrease score by 5;
+				decrease morale of player by 3;
+				if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+			otherwise:
+				say "As your feline heat courses through you, you sniff the air, trying to catch the scent of a nearby feline, but are unsuccessful[if cmonlist is empty].  Perhaps you'd best head somewhere you know there are more kitties to play with, your heat-filled mind decides[end if].";
+				increase slutfucked by 1;
+	otherwise if libido of player > 90:
+		increase slutfucked by 1;
+		say "[one of]You mewl softly as a fresh flow of heat juices run down your thighs[or]Stuffing some fingers between your legs, you try in vain to relieve the ache in your loins[or]You pant and moan as wave of need quiver through your cunny, your feline cunt wanting satisfaction[or]You yowl like a cat in heat - which you are, at least in part[or]You mrowl and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[purely at random][one of].  You start to imagine yourself submitting to some of the well-hung felines you've been seeing[or].  You sniff the air, hoping to find some kitty to play with[or].  You want to head back out into the city right away and find some kitty to scratch your special itch[or].  Thoughts of bending over for the next feline you see becomes increasingly tempting[or].  The thought of getting some tom to fill you full of kittens is delightfully exciting[purely at random].";
+
+
+Section 4 - Endings
+
 when play ends:
 	if bodyname of player is "cheetah woman":
 		if humanity of player is less than 10:
@@ -104,10 +188,6 @@ when play ends:
 			say "Rescued from the city with your humanity intact, you are still set aside by your sleek and trim cheetah-like form. You try your hand at a number of odd jobs afterwards, but nothing seems to fit, especially as you seem unable to sit still for too long in any one place without twitching and needing to move.  You take to making long runs just to work some of your excess energy out most days, which is when you encounter several of the other serious runners in the city, who are both amazed at your speed and stamina.  You give them several pointers on form and running style, two things you know about instinctively, and before you know it you are helping out most of the competition runners in your area.  This leads quickly to one of the local gyms hiring you, as your help makes plenty of difference in the next competition in the city, which is a lot of fun as you can run and move as much as you want on the machines there.[line break]";
 			say "While barred from competition yourself on account of your changed form, you derive an almost visceral pleasure from going fast yourself, and helping others to go fast.  Soon in addition to your job at the gym, you are a track coach for one of the schools in the area, running around the track at speeds that astonish your students, and helping them learn to run and sprint even faster then they thought possible. While it may not be as much fun as chasing down prey, chasing the clock has its own sort of thrill to it, and you quickly become both popular and recognizable for you contributions to the sport.  Eventually at some point someone organizes a set of games exclusively for the changed, and your invitation is one of the first sent out.  Eager for the chance to meet other changed, perhaps even more cheetahs, you agree quickly. And while the competition is fierce, you prove once again that cheetahs are the fastest land mammals, outrunning all comers to take first in a number of events.  Achieving minor celebrity status due to this, you meet several famous people, and even end up starring in a car ad as they roll off their new line of 'Cheetah' cars.  The best perk however, is the attention you get from several other people with some cheetah alterations, your speed and pretty spots making sure that you are never alone at night again....";
 
-			
-
-
 
 [ Edit this to have the correct Name as wall]
-cheetah ends here.
-
+Cheetah ends here.

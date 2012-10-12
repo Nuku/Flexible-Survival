@@ -1,5 +1,5 @@
-Version 2 of Rabbit Pack For FS by Lago Moro begins here.
-[Version 2 - refined blocks & prepped for event fight - Stripes]
+Version 3 of Rabbit Pack For FS by Lago Moro begins here.
+[Version 3 - Heat repairs - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Rabbit Pack to Flexible Survivals Wandering Monsters table."
@@ -147,13 +147,28 @@ Choose a blank row from Table of infection heat;
 now infect name entry is "rabbit pack"; [ This should be exactly the same as your monster name in the main table]
 now heat cycle entry is 1; [ This is the number of days a heat "cycle" lasts, usualy 7 ]
 now heat duration entry is 1; [ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.]
-now trigger text entry is "This is probably the strangest situation you have ever been into. Instinctively you know what exactly is going on, but in practice you are scared and confused. Let[apostrophe]s see...you can have female or male 'bodies', but not herms... you have a 'body' for every cock or pussy you had... and what else..."; [ This is the text that is written to the screen when the player comes into heat]
+now trigger text entry is "[rabpacktrigger]"; [ This is the text that is written to the screen when the player comes into heat]
 now inheat entry is "[rabpackinheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat riaises libido value by 5 every 3 hours. ]
 
 to say rabpackinheat:
-	say "[one of]Repeat: there is only a me. A single me. A single consciousness. There is no 'we', only 'I'. I can[apostrophe]t go insane now.[or]Maybe is the infection, but you find yourself calling a male body a 'cock', and a female one a 'pussy', or similar... what the hell...[or]Even if your individual bodies are weaker, you can coordinate them with ease. And two pair of eyes are better than just one, for example.[or]You realize one of your copies is acting affectionately towards another one, on its own. You can[apostrophe]t help it: it[apostrophe]s like a tic.[or]How was it? A female copy for every cunt and a male one for every penis? So what would happen if you were to lose both?[or]Note to self: talking and generally do things in perfect synchrony tends to unnerve people.[or]It is a bit odd to define the whole bunch of your copies [apostrophe]your body[apostrophe]. You still want to cling to how much sanity you have left, though.[at random]";
-	increase libido of player by 1;
-	decrease humanity of player by 1;
+	if bodyname of player is "rabbit pack" and ( cocks of player + cunts of player > 1 ):
+		say "[one of]Repeat: there is only a me. A single me. A single consciousness. There is no 'we', only 'I'. I can[apostrophe]t go insane now.[or]Maybe is the infection, but you find yourself calling a male body a 'cock', and a female one a 'pussy', or similar... what the hell...[or]Even if your individual bodies are weaker, you can coordinate them with ease. And two pair of eyes are better than just one, for example.[or]You realize one of your copies is acting affectionately towards another one, on its own. You can[apostrophe]t help it: it[apostrophe]s like a tic.[or]How was it? A female copy for every cunt and a male one for every penis? So what would happen if you were to lose both?[or]Note to self: talking and generally do things in perfect synchrony tends to unnerve people.[or]It is a bit odd to define the whole bunch of your copies [apostrophe]your body[apostrophe]. You still want to cling to how much sanity you have left, though.[at random]";
+		increase libido of player by 1;
+		decrease humanity of player by 1;
+	otherwise:
+		now turns in heat is 0;
+		now animal heat is False;
+		now inheat is False;
+
+to say rabpacktrigger:
+	if bodyname of player is "rabbit pack" and ( cocks of player + cunts of player > 1 ):
+		say "This is probably the strangest situation you have ever been into. Instinctively you know what exactly is going on, but in practice you are scared and confused. Let[apostrophe]s see...you can have female or male 'bodies', but not herms... you have a 'body' for every cock or pussy you had... and what else...";
+	otherwise:
+		now turns in heat is 0;
+		now animal heat is False;
+		now inheat is False;
+
+
 [ +++++ ] 
 
 [ Edit this to have the correct Name as wall]

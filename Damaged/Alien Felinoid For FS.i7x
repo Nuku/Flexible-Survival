@@ -146,7 +146,7 @@ When Play begins:
 	now description text entry is "Swollen and slowly dripping fluids, your entrance aches for a lion to fill it, you find yourself, nose in the air, slowly following a scent before you regain some control and stop.";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
 	now heat end entry is "[felinoidheat end]";		
 	now inheat entry is "[felinoidheat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
-	
+
 
 
 	[ +++++ ]	
