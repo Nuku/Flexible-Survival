@@ -120,6 +120,8 @@ When Play begins:
 	now heat start entry is "[cheetahwomanheatstart]";
 	now heat end entry is "[cheetahwomanheatend]";
 	now inheat entry is "[cheetahwomaninheat]";
+	
+colliechance is a number that varies.
 
 
 to say cheetahwomaninheat:
