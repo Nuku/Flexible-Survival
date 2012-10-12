@@ -220,7 +220,6 @@ name	desc	weight	object
 
 doctor's uniform is equipment.
 doctor's uniform is not temporary.
-[The AC of doctor's uniform is 1.]
 The placement of doctor's uniform is "body".
 The descmod of doctor's uniform is "A standard doctor's coat with pair of clinical white pants to go along with it.".
 The slot of doctor's uniform is "body".
