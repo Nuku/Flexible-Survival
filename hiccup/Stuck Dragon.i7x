@@ -293,7 +293,7 @@ Carry out dragonhatching:
 	say "[dragonchange]";
 
 to say dragonchange:
-	now libido of player is 99;
+	now libido of player is 75;
 	if "Male Preferred" is not listed in feats of player:
 		now tailname of player is "Slutty Dragoness";
 		now facename of player is "Slutty Dragoness";
@@ -800,7 +800,92 @@ Section 10 - Guide to Christy Stats
 [ 2 = Fucked (M) the dragoness	]
 
 
-Section 11 - Endings
+Section 11 - Heat Table
+
+to say sldrheatstart:
+	if libido of player < 25:
+		now libido of player is 25;
+	otherwise:
+		increase libido of player by 10;
+	increase cunt width of player by 1;
+	increase cunt length of player by 1;
+	if libido of player > 99, now libido of player is 99;
+
+to say sldrheatend:
+	say "You release a soft moan as your heat passes, the worst of your lustful urges fading for now.";
+	decrease cunt width of player by 1;
+	if cunt width of player is 0, now cunt width of player is 1;
+	decrease cunt length of player by 1;
+	if cunt length of player is 0, now cunt length of player is 1;
+	decrease slutfucked by 2;
+	if slutfucked < 0, now slutfucked is 0;
+	if slutfucked > 6, now slutfucked is 6;
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
+--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "Slutty Dragoness";
+	now heat cycle entry is 1;
+	now heat duration entry is 1;
+	now trigger text entry is "You release a moan that grows into a needy roar as your pussy flows with hot juices.  A wave of growing lust threatens to engulf you as you go into heat.  If this is anything like what Christy feels, you start to understand the wanton demands of her dragonic body.  You long to have a nice big cock inside you to breed you full of dragon eggs.";
+	now description text entry is "";
+	now heat start entry is "[sldrheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[sldrheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[sldrheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+
+to say sldrheat:
+	increase libido of player by a random number between 2 and 6;
+	if libido of player > 99, now libido of player is 99;
+	if libido of player > 90 and slutfucked > 8:
+		if there are no dangerous doors in the location of the player:
+			if location of player is fasttravel:
+				now battleground is "Outside";
+			otherwise:
+				say "You groan with increasing need, your body urging you to go out and find some nice, big cock to stuff inside you.";
+				increase slutfucked by 1;
+				now battleground is "void";
+		otherwise:
+			let y be a random dangerous door in the location of the player;
+			now battleground is marea of y;
+		if battleground is not "void":
+			let cmonlist be a list of numbers;
+			repeat with X running from 1 to number of filled rows in table of random critters:	[scans for all reptiles in the area]
+				choose row X from the table of random critters;
+				if there is no area entry, next;
+				if there is no name entry, next;
+				if area entry is battleground:
+					if name entry is listed in infections of Reptilelist:
+						add X to cmonlist;
+			if cmonlist is not empty:
+				now slutfucked is 0;
+				sort cmonlist in random order;
+				now monster is entry 1 of cmonlist;
+				choose row monster from the table of random critters;
+				say "Hearing your lustful calls being answered in the distance, you rush off to find this reptilian creature hoping it can help satisfy your sexual cravings.  You find the [name entry] soon enough, drawn to your calls.  Immediately upon seeing the creature, you submit yourself, offering your [bodytype of player] body freely in the hopes of satisfying your lustful, heat-fueled needs.";
+				attempttowait;
+				follow the cock descr rule;
+				follow the cunt descr rule;
+				follow the breast descr rule;
+				say "[victory entry]";
+				infect;
+				decrease score by 5;
+				decrease morale of player by 3;
+				if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+			otherwise:
+				say "As your draconic heat courses through you, you call out your need with the roar of a dragoness looking to be bred, but the call goes unanswered.  Your heat-filled desires make you want to head elsewhere in the hopes of finding some dragon, or baring that, a powerful lizard or reptile, to breed you.";
+				increase slutfucked by 1;
+	otherwise if libido of player > 90:
+		increase slutfucked by 1;
+		say "[one of]You moan loudly as a fresh flow of heat juices run down your thighs[or]Stuffing some fingers between your legs, you try in vain to relieve the ache in your loins[or]You pant and moan as wave of need quiver through your cunny, your dragonic cunt wanting satisfaction[or]You bite your tongue to try and hold back a lustful roar as you stuff a few fingers into your cunt to try and give yourself a little relief[or]You moan and squeeze your thighs together as slutty thoughts run through your head[or]The waves of hot lust filling your cunt make you moan as you try to focus[purely at random][one of].  You start to imagine yourself submitting to some studly dragon and getting bred[or].  Thoughts of getting bred full of eggs run through your mind[or].  You want to head back out into the city right away and find some scaly beast to play with you[or].  Thoughts of bending over for the next scaled creature you see becomes increasingly tempting[or].  A daydream about yourself on all fours with a [randomdragoncolour] dragon atop you, breeding you long and hard until you're stuffed with eggs, leaves you horny and excited[purely at random].";
+
+to say randomdragoncolour:
+	say "[one of]black[or]blue[or]red[or]crimson[or]golden[or]white[or]azure[or]fiery[or]green[purely at random]";
+
+
+Section 12 - Endings
 
 When play ends:
 	say "[dragonessupdate]";	[making sure dragoness/Christy's egg status is up to date]

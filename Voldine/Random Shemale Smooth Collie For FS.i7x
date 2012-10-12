@@ -132,7 +132,7 @@ When Play begins:
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if cocks of player > 0][one of]muscled[or]strong[or]powerful[at random][otherwise][one of]voluptuous[or]curvaceous[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "[one of]canine[or]doggy[purely at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
@@ -140,7 +140,7 @@ When Play begins:
 	now altcombat entry is "hump";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 [ Edit this to have the correct Name as wall]
-Random Shemale Smooth Collie For FS ends here.
+
 
 to say rsscbodyentry:
 	if "Male Preferred" is listed in feats of player:
@@ -151,3 +151,81 @@ to say rsscbodyentry:
 [Dog Milk is a drinkable item that reduces thirst but causes breast size to increase as well as up to 6 breasts (total, not additional) to grow on the player with no other transformative effects. Growth is limited to one inch at a time. I have no idea how to code this in though.
 This could be a good item to use to further progress the 'sister' plotline with Sandra. Say that she thinks one more thing needs to be done, but she needs some milk, and since it's already been established by her prior dialogue that she dislikes the feral gryphons, she refuses gryphon milk. She'll take the Dog Milk though, drink it herself and then give you a drink the same way she does when you visit her and are thirsty enough, except with the fresh nanites involved she gives you 6 instantly, and can do this to forms that don't normally allow it like the gryphon body.]
 
+
+Section 3 - Heat Table
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
+--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "Shemale Smooth Collie";
+	now heat cycle entry is 8;
+	now heat duration entry is 4;
+	now trigger text entry is "A whimper of need escapes your lips as a rush of heat builds between your legs.  Nested between your thighs your canine spade begins to puff up and swell, engorging and becoming looser for your desired mate.  You leak pheromone-laden juices steadily as your body goes into heat.  As these sensations grow, your need to be bred increases.";
+	now description text entry is "";
+	now heat start entry is "[collieheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[collieheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[collieinheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+
+to say collieheatstart:
+	[puts Shemale Smooth Collie as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Shemale Smooth Collie":
+			now monster is y;
+			break;
+	increase cunt width of player by 1;
+	increase cunt length of player by 1;
+	if cunt width of player < cunt width entry, increase cunt width of player by 1;
+	if cunt length of player < cunt length entry, increase cunt length of player by 1;
+
+
+to say collieheatend:
+	say "As your heat passes, your needy canine cunt becomes a little less prominent and swollen.";
+	[puts Shemale Smooth Collie as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Shemale Smooth Collie":
+			now monster is y;
+			break;
+	if cunt width of player > cunt width entry, decrease cunt width of player by 1;
+	if cunt length of player > cunt length entry, decrease cunt length of player by 1;
+	decrease slutfucked by 2;
+	if slutfucked < 0, now slutfucked is 0;
+	if slutfucked > 4, now slutfucked is 4;
+
+to say collieinheat:
+	increase libido of player by 5;
+	if libido of player > 99, now libido of player is 99;
+	if (libido of player is greater than 90) and (location of player is fasttravel ) and (slutfucked is greater than 6):
+		let colliechance be 25 + ( perception of player ) * 2;
+		if colliechance > 80, now colliechance is 80;
+		if a random chance of colliechance in 100 succeeds:
+			say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs.  Unable to control your lust, you strike out in the direction of your body's desired mate's scent.";
+			now slutfucked is 0;
+			[puts Shemale Smooth Collie as lead monster in case of impregnation]
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Shemale Smooth Collie":
+					now monster is y;
+					break;
+			say "The enticing scent leads to the large shemale collie.  Immediately upon seeing what your heat-addled mind believes to be your mate, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled need to be impregnated.";
+			wait for any key;
+			follow the cock descr rule;
+			follow the cunt descr rule;
+			follow the breast descr rule;
+			say "[victory entry]";
+			infect;
+			decrease the score by 5;
+			decrease the morale of the player by 3;
+			if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
+		otherwise:
+			say "Hot juices flow down your legs as your body's need starts to become overwhelming.  You moan and whimper, finding yourself sniffing at the air for something you don't catch wind of.";
+			increase slutfucked by 1;
+	else if libido of player is greater than 90:
+		increase slutfucked by 1;
+
+
+Random Shemale Smooth Collie For FS ends here.

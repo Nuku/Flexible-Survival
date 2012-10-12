@@ -116,6 +116,7 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
+
 when play ends:
 	if bodyname of player is "feral sea dragon":
 		if humanity of player is less than 10:

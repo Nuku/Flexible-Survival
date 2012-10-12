@@ -1,5 +1,5 @@
-Version 1 of Male Peacock For FS by Lago Moro begins here. 
-[Version 1.4 - Improved altcombat mode]
+Version 2 of Male Peacock For FS by Lago Moro begins here.
+[Version 2 - Peacock heat (mating call) - Stripes]
 
 "Adds a Male Peacock to Flexible Survivals Wandering Monsters table."
 
@@ -136,7 +136,58 @@ this is the peacockhypno rule:
 	rule succeeds;
 
 
-Section 4 - Peacock Feather
+Section 4 - Peacock Heat / Mating Call [by Stripes]
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
+--	--	--	--	--	--	--	--
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "peacock";	[ This should be exactly the same as your monster name in the main table]
+	now heat cycle entry is 5;					[ This is the number of days a heat "cycle" lasts, usually 7 ]
+	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
+	now trigger text entry is "[peacockheattrigger]";  [ This is the text that is written to the screen when the player comes into heat]
+	now heat start entry is "[peacockheatstart]";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
+	now heat end entry is "[peacockheatend]";		[this is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
+	now inheat entry is "[peacockinheat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+
+
+to say peacockheattrigger:
+	say "You can feel an increasing dampness in your loins.  As you find yourself growing increasingly aroused, something hidden at the back of your mind makes you ";
+	if there are no dangerous doors in the location of the player:
+		say "want to leave this place and go... somewhere else...";
+	otherwise:
+		let y be a random dangerous door in the location of the player;
+		if marea of Y is "High":
+			say "want to head out exploring.";
+		otherwise:
+			say "want to leave this place and go... somewhere else...";
+
+to say peacockinheat:
+	if there are no dangerous doors in the location of the player:
+		if a random chance of 3 in 5 succeeds:
+			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need.  A corner of your mind keeps calling you to satisfy those urges... but not here[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction.  The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier.  Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where.  You grow tired of being here, wanting to go somewhere else now.[purely at random]";
+	otherwise:
+		let y be a random dangerous door in the location of the player;
+		if marea of Y is "High":
+			say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier[or]The waves of hot lust filling your cunt make you moan as you try to focus[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where[purely at random][one of].  You feel a compulsion to go out and look for a male right away[or].  Your thoughts keep wandering back to the peacock you encountered before[or].  Thoughts of finding a sexy peacock to fill you sound very satisfying[or].  The urge to go looking around the neighbourhood is foremost in your mind[or].  The idea of going exploring, and maybe finding someone to mate with you, is very appealing[or].  A corner of your mind keeps calling you to go out and satisfy those urges[or].  You out across the neighbourhood, you want to go out and look around[or].  You hear the soft chirping of birdsong and you want to go out to find it[purely at random].";
+		otherwise:
+			if a random chance of 3 in 5 succeeds:
+				say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickle down your thighs as your pussy leaks with need.  A corner of your mind keeps calling you to satisfy those urges... but not here[or]You are forced to pause and finger yourself as your dripping cunt needs satisfaction.  The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier.  Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where.  You grow tired of being here, wanting to go somewhere else now.[purely at random]";
+	increase libido of player by 3;
+
+
+to say peacockheatstart:
+	increase libido of player by 8;
+
+to say peacockheatend:
+	if libido of player > 20:
+		now libido of player is ( libido of player * 3 ) / 4;
+		if libido of player < 20, now libido of player is 20;
+
+
+Section 5 - Peacock Feather
 
 peacock feather is a grab object.
 
@@ -155,7 +206,7 @@ instead of sniffing Peacock feather:
 	say "The long feather smells of an avian male and makes your mind foggy momentarily.";
 
 
-Section 5 - Endings
+Section 6 - Endings
 
 when play ends:
 	if bodyname is "peacock":
