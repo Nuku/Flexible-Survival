@@ -255,8 +255,8 @@ Definition: A grab object(called X) is wielded:
 	no;
 
 Definition: A situation(called X) is available:
-	if a situation is resolved, no;
-	if a situation is close:
+	if x is resolved, no;
+	if x is close:
 		if hardmode is true:
 			yes;
 		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):

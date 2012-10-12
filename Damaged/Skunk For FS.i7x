@@ -1,5 +1,5 @@
-Version 9 of Skunk For FS by Damaged begins here.
-[ Version 9 - Tie-in for Skunkbeast Lord update - Stripes ]
+Version 10 of Skunk For FS by Damaged begins here.
+[ Version 10 - Heat repairs - Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds male and female Skunks to Flexible Survivals Wandering Monsters table"
@@ -275,7 +275,7 @@ When Play begins:
 	now infect name entry is "Skunk";	[ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 5;					[ This is the number of days a heat "cycle" lasts, usually 7 ]
 	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
-	now trigger text entry is "Your need seems to swell suddenly, an ache between your legs causing you to fall down to all fours at its intensity. As you stand there, propped, rear in the air, drooling, only one thought consumes your mind, find a skunk and fuck it until you can't move.";  [ This is the text that is written to the screen when the player comes into heat]
+	now trigger text entry is "Your need seems to swell suddenly, an ache between your legs causing you to fall down to all fours at its intensity. As you stand there, propped, rear in the air, drooling, only one thought consumes your mind, find a skunk and let fuck it you until you can't move.";  [ This is the text that is written to the screen when the player comes into heat]
 	now heat start entry is "[skunk heat start]";		[this is a to say block that causes things to happen when the player enters heat. for example the GSD sex grows wider.  Delete entire line if you wish nothing to happen.]
 	now heat end entry is "[skunk heat end]";		[this is the same as heat start only it"s for ending the cycle. GSSD her sex is reduced back to it"s previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[skunk in heat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
@@ -285,13 +285,16 @@ to say skunk heat start:
 	increase cunt length of player by 2;
 
 to say skunk heat end:
-	decrease cunt width of player by 3;
 	decrease cunt length of player by 2;
+	decrease cunt width of player by 3;
+	if cunt length of player < 1, now cunt length of player is 1;
+	if cunt width of player < 1, now cunt width of player is 1;
+
 
 to say skunk in heat:
 	say "[one of]You ache constantly for a male, preferably skunk, but as you think about a large rod pushing into you you realise that any would do.[or]You need to fuck, again and again and again and again.[or]You need to be filled by a skunk's breeding tool.[or]Thinking becomes harder as the need to mate pushes everything else from your mind.[or]You NEED to fill your cunt NOW![or] 'Skunk kittens...', your mind tells you, 'Skunk kittens would be fun to have.'[at random]";
 	increase skunkready by 1;
-	increase libido of player by 10;
+	increase libido of player by a random number between 5 and 10;
 
 
 Table of Game Objects(continued)

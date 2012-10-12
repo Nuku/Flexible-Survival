@@ -1,5 +1,5 @@
-Version 8 of Random German Shepherd For FS by Telanda Softpaw begins here.
-[Version 8.1 - More victory sex added by Stripes]
+Version 9 of Random German Shepherd For FS by Telanda Softpaw begins here.
+[Version 9 - Heat repairs - Stripes]
 
 "Adds a German Shepard to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -183,6 +183,7 @@ to say gsdheatstart:
 
 to say gsdheatend:
 	decrease cunt width of player by 1;
+	if cunt width of player is 0, now cunt width of player is 1;
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
@@ -193,7 +194,7 @@ When Play begins:
 	now infect name entry is "German Shepherd";
 	now heat cycle entry is 7;
 	now heat duration entry is 2;
-	now trigger text entry is "A sudden throb between your legs catches you off guard, startling a whimper from your throat as you feel a rush of heat between your legs.  Nested between your thighs your canine spade begins to puff up and swell, engorging and becoming looser, a slow but constant seepage of lubricating fluids starting to run down your thigh, making a mess of your [skin of player] flesh.  You are in heat, and your body is making it easy for any male to find and impregnate you."; 
+	now trigger text entry is "A sudden throb between your legs catches you off guard, startling a whimper from your throat as you feel a rush of heat between your legs.  Nested between your thighs your canine spade begins to puff up and swell, engorging and becoming looser, a slow but constant seepage of lubricating fluids starting to run down your thigh, making a mess of your [skinname of player] flesh.  You are in heat, and your body is making it easy for any male to find and impregnate you."; 
 	now description text entry is "swollen and dripping German Shepherd twat ";
 	now heat start entry is "[gsdheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[gsdheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]

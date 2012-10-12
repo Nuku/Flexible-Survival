@@ -120,16 +120,16 @@ Section 5 - Fashion Statement
 fashionfight is a number that varies.
 
 Fashion statement is a situation. 
-The sarea of Fashion Statement is "Outside".
+The sarea of Fashion Statement is "Campus".
 
 Instead of resolving a Fashion Statement:
-	say "Wandering throughout the downtown area of the city you happen to come across a clothing outlet that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the mercilessness carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing."; 	
+	say "Wandering through the commercial area at the edge of the campus, you happen to come across a clothing store that looks as though it's just recently been ransacked. Mildly curious to know if anything has survived the mercilessness carnage you meander inside of the store on a whim. Looking around you find the pervasive funk of musk, both male and female, as well as mildew covered shelves, dried stains, glass littering the floor and assorted items tossed around rather appealing."; 	
 	say "However, considering the state of the world you don't really expect too much. That is, until you make your way to the back of the store and into the stockroom. Interesting enough this part of the store seems to have been kept in tack. Maybe there's something salvageable here? Should you check to see?";
 	if player consents:
 		say "You begin scavenging around like a hungry wolf looking for food as you rifle through boxes and bins while keeping an eye and ear out for trouble. Sadly enough, it would seem that trouble has found you. Whipping around you find a mutant stalking into the back room, probably on the trail of your scent!";
 		now fashionfight is 0;
 		while fashionfight is 0:
-			let T be a random number between one and three;
+			let T be a random number between one and four;
 			if T is 1:
 				now battleground is "Zoo";
 				fight;
@@ -139,7 +139,10 @@ Instead of resolving a Fashion Statement:
 			if T is 3:
 				now battleground is "Red";
 				fight;
-			now battleground is "Outside";
+			if T is 4 or T is 5:
+				now battleground is "Campus";
+				fight;
+			now battleground is "Campus";
 			say "With that little pest out of the way you return to searching for your possible treasures in peace...";
 			let dice be a random number from 1 to 20;
 			let the bonus be (( the perception of the player minus 8 ) divided by 2);

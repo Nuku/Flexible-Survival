@@ -1,4 +1,5 @@
-Version 1 of Reindeer by Stripes begins here.
+Version 2 of Reindeer by Stripes begins here.
+[ Version 2 - Heat repairs - Stripes ]
 "Adds a Christmas-themed Reindeer creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
 
@@ -187,6 +188,8 @@ to say nogging:
 
 Section 4 - Holiday Madness
 
+heatturnskipper is a truth state that varies.  heatturnskipper is normally false.	[skips a second heat roll if the player loses a turn]
+
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
 --	--	--	--	--	--	--	--
@@ -202,7 +205,9 @@ now inheat entry is "[reindeerheat]"; [this final say block is triggered every 3
 
 to say reindeerheat:
 	let diceroll be ( libido of player plus a random number between 0 and 100 );
-	if diceroll < 90:
+	if heatturnskipper is true:
+		now heatturnskipper is false;
+	otherwise if diceroll < 90:
 		increase libido of player by a random number between 0 and 3;
 	otherwise if diceroll < 130:		[90 - 130]
 		say "Holiday ditties play in your head as you squeeze your thighs together, moaning during a bout of holiday reindeer mating season.";
@@ -219,6 +224,7 @@ to say reindeerheat:
 	otherwise if diceroll < 170:		[155 - 170]
 		say "Your heat-filled pussy leaks juices and clouds your mind so thoroughly with mindless holiday cheer that you have to take a long break to masturbate, though with only limited satisfaction.  You only come to your senses hours later.";
 		decrease libido of player by a random number between 5 and 10;
+		now heatturnskipper is true;
 		follow the turnpass rule;
 	otherwise if diceroll < 185:		[170 - 185]
 		say "[reindeerbreastheat]";

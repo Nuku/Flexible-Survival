@@ -1,4 +1,5 @@
-Needy Heat for FS by Telanda Softpaw begins here.
+Version 2 of Needy Heat for FS by Telanda Softpaw begins here.
+[ Version 2 - Heat repairs - Stripes ]
 
 "Addon for adding an 'in heat' Event to infections, Designed to work with all monster type infections by default. with the option to be customisable if you want to add specifics for your monster."
 
@@ -32,10 +33,13 @@ to say huskyheatend:
 	if cunt width of player < 1, now cunt width of player is 1;
 	decrease Cunt length of player by 2;
 	if cunt length of player < 1, now cunt length of player is 1;
+	decrease slutfucked by 2;
+	if slutfucked < 0, now slutfucked is 0;
+	if slutfucked > 6, now slutfucked is 6;
 
 to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting events that can happen if she doesn't get any satisfaction ]
 	increase libido of player by 5;
-	if libido of player > 100, now libido of player is 100;
+	if libido of player > 99, now libido of player is 99;
 	if (libido of player is greater than 90) and (location of player is fasttravel ) and (slutfucked is greater than 8):
 		say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs.  Unable to control your lust, you strike out in the direction of the infected monster.";
 		now slutfucked is 0;
@@ -46,18 +50,18 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 			if area entry is "Outside":
 				add X to hmonlist;
 		sort hmonlist in random order;
-		repeat with Z running through hmonlist:		[Pick one of the monsters at random]
-			now monster is Z;
-			break;
+		now monster is entry 1 of hmonlist;
 		choose row monster from the table of random critters;
 		say "The enticing scent leads to a [name entry].  Immediately upon seeing the infected monster, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
 		wait for any key;
 		follow the cock descr rule;
+		follow the cunt descr rule;
 		follow the breast descr rule;
 		say "[victory entry]";
 		infect;
 		decrease the score by 5;
 		decrease the morale of the player by 3;
+		if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 	else if libido of player is greater than 90:
 		increase slutfucked by 1;
 
@@ -80,9 +84,9 @@ every turn (This is the check heat rule): [ May need to change this so that it o
 					now turns in heat is 0;
 					[ say "reset!"; ]
 				if turns in heat is greater than ( (heat cycle entry - heat duration entry ) times 8) and (inheat is not True):
+					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
 					say "[trigger text entry]";
 					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
-					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
 				else if turns in heat is greater than ( (heat cycle entry - heat duration entry ) times 8) and (inheat is True): [ still in heat, previously triggered.]
 					if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
 				else if inheat is true:

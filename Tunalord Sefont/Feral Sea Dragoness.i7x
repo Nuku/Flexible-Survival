@@ -105,6 +105,98 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
+
+Section 3 - Heat Table
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
+--	--	--	--	--	--	--	--;
+
+Table of infection heat (continued)
+infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
+--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "feral sea dragoness";
+	now heat cycle entry is 7;
+	now heat duration entry is 3;
+	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need.  You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seep into your mind.  Your can feel your dripping lips becoming full and engorged in a wanton display of your bodies need to be bred.  With this realization, it is clear that you've gone into heat.";
+	now description text entry is "";
+	now heat start entry is "[fsdheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[fsdheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[fsdinheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+
+When Play begins:
+	Choose a blank row from Table of infection heat;
+	now infect name entry is "feral sea dragon";
+	now heat cycle entry is 7;
+	now heat duration entry is 3;
+	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need.  You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seep into your mind.  Your can feel your dripping lips becoming full and engorged in a wanton display of your bodies need to be bred.  With this realization, it is clear that you've gone into heat.";
+	now description text entry is "";
+	now heat start entry is "[fsdheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[fsdheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now inheat entry is "[fsdinheat]";		[This happens each heat cycle, Default is to increase libido by 5]
+
+
+to say fsdheatstart:
+	[puts Feral Sea Dragon as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Feral Sea Dragon":
+			now monster is y;
+			break;
+	increase cunt width of player by 1;
+	increase cunt length of player by 1;
+	if cunt width of player < cunt width entry, increase cunt width of player by 1;
+	if cunt length of player < cunt length entry, increase cunt length of player by 1;
+	increase libido of player by 10;
+	if libido of player > 100, now libido of player is 100;
+
+
+to say fsdheatend:
+	say "As your heat passes, your needy canine cunt becomes a little less prominent and swollen.";
+	[puts Feral Sea Dragon as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Feral Sea Dragon":
+			now monster is y;
+			break;
+	if cunt width of player > cunt width entry, decrease cunt width of player by 1;
+	if cunt length of player > cunt length entry, decrease cunt length of player by 1;
+
+to say fsdinheat:
+	increase libido of player by 4;
+	if heatturnskipper is true:
+		now heatturnskipper is false;
+	otherwise if libido of player >= 80:
+		let fsdchance be ( 100 + libido of player - humanity of player );
+		if a random chance of fsdchance in 250 succeeds:
+			if location of player is fasttravel and location of player is not Beach Plaza and location of player is not Bouncy Castle:
+				say "Your heat-filled mind calls you towards the waterfront, wanting to swim in the ocean and find a sexy aquatic lover to satisfy your heat.  Before you can regain your senses, you head back to the beach.";
+				move the player to Beach Plaza;
+				now Beach Plaza is known;
+				now heatturnskipper is true;
+				follow the turnpass rule;
+			otherwise if location of player is Beach Plaza or location of player is Church Hall or location of player is Dirty Sheds or location of player is Overgrown Block:
+				say "Catching the breeze of the sea in the air, your pussy quivers with need and your heat-addled mind is distracted, drawn back to the beach in the hopes of satisfying its need to be fucked and bred.";
+				move the player to Beach Plaza;
+			otherwise if location of player is Public Beach:
+				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water.  Perhaps its cool waters will sooth your heat.  Your pussy quivers with each wave rolling onto the beach, making you feel all the more like you belong out there.";
+				decrease humanity of player by 3;
+				increase libido of player by 2;
+			otherwise if location of player is Bouncy Castle:
+				say "Looking out over the water, your lustful urges increase and you long to rush out and play in the water, momentarily distracting you from your task here.  Perhaps its cool waters will sooth your heat.  Your pussy quivers with each wave that rocks the inflatable castle, making you feel all the more like you belong out there.";
+				decrease humanity of player by 3;
+				increase libido of player by 2;
+			otherwise if location of player is Sloping Sand or location of player is Coral Ring or location of player is Sunken Ship:
+				say "Being out in the water feels so satisfying to your heat-addled body, helping to soothe your lustful urges somewhat.  Surely you are meant to stay here.  It feels so nice out in the water.  Now if you could only find some exotic undersea lover who's willing to breed your needy body.";
+				decrease humanity of player by 5;
+				decrease libido of player by 20;
+			otherwise:
+				say "Your pussy quivers and clenches in waves as your heat continues unabated.  Mmm... waves washing over you... lapping at your wet folds... cool, soothing waves...  Your mind wanders to thoughts of the sea and you find yourself desiring to head there.";
+	if libido of player > 100, now libido of player is 100;
+
 when play ends:
 	if bodyname of player is "feral sea dragoness":
 		if humanity of player is less than 10:
