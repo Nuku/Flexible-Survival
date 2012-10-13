@@ -42,7 +42,7 @@ When Play begins:
 	now name entry is "Squid";
 	now attack entry is "[one of]The squid girl whips her tentacles at you, slapping you around with her numerous tentacles![or]The female cephalopod turns and squids ink at you, temporarily blinding you and letting her strike at you with her tentacles![or]The squid girl wraps her tentacles around you and squeezes, trying to crush the fight out of you![or]The squid's tentacle arms manage to latch onto you, pulling you into her embrace for a cold, wet kiss![or]The squid girls tentacles grab you, groping you all over![at random]";
 	now defeated entry is "[beatthesquid]";
-	now victory entry is  "[losetosquid]";
+	now victory entry is "[losetosquid]";
 	now desc entry is "[squiddesc]";
 	now face entry is "almost human-like, except for the soft-fleshed, elongated crown and large dark eyes";
 	now body entry is "sleek and smooth, made for gliding through the water with ease. Your chest is a slightly lighter color than the rest of your body.  Your arms are long tentacles, lined with rows of suckers and ending in pad-like hands.  Your legs are a collection of tentacles, eight in number, that twist and roll as you move around";

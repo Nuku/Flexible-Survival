@@ -11,7 +11,7 @@ use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 45000.
-use ALLOC_CHUNK_SIZE of 105000.
+use ALLOC_CHUNK_SIZE of 116000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
@@ -5170,6 +5170,7 @@ Include Candy Striper by Stripes.
 Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
 Include RodAndRonda by Stripes.
+Include Matriarch NPC by Stripes.
 Include Tanuki by Nuku Valente.
 Include Mouse Taur by Nuku Valente.
 Include Deer by Nuku Valente.
