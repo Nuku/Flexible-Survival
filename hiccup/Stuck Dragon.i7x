@@ -828,8 +828,8 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "Slutty Dragoness";
-	now heat cycle entry is 1;
-	now heat duration entry is 1;
+	now heat cycle entry is 400;
+	now heat duration entry is 400;
 	now trigger text entry is "You release a moan that grows into a needy roar as your pussy flows with hot juices.  A wave of growing lust threatens to engulf you as you go into heat.  If this is anything like what Christy feels, you start to understand the wanton demands of her dragonic body.  You long to have a nice big cock inside you to breed you full of dragon eggs.";
 	now description text entry is "";
 	now heat start entry is "[sldrheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]

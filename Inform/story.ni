@@ -3562,6 +3562,7 @@ This is the turnpass rule:
 		increase dexterity of player by balloversize;
 		now balloversize is 0;
 		say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
+	follow the check heat rule;
 	if libido of player >= 100 and humanity of player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
 		decrease humanity of player by a random number between 1 and 2;

@@ -248,7 +248,7 @@ keepcock is a number that varies. keepcock is usually 0.
 
 Table of infection heat(continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
-"Parasitic Plant"	7	7	"[parasiticluststart]"	"dripping wet cunts "	--	--	"[parasiticlust]"
+"Parasitic Plant"	400	400	"[parasiticluststart]"	"dripping wet cunts "	--	--	"[parasiticlust]"
 
 to say parasiticluststart:
 	if plantdefeat is 1:
