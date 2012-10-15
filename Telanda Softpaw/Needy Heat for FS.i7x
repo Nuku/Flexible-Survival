@@ -15,7 +15,7 @@ lastturn is a number that varies. lastturn is usually 240. [This is used so that
 Table of infection heat
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
 "Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs,seeming to build rapidly.  It's not until you feel the warm trickle down your leg that you realise with a start what's happening, glancing down to see your sex become swollen and red as your body advertises it's fertility and readiness. [line break][line break] You are in heat."	--	--	--	"[defaultheat]"
-"Female Husky"	7	7	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp,  as you struggle for breath through the fading pain you can feel a hot trickle from between your legs. looking down you watch in horrified fascination as your sex twists and warps into that of a bitches, then begins to swell and puff up rapidly. your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping Husky Bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"
+"Female Husky"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp,  as you struggle for breath through the fading pain you can feel a hot trickle from between your legs. looking down you watch in horrified fascination as your sex twists and warps into that of a bitches, then begins to swell and puff up rapidly. your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping Husky Bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"
 
 Book 2 - Logic & Rules
 
@@ -65,9 +65,9 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 	else if libido of player is greater than 90:
 		increase slutfucked by 1;
 
-every turn (This is the check heat rule): [ May need to change this so that it only procs when theres a 'time' change]
+This is the check heat rule:
 	if heat enabled is true:
-		if lastturn is not turns:	[This is used so that we only trigger events once per GAME turn (3 hr period) rather then each event turn.]
+		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
 			if cunts of player is greater than 0 and (cockname of player is not "human") and gestation of child is 0 and larvaegg is not 2:	[Only run if female. and has groin infection]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more Tainted Sexuality.";
