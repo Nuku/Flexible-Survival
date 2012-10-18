@@ -862,7 +862,7 @@ Carry out reciting:
 						now Psych Department is unknown;
 						now Another Doctor is unresolved;
 					if hp of Doctor Moffatt > 0:
-						now Psych Departmetn is known;
+						now Psych Department is known;
 						now Another Doctor is resolved;
 						now hospnav is 1;
 						now lastfuck of Doctor Moffatt is turns;
