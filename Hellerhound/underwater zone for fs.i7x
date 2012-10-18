@@ -144,7 +144,7 @@ Sunken Ship is south of Coral Ring.
 Sunken Ship is a room.
 The description of Sunken Ship is "A large ship lays sunken and rotting here.  From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago.  It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea.  There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast.  You'd best be careful.  From here, you can barely make out the lighter spot in the rocks that is the coral ring you passed through to get here.";
 
-The invent of Sunken Ship is { "Sea Dragon Cum" , "Sea Dragon Cum" };
+The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" };
 
 the scent of Sunken Ship is "You can't smell anything while underwater.";
 
@@ -154,7 +154,7 @@ Section 3 - Sea Dragon Cum
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Sea Dragon Cum"	"Thick seed from one of the dangerous sea dragons that marauds the coast. It is rarely found concentrated like this."	1	sea dragon cum
+"sea dragon cum"	"Thick seed from one of the dangerous sea dragons that marauds the coast. It is rarely found concentrated like this."	1	sea dragon cum
 
 the scent of sea dragon cum is "The cum smells powerfully of a male sea dragon.";
 
