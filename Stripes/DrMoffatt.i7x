@@ -405,7 +405,7 @@ to say thirstdecrease:
 Section 4 - Active Effects
 
 an everyturn rule:
-	if ( hp of Doctor Moffatt <= 3 and hp of Doctor Moffatt <= 7 ) and lust of Doctor Moffatt is not 1:
+	if ( hp of Doctor Moffatt >= 3 and hp of Doctor Moffatt <= 7 ) and lust of Doctor Moffatt is not 1:
 		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
 			say "     Something about your recent changes has affected you.  Thoughts of the curvy skunk doctor has stopped filling your mind.";
 			now hp of Doctor Moffatt is 97;
