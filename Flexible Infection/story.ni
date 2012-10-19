@@ -5492,6 +5492,9 @@ when play ends:
 			if tf table of head is table Dragon Babe begin;
 				say "You flee the city at the sound of the incoming military, taking to the sewers and moving for what feels like a month of migration. You find a new city, still abandoned, mostly. It seems to have a lot of mutants in it, but more interestingly, some untouched humans still holding out. You have learned the sewers well, and your charms and skill keep you fed, too well fed. One day you find yourself stuck running along a familiar passage. For some reason, you don't feel nervous about the situation, knowing someone, despite all logic, will be along shortly to free you, and perhaps something more interesting than that. You can hardly wait.";
 			end if;
+			if tf table of head is table Fox Taur begin;
+				say "[foxtaur ending][line break]";
+			end if;
 			if tf table of head is table goblin begin;
 				let u be the number of compatible on-stage npc persons;
 				say "You [if u is greater than 0], and [u] others, [end if] flee to the outskirts of the city. A great roaring sound comes from above, where an airship comes in for a landing, its various gears spinning wildly in the struggle to keep it aloft. As soon as the plank is lowered, you dash up it. The goblins there greet their new member[if u is greater than 0]s[end if] eagerly and the ship sales off into the sky, towards adventure!";
