@@ -2860,6 +2860,7 @@ if the tf table of the pelvis is table latex fox and the destined femininity of 
 if the tf table of the pelvis is table minotaur and the destined femininity of the player is 1, yes;
 if the tf table of the pelvis is table goblin and the destined femininity of the player is 1, yes;
 if the tf table of the pelvis is table werewolf and the destined femininity of the player is 1, yes;
+if the tf table of rear is table fox taur, yes;
 no;
 
 Definition: A person (called N) is catty:

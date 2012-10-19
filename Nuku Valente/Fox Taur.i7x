@@ -34,7 +34,7 @@ Section Rules
 
 male sex of Fox Taur is usually "[if player is butch]You guide your cock to his waiting entrance and ease smoothly into his form. Your pre cum splashes out, lubricating the way as you drive harder and deeper, pulling him back against your rocking motions until you fill his bowels with thick gouts of seed, groaning with relief.[end if][if player is not butch]You raise your ass towards [printed name of noun], making a soft whining noise as you wave your rump back and forth, tail raised high in the air. He looks unsure a moment before he comes to his senses and approaches you quickly. His entry is a symphony of pleasure through your new body and you begin to rock back against him as he plunges deeply into you.[line break] [line break]You feel hands at your breasts and arch your back as new delights tingle through you. He brings you towards delightful completion again and again, or so you think, until his explosion in your depths set off a new chain of fireworks that leave you dizzy but sated on the ground.[end if]";
 
-The fox torso is a body part.  The body part origin of the fox torso is "rear".  The shift of the fox torso is "Your sense of balance suddenly seems terribly off. Daring a glance behind, you are horrified to witness a large protrusion extending from your ass. Crack and bones and rending of flesh ensues, and a minute later, you are the host of a whole second torso, that of a fox. Your genitals seem to have also migrated with it."  The desc of the fox torso is "You have a whole second torso extending from where your buttocks would normally be. It looks like that of a fox, complete with red fur on the body, and white fur along the belly. Along your underside, you can feel four rows of teats, jiggling slightly with each of your movements. Even more conspicuous is the presence of a fleshy udder where the teats end."  The TF table of the fox torso is Table fox taur. The fox torso is benign.
+[The fox torso is a body part.  The body part origin of the fox torso is "rear".  The shift of the fox torso is "Your sense of balance suddenly seems terribly off. Daring a glance behind, you are horrified to witness a large protrusion extending from your ass. Crack and bones and rending of flesh ensues, and a minute later, you are the host of a whole second torso, that of a fox. Your genitals seem to have also migrated with it."  The desc of the fox torso is "You have a whole second torso extending from where your buttocks would normally be. It looks like that of a fox, complete with red fur on the body, and white fur along the belly. Along your underside, you can feel four rows of teats, jiggling slightly with each of your movements. Even more conspicuous is the presence of a fleshy udder where the teats end."  The TF table of the fox torso is Table fox taur. The fox torso is benign.]
 
 [I'd like you to make a fox taur infection.
 Sex should be herm.
@@ -52,6 +52,20 @@ The primary attack description of a Fox Taur is "[one of]slides up against their
 The TF description of a Fox Taur is "lets out a yell of ecstasy as they fall to the ground, writhing and convulsing. Their clothing shreds as their body contorts in strange ways, growing new skeletal and muscular structure. After about of minute of this, they finally rise back to their feet and shake their discarded tatters off as they begin their new life as a".
 
 [Strange Claw is a kind of thing. The description of Strange Claw is "A claw that looks like it's from an animal. Something seems unusual about it, but you can't place what.". The TF Table of Strange Claw is table Fox Taur. 1 Strange Claw is in town border. Strange Claw is an infectitem.]
+
+A Milking Machine is a thing. "A curious looking milking machine hangs from the wall.". It is in Ranch Office. The description of milking machine is "It's a milking machine. Looks portable, with a milking tank built right at the end of it to carry around."
+
+Understand "use [thing]" as using.
+
+Using is an action applying to one thing.
+
+Instead of using a milking machine:
+	if tf table of rear is not table fox taur:
+		say "You feel a bit silly a moment holding the milkers before they seem to leap at you with a mind of their own. Rather than attaching at your chest, they grab at your lower belly and begin sucking energetically. Waves of strange sensations, mild pain, and distracting pleasure has you standing there for a moment with a strange expression as your body changes in ways not meant by nature.";
+		infect rear with fox taur;
+		continue the action;
+	say "Slipping the milkers over your new udder causes them to draw your vulpine cream from you. It[']s very pleasing, causing you to get harder and wetter at once, but does little productive besides that.";
+
 
 to say foxtaur ending:
 	say "Detecting incoming danger, you immediately flee the city on your swift fox paws. Avoiding all contact until you're more than a state away. You stumble across a farm and find it to be inhabited only by an old married couple that look years from death. They are quite surprised to find you one morning, attached to the milking machine and relieving the pressure that was building down there. Feigning harmlessness, they accept you as one of their animals, if the strangest one they ever saw. This works out well enough until the husband falls over while feeding the chickens. You easily leap over the stall wall and scurry over for a look. It appears that age had claimed him and he was dying. Thinking of no better way to assist, you gather him up and let your hungry womb consume him.";
