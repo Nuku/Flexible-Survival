@@ -858,10 +858,14 @@ Carry out reciting:
 					now hp of Doctor Moffatt is the number understood;
 					if hp of Doctor Moffatt is 99 or hp of Doctor Moffatt is 100:
 						now hp of Doctor Moffatt is 0;
-					if hp of Doctor Moffatt is 0:
+					if guy is banned or girl is banned or hermaphrodite is banned or furry is banned:
+						now Psych Department is unknown;
+						now Another Doctor is resolved;
+						now hp of Doctor Moffatt is 100;
+					otherwise if hp of Doctor Moffatt is 0:
 						now Psych Department is unknown;
 						now Another Doctor is unresolved;
-					if hp of Doctor Moffatt > 0:
+					otherwise if hp of Doctor Moffatt > 0:
 						now Psych Department is known;
 						now Another Doctor is resolved;
 						now hospnav is 1;

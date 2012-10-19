@@ -105,7 +105,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "Elf":
+	if bodyname of player is "elf":
 		if humanity of player is less than 10:
 			say "     Feeling no more attachment to this boring world, you speak the words of a spell that you suddenly remember.  The air ripples and shudders as a great portal opens before you, shimmering with heat.  You step through without hesitation and a great feline beast waits patiently in a jungle.  You mount the beast and he carries you back to your people swiftly.  Play time was over, but you would not forget your time amongst the humans.  You would suggest to the queen that your people take over a city of them.  They would make delightful pets...";
 		otherwise:
