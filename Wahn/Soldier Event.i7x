@@ -1,5 +1,5 @@
-Version 6 of Soldier Event by Wahn begins here.
-[Version 6 - Elaine, Adam and the Radio]
+Version 7 of Soldier Event by Wahn begins here.
+[Version 7 - David the Wandering Soldier (Patrol/Camp/Bunker), New Menus, Camp Bravo Entrance + two non-fuckable guard npcs]
 
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse";
@@ -48,12 +48,12 @@ when play begins:
 Instead of resolving a Trickster's Masterpiece:
 	say "     Following lust-filled grunts and bellows, you come upon a mid-sized military encampment on the parking space behind an office building. There you find a strange scene - in the middle of several olive green tents, there is a wooden hitching post - which a buck-naked soldier uses to hold on to. Behind the man is a very tall musclebound humanoid, sporting a horned bull's head and furred legs ending in cloven hooves - a minotaur. He's in a full on mating frenzy, shafting the human in front of him with mighty thrusts of his long cock. A bit to the side, a group of soldiers stands in front of an officer, many of them apprehensively looking over to the rutting minotaur before they turn back to their superior.";
 	say "     Curious what's going on there you sneak forward, staying out of sight behind one of the tents and just peeking around the corner. From your new location, you can hear the briefing the officer shouts at his men to be audible over the grunts and moans of the coupling man and beast.";
-	say "     '...so our local informant identified this creature to us as Patient Zero. Analyzing its bodily fluids could lead to a cure - but [if Diegochanged is 0]he[otherwise]she[end if] also warned us that samples must be kept at body temperature or they won't be usable after a short while. So since we can't guarantee to capture that -' he waves towards the minotaur, hulking over the soldier in front of it, '- alive, we had to move on to a different plan to get those samples to the scientists. Team up in twos, then grab your new equipment from corpsman Jones and follow his instructions. Dismissed.'";
+	say "     '...so our local informant identified this creature to us as Patient Zero. Analyzing its bodily fluids could lead to a cure - but [if Diegochanged is 0]he [otherwise]she [end if]also warned us that samples must be kept at body temperature or they won't be usable after a short while. So since we can't guarantee to capture that -' he waves towards the minotaur, hulking over the soldier in front of it, '- alive, we had to move on to a different plan to get those samples to the scientists. Team up in twos, then grab your new equipment from corpsman Jones and follow his instructions. Dismissed.'";
 	say "     The soldiers form up teams, then move towards the tent you're hiding behind. You peek in through a window flap and see a corpsman standing in front of several large sacks. When the first two soldiers come in, he says 'Here, take this -' (a bottle of lube) '- that -' (a black rubber dildo) '- and these -' (two butt-plugs) '- and get each other ready for Tiny Tim out there. Don't be embarrassed about it - you'll be heroes if they find a cure through your service. Also - really, really take your daily immunity boosters! You'll be carrying around potent stuff, so don't miss ANY injection.'";
 	say "     You spy in on them as group after group get their stuff, then strip and start to finger each other's asses rather sheepishly. Luckily several of the brave soldiers turn out to be gay, stepping in to help their inexperienced fellows out with some tips and hands-on support. Some even get to 'train' the newbies with their own hard shafts, the men preferring another soldier to often brightly colored sex toys.";
 	say "     Hearing the noise from the center of the camp rise, you reluctantly pull your gaze away from a whole tent full of naked men, most experimenting with dildos and some fucking each other with a passion. Looking around the corner of the tent, you see the minotaur thrust in a few more times, then grab the soldier's hips and hold him tightly as he grinds his hips forward and bellows loudly. You can see the creature's large balls pulsate as it deposits its seed inside the man's hole. Then another naked man comes forward and pushes a rubber butt plug into the fucked soldier's gaping hole as he pulls off the thick shaft. He leads the freshly filled and plugged man to a nearby bunk to recuperate, then steps up to the hitching post himself and wiggles his ass at the minotaur. Tireless, the massive creature pushes his hard cock against the man's pucker making them both grunt as he sinks into its tight embrace and starts another round of fucking.";
 	say "     [line break]";
-	say "     You stay quite a while, watching the soldiers take care of each other and then being bred one after another by the minotaur. In the end a whole squad of them gathers at the edge of the camp, fully clothed and with weapons and equipment, but standing and acting a bit strangely from the feeling of loads of cum and butt plugs inside their asses. Then they move out towards the closest checkpoint of the containment barrier around the city. You wonder what their superiors will say about this plan and the 'cargo' each soldier carries with him, should they even make it at all with all that active minotaur cum wearing down whatever defenses they do have[if diegotalk is 0]. And who might the trickster have been who sold them on this improbable tall tale? It would certainly be interesting to meet him - or her - or it[otherwise if diegochanged is 0]. Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing his hand in this, you'd say it's one of the best Diego's done yet[otherwise]. Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing her hand in this, you'd say it's one of the best Diego's done yet[end if].";
+	say "     You stay quite a while, watching the soldiers take care of each other and then being bred one after another by the minotaur. In the end a whole squad of them gathers at the edge of the camp, fully clothed and with weapons and equipment, but standing and acting a bit strangely from the feeling of loads of cum and butt plugs inside their asses. Then they move out towards the closest checkpoint of the containment barrier around the city. You wonder what their superiors will say about this plan and the 'cargo' each soldier carries with him, should they even make it at all with all that active minotaur cum wearing down whatever defenses they do have[if diegotalk is 0]. And who might the trickster have been who sold them on this improbable tall tale? It would certainly be interesting to meet him - or her - or it[otherwise if diegochanged is 0]. Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing his hand in this, you'd say it's one of the best Diego's done yet.[otherwise]. Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing her hand in this, you'd say it's one of the best Diego's done yet.[end if]";
 	say "     [line break]";
 	say "     Certainly worth another visit... you just hope you can find your way back to the [bold type]camp[roman type] with all the chaos on the streets of this city.";
 	wait for any key;
@@ -72,10 +72,10 @@ when play begins:
 	add Human Urges to badspots of girl;     [female soldier]
 
 Instead of resolving a Human Urges:
-	say "     As you wander through one of the residential areas next to this seedy section of town, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans.";
-	say "     Their city-camouflage clothing strewn about on the floor and rifles leaned against the opposite wall, you see two soldiers in intimate embrace on a bed. It's a man and a woman, with his hips pumping up and down as he fucks her with fast strokes and her arms holding him close to her body. One doesn't have to be infected with nanites to feel the basic urges of human existence - and with what's going on around all of you and the sexual sights around here especially, those two turned to each other to let off some steam.";
-	say "     You silently watch them go at it, sliding your hand down to your own crotch to stroke yourself. Both of the soldiers look pretty good, sweat glistening on their trained bodies as they move in unison. Soon, the woman's moans rise as she gets closer and closer, then turn into full-fledged lustful screams as she orgasms. Her partner isn't far behind, plunging his shaft deep into her pussy and grunting with each shot of semen he cums into her.";
-	say "     They lie on the bed in each other's arms for a moment, then the man pulls his cum-dripping cock out of her and stands up, going for a pack of cigarettes lying on a dresser nearby. The woman just lies there, softly stroking her wet pussy lips as she rides out the last bit of her orgasm. Unseen, but deep inside her, her partner's sperm race onwards, doing their duty in the battle to keep humanity going. The fastest of them soon finds a fertile egg, burrowing into it and starts a new life. Only time will tell if its parents succeed in their mission to protect humanity or if it and they will become something different in the end.";
+	say " As you wander through one of the residential areas next to this seedy section of town, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans.";
+	say " Their city-camouflage clothing strewn about on the floor and rifles leaned against the opposite wall, you see two soldiers in intimate embrace on a bed. It's a man and a woman, with his hips pumping up and down as he fucks her with fast strokes and her arms holding him close to her body. One doesn't have to be infected with nanites to feel the basic urges of human existence - and with what's going on around all of you and the sexual sights around here especially, those two turned to each other to let off some steam.";
+	say " You silently watch them go at it, sliding your hand down to your own crotch to stroke yourself. Both of the soldiers look pretty good, sweat glistening on their trained bodies as they move in unison. Soon, the woman's moans rise as she gets closer and closer, then turn into full-fledged lustful screams as she orgasms. Her partner isn't far behind, plunging his shaft deep into her pussy and grunting with each shot of semen he cums into her.";
+	say " They lie on the bed in each other's arms for a moment, then the man pulls his cum-dripping cock out of her and stands up, going for a pack of cigarettes lying on a dresser nearby. The woman just lies there, softly stroking her wet pussy lips as she rides out the last bit of her orgasm. Unseen, but deep inside her, her partner's sperm race onwards, doing their duty in the battle to keep humanity going. The fastest of them soon finds a fertile egg, burrowing into it and starts a new life. Only time will tell if its parents succeed in their mission to protect humanity or if it and they will become something different in the end.";
 	increase score by 5;
 	now Human Urges is resolved;
 
@@ -118,70 +118,460 @@ Thankful Soldier is a situation. Thankful Soldier is resolved.  [meeting the guy
 The sarea of Thankful Soldier is "Outside";
 when play begins:
 	add Thankful Soldier to badspots of guy;            [male soldier]
+	
+TSEventCounter is a number that varies.  TSEventCounter is normally 0.	
+LastTSEvent is a number that varies.  LastTSEvent is normally 555.
 
 Instead of resolving a Thankful Soldier:
-	say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
-	say "     At first raising his weapon in alarm, he then lowers it again as he recognizes you in turn. 'Hello there. You saved me from that hellish thing in the bar. Thanks a lot for that - sorry I didn't say anything then, but I was pretty groggy after that beating. I'm David, by the way.'";
-	say "     He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.' Do you graciously accept the supplies (Y) ...or would you rather take the handsome Private as your reward? (N) ";
-	if player consents:   [accept supplies]
-		say "     You take the items he offers you and stash them in your pack. 'Hope that'll help you a bit. Stay safe - help is coming, it's just a question of time till more troops arrive and the scientists figure out this whole mess.' He nods to you, then continues his patrol route.";
-		say "     Food x3, Water x1 obtained.";
-		add "food" to invent of player;
-		add "food" to invent of player;
-		add "food" to invent of player;
-		add "water bottle" to invent of player;
-	otherwise:            [fuck the soldier]
-		say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
-		say "     As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but his moans as you squeeze his ass and his bulge pressing against your body show that he's quite ready for some action. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
-		if(cocks of player > 0 and cunts of player > 0):
-			say "     Being dual-gendered, which way do you want to enjoy your new soldier friend? (Y = Fuck his Ass, N = Take him in your Pussy) ";
-			if player consents:   [fuck his ass]
-				say "[DavidFirstAnal]";
-			otherwise:    [let him fuck your pussy]
-				say "[DavidFirstVaginal]";
-		otherwise if(cocks of player > 0):
-			say "[DavidFirstAnal]";
-		otherwise if(cunts of player > 0):
-			say "[DavidFirstVaginal]";
-		otherwise:
-			say "[DavidFirstRubbing]";
-	say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Time will tell when you see him next.";
-	wait for any key;
-	increase score by 5;
-	now Thankful Soldier is resolved;
+	if (LastTSEvent - turns < 4):	 
+		say "     You walk through the alley where you last met David and check the surrounding area - no luck. Seems like your soldier-friend is patrolling or scouting somewhere else right now. Maybe you should try a bit later again...";
+	otherwise:
+		if TSEventCounter is 0: [first meeting]
+			say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
+			say "     At first raising his weapon in alarm, he then lowers it again as he recognizes you in turn. 'Hello there. You saved me from that hellish thing in the bar. Thanks a lot for that - sorry I didn't say anything then, but I was pretty groggy after that beating. I'm David, by the way.'";
+			say "     He pulls his backpack off and digs around in it for a moment, then turns to you holding three MREs and a water bottle. 'Please accept these as thanks.' Do you graciously accept the supplies (Y) ...or would you rather take the handsome Private as your reward? (N) ";
+			if player consents:   [accept supplies]
+				say "     You take the items he offers you and stash them in your pack. 'Hope that'll help you a bit. Stay safe - help is coming, it's just a question of time till more troops arrive and the scientists figure out this whole mess.' He nods to you, then continues his patrol route. You memorize where the alley is in the city, hoping you can catch him on patrol again sometime later.";
+				say "     Food x3, Water x1 obtained.";
+				add "food" to invent of player;
+				add "food" to invent of player;
+				add "food" to invent of player;
+				add "water bottle" to invent of player;
+			otherwise:            [fuck the soldier]
+				say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
+				say "     As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but he moans as you squeeze his ass and his bulge pressing against your body show that he's quite ready for some action. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
+				if(cocks of player > 0 and cunts of player > 0):
+					say "     [line break]";
+					say "     Being dual-gendered, which way do you want to enjoy your new soldier friend? (Y = Fuck his Ass, N = Take him in your Pussy) ";
+					if player consents:   [fuck his ass]
+						say "[DavidPatrolAnal]";
+					otherwise:    [let him fuck your pussy]
+						say "[DavidPatrolVaginal]";
+				otherwise if(cocks of player > 0):
+					say "[DavidPatrolAnal]";
+				otherwise if(cunts of player > 0):
+					say "[DavidPatrolVaginal]";
+				otherwise:
+					say "[DavidPatrolRubbing]";
+				say "     [line break]";
+				say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Hopefully you can catch him here again on his next patrol...";
+				now thirst of David is 1;
+			wait for any key;
+			increase score by 5;
+			now LastTSEvent is turns;
+			increase TSEventCounter by 1;
+		otherwise if TSEventCounter > 2 and Camp Bravo Entrance is known:   [all good things come to an end - he's ordered to Camp Bravo]
+			say "     Moving through the city, you run into a lone soldier walking down a street. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm. Currently he's pretty loaded with equipment, a large backpack full and all kinds of stuff hanging on straps and his belt.";
+			say "     As he recognizes you, he gives you a little wave and walks up to talk. He says [if thirst of David < 2]'Hello and goodbye I guess. I got new order to report to [bold type]Camp Bravo[roman type] for some special duties, so I'm afraid we won't be seeing each other again for now.' You ask him if he knows what he's supposed to do there and he shrugs, saying that he just got ordered to report there. Won't he be surprised when he gets there...[otherwise] with a bit of a sad expression 'I got ordered to report to Camp Bravo for some other duties. So I guess that's it for our little meetings in that alley... I'll miss you.' After pulling you in for a goodbye-kiss, he walks away, looking back after a while and waving, then continuing on his way.[end if]";
+			now hp of David is 1;
+			move David to Parade Ground;
+			now Thankful Soldier is resolved;
+		otherwise:																										[meeting him in the alley to chat or fuck]
+			say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
+			say "     As he recognizes you in turn, he gives you a little wave and walks up to you after a last vigilant look up and down the alley. He says [if thirst of David is 0]'Hello again. It's nice to see you're okay. Sadly, I can't share any more supplies...'[otherwise if thirst of David is 1]'Hello. It's... nice to see you again,' his face getting a bit red in embarrassment as he remembers what you did with him last time.[otherwise if thirst of David > 1]'Hi there - I've missed you.'[end if]";
+			say "     [line break]";
+			say "     What now? Do you want to talk to him (Y), or rather have some hot and sexy action (N)?";
+			if player consents:   [just talking]
+				say "     You chat a bit with David about life before the nanite plague and now and what's going on in the city. Speaking to a regular human about these things calms your mind and strengthens your human self-image a bit. After a while, you say your goodbyes and he goes on walking his patrol. Maybe you'll see him again the next time he comes through here...";			
+				increase humanity of player by 10;
+			otherwise:            [sex]
+				if thirst of David is 0:
+					say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
+					say "     As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but he moans as you squeeze his ass and his bulge pressing against your body show that he's quite ready for some action. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
+				otherwise:
+					say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss. [if thirst of David is 1]After a moment of hesitation, he replies in kind and you make out with each other, exploring each other's mouths with your tongues[otherwise if thirst of David > 1]He eagerly complies, hungrily making out with you and exploring your mouth with his tongue[end if]. Meanwhile, you run a hand through his hair and goose his bubble butt with the other one.";
+					say "     As you come back up for air, he [if thirst of David is 1]stammers 'I... just can't resist. So ... good.', moaning as you squeeze his ass and feel his bulge pressing against your body. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.[otherwise if thirst of David > 1]says 'I'm so horny right now. You're amazing...', moaning as you squeeze his ass and feel his bulge pressing against your body. Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.[end if]";
+				if(cocks of player > 0 and cunts of player > 0):
+					say "     [line break]";
+					say "     Being dual-gendered, which way do you want to enjoy your soldier friend? (Y = Fuck his Ass, N = Take him in your Pussy) ";
+					if player consents:   [fuck his ass]
+						say "[DavidPatrolAnal]";
+					otherwise:    [let him fuck your pussy]
+						say "[DavidPatrolVaginal]";
+				otherwise if(cocks of player > 0):
+					say "[DavidPatrolAnal]";
+				otherwise if(cunts of player > 0):
+					say "[DavidPatrolVaginal]";
+				otherwise:
+					say "[DavidPatrolRubbing]";
+				say "     [line break]";
+				say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Hopefully you can catch him here again in a little while...";
+				wait for any key;
+				if thirst of David < 5:
+					increase thirst of David by 1;
+			now LastTSEvent is turns;
+			increase TSEventCounter by 1;
 
-to say DavidFirstAnal:
-	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
-	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips, then spin him around, your arms around his chest from behind and walk him over to the nearest wall of a building.";
-	say "     With a moaned 'Stand like this.', you lift his arms up and put them against the wall, the pull his ass towards you a bit. You rub your rock-hard [cock of player] cock up and down between the round buns of his bubble butt, then bring its tip to the tight opening between them. Pushing forward with increasing pressure, David's pucker resists you for a moment, then opens up and allows your cockhead to slide into the tight embrace of his ass. It's virgin territory for sure you're exploring here - and from his lust-filled groans as you slowly slide deeper into him, you're being very well received.";
-	say "     As you bottom out inside his ass, you give his cock a few strokes, then move your hands back to his hips. Holding on tightly, you start pulling out almost all the way and hammering your shaft back inside him in quick deep strokes, filling the alley with slapping noises as your hips meet his butt. His tightly gripping hole feels just amazing around your thrusting member, filling you with ecstasy as you very thoroughly take his virginity.";
-	say "     Getting shafted like this soon drives your handsome Private over the edge, his cock spraying a huge load of cum all over the stones of the wall he's standing against. David's ass muscles quiver and flex with each shot of seed erupting from his cock, giving you all new sensations as you move in and out of him. Then it's your turn, and with one final deep thrust you push inside David all the way and fill his insides with spurt after spurt of warm seed.";
-	say "     You keep standing like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex and David's brain starts working again, he looks over his shoulder at you with a questioning expression. 'I like... this,' he says and you feel his asshole tighten for a second around your member. 'Does that mean I'm gay?' With a worried look he adds 'I got a girlfriend back home, you know.'";
-	say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that he just might be bisexual and that he should use the opportunity to try out the whole spectrum of possible partners. The girlfriend situation will surely work itself out once he knows what he really wants. Although judging from his load all over the wall, you're pretty certain you left a lasting impression on him, opening him up more man-on-man action...";
 
-to say DavidFirstVaginal:
+to say DavidPatrolAnal:
+	if lust of David is 0: 								[anal virgin]
+		say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
+		say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips, then spin him around, your arms around his chest from behind and walk him over to the nearest wall of a building.";
+		say "     [line break]";
+		say "     With a moaned 'Stand like this.', you lift his arms up and put them against the wall, then pull his ass towards you a bit. You rub your rock-hard [cock of player] cock up and down between the round buns of his bubble butt, then bring its tip to the tight opening between them. Pushing forward with increasing pressure, David's pucker resists you for a moment, then opens up and allows your cockhead to slide into the tight embrace of his ass. It's virgin territory for sure you're exploring here - and from his lust-filled groans as you slowly slide deeper into him, you're being very well received.";
+		say "     As you bottom out inside his ass, you give his cock a few strokes, then move your hands back to his hips. Holding on tightly, you start pulling out almost all the way and hammering your shaft back inside him in quick deep strokes, filling the alley with slapping noises as your hips meet his butt. His tightly gripping hole feels just amazing around your thrusting member, filling you with ecstasy as you very thoroughly take his virginity.";
+		say "     Getting shafted like this soon drives your handsome Private over the edge, his cock spraying a huge load of cum all over the stones of the wall he's standing against. David's ass muscles quiver and flex with each shot of seed erupting from his cock, giving you all new sensations as you move in and out of him. Then it's your turn, and with one final deep thrust you push inside David all the way and fill his insides with spurt after spurt of warm seed.";
+		say "     [line break]";
+		say "     You keep standing like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex and David's brain starts working again, he looks over his shoulder at you with a questioning expression. 'I like... this,' he says and you feel his asshole tighten for a second around your member. 'Does that mean I'm gay?' With a worried look he adds 'I got a girlfriend back home, you know.'";
+		say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that he just might be bisexual and that he should use the opportunity to try out the whole spectrum of possible partners. The girlfriend situation will surely work itself out once he knows what he really wants. Although judging from his load all over the wall, you're pretty certain you left a lasting impression on him, opening him up more man-on-man action...";
+	otherwise:             								[repeat assfucking]
+		say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
+		say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips, then spin him around, your arms around his chest from behind and walk him over to the nearest wall of a building.";
+		say "     [line break]";
+		say "     Knowing what's coming, he lifts his arms up and puts them against the wall, bending forward a bit and offering his ass. You rub your rock-hard [cock of player] cock up and down between the round buns of his bubble butt, then bring its tip to the tight opening between them. Pushing forward with increasing pressure, David's pucker resists you for a moment, then opens up and allows your cockhead to slide into the tight embrace of his ass. He's still tight as he was when you took his virginity and giving lust-filled groans as you slowly slide deeper into him.";
+		say "     As you bottom out inside his ass, you give his cock a few strokes, then move your hands back to his hips. Holding on tightly, you start pulling out almost all the way and hammering your shaft back inside him in quick deep strokes, filling the alley with slapping noises as your hips meet his butt. His tightly gripping hole feels just amazing around your thrusting member, filling you with ecstasy as you give him a good fucking.";
+		say "     Getting shafted like this soon drives your handsome Private over the edge, his cock spraying a huge load of cum all over the stones of the wall he's standing against. David's ass muscles quiver and flex with each shot of seed erupting from his cock, giving you all new sensations as you move in and out of him. Then it's your turn, and with one final deep thrust you push inside David all the way and fill his insides with spurt after spurt of warm seed.";
+		say "     [line break]";
+		say "     You keep standing like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex, he says 'I still can't believe how good you feel inside me,' he says and you feel his asshole tighten for a second around your member. 'I guess I really am bi, like you said.' With a worried look he adds 'What will Ann say about that when I get back home?'";
+		say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
+
+to say DavidPatrolVaginal:
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
 	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes and putting them down as an improvised blanket, you give him another quick kiss on the lips and lie down on it, pulling him with you by the hand so he ends up on top of you.";
+	say "     [line break]";
 	say "     It only takes a helping hand guiding his rod to your pussy lips for the young man's instincts to kick in and his hips plunge downward, thrusting his hard manhood deep into your vagina. He fucks you with smooth strokes, making you moan with the feelings as his shaft hits just the right spots inside you. You run your hands over his chest, feeling his muscles while your legs wrap around his hips to pull him even deeper with each of his thrusts. Soon he speeds up even more, groaning louder and louder as he gets closer to orgasm.";
 	say "     Then he shouts 'I'm coming!' and you feel a shudder run through his body as the first blast of his human cum shoots deep inside your body. You pull him down on top of you, hugging him close and kissing him as his cock twitches again and again, filling you to the brink with his fertile seed.[fimpregchance]";
 	if baby is 0 and gestation of child is not 0:
 		now facename of child is "human";
 		now bodyname of child is "human";
 		now skinname of child is "human";
-	say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I got a girlfriend back home, you know.'";
+	say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... oh no, I just cheated on my girlfriend. What will she say when I get back home. I - you...'";
 	say "     Pulling his mouth to yours for a quick kiss, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 
-to say DavidFirstRubbing:
+to say DavidPatrolRubbing:
 	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the something more.";
 	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips, then start rubbing your naked body against his. Grasping his hard manhood in your hand, you jerk a few times up and down on it, then and stroke the sensitive skin of your flat crotch with its tip. Even though you don't have anything there as a neuter, it still gives you a warm and pleasant feeling to feel the warmth of his shaft against you and hear his lustful moans.";
 	say "     You switch between grinding against David, fondling his body and making out with him, filling the alley with both of your moans and groans. Not being able to cum yourself, you could keep this up forever, but your horny soldier's urges all too soon have him gasping faster and faster as he gets closer to orgasm. Then it's time - his thick shaft pules in your hand as blasts of cum jet out of its head to splat all over your crotch and stomach.";
-	say "     Gathering up some cum with your finger, you lick it off, then give your handsome Private a kiss on the lips, making him taste his own cum on your lips. You keep standing like that for a moment, your arms around his chest and slowly making out. As both of you come down from the rush of sex and David's brain starts working again, he says 'That felt amazing - but... what exactly are you?' with a nod to your genderless nether region. With a worried look he adds 'Anyways... maybe this was wrong. I got a girlfriend back home, you know.'";
+	say "     Gathering up some cum with your finger, you lick it off, then give your handsome Private a kiss, making him taste his own cum on your lips. You keep standing like that for a moment, your arms around his chest and slowly making out. As both of you come down from the rush of sex and David's brain starts working again, he says 'That felt amazing - but... what exactly are you?' with a nod to your genderless nether region. With a worried look he adds 'Anyways... maybe this was wrong. We didn't really have sex, but you made me cum. Feels like I'm cheating on my girlfriend Ann back home.'";
 	say "     Stroking his cheek, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 
 
-Back at the Camp is a situation. Back at the Camp is resolved.  [enabled by the 'Tricksters Masterpiece' event]
+[ thirst states of David                                             ]
+[   0: had no sex of any kind with the player                        ]
+[   1: had some sort of intimate contact with the player - once      ]
+[   2: had some sort of intimate contact with the player - often     ]
+[  10: is the player's fuck-buddy                                    ]
+[  20: player is his girl/boyfriend                                  ]
+[ lust states of David                                               ]
+[   0: anal virgin                                                   ]
+[   1: got fucked in the ass                                         ]
+[   2: got fucked in the ass + sucked player cock                    ]
+[ hp states of David                                                 ]
+[   0: on patrol                                                     ]
+[   1: got called in to Camp Bravo                                   ]
+[   2: met the player in Camp Bravo                                  ]
+[   3: liaison to the player - in Camp Bravo                         ]
+[   4: liaison to the player - in the Bunker                         ]
+
+
+David is a man.
+The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair.";
+The conversation of David is { "Oh, hello." };
+lastfuck of David is usually 555.
+
+instead of sniffing David:
+	say "     David has a nice masculine human smell.";
+
+Instead of fucking David:
+	if(lastfuck of David - turns < 5):
+		say "     David says 'I'd love to, but I'm still pretty worn out from the last time...'";
+	otherwise:
+		say "     You walk up to David and tell him you want to 'talk' to him - alone. [if thirst of David < 2]He salutes and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier..[otherwise]He gives you a knowing wink and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier...[end if]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		choose a blank row in table of fucking options;
+		now title entry is "Suck David's cock";
+		now sortorder entry is 1;
+		now description entry is "Give him a blow-job.";
+		if (lust of David > 0 and cocks of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Have him suck your cock";
+			now sortorder entry is 2;
+			now description entry is "Get a blow-job.";
+		if (cunts of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Let David fuck your pussy";
+			now sortorder entry is 3;
+			now description entry is "Let the young soldier breed you.";
+		if (lust of David > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Let David fuck your ass";
+			now sortorder entry is 4;
+			now description entry is "Let the young soldier fill your ass with his seed.";
+		if (cocks of player > 0):
+			choose a blank row in table of fucking options;
+			now title entry is "Take David's ass";
+			now sortorder entry is 5;
+			now description entry is "Fill the young soldier's ass with your cock.";			
+		sort the table of fucking options in sortorder order;
+		while sextablerun is 0:
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry][line break]";
+				say "Is this what you want?";
+				if player consents:
+					let nam be title entry;
+					clear the screen and hyperlink list;
+					now sextablerun is 1;
+					if nam is "Suck David's cock":
+						say "[DavidSex1]";
+					otherwise if (nam is "Have him suck your cock"):
+						say "[DavidSex2]";
+					otherwise if (nam is "Let David fuck your pussy"):
+						say "[DavidSex3]";
+					otherwise if (nam is "Let David fuck your ass"):
+						say "[DavidSex4]";
+					otherwise if (nam is "Take David's ass"):
+						say "[DavidSex5]";
+		if thirst of David < 5:
+			increase thirst of David by 1;
+		now lastfuck of David is turns;
+
+instead of conversing David:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	choose a blank row in table of fucking options;
+	now title entry is "Ask him for a report.";
+	now sortorder entry is 1;
+	now description entry is "Talk to him.";
+	if (hp of David is 3):
+		choose a blank row in table of fucking options;
+		now title entry is "Send him to the bunker";
+		now sortorder entry is 2;
+		now description entry is "Have him go to the library bunker.";
+	if (hp of David is 4):
+		choose a blank row in table of fucking options;
+		now title entry is "Send him to Camp Bravo";
+		now sortorder entry is 3;
+		now description entry is "Have him go back to the military camp.";
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Abort";
+		now sortorder entry is 4;
+		now description entry is "Don't say anything.";
+	sort the table of fucking options in sortorder order;
+	while sextablerun is 0:
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry][line break]";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				clear the screen and hyperlink list;
+				now sextablerun is 1;
+				if nam is "Ask him for a report.":
+					if hp of David is 2:
+						say "     David says 'I'm still waiting for my number to come up. Doesn't seem as frightening as before though - maybe it's the strange smell in the air here...'";
+					otherwise if hp of David is 3:
+						say "     David says 'As you can see, the sample gathering is still going well. It's unbelievable how much stamina Tiny Tim has. [if CampBravoWomenAllowed is 1]Several of the female soldiers got sent out as well by now, their bellies already swelling with minotaur calves. [end if][if Adam is in Quartermaster's Tent]The quartermaster had a half-minotaur son too - he's in her tent helping her out.'[end if]";
+					otherwise if hp of David is 4:
+						if Sarahpups > 3:
+							say "     David says 'Sarah's puppies keep trying to chew up my boots. They're sweet and all, but sometimes they get on my nerves. I've been going up into the library to get some peace and quiet and read. [if Fang is in the Library]Of course, there your wolf keeps staring at me like he wants to mount me.[end if]'";
+						otherwise:
+							say "     Pretty quiet down here in the bunker. I've been going up into the library to grab a book or two to read. [if Fang is in the Library]And your wolf kept looking at me all the time like he wanted to mount me.[end if]'";
+					otherwise:
+						say "     In this hp state David shouldn't be talking. Please report when and how you saw this.";
+				otherwise if (nam is "Send him to the bunker"):
+					say "     David gives you a salute and says '[if thirst of David is 20]See you there, baby.'[otherwise]As you wish, sir.' [end if]before going to collect his clothes and equipment.";
+					move David to Bunker;
+					now hp of David is 4;
+				otherwise if (nam is "Send him to Camp Bravo"):
+					say "     David gives you a salute and says '[if thirst of David is 20]See you there, baby.'[otherwise]As you wish, sir.' [end if]before going to collect his clothes and equipment.";
+					move David to Parade Ground;
+					now hp of David is 3;
+				otherwise if (nam is "Abort"):
+					say "     Having changed your mind about talking to him, you wave David off and turn away.";
+
+after of going to Parade Ground while hp of David is 1:
+	now hp of David is 2;
+	say "     As you enter Camp Bravo, you see a familiar face standing on the parade ground - it's David Jackson, your handsome Private from out in the city. He's watching the minotaur with a bit of a wide-eyed expression. Moving up to him, you say hello.";
+	say "     [line break]";
+	say "     'Hello again. I was told there might be a special agent coming to talk to us, but I never thought it'd be you. You never told me you're with the government...' You apologize, giving him some airy explanation about needed secrecy and gathering unbiased information. Quickly leading over to another topic, you ask him about what he thinks about the Camp.";
+	say "     David points over at the minotaur, saying 'Just look at the thing - it's huge. Almost couldn't believe it when the first group of men came out and it stuck its cock up their asses and fucked them. And the whole story about why we're doing this sounds a bit fishy to me... but orders are orders.' He gives the minotaur another look and rubs his ass. 'I worry a bit that it'll be my turn soon...'";
+
+after of going to Parade Ground while thirst of David is 5 and hp of David is 3:
+	say "     As you step on the parade ground of Camp Bravo, David walks up to you and pulls you aside, saying he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.'";
+	say "     He looks at you with an earnest and hopeful expression. What do you tell him? Y = 'I like you too - come be my boyfriend.' ; N = 'We're just fuck-buddies, blowing off some steam.'";
+	if player consents:
+		now thirst of David is 20;                [boyfriend]
+		say "     He smiles and gives you a kiss and a tight embrace.";
+	otherwise:
+		now thirst of David is 10;                [fuck-buddy]
+		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
+
+after of going to Bunker while thirst of David is 5 and hp of David is 4:
+	say "     As you enter the bunker, David walks up to you and says he has something important to talk to you about. He looks a bit embarrassed about it, hesitating before he says 'Listen, you saved me from minotaur duty, and I like being with you and... you know. I wanted to ask how you see - you and me - us.'";
+	say "     He looks at you with an earnest and hopeful expression. What do you tell him? Y = 'I like you too - come be my boyfriend.' ; N = 'We're just fuck-buddies, blowing off some steam.'";
+	if player consents:
+		now thirst of David is 20;                [boyfriend]
+		say "     He smiles and gives you a kiss and a tight embrace.";
+	otherwise:
+		now thirst of David is 10;                [fuck-buddy]
+		say "     'Oh, ok - just buddies, you say. I'll go back to Ann then when all this is over.";
+
+
+to say DavidSex1:												[player sucks him]
+	if thirst of David is 0:
+		if David is in Parade Ground:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard and pretty pliable.";
+		otherwise:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke his crotch, a bulge quickly forming in his pants. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
+		say "     Kneeling down in front of him, you undo David's zipper and pull out his cock, making the man moan as you handle his erect manhood. Stroking up and down on his shaft, you have him rock-hard in no time, then move your head forward a bit and lick over the tip. Next you take his cock into your mouth, and start bobbing up and down on it, while David groans and murmurs things like 'So good...' and 'You're a lot better than...'";
+		say "     You give the young soldier a long and amazing blow-job, keeping at it until he suddenly shouts 'I'm coming!' and starts to shoot strings of cum into your mouth. You wait till he stops twitching and the last spurt of semen leaves his cock, then stand up and start making out with him, smiling inwardly as you push some of his own cum in David's mouth with your tongue to give him a taste.'";
+		say "     [line break]";
+		say "     As he comes down from the rush of orgasm a while later and David's brain starts working again, he pants 'Wow, you're better than... Oh!' with a guilty expression suddenly shadowing his face. 'I got a girlfriend - and now I've cheated on her having oral sex! What will she say when I get back home? I - you...'";
+		say "     Pulling his mouth to yours for another quick kiss, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
+	otherwise:
+		if David is in Parade Ground:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard. As you pull away to get some air, you moan 'Let me take care of that for you.', getting an eager nod from David as answer.";
+		otherwise:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
+		say "     Kneeling down in front of him, you undo David's zipper and pull out his cock, making the man moan as you handle his erect manhood. Stroking up and down on his shaft, you have him rock-hard in no time, then move your head forward a bit and lick over the tip. Next you take his cock into your mouth, and start bobbing up and down on it, while David groans and murmurs things like 'So good...' and 'You're a lot better than...'";
+		say "     You give the young soldier a long and amazing blow-job, keeping at it until he suddenly shouts 'I'm coming!' and starts to shoot strings of cum into your mouth. You wait till he stops twitching and the last spurt of semen leaves his cock, then stand up and start making out with him, smiling inwardly as you push some of his own cum in David's mouth with your tongue to give him a taste.'";
+		say "     [line break]";
+		if thirst of David is 10:						[fuck buddy]
+			say "     As he comes down from the rush of orgasm a while later and David's brain starts working again, he pants 'Wow, you're better than Ann. Best fuck-buddy ever. I'll miss you when I'm back with her.'";
+		otherwise if thirst of David is 20:	[boy/girlfriend]
+			say "     As he comes down from the rush of orgasm a while later and David's brain starts working again, he pants 'You're better than Ann ever was. I love having you as my [if cocks of player > 0]boyfriend[otherwise]girlfriend[end if].'";
+		otherwise:   												[worrying about cheating on his girlfriend]
+			say "     As he comes down from the rush of orgasm a while later and David's brain starts working again, he pants 'Wow, you're better than Ann.' with a somewhat guilty expression. 'And I've just cheated on her - again!'";
+
+to say DavidSex2:							[he sucks the player]
+	if David is in Parade Ground:
+		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
+	otherwise:
+		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
+	say "     Pulling back from David, you quickly strip off your clothes and sit at the edge of one of the nearby bunk beds. Holding out your hard [cock of player] manhood, you wave him closer and tell the young soldier to suck you off. [if lust of David is 1]He just stands there for a moment, staring at your cock until you say 'Come on, you liked getting fucked with it, didn't you? Just give it a try...' then steps up and kneels between your legs.[otherwise]He smiles at you, licking his lips, then steps up and kneels between your legs.[end if]";
+	say "     Taking hold of your cock, the young soldier holds it up and licks along the shaft before taking the tip in his mouth. You put your hands on his head and softly push it down on your cock, helping him to get into sucking on it. Soon you have him bobbing up and down on your manhood, with his lips tight around the shaft. [if lust of David is 1]Even though it's his first blow-job, he's pretty good at it, knowing how to handle a cock from being a man himself.[otherwise]He's very eager to please you, even trying to deep-throat you once or twice.[end if]";
+	say "     Before too much longer, you feel the need to cum rise in your balls and say 'I'm close, suck me harder.' [if lust of David is 0]You pull his head against your crotch as you start shooting, spurt after spurt of your seed filling his hot mouth.[otherwise]He pushes your cock into his mouth all the way as you orgasm, making you shoot directly down his throat and into his stomach.";
+	say "     [line break]";
+	if thirst of David is 10:							[fuck buddy]
+		say "     After softly sucking on your cock a bit more, David pulls it out of his mouth and looks up at you, saying 'How was that, fuck-buddy?'";
+	otherwise if thirst of David is 20:		[boy/girlfriend]
+		say "     After softly sucking on your cock a bit more, David pulls it out of his mouth and looks up at you with a smile. Then he moves up and pushes you back to lie on the bunk so you can make out. 'You're amazing. I love having you as my boyfriend.'";
+	otherwise:    												[worrying about cheating on his girlfriend]
+		say "     After softly sucking on your cock a bit more, David pulls it out of his mouth and looks up at you, saying 'Cock-sucking isn't so bad - I somehow even like the taste of cum. Ann always said it tastes horrible.' with a somewhat guilty expression.";
+	now lust of David is 2;
+
+to say DavidSex3:												[player pussy fucked]
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
+	if thirst of David is 0:							[first time]
+		if David is in Parade Ground:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard and pretty pliable.";
+		otherwise:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke his crotch, a bulge quickly forming in his pants. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
+		say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
+		say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you grab David and pull him with you to one of the nearby bunks, lying down with him on top of you.";
+		say "     [line break]";
+		say "     It only takes a helping hand guiding his rod to your pussy lips for the young man's instincts to kick in and his hips plunge downward, thrusting his hard manhood deep into your vagina. He fucks you with smooth strokes, making you moan with the feelings as his shaft hits just the right spots inside you. You run your hands over his chest, feeling his muscles while your legs wrap around his hips to pull him even deeper with each of his thrusts. Soon he speeds up even more, groaning louder and louder as he gets closer to orgasm.";
+		say "     Then he shouts 'I'm coming!' and you feel a shudder run through his body as the first blast of his human cum shoots deep inside your body. You pull him down on top of you, hugging him close and kissing him as his cock twitches again and again, filling you to the brink with his fertile seed.[fimpregchance]";
+		if baby is 0 and gestation of child is not 0:
+			now facename of child is "human";
+			now bodyname of child is "human";
+			now skinname of child is "human";
+		say "     [line break]";
+		say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... oh no, I just cheated on my girlfriend. What will she say when I get back home. I - you...'";
+		say "     Pulling his mouth to yours for a quick kiss, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
+	otherwise:
+		if David is in Parade Ground:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
+		otherwise:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
+		say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
+		say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you grab David and pull him with you to one of the nearby bunks, lying down with him on top of you.";
+		say "     [line break]";
+		say "     It only takes a helping hand guiding his rod to your pussy lips for the young man's instincts to kick in and his hips plunge downward, thrusting his hard manhood deep into your vagina. He fucks you with smooth strokes, making you moan with the feelings as his shaft hits just the right spots inside you. You run your hands over his chest, feeling his muscles while your legs wrap around his hips to pull him even deeper with each of his thrusts. Soon he speeds up even more, groaning louder and louder as he gets closer to orgasm.";
+		say "     Then he shouts 'I'm coming!' and you feel a shudder run through his body as the first blast of his human cum shoots deep inside your body. You pull him down on top of you, hugging him close and kissing him as his cock twitches again and again, filling you to the brink with his fertile seed.[fimpregchance]";
+		if baby is 0 and gestation of child is not 0:
+			now facename of child is "human";
+			now bodyname of child is "human";
+			now skinname of child is "human";
+		say "     [line break]";		
+		if thirst of David is 10:  						[fuck buddy]
+			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'You're an amazing fuck-buddy, you know. I'll miss you after all this is over.'";
+		otherwise if thirst of David is 20:  	[boy/girlfriend]
+			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'I love having you as my [if cocks of player > 0]boyfriend[otherwise]girlfriend[end if]. You're just amazing.' he says and gives you another deep kiss.";
+		otherwise:    												[worrying about cheating on his girlfriend]
+			say "     You lay there for a while, entwined and kissing, with his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I just cheated on Ann - again!'";
+
+to say DavidSex4:												[player ass fucked]
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
+	if David is in Parade Ground:
+		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
+	otherwise:
+		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
+	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
+	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you push David to lie on one of the nearby bunks, then climb on top of him, straddling his hips.";
+	say "     [line break]";
+	say "     Reaching back to hold his hard cock up, you push it against your hole, then slowly sink your ass down, impaling yourself on his manhood. David moans 'So tight.' as his shaft goes deeper into your tightly gripping asshole, his hands holding on to and stroking your hips. Then he bottoms out in you and you can feel a pleasant fullness and the warmth of his crotch against your buns. You stay still for a moment to revel in the feeling, then start sliding up and down on the hard shaft.";
+	say "     Fucking yourself on his cock, you make David moan and gasp under you, holding on tight to sides of the bunk. Then, after a while, you pull off him with a slight *plop* and say 'Your turn on top - fuck me hard and deep.' Laying down next to him, you give him a quick kiss, then spread your legs and wiggle your ass invitingly.";
+	say "     Without hesitation, he moves to kneel behind you, then sets the tip of his hard cock against your pucker and plunges in. The young soldier fucks you hard and fast, grinding his hips against your ass and moaning into your ear with his arms around your chest. With each frenzied thrust you move closer to orgasm, and soon you're pushed over the brink, spraying your seed into the bedsheets below you. Your anal muscles twitching and tightening around his cock with each burst of your cum, David joins you in orgasm, flooding your insides with his human seed.[mimpregchance]";
+	if baby is 0 and gestation of child is not 0:
+		now facename of child is "human";
+		now bodyname of child is "human";
+		now skinname of child is "human";
+	say "     [line break]";
+	if thirst of David is 10:  						[fuck buddy]
+		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Nice ass, it's really tight' and you feel his manhood twitch inside you once. 'You're an amazing fuck-buddy, you know. I'll miss you after all this is over.'";
+	otherwise if thirst of David is 20:  	[boy/girlfriend]
+		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. 'I love having you as my [if cocks of player > 0]boyfriend[otherwise]girlfriend[end if]. You're just amazing.' he says and slides over to lie beside you, giving you another deep kiss.";
+	otherwise:    												[worrying about cheating on his girlfriend]
+		say "     You lay there for a while, with him resting on your back and his slowly softening cock still inside you. As both of you come down from the rush of sex and David's brain starts working again, he pants 'Wow, that was... just wow.' and you feel his manhood twitch inside you once. Then a worried look comes over his face and he adds 'But... I just cheated on Ann - again!'";
+
+to say DavidSex5:												[David ass fucked]
+	if thirst of David is 0:							[first time]
+		if David is in Parade Ground:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard and pretty pliable.";
+		otherwise:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke his crotch, a bulge quickly forming in his pants. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
+	otherwise:														[already had some sex]
+		if David is in Parade Ground:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
+		otherwise:
+			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
+	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
+	if lust of David is 0:								[anal virgin]
+		say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips, then spin him around and push him towards one of the nearby bunks.";
+		say "     [line break]";
+		say "     With a moaned 'On all fours', you guide him onto the mattress, then pull his ass up a bit as you kneel behind him. You rub your rock-hard [cock of player] cock up and down between the round buns of his bubble butt, then lean over him and whisper 'I'm gonna fuck you now' in his ear. As horny as you've gotten him, he doesn't protest and just moans as you bring the tip of your cock to his tight opening. Pushing forward with increasing pressure, David's pucker resists you for a moment, then opens up and allows your cockhead to slide into the tight embrace of his ass. It's virgin territory for sure you're exploring here - and from his lust-filled groans as you slowly slide deeper into him, you're being very well received.";
+		say "     As you bottom out inside his ass, you give his cock a few strokes, then move your hands back to his hips. Holding on tightly, you start pulling out almost all the way and hammering your shaft back inside him in quick deep strokes, filling the [if David is in Bunker]room [otherwise]tent [end if]with slapping noises as your hips meet his butt. His tightly gripping hole feels just amazing around your thrusting member, filling you with ecstasy as you very thoroughly take his virginity.";
+		say "     Getting shafted like this soon drives your handsome Private over the edge, his cock spraying a huge load of cum all over the bedsheets under him. David's ass muscles quiver and flex with each shot of seed erupting from his cock, giving you all new sensations as you move in and out of him. Then it's your turn, and with one final deep thrust you push inside David all the way and fill his insides with spurt after spurt of warm seed.";
+		now lust of David is 1;
+	otherwise:														[repeat anal]
+		say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips and say 'Let's fuck.'";
+		say "     [line break]";
+		say "     Eager to get fucked, David gets on the next bunk on all fours, invitingly wiggling his ass at you. You kneel behind him and rub your rock-hard [cock of player] cock up and down between the round buns of his bubble butt, then lean over him and kiss is neck. He moans as you bring the tip of your cock to his tight opening and tease him a bit with it. Pushing forward with increasing pressure, David's pucker resists you for a moment, then opens up and allows your cockhead to slide into the tight embrace of his ass. He's still tight as he was when you took his virginity and giving lust-filled groans as you slowly slide deeper into him.";
+		say "     As you bottom out inside his ass, you give his cock a few strokes, then move your hands back to his hips. Holding on tightly, you start pulling out almost all the way and hammering your shaft back inside him in quick deep strokes, filling the [if David is in Bunker]room [otherwise]tent [end if]with slapping noises as your hips meet his butt. His tightly gripping hole feels just amazing around your thrusting member, filling you with ecstasy as you give him a good fucking.";
+		say "     Getting shafted like this soon drives your handsome Private over the edge, his cock spraying a huge load of cum all over the bedsheets under him. David's ass muscles quiver and flex with each shot of seed erupting from his cock, giving you all new sensations as you move in and out of him. Then it's your turn, and with one final deep thrust you push inside David all the way and fill his insides with spurt after spurt of warm seed.";
+	say "     [line break]";
+	if thirst of David is 10:  						[fuck buddy]
+		say "     You keep kneeling like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex, he pulls off your cock and sits next to you on the bed. 'Incredible how good having something up my ass feels. I'll have to talk Ann into getting some toys...'";
+	otherwise if thirst of David is 20:  	[boy/girlfriend]
+		say "     You keep kneeling like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex, you pull out and lie on the bed with David, face to face. He smiles at you, cuddling close and gives you a kiss. 'That was amazing. You're an incredible boyfriend, you know.'";
+	otherwise if thirst of David is 0:    [first time worrying]
+		say "     You keep kneeling like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex and David's brain starts working again, he looks over his shoulder at you with a questioning expression. 'I like... this,' he says and you feel his asshole tighten for a second around your member. 'Does that mean I'm gay?' With a worried look he adds 'I got a girlfriend back home, you know.'";
+		say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that he just might be bisexual and that he should use the opportunity to try out the whole spectrum of possible partners. The girlfriend situation will surely work itself out once he knows what he really wants. Although judging from his load all over the wall, you're pretty certain you left a lasting impression on him, opening him up more man-on-man action...";
+	otherwise:    												[worrying about cheating on his girlfriend]
+		say "     You keep kneeling like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex and David's brain starts working again, he looks over his shoulder at you with a questioning expression. 'I like... this,' he says and you feel his asshole tighten for a second around your member. 'But even if I'm just Bi as you say - this is till cheating on Ann.'";
+
+
+Back at the Camp is a situation. Back at the Camp is resolved.  [enabled by the 'Trickster's Masterpiece' event]
 The sarea of Back at the Camp is "Outside";
 when play begins:
 	add Back at the Camp to badspots of guy;            [male soldiers]
@@ -190,49 +580,45 @@ lastGuardBeg is a number that varies.  lastGuardBeg is normally 555.
 
 Instead of resolving a Back at the Camp:
 	say "     Following your memory through the chaotic streets of the city, you try to find the military camp where you observed all those men taking a minotaur in the ass before. You think it was somewhere around the block you're right now, and... ah - there it is. Coming round a corner, you see the first of the olive green tents of the camp. And what you also see are two soldiers standing guard, who notice you and give you suspicious looks as they click off the safety of their rifles.";
-	say "     One of them steps forward and calls out 'Halt, this is a restricted military zone. Please move away from -' ...he's interrupted by a loud, lust-filled bellow from inside the camp and turns a bit red in the face as he looks there and back to you. 'As I was saying, please move away from the perimeter. We're doing... important work here on a cure.'";
+	say "     One of them steps forward and looks at you with a grim look on his face. He calls out 'Halt, this is a restricted military zone. Move away from -' ...he's interrupted by a loud, lust-filled bellow from inside the camp and turns a bit red in the face as he looks there and back to you. 'As I was saying, move away from the perimeter. We're doing... important work here on a cure.'";
+	say "     [line break]";
 	say "     So, what now?";
-	wait for any key;
-	say "[CampBravoGuardTalk]";
-	wait for any key;
-
-to say CampBravoGuardTalk:
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "(Lie) Say you're a special agent here to check on their progress.";
 	now sortorder entry is 1;
 	now description entry is "Lie your way into the camp.";
-	now toggle entry is GuardTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Ask if they can spare any supplies.";
 	now sortorder entry is 2;
 	now description entry is "Ask them nicely for some supplies.";
-	now toggle entry is GuardTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Turn around and go.";
 	now sortorder entry is 3;
 	now description entry is "Leave the camp for now.";
-	now toggle entry is GuardTalk rule;
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the GuardTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want? ";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "(Lie) Say you're a special agent here to check on their progress."):
-			say "[GuardLie]";
-		if (nam is "Ask if they can spare any supplies."):
-			say "[GuardBeg]";
-		if (nam is "Leave the camp for now."):
-			say "[GuardLeave]";
-		wait for any key;
+	while sextablerun is 0:
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry][line break]";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				clear the screen and hyperlink list;
+				now sextablerun is 1;
+				if (nam is "(Lie) Say you're a special agent here to check on their progress."):
+					say "[GuardLie]";
+				if (nam is "Ask if they can spare any supplies."):
+					say "[GuardBeg]";
+				if (nam is "Leave the camp for now."):
+					say "[GuardLeave]";
 
 to say GuardLie:    [lie to get into the camp]
 	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
@@ -244,11 +630,11 @@ to say GuardLie:    [lie to get into the camp]
 		say "     You walk up to them like confidently and totally wrap them around your finger with some quick talking. In the end, they salute you before one of them leads the way to their commanding officer's tent. You pass the hitching post you saw being used before, and also the huge minotaur sitting besides it right now munching on some food.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "     The commandant of the camp is Major Padgett, who stands up from his field desk to shake your hand before offering you a seat.";
-		say "     'So you're the special agent sent to check out the situation? Welcome to Camp Bravo. Let me brief you about what's been happening. We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples...'[otherwise]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...'[end if] He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
+		say "     'So you're the special agent sent to check out the situation? Welcome to Camp Bravo. Let me brief you about what's been happening. We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples...' [otherwise]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...' [end if]He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
 		say "     'Several detachments of soldiers are on the way to the containment barrier, but I'm running out of men rapidly. I've already had to pull people out of other camps and scouting posts. Many of the remaining soldiers are women, and considering the potency of that creature's seed, I hesitate to expose any of them to it.'";
 		say "     'Please feel free to check out the camp and talk with everyone. And when you go back to report, please pass on that I need more people here to be able to send more people out with samples.'";
 		move player to Major's Tent;
-		now Camp Bravo is known;
+		now Camp Bravo Entrance is known;
 		now Back at the Camp is resolved;
 	otherwise:
 		say "     'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost.' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
@@ -257,7 +643,7 @@ to say GuardBeg:    [mooch some food from a guard]
 	if(lastGuardBeg - turns < 12):
 		say "     The soldier lowers a hand to his pocket, then stops. 'Wait a minute - I gave you something not too long ago! I can't hand out stuff constantly. That'll attract too much attention and all kinds of critters will show up asking for food.'";
 	otherwise:
-		say "     Hearing your plight, the guard pulls out a ration bar and throws it to you. 'Here. Now go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
+		say "     The first guard just scoffs at you, but the other guy pulls out a ration bar and throws it to you. 'Here. Now go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
 		add "food" to invent of player;
 		now lastGuardBeg is turns;
 
@@ -265,32 +651,46 @@ to say GuardLeave:    [lie to get into the camp]
 	say "     You follow the soldier's order and walk away. Too bad, getting into the camp would surely have been interesting. Maybe you should return later and try to convince them to let you in.";
 
 
-Camp Bravo is a room. It is a fasttravel. It is private.
-CampBravoWomenAllowed is a number that varies.  CampBravoWomenAllowed is normally 0.
+Camp Bravo Entrance is a room. It is a fasttravel. It is private.
+The description of Camp Bravo Entrance is "     You're at the entrance of Camp Bravo, a mid-sized military camp consisting of row after row of olive green tents. Two soldiers are on guard here, using a barricade line of wrecked cars as cover as they vigilantly watch the street. To the north lies the parade ground in the center of the camp.";
+Instead of sniffing Camp Bravo Entrance:
+	say "     A musky scent hangs in the air.";
 
-The description of Camp Bravo is "     You're in Camp Bravo, surrounded by green military tents. To the north lies the tent of the camp's commanding officer and west is the quartermaster's tent. In the middle of the camp is an mostly empty parade ground with a wooden hitching post and a single field bed. There are various patches of dried cum on them and the ground around. An impressively large minotaur sits next to it, munching on vegetables and bread brought to him by a grizzled looking soldier. Seems like caring for the beast is his responsibility.";
+Private Cooper is a man. Private Cooper is in Camp Bravo Entrance.
+The description of Private Cooper  is "     Private Cooper is a bulky man with a grim look on his face most of the time. He constantly scans for approaching intruders coming too close to the Camp Entrance.";
+The conversation of Private Cooper  is { "Don't distract me. Who knows what might rush us any minute now." };
 
-Instead of sniffing Camp Bravo:
-	say "     The heavy scent of cum and a musky minotaur odor hang in the air.";
+Private Orwell is a man. Private Orwell is in Camp Bravo Entrance.
+The description of Private Orwell is "     Private Orwell is an attractive and fit male, bearing the tattoo of a merman on his left shoulder. He's leaning comfortably against one of the wrecked cars, but still has his rifle at hand.";
+The conversation of Private Orwell is { "Man, this sucks - I only stumbled that one time in the mess tent and hit the Major with a mug of coffee and now I'm on perpetual guard duty and can't join in for the fun in there." };
 
-North of the Camp Bravo is the Major's Tent.
+instead of fucking Private Orwell:
+	say "     He sighs, 'Oh, how I'd love to take you up on that. But I just can't leave my post, as Grumpy over there would go ape if I tried.'";
+
+North of Camp Bravo Entrance is Parade Ground.
+The description of Parade Ground is "     You're in Camp Bravo, surrounded by green military tents. To the north lies the tent of the camp's commanding officer, west is the quartermaster's tent and to the south is the entrance of the camp. In the middle of the camp is an mostly empty parade ground with a wooden hitching post and a single field bed. There are various patches of dried cum on them and the ground around. An impressively large minotaur sits next to it, munching on vegetables and bread brought to him by a grizzled looking soldier. Seems like caring for the beast is his responsibility.";
+
+Instead of sniffing Parade Ground:
+	say "     The heavy scent of cum and a musky minotaur odor hang in the air. It must be laden with pheromones, as you're getting quite horny just from taking it in.";
+
+North of the Parade Ground is the Major's Tent.
 The description of Major's Tent is "     You're in a sparely furnished military tent, holding only a field desk, a small table, several chairs and a field bed. Major Padgett, the camp's commander sits at the desk, reading scout reports and other paperwork. On top of the table at one wall of the tent rests a military radio.";
 
 Instead of sniffing Major's Tent:
 	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since it's been rutting people in the area right before the tent.";
 
-West of the Camp Bravo is the Quartermaster's Tent.
+West of the Parade Ground is the Quartermaster's Tent.
 The description of Quartermaster's Tent is "     You're in the large tent of Camp Bravo's quartermaster. It holds a long row of filled shelves in the back, combined with various crates stacked high and a few large sacks resting on the floor next to the quartermaster's field desk. A medical corpsman is bent over one of them, counting its contents.";
 
 Instead of sniffing Quartermaster's Tent:
 	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since it's been rutting people in the area right before the tent.";
 
 
-
 Major Padgett is a man. Major Padgett is in Major's Tent.
 The description of Major Padgett is "     Major Padgett is an older man in military uniform, sporting a military buzz-cut of greying hair. He looks busy with scouting reports and other paperwork.";
 The conversation of Major Padgett is { "Attention!" };
 thirst of Major Padgett usually is 555.  [ The thirst value is used for the turn-number the player last tried to talk the Major into allowing women with the minotaur ]
+CampBravoWomenAllowed is a number that varies.  CampBravoWomenAllowed is normally 0.
 
 instead of sniffing Major Padgett:
 	say "     He smells of Old Spice.";
@@ -299,68 +699,69 @@ Instead of fucking Major Padgett:
 	say "     His brows draw together as you proposition him. 'What the - NO! Get a hold of yourself! I had expected better from you.'";
 
 instead of conversing Major Padgett:
-	say "[CampBravoMajorTalk]";
-
-to say CampBravoMajorTalk:
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Congratulate him on his work.";
 	now sortorder entry is 1;
 	now description entry is "Butter him up a bit.";
-	now toggle entry is MajorTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Explain to him that he's been tricked.";
 	now sortorder entry is 2;
 	now description entry is "Tell him the minotaur story was a hoax.";
-	now toggle entry is MajorTalk rule;
 	if CampBravoWomenAllowed is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk him into letting women fuck the minotaur.";
 		now sortorder entry is 3;
 		now description entry is "Convince him to let the minotaur breed female soldiers.";
-		now toggle entry is MajorTalk rule;
+	if hp of David is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask to have David taken of the minotaur breeding list.";
+		now sortorder entry is 4;
+		now description entry is "Convince him to make David a liaison to you.";
 	if thirst of Military Radio is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the radio.";
-		now sortorder entry is 4;
+		now sortorder entry is 5;
 		now description entry is "Ask him about the strange transmissions.";
-		now toggle entry is MajorTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Ask him to repeat his briefing.";
-	now sortorder entry is 5;
+	now sortorder entry is 6;
 	now description entry is "Another briefing.";
-	now toggle entry is MajorTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Excuse yourself and break off the conversation.";
-	now sortorder entry is 6;
+	now sortorder entry is 7;
 	now description entry is "Stop talking.";
-	now toggle entry is MajorTalk rule;
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the MajorTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want? ";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Congratulate him on his work."):
-			say "[MajorBrownnose]";
-		if (nam is "Explain to him that he's been tricked."):
-			say "[MajorPartypooper]";
-		if (nam is "Talk him into letting women fuck the minotaur."):
-			say "[MajorBreeding]";
-		if (nam is "Ask about the radio."):
-			say "[MajorRadio]";
-		if (nam is "Ask him to repeat his briefing."):
-			say "[MajorBriefing]";
-		if (nam is "Excuse yourself and break off the conversation."):
-			say "[MajorLeave]";
-		wait for any key;
+	while sextablerun is 0:
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry][line break]";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				clear the screen and hyperlink list;
+				now sextablerun is 1;
+				if (nam is "Congratulate him on his work."):
+					say "[MajorBrownnose]";
+				if (nam is "Explain to him that he's been tricked."):
+					say "[MajorPartypooper]";
+				if (nam is "Talk him into letting women fuck the minotaur."):
+					say "[MajorBreeding]";
+				if (nam is "Ask to have David taken of the minotaur breeding list."):
+					say "[MajorDavid]";
+				if (nam is "Ask about the radio."):
+					say "[MajorRadio]";
+				if (nam is "Ask him to repeat his briefing."):
+					say "[MajorBriefing]";
+				if (nam is "Excuse yourself and break off the conversation."):
+					say "[MajorLeave]";
 
 to say MajorBrownnose:
 	say "     You congratulate the major on his handling of the whole situation and butter him up a bit, making him open up about his dreams of being recognized as one of the people beating the infection. Oh boy, won't he be surprised when what's been happening here comes out to the public...";
@@ -370,15 +771,15 @@ to say MajorPartypooper:    [try to make the Major see how he's been tricked]
 	say "     As the major listens to you talk, his face gets redder and redder in anger. After a while he says 'Ah, I see...' - and pulls out a pistol - '... that you're an impostor, trying to stop our efforts in finding a cure. Sick individuals like you relish in all this chaos and don't want it to end, hm?'";
 	say "     Not being able to accept having been duped, he has his soldiers throw you out of the camp, ordering them to drive you away if you return. Your body bruised from the rough handling, you slowly make your way back to the bunker and resolve not to return to Camp Bravo to avoid any further unpleasantness.";
 	now hp of player is hp of player / 2;
-	now Camp Bravo is not known;
+	now Camp Bravo Entrance is not known;
 	move player to bunker;
 
 to say MajorBreeding:
 	if (thirst of Major Padgett - turns < 12):
 		say "     Maybe you should let your previous arguments sink in for a while before trying to talk the Major into this again...";
 	otherwise:
-		say "     You tell the colonel that the researchers urgently need more material and also that getting direct offspring of Patient Zero to examine could be greatly beneficial for their progress. Minotaur calves would surely be easier to manage and move than the creature itself, especially if they inherit the habit of obedience to superiors from their soldier mothers - or of course if said women can be brought outside the city before they even give birth.";
-		let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
+		say "     You tell the major that the researchers urgently need more material and also that getting direct offspring of Patient Zero to examine could be greatly beneficial for their progress. Minotaur calves would surely be easier to manage and move than the creature itself, especially if they inherit the habit of obedience to superiors from their soldier mothers - or of course if said women can be brought outside the city before they even give birth.";
+		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 		if 2 is listed in bookcollection, increase bonus by 2;
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
@@ -388,19 +789,24 @@ to say MajorBreeding:
 			now CampBravoWomenAllowed is 1;
 			now ElainePregnant is 48;      [48h till birth]
 		otherwise:
-			say "     He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at ly- err, convincing him of the truth and try this again later.";
+			say "     He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at Ly- err, convincing him of the truth and try this again later.";
 		now thirst of Major Padgett is turns;
+
+to say MajorDavid:
+	say "     You tell the major that you could use a soldier to serve as a liaison to you, keeping you informed about what's going on in the camp and sometimes coming with you for special duties. And that very nice Private David Jackson would fit perfectly...";
+	say "     He nods, answering 'Of course, I'll issue the order in a moment. And please remember to tell the people outside the city that I need more men sent here.'";
+	now hp of David is 3;
 
 to say MajorRadio:
 	say "     As you ask the Major about the strange transmission you heard over the radio, he grumbles and gives the device a hostile stare.";
 	say "     'Looks like some kind of critter out there has developed the ability to intercept and answer radio broadcasts. We don't even know how many of them are there - might be a whole lot of the bastards, or just the one who can change its voice infernally well. With them - or it - prattling nonsense, impersonating officers and delivering false information and orders almost constantly, I've had to order the men to turn in their receivers so they're not led astray. So we're out of direct communication with the forces quarantining the city for now...'";
 
 to say MajorBriefing:
-	say "     He looks a bit strangely at you, then says 'But I already - oh well, try to remember it this time: We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples...'[otherwise]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...'[end if] He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
+	say "     He looks a bit strangely at you, then says 'But I already - oh well, try to remember it this time: We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples..' [otherwise]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...' [end if]He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
 
 to say MajorLeave:
 	say "     You excuse yourself for disturbing him and walk out of the tent.";
-	move player to Camp Bravo;
+	move player to Parade Ground;
 
 
 [ thirst states of Military Radio                                    ]
@@ -468,57 +874,55 @@ instead of conversing Elaine:
 	say "[CampBravoElaineTalk]";
 
 to say CampBravoElaineTalk:
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Ask her for a status report.";
 	now sortorder entry is 1;
 	now description entry is "Get a report.";
-	now toggle entry is ElaineTalk rule;
 	if thirst of Elaine is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask her about Adam.";
 		now sortorder entry is 2;
 		now description entry is "Talk about Elaine's son with the minotaur.";
-		now toggle entry is ElaineTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Observe the next group of men getting their special supplies.";
 	now sortorder entry is 3;
 	now description entry is "Watch the dildos being handed out and used.";
-	now toggle entry is ElaineTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Proposition Elaine Scott for sex.";
 	now sortorder entry is 4;
 	now description entry is "Fuck her.";
-	now toggle entry is ElaineTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Do Nothing, turn away.";
 	now sortorder entry is 5;
 	now description entry is "Break the conversation off.";
-	now toggle entry is ElaineTalk rule;
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the ElaineTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want? ";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Ask her for a status report."):
-			say "[CampBravoElaineReport]";
-		if (nam is "Ask her about Adam."):
-			say "[CampBravoElaineAdamTalk]";
-		if (nam is "Observe the next group of men getting their special supplies."):
-			say "[CampBravoMenPrepping]";
-		if (nam is "Proposition Elaine Scott for sex."):
-			say "[ElaineFucking]";
-		if (nam is "Do Nothing, turn away."):
-			say "     You wave Elaine Scott off as she looks at you inquisitively and turn away.";
-		wait for any key;
+	while sextablerun is 0:
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry][line break]";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				clear the screen and hyperlink list;
+				now sextablerun is 1;
+				if (nam is "Ask her for a status report."):
+					say "[CampBravoElaineReport]";
+				if (nam is "Ask her about Adam."):
+					say "[CampBravoElaineAdamTalk]";
+				if (nam is "Observe the next group of men getting their special supplies."):
+					say "[CampBravoMenPrepping]";
+				if (nam is "Proposition Elaine Scott for sex."):
+					say "[ElaineFucking]";
+				if (nam is "Do Nothing, turn away."):
+					say "     You wave Elaine Scott off as she looks at you inquisitively and turn away.";
 
 to say CampBravoElaineReport:
 	if CampBravoWomenAllowed is 0:
@@ -587,7 +991,7 @@ to say ElaineFucking:
 				say "     The two of you spend a long while on the bed, fucking each other and making out, until you feel an urgent feeling rise in your balls. You thrust in all the way one last time and orgasm, with spurt after spurt of fertile seed filling your condom to the brink.";
 				say "     [line break]";
 				say "     Pulling your lips to hers, Elaine gives you a deep kiss, moaning 'Thanks, stud. I really needed that...' After a short rest, she slides out from under you and goes to put her clothes back on.";
-			now lastfuck of Elaine is turns;
+			now lastfuck of Elaine is turns;		
 
 
 Adam is a man.
@@ -603,65 +1007,64 @@ Instead of fucking Adam:
 		say "     Adam chuckles as you try to talk him into sex again. 'You're just insatiable, aren't you? Too bad I don't have quite dad's stamina, so I need a break before I'm ready to go again...'";
 	otherwise:
 		say "[AdamSexMenu]";
-		now lastfuck of Adam is turns; 			
+		now lastfuck of Adam is turns;
 
 instead of conversing Adam:
 	say "     He looks at you attentively as you step up, saying 'Oh, hello... I mean... Provisional Private Adam Scott ready for orders, sir!' Accepting his salute, you chat a bit and find the boy charming and pretty eager to please.";
 
 to say AdamSexMenu:
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Adam's cock";
 	now sortorder entry is 1;
 	now description entry is "Taste some half-minotaur seed.";
-	now toggle entry is AdamSex rule;
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow you";
 		now sortorder entry is 2;
 		now description entry is "Put Adam's mouth to good use.";
-		now toggle entry is AdamSex rule;
 	if (cunts of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Adam fuck your pussy";
 		now sortorder entry is 3;
 		now description entry is "Let the boy breed you.";
-		now toggle entry is AdamSex rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Let Adam fuck your ass";
 	now sortorder entry is 4;
 	now description entry is "Let the boy fill your ass with his seed.";
-	now toggle entry is AdamSex rule;
 	if (cocks of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Adam's ass";
 		now sortorder entry is 5;
 		now description entry is "Fill the half-minotaur's ass with your cock.";
-		now toggle entry is AdamSex rule;
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
+	while sextablerun is 0:
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry][line break]";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				clear the screen and hyperlink list;
+				now sextablerun is 1;
+				if (nam is "Suck Adam's cock"):
+					say "[AdamSex1]";
+				otherwise if (nam is "Have him blow you"):
+					say "[AdamSex2]";
+				otherwise if (nam is "Let Adam fuck your pussy"):
+					say "[AdamSex3]";
+				otherwise if (nam is "Let Adam fuck your ass"):
+					say "[AdamSex4]";
+				otherwise if (nam is "Take Adam's ass"):
+					say "[AdamSex5]";
 
-This is the AdamSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want? ";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Suck Adam's cock"):
-			say "[AdamSex1]";
-		otherwise if (nam is "Have him blow you"):
-			say "[AdamSex2]";
-		otherwise if (nam is "Let Adam fuck your pussy"):
-			say "[AdamSex3]";
-		otherwise if (nam is "Let Adam fuck your ass"):
-			say "[AdamSex4]";
-		otherwise if (nam is "Take Adam's ass"):
-			say "[AdamSex5]";
-		wait for any key;
 
 to say AdamSex1:    [suck Adam's cock]
 	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by a line of kisses down over his abs until you're crouched in front of the half-minotaur. Stroking the obvious bulge of his cock through the fabric of his shorts, you have him moaning needfully in no time. You smile up at Adam, undoing the zipper of his sorts then pull them down off his legs, freeing his proudly erect human manhood.";
@@ -673,7 +1076,7 @@ to say AdamSex2:    [have Adam suck the player char's cock]
 	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by licking over his chest and neck until you reach the chin and kiss him again. Moaning 'Blow me, beast-boy.', you move back a step and quickly slide off your clothes. Adam watches you undress, then smiles and replies 'My pleasure, sir.' before he licks his lips and kneels down.";
 	say "     Grasping your by now proudly standing erection in one hand, Adam strokes it softly a few times, then holds it up as he gives your balls a tentative lick and runs his tongue up the underside of your shaft, making you pant in pleasure. Arriving at the tip, he circles the head of your cock a few times with his tongue, then takes it between your lips. Your manhood slowly sliding deeper into his mouth, his lips caressing sensitive skin and giving you amazing sensations. Soon your cock hits the back of your mouth, but Adam takes a deep breath and continues going, sliding your shaft deeper and deeper. When his nose finally bumps into the skin under your navel, you moan loudly from the warm and tight feeling that gives you.";
 	say "     Pulling off your cock to get some air, Adam strokes its saliva-coated length some more, then start sucking you off in earnest, pumping his lips up and down on the hard shaft. He keeps going for a while, bringing you to the brink of an orgasm several times, but stopping each time to let you cool down a bit. Then finally he goes all out, sucking on your cock hard and pumping it in and out of his throat. With all the built up arousal, you don't last much longer before a mind-blowing orgasm shakes your body, spurt after spurt of your seed filling Adam's mouth.";
-	say "     Adam sticks out his tongue, showing off your white creamy cum, then demonstratively swallows it all. Then he stands up and gives you a deep kiss, making you taste some of your cum and playfully tongue-wrestling with you.";
+	say "     Adam sticks out his tongue, showing off your white creamy cum, then demonstratively swallows it all. Then he stands up and gives you a deep kiss, making you taste some of your cum and playfully tongue-wrestling with you."; 
 
 to say AdamSex3:    [pussy-fucked by Adam]
 	[puts Minotaur as lead monster in case of impregnation]
@@ -734,7 +1137,7 @@ to say AdamSex5:    [give Adam's tight ass a good fucking]
 		say "     Coming back up to breath, Adam moans 'That was amazing - you are amazing.' affectionately stroking your cheek.";
 
 
-Sergeant Alexander is a man. Sergeant Alexander is in Camp Bravo.
+Sergeant Alexander is a man. Sergeant Alexander is in Parade Ground.
 The description of Sergeant Alexander is "     Sergeant Alexander is a tough-looking soldier, who's seen a lot in his time. He's about 5'11' and pretty buff and muscular. Looks like he's responsible for caring for the minotaur, as he carries box after box of vegetables and other foodstuffs to the creature from behind one of the nearby tents.";
 The conversation of Sergeant Alexander is { "Ick!" };
 lastfuck of Alexander is usually 555.
@@ -746,60 +1149,56 @@ Instead of fucking Sergeant Alexander:
 	say "[AlexanderFucking]";
 
 instead of conversing Sergeant Alexander:
-	say "[CampBravoAlexanderTalk]";
-
-to say CampBravoAlexanderTalk:
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Watch a man take his turn getting fucked at the hitching post.";
 	now sortorder entry is 1;
 	now description entry is "Witness the minotaur assfucking a soldier.";
-	now toggle entry is AlexanderTalk rule;
 	if CampBravoWomenAllowed is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Watch the minotaur fuck a female soldier.";
 		now sortorder entry is 2;
 		now description entry is "Observe the minotaur breeding a woman.";
-		now toggle entry is AlexanderTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Take position at the hitching post yourself.";
 	now sortorder entry is 3;
 	now description entry is "Present yourself to the minotaur for fucking.";
-	now toggle entry is AlexanderTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Proposition Sergeant Alexander for sex.";
 	now sortorder entry is 4;
 	now description entry is "Let Sergeant Alexander fuck you.";
-	now toggle entry is AlexanderTalk rule;
 	choose a blank row in table of fucking options;
 	now title entry is "Do Nothing, turn away.";
 	now sortorder entry is 5;
 	now description entry is "Break the conversation off.";
-	now toggle entry is AlexanderTalk rule;
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
+	while sextablerun is 0:
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry][line break]";
+			say "Is this what you want?";
+			if player consents:
+				let nam be title entry;
+				clear the screen and hyperlink list;
+				now sextablerun is 1;
+				if (nam is "Watch a man take his turn getting fucked at the hitching post."):
+					say "[CampBravoWatchMen]";
+				if (nam is "Watch the minotaur fuck a female soldier."):
+					say "[CampBravoWatchWomen]";
+				if (nam is "Take position at the hitching post yourself."):
+					say "[CampBravoGetFucked]";
+				if (nam is "Proposition Sergeant Alexander for sex."):
+					say "[AlexanderFucking]";
+				if (nam is "Do Nothing, turn away."):
+					say "     You wave Sergeant Alexander off as he looks at you inquisitively and turn away.";
 
-This is the AlexanderTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want? ";
-	if player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Watch a man take his turn getting fucked at the hitching post."):
-			say "[CampBravoWatchMen]";
-		if (nam is "Watch the minotaur fuck a female soldier."):
-			say "[CampBravoWatchWomen]";
-		if (nam is "Take position at the hitching post yourself."):
-			say "[CampBravoGetFucked]";
-		if (nam is "Proposition Sergeant Alexander for sex."):
-			say "[AlexanderFucking]";
-		if (nam is "Do Nothing, turn away."):
-			say "     You wave Sergeant Alexander off as he looks at you inquisitively and turn away.";
-		wait for any key;
 
 to say CampBravoWatchMen:
 	say "     'So you want to watch someone's ass getting filled by Tiny Tim?' Sergeant Alexander asks and you nod in confirmation. 'Just a moment, the next plugging team will be here shortly.' He chats a bit with you until two buck-naked soldiers enter the parade ground, carrying nothing but two butt-plugs and a bottle of lube.";
@@ -852,7 +1251,7 @@ to say CampBravoGetFucked:
 		say "     'So you want to let the bull take a ride in your ass?' Sergeant Alexander asks and you nod in confirmation. 'One moment please, sir.' He walks into the quartermaster's tent in the west and shortly comes out of it again carrying a bottle of lube. 'You'll need this. And don't use it sparingly.'";
 		say "     You quickly undress, piling your clothes and equipment on the field bed standing close to the minotaur's fucking post. Then you lube your asshole with a generous amount of slippery gel, walk over to the hitching post and take position with your hands on the smooth wooden crossbar. Wiggling your ass invitingly brings the large minotaur to stand behind you almost instantly. He sniffs you, gives a lustful grumble and then runs his wide tongue up from your ass over your bare back. Grabbing his long shaft in a hand, he slaps it softly against your butt-cheeks before bringing it to your waiting hole. You give a short gasp as the minotaur pushes forward, popping the head of his thick cock inside, then starts to slide deeper. Inch after inch of rock-hard shaft slides through your tight opening until the minotaur is finally fully inside your body, his large balls rubbing up against your ass.";
 		say "     He holds still for a moment, his breach blowing warm against your neck, giving your ass time to get used to his massive girth. Then the pause is over, and the minotaur pulls almost all the way out and slams back inside with a bellow, gripping your hips tightly with his large hands as he humps you with deep thrusts. His animal nature becomes obvious now, as he tirelessly ruts your body without holding back, each thrust accompanied by the meaty slap of his balls against the your ass. You're quite thankful now for the lube, as it allows that massive cock to slide in and out of your body a lot easier than it otherwise would. The hard shaft rubbing sensitive spots deep inside you quickly has you moaning lustfully. [if cocks of player > 0]Your own cock hardens without ever being touched and looking down, you see drops of precum glisten at its tip.[otherwise]Even though you have no genitalia yourself, a deep pleasant feeling suffuses your body.[end if]";
-		say "     The hot any heavy coupling with the large beast continues for about twenty minutes, until the feelings of getting fucked drive you over the edge, your body shaking as orgasm grips it. [if cocks of player > 0]Your cock jerks as thick ropes of cum spray from its tip, splattering over the cum-drenched ground.[end if] As you writhe in the throes of lust, your anal muscles flex and spasm around the minotaur's long thrusting cock, giving your beastly fucker the last push to arrive at his own fulfillment. With a last deep shove he buries his cock fully in you as his balls contract with each blast of cum shooting up his shaft. Breathing heavily, he steadies himself with one hand on the wooden post while the other holds your body close until his orgasm subsides.[mimpregchance]";
+		say "     The hot any heavy coupling with the large beast continues for about twenty minutes, until the feelings of getting fucked drive you over the edge, your body shaking as orgasm grips it. [if cocks of player > 0]Your cock jerks as thick ropes of cum spray from its tip, splattering over the cum-drenched ground. [end if]As you writhe in the throes of lust, your anal muscles flex and spasm around the minotaur's long thrusting cock, giving your beastly fucker the last push to arrive at his own fulfillment. With a last deep shove he buries his cock fully in you as his balls contract with each blast of cum shooting up his shaft. Breathing heavily, he steadies himself with one hand on the wooden post while the other holds your body close until his orgasm subsides.[mimpregchance]";
 		say "     Thoroughly satisfied, the minotaur gives your sweaty back one last lick, then pulls is large cock out, leaving your stretches asshole gaping and with cum running out of it. Sergeant Alexander comes over to you and helps you to the field bed nearby to sit down and rest a bit before you put on your clothes and gear again.";
 		infect "Minotaur";
 
@@ -879,7 +1278,7 @@ to say AlexanderFucking:
 
 Tiny Tim is a man.
 The description of Tiny Tim is "     The large minotaur affectionately called 'Tiny Tim' by the soldiers in the camp currently sits on the ground besides the hitching post used in couplings with him. He's a magnificently well-build creature, at least nine feet tall and with large curved horns adoring his bull-like head. His otherwise human upper body shows thick, ropey muscles under bronzed skin. Beginning at the hip downwards, he has dark brown shaggy fur covering strong two-jointed legs that end in hooves. Between his legs dangles a long human-like cock and two large balls. The minotaur almost constantly half-hard, his manhood springing up instantly to its full one and a half feet of erect length every time the creature sees or smells a sexual partner.";
-Tiny Tim is in Camp Bravo.
+Tiny Tim is in Parade Ground.
 The conversation of Tiny Tim is { "[one of]'Alexander is my friend.'[or]'I'm hungry.'[or]'I'm horny. Want to fuck.'[or]'Are you my friend?'[or]'You smell nice.'[or]'Humans are tight. Good.'[or]'Nice place here.'[or]'I like soldiers.'[at random]" };
 
 instead of sniffing Tiny Tim:
