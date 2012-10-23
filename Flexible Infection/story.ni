@@ -2267,9 +2267,9 @@ Carry out UBng:
 	slurp the noun with the player;
 	if the noun is in the womb:
 		say "The moment they touch your thick vulva, it's all over. They begin to be drawn into you with powerful contractions, soon settling heavily in your womb, the burning ebbing a moment.";
-		if tf table of pelvis is not table centauress and tf table of pelvis is not fox taur:
+		if tf table of pelvis is not table centauress and tf table of pelvis is not table fox taur:
 			infect pelvis with centauress torso;
-		otherwise if table table of pelvis is not fox taur:
+		otherwise if tf table of pelvis is not table fox taur:
 			let u be a random not compatible touchable body part;
 			if u is not nothing, infect u with centauress torso;
 
@@ -2860,6 +2860,7 @@ if the tf table of the pelvis is table latex fox and the destined femininity of 
 if the tf table of the pelvis is table minotaur and the destined femininity of the player is 1, yes;
 if the tf table of the pelvis is table goblin and the destined femininity of the player is 1, yes;
 if the tf table of the pelvis is table werewolf and the destined femininity of the player is 1, yes;
+if the tf table of rear is table fox taur, yes;
 no;
 
 Definition: A person (called N) is catty:
@@ -5491,6 +5492,9 @@ when play ends:
 			end if;
 			if tf table of head is table Dragon Babe begin;
 				say "You flee the city at the sound of the incoming military, taking to the sewers and moving for what feels like a month of migration. You find a new city, still abandoned, mostly. It seems to have a lot of mutants in it, but more interestingly, some untouched humans still holding out. You have learned the sewers well, and your charms and skill keep you fed, too well fed. One day you find yourself stuck running along a familiar passage. For some reason, you don't feel nervous about the situation, knowing someone, despite all logic, will be along shortly to free you, and perhaps something more interesting than that. You can hardly wait.";
+			end if;
+			if tf table of head is table Fox Taur begin;
+				say "[foxtaur ending][line break]";
 			end if;
 			if tf table of head is table goblin begin;
 				let u be the number of compatible on-stage npc persons;

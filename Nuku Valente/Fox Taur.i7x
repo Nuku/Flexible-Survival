@@ -11,30 +11,30 @@ Lower torso should have 4 sets of small breasts/teats (towards the front), and a
 
 Table Fox Taur - Fox Taur Shifts
 Segment	Shift Text	Desc Text
-"head"	"Your nose grows rapidly into a narrow snout, whiskers sprouting and red fur spreading. Your interest in escaping the city dulls as you begin to consider more about just how interesting everyone around you is, and just how much more interesting they could become, with a little effort."	"Your head has been replaced with that of a fox, with rusty red fur, white along the under chin, and black eared. Your slender snout has fine whiskers."
-"chest"	"You are forced to pause a moment and grasp at your chest as it filled with warm and soft flesh, blossoming outwards into two enormous F cupped mountains of sensitive flesh, covered in cream and red fur."	"You have F cupped breasts, creamy furred down the center, with red fur along the outsides. Your teats are just visible, black nubs poking through the soft fur."
-"gut"	"Creamy fur runs down your belly as red overtakes your sides and back. You feel hungry a moment, but it passes."	"Your belly has white fur along the front with rusty red fur along the sides and along your back."
-"pelvis"	"Your crotch becomes soft with growint white fur, but there are no genitals to be seen, leaving you feeling a bit odd."	"There is neither a cock or a pussy at your front, just a crotch covered in soft looking creamy white fur."
-"left upper arm"	"Red scales inch along your left upper arm, muscles firming up just behind."	"Your left upper arm is covered in soft red scales that form a more rigid pad at the shoulder."
-"left forearm"	"Your left forearm is soon covered in red scales, lustrous in the light."	"Your left forearm is covered in red scales."
-"left hand"	"The nails of your left hand erupt into full claws, red scales rapidly sweeping backwards from there to cover the entire hand."	"Instead of a human hand, your left hand is that of a dragon, with fingers terminating in great claws and covered in red scales."
-"right upper arm"	"Red scales inch along your right upper arm, muscles firming up just behind."	"Your right upper arm is covered in soft red scales that form a more rigid pad at the shoulder."
-"right forearm"	"Your right forearm is soon covered in red scales, lustrous in the light."	"Your right forearm is covered in red scales."
-"right hand"	"The nails of your right hand erupt into full claws, red scales rapidly sweeping backwards from there to cover the entire hand."	"Instead of a human hand, your right hand is that of a dragon, with fingers terminating in great claws and covered in red scales."
-"left thigh"	"Red scales sprout from the flesh of your left thigh as new power fills you."	"Red scales cover your muscled left thigh."
-"left shin"	"Soft scales seem to rise to the surface of your left chin, soon overwhelming the old flesh with new shining coating."	"Lustrous red scales coat your left shin, looking harder than some of the rest."
-"left foot"	"A cramp makes you pause mid step as your left foot swells slightly, claws bursting free as it becomes more of a talon, covered in red scales."	"Your left foot looks more like a talon, covered in red scales with large black claws."
-"right thigh"	"Red scales sprout from the flesh of your right thigh as new power fills you."	"Red scales cover your muscled right thigh."
-"right shin"	"Soft scales seem to rise to the surface of your right chin, soon overwhelming the old flesh with new shining coating."	"Lustrous red scales coat your right shin, looking harder than some of the rest."
-"right foot"	"A cramp makes you pause mid step as your right foot swells slightly, claws bursting free as it becomes more of a talon, covered in red scales."	"Your right foot looks more like a talon, covered in red scales with large black claws."
-"rear"	"Your sense of balance is threatened as you begin to tip backwards. A glance shows a thick draconic tail growing into place. You regain footing as it settles in behind you, swaying with a mind of its own."	"A long dragon tail is parked above your butt. It is red scaled on the top, and a softer orange shade along the bottom."
-"full"		"Fox Taur"	"You have become a dragon woman. You stand at about six feet in height, with red scales covering most of your form. Your belly and undertail are orange scaled, and a purple diamond of scales has formed on your forehead. Your feet are like talons, and large claws also emerge from your fingertips, but you feel more agile than ever. Your form is clearly mammalian, with wide hips, narrow waist, and large, bouyant, breasts that bounce with every step without getting in your way. Perched on your head are two slender horns that curl backwards, and behind you, a thick dragon tail sways to a beat of its own drum."
+"head"	"Your skull begins to shape and mold itself like putty. Elongating into a muzzle, it soon afterwards grows rich, red fur to cover it, and whiskers to boot. "	"Your head is canine in shape, with a sleek and slender snout covered with beautiful rusty fur. Starting at your chin, the fur is white and continues down the front of your neck towards your chest."
+"chest"	"Your chest suddenly feels quite heavy as additional flesh begins to form, soon cascading into two hefty F-cup sized breasts. However, somehow you don't feel very impeded by their weight. A coat of red fur soon covers the rest of your chest, while your front gets a milky white color."	"The majority of your front is taken up by two large, F-cup breasts. They are lightly furry, with a coat of silky white fur. Your nipples poke through the fur ever-so-slightly as two black nubs."
+"gut"	"Soft, white fur covers your belly. A contrasting red covers your back and sides."	"Your belly has white fur along the front with rusty red fur along the sides and along your back."
+"pelvis"	"Silken white fur encroaches on your groin, covering and consuming your genitals with an uncomfortable itch. Soon, a new canine-style cock inflates from your pelvis, along with a set of balls behind it. A moist feeling behind that alerts you to the presence of a vagina as well."	"Your entire pelvic area is covered in lush white fur, but most attention is directed to your large, knotted canine shaft and female sex."
+"left upper arm"	"Red fur creeps along your left upper arm."	"Your left upper arm is covered in soft red fur."
+"left forearm"	"Your left forearm is soon covered in a coat of lush red fur."	"Your left forearm is covered in red fur."
+"left hand"	"The nails of your left hand erupt into small claws, red fur sweeps backwards from there to cover the entire hand."	"Your left hand is humanlike, but covered in red fur, and has pads on the palm. Your nails have hardened into tiny claws."
+"right upper arm"	"Red fur creeps along your right upper arm."	"Your right upper arm is covered in soft red fur."
+"right forearm"	"Your right forearm is soon covered in a coat of lush red fur."	"Your right forearm is covered in red fur."
+"right hand"	"The nails of your right hand erupt into small claws, red fur sweeps backwards from there to cover the entire hand."	"Your right hand is humanlike, but covered in red fur, and has pads on the palm. Your nails have hardened into tiny claws."
+"left thigh"	"Your left thigh becomes awash in rust-colored fur and your muscles tighten noticeably."	"Red fur covers your muscled left thigh."
+"left shin"	"Your left ankle itches profusely as red hairs sprout all over it, quickly covering it in a coat of fur."	"Your left shin is covered in a lush coat of rusty red fur."
+"left foot"	"Your left foot seems to melt as its bone structure is reworked. Your skin grows white fur and before you know it, you've got a fox's paw."	"Your left foot is less of a foot and more of a canine paw, covered in white fur."
+"right thigh"	"Your right thigh becomes awash in rust-colored fur and your muscles tighten noticeably."	"Red fur covers your muscled right thigh."
+"right shin"	"Your right ankle itches profusely as red hairs sprout all over it, quickly covering it in a coat of fur."	"Your right shin is covered in a lush coat of rusty red fur."
+"right foot"	"Your right foot seems to melt as its bone structure is reworked. Your skin grows white fur and before you know it, you've got a fox's paw."	"Your right foot is less of a foot and more of a canine paw, covered in white fur."
+"rear"	"Your sense of balance suddenly seems terribly off. Daring a glance behind, you are horrified to witness a large protrusion extending from your ass. Crack and bones and rending of flesh ensues, and a minute later, you are the host of a whole second torso, that of a fox. Your genitals seem to have also migrated with it."	"You have a whole second torso extending from where your buttocks would normally be. It looks like that of a fox, complete with red fur on the body, and white fur along the belly. Along your underside, you can feel four rows of teats, jiggling slightly with each of your movements. Even more conspicuous is the presence of a fleshy udder where the teats end."
+"full"		"Fox Taur"	"You are scarsely recogniseable as a human anymore. You have become a large fox taur, a with the upper body in the shape of a human's but with vulpine features. Black-tipped ears adorn your head, and a thin, carefully-sculpted muzzle shapes your face. A large set of breasts jiggle from your chest, you estimate them to be about F cup size. Red fur covers the entirety of your body, save for your underbelly and paws. Starting from your ass and extending backwards is a second torso, ending with a fox tail. The underside of your tauric body is lined with 8 teats and a jiggling udder."
 
 Section Rules
 
 male sex of Fox Taur is usually "[if player is butch]You guide your cock to his waiting entrance and ease smoothly into his form. Your pre cum splashes out, lubricating the way as you drive harder and deeper, pulling him back against your rocking motions until you fill his bowels with thick gouts of seed, groaning with relief.[end if][if player is not butch]You raise your ass towards [printed name of noun], making a soft whining noise as you wave your rump back and forth, tail raised high in the air. He looks unsure a moment before he comes to his senses and approaches you quickly. His entry is a symphony of pleasure through your new body and you begin to rock back against him as he plunges deeply into you.[line break] [line break]You feel hands at your breasts and arch your back as new delights tingle through you. He brings you towards delightful completion again and again, or so you think, until his explosion in your depths set off a new chain of fireworks that leave you dizzy but sated on the ground.[end if]";
 
-The fox torso is a body part.  The body part origin of the fox torso is "rear".  The shift of the fox torso is "You snap your head around to stare. You have the feline body from the magazine. Huge, four legs, breasts lining the bottom. Your new tail twitches anxiously as you stare at the hypersexualized torso you've been given."  The desc of the fox torso is "You have the lower torso of a cat, of sorts, starting at your hips and working back. It appears to be that of a cougar, with mixtures of cream, brown, and even a splash of black at the end of your long tail. Along your lower belly are six huge breasts, taking up all the space between your powerful legs, at least the space not taken up by the two liter sized sheath and the huge furry balls that rest just under your thick, pouting, nethers."  The TF table of the fox torso is Table fox taur. The fox torso is benign.
+[The fox torso is a body part.  The body part origin of the fox torso is "rear".  The shift of the fox torso is "Your sense of balance suddenly seems terribly off. Daring a glance behind, you are horrified to witness a large protrusion extending from your ass. Crack and bones and rending of flesh ensues, and a minute later, you are the host of a whole second torso, that of a fox. Your genitals seem to have also migrated with it."  The desc of the fox torso is "You have a whole second torso extending from where your buttocks would normally be. It looks like that of a fox, complete with red fur on the body, and white fur along the belly. Along your underside, you can feel four rows of teats, jiggling slightly with each of your movements. Even more conspicuous is the presence of a fleshy udder where the teats end."  The TF table of the fox torso is Table fox taur. The fox torso is benign.]
 
 [I'd like you to make a fox taur infection.
 Sex should be herm.
@@ -43,37 +43,33 @@ Coat color could be that of a grey fox, a red fox, or artic fox.
 Human upper torso should have 1 normal set of breasts, default size F cup.
 Lower torso should have 4 sets of small breasts/teats (towards the front), and an udder (closer to the back), because it's my money and why the hell not? :P]
 
-A Fox Taur is a infection model.  The description of a Fox Taur is "A strange creature that resembles a centaur, except it's covered in rusty red fur all over, and is made of fox, not horse. Her face is vulpine as well, with black coated ears that swivel towards sounds. She has two large breasts that bounce with each step. At a guess, you would put them around F cups, and you think they are nippleless at first, but catch a glimpse of the black flesh hiding under the fur. Under her lower body, things get more interesting. She has four seats of small breasts that run along the front of the lower, and a large ".  The TF table of a Fox Taur is Table Fox Taur.  Fox Taur is female. the Fox Taur is not immune. the Fox Taur is horny. the Fox Taur is not benign.
+A Fox Taur is a infection model.  The description of a Fox Taur is "A strange creature that resembles a centaur, except it's covered in rusty red fur all over, and is made of fox, not horse. Her face is vulpine as well, with black coated ears that swivel towards sounds. She has two large breasts that bounce with each step. At a guess, you would put them around F cups, and you think they are nippleless at first, but catch a glimpse of the black flesh hiding under the fur. Under her lower body, things get more interesting. She has four seats of small breasts that run along the front of the lower, and a large udder."  The TF table of a Fox Taur is Table Fox Taur.  Fox Taur is female. the Fox Taur is not immune. the Fox Taur is horny. the Fox Taur is not benign. The belly of the Fox Taur is the dark belly.
 
 The move rate of a Fox Taur is 2.
 The attack rate of a Fox Taur is 2.
 The reflex of a Fox Taur  is 15.
-The belly of a fox taur is womb.
 The primary attack description of a Fox Taur is "[one of]slides up against their victim, pressing their large breasts temptingly while whispering soft nothings in an ear, a hand brushing across[or]leaps at the target of their interest, tackling them to the ground and grinding her groin against[at random]".
-The TF description of a Fox Taur is "moans softly, falling to their knees as a huge tail erupts from their bottom, rapidly covered in scales. They explode out of their clothes as they gain new curves and height. An intense, but brief, scent of pure lust permeates the area as they rise as a".
+The TF description of a Fox Taur is "lets out a yell of ecstasy as they fall to the ground, writhing and convulsing. Their clothing shreds as their body contorts in strange ways, growing new skeletal and muscular structure. After about of minute of this, they finally rise back to their feet and shake their discarded tatters off as they begin their new life as a".
 
-Every turn while the tf table of pelvis is table fox taur and there is a playerheld person:
-	let x be the number of playerheld person;
-	if a random chance of 1 in 4 succeeds:
-		let z be 0;
-	otherwise:
+[Strange Claw is a kind of thing. The description of Strange Claw is "A claw that looks like it's from an animal. Something seems unusual about it, but you can't place what.". The TF Table of Strange Claw is table Fox Taur. 1 Strange Claw is in town border. Strange Claw is an infectitem.]
+
+A Milking Machine is a thing. "A curious looking milking machine hangs from the wall.". It is in Ranch Office. The description of milking machine is "It's a milking machine. Looks portable, with a milking tank built right at the end of it to carry around."
+
+Understand "use [thing]" as using.
+
+Using is an action applying to one thing.
+
+Instead of using a milking machine:
+	if tf table of rear is not table fox taur:
+		say "You feel a bit silly a moment holding the milkers before they seem to leap at you with a mind of their own. Rather than attaching at your chest, they grab at your lower belly and begin sucking energetically. Waves of strange sensations, mild pain, and distracting pleasure has you standing there for a moment with a strange expression as your body changes in ways not meant by nature.";
+		infect rear with fox taur;
 		continue the action;
-	if x is 1:
-		if a random chance of 1 in 2 succeeds:
-			say "Maternal satisfaction runs deep as your swollen belly jostle with the soft motions of your child, waiting to be reborn into a glorious future.";
-		otherwise if a random chance of 1 in 2 succeeds:
-			say "You feel a hand press back against your own as you pat your belly. Your child will be so wonderful when they are born. You can hardly wait to greet them with open arms.";
-		otherwise:
-			say "You feel as if you are not working hard enough. Your womb certainly has room for at least one more. Someone around here is just waiting for their turn to enter you and through you, a pleasurable new life.";
-	otherwise:
-		if a random chance of 1 in 2 succeeds:
-			say "Your womb churns a moment as its occupants adjust themselves within you. Pleasure gently tickles at your senses, forcing you to pause just a moment, caught between savoring it and questioning your own future.";
-		otherwise if a random chance of 1 in 2 succeeds:
-			say "Your massively swollen womb begins to jump, subtly at first, then more forcefully. Somehow, you know what's going on and put your hands over your belly to feel your unborn fucking wildly in the warm tight confines of your body.";
-		otherwise:
-			say "One of your children seems to have shoved the other, making you wobble as your massive womb is thrown off balance a moment. You gently pet your belly and whisper soft things, calming your occupants for the time being, even if they still may yet desire escape from the pleasurable future you provide for them.";
+	say "Slipping the milkers over your new udder causes them to draw your vulpine cream from you. It[']s very pleasing, causing you to get harder and wetter at once, but does little productive besides that.";
 
-[Purple Egg is a kind of thing. The description of Purple Egg is "What a curious looking egg, so lustrous and large. The purple shade is a bit odd, but you feel protective of it. Is it still alive?". The TF Table of Purple Egg is table Fox Taur. 1 Purple Egg is in town border. Purple Egg is infectitem. It is edible.]
+
+to say foxtaur ending:
+	say "Detecting incoming danger, you immediately flee the city on your swift fox paws. Avoiding all contact until you're more than a state away. You stumble across a farm and find it to be inhabited only by an old married couple that look years from death. They are quite surprised to find you one morning, attached to the milking machine and relieving the pressure that was building down there. Feigning harmlessness, they accept you as one of their animals, if the strangest one they ever saw. This works out well enough until the husband falls over while feeding the chickens. You easily leap over the stall wall and scurry over for a look. It appears that age had claimed him and he was dying. Thinking of no better way to assist, you gather him up and let your hungry womb consume him.";
+	say "The wife is quite distraught when she can't find her husband and spends days fretting until she comes to you, tearful and sobbing. She tells you about her life with him and how she can't even think about life without him. You can't hold your silence any longer. You reach for her and gently pet her greyed hair and offer her a chance to join him. She is quite startled to have her exotic animal talking back to her instead of placidly listening to her bawling. After some hesitation, she agrees, if it means she can be with her husband. Your womb becomes full shortly after. You remained on the farm ever since, with your two 'younger' children, taking care of the animals and living fondly with one another. Your family does grow over the years, as your rejuvinated children suggest neighbors that could benefit from a life as a fox taur.";
 
 
 Fox Taur ends here.
