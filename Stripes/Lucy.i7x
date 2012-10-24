@@ -9,7 +9,7 @@ instead of going to Mall FoodCourt while ( hp of Ronda is 10 and hp of Lucy is 0
 		move player to Mall FoodCourt;
 		if lastfuck of Lucy - turns >= 8:
 			say "     Rod comes up to talk to you, but keeps a little distance to be on the safe side.  'There's something I've been wanting to talk to you about, but you'd best completely get rid of that tainted rat infection beforehand.'";
-		now lastfuck of Lucy is turns;
+			now lastfuck of Lucy is turns;
 	otherwise:
 		move player to Mall FoodCourt;
 		say "     As you come into the food court, you are spotted by Rod, who comes over to you.  The rat guy is clearly excited about something.  'Yo!  I got some good news.  Now Ronda and I were like trying to come up with a way to thank you for the save, so we decided to do you a solid.'  He takes your hand in his ratty paw, pulling you over to the atrium and to Ronda.  He rushes you over to her.";
