@@ -4,10 +4,11 @@ Version 1 of Lucy by Stripes begins here.
 
 Section 1 - Introductions
 
-instead of going to Mall FoodCourt while ( hp of Ronda is 10 and hp of Lucy is 0 and lastfuck of Lucy - turns < 8):
+instead of going to Mall FoodCourt while ( hp of Ronda is 10 and hp of Lucy is 0 ):
 	if ( bodyname of player is "Slut Rat" or facename of player is "Slut Rat" or skinname of player is "Slut Rat" or cockname of player is "Slut Rat" or tailname of player is "Slut Rat" ):
 		move player to Mall FoodCourt;
-		say "     Rod comes up to talk to you, but keeps a little distance to be on the safe side.  'There's something I've been wanting to talk to you about, but you'd best completely get rid of that tainted rat infection beforehand.'";
+		if lastfuck of Lucy - turns >= 8:
+			say "     Rod comes up to talk to you, but keeps a little distance to be on the safe side.  'There's something I've been wanting to talk to you about, but you'd best completely get rid of that tainted rat infection beforehand.'";
 		now lastfuck of Lucy is turns;
 	otherwise:
 		move player to Mall FoodCourt;
