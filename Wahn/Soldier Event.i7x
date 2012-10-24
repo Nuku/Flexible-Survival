@@ -214,6 +214,7 @@ to say DavidPatrolAnal:
 		say "     [line break]";
 		say "     You keep standing like that for a moment, with your arms around his chest from behind and still connected through your dick in his ass. As both of you come down from the rush of sex and David's brain starts working again, he looks over his shoulder at you with a questioning expression. 'I like... this,' he says and you feel his asshole tighten for a second around your member. 'Does that mean I'm gay?' With a worried look he adds 'I got a girlfriend back home, you know.'";
 		say "     After giving him a playful slap on his firm buttocks as you pull out, you calm him down a bit by telling that he just might be bisexual and that he should use the opportunity to try out the whole spectrum of possible partners. The girlfriend situation will surely work itself out once he knows what he really wants. Although judging from his load all over the wall, you're pretty certain you left a lasting impression on him, opening him up more man-on-man action...";
+		now lust of David is 1;
 	otherwise:             								[repeat assfucking]
 		say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
 		say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes, you give him another quick kiss on the lips, then spin him around, your arms around his chest from behind and walk him over to the nearest wall of a building.";
@@ -380,9 +381,9 @@ instead of conversing David:
 						say "     David says 'As you can see, the sample gathering is still going well. It's unbelievable how much stamina Tiny Tim has. [if CampBravoWomenAllowed is 1]Several of the female soldiers got sent out as well by now, their bellies already swelling with minotaur calves. [end if][if Adam is in Quartermaster's Tent]The quartermaster had a half-minotaur son too - he's in her tent helping her out.'[end if]";
 					otherwise if hp of David is 4:
 						if Sarahpups > 3:
-							say "     David says 'Sarah's puppies keep trying to chew up my boots. They're sweet and all, but sometimes they get on my nerves. I've been going up into the library to get some peace and quiet and read. [if Fang is in the Library]Of course, there your wolf keeps staring at me like he wants to mount me.[end if]'";
+							say "     David says 'Sarah's puppies keep trying to chew up my boots. They're sweet and all, but sometimes they get on my nerves. I've been going up into the library to get some peace and quiet and read[if Fang is in the Library]. Of course, there your wolf keeps staring at me like he wants to mount me[end if].'";
 						otherwise:
-							say "     Pretty quiet down here in the bunker. I've been going up into the library to grab a book or two to read. [if Fang is in the Library]And your wolf kept looking at me all the time like he wanted to mount me.[end if]'";
+							say "     David says 'Pretty quiet down here in the bunker. I've been going up into the library to grab a book or two to read[if Fang is in the Library]. And your wolf kept looking at me all the time like he wanted to mount me[end if].'";
 					otherwise:
 						say "     In this hp state David shouldn't be talking. Please report when and how you saw this.";
 				otherwise if (nam is "Send him to the bunker"):
