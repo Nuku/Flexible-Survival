@@ -6061,7 +6061,7 @@ Ranch Yard is a room.  West of Ranch Yard is Town Border.
 inside of ranch yard is Ranch Office.
 The description of ranch office is "This place is definitately abandoned. There's dust everywhere, except for a small patch on the counter. To the east, you see an open doorway leading to anothe room, or you could head out. You can feel your allergies about to kick in with all the dust.".
 East of Ranch Office is Ranch Bedroom.
-The description of Ranch bedroom is "A fine bedroom, if you don't mind neglect and dust. There is still a bed, surprisingly soft looking if dirty. There is a window, but it was boarded up from the outside quite some time ago. To the wes you see the main ranch office.".
+The description of Ranch bedroom is "A fine bedroom, if you don't mind neglect and dust. There is still a bed, surprisingly soft looking if dirty. There is a window, but it was boarded up from the outside quite some time ago. To the west you see the main ranch office.".
 The Stable Doors is a door.
 understand "door" or "gate" as the stable doors.
 North of Ranch yard is Stable Doors.
