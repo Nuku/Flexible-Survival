@@ -407,7 +407,7 @@ Section 4 - Active Effects
 an everyturn rule:
 	if ( hp of Doctor Moffatt >= 3 and hp of Doctor Moffatt <= 7 ) and lust of Doctor Moffatt is not 1:
 		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
-			say "     Something about your recent changes has affected you.  Thoughts of the curvy skunk doctor has stopped filling your mind.";
+			say "     Something about your recent changes has affected you.  Thoughts of the curvy skunk doctor have stopped filling your mind.";
 			now hp of Doctor Moffatt is 97;
 		otherwise if lastfuck of Doctor Moffatt - turns < 12:
 			increase libido of player by ( hp of Doctor Moffatt + lastfuck of Doctor Moffatt - turns ) / 3;
@@ -430,7 +430,10 @@ an everyturn rule:
 			if morale of player < 0, now morale of player is morale of player / 2;
 		if libido of player > 100, now libido of player is 100;
 	otherwise if hp of Doctor Moffatt is 8 or hp of Doctor Moffatt is 9:
-		if bodyname of player is "Hyperskunk" and player is not pure:
+		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
+			say "     Something about your recent changes has affected you.  Thoughts of the curvy skunk doctor have stopped filling your mind.";
+			now hp of Doctor Moffatt is 97;
+		otherwise if bodyname of player is "Hyperskunk" and player is not pure:
 			say "     You moan softly as shivers of delight run through your mephit body.  Your paws move up to your [if breast size of player > 0]breasts and tease your nipples[otherwise]nipples[end if]pinching and tweaking them.  Soon they respond by leaking milk that dribbles down your [one of][bodydesc of player][or][bodytype of player][purely at random] body.  You are left panting with pleasure as you lick the traces of milk from your dainty fingers even as you feel the milk starting to take effect.";
 			increase libido of player by 10;
 			if libido of player > 100, now libido of player is 100;
