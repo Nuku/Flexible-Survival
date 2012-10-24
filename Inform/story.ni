@@ -10,7 +10,7 @@ Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
-use MAX_NUM_STATIC_STRINGS of 45000.
+use MAX_NUM_STATIC_STRINGS of 48000.
 use ALLOC_CHUNK_SIZE of 116000.
 use MAX_OBJECTS of 1000.
 use MAX_ACTIONS of 300.
@@ -1306,6 +1306,7 @@ carry out destinationcheck:
 	if the number of entries in L is 0:
 		say "Nowhere.";
 	otherwise:
+		sort L;
 		repeat with q running through L:
 			say "[link][Q][as]nav [Q][end link][line break]";
 	
@@ -5156,6 +5157,7 @@ Include Incubus For Fs by Stripes.
 Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
+Include Mall Rat For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.
@@ -5177,6 +5179,7 @@ Include Candy Striper by Stripes.
 Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
 Include RodAndRonda by Stripes.
+Include Lucy by Stripes.
 Include Matriarch NPC by Stripes.
 Include Tanuki by Nuku Valente.
 Include Mouse Taur by Nuku Valente.
