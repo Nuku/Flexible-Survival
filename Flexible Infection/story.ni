@@ -2802,7 +2802,7 @@ Carry out offering a person (called the victim): [attempts to infect person]
 		stop the action;
 	end if;
 	if the willpower of ctype of the player plus a random number from 1 to 20 is greater than the willpower of the victim plus a random number from 1 to 20 begin;
-		Say "Your corner [the victim], pressing your genitals into their face. The resist at first but soon begin to eagerly lick and suck at you. They bring you to a quick climax, drinking your juices.";
+		Say "Your corner [the victim], pressing your crotch into their face. The resist at first but soon begin to eagerly lick and suck at you. They bring you to a quick climax, drinking your juices.";
 [			increase the willpower of ctype of the player by a random number from 0 to 2.;]
 		infect the victim with pelvis;
 	otherwise;
@@ -3170,7 +3170,11 @@ if the noun is female or the noun is neuter begin;
 		if the tf table of pelvis is not the tf table of the noun and tf table of pelvis is table 0, infect pelvis with noun;
 		stop the action;
 	end if;
-	if the player is butch begin;
+	let zeptoid be 1;
+	if the player is femme begin;
+		if the player is butch and a random chance of 1 in 2 succeeds, now zeptoid is 0;
+	end if;
+	if the player is butch and zeptoid is 1 begin;
 		say "[female sex of ctype of pelvis]";
 [		increase the willpower of ctype of the player by a random number from 0 to 2.;]
 		if mouse cock is visible begin;
