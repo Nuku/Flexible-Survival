@@ -3745,7 +3745,7 @@ This is the turnpass rule:
 					say "Horrible pain lances through your body as your [descr] sex disgorges the child only after what feels like hours of struggle. Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
 					now hp of player is 1;
 					decrease morale of player by 10;
-			otherwise if cunts of player > 0:
+			otherwise if cunts of player is 0:
 				if mpregcount < 3:			[First few times, painful]
 					say "Shifting the large mass through your lower colon and sends horrible pain through your body as it struggles to adapt to this method of birthing.  You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg.  Your body squeezes and pushes as your [bodydesc of player] body is covered in sweat and you have a grimace of pain on your [facename of player] face with each painful shifting inside you.  By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the soccer-ball-sized egg from your ass.  Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
 					now hp of player is 1;
