@@ -272,8 +272,7 @@ The description of David is "     David Jackson is a young soldier, pretty frien
 The conversation of David is { "Oh, hello." };
 lastfuck of David is usually 555.
 
-instead of sniffing David:
-	say "     David has a nice masculine human smell.";
+The scent of David is "     David has a nice masculine human smell.";
 
 Instead of fucking David:
 	if(lastfuck of David - turns < 5):
