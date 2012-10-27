@@ -108,7 +108,7 @@ to say sarahslutstate:
 		say "She whines at you, spreading her legs to show her aching slit, and pulls against the leash you pegged her to the wall with, desperate for satisfaction.";
 	if sarahslut is greater than 2:
 		if sarahpregnant is greater than 0:
-			say "She smiles faintly, all dreams of humanity gone from her mind, rubbing her bloated belly. Her fur is matted from many sex acts without cleaning, and her lease, reading 'slut' on either side, is a testament to her state.";
+			say "She smiles faintly, all dreams of humanity gone from her mind, rubbing her bloated belly. Her fur is matted from many sex acts without cleaning, and her collar, reading 'slut' on either side, is a testament to her state.";
 		otherwise:
 			say "She smiles faintly, all pretentions of humanity gone from her mind, as she rubs her needy slit and large breasts. Her fur is matted from the many sex acts without cleaning, and her leash, reading 'slut' on either side, is a testament to her state of mind.";
 

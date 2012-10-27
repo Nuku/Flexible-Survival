@@ -56,12 +56,14 @@ Blanche is a woman.  Blanche is in Office Den.
 The description of Blanche is "[blanchedesc]";
 The conversation of Blanche is { "Thanks." }.
 
-instead of sniffing the Blanche:
-	say "She smells of wolf and half-hidden arousal.";
+the scent of Blanche is "She smells of wolf and half-hidden arousal.";
 
 to say blanchedesc:
 	if hp of Blanche < 3:
 		say "     Blanche is an anthropomorphic female wolf with white fur.  She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail.  She has a [if turns / 8 is even]pastel blue blouse[otherwise]pink blouse[end if] draped over her shoulders which she hasn't bothered to button up.";
+	otherwise:
+		say "     Blanche is an anthropomorphic female wolf with white fur.  She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail.  She doesn't bother to wear anything now, letting her sexy body be on display for you, a tantalizing sight that makes you look forward to playing with her some more.";
+
 
 Instead of conversing the Blanche:
 	if hp of Blanche is 1:
