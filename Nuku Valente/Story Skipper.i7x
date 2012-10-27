@@ -888,6 +888,15 @@ Carry out reciting:
 			-- 110:	[David's hp]
 				if the player's command matches "[number]":
 					now hp of David is the number understood;
+					if hp of David is 0 and ( guy is not banned and hellspawn is not banned ):
+						remove David from play;
+						now Captured Demon is unresolved;
+						now Thankful Soldier is resolved;
+					otherwise:
+						now Captured Demon is resolved;
+						now Thankful Soldier is resolved;
+					if hp of David < 4, move David to Parade Ground;
+					if hp of David is 4, move David to Bunker;
 		if upit is 1, decrease z by 58;
 	if hospquest is 3, now hospquest is 2;
 	now progress of Doctor Mouse is turns;
