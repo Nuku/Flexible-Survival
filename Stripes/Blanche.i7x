@@ -83,10 +83,11 @@ instead of fucking the Blanche:
 	if hp of Blanche is 1:
 		say "     That's awfully forward of you.  Perhaps you should talk to her a little first.";
 	otherwise if lastfuck of Blanche - turns < 6:
-		say "     I need a little more time to recover, hon.";
+		say "     'I need a little more time to recover, hon.'";
 	otherwise if cocks of player is 0 and cunts of player is 0:
 		say "     You're ill-equipped to play with the white wolf right now.";
 	otherwise:
+		now lastfuck of Blanche is turns;
 		if hp of Blanche is 2:
 			say "     Blanche blushes a little at your offer, but presses herself to you, kissing you passionately.  'Oh, I was so hoping you'd stay to [if cocks of player > 0]breed me[otherwise]keep me company[end if].  My body's been needing it so bad lately.  I think that's how that beast found me.'  She hugs you tighter, shuddering a little.  'But now you're here to help me with [if cocks of player > 0]my heat[otherwise]it[end if].'";
 		otherwise if hp of Blanche > 2:
