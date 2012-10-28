@@ -3303,7 +3303,7 @@ To fight:
 		now needed is ( level of companion of player ) times 10;
 		if "Good Teacher" is listed in feats of player:
 			now needed is ( level of companion of player ) times 6;
-		if xp of companion of player >= needed and level of companion of player is less than level of player and humanity of player > 0 and companion of player is not nullpet:
+		if xp of companion of player >= needed and level of companion of player is less than level of player and humanity of player > 0 and player is not lonely:
 			pet level up;
 	rule succeeds;
 
@@ -3334,7 +3334,7 @@ To challenge:
 	now needed is ( level of companion of player ) times 10;
 	if "Good Teacher" is listed in feats of player:
 		now needed is ( level of companion of player ) times 6;
-	if xp of companion of player >= needed and level of companion of player is less than level of player and humanity of player > 0 and companion of player is not nullpet:
+	if xp of companion of player >= needed and level of companion of player is less than level of player and humanity of player > 0 and player is not lonely:
 		pet level up;
 	rule succeeds;
 
