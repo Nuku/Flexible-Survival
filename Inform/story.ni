@@ -1854,7 +1854,9 @@ To process (X - a grab object):
 				if morale of player is greater than 0, now morale of player is 0;
 				say "You feel better having eaten.";
 	if x is chips:
-		if "Junk Food Junky" is listed in feats of player:
+		if labhost > 0 and bodyname of player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
+			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[otherwise]lab[end if] clearly excited about somthing.  There is a sudden pressure at your chest as your feel the curning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole.  You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body.  Dissapointed at the loss of your snack, you release a heavy sigh and continue on your way.";
+		otherwise if "Junk Food Junky" is listed in feats of player:
 			if hunger of player is greater than 14:
 				increase score by 5;
 			decrease hunger of player by 15;
@@ -3173,15 +3175,18 @@ To translate (k - a number):
 
 
 to Pet level up:
-	increase level of companion of player by 1;
-	decrease xp of companion of player by ( level of companion of player minus 1 ) times 10;
-	if "Good Teacher" is listed in feats of player:
-		increase xp of companion of player by ( level of companion of player minus 1 ) times 4;
-	say "Your [companion of player] has gained level [level of companion of player]! Congratulations!";
-	if remainder after dividing level of companion of player by 3 is 0:
-		increase weapon damage of companion of player by 1;
-	if remainder after dividing level of companion of player by 5 is 0:
-		increase dexterity of companion of player by 1;
+	if companion of player is nullpet:
+		let donothing be 0;
+	otherwise:
+		increase level of companion of player by 1;
+		decrease xp of companion of player by ( level of companion of player minus 1 ) times 10;
+		if "Good Teacher" is listed in feats of player:
+			increase xp of companion of player by ( level of companion of player minus 1 ) times 4;
+		say "Your [companion of player] has gained level [level of companion of player]! Congratulations!";
+		if remainder after dividing level of companion of player by 3 is 0:
+			increase weapon damage of companion of player by 1;
+		if remainder after dividing level of companion of player by 5 is 0:
+			increase dexterity of companion of player by 1;
 
 To level up:
 	increase level of player by 1;
@@ -3288,15 +3293,17 @@ To fight:
 		wait for any key;
 		Combat Menu;
 		now inafight is 0;
-		let needed be ( level of player plus one ) times 10;
-		if "Fast Learner" is listed in feats of player:
-			now needed is ( level of player plus one ) times 8;
-		if xp of player is greater than needed:
+		let needed be 0;
+		if player is fastlearning:
+			let needed be (level of player plus 1) times 8;
+		otherwise:
+			let needed be (level of player plus 1) times 10;
+		if xp of player >= needed and humanity of player > 0:
 			level up;
 		now needed is ( level of companion of player ) times 10;
 		if "Good Teacher" is listed in feats of player:
 			now needed is ( level of companion of player ) times 6;
-		if xp of companion of player is greater than needed and level of companion of player is less than level of player:
+		if xp of companion of player >= needed and level of companion of player is less than level of player and humanity of player > 0 and companion of player is not nullpet:
 			pet level up;
 	rule succeeds;
 
@@ -3317,11 +3324,18 @@ To challenge:
 	wait for any key;
 	Combat Menu;
 	now inafight is 0;
-	if xp of player is greater than ( level of player plus one ) times 10:
+	let needed be 0;
+	if player is fastlearning:
+		let needed be (level of player plus 1) times 8;
+	otherwise:
+		let needed be (level of player plus 1) times 10;
+	if xp of player >= needed and humanity of player > 0:
 		level up;
-	if "Fast Learner" is listed in feats of player and xp of player is greater than ( level of player plus one ) times 8:
-		level up;
-	[try looking;]
+	now needed is ( level of companion of player ) times 10;
+	if "Good Teacher" is listed in feats of player:
+		now needed is ( level of companion of player ) times 6;
+	if xp of companion of player >= needed and level of companion of player is less than level of player and humanity of player > 0 and companion of player is not nullpet:
+		pet level up;
 	rule succeeds;
 
 to hardmodeboost:			[Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
