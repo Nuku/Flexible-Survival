@@ -8,11 +8,13 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 Alphahuskypet is a number that varies.
+losttoalphahusky is a number that varies.
 
 to say Alpha Husky attack:
+	increase losttoalphahusky by 1;
 	if cunts of player is greater than 0:
 		if bodyname of player is "Female Husky":	
-			say "You find your body reacting instinctively to the alpha males victory, your loins filling with heat even as all desire to fight and resist drains out of you, the alpha husky grinning with amusement as you lie back on the ground and spread your legs for him enthusiastically. 'Now that[apostrophe]s what I like to see, a bitch who knows when to submit to her alpha,' The husky male say with an amused chuckle, the sexy and dominant scent of the powerful alpha making you shudder, as your slutty husky pussy dampens in response to his presence. The male husky wastes no more time with useless words, his body obviously as eager as lust filled as yours is, he pounces on you eagerly. Your legs wrap around his body as he wraps his paws around your waist, holding you tight as his canine cock rubs up against your heat filled outer lips. [line break]";
+			say "You find your body reacting instinctively to the alpha male's victory, your loins filling with heat even as all desire to fight and resist drains out of you, the alpha husky grinning with amusement as you lie back on the ground and spread your legs for him enthusiastically. 'Now that[apostrophe]s what I like to see, a bitch who knows when to submit to her alpha,' The husky male say with an amused chuckle, the sexy and dominant scent of the powerful alpha making you shudder, as your slutty husky pussy dampens in response to his presence. The male husky wastes no more time with useless words, his body obviously as eager as lust filled as yours is, he pounces on you eagerly. Your legs wrap around his body as he wraps his paws around your waist, holding you tight as his canine cock rubs up against your heat filled outer lips. [line break]";
 			say "You find yourself whining like a wanton bitch as the tip of his cock probes your passage teasingly, the husky grins as he nips at your neck teasingly, his paws gripping your rear as he pushes more and more of his canine rod into your body with every soft thrust. His strong dominant touch leaving you whimpering with desire as you rock your hips forward to meet his thrusts, his pointed cock sliding into your body like it was made for it, your insides burning with increased arousal as your inner walls are spread open before him. Burying your pawlike hands into his soft husky fur, you find yourself yipping softly with each thrust of his amazing meat into you, your body submitting eagerly to your alphas touch as his knot spreads your pussy lips wide, each rocking thrust of his cock inside you impaling you further as you take more and more of the handsome huskie's knot into your body.  [line break]";
 			say "Soon you cry out with pleasure as your pussy stretches enough to allow his wonderful knot inside, your pussy holding it tight like a good bitch as pleasure explodes through your sex fogged brain. The alpha grins and nips at your neck some more, his tongue licking and teasing at your exposed neck and chest as he thrusts into you with renewed vigor. You are soon groaning eagerly as he fucks you and teases you, each stroke of his cock inside your pussy teasing and tugging as his knot massages your insides with every sensual stroke. [line break]";
 			Say "You can feel your mind emptying of any thoughts other then pleasing and serving your alpha, your nice, strong amazingly powerful alpha. Images of being a nice proper slutty husky bitch for your handsome mate filling your head, and replacing those old unnecessary human thoughts, each press of his male husky body against your own slutty female husky body, making you more and more his bitch. A nice sluttly husky bitch for him to fuck, a needy and horny heat filled husky for him to breed, and fill full of lovely little husky pups for him. The new thoughts taking root in your mind, you find yourself whining eagerly up at your alpha as he pounds into your body, begging him without words to mark you with his seed and make you his. [line break]";
@@ -159,15 +161,81 @@ to say alpha husky bitch:
 
 To say Alpha Husky loss:
 	if sarahslut is greater than 3:
-		say "'You're tougher then I thought,' The alpha says as he looks at you speculatively, his husky nose working as he sniffs around you for a second, before a grin crosses his muzzle. 'And it looks like you already have tamed a bitch or two yourself,' He says with a chuckle, obviously scenting your lusty husky pets heat filled odor still clinging to your body. 'If you want I suppose I could give you a few pointers on being a proper alpha to them, one pack leader to another,' The husky says with a wink, his offer sounding surprisingly helpful as you think of how much fun it would be to be a proper alpha for your lusty little pets back in the bunker... Do you take him up on his offer?";
+		say "     'You're tougher then I thought,' The alpha says as he looks at you speculatively, his husky nose working as he sniffs around you for a second, before a grin crosses his muzzle. 'And it looks like you already have tamed a bitch or two yourself,' He says with a chuckle, obviously scenting your lusty husky pets heat filled odor still clinging to your body. 'If you want I suppose I could give you a few pointers on being a proper alpha to them, one pack leader to another,' The husky says with a wink, his offer sounding surprisingly helpful as you think of how much fun it would be to be a proper alpha for your lusty little pets back in the bunker... Do you take him up on his offer?";
 		if player consents:
-			say "'Knew you would be interested in that,' he chuckles roughly, and you listen eagerly as he begins you pointers on how to properly train a husky to serve you, his harsh voice interspersed with soft barks and much wagging of his tail as he eagerly describes how an alpha claims their bitch properly. By the time he saunters off into the streets of the city, you feel like you know quite a bit more about what life is like at the top of a husky pack, strangely enough, you even feel much more husky like yourself now too... shrugging the feeling off, you realize any husky changes could only bring you closer to being a proper alpha for your husky bitches, and grin as you saunter back off down the streets of the city yourself...";
+			say "     'Knew you would be interested in that,' he chuckles roughly, and you listen eagerly as he begins you pointers on how to properly train a husky to serve you, his harsh voice interspersed with soft barks and much wagging of his tail as he eagerly describes how an alpha claims their bitch properly. By the time he saunters off into the streets of the city, you feel like you know quite a bit more about what life is like at the top of a husky pack, strangely enough, you even feel much more husky like yourself now too... shrugging the feeling off, you realize any husky changes could only bring you closer to being a proper alpha for your husky bitches, and grin as you saunter back off down the streets of the city yourself...";
 			infect "Alpha Husky";
 			infect "Alpha Husky";
+		otherwise if losttoalphahusky >= 2 or a random chance of 1 in 2 succeeds:
+			say "     You also briefly consider pouncing on the defeated husky and giving him an added reminder that you beat him.  Shall you do this instead?";
+			if the player consents:
+				say "     Acting as if you're about to accept his offer, you move in a little closer and then tackle the alpha husky down, growling at him that you think he needs a better reminder that you beat him.  And now that you've got him, what do you plan on doing?";
+				caughtthealphahusky;
+			otherwise:
+				say "     Deciding to just drop the matter entirely, you tell him you're not interested.  'Your loss,' the husky says with a shrug, wagging his tail as he saunters off. 'Though if you don't want to be a proper alpha for that well tamed bitch I scented on you, feel free to send her my way anytime!'  He gives a barking laugh over his shoulder as he vanishes into the streets of the city.";
 		otherwise:
-			say "'Your loss,' The husky says with a shrug, wagging his tail as he saunters off, 'Though if you don[apostrophe]t want to be a proper alpha for that well tamed bitch I scented on you, feel free to send her my way anytime!' He calls back over his shoulder as he vanishes into the streets of the city.";
+			say "     'Your loss,' the husky says with a shrug, wagging his tail as he saunters off, 'Though if you don't want to be a proper alpha for that well tamed bitch I scented on you, feel free to send her my way anytime!'  He gives a barking laugh over his shoulder as he vanishes into the streets of the city.";
 	otherwise:
-		say "The powerful male husky growls as you beat him back again, before shaking his battered head at you sadly and turning tail. The anthro canine darts off down the city streets with his tail hanging low as he runs off to hide and lick his wounds. Somehow though, you don[apostrophe]t think that will be the last you see of the strange alpha husky...";
+		let caughtthealphahusky be 0;
+		if losttoalphahusky >= 2:	[lost at least twice]
+			say "     Having been beaten and abused by these male huskies a few times in the past, you growl as you beat him and pushing him down before he can get away.  He makes some snaps at you and tries to pull free, but you've got him.  Shall you take this opportunity to get a little payback?";
+			caughtthealphahusky;
+		otherwise if a random chance of 1 in 3 succeeds:
+			say "     You manage to push the alpha husky down to the ground at the end of your fight before he can slink away.  You growl down at him as he makes some snaps at you and tries to pull free.  You've got him, but what're you going to do with him?";
+			caughtthealphahusky;
+		otherwise:
+			say "     The powerful male husky growls as you beat him back again, before shaking his battered head at you sadly and turning tail. The anthro canine darts off down the city streets with his tail hanging low as he runs off to hide and lick his wounds. Somehow though, you don[apostrophe]t think that will be the last you see of the strange alpha husky...";
+
+
+to caughtthealphahusky:
+	if cocks of player > 0:
+		say "Choices: [link]Mount him (1)[as]1[end link], [link]Ride him (2)[as]2[end link], [link]Beat him up (3)[as]3[end link] or [link]Leave (4)[as]4[end link]";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= 4:
+				break;
+			otherwise:
+				say "Invalid choice.  Choose 1 through 4.";
+		if calcnumber is 1:
+			say "[alphahuskyfucked]";
+		otherwise if calcnumber is 2:
+			say "[alphahuskyridden]";
+		otherwise if calcnumber is 3:
+			say "[alphahuskybeatenup]";
+		otherwise if calcnumber is 4:
+			say "[alphahuskyreleased]";
+	otherwise:
+		say "Choices: [link]Ride him (1)[as]1[end link], [link]Beat him up (2)[as]2[end link] or [link]Leave (3)[as]3[end link]";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= 3:
+				break;
+			otherwise:
+				say "Invalid choice.  Choose 1 through 3.";
+		if calcnumber is 1:
+			say "[alphahuskyridden]";
+		otherwise if calcnumber is 2:
+			say "[alphahuskybeatenup]";
+		otherwise if calcnumber is 3:
+			say "[alphahuskyreleased]";
+
+
+to say alphahuskyfucked:
+	say "     Deciding this alpha male could use a taste of his own medicine, you roll him over and grab that fluffy tail of his.  He gives a mix of growling threats and whimpers, trying to bark and bluster out of his punishment, but this only spurs you on further, wanting to teach the male a good hard lesson of his own.  As you push your cock into his tight tailhole, his hips push back into your thrust despite his attempts at resistance.  And after a few thrusts, he's moaning and panting beneath you, his own cock dribbling precum onto the ground.  When you finally cum hard inside him, he cums as well before slinking off after you release him.  His fluffy tail low to cover his creamy hole, he heads back into the city to find someplace to lick his wounds and salve his injured pride.";
+
+to say alphahuskyridden:
+	say "     Deciding to show this alpha male who's in charge, you decide to take what you want from him instead of letting him force it upon you.  Slamming his shoulders down firmly, you straddle him and start grinding your hips down onto his crotch.  As his sheath starts to fill and his doggy cock emerges, he starts to pant.  He struggles a little, still wanting to be dominant and on top, but you growl at him until his ears dip.  Only then do you press that throbbing dog cock into your [if cunts of player > 0]juicy pussy[otherwise]tight anus[end if].  You ride him slowly, which makes the normally rough dog whimper for more, but you take your time, savouring both his pleas for you to go faster and the fulfilling ride you're getting.  Once you can't hold back any longer and need release, you pound yourself down onto him hard and fast until you both cum loudly as the canine seed floods your [if cunts of player > 0]womb[otherwise]belly[end if][if cocks of player > 0].  You shoot your own load across the husky's chest as his semen fills you[end if].  Finished with him, you push yourself off and send the cowed dog on his way.  He slinks off, his tail low at having been beaten and used for a change, looking for someplace to lick his wounds and salve his pride.";
+
+to say alphahuskybeatenup:
+	say "     Deciding this aggressive dog could use a bit of harsh discipline, you give him a few more smacks.  'Bad dog!  Bad dog!'  You rain blows down upon him, kicks and punches until he's cowering in a corner.  You give his rear a final hard boot and send him running.  He slinks off with his tail between his legs to find someplace to lick his wounds and salve his pride.";
+
+to say alphahuskyreleased:
+	say "     You growl down at the alpha husky angrily, making him whimper a little, which brings a smile to your face.  You push yourself off of him, releasing him.  The anthro canine scrambles to his feet and turns tail.  He darts off down the city streets with his tail hanging low as he runs off to hide and lick his wounds.  Somehow though, you don't think that will be the last you see of these strange alpha huskies.";
+
 
 Section 2 - Monster Insertion
 

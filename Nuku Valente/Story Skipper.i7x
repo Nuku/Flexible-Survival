@@ -905,6 +905,8 @@ Carry out reciting:
 					now Back at the Camp is resolved;
 					now Camp Bravo Entrance is unknown;
 					now CampBravoWomenAllowed is 0;
+					now ElainePregnant is 0;
+					now thirst of Elaine is 0;
 					remove Adam from play;
 					if guy is banned or furry is banned:
 						now Red Light Requisition is resolved;
@@ -919,7 +921,9 @@ Carry out reciting:
 					otherwise if hp of Adam is 4:
 						now Camp Bravo Entrance is known;
 						now CampBravoWomenAllowed is 1;
+						now ElainePregnant is 48;
 					otherwise if hp of Adam is 5:
+						now thirst of Elaine is 3;
 						now Camp Bravo Entrance is known;
 						now CampBravoWomenAllowed is 1;
 						move Adam to Quartermaster's Tent;
