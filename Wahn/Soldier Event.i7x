@@ -1,5 +1,5 @@
 Version 7 of Soldier Event by Wahn begins here.
-[Version 7 - David the Wandering Soldier (Patrol/Camp/Bunker), New Menus, Camp Bravo Entrance + two non-fuckable guard npcs]
+[Version 7.1 - Saving Camp Bravo / Adam]
 
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse";
@@ -871,7 +871,7 @@ An everyturn rule:
 		decrease ElainePregnant by 1;
 
 instead of sniffing Elaine:
-	say "     Smells like a female human[if thirst of Elaine is 1] - with a slight undertone of pregnancy.[otherwise if thirst of Elaine is 2] - a pregnant one.[otherwise].[end if]";
+	say "     Smells like a female human[if thirst of Elaine is 1] - with a slight undertone of pregnancy[otherwise if thirst of Elaine is 2] - a pregnant one[end if].";
 
 Instead of fucking Elaine:
 	say "[ElaineFucking]";
