@@ -35,6 +35,7 @@ Instead of resolving a Red Light Requisition:
 	say "     Moving through a seedier area of the city, you come around a corner and spot two soldiers a bit down the road, lugging around a large sack. When they spot you, their faces flush red with embarrassment and they run off, dashing away from you. You run after them, but then slip on something that must have dropped out of the sack as they jostled it while running. It's... a dark blue rubber dildo?";
 	say "     What's going on here? Why are soldiers looting the red light district and gathering up whole sacks of dildos and who knows what? Maybe you'll find out one of these days...";
 	increase score by 5;
+	now hp of Adam is 1;
 	Now Red Light Requisition is resolved;
 	Now Trickster's Masterpiece is unresolved;
 
@@ -61,6 +62,7 @@ Instead of resolving a Trickster's Masterpiece:
 	if libido of player > 100, now libido of player is 100;
 	increase score by 15;
 	extend game by 24;
+	now hp of Adam is 2;
 	Now Back at the Camp is unresolved;
 	Now Trickster's Masterpiece is resolved;
 
@@ -573,6 +575,7 @@ to say DavidSex5:												[David ass fucked]
 
 Back at the Camp is a situation. Back at the Camp is resolved.  [enabled by the 'Trickster's Masterpiece' event]
 The sarea of Back at the Camp is "Outside";
+
 when play begins:
 	add Back at the Camp to badspots of guy;            [male soldiers]
 
@@ -628,12 +631,13 @@ to say GuardLie:    [lie to get into the camp]
 	increase diceroll by bonus;
 	if diceroll is greater than 18:
 		say "     You walk up to them like confidently and totally wrap them around your finger with some quick talking. In the end, they salute you before one of them leads the way to their commanding officer's tent. You pass the hitching post you saw being used before, and also the huge minotaur sitting besides it right now munching on some food.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		attempttowait;
 		say "     The commandant of the camp is Major Padgett, who stands up from his field desk to shake your hand before offering you a seat.";
 		say "     'So you're the special agent sent to check out the situation? Welcome to Camp Bravo. Let me brief you about what's been happening. We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples...' [otherwise]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...' [end if]He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
 		say "     'Several detachments of soldiers are on the way to the containment barrier, but I'm running out of men rapidly. I've already had to pull people out of other camps and scouting posts. Many of the remaining soldiers are women, and considering the potency of that creature's seed, I hesitate to expose any of them to it.'";
 		say "     'Please feel free to check out the camp and talk with everyone. And when you go back to report, please pass on that I need more people here to be able to send more people out with samples.'";
 		move player to Major's Tent;
+		now hp of Adam is 3;
 		now Camp Bravo Entrance is known;
 		now Back at the Camp is resolved;
 	otherwise:
@@ -787,6 +791,7 @@ to say MajorBreeding:
 		if diceroll is greater than 18:
 			say "     He nods at your explanation, clearly accepting it for the truth. 'I see your point. Spreading out the duty of obtaining and transporting research samples to all soldiers under my command would alleviate the shortage of people I can send off. I'll pass along orders to that effect. Thank you for bringing this to my attention.'";
 			now CampBravoWomenAllowed is 1;
+			now hp of Adam is 4;
 			now ElainePregnant is 48;      [48h till birth]
 		otherwise:
 			say "     He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at Ly- err, convincing him of the truth and try this again later.";
@@ -855,6 +860,7 @@ lastfuck of Elaine is usually 555.
 An everyturn rule:
 	if ElainePregnant is 1:
 		move Adam to Quartermaster's Tent;
+		now hp of Adam is 5;
 		now ElainePregnant is 0;
 		now thirst of Elaine is 3;
 	if ElainePregnant is 24:
