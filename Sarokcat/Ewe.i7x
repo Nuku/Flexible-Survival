@@ -83,7 +83,7 @@ When Play begins:
 	now cunt length entry is 9;
 	now cunt width entry is 6;
 	now libido entry is 40;
-	now loot entry is "Tainted wool";		[NOTE: due to monster swapping, this is normally dropped by the ram.]
+	now loot entry is "Tainted wool";
 	now lootchance entry is 20;
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
