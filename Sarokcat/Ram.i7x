@@ -38,7 +38,7 @@ When Play begins:
 	now name entry is "ram"; [Name of your new Monster]
 	now attack entry is "[one of] He rubs his 'Specially treated' wool on you, causing you to moan at the sensitive sensation.[or]He Rushes forward, knocking you back with his short horns[or]The ram strikes out with one of his hooflike fists, the strike sending you reeling.[or]He Smirks at you before letting out a loud sheep call, the noise echoing in your head making your thoughts fuzzy[or]The powerful ram strikes you with his hooflike fist, sending you reeling.[or]The male ram grins happily as he tries to wrestle you to the ground.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[ram loss]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is  "[ram attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
+	now victory entry is "[ram attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "A strong looking male ram approaches, the horns on his head curling back slightly, while the horn between his legs juts proudly forward.";[ Description of the creature when you encounter it.]
 	now face entry is "short blunt muzzle on your flattened face, your sheep-like ears sticking straight out from the side of your head, and two small horns extending from your forehead and curling backwards";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "strong and rugged, equally well built for fighting other rams or keeping predators at bay.  Your strong leg muscles give you extra power when charging forward.  Your arms are thinner and end in hoof-like hands that have a little trouble manipulating things, but you don't need them to butt heads with anyone who crosses you";[ Body Description, format as the text "Your Body is (your text)"] 
@@ -71,8 +71,8 @@ When Play begins:
 	now cunt length entry is 0;
 	now cunt width entry is 0;
 	now libido entry is 30;
-	now loot entry is "food";		[NOTE: due to monster swapping, this is normally dropped by the ewe.]
-	now lootchance entry is 15;
+	now loot entry is "Tainted wool";
+	now lootchance entry is 40;
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscled[or]stocky[at random]";
@@ -87,7 +87,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Tainted wool"	"A small bundle of rough wool you found in the city, strangely enough, it has a rather pleasant musky scent coming from it."	1	 Tainted wool
+"Tainted wool"	"A small bundle of rough wool you found in the city, strangely enough, it has a rather pleasant musky scent coming from it."	1	Tainted wool
 
 Tainted wool is a grab object. It is part of the player.
 
