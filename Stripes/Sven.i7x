@@ -130,7 +130,7 @@ instead of conversing the Sven:
 		say "     You grab your weapon and press yourself against the door to help barricade it as whatever is outside charges down the steps again and again to batter against it.  The beast's pounding and claw slashes soon weaken the flimsy door too much and it starts to break in.  Through the breaks, you can see it is a snow leopard like Sven, but fully transformed and wild, and probably drawn by your friend's scent.  The next time it moves back for another charge, you whip open the door and charge it first, pushing it out of the stairwell and into the street.";
 		now snowmeowfight is 0;
 		challenge "Snow Leopard";
-		if snowmeowfight is 1:
+		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     After your victory against the intruder, you look around quickly to make sure there aren't any infected coming, then head back to the house to check on Sven.  You find him huddled in the stairwell with his head just poking over edge, clearly having crept out to watch the fight from there.  He has one hand nervously playing with his tail while the other has slipped into his shorts.  He does not appear to be aware he's doing the latter, looking up at you with admiration at your defeat of the beast.  As he starts to get up, he notices where his hand has gotten and quickly whips it out, blushing behind his tail.";
 			if Porn Store is known:
 				say "     You grin inside, but remember that you have more pressing things to deal with now.  Pulling Sven down the stairs, you go through the broken doorway and tell him that he needs to get ready to leave.  He wrings his tail and releases a few nervous mewls as he tries to cope with the idea of leaving his home away from home.  But you do recall another friend he could stay with who is much closer.  It would be faster and easier to move the nervous kitty there than going across the city to the bunker.  Do you suggest taking him to stay with Lisa the Mouse instead?";
@@ -154,7 +154,7 @@ instead of conversing the Sven:
 				move Sven to bunker;
 				move player to bunker;
 				increase score by 20;
-		otherwise if snowmeowfight is 2:
+		otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     After the snow leopard has dealt with you, it catches sight of Sven in the stairwell, mewling softly as he plays with himself in his shorts.  Too aroused by the show he received and drawn in by the feline's scent, he doesn't flee as it pads over, switching to move on all fours.  He moans softly as it nuzzles and licks his face, pulling off his clothes and mounting him right there.  He mewls and moans lustfully as he's taken by the strong male, slowly transforming as their loud rutting continues.  Recovering enough to get back up, you can see that the humanity's gone from Sven's eyes and he's succumb to his infection.  As there is nothing else you can do for him than to wish him well, you slink away quietly to nurse your wounds and search elsewhere.";
 			now hp of Sven is 99;
 			move Sven to dark basement;
