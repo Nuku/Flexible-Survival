@@ -1750,7 +1750,7 @@ Check feeding:
 	if the pregnant of player is greater than 20:
 		say "Your heavily pregnant breasts allow you to do this.";
 		continue the action;
-	if the tf table of chest is not table phoenix and the tf table of chest is not table felitaur and the tf table of gut is not table felitaur and the feline torso is not a part of the rear, say "Your breasts don't have that property." instead;
+	if the tf table of pelvis is not table fox taur and the tf table of chest is not table phoenix and the tf table of chest is not table felitaur and the tf table of gut is not table felitaur and the feline torso is not a part of the rear, say "Your breasts don't have that property." instead;
 
 Carry out feeding:
 	if the feline torso is a part of the rear: [ felitaur milk ]
