@@ -183,6 +183,7 @@ instead of addfeating the fun feats:
 		addfeat "Litter Bearer" with "Greatly increases the chance of multiple children in one birth - twins or more at over 50% chance.";
 	if "Fertile" is listed in feats of player:
 		addfeat "Selective Mother" with "You can decide if you want to become pregnant.";
+	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!";
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
 	addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.";
