@@ -98,15 +98,15 @@ Section 4 - Endings
 when play ends:
 	if bodyname of player is "Mall Rat":
 		if humanity of player is less than 10:
-			say "     You succumb to your Mall Rat infection.";
+			if hp of Lucy <= 1:
+				say "     Generic mall rat ending.";
+			otherwise:
+				say "     Mall rat + Lucy ending.";
 		otherwise:
-			say "     You survive, but were infected by the Mall Rat.";
-			if cocks of player > 0:							[MALE/HERM]
-				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
-				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";
+			if hp of Lucy <= 1:
+				say "     Generic mall rat ending.";
+			otherwise:
+				say "     Mall rat + Lucy ending.";
 ]
 
 [ Edit this to have the correct creature name as well]

@@ -67,8 +67,8 @@ When Play begins:
 	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 40;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "rhino cum";	[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 33;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]beefy[or]muscular[at random]";
@@ -78,6 +78,22 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"rhino cum"	"Exactly what it sounds like."	1	rhino cum
+
+rhino cum is a grab object. It is a part of the player. rhino cum is infectious. The strain of rhino cum is "Rhino".
+
+The usedesc of Rhino cum is "[drinkrhinocum]";
+
+to say drinkrhinocum:
+	say "     Following the strange urge you have, you slam back the bottle of rhino cum you found.  It has a strong taste to it, but you find it very exciting despite its salty flavour";
+	increase libido of player by 5;
+	if cocks of player > 0 and cock length of player < 12:
+		say ".  You feel a throbbing in your groin as your [if cocks of player > 1]cocks expand[otherwise]cock expands[end if] another inch almost immediately after you finish your drink.";
+		increase cock length of player by 1;
 
 
 Section 3 - Endings

@@ -372,6 +372,9 @@ to say paymentcheck:
 	otherwise if "panther milk" is listed in the invent of the player:
 		say "     Finding a container of panther milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'You brought kitty milk for the kitty.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete panther milk;
+	otherwise if "cheetah milk" is listed in the invent of the player:
+		say "     Finding a container of cheetah milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'You brought kitty milk for the kitty.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
+		delete cheetah milk;
 	otherwise if "cow milk" is listed in the invent of the player:
 		say "     Finding a container of cow milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Good old cow milk, rich and creamy.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete cow milk;

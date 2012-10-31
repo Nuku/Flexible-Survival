@@ -4867,6 +4867,13 @@ Carry out milking:
 			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 				add "panther milk" to the invent of the player;
 		now lastmilking is turns;
+	otherwise if the bodyname of the player is "cheetah woman":
+		say "It takes a while to milk your feline breasts, but you manage to do so.";
+		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
+			add "cheetah milk" to the invent of the player;
+		if breast size of player > 8:
+			add "cheetah milk" to the invent of the player;
+		now lastmilking is turns;
 	otherwise if the bodyname of the player is "Chocolate Lab":
 		say "It takes little effort to draw some white chocolate flavoured milk from your breasts.";
 		repeat with T running from one to the breasts of the player:
@@ -5236,6 +5243,8 @@ Include Solstice by Stripes.
 Include Leonard by Stripes.
 Include Athanasia by Stripes.
 Include Andrew by Stripes.
+Include Sam by Stripes.
+Include Mack by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
