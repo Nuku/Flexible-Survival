@@ -466,8 +466,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 cheetahmate is a number that varies.
 
 when play begins:
-	add { "cheetah" } to infections of guy;
-	add { "cheetah" } to infections of furry;
+	add { "Cheetah" } to infections of guy;
+	add { "Cheetah" } to infections of furry;
 
 
 To say cheetah defeat:
@@ -546,10 +546,11 @@ to say cheetahheat:
 			infect;
 			decrease the score by 5;
 			increase the morale of the player by 3;
+
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Cheetah"; [Name of your new Monster]
-	now attack entry is "[one of]Bites with sharp fangs, drawing blood[or] Slashes at you, opening large wounds [or] Leaps over you, slashing as it is flying [at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]bites with sharp fangs, drawing blood[or]slashes at you, opening large wounds [or]leaps over you, slashing as it is flying[at random]!"; [Text used when the monster makes an Attack]
 	now defeated entry is "[cheetah defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[cheetah attack]";
