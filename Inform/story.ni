@@ -1144,9 +1144,9 @@ carry out hunting:
 		sort Q in random order;
 		repeat with Z running through q:
 			choose row z from the table of random critters;
-			if "Unerring Hunter" is listed in the feats of the player:
+			if "Unerring Hunter" is listed in the feats of the player and there is a name entry:
 				if name entry matches the text topic understood, case insensitively:
-					let qubert is 0;
+					let qubert be 0;
 				otherwise:
 					next;
 			if there is a name entry:
