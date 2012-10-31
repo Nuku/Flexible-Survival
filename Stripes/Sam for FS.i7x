@@ -1,4 +1,4 @@
-Version 1 of Sam by Stripes begins here.
+Version 1 of Sam  for FS by Stripes begins here.
 [Version 1 - ]
 "Adds a fellow Researcher named Sam to the Flexible Survival game"
 
@@ -141,4 +141,4 @@ instead of fucking the Sam:
 Section 3 - Endings
 [to come later]
 
-Sam ends here.
+Sam for FS ends here.

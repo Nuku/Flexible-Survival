@@ -1,4 +1,4 @@
-Version 1 of Mack by Stripes begins here.
+Version 1 of Mack for FS by Stripes begins here.
 [Version 1 - ]
 "Adds a male Squirrel name Macadamia (Mack) to the Flexible Survival game"
 
@@ -140,4 +140,4 @@ instead of fucking the Macadamia:
 Section 5 - Endings
 [to come later]
 
-Mack ends here.
+Mack for FS ends here.
