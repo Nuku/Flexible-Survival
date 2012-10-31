@@ -75,8 +75,8 @@ When Play begins:
 	now cunt length entry is 12;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 50;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "eagle feather";	[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "winged";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]avian[or]raptor[or]bird-like[at random]";
@@ -85,6 +85,18 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"eagle feather"	"Exactly what it sounds like."	0	eagle feather
+
+eagle feather is a grab object. It is a part of the player. eagle feather is infectious. The strain of eagle feather is "Bald Eagle".
+
+The usedesc of eagle feather is "[useeaglefeather]";
+
+to say useeaglefeather:
+	say "     After twirling the feather around by the quill, you decide to start brushing is along your face.  The soft feel of it brushing against you feels very nice.  You continue this for a while until finally noticing that the feather has shrunk away and been absorbed into you.";
 
 
 when play ends:
