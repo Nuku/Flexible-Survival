@@ -240,7 +240,9 @@ Instead of resolving a Watering Hole:
 			otherwise:
 				say "     After defeating the eagle and sending it on its way, you face the pond, trying to decide if you'll take a drink.  Shall you lean down and have some water from the pond?";
 				if the player consents:
-					say "     Deciding that you'd rather have the water, regardless of the consequences, you lean in and drink your fill of the tainted waters.  You can taste the arousing flavour of their semen mixed into the water, but you're too excited now to stop.  As you finish your long drink, you spot a reflection in the water and, looking up, you spot more eagles soaring above you.  You decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot.";
+					say "     Deciding that you'd rather have the water, regardless of the consequences, you lean in and drink your fill of the tainted waters.  You can taste the arousing flavour of their semen mixed into the water, but you're too excited now to stop.  As you finish your long drink, you spot a reflection in the water and, looking up, you spot more eagles soaring above you.  You decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot, only pausing to grab a couple of the feathers lying around before you go.";
+					add "eagle feather" to invent of player;
+					add "eagle feather" to invent of player;
 					let ponddrinks be ( 1 + ( ( thirst of player - 1 ) / 25 ) );
 					repeat with y running from 1 to ponddrinks:
 						infect "Bald Eagle";
@@ -248,7 +250,9 @@ Instead of resolving a Watering Hole:
 					increase score by 10;
 					now thirst of player is 0;
 				otherwise:
-					say "     Deciding it'd probably be best to avoid the tainted waters, you get up.  Spotting more eagles in the air above you, you decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot.";
+					say "     Deciding it'd probably be best to avoid the tainted waters, you get up.  Spotting more eagles in the air above you, you decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot.  You pause only long enough to grab a couple of the feathers scattered around the edge of the pond.";
+					add "eagle feather" to invent of player;
+					add "eagle feather" to invent of player;
 					increase score by 5;
 	otherwise:
 		say "     Rather than risk facing the [if level of player <= 10]powerful [end if]creature for clearly tainted water, you decide to continue on your way, counting yourself lucky that you were able to learn that the water was infected.  Had he not been there, you may have ended up drinking it without knowing any better.";

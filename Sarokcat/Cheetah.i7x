@@ -77,8 +77,8 @@ When Play begins:
 	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
-	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	now loot entry is "cheetah milk";			[ Loot monster drops, ]
+	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]lithe[or]sleek[at random]";
@@ -88,6 +88,22 @@ When Play begins:
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"cheetah milk"	"The creamy milk with a feline scent."	1	cheetah milk
+
+cheetah milk is a grab object. It is a part of the player. Understand "milk" as cheetah milk. cheetah milk is infectious. The strain of cheetah milk is "cheetah woman".
+
+The usedesc of cheetah milk is "[drinkcheetahmilk]";
+
+to say drinkcheetahmilk:
+	say "     You drink down the cheetah milk.  It has a strangely pleasant taste and it helps quench your thirst a little.  You feel a little more lustful and excited.";
+	if bodyname of player is "cheetah woman" and inheat is true, increase slutfucked by 1;
+	decrease thirst of player by 5;
+	increase libido of player by 5;
+	if thirst of player < 0, now thirst of player is 0;
 
 
 Section 3 - Heat Table
