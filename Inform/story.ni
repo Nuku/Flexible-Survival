@@ -1172,7 +1172,7 @@ carry out hunting:
 				let the bonus be (( the perception of the player minus 10 ) divided by 2);
 				if "Curious" is listed in feats of player, increase bonus by 2;
 				increase dice by bonus;
-				if dice is greater than 15:
+				if dice >= 15 or "Unerring Hunter" is listed in feats of player:
 					say "You manage to find your way to [z]!";
 					move the player to z;
 					now z is known;
@@ -1209,7 +1209,7 @@ carry out hunting:
 					let the bonus be (( the perception of the player minus 10 ) divided by 2);
 					if "Curious" is listed in feats of player, increase bonus by 2;
 					increase dice by bonus;
-					if dice is greater than 15:
+					if dice >= 15 or "Unerring Hunter" is listed in feats of player:
 						now inasituation is true;
 						say "You manage to find your way to [z]!";
 						try resolving z;
@@ -5846,6 +5846,8 @@ to say promptsay:
 		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
 	say "[link][bracket]Save[close bracket][as]saveword[end link] ";
+	if "Unerring Hunter" is listed in feats of player and there is a visible dangerous door:
+		say "[link][bracket]Hunt[close bracket][as]huntinglist[end link] ";
 	say "[line break]";
 	say "Exits: ";
 	repeat with nam running through valid directions:

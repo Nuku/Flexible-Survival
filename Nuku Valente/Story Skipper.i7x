@@ -5,7 +5,11 @@ Trixie is a person. Trixie is in Grey Abbey Library.
 instead of sniffing Trixie:
 	say "Trixie smells of broken universes and rewritten fate.  How anything can smell like that or how you can even know that smell disturbs you to your very core.";
 
-The description of trixie is "Look, it[apostrophe]s Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a T Shirt that reads 'Let[apostrophe]s skip to the good stuff!'.";
+The description of trixie is "[trixiedesc]";
+
+to say trixiedesc:
+	say "     Look, it[apostrophe]s Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Let[apostrophe]s skip to the good stuff!'.";
+	say "     Trixie's got a new button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it.  Hmmm.";
 
 The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words.... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" };
 
@@ -1057,6 +1061,162 @@ to npcEint-Read (c - a number):	[converts the indexed text back to regular text]
 	if character number c in npcEint is "7", now restoreletter is "7";
 	if character number c in npcEint is "8", now restoreletter is "8";
 	if character number c in npcEint is "9", now restoreletter is "9";
+
+[
+trixienotice is a truth state that varies.  trixienotice is normally false.
+
+after going outside from the bunker while trixienotice is false:
+	now trixienotice is true;
+	say "     Trixie pipes up from somewhere at the edge of existence.  'Psst!  You might've noticed that 'Automatic Survival' has disappeared from the feat list.  I'm taking care of that and a few other cheats for you.  Just tell me '[link]iwannacheat[end link]' to access them... if you want to just cheat, that is.";
+]
+
+trixiecheating is an action applying to nothing.
+
+understand "trixiecheat" as trixiecheating.
+understand "iwannacheat" as trixiecheating.
+
+check trixiecheating:
+	if Trixie is not visible, say "Only Trixie can help you with that." instead;
+
+carry out trixiecheating:
+	let Unerring Hunter be "Unerring Hunter";
+	let Automatic Survival be "Automatic Survival";
+	let Open World be "Open World";
+	let Lil Better be "Lil Better";
+	say "     Now, this stuff here is outright cheating, but if you really want to do it, I can help you out with that.  It don't come for free though.  You'll take a knock to your score, though I'll give half that back if you turn the cheat off later.";
+	say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area.  [bold type]Automatic Survival[roman type] removes your need for food and water.  [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC).  [bold type]Lil Better[roman type] gives +1 to all stats.  [bold type]Play On[roman type] removes the time limit to the game.  You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
+	let trixieexit be 0;
+	while trixieexit is 0:
+		say "[link](1) Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
+		say "[link](2) Automatic Survival[as]2[end link] - [if Automatic Survival is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
+		say "[if Open World is listed in feats of player](3) Open World cannot be deactivated[otherwise][link](3) Open World[as]3[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
+		say "[link](4) Lil Better[as]4[end link] - [if Lil Better is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
+		say "[link](5) Play On[as]5[end link] - [if playon is 0]Inactive[otherwise]Active[end if] (Score halved to reactivate)[line break]";
+		say "[link](6) Set Humanity[as]6[end link] - Current Humanity: [bold type][humanity of player][roman type][line break]";
+		say "[link](7) Set Libido[as]7[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
+		say "[link](0) Abort[as]0[end link][line break]";
+		while 1 is 1:
+			say "Choice? (0-7)> [run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 7:
+				break;
+			otherwise:
+				say "Invalid choice.  Pick from 0 to 7.";
+		if calcnumber is 1:
+			if "Unerring Hunter" is listed in feats of player:
+				remove "Unerring Hunter" from feats of player;
+				increase score by 250;
+				say "Your 'Unerring Hunter' cheating ability has been removed.";
+			otherwise:
+				add "Unerring Hunter" to feats of player;
+				decrease score by 500;
+				say "You have gained the 'Unerring Hunter' cheat, but are penalized 500 points.";
+				say "You now have access to the 'huntinglist' listing (appearing as [bracket]Hunt[close bracket]).";
+		otherwise if calcnumber is 2:
+			if "Automatic Survival" is listed in feats of player:
+				remove "Automatic Survival" from feats of player;
+				say "Your 'Automatic Survival' cheating ability has been removed.";
+				increase score by 300;
+			otherwise:
+				add "Automatic Survival" to feats of player;
+				decrease score by 600;
+				say "You have gained the 'Automatic Survival' cheat, but are penalized 600 points.";
+		otherwise if calcnumber is 3:
+			if "Open World" is listed in feats of player:
+				say "This ability cannot be removed once gained.";
+			otherwise:
+				add "Open World" to feats of player;
+				decrease score by 400;
+				say "You have gained the 'Open World' cheat, but are penalized 400 points.";
+				repeat with Q running through fasttravel not private rooms:
+					now Q is known;
+				Now Approaching the Capitol Building is known;
+				Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
+				Now Plant Overview is known;
+				now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+				now College Campus is known;
+				now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
+		otherwise if calcnumber is 4:
+			if "Lil Better" is listed in feats of player:
+				remove "Lil Better" from feats of player;
+				say "Your 'Lil Better' cheating ability has been removed.";
+				increase score by 200;
+				decrease strength of player by 1;
+				decrease dexterity of player by 1;
+				decrease stamina of player by 1;
+				decrease intelligence of player by 1;
+				decrease dexterity of player by 1;
+				decrease perception of player by 1;
+				if remainder after dividing stamina of player by 2 is 1:
+					decrease maxhp of player by level of player plus 1;
+					if hp of player > maxhp of player, now hp of player is maxhp of player;
+			otherwise:
+				add "Lil Better" to feats of player;
+				decrease score by 400;
+				say "You have gained the 'Lil Better' cheat, but are penalized 400 points.";
+				increase strength of player by 1;
+				increase dexterity of player by 1;
+				increase stamina of player by 1;
+				increase intelligence of player by 1;
+				increase dexterity of player by 1;
+				increase perception of player by 1;
+				if remainder after dividing stamina of player by 2 is 0:
+					increase maxhp of player by level of player plus 1;
+		otherwise if calcnumber is 5:
+			if playon is 1:
+				now playon is 0;
+				say "Play On has been deactivated[if score > 0] and your score halved[end if].  The end is nigh.";
+				if turns <= targetturns + 8:
+					now targetturns is turns - 8;
+					say "You have been granted one final day.";
+				if score > 0, now score is score / 2;
+			otherwise:
+				now playon is 1;
+				say "Play On has been activated.  You are now in extended play mode.  The rescue will never come.";
+		otherwise if calcnumber is 6:
+			say "Set your humanity (1-100) or 0 to abort> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= 100:
+				now humanity of player is calcnumber;
+				say "Humanity adjusted.  Score penalized by 50.";
+				decrease score by 50;
+			otherwise:
+				say "Invalid choice - returning to menu.";
+		otherwise if calcnumber is 7:
+			say "Set your libido (1-100) or 0 to abort> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= 100:
+				now libido of player is calcnumber;
+				say "Libido adjusted.  Score penalized by 50.";
+				decrease score by 50;
+			otherwise:
+				say "Invalid choice - returning to menu.";
+		otherwise if calcnumber is 0:
+			say "Exiting menu.";
+			now trixieexit is 1;
+		wait for any key;
+		clear the screen and hyperlink list;
+
+huntinglisting is an action applying to nothing.
+
+understand "huntinglist" as huntinglisting.
+
+check huntinglisting:
+	if "Unerring Hunter" is not listed in feats of player:
+		say "You do not currently have this ability." instead;
+	if there is no dangerous door in the location of the player:
+		say "I don't see any good hunting grounds around here." instead;
+
+carry out huntinglisting:
+	sort table of random critters in lev order;
+	let y be a random dangerous door in the location of the player;
+	now battleground is the marea of y;
+	repeat with X running from 1 to number of filled rows in table of random critters:
+		choose row X from the table of random critters;
+		if there is no area entry, next;
+		if there is no name entry, next;
+		if area entry matches the text battleground, case insensitively:
+			say "[link][name entry][as]hunt [name entry][end link][line break]";
 
 
 Section X - Debugging - Not for Release
