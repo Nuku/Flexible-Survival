@@ -183,7 +183,7 @@ instead of addfeating the fun feats:
 		addfeat "Litter Bearer" with "Greatly increases the chance of multiple children in one birth - twins or more at over 50% chance.";
 	if "Fertile" is listed in feats of player:
 		addfeat "Selective Mother" with "You can decide if you want to become pregnant.";
-	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!";
+[	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!";	]
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
 	addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.";
@@ -193,7 +193,7 @@ instead of addfeating the fun feats:
 	if "Pure" is not listed in feats of player, addfeat "Corrupt" with "You have a weaker grip on your humanity.";
 	if "Corrupt" is not listed in feats of player, addfeat "Pure" with "You have a stronger grip on your humanity.";
 	addfeat "Junk Food Junky" with "Junk food is better for you than regular food and water.";
-	addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
+	if "Open World" is not listed in feats of player, addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
 
 instead of addfeating the basic feats:
 	addfeat "Survivalist" with "You are great at scavenging. When doing such, you get a +4 to finding things.";
@@ -298,7 +298,11 @@ This is the gainfeat rule:
 		say "You have gained '[nam]'!";
 [		decrease menu depth by 1;			]
 		increase featgained of player by 1;
-		if nam is "Automatic Survival", decrease score by 600;
+		if nam is "Automatic Survival":
+			decrease featgained of player by 1;
+			remove "Automatic Survival" from feats of player;
+			say "[bold type]This ability is now controlled by Trixie.  Your feat slot has been returned to you.[roman type]";
+			wait for any key;
 		if nam is "More Time", extend game by 24;
 		now Featqualified is 0;
 		if nam is "Hardy":
@@ -322,6 +326,7 @@ This is the gainfeat rule:
 			Now Zoo entrance is known;
 			Now Dry Plains is known;
 			Now Museum Foyer is known;
+			now Warehouse District is known;
 		if nam is "Instinctive Combat":
 			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
 	if autofeatloading is false, wait for any key;

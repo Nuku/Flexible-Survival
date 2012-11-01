@@ -550,6 +550,7 @@ carry out bargainhunting:
 				Now Zoo entrance is known;
 				Now Dry Plains is known;
 				Now Museum Foyer is known;
+				now Warehouse District is known;
 		otherwise if Z is 22:
 			if "Submissive" is listed in feats of the player:
 				say "Reaching down into the depths of the bargain bin, your hand touches on a rather familiar shape, pulling the item up, you find yourself smiling to see you have found a lovely little slave's collar. Looking at the collar reminds you of how much fun it can be to submit to a stronger more dominant mate, and your mind drifts to several of the sexy creatures in the city, lingering on just how much fun it could to be to just be theirs, their happy little slutty pet, happy to serve their every whim and need. Panting slightly as you think back on all your former submissions, you find yourself feeling increasingly happy and ready for thing to come, as you slip the collar into your pack as a happy reminder of all the submissive pleasure in your past, and hopefully all the lovely times in your future as well...";
