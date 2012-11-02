@@ -228,6 +228,8 @@ A grab object has a text called strain.
 A grab object has a text called trade.
 A grab object has a text called purified.
 A grab object has a text called usedesc.
+A grab object has a number called carried.
+A grab object has a number called stashed.
 Turns is a number that varies. Turns is 240.
 Hardmode is a truth state that varies. Hardmode is usually false;
 Levelwindow is a number that varies. Levelwindow is 3;
@@ -405,6 +407,42 @@ The cot is rooted in place. The cot is restful.
 Microwave is a thing. "A small microwave lays, almost hidden, in the corner, perhaps you could [bold type]microwave[roman type] something."
 
 Section - Vending Machine
+
+To add (item - a text)  to invent of player:
+	repeat with x running through grab objects:
+		if the printed name of x matches the text item:
+			increase carried of x by 1;
+			break;
+
+To add (item - a text)  to the invent of player:
+	repeat with x running through grab objects:
+		if the printed name of x matches the text item:
+			increase carried of x by 1;
+			break;
+
+To add (item - a text)  to the invent of the player:
+	repeat with x running through grab objects:
+		if the printed name of x matches the text item:
+			increase carried of x by 1;
+			break;
+
+To remove (item - a text)  from invent of player:
+	repeat with x running through grab objects:
+		if the printed name of x matches the text item:
+			delete x;
+			break;
+
+To remove (item - a text)  from the invent of player:
+	repeat with x running through grab objects:
+		if the printed name of x matches the text item:
+			delete x;
+			break;
+
+To remove (item - a text)  from the invent of the player:
+	repeat with x running through grab objects:
+		if the printed name of x matches the text item:
+			delete x;
+			break;
 
 There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
 Cola Vending Machine has a number called dispensed.
@@ -600,7 +638,7 @@ Book 3 - Definitions
 Definition: a direction (called D) is valid if the room D from the location of the player is a room.
 Definition: A grab object (called D) is owned:
 	if there is a name corresponding to a object of d in the table of game objects:
-		if the name corresponding to a object of d in the table of game objects is listed in the invent of the player, yes;
+		if the carried of d is greater than 0, yes;
 	no;
 
 Definition: A grab object (called D) is present:
@@ -1454,9 +1492,9 @@ carry out Inventorying:
 		now tempname is name entry in lower case;
 		now sortname entry is tempname;
 	sort the table of game objects in sortname order;	]
-	if "demon seed" is listed in invent of player, let dseed be 1;
-	say "Peeking into your backpack, you see: [if the number of entries in invent of player is 0]Nothing[otherwise][line break][end if]";
-	if the number of entries in invent of player is greater than 0:
+	if demon seed is owned, let dseed be 1;
+	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing[otherwise][line break][end if]";
+	if the number of owned grab objects is greater than 0:
 		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop[if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
 		let weight be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
@@ -1483,9 +1521,7 @@ carry out Inventorying:
 				if object entry is improved and ( object entry is armament or object entry is equipment ):
 					say " (improved)";
 				say " x ";
-				let number be 0;
-				repeat with  y running through invent of player:
-					if y is name entry, increase number by 1;
+				let number be carried of object entry;
 				say "[number]([weight entry times number] lbs)";
 				increase weight by weight entry times number;
 				say "[line break]";
@@ -1497,10 +1533,7 @@ carry out Inventorying:
 Definition: A grab object (called D) is fiveowned:
 	let count be 0;
 	if there is a name corresponding to a object of d in the table of game objects:
-		if the name corresponding to a object of d in the table of game objects is listed in the invent of the player:
-			repeat with y running through invent of player:
-				if y is the name corresponding to a object of d in the table of game objects, increase count by 1;
-			if count > 4, yes;
+		if the carried of D is greater than 4, yes;
 	no;
 
 understand the command "vint" and "vial inventory" and "vial inv" and "vinv" as something new.
@@ -1544,13 +1577,11 @@ strongbacked is a number that varies.
 
 definition: A person is overburdened:
 	let weight be 0;
-	if the number of entries in invent of player is greater than 0:
+	if the number of owned grab objects is greater than 0:
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			if object entry is owned:
-				let number be 0;
-				repeat with  y running through invent of player:
-					if y is name entry, increase number by 1;
+				let number be carried of object entry;
 				increase weight by weight entry times number;
 	if "Strong Back" is listed in feats of player and strongbacked is 0:
 		now strongbacked is 1;
@@ -1725,12 +1756,8 @@ After resolving a situation:
 to delete (X - a grab object):
 	let found be 0;
 	let number be 0;
-	repeat with Q running through invent of the player:
-		increase number by 1;
-		if q matches the regular expression printed name of x, case insensitively:
-			now found is 1;
-			remove entry number from invent of the player;
-			break;
+	decrease the carried of x by 1;
+	if carried of x is less than 0, now carried of x is 0;
 
 instead of waiting:
 	follow the turnpass rule;
@@ -1821,16 +1848,11 @@ definition: Daytimer is night:
 		yes;
 		
 To process (X - a grab object):
-	if x is temporary:
+	if x is temporary and x is owned:
 		say "You eagerly use up the [x]! ";
 		let found be 0;
 		let number be 0;
-		repeat with Q running through invent of the the player:
-			increase number by 1;
-			if q matches the regular expression printed name of x, case insensitively:
-				now found is 1;
-				remove entry number from invent of the player;
-				break;
+		delete x;
 	otherwise:
 		say "You use the [x]. ";
 	if usedesc of x is "":
@@ -2369,34 +2391,17 @@ carry out burninating something(called x):
 	if x is wielded:
 		say "You're wielding that, take it off first.";
 		stop the action;
-	repeat with Q running through invent of the the player:
-		increase number by 1;
-		if q exactly matches the text printed name of x, case insensitively:
-			increase found by 1;
+	if x is not owned:
+		say "You don't seem to be holding any.";
+		stop the action;
+	now found is carried of x;
 	now number is 0;
 	if x is an equipment:
 		if x is equipped:
 			if found is less than 2:
 				say "You're using that right now. Stop using it before you drop it.";
 				continue the action;
-	repeat with Q running through invent of the the player:
-		increase number by 1;
-		if q exactly matches the text printed name of x, case insensitively:
-			now found is 1;
-			remove entry number from invent of the player;
-			say "You destroy the [q].";
-			break;	
-	if found is 0:
-		now number is 0;
-		repeat with Q running through invent of the the player:
-			increase number by 1;
-			if q matches the regular expression printed name of x, case insensitively:
-				now found is 1;
-				remove entry number from invent of the player;
-				say "You destroy the [q].";
-				break;				
-	if found is 0:
-		say "You don't see any [x] in your backpack.";
+	delete x;
  
  
 Understand the command "drop" as something new.
@@ -2411,36 +2416,21 @@ carry out littering something(called x):
 	if x is wielded:
 		say "You're wielding that, take it off first.";
 		stop the action;
-	repeat with Q running through invent of the the player:
-		increase number by 1;
-		if q exactly matches the text printed name of x, case insensitively:
-			increase found by 1;
+	if x is not owned:
+		say "You don't seem to be holding that.";
+		stop the action;
+	now found is the carried of x;
 	now number is 0;
 	if x is an equipment:
 		if x is equipped:
 			if found is less than 2:
 				say "You're using that right now. Stop using it before you drop it.";
 				continue the action;
-	repeat with Q running through invent of the the player:
-		increase number by 1;
-		if q exactly matches the text printed name of x, case insensitively:
-			now found is 1;
-			add q to the invent of the location of the player;
-			remove entry number from invent of the player;
-			say "You set down the [q].";
-			break;	
-	if found is 0:
-		now number is 0;
-		repeat with Q running through invent of the the player:
-			increase number by 1;
-			if q matches the regular expression printed name of x, case insensitively:
-				now found is 1;
-				add q to the invent of the location of the player;
-				remove entry number from invent of the player;
-				say "You set down the [q].";
-				break;				
-	if found is 0:
-		say "You don't see any [x] in your backpack.";
+	repeat through table of game objects:
+		if printed name of x matches the text name entry:
+			add name entry to the invent of the location of the player;
+			break;
+	delete x;
 
 Looting is an action applying to nothing.
 
@@ -2483,11 +2473,7 @@ Carry out Purifying:
 		say "You don[apostrophe]t think that can get any more pure, at least not this way.";
 		stop the action;
 	let number be 0;
-	repeat with Q running through invent of the the player:
-		increase number by 1;
-		if q matches the regular expression printed name of the noun, case insensitively:
-			remove entry number from invent of the player;
-			break;
+	delete noun;
 	say "After purifying the [noun], you are left with [purified of the noun].";
 	add purified of the noun to the invent of the player;
 	
@@ -2509,11 +2495,7 @@ Carry out trading:
 		say "You get a second one free with your amazing negotiating skills.";
 		add trade of noun to the invent of the player;
 	let number be 0;
-	repeat with Q running through invent of the the player:
-		increase number by 1;
-		if q matches the regular expression printed name of the noun, case insensitively:
-			remove entry number from invent of the player;
-			break;
+	delete noun;
 
 This is the sex change rule:
 	choose row monster from the table of random critters;
@@ -3393,10 +3375,10 @@ understand "Rest" as resting;
 check resting:
 	if caffeinehigh of player > 0:
 		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest.  Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink." instead;
-	if "cot" is listed in invent of player:
+	if cot is owned:
 		say "You pull out your cot and lay it out before resting for a while.";
 		continue the action;
-	otherwise if "cot" is listed in invent of location of player:
+	otherwise if cot is present:
 		say "You rest on the cot.";
 		continue the action;
 	otherwise if the player is in the bunker:
@@ -3424,7 +3406,7 @@ carry out resting:
 	Rest;
 
 To Rest:
-	if "cot" is listed in invent of player or "cot" is listed in invent of location of player or the player is in the Bunker:
+	if cot is owned or cot is present or the player is in the Bunker:
 		let num1 be maxhp of the player divided by 4;
 		let num2 be ( stamina of the player * 2 ) + level of the player;
 		if num1 >= num2, increase hp of player by num1;		[best value chosen]

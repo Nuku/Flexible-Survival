@@ -122,7 +122,7 @@ Instead of conversing the Sam:
 			increase score by 20;
 			now hp of Sam is 3;
 	otherwise if hp of Sam is 3:
-		if "pink gel" is owned and "blue gel" is owned and "purple gel" is owned:
+		if pink gel is owned and blue gel is owned and purple gel is owned:
 			delete pink gel;
 			delete blue gel;
 			delete purple gel;
