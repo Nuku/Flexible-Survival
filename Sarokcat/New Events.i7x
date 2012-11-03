@@ -36,14 +36,13 @@ Instead of Resolving a Military presence:
 		stop the action;
 	if mtp is 3:
 		say "Traveling through the city you come across what appears to have been a military style barricade, currently unoccupied, investigating further you find that past the barricade several military tents had been set up in a mostly empty store parking lot. Investigating carefully in case there are trigger happy soldiers still around, you find that the makeshift camp seems completely empty, though there are several signs of a struggle in some areas. [line break] Gathering up your courage you start looking in some of the tents, only to be surprised to find the large tents seem full of empty movable beds with restraints and scientific equipment.   Looking closer you can see several of the beds were occupied at some point recently, and that from the looks of things the occupants managed to either free themselves from their restraints, or managed to somehow 'convince' whoever was with them to free them instead.  From the strong sexual musk lingering inside the tents, however they managed to get free, they definitely managed to turn the tables on their captors, the remnants of sexual fluids evident in several locations, as are several discarded or torn bio-hazard suits and sets of lab robes. [line break]  Deciding that whatever the military was doing here, it would probably be best for you not to stay to long, you hurriedly search through the rest of the tents, hoping to find a gun or something else of use left behind.  Eventually giving up, you are forced to leave without a weapon, having found several boxes of ammo, and no guns to go with them.  Though you do find several small boxes of what the military jokingly calls food, and end up taking some with you.";
-		add "food" to invent of player;
-		add "food" to invent of player;
+		increase carried of food by 2;
 		increase libido of player by 30;
 		increase mtp by 1;
 		stop the action;
 	if mtp is 4:
 		say " Traveling through the city you come upon a strange sight on one of the roads that eventually leads out of the city.  You find a large flatbed truck overturned on the road, with several jeeps abandoned next to it.  Curiosity getting the best of you, you move closer to investigate the strange sight.  [line break]  Arriving at the overturned flatbed, you find that it appears to have been rigged to carry something relatively large, and from the way the straps and tie downs were burst open, alive.  Moving around the truck to examine the jeeps, you find that up close the jeeps and the area are covered in some kind of hardened goop, and sitting in the middle of the stuff are what appear to be several almost man sized eggs. [line break] Wondering what happened here, you spy a bit of some military camo worked into the lining of one of the eggs, closer investigation shows sign of a struggle, with several empty shell casings, and even a thoroughly gummed up and useless military sidearm lying around. Recalling some of your earlier encounters and sightings with the wyverns in the city, you realize that it looks like they were trying to transport a couple of the beasts to some other location, probably for study like in that camp you saw earlier.  Things obviously didn't go as planned again you note as you look around at the numerous eggs that likely hold the transforming soldiers, you can[apostrophe]t help but wonder what the military[apostrophe]s interest in all this is, and why they aren[apostrophe]t already in the city in force to help the survivors. [line break] You are startled out of your thoughts by one of the eggs shaking a bit as you stare at it, and a small crack in the shell forming. Realizing that the eggs will probably start hatching soon, and that you are surrounded by quite a number of eggs indeed, you give a shudder as you hurry on your way. Though you pause to take a sample of the goop surrounding the area";
-		add "wyvern goop" to invent of player;
+		increase carried of wyvern goop by 1;
 		extend game by 8;
 		now Military presence is resolved;
 
@@ -58,8 +57,7 @@ Instead of Resolving a Cream truck:
 	say "An abandoned ice cream truck lies sitting here lonesomely in the middle of the street, you quickly investigate to see if any of the delicious treats are left.  Looking in the cooler in back you are disappointed to find all the ice cream has melted all over the place, covering the inside of the ice cream truck in sticky white stuff. Taking a whiff of a strange smell you investigate further, and Closer investigation determines that the sticky white stuff may not be ice cream after all, but just plain someone or something cream...  You might be able to find something useful here, but it would be messy, do you try?";
 	If player consents:
 		say "Carefully digging through the mess returns a few bottles of milk that doesn't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well.  Trying to scrape the stuff off while leaving the truck, you find the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
-		add "gryphon milk" to invent of player;
-		add "gryphon milk" to invent of player;
+		increase carried of gryphon milk by 2;
 		gryphonify;
 		now Cream truck is resolved;
 	otherwise:
@@ -157,8 +155,7 @@ Instead of Resolving a Locked utility room:
 		increase lurm by 1;
 	otherwise if lurm is 1:
 		say "Exploring the sewers further, you stumble across a large trail of dried cum. Feeling a sense of perverse curiosity you begin to backtrack to see where the large trail came from.  To your surprise the trail seems to lead you right back to the utility room you came across earlier, only this time the door appears to be open.  Carefully peeking around the side of the door, you see that this area hasn't been used as a simple utility room for quite some time. The tool racks are filled with strange and mildly disturbing looking skulls and other items, and the machinery is covered in strange symbols and writing that hurts your eyes to look at it.  [Line break] In the center of the room is a large black pentagram, surrounded by occult symbols, part of the pentagram is obscured by what appears to be a large pool of cum. Lying in their own smaller pools of seed are five empty black robes, probably worn by whoever was in here at the time.  The intense musky odor trapped in the room is starting to make your eyes water and your body heat up in response, deciding it would be a good idea to get out of there before you end up doing something you might (or might not!) regret. You quickly grab a couple items lying around and duck back outside.";
-		Add "demon seed" to invent of player;
-		Add "demon seed" to invent of player;
+		increase carried of demon seed by 2;
 		Now Locked utility room is resolved;
 
 
@@ -203,8 +200,8 @@ The sarea of Broken fountain is "Park";
 
 Instead of Resolving a Broken fountain:
 	Say "While wandering through the park trail you hear a soft trickling noise, like water softly running over stone. following the noise you come to a busted water fountain, apparently destroyed by several of the creatures fighting (or doing other things) in the area.  Glancing around you manage to find an empty container to put some of the water in, before heading on your way.";
-	Add "dirty water" to invent of player;
-	Now  Broken fountain is resolved;
+	increase carried of dirty water by 1;
+	Now Broken fountain is resolved;
 	
 
 
@@ -251,8 +248,8 @@ The sarea of squatters den is "Mall";
 
 Instead of resolving a squatters den:
 	say "Exploring the sewers underneath the mall, you find signs of a recent struggle.  Investigating more closely you see where something came across what appears to be a recently-inhabited squatter's den, piles of junk and blankets and even an old shopping cart have been dragged down here and set up in a small alcove.  From the looks of the recent struggle, the den isn't inhabited any longer.  Carefully picking through the piles of junk, you look for anything that might be of use.  Finding some food and a bottle of water that is none too cleanr, you head on about your business.";
-	Add "dirty water" to invent of player;
-	Add "food" to invent of player;
+	increase carried of dirty water by 1;
+	increase carried of food by 1;
 	Now squatters den is resolved;
 
 
@@ -263,8 +260,7 @@ The sarea of leaking pipe is "Mall";
 
 Instead of resolving a leaking pipe:
 	say "as you travel the sewers and utility corridors under the mall, you hear a steady trickling noise coming from down one of the passageways, the sound grows louder as you move closer, eventually discovering a leaking water pipe. You apparently aren't the only person to have discovered this source of water though, as someone has set up a couple small containers under the steady leak.  As the containers are definitely overflowing whoever set them up obviously hasn't been back in a while. Sensing an opportunity you quickly gather up a couple of the full containers and place them in your pack, you then hurry along before someone comes looking for them. ";
-	Add "dirty water" to invent of player;
-	Add "dirty water" to invent of player;
+	increase carried of dirty water by 2;
 	Now leaking pipe is resolved;
 
 
@@ -281,7 +277,7 @@ Instead of Resolving a library visitor:
 	otherwise if libvis is 1:
 		say "Returning to the library in a better mood then normal, your foraging having gone well today, you find that some creature has paid the library a visit in your absence again.  The creature seems to have actually tried searching the area around the building this time for other entry points, apparently not able to get in the doors you fortuitously locked behind you.  You wonder if this is the same visitor as last time, as it is showing much more reasoning capability now... still it didn't get in and you came back from the city with some extra food.  That's definitely a good sign isn[apostrophe]t it?";
 		increase libvis by 1;
-		Add "food" to invent of player;
+		increase carried of food by 1;
 	otherwise if libvis is 2:
 		say "returning from your hours of searching the city, you are relieved to see the library up ahead of you, and the chance to rest and relax a little from your scavenging.  However just as soon as you let your guard down to unlock the door and let yourself in, one of the creatures prowling the city springs out of concealment and attacks!'";
 		fight;
@@ -299,10 +295,8 @@ Instead of Resolving a library visitor:
 		fight;
 		say "Exhausted but victorious, you look around the site of the battle with a sigh, the ambushing beasts having left quite a bit of a mess behind themselves.  Consoling yourself with the thought that you doubt they will try anything like that again, you begin the painstaking task of cleaning the area up at least enough that you can move around easily. In the process of cleaning up after the creatures, you find a formerly overlooked supply room with what appears to be an open utility door leading to a small maintenance shed out back that also seems to be open.  Having figured out how the creatures found their way inside, you quickly lock both doors up, and jam them closed, ensuring that the creatures won't be able to use that entry again. You are in a much better mood now that you have found out how the creatures managed to get inside, and even better you found some much needed supplies in the supply room as well! [line break]."; 
 		say "You find 2 food and 2 water bottles in the supply room!";
-		Add "food" to invent of player;
-		Add "food" to invent of player;
-		Add "water bottle" to invent of player;
-		Add "water bottle" to invent of player;
+		increase carried of food by 2;
+		increase carried of water bottle by 2;
 		Increase score by 10;
 		Now library visitor is resolved;
 

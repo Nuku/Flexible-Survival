@@ -99,8 +99,8 @@ Instead of resolving Littlelostlamb:
 			attempttowait;
 			say "'You did it! Thank you so much!' Mary exclaims exuberantly.  She quickly grabs you in her excitement and plants a big kiss on your lips in thanks, before backing up slightly, her muzzle heating up slightly as she blushes in embarrassment. 'Um. Well, sorry about that...  I know the way from here and um, thank you very much again.' She stammers slightly as she reaches for her bag, pausing for a second she pulls out a couple of drinks and fumbles them into your hands with sudden nervousness.  'Um, Here. Just a small way of expressing my gratitude for your help. You should really stop by the store sometime though, so I can thank you properly.' Her woolly face hot with embarrassment, she then flees before you can respond.  Touching your lips slightly and thinking about the kiss, you think stopping by the store again might not be such a bad idea after all...";
 			increase nes by 1;
-			add "water bottle" to invent of player;
-			add "soda" to invent of player;
+			increase carried of water bottle by 1;
+			increase carried of soda by 1;
 			now littlelostlamb is resolved;
 		otherwise:
 			say "You hunt through the dark tunnels for what seems like hours, the tunnels twisting and turning until you have lost all sense of direction, eventually you find yourself back where you entered the tunnel,  Shuddering you quickly exit the subway tunnels for now... you can always come back later... ";
