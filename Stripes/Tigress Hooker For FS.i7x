@@ -363,49 +363,49 @@ to say beattigress:
 
 to say paymentcheck:
 	now tempnum is 0;		[reset payment flag again, jic]
-	if "gryphon milk" is listed in the invent of the player:
+	if gryphon milk is owned:
 		say "     Finding a container of gryphon milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Birdy milk at that.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete gryphon milk;
-	otherwise if "dolphin milk" is listed in the invent of the player:
+	otherwise if dolphin milk is owned:
 		say "     Finding a container of dolphin milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Fishy milk at that.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete dolphin milk;
-	otherwise if "panther milk" is listed in the invent of the player:
+	otherwise if panther milk is owned:
 		say "     Finding a container of panther milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'You brought kitty milk for the kitty.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete panther milk;
-	otherwise if "cheetah milk" is listed in the invent of the player:
+	otherwise if cheetah milk is owned:
 		say "     Finding a container of cheetah milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'You brought kitty milk for the kitty.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete cheetah milk;
-	otherwise if "cow milk" is listed in the invent of the player:
+	otherwise if cow milk is owned:
 		say "     Finding a container of cow milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Good old cow milk, rich and creamy.  That makes for a happy kitty!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete cow milk;
-	otherwise if "chocolate milk" is listed in the invent of the player:
+	otherwise if chocolate milk is owned:
 		say "     Finding a container of white chocolate milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Oh my, creamy white chocolate milk!  The matron will be so pleased with me!'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete chocolate milk;
-	otherwise if "vixen milk" is listed in the invent of the player:
+	otherwise if vixen milk is owned:
 		say "     Finding a container of vixen milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Ugh!  It smells like medicine and musky vixens.  Maybe we can boil that fox smell out of it,' shi muses.  Keeping hir find as payment, shi sets your backpack aside.";
 		delete vixen milk;
-	otherwise if "dog milk" is listed in the invent of the player:
+	otherwise if dog milk is owned:
 		say "     Finding a container of dog milk, shi smiles happily.  'Ooo!  Cream for the kitty.'  Shi opens it and sniffs.  'Ugh, it smells of dog.  Well, it[apostrophe]s still milk, so I[apostrophe]ll take it!  Maybe we can boil that dog smell out of it,' shi muses.  Keeping hir find as payment, shi sets your backpack aside.";
 		delete dog milk;
-	otherwise if "Fish" is listed in the invent of the player:
+	otherwise if Fish is owned:
 		say "     Finding the fish you[apostrophe]ve wrapped in old newspaper, shi smiles happily.  'Ooo!  Tasty feesh!  We[apostrophe]ll be eating well back at the motel tonight,' shi rumbles happily.  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete Fish;
-	otherwise if "soda" is listed in the invent of the player:
+	otherwise if soda is owned:
 		say "     Finding a can of soda, shi smiles happily.  'Hey!  This is my favorite flavour.  I haven[apostrophe]t been able to find one for days.'  Keeping hir find as payment, shi sets your backpack aside.";
 		delete soda;
-	otherwise if "water bottle" is listed in the invent of the player:
+	otherwise if water bottle is owned:
 		say "     Finding a water bottle, shi pulls it out.  'Here we go.  We always need more fresh water.'  Keeping hir find as payment, shi sets your backpack aside.";
 		delete water bottle;
-	otherwise if "dirty water" is listed in the invent of the player:
+	otherwise if dirty water is owned:
 		say "     Finding a bottle of dirty water, shi pulls it out.  'Here we go.  I was getting a little thirsty working out here.'  Keeping hir find as payment, shi sets your backpack aside.";
 		delete dirty water;
-	otherwise if "chips" is listed in the invent of the player:
+	otherwise if chips is owned:
 		say "     Finding a bag of chips, shi smiles. 'Hey!  This is my favorite flavour.  I thought they[apostrophe]d discontinued it, but you found one.'  Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
 		delete chips;
-	otherwise if "food" is listed in the invent of the player:
+	otherwise if food is owned:
 		say "     Finding some food in your pack, shi pulls it out.  'Things have been getting a little lean back at the motel.  It[apostrophe]ll be good to have a full meal.'  Keeping hir find as payment, shi sets your backpack aside.";
 		delete food;
-	otherwise if "motel key" is listed in the invent of the player:
+	otherwise if motel key is owned:
 		say "     Digging all the way to the bottom of your pack in search of something of interest, shi finds a motel key down there. 'Oh my!  Where did you find this?  We were worried it was lost.  Thanks for finding and returning it, sweetie,' shi purrrs, kissing your cheek and giving you a playful grope.";
 		delete motel key;
 	otherwise:										[No payment.  Smacked around, then raped.]

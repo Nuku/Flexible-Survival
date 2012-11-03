@@ -201,11 +201,11 @@ Instead of resolving a Dropped Handbag:
 		let T be a random number between 1 and 100;
 		if T < 41:
 			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  You do manage a lucky find and dig out a small canister of pepperspray.";
-			add "pepperspray" to invent of player;
+			increase carried of pepperspray by 1;
 			increase score by 5;
 		otherwise if T < 81:
 			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  But aside from the bottle of water at the top of the bag, you don't get anything of use.";
-			add "water bottle" to invent of player;
+			increase carried of water bottle by 1;
 			increase score by 1;
 		otherwise if T < 91:
 			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  But that's about all you find of use in the dropped handbag.";
@@ -245,13 +245,13 @@ Instead of resolving a Dented Bike:
 		let t be a random number between 1 and 3;
 		if t is 1:
 			say "You spot something under one of the shredded rags - it's an unopened bottle of water in a holder on the bike's frame!  ";
-			add "water bottle" to invent of player;
+			increase carried of water bottle by 1;
 		otherwise if t is 2:
 			say "You see a water bottle poke out from under one of the wheels. It's sports cap seems to have popped off during whatever happened here and part of the contents have run out. You look around a bit until you find it, then wipe the cap off as good as you can and put it back on the bottle.  ";
-			add "dirty water" to invent of player;
+			increase carried of dirty water by 1;
 		otherwise:
 			say "A small bulge in one piece of the shredded clothing attracts your attention. It's the pocket of a jacket, revealing a tasty chocolate bar.  ";
-			add "chips" to invent of player;
+			increase carried of chips by 1;
 	say "Looking around, you find a few more tufts of fur and some messy splatters of cum leading away, but that's it.";
 	increase dentedbikecount by 1;
 	if dentedbikecount is 3, now Dented Bike is resolved;
@@ -286,7 +286,7 @@ Instead of resolving a Looted Supermarket:
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice is greater than difficulty:
 			say "You get an idea and check the checkout section. The cashiers are people with needs too, so... you find an unopened soda bottle under the register.";
-			add "soda" to invent of player;
+			increase carried of soda by 1;
 		otherwise:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	otherwise if t is 3:
@@ -298,7 +298,7 @@ Instead of resolving a Looted Supermarket:
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice is greater than difficulty:
 			say "You get an idea and check the checkout section. The cashiers are people with needs too, so... you find an energy bar under the register.";
-			add "food" to invent of player;
+			increase carried of food by 1;
 		otherwise:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	otherwise if t is 4:
@@ -307,14 +307,14 @@ Instead of resolving a Looted Supermarket:
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( strength of player + level of player minus 10 ) divided by 2;
 		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
-		if "crowbar" is listed in invent of player:
+		if crowbar is owned:
 			increase bonus by 3;
 			let x be 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice is greater than difficulty:
 			say "You break open the door to a small room in the back[if x is 1] with the help of your crowbar[end if]. Aww - it's just the employees lockers and some cleaning supplies. At least one of them had a bag of chips in his locker.";
-			add "chips" to invent of player;
+			increase carried of chips by 1;
 		otherwise:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	increase supermarketcount by 1;
@@ -333,15 +333,15 @@ Instead of resolving a Abandoned Cars:
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( strength of player minus 10 ) divided by 2;
 	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
-	if "crowbar" is listed in invent of player:
+	if crowbar is owned:
 		increase bonus by 3;
 		let x be 1;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 	if bonus + dice is greater than difficulty:
 		say "No problem - you grab the lid and wrench it open with [if x is 1]your crowbar[otherwise]your superior strength[end if].  Inside you find several shopping bags, filled with a smelly mess of mostly rotting food.  At least you manage to salvage a can of [one of]tomato soup[or]baked beans[or]spaghetti[or]pineapple[at random] and a soda bottle from it.";
-		add "food" to invent of player;
-		add "soda" to invent of player;
+		increase carried of food by 1;
+		increase carried of soda by 1;
 	otherwise:
 		say "Try as you might, the trunk of this car is too damaged for you to break into it.  You'll have to try looking elsewhere.";
 	now Abandoned Cars is resolved;
@@ -358,7 +358,7 @@ when play begins:
 Instead of resolving a Gryphon Milkman:
 	say "As you're out and about looking for supplies, you hear the flapping of wings overhead.  Before you can do much more than look up, a gryphon lands in front of you.  This specimen looks like a pure male, judging from the flat manly chest and the half-hard cock between his legs.  And what he also has is a white peaked cap and a wire carrier with several bottles.";
 	say "'Here, have some milk - it's good for you,' he tells you cheerfully, pushing a milk bottle into your hand and tipping his hat to you. Then he jumps in the air and flies away, leaving you standing there alone.";
-	add "gryphon milk" to invent of player;
+	increase carried of gryphon milk by 1;
 	now Gryphon Milkman is resolved;
 
 
@@ -372,7 +372,7 @@ when play begins:
 
 Instead of resolving a Free Milk:
 	say "Your search for edible items leads you into a residential area.  As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full.  Walking over to the house, you take the bottle.  The milk is rather cold and smells delicious.  You wonder where it came from - you'd have thought that with the apocalypse and all, deliveries by the milkman would stop.  And are there even any cows left with these changing infections?";
-	add "gryphon milk" to invent of player;
+	increase carried of gryphon milk by 1;
 	now Free Milk is resolved;
 
 
@@ -383,7 +383,7 @@ The sarea of Mana from Heaven is "Outside";
 
 Instead of resolving a Mana from Heaven:
 	say "Moving through the city, you suddenly hear cawing and shouting from somewhere above.  It's a harpy flying in your direction, clutching something in her claws - closely followed by another who keeps insulting her.  Sounds like they're having a disagreement of the ownership of the can of peaches the first one has in her talons.  Before long, that dissolves into a furious mid-flight clawing match during which the fought-over can is knocked out of the claw holding it - and literally falls into your hands.  You quickly dash off with it before the harpies team up and attack you.";
-	add "food" to invent of player;
+	increase carried of food by 1;
 	now Mana from Heaven is resolved;
 
 
@@ -517,22 +517,21 @@ when play begins:
 Instead of resolving a Garden Veggies:
 	if girl is banned and guy is banned:
 		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil.  Between the heat wave and the dry weather, the plants are withering away.  You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
-		add "food" to invent of player;
+		increase carried of food by 1;
 		now Garden Veggies is resolved;
 	otherwise if lastgardenveg - turns < 8:
 		say "     Finding yourself back in the neighbourhood where you found the small garden, you decide to check on it again, but none of the produce has ripened yet.  They seem to be growing rather quickly, but you'll have to wait a little longer.";
 	otherwise if gardenveg is 0:
 		say "     As you're searching around the area for supplies, you find a small garden in the back yard of a home.  It's only got a dozen or so plants, but they're surprisingly still alive despite the heat wave and dry weather.  And even better than that, they're fruiting.  Only a little of the produce is ripe, but you snag what's ready to be picked.  You try to remember to return here again once the rest of the veggies have had time to mature.  Between the tomatoes, beans and peas, you should have enough for a meal.  It'll certainly be more nutritious than some of your meals lately.";
-		add "food" to invent of player;
+		increase carried of food by 1;
 		now lastgardenveg is turns;
 	otherwise if gardenveg is 1:
 		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to check on it again.  You are very pleased to see that more of the vegetables are ready to be picked.  They seem to be growing unusually quickly, but certainly look normal and safe enough to eat.  You pick some more of the produce, tomatoes and beans mostly this time.  It's enough for another vegetarian meal to keep you fed for another day.";
-		add "food" to invent of player;
+		increase carried of food by 1;
 		now lastgardenveg is turns;
 	otherwise if gardenveg is 2:
 		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to check on it again.  Since your last visit, more vegetables have ripened and are ready to be picked.  Very thankful for having found these plants, you gather up another batch of veggies, taking even more this time.  You dig up several of the carrots, having become large enough to pick, another couple of tomatoes and more beans and peas.  With so much of the produce mature and ready, you get enough for two meals this time.";
-		add "food" to invent of player;
-		add "food" to invent of player;
+		increase carried of food by 2;
 		now lastgardenveg is turns;
 	otherwise if gardenveg is 3:
 		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to make a quick detour to go check on it.  Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth.  'So you're the thief who's been stealing from my garden!  Oh, you are so fucked now,' the sheep says, launching itself at you.";
@@ -583,7 +582,7 @@ The sarea of DbLD is "Allzones";
 Instead of resolving a DbLD:
 	say "     While searching through the city for supplies, you come across the corpse of an excessively muscled man with a grizzled face.  It seems that some creature took rather violent exception to him from the signs of destruction all around.  The nearby walls are littered with bullet holes, though you don't spot any blood from his whatever his enemy was.  Whatever strange infection this unlucky person had, it really left him unable to fight.  Given his lack of actual wrists and ankles, it's clear he'd have trouble standing and fighting, let alone supporting his own top-heavy weight on his small, misshapen feet.  Given the hundreds of bullet holes, it seems he had trouble aiming that giant gun of his (now shattered into pieces) thanks to his perpetually squinting eyes.";
 	say "     And while it doesn't seem to have done its previous owner much good, you unbuckle the single, oversized shoulderpad from his malproportioned body and take it with you.  You know it's not really going to help much, but it's better than nothing and isn't doing that guy any good now.";
-	add "shoulder pad" to invent of player;
+	increase carried of shoulder pad by 1;
 	increase score by 5;
 	now DbLD is resolved;
 
@@ -664,8 +663,8 @@ Instead of resolving a Patient Rooms:
 		increase dice by bonus;
 		if dice >= 14:
 			say "     Pushing at the door, you are able to push open the door a little, letting you shove aside part of the makeshift barricade.  With that out of the way, you gain entrance to the room and take the bottle of water.  You also take a quick look around for the occupant.  You find their clothes scattered in the small bathroom and covered in blue goo.  The toilet and a good portion of the floor is similarly covered in this sticky goo.  You grab a sample of that as well.";
-			add "water bottle" to invent of player;
-			add "glob of goo" to invent of player;
+			increase carried of water bottle by 1;
+			increase carried of glob of goo by 1;
 			increase score by 5;
 			now patrooms is 1;
 		otherwise:
@@ -688,7 +687,7 @@ Instead of resolving a Shattered House:
 	let x be a random number from 1 to 5;
 	if x is 1 or x is 2:
 		say ".  Taking a quick look inside, you spot the partially destroyed kitchen.  While large sections of it have been crushed, you do get lucky and find some food you can recover and take with you.";
-		add "food" to invent of player;
+		increase carried of food by 1;
 	otherwise if x is 3:
 		say ".";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
@@ -699,7 +698,7 @@ Instead of resolving a Shattered House:
 		increase dice by bonus;
 		if dice >= 14:
 			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down.  Seeing more underneath, you manage to lift up the rubble with some effort and retrieving a single water bottle that's not been crushed before an ominious creaking sound ends you back before more of the house collapses.";
-			add "water bottle" to invent of player;
+			increase carried of water bottle by 1;
 		otherwise:
 			say "     Taking a quick look inside, you manage to spot some food wrappers and empty water bottles in one corner where some debris has fallen down.  Seeing more underneath, you try to lift up the rubble to search for more, but it's too heavy to move before an ominious creaking sound ends you back before more of the house collapses.";
 	otherwise if x is 4:
@@ -716,7 +715,7 @@ Instead of resolving a Shattered House:
 			let dam be ( ( hp of player + maxhp of player ) ) / 7;
 			decrease hp of player by dam;
 			say "     Taking a quick look inside, you yell in surprise as the kitchen floor collapses out from under you, dropping you into the basement as more of the room falls in around you.  You avoid a close call as the appliances comes tumbling in.  Once the dust settles, you grab a few items that fell out of the cubbard and climb out before the whole place collapses on top of you, much more wary about damaged buildings now.";
-			add "food" to invent of player;
+			increase carried of food by 1;
 	otherwise if x is 5:
 		say ".";
 		let bonus be ( the perception of the player plus level of the player minus 10 ) divided by 2;

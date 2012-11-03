@@ -98,7 +98,7 @@ Instead of resolving a Scattered Trash:
 	say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 	if bonus + dice is greater than 15:
 		say "     You manage to spot a sticky mess as you're stepping around through the trash.  It's hard to tell over the scent of the surrounding garbage, but it's clearly the sexual fluids from some kind of creature.  Finishing picking around the trash, you do manage to find a container of water.  The small jug has enough for a drink of water, but it seems to have been filled after the outbreak and is probably not clean.";
-		add "dirty water" to invent of player;
+		increase carried of dirty water by 1;
 		increase score by 1;
 	otherwise:
 		say "     As you're trying to maneuver around the scattered trash, you place your foot on something slick just as you're turning to look at something shiny.  Your foot comes out from under you and you fall onto your back, landing among the trash in something sticky.  Getting up quickly, you notice it is a puddle of sexual fluids from some kind of creature.  You try to wipe it off, but it's clearly too late as the tingles and prickles of spreading infection start.";
@@ -125,16 +125,16 @@ The sarea of Stray Cat is "Junkyard";
 
 Instead of resolving a Stray Cat:
 	say "     On a search through the scrapyard, you find your path blocked by a sweaty and panting snow leopard.  It seems he wandered in here and has gotten lost.  Startled to see you there, he gives a dry mrowl that cracks in his dry throat before stalking towards you quickly";
-	if "dirty water" is listed in invent of player or "water bottle" is listed in invent of player:
+	if dirty water is owned or water bottle is owned:
 		say ".  You have some water in your pack which may satisfy him long enough to make your escape.  Shall you toss him some water?";
 		if the player consents:
-			if "dirty water" is listed in invent of player and "water bottle" is listed in invent of player:
+			if dirty water is owned and water bottle is owned:
 				say "     You have both dirty water and fresh water.  Which will you give him? (Y=dirty, N=fresh)";
 				if the player consents:
 					say "[dirtysnow]";
 				otherwise:
 					say "[bottlesnow]";
-			otherwise if "dirty water" is listed in invent of player:
+			otherwise if dirty water is owned:
 				say "[dirtysnow]";
 			otherwise:
 				say "[bottlesnow]";

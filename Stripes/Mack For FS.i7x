@@ -61,7 +61,7 @@ to attackingnutsofactory:
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Victorious against the second, you head out into the storage section of the factory.  During the fight, you'd heard some crashing out in there and go to check on Macadamia.  There you find him panting and straightening his ruffled fur standing amidst a broken and spilled crate of nuts.  You spot some leopard fur stuck to the broken wood and guess that the squirrel pushed it onto one of the felines.";
 	if fightoutcome >= 20 and fightoutcome <= 29:
-		say "     After losing to the leopardmen, they start to drag you deeper into the building, clearly planning on having more fun with you.  With some clarity returning, you try to struggle against their strong grip.  And with a cry of 'Chitt Chuk Cuk!' Macadamia comes leaping off a some crates onto them.  The squirrel fights fast and frantically with the leopardmen, scurrying around the room and leaping back onto them from behind.  His attacks seem completely disorganized, but the leopards cannot keep up with him.  Eventually, they're sent running off as he topples a large crate onto one of them, sending the nuts inside spilling across the floor.  The squirrel chitters angrily at them, shaking his fist and throwing nuts, warning them not to come back.";
+		say "     After losing to the leopardmen, they start to drag you deeper into the building, clearly planning on having more fun with you.  With some clarity returning, you try to struggle against their strong grip.  And with a cry of 'Chitt Chuk Cuk!' Macadamia pushes a wooden crate down onto second leopardman, knocking him down and dazing him.  The squirrel then leaps down to deal with the other.  The other, still worn after fighting you, doesn't last long as the frantic squirrel fights by scurrying around the room and leaping back onto him from behind or delivering quick blows.  His attacks seem completely disorganized, but the leopard cannot keep up with him.  Eventually, the two of them are sent running off as he topples another large crate onto them, sending the nuts inside spilling across the floor.  The squirrel chitters angrily at them, shaking his fist and throwing nuts, warning them not to come back.";
 	if fightoutcome >= 10 and fightoutcome <= 29:		[win or lose]
 		say "     The squirrel chitters happily, dancing around among the nuts, tossing handfuls of them into the air.  'I did it!  I did it!  I did it!  Chrtt Chekt!'  Spotting you he grins and grabs some a handful of the nuts in both paws, pushing them to you.  'I mean we did it.  Here!  Take these for now.  And these.  And these.'  He pushes a few more pawloads of nuts into your hands, which you pour into your pack.  They should be more than enough to feed you for a while.";
 		say "     As he pushes a final load into your pack, he kisses you and slides his fluffy tail around you.  As your pack slips to the floor, his paws move to slide over your body.  The scent of nuts, macadamias especially, and arousal comes from him.  Shall you join him in celebrating your victory together?";
@@ -71,15 +71,13 @@ to attackingnutsofactory:
 			attempttowait;
 			say "     As the horny rodent fucks you, his paws roam over your [bodytype of player] body, stroking your [skinname of player] skin and eventually settling at your chest to play with your nipples.  You give a chitter as he pinches them and push harder back into him.  As your mutual lusts build, he pounds into you hard and faster until eventually blasting his hot load into you, draining his nuts to flood your [if cunts of player > 0]womb[otherwise]bowels[end if] with his semen.  Eventually his large orbs are drained and you find yourself left with a noticeable bulge from his considerable output.";
 			say "     After resting for a while, he helps you up and back into your gear, giving you several kisses and nips.  He makes you promise to come back and see him again after he's had time to take inventory.  He promises to give you some more nuts if you'll come back and play with him again.  'Thanks again for your help, my lovely hazelnut,' he churrs.  'Come back again soon and we can have some more fun.  But for now, I think I want to be alone with my nuts for a while.'  And with that, the squirrel sends you on your way, your pack somewhat heavier with your haul from the factory.";
-			add "food" to invent of player;
-			add "food" to invent of player;
+			increase carried of food by 2;
 			now hp of Macadamia is 4;
 [			infect "Squirrel";		]
 [			now Nutso Factory is known;	]
 		otherwise:
 			say "     You give the squirrel a hug and step back.  He seems a little disappointed, but gets over it quickly as he surveys the remaining nuts on the ground.  'Thanks for all your help.  Look, I'm going to want to take inventory,' the squirrel chitters.  'But I'll give you some more after that.  Just come by later and I should have some more for you.  But for now,' he says, gently pushing you towards the door.  'I think I want to be alone with my nuts for a while.'  And with that, the squirrel sends you on your way, your pack somewhat heavier with your haul from the factory.";
-			add "food" to invent of player;
-			add "food" to invent of player;
+			increase carried of food by 2;
 			now hp of Macadamia is 3;
 [			now Nutso Factory is known;	]
 	otherwise:

@@ -88,11 +88,8 @@ Instead of resolving a Policeman:
 			say "     As you travel through the city, you hear the pained yip of one of husky females.  Heading over cautiously to investigate, you come face to chest with Sgt Marks as he steps out of an alley.  He is zipping up his fly and you can hear the sound of someone rushing away down the alley.  'Damn bitches,' he grumbles.  'Barely worth the time to fuck, eh?' he comments.  'But forget her.  How is your project comin[apostrophe] along?  You got some good news for me?'";
 		if T is 4:
 			say "     After some fruitless searching through the city, you run into the tiger policeman again.  Sgt Marks is sitting on the roof of a car.  Somehow, even in this city gone mad, he[apostrophe]s managed to find a bag of store-bought doughnuts.  He[apostrophe]s got his claws sunk into several of the sugar-covered things and is stuffing them down his muzzle.  He looks over at you, wolfs the last of them down without concern for your possible hunger, and then dusts the sugar grains from his paws.  'Did you have any luck yet?  We can[apostrophe]t wait on this forever.'";
-	let keycollection be 0;
-	repeat with x running through invent of player:
-		if x is "motel key", increase keycollection by 1;
-	say "     Taking a quiet tally in your head, you have collected [keycollection] key(s).";
-	if keycollection > 4:			[5 or more keys to proceed]
+	say "     Taking a quiet tally in your head, you have collected [carried of motel key] key(s).";
+	if carried of motel key > 4:			[5 or more keys to proceed]
 		say "     Do you tell him you have found enough keys? (Y/N)";
 		if the player consents:
 			say "[line break][givekeys]";
@@ -121,7 +118,7 @@ to say givekeys:
 	increase xp of player by 10;
 	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat.  'Here, take this.  You're gonna need it,' he says meaningfully as he passes you a nightstick.  'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto.  I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out.  And if somethin['] holds you up, there'll be a key in the lip of the bumper.  I should be able to leave somethin['] for ya in the trunk and I[']ll get in touch after the heat dies down.'";
 	say "     Nightstick obtained.";
-	add "nightstick" to invent of player;
+	increase carried of nightstick by 1;
 
 
 Section 2 - Tiger Cop character and Police Car location
@@ -140,8 +137,7 @@ to say policecardesc:
 		if mqpickup is 0:
 			say "[line break]     Taking the key from its hiding place, you unlock the car[']s truck.  Inside is a note that simply says 'Catch you later' with two cans of police pepperspray on top of it.  Those should come in quite handy.";
 			say "     Two cans of pepperspray obtained.";
-			add "pepperspray" to invent of player;
-			add "pepperspray" to invent of player;
+			increase carried of pepperspray by 2;
 			increase score by 10;
 			now mqpickup is 1;
 
@@ -538,13 +534,13 @@ To say beattigercop:
 	if a random chance of 1 in 3 succeeds and nsgained is 0:
 		say "     When the gas clears, you see that the tiger had dropped his nightstick at the end of the fight.  You pick it up and add it to your arsenal.";
 		say "     Nightstick obtained.";
-		add "nightstick" to invent of player;
+		increase carried of nightstick by 1;
 		now nsgained is 1;
 		increase score by 5;
 	otherwise if a random chance of 1 in 5 succeeds and nsgained is 1:
 		say "     When the gas clears, you see that the tiger had dropped a can of pepperspray during the course of the fight.  You pick it up and add it to your arsenal.";
 		say "     Pepperspray obtained.";
-		add "pepperspray" to invent of player;
+		increase carried of pepperspray by 1;
 		increase score by 5;
 
 
