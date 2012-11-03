@@ -57,7 +57,7 @@ catwalk door is lockable and locked.
 catwalk door is west of Control Room.
 
 
-Cat key is a grab object.
+Cat Key is a grab object.
 it is part of the player.
 It is not temporary.
 
@@ -70,7 +70,7 @@ instead of using Cat key:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Cat Key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	Cat key
+"Cat Key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	Cat Key
 
 the scent of cat key is "There is a faint scent of ozone lingering to the key fob.";
 
@@ -78,7 +78,7 @@ the invent of Red Light District is {"Cat Key"}.
 
 
 before opening Catwalk Door:
-	if "Cat Key" is listed in the invent of the player:
+	if "Cat Key" is owned:
 		now Catwalk Door is unlocked;
 		say "The Cat Key unlocks the door. Seems like the manager here had a sense of humor.";
 
