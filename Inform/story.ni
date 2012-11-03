@@ -675,7 +675,7 @@ name	desc	weight	object	sortname (indexed text)
 face mask is equipment. It is a part of the player. It is not temporary.
 The descmod of face mask is "A mask covers nose and mouth, made popular during the swine flu scare. ";
 The placement of face mask is "face";
-journal is a grab object. It is a part of the player. It is not temporary.
+journal is a grab object. It is a part of the player. It is not temporary. The carried of journal is 1.
 cot is a grab object. It is a part of the player. It is not temporary.
 understand "Bed" as cot.
 Understand "book" as journal.
