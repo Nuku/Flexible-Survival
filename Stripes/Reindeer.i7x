@@ -229,7 +229,7 @@ to say reindeerheat:
 	otherwise if diceroll < 185:		[170 - 185]
 		say "[reindeerbreastheat]";
 	otherwise:					[185 - 200]
-		if "egg nog" is listed in invent of player:
+		if egg nog is owned:
 			delete egg nog;
 			increase libido of player by a random number from 3 to 8;
 			if libido of player > 100, now libido of player is 100;
@@ -283,7 +283,7 @@ to say reindeerbreastheat:
 		say "You moan lustfully and fondle your chest, teasing your nipples.  Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal.  As you continue to play with yourself, your nipples start to leak milk, rich and scented like brandy egg nog.  Delighted at this, you continue to milk yourself until this surge of lust passes.";
 		[copied entirely from the 'milk me' section]
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
-			add "egg nog" to the invent of the player;
+			increase carried of egg nog by 1;
 		increase libido of player by a random number from 3 to 8;
 		increase libido of player by a random number from 3 to 8;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 1 and 3;

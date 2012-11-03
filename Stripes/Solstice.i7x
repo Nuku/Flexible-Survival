@@ -31,7 +31,7 @@ Instead of resolving Adventurer:
 		now hp of Solstice is 1;
 	if hp of Solstice is 2:
 		say "     Managing to find your way through the chaos of the city, you make your way back to the intersection where you first met the vulpine adventurer.  True to her word, she steps out from one of the alleyways as you arrive.  'Did you get it?' she asks quickly";
-		if "Crow Artifact" is listed in invent of player:
+		if Crow Artifact is owned:
 			say ".  Nodding, you slip off your pack and remove the carving.  She smiles happily and snatches it out of your hand, looking it over with a critical eye.  'Yes!  I've got it all.  I've finally struck it big this time!' she says with elation in her voice.  She puts a paw over her mouth, suddenly wary that her raised voice will call undo attention.  Grabbing your wrist, she leads you between a few buildings.  'You can call me Solstice by the way.  I've been in the treasure hunting biz for a while, but this'll be my best find yet, thanks to you.'  She slips into a small, vacant shop and shuts the boarded up door behind you.  It looks like it was closed down long before the outbreak, making it a fairly safe place to hide out.";
 			delete Crow Artifact;
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -69,8 +69,8 @@ Instead of resolving Adventurer:
 				say "     Feeling rather uncertain about having sex with the recently-transformed Solstice, you quickly change the subject, pointing out that something has to be done about the statue.  She seems a little disappointed, but nods and gets up.  Using the cloths she had them bundled in, you gather up each piece and wrap them up again.  While the vulpogryph doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble.  That done, you remind her about your payment and take the food and water from her.  It's not much, but it'll certainly help.  She also passes you a small voucher card labelled [']50 credits['], saying its some kind of new money.";
 				say "     Bottle of water, food and 50 freecreds obtained.";
 				increase freecred by 50;
-				add "water bottle" to invent of player;
-				add "food" to invent of player;
+				increase carried of water bottle by 1;
+				increase carried of food by 1;
 				increase score by 25;
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -117,7 +117,7 @@ Instead of resolving Onyx Crow:
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "     Investigating further, you look over at the museum's description of this piece.  It goes on to talk about it being found in a collection of Greek treasures.  '...discovered by so-and-so... treasure vault... king of Crete in the year blah-blah-blah...'  The only interesting detail comes when it talks about how the Onyx Crow was probably the headpiece to a staff or scepter and likely of ceremonial significance.  Examining the carving, you do find that there is a square hole carved into the underside, which the plaque notes historians believe was used to fit it into place on the handle, but all that remains is the headpiece.";
 			say "     While this trip to the museum has been interesting, you'd best just bring your find back to the vixen adventurer to receive your reward.  You tuck the artifact into the bottom of your pack and leave the area, not wanting to get caught by Valerie in here with stolen goods.";
-			add "Crow Artifact" to invent of player;
+			increase carried of Crow Artifact by 1;
 			increase score by 10;
 			now hp of Solstice is 2;
 			now Onyx Crow is resolved;

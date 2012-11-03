@@ -95,15 +95,10 @@ Instead of conversing the Sam:
 			say "     'I haven't made a trip out there yet myself, but he did tell me the route he found to get there.  It should be fairly safe and let you avoid the really unsafe or blocked sections.'";
 			now Zoo Entrance is known;
 		say "     'I've got some extra supplies.  I can give you some if you'll gather two samples of both cheetah milk and rhino cum.  I'd really appreciate it.  Here, you can even take this bottle of water as a downpayment.'  Deciding it might be a good way to get some extra supplies.  As well, helping him finish up might be your ticket out of this whole mess if you can tag along with Sam.";
-		add "water bottle" to invent of player;
+		increase carried of water bottle by 1;
 		now hp of Sam is 2;
 	otherwise if hp of Sam is 2:
-		let milkfound be 0;
-		let cumfound be 0;
-		repeat with x running through invent of player:
-			if x is "cheetah milk", increase milkfound by 1;
-			if x is "rhino cum", increase cumfound by 1;
-		if milkfound < 2 or cumfound < 2:
+		if carried of cheetah milk < 2 or carried of rhino cum < 2:
 			if a random chance of 1 in 2 succeeds:
 				say "     'I want to thank you for deciding to help me with my work.  I need to get this stuff all done and I can't do it alone.  Don't forget, I'm looking for two samples of both cheetah milk and rhino cum for the tests I need to do.'";
 			otherwise:
@@ -117,8 +112,8 @@ Instead of conversing the Sam:
 			if Entrance to the Red Light District is unknown:
 				say "     'Since you haven't been there before - let me tell you - that place is really wild.  I mean, I had lots of fun there and all gathering nanite samples, but the creatures there can be extra intense.  I was really tempted to go back and visit that tigress in the alley again.  She was quite the ride and well worth the milk I gave her.'  He then proceeds to show you a route into the city's Red Light District.";
 				now Entrance to the Red Light District is known;
-			add "food" to invent of player;
-			add "water bottle" to invent of player;
+			increase carried of food by 1;
+			increase carried of water bottle by 1;
 			increase score by 20;
 			now hp of Sam is 3;
 	otherwise if hp of Sam is 3:
@@ -131,8 +126,8 @@ Instead of conversing the Sam:
 				say "     'Things are pretty open out there with few buildings still left standing.  It used to be mostly suburbs and small ranches, but something's making them all collapse really quickly.  Don't expect to find as much going on out there, but it's pretty open so you shouldn't have too much trouble finding some of those eagles.'";
 				now Dry Plains is known;
 			say "     He digs around in his supplies and pulls some stuff out for you.  'Here, how about some snacks this time?  Some sugar'll keep you going.'";
-			add "chips" to invent of player;
-			add "soda" to invent of player;
+			increase carried of soda by 1;
+			increase carried of chips by 1;
 			increase score by 20;
 			now hp of Sam is 4;
 		otherwise:
@@ -141,10 +136,7 @@ Instead of conversing the Sam:
 			otherwise:
 				say "     [one of]'I want to thank you for giving me a hand with this.  I don't think I could finish on my own.'[or]'I've got some other tests to run, but then I've got to go right back out and find a few more critters to fill out my quota.'[or]'I wouldn't have considered messing around with a guy before this, but I must say some of those males out there can be a lot of fun.'[or]'Some of those mutants out there are actually pretty sexy.  Once you learn to overlook stuff like fur or scales, you can see that there's some really hot ladies (and dudes) out there.'[or]'There's such a wild mix of creatures out there.  It's getting kind of fun finding them and just having some wild sex.  You should try letting a few of them win more often.'[or]'This resistance treatment's been a big help since I don't have to fight off all the creatures.  Though I do have to shoo away those I've already gotten samples from or I don't have the time and energy left to have fun when I finally track down a new one I need.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 3 succeeds]herm[otherwise if a random chance of 1 in 2 succeeds]female[otherwise]male[end if] next time.  Hopefully there's one around that I haven't already got.'[or]'It's getting harder to track down creatures I haven't already gotten enough samples from,' he says, motioning to wide array of small vials on the racks.[at random]";
 	otherwise if hp of Sam is 4:
-		let featherfound be 0;
-		repeat with x running through invent of player:
-			if x is "eagle feather", increase featherfound by 1;
-		if featherfound >= 2:
+		if carried of eagle feather >= 2:
 			now featherready is true;
 			assaultonminilab;
 		otherwise:
@@ -171,10 +163,7 @@ minilabfight is a number that varies.
 featherready is a truth state that varies.  featherready is normally false.
 
 instead of navigating Mini-Lab while hp of Sam is 4:
-	let featherfound be 0;
-	repeat with x running through invent of player:
-		if x is "eagle feather", increase featherfound by 1;
-	if featherfound >= 2:
+	if carried of eagle feather >= 2:
 		now featherready is false;
 		assaultonminilab;
 	otherwise:
@@ -246,10 +235,10 @@ to assaultonminilab:
 	otherwise if calcnumber is 3:
 		say "     Deciding it's every [if cunts of player > 0]woman for herself[otherwise]man for himself[end if], you rush over to Sam's supplies and grab a quick armload and make a run for it.  As you do this, Sam calls out with a mix of pleas for help and curses for leaving him, but you turn a deaf ear, rushing up the steps and out of the basement.  Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 		attempttowait;
-		add "water bottle" to invent of player;
-		add "food" to invent of player;
-		add "soda" to invent of player;
-		add "chips" to invent of player;
+		increase carried of food by 1;
+		increase carried of water bottle by 1;
+		increase carried of chips by 1;
+		increase carried of soda by 1;
 		decrease humanity of player by 12;
 		now hp of Sam is 100;
 		remove Sam from play;
