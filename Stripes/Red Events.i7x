@@ -28,7 +28,7 @@ The sarea of Fetish Store is "Red";
 Instead of resolving a Fetish Store:
 	say "     You come across a sex and fetish shop, which has clearly been ransacked by the sex-crazed mob.  After cautiously glancing around, you slip inside to see if you can find anything of use.  Sidestepping toppled displays, broken glass and sticky puddles, you quickly see that the sextoys and lube have all been taken.  Any remaining kinkwear is damaged beyond usability or soaked in cum.  This place has been stripped cleaner than any place you[']ve examined to date.  But fortune smiles upon you just a little before you head out and you spot something sticking out from under one of the toppled shelves.  Moving the shelf aside, you see it is a small riding crop.  Rather than leaving empty-handed, you decide to keep it and slip back outside to continue searching.";
 	say "     Riding crop obtained.  Giddy-up!";
-	add "riding crop" to invent of player;
+	increase carried of riding crop by 1;
 	increase score by 5;
 	Now Fetish Store is resolved;
 
@@ -58,10 +58,8 @@ Instead of resolving a Raided Corner Store:
 				say "     As one of the pair is about to step forward to deal with you, the other grabs hir shoulder, holding them back.  The second steps forward, looking you over more carefully.  'Hey, I think I heard about you from Gina.  You certainly smell like you[']ve met her.  Could you use some help there?'  You nod and the hyenas join you by the door.  One has some lockpicks and they soon get the door open.  Little of the stores inside are usable, most having been eaten or damaged already.  Presumably the owner was holed up in here. Before they succumbed to the infection and presumably left to the wilds of the city, that is.  But there is still some the usable loot.  You split your find with the hyenas, taking a couple of drinks and snacks each before you and they go your separate ways.[line break]";
 				say "     You obtain two snacks and two soft drinks.";
 				increase score by 10;
-				add "soda" to invent of player;
-				add "soda" to invent of player;
-				add "chips" to invent of player;
-				add "chips" to invent of player;
+				increase carried of soda by 2;
+				increase carried of chips by 2;
 			otherwise:
 				challenge "Herm Hyena";
 				challenge "Herm Hyena";
@@ -147,13 +145,11 @@ to say stripbarsearch:
 		say "     Navigating around the tables and the occasional cum puddle, you see that the outbreak struck here as well while the business was running.  You are extra cautious and avoid the main public area, instead checking behind the bar for supplies.  It seems that much of it was damaged or take already, but you do have some luck and find some soda you can take.";
 		say "     You obtain three soft drink cans.";
 		increase score by 5;
-		add "soda" to invent of player;
-		add "soda" to invent of player;
-		add "soda" to invent of player;
+		increase carried of soda by 3;
 	if T is 2:
 		say "     Searching through the strip bar, you have to avoid cum puddles.  You head over to check the bar, but find that it was destroyed during the outbreak.  It is covered in claw marks all over.  You can see a huge puddle of cum behind the bar.  You consider leaving, but spot the backstage door and slip in there before you leave.  It[']s also quite messy back here, but you do manage to recover some snacks that one of the girls must have brought.";
 		say "     You obtain a can of soft drink.";
-		add "soda" to invent of player;
+		increase carried of soda by 1;
 		increase score by 1;
 	if T is 3:
 		say "     Searching the strip bar, take care to avoid the cum puddles you find in there.  Clearly this place was open when the infection struck and the patrons and staff fell quickly.  You look around as best you can, but the extent of the contamination is too great and you have to give up the place for a loss.  As you step out, you are spotted by a tigress who emerges from a nearby alleyway.  She grins at you and runs a paw along her side.  'Looking for a little fun, are we?  I[']ve got just what you need,' she purrrs, fondling a sizeable bulge under hir skirt.[line break]";

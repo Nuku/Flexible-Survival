@@ -182,7 +182,7 @@ instead of conversing the Nermine while ( hp of Ronda is 3 and nerminetalk > 0 )
 
 
 before conversing the Nermine while hp of Ronda is 5:
-	if "lizard juice" is listed in invent of player and "Awesomest Fruit" is listed in invent of player:
+	if lizard juice is owned and Awesomest Fruit is owned:
 		say "[rondaitems]" instead;
 
 to say rondaitems:
@@ -429,9 +429,9 @@ to say helpingrod:
 		if calcnumber is 3:
 			say "     You shake your head and tell them that you'd not want to get in the way of their loving reunion and head out, hearing Rod start moaning again as Ronda turns her full attention back on buggering her boyfriend.";
 		say "     On the way out, you do snag some supplies from the counter, the two rats too occupied to notice you helping yourself to  them.  Not that you think they'd object, but they're a bit too distracted to see that you're properly rewarded for your efforts.  (Food, chips and a can of soda obtained.)[line break]";
-		add "food" to invent of player;
-		add "chips" to invent of player;
-		add "soda" to invent of player;
+		increase carried of food by 1;
+		increase carried of chips by 1;
+		increase carried of soda by 1;
 		increase score by 100;
 
 

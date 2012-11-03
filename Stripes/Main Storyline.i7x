@@ -401,7 +401,7 @@ instead of conversing Larissa while hp of doctor matt is 16:
 	say "     'Now, what we need you to do is place a few of these nanite density monitors at a few key locations in the city.  They'll help us detect the prop-' she stops herself short.  'Well, a temp doesn't need to know the details.  They measure some stuff about the nanites.  Perfectly safe,' she adds reassuringly.  'We've set a few up already nearby, but HQ wants them placed at four other key locations across the city: The downtown high rise district, the city park, the beachfront area and the seedy red light district.  They should be placed in open, elevated locations where they won't be disturbed.  Once you get to an area, try hunting around for a ['][bold type]detector site[roman type]['] to find an appropriate place to set it up.'";
 	say "     She heaves a small suitcase onto the counter and pops it open.  She takes a moment to demonstrate how to activate them, then closes it up and slides the case to you.  'They come equipped with a GPS transponder, so we'll be able to know if they've been properly installed or not, so don't get any funny ideas about just dumping them somewhere or sticking them in a few alleys.  They've got to be outside in the open and somewhere high up.'  Grabbing the heavy case, you sigh and head off, hoping this job will be as easy as she claims, but knowing it won't be somehow.";
 	now ndmlist is { "Beach", "Red Light District", "High Rise District", "Park" };
-	add "nanite density monitor" to invent of player;
+	increase carried of nanite density monitor by 1;
 	now beach detector site is unresolved;
 	now red light detector site is unresolved;
 	now high rise detector site is unresolved;

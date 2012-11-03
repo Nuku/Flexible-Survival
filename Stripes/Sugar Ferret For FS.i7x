@@ -24,7 +24,7 @@ to say losetosugarferret:
 			say "     Unwilling to keep fighting, you give yourself over to the manic ferrets.  Cheering, they bounce onto you, grabbing your limbs and body, pulling you down by sheer numbers.  Even as you're going down, you're groped and fondled by several of the over-excited ferrets while others pull off your backpack.";
 		otherwise:
 			say "     As your strength wanes, you are tackled by several of the ferrets at once.  They grab onto your arms, legs and body, pulling you down by sheer numbers.  Even as you're going down, you're groped and fondled by several of the over-excited ferrets while others pull off your backpack.";
-		if "soda" is listed in invent of player:
+		if soda is owned:
 			delete soda;
 			decrease lastcaffeine of Sweet Tooth by 2;
 			if bodyname of player is "Sugar Ferret" and caffeinehigh of player is 0:
@@ -40,10 +40,7 @@ to say losetosugarferret:
 				increase libido of player by 5;
 			otherwise:
 				say "     The wild ferrets rummage through your pack, pulling out all the soda they can find, cheering happily as they do, passing it around as they lustfully tease you.  You quickly grow more excited and long to play with them.  All around you, they drink down your supplies of soda while working to get you aroused.";
-			let found be 0;
-			repeat with x running through invent of player:
-				if x is "soda", increase found by 1;
-			while found is not 0:
+			while carried of soda is not 0:
 				delete soda;
 				decrease lastcaffeine of Sweet Tooth by 2;
 				if caffeinehigh of player > 0 and bodyname of player is "Sugar Ferret":
@@ -53,7 +50,6 @@ to say losetosugarferret:
 					decrease thirst of player by 3;
 					decrease humanity of player by 3;
 					increase libido of player by 3;
-				decrease found by 1;
 		otherwise:
 			if bodyname of player is "Sugar Ferret" and caffeinehigh of player is 0:
 				say "     The wild ferrets rummage through your pack, but find it empty of soda.  Not to let that get them down, they pull out some soda from their personal stashes to pass around while celebrating their victory.  They cheer happily, passing the drinks around as they lustfully tease you.  You quickly grow more excited and long to play with them.  When one presses some cola to your lips, you drink it down without thinking, your wild, over-caffeinated excitement returning as your Sugar Ferret body reacts.  You can feel the caffeine rushing through your system and you grab the nearest ferret, pulling them into a sweet kiss.";
