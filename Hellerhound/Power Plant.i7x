@@ -78,7 +78,7 @@ the invent of Red Light District is {"Cat Key"}.
 
 
 before opening Catwalk Door:
-	if "Cat Key" is owned:
+	if Cat Key is owned:
 		now Catwalk Door is unlocked;
 		say "The Cat Key unlocks the door. Seems like the manager here had a sense of humor.";
 
