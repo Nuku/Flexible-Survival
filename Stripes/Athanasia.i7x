@@ -53,7 +53,7 @@ instead of resolving FireAndIce:
 	say "     'Something is different, wrong...' it pauses to cough, struggling to speak.  '...wrong here.  It is trying to me change... make me different.'  You cradle its head in your arms, stroking its once bright plumage as it continues speaking.  'I am too weak to return to...' it pauses, as if considering its words, '...to return home.  I... I am going to *cough* have to ask you to help me one last time.  Please find a safe spot for it.  Somewhere hot and dry... hottest you can find so... change... safely...' it says weakly, looking at you with pleading in its fading eyes.  You nod, uncertain what the bird means, but wanting to put it at ease in its final moments.";
 	say "     Suddenly, the firebird pushes you back, snapping its sharp beak at you.  You scramble back on all fours quickly.  'Back!  It's coming!  Ahhhhhh!' the flaming bird shrieks as the fires surge again, engulfing it in a column of flames.  The fiery bird is consumed by the funeral pyre, leaving behind a pile of ashes and cooling embers.  Within the ashes is a golden egg, roughly the size of a man's head.";
 	say "     As you bundle the egg up in some scraps of clothes you find nearby, you ponder the strange event you witnessed.  Reminded of the myth of the phoenix which bursts into flames as it dies to be reborn in an egg, you wonder if you've met someone whose infection is imitating the old legends or if this is something greater.  Left uncertain, you pack away the egg with care while wondering where you could find a place hot enough to hatch a phoenix's egg.";
-	add "phoenix egg" to invent of player;
+	increase carried of phoenix egg by 1;
 	now FireAndIce is resolved;
 	now hp of Athanasia is 2;
 
@@ -75,7 +75,7 @@ instead of sniffing the phoenix egg:
 the phoenix egg has a truth state called shownermine.  shownermine of phoenix egg is normally false.
 [other show scenes could be created for other NPCs whom the player might show it to]
 
-instead of conversing the Nermine while "phoenix egg" is listed in invent of player and shownermine of phoenix egg is false:
+instead of conversing the Nermine while phoenix egg is owned and shownermine of phoenix egg is false:
 	say "     Pulling out the phoenix egg, you put in on the counter in the hopes that Nermine's expertise may be of use.  She remains her normal demeanor, but her golden eyes lock onto it with a hungry greed you've not seen from her before.  'Is that pretty egg for trading with Nermine?  Is nothing special... but maybe Nermine can be giving you a small trinket for it,' she says with an alluring smile.  You shake your head, telling her you're just looking for information.  'It is phoenix egg, but I am seeing you are knowing that.  Nermine live long time, but egg would help her live even longer still,' she says softly.  'Nermine would be trading you...' she starts to say.  Catching her tongue slipping across her lips as she eyes the golden egg with a hunger beyond simple greed, you snatch it from the counter and slide it back into your pack.";
 	say "     The jackal woman is clearly disappointed as you take the object of her hunger away.  'Fine!  I am telling you this much because I am being nice.  Phoenix egg is normally hatching shortly after phoenix is burning to ashes.  If not hatched yet, phoenix is weak and needing great heat to be regaining power.  It is bird of fire, of sun.  Powerful heat is being needed to restore it.  Sounds like too much trouble for you.  Nermine could be taking care of that for you,' she says, that hungry look in her eye again.  You clutch your pack tightly and step back.  It's clear you won't be able to trust Nermine on this matter and decide not to mention it to her again.";
 	now shownermine of phoenix egg is true;
@@ -95,7 +95,7 @@ instead of going down from Volcanic Crater:
 	otherwise if hp of Athanasia is 2:
 		say "     Looking down into the fiery pit, you are reluctant to go down there, but this is certainly the hottest place around for the phoenix's egg.  Deciding to take a look, you begin to very carefully scale down into the crater.  The great heat makes this a terrible struggle, but you manage to persevere, feeling a need to see it through for Athanasia.  Reaching the tunnels down there, you enter the cave.";
 		move the player to Volcanic Cave;
-		if "phoenix egg" is listed in invent of player:
+		if phoenix egg is owned:
 			say "     You look around the cave and its open magma pools, deciding this place certainly meets the requirements.  Short of throwing it into the volcanic crater itself, this is probably the hottest spot you'll find.  It should also be quite safe down here.  There's no reason anything should venture into this infernal cave to disturb it.  Unpacking it, you bring the egg to one of the magma pools and, hoping you're doing the right thing, lower the egg onto the semi-solid crust covering it.  The soft layer dips and cracks a little, letting some of the lava flow up and pool around the egg.  It seems unharmed by this and even seems to become more golden and lustrous.  You sigh in relief and step away, reminding yourself to return to check on it later.  You feel thirsty and drained after your climb and stay down here.";
 			delete phoenix egg;
 			now lastfuck of Athanasia is turns;

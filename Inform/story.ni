@@ -426,6 +426,12 @@ To add (item - a text)  to the invent of the player:
 			increase carried of x by 1;
 			break;
 
+To add (item - a text)  to invent of the player:
+	repeat with x running through grab objects:
+		if the printed name of x matches the text item:
+			increase carried of x by 1;
+			break;
+
 To remove (item - a text)  from invent of player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
@@ -439,6 +445,12 @@ To remove (item - a text)  from the invent of player:
 			break;
 
 To remove (item - a text)  from the invent of the player:
+	repeat with x running through grab objects:
+		if the printed name of x matches the text item:
+			delete x;
+			break;
+
+To remove (item - a text)  from invent of the player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
 			delete x;
