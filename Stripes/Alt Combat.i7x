@@ -393,15 +393,11 @@ This is the combat item rule:
 	now battleitem is 0;
 	blank out the whole of table of combat items;
 	let X be 1;
-	repeat with Q running through invent of player:
+	repeat with Q running through owned grab objects:
 		let z be journal;
-		repeat with y running through grab objects:
-			if q matches the regular expression printed name of y, case insensitively:
-				let z be y;
-				break;
-		if z is not fast, next;
+		if Q is not fast, next;
 		choose a blank row in table of combat items;
-		now title entry is Q;
+		now title entry is printed name of Q;
 		now toggle entry is combat item process rule;
 	if there is no title in row 1 of table of combat items:
 		say "You have no combat ready items to use!";
