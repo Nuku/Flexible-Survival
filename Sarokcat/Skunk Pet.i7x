@@ -54,7 +54,7 @@ Instead of resolving Lost skunk kit:
 				Otherwise:
 					say "Deciding that the whole situation is not really your problem, even if it is a fellow skunk creature, you leave the little skunk to it[apostrophe]s hiding spot, and continue on your way.";
 					now Lost skunk kit is resolved;
-			otherwise if "Skunk Goo" is listed in invent of player:
+			otherwise if Skunk Goo is owned:
 				say "Realizing you have some of that strange black goo from one of the other skunks, you think that you might be able to put the little skunk at ease if you smelled and looked more like one of the skunks, do you rub the goo on your hands?";
 				if the player consents:
 					say "Pulling out the strange black goo you found earlier, you rub it on your hands and face, the strange substance feeling rather rubbery for a minute, before seeming to sink into the skin.  Shuddering at little at the thought of whatever changes that might cause, you nevertheless take advantage of the black goo hiding your scent and looks for a minute, as you lean down to try to coax the little kit out of hiding.  The skunk kit whimpers for a second when it sees you are back, then seems to catch wind of the skunk scent rubbed on you, and your temporarily black hands and face.  Before you can do more then blink, the little skunk has awkwardly charged out of its hiding space, nearly falling over its own feet in its hurry to rub up against you.  You sit back as the small skunk rubs on you and tries to crawl in your lap, making soft whimpering noises.  Almost reluctantly you help it up and stroke it a few times to calm the shaking little kit down.";
@@ -93,7 +93,7 @@ Instead of resolving Lost skunk kit:
 			Otherwise:
 				say "Deciding that the whole situation is not really your problem, even if it is a fellow skunk creature, you leave the little skunk to it[apostrophe]s hiding spot, and continue on your way.";
 				now Lost skunk kit is resolved;
-		otherwise if "Skunk Goo" is listed in invent of player:
+		otherwise if Skunk Goo is owned:
 			say "Realizing you have some of that strange black goo from one of the other skunks, you think that you might be able to put the little skunk at ease if you smelled and looked more like one of the skunks, do you rub the goo on your hands?";
 			if the player consents:
 				say "Pulling out the strange black goo you found earlier, you rub it on your hands and face, the strange substance feeling rather rubbery for a minute, before seeming to sink into the skin.  Shuddering at little at the thought of whatever changes that might cause, you nevertheless take advantage of the black goo hiding your scent and looks for a minute, as you lean down to try to coax the little kit out of hiding.  The skunk kit whimpers for a second when it sees you are back, then seems to catch wind of the skunk scent rubbed on you, and your temporarily black hands and face.  Before you can do more then blink, the little skunk has awkwardly charged out of its hiding space, nearly falling over its own feet in its hurry to rub up against you.  You sit back as the small skunk rubs on you and tries to crawl in your lap, making soft whimpering noises.  Almost reluctantly you help it up and stroke it a few times to calm the shaking little kit down.  [line break]";

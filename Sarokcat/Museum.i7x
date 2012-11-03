@@ -79,10 +79,10 @@ carry out riddlesphinxing:
 		if there is a loot entry:
 			if loot entry is not "":
 				add loot entry to invent of player;
-				say "you acquired 1 [loot entry]";
+				say "You acquired 1 [loot entry].";
 			otherwise:
-				add "dirty water" to invent of player;
-				say "you acquired some dirty water!";
+				increase carried of dirty water by 1;
+				say "You acquired some dirty water!";
 		infect "sphinx";	
 	otherwise:
 		say "'That[apostrophe]s completely wrong!' Valerie says as she shoots you a smug look, 'Maybe you[apostrophe]ll have better luck next time, but I[apostrophe]m not impressed so far,' The sphinx says with a derisive swish of her tail as she dismisses you.  You feel somewhat humiliated by your loss, and strangely even feel as if you have lost a little bit of your humanity to the sphinxes wiles.";

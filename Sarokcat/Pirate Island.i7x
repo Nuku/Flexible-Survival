@@ -75,7 +75,7 @@ carry out treasurehunt:
 					stop the action;
 				if T is 2:
 					say "Walking through the dark and damp caves, you hear a soft trickling noise from one of the nearby alcoves, deciding to investigate you find a small stream trickling up from a crack in the wall.  Taking a look at the small spring you find the water is both crisp and clear, and decide to gather some of it up to take with you.  You continue exploring through the caves, but eventually find they twist and turn back on each other, and you end up back on the beach.[line break]";
-					Add "water bottle" to invent of player;
+					increase carried of water bottle by 1;
 					say "You gained a water bottle!";
 					stop the action;
 				if T is 3:
@@ -94,14 +94,14 @@ carry out treasurehunt:
 					if there is a loot entry:
 						if loot entry is not " ":
 							add loot entry to invent of player;
-							say "you acquired 1 [loot entry][line break]";
-							add "dirty water" to invent of player;
+							say "You acquired 1 [loot entry].";
+							increase carried of dirty water by 1;
 							say "you acquired some dirty water!";
 						otherwise:
-							add "pirate bandana" to invent of player;
+							increase carried of pirate bandana by 1;
 							say "you acquired a pirate bandana!";
 					otherwise:
-						add "food" to invent of player;
+						increase carried of food by 1;
 						say "You acquired some seafood!";	
 					stop the action;
 				if T is 6:
@@ -127,28 +127,28 @@ carry out treasurehunt:
 					if there is a loot entry:
 						if loot entry is not " ":
 							add loot entry to invent of player;
-							say "you acquired 1 [loot entry][line break]";
-							add "dirty water" to invent of player;
-							say "you acquired some dirty water!";
+							say "You acquired 1 [loot entry].";
+							increase carried of dirty water by 1;
+							say "You acquired some dirty water!";
 						otherwise:
-							add "pirate bandana" to invent of player;
-							say "you acquired a pirate bandana!";
+							increase carried of pirate bandana by 1;
+							say "You acquired a pirate bandana!";
 					otherwise:
-						add "food" to invent of player;
+						increase carried of food by 1;
 						say "You acquired some seafood!";	
 					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
 					choose row minortreasure from the table of random critters;
 					if there is a loot entry:
 						if loot entry is not " ":
 							add loot entry to invent of player;
-							say "you acquired 1 [loot entry][line break]";
-							add "dirty water" to invent of player;
-							say "you acquired some dirty water!";
+							say "You acquired 1 [loot entry].";
+							increase carried of dirty water by 1;
+							say "You acquired some dirty water!";
 						otherwise:
-							add "pirate bandana" to invent of player;
-							say "you acquired a pirate bandana!";
+							increase carried of pirate bandana by 1;
+							say "You acquired a pirate bandana!";
 					otherwise:
-						add "food" to invent of player;
+						increase carried of food by 1;
 						say "You acquired some seafood!";	
 					stop the action;
 				if T is 8:

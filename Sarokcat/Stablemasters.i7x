@@ -12,11 +12,9 @@ Slutslave is in Master's Office.
 instead of linkactioning Slutslave:
 	say "Possible Actions: [link]talk[as]talk Slutslave[end link], [link]smell[as]smell Slutslave[end link], [link]fuck[as]fuck Slutslave[end link], [link]train[as]train slave[end link][line break]";
 
-instead of sniffing Master's Office:
-	say "The Master's Office, your office, smells of equines and sex.";
+the scent of Master's Office is "The Master's Office, your office, smells of equines and sex.";
 
-instead of sniffing Slutslave:
-	say "Your slutslave smells of horses, lust and sex.";
+the scent of Slutslave is "Your slutslave smells of horses, lust and sex.";
 
 The invent of Master's Office is { "chips" , "soda", "cot", "medkit" };
 

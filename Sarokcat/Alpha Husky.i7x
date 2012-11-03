@@ -83,8 +83,10 @@ to say alpha huskypack lost:
 		say "The pack laughs and cheers as you submit to their superior numbers. They push you over and suddenly your mouth is full of dog cock as one sits down on you, shoving his member into you and starting to rut eagerly and with reckless abandon.";
 		say "You feel another husky rifling through your pockets. Are they mugging you? It seems so, as one gives a delighted bark and dashes off with something of yours, bringing it to the alpha husky to admire. You try to voice complaint, but can only get out a muffled whine around the cock filling you. The husky straddling your face howls, filling you with salty dog cum and forcing himself forward. Your jaw hurts as the knot is forced past it, leaving you tied to the lusty canine.";
 		say "Time passes, and the sounds of the other dogs grows quieter. You can't see them either, but you can't see much but the thighs of your rapist. He pulls free of your sore mouth and barks a word of thanks before hopping to his feet and dashing off, leaving you to recover.";
-		sort invent of the player in random order;
-		remove entry 1 from invent of the player;
+		let z be a random owned grab object;
+		decrease carried of z by 1;
+[		sort invent of the player in random order;	]
+[		remove entry 1 from invent of the player;		]
 	otherwise: [ player submitted ]
 		say "Seeing you take a submissive posture, the pack immediately stops their assault. They press in at you from all directions. Some are petting, some are licking. The leader however is looking you in the eyes. 'If you want to join us,' he says, 'You will have to be stronger than that.";
 		if cocks of player is greater than 0:

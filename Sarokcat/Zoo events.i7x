@@ -20,7 +20,7 @@ Instead of Resolving a Electric shockers:
 		now Electricprodstatus is 1;
 	otherwise if Electricprodstatus is 1:
 		say "Traveling through the zoo, you come across a rather familiar looking zookeepers shack, and it looks like someone else has been here recently as well. Deciding to be careful you peek around the door to make sure there isn[apostrophe]t some kind of strange beast there waiting for you.  You are rather surprised to note that not only is the shack empty again, but it looks like whatever was here had a goal, they seem to have made a concerted assault on the case in the corner holding the powerful electric prods.  They seem to have had more success then you, because the case now hangs open loosely, and several of the useful tools have spilled out onto the floor, a quick examination shows you that most of the weapons were damaged too severely to work by whoever broke the case open, but you actually manage to find one that you think might actually work for a while before it burns out. ";
-		add "Electric prod" to invent of player;
+		increase carried of electric prod by 1;
 		now epcountdown is 0;
 		now eptarget is a random number between 11 and 31;
 		now Electricprodstatus is 2;
@@ -29,7 +29,7 @@ Instead of Resolving a Electric shockers:
 	otherwise if Electricprodstatus is 3:
 		increase eprecharge by 2;
 		say "Finding the shack your electric weapon originally came from, you decide to see if there is anything left inside that might let you repair the nifty weapon.  Glancing around, you swap the spent battery out and put it back on the charger, and begin hunting through the remains of the other electric prods.  You are eventually able to cannibalize one of them in order to replace the burnt out parts in your own, but it takes a decent amount of time to perform the jury-rigged repair.  At the end of it, you once more have a semi-functional electric prod[if eprecharge is 2], and while it could still fritz out on you at any moment, you are at least pretty sure that you can return here and fix it again should that happen.[otherwise if eprecharge is 8], but sadly doubt you'll be able to repair it again from the few meager parts and batteries remaining.[otherwise],  and while it could fritz out on you at any moment, you are hopefully that you can return here and fix it again if you need to.[end if]";
-		add "Electric prod" to invent of player;
+		increase carried of electric prod by 1;
 		now epcountdown is 0;
 		now eptarget is a random number between 9 and ( 27 - eprecharge);	[repairs are increasingly less effective]
 		if eprecharge >= 4:
@@ -186,9 +186,8 @@ The sarea of Petting zoo is "Zoo";
 
 Instead of Resolving a Petting zoo:
 	say "Traveling along the empty zoo paths, you come across the petting zoo area, thinking surely there can't be much threat there you decide to stop by and investigate for a minute.  Entering the petting zoo you are only slightly surprised to find the area empty, more surprising is the large amount of children's clothing and a number of backpacks scattered around on the ground, obviously there was a school bus visiting the area at some point recently.  You sigh as you look around, then give a halfhearted search of the backpacks lying around, you find several items of food and water, and decide to take them with you.  It doesn[apostrophe]t count as taking candy from kids if they aren[apostrophe]t around does it?";
-		Add "food" to invent of player;
-		Add "water bottle" to invent of player;
-		Add "water bottle" to invent of player;
+		increase carried of food by 1;
+		increase carried of water bottle by 2;
 	Now Petting zoo is resolved;
 
 
@@ -296,10 +295,8 @@ Instead of Resolving a Feeding time:
 		challenge "tigertaur";
 		if lost is 0:
 			say " Grinning at the silly beast that thought it could beat you, you quickly pocket the food and water it so graciously left here for you, and whistling continue on your way, keeping your eye out for other traps like this one... after all you could use the supplies.";
-			Add "water bottle" to invent of player;
-			Add "water bottle" to invent of player;
-			Add "food" to invent of player;
-			Add "food" to invent of player;
+			increase carried of food by 2;
+			increase carried of water bottle by 1;
 			now Feeding time is resolved;
 		otherwise:
 			say "Lying there on the ground while you recover from the beasts devious trap, you eventually manage to roll over and pull yourself back to your feet. Looking around, you note with a sigh that the tigertaur took the food with it when it left, leaving you with nothing to show for your efforts other then your well fucked body. Shouldering your pack sadly, you continue on through the zoo, resolving to not be so easily tricked next time.";

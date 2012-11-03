@@ -21,17 +21,17 @@ Instead of resolving a Beach bum:
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
-					say "you acquired 1 [loot entry]";
+					say "You acquired 1 [loot entry].";
 				otherwise:
-					add "dirty water" to invent of player;
-					say "you acquired some dirty water.";
+					increase carried of dirty water by 1;
+					say "You acquired some dirty water.";
 			increase bbum by 1;
 		otherwise:
 			say "The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably won't be seeing him around here much longer...";
 			Now Beach bum is resolved;
 	otherwise if bbum is 1:
 		say "Traveling along the long beach you once again see the strange pile of junk and bits of ship wreckage that mark the location of the strange beach bum.  Recalling your bargain with the strange person, you trudge over to see if you have anything he might want to trade for.";
-		if "chips" is listed in invent of player:
+		if chips is owned:
 			say "Spying something he definitely wants, the beach bum moves more swiftly then you would normally have given him credit for, snatching your package of chips, and ripping it open before you can say a word.  In seconds it is stuffing chips into its mouth, pieces of chips flying everywhere and covering its cloth wrappings in bits of chip and grease.  Glancing up from its gruesome feast, the bum seems almost embarrassed as it offers you several items from its strange hoard.";
 			delete chips;
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
@@ -39,20 +39,20 @@ Instead of resolving a Beach bum:
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
-					say "you acquired 1 [loot entry]";
+					say "You acquired 1 [loot entry].";
 				otherwise:
-					add "dirty water" to invent of player;
-					say "you acquired some dirty water.";
+					increase carried of dirty water by 1;
+					say "You acquired some dirty water.";
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
 			choose row bumtrade from the table of random critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
-					say "you acquired 1 [loot entry]";
+					say "You acquired 1 [loot entry].";
 				otherwise:
-					add "dirty water" to invent of player;
-					say "you acquired some dirty water.";
-		otherwise if "food" is listed in invent of player:	
+					increase carried of dirty water by 1;
+					say "You acquired some dirty water.";
+		otherwise if food is owned:	
 			say "Glancing through your stuff, the bum seems somewhat happy to have found some spare food, which they quickly swipe, before offering you a small item from their beach findings.";
 			delete food;
 			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
@@ -60,10 +60,10 @@ Instead of resolving a Beach bum:
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
-					say "you acquired 1 [loot entry]";
+					say "You acquired 1 [loot entry].";
 				otherwise:
-					add "dirty water" to invent of player;
-					say "you acquired some dirty water.";
+					increase carried of dirty water by 1;
+					say "You acquired some dirty water.";
 		otherwise:
 			say " After taking a look at what you have available, the strange bum sighs and shakes its cloth wrapped head sadly,  apparently finding nothing edible amongst your offerings.  The strange creature waves you away, and feeling somewhat relieved you continue along the beach";
 
@@ -75,7 +75,7 @@ The sarea of Flotsam bits is "Beach";
 
 Instead of resolving a Flotsam bits:
 	say "Wandering along the beach, you spy a small pile of flotsam washed up on the beach.  Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus.  The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club.  It is a large log of driftwood with several branch stubs protruding from it.  A couple are placed such that you could swing it like a massive club or battering ram.  Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city.  Shrugging, you take the bit of wood with you, and continue along the beach.";
-	add "flotsam club" to invent of player;
+	increase carried of flotsam club by 1;
 	Now Flotsam bits is resolved;
 
 Table of Game Objects (continued)
@@ -118,10 +118,8 @@ The sarea of Smashed boat is "Beach";
 
 Instead of resolving a Smashed boat:
 	say "As you go along the beach, you come across a boat smashed up against some rocks, listing heavily to one side, seeing no one around you move closer to investigate.  From what you can tell it looks like whoever was on this boat was trying to flee whatever was going on in the city, having stocked up on supplies, and a chart to the next city down the way. Unfortunately it doesn[apostrophe]t look like they made it that far... but you do decide to take some of their supplies with you, since you doubt they will be needing them anymore wherever or whatever they now are.";
-	add "food" to invent of player;
-	add "food" to invent of player;
-	add "food" to invent of player;
-	add "water bottle" to invent of player;
+	increase carried of food by 2;
+	increase carried of water bottle by 1;
 	say "You acquired quite a bit of food, but only a little water.";
 	Now Smashed boat is resolved;
 
@@ -180,9 +178,7 @@ Instead of resolving a Tainted yacht:
 		fight;
 		say "Making it to the ship at last, you tiredly haul yourself aboard, only to stare around you in shock.  The deck is a slippery mess of fluid, and champagne glasses and bits of clothing lie scattered around the deck forlornly. Looking around inside carefully, you find the ship seems deserted, at least the front cabin is, you look around to try to figure out what happened here, and spot a few small journal entries in the log. Skimming the log you begin to understand what happened,  while apparently the owners of this yacht were intending to wait out the infection in style with a close group of friends, one of the people they let on the boat must have been infected already and not shown it yet.  Soon after they set up anchor for their nightly party, the orgy must have started, spreading the conversion throughout the small enclosed ship like a wildfire[line break]";
 		say "Searching the ship further could be dangerous, as not all of the creatures may have abandoned ship fully, still you decide to check to see if the boat still runs.   Unfortunately something seems to have flooded the engines, rendering them currently inoperable, moving forward to open the hatchway leading to the engines, you are overcome with the strong scent of musk and sex, making your skin twitch with the first signs of impending change.  Quickly slamming the door shut you realize that an orgy seems to have taken place near the engine room, and whatever the engine is flooded with, trying to clean it out would most likely result in you turning into whatever creature these people became. Quickly abandoning that idea, you go check the food supplies only to find that they like everything else on the ship, are tainted with the results of the boats occupants long orgy. Sighing, you go about gathering up some of the least tainted of the water supplies before heading back to shore, only slightly changed by your experience.";
-		add "dirty water" to invent of player;
-		add "dirty water" to invent of player;
-		add "dirty water" to invent of player;
+		increase carried of dirty water by 2;
 		infect "sewer gator";
 		infect "sewer gator";
 	otherwise:
@@ -228,8 +224,7 @@ Instead of resolving a Cream stand:
 		gryphonify;
 		challenge "Hermaphrodite Gryphon";
 		say "The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here.  You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphons little trap.  Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
-		add "gryphon milk" to invent of player;
-		add "gryphon milk" to invent of player;
+		increase carried of gryphon milk by 2;
 	otherwise:
 		say "Being cautious by nature, you decide to forgo the tasty beach treat, and keep to your own supplies.";
 	Now Cream stand is resolved;
@@ -250,7 +245,7 @@ Instead of resolving a Lucky seashell:
 		say "your perception has increased by 2!";
 	otherwise if T is 2:
 		say "Walking along the beach afterwards with a spring in your step, you scan the sands around you just in case something else useful turns up, and after just a short time, you spot a bottle of water! Wow this really must be your lucky day!";
-		Add "water bottle" to invent of player;
+		increase carried of water bottle by 1;
 	otherwise if T is 3:
 		say "Walking along the beach with the shell in hand, you can[apostrophe]t help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately.  Eventually you manage to drop it into the surf, and no matter how hard you look you don[apostrophe]t find the shining shell again.  Still you resolve to pay a bit more attention to how you move your hands from now on so you don[apostrophe]t drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn[apostrophe]t a total loss";
 		increase dexterity of player by 2;

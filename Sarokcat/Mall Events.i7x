@@ -14,27 +14,21 @@ Instead of resolving Tight space:
 		let T be a random number between one and five;
 		if T is 1:
 			say "It looks like the glint was just some leftover iridescent paint someone smeared here.";
-			stop the action;
-		if T is 2:
+		otherwise if T is 2:
 			say "You find a unopened bottle of water that must have rolled in here!";
-			Add "water bottle" to invent of player;
-			stop the action;
-		if T is 3:
+			increase carried of water bottle by 1;
+		otherwise if T is 3:
 			say "You get stuck in the tight space. Panicking, you struggle and fight to get out, eventually managing to tear your way free, leaving a good portion of skin behind though... damn that hurts!";
 			decrease hp of player by 20;
-			stop the action;
-		If T is 4:
+		otherwise If T is 4:
 			say "It looks like some kid made a little nest down here, you find some comic books and a few other shiny items, but most importantly you find some chips and soda to snack on!";
-			Add "chips" to invent of player;
-			Add "soda" to invent of player;
-			stop the action;
+			increase carried of chips by 1;
+			increase carried of soda by 1;
 		otherwise:
 			say "As you wriggle into the tight space, you hear something moving behind in behind you. It was a trap!";
 			fight;
-			stop the action;
 	otherwise:
 		say "Deciding to play it safe, you leave the narrow opening alone and continue about your business.";
-		stop the action;
 
 
 Section 2- Strange echo
@@ -87,10 +81,8 @@ Instead of resolving a Captive rat:
 		say "Driving off the foul demon, you turn to free the captive mall rat, only to discover that it has not only managed to free itself, but it seems to have undergone a surprising transformation as well!";
 		challenge "Slut Rat";
 		say "After that last fight, you definitely have more questions than answers. Maybe you should ask Rod or Ronda back in the mall about the strange demon[apostrophe]s seed.";
-		stop the action;
 	otherwise:
 		say "Discretion definitely being the better part of valor, you quickly hurry along the tunnels, ignoring the strange sounds.";
-		stop the action;
 	Now Captive rat is resolved;
 
 Section 6- puddle of goo
@@ -108,16 +100,15 @@ Instead of resolving a puddle of goo:
 		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll is greater than 14:
-			say " You manage to gather up some of the strange goo without incident!";
-			add "glob of goo" to invent of player;	
-			add "glob of goo" to invent of player;	
+			say "You manage to gather up some of the strange goo without incident!";
+			increase carried of glob of goo by 2;
 		otherwise:
 			say "While trying to gather up some of the strange substance, you slip and fall in it instead!";
 			infect "Goo Girl";
 			infect "Goo Girl";
-			add "glob of goo" to invent of player;	
+			increase carried of glob of goo by 1;
 	otherwise:
-		say "deciding it is always best to leave strange, gooey puddles alone, you give it a wide berth as you continue on your way.";
+		say "Deciding it is always best to leave strange, gooey puddles alone, you give it a wide berth as you continue on your way.";
 	Now puddle of goo is resolved;
 
 Section 7- Strange symbol

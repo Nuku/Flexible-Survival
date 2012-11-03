@@ -29,7 +29,7 @@ The sarea of fair food cart is "Midway";
 
 Instead of Resolving a fair food cart:
 	say "Wandering through the cheerful midway of the fair, you come across one of the fair food carts, that seems to still be dispensing popcorn and fair food. Feeling slightly ambiguous about taking anything in this crazy place, you try some of the food, and when nothing bad seems to happen, take some of it with you. What is a fair without some fair food after all?";
-	add "food" to invent of player;
+	increase carried of food by 1;
 	Now fair food cart is resolved;
 
 Section 4-  Happy silly feeling
@@ -71,10 +71,7 @@ The sarea of Prize winning toss is "Midway";
 
 Instead of Resolving a Prize winning toss:
 	say "Wandering through the games area of the midway, staring at the shining and sparkling fair games, you eventually give into temptation and try one of the tossing games, only to be surprised to find it is surprisingly hard, giving up you toss your last ring halfheartedly at the target and turn to leave, only to have to booth light up behind you. Looking backwards you see your last toss actually managed to make it onto the moving prize ring, and you actually won one of the lower tier prizes. Smiling at your lucky toss, you snag a pack of soda from the prize stack, and continue along your way, whistling along with the fair music.";
-	add "soda" to invent of player;
-	add "soda" to invent of player;
-	add "soda" to invent of player;
-	add "soda" to invent of player;
+	increase carried of soda by 4;
 	Now Prize winning toss is resolved;
 
 Section 8-  Sudden stampede
@@ -174,8 +171,7 @@ Instead of Resolving a Locked lockers:
 		challenge "Rubber tigress";
 		challenge "Rubber tigress";
 		say "Recovering from the unexpected assault, you take another look around the room,  from the looks of the room and the smell of sex in the air, somehow you doubt those were all the participants in whatever happened here, making you eye the two other doors leading out of the room with some trepidation.  Deciding it might be best just to be about your business as quickly as possible, you search the room for the box Boris asked you for.  You find several strange items, and even a couple of cans of soda someone had stuck in their locker, but are about to give up on the package, when you notice a rather unwieldy box stuck back on top of some of the lockers.  Hauling the box down, you note it has the letters 'Christy' scrawled on the top in black marker, you wonder what this Christy could have had that Boris thinks will be so helpful.  Sadly the box is tied up tight with several bits of twine, and you don[apostrophe]t want to annoy Boris if he needs the box unopened, you decide just to take it back to him to find out.  Besides, you think as you hurry out of the room, you thought you heard something coming from one of the other doors.";
-		add "soda" to invent of player;
-		add "soda" to invent of player;	
+		increase carried of soda by 2;
 		now christyquest is 2;
 		now Locked lockers is resolved;
 
