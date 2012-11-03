@@ -55,11 +55,8 @@ Instead of conversing the doctor matt:
 		now hp of doctor matt is 2;
 		now level of doctor matt is 0;
 	if hp of doctor matt is 2:
-		let milkfound be 0;
-		let goofound be 0;
-		repeat with x running through invent of player:
-			if x is "glob of goo", increase goofound by 1;
-			if x is "gryphon milk", increase milkfound by 1;
+		let milkfound be the carried of gryphon milk;
+		let goofound be the carried of glob of goo;
 		if girl is banned:
 			now goofound is 2;
 		if hermaphrodite is banned or furry is banned:
@@ -72,29 +69,10 @@ Instead of conversing the doctor matt:
 			stop the action;
 		extend game by 5;
 		let number be 0;
-		repeat with Q running through invent of the the player:
-			increase number by 1;
-			if q matches the text "glob of goo":
-				remove entry number from invent of the player;
-				break;
-		now number is 0;
-		repeat with Q running through invent of the the player:
-			increase number by 1;
-			if q matches the text "glob of goo":
-				remove entry number from invent of the player;
-				break;
-		now number is 0;
-		repeat with Q running through invent of the the player:
-			increase number by 1;
-			if q matches the text "gryphon milk":
-				remove entry number from invent of the player;
-				break;
-		now number is 0;
-		repeat with Q running through invent of the the player:
-			increase number by 1;
-			if q matches the text "gryphon milk":
-				remove entry number from invent of the player;
-				break;
+		delete glob of goo;
+		delete glob of goo;
+		delete gryphon milk;
+		delete gryphon milk;
 		say "'Ah, exemplary work,' he murmurs, already taking your goo and milk and quickly getting them into a deep freeze box that glows ominous blue. Chill white mist escapes for the moment he pops it open to place the precious objects inside, 'Now then, we shall see what can be seen. Come back tomorrow.'";
 		now level of doctor matt is turns;
 		increase score by 20;
@@ -157,8 +135,7 @@ Instead of conversing the doctor matt:
 		say "     'Now, you say that Dr Mouse has been having you collect samples from the city?  And from more and more powerful creatures?  This is worrisome.  I wonder what secrets he may be uncovering.  May I see what he's asked you to collect?' he asks.";
 		if triclamped is 0 and triclampedmatt is 0:
 			let tricllfound be 0;
-			repeat with x running through invent of player:
-				if x is "lava lamp", increase tricllfound by 1;
+			if lava lamp is owned, now tricllfound is 1;
 			if tricllfound is 0:
 				say "     Once you find a usable sample from this possible dinosaur, please bring it to me first, so that I may obtain a sample as well.";
 			if tricllfound is 1:
@@ -170,8 +147,7 @@ Instead of conversing the doctor matt:
 			now triclampedmatt is 2;
 		if sabtoothed is 0 and sabtoothedmatt is 0:
 			let sabertoothfound be 0;
-			repeat with x running through invent of player:
-				if x is "Chipped tooth", increase sabertoothfound by 1;
+			now sabertoothfound is carried of chipped tooth;
 			if sabertoothfound is 0:
 				say "     'I would like to ask you to obtain a sample from one of these creatures for me as well.  I know this means you may need to fight a second one, but I want to look into this matter as well.'";
 			if sabertoothfound > 0:
@@ -186,8 +162,7 @@ Instead of conversing the doctor matt:
 					now sabtoothedmatt is 2;
 		otherwise if sabtoothed is 1 and sabtoothedmatt is 0:
 			let sabertoothfound be 0;
-			repeat with x running through invent of player:
-				if x is "Chipped tooth", increase sabertoothfound by 1;
+			now sabertoothfound is carried of chipped tooth;
 			if sabertoothfound is 0:
 				say "     'I would like to ask you to obtain a sample from one of these creatures for me as well before Dr Mouse gets too far ahead.  I know this means you may need to fight a second one, but my research cannot fall behind.'";
 			if sabertoothfound > 0:
@@ -197,8 +172,7 @@ Instead of conversing the doctor matt:
 				now sabtoothedmatt is 1;
 		if nerminepackage < 5 and nerminepackagematt is 0:
 			let nermpack be 0;
-			repeat with x running through invent of player:
-				if x is "package", increase nermpack by 1;
+			now nermpack is carried of package;
 			if nermpack is 0:
 				say "     'I should like a chance to examine whatever object you are retrieving from this mysterious shop.  I want you to bring it here before delivering it to Dr Mouse.'";
 			if nermpack is 1:
@@ -218,7 +192,7 @@ Instead of conversing the doctor matt:
 				say "     The strap can be placed around your wrist, ankle or other limb.  It could even be used with the contacts pressed to your body, if you were ever changed to such a radical degree.  To check yourself, simply connect it to the analysis unit and press these buttons,' he says as he indicates them, 'to show you how the infection has spread through your body.  It has a catalog drawn from this terminal, but unfortunately must remain keyed to you to work and so it presently can't be used to check others.  I hope my larger model for the military will overcome this issue so they can do a quick scan at the base of the people they rescue to be aware of the strains infecting each individual.'";
 				say "     'As I stated, you may have this prototype, as I am working on an improved model for the military.  Perhaps it may be of some use to you.  If you can continue to help me, I may be able to upgrade its programming later,' he adds, clearly paying you to act as his double-agent.";
 				say "     Infection monitor obtained.  (Quick command: [bold type]pism[roman type])[line break]";
-				add "infection monitor" to invent of player;
+				increase carried of infection monitor by 1;
 				now mattcollection is 1;
 				increase score by 10;
 			otherwise:
@@ -288,11 +262,8 @@ Instead of conversing the doctor matt:
 		now foodneed is 6;
 		now hp of doctor matt is 13;
 	otherwise if hp of doctor matt is 13:
-		now foodcount is 0;
-		now watercount is 0;
-		repeat with x running through invent of player:
-			if x is "food", increase foodcount by 1;
-			if x is "water bottle", increase watercount by 1;
+		now foodcount is carried of food;
+		now watercount is carried of water bottle;
 		now tempnum is foodneed;
 		say "[thefoodening]";
 		say "[thefoodening]";
@@ -374,7 +345,7 @@ instead of using infection monitor:
 	monitor;
 
 check monitoring:
-	if "infection monitor" is listed in invent of player:
+	if infection monitor is owned:
 		monitor;
 	otherwise:
 		say "You don't have anything capable of that.";
@@ -459,7 +430,7 @@ The sarea of Beach Detector Site is "Beach";
 
 Instead of resolving a Beach Detector Site:
 	say "     Keeping an eye out for an appropriate spot to place the device for Zephyr, you notice a tall outcropping of rock out in the water that you might be able to scale.  It is certainly closer closer than most of the other rocks as well, so you should be able to swim out to it";
-	if "nanite density monitor" is not listed in invent of player:
+	if nanite density monitor is not owned:
 		say ".  You should return here with the device so you can install it.  Hopefully it's waterproof.";
 	otherwise:
 		say ".  You remove one of the detectors from the suitcase and hide the case among some tall grass.  Hoping the thing is waterproof, you bundle it up in a couple of plastic bags you have in your pack just in case, then head into the water, swimming out towards the rocky spire.  As you struggle to make it out there, a creature moves in to attack.";
@@ -494,7 +465,7 @@ The sarea of Red Light Detector Site is "Red";
 
 Instead of resolving a Red Light Detector Site:
 	say "     While scouting around in the fancier parts of this neighbourhood, you spot a large nightclub and sex show with a huge neon sign.  Somehow the neon outline of a 25 foot tall, big breasted woman is still lit, flashing along with the name of the club.  It certainly seems to the be the tallest spot around, the sign rising high above the three storey building, dwarfing all around it";
-	if "nanite density monitor" is not listed in invent of player:
+	if nanite density monitor is not owned:
 		say ".  Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	otherwise:
 		say ".  There is clearly a lot of activity still going on in this club, with rampant sex from a myriad of creatures both inside and out.  Going in from the front is simply out of the question.";
@@ -522,7 +493,7 @@ ndmhigh is a number that varies.
 
 Instead of resolving a High Rise Detector Site:
 	say "     While this part of the city has no shortage of tall buildings where the detector could be placed, other issues make most of them unsuitable.  Many of the buildings have been damaged by the aerial battles of some large creatures or have had their upper floors turned into the aeries.  Even those that aren't destroyed in this manner often show clear signs of habitation from large groups of infected creatures.  You do eventually come across one office building that seems less populated and intact up to the top";
-	if "nanite density monitor" is not listed in invent of player:
+	if nanite density monitor is not owned:
 		say ".  Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	otherwise:
 		say ".  Not looking forward to the long climb, you head into the building.";
@@ -565,7 +536,7 @@ The sarea of Park Detector Site is "Park";
 
 Instead of resolving a Park Detector Site:
 	say "     Unsure where in the park you could place the device which would be suitable for Zephyr's requirements.  You somehow doubt sticking it in a tree will quite be enough to satisfy them.  As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park.  Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";
-	if "nanite density monitor" is not listed in invent of player:
+	if nanite density monitor is not owned
 		say ".  Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	otherwise:
 		say ".";
@@ -582,7 +553,7 @@ Instead of resolving a Park Detector Site:
 
 Chapter 3 - Alternate Drop-off Points
 
-instead of entering the Confession Booth while "Beach" is listed in ndmlist and "nanite density monitor" is listed in invent of player:
+instead of entering the Confession Booth while "Beach" is listed in ndmlist and "nanite density monitor" is owned:
 	say "     Stepping into the confessional, you ask the priestess if you may place one of the nanite density monitors atop the belltop.";
 	say "     'Ah, those who cling to science are always seeking to explain that which is miraculous.  They, always able to find answers to their questions, never stop to truly appreciate the fact that it is still a miracle.  This is because they seek answers to the wrong questions in life,' she says serenely.  'But we will allow you to place your device, in thanks to the science which first brought about the nanites.  While some of the elements of this miracle were man-made, everything was put into place for a grander purpose - this great rebirth of the world.  You and those at Zephyr would do best to accept this truth rather than to seek greed from it.'";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -617,11 +588,11 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 
 ndmLisa is a truth state that varies.  ndmLisa is normally false.
 
-instead of conversing the Lisa while "Red Light District" is listed in ndmlist and "nanite density monitor" is listed in invent of player and ndmLisa is false:
+instead of conversing the Lisa while "Red Light District" is listed in ndmlist and nanite density monitor is owned and ndmLisa is false:
 	say "     You decide to ask Lisa if it would be okay to put the detector on top of her porn store.  It might be as tall as some of the other buildings, but it would certainly be a safer spot, so you're willing to give it a try.  As you start to bring up the topic, the mousetaur gets very upset.  'Zephyr?  You're helping those greedy bastards?  I've been hearing stuff about them and you shouldn't get involved with them.  They're bad news and it's going to get messy when the infected people around here have had enough of their money-grubbing scientists.'";
 	now ndmLisa is true;
 
-instead of conversing Alex while "High Rise District" is listed in ndmlist and "nanite density monitor" is listed in invent of player:
+instead of conversing Alex while "High Rise District" is listed in ndmlist and nanite density monitor is owned
 	say "     Looking around Alex's high rise condo, you decide to ask him if it would be alright to install the device from Zephyr on his balcony.  'Hmmm... Zephyr?  Aren't they some kind of R&D company?  Are they looking into this problem?  Sure!  It'll be good to know we're helping to fix this mess.  So, what does it do?' he asks in a spurt of manic energy.  You do your best to explain what little you know as you head out with him onto the balcony and find a suitable spot next to his now-useless air conditioner.  Activating the device, there is a whirr as the screws drill into the concrete, securing it in place.  You head back inside, thanking the ferrety lawyer for his help.";
 	remove "High Rise District" from ndmlist;
 	now High Rise Detector Site is resolved;
