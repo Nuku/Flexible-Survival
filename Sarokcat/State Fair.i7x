@@ -79,10 +79,8 @@ instead of fucking boris:
 		stop the action;
 	if borisquest is 4:
 		say "His eyes goes wide as he looks at the size of the toy you brought him,  'Wow' Boris says as he takes it from you reverentially, 'This is for me? This is great!' He says as he turns it over in his hands, 'Feline style too! And god I only wish I used to be hung like that!'  Boris turns to you with a large grin, 'I have to go try this on right away! It might take a while before its ready to go, but come back later and we can see how it went!' Boris says as he starts to turn away, then stops, 'Oh I almost forgot, I got you a couple things for helping me out like this,' he says as he gestures to a small package sitting next to the ticket booth.  Before you can thank him, he runs off with his new acquisition into one of the restrooms.  Soon you can hear his sharp growls and moans coming from the restroom, as he obviously begins fitting his new member, though its hard to tell whether the sounds are of pain or pleasure.";
-		Add "food" to invent of player;
-		Add "food" to invent of player;
-		Add "water bottle" to invent of player;
-		Add "water bottle" to invent of player;
+		increase carried of food by 2;
+		increase carried of water bottle by 2;
 		increase borisquest by 1;
 		increase boristalk by 1;
 		now lastborisfucked is turns;
@@ -216,14 +214,14 @@ carry out gameplay:
 			if there is a loot entry:
 				if loot entry is not " ":
 					add loot entry to invent of player;
-					say "you acquired 1 [loot entry][line break]";
-					add "dirty water" to invent of player;
-					say "you acquired some dirty water!";
+					say "You acquired 1 [loot entry].";
+					increase carried of dirty water by 1;
+					say "You acquired some dirty water!";
 				otherwise:
-					add "dirty water" to invent of player;
-					say "you acquired some dirty water!";
+					increase carried of dirty water by 1;
+					say "You acquired some dirty water!";
 			otherwise:
-				add "food" to invent of player;
+				increase carried of food by 1;
 				say "You acquired some carnival food!";	
 		otherwise:
 			say "The game buzzes at you derisively, as you lower your plastic weapon in defeat, the evil cardboard and plastic menaces will apparently live to see another day, although you resolve to come back and try again later as you walk away.";

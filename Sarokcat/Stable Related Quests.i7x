@@ -118,13 +118,13 @@ Instead of Resolving a findinghardware:
 			if lost is 0:
 				say "One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort, and you feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficiently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
 				Increase hp of player by 10;
-				Add "medkit" to invent of player;	
+				increase carried of medkit by 1;
 			otherwise:
 				say "One of the horsemen gives you a pat on the shoulder as he helps you up after driving off the rest of the creatures, and while you are certainly embarrassed at the situation, and having needed their help at this point, at least they managed to keep things going while you were being 'entertained' by your recent partner. Feeling somewhat weak after the exertion, when one of them hands you a draft beer and a medkit, you only nod gratefully as you drain the cool drink. You blink for a moment in surprise though as you feel a surge of power shoot through you, and groan as you realize it was a draft Horse beer you just drank, and while it definitely makes you feel a bit better, you can already feel your body changing In response.  Though you have little time to comment or react as several shadows blot out the sky, and you realize some of the aerial creatures have arrived and are attacking you and your fellow lookouts directly!";
 				infect "Horseman";
 				infect "Horseman";
 				increase hp of player by 40;
-				Add "medkit" to invent of player;	
+				increase carried of medkit by 1;
 				challenge "Wyvern";
 				challenge "Wyvern";
 				challenge "Wyvern";	
@@ -138,7 +138,7 @@ Instead of Resolving a findinghardware:
 					increase diceroll by bonus;
 					if diceroll is greater than 16:
 						say "You lead the creatures on a merry chase around this part of the city, before finally managing to lose them near the library itself.  Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day, and to see what Fancy thinks of your success.";		
-						Add "medkit" to invent of player;	
+						increase carried of medkit by 1;
 						now fancyquest is 5;
 						now findinghardware is resolved;
 						stop the action;
@@ -149,13 +149,13 @@ Instead of Resolving a findinghardware:
 						fight;
 						if lost is 0:
 							say "Victorious at last, you sigh as you stagger back towards the library, definitely feeling like you need a break before continuing back to the Stables to see if the hardware made it back there safely.";
-							Add "medkit" to invent of player;	
+							increase carried of medkit by 1;
 							now fancyquest is 5;
 							now findinghardware is resolved;
 							stop the action;
 						otherwise:
 							say "You drag your well used body back towards the library, feeling increasingly sore and tired as you do so, though hopefully at least the equines managed to get back to the Stables safely after you created the distraction.";	
-							Add "medkit" to invent of player;	
+							increase carried of medkit by 1;
 							now fancyquest is 5;
 							now findinghardware is resolved;
 							stop the action;
@@ -179,13 +179,13 @@ Instead of Resolving a findinghardware:
 						say "One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort, and you feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficiently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
 						Increase hp of player by 20;
 						if hp of player > maxhp of player, now hp of player is maxhp of player;
-						Add "medkit" to invent of player;	
+						increase carried of medkit by 1;
 					otherwise:
 						say "One of the horsemen gives you a pat on the shoulder as he helps you up after driving off the rest of the creatures, and while you are certainly embarrassed at the situation, and having needed their help at this point, at least they managed to keep things going while you were being 'entertained' by your recent partner. Feeling somewhat weak after the exertion, when one of them hands you a draft beer and a medkit, you only nod gratefully as you drain the cool drink. You blink for a moment in surprise though as you feel a surge of power shoot through you, and groan as you realize it was a draft Horse beer you just drank, and while it definitely makes you feel a bit better, you can already feel your body changing in response.  Though you have little time to comment or react as several shadows blot out the sky, and you realize some of the aerial creatures have arrived and are attacking you and your fellow lookouts directly!";
 						infect "Horseman";
 						infect "Horseman";
 						increase hp of player by 40;
-						Add "medkit" to invent of player;	
+						increase carried of medkit by 1;
 						if hp of player > maxhp of player, now hp of player is maxhp of player;
 					challenge "Wyvern";
 					challenge "Wyvern";
@@ -200,7 +200,7 @@ Instead of Resolving a findinghardware:
 						increase diceroll by bonus;
 						if diceroll is greater than 16:
 							say "You lead the creatures on a merry chase around this part of the city, before finally managing to lose them near the library itself.  Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day, and to take a look at the new sledgehammer the horseman handed you.";			
-							Add "medium sledge" to invent of player;	
+							increase carried of medium sledge by 1;
 							now fancyquest is 5;
 							now findinghardware is resolved;
 							stop the action;
@@ -211,13 +211,13 @@ Instead of Resolving a findinghardware:
 							fight;
 							if lost is 0:
 								say "Victorious at last, you sigh as you stagger back towards the library, definitely feeling like you need a break before continuing back to the Stables to see if the hardware made it back there safely.";
-								Add "medium sledge" to invent of player;	
+								increase carried of medium sledge by 1;
 								now fancyquest is 5;
 								now findinghardware is resolved;
 								stop the action;
 							otherwise:
 								say "You drag your well used body back towards the library, feeling increasingly sore and tired as you do so, though at least you have a new weapon to look at, and hopefully the equines managed to get back to the Stables safely after you created the distraction.";	
-								Add "medium sledge" to invent of player;	
+								increase carried of medium sledge by 1;
 								now fancyquest is 5;
 								now findinghardware is resolved;
 								stop the action;
@@ -258,13 +258,13 @@ Instead of Resolving a findinghardware:
 					if lost is 0:
 						say "One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort, and you feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficiently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
 						Increase hp of player by 20;
-						Add "medkit" to invent of player;	
+						increase carried of medkit by 1;
 					otherwise:
 						say "One of the horsemen gives you a pat on the shoulder as he helps you up after driving off the rest of the creatures, and while you are certainly embarrassed at the situation, and having needed their help at this point, at least they managed to keep things going while you were being 'entertained' by your recent partner. Feeling somewhat weak after the exertion, when one of them hands you a draft beer and a medkit, you only nod gratefully as you drain the cool drink. You blink for a moment in surprise though as you feel a surge of power shoot through you, and groan as you realize it was a draft Horse beer you just drank, and while it definitely makes you feel a bit better, you can already feel your body changing In response.  Though you have little time to comment or react as several shadows blot out the sky, and you realize some of the aerial creatures have arrived and are attacking you and your fellow lookouts directly!";
 						infect "Horseman";
 						infect "Horseman";
 						increase hp of player by 40;
-						Add "medkit" to invent of player;	
+						increase carried of medkit by 1;
 					challenge "Wyvern";
 					challenge "Wyvern";
 					challenge "Wyvern";	
@@ -278,7 +278,7 @@ Instead of Resolving a findinghardware:
 						increase diceroll by bonus;
 						if diceroll is greater than 16:
 							say "You lead the creatures on a merry chase around this part of the city, before finally managing to lose them near the library itself.  Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day, and to take a look at the new sledgehammer the horseman handed you.";			
-							Add "medium sledge" to invent of player;	
+							increase carried of medium sledge by 1;
 							now fancyquest is 5;
 							now findinghardware is resolved;
 							stop the action;
@@ -289,13 +289,13 @@ Instead of Resolving a findinghardware:
 							fight;
 							if lost is 0:
 								say "Victorious at last, you sigh as you stagger back towards the library, definitely feeling like you need a break before continuing back to the Stables to see if the hardware made it back there safely.";
-								Add "medium sledge" to invent of player;	
+								increase carried of medium sledge by 1;
 								now fancyquest is 5;
 								now findinghardware is resolved;
 								stop the action;
 							otherwise:
 								say "You drag your well used body back towards the library, feeling increasingly sore and tired as you do so, though at least you have a new weapon to look at, and hopefully the equines managed to get back to the Stables safely after you created the distraction.";	
-								Add "medium sledge" to invent of player;	
+								increase carried of medium sledge by 1;
 								now fancyquest is 5;
 								now findinghardware is resolved;
 								stop the action;

@@ -107,8 +107,8 @@ Instead of Resolving a Felinoid lair:
 		say "While traveling through the park, you come across a small hollow set into one of the hillsides, from the looks of the surrounding area, something might have passed this way not to long ago, though it doesn[apostrophe]t appear anything is nearby now.  There is an intriguing scent teasing at the edges of your consciousness that seems to be coming from within the cave, and there could be something useful left inside, though you would have to almost crawl to enter the low cave. Do you decide to look inside?";
 		if player consents:
 			say "Carefully crawling into the small cave, you find that some creature has obviously been using it as a den, its strong musk filling your nose with a spicy and intoxicating scent.  The area not being to large, you quickly spot a small cache of food and water, near what must be the creatures bedding, crawling over to the small stash you find the intoxicating scent has grown even stronger here, the creatures strong musk inundating your senses and filling you with the strange desire to roll around in the bedding and cover yourself in its strong masculine odor.  You manage to resist the strange strong urge to coat yourself in the musky scent long enough to grab the items and crawl out of the cave, but standing back up seems a little harder, as if you would rather be on all fours instead of two legs.  You leave the vicinity of the cave for now, but for some reason you know you will be back.";
-			Add "food" to invent of player;
-			Add "water bottle" to invent of player;
+			increase carried of water bottle by 1;
+			increase carried of food by 1;
 			increase lairconsent by 1;
 			infect "Felinoid";
 			infect "Felinoid";
@@ -118,8 +118,8 @@ Instead of Resolving a Felinoid lair:
 		say "Traveling along the park trail, you find your feet have brought you back once more to the strange hollow in the hill you visited before, looking around you see that once more the area seems unoccupied for now.  You remember both the stash of food and water you recovered here before, as well as that wonderfully musky scent that even now makes you want more.  But do you dare venturing inside again?";
 		if player consents:
 			say "Moving down onto all fours, you crawl back into the small cave again, the wonderful musky odor once more filling your brain with its intoxicating odor. As your eyes adjust to the dim interior, you notice immediately that the owner of the cave has replaced its stash of food and water, as you can see some sitting right in plain sight in the deepest part of the hollow.  Quickly moving forward on all fours, you snag your new loot, amazed at it just sitting there for you to take, and realize as you pause for a minute that the musk all around you is even stronger here. You find yourself pausing and just enjoying the wonderful scent for who knows how long before you snap out of it and recall that the owner of the cave could be back any minute. Strangely the thought of waiting for the cave owners return, is an extremely tempting one right now, and you can almost feel your body shifting and changing so you could greet him properly....  Managing to shake yourself out of it somehow, you pad out of the cave on all fours, the position seeming almost natural after visiting the small cave, and head back out into the park. Somehow though, you know you will end up back here at the cave again... and maybe this time its owner will be there to...";
-			Add "food" to invent of player;
-			Add "water bottle" to invent of player;
+			increase carried of water bottle by 1;
+			increase carried of food by 1;
 			increase lairconsent by 1;
 			infect "Felinoid";
 			infect "Felinoid";
@@ -164,7 +164,7 @@ The sarea of Abandoned picnic is "Park";
 
 Instead of Resolving a Abandoned picnic:
 	say "While traveling through the park, you come across a series of picnic tables set up for the casual parkgoer, normally this wouldn[apostrophe]t be worthy of note, except that it seems someone tried to set up a large picnic here on one of the tables fairly recently.  You look around and try calling out to whoever the other person might be, but all you find are some small signs of a scuffle not far away.  Sighing you look through the remains of the picnic, and while bugs and the outdoors have gotten to much of it, you manage to find some still sealed chips that you take with you.";
-	Add "Chips" to invent of player;
+	increase carried of chips by 1;
 	now Abandoned picnic is resolved;
 
 

@@ -37,7 +37,7 @@ Instead of Resolving a Tack room:
 	increase diceroll by bonus;
 	if diceroll is greater than 14:
 		say "As your eyes scan over the leather implements on the walls, you spot a riding whip that looks like it would be useful for more than just sexual play or horses, and decide to slip it into your pack to take it with you, after all given the nature of this place, having a horse whip around certainly couldn[']t hurt... although some of the creatures here might just find it more arousing to be whipped instead of painful...  Still thinking about those creatures and looking around the room, you decide it might be best to leave while you still can, after all, this is obviously an area some of them visit often, and being found in a place with so many ways to restrain a person could be problematical you think as you slip out the door, even though for some reason the idea of being restrained seems increasingly sexy to you as you can[']t help but imagining yourself in one of those nice sexy harnesses...";
-		add "horse whip" to the invent of player;
+		increase carried of horse whip by 1;
 		increase score by 5;
 	otherwise:
 		say "Thinking about those creatures and what they might use this gear for as you look around the room, you decide it might be best to leave while you still can, after all, this is obviously an area some of them visit often, and being found in a place with so many ways to restrain a person could be problematical you think as you slip out the door, even though for some reason the idea of being restrained seems increasingly sexy to you as you can[']t help but imagining yourself in one of those nice sexy harnesses.";
