@@ -536,7 +536,7 @@ The sarea of Park Detector Site is "Park";
 
 Instead of resolving a Park Detector Site:
 	say "     Unsure where in the park you could place the device which would be suitable for Zephyr's requirements.  You somehow doubt sticking it in a tree will quite be enough to satisfy them.  As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park.  Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";
-	if nanite density monitor is not owned
+	if nanite density monitor is not owned:
 		say ".  Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	otherwise:
 		say ".";
@@ -553,7 +553,7 @@ Instead of resolving a Park Detector Site:
 
 Chapter 3 - Alternate Drop-off Points
 
-instead of entering the Confession Booth while "Beach" is listed in ndmlist and "nanite density monitor" is owned:
+instead of entering the Confession Booth while "Beach" is listed in ndmlist and nanite density monitor is owned:
 	say "     Stepping into the confessional, you ask the priestess if you may place one of the nanite density monitors atop the belltop.";
 	say "     'Ah, those who cling to science are always seeking to explain that which is miraculous.  They, always able to find answers to their questions, never stop to truly appreciate the fact that it is still a miracle.  This is because they seek answers to the wrong questions in life,' she says serenely.  'But we will allow you to place your device, in thanks to the science which first brought about the nanites.  While some of the elements of this miracle were man-made, everything was put into place for a grander purpose - this great rebirth of the world.  You and those at Zephyr would do best to accept this truth rather than to seek greed from it.'";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -592,7 +592,7 @@ instead of conversing the Lisa while "Red Light District" is listed in ndmlist a
 	say "     You decide to ask Lisa if it would be okay to put the detector on top of her porn store.  It might be as tall as some of the other buildings, but it would certainly be a safer spot, so you're willing to give it a try.  As you start to bring up the topic, the mousetaur gets very upset.  'Zephyr?  You're helping those greedy bastards?  I've been hearing stuff about them and you shouldn't get involved with them.  They're bad news and it's going to get messy when the infected people around here have had enough of their money-grubbing scientists.'";
 	now ndmLisa is true;
 
-instead of conversing Alex while "High Rise District" is listed in ndmlist and nanite density monitor is owned
+instead of conversing Alex while "High Rise District" is listed in ndmlist and nanite density monitor is owned:
 	say "     Looking around Alex's high rise condo, you decide to ask him if it would be alright to install the device from Zephyr on his balcony.  'Hmmm... Zephyr?  Aren't they some kind of R&D company?  Are they looking into this problem?  Sure!  It'll be good to know we're helping to fix this mess.  So, what does it do?' he asks in a spurt of manic energy.  You do your best to explain what little you know as you head out with him onto the balcony and find a suitable spot next to his now-useless air conditioner.  Activating the device, there is a whirr as the screws drill into the concrete, securing it in place.  You head back inside, thanking the ferrety lawyer for his help.";
 	remove "High Rise District" from ndmlist;
 	now High Rise Detector Site is resolved;
