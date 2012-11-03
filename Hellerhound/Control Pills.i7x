@@ -2,21 +2,21 @@ Control Pills by Hellerhound begins here.
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Birth Control Pill"	"A small red pill, supposed to prevent accidental conception. It says 'lasts for 30 days', but with the nanites around, it's probably more like 3..."	1	control pill
+"Birth Control Pill"	"A small red pill, supposed to prevent accidental conception. It says 'lasts for 30 days', but with the nanites around, it's probably more like 3..."	1	birth control pill
 "Fertile Pill"	"A small blue pill, with the words 'Fertile 9h' on it. You've never seen the like before."	1	fertile pill
 
 
 
-control pill is a grab object. It is a part of the player. The usedesc of control pill is "You pop the pill into your mouth, and swallow.[controlpilluse]".
+birth control pill is a grab object. It is a part of the player. The usedesc of birth control pill is "You pop the pill into your mouth, and swallow.[controlpilluse]".
 fertile pill is a grab object. It is a part of the player. The usedesc of fertile pill is "You pop the odd pill into your mouth, and swallow.[fertilepilluse]".
 
 [
-the scent of control pill is "";
+the scent of birth control pill is "";
 the scent of fertile pill is "";
 ]
 
 
-understand "Control" and "Birth" and "Pill" as control pill.
+understand "Control" and "Birth" and "Pill" as birth control pill.
 understand "Fertile" and "Pill" as fertile pill.
 
 

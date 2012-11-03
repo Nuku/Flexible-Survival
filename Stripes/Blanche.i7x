@@ -25,7 +25,7 @@ Instead of resolving Wolfrape:
 			say "     Once safely concealed in the wolf's hidden den, she hugs you tightly and gives you a passionate kiss which surprises both of you.  As if suddenly realizing what she's done, she takes a step back, blushing at her ears.  'Oh, I'm sorry.  It's this... infection thing.  I'm sure you know what it does to you.  I am really thankful though for your help.'  She brushes her fur nervously and, realizing that she's nude, grabs one of a few spare blouses she has folded on the bookcase.  She slides it on, but doesn't bother to do it up after throwing you a quick glance.";
 			say "     She grabs a can of ravioli from the shelf as well, pressing it into your hands.  'Please take this.  I'd give you more, really, but it's about all I can spare right now.  You were really brave to try and help me against that monster.  I don't like going out there much because there are so many of them.  You could... if you need somewhere safe to hide that is... maybe stay here... with me.'  She speaks softly, but with obvious longing in her voice.  Perhaps she's lonely and simply wants companionship, though from the way she's looking at you, perhaps she wants more.";
 			now hp of Blanche is 1;
-			add "food" to invent of player;
+			increase carried of food by 1;
 			increase score by 20;
 			now battleground is "void";
 		otherwise if fightoutcome >= 20 and fightoutcome <= 29:

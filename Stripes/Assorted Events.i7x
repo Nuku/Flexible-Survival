@@ -15,7 +15,7 @@ Instead of resolving a Fallen Kunoichi:
 	say "     Passing through the halls of the museum, you come across the aftermath of what was an epic battle.  Many of the displays here are knocked over or shattered by what must have been powerful blows by a great weapon.  You can see gouges cut deep into the walls, many stained with blood.  Smaller darts and shuriken are embedded in the wall as well.  The floor is marked with several blood stains and cum puddles, as well as soot marks from flash powder or smoke bombs.  Clearly many battled a great foe here.";
 	say "     Half-buried in the ruins of one display, you find the grisly remains of a feline ninja cleaved in two at the waist.  Drawing off its mask, you see her face feminine locked in an expression of great pain and horror.  Something about her death gaze disturbs you deep inside and you are unable to bear the sight of it.  You brush her eyes shut and pull the mask back down over her feline face.  Beside the fallen kunoichi is her weapon, a bo staff with ornate metal tips.  Cautious of any infected blood, you quickly check her [italic type]shinobi shozoko[roman type], but find nothing else of use.";
 	say "     Bo staff obtained.";
-	add "bo staff" to invent of player;
+	increase carried of bo staff by 1;
 	increase score by 5;
 	Now Fallen Kunoichi is resolved;
 
@@ -83,7 +83,7 @@ Instead of resolving a Losing It:
 	if snowmeowfight is 1:
 		say "     Having dealt with the lustful feline, you get ready to leave, but notice the purse next to the tattered remains of the skirt that was torn off in the fight.  You take a moment to examine these last remnants of the woman's feminine identity.  You carefully avoid several spots of snowmeow cum, whether his or that of the one who changed her, you cannot say, as you shift the clothes around.  You are more successful with her purse, finding a canister of mace.  It seems she failed to use it in time and paid the price.  You mentally remind yourself to use it before things get out of hand and you end up like her... him.";
 		say "     Pepperspray obtained.";
-		add "pepperspray" to invent of player;
+		increase carried of pepperspray by 1;
 		increase score by 5;
 	otherwise if snowmeowfight is 2:
 		say "     After having been beaten by the beautiful feline, you stagger off in a bit of a lustful haze.  Something about the whole experience leaves you lustful and eager for more.";
@@ -153,9 +153,9 @@ instead of resolving a Trickster:
 					say "     Having beaten the pack alpha and sent him packing, the wolves['] assault on the few remaining soldiers wavers.  With a howl from their leader, they snatch up the fallen, partially transformed soldiers and drag them off into the city.  They'll be taking them back to their den to finish mating them until they're fully members of the pack.  Too tired from the fight, you and the other soldiers are in no shape to give pursuit.  As the last of the wolves are running off, you hear some distant laughter, probably from the coyote trickster who enjoyed the show while it lasted[if Park Entrance is unknown].  You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 					say "     The remaining soldiers thank you for the assistance.  Because of the cloud of wolf fur, nearly all of them have picked up ears or tails, but their humanity is mostly intact thanks to your help.  They'll have to scrub their recon mission and return to base.  You're told they can't take you with them at this time, but they do give over some of their supplies, as they'll re-equip at the base earlier than planned.  They take their guns and ammo, but one of the few who remained fully unchanged passes you his combat knife with a silent nod.  After packing the food and water away and strapping on the knife, you're given another round of thanks before they head off.";
 					say "     Food, water bottle and combat knife obtained.";
-					add "food" to invent of player;
-					add "water bottle" to invent of player;
-					add "combat knife" to invent of player;
+					increase carried of food by 1;
+					increase carried of water bottle by 1;
+					increase carried of combat knife by 1;
 					increase score by 20;
 		if wolffight is 3:
 			say "     Deciding to give up on fighting entirely, you push your way free of the wild fight.  You hop over one wolf who's mounted one poor soldier and are almost knocked down as your pursuer runs into a soldier getting up.  Finding an [']eager volunteer['] for his cock, the wolf drives it into the soldier's mouth and starts pounding away.  The wolves get the last of the soldiers as you're turning into an alleyway.  You can hear the laughter of what is probably the coyote trickster, amused by the results of his prank[if Park Entrance is unknown].  You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
@@ -241,13 +241,13 @@ Instead of resolving a Lovers Bench:
 		if scenario is "Bunker" or scenario is "Caught Outside":
 			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  It is no better than your own, so you toss it aside.  The woman's jeans do yield a small canister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
 			say "     Pepperspray obtained.";
-			add "pepperspray" to invent of player;
+			increase carried of pepperspray by 1;
 			increase score by 5;
 		otherwise:
 			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  Thinking it may be a useful tool or perhaps a weapon in a pinch, you take it.  The woman's jeans do yield a small canister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
 			say "     Pocketknife and pepperspray obtained.";
-			add "pocketknife" to invent of player;
-			add "pepperspray" to invent of player;
+			increase carried of pocketknife by 1;
+			increase carried of pepperspray by 1;
 			increase score by 10;
 		if companion of player is pink raccoon:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -384,9 +384,7 @@ Instead of resolving a PeachTree:
 			challenge "Parasitic Plant";
 			if lost is 0:
 				say "     Disentangling yourself from the tendrils in the tree and freeing yourself of the vine inside you, you make a quick grab for some of the fruit.  You snag a couple of them and then make a run for it as more vines rustle in the canopy.  As you move further from the tree, Joanna's seed settles down again.  You stroke your belly as if petting it, thankful for the warning it tried to give before its instincts took over.";
-				add "tasty peach" to invent of player;
-				add "tasty peach" to invent of player;
-				add "tasty peach" to invent of player;
+				increase carried of tasty peach by 3;
 				increase score by 10;
 			otherwise:
 				infect "Parasitic Plant";
@@ -407,9 +405,7 @@ Instead of resolving a PeachTree:
 		challenge "Parasitic Plant";
 		if lost is 0:
 			say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit.  You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
-			add "tasty peach" to invent of player;
-			add "tasty peach" to invent of player;
-			add "tasty peach" to invent of player;
+			increase carried of tasty peach by 3;
 			increase score by 10;
 		otherwise:
 			infect "Parasitic Plant";
@@ -424,7 +420,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "tasty peach"	"A very plump and juicy peach.  It is much larger than a typical peach, but smells all the more delicious."	1	tasty peach
 
-tasty peach is a grab object.
+tasty peach is a grab object.  tasty peach is temporary.
 
 the usedesc of tasty peach is "[yummypeach]";
 
@@ -462,8 +458,8 @@ Instead of resolving a Concession Stand:
 			say "     The vendor releases you and flips back behind the counter.  With a broad grin that seems momentarily feline, he passes you a tray of snacks and a can of soda.  You head off, still in a bit of a daze, licking your lips as you try to figure out the flavour of cum you just guzzled down.";
 			randominfect;		[first one picks a valid critter while infecting]
 			infect;			[second one gives the same infection]
-			add "chips" to invent of player;
-			add "soda" to invent of player;
+			increase carried of chips by 1;
+			increase carried of soda by 1;
 			decrease humanity of player by a random number between 8 and 6;
 			if "Pure" is listed in feats of player, increase humanity of player by a random number between 2 and 5;
 			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 1 and 4;
@@ -479,8 +475,8 @@ Instead of resolving a Concession Stand:
 				say "     As you walk up to the stand, the gentleman sets another tray of fried treats and a can of soda on the counter, then leaps over it.  You don't say a word as he whips out his cock again.  Any thoughts of discussion or dealing with the man fade as you again bury his throbbing meat in your mouth and suck away at it.  He chuckles softly and rubs your head, pumping into your mouth.  You run your tongue over some feline barbs, then across a pointed, canine glans.  It is thick, then long, then almost human, then unnaturally ridged.  These changes continue as you try to figure out each new one, loving the ever-changing delight more and more.  You put a hand to his ballsac and find it changing as well.  The orbs inside always remain quite large and heavy, though their shape shifts subtly.  But more apparent is the soft fur, no the hard scales, no the smooth skin, that covered his scrotum.  This time your lustful cocksucking is rewarded when you feel a knot briefly locking his cock in your mouth and he sprays thick cum into your mouth.  When the knot fades away as if never there, you pull your mouth back and swallow down the semen.  You take your purchased wares with a lustfully clouded mind that lingers as you wander back into the flashy fair.";
 				randominfect;		[first one picks a valid critter while infecting]
 				infect;			[second one gives the same infection]
-				add "chips" to invent of player;
-				add "soda" to invent of player;
+				increase carried of chips by 1;
+				increase carried of soda by 1;
 				decrease humanity of player by a random number between 10 and 20;
 				if "Pure" is listed in feats of player, increase humanity of player by a random number between 3 and 6;
 				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 2 and 5;
@@ -490,8 +486,8 @@ Instead of resolving a Concession Stand:
 				say "     Rubbing his balls and sucking his cock, you lavish attention upon him, becoming more and more eager to please him.  When he finally cums, his thick seed comes blasts from a large, leonine cock and you gulp it all down, rubbing your belly as his semen fills it.  You get up and lick your lips, barely remembering to take the food items.  You were so focused on getting the cum, you barely remembered the purchase at all this time.";
 				randominfect;		[first one picks a valid critter while infecting]
 				infect;			[second one gives the same infection]
-				add "chips" to invent of player;
-				add "soda" to invent of player;
+				increase carried of chips by 1;
+				increase carried of soda by 1;
 				decrease humanity of player by a random number between 12 and 24;
 				if "Pure" is listed in feats of player, increase humanity of player by a random number between 4 and 8;
 				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 3 and 6;
@@ -578,8 +574,7 @@ Instead of resolving a Beach Party:
 				challenge "Bottlenose Toy";
 				if dolphinflatablefight is 1:
 					say "     With the green dolphin sent back into the water, the girls start playing around with it.  Some start fingering themselves and each other, rather worked after their amusement with you.  With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks.";
-					add "soda" to invent of player;
-					add "soda" to invent of player;
+					increase carried of soda by 2;
 					increase score by 10;
 	if dolphinflatablefight is 2:
 		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once.  One has the last of the sodas.  But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily.  The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you.  Their rubber tongue glide across your skin and seek to tease you all over.  Two set to work on your nipples[if breast size of player > 0], squeezing your breasts[end if].  Others kiss and lick at your face and nibble at your ears.  Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin.  Her tongue plays over your [if cocks of player > 1]sticky, throbbing [cockname of player] cocks[otherwise if cocks of player is 1]sticky, throbbing [cockname of player] cock[otherwise if cunts of player > 1]sticky, juicy pussies[otherwise if cunts of player is 1]sticky, juicy pussy[otherwise]sticky thighs and barren crotch[end if].  Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills.  All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you[if cocks of player is 0 and cunts of player is 0].  Once you're finally all cleaned up,[otherwise].  When you finally cum,[end if] the pink dolphins release you, heading back to frolic in the water again.";

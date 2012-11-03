@@ -59,7 +59,7 @@ to say psychfirstarrival:
 		say "     'It seems there's at least some psychological component to how nanite infection manifests itself.  Or, at least, it can be a contributing factor in some cases.  Take myself for instance,' she says, running her gloved paws over her breasts and cock with clear pleasure.  'My infection seems to have imprinted on my skunk decorations and a few of my own personal kinks.  Yet others find their minds and sexual desires changed utterly by the infection instead.'";
 		say "     She turns around and bends over to pick something up, accidentally (maybe) giving you a peek under her skirt while her broad tail keeps the back of her doctor's coat split.  You can't help but notice that there's no wet pussy hidden under there, just her wide hips and huge nutsack.  You'd assumed she was a herm like so many others you've seen around, but she's actually a shemale.  Her curvy bottom sways from side to side, setting her balls rocking as well as he rummages around in the box before finally finding what she wanted.";
 		say "     'Here you go,' she says, passing you a glass sample jar and a bottle of water.  'Before we can get started, I'd like you to collect a sample from one of those skunk girls in the park.  They shouldn't be much trouble for you, I'm sure,' she says with a smile.  'And the water's for you.  My way of saying thanks for helping me out,' she says with a smile.";
-		add "water bottle" to invent of player;
+		increase carried of water bottle by 1;
 		now hp of doctor moffatt is 2;
 		now battleground is "void";
 
@@ -102,7 +102,7 @@ Instead of conversing the Doctor Moffatt:
 		now hp of doctor moffatt is 99;
 	otherwise if lust of Doctor Moffatt is 1:
 		say "     'You're overdue for your next session.  We should get back to that right away.  You probably have a lot of stories about what you've seen and done - and who you've done - to tell me all about,' she says with a grin.  'Please let me know when you're ready to get started.'";
-	otherwise if hp of Doctor Moffatt is 2 and "Skunk Goo" is listed in invent of player:
+	otherwise if hp of Doctor Moffatt is 2 and Skunk Goo is owned:
 		delete Skunk Goo;
 		say "     'You have my sample for me already?' she says with a happy smile before leaning over to give you a peck on the cheek.  'You're so sweet,' she purrs.  'Mmm... we should be able to get started shortly.  I just need a few moments to set things up in here,' she adds, giving you a wink and a swish of her wide hips before stepping out momentarily.";
 		say "     While she's out, you take the opportunity to look around the room quickly.  You scan her notes, finding a mix of musings about the mental and arousing effects of the infection and notes about some of the weasel patients being cared for in the psych ward.  Mixed in with them are some more crayon drawings, presumably by the mental patients.  They are a mix of distorted scribbles showing some of the creatures you've seen out in the city and rather lewd picturs of vixens, owls and a rather familiarly big-chested skunk.";
