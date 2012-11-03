@@ -62,8 +62,7 @@ Instead of resolving a Partial Ruin:
 	otherwise:
 		say "     Having beaten them into retreat, you search through the ruins of the store they destroyed.  It seems that little of value remained in here even before they tore the place down from below.  You do manage to find a couple of cans of food undamaged by the collapse.  After storing it away, you dust yourself off you leave the ruined store behind to be reclaimed by the grasslands, as the burrowing prairie dogs would rather have it.";
 		say "     Food x2 obtained.";
-		add "food" to invent of player;
-		add "food" to invent of player;
+		increase carried of food by 2;
 		increase score by 5;
 	Now Partial Ruin is resolved;
 
@@ -76,7 +75,7 @@ The sarea of Hardware Store is "Plains";
 Instead of resolving a Hardware Store:
 	say "     Coming across the remains of a hardware store, you are very hopeful to find something of use in it.  The rubble is difficult to move and the task quickly becomes both tiring and frustrating.  More and more as you work, you come to believe this place was picked completely clean before it collapsed.  While some parts are too buried to reach and check, those you can find yield nothing of value at all.  After a long and fruitless search, you grab the pack of nails you found and bash them into a board using a rock.  You wrap some fabric tape around the base to give you a better grip and end up with a crude spiked club.";
 	say "     Spiked club obtained!";
-	add "spiked club" to invent of player;
+	increase carried of spiked club by 1;
 	increase score by 5;
 	Now Hardware Store is resolved;
 
@@ -134,15 +133,15 @@ Instead of resolving a Pit Trap:
 		say "     Grabbing the pack, you start to hoof it away before whoever set the trap returns.  You chuckle as you hear the soldier screaming at you before his screams of anger turn to those of fear before being silenced.  Clearly the pit's creator or some other monster found the noisy human and they are going to be getting better acquainted.  You find a spot some distance away, sheltered by a mound of rubble, to examine the bag's contents.  Aside from a pocketknife, there a medkit and a ration pack to go along with the rope.";
 		if scenario is "Bunker" or scenario is "Caught Outside":
 			say "Medkit and food obtained.";
-			add "medkit" to invent of player;
-			add "food" to invent of player;
+			increase carried of medkit by 1;
+			increase carried of food by 1;
 			increase score by 5;
 			decrease humanity of player by 5;
 		otherwise:
 			say "Pocketknife, medkit and food obtained.";
-			add "pocketknife" to invent of player;
-			add "medkit" to invent of player;
-			add "food" to invent of player;
+			increase carried of pocketknife by 1;
+			increase carried of medkit by 1;
+			increase carried of food by 1;
 			increase score by 10;
 			decrease humanity of player by 5;
 	otherwise:
@@ -166,7 +165,7 @@ to say prairiedogfight:
 		decrease score by 10;
 	otherwise:
 		say "     Defeating the prairie dogs, you manage to drive them off.  Luckily, you were able to deal with them in time and the soldier still seems to be human.  He thanks you profusely for your help and gathers up his gear.  He searches through his pack and, needing the medkit for his own injuries, passes you his rations, saying he'll have to head back to base to report in on this new hazard in the area.  You wish him well and head your separate ways, feeling much better about yourself.";
-		add "food" to invent of player;
+		increase carried of food by 1;
 		increase score by 25;
 		increase humanity of player by 5;
 		increase morale of player by 3;
@@ -241,8 +240,7 @@ Instead of resolving a Watering Hole:
 				say "     After defeating the eagle and sending it on its way, you face the pond, trying to decide if you'll take a drink.  Shall you lean down and have some water from the pond?";
 				if the player consents:
 					say "     Deciding that you'd rather have the water, regardless of the consequences, you lean in and drink your fill of the tainted waters.  You can taste the arousing flavour of their semen mixed into the water, but you're too excited now to stop.  As you finish your long drink, you spot a reflection in the water and, looking up, you spot more eagles soaring above you.  You decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot, only pausing to grab a couple of the feathers lying around before you go.";
-					add "eagle feather" to invent of player;
-					add "eagle feather" to invent of player;
+					increase carried of eagle feather by 2;
 					let ponddrinks be ( 1 + ( ( thirst of player - 1 ) / 25 ) );
 					repeat with y running from 1 to ponddrinks:
 						infect "Bald Eagle";
@@ -251,8 +249,7 @@ Instead of resolving a Watering Hole:
 					now thirst of player is 0;
 				otherwise:
 					say "     Deciding it'd probably be best to avoid the tainted waters, you get up.  Spotting more eagles in the air above you, you decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot.  You pause only long enough to grab a couple of the feathers scattered around the edge of the pond.";
-					add "eagle feather" to invent of player;
-					add "eagle feather" to invent of player;
+					increase carried of eagle feather by 2;
 					increase score by 5;
 	otherwise:
 		say "     Rather than risk facing the [if level of player <= 10]powerful [end if]creature for clearly tainted water, you decide to continue on your way, counting yourself lucky that you were able to learn that the water was infected.  Had he not been there, you may have ended up drinking it without knowing any better.";

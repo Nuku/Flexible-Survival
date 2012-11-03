@@ -21,10 +21,10 @@ to say losetoDoberman:
 			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly.  'It's good to see that you've still got some control in there.  Things are really crazy out there right now.  Do you still remember your name?  Where you lived and worked?'  She asks you some basic questions, not to get the information but to make sure you can still remember it.  'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder.  'I want you to return to your home, take cover and wait this thing out";
 		otherwise:
 			say "     You drop your fighting stance and put your arms up, surrendering to the canine policewoman.  From the way she looks at you and licks her muzzle, a part of you hopes she'll give into her lusts with you.  She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back.  'Rrrr!  I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together.  And you should be too.  Since you're obviously able to control yourself enough to not fight, there may still be hope for you.'  You feel one of her paws grope your ass before its pulled away quickly.  'Sh-  Look, we both need to keep it together until rescue can come,' she continues.  'I'm ordering you to take cover and wait this thing out'";
-		if "dirty whip" is listed in invent of player or "infected sword" is listed in invent of player:
+		if dirty whip is owned or infected sword is owned:
 			say ".'";
 			say "     The policewoman's canine nose twitches and [if dobieresist < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.  As you start to protest, she twists your arm harder and pushes you down with a growl";
-			if "dirty whip" is listed in invent of player and "infected sword" is listed in invent of player:
+			if dirty whip is owned and infected sword is owned:
 				say ".  She takes your whip and sword away, making sure to grab them using an evidence bag.  'I appreciate your cooperation, but I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
 				if weapon object of player is dirty whip:
 					now weapon damage of player is 4;
@@ -36,14 +36,14 @@ to say losetoDoberman:
 					now weapon object of player is journal;
 				delete dirty whip;
 				delete infected sword;
-			otherwise if "dirty whip" is listed in invent of player:
+			otherwise if dirty whip is owned:
 				say ".  She takes your whip away, making sure to grab them using an evidence bag.  'I appreciate your cooperation, but I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
 				if weapon object of player is dirty whip:
 					now weapon damage of player is 4;
 					now weapon type of player is "Melee";
 					now weapon object of player is journal;
 				delete dirty whip;
-			otherwise if "infected sword" is listed in invent of player:
+			otherwise if infected sword is owned:
 				say ".  She takes your sword away, making sure to grab them using an evidence bag.  'I appreciate your cooperation, but I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
 				if weapon object of player is infected sword:
 					now weapon damage of player is 4;
@@ -70,10 +70,10 @@ to say losetoDoberman:
 			say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms.  She growls and keeps a close eye on you.  For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she looks you over sternly.  'I can see that you've at least still got a little control in there.  Still, you were resisting arrest.  You need to get a grip on yourself and hold on until rescue comes.'  She pulls out a pad and quickly writes something out.  'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home.  You need to keep it together, take cover and wait this mess out until rescue comes";
 		otherwise:
 			say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms.  She growls and keeps a close eye on you, licking her muzzle with a grin of pleasure.  From the look she give you, a part of you hopes she'll give into her lusts with you.  She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back.  'Rrrr!  I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together.  And you should be too.  But you've been resisting arrest,' she growls in your ear, giving you ass a squeeze.  'Sh-  Look, we both need to keep it together until rescue can come,' she continues.  'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home.  You need to keep it together, take cover and wait this mess out until rescue comes";
-		if "dirty whip" is listed in invent of player or "infected sword" is listed in invent of player:
+		if dirty whip is owned or infected sword is owned:
 			say ".'";
 			say "     The policewoman's canine nose twitches and [if dobieresist < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.  As you start to protest, she twists your arm harder and pushes you down with a growl";
-			if "dirty whip" is listed in invent of player and "infected sword" is listed in invent of player:
+			if dirty whip is owned and infected sword is owned:
 				say ".  She takes your whip and sword away, making sure to grab them using an evidence bag.  'Just think about the damage you could have caused with these.  You're too much of a loose cannon to be trusted with them.  I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
 				if weapon object of player is dirty whip:
 					now weapon damage of player is 4;
@@ -85,14 +85,14 @@ to say losetoDoberman:
 					now weapon object of player is journal;
 				delete dirty whip;
 				delete infected sword;
-			otherwise if "dirty whip" is listed in invent of player:
+			otherwise if dirty whip is owned:
 				say ".  She takes your whip away, making sure to grab it using an evidence bag.  'Just think about the damage you could have caused with this.  You're too much of a loose cannon to be trusted with it.  I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
 				if weapon object of player is dirty whip:
 					now weapon damage of player is 4;
 					now weapon type of player is "Melee";
 					now weapon object of player is journal;
 				delete dirty whip;
-			otherwise if "infected sword" is listed in invent of player:
+			otherwise if infected sword is owned:
 				say ".  She takes your sword away, making sure to grab it using an evidence bag.  'Just think about the damage you could have caused with this.  You're too much of a loose cannon to be trusted with it.  I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
 				if weapon object of player is infected sword:
 					now weapon damage of player is 4;
@@ -114,10 +114,10 @@ to say losetoDoberman:
 		otherwise:
 			say "     After the Doberman cop strikes her final blow, she knocks you to the ground and presses her nightstick at the back of your neck to hold you down firmly.  She growls deeply and knees you in the kidneys twice for good measure.  From the grin on her muzzle and the lustful licking of your muzzle, a part of you hopes she'll give into her lusts with you.  'Rrrr!  I'm not sure if you can understand me in there,' she growls as she holds you down, 'but I'm really tempted to show you how much I appreciate your earlier stunt.  But I'm trying to keep it together, and you should be too.   'I'm not sure if you can understand me in there,' she growls as she holds you down, 'but you need to keep it together and hold out until rescue can come.  I know things are crazy out there, but you can't give into it.'";
 			say "     'As much as I'd like to detain you and keep you all to myself,' she says with a soft rumble in your ear while a paw slides over your ass before groping your groin, before being pulled away quickly.  'Sh- I know it's crazy out here, but you're not making my job any easier.'  She gives you a firm knee to the kidneys.  'So I'm giving you a ticket and ordering you back to your home.  You need to get your head on straight or you'll completely end up a sex monster like the others out there.  The police band stated that the National Guard would be called in, so rescue is on the way.  You need to get a grip, take cover and wait this mess out until rescue comes";
-		if "dirty whip" is listed in invent of player or "infected sword" is listed in invent of player:
+		if dirty whip is owned or infected sword is owned:
 			say ".'";
 			say "     The policewoman's canine nose twitches and [if dobieresist < 50]she quickly grabs you by the wrist,[otherwise]grinds a knee into your lower spine while still[end if] twisting your arm behind your back.  'That weapon you're carrying is infectious and therefore contraband.  I cannot allow you to keep it.  As you start to protest, she twists your arm harder and pushes you down with a growl";
-			if "dirty whip" is listed in invent of player and "infected sword" is listed in invent of player:
+			if dirty whip is owned and infected sword is owned:
 				say ".  She takes your whip and sword away, making sure to grab them using an evidence bag.  'I can't let a half-crazed fool like you run around with something like this.  You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
 				if weapon object of player is dirty whip:
 					now weapon damage of player is 4;
@@ -129,14 +129,14 @@ to say losetoDoberman:
 					now weapon object of player is journal;
 				delete dirty whip;
 				delete infected sword;
-			otherwise if "dirty whip" is listed in invent of player:
+			otherwise if dirty whip is owned:
 				say ".  She takes your whip away, making sure to grab it using an evidence bag.  'I can't let a half-crazed fool like you run around with something like this.  You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
 				if weapon object of player is dirty whip:
 					now weapon damage of player is 4;
 					now weapon type of player is "Melee";
 					now weapon object of player is journal;
 				delete dirty whip;
-			otherwise if "infected sword" is listed in invent of player:
+			otherwise if infected sword is owned:
 				say ".  She takes your sword away, making sure to grab it using an evidence bag.  'I can't let a half-crazed fool like you run around with something like this.  You cannot be trusted with something this dangerous and I cannot allow such weapons to be used unchecked.  We should be trying to slow the infection, not spread it faster";
 				if weapon object of player is infected sword:
 					now weapon damage of player is 4;

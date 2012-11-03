@@ -61,10 +61,7 @@ to say libraryentrance:
 		now toggle entry is libentry rule;
 	let foodfound be 0;
 	let waterfound be 0;
-	repeat with x running through invent of player:
-		if x is "water bottle", increase waterfound by 1;
-		if x is "food", increase foodfound by 1;
-	if ( waterfound > 1 and foodfound > 1 ) or jamesfed is 1:
+	if ( carried of water bottle > 1 and carried of food > 1 ) or jamesfed is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Bribe";
 		now sortorder entry is 2;
@@ -204,13 +201,13 @@ to say libweaponoffer:
 		say "     Having no spare weapons, you are unable to offer one to him.  You try to come with a new approach, but he seems fixated on getting back to guarding and you have to let him send you on your way for the moment.  He does ask that you stop by again if you do come across something he might be interested in.";
 		wait for any key;
 	if x > 1:							[spare weapon(s)]
-		if "nightstick" is listed in the invent of player and weapon object of player is not nightstick:
+		if nightstick is owned and weapon object of player is not nightstick:
 			now weaponpick is 1;
-		otherwise if "crowbar" is listed in the invent of player and weapon object of player is not crowbar:
+		otherwise if crowbar is owned and weapon object of player is not crowbar:
 			now weaponpick is 2;
-		otherwise if "tire iron" is listed in the invent of player and weapon object of player is not tire iron:
+		otherwise if tire iron is owned and weapon object of player is not tire iron:
 			now weaponpick is 3;
-		otherwise if "flotsam club" is listed in the invent of player and weapon object of player is not flotsam club:
+		otherwise if flotsam club is owned and weapon object of player is not flotsam club:
 			now weaponpick is 4;
 		if weaponpick is 0:
 			say "     You wonder if you've got a suitable weapon to satisfy his needs and show him several of the ones you're not using.  Unfortunately, none in your pack that strikes his fancy.  Unable to offer him one he'd like, he sends you on your way for the moment.  He does ask that you stop by again if you do come across something he might be interested in.";
@@ -220,7 +217,7 @@ to say libweaponoffer:
 			say "     Will you offer it to him in trade for entry?";
 			if the player consents:
 				say "     You tell him he can have it if he'll let you go in for a bit";
-				if "journal" is listed in invent of player:
+				if journal is owned:
 					say ".  You flash your journal quickly, claiming you need to drop the book off and want to look for another";
 				otherwise:
 					say ".  You flash the corner of a notepad, claiming you need to write a report and need to check a book out from the library for it";
@@ -448,7 +445,7 @@ to say libbook3:
 to say libbook4:
 	say "     You come across a book on animals and their mating habits, colourfully titled [']Wild Animals['].  The book has many details and covers a wide gamut of creatures and even has numerous photos of their genitalia or of them in coitus.  With a quick perusal, you are able to pick up a better understanding of some of the creatures out there, slightly improving your ability to deal with them.  You decide to take the book with you, only partially for the information.  While the information in the book may be a little dry and analytical, you also find it strangely arousing.  You hang onto it for some [']personal['] reading later.";
 	add 4 to bookcollection;
-	add "Wild Animals" to invent of player;
+	increase carried of Wild Animals by 1;
 	say "     You have gained [bold type]10 XP[roman type] from reading the book.";
 	increase xp of player by 10;
 
