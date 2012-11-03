@@ -2483,7 +2483,7 @@ Trading is an action applying to two things.
 Understand "give [owned grab object] to [person]" as trading.
 
 Check trading:
-	if second noun is the player, say "Do you think you will get a good deal from yourself? That[apostrophe]s a hard bargain, man." instead;
+	if second noun is the player, say "Do you think you will get a good deal from yourself? That[']s a hard bargain, man." instead;
 	if second noun is not a trader, say "They do not look interested in trading." instead;
 	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
 	if trade of the noun is "", say "They don[apostrophe]t seem interested in that specific item." instead;

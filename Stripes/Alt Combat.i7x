@@ -915,7 +915,7 @@ to win:
 	if lootchance entry <= 50, now yy is ( yy * lootchance entry ) divided by 100;
 	if a random chance of ( lootchance entry + yy ) in 100 succeeds:
 		say "You gain 1 x [loot entry]!";
-		add loot entry to invent of player;
+		add loot entry to the invent of the player;
 	if "Magpie Eyes" is listed in feats of player and lootchance entry is greater than 0:
 		decrease lootchance entry by z;
 	vialchance (name entry);

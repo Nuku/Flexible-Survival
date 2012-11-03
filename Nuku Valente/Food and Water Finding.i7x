@@ -46,7 +46,7 @@ Instead of resolving a potential resources:
 	now x is a random number from 1 to 4;
 	if x is 1:
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
-		add y to invent of the player;
+		add y to the invent of the player;
 	otherwise if x is 2:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
@@ -86,7 +86,7 @@ Instead of resolving a potential resources:
 				decrease hp of player by 10;
 			otherwise:
 				say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
-				add y to invent of the player;
+				add y to the invent of the player;
 	otherwise if x is 3:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
@@ -138,7 +138,7 @@ Instead of resolving a potential resources:
 			say "Your arguments fall on deaf ears. Wait, does this guy even have ears?";
 		otherwise:
 			say "After working out the specifics, you are handed the [y] and you stuff it into your backpack.";
-			add y to invent of the player;
+			add y to the invent of the player;
 	say "[line break]";
 	
 
