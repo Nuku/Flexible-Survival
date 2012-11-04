@@ -427,7 +427,7 @@ this is the combat item process rule:
 	let nam be title entry;
 	repeat with N running from 1 to the number of rows in the table of game objects:
 		choose row N in the table of game objects;
-		if name entry is nam:
+		if name entry matches the text nam, case insensitively:
 			process object entry;
 			break;
 	if battleitem is 0 and monsterhp is greater than 0:
