@@ -18,42 +18,36 @@ Rule for printing a parser error while the latest parser error is the can't see 
         say "You don't see that in your backpack."
 
 Carry out masslittering something(called x):
-	if x is wielded:
-		say "You're wielding that, take it off first.";
+	if x is wielded or x is equipped:
+		say "You're [if x is wielded]wielding[otherwise]wearing[end if] that.  Take it off first.";
 		stop the action;
 	otherwise if x is owned:
-		let found be 1;
-		let number dropped be 0;
-		while found is 1:
-			let number be 1;
-			now found is 0;
-			repeat with junk running through the invent of the player:
-				if junk matches the regular expression printed name of x, case insensitively:
-					now found is 1;
-					add junk to the invent of the location of the player;
-					remove entry number from invent of the player;
-					increase number dropped by 1;
-					break;
-				increase number by 1;
-		if number dropped is greater than 0:
-			say "You set down [number dropped] x [x].";
+		let found be carried of x;
+		repeat with z running from 1 to found:
+			add printed name of x to invent of location of player;
+		now carried of x is 0;
+		if found is greater than 0:
+			say "You set down [found] x [x].";
 
 criminallittering is an action applying to nothing.
 
 Understand "dropitall" as criminallittering.
 
 Carry out criminallittering:
-	let x be a text;
-	add the invent of the player to the invent of the location of the player;
-	now the invent of the player is {};
-	if "journal" is listed in invent of the location of the player:
-		add "journal" to the invent of the player;
-		remove "journal" from invent of the location of the player;
-	if the weapon object of the player is not the journal:
-		now x is the name corresponding to an object of weapon object of the player in the table of game objects;
-		add x to the invent of the player;
-		remove x from invent of the location of the player;
-	say "You drop everything but your journal[if weapon object of the player is not the journal], and the [x] you[apostrophe]re wielding[end if].";
+	let droptotal be 0;
+	repeat with x running through owned grab objects:
+		if x is journal or x is equipped or x is wielded:
+			next;
+		otherwise:
+			let found be carried of x;
+			repeat with z running from 1 to found:
+				add printed name of x to invent of location of player;
+			increase droptotal by carried of x;
+			now carried of x is 0;
+	if droptotal is 0:
+		say "You don't have anything you're ready to drop.";
+	otherwise:
+		say "You drop everything but your journal and any equipped items you have.  You get rid of [droptotal] item(s) in all[if droptotal > 4].  Ahhh!  Your back feels much better now[end if].";
 					
 
 Inventory Management Enhancements for FS ends here.
