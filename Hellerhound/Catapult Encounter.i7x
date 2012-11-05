@@ -58,8 +58,8 @@ instead of resolving a loaded catapult:
 			otherwise:
 				say "You manage to get the resources without touching the ropes.";
 				repeat with T running from one to three:
-					add "food" to the invent of the player;
-					add "water bottle" to the invent of the player;
+					increase carried of food by 1;
+					increase carried of water bottle by 1;
 					now gotcatares is 1;
 		otherwise:
 			say "You look at the resources, tortured by their nearness, but decide to leave them be.";

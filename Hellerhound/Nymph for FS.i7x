@@ -47,7 +47,7 @@ To say nymph attack:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent.[impregchance]";
 		say "You manage to collect some of the cum, placing it in an empty water bottle.";
-		add "nymph cum" to the invent of the player;
+		increase carried of nymph cum by 1;
 		infect "Tree Nymph";	
 	if cocks of player is greater than 0 and cunts of player is 0:
 		say "You collapse under the pain of your beating, and the nymph approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body and immobilizing you. ";
@@ -57,7 +57,7 @@ To say nymph attack:
 		say "After you finish, she shoves one of her breasts into your face. 'still not had a drink, eh?', she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
 		infect "Tree Nymph";
 		say "You collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
-		add "nymph cum" to the invent of the player;
+		increase carried of nymph cum by 1;
 	if cocks of player is 0 and cunts of player is 0:
 		say "She looks at you with horror. 'Nothing? Nothing for me to play with?' She exclaims. Well, you will just have to fix that and come back later.";
 		infect "Tree Nymph";

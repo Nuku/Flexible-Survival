@@ -162,7 +162,7 @@ to say Catnip use:
 	say "You open the packet of Catnip and take a deep whiff.";
 		say "You gasp as scent hits you like a sledge hammer, bringing you instantly to full arousal.";
 		increase libido of player by 100;
-		Remove "catnip" from invent of player;
+		decrease carried of catnip by 1;
 
 instead of sniffing catnip:
 	process catnip;
@@ -172,7 +172,7 @@ angietold is a number that varies.
 instead of conversing the Angie:
 	if angietalk is 0:
 		say "'Hey again, it[apostrophe]s sad to see this place is in such a state, still it[apostrophe]s no surprise considering what the rest of the Zoo is like.'She sighs wistfully as she looks around the devastated shop before turning her golden eyes back to you, 'Thanks again for your help out there, I really appreciate it,' Angie says, a grateful smile crossing her muzzle. 'I[apostrophe]m still getting used to all the changes, both in me and in the Zoo itself, but I[apostrophe]ll help you out any way I can to pay you back for earlier.  There might still be some useful supplies out in the zoo as well, and I recovered a couple medkits from the employees room.  You should take this kit' She says, as she hands you a medkit [line break]";
-		add "medkit" to invent of player;
+		increase carried of medkit by 1;
 		say "You received a medkit![line break]";
  		say "'If you see anything else out there you need help with let me know, I[apostrophe]m going to be staying around here for a while trying to see if I can find some of the emergency stashes, I know there are several around here.' Angie says, then sighs and admits, 'Plus I just can[apostrophe]t really bear to leave the zoo, I really loved this place you know?  It's hard seeing it like this, and I worry about the animals out there in the city, of course,' She says as she pauses to think about it for a second, 'I suppose I count as one of those animals now myself too,  its almost scary how tempting it is sometimes to just give in to these new instincts.' The panther herm sighs and shakes her head, 'Yeah I just don[apostrophe]t think I can trust myself to go out there with you, if it got to be too much I might actually end up helping some of those wonderful beasts hold you down and fuck you while I...' Her voice trails off a minute as she blushes in embarrassment, although you note her cock is pushing up on the front of her skirt as her tail lashes behind her in excitement.  'Um yeah lets just say its best if I stay here for now..";
 		increase angietalk by 1;
@@ -259,7 +259,7 @@ to say angiertfun:
 	Infect "Pantherherm";
 	Infect "Pantherherm";
 	Say "[line break]As your bones settle back into place Angie cuddles up to you, licking your new fur. 'Oh that was wonderful.' she purrs, 'Tiger[apostrophe]s aren[apostrophe]t as sexy as panthers but they[apostrophe]ll do in a pinch, right?'  She laughs as you rub your throat, which still feels stretched. 'Was I a little rough?  It's funny, you know.  You touch my cock, then suddenly I'm all dominate and growly.  You lick my pussy and I'm a needy little whore. It's a switch.' She sighs and leans her head onto you chest, 'Thanks for being my toy, felt good to be in charge for once, Midnight[apostrophe]s a very top cat panther.  Here, you can take this from Midnight and my stash.";
-	Add "catnip" to the invent of the player;
+	increase carried of catnip by 1;
 	now angietold is 2;
 	now lastangiefucked is turns;
 	now lastMidnightfucked is turns;
