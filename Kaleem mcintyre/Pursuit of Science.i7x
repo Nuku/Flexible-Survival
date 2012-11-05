@@ -84,33 +84,18 @@ to say omioquest2:
 	let demonseedfound be 0;
 	let dogmilkfound be 0;
 	if gatherwolfcum is 0:
-		repeat with k running through invent of player:
-			if k is "wolf cum", increase wolfcumfound by 1;
-		if wolfcumfound >= 5:
+		if carried of wolf cum >= 5:
 			say "'Thank you so much for this!' Omio says as she suddenly jumps into the air and snatches the vials of wolf cum from you, almost startling the crap out of you. 'This will go a long way towards my research and development project for the overseer.' You try and ask the woman what she means, but Omio is just too excited to listen to you right at the moment as she continues to dance around.";
-			delete wolf cum;
- 			delete wolf cum;
-			delete wolf cum;
-			delete wolf cum;
-			delete wolf cum;
+			decrease carried of wolf cum by 5;
 			now gatherwolfcum is 1;
 	if gatherdemonseed is 0:	
-		repeat with k running through invent of player:
-			if k is "demon seed", increase demonseedfound by 1;
-		if demonseedfound >= 4:
-			delete demon seed;
-			delete demon seed;
-			delete demon seed;
-			delete demon seed;
+		if carried of demon seed >= 4:
+			decrease carried of wolf cum by 4;
 			say "I appreciate all of your efforts in working with me on this. I-I honestly didn't think you would go through such an endeavor for me.' Omio seems to choke up somewhat and from what you can see the red head is sincere in her sorrow. 'Oh well, thank you for your troubles.' Omio walks over to hug you and then place a gentle peck on your [facename of player] head.";
 			now gatherdemonseed is 1;
 	if gatherdogmilk is 0:
-		repeat with k running through invent of player:
-			if k is "dog milk", increase dogmilkfound by 1;
-		if dogmilkfound >= 3:
-			delete dog milk;
-			delete dog milk;
-			delete dog milk;
+		if carried of dog milk >= 3:
+			decrease carried of dog milk by 3;
 			say "'This is exactly what I need. Thank you for all of your help.' Omio looks over the collected sample of dog milk and then cocks her head back and forth while looking at the rolling white fluids. 'I should probably freeze this as soon as possible.' Omio goes off about her business and seems to flat out ignore you.'";
 			now gatherdogmilk is 1;
 	if gatherwolfcum is 1 and gatherdemonseed is 1 and gatherdogmilk is 1:		[complete]
@@ -127,40 +112,33 @@ to say omioquest2:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 			say "'The ferals aren't going to go anywhere anytime too soon, but we can't just let them run free forever.' Omio sighs heavily as she sits herself down onto her sofa. Looking over the somewhat tired red head you get the feeling that the conversation is over with. Though all of this information is rather much to take in, it does explain certain things about the future to come. Maybe helping Omio out more with her research will benefit everyone involved? Only time will tell. 'Anyway,' The red head gets up and then cheerfully smiles at you. 'You've done your work for me, so here are some gifts for you. Take them with my thanks.'";
-			add "water bottle" to invent of player;
-			add "food" to invent of player;
-			add "chips" to invent of player;
-			add "soda" to invent of player;
-			extend game by 8;
-			increase score by 50;
-			now omq is 3;
 		otherwise:											[need more]
 			say "'Oh, ok.' Omio shrugs, but doesn't seem all that hurt by your lack of interest in what she knows. 'Anyway,' The red head cheerfully smiles at you. 'You've done your work for me, so here are some gifts for you. Take them with my thanks.'";
-		add "water bottle" to invent of player;
-		add "food" to invent of player;
-		add "chips" to invent of player;
-		add "soda" to invent of player;
+		increase carried of water bottle by 1;
+		increase carried of food by 1;
+		increase carried of chips by 1;
+		increase carried of soda by 1;
 		extend game by 8;
 		increase score by 50;
 		now omq is 3;
 	otherwise:
 		say "'Now remember, I need you to locate several samples for my work.  To start my work, I am in need of five samples of wolf cum, four samples of demon seed and three samples of dog milk.  You should be able to find those back in the city if you look around for them.  As for the reward, we can talk about that after we're finished.";
 		if gatherwolfcum is 0:
-			if wolfcumfound is 0:
+			if wolf cum is not owned:
 				say "'Please remember that I need those samples as quickly as humanly, or otherwise in this case, possible. I know you have other things to accomplish, but time is really working against us and all.' Omio says with a calm, but commanding tone while watching you with her golden eyes shining pointedly into your face.";
 			otherwise:
 				say "'You don't have quite enough wolf cum at the moment, but I do commend you ability to gather what I need in spite of everything that's going on here in the city.' Omio smiles at you and then gives you a playful wink. 'I need five samples in total.  Good luck on your quest[if cunts of player > 0]gorgeous[otherwise if cocks of player > 0]handsome[otherwise if cunts of player > 0 and cocks of player > 0]my friend[end if].";
 		otherwise:
 			say "Now, you've already taken care of the wolf cum, so you can focus on the other stuff on the list.";
 		if gatherdemonseed is 0:
-			if demonseedfound is 0:
+			if demon seed is not owned:
 				say "'I know that it might be a little dangerous to ask you to face off against demons and the likes, but I really do need the full number of those samples, ASAP. If I remember correctly then there were reports of demons infesting the sewers of that big mall within the city. What was its name again?' Omio pauses for effect and then actually puts a finger underneath her chin to think about it. 'You know what... I don't think I actually remember. Was it south-something? Or was it Smithhaven? Or maybe Sicily?";
 			otherwise:
 				say "'I need you to gather even more of their demonic seed for my work.  I will need a total of four samples from those creatures.  I know facing off against them is asking quite a bit, but as you've seen, they're not quite as tough as they look.  They are beings created partially of fear and lies, and so those with enough bravery and strength of will are able to beat their physically imposing forms.  Remain confident and you will continue to prevail against them.";
 		otherwise:
 			say "With the demon seed taken care of, you can check that off the list of items.";
 		if gatherdogmilk is 0:
-			if dogmilkfound is 0:
+			if dog milk is not owned:
 				say "I know this might be a little strange a request, but please don't try and milk any old dog to bring back it's juice.' Omio giggles slightly. 'What I need is the milk of the mutant collie that's walking around town that stands about twelve feet tall in height. She's really not too hard to miss, but she can be somewhat elusive when she wants to be. Please find and bring me her milk so I can analyze it.'";
 			otherwise:
 				say "'I see you found the collie in question, I hope she wasn't too rough on you. She can be kinda frisky, but she honestly doesn't mean any harm.' Omio seems to snicker at this and you have to wonder just if the red head knows the mutant in question.";
@@ -205,8 +183,7 @@ to say omioquest3:
 				challenge "Wyvern";
 				challenge "Wyvern";
 				say "After dealing with those pest, and then wiping their gunky slime-like mucous down from off of your body, you decide that today's adventure is over and that its time to head for home. Though oddly enough, you manage to procure some bottles of water from the ground beside the truck before you go.";
-				add "water bottle " to invent of player;
-				add "water bottle" to invent of player;
+				increase carried of water bottle by 2;
 				Move player to Bunker;
 				extend game by 8;
 				increase score by 25;
@@ -220,9 +197,7 @@ to say omioquest3:
 			now omq is 4;		
 	otherwise:
 		say "'GODS!!!' Omio yells while shivering and rocking herself slightly. 'I can't stand those little pests! One of these days I'm going to create a super rodent killing machine and then let it go to town wiping out every last vegetable eating pest I can find on this stupid planet! Omio begins to rant more and more and quickly you get the feeling that maybe leaving would be a good thing to do before her ire finds its way centering on you. Taking your leave you notice several peaches on the ground at your feet and quickly move to pick them up while heading off. Lucky!";
-		add "peach" to invent of player;
-		add "peach" to invent of player;
-		add "peach" to invent of player;
+		increase carried of peach by 3;
 		extend game by 8;
 		increase score by 15;
 		now omq is 4;
@@ -269,7 +244,7 @@ to say omioquest6:
 		say "Why are you friends with this crazy woman again?";
 		now Ointerrogate is 2;
 		increase score by 6;
-	if omq is 6 and "lumpy box" is listed in invent of player:
+	if omq is 6 and lumpy box is owned:
 		say "'Oh!! Thank you so much!' Omio takes the offered package and then quickly darts off into her room to check over it. Too tired to bother chasing after the red head you simply move over to Omio's sofa and then crash onto the soft cushions. Minutes later find Omio coming back out of her room and then dancing around merrily while humming somewhat upbeat into the pit of her throat. Turning to look at you the red head can't help but grin like a lunatic as she comes over to sit down next to you.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
@@ -279,9 +254,9 @@ to say omioquest6:
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 		say "'Oh before you go, I just wanted you to know I'm going to be working on a big [bold type]alchemy[roman type] project soon so be on the look out to help, if you feel the need to come around, that is.' Omio shyly smiles at you while saying this and you groan slightly before sighing.";
 		delete lumpy box;
-		add "peach" to invent of player;
-		add "food" to invent of player;
-		add "water bottle" to invent of player;
+		increase carried of water bottle by 1;
+		increase carried of food by 1;
+		increase carried of peach by 1;
 		extend game by 8; 
 		increase score by 25;
 		now omq is 7;
@@ -310,33 +285,20 @@ to say omioquest8:
 	let spottedfurfound be 0;
 	let taintedwoolfound be 0;
 	if gatherspottedfur is 0:
-		repeat with k running through invent of player:
-			if k is "Spotted fur", increase spottedfurfound by 1;
-		if spottedfurfound >= 1:
+		if carried of Spotted fur >= 5:
 			say "'Well, aren't you a dashing hero, collecting this fur from savage leopards at the behest of a fair maiden.' Omio teases you and you find yourself blushing from the compliment...at least you think it's a compliment. The look in the other's golden eyes seem to speak somewhat differently though.'";
-			delete Spotted fur;
-			delete Spotted fur;
-			delete Spotted fur;
-			delete Spotted fur;
-			delete Spotted fur;
+			decrease carried of Spotted fur by 5;
 			now gatherspottedfur is 1;
 	if gathertaintedwool is 0:	
-		repeat with k running through invent of player:
-			if k is "Tainted wool", increase taintedwoolfound by 1;
-		if taintedwoolfound >= 1:
+		if carried of Tainted wool >= 3:
 			say "I appreciate all of your efforts in working with me on this. I-I honestly didn't think you would go through such an endeavor for me.' Omio seems to choke up somewhat and from what you can see the red head is sincere in her sorrow. 'Oh well, thank you for your troubles.' Omio walks over to hug you and then place a gentle peck on your [facename of player] head.";
-			delete Tainted wool;
-			delete Tainted wool;
-			delete Tainted wool;
+			decrease carried of Tainted wool by 3;
 			now gathertaintedwool is 1;
 	if gatherspottedfur is 1 and gathertaintedwool is 1:		[complete]
 		say "[bold type]The next bit of text is kinda long. You can skip it if you'd like. (Y=Skip, N=Read)[roman type]";
 		if player consents:
 			say "Omio gabs at you about the past and future and what not but you're not really paying attention. You do thank her all the after she hands you your new gear though. It never hurts to be polite after all.";
-			add "leopard suit" to invent of player;
-			add "water bottle" to invent of player;
-			add "food" to invent of player;
-			add "peach" to invent of player;
+			now carried of leopard suit is 1;
 			extend game by 8;
 			increase score by 20;
 			now omq is 9;		
@@ -368,10 +330,7 @@ to say omioquest8:
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				say "'Don't worry about it, just know that previous events won't be repeated if I have anything to say about it. If you give me some time I'll go over and work on this material to make it into something useful for you. You could so with some decent armor and all. Or maybe you could do with a nice loincloth to cover your lower [bodyname of player] body with. It would be something sexy to tease a certain mythical equine you've shagged before while strutting your stuff around in front of him.' You find cocking your head to the side in confusion before you suddenly recall Omio's quest for you to gain a unicorn form.";
 				say "Omio moves away from you, pulling the lump of spotted cotton with her, and then goes about her way to tailor the material into a piece of armor for you. Idly you wonder what she'll make.";
-				add "leopard suit" to invent of player;
-				add "water bottle" to invent of player;
-				add "food" to invent of player;
-				add "peach" to invent of player;
+				now carried of leopard suit is 1;
 				extend game by 8;
 				increase score by 20;
 				now omq is 9;
@@ -380,24 +339,21 @@ to say omioquest8:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				say "Tentatively you ask Omio what she means by that, but find yourself blinking in confusion back when the red head starts laughing all of a sudden. 'My, my, aren't we the curious one. Do you really think I'll give away all of my secrets? Any who, if you give me some time I'll go and work on this material to make it into something useful for you. So please, just give me a little time.' And with that the other beats a hasty retreat to her bedroom to begin working.";
-				add "leopard suit" to invent of player;
-				add "water bottle" to invent of player;
-				add "food" to invent of player;
-				add "peach" to invent of player;
+				now carried of leopard suit is 1;
 				extend game by 8;
 				increase score by 20;
 				now omq is 9;
 	otherwise:
 		say "'I know that I just asked you to go on a hunting missing for me, not more than a couple of days prior, but I do need those materials for my research .";
 		if gatherspottedfur is 0:
-			if spottedfurfound is 0:
+			if Spotted fur is not owned:
 				say "'Remember, [']five spotted fur['] in the high rise district. Fix it into your memory. A little ditty about both will help if all else fails. What do you know that rhymes with fur?' Omio asks honestly while tilting her head to the side.";
 			otherwise:
 				say "'Not quite enough spotted fur, but I love you working so hard for me.' Omio giggles shyly while batting her golden eyes at you. You silently wonder if it is alright to feel nauseated by the red head's display of femininity.";
 		otherwise:
 			say "'Spotted fur acquired captain!' Omio chrips. 'Now for the wool. I think there are supposed to be sheep somewhere at a certain store in the city? New Eve...or was it Evelyn? Or something. Omio cocks her head to the side while contemplating deeply. Sometimes you have to wonder if she's being serious of facetious with you when she does this clueless acting thing of hers.";
 		if gathertaintedwool is 0:
-			if taintedwoolfound is 0:
+			if Tainted wool is not owned:
 				say "'Remember, the rams would be at the New Ewe Store. Gonna catch a few of them for me, right?' Omio produces a small red and black ball from somewhere and then tosses it over your head. You don't even bother to look to see where it goes as you suddenly just want to get the hell away from the crazy red head.";
 			otherwise:
 				say "'Baa, baa black sheep have you anymore? No, sir. No, sir. Just a few bits more!' Where Omio got that leotard she wearing from you're not sure and truly you don't want to know, especially as she jingles those pompoms in front of her.";
@@ -420,9 +376,9 @@ to say omioquest9:
 
 
 to say omioquest10:
-	if "medallion" is not listed in invent of player:
+	if medallion is not owned:
 		say "'Please retrieve that medallion, the [bold type]Ouroboros[roman type], for me. I should be in the museum...unless someone has already stolen it.' Omio nibbles on the end of her fingernail as she says this.";
-	otherwise if "medallion" is listed in invent of player:
+	otherwise:
 		say "The squeal Omio let's out upon seeing you holding onto the medallion is almost enough to make your ears hurt as the red head's scrambles over to you and then gently takes the artifact she had so requested off of your hands. 'Thank you so much for this! Now I don't have to go through the effort of trying to craft one of these relics for myself.' Omio rubs the bronze metal against her tanned face and for a moment you almost think that you can see her golden eyes spark with an electric-like glow.'";
 		say "'Thank you again. This will be a big help for me.' Omio looks to you with a smile that speaks of something you're not quite sure of as golden eyes seem to gleam almost like stars from within the red head's face. 'Now then, to pay you back I can give you some more information on the organization I work for, if you'd like?(Y=Yes, N=No)";
 		if player consents:
@@ -441,13 +397,6 @@ to say omioquest10:
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				say "'For now though,' Omio says catching you just as you are about to go too deep into your own thoughts. 'Don't worry about it. Just know that there is a going to be a safe enough haven for you to go, if you feel that the world is becoming too much, provided that you are willing to do you share enough to help out the collective whole.' Omio glares at you while saying this. 'We're not running a charity site for people looking to just get over, we're running a place where everyone helps everyone else. All for one and one for all, as you could say.'";
 				say "Anyway,' The red head smiles and then giggles in her normal girlish way. The heavy air around the room from the previous conversation is now dispelled in the face of a more uplifting feeling. 'Thank you for helping me out just now. I'm going to be working more on my experiments so please, continue to help me out as much as you can. It will go a long way towards making this so much better for everyone involved.' Omio winks and you breathe out a sigh of disbelief at the golden eyed woman's sudden personality flip.";
-				delete medallion;
-				add "food" to invent of player;
-				add "water bottle" to invent of player;
-				add "peach" to invent of player;
-				extend game by 8;
-				increase score by 5;
-				now omq is 11;
 			otherwise:
 				say "You smile lustfully to Omio while coyly asking her what's so wrong with that? 'I see someone is succumbing to their licentious nature, you may want to take care of that before you end up somewhere in the park rutting with skunks.' Omio advises while rolling her eyes towards the ceiling. You only chuckle at the other before asking her to continue with her story."; 
 				say "'Anyway...with the way things are going with the media portraying those here in the city like some kind of debased vagabonds with no sense of morality or consciousness, and I know this because my organization is carefully listening to certain broadcasts, regular people who don't know anything of what's happening are going to get...confused by the situation. Knowing this and knowing of how hostilities have been in the past towards those who are [']different['] are you really ok with living in a world where you are looked down on by the very people you once considered yourself part of?'";
@@ -461,24 +410,17 @@ to say omioquest10:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				say "Anyway,' The red head smiles and then giggles in her normal girlish way signifying that the conversation's focus has now changed. 'Thank you for helping me out just now. I'm going to be working more on my experiments so please, continue to help me out as much as you can. It will go a long way towards making this so much better for everyone involved.' Omio winks and you breathe out a sigh of disbelief at the golden eyed woman's sudden personality flip.";
-				delete medallion;
 				decrease hp of player by 10;
 				if hp of player < 1, now hp of player is 1;
-				add "food" to invent of player;
-				add "water bottle" to invent of player;
-				add "peach" to invent of player;
-				extend game by 8;
-				increase score by 5;
-				now omq is 11;			
 		otherwise:
 			say "'Alright.' Omio giggles good-naturedly. It seems the red head is not bothered by your lack of interest in her people in the slightest. Maybe that's proof she trusts you? Or maybe not? 'Any who, thanks for all of your hard word. Please, accept these as a gift for all of your trouble, my sweet little bandit in disguise.' The thought of your past capper makes you roll your eyes to the ceiling.";
-			delete medallion;
-			add "food" to invent of player;
-			add "water bottle" to invent of player;
-			add "peach" to invent of player;
-			extend game by 8;
-			increase score by 5;
-			now omq is 11;
+		delete medallion;
+		increase carried of food by 1;
+		increase carried of water bottle by 1;
+		increase carried of peach by 1;
+		extend game by 8;
+		increase score by 5;
+		now omq is 11;
 
 
 to say omioquest11:
@@ -489,14 +431,14 @@ to say omioquest11:
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 	say "Asking the other why she just doesn't deliver the case to this Captain Redeye herself the red head sighs and then looks away. When no answer comes you find yourself not knowing what else to say at this point. Best to move along then.";
-	add "undisclosed case" to invent of player;
+	now carried of undisclosed case is 1;
 	now Warehouse District is known;
 	increase score by 2;
 	now omq is 12;
 
 
 to say omioquest12:
-	if "undisclosed case" is listed in invent of player:
+	if undisclosed case is owned:
 		say "'I know I haven't given you much by the way of information, but please. Go to the warehouse and look for Captain Red-Eyes and give him that case. It's...important.' Omio's whispered command makes you wonder just what's in this thing, but at her heartfelt look of...grief you don't bother asking. To the warehouse then to drop off this [bold type]Special Delivery[roman type]."; 
 	otherwise if bch is 1:
 		say "'Thank you for getting that case to Redeye.' Omio says and you simply nod to the red head. The hydra's words still ring in your ear somewhat so you feel slightly confused as you try to think on Omio's relationship to the sea serpent and your own choices for the future. 'I guess the last thing to do now is to get you to head to the [bold type]beach[roman type] and collect a certain material for me. That is, if you can spare the time. Omio looks to you with a strange, almost haunted look and for a minute you have to wonder...";
@@ -513,7 +455,7 @@ to say omioquest13:
 
 
 to say omioquest14:
-	if "flotsam club" is listed in invent of player:
+	if flotsam club is owned:
 		say "Having Omio remind you about the club you recall that you did find one and do have it one hand. But should you let Omio have it? Knowing the red head, anything might happen if she gets her claws onto the piece of wood. But then again, has she ever let you down before? You can live without a piece of driftwood, right?(Y=Yes, N=No)";
 		if player consents:
 			say "Telling Omio that you have one and that you wouldn't mind giving it to her you pull the piece of wood out and then wait. Quickly the other scoops the weapon from out of your [bodyname of player] hands, gives you a hug and then goes over to her cauldron to do something with it. Feeling slightly vulnerable without your weapon you ask Omio what she's going to do with it. Your answer comes in the form of the red head tossing your weapon into her bubbling pot like one would a vegetable into a hotpot. Oddly enough, something that really shouldn't have been, given who you are dealing with, you find yourself staring in awe as the piece of driftwood simply [italic type]melts[roman type] into the brewing yellowish orange mixture before disappearing completely.";
@@ -538,7 +480,7 @@ to say omioquest14:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 			say "Tracing this feeling back to its source you find that your heart is clenching just a little tighter for some reason as you watch Omio rise back up to her full height. The feeling is somewhat painful, but not in a physical way...more like...debilitating? Trying to understand what this is all about you get the oddest sense that you may not see Omio again after the city is rescued...or sanitized. However, that can't be right. The other just asked you to come by and help her out sometime later on. Maybe you're just feeling lonesome since you'll probably not have a reason to see the other quite so often. Maybe going to the red head's place to share some tea with Omio would be a good thing to do, whenever you have the time, that is.";
-			add "Organi Rod" to invent of player;
+			now carried of Organi Rod is 1;
 			delete flotsam club;
 			now omq is 15;
 			increase score by 25;
@@ -612,11 +554,6 @@ Instead of resolving a Dream of a Unicorn:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				say "When you wake up from your inopportune nap you have a hard time remembering what exactly happened, that is, until you find your clothes still in a puddle on the ground and your lap sticky with dried cum. Blushing slightly as the memories return to you, you look around to see where Omio has gotten to. When you see nothing and no one, save some skunk girls grinning at you from behind a bush you decide that Omio must have used her teleporter to go back home. Either that or walked. Picking up your clothes you note that there are several provisions laid out on the ground for you.";
-				add "food" to invent of player;
-				add "water bottle" to invent of player;
-				add "peach" to invent of player;
-				extend game by 8;
-				now Dream of a Unicorn is resolved;
 			otherwise:
 				say "'Alright then, just hold still while I conclude the last portion of the examination.' Omio chuckles and quickly you find yourself trying to back away from the other. You fearful retreat only succeeds in causing you to slip further onto the table, which consequently gives Omio a perfect opening as a white gloved hand reaches down to dip two fingers into your open cunt. A sudden grunt of pleasure quickly turns into panting moans as you feel Omio's, surprisingly thick digits, slip deeper and deeper into you until the redhead has both of her knuckles buried inside of your [bodyname of player] pussy. Spreading your legs on instinct you buck and shiver as the wannabe doctor's swirls her fingers around inside of your cunt while pressing her thumb over the nub of your clit. Arching and panting your body feels like you're about to go into heat as your honey begins to leak out from the inside of your now gaping folds.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -628,19 +565,14 @@ Instead of resolving a Dream of a Unicorn:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				say "You pass out from exhaustion before you can comment on that one and when you wake up you have a hard time remembering what exactly happened, that is, until you find your clothes still in a puddle around you on the floor and your lap sticky with your spilled honey. Blushing slightly as the memories return to you, you quickly get up and then go about your way before any trouble can find you. In your backpack are several extra supplies that had been given over by Omio.";
-				add "food" to invent of player;
-				add "water bottle" to invent of player;
-				add "peach" to invent of player;
-				extend game by 8;
-				now Dream of a Unicorn is resolved;
 		otherwise:
 			say "'Well I suppose we can skip it for today then.' Omio smiles patiently while saying this. The look in her eye is a bit forlorn, but at the same time you don't think you're ready for her to try anything more on your. 'Ok, well, I'm going to be working back at home. If you want to come and help me out again just head there.' Omio winks at you and then moves to take of her gloves and scrubs.";
 			say "When the redhead is done with the clean up portion of the examination she lays out several provisions for you and then turns to go off about her way.";
-			add "food" to invent of player;
-			add "water bottle" to invent of player;
-			add "peach" to invent of player;
-			extend game by 8;
-			now Dream of a Unicorn is resolved;
+		increase carried of food by 1;
+		increase carried of water bottle by 1;
+		increase carried of peach by 1;
+		extend game by 8;
+		now Dream of a Unicorn is resolved;
 
 
 

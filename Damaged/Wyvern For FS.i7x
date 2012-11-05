@@ -18,7 +18,7 @@ to say infect:
 	infect;
 	
 to say wyvern goop:
-	add "Wyvern Goop" to invent of player;
+	increase carried of wyvern goop by 1;
 
 to say wyvern attack:
 	if Wyvern_initialattack is 0:

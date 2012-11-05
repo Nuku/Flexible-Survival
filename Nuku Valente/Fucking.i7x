@@ -16,7 +16,7 @@ before fucking:
 
 check fucking:
 	if noun is not visible, say "Who?" instead;
-	
+
 Carry out fucking:
 	say "They don't seem very interested.";
 

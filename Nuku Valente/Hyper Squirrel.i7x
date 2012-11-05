@@ -50,12 +50,7 @@ Instead of Resolving a Hyper Squirrel Girl:
 				say "Give her something?";
 				if the player consents:
 					if the distilled milk is owned:
-						let number be 0;
-						repeat with Q running through invent of the the player:
-							increase number by 1;
-							if q matches the regular expression printed name of distilled milk:
-								remove entry number from invent of the player;
-								break;
+						decrease carried of distilled milk by 1;
 						say "'Awesome! Let[apostrophe]s go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
 						now snow is in Grey Abbey Library;
 						move player to Grey Abbey Library;
@@ -235,11 +230,11 @@ to say snowsquirrelgivein:
 		say ".  Pulling you into her lap, Snow slides her cock into your pussy and bounce her in your lap, her large breasts pressed to your chest.  The wild squirrels stand to either side of you, letting you both suck squirrel cock while fucking your new mate.  This beastial fucking goes on until she cums hard, filling your womb with her cum and each getting another tasty load from the squirrels down your throat.  After that, you're mounted again by the wild pair while Snow takes a turn eating out your cum-leaking box.  The romp continues on like this through a myriad of pairings and positions for hours despite the fact you both succumbed long ago.  Eventually, you four run off together back to the their nest to rest before going off in search of others to share your addictive lust with.";
 	now bodyname of player is "squirrel";
 	now skinname of player is "squirrel";
-	now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws.";
+	now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws";
 	now skin of player is "white furred";
 	now tailname of player is "squirrel";
 	now tail of player is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
-	now face of player is "set of two long white squirrel ears twitching above your head, a long rodent snout with bucked teeth jutting out of your";
+	now face of player is "set of two long white squirrel ears twitching above your head, a long rodent snout with bucked teeth jutting out a little";
 	now facename of player is "squirrel";
 	now cockname of player is "squirrel";
 	now cock of player is "bright pink";

@@ -266,9 +266,7 @@ Carry out HelpingKenazOut:
 
 To say aidKenaz1:
 	Let foodfound be 0;
-	Repeat with g running through invent of player:
-		If g is "food", increase foodfound by 1;
-	If foodfound >= 10:
+	If carried of food >= 10:
 		Say "'Thanks a lot for this!' Kenaz looks over the food you procured for him and then growls slightly before catching himself. 'Sorry about that. This growling thing seems to be getting worse as time goes by. It probably doesn't help matters much that most of the guys you found are now dogs.' Kenaz chuckles darkly at that thought and without meaning to you raise one eyebrow curiously at the other man. 'Oh, sorry, it's...'";
 		Say "Kenaz looks pensive for a moment but then just shakes his head as though trying to erase his own thoughts before they could become voiced. Tentatively you ask the other what's the matter that's concerning him so much when seconds of silence become minutes in between you. 'Well...' Kenaz licks his lips and then flushes some. 'You see, you know Othala? The salt and pepper haired woman you help saved. Well…you see…that is…' Kenaz lack of a finishing his statement begins to worry you slightly, but not as much as what happens next.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -404,7 +402,7 @@ To say aidKenaz4:
 To say aidKenaz5:
 	Say "'[italic type]Wuff![roman type] Oh sorry about that. That's been happening a lot as of late.' Kenaz rubs the back of his head before smirking at you. From what you can see the other is taking to his new form quite well. 'Anyway, I don't think I have much for you to do for today...oh wait a minute!' Kenaz makes a mad dash over to where the coat racks are and then pulls off a single firefighter coat and then brings it back over to you. 'Here, this may not be much, but please. I want you to have it for all of the trouble you've gone through for me and everyone else.'";
 	Say "Not seeing a reason why you shouldn't you take the offered gift you take the firefighter's coat and then place it into your backpack. 'I'm sorry that I don't have much to offer you, but...' You shush the other before he can start. Letting the Kenaz know that his souvenir will be cherished regardless of its worth gets a smile from the Dalmatian. 'You're a good friend, you know that?' You can only smirk at the other at that point.";
-	Add "firefighter coat" to invent of player;
+	now carried of firefighter coat is 1;
 	Now HelpKenazout is 6;
 	Now Kenazdes is turns;
 
@@ -447,12 +445,8 @@ To say aidKenaz6:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "Taking this chance for all that its worth you haul the shivering and groaning firefighter back towards the firehouse, after barking at the stunned Dalmatians to move their tails. Birch is the first to give you a hand with your burden as the others form a half circle in front of you with Pertho taking the lead. Getting Kenaz to the main area of the firehouse and then helping to get him cleaned off you and the others watch as the Dalmatian shivers, groans and whimpers while his body seemingly goes into shock. Before panic can set throughout you and the assembled firefighter however, you and everyone else get a big surprise out of the fallen Dalmatian...";
-			add "food" to invent of player;
-			add "food" to invent of player;		
-			add "food" to invent of player;
-			add "water bottle" to invent of player;
-			add "water bottle" to invent of player;
-			add "water bottle" to invent of player;
+			increase carried of food by 3;
+			increase carried of water bottle by 3;
 			move OtherDals to NeverNeverLand;
 			now Kenaztalk is 6;
 			now Kenazaroused is 0;
@@ -464,12 +458,8 @@ To say aidKenaz6:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "Not knowing how long the other is going to stay unconscious you grab Kenaz up off of the ground and then haul yourself and his furry black spotted butt back to the firehouse. 'Thanks a lot for not leaving me.' Kenaz whispers while trying not to laugh as the aftermath of panic begins to set into his mind about what could have just happened to him. At hearing those words you grip the hand you have holding onto the Dalmatian's furry paw just a bit tighter as the two of your run down the street together, back into the relative arms of safety.";
-			add "food" to invent of player;
-			add "food" to invent of player;		
-			add "food" to invent of player;
-			add "water bottle" to invent of player;
-			add "water bottle" to invent of player;
-			add "water bottle" to invent of player;
+			increase carried of food by 3;
+			increase carried of water bottle by 3;
 			increase score by 10;
 			now helpKenazout is 10;
 			follow the turnpass rule;
@@ -994,7 +984,7 @@ Instead of conversing the OtherDals:
 		if diceroll is greater than 16:
 			say "Spending the next hour of so playing round after round with the Dals nets you collecting a vast majority of the chips that the firefighters have scattered out onto the table. Because of your charisma you wind up winning the game and ultimately netting just a little more respect from the group as they growl playfully at you for beating them.";
 			say "Astonishingly enough Pertho comes up to you with a bottle of water in his jaws, offering the bottle to you for your successful win, or so you would guess. Taking the water with good grace you thank the feral pooch by scratching him behind his ears before stuffing the water bottle into the back of your pack. Thanking the guys for the good time you get up from the table to let Othala have your seat and then stretch your tired limbs before going about your way.";
-			add "water bottle" to invent of player;
+			increase carried of water bottle by 1;
 			increase score by 1;
 			follow the turnpass rule;
 		otherwise:
@@ -1033,7 +1023,7 @@ Instead of conversing the DalmatianTroupe:
 		if diceroll is greater than 16:
 			say "Spending the next hour of so playing round after round with the Dals nets you collecting a vast majority of the chips that the firefighters have scattered out onto the table. Because of your charisma you wind up winning the game and ultimately netting just a little more respect from the group as they growl playfully at you for beating them.";
 			say "Astonishingly enough Pertho comes up to you with a bottle of water in his jaws, offering the bottle to you for your successful win, or so you would guess. Taking the water with good grace you thank the feral pooch by scratching him behind his ears before stuffing the water bottle into the back of your pack. Thanking the guys for the good time you get up from the table to stretch your tired limbs before going about your way.";
-			add "water bottle" to invent of player;
+			increase carried of water bottle by 1;
 			increase score by 1;
 			follow the turnpass rule;
 		otherwise:

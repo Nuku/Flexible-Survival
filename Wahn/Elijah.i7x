@@ -233,7 +233,7 @@ instead of conversing the Elijah:
 		if vixen milk is owned, add "vixen milk" to milkchoicelist;
 		if dolphin milk is owned, add "dolphin milk" to milkchoicelist;
 		if cow milk is owned, add "cow milk" to milkchoicelist;
-		if cheetah milk is owned, add "cow milk" to milkchoicelist;
+		if cheetah milk is owned, add "cheetah milk" to milkchoicelist;
 		if milkchoicelist is empty:
 			say "     To mix together something to cure the injured angel, you need a good base to start with. Some form of milk should do the trick nicely...";
 			if demon seed is owned:
@@ -279,11 +279,10 @@ instead of conversing the Elijah:
 							say "     You sit on the next bunk in line, eagerly watching the angel. And you don't have to wait long - a more healthy color returns to his face pretty quickly and then he opens his azure eyes. Raising his upper body a bit, supported on the bunk by one of his wings, the angel looks around, then smiles brightly at you as he notices you at his side.";
 							say "     'My name is Elijah and I thank you, my friend. I feel much better now. Although rather strange...' he says, his brows knitting as he wiggles his fingers, flexes the muscles in his arms, followed by stretching first one, then the other wing to its fullest extent. Then he lifts the blanket he's under a bit and looks down, his eyes widening suddenly.";
 							say "     'My memories are a bit woozy, but I'm sure THAT wasn't there before. Must have originated with one of the demons, but it doesn't feel evil in of itself. Curious. Oh well, I guess I'll ignore it for now and it'll be taken care of when I get home.'";
-							[ *** This portion needs fixing.]
-[							repeat with Q running from 1 to number of entries in invent of player:
-								if chosenmilk is entry q in invent of player:
-									remove entry q from invent of player;
-									break;		]
+							repeat with Q running through temporary grab objects:
+								if the printed name of q matches the text chosenmilk, case insensitively:
+									decrease carried of q by 1;
+									break;
 							if Honeycomb is owned:
 								delete honeycomb;
 							otherwise:

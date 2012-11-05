@@ -244,9 +244,9 @@ This is the doorcheck rule:
 						say "A firm push and then a resound crack and you're in. Stumbling into the room and then looking around you find that there's very little of interest to you as you see look around at the cum stained and ruined break room that had once been a resting place for tired and overworked employees within the facility. All across the floor you can see that cum has stained just about everything from one side of the room to another, though thankfully not the ceiling. You mildly wonder then, if others had been in here, why, or rather how the door got jammed. Your answer comes when you turn to see dried cum crusted onto the sides of wood barrier."; 
 						say "Ignoring this you try to look around to find something useful to your quest. Nose quivering at the smells coming from in here you find your eyes widening slightly as you spot an intact refrigerator that seems to have missed the carnage that had dominated the 20' x 15' foot room. Going over and listening to the sounds of the machine still working, a surprise you really hadn't been expecting - with what luck you're having today - you quickly open the fridge door and peek your [facename of player] head in to have a look at the contents. Most of whatever had been inside of here has been cleaned out, no small shocker there, but upon looking onto the side shelves you find both food, chips, and water waiting for you. Lady luck really does smile on the foolish sometimes…or was that the brave?";
 						wait for any key;
-						add "water bottle" to invent of player;
-						add "bag of chips" to invent of player;
-						add "food" to invent of player;
+						increase carried of water bottle by 1;
+						increase carried of chips by 1;
+						increase carried of food by 1;
 						now ldoor is 1;
 						now doorsearch is 1;
 					otherwise:
@@ -319,9 +319,8 @@ Instead of Resolving a The beast of the tainted waters:
 			say "Deciding that you've come too far to quit now, even though any other sane person might have already tucked tail and fled, you realize that spending your time here has either made you insanely brave…or just insane. Shaking your head you watch as the tentacles of the fleshy BLOB strikes at the window again and then you curl your legs underneath you so that you can raise up onto your feet."; 
 			say "Doing so, albeit somewhat unsteadily, you breath out a heavy gust of air which is visible to the naked eye. Blinking you breathe in and out again and then realize that the room is rapidly drooping in temperature. Walking over to the main terminal you find that - just as you had thought - the facility is entering into flash freeze mode. Seeing your window of opportunity coming closer to opening fully you look around the room for something to use to help you ward off the creature and then you smile victoriously as you spot several lockers that you had failed to notice when coming into the room standing idle, as though in wait for you."; 
 			say "Rushing over to the metal containers you jar each of the doors open and then look inside to see if you can find something of meaningful use. Seeing what you need you take enough provisions for the fight ahead. Once that's done you decide that now its time to the beast. [bold type]It might do well for you to make sure you're equipped and fully healthy before going out to battle. This fight will be…difficult…[roman type]";
-			add "medkit" to invent of player;
-			add "healingbooster" to invent of player;
-			add "medkit" to invent of player;
+			increase carried of medkit by 1;
+			increase carried of healing booster by 1;
 			now resevquest is 6;
 			now lastResevoirfix is turns;
 			now The beast of the tainted waters is resolved;
@@ -462,7 +461,7 @@ Instead of resolving a PassionAfterTheBattle:
 		say "Cold as a winter's morning, blue as the sky during a clear afternoon, sharp with twin lethal edges that beckons to be used against any who stand before you, you see a pair of curved knives gleaming at you somewhat in an otherworldly manner. Not understanding this strange happening you aren't prepared for the twin weapons to float over to you and then stand in front of you. However, a sense of awe makes you reach out for the hilts of the knives before you can stop yourself. A shudder racks throughout your body as a pervasive chill runs down along your spine. When the daggers rest gently into your hand you can feel a sorrowful weight to them as you recall all of those who got trapped inside of the Blob and then frozen with the creature.";
 		say "There are no words that can help you to understand what is going on here, but you have a good feeling that you just received a kind gift that comes around only once in a lifetime. Taking the knives firmly into hand you clutch the twin blades close to your chest before turning to head out of the reservoir.";
 		wait for any key;
-		add "icicle knives" to invent of player;
+		now carried of icicle knives is 1;
 		now waterworks is 1;
 		now PassionAfterTheBattle is resolved;
 		now Sanctuary is resolved;

@@ -74,7 +74,7 @@ Instead of resolving a Magical Girl:
 		Say "Looking around and seeing no one in the immediate area you figure why not as a sudden plume of giddiness sings through your blood. Lifting the wand up and then shouting 'Sailor Star Power' you find yourself immediately regretting your action when a burst of rainbow colored light swallows you up. A sudden bout of confusion overcomes you as you first feel a wave crash over your body, followed by a feeling of nakedness and then finally something like ribbons strapping themselves all across your form before quickly everything slows down and you finally can blink open your eyes to see the world again. What you find however, turns out to be rather... extraordinary as you look down over yourself.";
 		Say "Where once before you had been dressed somewhat normally you now find that you have on a navy blue sailor skirt with a pink ribbon tied onto the back draped onto your waist, a tight fitting white sleeveless shirt hugging your upper body, a pair of arm length white gloves strapped onto your arms, a pair of blue boots covering your feet, and a golden tiara placed neatly onto your head. You'd scream, but you're somewhat afraid of what may come out of the shadows to have a look at what the noise is all about so instead you shakily look for your backpack, which had mysteriously slipped from your shoulders during your transformation, grab said pack when you do find it and then hurry back to the bunker so you can make sense of all of this.";
 		Say "As you run off you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing because at seeing the casual smirk lining the feline's facial features your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
-		Add "Sailor Outfit" to invent of player;
+		now carried of Sailor Outfit is 1;
 		Move the player to the Bunker;
 		Now Magical Girl is resolved;
 		Increase score by 1;
@@ -129,7 +129,7 @@ Instead of resolving a Triton:
 					Challenge "feral sea dragon";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "Having beaten back the pack of feral dragons you experience a sense of well deserve pride overcome you as you watch the group of feral reptiles scampering away back into the sea. Turning to head back to the beach with a smug smirk lining your face you never notice a half naked masculine figure with a long white beard rise up out of the sea to look at you inquisitively. Too busy enjoying your triumph you also never notice the trident you are still holding glowing with a faint golden light as you get ready to head off about your way.";
-						add "trident" to invent of player;
+						now carried of trident is 1;
 						increase score by 10;
 		if fightoutcome >= 20:
 			say "Having lost to one of the feral sea dragons you find yourself being stripped of your newfound weapon and then casually dumped onto the beach by the creature you had just been defeated by. Grunting in utter humiliation you rest on the muddy sands for a minute while lamenting your own weakness. Looks like you know truly understand the meaning about the [italic type]one that got away[roman type] as you listen to the chatter of the feral sea dragons as the reptiles dive back into the sea with your commandeered treasure. Better luck next time.";
@@ -182,8 +182,7 @@ When play begins:
 
 Instead of resolving a Free Catch:
 	Say "'Fresh fish!' The words make you pause even as you think how odd they sound given the limited amount of supplies there are here in the city. Turning you search for the area in which the voice had come from you look to find a black furred otter holding up a fish in one of her webbed hands. Thinking that maybe having a little extra variety in today's meal might be good for your stomach you head over to the otter to ask how much. 'There's no charge dear. I'm giving away what I have to those who don't have much. So here,' The otter hands you two fish. 'take these and take care of yourself.' Nodding to the kind mustelid you smile as you think about how nice some people can be, despite the craziness going on in the city.";
-	Add "Fish" to invent of player;
-	Add "Fish" to invent of player;
+	increase carried of Fish by 2;
 	Now Free Catch is resolved;
 
 

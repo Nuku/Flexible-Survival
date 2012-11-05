@@ -154,7 +154,7 @@ carry out orthasfuck:
 			say "'Awww!' She giggles. 'And here I thought I was going to get you to suck them out,' she says.";
 	otherwise if cunts of player is greater than 0 and cocks of player is less than 1: [ female player]
 		let seed be 0;
-		if "demon seed" is listed in the invent of the player:
+		if demon seed is owned:
 			say "She sniffs, and reaches into your pockets, and pulls out the little vial of Demon Seed that you have, and she gets a wonderful idea. A terrible, wonderful, awful idea. 'Hey... mind if I use this?' she asks, coyly. (Y/N)";
 			if the player consents:
 				now seed is 1;

@@ -176,7 +176,7 @@ Instead of resolving a Dr Feel Good:
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				Say "Shoving the coat and pants into your [bodyname of player] hands the youth gives you a shaky smile and then hurries around side of you to run out of the room at top speeds. Turning to watch the other go you wonder how many more people in this city are [']missing['] like that fennec's girlfriend.";
-				Add "doctor's uniform" to invent of player;
+				now carried of doctor's uniform is 1;
 				Increase score by 10;
 				Now Dr Feel Good is resolved;
 		if fightoutcome >= 20:		[lose/run]

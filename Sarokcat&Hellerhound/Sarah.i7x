@@ -91,6 +91,7 @@ instead of resolving a pet shop:
 Sarah is a woman.
 sarahtalk is a number that varies.
 sarahslut is a number that varies.
+shortonparts is a truth state that varies.  shortonparts is normally false.
 The description of Sarah is "A thin woman, with husky fur, a lolling tongue, and paws. There are white scar lines down her side where the huskies slashed her, and she has the slit of one of the feral bitches, just waiting to be filled. Her red collar stands out, with its leash ring on the back and the nameplate on front. [sarahslutstate][sarahpupstate]";
 The conversation of Sarah is { "Woof!" }.
 
@@ -119,21 +120,25 @@ instead of conversing the Sarah:
 		say "'Hello. My name is Sarah, and thanks for rescuing me form those darn huskies back there. I used to be a medic,[bold type] so if you happen to find any medkit parts I could put them together for you.[roman type] I really do appreciate the help, and I hope I can provide you with a lot of help in the meantime, until the rescue comes. Please fill my cunt!' She moans, then regains control of herself. 'Damn those huskies.' Regaining her train of thought, she looks up at you and smiles. 'I used to work at the hospital, in the ER general ward, where they treated those who hadn't hurt themselves so badly they needed a specialist,' she says as she runs her new paw-like hands down her body, 'so I[apostrophe]m sure I can be of great help to you as well.'";
 	otherwise:
 		if sarahslut < 4:
-			if hasparts is 0:
+			if hasparts is 0 or ( hasparts is 1 and shortonparts is true) :
 				if sarahslut < 3:
 					say "[one of]'Please fuck me, I need Oh sorry. Lost control of myself there.'[or]'Mmmm huskies.'[or]'I guess you are the alpha here.'[or]'I can make some medkits if you had parts.'[or]'Have you seen any spare medkit parts out there?'[or]'This place is wonderful. Why didn't I come here?'[or]'Thanks for saving me!'[or]Sarah moans, rubbing her dripping slit.[at random]";	[todo]
 				otherwise:
 					say "[one of]'Fuck me again master!'[or]'Please take me now!'[or]Sarah moans, rubbing her slit and dripping everywhere.[or]'Fill me!'[or]'Use me like the bitch I am.'[or]'Master, please use your slut!'[or]'I just love being your bitch.'[at random]";
+			otherwise if hasparts is 1:
+				say "Sarah hmms as she looks over the medkit parts you've found, running her white paws over them.  'You've got some parts here, but not quite enough to make a full medkit.  See if you can find some more around.'";
+				now shortonparts is true;
 			otherwise:
-				if hasparts is 1:
+				if hasparts is 2 or hasparts is 3:
 					say "Sarah coos in delight, running her white paws over some of the more unusual parts you found. 'This will make a great medkit' She exclaims, and manages to fit them back together. She hands you a medkit in return.";
-				otherwise if hasparts < 4:
+				otherwise if hasparts < 8:
 					say "Sarah looks at the parts with longing, and grabs them before you can hand them over. In short order you are handed back a few medkits, the most she could make.";
 				otherwise:
 					say "Sarah's eyes goggle out and her face turns pale at the size of your stockpile. She dives right in and begins to sort them, arranging them by type, and builds many medkits out of what you found.";
-				repeat with X running from one to hasparts:
-					add "medkit" to the invent of the player;
-				now hasparts is 0;
+				let madekits be hasparts / 2;
+				increase carried of medkit by madekits;
+				decrease hasparts by madekits * 2;
+				now shortonparts is false;
 		otherwise:
 			if hasparts is not 0:
 				say "The sight of medkit parts does little to free her submitted mind, and she ignores them to keep rubbing her dripping slit.";

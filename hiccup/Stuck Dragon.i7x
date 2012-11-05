@@ -243,12 +243,7 @@ check dragonfreeing:
 Carry out dragonfreeing:
 	now tempnum is 0;
 	if glob of goo is owned:
-		let number be 0;
-		repeat with Q running through invent of the the player:
-			increase number by 1;
-			if q matches the regular expression printed name of glob of goo:
-				remove entry number from invent of the player;
-				break;
+		delete glob of goo;
 		say "     You give the goo to Christy.  She smears the goo in the places where her body is jammed against the doorframe, greasing herself up.  'Oh yeah, that feels nice!' Christy moans as she rubs the goo on herself.  'If only I could reach my pussy, then I could... Ah! Bad thoughts! Bad thoughts!'";
 		say "     When she finishes, she braces her front legs on the walls on both sides of the doorframe and starts pushing against it.  As she struggles, you drop your pack and head over to help her, grabbing one shoulder and pulling.  At first nothing happens, but then her body violently pops free from the doorway like a cork from a bottle of champagne.  The cracks in the concrete around the doorframe break further and parts of the wall around the door collapse, blocking the passageway as it caves in.  Christy, unable to control her forward momentum, accidentally bowls you over and you end up pinned beneath her.";
 		say "     'My hero! Huh, where did you go?' Christy asks, unaware that you're pinned beneath her.  She shifts her bulk around as she tries to find you and then accidentally rubs her pussy against your face, sending waves of pleasure through her body.  Overcome by all her pent up lust, Christy starts to grind her pussy back and forth against your head. 'Oh, God yes! No! I must control these urges... I must... oh, screw it! It feels too damn good!'";

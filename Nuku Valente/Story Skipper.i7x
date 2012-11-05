@@ -75,6 +75,7 @@ Carry out reciting:
 					now the score is the score;
 			-- 11:	[Dr Matt]
 				if the player's command matches "[number]":
+					now carried of nanite density monitor is 0;
 					now unusual creature is resolved;
 					now the hp of doctor matt is the number understood;
 					now level of doctor matt is turns;
@@ -93,14 +94,13 @@ Carry out reciting:
 						increase freecred by 100 + ( 2 * number of fasttravel rooms );	[awards to minimum 50%]
 						now Zephyr Lobby is known;
 					if hp of doctor matt is 17:
-						add "nanite density monitor" to invent of player;
+						now carried of nanite density monitor is 1;
 						now beach detector site is unresolved;
 						now red light detector site is unresolved;
 						now high rise detector site is unresolved;
 						now park detector site is unresolved;
 						now ndmlist is { "Beach", "Red Light District", "High Rise District", "Park" };
 					if hp of doctor matt is 18:
-						if "nanite density monitor" is listed in invent of player, delete nanite density monitor;
 						now beach detector site is resolved;
 						now red light detector site is resolved;
 						now high rise detector site is resolved;
@@ -174,20 +174,15 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now the cunt width of player is the number understood;
 			-- 27:	[equipped weapon]
-				repeat with Y running through grab objects:
-					if the printed name of Y matches the text b, case insensitively:
-						if printed name of y is not listed in invent of player, add printed name of Y to invent of player;
-						if Y is armament:
-							now weapon object of player is Y;
-							now weapon of player is weapon of Y;
-							now weapon damage of player is weapon damage of Y;
-							now weapon type of player is weapon type of Y;
-							repeat with t running from 1 to number of filled rows in table of game objects:
-								choose row t in table of game objects;
-								if object entry is y:
-									add name entry to invent of player;
-									break;
-							say "You ready your [Y].";
+				repeat with y running through armaments:
+					if the printed name of y matches the text b, case insensitively:
+						if y is not owned, now carried of y is 1;
+						now weapon object of player is Y;
+						now weapon of player is weapon of Y;
+						now weapon damage of player is weapon damage of Y;
+						now weapon type of player is weapon type of Y;
+						say "You ready your [Y].";
+						break;
 			-- 28:	[Snow]
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
@@ -622,13 +617,14 @@ Carry out reciting:
 			-- 91:	[Solstice]
 				if the player's command matches "[number]":
 					remove Solstice from play;
+					now carried of Crow Artifact is 0;
 					now hp of Solstice is the number understood;
 					now Adventurer is resolved;
 					now Onyx Crow is resolved;
 					if hp of Solstice is 1:
 						now Onyx Crow is unresolved;
 					if hp of Solstice is 2:
-						add "Crow Artifact" to invent of player;
+						now carried of Crow Artifact is 1;
 						now Adventurer is unresolved;
 					if hp of Solstice is 3 or hp of Solstice is 4:
 						now lastfuck of Solstice is turns;
@@ -636,6 +632,7 @@ Carry out reciting:
 						move Solstice to Grey Abbey Library;
 			-- 92:	[Ronda the Slut Rat]
 				if the player's command matches "[number]":
+					now carried of lizard juice is 0;
 					now hp of Ronda is the number understood;
 					now Art Collector is resolved;
 					if hp of Ronda > 0 and hp of Ronda < 10:
@@ -654,13 +651,14 @@ Carry out reciting:
 								now area entry is "Mall";
 								break;
 					if hp of Ronda is 5:
-						add "lizard juice" to invent of player;
+						now carried of lizard juice is 1;
 					if hp of Ronda is 6:
 						now Art Collector is unresolved;
 					if hp of Ronda >= 8:
 						now SlutRat Den is known;	
 			-- 93:	[Athanasia]
 				if the player's command matches "[number]":
+					now carried of phoenix egg is 0;
 					now hp of Athanasia is the number understood;
 					remove Athanasia from play;
 					if hp of Athanasia is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned:
@@ -672,10 +670,9 @@ Carry out reciting:
 					otherwise:
 						now FireAndIce is resolved;
 					if hp of Athanasia is 2:
-						add "phoenix egg" to invent of player;
+						now carried of phoenix egg is 1;
 					if hp of Athanasia >= 3:
 						now lastfuck of Athanasia is turns;
-						if "phoenix egg" is listed in invent of player, delete phoenix egg;
 						now Government Assistance is resolved; 
 						now Approaching the Capitol Building is known;
 					if hp of Athanasia >= 4:
@@ -724,6 +721,7 @@ Carry out reciting:
 						now Skunkbeast Battle is unresolved;
 			-- 95:	[Kitsune]
 				if the player's command matches "[number]":
+					now carried of star bell is 0;
 					now ktp is the number understood;
 					now Strange Fox is unresolved;
 					now Strange Bell is resolved;
@@ -731,9 +729,8 @@ Carry out reciting:
 						now Strange Fox is resolved;
 						now Strange Bell is unresolved;
 					if ktp is 7:
-						add "star bell" to the invent of the player;
+						now carried of star bell is 1;
 					if ktp is 8:
-						if "star bell" is listed in invent of the player, delete star bell;
 						now Strange Fox is resolved;
 						now Foxy Hideaway is known;
 			-- 96:	[Release number]
@@ -966,7 +963,7 @@ Carry out reciting:
 				break;
 	if hospquest > 1, now locked stairwell is unlocked;
 	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
-	if mattcollection is 1 and "infection monitor" is not listed in invent of player, add "infection monitor" to invent of player;
+	if mattcollection is 1, now carried of infection monitor is 1;
 	if hp of doctor matt is 104, move Sally to bunker;
 	if hp of doctor matt is not 104, remove Sally from play;
 	now Sven is in Sven's Place;

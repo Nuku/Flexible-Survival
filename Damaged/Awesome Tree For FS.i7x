@@ -20,13 +20,13 @@ to say infect:
 	
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
-		add "Awesome Fruit" to invent of player;
+		now carried of Awesome Fruit is 1;
 		say "You gain 1x Awesome Fruit!";
 	if a random number between 1 and 100 > 40:
-		add "Awesomer Fruit" to invent of player;
+		now carried of Awesomer Fruit is 1;
 		say "You gain 1x Awesomer Fruit!";
 	if a random number between 1 and 100 > 85:
-		add "Awesomest Fruit" to invent of player;
+		now carried of Awesomest Fruit is 1;
 		say "You gain 1x Awesomest Fruit!";
 		
 to say awesome attack:
@@ -36,7 +36,7 @@ to say awesome attack:
 		now thirst of player is 0;
 		if a random number between 1 and 100 > 90:
 			if Awesome Bat is not owned:
-				add "Awesome Bat" to invent of player;
+				now carried of Awesome Bat is 1;
 				say "You get an awesome piece of wood that could be used as, an Awesome Bat!";
 		say "[Give Awesome][combat abort]";
 		now fightoutcome is 20;
