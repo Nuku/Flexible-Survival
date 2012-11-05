@@ -218,7 +218,7 @@ instead of resolving an abandoned truck:
 			say "You ruffle through the boxes, searching for a medkit and leaving mess in your wake.";
 			if a random chance of one in 8 succeeds:
 				say "You found a medkit!";
-				add "medkit" to the invent of the player;
+				increase carried of medkit by 1;
 			otherwise:
 				say "You find nothing of interest.";
 		otherwise:

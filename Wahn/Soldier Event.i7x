@@ -135,14 +135,12 @@ Instead of resolving a Thankful Soldier:
 			if player consents:   [accept supplies]
 				say "     You take the items he offers you and stash them in your pack. 'Hope that'll help you a bit. Stay safe - help is coming, it's just a question of time till more troops arrive and the scientists figure out this whole mess.' He nods to you, then continues his patrol route. You memorize where the alley is in the city, hoping you can catch him on patrol again sometime later.";
 				say "     Food x3, Water x1 obtained.";
-				add "food" to invent of player;
-				add "food" to invent of player;
-				add "food" to invent of player;
-				add "water bottle" to invent of player;
+				increase carried of food by 3;
+				increase carried of water bottle by 1;
 			otherwise:            [fuck the soldier]
 				say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
 				say "     As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but he moans as you squeeze his ass and his bulge pressing against your body show that he's quite ready for some action. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
-				if(cocks of player > 0 and cunts of player > 0):
+				if (cocks of player > 0 and cunts of player > 0):
 					say "     [line break]";
 					say "     Being dual-gendered, which way do you want to enjoy your new soldier friend? (Y = Fuck his Ass, N = Take him in your Pussy) ";
 					if player consents:   [fuck his ass]
@@ -648,7 +646,7 @@ to say GuardBeg:    [mooch some food from a guard]
 		say "     The soldier lowers a hand to his pocket, then stops. 'Wait a minute - I gave you something not too long ago! I can't hand out stuff constantly. That'll attract too much attention and all kinds of critters will show up asking for food.'";
 	otherwise:
 		say "     The first guard just scoffs at you, but the other guy pulls out a ration bar and throws it to you. 'Here. Now go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
-		add "food" to invent of player;
+		increase carried of food by 1;
 		now lastGuardBeg is turns;
 
 to say GuardLeave:    [lie to get into the camp]

@@ -207,7 +207,7 @@ instead of conversing the Eric:
 	otherwise if (hp of Eric is 11):   [accepted his pussy, had sex with player]
 		say "     He says 'Being part woman is better than I expected. Thank you for helping me accept this new me.' then steps closer, running a hand over your arm and whispers in your ear 'Wanna do another round in bed? I love being with you.'";
 	otherwise if (hp of Eric is 20):   [hoping for a cure]
-		if ("centaur cum" is not listed in invent of player):
+		if centaur cum is not owned:
 			say "     He says 'Do you think you'll have something to cure me soon? You said something about centaurs the last time. Please hurry, I don't know how long I can hold out any more. Since that thing with Stacy, my pussy keeps getting moist and swollen all the time.'";
 		otherwise:
 			say "     You hand your bottle of centaur stallion cum to Eric, who puts it to his lips after a nod of encouragement from you and takes a deep pull. You wait several minutes, during which his hopeful expression slowly begins to wane as nothing happens - until suddenly, he's wracked by a convulsion. You hold Eric tightly so he doesn't fall off his bunk until he relaxes s short time later. Looking down at the new bulge in his shorts, it's clear at least something happened.";

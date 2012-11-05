@@ -52,7 +52,7 @@ Smelly garbage is a scavevent.  The sarea of Smelly garbage is "Allzones".
 instead of resolving a smelly garbage:
 	say "You come across a garbage pail, obviously not tended since before the infection began. The stuff inside is useless slime, but maybe you could use the lid as a shield?";
 	if the player consents:
-		add "garbage can lid" to the invent of the player;
+		increase carried of garbage can lid by 1;
 		now smelly garbage is resolved;
 	otherwise:
 		say "You leave it there.";
@@ -147,7 +147,7 @@ instead of resolving sword nest:
 				randominfect;
 				say "The infected slime changes you.";
 				wait for any key;
-			add "infected sword" to the invent of the player;
+			increase carried of infected sword by 1;
 			now sword nest is resolved;
 		otherwise:
 			say "You leave the mess and its sword there without touching it.";
@@ -188,27 +188,14 @@ instead of resolving Destroyed bushes:
 		if the perception of the player is greater than a random number between one and 20:
 			say "In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. it is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if the player consents:	
-				let found be 0;
-				repeat with T running from one to three:
-					let number be 0;
-					repeat with Q running through invent of the the player:
-						increase number by 1;
-						if q matches the regular expression printed name of water bottle, case insensitively:
-							increase found by 1;
-							remove entry number from invent of the player;
-							if found is three:
-								break;
-					if found is three:
-						break;
-				if found is three:
-					say "You dump the water bottles on the whip, washing off the cum.";	
+				if carried of water bottle >= 3:
+					say "You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use.";	
 					say "You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
-					add "horse whip" to the invent of the player;
+					decrease carried of water bottle by 3;
+					increase carried of horse whip by 1;
 					now destroyed bushes is resolved;
 					now gotwhip is 1;
 				otherwise:
-					repeat with X running from 0 to found:
-						add "water bottle" to the invent of the player;
 					say "You don't have enough water. Maybe you could come back when you find more?";
 			if gotwhip is 0:
 				say "Do you wish to pick it up anyway?";
@@ -217,7 +204,7 @@ instead of resolving Destroyed bushes:
 					infect "black equinoid";
 					infect "black equinoid";
 					infect "black equinoid";
-					add "dirty whip" to the invent of the player;
+					increase carried of dirty whip by 1;
 					now gotwhip is 2;
 					now the destroyed bushes is resolved;
 				otherwise:

@@ -226,16 +226,17 @@ instead of conversing the Elijah:
 		if furry is not banned, now Examination Room is unresolved;
 	otherwise if (hp of Elijah is 2):  [wounded + unconscious in the bunker - revival quest started already]
 		let milkchoicelist be a list of text;
-		if "gryphon milk" is listed in invent of player, add "gryphon milk" to milkchoicelist;
-		if "dog milk" is listed in invent of player, add "dog milk" to milkchoicelist;
-		if "panther milk" is listed in invent of player, add "panther milk" to milkchoicelist;
-		if "chocolate milk" is listed in invent of player, add "chocolate milk" to milkchoicelist;
-		if "vixen milk" is listed in invent of player, add "vixen milk" to milkchoicelist;
-		if "dolphin milk" is listed in invent of player, add "dolphin milk" to milkchoicelist;
-		if "cow milk" is listed in invent of player, add "cow milk" to milkchoicelist;
+		if gryphon milk is owned, add "gryphon milk" to milkchoicelist;
+		if dog milk is owned, add "dog milk" to milkchoicelist;
+		if panther milk is owned, add "panther milk" to milkchoicelist;
+		if chocolate milk is owned, add "chocolate milk" to milkchoicelist;
+		if vixen milk is owned, add "vixen milk" to milkchoicelist;
+		if dolphin milk is owned, add "dolphin milk" to milkchoicelist;
+		if cow milk is owned, add "cow milk" to milkchoicelist;
+		if cheetah milk is owned, add "cow milk" to milkchoicelist;
 		if milkchoicelist is empty:
 			say "     To mix together something to cure the injured angel, you need a good base to start with. Some form of milk should do the trick nicely...";
-			if ("demon seed" is listed in invent of player):
+			if demon seed is owned:
 				say "     As you think of getting the milk, you remember the demon seed you still have in your pack. A wicked little thought sneaks into your mind - wouldn't it be interesting to see what the potent liquid might do to the helpless angel you have at your mercy?[line break]";
 				if player consents:
 					say "     You put your hand under your patient's head, raising it a bit and guide the old soda bottle holding the demon cum to his lips. Slowly, you let some of the liquid flow into his mouth until his swallowing reflex kicks in, continuing in that way until he's drunk all of what was in the bottle.";
@@ -246,12 +247,12 @@ instead of conversing the Elijah:
 				otherwise:
 					say "     Where did that thought come from? You shake it off, your mind returning to the gryphon milk you need for the your angel revival milkshake.";
 		otherwise:
-			if ("Honeycomb" is not listed in invent of player) and bee girl is not tamed:
+			if Honeycomb is not owned and bee girl is not tamed:
 				say "     You got the milk as base for your angel revival shake. Now to gather some honey to mix into it... maybe you can find some somewhere in the park.";
 			otherwise:
-				if "Honeycomb" is not listed in invent of player:
+				if Honeycomb is not owned:
 					say "     As you look over your supplies but find no honey, Honey tugs at your arm and offers you one of her precious supply to use instead.  That taken care of, you focus on the next step.";
-				if ("healing booster" is not listed in invent of player):
+				otherwise if healing booster is not owned:
 					say "     Milk and honey should be a nice start, but you need something more. Maybe you should check out the hospital for something to really boost your patient's healing ability.";
 				otherwise:
 					say "     You got the milk, honey and even a vial of healing booster. Do you want to mix it all together now and administer the result to Elijah?[line break]";
@@ -278,12 +279,13 @@ instead of conversing the Elijah:
 							say "     You sit on the next bunk in line, eagerly watching the angel. And you don't have to wait long - a more healthy color returns to his face pretty quickly and then he opens his azure eyes. Raising his upper body a bit, supported on the bunk by one of his wings, the angel looks around, then smiles brightly at you as he notices you at his side.";
 							say "     'My name is Elijah and I thank you, my friend. I feel much better now. Although rather strange...' he says, his brows knitting as he wiggles his fingers, flexes the muscles in his arms, followed by stretching first one, then the other wing to its fullest extent. Then he lifts the blanket he's under a bit and looks down, his eyes widening suddenly.";
 							say "     'My memories are a bit woozy, but I'm sure THAT wasn't there before. Must have originated with one of the demons, but it doesn't feel evil in of itself. Curious. Oh well, I guess I'll ignore it for now and it'll be taken care of when I get home.'";
-							repeat with Q running from 1 to number of entries in invent of player:
+							[ *** This portion needs fixing.]
+[							repeat with Q running from 1 to number of entries in invent of player:
 								if chosenmilk is entry q in invent of player:
 									remove entry q from invent of player;
-									break;
-							if "Honeycomb" is listed in invent of player:
-								delete Honeycomb;
+									break;		]
+							if Honeycomb is owned:
+								delete honeycomb;
 							otherwise:
 								now honeygiven is true;
 							delete healing booster;
@@ -312,7 +314,7 @@ The sarea of Sweet Surprise is "Park";
 
 Instead of resolving a Sweet Surprise:
 	say "     As you're searching through the park, you come across the remains of a picnic site that's been quite torn up.  There's some shreds of clothes and sticky pools of sexual fluids scattered around the torn blanket.  The dishes and cutlery are scattered and all that remains of the food is crumbs.  An overturned bottle of wine's left a large stain on the blanket and you spot an empty ring case beside it.  It seems things did not go quite as planned for this romantic picnic, but you hope that the couple are still together in whatever new forms they've gained.  You're about to leave when you spot their wicker basket knocked into the nearby bushes.  Whatever dessert was once in there has spoiled and become a suspicious green mass, but next to it is a sealed container holding a large honeycomb, probably meant to be used to top the dessert with fresh honey[if hp of Elijah is 2].  Remembering that you're looking for some to possibly heal the angel, you pack it away[end if].";
-	add "Honeycomb" to invent of player;
+	increase carried of honeycomb by 1;
 	increase score by 5;
 	now Sweet Surprise is resolved;
 
@@ -326,7 +328,7 @@ Instead of resolving a Examination Room:
 	challenge "Jaguar";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having beaten the orderly, you give the other rooms a cursory search.  As others may be drawn by the noise of the fight, you go as quick as you can.  The only item of any use you're able to find is a small syringe labelled as a [']healing booster['].  Concerned that you've already tarried too long, you take it and leave.";
-		add "healing booster" to invent of player;
+		increase carried of healing booster by 1;
 		increase score by 5;
 	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After the jaguar is finished with you, it roughly sends you on your way, driving you off.  He then heads back to the examination rooms, probably to gather up the remaining medical supplies.  You head back to the entrance to rethink your next move.";
@@ -551,7 +553,7 @@ An everyturn rule:
 							if entry q of invent of the bunker is "water bottle":
 								remove entry q from invent of the bunker;
 								break;
-					otherwise if "water bottle" is listed in invent of player:
+					otherwise if water bottle is owned:
 						say ".  He turns and storms off, but not before rummaging through your pack and grabbing one of the spare bottles of water to use to clean himself up.";
 						delete water bottle;
 				now Char-J of Elijah is "4";

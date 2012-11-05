@@ -92,27 +92,27 @@ instead of resolving an intact fountain:
 		if S is 1 and guy is not banned and hellspawn is not banned:
 			say "You identify some demon seed on the side of the fountain. Do you wish to collect it?";
 			if the player consents:
-				add "demon seed" to the invent of the player;
+				increase carried of demon seed by 1;
 		otherwise if S is 2 and hermaphrodite is not banned and furry is not banned:
 			say "You find some Gryphon Milk on the fountain. Collect it?";
 			if the player consents:
-				add "gryphon milk" to the invent of the player;
+				increase carried of gryphon milk by 1;
 		otherwise if S is 3 and girl is not banned:
 			say "You find a glob of goo floating in the fountain water. It appears to be unaffected by the clamor of nanites around it. Collect?";
 			if the player consents:
-				add "glob of goo" to the invent of the player;
+				increase carried of glob of goo by 1;
 		otherwise if S is 4 and hermaphrodite is not banned and furry is not banned:
 			say "You find a bunch of identifiably dog milk on the spray nozzle, currently off. Collect?";
 			if the player consents:
-				add "dog milk" to the invent of the player;
+				increase carried of dog milk by 1;
 		otherwise if S is 5 and girl is not banned and furry is not banned:
 			say "There is skunk goo floating in the cloudy water. Collect?";
 			if the player consents:
-				add "Skunk Goo" to the invent of player;
+				increase carried of skunk goo by 1;
 		otherwise if S is 6 and hermaphrodite is not banned and girl is not banned:
 			say "There is some webbing across sections of the fountain. Do you want to collect it?";
 			if the player consents:
-				add "spider webbing" to the invent of the player;
+				increase carried of spider webbing by 1;
 		
 	
 
