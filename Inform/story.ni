@@ -5242,6 +5242,7 @@ Include Mack for FS by Stripes.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
+Include Stag by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 
 
