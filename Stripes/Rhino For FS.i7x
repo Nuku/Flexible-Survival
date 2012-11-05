@@ -94,7 +94,8 @@ to say drinkrhinocum:
 	if cocks of player > 0 and cock length of player < 12:
 		say ".  You feel a throbbing in your groin as your [if cocks of player > 1]cocks expand[otherwise]cock expands[end if] another inch almost immediately after you finish your drink.";
 		increase cock length of player by 1;
-
+	otherwise:
+		say ".";
 
 Section 3 - Endings
 
