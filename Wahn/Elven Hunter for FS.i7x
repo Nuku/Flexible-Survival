@@ -17,7 +17,7 @@ to say Hunter wins:
 	otherwise:
 		if bodyname of player is "elf" or bodyname of player is "Elven Hunter":
 			say "     'And you want to call yourself an elf? Any novice hunter would have lasted longer in his first summer,' he scoffs at you.  Pulling off your clothes, the hunter looks you over and touches your naked body, then remarks 'The tiny machines of this realm made you look the part, enough to fool pixies and lower fey.  But believe me - you'll never be a true elf unless you get accepted for The Hunt.'";
-		otherwise if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in skinname of Reptilelist ):
+		otherwise if ( bodyname of player is listed in infections of Reptilelist and skinname of player is listed in infections of Reptilelist ):
 			say "     The elf looks over your [bodytype of player] form with disdain. 'You're already beaten? How disappointing. I had remembered those big lizards this world had a while ago with more cunning and strength. Oh well, maybe you're just an especially frail and sickly specimen. But you're certainly waking the hope for the existence of worthy prey in this realm.'";
 		[add other demons below as they are added to the game - left out the slutrat on purpose, as it's not a full demon the elf recognizes]
 		otherwise if bodyname of player is "Incubus" or bodyname of player is "Succubus" or bodyname of player is "Demon Brute" or bodyname of player is "Hellhound":
