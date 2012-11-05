@@ -1084,7 +1084,12 @@ when play begins:
 
 Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
-	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "feral sea dragon", "feral sea dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake" } to infections of Reptilelist;
+	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "feral sea dragon", "feral sea dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur" } to infections of Reptilelist;
+
+Taurlist is a marker.	[list of tauric infections]
+when play begins:
+	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
+[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional.]
 
 Part 2 - Rules
 
