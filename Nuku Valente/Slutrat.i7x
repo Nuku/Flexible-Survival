@@ -377,10 +377,10 @@ Carry out ratdarts:
 				say "Your dart lands on the outer rim of the board. The rats nod lightly, but none of them look terribly impressed at your skill. Perhaps with more practice...";
 			-- 3:
 				say "With pride, you land in the inner section of the board, shy of a bulls eye. One of the rats tosses a pack of chips towards you with a thumbs up.";
-				add "chips" to invent of player;
+				increase carried of chips by 1;
 			-- 4:
 				say "Yes! Your dart lands in the central circle, a bulls eye! The rats give a polite cheer at your excellent shot. One of them reaches under herself and pulls out a can of soda and tosses it to you, still warmed from her rump.";
-				add "soda" to invent of player;
+				increase carried of soda by 1;
 			-- 5:
 				say "Perfection. Your dart lands right in the middle of the central circle. A soft whistle of appreciation raises through the gathered rats. You can't help but feel more confident in yourself as a result.";
 				decrease slutratsub by 1;

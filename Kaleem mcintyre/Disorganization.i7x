@@ -22,8 +22,8 @@ Instead of resolving Disorganization:
 		say "You can only guess that the other man, as you don't see any breasts on the deceased body, must not have wanted to end up as a freak and ended his life, or had someone do it for him. Grabbing the fallen soldier's grey platted IDs you pull the dog tags up Reciting a name back into the transceiver you hear the man on the other end curse violently followed by the sounds of something crashing into something else, a wall maybe. A few seconds later the other person comes back in on the line, 'Thank you, kid. He's... he was a friend.' You bow your head as you hear a few sobs come from the man speaking to you. 'Listen, I don't know who you are or what you maybe be, but if there's a shred of humanity left in you then please find the rest of the recon team and let them know that the mission is aborted, ok?'";
 		say "You're not sure what to do, but maybe it wouldn't be so bad to do this for the other man. Considering the friend he lost and all it might be good for you to see if you can wheedle some way to escape from out of this place before everything goes completely to hell. A positive response from you has the man sighing and then laughing slightly in relief. 'Thanks. I appreciate this. Also, please take those dog tags and this transceiver with you. The recon team, if they're still alive and sane, will want them as proof of validity to who you say you are.' You nod, even though the other can't see you. 'Thanks again. Hey, this might be seen as in bad taste, but one has to get paid for their work and all so take whatever you find useful from my buddy and use it to stay alive.'";
 		say "At that the person on the opposite end of the communication line drops the call. You wonder if this is really happening. Is the world really going so crazy right now or are you having a nightmare that you can't seem to wake up from? Looking into the dead soldier's half open eyes you calmly reassure yourself that this could never be a bad dream, it's just too horrible to be anything out of even your most twisted of fantasies. You close the canid-man's eyes before searching through his gear.";
-		add "food" to invent of player;
-		add "bottle water" to invent of player;
+		increase carried of water bottle by 1;
+		increase carried of food by 1;
 		decrease libido of player by 30;
 		if libido of player < 0, now libido of player is 0;
 		now drs is 1;
@@ -119,17 +119,14 @@ Instead of resolving Disorganization:
 		increase intelligence of player by 1;
 		say "your intelligence has increased by 1!";
 		decrease morale of player by 15;
-		add "food" to invent of player;
-		add "food" to invent of player;
-		add "bottle water" to invent of player;
-		add "bottle water" to invent of player;
-		add "chips" to invent of player;
-		add "medkit" to invent of player;
-		add "pepperyspray" to invent of player;
+		increase carried of food by 2;
+		increase carried of water bottle by 2;
+		increase carried of chips by 1;
+		increase carried of medkit by 1;
+		increase carried of pepperspray by 1;
 		increase score by 50;
 		extend game by 8;
 		now Disorganization is resolved;
 
 
 Disorganization ends here.
-

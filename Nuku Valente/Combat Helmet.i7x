@@ -38,7 +38,7 @@ instead of resolving lost gear:
 				say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
 				if dice + bonus is greater than 20:
 					say "Hidden under the counter, you find an old army helmet. You snatch it up and tuck it into your backpack before leaving the, otherwise empty, store.";
-					add "combat helmet" to invent of player;
+					increase carried of combat helmet by 1;
 					increase score by 5;
 					now lost gear is resolved;
 					now lgnumber is 1;

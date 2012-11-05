@@ -38,8 +38,8 @@ Instead of conversing the Alex:
 			say "     His smile falters a little, but he tries to remain positive.  'Please continue to consider my proposal.  I think we'll both benefit from it.'";
 	otherwise if progress of alex is 3:
 		say "     Alex, just coming off a bout of ferretness, puts down the chew toy and looks up at you as you try to tell him you found Darrell.  He looks side to side for the missing sports star, then at you in with a mix of confusion and anger on his face.  'Where's Darrell?  I thought you were saying that you'd found him.'  This is where you have to explain to Alex that Darrell survived the incident, but not in the same way he started it.  Upon hearing that Darrell was still sane and relatively secure mentally, Alex is pleased enough, anyway.  'He can still pay me,' says Alex, 'and that's good enough.  Here's your next installment.'  He hands you another bit of food and water as payment.";
-		add "food" to invent of player;
-		add "water bottle" to invent of player;
+		increase carried of food by 1;
+		increase carried of water bottle by 1;
 		increase score by 20;
 		extend game by 2;
 		say "[line break]     'Alright, there's only one client left, and this one's gonna be a doozy, I'll wager.  This last client of mine is an aide to a City Council Member - well, possibly ex-city council at this point.  He doesn't have a whole lot of money, but his case'll be pretty big news if I can get a court to listen to him.  So as far as publicity, this is a huge case for me.  I need you to find him and bring him here.'  He sighs a bit, and his nose wiggles, almost cutely, you think to yourself.  'I'm not sure where he is, honestly.  He was a bit of an outdoorsman, so you might be able to find him at the park or the beach.  Other than that, I can't offer you anything else, besides his name, which is Lee.'";
@@ -133,9 +133,8 @@ Instead of resolving Find Lorenda:
 		now the player is in Alex's Condo;
 		say "     Upon arriving, the door is thrown open by the weaselly lawyer who ushers both of you inside.  He shuts it behind him, letting out a sigh of relief as he leans back against it.  First, he shows her to the living room and sets her down with a cup of coffee, then he returns to you.  'Thanks for bringing her in.  You've done me a major favor, so here you go.'  He gives you some food and water.  He even gives you an extra bottle as a bonus for coming through for him despite the danger.";
 		say "     'My next client is an athlete.  He plays for the city's basketball team.  His name's Darrell.  I don't know where he was when the incident happened, but I believe he may have been at the mall.  The team was doing a promotion at the shoe store there some time before the accident.'";
-		add "food" to invent of player;
-		add "water bottle" to invent of player;
-		add "water bottle" to invent of player;
+		increase carried of food by 1;
+		increase carried of water bottle by 2;
 		increase score by 50;
 		extend game by 8;
 		now progress of alex is 2;
@@ -203,8 +202,8 @@ Instead of going west from dirty sheds:
 			now progress of alex is 5;
 			move the player to Alex's Condo;
 			say "     Arriving back at the High Rise district, Alex is bemused to see that this latest client has made a rather serious reassignment in gender, but he is pleased to see that Lee at least seems to have her faculties in order.  'Alright,' he says.  'Here's your reward for the last bit.'  You receive one more food and one more water.";
-			add "food" to invent of player;
-			add "water bottle" to invent of player;
+			increase carried of food by 1;
+			increase carried of water bottle by 1;
 			increase score by 40;
 			extend game by 10;
 			say "[line break]     The weaselly lawyer looks you up and down, sizing you up.  'You know... I have a reputation as a hell of a lover,' he says, leering a little bit but remaining professional.  'What I'm saying is,' he chuckles, 'if you come and visit, I'd be willing to show you a good time.'";

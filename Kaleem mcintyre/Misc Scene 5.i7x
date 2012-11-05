@@ -8,7 +8,7 @@ The sarea of Helping the Helpless is "Outside";
 
 Instead of resolving a Helping the Helpless:
 	say "Walking down the almost deserted streets of the city, you come across a lone Dalmatian figure scrapping through a bunch of trash cans. More than likely looking for food, the figure's black and white spotted tail hangs limply as the mutant doesn't see anything appetizing inside of the smelly waste container.";
-	if "food" is listed in invent of player:
+	if food is owned:
 		say "A part of you wants to feel sorry for the mutant, but is it your job to say every kitten, or canine in this case, stuck in a tree? (Y=yes, N=No)";
 		if player consents:
 			say "Whistling to the Dalmatian to get the cano-mutate's attention, you swallow nervously when you see the other's floppy ear flick and then the Dal's black-spotted face turn in your direction. You have all of a half second to realize that you may have made a slight mistake as you watch the other run over to you after looking at your outstretch hand holding onto a small parcel of food. Bracing yourself for impact you ready yourself to hit the asphalt, but get the surprise of all surprises when the Dalmatian creature simply skids to a stop two feet from your outstretch hand. Going down onto its haunches to beg up at you like a normal canine, the Dal whines pleadingly while staring you down with big soulful brown eyes.";
@@ -20,7 +20,7 @@ Instead of resolving a Helping the Helpless:
 			increase score by 10;
 		otherwise:
 			say "Shaking your head you turn away from the scavenging mongrel to make your way down the street some other way. It's not your business what others have to do to survive. You've currently got your own shit to deal.";
-	otherwise if "chips" is listed in invent of player:
+	otherwise if chips is owned:
 		say "You know that you yourself don't have any food, but maybe some of the small snacks you have in your pocket will tide the creature over. It might not be much, but it's better than trash can food, right? (Y=Yes, N=No)";
 		if player consents:
 			say "Whistling to get the Dalmatian anthro's attention, you watch as it turns and then looks down to see what you put on the ground at your feet. Turning to step away from the cano-mutant, you're already moving off on your way just as your ears pick up the sound of charging footsteps going over to grasp your left behind treats. It might not have been much, but it was what you had after all. A sense of elation runs through you because of your gracious efforts.";
@@ -237,19 +237,19 @@ Instead of resolving a Rooftop:
 to say special gift:
 	let T be a random number between 1 and 7;
 	if T is 1:
-		add "food" to invent of player;
+		increase carried of food by 1;
 	if T is 2:
-		add "water bottle" to invent of player;
+		increase carried of water bottle by 1;
 	if T is 3:
-		add "chocolate milk" to invent of player;
+		increase carried of chocolate milk by 1;
 	if T is 4:
-		add "testosterone pill" to invent of player;
+		increase carried of testosterone pill by 1;
 	if T is 5:
-		add "Birth Control Pill" to invent of player;
+		increase carried of Birth Control Pill by 1;
 	if T is 6:
-		add "wolf cum" to invent of player;
+		increase carried of wolf cum by 1;
 	if T is 7:
-		add "healing booster" to invent of player;
+		increase carried of healing booster by 1;
 
 
 Section 10 - Dog and Pony Show

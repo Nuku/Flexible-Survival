@@ -91,12 +91,7 @@ To pigfeed:
 	now lastpigfed is turns;
 	if pigfed is 0:
 		if food is owned:
-			let number be 0;
-			repeat with Q running through invent of the the player:
-				increase number by 1;
-				if q matches the regular expression printed name of food:
-					remove entry number from invent of the player;
-					break;
+			delete food;
 			now pigfed is 1;
 			say "Thank you,' He shouts as he snatches the food from you and starts to gobble it down.[line break][line break]The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and splash on you. Your body immediately begins to feel strange. A loud ripping sound comes from the seat of your pants as a curly pig tail grows out above your butt.";
 			now tailname of player is "Piggy";
@@ -109,7 +104,6 @@ To pigfeed:
 		otherwise:
 			say "'You don't have any food,' he oinks sadly.";
 			now lastpigfed is 250;
-			stop the action;
 	otherwise if pigfed is 1:
 		say "'I[apostrophe]m still digesting the food you gave me before. However, I did find some other food a few minutes ago. You fed me, so I want to pay you back by feeding you. You can eat it if you want.' He says as he holds out a strange box.[line break][line break]You take a look at the box and notice that it is different from all the other packages of food that you've found. There is a picture of a cartoon pig on the front. The name of the product is too faded for you to read.";
 		say "Will you accept his offer and eat the food?";
@@ -126,18 +120,12 @@ To pigfeed:
 			now pigfed is 2;
 		otherwise:
 			say "'Suit yourself, more for me to eat later,' He shrugs.";
-			stop the action;
 	otherwise if pigfed is 2:
 		say "'I[apostrophe]m hungry again,' Philip whines then looks at you eagerly, 'Can you give me more food?'";
 		say "Will you give him some food?";
 		if player consents:
 			if food is owned:
-				let number be 0;
-				repeat with Q running through invent of the the player:
-					increase number by 1;
-					if q matches the regular expression printed name of food:
-						remove entry number from invent of the player;
-						break;
+				delete food;
 				say "Thank you,' He shouts as he snatches the food from you and starts to gobble it down.[line break][line break]The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and once again splash on you. Your body immediately begins to feel strange. Your body plumps up and your feet ache for a moment as they harden into pig hooves.[line break][line break]When he finishes eating, he eyes you appreciatively, then says, 'You seem to know how to find food. Can I come with you?'";
 				now bodyname of player is "Piggy";
 				now body of player is "big and fat and you have pig hooves instead of feet";
@@ -161,18 +149,14 @@ To pigfeed:
 			otherwise:
 				say "'You don't have any food,' he oinks sadly.";
 				now lastpigfed is 250;
-				stop the action;
 		otherwise:
 			say "'Aww...,' he snorts.";
 			now lastpigfed is 250;
-			stop the action;		
 	otherwise:
 		if pigfed is 3:
 			say "'That's okay, I finally figured out how to scavenge safely on my own. You don't have to get food for me any more.' He oinks.";
-			stop the action;
 		otherwise:
 			say "He groans and rubs his gut, 'I'm still digesting the food you gave me earlier. Come back later.'";
-			stop the action;
 
 
 Section 5 - Sexxxing the Piggy

@@ -20,7 +20,7 @@ Instead of Resolving a ForcedAdoption:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "Once you are certain the pair is gone you get up from your hiding place and walk over to where they were standing. as you glance around you spot the object the retriever girls was so obsessed with, an unusual sex toy shaped like a canine cock on one end with a bone shaped handle on the other. Against your better judgment, you feel compelled to pick the strange toy up, examining it more closely momentarily before slipping it into your bag and heading on your way, even as faint thoughts of doggie sex begin to creep into your mind.";
-		add "Dog Bone" to invent of player;
+		increase carried of Dog Bone by 1;
 		now rexeventmode is 1;
 	Otherwise if rexeventmode is 1:
 		if doggyboned < 3:

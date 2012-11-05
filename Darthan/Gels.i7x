@@ -179,10 +179,10 @@ to say beatthepurplegel: [Victory over Purple Gel.]
 				say "Spreading the Purple Gel's legs you place your [cock size desc of player] [cockname of player] at her waiting passage. Pushing forward you easily slide into her tight,wet, and warm tunnel. Grabbing her hips you begin to piston in and out of the purple girl as she reaches down and starts stroking her own member with both hands. Soon enough you give one final thrush as you blow your load in the gel girl's pussy. You watch as jet after jet of your cum shoots through her semi-transparent body until her pussy tightens on your member causing you to loose focus as streams of her purple goo spray across her belly and breasts. Pulling out of the girl you give her ass a playful swat before getting redressed and continuing on your way.";
 			otherwise: [Neuter Character]
 				say "Having no sexual organs of your own you get down and embrace the Purple Gel in an deep passionate kiss. Pulling away you move down and begin sucking on the girls giant tits. While you stimulate her breasts the gel's hands move down and start stroking her cock. Once you are satisfied with sucking her breasts you move further down to the gel girl's groin. Pulling her hands away you [if breast size of player > 0]place her member between your breasts as you begin to suck it[otherwise]you engulf her member with your mouth and begin sucking on it[end if]. You continue this until she can't hold back anymore and fills your mouth with her purple seed. Feeling that you cannot hold anymore you pull her out of your mouth as she continues to spray her seed across you face and [if breast size of player > 0]breasts[otherwise]chest[end if]. When she finally finished your upper body is covered in her sticky purple goo. [if water bottle is owned]Pulling a water bottle out of your pack you use it to rinse yourself off[otherwise if dirty water is owned]Pulling out a bottle of dirty water you use it to rinse yourself off[otherwise]Having nothing to rinse off with you try to clean as much of the goo as you can but don't have much luck[end if], redress, and continue on your way.";
-				if "water bottle" is listed in invent of player: [If you used water bottle to clean yourself]
-					remove "water bottle" from invent of player;
-				otherwise if "dirty water" is listed in invent of player: [If you used dirty water to clean yourself]
-					remove "dirty water" from invent of player;
+				if water bottle is owned: [If you used water bottle to clean yourself]
+					delete water bottle;
+				otherwise if dirty water is owned: [If you used dirty water to clean yourself]
+					delete dirty water;
 					weakrandominfect;
 				otherwise: [If you had no water the leftover semen makes you really horny]
 					increase libido of player by 25;
