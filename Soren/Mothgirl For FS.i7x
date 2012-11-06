@@ -1,4 +1,5 @@
-Version 7 of Mothgirl For FS by Soren begins here. 
+Version 8 of Mothgirl For FS by Soren begins here.
+[ Preliminary scene and mechanics repairs]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Add a Moth to Flexible Survivals Wandering Monsters table"
@@ -10,36 +11,41 @@ Section 1 - Monster Responses
 Mothdefeat is a number that varies.
 to say Moth attack:
 	if Mothdefeat is 0: [ first time losing to a moth ]
-		say "The Mothgirl smiles, rubbing her hands together collecting a small amount of light blue dust from her hands into her palm. She blows the dust into your face gently, making you feel tipsy and aroused. The moth  looks at your dreary state and rub her breasts onto your [Breast size of player] breasts and kisses you lightly on the lips before departing, whispering in your ear 'enjoy' as she leaves you in your state";
-		increase breast size of player by 1;
-		increase charisma of player by 1;
-		decrease intelligence of player by 1;
-		if the intelligence of player < 1:
-			now intelligence of player is 1;
+		say "The Mothgirl smiles, rubbing her hands together collecting a small amount of light blue dust from her hands into her palm. She blows the dust into your face gently, making you feel tipsy and aroused. The moth  looks at your dreary state and rub her breasts onto your [Breast size of player] breasts and kisses you lightly on the lips before departing, whispering in your ear 'enjoy' as she leaves you in your state.";
+		if breast size of player < 9, increase breast size of player by 1;
+		increase libido of player by 5;
+		decrease humanity of player by 3;
+		if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+		if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 		now Mothdefeat is 1;
 	otherwise:
-		if a random chance of 2 in 3 succeeds: [ Prefer male action]
-			if cunts of player > 0:
-				if cunt length of player is less than 15 or cunt width of player is less than 10:
-					say "The mothgirl looks over at you, shaking her head and smiling at the sudden return of past events. She pushes you to the ground and tenderly climbs on top of you and teases your nipples with her finger till they are erect. She then makes use of her position to unfurl her wings and flap them sending sparkling yellow dust down toward you, this arouses you even more making your cunt wet without any touch from the Moth. She then takes a small sphere the size of a pea, and pops it into her mouth. She takes some time to kiss you and rub your cunt even more as she waits for the pea like object to take effect. She then grows a penis above average in size, and enters your pussy with a hard lurch. The penis is covered in small millimeter size tubules as they stimulate your insides. She uses her sudden dominant position to force your [facename of player] face into her bosom and have you suck the nectar from her C cup breasts. After she is satisfied with her dominant position she quickens the pace of her penetrations till you both climax as one.[impregchance]";
-					increase breast size of player by 5;
-					increase charisma of player by 2;
-					increase cunt length of player by 2;
-					increase cunt width of player by 1;
+		if a random chance of 2 in 3 succeeds and cunts of player > 0: [ Prefer male action]
+			if cunt length of player is less than 15 or cunt width of player is less than 10:
+				say "The mothgirl looks over at you, shaking her head and smiling at the sudden return of past events. She pushes you to the ground and tenderly climbs on top of you and teases your nipples with her finger till they are erect. She then makes use of her position to unfurl her wings and flap them sending sparkling yellow dust down toward you, this arouses you even more making your cunt wet without any touch from the Moth. She then takes a small sphere the size of a pea, and pops it into her mouth. She takes some time to kiss you and rub your cunt even more as she waits for the pea like object to take effect. She then grows a penis above average in size, and enters your pussy with a hard lurch. The penis is covered in small millimeter size tubules as they stimulate your insides. She uses her sudden dominant position to force your [facename of player] face into her bosom and have you suck the nectar from her C cup breasts. After she is satisfied with her dominant position she quickens the pace of her penetrations till you both climax as one.[impregchance]";
+				if breast size of player < 6:
+					increase breast size of player by 3;
+				otherwise if breast size of player < 9:
+					now breast size of player is 9;
+				increase cunt length of player by 2;
+				increase cunt width of player by 1;
+				decrease humanity of player by 3;
+				increase libido of player by 8;
+				if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
+				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+			otherwise:
+				if ( stamina of player is less than 15 ) and ( intelligence of player is less than 15) :
+					say "She looks at you having been defeated by her once again.  She now has no mercy on you as she douses you with an abundance of dust from her wings. This drives your thoughts into submission as she tells you gently 'come here my pet' your body and mind unable to withstand the effects of the dust obeys and approaches the mothgirl. The mothgirl than spreads her legs and motions you with her finger to come closer as she says almost in a whisper 'now use that tongue of yours to please me, here' as she points to her pussy. You without pause drop your face onto her snatch and begin licking her gently at first. After a minute of teasing she tells you in an aroused tone 'faster if you please' giving you a sexy smile. You obey and quicken your pace, giving her surprisingly wet cunt a thorough licking. She starts to pant heavily as she says to you in a forceful tone 'harder' you unable to control your actions start to bury your tongue deep into her pussy. She soon reaches climax spraying nectar onto your face she then says softly through panted breathes 'lick it up, you will enjoy it'. You still under the effects of the dust clean her of the sprayed nectar and soon go to licking the liquid from your face.";
+					if breast size of player < 6:
+						increase breast size of player by 3;
+					otherwise if breast size of player < 9:
+						now breast size of player is 9;
+					decrease humanity of player by a random number between 4 and 8;
+					increase libido of player by 12;
+					if "Pure" is listed in feats of player, increase humanity of player by a random number between 1 and 3;
+					if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 2;
 				otherwise:
-					if ( stamina of player is less than 15 ) and ( intelligence of player is less than 15) :
-						say "She looks at you having been defeated by her once again, she now has no mercy on you as she douses you with an abundance of dust from her wings. This drives your thoughts into submission as she tells you gently 'come here my pet' your body and mind unable to withstand the effects of the dust obeys and approaches the mothgirl. The mothgirl than spreads her legs and motions you with her finger to come closer as she says almost in a whisper 'now use that tongue of yours to please me, here' as she points to her pussy. You without pause drop your face onto her snatch and begin licking her gently at first. After a minute of teasing she tells you in an aroused tone 'faster if you please' giving you a sexy smile. You obey and quicken your pace, giving her surprisingly wet cunt a thorough licking. She starts to pant heavily as she says to you in a forceful tone 'harder' you unable to control your actions start to bury your tongue deep into her pussy. She soon reaches climax spraying nectar onto your face she then says softly through panted breathes 'lick it up, you will enjoy it'. You still under the effects of the dust clean her of the sprayed nectar and soon go to licking the liquid from your face";
-						increase breast size of player by 5;
-						decrease intelligence of player by 2;
-						if the intelligence of player < 1:
-							now intelligence of player is 1;
-						decrease stamina of player by 2;
-						if the stamina of player < 1:
-							now stamina of player is 1;
-						increase charisma of player by 1;
-					otherwise:
-						say "She looks at you having been defeated by her once again, she now has no mercy on you as she douses you with an abundance of dust from her wings. However you recover from this dust and you escape before she has a chance to do anything to you. However you leave slightly aroused.";
-						increase charisma of player by 1;	
+					say "She looks at you having been defeated by her once again, she now has no mercy on you as she douses you with an abundance of dust from her wings. However you recover from this dust and you escape before she has a chance to do anything to you. However you leave slightly aroused.";
+					increase libido of player by 5;
 		otherwise: [ Prefer female action]
 			if cocks of player is 0:			
 				say "She looks at you and quickly gives you a small bite onto the neck, this paralyzes your entire body. She catches you and gently sets you on the ground, preparing for her coming entertainment she rubs her hands together in glee as she produces a small pea sized sphere, blue in color. She gingerly opens your mouth and places the pea onto your tongue, then gently closes your mouth and forces you to swallow it. This pea goes down to your stomach, in which the time it takes to do so she has disrobed herself and you in the process. You feel a sensation in your groin as you grow an above average penis and she takes no time as she jumps onto you and lowers her cunt onto your new member. She starts off slowly saying to you 'Don't worry, just lay there and enjoy' the moth girl then took off. She starts hammering her cunt onto your cock harder and faster than before however the paralyzing effects of her poison although does not keep your new penis flaccid, it denies you any climax. So despite the pleasurable activity your pleasure turns into pain. The mothgirl seeing as your face distorts from looking in rapture and instead looking in hell. She tells you as she continues to piston your cock into her pussy 'don't blame me for this, you lost'. As the minutes of endless sex roll by your body starts to recover from the poison and you cum gallons into the surprised mothgirl. You faint from the amount of energy used, as the moth girl stumbles away leaking cum from her cunt.";
