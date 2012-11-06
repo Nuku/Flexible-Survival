@@ -22,7 +22,7 @@ Include Basic Screen Effects by Emily Short.
 
 Instead of sniffing something (called x):
 	if the scent of x is "":
-		say "It smells pretty normal for a [x].";
+		say "It smells pretty normal for [a/an x].";
 	otherwise:
 		say "[scent of x][line break]";
 
