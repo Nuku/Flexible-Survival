@@ -122,7 +122,7 @@ When Play begins:
 	now cunt length entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;          [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 80;             [ Target libido the infection will rise towards. ]
-	now loot entry is "Sports Drink";   [ Dropped item, blank for none.  Case sensitive. ]
+	now loot entry is "sports drink";   [ Dropped item, blank for none.  Case sensitive. ]
 	now lootchance entry is 100;        [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -138,7 +138,7 @@ Section 3 - Sports Drink
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Sports Drink"	"A plastic bottle filled with a clear reddish sports drink. The brand symbol is a black wolf's head."	1	sports drink
+"sports drink"	"A plastic bottle filled with a clear reddish sports drink. The brand symbol is a black wolf's head."	1	sports drink
 
 sports drink is a grab object.
 the usedesc of sports drink is "[sportsdrinkuse]".
