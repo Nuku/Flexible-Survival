@@ -5198,7 +5198,7 @@ Include Retriever by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
-
+Include Wereraptor for FS by Stripes.
 
 [NPCs]
 Include Stuck Dragon by Hiccup.
