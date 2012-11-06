@@ -458,11 +458,11 @@ lastfuck of Helen is usually 555.
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "stag":
+	if bodyname of player is "Stag":
 		if humanity of player is less than 10:
 			if hp of Mike > 0 and hp of Mike < 99:			[player met and talked with Mike]
 				say "As you succumb to the infection, you drift aimlessly through the city for a while until you run into Mike by chance. A bit sad to see someone he knew reduced to such a state, he takes you along and cares for you, putting you in a spacious kennel with his human dogs.[if cocks of player > 0] Randy creature that you are, you impregnate several of the females, becoming the progenitor of a very successful breed of pet humans in the changed world.[end if][if cunts of player > 0]The male transformed dogs find you irresistible and are constantly eager to mount you, which results in more than one litter of human puppies...";
-			otherwise:																	[only had unfriendly contact with Mike]
+			otherwise:								[only had unfriendly contact with Mike]
 				say "As you succumb to the infection, you drift aimlessly through the city for a while, having sex with anyone you come across. After a while, there's a whole herd of willing does and a few stags following you. You lead them to the park to live among the trees, unconcerned about what's going on outside of it.";
 		otherwise:
 			say "When the rescue comes, you're carted into a holding facility and poked and prodded for a little while before they give you some shots to make you non-infective and release you into the outside world. As busy as they are with the more hostile infected resisting their efforts, there's not much time spent on you.";
