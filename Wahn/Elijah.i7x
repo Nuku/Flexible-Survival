@@ -225,16 +225,13 @@ instead of conversing the Elijah:
 		now Sweet Surprise is unresolved;
 		if furry is not banned, now Examination Room is unresolved;
 	otherwise if (hp of Elijah is 2):  [wounded + unconscious in the bunker - revival quest started already]
-		let milkchoicelist be a list of text;
-		if gryphon milk is owned, add "gryphon milk" to milkchoicelist;
-		if dog milk is owned, add "dog milk" to milkchoicelist;
-		if panther milk is owned, add "panther milk" to milkchoicelist;
-		if chocolate milk is owned, add "chocolate milk" to milkchoicelist;
-		if vixen milk is owned, add "vixen milk" to milkchoicelist;
-		if dolphin milk is owned, add "dolphin milk" to milkchoicelist;
-		if cow milk is owned, add "cow milk" to milkchoicelist;
-		if cheetah milk is owned, add "cheetah milk" to milkchoicelist;
-		if milkchoicelist is empty:
+		blank out the whole of table of itemselection;
+		repeat with Q running through owned milky grab objects:
+			choose a blank row in table of itemselection;
+			now object entry is Q;
+			now holding entry is carried of Q;
+			now objname entry is printed name of Q;
+		if there is no object in row 1 of table of itemselection:
 			say "     To mix together something to cure the injured angel, you need a good base to start with. Some form of milk should do the trick nicely...";
 			if demon seed is owned:
 				say "     As you think of getting the milk, you remember the demon seed you still have in your pack. A wicked little thought sneaks into your mind - wouldn't it be interesting to see what the potent liquid might do to the helpless angel you have at your mercy?[line break]";
@@ -257,32 +254,32 @@ instead of conversing the Elijah:
 				otherwise:
 					say "     You got the milk, honey and even a vial of healing booster. Do you want to mix it all together now and administer the result to Elijah?[line break]";
 					if player consents:
-						let chosenmilk be "empty";
-						if the number of entries in milkchoicelist is 1:
-							now chosenmilk is entry 1 of milkchoicelist;
+						let chosenmilk be pocketknife;
+						if the number of filled rows in table of itemselection is 1:
+							choose row 1 in table of itemselection;
+							now chosenmilk is object entry;
 						otherwise:
-							sort milkchoicelist;
+							sort table of itemselection in object order;
 							say "Which milk would you prefer to use? (no different results)[line break]";
-							repeat with y running from 1 to number of entries in milkchoicelist:
-								say "[link][bracket][y][close bracket][as][y][end link] - [entry y of milkchoicelist][line break]";
-							say "[link][bracket]0[close bracket][end link] - ABORT[line break]";
-							while chosenmilk is "empty":
-								say "Pick the corresponding number> [run paragraph on]";
+							repeat with y running from 1 to number of filled rows in table of itemselection:
+								choose row y from the table of itemselection;
+								say "[link][y] - [objname entry][as][y][end link] ([holding entry])[line break]";
+							say "[link][bracket]0[close bracket][end link] - NONE[line break]";
+							while chosenmilk is pocketknife:
+								say "Pick the corresponding number (0-[number of filled rows in table of itemselection])> [run paragraph on]";
 								get a number;
-								if calcnumber > 0 and calcnumber <= number of entries in milkchoicelist:
-									now chosenmilk is entry calcnumber in milkchoicelist;
+								if calcnumber > 0 and calcnumber <= number of filled rows in table of itemselection:
+									choose row calcnumber in table of itemselection;
+									now chosenmilk is object entry;
 								otherwise if calcnumber is 0:
-									now chosenmilk is "none";
-						if chosenmilk is not "none":
+									now chosenmilk is journal;
+						if chosenmilk is not journal:
 							say "     An empty soda bottle serves as the container into which you carefully pour your collected ingredients. Holding the bottle closed, you then give it your best bartender impression, shaking it like a martini. The result is a pale blue liquid, smelling pleasantly of honey.";
 							say "     And now to test if it works... you put your hand under patient's head, raising it a bit and guide the bottle to his lips. Slowly, you let some of the liquid flow into his mouth until his swallowing reflex kicks in, continuing in that way until he's drunk all of what was in the bottle.";
 							say "     You sit on the next bunk in line, eagerly watching the angel. And you don't have to wait long - a more healthy color returns to his face pretty quickly and then he opens his azure eyes. Raising his upper body a bit, supported on the bunk by one of his wings, the angel looks around, then smiles brightly at you as he notices you at his side.";
 							say "     'My name is Elijah and I thank you, my friend. I feel much better now. Although rather strange...' he says, his brows knitting as he wiggles his fingers, flexes the muscles in his arms, followed by stretching first one, then the other wing to its fullest extent. Then he lifts the blanket he's under a bit and looks down, his eyes widening suddenly.";
 							say "     'My memories are a bit woozy, but I'm sure THAT wasn't there before. Must have originated with one of the demons, but it doesn't feel evil in of itself. Curious. Oh well, I guess I'll ignore it for now and it'll be taken care of when I get home.'";
-							repeat with Q running through owned grab objects:
-								if the printed name of q matches the text chosenmilk, case insensitively:
-									delete q;
-									break;
+							delete chosenmilk;
 							if Honeycomb is owned:
 								delete honeycomb;
 							otherwise:

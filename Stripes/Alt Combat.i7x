@@ -24,7 +24,6 @@ absorb is a number that varies.           [ Used to track the damage absorbed by
 damagein is a number that varies.		[ Used to pass the damage to the various aborbancy subroutines. ]
 damageout is a number that varies.		[ Used to receive the adjusted damage after using one of the absorbancy subroutines. ]
 
-
 [		fightoutcome			]
 [ 100 *	starting value			]
 [							]
@@ -391,27 +390,25 @@ Chapter 2 - Item Use
 
 This is the combat item rule:
 	now battleitem is 0;
-	blank out the whole of table of combat items;
-	let X be 1;
-	repeat with Q running through owned grab objects:
-		let z be journal;
-		if Q is not fast, next;
-		choose a blank row in table of combat items;
-		now title entry is printed name of Q;
-		now toggle entry is combat item process rule;
-	if there is no title in row 1 of table of combat items:
+	blank out the whole of table of itemselection;
+	repeat with Q running through fast owned grab objects:
+		choose a blank row in table of itemselection;
+		now object entry is Q;
+		now holding entry is carried of Q;
+		now objname entry is printed name of Q;
+	if there is no object in row 1 of table of itemselection:
 		say "You have no combat ready items to use!";
 		wait for any key;
 	otherwise:
 		while 1 is 1:
 			if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-			repeat with y running from 1 to number of filled rows in table of combat items:
-				choose row y from the table of combat items;
-				say "[link][y] - [title entry][as][y][end link][line break]";
+			repeat with y running from 1 to number of filled rows in table of itemselection:
+				choose row y from the table of itemselection;
+				say "[link][y] - [objname entry][as][y][end link] ([holding entry])[line break]";
 			say "[link]0 - ABORT[as]0[end link][line break]";
 			say "Type the number corresponding to the item to be used> [run paragraph on]";
 			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of combat items:
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of itemselection:
 				now current menu selection is calcnumber;
 				follow the combat item process rule;
 				break;
@@ -423,20 +420,21 @@ This is the combat item rule:
 
 this is the combat item process rule:
 	decrease the menu depth by 1;
-	choose row Current Menu Selection in table of combat items;
-	let nam be title entry;
-	repeat with N running from 1 to the number of rows in the table of game objects:
-		choose row N in the table of game objects;
-		if name entry matches the text nam, case insensitively:
-			process object entry;
-			break;
+	choose row Current Menu Selection in table of itemselection;
+	process object entry;
 	if battleitem is 0 and monsterhp is greater than 0:
 		wait for any key;
 		choose row monstercom from table of Critter Combat;
 		if there is a continuous in row monstercom of the table of Critter Combat:
 			follow the continuous entry;
 		if combat abort is 0, follow the combat entry;
-	
+
+
+Table of itemselection
+object	holding (number)	objname (indexed text)	description (indexed text)
+journal	1	"journal"	"nothing"
+with 24 blank rows.
+
 
 Chapter 3 - Combat Pass
 

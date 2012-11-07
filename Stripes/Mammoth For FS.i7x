@@ -1,10 +1,8 @@
 Version 1 of Mammoth For FS by Stripes begins here.
 [Version 1]
-"Adds a Mammoth creature to Flexible Survivals Wandering Monsters table"
+"Adds a Mammoth creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
-
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Mammoth" } to infections of hermaphrodite;
