@@ -435,25 +435,25 @@ To add (item - a text)  to invent of the player:
 To remove (item - a text)  from invent of player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
-			delete x;
+			now carried of x is 0;
 			break;
 
 To remove (item - a text)  from the invent of player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
-			delete x;
+			now carried of x is 0;
 			break;
 
 To remove (item - a text)  from the invent of the player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
-			delete x;
+			now carried of x is 0;
 			break;
 
 To remove (item - a text)  from invent of the player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
-			delete x;
+			now carried of x is 0;
 			break;
 
 There is a Cola Vending Machine in Mall Foodcourt. "A broken down vending machine lurks nearby with several, large, soda brands brightly painted onto it." It is fixed in place. It has a description "A vending machine. It appears to dispense soda, but it's broken.".
@@ -1771,10 +1771,10 @@ After resolving a situation:
 	try looking;
 
 to delete (X - a grab object):
-	let found be 0;
-	let number be 0;
 	decrease the carried of x by 1;
-	if carried of x is less than 0, now carried of x is 0;
+	if carried of x is less than 0:
+		now carried of x is 0;
+		say "ERROR: There was no [x] to remove.  Please report where this occurred.";
 
 instead of waiting:
 	follow the turnpass rule;
@@ -3605,7 +3605,7 @@ This is the turnpass rule:
 		if "Perky" is listed in feats of player:
 			increase morale of player by 1;
 		now restoration is 0;
-		if "Physical Booster" is listed in feats of player:
+		if "Physical Booster" is listed in feats of player and wrcursestatus is not 5:
 			if Strength of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Strength of player by 1;
 				increase hunger of player by 6;
@@ -3623,7 +3623,7 @@ This is the turnpass rule:
 				increase hunger of player by 6;
 				say "Your body strives to regain its lost agility and restores your flexibility.  Your stomach grumbles with hunger at this sudden effort.  [bold type]Dexterity increased by 1.[roman type][line break]";
 				now restoration is 1;
-		if "Mental Booster" is listed in feats of player:
+		if "Mental Booster" is listed in feats of player and wrcursestatus is not 5:
 			if Intelligence of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Intelligence of player by 1;
 				increase hunger of player by 3;
@@ -4935,6 +4935,7 @@ Include Qytat Shifters by Hellerhound.
 Include Fucking by Nuku Valente.
 Include Needy Heat for FS by Telanda Softpaw.
 Include Church Of The Maternal Beast For Fs by Telanda Softpaw.
+Include Wereraptor for FS by Stripes.
 Include Pets by Nuku Valente.
 Include Computers by Hellerhound.
 Include Feats by Nuku Valente.
@@ -5198,7 +5199,7 @@ Include Retriever by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
-Include Wereraptor for FS by Stripes.
+
 
 [NPCs]
 Include Stuck Dragon by Hiccup.
