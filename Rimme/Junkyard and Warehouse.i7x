@@ -79,7 +79,7 @@ Instead of going south from the abandoned lot:
 					move the player to Storage Room;
 				otherwise:
 					say "The guard gives a startled cry when he sees the rest of your body, but you quickly explain that you are just another infected survivor, and you wish to enter for just a moment. 'I'm sorry,' he says. 'Too many of us have had, ahem, encounters with the beasts outside. I might make an exception, though,' he whispers, 'If you could bring me a soda. I haven't had one in so long.'";
-					if "soda" is listed in invent of player:
+					if soda is owned:
 						say "Do you give him a soda?";
 						if the player consents:
 							say "You dig into your backpack and give him your soda. He takes it eagerly and disappears. A few moments later, he shows up with another officer. The two mumble to each other for a moment, before the other officer speaks up.[line break]'All right, we will let you in. But if you try anything funny, we'll throw you out.' You promise you won't be any trouble, and the guards open the door for you.";
@@ -153,27 +153,23 @@ Instead of trading when the second noun is Steven:
 	if stevenremoved is 0:
 		if the noun is soda:
 			say "Steven's eyes gleam for a moment, before he snatches the can and tucks it away. He pulls out a medkit. 'Don't tell anyone about this.'";
-			add "medkit" to invent of player;
-			repeat with Q running through invent of the the player:
-				if Q matches the regular expression "soda":
-					delete soda;
-					stop the action;
-		if the noun is chips:
+			increment carried of medkit;
+			delete soda;
+		otherwise if the noun is chips:
 			say "Steven looks hungrily at the chips, and he carefully takes them off you and gives you back a medkit. 'You know, I'm breaking the rules for this,' as he winks at you.";
-			add "medkit" to invent of player;
-			repeat with Q running through invent of the the player:
-				if q matches the regular expression "chips":
-					delete chips;
-					stop the action;
-		say "He looks blankly at the [noun]. 'You can keep it.'";
+			increment carried of medkit;
+			delete chips;
+		otherwise:
+			say "He looks blankly at the [noun]. 'You can keep it.'";
 	otherwise:
 		if the noun is soda:
-			say "Steven looks at the soda with an air of remembrance. 'You keep it,' he says. 'I've had enough soda for now.'";
-		if the noun is chips:
-			say "Steven shakes his head sadly. 'I think I lost my appetite for junk food, frankly.'";
-		if the noun is medkit:
+			say "Steven looks at the soda with an air of remembrance.  'You keep it,' he says.  'I've had enough soda for now.'";
+		otherwise if the noun is chips:
+			say "Steven shakes his head sadly.  'I think I lost my appetite for junk food, frankly.'";
+		otherwise if the noun is medkit:
 			say "He shakes his head. 'Eh, you keep it. I'm not particularly injured right now.'";
-			[]
+		otherwise:
+			say "'Thanks, but no.  You hang on to it.";
 
 Section 4 - Steven, requests
 
@@ -203,7 +199,7 @@ Check foodrequest:
 
 Carry out foodrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a packet of food.";
-	add "food" to invent of player;
+	increment carried of food;
 	now lastfoodrun is turns;
 	increase stevenfood by 1;
 	if stevenfood is 5:
@@ -225,10 +221,10 @@ Check waterrequest:
 
 Carry out waterrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a bottle of water.";
-	add "water bottle" to invent of player;
+	increment carried of water bottle;
 	now lastwaterrun is turns;
 	increase stevenwater by 1;
-	if stevenfood is 5:
+	if stevenwater is 5:
 		say "That's as much water as I can give you.  I'm really sorry.";
 
 Chapter 3 - The Office and Stevenfucking
@@ -462,10 +458,10 @@ Instead of resolving junkyard digups:
 	if a random chance of 1 in 3 succeeds:
 		if a random chance of 1 in 2 succeeds:
 			say "You find a bottle of water!";
-			add "water bottle" to invent of player;
+			increment carried of water bottle;
 		otherwise:
 			say "You find a bottle of dirty water!";
-			add "dirty water" to invent of player;
+			increment carried of dirty water;
 	otherwise:
 		say "Alas, you do not find anything in this pile. You should try again.";
 	if jdigup is 3, now junkyard digups is resolved;
@@ -522,13 +518,13 @@ Instead of resolving an unused tool:
 	let result be a random number from 1 to 3;
 	if result is 1:
 		say "Huzzah! You found a crowbar!";
-		add "crowbar" to invent of player;
+		increment carried of crowbar;
 	if result is 2:
 		say "Success! You found a mallet!";
-		add "mallet" to invent of player;
+		increment carried of mallet;
 	if result is 3:
 		say "Yay! You found an iron pipe!";
-		add "iron pipe" to invent of player;
+		increment carried of iron pipe;
 	now an unused tool is resolved;
 
 Section 5 - Find a random infected object
