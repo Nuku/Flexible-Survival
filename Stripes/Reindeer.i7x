@@ -139,7 +139,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "egg nog"	"AKA chicken milk.  That holiday drink, spiked rather heavily with brandy by the smell of it."	1	egg nog
 
-egg nog is a grab object. It is a part of the player. egg nog is infectious.  understand "chicken milk" as egg nog.  The strain of egg nog is "Reindeer".
+egg nog is a grab object. It is a part of the player. egg nog is infectious.  understand "chicken milk" as egg nog.  The strain of egg nog is "Reindeer". egg nog is temporary.
 
 instead of sniffing egg nog:
 	say "The egg nog smells fresh and strongly of good brandy, making you want to drink it and remember Christmases past.";
@@ -236,7 +236,14 @@ to say reindeerheat:
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Remembering the egg nog, you pull it out from your pack and take a drink.[nogging]";
 		otherwise if "egg nog" is listed in invent of the location of the player:
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Spotting the egg nog, you grab it and take a drink.";
-			remove "egg nog" from invent of location of player;
+			let number be 0;
+			repeat with Q running through invent of the location of the player:
+				increase number by 1;
+				if q matches the text "egg nog", case insensitively:
+					add q to the invent of the player;
+					break;
+			remove entry number from invent of the location of the player;
+			increase carried of egg nog by 1;
 			process egg nog;
 		otherwise:
 			say "[reindeerbreastheat]";
