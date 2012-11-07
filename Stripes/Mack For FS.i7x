@@ -66,6 +66,12 @@ to attackingnutsofactory:
 		say "     The squirrel chitters happily, dancing around among the nuts, tossing handfuls of them into the air.  'I did it!  I did it!  I did it!  Chrtt Chekt!'  Spotting you he grins and grabs some a handful of the nuts in both paws, pushing them to you.  'I mean we did it.  Here!  Take these for now.  And these.  And these.'  He pushes a few more pawloads of nuts into your hands, which you pour into your pack.  They should be more than enough to feed you for a while.";
 		say "     As he pushes a final load into your pack, he kisses you and slides his fluffy tail around you.  As your pack slips to the floor, his paws move to slide over your body.  The scent of nuts, macadamias especially, and arousal comes from him.  Shall you join him in celebrating your victory together?";
 		if the player consents:
+			[puts Grey Squirrel as lead monster in case of impregnation]
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Grey Squirrel":
+					now monster is y;
+					break;
 			say "     Feeling there'd be no better way to celebrate your victory, you let your hands slide through Macadamia's fluffy fur to cup those large nuts of his.  The grey squirrel churrs happily and nuzzles your neck as you rub his heavy balls.  As his cock starts to slide from his sheath, he sets your pack aside and starts sliding off your remaining clothes and his belt of pouches.  Once that's done, he pushes you to the ground amid the nuts and gives you another kiss before rolling you onto all fours.";
 			say "     Quite aroused and excited now, you let him move atop you, bringing his stiff cock and heavy balls into position.  'Chuk... you did great, my sweet hazelnut,' he chitters, affectionately referring to the nut he used to represent you while planning the raid.  He nibbles along your shoulder and neck before lining up his hard shaft.  You moan in pleasure as he sinks it into your [if cunts of player > 0]pussy quickly[otherwise]asshole slowly[end if] and starts mating you.  You reach back and rub those heavy, swinging orbs of his, knowing their hot nutbutter'll be filling you soon.";
 			attempttowait;
@@ -137,6 +143,12 @@ instead of fucking the Macadamia:
 		say "     You're ill-equipped to play with the squirrel right now.";
 	otherwise:
 		now lastfuck of Macadamia is turns;
+		[puts Grey Squirrel as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Grey Squirrel":
+				now monster is y;
+				break;
 		if hp of Macadamia is 4:
 			say "     Wanting some fun with the energetic squirrel, you snuggle in close and scritch his chest.  He chirrs happily and slides his fluffy tail around you both as he gives you a kiss.  Soon you're on the floor together with the squirrel's nuts in your hand.  He nuzzles at your neck as your rub his balls, rubbing his furry cheeks against you.  As his cock starts to slide from his sheath, he sets your pack aside and starts sliding off your remaining clothes and his belt of pouches.  Once that's done, he gives you another kiss before rolling you onto all fours.";
 			say "     Quite aroused and excited now, you let him move atop you, bringing his stiff cock and heavy balls into position.  'Chuk... you did great, my sweet hazelnut,' he chitters, affectionately referring to the nut he used to represent you while planning the raid.  He nibbles along your shoulder and neck before lining up his hard shaft.  You moan in pleasure as he sinks it into your [if cunts of player > 0]pussy quickly[otherwise]asshole slowly[end if] and starts mating you.  You reach back and rub those heavy, swinging orbs of his, knowing their hot nutbutter'll be filling you soon.";

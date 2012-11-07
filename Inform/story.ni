@@ -224,6 +224,7 @@ Equipment has a number called effectiveness.  The effectiveness of equipment is 
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious. 
+A grab object can be milky. A grab object is usually not milky.
 A grab object has a text called strain.
 A grab object has a text called trade.
 A grab object has a text called purified.
@@ -696,7 +697,7 @@ dirty water is a grab object. It is a part of the player. The trade of dirty wat
 understand "water" as dirty water.
 water bottle is a grab object. It is a part of the player. The trade of water bottle is "chips".
 Does the player mean using the dirty water: it is unlikely.
-dog milk is a grab object. It is a part of the player.
+dog milk is a grab object. It is a part of the player.  it is milky.
 The purified of dog milk is "water bottle".
 The purified of Wyvern Goop is "food".
 soda is a grab object. It is a part of the player.
@@ -707,8 +708,8 @@ pocketknife is a armament. It is a part of the player. It has a weapon "[one of]
 understand "knife" as pocketknife.
 chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary.
 understand "seat" as chair.
-gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon"; The trade of Gryphon Milk is "distilled milk".
-distilled milk is a grab object. It is a part of the player.
+gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon"; The trade of Gryphon Milk is "distilled milk".  gryphon milk is milky.
+distilled milk is a grab object. It is a part of the player.  it is not milky.
 
 
 The invent of the player is { "journal" };
@@ -4826,9 +4827,9 @@ name	desc	weight	object
 "vixen milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
 
 
-panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".
-chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "soda".
-vixen milk is a grab object. It is a part of the player. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk".
+panther milk is a grab object. It is a part of the player. Understand "milk" as panther milk. panther milk is infectious. The strain of panther milk is "Panther Taur". The trade of panther milk is "distilled milk".  panther milk is milky.
+chocolate milk is a grab object. It is a part of the player. Understand "milk" as chocolate milk. chocolate milk is infectious. The strain of chocolate milk is "Chocolate Lab". The purified of chocolate milk is "soda".  chocolate milk is milky.
+vixen milk is a grab object. It is a part of the player. Understand "milk" as vixen milk. vixen milk is infectious. The strain of vixen milk is "Vixen Nurse". The purified of vixen milk is "distilled milk".  vixen milk is milky.
 
 
 check milking:
@@ -5148,6 +5149,7 @@ Include Albino Mouse by Stripes.
 Include Cat Ninjas by Stripes.
 Include Reindeer by Stripes.
 Include Snow Leopard for FS by Stripes.
+Include Grey Squirrel for FS by Stripes.
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.

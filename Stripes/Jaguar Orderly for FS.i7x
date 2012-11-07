@@ -165,7 +165,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "libido suppressant"	"A small syringe filled with a cloudy, orange fluid."	1	libido suppressant
 
-libido suppressant is a grab object. It is a part of the player. It is fast. It is not temporary.
+libido suppressant is a grab object. It is a part of the player. It is fast.
 libsuppcount is a number that varies.
 
 instead of sniffing the libido suppressant:
@@ -174,10 +174,10 @@ instead of sniffing the libido suppressant:
 the usedesc of libido suppressant is "[libsupp]".
 
 to say libsupp:
-	increase libsuppcount by 1;
-	if libsuppcount > 8, now libsuppcount is 8;
+	increase libsuppcount by 2;
+	if libsuppcount > 13, now libsuppcount is 13;
 	say "     You quickly inject the anti-arousal drugs, feeling your body respond quickly as your lustful urges momentarily wane.";
-	decrease libido of player by ( 20 - libsuppcount );
+	decrease libido of player by ( 25 - libsuppcount );
 	if libido of player < 0, now libido of player is 0;
 
 
