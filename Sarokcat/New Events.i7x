@@ -14,8 +14,7 @@ Instead of Resolving a Military presence:
 	if mtp is 0:
 		say "You encounter what appears to be a military jeep parked by the side of the road, your heart jumps as you think about the potential for rescue or some military equipment.  Approaching cautiously you notice that the interior is covered in what appears to be dried cum.  There is no signs of the former occupants and they sadly appear to have taken anything of use with them.";
 		increase mtp by 1;
-		stop the action;
-	If mtp is 1:
+	otherwise If mtp is 1:
 		say "While traveling through the deserted city all of a sudden a glint of light catches your eye on one of the nearby rooftops.  Hoping to find signs of another survivor you start moving to get a better view of the roof, straining your eyes to see what it might have been.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -28,23 +27,21 @@ Instead of Resolving a Military presence:
 			increase mtp by 1;
 		otherwise:
 			say "Sadly no matter how hard you search, you can't seem to figure out where the glint of light came from exactly.  Nor can you determine what exactly it was from the little you saw of it, chalking it up as just another of the strange events going on in the city, you continue about your way.";
-		stop the action;
-	If mtp is 2:
+	otherwise If mtp is 2:
 		say "Traveling through the streets again you hear a distant sound in the air for a minute.  Looking up and all around you can only barely make out a jet trail high in the sky.  Wondering why someone would be traveling that high you are about to turn away and continue about your business when you notice a small speck drifting in the sky.  You pull out your newly acquired binoculars and try to focus in on the speck to see what it is.  Surprisingly as you focus in the binoculars, the speck resolves itself into several people in urban camouflage falling through the sky!  As you watch breathlessly their parachutes open and they straighten up to land, though a sudden swirl of wind from over near the capitol building scatters their neat formation, blowing several of them to entirely different parts of the city.  Shaking your head as the figures fall out of sight and into the city itself, you can't help but wonder what this means for the city and your hopes of rescue.";
 		extend game by 12;
 		increase mtp by 1;
-		stop the action;
-	if mtp is 3:
+	otherwise if mtp is 3:
 		say "Traveling through the city you come across what appears to have been a military style barricade, currently unoccupied, investigating further you find that past the barricade several military tents had been set up in a mostly empty store parking lot. Investigating carefully in case there are trigger happy soldiers still around, you find that the makeshift camp seems completely empty, though there are several signs of a struggle in some areas. [line break] Gathering up your courage you start looking in some of the tents, only to be surprised to find the large tents seem full of empty movable beds with restraints and scientific equipment.   Looking closer you can see several of the beds were occupied at some point recently, and that from the looks of things the occupants managed to either free themselves from their restraints, or managed to somehow 'convince' whoever was with them to free them instead.  From the strong sexual musk lingering inside the tents, however they managed to get free, they definitely managed to turn the tables on their captors, the remnants of sexual fluids evident in several locations, as are several discarded or torn bio-hazard suits and sets of lab robes. [line break]  Deciding that whatever the military was doing here, it would probably be best for you not to stay to long, you hurriedly search through the rest of the tents, hoping to find a gun or something else of use left behind.  Eventually giving up, you are forced to leave without a weapon, having found several boxes of ammo, and no guns to go with them.  Though you do find several small boxes of what the military jokingly calls food, and end up taking some with you.";
 		increase carried of food by 2;
 		increase libido of player by 30;
 		increase mtp by 1;
-		stop the action;
-	if mtp is 4:
-		say " Traveling through the city you come upon a strange sight on one of the roads that eventually leads out of the city.  You find a large flatbed truck overturned on the road, with several jeeps abandoned next to it.  Curiosity getting the best of you, you move closer to investigate the strange sight.  [line break]  Arriving at the overturned flatbed, you find that it appears to have been rigged to carry something relatively large, and from the way the straps and tie downs were burst open, alive.  Moving around the truck to examine the jeeps, you find that up close the jeeps and the area are covered in some kind of hardened goop, and sitting in the middle of the stuff are what appear to be several almost man sized eggs. [line break] Wondering what happened here, you spy a bit of some military camo worked into the lining of one of the eggs, closer investigation shows sign of a struggle, with several empty shell casings, and even a thoroughly gummed up and useless military sidearm lying around. Recalling some of your earlier encounters and sightings with the wyverns in the city, you realize that it looks like they were trying to transport a couple of the beasts to some other location, probably for study like in that camp you saw earlier.  Things obviously didn't go as planned again you note as you look around at the numerous eggs that likely hold the transforming soldiers, you can[apostrophe]t help but wonder what the military[apostrophe]s interest in all this is, and why they aren[apostrophe]t already in the city in force to help the survivors. [line break] You are startled out of your thoughts by one of the eggs shaking a bit as you stare at it, and a small crack in the shell forming. Realizing that the eggs will probably start hatching soon, and that you are surrounded by quite a number of eggs indeed, you give a shudder as you hurry on your way. Though you pause to take a sample of the goop surrounding the area";
+	otherwise if mtp is 4:
+		say " Traveling through the city you come upon a strange sight on one of the roads that eventually leads out of the city.  You find a large flatbed truck overturned on the road, with several jeeps abandoned next to it.  Curiosity getting the best of you, you move closer to investigate the strange sight.  [line break]  Arriving at the overturned flatbed, you find that it appears to have been rigged to carry something relatively large, and from the way the straps and tie downs were burst open, alive.  Moving around the truck to examine the jeeps, you find that up close the jeeps and the area are covered in some kind of hardened goop, and sitting in the middle of the stuff are what appear to be several almost man sized eggs. [line break] Wondering what happened here, you spy a bit of some military camo worked into the lining of one of the eggs, closer investigation shows sign of a struggle, with several empty shell casings, and even a thoroughly gummed up and useless military sidearm lying around. Recalling some of your earlier encounters and sightings with the wyverns in the city, you realize that it looks like they were trying to transport a couple of the beasts to some other location, probably for study like in that camp you saw earlier.  Things obviously didn't go as planned again you note as you look around at the numerous eggs that likely hold the transforming soldiers, you can[apostrophe]t help but wonder what the military[apostrophe]s interest in all this is, and why they aren[apostrophe]t already in the city in force to help the survivors. [line break] You are startled out of your thoughts by one of the eggs shaking a bit as you stare at it, and a small crack in the shell forming. Realizing that the eggs will probably start hatching soon, and that you are surrounded by quite a number of eggs indeed, you give a shudder as you hurry on your way. Though you pause to take a sample of the goop surrounding the area.";
 		increase carried of wyvern goop by 1;
 		extend game by 8;
 		now Military presence is resolved;
+	if a rancom chance of 1 in 2 succeeds, mallrecall;
 
 Section 2- Cream truck
 
@@ -63,6 +60,7 @@ Instead of Resolving a Cream truck:
 	otherwise:
 		say "Deciding it would be best to avoid any contact with whatever might be left in the truck, you continue on down the road, the truck soon lost in the distance behind you.";
 		now Cream truck is resolved;
+	mallrecall;
 
 
 
@@ -73,6 +71,7 @@ Wyvern Flight is a situation
 
 Instead of Resolving a Wyvern Flight:
 	say "You spy a small group of Wyverns hauling off tables and chairs from a sidewalk cafe, apparently building a large nest somewhere nearby.  You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
+	mallrecall;
 	now Wyvern Flight is resolved;
 
 
@@ -324,9 +323,6 @@ Instead of resolving a ruined supplies:
 
 
 
-
-
-
 Section 17- Strange preacher
 
 Strange preacher is a situation.
@@ -336,13 +332,8 @@ when play begins:
 
 Instead of Resolving a Strange preacher:
 	say "Wandering the deserted streets, you hear what sounds like a loud voice from down the street a ways. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street.  Moving closer in case this is some kind of trick, you get a better look at the creature and finding yourself shaking your head in astonishment.  With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her legs spread giving you a good look at hir erect feline cock.  Behind hir though a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred panther lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach, Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch of the ground.  It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak. [line break] You realize as you have been staring at the strangeness of her form, you have hardly paid any attention to what she was actually saying, you pause to listen for a minute.  Listening to her speak, it quickly becomes obvious she is singing the praises of something called the church of the maternal beast, and someone she calls the Great Mother.  She appears to be trying to appeal to the infected by telling them to embrace the changes, and the new sexuality sweeping the city, but not to let it overwhelm them. She continues on in lewd detail about the things that one should be careful of doing, or else you might give in and lose yourself completely, her body shaking as she depicts several strange lewd acts to be avoided, and you can see her hind legs pumping her erect cock in the empty air eagerly as she continues to get more and more explicit in her descriptions. Shaking your head at the absurdity of it all, you leave the strange thing to its preaching, unsure if it even noticed you stopping to listen for a minute.";
+	mallrecall;
 	Now Strange preacher is resolved;
-
-
-
-
-
-
 
 
 
@@ -357,4 +348,3 @@ to hyenaify:
 	Infect "Herm Hyena";
 
 New Events ends here.
-

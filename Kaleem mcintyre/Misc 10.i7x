@@ -80,6 +80,7 @@ Instead of resolving a Magical Girl:
 		Increase score by 1;
 	Otherwise:
 		Say "Feeling almost foolish for thinking up something so dumb you casually toss the wand to the side and then continue off on your way.";
+		mallrecall;
 		Now Magical Girl is resolved;
 
 

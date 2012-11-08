@@ -36,6 +36,7 @@ When play begins:
 
 Instead of resolving a Guess that Character Two:
 	say "Jumping out of the way you find yourself dodging a charging Minotaur just as the creature is hightailing it at top speeds in the direction you've just come from. Tilting your head at seeing the odd creature running so fast you wonder what the hell could be scaring the beast so bad, right before your answer comes in the form of a dominatrix clad hyena herm charging down the street with a whip in her hand. The woman, who can't be more than five foot eight inches tall, has on a black bustier, stiletto boots, and is cackling manically as she follows on the trail of the minotaur. Gaping slight at seeing the hyena actually frightening away a creature almost twice as big and two and half heads taller than hir you wonder what's up with that pair. Just before the woman is totally out of sight you have swear that you heard hir say something along the lines of 'Call me queen, darling!'";
+	mallrecall;
 	now Guess that Character Two is resolved;
 
 

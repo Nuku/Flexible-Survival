@@ -21,7 +21,7 @@ Instead of resolving a Unorthodox Sight:
 Section 2 - Desperation
 
 Desperation is a situation.
-The sarea of Desperation is "Mall";
+The sarea of Desperation is "Outside";
 
 when play begins:
 	add Desperation to badspots of girl;

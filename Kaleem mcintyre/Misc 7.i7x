@@ -129,6 +129,7 @@ Instead of Resolving a Conchien:
 	increase libido of player by 17;
 	if libido of player > 100, now libido of player is 100;
 	increase score by 1;
+	mallrecall;
 	now Conchien is resolved;
 
 

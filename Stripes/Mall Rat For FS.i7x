@@ -93,21 +93,34 @@ Definition: a person is mallrattailed:
 
 
 Section 4 - Endings
-[
-[to be added later]
+
 when play ends:
 	if bodyname of player is "Mall Rat":
 		if humanity of player is less than 10:
 			if hp of Lucy <= 1:
-				say "     Generic mall rat ending.";
+				if Smith Haven Mall Lot South is known:
+					say "     Your life of roaming and wandering slowly becomes less and less attractive to you.  With thoughts of the sweet mall growing more frequent, you make your way back there to join the rats in their happy life of coolness and relaxing.  You have a happy life there with all those other cool dudes and pretty girls relaxing around the shopping center.  You do make the occasional excursion out into the city.  Usually, you only do these when one of the rats really needs something done out in the city";
+					if hp of Ronda > 0:
+						say ".  The slut rats lurking below are occasionally a problem, but with an awesome [if cocks of player > 0 and cunts of player > 0]mall rat[otherwise if cunts of player > 0]gal[otherwise]dude[end if] like you around to help, their uncoolness is kept from harshing everyone's good vibes.";
+					otherwise:
+						say ".";
+				otherwise:
+					say "     Your life of roaming and wandering slowly becomes less and less attractive to you.  With thoughts of finding someplace to settle down that'd be cooler than a dingy old bunker, your wanderings bring you to a large mall.  Entering the shopping plaze, you are pleased to find other rats already living there.  They turn out to be a great bunch of cool dudes and pretty girls for you to hang around with and you soon settle in there to stay, having found a new home for an awesome mall rat like you.";
 			otherwise:
-				say "     Mall rat + Lucy ending.";
+				say "     Your life of roaming and wandering slowly becomes less and less attractive to you.  With thoughts of the sweet mall and your even sweeter girlfriend waiting for you there, you make your way back there to join the rats in their happy life of coolness and relaxing.  You and Lucy get along wonderfully, making what everyone agrees is a cute couple.  But that doesn't stop either of you from continuing your horny habits of sleeping around, Lucy with many of the other mall rats and you with many of the mall's visitors and those you meet on your new much-rarer excursions out into the city.  Usually, you only do these when one of the rats really needs something done out in the city";
+				if hp of Ronda > 0:
+					say ".  The slut rats lurking below are occasionally a problem, but with an awesome [if cocks of player > 0 and cunts of player > 0]rat[otherwise if cunts of player > 0]gal[otherwise]dude[end if] like you around to help, their uncoolness is kept from harshing everyone's good vibes.";
 		otherwise:
 			if hp of Lucy <= 1:
-				say "     Generic mall rat ending.";
+				say "     You thankfully survive your time in the city until you're picked up and transported safely to the military processing camp.  While there is a slight interest in examining you as one of the few with the mall rat infection able to resist the pull to remain at the mall, the mall rats are known to be a peaceful and safe strain so you draw little scrutiny for it.  You are eventually processed and released.  You travel away from the city and find a new city to call your home.";
+				say "     You get a job managing a large mall, the work coming naturally to you.  You are an easy-going, laid-back manager and make friends with all the store owners and patrons quite easily.  The local youths like you as well, finding you much more tolerant of their slacker ways of hanging around the mall to while away their afternoons.  They treat your mall well and you have little problem with shoplifting, graffiti or other complaints you hear from the directors of other malls.  And when you see a few of them start to get rat tails of their own, you can't help but smile.";
 			otherwise:
-				say "     Mall rat + Lucy ending.";
-]
+				say "     As you're preparing for the military pick-up, Lucy tries to act cool about your leaving, but you know she's upset to see you going.  Kissing her, you tell her that you and Rod have a plan.  Hugging her, you head back to the bunker to take care of your final preparations and are transported to the military processing camp.  While there is a slight interest in examining you as one of the few with the mall rat infection able to resist the pull to remain at the mall, the mall rats are known to be a peaceful and safe strain so you draw little scrutiny for it.  You are eventually processed and released.";
+				say "     It is at this point that you begin your search to find a new home.  Using what information you can pick up from other survivors and the teams from Zephyr and RSX, you eventually follow some leads to Fairhaven.  There you find a large and unoccupied mall in that much safer city.  With a growing community of peaceful mutants living in one part of the city and large facilities for those other groups in another, you know you've found the place.  You pass word along with a team heading back to Rod at Smith Haven Mall along with a rolled up copy of the mall map and several photos.";
+				say "     It takes some time to arrange and quite a bit of convincing, but eventually Rod and a large portion of the mall rat population move to the Fairhaven Mall.  Now safe from the slut rat menace, the rats happily make this new mall into their hope, cleaning it up and adding their own personal brand of cool to the huge shopping center, making it what you all know to be the true heart of the city you now call home.";
+				say "     It takes a little convincing, but you manage to get Lucy to move into a home with you.  Since it's right across the street from the mall, she doesn't feel so bad about that and quickly becomes acclimatized by adding several cool decorations from the mall.  You particularly like the bubble gum machines she keeps stocked by the door.  A welcome treat for you and any guests.";
+				say "     She also reopens her nail salon, painting the nails for the mall rat girls and any other patrons who might want to make themselves look prettier.  You work with Rod, keeping an eye on things around town for the more mall-ridden rats and acting as go-between for the rat colony leader and the other groups around town.";
+
 
 [ Edit this to have the correct creature name as well]
 Mall Rat For FS ends here.

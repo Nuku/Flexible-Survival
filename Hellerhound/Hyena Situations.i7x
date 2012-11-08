@@ -8,6 +8,7 @@ Hyena Kill is a situation.
 instead of resolving Hyena Kill:
 	say "You come across a murder scene in the corner of one of the streets, blood spattered everywhere, on the walls, the sidewalk, the parked cars, and black spotted hair also. Powdered segments of bone are also scattered. It looks like one of the hyenas didn't go for the rape, but for the kill. Ouch. They must have really hated the person.";
 	say "You hope that isn't what they think of you.";
+	mallrecall;
 	now hyena kill is resolved;
 
 

@@ -93,6 +93,7 @@ Instead of resolving a Losing It:
 		if libido of player > 100, now libido of player is 100;
 	otherwise:
 		say "     Escaping the crazed feline, you dash off into the city, deciding to search somewhere away from the newly transformed and lustful feline.  Perhaps once it has sated its lusts from its transformation it will wander off and you can return to searching.";
+	mallrecall;
 	Now Losing It is resolved;
 
 
@@ -102,6 +103,7 @@ when play begins:
 
 instead of resolving a CatsandDogs:
 	say "     As you travel through the city, you come across a pair of old apartment buildings side by side.  The windows are open and the tenants are yelling at one another.  One building appears to be populated entirely by cats and the other by dogs.  They are growling, yowling and making rude gestures at one another.  They jeer at one another and toss trash across the alley dividing their buildings.  Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them.  You make note of the location and remind yourself to keep away, finding another path around this neighbourhood.";
+	mallrecall;
 	now CatsandDogs is resolved;
 
 
@@ -114,6 +116,7 @@ instead of resolving a Tour Bus:
 	say "     You hop back onto the car, then onto the ground.  You start to head on your way, mentally reminding yourself not to take this street again when passing through this area, when you hear a growl from behind you.  Crawling out of the bus, you see a large, cougar herm wearing a cap and coat that leads you to suspect this was once the bus driver.  It growls again and hops onto the ground, coming at you quickly.";
 	challenge "Cougar";
 	say "     Your encounter with the cougar creature over, you continue on your way, leaving it and its unusual den behind.";
+	mallrecall;
 	now Tour Bus is resolved;
 
 
