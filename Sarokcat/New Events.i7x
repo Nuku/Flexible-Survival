@@ -41,7 +41,7 @@ Instead of Resolving a Military presence:
 		increase carried of wyvern goop by 1;
 		extend game by 8;
 		now Military presence is resolved;
-	if a rancom chance of 1 in 2 succeeds, mallrecall;
+	if a random chance of 1 in 2 succeeds, mallrecall;
 
 Section 2- Cream truck
 

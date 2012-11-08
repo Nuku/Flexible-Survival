@@ -169,10 +169,12 @@ Instead of resolving a Memories of the Mall:
 
 
 to mallrecall:
+	say "[line break]";
+	attempttowait;
 	let recallchance be 0;
 	if bodyname of player is "Mall Rat", increase recallchance by 15;
 	if facename of player is "Mall Rat", increase recallchance by 15;
-	if hp of Lucy >= 2 and lastfuck of Lucy - turns >= 6:
+	if hp of Lucy >= 2 and lastfuck of Lucy - turns >= 12:
 		now recallchance is recallchance / 2;
 		increase recallchance by 25;
 		if cockname of player is "Mall Rat", increase recallchance by 10;
