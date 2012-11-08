@@ -33,6 +33,7 @@ Instead of resolving a Helping the Helpless:
 			say "Knowing that you yourself are doing without you move along down the street, completely ignoring the black spotted mutant rustling through the garbage bin.";
 	otherwise:
 		say "Knowing that you yourself are doing without, you move along the street, ignoring the black-spotted mutant rustling through the garbage bin.";
+	mallrecall;
 	now Helping the Helpless is resolved;
 
 

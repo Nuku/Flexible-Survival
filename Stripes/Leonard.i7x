@@ -364,10 +364,10 @@ to leonardmatesex:
 	now sortorder entry is 1;
 	now description entry is "suck the lion's cock";
 	if cunts of player > 0:
-[		choose a blank row in table of fucking options;
+		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 2;
-		now description entry is "have the lion eat you out";			]
+		now description entry is "have the lion eat you out";
 		choose a blank row in table of fucking options;
 		now title entry is "Have sex";
 		now sortorder entry is 3;
@@ -399,6 +399,11 @@ to leonardmatesex:
 					say "[leonardmatesex4]";
 		otherwise:
 			say "Invalid Option.";
+
+[
+You make for such a lovely feline.
+Let's help make you into that lovely feline your pride and I love so much.
+]
 
 to say leonardmate_newkitty:
 	if hp of Leonard is 7:
@@ -438,7 +443,12 @@ to say leonardmatesex1:			[Fellatio]
 
 
 to say leonardmatesex2:			[Cunnilingus]
-	say "...";
+	say "     You nuzzle to nibble at Leonard's feline ear and guide on of his paws between your legs, [if player is felinebodied or player is felinefaced]rumbling[otherwise]whispering[end if] to him that you would like to enjoy that rough tongue of his for a change.  He grins at you and guides you over to one of the chairs, keeping his paw between your legs the whole time.  Once you're comfortably seated, he leans in and gives you a long kiss before lowering himself between your legs.  He starts by nuzzling your thighs and caressing your legs, purring softly about what a lovely feline you've become and about how he and the whole pride love you very much.  He adds how much he's looking forward to breeding plenty of beautiful cubs with his pride's matron.";
+	say "     By the time his tongue reaches your pussy, you are already very wet, excited from his tantalizing licking and his lovely words.  He runs his tongue slowly across your cunt several times in slow licks.  The rough texture of his leonine tongue sends shivers of delight through you and you spread your legs wider.  Rubbing your hands through his mane, you urge your handsome lover to delve further and soon enough you can feel that tongue diving into you, spreading your dripping lips and diving into your wet tunnel.  He laps and licks attentively, working slowly to please you.  The work of his padded thumb is particularly enjoyable as it rubs at your stiff clit.  Soon enough, you are pushed over the edge into climax, your hot juices soaking the lion's muzzle as he laps up as much as he can get.  As your climax is passing, you find yourself very thankful that already you're sitting down, momentarily weak in the knees.  Leonard licks his muzzle as he gives up slowly, gives you a passionate, juicy kiss while running his paws over your body before leaving you to recover after your satisfying release.";
+	infect "Feline";
+	increase libido of player by 6;
+	if libido of player > 100, now libido of player is 100;
+	increase feline_meow by 1;
 
 
 to say leonardmatesex3:			[Have sex]
