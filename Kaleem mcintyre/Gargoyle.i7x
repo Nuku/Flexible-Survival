@@ -11,6 +11,7 @@ Section 1 - Monster Responses
 
 when play begins:
 	add { "Gargoyle" } to infections of guy;
+	add { "Gargoyle" } to infections of tailweapon;
 
 to say gargoyle attack:
 	say "A sweep of well polished claws against your chest sends you reeling back onto the ground in defeat. Seeing you lying there before it spread out prone in defeat the gargoyle smiles down at your with its beautifully monstrous face, a startling sight in and of itself since there is nothing merciful in the creature's solid black eyes. The gargoyle soon smirks at you when you try to move yourself to get up onto your feet, but both it and you know that your strength is about gone right now. Coal colored eyes shimmering down at you with an inhuman glee you suddenly feel as though you may have bitten off more than you can chew as your nose catches a slightly musk scent wafting into the air. Dropping your gaze south you whimper at the sight of the creature's powerfully flexing cock dribbling a straight line of precum down onto the ground in front of it.";

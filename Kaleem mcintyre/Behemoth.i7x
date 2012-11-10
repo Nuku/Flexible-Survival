@@ -9,6 +9,7 @@ when play begins:
 [Delete the lines with unneeded flags and replace 'Behemoth' with your creature's name entry.  Case sensitive.]
 	add { "Behemoth" } to infections of hermaphrodite;
 	add { "Behemoth" } to infections of furry;
+	add { "Behemoth" } to infections of tailweapon;
 
 [Sample loss and victory text Behemoths.]
 [Numerous other variations can be found in existing creature files.]

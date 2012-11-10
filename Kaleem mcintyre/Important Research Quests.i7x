@@ -200,7 +200,7 @@ Instead of resolving Important Treasure:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 		say "Smiling nervously you ask the other where the two would be at the moment. 'They're warehouse district over by the beach. You may want to get there as soon as possible.' The words are cryptic, but seem to hold the weight of deadly seriousness. You sigh painstakingly at all the trouble that you seem to be coming across right about now, but bow your head as you think to yourself the quickest way to get to the warehouse area of the city.[line break]";
-		add "lumpy box" to invent of player;
+		now carried of lumpy box is 1;
 		now Warehouse District is known;
 		now tpfs is 5;
 		increase score by 20; 
@@ -363,7 +363,7 @@ Instead of resolving a Ouroboros:
 								challenge "Cerberus";
 								if fightoutcome >= 10 and fightoutcome <= 19:
 									say "Having dealt with the mob, and kept the medallion tucked safely into one of the hidden pockets of your pants, you grumble tiredly before moving your way out of the Museum.";
-									add "medallion" to invent of player;
+									now carried of medallion is 1;
 									increase score by 10;
 									now Ouroboros is resolved;
 								otherwise:
@@ -390,12 +390,12 @@ Instead of resolving a Ouroboros:
 				if perception of player > 15 and intelligence of player > 15:
 					say "A faint memory from some other time and place reminds you that ancient people once used items like these in alchemical experiments or to represent concepts of eternity and equilibrium. Maybe Omio is going to turn some of the material she has back at her studio into gold? Then again, knowing the red head, she'd probably come up with something more conventional like [one of]a previously unheard-of fuel[or]a new fabric[or]a medical reagent[at random] in an effort to help others more than just herself. A chuckle worms its way from your throat at that one.[line break]"; 
 					say "While she might be somewhere between a ditz and a mad cap, Omio definitely would not waste anything as important as this on something frivolous. Such a thought makes you think that maybe this little theft might be worth the trouble after all. Pocketing the medallion you turn to walk away from the, now empty display, but before you do you turn and then smirk dangerously.[line break]";
-					add "medallion" to invent of player;
+					now carried of medallion is 1;
 					increase score by 10;
 					now Ouroboros is resolved;
 				otherwise:
 					say "Knowing that the medallion is important you try and flip the bronze amulet over several times in hope that something will stick out in your mind as [']important[']. When that doesn't happen you can only sigh and then shrug when nothing comes to mind. Realizing that it really doesn't matter anyway you pocket the artifact and then get ready to head out of the museum.[line break]";
-					add "medallion" to invent of player;
+					now carried of medallion is 1;
 					increase score by 10;
 					now Ouroboros is resolved;
 			otherwise:
@@ -406,7 +406,7 @@ Instead of resolving a Ouroboros:
 
 to say defeatedbycerb:
 	say "Having been defeated by the Cerberus you wind up getting tossed out of the Museum onto your head. Grunting in annoyance you soon find yourself chuckling in triumph as you feel the weight of the medallion shifting inside of your pocket."; 
-	add "medallion" to invent of player;
+	now carried of medallion is 1;
 	increase score by 10;
 	now Ouroboros is resolved;
 			
@@ -430,7 +430,7 @@ Special Delivery is a situation.
 The sarea of Special Delivery is "Warehouse"
 
 Instead of resolving a Special Delivery:
-	if "undisclosed case" is not listed in invent of player:
+	if undisclosed case is not owned:
 		say "Crossing one of the boardwalks that stand over the churning ocean you hear the voice of a very loud someone yelling out instructions. Whipping your head around you come to find a bipedal twin headed blue hydra with four dazzling crimson eyes trying to command a pair of frisky otters to get back to work. The pair of mustelids in question, who are currently rutting together against the railing of a docked luxury cruise boat, seem to be paying little mind to the scalie miscreant behind them.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
@@ -485,7 +485,7 @@ Instead of resolving a Special Delivery:
 			increase score by 3;
 			now Special Delivery is resolved;
 
-
+[
 Table of Game Objects (continued)
 name	desc	weight	object
 "undisclosed case"	"A case Omio hastily shoved into your hands."	1	undisclosed case
@@ -494,7 +494,7 @@ undisclosed case is a grab object. It is part of the player.  It is not temporar
 
 instead of sniffing undisclosed case:
 	say "The case smells of something fruity as well as spicy. Liquor, maybe?";
-	
+]
 
 
 Important Research Quests ends here.
