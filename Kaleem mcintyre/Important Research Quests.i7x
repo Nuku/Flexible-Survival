@@ -430,7 +430,7 @@ Special Delivery is a situation.
 The sarea of Special Delivery is "Warehouse"
 
 Instead of resolving a Special Delivery:
-	if "undisclosed case" is not owned:
+	if undisclosed case is not owned:
 		say "Crossing one of the boardwalks that stand over the churning ocean you hear the voice of a very loud someone yelling out instructions. Whipping your head around you come to find a bipedal twin headed blue hydra with four dazzling crimson eyes trying to command a pair of frisky otters to get back to work. The pair of mustelids in question, who are currently rutting together against the railing of a docked luxury cruise boat, seem to be paying little mind to the scalie miscreant behind them.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
