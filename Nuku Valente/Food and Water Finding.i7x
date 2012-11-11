@@ -140,6 +140,6 @@ Instead of resolving a potential resources:
 			say "After working out the specifics, you are handed the [y] and you stuff it into your backpack.";
 			add y to the invent of the player;
 	say "[line break]";
-	if battleground is "Outside" and a random chance of 1 in 8 succeeds, mallrecall;
+	if battleground is "Outside" and a random chance of 1 in 6 succeeds, mallrecall;
 
 Food and Water Finding ends here.
