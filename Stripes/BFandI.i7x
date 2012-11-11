@@ -6,6 +6,7 @@ Version 3 of BFandI by Stripes begins here.
 bfandi (or bfandi1) checks the various new column entries for critters on the table of random critters.
 bfandi2 lists all existing creatures in the monster table and displays whether they have an altcombat entry, showing that entry if it exists.
 bfandi3 lists all situations in the current area, whether they're resolved or unresolved and it's level.  It will also mention if it's a scavevent.
+bfandi4 lists all situations sorted by area, level or name, as selected once run, then provides data similar to bfandi3.
 ]
 
 Section 13 - Brute Force Creature Testing (BFandI command) - Not for release
