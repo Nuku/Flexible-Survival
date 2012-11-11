@@ -1199,6 +1199,50 @@ carry out trixiecheating:
 		wait for any key;
 		clear the screen and hyperlink list;
 
+[-----]
+
+anallevel is a number that varies.  anallevel is usually 2.		[normal]
+
+analadjusting is an action applying to nothing.
+
+understand "adjust anal" as analadjusting.
+understand "adjustanal" as analadjusting.
+understand "anal adjust" as analadjusting.
+understand "analadjust" as analadjusting.
+
+carry out analadjusting:
+	say "[special-style-2]NOTICE[roman type]: This mechanic is not yet implemented and will have little to no effect at the moment and will remain unannounced will the first adjustments are made.";
+	say "     This option will allow you to adjust your desired level for anal play in the game.  This choice will [bold type]not[roman type] affect all scenes nor will it eliminate/guarantee anal play in many cases.  It will simply be a means of telling specific scenes to provide alternate versions or add/remove portions of involving anal sex and anal play if they have been set to detect it.  Any complaints/whining/requests about it not working for any given scene/creature/NPC are all pointed towards the [special-style-1]24 MB[roman type] (and growing) of existing text this game represents and you will simply have to accept the adjustments when and where they come.  Paid requests to make these adjustments can be taken on, though some restrictions may apply in certain cases.";
+	say "     With that said, choosing:[line break]";
+	say "- [link](1) Less Anal[as]1[end link] will indicate that you're looking to see less anal sex in your game.  In some cases, it may alternate to another possible scene (such as oral) or simply have you driven off.  This change may be automatic or be induced randomly.  Keep in mind that many NPCs and creatures have sexual preferences of their own and so you could still encounter M/M and anal sex even if this preference is chosen.";
+	say "- [link](2) Normal[as]2[end link] will indicate that you'd like the game's average level of anal sex.  Some scenes with males/herms may result in anal sex, though other forms of anal play will be rare.";
+	say "- [link](3) More Anal[as]1[end link] will indicate that you're open to view anal sex more frequently.  Some scenes may also use this as an indicator to insert additions for other forms of anal play (fingering, rimming, prostate stimulation, etc...) if they exist for the scene.  This may also be used to prompt for anal sex with a female to occur.  Again as stated above, many NPCs and creatures have their own sexual preferences to consider, so the degree of change (if any) that may occur will vary.";
+	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Normal[otherwise]More Anal[end if][roman type].";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+	if calcnumber is 1:
+		say "You are now set to receive Less Anal.";
+		now anallevel is 1;
+		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
+		add "Less Anal" to feats of player;
+	otherwise if calcnumber is 2:
+		say "You are now set to receive the standard amount of anal sex.";
+		now anallevel is 2;
+		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
+		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
+	otherwise if calcnumber is 3:
+		say "You are now set to receive More Anal.";
+		now anallevel is 3;
+		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
+		add "More Anal" to feats of player;
+	otherwise if calcnumber is 4:
+		say "Exiting menu.";
+		say "[line break]";
+
+[-----]
+
 huntinglisting is an action applying to nothing.
 
 understand "huntinglist" as huntinglisting.
