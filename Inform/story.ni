@@ -12,7 +12,7 @@ Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 48000.
 use ALLOC_CHUNK_SIZE of 116000.
-use MAX_OBJECTS of 1000.
+use MAX_OBJECTS of 1100.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
 Use maximum indexed text length of at least 5000.

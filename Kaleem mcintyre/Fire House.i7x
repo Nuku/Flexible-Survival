@@ -829,7 +829,7 @@ Understand "scale up" as Firepolescaling.
 
 Check Firepolescaling:
 	If LowerFirepole is not visible: 
-		say "[one of]Thinking about monkeying around on a fire pole are we?[or]If you want to play around on a pole try the PALOMINO.[at random]";
+		say "[if PALOMINO is known and a random chance of 1 in 2 succeeds]If you want to play around on a pole, try the PALOMINO.[otherwise]Thinking about monkeying around on a fire pole are we?[end if]";
 
 carry out Firepolescaling:
 	say "Figuring that you could do with a light workout you decide to climb the fire pole.";
@@ -882,6 +882,12 @@ Instead of sniffing Sleeping Quarters:
 Section 8 - UpperFirePole
 
 The description of UpperFirepole is "The upper fire pole is just as spotless as its counterpart in the main area of the firehouse and glimmers with the same tantalizing shine that makes you just want to [bold type]slide down[roman type].";
+
+check firepolesliding:
+	if location of player is not Sleeping Quarters and location of player is not Slide Room:
+		say "There is no slide here." instead;
+	otherwise if location of player is Slide Room:		[Bouncy Castle slide]
+		try sliding instead;
 
 Instead of sniffing UpperFirepole:
 	say "The fire pole smells of sleepy times, panic, courage, musk and undeniable valor.";
