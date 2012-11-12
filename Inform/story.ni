@@ -5147,6 +5147,7 @@ Include Triceratops For Fs by Stripes.
 Include Siamese Cats by Stripes.
 Include Albino Mouse by Stripes.
 Include Cat Ninjas by Stripes.
+Include Flaming Lynx for FS by Stripes.
 Include Reindeer by Stripes.
 Include Snow Leopard for FS by Stripes.
 Include Grey Squirrel for FS by Stripes.
