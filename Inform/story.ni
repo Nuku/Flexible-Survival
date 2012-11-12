@@ -3261,7 +3261,7 @@ To fight:
 		now monsterhp is hp entry;
 		now lost is 0;
 		now fightoutcome is 100;
-		say "You run into a [name entry].[line break][desc entry].";
+		say "You run into a [name entry].[line break][desc entry]";
 		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1 and inasituation is false:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
 			if the player consents:
@@ -3321,7 +3321,7 @@ To challenge:
 	now monsterhp is hp entry;
 	now lost is 0;
 	now fightoutcome is 100;
-	say "You run into a [name entry].[line break][desc entry].";
+	say "You run into a [name entry].[line break][desc entry]";
 	if combat abort is 1:
 		now combat abort is 0;
 		rule succeeds;
@@ -5187,6 +5187,7 @@ Include Bunny Jock For Fs by Stripes.
 Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
 Include Mall Rat For Fs by Stripes.
+Include Latex Mistress For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.
