@@ -241,11 +241,11 @@ carry out nerminehelping:
 		now Nerminetalk is 1;
 		stop the action;
 	if Nerminehelpstatus is 5:
-		if carried of Peacock feather > 2:
+		if carried of peacock feather > 2:
 			say "'Yes you brought them!' the Jackal woman says as she snatches the large shiny feathers from you. 'Now Nermine can have a pretty new peacock feather necklace to wear!' She says as she places the glittering feathers in several different positions on her dark neck and glances into a mirror beside the counter as if to see which position she likes best.  She notices you watching in amusement, and flashes you a soft grin, 'What, not everything is about other customers, sometimes Nermine likes to get pretty things herself too.  Still you are being such a good helper,' She says as she reaches out to caress the side of your new muzzle gently,   'So very  nice and always so happy to help me out with the shop, maybe you would like to help Nermine out with her other needs as well?' She says with a wink as she runs her hand slowly down your black furred chest. 'Nermine has one last bit of help to give you first though,' The sleek Jackal says as she reaches behind the counter and produces another of those familiar looking jackal totems and hands it to you. 'You let totem finish helping you become even better, and then maybe Nermine will let her lovely little helper help her out of clothes in back room?' The thought of helping the sultry shopkeeper out in a more intimate manner makes your body flush with desire, and you look down at the totem in your hand with anticipation....'";
-			delete Peacock feather;
-			delete Peacock feather;
-			delete Peacock feather;
+			delete peacock feather;
+			delete peacock feather;
+			delete peacock feather;
 			increase carried of Jackal totem by 1;
 			increase xp of player by 30;
 			stop the action;		
