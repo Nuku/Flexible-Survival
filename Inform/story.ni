@@ -5000,6 +5000,7 @@ Include Red Events by Stripes.
 Include Dry Plains Events by Stripes.
 Include Junkyard Events by Stripes.
 Include Campus Events by Stripes.
+Include Leonard Events by Stripes.
 Include Latex Quad Husky by Stripes.
 Include New Events by Sarokcat.
 Include Fair Events by Sarokcat.
@@ -5130,6 +5131,7 @@ Include Hawkman by sarokcat.
 Include Unicorn by Sarokcat.
 Include Arctic Fox by Sarokcat.
 Include Nightmare by Sarokcat.
+Include Mannequin by Wahn.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
 Include Male Peacock for FS By Lago Moro.
