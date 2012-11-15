@@ -10,7 +10,7 @@ Part 0 - Core Event
 
 leoparklist is a list of numbers that varies.  leoparklist is usually {1, 2, 3, 4, 5, 6}.
 
-PridePark is a situation.  [PridePark is resolved.]
+PridePark is a situation.  PridePark is resolved.
 The sarea of PridePark is "Park";
 
 Instead of resolving PridePark:
