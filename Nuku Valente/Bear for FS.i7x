@@ -4,10 +4,10 @@ Version 3 of Bear for FS by Nuku Valente begins here.
 "Adds a Bear to Flexible Survivals Wandering Monsters table."
 [Description text for this Extension.]
 
-[ Notes... Giant schizophrenic lesbian bear. If I could have pulled it off.. 
- I wanted the honeycomb to decrease hunger and increase thirst a little, as befits something incredibly sweet. 
+[ Notes... Giant schizophrenic lesbian bear. If I could have pulled it off...
+ I wanted the honeycomb to decrease hunger and increase thirst a little, as befits something incredibly sweet.
 **I thought about an outcome where nobody gets screwed.  Not reeking of sex should lower the libido a little.
-I wanted her to be strong, hard hitting, and fairly easy to dodge.  Honeycomb seemed a natural portable, but not entirely necessary. 
+I wanted her to be strong, hard hitting, and fairly easy to dodge.  Honeycomb seemed a natural portable, but not entirely necessary.
 ]
 
 Section 1 - Monster Responses
@@ -103,7 +103,7 @@ When Play begins:
 	now cunt length entry is 15;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 8;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Honeycomb";			[ Loot monster drops, ]
+	now loot entry is "honeycomb";			[ Loot monster drops, ]
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table ]
 	now scale entry is 4;				[ Number 1-5, rough approx of infected PC body size/height.  1=small, 3=avg, 5=huge ]
@@ -124,13 +124,13 @@ when play ends:
 			
 Table of Game Objects(continued)
 name	desc	weight	object
-"Honeycomb"	"A red painted tin containing a wonderfully sweet smelling slice of coarse honeycomb. From the size of the cells you know you really don't want to find the hive."	2	Honeycomb
+"honeycomb"	"A red painted tin containing a wonderfully sweet smelling slice of coarse honeycomb. From the size of the cells you know you really don't want to find the hive."	2	honeycomb
 
 honeycomb is a grab object.
 
-the usedesc of Honeycomb is "[Honeycomb use]";
+the usedesc of honeycomb is "[honeycombuse]";
 
-to say Honeycomb use:
+to say honeycombuse:
 	say " You just are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth. ";
 	decrease the hunger of the player by 6;
 	increase thirst of player by 1;

@@ -447,7 +447,7 @@ carry out bargainhunting:
 					increase carried of pirate bandana by 1;
 				if hermaphrodite is not banned:
 					increase carried of Dog Milk by 1;
-				increase carried of Honeycomb by 1;
+				increase carried of honeycomb by 1;
 				increase carried of Fish by 1;
 		otherwise if Z is 15:
 			if girl is banned and ( hermaphrodite is banned or furry is banned ):

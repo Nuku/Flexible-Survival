@@ -25,7 +25,7 @@ Instead of resolving a Smashed Hive:
 		otherwise:
 			say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
 			say "     Honeycomb x 5 obtained.";
-			increase carried of Honeycomb by 5;
+			increase carried of honeycomb by 5;
 			increase score by 10;
 	otherwise if healing booster is owned:
 		say "     Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?";
@@ -36,12 +36,12 @@ Instead of resolving a Smashed Hive:
 		otherwise:
 			say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
 			say "     Honeycomb x 5 obtained.";
-			increase carried of Honeycomb by 5;
+			increase carried of honeycomb by 5;
 			increase score by 10;
 	otherwise:
 		say "     Feeling there is nothing that you can do for her, and not wanting to risk staying around an enraged bee girl, you grab some chunks of honeycomb and make a break for it.";
 		say "     Honeycomb x 5 obtained.";
-		increase carried of Honeycomb by 5;
+		increase carried of honeycomb by 5;
 		increase score by 10;
 	Now Smashed Hive is resolved;
 
@@ -52,7 +52,7 @@ to say beegirlsaved:
 	say "     As you're patting her patched-up abdomen, she regains consciousness and starts upright.  She buzzes angrily at you before realizing that she's been healed.  She calms down and smiles at you.  'Uhh... thank you,' she buzzes softly.  Wringing her lower hands together nervously, she gets up and looks around at her ruined hive.  With tears in her eyes, she wraps her arms around you and clutches to you tightly.  It seems you've made a new friend.";
 	say "     Stroking her soft hair and speaking reassuringly, you manage to calm her down and she smiles up at you.  'I'm Honey.  Oh!  The honey!' she exclaims, running around to gather up as much as she can of the hive's destroyed supply, putting it into a bag so she'll have something to live off of without her home and sisters.  'Here.  You can have a little too,' she says, giving you a couple of pieces as thanks.  When you head off, she follows along, having nowhere else to go but with her rescuer.";
 	say "     Honeycomb x 2 obtained.";
-	increase carried of Honeycomb by 2;
+	increase carried of honeycomb by 2;
 	increase score by 20;
 	now bee girl is tamed;
 	say "     (The bee girl is now tamed! You can make it your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
