@@ -244,12 +244,12 @@ instead of conversing the Elijah:
 				otherwise:
 					say "     Where did that thought come from? You shake it off, your mind returning to the gryphon milk you need for the your angel revival milkshake.";
 		otherwise:
-			if Honeycomb is not owned and bee girl is not tamed:
+			if honeycomb is not owned and bee girl is not tamed:
 				say "     You got the milk as base for your angel revival shake. Now to gather some honey to mix into it... maybe you can find some somewhere in the park.";
 			otherwise:
-				if Honeycomb is not owned:
+				if honeycomb is not owned:
 					say "     As you look over your supplies but find no honey, Honey tugs at your arm and offers you one of her precious supply to use instead.  That taken care of, you focus on the next step.";
-				otherwise if healing booster is not owned:
+				if healing booster is not owned:
 					say "     Milk and honey should be a nice start, but you need something more. Maybe you should check out the hospital for something to really boost your patient's healing ability.";
 				otherwise:
 					say "     You got the milk, honey and even a vial of healing booster. Do you want to mix it all together now and administer the result to Elijah?[line break]";
@@ -280,7 +280,7 @@ instead of conversing the Elijah:
 							say "     'My name is Elijah and I thank you, my friend. I feel much better now. Although rather strange...' he says, his brows knitting as he wiggles his fingers, flexes the muscles in his arms, followed by stretching first one, then the other wing to its fullest extent. Then he lifts the blanket he's under a bit and looks down, his eyes widening suddenly.";
 							say "     'My memories are a bit woozy, but I'm sure THAT wasn't there before. Must have originated with one of the demons, but it doesn't feel evil in of itself. Curious. Oh well, I guess I'll ignore it for now and it'll be taken care of when I get home.'";
 							delete chosenmilk;
-							if Honeycomb is owned:
+							if honeycomb is owned:
 								delete honeycomb;
 							otherwise:
 								now honeygiven is true;
@@ -303,7 +303,7 @@ instead of conversing the Elijah:
 
 Section 3 - Gathering Events
 
-[This event exists mainly to allow players with girl banned to have a means to find a Honeycomb.]
+[This event exists mainly to allow players with girl banned to have a means to find a honeycomb.]
 
 Sweet Surprise is a situation. Sweet Surprise is resolved.
 The sarea of Sweet Surprise is "Park";
