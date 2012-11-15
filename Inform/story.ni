@@ -5202,6 +5202,7 @@ Include Dalmatian by Kaleem mcintyre.
 Include Behemoth by Kaleem mcintyre.
 Include Gels by Darthan.
 Include Coyote by Darthan.
+Include Mushroom Men by AGentlemanCalledB.
 Include Retriever by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
