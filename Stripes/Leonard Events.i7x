@@ -10,7 +10,7 @@ Part 0 - Core Event
 
 leoparklist is a list of numbers that varies.  leoparklist is usually {1, 2, 3, 4, 5, 6}.
 
-PridePark is a situation.  [PridePark is resolved.]
+PridePark is a situation.  PridePark is resolved.
 The sarea of PridePark is "Park";
 
 Instead of resolving PridePark:
@@ -64,7 +64,11 @@ Instead of resolving PridePark:
 			say "     As you travel through the park, you come across another of the cute Feline girls.  She's been hurt and is nursing an injured [one of]footpaw[or]side[or]head[or]shoulder[or]arm[or]leg[purely at random].  It takes you but a moment to recognize her as [one of]one of Leonard's pride[or]one of your smaller pride sisters[or]a member of your pride[or]a member of the pride[purely at random], [one of]remembering her from the battle[or]recalling her helping with the recital[or]having seen her in the den before[or]catching Leonard's scent upon her[purely at random].  She mewls plaintively as you approach, smiling softly at the sight of her matron coming to her aid.";
 			if medkit is owned or healing booster is owned:
 				if medkit is owned:
-					say "     Your matronly desire to protect your pride girls kicks in and you don't hesitate to help.  Remembering your medkit, you pull it out and start to patch her up.  She winces and mewls softly as you get her bandaged up and give her some meds from the kit.  She snuggles up to you, giving you several kisses in thanks.  You guide her muzzle down to your chest ";
+					let medloss be 0;
+					if ( "Expert Medic" is not listed in feats of player and a random chance of 1 in 10 succeeds ) or ( "Expert Medic" is listed in feats of player and a random chance of 8 in 100 succeeds ):
+						let medloss be 1;
+						delete medkit;
+					say "     Your matronly desire to protect your pride girls kicks in and you don't hesitate to help.  Remembering your medkit, you pull it out and start to patch her up.  She winces and mewls softly as you get her bandaged up and give her some meds from the kit[if medloss is 1].  This uses up the last of that medkit, but you feel no regrets over that at the moment[end if].  She snuggles up to you, giving you several kisses in thanks.  You guide her muzzle down to your chest ";
 				otherwise if healing booster is owned:
 					delete healing booster;
 					say "     Your matronly desire to protect your pride girls kicks in and you don't hesitate to help.  Recalling the healing booster you have, you pull it out and inject it close to her wound.  She winces and mewls, but starts to purr as the medecine starts to take effect.  She snuggles up to you, giving you several kisses in thanks.  You guide her muzzle down to your chest ";
