@@ -578,6 +578,7 @@ Carry out reciting:
 					now hp of Leonard is the number understood;
 					now level of Hunting Prides is 8;
 					now Hunting Prides is resolved;
+					now PridePark is resolved;
 					if hp of Leonard is 100, now hp of Leonard is 0;
 					if hp of Leonard > 0:
 						now Lion's Den is known;
@@ -619,6 +620,7 @@ Carry out reciting:
 							now cock length entry is 9;
 							now cock width entry is 6;
 						if bodyname of player is "Feline", attributeinfect;
+						now PridePark is unresolved;
 			-- 91:	[Solstice]
 				if the player's command matches "[number]":
 					remove Solstice from play;
