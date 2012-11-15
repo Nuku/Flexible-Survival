@@ -353,7 +353,6 @@ Part 2 - Mate Sex
 
 to leonardmatesex:
 	if Feline_attached > 0 and feline_status is 0:
-		say "***brought a new kitty girl.";
 		say "[leonardmate_newkitty]";
 	otherwise:
 		say "     You snuggle up to your sexy mate and run your hands over his chest, making him rumble happily.  He pulls you into his arms and gives you a kiss.  As you kiss, you wonder how you might best show your love for the handsome lion.";
@@ -368,15 +367,15 @@ to leonardmatesex:
 		now title entry is "Cunnilingus";
 		now sortorder entry is 2;
 		now description entry is "have the lion eat you out";
-		choose a blank row in table of fucking options;
+[		choose a blank row in table of fucking options;
 		now title entry is "Have sex";
 		now sortorder entry is 3;
-		now description entry is "have the lion fuck you";
-[	choose a blank row in table of fucking options;
+		now description entry is "have the lion fuck you";		]
+	choose a blank row in table of fucking options;
 	now title entry is "Doggy-style";
 	now sortorder entry is 4;
 	now description entry is "have the lion mount you like a beast";
-	sort the table of fucking options in sortorder order;				]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -406,8 +405,7 @@ Let's help make you into that lovely feline your pride and I love so much.
 ]
 
 to say leonardmate_newkitty:
-	if hp of Leonard is 7:
-		say "     Leonard looks over the kitty girl you've brought to him and rumbles happily.  'And I see you've brought a new friend to me,' he purrs, lightly caressing her head.  'I take it she's ready to join our pride if you've brought her to me.'  You smile and nod to him, having fed her well on your milk and purred soothing words of love and welcome to the pride to her on your journey back here.  He gives you a quick kiss and leads you to the bed at the back with an arm around you and a paw resting on your rear.  'I am always pleased to welcome another of these poor, wayward felines into my home and give them the proper loving care they need.  Shall you [link]help (Y)[as]y[end link]me welcome her properly into our pride or would you prefer to [link]watch (N)[as]n[end link] this time?' he purrs, licking your ear.";
+	say "     Leonard looks over the kitty girl you've brought to him and rumbles happily.  'And I see you've brought a new friend to me,' he purrs, lightly caressing her head.  'I take it she's ready to join our pride if you've brought her to me.'  You smile and nod to him, having fed her well on your milk and purred soothing words of love and welcome to the pride to her on your journey back here.  He gives you a quick kiss and leads you to the bed at the back with an arm around you and a paw resting on your rear.  'I am always pleased to welcome another of these poor, wayward felines into my home and give them the proper loving care they need.  Shall you [link]help (Y)[as]y[end link]me welcome her properly into our pride or would you prefer to [link]watch (N)[as]n[end link] this time?' he purrs, licking your ear.";
 	if the player consents:
 		say "     Looking forward to helping Leonard bring another feline into the pride, you scritch the kitty's ears and nuzzle her, rousing her from the nap she was taking to resume nursing from your bosom.  As your mate helps you strip down, you purr soothingly to the kitty about how she'll love being part of the pride and that it's where she belongs.  She mewls softly and kneads her paws, your maternal milk making her susceptible to your invitation.";
 		say "     Leonard moves onto the bed slowly with feline grace and stealth, padding slowly overtop of you.  His paw moves in to replace your stroking hand at the feline's back, eventually drifting lower.  When his fingers move to her wet pussy, she mewls again, but you make sure she continues suckling peacefully as you purr affectionately to her.  The kitty in your arms starts rumbling and purring excitedly, raising her tail and wiggling her ass.  Leonard smiles at this and bring his cock into position, slowly sinking it into the smaller female's body.  She releases a yowl of pleasure, briefly sinking her claws into you, sending shivers of delight through you as you are reminded of [one of]your first time the with the sexy lion[or]all the other pretty kitties you've helped join the pride[or]the wonderful bond you've formed with the other girls in the pride[in random order].";
@@ -459,10 +457,18 @@ to say leonardmatesex3:			[Have sex]
 		say "[leonardsex_general]";
 
 
+
 to say leonardmatesex4:			[Doggy-style]
-	say "...";
-
-
+	say "     Feeling the urge for some carnal pleasure with your handsome mate, you strut over to the bed at the back of the tunnel.  You sway your hips[if player is felinetailed] and leonine tail[end if] at the lion, who eagerly follows you with a playful, predatory rumble.  As you pause at the bed, he places his strong paws on your rear and gives it a squeeze.  You run your hands over one another, helping each other out of your clothes before the lion tosses you onto the bed and pounces atop you.  You roll around on the large bed for a while, hands moving over each other before finally you move onto all fours and give your ass a meaningful shake.  'Mmm... yes, let me mount you like a lion should[if cunts of player > 0].  I'll pound you and breed you full of strong cubs[end if],' he rumbles even as he moves atop you.";
+	say "     With a paw groping your chest and the other gripping the sheets for support, he presses his hips forward, letting his hard cock grind against your rear, making you moan softly.  He nuzzles your neck and nibbles along it, purring as he dribbles streaks of precum over you before finally pulling back and mounting you properly.  As his hard, feline shaft sinks into your [if cunts of player > 0]hot pussy[otherwise]tight ass[end if], you mrowl in pleasure and push back into his thrust.  Once hilted inside you, he nuzzles your cheek and your turn you head to kiss him quickly.  'Mmm... we were made for one another,' he rumbles before starting to thrust.";
+	say "     Your aroused and needy body grips and squeezes at his cock as he mates you, longing for your mate to claim your [if cunts of player > 0]womb[otherwise]body[end if] once again with his seed[if breast size of player > 0].  His paw rubs at your chest, stroking your breasts and teasing your nipples[otherwise].  He paw rubs at your chest and teases your nipples[end if].  The lion's steady thrusts as he pounds his throbbing rod into you make you more and more excited and you push back into his powerful thrusts.  You reach back and grab his hefty balls, which have been slapping warmly against your [if cocks of player > 0]own[otherwise]thighs[end if] and fondle them, longing to feel their thick, creamy product within you and knowing that time's coming soon.";
+	say "     His pace picks up and his breathing grows heavier as his arousal builds[if cunts of player > 0].  Your feminine juices run down your legs as he pumps into your squeezing, quivering pussy[otherwise].  Your anus clenches down around him tightly each time he pushes deep inside you[end if].  And soon your effort is rewarded as Leonard takes your nape in his muzzle and holds it gently while driving into you hard and fast.  After a few of this pounding thrusts, you feel his ballsac tauten and feel his hot seed blasting into you moments later.  His ample load fills you with warmth and satisfaction[if cocks of player > 0 or cunts of player > 0], getting you to cum powerfully as well with a feline yowl of ecstacy[end if].  You can feel his virile semen [if cunts of player > 0]splashing against your cervix and flowing into your womb[otherwise if cocks of player > 0]splashing against your prostate and filling your bowels[otherwise]filling your bowels[end if].  By the time his large balls are drained, you've got a pleasant, warm, full feeling in your belly that makes you feel fulfilled.[impregchance]";
+	say "     Remaining sheathed inside you, he rolls onto his side with you in his arms, spooning with you even as his cock gives its last twitches.  'Mmm... my beautiful strong mate.  I do so enjoy our times together like this.  You must simply stay so I might enjoy this pleasure every day[if cunts of player > 0]and fill you with litters of cubs[end if].'  You snuggle yourself back against him and you promise him that you'll think about it, but add that you feel there's more you must do out in the city as well.  He nuzzles you and licks your ear, letting you know he understands before you drift off to rest for a bit with his half-hard cock still buried inside you, purring happily together.";
+	infect "Feline";
+	now feline_meow is feline_meow / 2;
+	decrease libido of player by libido of player / 4;
+	decrease humanity of player by 4;
+	follow the turnpass rule;
 
 
 Section 4 - Finding a Violin
