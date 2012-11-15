@@ -367,10 +367,10 @@ to leonardmatesex:
 		now title entry is "Cunnilingus";
 		now sortorder entry is 2;
 		now description entry is "have the lion eat you out";
-[		choose a blank row in table of fucking options;
+		choose a blank row in table of fucking options;
 		now title entry is "Have sex";
 		now sortorder entry is 3;
-		now description entry is "have the lion fuck you";		]
+		now description entry is "have the lion fuck you";
 	choose a blank row in table of fucking options;
 	now title entry is "Doggy-style";
 	now sortorder entry is 4;
@@ -450,12 +450,14 @@ to say leonardmatesex2:			[Cunnilingus]
 
 
 to say leonardmatesex3:			[Have sex]
-	say "(Note: More new sex scenes for Leonard and the matronly player will be coming at a later date.  Until then, enjoy the original versions.)[line break]";
-	if bodyname of player is "Feline" and the player is pure and a random chance of 2 in 3 succeeds:
-		say "[leonardsex_purefeline]";
-	otherwise:
-		say "[leonardsex_general]";
-
+	say "     Longing to have the handsome lion mate you, you slide a hand down to his loins and stroke his shaft.  He rumbles in pleasure and [if scalevalue of player <= 3]scoops you into his arms and carries you over to his bed.  As he does, he kisses you repeatedly, purring about what a beautiful mate you are.  He lowers you gently onto the sheets and slides onto the bed beside you[otherwise]leads you over the bed with a paw caressing your ass.  He gives you several more kisses before climbing onto the bed with you[end if].  You wrap one arm around him and take hold of his cock with the other, tugging him to move over your supine body as you spread your legs.  Rumbling at your eagerness to mate, he nuzzles across your chest, licks your nipples in passing and soon has his cock pressing against your thigh.  You stroke it across your wet, sensitive folds slowly before lining it up for entry and kissing him passionately.  As you kiss, he pushes his hips forward and thrusts into you.";
+	say "     You mrowl and purr beneath your leonine lover as he thrusts into you steadily, taking a slower approach than his usual animal mating.  With your arms around him, you stroke his softly-furred back and rear, giving those strong muscles the occasional squeeze as tremors of delight run through you[if breast size of player > 0 and the player is felinebodied].  He moves a paw to cup one of your breasts, caressing it before leaning down to wrap his lips around your nipple, nursing some of your feline milk from it.  'Mmm... you are delicious, my dear.  It is no wonder that the feline girls love nursing from you so much,' he purrs, licking his muzzle.  You caress his cheek and tell him to leave some for them as well, to which he grins and gives your nipple a slow lick with his raspy tongue, cleaning up the stray drops of milk from it before kissing you[otherwise if breast size of player > 0].  He moves a paw to cup one of your breasts, caressing it.  He leans down and licks his raspy tongue slowly across your hard nipple, sending a shiver of pleasure through you.  He then presses his muzzle to your lips, kissing you again[otherwise].  He moves a paw to rub over your flat chest and tweaks your nipples.  He leans down and licks slowly across one of them with his raspy tongue before nuzzling back up to kiss you again[end if].  As you kiss, you slide a hand around to fondle the lion's hefty ballsac, enjoying the thought of soon obtaining their contents within your womb[if gestation of child is 0 and larvaegg is not 2] to breed you[end if].";
+	say "     As Leonard starts to lick and nip along your neck and shoulders, his panting grows heavier and his thrusts harder as his excitement builds.  You grip his firm ass with your hands and squeeze it with every thrust he makes into you, pulling him firmly forward to drive his leonine shaft into you.  Soon enough, he roars in lustful release and you feel that familiar rush of your handsome lover's hot seed shooting into you and flowing into your womb as his body seeks to breed its mate again.  You mrowl and [if bodyname of player is listed in infections of Felinelist]dig your claws into his rear as you orgasm powerfully, arching your back and cry out in ecstasy[otherwise]grab his rear firmly as you orgasm powerfully, arching your back and crying out in ecstacy[end if].  After several firm thrusts and their accompanying blasts of lion cum, his balls are drained and your womb is full of his thick seed, leaving you with a pleasant bump from his considerable output[if gestation of child is 0 and larvaegg is not 2] which you hope will soon grow even larger[end if].  He eases himself from you slowly and snuggles up beside you, purring happily about what a wonderful mate you are and that the pride will become even greater with you as its matron.  As you drift off for a brief catnap after your romp, he wraps his arms around you, resting one paw on your tummy and the other at your recently-filled pussy.[impregchance]";
+	infect "Feline";
+	now feline_meow is feline_meow / 2;
+	decrease libido of player by libido of player / 4;
+	decrease humanity of player by 4;
+	follow the turnpass rule;
 
 
 to say leonardmatesex4:			[Doggy-style]
