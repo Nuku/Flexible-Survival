@@ -1513,7 +1513,7 @@ carry out Inventorying:
 	if demon seed is owned, let dseed be 1;
 	say "Peeking into your backpack, you see: [if the number of owned grab objects is 0]Nothing[otherwise][line break][end if]";
 	if the number of owned grab objects is greater than 0:
-		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
+		say "[bold type][bracket]U[close bracket][roman type]se, [bold type][bracket]L[close bracket][roman type]ook, [bold type][bracket]S[close bracket][roman type]mell, [bold type][bracket]D[close bracket][roman type]rop, [bold type][bracket]J[close bracket][roman type]unk, [bold type][bracket]X[close bracket][roman type]Junkall, [if the number of trader in the location of the player > 0 or ( Ronda is visible and hp of Ronda is 0 and dseed is 1 )], [bold type][bracket]T[close bracket][roman type]rade[end if][if the number of smither in the location of the player > 0], [bold type][bracket]I[close bracket][roman type]mprove[end if].";
 		let weight be 0;
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
@@ -1523,6 +1523,7 @@ carry out Inventorying:
 				say " [link][bracket][bold type]S[roman type][close bracket][as]smell [name entry][end link]";
 				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [name entry][end link]";
 				say " [link][bracket][bold type]J[roman type][close bracket][as]junk [name entry][end link]";
+				say " [link][bracket][bold type]X[roman type][close bracket][as]junkall [name entry][end link]";
 				if trade of object entry is "":
 					let notval be 0;
 					if Ronda is visible and hp of Ronda is 0 and name entry is "demon seed":
@@ -2406,7 +2407,9 @@ understand "junk [owned grab object]" as burninating.
 
 carry out burninating something(called x):
 	let found be 0;
-	let number be 0;
+	if x is journal:
+		say "You really don't think that's a good idea.";
+		stop the action;
 	if x is wielded:
 		say "You're wielding that, take it off first.";
 		stop the action;
@@ -2414,15 +2417,58 @@ carry out burninating something(called x):
 		say "You don't seem to be holding any.";
 		stop the action;
 	now found is carried of x;
-	now number is 0;
 	if x is an equipment:
 		if x is equipped:
 			if found is less than 2:
 				say "You're using that right now. Stop using it before you drop it.";
 				continue the action;
 	delete x;
- 
- 
+
+
+Understand the command "trashall" as something new.
+Understand the command "junkall" as something new.
+
+allburninating is an action applying to one thing.
+
+understand "trashall [owned grab object]" as allburninating.
+understand "junkall [owned grab object]" as allburninating.
+
+carry out allburninating something(called x):
+	let found be carried of x;
+	if x is not owned:
+		say "You don't seem to be holding any.";
+	otherwise:
+		say "Do you wish to permanently trash all of the '[x]' you have?";
+		if the player consents:
+			if x is journal:
+				say "You really don't think that's a good idea.";
+			otherwise if x is an armament:
+				if x is wielded:
+					if found is 1:
+						say "You're wielding that, so you'd best stop using it first.";
+					otherwise:
+						say "You trash all of them but the [x] you're using.  Bye-bye.";
+						now carried of x is 1;
+				otherwise:
+					say "You trash them all.  Bye-bye.";
+					now carried of x is 0;
+			otherwise if x is an equipment:
+				if x is equipped:
+					if found is 1:
+						say "You're using that right now.  You need to take it off to trash it.";
+					otherwise:
+						say "You trash all of them but the [x] you're wearing.  Bye-bye.";
+						now carried of x is 1;
+				otherwise:
+					say "You trash them all.  Bye-bye.";
+					now carried of x is 0;
+			otherwise:
+				say "You trash them all.  Bye-bye.";
+				now carried of x is 0;
+		otherwise:
+			say "You change your mind.";
+
+
 Understand the command "drop" as something new.
 
 littering is an action applying to one thing.
