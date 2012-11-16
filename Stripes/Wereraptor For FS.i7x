@@ -1,5 +1,5 @@
-Version 1 of Wereraptor For FS by Stripes begins here.
-[Version 1]
+Version 2 of Wereraptor For FS by Stripes begins here.
+[Version 2 - Wereraptor Rampage + Wereraptor Sex]
 "Adds a special wereraptor creature/curse to Flexible Survival's Wandering Monsters table"
 
 Section 0 - Event Activation
@@ -77,7 +77,22 @@ when play begins:
 	add { "Wereraptor" } to infections of Reptilelist;
 
 to say losetowereraptor:
-	if wrmode is 1:
+	if bodyname of player is "Wereraptor":
+		if wrmode is 1:
+			if cocks of player > 0:
+				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath her.  You are momentarily worried that she might maul you with those sharp claws of hers, but she instead releases a triumphant roar and grinds her hips down onto yours.  Catching the scent of her lust, your excitement grows and your feral nature takes over.  You grind your cock up against her, roaring as one as you penetrate her.  She rides you rough and hard, her claws digging into you as she rides your stiff cock.  The feel of your [cock of player] shaft sliding into her is just what your wereraptor body needs to satisfy its lustful desires.  You nip and lick at one another while in the throws of wild, primitive lust until you cry out again, cumming hard to fill her womb with your saurian seed.";
+			otherwise:
+				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath her.  You are momentarily worried that she might maul you with those sharp claws of hers, but she instead releases a triumphant roar and turns around, pressing her hindquarters, and more specifically her dripping snatch, into your face.  With the scent of the lustful wereraptor right in front of you, your excitement grows and your feral nature takes over.  You bury your nose between her legs and start licking wildly at her pussy, lapping up her heated juices and getting a roar of pleasure from her[if cunts of player > 0].  You roar in return as she sets to licking at your juicy cunt in return[end if].  In the throws of her lust, her claws dig into you but you hardly notice, your wild and primitive lust driving you to lick until [if cunts of player > 0]you both cum loudly with another hissing roar[otherwise]she cums with another loud, hissing roar[end if].";
+		otherwise:
+			if cunts of player > 0:
+				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath him.  You are momentarily worried that he might maul you with those sharp claws of his, but he instead releases as triumphant road and grinds his hard cock against your rear.  Catching the scent of his lust, your excitement grows and your feral nature takes over.  You spread your legs and raise your tail, hissing your need for the strong male to mount you.  Grabbing your shoulders with his clawed hands, he climbs atop you and drives his pulsing rod into you, making you both roar in pleasure.  He pounds into you rough and hard, his claws digging into you as he thrusts into your juicy cunt like the primitive beast he is.  He nips and licks along your neck, his hot breath sliding along your neck as he mates you.  The feel of his saurian shaft sliding into you is just what your wereraptor body needs to satisfy its lustful desires.  When your pleasures peak, he drives hard into you one last time and unleashes his hot seed, filling your womb with his saurian seed.  You both roar loudly in ecstasy at the triumphant climax of the wild mating.[impregchance]";
+			otherwise if "Less Anal" is not listed in feats of player and a random chance of 2 in 3 succeeds:
+				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath him.  You are momentarily worried that he might maul you with those sharp claws of his, but he instead releases as triumphant road and grinds his hard cock against your rear.  Catching the scent of his lust, your excitement grows and your feral nature takes over.  You spread your legs and raise your tail, hissing as you submit to the stronger male's dominance.  Grabbing your shoulders with his clawed hands, he climbs atop you and drives his pulsing rod into you, making you both roar in pleasure.  He thrusts into you rough and hard, his claws digging into you as he pounds into you like the primitive beast he is.  He nips and licks along your neck, his hot breath sliding along your neck as he fucks you in a display of feral dominance.  When your pleasures peak, he drives hard into you one last time and unleashes his hot seed, filling your belly with his saurian seed.  As he cums, he roars again, nipping firmly at your neck and grinding his pulsing shaft deep inside you[if cocks of player > 0].  This added pressure against your prostate and the hot rush of his semen into you pushes you over the edge and you climax as well.[mimpregchance]";
+			otherwise:
+				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath him.  You are momentarily worried that he might maul you with those sharp claws of his, but he instead releases a triumphant roar and turns around, pressing his hindquarters, and more specifically her throbbing cock, into your face.  With the scent of the lustful wereraptor right in front of you, your excitement grows and your feral nature takes over.  You wrap your lips around his erection and start licking and sucking at it, loving the taste of the stronger male's virile penis.  He roars in pleasure and starts thrusting into your mouth[if cocks of player > 0], burying his face between your legs and licking at your stiff shaft in return[end if].  In the throws of his lust, his claws dig into you but you hardly notice, your wild and primitive lust driving you to lick and suck until [if cunts of player > 0]you both cum loudly with another hissing roar[otherwise]he cums with another loud, hissing roar[end if] feeding you his rich seed.";
+		decrease humanity of player by 2;
+		decrease libido of player by 4;
+	otherwise if wrmode is 1:
 		say "     Defeated by the wereraptor, the creature hisses triumphantly and grabs your head in her clawed hands, pressing your head between her legs.  Feeling her sharp claws digging into your shoulders, you have no choice but to start licking at her wet pussy.  The flavour is strong but exciting, quickly building your lust until you're eagerly lapping at her dripping slit for more of her hot juices.  When she finally cums, she sinks her sharp claws into you and hisses loudly in pleasure.  Now done with you, she shoves you aside roughly and sniffs the air.  She flicks her tongue across her muzzle and rushes off after her new prey with a more mundane hunger to be sated.  You feel relieved that this wild beast chose not to make a meal out of you instead.";
 	otherwise:
 		say "     Defeated by the wereraptor, the creature hisses triumphantly and grabs your head in his clawed hands, pressing your head between his legs.  Feeling the sharp claws digging into your shoulders, you have no choice but to start licking and eventually sucking at that reptilian cock.  The flavour is strong but exciting, quickly building your lust until you're eagerly lapping along its length and working your mouth over it.  When he finally cums, he sinks his sharp claws into you and hisses loudly in pleasure while pumping his hot load down your throat.  Now done with you, he shoves you aside roughly and sniffs the air.  He flicks his tongue across his muzzle and rushes off after his new prey with a more mundane hunger to be sated.  You feel relieved that this wild beast chose not to make a meal out of you instead.";
@@ -88,7 +103,64 @@ to say losetowereraptor:
 
 
 to say beatthewereraptor:
-	say "     You manage to defeat and drive off the strange, feral, half-human creature into the night.";
+	if bodyname of player is "Wereraptor" and ( cocks of player > 0 or cunts of player > 0 ):
+		say "     As the wereraptor stumbles back, weak and beaten, your primitive urges drive you to pounce upon [if wrmode is 1]her[otherwise]him[end if] instinctively.  You bear [if wrmode is 1]her[otherwise]him[end if] to the ground and pin them.  Shall you give into your primitive, lustful instincts and mate with your fallen foe?";
+		if the player consents:
+			if wrmode is 1:
+				if cocks of player > 0:
+					say "     With the female pinned beneath you, you grind your hips down onto hers, pressing your stiff cock against her rear.  She hisses in lustful need and quickly moves into the mating stance with her tail raised and her legs wide.  As you sink your [cock size desc of player] [cock of player] shaft into her, you both roar in pleasure and begin fucking like wild, primitive beasts.  You grip her body tightly and sink your claws into her shoulders as you drive yourself into her again and again as your feral nature takes over.  You ride her rough and hard, your pulsing shaft pounding into the sexy saurian's body in a primal need to breed her.  The feel of her slick, juicy cunt around your cock is just what your wereraptor body needs to satisfy its lustful desires.  You nip and lick at her neck as you fuck her until you both cry out again, cumming hard to fill her womb with your saurian seed.";
+				otherwise:
+					say "     With the female pinned beneath you, you turn around and grind your hips down onto her face, pressing your wet pussy into her face.  She starts licking it right away, drawing a hiss of pleasure from you.  Not wanting to miss out on such a treat, you bury your own head between her muscled legs and dive your tongue into her snatch.  This excites her further and drives her to lick you even more excitedly.  You lap up each other's heated juices.  You both finally roar in pleasure as your wild and primitive lusts drive you both to lick until you both have cum.";
+			otherwise:
+				if cocks of player > 0 and cunts of player > 0 and "Less Anal" is not listed in feats of player:
+					say "     Your dual-gendered nature has you at odds on how to satisfy your lusts.  Shall you [link]ride (1)[as]1[end link] the male's cock, show your dominance and [link]mount him (2)[as]2[end link] or [link]blow one another (3)[as]3[end link]?";
+					now calcnumber is 0;
+					while calcnumber < 1 or calcnumber > 3:
+						say "Choice? (1-3)>[run paragraph on]";
+						get a number;
+						if calcnumber < 1 or calcnumber > 3:
+							say "Invalid choice.  Type [link]1[end link] to get fucked, [link]2[end link] to fuck him and [link]3[end link] for a 69.";
+					if calcnumber is 1:
+						say "[wrvict1]";
+					otherwise if calcnumber is 2:
+						say "[wrvict2]";
+					otherwise:
+						say "[wrvict3]";
+				otherwise if cocks of player > 0 and cunts of player > 0:
+					say "     Your dual-gendered nature has you at odds on how to satisfy your lusts.  Shall you [link]ride (Y)[as]y[end link] the male's cock or [link]blow one another (N)[as]n[end link]?";
+					if the player consents:
+						say "[wrvict1]";
+					otherwise:
+						say "[wrvict3]";
+				otherwise if cocks of player > 0 and "Less Anal" is not listed in feats of player:
+					say "     As your loosen the reins on your wereraptor lusts, shall you show your dominance and [link]mount him (Y)[as]y[end link] or [link]blow one another (N)[as]n[end link]?";
+					if the player consents:
+						say "[wrvict2]";
+					otherwise:
+						say "[wrvict3]";
+				otherwise if cocks of player > 0:
+					say "[wrvict3]";
+				otherwise:
+					say "[wrvict1]";
+			decrease humanity of player by 2;
+			decrease libido of player by 4;
+		otherwise:
+			say "     It takes a bit of effort to rein in your primal urges, but you do so, giving the creature a final punch before pouncing away and leaving it to slink away into the night.";
+	otherwise:
+		say "     You manage to defeat and drive off the strange, feral, half-human creature into the night.";
+
+
+to say wrvict1:		[ride the male]
+	say "     Keeping the male pinned down with your clawed hands, you grind your hips down onto his with a triumphant roar.  You rub down onto his hard shaft and push yourself down onto it, roaring together as he penetrates you.  You ride him rough and hard, your claws digging into his shoulders as you enjoy your fallen prey's saurian shaft inside you.  You feel of it pushing into you each time you press yourself down is just what your wereraptor body needs to satisfy its lustful desires.  You nip and lick at one another while in the throws of wild, primitive lust until you cry out again, cumming hard as his saurian seed fills your womb.";
+
+to say wrvict2:		[fuck the male]
+	say "     With the other wereraptor pinned beneath you, you grind your hard cock against his rear with a triumphant roar.  Having defeated him and proven yourself the stronger of the two males, he is forced to spread his legs and raise his tail like a female, submitting to your dominance.  Grabbing his shoulders with your clawed hands, you climb atop him and drive your pulsing rod into him, making you both roar in pleasure.  You thrust into him rough and hard, your claws digging into him as you fuck him with a primitive, beastial lust.  You nip and lick along his neck, panting heavily as you fuck him in this display of feral dominance.  When your pleasures peak, you drive hard into him one last time and unleash your hot seed, filling his bowels with your virile seed as you grind your cock deep inside him.  This sets your fallen prey off as well, having him spend his seed across the ground.";
+
+to say wrvict3:		[69 w/male]
+	if cocks of player > 0:		[male/herm]
+		say "     With the other wereraptor pinned beneath you, you turn around and grind your hips down onto his face.  You roar triumphantly and press your stiff cock onto his muzzle while leaking your precum across it.  He starts licking it right away, drawing a hiss of pleasure from you as he licks your aching rod[if cunts of player > 0] and dripping cunt[end if].  With the arousing scent of his own saurian cock before you, your instincts soon have you sucking down on him in return.  You thrust into his mouth, pounding your dribbling shaft into his muzzle, giving him a good taste of your virile cock.  Your wild and primitive lust drive you to lick and suck one another until you both cum loudly with another hissing roar, feeding your hot seed to one another.";
+	otherwise:				[female]
+		say "     With the other wereraptor pinned beneath you, you turn around and grind your your hips down onto his face, pressing your wet pussy to his muzzle.  He starts licking at it right away, drawing a hiss of pleasure from you.  He gives a soft whine, clearly wanting to fuck your juicy hole, but you growl with dominance and grind your pussy down all the harder.  He does focus better once you plunge his pulsing erection into your own mouth and start licking and sucking upon it.  This excites her further and drives her to lick you even more excitedly.  Your wild and primitive lust drive you to lick and suck one another until you both cum loudly with another hissing roar as you swallow down his hot load and your primal juices soak his muzzle.";
 
 
 to say wereraptordesc:
@@ -241,7 +313,7 @@ this is the wereraptor curse rule:
 						increase hunger of player by 10;
 						increase libido of player by 20;
 						if libido of player > 100, now libido of player is 100;
-						decrease humanity of player by 10;
+						decrease humanity of player by 10 + wrcurseholdback;
 						wrcursesave;
 						now wrcursestatus is 5;
 						now wrcurseholdback is 0;
@@ -253,9 +325,12 @@ this is the wereraptor curse rule:
 			if daytimer is day:
 				say "     With the coming of the day, you can feel the prehistoric beast sinking back into some dark corner of your mind.";
 				now wrcursestatus is 3;
-		otherwise if wrcursestatus is 5:
+		if wrcursestatus is 5:		[active curse]
 			if daytimer is night:
 				wrcursesave;	[cursed restoration]
+				let resistance be ( 120 + ( humanity of player ) - ( libido of player ) );
+				if a random chance of hunger of player in resistance succeeds:
+					wrcurserampage;	[curse rampage activates]
 			otherwise:
 				say "     With the coming of the day, your saurian body spasms and twitches.  The beast unleashed hissed and snarls, but those dark, instinctual impulses are pushed back into a dark corner of your mind.  But you know it is not gone, but merely slumbering, awaiting the coming of the night to seek its wild freedom again.  But for the moment, at least, you know peace.";
 				decrease libido of player by 10;
@@ -391,6 +466,39 @@ to wrcurserecede:
 	increase intelligence of player by 2;
 
 
+to wrcurserampage:
+	if there is a dangerous door in the location of the player or the location of player is fasttravel:
+		say "     You can feel the primitive, feral instincts of your wereraptor body trying to erode your conscious thought as its lust and hunger rise.  You catch the scent of prey in the air and your limited control snaps.  You head out into the city as nothing more than a wild beast seeking to slake its hunger and lust upon its prey.";
+		now skipturnblocker is 1;		[player effectively unconscious, delays/skips end of turn messages]
+		decrease humanity of player by 6;
+		now wrcursestatus is 6;
+		while daytimer is night and humanity of player > 0:
+			decrease humanity of player by 2;
+			if a random chance of 1 in 3 succeeds:
+				say "You have a brief, hazy image of [one of]wild, savage sex[or]animalistic lusts[or]sinking your claws into something as you sate your lusts[purely at random].";
+				weakrandominfect;
+			otherwise if a random chance of 1 in 3 succeeds:
+				say "You have a brief, hazy image of [one of]eating something raw and bloody[or]tearing wildly into some meat[or]the taste of blood as it runs down your muzzle[or]clawing and slashing at something[purely at random].";
+			follow the turnpass rule;
+			wrcurserestore;
+		if humanity of player > 0:
+			now skipturnblocker is 0;		[player returned to consciousness, messages resume]
+			say "     You finally pass out somewhere at dawn.  You awaken a few hours later covered in blood and with little memory of your wild rampage.  You can only recall vague images of your beastly form fighting, eating and fucking throughout the night, but no specifics.  Realizing you no longer feel hungry and can taste the coppery tang of blood in your mouth, you are momentarily ill before your nanites settle your stomach.  Worn and aching, you rise and stumble your way back to the last place you recall being, trying your best not to think of what you may have done last night.";
+			decrease libido of player by 20;
+			if libido of player < 0, now libido of player is 0;
+			now hunger of player is 0;
+			decrease morale of player by 5;
+			wrcurserecede;
+			now wrcursestatus is 3;
+			now hp of player is ( hp of player + hp of player + maxhp of player ) / 4;
+		otherwise if humanity of player <= 0:
+			end the game saying "Your wild rampage consumes you and you become nothing more than a wild creature that becomes a dangerous, bloodthirsty and lust-crazed beast each night.";
+	otherwise:		[confined, manage to hold on]
+		say "     You can feel the primitive, feral instincts of your wereraptor body trying to erode your conscious thought as its lust and hunger try to take over.  Thankfully, you are able to confine yourself indoors out of the moonlight.  You are wilder and more feral for a time, but manage to get a grip on yourself.  It takes its toll, but you remain in control for now.";
+		decrease humanity of player by 4;
+		increase libido of player by 2;
+
+
 [	wrcursestatus		]
 [ 0: no contact			]
 [ 1: freed				]
@@ -398,6 +506,7 @@ to wrcurserecede:
 [ 3: activated			]
 [ 4: resisted for the night	]
 [ 5: curse in effect		]
+[ 6: rampage in effect		]
 [ 100: curse purged		]
 
 
