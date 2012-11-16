@@ -690,7 +690,6 @@ Instead of resolving Hunting Prides:
 			say "     After having knocked out several of the small lionesses and sending several more running, you manage to grab the dark-haired one and toss her to the ground.  With the hunting pride collapsing and the felines scattered, you'd think she'd be more upset, but she continues to giggle excitedly.  'Oh, you think you're so strong now, don't you?' she laughs.  'Well, it's too late now.  Our clever master will deal with your prissy lion.  He has a plan to take care of him.'  As she starts giggling again, you growl angrily and punch her hard, knocking her out to silence her.  From the sounds of it, you'd best rush back to Leonard as soon as possible.";
 			increase hp of Leonard by 1;
 			now Hunting Prides is resolved;
-			now PridePark is unresolved;
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     [if fightoutcome is 22]Having submitted to the band of lionesses[otherwise]Unable to continue resisting the band of lionesses[end if], you are dragged to the ground by them as they purr and giggle happily.  You are kissed, licked and petted by the cute felines.  As they continue this loving assault upon you, you start to purr and nuzzle them back, welcoming their kisses and caressing them in return[if hp of Leonard is 12 or hp of Leonard is 13].  You find yourself French kissing the black-haired one, who rumbles happily at your increasing submission[end if].  You begin to forget why you were ever fighting with them in the first place, eventually becoming another cute feline girl like them.  Eventually, after much playful teasing and fun, you're brought back to the meet their leonine pride leader, who is happy to welcome you properly into the pride by mounting you, much to your feline delight.";
 		now humanity of player is 0;
@@ -819,6 +818,7 @@ to say leonardrivalfight:
 		otherwise:
 			now hp of Leonard is 16;
 			now feline_attached is 0;
+			now PridePark is unresolved;
 			move the player to Lion's Den;
 			follow the turnpass rule;
 	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
