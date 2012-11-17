@@ -302,6 +302,7 @@ Instead of conversing the doctor matt:
 		say "     But they are having difficulties of their own and they want more information on key locations throughout the city.  It seems many of their recon teams have not fared well against the infected hazards of the city.  They feel that someone already infected would have an easier time gathering this intel.  They are looking for safe paths of travel through the city for their forces to start from, allowing them to expand their rescue operations from these key points.  You should begin exploring the city, finding as many points that you can navigate between as you can.  Being aware of these and knowing routes to travel between them will help keep the soldiers safer while trying to help those who can still be rescued.  They are requesting a report on at least 50% of the city.'";
 		if waiterhater is 0, wait for any key; [skips waiting if selected]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		NanofabRewardScanner; [places piece for nanofab in room.  move this line if/when a better place is found]
 		now hp of doctor matt is 15;
 	if hp of doctor matt is 15:
 		if number of fasttravel rooms > ( number of known fasttravel rooms * 2 ):

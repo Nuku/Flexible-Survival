@@ -503,6 +503,11 @@ FeedingRateMultiplier is a number that varies.  FeedingRateMultiplier is usually
 nanofabnumtemp is a number that varies. [temporary number used to simplify fabricator logic]
 nanofabrowtemp is a number that varies. [needed to know a row number later, so held here]
 nanofabnametemp is a text that varies. [temporary name used to simplify fabricator logic]
+nanofablearning is a number that varies.  nanofablearning is usually 0. [can the nanofab learn new items on it's own.  0 (default) is no, 1 is yes.]
+[building parts defined here, added to Table of Game Objects in Book 5 - Tables (should be a few pages down)]
+heuristic processor is a grab object. It is a part of the player. [Heuristic Processor would allow learning of new 'recipes', currently not enabled]
+reprogramming device is a grab object. It is a part of the player. [part of nanofab, reward from dr. mouse?]
+infection scanner is a grab object. It is a part of the player. [part of nanofab, reward from dr. matt?]
 
 FabKnownList is an action applying to nothing.
 Understand "Fablist" as FabKnownList.
@@ -516,18 +521,49 @@ Carry out FabKnownList:
 			say "Name: [object entry][line break]";
 	say "End of list.[line break]";
 
-[SuperSecretNanoFabCheat is an action applying to nothing. [test command, do not list in help. eventually move to debug? or remove?]
-understand "Cheat Me A NanoFab" as SuperSecretNanoFabCheat.
+SuperSecretNanoFabCheat is an action applying to nothing. [test command, do not list in help. eventually move to debug? or remove?]
+understand "Cheat Me A NanoFab for testing purposes only do not use as it can break quests" as SuperSecretNanoFabCheat.
 
-carry out SuperSecretNanoFabCheat:
-	Move Nanofabricator to Grey Abbey Library;
-	increase GenericNanoPastePool by 50;
-	say "Nanofabricator created in library, GNP set to 50.  Happy fabbing :)";]
+carry out SuperSecretNanoFabCheat: [shuffle code around to match testing needs]
+	now computeron is 1; [skips need for power plant quest to turn on computer]
+	now hp of doctor matt is 14; [advanced doctor matt plot to simplify spawning of scanner]
+	increase freecred by 400; [adds credits to buy storage from zephyr]
+	add "medkit" to the invent of Grey Abbey Library; [used as building block]
+	add "medkit" to the invent of Grey Abbey Library; [used as building block]
+	now progress of Doctor Mouse is turns + 16; [should make doctor mouse ready for next mission]
+	now locked stairwell is unlocked; [unlocks stairs to make finding doctor mouse possible]
+	now hospquest is 9; [advance doctor mouse plot to simplify spawning of reprogrammer]
+[old cheat code, here for ease of adjusting]
+[	NanofabRewardReprogrammer;
+	NanofabRewardScanner;
+	NanofabRewardStorage;]
+	[Move Nanofabricator to Grey Abbey Library;]
+	[increase GenericNanoPastePool by 50;]
+	say "Nanofabricator cheat command successfully run.";[output to confirm you got this far]
+
+Section - Component Spawning
+
+[the below commands should spawn the needed components for the nanofabricator.  they should appear in the same room the player is in when they are called, regardless of what room that currently is.  they are called from quests elsewhere.]
+NanofabRewardScanner is an action applying to nothing. [currently called from doctor matt, hp 14]
+To NanofabRewardScanner:
+	add "infection scanner" to the invent of the location of the player; 
+
+NanofabRewardReprogrammer is an action applying to nothing. [currently called from doctor house, hp 9]
+To NanofabRewardReprogrammer:
+	add "reprogramming device" to the invent of the location of the player; 
+
+NanofabRewardStorage is an action applying to nothing. [unneeded? buy at zephyr?]
+To NanofabRewardStorage:
+	add "nanite collector" to the invent of the location of the player;
+
+NanofabRewardLearning is an action applying to nothing. [currently unused, will be used to enable learning of new 'recipes']
+To NanofabRewardLearning:
+	add "heuristic processor" to the invent of the location of the player; 
 
 Section - Creation of Nanofab
 
 NanofabCreating is an action applying to nothing.
-Understand "build nanofab from simple items for testing purposes only" as NanofabCreating. [change command when integrating with questline, current command obscure to avoid accident activation]
+Understand "build nanofab" as NanofabCreating. [change command as needed, should work fine as is]
 
 Before NanofabCreating: [checks that you have everything needed to build the nanofab, fails with relevant errors if you don't]
 	if Nanofabricator is in Grey Abbey Library:
@@ -537,26 +573,37 @@ Before NanofabCreating: [checks that you have everything needed to build the nan
 		say "This would be a poor location to assemble the Nanofabricator.  Perhaps the Library would be better";
 		stop the action; [fails if not in library]
 	if Library Computer is not visible: [shouldn't happen, since the computer is always in the library, but just in case...]
-		say "One of the required commonents is not available here: Library Computer";
+		say "You need something able to store information about the nanites, as well as handle the calculations to reconfigure them.  Perhaps there is something in [bold type]Grey Abbey Library[roman type] that would be of use.";
 		stop the action; [fails if no computer][to test]
 	if computeron is not 1: [should indicate computer has power, from power plant quest]
-		say "While the Library Computer is here, it has no power and will not run.  You need to restore power to the computer before you can build the nanofabricator.";
+		say "While the Library Computer is here, it has no power and will not run.  You need to restore [bold type]power[roman type] to the computer before you can build the nanofabricator.";
 		stop the action; [fails if no power for computer]
-	if Water Bottle is not owned: [replace with better materials when integrating with questline]
-		say "You do not have one of the required components: ingredient 1 PLACEHOLDER";
+	if Reprogramming Device is not owned: [replace with better materials if desired]
+		say "You are short a method of changing the nanites code.  Without a [bold type]Reprogramming Device[roman type] you'll never build a Nanofabricator.  ";
 		stop the action; [fails if item not in inventory]
-	if Food is not owned: [replace with better materials when integrating with questline]
-		say "You do not have one of the required components: ingredient 2 PLACEHOLDER";
+	if Infection Scanner is not owned: [replace with better materials if desired]
+		say "Without a way to tell what the nanites are currently configured for, you won't be able to tell how/if reprogramming has occured propperly.  You'll an [bold type]Infection Scanner[roman type] of some sort.  Sounds like the sort of thing a lab might have, maybe you should look around Trevor Labs.";
 		stop the action; [fails if item not in inventory]
-	if Medkit is not owned: [replace with better materials when integrating with questline]
-		say "You do not have one of the required components: ingredient 3 PLACEHOLDER";
+	if Nanite Collector is not owned: [replace with better materials if desired]
+		say "You need something to sort and control where the nanites move.  Perhaps some sort of [bold type]Nanite Collector[roman type] would work.  Maybe someone at Zephyr Inc could help you find one.";
+		stop the action; [fails if item not in inventory]
+	if carried of medkit is not greater than 2: [replace with better materials if desired]
+		say "You need something to hold the Nanofabricator together.  Perhaps the bandages from a [bold type]Medkit[roman type] would work.  Althought it might take more than one, you should get a few just to be safe.";
 		stop the action; [fails if item not in inventory]
 
+
 Carry out NanofabCreating:
-	delete food; [removes materials from player]
-	delete water bottle; [currently placeholder materials]
-	delete medkit; [rename once integrated with quests]
-	say "Having gathered the required materials you assemble them into a nanofabricator.";
+	say "Knowing you'll need some way to hold the Nanofabricator togethor, you break down a medkit for the bandages.  ";
+	delete medkit;
+	say "You move some junk around and setup the Nanite Collector to hold your gathered nanites.  ";
+	delete Nanite Collector;
+	say "You mount the Infection Scanner on the side of the colelctor.  ";
+	delete infection scanner;
+	say "Next, you position the Reprogramming Device, granting you the ability to safely reconfigure the nanites to suit your purposes.  ";
+	delete reprogramming device;
+	say "Realizing the whole thing looks a bit shaky, you take another Medkit to use for more bandages.  ";
+	delete medkit;
+	say "With all that done, you now have a completed Nanofabricator, granting you the ability to make all the supplies you could every want.  You just need to tell it to [bold type]Consume[roman type] a few items for raw materials, so you can then [bold type]Fab[roman type] the items it has in memory.  At least that's the theory...";
 	Move Nanofabricator to Grey Abbey Library; [puts nanofab in library]
 
 Section - Nano FABB ing
@@ -630,12 +677,12 @@ Carry out Nanofeeding something(called x):
 		now nanofabnumtemp is weight entry [in row nanofabrowtemp of table of game objects] times [fabvalue entry of nanofabnametemp times] FeedingRateMultiplier;
 		increase GenericNanoPastePool by nanofabnumtemp;
 		say "[special-style-1][nanofabnumtemp][roman type] material added to stockpile.  Stockpile currently at [bold type][GenericNanoPastePool][roman type].";
-[	otherwise if a random chance of 1 in 4 succeeds: [attempt to learn new item]
+	otherwise if nanofablearning is 1:[if the nanofab has the abiliity to learn new things added, then learn new items]
 		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Scanning...[roman type][line break]";
 		Choose a blank row from Table of Fabbable Items;
 		now object entry is the noun;[important bit, adds new stuff to fabbable item list]
 		say "The computer screen displays the message: [line break][bold type]Scan successful.  Make up of [x] is now known.  More can be frabricated with sufficent material.[roman type][line break]";
-		delete x;]
+		delete x;
 	otherwise: [learning failed, consume item]
 		say "The computer screen displays the message: [line break][bold type][x] is an unknown item.  Consuming input for raw material.[roman type][line break]";
 		choose row nanofabrowtemp in the table of game objects;
@@ -684,6 +731,9 @@ name	desc	weight	object	sortname (indexed text)
 "cot"	"A folding cot. You could carry it around and [bold type]rest[roman type] anywhere!"	25	cot
 "dog milk"	"A bottle of dog milk? Man you will take anything."	3	dog milk
 "face mask"	"A simple, flimsy, thing you wear on your face. Maybe it will help? Probably not."	3	face mask
+"heuristic processor"	"A small electronic circuit.  You've been told it's amazingly adaptive and can learn anything.  Probably nonsense, but maybe you can find a use for it, somehow."	1	heuristic processor
+"reprogramming device"	"An attempt by Dr. Mouse to build a device to reprogram the nanites.  It's too bulky, and doesn't have the processing capacity to be of any use in the field.  Perhaps you could find a way around those limitations?"	13	reprogramming device
+"infection scanner"	"Upgraded Infection Monitor.  Or it would have been, it's clearly not finished.  It's missing any sort of display to show what it finds.  Perhaps you could use it's scanner parts elsewhere?"	7	infection scanner
 
 face mask is equipment. It is a part of the player. It is not temporary.
 The descmod of face mask is "A mask covers nose and mouth, made popular during the swine flu scare. ";
