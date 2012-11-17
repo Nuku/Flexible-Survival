@@ -2636,7 +2636,7 @@ This is the sex change rule:
 		if prevcock < cocks of player:		[did new cock appear?]
 			follow the cock descr rule;
 			say " Your groin throbs with intense sensations as a [descr] [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
-	if cocks of player is not 0 and the sex entry is "Female" and "One Way" is not listed in feats of player:
+	if cocks of player is not 0 and ( the sex entry is "Female" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of player:
 		let prevcock be cock length of player;
 		let prevcock2 be cock width of player;
 		decrease cock length of player by 1;
@@ -2729,7 +2729,7 @@ This is the sex change rule:
 		if prevcunt < cunts of player:		[did new cunt appear?]
 			follow the cunt descr rule;
 			say " Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, Leaking along a thigh as you quiver.";
-	if cunts of player is not 0 and the sex entry is "Male" and "One Way" is not listed in feats of player:
+	if cunts of player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of player:
 		let prevcunt be cunt length of player;
 		let prevcunt2 be cunt width of player;
 		decrease cunt length of player by 1;
@@ -2774,7 +2774,7 @@ This is the breast change rule:
 			decrease breasts of player by 2;
 			say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
 		increase breast size of player by 2;
-	if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and ( ( "Male Preferred" is not listed in feats of player and "Flat Chested" is not listed in feats of player )  or "Breasts" is listed in feats of player ):
+	if ( the sex entry is "Female" or the sex entry is "Both") and breast size of player is less than breast size entry and ( ( "Male Preferred" is not listed in feats of player and "Flat Chested" is not listed in feats of player ) or "Breasts" is listed in feats of player ):
 		follow the breast descr rule;
 		let oldbreast be descr;
 		say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
