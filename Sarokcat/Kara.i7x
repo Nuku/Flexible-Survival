@@ -220,7 +220,7 @@ carry out Pierceplayer:
 			now piercesave is 0;
 			say "'Well thats your loss I suppose, though it looked so very nice on you...' She says with a soft sigh as she gets a pair of sterile metal cutters out of a drawer. 'Maybe I will have a new idea for a piercing for you for next time though,' Kara says with a hyena-like grin as she goes to work removing your piercing.";
 			if "NippleandChain Piercing" is listed in feats of the player:
-				Remove "NippleandChain piercing" from feats of the player;
+				Remove "NippleandChain Piercing" from feats of the player;
 			if "Hyenastyle Piercings" is listed in feats of the player:
 				Remove "Hyenastyle Piercings" from feats of the player;
 				decrease charisma of player by 2;

@@ -581,7 +581,7 @@ to say XerxesSex5:												[Xerxes ass fucked]
 [ HelenPregnant - timer since impregnation                           ]		
 
 An everyturn rule:
-	if Helen is in the library and thirst of Helen > 0:
+	if Helen is in the Grey Abbey Library and thirst of Helen > 0:
 		if HelenPregnant is 36:
 			now thirst of Helen is 2;   [visible pregnancy]
 		increase HelenPregnant by 1;
@@ -678,12 +678,12 @@ when play ends:
 		otherwise:
 			say "When the rescue comes, you're carted into a holding facility and poked and prodded for a little while before they give you some shots to make you non-infective and release you into the outside world. As busy as they are with the more hostile infected resisting their efforts, there's not much time spent on you.";
 			say "As you adjust to living among regular people again, your sleek lines attract many. Even though you end up getting a job as forest ranger and spend a lot of time in the wilderness, several amorous encounters with hikers lead to more and more people visiting the area. Soon there's a small party every weekend, with everyone dancing around a bonfire and getting laid by you before they pair up with one another.";
-	if Xerxes is in the library:
+	if Xerxes is in the Grey Abbey Library:
 		if humanity of player is less than 10:
 			say "After succumbing to your infection, you forget all about Xerxes, who faithfully waits for you to come back until he's half-starved. As his hunger finally overwhelms his sense of duty, he moves out into the city and is caught by a pack of female huskies. With them, he's pretty well taken care of from then on, as he gets fed pretty well and is allowed to mount them all the time to satisfy their urges.";
 		otherwise:
 			say "Since the soldiers most likely wouldn't believe you if you told them that Xerxes is actually a dog - and your dog - you get a bit creative when they come for you. Soon they're convinced he's a regular survivor who had a mental break and whom you took care of. You whisper to him to stay calm and that you'll come get him before he gets carted away to a psych ward. When you're released yourself soon after, you stay close to the holding facility until you manage to acquire a key by getting one of the orderlies dead drunk one night. Sneaking into the facility under cover of darkness, you find and free Xerxes, then make your escape. From then on, your faithful dog never leaves your side for long, always ready to guard your home[if lust of Xerxes > 0] and share your bed[end if].";
-	if Helen is in the library:
+	if Helen is in the Grey Abbey Library:
 		if humanity of player is less than 10:
 			say "After succumbing to your infection, you forget all about Helen, who faithfully waits for you to come back until she's half-starved. As her hunger finally overwhelms her sense of duty, she moves out into the city and is caught by an alpha husky who incorporates her into his pack. With them, she's pretty well taken care of from then on, as she gets fed pretty well and is often mounted by the pack leader. Over time, she bears several human-shaped puppies for him.";
 			if HelenPregnant > 0:
