@@ -71,7 +71,7 @@ When Play begins:
 	now attack entry is "[one of]She slams you with one of her great clawed hands. As you are sent flying you wonder where she gets her red nail polish.[or]With terrifying ease she picks you up and throws you into a pile of rubbish.[or]With a great sweep of her fur covered arm she knocks you flying.[or]Teeth that can shear your head off close around your neck, before being withdrawn.  She smiles embarrassed, 'sorry!' before punching the wind out of you.'[or]As she flattens you again you wonder if your plan needs changing. [at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[one of]The beaten bear comes back to her senses. 'Oh.  That's better.' and then slumps over, apparently peacefully asleep.[or] You find yourself watching the motion of her big furry backside as the defeated bear hurriedly ambles off.[at random]. "; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[ursine attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "A huge towering figure comes into view.  At first you see a wild bear on its hind legs but on closer inspection you realise that it's legs are somewhat long and its black claws are painted with nail polish, and she is absently rubbing herself... another infected citizen of this crazy world.  It must be the influence of the infection on you, but the longer you watch the more you see she is quite attractive in a uniquely bear kind of way. She has bright [one of]brown[or]blue[or]green[at random] eyes and behind what might be a smile a  row of terrifying huge pointed teeth. She is naked but covered in dense shaggy fur that covers her tall and wide body completely. . Her muscular chest is padded with three rows of flattish breasts and long nipples peek through her fur.  On seeing you, she speaks and exposes more of those teeth, '[one of]Run! I don't want to break another one![or]Not now, you dummy![or] Are you stalking me?[at random],'";[ Description of the creature when you encounter it.]
+	now desc entry is "A huge towering figure comes into view.  At first you see a wild bear on its hind legs but on closer inspection you realise that it's legs are somewhat long and its black claws are painted with nail polish, and she is absently rubbing herself... another infected citizen of this crazy world.  It must be the influence of the infection on you, but the longer you watch the more you see she is quite attractive in a uniquely bear kind of way. She has bright [one of]brown[or]blue[or]green[at random] eyes and behind what might be a smile a  row of terrifying huge pointed teeth. She is naked but covered in dense shaggy fur that covers her tall and wide body completely. . Her muscular chest is padded with three rows of flattish breasts and long nipples peek through her fur.  On seeing you, she speaks and exposes more of those teeth, '[one of]Run! I don't want to break another one![or]Not now, you dummy![or] Are you stalking me?[at random]'";[ Description of the creature when you encounter it.]
 	now face entry is "bearlike face, with an elongated snout and big bear teeth set in what is definitely not a teddy bear";[ Face description, format as the text "Your have a (your text) face."] 
 	now body entry is "tall and broad, with heavy shoulders and an undeniable presence that reeks sheer strength.";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]shaggy furred[or]coarsely furred[or]honey-scented furry[at random]";[ skin Description, format as the text "You have (your text) skin"] 
@@ -124,14 +124,14 @@ when play ends:
 			
 Table of Game Objects(continued)
 name	desc	weight	object
-"honeycomb"	"A red painted tin containing a wonderfully sweet smelling slice of coarse honeycomb. From the size of the cells you know you really don't want to find the hive."	2	honeycomb
+"honeycomb"	"A red painted tin containing a wonderfully sweet smelling slice of coarse honeycomb. From the size of the cells you know you really don't want to find the hive."	1	honeycomb
 
-honeycomb is a grab object.
+honeycomb is a grab object.  It is part of the player.  It is temporary.
 
 the usedesc of honeycomb is "[honeycombuse]";
 
 to say honeycombuse:
-	say " You just are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth. ";
+	say " You just are overcome with the need for sweetness. The sticky goodness of the honeycomb makes you drool as you shove it into your suddenly hungry mouth.";
 	decrease the hunger of the player by 6;
 	increase thirst of player by 1;
 
