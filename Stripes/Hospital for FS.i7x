@@ -741,6 +741,7 @@ to say hospquestpt8:
 		say "     As the nanite update runs through your system, you ask what the jaguar wanted that was so upsetting.  'Oh, I wasn't too upset about the news.  It's just harder to understand them now that they've got those big teeth.  There's a little pest running around the hospital, distracting the other staff at times.  Nothing you need concern yourself with, though.  They'll catch the pink perv sooner or later.'";
 		say "     Dr Mouse heads back to his worktable.  'I have to get back to things now.  I don't think I'll have anything for you for at least a few days.  Please give me some time to process all of these results.'";
 		now progress of Doctor Mouse is turns;
+		NanofabRewardReprogrammer; [places piece for nanofab in room.  move this line if/when a better place is found]
 		now hospquest is 10;
 
 to say hospquestpt9:
