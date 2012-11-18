@@ -76,7 +76,7 @@ When Play begins:
 	now cunt width entry is 6;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 50;			[ Target libido the infection will rise towards. ]
 	now loot entry is "eagle feather";	[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 30;		[ Percentage chance of dropping loot, from 0-100. ]
+	now lootchance entry is 40;		[ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "winged";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
 	now type entry is "[one of]avian[or]raptor[or]bird-like[at random]";
