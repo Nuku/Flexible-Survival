@@ -243,7 +243,7 @@ instead of conversing the susan:
 			say "She blushes and nudges you, 'You should talk to the Doctor first.'";
 		otherwise:
 			if libido of player is less than 50:
-				say "She rubs up against you gently and runs her hands across your [skin of player] chest, 'It is good to see you,' she whispers as she snuggles close to your [bodytype of player], but makes no attempt to push it further than soft chatter and close hugs.";
+				say "She rubs up against you gently and runs her hands across your [skin of player] chest, 'It is good to see you,' she whispers as she snuggles close to your [bodytype of player] body, but makes no attempt to push it further than soft chatter and close hugs.";
 				deerfy;
 			otherwise:
 				now libido of player is 0;
