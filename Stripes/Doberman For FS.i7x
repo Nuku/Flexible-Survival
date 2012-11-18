@@ -317,7 +317,7 @@ to say beatthedobie2:			[mid-lust cop player victory]
 to say beatthedobie3:			[high-lust cop player victory]
 	say ".  The female Doberman moans and sags to the ground, her increased lust taking hold.  She pulls open her pants, revealing her lack of panties as she starts fingering herself.  She looks up at you with a pure lust in her eyes as she spreads her legs and parts the dark lips of her canine pussy with fingers.  'Come on, take me!  I don't care anymore.  Just give it to me and make me yours,' she moans and pants while holding herself in wanton display for you.  You can't help but smile at what a fine slut you've made this cop into and try to decide how you'd like to use her";
 	if cocks of player > 0 or cunts of player > 0:
-		say ".  Shall you [if cocks of player > 0]fuck[otherwise]have her lick[end if] that juicy cunt of hers [link](1)[as]1[end link], [if cocks of player > 0]give her a titty-fuck[otherwise]get the doggy tongue of hers to please you[end if] [link](2)[as]2[end link] or enjoy a 69 with the horny canine?";
+		say ".  Shall you [if cocks of player > 0]fuck[otherwise]have her lick[end if] that juicy cunt of hers [link](1)[as]1[end link], [if cocks of player > 0]give her a titty-fuck[otherwise]get the doggy tongue of hers to please you[end if] [link](2)[as]2[end link] or enjoy a 69 [link](3)[as]3[end link] with the horny canine?";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
 			say "Choice? (1-3)>[run paragraph on]";
