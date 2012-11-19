@@ -66,13 +66,13 @@ to say drugsearch:
 		increase carried of cock pill by 1;
 	if T is 6:
 		say "     You find a birth control pill still in the sample pack.";
-		increase carried of Birth Control Pill by 1;
+		increase carried of birth control pill by 1;
 	if T is 7:
 		say "     You find a fertility enhancement pill still in the sample pack.";
-		increase carried of Fertile Pill by 1;
+		increase carried of fertile pill by 1;
 	if T is 8:
 		say "     You find a strange, blood red pill.";
-		increase carried of Blood Pill by 1;
+		increase carried of blood pill by 1;
 	if T is 9 or T is 10:
 		say "     You find a small syringe with clear, blue fluid in it and labeled as a [']healing booster['].";
 		increase carried of healing booster by 1;

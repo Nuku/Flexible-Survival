@@ -246,7 +246,7 @@ to say special gift:
 	if T is 4:
 		increase carried of testosterone pill by 1;
 	if T is 5:
-		increase carried of Birth Control Pill by 1;
+		increase carried of birth control pill by 1;
 	if T is 6:
 		increase carried of wolf cum by 1;
 	if T is 7:
