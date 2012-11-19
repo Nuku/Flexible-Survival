@@ -2,6 +2,8 @@ Version 1 of Flaming Lynx For FS by Stripes begins here.
 
 "Adds a Flaming Lynx creature to Flexible Survival's Wandering Monsters table"
 
+[NOTE: This was a commissioned creature with the specific request that it only be available for M/M type fun, so this characteristic should not be changed.]
+
 Section 1 - Monster Responses
 
 when play begins:

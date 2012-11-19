@@ -356,48 +356,48 @@ to leonardmatesex:
 		say "[leonardmate_newkitty]";
 	otherwise:
 		say "     You snuggle up to your sexy mate and run your hands over his chest, making him rumble happily.  He pulls you into his arms and gives you a kiss.  As you kiss, you wonder how you might best show your love for the handsome lion.";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	choose a blank row in table of fucking options;
-	now title entry is "Fellatio";
-	now sortorder entry is 1;
-	now description entry is "suck the lion's cock";
-	if cunts of player > 0:
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
 		choose a blank row in table of fucking options;
-		now title entry is "Cunnilingus";
-		now sortorder entry is 2;
-		now description entry is "have the lion eat you out";
+		now title entry is "Fellatio";
+		now sortorder entry is 1;
+		now description entry is "suck the lion's cock";
+		if cunts of player > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Cunnilingus";
+			now sortorder entry is 2;
+			now description entry is "have the lion eat you out";
+			choose a blank row in table of fucking options;
+			now title entry is "Have sex";
+			now sortorder entry is 3;
+			now description entry is "have the lion fuck you";
 		choose a blank row in table of fucking options;
-		now title entry is "Have sex";
-		now sortorder entry is 3;
-		now description entry is "have the lion fuck you";
-	choose a blank row in table of fucking options;
-	now title entry is "Doggy-style";
-	now sortorder entry is 4;
-	now description entry is "have the lion mount you like a beast";
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number (1-[number of filled rows in table of fucking options])> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			choose row calcnumber in table of fucking options;
-			say "Confirmation: Would you like to [description entry]?";
-			if player consents:
-				now sextablerun is 1;
-				now lastfuck of Leonard is turns;
-				if title entry is "Fellatio":
-					say "[leonardmatesex1]";
-				otherwise if title entry is "Cunnilingus":
-					say "[leonardmatesex2]";
-				otherwise if title entry is "Have sex":
-					say "[leonardmatesex3]";
-				otherwise if title entry is "Doggy-style":
-					say "[leonardmatesex4]";
-		otherwise:
-			say "Invalid Option.";
+		now title entry is "Doggy-style";
+		now sortorder entry is 4;
+		now description entry is "have the lion mount you like a beast";
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number (1-[number of filled rows in table of fucking options])> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				choose row calcnumber in table of fucking options;
+				say "Confirmation: Would you like to [description entry]?";
+				if player consents:
+					now sextablerun is 1;
+					now lastfuck of Leonard is turns;
+					if title entry is "Fellatio":
+						say "[leonardmatesex1]";
+					otherwise if title entry is "Cunnilingus":
+						say "[leonardmatesex2]";
+					otherwise if title entry is "Have sex":
+						say "[leonardmatesex3]";
+					otherwise if title entry is "Doggy-style":
+						say "[leonardmatesex4]";
+			otherwise:
+				say "Invalid Option.";
 
 [
 You make for such a lovely feline.

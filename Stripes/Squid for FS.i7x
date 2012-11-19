@@ -1,4 +1,5 @@
-Version 1 of Squid for FS by Stripes begins here.
+Version 2 of Squid for FS by Stripes begins here.
+[Version 2 - Sex update written by Blue Bishop w/assistance and coding by Stripes]
 
 [Adaptation of Squid Girl for Flexible Survival by Stripes]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
@@ -15,10 +16,32 @@ when play begins:
 	add ( "Squid" ) to infections of tailweapon;
 
 to say losetosquid:
-	say "     The squid girl moves over your defeated form and smoothly settles in above you.  Her tentacles effortlessly shed your clothes and caress your flesh[if cocks of player > 0].  She moans and slides her pussy over your cock and you shiver at her cold, wet embrace[end if][if cunts of player > 1].  A wriggling tentacle slides inside each of your pussies and starts stroking your insides with amazing precision[otherwise if cunts of player is 1].  One of her tentacles slides inside you and starts stroking your insides with amazing precision[end if][if breasts of player > 0].  Her arms wrap around your tits and start to knead and milk them gently[end if].  Her remaining limbs settle in over the rest of your body, their suckers pulling at your flesh here and there like the kisses of a hundred lovers.  Soon, you're both crying out in bliss as she brings you both to orgasm.  As her tentacles slowly pull away, she leans down to give you a gentle kiss. 'Come back soon,' she whispers.  'I'll be waiting.'  The tips of her tentacles slide slowly off of you, as it drawing out the contact as long as possible as she starts to swim off.";
+	if hp of player > 0:
+		say "     You stand down and throw your hands up in submission against the tentacled lady.  Cautiously, she advances upon you, and once sufficiently satisfied with your compliance she starts to gently relinquish you of your attire before having her fun.";
+	otherwise:
+		say "     Quickly moving, you find you're too weak to react before her suctioned tendrils grab hold of you and throw you to the ground, getting a faceful of sand.  She then roughly exonerates your clothing from its beleaguered owner, it's lewd intent made transparent to your vulnerable form.";
+	if cocks of player > 0:
+		say "     Partially engulfed in a writhing mass of tentacles, the girl descends her torso upon your crotch, the soft and affection caress of these appendages quickly influencing you into arousal, and though you cannot see past the mess of flesh you doubtlessly feel your [cock size desc of player] rod engulfed in the folds of the slinky creature's tight cunt[if cocks of player > 2].  In addition to the assault on your single organ, she's not one to let your additional equipment go neglected, and proceeds to let a couple tentacles attend to these tools, her proceeding kneads and strokes exasperated by the suctioned surface of such dextrous limbs[otherwise if cocks of player is 2].  In addition to the assault on your single organ, she's not one to let your second rod go neglected, and proceeds to let a tentacle wrap around its length, her proceeding kneads and strokes exasperated by the suctioned surface of such a dextrous limb[end if].";
+	if cunts of player > 0:
+		say "     [If cunts of player > 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, more tentacles invading your additional feminine holes one by one.  The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[otherwise if cunts of player is 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, followed by another in your second female passage.  The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[otherwise]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades your exposed cunt.  The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[end if].";
+	if breasts of player > 1 and breast size of player > 0:
+		say "[If breasts of player > 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, occasionally switching between the numerous sets.  The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[otherwise if breasts of player is 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, switching between the main set and the second on occasion. The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[otherwise]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, the audible noise of her suckers as they a pulled from your vulnerable flesh making you twitch and jerk about, much to her amusement[end if][if scalevalue of player > 3].  It's a little awkward for her to overpower a creature substantially larger than herself, but it's transparent that she enjoys the unique challenge of abusing such a sizeable beast[end if].";
+	otherwise:
+		say "     She bears down upon you, her suctioned 'hands' affectionately kneading your [bodydesc of player] chest, the audible noise of her suckers as they a pulled from your vulnerable flesh making you twitch and jerk about, much to her amusement[if scalevalue of player > 3].  It's a little awkward for her to overpower a creature substantially larger than her, but it's transparent that she enjoys the unique challenge of abusing such a sizeable beast[end if].";
+	if "More Anal" is listed in feats of player:
+		say "     Her pleasurable amusement certainly lacking in restraint, you're jolted with the immediate sensation of one of her numerous tendrils teasing at your exposed ass. The slick and smooth organ slowly worms its way into these confines, causing you to moan. She giggles merrily, your subsequent protests a source of mirthful amusement to the diminutive creature, her tentacle wriggling its way deeper into your bowels, forcing you to contend with its irreverent stimulation.";
+	If cocks of player > 0:
+		say "     With such extensive perversion imposed upon you, it's not long before you orgasm against the creature's ministrations, her own climax matching yours as your ejaculate into her hidden depths[if cocks of player > 2].  Your additional organs aimed at you, they too explode against her tendril's affection, dousing you with your own fluids[otherwise if cocks of player is 2].  Your second organ aimed at you, it too explodes against her tendril's affection, dousing you with your own fluids[end if][if cunts of player > 1].  Further exacerbating your release, your abused cunts tighten against the small creature's intrusions[otherwise if cunts of player > 0].  Further exacerbating your release, your abused cunt tightens against the small creature's intrusion[end if].  Satisfied, she slowly pries her limbs from your beleaguered form, departing with a merry giggle and a gentle kiss.";
+	Otherwise if cunts of player > 0:
+		say "     With such extensive perversion imposed upon you, it's not long before you orgasm against the creature's ministrations, [if cunts of player > 1]your abused cunts tightening against the small creature's intrusions[otherwise if cunts of player > 0]your abused cunt tightening against the small creature's intrusion[end if].  Satisfied, she slowly pries her limbs from your beleaguered form, departing with a merry giggle and a gentle kiss.";
+	Otherwise:
+		say "     She watched you as you writhe against her perverse affections, very much amused by your protests as she arouses you, lacking any sexual outlet to sate her relentless assault.  You're about to pass out from exhaustion before she finally relents, slowly prying her limbs from your beleaguered form, and departing with a merry giggle and a gentle kiss.";
+	say "     'Come back soon,' she whispers to you, 'I'll be waiting,' before she descends back into the depths of the coast.  Regardless of how you feel about the circumstances which unfurled before you, you have to admit that it's a little embarrassing to be covered in all these welts from the abuse of the squid girl's suckers.";
+
 
 to say beatthesquid:
-	say "     The squid girl swims back with a loud squeal and turns.  There is a burst of ink and when you can see again, she is gone.";
+	say "     You strike the aquatic creature down, and--seeing this as a losing fight--she quickly tumbles back into the depths of the waters from whence she came, releasing a cloud of ink to hide her escape.";
+
 
 to say squidskinchange:
 	let tempnum be squidcolour;
@@ -28,8 +51,10 @@ to say squidskinchange:
 	say "a sensation like cold, rushing water flooding through your veins as your skin sheds away revealing slick smooth red flesh below.  As you admire your new skin with wonder, it suddenly shifts to blue.  Your surprise brings on a yellow hue.  With a bit of practice, you settle on a color that suits you";
 
 to say squiddesc:
-	say "     Rising from the waters is a female squid creature.  Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh.  Her head is almost human, except for having an elongated crown and large, dark eyes.  The squid girl's chest is a slightly lighter colour than the rest of her body and has a pair of small, flat breasts.  Her arms are long tentacles lined with rows of suckers and ending in pad-like hands.  Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around.  Her ass is small and compact, barely disturbing the silhouette of her body.  Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
-
+	if a random chance of 1 in 2 succeeds:
+		say "     Rising from the waters is a female squid creature.  Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh.  Her head is almost human, except for having an elongated crown and large, dark eyes.  The squid girl's chest is a slightly lighter colour than the rest of her body and has a pair of small, flat breasts.  Her arms are long tentacles lined with rows of suckers and ending in pad-like hands.  Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around.  Her ass is small and compact, barely disturbing the silhouette of her body.  Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
+	otherwise:
+		say "     You are suddenly accosted by what looks to be a strange squid-girl.  Sleek and smooth in form, her streamlined build gives an almost fey appearance.  Seemingly gliding towards you, she exposes her glistening yellow flesh.  Head human-like, it is exaggerated by an elongated crown and large, dark eyes.  Further informing you of her lithe body, the creatures' chest is a slightly paler facet, adorned with a pair of small, flat breasts.  Her arms long tentacle-like appendages, they are lined with rows of suckers and ending in pad-like hands.  Pretty much everything below the waist is obscured by a writhing mass of tentacles, twisting and rolling as she moves to attack you, strangely determined in spite of her seemingly frail appearance.";
 
 Section 2 - Monster Insertion
 
@@ -78,7 +103,7 @@ When Play begins:
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]soft[or]flexible[or]boneless[at random]";
 	now type entry is "[one of]cephalopod[or]squid-like[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]

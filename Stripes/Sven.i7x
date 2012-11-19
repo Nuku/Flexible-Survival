@@ -196,7 +196,7 @@ instead of conversing the Sven:
 
 
 An everyturn rule:
-	if hp of Sven > 0 and hp of Sven < 4 and lastSvendrink - turns > 20:
+	if hp of Sven > 0 and hp of Sven < 4 and lastSvendrink - turns > 20 and skipturnblocker is 0:
 		now hp of Sven is 100;
 		remove Sven from play;
 		say "You briefly remember Sven and have a sinking feeling that something's happened to him.";
