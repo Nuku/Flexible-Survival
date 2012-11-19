@@ -257,6 +257,10 @@ Definition: A grab object(called X) is wielded:
 	if weapon object of player is x, yes;
 	no;
 
+Definition: The player is submissive:
+	if "Submissive" is listed in feats of player, yes;
+	no;
+
 Definition: A situation(called X) is available:
 	if x is resolved, no;
 	if x is close:
