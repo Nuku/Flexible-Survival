@@ -1,5 +1,5 @@
 Version 2 of Otter by Nuku Valente begins here.
-[Version 2.1 - no gender restrictions, adjusts target gender as needed]
+[Version 2.2 - Rimming scene and More/Less Anal checks - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Otter to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -12,9 +12,11 @@ Otterdefeat is a number that varies.
 Otterconsent is a number that varies.
 
 [Summary of the dancing around the flags:
+Anal play scenes will not occur if the player is set as Less Anal.
 If guy is banned, the male interplay scenes are removed from the sex.  Female scenes will instead be more likely (75% chance each).
 If girl is banned, the female interplay scenes are removed from the sex.  Male scenes will instead be more likely (75% chance each).
 A male otter may ride the player's cock if guy is not banned, but the female is more common (75%) unless female is banned.
+An otter (75% male/25% female unless banned) may rim the player if they're not recieving anal sex and if the player is set for More Anal.
 If girl or guy is banned, direct reference to that gender is removed from combat.
 If both guy and girl are banned, then they will show as normal during combat.
 If both guy and girl is banned, a special case is reached, with a unique herm otter coming in for the sex.
@@ -74,10 +76,14 @@ to say Otter attack:
 			say "As the otters swim around you excitedly, the males move off, sensing something about you.  They instead swim on watch to prevent any interruption of your time with the females members of the raft.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		if guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ):
+		if guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and "Less Anal" is not listed in feats of player:
 			say "An otter swims up behind you and grabs you at the sides, pulling you back against a stiff shaft. He nuzzles into your left ear, then right, as he snuggles up against your back and works the pointed tip of his bestial member into your back door, slowly working it into your body as his friends bark and cheer their encouragement. He pulls you back firmly, sinking several inches more of himself into you, the pain giving way to nanite induced pleasure that echoes outwards from where he stretches you lustfully. His slick, throbbing cock feels increasingly pleasurable inside you, finally peaking when his hot semen floods your bowels.[mimpregchance]";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+		otherwise if ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and "More Anal" is listed in feats of player:
+			let randomog be 1;	[male]
+			if guy is banned or ( girl is not banned and a random chance of 1 in 4 succeeds ), now randomog is 2;		[female]
+			say "An otter swims up behind you and nuzzles at your rear, tickling at your bottom with [if randomog is 1]his[otherwise]her[end if] whiskered face.  [if randomog is 1]He[otherwise]She[end if] nuzzles between your cheeks and starts licking at your pucker, making you squirm in response.  Soon [if randomog is 1]his[otherwise]her[end if] tongue's pressing past your anal ring and sliding into your through your back door.  [if randomog is 1]His[otherwise]Her[end if] webbed paws knead at your bottom as the playful lutrine licks your asshole, a sensation that grows increasingly pleasant as [if randomog is 1]he[otherwise]she[end if] and the other otters play with you.";
 		if guy is not banned and cunts of player is greater than 0 and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ):
 			say "An otter nuzzles into your throat as he presses himself against your front a moment. He grabs for your hips, then leans back, pressing his eager pointed tool against your nethers, easing it into you with a few sharp thrusts. He begins to piston against you like a machine, eyes closed and chest heaving with heavy gulps of air as he makes wild love. The rough loving is painful only for the first moment, giving way to erotic waves of tingling pleasure that run up and down your belly, centered on your ecstatic cunt, trembling tightly around the penetrating pole of that eager creature.";
 			say "The playful otter strokes his webbed paws across your hips as he thrusts into you before finally emptying his load into your trembling pussy.  Sated, he moves back, only to be replaced by another.  They continue to take turns with you, seeding you again and again.[impregchance]";
@@ -104,7 +110,7 @@ to say Otter attack:
 					say "Noticing you have extra male meat, another female swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their sopping wet cunts, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-		otherwise if cocks of player > 0 and guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ):
+		otherwise if cocks of player > 0 and guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and "Less Anal" is not listed in feats of player:
 			say "You can feel the soft, webbed paws of one of the otter's on your cock and you glance down to see a slender, young male grabbing and stroking your cock.  He seems to almost grin as he nuzzles his softly-furred face against it";
 			if cock length of player is greater than 12:
 				say ".  Too large for him to take, he continues to work his paws over your big cock.  His digits move to fondle your balls as well as he worships your impressive member.  His brown eyes are locked on it, staring at it lustfully";
