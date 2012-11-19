@@ -2,8 +2,8 @@ Control Pills by Hellerhound begins here.
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Birth Control Pill"	"A small red pill, supposed to prevent accidental conception. It says 'lasts for 30 days', but with the nanites around, it's probably more like 3..."	1	birth control pill
-"Fertile Pill"	"A small blue pill, with the words 'Fertile 9h' on it. You've never seen the like before."	1	fertile pill
+"birth control pill"	"A small red pill, supposed to prevent accidental conception. It says 'lasts for 30 days', but with the nanites around, it's probably more like 3..."	1	birth control pill
+"fertile pill"	"A small blue pill, with the words 'Fertile 9h' on it. You've never seen the like before."	1	fertile pill
 
 
 
@@ -96,7 +96,7 @@ an everyturn rule:
 
 
 
-the invent of Porn Store is {"Birth Control Pill", "Birth Control Pill", "Fertile Pill", "Fertile Pill"}.
+the invent of Porn Store is {"birth control pill", "birth control pill", "fertile pill", "fertile pill"}.
 
 
 Control Pills ends here.

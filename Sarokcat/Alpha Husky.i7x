@@ -54,7 +54,7 @@ to say Alpha Husky attack:
 		infect "Female Husky";
 	if husky gathering is resolved and fertile pill is owned:
 		say "You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers and you proceed back to safer grounds.";
-		delete Fertile Pill;
+		delete fertile pill;
 		now husky gathering is unresolved;
 			
 husky gathering is a situation. It is resolved.
