@@ -67,7 +67,7 @@ Section 3 - Fresh Apple
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Fresh Apple"	"A rosy red apple."	3	fresh apple
+"fresh apple"	"A rosy red apple."	1	fresh apple
 
 fresh apple is a grab object. It is a part of the player. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
 
@@ -251,7 +251,7 @@ When Play begins:
 	now cunt length entry is 17;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 24;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 0;	[done in the loss/win text]		[ Amount player Libido will go up if defeated ]
-	now loot entry is "Fresh Apple";			[ Loot monster drops, ]
+	now loot entry is "fresh apple";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
