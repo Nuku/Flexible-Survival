@@ -1091,6 +1091,7 @@ carry out trixiecheating:
 	say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area.  [bold type]Automatic Survival[roman type] removes your need for food and water.  [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC).  [bold type]Lil Better[roman type] gives +1 to all stats.  [bold type]Play On[roman type] removes the time limit to the game.  You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
 	let trixieexit be 0;
 	while trixieexit is 0:
+		say "[bold type]Cheats:[roman type][line break]";
 		say "[link](1) Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
 		say "[link](2) Automatic Survival[as]2[end link] - [if Automatic Survival is listed in feats of player]Active[otherwise]Inactive[end if][line break]";
 		say "[if Open World is listed in feats of player](3) Open World cannot be deactivated[otherwise][link](3) Open World[as]3[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
@@ -1098,14 +1099,17 @@ carry out trixiecheating:
 		say "[link](5) Play On[as]5[end link] - [if playon is 0]Inactive[otherwise]Active[end if] (Score halved to reactivate)[line break]";
 		say "[link](6) Set Humanity[as]6[end link] - Current Humanity: [bold type][humanity of player][roman type][line break]";
 		say "[link](7) Set Libido[as]7[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
+		say "[line break]";
+		say "[bold type]Game settings:[roman type][line break]";
+		say "[link](8) Set anal play content level[as]8[end link] -  Currently: [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Standard[otherwise]More Anal[end if][roman type][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-7)> [run paragraph on]";
+			say "Choice? (0-8)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 7:
+			if calcnumber >= 0 and calcnumber <= 8:
 				break;
 			otherwise:
-				say "Invalid choice.  Pick from 0 to 7.";
+				say "Invalid choice.  Pick from 0 to 8.";
 		if calcnumber is 1:
 			if "Unerring Hunter" is listed in feats of player:
 				remove "Unerring Hunter" from feats of player;
@@ -1195,6 +1199,8 @@ carry out trixiecheating:
 				decrease score by 50;
 			otherwise:
 				say "Invalid choice - returning to menu.";
+		otherwise if calcnumber is 8:
+			try analadjusting;
 		otherwise if calcnumber is 0:
 			say "Exiting menu.";
 			now trixieexit is 1;
@@ -1213,12 +1219,12 @@ understand "anal adjust" as analadjusting.
 understand "analadjust" as analadjusting.
 
 carry out analadjusting:
-	say "[special-style-2]NOTICE[roman type]: This mechanic is not yet implemented and will have little to no effect at the moment and will remain unannounced will the first adjustments are made.";
-	say "     This option will allow you to adjust your desired level for anal play in the game.  This choice will [bold type]not[roman type] affect all scenes nor will it eliminate/guarantee anal play in many cases.  It will simply be a means of telling specific scenes to provide alternate versions or add/remove portions of involving anal sex and anal play if they have been set to detect it.  Any complaints/whining/requests about it not working for any given scene/creature/NPC are all pointed towards the [special-style-1]24 MB[roman type] (and growing) of existing text this game represents and you will simply have to accept the adjustments when and where they come.  Paid requests to make these adjustments can be taken on, though some restrictions may apply in certain cases.";
+	say "[special-style-2]NOTICE[roman type]: This mechanic has just been implemented and will have little to no effect during most of game play.  Expect to see it come into use gradually and predominantly in newer content.";
+	say "     This option will allow you to adjust your desired level for anal play in the game.  This choice will [bold type]not[roman type] affect all scenes nor will it eliminate/guarantee anal play in many cases.  It will simply be a means of telling specific scenes to provide alternate versions or add/remove portions of involving anal sex and anal play if they have been set to detect it.  Please no complaints/whining/requests about these mechanics not being added to any given scene/creature/NPC.  The game comprises about [special-style-1]24 MB[roman type] (and growing) of existing text and code, so we state that you simply have to accept the adjustments when and where they come.  As a note, [bold type]paid requests[roman type] to make these adjustments can be taken on through the [bold type]Writer for Hire[roman type] project, though some restrictions may apply in certain cases.";
 	say "     With that said, choosing:[line break]";
-	say "- [link](1) Less Anal[as]1[end link] will indicate that you're looking to see less anal sex in your game.  In some cases, it may alternate to another possible scene (such as oral) or simply have you driven off.  This change may be automatic or be induced randomly.  Keep in mind that many NPCs and creatures have sexual preferences of their own and so you could still encounter M/M and anal sex even if this preference is chosen.";
-	say "- [link](2) Normal[as]2[end link] will indicate that you'd like the game's average level of anal sex.  Some scenes with males/herms may result in anal sex, though other forms of anal play will be rare.";
-	say "- [link](3) More Anal[as]1[end link] will indicate that you're open to view anal sex more frequently.  Some scenes may also use this as an indicator to insert additions for other forms of anal play (fingering, rimming, prostate stimulation, etc...) if they exist for the scene.  This may also be used to prompt for anal sex with a female to occur.  Again as stated above, many NPCs and creatures have their own sexual preferences to consider, so the degree of change (if any) that may occur will vary.";
+	say "- [link](1) Less Anal[as]1[end link] will indicate that you're looking to see less anal sex in your game.  In some cases, it may alternate to another possible sex scene (such as oral), a non-sexual scene or simply have you driven off.  This change may be automatic or be induced randomly.  Keep in mind that many NPCs and creatures have sexual preferences of their own and so you could still encounter M/M and anal sex even if this preference is chosen.";
+	say "- [link](2) Normal[as]2[end link] will indicate that you'd like the game's standard level of anal sex.  Some scenes with males/herms may result in anal sex, though other forms of anal play will be rare.";
+	say "- [link](3) More Anal[as]1[end link] will indicate that you're open to view anal sex more frequently.  Some scenes may also use this as an indicator to insert additions for other forms of anal play (fingering, rimming, prostate stimulation, etc...) if they exist for the scene.  You may even encounter the rare instance of anal sex with a female occurring.  Again as stated above, many NPCs and creatures have their own sexual preferences to consider, so the degree of change (if any) that may occur will vary.";
 	say "- [link](4) Exit[as]4[end link]: Leave this menu.  You are currently set as [bold type][if anallevel is 1]Less Anal[otherwise if anallevel is 2]Normal[otherwise]More Anal[end if][roman type].";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
@@ -1228,7 +1234,7 @@ carry out analadjusting:
 		say "You are now set to receive Less Anal.";
 		now anallevel is 1;
 		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
-		add "Less Anal" to feats of player;
+		if "Less Anal" is not listed in feats of player, add "Less Anal" to feats of player;
 	otherwise if calcnumber is 2:
 		say "You are now set to receive the standard amount of anal sex.";
 		now anallevel is 2;
@@ -1238,7 +1244,7 @@ carry out analadjusting:
 		say "You are now set to receive More Anal.";
 		now anallevel is 3;
 		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
-		add "More Anal" to feats of player;
+		if "More Anal" is not listed in feats of player, add "More Anal" to feats of player;
 	otherwise if calcnumber is 4:
 		say "Exiting menu.";
 		say "[line break]";
