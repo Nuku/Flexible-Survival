@@ -19,7 +19,7 @@ to say losetogoblin:
 
 to say beatthegoblin:
 	now goblinfight is 1;
-	say "     Driving back the little goblin with your blow, you advance to finish him off.  He scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounts of junk.  Even if you could squeeze through there, you don't feel it would be worth it to try and decide to let him go.";
+	say "     Driving back the little goblin with your blow, you advance to finish him off.  He scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounds of junk.  Even if you could squeeze through there, you don't feel it would be worth it to try and decide to let him go.";
 
 
 to say goblindesc:
