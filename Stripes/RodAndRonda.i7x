@@ -3,7 +3,7 @@ Version 1 of RodAndRonda by Stripes begins here.
 
 Section 1 - Rod
 
-Rod Mallrat is a person. "[if hp of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the broken sewer drain[at random][otherwise]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
+Rod Mallrat is a person. "[if hp of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the guarded bathroom area[at random][otherwise]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
 The description of rod mallrat is "[roddesc]".
 Rod is a trader.
 Rod Mallrat is in Mall FoodCourt.
