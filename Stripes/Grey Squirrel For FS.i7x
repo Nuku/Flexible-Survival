@@ -1,4 +1,5 @@
 Version 1 of Grey Squirrel For FS by Stripes begins here.
+[Version 1.1 - Endings added]
 
 "Adds a Grey Squirrel infection for use with Macadamia."
 
@@ -78,21 +79,26 @@ When Play begins:
 
 Section 3 - Endings
 
-[to be added later]
-[
 when play ends:
 	if bodyname of player is "Grey Squirrel":
 		if humanity of player is less than 10:
-			say "     You succumb to your template infection.";
+			if hp of Macadamia >= 13:
+				say "     As your humanity slips away and your squirrel nature takes over, you are drawn to rejoin Mack at the bunker and hole up with him there, turning it into a fortified squirrel den for the both of you.  His plans come together as he brings in more and more of his nuts for safe storage, as well as a few other luxury items, including a large jacuzzi, which gets filled with nuts.  Either there was much more than he'd let on at the factory or he's stored a lot more from elsewhere in the city.  Either way, you're pleased with your mate's impressive nuts and are more than happy to show him just how you are by letting him fill you again and again with his hot nut butter.  In this special love nest, you and he snuggle and fuck merrily, the squirrel topping you repeatedly on his mounds of nuts, in the nut jacuzzi and anywhere else he'd like to take you.";
+				if cunts of player > 0:
+					say "     As his sexy doe, he pumps you full of his nut butter until you're plump and full with his kits.  You are bred repeatedly by the virile squirrel, birthing several litters over the course of the winter.  When spring comes, these horny squirrels, bucks and does alike, flood out into the city and beyond, breeding and infecting others en mass.  You, now fully Hazel, and Macadamia stay in your love nest, continuing to breed and add to this new horde of energetic and lustful rodents.";
+				otherwise if "MPreg" is listed in feats of player:
+					say "     As his sexy [if cocks of player > 0]male [end if]doe, he pumps you full of his nut butter until you're plump and full with his kits.  Despite being [if cocks of player > 0]male[otherwise]neuter[end if] yourself, you can still become pregnant and so you are bred repeatedly by the virile squirrel, birthing several litters over the course of the winter.  When spring comes, these well-hung horny bucks flood out into the city and beyond, breeding and infecting others en mass.  You, now fully Hazelnut, and Macadamia stay in your love nest, continuing to breed and add to this new horde of energetic and lustful rodents.";
+				otherwise:
+					say "     As his sexy male doe, he pumps you full of his hot seed over and over again.  Your sexy body never stops turning him on and your virile mate is always ready for another go.  You both spend a long and enjoyable winter together with the squirrel atop you almost constantly fucking you.";
+			otherwise:
+				say "     As your humanity slips away and your squirrel nature takes over, you are drawn to the city park.  You live there, snacking on the nuts and fucking those you come across.  You catch a mate for yourself when the soldiers come through the city, dropping from the trees onto the lone, scared [if cunts of player > 0 or cocks of player is 0]guy as he's running through the woods[otherwise]girl as she's running through the woods[end if].  Soon enough, you've got another sexy squirrel companion to snuggle and fuck.";
 		otherwise:
-			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
-				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
-				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";
-]
+			if hp of Macadamia >= 13:
+				say "     As the time for rescue draws near, you try your best to convince Mack to come with you.  Finally, your sexy body wins out over the squirrel's hoard of nuts.  He's very disappointed to have to leave most of it behind, only able to take a few jars of his specially prepared nuts with him in his pack.  He gives you a grin and a wink, munching on some of them while the soldiers work to evacuate you before offering some to the soldiers.  Thinking nothing of it, they snack on a few as well, finding them very tasty.  Later, at the base, you spot signs of them starting to get a little squirrelly and grin.  And soon enough, Mack's working on turning them into sexy does eager for another taste of the squirrel's nut butter.";
+				say "     Having nothing more than a common squirrel infection, you are processed fairly quickly and eventually you and Mack are released, now with a pack of ex-soldier does in tow.  You all take over a large peanut plantation, setting up a small roasting operation using Mack's special nut butter as their seasoning and distributing them.  He breeds his harem of does, siring many more sexy, horny squirrels, who spread out and take over other plantations, adding to your mate's growing business empire[if cunts of player > 0].  You, as his first and favourite mate, are his special doe and bred often.  The squirrel still loves to call you Hazel affectionately[otherwise if cocks of player > 0].  You, as his first and favourite mate, are his special male doe and mounted often.  The squirrel still loves to call you Hazelnut affectionately[otherwise].  You, as his first and favourite mate, are his special doe and mounted often.  Despite your own lack of gender, you are always eager to let Macadamia fuck you and fill you with his nut butter, and he still loves to call you Hazelnut affectionately[end if][if cocks of player > 0].  Mack is also not a jealous lover, more than willing to share his does with you and let you mount and breed them, often while he watches or fucks you or another of the girls himself[end if].";
+			otherwise:
+				say "     After being rescued by the soldiers, you're processed fairly quickly because of your common squirrel infection.  Upon your eventual release, you find some work at a nut processing plant.  Your affinity for nuts makes you a good employee, having a knack for spotting bad nuts and helping to improve the seasoning mixes[if cocks of player > 0 or cunts of player > 0].  Not that you tell anyone about that last part, instead slipping your own sexual fluids into the mix to add a little something special to them[otherwise] by coming up with new combinations and improvements the company can make[end if].  The popularity of the company's product goes up and those people who start to show signs of going squirrelly from the product are simply put down to having picked up the infection from somewhere.";
+
 
 [ Edit this to have the correct creature name as well]
 Grey Squirrel For FS ends here.
