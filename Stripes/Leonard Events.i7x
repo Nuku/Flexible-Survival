@@ -1,8 +1,8 @@
 Version 1 of Leonard Events by Stripes begins here.
-[version 1 - Basic set-up]
+[version 1.1 - Fourth random option]
 
 "Adds a batch of random encounters with Leonard's Pride to Flexible Survival scattered around the city."
-[Note: These will only be accessible after completing Leonard's Qeust.]
+[Note: These will only be accessible after completing Leonard's Quest.]
 
 Section 1 - Park
 
@@ -26,8 +26,8 @@ Instead of resolving PridePark:
 		if entry 1 of leoparklist is 8, say "[leoparkscene8]";
 	otherwise:		[randomized situations]	]
 	if 1 is 1:
-		let t be a random number between 1 and 4;
-		if T is 1:
+		let t be a random number between 1 and 5;
+		if T is 1:					[treed kitty]
 			say "     As you're travelling along, you hear the plaintive yowl of a feline and come to a stop.  Hearing it again, you head quickly in that direction[one of], drawn to it by your matronly urges[or], somehow sensing it to be a member of your pride[or], fearing it to be one of your precious pride kitties[purely at random][one of].  Following a short path,[or].  Pushing through the undergrowth,[or].  Running through the woods,[or].  Going around some flowering bushes,[or].  Heading down a short incline,[or].  Leaping a fallen tree,[in random order] you reach a small clearing where one of the feline girls has gotten herself caught in a tree, having fled from a creature.  Spotting you, she [one of]cries out 'Matron!' cheerfully, happy to see you here to rescue her[or]yowls again and clutches the tree even tighter[or]scrambles a little higher and yowls for your help[at random].  Having drawn the creature's attention to you, you prepare to [one of]fight[or]defend your smaller pride sister[or]at least buy her enough time to get away[or]protect your pride member[in random order].";
 			fight;
 			if fightoutcome >= 10 and fightoutcome <= 19:
@@ -48,7 +48,7 @@ Instead of resolving PridePark:
 				say "     As you recover from the fight, you look around to see that the feline girl was at least able to get away during the struggle.";
 			otherwise if fightoutcome >= 30:
 				say "     Taking a moment to make sure that the feline girl has safely come down the tree and is ready to get away, you make a break for it in the other direction, keeping your opponent's attention on you long enough for her to escape.";
-		otherwise if T is 2 or T is 3:
+		otherwise if T is 2 or T is 3:	[wandering kitty]
 			say "     As you walk through the park, you run into another of the cute Feline girls running around.  It takes you but a moment to recognize her as [one of]one of Leonard's pride[or]one of your smaller pride sisters[or]a member of your pride[or]a member of the pride[purely at random], [one of]remembering her from the battle[or]recognizing her from the recital[or]having seen her in the den before[or]catching Leonard's scent upon her[purely at random].  You kneel down and open your arms wide for her, welcoming her with a hug and a kiss.  She snuggles up to you and is soon nuzzling at your chest";
 			if player is felinebodied:
 				say " and wrapping her lips around your nipple.  She starts nursing, purring happily as she does while you rumble to her [one of]about what an good and loyal kitty she is[or]about what a pretty kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes].  You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for another session with Leonard.  After she's been fed and her bond with the pride has been renewed, you release her back in the park with a reminder that Leonard would welcome another visit from her soon.";
@@ -60,7 +60,7 @@ Instead of resolving PridePark:
 				felinebodyshift;
 				increase libido of player by 2;
 				decrease humanity of player by 2;
-		otherwise if T is 4:
+		otherwise if T is 4:			[injured kitty]
 			say "     As you travel through the park, you come across another of the cute Feline girls.  She's been hurt and is nursing an injured [one of]footpaw[or]side[or]head[or]shoulder[or]arm[or]leg[purely at random].  It takes you but a moment to recognize her as [one of]one of Leonard's pride[or]one of your smaller pride sisters[or]a member of your pride[or]a member of the pride[purely at random], [one of]remembering her from the battle[or]recalling her helping with the recital[or]having seen her in the den before[or]catching Leonard's scent upon her[purely at random].  She mewls plaintively as you approach, smiling softly at the sight of her matron coming to her aid.";
 			if medkit is owned or healing booster is owned:
 				if medkit is owned:
@@ -114,10 +114,28 @@ Instead of resolving PridePark:
 				attempttowait;
 				move player to Lion's Den;
 				now battleground is "void";
-		otherwise if T is 5:
-			say "***Coming soon. - work group on patrol";
+		otherwise if T is 5:			[workgroup on patrol]
+			say "     While [one of]walking along the path[or]searching through the woods[or]pausing at a children's play area[or]pushing through the underbrush[purely at random], you're met by your work group as they're out on a patrol[one of][or], keeping an eye out for troublemakers[or], helping to protect the other girls in the pride[or], dealing with stray felines from the broken prides[or] between errands for Leonard[as decreasingly likely outcomes].  [one of]Pleased to see their matron[or]Happy to see you[or]Mewling happily[purely at random], the four of them come up to you and snuggle you tightly.  Much kissing and groping ensues between you all as [one of]you snuggle with the friendly felines[or]you let your pride favourites nurse from you[or]you pet the lovely kitties[or]the lovely kitties pile atop their dear matron[purely at random]";
+			if cocks of player > 0:
+				if a random chance of 1 in 3 succeeds:
+					say ".  After they fondle your [cock of player] cock to erection, you pull Raven, the dark-haired girl, into your lap and fuck her while she nurses.  You purr lovingly to her, telling her how pleased you are with her for watching out for your other special girls.  Not neglecting them, you make sure to give plenty of attention to the other girls as well";
+				otherwise:
+					say ".  Fondling your [cock of player] cock to erection, they take turns licking it before playing [randomgame] to decide who gets to [one of]ride[or]suck[or]play with[as decreasingly likely outcomes] it[end if].  Regardless of the winner, you make sure to give them all plenty of attention, especially clever Raven, the black-haired one, who's been leading the group in your stead";
+			if cunts of player > 0:
+				say ".  Your pussy gets fingered and licked by the loving girls while you to the same to a pair of them.  It's a delight for you to hear their mewls of pleasure as you get them off and they help the other two get off as well.";
+			otherwise:
+				say ".  You finger one of the girls with each hand, pumping fingers into their juicy cunts until they come.  It's a delight for you to hear their mewls of pleasure as you get them off and they help the other two get off as well.";
+			say "     Once your fun is all done, you give them parting kisses and hugs, letting them get back to their duties.  Your encouter with them has lifted your spirits and makes you feel closer to your pride.";
+			felinebodyshift;
+			infect "Feline";
+			decrease humanity of player by 3;
+			increase morale of player by 1;
+			if morale of player < 0, increase morale of player by 2;
+	if libido of player > 100, now libido of player is 100;
 
-[		- kitty thirsty/hungry (nurse + food/water)	- areas outside the park]
+
+to say randomgame:
+	say "[one of]rock-paper-scissors[or]choosies[or]eeny-meeny-miny-moe[or]roshambo[as decreasingly likely outcomes]";
 
 
 Part 1 - Special Park Pride 1 - Leonard out for a Walk
