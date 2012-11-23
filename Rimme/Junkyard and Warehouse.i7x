@@ -1,5 +1,5 @@
 Version 2 of Junkyard and Warehouse by Rimme begins here.
-[Version 2 - Updated Junkyard (Stripes) and Horsey-Steven sex (Shadowwolf94)]
+[Version 2.1 - Additional Horsey-Steven sex (Subs only)]
 
 Chapter 1 - Abandoned Lot into Storage Room
 
@@ -349,13 +349,12 @@ To stevenjunkfuck:
 			now monster is y;
 			break;
 	if laststevenfuck - turns is less than 6:
-		say "You start to cuddle up against him, but the flame just isn't lighting for him. Perhaps you should try again later.";
-		stop the action;
+		say "You start to cuddle up against him, but the flame just isn't lighting for him.  Perhaps you should try again later.";
 	otherwise:
-		say "You slide over and cuddle up against Steven, pulling you both down to the ground. You nuzzling at his chest as you slide your hand down to his crotch, taking hold of his flaccid equine shaft. He groans and shivers a little as you begin to gently stroking it";
+		say "     You slide over and cuddle up against Steven, pulling you both down to the ground.  You nuzzling at his chest as you slide your hand down to his crotch, taking hold of his flaccid equine shaft.  He groans and shivers a little as you begin to gently stroking it";
 		if cocks of player > 0:
 			if cunts of player > 0:
-				say ".  While the equine man relaxes and enjoys the attention you[']re giving his shaft, you ponder over how best to please him. Being a herm, you could easily climb up on top of him and ride him, or you could give my a some [']oral['] attention.(Y=Ride, N=Suck)";
+				say ".   While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  Being a herm, you could easily climb up on top of him and ride him, or you could give my a some [']oral['] attention.  (Y=Ride, N=Suck) ";
 				if the player consents:
 					say "[stevenride]";
 				otherwise:
@@ -368,17 +367,27 @@ To stevenjunkfuck:
 				say ".  Licking your lips and staring down at his large rod, you feel a red hot need growing between your legs and you get yourself ready to ride his thick shaft.";
 				say "[stevenride]";
 			otherwise:
-				say ".  Frowning a bit, you realize you don't have any male or female equipment. A little discouraged, you[']re about to stop when you realize you still have one thing you could use to get this sexy horse off. You lick your lips and take a deep breath, getting your jaw nice and loose for his sexy equine length.";
+				say ".  Frowning a bit, you realize you don't have any male or female equipment.  A little discouraged, you[']re about to stop when you realize you still have one thing you could use to get this sexy horse off.  You lick your lips and take a deep breath, getting your jaw nice and loose for his sexy equine length.";
 				say "[stevensuck]";
 		infect "red horse";
 		infect "red horse";
 		now laststevenfuck is turns;
 
 to say stevenride:
-	say "After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.[line break]You take a breath and push back, sliding his shaft into you. You groan and begin to ride him, taking it slow at first but soon picking up speed. Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine cock flaring up as he climaxes, flooding your womb with his fertile cum. This pushes you over the edge into your own orgasm, your cunt spasming around his thick shaft, milking it for his cum.[line break]Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you. You stretch out and slide up of his shaft, his cum flooding out of you. You grin and lean down, giving him a kiss before you go and clean yourself up.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.[line break][impregchance]";
+	say "     After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.";
+	say "     You take a breath and push back, sliding his shaft into you.  You groan and begin to ride him, taking it slow at first but soon picking up speed.  Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine cock flaring up as he climaxes, flooding your womb with his fertile cum.  This pushes you over the edge into your own orgasm, your cunt spasming around his thick shaft, milking it for his cum.";
+	say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you.  You stretch out and slide up of his shaft, his cum flooding out of you.  You grin and lean down, giving him a kiss before you go and clean yourself up.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.[impregchance]";
 
 to say stevensuck:
-	say "After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. Leaning further forward, you slip the tip into your mouth, gently sucking on it. Groaning, you feel Steven placing his hand on your head, pushing you further down on his shaft, the thick length filling up your mouth. You gulp around the length, stroking the base of it as you begin bobbing your mouth up and down.[line break]Your mouth is took much for the poor equine man to take and you feel the head of his cock flare up as he climaxes, pumping his thick cum down your throat. You gulp down as much as you can, but much of it squirts out around his shaft. When he finally empties his balls you slip his length out of your mouth and take a long needed breath. Panting hard you lick your lips and get about cleaning yourself off, but not before you move up and give Steven a good long kiss.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.";
+	say "     After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  Leaning further forward, you slip the tip into your mouth, gently sucking on it.  Groaning, you feel Steven placing his hand on your head, pushing you further down on his shaft, the thick length filling up your mouth.  You gulp around the length, stroking the base of it as you begin bobbing your mouth up and down.";
+	say "     Your mouth is took much for the poor equine man to take and you feel the head of his cock flare up as he climaxes, pumping his thick cum down your throat.  You gulp down as much as you can, but much of it squirts out around his shaft.  When he finally empties his balls you slip his length out of your mouth and take a long needed breath.  Panting hard you lick your lips and get about cleaning yourself off, but not before you move up and give Steven a good long kiss.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.";
+	if "Submissive" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		say "     Steven smiles down at you and strokes your head.  'Mmm... I can tell what you're really after,' he nickers before moving around behind you.  He pushes you forward onto all fours and runs his hands over your [bodydesc of player] body.  'You're really wanting the big stallion to mount you, aren't you?' he says.  He runs his hand between your legs to tease your [if cunts of player > 0]pussy[otherwise]pucker[end if] while grinding his cock against your backside, leaking the last few dribbles of his previous load onto your ass.  'How about I take you like a mare, huh?' he asks, rubbing a pair of fingers over into your needy hole.  Your submissive urges, already fired up from sucking off the virile male, have you moaning beneath him for him to mount you, bringing a smile to his equine face.";
+		say "     The strong horse guides his throbbing cock against your [if cunts of player > 0]pussy before thrusting into your wet hole[otherwise]pucker before thrusting into your tight hole[end if].  Climbing atop you, he nickers in pleasure as he fucks you, fucking you energetically despite having just gotten off[if breast size of player > 0].  He moves a hand to your [breast size desc of player] breasts, tweaking your nipples while he rides you[otherwise].  He rubs one hand over your flat chest[end if].";
+		if cocks of player > 0 and cunts of player is 0:		[male sub bonus scene]
+			say "     His hand moves lower, wrapping around your cock and stroking it as he fucks you.  'What a strange mare you are with a leaking cock like this.  You're a sexy mare though, aren't you?  Or maybe I'm wrong and I should stop fucking you,' he says, slowing his thrusts and moving to withdraw from you.  You release a soft whinny of need and push back onto his rod, replying that you want to be his sexy mare and that you need him to fill you.  At your words, he thrusts back into you hard and resumes fucking you, still stroking your dribbling erection.";
+		say "     Having already fucked you a few minutes ago, the stallion has more endurance this time, making for a nice, long fuck that has you moaning and whinnying beneath him.  He nuzzles at your neck and nips at it with his flat teeth as you both get hot and sweaty from the mating.  Finally his excitement boils over and he thrusts hard into you one last time, blasting his hot load deep inside you.  His loud, while not as big as the last, it still quite impressive and gives your [if cunts of player > 0]womb[otherwise]lower belly[end if] a wonderfully full feeling.  After withdrawing, he wipes his spent shaft across your rear and snuggles you in his arms.[impregchance]";
+
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -446,6 +455,7 @@ North of Junkyard Entrance is Junkyard Gate.
 
 The marea of Junkyard Gate is "Junkyard".
 
+
 Section 2 - Junkyard Digups
 
 Junkyard digups is a situation. The printed name of Junkyard digups is "a pile of garbage".
@@ -465,6 +475,7 @@ Instead of resolving junkyard digups:
 	otherwise:
 		say "Alas, you do not find anything in this pile. You should try again.";
 	if jdigup is 3, now junkyard digups is resolved;
+
 
 Section 3 - Steven's home
 
@@ -487,6 +498,7 @@ Instead of resolving a junkyard home:
 		move the player to Steven's home;
 		now Steven's home is known;
 		now junkyard home is resolved.
+
 
 Section 4 - Finding a tool
 
@@ -526,6 +538,7 @@ Instead of resolving an unused tool:
 		say "Yay! You found an iron pipe!";
 		increment carried of iron pipe;
 	now an unused tool is resolved;
+
 
 Section 5 - Find a random infected object
 
