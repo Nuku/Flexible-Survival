@@ -121,8 +121,13 @@ Instead of resolving PridePark:
 					say ".  After they fondle your [cock of player] cock to erection, you pull Raven, the dark-haired girl, into your lap and fuck her while she nurses.  You purr lovingly to her, telling her how pleased you are with her for watching out for your other special girls.  Not neglecting them, you make sure to give plenty of attention to the other girls as well";
 				otherwise:
 					say ".  Fondling your [cock of player] cock to erection, they take turns licking it before playing [randomgame] to decide who gets to [one of]ride[or]suck[or]play with[as decreasingly likely outcomes] it[end if].  Regardless of the winner, you make sure to give them all plenty of attention, especially clever Raven, the black-haired one, who's been leading the group in your stead";
+			otherwise:
+				if a random chance of 1 in 3 succeeds:
+					say ".  You push Raven, the black-haired girl, onto her back and bury your face between her legs.  You lick and lap at her pussy, making her moan and mewl in ecstasy.  Wanting to thank her for [one of]keeping an eye on your favourite girls[or]leading the small band in your stead[or]taking care of your personal favourites[or]helping out with your personal girls[purely at random], you [one of]fellate her[or]eat her out[or]lick her pussy[purely at random] until she cums repeatedly";
+				otherwise:
+					say ".  You push one of the girls onto her back and bury your face between her legs.  You lick and lap at her pussy, making her moan and mewl in ecstacy.  You lavish attention upon the lucky girl, [one of]fellating her[or]eating her out[or]licking her pussy[purely at random] until she cums repeatedly";
 			if cunts of player > 0:
-				say ".  Your pussy gets fingered and licked by the loving girls while you to the same to a pair of them.  It's a delight for you to hear their mewls of pleasure as you get them off and they help the other two get off as well.";
+				say ".  Your pussy gets fingered and licked by the loving girls while you finger a pair of them in return.  It's a delight for you to hear their mewls of pleasure as you get them off and they help the other two get off as well.";
 			otherwise:
 				say ".  You finger one of the girls with each hand, pumping fingers into their juicy cunts until they come.  It's a delight for you to hear their mewls of pleasure as you get them off and they help the other two get off as well.";
 			say "     Once your fun is all done, you give them parting kisses and hugs, letting them get back to their duties.  Your encouter with them has lifted your spirits and makes you feel closer to your pride.";
