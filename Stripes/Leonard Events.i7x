@@ -120,7 +120,7 @@ Instead of resolving PridePark:
 				if a random chance of 1 in 3 succeeds:
 					say ".  After they fondle your [cock of player] cock to erection, you pull Raven, the dark-haired girl, into your lap and fuck her while she nurses.  You purr lovingly to her, telling her how pleased you are with her for watching out for your other special girls.  Not neglecting them, you make sure to give plenty of attention to the other girls as well";
 				otherwise:
-					say ".  Fondling your [cock of player] cock to erection, they take turns licking it before playing [randomgame] to decide who gets to [one of]ride[or]suck[or]play with[as decreasingly likely outcomes] it[end if].  Regardless of the winner, you make sure to give them all plenty of attention, especially clever Raven, the black-haired one, who's been leading the group in your stead";
+					say ".  Fondling your [cock of player] cock to erection, they take turns licking it before playing [randomgame] to decide who gets to [one of]ride[or]suck[or]play with[as decreasingly likely outcomes] it.  Regardless of the winner, you make sure to give them all plenty of attention, especially clever Raven, the black-haired one, who's been leading the group in your stead";
 			if cunts of player > 0:
 				say ".  Your pussy gets fingered and licked by the loving girls while you to the same to a pair of them.  It's a delight for you to hear their mewls of pleasure as you get them off and they help the other two get off as well.";
 			otherwise:
