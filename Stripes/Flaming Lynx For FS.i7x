@@ -84,7 +84,7 @@ to say beattheflaminglynx:
 		say "     Beaten, the fiery feline's flames die down, going low as the lynx mewls in pain.  He turns around and raises his hindquarters and flags his short tail, exposing his rump and tight tailhole to you, submitting to the victor.  He releases a soft mewl, this time with more longing to it as a ripple of rainbow-coloured flames run across his body as he lowers his forequarters to further display his waiting hole.  You find yourself momentarily considering taking this strange feline up on his offer";
 		if cunts of player > 0:
 			say ".  Would you like to [link]mount the flaming cat(1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], relieve your [link]female needs (3)[as]3[end link] with the vibrant kitty or [link]let him go (0)[as]0[end link]?";
-			now calcnumber is 0;
+			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
 				say "Choice? (0-3)>[run paragraph on]";
 				get a number;
@@ -98,7 +98,7 @@ to say beattheflaminglynx:
 				now lynxfun is 3;
 		otherwise:
 			say ".  Would you like to [link]mount the flaming cat(1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link] or [link]let him go (0)[as]0[end link]?";
-			now calcnumber is 0;
+			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
 				say "Choice? (0-3)>[run paragraph on]";
 				get a number;
