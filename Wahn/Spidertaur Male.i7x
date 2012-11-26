@@ -7,7 +7,7 @@ Version 1 of Spidertaur Male by Wahn begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add { "Spidertaur Male" } to infections of guy;
+	add { "Spidertaur" } to infections of guy;
 
 to say Spidertaur_Wins:
 	say "     As you fall to the ground beaten, the spidertaur pins you to the ground with his legs and quickly binds you down with strands of tough spidersilk. With you now helpless on your back, he stands over you as if to show off his half-arachnid body, a hungry smile on his face. You see chitinous plates between his legs bulge outward a bit, then get pulled aside as his manhood rises to full hardness.";		
@@ -49,7 +49,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Spidertaur Male";
+	now name entry is "Spidertaur";
 	now attack entry is "[one of]Sweeping one of his front legs, he leaves a long slash in your flesh with the underarm-length claw at the end of it.[or]He crawls up the nearest wall, then drops down on you, claws poised to skewer you.[or]He leaps to one side and turns his abdomen to face you, and sticky strands spray over your form![or]He suddenly charges and knocks you down with the weight of his body, then stands over you and sprays webbing over your prone form![at random]";
 	now defeated entry is "[Spidertaur_Loses]";
 	now victory entry is "[Spidertaur_Wins]";
@@ -98,7 +98,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "Spidertaur Male":
+	if bodyname of player is "Spidertaur":
 		if humanity of player is less than 10:
 			say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Females and some choicy males you keep to impregnate and have some fun with, the rest just serve as stored food for when you get hungry.";
 		otherwise:
@@ -117,6 +117,6 @@ the usedesc of spidertaur hair is "[spidertaur hair use]";
 to say spidertaur hair use:
 	say "Play a bit with the hair, twirling it around your finger. After a while, it suddenly desintegrates into a fine powder which just seems to melt into your skin...";
 	
-spidertaur hair is infectious. The strain of spidertaur hair is "Spidertaur Male".
+spidertaur hair is infectious. The strain of spidertaur hair is "Spidertaur".
 
 Spidertaur Male ends here.
