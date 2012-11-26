@@ -22,6 +22,7 @@ when play begins:
 	add { "Template" } to infections of Felinelist;		[list of feline infections]
 	add { "Template" } to infections of Caninelist;		[list of canine infections]
 	add { "Template" } to infections of Reptilelist;	[list of reptile infections]
+	add { "Template" } to infections of Taurlist;		[list of tauric infections]
 
 [Sample loss and victory text templates.]
 [Numerous other variations can be found in existing creature files.]
