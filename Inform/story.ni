@@ -1137,14 +1137,31 @@ Caninelist is a marker.	[list of canine/lupine infections]
 when play begins:
 	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Female Husky", "Feral Wolf", "German Shepherd", "jackalboy", "jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
 
+Equinelist is a marker.	[list of equine infections]
+when play begins:
+	add { "black equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Stallionboi", "Unicorn", "Zebra" } to infections of Equinelist;
+
+Vulpinelist is a marker.	[list of vulpine infections]
+when play begins:
+	add { "Clockwork Fox", "hermaphrodite latex vixen", "Latex Fox", "Vixen Nurse", "Arctic fox", "Vulpogryph" } to infections of Vulpinelist;
+
 Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
 	add { "Ash Dragator", "Ash Drakenoid", "Ash Whelp", "feral sea dragon", "feral sea dragoness", "lizard girl", "sewer gator", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness", "Slutty Dragoness", "Horny Dragon", "Dragon", "Dragoness", "Naga", "Snake", "Reptaur" } to infections of Reptilelist;
 
+Insectlist is a marker.	[list of insectile/arachnid/bug infections]
+when play begins:
+	add { "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl", "Spidertaur" } to infections of Insectlist;
+
+Plantlist is a marker.	[list of plant infections]
+when play begins:
+	add { "Awesome tree", "Tree Nymph", "Parasitic Plant", "Mushroom Men" } to infections of Plantlist;
+
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
 	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
-[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional.]
+[Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional.  It also does not include the spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
+
 
 Part 2 - Rules
 
