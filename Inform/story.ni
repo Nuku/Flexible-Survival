@@ -302,6 +302,7 @@ A person can be booked. A person can be bunkered. A person is usually not booked
 
 Definition: A person(Called X) is booked:
 	If x is the player, no;
+	If x is Trixie, no;
 	if the location of x is Grey Abbey Library, yes;
 	no;
 
@@ -5261,6 +5262,7 @@ Include Latex Wolf for FS by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.
 Include Rabbit Pack for FS by Lago Moro.
+Include Fennec For Fs by Stripes.
 Include Jaguar Orderly For Fs by Stripes.
 Include Mismatched Chimera For Fs by Stripes.
 Include Naughty Nurse by Stripes.
@@ -5272,6 +5274,7 @@ Include Flaming Lynx for FS by Stripes.
 Include Reindeer by Stripes.
 Include Snow Leopard for FS by Stripes.
 Include Grey Squirrel for FS by Stripes.
+Include Dragontaur for FS by Stripes.
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.
