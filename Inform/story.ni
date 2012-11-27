@@ -5274,7 +5274,7 @@ Include Flaming Lynx for FS by Stripes.
 Include Reindeer by Stripes.
 Include Snow Leopard for FS by Stripes.
 Include Grey Squirrel for FS by Stripes.
-Include Dragontaur for FS by Stripes.
+[Include Dragontaur for FS by Stripes.]
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.
