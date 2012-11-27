@@ -1119,8 +1119,8 @@ Hellspawn is a flag.
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
 	add { "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Female Husky", "Latex Fox", "black equinoid", "Ashen Breeder", "lizard girl", "Skunk", "Shemale Smooth Collie", "Felinoid", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "sewer gator", "doe", "sea otter", "Ash Drakenoid", "red kangaroo", "feral sea dragon", "German Shepherd", "Cute Chinchilla Woman", "feral sea dragoness"  } to infections of furry;
-	add { "Naga", "Latex Fox", "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Ash Drakenoid", "feral sea dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
-	add { "Ashen Breeder", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "Mothgirl" } to infections of hermaphrodite;
+	add { "Naga", "Latex Fox", "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "feral sea dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
+	add { "Ashen Breeder", "Ash Drakenoid", "Slut Rat", "Panther Taur", "Hermaphrodite Gryphon", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "sewer gator", "doe", "black equinoid", "spidergirl", "Cute Chinchilla Woman", "Mothgirl" } to infections of hermaphrodite;
 	add { "Drone Wasp", "Goo Girl", "Female Husky", "lizard girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "spidergirl", "Mothgirl", "red kangaroo", "city sprite", "Pit bull", "feral sea dragoness", "Bovine", "Wyvern" } to infections of girl;
 
 [corollary]
@@ -2933,7 +2933,7 @@ To Infect:
 		now x is 6;	[33% chance of no mutation]
 		if x is 6:
 			say "Your nanites['] programmed resistance to change prevents further mutation.";
-			stop the action;
+			continue the action;
 	if "Microwaved" is listed in feats of player:
 		say "WARNING: [name entry] nanites detected!";
 		if x is 1:
@@ -5274,7 +5274,7 @@ Include Flaming Lynx for FS by Stripes.
 Include Reindeer by Stripes.
 Include Snow Leopard for FS by Stripes.
 Include Grey Squirrel for FS by Stripes.
-[Include Dragontaur for FS by Stripes.]
+Include Dragontaur for FS by Stripes.
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.
