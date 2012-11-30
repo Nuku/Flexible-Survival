@@ -437,6 +437,7 @@ Carry out reciting:
 			-- 74:	[Fang + Sandra]
 				if the player's command matches "[number]":
 					now libido of Fang is the number understood;
+					if libido of Fang is 2 and ( hp of Fang is 1 or hp of Fang is 2 ), now libido of Fang is 1;
 			-- 75:	[Philip]
 				if the player's command matches "[number]":
 					now pigfed is the number understood;
