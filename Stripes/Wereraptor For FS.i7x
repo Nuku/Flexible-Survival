@@ -1,5 +1,5 @@
-Version 2 of Wereraptor For FS by Stripes begins here.
-[Version 2 - Wereraptor Rampage + Wereraptor Sex]
+Version 3 of Wereraptor For FS by Stripes begins here.
+[Version 3 - Ending the curse]
 "Adds a special wereraptor creature/curse to Flexible Survival's Wandering Monsters table"
 
 Section 0 - Event Activation
@@ -9,6 +9,8 @@ The sarea of Paleontology Professor is "Campus";
 
 when play begins:
 	add Paleontology Professor to badspots of furry;
+
+utahmet is a truth state that varies.  utahmet is usually false.
 
 Instead of resolving a Paleontology Professor:
 	if guy is banned and girl is banned:
@@ -20,10 +22,11 @@ Instead of resolving a Paleontology Professor:
 			say "     You check the door and find it locked, but a [if girl is banned]man's[otherwise]woman's[end if] voice responds to your presence.  'Is someone there?  Help!  Can you help me get out?  My name is Dr. Utah and I locked myself in here when the changes started, but I can't get out now.  If you can still understand me, please help me,' [if girl is banned]he[otherwise]she[end if] pleads.  Shall you free [if girl is banned]him[otherwise]her[end if]?";
 			if the player consents:
 				say "     You try pushing at the heavy wooden door, but it seems quite stuck.  You bash your body against it a few times, feeling it start to give.  You keep at it, always worried that some creature will hear you and arrive, but manage to break down the door, cracking and snapping the wood away from the numerous nails pounded into the frame from the inside.  You land in the arms of a middle-aged [if girl is banned]man[otherwise]woman[end if].";
-				say "     The office is a mess and [if girl is banned]his[otherwise]her[end if] clothes are horribly torn, but [if girl is banned]he[otherwise]she[end if] seem quite human.  It seems [if girl is banned]he[otherwise]she[end if] was lucky enough to make it to safety before anything could infect [if girl is banned]him[otherwise]her[end if].  Their office also seems largely destroyed, with strange slashes on the walls and the door and most of the furniture overturned or completely broken.  Noticing your gaze, [if girl is banned]he[otherwise]she[end if] wring [if girl is banned]his[otherwise]her[end if] hands nervously.";
+				say "     The office is a mess and [if girl is banned]his[otherwise]her[end if] clothes are horribly torn, but [if girl is banned]he[otherwise]she[end if] seem quite human.  It seems [if girl is banned]he[otherwise]she[end if] was lucky enough to make it to safety before anything could infect [if girl is banned]him[otherwise]her[end if].  Their office also seems largely destroyed, with strange slashes on the walls and the door and most of the furniture overturned or completely broken.  Among the wreckage, there's a shattered display case with a large bone lying among the shards.  Noticing your gaze, [if girl is banned]he[otherwise]she[end if] wring [if girl is banned]his[otherwise]her[end if] hands nervously.";
 				say "     'I... it was so crazy.  Out there, I mean.  I nailed my door shut.  When things calmed down later, I couldn't get out.  I started to go stir crazy and threw around the furniture and beat at the walls trying to get someone to hear me.  I'd almost completely given up hope by the time you came by.  Thank you again for saving me.  I don't know how much longer I would have been able to hold out.  I had hoped someone would come to rescue us much sooner, but I'm guessing this is a much more widespread problem than just something on campus.  I know none of my fellow professors here were working on anything even remotely like this... outbreak.'";
 				say "     [if girl is banned]He rubs to scratch a scar on his side[otherwise]She rubs a scar on her side[end if] and starts moving outside the room.  'Look... as good as it is to talk to someone again, I really need to get out of this room after being cooped up in here.  I'm sure we'll catch up again soon,' [if girl is banned]she[otherwise]he[end if] adds with a grin before leaving.";
-				say "     Now alone, you look over the room, but find little.  Almost all the contents were destroyed or consumed, though you do find a stale bag of chips in the bottom of one drawer.  Better than nothing and a little reward for being a good samaritan, feeling a little better for having done the good deed.";
+				say "     Now alone, you look over the room, but find little.  Almost all the contents were destroyed or consumed, though you do find a stale bag of chips in the bottom of one drawer.  Better than nothing and a little reward for being a good samaritan, you are left feeling a little better for having done the good deed.";
+				now utahmet is true;
 				increase score by 25;
 				increase morale of player by 2;
 				increment carried of chips;
@@ -39,7 +42,7 @@ Instead of resolving a Paleontology Professor:
 				challenge "Wereraptor";
 				raptorrelease;
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					say "     Managing to drive off the raptor creature, you take a moment to survey the office.  I has been destroyed by the clawed menace trapped inside.  The furniture is largely destroyed, the walls and door covered in slashes and everything a mess.  Speaking of the door, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away.  Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
+					say "     Managing to drive off the raptor creature, you take a moment to survey the office.  I has been destroyed by the clawed menace trapped inside.  The furniture is largely destroyed, the walls and door covered in slashes and everything a mess.  Among the wreckage, there's a shattered display case with a large bone lying among the shards.  Speaking of the door though, you are confused as you examine it, seeing the nails barring it were driven in from the inside as if the creature sealed itself away.  Your search of the office does provide one small reward as you find a bag of stale chips in one of the drawers.";
 					increase score by 25;
 					increment carried of chips;
 				otherwise if fightoutcome >= 20 and fightoutcome <= 29:
@@ -103,7 +106,9 @@ to say losetowereraptor:
 
 
 to say beatthewereraptor:
-	if bodyname of player is "Wereraptor" and ( cocks of player > 0 or cunts of player > 0 ):
+	if wrcurseNermine is 9:
+		say "     You manage to defeat and drive off Dr. Utah, the first wereraptor.";
+	otherwise if bodyname of player is "Wereraptor" and ( cocks of player > 0 or cunts of player > 0 ):
 		say "     As the wereraptor stumbles back, weak and beaten, your primitive urges drive you to pounce upon [if wrmode is 1]her[otherwise]him[end if] instinctively.  You bear [if wrmode is 1]her[otherwise]him[end if] to the ground and pin them.  Shall you give into your primitive, lustful instincts and mate with your fallen foe?";
 		if the player consents:
 			if wrmode is 1:
@@ -165,6 +170,16 @@ to say wrvict3:		[69 w/male]
 
 to say wereraptordesc:
 	choose row monster from the table of random critters;
+	let debit be 0;
+	now dex entry is 19;
+	now hp entry is 45;
+	now lev entry is 8;
+	if lev entry is less than level of player and hardmode is true:
+		now debit is ( level of player ) - 8;
+		increase lev entry by debit;
+		increase dex entry by debit / 5;
+		increase hp entry by debit * 3;
+		increase wdam entry by ( debit / 3 );
 	now wrmode is a random number between 1 and 2;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You spot a raptor-like creature looking at you from the distance.  It stares at you long with its amber eyes, twitches its claws.  'Clever girl,' it hisses before turning away, leaving you be.";
@@ -174,6 +189,12 @@ to say wereraptordesc:
 		now wrmode is 0;
 	otherwise if wrcursestatus is 0 and girl is not banned:
 		now wrmode is 1;
+	otherwise if wrcurseNermine is 9 and girl is not banned:
+		now wrmode is 1;
+		increase dex entry by 1;
+		increase lev entry by 1;
+		increase hp entry by lev entry;
+		now monsterhp is hp entry;
 	otherwise if guy is banned:
 		now wrmode is 1;
 	otherwise if girl is banned:
@@ -282,6 +303,9 @@ this is the wereraptor curse rule:
 					say "     You can feel your mystical transformation fighting off something lingering inside you.  Your body writhes in pain and you hiss angrily as your eyes flash yellow and turn slitted before returning to normal.  The scars at your shoulders heal, whatever lingering affect they had purged by the greater power that now has a hold of you - for better or for ill.";
 					now hp of player is ( 2 * hp of player ) / 3;
 				now wrcursestatus is 100;
+				now Greenhouse is resolved;
+				now Getting the Knife is resolved;
+				now Dinosaur Skeleton is resolved;
 		if wrcursestatus is 2:
 			if daytimer is night:
 				if wrcursestart - turns >= 12:
@@ -348,7 +372,7 @@ to wrcursesave:
 			break;
 	if wrcursestatus is 2 or wrcursestatus is 3:
 		if wrcursestatus is 2:
-			say "     Feeling a surge of pain from the wounds in your shoulders that makes you feel dizzy and ill, you stumble outside to get some fresh air.  There, out in the moonlight, you feel a rush of power surging through you and your eyes turn yellow and slitted.  You stagger and fall, writhing on the ground as a rush of transformation unlike anything you've felt before surges through you.  As you stare up the moon and the instinctual urges threaten to overtake you, you realize this is no normal infection, but a strange lycanthopy.  You are becoming a wereraptor";
+			say "     Feeling a surge of pain from the wounds in your shoulders that makes you feel dizzy and ill, you stumble outside to get some fresh air.  There, out in the moonlight, you feel a rush of power surging through you and your eyes turn yellow and slitted.  You stagger and fall, writhing on the ground as a rush of transformation unlike anything you've felt before surges through you.  As you stare up the moon and the instinctual urges threaten to overtake you, you realize this is no normal infection, but a strange lycanthopy.  You are becoming a wereraptor.";
 			say "     As your new lycanthropic changes begin, your current form is suppresed for your wild, nocturnal form";
 		otherwise if wrcursestatus is 3:
 			say "     Unable to hold them back, there comes the familiar surge of pain from your raptor wounds.  You feel yourself changing with the coming of the night.  Your body changes, transforming into a lycanthropic raptor once more";
@@ -497,6 +521,210 @@ to wrcurserampage:
 		say "     You can feel the primitive, feral instincts of your wereraptor body trying to erode your conscious thought as its lust and hunger try to take over.  Thankfully, you are able to confine yourself indoors out of the moonlight.  You are wilder and more feral for a time, but manage to get a grip on yourself.  It takes its toll, but you remain in control for now.";
 		decrease humanity of player by 4;
 		increase libido of player by 2;
+
+
+Section 4 - Cure Events
+
+Part 1 - Greenhouse and Wolfsbane
+
+Greenhouse is a situation.  The level of Greenhouse is 7.  Greenhouse is resolved.
+The sarea of Greenhouse is "Campus";
+
+grhouse is a truth state that varies.  grhouse is usually false.
+
+Instead of resolving Greenhouse:
+	if grhouse is false:
+		say "     Remembering Nermine's instructions, you keep your eyes open as you travel around the campus.  Not recalling having seen one there before and unable to find out anywhere, you're about to give up when you swing back around towards the biology building again for another pass.  And that's when you spot it as you come around the edge of the chemistry building.  Linking it to the biology building, there is a connecting hallway and the topmost level of that passage is a greenhouse.";
+	otherwise:
+		say "     Hoping to gain entrance to the greenhouse this time, you slip into the chemistry building.  Moving carefully, you make your way up the stairs to the third floor and the pathway connecting it and the biology building.";
+	if daytimer is day:
+		say "     On the lookout for other creatures, you head into the chemistry building and make your way carefully up stairs to the third floor.  Finding the door to the greenhouse unlocked, you slip inside and start looking over the plants.  You locate the monkshood tucked away behind a few other plants.  In your eagerness, you end up knocking over one of the other pots, breaking it with a large shattering of pottery that seems very loud in the otherwise quiet greenhouse.";
+		attempttowait;
+		say "     Hearing footsteps approach, you clutch your find close and [if weapon object of player is not journal]ready your weapon with the other hand[otherwise]take up a fighting stance with the other fist raised[end if].  You are surprised to see an unchanged human appear, coming towards you quickly.";
+		if utahmet is false:
+			if girl is banned:
+				say "     'Stop,' the person wheezes as he tries to catch his breath after his frantic run into the greenhouse from the opposite end of the passageway.  'I... uhh... That aconitum is college property.  You can't take it.  Drop it and get out of here.'  Dressed in torn clothes and looking a little ragged around the edges, he still seems fully human.  He looks to be about in his late twenties, has dark hair and an average build.  He would probably look pretty handsome if his suit weren't all torn and the scruff on his face were shaved.";
+				attempttowait;
+				say "     Remaining at the ready, you ask him who he thinks he is to order you around like that.  '[bold type]I[roman type] am Dr. Utah and [bold type]I[roman type] am a professor here.  And [bold type]that[roman type] is college property.  Now put the wolfsbane down and get out of here before you attract some unwanted trouble.  I'm willing to be a little tolerant with you given the circumstances, but it won't last long.'";
+				say "    He tries to sound intimidating, but is clearly nervous and keeps several yards away from you.  Figuring he's scared of a battle-hardened survivalist such as yourself, you [if weapon object of player is not journal]wave your [weapon object of player] in his direction[otherwise]shake your fist menacingly at him[end if].  You growl that the college has already gone to hell and that you need this monkswood, wolfsbane or whatever it's called.  You then slam the pot to the ground, shattering it beside the other one.  You grab several of the plants by their stalks, shake the dirt from their roots and leave, leaving the professor to cautiously advance once you move to leave.";
+			otherwise:
+				say "     'Stop,' the person wheezes as she tries to catch her breath after her frantic run into the greenhouse from the opposite direction you'd entered.  'I... uhh... That aconitum is college property.  You can't take it.  Drop it and get out of here.'  Dressed in torn clothes and looking a little ragged around the edges, she still seems fully human.  She looks to be about in his late twenties, has dark hair and an average build.  She would probably look rather pretty if her blouse and dress weren't all torn and her hair weren't in such a mess.";
+				attempttowait;
+				say "     Remaining at the ready, you ask her who she thinks she is to order you around like that.  '[bold type]I[roman type] am Dr. Utah and [bold type]I[roman type] am a professor here.  And [bold type]that[roman type] is college property.  Now put the wolfsbane down and get out of here before you attract some unwanted trouble.  I'm willing to be a little tolerant with you given the circumstances, but it won't last long.'";
+				say "    She tries to sound intimidating, but is clearly nervous and keeps several yards away from you.  Figuring she's scared of a battle-hardened survivalist such as yourself, you [if weapon object of player is not journal]wave your [weapon object of player] in her direction[otherwise]shake your fist menacingly at her[end if].  You growl that the college has already gone to hell and that you need this monkswood, wolfsbane or whatever it's called.  You then slam the pot to the ground, shattering it beside the other one.  You grab several of the plants by their stalks, shake the dirt from their roots and leave, leaving the professor to cautiously advance once you move to leave.";
+		otherwise:
+			if girl is banned:
+				say "     'Stop,' the person wheezes as he tries to catch his breath after his frantic run into the greenhouse from the opposite end of the passageway.  'I... ohh... wait, it's you.  What are you doing here?  And what do you want with that?  That aconitum is college property.  You can't take it.'  Dressed in torn clothes and still looking a little ragged around the edges, Dr. Utah has at least managed to remain human since you've freed him.  Seeing him again, you take a moment to look him over.  He looks to be about in his late twenties, has dark hair and an average build.  He would probably look pretty handsome if his suit weren't all torn and the scruff on his face were shaved.";
+				attempttowait;
+				say "     Relaxing a little, you tell him that you just want the plant and that he should let you have it in return for freeing him.  'I appreciate your assistance and I've been very tolerant, but you can't take that plant.  It's very toxic and is quite dangerous.  Just put the wolfsbane down and get out of here before you attract some unwanted trouble.  I'm willing to be a little tolerant with you given the circumstances, but it won't last long.'";
+				say "    He tries to sound intimidating, but is clearly nervous and keeps several yards away from you.  Figuring he's scared of a battle-hardened survivalist such as yourself, you [if weapon object of player is not journal]wave your [weapon object of player] in his direction[otherwise]shake your fist menacingly at him[end if].  You growl that the college has already gone to hell and that you need this monkswood, wolfsbane or whatever it's called.  You then slam the pot to the ground, shattering it beside the other one.  You grab several of the plants by their stalks, shake the dirt from their roots and leave, leaving the professor to cautiously advance once you move to leave.";
+			otherwise:
+				say "     'Stop,' the person wheezes as she tries to catch her breath after her frantic run into the greenhouse from the opposite end of the passageway.  'I... ohh... wait, it's you.  What are you doing here?  And what do you want with that?  That aconitum is college property.  You can't take it.'  Dressed in torn clothes and still looking a little ragged around the edges, Dr. Utah has at least managed to remain human since you've freed her.  Seeing her again, you take a moment to look her over.  She looks to be about in his late twenties, has dark hair and an average build.  She would probably look rather pretty if her blouse and dress weren't all torn and her hair weren't in such a mess.";
+				attempttowait;
+				say "     Relaxing a little, you tell her that you just want the plant and that she should let you have it in return for freeing her.  'I appreciate your assistance and I've been very tolerant, but you can't take that plant.  It's very toxic and is quite dangerous.  Just put the wolfsbane down and get out of here before you attract some unwanted trouble.  I'm willing to be a little tolerant with you given the circumstances, but it won't last long.'";
+				say "    She tries to sound intimidating, but is clearly nervous and keeps several yards away from you.  Figuring she's scared of a battle-hardened survivalist such as yourself, you [if weapon object of player is not journal]wave your [weapon object of player] in her direction[otherwise]shake your fist menacingly at her[end if].  You growl that the college has already gone to hell and that you need this monkswood, wolfsbane or whatever it's called.  You then slam the pot to the ground, shattering it beside the other one.  You grab several of the plants by their stalks, shake the dirt from their roots and leave, leaving the professor to cautiously advance once you move to leave.";
+		increase carried of wolfsbane by 1;
+		now wrcurseNermine is 3;
+		now Greenhouse is resolved;
+		increase score by 20;
+	otherwise:
+		say "     On the lookout for other creatures, you head into the chemistry building and make your way carefully up stairs to the third floor.  Finding the door to the greenhouse locked, you look for a means to get inside, but the security door is quite heavy.  A sign on the door states that the greenhouse path is locked after hours and instructs students to go through the ground floor hallway to reach the biology building.  It looks like you'll have to come back at another time and hope that the door is open then.";
+		if grhouse is false or a random chance of 2 in 5 succeeds:
+			say "     On your way back to the stairwell, one of the wereraptor creature bursts from the stairwell door and skitters across the tiled floor on its clawed feet, turning to charge at you with an angry hiss.  'Leave here,' it says with a cold glare before charging in to attack you.";
+			challenge "Wereraptor";
+			say "     Once your confrontation with the wereraptor is concluded, you make your way out of the building, hoping not to run into any more trouble.";
+		now grhouse is true;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"wolfsbane"	"A bunch of roots from the monkshood."	1	wolfsbane
+
+wolfsbane is a grab object.
+it is part of the player.
+It is not temporary.
+
+instead of using wolfsbane:
+	say "     You shouldn't mess with that stuff.  Nermine needs it for your cure.  Besides, isn't it poisonous?  Hey... waitaminit.";
+
+instead of sniffing the wolfsbane:
+	say "     The wolfsbane has a strong scent that makes you sick to your stomach.";
+
+
+Part 2 - Getting the Knife
+
+Getting the Knife is a situation.  The level of Getting the Knife is 7.  Getting the Knife is resolved.
+The sarea of Getting the Knife is "Warehouse";
+
+wrknifefight is a truth state that varies.  wrknifefight is usually false.
+
+Instead of resolving Getting the Knife:
+	if girl is banned:
+		say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided.  It is a non-descript warehouse like so many others in this area.  You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you.  Turning around, you find yourself faced with a large, burly wolverine in a security guard uniform.";
+		now wrknifefight is true;
+		challenge "Wolverine Guard";
+		now wrknifefight is false;
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "[wrgetknife]";
+		otherwise:
+			say "     Driven off by the lumbering monstrocity, you will have to try coming back another time if you want to try getting the knife.";
+	otherwise:
+		[puts Doberman as lead monster for check]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Doberman":
+				now monster is y;
+				break;
+		if area entry is "Outside":
+			say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided.  It is a non-descript warehouse like so many others in this area.  You start looking around, trying to find a way into the building, only to be interrupted by a growl behind you.  Turning around, you find yourself faced with a female doberman wearing a police uniform.  'Halt!' she barks.  'Get away from there.  Getting supplies is one thing, but outright looting is unacceptable.'  It looks like you'll need to deal with the cop before you'll be able to gain entry.";
+			challenge "Doberman";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     Having dealt with the Doberwoman, you are free to turn your attention back to finding a means into the warehouse.";
+				say "[wrgetknife]";
+			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+				say "     The Doberwoman makes sure to send you on your way before leaving the area.  'And I'm going to be keeping an eye on this place, just so you know,' she adds with an extra growl.  'I don't want to see you around here again.'";
+			otherwise:
+				say "     The Doberwoman pursues you for some distance to ensure that you've been driven off.  You'll have to try coming back later.";
+		otherwise:
+			say "     Doing your best to circumvent the creatures roaming around here, you make your way to the address Nermine provided.  It is a non-descript warehouse like so many others in this area.  You start looking around, trying to find a way into the building.  Thankfully, there doesn't appear to be anyone here to oppose you.";
+			say "[wrgetknife]";
+
+
+to say wrgetknife:
+	say "     Checking around the building, you find a half-open window along one side of the warehouse.  It is quite high up, but you thankfully there are some old crates you can stack to get up to it.  After managing to get inside, you start looking around.  Thankfully, there's not much being stored in here right now, so it doesn't take you very long to find the shipping crate with the silver knife in it.";
+	say "     The knife seems a little unusual when compared to the other items you've seen around Nermine's store.  The handle is rather plain and made of wood, with only a few swirls carved into it.  The blade is about ten inches long and has a slight curve to it.  The silver blade shows some tarnish, but appears to still have a keen edge to it.  Uncertain why Nermine would care for such a thing when compared to the more ornate items in the lot, you shrug and put it away.";
+	increase carried of silver knife by 1;
+	let bonus be ( intelligence of player + perception of player - 20 ) divided by 2;
+	let dice be a random number from 1 to 20;
+	if bonus + dice is greater than 18:
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]:  ";
+		say "You are about to head out when you realize that you're about to walk away from this collection of antiquities without even checking out any of the others.  Just because Nermine doesn't want any of them doesn't mean they can't be of use to you.  You flip through the auction list.  It appears the items come from an estate sale and while most of them are nothing of interest to you, one of the photos catches your eye.  Finding the crate, you break into it and pull out the torso mannequin with a chainmail vest on it.  Now that might come in handy, you muse as you head out, feeling a little closer to being rid of your cursed affliction.";
+		increase score by 20;
+		increase carried of chainmail vest by 1;
+	otherwise:
+		say "     Having gotten what you came for, you make a hasty exit from the warehouse.  You feel a little closer to being rid of your cursed affliction.";
+	now wrcurseNermine is 6;
+	increase score by 20;
+	now Getting the Knife is resolved;
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"silver knife"	"An old silver knife with a ten inch blade and a slight curve to it."	2	silver knife
+"chainmail vest"	"A heavy chainmail vest that always seems to be a good fit thanks to nanite adjustment."	20	chainmail vest
+
+silver knife is an armament. It is part of the player. It has a weapon "[one of]the silver knife[or]the old knife[or]the curved knife[or]the silver dagger[at random]". The weapon damage of silver knife is 6. The weapon type of silver knife is "Melee". It is not temporary.
+
+instead of sniffing the silver knife:
+	say "While the silver knife has no strong scent, something about it makes you uneasy whenever you bring it close.";
+
+chainmail vest is equipment. It is not temporary.
+The AC of chainmail vest is 40.
+The effectiveness of chainmail vest is 60.
+The placement of chainmail vest is "body".
+The descmod of chainmail vest is "You are wearing a chainmail vest that covers your torso and shoulders.".
+The slot of chainmail vest is "body".
+
+the scent of chainmail vest is "There is little scent to the chainmail itself.";
+
+
+Part 3 - Dinosaur Skeleton
+
+Dinosaur Skeleton is a situation.  The level of Dinosaur Skeleton is 9.  Dinosaur Skeleton is resolved.
+The sarea of Dinosaur Skeleton is "Museum";
+
+wrdinoskel is a truth state that varies.  wrdinoskel is usually false.
+
+Instead of resolving Dinosaur Skeleton:
+	if daytimer is day:
+		say "     As you travel through the museum, you end up finding yourself in one of the upper sections of the Dinosaur exhibit.  There are several small- to mid-sized skeletons on display there, including one of a raptor.  You are momentarily excited at the prospect of being freed from your curse, but then recall that the ritual requires it be done at night.  Given the amount of activity around here from the denizens of the museum, you decide against just sticking around until then and resolve to come back after nightfall.";
+	otherwise if silver knife is not owned:
+		say "     As you travel through the museum, you end up finding yourself in one of the upper sections of the Dinosaur exhibit.  There are several small- to mid-sized skeletons on display there, including one of a raptor.  You approach the fossilized skeleton and prepare yourself to begin, but realize that you've forgotten the silver knife somewhere.  You will need that to complete the ritual.";
+	otherwise:
+		say "     As you travel through the museum, you end up finding yourself in one of the upper sections of the Dinosaur exhibit.  There are several small- to mid-sized skeletons on display there, including one of a raptor.  You approach the fossilized skeleton and prepare yourself to begin.  Your stomach churns at the very thought of drinking down the repulsive fluid so you decide to keep the bottle closed until the last possible moment.  Maybe if you open it and slam it back immediately, the revulsion won't have a chance to stop you.";
+		say "     Taking a last, deep breath, you hear a clickety sound behind you.  'Stop!' a voice growls.  'Don't be fooled by weakness.'  Holding steady, you turn around and find one of the wereraptors there behind you.  It steps forward slowly, its claws clacking on the hard floor.  'I showed restraint when you freed me and chose to see that you were blessssed.  But when you took the aconite, I knew you were up to something.  I could not stop you then, but I will stop you now.'";
+		attempttowait;
+		say "     Realization sinks in as the wereraptor speaks.  'Dr... Utah?' you utter, steadying yourself on the nearby display plaque.  Events seem to fall into place as that missing piece of the puzzle is revealed.  The creature before you is the young professor you met earlier and both were released when you broke into [if girl is banned]his[otherwise]her[end if] office.";
+		if girl is not banned:
+			say "     'Yessss.  And I was once like you,' the wereraptor says as she continues.  'Weak and fearful.  When the chaos began and my curse started to take hold, I barred myself inside my office.  I nailed the door shut from the inside and threw the hammer out the window.  I had meant to save others from the beast within me,' she says with a chuckle.  'But I came to realize that I was wrong and that this blessing is not to be feared.  The creature it frees is myself.  Free from my fears, my inhibitions, my petty concerns for others.  It has made me powerful... as it has made you powerful.  Do not throw it away and embrace it instead.  Embrace it and let the beast free, as it has freed me.'  Her voice grows louder and more maniacal as she concludes her tirade before charging to attack you.";
+		otherwise:
+			say "     'Yessss.  And I was once like you,' the wereraptor says as it continues.  'Weak and fearful.  When the chaos began and my curse started to take hold, I barred myself inside my office.  I nailed the door shut from the inside and threw the hammer out the window.  I had meant to save others from the beast within me,' he says with a chuckle.  'But I came to realize that I was wrong and that this blessing is not to be feared.  The creature it frees is myself.  Free from my fears, my inhibitions, my petty concerns for others.  It has made me powerful... as it has made you powerful.  Do not throw it away and embrace it instead.  Embrace it and let the beast free, as it has freed me.'  His voice grows louder and more maniacal as he concludes his tirade before charging to attack you.";
+		now wrcurseNermine is 9;
+		challenge "Wereraptor";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "     Having beaten the wereraptor, you pull open the potion and slam it back quickly while still on your adrenaline high.  This gives you the added courage to go through with it, drinking down much of it before you have a chance to react to it.  But once your body notices the repulsive taste, you start to retch and have to struggle to keep it down.  Uncertain how much you need, but not wanting to take any chances, you drink down the rest of it, feeling it burn the whole way down and roiling like molten metal in your stomach.";
+			say "     You stumble over to the fossil and outstretch your arm.  You quickly grab the knife and jab it into your forearm, letting your blood flow out onto the dinosaur bones.  The wound is extremely painful, sending chills through your body.  Your blood hisses and steams, turning a sickly green as it comes out of you and runs down your arm.  It turns to black upon landing on the bones.  You fall to your knees, but keep at it, holding the silver blade until all the tainted green is gone and the silver no longer causes the chilling pain[if wrcursestatus is 5] and all traces of your wereraptor form have been expunged[end if].";
+			attempttowait;
+			say "     You stagger to your feet, feeling very weak and worn from your blood loss, but also as if a great burden has been lifted from you.  You watch as the last of your blood bubbles on the fossilized bones and disappears.  You're uncertain if it boiled away or was absorbed into the dry bones, but it is gone.  In short order, the slashes on your shoulders fade away, healed and gone as if they were never there.  Having beaten its power, you know you can not be tainted by it again.";
+			say "     Not wanting to linger here any longer, you prepare to leave only to notice that the silver knife is missing.  You suspect it's somehow already found its way back to Nermine.";
+			if weapon object of player is silver knife, now weapon object of player is journal;
+			now carried of silver knife is 0;
+			if humanity of player < 100:
+				increase humanity of player by 1;
+				increase humanity of player by ( 100 - humanity of player ) / 2;
+			now hp of player is hp of player / 2;
+			increase morale of player by 5;
+			if wrcursestatus is 5:
+				wrcurserecede;
+			now wrcurseNermine is 11;
+			now wrcursestatus is 100;
+			increase score by 100;
+		otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+			if girl is not banned:
+				say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors.  With a hissing laugh, she tosses the vial down as you scream.  There is a distance crash as your precious cure is destroyed.  Dr. Utah clacks back across the tiled floor and runs her taloned hand across your body.  'Soon you will come to accept your proper nature and forsake your foolish reluctance.  It is time for the saurians to rise again, new and stronger.'  She leans in closer and runs her tongue along your face.  'I look forward to hunting with you,' she adds with a grope between your legs before turning and leaving.";
+			otherwise:
+				say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors.  With a hissing laugh, he tosses the vial down as you scream.  There is a distance crash as your precious cure is destroyed.  Dr. Utah clacks back across the tiled floor and runs his taloned hand across your body.  'Soon you will come to accept your proper nature and forsake your foolish reluctance.  It is time for the saurians to rise again, new and stronger.'  He leans in closer and runs his tongue along your face.  'I look forward to hunting with you,' he adds with a grope between your legs before turning and leaving.";
+			say "     Once you've recovered enough to stand, you prepare yourself to leave.  You glance around and realize that your silver knife is gone.  You suspect it's somehow already found its way back to Nermine.  With your cure gone and your payment made, you get the feeling that you're on your own now.";
+			if weapon object of player is silver knife, now weapon object of player is journal;
+			now carried of silver knife is 0;
+			now wrcurseNermine is 10;
+		otherwise:
+			if girl is not banned:
+				say "     As you turn and run, the speedy wereraptor makes a final charge and swipes her claws at you.  This knocks the potion from your hand, sending it tumbling to the ground and breaking.  With its scent in the air, your revulsion kicks in and you move quickly to get away, the transformed professor fleeing as well.  When you stop and try to catch your breath now that you're far from the smell of it, you realize that your silver knife is missing as well.  You suspect it's somehow already found its way back to Nermine.  With your cure gone and your payment made, you get the feeling that you're on your own now.";
+			if weapon object of player is silver knife, now weapon object of player is journal;
+			now carried of silver knife is 0;
+			now wrcurseNermine is 10;
+
 
 
 [	wrcursestatus		]

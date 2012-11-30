@@ -10,7 +10,7 @@ Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
-use MAX_NUM_STATIC_STRINGS of 48000.
+use MAX_NUM_STATIC_STRINGS of 50000.
 use ALLOC_CHUNK_SIZE of 116000.
 use MAX_OBJECTS of 1100.
 use MAX_ACTIONS of 300.
@@ -3380,7 +3380,7 @@ To fight:
 		now monsterhp is hp entry;
 		now lost is 0;
 		now fightoutcome is 100;
-		say "You run into a [name entry].[line break][desc entry]";
+		say "You run into a [name entry].[line break][desc entry][line break]";
 		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1 and inasituation is false:
 			say "You notice an avenue of escape! Do you want to abort the combat?";
 			if the player consents:
@@ -3440,7 +3440,7 @@ To challenge:
 	now monsterhp is hp entry;
 	now lost is 0;
 	now fightoutcome is 100;
-	say "You run into a [name entry].[line break][desc entry]";
+	say "You run into a [name entry].[line break][desc entry][line break]";
 	if combat abort is 1:
 		now combat abort is 0;
 		rule succeeds;
@@ -3471,7 +3471,7 @@ to hardmodeboost:			[Controls level boosting for hard mode, runs BEFORE any inte
 		increase hp entry by debit * 4;
 		repeat with D running from 1 to debit:
 			if remainder after dividing ( lev entry + 1 - D ) by 3 is 0, increase wdam entry by 1;
-			[This provides + 1 dmg to the creature for every time it reaches a level divisible by 2 ABOVE its base level]
+			[This provides + 1 dmg to the creature for every time it reaches a level divisible by 3 ABOVE its base level]
 			[This keeps the damage level of lower monsters more sane as they progress to match higher monsters]
 		repeat with D running from 1 to debit:
 			if remainder after dividing ( lev entry + 1 - D ) by 5 is 0, increase dex entry by 1;

@@ -258,7 +258,7 @@ Carry out reciting:
 					now Gryphoness Nest is resolved;
 					if gryphoncomforted is greater than 0:
 						now lonely gryphoness is resolved;
-						now Gryphon Nest is unresolved;
+						now Gryphoness Nest is unresolved;
 					if gryphoncomforted is greater than 2:
 						now gryphoness is tamed;
 						now Gryphoness Nest is resolved;
