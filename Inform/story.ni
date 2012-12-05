@@ -176,6 +176,7 @@ The player has a text called bodyname. Bodyname is usually "human";
 The player has a text called facename. Facename is usually "human";
 The player has a text called skinname. Skinname is usually "human";
 The player has a text called cockname. cockname is usually "human";
+The player has a text called tailname. Tailname is usually "human";
 The child has a text called bodyname. Bodyname is usually "human";
 The child has a text called facename. Facename is usually "human";
 The child has a text called skinname. Skinname is usually "human";
@@ -184,7 +185,6 @@ The child has a text called tailname. Tailname is usually "human";
 The player has text called Cock Size Desc.
 The player has text called Cunt Size Desc.
 The player has text called Breast Size Desc.
-The player has a text called tailname. Tailname is usually "human";
 The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
 The player has a text called weapon type. Weapon type is usually "Melee";
 A person has a number called Weapon damage. Weapon damage is usually 4.
@@ -292,12 +292,18 @@ Definition: A person(Called X) is pure:
 					yes;
 	no;
 
-Definition: A person(called X) is male:
+Definition: A person(called X) is male:			[note: this is both male and herm]
 	if cocks of x is greater than 0, yes;
 
-Definition: A person(called X) is female:
+Definition: A person(called X) is female:			[note: this is both female and herm]
 	if cunts of x is greater than 0, yes;
-	
+
+Definition: A person(called X) is herm:
+	if cocks of x > 0 and cunts of x > 0, yes;
+
+Definition: A person(called X) is neuter:
+	if cocks of x is 0 and cunts of x is 0, yes;
+
 A person can be booked. A person can be bunkered. A person is usually not booked. A person is usually not bunkered.
 
 Definition: A person(Called X) is booked:
@@ -310,6 +316,42 @@ Definition: A person(Called X) is bunkered:
 	If x is the player, no;
 	if the location of x is Bunker, yes;
 	no;
+
+to say subjpro_cap of (x - a person):	[Subjective Pronoun: He/She]
+	if cunts of x is 0:
+		say "He";
+	otherwise:
+		say "She";
+
+to say subjpro of (x - a person):	[subjective pronoun: he/she]
+	if cunts of x is 0:
+		say "he";
+	otherwise:
+		say "she";
+
+to say possadj_cap of (x - a person):	[Possessive Adjective: His/Her <something>]
+	if cunts of x is 0:
+		say "His";
+	otherwise:
+		say "Her";
+
+to say possadj of (x - a person):	[possessive adjective: his/her <something>]
+	if cunts of x is 0:
+		say "his";
+	otherwise:
+		say "her";
+
+to say objpro of (x - a person):	[objective pronoun: <to> him/her]
+	if cunts of x is 0:
+		say "him";
+	otherwise:
+		say "her";
+
+to say posspro of (x - a person):	[possessive pronoun: <something> = his/hers]
+	if cunts of x is 0:
+		say "his";
+	otherwise:
+		say "hers";
 
 
 A thing can be rooted in place. A thing is usually not rooted in place.
@@ -367,8 +409,21 @@ to say bunker desc:
 
 to say abbey desc:
 	say "     This converted abbey has been made into a small library and the architecture and design shows its origins despite the renovations made.  The simple columns, the wall sconces and several of the original features have been kept to give the library some 'character'.  The central room houses the stacks and a few desks, with side rooms set aside for reading and a couple of computers.  The computers would be more useful if there was power in the building.  You're still not entirely sure what knocked them out, but they're very out now.  You came here because you remembered there was a disused bunker in the basement.  It's kept you alive, so far.";
-	if Fang is in the Grey Abbey Library:
-		say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
+	if Fang is booked and Penny is booked:
+		say "     Fang and Penny are on guard here, taking shifts watching by the door";
+		if hp of Fang < 3:
+			say ".  The powerful male wolf watches in stoic silence";
+		otherwise:
+			say ".  The wolf tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random]";
+		say ".  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
+	otherwise if Fang is booked:
+		if hp of Fang < 3:
+			say "     Fang is on guard here by the door, the powerful male wolf watching in stoic silence.";
+		otherwise:
+			say "     Fang is on guard here by the door on his rope leash, tied to a [one of]column[or]desk[or]water fountain[or]metal staircase[or]wall sconce[at random].";
+	otherwise:
+		say "     Penny is on guard here, watching by the door for trouble.  The Doberwoman paces around, running her paw along her nightstick as if hoping for an opportunity to use it.";
+
 
 [
 Smith Haven Mall Lot is a room. "A vast and sprawling parking lot puts you within walking distance of a large mall to the north. You remember coming here a lot more often when you were in school. It was 'the place' to be. Ah well, it's a fine [time of day], may as well go shopping."
@@ -1474,49 +1529,6 @@ carry out navigating:
 	move the player to the noun;
 	follow turnpass rule;
 
-understand "vialdrop [text]" as vialdropping.
-
-Vialdropping is an action applying to one topic.
-
-Carry out vialdropping:
- 	let t be the topic understood;
-	let target be text;
-	let found be 0;
-	let z be 1;
-	let q be a topic;
-	repeat with x running through vials of player:
-		now q is x;
-		if t in lower case is x in lower case:
-			now target is x;
-			now found is 1;
-			break;
-		increase z by 1;
-	if found is 0:
-		say "You don't seem to have any such vial.";
-		continue the action;
-	say "You chuck the [target] vial away.";
-	remove entry z from vials of player;
-
-understand "vialalldrop [text]" as vialalldropping.
-
-Vialalldropping is an action applying to one topic.
-
-Carry out vialalldropping:
- 	let t be the topic understood;
-	let target be text;
-	let found be 0;
-	repeat with x running from 1 to the number of entries in vials of player:
-		if t in lower case is entry x in vials of player in lower case:
-			now target is entry x in vials of player;
-			remove entry x from vials of player;
-			decrease x by 1;
-			now found is 1;
-	if found is 0:
-		say "You don't seem to have any such vial.";
-	otherwise:
-		say "You chuck all your [target] vials away.";
-
-
 understand "vial [text]" as vialing.
 
 Vialing is an action applying to one topic.
@@ -1561,6 +1573,63 @@ carry out vialing:
 			infect target;
 		now researchbypass is 0;
 		remove entry z from vials of player;
+
+to deletevial (x - text):	[removes 1 vial of a given type from the player's inventory]
+	let found be 0;
+	let z be 0;
+	repeat with y running through vials of player:
+		increase z by 1;
+		if x in lower case is y in lower case:
+			now found is 1;
+			break;
+	if found is 0:
+		say "Error - [x] - Expected vial not found.";
+		stop the action;
+	otherwise:
+		remove entry z from vials of player;
+
+understand "vialdrop [text]" as vialdropping.
+
+Vialdropping is an action applying to one topic.
+
+Carry out vialdropping:
+	let t be the topic understood;
+	let target be text;
+	let found be 0;
+	let z be 1;
+	let q be a topic;
+	repeat with x running through vials of player:
+		now q is x;
+		if t in lower case is x in lower case:
+			now target is x;
+			now found is 1;
+			break;
+		increase z by 1;
+	if found is 0:
+		say "You don't seem to have any such vial.";
+		continue the action;
+	say "You chuck the [target] vial away.";
+	remove entry z from vials of player;
+
+understand "vialalldrop [text]" as vialalldropping.
+
+Vialalldropping is an action applying to one topic.
+
+Carry out vialalldropping:
+	let t be the topic understood;
+	let target be text;
+	let found be 0;
+	repeat with x running from 1 to the number of entries in vials of player:
+		if t in lower case is entry x in vials of player in lower case:
+			now target is entry x in vials of player;
+			remove entry x from vials of player;
+			decrease x by 1;
+			now found is 1;
+	if found is 0:
+		say "You don't seem to have any such vial.";
+	otherwise:
+		say "You chuck all your [target] vials away.";
+
 
 understand the command "i" and "inv" and "inventory" as something new.
 
@@ -4091,6 +4160,8 @@ to say body size of ( x - a person ):
 		say "huge";
 
 
+
+
 looknow is a number that varies.
 
 Afterexamine rules is a rulebook.
@@ -4552,7 +4623,6 @@ carry out scavenging:
 	follow turnpass rule;
 
 To Challenge (x - text):	
-	sort table of random critters in random order;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y from the table of random critters;
 		if name entry is x:
@@ -5365,6 +5435,7 @@ Include Orthas by Nuku Valente.
 Include Sven by Stripes.
 Include Frank by Stripes.
 Include Sally by Stripes.
+Include Penny by Stripes.
 [Include Max by Zero.]
 Include Fang by Stripes.
 Include Blanche by Stripes.
