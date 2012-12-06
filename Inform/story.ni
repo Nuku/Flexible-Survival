@@ -5412,7 +5412,7 @@ Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
 Include RodAndRonda by Stripes.
 Include Lucy by Stripes.
-Include Larissa for FS by Stripes.
+[Include Larissa for FS by Stripes.]
 Include Matriarch NPC by Stripes.
 Include Tanuki by Nuku Valente.
 Include Mouse Taur by Nuku Valente.
