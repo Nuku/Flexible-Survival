@@ -26,7 +26,7 @@ instead of fucking the Sally:
 		now lastSallyfucked is turns;
 		say "     Sally, hearing you step up, stops what she was doing and dashes towards you.  She whines softly and tugs at her leash, looking at you longingly.  When you smile down at her, she bounds around happily on all fours, knowing what's coming and needing it badly.  She hops back onto her bunk and rolls over, panting like a dog as she whines again, displaying her hybrid herm body that is available for your enjoyment.  The air around the bunk is saturated in the scent of her arousal and her male and female cum, exciting you greatly";
 		if cocks of player > 0:
-			say ".  As your needy fucktoy is a herm, how would you like to enjoy your your puppy-bun pet?  Do you feel like enjoying her pussy or her cock this time? (Y=her cock, N=her pussy)";
+			say ".  As your needy fucktoy is a herm, how would you like to enjoy your puppy-bun pet?  Do you feel like enjoying her pussy or her cock this time? (Y=her cock, N=her pussy)";
 			if the player consents:
 				say "[sallycock]";
 			otherwise:
@@ -37,7 +37,7 @@ instead of fucking the Sally:
 
 to say sallycock:
 	say "     Deciding, you want go at the huskybunny's cock, you straddle her on the bed and rub your hips down onto her throbbing meat.  She moans and yips softly, grinding up against you, looking at you with mindless adoration.  You reach back and fondle her balls before taking a hold of her cock and lining it up[if cunts of player > 0].  Once in position, you rub your wet pussy against her glans before easing down[otherwise].  Once in position, you rub your tight pucker against her glans, letting her pre act as lube before easing down[end if].  You moan in pleasure as you feel that canine cock sinking into you.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	attempttowait;
 	say "     Now that her transformation is complete and she's fully adapted to be your perfect fucktoy.  Somehow sensing what you want most out of any session, her cock shifts and alters its size and shape to best satisfy your lustful desires at any given time";
 	increase lust of Sally by 1;
 	if lust of Sally > 5, decrease lust of Sally by 5;
@@ -62,11 +62,11 @@ to say sallycock:
 
 to say sallypussy:
 	say "     Climbing onto Sally's bunk, kneel between her legs and you grab your huskybunny pet's legs.  Raising her ass like this, you get your cock lined up with her dripping pussy and sink into her.  She moans and yips in delight as you start fucking her.  Her pussy quiver and squeezes around your cock perfectly, providing delicious stimulation to your throbbing member.  Her canine shaft throbs and dribbles pre down her tummy, soaking her soft, fluffy fur.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	attempttowait;
 	say "     Her body, now that her transformation is complete into a slutty fucktoy, is responsive to your needs and adapts to your desires.  You can feel her cunt changing around you, becoming just the right size to satisfy you, becoming [one of]loose for a fast fucking that makes her boobs quiver on her chest[or]a sensual, perfect fit that feels just right around your cock[or]tight and snug, making for a slow, tight fuck that feels so good around your needy cock[in random order].";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	attempttowait;
 	say "     You pound away at her, enjoying a nice, long lovemaking session.  She hooks her legs around you, freeing up your hands to roam over her sexy body.  Your fingers tease her all over, having so many sensitive spots and such delightful responses to your touches.  Dr Mouse indeed did a fine job with her infection, making her into one of the best fucks you've ever had.  You finally drive hard into her and unleash your hot seed, pushing your glans past her cervix and into eager womb.  Her vaginal walls squeeze and tug at your spurting member, milking you to get as much as she can.  She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master and at having been seeded with his cum.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	attempttowait;
 	say "     After a long wait for your afterglow to pass and for your cock to start to soften, you slip out of her with a wet pop.  Her pussy clamps down automatically, wanting to keep all your seed inside.  You scritch her long, bunny ears and she smiles with her long tongue hanging from her muzzle as she pants happily.  As you walk off, she leans over and starts licking her sticky cunt clean.";
 	decrease humanity of player by a random number between 0 and 2;
 	now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
