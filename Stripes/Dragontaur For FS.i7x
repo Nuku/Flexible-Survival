@@ -14,7 +14,7 @@ when play begins:
 
 to say losetodragontaur:
 	if hp of Sam is 15:
-		say "     Sam grabs you roughly and [if scalevalue of player < 4]hefts you over his head.  With a growl, he tosses you several yards away.  You land half on and half off a cot, painfully injuring your back.";
+		say "     Sam grabs you roughly and [if scalevalue of player < 4]hefts you over his head.  With a growl, he tosses you several yards away[otherwise]pushes you back with a powerful shove[end if].  You land half on and half off a cot, painfully injuring your back.";
 	otherwise:
 		say "     Having defeated you, the dragontaur roars trimphantly and presses you to the ground.  It rumbles in your ear as it moves to mount you about [if cunts of player > 0]it's going to breed you full of whelps[otherwise]pound you until you're overflowing with cum[end if] and thrusts into you with little preamble.  It's tapered tip is designed for prying open reluctant holes and pushes its way into your [if cunts of player > 0][cunt size desc of player] pussy with ease[otherwise]tight anus[end if].  The draconic cock thickens as it pushes further into you, each of those ridges on it acting as delightfully pleasurable markers of just how much meat the powerful taur is stuffing inside you.  The dragon fucks you with wild, animalistic abandon, pounding you until you're nearly insensate with lust and finally climax as he blasts shot after shot of his creamy load into your wanton hole, bloating your [if cunts of player > 0]womb[otherwise]belly[end if] with his prodigious output.  Finished, he pushes you aside, leaving you on the ground and leaking his cum from your overstuffed and gaping [if cunts of player > 0]pussy[otherwise]asshole[end if].[impregchance]";
 	[more variations needed in the future]
@@ -31,7 +31,7 @@ to say dragontaurdesc:
 	if hp of Sam is 15:	[Fight w/Sam]
 		say "     Drawn into a fight with Sam, you find yourself facing off against the powerful dragontaur.  He has a draconic head with a pointed muzzle filled with sharp teeth and has pointy horns at the back of it.  His hands have claws and his feet are taloned.  His tail is thick and has a spaded tip.  Sam's hide is covered in thick, hard scales as well.  Both armed and armoured, the dragontaur is a dangerous enemy.";
 	otherwise:			[Random Dragontaur]
-		say "     Before you is a draconic taur creature, probably one of Sam's many descendents.  The creature's draconic head has a long, pointed muzzle with a slight curve at the end.  It's blue scales darken towards the back of its head as they approach the base of the ivory horns which jut from the back of its head.  Aside from the large pair at the top, there are three smaller horns on each side.  Its upper body is generally human in shape, but covered in azure scales and is quite toned, showing firm pecs and hard abs under the dense scales.";
+		say "     Before you is a draconic taur creature, definitely one of Sam's many descendents.  The creature's draconic head has a long, pointed muzzle with a slight curve at the end.  Its blue scales darken towards the back of its head as they approach the base of the ivory horns which jut from the back of its head.  Aside from the large pair at the top, there are three smaller horns on each side.  Its upper body is generally human in shape, but covered in azure scales and is quite toned, showing firm pecs and hard abs under the dense scales.";
 		say "     Its lower body is fully draconic, a compact but powerful beast with strong limbs and a stocky frame to support its weight.  Its azure scales give way to harder, steel blue plates along its underbelly.  Atop the back of its tauric body are a pair of draconic wings that are folded alongside its sides at the moment.  It has a long lizard tail ending in a spaded tip.  Beneath its lower body hangs its plump sheath and large balls, from which its ridged cock is starting to emerge.";
 
 
@@ -60,7 +60,7 @@ When Play begins:
 	now ass change entry is "strange twinges run up and down your spine.  Each time these tingles run down, they seem to travel further and further down until the growth of your new, draconic tail is complete";
 	now cock change entry is "pulses and throbs with need.  As you watch, it changes shape and becomes more tapered and gains a pointed, conical glans for pushing into its prey.  Ridges form along the length of your cock for added stimulation.  You find yourself looking forward to putting your new tool to use";
 	now str entry is 19;			[ These are now the creature's stats... ]
-	now dex entry is 21;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now dex entry is 19;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16;			[ These values may be used as part of alternate combat.]
 	now per entry is 12;
 	now int entry is 14;
