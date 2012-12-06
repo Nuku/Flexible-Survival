@@ -1122,7 +1122,7 @@ to say beatthedrone:
 
 
 to say defeated_panthertaur:
-	if zephyrtask is 1, increase zephyrpests by 1;
+[	if zephyrtask is 1, increase zephyrpests by 1;	]
 	say "[one of]The cat looks entirely irritated at the constant abuse on her perfect body. With a haughty harumph, she suddenly turns tail, raising it to expose her thick, furry, netherlips, then bolts off.[or]The cat mewls sadly, backing away before she raises her hands to her heavy breasts, pressing them together as she gives you a smoldering look. Wouldn't it be nice to make love instead of war?[felitaur tempt][at random]";
 
 
