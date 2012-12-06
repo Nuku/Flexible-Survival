@@ -1012,6 +1012,7 @@ this is the aura1 rule:		[weak aura]
 	otherwise:
 		say "You suffer [ ( lev entry + 4 ) / 4 ] damage.";
 		say "[line break]";
+		decrease hp of player by ( lev entry + 4 ) / 4;
 		if hp of player < 1:
 			if hp of player <= 0, now fightoutcome is 20;
 			if libido of player >= 110, now fightoutcome is 21;
