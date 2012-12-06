@@ -361,13 +361,13 @@ to say beatthedobie3:			[high-lust cop player victory]
 	say "     It seems you've finally completely broken the policewoman.  Shall you take her to be your bad dog bitch?  She might make a good guard for the library[if hp of Fang > 0 and hp of Fang < 100] alongside Fang[end if] as well as a fun plaything.";
 	if the player consents:
 		say "     Excited at the prospect of having the Doberman cop as your personal slutty bitch, you run your hand over her head and scritch her ears, telling her that she can come with you if she accepts her proper place as your slutty bad dog bitch.  She nods and licks at your hand.  'Oh yes, that's what I want.  It was foolish of a bad bitch like me to ever try being a cop, boss.'  Grinning, you help her up and lead her back to the library.";
-		now hp of Penny is 1;
+		now hp of Alexandra is 1;
 		now battleground is "void";
-		move Penny to Grey Abbey Library;
+		move Alexandra to Grey Abbey Library;
 		move player to Grey Abbey Library;
 	otherwise:
 		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground.  'Why would anyone want to keep a bad bitch like you?  Get out of here, you slut.  I don't want to see you again.'  She slinks away and you can't help but chuckle, darkly pleased at having broken the cop so fully and then just discarding her like trash.  You doubt she'll be troubling you any more.";
-		now hp of Penny is 100;
+		now hp of Alexandra is 100;
 	now area entry is "nowhere";
 
 
