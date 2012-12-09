@@ -41,6 +41,7 @@ to say Sprite attack:
 
 [ [Sprite loss] ]
 To say Sprite loss:
+	if zephyrtask is 3, increase zephyrpests by 1;
 	if fightstatus is 3, now fightstatus is 1;
 	say "The sprites disperse in an unhappy cloud of defeated fae kind, taking off in all directions.";
 	if (libido of player is greater than 50 or humanity of player is less than 30) and cocks of player is greater than 0:
