@@ -396,7 +396,7 @@ Chapter 1 - Getting Started
 
 ndmlist is a list of text that varies.  ndmlist is usually { }.
 
-instead of conversing Larissa while hp of doctor matt is 16:
+to say zephyrmatt1:
 	say "     You go up to Larissa at the counter and inform her that you're here on Dr. Matt's behalf to exchange information.  She glances up from the electronic game she's playing to pass the time.  'Oh, hey.  Head Office said someone would be coming by for that.'  She sets her game aside and glances up at you between flipping through the documents.  'If you're going around the city looking for work, we've got a bit of something for you to do.  HQ says it needs to be done ASAP, but we don't have the manpower.  If you could take care of that, I'll make sure these get a rush on top of paying you for the job.  Sound good?'";
 	say "     Understanding that Dr. Matt needs this information and that you'd best get on Zephyr's good side to get it, you nod ask her what needs to be done.  'Excellent!  We can't really go hiring you on right now, but even working for us freelance will really help you in the long run.  Zephyr's moving up in the world and you really want to be part of the team, trust me,' she says with a knowing smile.";
 	say "     'Now, what we need you to do is place a few of these nanite density monitors at a few key locations in the city.  They'll help us detect the prop-' she stops herself short.  'Well, a temp doesn't need to know the details.  They measure some stuff about the nanites.  Perfectly safe,' she adds reassuringly.  'We've set a few up already nearby, but HQ wants them placed at four other key locations across the city: The downtown high rise district, the city park, the beachfront area and the seedy red light district.  They should be placed in open, elevated locations where they won't be disturbed.  Once you get to an area, try hunting around for a ['][bold type]detector site[roman type]['] to find an appropriate place to set it up.'";
@@ -410,14 +410,13 @@ instead of conversing Larissa while hp of doctor matt is 16:
 	now hp of doctor matt is 17;
 
 
-instead of conversing Larissa while hp of doctor matt is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
+to say zephyrmatt2:
 	say "     'Don't forget about taking care of those nanite detection monitors.  Our system shows that there [if number of entries in ndmlist is 1]is still one[otherwise if number of entries in ndmlist is 2]are still two[otherwise if number of entries in ndmlist is 3]are still three[otherwise]are still four[end if] left to be placed.  We won't be able to pay you for the work until the whole job is completed.  Remember, if you get this done, I'll put a rush on that request from Dr. Matt for you,' she says with a bureaucratic smile that tells you that you have no real choice in the matter.";
 
-instead of conversing Larissa while hp of doctor matt is 17 and number of entries in ndmlist is 0:
+to say zephyrmatt3:
 	say "     Larissa looks up from some papers as you step over to her desk, telling her that you've got all four of them in place.  She taps a few keys on her computer and nods.  'We've got all four active and transmitting data.  Their placement seems... good,' she says after a pause.  'Very good, even.  Nicely done.'  Remembering the effort involved, you nod politely and bite back a comment about how it better well be good enough.";
 	say "     'I'll inform head office that Dr. Matt's completed his end of the bargain,' she adds, sliding you a CD-ROM.  'The data's encrypted and Dr. Matt - what an odd name - will be sent the key electronically.'  You take the disk and tuck it away somewhere safe.";
 	say "     The woman slides you a credit voucher.  'There you go.  That's two hundred free credits, good for any place that accepts the new currency of the new world,' she says with a smile.  Again, you have to bite your tongue from saying that this is just about the only place around that takes them right now.  You should at least be able to get some supplies or some gear from these guys.";
-[	say "     'So, cute stuff,' Larissa adds, 'What're you up to later?'  Cha-ching!";	]
 	increase freecred by 200;
 	now hp of doctor matt is 18;
 

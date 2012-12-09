@@ -74,6 +74,7 @@ to say gsdfurcolour:
 	say "[one of]black and tan [or]sable [or]blue and tan [or] black and silver [sticky random]";
 
 to say take gsd:
+	if zephyrtask is 2, increase zephyrpests by 1;
 	now gsd attack is  0; [Encounter over, reset for the next time!]
 	if a random number from 25 to 100 < libido of the player:
 		choose row monster in Table of random critters;
@@ -154,7 +155,7 @@ When Play begins:
 	now lev entry is 3;
 	now wdam entry is 5;			[Amount of  Damage monster Does when attacking.]
 	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;			[ Used in infection Calculations, if cocks > 0 shaft will grow to cock length & girth dimensions slowly]
+	now cocks entry is 1;			[ Used in infection Calculations, if cocks > 0 shaft will grow to cock length & girth dimensions slowly]
 	now cock length entry is 8;		[ Length infection will make cock grow to if cocks > 0 ]
 	now cock width entry is 4;		[ Width Infection will make cock grow to is cocks > 0 ]
 	now breasts entry is 8;			[ Number of Breasts infection will give you. ]

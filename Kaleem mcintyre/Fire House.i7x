@@ -823,7 +823,6 @@ Instead of sniffing:
 	say "The fire pole smells like sweat, nervousness, excitement and above all else hardworking diligence.";
 
 Firepolescaling is an action applying to nothing. 
-Understand "go up" as Firepolescaling.
 Understand "climb up" as Firepolescaling.
 Understand "scale up" as Firepolescaling.
 

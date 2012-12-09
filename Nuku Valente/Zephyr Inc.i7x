@@ -1,4 +1,4 @@
-Zephyr Inc by Nuku Valente begins here.
+Version 2 of Zephyr Inc by Nuku Valente begins here.
 
 "It[']s about time for Zephyr to show up around here."
 
@@ -16,18 +16,7 @@ instead of sniffing the Zephyr Lobby:
 
 Section 2 - Larissa
 
-Larissa is a woman. "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.". She is in Zephyr Lobby.
-The conversation of Larissa is { "We are looking for extracted vial samples.  If you obtain some, please bring it to me to ['][bold type]vialsell <name>[roman type]['] for a credited reward." }.
-
-Larissa has a list of text called vials.
-
-The description of Larissa is "She is about five and a half feet, with suntanned flesh. She seems perfectly human - an oddness in this city. Her name badge, worn on her generous chest, reads 'Larissa'. She had brown straight hair that goes down a little past her shoulders. She wears a lab coat, but it seems more like a uniform than any actual dedication to the sciences. It certainly looks cute on her though. Her silver eyes have specks of brown in them, easily seen as she asks how she can help you in a cheerful tone.";
-
-instead of sniffing Larissa:
-	say "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer.  You do catch a faint hint of lilacs, probably a perfume.";
-
-instead of fucking Larissa:
-	say "Larissa pulls a spritz bottle out of the a drawer under the counter, spraying you with diluted vinegar.  You are driven back.  'Is everyone a horny freak now?  Why can't they just all leave me alone so I can work in peace?' she grumbles.";
+[Moved to Larissa file in the Stripes sub-folder]
 
 
 Section 3 - Selling Vials
@@ -84,11 +73,11 @@ Carry out vialselling:
 		say ", but she shakes her head.  'We have met our quota for that sample and have no more interest nanites from [name entry] creatures.  Try hunting for bigger game.'";
 		continue the action;
 	if found is 0:
-		say " and she smiles, taking it from you.  'We were hoping to get one of these samples for your bureau's collection.'  She credits you for [basevalue] freecreds.";
+		say " and she smiles, taking it from you.  'We were hoping to get one of these samples for our bureau's collection.'  She credits you for [special-style-1][basevalue][roman type] freecreds.";
 	otherwise if found is 1:
-		say " and she smiles, taking it from you.  'Thanks for another sample.  I can give you an okay price for that.'  She credits you for [basevalue] freecred(s).";
+		say " and she smiles, taking it from you.  'Thanks for another sample.  I can give you an okay price for that.'  She credits you for [special-style-1][basevalue][roman type] freecred(s).";
 	otherwise if found >= 2:
-		say " and she nods, taking it from you.  'We have a few of these already, so I can't pay you as much for more.'  She only credits you with [basevalue] freecred(s) for it.";
+		say " and she nods, taking it from you.  'We have a few of these already, so I can't pay you as much for more.'  She only credits you with [special-style-1][basevalue][roman type] freecred(s) for it.";
 	increase freecred by basevalue;
 	remove entry z from vials of player;
 	add name entry to vials of Larissa;
