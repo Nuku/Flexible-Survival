@@ -112,6 +112,7 @@ Carry out reciting:
 						now park detector site is resolved;
 						now ndmlist is { };
 						increase freecred by 200;
+						if hp of Larissa is 0, now hp of Larissa is 1;
 					otherwise if hp of doctor matt is 100:
 						remove orthas from play;
 						now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
