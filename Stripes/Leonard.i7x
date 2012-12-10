@@ -1,5 +1,5 @@
 Version 3 of Leonard by Stripes begins here.
-[Version 3 - Quest Finale]
+[Version 3.1 - Small tweaks tying into the Leonard Events]
 
 "Adds a Male Feline NPC named Leonard to the Flexible Survival game"
 
@@ -29,7 +29,7 @@ instead of sniffing Lion's Den:
 	say "There is a faint, damp smell to the lion's den beneath the strong, masculine scent of its occupant.";
 
 to say lionsdendesc:
-	say "     The dark cave extends for about thirty or forty meters at a roughly even diameter, making you suspect it is some sort of abandoned tunnel project.  The back half of the cave has been furnished rather lavishly, with such items as plush chairs and ottomans arranged on a large rug like a sitting room.  Beside those are a small bookcase and a coat rack holding several lanterns for light.  Past those, there lies a dining room table and chairs with a small camping stove set up along one wall.  There is another bookcase nearby for cooking supplies.  It form a partial wall with a hand-carved wardrobe at its back.  This last section holds a very large, four-poster bed that abuts the end of the tunnel cave.";
+	say "     The dark cave extends for about thirty or forty meters at a roughly even diameter, making you suspect it is some sort of abandoned tunnel project.  The back half of the cave has been furnished rather lavishly, with such items as plush chairs and ottomans arranged on a large rug like a sitting room.  Beside those are a small bookcase and a coat rack holding several lanterns for light[if leonardwrdesk is true] as well as Leonard's new writing desk[end if].  Past those, there lies a dining room table and chairs with a small camping stove set up along one wall[if leonardcabinet is true].  There is an ornate cabinet to house his cooking supplies[otherwise].  There is another bookcase nearby for cooking supplies[end if].  It form a partial wall with a hand-carved wardrobe at its back.  This last section holds a very large, four-poster bed that abuts the end of the tunnel cave.";
 	say "     There are several paintings attached to the walls.  These seem quite old and possibly quite expensive.  They have been tastefully chosen, all going well together despite being from different styles and artists.  While not depicting anything overtly erotic, you can't help but feel the paintings have a primal, sexual quality to them.";
 	if hp of Leonard >= 16:
 		say "     Leonard's subservient maids are here as well, having obtained cute maid outfits from somewhere.  They are happily [one of]cleaning the cave[or]lovingling grooming their handsome master's mane[or]changing the sheets on the bed[or]preparing some food for their master[or]dusting, making sure to bend over with their tails up to flash their pantiless bottoms at their handsome master[or]snuggled up together, their paws caressing one another[or]snuggling up to you, showing their love for their pride mother[in random order].  They seem quite content in their new role as Leonard's servants, having completely forgotten about ever once being lions or leading prides of their own.";
@@ -116,6 +116,7 @@ Instead of conversing the Leonard:
 		say "     After letting you ride him for several minutes, he shifts positions by pushing you to lay back on the plush bed while he kneals between your legs.  With his cock still buried in you, but your ass raised and legs around his waist, he growls and pounds into you with even greater vigour.  'Ngg... you're such a horny kitty slut, ready to do whatever I want to get another ride on my big, lion cock,' he rumbles, gripping your ass firmly.  As he fucks you, he continues to tell you what you already know, that you're one of his eager, needy, submissive kitty sluts and you mewl and nod in agreement with the powerful male, willing to do whatever he wants of you as long as he keeps fucking you.";
 		say "     As his balls tighten up as his cock pulses in readiness, he drives himself hard into you.  'Yes, take it all, my eager [if cunts of player > 0]girl[otherwise]girly-boy[end if].  Another hot dose of cum from your lion master,' he says with a growl of lust.  You grip the sheets tightly and [if cocks of player > 0 or cunts of player > 0]cum hard[otherwise]yowl in delight[end if] as your feel his hot seed pumping into you, filling your needy body with his heat.  Once this balls have drained their ample load into your [if cunts of player > 0]womb[otherwise]bowels[end if], you are released and slide slowly off his spent member to sprawl out on your master's bed with him atop you while you both drift off for a quick catnap filled with dreams of feline lust and submission.[impregchance]";
 		infect "Feline";
+		rest;
 		now feline_meow is feline_meow / 2;
 		now libido of player is ( libido of player + libido of player + 30 ) / 3;
 		decrease humanity of player by 5;
@@ -146,6 +147,7 @@ Instead of conversing the Leonard:
 		say "     When you awaken, you find the girls from your group snuggled back around you.  As you start to get up, they are roused as well.  After some kisses and snuggles with your feline sisters, they head on their way.";
 		infect "Feline";
 		infect "Feline";
+		rest;
 		now feline_meow is feline_meow / 2;
 		now libido of player is ( libido of player + libido of player + 60 ) / 3;
 		decrease humanity of player by 25;
@@ -202,6 +204,7 @@ instead of fucking the Leonard:
 			say "[leonardsex_firsttimeA]";
 			infect "Feline";
 			infect "Feline";
+			rest;
 			increase libido of player by 20;
 			if libido of player > 80, now libido of player is 80;
 			decrease humanity of player by 4;
@@ -209,6 +212,7 @@ instead of fucking the Leonard:
 			say "[leonardsex_firsttimeB]";
 			infect "Feline";
 			infect "Feline";
+			rest;
 			increase libido of player by 5;
 			if libido of player > 100, now libido of player is 100;
 			decrease humanity of player by 4;
@@ -218,6 +222,7 @@ instead of fucking the Leonard:
 		if hp of Leonard < 4, now hp of Leonard is 4;
 		say "[leonardsex_newkitty]";
 		now feline_status is 2;
+		rest;
 		decrease humanity of player by 8;
 		follow the turnpass rule;
 		if hp of Leonard is 7:
@@ -228,6 +233,7 @@ instead of fucking the Leonard:
 		if hp of Leonard < 4, now hp of Leonard is 4;
 		say "[leonardsex_pridekitty]";
 		now feline_status is 3;
+		rest;
 		now feline_meow is feline_meow / 2;
 		decrease libido of player by libido of player / 3;
 		decrease humanity of player by 8;
@@ -237,6 +243,7 @@ instead of fucking the Leonard:
 		if hp of Leonard < 4, now hp of Leonard is 4;
 		say "[leonardsex_purefeline]";
 		infect "Feline";
+		rest;
 		now feline_meow is feline_meow / 2;
 		decrease libido of player by libido of player / 4;
 		decrease humanity of player by 8;
@@ -248,6 +255,7 @@ instead of fucking the Leonard:
 			increase libido of player by 4;
 			decrease humanity of player by 4;
 		infect "Feline";
+		rest;
 		now feline_meow is feline_meow / 2;
 		decrease libido of player by libido of player / 4;
 		decrease humanity of player by 4;
@@ -426,6 +434,7 @@ to say leonardmate_newkitty:
 		say "     As you all lie back on the bed, the feline girl snuggles up contentedly between your both, her new pride leader and lover on one side and her pride matron on the other.  Leonard wraps his strong, furry arms wrap around you both.  He nuzzles you, telling you again how he loves you and what a beautiful lioness you've become.  He strokes your [if facename of player is listed in infections of felinelist]muzzle[otherwise]cheek[end if], saying that with you by his side, you can form a beautiful pride together.";
 		increase libido of player by 12;
 		if libido of player > 100, now libido of player is 100;
+	rest;
 	now feline_status is 2;
 	decrease humanity of player by 5;
 	follow the turnpass rule;
@@ -454,6 +463,7 @@ to say leonardmatesex3:			[Have sex]
 	say "     You mrowl and purr beneath your leonine lover as he thrusts into you steadily, taking a slower approach than his usual animal mating.  With your arms around him, you stroke his softly-furred back and rear, giving those strong muscles the occasional squeeze as tremors of delight run through you[if breast size of player > 0 and the player is felinebodied].  He moves a paw to cup one of your breasts, caressing it before leaning down to wrap his lips around your nipple, nursing some of your feline milk from it.  'Mmm... you are delicious, my dear.  It is no wonder that the feline girls love nursing from you so much,' he purrs, licking his muzzle.  You caress his cheek and tell him to leave some for them as well, to which he grins and gives your nipple a slow lick with his raspy tongue, cleaning up the stray drops of milk from it before kissing you[otherwise if breast size of player > 0].  He moves a paw to cup one of your breasts, caressing it.  He leans down and licks his raspy tongue slowly across your hard nipple, sending a shiver of pleasure through you.  He then presses his muzzle to your lips, kissing you again[otherwise].  He moves a paw to rub over your flat chest and tweaks your nipples.  He leans down and licks slowly across one of them with his raspy tongue before nuzzling back up to kiss you again[end if].  As you kiss, you slide a hand around to fondle the lion's hefty ballsac, enjoying the thought of soon obtaining their contents within your womb[if gestation of child is 0 and larvaegg is not 2] to breed you[end if].";
 	say "     As Leonard starts to lick and nip along your neck and shoulders, his panting grows heavier and his thrusts harder as his excitement builds.  You grip his firm ass with your hands and squeeze it with every thrust he makes into you, pulling him firmly forward to drive his leonine shaft into you.  Soon enough, he roars in lustful release and you feel that familiar rush of your handsome lover's hot seed shooting into you and flowing into your womb as his body seeks to breed its mate again.  You mrowl and [if bodyname of player is listed in infections of Felinelist]dig your claws into his rear as you orgasm powerfully, arching your back and cry out in ecstasy[otherwise]grab his rear firmly as you orgasm powerfully, arching your back and crying out in ecstacy[end if].  After several firm thrusts and their accompanying blasts of lion cum, his balls are drained and your womb is full of his thick seed, leaving you with a pleasant bump from his considerable output[if gestation of child is 0 and larvaegg is not 2] which you hope will soon grow even larger[end if].  He eases himself from you slowly and snuggles up beside you, purring happily about what a wonderful mate you are and that the pride will become even greater with you as its matron.  As you drift off for a brief catnap after your romp, he wraps his arms around you, resting one paw on your tummy and the other at your recently-filled pussy.[impregchance]";
 	infect "Feline";
+	rest;
 	now feline_meow is feline_meow / 2;
 	decrease libido of player by libido of player / 4;
 	decrease humanity of player by 4;
@@ -467,6 +477,7 @@ to say leonardmatesex4:			[Doggy-style]
 	say "     His pace picks up and his breathing grows heavier as his arousal builds[if cunts of player > 0].  Your feminine juices run down your legs as he pumps into your squeezing, quivering pussy[otherwise].  Your anus clenches down around him tightly each time he pushes deep inside you[end if].  And soon your effort is rewarded as Leonard takes your nape in his muzzle and holds it gently while driving into you hard and fast.  After a few of this pounding thrusts, you feel his ballsac tauten and feel his hot seed blasting into you moments later.  His ample load fills you with warmth and satisfaction[if cocks of player > 0 or cunts of player > 0], getting you to cum powerfully as well with a feline yowl of ecstacy[end if].  You can feel his virile semen [if cunts of player > 0]splashing against your cervix and flowing into your womb[otherwise if cocks of player > 0]splashing against your prostate and filling your bowels[otherwise]filling your bowels[end if].  By the time his large balls are drained, you've got a pleasant, warm, full feeling in your belly that makes you feel fulfilled.[impregchance]";
 	say "     Remaining sheathed inside you, he rolls onto his side with you in his arms, spooning with you even as his cock gives its last twitches.  'Mmm... my beautiful strong mate.  I do so enjoy our times together like this.  You must simply stay so I might enjoy this pleasure every day[if cunts of player > 0]and fill you with litters of cubs[end if].'  You snuggle yourself back against him and you promise him that you'll think about it, but add that you feel there's more you must do out in the city as well.  He nuzzles you and licks your ear, letting you know he understands before you drift off to rest for a bit with his half-hard cock still buried inside you, purring happily together.";
 	infect "Feline";
+	rest;
 	now feline_meow is feline_meow / 2;
 	decrease libido of player by libido of player / 4;
 	decrease humanity of player by 4;

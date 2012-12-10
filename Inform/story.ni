@@ -11,7 +11,7 @@ use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 50000.
-use ALLOC_CHUNK_SIZE of 116000.
+use ALLOC_CHUNK_SIZE of 120000.
 use MAX_OBJECTS of 1100.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
@@ -3616,6 +3616,9 @@ check resting:
 
 carry out resting:
 	Rest;
+	follow the turnpass rule;
+	follow the player injury rule;
+	say "You are [descr]([hp of player]/[maxhp of player]).";
 
 To Rest:
 	if cot is owned or cot is present or the player is in the Bunker:
@@ -3623,14 +3626,16 @@ To Rest:
 		let num2 be ( stamina of the player * 2 ) + level of the player;
 		if num1 >= num2, increase hp of player by num1;		[best value chosen]
 		if num2 > num1, increase hp of player by num2;
-		increase the hp of the player by (the stamina of the player times 2) plus the level of the player;
 	otherwise if "Roughing It" is listed in feats of player:
 		let num1 be maxhp of the player divided by 4;
 		let num2 be ( stamina of the player * 2 ) + level of the player;
 		increase hp of player by ( num1 + num2 ) / 2;		[average value chosen]
-	follow the turnpass rule;
-	follow the player injury rule;
-	say "You are [descr]([hp of player]/[maxhp of player]).";
+	otherwise:		[accessible only when events induce resting]
+		let num1 be maxhp of the player divided by 4;
+		let num2 be ( stamina of the player * 2 ) + level of the player;
+		if num1 <= num2, increase hp of player by num1;		[lowest value chosen]
+		if num2 < num1, increase hp of player by num2;
+
 
 
 This is the explore rule:
