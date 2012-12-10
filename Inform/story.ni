@@ -5390,6 +5390,7 @@ Include Mammoth For Fs by Stripes.
 Include Black Wolf For Fs by Stripes.
 Include Mall Rat For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
+Include Math Teacher For Fs by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.
