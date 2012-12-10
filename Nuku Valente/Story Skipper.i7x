@@ -16,9 +16,9 @@ The conversation of trixie is { "Hello. I will teach you a magic word. To use it
 To say magic word:
 	if wrcursestatus is 5:
 		wrcurserecede;	[puts player back to normal form and restores proper stats for saving]
-	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[location of Snow]}[location of Sandra]}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}[if Needy Rabbit Girl is resolved]1[otherwise]0[end if]}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
+	say "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxhp of player]}[humanity of player]}[score - 50]}[hp of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}X}X}[if Hyper Squirrel Girl is resolved]1[otherwise]0[end if]}X}[location of coleen]}[coleentalk]}[coleenfound]}[coleencollared]}[coleenalpha]}[coleenslut]}[coleenspray]}[hp of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[nes]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[deerhappy]}[mattcollection]";	[THIS PORTION IS CLOSED - ADD TO NEXT SECTION]
 	say "[line break]'It seems this magic word gets longer every time I say it. Here is the second half,' she says, taking a breath before speaking on:[line break]";
-	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]";
+	say "continuedchant}[orthasstart]}[fancyquest]}[hp of sven]}[lust of sven]}[sarahslut]}[sarahtalk]}[sarahpups]}X}[alexbrunch]}[treasurefound]}[tmapfound]}[hp of Sandra]}[franksex]}[hp of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[otherwise]0[end if]}[if exotic bird is tamed]1[otherwise]0[end if]}[if Felinoid companion is tamed]1[otherwise]0[end if]}[if bee girl is tamed]1[otherwise]0[end if]}[if house cat is tamed]1[otherwise]0[end if]}[if little fox is tamed]1[otherwise]0[end if]}[if skunk kit is tamed]1[otherwise]0[end if]}[if helper dog is tamed]1[otherwise]0[end if]}[mousecurse]}[hp of Elijah]}[npcEint]}[if latexhuskymode is true]1[otherwise]0[end if]}[if insectlarva is true]1[otherwise]0[end if]}[hp of Leonard]}[hp of Solstice]}[hp of Ronda]}[hp of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[hp of Eric]}[hp of Christy]}[dragontype]}[dragonessfuck]}[hp of Doctor Medea]}[hp of Doctor Moffatt]}[hp of Lucy]}[thirst of david]}[lust of david]}[hp of david]}[hp of Adam]}[hp of Alexandra]}[hp of Larissa]";
 	say "[line break]'You'll need to recite that part on its own (including the continuedchant part) after telling me the first one using a second recite command.  Don't ask me to explain why.  It's magic!' she says in a teasing tone with a big grin while waggling her fingers.  'Just be sure to copy and paste that somewhere so you can use it to restore.  If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log.'";
 	if wrcursestatus is 5:
 		say "[line break]     Trixie waves her magic wand around and you flash between your normal form and your wereraptor form a few times so she can examine it before leaving you fully as a wereraptor once again.";
@@ -189,28 +189,20 @@ Carry out reciting:
 						now weapon type of player is weapon type of Y;
 						say "You ready your [Y].";
 						break;
-			-- 28:	[Snow]
-				repeat with Y running through rooms:
-					if the printed name of Y matches the text b, case insensitively:
-						now snow is in Y;
-			-- 29:	[Sandra]
-				repeat with Y running through rooms:
-					if the printed name of Y matches the text b, case insensitively:
-						now Sandra is in Y;
+			-- 28:	[redundant - removed]
+				now tempnum is 0;		[Duplicate removed]
+			-- 29:	[redundant - removed]
+				now tempnum is 0;		[Duplicate removed]
 			-- 30:	[Snow]
 				if the player's command matches "[number]":
 					if the number understood is 1:
 						now hyper squirrel girl is resolved;
-						now squirrel den is known;
+						now Snow is in Grey Abbey Library;
 					otherwise:
 						now hyper squirrel girl is not resolved;
-			-- 31:	[Sandra]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now needy rabbit girl is resolved;
-						now rabbit den is known;
-					otherwise:
-						now needy rabbit girl is not resolved;
+						remove Snow from play;
+			-- 31:	[redundant - removed]
+				now tempnum is 0;		[Duplicate removed]
 			-- 32:	[Coleen]
 				repeat with Y running through rooms:
 					if the printed name of Y matches the text b, case insensitively:
@@ -403,8 +395,7 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now sarahpups is the number understood;
 			-- 67:	[-nothing-]
-				if the player's command matches "[number]":
-					now tempnum is 0;		[Duplicate removed]
+				now tempnum is 0;		[Duplicate removed]
 			-- 68:	[Brunch w/Alex]
 				if the player's command matches "[number]":
 					now alexbrunch is the number understood;
@@ -425,6 +416,15 @@ Carry out reciting:
 			-- 71:	[Sandra + Coleen]
 				if the player's command matches "[number]":
 					now hp of Sandra is the number understood;
+					now lust of Sandra is turns;
+					if hp of Sandra > 0:
+						now Sandra is in the bunker;
+						now needy rabbit girl is resolved;
+						now rabbit den is known;
+					otherwise:
+						now Sandra is in Rabbit Den;
+						now needy rabbit girl is not resolved;
+						now rabbit den is unknown;
 			-- 72:	[Frank]
 				if the player's command matches "[number]":
 					now franksex is the number understood;
@@ -439,6 +439,8 @@ Carry out reciting:
 				if the player's command matches "[number]":
 					now libido of Fang is the number understood;
 					if libido of Fang is 2 and ( hp of Fang is 1 or hp of Fang is 2 ), now libido of Fang is 1;
+					if Fang is not in the Grey Abbey Library and Sandra is not in the Bunker:
+						now libido of Fang is 0;
 			-- 75:	[Philip]
 				if the player's command matches "[number]":
 					now pigfed is the number understood;
@@ -1030,16 +1032,12 @@ Carry out reciting:
 		move Sarah to bunker;
 		now Husky Pack is resolved;
 	if sarahpups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
-	if Sandra is in bunker and hp of Sandra is 0, now hp of Sandra is 1;
-	now lust of Sandra is turns;
 	if franksex is 0:
 		now Comic Shop is unknown;
 		now Mephitness is unresolved;
 	otherwise:
 		now Comic Shop is known;
 		now Mephitness is resolved;
-	if Fang is not in the Grey Abbey Library and Sandra is not in the Bunker:
-		now libido of Fang is 0;
 	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
 	wait for any key;
 
