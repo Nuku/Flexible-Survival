@@ -61,7 +61,7 @@ When Play begins:
 	now hp entry is 28;
 	now lev entry is 6;
 	now wdam entry is 6;
-	now area entry is "Outside";
+	now area entry is "Capitol";
 	now cocks entry is 1;
 	now cock length entry is 10;
 	now cock width entry is 8;

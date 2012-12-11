@@ -3756,7 +3756,6 @@ This is the turnpass rule:
 		if bodyname of player is "human" or ( shiftable is 2 and humanity of player > 49 ):		[blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
-			sort table of random critters in random order;
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y from the table of random critters;
 				if name entry is bodyname of player:
@@ -4113,12 +4112,14 @@ This is the cock descr rule:
 		now descr is "[one of]average in size[or]normal sized[at random]";
 	otherwise if cock length of player is less than 12:
 		now descr is "[one of]large[or]sizable[or]well-built[or]longer than average[at random]";
-	otherwise if cock length of player is less than 13:
+	otherwise if cock length of player is 12:
 		now descr is "foot long";
 	otherwise if cock length of player is less than 18:
 		now descr is "[one of]huge[or]heavy[or]ponderous[or]massive[or]forearm length[at random]";
+	otherwise if cock length of player is less than 25:
+		now descr is "[one of]giant[or]hulking[or]hypertrophied[or]elephantine[or]monstrous[at random]";
 	otherwise:
-		now descr is "[one of]giant[or]hulking[or]hypertrophied[or]monstrous[or]mammoth[or]gigantic[or]colossal[or]titanic[or]third leg[or]elephantine[at random]";
+		now descr is "[one of]mammoth[or]gigantic[or]colossal[or]titanic[or]third leg[at random]";
 	now cock size desc of player is descr;
 	rule succeeds;
 
@@ -4153,8 +4154,10 @@ This is the cunt descr rule:
 		now descr is "[one of]large[or]thick lipped[or]above average[at random]";
 	otherwise if cunt length of player is less than 18:
 		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
+	otherwise if cunt length of player is less than 25:
+		now descr is "[one of]titanic[or]astonishingly deep[or]elephantine[at random]";
 	otherwise:
-		now descr is "[one of]titanic[or]seemingly bottomless[or]elephantine[at random]";
+		now descr is "[one of]cavernous[or]seemingly bottomless[or]canyonlike[at random]";
 	now cunt size desc of player is descr;
 	rule succeeds;
 
@@ -4169,8 +4172,6 @@ to say body size of ( x - a person ):
 		say "large";
 	otherwise:						[12+ ft in height]
 		say "huge";
-
-
 
 
 looknow is a number that varies.
@@ -5396,6 +5397,7 @@ Include Black Wolf For Fs by Stripes.
 Include Mall Rat For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
 Include Math Teacher For Fs by Stripes.
+Include Dark Elf for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.

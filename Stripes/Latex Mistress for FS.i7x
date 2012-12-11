@@ -6,8 +6,6 @@ Version 1 of Latex Mistress for FS by Stripes begins here.
 Section 1 - Monster Responses
 
 when play begins:
-[These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Template' with your creature's name entry.  Case sensitive.]
 	add { "Latex Mistress" } to infections of girl;
 
 

@@ -93,19 +93,23 @@ instead of going east from Rusty Walkways:
 
 this is the capitol wandering rule:
 	now battleground is "Capitol";
-[	let bonus be 20;		[base 20% chance of random fight while simply moving]
+	let bonus be 20;		[base 20% chance of random fight while simply moving]
 	if "Curious" is listed in feats of player, increase bonus by 4;
 	if "Stealthy" is listed in feats of player, decrease bonus by 4 + (( perception of player - 10 ) / 2);
 	if "Bad Luck" is listed in feats of player, increase bonus by 4;
 	if a random number from 1 to 100 <= bonus:
-		say "     As you are trying to traverse the area, you are spotted by a roaming creature which moves in to confront you.";
-		fight;
-		if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
-			say "     As you are trying to recover from your last encounter, another roving creature finds you.";
+		if level of player > 3:
+			say "     As you are trying to traverse the area, you are spotted by a roaming creature which moves in to confront you.";
 			fight;
-		say "     After that delay, you continue on your way, hoping to find someplace to a little safer, if at least only for the moment.";
-		follow the turnpass rule;
-]
+			if ( ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ) ) and battleground is not "void":
+				say "     As you are trying to recover from your last encounter, another roving creature finds you.";
+				fight;
+			say "     After that delay, you continue on your way, hoping to find someplace to a little safer, if at least only for the moment.";
+			follow the turnpass rule;
+		otherwise:
+			say "     As you are trying to traverse the area, you spot a powerful creature roaming nearby.  You are forced to take cover and wait for it to eventually leave.  After that delay, you continue on your way, hoping to find someplace a little safer, if at least only for the moment.";
+			follow the turnpass rule;
+
 
 Section 4 - Situations
 
