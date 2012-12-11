@@ -5,7 +5,7 @@ Version 1 of Blanche by Stripes begins here.
 Section 1 - Event
 
 Wolfrape is a situation.  The level of Wolfrape is 16.
-The sarea of Wolfrape is "Outside";		[move back to Capitol Bldg area once populated]
+The sarea of Wolfrape is "Capitol";		[move back to Capitol Bldg area once populated]
 when play begins:
 	add Wolfrape to badspots of hermaphrodite;
 	add Wolfrape to badspots of girl;
