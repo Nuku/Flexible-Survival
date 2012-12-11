@@ -4,8 +4,14 @@ Version 1 of Larissa for FS by Stripes begins here.
 
 Section 1 - Basic Larissa
 
-Larissa is a woman. "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.". She is in Zephyr Lobby.
+Larissa is a woman. "[larissaview]". She is in Zephyr Lobby.
 The conversation of Larissa is { "$$$$$$$$!" }.
+
+to say larissaview:
+	if hp of Larissa <= 2:
+		say "Manning the counter is a female human with no clear signs of mutation. Her name badge declares her to be 'Larissa'.";
+	otherwise:
+		say "Manning the counter is Larissa, now a [if cocks of Larissa > 0 and cunts of Larissa > 0]herm[otherwise if cocks of Larissa > 0]male[otherwise if cunts of Larissa > 0]female[otherwise]neuter[end if] [form of larissa] who seems pretty pleased with [possadj of Larissa] new look.";
 
 Larissa has a list of text called vials.
 
@@ -312,7 +318,7 @@ when play begins:
 	add { "Alpha Husky", "German Shepherd", "Naga" } to possible_forms_guy of Larissa;
 	add { "Tigress Hooker", "Mammoth" } to possible_forms_girl of Larissa;
 
-this is the larissa_tfoption rule:		
+this is the larissa_tfoption rule:
 	if furry is not banned, add possible_forms_furry of Larissa to possible_forms of Larissa, if absent;
 	if guy is not banned, add possible_forms_guy of Larissa to possible_forms of Larissa, if absent;
 	if girl is not banned, add possible_forms_girl of Larissa to possible_forms of Larissa, if absent;

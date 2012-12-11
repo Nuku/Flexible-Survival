@@ -99,7 +99,7 @@ Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"vixentaur"	--	--	--	vxntaurpounce rule	20	--	--	--	vixentaurscent rule	--
+"vixentaur"	retaliation rule	--	--	vxntaurpounce rule	20	--	--	--	vixentaurscent rule	--
 
 this is the vxntaurpounce rule:		[damage+arousing pounce]
 	choose row monster from the table of random critters;
