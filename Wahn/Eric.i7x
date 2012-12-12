@@ -1,5 +1,5 @@
-Version 1 of Eric by Wahn begins here.
-[Version 0.7: Lowered the Difficulty of the Charisma check at the start]
+Version 2 of Eric by Wahn begins here.
+[Version 2: Adjustment for the new first meeting with the hulking cheerleaders]
 [Todo: possibly npc interactions & more conversation]
 "Adds an NPC named Eric to the Flexible Survival game"
 
@@ -49,8 +49,8 @@ Instead of resolving a Barricaded Lockerroom:
 	otherwise:
 		say "     Deciding not to bother with the crazed fellow further, you head off before anything else notices you poking around.";
 		now Barricaded Lockerroom is resolved;
-	
-Campus Arena Lockerroom is a room. It is fasttravel. It is private. 
+
+Campus Arena Lockerroom is a room. It is fasttravel. It is private.
 The description of Campus Arena Lockerroom is "[lroomdesc]";
 
 instead of sniffing Campus Arena Lockerroom:
@@ -120,7 +120,7 @@ to say ericdesc:
 instead of conversing the Eric:
 	if (hp of Eric is 0):   [starting state]
 		say "     Eric tells you what happened to him when the plague hit - with people shifting all around and his best friend taking a bite out of his arm, he moved in here and barricaded himself in. Since then, he's only left a few times, sneaking outside at night when most creatures are sleeping to gather some supplies. You in turn tell him of all the things you've seen and witnessed out in the city, making him go pale as he listens.";
-		say "     When you finish, Eric asks you 'You're a pretty resilient person from your stories... could you maybe help me save Stacy, my girlfriend? Well, ex-girlfriend I guess - she broke up with me a day before the plague hit... but that doesn't matter now. I've tried to find her and bring her here, but there was a massive green creature moving around her dorm building every time I checked. I just couldn't fight something that big, so I sneaked away before it noticed me. Please, help me save her from there!";
+		say "     When you finish, Eric asks you 'You're a pretty resilient person from your stories... could you maybe help me save Stacy, my girlfriend? Well, ex-girlfriend I guess - she broke up with me a day before the plague hit... but that doesn't matter now. I've tried to find her and bring her here, but there was a massive green creature moving around her dorm building every time I checked. I just couldn't fight something that big, so I sneaked away before it noticed me. Please, help me save her from there!'";
 		if the player consents:   [going on a rescue mission]
 			say "     Eric arms himself with a baseball bat and you move out together, mostly staying behind buildings and sneaking through the bushes. It goes pretty well, until you arrive at one of the main thoroughfare of the campus and have to step onto a large open area to move on. You almost make it, then hear a female voice behind you. Turning around, you see a succubus and incubus stand there, eying you like pieces of meat.";
 			say "     'It's just like you promised Aidan - a whole campus of pretty young things ripe for the plucking. How about you take that one,' she says with a nod to you, '- and I ride the redhead.'";
@@ -130,17 +130,25 @@ instead of conversing the Eric:
 			otherwise:
 				say "     Having beaten the incubus, you look around where the succubus and Eric are. There's some movement in the bushes in one direction, so you rush over there and find Eric half-dressed with the succubus running her hands all over him. She whirls around as she notices you, hissing at the distraction. As she comes closer, you ready yourself for an attack - and then Eric hits her with his bat from behind, ending the fight early. He says 'Let's get out of here.' and leads on towards your goal.";
 				increase score by 10;
+			say "[line break]";
 			say "     Arriving at a large dorm building, Eric guides you to the back entrance. You quietly make your way into the building, passing lots of empty rooms - and one with two naked bunny jocks in it, completely absorbed in stroking each other's cocks as they make out. Moving on, you arrive at a stairwell and go up two stories, then enter the hallway with Stacy's room in it. Finally you get to it, and Eric excitedly storms in - only to find it empty. He shouts 'Stacy? Where are you? Call out if you can hear me!', then throws open the door to the small bathroom in the back of the room. His frantic searching has you distracted for a moment, so that you notice the hulking presence behind you too late. A large green humanoid steps through the entrance door into the room behind you, giving you a backhanded slap that throws you across the room and into a wall.";
 			say "     The hulking green figure has recognizably female features and a pair of ample breasts. The rest of her - or him rather, as you can see a thick cock dangling between her legs from where you lie groggily on the ground - isn't quite as feminine. She's at least nine feet tall, her bulging muscles stretching a white crop top tightly over her large frame. Around her hips, you see a very short skirt that does almost nothing to hide her crotch and the male equipment there.";
 			say "     'Well well - here comes the cheating boyfriend and his newest little buddy.' She looks down at you in contempt. 'S-Stacy? Is that you? I told you, I didn't cheat on you - Diana kissed me just as you came in, not the other way around! I didn't do anything wrong!'";
 			say "     A scowl on her face, the former Stacy steps over your prone body and grabs Eric by the neck, holding him up in front of her face. 'Now listen you little - I know exactly...' suddenly she stops and sniffs the air, then lowers her head to Eric's crotch. 'Wait a minute - what's this? You're a girl now? Then I do know a way you can make it up to me - I'll take your virginity and forget about you and that bitch.' You see her cock lengthen and fill out a bit from below. Laying Eric down on the bed, Stacy just rips off his clothing, revealing his lean physique - and a pussy where his cock and balls should be. She holds him down with one hand, the other rubbing his pussy lips, making him moan at the unfamiliar sensations.";
 			say "[line break]";
-			say "     Your head clears a bit and the stars in front of your eyes vanish. With Stacy the cheerleader hulk distracted, now would be a good time to take her on and save Eric from the tender mercies of the girlfriend he intended to rescue. Or you could just stay right here and watch - on the floor right behind Stacy, you got a ringside seat for the action. Her cock is long enough that you could reach out and touch it, and you got a nice sight of Eric's pussy at the edge of the bed from here. (Y = save him; N = watch them)";
+			say "     Your head clears a bit and the stars in front of your eyes vanish. With Stacy the cheerleader hulk distracted, now would be a good time to take her on and save Eric from the tender mercies of the girlfriend he intended to rescue. Or you could just stay right here and watch - on the floor right behind Stacy, you got a ringside seat for the action. Her cock is long enough that you could reach out and touch it, and you got a nice sight of Eric's pussy at the edge of the bed from here. (Y = save him; N = watch them) ";
 			if the player consents:   [save him]
-				say "     You wait a moment longer, watching Stacy as she fingers Eric's pussy, making him gasp and moan and open his legs wide as new instincts take over. She continues to rub and stroke him until she's pretty wet, putting her fingers in her mouth to taste his female juices. 'Yes, you're ready. Now I'll show you what it means to be a woman!' she says, stroking her cock and moving closer to Eric. Then, as she's completely distracted, holding up her long erection close to Eric's folds, you rush at her and attack.";	     	
-				challenge "Hulking Cheerleader";
+				say "     You wait a moment longer, watching Stacy as she fingers Eric's pussy, making him gasp and moan and open his legs wide as new instincts take over. She continues to rub and stroke him until she's pretty wet, putting her fingers in her mouth to taste his female juices. 'Yes, you're ready. Now I'll show you what it means to be a woman!' she says, stroking her cock and moving closer to Eric. Then, as she's completely distracted, holding up her long erection close to Eric's folds, you rush at her and attack.";
+				if CheerleaderFirstEncounter is 0:
+					now CheerleaderFirstEncounter is 2;
+					challenge "Hulking Cheerleader";
+					now CheerleaderFirstEncounter is 0;
+				otherwise:
+					now CheerleaderFirstEncounter is 2;
+					challenge "Hulking Cheerleader";
+					now CheerleaderFirstEncounter is 1;
 				if lost is 1:
-					say "     With another hard slap, the hulking cheerleader sends you flying against the wall of the room, putting you in a world of hurt. You can only lie there and hold your aching body when she turns back to Eric.";	      
+					say "     With another hard slap, the hulking cheerleader sends you flying against the wall of the room, putting you in a world of hurt. You can only lie there and hold your aching body when she turns back to Eric.";
 					say "     Stacy pushes her massive erection against her ex-boyfriends folds, groaning as they spread and she sinks inside. You see her stop for a moment, presumably at his hymen, and say 'Ssh, hold still. It'll be over soon.' to him. There is a small pained yelp from Eric as she breaks through, but soon his lustful moans start up again as her hard shaft rubs against his insides. Going slow at first, then faster and faster, the gender-switched cheerleader starts fucking him in earnest, giving satisfied grunts each time she bottoms out in Eric's pussy. ";
 					say "     Not much later, Eric gasps as he has his first female orgasm, and you see his pussy juices glistening on Stacy's thrusting cock. She stops for a moment and looks down at the writhing cuntboy, then starts up again, harder and faster than before.";
 					say "     In between wild fucking, Stacy stops several times to pace herself and manages to last almost forty minutes, driving Eric to multiple more orgasms. As he is in the throes of another, she asks 'Do you like my cock inside you? Does it make you feel good?', and getting a moaned 'Yes' as an answer from him. She continues, 'Will you stay with me from now on? And let me fuck you anytime I want? And bear my children?', thrusting deep after each question and making Eric moan 'Yes, yes, yes.'";
@@ -148,24 +156,25 @@ instead of conversing the Eric:
 					say "     [line break]";
 					say "     You crawl out of the room and make your escape while she's still busy with Eric, having no choice but to concede him to her. With him having accepted being her girlfriend and likely already pregnant from her, there won't be any reason to come back here.";
 					now hp of Eric is 100;
-					remove Eric from play;          
+					remove Eric from play;
 				otherwise:
-					say "     With one last hit, the transformed woman collapses on the ground, leaving you the only person standing in her by now totally trashed room. You look over at Eric, who's been reduced to lying on the bed moaning, completely lost in the feelings his changed body is giving him. Seeing him there, legs spread and one hand rubbing the lips of his pussy, two possible choices come to mind. You could just take his virginity now while you can, or do the right thing and bring him to safety in the bunker under the library. (Y = fuck him, N = save him)";	      
+					say "     A moment later, the transformed woman collapses on the ground, leaving you the only person standing in her by now totally trashed room. You look over at Eric, who's been reduced to lying on the bed moaning, completely lost in the feelings his changed body is giving him. Seeing him there, legs spread and one hand rubbing the lips of his pussy, two possible choices come to mind. You could just take his virginity now while you can, or do the right thing and bring him to safety in the bunker under the library. (Y = fuck him, N = save him) ";	      
 					if the player consents:   [take advantage and take him to the bunker]
-						say "     This is an opportunity you don't want to miss - the cuntboy is hot and ready, lying there on the bed with spread legs and just waiting for it...";	      
+						say "     [line break]";
+						say "     This is an opportunity you don't want to miss - the cuntboy is hot and ready, lying there on the bed with spread legs and just waiting for it...";
 						if(cocks of player > 0):
-							say "     Your cock springs to attention as you step closer, then kneel on the bed between Eric's legs. Running your hands over his muscular legs, you arrive at his drippingly wet pussy and push two fingers inside, making him moan as you wiggle them. Inside, you feel the soft flesh of his hymen under your fingers - nice, he really is a virgin. The thought of taking his cherry on the bed of his former girlfriend makes your cock twitch in anticipation. You aim your manhood at his moist folds, rubbing its tip against his pussy lips, then push forward, sinking your shaft into his body until you reach his maidenhead and stop for a moment.";	      
+							say "     Your cock springs to attention as you step closer, then kneel on the bed between Eric's legs. Running your hands over his muscular legs, you arrive at his drippingly wet pussy and push two fingers inside, making him moan as you wiggle them. Inside, you feel the soft flesh of his hymen under your fingers - nice, he really is a virgin. The thought of taking his cherry on the bed of his former girlfriend makes your cock twitch in anticipation. You aim your manhood at his moist folds, rubbing its tip against his pussy lips, then push forward, sinking your shaft into his body until you reach his maidenhead and stop for a moment.";
 							say "     Running your hands over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go. He whimpers at your forceful intrusion in his innermost being, but soon the pleasure able feelings of your hard member rubbing his insides outweigh the pain and he starts moaning again with lust. Holding his legs up with your hands you thrust in and out, revelling in his tight embrace around your shaft as you make a real woman - or rather cuntboy - out of him.";
 							say "     Not much later, Eric gasps as he has his first female orgasm, his pussy getting really wet around your thrusting cock. You stop for a moment and look down at the writhing cuntboy you're inside of, then start up again, harder and faster than before.";
 							say "     Pacing yourself, you manage to last another half hour, giving Eric another orgasm, before you feel your balls tightening with your impending climax. With one last thrust as deep as you can go inside him, you reach your goal, shooting burst after burst of your seed deep inside his womb.";
-							say " [line break]";
+							say " 		[line break]";
 							say "     Such a nice little cuntboy, you decide to take Eric along to the bunker to have some fun with again later. After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping your cum and female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male german shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
 						otherwise:
 							say "     A quick search through Stacy's dresser reveals a long pink dildo - and a vibrating one too. You take it and climb on the bed with Eric, rubbing his moist pussy lips slowly with your fingers, then spreading them to have a look. Ah, perfect - he really is a virgin. The thought of taking his cherry on the bed of his former girlfriend makes you grin in anticipation. You rub the dildo's tip against his pussy lips for a moment, then push forward, sinking it slowly into his body until you reach his maidenhead.";
 							say "     Running your hands over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go. He whimpers at your forceful intrusion in his innermost being, but as you flip the switch and move the vibrating dildo in and out of him, pleasure able feelings soon outweigh the pain and he starts moaning again with lust. Running a hand over his lithe body as you fuck him with the dildo, you revel in his pants and gasps as you make a real woman - or rather cuntboy - out of him.";
 							say "     Not much later, Eric gasps as he has his first female orgasm, his pussy getting really wet around the dildo and leaking female juices on the mattress. You stop for a moment and look down at the writhing cuntboy you're made cum, then start up again, harder and faster than before.";
 							say "     Taking your time, you keep going with the dildo for another forty minutes, giving Eric two more screaming orgasms. Then a groggy groan from the cheerleader hulk on the floor reminds you that you sadly don't have all the time in the world and should leave before she fully wakes up or something else comes along.";
-							say " [line break]";
+							say " 		[line break]";
 							say "     Such a nice little cuntboy, you decide to take Eric along to the bunker to have some fun with again later. After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male german shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
 						say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. You soon reach the lockerroom and give Eric some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Ten minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Departing towards the bunker, Eric walks with you but a step apart, silently thinking about what you did to him.";
 						now hp of Eric is 99;
@@ -173,8 +182,9 @@ instead of conversing the Eric:
 						move Eric to bunker;
 						move player to bunker;
 					otherwise:                [really save him]
+						say "     [line break]";
 						say "     After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male german shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
-						say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer. You give him some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Twenty minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent besides you as he thinks about what happened to him.";	      
+						say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer. You give him some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Twenty minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent besides you as he thinks about what happened to him.";
 						now hp of Eric is 1;
 						now thirst of Eric is 1;
 						move Eric to bunker;
@@ -189,17 +199,19 @@ instead of conversing the Eric:
 				say "     [line break]";
 				say "     You crawl out of the room and make your escape while she's still busy with Eric, having no choice but to concede him to her. With him having accepted being her girlfriend and likely already pregnant from her, there won't be any reason to come back here.";
 				now hp of Eric is 100;
-				remove Eric from play;       
+				remove Eric from play;     
 		otherwise:   [try it later]
 			say "     Eric looks visibly deflated as you decline. 'Oh... if you change your mind, I'll be here. But we really should hurry - who knows what's happening to Stacy...'";
 	otherwise if (hp of Eric is 1):   [virgin in the bunker]
 		say "     You sit down beside Eric on a bunk and talk to him, trying to get him to open up about his... gender issues. He's very embarrassed about it all, rubbing his bandaged arm absentmindedly as he stockingly says 'After Danny bit me and nothing strange happened, I first thought I was immune to whatever is doing all this. But then later, as I was running away from him and through the chaos out in the campus, there was a wrenching feeling inside me and I fell down as my cock vanished and a vagina and womb formed.'";
 		say "     'I hid in the lockerroom and tried to ignore it, hoping something could be done if the military or someone came - but with what happened with Stacy - I'm not sure if I can do that any longer. The feelings I had were... strange and amazing, and I couldn't do anything to resist them. If you hadn't pulled her off me in time...";
-		say "     He takes a deep breath, then looks at you and shyly asks 'Do you think something can be done to change me back?' Wondering which answer he hopes for, you think for a moment what to answer. (Y = you'll search a cure; N = he should accept it)";
+		say "     He takes a deep breath, then looks at you and shyly asks 'Do you think something can be done to change me back?' Wondering which answer he hopes for, you think for a moment what to answer. (Y = you'll search a cure; N = he should accept it) ";
 		if player consents:   [search for a cure]
+			say "     [line break]";
 			say "     You tell Eric that you'll have an eye out for a way to make him a man again. Maybe the cum of some creature that's fully male and still somewhat human would do the trick... and there surely will be centaurs somewhere in this city by now.";
 			now hp of Eric is 20;
 		otherwise:            [make him accept his pussy]
+			say "     [line break]";
 			say "     Putting a hand on Eric's arm, you tell him to accept what happened to him and be grateful that he's still human. You remind him how good he felt when Stacy rubbed his pussy, so maybe he could try it with someone he trusts...";
 			now hp of Eric is 10;
 	otherwise if (hp of Eric is 10):   [accepted his pussy]
