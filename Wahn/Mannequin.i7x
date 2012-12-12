@@ -1,31 +1,11 @@
-Version 1 of Mannequin by Wahn begins here.
-[Version 1.1 - Neuter target gender]
+Version 2 of Mannequin by Wahn begins here.
+[Version 2 - Meeting Event folded into the monster description]
 
 "Adds a Neuter Mannequin to Flexible Survivals Wandering Monsters table"
 
+MannequinFirstEncounter is a number that varies.  MannequinFirstEncounter is normally 0.
 
-Section 1 - Event
-
-Harbor Breakin is a situation. The level of Harbor Breakin is 10.
-The sarea of Harbor Breakin is "Warehouse";
-
-Instead of resolving a Harbor Breakin:
-	say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and german shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers.";
-	say "     'Which one did that coyote say the food was in?' The bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.'";
-	say "     The two of them open up several more containers, but find nothing of use in this post-apocalyptic city. 'I'm beginning to think Diego sent us on a wild goose chase.' the shepherd growls. 'Ok, ok.. let's just open up this last one, then go back to the park and have some words with the coyote.' his buddy replies, then pulls open another container and yelps in surprise. 'Now that's freaky - for a moment I thought this container was full of people.'";
-	say "     [line break]";
-	say "     The german shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, etc.";
-	say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own and. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away."; 
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Mannequin":
-			now monster is y;
-			break;
-	now area entry is "Warehouse";
-	increase score by 10;
-	now Harbor Breakin is resolved;
-
-Section 2 - Monster Responses
+Section 1 - Monster Responses
 
 to say mannequin wins:
 	say "     The living doll grips you tightly and a strange sensation washes over you, as if part of your being is drained away. Before your eyes, its features change, making it look a bit more like yourself. You take your chance while it's distracted with checking out its new body and run away.";
@@ -34,9 +14,19 @@ to say mannequin loses:
 	say "     The mannequin silently collapses at your feet. Even though it's thoroughly beaten, it still weakly reaches for you, its face showing a desperate expression. You quickly get some road between it and you before it stands up again.";
 
 to say mannequinDesc:
-	say "     You cross paths with an animated mannequin which looks like an idealized male in his mid-twenties, with muscled arms, legs and chest and a featureless crotch. It has a pale flesh-colored skin-tone and a chiseled-looking face including sculpted wavy hair. As the mannequin notices you, an almost desperate, needful look crosses its face and it rushes at you.";		
+	if MannequinFirstEncounter is 0:
+		say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and german shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers.";
+		say "     [line break]";
+		say "     'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.'";
+		say "     The two of them open up several more containers, but find nothing of use in this post-apocalyptic city. 'I'm beginning to think Diego sent us on a wild goose chase.' the shepherd growls. 'Ok, ok.. let's just open up this last one, then go back to the park and have some words with that coyote...' his buddy replies, then pulls open another container and yelps in surprise. 'Now that's freaky - for a moment I thought this container was full of people.'";
+		say "     [line break]";
+		say "     The german shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, etc.";
+		say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away. As they start to get up too, you decide it's time to leave and make your way back to the hole in the fence. One of the mannequins got there before you, though. It might have absorbed the knowledge of its location from the dogs, or just have been lucky. Now it turns to you, eager to make your shape its own."; 	
+		now MannequinFirstEncounter is 1;
+	otherwise:
+		say "     You cross paths with an animated mannequin which looks like an idealized male in his mid-twenties, with muscled arms, legs and chest and a featureless crotch. It has a pale flesh-colored skin-tone and a chiseled-looking face including sculpted wavy hair. As the mannequin notices you, an almost desperate, needful look crosses its face and it rushes at you.";		
 	
-Section 3 - Monster Insertion
+Section 2 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -70,28 +60,27 @@ When Play begins:
 	now hp entry is 75;
 	now lev entry is 10;
 	now wdam entry is 10;
-	now area entry is "Nowhere";			[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;				[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;			[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;			[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;				[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;			[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;				[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;			[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;			[ Width of female sex  infection will try and give you ] 
-	now libido entry is 10;				[ Amount player Libido will go up if defeated ]
-	now loot entry is "";            	 	[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;       		[ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now area entry is "Warehouse";						[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 0;											[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0;								[ Length infection will make cock grow to if cocks]
+	now cock width entry is 0;								[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 0;										[ Number of Breasts infection will give you. ]
+	now breast size entry is 0;								[Size of breasts infection will try to attain ]
+	now male breast size entry is 0;					[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;											[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;								[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;								[ Width of female sex  infection will try and give you ] 
+	now libido entry is 10;										[ Amount player Libido will go up if defeated ]
+	now loot entry is "";          			  	 	[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0;     			  		[ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3;											[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "idealized";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "human";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now type entry is "human";								[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;									[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;							[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;				[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;						[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";					[ Row used to designate any special combat features, "default" for standard combat. ]
 		
 Section 3 - Endings
 

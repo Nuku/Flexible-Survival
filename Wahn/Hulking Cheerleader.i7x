@@ -1,43 +1,19 @@
-Version 1 of Hulking Cheerleader by Wahn begins here.
-[Version 1]
+Version 2 of Hulking Cheerleader by Wahn begins here.
+[Version 2 Initiation Event folded into the monster description]
 
 "Adds a Hulking Cheerleader to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
 when play begins:
 	add { "Hulking Cheerleader" } to infections of hermaphrodite;	[Futanari]
 
+CheerleaderFirstEncounter is a number that varies.  CheerleaderFirstEncounter is normally 0.
 
-Section 1 - Cheerleader Initiation Event
-
-[To explain to the players what they're about. Cheerleaders should only be encountered after this...]
-
-Cheerleader Initiation is a situation. The level of Cheerleader Initiation is 7.
-The sarea of Cheerleader Initiation is "Campus";
-when play begins:
-	add Cheerleader Initiation to badspots of hermaphrodite;		[Futanari]
-
-Instead of resolving a Cheerleader Initiation:
-	say "     Walking over the campus, you hear some high-pitched moaning from behind one of the buildings and decide to check it out. Peeking around a corner, you see a very tall green-skinned humanoid holding and fucking a twenty-ish human woman. The green creature has ample breasts stuffed into her small shirt and looks mostly female, but has a very large frame and is massively muscled. And she/he? also has one big whopper of a cock under her short skirt that she's busy driving into the Asian woman held in her arms. Their coupling soon builds to a loud climax, with the green giant giving satisfied grunts as she fills the woman's pussy with her seed.";
-	say "     Then the woman's body starts to change and she's quickly pulled off the still-twitching cock and lowered to the ground by her large partner. You see her skin turn green, muscles filling out rapidly and the whole body stretch and reshape itself until there are two green giants behind the building. The woman is completely stunned by what has happened to her, looking down on her new body and trying to make sense of it all. Her fucker steps closer and grins down at her. 'Ah, a convert. I still wonder why some people turn but most don't. Hey, I know you - you're Haruko and were on the gymnastics team, weren't you?'";
-	say "     The former woman on the ground gives a quick nod, still speechless. 'I'm Amy and a cheerleader - and you're an honorary one now too. Now let me give you the team initiation...' With that, the giant cheerleader leans down and grabs the newbie's cock and balls, stroking and fondling them. 'Remember how disgusted we all were with the jocks hunting after anyone they could get to spread their legs? Promising whatever a girl wanted to hear and always pretending that they 'forgot' to bring a condom when they had us hot and ready?' She stops talking for a moment, pumping both her hands up and down Haruko's hard cock and making the former woman moan in lust. 'You get it now, don't you? Think about burying this bad boy in a pussy, filling it with your seed. That's what cocks are for! And now it's our turn to have a go with them!'";
-	say "     Haruko grunts needily, precum forming at the tip of her cock. 'We started a competition too like those fuckers always did. You get a point for each pussy, five if you knock em up, ten for virgins. Just go look for Buffy - she keeps the scores.' Pulling the Asian, newly-made cheerleader to her feet, Amy gives her hard cock a last stroke and slaps her shoulder, saying 'Just follow where this thing leads you and do what's natural. You'll likely have to fight some of us though - a lot of the campus is already claimed by someone. But let's be civil to each other - be a good winner or loser and tell any converts you make the rules, ok?'";
-	say "     The Asian, green giant nods to her, then moves off to find something to fuck. You quickly duck behind the corner, not to become her first catch.";
-	wait for any key;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Hulking Cheerleader":
-			now monster is y;
-			break;
-	now area entry is "Campus";
-	now non-infectious entry is false;
-	increase score by 5;
-	Now Cheerleader Initiation is resolved;
-
-
-Section 2 - Monster Responses
+Section 1 - Monster Responses
 
 to say Cheerleader wins:
-	if hp of player <= 0 and bodyname of player is "Hulking Cheerleader":   [she's a good winner, giving hints to other players in their 'game']
+	if CheerleaderFirstEncounter is 2:  [fighting Stacy, for the event with Eric]
+		say "     Ouch, that hurt. With another hit, Stacy almost finishes you off, leaving you swaying dangerously as you try to keep standing.";
+	otherwise if hp of player <= 0 and bodyname of player is "Hulking Cheerleader":   [she's a good winner, giving hints to other players in their 'game']
 		say "     The hulking cheerleader steps over you, then gives you a hand and pulls you to your feet. 'I won - all the pussies in the area are mine. But still, you didn't do too bad. You should take on Alice or Jenny - they aren't too tough and while their areas aren't as good as mine, you should still be able to make good some points on the pussy hunt there.'";
 	otherwise:
 		if hp of player is greater than 0:   [player submitted]
@@ -64,7 +40,9 @@ to say randomgirlname:		[Inform doesn't like nested if/random within the same sa
 	say "[one of]Brittany[or]Christy[or]Janice[or]Claire[or]Willow[at random]";
 
 To say Cheerleader loses:
-	if bodyname of player is "Hulking Cheerleader":   [she's a good loser, telling the player of the females in the area]
+	if CheerleaderFirstEncounter is 2:  [fighting Stacy, for the event with Eric]
+		say "     That last hit gave her the rest. Stacy gets a cross-eyed look and sways visibly. You take a step back to be on the safe side...";
+	otherwise if bodyname of player is "Hulking Cheerleader":   [she's a good loser, telling the player of the females in the area]
 		say "     She steps back a bit, raising both hands to placate you. 'Ok, ok - you win. It's your area now. Quite a few fertile pussies here too - you'll just have to wait a bit till they give birth. I did a round not too long ago. Although there might be a virgin daughter or two of mine getting ripe and ready. Hope you have fun - but be ready for a rematch. I'll be back.'";
 	otherwise:   [lost to a non-cheerleader - which raises her estimation of the player from game piece to player] 
 		say "     She steps back a bit, raising both hands to placate you. 'Ok, ok - you win. You'd make a pretty good contestant in our game... how about you join the team?', the large green cheerleader says, holding her massive cock out to you with a hopeful expression. Do you want to blow her off?";
@@ -75,10 +53,23 @@ To say Cheerleader loses:
 			say "     You politely decline her offer. As you walk away, you hear her say 'Your loss, it's great fun to play. If you ever change your mind, you know where to find me.'";
 
 to say cheerleaderDesc:
-	say "     A strongly muscled, more than nine feet tall woman steps into your way. She has a beautiful face, light green like the rest of her body, and shoulder-length blond hair. Her ample breasts are barely contained by a white crop top stretched over her large frame, and a very short skirt does almost nothing to hide her crotch. Or his, rather - since you see a quite impressive maleness dangling between those green-skinned legs. 'Here for the pussy hunt? Let's see if you have what it takes,' she intones with a surprisingly girly voice, then cracks her knuckles.";
+	if CheerleaderFirstEncounter is 0:
+		say "     Walking over the campus, you hear some high-pitched moaning from behind one of the buildings and decide to check it out. Peeking around a corner, you see a very tall green-skinned humanoid holding and fucking a twenty-ish human woman. The green creature has ample breasts stuffed into her small shirt and looks mostly female, but has a very large frame and is massively muscled. And she/he? also has one big whopper of a cock under her short skirt that she's busy driving into the Asian woman held in her arms. Their coupling soon builds to a loud climax, with the green giant giving satisfied grunts as she fills the woman's pussy with her seed.";
+		say "     Then the woman's body starts to change and she's quickly pulled off the still-twitching cock and lowered to the ground by her large partner. You see her skin turn green, muscles filling out rapidly and the whole body stretch and reshape itself until there are two green giants behind the building. The woman is completely stunned by what has happened to her, looking down on her new body and trying to make sense of it all. Her fucker steps closer and grins down at her. 'Ah, a convert. I still wonder why some people turn but most don't. Hey, I know you - you're Haruko and were on the gymnastics team, weren't you?'";
+		say "     [line break]";
+		say "     The former woman on the ground gives a quick nod, still speechless. 'I'm Amy and a cheerleader - and you're an honorary one now too. Now let me give you the team initiation...' With that, the giant cheerleader leans down and grabs the newbie's cock and balls, stroking and fondling them. 'Remember how disgusted we all were with the jocks hunting after anyone they could get to spread their legs? Promising whatever a girl wanted to hear and always pretending that they 'forgot' to bring a condom when they had us hot and ready?' She stops talking for a moment, pumping both her hands up and down Haruko's hard cock and making the former woman moan in lust. 'You get it now, don't you? Think about burying this bad boy in a pussy, filling it with your seed. That's what cocks are for! And now it's our turn to have a go with them!'";
+		say "     Haruko grunts needily, precum forming at the tip of her cock. 'We started a competition too like those fuckers always did. You get a point for each pussy, five if you knock em up, ten for virgins. Just go look for Buffy - she keeps the scores.' Pulling the Asian, newly-made cheerleader to her feet, Amy gives her hard cock a last stroke and slaps her shoulder, saying 'Just follow where this thing leads you and do what's natural. You'll likely have to fight some of us though - a lot of the campus is already claimed by someone. But let's be civil to each other - be a good winner or loser and tell any converts you make the rules, ok?'";
+		say "     The asian giant nods to her, then moves off to find something to fuck. You quickly duck behind the corner, not to become her first catch. After watching her leave, you wonder if you should follow her and see what she does next, or get out of the hunting grounds of these giant shemales.";
+		say "     [line break]";
+		say "     Before you can come to a decision, you hear something behind you - and turning around, see yourself confronted with Amy, the first cheerleader hulk you saw. 'Did you enjoy peeping in on us?' she asks, grabbing hold of her cock. Your looks are invariably drawn to the massive member, glistening wetly as it gets fully hard again and she lubes it with some remaining cum sticking to the tip. 'I bet you can't wait to feel it inside yourself. Let me take you for a ride.'";
+		now CheerleaderFirstEncounter is 1;
+	otherwise if CheerleaderFirstEncounter is 2:  [fighting Stacy, for the event with Eric]
+		say "     Stacy roars 'His pussy is MINE!' and comes at you with balled fists.";
+	otherwise:																		[normal repeats for random cheerleaders]
+		say "     A strongly muscled, more than nine feet tall woman steps into your way. She has a beautiful face, light green like the rest of her body, and shoulder-length blond hair. Her ample breasts are barely contained by a white crop top stretched over her large frame, and a very short skirt does almost nothing to hide her crotch. Or his, rather - since you see a quite impressive maleness dangling between those green-skinned legs. 'Here for the pussy hunt? Let's see if you have what it takes,' she intones with a surprisingly girly voice, then cracks her knuckles.";
 
 
-Section 3 - Monster Insertion
+Section 2 - Monster Insertion
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -108,35 +99,34 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 12;
-	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 70;			[ The monster's starting hit points. ]
-	now lev entry is 9;                 [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 12;               [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 16;        [ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 10;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
-	now breast size entry is 4;         [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 4;    [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;          [ Width of female sex the infection will try to give a player. ]
-	now libido entry is 80;             [ Target libido the infection will rise towards. ]
-	now loot entry is "";               [ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Male";								[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 70;											[ The monster's starting hit points. ]
+	now lev entry is 9;              		  	[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 12;             		  [ Monster's average damage when attacking. ]
+	now area entry is "Campus";       		  [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now cocks entry is 1;            		  	[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 16;     		  	[ Length infection will make cock grow to if cocks. ]
+	now cock width entry is 10;       		  [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2;           		  [ Number of breasts the infection will give a player. ]
+	now breast size entry is 4;       		  [ Size of breasts the infection will try to attain. ]
+	now male breast size entry is 4;  		  [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;           		    [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now cunt length entry is 0;     		    [ Depth of female sex the infection will attempt to give a player. ]
+	now cunt width entry is 0;      		    [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 80;          		  	[ Target libido the infection will rise towards. ]
+	now loot entry is "";           		    [ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0;      		    [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 4;            		 		[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hulking[or]muscular[at random]";
 	now type entry is "human";
-	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;   [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;         		  [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;     		  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;    		  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default"; 		  [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
-Section 4 - Endings
+Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Hulking Cheerleader":
