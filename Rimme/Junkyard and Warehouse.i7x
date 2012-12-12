@@ -360,8 +360,11 @@ To stevenjunkfuck:
 				otherwise:
 					say "[stevensuck]";
 			otherwise:
-				say ".  Deciding that, since you lack female equipment, the best way to please your equine lover is probably by having a nice sexy mouth over that sexy rod of his.";
-				say "[stevensuck]";
+				say ".  While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  While he doesn't seem interested in being mounted, perhaps he'd consent to fucking your ass.  Otherwise, you might give him some [']oral['] attention.  (Y=Ride, N=Suck) ";
+				if the player consents:
+					say "[stevenanal]";
+				otherwise:
+					say "[stevensuck]";
 		otherwise:
 			if cunts of player > 0:
 				say ".  Licking your lips and staring down at his large rod, you feel a red hot need growing between your legs and you get yourself ready to ride his thick shaft.";
@@ -374,7 +377,7 @@ To stevenjunkfuck:
 		now laststevenfuck is turns;
 
 to say stevenride:
-	say "     After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.";
+	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.";
 	say "     You take a breath and push back, sliding his shaft into you.  You groan and begin to ride him, taking it slow at first but soon picking up speed.  Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine cock flaring up as he climaxes, flooding your womb with his fertile cum.  This pushes you over the edge into your own orgasm, your cunt spasming around his thick shaft, milking it for his cum.";
 	say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you.  You stretch out and slide up of his shaft, his cum flooding out of you.  You grin and lean down, giving him a kiss before you go and clean yourself up.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.[impregchance]";
 
@@ -388,10 +391,16 @@ to say stevensuck:
 		otherwise:
 			say "breedable backside, already aching to be filled after having sucked off the virile male, has ";
 		say "you moaning beneath him for him to mount you, bringing a smile to his equine face.";
-		say "     The strong horse guides his throbbing cock against your [if cunts of player > 0]pussy before thrusting into your wet hole[otherwise]pucker before thrusting into your tight hole[end if].  Climbing atop you, he nickers in pleasure as he fucks you, fucking you energetically despite having just gotten off[if breast size of player > 0].  He moves a hand to your [breast size desc of player] breasts, tweaking your nipples while he rides you[otherwise].  He rubs one hand over your flat chest[end if].";
+		say "     The strong horse guides his throbbing cock against your [if cunts of player > 0]pussy before thrusting into your wet hole[otherwise]pucker before thrusting into your tight hole[end if].  Climbing atop you, he nickers in pleasure as he fucks you, fucking you energetically despite having just gotten off[if breast size of player > 0].  He moves a hand to your [breast size desc of player] breasts, tweaking your nipples while he rides you[otherwise].  He rubs one hand over your flat [bodytype of player] chest[end if].";
 		if cocks of player > 0 and cunts of player is 0:		[male sub bonus scene]
 			say "     His hand moves lower, wrapping around your [cock size desc of player] [cock of player] dick and stroking it as he fucks you.  'What a strange mare you are with a leaking cock like this.  You're a sexy mare though, aren't you?  Or maybe I'm wrong and I should stop fucking you,' he says, slowing his thrusts and moving to withdraw from you.  You release a soft whinny of need and push back onto his rod, replying that you want to be his sexy mare and that you need him to fill you.  At your words, he thrusts back into you hard and resumes fucking you, still stroking your dribbling erection.";
 		say "     Having already fucked you a few minutes ago, the stallion has more endurance this time, making for a nice, long fuck that has you moaning and whinnying beneath him.  He nuzzles at your neck and nips at it with his flat teeth as you both get hot and sweaty from the mating.  Finally his excitement boils over and he thrusts hard into you one last time, blasting his hot load deep inside you.  His loud, while not as big as the last, it still quite impressive and gives your [if cunts of player > 0]womb[otherwise]lower belly[end if] a wonderfully full feeling.  After withdrawing, he wipes his spent shaft across your rear and snuggles you in his arms.[impregchance]";
+
+
+to say stevenanal:
+	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, pressing your body to his and giving him a deep kiss.  As you kiss him, you lower yourself into position on his hard rod before he realizes what it happening.  You groan a little into the kiss as his enlarged, equine shaft presses into your back passage.";
+	say "     You take a breath and push back, sliding more of his thick meat into you.  You groan and begin to ride him, taking it slow at first, but soon picking up speed.  His strong hands move to your hips, squeezing your bottom and pulling you down onto him as he accepts his lustful urges and fucks your sexy ass.  You can feel the pulse of his rod inside you and feeling his copious pre making you more and more slick.  Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine flaring up as she climaxes, flooding your bowels with his fertile cum[if cocks of player > 0].  This pushes you over the edge into your own orgasm, your ass clenching around his thick shaft, squeezing as much cum as you can get from this equine stud.  Your seed splatters across his chest as your [cock size desc of player] [cock of player] cock pulses[end if].";
+	say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you.  You stretch out and slide up of his shaft, his cum flooding out of you.  You grin and lean down, giving him a kiss before you go and clean yourself up.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum now slowly leaking out of your stretched pucker.[mimpregchance]";
 
 
 Table of random critters (continued)
