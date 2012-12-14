@@ -1,5 +1,5 @@
 Version 3 of Nermine by Sarokcat begins here.
-[ Version 3 - Wereraptor Curse plotline added by Stripes.]
+[ Version 3.1 - Wereraptor Curse bad end by Stripes.]
 "Adds Nermine and her Mysterious Shop to Flexible Survival to handle many of the player's mystical needs."
 
 Section 1- The Mysterious Shop
@@ -108,6 +108,9 @@ instead of conversing the Nermine:
 	otherwise if wrcurseNermine is 11:
 		say "     Nermine smiles as she looks you over.  'I am seeing that you are doing much better now.  I was being hopeful that you would be succeeding.  Now perhaps that I have helped you, perhaps you would be willing to help Nermine, maybe?' she says with a wink and a swish of her tail as she places the silver knife into her display case for rare items with delicate care.  'You are talented.  Perhaps you might even talk to Nermine about adding to my collection here,' she says, patting the case as she seals it up.";
 		now wrcurseNermine is 13;	[Quest closed - succeed]
+	otherwise if wrcurseNermine is 12:
+		say "     Nermine looks you over.  'I am seeing that you are deciding to be keeping your raptor nature.  Such is the fate of many of who come to my store, getting what they sought, but not as they originally intended.  I am hoping you are making the right decision.'";
+		now wrcurseNermine is 13;	[Quest closed - wereraptor]
 	otherwise if hellgatherquest is 5:
 		say "'Welcome back again, Nermine sees you have acquired the items she needs,' The jackal woman says with a sly smile as you set the bag from Harold out on the counter. 'Now Nermine has finished dealing with the collar as you requested, and should have these items ground and mixed and properly ready for little white mare soon enough, now all that remains is for Nermine to talk about payment with sexy equine stud here...' She says with a teasing wink as she looks you up and down for a minute, her request making you quite nervous, before she sighs slightly, her black furred shoulders slumping a bit. 'Unfortunately, Sexy equine has little Nermine wants right now, and is far to busy to send off on long quest to fetch items for a lonely jackaless, so it looks like Nermine will have to ask for same thing she did of earlier stablemaster at this point. Access to the stables when Nermine wants it, and a favor of Nermine's choosing in the future.' She says with a shrug and a smile as she cocks her head at you inquiringly. [line break]";
 		say "Hardly believing your luck you nod in agreement eagerly, and the jackal woman grins slightly before heading to the back room for a while after telling you to stay there and touch nothing.  Not wanting to get in trouble, or to be more honest, be turned into anything embarrassing given what you have learned so far about this strange shop, you wait for quite a while in her shop without messing with anything, until eventually Nermine returns with a small box and a pouch. 'Now Nermine warns would be Nightmare to be careful with the choker, it will prove just as effective on you as it will on current stablemaster, so be careful not to try it on yourself.' She says teasingly as she hands you the items, her words sending a shiver down your spine as you stow them away carefully and turn to leave. Though just as you are about to leave, you hear the shopkeeper say 'And Nermine hopes this one will remember their agreement better then the last one did, though maybe Nermine will still get to use curse she was preparing after all..' you hear her mutter, and quickly duck out of the shop before the creepy and strange shopkeeper decides to try cursing you just in case..";
@@ -281,6 +284,9 @@ carry out nerminehelping:
 		stop the action;
 	if rarequesting > 0:
 		say "'Do not be backing out of promise to be helping Nermine with the rare items she needs.  You should be focusing on that instead.";
+		stop the action;
+	if wrcursestatus >= 7 and wrcursestatus < 100:
+		say "'A wereraptor is not good for being a helper around Nermine's store and her very breakable collection.'";
 		stop the action;
 	if jackalboytf is 4:
 		say "'Ah handsome little Jackal toy is offering to help Nermine some more? Or is it they want Nermine to help them out?' The sultry Jackal woman says as she runs her clawed hands over your soft and sleek body, your eyes closing in pleasure as she gives you a soft scratch behind your canine ears.  'It is good to have an eager little Jackal pet around the place to help Nermine out whenever she needs it, she is glad you are accepting your new place here as happily as she knew you would.'  She says as she pets you a few more times, her soft words music to your submissive jackal soul, 'And her little helper doesn[apostrophe]t need to worry about any of the other infections in the city any more now, Nermine has made sure that your lovely new form is nice and permanent, so you can be her lusty little pet from now on! Isn[apostrophe]t that nice?'  Your mistress asks you as she rubs your head a few more times, and you find yourself nodding happily at her question, glad to be able to please your lovely dominant mistress in whatever way she wants.  'Nermine doesn[apostrophe]t need any more help in store right now, but maybe if she has time later, you can help her in back room sometime,' The wonderful jackal says as she stops petting you and goes back to leaning on the store counter, and you realize you can[apostrophe]t wait for another chance to help her out, whether  in the back room or doing whatever else she asks of you!";
@@ -795,31 +801,32 @@ To say jackaltotemmagic:
 		say "Rubbing the small totem curiously, you can feel some strange and almost invasive force trying to invade your body, and you hear small whispering about the pleasures of submission and surrender. With a shudder you find yourself fighting back almost instinctively, the power of your current form easily overpowering that of the totem, and with one last shake of your head you clear the last remnants of the intrusion from your mind. The thought of you bowing down submissively is so ridiculous it almost makes you laugh you think with amusement, as you look down at the little totem, only to find that at some point during the internal struggle, you crushed the small item in your hand.  Brushing the remains of the totem off, you shrug and guess Nermine won[apostrophe]t be giving you any help in that manner, and continue along with your business.";
 		now nerminetalk is 1;
 		now jackalboytf is 5;
-	if jackalboytf is 0:
+	if wrcursestatus >= 7 and wrcursestatus < 100:
+		say "You rub the small totem curiously and hiss in pain as it starts to heat up, scalding your hand.  You toss it aside.  Something about you is incompatible with it.";
+		now nerminetalk is 1;
+		now jackalboytf is 5;
+	otherwise if jackalboytf is 0:
 		say "Rubbing the small totem you wonder just what Nermine expects to happen, and are disappointed when all that seems to happen is the totem growing warm In your hands. You sigh and are about to put the small totem away when your ass start to tingle and feel strange, the statue growing even warmer under your touch.  Glancing behind you you surprised to see your ass seeming to stretch and change, your rear flattening out slightly as a small black jackal like tail forms behind you.  You feel a strange almost pleasant stretching sensation as your new tail grows until its tip is hanging just below your knees, staring at your new tail you find yourself experimentally moving it from side to side a few times, and watch as your new limb responds with surprising dexterity. Taking a few steps you are surprised to find your new tail seems to help your balance greatly, and you have to admit, the nice Jackal tail does look rather hot on you. Suddenly you feel something seem to break under your hands, and look down to see the Jackal totem Nermine gave you seems to have cracked and broken, its purpose fulfilled.";
 		now tailname of player is "jackalboy";
 		now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
 		increase dexterity of player by 3;
 		say "your dexterity has increased by 3!";
 		now jackalboytf is 1;
-		stop the action;
-	if jackalboytf is 1:
+	otherwise if jackalboytf is 1:
 		say "Taking hold of the next Jackal statue, you nervously rub it between your hands several times, wondering what will happen this time. The totem seems to grow warm before crumbling under your hands, and your hands seem to start to tingle strangely as the pieces of the statue fall to the ground. looking down at your hands, you blink as the dark black color of the totem seems to be rubbing off on you, your hands seeming to be shiny and black now as well. You quickly realize as the blackness spreads down your arms and starts to cover your body completely, that it is actually shiny black fur, sleek dark jackal fur just like Nermine's. For some reason though, the idea of having soft and sexy black fur just like the nice and wonderful shopkeeper of that strange shop seems to make you feel happier and more content, and also perhaps just a bit horny as well. Somehow you are sure your nice new pelt of soft fur will appeal to more then just the shopkeeper as well, and find yourself looking forward to showing off your new beautiful looks.";
 		now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 		now skinname  of player is "jackalboy";
 		increase charisma of player by 4;
 		say "your charisma has increased by 4!";
 		now jackalboytf is 2;
-		stop the action;
-	if jackalboytf is 2:
+	otherwise if jackalboytf is 2:
 		Say "Taking out the shiny black jackal statue, you get the impression for a second that this particular jackal totem was grinning at you, but when you take a closer look you see that it looks just like the other statues. You rub the statue eagerly, looking forward to whatever powerful change this statue will bring out in you. You are sure you see this totem grin and wink at you, before like the others it too cracks and crumbles in your hands, but you are distracted from this fact by the tingling spreading across your face. You reach your hands up to feel your face, even as it seems to crack and shift, your sight clouding over as your eyes seem to change, and your can barely see your new black furred muzzle pulling forward into a Jackals grin. You run your hands along the sides of your new Jackal like face, even as the bones settle and it finishes forming, new scents exploding through your brain, as your nose finishes shifting into place atop your narrow canine muzzle.  You blink several times, your eyes finally clearing as you stare out at the world through new sharper eyes, and the sounds of the world around you intensify as your new black canine ears finish shifting to stand straight up on your changed head.  You can feel a feral grin stretching your new muzzle wide as you think of how happy Nermine will be to see your newest change, your mind filled with thoughts of Nermine and the need to please the wonderful jackal woman. As you take in the world through your new heightened senses, you find yourself hoping she will be pleased enough with you to help you on your way to becoming even more the happy little Jackal you just know you need to be."; 
 		now facename of player is "jackalboy";
 		now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[apostrophe]t help but enjoy how much your mistress seems to like your new jackal[apostrophe]s";
 		increase perception of player by 3;
 		say "your perception has increased by 3!";
 		now jackalboytf is 3;
-		stop the action;
-	if jackalboytf is 3:
+	otherwise if jackalboytf is 3:
 		say "Pulling this small jackal totem out, you find yourself grinning along with the statue as you realize that surely this statue will be the last one you will need.  Rubbing the totem eagerly you feel a surge of warmth as it seems to melt under your hands, not crumbling like the others but seeming to almost melt into your body and become part of you. You don[apostrophe] have much time to think about this however, as your entire body starts to tingle and shift this time, your muscles seeming to ripple and smooth out, to give you a softer and more delicate appearance. You can feel the sharp claws of a jackal pushing out of your hands and feet, even as your body begins to take on a slightly more animalistic shape. Your heels lifting slightly off the ground as your rear legs crack and shift to a more stable stance as your feet seem to spread apart on new jackal paws. [line break]";
 		say "Looking down at yourself as the tingling begins to fade, you realize that you seem to be rather lean and skinny now, and perhaps a little shorter, your body obviously more built for grace and speed instead of combat.  The sight of your new form makes you smile happily though, as you realize that this new form is just what you needed for serving your mistress, its silky soft skin, and sensitive body obviously perfect for pleasuring and serving the larger and stronger jackal woman.   Thinking about Nermine you realize you can hardly wait to get back and show her your new perfect form, and thank her for all her help in helping you become the submissive little jackaltoy she wanted you to be. Wasting no time, you quickly run towards the shop, unable to wait as thoughts of the pretty and dominant shopkeeper run through your head, maybe if you are lucky she will even have another job or two for you to do, and if you are really lucky maybe she will even play with you some! You find yourself panting happily at the new thoughts, even as you run through the city on your swifter and surer legs.  ";
 		now bodyname of player is "jackalboy";
@@ -1201,6 +1208,9 @@ instead of conversing the rare counter:
 	if jackalboytf is greater than 0:
 		say "'Ah Nermine sees her little helper has noticed her rare item counter!' The jackal shopkeeper beams happily at your interest, 'Sadly Nermine isn[apostrophe]t needing your help with anything in the counter right now, she has other things waiting for you to help her with though...' Nermine says with a teasing smile on her dark muzzle.";
 		stop the action;
+	if wrcursestatus >= 7 and wrcursestatus < 100:
+		say "'Nermine is asking you and your sharp claws and big tail to be moving away from her collection of rare items.  Many of them are not to be liking being scratched or bumped.'";
+		stop the action;
 	if rarequesting is 13:
 		say "'Ah you wish to talk about the rare items again?' Nermine says as she saunters over, shaking her naked hips a little more then necessary as she leans forward on the glass countertop, her naked breasts soft and perky as she leans forward to give you a good look. 'Nermine can think of much better things for her handsome master to talk about, or even do with his lovely little pet...' the lust filled jackal woman says as she licks her lips eagerly, her obvious need making your muzzle pull back in a grin as you think of all the fun things you can do with her now.";
 		stop the action;
@@ -1322,6 +1332,11 @@ To say jackalankhmagic:
 		delete Strange ankh;
 		now jackalmantf is 5;
 		now Nerminetalk is 1;
+		stop the action;
+	if wrcursestatus >= 7 and wrcursestatus < 100:
+		say "You rub the small, golden ankh curiously and hiss in pain as it starts to heat up, scalding your hand.  You toss it aside.  Something about you is incompatible with it.";
+		now Nerminetalk is 1;
+		delete Strange ankh;
 		stop the action;
 	if jackalmantf is 0:
 		say "You smile as you rub the small golden ankh between your hands, the warm metal feeling nice and almost soft as you rub at it. Suddenly the small ankh almost seems to melt into your hands, leaving a soft tingling dusting of gold where the small trinket was before. As you stare at your palms, you feel a strange shifting sensation in your body, seeming to center on your rear.  Glancing behind you you surprised to see your ass starting to stretch and change, your rear flattening out as a long predatory black jackal like tail forms behind you.  You feel a strange almost pleasant stretching sensation as your new tail grows until its tip is hanging just below your knees, staring at your new tail you find yourself experimentally moving it from side to side a few times, and watch as your new limb responds with surprising dexterity. Taking a few steps you are surprised to find your new tail seems to help your balance greatly, and you have to admit, the nice Jackal tail does look rather hot and sexy on you..";

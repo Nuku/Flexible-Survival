@@ -1,5 +1,5 @@
 Version 2 of DrMoffatt by Stripes begins here.
-[Version 2.1 - Wereraptor responses]
+[Version 2.2 - More Wereraptor responses]
 "Adds a Skunk Shemale NPC named Doctor Moffatt to the Flexible Survival game"
 
 Section 1 - Event
@@ -21,10 +21,10 @@ Instead of resolving a Another Doctor:
 	if skunkbeaststatus is 1:
 		say ".  But now that I've looked you over, it seems you've been too tainted by those rather mundane skunks at the park and would not at all be a suitable candidate.  It's most unfortunate - you're rather cute,' she says with a final grin before turning and flicking her tail and heading off.  Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out.";
 		now hp of Doctor Moffatt is 100;
-	otherwise if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
+	otherwise if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 		say ".  But now that I've looked you over, it seems you've gone and become too tainted by some strangely persistant infection.  It keeps you from being a suitable candidate at all.  It's most unfortunate - you're rather cute,' she says with a final grin before turning and flicking her tail and heading off.  Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out.";
 	otherwise:
-		say ".  [if wrcursestatus >= 3 and wrcursestatus < 100]You do seem to have something strange and primal about you, but that should only make things more interesting, don't you think?  [end if]Certainly someone as clever and brave as yourself wouldn't be scared of a little experimenting,' she says, again teasing with the last word as she leans forward onto a small table to press her ample bosom out.  Your eyes locked on her strangely alluring body, you [if charisma of player < 16]mumble something about wanting to help her[otherwise]suavely say that one always has be open to experimenting these days[end if].  She giggles merrily at your reply and pulls a small keycard out of her pocket.  'Much of the hospital's halls have been barricaded or locked, but this card will let you get through those sealing off the Psych Department.  Come stop by my office and we'll talk more.'";
+		say ".  [if wrcursestatus >= 3 and wrcursestatus < 7]You do seem to have something strange and primal about you, but that should only make things more interesting, don't you think?  [end if]Certainly someone as clever and brave as yourself wouldn't be scared of a little experimenting,' she says, again teasing with the last word as she leans forward onto a small table to press her ample bosom out.  Your eyes locked on her strangely alluring body, you [if charisma of player < 16]mumble something about wanting to help her[otherwise]suavely say that one always has be open to experimenting these days[end if].  She giggles merrily at your reply and pulls a small keycard out of her pocket.  'Much of the hospital's halls have been barricaded or locked, but this card will let you get through those sealing off the Psych Department.  Come stop by my office and we'll talk more.'";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     Having given you the limited pass card and some directions, the hyperskunk woman gives you another grin before heading out, her tail giving a broad swish as she sways her ample hips.  'Please don't keep me waiting to long, my dear.  I could just about burst with excitement,' she says teasingly as she looks back at you over her shoulder.  Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out.  As you debate going to visit her to see what she has in mind, you look over the pass card.  At least this will make it a little easier to get around the hospital.";
@@ -52,12 +52,12 @@ to say psychfirstarrival:
 	if skunkbeaststatus is 1:
 		say "     'But it seems now that you've since become too tainted by those rather mundane skunks at the park.  You are no longer a suitable candidate for my testing.'  She sighs and teases one of her nipples.  'It's too bad, too.  I think we would have had lots of fun together.  Now I'll need to start looking for someone else.  You may go now,' she says dismissively, giving her tail a meaningful flick.";
 		now hp of doctor moffatt is 99;
-	otherwise if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
+	otherwise if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 		say "     'But it seems you've gone and become too tainted by some strangely persistant infection since I last saw you.  It keeps you from being a suitable candidate at all.'  She sighs and teases one of her nipples.  'It's too bad, too.  I think we would have had lots of fun together.  Now I'll need to start looking for someone else.  You may go now,' she says dismissively, giving her tail a meaningful flick.";
 		now hp of doctor moffatt is 99;
 	otherwise:
 		say "     'It seems there's at least some psychological component to how nanite infection manifests itself.  Or, at least, it can be a contributing factor in some cases.  Take myself for instance,' she says, running her gloved paws over her breasts and cock with clear pleasure.  'My infection seems to have imprinted on my skunk decorations and a few of my own personal kinks.  Yet others find their minds and sexual desires changed utterly by the infection instead.'";
-		if wrcursestatus >= 3 and wrcursestatus < 100:
+		if wrcursestatus >= 3 and wrcursestatus < 7:
 			say "     Moving up close, she runs her paws over your [bodytype of player].  'Applying that to you and your current saurian dilemma, it's simple to understand that it's tapped into something deep, primitive and wild inside you,' she says with a strong, sexual emphasis on those words, squeezing your shoulders and rubbing across the marks on your back.  'That primitive side lurking inside all of us, the instinctive monster from the id.  A creature of raw instincts, lusts and desires.  I'm sure it will make you a very interesting subject,' she says, running a fingertip along your chin as she leans her muzzle in closer.";
 			now wrcurseMoffatt is 1;
 		say "     She turns around and bends over to pick something up, accidentally (maybe) giving you a peek under her skirt while her broad tail keeps the back of her doctor's coat split.  You can't help but notice that there's no wet pussy hidden under there, just her wide hips and huge nutsack.  You'd assumed she was a herm like so many others you've seen around, but she's actually a shemale.  Her curvy bottom sways from side to side, setting her balls rocking as well as he rummages around in the box before finally finding what she wanted.";
@@ -104,7 +104,14 @@ Instead of conversing the Doctor Moffatt:
 	otherwise if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
 		say "     'It seems you've gone and become too tainted by some strangely persistant infection since I last saw you.  It keeps you from being a suitable candidate at all.'  She sighs and teases one of her nipples.  'It's too bad,too.  I think we would have had lots of fun together.  Now I'll need to start looking for someone else.  You may go now,' she says dismissively, giving her tail a meaningful flick.";
 		now hp of doctor moffatt is 99;
-	otherwise if wrcursestatus >= 3 and wrcursestatus < 100 and wrcurseMoffatt is 0:
+	otherwise if wrcursestatus >= 7 and wrcursestatus < 100:
+		if wrcurseMoffatt is 0:
+			say "     'It seems you've gone and become too tainted by some strangely persistant infection since I last saw you.  It keeps you from being a suitable candidate at all.'  She sighs and teases one of her nipples.  'It's too bad,too.  I think we would have had lots of fun together.  Now I'll need to start looking for someone else.  You may go now,' she says dismissively, giving her tail a meaningful flick.";
+			now hp of doctor moffatt is 99;
+		otherwise if wrcurseMoffatt is 1:
+			say "     'It seems you've gone and disobeyed my instructions and exaccerbated this saurian condition of yours.  You are no longer a valid candidate for my research and I'll have to find a new candidate and start all over again.  I am most disappointed in you and I don't want to see you here again,' she says with a dismissive wave of her fluffy tail.";
+			now hp of doctor moffatt is 99;
+	otherwise if wrcursestatus >= 3 and wrcursestatus < 7 and wrcurseMoffatt is 0:
 		say "     Moving up close, she runs her paws over your [bodytype of player].  'This dinosaurian transition that you're going through does present a bit of an unexpected kink,' she says with unusually playful emphasis, 'but it need not ruin my research.  I would surmise that it's tapped into something deep, primitive and wild inside you,' she says with a strong, sexual emphasis on those words, squeezing your shoulders and rubbing across the marks on your back.  'That primitive side lurking inside all of us, the instinctive monster from the id.  A creature of raw instincts, lusts and desires.  I'm sure it will make you a very interesting subject,' she says, running a fingertip along your chin as she leans her muzzle in closer.  She presses her plump breasts against you as she licks your ear.  'Just take care not to let it as it is and we can expect some very interesting sessions together,' he whispers softly in your ear before stepping away.";
 		now wrcurseMoffatt is 1;
 	otherwise if lust of Doctor Moffatt is 1:
@@ -210,7 +217,14 @@ instead of fucking the Doctor Moffatt:
 	otherwise if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
 		say "     'It seems you've gone and become too tainted by some strangely persistant infection since I last saw you.  It keeps you from being a suitable candidate at all.'  She sighs and teases one of her nipples.  'It's too bad,too.  I think we would have had lots of fun together.  Now I'll need to start looking for someone else.  You may go now,' she says dismissively, giving her tail a meaningful flick.";
 		now hp of doctor moffatt is 99;
-	otherwise if wrcursestatus >= 3 and wrcursestatus < 100 and wrcurseMoffatt is 0:
+	otherwise if wrcursestatus >= 7 and wrcursestatus < 100:
+		if wrcurseMoffatt is 0:
+			say "     'It seems you've gone and become too tainted by some strangely persistant infection since I last saw you.  It keeps you from being a suitable candidate at all.'  She sighs and teases one of her nipples.  'It's too bad,too.  I think we would have had lots of fun together.  Now I'll need to start looking for someone else.  You may go now,' she says dismissively, giving her tail a meaningful flick.";
+			now hp of doctor moffatt is 99;
+		otherwise if wrcurseMoffatt is 1:
+			say "     'It seems you've gone and disobeyed my instructions and exaccerbated this saurian condition of yours.  You are no longer a valid candidate for my research and I'll have to find a new candidate and start all over again.  I am most disappointed in you and I don't want to see you here again,' she says with a dismissive wave of her fluffy tail.";
+			now hp of doctor moffatt is 99;
+	otherwise if wrcursestatus >= 3 and wrcursestatus < 7 and wrcurseMoffatt is 0:
 		say "     Moving up close, she runs her paws over your [bodytype of player].  'This dinosaurian transition that you're going through does present a bit of an unexpected kink,' she says with unusually playful emphasis, 'but it need not ruin my research.  I would surmise that it's tapped into something deep, primitive and wild inside you,' she says with a strong, sexual emphasis on those words, squeezing your shoulders and rubbing across the marks on your back.  'That primitive side lurking inside all of us, the instinctive monster from the id.  A creature of raw instincts, lusts and desires.  I'm sure it will make you a very interesting subject,' she says, running a fingertip along your chin as she leans her muzzle in closer.  She presses her plump breasts against you as she licks your ear.  'Just take care not to let it as it is and we can expect some very interesting sessions together,' he whispers softly in your ear before stepping away.";
 		now wrcurseMoffatt is 1;
 	otherwise if hp of Doctor Moffatt is 3 or hp of Doctor Moffatt is 4:
@@ -422,7 +436,7 @@ Section 4 - Active Effects
 
 an everyturn rule:
 	if ( hp of Doctor Moffatt >= 3 and hp of Doctor Moffatt <= 7 ) and lust of Doctor Moffatt is not 1:
-		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
+		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 			say "     Something about your recent changes has affected you.  Thoughts of the curvy skunk doctor have stopped filling your mind.";
 			now hp of Doctor Moffatt is 97;
 		otherwise if lastfuck of Doctor Moffatt - turns < 12:
@@ -446,7 +460,7 @@ an everyturn rule:
 			if morale of player < 0, now morale of player is morale of player / 2;
 		if libido of player > 100, now libido of player is 100;
 	otherwise if hp of Doctor Moffatt is 8 or hp of Doctor Moffatt is 9:
-		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:
+		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 			say "     Something about your recent changes has affected you.  Thoughts of the curvy skunk doctor have stopped filling your mind.";
 			now hp of Doctor Moffatt is 97;
 		otherwise if bodyname of player is "Hyperskunk" and player is not pure:
