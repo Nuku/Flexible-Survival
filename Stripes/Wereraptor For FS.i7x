@@ -1,5 +1,5 @@
-Version 3 of Wereraptor For FS by Stripes begins here.
-[Version 3 - Ending the curse]
+Version 4 of Wereraptor For FS by Stripes begins here.
+[Version 4 - Accepting the curse]
 "Adds a special wereraptor creature/curse to Flexible Survival's Wandering Monsters table"
 
 Section 0 - Event Activation
@@ -73,6 +73,7 @@ Section 1 - Monster Responses
 wrmode is a number that varies.
 wrcursestatus is a number that varies.
 wrcursestart is a number that varies.
+wrcurseactivity is a truth state that varies.  wrcurseactivity is normally false.
 
 when play begins:
 	add { "Wereraptor" } to infections of furry;
@@ -220,8 +221,8 @@ When Play begins:
 	now defeated entry is "[beatthewereraptor]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[losetowereraptor]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[wereraptordesc]";						[ Description of the creature when you encounter it. ]
-	now face entry is "animalistic head of a raptor with piercing yellow eyes and covered in [if cocks of player > 0 and cunts of player > 0]dark crimson[otherwise if cunts of player > 0]black[otherwise if cocks of player > 0]green[otherwise]pale grey[end if] scales";
-	now body entry is "shaped like some kind of human-velociraptor hybrid.  You are hunched over, balancing on your powerful hind legs.  Your arms have a strong tendancy to fold up against your chest when not in use or when you are running, charging like a velociraptor in those movies you used to watch.  Your hands and feet now only possess three digits each";
+	now face entry is "[if wrcurseactivity is true]animalistic head of a raptor with piercing yellow eyes and[otherwise]a humanoid face with saurian features.  It has yellow eyes and is[end if] covered in [if cocks of player > 0 and cunts of player > 0]dark crimson[otherwise if cunts of player > 0]black[otherwise if cocks of player > 0]green[otherwise]pale grey[end if] scales";
+	now body entry is "[if wrcurseactivity is true]shaped like some kind of human-velociraptor hybrid.  You are hunched over, balancing on your powerful hind legs.  Your arms have a strong tendancy to fold up against your chest when not in use or when you are running, charging like a velociraptor in those movies you used to watch.  Your hands and feet now only possess three digits each[otherwise]roughly human in shape, but with taloned hands and feet.  Aside from a tendency to fold your arms up against your chest, you carry yourself mostly like any other person[end if]";
 	now skin entry is "deep blue and [if cocks of player > 0 and cunts of player > 0]dark crimson[otherwise if cunts of player > 0]black[otherwise if cocks of player > 0]green[otherwise]pale grey[end if] scales";
 	now tail entry is "Growing out from the base of your spine, you have a long, thick tail like that of a lizard or dinosaur.";
 	now cock entry is "[one of]slender[or]reptilian[or]saurian[or]tapered[purely at random]";
@@ -293,7 +294,7 @@ an everyturn rule:
 this is the wereraptor curse rule:
 	if skipturnblocker is 0:
 		if wrcursestatus > 0 and wrcursestatus < 100:
-			if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0:	[eliminates curse]
+			if ( ( jackalmantf > 0 or jackalboytf > 0 ) and wrcursestatus < 7 ) or nightmaretf > 0 or HellHoundlevel > 0:	[eliminates curse]
 				if wrcursestatus >= 3:
 					say "     You can feel your mystical transformation fighting off the wereraptor curse you are under.  Your body writhes in pain and you hiss angrily as your eyes flash yellow and turn slitted before returning to normal.  The scars at your shoulders heal, the curse purged by the greater power that now has a hold of you - for better or for ill.";
 					now hp of player is hp of player / 2;
@@ -361,6 +362,29 @@ this is the wereraptor curse rule:
 				if libido of player < 0, now libido of player is 0;
 				wrcurserecede;
 				now wrcursestatus is 3;
+		if wrcursestatus is 7:
+			if daytimer is night:
+				if wrcurseactivity is false:
+					now wrcurseactivity is true;
+					increase dexterity of player by 2;
+					increase strength of player by 2;
+					decrease charisma of player by 2;
+					decrease intelligence of player by 2;
+					say "     The power of your saurian transformation rushes through you again, growing back to full strength with the coming of the night.  You feel a rush of hunger and arousal surging through your system as the lust to feed and fuck fills you again";
+					wrcurserestore;
+					say ".";
+				otherwise if bodyname of player is not "Wereraptor" or player is not pure:
+					say "     The power of your saurian transformation rushes through you again, pushing to restore your reptilian form.  You feel a rush of hunger and arousal surging through your system as the lust to feed and fuck fills you again";
+					wrcurserestore;
+					say ".";
+			otherwise:
+				if wrcurseactivity is true:
+					now wrcurseactivity is false;
+					decrease dexterity of player by 2;
+					decrease strength of player by 2;
+					increase charisma of player by 2;
+					increase intelligence of player by 2;
+					say "     With the coming of the day, your saurian body spasms and twitches.  The feral strength of your wereraptor form recedes for now as your features soften and you take on a form more akin to a reptilian humanoid, hiding your wilder true nature for the moment.";
 
 
 to wrcursesave:
@@ -393,7 +417,14 @@ to wrcursesave:
 		wrcurserestore;
 		say ".";
 
+
 to wrcurserestore:
+	[puts Wereraptor as lead monster]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Wereraptor":
+			now monster is y;
+			break;
 	if skinname of player is not "Wereraptor":
 		wrskinsave;
 		increase hunger of player by 1;
@@ -504,7 +535,9 @@ to wrcurserampage:
 			otherwise if a random chance of 1 in 3 succeeds:
 				say "You have a brief, hazy image of [one of]eating something raw and bloody[or]tearing wildly into some meat[or]the taste of blood as it runs down your muzzle[or]clawing and slashing at something[purely at random].";
 			follow the turnpass rule;
-			wrcurserestore;
+			if bodyname of player is not "Wereraptor" or player is not pure:
+				say "     During the night, your curse overpowers your body and returns it to your wereraptor form";
+				wrcurserestore;
 		if humanity of player > 0:
 			now skipturnblocker is 0;		[player returned to consciousness, messages resume]
 			say "     You finally pass out somewhere at dawn.  You awaken a few hours later covered in blood and with little memory of your wild rampage.  You can only recall vague images of your beastly form fighting, eating and fucking throughout the night, but no specifics.  Realizing you no longer feel hungry and can taste the coppery tang of blood in your mouth, you are momentarily ill before your nanites settle your stomach.  Worn and aching, you rise and stumble your way back to the last place you recall being, trying your best not to think of what you may have done last night.";
@@ -686,44 +719,90 @@ Instead of resolving Dinosaur Skeleton:
 		attempttowait;
 		say "     Realization sinks in as the wereraptor speaks.  'Dr... Utah?' you utter, steadying yourself on the nearby display plaque.  Events seem to fall into place as that missing piece of the puzzle is revealed.  The creature before you is the young professor you met earlier and both were released when you broke into [if girl is banned]his[otherwise]her[end if] office.";
 		if girl is not banned:
-			say "     'Yessss.  And I was once like you,' the wereraptor says as she continues.  'Weak and fearful.  When the chaos began and my curse started to take hold, I barred myself inside my office.  I nailed the door shut from the inside and threw the hammer out the window.  I had meant to save others from the beast within me,' she says with a chuckle.  'But I came to realize that I was wrong and that this blessing is not to be feared.  The creature it frees is myself.  Free from my fears, my inhibitions, my petty concerns for others.  It has made me powerful... as it has made you powerful.  Do not throw it away and embrace it instead.  Embrace it and let the beast free, as it has freed me.'  Her voice grows louder and more maniacal as she concludes her tirade before charging to attack you.";
+			say "     'Yessss.  And I was once like you,' the wereraptor says as she continues.  'Weak and fearful.  When the chaos began and my curse started to take hold, I barred myself inside my office.  I nailed the door shut from the inside and threw the hammer out the window.  I had meant to save others from the beast within me,' she says with a chuckle.  'But I came to realize that I was wrong and that this blessing is not to be feared.  The creature it frees is myself.  Free from my fears, my inhibitions, my petty concerns for others.  It has made me powerful... as it has made you powerful.  Do not throw it away and embrace it instead.  Embrace it and let the beast free, as it has freed me.'  Her voice grows louder and more maniacal as she stalks closer to you.";
+			say "     'Rather than reject it and force the gift from your blood, accept my blood and the power of those bones and become stronger.  The transformations which have affected the city have awakened this power and it can help it becomes greater.  We shall resist the day and find power in the night,' she laughs.  'Come, join me and we shall spread our gift to those worthy of it and all others shall be our prey.'";
+			say "     Do you go ahead with the cure or accept her offer?";
 		otherwise:
-			say "     'Yessss.  And I was once like you,' the wereraptor says as it continues.  'Weak and fearful.  When the chaos began and my curse started to take hold, I barred myself inside my office.  I nailed the door shut from the inside and threw the hammer out the window.  I had meant to save others from the beast within me,' he says with a chuckle.  'But I came to realize that I was wrong and that this blessing is not to be feared.  The creature it frees is myself.  Free from my fears, my inhibitions, my petty concerns for others.  It has made me powerful... as it has made you powerful.  Do not throw it away and embrace it instead.  Embrace it and let the beast free, as it has freed me.'  His voice grows louder and more maniacal as he concludes his tirade before charging to attack you.";
-		now wrcurseNermine is 9;
-		challenge "Wereraptor";
-		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "     Having beaten the wereraptor, you pull open the potion and slam it back quickly while still on your adrenaline high.  This gives you the added courage to go through with it, drinking down much of it before you have a chance to react to it.  But once your body notices the repulsive taste, you start to retch and have to struggle to keep it down.  Uncertain how much you need, but not wanting to take any chances, you drink down the rest of it, feeling it burn the whole way down and roiling like molten metal in your stomach.";
-			say "     You stumble over to the fossil and outstretch your arm.  You quickly grab the knife and jab it into your forearm, letting your blood flow out onto the dinosaur bones.  The wound is extremely painful, sending chills through your body.  Your blood hisses and steams, turning a sickly green as it comes out of you and runs down your arm.  It turns to black upon landing on the bones.  You fall to your knees, but keep at it, holding the silver blade until all the tainted green is gone and the silver no longer causes the chilling pain[if wrcursestatus is 5] and all traces of your wereraptor form have been expunged[end if].";
-			attempttowait;
-			say "     You stagger to your feet, feeling very weak and worn from your blood loss, but also as if a great burden has been lifted from you.  You watch as the last of your blood bubbles on the fossilized bones and disappears.  You're uncertain if it boiled away or was absorbed into the dry bones, but it is gone.  In short order, the slashes on your shoulders fade away, healed and gone as if they were never there.  Having beaten its power, you know you can not be tainted by it again.";
-			say "     Not wanting to linger here any longer, you prepare to leave only to notice that the silver knife is missing.  You suspect it's somehow already found its way back to Nermine.";
-			if weapon object of player is silver knife, now weapon object of player is journal;
-			now carried of silver knife is 0;
-			if humanity of player < 100:
-				increase humanity of player by 1;
-				increase humanity of player by ( 100 - humanity of player ) / 2;
-			now hp of player is hp of player / 2;
-			increase morale of player by 5;
-			if wrcursestatus is 5:
-				wrcurserecede;
-			now wrcurseNermine is 11;
-			now wrcursestatus is 100;
-			increase score by 100;
-		otherwise if fightoutcome >= 20 and fightoutcome <= 29:
-			if girl is not banned:
-				say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors.  With a hissing laugh, she tosses the vial down as you scream.  There is a distance crash as your precious cure is destroyed.  Dr. Utah clacks back across the tiled floor and runs her taloned hand across your body.  'Soon you will come to accept your proper nature and forsake your foolish reluctance.  It is time for the saurians to rise again, new and stronger.'  She leans in closer and runs her tongue along your face.  'I look forward to hunting with you,' she adds with a grope between your legs before turning and leaving.";
-			otherwise:
-				say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors.  With a hissing laugh, he tosses the vial down as you scream.  There is a distance crash as your precious cure is destroyed.  Dr. Utah clacks back across the tiled floor and runs his taloned hand across your body.  'Soon you will come to accept your proper nature and forsake your foolish reluctance.  It is time for the saurians to rise again, new and stronger.'  He leans in closer and runs his tongue along your face.  'I look forward to hunting with you,' he adds with a grope between your legs before turning and leaving.";
-			say "     Once you've recovered enough to stand, you prepare yourself to leave.  You glance around and realize that your silver knife is gone.  You suspect it's somehow already found its way back to Nermine.  With your cure gone and your payment made, you get the feeling that you're on your own now.";
-			if weapon object of player is silver knife, now weapon object of player is journal;
-			now carried of silver knife is 0;
-			now wrcurseNermine is 10;
+			say "     'Yessss.  And I was once like you,' the wereraptor says as it continues.  'Weak and fearful.  When the chaos began and my curse started to take hold, I barred myself inside my office.  I nailed the door shut from the inside and threw the hammer out the window.  I had meant to save others from the beast within me,' he says with a chuckle.  'But I came to realize that I was wrong and that this blessing is not to be feared.  The creature it frees is myself.  Free from my fears, my inhibitions, my petty concerns for others.  It has made me powerful... as it has made you powerful.  Do not throw it away and embrace it instead.  Embrace it and let the beast free, as it has freed me.'  His voice grows louder and more maniacal as he stalks closer to you.";
+			say "     'Rather than reject it and force the gift from your blood, accept my blood and the power of those bones and become stronger.  The transformations which have affected the city have awakened this power and it can help it becomes greater.  We shall resist the day and find power in the night,' he laughs.  'Come, join me and we shall spread our gift to those worthy of it and all others shall be our prey.'";
+			say "     Do you go ahead with the cure or accept his offer?";
+		if the player consents:
+			say "[wrcureattempt]";
 		otherwise:
-			if girl is not banned:
-				say "     As you turn and run, the speedy wereraptor makes a final charge and swipes her claws at you.  This knocks the potion from your hand, sending it tumbling to the ground and breaking.  With its scent in the air, your revulsion kicks in and you move quickly to get away, the transformed professor fleeing as well.  When you stop and try to catch your breath now that you're far from the smell of it, you realize that your silver knife is missing as well.  You suspect it's somehow already found its way back to Nermine.  With your cure gone and your payment made, you get the feeling that you're on your own now.";
-			if weapon object of player is silver knife, now weapon object of player is journal;
-			now carried of silver knife is 0;
-			now wrcurseNermine is 10;
+			say "[wrcurseaccept]";
+		now Dinosaur Skeleton is resolved;
+
+
+to say wrcureattempt:
+	say "     Dr. Utah snarls at your rejection and clacks her claws together before charging.";
+	now wrcurseNermine is 9;
+	challenge "Wereraptor";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		say "     Having beaten the wereraptor, you pull open the potion and slam it back quickly while still on your adrenaline high.  This gives you the added courage to go through with it, drinking down much of it before you have a chance to react to it.  But once your body notices the repulsive taste, you start to retch and have to struggle to keep it down.  Uncertain how much you need, but not wanting to take any chances, you drink down the rest of it, feeling it burn the whole way down and roiling like molten metal in your stomach.";
+		say "     You stumble over to the fossil and outstretch your arm.  You quickly grab the knife and jab it into your forearm, letting your blood flow out onto the dinosaur bones.  The wound is extremely painful, sending chills through your body.  Your blood hisses and steams, turning a sickly green as it comes out of you and runs down your arm.  It turns to black upon landing on the bones.  You fall to your knees, but keep at it, holding the silver blade until all the tainted green is gone and the silver no longer causes the chilling pain[if wrcursestatus is 5] and all traces of your wereraptor form have been expunged[end if].";
+		attempttowait;
+		say "     You stagger to your feet, feeling very weak and worn from your blood loss, but also as if a great burden has been lifted from you.  You watch as the last of your blood bubbles on the fossilized bones and disappears.  You're uncertain if it boiled away or was absorbed into the dry bones, but it is gone.  In short order, the slashes on your shoulders fade away, healed and gone as if they were never there.  Having beaten its power, you know you can not be tainted by it again.";
+		say "     Not wanting to linger here any longer, you prepare to leave only to notice that the silver knife is missing.  You suspect it's somehow already found its way back to Nermine.";
+		if weapon object of player is silver knife, now weapon object of player is journal;
+		now carried of silver knife is 0;
+		if humanity of player < 100:
+			increase humanity of player by 1;
+			increase humanity of player by ( 100 - humanity of player ) / 2;
+		now hp of player is hp of player / 2;
+		increase morale of player by 5;
+		if wrcursestatus is 5:
+			wrcurserecede;
+		now wrcurseNermine is 11;
+		now wrcursestatus is 100;
+		increase score by 100;
+	otherwise if fightoutcome >= 20 and fightoutcome <= 29:
+		if girl is not banned:
+			say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors.  With a hissing laugh, she tosses the vial down as you scream.  There is a distance crash as your precious cure is destroyed.  Dr. Utah clacks back across the tiled floor and runs her taloned hand across your body.  'Soon you will come to accept your proper nature and forsake your foolish reluctance.  It is time for the saurians to rise again, new and stronger.'  She leans in closer and runs her tongue along your face.  'I look forward to hunting with you,' she adds with a grope between your legs before turning and leaving.";
+		otherwise:
+			say "     The wereraptor growls victoriously and grabs the potion with visible trepidation before racing headlong to the balcony overlooking the lower floors.  With a hissing laugh, he tosses the vial down as you scream.  There is a distance crash as your precious cure is destroyed.  Dr. Utah clacks back across the tiled floor and runs his taloned hand across your body.  'Soon you will come to accept your proper nature and forsake your foolish reluctance.  It is time for the saurians to rise again, new and stronger.'  He leans in closer and runs his tongue along your face.  'I look forward to hunting with you,' he adds with a grope between your legs before turning and leaving.";
+		say "     Once you've recovered enough to stand, you prepare yourself to leave.  You glance around and realize that your silver knife is gone.  You suspect it's somehow already found its way back to Nermine.  With your cure gone and your payment made, you get the feeling that you're on your own now.";
+		if weapon object of player is silver knife, now weapon object of player is journal;
+		now carried of silver knife is 0;
+		now wrcurseNermine is 10;
+	otherwise:
+		say "     As you turn and run, the speedy wereraptor makes a final charge and swipes her claws at you.  This knocks the potion from your hand, sending it tumbling to the ground and breaking.  With its scent in the air, your revulsion kicks in and you move quickly to get away, the transformed professor fleeing as well.  When you stop and try to catch your breath now that you're far from the smell of it, you realize that your silver knife is missing as well.  You suspect it's somehow already found its way back to Nermine.  With your cure gone and your payment made, you get the feeling that you're on your own now.";
+		if weapon object of player is silver knife, now weapon object of player is journal;
+		now carried of silver knife is 0;
+		now wrcurseNermine is 10;
+
+
+to say wrcurseaccept:
+	if girl is not banned:
+		say "     Looking down at the bottle of poisonous aconite and the silver knife that makes your skin crawl just to look at it, you reject them.  Your wereraptor body knows they are cursed and seek to kill you, not save you.  You hurl the bottle fast and far, sending over the balcony to the floor far below.  Dr. Utah gives a triumphant, hissing laugh and strides forward, running her taloned hands over your body.";
+		say "     'Excellent!  Let us begin so the wereraptors may rise again, new and greater than before.'  Saying this, she digs her claws into her own arm, causing her blood to flow down her arm before holding it out to you.  'Come, accept my blood into you.  Accept the power of these bones into you.  Become the wereraptor!'";
+		say "     With the scent of her blood and her arousal in the air, your excitement builds and you press your [if wrcursestatus is 4]mouth[otherwise]muzzle[end if] to the wound, lapping up the flowing blood and feeling it seep into you.  The wereraptor hisses as you drink, speaking too low for you to make out the words.  The bones behind you rattle and you'd swear you hear the hiss of words from them as well.  You open your body and mind up to the beast, the primitive, the raptor within you and it feels as if something is drawn into you as well as spreading throughout you.  Dr. Utah moans as well and you sense somehow that she's undergoing a similar change [if wrcursestatus is 4]as your powerful wereraptor form restores itself, this time stronger than ever[otherwise]though there is no visible difference on either of you[end if].";
+		if bodyname of player is not "Wereraptor" or player is not pure:
+			now wrcursestatus is 7;
+			now wrcurseactivity is true;
+			say "     As the power of the raptor infuses you, you change, returning to your true form";
+			wrcurserestore;
+		say "     When the process is done, she pushes your head back and you both stumble apart and fall to the ground.  You feel weak and tired.  But you know that will pass, for you are a wereraptor now and the blood in you is strong now.  You rise and look yourself over and while you see no differences, you know the power within you has grown and it cannot be taken from you now by foolish concoctions or a wretched kn-.  You stop and look around, but can find no trace of the silver knife, leading you to conclude that it has somehow made its way back to Nermine.";
+		say "     Dr. Utah rises and snarls triumphantly, a cry that you return.  'There is much to do before our kind can spread and rule the wretched mammals.  I shall return to my office and begin the preparations.  There are others I have infected who show promise and may soon accept the gift as you have,' she hisses softly, licking your muzzle.  'Those who accept it shall rise as we have and those who don't shall fall,' she concludes, running her hands over your body before turning and charging away.";
+		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake.  The wereraptor is a part of you now and its instincts are a part of your mind.  Its hunger is yours, but you are now in control.  There is no point in denying these desires for you have made them your own.";
+		now Paleontology Office is known;
+[		say "***raptor sex goes here?";	]
+	otherwise:
+		say "     Looking down at the bottle of poisonous aconite and the silver knife that makes your skin crawl just to look at it, you reject them.  Your wereraptor body knows they are cursed and seek to kill you, not save you.  You hurl the bottle fast and far, sending over the balcony to the floor far below.  Dr. Utah gives a triumphant, hissing laugh and strides forward, running his taloned hands over your body.";
+		say "     'Excellent!  Let us begin so the raptors may rise again, new and greater than before.'  Saying this, he digs his claws into his own arm, causing his blood to flow down his arm before holding it out to you.  'Come, accept my blood into you.  Accept the power of these bones into you.  Become the wereraptor!'";
+		say "     With the scent of his blood and his arousal in the air, your excitement builds and you press your [if wrcursestatus is 4]mouth[otherwise]muzzle[end if] to the wound, lapping up the flowing blood and feeling it seep into you.  The wereraptor hisses as you drink, speaking too low for you to make out the words.  The bones behind you rattle and you'd swear you hear the hiss of words from them as well.  You open your body and mind up to the beast, the primitive, the raptor within you and it feels as if something is drawn into you as well as spreading throughout you.  Dr. Utah moans as well and you sense somehow that he's undergoing a similar change [if wrcursestatus is 4]as your powerful wereraptor form restores itself, this time stronger than ever[otherwise]though there is no visible difference on either of you[end if].";
+		if bodyname of player is not "Wereraptor" or player is not pure:
+			now wrcursestatus is 7;
+			now wrcurseactivity is true;
+			say "     As the power of the raptor infuses you, you change, returning to your true form";
+			wrcurserestore;
+		say "     When the process is done, he pushes your head back and you both stumble apart and fall to the ground.  You feel weak and tired.  But you know that will pass, for you are a wereraptor now and the blood in you is strong now.  You rise and look yourself over and while you see no differences, you know the power within you has grown and it cannot be taken from you now by foolish concoctions or a wretched kn-.  You stop and look around, but can find no trace of the silver knife, leading you to conclude that it has somehow made its way back to Nermine.";
+		say "     Dr. Utah rises and snarls triumphantly, a cry that you return.  'There is much to do before our kind can spread and rule the wretched mammals.  I shall return to my office and begin the preparations.  There are others I have infected who show promise and may soon accept the gift as you have,' he hisses softly, licking your muzzle.  'Those who accept it shall rise as we have and those who don't shall fall,' he concludes, running his hands over your body before turning and charging away.";
+		say "     As the rush of your acceptance of the curse starts to fade, you wonder about the choice you've made, but do not feel that it is a mistake.  The wereraptor is a part of you now and its instincts are a part of your mind.  Its hunger is yours, but you are now in control.  There is no point in denying these desires for you have made them your own.";
+		wrcurserestore;
+		now Paleontology Office is known;
+[		say "***raptor sex goes here?";	]
+	now wrcursestatus is 7;
+	now wrcurseactivity is true;
 
 
 
@@ -735,6 +814,7 @@ Instead of resolving Dinosaur Skeleton:
 [ 4: resisted for the night	]
 [ 5: curse in effect		]
 [ 6: rampage in effect		]
+[ 7: curse accepted		]
 [ 100: curse purged		]
 
 

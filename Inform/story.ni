@@ -1205,7 +1205,7 @@ when play begins:
 
 Vulpinelist is a marker.	[list of vulpine infections]
 when play begins:
-	add { "Clockwork Fox", "hermaphrodite latex vixen", "Latex Fox", "Vixen Nurse", "Arctic fox", "Vulpogryph" } to infections of Vulpinelist;
+	add { "Clockwork Fox", "hermaphrodite latex vixen", "Latex Fox", "Vixen Nurse", "Arctic fox", "Vulpogryph", "Kitsune" } to infections of Vulpinelist;
 
 Reptilelist is a marker.	[list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
@@ -5419,6 +5419,7 @@ Include Candy Striper by Stripes.
 [NPCs]
 Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
+Include DrUtah by Stripes.
 Include RodAndRonda by Stripes.
 Include Lucy by Stripes.
 Include Larissa for FS by Stripes.
