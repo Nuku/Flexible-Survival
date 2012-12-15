@@ -247,7 +247,7 @@ to say findfirefighter5:
 	say "'Remember, you're looking for a [bold type]Dame[roman type] in the [bold type]high rise[roman type] district with salt and pepper hair. If you [bold type]take on a chocolate Lab body and face[roman type] then you should be able to find her without too much trouble. Saving her after that...well...I hope you're strong enough to face off a bunch of angry doggies!' Homaru chirps with a menacing smile on his face.";
  
 to say findfirefighter6:
-	say "'You've found three firefighters already, congratulations!' Homaru chuckles at you while saying this. 'There's only one other still here in the city, but he'll be by on his own time.' Homaru says cryptically.  'Anyway why don't you go back and check to see how Kenaz is? You might be surprise if you do.' And with that Kenaz waves you off. Maybe going to the firehouse would be wise?
+	say "'You've found three firefighters already, congratulations!' Homaru chuckles at you while saying this. 'There's only one other still here in the city, but he'll be by on his own time.' Homaru says cryptically.  'Anyway why don't you go back and check to see how Kenaz is? You might be surprised if you do.' And with that Homaru waves you off. Maybe going to the firehouse would be wise?
 	[bold type]There are no more firefighters to find now! So head back to the Fire House![roman type]";
 
 
