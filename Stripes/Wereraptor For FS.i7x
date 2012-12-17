@@ -420,11 +420,13 @@ to wrcursesave:
 
 to wrcurserestore:
 	[puts Wereraptor as lead monster]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Wereraptor":
-			now monster is y;
-			break;
+	choose row monster from table of random critters;
+	if name entry is not "Wereraptor":
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Wereraptor":
+				now monster is y;
+				break;
 	if skinname of player is not "Wereraptor":
 		wrskinsave;
 		increase hunger of player by 1;
