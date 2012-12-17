@@ -5334,6 +5334,7 @@ Include Nightmare by Sarokcat.
 Include Mannequin by Wahn.
 Include Spidertaur Male by Wahn.
 Include Catgirl by Wahn.
+Include Sand Man by Wahn.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
 Include Male Peacock for FS By Lago Moro.
