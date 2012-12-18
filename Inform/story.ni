@@ -1858,8 +1858,17 @@ to say mimpregchance:		[to be used when only MPreg would work]
 		if a random chance of 2 in target succeeds, impregnate with name entry;
 		now the libido of the player is (the libido of the player) / 2;
 
-
-to say fimpregchance:		[to be used when only female pregnancy would work]
+to say mimpregchance with (x - text):		[to be used when only MPreg would work]
+	if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player and larvaegg is not 2:
+		let target be 10;
+		if insectlarva is true:
+			increase target by 2 + larvaegg;
+		if "Fertile" is listed in feats of player, decrease target by 3;
+		if inheat is true, decrease target by 3;
+		if a random chance of 2 in target succeeds, impregnate with x;
+		now the libido of the player is (the libido of the player) / 2;
+ 
+ to say fimpregchance:		[to be used when only female pregnancy would work]
 	if cunts of player > 0 and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 10;
 		if insectlarva is true:
