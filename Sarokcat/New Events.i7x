@@ -246,7 +246,7 @@ squatters den is a situation.
 The sarea of squatters den is "Mall";
 
 Instead of resolving a squatters den:
-	say "Exploring the sewers underneath the mall, you find signs of a recent struggle.  Investigating more closely you see where something came across what appears to be a recently-inhabited squatter's den, piles of junk and blankets and even an old shopping cart have been dragged down here and set up in a small alcove.  From the looks of the recent struggle, the den isn't inhabited any longer.  Carefully picking through the piles of junk, you look for anything that might be of use.  Finding some food and a bottle of water that is none too cleanr, you head on about your business.";
+	say "Exploring the sewers underneath the mall, you find signs of a recent struggle.  Investigating more closely you see where something came across what appears to be a recently-inhabited squatter's den, piles of junk and blankets and even an old shopping cart have been dragged down here and set up in a small alcove.  From the looks of the recent struggle, the den isn't inhabited any longer.  Carefully picking through the piles of junk, you look for anything that might be of use.  Finding some food and a bottle of water that is none too clean, you head on about your business.";
 	increase carried of dirty water by 1;
 	increase carried of food by 1;
 	Now squatters den is resolved;
