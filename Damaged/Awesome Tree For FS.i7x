@@ -20,13 +20,13 @@ to say infect:
 	
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
-		now carried of Awesome Fruit is 1;
+		increase carried of Awesome Fruit by 1;
 		say "You gain 1x Awesome Fruit!";
 	if a random number between 1 and 100 > 40:
-		now carried of Awesomer Fruit is 1;
+		increase carried of Awesomer Fruit by 1;
 		say "You gain 1x Awesomer Fruit!";
 	if a random number between 1 and 100 > 85:
-		now carried of Awesomest Fruit is 1;
+		increase carried of Awesomest Fruit by 1;
 		say "You gain 1x Awesomest Fruit!";
 		
 to say awesome attack:
