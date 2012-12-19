@@ -1801,7 +1801,7 @@ To impregnate with (x - text):
 	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
 		stop the action;
 	if "Selective Mother" is listed in feats of player:
-		say "Do you wish to be impregnated with a [x] child?";
+		say "Do you wish to be impregnated with a/an [x] child?";
 		if the player consents:
 			let q be 1;
 		otherwise:
@@ -5369,6 +5369,7 @@ Include Snow Leopard for FS by Stripes.
 Include Grey Squirrel for FS by Stripes.
 Include Dragontaur for FS by Stripes.
 Include Vixentaur for FS by Stripes.
+Include Dracovixentaur for FS by Stripes.
 [Include Strange Slut by Zero.]
 [Include Dominator by Zero.]
 Include Random German Shepherd For Fs by Telanda Softpaw.
