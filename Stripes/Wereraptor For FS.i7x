@@ -357,7 +357,7 @@ this is the wereraptor curse rule:
 				if a random chance of hunger of player in resistance succeeds:
 					wrcurserampage;	[curse rampage activates]
 			otherwise:
-				say "     With the coming of the day, your saurian body spasms and twitches.  The beast unleashed hissed and snarls, but those dark, instinctual impulses are pushed back into a dark corner of your mind.  But you know it is not gone, but merely slumbering, awaiting the coming of the night to seek its wild freedom again.  But for the moment, at least, you know peace.";
+				say "     With the coming of the day, your saurian body spasms and twitches.  The beast unleashed hissed and snarls, but those dark, instinctual impulses are pushed back into a dark corner of your mind.  But you know it is not gone, but merely slumbering, awaiting the coming of the night to seek its wild freedom again.  But for the moment, at least, you know peace[if wrcurseNermine is 0 and a random chance of 2 in 3 succeeds].  Perhaps you should take this opportunity to find someone knowledgeable about [one of]such strange matters[or]mysterious and mystical matters[or]the occult[at random] for help[end if].";
 				decrease libido of player by 10;
 				if libido of player < 0, now libido of player is 0;
 				wrcurserecede;

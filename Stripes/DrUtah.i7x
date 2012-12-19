@@ -1,5 +1,5 @@
 Version 1 of DrUtah by Stripes begins here.
-[Version 1.1 - Sex & Preg w/female Dr. Utah]
+[Version 1.2 - Fixed pregnancy mechanic w/female Dr. Utah]
 "Adds a Wereraptor NPC named Dr. Utah to the Flexible Survival game"
 
 Section 1 - Paleontology Office
@@ -46,7 +46,7 @@ to say utahdesc:
 
 
 Instead of conversing the Doctor Utah:
-	if nightmaretf > 0 or HellHoundlevel > 0:
+	if nightmaretf > 0 or HellHoundlevel > 0 or wrcursestatus is 100:
 		say "     Dr. Utah sniffs and growls at you.  'You fool!  You wretch!  I can smell that... that... tainted essense within you.  You have given up the wonderful gift I have bestowed upon you.  Begone!' [if girl is not banned]she[otherwise]he[end if] snarls as he slashes at you, driving you from [if girl is not banned]his[otherwise]her[end if] office before slamming the door on you.  It seems you're no longer welcome here.";
 		now wrcursestatus is 100;
 		now Paleontology Office is unknown;
@@ -60,7 +60,7 @@ Instead of conversing the Doctor Utah:
 
 
 instead of fucking the Doctor Utah:
-	if nightmaretf > 0 or HellHoundlevel > 0:
+	if nightmaretf > 0 or HellHoundlevel > 0 or wrcursestatus is 100:
 		say "     Dr. Utah sniffs and growls at you.  'You fool!  You wretch!  I can smell that... that... tainted essense within you.  You have given up the wonderful gift I have bestowed upon you.  Begone!' [if girl is not banned]she[otherwise]he[end if] snarls as he slashes at you, driving you from [if girl is not banned]his[otherwise]her[end if] office before slamming the door on you.  It seems you're no longer welcome here.";
 		now wrcursestatus is 100;
 		now Paleontology Office is unknown;
@@ -107,6 +107,26 @@ an everyturn rule:
 		if lust of Doctor Utah >= 24:
 			say "By some unknown, feral instinct, you know that more of your offspring have entered this world.  Your wereraptor nature urges you to return to Dr. Utah... perhaps to breed her with more eggs.";
 			increase libido of Doctor Utah by a random number between 2 and 4;
+			increase hp of Doctor Utah by 1;
+			if hp of Doctor Utah > 20, now hp of Doctor Utah is 18;
+
+
+[	hp of Doctor Utah		]
+[ 0 = not yet bred		]
+[ 1 = first preggers		]
+[ 2 = first clutch		]
+[ odd = preggers			]
+[ even = not preggers		]
+[ 20 = maximum			]
+
+[	libido of Doctor Utah	]
+[	= egg count			]
+
+[	lust of Doctor Utah	]
+[	= gestation			]
+[ <= 12 = not showing much	]
+[ > 12  = egg heavy		]
+[ 24+   = ready to lay		]
 
 
 Section 3 - Endings

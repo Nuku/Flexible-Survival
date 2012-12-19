@@ -99,8 +99,8 @@ to say beattheflaminglynx:
 		otherwise:
 			say ".  Would you like to [link]mount the flaming cat(1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link] or [link]let him go (0)[as]0[end link]?";
 			now calcnumber is -1;
-			while calcnumber < 0 or calcnumber > 3:
-				say "Choice? (0-3)>[run paragraph on]";
+			while calcnumber < 0 or calcnumber > 2:
+				say "Choice? (0-2)>[run paragraph on]";
 				get a number;
 			if calcnumber is 1:
 				now lynxfun is 1;
