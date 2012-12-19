@@ -1,32 +1,48 @@
 Version 1 of Vixentaur For FS by Stripes begins here.
-[Version 1]
-"Adds a Vixentaur creature to Flexible Survivals Wandering Monsters table to go along with Sam the Dual-Taur's content."
+[Version 1.1 - Oral vixen victory for males, player victory scenes]
+"Adds a Vixentaur creature to Flexible Survival's Wandering Monsters table to go along with Sam the Dual-Taur's content."
 
 Section 1 - Monster Responses
+
+vixentaurcatch is a number that varies.  vixentaurcatch is normally -35.
 
 when play begins:
 	add { "Vixentaur" } to infections of girl;
 	add { "Vixentaur" } to infections of furry;
-	add { "Vixentaur" } to infections of Vulpinelist;		[list of reptile infections]
+	add { "Vixentaur" } to infections of Vulpinelist;		[list of vulpine infections]
 	add { "Vixentaur" } to infections of Taurlist;			[list of tauric infections]
-
 
 to say losetovixentaur:
 	if hp of Sam is 15:
 		say "     Sam growls and charges, slamming her body into yours and [if scalevalue of player < 4]sends you tumbling back several yards[otherwise]knocks you over[end if].  You land half on and half off a cot, painfully injuring your back.";
 	otherwise:
-		say "     Having defeated you, the vixentaur giggles excitedly and presses you to the ground.  She murrs in your ear about how [if cocks of player > 0]she wants you to breed some kits in her[otherwise]much fun she's going to have with you[end if].  You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom.  You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
-		if cocks of player > 0:
+		if cocks of player > 0 and a random chance of 2 in 3 succeeds:
+			say "     Having defeated you, the vixentaur giggles excitedly and presses you to the ground.  She murrs in your ear about how [if cocks of player > 0]she wants you to breed some kits in her[otherwise]much fun she's going to have with you[end if].  You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom.  You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
 			say "     She gets your [cock size desc of player] [cock of player] shaft lined up and sinks down onto your throbbing rod with ease.  She giggles and yips as she rides up and down.  Her inner walls squeeze and ripple across your manmeat in so many delightful ways.  She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk.  The vixen fucks you with wild, animalistic abandon, pounding her hips down onto yours until you're nearly insensate with lust and finally climax as her pussy clamps down around your shaft as she cums.  You blast your [if cock width of player > 20]large [end if]load into her, breeding the lustful vixen, possibly siring more of these alluring creatures.  Having got what she wanted, she giggles and heads off after flashing you her pussy with your cum [if cock width of player > 20]flowing[otherwise]leaking[end if] out of it.";
 		otherwise:
-			say "     She grinds her hips down onto you, rubbing her wet, dripping pussy against your [skin of player] flesh[if cunts of player > 0].  Her paws rub and knead over you, one of them slipping between your legs to tease your [cunt size desc of player] pussy[otherwise].  Her paws rub and knead over you, teasing every sensitive spot they can find[end if].  She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk.  she continues to rub against you until she finally cums, soaking you in her juices.  Having had her fun, she gets up with a giggle, presses her sticky crotch into your face and trots off merrily.";
+			say "     Having defeated you, the vixentaur giggles excitedly and presses you to the ground.  She murrs in your ear about how [one of]much fun she's going to have with you[or]she's been looking for some fun[at random].  You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom.  You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
+			say "     She grinds her hips down onto you, rubbing her wet, dripping pussy against your [skin of player] flesh.  Her paws rub and knead over you, [if cocks of player > 0 and cunts of player > 0]one of them wrapping around your [cock size desc of player] cock while the other goes for your juicy pussy[otherwise if cocks of player > 0]one of them wrapping around your [cock size desc of player] [cock of player] cock[otherwise if cunts of player > 0]one of them slipping between your legs to tease your [cunt size desc of player] pussy[otherwise]teasing every sensitive spot they can find[end if].  She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk.  she continues to rub against you until she finally cums, soaking you in her juices.  Having had her fun, she gets up with a giggle, presses her sticky crotch into your face and trots off merrily.";
 
 
 to say beatthevixentaur:
 	if hp of Sam is 15:
 		say "     You manage to knock Samantha down, having beaten the fight out of her.";
+	otherwise if a random number between 1 and 100 < vixentaurcatch and ( cocks of player > 0 or cunts of player > 0):
+		say "     The beaten vixentaur backs away from you, stumbling somewhat from her wounds.  Like the others, she prepares to shove you back, but you move in time to grab her and push her to the ground.  With her caught, you consider having some fun with her.  Shall you go ahead with that plan?";
+		if the player consents:
+			if cocks of player > 0:
+				say "     Keeping the defeated vixen pinned beneath you, you move around so you're laying across her back.  Pushing her tail up, you get your cock into position and slide it across her wet folds.  She vixen moans and fidgets beneath you with growing excitement.  '[one of]Oh, you do want to play with me[or]Hurry up and give it to me[or]Come on!  Fuck that naughty vixen[or]Breed me, you [bodytype of player] stud[at random]!' she says excitedly.  Grabbing her sexy bottom, you drive your cock into her and start fucking, pounding the slutty fox's juicy hole.";
+				say "     The vixentaur giggles, yips and moans as you fuck her.  Her cunt squeezes and rubs over your thrusting shaft in strange and delightful ways, the taur's vagina clearly made for pleasing any male that mounts her.  Reaching around, your grab her plump breasts and play with her nipples, getting her to dribble milk in a growing pool on the ground while enjoying the sounds of delight she makes at this.  When you finally cum, you drive hard into her and unleash your [if cock width of player > 40]huge [otherwise]large [end if] load while she cries out in ecstasy.  When you're through, you pull out, wipe your cock on her fluffy ass and give her a playful swat.  She bounds off, happily filled with your virile seed.";
+			otherwise:
+				say "     Keeping a grip on the vixen, you move around in front of her.  Grabbing her head, you push her face between your legs so her muzzle's squarely at your pussy.  Finding herself face to cunt with you, she stops resisting and giggles happily.  '[one of]Oh, you do want to play with me!' [or]Let me take care of that for you,' [or]I'm sorry for being such a naughty vixen earlier.  Let me make it up to you,' [or]Ooo!  This looks serious!  Lemme kiss it and make it aaallllll better,' [at random]she says excitedly.  And with that, the pink vulpine sets to work licking and lapping at your cunt.";
+				say "     Her tongue is quite adept at the task, working hard to please you and able to reach so many delightfully sensitive spots inside you with ease.  Despite your attempts to remain quiet, you can't help but moan and cry out as she expertly eats you out.  She eagerly laps up your flowing juices as she works that flexible appendage around inside you.  You run your hands over her ears and through her hair.  After a few small orgasms, she works you up to a large, crashing one that leaves your head spinning as her tongue goes wild inside your spasming vagina.  When you finally manage to push the eager vixen's muzzle back, her tongue pops out with a wet slurp.  She grins at you, licks her muzzle and dashes off with a happy giggle.";
+		otherwise:
+			say "     Not in the mood to play with the pink vixentaur, you give her ass a hard swat and warn her not to get in your way again.  She pouts and dashes off with a soft whimper and a bit of a limp from her injuries.";
+		decrease vixentaurcatch by 15;
 	otherwise:
 		say "     The beaten vixentaur backs away from you, stumbling somewhat from her wounds.  She gives you an angry shove, grumbling about how you're a big meanie for not wanting to play with her, before dashing off with a bit of a limp from her injuries.";
+		increase vixentaurcatch by 33;
+		if vixentaurcatch > 90, now vixentaurcatch is 90;
 
 
 to say vixentaurdesc:
@@ -47,7 +63,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Vixentaur";		[The creature's name as displayed and used in naming descriptions]
-	now attack entry is "[one of]The vixentaur grinds buxom breasts against your body![or]The vixentaur rears up and slashes you with her foreclaws![or]She snaps at you with her muzzle![or]The vixentaur slaps you soundly across the cheek![or]The vixen creature grabs you with her clawed hands and slams your face into her bosom.  The surprise motorboating leaves you momentarily dazed.[or]The vixen giggles and gives her breasts a tantalizing grope as she moves sexily around you.[at random]";
+	now attack entry is "[one of]The vixentaur grinds her buxom breasts against your body![or]The vixentaur rears up and slashes you with her foreclaws![or]She snaps at you with her muzzle![or]The vixentaur slaps you soundly across the cheek![or]The vixen creature grabs you with her clawed hands and slams your face into her bosom.  The surprise motorboating leaves you momentarily dazed.[or]The vixen giggles and gives her breasts a tantalizing grope as she moves sexily around you.[at random]";
 	now defeated entry is "[beatthevixentaur]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[losetovixentaur]";					[ Text when monster wins.  Change 'template' as above. ]
 	now desc entry is "[vixentaurdesc]";						[ Description of the creature when you encounter it. ]
@@ -75,8 +91,8 @@ When Play begins:
 	now cocks entry is 0;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0;		[ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
-	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
+	now breasts entry is 8;			[ Number of breasts the infection will give a player. ]
+	now breast size entry is 6;		[ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;			[ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 24;		[ Depth of female sex the infection will attempt to give a player. ]
