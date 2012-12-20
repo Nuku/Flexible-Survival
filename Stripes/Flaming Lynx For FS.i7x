@@ -83,7 +83,23 @@ to say beattheflaminglynx:
 	if cocks of player > 0:
 		say "     Beaten, the fiery feline's flames die down, going low as the lynx mewls in pain.  He turns around and raises his hindquarters and flags his short tail, exposing his rump and tight tailhole to you, submitting to the victor.  He releases a soft mewl, this time with more longing to it as a ripple of rainbow-coloured flames run across his body as he lowers his forequarters to further display his waiting hole.  You find yourself momentarily considering taking this strange feline up on his offer";
 		if cunts of player > 0:
-			say ".  Would you like to [link]mount the flaming cat(1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], relieve your [link]female needs (3)[as]3[end link] with the vibrant kitty or [link]let him go (0)[as]0[end link]?";
+			say ".  Would you like to [link]mount the flaming cat(1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], relieve your [link]female needs (3)[as]3[end link] with the vibrant kitty, have him [link]fuck your ass (4)[as]4[end link] or [link]let him go (0)[as]0[end link]?";
+			now calcnumber is -1;
+			while calcnumber < 0 or calcnumber > 4:
+				say "Choice? (0-4)>[run paragraph on]";
+				get a number;
+			if calcnumber is 1:
+				now lynxfun is 1;
+			otherwise if calcnumber is 2:
+				now lynxfun is 2;
+			otherwise if calcnumber is 3:
+				say "     As you reach for the feline with one hand and slide your other to tease as your wet pussy in anticipation of getting him to scratch your female itch, he hisses and leaps away.  His flames surge in a burst as he runs, leaving a streak of flames behind as he rockets off at surprising speed down the dark tunnels.  The flames fade quickly, thankfully doing no more damage than a scorchmark.";
+			otherwise if calcnumber is 4:
+				now lynxfun is 4;
+			otherwise:
+				now lynxfun is 3;
+		otherwise:
+			say ".  Would you like to [link]mount the flaming cat(1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link], have him [link]fuck your ass (3)[as]3[end link] or [link]let him go (0)[as]0[end link]?";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
 				say "Choice? (0-3)>[run paragraph on]";
@@ -93,19 +109,7 @@ to say beattheflaminglynx:
 			otherwise if calcnumber is 2:
 				now lynxfun is 2;
 			otherwise if calcnumber is 3:
-				say "     As you reach for the feline with one hand and slide your other to tease as your wet pussy in anticipation of getting him to scratch your female itch, he hisses and leaps away.  His flames surge in a burst as he runs, leaving a streak of flames behind as he rockets off at surprising speed down the dark tunnels.  The flames fade quickly, thankfully doing no more damage than a scorchmark.";
-			otherwise:
-				now lynxfun is 3;
-		otherwise:
-			say ".  Would you like to [link]mount the flaming cat(1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link] or [link]let him go (0)[as]0[end link]?";
-			now calcnumber is -1;
-			while calcnumber < 0 or calcnumber > 2:
-				say "Choice? (0-2)>[run paragraph on]";
-				get a number;
-			if calcnumber is 1:
-				now lynxfun is 1;
-			otherwise if calcnumber is 2:
-				now lynxfun is 2;
+				now lynxfun is 4;
 			otherwise:
 				now lynxfun is 3;
 	otherwise:
@@ -116,7 +120,11 @@ to say beattheflaminglynx:
 	otherwise if lynxfun is 2:
 		say "     Not interested in mounting the kitty, but still wanting some fun, you give his rear a swat and take him by the scruff of the neck.  His fur is merely warm and his flames are no longer scorching.  You drag the flaming feline's head around, pressing his muzzle to your [if cocks of player > 1]cocks[otherwise]cock[end if], which he starts licking at without hesitation.  You scritch the kitty's ears and press his muzzle forward, sinking your cock into his mouth.  His maw is delightfully warm, making your hard rod pulse with eagerness.  You start thrusting into him with his rough, feline tongue slides across your sensitive flesh.  Given the feline's disposition, it's clear he's done this before and is more than happy to do it again, giving you a wonderful blow job that has you cum with a loud groan in the end.  He swallows down all you can give, rumbling and purring as he does.  His flames ripple with another shimmer of colours and grow brighter.  Once he's been fueled up with your semen, you release him and let him head off, his flames brighter and more colourful than they were when he arrived.";
 	otherwise if lynxfun is 3:
-		say "     You shake your head at the eager kitty and give his rear a swat to send him on his way.  He gives a disappointed mewl and pads off down the tunnels.  The light from his presence gradually fades as he heads off down tunnels until he's out of sight completely, leaving you once more in the dark save for your own light source."
+		say "     You shake your head at the eager kitty and give his rear a swat to send him on his way.  He gives a disappointed mewl and pads off down the tunnels.  The light from his presence gradually fades as he heads off down tunnels until he's out of sight completely, leaving you once more in the dark save for your own light source.";
+	otherwise if lynxfun is 4:
+		say "     Still wanting to get the flaming lynx's cock in your ass, but just on your own terms, you grab the horny kitty and push him over.  His fur is merely warm and his flames are no longer scorching.  Taking a hold of his stiff member, you stroke it to full erection and spread his pre along it as it dribbles down over your fingers.  Once you've gotten him nice and slick, you straddle the oversized feline and bring you hips into position[if cunts of player > 0].  He seems briefly worried and eyes your cunt warily, but is relieved when it is your asshole you press against his pulsing shaft[otherwise].  He mrowls and ripples with colour as you press his pulsing shaft to your asshole[end if].";
+		say "     You moan softly as you push down onto him, his slick shaft sliding into your tight bottom and filling you nicely.  His fur gives another ripple of colour as you stroke his tummy and scritch his ears while riding him.  Warmth begins to suffuse into you from your stuffed ass, increasing your pleasure and arousing you greatly.  The feline's paws twitch in the air, trying in vain to find purchase to fuck you harder, but you're setting the pace and work to ensure your own enjoyment foremost.  Regardless of his instincts wanting him to be mounting you, he's still quite happy being ridden like this, if his rumbling purr is to be an accurate sign.";
+		say "     You have a very enjoyable time riding the animalistic mutant, squeeze down on his feline shaft and working it to rub at all your most sensitive spots just the way you like it.  When you finally cum and splatter your seed across his fur, his flames seem to surge and ripple with a rainbow excitement.  His shaft pulses and throbs in you as this rush of energy sends him over the edge, the heat filling you as he cums, sending shot after shot of deliciously hot semen into your bowels.  You wait until you're both done before easing off of the flaming lynx and letting him up.  His flames seem more vibrant and colourful after your fun and he dashes off while purring loudly.[mimpregchance]";
 
 
 to say flaminglynxattack:
