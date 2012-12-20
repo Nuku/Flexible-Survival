@@ -1,5 +1,5 @@
 Version 1 of Flaming Lynx For FS by Stripes begins here.
-[Version 1.1 - Player victory sex completed.]
+[Version 1.2 - Player victory anal riding.]
 
 "Adds a Flaming Lynx creature to Flexible Survival's Wandering Monsters table"
 
