@@ -5,19 +5,44 @@ Version 1 of Bald Eagle For FS by Stripes begins here.
 
 Section 1 - Monster Responses
 
+eagledefeatnum is a number that varies.
+noeaglesex is a number that varies.
+
 when play begins:
 	add { "Bald Eagle" } to infections of guy;
 	add { "Bald Eagle" } to infections of furry;
 
 to say losetoeagle:
+	now noeaglesex is 0;
+	let T be 1;
+	if "Submissive" is listed in feats of player, increase T by 1;
+	if "MPreg" is listed in feats of player, increase T by 1;
+	if "More Anal" is listed in feats of player, increase T by 1;
+	if "Less Anal" is listed in feats of player, now T is 0;
 	say "     Having defeated you, the eagle releases a triumph call and pushes you down.  His cock, poking from his soft feathers, is dripping with pre and eager for use on his captured prey";
 	if cunts of player > 0 and a random chance of 2 in 3 succeeds:
-		say ".  He roughly turns you over onto all fours and climbs atop you, sinking his slick cock into your pussy.  You moan and quickly grow excited despite yourself as his soft feathers slide over your body while his hard rod drives into you.  He nips at your shoulder and neck with his pointed beak while mating you.  After a few minutes of steady pounding, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you.  Even as you're cumming, he pushes you off his spent cock and onto the ground before soaring away.";
+		say ".  He roughly turns you over onto all fours and climbs atop you, sinking his slick cock into your pussy.  You moan and quickly grow excited despite yourself as his soft feathers slide over your body while his hard rod drives into you.  Your inner walls quiver and your honeyed juices start to flow as your excitement builds.  He nips at your shoulder and neck with his pointed beak while mating you.  After a few minutes of steady pounding, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you.  Even as you're cumming, he pushes you off his spent cock and onto the ground before soaring away.";
+	otherwise if cunts of player is 0 and a random chance of T in 6 succeeds:
+		say ".  He roughly turns you over onto all fours and grabs your ass.  'You're no eagless, but you'll do for now,' he says as he climbs atop you, sinking his slick cock into your ass. You groan in discomfort at the sudden penetration, but quickly grow excited despite yourself as his soft feathers slide over your body while his hard rod drives into you.  He nips at your shoulder and neck with his pointed beak while ass-fucking you.  After a few minutes of steady pounding, he drives hard into you repeatedly, blasting spurt after spurt of thick semen into you, stuffing your bowels with his seed.  Even as you're cumming, he pushes you off his spent cock and onto the ground before soaring away.[mimpregchance]";
 	otherwise:
 		say ".  Tucking his wings in, he grabs your head with his taloned fingers, pulling you to his cock.  He grinds his throbbing shaft against you, leaking his pre until the scent of it gets to be too much and you take it into your mouth and start sucking.  You lick and suck at his cock, moaning in pleasure as you do until finally he cums, spurting his thick seed down your throat, filling your belly with his semen.  Finished, he pushes you back and soars away.";
 
 to say beattheeagle:
-	say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds.";
+	if noeaglesex > 2:
+		say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds.  You make no effort to stop it, same as you've done with the others of its kind recently.";
+	otherwise if eagledefeatnum < 3 or ( cocks of player is 0 and cunts of player is 0 ) or noeaglesex > 2:
+		say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds.";
+	otherwise:
+		say "     After dealing that last blow to him, the eagle staggers back.  You notice him preparing to fly away like the others have before.  Shall you grab him for some fun before he can escape?";
+		if the player consents:
+			now noeaglesex is 0;
+			if cunts of player > 0:
+				say "     As the eagle prepares to take off, you pounce upon him, bearing him to the ground.  He is briefly stunned, giving you an opportunity to roll him onto his back and grab onto that foot-long cock of his.  You stroke it to full erection and clamber atop him, sinking your juicy pussy down over it with a low moan of satisfaction.  As he's starting to come out of it, you keep his shoulders pinned and ride the eagle's cock [if cunt length of player < 8]as hard and as fast as you can given its large size[otherwise]hard and fast[end if].  He makes no attempt to resist or escape, now bucking his hips to thrust up into you until you both reach a loud, crashing orgasm.  Once he's spent and you've taken what you've wanted from him, you slide off, moaning softly as you enjoy the warm feeling of his semen inside you.";
+			otherwise:
+				say "     As the eagle prepares to take off, you pounce upon him, bearing him to the ground.  He is briefly stunned, giving you an opportunity to roll him over onto all fours and guide your cock under his feathery tail.  With a low moan of satisfaction, you sink you cock into his rear, finding it [if cock length of player > 12]exceptionally[otherwise if cock length of player > 6]very[otherwise]quite[end if] tight around your [cock size desc of player] [cock of player] rod.  Still dazed, he gives a squawk of discomfort and tries to squirm away at first, but you keep a good grip on him until his cries turn to moans of pleasure as he's pushing back into your thrusts for more.  With a final, hard push, you drive your pulsing cock[if cock length of player > 12] deep[end if] inside him and cum hard, stuffing the bird with your creamy load.  As you're filling him, you reach around and stroke him off, getting him to splatter his load across the ground as he's buggered.";
+		otherwise:
+			increase noeaglesex by 1;
+			say "     You make no effort to stop its escape, instead waving your arms at it to shoo the annoying creature away.";
 
 to say eagledesc:
 	choose row monster from table of random critters;
