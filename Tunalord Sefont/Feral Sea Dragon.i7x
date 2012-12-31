@@ -84,7 +84,7 @@ To say dragon loss:
 to say fsdm desc:
 	now firebreathcount is 0;
 	now firebreathready is false;
-	say "     You notice something in the water, which appears to be a large shadow on it's approach towards you.  Suddenly, the prior silence is shattered with the concussive crashing of waves as a massive beast hurls itself from under its surface, landing on the beach close to you.  [one of]The dragon sniffs the air before seeing you, it's eye agleam with particular hunger[or]Looking at you, the dragon roars its challenge with a frightening glare[or]The dragon eyes you unnervingly as it seems to consider you for some purpose[at random].  You'd imagine it's fin-like limbs would be ill-equipped to move across land, but he's quick to prove otherwise as the massive bulk begins rushing down upon you.";
+	say "     You notice something in the water, which appears to be a large shadow on its approach towards you.  Suddenly, the prior silence is shattered with the concussive crashing of waves as a massive beast hurls itself from under its surface, landing on the beach close to you.  [one of]The dragon sniffs the air before seeing you, its eyes agleam with particular hunger[or]Looking at you, the dragon roars its challenge with a frightening glare[or]The dragon eyes you unnervingly as it seems to consider you for some purpose[at random].  You'd imagine its fin-like limbs would be ill-equipped to move across land, but he's quick to prove otherwise as the massive bulk begins rushing down upon you.";
 
 Section 2 - Monster Insertion
 
