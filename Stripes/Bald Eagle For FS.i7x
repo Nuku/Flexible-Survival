@@ -1,4 +1,5 @@
-Version 1 of Bald Eagle For FS by Stripes begins here.
+Version 2 of Bald Eagle For FS by Stripes begins here.
+[Version 2 - Victory sex + lock-out]
 
 "Adds a Bald Eagle creature to Flexible Survivals Wandering Monsters table"
 
