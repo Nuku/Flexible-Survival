@@ -129,7 +129,7 @@ When Play begins:
 	now cock change entry is "it becomes human-like, uncut and well-proportioned";
 	now str entry is 12;
 	now dex entry is 20;
-	now sta entry is 12;   
+	now sta entry is 12;
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 16;

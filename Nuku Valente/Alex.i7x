@@ -258,7 +258,7 @@ to say alexsexytimes1:
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft and [cunt size desc of player] pussy until you can hold back no longer and shoot your hot load down the ferrety man[']s throat.  He sucks it all down with soft moans until your balls are drained.  His muzzle pulls back and he slides his slinky body up yours to kiss you.  As your tongue dives between his lips, you can feel the mustelid[']s cum spraying across your body.";
 	otherwise if cocks of player > 0:				[MALE]
-		say "     The ferret runs his fingers over your [if cocks of player > 1]cocks, holding them[otherwise]cock, holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure.  His tongue glides over your [cock size desc of player] [if cocks of player > 1]cocks[otherwise]cock[end if] slowly, working over every square centimeter of [if cocks of player > 1]them[otherwise]it[end if] and your balls to pleasure you.  Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly.  He smiles up at you and rubs one hand over your [ball size] balls while the other strokes his animalistic member.";
+		say "     The ferret runs his fingers over your [if cocks of player > 1]cocks, holding them[otherwise]cock, holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure.  His tongue glides over your [cock size desc of player] [if cocks of player > 1]cocks[otherwise]cock[end if] slowly, working over every square centimeter of [if cocks of player > 1]them[otherwise]it[end if] and your balls to pleasure you[if anallevel is 3].  He continues lower, sliding his tongue across your tight pucker in several slow licks.  His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if].  Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly.  He smiles up at you and rubs one hand over your [ball size] balls while the other strokes his animalistic member.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft until you can hold back no longer and shoot your hot load down the ferrety man[']s throat.  He sucks it all down with soft moans until your balls are drained.  His muzzle pulls back and he slides his slinky body up yours to kiss you.  As your tongue dives between his lips, you can feel the mustelid[']s cum spraying across your body.";
@@ -294,7 +294,11 @@ to say alexsexytimes2:
 
 
 to say alexmalesexy2:
-	say "     Unable to resist such an offer, you get your cock nice and slick, then sink it down into him.  His ass spreads open for you slowly as you thrust steadily deeper and deeper.  He moans in delight beneath the larger, sexy ferret filling him.";
+	if a random chance of 1 in 3 succeeds or anallevel is 3:
+		say "     Unable to resist such an offer, but wanting a little more fun before the main event, you pour some lube onto your fingers and slip one into the horny ferret's ass.  He moans and squirms in delight, but pushes back harder onto your intruding digit.  Deciding he's already ready for more, you push a second finger into him to stretch him out further.  You make a point to tease his prostate, which has his cock twitching and dripping with precum onto his tan tummyfur.  You're tempted to suck it, but know that'd probably set him off at this point.";
+		say "     With him quite ready and worked up now, you get your cock nice and slick with the lube, then sink it down into him.  His loosened ass spreads open for you readily as you thrust steadily deeper and deeper.  He moans in delight beneath the larger, sexy ferret filling him.";
+	otherwise:
+		say "     Unable to resist such an offer, you get your cock nice and slick, then sink it down into him.  His ass spreads open for you slowly as you thrust steadily deeper and deeper.  He moans in delight beneath the larger, sexy ferret filling him.";
 	say "     You take your time until you[']re fully sheathed in him before you start pounding into him harder and faster.  He twists his flexible upper body so he can lick and kiss you while holding his ass presented to you.  As you stretch out overtop him and he nuzzles and nips at your neck, you take his cock in your paw and stroke him while pounding his rump with an increasingly frantic pace.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
@@ -361,17 +365,17 @@ to say alexbrunchtime:
 to say brunchtimechange:
 	if alexbrunch is 1:
 		now tailname of player is "Ferret";
-		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur. ";
+		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
 	if alexbrunch is 2:
 		now skinname of player is "Ferret";
 		now skin of player is "soft, white fur that covers your";
-		increase charisma of player by 1;
-		say "[bold type]Your charisma has increased by 1.[roman type][line break]";
+[		increase charisma of player by 1;
+		say "[bold type]Your charisma has increased by 1.[roman type][line break]";	]
 	if alexbrunch is 3:
 		now facename of player is "Ferret";
-		now face of player is "that of an adorable mustelid with darting eyes that search for shinies.  You have a cute, pink nose with plentiful whiskers on your ferrety muzzle.";
-		increase intelligence of player by 2;
-		say "[bold type]Your intelligence has increased by 2.[roman type][line break]";
+		now face of player is "that of an adorable mustelid with darting eyes that search for shinies.  You have a cute, pink nose with plentiful whiskers on your ferrety muzzle";
+[		increase intelligence of player by 2;
+		say "[bold type]Your intelligence has increased by 2.[roman type][line break]";	]
 	if alexbrunch is 4:
 		now bodyname of player is "Ferret";
 		now body of player is "the slender and flexible form of a ferret.  You constantly have the urge to weave and bob about playfully as you move";
@@ -381,9 +385,9 @@ to say brunchtimechange:
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
 		now the daycycle of player is 0;
-		increase dexterity of player by 2;
+[		increase dexterity of player by 2;
 		decrease stamina of player by 1;
-		say "[bold type]Your dexterity has increased by 2 while your stamina has dropped by 1.[roman type][line break]";
+		say "[bold type]Your dexterity has increased by 2 while your stamina has dropped by 1.[roman type][line break]";	]
 
 
 to say alexbodyreset:
@@ -433,7 +437,7 @@ to say pillowtalk:
 	if T is 7:
 		say "Alex runs his paw along your side and nibbles your ear, telling you that Lorenda and Lee have been asking about you.  It seems they want to thank you for saving them and getting them together.  They[']ve been rather overtly suggesting that you both come over sometime for a little fun at their place.  Alex runs his finger along your thigh as he tells you that part, making it clear to you just what kind of fun those two have in mind.";
 	if T is 8:
-		say "Alex wriggles his flexible body out from under his half-filled tray and nuzzles between your legs, licking and kissing at your [if cunts of player > 0 and cocks of player > 0]cock and pussy[otherwise if cocks of player > 0]cock[otherwise]pussy[end if].  You moan in delight, rubbing a paw through his headfur as you enjoy his oral ministrations with your meal until finally he gets a juicy treat as well when you cum.";
+		say "Alex wriggles his flexible body out from under his half-filled tray and nuzzles between your legs, licking and kissing at your [if cunts of player > 0 and cocks of player > 0]cock and pussy[otherwise if cocks of player > 0 and anallevel is 3]cock and anus[otherwise if cocks of player > 0]cock[otherwise]pussy[end if].  You moan in delight, rubbing a paw through his headfur as you enjoy his oral ministrations with your meal until finally he gets a juicy treat as well when you cum.";
 	if T is 9:
 		say "you talk to Alex about how he[']s changed while you[']ve known him.  He[']s become a much nicer person over the time you[']ve known him.  You cautiously ask him if he thinks it has to do with his growing changes, and he agrees.  'Part of it was the stress about my clients, but only part.  I think letting my ferret side out has made me happier and more positive overall.  I may get a little hyperactive at times, but it[']s hard to stay sad now.  I have a little romp around the room or hide a few shiny things and I[']m right as rain.'";
 	if T is 10:

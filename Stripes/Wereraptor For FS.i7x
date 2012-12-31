@@ -822,17 +822,18 @@ to say wrcurseaccept:
 
 [
 when play ends:
-	if bodyname of player is "Wereraptor":
-		if humanity of player is less than 10:
-			say "     You succumb to your template infection.";
+	if wrcursestatus is 2:
+		say "***something wild and primal struggles briefly for freedom, but is too old and weak and fades away with an angry hiss.";
+	otherwise if wrcursestatus >= 3 and wrcursestatus <= 6:
+		if bodyname of player is "Wereraptor":
+			say "***ending for Wereraptor";
 		otherwise:
-			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
-				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
-				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";
+			say "***as your infection takes hold, it forces out the ancient wereraptor curse.";
+	otherwise if wrcursestatus is 7:
+		if bodyname of player is "Wereraptor":
+			say "***ending for Wereraptor";
+		otherwise:
+			say "***as your infection takes hold, it forces out the ancient wereraptor curse.";
 ]
 
 [ Edit this to have the correct creature name as well]

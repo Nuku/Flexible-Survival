@@ -197,7 +197,7 @@ to say omioquest3:
 			now omq is 4;		
 	otherwise:
 		say "'GODS!!!' Omio yells while shivering and rocking herself slightly. 'I can't stand those little pests! One of these days I'm going to create a super rodent killing machine and then let it go to town wiping out every last vegetable eating pest I can find on this stupid planet! Omio begins to rant more and more and quickly you get the feeling that maybe leaving would be a good thing to do before her ire finds its way centering on you. Taking your leave you notice several peaches on the ground at your feet and quickly move to pick them up while heading off. Lucky!";
-		increase carried of peach by 3;
+		increase carried of tasty peach by 3;
 		extend game by 8;
 		increase score by 15;
 		now omq is 4;
@@ -256,7 +256,7 @@ to say omioquest6:
 		delete lumpy box;
 		increase carried of water bottle by 1;
 		increase carried of food by 1;
-		increase carried of peach by 1;
+		increase carried of tasty peach by 1;
 		extend game by 8; 
 		increase score by 25;
 		now omq is 7;
@@ -417,7 +417,7 @@ to say omioquest10:
 		delete medallion;
 		increase carried of food by 1;
 		increase carried of water bottle by 1;
-		increase carried of peach by 1;
+		increase carried of tasty peach by 1;
 		extend game by 8;
 		increase score by 5;
 		now omq is 11;
@@ -570,7 +570,7 @@ Instead of resolving a Dream of a Unicorn:
 			say "When the redhead is done with the clean up portion of the examination she lays out several provisions for you and then turns to go off about her way.";
 		increase carried of food by 1;
 		increase carried of water bottle by 1;
-		increase carried of peach by 1;
+		increase carried of tasty peach by 1;
 		extend game by 8;
 		now Dream of a Unicorn is resolved;
 

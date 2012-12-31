@@ -253,15 +253,19 @@ Section 4 - Endings
 when play ends:
 	if bodyname of player is "Dracovixentaur":
 		if humanity of player is less than 10:
-			say "     You succumb to your template infection.";
+			if hp of Sam >= 10 and hp of Sam <= 29:
+				say "***Succumb w/Sam as Dragontaur.  Should not be possible.";
+			otherwise if hp of Sam >= 30 and hp of Sam <=49:
+				say "***Succumb w/Sam as Vixentaur.  Should not be possible.";
+			otherwise if hp of Sam >= 50 and hp of Sam <= 69:
+				say "***Succumb w/Sam as Dracovixentaur.";
 		otherwise:
-			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
-				say "     Additional text for a male/herm survivor.";
-			otherwise if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
-				say "     Additional text for a female survivor who can become preggers.";
-			otherwise:									[F-STERILE]
-				say "     Additional text for a female survivor who cannot become preggers.";
+			if hp of Sam >= 10 and hp of Sam <= 29:
+				say "***Survive w/Sam as Dragontaur.  Should not be possible.";
+			otherwise if hp of Sam >= 30 and hp of Sam <=49:
+				say "***Survive w/Sam as Vixentaur.  Should not be possible.";
+			otherwise if hp of Sam >= 50 and hp of Sam <= 69:
+				say "***Survive w/Sam as Dracovixentaur.";
 ]
 
 [ Edit this to have the correct creature name as well]

@@ -5126,6 +5126,12 @@ Carry out milking:
 			repeat with T running from one to ( ( the breasts of the player ) / 2 ):
 				add "cow milk" to invent of the player;
 		now lastmilking is turns;
+	otherwise if the bodyname of the player is "Margay":
+		say "You start lactating shortly after you begin playing with your breasts.  You are rewarded with a slow and steady flow of milk as you pinch your nipples.  You gather your milk into bottles and store it away in you pack.";
+		let Z be square root of ( breasts of player * breast size of player );
+		repeat with T running from one to Z:
+			increase carried of margay milk by 1;
+		now lastmilking is turns;
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
 
