@@ -178,7 +178,6 @@ To say Alpha Husky loss:
 		otherwise:
 			say "     'Your loss,' the husky says with a shrug, wagging his tail as he saunters off, 'Though if you don't want to be a proper alpha for that well tamed bitch I scented on you, feel free to send her my way anytime!'  He gives a barking laugh over his shoulder as he vanishes into the streets of the city.";
 	otherwise:
-		let caughtthealphahusky be 0;
 		if losttoalphahusky >= 2:	[lost at least twice]
 			say "     Having been beaten and abused by these male huskies a few times in the past, you growl as you beat him and pushing him down before he can get away.  He makes some snaps at you and tries to pull free, but you've got him.  Shall you take this opportunity to get a little payback?";
 			caughtthealphahusky;
