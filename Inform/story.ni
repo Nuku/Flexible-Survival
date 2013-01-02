@@ -10,7 +10,7 @@ Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
-use MAX_NUM_STATIC_STRINGS of 50000.
+use MAX_NUM_STATIC_STRINGS of 55000.
 use ALLOC_CHUNK_SIZE of 120000.
 use MAX_OBJECTS of 1100.
 use MAX_ACTIONS of 300.
@@ -5350,6 +5350,7 @@ Include Mannequin by Wahn.
 Include Spidertaur Male by Wahn.
 Include Catgirl by Wahn.
 Include Sand Man by Wahn.
+Include Naiad by Wahn.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
 Include Male Peacock for FS By Lago Moro.
