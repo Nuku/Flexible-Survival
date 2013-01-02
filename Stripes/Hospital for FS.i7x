@@ -313,6 +313,15 @@ instead of resolving Records Room:
 	increase score by 5;
 
 
+Surrounding Area is a situation.
+The sarea of Surrounding Area is "Hospital";
+
+instead of resolving Surrounding Area:
+	say "     Deciding to take a some time to check out the neighbourhood around the hospital, you proceed away from the large building and into the nearby residential area.  As you cautiously move around the houses, a few things stand out right away.  The doors to the homes are open or are broken into.  A closer examination shows splintered wood, ripped hinges and broken glass, often with heavy claw marks as well.  But far more telling is the fact that it is far too quiet.  The city certainly isn't as noisy as it used to be, but there's usually some sounds of activity from time to time.  Be it some more peaceful mutants skulking around, weaker creatures fleeing from your approach or the noises of conflict and/or sex (for it's often hard to tell the two apart these days), there is usually some background sounds, but not here.  It becomes increasingly disconcerting for you.";
+	say "     As you continue to scout the area out, you consider slipping into one of the homes.  Just as you're about to step into the open and head for the open door, a trio of those jaguar orderlies come into view as they turn a corner.  They seem to be on patrol in the area, looking around very intently.  You slip further into the shadows and wait for them to pass before leaving the neighbourhood.  It seems the orderlies are still scouring the area for any survivors they can grab and you'd rather not risk being caught by them.";
+	now Surrounding Area is resolved;
+
+
 Stairwell is a situation.
 The sarea of Stairwell is "Hospital";
 
