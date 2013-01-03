@@ -39,7 +39,7 @@ to say beatthelatexmistress:
 				if calcnumber < 1 or calcnumber > 3:
 					say "Invalid choice.  Pick from 1 to 3.";
 			if calcnumber is 1:
-				now ltxmscene is 2;
+				now ltxmscene is 1;
 			otherwise if calcnumber is 2:
 				now ltxmscene is 2;
 			otherwise:

@@ -33,6 +33,7 @@ to say beattheeagle:
 		say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds.  You make no effort to stop it, same as you've done with the others of its kind recently.";
 	otherwise if eagledefeatnum < 3 or ( cocks of player is 0 and cunts of player is 0 ) or noeaglesex > 2:
 		say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds.";
+		increase eagledefeatnum by 1;
 	otherwise:
 		say "     After dealing that last blow to him, the eagle staggers back.  You notice him preparing to fly away like the others have before.  Shall you grab him for some fun before he can escape?";
 		if the player consents:
