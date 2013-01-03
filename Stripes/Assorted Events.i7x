@@ -436,9 +436,10 @@ to say yummypeach:
 		say "You decide to take a bite out of the juicy peach, savouring its soft flesh as you eat it.  The fruit slakes your hunger and thirst a little, though you can't help but become a little aroused as well.  Peaches have been called aphrodisiacs by some, after all.";
 		decrease thirst of player by 6;
 		decrease hunger of player by 3;
+	increase libido of player by 10;
 	if thirst of player < 0, now thirst of player is 0;
 	if hunger of player < 0, now hunger of player is 0;
-	increase libido of player by 10;
+	if libido of player > 100, now libido of player is 100;
 
 instead of sniffing tasty peach:
 	say "The oversized peach smells delicious and tempting.";
