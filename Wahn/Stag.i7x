@@ -1,5 +1,5 @@
 Version 3 of Stag by Wahn begins here.
-[Version 3.1 - Sex between Xerxes/Helen and Alpha Fang/Beta Fang/Felinoid, and whoever fucks Helen first knocks her up too]
+[Version 3.2 - Adjustments to infectiont texts]
 
 "Adds a Male Stag to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -166,16 +166,16 @@ When Play begins:
 	now defeated entry is "[Stag loses]";      [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Stag wins]";       [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[StagDesc]";              [ Description of the creature when you encounter it.]
-	now face entry is "furry, with the striking angular features of a proud stag. Your head is crowned by two multiple-pointed antlers";
-	now body entry is "male and fit. You have strong arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
+	now face entry is "covered in short brown fur and has the striking angular features of a proud stag. Crowning your head are two impressive multiple-pointed antlers";
+	now body entry is "that of a humanoid male, trim and fit. You have strong arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
 	now skin entry is "brown furred";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "Your butt has a deer's tail over it, [skin of player] on the top, soft cream along the underside. The rest of your ass is quite curvy and [skin of player], hiding nothing. ";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "pitch black human";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "your face draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. Short fur swells ticklishly over your new contours as growths sprout from the top of your head, growing quickly into ornate multi-pointed antlers."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your limbs grow long and strong, masculine. Your nails at hands and feet reform to cover your finger- and toe-tips in a protective hoof each."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "soft tingles spread in waves as fur sprouts in odd patterns across you, slowly settling into brown fur over most of your body, with lighter cream coloring starting at your navel and running down to your groin and the insides of your legs"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "a short, upturned, and furry tail sprouts into being over your deliciously round [skin of player] ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "your cock darkens until it is entirely black, but human shaped"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "it draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. Short fur swells ticklishly over your new contours as growths sprout from the top of your head, growing quickly into ornate multi-pointed antlers"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "your limbs grow very masculine, long and strong. Your nails at hands and feet reform to cover your finger- and toe-tips in a protective hoof each"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "soft tingles spread in waves over it and fur sprouts in odd patterns across you, slowly settling into brown fur over most of your body, with lighter cream coloring starting at your navel and running down to your groin and the insides of your legs"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "a short, upturned, and furry tail sprouts into being over its now deliciously round [skin of player] shape"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "your cock darkens until it is entirely black, but human shaped in form"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 22;
 	now sta entry is 13;
@@ -186,28 +186,28 @@ When Play begins:
 	now hp entry is 75;
 	now lev entry is 10;
 	now wdam entry is 10;
-	now area entry is "Nowhere";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 11;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 6;		[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;			[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;		[Size of breasts infection will try to attain ]
-	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
-	now libido entry is 70;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";               [ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
+	now area entry is "Nowhere";					[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;									[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 11;					[ Length infection will make cock grow to if cocks]
+	now cock width entry is 6;						[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;								[ Number of Breasts infection will give you. ]
+	now breast size entry is 0;						[Size of breasts infection will try to attain ]
+	now male breast size entry is 0;			[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;									[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;						[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;						[ Width of female sex  infection will try and give you ] 
+	now libido entry is 70;								[ Amount player Libido will go up if defeated ]
+	now loot entry is "";              		[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0;        		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "fit";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "cervine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now scale entry is 3;									[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "fit";		[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "cervine";					[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;							[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;					[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	blank out the nocturnal entry;				[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";			[ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - NPCs
 
@@ -303,7 +303,8 @@ Instead of fucking Mike:
 						say "[MikeSex4]";
 					otherwise if (nam is "Take Mike's ass"):
 						say "[MikeSex5]";
-		infect "Stag";
+		infect "Stag";			
+		infect "Stag";					[since it's the only source for the infection and you got to wait between scenes, let's make him double infective]
 		now lastfuck of Mike is turns;
 		
 
@@ -381,7 +382,7 @@ to say MikeSex5:												[player ass fucked]
 		say "     The stag's ass is amazingly tight, gripping your shaft as you slide deeper. You have to slow down and even stop for a moment in between so you don't just blow your load before you're fully in him. Resting your cock three quarters inside, you take a deep breath and reach around to softly pinch the stag's nipples a bit until you got yourself under control again. Then you move forward, pushing deeper into the stag until you bottom out, with his asshole tight around your cock and the soft fur of his bottom against your hips. Starting to slide in and out, both of you are soon moaning and gasping from the sensations.";
 		say "     Fucking the stag with hard and deep strokes, you soon drive him over the edge, shouting 'I'm coming...' as his shaft sprays a huge load of white cum all over the wall he leans against. His inner muscles twitching around your shaft gives you the rest too, your balls tightening as they send spurt after spurt of cum deep into the stag's ass.";
 		say "     [line break]";
-		say "     Holding your arms tight around his chest until your last spurt of semen is deposited, you then pull out in one quick go from his cum-filled asshole, accompanied by a slurping noise. His hole gapes open for a second with cum running out of it, then quickly closes, trapping the rest of your seed inside. You have a last look at the cream-colored for of his crack, wet with your cum, then give the stag a slap on the butt and leave him there like that.";
+		say "     Holding your arms tight around his chest until your last spurt of semen is deposited, you then pull out in one quick go from his cum-filled asshole, accompanied by a slurping noise. His hole gapes open for a second with cum running out of it, then quickly closes, trapping the rest of your seed inside. You have a last look at the cream-colored fur of his crack, wet with your cum, then give the stag a slap on the butt and leave him there like that.";
 	otherwise:																	[post-quest, friendly]
 		say "     You step close to Mike and pull his head to yours to give him a kiss, then run your hands over his chest and arms, feeling the muscles of his stag body and softly pinching his nipples. Looking down, you see a bulge in his jeans showing his growing arousal at your ministrations.";
 		say "     Pushing your hands down the front of his pants, you feel for his cock and balls, groping them as Mike puts his arms around you and kisses you back. After making out a bit and stroking each other's bodies, you open up his zipper and pull down the pants. He's got an impressive human-like cock halfway out of a furred sheath and a nice pair of balls, both covered in cream-colored fur. Reaching down to stroke him until he's fully hard, your lips find his for another kiss. Moaning 'I want to fuck your ass', you step back and quickly take off your clothes.";

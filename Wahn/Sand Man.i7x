@@ -1,5 +1,5 @@
 Version 1 of Sand Man by Wahn begins here.
-[Version 1 - Infection Setup, Victory+Defeat Sex, Endings]
+[Version 1.1 - Infection texts adjusted]
 
 "Adds a Male Sand Man to Flexible Survivals Wandering Monsters table, with impreg chance"
 
@@ -10,7 +10,7 @@ Section 1 - Monster Responses
 to say sandman wins:
 	say "     Defeated, you stop struggling and the sand man pulls you in for a deep kiss, his lips touching yours with a tickling feeling. '[if cocks of player > 0]Dude[otherwise]Sweetie[end if], now let's have some fun!' He leads you over to a large towel lying nearby in the sand, then pulls off your clothes and lowers you on it to lie on your back.";
 	if cocks of player > 0:						[male + herm]
-		say "     Kneeling between your legs, he runs his hands down your body, caressing your prone form. He then leans in to lick over your nipples and kiss your stomach before moving his hands to your legs and lifting them over his shoulders. With a softly spoken 'Relax, baby.' he puts his hard manhood against your asshole and starts pushing in against your pucker, slowly but surely until his cockhead pops in. Accompanied by his hands softly stroking up and down your legs, he sinks more and more into you until he finally bottoms out, his balls tickling your skin.";
+		say "     Kneeling between your legs, he runs his hands down your body, caressing your prone form. Then he leans in to lick over your nipples and kiss your stomach before moving his hands to your legs and lifting them over his shoulders. With a softly spoken 'Relax, baby.' he puts his hard manhood against your asshole and starts pushing in against your pucker, slowly but surely until his cockhead pops in. Accompanied by his hands softly stroking up and down your legs, he sinks more and more into you until he finally bottoms out, his balls tickling your skin.";
 		say "     [line break]";
 		say "     'I'm gonna rock your world' his charming voice tells you, then he starts grinding his hips against your crotch. Thrusting in and out, the feeling of his slightly rough member rubbing your insides has you gasping in lust in no time, grabbing the towel with both hands to hold on to something as you writhe around. Your sandy beach lover has quite some technique, often changing the angle in which he slides into you to rub sensitive spots you barely knew you had. Fucking you with deep thrusts, then pausing for a while and just caressing your body as you get too close to orgasm, he keeps you in a state of sexual bliss for a long time, allowing you to forget about the hardships of survival in this changed world for now.";
 		say "     Then, after you don't know how long, he takes out all the stops, pulling out till only the tip of his cock remains inside you and slamming it all the way in again, followed by quick and hard thrusts that quickly drive you over the edge. You shout in pleasure as your balls tighten and long strings of cum shoot from your [cock of player] shaft all over your stomach and chest. The sand man stud isn't far behind with his own orgasm, burying his whole cock deep inside you a final time and pumping a huge load of his seed deep into your asshole.[mimpregchance]";
@@ -30,11 +30,11 @@ to say sandman wins:
 		say "     Then, after you don't know how long, he takes out all the stops, pulling out till only the tip of his cock remains inside you and slamming it all the way in again, followed by quick and hard thrusts that quickly drive you over the edge. You shout in pleasure as your whole body is filled with a deep feeling of satisfaction. The sand man stud isn't far behind with his own orgasm, burying his whole cock deep inside you a final time and pumping a huge load of his seed deep into your asshole.[mimpregchance]";
 		say "     [line break]";
 		say "     He rests a moment to catch his breath with his slowly softening cock still inside you, then leans over you and gives you a kiss on the lips. 'You're an amazing lay, baby. Come find me again later if you want to have another go. But for now, just listen to the waves and rest...' He's right about that - your coupling was incredibly satisfying, but pretty exhausting too. As you realize how tired you really are, you feel the sand man pull out of you carefully, then see him walk off along the beach looking for new conquests as you doze off.";
-
+		
 to say sandman loses:
 	say "     The sand man takes a step back and raises his hands in a pacifying gesture. 'Ok, ok - I give up. You can be on top when I fuck you.' Judging from the hard bulge in his speedos, it doesn't even seem to occur to him that your fight might have been anything other than a sex game for dominance. He's pretty single-minded in his expectation of getting sex with anyone on the beach.";
 	if cocks of player > 0:
-		say "[line break]";
+		say " 		[line break]";
 		say "     Looking over the handsome sand man, you could either mount his cock with you on top [link](1)[as]1[end link], turn the tables and fuck him [link](2)[as]2[end link] or just leave[link](3)[as]3[end link].";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -51,7 +51,7 @@ to say sandman loses:
 		otherwise:												[leave]
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
 	otherwise:
-		say "[line break]";
+		say " 		[line break]";
 		say "     You consider getting a ride on that cock of his (Y) or just leaving (N). ";
 		if the player consents:
 			say "[sandman ride]";
@@ -88,6 +88,7 @@ to say sandman ride:
 		say "     [line break]";
 		say "     As you rest a moment to catch your breath, his slowly softening maleness still inside you, he leans up and gives you a kiss on the lips. 'You're an amazing lay, baby. Come find me again later if you want to have another go. But for now, just listen to the waves and rest...' He's right about that - your coupling was incredibly satisfying, but pretty exhausting too. As you realize how tired you really are, the sand man embraces you again and rolls the both of you over so you're lying on the towel now. Pulling out of you carefully, he gives you a seductive smile, then walks off along the beach looking for new conquests. You just stay there on the towel for a while and doze off for a nap.";
 
+
 to say sandman fucked:
 	say "     As you agree to someone getting fucked, he smiles and pulls you in for a deep kiss, his lips touching yours with a tickling feeling. 'Dude, now let's have some fun!' He leads you over to a large towel lying nearby in the sand and pulls off your clothes followed by his own speedo.";
 	say "     [line break]";
@@ -123,11 +124,11 @@ When Play begins:
 	now desc entry is "[sandmanDesc]";							[ Description of the creature when you encounter it.]
 	now face entry is "smooth, with sculpted angular features. A stylish pair of sunglasses sits over your eyes and flowing locks made of fine sand behaving like it was strands of hair surround your face";
 	now body entry is "that of a idealized male, with washboard abs and muscled arms and legs";
-	now skin entry is "fine white sand making up your body and";[ skin Description, format as the text "You have (your text) skin"] 
+	now skin entry is "fine white sand, making up your body and";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a round, firm bubble butt. A tight black speedo draws other's looks to it.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "it shapes itself into a chiseled male visage. A stylish pair of sunglasses coalesces out of a swirl of dust in front of your eyes"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your body is reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "it is reshaped into a muscled male form and your chest takes an idealized shape with washboard abs"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "it takes on the texture of very fine sand, formed into shape like normal skin and covering your whole body without blemishes or hair"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "it takes the well-rounded shape of an idealized bubble butt. A black speedo coalesces out of a swirl of dust around your hips, covering your curves"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "your manhood becomes human-shaped"; [ cock change text. format as "Your cock feels funny as (your text)" ]
@@ -141,28 +142,28 @@ When Play begins:
 	now hp entry is 60;
 	now lev entry is 8;
 	now wdam entry is 8;
-	now area entry is "Beach";			[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 1;				[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 14;			[ Length infection will make cock grow to if cocks]
-	now cock width entry is 5;			[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;				[ Number of Breasts infection will give you. ]
-	now breast size entry is 0;			[ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;				[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;			[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 0;			[ Width of female sex  infection will try and give you ] 
-	now libido entry is 10;				[ Amount player Libido will go up if defeated ]
-	now loot entry is "";				[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;			[ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now area entry is "Beach";								[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 1;											[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 14;							[ Length infection will make cock grow to if cocks]
+	now cock width entry is 5;								[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;										[ Number of Breasts infection will give you. ]
+	now breast size entry is 0;								[ Size of breasts infection will try to attain ]
+	now male breast size entry is 0;					[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0;											[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;								[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 0;								[ Width of female sex  infection will try and give you ] 
+	now libido entry is 10;										[ Amount player Libido will go up if defeated ]
+	now loot entry is "";											[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 0;								[ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3;											[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "sculpted";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "mineral";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
-
+	now type entry is "sculpted";							[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;									[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;							[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;				[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;						[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";					[ Row used to designate any special combat features, "default" for standard combat. ]
+		
 Section 3 - Endings
 
 when play ends:

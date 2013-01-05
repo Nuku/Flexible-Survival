@@ -1,16 +1,13 @@
 Version 1 of Elven Hunter for FS by Wahn begins here.
-[Version 1 - Ready to go live]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
+[Version 1.1 - Lembas Bread drop item]
 
 "Adds an Elven Hunter to Flexible Survivals Wandering Monsters table, With Impreg chance"
-[Description text for this Extension.]
 
 when play begins:
 	add { "Elven Hunter" } to infections of guy;
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 to say Hunter wins:
 	if hp of player is greater than 0:
 		say "     'Pathetic,' he sneers and shoves you to the ground. 'We had hoped this world would have finally brought forth something worth of The Hunt again. A true warrior never surrenders.' He leaves you lying there, saying 'You're not even worth sullying my blade. Do something useful with yourself - like serving as food for more worthy creatures.' as he vanishes into the shadows.";
@@ -124,7 +121,7 @@ When Play begins:
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
 	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into sharp, but handsome features.  Your ears lengthen and taper to narrow points"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a more attractive form, ending up in a tall and slender, nicely muscled shape. You hear a flutter like fairies wings behind you and when you turn around, there's a small pile of clothing sitting on the ground. Slipping into the soft boots, tight leather pants and fur-trimmed vest, you just feel right";
-	now skin change entry is "your skin seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
+	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a firm, round bubble butt";
 	now cock change entry is "it becomes human-like, uncut and well-proportioned";
 	now str entry is 12;
@@ -133,23 +130,23 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 16;
-	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 63;			[ The monster's starting hit points. ]
+	now sex entry is "Male";						[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 63;									[ The monster's starting hit points. ]
 	now lev entry is 8;                 [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 12;               [ Monster's average damage when attacking. ]
 	now area entry is "Park";           [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9;         [ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 7;          [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;             [ Number of breasts the infection will give a player. ]
+	now cock width entry is 4;          [ Cock width, more commonly used for ball size. ]
+	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
 	now breast size entry is 0;         [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;          [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 80;             [ Target libido the infection will rise towards. ]
-	now loot entry is "";               [ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "lembas bread";   [ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 50;         [ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[otherwise]sultry[end if][at random]";
@@ -168,5 +165,19 @@ when play ends:
 			say "     When rescue comes, you're first brought into a holding facility of the military. Thanks to your otherworldly, elven beauty, it turns out to be a relatively short, comfortable stay, as male and female soldiers and medical personnel find themselves strongly attracted to you. You bed a few of them to pass the time until your tests are done and you're released as non-infectious. Returning to human society brings problems with it, as some people just can't keep their hands off you once they see your perfect body. An... incident leading to a mid-sized orgy with a football team and all of the cheerleaders forces you to seek help from the elves.";
 			say "     You spend the next three weeks hiking through woods and wilderness until you finally hear first one, then many hunting horns in the distance, then closer and closer. A large party of elves on horses and other, less easily recognizable beasts, breaks through the underbrush and surrounds you. The elf you met before is among them and invites you to accompany the hunt through this and other worlds. You thank him, but decline, asking instead for help with your little problem. The elves gladly teach you how to weave illusions over yourself before they move on, allowing you to hide your true nature and walk through cities without constantly being propositioned.  Except when you want it, that is.";     
 
-[ Edit this to have the correct Name as well]
+Table of Game Objects(continued)
+name	desc	weight	object
+"lembas bread"	"A thin cake of bread, wrapped in a large leaf. It looks very tasty."	1	lembas bread
+
+instead of sniffing lembas bread:
+	say "Mmmh! Smells like freshly baked, delicious bread.";
+
+lembas bread is a grab object.
+the usedesc of lembas bread is "[lembas bread use]";
+
+to say lembas bread use:
+	say "Unwrapping the thin bread from its leaf, you take a bite from it. Tastes delicious, almost as if it's been freshly baked an hour ago.";
+	
+lembas bread is infectious. The strain of lembas bread is "Elven Hunter".
+
 Elven Hunter for FS ends here.
