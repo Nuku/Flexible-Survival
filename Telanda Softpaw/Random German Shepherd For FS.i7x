@@ -1,5 +1,5 @@
-Version 8 of Random German Shepherd For FS by Telanda Softpaw begins here.
-[Version 8.1 - More victory sex added by Stripes]
+Version 9 of Random German Shepherd For FS by Telanda Softpaw begins here.
+[Version 9 - Heat repairs - Stripes]
 
 "Adds a German Shepard to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -62,7 +62,7 @@ To say male shepherd rape:
 					say "You feel him make one or two tentative thrusts into your sex, just to make sure he's inside you before you hear him growl and begin humping in earnest. He eagerly grinding his hips into you your passage stretches to accept the canine cock as his sheath bunches up and rubs against your outer lips each time he drives his canine shaft in. The German Shepherd begins to hurry his thrusts, panting heavily in your ear as you feel a bulge at the base of his length start to swell and grow, but before you can even try and do anything about it he jerks and drives himself as deep as he possibly can inside you, howling out his pleasure as his knot rapidly swells with his climax.  His knot locking his length inside you as the cock twitches and pulses, the sated canine slumping atop you while rumbling happily and nuzzling and licking at his newest bitch. [line break]After about half an hour he softens enough to pull free, the slimy mix of your own cum and his splattering and drooling onto the floor. The German Shepherd casually walks off,  pleased with himself as you rise to your knees, arm's wrapping around your lightly bulging stomach as a few drips run down your legs.  The realisation hits that most of his seed will remain deep within you, forced into your womb by the pressure of being trapped behind his knot. [impregchance]";
 					if a random chance of 1 in 2 succeeds, say "[impregchance]";	[Increased chance w/knot in perfect fit]	
 		else: [ Male Triggers ]
-			say "You feel him make one or two tentative thrusts into your arse, just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your rear. He doesn't waste any further time, building up his pace to a energetic fucking, the small bump of his knot sliding through your ring and starting to swell as you feel his sheath bunch up and rub over the sensitive skin. With a soft growl he drives in one last time, panting heavily in your ear as you feel his shaft swell, the knot at its base doubling then tripling in size, tying you beneath the possessive male as you could feel each splurt of tainted canine seed.";
+			say "You feel him make one or two tentative thrusts into your arse, just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your rear. He doesn't waste any further time, building up his pace to a energetic fucking, the small bump of his knot sliding through your ring and starting to swell as you feel his sheath bunch up and rub over the sensitive skin. With a soft growl he drives in one last time, panting heavily in your ear as you feel his shaft swell, the knot at its base doubling then tripling in size, tying you beneath the possessive male as you could feel each splurt of tainted canine seed.[mimpregchance]";
 			if fuckable is 2:
 				say "The dog rumbled, lapping affectionately at your cheek as the tainted seed flooded and spread in your rear 'Such a good bitch... how about we start making you a proper girl?' he turns your head with one paw-like hand and presses his tongue forcefully into your mouth, kissing passionately as he shifts and tugs on the tie, shifting his knot inside you... letting some of his seed dribble and ooze out over your balls... starting a strange itching sensation.  He continues to ladle on the affection, nuzzling and licking till his knot goes down and he can pull free. Once he can, he does so suddenly enough to make you yelp in pain, smirking and swatting your rear and walks off. 'Be a good girl now, I'll be back when you're ready to carry my pups like a proper bitch should'.";
 				follow the sex change rule;	[ Trigger infection NOW, female sex ] 
@@ -74,6 +74,7 @@ to say gsdfurcolour:
 	say "[one of]black and tan [or]sable [or]blue and tan [or] black and silver [sticky random]";
 
 to say take gsd:
+	if zephyrtask is 2, increase zephyrpests by 1;
 	now gsd attack is  0; [Encounter over, reset for the next time!]
 	if a random number from 25 to 100 < libido of the player:
 		choose row monster in Table of random critters;
@@ -154,7 +155,7 @@ When Play begins:
 	now lev entry is 3;
 	now wdam entry is 5;			[Amount of  Damage monster Does when attacking.]
 	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;			[ Used in infection Calculations, if cocks > 0 shaft will grow to cock length & girth dimensions slowly]
+	now cocks entry is 1;			[ Used in infection Calculations, if cocks > 0 shaft will grow to cock length & girth dimensions slowly]
 	now cock length entry is 8;		[ Length infection will make cock grow to if cocks > 0 ]
 	now cock width entry is 4;		[ Width Infection will make cock grow to is cocks > 0 ]
 	now breasts entry is 8;			[ Number of Breasts infection will give you. ]
@@ -166,6 +167,15 @@ When Play begins:
 	now libido entry is 5;			[ Amount libido goes up by if you submit or are defeated by this monster ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]mutated[or]altered[or]animalistic[at random]";
+	now type entry is "canine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Heat Table
 
@@ -174,6 +184,7 @@ to say gsdheatstart:
 
 to say gsdheatend:
 	decrease cunt width of player by 1;
+	if cunt width of player is 0, now cunt width of player is 1;
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
@@ -184,7 +195,7 @@ When Play begins:
 	now infect name entry is "German Shepherd";
 	now heat cycle entry is 7;
 	now heat duration entry is 2;
-	now trigger text entry is "A sudden throb between your legs catches you off guard, startling a whimper from your throat as you feel a rush of heat between your legs.  Nested between your thighs your canine spade begins to puff up and swell, engorging and becoming looser, a slow but constant seepage of lubricating fluids starting to run down your thigh, making a mess of your [skin of player] flesh.  You are in heat, and your body is making it easy for any male to find and impregnate you."; 
+	now trigger text entry is "A sudden throb between your legs catches you off guard, startling a whimper from your throat as you feel a rush of heat between your legs.  Nested between your thighs your canine spade begins to puff up and swell, engorging and becoming looser, a slow but constant seepage of lubricating fluids starting to run down your thigh, making a mess of your [skinname of player] flesh.  You are in heat, and your body is making it easy for any male to find and impregnate you."; 
 	now description text entry is "swollen and dripping German Shepherd twat ";
 	now heat start entry is "[gsdheatstart]";		[Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[gsdheatend]";		[Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]

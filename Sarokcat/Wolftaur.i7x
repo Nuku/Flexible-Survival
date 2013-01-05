@@ -19,12 +19,12 @@ to say Wolftaur attack:
 		infect "Wolftaur";
 	otherwise:
 		if cunts of player is greater than 0:
-			say "'Finally a nice little bitch for me to play with,' The wolftaur says with a lupine grin as he knocks you to the ground with one last strong blow.  Your head reeling from the combination of his powerful male musk, and his attacks, you are unable to fight as the large male beast moves over you where you are sprawled flat on the ground. You begin to struggle slightly as his canine body presses up against your chest, his thick lupine rod rubbing against your soft passage as he covers you like a blanket. Your struggles cease quickly as his male musk intensifies, his  soft wolf fur rubbing up against your chest, as he rests his lower body on top of you, his clawed hands reaching down to stroke and pet the top of your head.  Feeling vaguely submissive and weak underneath the much more powerful beast, you find yourself relaxing and burying your hands in his fur as his canine cock begins to probe at your female passage.[line break]";
-			say "Suddenly you gasp, suddenly feeling very full as with one short swift thrust of his hindquarters, his pointed canine rod is inside you.  Your hands grip his fur tightly as he strokes your head and calls you a good bitch, even as he continues to piston his thick meat into your body.  Your own body responds by submissively opening itself up underneath him, your cervix opening up to allow his cock tip unopposed access to your womb, even as your legs spread wider to let his knot slip inside. [line break]";
+			say "'Finally a nice little bitch for me to play with,' The wolftaur says with a lupine grin as he knocks you to the ground with one last strong blow.  Your head reeling from the combination of his powerful male musk, and his attacks, you are unable to fight as the large male beast moves over you where you are sprawled flat on the ground. You begin to struggle slightly as his canine body presses up against your chest, his thick lupine rod rubbing against your soft passage as he covers you like a blanket. Your struggles cease quickly as his male musk intensifies, his  soft wolf fur rubbing up against your chest, as he rests his lower body on top of you, his clawed hands reaching down to stroke and pet the top of your head.  Feeling vaguely submissive and weak underneath the much more powerful beast, you find yourself relaxing and burying your hands in his fur as his canine cock begins to probe at your female passage.";
+			say "Suddenly you gasp, suddenly feeling very full as with one short swift thrust of his hindquarters, his pointed canine rod is inside you.  Your hands grip his fur tightly as he strokes your head and calls you a good bitch, even as he continues to piston his thick meat into your body.  Your own body responds by submissively opening itself up underneath him, your cervix opening up to allow his cock tip unopposed access to your womb, even as your legs spread wider to let his knot slip inside.";
 			say "Your mind fogs with pleasure as you pant and beg underneath the strong beast for him to fill you with his canine sperm and claim your body as his.A plea  that doesn[apostrophe]t go unanswered for long, as the powerful beast lets out a loud howl above you, its loud notes echoing throughout the zoo as his cock floods your womb with his seed. You lie there panting underneath him as you try to recover from your own orgasm, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually his knot shrinks enough that the large male is able to pull himself off you, his cock slipping out and leaving you feeling sadly empty as you lie there on the zoo path with your legs spread. 'That was a very good bit of fun little bitch,' The wolftaur says as he stares down at you with a lupine grin, 'Why don[apostrophe]t you come back again sometime so we can do this again? Who knows, you might even make a worthy mate someday.' The large male beast says as he reaches down to give you one last pet on the head and scratch behind the ears, before loping off into the zoo.[impregchance]";
 			infect "Wolftaur";
 		otherwise:
-			say "The large wolftaur sends you reeling with one last blow, stepping over you as you sprawl out helplessly on the ground. 'Not much of a bitch for me to play with are you?' The beast asks in a slightly amused tone of voice, 'Still I suppose that doesn[apostrophe]t mean we can[apostrophe]t have a bit of fun now that you understand who is dominant around here..' The large male wolftaur says as he reaches down to run his hands over your body, pausing to stroke your cock a few times, and watching your reaction with amusement. 'Nice and eager I see,' The male beast says as he begins to tease and play with your cock, his clawed hands pumping over it and making you groan and writhe on the ground under his dominant touch. The canine beast begins to stroke the inside of your legs with one of his forepaws, even as he pumps your cock in short stiff motions, your precum leaking out onto his furred hands as you pant and whine with submissive need.  Finally he rubs the base of your cock one last time, and you are unable to restrain yourself any longer, howling with pleasure as you shoot your seed out onto your [skin of player] chest. [line break]";
+			say "The large wolftaur sends you reeling with one last blow, stepping over you as you sprawl out helplessly on the ground. 'Not much of a bitch for me to play with are you?' The beast asks in a slightly amused tone of voice, 'Still I suppose that doesn[apostrophe]t mean we can[apostrophe]t have a bit of fun now that you understand who is dominant around here..' The large male wolftaur says as he reaches down to run his hands over your body, pausing to stroke your cock a few times, and watching your reaction with amusement. 'Nice and eager I see,' The male beast says as he begins to tease and play with your cock, his clawed hands pumping over it and making you groan and writhe on the ground under his dominant touch. The canine beast begins to stroke the inside of your legs with one of his forepaws, even as he pumps your cock in short stiff motions, your precum leaking out onto his furred hands as you pant and whine with submissive need.  Finally he rubs the base of your cock one last time, and you are unable to restrain yourself any longer, howling with pleasure as you shoot your seed out onto your [skin of player] chest.";
 			say "Panting you come down from your orgasm to see the large beast is still standing over you with an amused look on its lupine face, its own stiff cock showing just how much it enjoyed the experience as its thick musk fills your head. Unable to leave the canine beast unsatisfied, you quickly begin to return the favor, stroking and rubbing at his already aroused member, your hands tracing over his powerful knot as he moans above you. Given how aroused the male beast already is, it takes little encouragement from you for his canine cock to spill its seed all over your body as well, his strings of cum mingling with your own as his cock unloads its fertile treasure onto your body.  Your mind addled with lust and pleasure, and the powerful musk of the male wolftaur, you lie back down on the grass, enjoying the feeling of his seed mingling with your own as it sinks into your body. The male wolftaur gives you another happy grin as he looks down at your prone from, 'That was a good bit of fun there,' The beast says as he lifts up one of his forelegs to give you a pet on the head, 'We should come play again sometime, of course maybe you will be a proper bitch by then, but this works too.' He says in a teasing tone of voice, before turning and loping back off into the zoo, leaving you lying there happily covered in cum.";
 			infect "Wolftaur";
 
@@ -43,7 +43,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Wolftaur"; [Name of your new Monster]
-	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed forepaw out, slapping you down like a submissive wolf.[or]His large erect member catches your eye for a minute, noticing he pauses to spray his musk in the area, the scent making you pant with need.[or]He grabs your arm In his teeth, and wrestles you to the ground.[or]charging forward on all fours, the wolftaur snaps and claws at you viciously[or]The masculine wolftaurs strong dominant scent makes you pause for a second, and he takes advantage of that to try to wrestle you down to the ground.[or]He lashes out at you with his clawed hands, leaving small marks on your skin.[or]The large taur charges right at you, knocking you to the ground.[or]The wolf like beast lowers his head and nuzzles you, while his hands play over your body, making you feel aroused and submissive.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed forepaw out, slapping you down like a submissive wolf.[or]His large erect member catches your eye for a minute, noticing he pauses to spray his musk in the area, the scent making you pant with need.[or]He grabs your arm in his teeth, and wrestles you to the ground.[or]charging forward, the wolftaur snaps and claws at you viciously[or]The masculine wolftaurs strong dominant scent makes you pause for a second, and he takes advantage of that to try to wrestle you down to the ground.[or]He lashes out at you with his clawed hands, leaving small marks on your skin.[or]The large taur charges right at you, knocking you to the ground.[or]The wolf like beast lowers his head and nuzzles you, while his hands play over your body, making you feel aroused and submissive.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Wolftaur loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Wolftaur attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "Wandering through the zoo pathways, you begin to get the feeling that something is following you, looking around you in panic, you spot a large Wolftaur following you down the path.  The large beast is making little effort to hide, his wolfish lower body moving swiftly down the trail after you, while his fur covered upper body is flexing its clawed hands in anticipation of getting them on you, and there is a rather lusty look on the beasts canine face as it eyes you. '[one of]I don[apostrophe]t suppose you are on the way to your grandmas house now, because I see the treat I want....[or]Heh heh heh, now the question is, will you submit quietly or struggle? Either way you will be mine.[or]I can[apostrophe]t wait to see you on all fours underneath me[or]How about I show you what a large cock I have, it[apostrophe]s all the better to stick into you my dear...[or] You look like you would make a fine bitch...[or]Why don[apostrophe]t you come join my pack?[at random],' he says, a lusty canine musk filling the air as he abandons  any pretense of stealth and pads forward eagerly, his canine cock bouncing underneath his lower body eagerly.";[ Description of the creature when you encounter it.]
@@ -78,8 +78,46 @@ When Play begins:
 	now cunt length entry is 14;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 9;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Chipped Tooth";			[ Loot monster drops, ]
+	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]tauric[or]beastial[or]animalistic[at random]";
+	now type entry is "lupine";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "wtaurpounce";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Section 3 - Wolftaur Pounce Alt Attack
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"wtaurpounce"	retaliation rule	--	--	wtaurpounce rule	15	--	--	--	--	--
+
+this is the wtaurpounce rule:		[double-damage pouncing]
+	choose row monster from the table of random critters;
+	let rangenum be ( 80 - ( peppereyes * 4 ) );
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 67 );	[+50% damage]
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		now dam is (dam * 150) divided by 100;
+		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
+	say "The [one of][name entry][or]wolf[or]lupine taur[or]wolf-creature[purely at random] growls and pounces roughly atop you, [one of]knocking[or]sending[or]slamming[purely at random] you down briefly under it.  It's many paws pummel you, trying to knock the resistance out of you while you're surrounded in his strong, musky scent.  This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
+	now damagein is dam;
+	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
+	if absorb is greater than dam:
+		now absorb is dam;
+	if absorb is greater than 0:
+		say "You prevent [special-style-1][absorb][roman type] damage!";
+	decrease hp of the player by dam;
+	increase hp of player by absorb;
+	follow the player injury rule;
+	say "You are [descr].";
+
+
+Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Wolftaur":
@@ -116,4 +154,3 @@ when play ends:
 
 [ Edit this to have the correct Name as wall]
 Wolftaur ends here.
-

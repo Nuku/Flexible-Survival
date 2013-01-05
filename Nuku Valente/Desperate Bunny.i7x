@@ -158,12 +158,7 @@ To rabbitfuck:
 			say "Let her proceed?";
 			if player consents:
 				if glob of goo is owned:
-					let number be 0;
-					repeat with Q running through invent of the the player:
-						increase number by 1;
-						if q matches the regular expression printed name of glob of goo:
-							remove entry number from invent of the player;
-							break;
+					decrease carried of glob of goo by 1;
 					now rabbitsister is 2;
 					say "'You have just the right thing,' she says in a complimenting tone as she takes your jar of goo and pops it open. She slathers it across her hands then has you turn around. Her soft hands run across your back, working under clothes. The goo is warm thanks to her own heat, leaving slick trails over your body as she works down, and grabs your bottom, 'No one is a rabbit without a tail', she chastises, starting to rub firmly at the base of your spine, tingling growing. A finger strays, by accident, perhaps, though unlikely, towards your unguarded pucker, slipping in all too easily with its coating of goo. You arch back against her as she starts to explore you without shame, testing your elasticity boldly. Perhaps it is the goo infection helping, but she manages two fingers, then three, pumping against your shuddering form as you rock in place, your own dewy folds growing hot as pleasure builds inside you.[line break][line break]Your spine suddenly develops a kink, like a terrible lower back ache that grows more intense even as Sandra continues to stimulate your suddenly flexible sphincter. With an ecstatic wail of relief, the pain breaks with a wet noise as a rabbit's tail comes into fluffy fruition against Sandra's other rubbing hand. Sandra holds you gently as you recover, pressing her warm curves to your back and withdrawing her fingers from within you. 'I would ask you to lick again, but even I know that would be nasty.' She gives an odd expression, then laughs, moving away from you to clean off her hands.";
 					now tailname of player is "Rabbit Girl";

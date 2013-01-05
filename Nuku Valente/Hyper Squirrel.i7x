@@ -50,24 +50,16 @@ Instead of Resolving a Hyper Squirrel Girl:
 				say "Give her something?";
 				if the player consents:
 					if the distilled milk is owned:
-						let number be 0;
-						repeat with Q running through invent of the the player:
-							increase number by 1;
-							if q matches the regular expression printed name of distilled milk:
-								remove entry number from invent of the player;
-								break;
+						decrease carried of distilled milk by 1;
 						say "'Awesome! Let[apostrophe]s go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
 						now snow is in Grey Abbey Library;
 						move player to Grey Abbey Library;
-						try looking;
 						increase score by 5;
 						now hyper squirrel girl is resolved;
 					otherwise:
 						say "'Aw, you don't have what I need. You get some, and you got yourself a girl with talents. Trust me, it will be worth it.' She leans over to kiss either of your cheeks, then dances off into the city in a prance.";
-						stop the action;
 				otherwise:
 					say "'Well fine, play that way. I need a bigger chest. You want me, find me, and bring the goods,' she says, vanishing back into the city.";
-					stop the action;
 			otherwise:
 				say "'Well shoot then, I can do just fine on my own', she insists, and is gone in a trail of hyperactivity.";
 				now hyper squirrel girl is resolved;
@@ -77,11 +69,12 @@ Instead of Resolving a Hyper Squirrel Girl:
 
 Section 2 - Snow
 				
-Squirrel Den is a room. It is fasttravel. It is private.	[This is just a holding spot and not a real room]
+Squirrel Den is a room. It is private.	[This is just a holding spot and not a real room]
 
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.";
+
 Snow is a person.
-The description of Snow is "This sexual beauty is about six feet, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons. Type [bold type]upgrade (weapon)[roman type] and she'll give it a working over.";
+The description of Snow is "This sexual beauty is about six feet, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armour. Type [bold type]upgrade (weapon/armour)[roman type] and she'll give it a working over.";
 Snow is in Squirrel Den.
 The conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" };
 
@@ -93,6 +86,7 @@ instead of sniffing Snow:
 
 A person can be a smither.
 An armament can be improved.
+An equipment can be improved.
 Snow is a smither.
 
 Smithing is an action applying to one thing.
@@ -100,15 +94,32 @@ Smithing is an action applying to one thing.
 Understand "upgrade [owned grab object]" as smithing.
 
 Check smithing:
-	if the noun is not owned, say "You can[apostrophe]t offer what you don[apostrophe]t have." instead;
-	if the noun is not armament, say "They can only work on weapons." instead;
+	if the noun is not owned, say "You can't offer what you don't have." instead;
+	if the noun is not armament and the noun is not equipment, say "They can only work on weapons or armour." instead;
+	if the noun is equipment and ( AC of noun is 0 or effectiveness of noun is 0 ), say "They can only work on weapons or armour." instead;
 	If the noun is improved, say "It is as good as it gets." instead;
 	if the noun is wielded, say "Stop wielding it first." instead;
+	if the noun is equipped, say "Stop wearing it first." instead;
 	if a smither is not visible, say "Who is going to upgrade it? I see no one here." instead;
 
 Carry out smithing:
 	say "You offer up [the noun] to Snow. Snow smiles and blows you a kiss before moving off with it and tinkering it with a while before offering it back to you, mildly improved.";
-	increase the weapon damage of the noun by 1;
+	if the noun is armament, increase the weapon damage of the noun by 1;
+	if the noun is equipment:
+		if the slot of noun is "shield":
+			let boost be ( AC of noun * 5 ) / 100;
+			if boost < 2, now boost is 2;
+			increase AC of noun by boost;
+			if AC of noun > 100, now AC of noun is 100;
+			let boost be ( effectiveness of noun ) / 10;
+			increase effectiveness of noun by boost;
+		otherwise:
+			let boost be ( AC of noun * 5 ) / 100;
+			if boost < 2, now boost is 2;
+			increase AC of noun by boost;
+			if AC of noun > 100, now AC of noun is 100;
+			let boost be ( effectiveness of noun ) / 10;
+			increase effectiveness of noun by boost;
 	now the noun is improved;
 
 
@@ -135,13 +146,14 @@ instead of fucking Snow:
 				say "     You take Snow's cock in hand and stroke it, telling her that you're here for her and that she can satisfy herself with you as much as she needs.  Kissing you passionately again, she moans her thanks and grinds her throbbing meat against you.  'Oh, I really need to get off.  Let's have some fun.'";
 			otherwise:
 				say "[snowsquirrelgivein]";
-				wait for any key;
+				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				follow the turnpass rule;
 				stop the action;
 	say "     Snow gives a bright giggle as you advance on her and she grabs at your right hand, drawing you tight to her curvy front. She grinds against you, the lump in her pants growing firm as she bites at an ear, 'Want to play? I am in the mood!'[line break]";
 	let squirrelanal be 0;
 	if cock length of player > 4 and cock length of player < 16 and a random chance of 1 in 6 succeeds:		[ 1 in 6 of asking for anal ]
-		say "     Snow looks you over and gives you a coy grin before turning around and slipping down her pants.  She lifts her tail, flashing her ass and pussy at you, giving her rear a wiggle.  'Mmm.. I'm in the mood for something different, hon?  How about you take back door and stuff my tight nut hole?' she asks with a grin.  'What's the problem?  Can't a girl-boy want something a little kinkier?'  She swishes her tail around again while fingering her wet pussy, then spreading her juices over her pucker, getting it slick and glistening.  Will you take her up on her offer?";
+		say "     Snow looks you over and gives you a coy grin before turning around and slipping down her pants.  She lifts her tail, flashing her ass and pussy at you, giving her rear a wiggle.  'Mmm.. I'm in the mood for something different, hon?  How about you take the back door and stuff my tight nut hole?' she asks with a grin.  'What's the problem?  Can't a girl-boy want something a little kinkier?'  She swishes her tail around again while fingering her wet pussy, then spreading her juices over her pucker, getting it slick and glistening.  Will you take her up on her offer?";
 		if the player consents:
 			now squirrelanal is 1;
 			say "     As you move in and grind your stiffening member against her behind, she grins in pleasure and braces herself against the nearby workbench.  Pleased as punch, she moans happily as you press your glans to her slick hole and leak precum onto it, getting her even more wet and ready.  As you sink your throbbing shaft into her, you grip her hips and press yourself to her back.  'Ohhh... that's so [if cock length of player < 10]nice[otherwise]big[end if].  Do me, baby!  Stuff my tight, squirrely ass,' she demands, giving a squeeze around your [cock size desc of player] [cock of player] cock before pushing herself further onto it.  Needing no more encouragement, you start pounding away at the eager herm.";
@@ -218,11 +230,11 @@ to say snowsquirrelgivein:
 		say ".  Pulling you into her lap, Snow slides her cock into your pussy and bounce her in your lap, her large breasts pressed to your chest.  The wild squirrels stand to either side of you, letting you both suck squirrel cock while fucking your new mate.  This beastial fucking goes on until she cums hard, filling your womb with her cum and each getting another tasty load from the squirrels down your throat.  After that, you're mounted again by the wild pair while Snow takes a turn eating out your cum-leaking box.  The romp continues on like this through a myriad of pairings and positions for hours despite the fact you both succumbed long ago.  Eventually, you four run off together back to the their nest to rest before going off in search of others to share your addictive lust with.";
 	now bodyname of player is "squirrel";
 	now skinname of player is "squirrel";
-	now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws.";
+	now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws";
 	now skin of player is "white furred";
 	now tailname of player is "squirrel";
 	now tail of player is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth.";
-	now face of player is "set of two long white squirrel ears twitching above your head, a long rodent snout with bucked teeth jutting out of your";
+	now face of player is "set of two long white squirrel ears twitching above your head, a long rodent snout with bucked teeth jutting out a little";
 	now facename of player is "squirrel";
 	now cockname of player is "squirrel";
 	now cock of player is "bright pink";
@@ -241,6 +253,8 @@ Wild Squirrels is a situation.
 Wild Squirrels is resolved.
 
 Instead of resolving a wild squirrels:
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;
 	say "As you wander, you get the feeling that you are being watched somehow....";
 	let bonus be (( the Perception of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
@@ -304,7 +318,11 @@ Instead of resolving a wild squirrels:
 				now cock width of player is 4;
 		end the game saying "You lose your mind to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take turns with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
 	otherwise:
-		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled, moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.";
+		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled, moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";
+		if baby is 0 and gestation of child is not 0:
+			now facename of child is "squirrel";
+			now bodyname of child is "squirrel";
+			now skinname of child is "squirrel";
 	now bodyname of player is "squirrel";
 	now skinname of player is "squirrel";
 	now body of player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws.";

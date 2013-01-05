@@ -1,7 +1,8 @@
-Nymph for FS by Hellerhound begins here.
+Dryad for FS by Hellerhound begins here.
+[renamed from Tree Nymph]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Tree Nymph to Flexible Survivals Wandering Monsters table"
+"Adds a Dryad to Flexible Survivals Wandering Monsters table"
 
 [Description text for this Extension.]
 
@@ -10,16 +11,16 @@ Section 1 - Cum Vial
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"nymph cum"	"A bottle of nymph cum? Man you will scavenge anything."	3	nymph cum
+"dryad cum"	"A bottle of dryad cum? Man you will scavenge anything."	3	dryad cum
 
-nymph cum is a grab object. It is a part of the player. nymph cum is infectious. The strain of nymph cum is "Tree Nymph".  The purified of nymph cum is "water bottle".
+dryad cum is a grab object. It is a part of the player. dryad cum is infectious. The strain of dryad cum is "Dryad".  The purified of dryad cum is "water bottle".
 
-
+the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap.";
 
 Section 2 - Monster Insertion
 
 when play begins:
-	add { "Tree Nymph" } to infections of hermaphrodite;
+	add { "Dryad" } to infections of hermaphrodite;
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -27,52 +28,52 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 
-To say nymph defeat:
+To say dryad defeat:
 	if libido of player < 50:
-		Say "You manage to break the nymph in half, much like a tree. As the crack forms, her skin goes rough, and turns brown, morphing into bark. She shouts at you that she will return.";
+		Say "You manage to break the dryad in half, much like a tree. As the crack forms, her skin goes rough, and turns brown, morphing into bark. She shouts at you that she will return.";
 	if libido of player > 50 and cocks of player is greater than 0:
-		Say "You move closer to the nymph, stroking your [cock of player] cock, the entry is deceptively easy, and you start as you feel vines creeping along her inner walls. You try to pull out, but they grab hold and pull you all the way in. 'Silly you, thinking you could rape me.', well, let me teach you a thing or two.";
+		Say "You move closer to the dryad, stroking your [cock of player] cock, the entry is deceptively easy, and you start as you feel vines creeping along her inner walls. You try to pull out, but they grab hold and pull you all the way in. 'Silly you, thinking you could rape me.', well, let me teach you a thing or two.";
 		say "She leans into you, vines stroking your cock as it is massaged against her inner walls. You come to climax surprisingly quickly, spraying your load inside of her. When you finish, she places the nipple of one of her large breasts at your mouth, and with a dulled mind begin to suckle.";
 		say "That's good, have a drink, she says, as you roll over onto the ground, and she walks away, the tree disguise forming once more.";
 	if libido of player > 50 and cocks of player is 0 and cunts of player is greater than 0:
-		say "The nymph screams in rage, and her skin turns barklike. In an instant she has become a true tree, unmoving, covered in vines.";
+		say "The dryad screams in rage, and her skin turns barklike. In an instant she has become a true tree, unmoving, covered in vines.";
 		
 
-To say nymph attack:
+To say dryad attack:
 	if cunts of player > 0:
-		Say "As you go limp from the beating, greenish vines wrap around your body, spreading your legs and lifting you off the ground. The nymph steps forward and rubs her clit, grinning evilly.";
+		Say "As you go limp from the beating, greenish vines wrap around your [bodydesc of player] body, spreading your legs and lifting you off the ground. The dryad steps forward and rubs her clit, grinning evilly.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "As you watch in horror, it turns a wooden brown, with a barklike texture and grows longer and thicker, becoming a small, six inch cock.";
-		say "The vines bend, and your entire body tilts backward, placing your [cunt size desc of player] cunt right in front of her cock. 'Sweet carryings', she smirks, as she pushes inside, causing you to scream in pain from the rough bark. The nymph pumps in and out, and by the time you realize her cock is absorbing the lubrication, the pain causes you to lose consciousness.";
+		say "The vines bend, and your entire body tilts backward, placing your [cunt size desc of player] cunt right in front of her cock. 'Sweet carryings,' she smirks, as she pushes inside, causing you to scream in pain from the rough bark. The dryad pumps in and out, and by the time you realize her cock is absorbing the lubrication, the pain causes you to lose consciousness.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent. [impregchance]";
+		say "You wake to find thick, steaming cum mixed with blood running from your cunt, and a feeling of weakness all over. It must be the blood loss, you realize, as the size of the puddle under you becomes apparent.[impregchance]";
 		say "You manage to collect some of the cum, placing it in an empty water bottle.";
-		add "nymph cum" to the invent of the player;
-		infect "Tree Nymph";	
+		increase carried of dryad cum by 1;
+		infect "Dryad";	
 	if cocks of player is greater than 0 and cunts of player is 0:
-		say "You collapse under the pain of your beating, and the nymph approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body and immobilizing you. ";
-		say "You watch as she strokes her clit, and stare as it grows into a 6 inch long wooden cock that she begins to stroke. You watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
+		say "You collapse under the pain of your beating, and the dryad approaches. Suddenly, many green tendrils grow out of a hole above her clit that you had missed, twining around your cock and body and immobilizing you. ";
+		say "You watch as she strokes her clit, and stare as it grows into a 6 inch long wooden cock that she begins to stroke. You watch with growing lust and horror as it spasms, and white, thick, reeking spunk sprays all over your [bodydesc of player] body and face. She breathes out in a long sigh, and the tendrils bring you closer as she waits for the changes.";
 		repeat with n running from one to three:
-			infect "Tree Nymph";
+			infect "Dryad";
 		say "After you finish, she shoves one of her breasts into your face. 'still not had a drink, eh?', she quips as one of the green tendrils twining around her body squeezes the tit, milk spraying into your face and down your throat.";
-		infect "Tree Nymph";
+		infect "Dryad";
 		say "You collect the cum on you and place it into an empty water bottle. Maybe there is a use for it?";
-		add "nymph cum" to the invent of the player;
+		increase carried of dryad cum by 1;
 	if cocks of player is 0 and cunts of player is 0:
 		say "She looks at you with horror. 'Nothing? Nothing for me to play with?' She exclaims. Well, you will just have to fix that and come back later.";
-		infect "Tree Nymph";
+		infect "Dryad";
 		
 		[ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Tree Nymph"; [Name of your new Monster]
-	now attack entry is "The Nymph [one of]punches your face solidly like bark[or]kicks your face, exposing her cute pussy[or]whips the tree's branches at you[or]causes tentacle-like vines to rise out of the ground and slap you[at random]."; [Text used when the monster makes an Attack]
-	now defeated entry is "[nymph defeat]";
+	now name entry is "Dryad"; [Name of your new Monster]
+	now attack entry is "The Dryad [one of]punches your face solidly like bark[or]kicks your face, exposing her cute pussy[or]whips the tree's branches at you[or]causes tentacle-like vines to rise out of the ground and slap you[at random]."; [Text used when the monster makes an Attack]
+	now defeated entry is "[dryad defeat]";
 	 [ Text or say command used when Monster is defeated.]
-	now victory entry is "[nymph attack]";
-	now desc entry is "Walking through the red light district, you come across a road filled with trees. Many have had sex nearby, as you note the twisted shape of their branches, and the pinkish bark. One tree seems normalish enough, despite the enormous amounts of cum around its base. As you walk closer, the tree fades, and a tree nymph jumps in front of you.";[ Description of the creature when you encounter it.]
+	now victory entry is "[dryad attack]";
+	now desc entry is "Walking through the red light district, you come across a road filled with trees. Many have had sex nearby, as you note the twisted shape of their branches, and the pinkish bark. One tree seems normalish enough, despite the enormous amounts of cum around its base. As you walk closer, the tree fades, and a dryad jumps in front of you.";[ Description of the creature when you encounter it.]
 	now face entry is "cute, with green hair and branches growing behind your ears";[ Face description, format as the text "Your face is (your text)"] 
 	now body entry is "vine-wrapped and very feminine, milk leaking from shapely breasts";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "unblemished";[ skin Description, format as the text "You have (your text) skin"] 
@@ -104,12 +105,12 @@ When Play begins:
 	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 4;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 60;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "nymph cum";			[ Loot monster drops, ]
+	now loot entry is "dryad cum";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]feminine[or]sultry[or]slender[at random]";
-	now type entry is "[one of]nymph[or]plant[at random]";
+	now type entry is "[one of]dryad[or]plant[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
@@ -118,8 +119,8 @@ When Play begins:
 
 
 when play ends:
-	if the bodyname of the player is "Tree Nymph":
-		say "Life as a nymph is hard, your naked stature and vines, not to mention fear of clothes, keep you separate from the normal humans, and keep you in trouble with the law, who are still trying to cope with your kind's breach of public nudity";
+	if the bodyname of the player is "Dryad":
+		say "Life as a dryad is hard, your naked stature and vines, not to mention fear of clothes, keep you separate from the normal humans, and keep you in trouble with the law, who are still trying to cope with your kind's breach of public nudity";
 		if the humanity of the player < 10:
 			say ".  The revival of the city does you no good, and shortly you are behind bars for several acts of misconduct. You end up with a life sentence, and spend the rest of your time attempting to control the impulses the nanites wired into you.";
 		otherwise if the humanity of the player < 50:
@@ -130,4 +131,4 @@ when play ends:
 
 
 [ Edit this to have the correct Name as wall]
-Nymph for FS ends here.
+Dryad for FS ends here.

@@ -19,7 +19,7 @@ when play begins:
 
 [
 before taking the porn collection for the first time:
-	say "     Lisa notices your interest in the bundle of porn magazine's she's set aside and tied together with string.  'That's a bunch of stock I don't have any interest in keep.  You can take them if you'd like.'  Looking them over, you can see they have quite a bit of diversity in them, many of them quite raunchy, showing men and women in all forms of sexual congress.  There's even a few with male-male pairings.  There should certainly be something to pique your interest when you need a little diversion.";
+	say "     Lisa notices your interest in the bundle of porn magazine's she's set aside and tied together with string.  'That's a bunch of stock I don't have any interest in keeping.  You can take them if you'd like.'  Looking them over, you can see they have quite a bit of diversity in them, many of them quite raunchy, showing men and women in all forms of sexual congress.  There's even a few with male-male pairings.  There should certainly be something to pique your interest when you need a little diversion.";
 ]
 
 Section 2 - Masturbation

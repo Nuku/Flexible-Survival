@@ -1,31 +1,21 @@
-Nermine by Sarokcat begins here.
-
-"Adds a large group of scattered npcs to Flexible Survival with a variety of responses and goals..."
+Version 3 of Nermine by Sarokcat begins here.
+[ Version 3.1 - Wereraptor Curse bad end by Stripes.]
+"Adds Nermine and her Mysterious Shop to Flexible Survival to handle many of the player's mystical needs."
 
 Section 1- The Mysterious Shop
 
-The Mysterious Shop is a room. It is private. It is fasttravel.
+[The Mysterious Shop is a room. It is private. It is fasttravel]
+The Mysterious Shop is a room. The Mysterious Shop entrance is a door. It is south of The Mysterious Shop and north of Mall West Wing. The Mysterious Shop entrance is open.
 
-The description of The Mysterious Shop is "Bells jingle softly as you enter this rather quiet and eccentric shop, this strange shop seems to be still open and doing fine even without power. Softly scented candles cast a dim light over shelves covered with strange and unusual items which seem to be displayed in no discernible order.  You can[apostrophe]t see any of the normal things you would expect to find in a mall shop however, no nicely packed boxes, no brand name items clamoring for your attention, no well marked shelves, just a rather large strange assortment of items spread out as far as the eye can see. Children[apostrophe]s toys are placed next to expensive looking decorations,  candle holders lying next to ornamental fans from the orient, almost as if someone merely grabbed anything that interested them, and then spread their new treasures out for people to see. Compared to most other shops you have been in, this one seems quite strange and mysterious indeed although with the city in the state it is currently in you probably shouldn[apostrophe]t be too surprised at the strange things you find, although for some reason you can never quite remember seeing this shop here before....";
+Instead of searching The Mysterious Shop entrance:
+	say "With the windows of the shop blacked out, all you can make out through the entrance is [the other side of The Mysterious Shop entrance].";
+
+The description of The Mysterious Shop is "Bells jingle softly as you enter this rather quiet and eccentric shop, this strange shop seems to be still open and doing fine even without power. Softly scented candles cast a dim light over shelves covered with strange and unusual items which seem to be displayed in no discernible order.  You can[apostrophe]t see any of the normal things you would expect to find in a mall shop however, no nicely packed boxes, no brand name items clamoring for your attention, no well marked shelves, just a rather large strange assortment of items spread out as far as the eye can see. Children[apostrophe]s toys are placed next to expensive looking decorations, candle holders lying next to ornamental fans from the orient, almost as if someone merely grabbed anything that interested them, and then spread their new treasures out for people to see. Compared to most other shops you have been in, this one seems quite strange and mysterious indeed although with the city in the state it is currently in you probably shouldn[apostrophe]t be too surprised at the strange things you find, although for some reason you can never quite remember seeing this shop here before...";
 Nermine is in The Mysterious Shop.
 Bargain Bin is in The Mysterious Shop.
-East of The Mysterious Shop is Mall atrium.
-before entering the Mall Atrium when The Mysterious Shop is known:
-	let T be a random number between one and five;
-	if T is 1:
-		change the west exit of mall atrium to The Mysterious Shop;
-	if T is 2:
-		change the east exit of mall atrium to The Mysterious Shop;
-	If T is 3:
-		change the north exit of mall atrium to The Mysterious Shop;	
-	If T is 4:
-		change the southeast exit of mall atrium to The Mysterious Shop;
-	otherwise:
-		change the northwest exit of mall atrium to The Mysterious Shop;
 
 instead of sniffing Mysterious Shop:
 	say "The mysterious shop smells of scented candles and ancient secrets.";
-
 
 section 2- Nermine
 
@@ -39,6 +29,8 @@ Nerminefucked is a number that varies. Nerminefucked is usually 0.
 Jackalboytf is a number that varies.
 Jackalmantf is a number that varies.
 Nerminehelpstatus is a number that varies.
+wrcurseNermine is a number that varies.
+wrlastNermine is a number that varies.  wrlastNermine is normally 255.
 angryhorguth is a number that varies.
 
 Nermine is a woman.
@@ -64,31 +56,79 @@ instead of conversing the Nermine:
 	if Nerminetalk is 0:
 		say "'Ah a new customer!' The strange jackal says with a grin as you approach the counter, her voice soft and beautiful though tinged with a strange accent you don[apostrophe]t quite recognize. 'My name is Nermine, and I will be happy to help you out with whatever you need!' The jackal woman continues, the candlelight shining off her eyes and her silver makeup as she tilts her head to get a better look at you. 'You look like you have plenty of problems, well don[apostrophe]t worry! Whatever the problem, Nermine[apostrophe]s shop probably has some solution for it.' Nermine says with a small smile, 'Of course use solution at own risk and all that, and some of my items might not come that cheaply..' She continues, her light voice seeming tinged with amusement as she gestures around at the strange array of items scattered around the shop, 'Or perhaps you just wish to try your luck yes? Nermine has several items that might be fun for you to try out relatively cheaply...' She gestures at the small bin near the counter marked 'Bargain bin', 'Either way, you let Nermine know what she can do for you, or with you.' The sexy Jackaless says with a wink of her silver painted eye, making you wonder if she meant that last comment to be quite as suggestive as it sounded...";
 		increase Nerminetalk by 1;
-		stop the action;
-	if hellgatherquest is 5:
+	otherwise if wrcurseNermine is 0 and wrcursestatus >= 3 and wrcursestatus < 100:
+		say "     You decide to confide in Nermine about your wereraptor curse in the hopes that she can provide a cure.  She gives you a disdainful, cross look.  'Oh, so Nermine is being gypsy now, dealing in werewolves and curses for you?  Maybe you are wanting your palm read as well?' she growls.  After taking a deep breath to calm herself, she continues.  'I am not knowing much about these matters, but unless I am learning more, I cannot do much for the moment.  Be letting me consult my books and Nermine will be seeing what she can do.  Nermine will be needing at least a day for this.'";
+		say "     Nermine grins.  'If you cannot be waiting, perhaps there is another way though.  Stronger power would be removing this old, weak curse.  If you were to be [bold type]helping Nermine[roman type], perhaps Nermine could be helping you as well,' she says, giving you a coy smile and a flutter of her long lashes.  'Otherwise, be coming back tomorrow.'";
+		now wrcurseNermine is 1;
+		now wrlastNermine is turns;
+	otherwise if wrcurseNermine is 1 and wrcursestatus >= 3 and wrcursestatus < 100 and wrlastNermine - turns >= 8:
+		say "     Nermine sets aside the book she was leafing through and smiles at you.  'I am having good news.  While this is not Nermine's normal area of expertise, she is having books on many such subjects and I am finding something which may helping with your raptor problem.'  She shows you the open book.  The text in it appears to be hand written, but you don't recognize the language or even the alphabet.  She points out a drawing of some flowers on the opposite page.  'I am first needing roots of this plant.  It is monkshood and the flowers are being a purple colour like this,' she adds, indicating a lilac purple section of one of the hanging carpets on the wall.  'They are usually growing closer to the mountains, but there is a greenhouse at the college campus that is having many plants.  Perhaps you can be finding it there?'";
+		now wrcurseNermine is 2;
+		now Greenhouse is unresolved;
+	otherwise if wrcurseNermine is 2 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
+		say "     'If you are wanting Nermine's help with your nightly problem, then you are needing to get monkshood root.  Be looking for the purple flower in the greenhouse at the college campus.  But if finding it is too much trouble, you could always just be deciding to [bold type]help Nermine[roman type] and we could be dealing with your problem by giving you something better,' she adds with a coy smile and wink of her silver painted eye.";
+	otherwise if wrcurseNermine is 3 and wrcursestatus >= 3 and wrcursestatus < 100 and wolfsbane is not owned:
+		say "     In speaking to Nermine, you realize that you don't have the monkshood with you.  You try to remember what you did with it.  If you can't find it again, you'll have to take Nermine up on her offer to help her in trade for whatever she has planned or find something else powerful enough to overpower your curse... which may leave you even worse off than before.";
+		now wrcurseNermine is 4;
+	otherwise if wrcurseNermine is 4 and wrcursestatus >= 3 and wrcursestatus < 100 and wolfsbane is not owned and a random chance of 1 in 3 succeeds:
+		say "     In speaking to Nermine, you realize that you don't have the monkshood with you.  You try to remember what you did with it.  If you can't find it again, you'll have to take Nermine up on her offer to help her in trade for whatever she has planned or find something else powerful enough to overpower your curse... which may leave you even worse off than before.";
+	otherwise if ( wrcurseNermine is 3 or wrcurseNermine is 4 ) and wrcursestatus >= 3 and wrcursestatus < 100 and wolfsbane is owned:
+		say "     Pulling out the wolfsbane, you set it on the counter.  You feel ill just from touching it, but Nermine doesn't seem to have an adverse reaction to its smell.  Once she places it in a glass jar you feel a little better, but still suffer from a lingering uneasiness in your stomach.  'I will be preparing the potion while you are to be getting the next thing you are needing.";
+		say "     'There is a shipment of items that were going to be auctioned off.  Among them is the silver knife you are wanting.  It is looking like this.'  She pulls out a published listing from the auction house, pointing out the knife.  'Cure is not needing this specific knife, but knife is special, so should be working better for this.  Nermine will be it keeping as her payment, so don't be becoming attached to it,' she adds with a wink.  She slips you the listing after circling the lot number in red.  She goes on to tell you the location of the warehouse, but cautions you that the Warehouse District was a dangerous part of the city even before the outbreak[if Warehouse District is unknown].  She does provide you with a route she assures you will safely get you to the dockside area[end if].";
+		now carried of wolfsbane is 0;
+		now Warehouse District is known;
+		now wrcurseNermine is 5;
+		now Getting the Knife is unresolved;
+	otherwise if wrcurseNermine is 5 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
+		say "     'You will be needing the silver knife to be helping with your curse.  Attempt to be [bold type]getting the knife[roman type] from the warehouse I told you about.  While you are doing this, I will be preparing the monkshood potion.  But if it's proving to be too much difficult for you, perhaps you would help Nermine as her assistant.  There are many things you could be assisting me with,' she says with a sexy rumble, letting her eyes roam over your body.";
+	otherwise if wrcurseNermine is 6 and wrcursestatus >= 3 and wrcursestatus < 100 and silver knife is not owned:
+		say "     You recall that you don't have the silver knife on you at the moment.  You'll need that if you want to be rid of your wereraptor curse.  If you can't find it again, you'll have to use some more drastic means to deal with it.";
+		now wrcurseNermine is 7;
+	otherwise if wrcurseNermine is 7 and wrcursestatus >= 3 and wrcursestatus < 100 and silver knife is not owned and a random chance of 1 in 3 succeeds:
+		say "     You recall that you don't have the silver knife on you at the moment.  You'll need that if you want to be rid of your wereraptor curse.  If you can't find it again, you'll have to use some more drastic means to deal with it.";
+	otherwise if ( wrcurseNermine is 6 or wrcurseNermine is 7 ) and wrcursestatus >= 3 and wrcursestatus < 100 and silver knife is owned:
+		say "     Pulling out the silver knife, you place it carefully on the counter and move your head quickly away.  Despite being rather plain, Nermine takes a long time to examine the knife.  'Excellent.  I am thinking this knife will be working very nicely for what we are needing tonight.'";
+		say "     She pulls some of the monkshood root from the jar and starts carving it up with the knife on a small cutting board she must have placed in anticipation.  You cover your nose and back away.  While the jackal seems undisturbed by it, you feel waves of nausea strike you.  You move to stand by the door, taking in what fresh air you can while you wait for her to finish and add the finely cut root to a small potion.  Only once she's cleaned it up and the bottle is closed do you feel well enough to approach again.";
+		attempttowait;
+		say "     She passes you the potion and freshly cleaned blade, which you take carefully.  'Now you are ready for the final step.  For it, you are needing to be finding the body of the creature you are becoming.  A true one, not those cursed like you,' she emphasizes with a point of her clawed finger.  'You will be needing to check the dinosaur exhibit in the museum and find the right skeleton.  They are old bones, but it is an old curse, so it should still be working.";
+		say "    'The ritual is needed to be completed under the light of the moon.  I know this is meaning you may be transforming, but it must be done at night so it can be drawn out of you.  To do this, you must be drinking the potion (a thought which makes you ill just to consider) and then be spilling your blood onto it with the knife (which sends a shiver along your spine).  This is meant as sacrifice to appease the spirits and be drawing the curse out of you.  Is old magic and old magic is often... crude like this.  The beast within you can sense the power of the silver and of the monkshood.  This is why they are affecting you so, but you are needing to be strong and do as you must to be freeing yourself.'";
+		say "    Having received the items and your instructions, all that remains is to do it.  You try to remind yourself that you need to go ahead with it, but you are repulsed by the prospect.  Besides, isn't monkshood poison.  She certainly seemed to use a lot of it.  Feeling uncertain and unsettled, you try to decide what to do next.";
+		now Dinosaur Skeleton is unresolved;
+		now wrcurseNermine is 8;
+	otherwise if wrcurseNermine is 8 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
+		say "     'You will need to be going to the Museum and finding the proper [bold type]dinosaur skeleton[roman type] you are needing.  You must be performing the ritual at night.  Drink the potion, spill your own blood and the curse is being draw out of you.  Hopefully.'";
+	otherwise if wrcurseNermine is 9:
+		now wrcurseNermine is 10;	[This should not occur, but bumping to failure by default.]
+		say "     Nermine gives you an appraising look and shakes her head sadly.  You know there's no point in asking her for more assistance with your curse.  You will have to find another means to deal with it before it consumes you.";
+		now wrcurseNermine is 13;	[Quest closed - fail]
+	otherwise if wrcurseNermine is 10:
+		say "     Nermine gives you an appraising look and shakes her head sadly.  You know there's no point in asking her for more assistance with your curse.  You will have to find another means to deal with it before it consumes you.";
+		now wrcurseNermine is 13;	[Quest closed - fail]
+	otherwise if wrcurseNermine is 11:
+		say "     Nermine smiles as she looks you over.  'I am seeing that you are doing much better now.  I was being hopeful that you would be succeeding.  Now perhaps that I have helped you, perhaps you would be willing to help Nermine, maybe?' she says with a wink and a swish of her tail as she places the silver knife into her display case for rare items with delicate care.  'You are talented.  Perhaps you might even talk to Nermine about adding to my collection here,' she says, patting the case as she seals it up.";
+		now wrcurseNermine is 13;	[Quest closed - succeed]
+	otherwise if wrcurseNermine is 12:
+		say "     Nermine looks you over.  'I am seeing that you are deciding to be keeping your raptor nature.  Such is the fate of many of who come to my store, getting what they sought, but not as they originally intended.  I am hoping you are making the right decision.'";
+		now wrcurseNermine is 14;	[Quest closed - wereraptor]
+	otherwise if hellgatherquest is 5:
 		say "'Welcome back again, Nermine sees you have acquired the items she needs,' The jackal woman says with a sly smile as you set the bag from Harold out on the counter. 'Now Nermine has finished dealing with the collar as you requested, and should have these items ground and mixed and properly ready for little white mare soon enough, now all that remains is for Nermine to talk about payment with sexy equine stud here...' She says with a teasing wink as she looks you up and down for a minute, her request making you quite nervous, before she sighs slightly, her black furred shoulders slumping a bit. 'Unfortunately, Sexy equine has little Nermine wants right now, and is far to busy to send off on long quest to fetch items for a lonely jackaless, so it looks like Nermine will have to ask for same thing she did of earlier stablemaster at this point. Access to the stables when Nermine wants it, and a favor of Nermine's choosing in the future.' She says with a shrug and a smile as she cocks her head at you inquiringly. [line break]";
 		say "Hardly believing your luck you nod in agreement eagerly, and the jackal woman grins slightly before heading to the back room for a while after telling you to stay there and touch nothing.  Not wanting to get in trouble, or to be more honest, be turned into anything embarrassing given what you have learned so far about this strange shop, you wait for quite a while in her shop without messing with anything, until eventually Nermine returns with a small box and a pouch. 'Now Nermine warns would be Nightmare to be careful with the choker, it will prove just as effective on you as it will on current stablemaster, so be careful not to try it on yourself.' She says teasingly as she hands you the items, her words sending a shiver down your spine as you stow them away carefully and turn to leave. Though just as you are about to leave, you hear the shopkeeper say 'And Nermine hopes this one will remember their agreement better then the last one did, though maybe Nermine will still get to use curse she was preparing after all..' you hear her mutter, and quickly duck out of the shop before the creepy and strange shopkeeper decides to try cursing you just in case..";
 		now hellgatherquest is 6;
-		stop the action;
-	if hellgatherquest is 4:
+	otherwise if hellgatherquest is 4:
 		say "'Back again? Collar is not done yet, it must be strong indeed to bind a Nightmare after all, and you still do not have the ingredients for your next mixture from the barkeep at the palomino either. Perhaps handsome equine was entranced by Nermine's beauty and wished to admire her some more?' The jackal woman says with a teasing grin as she winks at you, before going back to dealing with the items in the shop, some of which seem to be trying to make a break for the door...";
-		stop the action;
-	if hellgatherquest is 3:
+	otherwise if hellgatherquest is 3:
 		say "'And the triumphant warrior returns! Or is it triumphant thief?' Nermine says with a soft chuckle as you set the golden collar down on the counter in front of her, 'Nermine is sure it doesn[apostrophe]t really matter which, though she does hope museum guardian is not too injured from battle... is convenient to have certain items all in one place instead of looted and scattered around city after all... besides, if satyrs got loose Nermine just knows her inventory would be in constant danger of being partied with and stolen.' The jackal woman says with a soft sigh, before shaking her head and whisking the golden choker you worked so hard for away behind the counter. 'Now Nermine needs to get working on finishing the preparations on this item, but is still more little mare needs as you said, ingredients to make sure the Nightmare[apostrophe]s seed doesn[apostrophe]t make you nice and submissive little slut like all the others...' She says with a chuckle as a canine grin spreads across her black and silver muzzle, 'Now normally Nermine would send you off to museum again to gather the ingredients from some of the creatures there, but one is sure that her equine visitor is probably not welcome there for a little while now.' Nermine grins as she winks at you before continuing, 'Fortunately for her visitor, Nermine has alternate method for you to gather ingredients for her, Is bar recently reopened in town, well bar club what have you, is called palomino or some such. Bartender there has been gathering ingredients as well from around town, and should have what Nermine needs as well. Of course you might have to befriend him first to get him to give you ingredients, but that is customers problem, not Nermine[apostrophe]s' The jackal shopkeep says with a grin, before handing you a small list to give to the bartender at the palomino.";
 		now hellgatherquest is 4;
-		stop the action;
-	if hellgatherquest is 2:
+	otherwise if hellgatherquest is 2:
 		say "'Little would be Nightmare is coming back to visit with Nermine again?' The jackal woman says with a soft grin, 'Well Nermine likes horses as well as next jackal, but is still preferable to canines herself, Nermine thinks maybe little equine should focus on getting the focus from museum instead of hanging around teasing jackal shopkeepers with handsome naked body...' Nermine says with a teasing wink and an appraising glance at your body before going back to what she was doing and leaving you to your own devices.";
-		stop the action;
-	if hellgatherquest is 1:
+	otherwise if hellgatherquest is 1:
 		say "'Ah you is coming to Nermine from the horses she sees,' The Jackal shopkeeper says with mild amusement as she looks your changed form up and down, 'And now Nermine gets better look at what silly little mare has been doing with ingredients she orders, Nermine certainly approves.' Nermine says with with amusement and a rather predatory grin on her silver brushed muzzle as she takes in your rather strange equine form, even as you preen under her appreciative gaze. 'So there is to be rival Nightmare in town is there? Well and good, old one never did finish paying for books, Nermine had plans for him eventually... but this will be much more amusing.' She says with a soft smile, followed by a chuckle as she takes in your look of confusion. 'Ah you did not know what you were becoming? Is rather interesting legend, Nermine will tell you,' The shopkeeper says with a wicked smile as she leans forward on the counter, her ample breasts pressing forward temptingly as she talks. [line break]";
-		say "'The Nightmare Is an old legend, of black horse with flaming red mane and eyes, that travels land and tempts maidens in the night, the flaming eyes were said to fascinate, and they were said to be untameable powerful creatures  of lust and violence.' Nermine says with relish as she slowly recounts several strange tales of dark horses riding off with maidens in the middle of the night, and inspiring disturbing and lustful dreams from all around them whenever they visited... her words causing you to listen with rapt attention as you realize just how tempting such a powerful existence sounds. 'Though of course, were none around for quite while, until one you called stable master visited me a while back, He had of course already started to change, but didn[apostrophe]t want to be just another horse... We struck bargain he and I, and he held up only most of his...' Nermine says with a soft sigh, as she shakes her jackal head in disgust, 'Is always way of those with power, is to be thinking they can do anything, is also why Nermine will be having you pay her in advance.' The jackal woman says with a smirk on her muzzle as she grins at you, something about her attitude making you both nervous, and aroused at the same time.[line break]";
+		say "'The Nightmare is an old legend, of black horse with flaming red mane and eyes, that travels land and tempts maidens in the night, the flaming eyes were said to fascinate, and they were said to be untameable powerful creatures  of lust and violence.' Nermine says with relish as she slowly recounts several strange tales of dark horses riding off with maidens in the middle of the night, and inspiring disturbing and lustful dreams from all around them whenever they visited... her words causing you to listen with rapt attention as you realize just how tempting such a powerful existence sounds. 'Though of course, were none around for quite while, until one you called stable master visited me a while back, He had of course already started to change, but didn[apostrophe]t want to be just another horse... We struck bargain he and I, and he held up only most of his...' Nermine says with a soft sigh, as she shakes her jackal head in disgust, 'Is always way of those with power, is to be thinking they can do anything, is also why Nermine will be having you pay her in advance.' The jackal woman says with a smirk on her muzzle as she grins at you, something about her attitude making you both nervous, and aroused at the same time.[line break]";
 		say "'Now then, first things first, Nermine assumes you are here for item little mare commissioned, and maybe some more of the special ingredients... Well item is not quite done, Nermine has most of the materials, but she still needs the focus.' She says in a much more business-like tone as she moves around behind the counter, 'If you want the item to be done soon, you will need to find Nermine a suitable item for the focus, fortunately for little want to be stablemaster, Nermine knows where such an item can be found.' The jackal woman says with a soft smile as she leans forward to speak in a lower tone, 'Now nightmares may not be quite like demons or others, but like any of the mythic beasts, it has its weakness, which Nermine knows well, so she needs you to fetch her very specific type of item for her to work on. Is one in museum in town that would work, nice golden choker, will make wonderful collar to bring Nightmare to heel, unfortunately is old and rather finely crafted gold, and museum guardian will not let it go easily, Nermine suggests you go prepared for a fight.' The jackal woman says with a sly wink, before leaning back and proceeding to promptly ignore you, and you sigh realizing that it is off to the city museum with you, to hunt for a golden focus of some kind...";
 		now hellgatherquest is 2;
-		stop the action;
-	if Nerminetalk is 1:
+	otherwise if Nerminetalk is 1:
 		say "'[one of]You need help finding what you need? Nermine can help!'[or]Don't hesitate to ask me any questions you might have!'[or]You say shop was at other end of mall before? Are you really sure?'[or]Doesn[apostrophe]t the candlelight seem rather romantic and mysterious to you too?'[or]Have you tried our new vanishing drinks? Nermine will give you free sample as soon as she can find where they went...'[or]I hear there is a nice museum in this town, maybe you can find some nice items there as well.'[or]I keep meaning to go see what happened at the Egypt exhibit, but it doesn[apostrophe]t do to leave the store unattended for long...'[or]I am actually enjoying the strange things going on outside, I get fewer odd looks from the customers now, of course I get fewer customers as well...'[or]Did you know jackals were considered to be very mystical animals and sacred to Anubis?'[or]What a very fine [cockname of player] cock you have there!' Nermine says with a smile, making you blush.[or]I like your [skin of player] skin, but Nermine very much prefers her own soft fur, it is a lovely shade of black don[apostrophe]t you agree?'[or]Are you sure you don[apostrophe]t want Nermine to HELP you?'[at random]";
-	if Nerminetalk is 2:
+	otherwise if Nerminetalk is 2:
 		say "Are you enjoying Nermine[apostrophe]s special brand of help?'  The Jackal woman asks you with a sultry smile, 'Nermine is certainly enjoying having helper as nice and cute as you...' Nermine says as she licks her lips playfully.  'Of course if you aren[apostrophe]t happy Nermine can fix things for you to the way they were before, but it would be such a shame...'  The jackal woman lets her voice trail off as she gives you a lonely look.  Do you ask her to undo the help she has given you?'";
 		if player consents:
 			say "'That is too bad,' Nermine says, a sad look tugging at her muzzle as she eyes you reproachfully. 'Well if you don[apostrophe]t need Nermine[apostrophe]s help, you can do without I suppose.' She says, reaching out one of her black claw tipped hands to trace some symbol on your forehead, sending a strange shiver through your body. 'There, can be infected again like any other, and will have no more help from poor little lonely Jackal.' She says as she turns back to watching the store, ignoring her ungrateful former customer.";
@@ -97,7 +137,7 @@ instead of conversing the Nermine:
 		otherwise:
 			say "'I knew you would love my help!' The happy Jackal says with a smile, even as she reaches across the counter to give you a soft lick on the cheek, 'Nermine is looking forward to being Very helpful to little helper in future...' She says as she grins at you, making you flush.";
 			Now Nerminetalk is 1;
-	if Nerminetalk is 3:
+	otherwise if Nerminetalk is 3:
 		say "'Nermine can see that you are certainly looking even more handsome then ever, probably as a result of all the hard work you have been doing to help her.' The jackaless says with a smile as she looks you over, 'Now if you wan[apostrophe]t I could help return you to your boring old form, and then you would susceptible to other changes again... but it would seem like such a shame to do so.' Nermine says with a soft smile on her face. Do you ask her to undo the changes from the strange ankhs?"; 
 		if player consents:
 			say "'That makes Nermine very sad,' Nermine says, a sad look tugging at her muzzle as she eyes you reproachfully. 'Well if you don[apostrophe]t want to be nice and handsome, Nermine supposes she will just have to fix that.' She says, reaching out with one of her black claw tipped hands to trace some symbol on your forehead, sending a strange shiver through your body. 'There, can be infected again like any other, though don[apostrophe]t expect Nermine to ask for any more help from such an ungrateful person, she doesn[apostrophe]t need to be left disappointed and heartbroken any more then necessary.' She says with a sniff as she turns back to watching the store, ignoring her ungrateful former associate.";
@@ -106,10 +146,8 @@ instead of conversing the Nermine:
 		otherwise:
 			say "'I knew you would love your new look as much as I do!' The happy Jackal says with a smile, even as she leans across the counter to give you a soft lick on the cheek, 'Nermine is looking forward to seeing much more of her handsome associate in the future.' She says as she grins at you, making your body flush eagerly.";
 			Now Nerminetalk is 1;
-	if Nerminetalk is 4:
+	otherwise if Nerminetalk is 4:
 		say "'Ah Nermine is happy to be addressed by her handsome master,' The naked Jackal woman says as she saunters over eagerly, 'What can Nermine help her master with?' She says as she poses slightly for your pleasure, stroking one of her clawed hands down her furred side teasingly. 'Sadly Nermine can not merely give her master items from the shop, everything must be bought or traded for as part of old agreement,' The jackal woman says with a soft sigh, before perking up slightly, 'Still! Nermine can give her amazingly handsome jackal master herself, whenever or wherever they decide they want to use her.' Nermine says with a happy grin as she licks her lips at the very arousing thought, obviously hoping you will decide to 'use' her often.";
-
-
 
 
 Instead of fucking the Nermine:
@@ -233,6 +271,7 @@ understand "help me" as nerminehelping;
 understand "nermine help" as nerminehelping;
 understand "ask nermine for help" as nerminehelping;
 understand "help nermine" as nerminehelping;
+understand "helping nermine" as nerminehelping;
 understand "ask for help" as nerminehelping;
 
 check nerminehelping:
@@ -245,20 +284,20 @@ carry out nerminehelping:
 	if rarequesting > 0:
 		say "'Do not be backing out of promise to be helping Nermine with the rare items she needs.  You should be focusing on that instead.";
 		stop the action;
+	if wrcursestatus >= 7 and wrcursestatus < 100:
+		say "'A wereraptor is not good for being a helper around Nermine's store and her very breakable collection.'";
+		stop the action;
 	if jackalboytf is 4:
 		say "'Ah handsome little Jackal toy is offering to help Nermine some more? Or is it they want Nermine to help them out?' The sultry Jackal woman says as she runs her clawed hands over your soft and sleek body, your eyes closing in pleasure as she gives you a soft scratch behind your canine ears.  'It is good to have an eager little Jackal pet around the place to help Nermine out whenever she needs it, she is glad you are accepting your new place here as happily as she knew you would.'  She says as she pets you a few more times, her soft words music to your submissive jackal soul, 'And her little helper doesn[apostrophe]t need to worry about any of the other infections in the city any more now, Nermine has made sure that your lovely new form is nice and permanent, so you can be her lusty little pet from now on! Isn[apostrophe]t that nice?'  Your mistress asks you as she rubs your head a few more times, and you find yourself nodding happily at her question, glad to be able to please your lovely dominant mistress in whatever way she wants.  'Nermine doesn[apostrophe]t need any more help in store right now, but maybe if she has time later, you can help her in back room sometime,' The wonderful jackal says as she stops petting you and goes back to leaning on the store counter, and you realize you can[apostrophe]t wait for another chance to help her out, whether  in the back room or doing whatever else she asks of you!";
 		now Nerminetalk is 1;
 		stop the action;
 	if Nerminehelpstatus is 5:
-		let feathers be 0;
-		repeat with z running through invent of player:
-			if z is "Peacock feather", increase feathers by 1;
-		if feathers > 2:
+		if carried of peacock feather > 2:
 			say "'Yes you brought them!' the Jackal woman says as she snatches the large shiny feathers from you. 'Now Nermine can have a pretty new peacock feather necklace to wear!' She says as she places the glittering feathers in several different positions on her dark neck and glances into a mirror beside the counter as if to see which position she likes best.  She notices you watching in amusement, and flashes you a soft grin, 'What, not everything is about other customers, sometimes Nermine likes to get pretty things herself too.  Still you are being such a good helper,' She says as she reaches out to caress the side of your new muzzle gently,   'So very  nice and always so happy to help me out with the shop, maybe you would like to help Nermine out with her other needs as well?' She says with a wink as she runs her hand slowly down your black furred chest. 'Nermine has one last bit of help to give you first though,' The sleek Jackal says as she reaches behind the counter and produces another of those familiar looking jackal totems and hands it to you. 'You let totem finish helping you become even better, and then maybe Nermine will let her lovely little helper help her out of clothes in back room?' The thought of helping the sultry shopkeeper out in a more intimate manner makes your body flush with desire, and you look down at the totem in your hand with anticipation....'";
-			delete Peacock feather;
-			delete Peacock feather;
-			delete Peacock feather;
-			add "Jackal totem" to invent of player;
+			delete peacock feather;
+			delete peacock feather;
+			delete peacock feather;
+			increase carried of Jackal totem by 1;
 			increase xp of player by 30;
 			stop the action;		
 		otherwise:
@@ -275,7 +314,7 @@ carry out nerminehelping:
 	if Nerminehelpstatus is 3:
 		if winefound is 2:
 			say "'How wonderful!' Nermine says as you proudly hold out the small vial of dark liquid to her. 'And you got it so nice and fast too! You are just the best helper ever!' The Jackal woman exclaims as she reaches over and runs her clawed hand through your fur several times. You find yourself groaning in pleasure under her soft touch, both at the feel of her hand on your fur, but from the sheer joy of making your lovely Jackal mistress so very happy. Before you can examine that thought more closely, Nermine stops petting you and carefully begins to stow the heady wine safely away. 'Nermine has customer seeking the best party wine ever, and asked her for help. Nermine is sure that a few drops of this wine in drink and her customer and his guests will enjoy their best party ever. She just knows he will love being happy drunk Nymph chasing Satyr.' The Jackal woman says with a grin on her face as she turns back to you, pulling an item out from under the counter as she does so.  'And Nermine has a lovely reward for her wonderful helper as well!' She says happily as she hands you another of those strangely carved Jackal totems.  'You use that to get some help from the Jackal, and then maybe you and Nermine can celebrate helping customers in back room together sometime....";
-			add "Jackal totem" to invent of player;
+			increase carried of Jackal totem by 1;
 			Now Nerminehelpstatus is 4;
 			increase xp of player by 20;
 			stop the action;		
@@ -284,22 +323,19 @@ carry out nerminehelping:
 			stop the action;
 	if jackalboytf is 2:
 		say "'Oh my!' Nermine says as she eyes your handsome new coat of fur, 'Nermine thinks you are starting to look absolutely wonderful now!' She exclaims happily, her obvious appreciation of your changing body making you smile happily. 'Nermine almost can[apostrophe]t wait to help you become even an better and sharper person,' She says before pausing slightly to let the idea of becoming even better sink in before she continues. 'Sadly, this is a store after all, and Nermine can only do so much for her handsome little helper without getting something in return...' The Jackal woman says, as she reaches out one of her black, claw-tipped hands to stroke your new fur lightly several times, making your eyes close in pleasure at the sensations.  'I tell you what,' She says as she leans back behind the counter, 'Nermine has easy task you can help her with, and then she can help you out even more!'  Seeing she has your attention, she pulls a small vial out from behind the counter, 'In museum of this city Nermine has heard satyrs are gathering again, and where the goat men are, so too is their unique wine.  Find one of the places they store the wine, and fill the vial up, and then Nermine can help you become an even better handsome helper, doesn[apostrophe]t that sound nice?' She says as she hands you the vial, her sexy voice sending shivers down your spine and making your jackal tail wag as you think about becoming a better helper then ever before!";
+		now winefound is 1;
 		now Nerminehelpstatus is 3;
 		stop the action;
 	if Nerminehelpstatus is 6:
 		say "'Nermine already is helping you! You use totem again and see!', Nermine says with a twinkle in her eye.";
 		stop the action;
 	if Nerminehelpstatus is 2:
-		let feathers be 0;
-		repeat with z running through invent of player:
-			if z is "Wyvern Goop", increase feathers by 1; 
-		if feathers > 2:
+		if carried of Wyvern Goop > 2:
 			say "'Yes you bring me the samples!' Nermine says with a smile on her muzzle as she takes the samples from you. 'Now Nermine can make several charms to trap one of the beasts for customer who wants little pet wyvern, Nermine think he will make handsome mate for trapped wyvern when she is done. Not that helpful little friend here needs to worry about that,' She says as she reaches over to trace one of her short claws along your cheek in a soft teasing manner. 'Now Nermine promised you to help you in return, and she keeps her bargains.' The jackal woman says as she reaches underneath the counter again and pulls out another of those polished onyx statues.";
 			delete Wyvern Goop;
 			delete Wyvern Goop;
 			delete Wyvern Goop;
-			now winefound is 1;
-			add "Jackal totem" to invent of player;
+			increase carried of Jackal totem by 1;
 			increase xp of player by 10;
 			now Nerminehelpstatus is 6;
 			stop the action;		
@@ -320,15 +356,12 @@ carry out nerminehelping:
 			if guy is banned or furry is banned or girl is banned:
 				say "'Oh, Nermine is seeing now that she looks at you that you will not be able to help her.  I am feeling most sorry for you, restricting your fun so.  You should not be so picky, I am thinking.'  Nermine shakes her jackal head sadly.";
 				say "(The helping quest requires guy, girl and furry content to be available.)";
-				stop the action;
 			otherwise:
 				say "'Excellent!' The jackaless says as she claps her hands happily, before reaching underneath the counter. 'Nermine loves to help out her customers!' She says as she brings a small item up from beneath the counter and holds it out to you.  Closer inspection reveals the item to be a small black statue of a jackalman with his arms crossed across his chest, glancing up at Nermine you see the jackal woman give you a sly wink, 'Nermine thinks this will help you look much better, get in touch with the power of the Jackal, go on, give it a try!' She says as she hands you the small totem, 'Is no charge for this one, is Nermine[apostrophe]s way of helping you get started.' The canine shopkeeper says with a grin on her muzzle, as you look down at the little item in your hands with curiosity.";
-				add "Jackal totem" to invent of player;
+				increase carried of Jackal totem by 1;
 				Now Nerminehelpstatus is 1;
-				stop the action;
 		otherwise:
 			say "'This is too bad,' The Jackal shopkeeper says with a sigh, 'Nermine does so enjoy helping people find themselves, and she had such very high hopes for you.  If you change your mind though, you just come see Nermine again, and she will help you find who you want to be.' Nermine says with a soft wink as she goes back to watching the store.";
-			stop the action;
 
 
 Section 3- Magic Bargain Bin
@@ -363,7 +396,7 @@ check bargainhunting:
 
 
 carry out bargainhunting:
-	if "food" is listed in invent of player and "water bottle" is listed in invent of player:
+	if food is owned and water bottle is owned:
 		say "Pulling out a small bit of food and a water bottle you set them out on the counter where Nermine quickly makes them disappear. Having paid your fee you eagerly begin to sort through the bargain bin to see what you can find...[line break]";
 		delete food;
 		delete water bottle;
@@ -380,8 +413,7 @@ carry out bargainhunting:
 				increase strangebottledrink by 1;
 			otherwise if "Spartan Diet" is listed in feats of the player:
 				say "Finding another of those vials of liquid tucked away within the bin, you decide to take the small vial of liquid with you, as refreshing as the small vial is it is obviously worth at least two full water bottles when you go to drink it later...";
-				Add "water bottle" to invent of player;
-				Add "water bottle" to invent of player;
+				increase carried of water bottle by 2;
 			otherwise:
 				Say "You smile as you once more come across one of those strange and very refreshing vials of liquid.  Quickly pulling the small vial out of the bin, you waste no time in taking a small sip of the strangely coloured liquid within.  To your disappointment the drink seems somewhat less refreshing this time, although you can still feel your body tingling as the liquid obviously does something to you.";
 				add "Spartan Diet" to feats of the player;
@@ -414,8 +446,8 @@ carry out bargainhunting:
 				say "Your dexterity has increased by 1!";
 			otherwise:
 				say "Poking absently through the bin, your eye catches on a small catlike charm, tucked away in the corner.  Pulling the charm out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers.  Suddenly Nermine snatches the golden charm from your hand with a handkerchief and carefully puts it into a jewelry box.  'I can tell that you will not be wanting this item.  I am sorry, but the bargain bin is like that some times.  Here.  You can be taking these back and waiting a moment before trying again with fresh start.  But you should be thinking to not be so picky.  More fun is to be had that way,' she adds philosophically.";
-				Add "food" to invent of player;
-				Add "water bottle" to invent of player;
+				increase carried of food by 1;
+				increase carried of water bottle by 1;
 		otherwise If Z is 7:
 			Say "Sorting through the bin, your eye is caught by a strange sparkly piece of jewelery in the bin, the pretty piece making you smile as you pull it out.  Closer inspection reveals that the item is nothing more then a simple piece of very sparkly costume jewelry, but somehow the strange piece makes you feel better as you stare at it.[line break]";
 			if "Magpie Eyes" is listed in feats of the player:
@@ -431,10 +463,8 @@ carry out bargainhunting:
 			say "Your intelligence has increased by 2!";
 		otherwise if Z is 9:
 			Say "Reaching deep into the bin, you find something seems to bite you and draw your hand back out of the bin quickly, you stare at your fingers as blood drips slowly from a nasty wound on your hand.  Nermine seems rather embarrassed by the whole affair as she helps you bandage up your new wound, and the jackal glares at the bin for a minute as if reprimanding whatever bit you.  'Nermine is sorry, sometimes things are not happy to end up in bargain bin, can make for bad misunderstandings,' The jackal says with a shrug, as she quickly refunds your food and water, and even places an extra packet of food and bottle of water out for the inconvenience.";
-			Add "food" to invent of player;
-			Add "food" to invent of player;
-			Add "water bottle" to invent of player;
-			Add "water bottle" to invent of player;
+			increase carried of food by 2;
+			increase carried of water bottle by 2;
 			decrease hp of player by 25;
 		otherwise if Z is 10:
 			say "Sorting through the bin, you come across a strange old fashioned pocket watch, your curiosity getting the better of you, you pull the strange item out of the bin to examine it closer. The unusual brass watch seems to feel slightly warm in your hands as you wind it up, and you are hit with a sudden dizzy spell as soon as you finish winding the watch, making you stagger slightly.  Blinking you catch yourself and stare around you feeling slightly befuddled, before realizing the watch is no longer in your hands.  Sighing at the loss of the interesting looking watch, you prepare to move on, though you feel like something has changed, even if you can[apostrophe]t quite put your finger on what.";
@@ -452,39 +482,35 @@ carry out bargainhunting:
 			say "Hunting through strange bin full of items, you find yourself touching what appears to be some sort of plastic bag. Overcome with curiosity, you quickly pull the bag out of the bin, and take a look inside. You are surprised to see that the bag contains several neatly labeled samples taken from creatures inside the city. 'Ah Nermine was looking for those!' You can hear the jackal like shopkeeper say as you stare at the items, making you look up at her instead. 'If fine looking customer doesn[apostrophe]t want to keep those, Nermine is more then willing to buy them back from them,' she says with a grin on her soft, silver-painted muzzle while you try to decide what to do with the items.  Do you give them back to the jackaless?";
 			if furry is banned:
 				say "Taking another quick glance at the contents, you decide that you have no interest in any of the beastially infected items and return the bag to Nermine while she slips your payment back to you. Checking the items she handed you back, you find yourself grinning as you realize the sly jackal woman slipped you an extra package of food as well.";
-				Add "food" to invent of player;
-				Add "food" to invent of player;
-				Add "water bottle" to invent of player;
+				increase carried of food by 2;
+				increase carried of water bottle by 1;
 			otherwise if player consents:
 				Say "Deciding you definitely don[apostrophe]t need any more of the infectious items from creatures within the city, you quickly hand the bag full of stuff over to Nermine while she slips your payment back to you. Checking the items she handed you back, you find yourself grinning as you realize the sly jackal woman slipped you an extra package of food as well.";
-				Add "food" to invent of player;
-				Add "food" to invent of player;
-				Add "water bottle" to invent of player;
+				increase carried of food by 2;
+				increase carried of water bottle by 1;
 			otherwise:
 				say "Deciding to keep the items yourself, since they could come in handy in this strange city you are stuck in, you stuff the bag into your pack.  Nermine sighs slightly at your choice and shakes her head as she goes back to watching the counter.";
 				if girl is not banned:
-					add "tuft of chin fur" to invent of player;
-					add "Honeycomb" to invent of player;
-					add "Skunk Goo" to invent of player;
+					increase carried of tuft of chin fur by 1;
+					increase carried of Skunk Goo by 1;
 				if guy is not banned:
-					add "Chipped tooth" to invent of player;
-					add "pirate bandana" to invent of player;
+					increase carried of Chipped tooth by 1;
+					increase carried of pirate bandana by 1;
 				if hermaphrodite is not banned:
-					add "Dog Milk" to invent of player;
-    				add "Fish" to invent of player;
+					increase carried of Dog Milk by 1;
+				increase carried of honeycomb by 1;
+				increase carried of Fish by 1;
 		otherwise if Z is 15:
 			if girl is banned and ( hermaphrodite is banned or furry is banned ):
 				say "Searching through the bargain bin, you find a small travel pouch tucked away in the corner and, curious, pull the pouch out.  Flipping it open, all you find is a wad of used bubblegum and a bottle of water.  Ugh!  Oh well, can't win them all and at least you got some water back.";
-				Add "water bottle" to invent of player;
+				increase carried of water bottle by 1;
 			otherwise:
 				say "Searching through the bargain bin, you find a small travel pouch tucked away in the corner, and curious pull the pouch out. Flipping the pouch open, you blink in surprise as you note it seems to contain a bottle of water along with [if girl is not banned]two nicely labeled samples of goo[otherwise]a wad of used bubblegum[end if], and [if hermaphrodite is not banned and furry is not banned]two small vials of gryphon milk[otherwise]a wad of used bubblegum[end if].  Staring at the items for a moment, you realize that you are obviously not the first person the good doctor Matt sent out in the city to retrieve samples for him.  Emptying the pouch out into your own backpack, you wonder just what happened to the former owner of the strange travel pouch, and if they are happier as whatever they are now.";
-				Add "water bottle" to invent of player;
+				increase carried of water bottle by 1;
 				if hermaphrodite is not banned and furry is not banned:
-					add "gryphon milk" to invent of player;
-					add "gryphon milk" to invent of player;
+					increase carried of gryphon milk by 2;
 				if girl is not banned:
-					Add "glob of goo" to invent of player;
-					Add "glob of goo" to invent of player;
+					increase carried of glob of goo by 2;
 		otherwise if Z is 16:
 			if dollfound is 0:
 				say "Reaching into the bin, you find your hand meeting some kind of plush stuffed toy, its soft form almost seeming to jump into your hand as you pull the strange thing out.  Looking at what you found, you blink as you find yourself holding a miniature version of yourself, the little plush doll appearing to be an exact replica of you as you are now right down to the smallest detail. Eying the unusual doll carefully, it seems almost alive, which is strangely disconcerting a way... Do you decide to keep it?";
@@ -494,8 +520,8 @@ carry out bargainhunting:
 					now dollfound is 1;
 				otherwise:
 					say "Sighing sadly, you toss the strange but creepy doll back into the bargain bin, shaking your head at the wastefulness of it. Turning away though, you see that Nermine decided to take pity on you, and your payment is sitting  back up there on the counter while she busies herself a little ways away. Nodding gratefully and feeling a bit better about the event, you tuck the food and water back away in your pack carefully, not sure if you you will try your luck again in the strange bin or not...";
-					Add "food" to invent of player;
-					Add "water bottle" to invent of player;
+					increase carried of food by 1;
+					increase carried of water bottle by 1;
 			otherwise:
 				say "Searching through the bin again, you blink as your hand finds a small doll sized pack and some accessories, pulling them out, you stare at them in puzzlement for a minute, before passing them along to your miniature doll self to play with. It never hurts to accessorize right?";
 				increase dexterity of strange doll by 1;
@@ -509,8 +535,8 @@ carry out bargainhunting:
 			if "Cold Fish" is listed in feats of player:
 				say "Sorting through the strange bin, you feel a small shiver from one of the items in the bin and reflexively release the item, protecting yourself from it.  You withdraw your hand and clutch it tightly as the shivers run up your arm and then down your body, filling your loins with heat and arousal.  Nermine, noticing your odd expression, slides back the water and food.  'Some items in the bargain bin do not agree with some people.  You may try again if you wish or leave matters be.'";
 				increase libido of player by 25;
-				Add "water bottle" to invent of player;
-				Add "food" to invent of player;
+				increase carried of food by 1;
+				increase carried of water bottle by 1;
 			otherwise if "Horny Bastard" is listed in feats of the player:
 				say "Pushing through the strange piles of unusual items stuffed into the overflowing bin, you find a small silver charm shaped like a [one of]feline[or]canine[or]demonic[or]equine[or]goat[or]dolphin[or]bestial[or]bear[at random] cock. The small charm glints in your hand as you pull it out of the bin, the lewd appearance of the finely detailed miniature cock charm making you grin. And leaves you feeling hornier and perhaps more bestial then ever as you slip the little charm onto a charm bracelet so you can wear it at all times. Now if only you could go out and find a real cock just like it....";
 				now libido of player is 100;
@@ -523,17 +549,12 @@ carry out bargainhunting:
 				say "Reaching into the bin, you can feel what seems to be some soft of book cover under your hands, blinking softly as you feel around, you realize that it isn[apostrophe]t just one book, but a small bundle of books tied together. Curious you draw the small bundle of books out of the bin, and are surprised to see the image of a half naked jackal like pirate looking at you from the cover of the first book. Slightly confused and curious you glance at the covers of the other books you pulled out, and see they all depict rather sexy looking jackal men posing suggestively in a variety of different situations. You open one of the books and begin to flip through it, and quickly realize it is a rather hard core romance novel featuring several beastial people, but featuring a handsome male jackal lead that swashbuckles his way through the hearts and beds of a large harem of various different women.";
 				say "You blush slightly in embarrassment and arousal at some of the scenes depicted in the books, causing Nermine to look over at you to see what Is so distracting. Upon spying what you are reading and the other books you are holding, the jackal shopkeeper coughs uncomfortably drawing your attention. 'Ah Nermine was wondering where those had gotten too.' She says as she carefully slips the books out of your hands and quickly hides them behind the counter. 'Nermine has no explanation for how such private material ended up in bargain bin, but is very reluctant to actually let them go, sometimes nights alone in shop can be very long you see.' The Jackal woman says with some embarrassment as she shifts uncomfortably behind the counter. Grinning slightly at the shopkeepers obvious discomfort, you shrug as she slides your payment back out on the counter for you to take, when you just stare at her with a smile, The jackal woman blushes even more, as she sets another package of food and water out next to your payment.  You can feel your smile grow even wider as you collect your supplies, thinking that you must have picked up some tips on getting the most out of your victories from the heroes of the books you skimmed.";
 				Now romancebooksfound is 1;
-				Add "food" to invent of player;
-				Add "water bottle" to invent of player;
-				Add "food" to invent of player;
-				Add "water bottle" to invent of player;
+				increase carried of food by 2;
+				increase carried of water bottle by 2;
 			Otherwise:
 				say "Once more feeling a package of books stashed away in the bargain bin, you pull it out, and seeing the jackal like hero on the cover, pass it over the counter to Nermine with a small grin. The Jackal shopkeeper blushes in embarrassment as she hides the books under the counter, and passes over some food and water without any further commentary";
-				Add "food" to invent of player;
-				Add "water bottle" to invent of player;
-				Add "food" to invent of player;
-				Add "water bottle" to invent of player;
-				stop the action;
+				increase carried of food by 2;
+				increase carried of water bottle by 2;
 		otherwise if Z is 20:
 			say "Rummaging through the bargain bin you find yourself feeling rather strange as you do so, almost as if something in the bin itself is affecting you, feeling vaguely worried, you begin to pull your hand out of the bin only to find it seems stuck on something, or more like something or someone is holding onto you and trying to drag you into the bin. The feeling is both strange and disturbing as you fight to free your hand from the bargain bin, and Nermine seems to notice your distress as you struggle, the jackal woman coming over to investigate the problem almost immediately. Just before she reaches you though, something seems to give in the bin, and you stagger backwards almost knocking the shopkeep over as you do so, the jackal woman just barely managing to catch you  before you drag both of you down to the ground. Unfortunately something else staggers out of the bin as well, and you find yourself face to face with a [one of]Rubber tigress[or]Ash drakenoid[or]Horseman[or]Leopardman[or]Felinoid[or]Plush lion[or]Tigress hooker[or]Satyr[at random] as it staggers unsteadily out of the bin, catching itself unsteadily before fixing its lust filled eyes on your body. You gape in surprise for a second, idly wondering just how the hell the creature fit into the bargain bin in the first place, before quickly preparing to fight as it steps towards you eagerly. The moment is broken by a sharp growl from over your shoulder, and the beast stops in its tracks and begins to back up in fear, and you glance over your shoulder to see Nermine fixing the creature with a deadly glare and a scowl on her muzzle. 'There is no fighting in Nermine[apostrophe]s shop, this she will not tolerate!' She says with a sharp bark, and the beast quickly turns tail and runs out the door, leaving you both impressed and a little worried as the surprisingly intimidating jackal woman turns her gaze on you. You relax as she gives you a small peck on the cheek and a smile before wandering back to her side of the counter, 'Nermine must say, she is not sure how that got in there, but she would advise handsome customer to be more careful about the things they pick out of the bargain bin from now on.' She says with a teasing wink, and you curse slightly as you realize that technically you just purchased the creature that just ran off... maybe next time you should try looking for a collar and leash before it leaves? Or maybe you should just hope there isn[apostrophe]t a next time...";
 		otherwise if Z is 21:
@@ -549,14 +570,17 @@ carry out bargainhunting:
 				now City Hospital is known;			
 				Now State fair is known;
 				Now Approaching the Capitol Building is known;
-[				Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]	]
+				Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
 				Now Plant Overview is known;
 				now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+				now College Campus is known;
+				now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
 				Now Entrance to the Red Light District is known;
 				Now Entrance to the High Rise District is known;
 				Now Zoo entrance is known;
 				Now Dry Plains is known;
 				Now Museum Foyer is known;
+				now Warehouse District is known;
 		otherwise if Z is 22:
 			if "Submissive" is listed in feats of the player:
 				say "Reaching down into the depths of the bargain bin, your hand touches on a rather familiar shape, pulling the item up, you find yourself smiling to see you have found a lovely little slave's collar. Looking at the collar reminds you of how much fun it can be to submit to a stronger more dominant mate, and your mind drifts to several of the sexy creatures in the city, lingering on just how much fun it could to be to just be theirs, their happy little slutty pet, happy to serve their every whim and need. Panting slightly as you think back on all your former submissions, you find yourself feeling increasingly happy and ready for thing to come, as you slip the collar into your pack as a happy reminder of all the submissive pleasure in your past, and hopefully all the lovely times in your future as well...";
@@ -567,11 +591,7 @@ carry out bargainhunting:
 		otherwise if Z is 23:
 			if "Bad Luck" is listed in feats of the player:
 				say "Reaching into the bargain bin, you almost groan as you feel your bad luck building up, likely going to ruin whatever attempt you make at retrieving an item from the bin. Feeling rather annoyed at the rather unfair world, you sigh helplessly and decide not to fight fate as you grab whatever comes to hand before pulling it out to look at it, obviously not expecting much given your luck. Imagine your surprise however, when the item you pulled out appears to be a custom soda holder, the kind used at beaches and for parties, and mostly full as well! What a nice surprise you find yourself thinking for a minute.. right before the first soda slips out of the holder, and lands right on your foot. Jumping in pain slightly you accidentally toss the soda holder up in the air. More cans slip out midair, and you groan and cry out as you are pelted with a short heavy rain of soda cans, when the rain finally stops you hear a small noise, and glance over to see Nermine valiantly covering her muzzle with one delicate paw as she tries not to laugh to hard at your antics. Sighing you realize your bad luck was obviously still working full force, though as you glance down around you, you at least managed to get some soda out of the deal... just be careful not to open them too soon after all that shaking.";
-				Add "soda" to invent of player;
-				Add "soda" to invent of player;
-				Add "soda" to invent of player;
-				Add "soda" to invent of player;
-				Add "soda" to invent of player;
+				increase carried of soda by 5;
 				decrease hp of player by 50;
 			otherwise:
 				say "Reaching into the bargain bin with high hopes, you feel something rather thin and metallic under your fingers, pulling it out you find yourself staring into a rather nicely made hand mirror. Admiring the fine looking mirror, you take a look at your reflection, only to gasp in surprise as it shows you kneeling on the floor in front of a shadowy figure, your features strange and twisted, a mixture of several other beasts, only somehow weaker and less dominant, your eyes wide and glazed without any sign of free will left, though obviously still recognizable as your own. Strangely enough even as you stare at it, the eyes of the shadowy figure turn and bore into your own eyes, and you gasp and drop the mirror in surprise. The sound of the mirror shattering as it hits the floor snaps you out of your shock however, and you look down at the mess even as Nermine tsks at you sadly. 'Is going to be seven years bad luck for you now, Nermine fears.' Her pronouncement makes you shudder slightly, as you feel a chill go down your spine... But as creepy as the mirror was, you can[apostrophe]t actually bring yourself to feel bad that it was destroyed.";
@@ -583,13 +603,12 @@ carry out bargainhunting:
 				wait for any key;
 				now nerminefeat is 1;
 				featget;
-				stop the action;
 			otherwise:
 				increase xp of player by a random number between 10 and 20;
 		otherwise if Z is 25:
 			if "Expert Medic" is listed in feats of the player:	
 				say "Rummaging through the bargain bin, you feel a rather familiar plastic case in the bin, and smile as you grip it and pull it out. Much to your delight, as you thought, the item was a medkit! With your practical medical skills, this should be quite useful indeed you think with a smile as you tuck the medkit away in your bag.";
-				Add "medkit" to invent of player;
+				increase carried of medkit by 1;
 			otherwise:
 				say "Rummaging through the bin, you feel some sort of cloth band snag in your fingers, and being somewhat interested in what kind of cloth item is in a bin like this, you pull it out of the bin for a better look. You blink in surprise to find it is a surprisingly functional looking armband, with the sign of the red cross on it, somewhat on impulse, you slide the armband on and admire it for a minute. Just the feeling of its weight on your arm makes you feel a bit safer and more like a doctor, and you pose in amusement for a minute like you were about to bandage someone up... only to realize that you actually feel like you know how to bandage someone professionally! With surprise you look down at your new armband in wonder, only to be shocked to discover that it is nowhere to be found! Shaking your head slightly at the strangeness of the situation, you look around for the armband for a minute, before sighing and realizing you will just have to make do with your strange new medical skills instead...";
 				add "Expert Medic" to feats of the player;	
@@ -650,37 +669,37 @@ carry out bargainhunting:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
 					say "You acquired 1 [loot entry]![line break]";
-					add "dirty water" to invent of player;
+					increase carried of dirty water by 1;
 					say "You acquired some dirty water!";
 				otherwise:
 					if guy is not banned and furry is not banned:
-						add "Chipped tooth" to invent of player;
+						increase carried of Chipped tooth by 1;
 						say "you acquired a Chipped tooth!";
 					otherwise if girl is not banned and furry is not banned:
-						add "Skunk Goo" to invent of player;
+						increase carried of Skunk Goo by 1;
 						say "You acquired some Skunk Goo!";
 					otherwise if hermaphrodite is not banned and furry is not banned:
-						add "panther milk" to invent of player;
+						increase carried of panther milk by 1;
 						say "You acquired some panther milk!";
 					otherwise:
-						add "dirty water" to invent of player;
+						increase carried of dirty water by 1;
 						say "You acquired some dirty water!";
-					add "dirty water" to invent of player;
+					increase carried of dirty water by 1;
 					say "You acquired some dirty water!";
 			otherwise:
 				if guy is not banned and furry is not banned:
-					add "Chipped tooth" to invent of player;
+					increase carried of Chipped tooth by 1;
 					say "You acquired a Chipped tooth!";
 				otherwise if girl is not banned and furry is not banned:
-					add "Skunk Goo" to invent of player;
+					increase carried of Skunk Goo by 1;
 					say "You acquired some Skunk Goo!";
 				otherwise if hermaphrodite is not banned and furry is not banned:
-					add "panther milk" to invent of player;
+					increase carried of panther milk by 1;
 					say "You acquired some panther milk!";
 				otherwise:
-					add "dirty water" to invent of player;
+					increase carried of dirty water by 1;
 					say "You acquired some dirty water!";
-				add "dirty water" to invent of player;
+				increase carried of dirty water by 1;
 				say "You acquired some dirty water!";
 	Otherwise:
 		say "Sorting through your pack, you are ashamed to realize you can[apostrophe]t afford to draw something out of the bargain bin right now.  You blush under Nermine[apostrophe]s curious gaze, as you casually move off to look through the rest of the store instead.";
@@ -695,8 +714,8 @@ carry out bargainhunting:
 to say plrtcl:
 	if humorous is banned or furry is banned or ( guy is banned and girl is banned and hermaphrodite is banned):
 		say "As you start to dig in one corner of the bin, Nermine stops you.  'I can tell that you will not be wanting anything from that corner.  I am sorry, but the bargain bin is like that some times.  Here.  You can be taking these back and waiting a moment before trying again with fresh start.  But you should be thinking to not be so picky.  More fun is to be had that way,' she adds philosophically.";
-		Add "food" to invent of player;
-		Add "water bottle" to invent of player;
+		increase carried of food by 1;
+		increase carried of water bottle by 1;
 	otherwise:
 		let Q be a list of numbers;
 		if guy is not banned, add 1 to Q;			[Plush lion]
@@ -781,31 +800,32 @@ To say jackaltotemmagic:
 		say "Rubbing the small totem curiously, you can feel some strange and almost invasive force trying to invade your body, and you hear small whispering about the pleasures of submission and surrender. With a shudder you find yourself fighting back almost instinctively, the power of your current form easily overpowering that of the totem, and with one last shake of your head you clear the last remnants of the intrusion from your mind. The thought of you bowing down submissively is so ridiculous it almost makes you laugh you think with amusement, as you look down at the little totem, only to find that at some point during the internal struggle, you crushed the small item in your hand.  Brushing the remains of the totem off, you shrug and guess Nermine won[apostrophe]t be giving you any help in that manner, and continue along with your business.";
 		now nerminetalk is 1;
 		now jackalboytf is 5;
-	if jackalboytf is 0:
+	if wrcursestatus >= 7 and wrcursestatus < 100:
+		say "You rub the small totem curiously and hiss in pain as it starts to heat up, scalding your hand.  You toss it aside.  Something about you is incompatible with it.";
+		now nerminetalk is 1;
+		now jackalboytf is 5;
+	otherwise if jackalboytf is 0:
 		say "Rubbing the small totem you wonder just what Nermine expects to happen, and are disappointed when all that seems to happen is the totem growing warm In your hands. You sigh and are about to put the small totem away when your ass start to tingle and feel strange, the statue growing even warmer under your touch.  Glancing behind you you surprised to see your ass seeming to stretch and change, your rear flattening out slightly as a small black jackal like tail forms behind you.  You feel a strange almost pleasant stretching sensation as your new tail grows until its tip is hanging just below your knees, staring at your new tail you find yourself experimentally moving it from side to side a few times, and watch as your new limb responds with surprising dexterity. Taking a few steps you are surprised to find your new tail seems to help your balance greatly, and you have to admit, the nice Jackal tail does look rather hot on you. Suddenly you feel something seem to break under your hands, and look down to see the Jackal totem Nermine gave you seems to have cracked and broken, its purpose fulfilled.";
 		now tailname of player is "jackalboy";
 		now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
 		increase dexterity of player by 3;
 		say "your dexterity has increased by 3!";
 		now jackalboytf is 1;
-		stop the action;
-	if jackalboytf is 1:
+	otherwise if jackalboytf is 1:
 		say "Taking hold of the next Jackal statue, you nervously rub it between your hands several times, wondering what will happen this time. The totem seems to grow warm before crumbling under your hands, and your hands seem to start to tingle strangely as the pieces of the statue fall to the ground. looking down at your hands, you blink as the dark black color of the totem seems to be rubbing off on you, your hands seeming to be shiny and black now as well. You quickly realize as the blackness spreads down your arms and starts to cover your body completely, that it is actually shiny black fur, sleek dark jackal fur just like Nermine's. For some reason though, the idea of having soft and sexy black fur just like the nice and wonderful shopkeeper of that strange shop seems to make you feel happier and more content, and also perhaps just a bit horny as well. Somehow you are sure your nice new pelt of soft fur will appeal to more then just the shopkeeper as well, and find yourself looking forward to showing off your new beautiful looks.";
 		now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 		now skinname  of player is "jackalboy";
 		increase charisma of player by 4;
 		say "your charisma has increased by 4!";
 		now jackalboytf is 2;
-		stop the action;
-	if jackalboytf is 2:
+	otherwise if jackalboytf is 2:
 		Say "Taking out the shiny black jackal statue, you get the impression for a second that this particular jackal totem was grinning at you, but when you take a closer look you see that it looks just like the other statues. You rub the statue eagerly, looking forward to whatever powerful change this statue will bring out in you. You are sure you see this totem grin and wink at you, before like the others it too cracks and crumbles in your hands, but you are distracted from this fact by the tingling spreading across your face. You reach your hands up to feel your face, even as it seems to crack and shift, your sight clouding over as your eyes seem to change, and your can barely see your new black furred muzzle pulling forward into a Jackals grin. You run your hands along the sides of your new Jackal like face, even as the bones settle and it finishes forming, new scents exploding through your brain, as your nose finishes shifting into place atop your narrow canine muzzle.  You blink several times, your eyes finally clearing as you stare out at the world through new sharper eyes, and the sounds of the world around you intensify as your new black canine ears finish shifting to stand straight up on your changed head.  You can feel a feral grin stretching your new muzzle wide as you think of how happy Nermine will be to see your newest change, your mind filled with thoughts of Nermine and the need to please the wonderful jackal woman. As you take in the world through your new heightened senses, you find yourself hoping she will be pleased enough with you to help you on your way to becoming even more the happy little Jackal you just know you need to be."; 
 		now facename of player is "jackalboy";
 		now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[apostrophe]t help but enjoy how much your mistress seems to like your new jackal[apostrophe]s";
 		increase perception of player by 3;
 		say "your perception has increased by 3!";
 		now jackalboytf is 3;
-		stop the action;
-	if jackalboytf is 3:
+	otherwise if jackalboytf is 3:
 		say "Pulling this small jackal totem out, you find yourself grinning along with the statue as you realize that surely this statue will be the last one you will need.  Rubbing the totem eagerly you feel a surge of warmth as it seems to melt under your hands, not crumbling like the others but seeming to almost melt into your body and become part of you. You don[apostrophe] have much time to think about this however, as your entire body starts to tingle and shift this time, your muscles seeming to ripple and smooth out, to give you a softer and more delicate appearance. You can feel the sharp claws of a jackal pushing out of your hands and feet, even as your body begins to take on a slightly more animalistic shape. Your heels lifting slightly off the ground as your rear legs crack and shift to a more stable stance as your feet seem to spread apart on new jackal paws. [line break]";
 		say "Looking down at yourself as the tingling begins to fade, you realize that you seem to be rather lean and skinny now, and perhaps a little shorter, your body obviously more built for grace and speed instead of combat.  The sight of your new form makes you smile happily though, as you realize that this new form is just what you needed for serving your mistress, its silky soft skin, and sensitive body obviously perfect for pleasuring and serving the larger and stronger jackal woman.   Thinking about Nermine you realize you can hardly wait to get back and show her your new perfect form, and thank her for all her help in helping you become the submissive little jackaltoy she wanted you to be. Wasting no time, you quickly run towards the shop, unable to wait as thoughts of the pretty and dominant shopkeeper run through your head, maybe if you are lucky she will even have another job or two for you to do, and if you are really lucky maybe she will even play with you some! You find yourself panting happily at the new thoughts, even as you run through the city on your swifter and surer legs.  ";
 		now bodyname of player is "jackalboy";
@@ -821,30 +841,33 @@ To say jackaltotemmagic:
 
 
 An everyturn rule:
-	if jackalboytf >= 1:
-		if tailname of player is not "jackalboy":
-			say "Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body, as your jackal like tail reforms.  Its sleek dark presence behind you proving that its form is stronger then your more recent infection.";
-			now tailname of player is "jackalboy";
-			now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
-	if jackalboytf >= 2:
-		if skinname of player is not "jackalboy":
-			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
-			now skinname of player is "jackalboy";
-			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
-	if jackalboytf >= 3:
-		if facename of player is not "jackalboy":
-			say "Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem.  You can feel the pressure inside your head building, until finally something inside your head seems to snap, and you let out a loud low moan of pleasure as your face seems to snap and reshape itself.  Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
-			Now facename of player is "jackalboy";
-			now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[apostrophe]t help but enjoy how much your mistress seems to like your new jackal's head";
-	if jackalboytf >= 4:
-		if bodyname of player is not "jackalboy":
-			say "Your body seems to twist and warp, making you convulse as your body fights off the intrusive new infection, soon you can see your body slimming back down into the sleek soft lines of the jackal boy your mistress likes so much.  The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you would[apostrophe]t want to make your mistress unhappy by being anything less than the lovely submissive jackal she helped mold you into.";
-			now bodyname of player is "jackalboy";
-			now body of player is "slim and sleek, only lightly muscled with slightly digigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal toy like yourself";
-			attributeinfect "jackalboy";
-		if cockname of player is not "jackalboy":
-			now cockname of player is "jackalboy";
-			now cock of player is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
+	if jackalboytf is 5:
+		let t be 0;		[do nothing statement]
+	otherwise:
+		if jackalboytf >= 1:
+			if tailname of player is not "jackalboy":
+				say "Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body, as your jackal like tail reforms.  Its sleek dark presence behind you proving that its form is stronger then your more recent infection.";
+				now tailname of player is "jackalboy";
+				now tail of player is "You have a sleek black furred jackals tail attached to your rear, it seems to sway happily over your tight sexy ass with every step you take.";
+		if jackalboytf >= 2:
+			if skinname of player is not "jackalboy":
+				say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
+				now skinname of player is "jackalboy";
+				now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
+		if jackalboytf >= 3:
+			if facename of player is not "jackalboy":
+				say "Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem.  You can feel the pressure inside your head building, until finally something inside your head seems to snap, and you let out a loud low moan of pleasure as your face seems to snap and reshape itself.  Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
+				Now facename of player is "jackalboy";
+				now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can[apostrophe]t help but enjoy how much your mistress seems to like your new jackal's head";
+		if jackalboytf >= 4:
+			if bodyname of player is not "jackalboy":
+				say "Your body seems to twist and warp, making you convulse as your body fights off the intrusive new infection, soon you can see your body slimming back down into the sleek soft lines of the jackal boy your mistress likes so much.  The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you would[apostrophe]t want to make your mistress unhappy by being anything less than the lovely submissive jackal she helped mold you into.";
+				now bodyname of player is "jackalboy";
+				now body of player is "slim and sleek, only lightly muscled with slightly digigrade legs and jackal like feet, your slim body is the perfect type of body for a submissive little jackal toy like yourself";
+				attributeinfect "jackalboy";
+			if cockname of player is not "jackalboy":
+				now cockname of player is "jackalboy";
+				now cock of player is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]";
 
 
 Section 5 Nermine quests
@@ -872,11 +895,14 @@ Instead of resolving a Bacchus wine:
 		say "Wandering through the twisting corridors of the museum, you come across a small cask of some sort placed up against the wall. Investigating closer, you see that the cask seems to be full of some dark red liquid, and a tantalizing fruity smell seems to fill the air around the liquid making your mouth water.  Looking around to see who left this cask here, you spot a small flagon lying up against the wall, it would be perfect for taking a taste of the liquid... Do you indulge?";
 		if player consents:
 			say "The hefty scent of the strange drink filling your nostrils, you dip the nearby flagons into the cask, the rich red liquid smelling delightful as you bring the flagon up to drink. The taste explodes across your tongue in an explosion of sweet tartness, and burns pleasantly on the way down as it fills your head with pleasure and your mind with images of dancing nymphs.  You realize this is some of the pure wine the Satyrs dilute for their drink, but you can[apostrophe]t bring yourself to stop drinking the amazing dark wine. You guzzle the rest of the delicious liquid gold as fast as possible, and stare blearily at your now empty cup, spotting the cask nearby, you move to get a refill, only to hear several satyr loudly carousing as they head this way.  Realizing you are poaching their booze, you quickly drop the flagon and stagger back out into the museum halls.  Eventually your head clears up enough and you manage to find your way back to the museum foyer, feeling much more like partying and drinking wine then you did earlier.";
+			decrease thirst of player by 10;
+			if thirst of player < 0, now thirst of player is 0;
+			decrease humanity of player by 5;
 			infect "Satyr";
 			infect "Satyr";
 		otherwise:
 			say "Deciding it is best not to mess with strange casks and other such things in these dark halls, you continue on your way leaving the drink untouched.";
-	if winefound is 1:
+	otherwise if winefound is 1:
 		say "Traveling down the museum halls, you spot several Satyrs bemoaning their current lack of booze, remembering Nermine[apostrophe]s request for some of the Satyr wine straight from the source, you attempt to stealthily follow the nimble goat men through the halls.";
 		let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -885,16 +911,17 @@ Instead of resolving a Bacchus wine:
 		if diceroll is greater than 15:
 			say "Carefully moving through the halls, you have to duck down and hide several times as other creatures pass, but you eventually manage to follow them to a small alcove where they seem to have hidden several dark casks.  The Satyr quickly refill their flagons and flasks and leave, and you take this opportunity to sneak into the alcove and look around, there are several flagons scattered around on the floor, and a few dark casks of wine in the alcove, one cask seems to be even darker and richer smelling then the rest though. Carefully you pry that cask open, and dip the vial into the liquid, pulling it out and stoppering it up when it is completely full.  Staring at the vial, you realize you now have the item Nermine asked for, and a surge of pleasure at the thought of being such a good little dog for your mistress shoots through you and makes your tail wag softly.  After a minute you shake yourself, and realize you should probably get out of here before any of the goat men come back, and quickly head back into the twisting halls of the museum, hoping you don[apostrophe]t encounter too much trouble finding your way back...";	
 			now winefound is 2;
-			stop the action;
 		otherwise:
 			say "Sadly your clumsy feet are not up to following the Nimble beasts quietly, and while the rest continue on, two of them turn back to see what the noise was.";
 			challenge "Satyr";
 			challenge "Satyr";
-			stop the action;
-	if winefound is 2:
+	otherwise if winefound is 2:
 		say "Wandering through the museum halls, you return once more to the casks full of rich dark satyr wine, you realize that while you don[apostrophe]t need any more wine for Nermine, you could still take a drink or two yourself, do you indulge?";
 		if player consents:
 			say "Smelling the hefty scent wafting off the wine, you decide that a flagon or two of wine can[apostrophe]t hurt anything, and dip one of the nearby flagons into the cask, the rich red liquid smelling delightful as you bring the flagon up to drink. The taste of the wine explodes across your tongue, filling your head with pleasure and your mind with images of dancing nymphs.  You guzzle the rest of the delicious liquid gold as fast as possible, and stare blearily at your now empty cup, spotting the cask nearby, you move to get a refill, only to hear several satyr loudly carousing as they head this way.  Realizing you are poaching their booze, you quickly drop the flagon and stagger back out into the museum halls.  Eventually your head clears up enough and you manage to find your way back to the museum foyer, feeling much more like partying and drinking wine then you did earlier.";
+			decrease thirst of player by 10;
+			if thirst of player < 0, now thirst of player is 0;
+			decrease humanity of player by 5;
 			infect "Satyr";
 			infect "Satyr";
 		otherwise:
@@ -973,9 +1000,8 @@ Instead of resolving a Hyena Challenging:
 	if hyenatrailing is 4:
 		 if matriarchdefeated is greater than 0 and matriarchowned is 0:
 			say "Moving through the city with purpose, you quickly head to the hyena gang hideout you know so well from your earlier failed attempts to challenge the matriarch. Approaching the gang hideout, you find several of the gang members talking about their most recent score from the museum, realizing they must know what happened to the items Nermine wanted, you try to screw up your courage as you go over to demand the more dominant hyenas tell you what they know. Recognizing you as their matriarchs submissive little pet hyena, the other gang members break into laughter at your meek attempt to challenge them, their voices making you remember your time underneath the matriarch, and causing you to quickly hunch down submissively without thinking. Seeing your reaction, the gang members seem to be even more amused, as they call out lewd suggestions even as you slowly slink away, realizing that without the ability to be taken seriously by your fellow gang members, this part of your quest is now definitely over, as is any hope you might have had of ever being anything other then a submissive little slut for the gang of laughing hyenas...";
-			stop the action;
 			now Hyena Challenging is resolved;
-		if matriarchowned is 1:
+		otherwise if matriarchowned is 1:
 			say "Following the trail of the stolen jewelry, you approach your gangs hideout, wondering just what your little hyenas have been up too, you knew the were exploring the sewers for ways out of town, but robbing the museum?.  Throwing the door to the warehouse open, you don[apostrophe]t have time to ask any questions, as you find that your subjects saw you coming, and are all gathered around and grinning as your Gina presents with a large wrapped package. Distracted from your purpose, you find yourself grinning as well as you eagerly open your present, a hyena like laugh of pleasure slipping out as you see that they are presenting you with a nice new set of jewelry from the museum, as a gift to their matriarch.  Grinning you slip all but the items that Nermine asked for on, before dragging Gina off to thank her for her thoughtfulness properly, while the rest of the hideout laughs and parties behind you.  Eventually after several hours, while your pet admires your new soft black fur, you gather up your new trophies, wondering if you really want to give even a small part of your new pretties to the strange jackal in the shop, they do make you feel so much better looking after all, maybe you should just Talk to Nermine about quitting while you are ahead....";
 			now nerminetalk is 3;
 			now rarequesting is 9;
@@ -987,7 +1013,7 @@ Instead of resolving a Hyena Challenging:
 			Challenge "Herm Hyena";
 			Challenge "Herm Hyena";
 			if lost is 0:
-				say "After defeating the hyenas, they are more then willing to admit your dominance, and with a pair of matching grins easily agree to lead you to their hideout.  Given how cheerful the tricky beasts are about the whole situation, you suspect you are walking right into a trap, but since it is probably the only way you will find out what happened to the items Nermine wants, you have no choice but to follow along.  Eventually after quite a bit of walking, you find yourself outside one of the large warehouses in the area, and looking around you realize you could have been here much quicker if they had brought you directly here.  You realize with a sigh that all the extra walking was just buying time so that a large number of hyenas could gather around the area, all of them grinning at chuckling at you as the two hyenas you beat earlier quickly duck away from you to join the crowd.  Sighing as you look around, you realize there is no way you could beat all of these hyenas in combat, so you try calling out and telling them you are only looking for 3 very specific pieces of jewelry from the museum, and hoping they are in the mood to listen. [line break]";
+				say "After defeating the hyenas, they are more then willing to admit your dominance, and with a pair of matching grins easily agree to lead you to their hideout.  Given how cheerful the tricky beasts are about the whole situation, you suspect you are walking right into a trap, but since it is probably the only way you will find out what happened to the items Nermine wants, you have no choice but to follow along.  Eventually after quite a bit of walking, you find yourself outside one of the large warehouses in the area, and looking around you realize you could have been here much quicker if they had brought you directly here.  You realize with a sigh that all the extra walking was just buying time so that a large number of hyenas could gather around the area, all of them grinning at chuckling at you as the two hyenas you beat earlier quickly duck away from you to join the crowd.  Sighing as you look around, you realize there is no way you could beat all of these hyenas in combat, so you try calling out and telling them you are only looking for 3 very specific pieces of jewelry from the museum, and hoping they are in the mood to listen.";
 				say "The air is filled with the laughter of the hyenas at your bold questioning, the noise making you feel somewhat less human as it echoes throughout the area, the laughter quiets suddenly as if someone had flicked a switch. And you blink as a much larger hyena adorned with many loops of jewelry and necklaces steps through the crowd to stand in front of you sizing you up, looking closer at her adornments, you realize that the hyena is wearing the items you came here for! The large hyena grins as she sees you have recognized her jewelery, and in a mocking tone of voice introduces herself as the matriarch of the gang, and that while the items you want are only the least part of her treasure, they are still hers. You sigh and almost turn away, before she lifts an eyebrow and continues, and you listen eagerly as she explains that since you have come this far, and she has no particular attachment to the items. That if you can put on a good enough show against her guards, she will let you challenge her to dominance combat for the items. Looking around at the array of grins showing on the many faces in the area, you realize that you have no choice but to agree to her terms, and prepare yourself for a grueling series of fights as the gang closes in around you forming an impromptu arena with you in the center."; 
 				Challenge "Herm Hyena";
 				Challenge "Herm Hyena";
@@ -1000,12 +1026,10 @@ Instead of resolving a Hyena Challenging:
 							now matriarchowned is 0;
 							now rarequesting is 9;
 							now Hyena Challenging is resolved;
-							stop the action;
 						otherwise:
 							say "After several hours of being passed around by the numerous gang members, all eager to get a shot at the person who thought they could challenge the matriarch, you are left alone to recover while the orgy continues without you, eventually you manage to recover enough from the matriarchs dominant use of your all too willing body, and slowly drag yourself away from the gangs territory.  As you stagger down the streets of the city, the cum of many different hyenas matting your thick black fur, you groan as you realize that you certainly don[apostrophe]t have a chance of recovering the items Nermine wants from the hyena stronghold now... even as the part of you that the hyena matriarch brought out is wondering if maybe you shouldn[apostrophe]t just give up on your silly quest and go back and become a nice little submissive hyena for the much more powerful gang of hyenas...";
 							now matriarchdefeated is 0;
 							now Hyena Challenging is resolved;
-							stop the action;
 					otherwise:
 						say "Looking down at the matriarchs defeated guards, you are surprised to hear the crowd of hyenas cheer your victory as loudly as they cheered for their own kind, their praise making you feel slightly more dominant as straighten up and stretch from your hard won victory.  After several minutes of cheering, and jesting, the crowd grows silent again in anticipation as the matriarch herself steps forward with a grin, and looking around you realize that win or lose, this particular fight is definitely a unique opportunity, if you lose now, you are pretty sure you won[apostrophe]t have another chance at getting the items back for Nermine, and so you resolve to fight your hardest to prove your dominance over the powerful matriarch. You shift your stance as you prepare for combat, only to jump back in shock as a black knotted dildo bounces off your head. As the crowd around you explodes once more into laughter, you pick up the strange thing and stare at it, realizing it is come kind of strap on. Glancing up at the matriarch, where she grins at you as she strokes her own thick knotted cock, you blush as you realize exactly what kind of dominance battle is in front of you, even as you slip the item on. You gasp as it grows warm and seems to become almost real as you settle it into place, your body growing even hornier as fondle the realistic toy, after a minute you hear the matriarch chuckle at your distraction, and shaking your head, you brace yourself and prepare to fight In however pornographic a way you need to.";
 						Challenge "Hyena matriarch";
@@ -1014,15 +1038,12 @@ Instead of resolving a Hyena Challenging:
 							now matriarchowned is 0;
 							now rarequesting is 9;
 							now Hyena Challenging is resolved;
-							stop the action;
 						otherwise:
 							say "After several hours of being passed around by the numerous gang members, you lose track of time as new cocks probe your at your body all eager to get a shot at the person who thought they could challenge the matriarch, at some point you lose the strapon they gave you, as one of the hyenas rips it off you making you cry out, while the rest laugh at you, since now they know why you came to the fight so ill prepared with a cock of your own. Obviously you are such a submissive slut you don[apostrophe]t need one after all, finally you are left alone to recover while the orgy continues without you, and eventually you manage to recover enough from the matriarchs dominant use of your all too willing body, and slowly drag yourself away from the gangs territory.  As you stagger down the streets of the city, the cum of many different hyenas matting your thick black fur, you groan as you realize that you certainly don[apostrophe]t have a chance of recovering the items Nermine wants from the hyena stronghold now... even as the part of you that the hyena matriarch brought out is wondering if maybe you shouldn[apostrophe]t just give up on your silly quest and go back and become a nice little submissive hyena for the much more powerful gang of hyenas...";
 							now matriarchdefeated is 0;
 							now Hyena Challenging is resolved;
-							stop the action;
 				otherwise:
 					say "Defeated and humiliated in front of the laughing gang of hyenas, you are forced to slink away in disgrace from the arena, even as an orgy and several more impromptu challenge matches break out behind you.  You are almost safely away when you hear the Hyena matriarch calling out teasingly behind you, inviting you to come back and try again whenever you feel up to it. Her challenge makes you blush with shame, as you resolve to do just that.";
-					stop the action;
 			otherwise:
 				say "Defeated by the hyenas, you have no choice but to slink back off down the streets of the city, wondering how you could lose to just a couple hyenas after having come this far successfully... and resolving to try again as soon as you have recovered.";			
 	otherwise:
@@ -1039,21 +1060,18 @@ statuequest is a number that varies;
 Instead of resolving a Anubis statue:
 	if statuequest is 0:
 		say "Wandering through the twisting corridors of the museum, you find yourself face to face with a large statue of a jackal man, the statue seems to be made out of some strange black stone, and you almost get the feeling that it is looking straight at you. You wonder if this strange statue is of the god called Anubis that all the jackal priestesses seem to be so eager to worship...";
-		stop the action;
-	if statuequest is 1:
+	otherwise if statuequest is 1:
 		say "Traveling down the museum halls, once again, you find your feet leading you through the halls until you reach an empty pedestal in the egyptian area. The situation seems strange, and you find yourself looking around carefully in case it is some sort of trap. You almost don[apostrophe]t spot the strange jackal headed man standing over in the shadows watching you, his eyes gleaming with amusement. 'Ah there you are, I have been keeping an eye on you, you know,' The strange man says as he walks up to you with a grin on his muzzle. 'It[apostrophe]s been fun watching you turn the tables on that little jackaless, but at this point she isn[apostrophe]t about to let you get any stronger or get any more power over her now is she?' The jackal man says with amusement as you are forced to agree with his statement. 'Well I find the whole situation amusing enough I might be willing to help you out instead, what do you say?' He asks you with an even wider grin on his canine face.";
 		if player consents:
 			say "'Excellent! I knew I could count on you to help me out,' The jackal headed man says as he rubs his claw tipped hands together in amusement. 'First things first though, my payment... In order to secure my help I DO need you to do something for me first, well for both of us really.' He says as you listen attentively, 'Go to the zoo here in town, and bring me back these particular pheromone samples they have stored there.' The strange man says as he produces a small list and hands it to you, 'Oh and If you happen to kill any of those annoying cats while your at it, I wouldn[apostrophe]t mind too much either.' The strange man says with a grin as he disappears into the dark museum hallways.";
 			now statuequest is 0;	
 			now anubisrequest is 1;
-			stop the action;
 		otherwise:
 			say "'That[apostrophe]s too bad,' The strange man says with a sad look on his face, 'I was so looking forward to watching you play with that lovely little jackaless some more.' He says with a teasing look on his jackal muzzle as he turns and begins to walk away, 'If you change your mind, you know where to find me.' He calls back over his shoulder as he vanishes into the museum.";
-			stop the action;
-	if statuequest is 2:
+	otherwise if statuequest is 2:
 		say "Returning to the museum with the samples the strange man sent you to retrieve, you quickly retrace your steps to the empty pedestal, and are unsurprised to find the Jackal like man leaning up against it with an amused grin. 'Found them I see?' He says with a smirk as he takes them from you eagerly, 'Trust me, these little beauties will make it more then worth your while,' The Jackalman says as he begins to carefully mix the pheromones together, the scent of some strange sort of musk filling your nose as he does so. 'Ah there we go!' He says happily as he takes a whiff of the completed project, seeming satisfied as he pulls out a familiar looking ankh with a jackal embossed on it. The man gives you a wink, as he slowly pours the mixture over the ankh, and the metal seems to almost absorb the liquid into itself. 'There we go now, once you use this little beauty, that little shopkeep won[apostrophe]t be able to keep her hands off of you. The jackal musk and enhanced pheromone mix should make sure of that.' The beastman says with a grin as he hands you the strangely scented ankh. 'I told you this little side trip of yours would be beneficial to both of us now didn[apostrophe]t I? I look forward to seeing how it works out.' he says in a voice filled with amusement as he turns and wanders off into the dark museum halls again.";
 		now statuequest is 0;
-		add "Strange ankh" to invent of player;
+		increase carried of Strange ankh by 1;
 
 
 
@@ -1067,8 +1085,7 @@ when play begins:
 Instead of resolving a Beastial Pheromones:
 	if anubisrequest is 0:
 		say "Traveling through the zoo, you come across one of the medical labs used for treatment of the animals, and decide to look inside.  Looking around you realize this is actually one of the labs where they store and keep track of sperm and pheromones collected from the animals in several large coolers.  While the coolers still seem to be functioning, probably due to some sort of emergency power supply, many of the vials are strewn across the area and smashed open, showing clearly you aren[apostrophe]t the first person to search the area.  The broken vials of scent seem to make your head swim with arousal as you look around the room, and you realize that some of the fluid in here is almost certainly from some of those infected beasts.  Looking around quickly in case the arousing smells have attracted anything to the area, you quickly retreat before you end up being affected by the powerful scent and transforming into something different.";
-		stop the action;
-	if anubisrequest is 1:
+	otherwise if anubisrequest is 1:
 		say "Hunting through the zoo, you follow the signs and with some luck manage to find the medical lab that is supposed to house the pheromones and chemicals the jackal like man sent you to fetch. Unfortunately you don[apostrophe]t seem to be the only one who has found the place, as a couple of felines are basking outside in the powerful scent emanating from within.";
 		challenge "cheetah woman";
 		challenge "cheetah woman";
@@ -1085,10 +1102,8 @@ Instead of resolving a Beastial Pheromones:
 			otherwise:
 				say "You search the area as fast as you can, rummaging through the different vials even as your mind grows more and more clouded with lust.  The musk of many different species fills your brain as your jackal nose inhales them happily, causing you to be more and more aroused and focused on touching and stroking your sensuous fur instead of searching the area as time goes on. Eventually you are so aroused you barely catch yourself as you find yourself almost downing a vial or two of obviously recently collected lion seed, your body so sexually needy that you can think of little else. Putting the vials down you stagger back out into the zoo, running through the overgrown pathways in a vain attempt to clear your head and put some distance between you and the tempting musk filled room, sure that if you stayed there any longer you would be sacrificing the last few remnants of your humanity. Once your head has cleared slightly, you realize that if you want to find the items the Jackal man asked for, you will need to return, hopefully being more careful this time though...";
 				decrease humanity of player by 15;
-				stop the action;
 		otherwise:
 			say "Driven back by the sleek powerful felines, you are forced to retrace your steps down the zoo pathways, needing to rest and relax before you can try again.... if you try again anyways.";
-			stop the action;
 
 
 
@@ -1116,7 +1131,7 @@ Instead of resolving a Twisted fruit grove:
 					say "Beating back the plant creatures, you quickly begin to hack and cut away at the vines encasing the trapped felinoid, the beast seeming to heart as the vines surrounding it are cut away, as it lashes out and struggles desperately to get free.  Finally managing to cut the beast loose, the creature staggers and seems somewhat disoriented as it takes in great gulps of fresh air, its sides heaving mightily. Realizing that the grove is on the move again apparently angered at being robbed of its trapped prey, you quickly push and prod the felinoid until it gets the idea, the two of you staggering down the path you hacked on the way in,  your combined might quickly making short work of the few plants that have managed to drag themselves back over to block the way.  Once you are far enough outside the glade, that the plants can[apostrophe]t follow, you practically collapse to the ground, the massive amount of effort it took to fight off so many of the plants, as well as cut the large cat free catching up to you all at once.  Lying there on the ground panting helplessly, you blink as suddenly the large felinoids face is right above yours, and you freeze as you realize that you are practically helpless in this position with the large beast standing above you. The beast looks down at you with his strangely intelligent eyes for a minute, lowering his muzzle down to sniff your face several times, before sticking his tongue out and giving you a long lick on your cheek. You blink as the beast backs off, sitting up as the male cat slowly weaves his way into out into the park, obviously still unsteady on his feet.  He shoots you one last grateful look over his shoulder, before vanishing into the park.  You wonder just what that was all about for a minute, did the creature actually appreciate the risk you took for his sake?  Shaking your head for a minute, you realize the felinoid probably has the right idea about leaving anyways, as you can[apostrophe]t stay here resting much longer.  Hauling yourself back to your feet, you quickly make your way back towards the entrance of the park, more then happy to be quit of these vine shrouded trees.";
 					now Felinoidrescued is 2;
 					now rarequesting is 2;
-					now  Twisted fruit grove is resolved;
+					now Twisted fruit grove is resolved;
 					stop the action;
 				otherwise:
 					say "You moan as the vines wrap around you as tightly as they have the newly trapped felinoid, his fight having been lost sometime during your own harsh battle. The vines cock like flowers invading your every orifice as they begin to cocoon your helpless body with their green leafy tendrils, anchoring you in place, unable to even lift a finger to escape.  You can feel the scent of the area invading your mind as your body continues to become more and plant like, your mind starting to fade as you realize that before much longer you will be more plant then animal, rooted here in the glade like several of the other strange plants. You struggle slightly in your viney bonds, but there is no one left to save you this time.  Your struggles slowly fade, as your mind fills with the strangely relaxing scent of the glade, and your body fills with the wonderful pleasure of the vines massaging your body. Soon you can[apostrophe]t even remember why you would want to struggle, or even why you would want to do anything other then relax here in your nice safe cocoon, your mind slowly fading completely as your new roots sink into the soil and your own new vines begin to entwine with those around you.";
@@ -1192,6 +1207,9 @@ instead of conversing the rare counter:
 	if jackalboytf is greater than 0:
 		say "'Ah Nermine sees her little helper has noticed her rare item counter!' The jackal shopkeeper beams happily at your interest, 'Sadly Nermine isn[apostrophe]t needing your help with anything in the counter right now, she has other things waiting for you to help her with though...' Nermine says with a teasing smile on her dark muzzle.";
 		stop the action;
+	if wrcursestatus >= 7 and wrcursestatus < 100:
+		say "'Nermine is asking you and your sharp claws and big tail to be moving away from her collection of rare items.  Many of them are not to be liking being scratched or bumped.'";
+		stop the action;
 	if rarequesting is 13:
 		say "'Ah you wish to talk about the rare items again?' Nermine says as she saunters over, shaking her naked hips a little more then necessary as she leans forward on the glass countertop, her naked breasts soft and perky as she leans forward to give you a good look. 'Nermine can think of much better things for her handsome master to talk about, or even do with his lovely little pet...' the lust filled jackal woman says as she licks her lips eagerly, her obvious need making your muzzle pull back in a grin as you think of all the fun things you can do with her now.";
 		stop the action;
@@ -1215,7 +1233,7 @@ instead of conversing the rare counter:
 	if rarequesting is 9:
 		say "'Oh my, you found them!' The jackal like shopkeep says with surprise as you set the items out on the counter proudly, 'Nermine had given up hope of every owning such lovely pieces of work!' She says happily as she opens up the rare item case and begins to position the new pieces of jewelry prominently inside it. You feel a grin tugging at your face at her obvious surprise and joy, feeling rather proud of all the work you put into to acquire the new items that now grace the glass case with their presence.  Finally satisfied with her new centerpieces positioning, Nermine turns to you and another large smile crosses her muzzle, the silver lines on her face making her look increasingly sexy as she leans over the counter and gestures you closer. Leaning forward, you find the jackalesses strong hand rubbing through your chest fur, before moving up to stroke along the sides of your neck and face, the sensation of her soft claws running through your fur making you shiver in anticipation. Suddenly Nermine grips the back of your neck with her hand as she pulls you into a deep kiss, her muzzle over your mouth as her tongue plays with your teasingly.  You need little encouragement at this point to respond eagerly, your own hands rubbing her shoulders, even as you savor the taste of the aroused jackal filling your mouth.  Eventually she breaks the kiss, and you both end up panting with arousal as you stare at each other eagerly.  After a moment, Nermine grins again before reaching under the counter, 'Nermine  thinks she still needs to pay you for all your help, and she has one last ankh to share with you now,' The shopkeeper says as she places another of those golden ankhs into your hands, 'Nermine also thinks she has other promise to fulfill as well, though that can wait until after her new friend has used ankh to look even more handsome,' The jackal woman says as she runs her tongue along the sides of her muzzle, licking her lips eagerly as she stares at you in anticipation.";
 		now rarequesting is 10;
-		add "Strange ankh" to invent of player;
+		increase carried of Strange ankh by 1;
 		stop the action;
 	if rarequesting is 8:
 		say "'You haven[apostrophe]t found the Jewelry yet?' The jackal woman says with a sad look on her silver and black muzzle,  'Nermine was afraid it might be too much to ask of you, but you looked so handsome and capable she got hopeful.' She sighs sadly, as she turns back to the regular counter. 'Maybe you should try asking around museum if searching halls doesn[apostrophe]t help, though Nermine isn[apostrophe]t sure there would be anyone there left to ask....' Nermine says as she goes back to what she was doing, her sad demeanor more then enough to rekindle your resolve to find the items the shopkeeper wants.";
@@ -1231,7 +1249,7 @@ instead of conversing the rare counter:
 		if treasurefound is 1:
 			say "'Ah you found them!' Nermine says with a large smile on her muzzle as she eagerly takes the small handful of coins you found from you, leaving you feeling vaguely sad as those soft golden circles disappear behind the counter. When you point out that that was all there was there, she blinks at you in surprise, 'Only so few coins left? Well it is lucky for us that you managed to find them then!' The jackal woman says with a small smile, before pulling out the small golden ankh she promised you earlier and handing it to you, 'Nermine thinks you have definitely earned this then, though she also thinks there might still be a few coins left out there if you were to go and look again.' The jackal woman says with a grin, as you weigh the warm golden ankh in your hands and wonder whether it was worth the handful of treasure you just traded for it...";
 			now rarequesting is 6;
-			add "Strange ankh" to invent of player;
+			increase carried of Strange ankh by 1;
 			now treasurefound is 0;
 			stop the action;
 		otherwise:
@@ -1247,7 +1265,7 @@ instead of conversing the rare counter:
 		stop the action;
 	if rarequesting is 2:
 		say "'Ah Nermine thanks you gratefully!' The jackal woman says with bright grin on her silver painted muzzle as she takes the basket full of strange fruit from you. 'These are very rare fruit indeed, and will certainly fetch a very high price to the right buyer!' She says brightly as she sets the basket down on the counter next to her, before reaching underneath it to produce the shiny golden ankh she showed you earlier. 'And speaking of price, here is the one we agreed on as well,' Nermine says as she hands you the soft golden ankh, its weight feeling surprisingly good in your hands as you hold it up to the candlelight. 'That is more then just a golden trinket,' The jackal woman says teasingly as she gathers up the basket and heads towards the back room, 'It is a very special and powerful ankh indeed, although some might value the gold more, if you want to keep helping Nermine, you will need its power instead.' She says as she vanishes through the door, leaving you staring down at the strange ankh with curiosity."; 
-		add "Strange ankh" to invent of player;
+		increase carried of Strange ankh by 1;
 		now rarequesting is 3;
 		stop the action;
 	if rarequesting is 1:
@@ -1310,8 +1328,14 @@ instead of sniffing Strange ankh:
 To say jackalankhmagic:
 	if Nightmaretf is greater than 0:
 		say "You rub the small golden ankh curiously, only to feel a strange burning sensation in your body as if two great forces were warring within you. You let out a short whinny of surprise as the ankh seems to heat up and burn your hand, and you drop the item instinctively. Feeling almost immediately  better, you look down at the ankh, only to stare in some surprise at the small puddle of molten gold lying there on the floor.... Somehow you don[apostrophe]t think that was what was supposed to happen.";
+		delete Strange ankh;
 		now jackalmantf is 5;
 		now Nerminetalk is 1;
+		stop the action;
+	if wrcursestatus >= 7 and wrcursestatus < 100:
+		say "You rub the small, golden ankh curiously and hiss in pain as it starts to heat up, scalding your hand.  You toss it aside.  Something about you is incompatible with it.";
+		now Nerminetalk is 1;
+		delete Strange ankh;
 		stop the action;
 	if jackalmantf is 0:
 		say "You smile as you rub the small golden ankh between your hands, the warm metal feeling nice and almost soft as you rub at it. Suddenly the small ankh almost seems to melt into your hands, leaving a soft tingling dusting of gold where the small trinket was before. As you stare at your palms, you feel a strange shifting sensation in your body, seeming to center on your rear.  Glancing behind you you surprised to see your ass starting to stretch and change, your rear flattening out as a long predatory black jackal like tail forms behind you.  You feel a strange almost pleasant stretching sensation as your new tail grows until its tip is hanging just below your knees, staring at your new tail you find yourself experimentally moving it from side to side a few times, and watch as your new limb responds with surprising dexterity. Taking a few steps you are surprised to find your new tail seems to help your balance greatly, and you have to admit, the nice Jackal tail does look rather hot and sexy on you..";
@@ -1365,30 +1389,33 @@ To say jackalankhmagic:
 
 
 An everyturn rule:
-	if jackalmantf >= 1:
-		if tailname of player is not "jackalman":
-			say "Your ass tingles as it shifts and changes while you watch, a pleasant sensation stealing over you as the power of the ankh you used returns your body to a proper form, your jackal-like tail reforming behind you.  Its sleek dark presence behind you proving that its power is stronger then your more recent infection.";
-			now tailname of player is "jackalman";
-			now tail of player is "You have a long sleek jackal[apostrophe]s tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
-	if jackalmantf >= 2:
-		if skinname of player is not "jackalman":
-			say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
-			now skinname of player is "jackalman";
-			now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
-	if jackalmantf >= 3:
-		if facename of player is not "jackalman":
-			say "You feel a strange discontent building in your head, as your face seems to burn and flex, its external form not matching that of your internal jackal, causing you to snap and snarl even as the bones in you face begin to shift and stretch again, and you let out a loud howl of triumphant pleasure as your face reshape itself back into a proper jackals visage, your grin once more stretching your muzzle as your gold dusted black fur settles in once more over your handsome jackals countenance.";
-			Now facename of player is "jackalman";
-			now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seeming both predatory, and strangely sexy at the same time";
-	if jackalmantf >= 4:
-		if bodyname of player is not "jackalman":
-			say "Your body seems to twist and warp, your muscles heating up again as your body fights the outside infection. Soon enough you can feel your form twisting and warping back into the proper and powerful shape of a predatory jackal.";
-			now bodyname of player is "jackalman";
-			now body of player is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself";
-			attributeinfect "jackalman";
-		if cockname of player is not "jackalman":
-			now cockname of player is "jackalman";
-			now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
+	if jackalmantf is 5:
+		let t be 0;
+	otherwise:
+		if jackalmantf >= 1:
+			if tailname of player is not "jackalman":
+				say "Your ass tingles as it shifts and changes while you watch, a pleasant sensation stealing over you as the power of the ankh you used returns your body to a proper form, your jackal-like tail reforming behind you.  Its sleek dark presence behind you proving that its power is stronger then your more recent infection.";
+				now tailname of player is "jackalman";
+				now tail of player is "You have a long sleek jackal[apostrophe]s tail attached to your rear, it seems to sway happily over your thickly muscled ass in a predatory manner as you move.";
+		if jackalmantf >= 2:
+			if skinname of player is not "jackalman":
+				say "Your skin seems to writhe and twitch, as if something were fighting underneath the surface, soon you can see patches of silky soft black jackal fur once more pushing their way out of your body.  The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
+				now skinname of player is "jackalman";
+				now skin of player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
+		if jackalmantf >= 3:
+			if facename of player is not "jackalman":
+				say "You feel a strange discontent building in your head, as your face seems to burn and flex, its external form not matching that of your internal jackal, causing you to snap and snarl even as the bones in you face begin to shift and stretch again, and you let out a loud howl of triumphant pleasure as your face reshape itself back into a proper jackals visage, your grin once more stretching your muzzle as your gold dusted black fur settles in once more over your handsome jackals countenance.";
+				Now facename of player is "jackalman";
+				now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seeming both predatory, and strangely sexy at the same time";
+		if jackalmantf >= 4:
+			if bodyname of player is not "jackalman":
+				say "Your body seems to twist and warp, your muscles heating up again as your body fights the outside infection. Soon enough you can feel your form twisting and warping back into the proper and powerful shape of a predatory jackal.";
+				now bodyname of player is "jackalman";
+				now body of player is "strong and powerful, nicely muscled with bestial digigrade legs and jackal like feet, your hands ending in sharp jackal like claws.  Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself";
+				attributeinfect "jackalman";
+			if cockname of player is not "jackalman":
+				now cockname of player is "jackalman";
+				now cock of player is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]";
 
 
 Section 8- Strange doll
@@ -1398,7 +1425,7 @@ strange doll is a pet. "The strange looking doll that you found in the bargain b
 strange doll is a part of the player;
 The weapon damage of strange doll is 7;
 The level of strange doll is 1;
-The Dexterity of strange doll is 8;
+The Dexterity of strange doll is 10;
 The summondesc of strange doll is "You pull the strange little doll from the shop out of your pack, and set it on the ground next to you, the doll lies there for a minute on the ground, before twitching and picking itself up. The little miniature version of you looks around the area, before looking up at you and saluting, obviously ready and willing to help.";
 The assault of strange doll is "[one of]The strange doll picks up something from the ground nearby, and tries to stab your attacker with it![or]Running up under your attacker, your strange plush doll tosses itself at their legs, tangling them up![or]The strange doll of you mimics your attack, striking at your opponent![or]Your opponent suddenly cries out in pain, your little ally having managed to score a hit in a sensitive area.[or] taking advantage of your foes distraction, your little doll gets in several good hits.[or]All of a sudden your opponent stops fighting and begins to try to claw at their face, taking the opportunity to land an extra hit, you notice your little plush doll managed to climb up and put its hands over their eyes.[or]All of a sudden your opponent is startled by a sudden rain of debris tossed at it by your little ally, causing it to fall backwards[or]Imitating you, your little mini me attacks the beast with wild abandon![at random]";
 

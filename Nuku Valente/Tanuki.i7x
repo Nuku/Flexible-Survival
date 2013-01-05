@@ -16,15 +16,15 @@ The demand of shrine is usually journal.
 
 ringing is an action applying to nothing.
 
-understand "rung" and "ring" and "ring bell" and "ring bell with hammer" as ringing.
+understand "rung" and "ring" and "ring bell" and "ring bell with hammer" and "ring ornate bell" and "ring ornate bell with hammer" as ringing.
 
-There is a donation box and hammer and and bell in shrine.
+There is a donation box and hammer and ornate bell in shrine.
 
-The description of bell is "A small ornate bell.";
+The description of ornate bell is "A small ornate bell.";
 The description of donation box is "A small, empty, box, awaiting donations to the spirits, or whomever maintains this place.";
 The description of hammer is "A tiny black mallet on a string.";
 
-Instead of taking the bell:
+Instead of taking the ornate bell:
 	say "The bell is securely attached to the shrine.";
 	
 Instead of taking the donation box:

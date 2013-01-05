@@ -1,4 +1,5 @@
-Satyr by Sarokcat begins here.
+Version 2 of Satyr by Sarokcat begins here.
+[Version 2 - Victory Sex - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Satyr to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -6,13 +7,15 @@ Satyr by Sarokcat begins here.
 
 Section 1 - Monster Responses
 
+beatsatyr is a number that varies.
+
 when play begins:
-	add { "Greek Nymph" } to infections of guy;
+	add { "Satyr" } to infections of guy;
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say Satyr attack:
 	if cunts of player is greater than 0:
-		say "'Hah!' The satyr says as he pins you to the wall,  'What do we have here?' the goat-like man says with a leer as his hands roam your body, 'Not quite a proper nymph I[apostrophe]ll admit, but you[apostrophe]ll do!'  The satyr says as he begins to fondle you, wine spilling everywhere the scent of the strong wine seeming to spiral through your head making you feel as if you had had a few too many drinks yourself.  The satyr pays no attention however to your distraction, as he is too busy positioning his large member for best effect, a fact brought to your attention as it begins to poke at your feminine opening.  Looking down you can only get small glimpses of his large member, as his body is in the way as he presses your back up against the wall. His hands drop to your hips as he spreads you wide for him, you open your mouth to try to protest, but only a lusty moan comes out as he begins to sink his hot goat-like meat into you.[line break]";
+		say "'Hah!' The satyr says as he pins you to the wall,  'What do we have here?' the goat-like man says with a leer as his hands roam your body, 'Not quite a proper nymph I[apostrophe]ll admit, but you[apostrophe]ll do!'  The satyr says as he begins to fondle you, wine spilling everywhere the scent of the strong wine seeming to spiral through your head making you feel as if you had had a few too many drinks yourself.  The satyr pays no attention however to your distraction, as he is too busy positioning his large member for best effect, a fact brought to your attention as it begins to poke at your feminine opening.  Looking down you can only get small glimpses of his large member, as his body is in the way as he presses your back up against the wall. His hands drop to your hips as he spreads you wide for him, you open your mouth to try to protest, but only a lusty moan comes out as he begins to sink his hot goat-like meat into you.";
 		say "Your mind fogs even more as the scent of wine, the satyrs musk and your own body's lust combine, sending you into a pleasurable haze as he begins to fuck you hard against the wall. His stout goat-like legs easily supporting both your weight, as he holds your moaning body up, you can[apostrophe]t help but realize now why nymphs always end up letting satyrs catch them. You find yourself thinking idly, their cock just feels sooo good.  You moan in delight as his cock stimulates all the places deep inside you, throwing your head back as you orgasm around his cock, and he doesn[apostrophe]t even stop, just pumps into you all the harder. You find your legs and arms wrapping around his back as he thrusts into you, holding him tight as he continues to fuck you, bringing you to yet another orgasm as his wonderful rod thrusts into you.  Finally satisfied that you are good and fucked, the satyr groans himself, and lets his cock explode inside of you, filling you with his hot seed. Gasping, you shudder in one last orgasm as your mind goes blank for a minute, only dimly noticing as the sated satyr pulls you off of him and lies you down carefully on the floor.  'Not quite the fun of a real nymph yet,' you think you hear the satyr say, 'But I have to admit that was pretty damn good anyways, maybe you[apostrophe]ll let me catch ya again sometime and we can make a real nymph out of you.' The satyr finishes with a smile, as he snags his wine cup from where it fell, and goes looking for a refill.  Slowly you manage to pull your well used body together, and head back off into the museum halls yourself, almost looking forward to that next promised chase[impregchance]";
 		if girl is not banned, infect "Greek Nymph";
 	otherwise:
@@ -21,9 +24,75 @@ to say Satyr attack:
 
 
 To say Satyr loss:
-	say "Knocking the goat man back on his furry little tail, his cup of wine splashes out on the floor.  The satyr looks more offended at this mistreatment of good liquor then it does at your violent actions at the satyr himself. 'Hey now! If ya didn[apostrophe]t want to have some fun you could have just said!' The goat-like creature says angrily,  'There ain[apostrophe]t no reason for you to abuse the booze!' Picking himself up, the satyr snatches up the now empty cup, and stalks off into the halls, the picture of offended innocence as he looks for a refill.'";
+	let t be a random number between ( 50 - beatsatyr ) and 125;
+[	say "Temporary value is [t].";	]
+	if beatsatyr > 10 and ( cocks of player > 0 or cunts of player > 0 ) and t < libido of player:
+		say "     Having knocked the satyr onto his goat ass, you feel a rush of lust wash over you after having been teased too much by these lustful creatures.  You grab him by the beard before he can finish his complaint about the spilled wine and you tell him to 'Shut up and...'";
+		say "[satyrsexselection]";
+	otherwise:
+		say "     Knocking the goat man back on his furry little tail, his cup of wine splashes out on the floor.  The satyr looks more offended at this mistreatment of good liquor then it does at your violent actions at the satyr himself.  'Hey now! If ya didn't want to have some fun you could have just said!' the goat-like creature says angrily. 'There ain't no reason for you to abuse the booze!'  Picking himself up, the satyr snatches up the now empty cup, and stalks off into the halls, the picture of offended innocence as he looks for a refill.";
+		if cocks of player > 0 or cunts of player > 0, increase beatsatyr by 10;
 
-	
+
+to say satyrsexselection:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	choose a blank row in table of fucking options;
+	now title entry is "fuck me";
+	now sortorder entry is 1;
+	now description entry is "order the satyr to fuck you";
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "bend over";
+		now sortorder entry is 2;
+		now description entry is "get some satyr ass";
+	if cocks of player > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "start sucking";
+		now sortorder entry is 3;
+		now description entry is "make the satyr blow you";
+	if cunts of player > 0 and cocks of player is 0:
+		choose a blank row in table of fucking options;
+		now title entry is "eat me";
+		now sortorder entry is 4;
+		now description entry is "make the satyr eat you out";
+	choose a blank row in table of fucking options;
+	now title entry is "leave";
+	now sortorder entry is 99;
+	now description entry is "send him on his way";
+	sort the table of fucking options in sortorder order;
+	while sextablerun is 0:
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "     [link][y] - ...[run paragraph on][title entry][as][y][end link][line break]";
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+[			say "[title entry]: Do you want to [description entry]?";
+			if player consents:	]
+			if 1 is 1:		[bypass asking for confirmation]
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "fuck me":
+					say "     The satyr looks up at you with momentary surprise before responding.  '[if cunts of player > 0]Well, why didn't you just say so?' [otherwise]But... well, if you insist.  I certainly won't say no to a good fuck,' [end if]he chuckles merrily.  He gets up and grabs your ass as you move to lean against one of the display cases.  With his large goat cock already getting large, he moves in behind you and grinds it firmly against your backside, leaking pre across your [if cunts of player > 0]rear[otherwise]pucker[end if].  Shift his hips, he gets his glans lined up and slowly drives it into you, making you moan in pleasure and push back against him.  As the satyr fucks you, his hands slide over your [bodydesc of player] body.  With him behind you, pounding into you hard, you can smell his wild, virile musk and it only serves to excite you further, making you more and more eager to have him fill you[if cunts of player is 0].  He even slides a hand around to grab your cock and start stroking it, telling you [one of]how nice it is to have a sexy ass to fuck from time to time[or]that the satyrs will do this sometimes when the nymphs are blue balling them[or]how he's done this to a couple of satyrs when he couldn't get his cock in a nymph for a while[or]that even other satyrs enjoy bending over like this for him[at random][otherwise if cunts of player is 0 and cocks of player > 0].  He even slides a hand around to grab your cock and start stroking you off[otherwise].  He slides a hand down to tease your clit, further increasing your pleasure[end if].  After a long and satisfying pounding, he drives his cock deep inside you and blasts shot after shot of his virile seed into you from his large balls, pushing you to a powerful climax as he filles you up.  Once he's done, he pulls out, wipes his cock on your ass and thanks you for the fuck before dashing off to get a refill of wine.";
+					now beatsatyr is beatsatyr / 2;
+				otherwise if nam is "bend over":
+					say "     The satyr looks up at you with some trepidation, but then grins and hops up.  'I'm more of a topper, but what good satyr'll turn down sex?' he chuckles merrily.  He bends over a nearby display case, wiggling his ass and flagging his tail.  You move up behind him and run your hands over his furred ass as you grind your stiff member against it[if cock length of player > 24].  Feeling the size of your massive prick, he becomes a little less eager, but then chuckles and grinds against you all the harder.  'My, you are a big boy, aren't you?' he says with a drunken laugh[otherwise if cock length of player > 12].  Feeling the size of your large prick, he shows no hesitation and grinds back against you.  'Come on, I've taken a few satyrs in my time, you'll fit just right,' he says with a drunken laugh[otherwise].  Feeling your [cock size desc of player] prink, he chuckles and grinds back against you.  'Well, you're not as hugh as the other satyr's, but this should still be fun,' he says with a drunken laugh[end if].  Shifting your hips, you press your cock against his dark pucker and sink yourself [if cock length of player > 24]slowly[otherwise if cock length of player > 12]smoothly[otherwise]with ease[end if] and your lover's cock twitches, spurting precum excitedly.  The musky scent of aroused satyr grows stronger, exciting you to start fucking him lustfully, much to his delight.  As you fuck him, he tells you [one of]how nice it is to get fucked from time to time[or]that the satyrs will do this sometimes when the nymphs are blue balling them[or]how he's been nice and let some of the slower satyrs do this when they couldn't get their hands on a nymph for a while[or]that he's enjoyed bending over for other satyrs like this often[at random].  After a long and satisfying ride on the satyr's hot ass, you drive your cock deep inside him and fill him with your load, setting him off to spray his seed across the floor.  Once you're done and pulled out, he grabs his fallen cup (bending over to show you his messy ass with your creamy load [if cock width of player > 20]flowing[otherwise if cock width of player > 12]running[otherwise if cock width of player > 6]leaking[otherwise]trickling[end if] out of it before dashing off to find a refill of wine.";
+					now beatsatyr is beatsatyr / 2;
+				otherwise if nam is "start sucking":
+					say "     The satyr looks up at you with momentary surprise before responding.  'It's no wine, but I'm sure it'll have a full-bodied flavour,' he chuckles merrily.  He leans forward and takes your throbbing cock in his hands, stroking it as his tongue plays over your meat.  When the teasing and licking goes on for too long, you grab his horns and pull his mouth forward, driving your cock into him.  He gives a bleating sound of surprise, but doesn't seem at all upset to judge by the way his tongue and lips set to work.  He sucks you skillfully, clearly the satyrs no stranger to this kind of fun when the nymphs aren't around[if cock length of player > 24].  Your massive penis is a bit more than the practiced satyr can handle, but he works gamely at pleasing you[otherwise if cock length of player > 12].  Your large penis presents no difficulty to the practiced satyr, as he's used to the cocks of the others of his kind and deep throats you as you're about to cum[otherwise if cock length of player > 4].  Your [cock size desc of player] penis is easily deep throated by the satyr who's had to deal with much larger males[otherwise].  Your [cock size desc of player] penis is worked all over by the talented satyr's mouth[end if].  You grab his horns again as you're about to cum, groaning in pleasure and feeding the lustful male your load[if a random chance of 1 in 2 succeeds], spraying the last few spurts across his face[end if].  He smiles and licks his lips, joking that he needs a drink to wash that down as he heads off with his empty cup in search of more wine.";
+					now beatsatyr is beatsatyr / 2;
+				otherwise if nam is "eat me":
+					say "     The satyr looks up at you with momentary surprise before responding.  'I'd prefer to get straight to filling that fine pussy of yours, but I know some nymphs prefer a bit more teasing before they'll let a virile satyr like myself mount them... no matter how much they may really want it,' he chuckles merrily.  He leans forward and presses his face between your legs, diving into your cunt with his tongue with zeal.  You moan in pleasure at this sudden action and grab onto his horns to grind him harder into your crotch.  Quite certain he's grinning down there, you can feel his tongue agilely move across your sensitive folds and along your inner walls.  He fellates you with skill, clearly having done this before for the nymphs as he's said.  Enjoying his tonguework greatly, you have several orgasms before getting a final, crashing one that leaves you panting and moaning as your juices flow down the satyr's face and neck.  Getting up, he smiles and licks his lips, making a jest about how you taste as good as any wine.  And with the mention of wine, he realizes that his cup is empty and rushes off to find a refill.";
+					now beatsatyr is beatsatyr / 2;
+				otherwise if nam is "leave":
+					say "     The satyr is clearly disappointed at your words, but then chuckles merrily.  'It seems I have gone and spilled my wine.  As much as I've enjoyed our time together, I do need to get some more.  I am simply dying of thirst,' he says with a drunken laugh as he picks up his cup and heads off down the halls in search of a refill.";
+		otherwise:
+			say "Invalid Option.  Pick 1 - [the number of filled rows in table of fucking options].";
+
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -71,6 +140,15 @@ When Play begins:
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "Satyr Wine";			[ Loot monster drops, ]
 	now lootchance entry is 30;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "stocky";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "[one of]satyr[or]mythological[at random]";
+	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 Table of Game Objects (continued)
 name	desc	weight	object

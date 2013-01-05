@@ -10,8 +10,6 @@ Section 1 - Monster Responses
 
 to say sphinx attack:
 	say "'Not so tough now are you, silly little thief.' Valerie says with a grin as she knocks you backwards, her paw reaching out and deftly swiping the item you were trying to steal back from you, 'Now I am going to go put this back on display, and we will forget this little incident ever happened... because I don[apostrophe]t think even someone as silly as you will be making the same mistake twice now will they?' The sphinx asks with amusement, before vanishing off down the museum halls, likely to return the item to its proper place before she returns to her perch at her desk... Well at least you are still alive and allowed in the museum, though trying again certainly seems a bit dangerous right now...";
-	infect "sphinx";
-
 
 
 To say sphinx loss:
@@ -42,7 +40,7 @@ When Play begins:
 	now ass change entry is "it tightens and powerful muscles shift around underneath the skin, and your rear seems to lengthen as a long leonine tail presses its way out of your body, causing you to shiver in pleasure at the feel of the air over your new appendage as it lashes behind you eagerly"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it tapers and draws to a point, soft barbs appearing along its length as it takes on a more leonine appearance, the skin shifting around near your groin to wrap it in a proper feline sheath and draw it up close to your body, where it can wait eagerly until an opportunity to use it presents itself"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 18;
-	now dex entry is 18;
+	now dex entry is 22;
 	now sta entry is 12;					
 	now per entry is 20;
 	now int entry is 25;
@@ -64,6 +62,15 @@ When Play begins:
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]animalistic[or]winged[or]quadrapedal[as decreasingly likely outcomes]";
+	now type entry is "[one of]leonine[or]feline[or]sphinx[or]mythological[at random]";
+	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "sphinx":

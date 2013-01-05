@@ -1,6 +1,7 @@
 Version 1 of Catgirl by Wahn begins here.
 [Version 1.1 - Small Adjustments]
 
+
 "Adds a Catgirl to Flexible Survival's Wandering Monsters table."
 [Description text for this Extension.]
 

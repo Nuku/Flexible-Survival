@@ -11,10 +11,9 @@ when play begins:
 to say losetorhino:
 	say "     The rhino man bowls you over and snorts angrily at you.  Pinning you down, he tears at your clothes and pack, tossing them aside.  His strong arms pin you down and he climbs atop you without any foreplay and grinds his throbbing horn against your ass.  Precum flows down from his cock and gets smeared between your cheeks";
 	if cunts of player > 0:
-		say ".  After a few strokes while he forces you into the right position, he pulls back and lines his cock with your dripping pussy and drives it hard into you.  You moan and gasp as the big rod pushes its way into you.  Keeping you pinned down, he pumps and thrusts his pulsing cock into you repeatedly as he grunts and snorts until he finally cums hard, blasting his thick semen into you.  His prodigious output fills your womb and swells your tummy before he's finally done.  Sated for now, he gets up and pushes you over, then walks off with a final grunt.";
-		say "[impregchance]";
+		say ".  After a few strokes while he forces you into the right position, he pulls back and lines his cock with your dripping pussy and drives it hard into you.  You moan and gasp as the big rod pushes its way into you.  Keeping you pinned down, he pumps and thrusts his pulsing cock into you repeatedly as he grunts and snorts until he finally cums hard, blasting his thick semen into you.  His prodigious output fills your womb and swells your tummy before he's finally done.  Sated for now, he gets up and pushes you over, then walks off with a final grunt.[impregchance]";
 	otherwise:
-		say ".  After a few strokes while he forces you into the right position, he pulls back and lines his cock with your tight pucker and drives hard into you.  You release a muffled scream at the sudden intrusion as the big rod pushes its way into you.  Keeping you pinned down, he pumps and thrusts into you repeatedly as he grunts and snorts until he finally cums hard, blasting his thick semen into you.  His prodigious output fills your bowels and swells your tummy before he's finally done.  Sated for now, he gets up and pushes you over, then walks off with a final grunt.";
+		say ".  After a few strokes while he forces you into the right position, he pulls back and lines his cock with your tight pucker and drives hard into you.  You release a muffled scream at the sudden intrusion as the big rod pushes its way into you.  Keeping you pinned down, he pumps and thrusts into you repeatedly as he grunts and snorts until he finally cums hard, blasting his thick semen into you.  His prodigious output fills your bowels and swells your tummy before he's finally done.  Sated for now, he gets up and pushes you over, then walks off with a final grunt.[impregchance]";
 
 to say beattherhino:
 	say "     Managing to finally wear down the powerful creature, you [one of]get him to charge blindly past you and tumble into a nearby enclosure.  Glancing down, you see him laying there, exhausted[or]dodge his final, blind charge and get him to bash right into a wall and pass out[or]breathe a sigh of relief as he finally passes out, completely exhausted[or]avoid his last charge and he plows off into the bushes.  When he doesn't come back out, you conclude he's passed out, exhausted[at random].  You pant for breath and wipe the sweat from your brow before heading off to continue your searching.";
@@ -60,7 +59,7 @@ When Play begins:
 	now area entry is "Zoo";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12;		[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5;		[ Cock width, more commonly used for ball size. ]
+	now cock width entry is 7;		[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 0;			[ Number of breasts the infection will give a player. ]
 	now breast size entry is 0;		[ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
@@ -68,8 +67,8 @@ When Play begins:
 	now cunt length entry is 0;		[ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 0;		[ Width of female sex the infection will try to give a player. ]
 	now libido entry is 40;			[ Target libido the infection will rise towards. ]
-	now loot entry is "";			[ Dropped item, blank for none.  Case sensitive. ]
-	now lootchance entry is 0;		[ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "rhino cum";	[ Dropped item, blank for none.  Case sensitive. ]
+	now lootchance entry is 42;		[ Percentage chance of dropping loot, from 0-100. ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]beefy[or]muscular[at random]";
@@ -80,6 +79,23 @@ When Play begins:
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"rhino cum"	"Exactly what it sounds like."	1	rhino cum
+
+rhino cum is a grab object. It is a part of the player. rhino cum is infectious. The strain of rhino cum is "Rhino".
+
+The usedesc of Rhino cum is "[drinkrhinocum]";
+
+to say drinkrhinocum:
+	say "     Following the strange urge you have, you slam back the bottle of rhino cum you found.  It has a strong taste to it, but you find it very exciting despite its salty flavour";
+	increase libido of player by 5;
+	if cocks of player > 0 and cock length of player < 12:
+		say ".  You feel a throbbing in your groin as your [if cocks of player > 1]cocks expand[otherwise]cock expands[end if] another inch almost immediately after you finish your drink.";
+		increase cock length of player by 1;
+	otherwise:
+		say ".";
 
 Section 3 - Endings
 

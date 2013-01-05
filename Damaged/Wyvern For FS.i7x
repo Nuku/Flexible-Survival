@@ -18,14 +18,14 @@ to say infect:
 	infect;
 	
 to say wyvern goop:
-	add "Wyvern Goop" to invent of player;
+	increase carried of wyvern goop by 1;
 
 to say wyvern attack:
 	if Wyvern_initialattack is 0:
-		say "The wyvern arcs back and opens its great maw, spitting a thick yellow-white fluid at you.[one of] It sticks to your torso, causing you to weaken just with its touch.[or] Adhering to any bit of skin the goop seems to thicken and cling to you.[at random] You do your best to free yourself of it, hoping that by freeing yourself you can escape and hide in a building.";
+		say "The wyvern arcs back and opens its great maw, spitting a thick yellow-white fluid at you[one of].  It sticks to your [bodydesc of player] torso, causing you to weaken just with its touch[or].  Adhering to any bit of skin the goop seems to thicken and cling to you[at random].  You do your best to free yourself of it, hoping that by freeing yourself you can escape and hide in a building.";
 		now Wyvern_initialattack is 1;
 	otherwise:
-		say "[one of]Again the beast sprays you, slowly building up more and more layers of the goop.[or]More of the adhesive, thickening stuff hits you, you can barely stand as the weight starts to drag you down.[at random]";
+		say "[one of]Again the beast sprays you, slowly building up more and more layers of the goop.[or]More of the adhesive, thickening stuff hits you.  You can barely stand as the weight starts to drag you down.[at random]";
 
 to say wyvern defeat:
 	say "With one last rip and heave you manage to get the last of the hindering bulk of goop off of you, with quick thinking you race to the nearest building and make your way to the basement. While in there you hear the beast demolish the building above you in its anger.";
@@ -35,16 +35,14 @@ to say wyvern vict:
 	if Wyvern_annoyed is 1:
 		say "Just as you can't fight any more, your arms and legs trapped in the growing mass, you hear a sound like a hurricane and manage to look up and see the great beast sniffing at you. With a disgusted snort the creature screams into the air and takes off, leaving you to tear your way free of the gunk and find shelter as best you can.[combat abort]";
 	otherwise:
-		say "Again and again it spits at you, encasing your arms and legs in the jelly like sticky mess. Slowly you feel your muscles contract of their own will, pulling you into a ball. Your last glimpse of the Wyvern is it spraying another kind of goop over you, one that seems to harden as you watch it. Suddenly sealed in, you fear suffocation, but something seems to burrow into your stomach even as you feel your last fitful breath pull in the sticky muck. Drowsiness begins to claim you as you suddenly feel calm, safe, protected. Darkness surrounds you just before your eyes close.";
+		say "Again and again it spits at you, encasing your arms and legs in the jelly like sticky mess. Slowly you feel your muscles contract of their own will, pulling you into a ball, your [bodydesc of player] body curled up inside it. Your last glimpse of the Wyvern is it spraying another kind of goop over you, one that seems to harden as you watch it. Suddenly sealed in, you fear suffocation, but something seems to burrow into your stomach even as you feel your last fitful breath pull in the sticky muck. Drowsiness begins to claim you as you suddenly feel calm, safe, protected. Darkness surrounds you just before your eyes close.";
 		infect;
 		say "Waking, you feel renewed and happy, but you realize you need to break out of the shell covering you. It takes all your strength to tear out as, gasping for breath, you sit there, watching as your new 'mother' is capturing another person. As you watch, she coats them again and again, forming an ovoid shape, finally sealing the casing with the hard shell. As you watch the beast, you realize it is pushing the 'egg' closer and closer to its tail, where a slitted opening forms. Pushing with her blunt muzzle you watch as she stuffs the egg into her giant depths. Deep down inside, you can't help but be proud of and feel love for your new mother.";
 		say "[wyvern goop][wyvern goop]";
+
 to say wyvern desc:
-	if "Female Preferred" is listed in feats of player:
+	if "Female Preferred" is listed in feats of player or "Sterile" is listed in feats of player:
 		now Wyvern_annoyed is 1;
-	otherwise:
-		if "Sterile" is listed in feats of player:
-			now Wyvern_annoyed is 1;
 	say "A monstrous Wyvern swoops out of the sky, forcing you to drop to the ground or be crushed. You look up at the thing, it is as big as a truck, looking like nothing save a eighty foot long snake with wings and a set of talons. Surely you can't fight that!";
 	
 Table of random critters (continued)
@@ -90,7 +88,7 @@ When Play begins:
 	now cunt length entry is 0;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 0;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 0;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "";			[ Loot monster drops, ]
+	now loot entry is "Wyvern Goop";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -105,7 +103,8 @@ When Play begins:
 
 when play ends:
 	if bodyname is "Wyvern":
-		say "Your wings finally strong enough, you take to the air and leave behind the city, your old life. Over the following year your body grows more and more, eventually leaving you massive, but not nearly as massive as your majestic mate. She is around half as big again as you are, almost ninety feet long, and you mate again and again with her, no heat driving you, just both your raw lust for each other. Eventually raising clutch after clutch of eggs, your children teach man a new fear of flying.";
+		if humanity of player < 10:
+			say "Your wings finally strong enough, you take to the air and leave behind the city, your old life. Over the following year your body grows more and more, eventually leaving you massive, but not nearly as massive as your majestic mate. She is around half as big again as you are, almost ninety feet long, and you mate again and again with her, no heat driving you, just both your raw lust for each other. Eventually raising clutch after clutch of eggs, your children teach man a new fear of flying.";
 	otherwise:
 		if Wyvern_eat is 1:
 			say "Despite other changes, your eyes never did change to anything else. Slitted, the outer part is a light blue bordering on sky blue, the slitted pupil is a dark black. Every time you look in the mirror you think of that majestic creature, a part of you wanting to be with her, another part wanting to be her child.";
@@ -117,8 +116,7 @@ Table of Game Objects(continued)
 name	desc	weight	object
 "Wyvern Goop"	"Thick, white and yellow, it seems to almost pulse with the ability to sustain life."	1	wyvern goop
 
-instead of sniffing wyvern goop:
-	say "The sticky gel has an acrid, spicy scent.";
+the scent of wyvern goop is "The sticky gel has an acrid, spicy scent.";
 
 To say wyvern goop use:
 	say "Eating the goop you feel all your needs sated, calm and relaxed you could almost sleep, but not before you churr happily to yourself as you drift off and do just that.";

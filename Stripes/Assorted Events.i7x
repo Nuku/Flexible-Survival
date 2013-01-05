@@ -1,5 +1,5 @@
 Version 4 of Assorted Events by Stripes begins here.
-[version 4 - Beach Party event added ]
+[version 4.1 - Dropped Handbag moved to Scavevents ]
 
 "Adds a batch of random events to Flexible Survival scattered around the city."
 
@@ -15,7 +15,7 @@ Instead of resolving a Fallen Kunoichi:
 	say "     Passing through the halls of the museum, you come across the aftermath of what was an epic battle.  Many of the displays here are knocked over or shattered by what must have been powerful blows by a great weapon.  You can see gouges cut deep into the walls, many stained with blood.  Smaller darts and shuriken are embedded in the wall as well.  The floor is marked with several blood stains and cum puddles, as well as soot marks from flash powder or smoke bombs.  Clearly many battled a great foe here.";
 	say "     Half-buried in the ruins of one display, you find the grisly remains of a feline ninja cleaved in two at the waist.  Drawing off its mask, you see her face feminine locked in an expression of great pain and horror.  Something about her death gaze disturbs you deep inside and you are unable to bear the sight of it.  You brush her eyes shut and pull the mask back down over her feline face.  Beside the fallen kunoichi is her weapon, a bo staff with ornate metal tips.  Cautious of any infected blood, you quickly check her [italic type]shinobi shozoko[roman type], but find nothing else of use.";
 	say "     Bo staff obtained.";
-	add "bo staff" to invent of player;
+	increase carried of bo staff by 1;
 	increase score by 5;
 	Now Fallen Kunoichi is resolved;
 
@@ -24,7 +24,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "bo staff"	"An ornate fighting staff."	2	bo staff
 
-bo staff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of bo staff is 3. The weapon type of bo staff is "Melee". It is not temporary.
+bo staff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of bo staff is 4. The weapon type of bo staff is "Melee". It is not temporary.
 
 
 Suddenly Ninjas is a situation.
@@ -55,16 +55,15 @@ Instead of resolving a Suddenly Ninjas:
 	Now Suddenly Ninjas is resolved;
 
 to say lostninjahorde:
-	say "     With the victorious ninja having finished with you, several others move in to have their way with you as well.  You are groped and fondled by the felines who tease and excite you to arousal and climax again and again.  Their skillful paws roam all over your body while they take turns filling all your holes.  You are pumped full of feline cum again and again by the sexy ninjas who never say a word as they fuck you completely senseless.  Lost in the lust of the ninja lovers, you eagerly take it all.  In the end, you feel as if several cups worth of cum have been pumped into you from every hole and even more coats your body.  You are left panting on the floor in a large puddle of musky semen, moaning as you roll around in it and leaking more cum out to add to it.";
-	increase libido of player by 25;
-	if libido of player > 100, now libido of player is 100;
-	decrease humanity of player by 18;
 	repeat with y running from 1 to number of filled rows in table of random critters:
 		choose row y in table of random critters;
 		if name entry is "Ninja Cat":
 			now monster is y;
 			break;
-	say "[impregchance][impregchance]";
+	say "     With the victorious ninja having finished with you, several others move in to have their way with you as well.  You are groped and fondled by the felines who tease and excite you to arousal and climax again and again.  Their skillful paws roam all over your body while they take turns filling all your holes.  You are pumped full of feline cum again and again by the sexy ninjas who never say a word as they fuck you completely senseless.  Lost in the lust of the ninja lovers, you eagerly take it all.  In the end, you feel as if several cups worth of cum have been pumped into you from every hole and even more coats your body.  You are left panting on the floor in a large puddle of musky semen, moaning as you roll around in it and leaking more cum out to add to it.[impregchance][impregchance]";
+	increase libido of player by 25;
+	if libido of player > 100, now libido of player is 100;
+	decrease humanity of player by 18;
 	infect "Ninja Cat";
 	infect "Ninja Cat";
 
@@ -84,7 +83,7 @@ Instead of resolving a Losing It:
 	if snowmeowfight is 1:
 		say "     Having dealt with the lustful feline, you get ready to leave, but notice the purse next to the tattered remains of the skirt that was torn off in the fight.  You take a moment to examine these last remnants of the woman's feminine identity.  You carefully avoid several spots of snowmeow cum, whether his or that of the one who changed her, you cannot say, as you shift the clothes around.  You are more successful with her purse, finding a canister of mace.  It seems she failed to use it in time and paid the price.  You mentally remind yourself to use it before things get out of hand and you end up like her... him.";
 		say "     Pepperspray obtained.";
-		add "pepperspray" to invent of player;
+		increase carried of pepperspray by 1;
 		increase score by 5;
 	otherwise if snowmeowfight is 2:
 		say "     After having been beaten by the beautiful feline, you stagger off in a bit of a lustful haze.  Something about the whole experience leaves you lustful and eager for more.";
@@ -94,6 +93,7 @@ Instead of resolving a Losing It:
 		if libido of player > 100, now libido of player is 100;
 	otherwise:
 		say "     Escaping the crazed feline, you dash off into the city, deciding to search somewhere away from the newly transformed and lustful feline.  Perhaps once it has sated its lusts from its transformation it will wander off and you can return to searching.";
+	mallrecall;
 	Now Losing It is resolved;
 
 
@@ -103,6 +103,7 @@ when play begins:
 
 instead of resolving a CatsandDogs:
 	say "     As you travel through the city, you come across a pair of old apartment buildings side by side.  The windows are open and the tenants are yelling at one another.  One building appears to be populated entirely by cats and the other by dogs.  They are growling, yowling and making rude gestures at one another.  They jeer at one another and toss trash across the alley dividing their buildings.  Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them.  You make note of the location and remind yourself to keep away, finding another path around this neighbourhood.";
+	mallrecall;
 	now CatsandDogs is resolved;
 
 
@@ -115,41 +116,8 @@ instead of resolving a Tour Bus:
 	say "     You hop back onto the car, then onto the ground.  You start to head on your way, mentally reminding yourself not to take this street again when passing through this area, when you hear a growl from behind you.  Crawling out of the bus, you see a large, cougar herm wearing a cap and coat that leads you to suspect this was once the bus driver.  It growls again and hops onto the ground, coming at you quickly.";
 	challenge "Cougar";
 	say "     Your encounter with the cougar creature over, you continue on your way, leaving it and its unusual den behind.";
+	mallrecall;
 	now Tour Bus is resolved;
-
-
-Dropped Handbag is a situation.
-
-Instead of resolving a Dropped Handbag:
-	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it.  Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.  Do you want to search it?  It doesn't seem like they'll be needing it anymore.";
-	if the player consents:
-		let T be a random number between 1 and 100;
-		if T < 41:
-			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  You do manage a lucky find and dig out a small canister of pepperspray.";
-			add "pepperspray" to invent of player;
-			increase score by 5;
-		otherwise if T < 81:
-			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  But aside from the bottle of water at the top of the bag, you don't get anything of use.";
-			add "water bottle" to invent of player;
-			increase score by 1;
-		otherwise if T < 91:
-			say "     Searching the handbag, you toss aside the makeup, tissues, pens, safety pins, lipstick, mirror, and loads of other little things you don't really need in this crisis, though you do pocket the gum.  But that's about all you find of use in the dropped handbag.";
-			increase score by 1;
-		otherwise:
-			say "     You open the bag and put your hand in to rummage through its contents, but are met with a sticky surprise.  Pulling it out, you find your hand covered in wet, sticky cum.  You can feel the tingles from the infected cum on your hand.  Someone, possibly the bag's original owner, filled it with their cum and left it for someone like you to find.";
-			say "[line break]";
-			sort table of random critters in random order;
-			repeat with X running from 1 to number of filled rows in table of random critters:
-				choose row X from the table of random critters;
-				if area entry matches the text battleground and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
-					now monster is X;
-					break;
-			choose row monster from the table of random critters;
-			infect;
-			decrease humanity of player by 5;
-	otherwise:
-		say "     Deciding not to bother, you continue on your way.";
-	now Dropped Handbag is resolved;
 
 
 Section 3 - Diego Events
@@ -188,19 +156,18 @@ instead of resolving a Trickster:
 					say "     Having beaten the pack alpha and sent him packing, the wolves['] assault on the few remaining soldiers wavers.  With a howl from their leader, they snatch up the fallen, partially transformed soldiers and drag them off into the city.  They'll be taking them back to their den to finish mating them until they're fully members of the pack.  Too tired from the fight, you and the other soldiers are in no shape to give pursuit.  As the last of the wolves are running off, you hear some distant laughter, probably from the coyote trickster who enjoyed the show while it lasted[if Park Entrance is unknown].  You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 					say "     The remaining soldiers thank you for the assistance.  Because of the cloud of wolf fur, nearly all of them have picked up ears or tails, but their humanity is mostly intact thanks to your help.  They'll have to scrub their recon mission and return to base.  You're told they can't take you with them at this time, but they do give over some of their supplies, as they'll re-equip at the base earlier than planned.  They take their guns and ammo, but one of the few who remained fully unchanged passes you his combat knife with a silent nod.  After packing the food and water away and strapping on the knife, you're given another round of thanks before they head off.";
 					say "     Food, water bottle and combat knife obtained.";
-					add "food" to invent of player;
-					add "water bottle" to invent of player;
-					add "combat knife" to invent of player;
+					increase carried of food by 1;
+					increase carried of water bottle by 1;
+					increase carried of combat knife by 1;
 					increase score by 20;
 		if wolffight is 3:
 			say "     Deciding to give up on fighting entirely, you push your way free of the wild fight.  You hop over one wolf who's mounted one poor soldier and are almost knocked down as your pursuer runs into a soldier getting up.  Finding an [']eager volunteer['] for his cock, the wolf drives it into the soldier's mouth and starts pounding away.  The wolves get the last of the soldiers as you're turning into an alleyway.  You can hear the laughter of what is probably the coyote trickster, amused by the results of his prank[if Park Entrance is unknown].  You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 			infect "Feral Wolf";
 		if wolffight is 2:
 			if cunts of player > 0:
-				say "     Before you can get back up, you are mounted by one of the other wolves, moaning loudly as he drives his thick cock into you.  He fucks you hard and fast, eager to fill you with cum and pups before moving on to another victim.  His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your wet hole.  'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak.  You respond to his words and press your ass back, moaning louder as he pounds into your abused pussy.  Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl[if cocks of player > 0].  Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum[end if].  Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.";
-				say "[impregchance]";
+				say "     Before you can get back up, you are mounted by one of the other wolves, moaning loudly as he drives his thick cock into you.  He fucks you hard and fast, eager to fill you with cum and pups before moving on to another victim.  His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your wet hole.  'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak.  You respond to his words and press your ass back, moaning louder as he pounds into your abused pussy.  Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl[if cocks of player > 0].  Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum[end if].  Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.[impregchance]";
 			otherwise:
-				say "     Before you can get back up, you are pushed down by one of the other wolves.  He pushes your clothes aside with his paws, scratching at your back with his claws, then growls and mounts you.  You can feel his wet, sticky cock slide against your ass before finding your tight pucker and pushing it open.  You moan loudly as he drives his thick cock into you.  He fucks you hard and fast, eager to fill you with cum before moving on to another victim.  His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your tight hole.  'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak.  You respond to his words and press your ass back, moaning louder as he pounds into your abused asshole, pressing that lupine shaft against your prostate.  Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl.  Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum.  Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.";
+				say "     Before you can get back up, you are pushed down by one of the other wolves.  He pushes your clothes aside with his paws, scratching at your back with his claws, then growls and mounts you.  You can feel his wet, sticky cock slide against your ass before finding your tight pucker and pushing it open.  You moan loudly as he drives his thick cock into you.  He fucks you hard and fast, eager to fill you with cum before moving on to another victim.  His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your tight hole.  'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak.  You respond to his words and press your ass back, moaning louder as he pounds into your abused asshole, pressing that lupine shaft against your prostate.  Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl.  Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum.  Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.[impregchance]";
 			say "     Just as your head is starting to clear, another wolf moves up to you, sticky cock hanging under him.  Seizing what may be your only opportunity to escape, you grab a fallen, half-transformed soldier beside you and press his growing muzzle onto the wolf's cock.  He latches onto it hungrily and starts licking and sucking.  Distracted, the wolf turns his attention on the changing soldier and thrusts into his muzzle.  Crawling carefully past a few more distracted wolves, you make it to the edge of the orgy and dash into a nearby building.  You rush out the back, having to leave the soldiers to their fate as bitches for a wolf pack.  A fate you almost shared.  As you run off, over the sounds of mating wolves, you catch the faint laughter of someone, probably the coyote trickster, enjoying the results of his prank[if Park Entrance is unknown].  You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 			infect "Feral Wolf";
 	otherwise:
@@ -226,7 +193,7 @@ when play begins:
 
 instead of resolving a Prank Aftermath:
 	say "     As you travel through the city, you hear some moaning mewls coming from up ahead.  On your guard, you sneak forward and take in the sight of several of those puma creatures playing with what was once a team of six soldiers.  The cougars have the men pinned to the ground and are having their way with them.  As you watch, the cougars force them to nurse from their breasts or suck their cocks until they develop a wet, new pussy for the herm kitties to fuck.  Outnumbered, the soldiers have no chance to escape and there are several felines waiting for their turn to sate their lusts on the transforming humans.";
-	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while it waits for its next turn with the new breedtoys.  Remembering that you told the Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
+	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while she waits for her next turn with the new breedtoys.  Remembering that you told the Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
 	if libido of player - humanity of player < -25:
 		say ".  Being too far gone into your lustful urges and the infection taking over, you feel some remorse for your actions, but are too aroused by what you see to do anything but watch.";
 		decrease humanity of player by 10;
@@ -245,6 +212,7 @@ instead of resolving a Prank Aftermath:
 		if libido of player > 100, now libido of player is 100;
 	say "[line break]";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     As you watch, the last of the soldiers is made into a herm with a pair of swelling breasts on her chest and a pair of feline ears.  She is pushed into the arms of two of her former teammates.  Too far gone in their own infection, they push her onto all fours, one taking her virgin pussy with her feline cock and the other forces her cock into his mouth.  As they fuck her, all three continue to change until they are full puma herms, fucking with mrowls of lustful delight.  The former soldiers cum hard into their ex-teammate, filling her new pussy and feline muzzle with their hot cum.  Watching this arousing show, you can't help but get turned on and start masturbating.  As you climax, you groan loudly and cum hard, unable to stop yourself.  But this doesn't go unheard and several of the powerful felines come after you.  Having just cum, you barely manage to get yourself back on your feet and ready to fight by the time the first one reaches you.";
 	say "[line break]";
 	challenge "Cougar";
@@ -276,16 +244,17 @@ Instead of resolving a Lovers Bench:
 		if scenario is "Bunker" or scenario is "Caught Outside":
 			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  It is no better than your own, so you toss it aside.  The woman's jeans do yield a small canister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
 			say "     Pepperspray obtained.";
-			add "pepperspray" to invent of player;
+			increase carried of pepperspray by 1;
 			increase score by 5;
 		otherwise:
 			say "     You focus on checking out the scattered clothes for anything of use.  The clothes, as you saw, are a little torn, perhaps from when they were first infected or in their rush to mate at the bench.  Their food has been reduced to scraps and crumbs and their drink bottles are empty.  There is a small pocketknife in the wolf's khakis.  Thinking it may be a useful tool or perhaps a weapon in a pinch, you take it.  The woman's jeans do yield a small canister of mace, which you store somewhere within easy reach.  You leave the rest, finding nothing else of use to you.";
 			say "     Pocketknife and pepperspray obtained.";
-			add "pocketknife" to invent of player;
-			add "pepperspray" to invent of player;
+			increase carried of pocketknife by 1;
+			increase carried of pepperspray by 1;
 			increase score by 10;
 		if companion of player is pink raccoon:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Raccoon":
@@ -298,8 +267,7 @@ Instead of resolving a Lovers Bench:
 			otherwise:
 				say "     As you're finishing up your scavenging, your pink raccoon pet takes your hand in his and pulls you over to the bench with a soft chirr.  He smiles and nuzzles you, guiding you to lay back on the bench.  You can see the front of his skirt standing up as his erect cock makes it rise.  He makes a needful moan as you slip a hand under his skirt to fondle his balls.  It seems your pet wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You stretch back on the bench, leaving one leg draped over the side, giving your pink pet clear access to your dripping slit.  He climbs atop you, lining up his cock even as he nuzzles at your neck.  You scritch his ears and caress his back as his penis sinks into your cunt, enjoying the sound of his soft moan as he slowly, tenderly penetrates you.";
 				say "     Gripping the bench tightly with his little claws, her leaves fresh holes in the wood while he thrusts into you.  You stroke his back and sides, telling him what a good pet he is and how much you love him.  Something about the bench makes this more than just sex, but instead lovemaking.  Your coon smiles down at you, kissing and nuzzling your face as you do the same.  His cotton candy scent fills the air, mingling with all the other arousing scents.  You reach around to grab his rump, squeezing it and making him moan as you pull him to thrust harder and harder into your dripping pussy.";
-				say "     After a powerfully long orgasm that pumps an impressive load of his coonboi seed into your pussy, he withdraws slowly.  Your pet is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
-				say "[impregchance]";
+				say "     After a powerfully long orgasm that pumps an impressive load of his coonboi seed into your pussy, he withdraws slowly.  Your pet is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.[impregchance]";
 			infect "Raccoon";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
@@ -309,6 +277,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		otherwise if companion of player is Gryphoness:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Hermaphrodite Gryphon":
@@ -320,8 +289,7 @@ Instead of resolving a Lovers Bench:
 				say "     After a powerfully long orgasm that pumps your seed into the sexy gryphoness's pussy and her own cum sprays across her body and the bench, you withdraw.  Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.";
 			otherwise:
 				say "     You snuggle up beside her on the bench, nuzzling and kissing one another.  Her paw soon find its way to your pussy and she fingers and teases your wet folds.  With her other arm around you, she moves to sit at one corner of the bench and guides you to sit in her lap.  Soon enough, you are lining up her throbbing cock with your wet hole while kissing your loving companion.  You moan in pleasure as you sink down on her leonine cock, gripping her shoulders.  She nuzzles your bosom, licking and sucking at your nipples before moving her head back up to kiss you.  You continue kissing as you ride in her lap, enjoying the feel of her throbbing meat inside your cunt.  One paw roams over your body while the other digs into the bench, adding her marks to those of the others who've used it.  Your ride her cock lustfully, but loving as well, as something about the bench makes this more like lovemaking than raw sex.  With your arms around her, you hold her lovingly while scritching at her wing roots, which makes her sing out her love for you and you respond in kind.";
-				say "     After a powerfully long orgasm that pumps an impressive load of her gryphon seed into your pussy and her own female juices leak onto the bench to join the others, you ease yourself off her spent shaft.  Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.";
-				say "[impregchance]";
+				say "     After a powerfully long orgasm that pumps an impressive load of her gryphon seed into your pussy and her own female juices leak onto the bench to join the others, you ease yourself off her spent shaft.  Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.[impregchance]";
 			infect "Hermaphrodite Gryphon";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
@@ -331,6 +299,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		otherwise if companion of player is Felinoid companion:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			repeat with y running from 1 to number of filled rows in table of random critters:
 				choose row y in table of random critters;
 				if name entry is "Felinoid":
@@ -339,8 +308,7 @@ Instead of resolving a Lovers Bench:
 			if cunts of player > 0:
 				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body.  You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face.  You can see his aroused cock, red and throbbing as it drips precum on your leg.  It seems your companion wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You move to lay back on the bench, putting your hips at one edge so your four-legged feline can mount you.  And he quickly does, lining up his cock with your dripping snatch before slowly sinking into you.  You moan in delight and run your hands over his sides and hips as his large, feline cock eases into you.";
 				say "     His large paws dig into the bench beside your head, leaving fresh scratches in the wood while he thrusts into you.  You nuzzle and kiss his feline face, telling him what a good kitty he is and how much you love him.  Something about the bench makes this more than just sex, but instead lovemaking.  Your kitty seems to smile down at you as he lickgrooms your face and chest, running his raspy tongue over your breasts.  You reach back to rub his large balls and squeeze his tightly muscled rear while he thrusts into you.  The sex is somehow both wildly animalistic and tenderly loving as the feline beast mates with you.";
-				say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your pussy, he eases his spent shaft from your cream-filled cunt.  Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.";
-				say "[impregchance]";
+				say "     After a powerfully long orgasm that pumps a huge load of his feline seed into your pussy, he eases his spent shaft from your cream-filled cunt.  Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to him.[fimpregchance]";
 			otherwise:
 				say "     As you're finishing up your scavenging, your felinoid companion snuggles up to you, rumbling and purring as he starts nudging you over to the bench with his strong body.  You sit on the bench and he puts his front paws on either side of you, nuzzling and licking at your face.  You can see his aroused cock, red and throbbing as it drips precum on your leg.  It seems your companion wants to enjoy the lovers['] bench with you as well.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on his offer.  You put your hands at his hips and get him to climb a little further onto the bench, bringing his large cock within reach of your mouth.  You start licking and kissing at his throbbing meat, then slide your mouth down over it, enjoying his mrowl of pleasure as you do.";
 				say "     His large paws dig into the back of the bench, leaving fresh scratches in the wood as he thrusts gently into your muzzle.  You face is buried in his soft fur as you run your fingers through it, stroking his belly and thighs as you lick and suck his cock.  You slide your mouth off, telling him what a good kitty he is and how much you love him as you kiss his cock and balls.  Something about the bench makes this more than just sex, but instead lovemaking.  Your kitty seems to smile down at you as you take him in you mouth again and he starts thrusting softly.  You reach rub his large balls and squeeze his tightly muscled rear while he rocks his hips.  The sex is somehow both wildly animalistic and tenderly loving as the feline beast pumps his cock as you take it fully into your mouth and down your throat.";
@@ -354,6 +322,7 @@ Instead of resolving a Lovers Bench:
 			increase score by 20;
 		otherwise if companion of player is bee girl:
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			say "     As you're finishing up your scavenging, Honey buzzes on over and takes your hand in her.  She smiles up at you and grins playfully.  She gives your arm a gentle tug with her four hands.  'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly.  'I used to see couples here when I was...'  She pauses, remembering her lost sisters.  'But I have you now,' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer.  Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs.  The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on her offer.";
 			if cocks of player > 0:
 				say "     Honey climbs up onto the bench, raising her bee abdomen up and waving her cute little bottom at you.  The soft, golden puff over her pussy is soaked in her juices and you can see her soft lips parted and ready for you.  The bumblebee drone buzzes excitedly as you move in behind her and get your hard cock lined up with her eager pussy.  She pushes herself back onto your cock slowly, clearly holding back from pushing it all in quickly, wanting to savour this moment.  Once you're stuffed inside her, you wrap your arms around her insect abdomen and start thrusting.  Her wings buzz frantically and her abdomen twitches in your arms.  'Mmm... kiss it.  Please, I want you to kiss me there,' she moans as her pussy quivers and squeezes around you at the thought of it.  So when you kiss and lick at the end of her abdomen, that sensitive spot where her stinger was lost - that you healed to save her life - she convulses in pleasure and digs her four chitinous hands into the wooden bench, adding fresh marks to join the numerous others.  Your sex is both lustful and loving all at once, as something about the bench makes this more like lovemaking than raw sex.  With one hand on the bench for support like that wolf, you let the other hold her striped behind while you lick and kiss it.";
@@ -367,9 +336,113 @@ Instead of resolving a Lovers Bench:
 			if "Corrupt" is listed in feats of player, decrease humanity of player by 1;
 			increase xp of bee girl by ( level of bee girl + 1 ) * 3;
 			increase score by 20;
+		otherwise if companion of player is mouse girl:
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Mental Mouse":
+					now monster is y;
+					break;
+			say "     As you're finishing up your scavenging, Rachel moves up beside you, running her paws over your [bodytype of player] body and taking your hand in her little paws.  She smiles up at you, looking deep into your eyes.  'You want to spend some time with me on the bench, don't you?' she says softly and you nod, the heavy scent of lust in the air and her mental powers  you long to play with the sexy mousie on it.  'Just some persomal time for you and I, none of the others listening in this time.'  The idea to resist doesn't even pop into your mind and you [if scalevalue of player >= 3]scoop her up into your arms and onto[otherwise]rush her over to[end if] the bench.";
+			if cocks of player > 0:
+				if scalevalue of player >= 3:
+					say "     You set Rachel down on the lovers bench and she stands on it with her hands gripping the back rest.  Now elevated for easier mounting, the small mouse raises her tail and wiggles her rear with a needy squeak.  Her exposed pussy is dripping wet and her musine cock is hard and dribbling precum, her body as aroused by the lustful scents as yours is.  You move in behind her and get your hard cock lined up with her wet cunt.  She pushes herself back onto your cock quickly, releasing another squeak as she grips the bench.  Leaning overtop of the smaller mouse girl, you grab the back of the bench as well and give her ears a nibble as you start pounding into her.  She shivers in pleasure at the nibbles and slides her slender tail around your waist.";
+					say "     As you continue thrusting into her, you can feel her pleasure as well as your own, sharing your growing love for each other.  You can feel the quivers of her pussy around your cock as well as the intense sensations this gives her.  You can feel the pulse of her cock as well as the growing pressure inside her balls as you stroke her maleness.  You can even sense her gripping the wood tightly and her small claws digging into it to leave fresh marks on the bench.  'Oh, my love.  It feels so good to be with you.  We should be together forever,' the busty little herm squeaks.  'Accept your place with me and it will always be like this.'  You moan and nuzzle at her neck, feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+				otherwise:
+					say "     You and Rachel climb up onto the bench, getting onto all fours atop it.  Both being rather small, you can easily both fit on the bench.  The small mouse raises her tail and wiggles her rear with a needy squeak.  Her exposed pussy is dripping wet and her musine cock is hard and dribbling precum, her body as aroused by the lustful scents as yours is.  You move in behind her and get your hard cock lined up with her wet cunt.  She pushes herself back onto your cock quickly, releasing another squeak as she grips the bench.  Leaning overtop of the smaller mouse girl, you place a hand on the back of the bench for support as the other moves to your sexy lover's cock as you start pounding into her.  She shivers in pleasure at the stroking and slides her slender tail around your waist.";
+					say "     As you continue thrusting into her, you can feel her pleasure as well as your own, sharing your growing love for each other.  You can feel the quivers of her pussy around your cock as well as the intense sensations this gives her.  You can feel the pulse of her cock as well as the growing pressure inside her balls as you stroke her maleness.  You can even sense her gripping the wood tightly and her small claws digging into it to leave fresh marks on the bench.  'Oh, my love.  It feels so good to be with you.  We should be together forever,' the busty little herm squeaks.  'Accept your place with me, with all of us, and it will always be like this.'  You moan and nuzzle at her neck, feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+				say "     After a powerfully long orgasm that pumps your seed into the cute mouse girl's pussy while her own seed blasts to splatter across the backrest, you slide your cock from her.  Your companion is extra-snugly after the lovemaking, nuzzling at your side as she holds your hand in hers and wraps her tail around your wrist, and you happily return this affection, feeling much closer to her.";
+			otherwise:
+				say "     Running your hands over each other, you can feel the mousie's stiff cock pressing against you and you can sense what she wants of you.  Unwilling to deny the needs of your sexy little lover, you lay your [bodytype of player] across the bench with your hips and legs hanging off the edge, offering up your [if cunts of player > 0]pussy[otherwise]your ass[end if] to the mouse girl.  She runs her little paws over your backside and squeaks happily, pleased that this puts you at the perfect height for her cock.  Moving in behind you, she lines up her throbbing maleness with your waiting hole and slowly sinks into you.  You can't help but moan and squeak in delight as you're penetrated, gripping the wood firmly as she starts pounding into you.";
+				say "     As she continues thrusting into you, you can feel her pleasure as well as your own, sharing your growing love for each other.  You can feel her cock inside you as well as the intense pleasure of your [if cunts of player > 0]wet vagina[otherwise]tight hole[end if] sliding across her hard flesh as well as the growing pressure inside her balls.  You can feel the quivering of her aroused pussy and the wet juices running down her thighs, as well as the slap of her own balls against her clit as she thrusts.  Sharing in all of this, you moan loudly and grip the bench firmly, digging fresh marks into it with your nails.  'Oh, my love.  It feels so good to be with you.  We should be together forever,' the busty little herm squeaks.  'Accept your place with me, with all of us, and it will always be like this.'  You moan and nod eagerly, pressing back into her thrusts and feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
+				say "     After a powerfully long orgasm that sends her hot seed into your [if cunts of player > 0]waiting womb and your synchronous climax[otherwise]stuffed bottom[end if], she slides her cock slowly from you, caressing your ass.  Your companion is extra-snugly after the lovemaking, nuzzling at your side as she holds your hand in hers and wraps her tail around your wrist, and you happily return this affection, feeling much closer to her.[impregchance]";
+			infect "Mental Mouse";
+			now libido of player is libido of player / 2;
+			decrease humanity of player by 20;
+			if "Pure" is listed in feats of player, increase humanity of player by 5;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by 5;
+			increase xp of mouse girl by ( level of mouse girl + 1 ) * 3;
+			increase score by 20;
 		otherwise:
 			increase libido of player by ( 100 - libido of player ) / 4;
 		now Lovers Bench is resolved;
+
+
+PeachTree is a situation.  The level of PeachTree is 7.
+The sarea of PeachTree is "Park";
+peachtreefight is a number that varies;
+
+when play begins:
+	add PeachTree to badspots of hermaphrodite;
+
+Instead of resolving a PeachTree:
+	now peachtreefight is 3;
+	say "     Straying down a disused path, you find yourself approaching a large peach tree.  The tree is laden with large, juicy fruit.  Your mouth salivates just from the scent coming from it";
+	if hp of Joanna >= 7 and hp of Joanna < 90:		[Joanna's seed]
+		say ".  As you start to step towards the tree, intent on having your fill of its fruit, your belly stirs.  You stifle a groan as Joanna's seed inside you squirms in an uncomfortable way.  Having not felt that reaction from it before, you stop yourself short and realize that you were about to rush up to the tree without pausing to check if it was safe.  Now that you look, you can see that the earth around the base of the tree has been disturbed and proper scrutiny of the canopy shows some half-hidden vines.";
+		say "     The fruit is still quite tempting, but it seems to not be as free as it first appeared.  Shall you still try to gather some?";
+		if the player consents:
+			say "     Deciding to risk it, you get ready and approach the tree.  As you near the trunk, the seed inside you stirs again, stimulated by the scent of the other plant nearby until it cannot help but push its vine out and burrow into the soil.  The vines from the canopy take this opportunity to make a grab for you, but you are ready for them and prevent them from latching onto you by surprise.";
+			challenge "Parasitic Plant";
+			if lost is 0:
+				say "     Disentangling yourself from the tendrils in the tree and freeing yourself of the vine inside you, you make a quick grab for some of the fruit.  You snag a couple of them and then make a run for it as more vines rustle in the canopy.  As you move further from the tree, Joanna's seed settles down again.  You stroke your belly as if petting it, thankful for the warning it tried to give before its instincts took over.";
+				increase carried of tasty peach by 3;
+				increase score by 10;
+			otherwise:
+				infect "Parasitic Plant";
+				say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you.  The plant's semen has a distinct peach flavour to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices.  Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home.  Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released.  Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
+				now libido of player is libido of player / 2;
+				decrease humanity of player by 10;
+		otherwise:
+			say "     Deciding not to risk it, you cover your nose and head back the way you came.";
+	otherwise:
+		if plantdefeat is 1:
+			say ".";
+			say "     As you approach the peach tree, there is a squirming sensation from your belly before the slumbering plant inside you pushes free.  It digs its main vine into the soil near the tree, trapping you there as other vines start to descent from the canopy.  Tricked by the plant's alluring scent and tempting fruit, you are now caught in a fight with the vines.  Between those from the tree and the one inside you, you will have a struggle on your hands.";
+			decrease hp of player by hp of player / 4;
+		otherwise:
+			say ".";
+			say "     As you approach the peach tree, your mind is intent only on those delicious, juicy fruit and blind to all else until it is too late.  As you reach up to grab some of the peaches, vines whip out from the canopy, wrapping around your wrists and grabbing you tightly.  As you struggle against this, another tendril erupts from the soil at the base of the tree, driving itself into your [if cunts of player > 0]pussy[otherwise]anus[end if] and swelling to try and lock itself inside you.  You groan in a mix of discomfort and pleasure at this unusual intrusion and struggle to break free, but you will be fighting at a disadvantage this time as the plant's taken you by surprise.";
+			decrease hp of player by hp of player / 5;
+		challenge "Parasitic Plant";
+		if lost is 0:
+			say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit.  You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
+			increase carried of tasty peach by 3;
+			increase score by 10;
+		otherwise:
+			infect "Parasitic Plant";
+			say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you.  The plant's semen has a distinct peach flavour to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices.  Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home.  Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released.  Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
+			now libido of player is libido of player / 2;
+			decrease humanity of player by 10;
+	now peachtreefight is 0;
+	now PeachTree is resolved;
+
+
+Table of Game Objects(continued)
+name	desc	weight	object
+"tasty peach"	"A very plump and juicy peach.  It is much larger than a typical peach, but smells all the more delicious."	1	tasty peach
+
+tasty peach is a grab object.  tasty peach is temporary.
+
+the usedesc of tasty peach is "[yummypeach]";
+
+to say yummypeach:
+	if "Junk Food Junky" is listed in feats of player:
+		say "You decide to take a bite out of the juicy peach, finding it nearly as good as those gummy peach candies you like so much.  The fruit slakes your hunger and thirst a little, though you can't help but become a little aroused as well.  Peaches have been called aphrodisiacs by some, after all.";
+		decrease thirst of player by 5;
+		decrease hunger of player by 2;
+	otherwise:
+		say "You decide to take a bite out of the juicy peach, savouring its soft flesh as you eat it.  The fruit slakes your hunger and thirst a little, though you can't help but become a little aroused as well.  Peaches have been called aphrodisiacs by some, after all.";
+		decrease thirst of player by 6;
+		decrease hunger of player by 3;
+	increase libido of player by 10;
+	if thirst of player < 0, now thirst of player is 0;
+	if hunger of player < 0, now hunger of player is 0;
+	if libido of player > 100, now libido of player is 100;
+
+instead of sniffing tasty peach:
+	say "The oversized peach smells delicious and tempting.";
 
 
 Section 5 - State Fair Events
@@ -385,12 +458,12 @@ Instead of resolving a Concession Stand:
 	if foodvendor is 0:
 		say "     Wandering through the bright lights of the state fair, you wander into a cluster of food stands advertising a variety of fried foods and sugary treats.  Most are closed up right now, but one seems to be open with a strange figure manning the stand.  This man is wearing a bright green suit with yellow trim and a yellow bowler hat.  While you think he's human, his features seem to be strangely shifting, making it hard for you to pin down exactly what he looks like.  At moments, you think you see a hint of lupine in his eyes or a feline muzzle, but then you can no longer discern these traits.  For a second you think you see a broad tail, but then it is gone as if it were never there.  Confused by all this, you miss the first part of his sales pitch, where he's trying to entice you into buying some of the snacks he has on sale.  '...so like I said, not a penny from your pocket do I want for them.  A delicious snack to satisfy your cravings and a cool drink to help you beat the heat,' he says as he motions to the tasty looking treats on display and the cans of soda chilling in an ice barrel.  'So, we got a deal?' he asks, holding out his hand.";
 		if the player consents:
-			say "     As you take the strange salesman's, you can feel a tingle run up through your arm.  The guy grins and hops onto his counter, sitting in front of you as he unzips his pants.  He whips out his cock, and like the rest of him, it is difficult to discern its features.  At times, you think it more feline, others more equine.  Even as you wrap your lips around it and start sucking, the feel and taste on your tongue changes over and over again.  You momentarily find yourself wondering when you started sucking his cock and why, but your mind can't hold onto it and instead you start puzzling over the form of his cock again.  You felt a knot there for a few bobs of your head, but now it seems more like a pair of hemipenises instead.  You keep sucking at his shifting cock, your hazy mind focused on its ever-changing shape and taste.  Eventually, he grips your head and holds you down into his lap as his cock gets quite long and is stuffed down your throat, unleashing a thick rush of cum into your belly.";
+			say "     As you take the strange salesman's hand, you can feel a tingle run up through your arm.  The guy grins and hops onto his counter, sitting in front of you as he unzips his pants.  He whips out his cock, and like the rest of him, it is difficult to discern its features.  At times, you think it more feline, others more equine.  Even as you wrap your lips around it and start sucking, the feel and taste on your tongue changes over and over again.  You momentarily find yourself wondering when you started sucking his cock and why, but your mind can't hold onto it and instead you start puzzling over the form of his cock again.  You felt a knot there for a few bobs of your head, but now it seems more like a pair of hemipenises instead.  You keep sucking at his shifting cock, your hazy mind focused on its ever-changing shape and taste.  Eventually, he grips your head and holds you down into his lap as his cock gets quite long and is stuffed down your throat, unleashing a thick rush of cum into your belly.";
 			say "     The vendor releases you and flips back behind the counter.  With a broad grin that seems momentarily feline, he passes you a tray of snacks and a can of soda.  You head off, still in a bit of a daze, licking your lips as you try to figure out the flavour of cum you just guzzled down.";
 			randominfect;		[first one picks a valid critter while infecting]
 			infect;			[second one gives the same infection]
-			add "chips" to invent of player;
-			add "soda" to invent of player;
+			increase carried of chips by 1;
+			increase carried of soda by 1;
 			decrease humanity of player by a random number between 8 and 6;
 			if "Pure" is listed in feats of player, increase humanity of player by a random number between 2 and 5;
 			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 1 and 4;
@@ -406,8 +479,8 @@ Instead of resolving a Concession Stand:
 				say "     As you walk up to the stand, the gentleman sets another tray of fried treats and a can of soda on the counter, then leaps over it.  You don't say a word as he whips out his cock again.  Any thoughts of discussion or dealing with the man fade as you again bury his throbbing meat in your mouth and suck away at it.  He chuckles softly and rubs your head, pumping into your mouth.  You run your tongue over some feline barbs, then across a pointed, canine glans.  It is thick, then long, then almost human, then unnaturally ridged.  These changes continue as you try to figure out each new one, loving the ever-changing delight more and more.  You put a hand to his ballsac and find it changing as well.  The orbs inside always remain quite large and heavy, though their shape shifts subtly.  But more apparent is the soft fur, no the hard scales, no the smooth skin, that covered his scrotum.  This time your lustful cocksucking is rewarded when you feel a knot briefly locking his cock in your mouth and he sprays thick cum into your mouth.  When the knot fades away as if never there, you pull your mouth back and swallow down the semen.  You take your purchased wares with a lustfully clouded mind that lingers as you wander back into the flashy fair.";
 				randominfect;		[first one picks a valid critter while infecting]
 				infect;			[second one gives the same infection]
-				add "chips" to invent of player;
-				add "soda" to invent of player;
+				increase carried of chips by 1;
+				increase carried of soda by 1;
 				decrease humanity of player by a random number between 10 and 20;
 				if "Pure" is listed in feats of player, increase humanity of player by a random number between 3 and 6;
 				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 2 and 5;
@@ -417,8 +490,8 @@ Instead of resolving a Concession Stand:
 				say "     Rubbing his balls and sucking his cock, you lavish attention upon him, becoming more and more eager to please him.  When he finally cums, his thick seed comes blasts from a large, leonine cock and you gulp it all down, rubbing your belly as his semen fills it.  You get up and lick your lips, barely remembering to take the food items.  You were so focused on getting the cum, you barely remembered the purchase at all this time.";
 				randominfect;		[first one picks a valid critter while infecting]
 				infect;			[second one gives the same infection]
-				add "chips" to invent of player;
-				add "soda" to invent of player;
+				increase carried of chips by 1;
+				increase carried of soda by 1;
 				decrease humanity of player by a random number between 12 and 24;
 				if "Pure" is listed in feats of player, increase humanity of player by a random number between 4 and 8;
 				if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 3 and 6;
@@ -426,13 +499,16 @@ Instead of resolving a Concession Stand:
 			otherwise if foodvendor is 3:
 				say "     Your friend the vendor smiles very happily as you come over again.  He doesn't bother to put out any food this time and hops fully over the counter.  Putting his shifting hands (paws?) on you, he leans you over the counter and unzip his fly.  Feeling him move to grope your ass, you moan softly and get your clothes and gear off.  He runs his fingers (talons?) down your back and rubs his throbbing shaft against your rear, making you moan again.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				if cunts of player > 0:
 					say "     The vendor lines up his cock to your pussy, then sinks it into you while it is small and musine in form.  It then shifts and becomes thick and equine, filling you deeply.  This sudden change leaves you gasping in pleasure, writhing over his meat.  It changes inside you again and again as he pounds away at you.  His penis drives into you with a canine knot that pops tightly into you, then pulls out with feline barbs that stimulate you walls deliciously.  It rubs your vaginal folds with draconic ridges, then pushes past your cervix as a slimy tendril[if cocks of player > 1].  His hands, feeling like velvety paws for a moment, grip your cocks and stroke them as he fucks you good and hard[otherwise if cocks of player is 1].  His hand, feeling like a velvety paw for a moment, grips your cock and strokes it as he fucks you good and hard[end if].  You writhe under this ever-changing rutting, loving every unique moment of pleasure it gives you.";
 				otherwise:
 					say "     The vendor lines up his cock to your tight asshole, then sinks it into you while it is small and musine in form.  It then shifts and becomes thick and equine, filling you deeply.  This sudden change leaves you gasping in pleasure, writhing over his meat.  It changes inside you again and again as he pounds away at you.  His penis drives into you with a canine knot that pops tightly into you, then pulls out with feline barbs that stimulate you walls deliciously.  It rubs against your spread anus with draconic ridges, then pushes deep into your bowels as a slimy tendril[if cocks of player > 1].  His hands, feeling like velvety paws for a moment, grip your cocks and stroke them as he fucks you good and hard[otherwise].  His hand, feeling like a velvety paw for a moment, grips your cock and strokes it as he fucks you good and hard[end if].  You writhe under this ever-changing rutting, loving every unique moment of pleasure it gives you.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				say "     'You love that, don't you?' he says in a soft, alluringly feline voice as ear while pounding a new cock into you with each thrust.  You respond by nodding your head eagerly.  'Of course, you'll want it again and again, won't you?'  You can only nod all the more, agreeing with his virile, lapine tone.  'You want to stay here and be my slutty pet to get it all the time.  Just think of it, being my slut, changing into different creatures for me to fuck.  Always new pleasures to be had.  You want that, don't you?' he rumbles in your ear, sounding strong and lupine now.  Lost in the haze of his enthralling power, you can't help but nod vigorously, agreeing to become his, wanting to be used like this over and over again.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 				say "     Having given in to him, you can feel the last of your will draining away, succumbing to being your master's slutty pet.  His to change.  His to fuck[if cunts of player > 0].  His to breed[end if].  And he rewards you by driving his cock deep inside you, feeling like an equine's, but so much larger, perhaps an elephant?  With his giant cock thrust deep inside you, he blasts his hot load into you, filling your [if cunts of player > 0]womb[otherwise]ass[end if] with his virile seed.  You moan and pant in delight as its volume bloats your tummy a little, making you feel so full and happy with so much of your new master's cum inside you.";  
 				now humanity of player is 9;
 				increase foodvendor by 1;
@@ -502,8 +578,7 @@ Instead of resolving a Beach Party:
 				challenge "Bottlenose Toy";
 				if dolphinflatablefight is 1:
 					say "     With the green dolphin sent back into the water, the girls start playing around with it.  Some start fingering themselves and each other, rather worked after their amusement with you.  With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks.";
-					add "soda" to invent of player;
-					add "soda" to invent of player;
+					increase carried of soda by 2;
 					increase score by 10;
 	if dolphinflatablefight is 2:
 		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once.  One has the last of the sodas.  But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily.  The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you.  Their rubber tongue glide across your skin and seek to tease you all over.  Two set to work on your nipples[if breast size of player > 0], squeezing your breasts[end if].  Others kiss and lick at your face and nibble at your ears.  Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin.  Her tongue plays over your [if cocks of player > 1]sticky, throbbing [cockname of player] cocks[otherwise if cocks of player is 1]sticky, throbbing [cockname of player] cock[otherwise if cunts of player > 1]sticky, juicy pussies[otherwise if cunts of player is 1]sticky, juicy pussy[otherwise]sticky thighs and barren crotch[end if].  Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills.  All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you[if cocks of player is 0 and cunts of player is 0].  Once you're finally all cleaned up,[otherwise].  When you finally cum,[end if] the pink dolphins release you, heading back to frolic in the water again.";
@@ -531,6 +606,7 @@ Instead of resolving a Beach Party:
 			follow the sex change rule;
 			follow the sex change rule;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if libido of player < 60, now libido of player is 60;
 		if humanity of player < 10:
 			say ".  With your mind fading away, you giggle happily and bound off into the water to play with your new friends as you forget yourself entirely and become a fun-loving beach toy.";

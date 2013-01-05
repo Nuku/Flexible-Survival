@@ -7,20 +7,8 @@ Pure pool is a situation.
 The sarea of Pure Pool is "Park";
 purpol is a number that varies.
 purpolu is a number that varies.
-
-
-
-
-
-to wyvernify:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Wyvern":
-			now monster is y;
-			break;
-	infect;
-	infect;
-	infect;    
+when play begins:
+	add Pure Pool to badspots of girl;
 
 
 to say stop wyvern:
@@ -91,7 +79,9 @@ instead of resolving a pure pool:
 		say "Do you wish to drink from it?";
 		if the player consents:
 			say "You dip your head into the cloudy pool and drink deeply.";
-			wyvernify;
+			infect "Wyvern";
+			infect "Wyvern";
+			infect "Wyvern";
 			now the thirst of the player is 0;
 		otherwise:
 			say "You keep clear of the infected water.";

@@ -9,7 +9,9 @@ Section 1 - Monster Responses
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 Spritedefeat is a number that varies.
 Spriteconsent is a number that varies.
+
 to say Sprite attack:
+	if fightstatus is 3, now fightstatus is 2;
 	if hp of player is greater than 0:
 		say "Noticing that you've stopped resisting their efforts, the swarm gives a collective 'YAY!' and dances around you in an ecstatic dance of welcoming before they buzz in all the closer, getting to work.";
 		now Spriteconsent is 1;
@@ -17,6 +19,8 @@ to say Sprite attack:
 	if a random chance of 1 in 2 succeeds and cunts of player is greater than 0:
 		say "You look down to see [(cunt length of player divided by 4) plus one] sprites working their way into you, one after the other. Despite their forms, they slip in smoothly, wings buzzing inside of you, exciting your tunnel and clit and sensing pleasure pulsing through your form as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[impregchance]";
 		wait for any key;
+	otherwise if "MPreg" is listed in feats of player and cunts of player is 0 and a random chance of 1 in 2 succeeds:
+		say "One of the sprites caresses your rear, nuzzling and kissing at it.  'Mmm... there's something special about this spritely boy, girls.  There's a nice, warm womb in him,' she giggles.  That said, she starts rubbing at your back passage, working your anus open.  You moan softly as she starts squirming her way inside.  She's followed by [if scalevalue of player is 1]another[otherwise][scalevalue] others[end if].  They slip in smoothly, wings buzzing[if cocks of player > 0] and fluttering against your prostate[end if] as they slowly penetrate with their tiny forms, making their way towards your waiting womb.[mimpregchance]";
 	if a random chance of 1 in 2 succeeds:
 		say "Your body is swarmed with the cloud, lifted up into the air and caressed from all sides. It's like sleeping on a cloud as they hold you up with hundreds of tiny hands while another hundred work on rubbing your every erogenous zone in alternating waves that has you paralyzed with pleasure.";
 		wait for any key;
@@ -37,8 +41,21 @@ to say Sprite attack:
 
 [ [Sprite loss] ]
 To say Sprite loss:
+	if zephyrtask is 3, increase zephyrpests by 1;
+	if fightstatus is 3, now fightstatus is 1;
 	say "The sprites disperse in an unhappy cloud of defeated fae kind, taking off in all directions.";
-	
+	if (libido of player is greater than 50 or humanity of player is less than 30) and cocks of player is greater than 0:
+		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";
+		say "You strip off your clothes, revealing your throbbing [cock size desc of player] [cock of player] dick. You peer back into your pack, and catch three of the pixie-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
+		say "With the bag opened, the captured sprites fly out and circle around you.  They coax you to sit on a nearby crate, spreading your legs for easier access to your [cock of player] shaft. Their wings tease your erect phallus as they flit around, examining your groin before getting to work. They start licking at you as they dart around your cock, leaving thin trails of saliva up and down your shaft. The largest one licks at your tip and giggles as you twitch and start to moan from their attentions. She manages to take your whole tip into her mouth and begins massaging your glans with rolling movements of her tongue. Others hold on to your shaft and start flapping their wings rapidly. It feels like your cock is covered in a bunch of vibrators. [if cock width of player is greater than 0]The last two tend to your [ball size] balls, licking and buzzing until you are lost in a haze of pleasure. [end if]After what feels like an hour, but was really only a few minutes, you can't take any more. You climax, covering the largest sprite from head to toe in your seed.";
+		say "After you recover, you open your pack and release the still-trapped sprites. One of the smaller fairies flies up to your ear as the rest fly away. 'If that was all you wanted, why didn't you just ask?' She circles your head once more before flying off.";
+	otherwise if (libido of player is greater than 50 or humanity of player is less than 30) and cunts of player is greater than 0:
+		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them.";
+		say "You strip off your clothes, revealing your [breast size desc of player] chest and aching pussy. You peer back into your pack, and catch three of the pixie-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
+		say "With the bag opened, the captured sprites fly out and circle around you.  They coax you to sit on a nearby crate, spreading your legs for easier access to your [cockname of player] [cunt size desc of player]pussy. They flit around you, their wings teasing all your most sensitive places. As you lean against the wall behind you, the group of sprites gather at your [breast size desc of player] breasts. They caress your soft flesh, massaging your bosom, tickling you with their wings, and teasing your nipples with their little tongues. The largest is able take your whole nipple in her mouth, and she sucks on it enthusiastically. As they pass from one breast to the next, one stays to tend to each breast. The rest continue teasing their way down your chest until they reach your dripping honey pot.";
+		say "They pass it by without pause, leaving you hot and breathing heavily in anticipation. They start down at your feet, tickling and massaging them in turn. The work their way up your calves, and stop at your thighs. The sprites squeeze and caress and tickle your inner thighs, getting maddeningly close to the aching need between your legs.";
+		say "Finally, they turn their attention to your sopping wet pussy. They lick and stroke and tickle at you. One takes your clit into her mouth and sucks on it rigorously, driving you to your peak. Just as you are about to climax they stop once again. You look down at them questioningly through your lusty haze just in time to see one fly headfirst into your pussy. Stars explode into your vision as you finally climax with the sprite wiggling inside you. The other sprites start licking and stroking your cunt and massaging your breasts with their friend still squirming inside you. They make you cum and again and again in quick succession until your vision soon goes dark.";
+		say "You wake up some time later in a puddle of your own sweet love juices. The sprites are nowhere to be seen. You look for your backpack and see it lies open. Free sprites must have released the others after you passed out. You look around for your clothes and get dressed, still a bit dazed from your incredible time with the little fairies.";
 	
 Section 2 - Monster Insertion
 

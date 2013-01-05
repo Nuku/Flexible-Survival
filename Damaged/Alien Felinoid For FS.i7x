@@ -27,7 +27,7 @@ to say felinoid attack:
 						increase catnum by 1;
 						infect;
 					otherwise:
-						say "You gasp as he paces beside you and, reaching a fore-leg over your shoulder, leans his weight into you, forcing your chest to lower down into the dirt.[line break]He grips at your neck tightly, a reminder of just who is in control. Obediently your body gives in to his implied threat and you feel your rear raise up under him, pressing the small of your back hard against his underbelly.[line break]Gripping a little tighter at your neck, he pulls himself forward, or you backwards, you are not sure, all you do know is with that first movement, he has found his mark and sunk in.[line break]You whine loudly, the feel of his spines dragging into you, his girth now swelling further to fill your depths, depths that had yearned for this moment.[line break]";
+						say "You gasp as he paces beside you and, reaching a fore-leg over your shoulder, leans his weight into you, forcing your [bodydesc of player] chest to lower down into the dirt.[line break]He grips at your neck tightly, a reminder of just who is in control. Obediently your body gives in to his implied threat and you feel your rear raise up under him, pressing the small of your back hard against his underbelly.[line break]Gripping a little tighter at your neck, he pulls himself forward, or you backwards, you are not sure, all you do know is with that first movement, he has found his mark and sunk in.[line break]You whine loudly, the feel of his spines dragging into you, his girth now swelling further to fill your depths, depths that had yearned for this moment.[line break]";
 						say "Arching your back further, trying to maximise how much he had worked into you, you feel your breasts push down and into the ground, nipples still rock hard.[line break]He begins, working his hips slowly at first, then with increasing speed and the spines, now buried far within your love cavern, both torture and pleasure your alternately from moment to moment as he works himself deeper and faster into you.[line break]At once, without warning, your release tears a hole in your existence and you are lost in a crying scream that echoed loudly.[line break]Panting hard, his weight still bearing in and out of your breeding cavern you knew then, that in this moment at least, you are no longer your own person, you are his, his sex toy, his breeding hole, his to fuck as much as he wants. And you would go to him willingly.[line break]The thought of that, as much as the constant stimulation pulls you into another release, you roared this time, he had released your neck at some point and you are free to act, partially at least, in any manner your twisted mind wishes, and with the afterglow of pleasure still saturating you, you act in one definitive way, by rocking your hips to meet his driving thrusts.[line break]";
 						say "He was purring, you feel it through your shoulder muscles, he was purring because you are such a good mate for him. That thought flows through you, a feeling of ascent accompanying it. This time you can feel yourself building, no longer slaved to the explosive release of earlier.[line break]You feel him grip back down on your ruff and rumble a growl low into your body, shaking your very bones. His member begins to flare, pushing the spines out further, almost painfully into your soft, delicate insides, almost... all pain flows away, there is only pleasure as you feel him build and, with one final heave of his muscles send his shaft, his spines and his seed burning into you.[line break]He releases your neck again, crying his dominance out loudly and you feel your own voice rise through the breaking surf of pleasure, to join his in one drawn out, simultaneous release.[line break]So much, he had put so much of himself into you, you lay there, now fully on your belly, his member still buried deep, both of you too tired to want to rouse.[line break]After what seems like an eternity, he pulls loose and, licking you a few times, paces off.[impregchance][impregchance][impregchance][impregchance][impregchance][impregchance]";
 						infect;
@@ -118,7 +118,7 @@ When Play begins:
 
 Section 3 - Monster Heat
 
-[ IMPORTANT READ ME  - Thiss section is compleately optional. if you do NOT want to go through the trouble of adding a particular heat text of events to your creature, just delete between the two marker comments, for clarity i have included the German shepard entry. +++++]	
+[ IMPORTANT READ ME  - This section is completely optional. if you do NOT want to go through the trouble of adding a particular heat text of events to your creature, just delete between the two marker comments, for clarity i have included the German shepard entry. +++++]	
 [ +++++ ]
 
 Table of infection heat (continued)
@@ -136,17 +136,17 @@ to say felinoidheat end:
 		decrease libido of player by 40;
 	otherwise:
 		now libido of player is 0;
-		
+
 When Play begins:
 	Choose a blank row from Table of infection heat;
 	now infect name entry is "Felinoid";	[ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 5;					[ This is the number of days a heat 'cycle' lasts, usualy 7 ]
-	now heat duration entry is 2;					[ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.] 
+	now heat cycle entry is 5;					[ This is the number of days a heat 'cycle' lasts, usually 7 ]
+	now heat duration entry is 2;					[ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.] 
 	now trigger text entry is "His hips connecting again and again, pounding into your depths, you feel him bite down on your neck and you are roaring in bliss moments later. Gasping, you shake your head, trying to clear the mental images and scenes that kept replaying over and over. You lift your hand up to your nose and pull it away again quickly, your mind connecting that smell with one thing, 'I'm in heat...' you murmur under your breath and try to hold the images at bay.";  [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is "Swollen and slowly dripping fluids, your entrance aches for a lion to fill it, you find yourself, nose in the air, slowly following a scent before you regain some control and stop.";				[ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
 	now heat end entry is "[felinoidheat end]";		
-	now inheat entry is "[felinoidheat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat riaises libido value by 5 every 3 hours. ]
-	
+	now inheat entry is "[felinoidheat]";			[this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
+
 
 
 	[ +++++ ]	

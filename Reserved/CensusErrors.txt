@@ -1,4 +1,6 @@
 d - non-folder found where author folders should be<br>
+Story.ni by Flexible Infection - title contains a full stop<br>
 Story.ni by Flexible Society Main File - title contains a full stop<br>
 Story.ni by Inform - title contains a full stop<br>
+Mall Rat for FS.i7x by Nuku Valente - appears not to be an extension (its first line does not end 'begin(s) here', as extension titling lines must)<br>
 Template For FS.i7x - non-folder found where author folders should be<br>

@@ -44,6 +44,7 @@ to say losetosiamesecat:
 		otherwise:
 			say "     The female takes advantage of your position to move in front of you.  Taking your head in her paws, she presses your face between her legs, pushing it against her wet pussy.  The fight clearly got her excited and her scent fills your nose, further arousing you.  She moans and purrs loudly as you start to lick her.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     The male behind you slides his hard shaft in and out of you.  His paws stroke over your hips, sharp claws against your skin as if to keep you in place, but by this point, you are lost to the lust and have no interest in removing that cock that's fucking you so nicely.  His pace is measured and disciplined, hitting all your sensitive spots and steadily building your arousal, making you moan and press back into each firm thrust.";
 		if cocks of player > 0:
 			say "     The female beneath you works at your cock with zeal, giving it almost unending attention.  She only slides her muzzle off it occasionally to lick further back over your balls and spread hole as the male fucks you.  You can hear him moan softly and poke you with his claws a little harder whenever her tongue is back there and brushes against his cock while licking you.";
@@ -54,15 +55,15 @@ to say losetosiamesecat:
 		otherwise:
 			say "     You can feel that hard cock drive into your ass again and again, making your hips quiver as you get closer to cumming.  His paws knead at your ass, claws poking at it as he thrusts.  Your tight ring squeezes around his hard meat as his penis presses against your prostate with each firm push into your rear.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if cocks of player > 0:
 			say "     The feline's rough tongue continues licking and sucking at your cock, lapping your precum from your tip.  Glancing over, you can see her fingering herself as she does so.  The sight of her fingers sinking into her wet pussy is enough to push you over the edge and your cock throbs in her muzzle, unleashing shot after shot of your hot seed into her waiting mouth.  From the loud moans she's making under you, you suspect that she's quite pleased with her treat and cumming as well.";
 		otherwise:
 			say "     The female grips your head more firmly and starts grinding her wet puss to your face as her moans get louder and louder.  Soon enough, your playful tongue pushes her over the edge and she cums hard, further soaking you with her sweet juices.  You lick and lap them up eagerly while your pussy clamps down on the cock filling you.  You moan and push back against the male as your orgasm hits, spilling your juices over his shaft.  Above you, you can feel the female lean a little forward and can hear the soft sounds of her kissing the tom fucking you.";
 		if cunts of player > 0:
-			say "     With your climax, you squeeze your dripping pussy around the feline's hard cock, inner walls quivering around it.  He mewls in pleasure and slams his dick into you again and again until you're moaning and mewling as well.  Hearing that, he pushes himself deep inside you and unleashes his hot, feline seed.  You can feel his hot cum flowing into you, painting the back of your vagina and flowing up into your womb.";
-			say "[impregchance]";
+			say "     With your climax, you squeeze your dripping pussy around the feline's hard cock, inner walls quivering around it.  He mewls in pleasure and slams his dick into you again and again until you're moaning and mewling as well.  Hearing that, he pushes himself deep inside you and unleashes his hot, feline seed.  You can feel his hot cum flowing into you, painting the back of your vagina and flowing up into your womb.[impregchance]";
 		otherwise:
-			say "     With your orgasm, you squeeze your tight ass around the feline's hard cock, inner muscles quivering around it.  He mewls in pleasure and slams his dick into you again and again, pounding your prostate until you're moaning and mewling as well.  Hearing that, he pushes himself deep inside you and unleashes his hot, feline seed.  You can feel his hot cum flowing into you, filling your bowels with his thick load.";
+			say "     With your orgasm, you squeeze your tight ass around the feline's hard cock, inner muscles quivering around it.  He mewls in pleasure and slams his dick into you again and again, pounding your prostate until you're moaning and mewling as well.  Hearing that, he pushes himself deep inside you and unleashes his hot, feline seed.  You can feel his hot cum flowing into you, filling your bowels with his thick load.[impregchance]";
 		say "     The three of you continue to thrust and grind against one another until you are all satisfied and your orgasms wind down.  The male slides himself slowly from you, some cum leaking out of your well-used hole before you can squeeze it shut to keep the rest warm and wet inside you.  As the female moves back, you sag to the ground, panting softly and enjoying the afterglow while the pair head off, hand in hand.";
 	otherwise:
 		if cocks of player > 0:
@@ -74,6 +75,7 @@ to say losetosiamesecat:
 		otherwise:
 			say "     The tom mewls softly as he watches his interlinked partner riding your hard cock.  Not wanting to be left out, he moves to your head, positioning his stiff cock, human-like and russet brown, over you.  His precum drips down onto your lips as he brings it over your mouth.  You lick away the pre from your lips, moaning softly at its enticing flavour.  When he brings it down to your lips, they part easily, letting him slide it into your mouth.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if cocks of player > 0:
 			say "     Riding your cock slowly, the female runs her paws over your chest and kneads at it with her paws.  You can feel her sharp claws against your skin, making you shiver a little.  Her wet puss squeezes firmly around your cock each time she pushes her hips down and takes it into her, your hips thrusting up in response.";
 		otherwise:
@@ -84,6 +86,7 @@ to say losetosiamesecat:
 		otherwise:
 			say "     The female's hips grind against you harder and faster as her excitement builds.  You can feel her claws and teeth along your leg as she scritches and nibbles along it.  Her wet puss and soft folds feel so nice against you, making you moan all the louder.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     The tom's thrusts pick up, pumping himself between your wet lips faster.  His paws hold your head steady as he thrusts into you again and again.  His precum flows steadily into you until finally he throws his head back and mrowls in ecstacy, shooting thick cum into your mouth and down your throat.  You gulp it down greedily, lustfully eager to have this kitty's seed in your tummy, moaning loudly as you cum as well.";
 		if cocks of player > 0:
 			say "     Watching the male cumming and feeling you set off moments later, shooting your hot seed into her eager pussy.  She grinds down onto your firmly and squeezes her pussy around you tightly, climaxing as well.  Her inner walls flutter around you, milking your shaft for as much as you'll give.  Your hips buck, thrusting into her until you're drained.";
@@ -131,6 +134,7 @@ to say siamsex1:	[ride cock]
 	say "     Having come to the decision that you want something hard to fill you, you roll the male over onto his back and straddle him.  With a hand on his chest and the other at his cock, you start to stroke him to erection.  You grind your wet pussy down onto his shaft before lining it up so you can take him in.  With a soft moan of pleasure, you ease down, feeling that russet brown shaft sliding inside you.";
 	say "     You rock your hips and start to ride the feline's cock, making him mewl cutely beneath you.  Your hands stroke his chest, petting him to get him to purr louder.  His cock throbs inside you as he starts to thrust up into you, starting to recover from the fight enough to join in.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     And speaking of recovering, his female twin starts to rouse as well and moves closer.  You reach over and start to play with her pussy with one paw while continuing to stroke the tom's chest with the other.  They purr happily, nuzzling and kissing until finally the cute male has had enough and his hot seed shoots into you.  At almost the same point, the female's pussy quivers around your fingers and her hot juices flow.  Your own climax quickly follows, milking at the kitty's cock as you watch the conjoined pair orgasm.[impregchance]";
 	say "      After a moment to rest and recover, you pull off and gather your clothes and gear, leaving the exhausted felines snuggled up against one another.";
 
@@ -139,6 +143,7 @@ to say siamsex2:	[fuck ass]
 	say "     Wanting to have your way with the cute kitty's bottom, you head over to the male and roll him over onto all fours.  He mewls cutely and squirms a little, but doesn't pull away as you line up your cock with his tailhole.  You rock your hips, grinding against his cheeks and leaking precum between them.";
 	say "     After a little teasing like this, you start to sink into his tight rump.  He releases a soft mewl and stretches his paws forward, kneading reflexively.  You pet his back and squeeze his rump, calling him a good kitty.  Once you're hilted in his ass, you pause for a few breaths before starting to thrust.  Reaching around, you can feel his cock has gotten quite hard as his excitement builds and he is soon pushing back into your thrusts.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     The female twin has also started to recover and she comes closer.  You reach over and start to play with her pussy with one hand while continuing to stroke the tom's back and bottom.  They purr happily, nuzzling and kissing until finally you reach your peak and drive your cock deep inside him.  Unleashing your hot seed, you pump is bottom full of your thick cum.";
 	say "     The male mrowls as he feels your cum shooting into his bowels.  You feel his ass tighten around you, spasming as he cums moments later, shooting his seed onto the ground beneath him.  At that same time, his female partner moans and clenches her pussy around your fingers as her orgasm strikes alongside his.";
 	say "     Once you are spent, you take a moment to rest and recover before pulling your cock free.  You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
@@ -148,6 +153,7 @@ to say siamsex3:	[FF oral]
 	say "     Deciding to put that feline's raspy tongue to good use, you guide her face between your legs and press her muzzle to your pussy.  She mewls softly and squirms, but quickly sets her tongue to work.  You moan softly as you feel her licking along your wet folds.";
 	say "     You run your fingers through her headfur and scritch her large ears, making her purr all the more.  She also gets more and more into the task before her, showing that she's clearly had some practice at this.  Her tongue is playful and talented, while her lips kiss and suck at your pussy lips and clit as well.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     The male twin has also started to recover and he comes closer.  You reach over and start to play with his cock with one hand while continuing to pet the good kitty femme with the other.  They purr happily, the male nuzzling and kissing his partner until you finally reach your peak and press her face to your pussy as you cum.  Your hot juices flow out over her tongue and across her muzzle[if cocks of player > 0].  Your cock throbs and shoots its hot load across the back of her head and down her body[end if].";
 	say "     As your orgasm rushes through you, you can feel the tom's cock throb in your hand, spraying his seed across the ground while the female's rear trembles.  It seems she's been fingering herself while playing with you and the conjoined pair mrowl in delight as they cum.";
 	say "     Once your orgasm passes, you take a moment to rest and recover before pushing the female back.  You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
@@ -157,6 +163,7 @@ to say siamsex4:	[fuck pussy]
 	say "     Wanting a crack at that feline's tight cunt, you roll her onto her back and spread her legs.  She mewls cutely and squirms a little, but doesn't pull away as you line up your cock with her wet folds.  You stroke your cock against her, then tease her pussy's lips with your tip.";
 	say "     After a little teasing like this, you start to sink into her snug, wet hole.  She releases a soft mewl and wiggles her back against the ground, paws kneading in the air.  You pet her tummy, then move your hand up to caresses her breasts.  Her nipples poke lightly from her soft fur and you tease them as well, getting another soft mewl from her.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     The male twin has also started to recover and he comes closer.  You reach over and start to play with his cock with one hand while continuing to play with her breasts with the other.  They purr happily, nuzzling and kissing until you finally reach your peak and thrust hard into her.  With that last thrust, your cock throbs inside her, unleashing your hot seed into her.";
 	say "     The female mrowls as she feels your cum shooting into her vagina and flowing into her womb.  You feel her pussy spasm around you, trembling all around you as her orgasm hits.  The tom's cock throbs in your hand as well, shooting his white seed across both their bodies as his orgasm hits alongside hers.";
 	say "     Once you are spent, you take a moment to rest and recover before pulling your cock free.  You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
@@ -170,7 +177,7 @@ to say siameseattack:
 		if hardmode is true and a random chance of 1 in 10 succeeds:
 			now dammy is (dammy * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-		let absorbby be 0;
+		let absorbby be 0;					[***to be fixed***]
 		if "Toughened" is listed in feats of player:
 			increase absorbby by dammy divided by 5;
 		decrease hp of the player by dammy;
@@ -282,45 +289,54 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Siamese Cat"; [Name of your new Monster]
-   now attack entry is "[siameseattack]"; [Text used when the monster makes an Attack]
-   now defeated entry is "[beatthesiamesecat]"; [ Text or say command used when Monster is defeated.]
-   now victory entry is "[losetosiamesecat]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-   now desc entry is "[siamesecatdesc]"; [ Description of the creature when you encounter it.]
-   now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as the text "Your face is (your text)."]
-   now body entry is "slender and feline in form, with sharp claws on your paw-like hands"; [ Body Description, format as the text "Your body is (your text)."]
-   now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as the text "You have (your text) skin"]
-   now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ] 
-   now cock entry is "russet brown"; [ Cock Description, format as you have a 'size' (your text) cock]
-   now face change entry is "it shifts into a feline muzzle.  Your ears become large and dark coloured, as does your muzzle and much of your face"; [ face change text. format as "Your face feels funny as (your text)." ]
-   now body change entry is "it becomes slender and vaguely feline in form.  Your arms end in dexterous paws with sharp, retractable claws"; [ body change text. format as "Your body feels funny as (your text)." ]
-   now skin change entry is "it grows a coat of smooth, glossy fur.  This fur is a cream colour on most of your body, but darker at the ends of your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-   now ass change entry is "a slender, feline tail covered in dark brown fur extends from your spine"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-   now cock change entry is "it takes on a russet brown hue, but otherwise human-like"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-   now str entry is 14;
-   now dex entry is 16;
-   now sta entry is 10;                    
-   now per entry is 14;
-   now int entry is 12;
-   now cha entry is 14;
-   now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-   now hp entry is 39;            [ How many HP has the monster got? ]
-   now lev entry is 5;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
-   now wdam entry is 6;            [Amount of Damage monster Does when attacking.]
-   now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
-   now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-   now cock length entry is 7;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 3;        [ Size of balls apparently ;) sneaky Nuku]
-   now breasts entry is 2;            [ Number of Breasts infection will give you. ]
-   now breast size entry is 3;        [Size of breasts infection will try to attain ]
-   now male breast size entry is 0;    [ Breast size for if Sex=male, usually zero. ]
-   now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-   now cunt length entry is 7;        [ Length of female sex  infection will attempt to give you. ]
-   now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
-   now libido entry is 50;            [ Will raise the player's libido towards this amount]
-   now loot entry is "";            [ Dropped item, if any ]
-   now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
+	Choose a blank row from Table of random critters;
+	now name entry is "Siamese Cat"; [Name of your new Monster]
+	now attack entry is "[siameseattack]"; [Text used when the monster makes an Attack]
+	now defeated entry is "[beatthesiamesecat]"; [ Text or say command used when Monster is defeated.]
+	now victory entry is "[losetosiamesecat]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[siamesecatdesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as the text "Your face is (your text)."]
+	now body entry is "slender and feline in form, with sharp claws on your paw-like hands"; [ Body Description, format as the text "Your body is (your text)."]
+	now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as the text "You have (your text) skin"]
+	now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ] 
+	now cock entry is "russet brown"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it shifts into a feline muzzle.  Your ears become large and dark coloured, as does your muzzle and much of your face"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes slender and vaguely feline in form.  Your arms end in dexterous paws with sharp, retractable claws"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it grows a coat of smooth, glossy fur.  This fur is a cream colour on most of your body, but darker at the ends of your limbs"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a slender, feline tail covered in dark brown fur extends from your spine"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it takes on a russet brown hue, but otherwise human-like"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 14;
+	now dex entry is 16;
+	now sta entry is 10;
+	now per entry is 14;
+	now int entry is 12;
+	now cha entry is 14;
+	now sex entry is "Female";     [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 39;            [ How many HP has the monster got? ]
+	now lev entry is 5;            [ Level of the Monster, you get this much xp if you win, or this much xp halved if you loose ]
+	now wdam entry is 6;            [Amount of Damage monster Does when attacking.]
+	now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
+	now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 7;        [ Length infection will make cock grow to if cocks]
+	now cock width entry is 3;        [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;            [ Number of Breasts infection will give you. ]
+	now breast size entry is 3;        [Size of breasts infection will try to attain ]
+	now male breast size entry is 0;    [ Breast size for if Sex=male, usually zero. ]
+	now cunts entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 7;        [ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 3;        [ Width of female sex  infection will try and give you ]
+	now libido entry is 50;            [ Will raise the player's libido towards this amount]
+	now loot entry is "";            [ Dropped item, if any ]
+	now lootchance entry is 0;        [ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]agile[or]acrobat's[or]slender[at random]";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "feline";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 when play ends:

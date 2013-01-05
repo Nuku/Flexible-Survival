@@ -1,5 +1,5 @@
 Version 3 of Pepperspray by Stripes begins here.
-[version 3.1 - More varied combat messages]
+[version 3.3 - Updated: colourized damage]
 
 
 battleitem is a number that varies.
@@ -32,20 +32,21 @@ this is the peppersprayflee rule:
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
 	increase combat bonus by gascloud;								[cannot release gas cloud if pepperspraying, but will still linger]
-	if hardmode is true and the combat bonus is less than -8:				[pepperspray limits hardmode penalty to -8]
+	if hardmode is true and the combat bonus is less than -9:				[pepperspray limits hardmode penalty to -9]
+		now the combat bonus is -9;
+	if hardmode is false and the combat bonus is less than -8:				[pepperspray limits regular penalty to -8]
 		now the combat bonus is -8;
 	let the roll be a random number from 1 to 20;
 	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 	if the roll plus the attack bonus minus the defense bonus is greater than 8:
 		say "Using the pepperspray to briefly disable the [name entry], you manage to make your escape.";
 		say "[pepperspraydrain]";
+		now fightoutcome is 30;
 		now combat abort is 1;
 	otherwise:
 		say "You try to escape using the pepperspray, but fail.";
 		say "[pepperspraydrain]";
 		follow the retaliation rule;
-		if the hp of the player is less than 1:
-			lose;
 	rule succeeds;
 
 
@@ -58,14 +59,13 @@ this is the peppersprayattack rule:
 	say "[enhancedattack]";
 	if monsterhp is greater than 0:
 		say "[enhancedattack]";
-		if gascloud > 0:
-			decrease gascloud by 1;
+	if gascloud > 0:
+		decrease gascloud by 1;
 	if monsterhp is greater than 0:
 		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
 		follow the retaliation rule;
-		if the hp of the player is less than 1:
-			lose;
 	otherwise:
+		now fightoutcome is 10;
 		win;
 	rule succeeds;
 
@@ -130,16 +130,16 @@ to say enhancedattack:
 			say "Filled with sudden motivation, your attack scores particularly well!  ";
 			increase dam by dam;
 		if wmstrike is 1:			[Weaponsmaster used]
-			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		otherwise if weapon object of player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player], you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [dam] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of player][or]Drawing strength from your [bodyname of player], you attack[or]You attack using your [bodyname of player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of player][']s natural defences[at random], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 			otherwise if "Black Belt" is listed in feats of player or "Martial Artist" is listed in feats of player:
-				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [dam] damage!";
+				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa!  You know kung-fu! [at random]hitting [name entry] for [special-style-2][dam][roman type] damage!";
 			otherwise:
-				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+				say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		otherwise:
-			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [dam] damage!";
+			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		if a random chance of 5 in 20 succeeds and "Tail Strike" is listed in feats of player:		[+5% of tail attack w/pepperspray]
 			if tailname of player is listed in infections of Tailweapon:
 				let z be 0;
@@ -152,7 +152,7 @@ to say enhancedattack:
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [dammy] damage!";
+				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
 				increase dam by dammy;
 				choose row monster from table of random critters;
 		if a random chance of 5 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12:
@@ -163,14 +163,14 @@ to say enhancedattack:
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
 			if cocks of player >= 3, increase dammy by a random number between 0 and 1;
-			say "[line break]You give your opponent a hard swat with your [cock size desc of player] wang for [dammy] additional damage!";
+			say "[line break]You give your opponent a hard swat with your [cock size desc of player] wang for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of 5 in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16:
 			let dammy be 0;
 			now dammy is ( square root of ( 2 * ( cock width of player - 13 ) ) ) + 1;
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
-			say "[line break]You tackle your opponent, slamming your [ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [dammy] additional damage!";
+			say "[line break]You tackle your opponent, slamming your [ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of 5 in 20 succeeds and "Boob Smother" is listed in feats of player and breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7:
 			let dammy be 0;
@@ -179,18 +179,18 @@ to say enhancedattack:
 			if dammy > 7, now dammy is 7;
 			increase dammy by a random number between 0 and 1;
 			if breasts of player > 4, increase dammy by a random number between 0 and 1;
-			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [dammy] additional damage!";
+			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of 3 in 10 succeeds and "Spirited Youth" is listed in feats of player:		[+5% chance of Spirited Youth attack]
 			let y be a random number from 4 to 6;
-			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [y] damage!";
+			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [special-style-2][y][roman type] damage!";
 			increase dam by y;
 		otherwise if a random chance of 2 in 25 succeeds and "Youthful Tides" is listed in feats of player:	[+3% of Youthful Tide onslaught]
 			let y be 0;
 			repeat with s running from 1 to number of entries in childrenfaces:
 				increase y by a random number from 2 to 4;
 			increase dam by y;
-			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [y] damage!";
+			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [name entry] for [special-style-2][y][roman type] damage!";
 		decrease monsterhp by dam;
 		follow the monster injury rule;
 		say "[Name entry] is [descr].";
@@ -208,7 +208,7 @@ to say enhancedattack:
 			now roll is a random number from 1 to 20;
 			if roll plus the combat bonus is greater than 8:
 				let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-				say "[z]: [assault of z] [dam] damage inflicted!";
+				say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
 				decrease monsterhp by dam;
 			otherwise:
 				say "Your [z] misses!";
@@ -220,7 +220,7 @@ to say enhancedattack:
 		now roll is a random number from 1 to 20;
 		if roll plus the combat bonus is greater than 8:
 			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
-			say "[assault of companion of player] [dam] damage inflicted!";
+			say "[assault of companion of player] [special-style-2][dam][roman type] damage inflicted!";
 			decrease monsterhp by dam;
 		otherwise:
 			say "Your [companion of player] misses!";

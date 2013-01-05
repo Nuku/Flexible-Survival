@@ -1,5 +1,5 @@
 Version 2 of Mismatched Chimera for FS by Stripes begins here.
-[Version 2.1 - Hard Mode Variant]
+[Version 2.2 - Random infection tweak]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Mismatched Chimera creature to Flexible Survivals Wandering Monsters table with impreg chance"
 [Description text for this Extension.]
@@ -37,7 +37,14 @@ to say losetomischim:
 		say "     You slide a hand up to fondle its large, sewn-together ballsac and find it very full and heavy.  As you fondle it, you come to realize that the heavy sac contains at least four different balls of various sizes, probably from a variety of creatures like the rest of its body.  You soon realize as well that this means it could carry almost any strain of the infection and change you in unpredictable ways.  You struggle for a moment, but the creature keeps you pinned with its strong grip and soon its mix of precum has done its job, filling you with lust and hunger for the chimera's mix of seed.  The idea starts to fill you with excitement even.  You start to picture yourself changing in random ways while these creatures have their way with you again and again.";
 		say "     You moan in delight at the creature growls in climax, pumping a hot, thick medley of cum into your mouth and down your throat.  You swallow down as much as you can of its impressive load, then sag to the ground as it releases you.  Sated for now, the mismatched hybrid wanders off, leaving you to the infection's changes.";
 	weakrandominfect;
-	weakrandominfect;
+	increase monster by 1;
+	choose row monster from table of random critters;
+	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		increase monster by 1;
+		choose row monster from table of random critters;
+		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			next;
+		break;
 
 
 to say beatthemischim:

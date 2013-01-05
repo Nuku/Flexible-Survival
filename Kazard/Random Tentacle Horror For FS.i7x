@@ -36,8 +36,7 @@ to say horror victory:
 		now cuntsmall is 0;
 	if "Male Preferred" is listed in feats of player:
 		say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
-		stop the action;
-	if tentaclerape is 0:
+	otherwise if tentaclerape is 0:
 		if gestation of child is 0:
 			if tentsubmit is 1:
 				say "As you lie down in a clear sign of submission the creature excitedly approaches you extending its many tentacles towards you as it does so. [line break] [line break] The creature wraps you in its slime coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body, and under your clothing, before pulling away, ripping the garments from your body. [line break] [line break]";

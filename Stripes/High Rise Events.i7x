@@ -1,5 +1,5 @@
 Version 2 of High Rise Events by Stripes begins here.
-[version 2.2 - Veterinary Hospital update]
+[version 2.3 - Veterinary Hospital update]
 
 "Adds a series of random events to Flexible Survival located at or focusing on the High Rise District."
 
@@ -15,6 +15,7 @@ when play begins:
 Instead of resolving a Rabid Lawyers:
 	say "     While searching the city, you encounter a large pack of wolves in front of a law firm.  They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants.  The are growling and slavering as they snap at each other or swinging their briefcases around.  Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones.  Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males.  Unwilling to face the legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
 	increase score by 1;
+	mallrecall;
 	Now Rabid Lawyers is resolved;
 
 
@@ -37,7 +38,7 @@ Instead of resolving a Pigging Out:
 			say "     When you first step in, the pig is somewhat startled by your presence.  Her heavy bulk struggles to get up, but she soon relaxes and smiles as she sees your piggish features and eager attitude.  With a grin, she picks up a handful of food from the floor with her left hand, the one she[apostrophe]d had in her pussy.  As you reach for it, you can see her wet juices running over the sugary dessert, making your mouth water for it all the more.  You stuff the food into your mouth, chewing noisily as you enjoy its added seasoning.";
 			say "     As you eat, she helps you out of your clothes, tossing them onto a knocked over table.  With you now naked, she runs her messy hands over your body as she pulls you into her arms.  She grabs another of the scattered pastries from the floor and stuffs it into her mouth before sloppily kissing you, smearing the creamy filling into your mouth with her tongue.";
 			if cocks of player > 0:
-				say "     You place your hands on her sow tits, making her squeal in pleasure.  She lays herself back on the floor, squishing some of the expensive food beneath her bulk.  You bury your face in her teats, licking and suckling at them playfully.  She oinks and moans in pleasure between mouthfuls.  You work your way down her chest, tending to each of her six breasts until that brings you between her legs and that wet, cavernous slit beacons to you.";
+				say "     You place your hands on her sow tits, making her squeal in pleasure.  She lays herself back on the floor, squishing some of the expensive food beneath her bulk.  You bury your face in her teats, licking and suckling at them playfully.  She oinks and moans in pleasure between mouthfuls.  You work your way down her chest, tending to each of her six breasts until that brings you between her legs and that wet, cavernous slit beckons to you.";
 				say "     You grab a nearby bottle of maple syrup and tear off the top, pouring it right onto those wet lips before you bury your face between her large thighs.  You lick all over her messy pussy, the maple sweetness tasting wonderful with her porcine juices.  You stuff your tongue into her, delving deeper for more of her sweet honey until she finally orgasms and soaks your face with it.";
 				say "     You smile up at her, licking your chops as she motions for you to climb atop her.  You do so eagerly, bringing your hard cock into position at her pussy before burying it in her ample folds.  With your face pressed to her piggish snout, she snuffles at your face and licks away the sticky syrup and her own juices with squeals of pleasure as you fuck her.";
 				say "     When she[apostrophe]s finished cleaning your face, you stuff another large pastry into her mouth and share it with her while kissing.  Her plump body ripples with each hard thrust you make into her.  You pound into her again and again until finally you climax, shooting your hot seed into her womb, making her squeal again.";
@@ -70,9 +71,8 @@ Instead of resolving a Pigging Out:
 				otherwise:
 					say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant.  The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig.  You get enough for two meals packed away using some of the kitchenware to pack it up.  While doing so, you also find a big kitchen knife that you decide to bring along.";
 					say "     Food x 2 and cleaver added to inventory.";
-					add "food" to invent of player;
-					add "food" to invent of player;
-					add "cleaver" to invent of player;
+					increase carried of food by 2;
+					increase carried of cleaver by 1;
 					increase score by 5;
 			otherwise:
 				say "     Looking around the messy restaurant and the scattered food around the pig, you[apostrophe]re not so sure they[apostrophe]ll be anything salvageable left and decide it may not be worth the risk to try.";
@@ -89,9 +89,8 @@ Instead of resolving a Pigging Out:
 			otherwise:
 				say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant.  The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig.  You get enough for two meals packed away using some of the kitchenware to pack it up.  While doing so, you also find a big kitchen knife that you decide to bring along.";
 				say "     Food x 2 and cleaver added to inventory.";
-				add "food" to invent of player;
-				add "food" to invent of player;
-				add "cleaver" to invent of player;
+				increase carried of food by 2;
+				increase carried of cleaver by 1;
 				increase score by 5;
 		otherwise:
 			say "     Looking around the messy restaurant and the scattered food around the pig, you[apostrophe]re not so sure they[apostrophe]ll be anything salvageable left and decide it may not be worth the risk to try.";
@@ -130,9 +129,9 @@ when play begins:
 	add Small Park to badspots of humorous;
 
 Instead of resolving a Small Park:
-	say "     While searching the area, you come across a small park.  It is only about a hundred meters in each direction.  From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed.  You don[apostrophe]t spot any danger at the moment, so perhaps it[apostrophe]s safe.  Shall you enter the park and investigate further? (Y/N)";
+	say "     While searching the area, you come across a small park.  It is only about a hundred meters in each direction.  From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed.  You don[apostrophe]t spot any danger at the moment, so perhaps it[apostrophe]s safe.  Shall you enter the park and investigate further? (Y/N)[line break]";
 	if player consents:
-		say "[line break][dogparksearch]";
+		say "[dogparksearch]";
 	otherwise:
 		say "     You go off, deciding to find a safer place to search.";
 		increase score by 1;
@@ -144,11 +143,11 @@ to say dogparksearch:
 	if T is 1:
 		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  You get lucky while searching around what appears to be a jogger[apostrophe]s outfit, finding an unopened bottle of water that rolled partway under a bush.";
 		say "     Added a water bottle to your supply.";
-		add "water bottle" to invent of player;
+		increase carried of water bottle by 1;
 		increase score by 1;
 	if T is 2:
 		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  You get lucky searching one pile of clothes, finding a used can of mace near the torn dress.  Quite sure it would be handy, you pick it up and add it to your inventory.";
-		add "pepperspray" to invent of player;
+		increase carried of pepperspray by 1;
 		increase score by 5;
 	if T is 3:
 		say "      You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here.  Having failed to sneak up on you, the male German Shepherd approached swiftly.";
@@ -172,7 +171,7 @@ to say dogparksearch:
 		[random canine infection]
 		say "[doggyinfect]";
 	if T is 9:
-		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While you walk through the park, you pass near the large tree at the center of the park and the dog smell is the strongest here.  It is very thick in the air around it and you can see the truck discoloured with markings and thick cum splashes.  Despite its origins, the scent is very attractive, drawing you in.  Do you want to examine it more closely? (Y/N)";
+		say "     You look around the park and are fortunately not spotted by any monsters.  You search around the park, finding many signs of attacked residents.  There are torn and cum-stained clothes in several clusters, along with dog leashes and collars.  The area is thick with the scent of dog.  While you walk through the park, you pass near the large tree at the center of the park and the dog smell is the strongest here.  It is very thick in the air around it and you can see the trunk discoloured with markings and thick cum splashes.  Despite its origins, the scent is very attractive, drawing you in.  Do you want to examine it more closely? (Y/N)";
 		if player consents:
 			say "     You move in closer to the tree and start to sniff around it.  The heady scent of dogs, both males and females, fill your nostrils.  You pant a little, tasting the scent of heat as well from many of them.  Your mind grows hazy and you roll on the ground in front of the tree, through several cum puddles, letting their scent get on you.  Getting up, you shamelessly add your scent to the base of the tree before heading off, leaving the dog park now that you[apostrophe]ve marked that you[apostrophe]ve been there.";
 			[triple random canine infection]
@@ -199,21 +198,25 @@ to say dogparksearch:
 
 
 to say doggyinfect:
-	let tempnum  be a random number between one and six;  [adjust this for new dogs]
-	if tempnum  is 1:
+	let tempnum  be a random number between one and nine;  [adjust this for new dogs]
+	if tempnum is 1:
 		infect "Female Husky";
-	if tempnum  is 2:
+	if tempnum is 2:
 		infect "German Shepherd";
-	if tempnum  is 3:
+	if tempnum is 3:
 		infect "Shemale Smooth Collie";
-	if tempnum  is 4:
+	if tempnum is 4:
 		infect "Pit bull";
-	if tempnum  is 5:
+	if tempnum is 5:
 		infect "Ashen Breeder";
-	if tempnum  is 6:
+	if tempnum is 6:
 		infect "Chocolate Lab";
-
-
+	if tempnum is 7:
+		infect "Alpha Husky";
+	if tempnum is 8:
+		infect "Retriever";
+	if tempnum is 9:
+		infect "Cerberus";
 
 Section 4- Corporate Fat Cats
 
@@ -226,6 +229,7 @@ when play begins:
 Instead of resolving a Corporate Fat Cats:
 	say "     You come across a pair of hefty felines on the steps of one of the many high-rise buildings.  Their business suits have mostly been removed and scattered around them.  One is a male black cat with white paws and a splash of white on his wide belly.  The other is a chubby Maine Coon tom with the thick, fluffy fur of the breed.  They are rolling around against one another, groping each other.  While stroking the black cat[apostrophe]s cock, the other cat goes on about looking forward to some asset growth.  The black cat nibbles at the portly Maine Coon[apostrophe]s ear, telling him how he wants to set up this merger and come out on top.  They continue to go on like this, bantering in corporate lingo while the black cat mounts the other while you walk off, leaving the fat cats to their [apostrophe]merger[apostrophe].";
 	increase score by 1;
+	mallrecall;
 	Now Corporate Fat Cats is resolved;
 
 
@@ -243,9 +247,9 @@ when play begins:
 	add Veterinary Hospital to badspots of furry;
 
 Instead of resolving a Veterinary Hospital:
-	say "     You find a veterinary hospital at the ground level of one of the high rises.  You don[apostrophe]t hear any monsters within and consider entering.  There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.  Shall you enter? (Y/N)";
+	say "     You find a veterinary hospital at the ground level of one of the high rises.  You don[apostrophe]t hear any monsters within and consider entering.  There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.  Shall you enter? (Y/N)[line break]";
 	if player consents:
-		say "[line break][vetsearch]";
+		say "[vetsearch]";
 	otherwise:
 		say "     You go off, deciding to find a safer place to search.";
 		increase score by 1;
@@ -257,7 +261,7 @@ to say vetsearch:
 	decrease humanity of player by 3;
 	if T is 1:
 		say "     You cautiously enter the veterinary hospital and look around.  As you suspected, it was rather hard hit by the outbreak.  You can see the tattered remains of the secretary and the vets[apostrophe] clothes scattered about, as well as many dried pools of cum.  The scent of feline and canine arousal is strong in the air, making the infection inside you tingle.  Feeling you shouldn[apostrophe]t stay long, you scout around and are fortunate to find a medical supply kit that is suitable for your needs.  You tuck it under one arm and quickly head out to get some fresh air.";
-		add "medkit" to invent of player;
+		increase carried of medkit by 1;
 		say "     Medkit obtained.";
 		increase score by 3;
 	if T is 2:
@@ -267,26 +271,22 @@ to say vetsearch:
 			if kittyness is 1:		[both doggy and kitty]
 				say "     At this moment at least, the warring feline and canine urges within you are in harmony and you feel a hunger for all the sample food items.  It seems you have enough feline and canine aspects within you that you find the pet food appetizing and are willing to add it to your supply.  As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat.  You quickly stuff them all into your bag and head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
 				say "     You obtain the equivalent of 3 food.";
-				add "food" to invent of player;
-				add "food" to invent of player;
-				add "food" to invent of player;
+				increase carried of food by 3;
 				increase score by 5;
 			otherwise:						[just doggy]
 				say "     Looking over the cans of dog food, your tummy rumbles.  It seems you have enough canine aspects within you that you find the dog food appetizing and are willing to add it to your supply.  As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat.  You quickly stuff them into your bag and head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
 				say "     You obtain the equivalent of 2 food.";
-				add "food" to invent of player;
-				add "food" to invent of player;
+				increase carried of food by 2;
 				increase score by 3;
 		otherwise if kittyness is 1:				[just kitty]
 			say "     Looking over the cans of cat food, your tummy rumbles.  It seems you have enough feline aspects within you that you find the cat food appetizing and are willing to add it to your supply.  As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat.  You quickly stuff them into your bag and head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
 			say "     You obtain the equivalent of 2 food.";
-			add "food" to invent of player;
-			add "food" to invent of player;
+			increase carried of food by 2;
 			increase score by 3;
 		otherwise if hunger of the player > 49:		[starving]
 			say "     You look at the cans of pet food for a moment and your stomach rumbles.  Despite being pet food, you are very hungry and need something to eat.  As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat.  Resigned to your fate, you take one of the cans and add it to your supply.  You then quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
 			say "     You obtain the equivalent of 1 food.";
-			add "food" to invent of player;
+			increase carried of food by 1;
 			increase score by 1;
 		otherwise:							[not a kitty or doggy, nor starving]
 			say "     You look at the cans of pet food briefly, then turn and continue searching.  You haven[apostrophe]t sunk that low yet.  A quick look around the rest of the room finds nothing else of interest.  Unsuccessful, you quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
@@ -315,142 +315,19 @@ to say vetsearch:
 		increase score by 1;
 
 
-to say doggycheck:		[add new canids when they arise]
+to say doggycheck:		[See the Flags section of story.ni file for Caninelist/Felinelist]
 	now doggyness is 0;
-	if the bodyname of player is "Female Husky":
-		now doggyness is 1;
-	if the facename of player is "Female Husky":
-		now doggyness is 1;
-	if the bodyname of player is "German Shepherd":
-		now doggyness is 1;
-	if the facename of player is "German Shepherd":
-		now doggyness is 1;
-	if the bodyname of player is "Shemale Smooth Collie":
-		now doggyness is 1;
-	if the facename of player is "Shemale Smooth Collie":
-		now doggyness is 1;
-	if the bodyname of player is "Pit bull":
-		now doggyness is 1;
-	if the facename of player is "Pit bull":
-		now doggyness is 1;
-	if the bodyname of player is "Latex Wolf":
-		now doggyness is 1;
-	if the facename of player is "Latex Wolf":
-		now doggyness is 1;
-	if the bodyname of player is "Ashen Breeder":
-		now doggyness is 1;
-	if the facename of player is "Ashen Breeder":
-		now doggyness is 1;
-	if the bodyname of player is "Painted Wolf Herm":
-		now doggyness is 1;
-	if the facename of player is "Painted Wolf Herm":
-		now doggyness is 1;
-	if the bodyname of player is "Alpha Wolf":
-		now doggyness is 1;
-	if the facename of player is "Alpha Wolf":
-		now doggyness is 1;
-	if the bodyname of player is "Wolftaur":
-		now doggyness is 1;
-	if the facename of player is "Wolftaur":
-		now doggyness is 1;
-	if the bodyname of player is "jackalboy":
-		now doggyness is 1;
-	if the facename of player is "jackalboy":
-		now doggyness is 1;
-	if the bodyname of player is "jackalman":
-		now doggyness is 1;
-	if the facename of player is "jackalman":
-		now doggyness is 1;
-	if the bodyname of player is "Chocolate Lab":
-		now doggyness is 1;
-	if the facename of player is "Chocolate Lab":
-		now doggyness is 1;
-	if the bodyname of player is "Feral Wolf":
-		now doggyness is 1;
-	if the facename of player is "Feral Wolf":
+	if bodyname of player is listed in the infections of Caninelist or facename of player is listed in infections of Caninelist:
 		now doggyness is 1;
 
-to say kittycheck:		[add new felines when they arise]
+to say kittycheck:
 	now kittyness is 0;
-	if the bodyname of player is "Panther Taur":
+	if bodyname of player is listed in the infections of Felinelist or facename of player is listed in infections of Felinelist:
 		now kittyness is 1;
-	if the facename of player is "Panther Taur":
-		now kittyness is 1;
-	if the bodyname of player is "cheetah woman":
-		now kittyness is 1;
-	if the facename of player is "cheetah woman":
-		now kittyness is 1;
-	if the bodyname of player is "Tigress Hooker":
-		now kittyness is 1;
-	if the facename of player is "Tigress Hooker":
-		now kittyness is 1;
-	if the bodyname of player is "Felinoid":
-		now kittyness is 1;
-	if the facename of player is "Felinoid":
-		now kittyness is 1;
-	if the bodyname of player is "Feline":
-		now kittyness is 1;
-	if the facename of player is "Feline":
-		now kittyness is 1;
-	if the bodyname of player is "Rubber tigress":
-		now kittyness is 1;
-	if the facename of player is "Rubber tigress":
-		now kittyness is 1;
-	if the bodyname of player is "Tiger":
-		now kittyness is 1;
-	if the facename of player is "Tiger":
-		now kittyness is 1;
-	if the bodyname of player is "Tiger Cop":
-		now kittyness is 1;
-	if the facename of player is "Tiger Cop":
-		now kittyness is 1;
-	if the bodyname of player is "Plush lion":
-		now kittyness is 1;
-	if the facename of player is "Plush lion":
-		now kittyness is 1;
-	if the bodyname of player is "Sabretooth":
-		now kittyness is 1;
-	if the facename of player is "Sabretooth":
-		now kittyness is 1;
-	if the bodyname of player is "tigertaur":
-		now kittyness is 1;
-	if the facename of player is "tigertaur":
-		now kittyness is 1;
-	if the bodyname of player is "sphinx":
-		now kittyness is 1;
-	if the facename of player is "sphinx":
-		now kittyness is 1;
-	if the bodyname of player is "Cheetah":
-		now kittyness is 1;
-	if the facename of player is "Cheetah":
-		now kittyness is 1;
-	if the bodyname of player is "Pantherherm":
-		now kittyness is 1;
-	if the facename of player is "Pantherherm":
-		now kittyness is 1;
-	if the bodyname of player is "Leopardman":
-		now kittyness is 1;
-	if the facename of player is "Leopardman":
-		now kittyness is 1;
-	if the bodyname of player is "Ninja Cat":
-		now kittyness is 1;
-	if the facename of player is "Ninja Cat":
-		now kittyness is 1;
-	if the bodyname of player is "Cougar":
-		now kittyness is 1;
-	if the facename of player is "Cougar":
-		now kittyness is 1;
-	if the bodyname of player is "Snow Leopard":
-		now kittyness is 1;
-	if the facename of player is "Snow Leopard":
-		now kittyness is 1;
-	if the bodyname of player is "Margay":
-		now kittyness is 1;
-	if the facename of player is "Margay":
-		now kittyness is 1;
+
 
 to say randomvetfight:				[more suitable pets can be added]
-	let tempnum be a random number between one and seven;
+	let tempnum be a random number between one and ten;
 	if tempnum is 1:
 		challenge "Female Husky";
 	if tempnum is 2:
@@ -465,6 +342,14 @@ to say randomvetfight:				[more suitable pets can be added]
 		challenge "rabbit pack";
 	if tempnum is 7:
 		challenge "Feline";
+	if tempnum is 7:
+		challenge "Alpha Husky";
+	if tempnum is 8:
+		challenge "Ninja Cat";
+	if tempnum is 9:
+		challenge "Siamese Cat";
+	if tempnum is 10:
+		challenge "Retriever";
 
 
 Section 6- Golf Store
@@ -477,7 +362,7 @@ when play begins:
 Instead of resolving a Golf Store:
 	say "     While passing down the street, hear a growing sound, like many hard objects striking the pavement again and again.  As the sound draws closer, you look around for a place to hide and duck into a small golf store.  Peering from behind a display case, you see a small herd of horsemen clomping through the street.  They seem in good spirits, but are watchful and some at the edge of the herd are on the lookout.  Something in their look tells you to remain hidden, which is later confirmed when you see a few half-changed prisoners at the center of the herd.  You continue to watch from the shadow until they[apostrophe]re gone.  As they march out of earshot, you relax and take a moment to look around the golf store you[apostrophe]d hidden in.  You grab a sturdy looking 9-iron from the display, your mind focused on arming yourself after seeing the herd.";
 	say "     Golf club obtained.";
-	add "golf club" to invent of player;
+	increase carried of golf club by 1;
 	increase score by 5;
 	Now Golf Store is resolved;
 
@@ -503,6 +388,7 @@ Instead of resolving a Electronics Store:
 	say "     As you watch, the darker one twitches and shudders for a moment while trying to swallow down a big mouthful.  His eyes blink, then turn a solid blue.  He smacks his chest a few times to reboot himself.  Once that is settled, he opens his jacket, accesses a panel on himself and pulls out a video card, swapping it for a newer model from one of the shelves.";
 	say "     With this impromptu upgrade completed, they get back to squabbling over the various electronic phones, mp3 players and doodads, babbling marketing buzzwords all the while.";
 	increase score by 1;
+	mallrecall;
 	Now Electronics Store is resolved;
 
 
@@ -551,8 +437,7 @@ Instead of resolving a Cameo:
 						if morale of player is greater than 0, now morale of player is 0;
 						say "You feel much better after having your snack.";
 					increase morale of player by 1;
-					add "chips" to invent of player;
-					add "chips" to invent of player;
+					increase carried of chips by 2;
 					increase score by 15;
 				otherwise:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack.  The fine chocolates are quite delicious.  You store the rest for later consumption.  While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
@@ -562,7 +447,7 @@ Instead of resolving a Cameo:
 						increase morale of player by 15;
 						if morale of player is greater than 0, now morale of player is 0;
 						say "You feel better having eaten.";
-					add "food" to invent of player;
+					increase carried of food by 1;
 					increase score by 5;
 	if choclabfight is 0:
 		say "     Managing to outmaneuver the chocolate dogs, you push your way out of the store and into the courtyard around the shops.  Looking back, you spot the dogs pressed up against the glass, leaving chocolate streaks on windows before they hop down and return to their lustful consumption of the chocolates.  You are quite certain there will be nothing left in the store except for the white chocolate stains from their sexual play as they celebrate their victory at defending their delicious prize.";
@@ -577,13 +462,13 @@ Instead of resolving a Cameo:
 			decrease humanity of player by a random number between 25 and 35;
 			increase hunger of player by 12;
 			if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 10;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		otherwise:
 			say ".  It feels like you are simultaneously filled and drained over and over again as your lovers mate you.  You seem to flow into them as they flow into you in an orgasmic melding of pleasure.";
 			decrease humanity of player by a random number between 20 and 30;
 			increase hunger of player by 12;
 			if "Pure" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 10;
+			if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		[puts Chocolate Lab as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
@@ -616,8 +501,7 @@ Instead of resolving a Cameo:
 			follow the turnpass rule;
 			stop the action;
 		otherwise:
-			say ".  You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form.  Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival.  You do feel a strong longing for more sex or more chocolate.  Or best of all, more chocolate sex.  You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.";
-			say "[impregchance][impregchance]";
+			say ".  You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form.  Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival.  You do feel a strong longing for more sex or more chocolate.  Or best of all, more chocolate sex.  You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.[impregchance][impregchance]";
 	now Cameo is resolved;
 
 

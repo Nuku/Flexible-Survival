@@ -14,8 +14,8 @@ to say cannon desc:
 		say "A six foot tall, perverted abomination stands before you. The creature has perfectly normal looking human arms and legs, but that is where the similarities end. The creature's body is shaped like a giant cock! Its head is pale purple, shaped like a mushroom, and has a single slit at the top.[line break][line break]The creature moves its head until the slit on the top is pointed in your direction. You get the feeling that it is examining you. The creature must like what it sees, because it immediately starts moving it your direction.";
 
 [The Cock Cannon inflicts no damage, but the player has a limited number of turns to defeat the Cock Cannon before it fires. If it fires, the player automatically loses.]
-cannonprep is a number that varies. cannonprep is usually 0.
-to say cannon fire:
+
+to say cannon fire:		[outmoded, now uses alt-attack below]
 	if cannonprep is 0:
 		[Elevation]
 		now cannonprep is 1;
@@ -23,7 +23,7 @@ to say cannon fire:
 	otherwise if cannonprep is 1:
 		[Wind direction]
 		now cannonprep is 2;
-		say "The Cock Cannon moves its mushroom shaped head to the [one of]right [or]left [at random]inorder to adjust for wind direction.";
+		say "The Cock Cannon moves its mushroom shaped head to the [one of]right[or]left[at random] in order to adjust for wind direction.";
 	otherwise if cannonprep is 2:
 		[Masturbate]
 		now cannonprep is 3;
@@ -33,10 +33,10 @@ to say cannon fire:
 		now cannonprep is 0;
 		say "The Cock Cannon reaches its peak and ejaculates with a loud BOOM!";
 		now hp of player is 0;
-		
+
 to say cannon attack:
 	if "Female Preferred" is not listed in feats of player:
-		say " You hear a strange whistling noise in the air, before a huge glob of sticky white cum falls out of the sky and soaks you from head to foot. Its job completed, the Cock Cannon leaves.";
+		say " You hear a strange whistling noise in the air, before a huge glob of sticky white cum falls out of the sky and soaks your [bodytype of player] body from head to foot.  The blast is so large it knocks you to the ground, leaving you dazed and soaked in semen. Its job completed, the Cock Cannon leaves.";
 	
 Section 2 - Monster Insertion
 
@@ -93,7 +93,86 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "cockcannon";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Section 3 - The Table of Critter Combat
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"cockcannon"	cockcannon rule	--	--	--	--	--	--	--	--	--
+
+
+cannonprep is a number that varies. cannonprep is usually 0.
+
+this is the cockcannon rule:
+	choose row monster from table of Random Critters;
+	let playernum be 10;
+	let ccnum be 10;
+	now monsterhit is false;
+	now avoidance is 0;
+	say "[avoidancecheck]";
+	if gascloud > 0, decrease gascloud by 1;
+	if avoidance is 1:
+		now monsterhit is false;
+	otherwise:
+		if cannonprep is 0:			[Elevation - int]
+			let playernum be dexterity of player + level of player;
+			let ccnum be int entry + lev entry + 5;
+		otherwise if cannonprep is 1:		[Wind direction - perc]
+			let playernum be dexterity of player + level of player;
+			let ccnum be per entry + lev entry + 5;
+		otherwise if cannonprep is 2:		[Masturbate - dex]
+			let playernum be 12;
+			let ccnum be dex entry + lev entry + 5;
+		otherwise if cannonprep is 3:		[Fire - stam]
+			let playernum be 12;
+			let ccnum be sta entry + lev entry + 5;
+		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
+			say "Calling upon your hidden power, you flash brightly with light, [one of]filling the phallic creature's eyes with spots[or]startling the Cock Cannon[or]making it harder for the Cock Cannon to focus on its [if cannonprep is 0 or cannonprep is 1]aiming[otherwise]self-pleasure[end if][purely at random].";
+			increase playernum by 5;
+[		say "TEST: player = [playernum] vs cock cannon = [ccnum]:[line break]";		]
+		let playernum be a random number between 1 and playernum;
+		let ccnum be a random number between 1 and ccnum;
+		say "[special-style-1][playernum][roman type] vs [special-style-2][ccnum][roman type]: ";
+		if playernum < ccnum:
+			now monsterhit is true;
+		otherwise:
+			now monsterhit is false;
+	if cannonprep is 0:
+		if monsterhit is true:
+			now cannonprep is 1;
+			say "[special-style-2]Hit[roman type]: The Cock Cannon pauses and seems to focus on you as it calculates the proper elevation, then lifts its mushroom shaped head up towards the sky.";
+		otherwise:
+			say "[special-style-1]Miss[roman type]: The Cock Cannon tries to focus on you, but you manage to keep evading and it has trouble targetting you.";
+	otherwise if cannonprep is 1:
+		if monsterhit is true:
+			now cannonprep is 2;
+			say "[special-style-2]Hit[roman type]: The Cock Cannon moves its mushroom shaped head to the [one of]right[or]left[at random] in order to adjust for wind direction and is now locked onto you.";
+		otherwise:
+			say "[special-style-1]Miss[roman type]: The Cock Cannon tries to make adjustements for the wind conditions, but your constant harassment and evasion slows it down.";
+	otherwise if cannonprep is 2:
+		if monsterhit is true:
+			now cannonprep is 3;
+			say "[special-style-2]Hit[roman type]: The Cock Cannon's arms start to stroke its penis-shaped body, increasing its visible size and arousal.  Precum starts to flow steadily from the top of its phallic head.";
+		otherwise:
+			say "[special-style-1]Miss[roman type]: The Cock Cannon attempts to pleasure itself, running its hands over its body, but with little success for now.";
+	otherwise if cannonprep is 3:
+		if monsterhit is true:
+			now cannonprep is 0;
+			say "[special-style-2]Hit[roman type]: The Cock Cannon reaches its peak and ejaculates with a loud BOOM!";
+			now libido of player is 110;
+		otherwise:
+			say "[special-style-1]Miss[roman type]: The Cock Cannon continues to stroke and rub itself, trying unsuccessfully to get itself off.";
+	now peppereyes is 0;
+	if hp of the player is greater than 0 and libido of player < 110:
+		[wait for any key;]
+		AttemptToWaitBeforeClear;
+	otherwise:
+		now fightoutcome is 20;
+		Lose;
+	rule succeeds;
+
 
 when play ends:
 	if bodyname is "Cock Cannon":

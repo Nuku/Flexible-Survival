@@ -1,5 +1,5 @@
 Version 3 of Hungry Boar Man by hiccup begins here.
-[Version 3 - completed endings by Stripes]
+[Version 3.1 - Added submissive male sex scene (Stripes)]
 
 "Adds an encounter to Flexible Survival with a hungry boar man."
 
@@ -91,12 +91,7 @@ To pigfeed:
 	now lastpigfed is turns;
 	if pigfed is 0:
 		if food is owned:
-			let number be 0;
-			repeat with Q running through invent of the the player:
-				increase number by 1;
-				if q matches the regular expression printed name of food:
-					remove entry number from invent of the player;
-					break;
+			delete food;
 			now pigfed is 1;
 			say "Thank you,' He shouts as he snatches the food from you and starts to gobble it down.[line break][line break]The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and splash on you. Your body immediately begins to feel strange. A loud ripping sound comes from the seat of your pants as a curly pig tail grows out above your butt.";
 			now tailname of player is "Piggy";
@@ -109,7 +104,6 @@ To pigfeed:
 		otherwise:
 			say "'You don't have any food,' he oinks sadly.";
 			now lastpigfed is 250;
-			stop the action;
 	otherwise if pigfed is 1:
 		say "'I[apostrophe]m still digesting the food you gave me before. However, I did find some other food a few minutes ago. You fed me, so I want to pay you back by feeding you. You can eat it if you want.' He says as he holds out a strange box.[line break][line break]You take a look at the box and notice that it is different from all the other packages of food that you've found. There is a picture of a cartoon pig on the front. The name of the product is too faded for you to read.";
 		say "Will you accept his offer and eat the food?";
@@ -126,18 +120,12 @@ To pigfeed:
 			now pigfed is 2;
 		otherwise:
 			say "'Suit yourself, more for me to eat later,' He shrugs.";
-			stop the action;
 	otherwise if pigfed is 2:
 		say "'I[apostrophe]m hungry again,' Philip whines then looks at you eagerly, 'Can you give me more food?'";
 		say "Will you give him some food?";
 		if player consents:
 			if food is owned:
-				let number be 0;
-				repeat with Q running through invent of the the player:
-					increase number by 1;
-					if q matches the regular expression printed name of food:
-						remove entry number from invent of the player;
-						break;
+				delete food;
 				say "Thank you,' He shouts as he snatches the food from you and starts to gobble it down.[line break][line break]The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and once again splash on you. Your body immediately begins to feel strange. Your body plumps up and your feet ache for a moment as they harden into pig hooves.[line break][line break]When he finishes eating, he eyes you appreciatively, then says, 'You seem to know how to find food. Can I come with you?'";
 				now bodyname of player is "Piggy";
 				now body of player is "big and fat and you have pig hooves instead of feet";
@@ -161,43 +149,44 @@ To pigfeed:
 			otherwise:
 				say "'You don't have any food,' he oinks sadly.";
 				now lastpigfed is 250;
-				stop the action;
 		otherwise:
 			say "'Aww...,' he snorts.";
 			now lastpigfed is 250;
-			stop the action;		
 	otherwise:
 		if pigfed is 3:
 			say "'That's okay, I finally figured out how to scavenge safely on my own. You don't have to get food for me any more.' He oinks.";
-			stop the action;
 		otherwise:
 			say "He groans and rubs his gut, 'I'm still digesting the food you gave me earlier. Come back later.'";
-			stop the action;
 
 
 Section 5 - Sexxxing the Piggy
 
 instead of fucking the philip:
+	let Piggy be "Piggy";
 	if Philip is not visible:
 		say "Who?";
 		stop the action;
 	if lastPhilipfucked - turns is less than 6:
-		say "'I know I'm a sexy stud and all,' the boar says, rubbing his big gut, 'but even I need to rest up before another go.  Don't worry, you can be my sow again soon.'";
+		say "     'I know I'm a sexy stud and all,' the boar says, rubbing his big gut, 'but even I need to rest up before another go.  Don't worry, you can be my sow again soon.'";
 		stop the action;
+	let piggymalefun be 8;
+	if "Submissive" is listed in feats of player, increase piggymalefun by 2;
+	if "MPreg" is listed in feats of player, increase piggymalefun by 2;
+	increase piggymalefun by anallevel;
 	if pigfed < 3:
-		say "'I know it[apostrophe]s hard to resist my charmingly good looks,' Philip smiles, 'But the way to my heart is through my stomach and you simply haven't fed me enough times yet.'";
+		say "     'I know it[apostrophe]s hard to resist my charmingly good looks,' Philip smiles, 'But the way to my heart is through my stomach and you simply haven't fed me enough times yet.'";
 		stop the action;
-	say "'I knew you couldn[apostrophe]t resist my, OINK!, studly physique.' Philip says as he jiggles his fat gut for emphasise while a grin spreads across his pig like face. 'Now, what should we do first?'[line break][line break]He takes a moment to look over your body, before he makes a decision.[line break][line break]";
+	say "     'I knew you couldn[apostrophe]t resist my, OINK!, studly physique,' Philip says as he jiggles his fat gut for emphasise while a grin spreads across his pig like face.  'Now, what should we do first?'  He takes a moment to look over your body, before he makes a decision.";
 	if pigfed is greater than 0 and tailname of player is not "Piggy":
-		say "Philip frowns as he take a close look at you, then he grins and smears a handful of mud above your butt as he yells, 'Suuuueeeyyy, pig, pig, pig!'[line break][line break]You[apostrophe]re not sure if it[apostrophe]s the mud or his words that cause it, but your curly pig tail suddenly regrows.[line break][line break]";
+		say "     Philip frowns as he take a close look at you, then he grins and smears a handful of mud above your butt as he yells, 'Suuuueeeyyy, pig, pig, pig!'  You[apostrophe]re not sure if it[apostrophe]s the mud or his words that cause it, but your curly pig tail suddenly regrows.";
 		now tailname of player is "Piggy";
 		now tail of player is " You have a short and curly pig tail above your ass.";
 	if pigfed is greater than 1 and facename of player is not "Piggy":
-		say "'Oh no, your face has been hideously mutated! Don't worry, I'll fix it!' Philip exclaims, as he approaches you and quickly licks his thick pig tongue across your face before you can react. Brief pain flares as his infection spreads to you rapidly, regaining your bald head, floppy pig ears, and upturned pig nose. Philip admires his work for a moment, then says, 'Much better.'[line break][line break]";
+		say "     'Oh no, your face has been hideously mutated! Don't worry, I'll fix it!' Philip exclaims, as he approaches you and quickly licks his thick pig tongue across your face before you can react. Brief pain flares as his infection spreads to you rapidly, regaining your bald head, floppy pig ears, and upturned pig nose. Philip admires his work for a moment, then says, 'Much better.'";
 		now face of player is "clearly porcine, having plump, rounded cheeks surrounding your upturned pig nose.  Your head is bald with big, floppy pig ears atop it.  Your features are rather hog-like now, with the occasional piggish snort to go along with it";
 		now facename of player is "Piggy";
 	if pigfed is greater than 2 and bodyname of player is not "Piggy":
-		say "As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.[line break][line break]";
+		say "     As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.";
 		now bodyname of player is "Piggy";
 		now body of player is "quite big, plump and fat with pig hooves instead of feet. ";
 		now scalevalue of player is 3;
@@ -205,42 +194,66 @@ instead of fucking the philip:
 		now bodytype of player is "[one of]porcine[or]piggish[at random]";
 		now the daycycle of player is 0;
 	if cunts of player > 0:
-		say "Philip takes you by the hand and gently lays you down on the ground. He massages your tits as he positions his bulk on top of you. His huge gut rests on top of you, pinning you down. When he finally has his huge boar cock in position, he takes a moment to rub the tip against the puffy and moist lips of your pussy. Then, without warning, he thrusts his tool past your [cunt size desc of player] nether lips and deep into your pussy. You gasp in surprise and pleasure as he begins to gyrate his chubby hips, sending his cock in and out of you. You can feel his huge balls slapping against your inner thighs with each thrust. Philip oinks and squeals as he ruts you and soon you join in. Finally you experience a thundering orgasm and Philip lets out one loud, long squeal then thrusts his cock as far into you as he can, as he spews his hot pig seed into you.";
 		let baby be 0;
 		if gestation of child is not 0, now baby is 1;
-		say "[impregchance]";
+		say "     Philip takes you by the hand and gently lays you down on the ground. He massages your tits as he positions his bulk on top of you. His huge gut rests on top of you, pinning you down. When he finally has his huge boar cock in position, he takes a moment to rub the tip against the puffy and moist lips of your pussy. Then, without warning, he thrusts his tool past your [cunt size desc of player] nether lips and deep into your pussy. You gasp in surprise and pleasure as he begins to gyrate his chubby hips, sending his cock in and out of you. You can feel his huge balls slapping against your inner thighs with each thrust. Philip oinks and squeals as he ruts you and soon you join in. Finally you experience a thundering orgasm and Philip lets out one loud, long squeal then thrusts his cock as far into you as he can, as he spews his hot pig seed into you.[impregchance]";
 		if baby is 0 and gestation of child is not 0:
 			now facename of child is "Piggy";
 			now bodyname of child is "Piggy";
 			now skinname of child is "Piggy";
 		if breasts of player < 8:
 			if "Male Preferred" is not listed in feats of player and "One Pair" is not listed in feats of player:
-				say "As soon as Philip's pig cum floods into you, your chest begins to feel strange. Within moments, six new breasts form in rows of twos beneath your original breasts. You have sow tits!";
+				say "     As soon as Philip's pig cum floods into you, your chest begins to feel strange. Within moments, six new breasts form in rows of twos beneath your original breasts. You have sow tits!";
 				now breasts of player is 8;	
 	otherwise if pigfucked is 3:
-		say "Philip smiles at you as you start to kneel before him without his prompting.  He rubs his piggish hand over your ears and strokes your flabby cheek.  'Now, I've noticed you keep coming back to the big boar.  You must be looking for somethin['] special, my eager sow,' he oinks.  He pushes you down into the mud and squeals loudly as he jumps atop you, pressing you into it and pinning you beneath him.  His throbbing shaft finds its way under your curly tail and probes at your tailhole.  He smears some of the slick mud onto it like lube, then pushes his thick meat into you as you're pulling your face free of the muck.  The cool mud and hot shaft pushing into you make you squeal loudly and press back against him, ending any possible objections to the boar's desires.  He oinks and grunts loudly as he pounds away at you, slapping his flabby body against your wide bottom again and again.  When his cock throbs inside you and his hot seed rushes into your bottom, you moan in delight.  As he pulls out of you, he gives your fat rump a soft slap.  'Mmm... that wasn't none too bad.  Not my usual preference, but you make such a fine sow, you deserved a treat.'  His piggish fingers stroke your rear and tease your messy tailhole, slick and leaking his semen.";
+		let baby be 0;
+		if gestation of child is not 0, now baby is 1;
+		say "     Philip smiles at you as you start to kneel before him without his prompting.  He rubs his piggish hand over your ears and strokes your flabby cheek.  'Now, I've noticed you keep coming back to the big boar.  You must be looking for somethin['] special, my eager sow,' he oinks.  He pushes you down into the mud and squeals loudly as he jumps atop you, pressing you into it and pinning you beneath him.  His throbbing shaft finds its way under your curly tail and probes at your tailhole.  He smears some of the slick mud onto it like lube, then pushes his thick meat into you as you're pulling your face free of the muck.  The cool mud and hot shaft pushing into you make you squeal loudly and press back against him, ending any possible objections to the boar's desires.  He oinks and grunts loudly as he pounds away at you, slapping his flabby body against your wide bottom again and again.  When his cock throbs inside you and his hot seed rushes into your bottom, you moan in delight.  As he pulls out of you, he gives your fat rump a soft slap.  'Mmm... that wasn't none too bad.  Not my usual preference, but you make such a fine sow, you deserved a treat.'  His piggish fingers stroke your rear and tease your messy tailhole, slick and leaking his semen.[mimpregchance with Piggy]";
+[		if baby is 0 and gestation of child is not 0:
+			now facename of child is "Piggy";
+			now bodyname of child is "Piggy";
+			now skinname of child is "Piggy";		]
 		if breasts of player < 8:
 			if "Male Preferred" is not listed in feats of player and "One Pair" is not listed in feats of player:
-				say "As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
+				say "     As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
 				now breasts of player is 8;
-	otherwise if pigfucked < 3 or a random chance of 2 in 3 succeeds:
-		say "Philip takes you by the hand and gently encourages you to kneel before him. Then he takes his shaft into one of his hands and says, 'Open wide.'[line break][line break]You stare at his rod hesitantly for a moment until the thick, musky scent of his boar cock makes you crave his seed. You hold his rod in your hands and you lick the tip of it a few times until it becomes hard. Then you gently guide it into your mouth. His shaft is so long that it reaches the back of your mouth and even a little bit into the top of your throat. You run your tongue up and down the length of his rod, causing Philip to moan happily. Finally, his boar cock dumps it's load into your mouth and you swallow every last drop. Mmm... his seed tastes like bacon grease.";
+	otherwise if pigfucked < 3 or a random chance of 5 in piggymalefun succeeds:
+		say "     Philip takes you by the hand and gently encourages you to kneel before him. Then he takes his shaft into one of his hands and says, 'Open wide.'";
+		say "     You stare at his rod hesitantly for a moment until the thick, musky scent of his boar cock makes you crave his seed.  You hold his rod in your hands and you lick the tip of it a few times until it becomes hard.  Then you gently guide it into your mouth.  His shaft is so long that it reaches the back of your mouth and even a little bit into the top of your throat.  You run your tongue up and down the length of his rod, causing Philip to moan happily.  Finally, his boar cock dumps its load into your mouth and you swallow every last drop.  Mmm... his seed tastes like bacon grease.";
 		if breasts of player < 8:
 			if "Male Preferred" is not listed in feats of player and "One Pair" is not listed in feats of player:
-				say "As soon as you swallow Philip's pig cum, your chest begins to feel strange. Within moments, six new breasts form in rows of twos beneath your original breasts. You have sow tits!";
+				say "     As soon as you swallow Philip's pig cum, your chest begins to feel strange. Within moments, six new breasts form in rows of twos beneath your original breasts. You have sow tits!";
 				now breasts of player is 8;
+	otherwise if "Submissive" is listed in feats of player and a random chance of piggymalefun in 25 succeeds:
+		let baby be 0;
+		if gestation of child is not 0, now baby is 1;
+		say "     Philip grabs you in his meaty arms and pulls you into a big kiss, rubbing his piggish body against yours, grabbing your ass as he does.  'You're nothing but my squealing piggy, aren't you?' he oinks as he teases a meaty finger under your tail and against your tight pucker.  Your submissive tendencies kick in and you moan and nod, wanting the big pig to take you more than ever.  Grinning, he pushes you down onto all fours in the mud and leaps atop you.  His throbbing porcine cock rubs between your ass cheeks, dribbling its greasy precum to act as lube.";
+		say "     'I'm going to enjoy making you squeal like a sow,' he oinks, sinking the first few inches of his cock into you.  You moan and press back onto him, pushing more of his thick shaft into you as he chuckles.  He gives your plump, piggy bottom a slap, drawing a squeal out of you.  'Oh, how I love that sound,' he says as he grips your cheeks firmly and starts pounding into you hard and fast.  This gets you squealing all the more, in part to further excite your lover and partially because you just can't control yourself.  The heavy hog nibbles at your floppy pig ear, snorting and oinking as his excitement builds.  He drives hard into you one last time and cums inside you, filling your rectum with his greasy load[if cocks of player > 0].  You can't help but cum has you feel his hot semen filling you as he fucks you like a pig[end if].[mimpregchance with Piggy]";
+[		if baby is 0 and gestation of child is not 0:
+			now facename of child is "Piggy";
+			now bodyname of child is "Piggy";
+			now skinname of child is "Piggy";	]
+		attempttowait;
+		say "     But he doesn't stop there.  After a brief pause during which he snuffles at your neck and tells you what a fine sow you make, he starts thrusting again, intent on claiming you a second time.  Already filled with a load of slick boar cum, his thrusts make the semen slosh around inside you.  Some of it leaks out around his thrusting cock, but much of it gets pushed deeper.  Soon you're squealing again beneath Philip with the wet, stick sounds of him stuffing your reused hole a delightful chorus to your cries.";
+		say "     He pounds into you even harder than before, but pulls out before he's done.  You try to push yourself back onto him, but he rolls you over onto your back.  You land in the mud with the boar knealing over you, pumping at his slick cock frantically, drawing a loud oink out of him as he cums hard, blasting his greasy load all across your body, basting you in his juices[if cocks of player > 1].  With your hands on your own cocks, you pump them hard, cumming a second time and adding your seed to his[otherwise].  With your hands on your own cock, you pump it hard, cumming a second time and adding your seed to his[end if].";
+		say "     He runs a piggish hand all over your body as he blasts the last few shots across your face.  'That's my good sow,' he says as he runs his fingers over your sticky body";
+		if breasts of player < 8:
+			if "Male Preferred" is not listed in feats of player and "One Pair" is not listed in feats of player:
+				say ", smiling as you find that you've once again gained a full set of eight piggish nipples down your front";
+				now breasts of player is 8;
+		say ".  He gets you to suck the messy cum from his spent shaft before rolling over in the muck and taking a nap.";
 	otherwise:
-		say "Philip pushes you down into the mud again and squeals that he's going to make you his sow again.  He grabs your fat ass and grinds his cock against it, moaning softly as his greasy pre leaks down between your cheeks.  He spreads the pre against your tailhole, then thrusts into you, making you squeal.  You groan as he presses his heavy body down over yours, forcing you down into the mud as he fucks you hard and fast.  His throbbing meat pounds away at you and the bunker is filled with the squeals and oinks of a rutting pair of hogs.  When his cum floods into your bowels, it feels so good, you can't help but cum also.  He gets off you slowly, teasingly calling you his sow as he fondles your messy bottom.";
+		say "     Philip pushes you down into the mud again and squeals that he's going to make you his sow again.  He grabs your fat ass and grinds his cock against it, moaning softly as his greasy pre leaks down between your cheeks.  He spreads the pre against your tailhole, then thrusts into you, making you squeal.  You groan as he presses his heavy body down over yours, forcing you down into the mud as he fucks you hard and fast.  His throbbing meat pounds away at you and the bunker is filled with the squeals and oinks of a rutting pair of hogs.  When his cum floods into your bowels, it feels so good, you can't help but cum also.  He gets off you slowly, teasingly calling you his sow as he fondles your messy bottom.[mimpregchance with Piggy]";
 		if breasts of player < 8:
 			if "Male Preferred" is not listed in feats of player and "One Pair" is not listed in feats of player:
-				say "As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
+				say "     As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
 				now breasts of player is 8;
 	if pigfucked > 0 and cocks of player > 0 and cockname of player is not "Piggy":
-		say "As the heat of Philip's strong cum warms your insides, you feel a tingle in your cock as it throbs and spurts its seed onto the messy floor.  Your shaft changes, becoming humanlike, but pinker.  It is musky and has a thick scent, much like your piggy lover's.";
+		say "     As the heat of Philip's strong cum warms your insides, you feel a tingle in your cock as it throbs and spurts its seed onto the messy floor.  Your shaft changes, becoming humanlike, but pinker.  It is musky and has a thick scent, much like your piggy lover's.";
 	now cock of player is "pink and musky";
 	now cockname of player is "Piggy";
 	if pigfucked > 1:
-		say "After finishing his fun with you, Philip rolls in the mud with you, snuggling and snuffling at your ears.  His piggish hands fondle your nipples, making you squeal like a pig, much to his delight";
+		say "     After finishing his fun with you, Philip rolls in the mud with you, snuggling and snuffling at your ears.  His piggish hands fondle your nipples, making you squeal like a pig, much to his delight";
 		if skinname of player is not "Piggy":
 			now skinname of player is "Piggy";
 			now skin of player is "pink and piggy";

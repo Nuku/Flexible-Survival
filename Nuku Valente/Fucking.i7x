@@ -9,9 +9,14 @@ Fucking is an action applying to one thing.
 
 Understand "fuck [person]" as fucking;
 
+before fucking:
+	follow the cock descr rule;
+	follow the cunt descr rule;
+	follow the breast descr rule;
+
 check fucking:
 	if noun is not visible, say "Who?" instead;
-	
+
 Carry out fucking:
 	say "They don't seem very interested.";
 
@@ -19,15 +24,6 @@ Carry out fucking:
 [No sex responses for some NPCs]
 instead of fucking Doctor Matt:
 	say "Doctor Matt recognizes the glint of arousal in your eyes as you imagine peeling him out of the suit.  He takes a few steps towards the back wall of the room, hovering his hand over the intercom.  'You're not going feral on me, are you?  Control yourself, or I'll have to call Orthas!'";
-
-instead of fucking Rod Mallrat:
-	if Ronda Mallrat is in the Mall Atrium:
-		say "'Dude!  I'm already taken.  Ronda would kill me if I fooled around.  Besides,' he adds with a wink, 'she's quite the sweet ride in the sack.  I'm covered.'";
-	otherwise:
-		say "Rod just sighs sadly and shakes his head.";
-
-instead of fucking Ronda Mallrat:
-	say "'Hey now, I ain't no floozy rat like some.  I've already got me a sexy guy wrapped around my finger.  Why would I need you?' she says, making the other girls nearby giggle.";
 
 [Fucking v2.0 table]
 
@@ -37,7 +33,7 @@ title	sortorder	subtable	description	toggle
 with 20 blank rows.
 
 This is the sexytable rule:
-	say "I'm a playholder! :)";
+	say "I'm a placeholder! :)";
 
 sextablerun is a number that varies.  sextablerun is normally 0.
 
@@ -132,20 +128,19 @@ to say testerbotselection:
 				now sextablerun is 1;
 				if nam is "Face fuck":
 					say "     Ordering the robot onto its knees, you bring your cock to its false mouth.  'Oh.  It is so big,' the robot says in a bored, monotone voice before leaning forward and taking your cock into its mouth.  The artificial orifice squeezes and sucks at your cock, leaking some lube to keep the hole slick as you start fucking its face.  You grab onto the handle on the top of its head and pound away.  You hear a whirr and a click before a recording starts playing of soft, wet moans, clearly lifted from some porno to play on a cassette inside the robot.  You pump the robot's face over your cock until finally you grunt and cum hard, blasting your seed into his mouth.  Finished, the robot stands up slowly and the leaking cum from the orifice with a disdainful wipe of its hand, then drags itself back over to the corner to plug in and recharge.";
-					increase libido by 10;
+					increase libido of player by 10;
 				otherwise if nam is "Fuck Testerbot":
 					say "     Ordering the robot onto the floor, you climb over its cold, hard body and line your cock up with its pussy.  As you get ready to penetrate the clearly well-used hole, the robot flatly says, 'Go easy.  It's my first time.'  You thrust into it and start pounding away with a dull clang with every slap against its cold, metal body.  The artificial pussy squeezes and clenches around your cock, leaking some lube to keep it pleasantly slick as you fuck that hole.  Sitting up, you grab the handles at the robot's side and start fucking harder.  You hear a whirr and a click before the robot's internal cassette player starts up with a mix of moans and cries to be fucked harder, clearly recorded from some porn movie.  You pound away at the false cunt until finally you cum hard, shooting your seed into it.  Finished, the robot stands up and somehow visibly shudders in disgust before slouching its way back to the corner to recharge.";
-					decrease libido by 15;
+					decrease libido of player by 15;
 				otherwise if nam is "Fucked by Testerbot":
 					say "     Spreading your legs, you order the sex robot to fuck you.  It sighs audibly before saying, 'Oh baby, you are so hot' in a monotone voice.  There is a whirr and clicking sound as one of the probes is moved and locked into position.  The dildo attachment slides into you, filling your cunt nicely before a light vibration starts and the robot begins a measured series of thrusts into you.  The shapely false cock pumps into you again and again, filling you with pleasure as the rumbling teases your clit.  There is a whirr and a click inside the robot before a recording of sex sounds taken from a porno starts up.  The sex robot fucks you harder as you reach up and grab its handles, pulling it to pound you harder to drive you to orgasm.  Finished, the robot stands up, gingerly unhooks the used probe and holds it at arm length before dropping into a cleaning vat and returning to its seat by the wall socket.";
-					decrease libido by 15;
+					decrease libido of player by 15;
 				otherwise if nam is "Anal on Testerbot":
 					say "     Ordering the robot to bend over, you bring your hard cock to its artificial anal orifice.  'Yes, do me hard... uhhh...' It shudders visibly before continuing.  'I've been... ugh... such a bad robot bitch.'  As you sink your cock into the it, the robot clenches down on the worktable, cracking the wood a little.  Ignoring it, you start thrusting into it as the snug back entrance clenches and squeezes much like an asshole.  As you pound away, a hidden cassette player starts up inside the robot, playing some grunts and wet, slapping sounds lifted from a porno.  This almost is enough to cover the dull, metal thumps as you bang against the boxy, metal robot's body.  Grabbing the robot's side handles, you thrust hard into it and shoot your hot semen into that gripping hole until your balls are drained.  Finished its duty, the robot slowly walks back to the wall socket to recharge, leaking your cum as it goes.";
-					decrease libido by 15;
-					increase libido of player by 5;
+					decrease libido of player by 15;
 				otherwise if nam is "Anal":
 					say "     At your order, the robot bends you over a worktable.  You can her a motor whirring, followed by a clicking sound as one of the probes is moved and locked into position.  The robot lines up the cock with your asshole and sighs audibly before saying 'I will make you my bitch' in a monotone voice before sliding the self-lubricating dildo up your butt.  You grunt a little as it starts pressing into you, then start to enjoy it as the robot thrusts into you with measured strokes[if cocks of player > 0].  The cock attachment presses at your prostate with every thrust, pleasantly stimulating the sensitive gland[otherwise].  The cock attachment pleasantly stimulates you as it slides back and forth inside you[end if].  An internal tape player starts up, playing back some grunts and moans from some porno.  As the robot pounds into you, the dildo starts to vibrate, increasing the pleasure you receive until finally you cum with a moan of ecstasy.  Finished its duty, the robot gingerly unhooks the used probe and holds it at a distance in its pincher hand before releasing it into a cleaning vat.  After shuddering and bemoaning that it feels so dirty, the robot slumps back by the wall socket and plugs in to recharge.";
-					decrease libido by 15;
+					decrease libido of player by 15;
 				wait for any key;
 		otherwise:
 			say "Invalid Option.";
@@ -154,6 +149,7 @@ to say testerbotselection:
 
 [This is the section to put the chosen option into effect, playing out the sex scene.]
 
+[The below method no longer needs to use this rule, but some older implementations still use this column]
 This is the testerbotsexy rule:
 	say "I'm now redundant! :)";
 

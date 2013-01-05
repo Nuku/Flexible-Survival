@@ -1,4 +1,5 @@
-Version 1 of Reindeer by Stripes begins here.
+Version 2 of Reindeer by Stripes begins here.
+[ Version 2 - Heat repairs - Stripes ]
 "Adds a Christmas-themed Reindeer creature to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
 
@@ -14,15 +15,13 @@ to say losetoreindeer:
 	if cunts of player > 0:
 		say "     He gives a merry laugh which causes his jingle bells to ring and lines up his cock behind you.  With another spurt of pre, he starts to slide his slender cock into you.  You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells.  His slender cock is easy to take, but fills your pussy nice and deep.";
 		if cunt length of player < 12:
-			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed sprays into you moments later, filling your womb with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground, but filled with warmth and happiness.";
-			say "[impregchance]";
+			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed sprays into you moments later, filling your womb with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground, but filled with warmth and happiness.[impregchance]";
 		otherwise:
-			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly as he sheaths his cock entirely in your depths and climax[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground, but filled with warmth and happiness.";
-			say "[impregchance]";
+			say "     Your pussy leaks juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle.  But you only feel the heat of your strong buck atop you as he ruts with you.  When he gives a few last shoves into you, you groan loudly as he sheaths his cock entirely in your depths and climax[if cocks of player > 0].  Your cock throbs beneath you and spills your semen across the ground[end if].  His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer.  This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground, but filled with warmth and happiness.[impregchance]";
 	otherwise:
 		say "     He gives a merry laugh which causes his jingle bells to ring and lines up his cock behind you.  With another spurt of his pre, this time to lube your tailhole, he starts to slide his slender cock into you.  You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells.  His cock fills you nice and deep, but isn't painful to take at all.";
 		say "     You leak precum onto the cold ground, only feeling the heat of your strong buck atop you.  When he gives a few last shoves into you, you groan loudly and cum hard, spilling your seed moments before his hot cum sprays into you, filling you with his holiday cheer.  This load is quite substantial, a ball-draining, belly-plumping, ass-flooding flow that leaves you panting on the ground, but filled with warmth and happiness.";
-	say "     He gives you a final, minty-sweet kiss under the mistletoe before flying off to spread more holiday cheer with others.  As he leaves, the temperature gradually returns to normal, but his hot special present keeps you warm inside until then.";
+	say "     He gives you a final, minty-sweet kiss under the mistletoe before flying off to spread more holiday cheer with others.  As he leaves, the temperature gradually returns to normal, but his hot special present keeps you warm inside until then.[impregchance]";
 	increase morale of player by a random number from 2 to 4;
 	decrease humanity of player by a random number from 2 to 5;
 	if "Pure" is listed in feats of player, increase humanity of player by a random number between 0 and 2;
@@ -140,7 +139,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "egg nog"	"AKA chicken milk.  That holiday drink, spiked rather heavily with brandy by the smell of it."	1	egg nog
 
-egg nog is a grab object. It is a part of the player. egg nog is infectious.  understand "chicken milk" as egg nog.  The strain of egg nog is "Reindeer".
+egg nog is a grab object. It is a part of the player. egg nog is infectious.  understand "chicken milk" as egg nog.  The strain of egg nog is "Reindeer". egg nog is temporary.
 
 instead of sniffing egg nog:
 	say "The egg nog smells fresh and strongly of good brandy, making you want to drink it and remember Christmases past.";
@@ -189,6 +188,8 @@ to say nogging:
 
 Section 4 - Holiday Madness
 
+heatturnskipper is a truth state that varies.  heatturnskipper is normally false.	[skips a second heat roll if the player loses a turn]
+
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
 --	--	--	--	--	--	--	--
@@ -204,7 +205,9 @@ now inheat entry is "[reindeerheat]"; [this final say block is triggered every 3
 
 to say reindeerheat:
 	let diceroll be ( libido of player plus a random number between 0 and 100 );
-	if diceroll < 90:
+	if heatturnskipper is true:
+		now heatturnskipper is false;
+	otherwise if diceroll < 90:
 		increase libido of player by a random number between 0 and 3;
 	otherwise if diceroll < 130:		[90 - 130]
 		say "Holiday ditties play in your head as you squeeze your thighs together, moaning during a bout of holiday reindeer mating season.";
@@ -221,18 +224,26 @@ to say reindeerheat:
 	otherwise if diceroll < 170:		[155 - 170]
 		say "Your heat-filled pussy leaks juices and clouds your mind so thoroughly with mindless holiday cheer that you have to take a long break to masturbate, though with only limited satisfaction.  You only come to your senses hours later.";
 		decrease libido of player by a random number between 5 and 10;
+		now heatturnskipper is true;
 		follow the turnpass rule;
 	otherwise if diceroll < 185:		[170 - 185]
 		say "[reindeerbreastheat]";
 	otherwise:					[185 - 200]
-		if "egg nog" is listed in invent of player:
+		if egg nog is owned:
 			delete egg nog;
 			increase libido of player by a random number from 3 to 8;
 			if libido of player > 100, now libido of player is 100;
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Remembering the egg nog, you pull it out from your pack and take a drink.[nogging]";
 		otherwise if "egg nog" is listed in invent of the location of the player:
 			say "As a wave of holiday merriment washes over you, you bleat lustfully and drive a pair of fingers into your sopping pussy.  Feeling the strength of your heat pulsing through you, you are so thirsty.  You look around for something to satisfy your thirst for holiday cheer.  Spotting the egg nog, you grab it and take a drink.";
-			remove "egg nog" from invent of location of player;
+			let number be 0;
+			repeat with Q running through invent of the location of the player:
+				increase number by 1;
+				if q matches the text "egg nog", case insensitively:
+					add q to the invent of the player;
+					break;
+			remove entry number from invent of the location of the player;
+			increase carried of egg nog by 1;
 			process egg nog;
 		otherwise:
 			say "[reindeerbreastheat]";
@@ -279,7 +290,7 @@ to say reindeerbreastheat:
 		say "You moan lustfully and fondle your chest, teasing your nipples.  Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal.  As you continue to play with yourself, your nipples start to leak milk, rich and scented like brandy egg nog.  Delighted at this, you continue to milk yourself until this surge of lust passes.";
 		[copied entirely from the 'milk me' section]
 		repeat with T running from one to ( ( the breasts of the player ) / 2 ):
-			add "egg nog" to the invent of the player;
+			increase carried of egg nog by 1;
 		increase libido of player by a random number from 3 to 8;
 		increase libido of player by a random number from 3 to 8;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 1 and 3;

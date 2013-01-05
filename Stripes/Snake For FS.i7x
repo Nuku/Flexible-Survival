@@ -34,7 +34,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Snake";
-	now attack entry is "[one of]The snake winds itself around your leg, squeezing as it tries to scale your body![or]The ring-necked snake snaps at your arm as you try to attack it![or]The ringneck hisses and snaps at your leg![or]The serpent manages to wind itself around you, constricting your body![or]As you attack, the snake whips its tail around your arms and latches on, squeezing them powerfully![at random]";
+	now attack entry is "[one of]The snake winds itself around your leg, squeezing as it tries to scale your body![or]The ring-necked snake snaps at your arm as you try to attack it![or]The ringneck hisses and snaps at your leg![or]As you attack, the snake whips its tail around your arms and latches on, squeezing them powerfully![at random]";
 	now defeated entry is "[beatthesnake]";
 	now victory entry is "[losetosnake]";
 	now desc entry is "[snakedesc]";
@@ -47,7 +47,7 @@ When Play begins:
 	now body change entry is "your spine pops repeatedly, extending and growing at it becomes more flexible.  As your body becomes more serpentine, you retain your limbs, but they become slender and flexible as well.  You are able to tuck against your sides to allow your snake body to slither across the ground or walk, as you prefer at any moment.  Your hands and feet gain sharp claws at the end of their digits";
 	now skin change entry is "it is shed from your body, sliding off of you like a snake's skin, revealing scaly hide underneath.  Your new skin is silver in colour, with a bright patch of yellow from your jaw down to your inner thighs";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your hips shift and pop, your ass almost disappearing away as a long snake tail extends in its place";
-	now cock change entry is "becomes slick and pointed as it bifurcates into hemipenes, like a snake or lizard.  While not two cocks, the pair can wriggle or slide against one another for stimulation while thrusting into a lover's hole";
+	now cock change entry is "your [if cocks of player is 1]shaft becomes slick and pointed as it bifurcates[otherwise if cocks of player > 1]shafts become slick and pointed as they bifurcate[end if] into hemipenes, like a snake or lizard.  While not two cocks, the pair can wriggle or slide against one another for stimulation while thrusting into a lover's hole";
 	now str entry is 8;			[ The player's stats will move towards these values through infection. ]
 	now dex entry is 18;			[ Only the monster's dexterity has any effect in combat. ]
 	now sta entry is 10;			[ These numbers should reflect a fully infected player's stats, not the attacking monster's. ]
@@ -79,7 +79,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "bearhugger";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Endings
 

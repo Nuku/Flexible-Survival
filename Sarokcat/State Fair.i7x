@@ -35,6 +35,12 @@ instead of sniffing Boris:
 	say "Boris smells faintly of funfur and lions[if borisquest is 5].  The scent of his new maleness is strong around him[end if].";
 
 instead of conversing the Boris:
+	[puts Plush lion as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Plush lion":
+			now monster is y;
+			break;
 	if boristalk is 0:
 		say "'Hey there and welcome to the... oh who am I kidding,' the lion costumed man says with a sigh, before raising one of his overlarge paws to rub at his face. 'Look I don't know who you are, or what you are doing here, but trust me, you probably don't want to be here. Heck I don't really want to be here anymore, but it's not like I can just leave.'  Seeing your slightly confused look he sighs and explains. 'Look it's like this, you see me?' he gestures at his plush furred form. 'I showed up for work early the other day, put on the costume, and now well. This is what I am, I can't even really remember my old name anymore, and I have a strange desire to hunt down that bastard Arthur the Antelope,' He growls for a minute, staring off into space, before seeming to come back to himself.";
 		say "'Gah see? I know and you know that there isn't really an Arthur the Antelope out there for me to hunt down, but it still gets to me,' the lion sighs heavily, 'So yeah you might as well just call me Boris now, seems more appropriate then anything else these days.' He pauses for a minute in thought, before shaking himself and continuing. 'So yeah, if you think this is strange, you really don't want to see what the rest of the fair is like.  Things have gotten wild in there, I swear I saw some sort of latex creatures hanging out near the house of wax, the fun house was taken over by some kind of crazy animalistic clowns,' Boris pauses for a minute to shudder at the thought of clowns, 'And to top it all off some of the fair prizes are running around on their own attacking people. Giant stuffed animals running around and jumping on people is definitely one of the weirder things I ever saw, course the fact that the people turned into more stuffed animals as well is pretty damn weird too if you ask me.'  Boris pauses for a second, before shaking his overlarge furred head, 'Just trust me on this, you really don't want to go out there.' His warning delivered, Boris the lion returns to leaning against the ticket booth and staring off into space, occasionally sighing.";
@@ -49,6 +55,12 @@ instead of conversing the Boris:
 
 
 instead of fucking boris:
+	[puts Plush lion as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Plush lion":
+			now monster is y;
+			break;
 	if borisquest is 0:
 		say "'Sorry hun, it[apostrophe]s not that I might not want to, but well, you see this WAS intended to be a family friendly fair.' Boris says with a sigh, 'And since we couldn't have the kiddies asking questions about things like that... well lets just say I[apostrophe]m currently ill equipped to do much of anything with you.' he says with a sad gesture to his featureless furred crotch.";
 		if furry is banned or girl is banned or guy is banned:
@@ -67,10 +79,8 @@ instead of fucking boris:
 		stop the action;
 	if borisquest is 4:
 		say "His eyes goes wide as he looks at the size of the toy you brought him,  'Wow' Boris says as he takes it from you reverentially, 'This is for me? This is great!' He says as he turns it over in his hands, 'Feline style too! And god I only wish I used to be hung like that!'  Boris turns to you with a large grin, 'I have to go try this on right away! It might take a while before its ready to go, but come back later and we can see how it went!' Boris says as he starts to turn away, then stops, 'Oh I almost forgot, I got you a couple things for helping me out like this,' he says as he gestures to a small package sitting next to the ticket booth.  Before you can thank him, he runs off with his new acquisition into one of the restrooms.  Soon you can hear his sharp growls and moans coming from the restroom, as he obviously begins fitting his new member, though its hard to tell whether the sounds are of pain or pleasure.";
-		Add "food" to invent of player;
-		Add "food" to invent of player;
-		Add "water bottle" to invent of player;
-		Add "water bottle" to invent of player;
+		increase carried of food by 2;
+		increase carried of water bottle by 2;
 		increase borisquest by 1;
 		increase boristalk by 1;
 		now lastborisfucked is turns;
@@ -88,7 +98,7 @@ instead of fucking boris:
 				say "'Sorry friend,' Boris says with a shrug, 'I still don[apostrophe]t swing that way.  But if you really want to try out my new addition you can go check out that locker room I told you about.'";
 				stop the action;
 			if christyquest is 2:
-				say "'Sorry, I STILL don[apostrophe]t swing... wait what do you have there?' Boris says as you approach him, his eyes catching on the rather bulky box you brought back.  'You found it! Wonderful!' He exclaims as he snags the box from you and sets it down on the ground beside him. You watch with curious interest as he deftly undoes the ties holding the boxes closed with his large paws, and opens the box up revealing some kind of light gold coloured fabric inside.  'Ah here she is!' Boris says as he carefully gathers up the fabric and lifts it up, you watch as it unfolds into a similar looking costume to the one Boris became, only slightly smaller and lacking in the mane area, amusingly enough it also seems to have a black pawprint shaped mark on the costumes ass.  'Christy the Lioness! Man I missed her! I mean, not that I really ever knew the real one... but uh.. you know what I mean.' Boris says, a wide grin stretching across his leonine face as he shows the costume to you, 'Now hey, since you obviously want to be with Boris so much since you went to such great efforts to help get me properly equipped, and you keep comin over and wanting to play with the new equipment even though you are pretty 'equipped' yourself.  I figure you must really want to make this happen, so now we have the perfect solution!' Boris says as he flourishes the fabric costume.  'You put this on and I figure it should work out for both of us, if whatever changed me is still around, I should get a Christy to play with for a while, and you, you should get a Boris to play with! Either way just slip it on and even if it doesn[apostrophe]t quite work as intended, I promise to let you play with the new 'little boris' as much as you want? What do you say?' Boris asks as he looks at you hopefully.";
+				say "'Sorry, I STILL don[apostrophe]t swing... wait what do you have there?' Boris says as you approach him, his eyes catching on the rather bulky box you brought back.  'You found it! Wonderful!' He exclaims as he snags the box from you and sets it down on the ground beside him. You watch with curious interest as he deftly undoes the ties holding the boxes closed with his large paws, and opens the box up revealing some kind of light gold coloured fabric inside.  'Ah here she is!' Boris says as he carefully gathers up the fabric and lifts it up, you watch as it unfolds into a similar looking costume to the one Boris became, only slightly smaller and lacking in the mane area, amusingly enough it also seems to have a black pawprint shaped mark on the costume's ass.  'Christy the Lioness! Man I missed her! I mean, not that I really ever knew the real one... but uh.. you know what I mean.' Boris says, a wide grin stretching across his leonine face as he shows the costume to you, 'Now hey, since you obviously want to be with Boris so much since you went to such great efforts to help get me properly equipped, and you keep comin over and wanting to play with the new equipment even though you are pretty 'equipped' yourself.  I figure you must really want to make this happen, so now we have the perfect solution!' Boris says as he flourishes the fabric costume.  'You put this on and I figure it should work out for both of us, if whatever changed me is still around, I should get a Christy to play with for a while, and you, you should get a Boris to play with! Either way just slip it on and even if it doesn[apostrophe]t quite work as intended, I promise to let you play with the new 'little boris' as much as you want? What do you say?' Boris asks as he looks at you hopefully.";
 				if player consents:
 					say "'You will? That[apostrophe]s wonderful!' Boris says exuberantly, 'I just knew you would be as turned on by the idea as I was!' He says, the tip of his new member poking out of its sheath showing you just how turned on Boris is by the idea.  He quickly leads you over to a table, where he begins to help you into the surprisingly realistic looking lioness costume. You shudder as your feet slip all too easily into the costume and your legs settle inside, the costume tingling where it touches your flesh, as it almost seems to tighten up around your legs. While Boris helps you get the costume up over your midsection, you realize the tingling in your legs seemed to have lessened somewhat, though now the rest of your body seems to be tingling slightly... Still you stretch out your lion paws in relief, glad that they no longer feel quite so strange. For a second something about your having lion paws bothers you, but you are distracted by Boris slipping the costume up over your shoulders, and the way it makes your chest tingle.  'Only one last bit left to go.' Boris says as he moves to position the headpiece, his hands on your body making your lionesses tail swish happily behind you.[line break]";
 					say "For a minute you find yourself a little worried at the fact that you have a lioness tail and hindpaws, and you bring your pawlike hands down to stroke it for a second in confusion.  You feel sure that you didn[apostrophe]t have one just a little bit ago, or did you? You find yourself wondering as boris prepares the face, but it seems hard to remember why you wouldn[apostrophe]t have one, since all lionesses have tails like that, and since you are a lioness how could you ever not have had one?  You don[apostrophe]t have long to ponder this question, though, as Boris finally has the headpiece ready to slip onto you, and your mind seems to grow even fuzzier as your face tingles and conforms to the costume.  Suddenly you blink as someone touches you, you look over to the side and sigh in recognition, its your Boris the lion! You feel like you missed him so much,  which seems strange since weren[apostrophe]t you just doing something for him.. in some kind of fair?[line break]";
@@ -204,14 +214,14 @@ carry out gameplay:
 			if there is a loot entry:
 				if loot entry is not " ":
 					add loot entry to invent of player;
-					say "you acquired 1 [loot entry][line break]";
-					add "dirty water" to invent of player;
-					say "you acquired some dirty water!";
+					say "You acquired 1 [loot entry].";
+					increase carried of dirty water by 1;
+					say "You acquired some dirty water!";
 				otherwise:
-					add "dirty water" to invent of player;
-					say "you acquired some dirty water!";
+					increase carried of dirty water by 1;
+					say "You acquired some dirty water!";
 			otherwise:
-				add "food" to invent of player;
+				increase carried of food by 1;
 				say "You acquired some carnival food!";	
 		otherwise:
 			say "The game buzzes at you derisively, as you lower your plastic weapon in defeat, the evil cardboard and plastic menaces will apparently live to see another day, although you resolve to come back and try again later as you walk away.";

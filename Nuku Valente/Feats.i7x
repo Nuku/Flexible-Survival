@@ -9,6 +9,7 @@ A featset can be functional. A featset is usually not functional.
 basic feats is functional.
 fun feats is a featset.
 featunlock is a number that varies.	[linked to Dr Matt/Dr Mouse hospital quest]
+autofeatloading is a truth state that varies. autofeatloading is usually false.
 
 The player has a number called featgained.
 
@@ -138,17 +139,17 @@ To addfeat (x - text) with (y - text):
 
 
 instead of addfeating the fun feats:
-	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player:
-		addfeat "Male Preferred" with "You will reject female mutation";
-	if "Male Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player:
-		addfeat "Female Preferred" with "You will reject male mutation";
+	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and ( isHellhound is false or ( isHellhound is true and maleHound is true ) ):
+		addfeat "Male Preferred" with "You will reject female mutation.";
+	if "Male Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and ( isHellhound is false or ( isHellhound is true and maleHound is false ) ):
+		addfeat "Female Preferred" with "You will reject male mutation.";
 	if "Male Preferred" is listed in feats of player:
 		if "Flat Chested" is not listed in feats of player, addfeat "Breasts" with "Despite being all male, you still grow breasts, curious.";
 	otherwise:
 		if "Breasts" is not listed in feats of player, addfeat "Flat Chested" with "Your chest tends to remain flat.";
 	if "Female Preferred" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
 		addfeat "Single Sexed" with "You can be male, or female, but not both.";
-	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player:
+	if "Female Preferred" is not listed in feats of player and "Male Preferred" is not listed in feats of player and isHellhound is false:
 		addfeat "Herm Preferred" with "You more easily stay in the wonderful world of dual gendership";
 	if "Modest Organs" is not listed in feats of player or "Passing Grade Chest" is not listed in feats of player:
 		addfeat "One Way" with "You can only grow larger, not smaller, sexually - barring specific effects.";
@@ -172,10 +173,17 @@ instead of addfeating the fun feats:
 	if "Horny Bastard" is not listed in feats of player:
 		addfeat "Cold Fish" with "Your libido will decrease over time.";
 	addfeat "Control Freak" with "When you win a battle, you may choose if you wish to engage in the post battle activities or not.";
-	addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
-	addfeat "Litter Bearer" with "Greatly increases the chance of multiple children in one birth - twins or more at over 50% chance.";
+	if "Female Preferred" is not listed in feats of player and "Sterile" is not listed in feats of player:
+		addfeat "MPreg" with "You can now be impregnated and give birth as a male/neuter (egg laying).";
+	if "Breeding True" is not listed in feats of player and "Sterile" is not listed in feats of player:
+		addfeat "They Have Your Eyes" with "Any child you have will appear exactly as you at time of birth.";
+	if "They Have Your Eyes" is not listed in feats of player and "Sterile" is not listed in feats of player:
+		addfeat "Breeding True" with "All new children you have will resemble their father.";
+	if "Sterile" is not listed in feats of player:
+		addfeat "Litter Bearer" with "Greatly increases the chance of multiple children in one birth - twins or more at over 50% chance.";
 	if "Fertile" is listed in feats of player:
 		addfeat "Selective Mother" with "You can decide if you want to become pregnant.";
+[	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!";	]
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it.";
 	addfeat "Submissive" with "Gain extra XP for submitting to monsters.  You may find submitting so much fun you do it spontaneously from time to time.";
@@ -185,7 +193,7 @@ instead of addfeating the fun feats:
 	if "Pure" is not listed in feats of player, addfeat "Corrupt" with "You have a weaker grip on your humanity.";
 	if "Corrupt" is not listed in feats of player, addfeat "Pure" with "You have a stronger grip on your humanity.";
 	addfeat "Junk Food Junky" with "Junk food is better for you than regular food and water.";
-	addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
+	if "Open World" is not listed in feats of player, addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are.";
 
 instead of addfeating the basic feats:
 	addfeat "Survivalist" with "You are great at scavenging. When doing such, you get a +4 to finding things.";
@@ -284,13 +292,17 @@ instead of addfeating the basic feats:
 This is the gainfeat rule:
 	choose row Current Menu Selection in table of gainable feats;
 	let nam be title entry;
-	say "Are you sure you want '[title entry]': [description entry][line break]?";
-	if player consents:
+	if autofeatloading is false, say "Are you sure you want '[title entry]': [description entry][line break]?";
+	if autofeatloading is true or player consents:
 		add nam to feats of player;
 		say "You have gained '[nam]'!";
 [		decrease menu depth by 1;			]
 		increase featgained of player by 1;
-		if nam is "Automatic Survival", decrease score by 600;
+		if nam is "Automatic Survival":
+			decrease featgained of player by 1;
+			remove "Automatic Survival" from feats of player;
+			say "[bold type]This ability is now controlled by Trixie.  Your feat slot has been returned to you.[roman type]";
+			wait for any key;
 		if nam is "More Time", extend game by 24;
 		now Featqualified is 0;
 		if nam is "Hardy":
@@ -299,20 +311,25 @@ This is the gainfeat rule:
 		if nam is "City Map":
 			now Beach Plaza is known;			
 			now Outside Trevor Labs is known;			
-			Now Smith Haven Mall Lot is known;
+			Now Smith Haven Mall Lot South is known;
 			now Park Entrance is known;			
 			now City Hospital is known;			
 			Now State fair is known;
 			Now Approaching the Capitol Building is known;
-[			Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]	]
+			Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
 			Now Plant Overview is known;
 			now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+			now College Campus is known;
+			now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
 			Now Entrance to the Red Light District is known;
 			Now Entrance to the High Rise District is known;
 			Now Zoo entrance is known;
 			Now Dry Plains is known;
 			Now Museum Foyer is known;
-	wait for any key;
-	clear the screen and hyperlink list;
+			now Warehouse District is known;
+		if nam is "Instinctive Combat":
+			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command.  These are the same as picking the same option over and over again during combat.  No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
+	if autofeatloading is false, wait for any key;
+	if autofeatloading is false, clear the screen and hyperlink list;
 
 Feats ends here.

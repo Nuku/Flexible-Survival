@@ -1,4 +1,5 @@
-Version 7 of Yamato Dragoness For FS by Kohryu begins here. 
+Version 2 of Yamato Dragoness For FS by Kohryu begins here.
+[ Version 2 - Fire Breath attack added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Yamato Dragoness to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -13,17 +14,20 @@ when play begins:
 to say Yamato Dragoness attack:
 	say "The female dragon lowers her head to sniff at you.";
 	if cocks of player is greater than 0 and cunts of player is not greater than 0:
-		Say "After she finishes sniffing you she starts to speak, though she doesn't open her mouth so you're not sure how she is speaking.  'You smell like an interesting male, lets see what you have.'  She then breathes a plume of blue fire over you, it doesn't burn or hurt, but your clothing disintegrates, revealing all of your body for her to see.";
+		Say "After she finishes sniffing you she starts to speak, though she doesn't open her mouth so you're not sure how she is speaking.  'You smell like an interesting male, lets see what you have.'  She then breathes a plume of blue fire over you, it doesn't burn or hurt, but your clothing disintegrates, revealing all of your [bodytype of player] body for her to see.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cock length of player is less than 15:
 			say "The dragoness looks at your [cock of player] cock in disappointment and says 'You're just not big enough, come back when you've sized up ok.' and then flies off, leaving you naked in the middle of the park.";
 		otherwise:
-			say "The dragoness sees the size of you [cock of player] cock and exclaims 'Oh!  You're pretty big; this is going to be fun!' She then moves her body over you before lifting her upper-body into the air and kneeling her lower-body around your hips and where your cock is.  You look at where her pussy should be and become aroused as she opens her scaled slit to reveal her dripping wet red pussy.  She lowers her self slowly onto your [cock of player] member, despite her size her pussy is crushingly tight, her powerful inner walls holding you with all there might.  Every inch she works in sends waves of pleasure through you until she finally has all of your cock...And then she starts working her inner muscles, pulling and pushing and twisting around your [cock of player] cock.  It barely takes a minute of this before you are cumming into her depths, but she doesn't stop, she starts to writhe as her pussy abuses your cock more and more.  After what seems like a lifetime she finally stops, lifting herself off of your sore member she closes her pussy tight to seal in all the cum she milked from you and says 'That was fun!  We should do it again sometime.' and flies away.  Leaving you to pick yourself up and walk awkwardly away.";
+			say "The dragoness sees the size of you [cock of player] cock and exclaims 'Oh!  You're pretty big; this is going to be fun!' She then moves her body over you before lifting her upper-body into the air and kneeling her lower-body around your [bodytype of player] hips and where your cock is.  You look at where her pussy should be and become aroused as she opens her scaled slit to reveal her dripping wet red pussy.  She lowers her self slowly onto your [cock size desc of player] [cock of player] member, despite her size her pussy is crushingly tight, her powerful inner walls holding you with all there might.  Every inch she works in sends waves of pleasure through you until she finally has all of your cock... And then she starts working her inner muscles, pulling and pushing and twisting around your achingly hard cock.  It barely takes a minute of this before you are cumming into her depths, but she doesn't stop, she starts to writhe as her pussy abuses your dick more and more.  After what seems like a lifetime she finally stops, lifting herself off of your sore member she closes her pussy tight to seal in all the cum she milked from you and says 'That was fun!  We should do it again sometime.' and flies away.  Leaving you to pick yourself up and walk awkwardly away.";
 	otherwise:
 		Say "The dragoness doesn't seem to like what she smells and says 'What am I supposed to do with you?  Guess I have to find someone else' and flies off."
-                                            
-	
-	
+
+to say yamato dragoness desc:
+	now firebreathcount is 0;
+	now firebreathready is false;
+	say "As you're walking through the park you look up and notice a serpent-like creature flying and coiling it's way through the sky.  As you try to figure out how it's flying with no wings the creature spots you staring at it and within an instant it flies to and lands in front of you.  The massive serpent-like dragon looks down upon you with playful eyes and you can't help but wonder what it wants.";
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -33,10 +37,10 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Yamato Dragoness"; [Name of your new Monster]
-	now attack entry is "[one of]snaps it's neck forward like a snake to bite at you.[or]whips it's tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]inhales deeply before breathing a wave of blue fire over you, strangely it doesn't burn but every pain receptor on your body screams in agony.[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]The oriental dragon[or]The Yamato Dragoness[or]It[purely at random] [one of]snaps it's neck forward like a snake to bite at you.[or]whips it's tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]slams you with one of its clawed paws.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "You finally manage to knock the dragon off balance, but before it falls onto the ground she starts to levitate into the air and says 'You're pretty tough, I can't wait to fight you again.' as she flies away."; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Yamato Dragoness attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "As you're walking through the park you look up and notice a serpent-like creature flying and coiling it's way through the sky.  As you try to figure out how it's flying with no wings the creature spots you staring at it and within an instant it flies to and lands in front of you.  The massive serpent-like dragon looks down upon you with playful eyes and you can't help but wonder what it wants.";[ Description of the creature when you encounter it.]
+	now desc entry is "[yamato dragoness desc]";[ Description of the creature when you encounter it.]
 	now face entry is "mostly human but with shining silver hair and a mouth-full of bladed teeth";[ Face description, format as the text "Your face is (your text)."] 
 	now body entry is "lean and wiry muscled";[ Body Description, format as the text "Your Body is (your text)."] 
 	now skin entry is "overlapping green scaled";[ skin Description, format as the text "You have (your text) skin."] 
@@ -56,7 +60,7 @@ When Play begins:
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now hp entry is 90;			[ How many HP has the monster got? ]
 	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 30;			[Amount of Damage monster Does when attacking.]
+	now wdam entry is 20;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Park";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 24;		[ Length infection will make cock grow to if cocks]
@@ -78,7 +82,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 [ Edit this to have the correct Name as wall]
 Yamato Dragoness For FS ends here.

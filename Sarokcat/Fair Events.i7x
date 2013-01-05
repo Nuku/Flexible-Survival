@@ -24,12 +24,12 @@ Instead of Resolving a Game crazy:
 
 Section 3-  fair food cart
 
-fair food cart is a situation.
+fair food cart is a scavevent.
 The sarea of fair food cart is "Midway";
 
 Instead of Resolving a fair food cart:
 	say "Wandering through the cheerful midway of the fair, you come across one of the fair food carts, that seems to still be dispensing popcorn and fair food. Feeling slightly ambiguous about taking anything in this crazy place, you try some of the food, and when nothing bad seems to happen, take some of it with you. What is a fair without some fair food after all?";
-	add "food" to invent of player;
+	increase carried of food by 1;
 	Now fair food cart is resolved;
 
 Section 4-  Happy silly feeling
@@ -48,13 +48,13 @@ Flashing fair lights is a situation.
 The sarea of Flashing fair lights is "Midway";
 
 Instead of Resolving a Flashing fair lights:
-	say "Wandering through the cheerful midway of the fair, you find yourself glancing up only to stop and stare, in the dim twilight lighting the brilliant flashing of the fair lights seems to be absolutely fascinating for a minute.  With the strange music of the fair playing in your head, and the lights glittering and flashing in their cheerful pattern,  you find yourself falling into a trance, the lights seeming to call out to something inside you.  You eventually blink, and tear your gaze away, and stagger onwards, but for some reason your brain is full of images of you staying in the fair, working one of the booths, or being the furry plushie prize for some lucky winner at one of the booths.  It is hard to even remember who you are for a bit, and you once more remind yourself just how dangerous this fair is, though it could be a fun place to stay...";
+	say "Wandering through the cheerful midway of the fair, you find yourself glancing up only to stop and stare, in the dim twilight lighting the brilliant flashing of the fair lights seems to be absolutely fascinating for a minute.  With the strange music of the fair playing in your head, and the lights glittering and flashing in their cheerful pattern, you find yourself falling into a trance, the lights seeming to call out to something inside you.  You eventually blink, and tear your gaze away, and stagger onwards, but for some reason your brain is full of images of you staying in the fair, working one of the booths, or being the furry plushie prize for some lucky winner at one of the booths.  It is hard to even remember who you are for a bit, and you once more remind yourself just how dangerous this fair is, though it could be a fun place to stay...";
 	decrease humanity of player by 20;
 	Now Flashing fair lights is resolved;
 
 Section 6-  Salty taffy
 
-Salty taffy is a situation.
+Salty taffy is a scavevent.
 The sarea of Salty taffy is "Midway";
 
 Instead of Resolving a Salty taffy:
@@ -71,10 +71,7 @@ The sarea of Prize winning toss is "Midway";
 
 Instead of Resolving a Prize winning toss:
 	say "Wandering through the games area of the midway, staring at the shining and sparkling fair games, you eventually give into temptation and try one of the tossing games, only to be surprised to find it is surprisingly hard, giving up you toss your last ring halfheartedly at the target and turn to leave, only to have to booth light up behind you. Looking backwards you see your last toss actually managed to make it onto the moving prize ring, and you actually won one of the lower tier prizes. Smiling at your lucky toss, you snag a pack of soda from the prize stack, and continue along your way, whistling along with the fair music.";
-	add "soda" to invent of player;
-	add "soda" to invent of player;
-	add "soda" to invent of player;
-	add "soda" to invent of player;
+	increase carried of soda by 4;
 	Now Prize winning toss is resolved;
 
 Section 8-  Sudden stampede
@@ -142,15 +139,13 @@ Instead of conversing the Lisa while borisquest is 3:
 	say "You take time to explain Boris the lions predicament, and when she stops laughing you explain what you saw with the plush lions and the changes that you and Boris hope can be duplicated for him as well. 'That poor... well lion,' Lisa says, still snickering slightly at the situation, 'Well now that I know what the problem is, how could I not try to help out?' Lisa asks you rhetorically, as she moves her long mouselike form out from behind the counter and starts searching through the back of the store. 'I think I might have something here even better then what you were thinking about using, if it is still here anyways... Ah here we go!' she exclaims triumphantly, a large grin crossing her face as she returns carrying something rather large and pointed.  As she sets it down on the counter, you get a closer look at the item, and find yourself grinning in amusement as well.[line break]";
 	say "Looking at the item Lisa set out on the counter, you are amused to find it appears to be a rather large novelty dildo, made of some kind of red substance.  The dildo is both slightly pointed and barbed, and in all ways other then its sheer size appears to resemble the cock of a cat, wondering who would purchase such a thing, you send Lisa a questioning glance.  The mousetaur shrugs, seeming to have anticipated your reaction, 'You would be surprised at the kind of stuff some people buy here,  to be honest you are just lucky we still had that one around, that and the canine variety were hard to keep on the shelves.'  Lisa says, causing you both to chuckle slightly as you stare at the barbed dildo. Shaking your head sadly, you start to ask her how much this is going to cost, but she waves her paw and cuts you off before you can finish asking. 'Just take it, it[apostrophe]s the least I can do to help this poor lion friend of yours out,' She says with a buck toothed grin at the situation, 'Besides,' she continues, 'It isn[apostrophe]t like accounting for all the stock is going to be a major priority for me anytime soon.  If the store owner is even around afterwards, he can bitch at me about it then, possibly literally if he ran into one of those German Shepherds out there,' she says with a smile as she hands you the feline dildo. 'Better you find a use for it with your friend out there, hopefully it will work as well or better then those condos. If it doesn[apostrophe]t though come on back and see me and we will find something else for the poor lion, and if it does work... well you and the lion can come on back and see me and maybe we can stress test it for him,' Lisa says with a smile and a wink.";
 	increase borisquest by 1;
-	stop the action;
 
 Instead of Resolving a Lion modifying:
 	if borisquest is 0:
 		say "Wandering through the cheerful midway of the fair, you hear a strange tearing noise from behind one of the maintenance sheds, curiosity getting the best of you, you cautiously take a look behind the shed. Glancing behind the shed, you are surprised to notice one of those plush lion beasts wandering the fair, this one seems to have been tearing at a box of some sort marked 'joke gifts' letting several small pink things wrapped in plastic spill out.  As you watch in surprise, the lion rips and tears at the plastic, seeming to have trouble with his soft plush claws and stuffed teeth, finally though it manages to work the package open, and the pink item inside spills out.   You have a momentary glimpse of the item as it rolls into view, and are surprised to note it seems to be a rubbery bit of plastic stretched over a cock shaped bit of packing, then your view of the item is temporarily obscured again as the lion pounces on the bit of rubber eagerly.  With its ass up in the air as it pounces, you notice that unlike most of the lions in the fair, this one still seems to be completely neuter, which makes you wonder what it needs the fake cock for. [line break] ";
 		say "Your curiosity is soon answered as the lion clumsily manipulates the fake rubbery thing down to where its own cock should be, giving you a better view of the 'joke' gift, and the lions ass at the same time.  You think the rubbery item is some form of condom material shipped for display on a fake cock... but whatever it is, the lion seems intent on settling the base up against where its cock should be, and then pressing it inwards.   The beast roars in what seems to be pain, causing you to blink for a second, then you note the rubbery fake cock seems to be changing slightly, becoming slightly pointed, and sinking into the lion, the displaced stuffing and fabric bulging out to form a pair of balls and a sheath for what looks more and more like a regular cats cock!  You are shocked to see what is basically just a shape and some stuffing slowly converting into nearly living material as the plush lion continues to shove it into itself roughly, yowling in and growling as it does so.  Then again you remind yourself that the plush creature itself was little more then fabric and stuffing at one point most likely, and it seems to be moving around and is pretty much alive itself.  The creature continues to roll around the area, its paws touching its new acquisition, and soon it starts rubbing its new cock on anything in sight, at this point you decide it would be best to get out of there while you can, before it tries rubbing its new cock on you.... Wandering away down the midway again, you have a strange thought and wonder if Boris might be interested in hearing about your strange encounter with the lion."; 
 		increase borisquest by 1;
-		stop the action;
-	if boristalk is 2:
+	otherwise if boristalk is 2:
 		say "Hunting through the fair again, you find the maintenance shed where you spotted the lion modifying itself, and recalling Boris[apostrophe]s request, you carefully go around back to see if you can find something similar for him.  Looking at the area, it seems to be deserted, though there is obviously sticky residue from where a number of plush beasts appear to have 'celebrated' their new additions.  Moving over to the torn open box, you note the large amount of empty packets scattered around.  Picking one up it reads, 'King Kongdoms, they feel so real its almost like your own cock!'  Sighing you have to admit under the circumstances the condoms do seem to be pretty real indeed.  Doing a quick search of the area before any of the creatures can return, you find plenty of empty packages, but none of the actual product left, looking through the other boxes back here doesn[apostrophe]t turn up anything of use either.  Sighing you slump your shoulders in defeat, it looks like you will be returning to Boris empty handed this time.";
 		increase borisquest by 1;
 		Now Lion modifying is resolved;
@@ -171,14 +166,12 @@ when play begins:
 Instead of Resolving a Locked lockers:
 	if christyquest is 0:
 		say "Traveling through the fair, you note a sign up on a half hidden door, the sign says 'Employee lockerups, authoritised personnel only. Grinning a little at the amusing misspelling, you wander over and try the door, figuring if there is anything of use to be found, it might be in an employee locker room.  Unfortunately the door is locked, and you can[apostrophe]t seem to find any other way into the area, sighing you move back off into the fairgrounds.";
-		stop the action;
-	if christyquest is 1:
+	otherwise if christyquest is 1:
 		say "Traveling through the fair, you note a sign up on a half hidden door, the sign says 'Employee lockerups, authoritised personnel only. Grinning a little at the amusing misspelling, you wander over and try the door, figuring if there is anything of use to be found, it might be in an employee locker room. Unfortunately the door is locked, causing you to sigh and turn to leave, only to remember the key Boris gave you earlier!  Turning back to the door you try out the key, and Success! The door opens into a rather nice well lit locker room, Though the room appears to be in a bit of disarray, since it looks like several people tried to make a stand in here.  Indeed as you move inside the room you find some of them are still here! Or what is they have become anyways!";
 		challenge "Rubber tigress";
 		challenge "Rubber tigress";
 		say "Recovering from the unexpected assault, you take another look around the room,  from the looks of the room and the smell of sex in the air, somehow you doubt those were all the participants in whatever happened here, making you eye the two other doors leading out of the room with some trepidation.  Deciding it might be best just to be about your business as quickly as possible, you search the room for the box Boris asked you for.  You find several strange items, and even a couple of cans of soda someone had stuck in their locker, but are about to give up on the package, when you notice a rather unwieldy box stuck back on top of some of the lockers.  Hauling the box down, you note it has the letters 'Christy' scrawled on the top in black marker, you wonder what this Christy could have had that Boris thinks will be so helpful.  Sadly the box is tied up tight with several bits of twine, and you don[apostrophe]t want to annoy Boris if he needs the box unopened, you decide just to take it back to him to find out.  Besides, you think as you hurry out of the room, you thought you heard something coming from one of the other doors.";
-		add "soda" to invent of player;
-		add "soda" to invent of player;	
+		increase carried of soda by 2;
 		now christyquest is 2;
 		now Locked lockers is resolved;
 

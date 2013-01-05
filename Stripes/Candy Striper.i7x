@@ -9,34 +9,60 @@ Section 1 - Monster Responses
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 
+nocandycoonsex is a number that varies.
 coonstatus is a number that varies.
 when play begins:
 	add { "Raccoon" } to infections of guy;
 	add { "Raccoon" } to infections of furry;
 
 to say losetocandycoon:
+	choose row monster from the table of random critters;
+	now nocandycoonsex is 0;
 	If cocks of player > 0:
-		say "     Victorious, the girlish coon giggles happily and pushes you to the ground.  Working off your remaining clothes with nimble fingers, the candy striper raises his skirt and lines his cock up with your butt.  After a few strokes to enjoy the feel of your bottom against his hot-pink shaft, he presses its glans against your back passage and slowly sinks it into you.  His paws move around to play with your [if cocks of player > 1]cocks[otherwise]cock[end if] while he pounds away at your ass with soft moans and squeals of pleasure.  His hot-pink cock sinks into you again and again with practiced strokes.  The stimulation quickly gets you quite aroused and you're leaking precum all over the coon's paws.  Leaning overtop you, he licks and nibbles at your ears, moaning that you're such a nice fuck and a good patient who'll get his hot medicine real soon.  True enough, in a few more strokes you can feel the pink raccoon thrust hard into you and pump his hot seed deep into your bowels.  His paws work at your cock frantically, coaxing you to climax moments later.";
-		say "     Finished with you, the coon slides his spent shaft out and gives you a kiss, rich with the taste of cotton candy before leaving you to recover.";
+		say "     Victorious, the girlish coon giggles happily and pushes you to the ground.  Working off your remaining clothes with nimble fingers, the candy striper raises his skirt, exposing his hot-pink erection.  Knowing you'll be taking his six inch cock one way or the other, you have a brief opportunity to try to distract him or simply let him take your ass as he clearly intends.  (Y=anal, N=oral)[line break]";
+		if the player consents:
+			say "     Having decided to accept your fate, you pause and allow the cotton candy coon to move in behind you, lining up his cock with your butt.  After a few strokes to enjoy the feel of your bottom against his hot-pink shaft, he presses its glans against your back passage and slowly sinks it into you.  His paws move around to play with your [if cocks of player > 1]cocks[otherwise]cock[end if] while he pounds away at your ass with soft moans and squeals of pleasure.  His hot-pink cock sinks into you again and again with practiced strokes.  The stimulation quickly gets you quite aroused and you're leaking precum all over the coon's paws.  Leaning overtop you, he licks and nibbles at your ears, moaning that you're such a nice fuck and a good patient who'll get his hot medicine real soon.  True enough, in a few more strokes you can feel the pink raccoon thrust hard into you and pump his hot seed deep into your bowels.  His paws work at your cock frantically, coaxing you to climax moments later.[mimpregchance]";
+			say "     Finished with you, the coon slides his spent shaft out and gives you a kiss, rich with the taste of cotton candy before leaving you to recover.";
+		otherwise:
+			say "     In the hopes of distracting the horny coon from your ass, you do the only thing you can hope will work and plunge your mouth over his cock, licking and sucking at it.  He moans softly and grins at this.  'Oh, I knew you were going to be fun.  With an attitude like that, you'll make for a sexy boytoy soon enough,' he giggles as he thrusts.  His hard shaft leaks cotton candy flavoured pre onto your tongue.  Its sweetness surprises you and makes you lick and suck more eagerly.  As you work to suck him off, his sweet taste excites you more and more and you become increasingly eager to get a tasty treat from this gay boi.  Your tongue plays over his cock as you fondle his balls, making him release more girly moans and squeaks until he finally does cum, shooting his sugary seed down your throat.  He strokes your head and smiles down at you as he slips his cock from your lips.  You can see that the dangling strand of cum connecting you has a light, rose tint to it before it snaps";
+			let x be libido of player;
+			if "Submissive" is listed in feats of player, increase x by 15;
+			if "More Anal" is listed in feats of player, increase x by 15;
+			if fightoutcome is 22, increase x by 15;		[submitted]
+			if "Less Anal" is listed in feats of player, now x is x / 3;
+			if a random chance of x in 150 succeeds:
+				say ".  Glancing down at you, he notices that you'd gotten hard while sucking him off and grins.  'Mmm... looks like someone's still up for more,' he giggles, pushing you down onto all fours.  'Now, where were we before you insisted on showing me how much you wanted my cock?'";
+				attempttowait;
+				say "     You realize that he's still intent on fucking you even after the blow job, but you don't find yourself adverse to the prospect any more.  Lost in a rush of hormones from the girly coon's sweet seed, you move into position willingly for him this time.  As you raise your ass for him, he pumps a hand over his waning erection[if anallevel is 3] while running a paw over your bottom.  He pops a finger into his muzzle and draws it out slowly before working the wet digit into your anus to open you up[otherwise], bringing it back up for another go[end if] before pressing his slick cock between your cheeks.  After a few strokes to enjoy the feel of your bottom against his hot-pink shaft, he presses its glans against your back passage and slowly sinks it into you.  His paws move around to play with your [if cocks of player > 1]cocks[otherwise]cock[end if] while he pounds away at your ass with soft moans and squeals of pleasure.  You can't help but respond in kind, succumbing further to your lusts.  His hot-pink cock sinks into you again and again with practiced strokes.  The stimulation quickly gets you quite aroused and you're leaking precum all over the coon's paws.  Leaning overtop you, he licks and nibbles at your ears, moaning that you're such a nice fuck and a good patient who'll get his hot medicine real soon.  True enough, in a few more strokes you can feel the pink raccoon thrust hard into you and pump his hot seed deep into your bowels.  His paws work at your cock frantically, coaxing you to climax moments later.[mimpregchance]";
+				say "     Finished with you, the coon slides his spent shaft out and gives you a kiss, rich with the taste of cotton candy before leaving you to recover.";
+				now libido of player is ( libido of player + libido of player + libido entry ) / 3;
+				infect "Raccoon";		[extra infection for double-sex]
+			otherwise:
+				say ".  'Nice job, sweetie,' he giggles, kissing you to share in the taste of his own cotton candy sweetness before dashing off.  'Catch you later, cutie.'  Licking your lips, you find yourself looking forward to it.";
+				increase libido of player by 15;
+				if libido of player > 100, now libido of player is 100;
 	otherwise:
 		say "     The pink highlighted raccoon shoves you down to your knees in front of him.  With a flourish, he flips up his skirt to expose his hot pink six incher to you.  You resist the urge to make a comment about its size, given the size on most other creatures you've seen running around these days.  He pulls your head forward, sliding his cock into your mouth with a soft moan.  'You're no sexy boi, but you'll have to do.  Any port in a storm, as it were,' he giggles as he thrusts.  His hard shaft leaks cotton candy flavoured pre onto your tongue.  Its sweetness surprises you and makes you lick and suck more eagerly.  Glancing up, you can see he's closed his eyes, perhaps imagining a horny male in your place.";
 		say "     This upsets you a little and makes you try all the harder to please him, eager to get this gay boi to cum for you.  Your tongue plays over his cock as you fondle his balls, making him release more girly moans and squeaks until he finally does cum, shooting his sugary seed down your throat.  He strokes your head and smiles down at you as he slips his cock from your lips.  You can see that the dangling strand of cum connecting you has a light, rose tint to it before it snaps.  He grins down at you and dashes off, yelling 'Not bad... for a girl.'";
 
 
 to say beatthecandycoon:
-	if libido of player < 40:
+	if nocandycoonsex > 2:
+		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts as you have in the past.";
+	otherwise if libido of player < 20:
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you, but you leave him to deal with his own lusts.";
 	otherwise:
 		say "     You manage to knock the fight out of the coon boytoy.  He moans and plays with himself, rolling over to expose his bottom to you.  You licks your lips, finding yourself quite tempted to have your way with him and use him like your own pink plaything for a bit.";
 		if the player consents:
+			now nocandycoonsex is 0;
 			If cocks of player > 0:
 				say "     You step over to him and grab his cute bottom, giving it a squeeze.  He moans and wiggles his rear back against your hands as you line up your cock with that tight pucker.  His back door spreads open for you rather easily, though still squeezes quite nicely around your cock as you mount him.  You grip his shoulders firmly and pound into him, making the girly boi moan in delight again and again.  The coon's cock, hot pink in colour and six inches in length, twitches between his legs, dripping precum onto the ground beneath him as he's fucked.  Eventually, your excitement becomes too great and you climax, shooting your hot seed deep inside the effeminate coon boi, much to his delight.  As the pink raccoon sprays his pink seed onto the ground, the air fills with the scent of cotton candy.  Done with him, you leave him there, moaning and panting in pleasure.";
 			otherwise:
 				say "     You give the coon's tight tush a slap and roll him over into a seated position.  Straddling his hips, you bring your wet pussy overtop of his cock.  His erection wavers slightly, but you grab a hold of it and slide this hot-pink rod into you.  The pink coon releases a girlish moan and you bury his muzzle in your bosom.  As you ride his cock, he starts to thrust, responding to the hot, wet hole gripping his cock.  When his lips find one of your nipples and start suckling at it, you moan soft and scritch his neck.  'That's my good, gay boytoy.  Fuck that pussy,' you tease, making his ears fold down a little, but he doesn't stop or slow at all.";
-				say "     The girly coon you've found makes a wonderful plaything, able to give you a long, satisfying ride with several orgasms before he finally gives in to his instincts and shoots his hot seed deep inside you.  The cotton candy smell that hangs around him grows stronger as he cums.  You let the cute coon drain his balls inside you before pulling off.  A mix of your juices and his pink cum clings to his cock as he sags back to the floor, panting and blushing as you tell him what a fine job he's done before leaving.";
-				say "[impregchance]";
+				say "     The girly coon you've found makes a wonderful plaything, able to give you a long, satisfying ride with several orgasms before he finally gives in to his instincts and shoots his hot seed deep inside you.  The cotton candy smell that hangs around him grows stronger as he cums.  You let the cute coon drain his balls inside you before pulling off.  A mix of your juices and his pink cum clings to his cock as he sags back to the floor, panting and blushing as you tell him what a fine job he's done before leaving.[impregchance]";
 		otherwise:
 			say "     You decide it best to just leave the horny coon to his own devices.";
+			increase nocandycoonsex by 1;
 
 to say candycoondesc:
 	say "     You have encountered a cute raccoon in a pink, candy striper outfit.  The uniform is a bright pink with a white apron and skirt.  It has a few white stains scattered on it.  The raccoon has a slender, feminine build.  The fur that should normally be the dark mask around its eyes is a cotton-candy pink, as are the stripes to ring its tail, matching the striped top it wears.  The pink raccoon looks you over, licking its lips and smiling at you with a girlish grin, running its paws down its body.  That's when you notice that this rather flat-chested girl has a bulge in 'her' skirt.  The gay boytoy grins playfully as you notice the growing bump in his mini skirt and moves in to play with you.";
@@ -117,6 +143,12 @@ An everyturn rule:
 		increase libido of player by 5;
 		let diceroll be a random number from 40 to 180;			[lust check vs 180, player libido 40 or less auto-wins]
 		if diceroll < libido of player:
+			[puts Raccoon as lead monster in case of impregnation]
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Raccoon":
+					now monster is y;
+					break;
 			if cocks of player > 0 and cunts of player is 0:
 				let T be a random number between one and five;
 				if T is 1:
@@ -194,8 +226,7 @@ to say coonpetsex5:		[frottage]
 to say coonpetsex6:		[f ride coon cock]
 	say "     Feeling a building heat in your loins, you glance over at your pet and decide to have a little fun.  His cotton candy scent has been getting you aroused and it's time for you to get some relief.  You motion for him to come over and he prances up to you eagerly.  You press the boytoy down onto the ground and flip up his skirt, revealing his cute, hard cock.";
 	say "     Straddling him, you raise up his cock and lower your pussy down onto it.  He whimpers softly for a moment, but that soon turns into moans of pleasure as you start riding him.  His paws stroke your sides and are easily coaxed up to your chest to your breasts.";
-	say "     As you continue riding him, you can feel him start to thrust up into you as his excitement builds.  His paws are a little clumsy as they play with your breasts, but do get better as you continue.  Soon, the effeminate coon moans loudly as he thrusts hard up into you and starts shooting his hot seed into you, trying to pump as much cum as he can into his mistress's pussy[if cocks of player > 0] while your cock streaks his pink outfit with cum[end if].";
-	say "[coonpreg]";
+	say "     As you continue riding him, you can feel him start to thrust up into you as his excitement builds.  His paws are a little clumsy as they play with your breasts, but do get better as you continue.  Soon, the effeminate coon moans loudly as he thrusts hard up into you and starts shooting his hot seed into you, trying to pump as much cum as he can into his mistress's pussy[if cocks of player > 0] while your cock streaks his pink outfit with cum[end if].[coonpreg]";
 	say "     When he's done, you pull yourself off.  You guide his muzzle between your thighs and he gives you a few licks to help clean your sticky folds.  As he does, you scritch his ears, telling him what a good pet he is.";
 	now libido of player is ( libido of player + 1 ) / 3;
 
@@ -207,8 +238,7 @@ to say coonpetsex7:		[f make coon eat you out]
 to say coonpetsex8:		[coon offers fuck f]
 	say "     As you consider your next course of action, your pet raccoon moves up to you and nuzzles at your neck.  His cotton candy scent fills your nose and your pussy grows damp.  Catching your scent, he moans softly and humps his cock against your hip.  You grin at the cute boytoy's current arousal and need, and decide to have some fun.";
 	say "     You find a relatively clean spot and lay back.  Spreading your legs, you spread your pussy's wet lips and motion for your pet to come and get it.  He obediently moves into position and lines up his cock with his mistress's pussy.  He pauses briefly and his ears droop for a moment before his vacant grin returns and thrusts into you like a good sex pet.";
-	say "     His paws caress your hips as he thrusts into you.  His technique, while practiced with males, works quite nicely to please you as well.  His pace is steady enough to let your excitement grow, but changes often enough that you don't go off too soon.  You have several small orgasms while his cute, little cock works to please you.  Eventually, the feel of your hot, wet hole around his cock gets to be too much for the effeminate coon and his hot seed blasts into you.";
-	say "[coonpreg]";
+	say "     His paws caress your hips as he thrusts into you.  His technique, while practiced with males, works quite nicely to please you as well.  His pace is steady enough to let your excitement grow, but changes often enough that you don't go off too soon.  You have several small orgasms while his cute, little cock works to please you.  Eventually, the feel of your hot, wet hole around his cock gets to be too much for the effeminate coon and his hot seed blasts into you.[coonpreg]";
 	say "     After he's withdrawn, you snuggle your cute raccoon playtoy and tell him what a good job he did fucking your pussy.  He smiles up happily at you and nuzzles your chest.";
 	now libido of player is ( libido of player + 1 ) / 3;
 
@@ -230,13 +260,13 @@ to say coonpetsex11:		[f paw him off]
 	now libido of player is ( libido of player + 1 ) / 2;
 
 to say coonpreg:
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
+	[puts Raccoon as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Raccoon":
+			now monster is y;
+			break;
 	say "[impregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Raccoon";
-		now bodyname of child is "Raccoon";
-		now skinname of child is "Raccoon";
 
 
 Section 4 - Raccoon at Bunker
@@ -259,9 +289,10 @@ after going to Bunker while coonstatus is 1:
 	now the player is in Bunker;
 	now coonstatus is 2;
 	say "     As you arrive at the bunker, you can see that the pink coon has arrived there as per your directions.  He prances over to you with a grin on his face.  'Thanks for getting me out of there, hon,' he churrs.  'Doc's been going extra-crazy lately.  I mean, I think he was a little odd before the whole mouse thing, but since then, he's been doing more and more experiments on everyone at the hospital.'  He hugs his arms around himself and shudders a little.";
-	say "     'I don't really remember who I am any more.  I'm pretty sure I was volunteering at the hospital and that I was gay before the change.  But aside from that, it's all rather hazy.  Since I don't remember my name, how about you call me Candy, hon?'";
+	say "     'I don't really remember who I am any more.  I'm pretty sure I was volunteering at the hospital and that I was gay before the change.  But aside from that, it's all rather hazy.  Since I don't remember my name, how about you call me Candy, hon?'  He reaches into his pocket and pulls out a small needle, another of the healing boosters.  'I don't really have much to give you to say thanks, but you should probably take this.  You might need it out there.'";
+	increase carried of healing booster by 1;
 	if cocks of player > 0:
-		say "     'I'd really like to show you how much I appreciate your help,' he says, running a finger up your thigh";
+		say "     'What I'd really like to do is show you how much I appreciate your help,' he says, running a finger up your thigh";
 		if bodyname of player is "Raccoon":
 			say ".  'I'm so glad you decided to keep the new look, sweetie,' he adds, rubbing his slender, coon body against yours with a sexy smile";
 		say ".";
@@ -280,18 +311,30 @@ Instead of fucking the Candy:
 	if lastCandyfucked - turns is less than 8:
 		say "     The coon smiles and kisses your cheek.  'I'm sorry, sweety.  I need a little time to recover.  I want to make the most of our playtime.'";
 	otherwise:
+		[puts Raccoon as lead monster in case of impregnation]
+		repeat with y running from 1 to number of filled rows in table of random critters:
+			choose row y in table of random critters;
+			if name entry is "Raccoon":
+				now monster is y;
+				break;
 		if cocks of player > 0:
 			say "     You decide to take up Candy on his offer for a little fun.  As you walk over to him, his eyes light up, as if sensing what you want.  His paws are all over you in moments, pulling your clothes off.  He nuzzles and nibbles at your neck, churring softly while rubbing his body against yours.";
 			now lastCandyfucked is turns;
 			if coonsex is odd:
 				if bodyname of player is "Raccoon":
 					say "     Candy moans softly as he rubs his body against the raccoon body he's given you and runs his paws over it.  He lets his little claws run over your shapely curves and girly body with churrs of delight.  His fluffy tail brushes across your legs, caressing them.  'You look so sexy like this, sweety.  I'm glad you appreciate it.  And now I'm going to show you how much I appreciate it, too,' he adds with a nibble to your ear as he takes a hold of your stiff erection.";
-				say "     He keeps his own outfit on and drops to his knees before you.  He starts nuzzling and licking at your [cockname of player] shaft, moaning softly at the taste of cock on his tongue again.  His talented muzzle works at your hard meat while he plays with your balls with one paw[if cunts of player > 0].  He makes a few tentative touches to your pussy, but nothing further, and returns to your balls[end if].  He smiles up at you, churring softly around your shaft, as his talented muzzle sets to work.";
-				say "     You stroke the cute coon's head, rubbing his ears as he gives you a wonderful blow job.  The raccoon's clearly had a lot of practice and has learned to use his altered muzzle and tongue to his best advantage.  Looking down, you can see his other paw between his legs, stroking his cute, hot pink cock vigorously.";
-				say "     The coon continues to tend to your throbbing member until finally you cum, spraying your hot load down his welcoming throat.  He licks it up happily and even makes a show of swallowing it for you.  He then lays back on the floor, still stroking himself until he sprays streaks of pink cum across his girly outfit, filling the air with the scent of cotton candy.";
-				increase coonsex by 1;
-				now libido of player is ( libido of player + 1 ) / 2;
-			otherwise:
+				if "Submissive" is listed in feats of player and ( coonsex / 2 ) is odd:	[Candy tops 50% instead of oral]
+					say "     Candy runs his paws over you with a girlish moan, groping your ass and crotch.  'Mmm... now it's not fair to you for me to always be on bottom, isn't it?  I can tell a subby guy like you like playing receiver, too,' he churrs as he presses you down onto the cot.  Flipping up his skirt, he slips his cock out of his panties and grinds it against your ass[if cunts of player > 0] while giving a few tentative brushes of his fingertips across your pussy, but his cock is aimed elsewhere[end if].  You don't resist, your submissive tendencies coming to the fore and making you eager to allow the coon to take charge this time.  After a few playful grinds against your buttocks, he presses his pink cock against your tight pucker and sinks slowly into you, letting his sweet-smelling pre act as a surprisingly good lube.  Soon the coon's average sized cock is stuffed inside you as he moans and churrs, intent on giving his sexy hero a good fucking.";
+					say "     And a good fucking it is, with the coon's ample practice making for a very enjoyable screw while his playful paws tease across your body and stroke your pulsing cock and balls.  While Candy's not as hugely hung as most creatures out there, he more than makes up for it in skill, soon having you panting and moaning with lustful delight.  He licks and nibbles at your ear while driving into you hard for the last few thrusts, pushing you over the edge to spray your load onto the bed as his cotton candy cum sprays into your bowels.  He cums so hard that the air around is heavy with the scent of it despite it all being shot inside you.[mimpregchance]";
+					increase coonsex by 1;
+					now libido of player is ( libido of player + 1 ) / 3;
+				otherwise:		[oral]
+					say "     He keeps his own outfit on and drops to his knees before you.  He starts nuzzling and licking at your [cockname of player] shaft, moaning softly at the taste of cock on his tongue again.  His talented muzzle works at your hard meat while he plays with your balls with one paw[if cunts of player > 0].  He makes a few tentative touches to your pussy, but nothing further, and returns to your balls[end if].  He smiles up at you, churring softly around your shaft, as his talented muzzle sets to work.";
+					say "     You stroke the cute coon's head, rubbing his ears as he gives you a wonderful blow job.  The raccoon's clearly had a lot of practice and has learned to use his altered muzzle and tongue to his best advantage.  Looking down, you can see his other paw between his legs, stroking his cute, hot pink cock vigorously.";
+					say "     The coon continues to tend to your throbbing member until finally you cum, spraying your hot load down his welcoming throat.  He licks it up happily and even makes a show of swallowing it for you.  He then lays back on the floor, still stroking himself until he sprays streaks of pink cum across his girly outfit, filling the air with the scent of cotton candy.";
+					increase coonsex by 1;
+					now libido of player is ( libido of player + 1 ) / 2;
+			otherwise:			[Candy bottoms]
 				if bodyname of player is "Raccoon":
 					say "     Candy moans softly and runs nimble fingers over your raccoon body, teasing and caressing you.  His paws travel over your shapely, girly body with churrs of delight and slides his fluffy, pink tail around your waist.  'You make such a sexy coon,' he churrs as he takes a hold of your cock in one paw.  'I can't wait to have you on top of me,' he adds with a nibble to your ear.";
 				say "     He keeps his own outfit on and drops onto all fours.  He waves his rear at you and flicks his tail up to raise his skirt and reveal his ready tailhole to you.  'Mmm... come on... Fill your sweet Candy.'  You grab his hips and line your cock up with the coon's tight pucker, making him moan softly as you thrust into his rear.";

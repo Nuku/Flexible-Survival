@@ -20,13 +20,13 @@ to say infect:
 	
 to say Give Awesome:
 	if a random number between 1 and 100 > 40:
-		add "Awesome Fruit" to invent of player;
+		increase carried of Awesome Fruit by 1;
 		say "You gain 1x Awesome Fruit!";
 	if a random number between 1 and 100 > 40:
-		add "Awesomer Fruit" to invent of player;
+		increase carried of Awesomer Fruit by 1;
 		say "You gain 1x Awesomer Fruit!";
 	if a random number between 1 and 100 > 85:
-		add "Awesomest Fruit" to invent of player;
+		increase carried of Awesomest Fruit by 1;
 		say "You gain 1x Awesomest Fruit!";
 		
 to say awesome attack:
@@ -36,9 +36,10 @@ to say awesome attack:
 		now thirst of player is 0;
 		if a random number between 1 and 100 > 90:
 			if Awesome Bat is not owned:
-				add "Awesome Bat" to invent of player;
+				now carried of Awesome Bat is 1;
 				say "You get an awesome piece of wood that could be used as, an Awesome Bat!";
 		say "[Give Awesome][combat abort]";
+		now fightoutcome is 20;
 	otherwise:
 		say "[one of]While you try and attack the tree, you trip over a root that you hadn't seen[or]You stop for a moment, and as you ponder just how awesome the tree really is, suddenly your leg cramps[at random].";
 		now monsterhp is 60;
@@ -54,7 +55,7 @@ to say awesome defeat:
 			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
 		say "With good feelings coursing through you at your good deed, a warmth seems to spread from the core of awesome that the tree's fruit seems to have implanted into your being.";
 		infect;
-		say "[combat abort]";
+		now fightoutcome is 19;
 	otherwise:	
 		say "Somehow you manage to strike the tree in such a way that it collapses, breaking along the fault line in its trunk you had made. You notice the branches are riddled with fruit and you make an effort to gather as many ripe ones as you can.";
 		if Awesome_noreward > 2:
@@ -159,26 +160,31 @@ name	desc	weight	object
 "Awesome Fruit"	"The most Awesome fruit you ever ate, now with a funky blue logo!"	1	awesome fruit
 "Awesome Bat"	"A heavy branch that you are pretty sure you could use to hit... something."	5	awesome bat
 
-instead of sniffing the Awesome Fruit:
+the scent of the Awesome Fruit is "[awesomefrscent]";
+
+to say awesomefrscent:
 	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	otherwise:
 		say "The strange fruit has a strong, manly scent that seems mouthwateringly sweet.";
 
-instead of sniffing the Awesomer Fruit:
+the scent of the Awesomer Fruit is "[awesomerfrscent]";
+
+to say awesomerfrscent:
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	otherwise:
 		say "The strange fruit has a lovely, feminine scent that seems mouthwateringly sweet.";
 
-instead of sniffing the Awesomest Fruit:
+the scent of the Awesomest Fruit is "[awesomestfrscent]";
+
+to say awesomestfrscent:
 	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	otherwise:
 		say "The strange fruit has a rich mix of male and female scents that seems mouthwateringly sweet.";
 
-instead of sniffing the Awesome Bat:
-	say "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.";
+the scent of the Awesome Bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.";
 
 to say awesome bat proc:
 	choose row monster from the table of random critters;

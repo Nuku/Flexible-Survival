@@ -12,7 +12,7 @@ when play begins:
 Instead of resolving a Smashed Hive:
 	say "     As you search through the park, you come across a giant, devastated bee hive.  The hive was built around the branches of a large tree and may have been over 15 feet tall when completed intact.  Now, broken fragments of it lay scattered around the area and only some of the upper chunks cling to the top branches to give you a scope of its size.  Scattered around the sticky rubble are the bodies of numerous bee girl drones, unmoving.  Cautiously, you step between the sticky chunks of honeycomb to take a closer look.";
 	say "     As you follow the bear tracks all around the area, you can see that one or even several bears assaulted the hive for the sweet honey.  Much of the honeycomb center has been taken away, though you may be able to retrieve some for yourself.  As you look around to find a clean section to pick from, you hear a weak buzz from behind you.  Turning, you see one of the bee drone's still alive, struggling to get up despite her injuries.";
-	if "medkit" is listed in invent of player:
+	if medkit is owned:
 		say "     Do you try to help the poor bee girl with your medkit or do you grab some honey while you can and make a run for it?";
 		if the player consents:
 			say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl.  She buzzes angrily at you, but stumbles and cannot remain upright.  Using your medkit, you try your best to patch her up, feeling sorry for this lone survivor";
@@ -25,34 +25,23 @@ Instead of resolving a Smashed Hive:
 		otherwise:
 			say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
 			say "     Honeycomb x 5 obtained.";
-			add "Honeycomb" to invent of player;
-			add "Honeycomb" to invent of player;
-			add "Honeycomb" to invent of player;
-			add "Honeycomb" to invent of player;
-			add "Honeycomb" to invent of player;
+			increase carried of honeycomb by 5;
 			increase score by 10;
-	otherwise if "healing booster" is listed in feats of player:
+	otherwise if healing booster is owned:
 		say "     Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?";
 		if the player consents:
 			say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl.  She buzzes angrily at you, but stumbles and cannot remain upright.  Moving to her side, you inject her with the healing booster, feeling sorry for this lone survivor and hoping it was worth using a booster to save her.";
+			delete healing booster;
 			say "[beegirlsaved]";
 		otherwise:
 			say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
 			say "     Honeycomb x 5 obtained.";
-			add "Honeycomb" to invent of player;
-			add "Honeycomb" to invent of player;
-			add "Honeycomb" to invent of player;
-			add "Honeycomb" to invent of player;
-			add "Honeycomb" to invent of player;
+			increase carried of honeycomb by 5;
 			increase score by 10;
 	otherwise:
 		say "     Feeling there is nothing that you can do for her, and not wanting to risk staying around an enraged bee girl, you grab some chunks of honeycomb and make a break for it.";
 		say "     Honeycomb x 5 obtained.";
-		add "Honeycomb" to invent of player;
-		add "Honeycomb" to invent of player;
-		add "Honeycomb" to invent of player;
-		add "Honeycomb" to invent of player;
-		add "Honeycomb" to invent of player;
+		increase carried of honeycomb by 5;
 		increase score by 10;
 	Now Smashed Hive is resolved;
 
@@ -63,8 +52,7 @@ to say beegirlsaved:
 	say "     As you're patting her patched-up abdomen, she regains consciousness and starts upright.  She buzzes angrily at you before realizing that she's been healed.  She calms down and smiles at you.  'Uhh... thank you,' she buzzes softly.  Wringing her lower hands together nervously, she gets up and looks around at her ruined hive.  With tears in her eyes, she wraps her arms around you and clutches to you tightly.  It seems you've made a new friend.";
 	say "     Stroking her soft hair and speaking reassuringly, you manage to calm her down and she smiles up at you.  'I'm Honey.  Oh!  The honey!' she exclaims, running around to gather up as much as she can of the hive's destroyed supply, putting it into a bag so she'll have something to live off of without her home and sisters.  'Here.  You can have a little too,' she says, giving you a couple of pieces as thanks.  When you head off, she follows along, having nowhere else to go but with her rescuer.";
 	say "     Honeycomb x 2 obtained.";
-	add "Honeycomb" to invent of player;
-	add "Honeycomb" to invent of player;
+	increase carried of honeycomb by 2;
 	increase score by 20;
 	now bee girl is tamed;
 	say "     (The bee girl is now tamed! You can make it your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";

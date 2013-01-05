@@ -9,7 +9,7 @@ Include Computers by Hellerhound.
 Ravaged power plant is a situation.
 
 instead of resolving a Ravaged Power Plant:
-	say "On your walk, you pass a building that was the power station for before. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
+	say "On your walk, you pass a building that was the power station for the city. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
 	now Plant Overview is known;
 	say "The power plant lobby is nearby, maybe you could return?";
 	now ravaged power plant is resolved;
@@ -29,17 +29,13 @@ instead of resolving a Generator Parts:
 		now fixedgens is 1;
 
 [Scents of rooms]
-instead of sniffing Plant Lobby:
-	say "The power plant lobby smells of smoke, ash and cum.";
+the scent of Plant Lobby is "The power plant lobby smells of smoke, ash and cum.";
 
-instead of sniffing Control Room:
-	say "The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.";
+the scent of Control Room is "The control room smells of burnt electronics and ozone along with the harsh, sulfurous scents from the magma.";
 
-instead of sniffing Plant Overview:
-	say "There is a faint scent of smoke coming from the power plant.";
+the scent of Plant Overview is "There is a faint scent of smoke coming from the power plant.";
 
-instead of sniffing Cat Walk:
-	say "The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.";
+the scent of Cat Walk is "The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.";
 
 
 broken fence is a door. "The flattened fence to the east allows access from the city.".
@@ -61,7 +57,7 @@ catwalk door is lockable and locked.
 catwalk door is west of Control Room.
 
 
-Cat key is a grab object.
+Cat Key is a grab object.
 it is part of the player.
 It is not temporary.
 
@@ -74,16 +70,15 @@ instead of using Cat key:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Cat Key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	Cat key
+"Cat Key"	"A key with a picture of a cat attached to it. Odd. What does this unlock?"	1	Cat Key
 
-instead of sniffing pocketknife:
-	say "There is a faint scent of ozone lingering to the key fob.";
+the scent of cat key is "There is a faint scent of ozone lingering to the key fob.";
 
 the invent of Red Light District is {"Cat Key"}.
 
 
 before opening Catwalk Door:
-	if "Cat Key" is listed in the invent of the player:
+	if Cat Key is owned:
 		now Catwalk Door is unlocked;
 		say "The Cat Key unlocks the door. Seems like the manager here had a sense of humor.";
 

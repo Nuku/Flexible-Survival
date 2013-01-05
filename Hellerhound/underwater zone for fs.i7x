@@ -11,9 +11,9 @@ Instead of resolving a Gill Fruits Tree:
 	say "You come across an odd tree, half in and half out of the water, with slitted fruits on the branches. This must be the elusive gill fruit tree.";
 	say "Do you wish to pick some?";
 	if the player consents:
-		add "Gill Fruit" to the invent of the player;
-		add "Gill Fruit" to the invent of the player;
+		increase carried of gill fruit by 2;
 		say "As you pick some of the fruit, the rest falls off into the water, overripe. Odd.";
+		now gill fruits tree is resolved;
 	otherwise:
 		say "You leave the tree alone.";
 
@@ -31,6 +31,8 @@ to say gill fruit use:
 	now hasgills is 1;
 	decrease the thirst of the player by 10;
 	decrease the hunger of the player by 10;
+	if thirst of player < 0, now thirst of player is 0;
+	if hunger of player < 0, now hunger of player is 0;
 	increase score by 10;
 	say "Your neck feels odd as gills seem to sprout, tiny folds of skin flat in the air.";
 	follow the turnpass rule;
@@ -39,8 +41,7 @@ after examining the player:
 	if hasgills is 1:
 		say "You have small gills on your neck, a result of eating strange fruit.";
 
-instead of sniffing gill fruit:
-	say "The strange fruit has a faint, fishy scent.";
+the scent of gill fruit is "The strange fruit has a faint, fishy scent.";
 	
 
 Section 2 - Underwater Beach
@@ -62,44 +63,46 @@ check swimtoing:
 
 carry out swimtoing:
 	if a random number between 1 and 26 is greater than the perception of the player:[higher chance than normal]
-		let T be a random number between one and 10;
-		if T is 1:
-			if furry is banned or guy is banned:
-				increase T by 1;
-			otherwise:
-				say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-				challenge "feral sea dragon"; [duh case, all three ways]
-		if T is 2:
-			if furry is banned or girl is banned:
-				increase T by 1;
-			otherwise:
-				say "As you swim, you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you swim as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
-				challenge "feral sea dragoness";
-		if T is 3:
-			if furry is banned or hermaphrodite is banned:
-				increase T by 1;
-			otherwise:
-				challenge "hermaphrodite dolphin";
-		if T is 4:
-			if furry is banned or guy is banned:
-				increase T by 1;
-			otherwise:
-				challenge "Killer Whale";
-		if T is 5:
-			if furry is banned:
-				increase T by 1;
-			otherwise:
-				challenge "Otter";
-		if T is 6:
-			if guy is banned:
-				increase T by 1;
-			otherwise:
-				challenge "Siren";
+		swimmingfight;
 	otherwise:
 		say "You travel to [the noun], avoiding trouble as best you can.";
 	move the player to the noun;
 	follow turnpass rule;
 
+to swimmingfight:
+	let T be a random number between one and 10;
+	if T is 1:
+		if furry is banned or guy is banned:
+			increase T by 1;
+		otherwise:
+			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+			challenge "feral sea dragon"; [duh case, all three ways]
+	if T is 2:
+		if furry is banned or girl is banned:
+			increase T by 1;
+		otherwise:
+			say "As you [if rowing is true]row[otherwise]swim[end if], you spot a sleek and streamlined blue form cutting through the water.  As the draconic serpent draws closer, you [if rowing is true]row[otherwise]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
+			challenge "feral sea dragoness";
+	if T is 3:
+		if furry is banned or hermaphrodite is banned:
+			increase T by 1;
+		otherwise:
+			challenge "hermaphrodite dolphin";
+	if T is 4:
+		if furry is banned or guy is banned:
+			increase T by 1;
+		otherwise:
+			challenge "Killer Whale";
+	if T is 5:
+		if furry is banned:
+			increase T by 1;
+		otherwise:
+			challenge "Otter";
+	if T is 6:
+		if guy is banned:
+			increase T by 1;
+		otherwise:
+			challenge "Siren";
 
 
 after looking when the player is in the public beach:
@@ -109,8 +112,7 @@ after looking when the player is in the public beach:
 The Sloping Sand is a room. "The sand here slopes gently downward, with a few rising dunes under the water causing shallow and deep areas, but always progressively passing deeper into the ocean.  From here, you have a better view of the rocky area with the crashing waves.  It looks like a rather unhealthy area to swim - but at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks.";
 the Sloping Sand is southeast of public beach.
 
-instead of sniffing Sloping Sand:
-	say "All you can smell out here is the strong scent of the ocean.";
+the scent of Sloping Sand is "All you can smell out here is the strong scent of the ocean.";
 
 before swimtoing The Sloping sand:
 	if hasgills is not 1:
@@ -127,8 +129,7 @@ Coral Ring is south of the Sloping Sand.
 
 The coral ring is a room. "A huge ring of red coral arches over your head, allowing you passage through the choppy waters by the jagged rocks.  By passing through here, you are able to move to and from the deeper reaches of the sea.  To the south from here, you can see a shadowy shape beneath the water, barely at the limits of your restricted vision in the deeper waters.  It seems like a sunken ship, its broken mast helping you distinguish the shape.  It looks like there's a shipwreck to explore!".
 
-instead of sniffing Coral Ring:
-	say "All you can smell out here is the strong scent of the ocean.";
+the scent of Coral Ring is "All you can smell out here is the strong scent of the ocean.";
 
 after entering the coral ring:
 	say "You look up with awe, sure this accomplishment was great.";
@@ -143,10 +144,9 @@ Sunken Ship is south of Coral Ring.
 Sunken Ship is a room.
 The description of Sunken Ship is "A large ship lays sunken and rotting here.  From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago.  It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea.  There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast.  You'd best be careful.  From here, you can barely make out the lighter spot in the rocks that is the coral ring you passed through to get here.";
 
-The invent of Sunken Ship is { "Sea Dragon Cum" , "Sea Dragon Cum" };
+The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" };
 
-instead of sniffing Sunken Ship:
-	say "You can't smell anything while underwater.";
+the scent of Sunken Ship is "You can't smell anything while underwater.";
 
 
 Section 3 - Sea Dragon Cum
@@ -154,10 +154,9 @@ Section 3 - Sea Dragon Cum
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Sea Dragon Cum"	"Thick seed from one of the dangerous sea dragons that marauds the coast. It is rarely found concentrated like this."	1	sea dragon cum
+"sea dragon cum"	"Thick seed from one of the dangerous sea dragons that marauds the coast. It is rarely found concentrated like this."	1	sea dragon cum
 
-instead of sniffing sea dragon cum:
-	say "The cum smells powerfully of a male sea dragon.";
+the scent of sea dragon cum is "The cum smells powerfully of a male sea dragon.";
 
 to say sea dragon cum use:
 	if the cunts of the player > 0:

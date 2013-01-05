@@ -16,11 +16,11 @@ when play begins:
 to say losetoninja:
 	if cunts of player > 0:
 		say "     The ninja grabs you by the arm as you stop fighting him.  With a purring rumble, he presses you against one of the walls with one paw while the other gropes your rear.  His paw moves the intervening clothes and grinds his stiff rod against your ass.  You moan softly in pleasure as the feline slides his cock into your pussy slowly.  As your excitement starts to build and you find yourself growing ever excited by the prospect of having this mysterious feline fuck you, his paws relax their grip and instead move across your body to tease your ass and breasts.";
-		say "     You press your hands to the wall and push your hips back into each thrust the feline makes.  It seems he's quite adept at the art of lovemaking as well as the art of ninjutsu.  Your pussy quivers around his cock as he moves and thrusts to stimulate you to greater and greater heights while saving your orgasm for the highest point of all.  As you come to the point that you're moaning and mewling beneath him for his seed, he pushes his cock deep inside you and unleashes a hot blast of feline cum.  It is at this point that he stimulates you far past your peak, sending you into multiple orgasms that finally end with you stretched out on the floor with your thighs soaked in your own juices and feline cum leaking from your overfilled pussy[if cocks of player > 0].  In your powerful orgasm, you left a large splatter of cum on the wall.  Your balls ache a little, but wonderfully so, from being so thoroughly drained[end if].";
+		say "     You press your hands to the wall and push your hips back into each thrust the feline makes.  It seems he's quite adept at the art of lovemaking as well as the art of ninjutsu.  Your pussy quivers around his cock as he moves and thrusts to stimulate you to greater and greater heights while saving your orgasm for the highest point of all.  As you come to the point that you're moaning and mewling beneath him for his seed, he pushes his cock deep inside you and unleashes a hot blast of feline cum.  It is at this point that he stimulates you far past your peak, sending you into multiple orgasms that finally end with you stretched out on the floor with your thighs soaked in your own juices and feline cum leaking from your overfilled pussy[if cocks of player > 0].  In your powerful orgasm, you left a large splatter of cum on the wall.  Your balls ache a little, but wonderfully so, from being so thoroughly drained[end if].[impregchance]";
 		say "     As silently as he came, the feline ninja disappears back into the shadows and is gone.";
 	otherwise if a random chance of 1 in 2 succeeds:
 		say "     The ninja grabs you by the arm as you stop fighting him.  With a purring rumble, he presses you against one of the walls with one paw while the other gropes your rear.  His paw moves the intervening clothes and grinds his stiff rod against your ass.  You groan softly as the feline probes his leaking cock into your tight asshole.  As your sphincter relaxes to accommodate the feline's penis thrusting into you, you find yourself growing ever excited by the prospect of having this mysterious feline fuck you.  His paws relax their grip and instead move across your body to tease across your body and fondle your maleness.";
-		say "     You press your hands to the wall and push your hips back into each thrust the feline makes.  It seems he's quite adept at the art of lovemaking as well as the art of ninjutsu.  Your back passage quivers around his cock as he moves and thrusts to stimulate you to greater and greater heights while saving your orgasm for the highest point of all.  As you come to the point that you're moaning and mewling beneath him for his seed, he pushes his cock deep inside you and unleashes a hot blast of feline cum.  The press of his glans against your prostate as his semen blasts against it is when he chooses to stimulate you far past your peak, sending you into a powerful orgasm that splatters the wall with your seed.  It finally end with you stretched out on the floor with your balls drained and feline cum leaking from your overfilled ass.";
+		say "     You press your hands to the wall and push your hips back into each thrust the feline makes.  It seems he's quite adept at the art of lovemaking as well as the art of ninjutsu.  Your back passage quivers around his cock as he moves and thrusts to stimulate you to greater and greater heights while saving your orgasm for the highest point of all.  As you come to the point that you're moaning and mewling beneath him for his seed, he pushes his cock deep inside you and unleashes a hot blast of feline cum.  The press of his glans against your prostate as his semen blasts against it is when he chooses to stimulate you far past your peak, sending you into a powerful orgasm that splatters the wall with your seed.  It finally end with you stretched out on the floor with your balls drained and feline cum leaking from your overfilled ass.[impregchance]";
 		say "     As silently as he came, the feline ninja disappears back into the shadows and is gone.";
 	otherwise:
 		say "     The ninja grabs you by the arm as you stop fighting him.  He pulls you in close and blows across his palm, sending a cloud of dust into your face.  Panting from the fight, you cannot help breathing in the dust and collapse to the floor.  When you regain consciousness, the feline ninja is gone and your face is covered in a sticky mess of feline cum.";
@@ -31,7 +31,7 @@ to say beattheninja:
 
 
 to say ninjaattack:
-	choose row monster from the table of random critters;
+[	choose row monster from the table of random critters;
 	if a random chance of 3 in 10 succeeds:
 		say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you.  The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random].  There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you.  As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
 		increase libido of player by a random number between 2 and 5;
@@ -39,7 +39,7 @@ to say ninjaattack:
 		let dammy be a random number between 2 and 3;
 		if hardmode is true, increase dammy by ( square root of lev entry );
 		decrease the hp of player by dammy;
-		say "You take [dammy] damage from the ninja star.";
+		say "You take [dammy] damage from the ninja star.";	]
 	let T be a random number between 1 and 6;
 	if T is 1:
 		say "The feline ninja strikes at you with his antique weapon!";
@@ -66,7 +66,7 @@ to say ninjadesc:
 	if "Wary Watcher" is listed in feats of player, increase featbonus by 3;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20: [dice]+[bonus]+[featbonus] = [dice + bonus + featbonus][line break]";
-	if dice + bonus + featbonus is greater than 12 + ( dex entry - 10 ) / 2:
+	if dice + bonus + featbonus is greater than 12 + ( ( dex entry - 10 ) / 2 ):
 		say "     As you move down the halls of the museum, you hear a faint sound from behind you and turn around quickly.  You are narrowly missed by a triad of flying shuriken that embed themselves into the floor beside you.  There is a soft thump as an agile figure in concealing clothes drops to the floor on all fours.  Slitted eyes stare out at you from behind the dark mask and pointed, feline ears are trained on you.  The ninja feline releases a soft growl and charges, pulling out an oriental weapon and attacking you.";
 	otherwise:
 		let dammy be 8;
@@ -131,8 +131,36 @@ When Play begins:
    now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
    now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
    blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now altcombat entry is "ninjastar";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
+
+Section 3 - Ninja Star Alt-Attack		[Pre-attack 30% of the time]
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"ninjastar"	retaliation rule	ninjastar rule	--	--	--	--	--	--	--	--
+
+this is the ninjastar rule:
+	if a random chance of 3 in 10 succeeds and inafight is 1:
+		choose row monster from the table of random critters;
+		now monsterhit is false;
+		increase dex entry by 4;
+		standardstrike;
+		decrease dex entry by 4;
+		if monsterhit is true:
+			increase libido of player by a random number between 2 and 5;
+			if libido of player > 100, now libido of player is 100;
+			let dammy be a random number between 2 and 3;
+			if hardmode is true, increase dammy by ( square root of lev entry );
+			now damagein is dammy;
+			say "[normalabsorbancy]";
+			if absorb is greater than dammy:
+				now absorb is dammy;
+			say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you.  The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random] for [special-style-2][dammy][roman type] damage[if absorb > 0].  Your defenses manage to prevent [special-style-1][absorb][roman type] hp of this damage[end if].  There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you.  As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
+			decrease hp of the player by dammy;
+			increase hp of player by absorb;
+		otherwise:
+			say "The [one of]feline ninja[or]cat ninja[or]ninja[as decreasingly likely outcomes] [one of]flicks a shuriken at you that narrowly misses[or]pulls a ninja star from his dark robes, but you manage to evade it[or]tries to hit you with a surprise shuriken strike, but you catch the motion of his hand and are ready to dodge[or]throws a ninja star he pulls from his robes, but misses[purely at random]!";
 
 when play ends:
 	if bodyname of player is "Ninja Cat":

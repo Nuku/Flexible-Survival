@@ -38,8 +38,8 @@ Instead of conversing the Alex:
 			say "     His smile falters a little, but he tries to remain positive.  'Please continue to consider my proposal.  I think we'll both benefit from it.'";
 	otherwise if progress of alex is 3:
 		say "     Alex, just coming off a bout of ferretness, puts down the chew toy and looks up at you as you try to tell him you found Darrell.  He looks side to side for the missing sports star, then at you in with a mix of confusion and anger on his face.  'Where's Darrell?  I thought you were saying that you'd found him.'  This is where you have to explain to Alex that Darrell survived the incident, but not in the same way he started it.  Upon hearing that Darrell was still sane and relatively secure mentally, Alex is pleased enough, anyway.  'He can still pay me,' says Alex, 'and that's good enough.  Here's your next installment.'  He hands you another bit of food and water as payment.";
-		add "food" to invent of player;
-		add "water bottle" to invent of player;
+		increase carried of food by 1;
+		increase carried of water bottle by 1;
 		increase score by 20;
 		extend game by 2;
 		say "[line break]     'Alright, there's only one client left, and this one's gonna be a doozy, I'll wager.  This last client of mine is an aide to a City Council Member - well, possibly ex-city council at this point.  He doesn't have a whole lot of money, but his case'll be pretty big news if I can get a court to listen to him.  So as far as publicity, this is a huge case for me.  I need you to find him and bring him here.'  He sighs a bit, and his nose wiggles, almost cutely, you think to yourself.  'I'm not sure where he is, honestly.  He was a bit of an outdoorsman, so you might be able to find him at the park or the beach.  Other than that, I can't offer you anything else, besides his name, which is Lee.'";
@@ -74,6 +74,7 @@ Instead of resolving Meet Alex:
 	say "     'Good [short time of day], [if breast size of player is greater than 0]Ma'am[otherwise]Sir[end if]. My name is Alex... well, I don't suppose last names are important anymore, are they?'";
 	say "     Now that you get a better look at him, even though he initially appeared unchanged, it's become quite clear upon closer inspection that he too has a few changes. His ears have mutated to become somewhat pointed, and now rest near the top of his head. He has a small button nose, with prodigious whiskers on either side, and a furry tail swivels from behind him. You think it looks somewhat... mustelid, perhaps a ferret or weasel of some sort. You are about to ask him about it when he continues.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     'Look, it's hard to find friends in this city after the incident. And so since you seem to be somewhat sane still... [if humanity of player is less than 100]despite your changes...[end if] I figure you might be able to help me. If you're out exploring the city, it means you can handle the monsters out there.' His nose twitches, as do his whiskers, as he seems to be pondering something. 'Before the incident, I was a high-priced lawyer, and once rescue comes, I plan on returning to that job. But I have three wealthy clients that won't be able to pay me if they get turned into creatures without a thought in their heads but sex.'";
 	say "     You feel like you're starting to get the gist of what the shorter man is leading up to. He speaks very quickly, probably having something to do with his profession.  'Here's my proposition,' he says. 'I have access to a pretty solid stockpile of food and water. For each of my clients you manage to bring back to me, to my condo in the high-rise over there,' he points, 'I'll give you one of each. How's that sound?'";
 	now Alex's Condo is known;
@@ -107,7 +108,6 @@ Instead of resolving Find Lorenda:
 			now found is 1;
 		otherwise:
 			say "Despite your search and Lisa's information, you fail to find her.  She has to be around here somewhere.";
-			stop the action;
 	if lisacheat is 0:
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
@@ -117,30 +117,29 @@ Instead of resolving Find Lorenda:
 			now found is 1;
 		otherwise:
 			say "Despite your search, you fail to find her.  She has to be around here somewhere.";
-			stop the action;
-	if humorous is banned or guy is banned:
-		say "     You follow a hopeful trail and you suddenly realize there are other tracks following the same trail.  You rush forward and arrive to find a pair of creatures bearing down on a woman screaming frantically down one of the alleyways.  She is pinned to the wall, between the pair of them.  Thinking quickly, you rush to her aid!";
-		now battleground is "Outside";
-		fight;
-		say "     Dealing with one mutant, you turn your attention to the second before it can reach Lorenda.";
-		fight;
-	otherwise:
-		say "     You follow a trail and you suddenly realize that there's a trickle of cum that follows the same trail.  You arrive to find a pair of Cock Cannons aimed gainfully at a woman screaming frantically down one of the alleyways.  She is pinned to the wall, between the pair of them.  Thinking quickly, you rush to her aid!";
-		challenge "Cock Cannon";
-		say "     Dealing with one mutant, you turn your attention to the second before it can reach Lorenda.";
-		challenge "Cock Cannon";
-	say "     She whimpers, and you pull her up from her spot on the alley concrete.  'Wh-what were those things?' [if humanity of player is less than 100] 'What are you?'[end if] She seems a bit panicked, but has calmed significantly once you dealt with the pair.  She hasn't totally escaped the city's various mutations - her clothes are painfully strained with the size of her inflated breasts and she bears a floofy fox tail likely given to her by one of those latex foxes or another vulpine - but she remains mostly human.  You point out that what they were was patently obvious, which earns you a smirk.  Once you explain that Alex sent you, she nods and gladly follows you back to his condo in the High Rise District.";
-	now the player is in Alex's Condo;
-	say "     Upon arriving, the door is thrown open by the weaselly lawyer who ushers both of you inside.  He shuts it behind him, letting out a sigh of relief as he leans back against it.  First, he shows her to the living room and sets her down with a cup of coffee, then he returns to you.  'Thanks for bringing her in.  You've done me a major favor, so here you go.'  He gives you some food and water.  He even gives you an extra bottle as a bonus for coming through for him despite the danger.";
-	say "     'My next client is an athlete.  He plays for the city's basketball team.  His name's Darrell.  I don't know where he was when the incident happened, but I believe he may have been at the mall.  The team was doing a promotion at the shoe store there some time before the accident.'";
-	add "food" to invent of player;
-	add "water bottle" to invent of player;
-	add "water bottle" to invent of player;
-	increase score by 50;
-	extend game by 8;
-	now progress of alex is 2;
-	now battleground is "void";
-	now find lorenda is resolved;
+	if found is 1:
+		if humorous is banned or guy is banned:
+			say "     You follow a hopeful trail and you suddenly realize there are other tracks following the same trail.  You rush forward and arrive to find a pair of creatures bearing down on a woman screaming frantically down one of the alleyways.  She is pinned to the wall, between the pair of them.  Thinking quickly, you rush to her aid!";
+			now battleground is "Outside";
+			fight;
+			say "     Dealing with one mutant, you turn your attention to the second before it can reach Lorenda.";
+			fight;
+		otherwise:
+			say "     You follow a trail and you suddenly realize that there's a trickle of cum that follows the same trail.  You arrive to find a pair of Cock Cannons aimed gainfully at a woman screaming frantically down one of the alleyways.  She is pinned to the wall, between the pair of them.  Thinking quickly, you rush to her aid!";
+			challenge "Cock Cannon";
+			say "     Dealing with one mutant, you turn your attention to the second before it can reach Lorenda.";
+			challenge "Cock Cannon";
+		say "     She whimpers, and you pull her up from her spot on the alley concrete.  'Wh-what were those things[if humanity of player is less than 100]?  What are you[end if]?'  She seems a bit panicked, but has calmed significantly once you dealt with the pair.  She hasn't totally escaped the city's various mutations - her clothes are painfully strained with the size of her inflated breasts and she bears a floofy fox tail likely given to her by one of those latex foxes or another vulpine - but she remains mostly human.  You point out that what they were was patently obvious, which earns you a smirk.  Once you explain that Alex sent you, she nods and gladly follows you back to his condo in the High Rise District.";
+		now the player is in Alex's Condo;
+		say "     Upon arriving, the door is thrown open by the weaselly lawyer who ushers both of you inside.  He shuts it behind him, letting out a sigh of relief as he leans back against it.  First, he shows her to the living room and sets her down with a cup of coffee, then he returns to you.  'Thanks for bringing her in.  You've done me a major favor, so here you go.'  He gives you some food and water.  He even gives you an extra bottle as a bonus for coming through for him despite the danger.";
+		say "     'My next client is an athlete.  He plays for the city's basketball team.  His name's Darrell.  I don't know where he was when the incident happened, but I believe he may have been at the mall.  The team was doing a promotion at the shoe store there some time before the accident.'";
+		increase carried of food by 1;
+		increase carried of water bottle by 2;
+		increase score by 50;
+		extend game by 8;
+		now progress of alex is 2;
+		now battleground is "void";
+		now find lorenda is resolved;
 
 
 Instead of conversing the Rod while progress of alex is 2:
@@ -203,8 +202,8 @@ Instead of going west from dirty sheds:
 			now progress of alex is 5;
 			move the player to Alex's Condo;
 			say "     Arriving back at the High Rise district, Alex is bemused to see that this latest client has made a rather serious reassignment in gender, but he is pleased to see that Lee at least seems to have her faculties in order.  'Alright,' he says.  'Here's your reward for the last bit.'  You receive one more food and one more water.";
-			add "food" to invent of player;
-			add "water bottle" to invent of player;
+			increase carried of food by 1;
+			increase carried of water bottle by 1;
 			increase score by 40;
 			extend game by 10;
 			say "[line break]     The weaselly lawyer looks you up and down, sizing you up.  'You know... I have a reputation as a hell of a lover,' he says, leering a little bit but remaining professional.  'What I'm saying is,' he chuckles, 'if you come and visit, I'd be willing to show you a good time.'";
@@ -249,20 +248,24 @@ to say alexsexytimes1:
 	say "     With a grin, Alex slides an arm around your waist and leads you off to his bedroom.  This room, like the rest of his condo, is tastefully decorated with modern furnishings.  There are several candles around the room, as well as a camping lantern to provide light in the evenings.  His bed is quite large and covered in [one of]red[or]blue[or]turquoise[or]crimson[or]aqua[or]scarlet[at random] satin sheets today.  He kisses you softly as he lowers you onto the soft sheets, intent on repaying you for all your help, as well as dealing with his pent up arousal from being up here all alone.  His hands run across your body, helping you out of any remaining clothes.  Once you[']re naked and comfortable on his bed, he slowly strips for you, taking off his suit and baring his body to you[if alexbrunch is 0].  He seems a little embarrassed by showing his changed body to you[otherwise].  He shows his changing body to you proudly, having grown much more comfortable with it and with you[end if].";
 	say "     Aside from his ears, nose and muzzle, you can see that he[']s softly-furred and ferret-like from his [if alexbrunch is 0]thighs[otherwise if alexbrunch is 1]waist[otherwise if alexbrunch is 2]chest[otherwise if alexbrunch is 3]shoulders[end if] down to his feet, which are a little paw-like.  His fur has a two-tone tan colouration.  His cock, poking from a tan-furred sheath, is slender and has a strangely curved tip.  He runs his fingers over it slowly as he climbs onto the bed to join you, stroking himself towards full hardness[alexbodyreset].";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     Alex runs his hands over your body, stroking it sensually as he nuzzles your cheek.  Soon he[']s moving down to your neck, licking and nibbling as he softly chirrs.  His whiskered face moves do to your nipples, teasing them with a few licks before continuing down your body. His tongue plays across your [bodyname of player] body as it goes slowly lower and lower.  His tongue eventually reaches your groin and starts licking over your tender, sensitive flesh.";
 	if cocks of player > 0 and cunts of player > 0:		[HERM]
 		say "     The ferret runs his fingers over your [if cocks of player > 1]cocks, holding them[otherwise]cock, holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure.  His tongue glides over your [cock size desc of player] [if cocks of player > 1]cocks[otherwise]cock[end if] slowly, working over every square centimeter of [if cocks of player > 1]them[otherwise]it[end if] and your balls to pleasure you.";
 		say "     After tending to your male genitals, he nuzzles under your balls to give your pussy some attention.  The ferret runs is fingers over your wet lips, the spreads them as he teasingly brushes his tongue across them.  He works his tongue across your pussy again and again, nibbling your folds from time to time.  Once he[']s tended to every square centimeter of your lips and gotten you drippingly wet, he dives his tongue into you and starts licking and lapping with considerable zeal.";
 		say "     Having gotten you quite worked up, when he finally plunges his mouth down over your cock and starts sucking it firmly, you moan loudly.  He smiles up at you and rubs one hand over your [ball size] to slip a finger into your pussy while the other strokes his animalistic member.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft and [cunt size desc of player] pussy until you can hold back no longer and shoot your hot load down the ferrety man[']s throat.  He sucks it all down with soft moans until your balls are drained.  His muzzle pulls back and he slides his slinky body up yours to kiss you.  As your tongue dives between his lips, you can feel the mustelid[']s cum spraying across your body.";
 	otherwise if cocks of player > 0:				[MALE]
-		say "     The ferret runs his fingers over your [if cocks of player > 1]cocks, holding them[otherwise]cock, holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure.  His tongue glides over your [cock size desc of player] [if cocks of player > 1]cocks[otherwise]cock[end if] slowly, working over every square centimeter of [if cocks of player > 1]them[otherwise]it[end if] and your balls to pleasure you.  Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly.  He smiles up at you and rubs one hand over your [ball size] balls while the other strokes his animalistic member.";
+		say "     The ferret runs his fingers over your [if cocks of player > 1]cocks, holding them[otherwise]cock, holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure.  His tongue glides over your [cock size desc of player] [if cocks of player > 1]cocks[otherwise]cock[end if] slowly, working over every square centimeter of [if cocks of player > 1]them[otherwise]it[end if] and your balls to pleasure you[if anallevel is 3].  He continues lower, sliding his tongue across your tight pucker in several slow licks.  His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if].  Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly.  He smiles up at you and rubs one hand over your [ball size] balls while the other strokes his animalistic member.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft until you can hold back no longer and shoot your hot load down the ferrety man[']s throat.  He sucks it all down with soft moans until your balls are drained.  His muzzle pulls back and he slides his slinky body up yours to kiss you.  As your tongue dives between his lips, you can feel the mustelid[']s cum spraying across your body.";
 	otherwise:								[FEMALE]
 		say "     The ferret runs is fingers over your wet lips, the spreads them as he teasingly brushes his tongue across them.  He works his tongue across your pussy again and again, nibbling your folds from time to time.  Once he[']s tended to every square centimeter of your lips and gotten you dripping wet, he dives his tongue into you and starts licking and lapping with considerable zeal.  After having gotten you all worked up, you moan loudly as that nimble tongue sets to work inside you.  He smiles up at you and slips a finger into your snatch alongside his tongue while his other paw strokes his animalistic cock.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     His nimble finger and playful tongue tease your sensitive clit and inner walls until you can hold back no longer.  You moan loudly as your orgasm washes over you, pouring your sweet waters across his tongue.  He laps them up excitedly, making you moan all the more until your climax finally wanes into a pleasant afterglow.  Not overstaying his welcome in your now oversensitive pussy, he slips his tongue and finger out and gives you a long lick to get your dripping juices.  His muzzle pulls back and he slides his slinky body up yours to kiss you.  As your tongue dives between his lips, you can feel the mustelid[']s cum spraying across your body.";
 	say "     After kissing and snuggling, he wipes his sticky mess off of you with a towel before it can dry uncomfortably.  He snuggles up to you as you both take a quick nap after your romp.";
 	wait for any key;
@@ -271,6 +274,7 @@ to say alexsexytimes2:
 	say "     With a grin, Alex slides an arm around your waist and leads you off to his bedroom, pulling clothes off each other as you go.  You are quite familiar with this room now and move onto the bed eagerly, spreading yourself out on the [one of]red[or]blue[or]turquoise[or]crimson[or]aqua[or]scarlet[at random] satin sheets.  He stretches out his fully ferret body before you, then bounds around excitedly on the bed with you, licking and nibbling you all over, making you alternately giggle and moan[alexbodyreset].";
 	say "     Alex looks over your lovely, ferret body and dooks happily at the sight of his beautiful mate.  You both roll around on the large bed, slender, flexible bodies intertwining as you run your paws over each other.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if cocks of player > 0 and cunts of player > 0:		[HERM]
 		say "     Eventually, the smaller ferret moves his paws to your groin, taking your maleness in one and playing with your wet folds with the other.  'My dearest, what to do with you?  You have this lovely cock, begging to fill your little ferret love.  Does the big, sexy herm want to pin me down and have her way with my tight bottom?  But you also have this cute, dripping puss, ready and waiting for your lover[']s ferret cock.  Do you need him to fill you with his hot seed and breed you like an animal?'  Both offers sound so delightful to you, but which do you prefer to take? (Y-mount him, N-get fucked)";
 		if the player consents:					[HERM - MALE OPTION]
@@ -290,9 +294,14 @@ to say alexsexytimes2:
 
 
 to say alexmalesexy2:
-	say "     Unable to resist such an offer, you get your cock nice and slick, then sink it down into him.  His ass spreads open for you slowly as you thrust steadily deeper and deeper.  He moans in delight beneath the larger, sexy ferret filling him.";
+	if a random chance of 1 in 3 succeeds or anallevel is 3:
+		say "     Unable to resist such an offer, but wanting a little more fun before the main event, you pour some lube onto your fingers and slip one into the horny ferret's ass.  He moans and squirms in delight, but pushes back harder onto your intruding digit.  Deciding he's already ready for more, you push a second finger into him to stretch him out further.  You make a point to tease his prostate, which has his cock twitching and dripping with precum onto his tan tummyfur.  You're tempted to suck it, but know that'd probably set him off at this point.";
+		say "     With him quite ready and worked up now, you get your cock nice and slick with the lube, then sink it down into him.  His loosened ass spreads open for you readily as you thrust steadily deeper and deeper.  He moans in delight beneath the larger, sexy ferret filling him.";
+	otherwise:
+		say "     Unable to resist such an offer, you get your cock nice and slick, then sink it down into him.  His ass spreads open for you slowly as you thrust steadily deeper and deeper.  He moans in delight beneath the larger, sexy ferret filling him.";
 	say "     You take your time until you[']re fully sheathed in him before you start pounding into him harder and faster.  He twists his flexible upper body so he can lick and kiss you while holding his ass presented to you.  As you stretch out overtop him and he nuzzles and nips at your neck, you take his cock in your paw and stroke him while pounding his rump with an increasingly frantic pace.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "     Finally, you are driven over the edge and slam your cock deep inside him, shooting your hot seed into the sexy ferret[']s rump.  He moans and dooks happily, begging for you to give him all you[']ve got.  With the tight grip of his asshole around you and his inner walls almost milking at you for more, you are happy to oblige and give him as much as you can while his own seed splatters onto the sheets.";
 
 
@@ -302,8 +311,7 @@ to say alexfemalesexy2:
 	say "     Unable to resist such a sexy offer, you take a hold of his cock and point it upright, teasing your pussy[']s wet lips against it.  As your juices run down his length, you lower yourself down over his throbbing meat.  You both dook in delight and start bouncing on the bed with each thrust he makes into you.";
 	say "     With his slender cock stuffed fully inside you, you lower your flexible body overtop of him, bringing your breasts to the smaller ferret[']s muzzle.  He licks and suckles at your nipples, making you shiver in delight.  His paws grip your ass, squeezing it as he pulls your hips down into each thrust he makes.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "     Finally, he is driven over the edge and thrusts his cock deep inside you, shooting his hot seed into his sexy mate[']s vagina and womb.  You both moan and dook as he fills you with his thick semen.  Driven to orgasm yourself, your inner walls squeeze and pull at his cock, begging it to give you all it can.  His throbbing member and heavy balls are happy to oblige, filling you delightfully full.";
-	say "[impregchance]";
+	say "     Finally, he is driven over the edge and thrusts his cock deep inside you, shooting his hot seed into his sexy mate[']s vagina and womb.  You both moan and dook as he fills you with his thick semen.  Driven to orgasm yourself, your inner walls squeeze and pull at his cock, begging it to give you all it can.  His throbbing member and heavy balls are happy to oblige, filling you delightfully full.[impregchance]";
 	if baby is 0 and gestation of child is not 0:
 		now facename of child is "Ferret";
 		now bodyname of child is "Ferret";
@@ -326,12 +334,14 @@ to say alexbrunchtime:
 		say "     Having been caught, he stops and looks at you nervously.  You can[']t really find it in you to be mad with the sneaky ferret and slide up beside him.  With your arm around him, you start stroking his cock, allowing him to finish his waning orgasm with a final, big blast into the creamy sauce.";
 		say "     With his cum to complete today[']s sauce, you start mixing it in while he continues cooking.  You lower yourself to your knees and smear some of the chocolate sauce on his cock before passing the spoon up to him.  He slowly licks it clean as you do the same to his cock.  He moans and whimpers in pleasure at the attention, trying his best to focus on the cooking while you suck him off.  Eventually you get your tasty treat while he only burns the eggs a little.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if cocks of player > 0:			[MALE/HERM]
 			say "     The smaller ferret climbs into your lap when you head to the dining room to eat, sharing one large plate.  You snuggle, kiss and tease one another playfully while eating your breakfast, enjoying the ferret[']s special pancakes all the more for knowing what makes them special.  The ferret playful grinds his ass against your cock as he happily informs you that Lorenda and Lee are getting along well.  It seems she[']s helping [apostrophe]him[apostrophe] become more comfortable with being partly a [apostrophe]her[apostrophe] as well and they are making a rather cute couple.";
 		otherwise:					[FEMALE]
 			say "     You climb into his lap when you head to the dining room to eat, sharing one large plate.  You snuggle, kiss and tease one another playfully while eating your breakfast, enjoying the ferret[']s special pancakes all the more for knowing what makes them special.  The ferret[']s playful fingers tease your pussy as he happily informs you that Lorenda and Lee are getting along well.  It seems she[']s helping [apostrophe]him[apostrophe] become more comfortable with being partly a [apostrophe]her[apostrophe] as well and they are making a rather cute couple.";
 		say "     Once your meal is done, you head back to the bedroom to get ready to head back out, but more prominently in your mind, to watch the next wave of changes overcome you.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     You slip off the robe and stretch out your body in front of the mirror, watching the changes in your reflection.  Your body grows more lithe and flexible.  You test out this flexibility, bending and contorting yourself with ease in front of the full length mirror[if cocks of player > 1].  And speaking of [']full length['], the sight of your changing body excites your cocks to full erection.  Like Alex[']s, they are smooth and slender with an upward curving glans[otherwise if cocks of player is 1].  And speaking of [']full length['], the sight of your changing body excites your cock to full erection.  Like Alex[']s, it are smooth and slender with an upward curving glans[end if][if cunts of player > 1].  You take a moment to examine your pussies as well, playing with your pink folds, rich with the scent of aroused mustelid[otherwise if cunts of player is 1].  You take a moment to examine your pussy as well, playing with your pink folds, rich with the scent of aroused mustelid[end if].";
 		say "[brunchtimechange]";
 		say "     Your changes done, you bound back into the living room with fresh excitement to find Alex has continued changing as well.  His infection has progressed up further, fully covering his head and arms now, making him a tan and brown ferret.  He has a cute mask of dark fur around his eyes on his now mustelid muzzle.  You chirr and nuzzle him, running your nimble paws over his body as you both share several kisses before parting.";
@@ -355,17 +365,17 @@ to say alexbrunchtime:
 to say brunchtimechange:
 	if alexbrunch is 1:
 		now tailname of player is "Ferret";
-		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur. ";
+		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
 	if alexbrunch is 2:
 		now skinname of player is "Ferret";
 		now skin of player is "soft, white fur that covers your";
-		increase charisma of player by 1;
-		say "[bold type]Your charisma has increased by 1.[roman type][line break]";
+[		increase charisma of player by 1;
+		say "[bold type]Your charisma has increased by 1.[roman type][line break]";	]
 	if alexbrunch is 3:
 		now facename of player is "Ferret";
-		now face of player is "that of an adorable mustelid with darting eyes that search for shinies.  You have a cute, pink nose with plentiful whiskers on your ferrety muzzle.";
-		increase intelligence of player by 2;
-		say "[bold type]Your intelligence has increased by 2.[roman type][line break]";
+		now face of player is "that of an adorable mustelid with darting eyes that search for shinies.  You have a cute, pink nose with plentiful whiskers on your ferrety muzzle";
+[		increase intelligence of player by 2;
+		say "[bold type]Your intelligence has increased by 2.[roman type][line break]";	]
 	if alexbrunch is 4:
 		now bodyname of player is "Ferret";
 		now body of player is "the slender and flexible form of a ferret.  You constantly have the urge to weave and bob about playfully as you move";
@@ -375,9 +385,9 @@ to say brunchtimechange:
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
 		now the daycycle of player is 0;
-		increase dexterity of player by 2;
+[		increase dexterity of player by 2;
 		decrease stamina of player by 1;
-		say "[bold type]Your dexterity has increased by 2 while your stamina has dropped by 1.[roman type][line break]";
+		say "[bold type]Your dexterity has increased by 2 while your stamina has dropped by 1.[roman type][line break]";	]
 
 
 to say alexbodyreset:
@@ -427,7 +437,7 @@ to say pillowtalk:
 	if T is 7:
 		say "Alex runs his paw along your side and nibbles your ear, telling you that Lorenda and Lee have been asking about you.  It seems they want to thank you for saving them and getting them together.  They[']ve been rather overtly suggesting that you both come over sometime for a little fun at their place.  Alex runs his finger along your thigh as he tells you that part, making it clear to you just what kind of fun those two have in mind.";
 	if T is 8:
-		say "Alex wriggles his flexible body out from under his half-filled tray and nuzzles between your legs, licking and kissing at your [if cunts of player > 0 and cocks of player > 0]cock and pussy[otherwise if cocks of player > 0]cock[otherwise]pussy[end if].  You moan in delight, rubbing a paw through his headfur as you enjoy his oral ministrations with your meal until finally he gets a juicy treat as well when you cum.";
+		say "Alex wriggles his flexible body out from under his half-filled tray and nuzzles between your legs, licking and kissing at your [if cunts of player > 0 and cocks of player > 0]cock and pussy[otherwise if cocks of player > 0 and anallevel is 3]cock and anus[otherwise if cocks of player > 0]cock[otherwise]pussy[end if].  You moan in delight, rubbing a paw through his headfur as you enjoy his oral ministrations with your meal until finally he gets a juicy treat as well when you cum.";
 	if T is 9:
 		say "you talk to Alex about how he[']s changed while you[']ve known him.  He[']s become a much nicer person over the time you[']ve known him.  You cautiously ask him if he thinks it has to do with his growing changes, and he agrees.  'Part of it was the stress about my clients, but only part.  I think letting my ferret side out has made me happier and more positive overall.  I may get a little hyperactive at times, but it[']s hard to stay sad now.  I have a little romp around the room or hide a few shiny things and I[']m right as rain.'";
 	if T is 10:

@@ -1,5 +1,5 @@
 Version 2 of Junkyard and Warehouse by Rimme begins here.
-[Version 2 - Updated Junkyard (Stripes) and Horsey-Steven sex (Shadowwolf94)]
+[Version 2.1 - Additional Horsey-Steven sex (Sub/MPreg only)]
 
 Chapter 1 - Abandoned Lot into Storage Room
 
@@ -22,24 +22,29 @@ Section 2 - Entering the Warehouse
 Definition: a person is facially human:
 	if the facename of the player is "human", yes;
 	if the facename of the player is "Awesome tree", yes;
-	if the facename of the player is "city sprite", yes;
 	if the facename of the player is "Siren", yes;
+	if the facename of the player is "Greek Nymph", yes;
 	no;
 
 Definition: a person is skintone human:
 	if the skinname of the player is "human", yes;
 	if the skinname of the player is "Awesome tree", yes;
-	if the skinname of the player is "elf", yes;
 	if the skinname of the player is "city sprite", yes;
+	if the skinname of the player is "elf", yes;
+	if the skinname of the player is "Elven Hunter", yes;
 	if the skinname of the player is "harpy", yes;
 	if the skinname of the player is "Siren", yes;
 	if the skinname of the player is "Succubus", yes;
 	if the skinname of the player is "Incubus", yes;
+	if the skinname of the player is "Greek Nymph", yes;
 	no;
 
 Definition: a person is bodily human:
 	if the bodyname of the player is "human", yes;
+	if the bodyname of the player is "elf", yes;
+	if the bodyname of the player is "Elven Hunter", yes;
 	if the bodyname of the player is "Awesome tree", yes;
+	if the bodyname of the player is "Greek Nymph", yes;
 	no;
 
 Instead of entering the Storage Room:
@@ -74,7 +79,7 @@ Instead of going south from the abandoned lot:
 					move the player to Storage Room;
 				otherwise:
 					say "The guard gives a startled cry when he sees the rest of your body, but you quickly explain that you are just another infected survivor, and you wish to enter for just a moment. 'I'm sorry,' he says. 'Too many of us have had, ahem, encounters with the beasts outside. I might make an exception, though,' he whispers, 'If you could bring me a soda. I haven't had one in so long.'";
-					if "soda" is listed in invent of player:
+					if soda is owned:
 						say "Do you give him a soda?";
 						if the player consents:
 							say "You dig into your backpack and give him your soda. He takes it eagerly and disappears. A few moments later, he shows up with another officer. The two mumble to each other for a moment, before the other officer speaks up.[line break]'All right, we will let you in. But if you try anything funny, we'll throw you out.' You promise you won't be any trouble, and the guards open the door for you.";
@@ -148,27 +153,23 @@ Instead of trading when the second noun is Steven:
 	if stevenremoved is 0:
 		if the noun is soda:
 			say "Steven's eyes gleam for a moment, before he snatches the can and tucks it away. He pulls out a medkit. 'Don't tell anyone about this.'";
-			add "medkit" to invent of player;
-			repeat with Q running through invent of the the player:
-				if Q matches the regular expression "soda":
-					delete soda;
-					stop the action;
-		if the noun is chips:
+			increment carried of medkit;
+			delete soda;
+		otherwise if the noun is chips:
 			say "Steven looks hungrily at the chips, and he carefully takes them off you and gives you back a medkit. 'You know, I'm breaking the rules for this,' as he winks at you.";
-			add "medkit" to invent of player;
-			repeat with Q running through invent of the the player:
-				if q matches the regular expression "chips":
-					delete chips;
-					stop the action;
-		say "He looks blankly at the [noun]. 'You can keep it.'";
+			increment carried of medkit;
+			delete chips;
+		otherwise:
+			say "He looks blankly at the [noun]. 'You can keep it.'";
 	otherwise:
 		if the noun is soda:
-			say "Steven looks at the soda with an air of remembrance. 'You keep it,' he says. 'I've had enough soda for now.'";
-		if the noun is chips:
-			say "Steven shakes his head sadly. 'I think I lost my appetite for junk food, frankly.'";
-		if the noun is medkit:
+			say "Steven looks at the soda with an air of remembrance.  'You keep it,' he says.  'I've had enough soda for now.'";
+		otherwise if the noun is chips:
+			say "Steven shakes his head sadly.  'I think I lost my appetite for junk food, frankly.'";
+		otherwise if the noun is medkit:
 			say "He shakes his head. 'Eh, you keep it. I'm not particularly injured right now.'";
-			[]
+		otherwise:
+			say "'Thanks, but no.  You hang on to it.";
 
 Section 4 - Steven, requests
 
@@ -198,7 +199,7 @@ Check foodrequest:
 
 Carry out foodrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a packet of food.";
-	add "food" to invent of player;
+	increment carried of food;
 	now lastfoodrun is turns;
 	increase stevenfood by 1;
 	if stevenfood is 5:
@@ -220,10 +221,10 @@ Check waterrequest:
 
 Carry out waterrequest:
 	say "Steven nods. 'Wait here,' he says, and he disappears into the stockpile of supplies. Moments later, he returns with a bottle of water.";
-	add "water bottle" to invent of player;
+	increment carried of water bottle;
 	now lastwaterrun is turns;
 	increase stevenwater by 1;
-	if stevenfood is 5:
+	if stevenwater is 5:
 		say "That's as much water as I can give you.  I'm really sorry.";
 
 Chapter 3 - The Office and Stevenfucking
@@ -286,26 +287,35 @@ To stevenfuck:
 	if cunts of player > 0:
 		say "You turn him around and give him a long, lustful kiss. Your tongues touch and dance around each other as his cock grows in anticipation. You slip off your pants and seat your vulva around his cock and begin pumping it, back and forth, eagerly, as he falls against the bookshelf.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "His grunts become groans of pleasure, as his hair starts to let itself down into a flowing mane. He fumbles with his shirt, trying to take it off as his hands harden into hooves. Finally he rips it off and sucks your mouth hard, his tongue fiercer with more passion than you've ever felt.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "Each kiss becomes more intense than the last, as every buried passion comes forth as he jerks his pelvis into you, his butt ramming against the bookshelf. With one last bang, he snaps the bookcase into splinters, sending everything left on the shelf to the ground, while he ejaculates into you, letting loose a wild whinny.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	otherwise:
 		say "You turn him around and give him a long, lustful kiss. Your tongues touch and dance around each other as his cock grows in anticipation. You grab his shaft with one hand and begin rubbing it up and down.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if cocks of player > 0:
 			if Cock Length of player > 8:
 				say "You drop your own pants, and rub your own penis against his. He starts to gasp, but you keep your lips against his, tongues twirling around each other. He salivates passionately, and he grips your sides as his hips start rocking, banging into the bookshelf with ever-increasing bangs.";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		otherwise:
 			say "He tries to pull away, in one last attempt at freedom, but you grab him with both hands and kiss him hard as you wriggle your whole body up and down his member. He falls against the bookshelf as you hug him more tightly his feet rising up off the ground, hands gradually coming to meet yours.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "Finally, he pulls his mouth away from yours, but only for a second, as he darts back in, kissing you in the cheek and neck. His moans become whinnies of joy as his face stretches forward, kissing you further and further down your face. You sidle around as he kisses the back of your neck, and inserts his giant horse penis into your ass.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "Now it is your turn to gasp, as he cuddles you tightly with his strong stallion arms. He bangs you, harder, harder, each time cracking the bookshelf into pieces. With one final kick, he smashes the pallet into smithereens as the cum creams into your abdomen, soaking your legs and dripping onto the floor.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	say "Now all of your clothes are on the floor, Steven's right beside you. Both of you tumble to the floor, as he whinnies in excitement. His deep equine eyes jiggle with pleasure. 'Oh, let's not stop now,' he breathes, 'Let's do it again!' He kisses you again, and his feet, now hooves, stamps against the ground, smashing the picture frame and ripping the books in two. You two slide towards the middle and start doing it again, this time even faster and harder than before.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 	if cunts of player > 0:
 		if breasts of player > 3:
 			say "He drives his member into your hole, his balls banging against your ass, his hands gripping two of your breasts and stroking them, all while he kisses you, sucking at your lips and your tongue. You both gasp and groan very loudly as you pound the ground over and over again, until you suddenly feel Steven being lifted from you. You open your eyes to see the guards, having broken down the door, pulling your away from the primal scene.";
@@ -339,36 +349,59 @@ To stevenjunkfuck:
 			now monster is y;
 			break;
 	if laststevenfuck - turns is less than 6:
-		say "You start to cuddle up against him, but the flame just isn't lighting for him. Perhaps you should try again later.";
-		stop the action;
+		say "You start to cuddle up against him, but the flame just isn't lighting for him.  Perhaps you should try again later.";
 	otherwise:
-		say "You slide over and cuddle up against Steven, pulling you both down to the ground. You nuzzling at his chest as you slide your hand down to his crotch, taking hold of his flaccid equine shaft. He groans and shivers a little as you begin to gently stroking it";
+		say "     You slide over and cuddle up against Steven, pulling you both down to the ground.  You nuzzling at his chest as you slide your hand down to his crotch, taking hold of his flaccid equine shaft.  He groans and shivers a little as you begin to gently stroking it";
 		if cocks of player > 0:
 			if cunts of player > 0:
-				say ".  While the equine man relaxes and enjoys the attention you[']re giving his shaft, you ponder over how best to please him. Being a herm, you could easily climb up on top of him and ride him, or you could give my a some [']oral['] attention.(Y=Ride, N=Suck)";
+				say ".   While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  Being a herm, you could easily climb up on top of him and ride him, or you could give my a some [']oral['] attention.  (Y=Ride, N=Suck) ";
 				if the player consents:
 					say "[stevenride]";
 				otherwise:
 					say "[stevensuck]";
 			otherwise:
-				say ".  Deciding that, since you lack female equipment, the best way to please your equine lover is probably by having a nice sexy mouth over that sexy rod of his.";
-				say "[stevensuck]";
+				say ".  While the equine man relaxes and enjoys the attention you're giving his shaft, you ponder over how best to please him.  While he doesn't seem interested in being mounted, perhaps he'd consent to fucking your ass.  Otherwise, you might give him some [']oral['] attention.  (Y=Ride, N=Suck) ";
+				if the player consents:
+					say "[stevenanal]";
+				otherwise:
+					say "[stevensuck]";
 		otherwise:
 			if cunts of player > 0:
 				say ".  Licking your lips and staring down at his large rod, you feel a red hot need growing between your legs and you get yourself ready to ride his thick shaft.";
 				say "[stevenride]";
 			otherwise:
-				say ".  Frowning a bit, you realize you don't have any male or female equipment. A little discouraged, you[']re about to stop when you realize you still have one thing you could use to get this sexy horse off. You lick your lips and take a deep breath, getting your jaw nice and loose for his sexy equine length.";
+				say ".  Frowning a bit, you realize you don't have any male or female equipment.  A little discouraged, you[']re about to stop when you realize you still have one thing you could use to get this sexy horse off.  You lick your lips and take a deep breath, getting your jaw nice and loose for his sexy equine length.";
 				say "[stevensuck]";
 		infect "red horse";
 		infect "red horse";
 		now laststevenfuck is turns;
 
 to say stevenride:
-	say "After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.[line break]You take a breath and push back, sliding his shaft into you. You groan and begin to ride him, taking it slow at first but soon picking up speed. Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine cock flaring up as he climaxes, flooding your womb with his fertile cum. This pushes you over the edge into your own orgasm, your cunt spasming around his thick shaft, milking it for his cum.[line break]Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you. You stretch out and slide up of his shaft, his cum flooding out of you. You grin and lean down, giving him a kiss before you go and clean yourself up.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.[line break][impregchance]";
+	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, sliding down his body into the head of his length presses up against your cunt. You groan a little and press back lightly against it, teasing him.";
+	say "     You take a breath and push back, sliding his shaft into you.  You groan and begin to ride him, taking it slow at first but soon picking up speed.  Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine cock flaring up as he climaxes, flooding your womb with his fertile cum.  This pushes you over the edge into your own orgasm, your cunt spasming around his thick shaft, milking it for his cum.";
+	say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you.  You stretch out and slide up of his shaft, his cum flooding out of you.  You grin and lean down, giving him a kiss before you go and clean yourself up.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.[impregchance]";
 
 to say stevensuck:
-	say "After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. Leaning further forward, you slip the tip into your mouth, gently sucking on it. Groaning, you feel Steven placing his hand on your head, pushing you further down on his shaft, the thick length filling up your mouth. You gulp around the length, stroking the base of it as you begin bobbing your mouth up and down.[line break]Your mouth is took much for the poor equine man to take and you feel the head of his cock flare up as he climaxes, pumping his thick cum down your throat. You gulp down as much as you can, but much of it squirts out around his shaft. When he finally empties his balls you slip his length out of your mouth and take a long needed breath. Panting hard you lick your lips and get about cleaning yourself off, but not before you move up and give Steven a good long kiss.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.";
+	say "     After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  Leaning further forward, you slip the tip into your mouth, gently sucking on it.  Groaning, you feel Steven placing his hand on your head, pushing you further down on his shaft, the thick length filling up your mouth.  You gulp around the length, stroking the base of it as you begin bobbing your mouth up and down.";
+	say "     Your mouth is took much for the poor equine man to take and you feel the head of his cock flare up as he climaxes, pumping his thick cum down your throat.  You gulp down as much as you can, but much of it squirts out around his shaft.  When he finally empties his balls you slip his length out of your mouth and take a long needed breath.  Panting hard you lick your lips and get about cleaning yourself off, but not before you move up and give Steven a good long kiss.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.";
+	if ( "Submissive" is listed in feats of player or ( "MPreg" is listed in feats of player and cunts of player is 0 ) ) and a random chance of 2 in 5 succeeds:
+		say "     Steven smiles down at you and strokes your head.  'Mmm... I can tell what you're really after,' he nickers before moving around behind you.  He pushes you forward onto all fours and runs his hands over your [bodydesc of player] body.  'You're really wanting the big stallion to mount you, aren't you?' he says.  He runs his hand between your legs to tease your [if cunts of player > 0]pussy[otherwise]pucker[end if] while grinding his cock against your backside, leaking the last few dribbles of his previous load onto your ass.  'How about I take you like a mare, huh?' he asks, rubbing a pair of fingers over into your needy hole.  Your ";
+		if "Submissive" is listed in feats of player:
+			say "submissive urges, already fired up from sucking off the virile male, have ";
+		otherwise:
+			say "breedable backside, already aching to be filled after having sucked off the virile male, has ";
+		say "you moaning beneath him for him to mount you, bringing a smile to his equine face.";
+		say "     The strong horse guides his throbbing cock against your [if cunts of player > 0]pussy before thrusting into your wet hole[otherwise]pucker before thrusting into your tight hole[end if].  Climbing atop you, he nickers in pleasure as he fucks you, fucking you energetically despite having just gotten off[if breast size of player > 0].  He moves a hand to your [breast size desc of player] breasts, tweaking your nipples while he rides you[otherwise].  He rubs one hand over your flat [bodytype of player] chest[end if].";
+		if cocks of player > 0 and cunts of player is 0:		[male sub bonus scene]
+			say "     His hand moves lower, wrapping around your [cock size desc of player] [cock of player] dick and stroking it as he fucks you.  'What a strange mare you are with a leaking cock like this.  You're a sexy mare though, aren't you?  Or maybe I'm wrong and I should stop fucking you,' he says, slowing his thrusts and moving to withdraw from you.  You release a soft whinny of need and push back onto his rod, replying that you want to be his sexy mare and that you need him to fill you.  At your words, he thrusts back into you hard and resumes fucking you, still stroking your dribbling erection.";
+		say "     Having already fucked you a few minutes ago, the stallion has more endurance this time, making for a nice, long fuck that has you moaning and whinnying beneath him.  He nuzzles at your neck and nips at it with his flat teeth as you both get hot and sweaty from the mating.  Finally his excitement boils over and he thrusts hard into you one last time, blasting his hot load deep inside you.  His loud, while not as big as the last, it still quite impressive and gives your [if cunts of player > 0]womb[otherwise]lower belly[end if] a wonderfully full feeling.  After withdrawing, he wipes his spent shaft across your rear and snuggles you in his arms.[impregchance]";
+
+
+to say stevenanal:
+	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out.  You then slide up on top of him, pressing your body to his and giving him a deep kiss.  As you kiss him, you lower yourself into position on his hard rod before he realizes what it happening.  You groan a little into the kiss as his enlarged, equine shaft presses into your back passage.";
+	say "     You take a breath and push back, sliding more of his thick meat into you.  You groan and begin to ride him, taking it slow at first, but soon picking up speed.  His strong hands move to your hips, squeezing your bottom and pulling you down onto him as he accepts his lustful urges and fucks your sexy ass.  You can feel the pulse of his rod inside you and feeling his copious pre making you more and more slick.  Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine flaring up as he climaxes, flooding your bowels with his fertile cum[if cocks of player > 0].  This pushes you over the edge into your own orgasm, your ass clenching around his thick shaft, squeezing as much cum as you can get from this equine stud.  Your seed splatters across his chest as your [cock size desc of player] [cock of player] cock pulses[end if].";
+	say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you.  You stretch out and slide up of his shaft, his cum flooding out of you.  You grin and lean down, giving him a kiss before you go and clean yourself up.  He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum now slowly leaking out of your stretched pucker.[mimpregchance]";
+
 
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
@@ -436,6 +469,7 @@ North of Junkyard Entrance is Junkyard Gate.
 
 The marea of Junkyard Gate is "Junkyard".
 
+
 Section 2 - Junkyard Digups
 
 Junkyard digups is a situation. The printed name of Junkyard digups is "a pile of garbage".
@@ -448,13 +482,14 @@ Instead of resolving junkyard digups:
 	if a random chance of 1 in 3 succeeds:
 		if a random chance of 1 in 2 succeeds:
 			say "You find a bottle of water!";
-			add "water bottle" to invent of player;
+			increment carried of water bottle;
 		otherwise:
 			say "You find a bottle of dirty water!";
-			add "dirty water" to invent of player;
+			increment carried of dirty water;
 	otherwise:
 		say "Alas, you do not find anything in this pile. You should try again.";
 	if jdigup is 3, now junkyard digups is resolved;
+
 
 Section 3 - Steven's home
 
@@ -478,6 +513,7 @@ Instead of resolving a junkyard home:
 		now Steven's home is known;
 		now junkyard home is resolved.
 
+
 Section 4 - Finding a tool
 
 an unused tool is a situation.
@@ -499,7 +535,7 @@ instead of sniffing the crowbar:
 instead of sniffing the mallet:
 	say "The mallet smells faintly of the junkyard where you found it.";
 
-instead of sniffing the beach plaza:
+instead of sniffing the iron pipe:
 	say "The iron pipe smells like old rust and whatever that hard, dry gunk inside was.";
 
 
@@ -508,14 +544,15 @@ Instead of resolving an unused tool:
 	let result be a random number from 1 to 3;
 	if result is 1:
 		say "Huzzah! You found a crowbar!";
-		add "crowbar" to invent of player;
+		increment carried of crowbar;
 	if result is 2:
 		say "Success! You found a mallet!";
-		add "mallet" to invent of player;
+		increment carried of mallet;
 	if result is 3:
 		say "Yay! You found an iron pipe!";
-		add "iron pipe" to invent of player;
+		increment carried of iron pipe;
 	now an unused tool is resolved;
+
 
 Section 5 - Find a random infected object
 
@@ -530,14 +567,14 @@ Instead of resolving signs of a scuffle:
 	let firstbeast be a random number from 1 to number of filled rows in the table of random critters;
 	choose row firstbeast from the table of random critters;
 	if there is a loot entry:
-		if loot entry is not "":
+		if loot entry is not "" and loot entry is not " ":
 			add loot entry to invent of player;
 			say "You found 1 x [loot entry]!";
 			now opportunity is 1;
 	let secondbeast be a random number from 1 to number of filled rows in the table of random critters;
 	choose row secondbeast from the table of random critters;
 	if there is a loot entry:
-		if loot entry is not "":
+		if loot entry is not "" and loot entry is not " ":
 			add loot entry to invent of player;
 			say "You found 1 x [loot entry]!";
 			now opportunity is 1;

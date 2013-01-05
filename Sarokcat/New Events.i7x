@@ -1,4 +1,5 @@
 New Events by Sarokcat begins here.
+[Abandoned Player moved to Warehouse area]
 
 "Adds a series of random events to Flexible Survival with several different outcomes."
 
@@ -13,8 +14,7 @@ Instead of Resolving a Military presence:
 	if mtp is 0:
 		say "You encounter what appears to be a military jeep parked by the side of the road, your heart jumps as you think about the potential for rescue or some military equipment.  Approaching cautiously you notice that the interior is covered in what appears to be dried cum.  There is no signs of the former occupants and they sadly appear to have taken anything of use with them.";
 		increase mtp by 1;
-		stop the action;
-	If mtp is 1:
+	otherwise If mtp is 1:
 		say "While traveling through the deserted city all of a sudden a glint of light catches your eye on one of the nearby rooftops.  Hoping to find signs of another survivor you start moving to get a better view of the roof, straining your eyes to see what it might have been.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -27,24 +27,21 @@ Instead of Resolving a Military presence:
 			increase mtp by 1;
 		otherwise:
 			say "Sadly no matter how hard you search, you can't seem to figure out where the glint of light came from exactly.  Nor can you determine what exactly it was from the little you saw of it, chalking it up as just another of the strange events going on in the city, you continue about your way.";
-		stop the action;
-	If mtp is 2:
+	otherwise If mtp is 2:
 		say "Traveling through the streets again you hear a distant sound in the air for a minute.  Looking up and all around you can only barely make out a jet trail high in the sky.  Wondering why someone would be traveling that high you are about to turn away and continue about your business when you notice a small speck drifting in the sky.  You pull out your newly acquired binoculars and try to focus in on the speck to see what it is.  Surprisingly as you focus in the binoculars, the speck resolves itself into several people in urban camouflage falling through the sky!  As you watch breathlessly their parachutes open and they straighten up to land, though a sudden swirl of wind from over near the capitol building scatters their neat formation, blowing several of them to entirely different parts of the city.  Shaking your head as the figures fall out of sight and into the city itself, you can't help but wonder what this means for the city and your hopes of rescue.";
 		extend game by 12;
 		increase mtp by 1;
-		stop the action;
-	if mtp is 3:
+	otherwise if mtp is 3:
 		say "Traveling through the city you come across what appears to have been a military style barricade, currently unoccupied, investigating further you find that past the barricade several military tents had been set up in a mostly empty store parking lot. Investigating carefully in case there are trigger happy soldiers still around, you find that the makeshift camp seems completely empty, though there are several signs of a struggle in some areas. [line break] Gathering up your courage you start looking in some of the tents, only to be surprised to find the large tents seem full of empty movable beds with restraints and scientific equipment.   Looking closer you can see several of the beds were occupied at some point recently, and that from the looks of things the occupants managed to either free themselves from their restraints, or managed to somehow 'convince' whoever was with them to free them instead.  From the strong sexual musk lingering inside the tents, however they managed to get free, they definitely managed to turn the tables on their captors, the remnants of sexual fluids evident in several locations, as are several discarded or torn bio-hazard suits and sets of lab robes. [line break]  Deciding that whatever the military was doing here, it would probably be best for you not to stay to long, you hurriedly search through the rest of the tents, hoping to find a gun or something else of use left behind.  Eventually giving up, you are forced to leave without a weapon, having found several boxes of ammo, and no guns to go with them.  Though you do find several small boxes of what the military jokingly calls food, and end up taking some with you.";
-		add "food" to invent of player;
-		add "food" to invent of player;
+		increase carried of food by 2;
 		increase libido of player by 30;
 		increase mtp by 1;
-		stop the action;
-	if mtp is 4:
-		say " Traveling through the city you come upon a strange sight on one of the roads that eventually leads out of the city.  You find a large flatbed truck overturned on the road, with several jeeps abandoned next to it.  Curiosity getting the best of you, you move closer to investigate the strange sight.  [line break]  Arriving at the overturned flatbed, you find that it appears to have been rigged to carry something relatively large, and from the way the straps and tie downs were burst open, alive.  Moving around the truck to examine the jeeps, you find that up close the jeeps and the area are covered in some kind of hardened goop, and sitting in the middle of the stuff are what appear to be several almost man sized eggs. [line break] Wondering what happened here, you spy a bit of some military camo worked into the lining of one of the eggs, closer investigation shows sign of a struggle, with several empty shell casings, and even a thoroughly gummed up and useless military sidearm lying around. Recalling some of your earlier encounters and sightings with the wyverns in the city, you realize that it looks like they were trying to transport a couple of the beasts to some other location, probably for study like in that camp you saw earlier.  Things obviously didn't go as planned again you note as you look around at the numerous eggs that likely hold the transforming soldiers, you can[apostrophe]t help but wonder what the military[apostrophe]s interest in all this is, and why they aren[apostrophe]t already in the city in force to help the survivors. [line break] You are startled out of your thoughts by one of the eggs shaking a bit as you stare at it, and a small crack in the shell forming. Realizing that the eggs will probably start hatching soon, and that you are surrounded by quite a number of eggs indeed, you give a shudder as you hurry on your way. Though you pause to take a sample of the goop surrounding the area";
-		add "wyvern goop" to invent of player;
+	otherwise if mtp is 4:
+		say " Traveling through the city you come upon a strange sight on one of the roads that eventually leads out of the city.  You find a large flatbed truck overturned on the road, with several jeeps abandoned next to it.  Curiosity getting the best of you, you move closer to investigate the strange sight.  [line break]  Arriving at the overturned flatbed, you find that it appears to have been rigged to carry something relatively large, and from the way the straps and tie downs were burst open, alive.  Moving around the truck to examine the jeeps, you find that up close the jeeps and the area are covered in some kind of hardened goop, and sitting in the middle of the stuff are what appear to be several almost man sized eggs. [line break] Wondering what happened here, you spy a bit of some military camo worked into the lining of one of the eggs, closer investigation shows sign of a struggle, with several empty shell casings, and even a thoroughly gummed up and useless military sidearm lying around. Recalling some of your earlier encounters and sightings with the wyverns in the city, you realize that it looks like they were trying to transport a couple of the beasts to some other location, probably for study like in that camp you saw earlier.  Things obviously didn't go as planned again you note as you look around at the numerous eggs that likely hold the transforming soldiers, you can[apostrophe]t help but wonder what the military[apostrophe]s interest in all this is, and why they aren[apostrophe]t already in the city in force to help the survivors. [line break] You are startled out of your thoughts by one of the eggs shaking a bit as you stare at it, and a small crack in the shell forming. Realizing that the eggs will probably start hatching soon, and that you are surrounded by quite a number of eggs indeed, you give a shudder as you hurry on your way. Though you pause to take a sample of the goop surrounding the area.";
+		increase carried of wyvern goop by 1;
 		extend game by 8;
 		now Military presence is resolved;
+	if a random chance of 1 in 2 succeeds, mallrecall;
 
 Section 2- Cream truck
 
@@ -57,13 +54,13 @@ Instead of Resolving a Cream truck:
 	say "An abandoned ice cream truck lies sitting here lonesomely in the middle of the street, you quickly investigate to see if any of the delicious treats are left.  Looking in the cooler in back you are disappointed to find all the ice cream has melted all over the place, covering the inside of the ice cream truck in sticky white stuff. Taking a whiff of a strange smell you investigate further, and Closer investigation determines that the sticky white stuff may not be ice cream after all, but just plain someone or something cream...  You might be able to find something useful here, but it would be messy, do you try?";
 	If player consents:
 		say "Carefully digging through the mess returns a few bottles of milk that doesn't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well.  Trying to scrape the stuff off while leaving the truck, you find the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
-		add "gryphon milk" to invent of player;
-		add "gryphon milk" to invent of player;
+		increase carried of gryphon milk by 2;
 		gryphonify;
 		now Cream truck is resolved;
 	otherwise:
 		say "Deciding it would be best to avoid any contact with whatever might be left in the truck, you continue on down the road, the truck soon lost in the distance behind you.";
 		now Cream truck is resolved;
+	mallrecall;
 
 
 
@@ -74,16 +71,18 @@ Wyvern Flight is a situation
 
 Instead of Resolving a Wyvern Flight:
 	say "You spy a small group of Wyverns hauling off tables and chairs from a sidewalk cafe, apparently building a large nest somewhere nearby.  You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
+	mallrecall;
 	now Wyvern Flight is resolved;
 
 
 Section 4- Abandoned player
 
-Abandoned player is a situation
+Abandoned player is a situation.  The sarea of Abandoned player is "Warehouse".
 
 Instead of Resolving a Abandoned player:
-	say "As you search the deserted streets of the city, you hear some noise coming from a nearby alley, cautiously following it you prepare for combat as you move closer.  Gripping your makeshift weapon tightly, you duck around the corner and prepare to engage in epic combat... with an abandoned CD player.  Sighing you lower you weapon before looking around you in embarrassment, fortunately there was no one around to see that.  Checking the music player you decide to leave the instrument of your ridicule where it was so it wont remind you of today, besides, you never liked that artist much anyways.";
+	say "As you search the deserted streets of the area close to the waterfront, you hear some noise coming from a nearby alley, cautiously following it you prepare for combat as you move closer.  Gripping your makeshift weapon tightly, you duck around the corner and prepare to engage in epic combat... with an abandoned CD player.  Sighing you lower you weapon before looking around you in embarrassment, fortunately there was no one around to see that.  Checking the music player you decide to leave the instrument of your ridicule where it was so it wont remind you of today, besides, you never liked that artist much anyways.";
 	Now Abandoned player is resolved;
+
 
 Section 5- Hyena Gang
 
@@ -153,11 +152,9 @@ Instead of Resolving a Locked utility room:
 	if lurm is 0:
 		say "While exploring underneath the mall you come across a locked utility room, hoping for the best you search for some manner of prying the door open, only to notice the sticky white stuff leaking out from underneath the door. Deciding discretion is the better part of survival, you move quickly on your way.";
 		increase lurm by 1;
-		stop the action;
-	if lurm is 1:
+	otherwise if lurm is 1:
 		say "Exploring the sewers further, you stumble across a large trail of dried cum. Feeling a sense of perverse curiosity you begin to backtrack to see where the large trail came from.  To your surprise the trail seems to lead you right back to the utility room you came across earlier, only this time the door appears to be open.  Carefully peeking around the side of the door, you see that this area hasn't been used as a simple utility room for quite some time. The tool racks are filled with strange and mildly disturbing looking skulls and other items, and the machinery is covered in strange symbols and writing that hurts your eyes to look at it.  [Line break] In the center of the room is a large black pentagram, surrounded by occult symbols, part of the pentagram is obscured by what appears to be a large pool of cum. Lying in their own smaller pools of seed are five empty black robes, probably worn by whoever was in here at the time.  The intense musky odor trapped in the room is starting to make your eyes water and your body heat up in response, deciding it would be a good idea to get out of there before you end up doing something you might (or might not!) regret. You quickly grab a couple items lying around and duck back outside.";
-		Add "demon seed" to invent of player;
-		Add "demon seed" to invent of player;
+		increase carried of demon seed by 2;
 		Now Locked utility room is resolved;
 
 
@@ -202,8 +199,8 @@ The sarea of Broken fountain is "Park";
 
 Instead of Resolving a Broken fountain:
 	Say "While wandering through the park trail you hear a soft trickling noise, like water softly running over stone. following the noise you come to a busted water fountain, apparently destroyed by several of the creatures fighting (or doing other things) in the area.  Glancing around you manage to find an empty container to put some of the water in, before heading on your way.";
-	Add "dirty water" to invent of player;
-	Now  Broken fountain is resolved;
+	increase carried of dirty water by 1;
+	Now Broken fountain is resolved;
 	
 
 
@@ -249,9 +246,9 @@ squatters den is a situation.
 The sarea of squatters den is "Mall";
 
 Instead of resolving a squatters den:
-	say "Exploring the sewers underneath the mall, you find signs of a recent struggle.  Investigating more closely you see where something came across what appears to be a recently-inhabited squatter's den, piles of junk and blankets and even an old shopping cart have been dragged down here and set up in a small alcove.  From the looks of the recent struggle, the den isn't inhabited any longer.  Carefully picking through the piles of junk, you look for anything that might be of use.  Finding some food and a bottle of water that is none too cleanr, you head on about your business.";
-	Add "dirty water" to invent of player;
-	Add "food" to invent of player;
+	say "Exploring the sewers underneath the mall, you find signs of a recent struggle.  Investigating more closely you see where something came across what appears to be a recently-inhabited squatter's den, piles of junk and blankets and even an old shopping cart have been dragged down here and set up in a small alcove.  From the looks of the recent struggle, the den isn't inhabited any longer.  Carefully picking through the piles of junk, you look for anything that might be of use.  Finding some food and a bottle of water that is none too clean, you head on about your business.";
+	increase carried of dirty water by 1;
+	increase carried of food by 1;
 	Now squatters den is resolved;
 
 
@@ -262,8 +259,7 @@ The sarea of leaking pipe is "Mall";
 
 Instead of resolving a leaking pipe:
 	say "as you travel the sewers and utility corridors under the mall, you hear a steady trickling noise coming from down one of the passageways, the sound grows louder as you move closer, eventually discovering a leaking water pipe. You apparently aren't the only person to have discovered this source of water though, as someone has set up a couple small containers under the steady leak.  As the containers are definitely overflowing whoever set them up obviously hasn't been back in a while. Sensing an opportunity you quickly gather up a couple of the full containers and place them in your pack, you then hurry along before someone comes looking for them. ";
-	Add "dirty water" to invent of player;
-	Add "dirty water" to invent of player;
+	increase carried of dirty water by 2;
 	Now leaking pipe is resolved;
 
 
@@ -277,23 +273,19 @@ Instead of Resolving a library visitor:
 	if libvis is 0:
 		say "Returning from a rather boring time searching the city, you find the library doors scratched and dented, as if some large creature had attempted to enter... perhaps scenting your recent presence. Fortunately enough it doesn't seem to have found a way in, although its attempt is still worrisome, you should probably keep an eye out in case it comes back.";
 		increase libvis by 1;
-		stop the action;
-	if libvis is 1:
+	otherwise if libvis is 1:
 		say "Returning to the library in a better mood then normal, your foraging having gone well today, you find that some creature has paid the library a visit in your absence again.  The creature seems to have actually tried searching the area around the building this time for other entry points, apparently not able to get in the doors you fortuitously locked behind you.  You wonder if this is the same visitor as last time, as it is showing much more reasoning capability now... still it didn't get in and you came back from the city with some extra food.  That's definitely a good sign isn[apostrophe]t it?";
 		increase libvis by 1;
-		Add "food" to invent of player;
-		stop the action;
-	if libvis is 2:
+		increase carried of food by 1;
+	otherwise if libvis is 2:
 		say "returning from your hours of searching the city, you are relieved to see the library up ahead of you, and the chance to rest and relax a little from your scavenging.  However just as soon as you let your guard down to unlock the door and let yourself in, one of the creatures prowling the city springs out of concealment and attacks!'";
 		fight;
 		say "Finally driving away the creature, you quickly duck inside the library to rest and relax, your heart hammering from the  shock of the unexpected fight and the fight itself.  The beast was obviously lying in wait for your return, making you wonder if it was the creature that has been trying to get into the library these past several times. Hopefully its defeat at your hands means it won[apostrophe]t be back this way again anytime soon, then again if it does come back you suppose you will just have to be ready for it.";
 		increase libvis by 1;
-		stop the action;
-	if libvis is 3:
+	otherwise if libvis is 3:
 		say "Returning to the library you are shocked to open the door to find that you appear to have had a visitor again, only this time they somehow made their way inside. You look around at the library entrance and the books knocked over and the obvious signs of someone or something searching the place, probably for you.  Checking carefully you determine that whatever it was and however it got in here, at least now it seems to be long gone, luckily enough.  Following what you can of it's trail, you sigh in relief as it doesn[apostrophe]t seem to have found the entry to the bunker in its searching, of course you still haven[apostrophe]t figured out how it found its way in to begin with...";
 		increase libvis by 1;
-		stop the action;
-	if libvis is 4:
+	otherwise if libvis is 4:
 		say "After another long day searching the abandoned city, you are happy to return to the library to for some hard earned rest. As you go to unlock the door you remember your unwanted visitor from before, and are thus careful when you go to open the door up, just in case. You[apostrophe]re caution seems warranted as as soon as you begin to swing the door open, something inside barrels out and attacks you directly! And from a glimpse of more movement from inside heading this way, apparently this time it isn't alone!";
 		fight;
 		say "Dealing with your first opponent, you barely have time to take a breath before another creature that had been hiding outside around the corner moves in on you!";
@@ -302,10 +294,8 @@ Instead of Resolving a library visitor:
 		fight;
 		say "Exhausted but victorious, you look around the site of the battle with a sigh, the ambushing beasts having left quite a bit of a mess behind themselves.  Consoling yourself with the thought that you doubt they will try anything like that again, you begin the painstaking task of cleaning the area up at least enough that you can move around easily. In the process of cleaning up after the creatures, you find a formerly overlooked supply room with what appears to be an open utility door leading to a small maintenance shed out back that also seems to be open.  Having figured out how the creatures found their way inside, you quickly lock both doors up, and jam them closed, ensuring that the creatures won't be able to use that entry again. You are in a much better mood now that you have found out how the creatures managed to get inside, and even better you found some much needed supplies in the supply room as well! [line break]."; 
 		say "You find 2 food and 2 water bottles in the supply room!";
-		Add "food" to invent of player;
-		Add "food" to invent of player;
-		Add "water bottle" to invent of player;
-		Add "water bottle" to invent of player;
+		increase carried of food by 2;
+		increase carried of water bottle by 2;
 		Increase score by 10;
 		Now library visitor is resolved;
 
@@ -318,9 +308,9 @@ The sarea of ruined supplies is "Mall";
 
 
 Instead of resolving a ruined supplies:
-	say "Searching the area under the mall again, you find a small pallet of food supplies obviously intended for use above at the food court. Unfortunately you were obviously not the first person to find these supplies, and some person has obviously been here before you and made a pig out of themselves.  Boxes are ripped open, food was obviously messily consumed, and almost all of the drinks have been opened, leaving the area strewn with wrappers and empty bottles. Eying the mess dubiously, you wonder if it is even worth searching through it all to see if there is anything left. ";
+	say "Searching the area under the mall again, you find a small pallet of food supplies obviously intended for use above at the food court. Unfortunately you were obviously not the first person to find these supplies, and some person has obviously been here before you and made a pig out of themselves.  Boxes are ripped open, food was obviously messily consumed, and almost all of the drinks have been opened, leaving the area strewn with wrappers and empty bottles. Eying the mess dubiously, you wonder if it is even worth searching through it all to see if there is anything left.";
 	if player consents:
-		say "tossing the supplies and boxes to the side, you realize that tossing things around as you look through the remains of the supplies is actually kind of fun.  You find small bits of food and a few mouthfuls of drink left over, and continue searching for more, as you quickly stuff them in your face, enjoying this strange type of edible scavenger hunt you have embarked on. Before you know it you look up and realize that you have spread the mess around an even larger area then before, and that you have been rooting around in the remains like some sort of pig yourself.  As you stand up to leave you hesitate to leave such an enjoyable bit of fun, and you are sure there are still some crumbs left behind. Thinking this you begin to turn back to the mess of wrappers and boxes, only to catch a glimpse of yourself in one of the shiny wrappers and realize that you really have started to become rather pig-like yourself from your messy endeavors! Realizing that staying here any longer, however tempting it may be would almost certainly result in your becoming totally porcine, you quickly hurry away, darting a few longing looks over your shoulder at the remains of the supplies before managing to get a hold of yourself.";
+		say "Tossing the supplies and boxes to the side, you realize that tossing things around as you look through the remains of the supplies is actually kind of fun.  You find small bits of food and a few mouthfuls of drink left over, and continue searching for more, as you quickly stuff them in your face, enjoying this strange type of edible scavenger hunt you have embarked on. Before you know it you look up and realize that you have spread the mess around an even larger area then before, and that you have been rooting around in the remains like some sort of pig yourself.  As you stand up to leave you hesitate to leave such an enjoyable bit of fun, and you are sure there are still some crumbs left behind. Thinking this you begin to turn back to the mess of wrappers and boxes, only to catch a glimpse of yourself in one of the shiny wrappers and realize that you really have started to become rather pig-like yourself from your messy endeavors! Realizing that staying here any longer, however tempting it may be would almost certainly result in your becoming totally porcine, you quickly hurry away, darting a few longing looks over your shoulder at the remains of the supplies before managing to get a hold of yourself.";
 		piggyify;
 		piggyify;
 		now hunger of player is 0;
@@ -329,9 +319,6 @@ Instead of resolving a ruined supplies:
 	otherwise:
 		say "Deciding its perhaps best not to get involved in such a total mess, just on the off chance you might find something useful left in the remains, you  continue along your way doing your best to forget the horrible carnage you are leaving behind.";
 		Now ruined supplies is resolved;
-
-
-
 
 
 
@@ -345,13 +332,8 @@ when play begins:
 
 Instead of Resolving a Strange preacher:
 	say "Wandering the deserted streets, you hear what sounds like a loud voice from down the street a ways. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street.  Moving closer in case this is some kind of trick, you get a better look at the creature and finding yourself shaking your head in astonishment.  With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her legs spread giving you a good look at hir erect feline cock.  Behind hir though a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred panther lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach, Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch of the ground.  It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak. [line break] You realize as you have been staring at the strangeness of her form, you have hardly paid any attention to what she was actually saying, you pause to listen for a minute.  Listening to her speak, it quickly becomes obvious she is singing the praises of something called the church of the maternal beast, and someone she calls the Great Mother.  She appears to be trying to appeal to the infected by telling them to embrace the changes, and the new sexuality sweeping the city, but not to let it overwhelm them. She continues on in lewd detail about the things that one should be careful of doing, or else you might give in and lose yourself completely, her body shaking as she depicts several strange lewd acts to be avoided, and you can see her hind legs pumping her erect cock in the empty air eagerly as she continues to get more and more explicit in her descriptions. Shaking your head at the absurdity of it all, you leave the strange thing to its preaching, unsure if it even noticed you stopping to listen for a minute.";
+	mallrecall;
 	Now Strange preacher is resolved;
-
-
-
-
-
-
 
 
 
@@ -366,4 +348,3 @@ to hyenaify:
 	Infect "Herm Hyena";
 
 New Events ends here.
-

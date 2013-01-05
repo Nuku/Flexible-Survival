@@ -2,7 +2,6 @@ Version 1 of Naiad by Wahn begins here.
 [Version 1.1 - Infection Texts adjusted]
 
 "Adds a Naiad to Flexible Survival's Wandering Monsters table."
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 

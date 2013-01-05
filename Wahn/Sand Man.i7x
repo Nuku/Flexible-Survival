@@ -57,7 +57,7 @@ to say sandman loses:
 			say "[sandman ride]";
 		otherwise:
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
-	
+
 to say sandman ride:
 	say "     As you agree to taking a ride on the beach stud's manhood, he smiles and pulls you in for a deep kiss, his lips touching yours with a tickling feeling. '[if cocks of player > 0]Dude[otherwise]Sweetie[end if], now let's have some fun!' He leads you over to a large towel lying nearby in the sand and pulls off your clothes followed by his own speedo.";
 	if cocks of player > 0:						[male + herm]
@@ -87,7 +87,8 @@ to say sandman ride:
 		say "     Then finally, you just can't hold back any more, pulling out till only the tip of his cock remains inside you and slamming down on it all the way again, followed by quick and hard bouncing up and down on his shaft. It doesn't take long till that drives you over the edge, shouting in pleasure as a feeling of fulfillment spreads through your whole body. The sand man stud isn't far behind with his own orgasm, pulling you down against his hips, his cock pumping a huge load of his seed deep into your asshole.[mimpregchance]";
 		say "     [line break]";
 		say "     As you rest a moment to catch your breath, his slowly softening maleness still inside you, he leans up and gives you a kiss on the lips. 'You're an amazing lay, baby. Come find me again later if you want to have another go. But for now, just listen to the waves and rest...' He's right about that - your coupling was incredibly satisfying, but pretty exhausting too. As you realize how tired you really are, the sand man embraces you again and rolls the both of you over so you're lying on the towel now. Pulling out of you carefully, he gives you a seductive smile, then walks off along the beach looking for new conquests. You just stay there on the towel for a while and doze off for a nap.";
-		
+
+
 to say sandman fucked:
 	say "     As you agree to someone getting fucked, he smiles and pulls you in for a deep kiss, his lips touching yours with a tickling feeling. 'Dude, now let's have some fun!' He leads you over to a large towel lying nearby in the sand and pulls off your clothes followed by his own speedo.";
 	say "     [line break]";
@@ -95,7 +96,7 @@ to say sandman fucked:
 	say "     Turning the tables on this beach-side Don Juan makes fucking him even more delicious, making you smile with each lust-filled gasp as your hips slap against his cheeks. Soon you drive him over the edge and he orgasms, spraying the towel below with a large load of cum. The sand man's tight hole twitches and contracts even more around your shaft as he comes, and the additional stimulation gives you the rest too, making you fill your little beach boy with spurt after spurt of your seed.";
 	say "     [line break]";
 	say "     Catching your breath, you hold on to his hips for a moment, then pull out of his asshole. There's something very satisfying about the little moan he gives as you leave his body and the thin line of cum connecting the tip of your cock to his hole for a moment before it drips on the towel. Giving his cheeks a last grope and a little slap, you say 'Nice ass, beach boy' and walk off, leaving him lying on his towel, still a bit dazed and surprised about what happened to him.";	  
-	
+
 to say sandmanDesc:
 	if SandManFirstEncounter is 0:	
 		say "     Walking over the beach, you come upon a large towel on which a handsome man lies sleeping, wearing nothing but a pair of stylish sunglasses and tight speedos. He has a ripped body and nice muscles - and is sculpted from sand. Amazingly life-like, even up to the hairs which almost look like they consist out of single strands. He's got even the smallest details a human would have...";
@@ -106,7 +107,7 @@ to say sandmanDesc:
 		now SandManFirstEncounter is 1;
 	otherwise:
 		say "     You cross paths with a handsome beach stud wearing nothing but a pair of stylish sunglasses and a pair of tight speedos on his sculpted body. Perfectly sculpted into an Adonis-like shape that is - out of finely grained sand. He takes a striking pose in front of you and runs a hand through shoulder-length hair. '[one of]Wanna make out in the dunes, baby?'[or]You're even more beautiful up close. Let's do it - right here.'[or]Hey baby, you're hot. I can't wait to hold you in my arms.'[or]How about a little fling in the sand? No strings attached.'[or]Beach Patrol. Do you know mouth-to-mouth resuscitation? Come here and I'll show you how it's done.'[at random]";		
-	
+
 Section 2 - Monster Insertion
 
 Table of random critters (continued)
@@ -172,5 +173,5 @@ when play ends:
 		otherwise:
 			say "When the military finally moves in, you're brought to a holding facility like so many others and have to spend quite a while waiting for the doctors to have a look at you. When they finally do, they're a bit nonplussed, with you no longer being an organic life-form, but rather mineral. They give you the regular shot to make you non-infectious, which thankfully works, then send you over to a nearby research lab to be thoroughly prodded and poked for a few days. As it turns out, your new form doesn't actually need to breathe - and neither does it age, which is a nice plus.";
 			say "You're approached by a NASA representative shortly after, who offers you a spot in astronaut training to make use of your special ability. You eagerly accept and spend the following months and years in Florida, leading to some interesting encounters in space some time later - and quite a few other 'invigorating' encounters with people catching your eye on the beaches surrounding Cape Canaveral...";
-	
+
 Sand Man ends here.

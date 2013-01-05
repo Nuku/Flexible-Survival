@@ -15,24 +15,45 @@ when play begins:
 	add { "Vixen Nurse" } to infections of furry;
 
 to say losetovixennurse:
+	choose row monster from the table of random critters;
 	if vixgender is 0:
 		If cocks of player > 0:
 			say "     The vixen nurse pushes you down as you stop struggling.  Climbing over you, her paws go to your crotch and grab your cock.  With an adept paw, she gets you fully hard before moving to line it up with her wet slit.  She sinks herself slowly down over your cock and moans.  She kneads her paws over your chest as her bubble butt bounces in your lap.  While she rides you, her silvery body and her white and black outfit become your entire, monochrome word of ecstacy.  That one spot of red on her cap is the only colour in your vision until finally you climax.  Your vision is then awash in a blur of colours as you pump your hot seed into her before finally sagging back onto the floor with a sigh of pleasure.  She smiles down at her happy patient and leaves you there.";
 		otherwise:
-			say "     The vixen nurse pushes you down at you stop struggling.  She takes you in her arms and holds you close as she unbuttons the front of her shirt enough to bare one of her breasts.  'Time to take your medicine, my dear,' she purrrs softly.  You consider resisting only briefly, for once your lips touch that nipple and taste the traces of her warm milk on it, you start nursing right away.  As you drink down her milk, she slips a paw between your legs to play with your pussy.  She teases your wet folds, then slips a finger into you.  She works it in and out quickly until you finally have a very fulfilling orgasm that makes your head spin and colours dance in your eyes.  As you try to recover from this, she lowers you to the floor and leaves her patient there, still licking your lips.";
+			say "     The vixen nurse pushes you down at you stop struggling.  She takes you in her arms and holds you close as she unbuttons the front of her shirt enough to bare one of her breasts.  'Time to take your medicine, my dear,' she purrrs softly.  You consider resisting only briefly, for once your lips touch that nipple and taste the traces of her warm milk on it, you start nursing right away.  As you drink down her milk, she slips a paw between your legs to play with your pussy.  Her milk has a mild, medicinal taste that clouds your judgement and makes you increasingly aroused.  She teases your wet folds, then slips a finger into you.  She works it in and out quickly until you finally have a very fulfilling orgasm that makes your head spin and colours dance in your eyes.  As you try to recover from this, she lowers you to the floor and leaves her patient there, still licking your lips.";
 	if vixgender is 1:
-		if cunts of player > 0:
-			say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your pussy, making you moan.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing increasingly aroused and as soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed.";
-			say "     [impregchance]";
+		say "     The silver-furred vixen grins at you as she looks over her [if fightoutcome is 22]willing [end if]patient.  Moving in close, she rubs her sexy body against yours, grinding her throbbing erection against you even as she grabs your ass meaningfully.  Knowing you're going to be mounted shortly by the horny vixen if you don't do anything, you consider trying to suck her off to satisfy her instead.  Shall you accept to let the herm fuck you (Y) or do you want to attempt an oral distraction (N)?";
+		if the player consents:
+			say "     Deciding you'd prefer that throbbing cock of hers in your mouth than elsewhere, you lower yourself to your knees and start licking and kissing at it.  She moans in pleasure and runs her paws over your head, pushing her leaking shaft against your lips and into your mouth.  As you suck her off, you grow increasingly aroused and eager to get her off, soon lusting for the sexy herm's seed.  As you bob your head over her meaty rod, she scribbles some distracted notes on her clipboard, mumbling about her patient's ['][one of]cooperative nature[or]arousal response[or]satisfying progress[purely at random]['] and ['][one of]eagerness to take [if cunts of player > 0]her[otherwise if cocks of player > 0]his[otherwise]their[end if] medicine[or]oral fixation[or]lingum activity[purely at random]['] before turning her full attention back to you.  You rub her plump ballsac with one hand and slide a pair of fingers into her puss with the other, pumping in time to her thrusting, getting her to cum hard and spew her hot load down your throat.  You eagerly swallow down the musky mess and suck her cock clean before letting it go, having gotten quite turned on by the whole experience.";
+			let x be libido of player;
+			if fightoutcome is 22, increase x by 15;		[submitted]
+			if cunts of player > 0, increase x by 15;		[F/H]
+			if a random chance of x in 200 succeeds:
+				attempttowait;
+				say "     The vixen nurse, panting a little from her orgasm, takes in the scent of your arousal and smiles.  Reminded of her initial plan, her cock starts to rise again.  Getting hard in your mouth again.  Lost in your lust, you help her along, licking and sucking it to restore her erection.  With some help from you, soon she's up and ready to go again, which you are far more eager for than before.";
+				if cunts of player > 0:
+					say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your pussy, making you moan.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing even more aroused[if cocks of player > 0]when she reaches around to stroke your pulsing shaft in return,[end if] and are soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed.  This pushes you over the edge, causing you to cum as well.[impregchance]";
+					say "     Having nicely seeded your womb, she pulls out and wipes her shaft clean on your rear end before getting up and leaving you there, slowly leaking out her plentiful cum onto the floor.";
+				otherwise:
+					say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your ass, making you groan in pain.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing even more aroused and as it becomes more and more pleasurable[if cocks of player > 0], especially once she reaches around to stroke your pulsing shaft in return[end if].  You are soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed[if cocks of player > 0].  This pushes you over the edge and causes you to cum as well[end if].[mimpregchance]";
+					say "     Having nicely seeded your ass, she pulls out and wipes her shaft clean on your rear end before getting up and leaving you there, slowly leaking out her plentiful cum onto the floor.";
+				now libido of player is ( libido of player + libido of player + libido entry ) / 3;
+				infect "Vixen Nurse";		[extra infection for double-sex]
+			otherwise:
+				say "     The vixen nurse, panting a little from her orgasm, pushes you off her spent shaft and straightens her uniform and grins as she places her clipboard in front of the bulge in her skirt.  She grins and heads off, perhaps to find another vict... ah... patient in need of her special brand of TLC.";
+				increase libido of player by 15;
+				if libido of player > 100, now libido of player is 100;
+		otherwise if cunts of player > 0:
+			say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your pussy, making you moan.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing increasingly aroused[if cocks of player > 0], especially once she reaches around to stroke your pulsing shaft in return,[end if] and are soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed.  This pushes you over the edge, causing you to cum as well.[impregchance]";
 			say "     Having nicely seeded your womb, she pulls out and wipes her shaft clean on your rear end before getting up and leaving you there, slowly leaking out her plentiful cum onto the floor.";
-		if cocks of player > 0:
-			say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your ass, making you groan in pain.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing increasingly aroused and start to submit to her as it becomes more and more pleasurable.  You are soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed.";
+		otherwise:
+			say "     The vixen nurse pushes you down to the ground, getting you onto all fours.  The herm vixen is on you moments later, driving her large cock into your ass, making you groan in pain.  She nips at your ears and growls playfully as she pumps her hard shaft into you again and again.  You find yourself growing increasingly aroused and start to submit to her as it becomes more and more pleasurable[if cocks of player > 0], especially once she reaches around to stroke your pulsing shaft in return[end if].  You are soon pushing back into her thrusts.  She gives you a few slaps on the rear with her clipboard, then drives her big cock deep inside you, unleashing her hot seed[if cocks of player > 0].  This pushes you over the edge and causes you to cum as well[end if].[mimpregchance]";
 			say "     Having nicely seeded your ass, she pulls out and wipes her shaft clean on your rear end before getting up and leaving you there, slowly leaking out her plentiful cum onto the floor.";
 	[value reset]
-	choose row monster from the table of random critters;
 	now lev entry is 4;
 
 to say beatthevixennurse:
+	choose row monster from the table of random critters;
 	if libido of player > 33:
 		say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big tr... eep!' she starts to say before you reach out and grab her by the wrist, pulling the weakened vixen into your arms.  She moans softly, trying half-heartedly to struggle, but you've taken the fight out of her.  Do you want to have a little fun with the naughty nurse?";
 		if the player consents:
@@ -52,18 +73,20 @@ to say beatthevixennurse:
 	otherwise:
 		say "     Your last blow to the nurse sends her staggering back.  She waves her clipboard intently at you.  'Oh, you are in big trouble now.  I'm going to have to send the orderlies down here to deal with you.'  With that, she turns and runs away.";
 	[value reset]
-	choose row monster from the table of random critters;
 	now lev entry is 4;
 
 
 to say vixennursedesc:
 	choose row monster from the table of random critters;
+	now lootchance entry is 20;
 	let debit be 0;
 	now vixgender is 0;
 	if hermaphrodite is banned:			[always female if herm banned]
 		now vixgender is 0;
 	otherwise if hospquest > 5:
-		if a random chance of 2 in 5 succeeds:
+		let hermvixchance be 30 + hospquest + hospquest;		[increasingly likely as hospquest progresses]
+		if hermvixchance > 75, now hermvixchance is 75;
+		if a random chance of hermvixchance in 100 succeeds:
 			now vixgender is 1;		[now a herm]
 	if vixgender is 0:
 		say "     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit.  She has a short cut, white apron with a black top under it.  There's even a traditional, white nurse's cap with a red cross on it on the vixen's head.  She has lustrous, gray fur, indicating that her infection originated from a silver fox.  Glancing down those long, slender legs you see they end in digitigrade paws.  To her ample chest, she holds a large clipboard.  You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard.  She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient[']s gotten out of bed[or]Bend over, sweety.  It[']s time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area.  The doctor will see you shortly.  Until then, let me take care of you[at random].'  She raises her clipboard, seemingly intent on clubbing you with it.";
@@ -141,7 +164,28 @@ When Play begins:
    now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
    now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
    blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-   now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+   now altcombat entry is "vixennurse";		[ Row used to designate any special combat features, "default" for standard combat. ]
+
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"vixennurse"	vixhealboost rule	--	--	--	--	--	--	--	--	--
+
+this is the vixhealboost rule:
+	choose row monster from the table of random critters;
+	if monsterhp <= ( hp entry / 4 ) and lootchance entry > 0 and a random chance of 1 in 4 succeeds:	[weak and not used healing booster]
+		let healed be 25;
+		increase monsterhp by healed;
+		if monsterhp > hp entry:
+			decrease healed by hp entry - monsterhp;
+			now monsterhp is hp entry;
+		say "     The [one of]vixen nurse[or]vulpine nurse[or]silvery vixen[at random] falls back momentarily due to her injuries.  She pulls a small syringe filled with blue fluid out and injects it quickly into her [one of]leg[or]thigh[or]arm[or]side[purely at random] before [one of]throwing the empty needle aside[or]tossing the needle away[or]breaking the empty needle on the ground[at random].  As her injuries start to rapidly heal, she then rushes back into the fray to face you again.  She has recovered [special-style-1][healed][roman type] hit points.";
+		now lootchance entry is 0;		[used up potential healing booster]
+		follow the monster injury rule;
+		say "[Name entry] is [descr].";
+		wait for any key;
+	otherwise:
+		standardretaliate;
 
 
 Table of Game Objects (continued)

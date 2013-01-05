@@ -87,11 +87,11 @@ To say butterfly defeat:
 				if ButterflyHasNegligee is True and ButterflyNegligeeTorn is False:
 					say "As you go to leave you notice the butterfly forgot her negligee.";
 					say "You gain 1 x pristine negligee!";
-					add "pristine negligee" to invent of player;
+					now carried of pristine negligee is 1;
 				otherwise if ButterflyHasNegligee is True:
 					say "As you go to leave you notice the butterfly forgot her negligee.";
 					say "You gain 1 x damaged negligee!";
-					add "damaged negligee" to invent of player;
+					now carried of damaged negligee is 1;
 				now ButterflyHasNegligee is False;
 				if butterfly grove is unknown:
 					say "You find a note she left behind with a rough map leading to her home.";
@@ -108,7 +108,7 @@ To say butterfly defeat:
 		otherwise if cocks of player is 0 and cunts of player is 0:
 			say "Unable to sustain her flight any longer she falls to her knees and you advance on her, pulling down your pants. She gazes upon your sexless groin, tilting her head in confusion. With a puzzled expression she goes to leave, but before doing so takes your hand and places something in it. 'Eat this. Maybe we[apostrophe]ll meet again sometime' she says meekly before flying off. [line break]";
 			say "You gain 1 x testosterone pill!";
-			add "testosterone pill" to invent of player;
+			increase carried of testosterone pill by 1;
 		otherwise:
 			say "DEBUG: You should never get here.";
 	otherwise:
@@ -130,7 +130,7 @@ To say butterfly defeat:
 				if ButterflyRevenge is False and ButterflyRaped is greater than 1:
 					say "She screams at your deep penetration, but then tries to reign-in her outward emotions determined not to give you the satisfaction. She bites her lip as she gyrates roughly on your cock in a dishonest show of strength. [if ButterflyHasNegligee is True]You tear the tattered remains of her negligee from her body[otherwise]You grab her firmly by the zig zag of ties on her leather top[end if] and press her back down to the ground stretching her arms out wide. You restrain her arms under your weight and her wings lie pinned underneath. As your piston hammers away at her pussy unabated, her vulnerable breasts bob around on her chest like lumps of jelly. Continuing to pummel her cunt you sense her mind begin to break as she moans and groans gasping for air. As you feel the tension build in your cock you withdraw it from her cunt and explode in a torrent spraying cum across her crotch, [if ButterflyHasNegligee is True]tummy[otherwise]leather top[end if], breasts and face. Dazed the butterfly starts to crawl away. Attempting to lift off she loses her sense of direction and orientation descending back to the ground with a thud. Eventually after a couple of attempts she manages to get airborne and flies off. [line break]";
 					say "You gain 1 x damaged negligee!";
-					add "damaged negligee" to invent of player;
+					now carried of damaged negligee is 1;
 					now ButterflyHasNegligee is False;
 					if butterfly grove is unknown:
 						say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
@@ -164,11 +164,11 @@ To say butterfly defeat:
 					if ButterflyHasNegligee is True and ButterflyNegligeeTorn is False:
 						say "As you go to leave you notice the butterfly forgot her negligee.";
 						say "You gain 1 x pristine negligee!";
-						add "pristine negligee" to invent of player;
+						now carried of pristine negligee is 1;
 					otherwise if ButterflyHasNegligee is True:
 						say "As you go to leave you notice the butterfly forgot her negligee.";
 						say "You gain 1 x damaged negligee!";
-						add "damaged negligee" to invent of player;
+						now carried of pristine negligee is 1;
 					now ButterflyHasNegligee is False;
 					if butterfly grove is unknown:
 						say "You find a note she left behind with a rough map leading to her home.";
@@ -199,7 +199,7 @@ To say butterfly defeat:
 				if ButterflyRevenge is False and ButterflyRaped is greater than 1:
 					say "You restrain her by the leg as you insert a fourth and then a fifth finger. With her on all fours you fist away at the butterfly stretching her passage to it[apostrophe]s limits. She screams at your deep penetration, but then tries to reign-in her outward emotions determined not to give you the satisfaction. She bites her lip trying to distract her mind from the assault her body is receiving as [if ButterflyHasNegligee is True]you tear the tattered remains of her negligee from it[otherwise]you let slip the tie on her leather skirt allowing it to fall off her and onto the ground[end if]. Spreading her legs further apart for better access you hammer away at her pussy unabated, her vulnerable breasts bobbing around on her chest like lumps of jelly. Continuing to pummel her cunt you sense her mind begin to break as she moans and groans gasping for air. Losing all sense of the difference between pleasure and pain the butterfly orgasms in spite of herself. Still dazed she starts to crawl away[if ButterflyHasNegligee is False], her skirt in her hand[end if]. Attempting to lift off she loses her sense of direction and orientation descending back to the ground with a thud. Eventually after a couple of attempts she manages to get airborne and flies off. [line break][line break]";
 					say "You gain 1 x damaged negligee!";
-					add "damaged negligee" to invent of player;
+					now carried of damaged negligee is 1;
 					now ButterflyHasNegligee is False;
 					if butterfly grove is unknown:
 						say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
@@ -232,11 +232,11 @@ To say butterfly defeat:
 					if ButterflyHasNegligee is True and ButterflyNegligeeTorn is False:
 						say "As you go to leave you notice the butterfly forgot her negligee.";
 						say "You gain 1 x pristine negligee!";
-						add "pristine negligee" to invent of player;
+						now carried of pristine negligee is 1;
 					otherwise if ButterflyHasNegligee is True:
 						say "As you go to leave you notice the butterfly forgot her negligee.";
 						say "You gain 1 x damaged negligee!";
-						add "damaged negligee" to invent of player;
+						now carried of damaged negligee is 1;
 					now ButterflyHasNegligee is False;
 					if butterfly grove is unknown:
 						say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
@@ -344,7 +344,7 @@ To say butterfly attack:
 		otherwise if cocks of player is 0 and cunts of player is 0:
 			say "As you lay defeated the butterfly girl advances on you pulling down your pants. She gazes upon your sexless groin, tilting her head in confusion. She decides you[apostrophe]ve suffered enough and goes to leave, but before doing so takes your hand and places something in it. 'Eat this. Maybe we[apostrophe]ll meet again sometime' she says meekly before flying off. [line break]";
 			say "You gain 1 x testosterone pill!";
-			add "testosterone pill" to invent of player;
+			now carried of testosterone pill is 1;
 		otherwise:
 			say "DEBUG: You should never get here.";
 	otherwise:
@@ -358,11 +358,11 @@ To say butterfly attack:
 				if ButterflyHasNegligee is True and ButterflyNegligeeTorn is False:
 					say "As you go to leave you notice the butterfly forgot her negligee.";
 					say "You gain 1 x pristine negligee!";
-					add "pristine negligee" to invent of player;
+					now carried of pristine negligee is 1;
 				otherwise if ButterflyHasNegligee is True:
 					say "As you go to leave you notice the butterfly forgot her negligee.";
 					say "You gain 1 x damaged negligee!";
-					add "damaged negligee" to invent of player;
+					now carried of damaged negligee is 1;
 				now ButterflyHasNegligee is False;
 				now the libido of the player is (the libido of the player) / 2;
 				impregnatebutterfly;
@@ -386,12 +386,12 @@ To say butterfly attack:
 				if ButterflyHasNegligee is True and ButterflyNegligeeTorn is False:
 					say "As you go to leave you notice the butterfly forgot her negligee.";
 					say "You gain 1 x pristine negligee!";
-					add "pristine negligee" to invent of player;
+					now carried of pristine negligee is 1;
 					now ButterflyHasNegligee is False;
 				otherwise if ButterflyHasNegligee is True:
 					say "As you go to leave you notice the butterfly forgot her negligee.";
 					say "You gain 1 x damaged negligee!";
-					add "damaged negligee" to invent of player;
+					now carried of damaged negligee is 1;
 					now ButterflyHasNegligee is False;
 				if butterfly grove is unknown:
 					say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
@@ -406,7 +406,7 @@ To say butterfly attack:
 		otherwise if cocks of player is 0 and cunts of player is 0:
 			say "As you lay defeated the butterfly girl advances on you pulling down your pants. She gazes upon your sexless groin, tilting her head in confusion. Unsure how to proceed she backs away and goes to leave, but before doing so takes your hand and places something in it. 'Eat this. Maybe we[apostrophe]ll meet again sometime' she says meekly before flying off.";
 			say "You gain 1 x testosterone pill!";
-			add "testosterone pill" to invent of player;
+			now carried of testosterone pill is 1;
 		otherwise:
 			say "DEBUG: You should never get here.";
 	if ButterflyPregnant is True:
@@ -423,7 +423,7 @@ When Play begins:
 	add { "Butterfly" } to infections of girl;
 	Choose a blank row from Table of random critters;
 	now name entry is "Butterfly"; [Name of your new Monster]
-	now attack entry is "[one of]Darts up suddenly, kicks at your head and painfully connects [or] Punches you in the midsection with her fist [or] Wraps her legs around your neck [or] Emits a high pitched noise that hurts your head [at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]She darts up suddenly, kicks at your head and painfully connects![or]The butterfly punches you in the midsection with her fist![or]She wraps her legs around your neck [or]Your colourful opponent emits a high pitched noise that hurts your head![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[butterfly defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[butterfly attack]";
@@ -449,13 +449,13 @@ When Play begins:
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now lev entry is 3;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
 	now area entry is "High";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10;		[ Length infection will make cock grow to if cocks]
 	now cock width entry is 3;		[ Size of balls apparently ;) sneaky Nuku]
 	now breasts entry is 2;			[ Number of Breasts infection will give you. ]
 	now breast size entry is 0;		[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunts entry is 1;			[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 10;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 3;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 20;			[ Amount player Libido will go up if defeated ]
@@ -464,7 +464,7 @@ When Play begins:
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]delicate[or]streamlined[or]winged[at random]";
-	now type entry is "[one of]butterfly[or]insectile[at random]";
+	now type entry is "[one of]butterfly[or]insectile[or]lepidopterous[at random]";
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
@@ -562,7 +562,7 @@ This is the butterflytreatment choice rule:
 						now dex entry is 32 + ( lev entry / 5 );
 						now hp entry is 45 + ( debit * 5 );
 						now wdam entry is 14 + ( 4 * debit / 11 );		[Strong dmg growth rate]
-						now sex entry is "Female"; 
+						now sex entry is "Female";
 						break;
 			now ButterflyLove is False;
 	otherwise:
@@ -634,7 +634,7 @@ before using a grab object(called x):
 		if cunts of player is greater than 0:
 			say "As you move to slip the pill in your mouth you feel an uneasy shiver run through your cunt[if cunts of player is greater than 1]s[end if]. [if gestation of child is greater than 0]Your lower belly quivers causing you to feel ill. [end if]Are you sure to still want to use it?";
 			if the player consents:
-				if "Female Preferred" is listed in invent of player:
+				if "Female Preferred" is listed in feats of player:
 					say "Your feat will not allow this to work.";
 					stop the action;
 				continue the action;
@@ -648,24 +648,42 @@ to say testosterone pill use:
 		now cocktext is "[cock size desc of player] [cock of player] ";
 	otherwise:
 		now cocktext is "[cock size desc of player] ";
-	if cunts of player is greater than 0:
-		if cocks of player is greater than 0:
-			now cunts of player is 0;
-			say "With a burst of intense pain the lips of your cunts[if cocks of player is greater than 1]s[end if] fuse together and flatten. Within seconds nothing remains of your former femininity. ";
-		otherwise:
-			now cunts of player is 0;
-			now cocks of player is 1;
-			now cock length of player is 6;
-			now cock width of player is 4;
-			follow the cock descr rule;
-			say "With your body in shock you feel your cunt[if cunts of player is greater than 1]s[end if] tighten, push out of your body and form into a [cocktext ]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
-	if cocks of player is greater than 0:
+	if cunts of player > 0 and cocks of player > 0:		[HERM]
+		now cunts of player is 0;
+		now cunt width of player is 0;
+		now cunt length of player is 0;
+		say "With a burst of intense pain the lips of your cunts[if cunts of player is greater than 1]s[end if] fuse together and flatten. Within seconds nothing remains of your former femininity. ";
 		increase cock length of player by 2;
-		follow the cock descr rule;
-		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player is greater than 1]they[otherwise]it[end if] gains in length, becoming [descr]! ";
 		increase cock width of player by 2;
 		follow the cock descr rule;
-		say "You can see your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
+		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player is greater than 1]they gain[otherwise]it gains[end if] in length, becoming [descr]! ";
+		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
+	otherwise if cunts of player > 0:				[FEMALE]
+		now cunts of player is 0;
+		now cunt width of player is 0;
+		now cunt length of player is 0;
+		now cocks of player is 1;
+		now cock length of player is 6;
+		now cock width of player is 4;
+		follow the cock descr rule;
+		say "With your body in shock, you feel your cunt[if cunts of player is greater than 1]s[end if] tighten, push out of your body and form into a [cocktext ]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
+	otherwise if cocks of player > 0:				[MALE]
+		now cunts of player is 0;
+		now cunt width of player is 0;
+		now cunt length of player is 0;
+		increase cock length of player by 2;
+		increase cock width of player by 2;
+		follow the cock descr rule;
+		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][otherwise][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player is greater than 1]they gain[otherwise]it gains[end if] in length, becoming [descr]! ";
+		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as it grows larger, [skin of player] flesh growing taught with the expansion, leaving you with [ball size]! ";
+	otherwise:								[NEUTER]
+		now cunts of player is 0;
+		now cunt width of player is 0;
+		now cunt length of player is 0;
+		now cocks of player is 1;
+		now cock length of player is 6;
+		now cock width of player is 4;
+		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext ]cock, pulsing in excitement. Some new [ball size] then pop out underneath. ";
 	if breast size of player is greater than 0:
 		now breast size of player is 0;
 		say "With the feel of a popping balloon your breasts deflate leaving you with a flat yet muscular chest. ";
@@ -701,7 +719,7 @@ to say butterfly grove scene:
 	if ButterflyPregnant is True and cocks of player is 0: [How'd you manage that?]
 		say "You sense someone is watching you, but no matter where you look you can[apostrophe]t find anyone. As you look around you spot a small item resting in the grass.";
 		say "You gain 1 x testosterone pill!";
-		add "testosterone pill" to invent of player;
+		now carried of testosterone pill is 1;
 	otherwise if ButterflyRaped is greater than 1 and ButterflyPregnant is True and gestation of ButterflyBaby is 3:
 		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she[apostrophe]s unsure how you[apostrophe]ll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner[apostrophe]s genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of ButterflyBaby] face and [bodyname of ButterflyBaby] body, covered in [skinname of ButterflyBaby] skin. Your child, hungry for knowledge and experience of the world decides to stay with you.";
 		add facename of ButterflyBaby to childrenfaces;
@@ -736,11 +754,11 @@ to say butterfly grove scene:
 		let player_returned_negligee be False;
 		if "Sterile" is listed in feats of player:
 			now player_sterile is True;
-		if "pristine negligee" is listed in invent of player:
+		if pristine negligee is owned:
 			say "You have an item she might like. Do you want to give it to her?";
 			if the player consents:
 				now player_returned_negligee is True;
-				remove "pristine negligee" from invent of the player;
+				delete pristine negligee;
 				say "You hand over the pristine negligee. Surprised by your kind gesture the butterfly hugs you warmly. [line break][line break]";
 				now ButterflyRaped is 0;
 				if cocks of player is greater than 0:
@@ -775,7 +793,7 @@ to say butterfly grove scene:
 				otherwise:
 					say "As you pull down your pants she gazes upon your sexless groin, tilting her head in confusion. She goes to leave, but before doing so takes your hand and places something in it. 'Eat this. Maybe we[apostrophe]ll meet again sometime' she says meekly before flying off. [line break][line break]";
 					say "You gain 1 x testosterone pill!";
-					add "testosterone pill" to invent of player;
+					now carried of testosterone pill is 1;
 					infect "Butterfly";
 					wait for any key;
 					repeat with y running from 1 to number of filled rows in table of random critters:
@@ -851,12 +869,12 @@ to say butterfly grove scene:
 		say "Your Butterfly lover is very pleased to see both you, and the offspring you created together greeting you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove. [line break][line break]";
 		say "Do you follow?";
 		if the player consents:
-			if "cute panties" is listed in invent of player:
+			if cute panties is owned:
 				say "Your naked lover spots something sticking out of your pocket and looks at you with a curious expression. You pull the pair of cute panties out and show them to her. She stretches them out examining them closely, her antennae twitching quizzically, but she remains perplexed. You offer to show her their purpose, and taking the panties back you stoop down and lift one of her legs through the appropriate hole, and then move on to the other leg as she reacts in surprise. Pulling them up her velvet thighs and in to place you realize how lucky it is that they're low-cut since they don't get in the way of her large abdomen. She twists around with her arms in the air to view them from various angles. Still curious she tugs at them clearly not used to the feeling. Your [cocktext]cock[if cocks of player is greater than 1]s were[otherwise] was[end if] already standing to attention, but to your surprise the sight of her camel toe takes it up a notch further. With your arm moving instinctually you reach for it, and fondle her through the fabric as she continues to show more interest in the panties than what you[apostrophe]re doing. [line break][line break]";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				say "As you put an arm around her midriff and suck at her earlobe she awakens to your advance and starts stroking your [skin of player] [if breast size of player is greater than 0][breast size desc of player] boobs[otherwise] chest[end if]. You kneel down on the ground as the butterfly follows pausing a moment first to give you a good close-up of the panties. She sits on your lap, her panties pressed against your throbbing cock[if cocks of player is greater than 1]s[end if] as you both kiss passionately and hold each other close. As you grope her [ButterflyBreastDesc] breasts you wonder quietly how she[apostrophe]d react to a bra. You reach down and pull the crotch of her panties aside exposing her cunt as she peers down still intrigued at this mysterious piece of cloth. She maneuvers for penetration and a moment later you[apostrophe]re in the heat of sex as she rides [if cocks of player is greater than 1]one of [end if]your rod[if cocks of player is greater than 1]s[end if] fervently. Sensing your member harden she lets it slip out as you cum expelling a sizable load of sperm over her new panties. She climbs off and tries to examine them as best she can before starting to take them off. You enjoy her usual 'au naturale' look returning from behind as she strips. As she continues to examine the sodden panties curiously you offer to take them back, but she immediately moves them out of your reach. Stepping away she holds them up to her face, and breathes in your scent. Delirious with excitement she speeds off still clutching the panties to her face. [line break]";
 				say "You lose 1 x cute panties!";
-				remove "cute panties" from invent of the player;
+				delete cute panties;
 			otherwise:
 				say "If there was any doubt as to her intentions the pheromones wafting from your lover make them clear. With moisture already streaming down her thighs she begins to strip you. 'I need you inside me.' she says yearning for your cock[if cocks of player is greater than 1]s[end if]. She leans against a nearby tree and bends over awaiting penetration. Reaching an arm under her body she uses two fingers to spread her pussy apart welcomingly. Your mate bites her lip as she feels the head of [if cocks of player is greater than 1]one of [end if]your [cocktext]rod[if cocks of player is greater than 1]s[end if] finding it[apostrophe]s bearings and rubbing on her lips, her abdomen resting against your [skin of player] tummy. As your pole presses in you sense how her passage has adapted to the shape of your cock[if cocks of player is greater than 1]s[end if] from your various encounters. You pump away, your hands on her hips and it[apostrophe]s not long until you[apostrophe]re pouring your cum inside. [line break][line break]";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -880,12 +898,12 @@ to say butterfly grove scene:
 		say "Your Butterfly lover is very pleased to see you and greets you lovingly. After talking for a while she tries to pull you off alone to an isolated corner of the grove. [line break][line break]";
 		say "Do you follow?";
 		if the player consents:
-			if "cute panties" is listed in invent of player:
+			if cute panties is owned:
 				say "Your naked lover spots something sticking out of your pocket and looks at you with a curious expression. You pull the pair of cute panties out and show them to her. She stretches them out examining them closely, her antennae twitching quizzically, but she remains perplexed. You offer to show her their purpose, and taking the panties back you stoop down and lift one of her legs through the appropriate hole, and then move on to the other leg as she reacts in surprise. Pulling them up her velvet thighs and in to place you realize how lucky it is that they're low-cut since they don't get in the way of her large abdomen. She twists around with her arms in the air to view them from various angles. Still curious she tugs at them clearly not used to the feeling. Your [cunt size desc of player] vagina[if cunts of player is greater than 1]s[end if] [if cunts of player is greater than 1]were[otherwise]was[end if] already becoming damp, but to your surprise the sight of her camel toe takes it up a notch further. With your arm moving instinctually you reach for it, and fondle her through the fabric as she continues to show more interest in the panties than what you[apostrophe]re doing. [line break][line break]";
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				say "As you put an arm around her midriff and suck at her earlobe she awakens to your advance stroking your [skin of player] [if breast size of player is greater than 0][breast size desc of player] boobs[otherwise] chest[end if]. You kneel down on the ground as the butterfly follows pausing a moment first to give you a good close-up of the panties. She sits on your lap as you both kiss passionately and hold each other close. As you fondle her [ButterflyBreastDesc] breasts you wonder quietly how she[apostrophe]d react to a bra. You reach down and pull the crotch of her panties aside exposing her cunt as she peers down still intrigued at this mysterious piece of cloth. You both begin to finger each other[apostrophe]s cunts and soon are in the heat of sex as she kneads your [if cunts of player is greater than 1]many[end if] puss[if cunts of player is greater than 1]ies[otherwise]y[end if] fervently. In a moment of pure ecstasy you both cum as her liquid pours over your lap and you spray a sizable load of fluid over her new panties. She climbs off and tries to examine them as best she can before starting to take them off. You enjoy her usual 'au naturale' look returning from behind as she strips. As she continues to examine the sodden panties curiously you offer to take them back, but she immediately moves them out of your reach. Stepping away she holds them up to her face, and breathes in your scent. Delirious with excitement she speeds off still clutching the panties to her face. [line break]";
 				say "You lose 1 x cute panties!";
-				remove "cute panties" from invent of the player;
+				delete cute panties;
 			otherwise:
 				say "If there was any doubt as to her intentions the pheromones wafting from your lover make them clear. With moisture already streaming down her thighs she begins to strip you. 'I need you.' she says yearning for your love. She leans against a nearby tree and bends over awaiting your attention. Reaching an arm under her body she uses two fingers to spread her pussy apart welcomingly. Your mate bites her lip as she feels your mouth rubbing along her lips. As your tongue presses into her hole you sense her body spasm in pleasure. You lick away, your hands on her hips and it[apostrophe]s not long until she cums in a flurry of moans. [line break][line break]"; 
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -923,14 +941,14 @@ Lingerie Store is a room. "[lingerie store scene]". It is unknown. It is fasttra
 
 to say lingerie store scene:
 	say "Displayed on the various racks and rails you see bras, panties and many other types of undergarment covering the room. Every style of underwear you could imagine can be found here including many you couldn[apostrophe]t. [line break]";
-	if "damaged negligee" is listed in invent of player and "pristine negligee" is not listed in invent of player and "pristine negligee" is not listed in invent of lingerie store:
+	if damaged negligee is owned and pristine negligee is not owned and "pristine negligee" is not listed in invent of lingerie store:
 		say "[line break]You take out the damaged negligee and look around the store for a match. After a few minutes you find a rack carrying various negligees of the same style. Looking at the sizes you find some that are a perfect match for the one left behind by the butterfly. Deciding you no longer need the damaged negligee you set it down on the counter. [line break]";
 		try littering damaged negligee;
-		add "pristine negligee" to invent of lingerie store;
+		now carried of pristine negligee is 1;
 	if perception of player is greater than 15:
 		if ButterflyPantiesFound is False or a random chance of 1 in 3 succeeds:
 			say "[line break]Out of the corner of your eye you notice something small sticking out from under one of the display racks. You crouch down to take a look, but accidentally bump into one of the racks knocking it's contents to the floor. ";
-			add "cute panties" to invent of lingerie store;
+			now carried of cute panties is 1;
 			now ButterflyPantiesFound is True;
 
 instead of sniffing lingerie store:
@@ -993,12 +1011,12 @@ To recite butterflymagic(x - text):
 	otherwise if character number 4 in bmagic is "2":
 		now ButterflyAttire is "She is wearing a long-sleeved, strapless, skin-tight black leather top with a split down the middle reaching to her navel. The split is pulled together by a zig-zag of lacing as the inner-side of each [ButterflyBreastDesc] breast bulges out around the strands. Her rigid nipples deform the otherwise smooth surface of the leather. Colorful wings extend through sizable openings at the back allowing them complete freedom. A tie around her waist dangles dozens of strips of black leather down below her crotch in the style of a grass skirt, but the gaps in coverage let you see she[apostrophe]s completely bare underneath. Her stripy yellow and black abdomen pokes out through the strands at the back. She sports a pair of shiny black PVC stockings up to her thighs and a svelte pair of black high-heeled leather boots on her feet.";
 		now ButterflyHasNegligee is False;
-		add "damaged negligee" to the invent of the player;
+		now carried of damaged negligee is 1;
 		now lingerie store is known;
 	otherwise if character number 4 in bmagic is "3":
 		now ButterflyAttire is "She is completely naked and makes no attempt to hide any part of her body from the golden tuft of hair above her pubes to the stiff [one of]ruby[or]scarlet[at random] red nipples decorating her jiggling [ButterflyBreastDesc] breasts like small cherries.";
 		now ButterflyHasNegligee is False;
-		add "pristine negligee" to the invent of the player;
+		now carried of pristine negligee is 1;
 		now lingerie store is known;
 	change the text of the player's command to character number 5 in bmagic;
 	if the player's command matches "[number]":
@@ -1056,7 +1074,7 @@ understand "bpill" as givebpill.
 
 carry out givebpill:
 	say "You gain 1 x testosterone pill!";
-	add "testosterone pill" to invent of the player;
+	now carried of testosterone pill is 1;
 
 butterflyprocreated is an action applying to one topic.
 understand "bproc" as butterflyprocreated.
@@ -1094,9 +1112,9 @@ carry out impregbutterfly:
 	now ButterflyLove is True;
 	now ButterflyForeplay is True;
 	say "You gain 1 x damaged negligee!";
-	add "damaged negligee" to invent of player;
+	now carried of damaged negligee is 1;
 	say "You gain 1 x pristine negligee!";
-	add "pristine negligee" to invent of player;
+	now carried of pristine negligee is 1;
 	now ButterflyHasNegligee is False;
 	say "You find a note she left behind with a rough map leading to her home.";
 	now butterfly grove is known;

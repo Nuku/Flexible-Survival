@@ -1,11 +1,12 @@
-Odd Weapons for FS by Hellerhound begins here.
+Version 2 of Odd Weapons for FS by Hellerhound begins here.
+[ Garbage Can Lid is now equipment as a shield - Stripes ]
 
-Section 1 - Garbage can lid
+Section 0 - Weapons and Shield
 
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"garbage can lid"	"The lid of a garbage can, usable as a weapon."	4	garbage can lid
+"garbage can lid"	"The lid of a garbage can, usable as a shield... more or less."	4	garbage can lid
 "infected sword"	"A sword with cloudy metal found in a sea of slime. It is infectious, and keeps changing you."	10	infected sword
 "dirty whip"	"A whip covered with dripping horse cum. It is infectious, and was found abandoned by its owner."	3	dirty whip
 "horse whip"	"A whip you found and cleaned up.  It has metal studs on the lash."	2	horse whip
@@ -17,57 +18,44 @@ Does the player mean littering the clean whip when the clean whip is owned: it i
 Does the player mean grabbing the dirty whip when the dirty whip is visible: it is likely.
 Does the player mean grabbing the clean whip when the clean whip is visible: it is very likely.]
 
-[When Play begins:
-	now the printed name of clean whip is "whip";]
-
 dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your messy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
 
-instead of sniffing dirty whip:
-	say "The sticky whip smells of equine cum.";
+the scent of dirty whip is "The sticky whip smells of equine cum.";
 
 horse whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]". the weapon damage of horse whip is 6. The weapon type of horse whip is "Melee". It is not temporary.
 
-instead of sniffing horse whip:
-	say "The horse whip smells of leather and oils.";
-
-garbage can lid is a armament. It is a part of the player. It has a weapon "[one of]your large shield[or]your lid[or]your trusty lid[or]flashing grey circle[at random]". The weapon damage of garbage can lid is 5. The weapon type of garbage can lid is "Melee". It is not temporary.
-
-instead of sniffing garbage can lid:
-	say "A heavy scent of garbage fills your nose as you sniff your makeshift shield.";
+the scent of horse whip is "The horse whip smells of leather and oils.";
 
 infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. the purified of infected sword is "Nothing".
 
-instead of sniffing infected sword:
-	say "The infected sword smells of a myriad of musky scents, all shifting and changing.  You can never seem to identify a scent before a new one appears.";
+the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing.  You can never seem to identify a scent before a new one appears.";
 
 instead of purifying an infected sword:
 	say "The sword sets the sides of the microwave on fire, and Matt rushes over and sprays it with the fire extinguisher. 'What are you doing?' he exclaims, 'Don't you know what happens when you put metal in the microwave?";
 	say "I have fixed the damage, but next time it might not be so. Do not do it again!";
 	stop the action;
 
+garbage can lid is equipment. It is not temporary.
+The AC of garbage can lid is 28.
+The effectiveness of garbage can lid is 30.
+The placement of garbage can lid is "body".
+The descmod of garbage can lid is "You hold an aluminum garbage can lid in your off hand as an improvised shield.".
+The slot of garbage can lid is "shield".
 
-perraise is a number that varies.
+the scent of garbage can lid is "A heavy scent of garbage fills your nose as you sniff your makeshift shield.";
 
-every turn:
-	if the garbage can lid is wielded:
-		if perraise is 0:
-			increase the dexterity of the player by 6;
-			now perraise is 1;
-	otherwise:
-		if perraise is 1:
-			decrease the dexterity of the player by 6;
-			now perraise is 0;
 
-Smelly garbage is a situation.
+Section 1 - Garbage can lid
+
+Smelly garbage is a scavevent.  The sarea of Smelly garbage is "Allzones".
 
 instead of resolving a smelly garbage:
 	say "You come across a garbage pail, obviously not tended since before the infection began. The stuff inside is useless slime, but maybe you could use the lid as a shield?";
 	if the player consents:
-		add "garbage can lid" to the invent of the player;
+		increase carried of garbage can lid by 1;
 		now smelly garbage is resolved;
 	otherwise:
 		say "You leave it there.";
-
 
 
 Section 2 - Infected Sword
@@ -159,12 +147,14 @@ instead of resolving sword nest:
 				randominfect;
 				say "The infected slime changes you.";
 				wait for any key;
-			add "infected sword" to the invent of the player;
+			increase carried of infected sword by 1;
 			now sword nest is resolved;
 		otherwise:
 			say "You leave the mess and its sword there without touching it.";
+			now sword nest is resolved;
 	otherwise:
 		say "You leave the mess behind, pondering the reason why this occurred here and nowhere else.";
+	if battleground is not "void", mallrecall;
 
 
 An everyturn rule:
@@ -200,27 +190,14 @@ instead of resolving Destroyed bushes:
 		if the perception of the player is greater than a random number between one and 20:
 			say "In one of the puddles of cum you find a whip with metal bits strung throughout it. It looks as if the rider carried it, and lost it in the fray. it is currently covered with cum, but if you have enough water, you could change that. Do you wish to?";
 			if the player consents:	
-				let found be 0;
-				repeat with T running from one to three:
-					let number be 0;
-					repeat with Q running through invent of the the player:
-						increase number by 1;
-						if q matches the regular expression printed name of water bottle, case insensitively:
-							increase found by 1;
-							remove entry number from invent of the player;
-							if found is three:
-								break;
-					if found is three:
-						break;
-				if found is three:
-					say "You dump the water bottles on the whip, washing off the cum.";	
+				if carried of water bottle >= 3:
+					say "You have to use a few bottles to wash off the whip, but you manage to get it clean and safe to use.";	
 					say "You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
-					add "horse whip" to the invent of the player;
+					decrease carried of water bottle by 3;
+					increase carried of horse whip by 1;
 					now destroyed bushes is resolved;
 					now gotwhip is 1;
 				otherwise:
-					repeat with X running from 0 to found:
-						add "water bottle" to the invent of the player;
 					say "You don't have enough water. Maybe you could come back when you find more?";
 			if gotwhip is 0:
 				say "Do you wish to pick it up anyway?";
@@ -229,7 +206,7 @@ instead of resolving Destroyed bushes:
 					infect "black equinoid";
 					infect "black equinoid";
 					infect "black equinoid";
-					add "dirty whip" to the invent of the player;
+					increase carried of dirty whip by 1;
 					now gotwhip is 2;
 					now the destroyed bushes is resolved;
 				otherwise:

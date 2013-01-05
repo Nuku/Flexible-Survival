@@ -1,7 +1,13 @@
-Version 1 of BFandI by Stripes begins here.
+Version 3 of BFandI by Stripes begins here.
 
-"Creates the 'Brute Force and Ignorance' debugging command to forcibly check the various new column entries for critters on the table of random critters.  This document also contains various data on the new player variables created to go with these and what the use and possible applications of the new column entries can include.";
+"Creates the 'Brute Force and Ignorance' debugging commands to forcibly check on various data in the game.  This document also contains various data on the new player variables created to go with these and what the use and possible applications of the new column entries can include.";
 
+[ BFandI command list:
+bfandi (or bfandi1) checks the various new column entries for critters on the table of random critters.
+bfandi2 lists all existing creatures in the monster table and displays whether they have an altcombat entry, showing that entry if it exists.
+bfandi3 lists all situations in the current area, whether they're resolved or unresolved and it's level.  It will also mention if it's a scavevent.
+bfandi4 lists all situations sorted by area, level or name, as selected once run, then provides data similar to bfandi3.
+]
 
 Section 13 - Brute Force Creature Testing (BFandI command) - Not for release
 
@@ -11,12 +17,13 @@ Section 13 - Brute Force Creature Testing (BFandI command) - Not for release
 
 bfanditesting is an action applying to one topic.
 understand "bfandi [text]" as bfanditesting.
+understand "bfandi1 [text]" as bfanditesting.
 
 carry out bfanditesting:
 	say "You begin the test by looking over yourself.";
-	say "Your scalevalue is set to [scalevalue].  Your body size for this is [body size of player].";
-	say "Your bodydesc value is set to [bodydesc], resulting in such fine prose as: 'The studly wolf climbs atop your [bodydesc] body and fucks you wildly.'  Stirring.";
-	say "Your bodytype value is set to [bodytype], usable in scenes like: 'You press your [bodytype] body against the slutty catgirl as you stuff her wet snatch.'  Wonderous!";
+	say "Your scalevalue is set to [scalevalue of player].  Your body size for this is [body size of player].";
+	say "Your bodydesc value is set to [bodydesc of player], resulting in such fine prose as: 'The studly wolf climbs atop your [bodydesc] body and fucks you wildly.'  Stirring.";
+	say "Your bodytype value is set to [bodytype of player], usable in scenes like: 'You press your [bodytype of player] body against the slutty catgirl as you stuff her wet snatch.'  Wonderous!";
 	say "-----";
 	say "[line break]";
 	repeat with y running from 1 to number of filled rows in table of random critters:
@@ -119,6 +126,97 @@ These will be used to describe the player during scenes and should be a single a
 [ NOCTURNAL: A truth state to designate whether this creature is nocturnal (true) or diurnal (false).  Nocturnal creatures will only be available for encounters during the night.  Diurnal creatures will only be available for encounters during the night.  An unset creature is treated as the normal case, able to be found both during the day and the night.  As such, this variable will most often remain blank. ]
 
 [ ALTCOMBAT: An entry to detect whether the creature has any special behaviour during combat.  See the 'Alt Combat' document for the updated combat system.  An unset creature is treated as using the 'default' combat system. ]
+
+[-----------------------------------------------------------]
+
+bfanditesting2 is an action applying to one topic.
+understand "bfandi2" as bfanditesting2.
+
+carry out bfanditesting2:
+	sort table of random critters in lev order;
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if there is no altcombat in row y of the table of random critters:
+			say "[name entry]:  [special-style-2]UNSET![roman type]";
+		otherwise:
+			if altcombat entry is "default":
+				say "[name entry]:  DEFAULT[line break]";
+			otherwise:
+				say "[name entry]:  [special-style-1][altcombat entry][roman type][line break]";
+		if the remainder after dividing y by 20 is 0:
+			wait for any key;
+			say "[line break]";
+
+[------------------------------------------------------------]
+
+bfanditesting3 is an action applying to one topic.
+understand "bfandi3" as bfanditesting3.
+
+check bfanditesting3:
+	if there is no dangerous door in the location of the player:
+		say "I don't see any good hunting grounds around here." instead;
+	otherwise:
+		let y be a random dangerous door in the location of the player;
+		now battleground is the marea of y;
+
+carry out bfanditesting3:
+	let totalsit be 0;
+	let zonesit be 0;
+	let unressit be 0;
+	let scavsitnum be 0;
+	say "Current area: [battleground][line break]";
+	repeat with z running through situations:
+		increase totalsit by 1;
+		if ( sarea of z matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ) ):
+			increase zonesit by 1;
+			say "[z] is [if z is resolved][special-style-2]Resolved[roman type][otherwise][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
+			if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
+				say ".  [bold type]Scavevent[roman type] (All-zones)";
+				increase scavsitnum by 1;
+			otherwise if z is a scavevent:
+				say ".  [bold type]Scavevent[roman type]";
+				increase scavsitnum by 1;
+			say ".";
+			if z is unresolved, increase unressit by 1;
+	say "[bold type][zonesit][roman type] ([special-style-1][unressit][roman type]/[special-style-2][zonesit - unressit][roman type]) of [totalsit] total events.  [bold type][scavsitnum][roman type] are scavevents.";
+
+[------------------------------------------------------------]
+
+bfanditesting4 is an action applying to one topic.
+understand "bfandi4" as bfanditesting4.
+
+carry out bfanditesting4:
+	let choicemade be 0;
+	let unressit be 0;
+	let scavsitnum be 0;
+	let tempsitlist be the list of situations;
+	say "Listing all situations.  Select sort parameter by number:[line break]";
+	say "[link]1 - Hunting area[as]1[end link][line break]";
+	say "[link]2 - Level[as]2[end link][line break]";
+	say "[link]3 - Unsorted[as]3[end link][line break]";
+	say "Option> [run paragraph on]";
+	while choicemade is 0:
+		get a number;
+		if calcnumber < 1 or calcnumber > 3:
+			say "Pick option 1 (Area), 2 (Level) or 3 (Unsorted) by number> [run paragraph on]";
+		otherwise:
+			now choicemade is 1;
+			if calcnumber is 1:
+				sort tempsitlist in sarea order;
+			if calcnumber is 2:
+				sort tempsitlist in level order;
+	repeat with z running through tempsitlist:
+		say "[z] ([sarea of z]) is [if z is resolved][special-style-2]Resolved[roman type][otherwise][special-style-1]Unresolved[roman type][end if].  Lvl [level of z]";
+		if z is a scavevent and ( the sarea of z is "Allzones" or the sarea of z is "allzones" ):
+			say ".  [bold type]Scavevent[roman type] (All-zones)";
+			increase scavsitnum by 1;
+		otherwise if z is a scavevent:
+			say ".  [bold type]Scavevent[roman type]";
+			increase scavsitnum by 1;
+		say ".";
+		if z is unresolved, increase unressit by 1;
+	say "Total: [bold type][number of entries in tempsitlist][roman type] ([special-style-1][unressit][roman type]/[special-style-2][number of entries in tempsitlist - unressit][roman type]).  [bold type][scavsitnum][roman type] are scavevents.";
+
 
 
 BFandI ends here.

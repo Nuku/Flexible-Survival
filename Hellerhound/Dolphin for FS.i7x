@@ -60,8 +60,13 @@ To say dolphin loss:
 to say dolphin fuck:
 	if the cunts of the player is not 0: [prefer male action]
 		say "The dolphin places her large, pink cock at your waiting entrance, and rubs it back and forth, without touching it. You are horrified and fascinated by it.";
+		if scalevalue of player is greater than 3:
+			say "She eagerly slams her cock into your cunt. In spite her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first.";
+			say "She continues to ram your eager hole, you can feel her prehensile member worming around in the depths of your cunt, but even this impressive rod can only barely fill your expansive hole. At hilt she can only just barely tickle your cervix. She seems a little surprised by this, suggesting she might not be used to handling a beast of your magnitude. 'I should be--unf--enjoying this, it's--urgh--rare for someone--Ah!--to handle me so well...' She trails off. You get the impression that, while she is certainly enjoying the ride, she's likely used to the 'challenge' of far less accommodating females.";
+			say "Regardless, her assault on your hole reaches a fever pitch, and it's not long before she lets out a chittering scream in climax, unloading her cum into you womb [impregchance]. You feel her passionate fluids flood the depths of you cunt, though her equally expansive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release; she's quick to yank her rod from your snatch and tends to you and her potential offspring only briefly before departing.";		
+			continue the action;
 		if the cunt width of the player is less than 6:
-			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. You're cunt can't be that tight. Lets fix it.";
+			say "She shoves her cock into you, more coming out of her top slit, but it is unable to go further than the tapered head. She looks at you with horror. You're cunt can't be that tight. Let's fix it.";
 			say "She starts slamming her pointed cock into your small pussy, widening it by a bunch every smash, at the expense of your pleasure. Your mind is so full of pain you are having trouble staying conscious, and as she finally manages to slam inside you, you feel a twinge as the nanites 'fix' your cunt.";
 			now the cunt width of the player is 6;
 		otherwise if the cunt width of the player is less than 8:
@@ -93,18 +98,29 @@ to say dolphin fuck:
 		otherwise:[cunt is finally big enough]
 			say "She shrieks with joy 'Your pussy is finally big enough for me. I bet that took a lot of doing.'";
 			say "She then proceeds to push deeper, slowly wriggling and twisting her prehensile member into your wet cunt. She bottoms out before she can get to your cervix, and looks relieved. 'I am so big, none of the others in my pod can totally cover me, without assistance, but you...' she says, awed and relieved. She begins to wriggle her cock, pulling in and out and forming rings inside of you, causing immense pleasure. As you start humping back, she screams in climax, the sound carrying you to yours. After what seems like hours of her filling you, she begins to pull out, cum flowing around her now shrinking cock out of your cunt and into the water. [impregchance]";
-	otherwise if "Male Preferred" is listed in feats of player:
-		say "The dolphin gives a sudden clicking cry of dismay before she retreats, leaving you behind.";
-	otherwise if the cocks of the player is not 0:[do female next]
+	otherwise if "Male Preferred" is not listed in feats of player:[do female next]
 		say "She looks at your male genitals, surprised. 'Why not a girl?' she mutters, and kisses the base of your cock. Maybe next time you will be ready for me. Make sure to be nice and large!";
 		say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
 		increase the cunts of the player by 1;
 		increase the cunt length of the player by 6;
 		increase the cunt width of the player by 4;
 	otherwise:
-		say "'You genderless freak!' She screams. 'Make sure you have something for me to use later', she reprimands.";
-		decrease the HP of the player by 10;
-
+		say "The dolphin places her large, pink cock at your waiting entrance, and rubs it back and forth, without touching it. You are horrified and fascinated by it.";
+		if scalevalue of player is 1:
+			say "She shoves her cock into your ass, more coming out of her top slit, but it is unable to go further than the tapered head. She briefly looks at you with horror before realizing the obvious, you're way too small! 'I think we should wait until you're in a form suited for a lady of my... 'Needs.'' And with that she departs, dejected and disappointed.";
+		otherwise if scalevalue of player is 2:
+			say "She slams her cock into your ass rather carelessly, but her endeavors are cut off when she realizes she can't go any more than halfway inside. She--rather rashly--continues to ram you in vain as it just won't go any deeper. She thinks for a moment, but it doesn't take her long to figure out what the problem. She tells you 'I'm afraid you need to a much larger form to be able to take me, small one.' She then disengages from you, leaving you to your own devices for the time being.";
+		otherwise if scalevalue of player is 3:
+			say "She slams her cock into your ass rather carelessly, Her overlarge tool squeezing through your tight confines, clearly -much- too large for you, but that doesn't stop her from making a mess of your intestines.";
+			say "Her prehensile member worms its way into the depths of your bowels. A victim of this creature's ungodly length, you soon feel her malehood's intrusion invade your stomach where it relents, and you fear that--if she were any longer--she could rightly impale you with her dick.";
+			say "She continues to thoroughly fuck you brains out, slamming your ass with dogged determination. you can visibly see the length of her rod bulge from your belly as she soon begins to orgasm.";
+			say "She lets out a chittering scream as she cums hard inside of you, stunning you and leaving you floating in the water. You can only watch, unreasoningly as your belly gets bigger and bigger until you look positively bloated. A little while and expansion later, she begins to remove her cock with much wriggling and squirming, to watch the cum inside of you get forced out into a cloud in the water once your entrance is clear.[impregchance]";
+			say "She then departs from you, clearly satisfied with her work on your poor soul, leaving you to float in the water, a mess of a person.";
+		otherwise:
+			say "She eagerly slams her cock into your ass. In spite her larger girth, your higher body size is more than enough to take her on, and she seems pleased by this. At least, at first.";
+			say "Her prehensile member worms its way into the depths of your bowels, but even this sizeable intruder can only wander so far into your labyrinth of flesh. She seems a little surprised by this, suggesting she might not be used to handling a beast of your magnitude. You get the impression that she might be a little disappointed by this as well, perhaps used to the 'challenge' of contending with much smaller victims.";
+			say "Regardless, she continues fervently ramming you with her impressive dick. It's not long before she lets out a chittering scream in climax, unloading her cum into you. You feel her passionate fluids flood your inner depths, though her equally impressive load only manages to distend your belly ever slightly. Even her afterglow seems ruined by how well you can handle her release, and rather unceremoniously pulls her length from you in brisk departure.[impregchance]";
+		
 
 Section 2 - Monster Insertion
 
@@ -151,7 +167,7 @@ When Play begins:
 	now cunt length entry is 28;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 10;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 40;			[ Amount player Libido will go up if defeated ]
-	now loot entry is "Dolphin Milk";			[ Loot monster drops, ]
+	now loot entry is "dolphin milk";			[ Loot monster drops, ]
 	now lootchance entry is 75;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -228,13 +244,12 @@ to dolphinify:
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Dolphin Milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
+"dolphin milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
 
 
-dolphin milk is a grab object. It is a part of the player. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "hermaphrodite dolphin". The purified of dolphin milk is "distilled milk".
+dolphin milk is a grab object. It is a part of the player.  it is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "hermaphrodite dolphin". The purified of dolphin milk is "distilled milk".
 
-instead of sniffing Dolphin Milk:
-	say "The dolphin milk smells like milk with an odd, fishy scent mixed in.";
+the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.";
 
 [ Edit this to have the correct Name as wall]
 Dolphin for FS ends here.

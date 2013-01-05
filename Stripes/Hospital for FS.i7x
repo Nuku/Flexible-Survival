@@ -51,31 +51,34 @@ Instead of resolving a Pharmaceutical Storage:
 	now Pharmaceutical Storage is resolved;
 
 to say drugsearch:
-	let T be a random number between 1 and 10;
+	let T be a random number between 1 and 11;
 	if T is 1:
 		say "     You find a medkit.";
-		add "medkit" to invent of player;
+		increase carried of medkit by 1;
 	if T is 2 or T is 3:
 		say "     You find some parts for a medkit among the scattered mess.  Maybe someone could put them together?[line break]";
 		increase hasparts by 1;
 	if T is 4:
 		say "     You find a testosterone pill still in the sample pack.";
-		add "testosterone pill" to invent of player;
+		increase carried of testosterone pill by 1;
 	if T is 5:
 		say "     You find a cock pill still in the sample pack.";
-		add "cock pill" to invent of player;
+		increase carried of cock pill by 1;
 	if T is 6:
 		say "     You find a birth control pill still in the sample pack.";
-		add "Birth Control Pill" to invent of player;
+		increase carried of birth control pill by 1;
 	if T is 7:
 		say "     You find a fertility enhancement pill still in the sample pack.";
-		add "Fertile Pill" to invent of player;
+		increase carried of fertile pill by 1;
 	if T is 8:
 		say "     You find a strange, blood red pill.";
-		add "Blood Pill" to invent of player;
+		increase carried of blood pill by 1;
 	if T is 9 or T is 10:
 		say "     You find a small syringe with clear, blue fluid in it and labeled as a [']healing booster['].";
-		add "healing booster" to invent of player;
+		increase carried of healing booster by 1;
+	if T is 11:
+		say "     You find a small syringe with cloudy, orange fluid in it and labeled as a [']libido suppressant['].";
+		increase carried of libido suppressant by 1;
 
 
 Ambulance Dock is a situation.
@@ -89,9 +92,7 @@ Instead of resolving a Ambulance Dock:
 			increase hasparts by 1;
 		otherwise:
 			say "     You are successfully able to retrieve a medical kit from the mess.  Having been covered by the shock blanket before the fluids started flying, it is undamaged and still usable.  What luck!  Your search did unfortunately get quite a bit of that cum on you though.";
-		sort table of random critters in random order;		[double infection by one monster]
-		now monster is 1;
-		infect;
+		weakrandominfect;				[random infection, followed by same infection]
 		infect;
 	otherwise:
 		say "     You opt to play it safe and continue your search elsewhere.";
@@ -108,7 +109,7 @@ Instead of resolving a Operating Room:
 	say "     As you are about to turn a corner, you spot a team of several jaguar orderlies marching down the hall towards you.  You duck back quickly before they spot you and dive quietly into the nearest room.  As you wait quietly around the edge of the door, you can see that this is one of the hospital's operating rooms.  Once you hear the group head past and continue on, you let out a sigh of relief and decide to search the room while you're here.";
 	say "     It's clear there was some chaos in here, with overturned tables and surgical tools scattered across the floor.  Along with this are several sets of surgical scrubs and piles of clothing, much of it messy with stick fluids.  You steer clear of them and check the patient's chart, finding notes about exploratory surgery on an unusual and rapidly forming growth.  Clearly another case of a transforming patient gone amuck on the unprepared medical staff.";
 	say "     You do have some good fortune though and spot a bonesaw on the floor.  You pick it up and add it to your arsenal.  As you slip out the back into the doctor's prep room, you find an exit that leads around one of the barricades, enabling you to get around more of the hospital.";
-	add "bonesaw" to invent of player;
+	increase carried of bonesaw by 1;
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 5;
@@ -133,7 +134,7 @@ when play begins:
 Instead of resolving a Staff Lounge:
 	say "     In one corner of the hospital, you come across a lounge for the staff.  Taking a glance inside, you find it unoccupied and go in to search.  There are a few chairs and couches, but it seems like some of the staff have used them for [']recreation['] recently.  Not wanting to run into a couple of them sneaking in here for more fun, you confine yourself to a quick search of the room.  Without power, the food in the fridge has gone bad, but you do manage to find an unopened bottle of water.";
 	say "     Bottle of water obtained.";
-	add "water bottle" to invent of player;
+	increase carried of water bottle by 1;
 	say "     As you are about to head out, you bump into a girlish raccoon in a pink dress, carrying a large dildo in one paw.  It seems someone did come for a little fun in the break room.";
 	challenge "Raccoon";
 	say "     Your encounter with the boytoy raccoon over, you leave the lounge to continue your search.";
@@ -155,6 +156,9 @@ The sarea of Maternity Ward is "Hospital";
 
 Instead of resolving a Maternity Ward:
 	say "     Reaching the hospital's maternity ward, you suppress a shudder and morbidly take a look in to see what has become of it.  Inside you find the place busy with vixen nurses.  Several are tending to the bassinets while a few others are nurse feeding little foxcub babies.  The staff dutifully tend over the cubs, cooing and playing with them happily.  You turn and quietly leave, unsure if you are disturbed or relieved that it was not as you feared within.";
+	if hp of Doctor Medea is 3:
+		say "     During your quick peek, you did note that the items of medical equipment Dr. Medea mentioned did not seem to be in there, saving you from having to go in there and deal with the large group vixen nurses in there.  It seems like you'll have to look elsewhere in the hospital.";
+		increase score by 4;
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 1;
@@ -182,7 +186,7 @@ Instead of resolving a Radiology:
 	now Radiology is resolved;
 
 
-to say hospfight1:
+to say hospfight1:		[staff fight]
 	let T be a random number between 1 and 7;
 	if T is 1:
 		challenge "Raccoon";
@@ -208,6 +212,40 @@ to say hospfight2:		[prevents duplicate of raccoon, who is a unique individual]
 		challenge "Jaguar";
 
 
+to say hospfight3:		[no Raccoon, Psycho Weasel instead... generic fight]
+	let T be a random number between 1 and 7;
+	if T is 1:
+		challenge "Psycho Weasel";
+	if T is 2:
+		challenge "Fluffy Owl";
+	if T is 3 or T is 4:
+		challenge "Vixen Nurse";
+	if T is 5 or T is 6:
+		challenge "Mismatched Chimera";
+	if T is 7:
+		challenge "Jaguar";
+
+
+to say hospfight4:		[no Raccoon, flags handled internally]
+	let T be a list of numbers;
+	if guy is not banned:
+		add 1 to T;		[Psycho Weasel]
+		add 2 to T;		[Jaguar]
+	if girl is not banned:
+		add 3 to T;		[Fluffy Owl]
+		add 4 to T;		[Vixen Nurse]
+		add 4 to T;		[Vixen Nurse]
+	if hermaphrodite is not banned:
+		add 5 to T;		[Mismatched Chimera]
+		add 5 to T;		[Mismatched Chimera]
+	sort T in random order;
+	if entry 1 of T is 1, challenge "Psycho Weasel";
+	if entry 1 of T is 2, challenge "Jaguar";
+	if entry 1 of T is 3, challenge "Fluffy Owl";
+	if entry 1 of T is 4, challenge "Vixen Nurse";
+	if entry 1 of T is 5, challenge "Mismatched Chimera";
+
+
 Pathology is a situation.  The level of Pathology is 5.
 The sarea of Pathology is "Hospital";
 when play begins:
@@ -231,20 +269,6 @@ Instead of resolving a Pathology:
 	now Pathology is resolved;
 
 
-Stairwell is a situation.
-The sarea of Stairwell is "Hospital";
-
-Instead of resolving a Stairwell:
-	if a random chance of 1 in 2 succeeds:
-		say "     You manage to reach one to the stairwells, but find the door blocked and unable to open.  Glancing through the small window, you see that its been barricaded from the inside as well as jammed with a heavy metal bar.  You will have to continue searching to find another way to the upper floors.";
-	otherwise:
-		say "     In a far corner of the hospital, you come to one of the stairwells and find the door stuck half-open.  There are several large and heavy items scattered behind it, including the overturned gurney which is keeping the door open.  From the mess of clothes and sticky stains among the mess, it looks like some people were trying to barricade the door, but the creatures forced their way in before the job could be completed.  You are able to slip through the mess and go up the stairs to explore the upper rooms.";
-		increase hospstairs by 1;
-		say "[hospprogress]";
-		increase score by 5;
-		now Stairwell is resolved;
-
-
 Cafeteria is a situation.
 The sarea of Cafeteria is "Hospital";
 
@@ -260,6 +284,58 @@ Instead of resolving a Cafeteria:
 	now Cafeteria is resolved;
 
 
+Chaplaincy is a situation.
+The sarea of Chaplaincy is "Hospital";
+
+instead of resolving Chaplaincy:
+	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members.  Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here.  Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else.  You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-ladden clothes.  You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused.  In the end, he must have decided to give into his urges rather than keep denying them.  You pick it up and store it away.  Perhaps it will be useful for you in a moment of need.";
+	increase carried of libido suppressant by 1;
+	increase score by 5;
+	now Chaplaincy is resolved;
+
+
+Records Room is a situation.  The level of Records Room is 5.
+The sarea of Records Room is "Hospital";
+when play begins:
+	add Radiology to badspots of girl;
+	add Radiology to badspots of guy;
+	add Radiology to badspots of hermaphrodite;
+	add Radiology to badspots of furry;
+
+instead of resolving Records Room:
+	say "     You come across the hospital's records room, where all the patient files are stored.  It is tightly packed with ceiling high filing cabinets and shelves.  There are a few files set out that seem to have been recently updated to include post-infection data, making you wonder who's still performing medical tests at the hospital.  Setting them aside, you move around the room, searching for anything of use and almost bump into a creature as it emerges from a door to another filing room.";
+	if coonstatus is 0:
+		say "[hospfight1]";
+	otherwise:
+		say "[hospfight3]";
+	say "     After your encounter with the creature, you turn to leave the records room before any others come to check on the noise.  As you make your way to the door, you spot a syringe of orange liquid on a desk.  It is labeled as [']libido suppressant['], possibly left behind by whoever was trying to focus on their records work.";
+	increase carried of libido suppressant by 1;
+	increase score by 5;
+
+
+Surrounding Area is a situation.
+The sarea of Surrounding Area is "Hospital";
+
+instead of resolving Surrounding Area:
+	say "     Deciding to take a some time to check out the neighbourhood around the hospital, you proceed away from the large building and into the nearby residential area.  As you cautiously move around the houses, a few things stand out right away.  The doors to the homes are open or are broken into.  A closer examination shows splintered wood, ripped hinges and broken glass, often with heavy claw marks as well.  But far more telling is the fact that it is far too quiet.  The city certainly isn't as noisy as it used to be, but there's usually some sounds of activity from time to time.  Be it some more peaceful mutants skulking around, weaker creatures fleeing from your approach or the noises of conflict and/or sex (for it's often hard to tell the two apart these days), there is usually some background sounds, but not here.  It becomes increasingly disconcerting for you.";
+	say "     As you continue to scout the area out, you consider slipping into one of the homes.  Just as you're about to step into the open and head for the open door, a trio of those jaguar orderlies come into view as they turn a corner.  They seem to be on patrol in the area, looking around very intently.  You slip further into the shadows and wait for them to pass before leaving the neighbourhood.  It seems the orderlies are still scouring the area for any survivors they can grab and you'd rather not risk being caught by them.";
+	now Surrounding Area is resolved;
+
+
+Stairwell is a situation.
+The sarea of Stairwell is "Hospital";
+
+Instead of resolving a Stairwell:
+	if a random chance of 1 in 2 succeeds:
+		say "     You manage to reach one to the stairwells, but find the door blocked and unable to open.  Glancing through the small window, you see that its been barricaded from the inside as well as jammed with a heavy metal bar.  You will have to continue searching to find another way to the upper floors.";
+	otherwise:
+		say "     In a far corner of the hospital, you come to one of the stairwells and find the door stuck half-open.  There are several large and heavy items scattered behind it, including the overturned gurney which is keeping the door open.  From the mess of clothes and sticky stains among the mess, it looks like some people were trying to barricade the door, but the creatures forced their way in before the job could be completed.  You are able to slip through the mess and go up the stairs to explore the upper rooms.";
+		increase hospstairs by 1;
+		say "[hospprogress]";
+		increase score by 5;
+		now Stairwell is resolved;
+
+
 Section 3 - Helper Dog Event & Pet
 
 Mournful Dog is a situation.
@@ -273,12 +349,9 @@ Instead of resolving a Mournful Dog:
 		say "     It seems the poor beast's master passed away, and in the ensuing chaos at the hospital, was left here since.  It is unclear if they died before the outbreak took hold or if they were too weak and the infection finished them off before it could change and heal them.  The dog, probably hostile to the infected hospital staff, has continued to protect its master and kept them from the removing the body.";
 		increase score by 1;
 		now hdog is 1;
-		let foodfound be 0;
-		repeat with x running through invent of player:
-			if x is "food", increase foodfound by 1;
-		if foodfound is 0:
+		if food is not owned:
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly.  Unfortunately, you have no food to spare.  Perhaps you should try to find it again later when you have some to give it.";
-		if foodfound > 0:		
+		if food is owned:		
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly.  Do you offer it some food?";
 			if the player consents:
 				delete food;
@@ -303,12 +376,9 @@ Instead of resolving a Mournful Dog:
 				now Mournful Dog is resolved;
 	otherwise:
 		say "     Your passage through the halls finds you at the room with the dead patient and their pet dog.  You pinch your nose and poke in again to check on the dog, finding it still there.  It perks up a little as you arrive, but still won't approach.  It seems in slightly better condition than when you were here last time, but is still quite malnourished.";
-		let foodfound be 0;
-		repeat with x running through invent of player:
-			if x is "food", increase foodfound by 1;
-		if foodfound is 0:
+		if food is not owned:
 			say "     Having no food to spare, you cannot give any to the dog.  Perhaps you should find some and return later.";
-		if foodfound > 0:		
+		if food is owned:		
 			say "     The dog, clearly reluctant to leave its master, has not been able to feed itself properly.  Do you offer it some food?";
 			if the player consents:
 				delete food;
@@ -335,9 +405,9 @@ Instead of resolving a Mournful Dog:
 
 helper dog is a pet.  helper dog is a part of the player;
 The description of helper dog is "The helper dog is a black and white shepherd with soulful and intelligent brown eyes.  He will follow you and loyally assist you with your troubles.";
-The weapon damage of helper dog is 5;
+The weapon damage of helper dog is 6;
 The level of helper dog is 5;
-The Dexterity of helper dog is 14;
+The Dexterity of helper dog is 15;
 The summondesc of helper dog is "Coming obediently to your call, the helper dog moves to your side, ready and eager to assist you.";
 The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg it finally pulled free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In an surprising piece of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]";
 
@@ -357,7 +427,7 @@ Section 4 - The Hidden Lab & Dr Mouse
 An everyturn rule:
 	if hospquest is 0 and hp of doctor matt > 7:	[Not started hospital quest & found susan (regardless of outcome) _or_ Dr Matt is only a recording]
 		increase hospcountdown by 1;
-		if hospcountdown is 8:				[Will activate 'random' event in 8 turns]
+		if hospcountdown >= 8 and skipturnblocker is 0:				[Will activate 'random' event in 8 turns]
 			say "     You hear an unusual, loud noise and reflexively take cover, peeking out from a window.  As you watch, you can see some large jaguar men in hospital scrubs carrying an insensate husky girl.  They seem to be led by a silver-furred vixen in a nurse's uniform as she directs them to put her in the ambulance helicopter, the source of the unusual noise in the otherwise quiet city.  'Perhaps this bears looking into further,' you think as you watch it head off in the direction of the city hospital.";
 			extend game by 4;
 			increase score by 10;
@@ -466,7 +536,7 @@ Instead of conversing the Doctor Mouse:
 	if hospquest is 2:
 		say "     The white mouse looks up from his work.  'I need you to find that device for me.  Significant portions of my research are at a standstill without it.  Please try searching within other labs in the city.'";
 	if hospquest is 3:
-		if "scientific device" is not listed in invent of player:
+		if scientific device is not owned:
 			say "     'What do you mean you found the device but haven't brought it with you?  What fools I have to wo...'  He sighs and rubs his brow.  'Please, I need you to go back where you left it and get it for me.'";
 		otherwise:
 			say "     'Yes!  That is it,' Doctor Mouse says as he hops down from his stool to grab for it before thinking better of it.  'Uh, would you be so kind as to put it over there for me?' he asks, pointing to an open spot on the central work area.";
@@ -501,6 +571,7 @@ Instead of conversing the Doctor Mouse:
 
 Section 5 - Dr Mouse's Quests
 
+[	hospquest values        ]
 [	0 new				]
 [	1 saw helicopter		]
 [	2 found hidden lab	]
@@ -526,6 +597,7 @@ nerminepackagematt is a number that varies.
 sabtoothedmatt is a number that varies.
 triclampedmatt is a number that varies.
 mattcollection is a number that varies.
+hospbattlelost is a number that varies.
 
 instead of going to 2F Trevor Labs while hospquest is 2:		[Examining other labs]
 	now the player is in 2F Trevor Labs;
@@ -546,7 +618,7 @@ instead of going to Primary Lab while hospquest is 2:			[Searching the main lab]
 			extend game by 8;
 		otherwise:
 			say "     You tell him you are working on something and would like to scavenge parts from it, since he doesn't need it anymore.  He doesn't have any objections, as he won't be taking any of the equipment once they are extracted by the military.  You carefully unhook the device and carry it off with you.  It is somewhat heavy though.  Better be worth it.";
-	add "scientific device" to invent of player;
+	increase carried of scientific device by 1;
 	now hospquest is 3;
 	increase score by 5;
 
@@ -569,11 +641,11 @@ instead of sniffing the scientific device:
 to say hospquestpt2:
 	say "     'I have a lot of samples and tests I would like to run.  Many of my projects and analyses have been unable to progress without proper instrumentation.  I will need some time to run more tests before I can gain more information. I'm all abuzz with excitement; I want to tackle it all right away.  No sleep for me tonight,' he adds with a chuckle.";
 	say "     'But as I promised, I do have a few things for you.'  He heads over to one of the cabinets under the work bench and digs around, pushing some of the items aside as he digs around.  'I set this aside for you if you were successful.  I know it's not much, but I expect to deliver better once my results start reaching fruition.'  From the back, he pulls out a large beaker with a bottle of water and two syringes sitting in it.";
-	say "     'These are healing boosters that I created some time ago.  They provide important nutrients and stimulate the nanites to bring about a surge in their healing rate for a brief time, resulting in rapid repair of injuries.  Most helpful for you out there, I expect.  And a bottle of water as well, as you're probably thirsty after lugging that thing across the city.";
+	say "     'These are healing boosters and a libido suppressant that I created some time ago.  The healing booster provides important nutrients and stimulate the nanites to bring about a surge in their healing rate for a brief time, resulting in rapid repair of injuries.  The other contains a cocktail of anaphrodiasiacs meant to help curb your arousal, for at time at least.  They should both be most helpful for you out there, I expect.  And a bottle of water as well, as you're probably thirsty after lugging that thing across the city.";
 	delete scientific device;
-	add "healing booster" to invent of player;
-	add "healing booster" to invent of player;
-	add "water bottle" to invent of player;
+	increase carried of healing booster by 1;
+	increase carried of libido suppressant by 1;
+	increase carried of water bottle by 1;
 	now progress of Doctor Mouse is turns;
 	extend game by 6;
 	say "[line break]";
@@ -583,14 +655,11 @@ to say hospquestpt2:
 to say hospquestpt3:
 	say "     The white mouse looks up from his research as you check in with him.  'You've done very well.  This has been a great boon in understanding the functioning of these little nanites.  I was hoping you'd be able to assist me with something further.  Through the use of the staff here, I have been able to secure several samples,' he says, pointing to various bottles and jars on one table, many of them filled with white fluids.  'But there's one creature, a large canine out looking for a mate, that they've seen rarely and have been unable to sample.  Being a twelve-foot dog, the orderlies are rather reluctant to approach it.  There are some times that the animal nature of the infection's changes do present a problem.";
 	say "     I would like you to try tracking down this creature and obtaining a sample from it.  From their accounts, it is a rather impressive creature with rather a uncommon... shall we say... [']gender configuration[']?  It is a variation that should be investigated and I am curious to see if I can trace the source of its unusual pairing of features.";
-	let dogmilkfound be 0;
-	repeat with x running through invent of player:
-		if x is "dog milk", increase dogmilkfound by 1;
-	if dogmilkfound is 0:
+	if dog milk is not owned:
 		say "     'I can only make assumptions on why that creature is unique, but each possible reason has different implications and applications.  Proper testing is required to learn more.  Going forward without that knowledge may adversely bias the results of my other experiments.'";
 		now hospquest is 5;
 		increase score by 5;
-	if dogmilkfound > 0:
+	if dog milk is owned:
 		say "     'What is this?' he exclaims as you pull out the bottle of dog milk.  'You already have some?  Astonishing!  I knew you would make a fine assistant, but this is most impressive.  There are numerous possibilities for why that dog creature is unique and some of them could affect the results of my other experiments.  Ascertaining or removing certain variables will greatly increase the likelihood of gaining meaningful results.'";
 		delete dog milk;
 		now progress of Doctor Mouse is turns;
@@ -599,13 +668,9 @@ to say hospquestpt3:
 		now hospquest is 6;
 
 to say hospquestpt4:
-	let dogmilkfound be 0;
-	repeat with x running through invent of player:
-		if x matches the text "dog milk", case insensitively:
-			increase dogmilkfound by 1;
-	if dogmilkfound is 0:
+	if dog milk is not owned:
 		say "     'I need you to get a sample, preferably its milk, from that large canine.  Its shemale attributes are unusual and I wish to determine what factor or factors may have made it different and unique.'";
-	if dogmilkfound > 0:
+	if dog milk is owned:
 		say "     'You have it?  Excellent work.  I knew when you showed up that you'd make a fine assistant.  There was just something about you.'  He takes the jar of dog milk and starts drawing samples from it, putting them into beakers for testing.  'It will take some time to complete my tests, but I expect I'll have something for you once the results are in.'";
 		delete dog milk;
 		now progress of Doctor Mouse is turns;
@@ -628,15 +693,10 @@ to say hospquestpt5:
 		now hospquest is 7;
 
 to say hospquestpt6:
-	let tigpatchfound be 0;
-	repeat with x running through invent of player:
-		if x is "Tiger patch", increase tigpatchfound by 1;
-	if tigpatchfound < 3:
+	if carried of Tiger patch < 3:
 		say "     Please remember, I need you to obtain three samples from those rubbery felines, so I can be certain to have enough to obtain results.  Please make your way to the State Fair and try to collect some.";
-	if tigpatchfound > 2:
-		delete Tiger patch;
-		delete Tiger patch;
-		delete Tiger patch;
+	if carried of Tiger patch >= 3:
+		decrease carried of Tiger patch by 3;
 		say "     Good work!  I shall set to work on these right away.   And while I work on that, I do have another project for you.  I have a pair of situations where my orderlies have upset the locals too much to complete their task and I need someone independent of the hospital to go in and complete the job.";
 		say "     I have just obtained word that the museum contains a pair of prehistoric creatures.  Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes.  The reports from the hospital creatures are somewhat unspecific, but there appears to be a armoured, dinosaur-like creature and several smilodons.  I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter.  I need you to obtain samples from both of these.";
 		say "     'The last thing I need for you is to perform a simple pick-up while you are out.  There is a jackal shopkeeper who has set herself up in the mall.  She has a package for me.  The rats who live there will not allow the hospital staff to approach, having been set off by the appearance of one of the jaguars when the order was first placed.";
@@ -647,32 +707,23 @@ to say hospquestpt6:
 
 to say hospquestpt7:
 	if triclamped is 0:
-		let tricllfound be 0;
-		repeat with x running through invent of player:
-			if x is "lava lamp", increase tricllfound by 1;
-		if tricllfound is 0:
+		if lava lamp is not owned:
 			say "     If you are not able to obtain a usable sample from this dinosaur creature, be sure to go to its nest and search there.  There may be eggs or something else with enough nanites to act as a proper sample.  They were very clear that it was female.";
-		if tricllfound is 1:
+		if lava lamp is owned:
 			delete lava lamp;
 			say "     The mouse dubiously looks at the lava lamp you[']ve pulled out, but goes to take it.  As you explain what you suspect it[']s been used for, he pulls his hands back quickly and puts on a pair of ill-fitting gloves over his mouse-paw hands.  Only then does he handle it, setting it on the lab table.  'I... this is a rather ingenious way to obtain a sample.  I... uhh... commend you.  Please continue,' he says.";
 			now triclamped is 1;
 	if sabtoothed is 0:
-		let sabertoothfound be 0;
-		repeat with x running through invent of player:
-			if x is "Chipped tooth", increase sabertoothfound by 1;
-		if sabertoothfound is 0:
+		if Chipped tooth is not owned:
 			say "     There appear to be several of these smilodons in the museum.  Take care, smilodons, popularly known as sabretooth tigers, were the apex predators in their time and are larger than any current feline.  Any creatures based on them with nanite enhancement would be... quite powerful.";
-		if sabertoothfound > 0:
+		if Chipped tooth is owned:
 			delete Chipped tooth;
 			say "     The mouse looks at the large fang with a mix of awe and delight.  He takes it carefully from you and places on a sample tray.  Another successful mission completed.";
 			now sabtoothed is 1;
 	if nerminepackage < 5:
-		let nermpack be 0;
-		repeat with x running through invent of player:
-			if x is "package", increase nermpack by 1;
-		if nermpack is 0:
+		if package is not owned:
 			say "     The shopkeeper at the mall has a collection of... ahh... [']occult and mystical items[']', he says with a bit of disdain.  'But she does have some historically significant items and I wanted to obtain something from her.  She may want something of similar value in return,' he adds.";
-		if nermpack is 1:
+		if package is owned:
 			say "     The mouse takes the package from you with a smile and puts it on his sample table quietly.";
 			delete package;
 			now nerminepackage is 5;
@@ -699,6 +750,7 @@ to say hospquestpt8:
 		say "     As the nanite update runs through your system, you ask what the jaguar wanted that was so upsetting.  'Oh, I wasn't too upset about the news.  It's just harder to understand them now that they've got those big teeth.  There's a little pest running around the hospital, distracting the other staff at times.  Nothing you need concern yourself with, though.  They'll catch the pink perv sooner or later.'";
 		say "     Dr Mouse heads back to his worktable.  'I have to get back to things now.  I don't think I'll have anything for you for at least a few days.  Please give me some time to process all of these results.'";
 		now progress of Doctor Mouse is turns;
+		NanofabRewardReprogrammer; [places piece for nanofab in room.  move this line if/when a better place is found]
 		now hospquest is 10;
 
 to say hospquestpt9:
@@ -785,6 +837,7 @@ instead of going to Hidden Lab while hospquest > 10:
 		say "     'I did not expect you back.  You did not call for the helicopter.  What has happened?  My orders were for you to only return when you had finished with the scientist.'  Noticing your expression, he stiffens and glares at you angrily with his blood red eyes.  'Unless you have no intention of doing so.  You dare betray me?'";
 		say "     He hops off his stool and rushes towards the intercom button at one corner of the room.  You, already taking advantage of his brief confusion, were already moving in that direction to cut him off.";
 		let bonus be ( dexterity of player minus 10 ) divided by 2;
+		if bonus > 8, now bonus is 8;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
 		if bonus + dice is greater than 9:
@@ -846,18 +899,22 @@ to say hospbigfight1:
 	now fightstatus is 3;	[set to run away by default]
 	challenge "Jaguar";
 	if fightstatus is 3:
+		now fightstatus is 0;
 		say "[hospranaway]";
 		stop the action;
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[hosploss]";
 		stop the action;
 	now fightstatus is 3;
 	say "     The second jaguar moves around the worktables steps past his fallen comrade to attack you as well.";
 	challenge "Jaguar";
 	if fightstatus is 3:	[reset to run away by default]
+		now fightstatus is 0;
 		say "[hospranaway]";
 		stop the action;
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[hosploss]";
 		stop the action;
 	say "     The two guards dealt with, you barely dodge in time as the mouse tries to jab you with a syringe.  You knock it from his paw, sending it to shatter on the floor.  The powerful scent of an array of hormones fills the air, having clearly intended to change you into a mindless sex beast before you could attack him.  That option gone, the little mouse strikes out at you with his fists.";
@@ -868,9 +925,11 @@ to say hospbigfight2:
 	now fightstatus is 3;	[set to run away by default]
 	challenge "Albino Mouse";
 	if fightstatus is 3:
+		now fightstatus is 0;
 		say "[hospranaway]";
 		stop the action;
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[hosploss]";
 		stop the action;
 	say "     Battered and bloodied, the mad doctor turns and runs.  For a moment, you think he's trying to escape and move to cut him off from the exit, but he instead veers off to his storage unit and searches inside for a vial.";
@@ -886,11 +945,14 @@ to say hospbigfight2:
 	now fightstatus is 3;	[set to run away by default]
 	challenge "Albino Mouse";
 	if fightstatus is 3:
+		now fightstatus is 0;
 		say "[hospranaway]";
 		stop the action;
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[hosploss]";
 		stop the action;
+	now fightstatus is 0;
 	say "[hospvictory]";
 
 to say hospranaway:
@@ -911,11 +973,12 @@ to say hospranaway:
 	now hospquest is 13;
 
 to say hosploss:
+	now hospbattlelost is 1;
 	say "     Your head is pounding and your vision is hazy even before you open your eyes.  Struggling to remember what happened, you try to look around.  As you attempt to open them, bright lights blind you and force them shut again, causing you to wince in pain.  You try to pull a hand to cover your eyes, but your arm won't move, tightly restrained.";
 	say "     'Ahh, the patient is now awake.  We may begin,' you hear from one side.  The sound of Dr Mouse's voice rushes reality back to you and you struggle to get up.  At his point, you discover that you are tightly strapped down and cannot move.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     As the spots begin to clear from your vision, there is much to take in.  Foremost is the operating table you are strapped onto, held down by thick, leather straps.  Above that are large, bright lights shining down on you.  As the rest of the room becomes clearer, you start to make out the blurry forms around you.  There are several other figures on the operating floor around you, nurses and an orderly, as well as several trays of medical instruments.";
-	say "     Above the operating floor, a larger viewing area above the floor level and surrounding the room comes into focus.  Most of the seats are filled with more vixen nurses and jaguar orderlies, but there are a few others as well.  There is a rather plastic-looking fish creature who is constantly wiping himself with a wet cloth surrounded by big breasted owl women.  In one corner, there is a cluster crazed weasels in straightjackets secured to their seats, gibbering and snapping at one another.  A few other individual creatures fill scattered seats.  You are clearly in the operating theater, where demonstrations of medical procedures are performed for staff and med students.";
+	say "     Above the operating floor, a larger viewing area above the floor level and surrounding the room comes into focus.  Most of the seats are filled with more vixen nurses and jaguar orderlies, but there are a few others as well.  There is a rather plastic-looking fish creature who is constantly wiping himself with a wet cloth surrounded by big breasted owl women.  In one corner, there is a cluster crazed weasels in straightjackets secured to their seats, gibbering and snapping at one another.  They have a very busty gray skunk woman sitting behind them[if hp of Doctor Moffatt > 0], whom your recognize as Dr. Moffatt[end if].  A few other individual creatures fill scattered seats.  You are clearly in the operating theater, where demonstrations of medical procedures are performed for staff and med students.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     As Dr Mouse steps forward after washing his paws, the room quickly falls silent[if hospfight is 2].  The altered doctor has smoothed down his fur a little and found a much larger lab coat to put on.  It barely fits across his shoulders and hangs open, leaving his mutated body and groin uncovered.  There are some holes torn into the back by his dorsal spines to make it fit at all[end if].  One of the nurses puts a pair of ill-fitting gloves over his [if hospfight is 1]little[otherwise]twisted[end if] paws as he looks you over.  Despite his dispassionate, clinical expression, there is a malicious gleam in his blood red eyes.  The [if hospfight is 1]little mouse[otherwise]monstrous mouse[end if] steps up beside you, then turns to look up at the assembled group.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -969,34 +1032,25 @@ to say hosptfscene:
 	sort table of random critters in random order;
 	now monster is 1;
 	choose row monster from the table of random critters;
-	while name entry is tailname of player:
+	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player:
 		sort table of random critters in random order;
 		now monster is 1;
 		choose row monster from the table of random critters;
-		if there is no name entry:
-			next;
-		break;
 	now tailname of player is name entry;
 	now tail of player is tail entry;
 	say "     'The first injection will adjust the volunteer's lower spine.  We shall begin there, as the changes may be the least visible, depending on the outcome.'  The mouse the jabs a second needle, quite painfully, into your ass.  As he watches, the doctor comments to the group about how your ass becomes malleable as [ass change entry].";
-	while name entry is tailname of player or name entry is facename of player:
+	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player:
 		sort table of random critters in random order;
 		now monster is 1;
 		choose row monster from the table of random critters;
-		if there is no name entry:
-			next;
-		break;
 	now facename of player is name entry;
 	now face of player is face entry;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "          'We shall now move on to the head,' he states, motioning for the orderly to step up.  He grabs your neck and squeezes it painfully as he injects the next formula into your carotid artery, sending the fluid up into your head.  As a burning sensation courses through your head, the doctor discusses how [face change entry].  As your face shifts and changes, the orderly adjusts the various straps as necessary, keeping you restrained.";
-	while name entry is tailname of player or name entry is facename of player or name entry is skinname of player:
+	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player:
 		sort table of random critters in random order;
 		now monster is 1;
 		choose row monster from the table of random critters;
-		if there is no name entry:
-			next;
-		break;
 	now skinname of player is name entry;
 	now skin of player is skin entry;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -1009,13 +1063,10 @@ to say hosptfscene:
 		say "     You can see that the monstrous mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure.  Another of the vixen nurses is on her knees, licking and kissing the large cock.  Her muzzle is pulled onto the thick shaft as Dr Mouse gets tired of foreplay and starts facefucking her with a low growl.  She takes it in eagerly, playing with his heavy balls until he cums down her throat.  Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
 	otherwise:		[Dr Mouse is mouse]
 		say "     You can see that the albino mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure.  His cock is small, perhaps about four inches to match his small height.  But his balls are quite large, perhaps each the size of a peach.  One of the vixen nurses is on her knees, licking and kissing his cock before taking it into her muzzle.  She fondles his balls and sucks his shaft obediently until he sends his ample load down her throat.  Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
-	while name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player:
+	while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player:
 		sort table of random critters in random order;
 		now monster is 1;
 		choose row monster from the table of random critters;
-		if there is no name entry:
-			next;
-		break;
 	now bodyname of player is name entry;
 	now body of player is body entry;
 	attributeinfect;
@@ -1052,18 +1103,15 @@ to say hosptfscene:
 	say "[line break]";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if cocks of player > 0:
-		while name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
+		while ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
 			sort table of random critters in random order;
 			now monster is 1;
 			choose row monster from the table of random critters;
-			if there is no name entry:
-				next;
-			break;
 		say "     The mouse doctor grins viciously as he looks over your changed form, then turns to the audience.  'There is one final injection to make, my colleagues.  And I'm sure this is the one you've all been anxiously awaiting.  He moves his paw to your cock(s), quite aroused by the earlier teasing, and gives it a squeeze.  Those watching are quite pleased by this and many shift forward in their seats to get a better look.";
 		say "     The doctor fondles your balls teasingly and slides the syringe across your cock and balls, making you involuntarily whimper.  You sigh in relief as he moves the needle down further and injects your inner thigh close to your groin.  As the mouse observes the changes, an arousing heat flows up into your groin as [cock change entry].";
-		follow the sex change rule;
 		now cockname of player is name entry;
 		now cock of player is cock entry;
+		follow the sex change rule;
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		if cocks of player is 0:	[now female]
 			say "     The mouse doctor smiles as your final changes set in and you are left with only a wet pussy between your legs.  He teases your wet folds and turns to the audience.  'It seems I was mistaken.  There is one more injection to make,' he announces, slipping a pair of fingers into your vagina, making you moan in response despite yourself.  His other paw is at his groin, stroking his stiffening cock back to erection.  Many in the audience cheer or laugh at that.";
@@ -1078,9 +1126,15 @@ to say hosptfscene:
 		say "[drmousesex]";
 
 to say drmousesex:
+	[puts Albino Mouse as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Albino Mouse":
+			now monster is y;
+			break;
 	if hospfight is 1:	[normal mouse]
 		say "     The small mouse motions for the orderly, who gently lifts him up onto the operating table with you.  The white furred mouse grins down at you, lining up his cock with your pussy, making it clear what final injection he has in mind.  You struggle and try to shake your head, but the restraints keep you locked in place.  He grins and thrusts his cock hard into you.  Thankfully, due to his small size, there is little discomfort and it soon becomes quite pleasurable as mad mouse fucks you zealously.";
-		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and is giving her a lap ride on her cock while playing with those enormous, feathered tits.";
+		say "     You can see the audience has become quite worked up again, most of them partaking in sex with their colleagues.  A jaguaress is getting pounded by one of the jaguars while several others spray their seed across her body.  One vixen herm, who you suspect is the same from earlier, has lured one of the owls away from the sturgeon and is giving her a lap ride on her cock while playing with those enormous, feathered tits[if hp of Doctor Moffatt > 0].  Dr. Moffatt, the hyperherm skunk has another of her weasel patients with his face buried in her lap, stuffed with her giant cock[otherwise].  The big breasted skunk woman has one of the wild-eyed weasels between her legs[end if].";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "     The mouse's paws fondling your breasts brings you back to focusing on him.  His gloved paws tease your nipples and he laughs happily, aroused with his power over you.  His cock, while small, is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the little fellow makes.";
 		say "     'Mmm... I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  You can feel it fill your pussy to capacity and overflowing as much of it pushes and flows up into your womb.";
@@ -1090,13 +1144,7 @@ to say drmousesex:
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "     The mouse's large paws fondling your breasts brings you back to focusing on him.  His gloved paws tease your nipples and he laughs happily, aroused with his power over you.  His monstrous cock is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the mutated mouse makes.  That spaded tip presses at your cervix, trying to spread it open while the ridges along his shaft feel so delightful against your vaginal walls.";
 		say "     'Mmm... I am almost tempted to keep you as a little fucktoy.  I'd breed you full of cute little mice over and over again.  I bet you'd like that, you slut' he teases, tweaking your nipples.  'But I can't afford any distractions right now.  I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.'  And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls.  His spaded glans, pressed against your cervix, forces it to spread open, allowing the bulk of his mutated load to flow up into your womb in an attempt to breed you.";
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
-	say "[impregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Albino Mouse";
-		now bodyname of child is "Albino Mouse";
-		now skinname of child is "Albino Mouse";
+	say "[impregchance][impregchance]";
 	say "     Panting, the mad doctor withdraws his spent shaft and hops down with a grin.  He raises his arms to the crowd, who manage some dignified clapping despite the major orgy that's broken out across most of the audience section.";
 
 
@@ -1111,9 +1159,9 @@ to say hospvictory:
 		say "     Feeling that the doctor is in good hands, you quickly look around the room, grabbing what notes and samples you can from the doctor's work area.  Worried that someone may notice the commotion and come up to investigate, you rush to find as much as you can carry.  You take several interesting vials and concoctions from the storage case, carefully stowing them in some padding.  The doctor's laptop and research notebook go in there as well.";
 		say "     Having gathered what you could and breaking or spilling chemicals onto the other stuff to keep anyone from following Dr Mouse's research, you turn back to see take another look at the mad doctor and his mismatched lovers.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	say "     The chimeras have continued to feed and fuck him, resulting in a seemingly random array of changes to his body starting to arise.  His head loses its mouse-like qualities entirely and becomes leonine.  While his right arm becomes that of some kind of lizard, his left one bifurcates into a pair of smaller limbs, one an avian wing and the other a monkey's arm.  One leg gains a horse's hoof while the other has a goat's.  His tail becomes long and serpentine, covered in red scales.";
+	say "     The chimeras have continued to feed and fuck him, resulting in a seemingly random array of changes to his body starting to arise.  His head has lost its mouse-like qualities entirely and becomes leonine.  While his right arm becomes that of some kind of lizard, his left one bifurcates into a pair of smaller limbs, one an avian wing and the other a monkey's arm.  One leg gains a horse's hoof while the other has a goat's.  His tail becomes long and serpentine, covered in red scales.";
 	say "     When breasts start to form on what was once the mouse's chest, the chimera riding him pulls off his cock, which is now wholly canine in form, and drives its cock into the new pussy under his balls.  That is enough to stir Dr Mouse to wakefulness, but what little intelligence there is in those eyes is fading rapidly as the infection takes over fully.  The new herm moans lustfully and wraps her mismatched legs around the chimera's waist, yowling with mindless need.";
-	say "     The second hybrid pulls its breast from their captive's muzzle and replaces it with its cock instead.  The ex-mouse takes it into its mouth eagerly, licking and sucking with need.  As the new hybrid continues to be mated by the fractured creatures of its own creation, there nothing but lust in those vacant eyes as she succumbs fully.";
+	say "     The second hybrid pulls its breast from their captive's muzzle and replaces it with its cock instead.  The ex-mouse takes it into its mouth eagerly, licking and sucking with need.  As the new hybrid continues to be mated by the fractured creatures of its own creation, there is nothing but lust in those vacant eyes as she succumbs fully.";
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	say "     Satisfied that the mouse is no longer a threat, you step over to the worktable and break off the anchor points for the chains.  The trio, too engrossed in sex, don't react more than looking up at you and mewling enticingly for you to join them.  Now freed, you are satisfied that the two unfortunate creatures will not be trapped to starve, and that they and their new companion can instead join the others like them in the hospital, where the doctor will never be heard from again.";
 	say "     Your task done, you decide to linger no longer and quickly go down the stairs.  Acting as if nothing is amiss, you walk past the jaguar guarding the stairwell and exit the hospital.";
@@ -1150,10 +1198,13 @@ to say tlabsbigfight:
 	now fightstatus is 3;
 	challenge "Dragon";
 	if fightstatus is 3:
+		now fightstatus is 0;
 		say "[tlranaway]";
 	if fightstatus is 2:
+		now fightstatus is 0;
 		say "[tlloss]";
 	if fightstatus is 1:
+		now fightstatus is 0;
 		say "[tlvictory]";
 
 
@@ -1371,7 +1422,7 @@ Instead of resolving a Dinosaur Nest:
 	if dnfightresult is 1:		[win]
 		say "     Having bested the triceratops woman, you can finish searching her nest in the hopes of finding something to satisfy the mouse doctor.  You dig around in the her collection of old stuff, but don't see anything for some time.  Eventually, you instead smell something and soon track the scent to a lava lamp.  Unplugged, the glass lamp is off its stand and is coated in a wet sheen of fluids.  Guessing the strange creature has been using it for some improvised fun, you wrap it in a paisley shirt and pack it away.";
 		say "     Lava lamp collected.";
-		add "lava lamp" to invent of player;
+		increase carried of lava lamp by 1;
 		increase score by 10;
 		now Dinosaur Nest is resolved;
 
@@ -1425,11 +1476,11 @@ Instead of conversing the Nermine while nerminepackage is 1 and Nerminetalk > 0:
 	now nerminepackage is 2;
 	now Viking Longboat is unresolved;
 
-Instead of conversing the Rod while nerminepackage > 0 and rodhosp is 0:
+Instead of conversing Rod Mallrat while nerminepackage > 0 and rodhosp is 0:
 	say "     'Those big, spotted hairballs that rolled in here the other day?  That was a bad scene, dude.  They started to get fresh with some of the girls in the atrium and tried to drag them off.  Well, we wouldn't put up with that.  Never try to force a mall rat from their mall, man.  We don't want none of them goons and their friends in here again.'";
 	now rodhosp is 1;
 
-Instead of conversing the Ronda while nerminepackage > 0 and rondahosp is 0:
+Instead of conversing the Ronda Mallrat while nerminepackage > 0 and rondahosp is 0:
 	say "     'You asking about those macho hairball rejects from Shock Therapy?  Suzie and Anna were talking to them after they rolled in here like they owned the place.  Just a little playful flirting to tease their boys.  No harm in it.  But the kitties started getting fresh.  They offered them a ride in their swanky helicopter, which was tempting, but that'd mean leaving the mall, so the girls said [']No way['].'";
 	say "     'Well, those kitty-litter heads didn't like that and started to get pushy about it.  By that point, their boyfriends had had enough and rallied the troops to deal with them.  That slutty vixen came running out of the store and the dude on her radio was squawking to know what was happening.  We kicked the lot of them out.  They came poking back once or twice, but they're not allowed to shop here anymore.  We told Bruno, he's security, on them and that crazy wolverine and a few of the boys sent them packing.'";
 	now rondahosp is 1;
@@ -1466,7 +1517,7 @@ Instead of resolving a Viking Longboat:
 		if bonus + dice is greater than 18:
 			say "     Nimbly dashing across the collapsing ship, you manage to make it to the ladder and slide down it, barely touching the rungs at all.  You drop the last five feet onto all fours as more ancient lumber rains down and the ladder sways.  You scramble back quickly away from the devastated relic until the dust settles.  You pull out the two green gems from your pack and look at them before tucking them away again.  You look over the heap and decide to grab a souvenir for yourself, swiping one of the spears from the ruined display to add to your arsenal.";
 			say "     Spear added to inventory.  Stabby-stabby!";
-			add "spear" to the invent of player;
+			increase carried of spear by 1;
 			increase score by 20;
 		otherwise:
 			say "     You try to make it back to the ladder, but part of the floor gives out beneath you.  You fall through the deck, crashing through the bottom of the ship and falling to the ground.  Terrified of getting buried under the rain of ancient lumber that continues, you scramble away as fast as you can manage.  You fall panting in a heap, entangled by the velvet ropes as the last of it comes crashing down with a cloud of dust.  You get up unsteadily and pull out the green gems, hoping they're worth the many aches and bruises you now have.  (20 Dmg taken)";
@@ -1485,14 +1536,11 @@ instead of sniffing the spear:
 	say "The Viking spear smells of ancient battles.  The scent gets your blood pumping for battle.";
 
 Instead of conversing the Nermine while nerminepackage is 3:
-	add "package" to invent of player;
+	increase carried of package by 1;
 	say "     'Have you been finding the dragon's eyes for Nermine?' she asks.  'Wonderful.  Most beautiful,' she says as she holds them up to the light and gazes through them.  'Even older than I thought, long before put on that ship.  Long history.  Nermine is very pleased to have these.  So much so I will give you some advice.'";
 	say "     'White mousey doctor is wanting something from Nermine's shop.  People who want things from my store often get exactly what they were looking for.  Be careful with mousey doctor, not get hurt,' the jackal woman says.  'The item in the box is quite old, much of its strength has faded, but it still came from a powerful creature long ago.'";
 	say "     The package for Dr Mouse has been obtained.";
-	let spearfound be 0;
-	repeat with x running through invent of player:
-		if x is "spear", increase spearfound by 1;
-	if spearfound is 1:
+	if spear is owned:
 		say "     'And you appear to be most lucky, little helper,' she adds, taking note of the spear you have.  'That is spear of great Viking chief who commanded the boat.  A rare find, such a thing,' she says with a little greed in her eye, as if trying to come up with a suitable trade to tempt it away from you.";
 	increase score by 10;
 	now nerminepackage is 4;

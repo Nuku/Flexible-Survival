@@ -1,5 +1,5 @@
 Version 2 of Centaur by Hellerhound begins here.
-[Version 2.1 - Update to new creature data ]
+[Version 2.2 - Alt Attack]
 
 [converted from FI]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
@@ -13,13 +13,12 @@ Section 1 - Dry Plains
 understand "plains" as Dry Plains.
 
 
-Dry Plains is a room. It is fasttravel. "At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you.  You don't see any kind of military cordon here, making you suspect that the infected already spread out here before the military was mobilized to close it off.  Their lines are probably further back.  Some hoofprints you spot in a sandy patch nearby furthers this assumption.  As for the open grasslands, it looks like the some kind of storm or quake levelled all the scattered buildings further out.  Now all that is left of them among the dirt and grassland are mounds of rubble.  The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.";
+Dry Plains is a room. It is fasttravel. "At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you.  You don't see any kind of military cordon here, making you suspect those already infected has spread out here before the military was mobilized to close it off.  Their lines are probably further back.  Some hoofprints you spot in a sandy patch nearby furthers this assumption.  As for the open grasslands, it looks like the some kind of storm or quake levelled all the scattered buildings further out.  Now all that is left of them among the dirt and grassland are mounds of rubble.  The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.";
 Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
 Plains door is west of wandering the plains.
 Wandering the plains is a room.
 
-Instead of sniffing the dry plains:
-	say "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.";
+the scent of the dry plains is "The dry plains smell lightly of dry grasses and disturbed earth.  There is little of man-made origin to smell on the air except the scents coming from the city behind you.";
 
 Section 2 - Tainted Centaur Event
 
@@ -68,24 +67,25 @@ Section 3 - Fresh Apple
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Fresh Apple"	"A rosy red apple."	3	fresh apple
+"fresh apple"	"A rosy red apple."	1	fresh apple
 
 fresh apple is a grab object. It is a part of the player. Understand "apple" and "fresh" as fresh apple. fresh apple is infectious. The strain of fresh apple is "Mutant Centaur". The purified of fresh apple is "food".
 
+the scent of fresh apple is "The apple smells fresh and juicy at first, though you notice a strange, rotten smell hidden beneath that.";
 
 Section 4 - Monster Responses
 
 To say centaur defeat:
 	if libido of player < 50:
 		Say "The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
-		add "Fresh Apple" to the invent of the player;
+		increase carried of fresh apple by 1;
 	if libido of player > 50 and cocks of player is greater than 0:
 		Say "The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [cock of player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 		say "The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
 		if the humanity of the player > 90:
 			say "You instantly pull out, looking at the tentacles like the abomination they are. You kick dirt over the centaur as you leave, stealing an apple from its pack.";
-			add "Fresh Apple" to the invent of the player;
+			increase carried of fresh apple by 1;
 			increase the libido of the player by 20;
 		otherwise:
 			say "The appearance of the helping tentacles is a welcome development, and you begin thrusting with vigor, the lubrication of the creature's waste keeping you from ripping the walls.";
@@ -101,7 +101,7 @@ To say centaur defeat:
 		say "The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vinelike bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
 		if the humanity of the player < 40:
 			say "The sight of those tentacles drives you insane with lust. You grab them, and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain, that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then your hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
-			add "Fresh Apple" to the invent of the player;
+			increase carried of fresh apple by 1;
 			now the libido of the player is 0;
 		otherwise if the humanity of the player < 90:
 			say "The sight of the tentacles doesn't bother your fuzzy mind in the least as you leap onto the centaur's furry belly and rub yourself forward and back, arousing yourself and trying to raise yourself to orgasm. Your dripping pussy leaves streaks of wetness on the centaur's fur, and after a short while, something wet and large pokes at your back, breaking your concentration. You stop and turn back in surprise to see the huge green cock starkly erect, its precum-dripping tip a few inches from your face. A trail of precum leads along your body to your back. It isn't done growing, and pushes you forwards a few inches before it is fully ready.";
@@ -111,7 +111,7 @@ To say centaur defeat:
 				say "You open your mouth wide and fit as much of it in as you can, which means only the soft head. You start to lick it and suck at the hole, drinking in the juices, until it climaxes.";
 				say "The spray of fluid begins slowly, but increases in flow rapidly until you cannot swallow it all, and it shoves your face back, and sprays of hot green cum soak your whole body in a few seconds.";
 				say "After cleaning up the centaur as well as yourself, you go on your way, with an apple as payment.";
-				add "Fresh Apple" to the invent of the player;
+				increase carried of fresh apple by 1;
 				now the libido of the player is 0;
 			otherwise: [cock will fit]
 				say "After pulling at it for a moment, the head goes in. Your walls contract, bringing more of it inside you, and you closer to the monstrous testicles. All of a sudden, the two tentacles that had been lying limp on the ground dart into your ass, causing you to gasp from addictive pleasure.";
@@ -119,8 +119,8 @@ To say centaur defeat:
 				say "You drift off into a haze of pleasure, filled with slapping noises of the centaur's balls. You come out of the haze into your orgasm, pleasure flooding your senses and hot cum flooding your insides, filling them until you look overdue for triplets. When your belly can stretch no more, cum sprays out of the tight seal between your lips and its shaft, covering what is in the way with green seed.";
 				say "The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 				if a random chance of one in two succeeds:
-					add "Fresh Apple" to the invent of the player;
-				add "Fresh Apple" to the invent of the player;
+					increase carried of fresh apple by 1;
+				increase carried of fresh apple by 1;
 		otherwise:
 			if "Kinky" is not listed in the feats of the player:
 				say "The sight of the tentacles puts you off your lunch, and you lose it a short time later, heaving your guts all over the ground.";
@@ -132,7 +132,7 @@ To say centaur defeat:
 				say "The tentacles put your lust back where it came from, and you leave the stricken centaur where it is.";
 				say "You find an apple in its discarded backpack.";
 				decrease the libido of the player by 10;
-				add "Fresh Apple" to the invent of the player;
+				increase carried of fresh apple by 1;
 		[todo]
 
 to say centaur rape female:
@@ -143,8 +143,8 @@ to say centaur rape female:
 	say "[impregchance][impregchance]";
 	say "The centaur pulls out of you with a splotchy noise, green cum running like a small stream from your abused lips, and walks off, leaving you to clean up and be on your way, an apple or two in your bag.";
 	if a random chance of one in two succeeds:
-		add "Fresh Apple" to the invent of the player;
-	add "Fresh Apple" to the invent of the player;
+		increase carried of fresh apple by 1;
+	increase carried of fresh apple by 1;
 	if centaurmate is 1:			[Extra infection for mate]
 		infect "Mutant Centaur";
 	if Apple Tree is not resolved:	[Extra infection for event]
@@ -216,7 +216,7 @@ When Play begins:
 	add "Mutant Centaur" to infections of guy;
 	Choose a blank row from Table of random critters;
 	now name entry is "Mutant Centaur"; [Name of your new Monster]
-	now attack entry is "The Centaur[one of] punches your face with its hand[or] headbutts you[or]'s green tentacles rise from under him and slap you[or] rears up and slams you with his front hooves[at random]!";
+	now attack entry is "The Centaur[one of] punches your face with its hand[or] headbutts you[or]'s green tentacles rise from under him and slap you[or] rears up and slams you with his one of its hooves[at random]!";
 	now defeated entry is "[centaur defeat]";
 	now victory entry is "[centaur attack]";
 	now desc entry is "[centaurmeet]";[ Description of the creature when you encounter it.]
@@ -224,12 +224,12 @@ When Play begins:
 	now body entry is "that of a centaur, with a muscled, human upper torso.  Your body has well-defined muscles, but they seem a little strange and don't quite move right.  Your arms are strong and muscular, and roughly human in appearance as well.  Your lower body is that of a horse, with a muscular equine form and slender legs leading to a set of bottle green hooves";
 	now skin entry is "human on your upper body and blending smoothly into black horsehair on your bottom half to cover your";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a green, flowing tail like a horse coming from just above your behind.  It wriggles and squirms unlike a horsetail though, moving more like a tentacle.";
-	now cock entry is "green and equine, with bumps covering it and tentacles growing out of two bulges along its sheath";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now cock entry is "[one of]green and equine[or]equine and tentacled[or]bumped and tentacled[or]bumped and equine[or]green and bump-covered[at random]";
 	now face change entry is "your ears become longer and grow fur, changing shape to become like a horse's"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your body grows muscled at the bottom, and your legs change into those of a horse.  Your muscles grow and shift, moving into slightly different positions.  Your breasts feel odd, and it seems like most of their girth is inside of you"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "the skin below your abdomen grows black fur, melding smoothly into the human skin above"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a twitching quiver runs down your spine as it extends and grows a green horse's tail";
-	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "it spasms in orgasm, spraying out all its cum until dry as it shrinks and looks like it is dead, your balls shrunken and crinkling. They do not look like they were meant to be.  Your cock becomes twisted and deformed as its infested by the strange infection.  It turns green and equine in shape with bumps covering it and tentacles growing out of two bulges along its sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 22;
 	now dex entry is 24;
 	now sta entry is 20;					
@@ -251,7 +251,7 @@ When Play begins:
 	now cunt length entry is 17;		[ Length of female sex  infection will attempt to give you. ]
 	now cunt width entry is 24;		[ Width of female sex  infection will try and give you ] 
 	now libido entry is 0;	[done in the loss/win text]		[ Amount player Libido will go up if defeated ]
-	now loot entry is "Fresh Apple";			[ Loot monster drops, ]
+	now loot entry is "fresh apple";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
@@ -268,9 +268,9 @@ When Play begins:
 	now type entry is "centaur";			[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is true;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "hoofstomp";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 6 - Centaur Heat

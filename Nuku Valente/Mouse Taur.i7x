@@ -18,7 +18,7 @@ After resolving a Mouse Taur, try looking;
 Instead of Resolving a Mouse Taur:
 	if mtrp is 0:
 		say "A voice suddenly rises, startling you. Spinning about in alarm, you see a creature approaching you. She has a body that reminds you of a basic house variety mouse, if expanded until it were six feet long. Where its head should be is the belly and upper torso of a humanoid. As she approaches, her two C or D cup breasts sway in counterpoint to her two hips. Her face is mostly human, with fine whiskers, large round rodent ears and just enough snout to know it's there. She smiles at you, showing off bucked teeth, 'Hello', she says, 'I was watching you roam around and thought you might like some company.'";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		attempttowait;
 		if cocks of player is greater than 0 and cunts of player is less than 1:
 			say "She looks you over critically, placing her paw like hands on her hips and leaning a bit, 'I was hoping for something a little more...' she trails off, then shakes her head, 'Nevermind that, I am being rude. You will be just fine, I[apostrophe]m sure, with some work.' She smiles brilliantly and offers a hand, 'Lisa, you are?'";
 		if cunts of player is greater than 0 and cocks of player is greater than 0:
@@ -27,7 +27,7 @@ Instead of Resolving a Mouse Taur:
 			say "She approaches closer, reaching to embrace you. You flinch with worry, but no harm befalls as she hugs you softly to her soft and warm body. Your face is drawn against her soft tits as her hand rubs your back quietly a moment, 'Poor little dear, lost in all this ruin and chaos. I'm Lisa, but you can call me mom if you prefer, or sis, that works.'";
 		if cunts of player is less than 0 and cocks of player is less than 1:
 			say "She sniffs the air lightly and looks at you with some confusion, 'You must have had such a hard time of it,' she says with some sympathy, 'I am Lisa, nice to meet you.'";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		attempttowait;
 		say "You give your name and begin idly chatting about time before everything went bad. You settle with her and she pulls out some snacks, sharing with you as you talk with her. She was a recently graduated major in education, 'I planned to be a teacher,' she explained, 'Grade school, but then this happened.' It seems that some mice that lived in her house became infected. 'They never bit me or anything,' she explained, 'I'm pretty certain their fur got onto a bit of my food. It took a long time to change.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself, 'Or so I did. Hey, here's my address. You come by anytime, say hello, ok?'[line break] Meal time over, you both rise. She gives you a firm parting hug, and turns to walk off into the red light area, long furry tail swaying behind her.";
 		increase mtrp by 1;
 		decrease hunger of player by 20;

@@ -1,57 +1,142 @@
-Version 4 of Slutrat by Nuku Valente begins here.
-[ Version 4.3 Ronda pt 3 ]
-[3:30]
+Version 5 of Slutrat by Nuku Valente begins here.
+[ Version 5 Ronda completed ]
 
 Section 0 - Slut Rat Monster
 
-[Will be made into a regular critter so Ronda-form and outcomes can be added]
-
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
-"Slut Rat"	"[one of]She slices at your face with a sudden swipe of her claws.[or]She draws you close with a loud rumble and presses your lips to a breast, holding you still until you start drinking from her, intense warmth rushing through your body, though you are left drained and tired as well.[if cock width of player is greater than 0] Your balls sing with pleasure as they grow heavier by the moment![otherwise] You squirm in shock as you feel a new set of balls erupt from your body![end if][slut rat growth] [or]Her tail loops around and tickles at you between the legs even as she shoves you back against the ground.[or]She suddenly turns, and a flying furry breasts crashes into you painfully.[at random]"	"She gives a final hiss of defiance, then scurries away out of sight, leaving you with an image of her perfect rump and twitching tail to remind her by."	"[slut rat victory]"	"Towering over most, a tall intimidating wall of fur and leather. It appears female at first glance. Piercing its large directed ears are one ring a piece, one a golden hue, and another silvery shade. It's covered from top to bottom in ebony black fur, that is, where clothing is not apparent. Her eyes are the same black shade as her hair, the left eye having a scar that runs an inch above downwards in a slicing motion to an inch or two below.
-         She wears a rather large leather collar with a bell attached, the bell portion resting between the massive pillows of her chest, resting on top of them like some sort of sacred artifact. The bell makes no sound. Her breasts are restrained by her leather suit, the two upside down V's struggling mightily with small buckles between them just to keep them fastened and avoid falling apart. They might be seven or so inches in radius, and the leather doesn't do much to hide the details from the front, indents visible in the leather, revealing more than it ought to.[line break]
-         Her arms are long and slender, with black fur, and bright pink shaded paws. The paws have clearly defined fingers, looking quite capable of grasping things, or clawing, with sharp black shaded tips to them. Her midsection is slim and trim, and also concealed fully by the leather bodice she wears, clinging tightly to her contours.[line break]
-         Gazing at her from the back, it can be seen that the leather doesn't cover much back there beyond decency. Her furred buttocks and thighs are visible, though calves are again covered in the suit. From the front, an odd sight greets the eyes. The contours of the leather shape outwards from her thighs and along her belly, the shape is distinct and hard to miss, as if this bizarre furred female were in the possession of monstrously large male genitalia. She makes no move to be discreet or hide this abnormality, seeming perfectly at ease with its existence, probably having been the one to modify the suit in the first place to cope with such an unwieldy intruder.[line break]
-         Glancing back down to her feet, they are garbed in simple shoes, looking dated and worn from far too much overuse and abuse."	"furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"	"bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you."	"[one of]black furred[or]rat furred[or]softly furred[at random]"	"You have a long, [skin of player] tail. It is segmented, like a rat tail should be, thin and whip like, moving about in long motions."	"[one of][skin of player] sheathed[or]leaking[or]human like[at random]"	"your face draws forward into a long snout as hair spills to your shoulders"	"you can feel your entire body changing configuration to emphasize your fertile signals, ass and hips pushing outwards as waist slims. Short claws forming on your hands, which remain smooth. The rest of you [skin of player]"	"a wave of erotic satisfaction forces you to your knees, your genitals releasing their fluids across thighs as fur explodes out across your form"	"A long slithering sensation is felt in your pants. A quick check reveals it to be a naked pink rat tail."	"it swells and throbs and refuses to calm down. It is soon leaking prefluids all over the place in constant readiness."	10	16	10	10	12	10	"Both"	45	6	13	"Unknown"	1	12	10	2	10	0	1	12	7	100	"soda"	20	3	"[one of]sultry[or]alluring[or]curvaceous[at random]"	"[one of]murine[or]ratty[or]rodent[at random]"	false	false	false	--	"default"
+"Slut Rat"	"[slutratattacks]"	"[defeattheslutrat]"	"[slut rat victory]"	"[slutratdesc]"	"furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"	"bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you"	"[one of]black furred[or]rat furred[or]softly furred[at random]"	"You have a long, [skin of player] tail. It is segmented, like a rat tail should be, thin and whip like, moving about in long motions."	"[one of]sheathed[or]leaking[or]human like[at random]"	"your face draws forward into a long snout as hair spills to your shoulders"	"you can feel your entire body changing configuration to emphasize your fertile signals, ass and hips pushing outwards as waist slims. Short claws forming on your hands, which remain smooth. The rest of you [skin of player]"	"a wave of erotic satisfaction forces you to your knees, your genitals releasing their fluids across thighs as fur explodes out across your form"	"A long slithering sensation is felt in your pants. A quick check reveals it to be a naked pink rat tail"	"it swells and throbs and refuses to calm down. It is soon leaking prefluids all over the place in constant readiness"	10	16	10	10	12	10	"Both"	45	6	13	"Unknown"	1	12	10	2	10	0	1	12	7	100	"soda"	20	4	"[one of]sultry[or]alluring[or]curvaceous[at random]"	"[one of]murine[or]ratty[or]rodent[at random]"	false	false	false	--	"slutratalt"
+
+
+Table of Critter Combat (continued)
+name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
+"slutratalt"	retaliation rule	--	--	rattymilk rule	15	--	--	--	--	--
+
+this is the rattymilk rule:
+	say "She draws you close with a loud rumble[if face mask is equipped], pushes your face mask aside[end if] and presses your lips to a breast, holding you still until you start drinking from her.  Intense warmth rushes through your body, making you lustful and less eager to resist the sexy rat";
+	choose row monster from the table of random critters;
+	let dam be ( ( ( wdam entry + square root of wdam entry - peppereyes ) times a random number from 80 to 120 ) / 100 );
+	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
+		now dam is (dam * 150) divided by 100;
+		say ".  You end up getting a very large dose of her milk before you are able to push away - Critical Hit";
+	say "!  You take [special-style-2][dam][roman type] damage";
+	if "Female Preferred" is listed in feats of player:
+		say ".  You can feel a tingling in your groin that starts to flare up, but is then resisted until it subsides.";
+	otherwise if cock width of player is greater than 0:
+		increase cock width of player by a random number from 1 to 3;
+		say ".  Your balls sing with pleasure as they grow heavier as the milk sends them into overproduction and your balls feel like they have become [ball size]!";
+	otherwise:
+		say ".  You squirm in shock as you feel a new set of balls erupt from your body and a [cock of player] cock forming to go with them!";
+		increase cock width of player by a random number from 1 to 3;
+		if cocks of player is 0, now cocks of player is 1;
+		if cock length of player is 0, now cock length of player is a random number from 2 to 4;
+		increase cock width of player by a random number from 1 to 3;
+		say "Your balls feel like they have become [ball size]!";
+	increase libido of player by a random number between 3 and 8;
+	if bodyname of player is "Slut Rat", increase libido of player by 2;
+	if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
+	if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 3;
+	decrease humanity of player by a random number between 1 and 4;
+	if "Pure" is listed in feats of player, increase humanity of player by 1;
+	if "Corrupt" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	decrease hp of the player by dam;
+	follow the player injury rule;
+	say "You are [descr].";
+
+
+to say slutratdesc:
+	choose row monster from table of random critters;
+	let debit be 0;
+	if rondafight is 3:
+		if hardmode is true and level of player > 9, let debit be level of player - 9;
+		now hp entry is 69 + ( debit * 5 );			[- How many HP has the monster got? -]
+		now monsterhp is 69 + ( debit * 5 );
+		now wdam entry is 15 + ( debit / 3 );		[-Amount of Damage monster Does when attacking.-]
+		now lev entry is 9 + debit;
+		say "     Despite your hopes of saving her, you find yourself facing off against the slut rat Ronda.  She is a tall and intimidating wall of fur and leather, appearing female at first glance.  But you know better, sporting a bulging package under her tight, leather outfit.  She has a lustful look in her eyes, having decided she'd rather repay you for the chocolates with sex than listening to what you have to say.  You try to calm her down and get her to focus, but that moment of rememberance is fading.  In her confusion, she seems to think you're just looking to scrap to see who's on top, as the slut rats sometimes do.  Being the first of the slut rats, she is a little bigger and tougher than the others.";
+	otherwise:
+		if hardmode is true and level of player > 6, let debit be level of player - 6;
+		now hp entry is 45 + ( debit * 5 );			[- How many HP has the monster got? -]
+		now monsterhp is 45 + ( debit * 5 );
+		now wdam entry is 13 + ( debit / 3 );		[-Amount of Damage monster Does when attacking.-]
+		now lev entry is 6 + debit;
+		say "     Towering over most, a tall intimidating wall of fur and leather. It appears female at first glance. Piercing its large directed ears are one ring a piece, one a golden hue, and another silvery shade. It's covered from top to bottom in ebony black fur, that is, where clothing is not apparent. Her eyes are the same black shade as her hair, the left eye having a scar that runs an inch above downwards in a slicing motion to an inch or two below.";
+		say "     She wears a rather large leather collar with a bell attached, the bell portion resting between the massive pillows of her chest, resting on top of them like some sort of sacred artifact. The bell makes no sound. Her breasts are restrained by her leather suit, the two upside down V's struggling mightily with small buckles between them just to keep them fastened and avoid falling apart. They might be seven or so inches in radius, and the leather doesn't do much to hide the details from the front, indents visible in the leather, revealing more than it ought to.";
+		say "     Her arms are long and slender, with black fur, and bright pink shaded paws. The paws have clearly defined fingers, looking quite capable of grasping things, or clawing, with sharp black shaded tips to them. Her midsection is slim and trim, and also concealed fully by the leather bodice she wears, clinging tightly to her contours.";
+		say "     Gazing at her from the back, it can be seen that the leather doesn't cover much back there beyond decency. Her furred buttocks and thighs are visible, though calves are again covered in the suit. From the front, an odd sight greets the eyes. The contours of the leather shape outwards from her thighs and along her belly, the shape is distinct and hard to miss, as if this bizarre furred female were in the possession of monstrously large male genitalia. She makes no move to be discreet or hide this abnormality, seeming perfectly at ease with its existence, probably having been the one to modify the suit in the first place to cope with such an unwieldy intruder.";
+		say "     Glancing back down to her feet, they are garbed in simple shoes, looking dated and worn from far too much overuse and abuse.";
+
+
+to say slutratattacks:
+	say "[one of]She slices at your face with a sudden swipe of her claws.[or]The slut rat makes a grab for you and rubs her body against yours, pressing her throbbing cock and lucious breasts against you.[or]The slut rat stops her heel onto your foot, then knees you in the gut.[or]Her tail loops around and tickles at you between the legs even as she shoves you back against the ground.[or]She suddenly turns, and a flying furry breast crashes into you painfully, making your head spin.[at random]";
+
+
+to say defeattheslutrat:
+	if rondafight is 3:
+		now rondafight is 1;
+		say "     You manage to knock Ronda down long enough to jump on top of her.  It takes some effort to resist fucking her then and there, your ratty blood all worked up, but you rein it in.  You tell the sexy rat to open wide, which she does, thinking she's going to get a meaty treat.  You instead quickly dump the serum down her throat and put your hand over her mouth to keep her from spitting it up.";
+	otherwise:
+		say "     She gives a final hiss of defiance, then scurries away out of sight, leaving you with an image of her perfect rump and twitching tail to remind her by.";
+
+
+to say slut rat victory:
+	[puts Slut Rat as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Slut Rat":
+			now monster is y;
+			break;
+	if rondafight is 3:
+		now rondafight is 2;
+		say "     Victorious, Ronda pushes you down onto one of the crates and climbs atop you roughly.  You moan as she grinds her cock against your backside.  'See!  Told you I was sexiest beast around.  And the only change going on around here is that I'm going to make you into my sexy bitch for the next half hour,' she rumbles, pressing her thick rod deep into you.  Your moans at being penetrated stifle any attempt to tell her about the potion and soon enough, with the large rat pumping her cock into your [if cunts of player > 0]pussy[otherwise]ass[end if], you forget about it as well.  As she starts pounding you harder, you drop it to get a better grip on the crate.  True to her word, Ronda pounds you long and hard for the next half hour, swapping positions a few times, making sure she's blasted thick rat cum into you from both end and splattering it all over your face[if cocks of player > 0 or cunts of player > 0], making you cum several times as well from her enthusiastic fucking[end if].  During the course of this wild session, any last vestiges of Ronda's previous life fade away completely, buried forever under her new slut rat persona.[impregchance]";
+		decrease humanity of player by 10;
+		increase libido of player by 20;
+		if libido of player > 80, now libido of player is 80;
+		infect "Slut Rat";
+	otherwise:
+		if the location of the player is slutrat den:
+			say "     The rat grins as she pushes you towards the others, 'Let[']s remind this one how we treat bad people'. Of course, how they treat bad people and how they treat good people can be a bit foggy at times. At the call, the other rats stop their coupling and stroking and other diversions to instead gather around you with hungry expressions.";
+		otherwise:
+			say "     Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged.  They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
+		if cocks of player is greater than 0:
+			say "     One rat lowers before you and takes your [cock size desc of player] [cock of player] dick into her waiting snout, suckling firmly as her hands caress your [ball size] in eager rubs of her smooth hands";
+			if cocks of player is greater than 1:
+				let x be cocks of player minus 1;
+				say ".  Your extra endowment is not put to waste, as a rat girl reaches for each, and you are soon being stroked in increasingly fast motions. [if x is greater than 1]Your extra cocks[otherwise]Your extra cock[end if] is stroked with loving adoration as they nuzzle into your excited flesh and lap at it with warm soft tongues.";
+			otherwise:
+				say ".";
+		if cunts of player is greater than 0:
+			say "     The rat who [if location of player is slutrat den]beat you[otherwise]brought you in[end if] tips you forward, pressing her massive tool against your exposed snatch and rubbing along it in slow teasing motions, considering.";
+			if cunt length of player is less than 12 or cunt width of player is less than 7:
+				say "     She humphs, 'You will not fit, but we can fix that,' she assures in a needy whisper in your ear. Soon your head is being tipped back as something sickly sweet is poured down your throat, making your female organs tingle powerfully as they begin to expand";
+				increase cunt length of player by 4;
+				increase cunt width of player by 3;
+				if cunt length of player is less than 12 or cunt width of player is less than 7:
+					say ".  Despite the growth, you remain a bit too small, but the rat only has so much patience. She drives up, stuffing her huge organ into your now sopping wet cunt, the lubrication doing much to ease the passage as she begins to piston against you, slapping your bottom with her huge swaying balls and breeding you with a feral intensity.[impregchance]";
+				otherwise:
+					say ".  Now large enough, she smoothly pops her cock into your drenched hole, your needy fluids making it quite easy for her to pump lovingly against your wanton sex, grinding her hips against you when she isn't rocking with increasing intensity, her huge balls bumping you, promising a terrific load.[impregchance]";
+			otherwise:
+				say "     Your needy cunt is soon being stuffed and your body rocked as she crashes into you with practiced strokes, tickling at your most sensitive places with her rock hard member. You can feel the tool spurting thick gobs of fluid inside of you with every thrust, even though she hasn't even climaxed yet, your body tingling with pleasure.[impregchance]";
+		otherwise:
+			say "     The rat [if location of player is slutrat den]beat you[otherwise]brought you in[end if] leans you forward and presses her massive tool to your back door, easing up into your body with strange ease despite the size of the tool. As she rocks against you, new sensations explode and echo through your body. She pets over your [bodydesc of player] form and cooes in your ear, pistoning against your ass with increasingly eager thumps, eventually filling your ass with her thick seed.[mimpregchance]";
+		say "     A rat grabs your head and pulls you off towards a waiting nipple. The milk flows thick and sweet across your tongue as your groin throbs and tingles with new delights.  [slut rat growth]";
+		say "     All at once, everyone is climaxing. In you, around you, shuddering squeals of rodent delight before you feel your own body shudder in powerful release. As darkness claims you, you can see the den getting smaller, the original rat dragging you away.";
+		if a random chance of 1 in 2 succeeds and slutrat den is unknown:
+			say "You remember the way back!";
+			now the Slutrat Den is known;
+
 
 To say slut rat growth:
 	if "Female Preferred" is listed in feats of player:
 		say "You resist the growth!";
+	otherwise if cocks of player is 0:
+		now cocks of player is 1;
+		increase cock length of player by a random number from 2 to 4;
+		increase cock width of player by a random number from 1 to 3;
+		say "Your new balls feel like they have become [ball size] and you gain a small [cock of player] cock to go with them!";
 	otherwise:
 		increase cock width of player by a random number from 1 to 3;
 		say "Your balls feel like they have become [ball size]!";
- 
-to say slut rat victory:
-	if the location of the player is slutrat den:
-		say "     The rat grins as she pushes you towards the others, 'Let[']s remind this one how we treat bad people'. Of course, how they treat bad people and how they treat good people can be a bit foggy at times. At the call, the other rats stop their coupling and stroking and other diversions to instead gather around you with hungry expressions.";
-	otherwise:
-		say "     Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged.  They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
-	if cocks of player is greater than 0:
-		say "     One rat lowers before you and takes your [cock size desc of player] [cock of player] dick into her waiting snout, suckling firmly as her hands caress your [ball size] in eager rubs of her smooth hands";
-		if cocks of player is greater than 1:
-			let x be cocks of player minus 1;
-			say ".  Your extra endowment is not put to waste, as a rat girl reaches for each, and you are soon being stroked in increasingly fast motions. [if x is greater than 1]Your extra cocks[otherwise]Your extra cock[end if] is stroked with loving adoration as they nuzzle into your excited flesh and lap at it with warm soft tongues.";
-		otherwise:
-			say ".";
-	if cunts of player is greater than 0:
-		say "     The rat who [if location of player is slutrat den]beat you[otherwise]brought you in[end if] tips you forward, pressing her massive tool against your exposed snatch and rubbing along it in slow teasing motions, considering.";
-		if cunt length of player is less than 12 or cunt width of player is less than 7:
-			say "     She humphs, 'You will not fit, but we can fix that,' she assures in a needy whisper in your ear. Soon your head is being tipped back as something sickly sweet is poured down your throat, making your female organs tingle powerfully as they begin to expand";
-			increase cunt length of player by 4;
-			increase cunt width of player by 3;
-			if cunt length of player is less than 12 or cunt width of player is less than 7:
-				say ".  Despite the growth, you remain a bit too small, but the rat only has so much patience. She drives up, stuffing her huge organ into your now sopping wet cunt, the lubrication doing much to ease the passage as she begins to piston against you, slapping your bottom with her huge swaying balls and breeding you with a feral intensity.[impregchance]";
-			otherwise:
-				say ".  Now large enough, she smoothly pops her cock into your drenched hole, your needy fluids making it quite easy for her to pump lovingly against your wanton sex, grinding her hips against you when she isn't rocking with increasing intensity, her huge balls bumping you, promising a terrific load.[impregchance]";
-		otherwise:
-			say "     Your needy cunt is soon being stuffed and your body rocked as she crashes into you with practiced strokes, tickling at your most sensitive places with her rock hard member. You can feel the tool spurting thick gobs of fluid inside of you with every thrust, even though she hasn't even climaxed yet, your body tingling with pleasure.[impregchance]";
-	otherwise:
-		say "     The rat [if location of player is slutrat den]beat you[otherwise]brought you in[end if] leans you forward and presses her massive tool to your back door, easing up into your body with strange ease despite the size of the tool. As she rocks against you, new sensations explode and echo through your body. She pets over your [skin of player] form and cooes in your ear, pistoning against your ass with increasingly eager thumps.";
-	say "     A rat grabs your head and pulls you off towards a waiting nipple. The milk flows thick and sweet across your tongue as your groin throbs and tingles with new delights.  [slut rat growth]";
-	say "     All at once, everyone is climaxing. In you, around you, shuddering squeals of rodent delight before you feel your own body shudder in powerful release. As darkness claims you, you can see the den getting smaller, the original rat dragging you away.";
-	if a random chance of 1 in 2 succeeds and slutrat den is unknown:
-		say "You remember the way back!";
-		now the Slutrat Den is known;
 
 
 Section 1 - Slut Rat Den & Arrival
@@ -62,8 +147,7 @@ SlutratSub is a number that varies.  SlutratSub is usually 5.		[0 to 10 range, 5
 Slutratcor is a number that varies.
 lastratvisit is a number that varies.
 
-instead of sniffing SlutRat Den:
-	say "The den is heavy with the musky scents of the lustful rats, which is only slightly masked by the soft incenses.";
+the scent of the SlutRat Den is "The den is heavy with the musky scents of the lustful rats, which is only slightly masked by the soft incenses.";
 
 To Say slutratdenscene:
 	[puts Slut Rat as lead monster for easy use]
@@ -179,6 +263,7 @@ To ratslutchug:
 	if player consents:
 		say "     The purple stuff is cloyingly sweet and as thick as any milkshake you have ever sampled. You begin to suck as hard as you can, cheeks collapsing inwards as you try to drain the stuff from the bottle despite how slowly it wants to move. Your tongue is rewarded with a few dribs and drabs at first, lungs aching as you try harder. The bottle begins to crinkle as it bends inwards and you are suddenly rewarded with a gush of the sweet stuff. It[']s as much eaten as it is drunk, like especially thick jello with a taste that reminds lightly of honey.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "     Desperate for breath, you break the seal of your lips for a gasp. The bottle snaps back to its usual dimensions and a solid object pops out of it, blocking your throat. You collapse to your knees, choking almost silently as you try to dislodge it. You can feel the rats as either side of you, rubbing their curvaceous forms along you and petting as they whisper soft enticements, telling you to swallow, not spit. With a painful gulp, the sphere descends into your belly heavily.";
 		increase cock length of player by 8;
 		increase cock width of player by 8;
@@ -188,8 +273,9 @@ To ratslutchug:
 		follow the cock descr rule;
 		decrease humanity of the player by 20;
 		say "     As the pain fades, a warmth rushes down between your thighs. Your [cock of player] [if cocks of player is greater than 1]cocks begin[otherwise]cock begins[end if] to grow rapidly. The sound of stretching flesh is barely heard as pleasure runs through your altering shaft in sharp, almost painful, spikes of delight. The rats are cheering on the growth while the two beside you reach to rub and caress encouragingly. You are all too soon long enough for both of them to pull, squeeze, and play with you without getting in the way of the other, lavishing attention on your now [cock size desc of player] equipment with agile fingers and slippery tongues.";
-		say "     Their hands leave your sensitive bits to haul you to your feet. That[']s when you notice their scent has changed. Instead of smelling like dirty animals, they smell like a delicate floral perfume, subtle and bogglingly attractive. You reach for one of them and your hand is swatted away lightly, 'Easy there, bitch,' she says with a smile, 'Good bitch. But you only touch when told to,' she says as she leans in and plants a kiss. Her fur tickles lightly against your own [skin of player] flesh as she draws you in against her curvy form. Down below, her throbbing shaft nudges against you through the leather she wears[if slutratcor is 1], 'Welcome, bitch. We[']ll have lots of fun together.'[otherwise], 'That[']s a good boy, drink nice and hard.'[end if] Greeting given, she pushes you back half a step, and moves back to her pillow.";
+		say "     Their hands leave your sensitive bits to haul you to your feet. That[']s when you notice their scent has changed. Instead of smelling like dirty animals, they smell like a delicate floral perfume, subtle and bogglingly attractive. You reach for one of them and your hand is swatted away lightly, 'Easy there, bitch,' she says with a smile, 'Good bitch. But you only touch when told to,' she says as she leans in and plants a kiss. Her fur tickles lightly against your own [skin of player] flesh as she draws you in against her curvy form. Down below, her throbbing shaft nudges against you through the leather she wears[if slutratcor is 1], 'Welcome, bitch. We[']ll have lots of fun together[otherwise], 'That[']s a good boy, drink nice and hard[end if].' Greeting given, she pushes you back half a step, and moves back to her pillow.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		try looking;
 		continue the action;
 	otherwise:
@@ -256,11 +342,13 @@ Carry out ratdarts:
 			say "     'Like skeeball!' a cheery rat beside her pipes up, reaching for her neighbour's cock.  'Nah!  Skeeball's lame,' she first says, stuffing the rat's muzzle over her throbbing cock to silence her.  'Maybe a pinball machine or a video game.  Have to run a damn long extension cord for that though,' she muses, thrusting into the cocksucking rat's mouth.";
 			say "     'What about pool?' another offers, coming over to play with the rat's breasts.  'Yeah, pool wouldn't be bad at all.  One of those big, classy tables they got in those high-class clubs would be awesome!  Newbie, you get right on that,' she orders, giggling as her nipples are licked and she becomes preoccupied with her playmates.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 			now Pool Hall is unresolved;
 			now pooltable of slutrat den is 1;
 		if remainder after dividing ratdartcount by 4 is 0 and pooltable of slutrat den is 1:
 			say "     The same slut rat from earlier [one of]looks up from plowing another smaller rat as you approach the board again.  'Hey newbie, any luck finding us that pool table or somethin[']?' she asks, not breaking her pace.  You shake your head and she grumbles, 'Bummer!' and returns to nibbling on her current lover's ear.[or]scratches in itch on her chest, making her large breasts jiggle.  'Any luck with getting us something else to do?' she bitches.[or]yawns in boredom.  'We should really have something more than darts.  Go back topside and look for a classy pool table.  Try the High Rise District for a fancy pool hall,' she suggests.  'Yeah, get moving!' a few of the others pipe up.[or]presses another rat's face to her dripping pussy.  'You should really head topside and find us that pool table,' she complains.  'Yeah!  And look for a skeeb-' the second girl starts to say, but is cut off as the bigger rat stuffs her face back to her cunt.[in random order]";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		let the bonus be (( the dexterity of the player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: Taking a brief breath, you draw back the dart and eye the center circle. With a sudden thrust, the dart sails forward. ";
@@ -289,10 +377,10 @@ Carry out ratdarts:
 				say "Your dart lands on the outer rim of the board. The rats nod lightly, but none of them look terribly impressed at your skill. Perhaps with more practice...";
 			-- 3:
 				say "With pride, you land in the inner section of the board, shy of a bulls eye. One of the rats tosses a pack of chips towards you with a thumbs up.";
-				add "chips" to invent of player;
+				increase carried of chips by 1;
 			-- 4:
 				say "Yes! Your dart lands in the central circle, a bulls eye! The rats give a polite cheer at your excellent shot. One of them reaches under herself and pulls out a can of soda and tosses it to you, still warmed from her rump.";
-				add "soda" to invent of player;
+				increase carried of soda by 1;
 			-- 5:
 				say "Perfection. Your dart lands right in the middle of the central circle. A soft whistle of appreciation raises through the gathered rats. You can't help but feel more confident in yourself as a result.";
 				decrease slutratsub by 1;
@@ -308,13 +396,19 @@ Carry out ratdarts:
 Section 4 - Slut Rat Sex
 
 To say slutratsubsex:
+	[puts Slut Rat as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Slut Rat":
+			now monster is y;
+			break;
 	say "     The horny rat pins you down, clearly intent on having her way with your body.  You moan softly and strip as you submit yourself to her needs.  Her paws run over your body";
 	if cunts of player > 0:
 		say ", drifting down your chest to your groin[if cocks of player > 0].  She wraps her paw around your cock and balls, then lifts them out of the way to expose your waiting pussy[otherwise].  She slides her fingers across your waiting pussy[end if].  You moan softly as the rat herm teases your pussy with a hungry, lustful grin.  She moves into position, lining her cock up with your slit and thrusts into you[if cunt length of player < 10 or cunt width of player < 6].  Your wet snatch is a tight fit for the well-hung rat, but she growls and thrusts all the harder, eventually stuffing your pussy full of rat cock[otherwise].  Your wet snatch spreads open for the well-hung rat, taking her cock fully into you, making you both moan in pleasure[end if].";
 		if SlutratSub > 5:
-			say "     'Mmm... you're a good little bitch, aren't you?' she moans in you ear as she fucks you.  You can't help but nod in agreement, loving the feel of this powerful, sexy rat dominating you.  Her big, thick cock throbs inside you so deliciously with each push it makes into your eager body.    You grip her balls and fondle them, longing for her to fill you with her seed[if cocks of player > 0].  She takes your cock in hand and starts stroking your meat, making you whimper in pleasure like the horny slut you are[otherwise].  She slides her paws to your breasts, groping and squeezing them, making you whimper in pleasure like the horny slut you are[end if].  Eventually the rat girl's penis drives into you one last time and unleashes a hot rush of seed deep inside you.  You can feel each blast of that powerful rat's cum and longing for more even after the heavy load you've received[if cocks of player > 0].  Your paint your chest with your own cum as the pleasure of this wild romp pushes you to orgasm hard for dominant rat pumping your shaft[end if].  Satisfied, she withdraws her softening shaft and gives your ass a swat while rat cum leaks from your gaping slit.";
+			say "     'Mmm... you're a good little bitch, aren't you?' she moans in you ear as she fucks you.  You can't help but nod in agreement, loving the feel of this powerful, sexy rat dominating you.  Her big, thick cock throbs inside you so deliciously with each push it makes into your eager body.    You grip her balls and fondle them, longing for her to fill you with her seed[if cocks of player > 0].  She takes your cock in hand and starts stroking your meat, making you whimper in pleasure like the horny slut you are[otherwise].  She slides her paws to your breasts, groping and squeezing them, making you whimper in pleasure like the horny slut you are[end if].  Eventually the rat girl's penis drives into you one last time and unleashes a hot rush of seed deep inside you.  You can feel each blast of that powerful rat's cum and longing for more even after the heavy load you've received[if cocks of player > 0].  Your paint your chest with your own cum as the pleasure of this wild romp pushes you to orgasm hard for dominant rat pumping your shaft[end if].  Satisfied, she withdraws her softening shaft and gives your ass a swat while rat cum leaks from your gaping slit.[impregchance]";
 		otherwise:
-			say "     'Mmm... nice to be bottom for a change, isn't it?' she moans in you ear as she fucks you.  You can't help but nod in agreement, loving the feel of this powerful, sexy rat atop you.  Her big, thick cock throbs inside you so deliciously with each push it makes into your eager body.    You grip her balls and fondle them, eager to help her get off[if cocks of player > 0].  She takes your cock in hand and starts stroking your meat, spreading your leaking precum over it[otherwise].  She slides her paws to your breasts, groping and squeezing them, making you nipples painfully hard[end if].  Eventually the rat girl's penis drives into you one last time and unleashes a hot rush of seed deep inside you.  You can feel each blast of that beautiful rat's cum and watch your tummy swell a little from the output of her big balls[if cocks of player > 0].  Your paint your chest with your own cum as the pleasure of this wild romp pushes you to orgasm hard for sexy rat pumping your shaft[end if].  Satisfied, she withdraws her softening shaft and gives your ass a swat while rat cum leaks from your gaping slit.";
+			say "     'Mmm... nice to be bottom for a change, isn't it?' she moans in you ear as she fucks you.  You can't help but nod in agreement, loving the feel of this powerful, sexy rat atop you.  Her big, thick cock throbs inside you so deliciously with each push it makes into your eager body.    You grip her balls and fondle them, eager to help her get off[if cocks of player > 0].  She takes your cock in hand and starts stroking your meat, spreading your leaking precum over it[otherwise].  She slides her paws to your breasts, groping and squeezing them, making you nipples painfully hard[end if].  Eventually the rat girl's penis drives into you one last time and unleashes a hot rush of seed deep inside you.  You can feel each blast of that beautiful rat's cum and watch your tummy swell a little from the output of her big balls[if cocks of player > 0].  Your paint your chest with your own cum as the pleasure of this wild romp pushes you to orgasm hard for sexy rat pumping your shaft[end if].  Satisfied, she withdraws her softening shaft and gives your ass a swat while rat cum leaks from your gaping slit.[impregchance]";
 	otherwise:
 		say ", moving up to grab your head and pulling it between her legs.  Finding your face pressed against the rat's large cock, you take in her strong, arousing scent.  Her strong scent is quite arousing and you find yourself submitting to her desires and begin to lick and kiss her throbbing meat.  She moans happily and rubs her paws over your head, scritching your ears.";
 		if SlutratSub > 5:
@@ -324,6 +418,12 @@ To say slutratsubsex:
 	infect "Slut Rat";
 
 To say slutratdomsex:
+	[puts Slut Rat as lead monster in case of impregnation]
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is "Slut Rat":
+			now monster is y;
+			break;
 	if cocks of player > 0:
 		if a random chance of 1 in 2 succeeds:
 			say "     Feeling in the mood for a little fun, you press the slutty rat towards a battered and stained loveseat someone managed to get down here.  The rats sitting there vacate it reluctantly as you both strip, but the prospect of watching a little fun clearly helps.  You push the rat face down onto the stained cushions and get your cock lined up with her wet slit.  She moans softly as you tease your cock against her wet slit a few times before sinking into her, listening to her give a [if cock length of player < 6 or cock width of player < 4]soft sigh of pleasure as you mount her[otherwise if cock length of player < 18 and cock width of player < 12]delicious moan of pleasure as you mount her[otherwise]muffled yelp of painful pleasure as your big cock is driven into her[end if].  As you start thrusting, she squirms and wriggles under you, her wet cunt gripping and squeezing your cock with need[if slutratsub < 4].  You press her rodent muzzle against a musky stain on the cushions as you take her cock in your other hand and start pumping at it[otherwise].  You wrap your hand around her cock and start pumping at it[end if].  You pound into her again and again, loving her lustful cries as the others watch you have your way with the horny rat beneath you.  After a good, long fucking, you drive hard into her and blast your thick seed into her[if cock width of player > 12], making her belly swell with your ample load[otherwise], emptying your balls into her dripping slit[end if].  With you stroking her throbbing meat, she blasts her load onto the loveseat, adding another big, sticky stain to it[if slutratsub < 4], which you leave her lying in.  The rats who left the loveseat scramble back onto it, sharing other rat between them to deal with their own lusts now[otherwise].  Satisfied, you pull out and pull her up into a kiss while the loveseat's previous occupants reclaim it to satisfy their own excited lusts now[end if].";
@@ -331,7 +431,7 @@ To say slutratdomsex:
 			say "     Feeling in the mood for a little fun, you push the slutty rat to one of the walls and move in behind her.  Stripping off your clothes, you lift her rat tail up and grind your hard cock against her ass.  She moans and wiggles back against your throbbing meat.  Grabbing her bottom firmly, you sink your hard cock into her, making her [if cock length of player < 6 or cock width of player < 4]give a soft sigh of pleasure as you mount her[otherwise if cock length of player < 18 and cock width of player < 12]moan in satisfaction as you mount her[otherwise]release a muffled yelp of painful pleasure as your big cock is driven into her[end if][if slutratsub < 4].  She braces herself against the wall as you pound into her hard and fast, [otherwise].  She rubs back against you as you thrust into her steadily, [end if]making her wet cunt quiver and squeeze around you wonderfully.  Putting a free hand around her throbbing meat, you pump and stroke her cock as you fuck her until she blasts her thick seed across the wall, painting it with her semen.  As she orgasms, her cunt squeezes and milks at your shaft, getting you to cum hard and pump your load into her[if cock width of player > 12].  Your ample load makes her belly swell as you drain your big balls into her lustful body[end if][if slutratsub < 4].  Finished with her, you pull your cock free and leave her lying against the wall in a post-orgasmic daze, her cum running down the wall onto fur[otherwise].  Finished, you slide your cock free and pull her into a lustful kiss and an ass squeeze before parting[end if].";
 	otherwise:
 		if a random chance of 1 in 2 succeeds:
-			say "     Feeling in the mood for a little fun, you press the slutty rat towards a battered and stained loveseat someone managed to get down here.  The rats sitting there vacate it reluctantly as you both strip, but the prospect of watching a little fun clearly helps.  You push the rat to lay down on the stained cushions and straddle her throbbing cock.  You stroke and pump it, making sure its fully hard before moving to ease yourself down onto it, eager to take what you want from this sexy rat.  She moans as your wet pussy kisses her glans, then starts to spread open for it[if cunt width of player < 9 or cunt width of player < 6].  Her large cock is difficult for your small pussy to take, but you take your time and are persistent, forcing the rat below you to let you set the pace until you are stuffed full of her throbbing meat[otherwise if cunt length of player < 16 and cunt width of player < 12].  Her large cock is a wonderful fit for your large pussy, wonderfully long and filling.  You do take your time sinking down onto it, wanting to savour the sensation, forcing the rat below you to let you set the pace[otherwise].  Your cavernous pussy takes her large cock in easily, letting you drive the full length of it into you in one quick push.  The sexy rat moans deliciously as your hot, slick cunt swallows up her big penis in one go[end if].  You give the rat's cock a good, long ride, switching from fast pounding to slow creeping, drawing it out until the slut rat is moaning and begging you to let her finish.  As you feel your own orgasm approaching, you push towards it until you cum hard and allow the rat to finally get off and pump her ample load into you with a moan of satisfaction[if slutratsub < 4].  Finished with her, you get up and leave her on the loveseat in a daze for its previous occupants to use to sate their lusts[otherwise].  Finished, you get up and pull her into you arms for a lustful kiss and an ass squeeze before parting[end if].";
+			say "     Feeling in the mood for a little fun, you press the slutty rat towards a battered and stained loveseat someone managed to get down here.  The rats sitting there vacate it reluctantly as you both strip, but the prospect of watching a little fun clearly helps.  You push the rat to lay down on the stained cushions and straddle her throbbing cock.  You stroke and pump it, making sure its fully hard before moving to ease yourself down onto it, eager to take what you want from this sexy rat.  She moans as your wet pussy kisses her glans, then starts to spread open for it[if cunt width of player < 9 or cunt width of player < 6].  Her large cock is difficult for your small pussy to take, but you take your time and are persistent, forcing the rat below you to let you set the pace until you are stuffed full of her throbbing meat[otherwise if cunt length of player < 16 and cunt width of player < 12].  Her large cock is a wonderful fit for your large pussy, wonderfully long and filling.  You do take your time sinking down onto it, wanting to savour the sensation, forcing the rat below you to let you set the pace[otherwise].  Your cavernous pussy takes her large cock in easily, letting you drive the full length of it into you in one quick push.  The sexy rat moans deliciously as your hot, slick cunt swallows up her big penis in one go[end if].  You give the rat's cock a good, long ride, switching from fast pounding to slow creeping, drawing it out until the slut rat is moaning and begging you to let her finish.  As you feel your own orgasm approaching, you push towards it until you cum hard and allow the rat to finally get off and pump her ample load into you with a moan of satisfaction[if slutratsub < 4].  Finished with her, you get up and leave her on the loveseat in a daze for its previous occupants to use to sate their lusts[otherwise].  Finished, you get up and pull her into you arms for a lustful kiss and an ass squeeze before parting[end if].[impregchance]";
 		otherwise:
 			say "     Feeling in the mood for a little fun, you push the slutty rat to her knees and [if slutratsub < 4]press[otherwise]guide[end if] her muzzle between your legs to your dripping cunt.  Obediently, she sets to licking and kissing your sensitive folds, then slides her slick tongue into your hot tunnel, making you sigh in pleasure.  You run your fingers through her rough hair and over her round ears.  She works hard to please you, working her tongue up inside you and flicking it against your inner walls to excite any sensitive spot she finds.  Between licking, she kisses and sucks at your clit, making you moan all the more.  She keeps this up diligently until you cum hard, soaking her face and muzzle in your hot juices, which she eagerly laps up.  As the rush of your orgasm starts to fade, you press her to lay back on the floor and take her cock firmly in hand.  As a reward for her hard work and attentive tongue-work, you pump her meat until she cums hard and sprays her seed over herself.  Finished with her, you leave her like that, stick with a mix of your juices and her semen.";
 	infect "Slut Rat";
@@ -400,11 +500,10 @@ to say poolhallvictoryorgy:
 	say "     Adding another cougar to your pile of defeated foes, you look around to see the puma counterattack faltering and then breaking entirely.  There are calls for retreat and the feline herms try to make a break for it, but several are unable to get away, piled on by horny, victorious slut rats.  Other, lost in the lusts of their own victory and fucking their prey, don't hear the call and soon have the tables turned on them by a few other rats joining in.  Finding yourself quite aroused by the orgy of sex and transformation around you, you rush over to join the rat duo of the one who got you looking for a table and her skeeball-loving friend.";
 	say "     They have one of the pumas bent over a pool table and are about to have some fun with her.  Taking an eight ball in her paw, the lead rat stuffs it in the puma's muzzle to silence her while the other starts licking at her pussy and asshole.  Deciding that, since they don't remember their old names, you'll just have to give them nicknames.  'Nice move, Eight-ball,' you say, patting the larger rat's shoulder.  'Be sure to lick her nice and deep, Skeeball.  I want her good and slick,' you chuckle as you [if cocks of player > 1]stroke your throbbing cocks[otherwise]stroke your throbbing cock[otherwise]swat the kitty's ass[end if].";
 	if cocks of player > 0:
-		say "     After Skeeball's licked the kitty until she's mewling with need around her stuffed muzzle and grey fur's starting to spread across her muff, you move atop the feline and sink your [if cocks of player > 0]cocks into her pussy and tailhole[otherwise]cock into her pussy[end if].  Leaning over her, you nibble and licks at her ears, tugging at them lightly until they take on a rounder, rat-like shape.  While you merrily fuck your victim, Eight-ball moves in behind you and rubs her own throbbing cock against your ass.  Wiggling your bottom, you steady yourself for the rat and she drive her throbbing rathood into your [if cunts of player > 0]dripping snatch[otherwise]tight hole[end if].  With the added rat behind you, you drive all the harder into the puma.  As her short muzzle elongates into a lovely, rat-like muzzle, Skeeball is there to pull out the pool ball and replace it with her cock.  Getting stuffed from both ends, the cougar changes faster and faster, well on her way to becoming a lovely and lustful new rat sister.  With a final thrust, you push deep into her and unleash your hot load into her, filling her womb[if cocks of player > 1], and ass[end if] with your semen.";
+		say "     After Skeeball's licked the kitty until she's mewling with need around her stuffed muzzle and grey fur's starting to spread across her muff, you move atop the feline and sink your [if cocks of player > 0]cocks into her pussy and tailhole[otherwise]cock into her pussy[end if].  Leaning over her, you nibble and licks at her ears, tugging at them lightly until they take on a rounder, rat-like shape.  While you merrily fuck your victim, Eight-ball moves in behind you and rubs her own throbbing cock against your ass.  Wiggling your bottom, you steady yourself for the rat and she drive her throbbing rathood into your [if cunts of player > 0]dripping snatch[otherwise]tight hole[end if].  With the added rat behind you, you drive all the harder into the puma.  As her short muzzle elongates into a lovely, rat-like muzzle, Skeeball is there to pull out the pool ball and replace it with her cock.  Getting stuffed from both ends, the cougar changes faster and faster, well on her way to becoming a lovely and lustful new rat sister.  With a final thrust, you push deep into her and unleash your hot load into her, filling her womb[if cocks of player > 1], and ass[end if] with your semen.[impregchance]";
 	otherwise:
-		say "     After Skeeball's licked the kitty until she's mewling with need around her stuffed muzzle and grey fur's starting to spread across her muff, you pat the slutty rat and tell her its time to fuck that hole.  Skeeball, normally the bitch, jumps at the opportunity and sinks her cock slowly into the herm's cunt.  Eight-ball, not to be left out, moves in around behind the other rat.  'Here, let me help you with that,' she says, sinking her cock into her partner's cunt.  With the stronger rat behind her, Skeeball pounds hard and fast into the cougar.  You climb up onto the table and, removing the pool ball from her changing muzzle, guide her rat-like face to your snatch, having her lick your pussy while the rats take her.  You rub her changing ears, stroking and rubbing into a lovely rat ears while her tongue dives into you again and again.  With such an exciting set of partners, you end up cumming hard, soaking her muzzle and leaving a wet patch on the green felt of the table.";
+		say "     After Skeeball's licked the kitty until she's mewling with need around her stuffed muzzle and grey fur's starting to spread across her muff, you pat the slutty rat and tell her its time to fuck that hole.  Skeeball, normally the bitch, jumps at the opportunity and sinks her cock slowly into the herm's cunt.  Eight-ball, not to be left out, moves in around behind the other rat.  'Here, let me help you with that,' she says, sinking her cock into her partner's cunt.  With the stronger rat behind her, Skeeball pounds hard and fast into the cougar.  You climb up onto the table and, removing the pool ball from her changing muzzle, guide her rat-like face to your snatch, having her lick your pussy while the rats take her.  You rub her changing ears, stroking and rubbing them into a lovely rat ears while her tongue dives into you again and again.  With such an exciting set of partners, you end up cumming hard, soaking her muzzle and leaving a wet patch on the green felt of the table.";
 	say "     The rat orgy goes on for quite a while, with a celebration that finishes off the liquor at the bar during the orgy of sex.  You swap around with lots of the rats, taking turns enjoying the transforming felines, helping them to become lovely, slutty rats.  This new bitches are made to carry one of the large pool tables down into the sewers and bring it all the way back to the rat den.  Space is made and the new table is set up, much to the delight of the other rats.  After another bout of celebratory sex, you are left sexually satisfied and covered in rat cum and juices after having been filled every which way possible.";
-	if cunts of player > 0, say "[impregchance]";
 	infect "Slut Rat";
 	infect "Slut Rat";
 	move Pool Table to slutrat den;
@@ -446,8 +545,7 @@ The description of Pool Table is "     This is the pool table that you, Eight-ba
 The conversation of Pool Table is { "Scratch!" }.
 lastpoolgame is a number that varies.  lastpoolgame is normally 555.
 
-instead of sniffing the Pool Table:
-	say "The pool table smalls of the rats that have been playing it and of the stains they've left on it.";
+the scent of the Pool Table is "The pool table smalls of the rats that have been playing it and of the stains they've left on it.";
 
 instead of fucking the Pool Table:
 	say "I know it's got holes, but those aren't the kind of balls you're supposed to put into them.";
@@ -509,142 +607,6 @@ instead of conversing the Pool Table:
 			now lastpoolgame is turns;
 			say "[slutratdomsex]";
 
-
-Section 7 - Ronda
-
-instead of going to Mall FoodCourt while ( hp of Ronda is 1 and lastfuck of rod - turns >= 16 ):
-	move player to Mall FoodCourt;
-	if furry is banned or girl is banned or hermaphrodite is banned or humorous is banned or guy is banned:
-		say "     Rod seems particularly down and you go over to talk to him.  He sighs sadly and tells you about how he went to the mysterious shop in the mall to look for a cure for Ronda.  'But the spooky dog-woman said nothing could be done for her.  She had some weird, mumbo-jumbo explanation.  Something about needing the creatures that have been banned or something.  So, I guess nothing can be done for her.'  With that, he slumps off to be alone at one of the tables in the far corner of the food court.";
-		now hp of ronda is 2;
-	otherwise:
-		now hp of ronda is 3;
-		say "     Rod comes up to you as you arrive.  He seems a little more animate than he's been of late, if still rather disheveled.  'Hey, can I ask a favour?  I was, like, you know, totally missing Ronda.  You know about Ronda, dontcha?  She was there when those infected rats popped up and swarmed the place.  You must've missed it, but it was a bad scene, dude.'  You keep quiet, thinking it best that Rod and the other rats not know about your part in that incident.  'But yeah, there I was, totally bummed, when I went [']Dude!['] and got this brainwave to talk to that weird dog-girl at the shop.  She was all spooky and stuff, but she said there might be a way to help Ronda.  But that's when she told me that I'd need to get some stuff out in the city, and I'm not to keen on leaving the mall, you know.  So brainwave number two comes and I'm thinking my friend can help me with it.  So that's where you come in.'  Feeling a little guilty about what happened, you agree to visit the shop on the west side of the Atrium and see what needs to be done.";
-
-instead of conversing the Nermine while ( hp of Ronda is 3 and nerminetalk > 0 ):
-	now hp of Ronda is 4;
-	say "     Nermine smiles as you bring up the topic of Ronda and the slut rats.  'Ahh... I was wondering who the rat boy would find to be helping him.  Ironic that he should be picking you, eh?' she says, leaning across her counter.  'Well, perhaps you will be learning not to play around with things you are not understanding.  Now, as I told the rat boy, I should be needing some things to be making a cure for his love.  He is bound too tightly to the mall and cannot be leaving, even for the girl he loves.  But you are not having this problem.";
-	say "     First, there are some lizards running around the park who are thinking they are artists.  Be finding one of them and be getting a sample of the juices from their womanly flower.  This should not be too hard a task.  More difficult is the fruit needed.  There are grand trees roaming the streets, moving around on their own power.  These are producing fruits capable of restoring a person.  Eating these fruits, they are changing to become human again, or at least appearing to be human.  I am needing the best and shiniest of these fruits to be fighting the corruption affecting the Ronda-rat.  Most of the other herbs and holy items I am having already.";
-
-
-before conversing the Nermine while hp of Ronda is 5:
-	if "lizard juice" is listed in invent of player and "Awesomest Fruit" is listed in invent of player:
-		say "[rondaitems]" instead;
-
-to say rondaitems:
-	say "     Pulling out the items Nermine needed to help Ronda, you place them on the counter.  She smiles happily and takes them.  'And now it is time to be talking about Nermine's payment for this.  The last items Nermine is needing complete the cure are to be found in a private collection in the city.  Downtown, there is condo of a private art collector.  He is keeping veil and staff in his penthouse suite.  Nermine is wanting you to be collecting them for her.  Veil needed to complete cure, staff is payment.  One trip for both.  Easy for one working so hard to make amends.";
-	now hp of Ronda is 6;
-	now Art Collector is unresolved;
-	increase score by 10;
-	delete lizard juice;
-	delete Awesomest Fruit;
-
-before conversing the Nermine while hp of Ronda is 7:
-	say "[rondaitems2]" instead;
-
-to say rondaitems2:
-     say "     Nermine smiles as you hand over the items to her, examining them with a critical eye.  'You are being most helpful in this.  The staff of Tiresias will be looking good in my collection,' she says, placing the seemingly ordinary stick in the case.  'It is unfortunate I am to be burning the veil, but having one is better than none.'  With that, she takes takes it and the other items you gathered into the back to prepare them.  When she finally emerges some time later, she hands a vial of grey fluid to you.  'You are to be giving this to the Ronda-rat.  It will be purging the dark power within her.  Be careful, is only having one chance at this.  I can be making no more with what is available here in the city.";
-	now hp of Ronda is 8;
-
-before conversing the Nermine while ( hp of Ronda is 8 or hp of Ronda is 9 ) and a random chance of 1 in 3 succeeds:
-	say "     You have the cure you need.  Now you are needing to be finding the Ronda and giving it to her.  Talk to the Rod-rat about this.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"lizard juice"	"A small vial of the creamy, white cum from one of those lizard girls."	1	lizard juice
-
-lizard juice is a grab object.  It is part of the player.  It is not temporary.
-
-instead of using lizard juice:
-	say "You need to save that to help Ronda.";
-
-
-Art Collector is a situation.  The level of Art Collector is 9.
-Art Collector is resolved.
-The sarea of Art Collector is "High";
-
-artleopardfight is a number that varies.
-artattempt is a number that varies.
-
-Instead of resolving a Art Collector:
-	if artattempt is 0:
-		say "     Managing to follow Nermine's directions through the available paths through the chaotic city, you manage to circumvent other creatures and obstacles to make it to the address she's provided you.  Looking up at the high rise building, your legs ache at the thought of scaling its stairs to reach the penthouse, but there is no other option.  You move quietly inside and carefully make your way to the stairwell to begin your ascent.  It is long and tiring, but you press on, not wanting to risk being found in such a confined space with the countless creatures which probably enhabit this building.  You can see several wet splotches on the stairs, many quite fresh.";
-		say "     After an ascent which leaves you hungry, thirsty and aching, you make it to the access to the penthouse suite.  Opening the door, you step into the antechamber connecting to the inoperative elevator and the large doors to the suite.  Finding them unlocked, you slip quietly into the spacious foyer and living room, looking at the various pieces on display.  One of them, a veil and simple staff are held in a glass case.  The veil is a simple band of old, greyed cloth and the staff is little more than a wooden walking stick made from a straight branch, neither having anything remarkable about them.  As you look over the case, you try to decide how best to get at the contents, but are interrupted by an angry growl behind you.  Turning, you find a large leopardman stalking out of the nearby bedroom and spot several sexy leopardesses on the bed waiting for his return after dealing with the would-be thief.  This creature was once likely the art collector and has since gathered a harem of horny females to add to his collection.";
-	otherwise:
-		say "     Managing to make your way back to the high rise with the art collector's suite atop it, you pause, reluctant to head up and possibly face the powerful leopardman again.  Gathering your resolve, you make your way inside and begin your arduous ascent anew.   It is long and tiring, but you press on, not wanting to risk being found in such a confined space with the countless creatures which probably enhabit this building.  You can see several wet splotches on the stairs, many quite fresh.";
-		say "     After an ascent which leaves you hungry, thirsty and aching, you find yourself in front of the penthouse suite again.  Opening the door, you step into the antechamber connecting to the inoperative elevator and the large doors to the suite.  Finding them still unlocked, you slip quietly into the spacious foyer and living room, looking at the various pieces on display before heading over to the one containing the veil and simple staff.  As you approach it, but are again interrupted by an angry growl from the large leopardman stalking out of the nearby bedroom.  The several sexy leopardesses are still spread out on and around the bed waiting for his return after dealing with the would-be thief.";
-	increase thirst of player by 12;
-	increase hunger of player by 6;
-	decrease hp of player by ( hp of player divided by 6 );
-	now artleopardfight is 3;
-	challenge "Leopardman";
-	if artleopardfight is 3:		[fled]
-		say "     You manage to feint past the enraged, aroused feline and charge out of the suite.  You rush for the stairs with him in hot pursuit, but the lustful moans of the heat-ridden females draw him back inside, letting you escape.  You run down as quick as you can for the first several flights, just in case, then slow to a more reasonable pace for your long defeated descent.  You'll have to recover and try coming back another time.";
-		now artattempt is 1;
-	otherwise if artleopardfight is 2:	[lost]
-		say "     The powerful leopard grabs you and runs his paws over you, as if trying to decide what to do with the thief he's caught.  But before he can come to a decision, the heat-ridden females on his bed start to yowl in lustful need, longing for the strong male to rejoin them.  The muscled feline grabs you roughly and drags you out onto his large patio.  While the impressive view of the skyline would normally draw your attention, it is the ground that soon fills your view as he hurls you over the side of the building.  You scream as you plummet quickly, spreading yourself out as best you can to slow your fall, but with little effect as the pavement seems to rush up at you.  As you are about to strike the ground, everything mercifully goes black.";
-		now artattempt is 1;
-		wait for any key;
-		clear the screen;
-		say "[bold type]Splud![roman type]";
-		wait for any key;
-		now heat enabled is false;	[temporarily turning off heat effects]
-		now skipturnblocker is 1;	[temporarily turns off several other end of turn effects]
-		if "Rapid Healing" is not listed in feats of player, follow the turnpass rule;
-		if "Regeneration" is not listed in feats of player, follow the turnpass rule;
-		follow the turnpass rule;
-		follow the turnpass rule;
-		follow the turnpass rule;
-		follow the turnpass rule;
-		now heat enabled is true;	[heat effects turned back on]
-		now skipturnblocker is 0;	[restores normal end of turn functions for the final turn skip after the scene]
-		now hp of player is 1;
-		increase hunger of player by 5;
-		increase thirst of player by 5;
-		decrease morale of player by 20;
-		decrease humanity of player by 8;
-		say "     When you finally awaken, sore and aching all over but somehow alive, you give thanks to the powerful healing abilities of the infection.  You slowly struggle to rise, the healing process having taken much out of you.  You have left a noticeable dent and several cracks in the pavement where you landed, as well as a sizable red stain.  Looking at it as you struggle to get up, you notice that something else is off - the lighting very different now.  Looking up, you see that it's [short time of day] now, many hours since your ill-fated fight with the leopardman.  After what feels like a Herculean effort, you make it to your feet and stagger off to find someplace to heal in peace.";
-	otherwise if artleopardfight is 1:	[victory]
-		say "     With the leopardman driven off, you can hear the lustful yowls of the felines get louder as they start to climb off the bed.  Unwilling to face down a pack of heat-ridden females, you quickly smash the case, grab the items and make a run for it.  You dash to the antechamber and into the stairwell, rushing down the first couple of flights.  When you don't hear any pursuit, you relax a little and cautiously slow down, hoping the decided to coax the defeated male from the other room to satisfy them.  You look over the strange, unassuming items and hope they are worth the effort as you stow them away carefully and make your way back outside.";
-		increase score by 20;
-		now hp of Ronda is 7;
-		now Art Collector is resolved;
-
-
-to say rondarescue:
-	say "     Looking around the room, you spot several of the rats in mid-coitus and try to check them out without looking too interested.  Not that the rats would mind, per se, but you might get roped into playing with them and lose track of your actual goal.";
-	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	let the dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus]+[level of Ronda] -- [dice + bonus + level of Ronda]: vs 17.";
-	if dice + bonus + level of ronda < 17:
-		increase level of Ronda by 2;
-		say "     Looking around the various rats in the den at the moment, you aren't able to spot one with Ronda's red heart on their fur.  You try to keep a mental list of who you've already checked, though it's hard to tell the slutty rats apart at times.";
-	otherwise:
-		say "     You are about to give up when you spot a flash of red on one of the large rats.  This well-endowed herm has another rat's muzzle buried under her hefty balls and licking her snatch.  You'd almost missed it because her big testes were covering the little red heart.  You're tempted to join in right away, but you won't be able to tempt her someone secluded until she's done with her current playtoy anyhow.  You snuggle back with one of the other rats and sit back to enjoy the show.";
-		if pooltable of slutrat den is 3:
-			if slutratsub > 5 or cocks of player is 0:	[bottom]
-				say "     Finding yourself in Eight-ball's arms, you moan in pleasure as the rat starts playfully teasing you.  You giggle happily and wiggle back against her cock, soon rewarded with the pleasant joy of having her cock slide up into your [if cunts of player > 0]hot pussy[otherwise]tight ass[end if].  You bounce in his lap as you both enjoy the show, watching as Ronda rolls the other rat onto all fours and fucks her good and hard until she's full of overflowing semen, and so are you.[impregchance]";
-			otherwise:			[top]
-				say "     Finding yourself in Skeeball's arms, you moan in pleasure as the rat starts playfully teasing you.  You giggle happily and pull her into your lap.  The slutty rat grinds herself down onto your cock and moans in pleasure as you drive it into her, bouncing her in your lap as you both enjoy the show.  You watch as Ronda rolls the other rat onto all fours and fucks her good and hard until she's full of overflowing semen, and so is Skeeball.";
-		otherwise:
-			say "     You make out with the sexy slut rat you've found, playing around until you have both have a powerful orgasm while you watch Ronda fuck the small rat beneath her until she's full of overflowing semen.";
-		infect "Slut Rat";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "     After the sexy show is over, you keep an eye on Ronda, letting her relax for a bit and hopefully become aroused enough to be tempted away for some more fun.  Noticing her cock start to throb as her fingertips subconsciously slide over it, you snuggle up beside her and run your paw across her hip.  At first, she doesn't seem very interested, but you start teasing her.  Once you begin to get her attention, you discretely slip out the pack of deluxe chocolates, which really pique her interest.  Whispering that you don't really have enough for everyone, you wrap your paw around her cock and lead her off towards a shadowy alcove where some junk and supplies are kept.  She follows with a paw on your ass, squeezing it.";
-		say "     Once out of sight of the others, Ronda stuffs several of the chocolates into her muzzle, moaning in pleasure before pressing you into a chocolatey kiss.  Her tongue dives into your mouth, sharing the chocolate and hazelnut flavour with you as her paws run all over your body.  Fully hard and leaking precum, she grinds her cock against you lustfully.  'Oh, I've missed these so much,' she moans.  'It's like I can... almost remember...' she says softly.  You tell her that there are more waiting for her, that you'll help her remember, that you're here to help her change back.  You slide the small vial of grey liquid from your pack.";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "     But she shakes her head at that and grinds her hard cock against you harder.  'Change?  Why would I want to change?  We're the sexiest beasts on the planet.  Mmm... enough talking.  Let's fuck, sweet stuff,' she rumbles, grinding her hard cock against you.  You'll have to fight her before you can get her to take it.";
-		challenge "Slut Rat";
-		if lost is 1:
-			say "     After being beaten by Ronda and in the ensuing wild romp, the small vial is knocked aside and shatters, spilling its contents onto the dirty floor, ending any hope of saving her.";
-			say "     (***  Content still to be completed )";
-			now hp of Ronda is 99;
-		otherwise:
-			say "     Managing to beat Ronda, you hold her down long enough to pour the cure down her throat.";
-			say "     (***  Content still to be completed )";
-			now hp of Ronda is 10;
-
-
 Section 9 - Endings
 
 When play ends:
@@ -652,7 +614,7 @@ When play ends:
 		if bodyname of player is "Slut Rat":
 			say "     You can no longer deny your new basic needs. You flee to the mall and its comforting sewers. Following your instincts, you are soon in the welcoming embrace of your rodent sisters, who take turns fucking and being fucked by you for what feels like days in a celebration of your coming around. Your family remains there, hiding from the rescue, and living out your days together.";
 			if slutratcor is greater than 4:
-				say "     Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It[']s time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords had need of you both.";
+				say "     Your [skin of player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It's time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords have need of you both.";
 				continue the action;
 			otherwise if visittimes of slutrat den is greater than 0:
 				if slutratsub is 5:

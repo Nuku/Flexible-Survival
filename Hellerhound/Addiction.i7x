@@ -6,7 +6,7 @@ A grab object is either addictive or inert. A grab object is usually inert.
 
 Table of Addictive Items
 object	speed	name
-blood pill	1	"Blood Pill"
+blood pill	1	"blood pill"
 
 
 
@@ -63,9 +63,9 @@ Section 2 - Test Drug
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"Blood Pill"	"A pill you got from some strange street."	1	blood pill
+"blood pill"	"A pill you got from some strange street."	1	blood pill
 
-
+the scent of blood pill is "The strange pill has a harsh, metallic scent.";
 
 
 blood pill is a grab object. It is a part of the player. It is temporary. Understand "pill" as blood pill.
@@ -91,6 +91,6 @@ an everyturn rule:
 
 
 when play begins:
-	add "Blood Pill" to the invent of Entrance to the Red Light District;
+	add "blood pill" to the invent of Entrance to the Red Light District;
 
 Addiction ends here.

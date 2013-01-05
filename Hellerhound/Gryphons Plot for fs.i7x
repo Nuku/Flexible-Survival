@@ -22,8 +22,7 @@ instead of resolving a gryphons plot:
 						say "The third, wary of the defeat of the first two, flees.";
 						now milsave is 1;
 						say "The soldiers congratulate you and thank you for helping them. The give you some food.";
-						add "food" to the invent of the player;
-						add "food" to the invent of the player;
+						increase carried of food by 2;
 					otherwise:
 						say "You fly into the air on your wings, screeching a challenge at the gryphons. One, flying low, is startled and crashes into a nearby building, spraying milk all over. The other two come on to attack.";
 						challenge "Hermaphrodite Gryphon";
@@ -31,9 +30,8 @@ instead of resolving a gryphons plot:
 						challenge "Hermaphrodite Gryphon";
 						now milsave is 1;
 						say "The soldiers thank you for helping them, and they give you food in reward. You also collect some of the spilled milk from the gryphon that crashed.";
-						add "food" to the invent of the player;
-						add "food" to the invent of the player;
-						add "gryphon milk" to the invent of the player;
+						increase carried of food by 2;
+						increase carried of gryphon milk by 1;
 				otherwise:
 					if the bodyname of the player is "Hermaphrodite Gryphon" and the cockname of the player is "Hermaphrodite Gryphon":
 						say "Do you help the gryphons?";
@@ -64,8 +62,7 @@ instead of resolving a gryphons plot:
 							say "Do you gather some of the remained fluids?";
 							if the player consents:
 								say "You manage to get several bottles of gryphon milk out of the carnage.";
-								repeat with N running from one to 6:
-									add "gryphon milk" to the invent of the player;
+								increase carried of gryphon milk by 6;
 							otherwise:
 								say "You decide to leave the mess[one of] drying in the sun[or] alone[or] as it is[or], messy[at random].";
 							now milsave is -1;

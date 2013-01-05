@@ -33,7 +33,7 @@ Instead of resolving a Policeman:
 		say "     The cop walks up to you purposefully, pulling out his nightstick and slapping his palm with it a couple of times while sizing you up.  Watching your reactions, he notices that you[apostrophe]re not a mindless monster (yet) and relaxes only slightly.  'Hold it right there.  What are you doin[apostrophe] roamin[apostrophe] the streets during a crisis?  All citizens were advised to stay at home and in shelters before all communications dropped,' he growls with authority.";
 		if scenario is "Researcher":
 			say "     You quickly explain to him that you are actually a researcher sent in to gather data.  You tell him that you have been inoculated to be resistant and have been searching throughout the city for samples.  You tell him a little about what you[apostrophe]ve seen, leaving out some details for the moment.  You wouldn[apostrophe]t want to incriminate yourself.  The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
-		if hp of doctor matt > 0 and hp of doctor matt < 100:
+		otherwise if hp of doctor matt > 0 and hp of doctor matt < 100:
 			say "     You quickly explain to him that you were in a shelter, but were running out of supplies and had to risk leaving.  You tell him a little bit about what you[apostrophe]ve seen, leaving out some details for the moment.  You wouldn[apostrophe]t want to incriminate yourself.  You even add in the fact that you[apostrophe]re working with a scientist who[apostrophe]s investigating the cause of the outbreak.  The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
 		otherwise:
 			say "     You quickly explain to him that you were in a shelter, but were running out of supplies and had to risk leaving.  You tell him a little bit about what you[apostrophe]ve seen, leaving out some details for the moment.  You wouldn[apostrophe]t want to incriminate yourself.  The cop keeps a stern eye on you while you talk, making a few notes and taking down your personal information.";
@@ -77,7 +77,7 @@ Instead of resolving a Policeman:
 				challenge "Tiger Cop";
 			now mqstatus is 99;		[set to refused quest]
 			Now Policeman is resolved;
-			stop the action;
+			continue the action;
 	otherwise:
 		let T be a random number between one and four;
 		if T is 1:
@@ -88,11 +88,8 @@ Instead of resolving a Policeman:
 			say "     As you travel through the city, you hear the pained yip of one of husky females.  Heading over cautiously to investigate, you come face to chest with Sgt Marks as he steps out of an alley.  He is zipping up his fly and you can hear the sound of someone rushing away down the alley.  'Damn bitches,' he grumbles.  'Barely worth the time to fuck, eh?' he comments.  'But forget her.  How is your project comin[apostrophe] along?  You got some good news for me?'";
 		if T is 4:
 			say "     After some fruitless searching through the city, you run into the tiger policeman again.  Sgt Marks is sitting on the roof of a car.  Somehow, even in this city gone mad, he[apostrophe]s managed to find a bag of store-bought doughnuts.  He[apostrophe]s got his claws sunk into several of the sugar-covered things and is stuffing them down his muzzle.  He looks over at you, wolfs the last of them down without concern for your possible hunger, and then dusts the sugar grains from his paws.  'Did you have any luck yet?  We can[apostrophe]t wait on this forever.'";
-	let keycollection be 0;
-	repeat with x running through invent of player:
-		if x is "motel key", increase keycollection by 1;
-	say "     Taking a quiet tally in your head, you have collected [keycollection] key(s).";
-	if keycollection > 4:			[5 or more keys to proceed]
+	say "     Taking a quiet tally in your head, you have collected [carried of motel key] key(s).";
+	if carried of motel key > 4:			[5 or more keys to proceed]
 		say "     Do you tell him you have found enough keys? (Y/N)";
 		if the player consents:
 			say "[line break][givekeys]";
@@ -121,7 +118,7 @@ to say givekeys:
 	increase xp of player by 10;
 	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat.  'Here, take this.  You're gonna need it,' he says meaningfully as he passes you a nightstick.  'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto.  I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out.  And if somethin['] holds you up, there'll be a key in the lip of the bumper.  I should be able to leave somethin['] for ya in the trunk and I[']ll get in touch after the heat dies down.'";
 	say "     Nightstick obtained.";
-	add "nightstick" to invent of player;
+	increase carried of nightstick by 1;
 
 
 Section 2 - Tiger Cop character and Police Car location
@@ -140,8 +137,7 @@ to say policecardesc:
 		if mqpickup is 0:
 			say "[line break]     Taking the key from its hiding place, you unlock the car[']s truck.  Inside is a note that simply says 'Catch you later' with two cans of police pepperspray on top of it.  Those should come in quite handy.";
 			say "     Two cans of pepperspray obtained.";
-			add "pepperspray" to invent of player;
-			add "pepperspray" to invent of player;
+			increase carried of pepperspray by 2;
 			increase score by 10;
 			now mqpickup is 1;
 
@@ -506,18 +502,24 @@ when play begins:
 
 to say losetotigercop:
 	if mqstatus is 98:
- 		say "     Unable to stand up to the large tiger any longer, he grabs you roughly and shoves you face down onto a mound of rubble. 'You couldn[apostrophe]t just do what you were told.  The world is filled with punks like you these days.  No respect for authority,' he growls as he holds you down with one paw and bares your bottom with the other.";
+		say "     Unable to stand up to the large tiger any longer, he grabs you roughly and shoves you face down onto a mound of rubble. 'You couldn[apostrophe]t just do what you were told.  The world is filled with punks like you these days.  No respect for authority,' he growls as he holds you down with one paw and bares your bottom with the other.";
 		if cunts of player is greater than 0:
- 			say "     'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your pussy, making you shiver.  He teases you with it briefly, getting you wet despite yourself, before sinking it into you.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching pussy.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
+			say "     'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your pussy, making you shiver.  He teases you with it briefly, getting you wet despite yourself, before sinking it into you.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching pussy.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
 		otherwise:
 			say "     'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver.  He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching hole.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
 		infect "Tigress Hooker";
 	otherwise:
 		if cunts of player is greater than 0:
- 			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down onto a nearby car.  Pressing your face to the dirty hood, he growls in your ear.  'I warned you what would happen if I caught you,' he rumbles.  With a strong paw firmly at your neck, the other bares your bottom and moves you into position.";
- 			say "     You hear him unzip, then there[apostrophe]s the feel of a large, hard cock against your bottom.  He grinds against you a few times, getting fully hard before sinking it firmly into you.  Your body shudders from the sudden intrusion, but he pays your discomfort no mind, only pounding you hard and fast.";
- 			say "     You start to moan and grind against him as the powerful male fucks you, losing yourself in the sex.  'That[apostrophe]s a good slut,' he rumbles.  'Take it, you whore.'  Your pussy squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your pussy with his sperm.";
- 			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
+			[puts Tigress Hooker as lead monster in case of impregnation]
+			repeat with y running from 1 to number of filled rows in table of random critters:
+				choose row y in table of random critters;
+				if name entry is "Tigress Hooker":
+					now monster is y;
+					break;
+			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down onto a nearby car.  Pressing your face to the dirty hood, he growls in your ear.  'I warned you what would happen if I caught you,' he rumbles.  With a strong paw firmly at your neck, the other bares your bottom and moves you into position.";
+			say "     You hear him unzip, then there[apostrophe]s the feel of a large, hard cock against your bottom.  He grinds against you a few times, getting fully hard before sinking it firmly into you.  Your body shudders from the sudden intrusion, but he pays your discomfort no mind, only pounding you hard and fast.";
+			say "     You start to moan and grind against him as the powerful male fucks you, losing yourself in the sex.  'That[apostrophe]s a good slut,' he rumbles.  'Take it, you whore.'  Your pussy squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your pussy with his sperm.[impregchance]";
+			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
 		otherwise:
 			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down to your knees.  He wraps his strong paw around your jaw, holding you there while he growls down at you.  'I warned you what would happen if I caught you,' he rumbles.";
 			say "     As you watch, his other paw opens his uniform pants and pull out his large, hard cock.  His shaft is a full foot long and human-like in form, though a deeper red in colour.  Holding your head firmly, he strokes his cock against your face until its fully hard and leaking pre onto you.";
@@ -532,13 +534,13 @@ To say beattigercop:
 	if a random chance of 1 in 3 succeeds and nsgained is 0:
 		say "     When the gas clears, you see that the tiger had dropped his nightstick at the end of the fight.  You pick it up and add it to your arsenal.";
 		say "     Nightstick obtained.";
-		add "nightstick" to invent of player;
+		increase carried of nightstick by 1;
 		now nsgained is 1;
 		increase score by 5;
-	if a random chance of 1 in 5 succeeds and nsgained is 1:
+	otherwise if a random chance of 1 in 5 succeeds and nsgained is 1:
 		say "     When the gas clears, you see that the tiger had dropped a can of pepperspray during the course of the fight.  You pick it up and add it to your arsenal.";
 		say "     Pepperspray obtained.";
-		add "pepperspray" to invent of player;
+		increase carried of pepperspray by 1;
 		increase score by 5;
 
 

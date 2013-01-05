@@ -11,8 +11,7 @@ when play begins:
 to say losetogoblin:
 	now goblinfight is 2;
 	if cunts of player > 0 and bodyname of player is "Goblin":
-		say "     The goblin cackles merrily at his victory and pushes you down onto the ground.  Having found a female goblin, or at least someone close to one, he pushes you onto all fours with his foot and scrambles atop you.  Raising his loincloth, he brings his green cock to your pussy and thrusts into you with no preamble.  He grips your shoulders and pounds away at you, driving his small cock in again and again.  Your body can't help but respond to this, panting and moaning at having a goblin cock inside it.  Your pussy quivers over his penis, milking at it until he cums.  As his hot seed rushes into you, you cum as well with a loud, squealing moan.  Once he's drained his balls into you, he gives you another kick to send you on your way.";
-		say "[impregchance]";
+		say "     The goblin cackles merrily at his victory and pushes you down onto the ground.  Having found a female goblin, or at least someone close to one, he pushes you onto all fours with his foot and scrambles atop you.  Raising his loincloth, he brings his green cock to your pussy and thrusts into you with no preamble.  He grips your shoulders and pounds away at you, driving his small cock in again and again.  Your body can't help but respond to this, panting and moaning at having a goblin cock inside it.  Your pussy quivers over his penis, milking at it until he cums.  As his hot seed rushes into you, you cum as well with a loud, squealing moan.  Once he's drained his balls into you, he gives you another kick to send you on your way.[impregchance]";
 	otherwise:
 		say "     The goblin cackles at his victory and pushes you to the ground.  Taking your head in his hands, you can they have a surprisingly strong grip for their spindly size.  Pressing your face to his loincloth, the masculine scent it's masking becomes more apparent.  As his cock grows hard, his loincloth is pushed aside to reveal a five inch cock.  Given his body's size, it must seem impressive to him, though you've seen much bigger out in this city.";
 		say "     But regardless of its size, its clear what the goblin wants of you.  As he presses his cock to your lips, you give it a few licks before taking it into your mouth.  Its taste is bitter, but also masculine and strong.  You find yourself continuing to lick at it and start sucking it of your own accord, aroused by the sight of the little guy's prominent ballsac.  They are a little bigger than an average man's, making them quite impressive on his small frame.  You grip his green, leathery sac as you bob over his cock, getting him to blast his spunk into your mouth.  Though bitter, you swallow it all down with a soft moan around his meat.  Once his cock gives its last spurt, he pushes you away with his boot and sends you on your way.";
@@ -20,7 +19,7 @@ to say losetogoblin:
 
 to say beatthegoblin:
 	now goblinfight is 1;
-	say "     Driving back the little goblin with your blow, you advance to finish him off.  He scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounts of junk.  Even if you could squeeze through there, you don't feel it would be worth it to try and decide to let him go.";
+	say "     Driving back the little goblin with your blow, you advance to finish him off.  He scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounds of junk.  Even if you could squeeze through there, you don't feel it would be worth it to try and decide to let him go.";
 
 
 to say goblindesc:

@@ -1,4 +1,4 @@
-Teddy bear by Sarokcat begins here. 
+Teddy Bear by Sarokcat begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a giant teddy bear to Flexible Survivals Wandering Monsters table"
@@ -7,8 +7,8 @@ Teddy bear by Sarokcat begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add { "Teddy bear" } to infections of girl;
-	add { "Teddy bear" } to infections of furry;
+	add { "Teddy Bear" } to infections of girl;
+	add { "Teddy Bear" } to infections of furry;
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 to say teddy bear attack:
@@ -30,16 +30,16 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Teddy bear"; [Name of your new Monster]
-	now attack entry is "[one of]The bear windmills its arms and crashes into you, knocking you down.[or]The strange plush bear takes a moment out of combat to give you a big fuzzy hug, causing you to feel vaguely unsettled.[or]Its large plush hands come down hard on your head, making you wonder through the ringing in your ears just what the heck its stuffed with, lead?.[or]Jumping up as it charges, the big fluffy bear knocks you flat as it crashes to the ground.[or]Singing along with the fair music, the fluffy bear prances around seemingly at random, until it ends up ramming into you.[or] Charging forward with its oversized head lowered, the giant bear rams right into you, knocking you both down.[at random]"; [Text used when the monster makes an Attack]
+	now name entry is "Teddy Bear"; [Name of your new Monster]
+	now attack entry is "[one of]The bear windmills its arms and crashes into you, knocking you down.[or]The strange plush bear takes a moment out of combat to give you a big fuzzy hug, causing you to feel vaguely unsettled.[or]Its large plush hands come down hard on your head, making you wonder through the ringing in your ears just what the heck it's stuffed with, lead?[or]Jumping up as it charges, the big fluffy bear knocks you flat as it crashes to the ground.[or]Singing along with the fair music, the fluffy bear prances around seemingly at random, until it ends up ramming into you.[or] Charging forward with its oversized head lowered, the giant bear rams right into you, knocking you both down.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[teddy bear loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[teddy bear attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "A giant teddy bear, covered in soft pink fur toddles down the midway towards you, moving surprisingly fast on its round plush legs '[one of]Oh good, I was looking for someone to play with![or]Don[apostrophe]t you want a prize?[or]Take me home with you![or]Don[apostrophe]t you want a cuddle?[or]You would look great if you were fluffy like me![or]You will be my carnival prize![at random]' she says as she charges towards you, her large roundish arms windmilling dangerously.";[ Description of the creature when you encounter it.]
 	now face entry is "large teddy bear like face, with a short muzzle and rosy cheeks, your big black eyes seeming comical and cute, and your mouth is pulled upwards by your muzzle so it seems as if you are always smiling goofily. Type of";[ Face description, format as the text "Your have a (your text) face."]
 	now body entry is "Rounded in the middle with somewhat round arms and legs, and plump, plush, paw-like hands, your body almost feels like it is full of some sort of strange stuffing that moves around as you walk, poking yourself you can see your clawed paw sink deeply into your stuffed side with almost no pain whatsoever";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "[one of] brown furred[or]softly furred[or]fake furred[or]strangely plush[at random]";[ skin Description, format as the text "You have (your text) skin"] 
+	now skin entry is "[one of]brown furred[or]softly furred[or]fake furred[or]strangely plush[at random]";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a short plush little bear tail attached to your rear, while it doesn[apostrophe]t seem to be made of flesh and blood, you can still feel it as if it were.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "[one of]plush[or]Teddy bear[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now cock entry is "[one of]plush[or]teddy bear[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
 	now face change entry is "your face balloons outwards as your head seems to swell up, your cheeks stretching out and a cute little muzzle forming as your face becomes that of a happy giant teddy bear"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it shifts and plumps outwards, your hands and feet becoming fatter and rounder, making it hard to balance as you seem to become much more like a children[apostrophe]s toy."; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "your flesh tingles and sprouts a soft thick brown pelt of plush fake fur"; ["Your skin feels funny as (your text)" ]
@@ -68,6 +68,15 @@ When Play begins:
 	now libido entry is 30;			[ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";			[ Loot monster drops, ]
 	now lootchance entry is 0;		[ Chance of loot dropping 0-100 ]
+	[ These represent the new additions to the table of random critters ]
+	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]plush[or]stuffed[or]padded[at random]";
+	now type entry is "[one of]toy-like[or]ursine[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "bearhugger";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "teddy bear":
@@ -78,6 +87,6 @@ when play ends:
 	
 
 [ Edit this to have the correct Name as wall]
-Teddy bear ends here.
+Teddy Bear ends here.
 
 .

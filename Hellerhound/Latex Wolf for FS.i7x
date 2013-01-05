@@ -1,5 +1,5 @@
 Version 2 of Latex Wolf for FS by Hellerhound begins here.
-[ Version 2 - Endings added by Stripes ]
+[ Version 2.1 - Minor tweaks by Stripes ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Latex Wolf to Flexible Survivals Wandering Monsters table"
@@ -22,7 +22,7 @@ To say latex wolf defeat:
 
 To say latex wolf attack:[todo]
 	if cunts of player > 0:
-		Say "As you fall, the latex wolf rolls you over and sits up, on your hips, impaling you on his red rubbery cock. He then begins to lean forwards and backwards, sliding his doggy shaft in and out of your cunt, squeaking with every thrust. He thrusts faster, and faster, making slapping noises where his black balls hit your ass cheeks, and finally slams your knot inside with a thrust that causes you to hunch up in pain and pleasure. He keeps trying to thrust, even when he is tied, and finally brings himself to orgasm, filling you with black rubbery seed. [impregchance]";
+		Say "As you fall, the latex wolf rolls you over and sits up, on your hips, impaling you on his red rubbery cock. He then begins to lean forwards and backwards, sliding his doggy shaft in and out of your [cunt size desc of player] cunt, squeaking with every thrust. He thrusts faster, and faster, making slapping noises where his black balls hit your ass cheeks, and finally slams your knot inside with a thrust that causes you to hunch up in pain and pleasure. He keeps trying to thrust, even when he is tied, and finally brings himself to orgasm, filling you with black rubbery seed. [impregchance]";
 		increase the libido of the player by 60;	
 	otherwise:
 		say "You fall to the ground, and the wolf pounces, hoping there is something for him to use. When she reveals your endowments, he sighs in disappointment, and raises one leg over you";
@@ -46,11 +46,11 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Latex Wolf"; [Name of your new Monster]
-	now attack entry is "The Latex Wolf [one of] slaps you with a rubbery pad[or] claws you with plastic nails[or] bites with rubbery teeth[or] pounces forward and bodyslams you[at random]."; [Text used when the monster makes an Attack]
+	now attack entry is "The Latex Wolf [one of]slaps you with a rubbery pad[or]claws you with plastic nails[or]bites with rubbery teeth[or]pounces forward and bodyslams you[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[latex wolf defeat]";
 	 [ Text or say command used when Monster is defeated.]
 	now victory entry is "[latex wolf attack]";
-	now desc entry is "There is rubbery skidding noise, and a black and white latex wolf whips around the corner.";[ Description of the creature when you encounter it.]
+	now desc entry is "You are startled when you hear a rubbery, skidding noise [if a random chance of 1 in 2 succeeds]from behind you[otherwise if a random chance of 1 in 2 succeeds]to your left[otherwise]to your right[end if].  Turning to face the noise, you spot a black and white latex wolf whipping around the corner.";[ Description of the creature when you encounter it.]
 	now face entry is "elongated with a muzzle and sharp teeth";[ Face description, format as the text "Your face is (your text)."] 
 	now body entry is "small and lupine, bent onto all fours.  Your insides feel strange, as if they are made of something shifting and changing";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "rubbery latex with black, fur-like patterned";[ skin Description, format as the text "You have (your text) skin."] 
@@ -61,16 +61,16 @@ When Play begins:
 	now skin change entry is "it smoothes, becoming flawless, and growing a black rubbery layer as you watch"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "a long tail mutates out, black and round, whipping back and forth with your emotions"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "a knot forms on the base while a sheath forms towards the bottom, and it turns a deep red"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-	now str entry is 16;
+	now str entry is 12;
 	now dex entry is 18;
-	now sta entry is 17;					
+	now sta entry is 12;
 	now per entry is 16;
-	now int entry is 13;
+	now int entry is 10;
 	now cha entry is 12;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 20;			[ How many HP has the monster got? ]
+	now hp entry is 30;			[ How many HP has the monster got? ]
 	now lev entry is 5;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you lose ] 
-	now wdam entry is 4;			[Amount of Damage monster Does when attacking.]
+	now wdam entry is 5;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
 	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 4;		[ Length infection will make cock grow to if cocks]
@@ -133,6 +133,9 @@ to say lwmast2:
 		if cunt length of player < 8 and "Male Preferred" is not listed in feats of player, increase cunt length of player by 1;
 	otherwise:
 		say "Overcome with lustful urges, you whimper softly with the need for satisfaction.  You spot a foam latex toy and pounce on it, grinding your cock against the strangely enjoyable material.  You rub your throbbing erection against it, moaning as you ride it hard and fast.  Your precum dribbles out onto it as it feels increasingly satisfying as your lust builds.  Finally climaxing messily, you moan and rise onto all fours, finding that much of the toy has melted away, flowing into your body.  You gobble down the sticky and cum-soaked remains with relish";
+
+
+Section 4 - Endings
 
 when play ends:
 	if the bodyname of the player is "Latex Wolf":

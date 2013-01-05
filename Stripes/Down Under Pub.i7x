@@ -31,7 +31,7 @@ Instead of resolving a Aussie Pub:
 			if cocks of player > 0:				[ MALE/HERM! ]	
 				say "     You get lucky, getting there just as he gets a new pussy, which you quickly fill with your cock.  You lick and kiss the rising breasts on the new jill[apostrophe]s chest, taking perverse satisfaction in helping to change the mostly human-male into a herm doe for you and the others to fuck.  Eventually, after you and many others have filled her with your seed, shi[apostrophe]s released from the table.  Shi eagerly joins the first buck who took hir in his booth, showing hir appreciation by sucking him off.";
 			otherwise:						[ FEMALE! ]
-				say "     Having just finished with the boomer, you bring you messy pussy above the playtoy[apostrophe]s lips, letting it drip down onto him.  He has his tongue up in your pussy almost immediately, seeking that thick, virile taste.  He licks and teases your pussy aggressively as he seeks out every drop of roo cum he can get.  From your vantage point above him, you get to watch as a new, wet slit forms under his balls, wet and dripping with need.  You lick and finger hir in return, taking perverse satisfaction in helping to change the mostly-human male into a herm doe for you and the others to enjoy.  Eventually, after you and many others have finished playing with hir, shi[apostrophe]s released from the table. Shi eagerly joins the first buck who took hir in his booth, showing hir appreciation by sucking him off.";
+				say "     Having just finished with the boomer, you bring your messy pussy above the playtoy[apostrophe]s lips, letting it drip down onto him.  He has his tongue up in your pussy almost immediately, seeking that thick, virile taste.  He licks and teases your pussy aggressively as he seeks out every drop of roo cum he can get.  From your vantage point above him, you get to watch as a new, wet slit forms under his balls, wet and dripping with need.  You lick and finger hir in return, taking perverse satisfaction in helping to change the mostly-human male into a herm doe for you and the others to enjoy.  Eventually, after you and many others have finished playing with hir, shi[apostrophe]s released from the table. Shi eagerly joins the first buck who took hir in his booth, showing hir appreciation by sucking him off.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			say "     Eventually, the party winds down, appetites (both carnal and more mundane) are sated and you head off with several of the others.  As you're heading out though, the barmaid pulls you in close for another kiss.  Grabbing your ass, she whispers that you should come back again in a few days and she'll let you in.  You'd heard from the crowd that roos are allowed a visit a week because of the need for supplies and the popularity of the location.  But it seems the serving girl's taken a liking to you and let you come every two or three days.  Part of you feels quite drawn to the rambunctious roos and you look forward to finding more to have fun with in the future and looking forward to another visit to the pub.";
 			infect "red kangaroo";
@@ -84,7 +84,7 @@ to say down under pub scene:
 		if a random chance of 3 in 10 succeeds:
 			increase rooness by 1;
 			if cocks of player > 0:
-				say "     It seems luck's on your side this time, as she's got a few minutes to spend with you and she's under the table, licking and sucking at your cock eagerly.  You moan in pleasure and rub her ears as her long muzzle bobs over your meaty shaft.  Once you're nice and slick, she's up again and into your lap for a ride.  Many of the other patrons nearby turn their attention to watch the show with grins, so you resolve to make the most of it.  Taking her strong roo legs in your hands, you raise them up high so everyone gets a good view of your cock plowing into her.  Getting in on the show, she fondles her bosom and holds on of her breasts up so she can lick her nipple slowly.  Turned on by showing off your lover to the others, you have a very enjoyable fuck before shooting your hot load into her.  Setting her back down, you give her another kiss and pat on the rear to send her back to her duties.";
+				say "     It seems luck's on your side this time, as she's got a few minutes to spend with you and she's under the table, licking and sucking at your cock eagerly.  You moan in pleasure and rub her ears as her long muzzle bobs over your meaty shaft.  Once you're nice and slick, she's up again and into your lap for a ride.  Many of the other patrons nearby turn their attention to watch the show with grins, so you resolve to make the most of it.  Taking her strong roo legs in your hands, you raise them up high so everyone gets a good view of your cock plowing into her.  Getting in on the show, she fondles her bosom and holds one of her breasts up so she can lick her nipple slowly.  Turned on by showing off your lover to the others, you have a very enjoyable fuck before shooting your hot load into her.  Setting her back down, you give her another kiss and pat on the rear to send her back to her duties.";
 			otherwise:
 				say "     It seems luck's on your side this time, as she's got a few minutes to spend with you and she's under the table, licking and lapping at your pussy eagerly.  You moan in pleasure and rub her ears as her tongue dives into you again and again.  Many of the other patrons nearby turn their attention to watch the show with grins, so you resolve to make the most of it.  Patting her side and turning in your seat, you raise one of your powerful roo legs high, spreading yourself.  Getting in on the fun, she nibbles and kisses along your thighs so the others can get a peek at your dripping snatch before she dives back into eating you out.  With her own tail raised high and her fingers in her snatch, she fingers herself wildly, much to the crowd's delight.  Turned on by showing off your lover to the others, you have a very enjoyable time before finally cumming hard and soaking her muzzle in your juices.  Setting her back down, you give her another kiss (which tastes of you) and pat on the rear to send her back to her duties.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -125,6 +125,9 @@ to say down under pub scene:
 		say "[line break]";
 	say "     With your visit to the Aussie pub over, you head back to the nearby Red Light District to decide where to head next.";
 	wait for any key;
+
+
+after navigating Sweet Tooth:
 	move the player to Entrance to the Red Light District;
 
 
@@ -182,7 +185,7 @@ Section 4 - Random Sluts
 [reclaimed from Strange Sluts]
 slutname is a text that varies. slutname is usually "hound dog".
 
-to say randomdesc:
+to say randomdesc:	[male]
 	let T be a random number between 1 and 15;
 	if T is 1:
 		now slutname is "husky";
@@ -215,7 +218,7 @@ to say randomdesc:
 	if T is 15:
 		now slutname is "wolf";
 
-to say randomdesc2:
+to say randomdesc2:	[female]
 	let T be a random number between 1 and 15;
 	if T is 1:
 		now slutname is "husky";

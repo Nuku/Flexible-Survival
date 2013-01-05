@@ -62,15 +62,15 @@ When Play begins:
 	now victory entry is  "[Elf attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "A human? Maybe? She has asian like facial features on lightly tanned flesh. Her ears are unusually long and tapered, but other than that, nothing impossible. She has delicious curves, with heavy G breasts swaying with every step, barely held in place with her sheer green silks. Strung over her back is a long curved wooden bow, almost as pretty as she is, if you like that kind of thing. She has long blond hair that flows down to her ass without bothering her graceful steps.";[ Description of the creature when you encounter it.]
 	now face entry is "set of deep, soul piercing, blue eyes framed in a face that seems somewhat oriental. Your ears are quite long and tapered, inhumanly so, framing your";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is " largely slender and agile, with long arms and slim fingers. Your body is covered in fine, green, silks that flow smoothly across your form, concealing it in its soft embrace. Your legs are shapely and athletic, the silks brushing along them with each step.";[ Body Description, format as the text "Your Body is (your text)"] 
+	now body entry is "largely slender and agile, with long arms and slim fingers. Your body is covered in fine, green, silks that flow smoothly across your form, concealing it in its soft embrace. Your legs are shapely and athletic, the silks brushing along them with each step";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "smooth and flawless";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a large, firm, buttocks, waiting to be grabbed. It is somewhat concealed in green silks. ";[ Tail description, write a whole Sentence or leave blank. ] 
+	now tail entry is "You have a large, firm, buttocks, waiting to be grabbed. It is somewhat concealed in green silks";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "human";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "a strange warping ripple runs across the flesh of your cheeks as your face changes and smooths out to new, elfin, proportions."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "waves of heat run through your altering form. Your figure becomes feminine and your fingers lengthen to agile digits. Arms and legs follow as the world seems to shrink a little around you. Green silks burst into existence, wrapping your exotic form in comforting softness."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "your skin evens out its blemishes, becoming youthful and smooth."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your rump begins to swell, along with your lust, leaving you breathing hard as you gain a large, grabbable, ass."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it thrums with an alien pleasure."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "a strange warping ripple runs across the flesh of your cheeks as your face changes and smooths out to new, elfin, proportions"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "waves of heat run through your altering form. Your figure becomes feminine and your fingers lengthen to agile digits. Arms and legs follow as the world seems to shrink a little around you. Green silks burst into existence, wrapping your exotic form in comforting softness"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "your skin evens out its blemishes, becoming youthful and smooth"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "your rump begins to swell, along with your lust, leaving you breathing hard as you gain a large, grabbable, ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it thrums with an alien pleasure"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 12;
 	now dex entry is 18;
 	now sta entry is 12;					
@@ -105,7 +105,7 @@ When Play begins:
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
-	if bodyname of player is "Elf":
+	if bodyname of player is "elf":
 		if humanity of player is less than 10:
 			say "     Feeling no more attachment to this boring world, you speak the words of a spell that you suddenly remember.  The air ripples and shudders as a great portal opens before you, shimmering with heat.  You step through without hesitation and a great feline beast waits patiently in a jungle.  You mount the beast and he carries you back to your people swiftly.  Play time was over, but you would not forget your time amongst the humans.  You would suggest to the queen that your people take over a city of them.  They would make delightful pets...";
 		otherwise:

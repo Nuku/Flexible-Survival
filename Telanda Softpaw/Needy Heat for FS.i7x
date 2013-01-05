@@ -1,4 +1,5 @@
-Needy Heat for FS by Telanda Softpaw begins here.
+Version 2 of Needy Heat for FS by Telanda Softpaw begins here.
+[ Version 2 - Heat repairs - Stripes ]
 
 "Addon for adding an 'in heat' Event to infections, Designed to work with all monster type infections by default. with the option to be customisable if you want to add specifics for your monster."
 
@@ -14,13 +15,14 @@ lastturn is a number that varies. lastturn is usually 240. [This is used so that
 Table of infection heat
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat
 "Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs,seeming to build rapidly.  It's not until you feel the warm trickle down your leg that you realise with a start what's happening, glancing down to see your sex become swollen and red as your body advertises it's fertility and readiness. [line break][line break] You are in heat."	--	--	--	"[defaultheat]"
-"Female Husky"	7	7	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp,  as you struggle for breath through the fading pain you can feel a hot trickle from between your legs. looking down you watch in horrified fascination as your sex twists and warps into that of a bitches, then begins to swell and puff up rapidly. your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping Husky Bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"
+"Female Husky"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp,  as you struggle for breath through the fading pain you can feel a hot trickle from between your legs. looking down you watch in horrified fascination as your sex twists and warps into that of a bitches, then begins to swell and puff up rapidly. your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping Husky Bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"
 
 Book 2 - Logic & Rules
 
 to say defaultheat:
 	[say "You shift uncomfortably. still being driven by the swollen needy heat between your legs.";]
-	if libido of player is less than 96, increase libido of player by 5;
+	increase libido of player by 5;
+	if libido of player > 100, now libido of player is 100;
 	
 to say huskyheatstart:
 	increase Cunt length of player by 2;
@@ -31,10 +33,13 @@ to say huskyheatend:
 	if cunt width of player < 1, now cunt width of player is 1;
 	decrease Cunt length of player by 2;
 	if cunt length of player < 1, now cunt length of player is 1;
+	decrease slutfucked by 2;
+	if slutfucked < 0, now slutfucked is 0;
+	if slutfucked > 6, now slutfucked is 6;
 
 to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting events that can happen if she doesn't get any satisfaction ]
 	increase libido of player by 5;
-	if libido of player > 100, now libido of player is 100;
+	if libido of player > 99, now libido of player is 99;
 	if (libido of player is greater than 90) and (location of player is fasttravel ) and (slutfucked is greater than 8):
 		say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs.  Unable to control your lust, you strike out in the direction of the infected monster.";
 		now slutfucked is 0;
@@ -45,25 +50,25 @@ to say huskyheat:  	[ Husky stays in heat permanently. lets make a interesting e
 			if area entry is "Outside":
 				add X to hmonlist;
 		sort hmonlist in random order;
-		repeat with Z running through hmonlist:		[Pick one of the monsters at random]
-			now monster is Z;
-			break;
+		now monster is entry 1 of hmonlist;
 		choose row monster from the table of random critters;
 		say "The enticing scent leads to a [name entry].  Immediately upon seeing the infected monster, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
 		wait for any key;
 		follow the cock descr rule;
+		follow the cunt descr rule;
 		follow the breast descr rule;
 		say "[victory entry]";
 		infect;
 		decrease the score by 5;
 		decrease the morale of the player by 3;
+		if "Kinky" is listed in feats of the player, increase the morale of the player by 6;
 	else if libido of player is greater than 90:
 		increase slutfucked by 1;
 
-every turn (This is the check heat rule): [ May need to change this so that it only procs when theres a 'time' change]
+This is the check heat rule:
 	if heat enabled is true:
-		if lastturn is not turns:	[This is used so that we only trigger events once per GAME turn (3 hr period) rather then each event turn.]
-			if cunts of player is greater than 0 and (cockname of player is not "human") and gestation of child is 0:	[Only run if female. and has groin infection]
+		if humanity of player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
+			if cunts of player is greater than 0 and (cockname of player is not "human") and gestation of child is 0 and larvaegg is not 2:	[Only run if female. and has groin infection]
 				if animal heat is not True:	[ Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more Tainted Sexuality.";
 					now turns in heat is 0;
@@ -79,9 +84,9 @@ every turn (This is the check heat rule): [ May need to change this so that it o
 					now turns in heat is 0;
 					[ say "reset!"; ]
 				if turns in heat is greater than ( (heat cycle entry - heat duration entry ) times 8) and (inheat is not True):
+					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
 					say "[trigger text entry]";
 					if there is heat start entry, say "[heat start entry]";[Heat start Trigger]
-					now inheat is True;	[Player is now in heat. each cycle from now will run heat events]
 				else if turns in heat is greater than ( (heat cycle entry - heat duration entry ) times 8) and (inheat is True): [ still in heat, previously triggered.]
 					if there is inheat entry, say "[inheat entry]"; [inheat Trigger]
 				else if inheat is true:

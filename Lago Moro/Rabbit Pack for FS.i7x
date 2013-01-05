@@ -1,4 +1,5 @@
-Version 1 of Rabbit Pack For FS by Lago Moro begins here. 
+Version 3 of Rabbit Pack For FS by Lago Moro begins here.
+[Version 3 - Heat repairs - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Rabbit Pack to Flexible Survivals Wandering Monsters table."
@@ -14,21 +15,30 @@ when play begins:
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
 to say rabpackdesc:
+	choose row monster from the table of random critters;
 	say "A little humanoid rabbit appears in front of you! Less than three feet tall and completely naked,it looks like a young human, except for the ears and the short coat of fur covering [one of]his body. He[or]her body. She[at random] is smelling something from you, and you back away quickly.";
 	if "One Pair" is listed in feats of player:
+		now area entry is "nowhere";		[removes from random intercounters and infection]
+		now non-infectious entry is true;
 		say "However, something in your scent sends the critter away from you. (They won't attack you if you have the One Pair feat.)[combat abort]";
+		now fightoutcome is 19;
 	otherwise if "Just One" is listed in feats of player:
+		now area entry is "nowhere";		[removes from random intercounters and infection]
+		now non-infectious entry is true;
 		say "However, something in your scent sends the critter away from you. (They won't attack you if you have the Just One feat.)[combat abort]";
+		now fightoutcome is 19;
 	otherwise:
 		say "However, the creature is not alone. In an instant, you are surrounded by about ten rabbit-like creatures, some females, other males, all wanting YOU!";
 
 
 to say rabpackvictory:
+	if fightstatus is 3, now fightstatus is 2;
 	if bodyname of player is "rabbit pack":
 		say "The rabbit creatures take all of you into a nearby abandoned building. They...no, it has plans for you, and it doesn[apostrophe]t wants unwanted guests.[line break] After laying you to the ground, they step back, sitting or crouching around you. Instinctively, you group together all of your copies, for how your injures can afford. One of them slowly creeps closer, making a noise, an attempt to tranquilize you. [one of]He[or]She[at random] hugs you, kissing tenderly your forehead until you calm down. The other part soon join in...";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		say "It[apostrophe]s so slow...not lazy or sluggish, but constantly building up your pleasure, a tiny bit at a time. Couples and groups changes constantly, without a pattern, and you weakly realize that a few of your own copies are making out with each other. Even your thoughts are interweaving with...well...hir, and you find your consciousness passing from male to female in a pinkish blur...either by you or to you, cocks are [one of]jerked[or]sucked[or]inserted[at random], breasts[one of]massaged[or]milked[at random], asses[one of]groped[or]prodded[at random], cunts[one of]licked[or]fingered[or]filled[at random]...every often a [one of]sweet[or]warm[or]lovely[at random] kiss...";
-		say "After at least hours, it finally ends. After a little rest, they escort you back to where they ambushed you, worn-out but satisfied.";
+		say "After at least hours, it finally ends. After a little rest, they escort you back to where they ambushed you, worn-out but satisfied.[impregchance]";
 		decrease libido of player by 50;
 	otherwise:
 		say "The rabbit creatures lift you in unison and transport you into a nearby abandoned building, before any unwanted guest shows up.[line break] They lay you gently on the ground and admire your body, obviously pleased by what they got; they crawl on you, caressing, licking gently...[line break][rabpacka][rabpackb][rabpackc]";
@@ -46,8 +56,6 @@ to say rabpackb:
 			say "Meanwhile, you feel someone grabbing your cock and pressing it against its body. It must be a[one of]he, as you can feel his own penis and balls being rubbed against your member[or]she, since you feel two soft breasts being pressed against it[at random]. Sure it feels good...";
 		otherwise:
 			say "Meanwhile, you feel someone grabbing your cock and slowly jerking it while [one of]licking across its length[or]sucking its tip[or]massaging your balls[at random]. Sure it feels good...";
-	otherwise:
-		say "";
 
 to say rabpackc:
 	if cunts of player > 0:
@@ -55,9 +63,11 @@ to say rabpackc:
 			say "At the same time you feel at least a pair of tongues licking your feminine folds. You can't see what exactly is going on, but the increasing moistness of your groin is a sure indication...";
 		otherwise:
 			say "At the same time you feel someone gently licking your feminine folds. It[apostrophe]s not invasive, but constant and agonizingly slow, just like everything else they are doing to you...";
-	otherwise:
-		say "";
 
+
+to say rabpackbeaten:
+	if fightstatus is 3, now fightstatus is 1;
+	say "You finally manage to incapacitate most of them. You go away while those still conscious are dragging their comrades to safety.";
 
 Section 2 - Monster Insertion
 
@@ -70,19 +80,19 @@ When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "rabbit pack"; [Name of your new Monster]
 	now attack entry is "[one of]They pounce on you all at the same time![or]One of them crawls on your back and hits you in the head. More than once.[or]You lose your balance and fall on the ground! They try to pin you down![or]One of them manages to flank you and attack by surprise.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "You finally manage to incapacitate most of them. You go away while those still conscious are dragging their comrades to safety."; [ Text or say command used when Monster is defeated.]
+	now defeated entry is "[rabpackbeaten]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[rabpackvictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
 	now desc entry is "[rabpackdesc]";[ Description of the creature when you encounter it.]
 	now face entry is "rabbit ears sprouting from the top of your head and flopping around the sides of your";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "short but agile.";[ Body Description, format as the text "Your Body is (your text)"] 
-	now skin entry is "short fur covering almost every inch of your body.";[ skin Description, format as the text "You have (your text) skin"] 
+	now body entry is "short but agile";[ Body Description, format as the text "Your Body is (your text)"] 
+	now skin entry is "short fur covering almost every inch of your body";[ skin Description, format as the text "You have (your text) skin"] 
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ] 
-	now cock entry is "humanlike";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you feel your head spin and lose consciousness. When you wake up, you open your eyes...your multiple pair of eyes. To your horror, you see that you have been split into many smaller copies of your previous form! Luckily, you retained your personality and mental sanity... but for how long?"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "a little coating of fur covers you from head to toe. Feels almost like velvet.."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "A little tail sprouts, waggling."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it becomes humanlike, covered with foreskin. A pair of soft balls descends as well."; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock entry is "human-like";[ Cock Description, format as you have a 'size' (your text) cock] 
+	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "you feel your head spin and lose consciousness. When you wake up, you open your eyes... your multiple pair of eyes. To your horror, you see that you have been split into many smaller copies of your previous form! Luckily, you retained your personality and mental sanity... but for how long?"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "a little coating of fur covers you from head to toe. Feels almost like velvet"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "A little tail sprouts, waggling"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now cock change entry is "it becomes humanlike, covered with foreskin. A pair of soft balls descends as well"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 6;
 	now dex entry is 15;
 	now sta entry is 10;					
@@ -137,13 +147,28 @@ Choose a blank row from Table of infection heat;
 now infect name entry is "rabbit pack"; [ This should be exactly the same as your monster name in the main table]
 now heat cycle entry is 1; [ This is the number of days a heat "cycle" lasts, usualy 7 ]
 now heat duration entry is 1; [ This is how many days of the cycle you are actualy in heat. default is 1, set it to the same as cycle for permanently in heat.]
-now trigger text entry is "This is probably the strangest situation you have ever been into. Instinctively you know what exactly is going on, but in practice you are scared and confused. Let[apostrophe]s see...you can have female or male 'bodies', but not herms... you have a 'body' for every cock or pussy you had... and what else..."; [ This is the text that is written to the screen when the player comes into heat]
+now trigger text entry is "[rabpacktrigger]"; [ This is the text that is written to the screen when the player comes into heat]
 now inheat entry is "[rabpackinheat]"; [this final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat riaises libido value by 5 every 3 hours. ]
 
 to say rabpackinheat:
-	say "[one of]Repeat: there is only a me. A single me. A single consciousness. There is no 'we', only 'I'. I can[apostrophe]t go insane now.[or]Maybe is the infection, but you find yourself calling a male body a 'cock', and a female one a 'pussy', or similar... what the hell...[or]Even if your individual bodies are weaker, you can coordinate them with ease. And two pair of eyes are better than just one, for example.[or]You realize one of your copies is acting affectionately towards another one, on its own. You can[apostrophe]t help it: it[apostrophe]s like a tic.[or]How was it? A female copy for every cunt and a male one for every penis? So what would happen if you were to lose both?[or]Note to self: talking and generally do things in perfect synchrony tends to unnerve people.[or]It is a bit odd to define the whole bunch of your copies [apostrophe]your body[apostrophe]. You still want to cling to how much sanity you have left, though.[at random]";
-	increase libido of player by 1;
-	decrease humanity of player by 1;
+	if bodyname of player is "rabbit pack" and ( cocks of player + cunts of player > 1 ):
+		say "[one of]Repeat: there is only a me. A single me. A single consciousness. There is no 'we', only 'I'. I can[apostrophe]t go insane now.[or]Maybe is the infection, but you find yourself calling a male body a 'cock', and a female one a 'pussy', or similar... what the hell...[or]Even if your individual bodies are weaker, you can coordinate them with ease. And two pair of eyes are better than just one, for example.[or]You realize one of your copies is acting affectionately towards another one, on its own. You can[apostrophe]t help it: it[apostrophe]s like a tic.[or]How was it? A female copy for every cunt and a male one for every penis? So what would happen if you were to lose both?[or]Note to self: talking and generally do things in perfect synchrony tends to unnerve people.[or]It is a bit odd to define the whole bunch of your copies [apostrophe]your body[apostrophe]. You still want to cling to how much sanity you have left, though.[at random]";
+		increase libido of player by 1;
+		decrease humanity of player by 1;
+	otherwise:
+		now turns in heat is 0;
+		now animal heat is False;
+		now inheat is False;
+
+to say rabpacktrigger:
+	if bodyname of player is "rabbit pack" and ( cocks of player + cunts of player > 1 ):
+		say "This is probably the strangest situation you have ever been into. Instinctively you know what exactly is going on, but in practice you are scared and confused. Let[apostrophe]s see...you can have female or male 'bodies', but not herms... you have a 'body' for every cock or pussy you had... and what else...";
+	otherwise:
+		now turns in heat is 0;
+		now animal heat is False;
+		now inheat is False;
+
+
 [ +++++ ] 
 
 [ Edit this to have the correct Name as wall]
