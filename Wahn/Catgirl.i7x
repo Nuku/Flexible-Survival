@@ -1,5 +1,5 @@
 Version 1 of Catgirl by Wahn begins here.
-[Version 1 - Base Infection]
+[Version 1.1 - Small Adjustments]
 
 "Adds a Catgirl to Flexible Survival's Wandering Monsters table."
 [Description text for this Extension.]
@@ -47,7 +47,7 @@ When Play begins:
 	now defeated entry is "[Catgirl_Loses]";
 	now victory entry is "[Catgirl_Wins]";
 	now desc entry is "[Catgirl_Desc]";
-	now face entry is "a mixture of cat and human, with rather sharp features and a mouth full of sharp teeth. Vertically slitted eyes and large pointy cat's ears higher up than a human's would be complete the picture";
+	now face entry is "a mixture of cat and human, with rather sharp features and a mouth full of pointy teeth. Vertically slitted eyes and large cat's ears realatively high on your head complete the picture";
 	now body entry is "very slender and sleek, built for speed and agility. Your hands are mostly human, although equipped with sharp claws, while your long legs end in more paw-like digitigrade feet";
 	now skin entry is "black, soft-furred";
 	now tail entry is "You have a long mobile tail over the tight buns of your behind. It's pretty useful for helping you hold your balance in any situation.";
@@ -55,7 +55,7 @@ When Play begins:
 	now face change entry is "it reshapes itself, giving you sharp features and a pretty pointy chin. You feel your mouth filling with a predator's sharp teeth and your ears grow and migrate further up on your head";
 	now body change entry is "you fall to the ground, your chest and limbs reforming into a slender, sleek new shape. Your hands acquire sharp claws, while your feet take the shape of digitigrade paws";
 	now skin change entry is "short black fur sprouts all over your body";
-	now ass change entry is "your ass becomes tight and firmly muscled. This is followed by a very strange feeling as a long tail rapidly forms above it, making you stumble around for a moment before you adjust to using it for balance";
+	now ass change entry is "it becomes tight and firmly muscled. This is followed by a very strange feeling as a long tail rapidly forms above it, making you stumble around for a moment before you adjust to using it for balance";
 	now cock change entry is "it develops lots of tiny spines";
 	now str entry is 12;
 	now dex entry is 22;
@@ -63,31 +63,31 @@ When Play begins:
 	now per entry is 20;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Female";			[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60;				[ How many HP has the monster got? ]
-	now lev entry is 8;				[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 8;				[ Amount of Damage monster Does when attacking.]
-	now area entry is "Warehouse";		[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;				[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;			[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;			[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;				[ Number of Breasts infection will give you. ]
-	now breast size entry is 2;			[ Size of breasts infection will try to attain ]
+	now sex entry is "Female";					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 60;									[ How many HP has the monster got? ]
+	now lev entry is 8;									[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 8;								[ Amount of Damage monster Does when attacking.]
+	now area entry is "Warehouse";			[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 0;								[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0;					[ Length infection will make cock grow to if cocks]
+	now cock width entry is 0;					[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;							[ Number of Breasts infection will give you. ]
+	now breast size entry is 2;					[ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;				[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 16;			[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;			[ Width of female sex  infection will try and give you ] 
-	now libido entry is 25;				[ Amount player Libido will go up if defeated ]
-	now loot entry is "";				[ Loot monster drops, ]
-	now lootchance entry is 0;			[ Chance of loot dropping 0-100 ]
+	now cunts entry is 1;								[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 10;				[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 6;					[ Width of female sex  infection will try and give you ] 
+	now libido entry is 25;							[ Amount player Libido will go up if defeated ]
+	now loot entry is "";								[ Loot monster drops, ]
+	now lootchance entry is 0;					[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2;								[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]flexible[or]slender[at random]";
 	now type entry is "feline";
-	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now magic entry is false;						[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;				[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;	[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	blank out the nocturnal entry;			[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
 	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:

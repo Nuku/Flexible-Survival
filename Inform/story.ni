@@ -5357,7 +5357,7 @@ Include Male Peacock for FS By Lago Moro.
 Include Gryphons Plot for FS by Hellerhound.
 Include Dolphin for FS by Hellerhound.
 Include Centaur by Hellerhound.
-Include Nymph for FS by Hellerhound.
+Include Dryad for FS by Hellerhound.
 Include Latex Wolf for FS by Hellerhound.
 Include Hermaphrodite Latex Vixen for FS by Tentabear.
 Include Butterfly for FS by mirumu.

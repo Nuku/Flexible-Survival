@@ -1,5 +1,5 @@
 Version 7 of Soldier Event by Wahn begins here.
-[Version 7.1 - Saving Camp Bravo / Adam]
+[Version 7.2 - Fucking David starting text adjusted]
 
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse";
@@ -278,7 +278,8 @@ Instead of fucking David:
 	if(lastfuck of David - turns < 5):
 		say "     David says 'I'd love to, but I'm still pretty worn out from the last time...'";
 	otherwise:
-		say "     You walk up to David and tell him you want to 'talk' to him - alone. [if thirst of David < 2]He salutes and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier..[otherwise]He gives you a knowing wink and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier...[end if]";
+		if David is in Parade Ground:
+			say "     You walk up to David and tell him you want to 'talk' to him - alone. [if thirst of David < 2]He salutes and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier..[otherwise]He gives you a knowing wink and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier...[end if]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		choose a blank row in table of fucking options;

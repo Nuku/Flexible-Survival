@@ -1,5 +1,5 @@
 Version 1 of Wolfman by Wahn begins here.
-[Version 0.3 - Event moved to first monster encounter and Septus content added]
+[Version 1.4 - Adjustments to some texts]
 
 "Adds a team of football wolfmen to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -82,12 +82,12 @@ When Play begins:
 	now victory entry is  "[Septus wins]";    [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[Wolfmandesc]";            [ Description of the creature when you encounter it. ]
 	now face entry is "a canine muzzle sticking out of your wolf-like head. The sharp teeth inside it make your smiles and growls pretty unforgettable for others, and the long tongue should come in handy for french kissing";
-	now body entry is "tall and well muscled, standing on two legs and showing an interesting mix of lupine and human form. While your legs are fully digitigrade and end in large paws, your arms are changed but still more human-like and end in strong, now clawed, hands.";
+	now body entry is "tall and well muscled, standing on two legs and showing an interesting mix of lupine and human form. While your legs are fully digitigrade and end in large paws, your arms are changed but still more human-like and end in strong, now clawed, hands";
 	now skin entry is "[one of]black furred[or]densely furred[or]furred[at random]";
 	now tail entry is "You have a mid-length fluffy tail growing out of your spine just above the grabbable buns of your ass.";  [ Tail desc., written as a full sentence or left blank for none. ]
 	now cock entry is "[one of]lupine[or]wolf[or]knotted[at random]";
-	now face change entry is "your face stretches out into a large lupine muzzle, filled with a predator's sharp teeth. Your worldview shifts a bit as your ears become pointed and move to the top of your head, your vision becomes somehow 'sharper' and new scents assail your now much more sensitive nose."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your body morphs into a well tones human-wolf hybrid shape. With the crunching noise of breaking bones, your legs become digitigrade - now ending in large paws instead of feet. Your arms meanwhile fill out and lengthen a bit and also change the form of their joints slightly. Still, they're closer to human than the legs - even with the new sharp claws on the hands."; [ body change text. format as "Your body feels funny as (your text)" ]
+	now face change entry is "it stretches out into a large lupine muzzle, filled with a predator's sharp teeth. A shift goes through your worldview when your ears become pointed and move to the top of your head, your vision becomes somehow 'sharper' and new scents assail your now much more sensitive nose"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "it morphs into a well toned human-wolf hybrid shape. With the crunching noise of breaking bones, your legs become digitigrade - now ending in large paws instead of feet. Your arms meanwhile fill out with muscles, lengthen a bit and also change the form of their joints slightly. Still, they're closer to human than the legs - even with the new sharp claws at the ends of your fingers"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "dense black fur spreads rapidly over your form. Well, mostly black - your chest shows a large '22' on it in blood-red fur, just like your back"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "a mid-length lupine tail sprouts from your backside"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "your member grows thicker as the top of it grows to a sharp point, a large canine knot forming at the base of your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
@@ -104,7 +104,7 @@ When Play begins:
 	now area entry is "Outside";				[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;        [ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 10;         [ Cock width, more commonly used for ball size. ]
+	now cock width entry is 8;        	[ Cock width, more commonly used for ball size. ]
 	now breasts entry is 0;             [ Number of breasts the infection will give a player. ]
 	now breast size entry is 0;         [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
@@ -439,7 +439,7 @@ Instead of fucking Septus:
 						say "[SeptusSex4]";
 					otherwise if (nam is "Take Septus ass"):
 						say "[SeptusSex5]";
-		infect "Wolfman";
+		infect "Football Wolfman";
 		now lastfuck of Septus is turns;
 		
 
