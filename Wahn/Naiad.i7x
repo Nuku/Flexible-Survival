@@ -1,8 +1,7 @@
 Version 1 of Naiad by Wahn begins here.
-[Version 1 - Base Infection, Victory+Loss Scenes, Endings]
+[Version 1.1 - Infection Texts adjusted]
 
 "Adds a Naiad to Flexible Survival's Wandering Monsters table."
-[Description text for this Extension.]
 
 Section 1 - Monster Responses
 
@@ -86,7 +85,7 @@ When Play begins:
 	now victory entry is "[Naiad Wins]";
 	now desc entry is "[Naiad Desc]";
 	now face entry is "that of a very beautiful woman, with aquamarine blue eyes. Long strands of golden blond hair flow down over your shoulders";
-	now body entry is "that of a well-shaped young woman, with a slender and flexible build that seems made for swimming, darting and gliding through the water. Perfectly rounded perky breasts complete the picture that will take many a man's breath away with its supernatural beauty";
+	now body entry is "a well-shaped young woman's, with a slender and flexible build that seems made for swimming, darting and gliding through the water. Perfectly rounded perky breasts complete the picture that will take many a man's breath away with its supernatural beauty";
 	now skin entry is "[one of]perfect[or]soft and sleek[or]beautiful[at random]";
 	now tail entry is "You shapely ass has just the right amount of pert buttcheeks to make it deliciously grab-able.";
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
@@ -101,38 +100,38 @@ When Play begins:
 	now per entry is 20;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Female";			[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 60;				[ How many HP has the monster got? ]
-	now lev entry is 8;				[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 8;				[ Amount of Damage monster Does when attacking.]
-	now area entry is "Campus";			[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;				[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;			[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;			[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;				[ Number of Breasts infection will give you. ]
-	now breast size entry is 2;			[ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;		[ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;				[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 16;			[ Length of female sex  infection will attempt to give you. ]
-	now cunt width entry is 8;			[ Width of female sex  infection will try and give you ] 
-	now libido entry is 25;				[ Amount player Libido will go up if defeated ]
-	now loot entry is "";				[ Loot monster drops, ]
-	now lootchance entry is 0;			[ Chance of loot dropping 0-100 ]
+	now sex entry is "Female";				[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now hp entry is 60;								[ How many HP has the monster got? ]
+	now lev entry is 8;								[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 8;							[ Amount of Damage monster Does when attacking.]
+	now area entry is "Campus";				[ Current options are 'Outside' and 'Mall'  Case sensitive]
+	now cocks entry is 0;							[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0;				[ Length infection will make cock grow to if cocks]
+	now cock width entry is 0;				[ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 2;						[ Number of Breasts infection will give you. ]
+	now breast size entry is 2;				[ Size of breasts infection will try to attain ]
+	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;							[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 8;				[ Length of female sex  infection will attempt to give you. ]
+	now cunt width entry is 6;				[ Width of female sex  infection will try and give you ] 
+	now libido entry is 25;						[ Amount player Libido will go up if defeated ]
+	now loot entry is "";							[ Loot monster drops, ]
+	now lootchance entry is 0;				[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
-	now scale entry is 2;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 2;							[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]flexible[or]slender[at random]";
 	now type entry is "human-like";
-	now magic entry is true;			[ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now magic entry is true;							[ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;					[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	blank out the nocturnal entry;				[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now altcombat entry is "default";			[ Row used to designate any special combat features, "default" for standard combat. ]
 
 when play ends:
 	if bodyname of player is "Naiad" and cunts of player > 0:
 		if humanity of player is less than 10:
-			say "Before long, your instincts take over, driving you to seek out a body of water to claim for your own. As you do so, its contents supernaturally become fresh and clean again, a rarity in this stricken city. This causes all kinds of people to search out your lake, the infected as well as the rare human survivors. You allow most to drink, punishing those who try to pollute your water and inviting selected guests to swim and couple with you.";
-			say "When the military finally moves in, some soldiers think you a surviving human and try to 'rescue' you - which doesn't go so well for them. They end up wet as drowned rats and and washed all the way down the way they came from - except for a cute one you decide to keep for a while and play with. In the end, you're marked down as 'too much trouble to bring in' and left in peace. So there you stay, in your clean lake in the middle of the chaotic infected city.";
+			say "Before long, your instincts take over, driving you to seek out a body of water to claim for your own. As find a suitable lake in a park and do so, its contents supernaturally become fresh and clean again, a rarity in this stricken city. This causes all kinds of people to search out your lake, the infected as well as the rare human survivors. You allow most to drink, punishing those who try to pollute your water and inviting selected guests to swim and couple with you.";
+			say "When the military finally moves in, some soldiers think you a surviving human and try to 'rescue' you - which doesn't go so well for them. They end up wet as drowned rats and and washed all the way down the way they came from - except for a cute one you decide to keep for a while and play with. In the end, you're marked down as 'too much trouble to bring in' and left in peace. So there you stay, in your pristine enchanted lake in the middle of the chaotic infected city.";
 		otherwise:
 			say "When the military moves in, you're brought to a holding facility for uninfected survivors, seeing as you look human. Just to be on the safe side, the doctors give everyone a shot to neutralize infectious nanites and then you're hustled out to a disaster relief center so they can deal with the harder infected cases. Now free in the outside world, you keep yourself afloat with small jobs while training your swimming skills and taking part in one tournament after another. Soon you got a pretty good track record and are invited to join the US Olympic team...";
 

@@ -1,5 +1,5 @@
 Version 2 of Hulking Cheerleader by Wahn begins here.
-[Version 2 Initiation Event folded into the monster description]
+[Version 2.1 - Infection Texts adjusted]
 
 "Adds a Hulking Cheerleader to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -90,7 +90,7 @@ When Play begins:
 	now cock entry is "[one of]green[or]human[at random]";
 	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into the beautiful features of a woman. Your hair adjusts to shoulder-length and takes on a blonde color"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "it is reshaped into a very tall form, ending up in a strongly muscled but still recognizably female shape. A very tight white crop top and skirt coalescence out of a cloud of nanites around your chest and hips";
-	now skin change entry is "your skin seems to soften and smooth out while taking on a light green color. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
+	now skin change entry is "it seems to soften and smooth out while taking on a light green color. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a firm, round bubble butt";
 	now cock change entry is "it becomes human-like, uncut and well-proportioned";
 	now str entry is 26;
@@ -106,7 +106,7 @@ When Play begins:
 	now area entry is "Campus";       		  [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;            		  	[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;     		  	[ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 10;       		  [ Cock width, more commonly used for ball size. ]
+	now cock width entry is 12;       		  [ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;           		  [ Number of breasts the infection will give a player. ]
 	now breast size entry is 4;       		  [ Size of breasts the infection will try to attain. ]
 	now male breast size entry is 4;  		  [ Breast size for if Sex="Male", usually zero. ]
