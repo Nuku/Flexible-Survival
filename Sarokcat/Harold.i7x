@@ -1,5 +1,5 @@
-Version 2 of Harold by Sarokcat begins here.
-[ Version 2 - M/M fun now possible ]
+Version 3 of Harold by Sarokcat begins here.
+[ Version 3 - Added supply task and random drink testing by Kaleem]
 
 "Adds a npc to Flexible Survival with a well stocked bar and a problem..."
 
@@ -9,6 +9,7 @@ section 1 - Harold
 Haroldtalk is a number that varies.
 Haroldaroused is a number that varies.[not a needed number, but used to set different arousal states if they aren't automatically willing to just hop into bed.]
 LastHaroldfucked is a number that varies. LastHaroldfucked is usually 250.
+lastrandomharold is a number that varies.  lastrandomharold is usually 250.
 Haroldfucked is a number that varies. Haroldfucked is usually 0.
 tattoohunter is a number that varies.
 Harold is in The PALOMINO.
@@ -50,8 +51,69 @@ instead of conversing the Harold:
 		otherwise if tattoohunter is greater than 2:
 			say "     'Well friend, just because things didn't quite work out the way I would have liked them, it doesn't mean I don't owe ya for all your help looking for my friend.  Why don't ya show me that list of yours there, and we can see what I've got,' the unicorn barkeep says with a broad smile and a nod of his head as you approach him about the ingredients.  He wanders off into a narrow back room for a while, only to return with a small pouch full of some unknown items.  'Well, here ya go.  These should be what ya want.  Gave ya all of the stock I was saving, since I didn't know how much you would need.  And if ya need anything else, you be sure to come visit Harold ok?' the rather saucy unicorn says with a sly wink as you tuck the pouch away and prepare to head back to Nermine with your findings.";
 			now hellgatherquest is 5;
-	otherwise if Haroldtalk is 2: [Normal short messages the npc will say each time you talk to them]
-		say "     '[one of]No, I was far from being a virgin, so that can't be why I ended up this way,' Harold says with some exasperation as you open your mouth to talk to him, making you blink in surprise.[or]Try some of the drinks, we make em all here!' Harold says proudly.[or]I wish some of the patrons would get back with those supplies I need, we are running low on some of the 'special ingredients' for some of the drinks.'[or]See Tristian over there?  He really helped get this place going right after things went to hell, maybe you should go talk to him sometime about it.'[or]I was a bartender before all this happened, different bar of course, but I have to admit I like this venue better, lots of eye candy at least!'[or]Eat, Drink, Party! For tomorrow we may be overrun! Or something like that anyways.'[or]Looking to order a drink? Just look at the bar to see what we have available, and then order it. [or]It's a good thing I don't need to find virgins to play with, given the state the city is in now, I'm not sure there are any left!'[or]We get all types around here now, I have to say, it definitely makes bartending more interesting.[or]We occasionally have some trouble with the roaming beasts trying to get in here or attack people, but there are more then enough of us both here and in the apartment building next door to keep the place safe.'[or]If you need a place to crash sometime, we kind of took over the apartment building next door, blocked off the front access so no one can get in that way, and the side entrance we attached to the club.  That's where most of the people here end up when they need to relax, it also has a good basement for the still.' Harold says with a chuckle.[or]If ya need help with something, you are probably in the wrong place, if you need a damn good time and a drink or two, then you are definitely in the right place.'[or]'We burned through most of the stocks of standard booze pretty fast at first, till we figured out how to mix them up to make them last longer, you should let us know how we did after trying some of the drinks.'[at random]";
+	otherwise if Haroldtalk is 2 and a random chance of 2 in 5 succeeds:
+		Say "     'Am I ever so glad to see you!' Harold says with a hint of desperation coloring his voice.  Confused, you cock an eyebrow at the large stallion.  'Look, I know you shouldn't ask this of friends, but I REALLY need your help.' Giving the unicorn a quizzical look, you ask Harold what the problem is.  The horned equine curls a finger begging you closer before he himself leans down to whisper something into your ear. 'See, the thing is, the club's slowly running out of food and before long we're going to need to send some people out to go and find some provisions, otherwise things are going to get... uncomfortable... around here for some of us.'";
+		attempttowait;
+		say "     Harold turns his gaze towards some of the predators in the club and you quickly come to understand the unspoken message. 'I know this not your problem, but I also know you travel outside a lot, so if you could snag maybe ten things of food and maybe ten liters of water, then I'd be really indebted to you.' Letting the other man know that you'll see what you can do, you receive a somber nod from Harold before the bartender pulls himself to stand in his usual upright position back behind his bar.  'Ok. And thanks.'  You nod and then turn to leave from the bar to go about your way.";
+		now Haroldtalk is 3;
+	otherwise if Haroldtalk is 3 and ( carried of water bottle < 10 or carried of food < 10 ) and a random chance of 2 in 5 succeeds:
+		say "     [one of]Harold nods for you to come closer and then whispers, 'Did you ever get that food and I water I asked you for?' Shaking your head you get a sigh out of the unicorn. 'Look, I know you're busy and all, but I [italic type]really[roman type] need ten things of food and ten things of water, if you can spare them. I'll try to make it worth your while if you can get them ASAP.' Nodding to the other man you tell him that you'll do the best you can.[or]'Did you have any luck finding those supplies I'd asked about?'[or]'Don't forget to keep your eyes open for some of the supplies we need here.'[or]'Most of the staff here don't have much time to collect supplies, so we need help from helpful patrons like you to keep us supplied.'[at random]";
+	otherwise if Haroldtalk is 3 and carried of water bottle >= 10 and carried of food >= 10:
+		decrease carried of water bottle by 10;
+		decrease carried of food by 10;
+		say "     When you walk up to Harold to let him know that you have the food and water he needs the unicorn quickly waves a hand to hush you and then nods for you to follow him back behind the bar. Once you're in the back Harold has you unload the food and water over by a small generator powered refrigerator unit and then leads you back to the front.";
+		say "     'Thanks a lot for this, I really appreciate it.' Harold whickers gratefully and you nod to the unicorn before turning to head off about your way. 'Hey, hold up a sec.' Stopping you turn to look back at Harold and then find yourself being handed something by the stallion. 'It's not much, but I wanted you to have this. Looking at what the unicorn hands you, you find yourself in possession of a good number of freecreds. 'Some guys at Zephyr have been giving these out for nailing the beasts running around... so... yeah...' Wondering how Harold got a hold of these, considering that he's been at the bar the whole time, right before you shrug and then thank the other man for the gift. 'No problem!'";
+		increase freecred by 100;
+		increase xp of player by 12 + level of player;
+		now Haroldtalk is 2;
+	otherwise:
+		If a random chance of 1 in 3 succeeds and lastrandomharold - turns >= 8 and LastDrinkserved is not 250:
+			say "     'Hey, would you mind tasting this for me?' Harold asks just after pouring a pink tinged liquor from a pair of shakers he had been tossing about into a lone wine glass atop his bar.  Seeing the drink, and noting the funny way the liquid shimmers an almost pale white in underneath the flashing lights of the club, you glance up at the bartender, then back to the drink.  Shall you try it?'";
+			if the player consents:
+				say "     Deciding you could go for a drink, you shrug and pick up the glass, taking a sip of it.";
+				attempttowait;
+				say "[drinkflavor]";
+				increase score by 2;
+			otherwise:
+				say "Deciding to play it safe, you pass on the drink.  Harold finds someone else to give it a try.";
+				now lastrandomharold is turns - 8;	[added delay before next offer]
+		otherwise:
+			say "     '[one of]No, I was far from being a virgin, so that can't be why I ended up this way,' Harold says with some exasperation as you open your mouth to talk to him, making you blink in surprise.[or]Try some of the drinks, we make em all here!' Harold says proudly.[or]I wish some of the patrons would get back with those supplies I need, we are running low on some of the [']special ingredients['] for some of the drinks.'[or]See Tristian over there?  He really helped get this place going right after things went to hell, maybe you should go talk to him sometime about it.'[or]I was a bartender before all this happened, different bar of course, but I have to admit I like this venue better, lots of eye candy at least!'[or]Eat, Drink, Party! For tomorrow we may be overrun! Or something like that anyways.'[or]Looking to order a drink? Just look at the bar to see what we have available, and then order it. [or]It's a good thing I don't need to find virgins to play with, given the state the city is in now, I'm not sure there are any left!'[or]We get all types around here now, I have to say, it definitely makes bartending more interesting.[or]We occasionally have some trouble with the roaming beasts trying to get in here or attack people, but there are more then enough of us both here and in the apartment building next door to keep the place safe.'[or]If you need a place to crash sometime, we kind of took over the apartment building next door, blocked off the front access so no one can get in that way, and the side entrance we attached to the club.  That's where most of the people here end up when they need to relax, it also has a good basement for the still.' Harold says with a chuckle.[or]If ya need help with something, you are probably in the wrong place, if you need a damn good time and a drink or two, then you are definitely in the right place.'[or]'We burned through most of the stocks of standard booze pretty fast at first, till we figured out how to mix them up to make them last longer, you should let us know how we did after trying some of the drinks.'[at random]";
+
+
+to say drinkflavor:	
+	let T be a random number between 1 and 8;
+	if T is 1 or T is 2:
+		say "     Right away you find that the flavor of the unknown drink is relatively sweet on your tongue. Licking your [facename of player] lips you nod up to the unicorn before swallowing down the rest of the fluid in a single gulp. Letting the sweet, if not somewhat tangy, liquor settle into the back of your throat you savor the unique flavor of the alcoholic beverage for several seconds before swallowing happily. 'I'm glad you enjoyed that,' Harold whickers, very much pleased with himself. 'I'm making a new drink to put up on the drink bar's menu, but I think I need to refine this little concoction of mine some more before I do that.' Harold proudly neighs. You nod to the other, thanking him for his, as of yet, unnamed concoction and then go about your business for the day.";
+		decrease thirst of player by 8;
+		if thirst of player < 0, now thirst of player is 0;
+	if T is 3 or T is 4:
+		say "     On first taste you find that the flavor of the drink is rather bland on your palate. A second sip doesn't help your opinion of concoction any and quickly you find yourself shaking your head up at Harold. Smacking your lips you can't stop yourself from flinching in distaste as your tongue seems to go numb for a minute. Noting the sheepish smile on Harold's face you shrug and then down the rest of the liquor as quickly as possible. Setting the glass back down onto the counter you give the unicorn another shake of your head before giving the drink a big thumbs down. 'No good, huh? Damn, guess I'm going to have to fine tune it some more. Maybe if I add some sugar instead of salt?' Harold asks you while curling his lips up into a concentrated frown as he looks at the now empty wine glass. You nod and then give the unicorn your opinion, watching as he stares at you somewhat sagely, before slowly taking your leave of the bar to go about your business.";
+		decrease thirst of player by 4;
+		if thirst of player < 0, now thirst of player is 0;
+	if T is 5:
+		say "     The first taste of the unsavory drink immediately makes you spit it out. Coughing and hacking the putrid tasting beverage back up you completely miss out on the fact that Harold has jumped back out of the way so as not to be splashed by your [']review['] of his latest concoction. 'No good, huh?' the unicorn asks somewhat nervously and it takes everything in you to keep from telling the equine man off. Placing the wine glass back down onto the bar you gaze at the disgusting pink liquor for a second before informing Harold of your thoughts on his latest concoction. 'I-I see...well I'm sorry about that. Guess, I need to work on it some more?' Harold asks nervously after reaching up to stroke his long pearlescent horn somewhat sheepishly.";
+		decrease thirst of player by 1;
+		if thirst of player < 0, now thirst of player is 0;
+	if T is 6:
+		say "     The first taste of the drink has you pulling back and then staring at Harold somewhat incredulously. The big unicorn blinks at you in some confusion and prepares to open his muzzle to ask what the matter is, but you beat him to the punch as you ask him how much alcohol he put into this unknown beverage. 'About the same amount you'll find in your average Piña colada. Why? Is it too strong?' You look to the unicorn and then down to the pink alcoholic concoction in front of you before bringing your thumb and forefinger fingers up to pinch them together ever so slightly. The unicorn apologetically sighs and then nods his head, but when he tries to get the drink back from you, you are already downing the wine glass so as to polish off the rest. Harold whickers happily once you set the glass onto the bar and you nod at the man before turning to go about your business, stumbling just a tad bit as you do.";
+		increase thirst of player by 2;
+		if thirst of player > 100, now thirst of player is 100;
+	if T is 7:
+		say "     At the first taste of the unnamed drink you find yourself instantly feeling somewhat tipsy as the world around you begins to shift ever so slightly. Not letting this deter you however, you knock back the rest of the alcoholic beverage in a single gulp before slamming the wine glass down onto the bar. This proves to be a mistake on your part because very soon you are swaying and giggling in your seat as you look up to Harold with half lidded eyes. Staring up at Harold you suddenly find that the other man looks particularly sexy with all those muscles and that awesome silver mane of his wrapped in that too tight black vest he has on. 'T-too strong?' The unicorn asks while taking a quick step back as something in your drunken eyes has him severely spooked. Seeing his fear and that cute little bob of his throat where his delicious looking Adam's apple is nervously vibrating, you instantly fly over the counter to tackle the unicorn.";
+		attempttowait;
+		say "     Harold yelps as he catches you with his muscular arms, however, the horned equine is not at all prepared for you to kiss, lick, nip, bite and all out chew on his throat as you quickly find yourself [italic type]hungry[roman type] for the sweet tasting mythic beast. It takes the other almost two minutes to pry your [bodyname of player] form away from him, but when he does Harold has no time to try and calm you down because you quickly pass out seconds later. In the dim fog of black unconsciousness, you could almost swear that you heard someone say [']WAY too strong['], but you're not sure.'";
+		unicornify;
+	if T is 8:
+		say "     At the first taste of the unnamed drink, you find it rather tasty, with a [one of]fruity[or]strong[or]minty[or]powerful[at random] flavour and a [one of]mild[or]sharp[or]subtle[or]sweet[or]rich[at random] aftertaste.  You smile and swallow down the rest of it.  It's not quite the sort of thing you'd usually get, but it's pleasant enough and you tell the unicorn so.  He seems fairly pleased with your review.  'Well, that one's coming along well, I guess.  I'll need to stock up a bit more before I can put it on the menu though.  Got to make sure I have a supply of the [']special ingredient['],' he adds with a wink.";
+		say "     'Uh oh,' you think to yourself.";
+		attempttowait;
+		weakrandominfect;
+		infect;
+		decrease humanity of player by 5;
+		decrease thirst of player by 5;
+	now lastrandomharold is turns;
+
 
 
 Section 3 - Sex Mechanics

@@ -1,4 +1,5 @@
-Tiger Den by Sarokcat begins here.
+Version 2 of Tiger Den by Sarokcat begins here.
+[Version 2 - Added supply task for Chase by Kaleem]
 
 "Adds a tiger den to Flexible Survival with a few anthro tigers, and some small quests vs the tigertaurs..."
 
@@ -32,9 +33,37 @@ instead of conversing the Chase:
 		say "     Chase waves at you as you approach, 'Hey welcome to our little hideout, we call it the Tigers den', he says with a soft chuckle, 'Not a bad little place here either. Not sure who found it to begin with, or if they are even still around or ended up changed by one of the tigertaurs.' Chase lets out a soft sigh at that, 'The damn Tigertaurs are catching more and more of us each time we go out to forage or try to find people to help, we actually have a good stockpile of supplies here,' He says with a gesture to one of the locked doors, 'But as you can see we have a decent amount of people here too, and no idea how long we need to wait for rescue, if it's even coming.' Chase shrugs slightly before proceeding to show you around the rather large solid basement, several of the tiger people stopping to watch as the two of you pass by.";
 		say "     Noting your interest in all various different tiger-like people, Chase stops for a minute to explain.  'When I first ended up down here, not long after this place was started, there were more different types of minorly infected here, and we even had a number of people who hadn't been infected yet at all we thought. Still,' the tiger says with a shrug, 'the longer we all stayed down here together, the more tiger-like everyone else seemed to become, until at this point I'm not sure if there are any non-tigers left down here. Most people actually seem to have adapted to the changes without any real regrets though. I mean heck,' Chase says with an amused grin on his tiger-like muzzle, 'What's NOT to like about being a tiger? I mean not only are we amazingly strong and fast hunters, but you seem to come through the change with your mind intact unlike a lot of the other infected. Most of all though,' Chase says as he strokes a hand down his tiger-furred side in amusement, 'Tigers are so just damn sexy, with the stripes and all, don't you agree?' Chase says as he poses his long lean body for your examination. Taking your silence as a sign of agreement, the tiger man grins as he finishes up the tour and goes back to watching the rest of the den members go about their business.";
 		increase Chasetalk by 1;
-		stop the action;
-	if Chasetalk is 1:
-		say "[one of]'Hey good to see you came by again.'[or]'Hey I'm glad your back, I was starting to get worried about you out there.'[or]'I don't know why we seem to still be pretty much our normal selves, and the tigertaurs aren't.'[or]'I'm glad you came along when you did.  I may love being a tigerman, but I don't think I would enjoy being a tigertaur nearly as much.'[or]'After all this is over, what do you think will happen to those of us who can still think clearly?'[or]'I wonder if they will put us infected people in some kind of large infected zoo when they finally retake the city, spending all your time sleeping and eating and fucking for an audience might not be pretty fun, but I wonder if they will let us have internet connections...'[or]'I swear the zoo is a mess now, but it's still one of the safer places to forage it seems, there is some REALLY crazy stuff in other parts of the city that tries to grab ya.'[or]'Did you see those small packs of rabbits roaming around? God they always make my mouth water..'[or]'You should try sticking around down here with us until help arrives, sure you would probably end up a tiger like the rest of us, but that's kinda a good thing to my mind.'[or]'I always loved tigers before all this, now I find I REALLY love tigers, if you know what I mean.'[or]'While the tigertaurs can convert anyone it seems, us tigers seem especially vulnerable to them.'[or]'I used to be called Alex before all this, everyone just calls me Chase now though,' he says with a shrug.  'It seems more appropriate anyways.'[at random]";  
+	otherwise if Chasetalk is 1:
+		If a random chance of 2 in 5 succeeds:
+			say "	'Hey, I'm sorry to ask this of a friend, but could you do me a small favor?'  Not sure what the tiger is on about, you ask Chase what he needs. 'Well, we're kind of running low on food and water around here.  I was kind of hoping that if you happened to come across some extra supplies, you wouldn't mind sharing some with us?'";
+			say "	Not seeing any reason why not as long as you can keep yourself supplied too, you nod and then ask Chase how much in the way of provisions he and the others would need. 'Not much maybe just 20 pounds of food (8 units) and maybe a couple gallons of water (5 units). The waters not that necessary though, but the food would be really appreciated.' The tiger smiles at you somewhat sheepishly. Gaping and then nodding somewhat bewilderedly at the feline man you tell Chase that you'll see what you can do.";
+			Say "'Thanks and sorry about the inconvenience.' Chase saunters up next to you and then licks his raspy tongue across you [facename of player] face.";
+			Now Chasetalk is 2;
+		otherwise:
+			say "[chasebasictalk]";
+	otherwise If Chasetalk is 2:
+		if carried of bottle water < 5 or carried of food < 8:
+			if a random chance of 3 in 5 succeeds:
+				Say "	[one of]'Hey, sorry to bug, but did you ever get that food? We need like 8 things of food and maybe 5 liters of water, if you can spare that much.'[or]'Did you have any luck finding those supplies I'd asked about?'[or]'Don't forget to keep your eyes open for some of the supplies we need here.'[or]'Did you see those small packs of rabbits roaming around? God they always make my mouth water...'[at random]";
+			otherwise:
+				say "[chasebasictalk]";
+		otherwise:
+			decrease carried of water bottle by 5;
+			decrease carried of food by 8;
+			if a random chance of 1 in 2 succeeds:
+				Say "	'Woah, thanks a lot for this! This should keep the rest of us going for a while longer!' Chase nuzzles the side of your neck and then licks you across your throat. A shiver racks down your spine from the rough wet feel of the tiger's tongue sliding along your [facename of player] throat. When the feline pulls back Chase says, 'Hey why don't I show you some neat tricks we tigers like to pull off? It may help you to fight and run away better when your outside foraging or whatever.";
+				Increase xp of player by 40 + ( 3 * level of player );
+				Now Chasetalk is 3;
+			otherwise:
+				Say "	'Hey, thanks a lot for this. I really appreciate it!' Chase smiles as he looks to you fondly. Blushing at the tigerman, you quickly hand him the provisions. 'Hey why don't I show you some neat tricks we tigers like to pull off? It may help you to fight and run away better when your outside foraging or whatever.";
+				Increase xp of player by 40 + ( 3 * level of player );
+				Now Chasetalk is 3;
+	otherwise if chasetalk is 3:
+		say "[chasebasictalk]";
+
+
+to say chasebasictalk:
+	say "[one of]'Hey good to see you came by again.'[or]'Hey I'm glad your back, I was starting to get worried about you out there.'[or]'I don't know why we seem to still be pretty much our normal selves, and the tigertaurs aren't.'[or]'I'm glad you came along when you did.  I may love being a tigerman, but I don't think I would enjoy being a tigertaur nearly as much.'[or]'After all this is over, what do you think will happen to those of us who can still think clearly?'[or]'I wonder if they will put us infected people in some kind of large infected zoo when they finally retake the city, spending all your time sleeping and eating and fucking for an audience might not be pretty fun, but I wonder if they will let us have internet connections...'[or]'I swear the zoo is a mess now, but it's still one of the safer places to forage it seems, there is some REALLY crazy stuff in other parts of the city that tries to grab ya.'[or]'Did you see those small packs of rabbits roaming around? God they always make my mouth water..'[or]'You should try sticking around down here with us until help arrives, sure you would probably end up a tiger like the rest of us, but that's kinda a good thing to my mind.'[or]'I always loved tigers before all this, now I find I REALLY love tigers, if you know what I mean.'[or]'While the tigertaurs can convert anyone it seems, us tigers seem especially vulnerable to them.'[or]'I used to be called Alex before all this, everyone just calls me Chase now though,' he says with a shrug.  'It seems more appropriate anyways.'[at random]";  
 
 
 instead of fucking Chase:

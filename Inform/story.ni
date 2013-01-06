@@ -1217,7 +1217,7 @@ when play begins:
 
 Plantlist is a marker.	[list of plant infections]
 when play begins:
-	add { "Awesome tree", "Tree Nymph", "Parasitic Plant", "Mushroom Men" } to infections of Plantlist;
+	add { "Awesome tree", "Dryad", "Parasitic Plant", "Mushroom Men" } to infections of Plantlist;
 
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
@@ -1229,7 +1229,7 @@ Part 2 - Rules
 
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
-	
+
 
 d18 is a number that varies.
 descr is text that varies.
@@ -4282,13 +4282,13 @@ This is the self examine rule:
 	follow the breast descr rule;
 	if breasts of player is greater than 0:
 		if breast size of player is 0:
-			say "You have [breasts of player] nipples.";
+			say "You have [breasts of player] nipples on your [bodydesc of player] chest.";
 		otherwise:
 			if breasts of player is greater than 2:
-				say "You have [breasts of player] breasts. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [breast size of player times three divided by five] inch[if breast size of player times three divided by 5 is not 1]es[end if] from your chest. ";
+				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [breast size of player times three divided by five] inch[if breast size of player times three divided by 5 is not 1]es[end if] from your chest. ";
 				if breasts of player is greater than 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly.";
 			otherwise:
-				say "You have two [descr] breasts, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
+				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest.";
 	if child is not born and gestation of child is greater than 0:
 		if gestation of child is less than 10:
 			say "Your [skin of player] swollen belly looks ready to spill forth life at any moment.";
