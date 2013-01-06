@@ -1,5 +1,5 @@
 Version 1 of Sand Man by Wahn begins here.
-[Version 1 - Infection Setup, Victory+Defeat Sex, Endings]
+[Version 1.1 - Infection texts adjusted]
 
 "Adds a Male Sand Man to Flexible Survivals Wandering Monsters table, with impreg chance"
 
@@ -145,7 +145,7 @@ When Play begins:
 	now cocks entry is 1;											[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 14;							[ Length infection will make cock grow to if cocks]
 	now cock width entry is 5;								[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;										[ Number of Breasts infection will give you. ]
+	now breasts entry is 2;										[ Number of Breasts infection will give you. ]
 	now breast size entry is 0;								[ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;					[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;											[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
@@ -156,7 +156,7 @@ When Play begins:
 	now lootchance entry is 0;								[ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 3;											[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "sculpted";	[ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "mineral";							[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "sculpted";							[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;									[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;							[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;				[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
