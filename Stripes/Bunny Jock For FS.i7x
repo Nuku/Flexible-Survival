@@ -5,11 +5,14 @@ Version 1 of Bunny Jock For FS by Stripes begins here.
 
 Section 1 - Monster Responses
 
+bunnyjocknosex is a number that varies.
+
 when play begins:
 	add { "Bunny Jock" } to infections of guy;
 	add { "Bunny Jock" } to infections of furry;
 
 to say losetobunnyjock:
+	now bunnyjocknosex is 0;
 	if cunts of player > 0:
 		say "     'I knew you couldn't say no to all this hotness for long, baby,' he says, flexing his muscles before pulling off his shirt.  Unwilling or unable to continue resisting the bunny's advances, you ogle his muscled chest openly.  His massive chest has bulging pecs and firm abs.  Every muscle seems impossibly fit and defined, even under his fur, making you long to touch his body.  But as he pulls down his shorts, exposing his enormous cock, your eyes are immediately locked on it.  You practically drool at the sight of it, reaching out to take hold of his maleness.  As you run your hands over it, he runs his paws over your body, rumbling in pleasure.";
 		say "     Once your fondling has gotten him fully hard, you press yourself against his two and a half foot rod and massive balls.  His paws stroke your rear and breasts before he lowers you down to the ground beneath him.  You moan and pant, spreading your legs for that giant prick, hardly giving a thought to its size past your growing need to have it in you.  Getting it lined up, he slowly pushes it into you, making you groan loudly[if cunt width of player < 6 or cunt length of player < 12].  The bunny's massive cock pushes into you gradually, stretching you out a little as it goes, but somehow your body is able to take it[otherwise if cunt width of player < 9 or cunt length of player < 20].  The bunny's massive cock pushes into you slowly, a snug fit even for your large cunt[otherwise].  The bunny's massive cock pushes into you with a little effort, feeling wonderfully filling for your enormous cunt[end if].";
@@ -24,9 +27,12 @@ to say losetobunnyjock:
 
 to say beatthebunnyjock:
 	say "     Beaten, the big bunny jock stumbles back and falls onto his rump[if cunts of player > 0].  'Hey, baby.  I just wanted to show you a little bunny love,' the rabbit complains[otherwise].  'Not cool, dude.  I was just horsing around,' the rabbit complains[end if]";
-	if libido of player > 40:
+	if bunnyjocknosex > 2:
+		say ".  As his paws wander down to his shorts to fondle himself, you head off as you have with the rest of them.  You leave him to his own devices to find some relief elsewhere.";
+	otherwise if libido of player > 40:
 		say ".  As his paws wander to his shorts to fondle his big package, you consider having a little fun with that big boy's cock.  Do you want to stroke and suck him off?";
 		if the player consents:
+			now bunnyjocknosex is 0;
 			say "     Moving over to the big bunny, you grab his crotch and start tugging down his shorts.  Pulling them off, you free his huge cock, which soon rises to roughly two and a half feet in length.  Wrapping both hands around it, you start stroking it up and down, grinning as you watch the jock's face melt into one of bliss.  You lick and kiss all over his massive glans, even playing your tongue against his slit to lap up the precum leaking quickly from it.  You grind your body against his shaft while you stroke him.  As he's about to blow, you press your lips to his glans and catch the first few blasts in your mouth, gulping them down.  But you can't keep up with his prodigious output and let the rest blast across him and the ground.  Leaving him like that, you head on your way, rubbing your full tummy.  You find the bunny's load quite satisfying, though you later find yourself growing increasingly aroused.";
 			decrease thirst of player by 8;
 			decrease hunger of player by 4;
@@ -35,6 +41,7 @@ to say beatthebunnyjock:
 			if hunger of player < 0, now hunger of player is 0;
 			if libido of player > 100, now libido of player is 100;
 		otherwise:
+			increase bunnyjocknosex by 1;
 			say "     Resisting the urge, you turn away and head off before you are tempted further.";
 	otherwise:
 		say ".  As his paws wander down to his shorts to fondle himself, you head off, leaving him to his own devices to find some relief elsewhere.";
