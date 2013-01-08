@@ -39,6 +39,8 @@ to say beattheequinoid:
 	otherwise:
 		say "     The black furred creature sinks to the ground, then slumps over, panting and defeated.";
 	if equinoidstatus < 4, increase equinoidstatus by 1;
+	if equinoidstatus is 4:
+		say "[equinoidcampinvite]";		[Invite to visit the black equinoid camp]
 
 
 Section 2 - Monster Insertion

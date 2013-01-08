@@ -364,7 +364,7 @@ to monitor:
 	otherwise if cunts of player > 0:
 		say "Groin status:  [cockname of player]     Gender: Female[line break]";
 	otherwise:
-		say "ERROR!: Neuter[line break]";
+		say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
 	follow the self examine rule;
 
 

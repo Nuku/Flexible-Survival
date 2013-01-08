@@ -605,11 +605,10 @@ Instead of resolving a Beach Party:
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if libido of player < 60, now libido of player is 60;
 		if humanity of player < 10:
 			say ".  With your mind fading away, you giggle happily and bound off into the water to play with your new friends as you forget yourself entirely and become a fun-loving beach toy.";
+			attempttowait;
 			end the game saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
 			now battleground is "void";
 			wait for any key;

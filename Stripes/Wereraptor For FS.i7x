@@ -823,7 +823,8 @@ to say wrcurseaccept:
 [
 when play ends:
 	if wrcursestatus is 2:
-		say "***something wild and primal struggles briefly for freedom, but is too old and weak and fades away with an angry hiss.";
+		if humanity of player < 10:
+		say "     As your infection is taking hold and your old self is failing, there is another struggle going on inside you.  You can feel something wild and primal briefly struggle for freedom, but it is too old and weak, and soon fades away with an angry hiss at being denied its return.";
 	otherwise if wrcursestatus >= 3 and wrcursestatus <= 6:
 		if bodyname of player is "Wereraptor":
 			say "***ending for Wereraptor";

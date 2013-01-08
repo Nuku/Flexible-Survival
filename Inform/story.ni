@@ -11,7 +11,7 @@ use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 55000.
-use ALLOC_CHUNK_SIZE of 120000.
+use ALLOC_CHUNK_SIZE of 125000.
 use MAX_OBJECTS of 1100.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
@@ -259,6 +259,10 @@ Definition: A grab object(called X) is wielded:
 
 Definition: The player is submissive:
 	if "Submissive" is listed in feats of player, yes;
+	no;
+
+Definition: The player is perminfected:
+	if ( jackalmantf > 0 or jackalboytf > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
 	no;
 
 Definition: A situation(called X) is available:
@@ -5185,6 +5189,7 @@ Include Zoo by Hellerhound.
 Include Qytat a'th Lundrues by hellerhound.
 Include Campus For Fs by Stripes.
 Include Hospital For Fs by Stripes.
+Include Equinoid Camp For FS by Stripes.
 Include Medical Checkups by Hellerhound.
 Include Junkyard and Warehouse by Rimme.
 Include State Fair by Sarokcat.

@@ -1,7 +1,10 @@
 Version 1 of Werewolf Costume For FS by Stripes begins here.
+[Version 1.1 - Male player victory sex w/no-sex option.]
 "Adds a Werewolf Costume creature to Flexible Survivals Wandering Monsters table"
 
 Section 1 - Monster Responses
+
+werewolfcostumenosex is a number that varies.
 
 when play begins:
 	add { "Werewolf Costume" } to infections of guy;
@@ -9,6 +12,7 @@ when play begins:
 
 
 to say losetomonstercostume:
+	now werewolfcostumenosex is 0;
 	if bodyname of player is "Werewolf Costume":
 		say "     With your resistance to the strange creature broken, it wraps its floppy arms around your costume body.  It drags you to one of the carnival booths.  A pair of those strange carnival creatures are running the booth and the costume werewolf throws you over one of them before jumping on the other.  Your body, acting on its own, wraps itself around the struggling figure and pulls it in through your hidden zipper, forcing it to wear you.  The costume werewolf, similarly worn now, growls and pounces you.";
 		if cunts of player > 0:
@@ -24,7 +28,24 @@ to say losetomonstercostume:
 
 
 to say beatthemonstercostume:
-	say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap.";
+	say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap";
+	if werewolfcostumenosex > 2:
+		say ".  As with the others of its kind, you leave it alone now that you've taken the fight out of it.";
+	otherwise if cocks of player > 0 and libido of player > 25 and werewolfcostumenosex < 3:
+		say ".  Feeling a little worked up after your fight, you glance down at the costume creature.  It moans softly, struggling to rise again.  Despite its costume nature, that head of its does have a mouth you might be able to make use of, if you were so inclined.  Shall you go ahead with this plan?";
+		if the player consents:
+			now werewolfcostumenosex is 0;
+			say "     Grabbing the costume creature by the head, you press its muzzle to your groin and thrust your hard cock into is open mouth.  It goes a weak moan and flops its limp arms, but is too weak to stop you from taking advantage of it.  You pound your hips against its padded muzzle, grinning as it starts to respond by licking and sucking at your [cock of player] manmeat.  As you continue, you can feel its soft paws slide up your legs, but they're no longer struggling, instead rubbing your thighs and gripping your ass so it can better pull its head into your thrusts.";
+			if a random chance of 3 in 5 succeeds:
+				say "     When you cum, you thrust fully into the costume creature, letting your cock pulse as it sends your hot seed into its empty insides[if cock width of player > 40].  Your prodigious output leaves the werewolf suit considerably fuller.  It makes wet, sloshing sounds as it shifts around, trying to drag its cum-stuffed body away[otherwise if cock width of player > 20].  Your considerable output leaves the werewolf suit looking somewhat fuller and more padded than before.  It makes wet sounds as it slinks off[otherwise].  You pump your load down at the creature's padded throat before pushing it aside[end if].";
+			otherwise:
+				say "     Moments before you cum, you push the strange creature's head back and pump your meat frantically, spraying your [if cock width of player > 40]excessive[otherwise if cock width of player > 20]large[otherwise]sticky[end if] load across its muzzle.  It holds its mouth wide open and slathers its tongue across its muzzle, trying to lap up as much of it as it can get.  Once you're done cumming, you wipe your dick across its furry side and toss it aside.  The messy costume creature slinks off, wiping and licking itself as it goes.";
+		otherwise:
+			increase werewolfcostumenosex by 1;
+			say "     Certain you can find a better way to sate your lusts in this wacky city, you leave the strange beast behind.";
+	otherwise:
+		say ".";
+
 
 
 to say monstercostumedesc:

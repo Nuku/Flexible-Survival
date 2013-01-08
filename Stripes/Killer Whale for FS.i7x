@@ -41,8 +41,6 @@ to say losetoorca:
 			say "[orcadefeatsex4]";
 
 
-
-
 to say orcadefeatsex1:		[anal sex]
 	say "     Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva whilst it becomes fully engorged; eventually, your feel its immense length depart from your abused orifice before he indicates to you that he would abuse another.  He slides over top of you, his massive form pinning against the beach's sand as his muscular tail spreads and otherwise prepares your legs for his eager intrusion.  With a sharp jab, you feel the flexible member invade your ass, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
 	say "     Influenced by whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion.  Slickly sliding across the supple walls of your [bodytype of player] anus, the orcaman's impressive shaft probes your depths of your fleshy labyrinth, and it's not long before your hole is sufficiently stretched to accommodate the whole of his cock within your confines.  Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and--as though like clockwork--the beast's on release felt apparent as his thick, virile cum floods the confines of your stomach.[mimpregchance]";
