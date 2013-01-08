@@ -37,6 +37,7 @@ to say wolfherm attack:
 
 
 to say beatpwh:
+	if equinoidstatus >= 6 and equinoidstatus < 9, increase equinoidstatus by 1;
 	let diceroll be a random number between 33 and 125;
 	if diceroll < libido of player and cocks of player > 0:
 		say "     Looking over the wild wolf herm's painted body, you feel a lustful urge to have sex with hir.  As your eyes roam over hir sexy body, hir arousing scent makes you eye hir cock and pussy longingly.  Shall you give into those urges completely and have sex with the lupine herm or hold back and sate your lusts orally? (Y=sex, N=oral)";
@@ -70,6 +71,11 @@ to say beatpwh:
 	otherwise:
 		say "With a dominant howl, you throw your opponent to the ground, straddling the wolf herm's mouth as your hips wiggle in preparation. Smiling with seductive, passionate lust, you lower your hips to hir face and bury your own snout in the thick, pungent aroma lifting from the creature's groin. [if player is female]You smile sweetly as your tongue strokes their length, your mouth filled with that masculine flavor. Your nethers tingle as they are tended to, your mind filling with the bliss of having a thick, meaty length to suckle upon. With a moan, you press forward, managing to take hir cock all the way inside your mouth, slowly savoring that wonderful sensation until, with a long, delightful spurt, your mouth is flooded with semen that tingles as it works into your [bodytype of player] belly[otherwise] You slowly lap at hir feminine lips, grinding your nethers against the herm's face as you taste the sweet fluids the creature offers. Nestling deep into that slit, the slightest taste is enough to make you moan, craving more as you spread hir thick, slimy lips around your tongue. With a happy moan you press several fingers deeper into hir, probing hir most sensitive spots as shi takes four fingers inside of hir.  Shi growls and grips your head as hir walls clench down on your fingers and your mouth is filled with the sweet, passionate, feminine nectar you crave[end if].  Hir long, lupine tongue plays across your groin, lapping up your cum as you orgasm while swallowing down hir herm juices.";
 		if libido of player < 60, increase libido of player by a random number between 1 and 10;
+	if equinoidstatus is 9:
+		say "     You recall your agreement with the equinoids and have defeated a trio of the painted wolves.  They should let you approach their camp now.";
+		now equinoidstatus is 10;
+		now Equinoid Camp is known;
+
 	
 Section 2 - Monster Insertion
 
