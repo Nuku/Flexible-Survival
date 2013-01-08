@@ -1071,7 +1071,7 @@ Instead of resolving a Anubis statue:
 	otherwise if statuequest is 2:
 		say "Returning to the museum with the samples the strange man sent you to retrieve, you quickly retrace your steps to the empty pedestal, and are unsurprised to find the Jackal like man leaning up against it with an amused grin. 'Found them I see?' He says with a smirk as he takes them from you eagerly, 'Trust me, these little beauties will make it more then worth your while,' The Jackalman says as he begins to carefully mix the pheromones together, the scent of some strange sort of musk filling your nose as he does so. 'Ah there we go!' He says happily as he takes a whiff of the completed project, seeming satisfied as he pulls out a familiar looking ankh with a jackal embossed on it. The man gives you a wink, as he slowly pours the mixture over the ankh, and the metal seems to almost absorb the liquid into itself. 'There we go now, once you use this little beauty, that little shopkeep won[apostrophe]t be able to keep her hands off of you. The jackal musk and enhanced pheromone mix should make sure of that.' The beastman says with a grin as he hands you the strangely scented ankh. 'I told you this little side trip of yours would be beneficial to both of us now didn[apostrophe]t I? I look forward to seeing how it works out.' he says in a voice filled with amusement as he turns and wanders off into the dark museum halls again.";
 		now statuequest is 0;
-		increase carried of Strange ankh by 1;
+		increase carried of strange ankh by 1;
 
 
 
@@ -1233,7 +1233,7 @@ instead of conversing the rare counter:
 	if rarequesting is 9:
 		say "'Oh my, you found them!' The jackal like shopkeep says with surprise as you set the items out on the counter proudly, 'Nermine had given up hope of every owning such lovely pieces of work!' She says happily as she opens up the rare item case and begins to position the new pieces of jewelry prominently inside it. You feel a grin tugging at your face at her obvious surprise and joy, feeling rather proud of all the work you put into to acquire the new items that now grace the glass case with their presence.  Finally satisfied with her new centerpieces positioning, Nermine turns to you and another large smile crosses her muzzle, the silver lines on her face making her look increasingly sexy as she leans over the counter and gestures you closer. Leaning forward, you find the jackalesses strong hand rubbing through your chest fur, before moving up to stroke along the sides of your neck and face, the sensation of her soft claws running through your fur making you shiver in anticipation. Suddenly Nermine grips the back of your neck with her hand as she pulls you into a deep kiss, her muzzle over your mouth as her tongue plays with your teasingly.  You need little encouragement at this point to respond eagerly, your own hands rubbing her shoulders, even as you savor the taste of the aroused jackal filling your mouth.  Eventually she breaks the kiss, and you both end up panting with arousal as you stare at each other eagerly.  After a moment, Nermine grins again before reaching under the counter, 'Nermine  thinks she still needs to pay you for all your help, and she has one last ankh to share with you now,' The shopkeeper says as she places another of those golden ankhs into your hands, 'Nermine also thinks she has other promise to fulfill as well, though that can wait until after her new friend has used ankh to look even more handsome,' The jackal woman says as she runs her tongue along the sides of her muzzle, licking her lips eagerly as she stares at you in anticipation.";
 		now rarequesting is 10;
-		increase carried of Strange ankh by 1;
+		increase carried of strange ankh by 1;
 		stop the action;
 	if rarequesting is 8:
 		say "'You haven[apostrophe]t found the Jewelry yet?' The jackal woman says with a sad look on her silver and black muzzle,  'Nermine was afraid it might be too much to ask of you, but you looked so handsome and capable she got hopeful.' She sighs sadly, as she turns back to the regular counter. 'Maybe you should try asking around museum if searching halls doesn[apostrophe]t help, though Nermine isn[apostrophe]t sure there would be anyone there left to ask....' Nermine says as she goes back to what she was doing, her sad demeanor more then enough to rekindle your resolve to find the items the shopkeeper wants.";
@@ -1249,7 +1249,7 @@ instead of conversing the rare counter:
 		if treasurefound is 1:
 			say "'Ah you found them!' Nermine says with a large smile on her muzzle as she eagerly takes the small handful of coins you found from you, leaving you feeling vaguely sad as those soft golden circles disappear behind the counter. When you point out that that was all there was there, she blinks at you in surprise, 'Only so few coins left? Well it is lucky for us that you managed to find them then!' The jackal woman says with a small smile, before pulling out the small golden ankh she promised you earlier and handing it to you, 'Nermine thinks you have definitely earned this then, though she also thinks there might still be a few coins left out there if you were to go and look again.' The jackal woman says with a grin, as you weigh the warm golden ankh in your hands and wonder whether it was worth the handful of treasure you just traded for it...";
 			now rarequesting is 6;
-			increase carried of Strange ankh by 1;
+			increase carried of strange ankh by 1;
 			now treasurefound is 0;
 			stop the action;
 		otherwise:
@@ -1265,7 +1265,7 @@ instead of conversing the rare counter:
 		stop the action;
 	if rarequesting is 2:
 		say "'Ah Nermine thanks you gratefully!' The jackal woman says with bright grin on her silver painted muzzle as she takes the basket full of strange fruit from you. 'These are very rare fruit indeed, and will certainly fetch a very high price to the right buyer!' She says brightly as she sets the basket down on the counter next to her, before reaching underneath it to produce the shiny golden ankh she showed you earlier. 'And speaking of price, here is the one we agreed on as well,' Nermine says as she hands you the soft golden ankh, its weight feeling surprisingly good in your hands as you hold it up to the candlelight. 'That is more then just a golden trinket,' The jackal woman says teasingly as she gathers up the basket and heads towards the back room, 'It is a very special and powerful ankh indeed, although some might value the gold more, if you want to keep helping Nermine, you will need its power instead.' She says as she vanishes through the door, leaving you staring down at the strange ankh with curiosity."; 
-		increase carried of Strange ankh by 1;
+		increase carried of strange ankh by 1;
 		now rarequesting is 3;
 		stop the action;
 	if rarequesting is 1:
@@ -1316,26 +1316,26 @@ Section 7- Jackal ankh
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"Strange ankh"	"a small golden ankh with an image of a jackal headed beastman set into the base, it feels oddly warm in your hands"	5	 Strange ankh
+"strange ankh"	"a small golden ankh with an image of a jackal headed beastman set into the base, it feels oddly warm in your hands"	5	 strange ankh
 
-Strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as Strange ankh. 
+strange ankh is a grab object. It is part of the player. Understand "ankh" and "strange" as strange ankh. 
 
-The usedesc of Strange ankh is "[jackalankhmagic].";
+The usedesc of strange ankh is "[jackalankhmagic].";
 
-instead of sniffing Strange ankh:
+instead of sniffing strange ankh:
 	say "The golden ankh smells faintly of desert sand and masculine musk.";
 
 To say jackalankhmagic:
 	if Nightmaretf is greater than 0:
 		say "You rub the small golden ankh curiously, only to feel a strange burning sensation in your body as if two great forces were warring within you. You let out a short whinny of surprise as the ankh seems to heat up and burn your hand, and you drop the item instinctively. Feeling almost immediately  better, you look down at the ankh, only to stare in some surprise at the small puddle of molten gold lying there on the floor.... Somehow you don[apostrophe]t think that was what was supposed to happen.";
-		delete Strange ankh;
+		delete strange ankh;
 		now jackalmantf is 5;
 		now Nerminetalk is 1;
 		stop the action;
 	if wrcursestatus >= 7 and wrcursestatus < 100:
 		say "You rub the small, golden ankh curiously and hiss in pain as it starts to heat up, scalding your hand.  You toss it aside.  Something about you is incompatible with it.";
 		now Nerminetalk is 1;
-		delete Strange ankh;
+		delete strange ankh;
 		stop the action;
 	if jackalmantf is 0:
 		say "You smile as you rub the small golden ankh between your hands, the warm metal feeling nice and almost soft as you rub at it. Suddenly the small ankh almost seems to melt into your hands, leaving a soft tingling dusting of gold where the small trinket was before. As you stare at your palms, you feel a strange shifting sensation in your body, seeming to center on your rear.  Glancing behind you you surprised to see your ass starting to stretch and change, your rear flattening out as a long predatory black jackal like tail forms behind you.  You feel a strange almost pleasant stretching sensation as your new tail grows until its tip is hanging just below your knees, staring at your new tail you find yourself experimentally moving it from side to side a few times, and watch as your new limb responds with surprising dexterity. Taking a few steps you are surprised to find your new tail seems to help your balance greatly, and you have to admit, the nice Jackal tail does look rather hot and sexy on you..";
