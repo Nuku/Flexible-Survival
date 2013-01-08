@@ -1,16 +1,19 @@
 Version 2 of Incubus For FS by Stripes begins here.
-[Version 2 - Moved to College Campus area]
+[Version 2.1 - Added oral victory sex for regular player]
 
 "Adds an Incubus creature to Flexible Survivals Wandering Monsters table"
 [Created in thanks for Wahn for all his hard work helping with typos]
 
 Section 1 - Monster Responses
 
+incubusnosex is a number that varies.
+
 when play begins:
 	add { "Incubus" } to infections of guy;
 	add { "Incubus" } to infections of hellspawn;
 
 to say losetoincubus:
+	now incubusnosex is 0;
 	if bodyname of player is "Incubus" or bodyname of player is "Succubus":
 		if cunts of player > 0:
 			say "     Unwilling or unable to continue resisting the infernal temptation that the incubus provides, you give your body up to him.  Stepping up to you, he runs his hands over your face and shoulders, lightly caressing you.  'Mmm... I see that you've already begun to accept our infernal gifts and give into your lustful nature.  Good.'  He guides you onto all fours and lets his tail slide across your body, sending shivers of delight through your tainted flesh.";
@@ -34,7 +37,7 @@ to say losetoincubus:
 		say "     The pleasure you feel as his large, perfect cock pushes into you is one of utter, sinful delight.  He fucks you hard and fast, rocking his hips and pumping his shaft into you.  His hands roam over your body, joining his tail in teasing against your flesh.  It is only the soft sound of the beating of his wings that tells you how he's supporting himself so easily atop you.  His body, penis, fingers, tongue, mouth and tail all move with the practiced ease of one who's spent countless ages exploring sexual pleasure and loving every moment of it.  You cannot help but moan and push back into his thrusts as he buggers you, your asshole practically milking at his cock with lustful need.";
 		say "     Finally, after what feels like hours of sinful fucking, he drives his shaft fully into you and unleashes his hot seed, pouring his tainted load into your bowels[if cocks of player is 1].  Your balls tighten and your cock throbs as he pumps it, spraying your semen onto his waiting hand before bringing it forward for you both to lustfully lap up[otherwise if cocks of player > 0].  He pumps at your cocks, playfully stroking each to orgasm in turn while his other hand waits to catch the load.  Each sticky handful of cum is brought forward for you both to lustfully lap up[end if].  His large balls slap against your thighs as he drains them his infernal seed into you.  Spent, he pushes you to the ground, gives you a lustful kiss and heads off in nimble leaps across the rubble as his little wings flap frantically.[impregchance]";
 	if libido of player > 80, now libido of player is 80;
-	if "Female Preferred" is listed in feats of player and guy is not banned:
+	if "Female Preferred" is listed in feats of player and girl is not banned:
 		infect "Succubus";
 	otherwise:
 		infect "Incubus";
@@ -48,7 +51,7 @@ to say beattheincubus:
 				say "     You move atop him eagerly, bringing your throbbing cock to his dark pucker.  He moans lustfully and pushes back, spearing himself onto your [cock size desc of player] shaft with the ease of one who's been taken by the cocks of numerous demonic creatures before.  The feel of his gripping, squeezing walls around your cock is exquisite, filling you with such sinful pleasure at buggering that hot hole.  His anus is like a hot vice around your shaft and almost seems to suck on it with its lustful need for your seed.  You let your hand roam over his muscled body, then move it down to stroke over that perfect cock of his.";
 				say "     When you finally cum, painting his inner walls with your semen, he cums as well with a loud cry of sexual pleasure.  He holds a cupped hand into the spurting blasts, gathering a palmful of his tainted load.  He laps up some of it and, when he offers you some as well, you are too lost in your lustful pleasure to even consider refusing.  You lap up the rest and even suck his fingers clean.  After withdrawing, you both rise and he gives you a passionate French kiss while running his hands over your body.  'I look forward to you joining our ranks more fully so we may continue to share in the pleasures of the flesh,' he whispers while nibbling your ear before bounding off across the rubble in nimble leaps, flapping his little wings frantically.  You watch him go while his tainted seed sends warm tingles through your body.";
 				if libido of player > 80, now libido of player is 80;
-				if "Female Preferred" is listed in feats of player and guy is not banned:
+				if "Female Preferred" is listed in feats of player and girl is not banned:
 					infect "Succubus";
 				otherwise:
 					infect "Incubus";
@@ -56,6 +59,23 @@ to say beattheincubus:
 				say "     When you refuse, the incubus['] face briefly becomes one of demonic anger before returning to its beautiful appearance.  'Very well, then.  Perhaps you will be more accommodating once you join our ranks more fully.  I promise to show you such wonderful pleasures of the flesh, my dear,' he says with a dark smile.  'I expect you will become a most impressive temptation,' he says, still grinning.  'I hope you'll accept my offers for sinful delights when that time comes, or perhaps the next time we meet,' he adds with a slow lick across the spaded tip of his tail.  With that, he turns and bounds off across the rubble in nimble leaps, his little wings flapping frantically.";
 		otherwise:
 			say "     'Well done, my infernal sibling,' the incubus says with a smile as he bows in submission to you.  'You are definitely the more powerful seducer,' he acknowledges with another, lower bow and you can't help but smile, feeling strangely at ease now that the combat is over.  'I look forward to you joining our ranks more fully so we may share in the pleasures of the flesh.  I expect you will become a most impressive temptation,' he says with a grin.  'I hope you'll accept my offers for sinful delights when that time comes, or perhaps the next time we meet,' he adds with a slow lick across the spaded tip of his tail.  With that, he turns and bounds off across the rubble in nimble leaps, his little wings flapping frantically.";
+	otherwise if cocks of player > 0 and incubusnosex < 3:
+		say "     'Alas, I am defeated,' the incubus moans as it staggers back as it tries to remain standing.  'I cannot resist your might any further,' the incubus says as he falls to his knees.  'You may now make use of my body as you would,' he says with an exaggerated sigh, reaching for your groin and licking his lips.  Shall you take your prize and make the sex demon blow you, or will you refuse this final temptation?";
+		if the player consents:
+			say "     Wanting a go at the sex demon's hot mouth, you grab his head and pull him forward onto your cock.  He moans softly as you thrust between his soft, wet lips and starts sucking expertly.  His hands roam across your ballsac, your thighs and your ass as he works eagerly to blow you.  Your infernal lover is very good at it, working his whole mouth to build you up to the biggest climax he can.  With a talent brought from centuries of such depravities, the demon's mouth offers such a sinful delight.";
+			if "Less Anal" is not listed in feats of player and a random chance of 2 in 3 succeeds:
+				say "     As the great blow job continues, you enjoy the moans of the incubus sucking you off.  As he performs a particularly pleasurable bit of tonguework that has you panting and groaning, you feel a slick digit slip between your cheeks and probing at your anus.  Too aroused and into getting sucked off, you don't resist as that wet finger makes its way into your rectum to rub at your prostate.  You moan and clench down on it as you blow your load, shooting your hot seed into the demonic boytoy's mouth to feed his dark lusts.  The finger's withdrawn slowly with a wet pop and your cock released.";
+				say "     'Mmm... that was most enjoyable.  Do you see how much better it could be now if you just give in and accept the pleasures of the flesh?' he says with a grin as he rises with ease.  He makes a show of licking his lips before turning and bounding off across the rubble in nimble leaps, his little wings flapping frantically.  It is not until he's gone that you notice the warm, wet feeling of your anus and look down to see the puddle of incubus cum with a finger streak through it.";
+			otherwise:
+				say "     As the great blow job continues, you enjoy the moans of the incubus sucking you off.  As he performs a particularly pleasurable bit of tonguework that has you panting and moaning, he grabs your balls with a warm, sticky hand and rubs them firmly.  This soon has you over the edge and shooting your hot seed into the demonic boytoy's mouth to feed his dark lusts.  He licks and sucks your cock clean, then nibbles on your balls lightly.";
+				say "     'Mmm... that was most enjoyable.  Do you see how much better it could be now if you just give in and accept the pleasures of the flesh?' he says with a grin as he rises with ease.  He makes a show of licking his lips before turning and bounding off across the rubble in nimble leaps, his little wings flapping frantically.  It is not until he's gone that you notice the warm, wet feeling on your ballsac and look down to see the puddle of incubus cum with a hand streak through it.";
+			if "Female Preferred" is listed in feats of player and girl is not banned:
+				infect "Succubus";
+			otherwise:
+				infect "Incubus";
+		otherwise:
+			say "     The incubus['] eyes burn and his face briefly becomes one of demonic anger before returning to its beautiful appearance.  'Very well, then.  Should you change your mind, I promise to show you such wonderful pleasures of the flesh, my dear,' he says with a dark smile.  'I expect you will become a most impressive temptation,' he says, still grinning.  'I hope you'll accept my offers for sinful delights when that time comes, or perhaps the next time we meet,' he adds with a slow lick across the spaded tip of his tail.  With that, he rises with ease and bounds off across the rubble in nimble leaps, his little wings flapping frantically.";
+			increase incubusnosex by 1;
 	otherwise:
 		say "     'It is unfortunate that you aren't interested in the pleasures I could offer you,' the incubus says as he staggers back from your assault.  'I could have shared such sensual pleasures of the flesh with you,' he says with a disappointed sigh before turning and bounding off in nimble leaps across the rubble, his little wings flapping frantically.";
 
