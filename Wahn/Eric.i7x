@@ -1,6 +1,6 @@
 Version 2 of Eric by Wahn begins here.
-[Version 2: Adjustment for the new first meeting with the hulking cheerleaders]
-[Todo: possibly npc interactions & more conversation]
+[Version 2.1: Adverse reaction against Furlings, Location renamed to 'Sports Arena Lockerroom']
+
 "Adds an NPC named Eric to the Flexible Survival game"
 
 [ HP states of Eric                                                  ]
@@ -19,6 +19,10 @@ Version 2 of Eric by Wahn begins here.
 [   1: Smells male + fertile pussy                                   ]
 [  11: Smells male + pregnant pussy                                  ]
 [  21: Smells male + horse musk                                      ]
+
+[ Libido states of Eric (for reactions against a player furling)     ]
+[   0: Eric has never seen the player in Furling shape		           ]
+[   1: Eric has seen the player in Furling shpe - is not frightened  ]
 
 [ NPC Connection summary for endings :                               ] 
 [                                                                    ]
@@ -39,21 +43,25 @@ Instead of resolving a Barricaded Lockerroom:
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]: ";
 		if dice + bonus >= 15:
-			say "[line break]     After some quick talking, you manage to convince the person inside the lockerroom that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
-			say "     'Hi, I'm Eric,' the man says, shaking your hand. 'Nice to see not everyone has gone totally bonkers in this city. I couldn't believe the stuff going on out there at first... saw my roommate transform into a big furry thing right in front of my eyes. There wasn't anything human left in him - he even bit me!' He shows you his bandaged arm.";
-			move player to Campus Arena Lockerroom;
-			now Campus Arena Lockerroom is known;
-			Now Barricaded Lockerroom is resolved;
+			if bodyname of player is "Furling":
+				say "[line break]     After some quick talking, you almost had him convinced, but then he opens the door a bit more and peeks outside. After a short gasp from behind the door, it gets slammed shut again, with noises of something heavy pushed against it for good measure. 'Ah, you're one of them - go away, creature!'";
+				say "     Hm, sounds like he really doesn't like your current looks. Maybe you should try this again in a different shape...";
+			otherwise:	
+				say "[line break]     After some quick talking, you manage to convince the person inside the lockerroom that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
+				say "     'Hi, I'm Eric,' the man says, shaking your hand. 'Nice to see not everyone has gone totally bonkers in this city. I couldn't believe the stuff going on out there at first... saw my roommate transform into a big furry thing right in front of my eyes. There wasn't anything human left in him - he even bit me!' He shows you his bandaged arm.";
+				move player to Sports Arena Lockerroom;
+				now Sports Arena Lockerroom is known;
+				Now Barricaded Lockerroom is resolved;
 		otherwise:
 			say "[line break]     As you're trying to explain, the person behind the door shouts 'I don't believe you. You're just one of those strange creatures who wants to trick me!' Then the door is pushed closed from the other side.";
 	otherwise:
 		say "     Deciding not to bother with the crazed fellow further, you head off before anything else notices you poking around.";
 		now Barricaded Lockerroom is resolved;
 
-Campus Arena Lockerroom is a room. It is fasttravel. It is private.
-The description of Campus Arena Lockerroom is "[lroomdesc]";
+Sports Arena Lockerroom is a room. It is fasttravel. It is private.
+The description of Sports Arena Lockerroom is "[lroomdesc]";
 
-instead of sniffing Campus Arena Lockerroom:
+instead of sniffing Sports Arena Lockerroom:
 	say "You don't smell anything noteworthy. With a nanite virus apocalypse going on right outside the door, there haven't been any large numbers of sweaty athletes in here for some time now.";
 
 to say lroomdesc:
@@ -66,11 +74,21 @@ to say lroomdesc:
 	otherwise if (hp of Eric is 100):                       [Eric never came back from Stacy's dorm]
 		say "     This is the men's lockerroom of the sports arena in the Fairhaven campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and pushing one of the lockers in front of the door should keep out all but the most determined intruders.";
 
+instead of going inside from the Grey Abbey Library while (libido of Eric is 0 and bodyname of player is "Furling"):
+	move player to Bunker;
+	say "     As you enter the bunker and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies at the college after they transformed.'";
+	now libido of Eric is 1;
+	
+instead of navigating Sports Arena Lockerroom while (libido of Eric is 0 and bodyname of player is "Furling"):
+	move player to Sports Arena Lockerroom;
+	say "     As you enter the lockerroom and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies in the dorm after they transformed.'";
+	now libido of Eric is 1;
+
 Section 2 - Eric the Cuntboy Athlete
 
 [Smells, Description, Conversation and NPC Interaction]
 
-Eric is a man.  Eric is in Campus Arena Lockerroom.  The hp of Eric is normally 0.
+Eric is a man.  Eric is in Sports Arena Lockerroom.  The hp of Eric is normally 0.
 The description of Eric is "[Ericdesc]";
 The conversation of Eric is { "Mew!" }.
 lastEricfucked is a number that varies.  lastEricfucked is normally 555.
@@ -532,7 +550,7 @@ to say EricSex8:    [player's ass fucked by Eric]
 Section 4 - Endings
 
 when play ends:
-	if (hp of Eric is 0) and Campus Arena Lockerroom is known and humanity of player > 9:
+	if (hp of Eric is 0) and Sports Arena Lockerroom is known and humanity of player > 9:
 		say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. There you meet Eric again, still rather distraught that he couldn't save or even find his girlfriend. Later, when it's time for prodding and probing you survivors, there's a bit of a commotion after Eric gets called into the examination room. Several doctors and scientists are called in and Eric gets moved to another wing of the facility and you don't see him again after that. You wonder what's so special about him.";	
 	otherwise if ((Eric is in the bunker) and (hp of Eric is 1 or hp of Eric is 10 or hp of Eric is 20)): [cuntboy virgin Eric]
 		if (humanity of player < 10):
@@ -583,7 +601,7 @@ when play ends:
 	otherwise if (hp of Eric is 100): [Stacy's girlfriend now]
 		if humanity of player > 9:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. While waiting for the doctors to examine and clear you, you hear soldiers talk about a huge green humanoid in the campus area accompanied by a massively pregnant human. Sounds like Stacy and Eric. Apparently she took out a full squad of soldiers when they wanted to 'rescue' her boy/girl-friend, adding two female soldiers to her breeding partners and leaving the rest to be picked up by horny bunny jocks.";
-	otherwise if Campus Arena Lockerroom is known:
+	otherwise if Sports Arena Lockerroom is known:
 		say "ERROR-Eric-[hp of Eric]E: He should have had one of the other endings by now. Please report under which circumstances you got to see this.";
 			
 

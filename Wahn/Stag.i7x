@@ -1,5 +1,5 @@
 Version 3 of Stag by Wahn begins here.
-[Version 3.2 - Adjustments to infectiont texts]
+[Version 3.3 - hp variable on 0 as starting value for X/H]
 
 "Adds a Male Stag to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -9,6 +9,9 @@ Section 1 - Dog-Walking Event
 
 Dog Walking is a situation. The level of Dog Walking is 7.
 The sarea of Dog Walking is "Warehouse";
+when play begins:
+	add Dog Walking to badspots of guy;
+	add Dog Walking to badspots of furry;
 
 Instead of resolving a Dog Walking:
 	if hp of Mike is 0:   						[first meeting]
@@ -49,15 +52,11 @@ Instead of resolving a Dog Walking:
 				increase score by 5;
 			now hp of Mike is 3;	
 			say "     Nodding over to you, Mike says 'Thanks a lot for the help' as he kneels next to Lea to check on her. The transformed dog has a long claw-slash on her side and starts to whimper loudly now that the adrenaline of the fight wears off. 'This doesn't look good - might get infected too. I have to get her home.' He picks Lea up in his arms, and you walk down the street together, with you acting as a lookout for more trouble. Soon you arrive at Mike's house, where he leads you to the large dog kennel in the back and sets Lea down on a bed.";	  
-			move Mike to Mike's Office;
-			move Lea to Mike's Office;
 			move player to Mike's Office;
 			now Mike's Home is known;
 		otherwise:
 			say "     You quickly turn around and flee before you get drawn into the fight too and don't stop running until you're well away. With odds of five against two, you don't think you'll see either Mike or Lea again. Who knows what the leopardmen will do with them...";
 			now hp of Mike is 100;
-			remove Mike from play;
-			remove Lea from play;
 			Now Dog Walking is resolved;
 	otherwise if hp of Mike > 2 and hp of Mike < 98:   [further repeat meetings]
 		say "     You run into Mike and his 'dog' Lea again, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behaviour as he walks after her over to you.";
@@ -138,9 +137,9 @@ to say Stag loses:
 						choose row y in table of random critters;
 						if name entry is "Stag":
 							now monster is y;
+							now area entry is "Warehouse";
+							now non-infectious entry is false;
 							break;
-					now area entry is "Warehouse";
-					now non-infectious entry is false;
 
 to say StagDesc:
 	if hp of Mike is 0:				[first encounter]
@@ -157,6 +156,10 @@ Section 3 - Monster Insertion
 Table of random critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	hp	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+when play begins:
+	add { "Stag" } to infections of guy;
+	add { "Stag" } to infections of furry;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
@@ -223,7 +226,7 @@ Section 3 - NPCs
 [  99: hostile after player attack 											]
 [ 100: lost to the leopardman gang 											]
 
-Mike is a man. 
+Mike is a man. Mike is in Mike's Office.
 The description of Mike is "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful..";
 The conversation of Mike is { "Oh, hello." };
 lastfuck of Mike is usually 555.
@@ -421,12 +424,14 @@ instead of conversing Mike:
 				say "     After getting a bottle of lube as additional present from Mike, you bring your new pet to the library. Hopefully he'll make a good guard-dog... although the other possibilities sound enticing too.";
 				move Xerxes to the Grey Abbey Library;
 				move player to the Grey Abbey Library;
+				now hp of Xerxes is 1;
 			otherwise:
 				say "     Mike takes you to the kennel, where you have a look at his 'dogs'. In the end, you choose Helen, a black haired female looking about nineteen years old, with a shapely body and nice perky breasts. She attentively looks to Mike as he explains that you're her new master, then comes over to you to sniff you and lick your hand.";
 				say "     Looking down over Helen's naked body, Mike strokes the bulge in his pants, then looks back to you. 'I used condoms when I picked her cherry and trained her, so no worries about that. If you plow that field and bring out some seeds, they're all yours. Might be best to act quick if you got any male pets or want to take her out for walks without all kinds of critters smelling a fertile female...'";
 				say "     You bring your new pet to the library. Hopefully she'll make a good guard-dog... although the other possibilities sound enticing too.";
 				move Helen to the Grey Abbey Library;
 				move player to the Grey Abbey Library;
+				now hp of Helen is 1;
 			now hp of Mike is 6;
 		otherwise:
 			say "     Mike shrugs as you decline, says 'As you wish. But the offer stands, so just say so if you change your mind.'"; 
@@ -435,7 +440,7 @@ instead of conversing Mike:
 	otherwise:
 		say "     Mike is not in a state when he should be able to talk - please report how you got this.";
 		
-Lea is a woman. 
+Lea is a woman.  Lea is in Mike's Office.
 The description of Lea is "     Originally one of Mike's dogs, Lea now is a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with the pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication. [if hp of Mike < 5]A deep gash from a leopardman's claw mark her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon.[otherwise if hp of Mike > 4]A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again.[end if]";
 The conversation of Lea is { "Woof." };
 lastfuck of Lea is usually 555.
@@ -454,17 +459,21 @@ instead of conversing Lea:
 
 
 [ hp states of Xerxes															]
+[   0: hasn't been brought to the bunker yet			]
 [   1: no sex with either Fang or the Felinoid		]
 [  10: got fucked only by Fang										]
 [  11: got fucked only by the Felinoid						]
 [  12: got fucked by both Fang and the Felinoid		]
+[ lust of Xerxes																	]
+[   0: hasn't had sex with the player							]
+[   1: had sex with the player										]
 
 Xerxes is a man. 
 The description of Xerxes is "     Originally one of Mike's dogs, Xerxes now is a young human male of about nineteen. He has short black hair and a well-developed physique, with muscular arms and legs. All in all a very handsome guy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication. He watches you attentively, eager to follow the commands of his master.";
 The conversation of Xerxes is { "Woof." };
 lastfuck of Xerxes is usually 555.
 lastxerxestalk is a number that varies.  lastxerxestalk is usually 555.
-hp of Xerxes is usually 1.
+hp of Xerxes is usually 0.
 
 instead of going outside from Bunker while (Xerxes is in the Grey Abbey Library and lastfuck of Xerxes - turns > 5 and (hp of Xerxes is 1 or hp of Xerxes is 10) and felinoid companion is tamed ):
 	move player to Grey Abbey Library;
@@ -730,6 +739,7 @@ to say XerxesSex7:												[Male Player with Fang & Xerxes]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register your felinoid companion standing some distance away among the bookshelves and giving Fang and Xerxes a calculating look. Seems almost like he's up to something - mounting Xerxes ass again to make him his alone possibly. Oh well, the rivalry between them will hopefully work itself out sometime in the end, you tell yourself as you doze off...";
 
 [ hp states of Helen															]
+[   0: hasn't been brought to the bunker yet			]
 [   1: no sex with either Fang or the Felinoid		]
 [  10: got fucked only by Fang										]
 [  11: got fucked only by the Felinoid						]
@@ -759,7 +769,7 @@ The description of Helen is "     Originally one of Mike's dogs, Helen now is a 
 The conversation of Helen is { "Woof." };
 lastfuck of Helen is usually 555.
 lasthelentalk is a number that varies.  lasthelentalk is usually 555.
-hp of Helen is usually 1.
+hp of Helen is usually 0.
 HelenPregnant is a number that varies. 
 	
 instead of going outside from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (hp of Helen is 1 or hp of Helen is 10) and felinoid companion is tamed ):
