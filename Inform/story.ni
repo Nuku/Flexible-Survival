@@ -5051,7 +5051,7 @@ check milking:
 		say "You don't appear to have anything worth milking." instead;
 	if breast size of player is less than 2:
 		say "You don't appear to have anything worth milking." instead;
-	if cunts of player is less than 1:
+	if cunts of player is less than 1 and "MPreg" is not listed in feats of player:
 		say "Your breasts don't seem ready to lactate." instead;
 	if lastmilking - turns is less than 8:
 		say "Your breasts have been drained recently.  You'll need to wait before another worthwhile milking." instead;
