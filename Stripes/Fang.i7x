@@ -556,7 +556,7 @@ to say fangwscontent:
 Chapter 4 - Alpha Fang and Candy
 
 an everyturn rule:
-	if ( hp of Fang is 3 or hp of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang is 2 and girl is banned ) ) and lust of Candy is 0 and coonstatus is 2:
+	if ( hp of Fang is 3 or hp of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 0 and coonstatus is 2:
 		now lust of Candy is 1;
 		now lastCandyfucked is turns;
 		now lastFangfucked is turns;
@@ -579,7 +579,7 @@ an everyturn rule:
 		otherwise:
 			say "     Grabbing your pack, you toss the rest of the stuff back into it and head into the bunker to give the two some privacy.  You putter around in there for a while, Candy eventually returning.  His fur is rather scruffy and his dress has got a tear in it.  He's got a wild look in his eyes that you haven't seen since his time at the hospital and snarls a little[if the number of bunkered people > 3].  The others seem a little concerned at this and you[otherwise].  You[end if] get up slowly, concerned the girly coon may have regressed further and shift into a fighting stance.";
 			say "     'Aieee!  My dress!' Candy shrieks, spotting the torn shoulder.  He immediately slides it off, pausing only a moment to tease his nipples and straighten his fur.  He runs over to grab his little sewing kit and gets to work repairing his outfit, clearly making a show of grumbling about [']such brutish behaviour['] and the like between commenting about how the wolf was [']at least a good fuck['] and [']quite the beast in the sack['].  As this goes on, Candy recounts his romp in increasingly graphic detail and you slip back into the library.";
-	otherwise if ( hp of Fang is 3 or hp of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang is 2 and girl is banned ) ) and lust of Candy is 2 and coonstatus is 2:
+	otherwise if ( hp of Fang is 3 or hp of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 2 and coonstatus is 2:
 		now lust of Candy is 3;
 		now lastFangfucked is turns;
 		say "     As you're taking a break, you hear the door to the bunker open.  Glancing over, you spot Candy sashaying out again.  He smiles and waves to you, giving his tail a big swish.  'I'll be borrowing your big, bad wolf again, hon.  I've decided the best way he can repay me for nearly ruining my outfit is with another fucking.  I hope you don't mind.'  And with that said, he continues over to Fang.  This time, he pulls off his dress and tosses it across the librarian's desk.";
