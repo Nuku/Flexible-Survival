@@ -13,6 +13,7 @@ dobielibido is a number that varies.
 when play begins:
 	add { "Doberman" } to infections of furry;
 	add { "Doberman" } to infections of girl;
+	add { "Doberman" } to infections of Caninelist;
 
 to say losetoDoberman:
 	if dobielibido < 50:
