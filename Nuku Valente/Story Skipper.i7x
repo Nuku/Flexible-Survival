@@ -1037,10 +1037,10 @@ Carry out reciting:
 			-- 118:	[Mike]
 				if the player's command matches "[number]":
 					now hp of Mike is the number understood;
-					if hp of Mike is 100:				[Mike lost]
+					if hp of Mike is 100 or guy is banned or furry is banned:	[Mike lost]
 						now Mike's Home is unknown;
 						now Dog Walking is resolved;
-					otherwise if hp of Mike is 99 and guy is not banned and furry is not banned:		[Mike enemy]
+					otherwise if hp of Mike is 99:					[Mike enemy]
 						now Mike's Home is unknown;
 						now Dog Walking is resolved;
 						repeat with y running from 1 to number of filled rows in table of random critters:
@@ -1050,7 +1050,7 @@ Carry out reciting:
 								now area entry is "Warehouse";
 								now non-infectious entry is false;
 								break;
-					otherwise if hp of Mike > 2 or guy is banned or furry is banned:
+					otherwise if hp of Mike > 2 and hp of Mike < 98:
 						now Dog Walking is resolved;
 						now Mike's Home is known;
 					otherwise:
