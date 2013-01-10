@@ -1201,7 +1201,7 @@ when play begins:
 
 Caninelist is a marker.	[list of canine/lupine infections]
 when play begins:
-	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Female Husky", "Feral Wolf", "German Shepherd", "jackalboy", "jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
+	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmation", "Female Husky", "Feral Wolf", "German Shepherd", "jackalboy", "jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Shemale Smooth Collie", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
 
 Equinelist is a marker.	[list of equine infections]
 when play begins:
@@ -1227,6 +1227,10 @@ Taurlist is a marker.	[list of tauric infections]
 when play begins:
 	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
 [Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional.  It also does not include the spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
+
+Knotlist is a marker.	[list of infections w/knotted cock]
+when play begins:
+	add { "Alpha Husky", "Alpha Wolf", "Ashen Breeder", "Doberman", "jackalboy", "jackalman", "Wolftaur", "Arctic fox", "Retriever", "Herm Hyena", "Coyote", "Latex Wolf", "Pit bull", "Hermaphrodite Gryphon", "Latex Fox", "Dalmation", "Painted Wolf Herm", "Female Husky", "Feral Wolf", "Vixen Nurse", "Werewolf Costume", "Vixentaur", "Vulpogryph", "Dracovixentaur", "Clockwork Fox", "Fennec", "Cerberus", "Chocolate Lab", "Black Wolf", "Hellhound", "German Shepherd", "hermaphrodite latex vixen", "Kitsune", "Shemale Smooth Collie", "Wrestling Wolf", "Football Wolfman" } to infections of Knotlist;
 
 
 Part 2 - Rules
