@@ -942,6 +942,8 @@ Carry out reciting:
 			-- 112:	[Doberman Cop / Alexandra]
 				if the player's command matches "[number]":
 					now hp of Alexandra is the number understood;
+					now lust of Alexandra is 0;
+					now libido of Alexandra is 0;
 					if hp of Alexandra > 0:
 						move player to Grey Abbey Library;
 						[puts Doberman as lead monster in case of impregnation]
@@ -953,6 +955,10 @@ Carry out reciting:
 								break;
 					otherwise:
 						remove Alexandra from play;
+					if hp of Alexandra is 3 and hp of Alexandra is 5:
+						now lust of Alexandra is 1;	[reset to start of pregnancy]
+					if hp of Alexandra is 4 or hp of Alexandra is 5:
+						now libido of Alexandra is a random number between 2 and 4;	[minimum children restored]
 			-- 113:	[Larissa (Multiform NPC)]
 				if the player's command matches "[number]":
 					now hp of Larissa is the number understood;
