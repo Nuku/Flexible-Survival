@@ -102,7 +102,7 @@ to say badAlexandrasex:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "Have Alexandra suck you off.";
+		now description entry is "Take her up the ass.";
 	if cocks of player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
