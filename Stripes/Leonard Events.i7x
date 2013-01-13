@@ -8,7 +8,7 @@ Section 1 - Park
 
 Part 0 - Core Event
 
-leoparklist is a list of numbers that varies.  leoparklist is usually {1, 2, 6, 9}.
+leoparklist is a list of numbers that varies.  leoparklist is usually {1, 2, 5, 6, 9}.
 leonardwrdesk is a truth state that varies.  leonardwrdesk is normally false.
 leonardcabinet is a truth state that varies.  leonardcabinet is normally false.
 
@@ -35,13 +35,13 @@ Instead of resolving PridePark:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Having beaten your foe, you welcome the poor, scared kitty into your arms and snuggle with her.  She purrs happily and thanks you profusely with make cute kisses";
 				if player is felinebodied:
-					say ".  She nuzzles at your chest and starts nursing, drawing out your feline milk.  You purr soothingly to her that [one of]the pride[or]you[or]your pride[purely at random] [one of]loves her[or]will protect her[or]will keep her safe[or]is where she belongs[purely at random].  Soon she's calmed down and purring happily in her arms.  Once she's been fed, you put her down and release her back into the park[one of], cautioning her to be more careful[or], giving her rear a soft pat[or] after warning her to be more careful[or] after giving her ears a scritch[or] after giving her a final hug[purely at random].  Feeling better for having helped [one of]the pride[or]your pride[or]Leonard's pride[or]your pride sister[or]the cute lioness[or]the kitty girl[purely at random], you head back on your way.";
+					say ".  She nuzzles at your chest and starts nursing, drawing out your feline milk.  You purr soothingly to her that [one of]the pride[or]you[or]your pride[purely at random] [one of]loves her[or]will protect her[or]will keep her safe[or]is where she belongs[purely at random].  Soon she's calmed down and purring happily in your arms.  Once she's been fed, you put her down and release her back into the park[one of], cautioning her to be more careful[or], giving her rear a soft pat[or] after warning her to be more careful[or] after giving her ears a scritch[or] after giving her a final hug[purely at random].  Feeling better for having helped [one of]the pride[or]your pride[or]Leonard's pride[or]your pride sister[or]the cute lioness[or]the kitty girl[purely at random], you head back on your way.";
 					increase morale of player by 1;
 					infect "Feline";
 					increase libido of player by 2;
 					decrease humanity of player by 2;
 				otherwise:
-					say ".  She nuzzles at your chest and mewls softly, kneading her paws over your [bodytype of player] body, helping to restore your matronly feline body.  As your feline bosom returns, she wraps her lips around a nipple and starts to nurse milk from you.  You purr soothingly to her that [one of]the pride[or]you[or]your pride[purely at random] [one of]loves her[or]will protect her[or]will keep her safe[or]is where she belongs[purely at random].  Soon she's calmed down and purrign happily.  Once she's been fed, you put her down and release her back into the park[one of], cautioning her to be more careful[or], giving her rear a soft pat[or] after warning her to be more careful[or] after giving her ears a scritch[or] after giving her a final hug[purely at random].  Feeling better for having helped [one of]the pride[or]your pride[or]Leonard's pride[or]your pride sister[or]the cute lioness[or]the kitty girl[purely at random], you head back on your way.";
+					say ".  She nuzzles at your chest and mewls softly, kneading her paws over your [bodytype of player] body, helping to restore your matronly feline body.  As your feline bosom returns, she wraps her lips around a nipple and starts to nurse milk from you.  You purr soothingly to her that [one of]the pride[or]you[or]your pride[purely at random] [one of]loves her[or]will protect her[or]will keep her safe[or]is where she belongs[purely at random].  Soon she's calmed down and purring happily.  Once she's been fed, you put her down and release her back into the park[one of], cautioning her to be more careful[or], giving her rear a soft pat[or] after warning her to be more careful[or] after giving her ears a scritch[or] after giving her a final hug[purely at random].  Feeling better for having helped [one of]the pride[or]your pride[or]Leonard's pride[or]your pride sister[or]the cute lioness[or]the kitty girl[purely at random], you head back on your way.";
 					increase morale of player by 1;
 					felinebodyshift;
 					increase libido of player by 2;
@@ -169,7 +169,7 @@ to say leoparkscene2:
 	say "     'Master Leonard had mentioned that something nicer than the bookshelf was needed for his kitchen if he was going to be able to entertain guests.  I'd been looking for a good one for soooo long and this one would fit just right in that open spot and everything.  I was so happy when I found this one and I was bringing it back.  I had a cart and a blanket to cover it and straps and everything, matron,' she insists.  'But then -sniff- that coyote that's always hanging around spotted me and he was mean and hit me and he took my cart and all the rest of it.  He said he needed it for some -sniff- stupid prank and then I was stuck and I couldn't leave the cabinet to find another cart and it was -sniff- supposed to be a surprise and another girl could've gotten it or...'";
 	attempttowait;
 	say "     By this point, her narrative starts to break down as the tears struggle to return, so you cuddle her in your arms and tell her that you'll help her bring it back to the cave.  She smiles up at you and hugs you very tightly, thanking you repeatedly between kisses.";
-	say "     After some more playful snuggling, you head over to the cabinet and look it over.  It's an older style with round glass windows built into the upper half and several draws below that.  While it's not as large as others you've seen, it will fit much better into the limited space of Leonard's cave.  And while you may not be that knowledgeable of such things, it certainly looks like a well-made and older collector's piece.  It is fairly heavy and you're impressed that the smaller girl was able to drag it so far, a testament to her determination to please the handsome lion.";
+	say "     After some more playful snuggling, you head over to the cabinet and look it over.  It's an older style with round glass windows built into the upper half and several drawers below that.  While it's not as large as others you've seen, it will fit much better into the limited space of Leonard's cave.  And while you may not be that knowledgeable of such things, it certainly looks like a well-made and older collector's piece.  It is fairly heavy and you're impressed that the smaller girl was able to drag it so far, a testament to her determination to please the handsome lion.";
 	say "     With your help and a few more breaks along the way, the cabinet arrives safely at Leonard's cave.  You allow the feline girl to present it to Leonard, who seems quite pleased with her acquisition and quickly has the maids move it into position.  As she'd said, it fits nicely into one side of the kitchen area, freeing that bookshelf to join the others in the sitting room area.";
 	attempttowait;
 	say "     You hang back during the installation, letting the kitty take the spotlight for her find, but when Leonard's ushers her off to receive her reward, she insists that you come as well.  You join them on the bed just as she's helping Leonard out of his suit coat.  Spotting the lion's stiff member, you take it in your paw and stroke it while giving him a kiss.";
@@ -200,7 +200,33 @@ to say leoparkscene4:
 Part 5 - Special Park Pride 5 - Kitty Rescue
 
 to say leoparkscene5:
-	say "***Special 5.";
+	if hermaphrodite is not banned:
+		say "     You hear a plaintive yowl in the distance and your matronly instincts kick in before you even know what's happening.  You move as quickly as you can towards the sound.  You soon arrive at a pair of wolves who have one of the feline girls pinned and are getting ready to ravage her.  Hearing you charging, one remains to deal with their prisoner while the other turns to confront you with a growl.";
+		challenge "Painted Wolf Herm";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "     Having dealt with the first of them, you approach the second.  Shi's managed to get the feline girl partially tied up in the time you've been occupied and turns to deal with you so shi can enjoy hir prize.";
+			challenge "Painted Wolf Herm";
+			if fightoutcome >= 10 and fightoutcome <= 19:
+				say "     Having defeated the second of the wolves, you head over to the kitty girl and free her from her bondage.  She hugs herself tightly to you and kisses you repeatedly as she thanks you for saving her";
+				if player is felinebodied:
+					say ".  Nuzzling at your chest, she starts nursing, drawing out your feline milk.  You purr soothingly to her that the pride will protect her.  Soon she's calmed down and purring happily in your arms.  Once she's been fed, you put her down and turn your attention towards the fallen wolves.";
+				otherwise:
+					say ".  Nuzzling at your chest, she mewls softly and kneads her paws over your [bodytype of player] body, helping to restore your matronly feline body.  As your feline bosom returns, she wraps her lips around a nipple and starts to nurse milk from you.  You purr soothingly to her that the pride will protect her.  Soon she's calmed down and purring happily.  Once she's been fed, you put her down and turn your attention towards the fallen wolves.";
+				say "     With your matronly instincts running strong, you head towards the pair of would-be assailants.  The two wolves, still dazed after their defeat, can only struggle weakly as you and the feline girl press them to your bosom.  With their muzzles pressed to your nipples, your still-flowing milk dribbles across their lips and soon they start suckling for more.  You purr softly to them about how they should calm down and that they'd submit like good kitties.  At first, they growl a little at these words, but don't stop nursing.";
+				say "     The kitty girl, meanwhile, is snuggled between them, stroking their backs.  At your prompting, she purrs to them about how she'd welcome them as her sisters.  They were just being too rough before, you tell them.  If they were good, submissive kitties, they'd all get along so much better.  To emphasize this, the kitty slides her paws under them, groping them to draw soft moans.";
+				say "     As this treatment progresses, the wolves start to change, becoming smaller and more feminine.  There ears turn more feline in shape and their muzzles a little shorter.  While still rather lupine by the time it's done, they do have some leonine traits starting to show.  Grinning happily at this trio, you give the kitty girl a kiss and a fondle.  Dazed from their meal of matronly milk, the other two listen obediently as you tell them to follow the kitty girl back to Leonard's cave where he can help them become proper sisters for their lovely kitty friend.  You can't help but grin happily as you watch them go.";
+				increase morale of player by 1;
+				increase libido of player by 3;
+				decrease humanity of player by 3;
+		if fightoutcome >= 20 and fightoutcome <= 29:
+			say "     Defeated, you are pushed to the ground beside the bound feline girl.  The wolves then proceed to mount you both repeatedly, taking turns with each of you.  Because you'd tried to keep them from their prize, they are rough and don't hold back, pounding away at you as you moan beneath them.  By the time they are done, you are leaking wolf cum from every orifice.  Too weak to struggle, you can only watch as they head off with the considerably transformed feline girl.  Changing much more dramatically than you, she's well on her way to being a herm wolf herself and has been lost to the pride.[impregchance]";
+			decrease morale of player by 3;
+			infect "Painted Wolf Herm";
+		otherwise if fightoutcome >= 30:
+			say "     Forced to flee, you must abandon the feline girl to her lupine fate.  It saddens you to lose a member of the pride.";
+			decrease morale of player by 3;
+	otherwise:
+		say "     You come across the signs of a struggle and a few scattered tufts of feline fur and the musky scent of lupine sex.  It seems that one of the feline girls was captured and mated here.  From the way her paw prints change, it seems she was fucked and transformed into a wolf by her assailants.  You are saddened by this, but know there's little you can do about it at this point.";
 	remove 5 from leoparklist;
 
 
