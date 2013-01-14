@@ -321,7 +321,7 @@ to say onyxboral2:
 
 
 to say onyxbanal:
-	if onyxdma is 1:
+	if onyxdma is 0:
 		say "     As you offer yourself to him he seems to stop you for a moment, reflecting briefly.";
 		say "     'No... I think I'd rather have fun with my [if scalevalue of player < 4]little[otherwise]big ol['][end if] toy another way.' He grins, pulling you to a comfortable spot in the library before undressing you and having you lay down on your side. He [if scalevalue of player > 3]walks[otherwise]gets down on his knees and shifts[end if] over to your behind, grinning even more deviously as he grinds his hardening and soon pre-oozing organ against your [bodytype of player] thigh.";
 		if scalevalue of player < 4:
@@ -378,23 +378,23 @@ to say onyxbanal:
 			Otherwise:
 				say "     Your behind is strained under his seemingly endless assault until the equine is finally struck with bliss, first made apparent by the feel of his virile seed flooding the depths of your bowels, [if scalevalue of player < 3]belly bloating almost immediately to accommodate the the sizeable load, though now your body's a bit better equipped to handle it, minimizing the subsequent mess of the escaping fluids[otherwise]body bloating slightly to maintain such a virile load, though you've grown to handle the strain of his almost excessive fluids[end if]. Sweat slicked form resting briefly against you whilst he waits for his dick to soften a bit, he eventually pull himself free, leaving a trail of cum in its wake.";
 			say "     'You're quite the tight fit, love! Er... You might want to clean yourself off, though.' He helps you to your feet, offering a reasonably clean towel he scrounged up and leaving you to clean up after yourself.[mimpregchance]";
-	otherwise:
-		say "     Bracing yourself, there's no doubt that your accomodating size will be his excuse to use you recklessly, and regardless of your [if scalevalue of player > 4]massive[otherwise]larger[end if] scale he's certainly adept at making an entrance when you feel the blunted tip of his impressive cock thrust firmly into your exposed pucker.
-His wanton assault [if cocks of player > 1]quickly driving your own, [cock size desc of player] cocks erect[otherwise if cocks of player > 0]quickly driving your own, [cock size desc of player] cock erect[otherwise if cunts of player > 0]rapidly driving you wet with arousal[otherwise]compelling you to watch as he goes on[end if], you derive a delightful pleasure in the occupancy of his flesh, and once he's satisfied with the leeway of your anal ring he begins fuck you in earnest.";
-		If libido of player > 69:
-			say "     Driven by your overwhelming lust, you're soon forced to cry out, ";
-			if cocks of player > 0:
-				say "[if cocks of player > 1]cocks exploding with their[otherwise if cocks of player > 0]cock exploding with its[end if] [if cock width of player > 24]massive[end if] load over your naked, [bodydesc of player] torso, much to Onyx's amusement.";
-				say "     '[one of]Aw, you're just one big softy, aren't you?[or]Ha, looks like you're not big enough to resist me![at random]' His taunts stinging you with lust-twisted shame as he continues to ride you.";
-			Otherwise if cunts of player > 0:
-				say "writhing visibly in blissful release. You would move to offer up your neglected [if cunts of player > 1]pussies[otherwise if cunts of player > 0]pussy[end if] your own affection when you're forced to contend with Onyx's refusal to let you do so.";
-				say "     '[one of]Aw, you're just one big softy, aren't you?[or]Ha, looks like you're not big enough to resist me![at random]' His taunts stinging you with lust-twisted shame as he continues to ride you.";
-			say "     He, soon, is hit with his own bliss, a flood of the equine's virile seed filling your hungry bowels. He doesn't relent until he is fully drained within the confines of your ever-so-accommodating hole, inevitably collapsing against you, sweat-slicked form panting as he slowly gathers his breath. In due time, he pulls his softened cock free of you, wiping himself clean against your ample behind.";
-			say "     'Such a big, naughty slut, making all this mess!' He gestures to the [if cock width of player > 24]considerable[end if] mess of your own sexual fluids before leaving you to handle the matter yourself. A little embarrassed, you tidy up before going about your business.[mimpregchance]";
 		otherwise:
-			say "     You're eventually offered the equine's virile seed as he too finds bliss, your bowels more than happy to accept as it floods their depths. He doesn't let up until he is fully drained within the confines of your ever-so-accommodating hole, inevitably collapsing against you, sweat slicked form panting as he slowly gathers his breath. In due time, he pulls his softened cock free of you, wiping himself clean against your ample behind.";
-			say "     'Geez, you're like a black hole. I don't even phase you, do I?' He remarks incredulously as you straighten yourself out before he lets you off. Admittedly, you're fair bit more aroused from being used like that.[mimpregchance]";
-			increase libido of player by 25;
+			say "     Bracing yourself, there's no doubt that your accomodating size will be his excuse to use you recklessly, and regardless of your [if scalevalue of player > 4]massive[otherwise]larger[end if] scale he's certainly adept at making an entrance when you feel the blunted tip of his impressive cock thrust firmly into your exposed pucker.
+His wanton assault [if cocks of player > 1]quickly driving your own, [cock size desc of player] cocks erect[otherwise if cocks of player > 0]quickly driving your own, [cock size desc of player] cock erect[otherwise if cunts of player > 0]rapidly driving you wet with arousal[otherwise]compelling you to watch as he goes on[end if], you derive a delightful pleasure in the occupancy of his flesh, and once he's satisfied with the leeway of your anal ring he begins fuck you in earnest.";
+			If libido of player > 69:
+				say "     Driven by your overwhelming lust, you're soon forced to cry out, ";
+				if cocks of player > 0:
+					say "[if cocks of player > 1]cocks exploding with their[otherwise if cocks of player > 0]cock exploding with its[end if] [if cock width of player > 24]massive[end if] load over your naked, [bodydesc of player] torso, much to Onyx's amusement.";
+					say "     '[one of]Aw, you're just one big softy, aren't you?[or]Ha, looks like you're not big enough to resist me![at random]' His taunts stinging you with lust-twisted shame as he continues to ride you.";
+				Otherwise if cunts of player > 0:
+					say "writhing visibly in blissful release. You would move to offer up your neglected [if cunts of player > 1]pussies[otherwise if cunts of player > 0]pussy[end if] your own affection when you're forced to contend with Onyx's refusal to let you do so.";
+					say "     '[one of]Aw, you're just one big softy, aren't you?[or]Ha, looks like you're not big enough to resist me![at random]' His taunts stinging you with lust-twisted shame as he continues to ride you.";
+				say "     He, soon, is hit with his own bliss, a flood of the equine's virile seed filling your hungry bowels. He doesn't relent until he is fully drained within the confines of your ever-so-accommodating hole, inevitably collapsing against you, sweat-slicked form panting as he slowly gathers his breath. In due time, he pulls his softened cock free of you, wiping himself clean against your ample behind.";
+				say "     'Such a big, naughty slut, making all this mess!' He gestures to the [if cock width of player > 24]considerable[end if] mess of your own sexual fluids before leaving you to handle the matter yourself. A little embarrassed, you tidy up before going about your business.[mimpregchance]";
+			otherwise:
+				say "     You're eventually offered the equine's virile seed as he too finds bliss, your bowels more than happy to accept as it floods their depths. He doesn't let up until he is fully drained within the confines of your ever-so-accommodating hole, inevitably collapsing against you, sweat slicked form panting as he slowly gathers his breath. In due time, he pulls his softened cock free of you, wiping himself clean against your ample behind.";
+				say "     'Geez, you're like a black hole. I don't even phase you, do I?' He remarks incredulously as you straighten yourself out before he lets you off. Admittedly, you're fair bit more aroused from being used like that.[mimpregchance]";
+				increase libido of player by 25;
 
 
 

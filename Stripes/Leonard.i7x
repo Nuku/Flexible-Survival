@@ -1,5 +1,5 @@
 Version 3 of Leonard by Stripes begins here.
-[Version 3.1 - Small tweaks tying into the Leonard Events]
+[Version 3.2 - New matron sex scenes]
 
 "Adds a Male Feline NPC named Leonard to the Flexible Survival game"
 
@@ -362,6 +362,8 @@ Part 2 - Mate Sex
 to leonardmatesex:
 	if Feline_attached > 0 and feline_status is 0:
 		say "[leonardmate_newkitty]";
+	otherwise if cunts of player > 0 and player is felinebodied and a random chance of 2 in 5 succeeds:
+		say "[leonardmatesex_lc]";
 	otherwise:
 		say "     You snuggle up to your sexy mate and run your hands over his chest, making him rumble happily.  He pulls you into his arms and gives you a kiss.  As you kiss, you wonder how you might best show your love for the handsome lion.";
 		now sextablerun is 0;
@@ -370,18 +372,23 @@ to leonardmatesex:
 		now title entry is "Fellatio";
 		now sortorder entry is 1;
 		now description entry is "suck the lion's cock";
+		if breast size of player > 2 and player is felinebodied:
+			choose a blank row in table of fucking options;
+			now title entry is "Titty Fuck";
+			now sortorder entry is 2;
+			now description entry is "Share the bounty of the pride with him";
 		if cunts of player > 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Cunnilingus";
-			now sortorder entry is 2;
+			now sortorder entry is 3;
 			now description entry is "have the lion eat you out";
 			choose a blank row in table of fucking options;
 			now title entry is "Have sex";
-			now sortorder entry is 3;
+			now sortorder entry is 4;
 			now description entry is "have the lion fuck you";
 		choose a blank row in table of fucking options;
 		now title entry is "Doggy-style";
-		now sortorder entry is 4;
+		now sortorder entry is 5;
 		now description entry is "have the lion mount you like a beast";
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -404,6 +411,8 @@ to leonardmatesex:
 						say "[leonardmatesex3]";
 					otherwise if title entry is "Doggy-style":
 						say "[leonardmatesex4]";
+					otherwise if title entry is "Titty Fuck":
+						say "[leonardmatesex5]";
 			otherwise:
 				say "Invalid Option.";
 
@@ -439,6 +448,28 @@ to say leonardmate_newkitty:
 	decrease humanity of player by 5;
 	follow the turnpass rule;
 
+
+to say leonardmatesex_lc:		[Leonard's choice]
+	if a random chance of 3 in 5 succeeds:
+		say "     As you give Leonard a sexy look and start to stride over to him, he rumbles lustfully and wraps his arms around you.  He pulls you in close and kisses you passionately, his paws running over your body.  'Mmm... I want you, my mate,' he rumbles, kneading your bottom as he slides his tongue across your neck.  You can only moan weakly in response, any sexy plans of your own thrown out as your body responds to the lion's advances.  Smiling up at him, you accompany him to the bed where, after divesting you both of your clothing and gear, he moves to climb atop you on all fours.";
+		say "     With a large paw to either side of you, he presses his hips forward, grinding his hard cock against your rear to make you moan softly.  He nuzzles your neck and nibbles along it, purring as he dribbles streaks of precum over you[one of].  Despite his earlier eagerness, he takes some time to get you even more worked up[or].  Taking little time for foreplay, he makes a few teasing slides across your wet lips[at random] before finally pulling back and mounting you properly.  As his hard, feline shaft sinks into your hot pussy, you mrowl in pleasure and push back into his thrust.  Once hilted inside you, he nuzzles your cheek and your turn you head to kiss him quickly[if gestation of child is 0 and larvaegg is not 2].  'Mmm... let's make some cubs[otherwise].  'Mmm... my sexy, pregnant beauty[end if],' he rumbles before starting to thrust.";
+		say "     Your aroused and needy body grips and squeezes at his cock as he mates you, longing for your mate to claim your [if gestation of child is 0 and larvaegg is not 2]womb[otherwise]body[end if] once again with his seed[if breast size of player > 0].  His paw rubs at your chest, stroking your breasts and teasing your nipples[otherwise].  His paw rubs at your chest and teases your nipples[end if].  The lion's steady thrusts as he pounds his throbbing rod into you make you more and more excited and you push back into his powerful thrusts.  You reach back and grab his hefty balls, which have been slapping warmly against your [if cocks of player > 0]own[otherwise]thighs[end if] and fondle them, longing to feel their thick, creamy product within you and knowing that time's coming soon.";
+		say "     His pace accelerates and his breathing grows heavier as his arousal builds.  As he pumps into your squeezing, quivering pussy, your hot juices run down your thighs, your arousal climbing.  Leonard takes your nape in his muzzle and holds it gently while driving into you hard and fast, his shaft throbbing inside you with every heavy thud of his heart.  After a few of these pounding thrusts, you feel his hot seed blasting into you in thick spurts that are wonderfully fulfilling.  His ample load fills you with warmth and satisfaction, getting you to cum powerfully as well with a feline yowl of ecstacy as his virile semen splashes against your cervix and flows into your womb[if gestation of child is 0 and larvaegg is not 2] in an attempt to breed you[end if].  By the time his large balls are drained, you've got a pleasant, warm, full feeling in your belly that leaves you purring happily.[impregchance]";
+		say "     Remaining sheathed inside you, he rolls onto his side with you in his arms, spooning with you even as his cock gives its last twitches.  'Mmm... my beautiful, strong mate.  We were meant to be together like this,' he rumbles, running his paw over your well-seeded tummy.  'You should stay so I might breed you with litter after litter of cubs.'  You snuggle yourself back against him and you long to agree, but tell him that you feel there's more you must do out in the city as well for now.  He nuzzles you and licks your ear, letting you know he hopes the day will come soon when you're done with the city and can be his alone.  You drift off to rest for a bit with his half-hard cock still buried inside you, purring happily together.";
+		decrease humanity of player by 5;
+	otherwise:
+		say "     As you give Leonard a sexy look and start to stride over to him, he rumbles lustfully and wraps his arms around you.  He pulls you in close and kisses you passionately, his paws running over your body.  'Mmm... come, my lovely mate,' he rumbles as he kneads your bottom and runs his tongue along your neck.  'I wish to show the passion of my love to you.'  You rumble softly in response, any sexy plans of your own thrown out as your body responds to the lion's advances.  Smiling up at him, you accompany him to the bed where, after divesting you both of your clothing and gear, he lays you back across the sheets and moves atop you.";
+		say "     Eager to have the handsome lion mate you, you mrowl softly and wrap your arms around him.  Rumbling at your eagerness to mate, he nuzzles across your chest, licking your nipples in passing and soon has his cock pressing against your thigh.  He strokes it across your wet, sensitive folds slowly before lining it up for entry and kissing him passionately.  As you kiss, he pushes his hips forward and thrusts into you.";
+		say "     You mrowl and purr beneath your leonine lover as he thrusts into you steadily, taking a slower approach than his usual animal mating.  With your arms around him, you stroke his softly-furred back and rear, giving those strong muscles the occasional squeeze as tremors of delight run through you.  [if breast size of player > 0].  He slides a paw across your breasts, caressing them before teasing your nipples.  He licks his lips as dribbles of milk leak from them and leans forward to wrap his lips around your nipple, nursing some of your feline milk from it.  'Mmm... delicious.  It will feed our cubs well,' he purrs before kissing you, sliding his tongue into your mouth.  You can taste traces of your milk on his tongue as you kiss[otherwise].  He moves a paw to rub over your flat chest and tweaks your nipples.  He leans down and licks slowly across one of them with his raspy tongue before nuzzling back up to kiss you again[end if].  As you kiss, you slide a hand around to fondle the lion's hefty ballsac, enjoying the thought of soon obtaining their contents within your womb[if gestation of child is 0 and larvaegg is not 2] to breed you[end if].";
+		say "     As Leonard licks and nips along your neck and shoulders, his panting grows heavier and his thrusts harder as his excitement builds.  You grip his muscled shoulders with your hands and squeeze them with every thrust he makes into you, digging your claws in as you yowl in ecstasy.  With the pain of your claws and the pleasure of your cunt spasming around his shaft, he roars loudly and drives himself hard into you, blasting his hot seed into your womb as he seeks to breed you.  After several firm thrusts and their accompanying blasts of lion cum, his balls are drained and your womb is full of his thick seed, leaving you with a pleasant bump from his considerable output[if gestation of child is 0 and larvaegg is not 2] which you hope will soon grow even larger[end if].  He eases himself from you slowly and snuggles up beside you, purring happily as his fingers run over your body, working steadily to bring you to another climax as fingers pump into your cream-filled pussy and teeth nibble your [if breast size of player > 0]milky nipple[end if].  Once he's sure that you're quite satisfied, he snuggles you in his arms and purrs softly to you about how the pride treasures you and how much he and all the pride long for you to stay so you might enjoy such pleasures always.  Even as you drift off, the desire to stay is very tempting.[impregchance]";
+		decrease humanity of player by 8;
+	infect "Feline";
+	rest;
+	now feline_meow is feline_meow / 2;
+	decrease libido of player by libido of player / 4;
+	follow the turnpass rule;
+
+
 to say leonardmatesex1:			[Fellatio]
 	say "     Deciding you want to show your feline lover how much you appreciate him, you shove him back into his chair with a grin.  You run your hands down his body as you lower yourself between his legs.  After the initial surprise has passed, it fades to a rumble of pleasure and a gentle caress of his paw across your cheek.  You nuzzle against those soft pads and wrap your fingers around his sheath and balls, stroking the warm fur.  'Mmm... you are such a lovely, beautiful and mmm...' he moans as you lick across his glans, '...thoughtful mate.'  You grin up at him one last time before leaning forward and taking the emerged portion of his shaft into your mouth.  As you take more of it in, you let your lips push back his sheath so you can feel his maleness growing fully hard in your mouth, excited by the thought that you're doing that to him.";
 	say "     His loins heavy with his strong, virile scent, you quickly grow excited as well.  You think back to the first time you did this.  It seems so long ago.  You never dreamed at the time how close you'd become to your wonderful mate and his pride.  With thoughts to all this great lion has given you, you work your mouth and tongue to the best of your abilities, seeking to show him how much you love him for all you've shared together.  'Oh, my wonderful mate,' he moans as his cock pulses and throbs in your mouth, dribbling his pre down your throat.";
@@ -473,8 +504,8 @@ to say leonardmatesex3:			[Have sex]
 to say leonardmatesex4:			[Doggy-style]
 	say "     Feeling the urge for some carnal pleasure with your handsome mate, you strut over to the bed at the back of the tunnel.  You sway your hips[if player is felinetailed] and leonine tail[end if] at the lion, who eagerly follows you with a playful, predatory rumble.  As you pause at the bed, he places his strong paws on your rear and gives it a squeeze.  You run your hands over one another, helping each other out of your clothes before the lion tosses you onto the bed and pounces atop you.  You roll around on the large bed for a while, hands moving over each other before finally you move onto all fours and give your ass a meaningful shake.  'Mmm... yes, let me mount you like a lion should[if cunts of player > 0].  I'll pound you and breed you full of strong cubs[end if],' he rumbles even as he moves atop you.";
 	say "     With a paw groping your chest and the other gripping the sheets for support, he presses his hips forward, letting his hard cock grind against your rear, making you moan softly.  He nuzzles your neck and nibbles along it, purring as he dribbles streaks of precum over you before finally pulling back and mounting you properly.  As his hard, feline shaft sinks into your [if cunts of player > 0]hot pussy[otherwise]tight ass[end if], you mrowl in pleasure and push back into his thrust.  Once hilted inside you, he nuzzles your cheek and your turn you head to kiss him quickly.  'Mmm... we were made for one another,' he rumbles before starting to thrust.";
-	say "     Your aroused and needy body grips and squeezes at his cock as he mates you, longing for your mate to claim your [if cunts of player > 0]womb[otherwise]body[end if] once again with his seed[if breast size of player > 0].  His paw rubs at your chest, stroking your breasts and teasing your nipples[otherwise].  He paw rubs at your chest and teases your nipples[end if].  The lion's steady thrusts as he pounds his throbbing rod into you make you more and more excited and you push back into his powerful thrusts.  You reach back and grab his hefty balls, which have been slapping warmly against your [if cocks of player > 0]own[otherwise]thighs[end if] and fondle them, longing to feel their thick, creamy product within you and knowing that time's coming soon.";
-	say "     His pace picks up and his breathing grows heavier as his arousal builds[if cunts of player > 0].  Your feminine juices run down your legs as he pumps into your squeezing, quivering pussy[otherwise].  Your anus clenches down around him tightly each time he pushes deep inside you[end if].  And soon your effort is rewarded as Leonard takes your nape in his muzzle and holds it gently while driving into you hard and fast.  After a few of this pounding thrusts, you feel his ballsac tauten and feel his hot seed blasting into you moments later.  His ample load fills you with warmth and satisfaction[if cocks of player > 0 or cunts of player > 0], getting you to cum powerfully as well with a feline yowl of ecstacy[end if].  You can feel his virile semen [if cunts of player > 0]splashing against your cervix and flowing into your womb[otherwise if cocks of player > 0]splashing against your prostate and filling your bowels[otherwise]filling your bowels[end if].  By the time his large balls are drained, you've got a pleasant, warm, full feeling in your belly that makes you feel fulfilled.[impregchance]";
+	say "     Your aroused and needy body grips and squeezes at his cock as he mates you, longing for your mate to claim your [if cunts of player > 0]womb[otherwise]body[end if] once again with his seed[if breast size of player > 0].  His paw rubs at your chest, stroking your breasts and teasing your nipples[otherwise].  His paw rubs at your chest and teases your nipples[end if].  The lion's steady thrusts as he pounds his throbbing rod into you make you more and more excited and you push back into his powerful thrusts.  You reach back and grab his hefty balls, which have been slapping warmly against your [if cocks of player > 0]own[otherwise]thighs[end if] and fondle them, longing to feel their thick, creamy product within you and knowing that time's coming soon.";
+	say "     His pace picks up and his breathing grows heavier as his arousal builds[if cunts of player > 0].  Your feminine juices run down your legs as he pumps into your squeezing, quivering pussy[otherwise].  Your anus clenches down around him tightly each time he pushes deep inside you[end if].  And soon your effort is rewarded as Leonard takes your nape in his muzzle and holds it gently while driving into you hard and fast.  After a few of these pounding thrusts, you feel his ballsac tauten and feel his hot seed blasting into you moments later.  His ample load fills you with warmth and satisfaction[if cocks of player > 0 or cunts of player > 0], getting you to cum powerfully as well with a feline yowl of ecstacy[end if].  You can feel his virile semen [if cunts of player > 0]splashing against your cervix and flowing into your womb[otherwise if cocks of player > 0]splashing against your prostate and filling your bowels[otherwise]filling your bowels[end if].  By the time his large balls are drained, you've got a pleasant, warm, full feeling in your belly that makes you feel fulfilled.[impregchance]";
 	say "     Remaining sheathed inside you, he rolls onto his side with you in his arms, spooning with you even as his cock gives its last twitches.  'Mmm... my beautiful strong mate.  I do so enjoy our times together like this.  You must simply stay so I might enjoy this pleasure every day[if cunts of player > 0]and fill you with litters of cubs[end if].'  You snuggle yourself back against him and you promise him that you'll think about it, but add that you feel there's more you must do out in the city as well.  He nuzzles you and licks your ear, letting you know he understands before you drift off to rest for a bit with his half-hard cock still buried inside you, purring happily together.";
 	infect "Feline";
 	rest;
@@ -482,6 +513,16 @@ to say leonardmatesex4:			[Doggy-style]
 	decrease libido of player by libido of player / 4;
 	decrease humanity of player by 4;
 	follow the turnpass rule;
+
+
+to say leonardmatesex5:
+	say "     Wanting to share the bounty of the pride with your lovely mate, you rub your full breasts against his chest and slowly lower yourself down to your knees.  With your feline mammaries pressed around his stiff member, you slide your tits against his shaft, causing the lion's rumbles of pleasure to grow.  He smiles down at you, stroking your ears and petting you lovingly as you seek to please him.  'Mmm... you are such a wonderful mate.  The pride is fortunate to have such a... [if breast size of player < 6]lovely[otherwise if breast size of player < 10]giving[otherwise]bountiful[end if] beauty to provide for it,' he rumbles, his eyes locked on your [breast size desc of player] boobs.  You merely grin up at him and lick slowly across his glans, delighting in his shiver of excitement and the dollop of delicious pre it brings.";
+	say "     With his cock so close, his strong, virile scent has you quickly grow excited as well.  You pinch and tease your own nipples, drawing out dribbles of milk that run down your body and send shivers of delight through you.  You lick and kiss some more, but let your [breast size desc of player] breasts do most of the work of pleasing your mate.  You pick up the pace, pressing harder and rubbing faster.";
+	say "     As the spurts of pre from his leonine cock grow more frequent, you know his climax is fast approaching.  Placing [one of]a paw at your shoulder, he pushes you back.  'Take it and spread my seed across your breasts.  Mark those lovely breasts of yours for the pride,' your strong, virile mate rumbles.  Obediently, eagerly, you put one paw on his shaft and the other on his balls and start stroking the sexy lion off.  Soon he roars and cums heavily, painting your [breast size desc of player] breasts in his seed, claiming them for him and his pride.  After the last shots splatter across your bosom, you plunge your mouth over his cock and lick it clean while rubbing his semen into your tits and over your nipples.  Your mate can't help but smile down at the sight of you messy with his cum[or]a paw at the back of your head, he presses his cock to your lips and into your mouth.  'Suck it all down, my hungry kitty,' he rumbles, rubbing his paws firmly over your head.  You do so obediently, eagerly even, and work your lips, tongue and mouth over the throbbing length of leonine meat, working to finish the job.  This doesn't take long and soon you're rewarded with heavy blasts of heavenly juicy cum from his throbbing shaft.  You swallow down every shot he provides, eagerly taking it all in, rolling it over your tongue before letting it slide down your throat.  Your mate can't help but smile down at the sight of you sucking down his seed[at random].  When done, you slowly slide your mouth off his shaft and smile up at him as you flop down on the floor in a sexy pose, lightly teasing your nipples[if cunts of player > 0] as you finger yourself to orgasm in a final show[otherwise if cocks of player > 0] as you stroke yourself off across yourself in a final show[end if].";
+	infect "Feline";
+	increase libido of player by 6;
+	if libido of player > 100, now libido of player is 100;
+	increase feline_meow by 1;
 
 
 Section 4 - Finding a Violin
