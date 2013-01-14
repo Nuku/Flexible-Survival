@@ -1,5 +1,5 @@
 Version 4 of Wereraptor For FS by Stripes begins here.
-[Version 4 - Accepting the curse]
+[Version 4.1 - Endings]
 "Adds a special wereraptor creature/curse to Flexible Survival's Wandering Monsters table"
 
 Section 0 - Event Activation
@@ -820,22 +820,44 @@ to say wrcurseaccept:
 [ 100: curse purged		]
 
 
-[
 when play ends:
 	if wrcursestatus is 2:
 		if humanity of player < 10:
-		say "     As your infection is taking hold and your old self is failing, there is another struggle going on inside you.  You can feel something wild and primal briefly struggle for freedom, but it is too old and weak, and soon fades away with an angry hiss at being denied its return.";
+			say "     As your infection is taking hold and your old self is failing, there is another struggle going on inside you.  You can feel something wild and primal briefly struggle for freedom, but it is too old and weak, and soon fades away with an angry hiss at being denied its return.";
 	otherwise if wrcursestatus >= 3 and wrcursestatus <= 6:
 		if bodyname of player is "Wereraptor":
-			say "***ending for Wereraptor";
+			if humanity of player < 10:
+				say "     You succumb to the strange, saurian affliction, much of your mind becomes that of the primitive beast lurking inside you.  You grow to live for the wild hunt for food and sex at night, mauling and cursing others.  During the day, you revert back to whatever infection may be affecting you at the time, but the true you is only hiding behind it, waiting for nightfall to surprise your prey and strike.";
+			otherwise:
+				say "     When rescue comes, you do your best to hide your saurian affliction.  It is very difficult and takes a considerable toll on you as you fearfully hold it back each night, remaining in your daytime form.  Thankfully, it does seem to understand the need to hide while you're at the military compound, though it doesn't like it.  You hear the occasional mumble of anomalies with your testing, but nothing further seems to stem from it.  In time, you are released and you make a new life for yourself.  After the long stay at the facility, you have gained some ability to restrain your curse and it only rises during the full moon to strike.  At these times, you don't hold it back, letting it run free.  There are reports of monthly attacks by a lizard creature, but it is never caught as it cannot be tracked down after the hunt.";
 		otherwise:
-			say "***as your infection takes hold, it forces out the ancient wereraptor curse.";
+			if humanity of player < 10:
+				say "     As your infection takes hold, it forces out the ancient wereraptor curse.  The curse, too old and weak, cannot maintain itself as the nanites fully take over your body and mind.";
+			otherwise:
+				say "     When rescue comes, you do your best to hide your saurian affliction.  It is very difficult and takes a considerable toll on you as you fearfully hold it back each night, remaining in your daytime form.  Thankfully, it does seem to understand the need to hide while you're at the military compound, though it doesn't like it.  You hear the occasional mumble of anomalies with your testing, but nothing further seems to stem from it.  In time, you are released and you make a new life for yourself.  After the long stay at the facility, you have gained some ability to restrain your curse and it only rises during the full moon to strike.  At these times, you don't hold it back, letting it run free.  There are reports of monthly attacks by a lizard creature, but it is never caught as it cannot be tracked down after the hunt.";
 	otherwise if wrcursestatus is 7:
 		if bodyname of player is "Wereraptor":
-			say "***ending for Wereraptor";
+			if humanity of player < 10:
+				say "     As the last vestiges of your humanity are consumed by your wereraptor identity, you return to Dr. Utah and join [if girl is not banned]her[otherwise]him[end if] in preparation for the rise of the new saurian people, remaining in the fallen city for a time.  You, and others like yourselves, form into [']The Society of the Sickle['].  Training yourselves to gain partial control over your transformation, you are able to slip into society and hide yourselves among them, working in secret to infect others and add new members to your order.  Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first.  But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers.";
+			otherwise:
+				say "     When you are taken to the military compound, you and Dr. Utah keep your more powerful night forms repressed with some effort.  Your examination has you categorized both as an indeterminate lizard form.  In time, you both are released and set up new lives together.  Working in secret, you, and the others like yourselves you recruit, form into [']The Society of the Sickle['].  Training yourselves to gain partial control over your transformation, you are able to slip into society and hide yourselves among them, working in secret to infect others and add new members to your order.";
+				if girl is not banned and libido of Doctor Utah > 0:
+					say "     When the eggs Dr. Utah left in the city hatch, they seems like other ferals and go largely unnoticed at first.  But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers";
+				otherwise:
+					say "     Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first.  But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers";
+				say ".  As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures.  But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow.  With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
 		otherwise:
-			say "***as your infection takes hold, it forces out the ancient wereraptor curse.";
-]
+			if humanity of player < 10:
+				say "     As your infection takes hold, it tries to force out the ancient wereraptor curse, but cannot do so entirely.  You spend much of your existence unaware of your dual identity, but every full moon, the hidden monster from the id rises and you transform into the Wereraptor to stalk the night.  Often at these times, you meet with Dr. Utah in [if girl is not banned]her[otherwise]his[end if] impressive night form and enjoy a lustful hunt together, adding others to your numbers.";
+			otherwise:
+				say "     When rescue comes, your increased control over your curse allows you to hide your saurian affliction.  It is takes some effort, but you manage to stay as you are while you're at the military compound.  You hear the occasional mumble of anomalies with your testing, but nothing further seems to stem from it.  In time, you are released and you make a new life for yourself.  After the long stay at the facility, you find that your current form has managed to set itself as your regular, daytime form, though you are able to transform at will at night into a beautiful and sexy wereraptor.  This allows you to integrate yourself into society and make a place for yourself from which to secretly live out your nightlife when you feel the urge to hunt.";
+				say "     With the help of Dr. Utah and the others who have joined you, you form into [']The Society of the Sickle['].  Training yourselves to gain partial control over your transformation, you are able to hide among society and work in secret to infect others, adding new members to your order.";
+				if girl is not banned and libido of Doctor Utah > 0:
+					say "     When the eggs Dr. Utah left in the city hatch, they seems like other ferals and go largely unnoticed at first.  But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers";
+				otherwise:
+					say "     Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first.  But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers";
+				say ".  As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures.  But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow.  With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
+
 
 [ Edit this to have the correct creature name as well]
 Wereraptor For FS ends here.

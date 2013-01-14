@@ -104,9 +104,10 @@ instead of fucking the Doctor Utah:
 an everyturn rule:
 	if lust of Doctor Utah > 0:
 		increase lust of Doctor Utah by 1;
-		if lust of Doctor Utah >= 24:
+		if lust of Doctor Utah >= 24 and skipturnblocker is 0:
 			say "By some unknown, feral instinct, you know that more of your offspring have entered this world.  Your wereraptor nature urges you to return to Dr. Utah... perhaps to breed her with more eggs.";
 			increase libido of Doctor Utah by a random number between 2 and 4;
+			now lust of Doctor Utah is 0;
 			increase hp of Doctor Utah by 1;
 			if hp of Doctor Utah > 20, now hp of Doctor Utah is 18;
 
