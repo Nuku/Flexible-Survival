@@ -54,6 +54,12 @@ Instead of resolving a Raiding Party:
 					say "     Looking at you, she grins and runs her paws over her body.  'Well, sweety, that was mighty nice of you.  How about I give you a little reward for your help?' she purrs, motioning to a discarded mattress at the edge of a nearby pile.  From the looks of it, it's been used a few times before.  As her paws run over her skirt, you can see the bulge there of her poorly concealed maleness.  'No charge this time, sweety,' the feline whore adds, running hir paws over your chest.  'I can show you a real good time.  Anything you like,' shi rumbles with a grin, rubbing hir breasts and sheath against you.  Shall you accept hir tempting offer?";
 					if the player consents:
 						now junknum is 1;
+						[puts Tigress Hooker as lead monster in case of impregnation]
+						repeat with y running from 1 to number of filled rows in table of random critters:
+							choose row y in table of random critters;
+							if name entry is "Tigress Hooker":
+								now monster is y;
+								break;
 						say "[losetotigress]";
 						now junknum is 0;
 						say "     Your romp with the feline over, shi gives gives you one last kiss before telling you shi needs to get back to work.  Shi points off towards the seedier part of town and tells you of a route leading you there, should you want to find hir and hir sisters for more fun.";
