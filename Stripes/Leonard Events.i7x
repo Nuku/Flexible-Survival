@@ -1,5 +1,5 @@
 Version 1 of Leonard Events by Stripes begins here.
-[version 1.2 - First 4 unique events]
+[version 1.3 - Another unique event]
 
 "Adds a batch of random encounters with Leonard's Pride to Flexible Survival scattered around the city."
 [Note: These will only be accessible after completing Leonard's Quest.]
@@ -16,7 +16,7 @@ PridePark is a situation.  PridePark is resolved.
 The sarea of PridePark is "Park";
 
 Instead of resolving PridePark:
-	if leoparklist is not empty and a random chance of 1 in 3 succeeds:	[unique situations]
+	if leoparklist is not empty and a random chance of 2 in 5 succeeds:	[unique situations]
 		sort leoparklist in random order;
 		if entry 1 of leoparklist is 1, say "[leoparkscene1]";
 		if entry 1 of leoparklist is 2, say "[leoparkscene2]";
