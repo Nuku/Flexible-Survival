@@ -327,7 +327,7 @@ to say onyxbanal:
 		if scalevalue of player < 4:
 			say "     You're not rightly sure how he intends to fit something that big back there, but your uncertainty only fuels his wicked plans further, and you soon feel his blunted tip press teasingly against your exposed pucker. You're given a small mercy as he makes a slow effort of sinking his cock into your hole, quickly strained as you're considerably stretched to accommodate his expansive girth.";
 			say "     [if cocks of player > 1]Your own [cock size desc of player] cocks driven hard[otherwise if cocks of player > 0]Your own [cock size desc of player] cock driven hard[otherwise if cunts of player > 0]Blatantly aroused[otherwise]Writhing weakly[end if] as his flesh floods your bowels, he appears singularly intent on sating his fiery lust, even as you [if scalevalue of player < 2]begin to see the outline of dick bulge out from your belly[otherwise]strain to remain clear-minded under such a considerable sensation[end if]. Regardless, you're quickly forced to acclimate to his thick intrusion before he begins to fuck you in earnest.";
-			If lust of player > 49:
+			If libido of player > 49:
 				If cocks of player > 0:
 					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[if cocks of player > 1]s[end if] in a staggered [if cock width of player > 12]and quite messy[end if] orgasm, forcing Onyx to taunt you.";
 					say "     'Aw, my little fucktoy is so sensitive, how adorable!' You can only help but blush in a mix of pleasure and embarrassment as you sully yourself with [if cock width of player > 12]numerous[end if] strings of your sexual fluids a mess across your [bodydesc of player] torso.";
@@ -366,7 +366,7 @@ to say onyxbanal:
 		if scalevalue of player < 4:
 			say "     Bracing yourself, you prepare for the inevitable assault he has planned for you, and you soon feel his blunted tip press teasingly against your exposed pucker. By now you're sufficiently acclimated to him, and you're able to accommodate his expansive girth with minimal discomfort, though this only compels him to be more reckless in forcing it down your hole.";
 			say "[if cocks of player > 1]Your own, [cock size desc of player] cocks driven hard[otherwise if cocks of player > 0]Your own [cock size desc of player] cock driven hard[otherwise if cunts of player > 0]Blatantly aroused[otherwise]Shifting to best suit him[end if] as his flesh floods your bowels, he appears singularly intent on sating his fiery lust, even as you [if scalevalue of player < 2]begin to see his dick protrude out from your belly[otherwise]struggle to abide his expansive girth[end if]. It takes a little effort, but he finds immense pleasure in hilting his thick intrusion inside you.";
-			If lust of player > 49:
+			If libido of player > 49:
 				If cocks of player > 0:
 					say "     Prostate so thoroughly ravaged by his assault, strained gouts of hot cum spurt from your cock[if cocks of player > 1]s[end if] in a staggered [if cock width of player > 12]and quite messy[end if] orgasm, forcing Onyx to taunt you.";
 					say "     'Aw, my little fucktoy is so sensitive, how adorable!' You can only help but blush in a mix of pleasure and embarrassment as you sully yourself with [if cock width of player > 12]numerous[end if] strings of your sexual fluids a mess across your [bodydesc of player] torso.";
