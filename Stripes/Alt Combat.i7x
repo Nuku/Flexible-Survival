@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2 - Armour Upgrade: Absorbancy ]
+[Version 2.1 - Pet updrage, Charisma driven]
 
 "Oh my God!  Who gave them super-powers?!"
 
