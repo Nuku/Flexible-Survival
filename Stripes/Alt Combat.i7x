@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2 - Armour Upgrade: Absorbancy ]
+[Version 2.1 - Pet updrage, Charisma driven]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -346,34 +346,43 @@ This is the player attack rule:
 		say "[Name entry] is [descr].";
 	otherwise:
 		say "You miss!";
-	if player is not lonely and a random chance of 1 in 20 succeeds and "The Horde" is listed in feats of player:
-		say "[line break]";
-		say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
-		say "[line break]";
-		repeat with z running through tamed pets:
-			now attack bonus is ( ( dexterity of z minus 10 ) divided by 2 ) plus level of z;
+	let petchance be 0;
+	if the player is not lonely:
+		let petchance be ( charisma of player / 3 ) * 50;
+		if petchance > 400, now petchance is 400;
+		if "Good Teacher" is listed in feats of player, increase petchance by 20;
+		if "Ringmaster" is listed in feats of player, increase petchance by 20;
+		increase petchance by square root of ( 30 * charisma of player );
+		if petchance > 500, now petchance is 500;
+	if player is not lonely:
+		if a random chance of petchance in 4000 succeeds and "The Horde" is listed in feats of player:
+			say "[line break]";
+			say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
+			say "[line break]";
+			repeat with z running through tamed pets:
+				now attack bonus is ( ( dexterity of z minus 10 ) divided by 2 ) plus level of z;
+				let the combat bonus be attack bonus minus defense bonus;
+				if hardmode is true and combat bonus is greater than 10:
+					now combat bonus is 10;
+				now roll is a random number from 1 to 20;
+				if roll plus the combat bonus is greater than 8:
+					let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
+					say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
+					decrease monsterhp by dam;
+				otherwise:
+					say "Your [z] misses!";
+		otherwise if a random chance of petchance in 1000 succeeds:
+			now attack bonus is ( ( dexterity of companion of player minus 10 ) divided by 2 ) plus level of companion of player;
 			let the combat bonus be attack bonus minus defense bonus;
 			if hardmode is true and combat bonus is greater than 10:
 				now combat bonus is 10;
 			now roll is a random number from 1 to 20;
 			if roll plus the combat bonus is greater than 8:
-				let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
-				say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
+				let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
+				say "[assault of companion of player] [special-style-2][dam][roman type] damage inflicted!";
 				decrease monsterhp by dam;
 			otherwise:
-				say "Your [z] misses!";
-	otherwise if player is not lonely and a random chance of 1 in 5 succeeds:
-		now attack bonus is ( ( dexterity of companion of player minus 10 ) divided by 2 ) plus level of companion of player;
-		let the combat bonus be attack bonus minus defense bonus;
-		if hardmode is true and combat bonus is greater than 10:
-			now combat bonus is 10;
-		now roll is a random number from 1 to 20;
-		if roll plus the combat bonus is greater than 8:
-			let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
-			say "[assault of companion of player] [special-style-2][dam][roman type] damage inflicted!";
-			decrease monsterhp by dam;
-		otherwise:
-			say "Your [companion of player] misses!";
+				say "Your [companion of player] misses!";
 	say "[line break]";
 	if monsterhp is greater than 0:
 		if before combat is 0:
