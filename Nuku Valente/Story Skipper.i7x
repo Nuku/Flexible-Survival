@@ -612,17 +612,21 @@ Carry out reciting:
 					if hp of Leonard is 15, now hp of Leonard is 16;
 					if hp of Leonard >= 16 and hp of Leonard <= 100:
 						if "Male Preferred" is listed in feats of player, remove "Male Preferred" from feats of player;
+						let foundfel be 0;
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
 							if name entry is "Feline":
 								now monster is y;
+								let foundfel be 1;
 								break;
-						now scale entry is 3;
-						if "Herm Preferred" is listed in feats of player:
-							now sex entry is "Both";
-							now cocks entry is 1;
-							now cock length entry is 9;
-							now cock width entry is 6;
+						if foundfel is 1:
+							now scale entry is 3;
+							now breast size entry is 5;
+							if "Herm Preferred" is listed in feats of player:
+								now sex entry is "Both";
+								now cocks entry is 1;
+								now cock length entry is 9;
+								now cock width entry is 6;
 						if bodyname of player is "Feline", attributeinfect;
 						now PridePark is unresolved;
 			-- 91:	[Solstice]
