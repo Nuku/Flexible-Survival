@@ -1,5 +1,5 @@
 Version 1 of Leonard Events by Stripes begins here.
-[version 1.3 - Another unique event]
+[version 1.4 - 2 new random events]
 
 "Adds a batch of random encounters with Leonard's Pride to Flexible Survival scattered around the city."
 [Note: These will only be accessible after completing Leonard's Quest.]
@@ -28,7 +28,7 @@ Instead of resolving PridePark:
 		if entry 1 of leoparklist is 8, say "[leoparkscene8]";
 		if entry 1 of leoparklist is 9, say "[leoparkscene9]";
 	otherwise:		[randomized situations]
-		let t be a random number between 1 and 5;
+		let t be a random number between 1 and 6;
 		if T is 1:					[treed kitty]
 			say "     As you're travelling along, you hear the plaintive yowl of a feline and come to a stop.  Hearing it again, you head quickly in that direction[one of], drawn to it by your matronly urges[or], somehow sensing it to be a member of your pride[or], fearing it to be one of your precious pride kitties[purely at random][one of].  Following a short path,[or].  Pushing through the undergrowth,[or].  Running through the woods,[or].  Going around some flowering bushes,[or].  Heading down a short incline,[or].  Leaping a fallen tree,[in random order] you reach a small clearing where one of the feline girls has gotten herself caught in a tree, having fled from a creature.  Spotting you, she [one of]cries out 'Matron!' cheerfully, happy to see you here to rescue her[or]yowls again and clutches the tree even tighter[or]scrambles a little higher and yowls for your help[at random].  Having drawn the creature's attention to you, you prepare to [one of]fight[or]defend your smaller pride sister[or]at least buy her enough time to get away[or]protect your pride member[in random order].";
 			fight;
@@ -50,7 +50,7 @@ Instead of resolving PridePark:
 				say "     As you recover from the fight, you look around to see that the feline girl was at least able to get away during the struggle.";
 			otherwise if fightoutcome >= 30:
 				say "     Taking a moment to make sure that the feline girl has safely come down the tree and is ready to get away, you make a break for it in the other direction, keeping your opponent's attention on you long enough for her to escape.";
-		otherwise if T is 2 or T is 3:	[wandering kitty]
+		otherwise if T is 2:			[wandering kitty]
 			say "     As you walk through the park, you run into another of the cute Feline girls running around.  It takes you but a moment to recognize her as [one of]one of Leonard's pride[or]one of your smaller pride sisters[or]a member of your pride[or]a member of the pride[purely at random], [one of]remembering her from the battle[or]recognizing her from the recital[or]having seen her in the den before[or]catching Leonard's scent upon her[purely at random].  You kneel down and open your arms wide for her, welcoming her with a hug and a kiss.  She snuggles up to you and is soon nuzzling at your chest";
 			if player is felinebodied:
 				say " and wrapping her lips around your nipple.  She starts nursing, purring happily as she does while you rumble to her [one of]about what an good and loyal kitty she is[or]about what a pretty kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes].  You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for another session with Leonard.  After she's been fed and her bond with the pride has been renewed, you release her back in the park with a reminder that Leonard would welcome another visit from her soon.";
@@ -62,6 +62,22 @@ Instead of resolving PridePark:
 				felinebodyshift;
 				increase libido of player by 2;
 				decrease humanity of player by 2;
+		otherwise if T is 3:			[wandering kitty 2]
+			say "     Travelling through the park, you come across another of the cute Feline girls running around.  She comes over to you excitedly when she spots you, calling out to her matron.  You recognize her as [one of]one of Leonard's pride[or]one of your smaller pride sisters[or]a member of your pride[or]a member of the pride[purely at random], [one of]remembering her from the battle[or]recognizing her from the recital[or]having seen her in the den before[or]catching Leonard's scent upon her[purely at random].  You kneel down and open your arms wide for her, welcoming her with a hug and a kiss.  She snuggles up to you and is soon nuzzling at your chest";
+			if player is felinebodied:
+				say " and wrapping her lips around your nipple.  She nurses only briefly, moving her head lower to nuzzle between your legs.";
+			otherwise:
+				say ", kneading her paws over your [bodytype of player] until your matronly figure is restored and she can begin nursing from your milk.  She nurses only briefly, moving her head lower to nuzzle between your legs.";
+				felinebodyshift;
+			if cocks of player > 0:
+				say "     Finding your stiffening member, she wraps her warm lips around it and starts sucking on your [cock of player] shaft, working to get you fully hard[if cock length of player > 20].  Your massive cock stuffs her muzzle and throat fully, the small kitty mewling in pleasure around it as she somehow copes with it[otherwise if cock length of player > 12].  Your big cock stuffs her muzzle fully, the small kitty mewling in pleasure around it as she purrs happily[otherwise].  Your stiff cock throbs in her muzzle as she licks and sucks at it hungrily[end if].  You moan and rub her ears, telling her [one of]what a good and loyal kitty she is[or]what a sexy kitty she is[or]how nice that feels[or]to be sure to do this for Loenard soon[in random order].  Her paws knead at your [ball size] while she works your maleness with her muzzle eagerly.  When you finally blow, you shoot your load down her throat, leaving her [if cock width of player > 15]hugely bloated as your ample cum stuffs her small body, leaving her full and purring happily as she curls up for a nap[otherwise if cock width of player > 8]tummy a little plump after you pull out.  She snuggles her loving matron tight, licks her lips and heads on her way[otherwise]licking her lips as she releases your spent shaft.  She snuggles her loving matron tight and heads on her way, pleased to have run into you[end if].";
+			otherwise if cunts of player > 0:
+				say "     Finding her way to your juicy pussy, she presses her muzzle to it and starts licking.  Her raspy tongue plays slowly over your wet folds, lapping up your juices.  You moan and rub her ears, telling her [one of]what a good and loyal kitty she is[or]what a pretty kitty she is[or]how nice that feels[or]to keep licking like a good girl[in random order].  Her paws knead at your thighs, occasionally moving to rub at your clit as she smiles up at you with a wet grin on her muzzle before diving back in.  Her tongue delves into you, lapping until you cum with a rumbling moan of ecstasy.  She snuggles with you, nursing now as you enjoy the afterglow, before giving you a parting kiss and heading off with a girlish giggle.";
+			otherwise:
+				say "     Finding her way to your bare groin, she whimpers softly and sets to licking at it over and over again.  She kneads her paws at your inner thighs and mewls plaintively.  You cuddle her in your arms and let her nurse for a while before she heads off.";
+			infect "Feline";
+			increase libido of player by 2;
+			decrease humanity of player by 2;
 		otherwise if T is 4:			[injured kitty]
 			say "     As you travel through the park, you come across another of the cute Feline girls.  She's been hurt and is nursing an injured [one of]footpaw[or]side[or]head[or]shoulder[or]arm[or]leg[purely at random].  It takes you but a moment to recognize her as [one of]one of Leonard's pride[or]one of your smaller pride sisters[or]a member of your pride[or]a member of the pride[purely at random], [one of]remembering her from the battle[or]recalling her helping with the recital[or]having seen her in the den before[or]catching Leonard's scent upon her[purely at random].  She mewls plaintively as you approach, smiling softly at the sight of her matron coming to her aid.";
 			if medkit is owned or healing booster is owned:
@@ -138,11 +154,44 @@ Instead of resolving PridePark:
 			decrease humanity of player by 3;
 			increase morale of player by 1;
 			if morale of player < 0, increase morale of player by 2;
+		otherwise if T is 6:			[kitty w/small gift/supplies]
+			if a random chance of 1 in 2 succeeds:
+				say "     In your travels through the park, you run into another of the cute feline girls.  Spotting you, she smiles and comes over [one of]quickly[or]excitedly[or]carefully[at random] with some small item in her paws.  Recognizing her as [one of]one of Leonard's pride[or]one of your smaller pride sisters[or]a member of your pride[or]a member of the pride[purely at random], [one of]remembering her from the battle[or]recognizing her from the recital[or]having seen her in the den before[or]catching Leonard's scent upon her[purely at random], you smile as she approaches.  She comes up to you and offers to show you what she's found, [one of]a piece of fine china[or]a bottle of aged [spiritlist][or]an old book[or]a golden trinket[or]a collection of spices[at random] that has been carefully bundled up.";
+				say "     Telling her that you're certain Leonard will be pleased with it, you welcome her into your arms with a hug and a kiss.  She snuggles up to you and is soon nuzzling at your chest";
+			otherwise:
+				say "     In your travels through the park, you run into another of the cute feline girls.  Spotting you, she smiles and comes over [one of]quickly[or]excitedly[at random] with a full bag in her arms.  Recognizing her as [one of]one of Leonard's pride[or]one of your smaller pride sisters[or]a member of your pride[or]a member of the pride[purely at random], [one of]remembering her from the battle[or]recognizing her from the recital[or]having seen her in the den before[or]catching Leonard's scent upon her[purely at random], you smile as she approaches.  She comes up to you, saying she's collected some supplies for [one of]her master[or]Leonard[or]her leonine master[at random], showing you some ";
+				let sup be a random number between 1 and 4;
+				if sup is 1 or sup is 2:
+					say "[one of]assorted cans[or]canned meat[or]mixed fruit[or]assorted food[at random] in the bag.  She gives you some with a smile, but says they'll need the rest back at the den.";
+					increase carried of food by 1;
+					increase score by 5;
+				otherwise if sup is 3:
+					say "bottles of fresh water in the bag.  She gives you a bottle with a smile, but says they'll need the rest back at the den.";
+					increase carried of water bottle by 1;
+					increase score by 5;
+				otherwise:
+					say "cans of soda in the bag.  She gives you a can with a smile, but says they'll need the rest back at the den.";
+					increase carried of soda by 1;
+					increase score by 5;
+				say "     You smile at her and rub her head, giving her ears a scritch, telling her what a good kitty she is to share.  You welcome her into your arms with a hug and a kiss.  She snuggles up to you and is soon nuzzling at your chest";
+			if player is felinebodied:
+				say " and wrapping her lips around your nipple.  She nurses, purring happily as she does while you rumble to her [one of]about what an good and loyal kitty she is[or]about what a resourceful kitty she is[or]how kind she is to have gotten a gift for her master[or]about how much her pride cares for her[as decreasingly likely outcomes].  You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for her upcoming session with Leonard.  After she's been fed and she's too excited to wait any longer, you release her back in the park, sending her hurrying on her way back to her master with her gift.";
+				infect "Feline";
+				increase libido of player by 2;
+				decrease humanity of player by 2;
+			otherwise:
+				say ", kneading her paws over your [bodytype of player] until your matronly figure is restored and she can begin nursing from your milk.  She purrs happily as she does while you rumble to her [one of]about what an good and loyal kitty she is[or]about what a resourceful kitty she is[or]that you and Leonard love her[or]about how much her pride cares for her[as decreasingly likely outcomes].  You pet her lovely, leonine body, patting her bottom and fingering her pussy to get her worked up for her upcoming session with Leonard.  After she's been fed and she's too excited to wait any longer, you release her back in the park, sending her hurrying on her way back to her master with her gift.";
+				felinebodyshift;
+				increase libido of player by 2;
+				decrease humanity of player by 2;
 	if libido of player > 100, now libido of player is 100;
 
 
 to say randomgame:
 	say "[one of]rock-paper-scissors[or]choosies[or]eeny-meeny-miny-moe[or]roshambo[as decreasingly likely outcomes]";
+
+to say spiritlist:
+	say "[one of]bourbon[or]rum[or]wine[at random]";
 
 
 Part 1 - Special Park Pride 1 - Leonard out for a Walk
