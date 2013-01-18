@@ -1,5 +1,5 @@
 Version 3 of Tiger Cop For FS by Stripes begins here.
-[Version 3.1 - Hard Mode adjustment]
+[Version 3.2 - New TC victory scenes]
 
 Section 1 - Key Hunt Quest
 
@@ -507,8 +507,15 @@ to say losetotigercop:
 			say "     'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your pussy, making you shiver.  He teases you with it briefly, getting you wet despite yourself, before sinking it into you.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching pussy.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
 		otherwise:
 			say "     'Well, I[apostrophe]ll teach you a lesson you won[apostrophe]t soon forget,' he says as he slides his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver.  He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication.  He pounds you hard and fast with it, making your body shudder until you finally climax.  He sprays his cum across your ass, and then removes the weapon from your aching hole.  He picks you up roughly and gives you a hard shove.  'Get your dumb ass out of here.  And if I catch you again, you[apostrophe]ll get the real thing.'";
-		infect "Tigress Hooker";
 	otherwise:
+		if a random chance of 1 in 3 succeeds and ( cunts of player > 0 or "Less Anal" is not listed in feats of player ):
+			say "     'It looks like you need another lesson in why you shouldn't mess with me,' he says as he grabs you roughly and shoves you face down onto a mound of rubble.  'Punks like you are nothin['] but trouble.  Should've gotten a good, hard spankin['] from dad to beat some respect into you.'  With you pinned down, the tiger holds you down wiht one paw and bares your ass with the other.";
+			if cunts of player > 0:
+				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain.  After another stinging slap, he runs his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of his nightstick against your pussy, making you shiver.  He works it across your folds, sliding it back and forth, getting you wet despite yourself.  Shifting its position, he thrusts it into your cunt, making you groan at the sudden, hard intrusion.  The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder until you finally cum.  Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching pussy.";
+				say "     Wiping the slick rod across your ass, he gives you another hard swat, making you cry out.  'Get your dumb ass out of here.  I might not go so easy on you next time,' he growls.";
+			otherwise:
+				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain.  After another stinging slap, he runs his nightstick across your cheek before moving it back.  As he grips you tightly, you can feel the cool touch of his nightstick against your asshole, making you shiver.  He rubs it against your pucker and you try your best to relax before he drives it into you with only a little spit as lube.  You groan at the sudden, hard intrusion as it thrusts into you and starts sliding it back and forth[if cocks of player > 0 and player is submissive], getting you hard despite yourself[end if].  The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder[if cocks of player > 0 and player is submissive] until you finally cum[end if].  Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching asshole.";
+				say "     Wiping the warm rod across your ass, he gives you another hard swat, making you cry out.  'Get your dumb ass out of here.  I might not go so easy on you next time,' he growls.";
 		if cunts of player is greater than 0:
 			[puts Tigress Hooker as lead monster in case of impregnation]
 			repeat with y running from 1 to number of filled rows in table of random critters:
@@ -517,16 +524,32 @@ to say losetotigercop:
 					now monster is y;
 					break;
 			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down onto a nearby car.  Pressing your face to the dirty hood, he growls in your ear.  'I warned you what would happen if I caught you,' he rumbles.  With a strong paw firmly at your neck, the other bares your bottom and moves you into position.";
-			say "     You hear him unzip, then there[apostrophe]s the feel of a large, hard cock against your bottom.  He grinds against you a few times, getting fully hard before sinking it firmly into you.  Your body shudders from the sudden intrusion, but he pays your discomfort no mind, only pounding you hard and fast.";
+			say "     You hear him unzip, then there[apostrophe]s the feel of a large, hard cock against your bottom.  He grinds against you a few times, getting fully hard before sinking it firmly into you.  Your [bodydesc of player] body shudders from the sudden intrusion, but he pays your discomfort no mind, only pounding you hard and fast.";
 			say "     You start to moan and grind against him as the powerful male fucks you, losing yourself in the sex.  'That[apostrophe]s a good slut,' he rumbles.  'Take it, you whore.'  Your pussy squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your pussy with his sperm.[impregchance]";
 			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
 		otherwise:
-			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down to your knees.  He wraps his strong paw around your jaw, holding you there while he growls down at you.  'I warned you what would happen if I caught you,' he rumbles.";
-			say "     As you watch, his other paw opens his uniform pants and pull out his large, hard cock.  His shaft is a full foot long and human-like in form, though a deeper red in colour.  Holding your head firmly, he strokes his cock against your face until its fully hard and leaking pre onto you.";
-			say "     Soon you are licking at that throbbing shaft, then taking it into your eager mouth.  You lick and suck on it, moaning around the tiger[apostrophe]s large cock.  With a firm hold on you, he fucks your face hard and fast, pushing his throbbing cock down your throat again and again.";
-			say "     You start to moan and fondle his ballsac as the powerful male fucks you, losing yourself in the sex.  'That[apostrophe]s a good slut,' he rumbles.  'Take it, you whore.'  Your lips slide over his thick, foot-long member until he finally unleashes his hot seed into your mouth and flooding your throat with his sperm.";
-			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
-		infect "Tigress Hooker";
+			let mchance be 4;
+			if "Submissive" is listed in feats of player, increase mchance by 2;
+			if "More Anal" is listed in feats of player, increase mchance by 2;
+			if "MPreg" is listed in feats of player, increase mchance by 2;
+			if "Less Anal" is listed in feats of player, now mchance is 0;
+			if a random chance of mchance in 12 succeeds:
+				say "     The victorious tiger grabs you roughly and tosses to to the ground at his feet.  He puts a heavy paw at your shoulder, pushing you to the ground.  'I warned you what would happen if I caught you,' he rumbles.  Above you, you can hear the sound of him unzipping his pants.";
+				say "     Reaching down, he grabs you with his paws and pushes you onto all fours.  One paw then holds you firmly by the neck while the other bares your bottom to him";
+				if tailname of player is "Tigress Hooker" or tailname of player is "Tiger" or tailname of player is "tigertaur":
+					say ".  He grabs you by your striped tail and raises your rear up.  'Here you've got this sexy tail and no juicy pussy to go with it.  It just ain't right,' he grumbles, giving your ass a hard swat before getting his cock lined up with your rear.";
+				otherwise:
+					say ".  He gives your rear a firm swat and lines up his cock with your rear.";
+				say "     Gripping your cheeks with both paws, claws out and poking into your tender flesh, he drives his feline cock into your [bodydesc of player] body, making you yowl for him.  The tiger cop pays your discomfort no mind, only pounding away at you hard and fast.  His throbbing member pulses and leaks precum into your abused passage.";
+				say "     As he fucks your ass, you start to moan and grind against him as the powerful male fucks you, losing yourself in the sex.  'That[apostrophe]s a good slut,' he rumbles.  'Take it, you man whore.'  Your anus squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your inner walls with his sperm.[mimpregchance]";
+				say "     Finished with you, he pulls his cock from you roughly, wipes it across your rear and shoves you on your way.";
+			otherwise:
+				say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down to your knees.  He wraps his strong paw around your jaw, holding you there while he growls down at you.  'I warned you what would happen if I caught you,' he rumbles.";
+				say "     As you watch, his other paw opens his uniform pants and pull out his large, hard cock.  His shaft is a full foot long and human-like in form, though a deeper red in colour.  Holding your head firmly, he strokes his cock against your face until its fully hard and leaking pre onto you.";
+				say "     Soon you are licking at that throbbing shaft, then taking it into your eager mouth.  You lick and suck on it, moaning around the tiger[apostrophe]s large cock.  With a firm hold on you, he fucks your face hard and fast, pushing his throbbing cock down your throat again and again.";
+				say "     You start to moan and fondle his ballsac as the powerful male fucks you, losing yourself in the sex.  'That[apostrophe]s a good slut,' he rumbles.  'Take it, you whore.'  Your lips slide over his thick, foot-long member until he finally unleashes his hot seed into your mouth and flooding your throat with his sperm.";
+				say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
+	infect "Tigress Hooker";
 
 
 To say beattigercop:
