@@ -78,7 +78,7 @@ to say cfgdesc:
 	otherwise if a random chance of 1 in 2 succeeds:
 		now cfgmode is 1;
 	otherwise:
-		now cfgmode is 2;	
+		now cfgmode is 2;
 	if cfgmode is 1:
 		say "     Before you is one of the most unusual forms the infection has taken, creating a partially mechanical fox-creature.  Looking over this clockwork fox girl, her body is covered in gears sticking through brass wire fur.  She whirrs and clicks as she moves in a strangely mechanical manner, occasionally twitching as something internal catches before releasing a moment later.  Her head is drawn forward into a muzzle and the pointed brass ears at the top give it a very foxy look.  Her body is thin and shapely, not dissimilar to the other vulpines you've seen in the city, but having several plated sections and protrusions of gears.  Her chestplate has two small breasts formed onto it.  Her arms and legs are thin and vulpine, leading down to small clawed paws.  She has a long plumed tail that seems to be made from extremely soft wire that resembles a fox tail, moving with the faint click of cogs and gears within.  A private peek reveals that she has a thick-lipped cunt nestled between her legs, made of shimmering, coppery flesh, but dripping a clear lubricant that glistens like oil as the female mechanism moves forward to attack you.";
 		now sex entry is "Male";
