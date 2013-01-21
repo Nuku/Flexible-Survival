@@ -5426,6 +5426,8 @@ Include Mall Rat For Fs by Stripes.
 Include Latex Mistress For Fs by Stripes.
 Include Math Teacher For Fs by Stripes.
 Include Dark Elf for FS by Stripes.
+Include Automaton for FS by Stripes.
+Include Anime Babe for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.
