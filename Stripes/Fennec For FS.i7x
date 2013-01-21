@@ -107,16 +107,6 @@ to say fennecvicsex2:
 		say "     Beneath him, his smaller cock pulses and drips with pre while you fuck his ass.  When he cums, splattering his seed across the ground, his tailhole clamps down around you with each shot.  A few of this squeezes are enough to send you over the edge and empty your load into the fox's ass[if cock width of player > 40].  Your [ball size] orbs drain completely into the little fox, leaving him so bloated with cum he cannot move.  Despite this, he seems very pleased with the outcome, only able to release a wet, gurgling yip that overflows with some of your semen[otherwise if cock width of player > 20].  Your hefty load is pumped into him, leaving him plump and bloated with your cum.  He seems quite pleased at this and releases a happy yip as he rubs his rounded tummy[otherwise].  You pound into him, releasing shot after shot until your balls are drained[end if].  Finished, you withdraw and give the fox's ears a scritch, leaving him to lie there and recover.";
 
 
-[
-	if libido of player > 25:
-		say "     Your final blow sends the fennec tumbling back.  He lands on his ass with a pained yip.  Feeling [if libido of player > 70]very [otherwise if libido of player > 40]quite [end if]aroused from the excitement, you consider using him for a little stress relief";
-		if cocks of player > 0:
-			say ".  Shall you get him to suck you off, mount the fox or 
-		...
-	otherwise:
-		say "     Your final blow sends the fennec tumbling back.  He lands on his ass with a pained yip.  As he struggles to get back up, you give him a shove with your foot, sending him scrambling to get away.";
-]
-
 to say fennecattack:
 	say "[one of]punches you in the face with a sly grin[or]kicks you in the leg[or]claws at your sides[or]bites your forearm[at random]";
 

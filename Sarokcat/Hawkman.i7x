@@ -4,6 +4,9 @@ Hawkman by Sarokcat begins here.
 "Adds a Hawkman to Flexible Survivals Wandering Monsters table"
 [Description text for this Extension.]
 
+nohawkmansex is a number that varies.
+hawkmanbeaten is a number that varies.
+
 Section 1 - Monster Responses
 
 when play begins:
@@ -13,16 +16,29 @@ when play begins:
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ] 
 
 to say Hawkman attack:
+	now nohawkmansex is 0;
 	if cunts of player is greater than 0:
 		say "The hawkman's beak spreads open in a wide grin as you finally stop fighting him, he wastes no time in leaping forward and knocking your unresisting form to the ground, chuckling happily as he rubs his surprisingly soft feathers up against your body eagerly. You find yourself moaning softly as his avian form pins you to the ground, his  taloned feet gripping your legs and stroking them lightly as he spreads them wide open for him. His wings open wide and enclose the two of you in a small tent smelling strongly of his masculine presence, and your body begins to burn with need even as he positions his narrow pink cock in front of your already damp female opening. You feel strangely comfortable and protected as he buries himself in your waiting passage, and you moan happily with pleasure as he nuzzles your neck with his hooked raptor beak. The feel of his avian organ in your body is absolutely wonderful, as it seems to reach deep inside you and stroke you in all the right places, and the almost hypnotic building rhythm of his short thrusts into your body makes your mind fill with pleasure as you bury your fingers in his lovely feathered sides. It isn[apostrophe]t long before you are gasp and shuddering in orgasm underneath him as he fills your body with his wonderful avian seed, your body eagerly responding to his seeding with a rush of amazing pleasure even as he cries out his triumph to the empty streets around you. You find yourself smiling happily as he pulls himself off of you, the hawkman rubbing his beak over your well used body a few times before taking to the air again, and as you begin to try to gather your wits about you, you find yourself almost idly wondering as you rub your belly whether or not you will see the handsome bird again anytime soon....[impregchance]";
 		infect "Hawkman";
 	otherwise:
-		say "Knocking you to the ground, the hawkman screams his triumph as he stands over you, his beak cocked to the side as he seems to examine you minutely, before making a noise of avian disgust. You sit up as the birdman flaps his wings and takes to the sky again, only to stare in surprise as he begins to stroke himself off above you, the hunt and the combat obviously having only increased the strange creatures arousal. Within a minute he shudders, his cock twitching as he covers your beaten form with his sticky white seed, the seed seeming to tingle even as it sinks into your body, and the watching hawkman lets out a sound of satisfaction before flying off into the city in search of more prey, leaving you lying there trying to deal with your new changes.";
+		say "Knocking you to the ground, the hawkman screams his triumph as he stands over you, his beak cocked to the side as he seems to examine you minutely, before making a noise of avian disgust. You sit up as the birdman flaps his wings and takes to the sky again, only to stare in surprise as he begins to stroke himself off above you, the hunt and the combat obviously having only increased the strange creature's arousal. Within a minute, he shudders, his cock twitching as he covers your beaten form with his sticky white seed.  The seed seems to tingle even as it sinks into your body, and the watching hawkman lets out a sound of satisfaction before flying off into the city in search of more prey, leaving you lying there trying to deal with your new changes.";
 		infect "Hawkman";
 		
 
 To say Hawkman loss:
-	say "With one last vicious blow, you knock the hawkman back, the creature seemingly surprisingly fragile for all its striking power, and as it hops back and takes to the sky again to flee, you wonder if its bones are just as delicate as most birds... Sighing you turn to continue on your way, though you resolve to keep a better eye on the sky above just in case more of those surprisingly sexy hawkmen are in the area.";
+	if hawkmanbeaten < 3 or cocks of player is 0:
+		say "     With one last vicious blow, you knock the hawkman back, the creature seemingly surprisingly fragile for all its striking power, and as it hops back and takes to the sky again to flee, you wonder if its bones are just as delicate as most birds... Sighing you turn to continue on your way, though you resolve to keep a better eye on the sky above just in case more of those surprisingly sexy hawkmen are in the area.";
+		increase hawkmanbeaten by 1;
+	otherwise if nohawkmansex > 2:
+		say "     As you've done with the others of his kind recently, you pull the bird back to the ground and pull some of his tailfeathers out as a painful reminder not to mess with you again.";
+	otherwise:
+		say "     With a final, vicious blow, you knock the hawkman back.  Prepared for the avian's escape attempt, you reach out and grab it by the ankle as it starts to flap its wings.  Too weak, you pull it to the down, slamming it to the ground, leaving it vulnerable to you.  Shall you take advantage of the bird (Y) or let it go (N) now that it knows you're stronger than it?";
+		if the player consents:
+			say "     Wanting some proper payback, you pin the weakened bird beneath you and grind your cock beneath its tail feathers.  It squawks indignantly, but a firm hand on around its beak and thrust forward has you mounting the bird and fucking its tight ass[if cock length of player > 36].  You stuff as much as you can in the hawkman's ass, filling his slender body to capacity with your throbbing meat[otherwise if cock length of player > 18].  You stuff your [cock size desc of player] cock entirely into the hawkman's ass, filling him with your throbbing meat[otherwise].  You stuff your [cock size desc of player] cock into the hawkman's ass, working your full length into him[end if].  You pound away at him, loving the feel of his tight ass around your pulsing shaft as you fuck him until you cum[if cock width of player > 40].  Your massive load leaves him bloated and full like a stuffed holiday bird, unable to move he's so full[otherwise if cock width of player > 20].  Your heavy load leaves him stuffed and leaking cum as he staggers away[otherwise].  Your creamy load is pumped into him, leaving his rump and tailfeathers sticky with your seed once you're done[end if].";
+		otherwise:
+			say "     To reinforce your victory, you pull a few feathers from the bird's tail, making him squawk in pain.";
+			increase nohawkmansex by 1;
+
 
 Section 2 - Monster Insertion
 
