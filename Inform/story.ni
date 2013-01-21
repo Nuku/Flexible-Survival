@@ -898,18 +898,21 @@ title	subtable	description	toggle
 
 
 To say gryphon fuck:
-	if cocks of player is greater than 0:
+	if cunts of player > 0 and cocks of player > 0 and cunt length of player >= 12:
+		say "The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cock size desc of player] [cock of player] shaft before moving on to your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [if breast size of player > 0][breast size desc of player][otherwise][bodytype of player] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Her taloned hands grip your throbbing maleness and stroke it as she thrusts into you.  Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.[impregchance] You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.";
+	otherwise if cocks of player is greater than 0:
 		if cock length of player is less than 7:
 			say "[one of]The gryphon shoves you to the ground roughly and seems disappointed about something. She sniffs at you once more before snorting loudly. With a disdainful kick of a foot, she leaves some dust on you, then departs.[or]The gryphon pushes you back with one hand while the other grabs at you, removing any clothing you may have. She speaks haltingly, as if she is not used to speaking anymore, 'You are too small, but maybe, later. For now, a gift.' She kneels before you and takes your [cock size desc of player] [cock of player] member into her beak, lapping over it with soft, wet, tongue. Her firm paw hands hold to your ass as she begins to bob slowly against you, making your flesh tingle with delight as she works at you expertly. All too soon you are spilling seed across that tongue, grunting with your own satisfaction. She rises, licking her beak. With a wink, she saunters off.[at random]";
 		otherwise:
 			say "Eyeing something she wants, the gryphon pushes you back a little before turning around and raising her tail high into the air, exposing her pouting lips to your view. Unable to resist, you move up and seize her well muscled hips and are soon pushing against her. With every sink of your [cock size desc of player] [cock of player] meat into her, she gives a pleasured,  keening sound. Her cunt squeezes around your hefty member, encouraging it until you blow your load deep inside of her dripping snatch. Your bodies tremble against one another as passions ebb and she lets you slide off to the ground. Before leaving, she turns to gently lick over your face, then cleans your [cock size desc of player] tool dutifully.";
+	otherwise if cunts of player is greater than 0:
+		if cunt length of player is less than 12:
+			say "The gryphon nudges you over onto your belly with suddenly gentle hands, holding you in place as she scrambles on top of you, pressing her warm furry bulk against your [skin of player] back. You feel a shaft that's far too large for your [cunt size desc of player] passageway. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the huge member as it batters against your cervix. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, directly injected into your womb with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with potential life.[impregchance] Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.";
+			increase cunt length of player by 1;
+		otherwise:
+			say "The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [skin of player] [breast size desc of player] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.[impregchance] You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.";
 	otherwise:
-		if cunts of player is greater than 0:
-			if cunt length of player is less than 12:
-				say "The gryphon nudges you over onto your belly with suddenly gentle hands, holding you in place as she scrambles on top of you, pressing her warm furry bulk against your [skin of player] back. You feel a shaft that's far too large for your [cunt size desc of player] passageway. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the huge member as it batters against your cervix. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, directly injected into your womb with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with potential life.[impregchance] Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.";
-				increase cunt length of player by 1;
-			otherwise:
-				say "The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cunt size desc of player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [skin of player] [breast size desc of player] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload.[impregchance] You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.";
+		say "The gryphon is surprised to find you rather lacking and nudges you over onto your belly with suddenly gentle hands.  She holds you in place as she scrambles on top of you, pressing her warm furry bulk against your back.  You feel a shaft slide against your rear, dribbling pre across your back entrance.  Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake.  You can feel yourself being stretched painfully by the large member as it forces its way into your bowels.  The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, pumping into your rectum with powerful cannon blasts.  You can feel the heat washing off her immense balls as she makes your belly swell with her virile seed.[mimpregchance] Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.";
 		
 To say gootemp:
 	if a random number from 1 to 100 is less than the libido of the player:
@@ -976,41 +979,38 @@ To say felitaur tempt:
 		say "The cat gives a soft huff, almost a hiss, then flees on quick feline paws, her shapely rump the last thing seen.";
 
 to say latexfoxrape:
-	if libido of player is 0:
-		say "The latex fox gets an odd expression before a soft hissing is heard. The poor creature slowly sinks to the ground as the air escapes it, softly whining until it is an inanimate pile of latex.";
-		stop the action;
+	let c be 0;
 	if a random number from 1 to 100 is greater than libido of player:
 		let c be 1;
 	otherwise:
 		say "The latex fox gets an odd expression before a soft hissing is heard. The poor creature slowly sinks to the ground as the air escapes it, softly whining until it is an inanimate pile of latex.";
-		stop the action;
-	if cunts of player is greater than 0 and a random chance of 1 in 2 succeeds:
-		say "[latexfoxrapee]";
-		stop the action;
-	if cocks of player is 0 and cunts of player is greater than 0:
-		say "[latexfoxrapee]";
-		stop the action;
-	say "The Latex Fox slumps to the ground defeated. Instead of popping like your used to, the fox rolls onto its stomach, presents it ass to you and lets out a plaintive whimper. Needing no more invitation you dive right in.";
-	say "Positioning your [cock size desc of player] cock at the puckered hole, you are amazed as you realize the little fox is leaking what appears to be a small dribble of lubricant from its asshole.";
-	if cock length of player is less than 6:
-		say "Your diminutive [cock of player] cock slips right into the foxes waiting asshole. With little effort you start pistoning away, what you lack in size you are more than making up for in force and speed.";
-	otherwise if cock length of player is less than 10:
-		say "Your [cock of player] cock slides into the fox with little effort, the tight well lubed hole seems to suck you in even deeper as the Fox whimpers in pleasure.";
-	otherwise if cock length of player is less than 15:
-		say "You place the head of your ample [cock of player] cock at the Foxes dribbling asshole slowly increasing the pressure. With a small yelp from the Fox you are in, you get the feeling that this little guy could stretch to accommodate a much larger member than you are currently packing.";
-	otherwise:
-		say "With a sadistic grin you point your gargantuan [cock of player] missile at its target. The Foxes eyes go wide when it realizes how large you are and starts trying to crawl away. Having none of that, you grab the Fox by its ankles and start pulling him towards you. The Foxes legs stretch elastically as you pull, his poor little asshole straining against your rod. Finally the Foxes rubbery sphincter relaxes enough to let you in, and like a slingshot the Fox is instantly impaled on your gigantic penis, obscenely stretching the poor creature all the way to his head. You realize the Fox is just fine as he lets out a euphoric yelp and his eyes glaze over lost in the pleasurable fullness.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	say "As you start sliding your [cock size desc of player] shaft in and out you notice the Fox's ass seems to be adjusting to you, stretching and tightening in just the right places to fit your [cock of player] penis perfectly. As this is happening the Fox switches from whimpers and yelps to long low moans of pleasure as you press your [bodydesc of player] body over his and pound away, his red knotted shaft starts growing and leaking rubbery precum.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	say "Nearing orgasm you pick up the pace, your little red toy drooling in bliss. Fucking the Fox like a wild man, you let out a roar as torrents of cum pour forth from your tool, lewdly distending the belly of your victim. Not to be left out, the Fox starts shooting gobs of thick rubbery cum onto the ground, pooling around him. With some effort you pull your cock out of the little Fox with an audible pop. The seed you just planted come spilling out of the abused hole adding the the already large pool of cum the Fox is laying in.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	say "With your lust sated you put on your clothes. Walking away you smile as you see the little Fox lustily wallows in the pool of cum, occasionally dipping its head to the pool and taking loud slurpy gulps of semen, coo-ing with satisfaction.";
-	decrease libido of player by 30;
-	if libido of player is less than 0, now libido of player is 0;
+	if c > 0:
+		if ( cunts of player is greater than 0 and cocks of player is 0 ) or ( cunts of player > 0 and cocks of player > 0 and a random chance of 1 in 2 succeeds ):
+			say "[latexfoxrapee]";
+		otherwise if "Less Anal" is listed in feats of player:
+			say "Having beaten the latex fox, you pop its rubbery hide, causing it to deflate into an inanimate pile of latex.";
+		otherwise:
+			say "The Latex Fox slumps to the ground defeated. Instead of popping like you're used to, the fox rolls onto its stomach, presents its ass to you and lets out a plaintive whimper. Needing no more invitation you dive right in.";
+			say "Positioning your [cock size desc of player] cock at the puckered hole, you are amazed as you realize the little fox is leaking what appears to be a small dribble of lubricant from its asshole";
+			if cock length of player is less than 6:
+				say ". Your diminutive [cock of player] cock slips right into the fox's waiting asshole. With little effort you start pistoning away, what you lack in size you are more than making up for in force and speed.";
+			otherwise if cock length of player is less than 10:
+				say ". Your [cock of player] cock slides into the fox with little effort, the tight well lubed hole seems to suck you in even deeper as the Fox whimpers in pleasure.";
+			otherwise if cock length of player is less than 15:
+				say "Y. ou place the head of your ample [cock of player] cock at the Foxes dribbling asshole slowly increasing the pressure. With a small yelp from the Fox you are in, you get the feeling that this little guy could stretch to accommodate a much larger member than you are currently packing.";
+			otherwise:
+				say ". With a sadistic grin you point your gargantuan [cock of player] missile at its target. The fox's eyes go wide when it realizes how large you are and starts trying to crawl away. Having none of that, you grab the fox by its ankles and start pulling him towards you. The fox's legs stretch elastically as you pull, his poor little asshole straining against your rod. Finally the fox's rubbery sphincter relaxes enough to let you in, and like a slingshot the fox is instantly impaled on your gigantic penis, obscenely stretching the poor creature all the way to his head. You realize the fox is just fine as he lets out a euphoric yelp and his eyes glaze over lost in the pleasurable fullness.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "As you start sliding your [cock size desc of player] shaft in and out you notice the fox's ass seems to be adjusting to you, stretching and tightening in just the right places to fit your [cock of player] penis perfectly. As this is happening the fox switches from whimpers and yelps to long low moans of pleasure as you press your [bodydesc of player] body over his and pound away, his red knotted shaft starts growing and leaking rubbery precum.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "Nearing orgasm you pick up the pace, your little red toy drooling in bliss. Fucking the fox like a wild man, you let out a roar as torrents of cum pour forth from your tool, lewdly distending the belly of your victim. Not to be left out, the fox starts shooting gobs of thick rubbery cum onto the ground, pooling around him. With some effort you pull your cock out of the little fox with an audible pop[if cock width of player > 40].  Your massive load bloats the rubbery fox, swelling him up like a cum-filled balloon[otherwise if cock width of player > 20].  Your large load causes a noticeable bulge in the rubbery fox, making his tummy look like he swallowed a cum-filled balloon[end if]. The seed you just planted come spilling out of the abused hole adding the the already large pool of cum the fox is laying in.";
+			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+			say "With your lust sated you put on your clothes. Walking away you smile as you see the little fox lustily wallows in the pool of cum, occasionally dipping its head to the pool and taking loud slurpy gulps of semen, coo-ing with satisfaction.";
+			decrease libido of player by 30;
+			if libido of player is less than 0, now libido of player is 0;
 
 
 to say latexfoxrapee:
