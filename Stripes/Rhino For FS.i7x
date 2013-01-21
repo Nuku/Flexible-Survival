@@ -86,7 +86,7 @@ name	desc	weight	object
 
 rhino cum is a grab object. It is a part of the player. rhino cum is infectious. The strain of rhino cum is "Rhino".
 
-The usedesc of Rhino cum is "[drinkrhinocum]";
+The usedesc of rhino cum is "[drinkrhinocum]";
 
 to say drinkrhinocum:
 	say "     Following the strange urge you have, you slam back the bottle of rhino cum you found.  It has a strong taste to it, but you find it very exciting despite its salty flavour";
