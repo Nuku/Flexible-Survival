@@ -1,5 +1,5 @@
 Version 8 of Parasitic Plant For FS by xeylef begins here.
-[Version 8.1 - Alternate player loss scene added]
+[Version 8.2 - Anime Babe vulnerability]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Parasitic Plant creature to Flexible Survivals Wandering Monsters table, With multiple vaginas!"
 [Description text for this Extension.]
@@ -93,6 +93,10 @@ to say plantorseed:
 				say "A pain from your womb suddenly forces you to the ground. It almost feels like you are giving birth but whatever it is feels more like a long cock pushing at the inside of your pussy! Looking down, you see a large vine-like root slide out of your pussy, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you to move around some, but other vines are emerging from the soil. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
 			otherwise:	[cunt no, seed]
 				say "A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some, but other vines are emerging from the soil. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
+	if bodyname of player is "Anime Babe":
+		say "Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the plant's vines.  You moan and squeal in barely suppressed pleasure as those vines squirm inside you, quickly draining your resistance.";
+		now hp of player is hp of player / 2;
+		now libido of player is ( 100 + libido of player + libido of player ) / 3;
 
 to say submitcheck:
 	now didsubmit is 1;
