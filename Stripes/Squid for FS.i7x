@@ -1,5 +1,5 @@
 Version 2 of Squid for FS by Stripes begins here.
-[Version 2 - Sex update written by Blue Bishop w/assistance and coding by Stripes]
+[Version 2.1 - Anime Babe vulnerability]
 
 [Adaptation of Squid Girl for Flexible Survival by Stripes]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
@@ -55,6 +55,11 @@ to say squiddesc:
 		say "     Rising from the waters is a female squid creature.  Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh.  Her head is almost human, except for having an elongated crown and large, dark eyes.  The squid girl's chest is a slightly lighter colour than the rest of her body and has a pair of small, flat breasts.  Her arms are long tentacles lined with rows of suckers and ending in pad-like hands.  Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around.  Her ass is small and compact, barely disturbing the silhouette of her body.  Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
 	otherwise:
 		say "     You are suddenly accosted by what looks to be a strange squid-girl.  Sleek and smooth in form, her streamlined build gives an almost fey appearance.  Seemingly gliding towards you, she exposes her glistening yellow flesh.  Head human-like, it is exaggerated by an elongated crown and large, dark eyes.  Further informing you of her lithe body, the creatures' chest is a slightly paler facet, adorned with a pair of small, flat breasts.  Her arms long tentacle-like appendages, they are lined with rows of suckers and ending in pad-like hands.  Pretty much everything below the waist is obscured by a writhing mass of tentacles, twisting and rolling as she moves to attack you, strangely determined in spite of her seemingly frail appearance.";
+	if bodyname of player is "Anime Babe":
+		say "     Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the squid's swaying tentacles.  You moan and squeal in barely suppressed pleasure as those tentacles squirm around you, quickly draining your resistance.";
+		now hp of player is hp of player / 2;
+		now libido of player is ( 100 + libido of player + libido of player ) / 3;
+
 
 Section 2 - Monster Insertion
 

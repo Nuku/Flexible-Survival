@@ -1,5 +1,5 @@
 Version 2 of Bouncy Castle by Stripes begins here.
-[Version 2.0B - Extended castle w/more sexy traps]
+[Version 2.1 - Anime Babe vulnerability]
 "Save the vixen 'princess' from the 'castle'."
 
 Section 1 - Starting Event
@@ -291,10 +291,17 @@ to say bctoyroom:
 	say "     This side room has the same colour scheme as the adjoining entrance room with a green floor, blue walls and red ceiling.  In the corners there, are curved yellow sections to symbolize columns.  The room is quite cluttered with beach toys and pool toys scattered all around the room and even clumped into several piles.  There's a bit of everything in here, with pool noodles and paddle boards all over the place, plastic pails and buckets of all colours and beach balls everythere.  It looks like the dolphin girls have been storing any beach toys they've found in here.";
 	if lastoctofight - turns >= 4:
 		if lastoctofight is 255:
-			say "     As you're looking around, some of the junk scattered here starts to shift and move.  Thinking at first it only the result of your weight shifting the floor, you try to tread more carefully.  But when the yellow tentacles start to appear from beneath the mess, you find yourself surrounded.  One large pile shifts and you see a grinning inflatable with a vapid expression of joy on its smooth, round face.  The inflatable octopus is sunshine yellow with amber along the underside of the inflated tentacles and on a few spots atop its head.  It shambles towards you as its curled tentacles try to wrap around you.";
+			say "     As you're looking around, some of the junk scattered here starts to shift and move.  Thinking at first it only the result of your weight shifting the floor, you try to tread more carefully.  But when the yellow tentacles start to appear from beneath the mess, you find yourself surrounded.  One large pile shifts and you see a grinning inflatable with a vapid expression of joy on its smooth, round face.  The inflatable octopus is sunshine yellow with amber along the underside of the inflated tentacles and on a few spots atop its head.  It shambles towards you as its curled tentacles try to wrap around you";
+			if bodyname of player is "Anime Babe":
+				say ".  Your anime babe body quivers at the knees at the sight of those tentacles, your body no longer obeying your minds commands to resist";
+			say ".";
 		otherwise:
-			say "     As you try to move around the room, the yellow octopus rouses itself and makes another grab at you with its sunshine yellow tentacles.  It grins at you with the same, unchanging expression of giggling happiness.";
+			say "     As you try to move around the room, the yellow octopus rouses itself and makes another grab at you with its sunshine yellow tentacles.  It grins at you with the same, unchanging expression of giggling happiness";
+			if bodyname of player is "Anime Babe":
+				say ".  Your anime babe body quivers at the knees at the sight of those tentacles, your body no longer obeying your minds commands to resist";
+			say ".";
 		let bonus be ( strength of player - 10 ) / 2;
+		if bodyname of player is "Anime Babe", decrease bonus by 5;
 		let dice be a random number from 1 to 20;
 		say "     You roll 1d20([dice])+[bonus]: [dice + bonus] vs 17: ";
 		if bonus + dice is greater than 16:
