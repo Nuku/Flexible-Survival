@@ -5429,6 +5429,7 @@ Include Dark Elf for FS by Stripes.
 Include Automaton for FS by Stripes.
 Include Anime Babe for FS by Stripes.
 Include Amazonian for FS by Stripes.
+Include Quilled Tousky for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.
