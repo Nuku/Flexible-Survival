@@ -2255,6 +2255,8 @@ To process (X - a grab object):
 		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
 		if "Expert Medic" is listed in the feats of the player:
 			now healed is ( healed times 125 ) divided by 100;
+		otherwise if carried of First Aid Manual > 0:
+			increase healed by 2;
 		if "Rapid Healing" is listed in the feats of the player:
 			now healed is ( healed times 110 ) divided by 100;
 		if "Regeneration" is listed in the feats of the player:
@@ -2279,6 +2281,8 @@ To process (X - a grab object):
 		let healed be 20;
 		if "Expert Medic" is listed in the feats of the player:
 			now healed is 25;
+		otherwise if carried of First Aid Manual > 0:
+			increase healed by 2;
 		if "Rapid Healing" is listed in the feats of the player:
 			increase healed by 2;
 		if "Regeneration" is listed in the feats of the player:
@@ -3744,6 +3748,7 @@ This is the turnpass rule:
 	if the thirst of player is less than 0, now the thirst of player is 0;
 	if the hp of the player is less than the maxhp of the player:
 		increase the hp of the player by the stamina of the player divided by 2;
+		if carried of First Aid Manual > 0, increase hp of player by 1;
 	if "Regeneration" is listed in feats of player:
 		increase the hp of the player by (level of player divided by 3);
 	if "Rapid Healing" is listed in feats of player:
