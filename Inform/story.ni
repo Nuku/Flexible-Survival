@@ -5149,6 +5149,12 @@ Carry out milking:
 		repeat with T running from one to Z:
 			increase carried of margay milk by 1;
 		now lastmilking is turns;
+	otherwise if bodyname of player is "Xeno":
+		say "Bringing your clawed hands to your [if player is xenoskinned]black, [end if]green-veined breasts, you pinch and squeeze your nipples, drawing out green, acidic milk that sizzles where it falls.  You manage to contain some in a jar that it doesn't seem to be able to eat through right away";
+		let z be the square root of ( breasts of player * breast size of player );
+		let z be z / 2;
+		increase carried of acid milk by z;
+		now lastmilking is turns;
 	otherwise:
 		say "Your milk wouldn't be that interesting.";
 
@@ -5441,6 +5447,7 @@ Include Amazonian for FS by Stripes.
 Include Quilled Tousky for FS by Stripes.
 Include Giraffe for FS by Stripes.
 Include Bird of Paradise for FS by Stripes.
+Include Xeno for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.
