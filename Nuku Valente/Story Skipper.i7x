@@ -949,7 +949,7 @@ Carry out reciting:
 					now lust of Alexandra is 0;
 					now libido of Alexandra is 0;
 					if hp of Alexandra > 0:
-						move player to Grey Abbey Library;
+						move Alexandra to Grey Abbey Library;
 						[puts Doberman as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
