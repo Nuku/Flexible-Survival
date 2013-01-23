@@ -169,7 +169,7 @@ carry out delaymilitary:
 
 Section 4 - Homaru Search
 
-Aid is a number that varies.
+[Aid is a number that varies.]
 Dam is a number that varies.
 Homarusearching is a number that varies.
 Findfirefighter is a number that varies.
