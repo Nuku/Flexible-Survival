@@ -65,8 +65,8 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Alien"; [Name of your new Monster]
-	now attack entry is "Alien uses their [one of]Sharpening[or]Lunge[or]Overpenetrate[or]Sharp Bite[or]Pounce[or]mutant power[at random]"; [Text used when the monster makes an Attack]
+	now name entry is "Xeno"; [Name of your new Monster]
+	now attack entry is "[one of]The Xeno[or]The alien[or]The creature[at random] attacks using its [one of]sharpened claws[or]deadly talons[or]vicious claws[or]slashing tail[at random]!";
 	now defeated entry is "[beatthexeno]";
 	now victory entry is "[losetoxeno]";
 	now desc entry is "[xenodesc]";
