@@ -16,7 +16,8 @@ to say losetobirdofparadise:
 
 
 to say beatthebirdofparadise:
-	say "     Having beaten the colourful bird woman, she shrieks angrily and takes flight, leaving you in search of a more cooperative mate.";
+	say "     Having beaten the colourful bird woman, she shrieks angrily and takes flight, leaving you in search of a more cooperative mate.  As the bird leaves, your arousal decreases a little once the temptation is out of sight.";
+	now libido of player is ( libido of player * 4 ) / 5;
 
 
 to say birdofparadisedesc:
