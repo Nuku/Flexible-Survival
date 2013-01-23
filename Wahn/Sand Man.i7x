@@ -1,9 +1,12 @@
 Version 1 of Sand Man by Wahn begins here.
-[Version 1.1 - Infection texts adjusted]
+[Version 1.2 - Flagged]
 
 "Adds a Male Sand Man to Flexible Survivals Wandering Monsters table, with impreg chance"
 
 SandManFirstEncounter is a number that varies.  SandManFirstEncounter is normally 0.
+
+when play begins:
+	add { "Sand Man" } to infections of guy;
 
 Section 1 - Monster Responses
 

@@ -1,4 +1,5 @@
 Version 1 of Central Library by Stripes begins here.
+[ Version 1.1 - 2 new books to find]
 
 "Adds the Central Library to the Flexible Survival game"
 
@@ -315,6 +316,8 @@ to say libraryexplore:
 	if 3 is not listed in bookcollection, add 3 to randomlist;
 	if 4 is not listed in bookcollection, add 4 to randomlist;
 	if 5 is not listed in bookcollection, add 5 to randomlist;
+	if 6 is not listed in bookcollection, add 6 to randomlist;
+	if 7 is not listed in bookcollection, add 7 to randomlist;
 	sort randomlist in random order;
 	if randomlist is empty:
 		say "     Perusing the books, you find nothing of interest in the nearby shelves.  You are about to move to the next section when you spot a bottle of water and some chips someone must have set down on the shelf.  From the pile of clothes and sticky mess on the floor, it's likely they won't be coming back for them any time soon.  You grab them and stuff them into your pack for later consumption.";
@@ -340,6 +343,12 @@ to say libraryexplore:
 	otherwise if entry 1 of randomlist is 5:
 		say "[libbook5]";			[military reconnaissance]
 		now bookfound is 5;
+	otherwise if entry 1 of randomlist is 6:
+		say "[libbook6]";			[first aid manual]
+		now bookfound is 6;
+	otherwise if entry 1 of randomlist is 7:
+		say "[libbook7]";			[animal handling]
+		now bookfound is 7;
 	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 	if xp of player is greater than ( level of player plus one ) times 10:
 		level up;
@@ -457,6 +466,27 @@ to say libbook5:
 	if player is in Grey Abbey Library, follow the turnpass rule;
 
 
+to say libbook6:
+	say "     You find a book on first aid which might be of use to you.  The small pocket-sized book seems to cover most common injuries and how to treat them.  While certainly no match for proper training, it should still help you deal with any unfortunate injuries and help you heal faster through proper care and treatment.  You put it in your pack and remind yourself to consult it should you get hurt out in the city or when trying to use a medkit.";
+	add 6 to bookcollection;
+	say "     While the manual is in your possession, you will regain health at the rate of 1 faster each turn and recover 2 more hp when using a healing item (unless superseded by the Expert Medic feat).";
+	increase carried of First Aid Manual by 1;
+
+
+to say libbook7:
+	say "     You find a book on animal training.  The book deals with many of the principles involved and covers a variety of animals, not just dogs.  The sections on guard animals are particularly interesting, finding several techniques you might use with any pets you acquire to help in their training.  Enhanced by the infection, your mind picks up many details from a quick perusal of the book[if player is in Grey Abbey Library].  Taking a seat in the library, you read through the book and make sure to absorb the details[otherwise].  You slip it into your pack for a more thorough reading later, to make sure the information sticks[end if].";
+	add 7 to bookcollection;
+	if "Good Teacher" is listed in feats of player:
+		repeat with z running through pets:
+			increase xp of z by ( level of player + 1 ) * 3;
+			say "     You have gained [bold type]10 XP[roman type] from reading the book and your pets have all gained xp as well.";
+			increase xp of player by 10;
+	otherwise:
+		add "Good Teacher" to feats of player;
+		say "     You have gained the [bold type]Good Teacher[roman type] feat.";
+	if player is in Grey Abbey Library, follow the turnpass rule;
+
+
 Table of library books
 title	booknum	subtable	bookcode
 "martial arts"	1	--	"796.81.C345j"
@@ -464,6 +494,8 @@ title	booknum	subtable	bookcode
 "animals"	3	--	"591.1.G311a"
 "animal mating"	4	--	"591.069.T724w"
 "military"	5	--	"355.72.U523m"
+"first aid"	6	--	"616.0252.S031f"
+"animal training"	7	--	"636.088.P498a"
 
 deweying is an action applying to one topic.
 
@@ -492,6 +524,10 @@ carry out deweying:
 		say "[libbook4]";
 	otherwise if found is 5:
 		say "[libbook5]";
+	otherwise if found is 6:
+		say "[libbook6]";
+	otherwise if found is 7:
+		say "[libbook7]";
 	otherwise:
 		say "     You look among the stacks, but don't find any books of interest.";
 
@@ -499,6 +535,7 @@ carry out deweying:
 Table of Game Objects (continued)
 name	desc	weight	object
 "Wild Animals"	"A book on the mating habits of animals that you retrieved from the library.  You could use it for a little [']personal['] reading if you'd like to get yourself excited."	2	Wild Animals
+"First Aid Manual"	"A guide to proper first aid that should be handy to hang onto."	1	First Aid Manual
 
 Wild Animals is a grab object.  It is part of the player.  It is not temporary.
 
@@ -511,8 +548,15 @@ instead of using Wild Animals:
 	if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
 
-instead of sniffing Wild Animals:
-	say "     It smells like an old book, though there's a faintly arousing scent lingering around it as well.";
+the scent of Wild Animals is "     It smells like an old book, though there's a faintly arousing scent lingering around it as well.";
+
+First Aid Manual is a grab object.  It is part of the player.  It is not temporary.
+
+instead of using First Aid Manual:
+	say "     You pull out the book and flip through it, scanning through its procedures for dealing with various injuries.  It should be handy if you get hurt out in the city.";
+	say "     Keeping this book in your possession will increase your healing rate by 1 each turn and by 2 when using a healing item (unless superseded by the 'Expert Medic' feat.)[line break]";
+
+the scent of First Aid Manual is "     It smells like an old book.";
 
 Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( hp of doctor matt > 0 and hp of doctor matt < 100 ):
 	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning.  With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans.  This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.  Shall you relay this intelligence to the military?";

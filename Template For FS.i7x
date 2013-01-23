@@ -26,7 +26,9 @@ when play begins:
 	add { "Template" } to infections of Reptilelist;	[list of reptile infections]
 	add { "Template" } to infections of Insectlist;		[list of insectile infections]
 	add { "Template" } to infections of Plantlist;		[list of plant infections]
+	add { "Template" } to infections of Avianlist;		[list of avian/bird infections]
 	add { "Template" } to infections of Taurlist;		[list of tauric infections]
+	add { "Template" } to infections of Knotlist;		[list of cock infections with a knot]
 
 [Sample loss and victory text templates.]
 [Numerous other variations can be found in existing creature files.]
@@ -82,12 +84,12 @@ When Play begins:
 	now skin change entry is "you gain fur/scales/skin/patterns described herein";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "your tail or ass changes in the manner described by this text";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it takes on a new, kinky form";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 8;			[ These are now the creature's stats... ]
+	now str entry is 12;			[ These are now the creature's stats... ]
 	now dex entry is 12;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 15;			[ These values may be used as part of alternate combat.]
-	now per entry is 10;
-	now int entry is 16;
-	now cha entry is 14;
+	now sta entry is 12;			[ These values may be used as part of alternate combat.]
+	now per entry is 12;
+	now int entry is 12;
+	now cha entry is 12;
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 24;			[ The monster's starting hit points. ]
 	now lev entry is 1;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
@@ -117,6 +119,8 @@ When Play begins:
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
+
+Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Template":
