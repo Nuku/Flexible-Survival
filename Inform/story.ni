@@ -1223,6 +1223,10 @@ Plantlist is a marker.	[list of plant infections]
 when play begins:
 	add { "Awesome tree", "Dryad", "Parasitic Plant", "Mushroom Men" } to infections of Plantlist;
 
+Avianlist is a marker.	[list of avian/bird infections]
+when play begins:
+	add { "Bald Eagle", "Fluffy Owl", "harpy", "Hermaphrodite Gryphon", "peacock", "Quilled Tousky", "Hawkman", "Siren", "sphinx", "Vulpogryph", "Bird of Paradise" } to infections of Avianlist;
+
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
 	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
@@ -5435,6 +5439,8 @@ Include Automaton for FS by Stripes.
 Include Anime Babe for FS by Stripes.
 Include Amazonian for FS by Stripes.
 Include Quilled Tousky for FS by Stripes.
+Include Giraffe for FS by Stripes.
+Include Bird of Paradise for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.
