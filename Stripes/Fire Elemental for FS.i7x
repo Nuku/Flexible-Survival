@@ -74,7 +74,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Fire Elemental"; [Name of your new Monster]
-	now attack entry is "Fire Elemental uses their [one of]Crash And Burn[or]Flamethrower[or]Burninate[or]Fire Dance[or]mutant power[at random]"; [Text used when the monster makes an Attack]
+	now attack entry is "[one of]The fire elemental[or]The fiery woman[or]The flaming woman[or]She[at random] [one of]sends a burst of flame at you[or]exhales a cone of heat[or]sends a fiery kick at you[or]strikes you with a flaming fist[at random]!";
 	now defeated entry is "[beatthefireelemental]";
 	now victory entry is "[losetofireelemental]";
 	now desc entry is "[fireelementaldesc]";
@@ -85,7 +85,7 @@ When Play begins:
 	now cock entry is "hot, barbed";
 	now face change entry is "your hair burns away in a swirl of flames and your shape reforms along feminine lines.  Though it still feels like there's something on your scalp... and as you reach up, your hand meets a harmless flame that's taken the place of normal hair";
 	now body change entry is "it feels suddenly like an incendiary grenade has gone off in your chest.  Your breath rushes from you with a spark of flame, your organs burning inside of you... and when you can look down, your form is more shapely, and you still feel unnaturally warm.  In a flash of heat and flame, any imperfections of your arms burn away, leaving wiry muscles behind... and warmth, plenty of warmth.  Your legs rapidly heat up until they to burn away any imperfections, leaving wiry, toned legs behind - and you have a sudden urge to dance on them in celebration[if the player is fireskinned] as your flames dance over your transformed body[end if]";
-	now skin change entry is "your skin smoothes out in a shimmer of heat, any hair on it falling away... right before it cracks, and the glow of fire exudes from within your body";
+	now skin change entry is "your skin smoothes out in a shimmer of heat, any hair on it falling away... right before it cracks, and the glow of fire exudes from within your body.  You seem able to control the intensity of these flames so you might enjoy the sensual touch of others, though they'll also grow weak and ineffectual if you are too injured to sustain them, leaving you still vulnerable to the other creatures of the city";
 	now ass change entry is "your ass melts and reforms in a flash of heat into something human, shapely and decidedly sexy";
 	now cock change entry is "your cock heats up, and seems to ignite for a moment, leaving it covered in flame-shaped barbs.";
 	now str entry is 15;

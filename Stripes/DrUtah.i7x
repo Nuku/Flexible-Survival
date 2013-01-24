@@ -47,7 +47,7 @@ to say utahdesc:
 
 Instead of conversing the Doctor Utah:
 	if nightmaretf > 0 or HellHoundlevel > 0 or wrcursestatus is 100:
-		say "     Dr. Utah sniffs and growls at you.  'You fool!  You wretch!  I can smell that... that... tainted essense within you.  You have given up the wonderful gift I have bestowed upon you.  Begone!' [if girl is not banned]she[otherwise]he[end if] snarls as he slashes at you, driving you from [if girl is not banned]his[otherwise]her[end if] office before slamming the door on you.  It seems you're no longer welcome here.";
+		say "     Dr. Utah sniffs and growls at you.  'You fool!  You wretch!  I can smell that... that... tainted essense within you.  You have given up the wonderful gift I have bestowed upon you.  Begone!' [if girl is not banned]she[otherwise]he[end if] snarls as [if girl is not banned]she[otherwise]he[end if] slashes at you, driving you from [if girl is not banned]his[otherwise]her[end if] office before slamming the door on you.  It seems you're no longer welcome here.";
 		now wrcursestatus is 100;
 		now Paleontology Office is unknown;
 		move player to College Campus;

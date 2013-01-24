@@ -97,6 +97,8 @@ to say drinkrhinocum:
 	otherwise:
 		say ".";
 
+the scent of rhino cum is "The contents of the jar of rhino cum smell strong and musky.";
+
 Section 3 - Endings
 
 when play ends:
