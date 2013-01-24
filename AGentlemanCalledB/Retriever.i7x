@@ -1,6 +1,6 @@
-Version 2 of Retriever by AGentlemanCalledB begins here.
+Version 3 of Retriever by AGentlemanCalledB begins here.
 "Adds a retriever creature to Flexible Survivals Wandering Monsters table"
-[Version 2 - Rex Pet endings, modified description for Rex pet player, additional entries for updated table of random critters]
+[Version 3 - Updates for compatability with Rex overhaul]
 
 Section 1 - Monster Responses
 
@@ -65,7 +65,7 @@ When Play begins:
 	now defeated entry is "[beattheRetriever]";
 	now victory entry is "[losetoRetriever]";
 	now desc entry is "[Retrieverdesc]";
-	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if rexpet > 0].  Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small silver bone shaped tag with you name engraved on it[end if]";
+	now face entry is "that of an attractive female retriever, with large folded ears atop your head and a delicate canine muzzle[if hp of Rex > 9].  Fastened around your neck, you have a thin blue leather studded collar, declaring your status as Rex's pet to the world. There's even a small silver bone shaped tag with you name engraved on it[end if]";
 	now body entry is "that of a clearly female canine, with a beautiful hourglass figure leading into shapely digitgrade legs and large paws. Your hands have also become somewhat paw-like, while they have maintained some dexterity, it is clear they have become very canine, with short but slender digits topped with small claws";
 	now skin entry is "a thick, shiny coat of golden fur over your";
 	now tail entry is "Your tail is that of a golden retriever, long and covered with soft golden fur. It wags happily constantly without your input unless you make a conscious effort to stop it.";
@@ -111,53 +111,53 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Retriever":
 		if humanity of player is less than 10:
-			if rexpet is 1:
-				say "Your life as Rex's happy sexpet is a simple but strangely fulfilling one. Rex proves to be a kind owner, always ensuring you and Karen are both well cared for,  with a safe home, plenty of food and water, the lustful needs instilled in you by the infection and Rex's training never go unattended.";
-				say "Eventually when the military moves through the city they are greeted at the door by Rex, who manages to convince them none of you are dangerous. After a short stay at their camp you are allowed to leave and you move to a small, quiet home outside the city where you continue your peaceful existence for many years.";
+			if hp of Rex is 10:
+				say "     Your life as Rex's happy sexpet is a simple but strangely fulfilling one. Rex proves to be a kind owner, always ensuring you and Karen are both well cared for,  with a safe home, plenty of food and water, the lustful needs instilled in you by the infection and Rex's training never go unattended.";
+				say "     Eventually when the military moves through the city they are greeted at the door by Rex, who manages to convince them none of you are dangerous. After a short stay at their camp you are allowed to leave and you move to a small, quiet home outside the city where you continue your peaceful existence for many years.";
 				if cunts of player > 0:
 					if "Sterile" is not listed in feats of player:
-						say "You frequently find you belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away too live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
+						say "     You frequently find you belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away too live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
 					otherwise:
-						say "Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
+						say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
 				otherwise:
-					say "Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
-			otherwise if rextalk is 1:
-				say "As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again";
-				say "This turns out to be the final push your mind needed, and as you reach to accept the collar the last of your resistance fades away, finally surrendering yourself t a simple life as one of Rex's happy pets.";
+					say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
+			otherwise if hp of Rex > 5:
+				say "     As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again";
+				say "     This turns out to be the final push your mind needed, and as you reach to accept the collar the last of your resistance fades away, finally surrendering yourself t a simple life as one of Rex's happy pets.";
 				if cunts of player > 0:
 					if "Sterile" is not listed in feats of player:
-						say "You frequently find you belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away too live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
+						say "     You frequently find you belly round with Rex's retriever pups, thanks to your regular fun with your master, and each litter is well trained to be perfect sexpets like Karen and yourself. It almost breaks your heart each time your pups are sent away too live with families of their own, but you are comforted knowing Rex personally ensures each and every home is just as loving and caring as your own.";
 					otherwise:
-						say "Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
+						say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
 				otherwise:
-					say "Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
+					say "     Frequently Karen's belly becomes round with Rex's pups, leaving you somewhat disappointed that you cannot share that special bond with your master. You do however enjoy the time you get to spend with the pups as they are trained properly to be perfect pets like Karen and yourself and you are always sad to see them go when the time comes to send them off too new families of their own, despite Karen's reassurances that Rex ensures each pup find a home as loving and caring as your own.";
 			otherwise:
-				say "As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city is search of new playmates too sate your canine lusts with.";
-				if doggyboned is 3:
-					say "You enjoy your time in the city with the other various infected creatures, particularly the other canines, but even they are unable to relive the burning need in your body the way your wonderful sextoy does.";
-					say "Occasionally you share the pleasure of the wonderful bone with your lovers, but you never allow it to leave your possession, Bringing it with you everywhere you go in your new life as a carefree retriever bitch.";
+				say "     As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city is search of new playmates too sate your canine lusts with.";
+				if hp of Rex is 4:
+					say "     You enjoy your time in the city with the other various infected creatures, particularly the other canines, but even they are unable to relive the burning need in your body the way your wonderful sextoy does.";
+					say "     Occasionally you share the pleasure of the wonderful bone with your lovers, but you never allow it to leave your possession, Bringing it with you everywhere you go in your new life as a carefree retriever bitch.";
 				otherwise:
-					say "You enjoy your time with the other various creatures in the city, particularly the huskies and their handsome alphas, yet you always feel something is missing. Deep down you know you will never be truly satisfied until you find a strong alpha of your own breed, to take you in and fill you with his pups like those lucky huskies.";
+					say "     You enjoy your time with the other various creatures in the city, particularly the huskies and their handsome alphas, yet you always feel something is missing. Deep down you know you will never be truly satisfied until you find a strong alpha of your own breed, to take you in and fill you with his pups like those lucky huskies.";
 		otherwise:
-			if rexpet > 0:
-				say "	Despite having submitted yourself to a life as Rex's pet, you manage too maintain some part of your mind, and because of this your relationship with your master eventually develops beyond him simply being your owner. Before long you are much more akin to lovers then master and pet. However, Rex makes certain you always remember how your relationship started, expecting you too continue wearing your collar and occasionally giving you a refresher 'lesson' too ensure your training hasn't been forgotten.";
+			if hp of Rex > 9:
+				say "     Despite having submitted yourself to a life as Rex's pet, you manage too maintain some part of your mind, and because of this your relationship with your master eventually develops beyond him simply being your owner. Before long you are much more akin to lovers then master and pet. However, Rex makes certain you always remember how your relationship started, expecting you too continue wearing your collar and occasionally giving you a refresher 'lesson' too ensure your training hasn't been forgotten.";
 			otherwise:
-				say "Once the military moves into the city you are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city.";
-				if rextalk is 1:
-					say "Much to your surprise you spot Rex in your group, with Karen under his arm. He greets you warmly as you approach and you chat merrily with him for some time while you wait to be allowed to leave.";
-					say "Even though it's apparent that he still hopes to make another pet of you one day you maintain contact with Rex in the outside world, forging an unusual  friendship with benefits with him, as he seems to be the only one who can sate the burning need in your body instilled by that unusual doggy sextoy, and he's more than happy to help you keep your needs in check.";
+				say "     Once the military moves into the city you are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city.";
+				if hp of Rex > 5:
+					say "     Much to your surprise you spot Rex in your group, with Karen under his arm. He greets you warmly as you approach and you chat merrily with him for some time while you wait to be allowed to leave.";
+					say "     Even though it's apparent that he still hopes to make another pet of you one day you maintain contact with Rex in the outside world, forging an unusual  friendship with benefits with him, as he seems to be the only one who can sate the burning need in your body instilled by that unusual doggy sextoy, and he's more than happy to help you keep your needs in check.";
 					if humanity of player is less than 50:
-						say "Each time you visit you notice he has left that same blue collar out where you can see it, and each time you do you find yourself wondering about the way things could have been.....the way things could still be.";
-				otherwise if doggyboned is 3:
-					say "You manage to smuggle your dog-cock shaped sex toy out of the city with you, Frequently needing it to satisfy your body's strange new needs.";
-				say "You lead [if doggyboned is 3]an otherwise normal[otherwise]a relatively normal[end if] life outside the city, ending up working as a [if cunts of player > 0]waitress[otherwise]waiter[end if] in an upscale restaurant catering mostly to other infected survivors. The friendly and upbeat demeanor provided by your retriever infection proves to be a valuable asset in this line of work, and your attractive canine body ensures you never have trouble finding someone who will let you follow them home for a night of lustful fun.";
+						say "     Each time you visit you notice he has left that same blue collar out where you can see it, and each time you do you find yourself wondering about the way things could have been.....the way things could still be.";
+				otherwise if hp of Rex is 4:
+					say "     You manage to smuggle your dog-cock shaped sex toy out of the city with you, Frequently needing it to satisfy your body's strange new needs.";
+				say "     You lead [if hp of Rex is 4]an otherwise normal[otherwise]a relatively normal[end if] life outside the city, ending up working as a [if cunts of player > 0]waitress[otherwise]waiter[end if] in an upscale restaurant catering mostly to other infected survivors. The friendly and upbeat demeanor provided by your retriever infection proves to be a valuable asset in this line of work, and your attractive canine body ensures you never have trouble finding someone who will let you follow them home for a night of lustful fun.";
 	otherwise:
-		if rexpet > 0:
+		if hp of Rex > 9:
 			if humanity of player is less than 10:
-				say "	With your mind lost too another infection out in the city, you quickly forget your submission too Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid any other survivor then can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
+				say "     With your mind lost too another infection out in the city, you quickly forget your submission too Rex, and your place as his pet. He and Karen search the city for you for some time, even enlisting the aid any other survivor then can find in exchange for a share of Rex's stockpiled supplies. Despite their titanic effort the pair is never able to find you among the horde of mindless mutants in the city, eventually leaving you and it behind to find a new home outside once the military moves in.";
 			otherwise:
-				say "	When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it.";
-		otherwise if doggyboned is 3:
-			say "As the last of the retriever infection is worked out of your system you find the powerful urges caused by that strange bone seam to diminish as well.";
+				say "     When the military finally moves into the city and the retriever infection still hasn't taken hold Rex takes you aside for a private moment, realizing that, despite convincing you to submit to him and accept a place as his pet, his 'training' still hasn't managed to take hold of you. With tears welling up in his puppydog eyes Rex reaches behind your neck and unfastens the blue collar, he tenderly places it in your palms, and closes your hands tightly around it. Finally he informs you that you are free to leave and do what you wish in this new world, but you will always have a place in his home should you every truly desire it.";
+		otherwise if hp of Rex is 4:
+			say "     As the last of the retriever infection is worked out of your system you find the powerful urges caused by that strange bone seam to diminish as well.";
 
 Retriever ends here.
