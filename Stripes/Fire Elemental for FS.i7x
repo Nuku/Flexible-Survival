@@ -1,4 +1,5 @@
 Version 1 of Fire Elemental for FS by Stripes begins here.
+[Version 1.1 - Promotion to lvl 15 and Fire Breath alt attack]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Fire Elemental to Flexible Survival."
@@ -89,15 +90,15 @@ When Play begins:
 	now ass change entry is "your ass melts and reforms in a flash of heat into something human, shapely and decidedly sexy";
 	now cock change entry is "your cock heats up, and seems to ignite for a moment, leaving it covered in flame-shaped barbs.";
 	now str entry is 15;
-	now dex entry is 18;
+	now dex entry is 22;
 	now sta entry is 12;
-	now per entry is 10;
+	now per entry is 12;
 	now int entry is 10;
-	now cha entry is 16;
+	now cha entry is 17;
 	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 55;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
-	now lev entry is 9;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
-	now wdam entry is 12;			[Amount of Damage monster Does when attacking. Claws and massive strength]
+	now hp entry is 95;			[ How many HP has the monster got?  She's not too hard- she doesn't want to win so much as not lose]
+	now lev entry is 15;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
+	now wdam entry is 15;			[Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains";	[ Current options are 'Outside' and 'Mall'  Case sensitive If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
@@ -119,7 +120,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "firebreath";		[ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Definition: a person is fireskinned:
@@ -153,7 +154,7 @@ When Play begins:
 	now inheat entry is "[defaultheat]";		[This happens each heat cycle, Default is to increase libido by 5]
 
 
-Section 3 - Endings
+Section 4 - Endings
 
 [
 when play ends:
