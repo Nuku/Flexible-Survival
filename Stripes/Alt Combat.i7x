@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2.1 - Pet updrage, Charisma driven]
+[Version 2.2 - Children upgrade, also Charisma driven]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -209,6 +209,15 @@ Chapter 2 - Player Attack
 
 This is the player attack rule:
 	choose row monster from the table of random critters;
+	let petchance be 0;
+	if the player is not lonely or number of entries in childrenfaces is greater than 0:
+		let petchance be -50;
+		increase petchance by ( charisma of player * 250 ) / 12;
+		if petchance > 450, now petchance is 450;
+		if "Good Teacher" is listed in feats of player, increase petchance by 20;
+		if "Ringmaster" is listed in feats of player, increase petchance by 20;
+		increase petchance by square root of ( 30 * charisma of player );
+		if petchance > 600, now petchance is 600;
 	let the attack bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
@@ -331,11 +340,11 @@ This is the player attack rule:
 			if breasts of player > 4, increase dammy by a random number between 0 and 1;
 			say "[line break]Grabbing your opponent, you smoosh them into your ample bosom, smothering and crushing them with your tits for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
-		if a random chance of 5 in 20 succeeds and "Spirited Youth" is listed in feats of player:
+		if a random chance of petchance in 1000 succeeds and "Spirited Youth" is listed in feats of player:
 			let y be a random number from 4 to 6;
 			say "Your child [one of]lashes out[or]assists with a sudden strike[or]takes advantage of a distraction[or]launches a surprise attack[or]descends from out of nowhere[at random] at [name entry] for [special-style-2][y][roman type] damage!";
 			increase dam by y;
-		otherwise if a random chance of 1 in 20 succeeds and "Youthful Tides" is listed in feats of player:
+		otherwise if a random chance of petchance in 4000 succeeds and "Youthful Tides" is listed in feats of player:
 			let y be 0;
 			repeat with s running from 1 to number of entries in childrenfaces:
 				increase y by a random number from 2 to 4;
@@ -346,14 +355,6 @@ This is the player attack rule:
 		say "[Name entry] is [descr].";
 	otherwise:
 		say "You miss!";
-	let petchance be 0;
-	if the player is not lonely:
-		let petchance be ( charisma of player / 3 ) * 50;
-		if petchance > 400, now petchance is 400;
-		if "Good Teacher" is listed in feats of player, increase petchance by 20;
-		if "Ringmaster" is listed in feats of player, increase petchance by 20;
-		increase petchance by square root of ( 30 * charisma of player );
-		if petchance > 500, now petchance is 500;
 	if player is not lonely:
 		if a random chance of petchance in 4000 succeeds and "The Horde" is listed in feats of player:
 			say "[line break]";

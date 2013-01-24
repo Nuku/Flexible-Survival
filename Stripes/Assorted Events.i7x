@@ -141,7 +141,7 @@ instead of resolving a Trickster:
 			say "     You toss the bag of fur in the face of one wolf about the slam into you.  He has large sections of his pelt shaved off, exposing wide patches of pink skin.  The bagged fur is sent flying, floating in the air all around the area.  You cough and brush it out of your eyes in time to see another wolf moving in to attack you.";
 		otherwise:
 			decrease hp of player by 10;
-			say "     You are slammed into by one of the wolves and knocked to the side, taking 10 damage.  You can see as he continues past you that this wolf is the largest of them all and probably the pack alpha.  He has large sections of his pelt poorly shaved off, exposing wide patches of pink skin.  The bagged fur is sent flying, floating in the air all around the area.  You cough and brush it out of your eyes as you get back to your feet in time to see another wolf moving in to attack you.";
+			say "     You are slammed into by one of the wolves and knocked to the side, taking [special-style-2]10[roman type] damage.  You can see as he continues past you that this wolf is the largest of them all and probably the pack alpha.  He has large sections of his pelt poorly shaved off, exposing wide patches of pink skin.  The bagged fur is sent flying, floating in the air all around the area.  You cough and brush it out of your eyes as you get back to your feet in time to see another wolf moving in to attack you.";
 		now wolffight is 3;
 		challenge "Feral Wolf";
 		if wolffight is 1:

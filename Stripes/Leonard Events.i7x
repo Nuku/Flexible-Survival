@@ -19,14 +19,14 @@ Instead of resolving PridePark:
 	if leoparklist is not empty and a random chance of 2 in 5 succeeds:	[unique situations]
 		sort leoparklist in random order;
 		if entry 1 of leoparklist is 1, say "[leoparkscene1]";
-		if entry 1 of leoparklist is 2, say "[leoparkscene2]";
-		if entry 1 of leoparklist is 3, say "[leoparkscene3]";
-		if entry 1 of leoparklist is 4, say "[leoparkscene4]";
-		if entry 1 of leoparklist is 5, say "[leoparkscene5]";
-		if entry 1 of leoparklist is 6, say "[leoparkscene6]";
-		if entry 1 of leoparklist is 7, say "[leoparkscene7]";
-		if entry 1 of leoparklist is 8, say "[leoparkscene8]";
-		if entry 1 of leoparklist is 9, say "[leoparkscene9]";
+		otherwise if entry 1 of leoparklist is 2, say "[leoparkscene2]";
+		otherwise if entry 1 of leoparklist is 3, say "[leoparkscene3]";
+		otherwise if entry 1 of leoparklist is 4, say "[leoparkscene4]";
+		otherwise if entry 1 of leoparklist is 5, say "[leoparkscene5]";
+		otherwise if entry 1 of leoparklist is 6, say "[leoparkscene6]";
+		otherwise if entry 1 of leoparklist is 7, say "[leoparkscene7]";
+		otherwise if entry 1 of leoparklist is 8, say "[leoparkscene8]";
+		otherwise if entry 1 of leoparklist is 9, say "[leoparkscene9]";
 	otherwise:		[randomized situations]
 		let t be a random number between 1 and 6;
 		if T is 1:					[treed kitty]

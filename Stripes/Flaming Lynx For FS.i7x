@@ -1,5 +1,5 @@
 Version 1 of Flaming Lynx For FS by Stripes begins here.
-[Version 1.3 - Player victory touch-ups]
+[Version 1.4 - Fire Breath alt attack]
 
 "Adds a Flaming Lynx creature to Flexible Survival's Wandering Monsters table"
 
@@ -169,7 +169,7 @@ When Play begins:
 	now sex entry is "Male";		[ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
 	now hp entry is 60;			[ The monster's starting hit points. ]
 	now lev entry is 9;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 11;			[ Monster's average damage when attacking. ]
+	now wdam entry is 10;			[ Monster's average damage when attacking. ]
 	now area entry is "Mall";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8;		[ Length infection will make cock grow to if cocks. ]
@@ -191,7 +191,7 @@ When Play begins:
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	blank out the nocturnal entry;		[ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";		[ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "firebreath";	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 [
 Section 3 - Endings

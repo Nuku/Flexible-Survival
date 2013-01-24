@@ -1225,7 +1225,7 @@ when play begins:
 
 Avianlist is a marker.	[list of avian/bird infections]
 when play begins:
-	add { "Bald Eagle", "Fluffy Owl", "harpy", "Hermaphrodite Gryphon", "peacock", "Quilled Tousky", "Hawkman", "Siren", "sphinx", "Vulpogryph", "Bird of Paradise" } to infections of Avianlist;
+	add { "Bald Eagle", "Fluffy Owl", "harpy", "Hermaphrodite Gryphon", "peacock", "Quilled Tousky", "Hawkman", "Siren", "Vulpogryph", "Bird of Paradise" } to infections of Avianlist;
 
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
@@ -5449,6 +5449,7 @@ Include Giraffe for FS by Stripes.
 Include Bird of Paradise for FS by Stripes.
 Include Xeno for FS by Stripes.
 Include Fire Elemental for FS by Stripes.
+Include Corota for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.
