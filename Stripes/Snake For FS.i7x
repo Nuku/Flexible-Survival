@@ -1,7 +1,7 @@
-Version 1 of Snake For FS by Stripes begins here.
+Version 2 of Snake For FS by Stripes begins here.
+[ Version 2 - Snake Vore]
 
 "Adds a Snake creature to Flexible Survivals Wandering Monsters table"
-
 
 Section 1 - Monster Responses
 
@@ -13,7 +13,19 @@ to say losetosnake:
 		say "     Giving in, you sag to your knees and submit to the giant serpent";
 	otherwise:
 		say "     Beaten, you sag to your knees, no longer able to resist the giant serpent";
-	say ".  The two-tone snake winds its body around yours, squeezing and constricting.  It nips and bites at you, seeping venom into your wounds.  You grow warm and woozy, and strangely aroused.  You start to moan as the snake's squeezing starts to feel more enjoyable and pleasing, though it's hard to say if it is squeezing you less or your perception of those clenching coils has changed.  As the venom continues to excite you, you cum hard before the serpent releases you and slithers away.";
+	if a random chance of 1 in 3 succeeds:
+		say ".  Determining its prey as now defenseless, the serpent quickly winds its body around you, squeezing you with its coils.  As it constricts you, it weakens you further by nipping and biting at you, seeping venom into your wounds.  You grow warm and woozy, and strangely aroused.  You start to moan as the snake's squeezing starts to feel more enjoyable and pleasing, so much so that you don't notice at first its mouth unhinging to open unnaturally wide as it prepares to satisfy a more literal hunger.";
+		if scalevalue of player < 4:				[man-sized or less]
+			say "     It is not until the snake's head is down over yours, its tongue sliding across your cheek as it tastes its prey, that you realize your true predicamment.  But it feels so good, so warm and tingly, that you find it hard to focus on struggling at all.  With your arms pinned to your sides and its coils crushing down on your limbs, there's little you can do to fight the inevitable.";
+			say "     Its throat slides over your head, gulping down around you as it starts to pull you inwards.  Those strong muscles slide over your shoulders as its mouth closes around your body, fangs biting into your rear, causing you to moan [if cocks of player > 1]as your cocks throb against the snake's palate[otherwise if cocks of player is 1]as your cock throbs against the snake's palate[end if][if cocks of player > 0 and cunts of player > 0] [end if][if cunts of player > 0]while its tongue dives into your cunt, lapping up your juices[end if].  As the snake's esophagus continues its inexorable work of pulling you inwards, the squeezing and the warmth grow more intense until you finally cum before passing out.  Full and very well fed, the snake [if daytimer is day]stretches out in the warm sun[otherwise]curls up under the night sky[end if] to rest and digest its meal.";
+		otherwise if scalevalue of player > 3:		[large]
+			say "     It is not until the snake's head is down over yours, mouth stretching wide to try and consume a creature larger than itself, that you realize your true predicamment.  But it feels so good, so warm and tingly, that you find it hard to focus on struggling at all.  With your arms pinned to your sides and its coils crushing down on your limbs, you try to squirm, but the snake's got you too tightly and you are too weak from the venom to put up much more of a fight.  Even with your added size, it has you as its prey and won't let you go.";
+			say "     Its throat slides over your head, gulping down around you as it starts to pull you inwards.  With a pop of its jaw dislocating entirely, those strong muscles slide over your shoulders as its mouth closes around your body, fangs biting into your rear, causing you to moan [if cocks of player > 1]as your cocks throb against the snake's palate[otherwise if cocks of player is 1]as your cock throbs against the snake's palate[end if][if cocks of player > 0 and cunts of player > 0] [end if][if cunts of player > 0]while its tongue dives into your cunt, lapping up your juices[end if].  As the snake's esophagus continues its inexorable work of pulling your large mass inwards, the squeezing and the warmth grow more intense until you finally cum before passing out.  Full and very well fed, the snake [if daytimer is day]stretches out in the warm sun[otherwise]curls up under the night sky[end if] to rest and digest its meal.";
+		say "     You wake up some time later covered in clear, sticky goo.  You are weak, emaciated and unsure how you ended up here or if you even want to know how you did.  You stagger weakly to your feet, feeling very hungry and thirsty after your very draining experience as your nanites in your body try to speed your recovery.";
+		increase thirst of player by 15;
+		increase hunger of player by 15;
+	otherwise:
+		say ".  The two-tone snake winds its body around yours, squeezing and constricting.  It nips and bites at you, seeping venom into your wounds.  You grow warm and woozy, and strangely aroused.  You start to moan as the snake's squeezing starts to feel more enjoyable and pleasing, though it's hard to say if it is squeezing you less or your perception of those clenching coils has changed.  As the venom continues to excite you, you cum hard before the serpent releases you and slithers away.";
 
 
 to say beatthesnake:
