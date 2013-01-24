@@ -11,7 +11,6 @@ when play begins:
 	add { "Corota" } to infections of girl;
 	add { "Corota" } to infections of furry;
 	add { "Corota" } to infections of Tailweapon;	[usable for Tail Strike feat]
-	add { "Corota" } to infections of Felinelist;	[list of feline infections]
 	add { "Corota" } to infections of Reptilelist;	[list of reptile infections]
 
 to say losetocorota:
