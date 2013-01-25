@@ -23,7 +23,7 @@ to say Satyr attack:
 		say "     Confused and excited by the jovial satyr and his musky male scent, you take his shaft in hand, stroke it a few times and guide it to your mouth.  You slide your lips over it, slowly at first to taste his strong, masculine flavour before getting it all in and starting to work over it.  You knead his hairy balls while he rubs your head and chuckles merrily, grabbing another swig of his drink, spilling some down onto you.  The drops which land on his rounded belly and roll to his shaft are licked up to you, adding to the exciting taste and fueling your drunken lust all the more.  Pulling free from his shaft, you wantonly lick up the wine before diving down to his balls and cleaning them as well.";
 		if bodyname of player is not "Greek Nymph" and bodyname of player is not "Satry" and facename of player is not "Greek Nymph" and facename of player is not "Satry":
 			say "     'That's a fine job you're doing.  Many a teasing nymph would not go so far.  But I'm thinking you're ready to have some satyr in you in a more... physical way,' he laughs, pushing you down";
-		otherwise if bodyname of player is "Satyr" or facename of "Satyr":
+		otherwise if bodyname of player is "Satyr" or facename of player is "Satyr":
 			say "     'That's a fine job you're doing, my brother.  Many a teasing nymph would not go so far.  Nothing like a wild, rutting pair of satyrs, eh?' he laughs, pushing you down";
 		otherwise:
 			say "     'You look like a nymph, but you're no teasing girl like so many of them.  Mmm... as beautiful as a nymph, but still a randy male.  Quite special, aren't you?' he laughs, pushing you down";
