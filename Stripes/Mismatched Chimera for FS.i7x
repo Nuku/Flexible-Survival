@@ -42,9 +42,6 @@ to say losetomischim:
 	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
 		increase monster by 1;
 		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
 
 
 to say beatthemischim:

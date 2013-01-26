@@ -4742,6 +4742,18 @@ to say randomfimpreg:		[Use when only female pregnancy would work]
 		break;
 	say "[fimpregchance]";
 
+to setmonster ( x - text ):		[puts an infection (named x) as lead monster for later use]
+	let found be 0;
+	repeat with y running from 1 to number of filled rows in table of random critters:
+		choose row y in table of random critters;
+		if name entry is x:
+			now found is 1;
+			now monster is y;
+			break;
+	if found is 0:
+		say "ERROR - Creature '[x]' not found. (setmonster)";
+
+
 
 Section x - Debug Commands - Not for release
 
@@ -5519,6 +5531,7 @@ Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
 Include Stag by Wahn.
+Include Thomas by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 
 
