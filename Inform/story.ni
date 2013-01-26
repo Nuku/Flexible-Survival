@@ -5519,6 +5519,7 @@ Include Alpha Fang Scenes by Nuku Valente.
 Include Elijah by Wahn.
 Include Eric by Wahn.
 Include Stag by Wahn.
+Include Thomas by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
 
 
