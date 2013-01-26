@@ -353,7 +353,7 @@ Carry out reciting:
 						now deerhappy is 0;
 					if hp of doctor matt is greater than 6:
 						if deerhappy is 1:
-							remove susan from play;
+							remove Susan from play;
 							now unusual creature is resolved;
 							repeat with y running from 1 to number of filled rows in table of random critters:
 								choose row y in table of random critters;
@@ -362,7 +362,7 @@ Carry out reciting:
 									now area entry is "Park";
 									break;
 						if deerhappy is 2:
-							move susan to Primary Lab;
+							move Susan to Primary Lab;
 							now unusual creature is resolved;
 			-- 59:	[Hospital Quest]
 				if the player's command matches "[number]":
@@ -847,7 +847,7 @@ Carry out reciting:
 						now Isolated Street is known;
 						now Back Alley is known;
 						now NoIntroduction is 1;
-					otherwise if hp of Christy >= 2:
+					if hp of Christy >= 2:
 						remove dragoness from play;
 					if hp of Christy is 90:
 						now Dragon Prey is unresolved;
