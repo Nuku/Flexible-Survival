@@ -110,7 +110,7 @@ When Play begins:
 	now desc entry is "[cfgdesc]";
 	now face entry is "drawn forward into a mechanical muzzle with whirring gears for teeth.  Atop your head, you have a pair of pointed ears made of shiny brass, adding to your foxish look";
 	now body entry is "thin and muscled, resembling that of one of the clockwork fox beings.  Your arms are thin and vulpine, leading down to small clawed paws.  Your legs are thin but filled with a mix of muscles and clockwork mechanisms, leading down to a pair of foxy paws";
-	now skin entry is "[one of]brass wire fur with gears poking through your metallic[or]lush wire fur over your[or]gears sticking through brass wire fur to cover your metallic[at random]";
+	now skin entry is "[one of]brass wire fur with gears poking through your metallic[or]lush wire fur over your brass[or]gears sticking through brass wire fur to cover your metallic[at random]";
 	now tail entry is "You have a mechanical fox tail that is covered in soft, metallic fur.  It whirrs and clicks softly with the sounds of the cogs and gears inside to make it move so beautifully.";
 	now cock entry is "[one of]clockwork[or]knotted[or]clockwork knotted[or]mechanically-driven[at random]";
 	now face change entry is "your nose and mouth pull forward into a foxy muzzle, but one filled with clockwork mechanics instead of flesh and bone.  Your teeth become small, clicking gears to chew your food or nibble at playmates.  You can feel your ears rise up the side of your head, becoming pointed cups of shiny brass";

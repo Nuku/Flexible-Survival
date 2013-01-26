@@ -1385,7 +1385,9 @@ To say jackalankhmagic:
 		increase dexterity of player by 2;
 		say "your dexterity has increased by 2!";
 		now jackalmantf is 4;
-	
+	if jackalmantf is 5:
+		say "You examine the strange ankh in your hand, but it seems to slip out of your fingers.  When you look for it, you can't seem to find it.  Oh well, you'd already asked Nermine to reverse its effects, so that's probably for the best.";
+		now carried of strange ankh is 0;
 
 
 An everyturn rule:
