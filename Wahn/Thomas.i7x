@@ -174,7 +174,7 @@ to say ThomasTalkMenu:
 	now description entry is "Talk a bit about this and that.";
 	now toggle entry is ThomasTalk rule;
 	choose a blank row in table of fucking options;
-	if (hp of Thomas is 2):
+	if (hp of Thomas is 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk him into sex as a mare";
 		now sortorder entry is 2;
