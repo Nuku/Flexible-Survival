@@ -5253,6 +5253,8 @@ Include Junkyard Events by Stripes.
 Include Campus Events by Stripes.
 Include Leonard Events by Stripes.
 Include Latex Quad Husky by Stripes.
+Include CEOutside by Stripes.
+Include CEPark by Stripes.
 Include New Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Mall Events by Sarokcat.

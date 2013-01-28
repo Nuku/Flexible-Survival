@@ -1,5 +1,5 @@
 Random Events by hiccup begins here.
-[Several events moved to other areas to spread them around a little.]
+[Several events transfered to CEOutside document in Stripes's folder.]
 
 "Adds several new random events that can trigger while exploring. These events have no effect on the gameplay, but they do add more detail to the game world."
 
@@ -33,16 +33,6 @@ Instead of Resolving a Politics:
 	now Politics is Resolved;
 
 
-School Spirit is a situation.
-the sarea of School Spirit is "Outside";
-
-Instead of Resolving a School Spirit:
-	say "While exploring the city, you discover a crashed school bus. There is no one on the bus, but you do find a dozen shredded cheerleader uniforms. Judging by the uniforms, the cheerleaders were from the local college. All the uniforms are ripped around the middle, almost as if the bellies of all the cheerleaders grew until they ripped through their uniforms. That's when you notice the dozen piles of afterbirth on the floor of the bus. A creature must have gotten on board the bus and impregnated every single cheerleader with its infectious seed. You quietly leave the bus and sneak away before the cheerleaders and their spawn return.";
-	increase the score by 1;
-	mallrecall;
-	now School Spirit is Resolved;
-
-
 Failed Survivor is a situation.
 the sarea of Failed Survivor is "Junkyard";
 
@@ -52,39 +42,6 @@ Instead of Resolving a Failed Survivor:
 	now Failed Survivor is Resolved;
 
 
-Another Survivor is a situation.
-the sarea of Another Survivor is "Outside";
-
-Instead of Resolving a Another Survivor:
-	say "While exploring the city, you spot another survivor. Before you get a chance to introduce yourself, a Hermaphrodite Gryphon swoops out of the sky, snatches up the other survivor, and flies away.";
-	increase the score by 1;
-	mallrecall;
-	now Another Survivor is Resolved;
-
-
-Masturbating Fox is a situation.
-the sarea of Masturbating Fox is "Outside";
-when play begins:
-	add Masturbating Fox to badspots of guy;
-	add Masturbating Fox to badspots of furry;
-
-Instead of Resolving a Masturbating Fox:
-	say "While exploring the city, you hear a strange sound in the distance.[line break][line break]Squeak! Squeak! Squeak![line break][line break]You follow the strange squeaking sound until you find it's source. The sound is coming from a latex fox creature that you find behind a pile of rubble. The creature is vigorously masturbating it's rubbery cock, creating a loud squeaking sound with each stroke. The creature notices your presence and you brace yourself for a fight. Thankfully the creature decides to ignore you and go back to masturbating. You sigh with relief and leave before it can change its mind.";
-	increase the score by 1;
-	mallrecall;
-	now Masturbating Fox is Resolved;
-
-
-Giant Egg is a situation.
-the sarea of Giant Egg is "Outside";
-
-Instead of Resolving a Giant Egg:
-	say "You search through the city streets, until you come across a giant egg. The egg is the size of a beach ball and it looks freshly laid. You quickly leave the area before its Mommy returns.";
-	increase the score by 1;
-	mallrecall;
-	now Giant Egg is Resolved;
-
-
 Tracks is a situation.
 the sarea of Tracks is "Plains";
 
@@ -92,5 +49,9 @@ Instead of Resolving a Tracks:
 	say "While exploring around some collapsing buildings, you discover a short trail of footprints leading through some mud. At first, the footprints are human, but the tracks slowly change until they look like they were made by hooves. You follow the tracks as long as you can, but you eventually lose the trail.";
 	increase the score by 1;
 	now Tracks is Resolved;
+
+
+[School Spirit, Another Survivor, Masturbating Fox and Giant Egg moved to CEO1 file.]
+
 		
 Random Events ends here.

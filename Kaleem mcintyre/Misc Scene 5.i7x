@@ -1,82 +1,15 @@
 Misc Scene 5 by Kaleem mcintyre begins here.
+[Several events transfered to CEO1 document in Stripes's folder.]
 
 
 Section 1 - Helping the Helpless
 
-Helping the Helpless is a situation.
-The sarea of Helping the Helpless is "Outside";
-
-Instead of resolving a Helping the Helpless:
-	say "Walking down the almost deserted streets of the city, you come across a lone Dalmatian figure scrapping through a bunch of trash cans. More than likely looking for food, the figure's black and white spotted tail hangs limply as the mutant doesn't see anything appetizing inside of the smelly waste container.";
-	if food is owned:
-		say "A part of you wants to feel sorry for the mutant, but is it your job to say every kitten, or canine in this case, stuck in a tree? (Y=yes, N=No)";
-		if player consents:
-			say "Whistling to the Dalmatian to get the cano-mutate's attention, you swallow nervously when you see the other's floppy ear flick and then the Dal's black-spotted face turn in your direction. You have all of a half second to realize that you may have made a slight mistake as you watch the other run over to you after looking at your outstretch hand holding onto a small parcel of food. Bracing yourself for impact you ready yourself to hit the asphalt, but get the surprise of all surprises when the Dalmatian creature simply skids to a stop two feet from your outstretch hand. Going down onto its haunches to beg up at you like a normal canine, the Dal whines pleadingly while staring you down with big soulful brown eyes.";
-			say "The whines of hunger that comes out of the other are almost heartbreaking for you to hear. Setting the food down in front of the anthro and then taking a step back you watch as the spotted creature quickly gobbles up the food as though it hadn't eaten in days. Knowing how rough things are here in this city, the Dal probably hadn't. When the other finishes, it turns its muzzle to look up at you adoringly and then gives you a happy bark before trotting off. You suddenly feel good about yourself for what you have done, even though you're slightly lacking on provisions as of now.";
-			increase morale of player by 5;
-			increase humanity of player by 12;
-			if humanity of player > 100, now humanity of player is 100;
-			delete food;
-			increase score by 10;
-		otherwise:
-			say "Shaking your head you turn away from the scavenging mongrel to make your way down the street some other way. It's not your business what others have to do to survive. You've currently got your own shit to deal.";
-	otherwise if chips is owned:
-		say "You know that you yourself don't have any food, but maybe some of the small snacks you have in your pocket will tide the creature over. It might not be much, but it's better than trash can food, right? (Y=Yes, N=No)";
-		if player consents:
-			say "Whistling to get the Dalmatian anthro's attention, you watch as it turns and then looks down to see what you put on the ground at your feet. Turning to step away from the cano-mutant, you're already moving off on your way just as your ears pick up the sound of charging footsteps going over to grasp your left behind treats. It might not have been much, but it was what you had after all. A sense of elation runs through you because of your gracious efforts.";
-			increase morale of player by 2;
-			increase humanity of player by 6;
-			delete chips;
-			if humanity of player > 100, now humanity of player is 100;
-			increase score by 5;
-		otherwise:
-			say "Knowing that you yourself are doing without you move along down the street, completely ignoring the black spotted mutant rustling through the garbage bin.";
-	otherwise:
-		say "Knowing that you yourself are doing without, you move along the street, ignoring the black-spotted mutant rustling through the garbage bin.";
-	mallrecall;
-	now Helping the Helpless is resolved;
+[Moved to CEO1 file.]
 
 
 Section 2 - The Pack
 
-The Pack is a situation.
-The sarea of The Pack is "Outside";
-When play begins:
-	add The Pack to badspots of furry;
-	add The Pack to badspots of guy;
-	add The Pack to badspots of girl;
-
-Instead of resolving a The Pack:
-	say "Running through the city streets, you look up to the grey clouds above just in time to hear as a clap of thunder resonate throughout the sky. Shivering because you know that you're about to be caught in a small shower you instinctively find yourself looking around for some kind of cover to wait out the incoming rain. Twisting your head from side to side you finally see a small shop with boarded up windows standing quietly between two tall trees. A second boom of thunder has you making your way over to the slightly cracked door of the building and then proceeding to knock down the door as you frantically hope to find suitable shelter inside.";
-	let bonus be (( the Strength of the player minus 10 ) divided by 2);
-	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
-	increase diceroll by bonus;
-	if diceroll is greater than 8:
-		say "Breaking into the front of the store, you find yourself encased in pitch black darkness just as a bolt of lightning lights up the sky. Turning to see that small droplets of rain are coming through the now opened door behind you, you swiftly move to shut the wood barrier before the inside area can get soaked. Once the door is closed, you find yourself breathing a sigh as you think about how safe you should be from the coming storm, however the feeling of security quickly abandons you as you hear a dark rumble come from around you. Slowly rolling a nervous eye towards your left side, you flinch as you hear someone striking a match. The darkened store brightens instantaneously as the unknown person lights a large candle and then picks up said candle by the holder it's placed into. Turning around to regard the other, you find yourself gasping slightly as you note the imposing figure of an Alpha Wolf standing in front of you, on two legs no less, with the same strong lupine features you have come to both know and slightly fear in this city. The other looks at you with uninterested grey eyes and you have to wonder if the other was the one to growl, that is, right before several dark forms slowly assemble around the candle-holding canine.";
-		say "'Who are you, stranger? What are you doing here?' The smooth and even tone from the Alpha Wolf makes you pause to think as you look notice more and more wolves gathering together around their leader. Many of them are slightly dirty, probably from the lack of working water in the city, and have tangled and matted fur running along their strong, bulky frames. The smell of musky canine seems to rise steadily inside of the small shop as the canines break free from the surrounding shadows to stand around their alpha until they form a wall between their leader and you. 'S-sorry, I-I just came to get out of the rain.' You say just as a booming roar of thunder strikes out overhead. You jump a little, but manage to calm down before your heart can leap into your throat. A hand pressing over your chest helps with this effort.";
-		say "'I see. You are welcome to say if you cause no trouble here.' The Alpha Wolf says somberly and you are quick to nod as you watch the other wolves around you growling and watching you with glowering eyes. 'So be it then,' This is the last the dominant male has to say to you before he turns and then heads up a flight of stairs you hadn't noticed beforehand. The assembled gathering of wolves watch you carefully for another minute as you look around for a place to wait out the storm before they all head up after their alpha. Many of them walk onto all fours like quadrupeds while others take a two-legged stance when heading upstairs, but all of them exclude and aura of viciousness about themselves making you very cautious of anything you might do while within the little shop. Not really knowing how or why this group of canines have all banded together, you don't take the time to bother caring as you hunker down to wait out the storm.";
-		say "Twenty minutes into your self-imposed siesta you hear the familiar noises of someone moaning coming from upstairs. Taking a guess as to what's happening you snort before burying your head between your shoulders with the full intention of ignoring the disturbance. It's only when you hear a female begin to yelp that your head snaps up and your senses go to blazing. Wondering why there was a woman making such noise, even though in the back of your subconscious you instinctively know why, you narrow your eyes as the desire to check things out upstairs courses through you. Should you really go to investigate? (Y=Yes, N=No)";
-		if player consents:
-			say "Carefully getting yourself up you stretch to get your bones back into their proper place before moving over to take the stairs that the Alpha Wolf and his pack had gone up."; 
-			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
-			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
-			increase diceroll by bonus;
-			if diceroll is greater than 10:
-				say "Thankfully your carefully placed footsteps keep you from making any noise as you head on up the building. You smirk slightly in triumph for your cat-like ability to be silent as you get to the second floor of the dilapidated shop. When you do though your eyes nearly bulge out of their sockets as there in the middle of the floor, surrounded by over a dozen wolves, is a man in his early thirties panting and gasping while slamming his ass back and forth against the groin of the Alpha Wolf. Thrusting himself into the human with a smooth set of motions the larger canine steadily works to drive his long red cock back and forth inside of the other male's backside, breaking through whatever resistance he might have found, as he swiftly works to change the male into a proper wolf. Confused as to the feminine shout that you had heard just now you tilt your head to the side in confusion, and then gasp silently as you watch the onset of breasts pushing out from the other male's body.";
-				say "Looking over the man, who is slowly becoming a female, you see that the unnamed human's skin is slowly being covered with a dark coat of fur of fur while at the same time [']her['] waist is narrowing itself down to become curvier. The next cry that comes from the she-male sounds almost completely feminine in vocalization as the other lifts hir head up to pant and then drool openly while whining as shi gives hirself over to her new alpha. The look of bliss on the other's face would not have been so bad had hir cock not been shrinking down to become nonexistent. Not wanting to see any more, you tentatively back up to move back down the steps so as not to having your peeping found out. Going back downstairs and listening to the strong howls of the wind coming from outside you hunker yourself down close to the door and then proceed to wait the storm out. Listening to the male upstairs yelping as he slowly becomes more and more feminine you try not to shudder as you imagine what it must be like for the other to be losing his masculinity. The pleased noises that the other makes seconds later make you think that the other doesn't mind so much as she is now receiving pleasure the likes that a regular human man could never dream. A resounding yip has you jumping slightly as you can just imagine that the new female wolf's ass has just spread enough to the Alpha Wolf to slip his engorged knot into her. That's not your problem though, you surmise because immediately after the rain lets up you promise to bolt of out of the little shop to get well away from this pack of mutants.";
-			otherwise:
-				say "You curse slightly as your feet make the floorboards squeak. You have only a second to regret your curious nature as something comes to the front of the stairs and then slams down into you forcing both you and it to tumble as you both fall down the stairwell.";
-				say "Upon groaning and then blinking to look up at what hit you, you find yourself gulping quietly as your eyes lock on to a drooling muzzle snarling down at you angrily. Acting on pure instinct you brace your foot underneath the wolf atop you and then kick with all of your might to shove the incensed canine away. With a loud yelp and then a yowl you have just enough time to breathe a sigh and then get up onto your feet to scramble for the front door of the shop before the canine is up and darting after you. Getting to the door and grabbing hold of the handle you throw open the wooden barrier right as the beast grabs your ass between its teeth. The hard bite that you receive makes you scream out loud which inadvertently summons some of the other wolves. Hearing the pack coming for you, you reach back a hand to swat the canine tugging at your tender rear in order to get it to release you.";
-				say "Thankfully, the wolf lets go of you, though not without taking a part of your pants with it, and then you speedily throw open the front door and head out into the pouring rain to get away. You don't take the time to care that you are getting soaked as you rush down the street. This will be better than being mauled by ferocious canines any day, you think while blinking through the veil of water coming down from the sky.";
-				decrease hp of player by 5;
-				infect "Feral Wolf";
-		otherwise:
-			say "Knowing better than to stick your nose in where it doesn't belong you settle yourself back down with a weary grunt and then close your eyes so that you can block out the noise coming from both upstairs and outside with the raging storm now seeming to pick up in intensity. The cries from the female soon become yips and whines and you hazard a guess as to what has just happened before ignoring the now crooning whimpers coming from upstairs. It really doesn't matter though since [']that['] sort of thing has become a natural occurrence in this city. By the time you've finished your nap the rain has let up outside. Picking yourself up to leave you find yourself just in time to watch the Alpha Wolf coming back down the stairs to check on you. Giving the other a cordial nod for his hospitality you make your way out of the front door just in time to miss thirteen other wolves come down to see about their alpha. One of them was limping slightly, but at the same time this particular lupine was panting happily as a long tail wagged wildly behind their backside. The sounds of something liquid dropping onto the ground from behind the other completely escaped your hearing as you are already five steps down the now wet street.";
-	otherwise:
-		say "Grunting as your shoulder bangs into the doorframe without causing it to open you curse and then shake your head as you try to prepare yourself for another ramming charge. However, the pitter patter of rain soon comes down around you and you end up getting drenched before you can make your second effort of it. Swearing and throwing an arm up to shield your head you move away from the door to find another spot to take cover in. Running as you do, coupled with the growing storm raging around you, you fail to hear a woman's cry coming from the derelict little shop. The yelping sound soon turns into a series of biting moans as the minutes pass, but by then you are already a block and a half away. Too far to hear or care.";
-	now The Pack is resolved;
+[Moved to CEO1 file.]
 
 
 Section 3 - Lady Surrounded by Butterflies

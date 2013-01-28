@@ -1,5 +1,5 @@
 New Events by Sarokcat begins here.
-[Abandoned Player moved to Warehouse area]
+[Several events transfered to CEO1 document in Stripes's folder.]
 
 "Adds a series of random events to Flexible Survival with several different outcomes."
 
@@ -45,34 +45,12 @@ Instead of Resolving a Military presence:
 
 Section 2- Cream truck
 
-Cream truck is a situation.
-when play begins:
-	add Cream truck to badspots of hermaphrodite;
-	add Cream truck to badspots of furry;
-
-Instead of Resolving a Cream truck:
-	say "An abandoned ice cream truck lies sitting here lonesomely in the middle of the street, you quickly investigate to see if any of the delicious treats are left.  Looking in the cooler in back you are disappointed to find all the ice cream has melted all over the place, covering the inside of the ice cream truck in sticky white stuff. Taking a whiff of a strange smell you investigate further, and Closer investigation determines that the sticky white stuff may not be ice cream after all, but just plain someone or something cream...  You might be able to find something useful here, but it would be messy, do you try?";
-	If player consents:
-		say "Carefully digging through the mess returns a few bottles of milk that doesn't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well.  Trying to scrape the stuff off while leaving the truck, you find the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
-		increase carried of gryphon milk by 2;
-		gryphonify;
-		now Cream truck is resolved;
-	otherwise:
-		say "Deciding it would be best to avoid any contact with whatever might be left in the truck, you continue on down the road, the truck soon lost in the distance behind you.";
-		now Cream truck is resolved;
-	mallrecall;
-
-
+[Moved to CEO1 file.]
 
 
 Section 3- Wyvern Flight
 
-Wyvern Flight is a situation
-
-Instead of Resolving a Wyvern Flight:
-	say "You spy a small group of Wyverns hauling off tables and chairs from a sidewalk cafe, apparently building a large nest somewhere nearby.  You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
-	mallrecall;
-	now Wyvern Flight is resolved;
+[Moved to CEO1 file.]
 
 
 Section 4- Abandoned player
@@ -321,20 +299,9 @@ Instead of resolving a ruined supplies:
 		Now ruined supplies is resolved;
 
 
-
-
 Section 17- Strange preacher
 
-Strange preacher is a situation.
-when play begins:
-	add Strange preacher to badspots of hermaphrodite;
-	add Strange preacher to badspots of furry;
-
-Instead of Resolving a Strange preacher:
-	say "Wandering the deserted streets, you hear what sounds like a loud voice from down the street a ways. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street.  Moving closer in case this is some kind of trick, you get a better look at the creature and finding yourself shaking your head in astonishment.  With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her legs spread giving you a good look at hir erect feline cock.  Behind hir though a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred panther lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach, Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch of the ground.  It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak. [line break] You realize as you have been staring at the strangeness of her form, you have hardly paid any attention to what she was actually saying, you pause to listen for a minute.  Listening to her speak, it quickly becomes obvious she is singing the praises of something called the church of the maternal beast, and someone she calls the Great Mother.  She appears to be trying to appeal to the infected by telling them to embrace the changes, and the new sexuality sweeping the city, but not to let it overwhelm them. She continues on in lewd detail about the things that one should be careful of doing, or else you might give in and lose yourself completely, her body shaking as she depicts several strange lewd acts to be avoided, and you can see her hind legs pumping her erect cock in the empty air eagerly as she continues to get more and more explicit in her descriptions. Shaking your head at the absurdity of it all, you leave the strange thing to its preaching, unsure if it even noticed you stopping to listen for a minute.";
-	mallrecall;
-	Now Strange preacher is resolved;
-
+[Moved to CEO1 file.]
 
 
 to piggyify:
