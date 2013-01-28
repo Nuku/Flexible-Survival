@@ -1,4 +1,5 @@
 Misc 6 by Kaleem mcintyre begins here.
+[Several events transfered to CEO1 document in Stripes's folder.]
 
 "Miscellaneous events to be added to Flexible survival."
 
@@ -26,18 +27,10 @@ Instead of resolving a Guess that Character One:
 	say "You stay to watch until the wolf arches, howls and then gushes his seed down into the calico's sucking throat before smirking and then turning around to walk away. Obviously this group of friends is very close, otherwise you don't think that the others would have stayed to watch the calico sucking off the wolf as they had without saying anything in conjecture. Had you turned around you would have seen the calico flip the wolf over and then press his nose into the other's rump in order to tongue fuck the lupine's upturned hole, but by then you are already on your way somewhere else. The howl of the wolf would stick in your mind for a while though.";
 	now Guess that Character One is resolved;
 
+
 Section 3 - Guess that Character Two
 
-Guess that Character Two is a situation.
-The sarea of Guess that Character Two is "Outside";
-When play begins:
-	Add Guess that Character Two to badspots of furry;
-	Add Guess that Character Two to badspots of hermaphrodite;
-
-Instead of resolving a Guess that Character Two:
-	say "Jumping out of the way you find yourself dodging a charging Minotaur just as the creature is hightailing it at top speeds in the direction you've just come from. Tilting your head at seeing the odd creature running so fast you wonder what the hell could be scaring the beast so bad, right before your answer comes in the form of a dominatrix clad hyena herm charging down the street with a whip in her hand. The woman, who can't be more than five foot eight inches tall, has on a black bustier, stiletto boots, and is cackling manically as she follows on the trail of the minotaur. Gaping slight at seeing the hyena actually frightening away a creature almost twice as big and two and half heads taller than hir you wonder what's up with that pair. Just before the woman is totally out of sight you have swear that you heard hir say something along the lines of 'Call me queen, darling!'";
-	mallrecall;
-	now Guess that Character Two is resolved;
+[Moved to CEO1 file.]
 
 
 Section 4 - Guess that Character Three

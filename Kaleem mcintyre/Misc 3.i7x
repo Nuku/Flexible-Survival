@@ -1,4 +1,5 @@
 Misc 3 by Kaleem mcintyre begins here.
+[Several events transfered to CEO1 document in Stripes's folder.]
 
 "Adds a series of random events to Flexible Survival."
 
@@ -68,17 +69,10 @@ Instead of resolving Dragon Boy:
 		say "Astonishingly enough the dragon seems to approve of your bravado as it smirks at you with a mouth full of one too many sharp fangs and then clasps its forearms together to give you a small bow. Blinking in awe you watch as the magnificently frightening creature slowly turns away from you, after rising back up, and then flies away, off to somewhere you'll probably never be privy to in this life. A sense of awe comes over you as you sigh and then deflate as your knees slowly weaken and then collapse, sending you down onto the sandy floor.";
 	now Dragon Boy is resolved;
 
+
 Section 5 - Grumpy Old Men
 
-Grumpy Old Men is a situation.
-The sarea of Grumpy Old Men is "Outside".
-
-Instead of resolving Grumpy Old Men:
-	say "While walking down the streets of the city you stop when your eyes catch the form of two old men, a tiger and wolf respectfully, arguing with each other while waving their hands up and down wildly at one another. Thinking that the two are about to fight you watch as they move right on down the street past you, completely ignoring you, while at the same time wondering if you should speak up to say anything to stop their argument. You find your words disappearing inside of your throat as you listen to the conversation of the two, if only in bits and pieces. 'Harry, you're too old be this cranky anymore.' The wolf says while walking on next to his friend. The lupine seems to be a bit embarrassed by the feline, but at the same time he's smiling all the while. 'I'll be too old when they put me in the grave. Until then, keep your fuzzy tail moving so we can find old Alma to see if we can borrow some of that ammunition of hers.' The tiger grumbles while twisting his head this way and that, as though looking for this [italic type]Alma[roman type] person right here, right now. 'Do you really think she survived all of this?' The wolf waves his hand around to denote the mess that the town has become and strangely enough the graying tiger gives the silver wolf a pointed look. 'Sure as hell do, just like you know. Hell, knowing her, she's probably taking in refuges!' The tiger lets out a roar of laughter before hissing and then kneeling down to rub at his lower back. In a heartbeat the wolf is right next to his companion, helping the other by offering a shoulder to the feline who maybe is a little too proud, or stubborn, to take.";
-	say "'Will you let me be! I can manage just fine. I've haven't gotten that old, damnit!' The tiger says even while taking the arm of his cohort. 'I know...I know, sure shot. However, if you won't let me help you, then who will you let tend to your ouchies?' The wolf seems to speak somewhat more softly at his friend. The tiger says nothing as he looks up into the bright eyes of his friend, before quickly turning his head to grumble something while using the wolf as a crutch. 'You keep this up and the next thing you know I'll be asking you to cook for me.' The tiger gruffs. The wolf only laughs though. 'Harry, I already do cook for you.' 'Yeah, but I don't have to ask for it just yet,' A playful smile crosses the striped feline muzzle and you have to blink to be sure that you are seeing correctly as the lupine seems to almost flush at the other's statement.";
-	say "The two men continue to walk down the street, the tiger slipping away from the wolf after he regains some of his balance, and then off the two go -- down the street and out of sight - with both still fussing at each other playfully while respective tails wrap tightly around each other. You can only shake your head as you hope that one day you'll be able to have a friend like that when you get to the age of those old men."; 
-	mallrecall;
-	now Grumpy Old Men is resolved;
+[Moved to CEO1 file.]
 
 
 Misc 3 ends here.

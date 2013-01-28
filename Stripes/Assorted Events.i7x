@@ -1,5 +1,5 @@
 Version 4 of Assorted Events by Stripes begins here.
-[version 4.1 - Dropped Handbag moved to Scavevents ]
+[version 4.2 - CatsAndDogs transfered to CEO1 document in Stripes's folder, B&R transfered here]
 
 "Adds a batch of random events to Flexible Survival scattered around the city."
 
@@ -97,14 +97,7 @@ Instead of resolving a Losing It:
 	Now Losing It is resolved;
 
 
-CatsandDogs is a situation.
-when play begins:
-	add CatsandDogs to badspots of furry;
-
-instead of resolving a CatsandDogs:
-	say "     As you travel through the city, you come across a pair of old apartment buildings side by side.  The windows are open and the tenants are yelling at one another.  One building appears to be populated entirely by cats and the other by dogs.  They are growling, yowling and making rude gestures at one another.  They jeer at one another and toss trash across the alley dividing their buildings.  Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them.  You make note of the location and remind yourself to keep away, finding another path around this neighbourhood.";
-	mallrecall;
-	now CatsandDogs is resolved;
+[CatsandDogs moved to CEO1 file]
 
 
 Tour Bus is a situation.  The level of Tour Bus is 6.
@@ -618,6 +611,17 @@ Instead of resolving a Beach Party:
 			say ".  You manage to keep your mind together enough to leave the dolphin girls and with their large dolphin toy to continue their partying.  As you walk back along the beach, you can hear a few cries of disappointment, but the giggling and playing starts up again moments afterwards.  You're quite sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
 	if dolphinflatablefight is 3 or dolphinflatablefight is 4:
 		say "     You manage to make a break for it, running away from the waterfront.  You can hear a few cries of disappointment, but the giggling and playing starts up moments afterwards.  You're sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
+
+
+Section 7 - Mall Events
+
+B&R is a situation.
+The sarea of B&R is "Mall";
+
+Instead of resolving a B&R:
+	say "     While roaming around through the sewers, you hear the sound of arguing voices coming towards you.  Being cautious, you duck into the shadows and watch the pair approach.  They are an odd pair of big, muscled brutes carrying large weapons.  The first is a warthog wearing shoulder pads and a torn, red vest, with several hand grenades within easy reach on it.  His sharp, white tusks, hoop snoot-ring and bone necklace give him a menacing appearance despite the purple mohawk and sunglasses.  The other is a rhino in a yellow wife-beater and cargo pants with a bandolier of bullets across his chest, as well as a grenade of his own.  While he clearly has a bit of a gut on him, his arms are even more muscled than his companion[apostrophe]s.";
+	say "     It[apostrophe]s hard to follow what exactly they[apostrophe]re arguing about as they pause near your hiding place.  Most of the time, it sounds like they[apostrophe]re searching for turtles, intent on violence, but the rest of the time they[apostrophe]re trying to remember an old cartoon they watched as kids.  Eventually, they make a decision on which way to go next and continue on.  Rather than interrupt the well-armed, volatile and clearly crazy duo, you quietly let them pass before moving on.";
+	Now B&R is resolved;
 
 
 Assorted Events ends here.

@@ -1,58 +1,14 @@
 Hyena Situations by Hellerhound begins here.
-[ Moved Intact Fountain to the College Campus]
+[Several events transfered to CEO1 document in Stripes's folder.]
 
 Section 1 - Hyena Kill
 
-Hyena Kill is a situation.
-
-instead of resolving Hyena Kill:
-	say "You come across a murder scene in the corner of one of the streets, blood spattered everywhere, on the walls, the sidewalk, the parked cars, and black spotted hair also. Powdered segments of bone are also scattered. It looks like one of the hyenas didn't go for the rape, but for the kill. Ouch. They must have really hated the person.";
-	say "You hope that isn't what they think of you.";
-	mallrecall;
-	now hyena kill is resolved;
+[Moved to CEO1 file]
 
 
 Section 2 - Panther Trap
 
-panther trap is a situation.
-when play begins:
-	add panther trap to badspots of hermaphrodite;
-	add panther trap to badspots of furry;
-
-instead of resolving a panther trap:
-	say "You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately the grey and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you would swear would be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";
-	if a random number between one and 20 < 12:
-		[puts Panther Taur as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Panther Taur":
-				now monster is y;
-				break;
-		[the felitaur heard]
-		say "A panther taur comes up behind you, its trap having fallen on you, and proceeds to use you.";
-		say "[felitaur rape]";
-	otherwise:
-		if a random chance of one in 3 succeeds:
-			let Q be a list of numbers;
-			repeat with X running from 1 to number of rows in table of random critters:
-				choose row X from the table of random critters;
-				if there is no area entry, next;
-				if name entry matches the text battleground, case insensitively:
-					add x to Q;
-			sort Q in random order;
-			repeat with Z running through Q:
-				choose row Z from the table of random critters;
-				if there is a name entry:
-					now monster is Z;
-				otherwise:
-					next;
-				break;
-			say "A nearby monster catches you in the felitaur's trap, and proceeds to fight you, in the process disrupting the rubble and freeing you.";
-			decrease the HP of the player by 10;
-			fight;
-			follow the turnpass rule;
-		otherwise:
-			say "Nobody shows up before you succeed at freeing yourself. Phew.";
+[Moved to CEO1 file]
 
 
 Section 3 - Intact Fountain
