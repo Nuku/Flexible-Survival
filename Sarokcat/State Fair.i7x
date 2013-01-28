@@ -1,4 +1,5 @@
-State Fair by Sarokcat begins here.
+Version 1 of State Fair by Sarokcat begins here.
+[Version 1.1 - Added convo note about Artemis]
 
 "Adds an adventuring area to Flexible Survival with a unhappy lion and a game."
 
@@ -25,6 +26,7 @@ Borisquest is a number that varies.
 Christyquest is a number that varies.
 Lastborisfucked is a number that varies. Lastborisfucked is usually 250.
 borisfucked is a number that varies. borisfucked is usually 0.
+BorisArtemistalk is a truth state that varies.  BorisArtemistalk is normally false.
 
 Boris the lion is a man.
 The description of Boris the lion is "Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair.  Even you recognize that the person is dressed up as  the (semi)famous Boris the lion suit.  Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic then any you suit you have ever seen before, a closer look shows there is no loose areas of skin on the costume, and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn[apostrophe]t a suit anymore, its Boris the lion!";
@@ -45,12 +47,14 @@ instead of conversing the Boris:
 		say "'Hey there and welcome to the... oh who am I kidding,' the lion costumed man says with a sigh, before raising one of his overlarge paws to rub at his face. 'Look I don't know who you are, or what you are doing here, but trust me, you probably don't want to be here. Heck I don't really want to be here anymore, but it's not like I can just leave.'  Seeing your slightly confused look he sighs and explains. 'Look it's like this, you see me?' he gestures at his plush furred form. 'I showed up for work early the other day, put on the costume, and now well. This is what I am, I can't even really remember my old name anymore, and I have a strange desire to hunt down that bastard Arthur the Antelope,' He growls for a minute, staring off into space, before seeming to come back to himself.";
 		say "'Gah see? I know and you know that there isn't really an Arthur the Antelope out there for me to hunt down, but it still gets to me,' the lion sighs heavily, 'So yeah you might as well just call me Boris now, seems more appropriate then anything else these days.' He pauses for a minute in thought, before shaking himself and continuing. 'So yeah, if you think this is strange, you really don't want to see what the rest of the fair is like.  Things have gotten wild in there, I swear I saw some sort of latex creatures hanging out near the house of wax, the fun house was taken over by some kind of crazy animalistic clowns,' Boris pauses for a minute to shudder at the thought of clowns, 'And to top it all off some of the fair prizes are running around on their own attacking people. Giant stuffed animals running around and jumping on people is definitely one of the weirder things I ever saw, course the fact that the people turned into more stuffed animals as well is pretty damn weird too if you ask me.'  Boris pauses for a second, before shaking his overlarge furred head, 'Just trust me on this, you really don't want to go out there.' His warning delivered, Boris the lion returns to leaning against the ticket booth and staring off into space, occasionally sighing.";
 		increase boristalk by 1;
-		stop the action;
-	if boristalk is 1:
+	otherwise if companion of player is rubber tigress and BorisArtemistalk is false:
+		say "     'Oh, you ended up bumping into her,' the lion says as he points to your feline companion.  'I spotted her poking around and felt bad for her.  None of the other critters running around would show her much interest and some of the other tigresses were downright mean about it.  I [if boristalk < 3]can[otherwise]could[end if] kind of sympathize with her situation, you know?  Anyhow, I'm glad she's got a friend.'  He leans down and pets the tigress's head with his oversized, plush paw, causing her to purr happily before snuggling up against you and weaving around your legs for more scritches from you.";
+		now BorisArtemistalk is true;
+	otherwise if boristalk is 1:
 		say "[one of]'Back again? don't say I didn't warn you.'[or]Seeming startled out of some inner fantasy, Boris looks around for a second before his eyes manage to focus on you, 'Hey kid, you seen an evil antelope go by here? Name of Arthur?'[or]'Heeey there! I'm Boris the lion! How can I help you today!'[or]'Hey there and welcome to the fair, please enjoy your stay with us.' he says absentmindedly.[or]'There's  poachers in the pride-lands again!'[or]'Strangely enough, it's cooler out here in fur than it was when it was a damn suit.'[or]'I knew I should have quit this job last month when I had the chance....'[or]'Watch out for the stuffed prizes, well unless you have some strange fantasy about being a plush toy,' Boris warns, 'If you do though... well you came to the right place,'[or]'You know, it's funny,' Boris says with a thoughtful expression 'I can't really remember the last time the fair was this busy.'[or]'There's plenty of food and stuff lying around in the fair' Boris comments, waving a half eaten hot dog at you, 'Just stay away from the cotton candy if you know what's good for you.'[or]'If you find a way out of this place, mind letting me know?' Boris says with a sigh, 'Got to be plenty of places that could use a new mascot out there.'[or] 'Pride life is the best!' Boris exclaims, before catching himself and sighing.[or]'Suffering Savannah!'[or]'Man I wish someone had been wearing the Christy the Lioness suit the other day...' he mutters to himself, before blushing and looking embarrassed.[or]'You aren't a poacher are you? I hate poachers' Boris says with a growl.[at random]";
-	if boristalk is 2:
+	otherwise if boristalk is 2:
 		say "'Any luck with helping me out with my little [']problem[']?' Boris asks you hopefully.";
-	if boristalk is 3:
+	otherwise if boristalk is 3:
 		say "'You are definitely the best friend ever, I can't believe how much better I feel now that you helped me out, if I can ever do anything to help you out you just let me know!' The happy lion says with a smile on his muzzle.";
 
 
