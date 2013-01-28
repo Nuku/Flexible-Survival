@@ -16,24 +16,19 @@ Instead of resolving a Poor Kitty:
 		say "     Intrigued, you look down at your feet and pick up one of the red cups at your feet.  Turning it around, you notice the cup in your hand has a large bite taken out of it, as if this feline's been slowly dining on them.  Cup still in hand, you head to the exit and look around.  You spot her hiding around the corner of a nearby booth.  She releases a soft, cautious mewl, eying the cup.  She pads out slowly towards you and mewls again.  Shall you [link]give her the cup (Y)[as]Y[end link] or [link]throw it away (N)[as]N[end link] to distract her?";
 		if the player consents:
 			say "     She looks up at you and slowly reaches out to take the cup into her muzzle.  Her smooth, rubbery mouth doesn't so much bite into it as absorb the portion her lips touch.  Her tongue slides the melting red plastic around in her mouth before swallowing it down[if skinname of player is listed in infections of Latexlist].  Seeing her do this is a little disconcerting, given your current nature, but she is careful to only take the cup into her mouth when she goes for the second bite[otherwise].  She takes rest of the cup into her mouth and it soon follows the first bite[end if].";
-			say "     After swallowing the last of it down, she nuzzles against your leg and purrs softly, giving a cute, cat-like mew.  You reach down and cautiously pet her head, rubbing the rubber tigress's ears.  She nuzzles against your touch, purring all the louder.";
-			say "     'You're just a big kitty, aren't you?' you say to her, getting another mew from her.  'You're a strange rubber tigress,' you muse.  'What can I call you?'  She can only reply with a mewl.  'Hmm... rubber tigress... RT... Artie?  No, Artemis.  How about Artemis, kitty?  Roman goddess of the hunt, wilderness and... uhhh... virginity.'  She seems pleased with this choice, giving a happy, squeaking mew and purring all the louder.  Having received a name from you, Artemis purrs and nuzzles at you happily.  It seems you've made a friend.  With her following, you go back into the concession stand and gather up a stack of cups for her and put them in your pack.";
-			increase carried of cup stack by 1;
-			increase score by 20;
-			now rubber tigress is tamed;
-			now hp of rubber tigress is 3;
-			now libido of rubber tigress is 20;
-			say "     (The rubber tigress is now tamed! You can make her your active pet by typing [bold type][link]pet rubber tigress[end link][roman type].  You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command.  Pets will lower the xp you gain from battle, but can gain levels themselves to be more useful in a scrap.  Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
-			now Poor Kitty is resolved;
+			say "     After swallowing the last of it down, she nuzzles against your leg and purrs softly, giving a cute, cat-like mew.  You reach down and cautiously pet her head, rubbing the rubber tigress's ears for a bit.  After petting her head for a while, you move to back off while she watches you go.";
+			increase score by 5;
+			now hp of rubber tigress is 1;
 		otherwise:
 			say "     You throw the several yards away and the tigress bounds over to it.  She gives it several playful bats with her paw, sending it skittering across the ground.  She hunkers down, hips and tail all atwitch as she creeps closer and then pounces.  She bites into the cup, her lips melting through the plastic.  As she's doing all this, you're backing away slowly and dash off around the corner.  You hear a soft, plaintive mewl in the distance, but that is all.";
-			now hp of rubber tigress is 1;
+			now hp of rubber tigress is 2;
+			now Poor Kitty is resolved;
 	otherwise if hp of rubber tigress is 1:
 		say "     While walking the midway you get this odd feeling that you're being watched.  You catch a bit of orange out of the corner of your eye, but it is gone by the time you look.  Noticing that you've been in this area before, you suspect you know what's up.  You continue nonchalantly while knowing that strange, neuter tigress is following you.  You consider your options, wondering if you should try offering her [link]another treat (Y)[as]y[end link] or just [link]drive her off (N)[as]n[end link].";
 		if the player consents:
 			say "     Continuing to walk along, you take some string you found and an empty water bottle out of your pack.  Keeping this out of sight, you tie the string around the neck of the bottle.  The next time you go around a corner, you hurry ahead and drop the bottle.  As your rubbery stalker comes around the corner, you tug at the string, making the bottle skitter a little.  She hunkers down and starts purring, her tail swishing as she shifts her weight before pouncing.  You tug the bottle a little further back, making her pursue it with soft swats of her padded paws.  Soon enough, you have her rolling on her back beside you, juggling the bottle on her paws as she purrs happily.  She plays with her toy for a while like this before biting down on it, eating the plastic in gooey bites.";
 			say "     After swallowing the last of it down, she spits out the loop of string and nuzzles at your leg.  She purrs softly, giving a cute, cat-like mew.  You reach down and cautiously pet her head, rubbing the rubber tigress's ears.  She nuzzles against your touch, purring all the louder.";
-			say "     'You're just a big kitty, aren't you?' you say to her, getting another mew from her.  'You're a strange rubber tigress,' you muse.  'What can I call you?'  She can only reply with a mewl.  'Hmm... rubber tigress... RT... Artie?  No, Artemis.  How about Artemis, kitty?  Roman goddess of the hunt, wilderness and... uhhh... virginity.'  She seems pleased with this choice, giving a happy, squeaking mew and purring all the louder.  Having received a name from you, Artemis purrs and nuzzles at you happily.  It seems you've made a friend.  With her following, you go back to the concession stand where you first found her, gather up a stack of cups for her and put them in your pack.";
+			say "     'You're just a big kitty, aren't you?' you say to her, getting another mew from her.  'You're certainly a strange rubber tigress,' you muse.  'What can I call you?'  She can only reply with a mewl.  'Hmm... rubber tigress... RT... Artie?  No, Artemis.  How about Artemis, kitty?  Roman goddess of the hunt, wilderness and... uhhh... virginity.'  She seems pleased with this choice, giving a happy, squeaking mew and purring all the louder.  Having received a name from you, Artemis purrs and nuzzles at you happily.  It seems you've made a friend.  With her following, you go back to the concession stand where you first found her, gather up a stack of cups for her and put them in your pack.";
 			increase carried of cup stack by 1;
 			increase score by 20;
 			now rubber tigress is tamed;
@@ -50,7 +45,7 @@ Instead of resolving a Poor Kitty:
 Section 2 - Artemis
 
 rubber tigress is a pet.  rubber tigress is a part of the player;
-The description of rubber tigress is "Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves.  Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly.  Malformed or incomplete for some reason, the rubber tigress cannot stand upright and lacks any gender of her own, unlike the rest of her kind.  Despite her female curves and strangely sexy booty, she has no genitals under her striped tail, only a small, crinkled hole for her anus.  Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[at random].";
+The description of rubber tigress is "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves.  Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly.  Malformed or incomplete for some reason, the rubber tigress cannot stand upright and lacks any gender of her own, unlike the rest of her kind.  Despite her female curves and strangely sexy booty, she has no genitals under her striped tail, only a small, crinkled hole for her anus.  Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[at random].";
 The weapon damage of rubber tigress is 5;
 The level of rubber tigress is 3;
 The Dexterity of rubber tigress is 16;
@@ -193,9 +188,18 @@ Section 5 - Food/Drink
 after using water bottle while companion of player is rubber tigress:
 	say "     After finishing off your drink, you notice Artemis looking up at you... or more appropriately your empty bottle.  You toss it to her and she [one of]chomps onto it, melting the plastic into clear goo and swallowing it down[or]pounces atop it, flattening it down before licking up one end and sliding it into her mouth whole to melt and slide down her throat[or]bats it around for a bit before eating it[at random].";
 
+after using dirty water while companion of player is rubber tigress:
+	say "     After finishing off your drink, you notice Artemis looking up at you... or more appropriately your empty bottle.  You toss it to her and she [one of]chomps onto it, melting the plastic into clear goo and swallowing it down[or]pounces atop it, flattening it down before licking up one end and sliding it into her mouth whole to melt and slide down her throat[or]bats it around for a bit before eating it[at random].";
+
 after using chips while companion of player is rubber tigress:
 	say "     From the time you first started opening your snack, [one of]Artemis's eyes have been watching you intently[or]Artemis has been lying down and acting nonchalant, but you can see the corner of her eye watching, waiting[or]Artemis's ears have perked up and she's been purring around your legs, mewling excitedly[at random].  Finished with the snack, you roll the wrapper into a ball and toss it to her.  She bats it out of the air and chases it for a bit before licking it up with her tongue.  It melts in her mouth and flows down her throat with a soft gulp.";
 
+
+[ hp of rubber tigress ]
+[ 0 = no encounter     ]
+[ 1 = fed once         ]
+[ 2 = refused          ]
+[ 3 = tamed            ]
 
 Section 6 - Endings
 
