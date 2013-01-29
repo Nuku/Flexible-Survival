@@ -3,7 +3,7 @@ Apartment 319 by Kaleem mcintyre begins here.
 Section 1 - Apartment 319
 
 Apartment 319 is a situation.
-Aid is a number that varies.
+AptAid is a number that varies.
 
 The sarea of Apartment 319 is "High";
 When play begins:
@@ -12,9 +12,9 @@ When play begins:
 	Add Apartment 319 to badspots of guy;
 
 Instead of resolving a Apartment 319:
-	if aid is 0:
+	if AptAid is 0:
 		Say "Briskly walking through the streets of the high rise you come across a man jogging down the streets. Not thinking much of him you step out of his way, being that he's going in the opposite direction of you. It's only when he's shot passed you that you realize that there is something strange about the other. But not being able to place it at the moment you simply shrug and go off about your way.";
-	If aid is 1 and ( guy is banned or hellspawn is banned or furry is banned or hermaphrodite is banned ):
+	If AptAid is 1 and ( guy is banned or hellspawn is banned or furry is banned or hermaphrodite is banned ):
 		say "Jogging down the side of the streets of the high rise district you end up bumping into someone. Not being able to stop yourself you flail around wildly to collect your balance only to end up collapsing on the other in spite of your attempts. Luckily whoever is in front of you is able to catch you weight before you end up dragging the both of you down onto the pavement. 'Whoa there, are you okay stranger?' The person holding you up, who just so happens to be a Dalmatian, asks with their dark brown eyes shining at you somewhat playfully.";
 		say "Nodding to the other you pull yourself away from them to stand on your own two feet and then, on a whim, look down to inspect the shirt the Dal is wearing, an oddity in this town with almost everyone running around half naked. What you see makes your senses slightly spark and quickly you tip your head up to ask the Dal if he is from station 86. 'Y-yes, I am. Who are you though?' The man wearing the blue firefighter's embroidered shirt takes a step back from you, yet in spite of this you give the Dalmatian the rundown of what's happening and who you just so happen to be. Watching the other's face go through a multitude of expression before stilling on surprise you can bet that he never imagined hearing this information when he woke up today. ";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -24,7 +24,7 @@ Instead of resolving a Apartment 319:
 		say "(This content requires the guy, hellspawn, furry and hermaphrodite flags.)[line break]";
 		now Apartment 319 is resolved;
 		now HomaruSearch is 4;
-	otherwise if aid is 1:
+	otherwise if AptAid is 1:
 		say "Finding the condominium that Homaru had told you about earlier you enter into the plush looking building and then head up the back stairwell on up to the third floor. Once there you quietly move through the hallway until you find the doorway marked with the numbers 319. Remembering that this is where one of the missing firefighters was [']supposed['] to be living at you knock on the door three times and then wait. As the wood barrier creaks open, ever so slightly, you find yourself nervously taking a step back when a voice seeps through the small crack of the doorway. 'Can I help you?";
 		say "Grunting low in your throat to try and suppress some of the unease that has gripped at your heart you tell the person who you are and then ask him if he happens to be one of the firefighters from station 86. 'Yes, but who are you?' The door opens a little more and you can faintly see a splash of black on white as a long snout peeks out. Informing the other know that you are friends with Kenaz, and that you are trying to find his coworkers, you watch as the door opens just a little more. What you see slightly amazes you as you find yourself looking into the fully transformed face of a Dalmatian mutant who is currently staring back at you somewhat unsurely.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -42,14 +42,14 @@ Instead of resolving a Apartment 319:
 		if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
 		if player consents:
 			say "Making the decision that whatever going on with Dagaz is going to [italic type]be[roman type] your problem as of now, you make plans to come back later on to in the evening to check up on the other man. Because whatever is going on, it's mighty suspicious![line break][line break]";
-			now aid is 2;
+			now AptAid is 2;
 			increase score by 1;
 		otherwise:
 			say "Deciding that it's not really much of your concern, as the Dalmatian looked as healthy as could be, despite his weird tramp stamp, you simply bow your head to the closed door and then turn to go about your way. You've done your civic duty for the day after all.";
 			now Homarusearch is 4;
 			now Apartment 319 is resolved;
 			increase score by 3;	
-	if aid is 2: 
+	if AptAid is 2: 
 		say "Hiding out within the Dal's condo for a couple of hours you go back to knock on Dagaz's door, only to find yourself freezing just as your fist is about to touch the wood when the sound of someone crying out in pain rushes across your hearing. Not exactly sure what's going on you press your ear to the door. The sound of something hard smacking into flesh and another sharp cry has you pulling back in confusion. When Dagaz's voice howls out in agony you are backing up to charge the door in an effort to force it open without weighing the consequences of your choice.";
 		say "The fact that the door wasn't exactly locked makes your entrance somewhat hap hazardous as you windup tumbling into the room with all the grace of a duck trying to break dance. Grunting when your knees meet the carpet you shake your head and then look up in indignation, only to blink in confusion as you spy Dagaz hanging from his ceiling in a sling between several burly looking creatures. Of the six present, from what a quick head count informs you of the numbers present, three of the mutants are hyenas, two are demons and one is something that you're not really sure about. The fact that five out of six of them have some very [']interesting['] weaponry in their hands has you raising an eye ridge ever so slowly as you silently wonder what kind of party you just stumbled onto.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
@@ -130,73 +130,73 @@ Instead of resolving a Apartment 319:
 										extend game by -8;
 								otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 									say "Having lost to the incubus you are swiftly picked up and then thrown headfirst out of the apartment. Landing on your head you can only lament your own weakness as you listen the front door slam shut behind your right before the sounds of someone being lashed and spanked start up from the other side of the closed door. A yowl follows the noise and tiredly you can only hope that Dagaz will be alright in there. You're definitely going to come see about him later before going back to Homaru.";
-									now aid is 3;
+									now AptAid is 3;
 									increase score by 2;
 									if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 									if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 								otherwise: 
 									say "Trying to run away winds up with you getting a boot to the rear by the incubus. Consequently this sends you flying into a wall on the other side of the doorway you had charged through. Smacking into the wall and then groaning you listen to the door slam shut before the sounds of someone being lashed and spanked start up from the other side of the closed door. A yowl follows the noise and tiredly you can only hope that Dagaz will be alright in there. You're definitely going to come see about him later before going back to Homaru.";
-									now aid is 3;
+									now AptAid is 3;
 									increase score by 2;
 									if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 									if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 							otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 								say "Having lost to the demon pair you find yourself swiftly tossed outside of the apartment onto your head. Grunting from the impact you mutter a few choice curses before tiredly getting up to shake yourself off. The sounds of yowls and cries that come from out of the now shut condo door break your heart but when you try to beat at the wood barrier to get inside again you find yourself getting burned when a strange crest appears on the doorframe. Maybe you should come back later to check on Dagaz? After all, this is probably going to stick with you a while, keeping you from looking for anymore of the firefighters.";
-								now aid is 3;
+								now AptAid is 3;
 								increase score by 2;
 								if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 								if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 							otherwise:
 								say "Trying to run you, you find yourself getting swiftly tossed outside of the apartment onto your head. Grunting from the impact you mutter a few choice curses before tiredly getting up to shake yourself off. The sounds of yowls and cries that come from out of the now shut condo door break your heart but when you try to beat at the wood barrier to get inside again you find yourself getting burned when a strange crest appears on the doorframe. Maybe you should come back later to check on Dagaz?";
-								now aid is 3;
+								now AptAid is 3;
 								increase score by 2;
 								if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 								if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 						otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 							say "Having lost to the demon pair you find yourself swiftly tossed outside of the apartment onto your head. Grunting from the impact you mutter a few choice curses before tiredly getting up to shake yourself off. The sounds of yowls and cries that come from out of the now shut condo door break your heart but when you try to beat at the wood barrier to get inside again you find yourself getting burned when a strange crest appears on the doorframe. Maybe you should come back later to check on Dagaz? After all, this is probably going to stick with you a while, keeping you from looking for anymore of the firefighters.";
-							now aid is 3;
+							now AptAid is 3;
 							increase score by 2;
 							if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 							if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 						otherwise:
 							say "Trying to run you, you find yourself getting swiftly tossed outside of the apartment onto your head. Grunting from the impact you mutter a few choice curses before tiredly getting up to shake yourself off. The sounds of yowls and cries that come from out of the now shut condo door break your heart but when you try to beat at the wood barrier to get inside again you find yourself getting burned when a strange crest appears on the doorframe. Maybe you should come back later to check on Dagaz?";
-							now aid is 3;
+							now AptAid is 3;
 							increase score by 2;
 							if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 							if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 					otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 						say "Getting hauled up by the hyenas and then casually tossed out of the open door, like a sack of dirty laundry, you end up grunting and then berating your own weakness when you listen to the apartment door slam behind you. Pulling yourself up and then growling you decide that coming back to check on Dagaz later on is a must, after you go and find some place to clean up the hyena gunk covering your chest, that is.";
-						now aid is 3;
+						now AptAid is 3;
 						increase score by 2;
 						if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 						if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 					otherwise:
 						say "Trying to run away you find yourself getting booted out of the apartment by the hyenas. Meeting the wall outside you end up pulling yourself up, a few minutes afterwards and then growling at you cowardliness. Turning your head to look back at the now shut apartment door you decide that coming back to check on Dagaz later on is a must, after you go and find some place to nurse your aching head";
-						now aid is 3;
+						now AptAid is 3;
 						increase score by 2;
 						if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 						if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 					say "Getting hauled up by the hyenas and then casually tossed out of the open door, like a sack of dirty laundry, you end up grunting and then berating your own weakness when you listen to the apartment door slam behind you. Pulling yourself up and then growling you decide that coming back to check on Dagaz later on is a must, after you go and find some place to clean up the hyena gunk covering your chest, that is.";
-					now aid is 3;
+					now AptAid is 3;
 					increase score by 2;
 					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 					if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 				otherwise:
 					say "Trying to run away you find yourself getting booted out of the apartment by the hyenas. Meeting the wall outside you end up pulling yourself up, a few minutes afterwards and then growling at you cowardliness. Turning your head to look back at the now shut apartment door you decide that coming back to check on Dagaz later on is a must, after you go and find some place to nurse your aching head";
-					now aid is 3;
+					now AptAid is 3;
 					increase score by 2;
 					if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 					if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 			otherwise if fightoutcome >= 20 and fightoutcome <= 29:
 				say "Getting hauled up by the hyenas and then casually tossed out of the open door, like a sack of dirty laundry, you end up grunting and then berating your own weakness when you listen to the apartment door slam behind you. Pulling yourself up and then growling you decide that coming back to check on Dagaz later on is a must, after you go and find some place to clean up the hyena gunk covering your chest, that is.";
-				now aid is 3;
+				now AptAid is 3;
 				increase score by 2;
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 			otherwise:
 				say "Trying to run away you find yourself getting booted out of the apartment by the hyenas. Meeting the wall outside you end up pulling yourself up, a few minutes afterwards and then growling at you cowardliness. Turning your head to look back at the now shut apartment door you decide that coming back to check on Dagaz later on is a must, after you go and find some place to nurse your aching head";
-				now aid is 3;
+				now AptAid is 3;
 				increase score by 2;
 				if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 				if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 						
@@ -206,7 +206,7 @@ Instead of resolving a Apartment 319:
 			increase score by 2;
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 	
-	if aid is 3:
+	if AptAid is 3:
 		say "Coming back to apartment 319 you worriedly knock on Dagaz's door while calling out for the other man. When a barking voice from the otherwise tells you to [italic type]shut up[roman type] you sigh happily as you realize that the Dalmatian is still very much alive. Healthy might be another story all together for when the Dalmatian opens the door you find that the other looks rather…rough. And that might be an understatement. Fur tangled and stuck into knots, eyes somewhat bleary, and cum soaked across his chest and torso, the firefighter looks like he had been through an orgy.";
 		say "'Well, if it isn't my supposed rescuer. Heh...uhm...' The other man looks somewhat conflicted as he rubs at his the back of his head while looking at you somewhat unsurely. Asking him if he's alright you watch as the Dalmatian nods at you before blushing somewhat sheepishly. 'Look, I appreciate everything you tried to do, but please, for my sake [italic type]don't[roman type] tell anybody about what happened the night before, ok?' Promising that you won't you get a bitten off chuckle as Dagaz looks to you with something akin to embarrassment written onto muzzle.";
 		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
