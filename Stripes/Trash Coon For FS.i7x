@@ -9,7 +9,10 @@ when play begins:
 	add { "Trash Coon" } to infections of girl;
 	add { "Trash Coon" } to infections of furry;
 
+no trashcoonsex is a number that varies.
+
 to say losetotrashcoon:
+	now notrashcoonsex is 0;
 	say "     The big coon laughs merrily as she grabs you and tosses you to the ground.  She pulls out a bottle of dirty water from where she was rummaging around in the trash.  As she strides back towards you, she fastidiously washes her paws with the water, then pushes you back down and brings her damp paws to your ";
 	if cocks of player > 0:
 		say "[if cocks of player > 1]cocks, stroking and caressing them to get you hard[otherwise]cock, stroking and caressing it to get you hard[end if].  Her nimble paws move back and forth from your throbbing maleness to your balls[if cunts of player is 1] and cunt[otherwise if cunts of player > 1]and cunts[end if].  After a little teasing, she decides you're ready for the main course and climbs atop you, bringing her wide hips and lowering her wet pussy to your face.  As she plunges her muzzle down over your cock, licking and sucking vigorously, you moan and take in her strong scent and the strength of her arousal overwhelms you.  You push your face up into her folds, licking and kissing at her dripping slit, making her chirr happily and suck harder in return.  She grinds down into your face, soaking you in her juices as she licks and sucks at your [if cocks of player > 1]cocks[otherwise]cock[end if] while fondling [if cunts of player > 1]your pussies[otherwise if cunts of player is 1]your pussy[otherwise]you[end if].  Her hot juices flow into your mouth and down your face.  Eventually, it all becomes too much and you buck beneath her, pumping your hot seed down her throat.  After her tasty treat, she raises her heavy body off of you and sends you on your way with a kiss.";
@@ -17,22 +20,30 @@ to say losetotrashcoon:
 		say "[if cunts of player > 1]pussies[otherwise]pussy[end if], stroking over your sensitive folds to get you to moan.  Her nimble fingers slip into you and begin to caress your [if cunts of player > 1]clits[otherwise]clit[end if] and inner walls.  After a little teasing, she decides you're ready for the main course and climbs atop you, bringing her wide hips and lowering her wet pussy to your face.  As she plunges her muzzle between your legs and starts licking your wet lips, you moan and take in her strong scent and the strength of her arousal overwhelms you.  You push your face up into her folds, licking and kissing at her dripping slit, making her chirr happily and dive her tongue deeper into you.  She grinds down into your face, soaking you in her juices as she licks and laps at your [if cunts of player > 1]cunts[otherwise]cunt[end if] while fingering you.  Her hot juices flow into your mouth and down your face.  Eventually, it all becomes too much and you buck beneath her, grinding your [if cunts of player > 1]pussies[otherwise]pussy[end if] against her muzzle and cumming hard.  After her tasty treat, she raises her heavy body off of you and sends you on your way with a kiss.";
 
 to say beatthetrashcoon:
+	let skipx be 0;
 	if bodyname of player is "Trash Coon" or facename of player is "Trash Coon":
+		now notrashcoonsex is 0;
 		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through.  Laying back against it, this gives you a lovely view of her pudgy raccoon body, awakening a lustful urge in you.  Her aroused scent mixes with that of the trash, which also seems strangely enticing and you cannot help yourself.  Tossing aside your gear, you pounce onto her bulky body and kiss her passionately.  A little surprised by the kiss after the fight, she wraps her arms around you and welcomes the affection.";
-	otherwise if libido of player > a random number between 50 and 150:
+	otherwise if notrashcoonsex > 2:
+		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through.  As with the others of her kind, you take this opportunity to turn and head off, leaving her behind.";
+	otherwise if libido of player > a random number between 30 and 130:
 		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through.  Laying back against it, this gives you a lovely view of her pudgy raccoon body, awakening a lustful urge in you.  Her aroused scent is heavy in the air, enticing you above the smell of the trash.  She is there for the taking, if you want her.";
 		if the player consents:
+			now notrashcoonsex is 0;
 			say "     Eying the horny coon, you decide to give in to your urges.  Tossing aside your gear, you pounce onto her bulky body and kiss her passionately.  A little surprised by the kiss after the fight, she wraps her arms around you and welcomes the affection.";
 		otherwise:
 			say "     Resisting the urge to roll around in the trash with the lusty raccoon, you turn and head off, leaving her behind.";
-			continue the action;
+			increase notrashcoonsex by 1;
+			let skipx be 1;
 	otherwise:
-		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through.  Deciding to make this opportunity, you turn and head off, leaving her behind.";
-		continue the action;
-	if cocks of player > 0:
+		say "     The bulky coon stumbles back from the final blow and collapses atop the pile of trash she was rummaging through.  Deciding to make use of this opportunity, you turn and head off, leaving her behind.";
+		let skipx be 1;
+	if cocks of player > 0 and skipx is 0:
 		say "     Your cock grows quite hard and throbs, soon slipping between her wet folds to dive into her needy pussy.  She chirrs in pleasure as you penetrate her and start thrusting.  With the cushion of her fat and the soft trash beneath her, you pound away vigorously, enjoying the soft sway of her body as you mate with her.  You kiss one another repeatedly and your paws wander up to her bosom to grope her big breasts [if breast size of player > 0]while she does the same to you[otherwise]while her paws squeeze and pull at your ass with each thrust[end if].  Your tongues slide around inside each other's mouths as the pace quickens until finally you drive hard into her, pumping your hot [cockname of player] semen into her and she orgasms powerfully in response.  Her quivering pussy milks and squeezes at your cock, drawing out you cum until you collapse panting atop her.  Spent now, you give her a final kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful mating.";
-	otherwise:
+	otherwise if cunts of player > 0 and skipx is 0:
 		say "     Your [if cunts of player > 1]pussies[otherwise]pussy[end if] grows drippingly wet and your clit throbs.  You bring a hand between her thighs, stroking and teasing her wet snatch.  She chirrs in pleasure as you dive a trio of fingers into her start pumping, and she quickly returns the favour by rubbing your sensitive folds and slipping a few fingers into you.  You kiss one another repeatedly while fingering one another.  Your tongues slide around inside each other's mouths as the pace quickens until finally you are each pumping vigorously into the other as you orgasm powerfully in response.  Your groins and hands are soaked in female cum as your pussies quiver and squeeze at the digits filling them until finally you collapse panting atop her softly padded body.  Satisfied now, you give her a final kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
+	otherwise if skipx is 0:
+		say "     Lacking much of a gender of your own, but still excited by the rotund female, you dive between her legs and start licking at her juicy cunt.  Her strong scent and the taste of her juices is very exciting.  You dive your tongue into her and rub her clit with your thumb, enjoying the chirring sounds of pleasure she's emitting.  You work her to an eventual climax that is quite powerful and leaves your face soaked in her cum.  You move atop her and give her a sticky kiss before climbing off and heading on your way, leaving her to rest in the trash after the lustful encounter.";
 
 to say trashcoondesc:
 	choose row monster from table of random critters;

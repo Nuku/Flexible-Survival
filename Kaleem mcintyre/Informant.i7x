@@ -169,7 +169,6 @@ carry out delaymilitary:
 
 Section 4 - Homaru Search
 
-HomaruAid is a number that varies.
 Dam is a number that varies.
 Homarusearching is a number that varies.
 Findfirefighter is a number that varies.
@@ -224,7 +223,7 @@ to say findfirefighter2:
 	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more'] 
 	say "Moving his sandwich over out of the way you watch as the informant pulls out a manila folder and then shuffles through it. 'Let's see, the next firefighter that might still be in the city should be at the [bold type]high rise district[roman type]. I believe in the golden temple complex. Don't ask me why they named the place as such. I'm still trying to get information on that on.' You close your mouth just as you were preparing to ask. Smirking up at you Homaru reaches up above the folder to hand you a slip of paper.[line break]";
 	say "Walking over to take the item in question you find three numbers looking up at you. [bold type]319[roman type]? 'That's the apartment number. In case you manage to somehow forget it.' Homaru teases and then closes the manila folder. Putting away his little information file you watch as the brown haired man returns to eating his sandwich, his whole demeanor having changed now that he's no longer focused on business.[line break]";
-	now homaruaid is 1;
+	now AptAid is 1;
 	now Apartment 319 is unresolved;
 	increase score by 4;
 	now Homarusearch is 3;
