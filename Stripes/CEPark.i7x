@@ -115,14 +115,14 @@ Section 10 - Groundskeepers cabin (by Sarokcat)
 
 to say cepark10:
 	say "While traveling through the park, you come across a small locked building set back in the vegetation, closer investigation allows you to find a small sign that someone knocked over, declaring it to be one of the park buildings and employees only.  Deciding that under the circumstances you really don[apostrophe]t care about the employees only rule, you search around the small building to try to find a way in, only to be frustrated at the way the building is locked up tight. Sighing you are eventually forced to go on your way, but maybe you will be back to try again later.";
-	remove 10 from cepark1list;
+	remove 10 from cepark2list;
 
 
 Section 11 - Badger sighting (by Sarokcat)
 
 to say cepark11:
 	say "While traveling happily through the park, you hear a growling and snarling noise from on the other side of one of the nearby bushes.  Taking a careful look over the bushes, you note that one of those striped skunkbeasts seems to be threatening one of the bears wandering the park. The bear seems intimidated for some reason and is backing off slowly, which is confusing since the beast doesn[apostrophe]t have its tail raised.  In fact, on closer inspection, the beast doesn[apostrophe] seem to have a skunk tail to raise, while it is striped its coloration is slightly different, and its build is considerably stockier.  It isn[apostrophe]t until it scrapes its long claws along the ground and growls at the bear sending it running, that you realize this is actually some kind of badger creature, and not a skunk after all!  After scaring the bear off the creature begins to scent the air and look around, he must be looking for you! You recall that badgers are one of the most dangerous and possessive burrowing creatures around, and realize that if he gets his hands on you he likely won[apostrophe]t let you go, you turn and flee into the park before he can track you down.";
-	remove 11 from cepark1list;
+	remove 11 from cepark2list;
 
 
 Section 12 - Empty jeep (by Sarokcat)
@@ -130,7 +130,7 @@ Section 12 - Empty jeep (by Sarokcat)
 to say cepark12:
 	say "While traveling through the park, you come across what is obviously a caretakers jeep, the off-road vehicle just sitting there in the middle of the area with its drivers side door wide open. Moving closer to investigate you realize a strange and powerful smell is coming from within the jeep, it smells like whoever was in the vehicle got sprayed by one of those wandering skunks.  Sadly you realize, with as much of the musk as was sprayed into the jeep, if you tried to take the vehicle, even if it worked you probably wouldn[apostrophe]t get far before turning into a skunk beast like you assume must have happened to the vehicles former owner. Sighing you continue on your way. ";
 	increase the score by 1;
-	remove 12 from cepark1list;
+	remove 12 from cepark2list;
 
 
 Section 13 - small fire (by Sarokcat)
@@ -138,7 +138,7 @@ Section 13 - small fire (by Sarokcat)
 to say cepark13:
 	say "While traveling through the park,  you come across an area where someone seems to have recently set a small fire, the fire is slowly burning in a pit of stones in what looks to be the start of a small campsite. Sadly it seems like the fire has almost burned itself out, but you see no signs of whoever or whatever started the fire in the first place.  Figuring it would probably be best to keep moving, just in case the fire attracts something dangerous, you continue along your way.";
 	increase the score by 1;
-	remove 13 from cepark1list;
+	remove 13 from cepark2list;
 
 
 Section 14 - Torn vegetation (by Sarokcat)
@@ -146,7 +146,7 @@ Section 14 - Torn vegetation (by Sarokcat)
 to say cepark14:
 	say "While traveling through the park, you come across an area where the vegetation is ripped and torn, and the ground is churned up and tossed around. You look around cautiously, but can[apostrophe]t see anything that could cause this level of devastation, nearby at least. Determining it seems safe for the minute at least, you move closer to the damaged area, and try to figure out what might have happened. From what little you can tell as an inexperienced observer, there seem to be two different types of rather large claw marks, and it seems likely that two of the infected beasts ended up fighting each other here.  Observing the amount of damage they day, you shudder for a minute and hurry on your way, surviving until the rescue seems harder every day.... ";
 	increase the score by 1;
-	remove 14 from cepark1list;
+	remove 14 from cepark2list;
 
 
 Section 15 - Abandoned picnic (by Sarokcat)
@@ -155,7 +155,7 @@ to say cepark15:
 	say "While traveling through the park, you come across a series of picnic tables set up for the casual parkgoer, normally this wouldn[apostrophe]t be worthy of note, except that it seems someone tried to set up a large picnic here on one of the tables fairly recently.  You look around and try calling out to whoever the other person might be, but all you find are some small signs of a scuffle not far away.  Sighing you look through the remains of the picnic, and while bugs and the outdoors have gotten to much of it, you manage to find some still sealed chips that you take with you.";
 	increase carried of chips by 1;
 	increase the score by 5;
-	remove 15 from cepark1list;
+	remove 15 from cepark2list;
 
 
 CEPark ends here.
