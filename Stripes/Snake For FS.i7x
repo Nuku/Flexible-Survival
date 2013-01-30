@@ -13,7 +13,7 @@ to say losetosnake:
 		say "     Giving in, you sag to your knees and submit to the giant serpent";
 	otherwise:
 		say "     Beaten, you sag to your knees, no longer able to resist the giant serpent";
-	if a random chance of 2 in 5 succeeds:
+	if a random chance of 2 in 5 succeeds and inasituation is false:
 		say ".  Determining its prey as now defenseless, the serpent quickly winds its body around you, squeezing you with its coils.  As it constricts you, it weakens you further by nipping and biting at you, seeping venom into your wounds.  You grow warm and woozy, and strangely aroused.  You start to moan as the snake's squeezing starts to feel more enjoyable and pleasing, so much so that you don't notice at first its mouth unhinging to open unnaturally wide as it prepares to satisfy a more literal hunger.";
 		if scalevalue of player < 4:				[man-sized or less]
 			say "     It is not until the snake's head is down over yours, its tongue sliding across your cheek as it tastes its prey, that you realize your true predicamment.  But it feels so good, so warm and tingly, that you find it hard to focus on struggling at all.  With your arms pinned to your sides and its coils crushing down on your limbs, there's little you can do to fight the inevitable.";
