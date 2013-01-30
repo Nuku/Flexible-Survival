@@ -1,4 +1,5 @@
 Version 1 of Tanuki by Nuku Valente begins here.
+[Version 1.1 - Fixes several potential size change bugs - Stripes]
 
 "Adds Tanuki to Flexible Survival"
 
@@ -100,6 +101,10 @@ check ballgrowing:
 	if facename of player is not "Tanuki", say "You need to have your head on right to do that." instead;
 
 carry out ballgrowing:
+	if cocks of player is 0:
+		say "Your tanuki magic forms  a set a balls for you, growing a tiny cock to go with them.";
+		now cocks of player is 0;
+		now cock length of player is 2;
 	increase cock width of player by a random number between 1 and 5;
 	say "Your tanuki magic surges down into your balls as they begin to swell rapidly! Your balls feel like they have become [ball size]!";
 
@@ -113,8 +118,11 @@ check ballshrinking:
 carry out ballshrinking:
 	decrease cock width of player by a random number between 1 and 5;
 	if cock width of player is less than 1:
+		say "You have no more balls!  Your [if cocks of player > 1]cocks go[otherwise]cock goes[end if] away as well for now!";
+		now cocks of player is 0;
+		now cock length of player is 0;
 		now cock width of player is 0;
-		say "You have no more balls!";
+		follow the cock descr rule;
 	otherwise:
 		say "Your tanuki magic surges down into your balls as they begin to shrink rapidly! Your balls feel like they have become [ball size]!";
 	
@@ -126,6 +134,10 @@ check cockgrowing:
 	if facename of player is not "Tanuki", say "You need to have your head on right to do that." instead;
 
 carry out cockgrowing:
+	if cocks of player is 0:
+		say "Your tanuki magic grows a cock for you as you form a tiny set a balls for yourself as well.";
+		now cocks of player is 0;
+		now cock width of player is 2;
 	increase cock length of player by a random number between 1 and 5;
 	follow the cock descr rule;
 	say "Your tanuki magic surges down into your male meat as it begins to swell rapidly! Your [descr] [cock of player] organ twitches excitedly!";
@@ -141,8 +153,10 @@ carry out cockshrinking:
 	decrease cock length of player by a random number between 1 and 5;
 	if cock length of player is less than 1:
 		now cock length of player is 0;
+		now cock width of player is 0;
 		now cocks of player is 0;
 		say "You have no more cock!";
+		follow the cock descr rule;
 	otherwise:
 		follow the cock descr rule;
 		say "Your tanuki magic surges down into your male meat as it begin to shrink rapidly! Your [descr] [cock of player] cock settles with a last twitch!";
@@ -155,6 +169,7 @@ check breastgrowing:
 	if facename of player is not "Tanuki", say "You need to have your head on right to do that." instead;
 
 carry out breastgrowing:
+	if breasts of player is 0, now breasts of player is 2;
 	increase breast size of player by a random number between 1 and 2;
 	if breast size of player is greater than 26, now breast size of player is 26;
 	follow the breast descr rule;
@@ -172,6 +187,7 @@ carry out breastshrinking:
 	if breast size of player is less than 1:
 		now breast size of player is 0;
 		say "You have no more breasts than nipples!";
+		follow the breast descr rule;
 	otherwise:
 		follow the breast descr rule;
 		say "Your tanuki magic surges up into your chest as it begin to shrink rapidly, leaving you with [descr] breasts!";
@@ -206,7 +222,7 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 8;
 	now cha entry is 19;
-	now sex entry is "Neither";     [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
+	now sex entry is "nochange";     [- Defines which sex the infection will try and make you. current options are "Male" "Female" "Both"-]
 	now hp entry is 64;            [- How many HP has the monster got? -]
 	now lev entry is 5;            [- Level of the Monster, you get this much hp if you win, or this much hp halved if you loose -]
 	now wdam entry is 10;            [-Amount of Damage monster Does when attacking.-]
