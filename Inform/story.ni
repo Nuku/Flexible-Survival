@@ -261,6 +261,40 @@ Definition: The player is submissive:
 	if "Submissive" is listed in feats of player, yes;
 	no;
 
+[pregnancy related checks]
+Definition: The player is impreg_ok:		[can the player become pregnant in general]
+	if "Sterile" is listed in feats of player, no;
+	if ( cunts of player > 0 or "MPreg" is listed in feats of player ), yes;
+	no;
+
+Definition: The player is impreg_able:		[can the player current be impregnated]
+	if "Sterile" is listed in feats of player, no;
+	if gestation of child > 0 or child is born, no;
+	if larvaegg is 2, no;
+	if ( cunts of player > 0 or "MPreg" is listed in feats of player ), yes;
+	no;
+
+Definition: The player is impreg_now:		[is the player currently pregnant]
+	if gestation of child > 0, yes;
+	no;
+
+[MPreg-pregnancy checks]
+Definition: The player is mpreg_ok:			[can the player become male-pregnant in general]
+	if "Sterile" is listed in feats of player, no;
+	if "MPreg" is listed in feats of player, yes;
+	no;
+
+Definition: The player is mpreg_able:		[can the player current be male-impregnated]
+	if "Sterile" is listed in feats of player, no;
+	if gestation of child > 0 or child is born, no;
+	if larvaegg is 2, no;
+	if "MPreg" is listed in feats of player, yes;
+	no;
+
+Definition: The player is mpreg_now:		[is the player currently male-impregnated]
+	if gestation of child > 0 and "MPreg" is listed in feats of player and cunts of player is 0, yes;
+	no;
+
 Definition: The player is perminfected:
 	if ( jackalmantf > 0 or jackalboytf > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
 	no;
@@ -4064,7 +4098,7 @@ This is the monster injury rule:
 	choose row monster from the table of random critters;
 	let per be ( monsterhp times 100 ) divided by hp entry;
 	if per is less than 10:
-		now descr is "[one of]on death[apostrophe]s door[or]almost defeated[or]barely mobile[at random]";
+		now descr is "[one of]on death's door[or]almost defeated[or]barely mobile[at random]";
 	otherwise if per is less than 40:
 		now descr is "[one of]wounded[or]bashed around[or]significantly harmed[at random]";
 	otherwise if per is less than 80:
@@ -4077,7 +4111,7 @@ This is the player injury rule:
 	choose row monster from the table of random critters;
 	let per be ( hp of the player times 100 ) divided by maxhp of the player;
 	if per is less than 10:
-		now descr is "[one of]on death[apostrophe]s door[or]almost defeated[or]barely mobile[at random]";
+		now descr is "[one of]on death's door[or]almost defeated[or]barely mobile[at random]";
 	otherwise if per is less than 40:
 		now descr is "[one of]wounded[or]bashed around[or]significantly harmed[at random]";
 	otherwise if per is less than 80:
