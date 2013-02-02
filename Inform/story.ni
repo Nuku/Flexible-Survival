@@ -1209,6 +1209,7 @@ flag is a kind of thing.
 A flag has a list of text called infections.
 A flag has a list of situations called badspots.
 A flag can be banned. A flag is usually not banned.
+A flag can be warded. A flag is usually not warded.
 Furry is a flag.
 Guy is a flag.
 Girl is a flag.
@@ -1503,6 +1504,8 @@ to ban menu:
 		now description entry is printed name of Q;
 		if q is banned:
 			now title entry is "BANNED";
+		if q is warded:
+			now title entry is "WARDED";
 		now toggle entry is flag ban rule;
 [	let z be the number of rows in table of combat items;
 	say "[Z].";]
@@ -1530,8 +1533,11 @@ This is the flag ban rule:
 			break;
 	if z is banned:
 		now z is not banned;
-	otherwise:
+	otherwise if z is warded:
 		now z is banned;
+		now z is not warded;
+	otherwise:
+		now z is warded;
 	decrease the menu depth by 1;
 	ban menu;
 
@@ -3492,6 +3498,12 @@ To fight:
 		if there is a lev entry:
 			if lev entry is greater than level of player plus levelwindow and hardmode is false:
 				next;
+			let skipit be 0;
+			repeat with s running through warded flags:
+				if name entry is listed in infections of s:
+					now skipit is 1;
+					break;
+			if skipit is 1, next;
 		otherwise:
 			next;
 		if area entry matches the text battleground:
