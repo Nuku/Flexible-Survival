@@ -1,10 +1,10 @@
 Version 1 of Francis by AGentlemanCalledB begins here.
-[Version 1 - Basic event, npc and location, partially prepared for expanded Rex content.]
+[Version 1.1 - Basic event, npc and location, partially prepared for expanded Rex content. Tweeks and minor fixes]
 "Adds a Male mutt NPC named François to the Flexible Survival game"
 
 Section 1 - Event
 
-Gourmet Treats is a situation.
+Gourmet Treats is a situation. The level of Gourmet Treats is 8.
 The sarea of Gourmet Treats is "High";
 
 when play begins:
@@ -89,31 +89,43 @@ to say BakeryGShep:
 			if name entry is "German Shepherd":
 				now monster is y;
 				break;
-		say "   With the first German Shepherd dealt with, you survey the room looking for you next opponent, but realize too late that one of the hounds is missing. Suddenly you are grabbed from behind, your arms twisted behind your back by the sneaky canine. You struggle as best you can against the shepherd, trying to break free from his grasp.";
-		attempttowait;
+		say "   With the first German Shepherd dealt with, you survey the room looking for you next opponent, but realize too late that one of the hounds is missing. Suddenly you are grabbed from behind, your arms twisted behind your back by the sneaky canine. You struggle as best you can against the shepherd, trying to break free from his grasp";
+		let escape be 0;
 		let playernum be a random number between 1 and strength of player;
-		let x be a random number between 1 and str entry;
-		if playernum < x:
-			say "   Unable to break out of his grip, your canine captor begins licking at the back of your neck and nibbling at your ears as the other two shepherds move towards you. While the two canines begins stripping you of your gear you continue struggling, desperate too break free, but the effort of your continued struggles begins too weigh on your stamina.";
-			attempttowait;
-			let playernum be a random number between 1 and (strength of player + stamina of player);
-			let x be a random number between 1 and (str entry + sta entry);
-			if playernum < x:
-				say "   Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if cocks of player > 0 and cunts of player > 0]sucking and licking at your rising cock and moistening pussy[otherwise if cocks of player > 0]sucking and licking at your rising cock[otherwise if cunts of player > 0]sucking and licking at your moistening cunt[otherwise]licking at you groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. This sexual assault all over your body quickly begins too build your arousal, you find yourself struggling to continue resisting your captor, when the teasing finally stops the shepherd behind you releases your arms and pushes you down to all fours, as he grips your hips with his pawlike hands and begins lining his knotted cock up with your [if cunts of player > 0]dripping pussy[otherwise]ass[end if] you realize this is your last chance too escape.";
-				attempttowait;
-				let playernum be a random number between 1 and (100 - libido of player);
-				let x be a random number between 1 and 100;
-				if playernum < x:
-					say "   Unfortunately your lust addled mind is unable too hold onto this fleeting though of escape, all you can do is whimper weakly as the canine above you begins too sink his meat into you. You feel him make one or two tentative thrusts into your [if cunts of player > 0]sex[otherwise]arse[end if], just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your [if cunts of player > 0]cunt[otherwise]rear[end if]. He doesn't waste any time, building up his pace to a energetic fucking, panting heavily in your ear as you feel a bulge at the base of his length start to swell and grow. With a soft growl he drives in one last time, howling out his pleasure as his knot rapidly swells with his climax, tying you beneath the possessive male. The sated canine slumps atop you not even bothering to support his own weight as pants sprawled on your back, shifting about while waiting impatiently for his knot to go down. As soon as he is able he pulls himself free, knot popping wetly from your [if cunts of player > 0]cunt[otherwise]rear[end if] and causing you to yelp in pain as you collapse on the ground.[impregchance]";
-					infect "German Shepherd";
-					attempttowait;
-					now fightoutcome is 21;
-		if fightoutcome >= 10 and fightoutcome <= 19:
+		let shepnum be a random number between 1 and str entry;
+		if playernum > shepnum: 
+			increase escape by 1;
+			say " and feels his grip weakening as a result.";
+		otherwise:
+			say ", but the shepherd simply chuckles at your effort, twisting your arm painfully as he tightens his grip.";
+		attempttowait;
+		say "   Unable to break out of his grip, your canine captor begins licking at the back of your neck and nibbling at your ears as the other two shepherds move towards you. While the two canines begins stripping you of your gear you continue struggling, desperate too break free, but the effort of your continued struggles begins too weigh on your stamina";
+		let playernum be a random number between 1 and (strength of player + stamina of player);
+		let shepnum be a random number between 1 and (str entry + sta entry);
+		if playernum > shepnum:
+			say ", fortunitly the same is true of your enemy and you feel his grip slipping[if escape is 1] futher[end if] as a result of your efforts.";
+			increase escape by 1;
+		otherwise:
+			say ", unfortunitly the same is not true of your enemy, despite your best efforts you make no headway.";
+		attempttowait;
+		if escape < 2:
+			say "   Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if cocks of player > 0 and cunts of player > 0]sucking and licking at your rising cock and moistening pussy[otherwise if cocks of player > 0]sucking and licking at your rising cock[otherwise if cunts of player > 0]sucking and licking at your moistening cunt[otherwise]licking at you groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. This sexual assault all over your body quickly begins too build your arousal, you find yourself struggling to continue resisting your captor, when the teasing finally stops the shepherd behind you releases your arms and pushes you down to all fours, as he grips your hips with his pawlike hands and begins lining his knotted cock up with your [if cunts of player > 0]dripping pussy[otherwise]ass[end if] you realize this is your last chance too escape.";
+			let playernum be a random number between 1 and (100 - libido of player);
+			let shepnum be a random number between 30 and 100;
+			if playernum > shepnum:
+				increase escape by 1;
+		if escape is 2:
 			say "   Gathering all your strength, you manage too break out of the shepherd's grip, pushing him aside you grab a nearby stool and smash it across his face, knocking him out cold. Without missing a beat you turn too face the remaining two canines and ready yourself for your next opponent.";
+		otherwise:
+			say "   Unfortunately your lust addled mind is unable too hold onto this fleeting though of escape, all you can do is whimper weakly as the canine above you begins too sink his meat into you. You feel him make one or two tentative thrusts into your [if cunts of player > 0]sex[otherwise]arse[end if], just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your [if cunts of player > 0]cunt[otherwise]rear[end if]. He doesn't waste any time, building up his pace to a energetic fucking, panting heavily in your ear as you feel a bulge at the base of his length start to swell and grow. With a soft growl he drives in one last time, howling out his pleasure as his knot rapidly swells with his climax, tying you beneath the possessive male. The sated canine slumps atop you not even bothering to support his own weight as pants sprawled on your back, shifting about while waiting impatiently for his knot to go down. As soon as he is able he pulls himself free, knot popping wetly from your [if cunts of player > 0]cunt[otherwise]rear[end if] and causing you to yelp in pain as you collapse on the ground.[impregchance]";
+			infect "German Shepherd";
+			attempttowait;
+			now fightoutcome is 21;
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		challenge "German Shepherd";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "   With another shepherd beaten you bring your attention too the final hound.";
 			challenge "German Shepherd";
-			if fightoutcome >= 10 and fightoutcome <= 19:
-				say "   With another shepherd beaten you bring your attention too the final hound.";
-				challenge "German Shepherd";
 
 to say BakeryChocLab:
 	challenge "Chocolate Lab";
@@ -152,6 +164,7 @@ The description of François is "[Françoisdesc]";
 The conversation of François is { "Numnum!" }.
 lastfuck of François is normally 555.
 understand "Francois" as François.
+understand "Francis" as François.
 
 instead of sniffing the François:
 	say "       François has a light male musk,  difficult to catch over the smells pervading the bakery.";
