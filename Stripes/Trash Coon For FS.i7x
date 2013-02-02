@@ -9,7 +9,7 @@ when play begins:
 	add { "Trash Coon" } to infections of girl;
 	add { "Trash Coon" } to infections of furry;
 
-no trashcoonsex is a number that varies.
+notrashcoonsex is a number that varies.
 
 to say losetotrashcoon:
 	now notrashcoonsex is 0;

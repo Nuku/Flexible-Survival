@@ -42,6 +42,7 @@ to say automatondesc:
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You come across a strange, metallic human.  It looks you over with its glowing eyes before striding off as if recognizing that you are not what it is searching for as you don't want to play with it.";
 		blank out the whole row;
+		now fightoutcome is 19;
 		now autogender is 0;
 		now combat abort is 1;
 	otherwise if girl is banned:

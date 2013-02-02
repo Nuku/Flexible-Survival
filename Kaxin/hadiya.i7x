@@ -149,7 +149,9 @@ instead of fucking hadiya:
 			attempttowait;
 			say "     She obviously is very pent up and wants to make sure that you'll be remembering her for a good long time after she's done with you.  The powerful thrusts of her hips just pounding your body against the wall, plunging the full length of her cock inside you, making you moan in obvious arousal at the feeling of warmth and fullness deep inside your bowels.  The pain mixes with pleasure, but you can only hold on and take it, helpless underneath the dominant hyena and her desires.  Her lust quickly rises to a fever pitch, and she finally unloads inside you.  Letting out a muffled cackle, she just hilts herself one last time.  Her cock pulses, firing hot sticky ropes of her seed deep inside you, staining the inner walls with her sticky hot seed.[mimpregchance]";
 			say "     Yanking her cock out, she gives your rump a firm slap.  'Pretty good, come back when I'm ready and you can help me out again,' she snarls, obviously done with you for now.";
-			if hp of Hadiya < 4, now hp of Hadiya is 4;
+			if hp of Hadiya < 4:
+				now the vmusings of Hadiya is "[hadiyamusing]";
+				now hp of Hadiya is 4;
 			hadiyahyenaify;
 		otherwise:
 			say "     After hearing that, she doesn't bother to waste time.  'Guess you'll just have to use your other end then.'  Placing one of her oversized paws on your shoulder and applying some of her natural hyena strength, she forces you down onto your knees in front of her. Your view is completely dominated by the sight of the swollen red flesh of her aroused length.  The scent of her feminine musk almost overpowering, you simply can't help yourself, beginning to nuzzle against the very tip.  Pressing your lips against the tapering tip to get a direct taste of her shaft, something that makes the hyena let out a satisfied little cackle.  'That's a good bitch, keep it up.'";

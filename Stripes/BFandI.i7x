@@ -1,5 +1,5 @@
-Version 3 of BFandI by Stripes begins here.
-
+Version 4 of BFandI by Stripes begins here.
+[version 4 - Flag and Marker listing added]
 "Creates the 'Brute Force and Ignorance' debugging commands to forcibly check on various data in the game.  This document also contains various data on the new player variables created to go with these and what the use and possible applications of the new column entries can include.";
 
 [ BFandI command list:
@@ -217,6 +217,36 @@ carry out bfanditesting4:
 		if z is unresolved, increase unressit by 1;
 	say "Total: [bold type][number of entries in tempsitlist][roman type] ([special-style-1][unressit][roman type]/[special-style-2][number of entries in tempsitlist - unressit][roman type]).  [bold type][scavsitnum][roman type] are scavevents.";
 
+
+[------------------------------------------------------------]
+
+[Listing flags and markers to show all critters.  Does not yet display flagged events.]
+
+bfanditesting5 is an action applying to one topic.
+understand "bfandi5" as bfanditesting5.
+
+carry out bfanditesting5:
+	say "[special-style-2]FLAGS:[roman type][line break]";
+	say "[bold type]Girl:[roman type] [infections of girl].";
+	say "[bold type]Guy:[roman type] [infections of guy].";
+	say "[bold type]Hermaphrodite:[roman type] [infections of hermaphrodite].";
+	say "[bold type]Furry:[roman type] [infections of furry].";
+	say "[bold type]Hellspawn:[roman type] [infections of hellspawn].";
+	say "[bold type]Humorous:[roman type] [infections of humorous].";
+	say "[line break]";
+	say "[special-style-1]MARKERS:[roman type][line break]";
+	say "[bold type]Tailweapon:[roman type] [infections of tailweapon].";
+	say "[bold type]Felinelist:[roman type] [infections of Felinelist].";
+	say "[bold type]Caninelist:[roman type] [infections of Caninelist].";
+	say "[bold type]Equinelist:[roman type] [infections of Equinelist].";
+	say "[bold type]Vulpinelist:[roman type] [infections of Vulpinelist].";
+	say "[bold type]Reptilelist:[roman type] [infections of Reptilelist].";
+	say "[bold type]Insectlist:[roman type] [infections of Insectlist].";
+	say "[bold type]Plantlist:[roman type] [infections of Plantlist].";
+	say "[bold type]Avianlist:[roman type] [infections of Avianlist].";
+	say "[bold type]Taurlist:[roman type] [infections of Taurlist].";
+	say "[bold type]Knotlist:[roman type] [infections of Knotlist].";
+	say "[bold type]Latexlist:[roman type] [infections of Latexlist].";
 
 
 BFandI ends here.

@@ -168,7 +168,7 @@ to say LarissaTFsex:		[Menu options to be added later as more scenes are compose
 
 [ cock/cunt size scaling:
 cock length > ( ( cunt length * 2) + cunt width + 2 )		:	over the limit
-cock length > ( cunt length + cunt width + 2			:	large
+cock length > ( cunt length + cunt width + 2 )			:	large
 cock length	< ( ( cunt length + cunt width + 1 ) / 3 )	:	small
 
 cum output scaling:

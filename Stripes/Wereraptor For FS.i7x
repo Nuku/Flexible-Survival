@@ -186,6 +186,7 @@ to say wereraptordesc:
 		say "     You spot a raptor-like creature looking at you from the distance.  It stares at you long with its amber eyes, twitches its claws.  'Clever girl,' it hisses before turning away, leaving you be.";
 		say "(Currently requires at least one of Guy or Girl content to be available.)[line break]";
 		blank out the whole row;
+		now fightoutcome is 19;
 		now combat abort is 1;
 		now wrmode is 0;
 	otherwise if wrcursestatus is 0 and girl is not banned:
@@ -338,7 +339,7 @@ this is the wereraptor curse rule:
 						increase hunger of player by 10;
 						increase libido of player by 20;
 						if libido of player > 100, now libido of player is 100;
-						decrease humanity of player by 10 + wrcurseholdback;
+						decrease humanity of player by 6 + wrcurseholdback;
 						wrcursesave;
 						now wrcursestatus is 5;
 						now wrcurseholdback is 0;

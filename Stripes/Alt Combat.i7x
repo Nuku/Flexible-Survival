@@ -23,6 +23,8 @@ fightoutcome is a number that varies.	[ Used to track the different outcomes of 
 absorb is a number that varies.           [ Used to track the damage absorbed by armour/shield/feats. ]
 damagein is a number that varies.		[ Used to pass the damage to the various aborbancy subroutines. ]
 damageout is a number that varies.		[ Used to receive the adjusted damage after using one of the absorbancy subroutines. ]
+velossaved is a truth state that varies.	[ Used to mark if Velos's last-minute save has been used this turn. ]
+velossavedyes is a truth state that varies. [ Used to mark if Velos has ever used his last-minute save.]
 
 [		fightoutcome			]
 [ 100 *	starting value			]
@@ -481,10 +483,18 @@ This is the flee rule:
 		otherwise if tailname of player is "Squid":
 			say "Turning around, you spray an inky cloud at your enemy before trying to escape.";
 			increase gascloud by 5;
+		otherwise if bodyname of player is "Corota":
+			say "Rustling your wings, you send a cloud of choking dust at your foe before you attempt your escape.";
+			increase gascloud by 5;
 		otherwise:
 			say "You release your cover cloud and try to escape.";
 			increase gascloud by 3;
 		increase combat bonus by gascloud;
+	if hp of Velos > 2 and scalevalue of player < 3:
+		if velosfleepenalty is false:
+			say "The added weight and discomfort of the heavy serpent inside you makes it a little harder to get away.";
+			now velosfleepenalty is true;
+		decrease combat bonus by ( 3 - scalevalue of player );
 	if hardmode is true and the combat bonus is less than -11:
 		now the combat bonus is -11;
 	if hardmode is false and the combat bonus is less than -9:
@@ -640,6 +650,12 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 			now avoidance is 1;
 	otherwise if "Black Belt" is listed in feats of player and a random chance of 1 in ( 10 - peppereyes ) succeeds:
 		say "You nimbly avoid the attack at the last moment!";
+		now avoidance is 1;
+	if avoidance is 0 and level of Velos > 2 and ( ( hp of player * 100 ) / maxhp of player ) < 10 and velossaved is false:
+		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddently, the [name entry] is started and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges.  'Boo.'  Stunned by this new foe, the [name entry] is thrown off balance for a moment.  By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep.  Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe.  This drives your opponent is back for a few moment's reprieve.[cycling]";
+		increase hp of player by 5;
+		now velossavedyes is true;
+		now velossaved is true;
 		now avoidance is 1;
 
 Book 4 - Standard Hit and Damage
