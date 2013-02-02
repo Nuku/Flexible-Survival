@@ -11,7 +11,7 @@ use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
 use MAX_NUM_STATIC_STRINGS of 55000.
-use ALLOC_CHUNK_SIZE of 125000.
+use ALLOC_CHUNK_SIZE of 130000.
 use MAX_OBJECTS of 1100.
 use MAX_ACTIONS of 300.
 use MAX_VERBS of 300.
@@ -25,7 +25,6 @@ Instead of sniffing something (called x):
 		say "It smells pretty normal for a/an [x].";
 	otherwise:
 		say "[scent of x][line break]";
-
 
 To say a/an (T - text):
 	let Txt be indexed text;
@@ -250,6 +249,7 @@ A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
 A situation has a text called sarea. The sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0.
+A situation has a number called minscore. The minscore of a situation is usually -2147483648.
 A featset is a kind of thing.
 inasituation is a truth state that varies.  inasituation is normally false.
 
@@ -264,14 +264,15 @@ Definition: The player is submissive:
 [pregnancy related checks]
 Definition: The player is impreg_ok:		[can the player become pregnant in general]
 	if "Sterile" is listed in feats of player, no;
-	if ( cunts of player > 0 or "MPreg" is listed in feats of player ), yes;
+	if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ), yes;
 	no;
+
 
 Definition: The player is impreg_able:		[can the player current be impregnated]
 	if "Sterile" is listed in feats of player, no;
 	if gestation of child > 0 or child is born, no;
 	if larvaegg is 2, no;
-	if ( cunts of player > 0 or "MPreg" is listed in feats of player ), yes;
+	if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ), yes;
 	no;
 
 Definition: The player is impreg_now:		[is the player currently pregnant]
@@ -288,12 +289,14 @@ Definition: The player is mpreg_able:		[can the player current be male-impregnat
 	if "Sterile" is listed in feats of player, no;
 	if gestation of child > 0 or child is born, no;
 	if larvaegg is 2, no;
+	if level of Velos is 1 and hp of Velos > 2, no;
 	if "MPreg" is listed in feats of player, yes;
 	no;
 
 Definition: The player is mpreg_now:		[is the player currently male-impregnated]
 	if gestation of child > 0 and "MPreg" is listed in feats of player and cunts of player is 0, yes;
 	no;
+
 
 Definition: The player is perminfected:
 	if ( jackalmantf > 0 or jackalboytf > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
@@ -302,7 +305,9 @@ Definition: The player is perminfected:
 Definition: A situation(called X) is available:
 	if x is resolved, no;
 	if x is close:
-		if hardmode is true:
+		if score >= minscore of x:
+			no;
+		otherwise if hardmode is true:
 			yes;
 		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):
 			yes;
@@ -312,10 +317,12 @@ Definition: A situation(called X) is close:
 	if ( sarea of X matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of X is "Allzones" or the sarea of x is "allzones" ) ):
 		yes;
 	no;
-	
+
 Definition: A scavevent(called X) is scavable:
 	if ( sarea of X matches the text battleground, case insensitively ) or ( sarea of X is "Allzones" or the sarea of X is "allzones" ):
-		if hardmode is true:
+		if score >= minscore of x:
+			no;
+		otherwise if hardmode is true:
 			yes;
 		otherwise if the level of X is less than (the level of the player plus levelwindow plus 1):
 			yes;
@@ -347,11 +354,13 @@ A person can be booked. A person can be bunkered. A person is usually not booked
 Definition: A person(Called X) is booked:
 	If x is the player, no;
 	If x is Trixie, no;
+	if x is Velos, no;
 	if the location of x is Grey Abbey Library, yes;
 	no;
 
 Definition: A person(Called X) is bunkered:
 	If x is the player, no;
+	if x is Velos, no;
 	if the location of x is Bunker, yes;
 	no;
 
@@ -1304,6 +1313,7 @@ carry out hunting:
 	let found be 0;
 	let sitfound be 0;
 	let foundbadtime be 0;
+	let scorefound be 0;
 	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed:		[hunted by the mouse collective]
 		repeat with y running from 1 to number of filled rows in table of random critters:
 			choose row y in table of random critters;
@@ -1442,6 +1452,10 @@ carry out hunting:
 						if printed name of z matches the text topic understood, case insensitively:
 							now sitfound is 1;
 					next;
+				if score < minscore of z:
+					if scorefound is 0:
+						if printed name of z matches the text topic understood, case insensitively:
+							now scorefound is 1;
 				if printed name of z matches the text topic understood, case insensitively:
 					say "It should be somewhere....";
 					now found is 1;
@@ -1481,6 +1495,8 @@ carry out hunting:
 		if found is 0:
 			if foundbadtime is 1:
 				say "[bold type]There doesn't seem to be any of them around right now...[roman type][line break]";
+			otherwise if scorefound is 0:
+				say "[bold type]You have not accomplished enough to find this yet...[roman type][line break]";
 			otherwise if sitfound is 0:
 				say "[bold type]You don't think what you're looking for can be found here...[roman type][line break]";
 			otherwise if sitfound is 1:
@@ -1588,6 +1604,7 @@ carry out navigating:
 				Fight;
 	otherwise:
 		say "You travel to [the noun], avoiding trouble as best you can.";
+	if hp of Velos > 2, move Velos to the noun;
 	move the player to the noun;
 	follow turnpass rule;
 
@@ -1856,6 +1873,8 @@ To Birth:
 To impregnate with (x - text):
 	if child is born or gestation of child is greater than 0 or "Sterile" is listed in feats of player or larvaegg is 2 or ( cunts of player is 0 and "MPreg" is not listed in feats of player ):
 		stop the action;
+	if cunts of player is 0 and "MPreg" is listed in feats of player and level of Velos is 1 and hp of Velos > 2:
+		stop the action;
 	if "Selective Mother" is listed in feats of player:
 		say "Do you wish to be impregnated with a/an [x] child?";
 		if the player consents:
@@ -1892,10 +1911,12 @@ To impregnate with (x - text):
 
 
 to say impregchance:		[to be used when either female or MPreg would work]
-	if ( cunts of player > 0 or "MPreg" is listed in feats of player ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
+	if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
+		if level of Velos > 0 and cunts of player is 0:
+			increase target by ( 3 - level of Velos );
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		choose row monster from the table of random critters;
@@ -1904,10 +1925,12 @@ to say impregchance:		[to be used when either female or MPreg would work]
 
 
 to say mimpregchance:		[to be used when only MPreg would work]
-	if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player and larvaegg is not 2:
+	if ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
+		if level of Velos > 0:
+			increase target by ( 3 - level of Velos );
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		choose row monster from the table of random critters;
@@ -1915,10 +1938,12 @@ to say mimpregchance:		[to be used when only MPreg would work]
 		now the libido of the player is (the libido of the player) / 2;
 
 to say mimpregchance with (x - text):		[to be used when only MPreg would work]
-	if "MPreg" is listed in feats of player and "Sterile" is not listed in feats of player and larvaegg is not 2:
+	if ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) and "Sterile" is not listed in feats of player and larvaegg is not 2:
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
+		if level of Velos > 0:
+			increase target by ( 3 - level of Velos );
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		if a random chance of 2 in target succeeds, impregnate with x;
@@ -1929,6 +1954,8 @@ to say mimpregchance with (x - text):		[to be used when only MPreg would work]
 		let target be 10;
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
+		if level of Velos > 0:
+			increase target by ( 3 - level of Velos );
 		if "Fertile" is listed in feats of player, decrease target by 3;
 		if inheat is true, decrease target by 3;
 		choose row monster from the table of random critters;
@@ -3727,7 +3754,7 @@ This is the explore rule:
 			now something is 1;
 			plot;
 			wait for any key;
-	if something is 0 and a random number from 1 to 20 is less than ( bonus + 8 ) and there is an unresolved situation :
+	if something is 0 and a random number from 1 to 20 is less than ( bonus + 8 ) and there is an unresolved situation:
 		let L be a random available situation;
 		If L is not nothing:
 			say "[one of]After wandering aimlessly for hours, you happen across[or]Following your faint memories, you manage to find[or]Following movement, you end up at[at random] [L].";
@@ -3787,6 +3814,9 @@ This is the turnpass rule:
 	follow the breast descr rule;
 	now gascloud is 0;
 	now fightstatus is 0;
+	if hp of Velos > 2:
+		if Velos is not in the location of the player:		[travelling w/player]
+			Now Velos is in the location of the player;
 	if breast size of player is greater than 26, now breast size of player is 26;
 	let oldlib be libido of player;
 	if libido of player is less than 100 and "Horny Bastard" is listed in feats of player:
@@ -4193,9 +4223,9 @@ This is the cock descr rule:
 	otherwise if cock length of player is less than 18:
 		now descr is "[one of]huge[or]heavy[or]ponderous[or]massive[or]forearm length[at random]";
 	otherwise if cock length of player is less than 25:
-		now descr is "[one of]giant[or]hulking[or]hypertrophied[or]elephantine[or]monstrous[at random]";
+		now descr is "[one of]giant[or]hulking[or]hypertrophied[or]elephantine[or]monstrous[or]towering[at random]";
 	otherwise:
-		now descr is "[one of]mammoth[or]gigantic[or]colossal[or]titanic[or]third leg[at random]";
+		now descr is "[one of]mammoth[or]gigantic[or]colossal[or]titanic[or]third leg[or]devastating[at random]";
 	now cock size desc of player is descr;
 	rule succeeds;
 
@@ -4218,6 +4248,25 @@ To say ball size:
 		otherwise:
 			say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
 		say " [one of]balls[or]testicles[or]gonads[at random]";
+
+to say cum load size of ( x - a person ):
+	if cock width of x > 0:
+		if cock width of x is less than 3:
+			say "[one of]piddling[or]tiny[or]miniscule[or]feeble[or]small[or]meager[at random]";
+		otherwise if cock width of x is less than 6:
+			say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
+		otherwise if cock width of x is less than 12:
+			say "[one of]triple-dose[or]half-cup[or]cupload[or]ample[or]above-average[or]generous[or]sizable[at random]";
+		otherwise if cock width of x is less than 16:
+			say "[one of]half-litre[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
+		otherwise if cock width of x is less than 20:
+			say "[one of]one-litre[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
+		otherwise if cock width of x is less than 25:
+			say "[one of]two-litre[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
+		otherwise if cock width of x is less than 32:
+			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
+		otherwise:
+			say "[one of]torrential[or]monumental[or]colossal[or]gigantic[or]immeasurable[or]devastating[or]near-unending[at random]";
 
 This is the cunt descr rule:
 	if cunt length of player is less than 3:
@@ -5533,6 +5582,7 @@ Include Candy Striper by Stripes.
 
 
 [NPCs]
+Include Velos by Blue Bishop.
 Include Stuck Dragon by Hiccup.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
@@ -5600,7 +5650,7 @@ Include Honey by Stripes.
 Include Artemis by Stripes.
 
 
-Book Start the Game
+Book - Start the Game
 
 instead of going somewhere while player is overburdened:
 	say "You are too over burdened to move. Drop some of that junk!";

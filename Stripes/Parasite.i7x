@@ -75,17 +75,19 @@ an everyturn rule:
 						increase humanity of player by 3;
 						decrease libido of player by 5;
 					if larvaexpel is 3:
-						say "     After enduring the squirming of the larva inside you and the strange, twisted urges you've been feeling because of it, you feel a painful jab and an uncomfortable weight in your [if cunts of player > 0]womb[otherwise]bowels[end if].  Making your way somewhere private, you groan in pain as your body pushes to expel the lump inside you.  Finally, you manage to push it out and are surprised to find it only more [if larvalaid < 2]thick goo[otherwise]egg goo[end if], but the parasite itself.  With it dead now after being prevented from fulfilling its life cycle repeatedly, you have managed to push it out, freeing you from its strange, parasitic hold.  It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end from which you suspect it released the [if larvalaid < 2]slimy goo[otherwise]egg slime[end if] into you.  While you'd rather have nothing more to do with the creature, you dispose of the larva in case the wasps would be drawn to its scent.";
+						say "     After enduring the squirming of the larva inside you and the strange, twisted urges you've been feeling because of it, you feel a painful jab and an uncomfortable weight in your [if cunts of player > 0]womb[otherwise]bowels[end if].  Making your way somewhere private, you groan in pain as your body pushes to expel the lump inside you.  Finally, you manage to push it out and are surprised to find it not only more [if larvalaid < 2]thick goo[otherwise]egg goo[end if], but the parasite itself.  With it dead now after being prevented from fulfilling its life cycle repeatedly, you have managed to push it out, freeing you from its strange, parasitic hold.  It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end from which you suspect it released the [if larvalaid < 2]slimy goo[otherwise]egg slime[end if] into you.  While you'd rather have nothing more to do with the creature, you dispose of the larva in case the wasps would be drawn to its scent.";
 						now insectlarva is false;
 						now larvacounter is 0;
 						now larvaegg is 0;
 						increase humanity of player by 10;
+						if humanity of player > 100, now humanity of player is 100;
 						now libido of player is libido of player / 2;
 						repeat with y running from 1 to number of filled rows in table of random critters:
 							choose row y in table of random critters;
 							if name entry is "Black Wasp":
 								now area entry is "nowhere";
 								now non-infectious entry is true;	[Wasps locked again]
+								break;
 				otherwise:
 					if hp of player < 1, now hp of player is 1;
 					say "     The larva's activity inside you becomes too much for you and following some strange instinct, you head off alone briefly and find an elevated, open spot and wait.  Soon enough, one of the black wasps is drawn in by your scent.  Feeling strangely aroused and having no more will to resist it, you readily give yourself up to the large large insect with a lustful moan.";

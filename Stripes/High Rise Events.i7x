@@ -218,6 +218,7 @@ to say doggyinfect:
 	if tempnum is 9:
 		infect "Cerberus";
 
+
 Section 4- Corporate Fat Cats
 
 Corporate Fat Cats is a situation.
@@ -227,11 +228,10 @@ when play begins:
 	add Corporate Fat Cats to badspots of furry;
 
 Instead of resolving a Corporate Fat Cats:
-	say "     You come across a pair of hefty felines on the steps of one of the many high-rise buildings.  Their business suits have mostly been removed and scattered around them.  One is a male black cat with white paws and a splash of white on his wide belly.  The other is a chubby Maine Coon tom with the thick, fluffy fur of the breed.  They are rolling around against one another, groping each other.  While stroking the black cat[apostrophe]s cock, the other cat goes on about looking forward to some asset growth.  The black cat nibbles at the portly Maine Coon[apostrophe]s ear, telling him how he wants to set up this merger and come out on top.  They continue to go on like this, bantering in corporate lingo while the black cat mounts the other while you walk off, leaving the fat cats to their [apostrophe]merger[apostrophe].";
+	say "     You come across a pair of hefty felines on the steps of one of the many high-rise buildings.  Their business suits have mostly been removed and scattered around them.  One is a male black cat with white paws and a splash of white on his wide belly.  The other is a chubby Maine Coon tom with the thick, fluffy fur of the breed.  They are rolling around against one another, groping each other.  While stroking the black cat's cock, the other cat goes on about looking forward to some asset growth.  The black cat nibbles at the portly Maine Coon's ear, telling him how he wants to set up this merger and come out on top.  They continue to go on like this, bantering in corporate lingo while the black cat mounts the other while you walk off, leaving the fat cats to their [']merger['].";
 	increase score by 1;
 	mallrecall;
 	Now Corporate Fat Cats is resolved;
-
 
 
 Section 5- Veterinary Hospital
