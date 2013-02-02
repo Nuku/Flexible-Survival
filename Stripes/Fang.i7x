@@ -200,6 +200,7 @@ to say fangsandrasex:
 		if the player consents:
 			say "[fangsub]";
 			now hp of Fang is 3;			[Fang becomes alpha]
+			now vmusedone of Fang is false;	[Open for fresh musings]
 			now libido of player is libido of player / 2;
 			infect "Feral Wolf";
 		otherwise:
@@ -444,6 +445,7 @@ instead of going outside from Bunker while ( lastFangfucked - turns >= 24 and hp
 	if the player consents:
 		say "[fangsub2]";
 		now hp of Fang is 4;			[Alpha Fang w/o Sandra]
+		now vmusedone of Fang is false;	[Open for fresh musings]
 		now libido of player is libido of player / 2;
 		infect "Feral Wolf";
 	otherwise:
@@ -488,23 +490,18 @@ to say fangsub2:
 
 to say fangdomfuck2:
 	say "     Deciding the wolf needs a good lesson to remind him that his place is beneath you, you keep him pinned down and climb atop him.  He whimpers softly, but raises his tail as you slide your hard cock under it.  He squirms a little, so you grip his neck harder and drive your shaft into his tailhole, spreading it open.  With him properly pinned and stuffed, you fuck the big wolf hard and fast.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	attempttowait;
 	say "     'You be a good beta now and submit to your alpha,' you growl in his ear as you pound away at him.  'You get fucked when I say you do.  You top when I say you do.  And if you forget that again, I'll go out there and find the tightest cock ring I can and I won't even let you cum unless I- say- so-!' you snarl, punctuating those final words with hard thrusts of your cock into him.  'I'll make you my slutty, omega bitch and then leave you with blue balls for weeks on end.'  Fang whimpers submissively and starts pushing into your thrusts, accepting him place beneath you with a soft rumble of 'You are alpha.'  You relax your grip of him, but keep pounding him hard and fast, until finally you cum hard, blasting your load into his bowels and the wolf cums hard in response, staining the floor with another puddle of sticky cum.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	attempttowait;
 	say "     Pleased with his submission to you again, you scritch his ears and ease your cock from his ass.  He pads around and nuzzles you, giving you affectionate licks on the cheek before dipping his head and licking your cock [if cunts of player > 0]and cunt[end if] clean while you rub his ears.  Deciding to have a little more fun, you grab the wolf's head and drive your shaft into his fanged muzzle, ordering him to suck you off.  The wolf dips his ears and whines softly, finding the task difficult with his lupine muzzle, but does his best for his alpha.  He is soon rewarded with a messy blast of your hot semen down his throat, which he laps up and swallows down obediently.  Satisfied, you scritch his ears and let him resume his post.";
 
 to say fangdomride2:
 	say "     Deciding the wolf needs to be shown who's in charge, you push him roughly over onto his back.  His feral legs squirm in the air as you hold him there and climb atop him, keeping a grip on his balls to rein him in while the other grips his throat.  You grind your pussy down over his cock, teasing his throbbing shaft and leaking your juices over it, but you keep him from thrusting into you.  With him properly pinned, you grind down onto him, further taunting the aroused wolf.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	say "     'You be a good beta now and submit to your alpha,' you growl in his ear as you slide your aroused pussy across this throbbing penis.  'You get fucked when I say you do.  You top when I say you do.  And if you forget that again, I'll go out there and find tightest cock ring I can and I won't even let you cum unless I- say- so-!' you snarl, slapping your dripping pussy against the wolf's swollen balls to emphasize those final words.  'I'll make you my slutty, omega bitch and then leave you with blue balls for weeks on end.'  Fang whimpers submissively and tilts his head back, baring his throat to you, accepting him place beneath you with a soft rumble of 'You are alpha.'  You shift your position and slide slowly down his cock, your cunt quivering in delight after having the thick wolf cock so tantalizingly close.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-	say "     You ride him hard and fast, needing this almost as much as he does after all that teasing.  His hard shaft throbs inside you, leaking precum into your hot pussy.  You knead the wolf's ballsac and push yourself down hard onto his knot, pushing it into you.  'These are mine,' you growl as you fondle his balls.  'And I'm going to take what I want from them when I want,' you rumble, clamping your pussy down firmly around his knot, enjoying his lustful howl as he blasts his thick semen into you, filling your womb with his load.  Panting for breath, you nibble along the wolf's throat while waiting for his knot to go down.";
-	if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-	if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
+	attempttowait;
+	say "     'You be a good beta now and submit to your alpha,' you growl in his ear as you slide your aroused pussy across this throbbing penis.  'You get fucked when I say you do.  You top when I say you do.  And if you forget that again, I'll go out there and find tightest cock ring I can and I won't even let you cum unless I- say- so-!' you snarl, slapping your dripping pussy against the wolf's swollen balls to emphasize those final words.  'I'll make you my slutty, omega bitch and then leave you with blue balls for weeks on end.'  Fang whimpers submissively and tilts his head back, baring his throat to you, accepting his place beneath you with a soft rumble of 'You are alpha.'  You shift your position and slide slowly down his cock, your cunt quivering in delight after having the thick wolf cock so tantalizingly close.";
+	attempttowait;
+	say "     You ride him hard and fast, needing this almost as much as he does after all that teasing.  His hard shaft throbs inside you, leaking precum into your hot pussy.  You knead the wolf's ballsac and push yourself down hard onto his knot, pushing it into you.  'These are mine,' you growl as you fondle his balls.  'And I'm going to take what I want from them when I want,' you rumble, clamping your pussy down firmly around his knot, enjoying his lustful howl as he blasts his thick semen into you, filling your womb with his load.  Panting for breath, you nibble along the wolf's throat while waiting for his knot to go down.[impregchance]";
+	attempttowait;
 	say "     Pleased with his submission to you again, you scritch his ears and ease yourself off his spent shaft.  He pads around and nuzzles you, giving you affectionate licks on the cheek before dipping his head and licking your leaking pussy clean while you rub his ears.  Deciding to have a little more fun, you grab the wolf's head and press his muzzle to your cunt, ordering him to lick it all up.  The wolf dips his ears obediently and sets his tongue to work, diving it into your hot, sticky muff.  His long, lupine tongue feels wonderful inside you and soon you're cumming again as he licks up as much of the load he filled you with as he can get.  Satisfied, you scritch his ears and let him resume his post.";
 
 to say fangalphasex2:

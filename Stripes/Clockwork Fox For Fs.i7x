@@ -69,6 +69,7 @@ to say cfgdesc:
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You come across a strange, mechanical fox.  The mechanical fox whirrs and clicks as it looks you over, eyes scanning you in some strange manner.  As if sensing something about you, it turns and heads off, somehow knowing you don't want to play with it.";
 		blank out the whole row;
+		now fightoutcome is 19;
 		now combat abort is 1;
 		now cfgmode is 0;
 	otherwise if guy is banned:
