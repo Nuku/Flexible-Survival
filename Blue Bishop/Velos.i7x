@@ -90,7 +90,7 @@ Instead of resolving Strange Serpent:
 
 Section 2 - Velos the AssSSSSssserpent
 
-Velos is a person.  Velos is in Bunker.
+Velos is a person.
 The description of Velos is "[velosdesc]";
 The conversation of Velos is { "Snipe." }.
 velospostmusings is a list of numbers that varies.  velospostmusings is usually {}.
