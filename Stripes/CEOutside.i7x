@@ -232,7 +232,7 @@ to say ceoutside10:
 	otherwise:
 		say "Deciding it would be best to avoid any contact with whatever might be left in the truck, you continue on down the road, the truck soon lost in the distance behind you.";
 	mallrecall;
-	remove 10 from ceoutside1list;
+	remove 10 from ceoutside2list;
 
 
 Section 11 - Wyvern Flight (by Sarokcat)
@@ -240,7 +240,7 @@ Section 11 - Wyvern Flight (by Sarokcat)
 to say ceoutside11:
 	say "You spy a small group of Wyverns hauling off tables and chairs from a sidewalk cafe, apparently building a large nest somewhere nearby.  You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
 	mallrecall;
-	remove 11 from ceoutside1list;
+	remove 11 from ceoutside2list;
 
 
 Section 12 - Strange preacher (by Sarokcat)
@@ -248,7 +248,7 @@ Section 12 - Strange preacher (by Sarokcat)
 to say ceoutside12:
 	say "Wandering the deserted streets, you hear what sounds like a loud voice from down the street a ways. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street.  Moving closer in case this is some kind of trick, you get a better look at the creature and finding yourself shaking your head in astonishment.  With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her legs spread giving you a good look at hir erect feline cock.  Behind hir though a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred panther lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach, Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch of the ground.  It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak. [line break] You realize as you have been staring at the strangeness of her form, you have hardly paid any attention to what she was actually saying, you pause to listen for a minute.  Listening to her speak, it quickly becomes obvious she is singing the praises of something called the church of the maternal beast, and someone she calls the Great Mother.  She appears to be trying to appeal to the infected by telling them to embrace the changes, and the new sexuality sweeping the city, but not to let it overwhelm them. She continues on in lewd detail about the things that one should be careful of doing, or else you might give in and lose yourself completely, her body shaking as she depicts several strange lewd acts to be avoided, and you can see her hind legs pumping her erect cock in the empty air eagerly as she continues to get more and more explicit in her descriptions. Shaking your head at the absurdity of it all, you leave the strange thing to its preaching, unsure if it even noticed you stopping to listen for a minute.";
 	mallrecall;
-	remove 12 from ceoutside1list;
+	remove 12 from ceoutside2list;
 
 
 Section 13 - Hyena Kill  (by Hellerhound)
@@ -257,7 +257,7 @@ to say ceoutside13:
 	say "You come across a murder scene in the corner of one of the streets, blood spattered everywhere, on the walls, the sidewalk, the parked cars, and black spotted hair also. Powdered segments of bone are also scattered. It looks like one of the hyenas didn't go for the rape, but for the kill. Ouch. They must have really hated the person.";
 	say "You hope that isn't what they think of you.";
 	mallrecall;
-	remove 13 from ceoutside1list;
+	remove 13 from ceoutside2list;
 
 
 Section 14 - Panther Trap  (by Hellerhound)
@@ -296,7 +296,7 @@ to say ceoutside14:
 			follow the turnpass rule;
 		otherwise:
 			say "Nobody shows up before you succeed at freeing yourself. Phew.";
-	remove 14 from ceoutside1list;
+	remove 14 from ceoutside2list;
 
 
 Section 15 - CatsandDogs (by Stripes)
@@ -304,7 +304,7 @@ Section 15 - CatsandDogs (by Stripes)
 to say ceoutside15:
 	say "     As you travel through the city, you come across a pair of old apartment buildings side by side.  The windows are open and the tenants are yelling at one another.  One building appears to be populated entirely by cats and the other by dogs.  They are growling, yowling and making rude gestures at one another.  They jeer at one another and toss trash across the alley dividing their buildings.  Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them.  You make note of the location and remind yourself to keep away, finding another path around this neighbourhood.";
 	mallrecall;
-	remove 15 from ceoutside1list;
+	remove 15 from ceoutside2list;
 
 
 CEOutside ends here.
