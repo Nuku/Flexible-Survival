@@ -1495,7 +1495,7 @@ carry out hunting:
 		if found is 0:
 			if foundbadtime is 1:
 				say "[bold type]There doesn't seem to be any of them around right now...[roman type][line break]";
-			otherwise if scorefound is 0:
+			otherwise if scorefound is 1:
 				say "[bold type]You have not accomplished enough to find this yet...[roman type][line break]";
 			otherwise if sitfound is 0:
 				say "[bold type]You don't think what you're looking for can be found here...[roman type][line break]";
@@ -5637,7 +5637,7 @@ Include Eric by Wahn.
 Include Stag by Wahn.
 Include Thomas by Wahn.
 Include RexxyEvent by AGentlemanCalledB.
-Include Francis by AGentlemanCalledB.
+[Include Francis by AGentlemanCalledB.]
 
 
 [Pets]

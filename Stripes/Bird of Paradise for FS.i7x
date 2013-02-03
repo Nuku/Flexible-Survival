@@ -95,7 +95,7 @@ bopsongcount is a number that varies.
 
 this is the bopsong rule:
 	choose row monster from the table of random critters;
-	say "The exotic bird's sexy dancing and singing is quite tantalizing, seeking to entice you into giving into her advances.  She flashes her breasts and juicy cunt at you, singing softly, alluring as she does.";
+	say "The exotic bird's sexy dancing and singing is quite tantalizing, seeking to entice you into giving into her advances.  She flashes her breasts and juicy cunt at you, singing softly and alluring as she does.";
 	let playernum be 150 + humanity of player - libido of player + ( level of player * 2 ) + cha entry;
 	let bopnum be 200 + ( lev entry * 2 ) + cha entry * 2;
 	if peppereyes > 0, decrease bopnum by 100;
@@ -113,6 +113,7 @@ this is the bopsong rule:
 	say "[special-style-1][playernum][roman type] vs [special-style-2][bopnum][roman type]: ";
 	if playernum >= bopnum:
 		say "As captivating and tantalizing as the large birds song and mating dance may be, you manage to avert your eyes and regain your senses.";
+		wait for any key;
 	otherwise:
 		let xx be ( lev entry + 10 ) / 10;			[ xx=1 unless hard mode or otherwise boosted]
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
@@ -126,7 +127,7 @@ this is the bopsong rule:
 			increase libido of player by a random number between 0 and 2;
 		if facename of player is listed in Infections of Avianlist:
 			increase libido of player by a random number between 0 and 2;
-		say "[if bodyname of player is listed in infections of Avianlist or facename of player is listed in infections of Avianlist]Your avian nature is particularly captivated by the exotically captivating [one of]bird[or]female[at random] before you and you start to sing back to her, starting to move in time with her dancing[end if]Unable to look away from the [one of]sexy[or]exotic[or]alluring[or]vibrant[or]colourful[at random] [one of]bird woman[or]avian[or]bird of paradise[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]join in her dance[or]stop and listen to her song[or]simply enjoy the musical song[purely at random].  The entire display drains some of your resistance, arousing you further and tempting you to give in and join in the bird's mating dance!  You take [special-style-2][dam][roman type] damage!";
+		say "[if bodyname of player is listed in infections of Avianlist or facename of player is listed in infections of Avianlist]Your avian nature is particularly captivated by the exotically captivating [one of]bird[or]female[at random] before you and you start to sing back to her, starting to move in time with her dancing[otherwise]Unable to look away from the [one of]sexy[or]exotic[or]alluring[or]vibrant[or]colourful[at random] [one of]bird woman[or]avian[or]bird of paradise[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]join in her dance[or]stop and listen to her song[or]simply enjoy the musical song[purely at random][end if].  The entire display drains some of your resistance, arousing you further and tempting you to give in and join in the bird's mating dance!  You take [special-style-2][dam][roman type] damage!";
 		decrease hp of the player by dam;
 		follow the player injury rule;
 		say "You are [descr][if hp of player > 0 and libido of player < 110] and it takes an effort of will to refocus your mind and break your gaze away from those deep eyes of hers[end if].";
