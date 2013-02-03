@@ -5572,6 +5572,7 @@ Include Manticore by Kaleem mcintyre.
 Include Minotaur by Kaleem mcintyre.
 Include Dalmatian by Kaleem mcintyre.
 Include Behemoth by Kaleem mcintyre.
+Include Goat Janitor by McRabid.
 Include Gels by Darthan.
 Include Coyote by Darthan.
 Include Mushroom Men by AGentlemanCalledB.
