@@ -305,7 +305,7 @@ Definition: The player is perminfected:
 Definition: A situation(called X) is available:
 	if x is resolved, no;
 	if x is close:
-		if score >= minscore of x:
+		if score < minscore of x:
 			no;
 		otherwise if hardmode is true:
 			yes;
@@ -320,7 +320,7 @@ Definition: A situation(called X) is close:
 
 Definition: A scavevent(called X) is scavable:
 	if ( sarea of X matches the text battleground, case insensitively ) or ( sarea of X is "Allzones" or the sarea of X is "allzones" ):
-		if score >= minscore of x:
+		if score < minscore of x:
 			no;
 		otherwise if hardmode is true:
 			yes;
@@ -5489,6 +5489,7 @@ Include Catgirl by Wahn.
 Include Sand Man by Wahn.
 Include Naiad by Wahn.
 Include Furling by Wahn.
+Include Spartan by Wahn.
 Include Ash Dragator for FS by Sweraptor.
 Include Ash Whelp For FS by Sweraptor.
 Include Male Peacock for FS By Lago Moro.
