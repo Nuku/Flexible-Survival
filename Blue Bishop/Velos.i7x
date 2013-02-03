@@ -70,15 +70,15 @@ Instead of resolving Strange Serpent:
 							now non-infectious entry is true;	[Wasps locked again]
 							break;
 				if the player consents:
-					say "     Quickly, you grab a hold of him, much to his surprise, and start trying to pull him free of you. Sadly, his form is too slick for you to get a good grip, and even when it seems you might even have some grip he doesn't budge, instead eliciting jolts of twisted pleasure across your form, until you inevitably relent.";
-					say "     'Ach, don't do that! I don't like this arrangement any more than you do, so let's please refrain from such ill-treatment. Maybe we should start on better footing, my name is Velos. Think of this as a great opportunity to make a new friend! ...Else I fear this arrangement might end up less comfortable than it could be.'";
+					say "     Quickly, you grab a hold of him, much to his surprise, and start trying to pull him free of you.  Sadly, his form is too slick for you to get a good grip, and even when it seems you might even have some grip he doesn't budge, instead eliciting jolts of twisted pleasure across your form, until you inevitably relent.";
+					say "     'Ach, don't do that!  I don't like this arrangement any more than you do, so let's please refrain from such ill-treatment.  Maybe we should start on better footing, my name is Velos.  Think of this as a great opportunity to make a new friend!  ...Else I fear this arrangement might end up less comfortable than it could be.'";
 					increase libido of player by 15;
 					if libido of player > 100, now libido of player is 100;
 				otherwise:
-					say "     'My apologies for the deception, it was quite necessary, I'm afraid.' You can determine a subtle frown from him under this faint light. 'My name is Velos, and I do hope you don't take this too personally, I'm as much a prisoner here as you are.' There's a slight sour tinge to that last statement, though at this point you're not sure if that's just another ruse on his part.";
+					say "     'My apologies for the deception, it was quite necessary, I'm afraid.'  You can determine a subtle frown from him under this faint light.  'My name is Velos, and I do hope you don't take this too personally, I'm as much a prisoner here as you are.'  There's a slight sour tinge to that last statement, though at this point you're not sure if that's just another ruse on his part.";
 					increase libido of player by 10;
 					if libido of player > 100, now libido of player is 100;
-				say "     'I doubt I will prove as much a burden as you would worry yourself over, but whilst you're running around it only seems fair to show me some of the sights. If you run into others, perhaps you should let me muse over them? Of course, you could always have me muse yourself, but otherwise I'll mind my own business in here. And with that...' He retreats once more into your bowels, leaving you to your own devices and the occasional irreverent twitching of your occupant. You slowly gather your thoughts as you return from whence you came.";
+				say "     'I doubt I will prove as much a burden as you would worry yourself over, but whilst you're running around it only seems fair to show me some of the sights.  If you run into others, perhaps you should let me [link]muse[at]muselist[end link] over them?  But otherwise, I'll mind my own business in here.  And with that...'  He retreats once more into your bowels, leaving you to your own devices and the occasional irreverent twitching of your occupant.  You slowly gather your thoughts as you return from whence you came.";
 				now level of Velos is 1;
 				now hp of Velos is 3;
 			otherwise:
@@ -113,11 +113,11 @@ to say velosdesc:
 	say "     A pure, pearl white in colour, his form seems scaled, though you're not sure if the scales are false, as you've never seen him shed them, to say nothing of the difficulty in determining its proper texture, given his perpetually slick frame.  Thankfully, the odourless lubricant is not overly abundant, and only becomes a slight mess around where it accumulates--particularly, your anal ring.";
 	say "     He generally doesn't like being touched all that much, but your occasional prodding does seem to offer a reciprocal sensation onto you, inferring that your senses are tied--at least at the base level.  This would also infer that any harm done to him would be received in kind, and it's unclear if it works both ways; that he feels what you feel.";
 	if level of velos is 1:
-		say "Demeanour-wise, he doesn't seem to regard you all that well, and is otherwise a little belligerent towards you.";
+		say "[italic type]Demeanour-wise, he doesn't seem to regard you all that well, and is otherwise a little belligerent towards you.[roman type]";
 	if level of velos is 2:
-		say "Demeanour-wise, he seems to regard you fairly well, and is a bit less perturbed by having himself be summoned before you.";
+		say "[italic type]Demeanour-wise, he seems to regard you fairly well, and is a bit less perturbed by having himself be summoned before you.[roman type]";
 	if level of velos is 3:
-		say "Demeanour-wise, he seems to put you in high regard, more than happy to be on the receiving end of your attention.";
+		say "[italic type]Demeanour-wise, he seems to put you in high regard, more than happy to be on the receiving end of your attention.[roman type]";
 
 
 Instead of conversing the Velos:
@@ -136,13 +136,13 @@ Instead of conversing the Velos:
 		now vpostmusenum is entry 1 of velospostmusings;
 		postmuse vpostmusenum;
 	otherwise if a random chance of 2 in 5 succeeds:
-		say "     '[one of][if location of player is Volcanic Cave]Ughh... it's terribly hot in here![otherwise if location of player is Volcanic Crater]Now the temperature almost bearable, but these wretched fumes are getting to me![otherwise if location of player is SlutRat Den]With you to support me, this place is almost comfortable.  But now we're back into the sewers again.  How is that progress?[otherwise]It's right freezing out here![end if][or]I'm feeling queasy already...[or]What's that over there?  Bring me a little closer... Yeah, nevermind, it was nothing.  My apologies.[or]You're probably curious as to how I can anchor myself within you and yet still hang out like this... a magician never shares his secrets![or]I sometimes long to eat on my own again...[or]Oh, I think I see a quarter on the ground!  Though I wager it'll be of little use.[or]Wait... Did you hear something?  Hm... Probably nothing.[or]Why is it that I sometimes feel like I'm the only sane person here?[at random]'";
+		say "     '[one of][if location of player is Volcanic Cave]Ughh... it's terribly hot in here!'[otherwise if location of player is Volcanic Crater]Now the temperature almost bearable, but these wretched fumes are getting to me!'[otherwise if location of player is SlutRat Den]With you to support me, this place is almost comfortable.  But now we're back into the sewers again.  How is that progress?'[otherwise]It's right freezing out here!'[end if][or]I'm feeling queasy already...'[or]What's that over there?  Bring me a little closer... Yeah, nevermind, it was nothing.  My apologies.'[or]You're probably curious as to how I can anchor myself within you and yet still hang out like this... a magician never shares his secrets!'[or]I sometimes long to eat on my own again...'[or]Oh, I think I see a quarter on the ground!  Though I wager it'll be of little use.'[or]Wait... Did you hear something?  Hm... Probably nothing.'[or]Why is it that I sometimes feel like I'm the only sane person here?'[at random]";
 	otherwise if level of Velos is 1:
-		say "     '[one of]Hope you're fond of playing tour guide, because I would very much prefer you take me around the place, perhaps letting me muse over other people--assuming they don't flee in terror, of course[or]Don't give me that look.  What do you want?[or]I assure you, if you're just going to stare at me, I'm just going to go right back in.[or]What?[or]No, I won't go away, stop asking.[or]If you gaze long into an abyss, the abyss will gaze back into you.[or]You have the worst eating habits.  Do you know that?[or]Try not to get raped too much; it's very disconcerting for me when it happens![or]Can I go back in now?[or]I'm sorry, I don't like this arrangement as much as you do.[or]You're stuck with me, so you'll just have to learn to deal with me.[at random]'";
+		say "     '[one of]Hope you're fond of playing tour guide, because I would very much prefer you take me around the place, perhaps letting me muse over other people--assuming they don't flee in terror, of course.'[or]Don't give me that look.  What do you want?'[or]I assure you, if you're just going to stare at me, I'm just going to go right back in.'[or]What?'[or]No, I won't go away, stop asking.'[or]If you gaze long into an abyss, the abyss will gaze back into you.'[or]You have the worst eating habits.  Do you know that?'[or]Try not to get raped too much; it's very disconcerting for me when it happens!'[or]Can I go back in now?'[or]I'm sorry, I don't like this arrangement as much as you do.'[or]You're stuck with me, so you'll just have to learn to deal with me.'[at random]";
 	otherwise if level of Velos is 2:
-		say "     '[one of]Things look like they're rubbish all over.  What are your plans?[or]I'm fairly certain things couldn't get any worse around here.[or]What do you wager is taking the military?[or]I really do wish I didn't need someone to carry me around, but I suppose my predicament could be worse...[or]You're not a bad kid... Unless you're doing something you shouldn't be when I'm not looking?[or]Try to stay out of trouble, please?[or]You have any idea how infuriating it is for me to watch all this happening and not be able to do anything about it?[or]Such desolation...[at random]'";
+		say "     '[one of]Things look like they're rubbish all over.  What are your plans?'[or]I'm fairly certain things couldn't get any worse around here.'[or]What do you wager is taking the military?'[or]I really do wish I didn't need someone to carry me around, but I suppose my predicament could be worse...'[or]You're not a bad kid... Unless you're doing something you shouldn't be when I'm not looking?'[or]Try to stay out of trouble, please?'[or]You have any idea how infuriating it is for me to watch all this happening and not be able to do anything about it?'[or]Such desolation...'[at random]";
 	otherwise if level of Velos is 3:
-		say "     '[one of]I hate to admit it, but I don't think I was going to linger on for much longer until you came along.[or]I'm glad it was you who found me.[or]Take care of yourself out there, and I'm not saying that because I must share your pain.[or]I don't care what you look like, I appreciate you for what's inside.  ...  Heh, sorry, that was quite the bad joke.[or]I'd try to make less of a mess of things if I could, really.[or]I'll probably be able to find someone else to have me carry around when this is through.  I-If that's what you want, I mean.[or]I feel a bit ill at ease when outside like this; I feel a lot safer when I'm inside...[or]Try to stay out of the sewers, terrible things scheme at its deepest depths.[or]I wish I could protect you as well as you for me.[at random]'";
+		say "     '[one of]I hate to admit it, but I don't think I was going to linger on for much longer until you came along.'[or]I'm glad it was you who found me.'[or]Take care of yourself out there, and I'm not saying that because I must share your pain.'[or]I don't care what you look like, I appreciate you for what's inside.  ...  Heh, sorry, that was quite the bad joke.'[or]I'd try to make less of a mess of things if I could, really.'[or]I'll probably be able to find someone else to have me carry around when this is through.  I-If that's what you want, I mean.'[or]I feel a bit ill at ease when outside like this; I feel a lot safer when I'm inside...'[or]Try to stay out of the sewers, terrible things scheme at its deepest depths.'[or]I wish I could protect you as well as you for me.'[at random]";
 
 
 instead of fucking the Velos:
@@ -865,38 +865,53 @@ to postmuse (x - a number ):
 	if x is -4:				[***Establish combat boon (Requires high favour)]
 		say "     'Hey... Freeloader as I am, I might be able to help you in a pinch if you get in a fight. I guess I could play as a last line of defense, but I'm not a very good fighter, and taking your enemy by surprise is about the most I can do.'";
 		now velossavedtalk is true;
+		remove -4 from velospostmusings;
 	otherwise if x is -3:		[***If player has multiple heads]
 		say "     'Hey, your other head there's giving me a dirty look. Cut that out, you!'";
 		now velosheadstalk is true;
+		remove -3 from velospostmusings;
 	otherwise if x is -2:		[***Random Elaboration (Req. Medium+ favour)]
 		say "     'Okay, I'm sorry that I more or less tricked you into having me.  But if I told you explicitly, you'd either refuse outright, or your judgment might be twisted by your libido and thusly render your consent useless.'";
 		now velosapology is true;
+		remove -2 from velospostmusings;
 	otherwise if x is -1:		[***If player has Reg. parasite in cunt:]
 		say "     'Hey, could you tell the guy in the other room to keep it down?  I'm not even going to ask where you got them; you have quite the peculiar luck.'";
 		now velosparasitetalk is true;
+		remove -1 from velospostmusings;
 	otherwise if x is 1:		[Sgt Alexander]
 		say "     'I have to apologize about before, really.  I've never been so angry in my life.  It's stupid nonsense like this that ensures the continued chaos... Uh, also, forget what I said about hallucinations, it's not important.  Regardless, it looks like we're on our own here for a while.'";
+		remove 1 from velospostmusings;
 	otherwise if x is 3:		[Dr. Moffatt]
 		say "     'You can--no doubt--imagine that I find it hard to trust a doctor whose desk is redundant to their chest.  I don't know, maybe she has good intent, but this blight has a habit of perverting even the best of intents.'";
+		remove 3 from velospostmusings;
 	otherwise if x is 4:		[Dr. Mouse]
 		say "     'I find it hard to trust anyone who's first question in the face of such a blight as this is [']How might I make use of this?[']  I'd exercise caution around that mouse fellow.'";
+		remove 4 from velospostmusings;
 	otherwise if x is 10:		[Harold]
 		say "     'We should go to that bar more often! Though I hate to admit it, the music feels kinda nice from the inside...' You can see a slight tinge of embarrassment across the serpent's face when he asks that.";
 [NOTE: A nice, subtle mechanic would be to set a trigger when the player enters the bar after this line triggers, wherein the player receives a bonus, free point of favour. Little touches like that are really add a bit to the experience.]
+		remove 10 from velospostmusings;
 	otherwise if x is 11:		[Hadiya]
 		say "     'What was up with that cross-looking hyena-lady?  You keep some strange company...  I kinda like her.'";
+		remove 11 from velospostmusings;
 	otherwise if x is 12:		[Philip]
 		say "     'Maybe I was a bit too hard on that swine fellow?  I'm sorry...  I guess it's a bit distracting when -my- circumstances appear substantially cleaner than someone else's.'";
+		remove 12 from velospostmusings;
 	otherwise if x is 14:		[Diego]
 		say "     'I'm still right steamed over that coyote.  Who does he think he is?  You know...' his expression shifts into something more sullen, 'I sometimes wonder if just rotting in that sewer was the better thing to do.  Maybe he's right, and I'm in no position to condemn him?  Bah, nevermind me...'";
+		remove 14 from velospostmusings;
 	otherwise if x is 15:		[Leonard]
 		say "     'You don't need me to warn you against that feline chap.  You might spend time with him and it might be fun for now, but you may someday find yourself doing something you regret--if you even have the will to feel it by then.'";
+		remove 15 from velospostmusings;
 	otherwise if x is 18:		[Beverly]
 		say "     'You think that Gerbil-lady just has an inherent fear of snakes?  Bah, maybe just talking ones that pop out of people's rear.  I won't contest that.'";
+		remove 18 from velospostmusings;
 	otherwise if x is 19:		[Christy w/UB]
 		say "     'You have some strange friends--myself notwithstanding--though I suppose that dragoness would explain some peculiar sensations that have been coming from you...'";
+		remove 19 from velospostmusings;
 	otherwise if x is 20:		[Nermine]
 		say "     'I'm sorry if I was grumpy when you were talking to that jackal-lady, and as much as I wish weren't this way there's no easy fix to my problem.  No book might contain what I've gone through...'";
+		remove 20 from velospostmusings;
 
 
 [	hp of Velos			]
