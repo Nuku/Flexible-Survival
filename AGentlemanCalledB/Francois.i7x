@@ -1,10 +1,10 @@
-Version 1 of François by AGentlemanCalledB begins here.
-[Version 1 - Basic event, npc and location, partially prepared for expanded Rex content.]
+Version 1 of Francois by AGentlemanCalledB begins here.
+[Version 1.1 - Basic event, npc and location, partially prepared for expanded Rex content. Tweeks and minor fixes]
 "Adds a Male mutt NPC named François to the Flexible Survival game"
 
 Section 1 - Event
 
-Gourmet Treats is a situation.
+Gourmet Treats is a situation. The level of Gourmet Treats is 8.
 The sarea of Gourmet Treats is "High";
 
 when play begins:
@@ -16,7 +16,7 @@ Instead of Resolving a Gourmet Treats:
 	if hp of Karen is 1:
 		say "   While traveling through the high rise district you come across what you can only assume is the strange bakery Karen mentioned. While the boarded up windows prevent you from seeing inside, the large sign above the door makes it clear that this is the place. The weathered sign reads Bone-Appetit, and features a rather plump cartoon canine in a chef's uniform. Eager too follow through with your plan too free yourself from Rex, you reach for the door handle. Slowly pulling the door open a crack, you peer inside the building, noticing some movement and groaning near the back counter you pause for a moment before steeling yourself and swinging the door open.";
 	otherwise:
-		say "   While traveling through the high rise district you come across a rather unusual looking building.While the boarded up windows prevent you from seeing inside, the large sign above the door proclaims the place to be some sort of pet bakery. The weathered sign reads Bone-Appetit, and features a rather plump cartoon canine in a chef's uniform. With the exception of the boarded up windows the exterior of the building appears relatively undamaged, thinking there may still be some useful supplies within you decide to step inside.";
+		say "   While traveling through the high rise district you come across a rather unusual looking building. While the boarded up windows prevent you from seeing inside, the large sign above the door proclaims the place to be some sort of pet bakery. The weathered sign reads Bone-Appetit, and features a rather plump cartoon canine in a chef's uniform. With the exception of the boarded up windows the exterior of the building appears relatively undamaged, thinking there may still be some useful supplies within you decide to step inside.";
 	attempttowait;
 	let T be a random number between 1 and 4;
 	say "   A bell above the door jingles loudly as you step inside, [if hp of Karen is 1]and the creatures in the back quickly turn their attention too the unexpected intruder[otherwise]and you curse yourself as you spot a group of creatures near the back of the store turning to investigate the source of the noise[end if]. Surveying the scene you quickly realize you've walked in on [if T is 1] a small pack of huskies[otherwise if T is 2] a group of german shepherds[otherwise if T is 3] a small pack of Chocolate Labs[otherwise if T is 4] a pair of Retrievers[end if] who have captured another creature, and are having some fun with their prize in the secluded bakery. As the canines move towards you there is a weak cry for help from their prisoner, a survivor? Realizing there is more at stake here then you originally expected, you drop your pack and prepare yourself for the approaching [if T is 1]huskies[otherwise if T is 2]german shepherds[otherwise if T is 3]Labs[otherwise if T is 4]Retrievers[end if].";
@@ -43,7 +43,7 @@ Instead of Resolving a Gourmet Treats:
 		move player to Bone-Appetit;
 		now battleground is "void";
 	otherwise if fightoutcome >= 10 and fightoutcome <= 19:
-		say "   Having finally dealt with the [if T is 1]huskies[otherwise if T is 2]german shepherds[otherwise if T is 3]Chocolate Labs[otherwise if T is 4]Retrievers[end if] you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out.   Satisfied with the security of the building you approach the canines' captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short stocky canine body and face, covered with a thick coat of fur in many different colours and patterns, there even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
+		say "   Having finally dealt with the [if T is 1]huskies[otherwise if T is 2]german shepherds[otherwise if T is 3]Chocolate Labs[otherwise if T is 4]Retrievers[end if] you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out.   Satisfied with the security of the building you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short stocky canine body and face, covered with a thick coat of fur in many different colours and patterns, there even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "   'Thank you, mon ami[if cunts of player > 0]e[end if]' the man says with a strong French accent, 'I shudder to imagine where I'd be had you not come along. I am François, master chef, at your service.'";[ Realizing that he must be the owner of this bakery you eagerly explain your situation to François, recounting the entire story that lead you to your position with Rex.
 		attempttowait;
 		say "   'Poor Karen, she was such a nice girl' François says after listening to your tale, 'but at least it's not too late to help you escape the same fate. I haven't a lot of supplies left, but I will gladly do what I can too help.' Without another word François gets too work, you can't help but grin as you remember the sign outside when he dons his apron and cap. Soon the entire bakery is filled with the warm scents of his work, and you find your mouth watering, despite knowing they are snacks intended for dogs.";
@@ -89,31 +89,43 @@ to say BakeryGShep:
 			if name entry is "German Shepherd":
 				now monster is y;
 				break;
-		say "   With the first German Shepherd dealt with, you survey the room looking for you next opponent, but realize too late that one of the hounds is missing. Suddenly you are grabbed from behind, your arms twisted behind your back by the sneaky canine. You struggle as best you can against the shepherd, trying to break free from his grasp.";
-		attempttowait;
+		say "   With the first German Shepherd dealt with, you survey the room looking for you next opponent, but realize too late that one of the hounds is missing. Suddenly you are grabbed from behind, your arms twisted behind your back by the sneaky canine. You struggle as best you can against the shepherd, trying to break free from his grasp";
+		let escape be 0;
 		let playernum be a random number between 1 and strength of player;
-		let x be a random number between 1 and str entry;
-		if playernum < x:
-			say "   Unable to break out of his grip, your canine captor begins licking at the back of your neck and nibbling at your ears as the other two shepherds move towards you. While the two canines begins stripping you of your gear you continue struggling, desperate too break free, but the effort of your continued struggles begins too weigh on your stamina.";
-			attempttowait;
-			let playernum be a random number between 1 and (strength of player + stamina of player);
-			let x be a random number between 1 and (str entry + sta entry);
-			if playernum < x:
-				say "   Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if cocks of player > 0 and cunts of player > 0]sucking and licking at your rising cock and moistening pussy[otherwise if cocks of player > 0]sucking and licking at your rising cock[otherwise if cunts of player > 0]sucking and licking at your moistening cunt[otherwise]licking at you groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. This sexual assault all over your body quickly begins too build your arousal, you find yourself struggling to continue resisting your captor, when the teasing finally stops the shepherd behind you releases your arms and pushes you down to all fours, as he grips your hips with his pawlike hands and begins lining his knotted cock up with your [if cunts of player > 0]dripping pussy[otherwise]ass[end if] you realize this is your last chance too escape.";
-				attempttowait;
-				let playernum be a random number between 1 and (100 - libido of player);
-				let x be a random number between 1 and 100;
-				if playernum < x:
-					say "   Unfortunately your lust addled mind is unable too hold onto this fleeting though of escape, all you can do is whimper weakly as the canine above you begins too sink his meat into you. You feel him make one or two tentative thrusts into your [if cunts of player > 0]sex[otherwise]arse[end if], just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your [if cunts of player > 0]cunt[otherwise]rear[end if]. He doesn't waste any time, building up his pace to a energetic fucking, panting heavily in your ear as you feel a bulge at the base of his length start to swell and grow. With a soft growl he drives in one last time, howling out his pleasure as his knot rapidly swells with his climax, tying you beneath the possessive male. The sated canine slumps atop you not even bothering to support his own weight as pants sprawled on your back, shifting about while waiting impatiently for his knot to go down. As soon as he is able he pulls himself free, knot popping wetly from your [if cunts of player > 0]cunt[otherwise]rear[end if] and causing you to yelp in pain as you collapse on the ground.[impregchance]";
-					infect "German Shepherd";
-					attempttowait;
-					now fightoutcome is 21;
-		if fightoutcome >= 10 and fightoutcome <= 19:
+		let shepnum be a random number between 1 and str entry;
+		if playernum > shepnum: 
+			increase escape by 1;
+			say " and feels his grip weakening as a result.";
+		otherwise:
+			say ", but the shepherd simply chuckles at your effort, twisting your arm painfully as he tightens his grip.";
+		attempttowait;
+		say "   Unable to break out of his grip, your canine captor begins licking at the back of your neck and nibbling at your ears as the other two shepherds move towards you. While the two canines begins stripping you of your gear you continue struggling, desperate too break free, but the effort of your continued struggles begins too weigh on your stamina";
+		let playernum be a random number between 1 and (strength of player + stamina of player);
+		let shepnum be a random number between 1 and (str entry + sta entry);
+		if playernum > shepnum:
+			say ", fortunitly the same is true of your enemy and you feel his grip slipping[if escape is 1] futher[end if] as a result of your efforts.";
+			increase escape by 1;
+		otherwise:
+			say ", unfortunitly the same is not true of your enemy, despite your best efforts you make no headway.";
+		attempttowait;
+		if escape < 2:
+			say "   Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if cocks of player > 0 and cunts of player > 0]sucking and licking at your rising cock and moistening pussy[otherwise if cocks of player > 0]sucking and licking at your rising cock[otherwise if cunts of player > 0]sucking and licking at your moistening cunt[otherwise]licking at you groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. This sexual assault all over your body quickly begins too build your arousal, you find yourself struggling to continue resisting your captor, when the teasing finally stops the shepherd behind you releases your arms and pushes you down to all fours, as he grips your hips with his pawlike hands and begins lining his knotted cock up with your [if cunts of player > 0]dripping pussy[otherwise]ass[end if] you realize this is your last chance too escape.";
+			let playernum be a random number between 1 and (100 - libido of player);
+			let shepnum be a random number between 30 and 100;
+			if playernum > shepnum:
+				increase escape by 1;
+		if escape is 2:
 			say "   Gathering all your strength, you manage too break out of the shepherd's grip, pushing him aside you grab a nearby stool and smash it across his face, knocking him out cold. Without missing a beat you turn too face the remaining two canines and ready yourself for your next opponent.";
+		otherwise:
+			say "   Unfortunately your lust addled mind is unable too hold onto this fleeting though of escape, all you can do is whimper weakly as the canine above you begins too sink his meat into you. You feel him make one or two tentative thrusts into your [if cunts of player > 0]sex[otherwise]arse[end if], just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your [if cunts of player > 0]cunt[otherwise]rear[end if]. He doesn't waste any time, building up his pace to a energetic fucking, panting heavily in your ear as you feel a bulge at the base of his length start to swell and grow. With a soft growl he drives in one last time, howling out his pleasure as his knot rapidly swells with his climax, tying you beneath the possessive male. The sated canine slumps atop you not even bothering to support his own weight as pants sprawled on your back, shifting about while waiting impatiently for his knot to go down. As soon as he is able he pulls himself free, knot popping wetly from your [if cunts of player > 0]cunt[otherwise]rear[end if] and causing you to yelp in pain as you collapse on the ground.[impregchance]";
+			infect "German Shepherd";
+			attempttowait;
+			now fightoutcome is 21;
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		challenge "German Shepherd";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "   With another shepherd beaten you bring your attention too the final hound.";
 			challenge "German Shepherd";
-			if fightoutcome >= 10 and fightoutcome <= 19:
-				say "   With another shepherd beaten you bring your attention too the final hound.";
-				challenge "German Shepherd";
 
 to say BakeryChocLab:
 	challenge "Chocolate Lab";
@@ -151,6 +163,7 @@ François is a man. François is in Bone-Appetit.
 The description of François is "[Françoisdesc]";
 The conversation of François is { "Numnum!" }.
 lastfuck of François is normally 555.
+understand "Francis" as François.
 understand "Francois" as François.
 
 instead of sniffing the François:
@@ -169,4 +182,4 @@ instead of fucking the François:
 	say "     I appreciate the offer mon ami[if cunts of player > 0]e[end if], but for now, I must decline.";
 	say "     This character is currently incomplete, proper sex scenes in a future update!";
 
-François ends here.
+Francois ends here.
