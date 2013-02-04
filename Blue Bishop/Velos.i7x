@@ -78,7 +78,7 @@ Instead of resolving Strange Serpent:
 					say "     'My apologies for the deception, it was quite necessary, I'm afraid.'  You can determine a subtle frown from him under this faint light.  'My name is Velos, and I do hope you don't take this too personally, I'm as much a prisoner here as you are.'  There's a slight sour tinge to that last statement, though at this point you're not sure if that's just another ruse on his part.";
 					increase libido of player by 10;
 					if libido of player > 100, now libido of player is 100;
-				say "     'I doubt I will prove as much a burden as you would worry yourself over, but whilst you're running around it only seems fair to show me some of the sights.  If you run into others, perhaps you should let me [link]muse[at]muselist[end link] over them?  But otherwise, I'll mind my own business in here.  And with that...'  He retreats once more into your bowels, leaving you to your own devices and the occasional irreverent twitching of your occupant.  You slowly gather your thoughts as you return from whence you came.";
+				say "     'I doubt I will prove as much a burden as you would worry yourself over, but whilst you're running around it only seems fair to show me some of the sights.  If you run into others, perhaps you should let me [link]muse[as]muselist[end link] over them?  But otherwise, I'll mind my own business in here.  And with that...'  He retreats once more into your bowels, leaving you to your own devices and the occasional irreverent twitching of your occupant.  You slowly gather your thoughts as you return from whence you came.";
 				now level of Velos is 1;
 				now hp of Velos is 3;
 			otherwise:
