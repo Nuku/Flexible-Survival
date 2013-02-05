@@ -348,7 +348,7 @@ carry out Larissatfing:
 		say "     'So to pull this off, I'd need you to snag some vial samples";
 		if scenario is not "Researcher" or nanitemeter is not 1:
 			say ", and for that you'll need to get one of the nanite collectors we have on sale here";
-		say ".  With a vial and some credits from you, I'll get a new bod.'  You must make a face at the mention of money as well.  'Oh, now don't be like that.  I'll need it to help with my expenses.  I'll need to pay for a new id card, pay someone to watch my shift,  get some new clothes... lots of stuff so we can set this up.  You'll get to help me test drive it, so doesn't that sound worth it, hon";
+		say ".  With a vial and some credits from you, I'll get a new bod.'  You must make a face at the mention of money as well.  'Oh, now don't be like that.  I'll need it to help with my expenses.  I'll need to pay for a new id card, pay someone to watch my shift, get some new clothes... lots of stuff so we can set this up.  You'll get to help me test drive it, so doesn't that sound worth it, hon";
 		if scenario is not "Researcher" or nanitemeter is not 1:
 			say "?'  She gives you a grin.  'I'll even arrange to give you a big discount on the nanite collector, letting you get it for the employee price.  Just don't tell anyone,' she adds with a wink.";
 			nanitecoll_discount;

@@ -968,6 +968,7 @@ Carry out reciting:
 					now hp of Larissa is the number understood;
 				if hp of Larissa > 3, now hp of Larissa is 3;
 				if hp of Larissa > 1, nanitecoll_discount;
+				follow the larissa_tfoption rule;
 			-- 114:	[Sam (Dual-taur NPC)]
 				if the player's command matches "[number]":
 					now hp of Sam is the number understood;
