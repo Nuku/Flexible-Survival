@@ -105,7 +105,7 @@ When Play begins:
    now area entry is "Hospital";    [ Location of monster, in this case the City Hospital]
    now cocks entry is 1;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
    now cock length entry is 6;        [ Length infection will make cock grow to if cocks]
-   now cock width entry is 2;        [ Size of balls apparently ;) sneaky Nuku]
+   now cock width entry is 4;        [ Size of balls apparently ;) sneaky Nuku]
    now breasts entry is 0;            [ Number of Breasts infection will give you. ]
    now breast size entry is 0;        [Size of breasts infection will try to attain ]
    now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
