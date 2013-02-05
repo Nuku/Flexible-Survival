@@ -5581,6 +5581,7 @@ Include Retriever by AGentlemanCalledB.
 Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
+Include Badger by StripeGuy.
 
 
 [NPCs]
