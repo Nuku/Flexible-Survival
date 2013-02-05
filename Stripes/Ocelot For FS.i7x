@@ -293,7 +293,7 @@ name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body chan
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
-	now name entry is "Template";		[The creature's name as displayed and used in naming descriptions]
+	now name entry is "Ocelot";		[The creature's name as displayed and used in naming descriptions]
 	now attack entry is "[ocelotattack]";	[Text used when the monster succeeds on an attack]
 	now defeated entry is "[beattheocelot]";				[ Text when monster loses.  Change 'template' as above. ]
 	now victory entry is "[losetoocelot]";					[ Text when monster wins.  Change 'template' as above. ]
@@ -318,7 +318,7 @@ When Play begins:
 	now hp entry is 22;			[ The monster's starting hit points. ]
 	now lev entry is 2;			[ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
 	now wdam entry is 5;			[ Monster's average damage when attacking. ]
-	now area entry is "Outside";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "High";		[ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;			[ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 6;		[ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 4;		[ Cock width, more commonly used for ball size. ]

@@ -83,7 +83,7 @@ When Play begins:
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;							[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stocky[or]compact[at random]";
-	now type entry is "[one of]equine[or]zebrine[at random]";
+	now type entry is "[one of]badger[or]musteline[at random]";
 	now magic entry is false;					[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
@@ -101,6 +101,6 @@ when play ends:
 				say "[line break]";
 				say "In the court of the underground king, you serve many roles. Your strong body constantly expands the tunnels and mines, freeing gold and gemstones from the bosom of the earth. Between shifts, you use your well-muscled ass to pleasure the domineering brock as he pleases. Sometimes you serve him with other submissive males, your brothers in stripes, or deliver to him females for his consumption. Hard stones and hard cocks fill your days and your holes as the one who made you expands his empire. Time wears away the last vestiges of your human mind completely, replacing everything you knew with the satisfaction of serving your new clan.";
 		otherwise:
-			say "Rescued finally by the military, you find yourself at odd sorts. Your gruff appearance and hunched frame is enough to attract attention, and the wide spaces of the aboveground make you feel slightly edgy most times. In search of a means to satisfy your urges for darkness and the need to smell fresh-dug earth you try your paw at mining. Somewhat to your own surprise, you find yourself to have a certain knack for it thanks to your infection. Wether with your own claws or tools, your excavations have a certain elegance and attract quite a bit of attention. At first it is only basements and storm cellars, but it is not long before a major mining company recruits you. Your ability to sniff out precious metals and gems is invaluable, and you always know the proper way to safely dig. You spend your days in the earth, where you belong - and you get paid for it.";
+			say "Rescued finally by the military, you find yourself at odd sorts. Your gruff appearance and hunched frame is enough to attract attention, and the wide spaces of the aboveground make you feel slightly edgy most times. In search of a means to satisfy your urges for darkness and the need to smell fresh-dug earth you try your paw at mining. Somewhat to your own surprise, you find yourself to have a certain knack for it thanks to your infection. Whether with your own claws or tools, your excavations have a certain elegance and attract quite a bit of attention. At first it is only basements and storm cellars, but it is not long before a major mining company recruits you. Your ability to sniff out precious metals and gems is invaluable, and you always know the proper way to safely dig. You spend your days in the earth, where you belong - and you get paid for it.";
 
 Badger ends here.
