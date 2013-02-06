@@ -55,7 +55,7 @@ When Play begins:
 	now face change entry is "you feel it stretch forward into a proper badger-like muzzle, your jaw reshaping into a powerful wedge and teeth blossoming into a razor-sharp array. Your ears and nose shrink into a streamlined shape better for burrowing, making your profile sleek. The pain subsides as white, black, and gray colors swirl over your face, forming the characteristic stripes of the European badger. Only the intelligent light in your eyes and oversized braincase keep you from being mistaken for an oversized feral"; [ face change text. format as "Your face feels funny as (your text)" ]
 	now body change entry is "your chest thickens and draws forward as your torso shifts, hunching over as your spine adapts for tunneling. Dense muscle bloats up on your chest, shoulders, and upper back, aching as your arms thicken and hands sprout long, tough claws. The ground comes even closer as your legs shorten, turning length into mass and powerful bulky cords of muscle. Tendons and ligaments connect, fusing together to put your entire frame under tension, anchoring the large muscles in your back and ass to the long claws tipping every digit"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "soft black and white striped fur slowly covers your body, your skin twitching and shuddering as it settles into place"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "your ass shudders as muscle is packed on, pelvis creaking as your hips widen to make more room. The dense and powerful muscle aches as it forms out the broad burrowing platform for your legs, overshadowing the sensation of your small spade-tail sprouting from the base of your spine. Rough guard hairs in white and shades of gray force themselves out of your skin, tingling powerfully"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now ass change entry is "muscle is packed on, pelvis creaking as your hips widen to make more room. The dense and powerful muscle aches as it forms out the broad burrowing platform for your legs, overshadowing the sensation of your small spade-tail sprouting from the base of your spine. Rough guard hairs in white and shades of gray force themselves out of your skin, tingling powerfully"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it darkens to a deep ebon colour, taking on a slightly tapered profile. Ridges and veins briefly surge from the surface before the shaft retracts into a well-shielded badger sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 19;
 	now dex entry is 19;
@@ -71,7 +71,7 @@ When Play begins:
 	now cocks entry is 1;							[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8;				[ Length infection will make cock grow to if cocks]
 	now cock width entry is 4;				[ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0;						[ Number of Breasts infection will give you. ]
+	now breasts entry is 2;						[ Number of Breasts infection will give you. ]
 	now breast size entry is 0;				[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;							[ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
