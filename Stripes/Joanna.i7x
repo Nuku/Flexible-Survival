@@ -108,7 +108,7 @@ to say losejoannafight:
 
 Section 2 - Flower Garden
 
-Flower Garden is a room. It is fasttravel. It is private.
+Flower Garden is a room. It is fasttravel. It is private.  It is sleepsafe.
 The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care.  Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden.  She uproots herself from time to time to walk around and tend to her flowers.  There is a stone path to walk that weaves through the various beds and bushes.";
 lastflowersmell is a number that varies.  lastflowersmell is normally 555;
 Skyscrapers2 is a door.  "Leaving here to the east heads back into the High Rise District.".
