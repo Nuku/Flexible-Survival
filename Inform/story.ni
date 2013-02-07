@@ -5583,6 +5583,7 @@ Include Doberman for FS by Stripes.
 Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
 Include Badger by StripeGuy.
+Include Opossum Sailor by StripeGuy.
 
 
 [NPCs]
