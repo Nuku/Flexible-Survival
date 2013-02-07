@@ -408,6 +408,7 @@ A door has a text called marea.
 A room can be known or unknown. A room is usually unknown.
 A room can be fasttravel. A room is usually not fasttravel.
 A room can be private. A room is usually not private.
+A room can be sleepsafe.  A room is usually not sleepsafe.
 The player is wearing a watch.
 The player is wearing a backpack. The description of the backpack is "A backpack, full of stuff. To look inside, type [bold type]item[roman type] To look at an item, type [bold type]look (item name)[roman type] To use an item, type [bold type]use (item name)[roman type]. Do you see something in the room you want to take with you? Type [bold type]grab (item name)[roman type] to snatch it up.";
 
@@ -433,10 +434,9 @@ hypernull is a number that varies.
 
 Book 2 - Places
 
-Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.
+Grey Abbey Library is a room.  Grey Abbey Library is fasttravel.  Grey Abbey Library is sleepsafe.
 The description of Grey Abbey Library is "[abbey desc]".
 Bunker is a room.  The description of Bunker is "[bunker desc]";
-
 The invent of Bunker is { "face mask","medkit","medkit","water bottle","water bottle","water bottle","food","food","pocketknife","cot" }.
 Library door is a door. "Solid oak doors lend a stately appearance to the library.". Library door is dangerous.
 East of 7th Street & Main is the Library Door. "Solid oak doors lend a stately appearance to the library.".
@@ -3685,10 +3685,44 @@ carry out punying:
 
 Resting is an action applying to nothing.
 understand "Rest" as resting;
+roughing is a truth state that varies.  roughing is usually false.
 
 check resting:
+	now roughing is false;
 	if caffeinehigh of player > 0:
-		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest.  Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink." instead;
+		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest.  Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
+		stop the action;
+	if location of player is PALOMINO or location of player is Private Booths:
+		say "Why are you even trying to sleep here?  Everyone's partying like it's the end of the world.";
+		stop the action;
+	if cot is owned:
+		say "You pull out your cot and lay it out before resting for a while.";
+	otherwise if cot is present:
+		say "You rest on the cot.";
+	otherwise if the player is in the bunker:
+		say "You rest on one of the cots available.";
+	otherwise if "Roughing It" is listed in feats of player:
+		say "You hunker down somewhere secluded for a quick nap.";
+		now roughing is true;
+	otherwise:
+		say "You have nothing to rest on.";
+		stop the action;
+	if companion of player is not rubber tigress:
+		if there is a dangerous door in the location of the player and location of player is not sleepsafe:
+			say "...";
+			attempttowait;
+			let intodds be 3;
+			if "Bad Luck" is listed in feats of player, increase intodds by 1;
+			if a random chance of intodds in 20 succeeds:
+				say "...but your nap is interrupted by the arrival of a creature.";
+				fight;
+				stop the action;
+			otherwise:
+				say "...and you thankfully complete your nap in peace.";
+		otherwise if roughing is true:
+			say "You are thankfully able to complete your nap in peace.";
+
+[  --old version - to be removed--
 	if cot is owned:
 		say "You pull out your cot and lay it out before resting for a while.";
 		continue the action;
@@ -3715,29 +3749,28 @@ check resting:
 			continue the action;
 	say "You have nothing to rest on.";
 	stop the action;
+]
 
 carry out resting:
+	if companion of player is rubber tigress:
+		artemisnap;
+		increase hp of player by (level of rubber tigress) / 2;	[grants additional rest]
 	Rest;
 	follow the turnpass rule;
 	follow the player injury rule;
 	say "You are [descr]([hp of player]/[maxhp of player]).";
 
 To Rest:
+	let num1 be maxhp of the player divided by 4;
+	let num2 be ( ( stamina of the player * 3 ) / 2 ) + level of the player;
 	if cot is owned or cot is present or the player is in the Bunker:
-		let num1 be maxhp of the player divided by 4;
-		let num2 be ( stamina of the player * 2 ) + level of the player;
 		if num1 >= num2, increase hp of player by num1;		[best value chosen]
 		if num2 > num1, increase hp of player by num2;
 	otherwise if "Roughing It" is listed in feats of player:
-		let num1 be maxhp of the player divided by 4;
-		let num2 be ( stamina of the player * 2 ) + level of the player;
 		increase hp of player by ( num1 + num2 ) / 2;		[average value chosen]
 	otherwise:		[accessible only when events induce resting]
-		let num1 be maxhp of the player divided by 4;
-		let num2 be ( stamina of the player * 2 ) + level of the player;
 		if num1 <= num2, increase hp of player by num1;		[lowest value chosen]
 		if num2 < num1, increase hp of player by num2;
-
 
 
 This is the explore rule:
