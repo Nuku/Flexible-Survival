@@ -11,6 +11,7 @@ when play begins:
 [Delete the lines with unneeded flags and replace 'Template' with your creature's name entry.  Case sensitive.]
 	add { "Opossum Sailor" } to infections of girl;
 	add { "Opossum Sailor" } to infections of furry;
+	add { "Opossum Sailor" } to infections of Tailweapon;		[usable for Tail Strike feat]
 
 [ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are alot of cock/species/cunt checks. ]
 
@@ -51,7 +52,7 @@ When Play begins:
 	now attack entry is "[one of]The opossum snaps her hips forward and around, prehenstile tail whipping toward your face![or]With a hissing growl, the opossum hops up and swings from a rope to kick you hard![or]Darting forward, she goes low and swipes upward to slash you with her claws![or]The opossum fumbles for her cutlass, and finding it missing, whaps you with the leather scabbard![or]Feeling threatened, the opossum slumps onto the ground and flops around for a moment before spraying foul-smelling secretions on you![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Opossum Sailor loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Opossum Sailor attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "The warehouse and docks are alive with sailors and dock workers and various hangers-on milling about, unloading cargo, or maintaining the ships. Unfortunately you cannot travel too far before attracting some attention from at least one lonely sailor. Swagging out of the crowd in hobnailed boots comes an oppossum decked out in leather and gold brocade like a sailor of old, a cutlass by her side. She sneers at you from under her tricorn hat, spitting out the stub of a cigar that had been in her muzzle. You would almost swear you can hear the opossum's cunt sizzling as she levels a finger at you.'[one of]Ahoy! Stand fast and prepare to be boarded![or]Polish your brightwork and stow your duffle, officer on deck![or]No time to caulk, sailor, you've got to dig out![or]I've no paitence for your drip, ya['] dogsbody.[or]Strike your colors and come with me to the cuddy![or]I'm always looking to press gang, come along or I'll clap you in bilboes![or]All standing! I just spotted my new bloke![or]Surrender to me or you'll dance the hemp jig![or]Which would you rather, be a blue under my command, or get tossed to the pirate sharks that hunt the sandy shore?[at random]' she cackles with a matter-of-fact threat, adjusting her epaulets before beginning her attack!";[ Description of the creature when you encounter it.]
+	now desc entry is "The warehouse and docks are alive with sailors and dock workers and various hangers-on milling about, unloading cargo, or maintaining the ships. Unfortunately you cannot travel too far before attracting some attention from at least one lonely sailor. Swagging out of the crowd in hobnailed boots comes an opossum decked out in leather and gold brocade like a sailor of old, a cutlass by her side. She sneers at you from under her tricorn hat, spitting out the stub of a cigar that had been in her muzzle. You would almost swear you can hear the opossum's cunt sizzling as she levels a finger at you.'[one of]Ahoy! Stand fast and prepare to be boarded![or]Polish your brightwork and stow your duffle, officer on deck![or]No time to caulk, sailor, you've got to dig out![or]I've no paitence for your drip, ya['] dogsbody.[or]Strike your colors and come with me to the cuddy![or]I'm always looking to press gang, come along or I'll clap you in bilboes![or]All standing! I just spotted my new bloke![or]Surrender to me or you'll dance the hemp jig![or]Which would you rather, be a blue under my command, or get tossed to the pirate sharks that hunt the sandy shore?[at random]' she cackles with a matter-of-fact threat, adjusting her epaulettes before beginning her attack!";[ Description of the creature when you encounter it.]
 	now face entry is "a round and tapering face, with a sensitive pink nose and wide eyes. Your ears are black and constrast with the very pale pink and white of your face. The overall effect is a bit clownish and not very threatening.";
 	now body entry is "a bit on the slender side, but with a solid foundation. Your limbs are average in length, and proportionally are average in relation to your torso. In fact, you are weirdly average and flexibly non-specific in your shape and mass. Your body is so baseline mammal that you could adapt to many situations or sexual positions easily. ";  
 	now skin entry is "[one of]gray fur with hints of black[or]coarse furred[or]muddled shades of black and gray[or]thick opossum fur[at random]";[ skin Description, format as the text "You have (your text) skin"] 
@@ -62,14 +63,14 @@ When Play begins:
 	now skin change entry is "muddled shades of gray fur begin to sprout from your skin, black and white splotches of guard hairs weaving in like smudges"; [ skin change text. format as "Your skin feels funny as (your text)" ]
 	now ass change entry is "your hips widen subtly, making room for new glands on either side of your puckered asshole. Your muscles ache as they spread out slightly, to distribute power more equally to your legs, torso, and tail. Yes, your tail - its the long pink hairless appendage that uncoils with a mind of its own, sort of"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it turns vibrant pink, almost like bubble gum, and acquires a very mild curve to it. Without warning, it retracts into a dapper opossum sheath"; [ cock change text. format as "Your cock feels funny as (your text)" ]
-	now str entry is 21;
+	now str entry is 17;
 	now dex entry is 21;
-	now sta entry is 19;					
-	now per entry is 17;
+	now sta entry is 16;					
+	now per entry is 14;
 	now int entry is 15;
 	now cha entry is 15;
 	now sex entry is "Both"; 			[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now hp entry is 105;				[ How many HP has the monster got? ]
+	now hp entry is 92;				[ How many HP has the monster got? ]
 	now lev entry is 11;				[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 14;				[Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";		[ Current options are 'Outside' and 'Mall'  Case sensitive]
