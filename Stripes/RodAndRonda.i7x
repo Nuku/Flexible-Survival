@@ -1,5 +1,5 @@
 Version 1 of RodAndRonda by Stripes begins here.
-[ Version 1.1 - Alternate conversation fixes ]
+[ Version 1.2 - Consolidating conversation elements ]
 
 Section 1 - Rod
 
@@ -21,8 +21,16 @@ instead of sniffing Rod:
 	otherwise:
 		say "Rod smells of slutty rats and sex.  Lots of sex.";
 
-instead of conversing Rod Mallrat while tmapfound is not 1 and ( ( hospquest is 8 and rodhosp is not 0 ) or hospquest is not 8 ) and progress of alex is not 2:
-	if hp of Ronda is 0:
+instead of conversing Rod Mallrat:
+	if tmapfound is 1:		[***needs Slut Rat version?]
+		say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I'll be right back, dude.  I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder.   You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that's some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue what's on the island though,  but the scratchings on the front part are definitely a warning about pirates[if level of player < (7 - levelwindow)]!  You'd best toughen yourself up before trying to find a way over there[otherwise]!  Best be careful[end if].'  Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too.  Some of the other mall rats are thinking about hitting the beach sometime to find [']em.  Not me though, but hey whatever you're doing, it sounds kinda exciting.  Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court.  You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates!  And maybe some treasure too!";
+		increase tmapfound by 1;
+	otherwise if hospquest is 8 and nerminepackage > 0 and rodhosp is not 0 and hp of Ronda is not 100:
+		say "     'Those big, spotted hairballs that rolled in here the other day?  That was a bad scene, dude.  They started to get fresh with some of the girls in the atrium and tried to drag them off.  Well, we wouldn't put up with that.  Never try to force a mall rat from their mall, man.  We don't want none of them goons and their friends in here again.'";
+		now rodhosp is 1;
+	otherwise if progress of alex is 2 and hp of Ronda is not 100:
+		say "     'Darrell?  Yeah, he was here when it all went down.  But... you might be a little surprised[if hp of ronda is 0 or hp of Ronda is 10].  Go talk to my girl, she knows where he is.'[otherwise].'  He shrugs, and points to the north.  'Go ask the others.  They might know where he is.'  He seems a little bummed.[end if]";
+	otherwise if hp of Ronda is 0:
 		say "     [one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know.  Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
 	otherwise if hp of Ronda is 1 or hp of Ronda is 2:
 		say "     [one of]'Oh, hey there.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Watch out for those infected rats.   Dunno where they came from, but they're bad news.  The rats they get don't come back.'[or]'Sup?'[at random]";
@@ -120,8 +128,12 @@ instead of sniffing Ronda:
 	otherwise:
 		say "Ronda smells of slutty rats, cheap perfume and lots of sex.";
 
-instead of conversing Ronda Mallrat while ( ( hospquest is 8 and rondahosp is not 0 ) or hospquest is not 8 ):
-	if hp of Ronda is 0:
+instead of conversing Ronda Mallrat:
+	if hp of Ronda is not 100 and hospquest is 8 and nerminepackage > 0 and rondahosp is 0:
+		say "     'You asking about those macho hairball rejects from Shock Therapy?  Suzie and Anna were talking to them after they rolled in here like they owned the place.  Just a little playful flirting to tease their boys.  No harm in it.  But the kitties started getting fresh.  They offered them a ride in their swanky helicopter, which was tempting, but that'd mean leaving the mall, so the girls said [']No way['].'";
+		say "     'Well, those kitty-litter heads didn't like that and started to get pushy about it.  By that point, their boyfriends had had enough and rallied the troops to deal with them.  That slutty vixen came running out of the store and the dude on her radio was squawking to know what was happening.  We kicked the lot of them out.  They came poking back once or twice, but they're not allowed to shop here anymore.  We told Bruno, he's security, on them and that crazy wolverine and a few of the boys sent them packing.'";
+		now rondahosp is 1;
+	otherwise if hp of Ronda is 0:
 		say "[one of]'Hey there, sugar, you just call me Ronda.'[or]'You meet Rod? He's my boy. You be nice to him, or I will be very... upset.'[or]'Those clothes are out of date, hon.  You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[at random]";
 	otherwise if hp of Ronda > 0 and hp of Ronda < 10:
 		say "ERROR-Ronda-[hp of Ronda]T: You should not be able to converse with Ronda at this point.";
