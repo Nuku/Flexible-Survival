@@ -806,6 +806,7 @@ to say wrcurseaccept:
 [		say "***raptor sex goes here?";	]
 	now wrcursestatus is 7;
 	now wrcurseactivity is true;
+	now wrcurseNermine is 12;
 
 
 
