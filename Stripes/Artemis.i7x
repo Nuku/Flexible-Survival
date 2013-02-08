@@ -1,5 +1,5 @@
 Version 2 of Artemis by Stripes begins here.
-[Version 2 - Resting mechanic added]
+[Version 2.1 - First random turn glomping]
 
 "Adds a neuter rubber tigress pet named Artemis."
 
@@ -71,11 +71,11 @@ Chapter 0 - Everyturn Mechanics
 lastArtemisplay is a number that varies.  lastArtemisplay is normally 255.
 
 An everyturn rule:
-	if companion of player is rubber tigress:
+	if companion of player is rubber tigress and skipturnblocker is 0:
 		increase libido of player by 3;
 		increase libido of rubber tigress by 5;
 		if lastfuck of rubber tigress - turns >= 4 and ( cocks of player > 0 or cunts of player > 0 ):
-			let diceroll be a random number from 80 to 300;			[lust check vs 300, total of 80 or less auto-wins]
+			let diceroll be a random number from 80 to 300;			[lust check vs 300, min total over 80 required for success]
 			if diceroll < ( libido of player + libido of rubber tigress ):
 				let artemissex be a list of numbers;
 				if cocks of player > 0 and "More Anal" is listed in feats of player, add 1 to artemissex;		[anal]
@@ -85,6 +85,12 @@ An everyturn rule:
 				if cunts of player > 0, add 5 to artemissex;									[F-oral 1]
 				if cunts of player > 0, add 6 to artemissex;									[F-oral 2]
 				if cunts of player > 0, add 7 to artemissex;									[F-oral 3]
+				if hp of rubber tigress > 5:
+					add 8 to artemissex;												[E-masturbate]
+					let glompchance be ( lastArtemisglomp - turns ) / 4;
+					if glompchance > 8, now glompchance is 8;									[# of additional chances]
+					repeat with y running from 1 to glompchance:
+						add 8 to artemissex;											[E-masturbate]
 				sort artemissex in random order;
 				if entry 1 of artemissex is 1, say "[artemissex1]";
 				if entry 1 of artemissex is 2, say "[artemissex2]";
@@ -93,6 +99,7 @@ An everyturn rule:
 				if entry 1 of artemissex is 5, say "[artemissex5]";
 				if entry 1 of artemissex is 6, say "[artemissex6]";
 				if entry 1 of artemissex is 7, say "[artemissex7]";
+				if entry 1 of artemissex is 8, say "[artemissex8]";
 				now lastfuck of rubber tigress is turns;
 		if lastArtemisplay - turns >= 4 and lastfuck of rubber tigress is not turns:
 			if a random chance of 1 in 4 succeeds:
@@ -101,6 +108,9 @@ An everyturn rule:
 				otherwise:
 					say "[one of][artemisplay5][or][artemisplay6][cycling]";
 				now lastArtemisplay is turns;
+	otherwise if rubber tigress is tamed:
+		increase libido of rubber tigress by 3;
+		if libido of rubber tigress > 100, now libido of rubber tigress is 100;
 
 
 Chapter 1 - Sexxxings Scenes
@@ -177,6 +187,27 @@ to say artemissex7:	[F-oral 3]
 	now libido of rubber tigress is ( 2 * libido of rubber tigress ) / 3;
 
 
+to say artemissex8:	[Engulf and masturbate]
+	if a random chance of 1 in 3 succeeds:
+		say "     Deciding to take a break, you put down your pack and move to take a seat.  But as you're sitting down, you find your seat higher and more padded than you expected.  Artemis, having jumped into your seat ahead of you lets her body soften and sag before starting to flow up over you.  You [if cocks of player > 0]chuckle[otherwise]giggle[end if] as the sneaky kitty's managed to catch you.  You try to struggle, but her rubbery coating continues to spread over you[if scalevalue of player > 5].  It takes some time and extra stretching on her part to be able to cover your [body size of player], [bodydesc of player] body, but she perseveres in her plan to hijack you for some fun[end if].  The feel of her flowing rubber [if cocks of player > 0 and cunts of player > 0]spreading over your dual genders is particularly pleasing, as always.  The squeezing around your maleness and the feel of it flowing past your folds and into you[otherwise if cocks of player > 1]spreading over your throbbing cocks is particularly pleasing, as always.  The squeezing around your manhood and rubbing you all over[otherwise if cocks of player is 1]spreading over your throbbing cock is particularly pleasing, as always.  The squeezing around your manhood and rubbing you all over[otherwise if cunts of player > 1]spreading across your wet folds is particularly pleasing, as always.  And the feel of her then pushing into you to flow into your cunts[otherwise if cunts of player is 1]spreading across your wet folds is particularly pleasing, as always.  And the feel of her then pushing into you to flow into your cunt[end if] is such a perverse delight[if anallevel > 1].  And more kinky pleasure comes when more flowing rubber presses at your tight pucker, spreading you open with ease so she can flow into your bowels and coat them as well[end if].";
+		say "     Once she's at the point of finishing up with your head, you stop your pointless struggles and open your mouth wide, inviting her to finish sealing you inside her.  The feel of her flowing into your mouth and throat is a little disconcerting, but you've grown so close to your lovable tigress that you trust her doing it.  With you all sealed up and drifting off into the sleepwalking state, her head reforms and your body, as needed, shifts shape a little to let you both become a [if cocks of player > 0 and cunts of player is 0]girlish tiger[otherwise]sexy tigress[end if][if bodyname of player is listed in infections of taurlist] taur[end if] made of rubber.  And finding herself already in a nice seat, she decides to enjoy the position by having a little fun.";
+	otherwise:
+		say "     Catching sight of the glancing looks the tigress is giving you and feeling that it might be fun to snuggle up extra-close to your kitty again, you drop your gear and leap atop her, running your [if bodyname of player is listed in infections of Felinelist]paws[otherwise]hands[end if] across her body, pulling her close[if cocks of player > 1].  You grind your stiff cocks against her[otherwise if cocks of player is 1].  You grind your stiff cock against her[otherwise].  You rub your crotch against her, pressing your pussy against her[end if].  She squirms a little at first, but you soon feel her rubbery skin spreading over you.  With your loins pressed right against her, she starts with them.  Flowing latex spreads out from there over your hips and chest as you can feel the stuff [if cocks of player > 0 and cunts of player > 1]wrapping around your stiff manhood and sealing over your pussies before pushing further into you, coating and sealing your cunts in a protective layer of herself[otherwise if cocks of player > 0 and cunts of player is 1]wrapping around your stiff manhood and sealing over your pussy before pushing further into you, coating and sealing your cunt in a protective layer of herself[otherwise if cocks of player > 1]wrapping around your stiff cocks and coating them in a snug, squeezing layer of herself[otherwise if cocks of player is 1]wrapping around your stiff cock and coating it in a snug, squeezing layer of herself[otherwise if cunts of player > 1]encapsulating your juicy folds before pushing further into you, coating and sealing your cunts in a protective layer of herself[otherwise if cunts of player is 1]encapsulating your juicy folds before pushing further into you, coating and sealing your cunt in a protective layer of herself[end if][if anallevel > 1].  You can't help but moan as a pushing sensation at your anus leads it to opening and allowing more of her to flow into you and coat your back passage as well in herself[end if].  It is all so very arousing to be giving so much of yourself to your loyal tigress pet.";
+		say "     As she's finishing up there, you realize that she's continued on and has most of you covered.  She's left your arms uncovered for the moment, leaving you free to [one of]spread around the flowing rubber over the rest of you, even pulling it up over your head[or]rub over your latex-coated body, feeling yourself (and thereby her) up as she continues to engulf you, spreading onwards to your head[or]push your arms into the flowing orange and black rubber and spreading it over them while she's covering your head[or]wait for her to completely cover your head and form her feline face, letting you stroke and caress it while she finishes covering you[cycling].  While there is an uncomfortable moment while she's flowing down your throat, you trust the rubber kitty and accept her taking you over fully like a good puppet body for her.  With you all sealed up and drifting off into the sleepwalking state, the last few shifts and changes happen, reforming your body as needed so you both can become a [if cocks of player > 0 and cunts of player is 0]girlish tiger[otherwise]sexy tigress[end if][if bodyname of player is listed in infections of taurlist] taur[end if] made of rubber.  Clearly pleased with herself and her new form, she quickly finds a comfy spot to settle down and enjoy it.";
+	if a random chance of 1 in 1 succeeds:				[more variations to come]
+		if cocks of player > 0 and cunts of player > 0:
+			say "     Running her smooth hands over her newly acquired body, she lets them roam over herself.  While directionless at first, they soon start to drift down to her [cock size desc of player] [if cocks of player > 1]cocks, wrapping a paw around one of them[otherwise]cock, wrapping a paw around it[end if] so she can enjoy your borrowed manhood.  The [cock of player] phallus throbs in her paw, dribbling precum as she plays with herself.  Slipping her other paw around the base of it, she finds her [if cunts of player > 1]wet pussies and starts playing with them[otherwise]wet pussy and starts playing with it[end if], mewling in pleasure as she drills a few fingers into herself.  She goes at it for quite a while, relishing this quick opportunity to gain a gender and enjoy some much needed sexual release through you[one of].  Soon enough, she has you cumming hard, splattering your [cum load size of player] load across herself, and you drift off into a fuller slumber[or].  Leaning forward with the flexible ease of a feline creature made of rubber, she stuffs your [cock size desc of player] shaft into her muzzle, licking and sucking at it until you cum, shooting your [cum load size of player] load into her mouth and down into your belly.  You drift off into a fully slumber after this[at random], only to be awoken by the fully-reformed tigress nuzzling at your cheek.  After some snuggling, you get up and head back on your way.";
+		otherwise if cocks of player > 0:
+			say "     Running her smooth hands over her newly acquired body, she lets them roam over herself.  While directionless at first, they soon start to drift down to her [cock size desc of player] [if cocks of player > 1]cocks, wrapping a paw around one of them[otherwise]cock, wrapping a paw around it[end if] so she can enjoy your borrowed manhood.  The [cock of player] phallus throbs in her paw, dribbling precum as she plays with herself[if anallevel > 1 and a random chance of anallevel in 5 succeeds].  She even slips a paw to her rear, rubbing at her back door before pushing a few digits into the smooth, easily stretchable hole.  Finding your prostate a particularly enjoyable spot, the pays particular attention to it while stroking her cock[end if].  She goes at it for quite a while, relishing this quick opportunity to gain a gender and enjoy some much needed sexual release through you[one of].  Soon enough, she has you cumming hard, splattering your [cum load size of player] load across herself, and you drift off into a fuller slumber[or].  Leaning forward with the flexible ease of a feline creature made of rubber, she stuffs your [cock size desc of player] shaft into her muzzle, licking and sucking at it until you cum, shooting your [cum load size of player] load into her mouth and down into your belly.  You drift off into a fully slumber after this[at random], only to be awoken by the fully-reformed tigress nuzzling at your cheek.  After some snuggling, you get up and head back on your way.";
+		otherwise if cunts of player > 0:
+			say "     Running her smooth hands over her newly acquired body, she lets them roam over herself.  While directionless at first, they soon start to drift down to her [if cunts of player > 1]wet pussies and starts playing with them[otherwise]wet pussy and starts playing with it[end if], mewling in pleasure as she drills a few fingers into herself.  Tries a few different methods, unable to quite decide which is the best all while fueling your excitement within the dreamy haze you're in.  She goes at it for quite a while, relishing this quick opportunity to gain a gender and enjoy some much needed sexual release through you[one of].  Soon enough, she has you cumming hard, soaking her smooth skin with your juices as she pumps wildly into her wanton [if cunts of player > 1]holes[otherwise]hole[end if][or].  Leaning forward with the flexible ease of a feline creature made of rubber, she presses her muzzle to her [if cunts of player > 1]pussies[otherwise]pussy[end if] and starts lapping over and into those rubbery folds, soon sending you both over the edge to a wet and juicy climax[at random].  Stretching out, she purrs happily while you drift off fully into slumber, only to be awoken by the fully-reformed tigress nuzzling at your cheek.  After some snuggling, you get up and head back on your way.";
+	now libido of rubber tigress is libido of rubber tigress / 3;
+	now libido of player is ( libido of player * 3 ) / 4;
+	now lastfuck of rubber tigress is turns;
+	now lastArtemisglomp is turns;
+
+
+
 Chapter 2 - Playtime Scenes
 
 to say artemisplay1:	[chase cup]
@@ -238,6 +269,8 @@ after using chips while companion of player is rubber tigress:
 
 Section 6 - Napping w/Artemis
 
+lastArtemisglomp is a number that varies.  lastArtemisglomp is usually 255.  [time since last glomp]
+
 to artemisnap:
 	now libido of rubber tigress is libido of rubber tigress / 3;
 	if hp of rubber tigress < 5:
@@ -245,7 +278,7 @@ to artemisnap:
 		increase hp of rubber tigress by 1;
 	otherwise if hp of rubber tigress is 5:
 		say "     As usual, when you're getting ready to lie down and take catnap, the rubber tigress pads over to you.  She purrs softly, kneads around for a little bit and then curls up to name with you.  Being mostly filled with air, she's fairly light, but still feels nice against your [one of]legs[or]thigh[at random] and her soft purring helps lull you to sleep.";
-		attemptowait;
+		attempttowait;
 		say "     You have strange dreams again, feeling yourself lying down with Artemis atop you, but she's not merely resting on you, but flowing down overtop of you.  The tigress's rubbery flesh melts over you, wrapping around your waist and legs.  With her flowing over your groin, you can feel the sensation building and your sleep-clouded mind starts to realize that this may be no dream at all.  You try to get up, but she's already engulfed most of your legs and hips, making it impossible to stand.  When you press your hands to her head and try to push her off, her rubbery flesh deforms before going soft, capturing them as well.  The rubber overtop over your legs and waist presses in tighter, wrapping snugly over your body and loins[if cocks of player > 1].  Your cocks are fully erect, unchanged in form, but sealed in a layer of orange[otherwise if cocks of player is 1].  Your cock is fully erect, unchanged in form, but sealed in a layer of orange[end if][if cunts of player > 1].  You can feel more of her flowing skin pushing into your cunts, lining them with a thin layer of latex[otherwise if cunts of player is 1].  You can feel more of her flowing skin pushing into your cunt, lining it with a thin layer of latex[end if][if anallevel is not 1 or (cocks of player is 0 and cunts of player is 0)].  She even presses a bubble of the flowing stuff into your rear, coating your very depths with herself[end if].";
 		say "     She stands you up even as she's solidifying around your arms and coating your head in flowing rubber, her feline head reforming over yours.  You gasp and try to take a breath, allowing her to slide into your mouth and down your throat.  Having you fully encapsulated now, she makes your body move, walking upright a little unsteadily for the first few steps.  Everything has a pale orange sheen and is ever so slightly out of focus, making you feel as if you are again in a dream.  You start to drift off, sleepwalking along as your pet walks you around.  She seems quite pleased with herself, able to [if bodyname of player is listed in infections of Taurlist]strut around as a taur[otherwise]stand upright as an anthro [end if]tiger.";
 		if cocks of player > 0 and cunts of player > 0:		[herm]
@@ -296,7 +329,7 @@ after resting while companion of player is rubber tigress:
 		say "     When you awaken from slumber, you find yourself well rested and a little less aroused (at least for the moment).  Artemis is just starting to wake up as you shift about.  After a yawn and a stretch, she's nuzzling you and purring happily, getting some [']morning['] scritches from her you.  Having shared so much with the rubbery feline, you can't but feel closer to her.";
 		now libido of player is ( libido of player * 3 ) / 4;
 	now lastfuck of rubber tigress is turns;
-
+	now lastArtemisglomp is turns;
 
 [ hp of rubber tigress ]
 [ 0 = no encounter     ]
