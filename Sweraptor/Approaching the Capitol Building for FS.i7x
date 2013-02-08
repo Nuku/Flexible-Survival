@@ -113,26 +113,8 @@ this is the capitol wandering rule:
 
 Section 4 - Situations
 
-[Wolfrape event moved to Blanche file.]
+[Wolfrape event moved to Blanche file. (Stripes)]
 
-dragatorspot is a situation.
-The sarea of dragatorspot is "Capitol".
-
-Instead of resolving dragatorspot:
-	say "Down the street you spot a crocodile like beast.  It is black with six legs, one of the Ash Broods Dragators.  You watch it with sympathy as it knocks over trash cans and uses its huge jaws and teeth to rummage through the refuse.  Such a stupid, unclean creature is easily avoided.";
-	increase score by 1;
-	now dragatorspot is resolved;
-
-
-whelpspot is a situation.
-The sarea of whelpspot is "Capitol".
-whelpspotnum is a number that varies.
-
-Instead of resolving Whelpspot:
-	say "A shadow darts overhead and instinctively you dive for cover. Hiding in an abandoned auto you watch worriedly while a flock of Ash Dragon whelps swoops overhead. They do not linger long, heading off in the direction of the Capitol Building.";
-	increase score by 1;
-	increase whelpspotnum by 1;
-	if whelpspotnum is 3, now Whelpspot is resolved;
-
+[Other events moved to Capitol Events file. (Blue Bishop)]
 
 Approaching the Capitol Building for FS ends here.
