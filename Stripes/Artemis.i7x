@@ -45,6 +45,7 @@ Instead of resolving a Poor Kitty:
 
 Section 2 - Artemis
 
+Artemis is a woman.
 rubber tigress is a pet.  rubber tigress is a part of the player;
 understand "Artemis" as rubber tigress.
 The description of rubber tigress is "[artemisdesc]";
@@ -55,7 +56,7 @@ The summondesc of rubber tigress is "The rubber tigress gives a soft mew and nuz
 The assault of rubber tigress is "[one of]The rubber tigress swipes at your foe with her paws, hard, plastic claws unsheathed.[or]Sneaking around behind your foe, Artemis pounces on them with an angry mrowl![or]The rubber tigress bites at your enemy with hardened plastic teeth.[or]Artemis bashes herself against your foe, partially deflates and wraps her rubbery hide around them, squeezing down hard and slowing them long enough for you to get in an additional quick strike.[or]Winding her tail around your foe's [if a random chance of 1 in 4 succeeds]arm[otherwise if a random chance of 1 in 3 succeeds]leg[otherwise if a random chance of 1 in 2 succeeds]wrist[otherwise]ankle[end if], the rubber tigress holds them long enough to [if a random chance of 1 in 2 succeeds]get in some slashes with sharp claws[otherwise]bite them[end if].[at random]";
 
 to say artemisdesc:
-     say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves.  Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly.  Malformed or incomplete for some reason, the rubber tigress cannot stand upright and lacks any gender of her own, unlike the rest of her kind[if hp of rubber tigress >= 6].  As you've noticed, she is capable of borrowing your body to give herself one for a little while[end if].  Despite her female curves and strangely sexy booty, she has nothing under her striped tail save for the crinkled hole of her anus.  Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[at random].";
+	say "     Artemis, as you've called the rubber tigress currently at your side, is built like a feral tiger make of smooth rubber, but with faintly feminine curves.  Her skin is a glossy orange with black stripes and flexes and moves as she pads quietly.  Malformed or incomplete for some reason, the rubber tigress cannot stand upright and lacks any gender of her own, unlike the rest of her kind[if hp of rubber tigress >= 6].  As you've noticed, she is capable of borrowing your body to give herself one for a little while[end if].  Despite her female curves and strangely sexy booty, she has nothing under her striped tail save for the crinkled hole of her anus.  Noticing you looking at her, she [one of]purrs happily[or]rolls onto her back in search of tummy rubs[or]nuzzles your thigh[or]lightly mouths your hand with her padded muzzle[or]gives a cute, slightly squeaking mew[at random].";
 	if hp of rubber tigress < 6:
 		say "     While your companion, the loyal rubber tigress can keep an ear perked for trouble if you're sleeping outside, keeping you safe from unwanted interruption.";
 	otherwise:
@@ -263,11 +264,11 @@ cuptrick is a truth state that varies.  cuptrick is normally false.
 
 instead of using cup stack:
 	if companion of player is rubber tigress:
-		if hp of artemis >= 7 and a random chance of 1 in 2 succeeds and cuptrick is false:		[cup training]
+		if hp of artemis is greater than 6 and a random chance of 1 in 2 succeeds and cuptrick is false:		[cup training]
 			say "     Deciding the cups might make a good means to train Artemis, given her fondness for them.  You take one out, which quickly draws the kitty's attention.  Almost immediately, she's at your side, purring and nuzzling around your legs.  You hold the cup up and tell her to sit.  She eyes the cup and mrowls needfully.  You keep it out of reach and tell her again to sit.";
 			say "     When you ask her a third time, she lowers and down obediently.  Or so you think at first.  A moment later you notice her continue to sink down past her normal sitting position, her hindquarters being pressed down and deforming.  Just as you're taking this in, she springs upward, her reinflating hindquarters propelling her up so she may swat the cup out of your surprised hand.  As it skitters across the ground, she walks over to it slowly, tail and ass swishing.  She gulps it down in one extra wide, very deliberate bite.";
 			say "     You decide it best not to try that again.";
-		otherwise if hp of artemis >= 7 and a random chance of 2 in 9 succeeds:				[offer cup]
+		otherwise if hp of artemis is greater than 6 and a random chance of 2 in 9 succeeds:				[offer cup]
 			say "     Taking out one of the cups, you kneel down and offer it in hand to the rubber tigress.  She mewls happily and starts munching up the cup as you hold it out for her.  With the last of it melting and flowing down across your fingers, she licks at your hand, drawing it off your skin.  There's a slight shiver of pleasure that runs through you as she does this as it feels a bit like when she spreads herself over you.";
 		otherwise if a random chance of 2 in 5 succeeds:							[cup toss]
 			say "     Deciding to feed the tigress a treat, you pull out one of the cups.  Hearing it come out, her ears perk up and she comes rushing over.  As she's coming, you toss it just over her head, making her rear up and swat at it.  She bounds off in pursuit, swatting it around the ground before leaping onto it.  It cracks with the crinkling of hard plastic.  Holding it down by one of the flaps, she starts eating away at it, melting portions of the plastic as she wraps her mouth around them.  Soon enough she's lapping the last few dribbles of runny red and white plastic from the ground.";
