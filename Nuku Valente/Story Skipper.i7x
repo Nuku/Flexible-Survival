@@ -1003,10 +1003,10 @@ Carry out reciting:
 					now carried of silver knife is 0;
 					now Dinosaur Skeleton is resolved;
 					now Paleontology Office is unknown;
-					if girl is banned and guy is banned:
+					if ( girl is banned and guy is banned ) or furry is banned:
 						now wrcursestatus is 0;
+						now wrcurseNermine is 0;
 						now Paleontology Professor is resolved;
-						now hp of Doctor Utah is 0;
 					if wrcursestatus > 0:
 						raptorrelease;
 						now Paleontology Professor is resolved;
@@ -1032,8 +1032,10 @@ Carry out reciting:
 						now lust of Doctor Utah is 0;
 					if wrcurseNermine is 12 or wrcurseNermine is 14:
 						now Paleontology Office is known;
-						if hp of Doctor Utah > 1:
-							if girl is not banned:
+						now libido of Doctor Utah is 0;
+						now lust of Doctor Utah is 0;
+						if girl is not banned:
+							if hp of Doctor Utah > 1:
 								if hp of Doctor Utah is odd:
 									now lust of Doctor Utah is 1;
 								otherwise:
@@ -1042,8 +1044,8 @@ Carry out reciting:
 								now libido of Doctor Utah is 0;
 								repeat with itx running from 1 to iterations:
 									increase libido of Doctor Utah by a random number between 2 and 4;
-							otherwise:
-								let iterations be 0;	[do nothing action]
+						otherwise:
+							now hp of Doctor Utah is 0;		[no advanced male content yet]
 					if weapon object of player is silver knife and silver knife is not owned, now weapon object of player is journal;
 			-- 118:	[Mike]
 				if the player's command matches "[number]":
