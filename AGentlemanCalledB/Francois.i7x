@@ -89,7 +89,7 @@ to say BakeryGShep:
 			if name entry is "German Shepherd":
 				now monster is y;
 				break;
-		say "   With the first German Shepherd dealt with, you survey the room looking for you next opponent, but realize too late that one of the hounds is missing. Suddenly you are grabbed from behind, your arms twisted behind your back by the sneaky canine. You struggle as best you can against the shepherd, trying to break free from his grasp";
+		say "     With the first German Shepherd dealt with, you survey the room looking for you next opponent, but realize too late that one of the hounds is missing. Suddenly you are grabbed from behind, your arms twisted behind your back by the sneaky canine. You struggle as best you can against the shepherd, trying to break free from his grasp";
 		let escape be 0;
 		let playernum be a random number between 1 and strength of player;
 		let shepnum be a random number between 1 and str entry;
@@ -99,25 +99,25 @@ to say BakeryGShep:
 		otherwise:
 			say ", but the shepherd simply chuckles at your effort, twisting your arm painfully as he tightens his grip.";
 		attempttowait;
-		say "   Unable to break out of his grip, your canine captor begins licking at the back of your neck and nibbling at your ears as the other two shepherds move towards you. While the two canines begins stripping you of your gear you continue struggling, desperate too break free, but the effort of your continued struggles begins too weigh on your stamina";
+		say "     Unable to break out of his grip, your canine captor begins licking at the back of your neck and nibbling at your ears as the other two shepherds move towards you. While the two canines begins stripping you of your gear you continue struggling, desperate too break free, but the effort of your continued struggles begins too weigh on your stamina";
 		let playernum be a random number between 1 and (strength of player + stamina of player);
 		let shepnum be a random number between 1 and (str entry + sta entry);
 		if playernum > shepnum:
 			say ", fortunitly the same is true of your enemy and you feel his grip slipping[if escape is 1] futher[end if] as a result of your efforts.";
 			increase escape by 1;
 		otherwise:
-			say ", unfortunitly the same is not true of your enemy, despite your best efforts you make no headway.";
+			say ", unfortunately the same is not true of your enemy, despite your best efforts you make no headway.";
 		attempttowait;
 		if escape < 2:
-			say "   Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if cocks of player > 0 and cunts of player > 0]sucking and licking at your rising cock and moistening pussy[otherwise if cocks of player > 0]sucking and licking at your rising cock[otherwise if cunts of player > 0]sucking and licking at your moistening cunt[otherwise]licking at you groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. This sexual assault all over your body quickly begins too build your arousal, you find yourself struggling to continue resisting your captor, when the teasing finally stops the shepherd behind you releases your arms and pushes you down to all fours, as he grips your hips with his pawlike hands and begins lining his knotted cock up with your [if cunts of player > 0]dripping pussy[otherwise]ass[end if] you realize this is your last chance too escape.";
+			say "     Too tired to continue fighting against your captor, the three canines quickly begin having some fun with you. One canine begins [if cocks of player > 0 and cunts of player > 0]sucking and licking at your rising cock and moistening pussy[otherwise if cocks of player > 0]sucking and licking at your rising cock[otherwise if cunts of player > 0]sucking and licking at your moistening cunt[otherwise]licking at you groin[end if], while the second brings his muzzle to your lips, pulling you into a deep kiss. Meanwhile the shepherd binding your arms continues playing at your neck and ears while grinding his stiffening rod into your back. This sexual assault all over your body quickly begins too build your arousal, you find yourself struggling to continue resisting your captor, when the teasing finally stops the shepherd behind you releases your arms and pushes you down to all fours, as he grips your hips with his pawlike hands and begins lining his knotted cock up with your [if cunts of player > 0]dripping pussy[otherwise]ass[end if] you realize this is your last chance too escape.";
 			let playernum be a random number between 1 and (100 - libido of player);
 			let shepnum be a random number between 30 and 100;
 			if playernum > shepnum:
 				increase escape by 1;
 		if escape is 2:
-			say "   Gathering all your strength, you manage too break out of the shepherd's grip, pushing him aside you grab a nearby stool and smash it across his face, knocking him out cold. Without missing a beat you turn too face the remaining two canines and ready yourself for your next opponent.";
+			say "     Gathering all your strength, you manage too break out of the shepherd's grip, pushing him aside you grab a nearby stool and smash it across his face, knocking him out cold. Without missing a beat you turn too face the remaining two canines and ready yourself for your next opponent.";
 		otherwise:
-			say "   Unfortunately your lust addled mind is unable too hold onto this fleeting though of escape, all you can do is whimper weakly as the canine above you begins too sink his meat into you. You feel him make one or two tentative thrusts into your [if cunts of player > 0]sex[otherwise]arse[end if], just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your [if cunts of player > 0]cunt[otherwise]rear[end if]. He doesn't waste any time, building up his pace to a energetic fucking, panting heavily in your ear as you feel a bulge at the base of his length start to swell and grow. With a soft growl he drives in one last time, howling out his pleasure as his knot rapidly swells with his climax, tying you beneath the possessive male. The sated canine slumps atop you not even bothering to support his own weight as pants sprawled on your back, shifting about while waiting impatiently for his knot to go down. As soon as he is able he pulls himself free, knot popping wetly from your [if cunts of player > 0]cunt[otherwise]rear[end if] and causing you to yelp in pain as you collapse on the ground.[impregchance]";
+			say "     Unfortunately your lust addled mind is unable too hold onto this fleeting though of escape, all you can do is whimper weakly as the canine above you begins too sink his meat into you. You feel him make one or two tentative thrusts into your [if cunts of player > 0]sex[otherwise]arse[end if], just to make sure he's inside you before you hear him growl and begin humping in earnest, eagerly grinding his hips into you, the rigid dog cock driving easily into your [if cunts of player > 0]cunt[otherwise]rear[end if]. He doesn't waste any time, building up his pace to a energetic fucking, panting heavily in your ear as you feel a bulge at the base of his length start to swell and grow. With a soft growl he drives in one last time, howling out his pleasure as his knot rapidly swells with his climax, tying you beneath the possessive male. The sated canine slumps atop you not even bothering to support his own weight as pants sprawled on your back, shifting about while waiting impatiently for his knot to go down. As soon as he is able he pulls himself free, knot popping wetly from your [if cunts of player > 0]cunt[otherwise]rear[end if] and causing you to yelp in pain as you collapse on the ground.[impregchance]";
 			infect "German Shepherd";
 			attempttowait;
 			now fightoutcome is 21;
@@ -174,7 +174,7 @@ to say Françoisdesc:
 
 Instead of conversing the François:
 	if a random chance of 1 in 3 succeeds:
-		say "      [if daytimer is day]Boujour[otherwise]Bonsoir[end if] [one of]mon ami[if cunts of player > 0]e[end if][or]my friend[at random], [one of]Comment ça va?[or]Comment allez-vous?[or]How are you?[at random]";
+		say "      [if daytimer is day]Boujour[otherwise]Bonsoir[end if], [one of]mon ami[if cunts of player > 0]e[end if][or]my friend[at random].  [one of]Comment ça va?[or]Comment allez-vous?[or]How are you?[at random]";
 	otherwise:
 		say "     [one of]Perhaps I should try to get back into business, I can't help but think my work would be even more popular now[or]I have a much greater appreciation for my work now[or]Perhaps I should go out there and try to find  myself a Lady[or]Thanks again for the help, mon ami[if cunts of player > 0]e[end if][at random]."
 
@@ -182,27 +182,29 @@ instead of fucking the François:
 	if cocks of player is 0 and cunts of player is 0:
 		say "     Lacking any gender of your own, you can't quite get up the enthusiasm to play with the friendly French mutt.";
 	otherwise if cocks of player is 0:
-		say "     'Ah d�sol�, mon amie.  I have never had much interest in what you English call the fairer sex.  Ah, but only if you were a man,' he sighs wistfully.";
+		say "     'Ah désolé, mon amie.  I have never had much interest in what you English call the fairer sex.  Ah, but only if you were a man,' he sighs wistfully.";
 	otherwise if lastfuck of François - turns < 6:
 		say "     He licks his muzzle and eyes your crotch, but shakes his head.  'As much as I would relish to opportunity to show you my thanks again, there is so much else that needs to be done.  Perhaps a little later though?' he adds with a smile and the brush of a paw down your side.";
 	otherwise:
 		if hp of François is 0:
 			say "     François smiles at your offer, his ears perking up and his eyes moving right away to your groin.  His tongue slides slowly across his muzzle.  'Ah, mon ami[if cunts of player > 0]e[end if], I would very much enjoy the opportunity to thank you for wanting to rescue me.  Mmm... mon hero,' he moans sensually in his rich accent, speaking very softly and sexily now.  Moving in closer, he runs his paws over your [if scalevalue of player > 2]larger[end if] body and helps you out of your clothes and gear.";
-			say "[fançoissex1]";
+			say "[françoissex1]";
 			increase hp of François by 1;
 		otherwise:
-			say "     François smiles at your offer and moves up against you, running his paws over your [bodydesc of player] body.  He nuzzles at your chest as he helps you out of your clothes and gear[if breast size of player is 0].  He licks across your manly pecs, teasing your nipples with his tongue[end if].  'Mmm... I would certainly enjoy another opportunity to get another taste of your rich, thick cream, mon hero,' he says softly in his sensual accent.  He places a paw on your cock and the other at your ballsac, gently caressing them.";
-			say "[fançoissex1]";
+			say "     François smiles at your offer and moves up against you, running his paws over your [bodydesc of player] body.  He nuzzles at your chest as he helps you out of your clothes and gear[if breast size of player is 0].  He licks across your manly pecs, teasing your nipples with his tongue[end if].  'Mmm... I would certainly enjoy another opportunity to get another taste of your rich, thick cream, mon héro,' he says softly in his sensual accent.  He places a paw on your cock and the other at your ballsac, gently caressing them.";
+			say "[françoissex1]";
 		now lastfuck of François is turns;
 
 
-to say Françoissex1:
+to say françoissex1:
 	say "     Rather than delay any longer, he lowers himself in front of you, licking and sniffing as he goes, taking in your scent.  'Mmm... you have such an [one of]exciting[or]exotic[or]enjoyable[or]intereting[or]alluring[at random] flavour,' he moans as he slathers his canine tongue back and forth over your maleness[if cock length of player > 24].  'And so very big!  C'est magnifique!  I shall enjoy this greatly[otherwise if cock length of player > 12].  'And so big!  I shall enjoy this very much[otherwise].  'I shall enjoy this[end if],' he adds, rubbing your cock with his paws before licking across your glans, lapping up the first dribbles of precum.";
-	say "     He takes his good, sweet time licking at your [cock size desc of player] [cock of player] erection, lavishing attention on it as he savours your rich, masculine flavour before finally opening his muzzle [if cock length of player > 24]extra-wide [otherwise if cock length of player > 12]fully [end if]and taking it inside.  He is quite careful with his teeth, only using them very lightly to add extra stimulation while his tongue plays across your pulsing length.  It's clear that the Frenchman's had plenty of practice at this even before his transformation as well as after, given how well he's working his muzzle over your shaft.  You stroke his canine head and rub his feline ears, getting him to smile a little at the corner of his mouth.
+	say "     He takes his good, sweet time licking at your [cock size desc of player] [cock of player] erection, lavishing attention on it as he savours your rich, masculine flavour before finally opening his muzzle [if cock length of player > 24]extra-wide [otherwise if cock length of player > 12]fully [end if]and taking it inside.  He is quite careful with his teeth, only using them very lightly to add extra stimulation while his tongue plays across your pulsing length.  It's clear that the Frenchman's had plenty of practice at this even before his transformation as well as after, given how well he's working his muzzle over your shaft.  You stroke his canine head and rub his feline ears, getting him to smile a little at the corner of his mouth.";
 	if hp of François is 0 or a random chance of 1 in 2 succeeds:
 		say "     While it's clear he knows how to make it last, he's quite eager to get his tasty treat.  He works his muzzle [if cock length of player > 12]and throat[end if] over your cock while his paws knead at your nuts.  These last he works softly, caressing them with care to get you all the more excited.  With such an eager mutt hard at work on your shaft, you don't hold out very long and are soon sending your [cum load size of player] load down his throat, giving him the thick, musky semen he's been after[if cock width of player > 24].  Your [cum load size of player] load plumps up the small hybrid's belly considerably, leaving him nicely rounded with cum[otherwise if cock width of player > 16].  Your [cum load size of player] load adds some visible inches to his belly as you fill him up[end if].  He licks him muzzle, rolling the cum left in his muzzle around on his tongue so he might enjoy its flavour.  'Mmm... very nice, mon ami.  Such a rich[if cock width of player > 16], filling[end if] treat.'  He rubs a paw over his belly and gets up slowly.";
 	otherwise:
 		say "     This time the horny hybrid decides to take his good, sweet time with you, working his muzzle over your throbbing meat with his muzzle [if cock length of player > 12]and throat[end if] with all his considerable skill.  His paws knead at your ballsac, rolling around those cum-filled orbs as he works with care to build you to greater and greater heights.  He knows many delightful tricks to do with his tongue, made all the better by the long, canine one he now has.  By the time he's sucking down hard at your cock and bobbing quickly across your shaft, your balls feel achingly full.  You grab his head and pull his muzzle forward, jamming your full length into the sexy cur and cum with a loud moan.  Unleashing your [cum load size of player] load down his throat, you [if cock width of player > 24]send burst after burst of thick seed into your eager lover until his belly is plump and rounded with it all[otherwise if cock width of player > 16]send shot after shot of thick seed into your eager lover until his belly has gained a few inches from it all[otherwise]send spurt after spurt until those balls of yours finally feel drained[end if].  Spent, you sag down into a chair, smiling down at the mutt as he licks his muzzle with grin, clearly aware of how his fellatio's affected you.  He licks him muzzle, rolling the cum left in his muzzle around on his tongue so he might enjoy its flavour.  'Mmm... very nice, mon ami.  Such a rich[if cock width of player > 16], filling[end if] treat.'  He rubs a paw over his belly and gets up slowly.";
+
+[  délcieux, savoureux, excitant, intense, agréable, exotique, intéressant, séduisant,  ]
 
 
 Francois ends here.
