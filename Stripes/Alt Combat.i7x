@@ -1,9 +1,9 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2.2 - Children upgrade, also Charisma driven]
+[Version 2.3 - Setup section before a fight added]
 
 "Oh my God!  Who gave them super-powers?!"
 
-Section 1 - Basic variables
+Section 0 - Basic variables
 
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
@@ -45,6 +45,20 @@ velossavedyes is a truth state that varies. [ Used to mark if Velos has ever use
 [ 30 *	player flee				]
 [ NOTES: Alt-Combat will only award the basic values marked with an asterisk.						]
 [ Most events should only concern themselves with those results, often lumping all losses into one group.	]
+
+
+Section 1 - Prepping for Combat
+
+to prepforfight:		[Do all the pre-fight setup, reset values, and display the monster description]
+	choose row monster from table of random critters;
+	now combat abort is 0;
+	if lev entry is less than level of player and hardmode is true:
+		hardmodeboost;
+	now monsterhp is hp entry;
+	now gascloud is 0;
+	now lost is 0;
+	now fightoutcome is 100;
+	say "You run into a [name entry].[line break][desc entry][line break]";
 
 
 Section 2 - Combat
