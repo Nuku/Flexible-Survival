@@ -1066,7 +1066,7 @@ To say felitaur tempt:
 
 to say latexfoxrape:
 	let c be 0;
-	if a random number from 1 to 100 is less than libido of player:
+	if a random number from 40 to 140 is less than libido of player:	[lust check, min 40 to pass]
 		let c be 1;
 	otherwise:
 		say "The latex fox gets an odd expression before a soft hissing is heard. The poor creature slowly sinks to the ground as the air escapes it, softly whining until it is an inanimate pile of latex.";
