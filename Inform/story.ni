@@ -1066,7 +1066,7 @@ To say felitaur tempt:
 
 to say latexfoxrape:
 	let c be 0;
-	if a random number from 1 to 100 is less than libido of player:
+	if a random number from 40 to 140 is less than libido of player:	[lust check, min 40 to pass]
 		let c be 1;
 	otherwise:
 		say "The latex fox gets an odd expression before a soft hissing is heard. The poor creature slowly sinks to the ground as the air escapes it, softly whining until it is an inanimate pile of latex.";
@@ -1094,7 +1094,7 @@ to say latexfoxrape:
 			say "Nearing orgasm you pick up the pace, your little red toy drooling in bliss. Fucking the fox like a wild man, you let out a roar as torrents of cum pour forth from your tool, lewdly distending the belly of your victim. Not to be left out, the fox starts shooting gobs of thick rubbery cum onto the ground, pooling around him. With some effort you pull your cock out of the little fox with an audible pop[if cock width of player > 40].  Your massive load bloats the rubbery fox, swelling him up like a cum-filled balloon[otherwise if cock width of player > 20].  Your large load causes a noticeable bulge in the rubbery fox, making his tummy look like he swallowed a cum-filled balloon[end if]. The seed you just planted come spilling out of the abused hole adding the the already large pool of cum the fox is laying in.";
 			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
 			if waiterhater is 0 and hypernull is 0, say "[line break]";	[adds a break after the 'more']
-			say "With your lust sated you put on your clothes. Walking away you smile as you see the little fox lustily wallows in the pool of cum, occasionally dipping its head to the pool and taking loud slurpy gulps of semen, coo-ing with satisfaction.";
+			say "With your lust sated you put on your clothes. Walking away you smile as you see the little fox lustily wallows in the pool of cum, occasionally dipping its head to the pool and taking loud slurpy gulps of semen, cooing with satisfaction.";
 			decrease libido of player by 30;
 			if libido of player is less than 0, now libido of player is 0;
 
@@ -1304,7 +1304,7 @@ when play begins:
 
 Insectlist is a marker.	[list of insectile/arachnid/bug infections]
 when play begins:
-	add { "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl", "Spidertaur" } to infections of Insectlist;
+	add { "Black Wasp", "Drone Wasp", "Butterfly", "Mothgirl", "spidergirl", "Spidertaur" } to infections of Insectlist;
 
 Plantlist is a marker.	[list of plant infections]
 when play begins:
