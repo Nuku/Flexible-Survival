@@ -45,7 +45,6 @@ Instead of resolving a Poor Kitty:
 
 Section 2 - Artemis
 
-Artemis is a woman.
 rubber tigress is a pet.  rubber tigress is a part of the player;
 understand "Artemis" as rubber tigress.
 The description of rubber tigress is "[artemisdesc]";

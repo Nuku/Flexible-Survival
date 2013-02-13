@@ -1,4 +1,4 @@
-Ewe by Sarokcat begins here. 
+Ewe by Sarokcat begins here.
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Ewe to Flexible Survivals Wandering Monsters table, With no Impreg chance"
@@ -15,18 +15,14 @@ to say ewe attack:
 			say "'Finally! I won[apostrophe]t be alone anymore!' The ewe says as she rubs her body up against your defeated form. Her soft woolen scent filling your head as she begins to clutch you to her eagerly, 'If I had to spend any more time without a flock I thought I would go crazy!' The ewe says happily, as she holds you to her tightly, and while you are pretty sure she has already been without a flock for too long, the feel of the naked ewe[apostrophe]s soft wool rubbing up against you seems very soothing. You let yourself relax for a bit in her arms, as she chatters happily about the joys of belonging to a flock, and how very lonely she has been without one, even as she talks about what a wonderful sheep you will make. Slightly worried about that last part of her statement, you wait until your new friend falls into an obviously exhausted sleep, before slipping out of her arms and making your way back out into the city. You wonder what the lonely ewe will do when she wakes up alone again, and if perhaps it might have been better for her if you had taken her with you... ";
 		otherwise:
 			say "'Oh, I've got you now, little thief,' the ewe says with a chuckle, groping your chest and then down to between your legs as she presses you to the ground, rubbing her soft, woolen body against yours.  'I should make you pay me back for taking our vegetables,' she bleats, grabbing your head and pressing it between her thighs.  With the arousing scent of her cunt in your face, you can't help but start licking her.  She grinds her pussy against your tongue until she has a loud, bleating orgasm.";
-	if guy is not banned and "Female Preferred" is not listed in feats of player:
-		infect "ram";
-	otherwise:
-		infect "ewe";
-
+	infect;
 
 To say ewe loss:
 	if cocks of the player is greater than 0:
 		say "Bleating sadly, the ewe collapses onto all fours in front of you, the defeated ewe looks up at you pleadingly as she stands there helplessly. Her lonely lust  filled eyes filled with need as she crouches down on the ground submissively.  As you turn to leave, you hear her soft voice beg from behind you.. 'Please, I[apostrophe]ve been so lonely... don[apostrophe]t you want me either?' She asks plaintively, making you pause as you look back to see her obviously needy rear raised towards you. Do you take the sheep up on her offer?";
 		if player consents:
 			say "You grin as you look down on the eager ewe, unable to resist her heat filled scent and the sight of her winking sex, you reach forward and bury your hands in her soft fleece, making her bleat eagerly in anticipation. Gripping her hips tightly, you slide your [cock of player] rod into her wet velvety opening, her passage spreading wide before your cock as she moans in pleasure. Feeling increasingly powerful, you begin to thrust into the ewes heat filled body again and again, her warm inner walls feeling like heaven, as each thrust brings you both closer and closer to your passionate climax. Soon your cock explodes within her, and you moan with pleasure as your seed spills into her body, she lets out a low bleating sound underneath you, as her body shudders in pleasure as well, before she collapses onto the ground.  Grinning as you struggle to stay standing on your unsteady feet, you look down at the happily fucked ewe sprawled out on the ground, enjoying the sated expression on her face for a few minutes, before you continue on with your explorations of the city.";
-			if guy is not banned and "Female Preferred" is not listed in feats of player:
+			if guy is not banned:
 				infect "ram";
 			otherwise:
 				infect "ewe";
