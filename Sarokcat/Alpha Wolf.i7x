@@ -53,6 +53,7 @@ to say Alpha Wolf attack:
 			increase Alpha Wolfdefeat by 1;
 		otherwise:
 			say "The wolf grabs you and pins you to the ground again, his rough paw-like hand exploring your crotch causing you to moan.  The beast growls seemingly unhappy with what he finds, and snarls and snaps over your prone body.  'What is this?' The alpha demands,  'A weakling like you without the proper equipment to submit to your alpha? Unacceptable!' The beast growls causing you to shudder as his displeasure washes over you. The alpha knocks you to the side, forcing you to prostrate yourself beneath him as he rests his hind paw on your throat, causing you to gasp as he growls down at you.  'Next time you will be ready for your alpha's pleasure little submissive, or else I might not be so forgiving' your alpha growls at you, before it removes its paw from your neck, and pads off down the street, leaving you gasping behind him, and lying their submissively shuddering in fear and a strange desire to do as your alpha pleases long after the beast is gone.";
+			increase Alpha Wolfdefeat by 1;
 	now wolffight is 2;				[lost]
 
 
