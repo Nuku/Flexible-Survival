@@ -1,5 +1,5 @@
 Version 1 of Wolfman by Wahn begins here.
-[Version 1.4 - Adjustments to some texts]
+[Version 1.5 - Threesome with Jennifer+Septus]
 
 "Adds a team of football wolfmen to Flexible Survivals Wandering Monsters table, With Impreg chance"
 
@@ -257,6 +257,12 @@ to say JenniferSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill the cheerleader's ass with your cock.";
 		now toggle entry is JenniferSex rule;
+	if (cocks of player > 0):
+		choose a blank row in table of fucking options;
+		now title entry is "Share Jennifer with Septus";
+		now sortorder entry is 6;
+		now description entry is "Have a hot threesome with them.";
+		now toggle entry is JenniferSex rule;
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;
@@ -280,6 +286,8 @@ This is the JenniferSex rule:
 			say "[JenniferSex4]";
 		otherwise if (nam is "Take Jennifer's ass"):
 			say "[JenniferSex5]";
+		otherwise if (nam is "Share Jennifer with Septus"):
+			say "[JenniferSex6]";
 		wait for any key;
 
 to say JenniferSex1:    [cock sucked by Jennifer]
@@ -325,6 +333,39 @@ to say JenniferSex5:    [fucking Jennifer's ass]
 		say "     It's an amazing feeling to be inside Jennifer's ass, rubbing against the inner walls with your shaft as she slides up and down on your cock. From her reaction and the incredibly tight grip around your penis, you don't think she's had anal sex all that often. With Jennifer bouncing up and down on your cock, her breasts are directly in front of your face so you catch one with your mouth and start sucking on it, running your tongue over its nipple.";
 		say "     Fucking the hot little cheerleader in the midst of her cheering friends and wolfmen offspring, you quickly feel a rising pressure in your balls. As you gasp that you're close to blowing your load, she answers 'Ok, hold my legs tight then.' You grasp her slender thighs as Jennifer leans back, back and further back until she's basically doing a handstand, only connected to you through your cock in her now upside-down ass and your hands holding her legs. With this new position, both of you get different feelings from the fucking, making you moan loudly and prompting you to fuck her harder and harder.";
 		say "     Soon, you reach the point of no return, gasping loudly as your seed shoots into Jennifer's body. Your forceful spurts and the helping force of gravity make sure all of it ends up deep inside her body, although your little swimmers of course search in vain for an egg in her ass. The crowd around you cheers and you can hear moans and lustful growls echo through the warehouse as many of them decide to follow your lead, both in the private section and right around you in the training area. Meanwhile, you slowly go down to your knees, lowering Jennifer to lie on her back with your cock still deep inside her and lean over her to make out some more.";
+
+to say JenniferSex6:    [sharing Jennifer with Septus]
+	say "     Pulling Septus aside, you ask him if he wants to do a threesome with Jennifer and you, and he eagerly agrees. He obviously can't wait to get it on with the cheerleader and while you take off your clothing, his shaft rapidly slides out of its sheath and hardens. 'Come on buddy' he says, putting his arm around your shoulders. 'Between me and you' - he reaches down with that and gives your own hardening shaft a few jerks - 'it'll be something she won't soon forget.'";
+	if(thirst of Jennifer is 2):    [pregnant version]
+		say "     The two of you walk over to Jennifer together, your cocks getting just a bit harder as you watch her naked body with its bulging pregnant belly from close up. Seeing the erections pointing at her, she smiles and remarks 'I see you boys want to have some fun. Good... this pregnancy makes me horny as fuck. I need a cock - or two - inside me.'";
+		say "     [line break]";
+		say "     Taking one cock in each hand, she guides you over to a nearby bunk and pushes Septus to sit on it, then takes a wide stance with her legs and bends over to suck him. You're left standing behind her, your manhood pointing straight at the moist and swollen pussy of the young human woman. Not able to resist entering that inviting cave, you bring your hips forward, cock sliding in between her pussy lips. Jennifer's moans are a bit muffled because of the wolfman cock in her mouth, but she clearly enjoys being filled by your [cock of player] shaft. While you thrust in and out of her body from behind, Septus has his hands on her head, pumping it up and down on his wolfman cock and panting in lust.";
+		say "     Fucking and getting sucked, the wolfman and you grin at each other, thoroughly enoying Jennifer's body. 'Great fuck, isn't she? But you should try her mouth too - come on, let's switch.' A bit reluctantly, you pull out of the hot cheerleader's body and take Septus place on the bunk. She immediately grabs hold of your manhood, running her tongue up over its underside before putting the tip in her mouth and sliding her lips down over the shaft. Man, she really knows what she's doing, you think to yourself as you moan loudly.";
+		say "     Giving you a knowing wink, Septus then rubs his lupine cock up against Jennifer's ass and bends over her, licking her back and reaching around to fondle her breasts and belly. He pulls back after that, aims the pointy tip of his lupine cock at her opening and slams forward in one mighty thrust. Something more animalistic in him takes hold as the wolfman mounts the cheerleader, holding onto her tightly and relentlessly rutting with her. With Jennifer still bobbing up and down on your cock, you watch the wild coupling of the muscular male and slender young woman. Before much longer, a deep growl rolls up in Septus throat, followed by a loud wolf's howl as his body shudders, hips still thrusting against Jennifer as he fills her with his seed.";
+		say "     [line break]";
+		say "     After getting his breath back, reason returns to Septus eyes and he looks down at his crotch pressed against Jennifer's backside, then over to you. 'Oh, sorry about that - I knotted inside. It's just... sometimes I can't hold back, not with Jennifer. No wonder father managed to knock up a whole busload of girls in one go if this is what he felt all the time.'";
+		say "     [line break]";
+		say "     With your balls aching to release their load, you don't think you can wait till Septus knot goes down. So what now? Do you want to give Jennifer a tasty snack (Y), or fuck Septus ass instead (N)?";
+		if player consents:
+			say "     Eager to get off, you take hold of the cheerleaders head and face-fuck her, pumping your manmeat in and out between her warm lips and into her throat. Soon, you feel the urgent need to cum rise inside you and pull back a bit until just the tip of your cock is inside her mouth. Spurt after spurt of your cum shoot onto Jennifer's tongue and after you're done, she sticks it out to show it to you, then swallows your seed demonstratively.";
+		otherwise:
+			say "     Standing up, you walk around Septus and Jennifer, your eyes roaming over their somewhat sweaty bodies. Pulling the wolfman's tail up, you run your hands through the soft fur on his behind, groping and squeezing his bunds before pulling them apart to have a look at his pucker. As you stroke a finger over it and poke a finger in, he gasps 'Please be gentle, we usually dont't fuck each other.' Reaching around to stroke his chest, you whisper in his ear 'Of course' then aim your cock and push forward, sinking your hard shaft into his hole. It's amazingly tight an warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him.";
+			say "     Already pretty close to blowing your load through Jennifer's oral attention, it doesn't take long at all until Septus tight hole gives you the rest. With a lustful groan, you grind your crotch against his ass, pushing your member deep inside him as it starts shooting long strands of your seed. After you finish coming, you stay inside him for a while longer, then pull out and keep the two of them company until they can disengage from each other.";
+	otherwise:      [regular version]
+		say "     The two of you walk over to Jennifer together, your cocks getting just a bit harder as you watch her naked body from close up. Seeing the erections pointing at her, she smiles and remarks 'I see you boys want to have some fun. Good... I'm horny as fuck. I need a cock - or two - inside me.'";
+		say "     [line break]";
+		say "     Taking one cock in each hand, she guides you over to a nearby bunk and pushes Septus to sit on it, then takes a wide stance with her legs and bends over to suck him. You're left standing behind her, your manhood pointing straight at the moist and swollen pussy of the young human woman. Not able to resist entering that inviting cave, you bring your hips forward, cock sliding in between her pussy lips. Jennifer's moans are a bit muffled because of the wolfman cock in her mouth, but she clearly enjoys being filled by your [cock of player] shaft. While you thrust in and out of her body from behind, Septus has his hands on her head, pumping it up and down on his wolfman cock and panting in lust.";
+		say "     Fucking and getting sucked, the wolfman and you grin at each other, thoroughly enoying Jennifer's body. 'Great fuck, isn't she? But you should try her mouth too - come on, let's switch.' A bit reluctantly, you pull out of the hot cheerleader's body and take Septus place on the bunk. She immediately grabs hold of your manhood, running her tongue up over its underside before putting the tip in her mouth and sliding her lips down over the shaft. Man, she really knows what she's doing, you think to yourself as you moan loudly.";
+		say "     Giving you a knowing wink, Septus then rubs his lupine cock up against Jennifer's ass and bends over her, licking her back and reaching around to fondle her breasts. He pulls back after that, aims the pointy tip of his lupine cock at her opening and slams forward in one mighty thrust. Something more animalistic in him takes hold as the wolfman mounts the cheerleader, holding onto her tightly and relentlessly rutting with her. With Jennifer still bobbing up and down on your cock, you watch the wild coupling of the muscular male and slender young woman. Before much longer, a deep growl rolls up in Septus throat, followed by a loud wolf's howl as his body shudders, hips still thrusting against Jennifer as he fills her with his seed.";
+		say "     [line break]";
+		say "     After getting his breath back, reason returns to Septus eyes and he looks down at his crotch pressed against Jennifer's backside, then over to you. 'Oh, sorry about that - I knotted inside. It's just... sometimes I can't hold back, not with Jennifer. No wonder father managed to knock up a whole busload of girls in one go if this is what he felt all the time.'";
+		say "     [line break]";
+		say "     With your balls aching to release their load, you don't think you can wait till Septus knot goes down. So what now? Do you want to give Jennifer a tasty snack (Y), or fuck Septus ass instead (N)?";
+		if player consents:
+			say "     Eager to get off, you take hold of the cheerleaders head and face-fuck her, pumping your manmeat in and out between her warm lips and into her throat. Soon, you feel the urgent need to cum rise inside you and pull back a bit until just the tip of your cock is inside her mouth. Spurt after spurt of your cum shoot onto Jennifer's tongue and after you're done, she sticks it out to show it to you, then swallows your seed demonstratively.";
+		otherwise:
+			say "     Standing up, you walk around Septus and Jennifer, your eyes roaming over their somewhat sweaty bodies. Pulling the wolfman's tail up, you run your hands through the soft fur on his behind, groping and squeezing his bunds before pulling them apart to have a look at his pucker. As you stroke a finger over it and poke a finger in, he gasps 'Please be gentle, we usually dont't fuck each other.' Reaching around to stroke his chest, you whisper in his ear 'Of course' then aim your cock and push forward, sinking your hard shaft into his hole. It's amazingly tight an warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him.";
+			say "     Already pretty close to blowing your load through Jennifer's oral attention, it doesn't take long at all until Septus tight hole gives you the rest. With a lustful groan, you grind your crotch against his ass, pushing your member deep inside him as it starts shooting long strands of your seed. After you finish coming, you stay inside him for a while longer, then pull out and keep the two of them company until they can disengage from each other.";
 
 Jenniferpregnant is a number that varies.
 Jenniferwolves is a number that varies.
