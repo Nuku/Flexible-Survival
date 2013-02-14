@@ -1,5 +1,5 @@
 Version 2 of Goblin For FS by Stripes begins here.
-[Version 2 - Sex update written by Blue Bishop w/assistance and coding by Stripes]
+[Version 2.1 - Continued sex update written by Blue Bishop w/assistance and coding by Stripes]
 "Adds a Goblin creature to Flexible Survivals Wandering Monsters table with impregchance"
 
 
@@ -35,9 +35,36 @@ to say losetogob_f:
 		say "     She lingers for a moment, panting, until she finds herself sufficiently recovered before pulling herself free from you[if scalevalue of player > 4].  She pats you teasingly on the top of your head[otherwise].  She gives you a playful swat on your behind[end if] before departing, the creature finding a tiny tunnel in the junk before descending within it.  Now free, you suppose you could be worse for wear, though you are somewhat disoriented by the influence of her infection.  You stagger off, wanting to get some distance before the scent of sex draws others.";
 
 
+
 to say losetogob_m:
-	say "     The creature emits a sinister cackle when [if hp of player > 0]his victim surrenders[otherwise]he fells you in combat[end if]. The little goblin pushing you to the ground, forcing you to relinquish your attire";
-	if cunts of player > 0:
+	say "     The creature emits a sinister cackle when [if hp of player > 0]his victim surrenders[otherwise]he fells you in combat[end if].  The little goblin pushing you to the ground, forcing you to relinquish your attire";
+	if "Less Anal" is not listed in feats of player and ( ( cunts of player > 0 and "More Anal" is listed in feats of player and ( a random chance of 1 in 4 succeeds or ( "MPreg" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) ) or ( a random chance of 1 in 4 succeeds or ( "More Anal" is listed in feats of player and a random chance of 1 in 4 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 4 succeeds ) or ( "MPreg" is listed in feats of player and a random chance of 1 in 4 succeeds ) )
+ ):		[anal, f: max 34%, m: max 68%]
+		say ".  [if scalevalue of player > 3]He circles around you for a moment, deciding how best to handle a beast of your scale.  Coming to a conclusion, he starts kicking you to compel you onto your back until you comply[otherwise]Driven by carnal urges, he begins to lewdly fondle your exposed, [bodydesc of player] form, much in spite of any protest you might offer.  Toothy grin wide as he forces you onto your back, he's certainly going to enjoy the fun he's about to have[end if].  Legs pulled to spread for him, you're given a clear view of his blatantly erect cock, forced from hiding behind the paltry cover of his loincloth.";
+		say "     Grinding the length of his--admittedly fairly average, though you suppose it's quite impressive to a creature of his size--cock against your exposed behind[if cocks of player > 1], he moves a hand to stroke one of your [cock size desc of player] cocks, supplementing his teasing with more direct affections until you're forced hard[otherwise if cocks of player > 0], he moves a hand to stroke your [cock size desc of player] cock, supplementing his teasing with more direct affections until you're forced hard[otherwise if cunts of player > 1], he moves a hand to stroke one of your cunts, supplementing his imminent intrusion with another as you feel his fingers sink into the feminine portal[otherwise if cunts of player > 0], he moves a hand to stroke your cunt, supplementing his imminent intrusion with another as you feel his fingers sink into the feminine portal[otherwise], he would briefly tease your [bodytype of player] ring before its appropriate use[end if].  Soon after, You feel the head of his cock force its way into you, [if scalevalue of player > 3]his prick barely registering against your sizeable hole.  He doesn't seem to mind, though; all the more excuse to be more reckless in his lust[otherwise]eliciting a moan from you in involuntary response against the irreverent intrusion. He would at least spare you a moment of gentle reservation before his wanton hunger takes precedent[end if].";
+		If scalevalue of player > 3:
+			say "     You watch on as the smaller creature continues to ride against your [bodytype of player] anus, his intrusion insufficient in pleasuring you, ";
+			If cocks of player > 0:
+				say "[if cocks of player > 2]a shortcoming he compensates for by the additional attention he confers to your dicks, now using both hands to milk two of them[otherwise if cocks of player > 1]a shortcoming he compensates for by the additional attention he confers to your dicks, now using both hands to milk the two of them[otherwise], a shortcoming he compensates for by the additional attention he confers to your dick[end if].  You can imagine the whole affair is a bit awkward for the diminutive goblin, barely able to ride you and hold onto you at the same time, though he's certainly not lacking in tenacity.";
+			Otherwise If cunts of player > 0:
+				say "a shortcoming he compensates for by the additional attention he confers to your cunt.  You can imagine the whole affair is a bit awkward for the diminutive goblin, barely able to ride you and hold onto you at the same time, though he's certainly not lacking in tenacity.";
+			Otherwise:
+				say "not that he seems to regard this. More than content to abuse your hole. Inevitably, you watch him go rigid, followed by the sensation of his cum flooding your depths.";
+			say "     Slowly, he manages to pull himself free from you, casually wiping his cock clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs.[mimpregchance]";
+		Otherwise:
+			say "     You watch on as he continues to ride against your [bodytype of player] anus, causing you to tremble in pleasure as he abuses your hole ";
+			If cocks of player > 0:
+				say "[if cocks of player > 2].  He continues to stroke your dicks, now using both hands to milk two of them[if cocks of player > 1].  He continues to stroke your dicks, now using both hands to milk the two of them[otherwise], further raising your arousal as he continues to pump your dick[end if].  Quite the tenacious goblin, you can't help but credit him for his ability to multitask, at least.";
+			Otherwise:
+				say ".  He shows a rising fervor, illustrating his imminent release, his lustful endeavours thrusting you closer to your own bliss.";
+			If cocks of player > 0:
+				say "     Suddenly, your [if cocks of player > 1]cocks[otherwise]cock[end if] erupts, [if cock width of player > 24]your unsuspecting face and upper torso immediately getting hosed with your [cum load size of player] load[otherwise if cock width of player > 12]firing its [cum load size of player] load impotently against your torso and face[otherwise]firing its [cum load size of player] load impotently against your torso[end if].  The tightening of your greedy ring forcing the goblin to climax himself, unloading his own seed into your ass.";
+			Otherwise if cunts of player > 0:
+				say "     Suddenly, you feel the goblin's load fire into your ass, the sensation of which triggering your own climax, the diminutive creature panting against your [bodytype of player] form as you milk him of every last drop of seed he has to offer.";
+			Otherwise:
+				say "     Suddenly, you feel the goblin's load fire into your ass, lost in the throes of his own pleasure very much in spite your inability to effectively satisfy your own.";
+			say "     Slowly, he manages to pull himself free from you, casually wiping his cock clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs.[mimpregchance]";
+	otherwise if cunts of player > 0 and a random chance of 2 in 3 succeeds:	[m/f - min: 44%, max: 67%]
 		say "[if scalevalue of player > 3].  He circles around you for a moment, deciding how best to handle a beast of your scale.  Coming to a conclusion, he starts kicking you to compel you onto your back until you comply[otherwise].  Driven by carnal urges, he begins to lewdly fondle your exposed, [bodydesc of player] form, much in spite of any protest you might offer.  Toothy grin wide as he forces you onto your back, he's certainly going to enjoy the fun he's about to have[end if].  Legs pulled to spread for him, you're given a clear view of his blatantly erect cock, forced from hiding behind the paltry cover of his loincloth.";
 		say "     Grinding the length of his - admittedly fairly average, though you suppose it's quite impressive to a creature of his size - cock against your exposed cunt[if cocks of player > 1], he moves a hand to stroke one of your [cock size desc of player] cocks.  He supplements his teasing with more direct affections until you're forced hard[otherwise if cocks of player is 1], he moves a hand to stroke your [cock size desc of player] cock.  He supplements his teasing with more direct affections until you're forced hard[otherwise], he would briefly tease your [bodytype of player] portal before its appropriate use[end if].  Soon after, you feel the head of his [if cocks of player > 0]own[end if] cock force its way into you, [if cunt width of player > 7 and cunt length of player > 10]his prick barely registering against your sizeable hole.  He doesn't seem to mind, though; all the more excuse to be more reckless in his lust[otherwise]eliciting a moan from you in involuntary response against the irreverent intrusion.  He would at least spare you a moment of gentle reservation before his wanton hunger takes precedent[end if].";
 		if cunt width of player > 7 and cunt length of player > 10:
@@ -68,18 +95,47 @@ to say losetogob_m:
 			otherwise:
 				say "     Suddenly, you feel the goblin's load fire into the depths of your [cunt size desc of player] portal, the sensation of which triggering your own climax, the diminutive creature panting against your [bodytype of player] form as you milk him of every last drop of seed he has to offer.[impregchance]";
 			say "     Slowly, he manages to pull himself free from you, casually wiping his cock clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs.  You get back up, wipe yourself off and leave the area quickly before the scent of sex draws others.";
-[ still leaves anal and oral ]
-
-
-
+	otherwise:			[oral]
+		say ".  Exposing his cock from behind the cover of his loincloth, he lets you watch as he begins to stroke himself erect before you.  It's not long before he's ready, and is quick to point it out by irreverently prodding your closed lips with the tool.";
+		If player is submissive or hp of player > 0:
+			say "     [if scalevalue of player > 4]He's a little ill at ease when you find yourself quickly compelled to comply, perhaps because he's putting himself between the jaws of a creature significantly larger than he.  Regardless, you hide his rod within the confines of your maw, much to the goblin's approval[otherwise]Finding yourself quickly compelled to comply, you open your maw to engulf the rod, to which he responds by shamelessly thrusting the length of it in its entirety within the confines of your hole, much in spite any complaints you could offer up against this shameless abuse[end if].";
+		otherwise:
+			say "     [if scalevalue of player > 4]You're quick to respond with a grin--weak as you may be, you've still got enough in you to ward him off, exposing your teeth to the diminutive creature.  He's briefly taken aback, but ultimately responds by thwacking you with a wrench a couple times until you're forced into complying; big as you may be, he still has the upper hand here and eventually you allow him to bury his cock into the confines of your large maw[otherwise]You find yourself unwilling to humor his needs, but that only incurs his further wrath when he smacks you around a bit until you agree to satisfy his urges. You open your mouth to oblige him, only to have the goblin thrust the entirety of his length into your hole, much in spite any complaints you could offer up against this shameless abuse[end if].";
+			say "     Thrusting wildly against you, you can taste emergent pre of his rising sexual fervor[if scalevalue of player < 4].  You feel like you're about to pass out from lack of oxygen until you suddenly feel your throat flooded with the release of his cum.  He inevitably pushes you free, no doubt amused as you gasp for air[otherwise].  His thrusts become increasingly erratic until you're met with the taste of his cum, the creature rigid against your maw as he attains blissful release. It takes him a bit, but he eventually pulls free of your lips, wiping his cock clean against the side of your face[end if].  Satisfied, he runs off back from whence he hid. It takes you a moment to recover, and you find yourself a little disoriented by his sexual fluid's infectious influence.";
 
 
 [  - old scene -
 	if cunts of player > 0 and bodyname of player is "Goblin":
 		say "     The goblin cackles merrily at his victory and pushes you down onto the ground.  Having found a female goblin, or at least someone close to one, he pushes you onto all fours with his foot and scrambles atop you.  Raising his loincloth, he brings his green cock to your pussy and thrusts into you with no preamble.  He grips your shoulders and pounds away at you, driving his small cock in again and again.  Your body can't help but respond to this, panting and moaning at having a goblin cock inside it.  Your pussy quivers over his penis, milking at it until he cums.  As his hot seed rushes into you, you cum as well with a loud, squealing moan.  Once he's drained his balls into you, he gives you another kick to send you on your way.[impregchance]";
 	otherwise:
-		say "     The goblin cackles at his victory and pushes you to the ground.  Taking your head in his hands, you can they have a surprisingly strong grip for their spindly size.  Pressing your face to his loincloth, the masculine scent it's masking becomes more apparent.  As his cock grows hard, his loincloth is pushed aside to reveal a five inch cock.  Given his body's size, it must seem impressive to him, though you've seen much bigger out in this city.";
+		say "     The goblin cackles at his victory and pushes you to the ground.  Taking your head in his hands, you can feel they have a surprisingly strong grip for their spindly size.  Pressing your face to his loincloth, the masculine scent it's masking becomes more apparent.  As his cock grows hard, his loincloth is pushed aside to reveal a five inch cock.  Given his body's size, it must seem impressive to him, though you've seen much bigger out in this city.";
 		say "     But regardless of its size, its clear what the goblin wants of you.  As he presses his cock to your lips, you give it a few licks before taking it into your mouth.  Its taste is bitter, but also masculine and strong.  You find yourself continuing to lick at it and start sucking it of your own accord, aroused by the sight of the little guy's prominent ballsac.  They are a little bigger than an average man's, making them quite impressive on his small frame.  You grip his green, leathery sac as you bob over his cock, getting him to blast his spunk into your mouth.  Though bitter, you swallow it all down with a soft moan around his meat.  Once his cock gives its last spurt, he pushes you away with his boot and sends you on your way.";
+]
+
+[
+to say beatthegoblin:
+	now goblinfight is 1;
+	say "     Defeated, the goblin is doubled over on the dirt.  Now that it's at your mercy, shall you have your way with them or leave them be?";
+	if the player consents:
+		if gobgender is 1:
+			say "[beatthegob_f]";
+		otherwise if gobgender is 2:
+			say "[beatthegob_m]";
+	otherwise:
+		say "     You concede to letting the goblin free, the diminutive creature scrambling away fearfully towards one of the mounds of scrap.  There it dives into the santuary of a tight tunnel, slipping out of sight.";
+
+
+to say beatthegob_f:
+- cock (not huge) : fuck
+- cock (not huge) : anal
+- cock/cunt : oral (random choice herm)
+
+
+to say beatthegob_m:
+- cunt : ride him
+- huge cock : docking
+- not-huge cock : anal
+- cock/cunt : oral (random choice herm)
 ]
 
 to say beatthegoblin:
