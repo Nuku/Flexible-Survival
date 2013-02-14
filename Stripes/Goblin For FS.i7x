@@ -54,7 +54,7 @@ to say losetogob_m:
 		Otherwise:
 			say "     You watch on as he continues to ride against your [bodytype of player] anus, causing you to tremble in pleasure as he abuses your hole ";
 			If cocks of player > 0:
-				say "[if cocks of player > 2].  He continues to stroke your dicks, now using both hands to milk two of them[if cocks of player > 1].  He continues to stroke your dicks, now using both hands to milk the two of them[otherwise], further raising your arousal as he continues to pump your dick[end if].  Quite the tenacious goblin, you can't help but credit him for his ability to multitask, at least.";
+				say "[if cocks of player > 2].  He continues to stroke your dicks, now using both hands to milk two of them[otherwise if cocks of player > 1].  He continues to stroke your dicks, now using both hands to milk the two of them[otherwise], further raising your arousal as he continues to pump your dick[end if].  Quite the tenacious goblin, you can't help but credit him for his ability to multitask, at least.";
 			Otherwise:
 				say ".  He shows a rising fervor, illustrating his imminent release, his lustful endeavours thrusting you closer to your own bliss.";
 			If cocks of player > 0:
