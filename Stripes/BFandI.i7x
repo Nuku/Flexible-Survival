@@ -7,6 +7,7 @@ bfandi (or bfandi1) checks the various new column entries for critters on the ta
 bfandi2 lists all existing creatures in the monster table and displays whether they have an altcombat entry, showing that entry if it exists.
 bfandi3 lists all situations in the current area, whether they're resolved or unresolved and it's level.  It will also mention if it's a scavevent.
 bfandi4 lists all situations sorted by area, level or name, as selected once run, then provides data similar to bfandi3.
+bfandi5 lists all flags and markers, counting their individual totals and displaying their contents.
 ]
 
 Section 13 - Brute Force Creature Testing (BFandI command) - Not for release
@@ -227,26 +228,26 @@ understand "bfandi5" as bfanditesting5.
 
 carry out bfanditesting5:
 	say "[special-style-2]FLAGS:[roman type][line break]";
-	say "[bold type]Girl:[roman type] [infections of girl].";
-	say "[bold type]Guy:[roman type] [infections of guy].";
-	say "[bold type]Hermaphrodite:[roman type] [infections of hermaphrodite].";
-	say "[bold type]Furry:[roman type] [infections of furry].";
-	say "[bold type]Hellspawn:[roman type] [infections of hellspawn].";
-	say "[bold type]Humorous:[roman type] [infections of humorous].";
+	say "[bold type]Girl:[roman type] ([special-style-2][number of entries in infections of girl][roman type]) [infections of girl].";
+	say "[bold type]Guy:[roman type] ([special-style-2][number of entries in infections of guy][roman type]) [infections of guy].";
+	say "[bold type]Hermaphrodite:[roman type] ([special-style-2][number of entries in infections of hermaphrodite][roman type]) [infections of hermaphrodite].";
+	say "[bold type]Furry:[roman type] ([special-style-2][number of entries in infections of furry][roman type]) [infections of furry].";
+	say "[bold type]Hellspawn:[roman type] ([special-style-2][number of entries in infections of hellspawn][roman type]) [infections of hellspawn].";
+	say "[bold type]Humorous:[roman type] ([special-style-2][number of entries in infections of humorous][roman type]) [infections of humorous].";
 	say "[line break]";
 	say "[special-style-1]MARKERS:[roman type][line break]";
-	say "[bold type]Tailweapon:[roman type] [infections of tailweapon].";
-	say "[bold type]Felinelist:[roman type] [infections of Felinelist].";
-	say "[bold type]Caninelist:[roman type] [infections of Caninelist].";
-	say "[bold type]Equinelist:[roman type] [infections of Equinelist].";
-	say "[bold type]Vulpinelist:[roman type] [infections of Vulpinelist].";
-	say "[bold type]Reptilelist:[roman type] [infections of Reptilelist].";
-	say "[bold type]Insectlist:[roman type] [infections of Insectlist].";
-	say "[bold type]Plantlist:[roman type] [infections of Plantlist].";
-	say "[bold type]Avianlist:[roman type] [infections of Avianlist].";
-	say "[bold type]Taurlist:[roman type] [infections of Taurlist].";
-	say "[bold type]Knotlist:[roman type] [infections of Knotlist].";
-	say "[bold type]Latexlist:[roman type] [infections of Latexlist].";
+	say "[bold type]Tailweapon:[roman type] ([special-style-1][number of entries in infections of Tailweapon][roman type]) [infections of tailweapon].";
+	say "[bold type]Felinelist:[roman type] ([special-style-1][number of entries in infections of Felinelist][roman type]) [infections of Felinelist].";
+	say "[bold type]Caninelist:[roman type] ([special-style-1][number of entries in infections of Caninelist][roman type]) [infections of Caninelist].";
+	say "[bold type]Equinelist:[roman type] ([special-style-1][number of entries in infections of Equinelist][roman type]) [infections of Equinelist].";
+	say "[bold type]Vulpinelist:[roman type] ([special-style-1][number of entries in infections of Vulpinelist][roman type]) [infections of Vulpinelist].";
+	say "[bold type]Reptilelist:[roman type] ([special-style-1][number of entries in infections of Reptilelist][roman type]) [infections of Reptilelist].";
+	say "[bold type]Insectlist:[roman type] ([special-style-1][number of entries in infections of Insectlist][roman type]) [infections of Insectlist].";
+	say "[bold type]Plantlist:[roman type] ([special-style-1][number of entries in infections of Plantlist][roman type]) [infections of Plantlist].";
+	say "[bold type]Avianlist:[roman type] ([special-style-1][number of entries in infections of Avianlist][roman type]) [infections of Avianlist].";
+	say "[bold type]Taurlist:[roman type] ([special-style-1][number of entries in infections of Taurlist][roman type]) [infections of Taurlist].";
+	say "[bold type]Knotlist:[roman type] ([special-style-1][number of entries in infections of Knotlist][roman type]) [infections of Knotlist].";
+	say "[bold type]Latexlist:[roman type] ([special-style-1][number of entries in infections of Latexlist][roman type]) [infections of Latexlist].";
 
 
 BFandI ends here.
