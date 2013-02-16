@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2.3 - Setup section before a fight added]
+[Version 2.5 - Updated version number for d50 and bonus system]
 
 "Oh my God!  Who gave them super-powers?!"
 
