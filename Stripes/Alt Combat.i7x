@@ -81,6 +81,11 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 		increase pldodgebonus by dodgebonus of x;
 	if weapon object of player is unwieldy:
 		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player);
+	if weapon object of player is bo staff:
+		if "Martial Artist" is listed in feats of player, increase plhitbonus by 1;
+		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
+	if weapon object of player is journal:
+		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of player:
 		let speciesbonus be 0;
 		if bodyname of player is name entry, increase speciesbonus by 3;
