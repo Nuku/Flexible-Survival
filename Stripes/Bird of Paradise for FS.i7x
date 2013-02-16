@@ -1,4 +1,5 @@
 Version 1 of Bird of Paradise for FS by Stripes begins here.
+[Version 1.1 - Alt combat tweaked]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Bird of Paradise to Flexible Survival."
@@ -96,9 +97,9 @@ bopsongcount is a number that varies.
 this is the bopsong rule:
 	choose row monster from the table of random critters;
 	say "The exotic bird's sexy dancing and singing is quite tantalizing, seeking to entice you into giving into her advances.  She flashes her breasts and juicy cunt at you, singing softly and alluring as she does.";
-	let playernum be 150 + humanity of player - libido of player + ( level of player * 2 ) + cha entry;
-	let bopnum be 200 + ( lev entry * 2 ) + cha entry * 2;
-	if peppereyes > 0, decrease bopnum by 100;
+	let playernum be 150 + humanity of player + ( level of player * 2 ) + charisma of player + ( plmindbonus * 3) - libido of player;
+	let bopnum be 200 + ( lev entry * 2 ) + ( cha entry * 2 ) + ( monmindbonus * 3);
+	if peppereyes > 0, decrease bopnum by 75;
 	if bodyname of player is "Bird of Paradise":
 		decrease playernum by 12;
 	otherwise if bodyname of player is listed in Infections of Avianlist:

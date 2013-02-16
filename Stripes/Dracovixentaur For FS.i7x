@@ -1,5 +1,5 @@
 Version 1 of Dracovixentaur For FS by Stripes begins here.
-[Version 1.2 - Endings]
+[Version 1.3 - Alt attack tweaked]
 "Adds a Dracovixentaur creature to Flexible Survival's Wandering Monsters table to go along with Sam the Dual-Taur's content."
 
 Section 1 - Monster Responses
@@ -225,9 +225,9 @@ this is the DVtaurpounce rule:		[double-damage pouncing]
 
 this is the DVtaurscent rule:
 	choose row monster from the table of random critters;
-	let playernum be Stamina of player + level of player;
+	let playernum be Stamina of player + level of player + plmindbonus;
 	if face mask is equipped, increase playernum by 4;
-	let vixennum be cha entry + ( lev entry / 2 );
+	let vixennum be cha entry + ( lev entry / 2 ) + monmindbonus;
 	let playernum be a random number between 0 and playernum;
 	let vixennum be a random number between 0 and vixennum;
 	if vixennum > playernum:

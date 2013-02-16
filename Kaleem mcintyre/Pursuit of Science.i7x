@@ -631,7 +631,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Organi Rod"	"A rod laden with a metallic substance reminiscent of gold. Transformed from a normal club into this by the power of alchemy the rod is both tougher and more damaging. It weighs a lot less than before too. "	5	Organi Rod
 
-Organi Rod is an armament. It is part of the player. It has a weapon "[one of]your mystic rod[or]your smooth and polished staff[or]your gleaming pole[or]your seven foot staff of pain[at random]". The weapon damage of Organi Rod is 15. The weapon type of Organi Rod is "Melee". It is not temporary.
+Organi Rod is an armament. It is part of the player. It has a weapon "[one of]your mystic rod[or]your smooth and polished staff[or]your gleaming pole[or]your seven foot staff of pain[at random]". The weapon damage of Organi Rod is 15. The weapon type of Organi Rod is "Melee". It is not temporary. the objsize of organi rod is 4.
 
 instead of sniffing Organi Rod:
 	say "The rod smells of alchemical residue with a touch of heart and soul from a bubbly researcher.";

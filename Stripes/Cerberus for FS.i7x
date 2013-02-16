@@ -1,5 +1,5 @@
 Version 1 of Cerberus for FS by Stripes begins here.
-[ Version 1.1 - Anime Babe vulnerability]
+[ Version 1.2 - Alt attack and Anime Babe vulnerability tweaked]
 [Adaptation for Flexible Survival by Stripes]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 [This monster was updated and converted to a more readable format by Stripes.  All sexual encounters from MP MUD have been rewritten to fit the game better, all credit to creature idea goes to original author!]
@@ -114,8 +114,11 @@ to say cerberusdesc:
 	say "     You find yourself facing a creature of legend, a three-headed hound like Cerberus of Greek myth.  This beast's large, canine body has three heads and its muscled body is covered in a coat of rough fur as black as coal.  The creature pads towards you on all fours, then rises up on its hind legs, displaying its powerful body to you as it growls.  The monster's chest is quite broad, expanded to make room for the three heads as well as the powerful organs to drive its altered body.  It has six rows of breasts.  The uppermost pair are of above-average size and they become progressively smaller until the last row are slight bumps with nipples.  Its arms and legs are muscled and strong to be able to bear the weight of this large creature.  Between the mythic creature's legs is a wet, dripping slit.  Behind it, you catch a glimpse of its long, thick tail.  As you examine the tail, you notice a slit at the very end of it from whence hir male genitals are just now peeking out. Something tells you that hir testicles are in that tail as well.  The cock on the end of hir tail is quite large, with a swelling knot and several large ridges along its canine length.  The three heads growl at you again, drawing your focus back to them in time see the Cerberus herm charge at you with lust in hir six wild eyes.";
 	if bodyname of player is "Anime Babe":
 		say "     Your anime girl body, particularly vulnerable to tentacle attack, is entranced by the Cerberus's tail and cock tip, so like a tentacle eager to fill you.  You moan and squeal in barely suppressed pleasure as that tail sways, quickly draining your resistance.";
-		now hp of player is hp of player / 2;
-		now libido of player is ( 100 + libido of player + libido of player ) / 3;
+		decrease plfleebonus by 2;
+		decrease pldodgebonus by 2;
+		decrease plmindbonus by 2;
+		now hp of player is ( 3 * hp of player ) / 4;
+		now libido of player is ( 100 + libido of player + libido of player + libido of player ) / 4;
 
 
 to say cerberusfacetf:
@@ -221,7 +224,7 @@ this is the cerberus rule:
 			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now cmdmg is (cmdmg * 150) divided by 100;
 				say "Critical Hit!  ";
-			say "The [one of]first[or]right[at random] head [one of]bites[or]chews on[or]latches onto[purely at random] your left [one of]arm[or]shoulder[or]wrist[or]hand[or]side[or]hip[or]thigh[or]leg[at random], doing [special-style-2][cmdmg][roman type] damage!";
+			say "The [one of]first[or]right[at random] head [one of]bites[or]chews on[or]latches onto[or]clamps onto[purely at random] your left [one of]arm[or]shoulder[or]wrist[or]hand[or]side[or]hip[or]thigh[or]leg[at random], doing [special-style-2][cmdmg][roman type] damage!";
 			increase cmdmgtotal by cmdmg;
 		otherwise:
 			say "The [one of]first[or]right[at random] head misses!";
@@ -234,7 +237,7 @@ this is the cerberus rule:
 			if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 				now cmdmg is (cmdmg * 150) divided by 100;
 				say "Critical Hit!  ";
-			say "The [one of]second[or]middle[or]central[at random] head [one of]bites[or]chews on[or]latches onto[purely at random] your [one of]shoulder[or]chest[or]side[or]hip[or]waist[at random], doing [special-style-2][cmdmg][roman type] damage!";
+			say "The [one of]second[or]middle[or]central[at random] head [one of]bites[or]chews on[or]latches onto[or]tears into[purely at random] your [one of]shoulder[or]chest[or]side[or]hip[or]waist[at random], doing [special-style-2][cmdmg][roman type] damage!";
 			increase cmdmgtotal by cmdmg;
 		otherwise:
 			say "The [one of]second[or]middle[or]central[at random] head misses!";

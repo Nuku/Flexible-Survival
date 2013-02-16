@@ -26,7 +26,7 @@ horse whip is an armament. It is part of the player. It has a weapon "[one of]yo
 
 the scent of horse whip is "The horse whip smells of leather and oils.";
 
-infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. the purified of infected sword is "Nothing".
+infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. the purified of infected sword is "Nothing". the objsize of infected sword is 4.
 
 the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing.  You can never seem to identify a scent before a new one appears.";
 

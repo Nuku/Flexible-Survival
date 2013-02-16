@@ -1,5 +1,5 @@
 Version 4 of Hospital for FS by Stripes begins here.
-[Version 4 - Sally option for Dr Matt added]
+[Version 4.1 - Bonesaw tweak]
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
 [Description text for this Extension.]
 
@@ -119,7 +119,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "bonesaw"	"A stainless steel bonesaw used for medical procedures.  A little unwieldy, but sharp."	3	bonesaw
 
-bonesaw is an armament. It is part of the player. It has a weapon "[one of]the bonesaw[or]your bonesaw[or]your medical blade[or]the stainless steel saw[at random]". The weapon damage of bonesaw is 6. The weapon type of bonesaw is "Melee". It is not temporary.
+bonesaw is an armament. It is part of the player. It has a weapon "[one of]the bonesaw[or]your bonesaw[or]your medical blade[or]the stainless steel saw[at random]". The weapon damage of bonesaw is 6. The weapon type of bonesaw is "Melee". It is not temporary.  The objsize of bonesaw is 2.
 
 instead of sniffing the bonesaw:
 	say "The bonesaw smells faintly of antiseptic and blood.";

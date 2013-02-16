@@ -1,5 +1,5 @@
 Version 2 of Squid for FS by Stripes begins here.
-[Version 2.1 - Anime Babe vulnerability]
+[Version 2.2 - Tweaked Anime Babe vulnerability]
 
 [Adaptation of Squid Girl for Flexible Survival by Stripes]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
@@ -57,7 +57,10 @@ to say squiddesc:
 		say "     You are suddenly accosted by what looks to be a strange squid-girl.  Sleek and smooth in form, her streamlined build gives an almost fey appearance.  Seemingly gliding towards you, she exposes her glistening yellow flesh.  Head human-like, it is exaggerated by an elongated crown and large, dark eyes.  Further informing you of her lithe body, the creatures' chest is a slightly paler facet, adorned with a pair of small, flat breasts.  Her arms long tentacle-like appendages, they are lined with rows of suckers and ending in pad-like hands.  Pretty much everything below the waist is obscured by a writhing mass of tentacles, twisting and rolling as she moves to attack you, strangely determined in spite of her seemingly frail appearance.";
 	if bodyname of player is "Anime Babe":
 		say "     Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the squid's swaying tentacles.  You moan and squeal in barely suppressed pleasure as those tentacles squirm around you, quickly draining your resistance.";
-		now hp of player is hp of player / 2;
+		decrease plfleebonus by 3;
+		decrease pldodgebonus by 3;
+		decrease plmindbonus by 3;
+		now hp of player is ( 2 * hp of player ) / 3;
 		now libido of player is ( 100 + libido of player + libido of player ) / 3;
 
 

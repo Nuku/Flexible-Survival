@@ -1,4 +1,5 @@
 Version 1 of Bunny Jock For FS by Stripes begins here.
+[Version 1.1 - Alt attack tweaked]
 
 "Adds a Bunny Jock creature to Flexible Survivals Wandering Monsters table with impregchance"
 
@@ -130,9 +131,9 @@ this is the powerplay rule:
 		if a random chance of 1 in 3 succeeds:
 			say "'And then I was like, [']Hey Coach, put me in!['] and I grabbed the ball like this,' he says, grabbing you and hefting you under his arm in a crushing hold and charges across the grass.  '30!  20!  10!  Touchdown!' he cheers, slamming you hard to the ground as if spiking the ball.  You take a hefty [special-style-2][dam][roman type] damage!";
 		otherwise if a random chance of 1 in 2 succeeds:
-			say "'And there was 5 seconds left on the clock in the big game and then Darrell was Woosh!  Woosh! past them and SLAM DUNK!'  As he's excitedly re-enacting the play, he grabs you, leaps 10 feet in the air with his powerful, rabbit legs and dunks you like a ball through an imaginary hoop.  'Dude!  That game was awesome!' he yells as your head rings.  You take [special-style-2][dam][roman type] damage!";
+			say "'And there was 5 seconds left on the clock in the big game and then Darrell was [']Woosh! Woosh!['] past them and SLAM DUNK!'  As he's excitedly re-enacting the play, he grabs you, leaps 10 feet in the air with his powerful, rabbit legs and dunks you like a ball through an imaginary hoop.  'Dude!  That game was awesome!' he yells as your head rings.  You take [special-style-2][dam][roman type] damage!";
 		otherwise:
-			say "'And so their defensemen were lining up to block our winger and so I came skating across the ice and WHAM!' he cries, barreling his shoulder into you and plowing you into a wall so hard it rattles your teeth.  'I checked both of them in one go.  Got a penalty for that one, but it was so worth it!' he adds.";
+			say "'And so their defensemen were lining up to block our winger and so I came skating across the ice and WHAM!' he cries, barreling his shoulder into you and plowing you into a wall so hard it rattles your teeth.  'I checked both of them in one go.  Got a penalty for that one, but it was sooooo worth it!' he adds.";
 	now damagein is dam;
 	say "[normalabsorbancy]";
 	if absorb is greater than dam:

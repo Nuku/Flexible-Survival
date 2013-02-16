@@ -483,7 +483,7 @@ name	desc	weight	object
 
 icicle knives is an armament. 
 It is part of the player.
-It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 16. The weapon type of icicle knives is "Melee". It is not temporary. 
+It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 16. The weapon type of icicle knives is "Melee". It is not temporary. the objsize of icicle knives is 2.
 
 Instead of sniffing icicle knives:
 	Say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir."; 

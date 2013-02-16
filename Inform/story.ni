@@ -20,6 +20,12 @@ Include Basic Help Menu by Emily Short.
 Include Version 4 of Menus by Emily Short.
 Include Basic Screen Effects by Emily Short.
 
+[Absolute value]
+To decide which number is the absolute value of (N - a number):
+	if N is less than 0:
+		let N be 0 minus N;
+	decide on N.
+
 Instead of sniffing something (called x):
 	if the scent of x is "":
 		say "It smells pretty normal for a/an [x].";
@@ -205,6 +211,7 @@ A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.
 Grab Object is a kind of thing.
+a grab object has a number called objsize. The objsize of grab object is usually 3.	[Used only for armaments and journal.]
 things have a text called scent.
 rooms have a text called scent.
 The player has a grab object called weapon object. A weapon object is usually journal;
@@ -212,6 +219,7 @@ A armament is a kind of grab object.
 A armament has a text called weapon.
 A armament has a text called weapon type.
 A armament has a number called Weapon Damage.
+A armament has a number called hitbonus.	[Rare, usually magic]
 An armament can be ranged or melee. An armament is usually melee.
 Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
@@ -220,6 +228,8 @@ Equipment has a text called placement. The placement of equipment is usually "en
 Equipment has a text called slot. The slot of equipment is usually "";
 Equipment has a number called AC. The AC of equipment is usually 0.
 Equipment has a number called effectiveness.  The effectiveness of equipment is usually 0.
+Equipment has a number called dodgebonus.  The dodgebonus of equipment is usually 0.	[Rare, usually magic]
+Equipment has a number called fleebonus.  The fleebonus of equipment is usually 0.		[Usually a penalty]
 A grab object can be temporary. A grab object is usually temporary.
 A grab object can be fast. A grab object is usually not fast.
 A grab object can be infectious. 
@@ -255,6 +265,11 @@ inasituation is a truth state that varies.  inasituation is normally false.
 
 Definition: A grab object(called X) is wielded:
 	if weapon object of player is x, yes;
+	no;
+
+Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
+	if grab object is journal, no;
+	if the absolute value of ( scalevalue of player - objsize of x ) > 1, yes;
 	no;
 
 Definition: The player is submissive:
@@ -861,9 +876,9 @@ soda is a grab object. It is a part of the player.
 chips is a grab object. It is a part of the player.
 glob of goo is a grab object. It is a part of the player. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
 food is a grab object. It is a part of the player. The trade of food is "soda".
-pocketknife is a armament. It is a part of the player. It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]". The weapon damage of pocketknife is 5. The weapon type of pocketknife is "Melee". It is not temporary.
+pocketknife is a armament. It is a part of the player. It has a weapon "[one of]your large knife[or]your blade[or]your trusty pocket knife[or]flashing steel[at random]". The weapon damage of pocketknife is 5. The weapon type of pocketknife is "Melee". It is not temporary.  the objsize of pocketknife is 2.
 understand "knife" as pocketknife.
-chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary.
+chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary.  the objsize of chair is 4.
 understand "seat" as chair.
 gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon"; The trade of Gryphon Milk is "distilled milk".  gryphon milk is milky.
 distilled milk is a grab object. It is a part of the player.  it is not milky.
@@ -4440,6 +4455,11 @@ This is the self examine rule:
 		if descmod of x is "", next;
 		if placement of x is "body":
 			say " [descmod of x][run paragraph on]";
+	if weapon object of player is not journal:
+		say "  You are carrying a/an [weapon object of player] just in case of trouble";
+		if weapon object of player is unwieldy:
+			say ".  Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[otherwise]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[otherwise if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[otherwise]somewhat unwieldy[end if] for you to use at the moment";
+		say ".[run paragraph on]";
 	if tail of player is "":
 		say "";
 	otherwise:
@@ -4944,7 +4964,7 @@ carry out levelcheat:
 	level up;
 	decrease score by level of the player times level of the player; 
 
-Section Lists of Tables
+Section Lists of Tables - Not for release
 
 [intends to list stuff for debuging (or any other activity needing a list of whats in the game).  output is formatted as CSV to simplify exporting.  appears to be working properly.]
 TableListing is an action applying to one topic.

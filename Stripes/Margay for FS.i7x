@@ -1,4 +1,5 @@
 Version 1 of Margay for FS by Stripes begins here.
+[Version 1.1 - Alt attack tweaked]
 
 [Adaptation for Flexible Survival by Stripes]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
@@ -130,8 +131,8 @@ this is the margaydance rule:
 	increase margaydancecount by 1;
 	if margaydancecount is even and a random chance of 2 in 5 succeeds and peppereyes is 0:	[40% of the time on any even round]
 		say "The big kitty performs an erotic dance that is quite tantalizing, seeking to entice you into giving into her rough advances.  She runs her paws over her ample figure, her numerous breasts and then down to her wet cunts, fingering them with a moan of desire.";
-		let playernum be 150 + humanity of player - libido of player + ( level of player * 2 ) + cha entry;
-		let margaynum be 200 + ( lev entry * 2 ) + cha entry;
+		let playernum be 150 + humanity of player + ( level of player * 2 ) + charisma of player + ( plmindbonus * 3 ) - libido of player ;
+		let margaynum be 200 + ( lev entry * 2 ) + cha entry + ( monmindbonus * 3 );
 		if bodyname of player is "Margay":
 			decrease playernum by 12;
 		otherwise if bodyname of player is listed in infections of Felinelist:

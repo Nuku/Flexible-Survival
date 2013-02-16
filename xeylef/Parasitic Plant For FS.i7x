@@ -1,5 +1,5 @@
 Version 8 of Parasitic Plant For FS by xeylef begins here.
-[Version 8.2 - Anime Babe vulnerability]
+[Version 8.3 - Alt attack and Anime Babe vulnerability tweaked]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 "Adds a Parasitic Plant creature to Flexible Survivals Wandering Monsters table, With multiple vaginas!"
 [Description text for this Extension.]
@@ -95,7 +95,10 @@ to say plantorseed:
 				say "A pain from your gut suddenly forces you to the ground. It almost feels like you are giving birth from your ass but whatever it is feels more like a long cock pushing at the inside of your ass! Looking down, you see a large vine-like root slide out of your anus, growing longer and longer. It soon reaches the ground and burrows into the earth, seemingly taking root. The pain ends but you're still in trouble: the vine is very strong and no matter how much you pull or tug the vine refuses to pull free from the ground or from inside of you. The vine keeps growing longer for a few moments until there is a good 10 feet of vine between your pussy and the ground, allowing you room to move around some, but other vines are emerging from the soil. Its going to be a fight trying to break the strong root, or a good running start might allow you to break the root if you flee.";
 	if bodyname of player is "Anime Babe":
 		say "Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the plant's vines.  You moan and squeal in barely suppressed pleasure as those vines squirm inside you, quickly draining your resistance.";
-		now hp of player is hp of player / 2;
+		decrease plfleebonus by 3;
+		decrease pldodgebonus by 3;
+		decrease plmindbonus by 3;
+		now hp of player is ( 2 * hp of player ) / 3;
 		now libido of player is ( 100 + libido of player + libido of player ) / 3;
 
 to say submitcheck:
@@ -185,16 +188,24 @@ this is the ppstrike rule:		[possible sonic attack and sets upcoming strike]
 	otherwise:
 		choose row monster from the table of random critters;
 		now ppatt is false;
-		let the defense bonus be (( the stamina of the player - 10 ) / 2) + level of the player;
+		let the defense bonus be stamina of the player + ( level of player * 2 ) - 10;
 		if gascloud > 0, decrease gascloud by 1;
-		let the attack bonus be (( the sta entry minus 10 ) divided by 2) plus lev entry;
+		let the attack bonus be sta entry + ( lev entry * 2 ) - 10;
 		let the combat bonus be attack bonus minus defense bonus;
-		if hardmode is true and the combat bonus is less than -10:
-			now the combat bonus is -10;
-		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
-		let the roll be a random number from 1 to 20;
-		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-		if the roll plus the combat bonus is greater than 8:
+		if hardmode is true:
+			if the combat bonus is greater than 19:
+				now combat bonus is 19;
+			otherwise if the combat bonus is less than -22:
+				now combat bonus is -22;
+		otherwise:
+			if the combat bonus is greater than 16:
+				now combat bonus is 16;
+			otherwise if the combat bonus is less than -25:
+				now combat bonus is -25;
+		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15;	[***if autopass, min. 25% chance to hit]
+		let the roll be a random number from 1 to 50;
+		say "[name entry] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+		if the roll plus the combat bonus is greater than 20:
 			now monsterhit is true;
 		otherwise:
 			now monsterhit is false;

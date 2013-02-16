@@ -1,4 +1,5 @@
 Version 1 of Dolphin for FS by Hellerhound begins here.
+[Version 1.1 - Alt attack tweaked - Stripes]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a dolphin to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -187,8 +188,8 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
 	choose row monster from table of random critters;
 	if a random chance of 1 in 6 succeeds:
-		say "The dolphin lets off a really loud pulse of high pitched clicks, which weakens you ([ ( 6 + level of player ) / 2 ] dmg) and stuns you just long enough for her to attack again.";
-		decrease hp of player by ( ( 6 + level of player ) / 2 );
+		say "The dolphin lets off a really loud pulse of high pitched clicks, which weakens you ([ ( 6 + lev entry ) / 2 ] dmg) and stuns you just long enough for her to attack again.";
+		decrease hp of player by ( ( 6 + lev entry ) / 2 );
 	now tempnum is a random number between 1 and 5;		[picks one of the attacks]
 	if tempnum is 1:
 		now attack entry is "She bites your hand with her sharp little teeth. It hurts!";
