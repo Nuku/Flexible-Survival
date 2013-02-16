@@ -36,7 +36,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "riding crop"	"A leather riding crop used for dealing with recalcitrant steeds and playtoys."	1	riding crop
 
-riding crop is an armament. It is part of the player. It has a weapon "[one of]your riding crop[or]your crop[or]your leather crop[or]your disciplinary tool[at random]". The weapon damage of riding crop is 4. The weapon type of riding crop is "Melee". It is not temporary.
+riding crop is an armament. It is part of the player. It has a weapon "[one of]your riding crop[or]your crop[or]your leather crop[or]your disciplinary tool[at random]". The weapon damage of riding crop is 4. The weapon type of riding crop is "Melee". It is not temporary. the objsize of riding crop is 2.
 
 instead of sniffing the riding crop:
 	say "The riding crop smells of leather and discipline.";

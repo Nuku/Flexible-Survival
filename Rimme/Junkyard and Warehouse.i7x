@@ -527,7 +527,7 @@ name	desc	weight	object
 
 crowbar is a armament. It is a part of the player. It has a weapon "your crowbar". The weapon damage of crowbar is 6. The weapon type of crowbar is "Melee". It is not temporary.
 mallet is a armament. It is a part of the player. It has a weapon "your mallet". The weapon damage of mallet is 7. The weapon type of mallet is "Melee". It is not temporary.
-iron pipe is a armament. It is a part of the player. It has a weapon "your iron pipe". The weapon damage of iron pipe is 5. The weapon type of iron pipe is "Melee". It is not temporary.
+iron pipe is a armament. It is a part of the player. It has a weapon "your iron pipe". The weapon damage of iron pipe is 5. The weapon type of iron pipe is "Melee". It is not temporary.  the objsize of mallet is 2.
 
 instead of sniffing the crowbar:
 	say "The crowbar smells of metal and motor oil.";

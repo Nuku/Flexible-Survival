@@ -319,7 +319,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "medium sledge"	"A rather well balanced, professional sledgehammer, this particular one seems to also have been reinforced with some steel sheathing on the handle, and while heavy it certainly looks like it could do a lot of damage to either a wall, or any creature that gets in your way."	15	medium sledge
 
-medium sledge is an armament. It is part of the player. It has a weapon "[one of]your sledgehammer[or]your well balanced sledgehammer[or]your heavy weapon[at random]". The weapon damage of medium sledge is 18. The weapon type of medium sledge is "Melee". It is not temporary.
+medium sledge is an armament. It is part of the player. It has a weapon "[one of]your sledgehammer[or]your well balanced sledgehammer[or]your heavy weapon[at random]". The weapon damage of medium sledge is 18. The weapon type of medium sledge is "Melee". It is not temporary. the objsize of medium sledge is 4. the hitbonus of medium sledge is -2.
 
 instead of sniffing medium sledge:
 	say "The large sledge smells of metal and broken concrete, plaster and heads.";

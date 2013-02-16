@@ -142,9 +142,9 @@ Section 4a - Trident (Weapon)
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"trident"	"A bronze three-pronged spear that is as lightweight as it is deadly."	5	trident
+"trident"	"A large, bronze three-pronged spear that is as lightweight as it is deadly."	5	trident
 
-trident is an armament. It is part of the player. It has a weapon "[one of]your three-pronged spear[or]your deadly trident[or]your bronze spear[or]your majestic weapon of doom[at random]". The weapon damage of trident is 10. The weapon type of trident is "Melee". It is not temporary.
+trident is an armament. It is part of the player. It has a weapon "[one of]your three-pronged spear[or]your deadly trident[or]your bronze spear[or]your majestic weapon of doom[at random]". The weapon damage of trident is 10. The weapon type of trident is "Melee". It is not temporary. the objsize of trident is 4.
 
 instead of sniffing trident:
 	say "The trident smells like the sea, the moon, the stars and...a little mermaid? Weird.";

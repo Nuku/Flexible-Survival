@@ -195,7 +195,7 @@ to say awesome bat proc:
 			increase Awesome_noreward by 1;
 			
 awesome bat is a armament. It has a weapon "[one of]awesome bat, a double rainbow appears for a brief second,[awesome bat proc][or]bat of awesomeness[or]indestructible length of awesome-wood[at random]". 
-The weapon damage of awesome bat is 7. 
+The weapon damage of awesome bat is 7. the objsize of awesome bat is 4.
 The weapon type of awesome bat is "Melee". It is not temporary.
 
 

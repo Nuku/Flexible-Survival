@@ -1,5 +1,5 @@
 Version 4 of Wereraptor For FS by Stripes begins here.
-[Version 4.1 - Endings]
+[Version 4.2 - Hit bonus and size for silver knife]
 "Adds a special wereraptor creature/curse to Flexible Survival's Wandering Monsters table"
 
 Section 0 - Event Activation
@@ -686,10 +686,10 @@ to say wrgetknife:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"silver knife"	"An old silver knife with a ten inch blade and a slight curve to it."	2	silver knife
+"silver knife"	"An old silver knife with a ten inch blade and a slight curve to it.  It seems particularly well weighted."	2	silver knife
 "chainmail vest"	"A heavy chainmail vest that always seems to be a good fit thanks to nanite adjustment."	20	chainmail vest
 
-silver knife is an armament. It is part of the player. It has a weapon "[one of]the silver knife[or]the old knife[or]the curved knife[or]the silver dagger[at random]". The weapon damage of silver knife is 6. The weapon type of silver knife is "Melee". It is not temporary.
+silver knife is an armament. It is part of the player. It has a weapon "[one of]the silver knife[or]the old knife[or]the curved knife[or]the silver dagger[at random]". The weapon damage of silver knife is 6. The weapon type of silver knife is "Melee". It is not temporary.  the objsize of silver knife is 2.  the hitbonus of silver knife is 2.
 
 instead of sniffing the silver knife:
 	say "While the silver knife has no strong scent, something about it makes you uneasy whenever you bring it close.";

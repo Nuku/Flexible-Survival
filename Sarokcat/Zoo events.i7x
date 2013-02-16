@@ -41,7 +41,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Electric prod"	"A powerful electric tool designed to shock and incapacitate wild animals, it should work on the beasts around the city as well."	5	 Electric prod
 
-Electric prod is an armament. It is part of the player. It has a weapon "[one of]shocking stick[or]your electric prod[at random]". The weapon damage of Electric prod is 22. The weapon type of Electric prod is "Melee". It is not temporary.
+Electric prod is an armament. It is part of the player. It has a weapon "[one of]shocking stick[or]your electric prod[at random]". The weapon damage of Electric prod is 22. The weapon type of Electric prod is "Melee". It is not temporary. the objsize of electric prod is 2.
 
 instead of sniffing Electric prod:
 	say "The electric stun rod smells faintly of ozone.";
