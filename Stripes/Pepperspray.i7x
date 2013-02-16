@@ -24,8 +24,58 @@ to say pepperspraydrain:
 to say usepepperspray:
 	select an option from the table of pepperspraychoice;
 
+Table of pepperspraychoice
+title	subtable	description	toggle
+"Spray and Attack"	--	"Spicy Eyes!!!"	peppersprayattack rule
+"Spray and Flee"	--	"Run Away!"	peppersprayflee rule
+
+
 this is the peppersprayflee rule:
-	[Perform an attempt to flee at +4 from the weakened enemy]
+	[Perform an attempt to flee from the weakened enemy]
+	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
+	choose row monster from the table of random critters;
+	say "Using the pepperspray to briefly disable the [name entry], you make your escape attempt.";
+	increase plfleebonus by 3;
+	decrease mondodgebonus by 5;
+	decrease monhitbonus by 5;
+	decrease monhitbonus by 5;
+	say "[pepperspraydrain]";
+	follow the flee rule;
+	increase mondodgebonus by 5;
+	increase monhitbonus by 5;
+	increase monmindbonus by 5;
+	increase plfleebonus by 3;
+	rule succeeds;
+
+
+this is the peppersprayattack rule:
+	[Perform enhanced double-attack with creature penalized by 5!]
+	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
+	choose row monster from the table of random critters;
+	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly.  You attack twice while they have difficulty defending themselves.[line break]";
+	say "[pepperspraydrain]";
+	decrease mondodgebonus by 5;
+	decrease monhitbonus by 5;
+	decrease monhitbonus by 5;
+	follow the player attack rule;
+	if monsterhp is greater than 0 and combat abort is 0:
+		follow the player attack rule;
+	if gascloud > 0:
+		decrease gascloud by 1;
+	if monsterhp is greater than 0:
+		say "[line break]Having partially recovered, your enemy attempts to retaliate.[line break]";
+		follow the retaliation rule;
+	otherwise:
+		now fightoutcome is 10;
+		win;
+	increase mondodgebonus by 5;
+	increase monhitbonus by 5;
+	increase monmindbonus by 5;
+	rule succeeds;
+
+
+[
+	[Perform an attempt to flee at +4 from the weakened enemy & +5 to dodge (if needed)]
 	now battleitem is 1;	[combat item chosen - retaliate to be handled internally]
 	choose row monster from the table of random critters;
 	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 12 ) divided by 2) plus level of the player;
@@ -76,13 +126,8 @@ to say enhancedattack:
 	let the attack bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
-	if "Know Thyself" is listed in feats of player:
-		now speciesbonus is 0;
-		if bodyname of player is name entry, increase speciesbonus by a random number from 0 to 2;
-		if facename of player is name entry, increase speciesbonus by a random number from 0 to 1;
-		if cockname of player is name entry, increase libido of player by a random number from 0 to 1;
-		if speciesbonus > 2, now speciesbonus is 2;
-		increase combat bonus by speciesbonus;
+	if "Know Thyself" is listed in feats of player:		[That's what you get for thinking with your crotch.]
+		if cockname of player is name entry, increase libido of player by a random number from 0 to 2;
 	if hardmode is true:
 		if the combat bonus is greater than 12:				[pepperspray increases hardmode bonus limit to +12]
 			now combat bonus is 12;
@@ -225,7 +270,6 @@ to say enhancedattack:
 		otherwise:
 			say "Your [companion of player] misses!";
 
-[
 
 to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Combat]
 	now avoidance is 0;
@@ -288,10 +332,5 @@ to say enhancedavoidance:		[no longer used, incorporated into avoidance in Alt C
 		now avoidance is 1;
 
 ]
-
-Table of pepperspraychoice
-title	subtable	description	toggle
-"Spray and Attack"	--	"Spicy Eyes!!!"	peppersprayattack rule
-"Spray and Flee"	--	"Run Away!"	peppersprayflee rule
 
 Pepperspray ends here.

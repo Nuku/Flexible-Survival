@@ -1,5 +1,5 @@
 Version 3 of Demon Brute For FS by Leo X begins here.
-[Version 3 - Alt Attack]
+[Version 3.1 - Alt Attack tweaked - Stripes]
 
 "Adds a Monster name to Flexible Survivals Wandering Monsters table, With Impreg chance"
 [Description text for this Extension.]
@@ -84,7 +84,7 @@ Section 3 - Alt Combat
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
-"demonbrute"	retaliation rule	brfoinc rule	--	bruteforce rule	10	--	--	--	--	--
+"demonbrute"	retaliation rule	brfoinc rule	--	bruteforce rule	16	--	--	--	--	--
 
 this is the brfoinc rule:		[increasing likelihood of bruteforce attack]
 	choose row monstercom from the table of critter combat;
@@ -93,14 +93,14 @@ this is the brfoinc rule:		[increasing likelihood of bruteforce attack]
 
 this is the bruteforce rule:
 	choose row monstercom from the table of critter combat;
-	now alt1chance entry is 0;
+	now alt1chance entry is 5;
 	choose row monster from the table of random critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );	[double damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
-	say "[one of]The demonic creature[or]The [name entry][or]Your enemy[or]The demon[purely at random] growls and charges you, pinning you against a wall briefly.  It leans its strong, heavy body against yours and punches you several times in the [one of]gut[or]side[or]solar plexus[or]sternum[or]breadbasket[purely at random].  It then tosses you aside roughly with another growl, sending you tumbling.  You suffer [special-style-2][dam][roman type] damage!";
+	say "[one of]The demonic creature[or]The [name entry][or]Your enemy[or]The demon[purely at random] growls and charges you, pinning you against a wall briefly.  It leans its strong, heavy body against yours and punches you several times in the [one of]gut[or]side[or]solar plexus[or]sternum[or]breadbasket[purely at random].  It then [if scalevalue of player < 4]tosses you aside[otherwise]shoulders you back[end if] roughly with another growl, sending you tumbling.  You suffer [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
 	say "[noshieldabsorbancy]";		[unable to use shield while pinned]
 	if absorb is greater than dam:

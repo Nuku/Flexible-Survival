@@ -1,5 +1,5 @@
 Version 1 of Anime Babe for FS by Stripes begins here.
-[Version 1.2 - Loads of endings!]
+[Version 1.3 - Added Anime Babe vulnerability]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 
 "Adds Anime Babe to Flexible Survival."
@@ -136,7 +136,14 @@ to say beattheanimebabe:
 to say animebabedesc:
 	say "     You find yourself facing off with a cartoonishly proportioned woman.  Her body is covered in shiny, perfectly smooth, tan skin, looking exactly the same in any light.  Her head is fairly large in proportion to her body and has long, blue hair.  Her face has a small, near invisible nose and gargantuan, shining eyes that are very expressive.  Her body is rail thin without any visible body fat or apparent room for most of her vital organs.  When at rest, no part of her seems to move at all.  Her arms are exceptionally scrawny, almost skeletal.  Her elbows are extremely angular, and her hands are quite dainty.  Her legs are disproportionately lengthy, making up a full two thirds of her height.  Each is extremely slender, tapering down to feet so small it's a wonder she can stand.";
 	say "    The girl is dressed in a small shirt and short skirt, much like a Japanese school girl outfit.  This [one of]pink[or]white[or]blue[at random] shirt does little to cover her plump breasts.  To go with her large bosom, she has a tight little ass, and constantly seem to be bending over to give you a clear view of either those lovely jugs or her pert bottom.";
-	say "     She giggles and says something which sounds Japanese, full of 'Desu', 'Kawaii' and 'Keki'.  She runs towards you, breasts swaying as holds her arms up at her sides.";
+	say "     She giggles and says something which sounds Japanese, full of 'Desu', 'Kawaii' and 'Keki'.  She runs towards you, breasts swaying as holds her arms up at her sides";
+	if ( cocks of player > 0 and ( cockname of player is "Tentacle Horror" or cockname of player is "Parasitic Plant" or cockname of player is "Squid" or tailname of player is "Cerberus" ) ) or bodyname of player is "Squid":
+		say ".  She seems particularly excited and attacks you with wild abandon";
+		increase monhitbonus by 2;
+		decrease mondodgebonus by 2;
+		decrease monmindbonus by 2;
+	say ".";
+
 
 
 Section 2 - Monster Insertion

@@ -8,7 +8,7 @@ Section 0 - Basic variables
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
 combat abort is a number that varies.	[ 0 = combat continues  /  1 = combat will be aborted. ]
-speciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
+[ speciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]	]
 automaticcombatcheck is a number that varies. [ Used to mark if combat actions are not being chosen by the player. ]
 inafight is a number that varies.		[ Used to detect if player is in a fight (item use) ]
 avoidance is a number that varies.		[ Used to track if a player automatically avoids an attack. ]
@@ -25,6 +25,16 @@ damagein is a number that varies.		[ Used to pass the damage to the various abor
 damageout is a number that varies.		[ Used to receive the adjusted damage after using one of the absorbancy subroutines. ]
 velossaved is a truth state that varies.	[ Used to mark if Velos's last-minute save has been used this turn. ]
 velossavedyes is a truth state that varies. [ Used to mark if Velos has ever used his last-minute save.]
+plhitbonus is a number that varies.		[ Used to total the player's special hit bonuses. ]
+pldodgebonus is a number that varies.	[ Used to total the player's special dodge bonuses. ]
+plfleebonus is a number that varies.	[ Used to total the player's special flee bonuses. ]
+plmindbonus is a number that varies.	[ Used to total the player's special mental/will bonuses. ]
+pethitbonus is a number that varies.	[ Used to total the player's pet's special hit bonuses. ]
+monhitbonus is a number that varies.	[ Used to total the enemy's special hit bonuses. ]
+mondodgebonus is a number that varies.	[ Used to total the enemy's special dodge bonuses. ]
+monmindbonus is a number that varies.	[ Used to total the enemy's special mental/will bonuses. ]
+
+
 
 [		fightoutcome			]
 [ 100 *	starting value			]
@@ -54,9 +64,40 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	now combat abort is 0;
 	if lev entry is less than level of player and hardmode is true:
 		hardmodeboost;
+	now peppereyes is 0;
 	now monsterhp is hp entry;
 	now gascloud is 0;
 	now lost is 0;
+	now plhitbonus is 0;
+	now pldodgebonus is 0;
+	now plfleebonus is 0;
+	now plmindbonus is 0;
+	now pethitbonus is 0;
+	now monhitbonus is 0;
+	now mondodgebonus is 0;
+	now monmindbonus is 0;
+	increase plhitbonus by hitbonus of weapon object of player;
+	repeat with x running through equipped equipment:
+		increase pldodgebonus by dodgebonus of x;
+	if weapon object of player is unwieldy:
+		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player);
+	if "Know Thyself" is listed in feats of player:
+		let speciesbonus be 0;
+		if bodyname of player is name entry, increase speciesbonus by 3;
+		if facename of player is name entry, increase speciesbonus by 2;
+		if speciesbonus > 4, now speciesbonus is 4;
+		increase plhitbonus by speciesbonus;
+		let mmb be 0;
+		if bodyname of player is name entry, increase mmb by 1;
+		if facename of player is name entry, increase mmb by 1;
+		if cockname of player is name entry, increase mmb by 2;
+		if mmb > 2, now mmb is 2;
+		increase monmindbonus by mmb;		[increased vulnerability to mental/allure attacks]
+	if companion of player is mouse girl:
+		increase plmindbonus by 2;
+		if name entry is "Mental Mouse", decrease plmindbonus by 1;
+	if hp of Velos > 2 and scalevalue of player < 3:
+		decrease plfleebonus by 5 - ( scalevalue of player * 2 );
 	now fightoutcome is 100;
 	say "You run into a [name entry].[line break][desc entry][line break]";
 
@@ -233,25 +274,26 @@ This is the player attack rule:
 		if "Good Teacher" is listed in feats of player, increase petchance by 20;
 		if "Ringmaster" is listed in feats of player, increase petchance by 20;
 		increase petchance by square root of ( 30 * charisma of player );
+		increase petchance by peppereyes * 15;
 		if petchance > 600, now petchance is 600;
-	let the attack bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
-	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
-	let the combat bonus be attack bonus minus defense bonus;
-	if "Know Thyself" is listed in feats of player:
-		now speciesbonus is 0;
-		if bodyname of player is name entry, increase speciesbonus by a random number from 0 to 2;
-		if facename of player is name entry, increase speciesbonus by a random number from 0 to 1;
-		if cockname of player is name entry, increase libido of player by a random number from 0 to 1;
-		if speciesbonus > 2, now speciesbonus is 2;
-		increase combat bonus by speciesbonus;
+	let the attack bonus be dexterity of player + ( level of player * 2 ) + plhitbonus - 10;
+	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
+	let the combat bonus be attack bonus - defense bonus;
+	if "Know Thyself" is listed in feats of player:		[That's what you get for thinking with your crotch.]
+		if cockname of player is name entry, increase libido of player by a random number from 0 to 2;
 	if hardmode is true:
-		if the combat bonus is greater than 10:
-			now combat bonus is 10;
-		otherwise if the combat bonus is less than -10:
-			now combat bonus is -10;
-	let the roll be a random number from 1 to 20;
-	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the combat bonus is greater than 8:
+		if the combat bonus is greater than 16:
+			now combat bonus is 16;
+		otherwise if the combat bonus is less than -25:
+			now combat bonus is -25;
+	otherwise:
+		if the combat bonus is greater than 19:
+			now combat bonus is 19;
+		otherwise if the combat bonus is less than -22:
+			now combat bonus is -22;
+	let the roll be a random number from 1 to 50;
+	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus > 20:
 		let wmstrike be 0;
 		let z be 0;
 		let dam be ( weapon damage of the player times ( a random number from 80 to ( 120 + level of player ) ) ) divided by 100;
@@ -308,7 +350,9 @@ This is the player attack rule:
 		otherwise:
 			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of player], hitting [name entry] for [special-style-2][dam][roman type] damage!";
 		let bonusattacks be 0;		[max 2 bonus attacks in a round]
-		if a random chance of 4 in 20 succeeds and "Tail Strike" is listed in feats of player and bonusattacks < 2:
+		let specattchance be 4;
+		if peppereyes > 0, increase specattchance by 1;
+		if a random chance of specattchance in 20 succeeds and "Tail Strike" is listed in feats of player and bonusattacks < 2:
 			if tailname of player is listed in infections of Tailweapon:
 				increase bonusattack by 1;
 				let z be 0;
@@ -324,7 +368,7 @@ This is the player attack rule:
 				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
 				increase dam by dammy;
 				choose row monster from table of random critters;
-		if a random chance of 4 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12 and bonusattacks < 2:
+		if a random chance of specattchance in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12 and bonusattacks < 2:
 			increase bonusattack by 1;
 			let dammy be 0;
 			let z be cock length of player + ( 2 * cocks of player ) - 12;
@@ -338,15 +382,15 @@ This is the player attack rule:
 			otherwise:
 				say "[line break]You give [one of]your opponent[or]your enemy[or]the [name entry][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of player] [one of]wang[or]cock[or]prick[purely at random][if cocks of player > 1]s[end if] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
-		if a random chance of 4 in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16 and bonusattacks < 2:
+		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of player and cock width of player >= 16 and bonusattacks < 2:
 			increase bonusattack by 1;
 			let dammy be 0;
 			now dammy is ( square root of ( 2 * ( cock width of player - 13 ) ) ) + 1;
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
-			say "[line break]You tackle your opponent, slamming your [ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
+			say "[line break]You tackle your opponent, slamming your [ball size] onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
-		if a random chance of 4 in 20 succeeds and "Boob Smother" is listed in feats of player and breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7 and bonusattacks < 2:
+		if a random chance of specattchance in 20 succeeds and "Boob Smother" is listed in feats of player and breast size of player > 2 and ( breast size of player + ( breasts of player / 2 ) ) >= 7 and bonusattacks < 2:
 			increase bonusattack by 1;
 			let dammy be 0;
 			let z be breast size of player + breasts of player;
@@ -377,24 +421,32 @@ This is the player attack rule:
 			say "Your many pets, always close by, come pouring out en masse and swarm your enemy, battering the [name entry] from all sides!";
 			say "[line break]";
 			repeat with z running through tamed pets:
-				now attack bonus is ( ( dexterity of z minus 10 ) divided by 2 ) plus level of z;
+				now the attack bonus is dexterity of z + ( level of z * 2 ) + pethitbonus - 10;
 				let the combat bonus be attack bonus minus defense bonus;
-				if hardmode is true and combat bonus is greater than 10:
-					now combat bonus is 10;
-				now roll is a random number from 1 to 20;
-				if roll plus the combat bonus is greater than 8:
+				if hardmode is true:
+					if the combat bonus is greater than 16:
+						now combat bonus is 16;
+				otherwise:
+					if the combat bonus is greater than 19:
+						now combat bonus is 19;
+				now roll is a random number from 1 to 50;
+				if roll plus the combat bonus is greater than 20:
 					let dam be ( weapon damage of z times a random number from 80 to 120 ) divided by 100;
 					say "[z]: [assault of z] [special-style-2][dam][roman type] damage inflicted!";
 					decrease monsterhp by dam;
 				otherwise:
 					say "Your [z] misses!";
 		otherwise if a random chance of petchance in 1000 succeeds:
-			now attack bonus is ( ( dexterity of companion of player minus 10 ) divided by 2 ) plus level of companion of player;
+			now attack bonus is dexterity of companion of player + ( level of companion of player * 2 ) + pethitbonus - 10;
 			let the combat bonus be attack bonus minus defense bonus;
-			if hardmode is true and combat bonus is greater than 10:
-				now combat bonus is 10;
-			now roll is a random number from 1 to 20;
-			if roll plus the combat bonus is greater than 8:
+			if hardmode is true:
+				if the combat bonus is greater than 16:
+					now combat bonus is 16;
+			otherwise:
+				if the combat bonus is greater than 19:
+					now combat bonus is 19;
+			now roll is a random number from 1 to 50;
+			if roll plus the combat bonus is greater than 50:
 				let dam be ( weapon damage of companion of player times a random number from 80 to 120 ) divided by 100;
 				say "[assault of companion of player] [special-style-2][dam][roman type] damage inflicted!";
 				decrease monsterhp by dam;
@@ -487,10 +539,10 @@ Chapter 5 - Flee
 
 This is the flee rule:
 	choose row monster from the table of random critters;
-	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 20 ) divided by 2) plus level of the player;
-	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
-	let the combat bonus be attack bonus minus defense bonus;
-	if "Gas Cloud" is listed in feats of player and gascloud is 0:
+	let the attack bonus be dexterity of player + intelligence of player + ( level of player * 2 ) + plfleebonus - 20;
+	let the defense bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
+	let the combat bonus be attack bonus - defense bonus;
+	if "Gas Cloud" is listed in feats of player and gascloud is 0 and peppereyes > 0:
 		if tailname of player is "Skunk" or tailname of player is "Skunkbeast Lord" or tailname of player is "Skunk Taur":
 			say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
 			increase gascloud by 5;
@@ -503,19 +555,19 @@ This is the flee rule:
 		otherwise:
 			say "You release your cover cloud and try to escape.";
 			increase gascloud by 3;
-		increase combat bonus by gascloud;
-	if hp of Velos > 2 and scalevalue of player < 3:
-		if velosfleepenalty is false:
-			say "The added weight and discomfort of the heavy serpent inside you makes it a little harder to get away.";
-			now velosfleepenalty is true;
-		decrease combat bonus by ( 3 - scalevalue of player );
-	if hardmode is true and the combat bonus is less than -11:
-		now the combat bonus is -11;
-	if hardmode is false and the combat bonus is less than -9:
-		now the combat bonus is -9;
-	let the roll be a random number from 1 to 20;
-	say "You roll 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-	if the roll plus the combat bonus is greater than 8:
+		increase combat bonus by gascloud * 2;
+	if hp of Velos > 2 and scalevalue of player < 3 and velosfleepenalty is false:
+		say "The added weight and discomfort of the heavy serpent inside your [body size of player] body does make it a little harder to get away.";
+		now velosfleepenalty is true;
+	if hardmode is true:
+		if the combat bonus is less than -25:
+			now combat bonus is -25;
+	otherwise:
+		if the combat bonus is less than -22:
+			now combat bonus is -22;
+	let the roll be a random number from 1 to 50;
+	say "You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
+	if the roll plus the combat bonus is greater than 20:
 		say "You manage to evade [name entry] and slip back into the city.";
 		now fightoutcome is 30;
 		now combat abort is 1;
@@ -628,20 +680,26 @@ to standardstrike:
 		now monsterhit is false;
 	otherwise:
 		choose row monster from the table of random critters;
-		let the defense bonus be (( the dexterity of the player minus 10 ) divided by 2) plus level of the player;
-		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry - peppereyes;
+		let the defense bonus be dexterity of the player + ( level of the player * 2 ) + pldodgebonus - 10;
+		let the attack bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
 		let the combat bonus be attack bonus minus defense bonus;
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
-			decrease combat bonus by 3;
-		if combat bonus is less than -11:
-			now the combat bonus is -11;
-		if hardmode is true and the combat bonus is less than -8:
-			now the combat bonus is -8;
-		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
-		let the roll be a random number from 1 to 20;
-		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
-		if the roll plus the combat bonus is greater than 8:
+			decrease combat bonus by 6;
+		if hardmode is true:
+			if the combat bonus is greater than 19:
+				now combat bonus is 19;
+			otherwise if the combat bonus is less than -22:
+				now combat bonus is -22;
+		otherwise:
+			if the combat bonus is greater than 16:
+				now combat bonus is 16;
+			otherwise if the combat bonus is less than -25:
+				now combat bonus is -25;
+		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15;	[***if autopass, min. 30% chance to hit]
+		let the roll be a random number from 1 to 50;
+		say "[name entry] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		if the roll plus the combat bonus is greater than 20:
 			now monsterhit is true;
 		otherwise:
 			now monsterhit is false;
@@ -666,7 +724,7 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 		say "You nimbly avoid the attack at the last moment!";
 		now avoidance is 1;
 	if avoidance is 0 and level of Velos > 2 and ( ( hp of player * 100 ) / maxhp of player ) < 10 and velossaved is false:
-		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddently, the [name entry] is started and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges.  'Boo.'  Stunned by this new foe, the [name entry] is thrown off balance for a moment.  By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep.  Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe.  This drives your opponent is back for a few moment's reprieve.[cycling]";
+		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddently, the [name entry] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges.  'Boo.'  Stunned by this new foe, the [name entry] is thrown off balance for a moment.  By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep.  Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe.  This drives your opponent is back for a few moments['] reprieve.[cycling]";
 		increase hp of player by 5;
 		now velossavedyes is true;
 		now velossaved is true;
@@ -1043,10 +1101,10 @@ Part 1 - Continuous Effect Example - Aura1
 this is the aura1 rule:		[weak aura]
 	choose row monster from table of random critters;
 	say "     The [name entry]'s aura of energy continues to sap your strength... [run paragraph on]";
-	let bonus be ( Stamina of player minus 10 ) divided by 2;
-	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] vs 8 and score [dice plus bonus]: ";
-	if dice + bonus >= 8:
+	let bonus be Stamina of player - 10;
+	let dice be a random number from 1 to 50;
+	say "You roll 1d50([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
+	if dice + bonus > 20:
 		say "You manage to resist the creature's power and press on.";
 		say "[line break]";
 	otherwise:
@@ -1143,20 +1201,26 @@ this is the intstrike rule:
 		now monsterhit is false;
 	otherwise:
 		choose row monster from the table of random critters;
-		let the defense bonus be (( the intelligence of the player - 10 ) / 2) + level of the player;
-		let the attack bonus be (( the int entry minus 10 ) divided by 2) plus lev entry - peppereyes;
+		let the defense bonus be intelligence of player + ( level of player * 2 ) + plmindbonus - 10;
+		let the attack bonus be int entry + ( lev entry * 2 ) + monmindbonus - 10;
 		let the combat bonus be attack bonus minus defense bonus;
 		if "Flash" is listed in feats of player and a random chance of 3 in 20 succeeds:
 			say "Calling upon your hidden power, you flash brightly with light, filling the [Name Entry]'s eyes with spots.";
-			decrease combat bonus by 3;
-		if combat bonus is less than -11:
-			now the combat bonus is -11;
-		if hardmode is true and the combat bonus is less than -8:
-			now the combat bonus is -8;
-		if autoattackmode is 3 and combat bonus < -6, now combat bonus is -6;	[***if autopass, min. 25% chance to hit]
-		let the roll be a random number from 1 to 20;
-		say "[name entry] rolls 1d20([roll])+[combat bonus] -- [roll plus combat bonus]: ";
-		if the roll plus the combat bonus is greater than 8:
+			decrease combat bonus by 6;
+		if hardmode is true:
+			if the combat bonus is greater than 19:
+				now combat bonus is 19;
+			otherwise if the combat bonus is less than -22:
+				now combat bonus is -22;
+		otherwise:
+			if the combat bonus is greater than 16:
+				now combat bonus is 16;
+			otherwise if the combat bonus is less than -25:
+				now combat bonus is -25;
+		if autoattackmode is 3 and combat bonus < -15, now combat bonus is -15;	[***if autopass, min. 30% chance to hit]
+		let the roll be a random number from 1 to 50;
+		say "[name entry] rolls 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: [run paragraph on]";
+		if the roll plus the combat bonus is greater than 20:
 			now monsterhit is true;
 		otherwise:
 			now monsterhit is false;
@@ -1221,8 +1285,8 @@ this is the firebreath rule:
 		now firebreathready is false;
 		now firebreathcount is 0;
 		let fbhit be 0;
-		let playernum be 10 + dexterity of player + level of player;
-		let dragonnum be 10 + per entry + lev entry - peppereyes;
+		let playernum be 10 + dexterity of player + level of player + pldodgebonus;
+		let dragonnum be 10 + per entry + lev entry + monhitbonus;
 [		say "TEST: player = [playernum] vs dragon = [dragonnum]:[line break]";	]
 		let playernum be a random number between 1 and playernum;
 		let dragonnum be a random number between 1 and dragonnum;

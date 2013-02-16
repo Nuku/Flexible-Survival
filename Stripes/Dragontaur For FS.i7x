@@ -1,5 +1,5 @@
 Version 1 of Dragontaur For FS by Stripes begins here.
-[Version 1.2 - Endings]
+[Version 1.3 - Alt Attack tweaked]
 "Adds a Dragontaur creature to Flexible Survival's Wandering Monsters table to go along with Sam the Dual-Taur's content."
 
 Section 1 - Monster Responses

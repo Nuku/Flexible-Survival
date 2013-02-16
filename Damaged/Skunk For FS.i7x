@@ -1,5 +1,5 @@
 Version 10 of Skunk For FS by Damaged begins here.
-[ Version 10 - Heat repairs - Stripes ]
+[ Version 10.1 - Alt Attack adjusted ]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds male and female Skunks to Flexible Survivals Wandering Monsters table"
@@ -227,9 +227,10 @@ this is the skunkspray rule:
 
 to skspray:						[ignores defences, requires no hit, hum/lib check instead to resist]
 	choose row monster from table of random critters;
-	let checknum be ( humanity of player - libido of player + ( level of player * 2 ) ) * 2;
+	let checknum be ( humanity of player + ( level of player * 2 ) + ( plmindbonus * 2 ) - libido of player ) * 2;
 	if checknum > 180, now checknum is 180;
-	if a random chance of checknum in 200 succeeds:
+	let rangenum be 200 + ( monhitbonus + monmindbonus );
+	if a random chance of checknum in rangenum succeeds:
 		say "The skunk turns around and flashes its tail moments before releasing its spray at you.  You move out of the way of the thick, oily musk and cover your mouth and nose, blocking out the strangely tempting scent.";
 	otherwise:
 		now tempnum is 0;

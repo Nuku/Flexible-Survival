@@ -1,5 +1,5 @@
 Version 2 of Mental Mouse For FS by Stripes begins here.
-[Version 2 - Rachel content added]
+[Version 2.1 - Alt Attack tweaked]
 
 "Adds a Mental Mouse creature to Flexible Survivals Wandering Monsters table with impregchance"
 
@@ -164,8 +164,7 @@ to say mousedesc:
 		say "[mousebuff]";
 		say "     As the mice draw nearer, there is a rustling behind you as another of these mice pops up behind you[if lev entry is 6 or lev entry is 7], and another[otherwise if lev entry > 7], and then a few more start popping up from all around[end if].  With reinforcements now, this [if lev entry < 6]quartet of mice[otherwise if lev entry < 21]group of [ (lev entry / two ) + one ] mice[otherwise]large group of mice[end if] move in to forcibly welcome you as member of this strange mouse-collective.";
 	if mousecurse is 1 and mouse girl is the companion of the player:
-		say "     Rachel moves in close beside you.  'I told you all that I'll bring this one in on my own,' she says to the other mice, clearly speaking aloud for your benefit.  'We should not wait any longer.  This one is meant to be with us,' they others respond, moving in.  It seems that your mate is more independent than most of the other mice in the collective, but is unable to sway the mouse hive-mind now that they've stumbled across you again.";
-
+		say "     Rachel moves in close beside you.  'I told you all that I'll bring this one in on my own,' she says to the other mice, clearly speaking aloud for your benefit.  'We should not wait any longer.  This one is meant to be with us,' they others respond, moving in.  It seems that your mate is more independent than most of the other mice in the collective, but is unable to sway the mouse hive-mind into waiting now that they've stumbled across you again.";
 
 Section 2 - Monster Insertion
 

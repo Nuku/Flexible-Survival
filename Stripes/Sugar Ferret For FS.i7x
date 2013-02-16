@@ -1,5 +1,5 @@
 Version 1 of Sugar Ferret For FS by Stripes begins here.
-[Version 1 - Creature added ]
+[Version 1.1 - Alt attack tweaked]
 "Adds a caffeine-addicted Sugar Ferret creature to Flexible Survivals Wandering Monsters table"
 
 
@@ -170,8 +170,8 @@ this is the sugferret rule:		[continuous temptation]
 	choose row monster from table of random critters;
 	if bodyname of player is "Sugar Ferret":
 		say "     [one of]Just looking at the other cute, bouncy ferrets around you is a considerable temptation.  If you give in, you could have more soda with them and have some fun...[or]The sight of those energetic ferrets makes you want to give in and join them in their wild romp...[or]'Yay!  Playtime!' one of the ferrets calls out...[or]'Weeee!  PopPopPopPopPop!' they babble frantically, lost in their caffeine high and you find yourself tempted to give into the manic energy filling you as well...[or]'Join us for some fun!  Come!  We've got sugar!' one of them says in a tempting manner.  'Yeah,' another pipes up, 'we'll share!'  Your ferrety impulses do find the offer alluring...[at random]";
-		let targetnum be 200 + humanity of player - libido of player - ( caffeinehigh of player * 2 );
-		let tempnum be a random number between 1 and 200;
+		let targetnum be 200 + humanity of player + ( plmindbonus * 3 ) - libido of player - ( caffeinehigh of player * 2 );
+		let tempnum be a random number between 1 and ( 200 + ( monmindbonus * 3 ) );
 		say "1-200: [tempnum] vs [targetnum]: ";
 		if tempnum > targetnum:
 			let dam be ( ( square root of ( lev entry + wdam entry ) ) * ( a random number between 80 and 120 ) ) / 100;

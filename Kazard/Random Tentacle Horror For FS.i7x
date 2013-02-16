@@ -1,5 +1,5 @@
 Version 9 of Random Tentacle Horror For FS by Kazard begins here.
-[ Version 9.2 - Anime Babe vulnerability]
+[ Version 9.3 - Tweaked Anime Babe vulnerability]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
 "Adds a Tentacle Horror to Flexible Survivals Wandering Monsters table, With Impreg chance"
@@ -236,7 +236,10 @@ to say horror description:
 				say "You don't know what you were thinking, coming back down here after that horror in the dark somehow let you go the last time you faced it. However here you are, looking at 13 inhuman glowing eyes, listening to the sound of the beasts slime covered appendages slithering in the shadows. Still feeling the slight bulge where the creatures egg nestled inside you, you can only pray you fare better this round...";
 	if bodyname of player is "Anime Babe":
 		say "Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the horrors tendrils.  You moan and squeal in barely suppressed pleasure as those tentacles squirm around you, quickly draining your resistance.";
-		now hp of player is hp of player / 2;
+		decrease plfleebonus by 3;
+		decrease pldodgebonus by 3;
+		decrease plmindbonus by 3;
+		now hp of player is ( 2 * hp of player ) / 3;
 		now libido of player is ( 100 + libido of player + libido of player ) / 3;
 	say "By Kazard - AKA Restitution69";
 
