@@ -633,28 +633,30 @@ to say XerxesSex3:												[player pussy fucked]
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. Your hand strays deeper and deeper until you touch the smooth curves of his bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
 	say "     [line break]";
 	say "     Quickly stripping off your clothes, you get on the cot yourself and assume a position on all fours in front of Xerxes. You wiggle your ass at him and reach down to spread your folds invitingly. Already hot and ready from your earlier stroking, your human dog doesn't hesitate a second before he mounts you from behind in typical doggie-style, hugging your chest has his hips grind against you. His hard shaft quickly finds your moist opening and plunges deep into your body.";
+	let baby be 0;
+	if child is born or gestation of child is not 0, now baby is 1;	
 	say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. This soon drives your arousal to the max, giving you a mind-blowing orgasm that moistens Xerxes cock with even more slippery femcum[if cocks of player > 0] and makes your cock spray your own load all over the sheets below[end if]. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling your womb with his human seed.[fimpregchance]";
 	say "     As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, you move to lie on your sides with him behind you and rest for a while on the cot as you come down from your orgasms.";
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;	
 	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Human";
-		now bodyname of child is "Human";
-		now skinname of child is "Human";
+		now facename of child is "human";
+		now bodyname of child is "human";
+		now skinname of child is "human";
 
 to say XerxesSex4:												[player ass fucked]
 	say "     You step besides the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, looking happy at getting his master's attention.";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking over his shoulders and muscular back. Your hand strays deeper and deeper until you touch the smooth curves of his bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
 	say "     [line break]";
 	say "     Quickly stripping off your clothes, you grab the bottle Mike gave you and apply a generous amount of lube to your hole, then get on the cot and assume a position on all fours in front of Xerxes. You wiggle your ass at him and reach back to spread your cheeks invitingly. Already hot and ready from your earlier stroking, your human dog doesn't hesitate a second before he mounts you from behind in typical doggie-style, hugging your chest has his hips grind against you. His hard shaft pokes your ass and rubs up and down your crack until he finally finds your hole and presses in against you. As your pucker yields to Xerxes invading member, he plunges deep into your body, giving a lustful growl as he bottoms out in one thrust.";
-	say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. This soon drives your arousal to the max, giving you a mind-blowing orgasm[if cocks of player > 0] that makes you shoot long streams of cum all over the sheets below[otherwise if cunts of player > 0] that makes your pussy drip with femcum[end if]. Your anal muscles twitching around his cock obviously excites Xerxes, as his growls of lust increase and he speeds up before plunging in one last time and filling your asshole with his human seed.[mimpregchance]";
-	say "     As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, you move to lie on your sides with him behind you and rest for a while on the cot as you come down from your orgasms.";
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
+	say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you. This soon drives your arousal to the max, giving you a mind-blowing orgasm[if cocks of player > 0] that makes you shoot long streams of cum all over the sheets below[otherwise if cunts of player > 0] that makes your pussy drip with femcum[end if]. Your anal muscles twitching around his cock obviously excites Xerxes, as his growls of lust increase and he speeds up before plunging in one last time and filling your asshole with his human seed.[mimpregchance]";
+	say "     As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, you move to lie on your sides with him behind you and rest for a while on the cot as you come down from your orgasms.";
 	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Human";
-		now bodyname of child is "Human";
-		now skinname of child is "Human";
+		now facename of child is "human";
+		now bodyname of child is "human";
+		now skinname of child is "human";
 
 to say XerxesSex5:												[Xerxes ass fucked]
 	say "     You step besides the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, looking happy at getting his master's attention.";
@@ -771,14 +773,14 @@ to say XerxesSex8:												[female player and felinoid + Xerxes]
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, already a bit wet at the crotch from the juices of your swollen and dripping pussy, then step up to the two rutting beasts. Running a hand through the soft fur of the felinoid, then over the smooth skin of your human dog, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes. Your human dog has a bit of a pleasantly zoned out expression on his face, panting and grunting in lust as he's fucked. His hard cock bumps against you often, every time one of the felinoid's thrusts into his ass pushes him down.";
 		say "     Reaching up with a hand, you pull Xerxes head down a bit till he looks you in the eye and say 'Xerxes! Who's a good boy? Do you like my friend fucking your ass? I want you to fuck me now too - come on.' Your other hand meanwhile searches out his rock-hard erection and guides it to your moist opening. Between a thrust from the felinoid that pushes Xerxes manhood into you at first and a kind of automatic urge of his body to keep pounding into a tight and warm hole, your pet is soon fucking you enthusiastically and comes out of his blissed out submissive state for the felinoid a bit. Happy at intimate contact with his mistress, he starts licking your face and participates in hot making out as you pull his lips to yours.";
 		say "     [line break]";
-		say "     Even though you'd wish your threesome could last forever, with Xerxes pounding into you and the felinoid pushing him even deeper as he thrusts into the dog's asshole, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and starts grinding his hips against your crotch, he starts a chain reaction. You feel the first blast of his seed shoot into you just as you push over the line to orgasm yourself, writhing in pleasure as your womb is filled with human cum. Meanwhile, the human dog's twitching asshole drives your felinoid companion over the edge, a deep rumble of satisfaction vibrating in his throat as his spined shaft pulses with spurt after spurt of cum he deposits in Xerxes asshole. [fimpregchance]";
-		say "     After a moment of just resting his cock inside Xerxes as he finishes shooting, the large feline then throws himself over to lounge on his side, taking the human dog still impaled on his spined cock with him. Looking over, you see them lying together, the human dog spooned against the warm belly fur of the larger cat. Purring as loud as a idling motor, the felinoid starts licking his sweaty human skin. Looks as if he's actively trying to infect Xerxes, or at least spread his scent over all of your human pet's body.";
 		let baby be 0;
 		if child is born or gestation of child is not 0, now baby is 1;
+		say "     Even though you'd wish your threesome could last forever, with Xerxes pounding into you and the felinoid pushing him even deeper as he thrusts into the dog's asshole, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and starts grinding his hips against your crotch, he starts a chain reaction. You feel the first blast of his seed shoot into you just as you push over the line to orgasm yourself, writhing in pleasure as your womb is filled with human cum. Meanwhile, the human dog's twitching asshole drives your felinoid companion over the edge, a deep rumble of satisfaction vibrating in his throat as his spined shaft pulses with spurt after spurt of cum he deposits in Xerxes asshole. [fimpregchance]";
+		say "     After a moment of just resting his cock inside Xerxes as he finishes shooting, the large feline then throws himself over to lounge on his side, taking the human dog still impaled on his spined cock with him. Looking over, you see them lying together, the human dog spooned against the warm belly fur of the larger cat. Purring as loud as a idling motor, the felinoid starts licking his sweaty human skin. Looks as if he's actively trying to infect Xerxes, or at least spread his scent over all of your human pet's body.";
 		if baby is 0 and gestation of child is not 0:
-			now facename of child is "Human";
-			now bodyname of child is "Human";
-			now skinname of child is "Human";		
+			now facename of child is "human";
+			now bodyname of child is "human";
+			now skinname of child is "human";		
 	if Fang is in the Grey Abbey Library:			[rivalry messages]
 		say "     [line break]";
 		if hp of Fang is 1 or hp of Fang is 2:	[Beta Fang]
@@ -813,14 +815,14 @@ to say XerxesSex9:												[Female Player with Fang & Xerxes]
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get besides them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes - where your human dog immediately greets you by licking your face and woofing at you between the lust-filled pants and grunts as he's fucked. His hard cock bumps against you often, every time one of Fang's thrusts into his ass pushes him down.";
 			say "     Reaching up with a hand, you pull Xerxes head down a bit till he looks you in the eye and say 'Xerxes! Who's a good boy? Do you like my friend fucking your ass? I want you to fuck me now too - come on.' Your other hand meanwhile searches out his rock-hard erection and guides it to your moist opening. Between a thrust from Fang that pushes Xerxes manhood into you at first and the dog's libido turning into high gear as he feels your moist tunnel around his cock, your pet is soon fucking you enthusiastically.";
 			say "     [line break]";
-			say "     Even though you'd wish your threesome could last forever, with Xerxes pounding into you and Fang pushing him even deeper as he thrusts into the dog's asshole, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and starts grinding his hips against your crotch, he starts a chain reaction. You feel the first blast of his seed shoot into you just as you push over the line to orgasm yourself, writhing in pleasure as your womb is filled with human cum. Meanwhile, the human dog's twitching asshole drives the feral wolf on top of him over the edge, a lust-filled howl sounding from his throat as his canine shaft pulses with spurt after spurt of cum being deposited in Xerxes asshole. [fimpregchance]";
-			say "     You spend a moment resting on the ground with Xerxes on top - and in - you. He feels nice inside you and your thoughts wander to his virile load deposited into your womb, its millions of little swimmers swarming out on their mission to find an egg. Phew, that was a nice fuck. Not wanting to wait the full time till Fang's knot goes down and he can disengage from Xerxes, you slide out from under your human dog and get on his nearby cot to rest for now.";
 			let baby be 0;
 			if child is born or gestation of child is not 0, now baby is 1;
+			say "     Even though you'd wish your threesome could last forever, with Xerxes pounding into you and Fang pushing him even deeper as he thrusts into the dog's asshole, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and starts grinding his hips against your crotch, he starts a chain reaction. You feel the first blast of his seed shoot into you just as you push over the line to orgasm yourself, writhing in pleasure as your womb is filled with human cum. Meanwhile, the human dog's twitching asshole drives the feral wolf on top of him over the edge, a lust-filled howl sounding from his throat as his canine shaft pulses with spurt after spurt of cum being deposited in Xerxes asshole.[fimpregchance]";
+			say "     You spend a moment resting on the ground with Xerxes on top - and in - you. He feels nice inside you and your thoughts wander to his virile load deposited into your womb, its millions of little swimmers swarming out on their mission to find an egg. Phew, that was a nice fuck. Not wanting to wait the full time till Fang's knot goes down and he can disengage from Xerxes, you slide out from under your human dog and get on his nearby cot to rest for now.";
 			if baby is 0 and gestation of child is not 0:
-				now facename of child is "Human";
-				now bodyname of child is "Human";
-				now skinname of child is "Human";		
+				now facename of child is "human";
+				now bodyname of child is "human";
+				now skinname of child is "human";		
 		if felinoid companion is tamed:  [rivalry messages - Beta Fang vs Felinoid]
 			say "     [line break]";
 			if hp of Xerxes is 10:
@@ -846,14 +848,14 @@ to say XerxesSex9:												[Female Player with Fang & Xerxes]
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get besides them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes - where your human dog immediately greets you by licking your face and woofing at you between the lust-filled pants and grunts as he's fucked. His hard cock bumps against you often, every time one of Fang's thrusts into his ass pushes him down.";
 			say "     Reaching up with a hand, you pull Xerxes head down a bit till he looks you in the eye and say 'Xerxes! Who's a good boy? Do you like my master fucking your ass? I want you to fuck me now too - come on.' Your other hand meanwhile searches out his rock-hard erection and guides it to your moist opening. Between a thrust from Fang that pushes Xerxes manhood into you at first and the dog's libido turning into high gear as he feels your moist tunnel around his cock, your pet is soon fucking you enthusiastically.";
 			say "     [line break]";
-			say "     Even though you'd wish your threesome could last forever, with Xerxes pounding into you and Fang pushing him even deeper as he thrusts into the dog's asshole, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and starts grinding his hips against your crotch, he starts a chain reaction. You feel the first blast of his seed shoot into you just as you push over the line to orgasm yourself, writhing in pleasure as your womb is filled with human cum. Meanwhile, the human dog's twitching asshole drives the large feral wolf on top of him over the edge, a lust-filled howl sounding from his throat as his canine shaft pulses with spurt after spurt of cum being deposited in Xerxes asshole. [fimpregchance]";
-			say "     You spend a moment resting on the ground with Xerxes on top - and in - you. He feels nice inside you and your thoughts wander to his virile load deposited into your womb, its millions of little swimmers swarming out on their mission to find an egg. Phew, that was a nice fuck. Not wanting to wait the full time till Fang's knot goes down and he can disengage from Xerxes, you slide out from under your human dog and get on his nearby cot to rest for now.";
 			let baby be 0;
 			if child is born or gestation of child is not 0, now baby is 1;
+			say "     Even though you'd wish your threesome could last forever, with Xerxes pounding into you and Fang pushing him even deeper as he thrusts into the dog's asshole, everyone's stamina has its limits. When Xerxes suddenly gives a pleased yip and starts grinding his hips against your crotch, he starts a chain reaction. You feel the first blast of his seed shoot into you just as you push over the line to orgasm yourself, writhing in pleasure as your womb is filled with human cum. Meanwhile, the human dog's twitching asshole drives the large feral wolf on top of him over the edge, a lust-filled howl sounding from his throat as his canine shaft pulses with spurt after spurt of cum being deposited in Xerxes asshole.[fimpregchance]";
+			say "     You spend a moment resting on the ground with Xerxes on top - and in - you. He feels nice inside you and your thoughts wander to his virile load deposited into your womb, its millions of little swimmers swarming out on their mission to find an egg. Phew, that was a nice fuck. Not wanting to wait the full time till Fang's knot goes down and he can disengage from Xerxes, you slide out from under your human dog and get on his nearby cot to rest for now.";
 			if baby is 0 and gestation of child is not 0:
-				now facename of child is "Human";
-				now bodyname of child is "Human";
-				now skinname of child is "Human";				
+				now facename of child is "human";
+				now bodyname of child is "human";
+				now skinname of child is "human";				
 		if felinoid companion is tamed:		[rivalry messages - Alpha Fang vs Felinoid]
 			say "     [line break]";
 			if hp of Xerxes is 10:
