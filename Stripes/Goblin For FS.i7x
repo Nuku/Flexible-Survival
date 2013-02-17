@@ -35,7 +35,6 @@ to say losetogob_f:
 		say "     She lingers for a moment, panting, until she finds herself sufficiently recovered before pulling herself free from you[if scalevalue of player > 4].  She pats you teasingly on the top of your head[otherwise].  She gives you a playful swat on your behind[end if] before departing, the creature finding a tiny tunnel in the junk before descending within it.  Now free, you suppose you could be worse for wear, though you are somewhat disoriented by the influence of her infection.  You stagger off, wanting to get some distance before the scent of sex draws others.";
 
 
-
 to say losetogob_m:
 	say "     The creature emits a sinister cackle when [if hp of player > 0]his victim surrenders[otherwise]he fells you in combat[end if].  The little goblin pushing you to the ground, forcing you to relinquish your attire";
 	if "Less Anal" is not listed in feats of player and ( ( cunts of player > 0 and "More Anal" is listed in feats of player and ( a random chance of 1 in 4 succeeds or ( "MPreg" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) ) or ( a random chance of 1 in 4 succeeds or ( "More Anal" is listed in feats of player and a random chance of 1 in 4 succeeds ) or ( "Submissive" is listed in feats of player and a random chance of 1 in 4 succeeds ) or ( "MPreg" is listed in feats of player and a random chance of 1 in 4 succeeds ) )
@@ -115,32 +114,45 @@ to say losetogob_m:
 [
 to say beatthegoblin:
 	now goblinfight is 1;
-	say "     Defeated, the goblin is doubled over on the dirt.  Now that it's at your mercy, shall you have your way with them or leave them be?";
-	if the player consents:
-		if gobgender is 1:
-			say "[beatthegob_f]";
-		otherwise if gobgender is 2:
-			say "[beatthegob_m]";
+	if cocks of player is 0 and cunts of player is 0:
+		say "     Driving back by your final blow, the goblin lands doubled over on the dirt.  [if gobgender is 1]She[otherwise]He[end if] scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounds of junk.  Even if you could squeeze through there, you don't feel it would be worth it to try and decide to let [if gobgender is 1]her[otherwise]him[end if] go.";
 	otherwise:
-		say "     You concede to letting the goblin free, the diminutive creature scrambling away fearfully towards one of the mounds of scrap.  There it dives into the santuary of a tight tunnel, slipping out of sight.";
+		say "     Driving back by your final blow, the goblin lands doubled over on the dirt.  Now that it's at your mercy, shall you have your way with it or leave it be?";
+		if the player consents:
+			if gobgender is 1:
+				say "[beatthegob_f]";
+			otherwise if gobgender is 2:
+				say "[beatthegob_m]";
+		otherwise:
+			say "     You concede to letting the goblin free, the diminutive creature scrambling away fearfully towards one of the mounds of scrap.  There it dives into the santuary of a tight tunnel, slipping out of sight.";
 
 
 to say beatthegob_f:
+	if cocks of player > 0 and cock length of player < 13:
+		fuck/anal or oral
+	otherwise:
+		oral
+
+
 - cock (not huge) : fuck
 - cock (not huge) : anal
 - cock/cunt : oral (random choice herm)
 
 
 to say beatthegob_m:
+	if cocks of player > 0 and 
+
 - cunt : ride him
 - huge cock : docking
 - not-huge cock : anal
 - cock/cunt : oral (random choice herm)
 ]
 
+
+
 to say beatthegoblin:
 	now goblinfight is 1;
-	say "     Driving back the little goblin with your blow, you advance to finish him off.  [if gobgender is 1]She[otherwise]He[end if] scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounds of junk.  Even if you could squeeze through there, you don't feel it would be worth it to try and decide to let [if gobgender is 1]her[otherwise]him[end if] go.";
+	say "     Driving back the little goblin with your blow, you advance to finish [if gobgender is 1]her[otherwise]him[end if] off.  [if gobgender is 1]She[otherwise]He[end if] scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounds of junk.  Even if you could squeeze through there, you don't feel it would be worth it to try and decide to let [if gobgender is 1]her[otherwise]him[end if] go.";
 
 
 to say goblindesc:

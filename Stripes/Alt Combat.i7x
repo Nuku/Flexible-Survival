@@ -1,5 +1,5 @@
 Version 2 of Alt Combat by Stripes begins here.
-[Version 2.3 - Setup section before a fight added]
+[Version 2.5 - Updated version number for d50 and bonus system]
 
 "Oh my God!  Who gave them super-powers?!"
 
@@ -76,7 +76,10 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	now monhitbonus is 0;
 	now mondodgebonus is 0;
 	now monmindbonus is 0;
-	increase plhitbonus by hitbonus of weapon object of player;
+	if weapon object of player is journal:
+		if "Black Belt" is listed in feats of player, increase plhitbonus by 1;
+	otherwise:
+		increase plhitbonus by hitbonus of weapon object of player;
 	repeat with x running through equipped equipment:
 		increase pldodgebonus by dodgebonus of x;
 	if weapon object of player is unwieldy:
