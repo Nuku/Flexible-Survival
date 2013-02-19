@@ -9,6 +9,7 @@ Alexandra is a person.
 The description of Alexandra is "[Alexandradesc]";
 The conversation of Alexandra is { "Yes Boss!" }.
 Alexandrastory is a truth state that varies.  Alexandrastory is usually false.
+Alexandrastory2 is a truth state that varies.  Alexandrastory2 is usually false.
 dobieanal is a truth state that varies.  dobieanal is usually false.
 lastdobiemess is a number that varies.
 
@@ -48,6 +49,15 @@ Instead of conversing the Alexandra:
 		try fucking Alexandra;
 	otherwise if hp of Alexandra is 2:
 		say "     [one of]'Are you going to use your slutty bitch again soon?'[or]'I've been having beating up the strays who wander by.  It's much more fun dealing with them now that I'm willing to play with them afterwards.'[or]'Thanks again for knocking some sense into me, boss.  Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]Alexandra gives you a report on recent activity around the library while playing with her pussy.[or]'I hope something wanders by soon.  I'm in the mood to bust some heads,' she growls, running her paw over her nightstick.[at random]";
+	otherwise if a random chance of 1 in 3 succeeds and Alexandrastory is true and Alexandrastory2 is false:
+		say "     Alexandra pulls out one of the chairs and sits in it backwards, resting her [if ( hp of Alexandra is 3 and lust of Alexandra > 12 ) or hp of Alexandra > 3]plump [end if]breasts atop the back of it.  'Yeah, things kind of sucked for a while after I was taken away from my dead-beat parents.  I had a tough time fitting in, felt everyone was always judging me, so I started pretending I was a good person and I was better than them.  Somewhere along the lines, I forgot I was pretending, but a part of me always knew.  So when things here went in the shitter, I guess I just kept on pretending.  Being a cop and pretending to be a good girl are the only thing I knew how to do,' she says shaking her head.";
+		say "     'I just kept on believing my own lie and tried my best to be a good cop.  I'm glad you came along to knock some sense into me, boss.  I ain't nothing but a bad dog and I always was.  Now I just look the part and can enjoy it,' she says, leaning back and groping her breasts.  'I was so goddamned uptight before, I never had sex until you came along.  Didn't know what I was missing,' she adds, stuffing a few fingers into her open jeans.  'Mmm... but enough talking.  Let's fuck some more,' she says, knocking the chair to the ground as she gets up.  She presses her body to yours, moaning with lustful need.";
+		attempttowait;
+		now Alexandrastory2 is true;
+		now lastfuck of Alexandra is turns + 8;
+		try fucking Alexandra;
+	otherwise if no_AlexandraNPC is not turns and a random chance of 1 in 3 succeeds:
+		AlexandraNPCChat;
 	otherwise if hp of Alexandra is 3:
 		if lust of Alexandra > 12:	[visibly preggers]
 			say "     [one of]'It seems your naughty bitch has gotten herself knocked up, boss.'[or]'Thanks again for knocking some sense into me, boss.  Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]Alexandra gives you a report on recent activity around the library while rubbing her swollen breasts, milk leaking from her nipples.[or]'You're quite the stud, boss,' she moans, running her paws over her enlarged, pregnant belly.[or]'It looks like I'm going to have some pups,' she says, running her paws over her rounded belly with a shiver of excitement at the prospect.[or]'It's a little strange getting so pregnant so fast, but I guess that's what makes me a breeder bitch, isn't it?' she says with a smile.[at random]";
@@ -60,7 +70,6 @@ Instead of conversing the Alexandra:
 			say "     [one of]'It seems your naughty bitch has gotten herself knocked up, boss.'[or]'Thanks again for knocking some sense into me, boss.  Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]Alexandra gives you a report on recent activity around the library while rubbing her swollen breasts, milk leaking from her nipples.[or]'You're quite the stud, boss,' she moans, running her paws over her enlarged, pregnant belly.[or]'My pups go out to have a little fun from time to time.  But don't worry.  They know to leave you along, boss.'[or]'It looks like I'm going to have some more pups,' she says, running her paws over her rounded belly with a shiver of excitement at the prospect.[or]'My pups are a bunch of rough hounds like their bitch mother,' she says with a grin.[or]'It was a little strange at first, but I'm really looking forward to giving birth to more pups.'[or]'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix,' she says.[or]'I'm really enjoying being bred like the naughty bitch I am,' she says with a moan, reaching around her rounded belly to rub her pussy as best she can.[at random]";
 		otherwise:				[slightly preggers]
 			say "     [one of]'Are you going to use your slutty bitch again soon?'[or]'I've been having beating up the strays who wander by.  It's much more fun dealing with them now that I'm willing to play with them afterwards.'[or]'My pups go out to have a little fun from time to time.  But don't worry.  They know to leave you along, boss.'[or]'It was pretty fun getting knocked up and having some pups.'[or]'It was really exciting getting used like a breeder bitch.  I'm looking forward to doing it again and again.'[or]'Thanks again for knocking some sense into me, boss.  Otherwise I'd probably still be out there, being a stuffy goody-two-shoes instead of getting the best (and only) sex of my life.'[or]Alexandra gives you a report on recent activity around the library while rubbing her breasts.[or]'My pups are a bunch of rough hounds like their bitch mother,' she says with a grin.[or]'My pups can be a bit of a handful, but it's nothing a good knock on the head doesn't fix,' she says.[or]'I hope something wanders by soon.  I'm in the mood to bust some heads,' she growls, running her paw over her nightstick.[or]She rubs her somewhat rounded belly.  'Mmm... got another litter on the way, boss,' she says with a smile.[at random]";
-
 
 
 Section 2 - Sexxxings
@@ -342,6 +351,115 @@ an everyturn rule:
 [ 5 = licked her ]
 [ 6 = tits ]
 [ 7 = 69 ]
+
+[
+Thoughts on others:
+Candy - silly flake, wimp, I could take him easy
+Sven - noticed the player's got another fucktoy.  understands that it's now a world where what you can take is yours.
+Fang - minor changes alpha/beta, lots of fun to sneak out back with him
+Philip - stupid slob
+Mack - 
+Snow -
+Sandra - 
+Sally - 
+Sam -
+Sarah -
+David - 
+...
+]
+
+A_Candy is a truth state that varies.  A_Candy is false.
+A_Sven is a truth state that varies.  A_Sven is false.
+A_Fang is a truth state that varies.  A_Fang is false.
+A_Philip is a truth state that varies.  A_Philip is false.
+A_Mack is a truth state that varies.  A_Mack is false.
+A_Sam is a truth state that varies.  A_Sam is false.
+A_Snow is a truth state that varies.  A_Snow is false.
+A_Sandra is a truth state that varies.  A_Sandra is false.
+A_Sally is a truth state that varies.  A_Sally is false.
+A_Sarah is a truth state that varies.  A_Sarah is false.
+A_Coleen is a truth state that varies.  A_Coleen is false.
+A_Solstice is a truth state that varies.  A_Solstice is false.
+A_David is a truth state that varies.  A_David is false.
+A_Elijah is a truth state that varies.  A_Elijah is false.
+A_Onyx is a truth state that varies.  A_Onyx is false.
+A_Helen is a truth state that varies.  A_Helen is false.
+A_Xerxes is a truth state that varies.  A_Xerxes is false.
+no_AlexandraNPC is a number that varies.  no_AlexandraNPC is usually 255.
+
+to AlexandraNPCChat:
+	let AlexandraNPC be a list of numbers;
+	if A_Candy is false and Candy is bunkered, add 1 to AlexandraNPC;
+	if A_Sven is false and Sven is bunkered, add 2 to AlexandraNPC;
+	if A_Fang is false and Fang is booked, add 3 to AlexandraNPC;
+	if A_Philip is false and Philip is bunkered, add 4 to AlexandraNPC;
+	if A_Mack is false and Mack is bunkered, add 5 to AlexandraNPC;
+	if A_Sam is false and Sam is bunkered, add 6 to AlexandraNPC;
+	if A_Snow is false and Snow is booked, add 7 to AlexandraNPC;
+	if A_Sandra is false and Sandra is bunkered, add 8 to AlexandraNPC;
+	if A_Sally is false and Sally is bunkered, add 9 to AlexandraNPC;
+	if A_Sarah is false and Sarah is bunkered, add 10 to AlexandraNPC;
+	if A_Coleen is false and Coleen is bunkered, add 11 to AlexandraNPC;
+	if A_Solstice is false and Solstice is booked, add 12 to AlexandraNPC;
+	if A_David is false and David is booked, add 13 to AlexandraNPC;
+	if A_Elijah is false and Elijah is bunkered, add 14 to AlexandraNPC;
+	if A_Onyx is false and Onyx is booked, add 15 to AlexandraNPC;
+	if A_Helen is false and Helen is booked, add 16 to AlexandraNPC;
+	if A_Xerxes is false and Xerxes is booked, add 17 to AlexandraNPC;
+	if AlexandraNPC is empty:
+		now no_AlexandraNPC is turns;
+		try conversing Alexandra;
+	otherwise:
+		sort AlexandraNPC in random order;
+		if entry 1 of AlexandraNPC is 1, say "[A_NPC01]";
+		if entry 1 of AlexandraNPC is 2, say "[A_NPC02]";
+		if entry 1 of AlexandraNPC is 3, say "[A_NPC03]";
+		if entry 1 of AlexandraNPC is 4, say "[A_NPC04]";
+[		if entry 1 of AlexandraNPC is 5, say "[A_NPC05]";
+		if entry 1 of AlexandraNPC is 6, say "[A_NPC06]";		]
+		if entry 1 of AlexandraNPC is 7, say "[A_NPC07]";
+		if entry 1 of AlexandraNPC is 8, say "[A_NPC08]";
+		if entry 1 of AlexandraNPC is 9, say "[A_NPC09]";
+		if entry 1 of AlexandraNPC is 10, say "[A_NPC10]";
+[		if entry 1 of AlexandraNPC is 11, say "[A_NPC11]";
+		if entry 1 of AlexandraNPC is 12, say "[A_NPC12]";
+		if entry 1 of AlexandraNPC is 13, say "[A_NPC13]";
+		if entry 1 of AlexandraNPC is 14, say "[A_NPC14]";
+		if entry 1 of AlexandraNPC is 15, say "[A_NPC15]";
+		if entry 1 of AlexandraNPC is 16, say "[A_NPC16]";
+		if entry 1 of AlexandraNPC is 17, say "[A_NPC17]";	]
+
+to say A_NPC01:	[Candy]
+	say "     'How can you stand that prissy raccoon boy, boss?' she whispers to you as Candy prances into the library to get a book.  'He's such a silly flake.  He's nothing but a useless wimp.  I could take him with one hand tied behind my back.'  Candy gives a cheery smile and wave, ignoring the glare the Doberwoman's giving him[if cocks of player > 0].  He gives his fluffy tail a big swish[end if].";
+	now A_Candy is true;
+
+to say A_NPC02:	[Sven]
+	say "     'I noticed you've got another fucktoy stashed away here - that quiet snow leopard.  Good for you, boss.  At least you understand that it's now a world where what you can take is yours, and that includes whatever sexy playthings you want.  I might like a go at him sometime... though I might play a little rougher than he's used to,' she adds with a toothy grin.";
+	now A_Sven is true;
+
+to say A_NPC03:	[Fang]
+	say "     'That wolf that helps me guard this place, he's a quiet one.  Doesn't say much, but damn if he's not a lot of fun to sneak out back with.  I can see why you [if hp of Fang < 3]wanted to keep him[otherwise]bend over for him[end if].'";
+	now A_Fang is true;
+
+to say A_NPC04:	[Philip]
+	say "     'That pig you found is nothing but a stupid, useless slob.  Does nothing but wallow in his own filth.  He reminds me of my father,' she growls, grinding one fist into her palm.";
+	now A_Philip is true;
+
+to say A_NPC07:	[Snow]
+	say "     'That squirrel you found,' she says, nodding towards Snow, 'has got some sweet melons on her.  And that fine piece of meat I wouldn't mind riding either.  I see that bushy tail of hers swish and part of me just wants to jump her bones.  If she'd shut up about those stupid squirrels of hers for a while, I might even do it.'";
+	now A_Snow is true;
+
+to say A_NPC08:	[Sandra]
+	say "     'That silly bunny girl you found may act all cute and innocent, but she's one kinky slut.  I've caught her pawing off to some messed up shit going on with the critters outside more than once.  Now, I don't have a problem with that,' she says, slipping a paw into her own jeans.  'World's gone to hell and people can get up to whatever kind of kinky shit they like now that there's nobody's around to say they can't.'";
+	now A_Sandra is true;
+
+to say A_NPC09:	[Sally]
+	say "     'That huskybunny slut you found is quite a bit of fun, I must say.  I borrowed her for a bit, boss,' she says with a wink.  'Now, I seen a lot of critters out there, but nothing quite like her.  I'm not sure what you did to get your hands on such a sweet-ass fucktoy, but I expect you'll not be telling that story to the military if they ever get off their asses and get us out of here.";
+	now A_Sally is true;
+
+to say A_NPC10:	[Sarah]
+	say "     'Couldn't help noticing that you've got another doggy pet.  Are you planning on being a playah and making a little harem of bitches for yourself, boss?  That's fine by me as long as they remember who's top dog around here,' she says with a growl while smacking a fist into her palm.";
+	now A_Sarah is true;
 
 
 Alexandra ends here.

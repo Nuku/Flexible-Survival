@@ -33,7 +33,8 @@ pethitbonus is a number that varies.	[ Used to total the player's pet's special 
 monhitbonus is a number that varies.	[ Used to total the enemy's special hit bonuses. ]
 mondodgebonus is a number that varies.	[ Used to total the enemy's special dodge bonuses. ]
 monmindbonus is a number that varies.	[ Used to total the enemy's special mental/will bonuses. ]
-
+playerpoison is a number that varies.	[ Used to track how poisoned the player may be. ]
+monsterpoison is a number that varies.	[ Used to track how poisoned the monster may be (not currently in use). ]
 
 
 [		fightoutcome			]
@@ -67,6 +68,8 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and display the mon
 	now peppereyes is 0;
 	now monsterhp is hp entry;
 	now gascloud is 0;
+	now playerpoison is 0;
+	now monsterpoison is 0;
 	now lost is 0;
 	now plhitbonus is 0;
 	now pldodgebonus is 0;
@@ -464,6 +467,7 @@ This is the player attack rule:
 	if monsterhp is greater than 0:
 		if before combat is 0:
 			choose row monstercom from table of Critter Combat;
+			if playerpoison > 0, follow the playerpoisoned rule;
 			if there is a continuous in row monstercom of the table of Critter Combat:
 				follow the continuous entry;
 			if combat abort is 0, follow the combat entry;
@@ -511,6 +515,7 @@ this is the combat item process rule:
 	if battleitem is 0 and monsterhp is greater than 0:
 		wait for any key;
 		choose row monstercom from table of Critter Combat;
+		if playerpoison > 0, follow the playerpoisoned rule;
 		if there is a continuous in row monstercom of the table of Critter Combat:
 			follow the continuous entry;
 		if combat abort is 0, follow the combat entry;
@@ -526,6 +531,7 @@ Chapter 3 - Combat Pass
 
 This is the combat pass rule:
 	choose row monstercom from table of Critter Combat;
+	if playerpoison > 0, follow the playerpoisoned rule;
 	if there is a continuous in row monstercom of the table of Critter Combat:
 		follow the continuous entry;
 	if combat abort is 0, follow the combat entry;
@@ -582,6 +588,7 @@ This is the flee rule:
 	otherwise:
 		say "You fail to get away.";
 		choose row monstercom from table of Critter Combat;
+		if playerpoison > 0, follow the playerpoisoned rule;
 		if there is a continuous in row monstercom of the table of Critter Combat:
 			follow the continuous entry;
 		if combat abort is 0, follow the combat entry;
@@ -593,6 +600,36 @@ This is the throw combat rule:
 	now hp of player is -2;
 	say "You allow yourself to be subdued while putting up a token struggle.";
 	Lose;
+
+
+Chapter P - Poison
+
+this is the playerpoisoned rule:
+	if playerpoison > 0:
+		choose row monster from the table of random critters;
+		let dam be lev entry + ( playerpoison * 2 );
+		increase dam by a random number between 0 and playerpoison;
+		let dam be dam / 4;
+		let playernum be stamina of player + level of player;
+		let poisonnum be ( playerpoison * 2 ) + lev entry;
+		let playernum be a random number between 1 and playernum;
+		let poisonnum be a random number between 1 and poisonnum;
+		if playernum >= poisonnum:	[successful stamina check decreases poison faster]
+			decrease playerpoison by 2;
+		otherwise:
+			decrease playerpoison by 1;
+		decrease playerpoison by playerpoison / 7;	[drops very high values faster, mostly for hard mode]
+		say "As the toxins in your system continue to affect you, you take another [special-style-2][dam][roman type] damage";
+		if poisonnum > 0:
+			say "!  Your nanites continue to try and purge it from your system, quickly working to break down more of it.";
+		otherwise:
+			say "!  Your nanites manage to purge the last of it from your system, leaving you free of its debilitating effects.";
+			increase plhitbonus by 2;
+		decrease hp of player by dam;
+		if hp of player < 1:
+			if hp of player <= 0, now fightoutcome is 20;
+			if libido of player >= 110, now fightoutcome is 21;
+			lose;
 
 
 Section 3 - Monster Counterattack
@@ -1067,7 +1104,7 @@ preattack:		This rule is followed at the very start of the 'to retaliate' featur
 			for effects that take place before a normal attack and occurs _before_ a player's avoidance check.
 postattack:		This rule is followed at the very end of the 'to retaliate' feature, but again can be called by other combat rules as well.  It is
 			meant for effects that take place after a normal attack.  This could be as simple as bragging, to poisoining a player (to be managed
-			by a continuous rule) and so on.
+			by the playerpoisoned rule) and so on.
 altattack1:		This is an alternate, dexterity-based attack the creature will sometimes use.  These can be attacks w/effects, different damage,
 			armour piercing, etc...
 alt1chance:		The likelihood the first alternate attack will be chosen.
