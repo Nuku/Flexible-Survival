@@ -416,6 +416,94 @@ to say posspro of (x - a person):	[possessive pronoun: <something> = his/hers]
 		say "hers";
 
 
+[short singular/plural statements - these add an s, es, y/ies as needed to a noun or a verb based on one or the other sexual characteristic]
+
+to say smn:   [stick an s on if multiple male - noun]
+	if cocks of player > 1:
+		say "s";
+	otherwise:
+		say "";
+
+to say sfn:    [stick an s on if multiple female - noun]
+	if cunts of player > 1:
+		say "s";
+	otherwise:
+		say "";
+
+to say esmn:   [stick an es on if multiple male - noun]
+	if cocks of player > 1:
+		say "s";
+	otherwise:
+		say "";
+
+to say esfn:    [stick an es on if multiple female - noun]
+	if cunts of player > 1:
+		say "s";
+	otherwise:
+		say "";
+
+to say ymn:   [sticks y/ies on if multiple male - noun]
+	if cocks of player > 1:
+		say "s";
+	otherwise:
+		say "";
+
+to say yfn:    [sticks y/ies on if multiple female - noun]
+	if cunts of player > 1:
+		say "s";
+	otherwise:
+		say "";
+
+to say smv:    [stick an s on if single male - verb]
+	if cocks of player > 1:
+		say "";
+	otherwise:
+		say "s";
+
+to say sfv:    [stick an s on if single female - verb]
+	if cunts of player > 1:
+		say "";
+	otherwise:
+		say "s";
+
+to say esmv:    [stick an es on if single male - verb]
+	if cocks of player > 1:
+		say "";
+	otherwise:
+		say "es";
+
+to say esfv:    [stick an es on if single female - verb]
+	if cunts of player > 1:
+		say "";
+	otherwise:
+		say "es";
+
+to say ymv:    [stick an y/ies on if single male - verb]
+	if cocks of player > 1:
+		say "";
+	otherwise:
+		say "s";
+
+to say yfv:    [sticks y/ies on if single female - verb]
+	if cunts of player > 1:
+		say "s";
+	otherwise:
+		say "";
+
+[
+Example:
+say "Your cock[smn] smash[esmv] into the goblin's face.  Your juicy puss[yfn] then grind[sfv] against his pointy nose.";
+
+1 cock: Your cock smashes into the goblin's face...
+
+2+ cocks: Your cocks slam into the goblin's face...
+
+1 cunt: ...Your juicy pussy then grinds against his pointy nose.
+
+2+ cunts: ...Your juicy pussies then grind against his pointy nose.
+]
+
+
 A thing can be rooted in place. A thing is usually not rooted in place.
 A thing can be restful. A thing is usually not restful.
 A door can be dangerous.
