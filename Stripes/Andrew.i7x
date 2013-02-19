@@ -1,4 +1,6 @@
-Version 1 of Andrew by Stripes begins here.
+Version 2 of Andrew by Stripes begins here.
+[Added scene by Gyrgon]
+
 "Adds a primarily M/M Wolf NPC named Andrew to the Flexible Survival game"
 
 
@@ -78,8 +80,64 @@ instead of fucking the Andrew:
 		now lastfuck of Andrew is turns;
 		andrewinfect;
 		if hp of Andrew is 6, now hp of Andrew is 7;
+	otherwise if hp of Andrew is 8 or ( hp of Andrew > 8 and a random chance of 1 in 4 succeeds):	[special - bukakke]
+		say "[randomdesc]";		[yields 'slutname' - male 1]
+		let male1type be slutname;
+		say "[randombodypart]";		[yields 'bodyselector' - male 2]
+		while bodyselector is slutname:
+			say "[randombodypart]";
+		let male2type be bodyselector;
+		say "[randomdesc]";		[yields 'slutname' - male 3]
+		while slutname is male1type or slutname is male2type:
+			say "[randomdesc]";
+		let male3type be slutname;
+		say "[randombodypart]";		[yields 'bodyselector' - male 4]
+		while bodyselector is male1type or bodyselector is male2type or bodyselector is male3type:
+			say "[randombodypart]";
+		let male4type be bodyselector;
+		let randomcolourchoice be "grey ";
+		let male1c be "";
+		let male2c be "";
+		let male3c be "";
+		let male4c be "";
+		if hp of Andrew is 8, sort randomcolourlist in random order;	[fresh randomized set]
+		if a random chance of 1 in 5 succeeds:
+			now male1c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+		if a random chance of 1 in 5 succeeds:
+			now male2c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+		if a random chance of 1 in 5 succeeds:
+			now male3c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+		if a random chance of 1 in 5 succeeds:
+			now male4c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+		if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+[		say "TEST:[line break]";
+		say "male1type: [male1type][line break]";
+		say "male2type: [male2type][line break]";
+		say "male3type: [male3type][line break]";
+		say "male4type: [male4type][line break][line break]";
+		say "male1c: [male1c][line break]";
+		say "male2c: [male2c][line break]";
+		say "male3c: [male3c][line break]";
+		say "male4c: [male4c][line break][line break]";	]
+		say "          Andrew grins at your offer and pulls you in for a kiss.  He strokes a paw across your face and nibbles at your ear.  'Mmm... You looked so sexy before with my cum all over your face.  How about we get you nice and messy like that again?' he says with his faintly feminine voice with considerable eagerness.  Clearly the wolf is very turned on by the prospect of getting you nice and sticky like that again.  You think about what he said, and with a grin you suggest something even more messy.  Giving the gay wolf a kiss on the cheek, you whisper in his ear it might be more entertaining to invite some of the other patrons to join in on the fun.";
+		say "     Andrew's ears perk up at your suggestion and he dashes out of the booth.  While you wait for him to return you remove your clothes, stripping down naked and sitting on the edge the booth, idly stroking your [cock of player] [if cocks of player > 1]cocks[otherwise]shaft[end if].  After a bit you hear some excited chatter as Andrew comes back in, trailing behind him four other males.  Looking at them you see that he brought a rather mixed group, and ready to go, judging by the bulges in their clothes.  You beckon them closer and watch them strip off their clothes, eagerly getting naked to join the fun.";
+		say "     You see one a little more eager than the others, a rather endowed [male1c][male1type] walks up to you and push his leaky cock in your face.  Now that one has broken the ice, the others move in closer, a [male2c][male2type] rubbing his swollen glans against your cheek.  'Mmm... put that tongue to work.  Show us how well a cock-slut like you knows how to please.'  Grinning widely, you eagerly start licking and kissing on his cock, slathering it with your tongue and sucking on his tip.  Not to be undone, the [male2type] pushes his shaft against your mouth, making you divide your attention between the two of them.  You lick and suck on first one cock, then the other, moaning softly at the taste of their cockflesh and the pre that starts to flow from them.  Grabbing them with your hands, you rub and stroke on their cocks when they aren't in your mouth, pleasuring them with skill.";
+		say "     After a few minutes, you hear some whispers from Andrew and the other two males. With a quick motion you suddenly have the delicious cocks pulled from your mouth.  Now that the [male1type] and [male2type] have been pulled back from blocking your sight, you can see who the others Andrew found are.  Standing to the side of the [male1c][male1type] is a [male3c][male3type], with a big grin on and his hand on his friend's shoulder.  Between Andrew and the [male2c][male2type] is a [male4c][male4type] eagerly waiting his turn.  Andrew leans in and licks your cheek, tasting some of the musky pre left there, and murring.  'How about you hop up on the table here, sweetie?  Let all of us have a turn at you,' Andrew says in a lust filled voice, patting one of the cum-stained tables.";
+		say "     You eagerly agree and spring up on the table, sitting on the edge of it and pulling Andrew in close.  You draw him down and give him a kiss, feeling his girthy shaft hot on your [cock size desc of player] [if cocks of player > 1]rods[otherwise]rod[end if], taking his paws in your hands and placing them on your cocks, urging him to explore.  Looking up from Andrew you crook your finger at the others, urging them in close.  Reaching out you grab the cocks of the [male3type] and [male4type] and you begin pumping your hands on them.  You let out a moan as Andrew begins stroking his hefty meat against your [cock of player] [if cocks of player > 1]erections[otherwise]erection[end if], keeping a tight grip on [if cocks of player > 1]all of the[otherwise]both of your[end if] throbbing cocks, frotting against you vigorously.";
+		say "     Pulling the two males you have your hands on closer, you let go of their cocks and start to lick and suck on both of them eagerly.  You moan loudly to them, showing them how much you enjoy having their cocks in your face.  Keeping your hands on them, you stroke them as you pleasure them.  The other two come up and stand over you, starting to jerk themselves off over you, watching you lash your tongue on the other two and looking at what Andrew is doing to you as well.";
+		say "     As things heat up, moans and grunts almost overpower the music in the booth, the scent of male musk filling the atmosphere as pre coats your [bodydesc of player] body.  Sloppy wet sounds add to the noise as pre and saliva flows more freely, your [cock of player] shaft throbbing heavily against Andrew's thick, knotted member.  Your hands explore the drippy dicks, feeling their textures and veins as you try to bring the four sexy males around you to orgasm.  Looking past them, you can see you've gathered an audience as others lean over from the neighbouring booth or watch from the sidelines.  From the expression on their faces, you can tell more than a few of them have some horny cocksucker tending to them right now.";
+		say "     The first one to climax is the [male1c][male1type], voicing out a loud moan as his thick cock throbs heavily before starting to soak you and the table in cum, a few shots even hitting the other males.  This sets off a chain reaction as hot jizz starts flying onto you, the other three covering your body in their seed and soaking your face and body.  You moan and suck and lick on the two spurting cocks in front of you, enjoying the taste of the thick cream.";
+		say "     Watching this sets Andrew off and with a howl his cock starts throbbing and blasting his cum all over you and the table you are laying on, as well as hitting the other males.  The large spurts of cum he unleashes seem particularly thick and plentiful, even for him, soaking much of you in wolf semen.  The feel of his cock throbbing against yours and the scents and sounds in the air, as well as the sight and feel of the cocks around you all cumming sets you off.  Your [cock size desc of player] maleness swells and then throbs as you shoot your [cum load size of player] load onto yourself, adding to the thick coating of cream on you.";
+		say "     After everyone is spent, the [male1type] and [male2type] sit down in a booth of their own, cuddling and snuggling with each other.  The other two sit down in the messy booth with you and Andrew, the four of you cuddling and groping one another.  Andrew leans in with a smile and licks some of the mixed cum off your cheek.  'That was a lot of fun, sexy.  Looks like you've turned into quite the cum-slut,' Andrew says with a smirk.  'We'll have to do this again sometime.'";
+		now lastfuck of Andrew is turns;
+		andrewinfect;
+		if hp of Andrew is 8, now hp of Andrew is 9;
 	otherwise:					[standard anal sex w/Andrew]
-		if hp of Andrew < 6, increase hp of Andrew by 1;
+		if hp of Andrew < 8, increase hp of Andrew by 1;
 		say "     Andrew grins at your offer and runs his paws over your [bodydesc of player] body with obvious lust.  'Mmm... I'm certainly up for some fun again, sweetie.  Now what exactly did you have in mind?' he says with his slightly feminine voice while walking a paw down to your crotch[if cunts of player > 0].  'I'm up for either top or bottom.  But if I top, I'd be taking your back door in, hon,' he says softly to make sure that'd be alright[otherwise].  'I'm up for either top or bottom, sweetie.  What do you feel like?' he asks while nibbling your ear[end if].";
 		say "     Do you want to fuck him (Y) or get fucked (N)?";
 		if the player consents:
@@ -123,6 +181,63 @@ to andrewinfect:
 	infect "Black Wolf";
 	now non-infectious entry is true;
 	now sex entry is tempvalue;
+
+
+
+randomcolourlist is a list of text that varies.  randomcolourlist is usually { "pink ", "red ", "green ", "blue ", "teal ", "yellow ", "white ", "black ", "purple ", "grey ", "maroon ", "golden ", "cyan ", "peach " }.
+
+Section x - Not for release
+
+andrewtesting is an action applying to nothing.
+
+understand "andrewtest" as andrewtesting.
+
+carry out andrewtesting:
+	if 1 is 1:
+		say "[randomdesc]";		[yields 'slutname' - male 1]
+		let male1type be slutname;
+		say "[randombodypart]";		[yields 'bodyselector' - male 2]
+		while bodyselector is slutname:
+			say "[randombodypart]";
+		let male2type be bodyselector;
+		say "[randomdesc]";		[yields 'slutname' - male 3]
+		while slutname is male1type or slutname is male2type:
+			say "[randomdesc]";
+		let male3type be slutname;
+		say "[randombodypart]";		[yields 'bodyselector' - male 4]
+		while bodyselector is male1type or bodyselector is male2type or bodyselector is male3type:
+			say "[randombodypart]";
+		let male4type be bodyselector;
+		let randomcolourchoice be "grey ";
+		let male1c be "";
+		let male2c be "";
+		let male3c be "";
+		let male4c be "";
+		if hp of Andrew is 8, sort randomcolourlist in random order;	[fresh randomized set]
+		if a random chance of 1 in 5 succeeds:
+			now male1c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+		if a random chance of 1 in 5 succeeds:
+			now male2c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+		if a random chance of 1 in 5 succeeds:
+			now male3c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+		if a random chance of 1 in 5 succeeds:
+			now male4c is entry 1 of randomcolourlist;
+			rotate randomcolourlist;
+		if a random chance of 1 in 10 succeeds, sort randomcolourlist in random order;	[10% chance to re-randomize each time]
+		say "TEST:[line break]";
+		say "male1type: [male1type][line break]";
+		say "male2type: [male2type][line break]";
+		say "male3type: [male3type][line break]";
+		say "male4type: [male4type][line break][line break]";
+		say "male1c: [male1c][line break]";
+		say "male2c: [male2c][line break]";
+		say "male3c: [male3c][line break]";
+		say "male4c: [male4c][line break][line break]";
+
+
 
 
 Andrew ends here.
