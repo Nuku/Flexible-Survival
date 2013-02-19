@@ -4316,16 +4316,15 @@ This is the monster injury rule:
 	rule succeeds;
 
 This is the player injury rule:
-	choose row monster from the table of random critters;
 	let per be ( hp of the player times 100 ) divided by maxhp of the player;
-	if per is less than 10:
-		now descr is "[one of]on death's door[or]almost defeated[or]barely mobile[at random]";
-	otherwise if per is less than 40:
-		now descr is "[one of]wounded[or]bashed around[or]significantly harmed[at random]";
-	otherwise if per is less than 80:
-		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random]";
+	if per <= 10:
+		now descr is "[if playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]on death's door[or]almost defeated[or]barely mobile[at random]";
+	otherwise if per <= 40:
+		now descr is "[if playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]wounded[or]bashed around[or]significantly harmed[at random]";
+	otherwise if per <= 80:
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	otherwise:
-		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random]";
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	rule succeeds;
 
 This is the brain descr rule:
