@@ -114,7 +114,7 @@ to say losetogob_m:
 to say beatthegoblin:
 	now goblinfight is 1;
 	now calcnumber is -1;
-	if cocks of player is 0 and cunts of player is 0:
+	if cocks of player > 0 or cunts of player > 0:
 		say "     Driven back by your final blow, the goblin lands doubled over on the dirt.  Now that [if gobgender is 1]she[otherwise]he[end if] is at your mercy, you find yourself [if libido of player < 33]somewhat[otherwise if libido of player < 67]rather[otherwise]very[end if] excited after the fight.  Tempted to give a little of what you would have gotten if the tables were turned, you consider some options.  Shall you ";
 		if gobgender is 1:	[female goblin]
 			if cocks of player > 0 and cock length of player < 13:
