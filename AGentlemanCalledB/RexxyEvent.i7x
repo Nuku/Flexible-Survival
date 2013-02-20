@@ -20,7 +20,7 @@ Instead of Resolving a ForcedAdoption:
 		say "     Once you are certain the pair is gone you get up from your hiding place and walk over to where they were standing. as you glance around you spot the object the retriever girls was so obsessed with, an unusual sex toy shaped like a canine cock on one end with a bone shaped handle on the other. Against your better judgment, you feel compelled to pick the strange toy up, examining it more closely momentarily before slipping it into your bag and heading on your way, even as faint thoughts of doggie sex begin to creep into your mind.";
 		increase carried of Dog Bone by 1;
 		now hp of Rex is 1;
-	if hp of Rex is 4:
+	otherwise if hp of Rex is 4:
 		if Dog Bone is owned:
 			say "     As you once again find yourself passing through a familiar neighborhood you are suddenly stuck with concern for you favorite toy. pulling it from your bag you hold it tightly too your chest. In a moment of clarity you realize this is the very same place you first acquired the toy... and saw its previous owner captured by a large male retriever. ";
 			say "     You ponder just how similar a position you are in too hers when you are suddenly grabbed from behind. You are spun around to see the large, sexy, male canine face to face before he presses his muzzle to your face, drawing you into a deep kiss.  Your mind is flooded with the thoughts and desires of the retriever bitch you have been becoming, your infection driven to new a new lust fueled high by the his deep kiss and powerful male scent.";
@@ -30,13 +30,13 @@ Instead of Resolving a ForcedAdoption:
 			delete Dog Bone;
 			now Rex's Place is known;
 			now hp of Rex is 5;
-			say "[bold type]Rex's Place is now known[roman type]";
+			say "[bold type]Rex's Place is now known.[roman type]";
 			now ForcedAdoption is resolved;
 		Otherwise:
-			Say "     Once again you find yourself in the neighborhood where you saw the golden retriever girl being abducted by the large male. As you walk by nervously you find your thoughts once again drawn to your beloved doggie sex toy, feeling an overwhelming urge to return to where you left it and play with it again.";
+			Say "     Once again, you find yourself in the neighborhood where you saw the golden retriever girl being abducted by the large male. As you walk by nervously you find your thoughts once again drawn to your beloved doggie sex toy, feeling an overwhelming urge to return to where you left it and play with it again.";
 			increase bonelust by 1;
 	Otherwise:
-		say "     Once again you find yourself in the neighborhood where you saw the golden retriever girl being abducted by the large male. As you walk by nervously you find your thoughts once again drawn to doggie sex and the strange toy you picked up.";
+		say "     Once again, you find yourself in the neighborhood where you saw the golden retriever girl being abducted by the large male. As you walk by nervously you find your thoughts once again drawn to doggie sex and the strange toy you picked up.";
 
 Section 2 - Doggy Bone
 
