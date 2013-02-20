@@ -1228,13 +1228,14 @@ Carry out savetrix2:
 	now trixsavetext3 is "[trixsavetext1]" ;
 	reciting2;	
 
-
+[
 testsven is an action applying to nothing.
 understand "tsven" as testsven;	
 carry out testsven:
 	now hp of Sven is 4;
 	move Sven to Bunker;
-	
+]
+
 Reciting is an action applying to [16 things]one topic.
 Understand "recite [text]" as reciting.
 
