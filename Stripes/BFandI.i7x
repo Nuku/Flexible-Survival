@@ -245,6 +245,7 @@ carry out bfanditesting5:
 	say "[bold type]Insectlist:[roman type] ([special-style-1][number of entries in infections of Insectlist][roman type]) [infections of Insectlist].";
 	say "[bold type]Plantlist:[roman type] ([special-style-1][number of entries in infections of Plantlist][roman type]) [infections of Plantlist].";
 	say "[bold type]Avianlist:[roman type] ([special-style-1][number of entries in infections of Avianlist][roman type]) [infections of Avianlist].";
+	say "[bold type]Avianpredlist:[roman type] ([special-style-1][number of entries in infections of Avianpredlist][roman type]) [infections of Avianpredlist].";
 	say "[bold type]Taurlist:[roman type] ([special-style-1][number of entries in infections of Taurlist][roman type]) [infections of Taurlist].";
 	say "[bold type]Knotlist:[roman type] ([special-style-1][number of entries in infections of Knotlist][roman type]) [infections of Knotlist].";
 	say "[bold type]Latexlist:[roman type] ([special-style-1][number of entries in infections of Latexlist][roman type]) [infections of Latexlist].";
