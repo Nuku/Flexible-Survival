@@ -1418,6 +1418,10 @@ Avianlist is a marker.	[list of avian/bird infections]
 when play begins:
 	add { "Bald Eagle", "Fluffy Owl", "harpy", "Hermaphrodite Gryphon", "peacock", "Quilled Tousky", "Hawkman", "Siren", "Vulpogryph", "Bird of Paradise" } to infections of Avianlist;
 
+Avianpredlist is a marker.	[list of predatory avian/bird infections]
+when play begins:
+	add { "Bald Eagle", "Fluffy Owl", "Hermaphrodite Gryphon", "Hawkman" } to infections of Avianpredlist;
+
 Taurlist is a marker.	[list of tauric infections]
 when play begins:
 	add { "Reptaur", "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "tigertaur", "Wolftaur", "Skunk Taur" } to infections of Taurlist;
@@ -5738,6 +5742,7 @@ Include Xeno for FS by Stripes.
 Include Fire Elemental for FS by Stripes.
 Include Corota for FS by Stripes.
 Include Ocelot for FS by Stripes.
+Include Blue Chaffinch for FS by Stripes.
 Include Elven Hunter For Fs by Wahn.
 Include Hulking Cheerleader by Wahn.
 Include Reptaur by Kaleem mcintyre.

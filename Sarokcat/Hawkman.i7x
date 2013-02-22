@@ -41,6 +41,16 @@ To say Hawkman loss:
 			say "     To reinforce your victory, you pull a few feathers from the bird's tail, making him squawk in pain.";
 			increase nohawkmansex by 1;
 
+to say hawkmandesc:
+	choose row monster from table of random critters;
+	if "Male Preferred" is listed in feats of player:
+		now sex entry is "Male";
+	otherwise if "Herm Preferred" is listed in feats of player:
+		now sex entry is "Both";
+	otherwise:
+		now sex entry is "Female";
+	say "     As you wander through the city streets, you hear a whistling sound from above, and look up to see a powerful avian form swooping down towards you. You jump back as it lands in front of you, and you get a closer look at the creatures raptor-like form as it stalks towards you on his taloned feet. The strange bird like man has large hawk-like wings stretching out from his back, and stalks forward on avian talons, while his rather taloned hands stretch towards you eagerly, and the rest of his body is covered in rather soft and beautiful looking brown patterned feathers. The obviously male creature is half erect as he cocks his avian head to the side appraisingly, and you can swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
+
 
 Section 2 - Monster Insertion
 
@@ -55,16 +65,16 @@ When Play begins:
 	now attack entry is "[one of]He lashes out at you with his wing, the powerful wing strike smashing you backwards.[or]The hawkman flaps his wings and gains a leaps into the air, lashing out at you with his powerful rear talons.[or]he grabs at you with his taloned fingers.[or]He charges forward, his wings flapping behind him giving his speed as he barrels into you.[or]He lets out a loud screech causing you to duck instinctively as he barrels forward.[or]He stalks forward teasingly, his rhythmic movements almost hypnotic as he postures in front of you.[or]He strikes forward with his large predatory beak and rubs it against you teasingly.[or]The hawkman stretches forward with one of his taloned fingers and strokes his cool finger down the side of your face teasingly.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Hawkman loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is  "[Hawkman attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.] 
-	now desc entry is "As you wander through the city streets, you hear a whistling sound from above, and look up to see a powerful avian form swooping down towards you. You jump back as it lands in front of you, and you get a closer look at the creatures raptor-like form as it stalks towards you on his taloned feet. The strange bird like man has large hawk-like wings stretching out from his back, and stalks forward on avian talons, while his rather taloned hands stretch towards you eagerly, and the rest of his body is covered in rather soft and beautiful looking brown patterned feathers. The obviously male creature is half erect as he cocks his avian head to the side appraisingly, and you can swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";[ Description of the creature when you encounter it.]
+	now desc entry is "[hawkmandesc]";[ Description of the creature when you encounter it.]
 	now face entry is "narrow hawk-like head, with a sharp curved raptor-like beak and two sharp piercing hawk-like eyes in your new avian";[ Face description, format as the text "Your have a (your text) face."] 
-	now body entry is "lithe and slim, with powerful taloned feet and rather claw-like taloned hands, your avian body sports two large powerful wings, which catch the air behind you and make you almost feel like you could fly.";[ Body Description, format as the text "Your Body is (your text)"] 
+	now body entry is "lithe and slim, with powerful taloned feet and rather claw-like taloned hands, your avian body sports two large powerful wings, which catch the air behind you and make you almost feel like you could fly";[ Body Description, format as the text "Your Body is (your text)"] 
 	now skin entry is "[one of]soft feathered[or]brown feathered[or]hawk-like[or]feathered[at random]";[ skin Description, format as the text "You have (your text) skin"] 
-	now tail entry is "You have a rather large tail made of feathers folded neatly behind you, its patterned feathers seeming to shine and shimmer behind you as it flexes and spreads out behind you with every step you take. ";[ Tail description, write a whole Sentence or leave blank. ] 
+	now tail entry is "You have a rather large tail made of feathers folded neatly behind you, its patterned feathers seeming to shine and shimmer behind you as it flexes and spreads out behind you with every step you take.";[ Tail description, write a whole Sentence or leave blank. ] 
 	now cock entry is "[one of]slim pointed[or]avian[or]hawk-like[at random]";[ Cock Description, format as you have a 'size' (your text) cock] 
-	now face change entry is "your nose seems to flatten out, and you fight to breathe for a second as your mouth presses forward, the bones of your jaw cracking as it begins to reshape into a powerful avian beak. Your eyes swim for a minute before sharpening into the razor sharp focus of a hawk, and you gasp for breath as your beak finishes forming, your new thin birdlike tongue exploring your strangely shaped new hawk-like beak curiously."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "your bones seem to stretch and flex under the skin for a second, your balance seeming to change as your body grows lighter, and you stagger and nearly fall as your feet shift, the knees snapping and reversing in direction as new raptor-like talons form, your hands soon shifting and following suit as they become covered in powerful birdlike talons as well. Your changes aren't quite over you discover however, as all of a sudden your spine seems to shift, causing you to moan as your back bulges out, and two powerful avian wings erupt out from your sides, and you flap your new wings experimentally as you stretch out your powerful new avian form.."; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "small dimples appear over your body, covering you completely before they begin to tingle, and you feel several small pinpricks as small feathers begin to push their way out of your skin, the first set of feathers growing in quickly even as another set begins to push out to cover the soft downy underfeathers with their brown patterned hawk-like markings."; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "large powerful feathers seem to erupt out from the base of your spine, the feathers seeming to fold together to form a wide flat avian like tail, the strange new appendage feeling surprisingly responsive as you spread it out behind you experimentally, the feathers feeling surprisingly good and arousing where they rub against your body."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now face change entry is "your nose seems to flatten out, and you fight to breathe for a second as your mouth presses forward, the bones of your jaw cracking as it begins to reshape into a powerful avian beak. Your eyes swim for a minute before sharpening into the razor sharp focus of a hawk, and you gasp for breath as your beak finishes forming, your new thin birdlike tongue exploring your strangely shaped new hawk-like beak curiously"; [ face change text. format as "Your face feels funny as (your text)" ]
+	now body change entry is "your bones seem to stretch and flex under the skin for a second, your balance seeming to change as your body grows lighter, and you stagger and nearly fall as your feet shift, the knees snapping and reversing in direction as new raptor-like talons form, your hands soon shifting and following suit as they become covered in powerful birdlike talons as well. Your changes aren't quite over you discover however, as all of a sudden your spine seems to shift, causing you to moan as your back bulges out, and two powerful avian wings erupt out from your sides, and you flap your new wings experimentally as you stretch out your powerful new avian form"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now skin change entry is "small dimples appear over your body, covering you completely before they begin to tingle, and you feel several small pinpricks as small feathers begin to push their way out of your skin, the first set of feathers growing in quickly even as another set begins to push out to cover the soft downy underfeathers with their brown patterned hawk-like markings"; [ skin change text. format as "Your skin feels funny as (your text)" ]
+	now ass change entry is "large powerful feathers seem to erupt out from the base of your spine, the feathers seeming to fold together to form a wide flat avian like tail, the strange new appendage feeling surprisingly responsive as you spread it out behind you experimentally, the feathers feeling surprisingly good and arousing where they rub against your body"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it is drawn up almost entirely into your body, your penis narrowing into a rather avian, pointed member as it slips into your newly created vent"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 16;
 	now dex entry is 20;
@@ -77,9 +87,9 @@ When Play begins:
 	now lev entry is 7;			[ Level of the Monster, you get this much hp if you win, or this much hp halved if you loose ] 
 	now wdam entry is 13;			[Amount of Damage monster Does when attacking.]
 	now area entry is "Outside";	[ Current options are 'Outside' and 'Mall'  Case sensitive]
-	now cocks entry is 0;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;		[ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;		[ Size of balls apparently ;) sneaky Nuku]
+	now cocks entry is 1;			[ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 8;		[ Length infection will make cock grow to if cocks]
+	now cock width entry is 4;		[ Size of balls apparently ;) sneaky Nuku]
 	now breasts entry is 0;			[ Number of Breasts infection will give you. ]
 	now breast size entry is 0;		[Size of breasts infection will try to attain ]
 	now male breast size entry is 0;	[ Breast size for if Sex="Male", usually zero. ]
@@ -92,7 +102,7 @@ When Play begins:
 	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3;				[ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]winged[at random]";
-	now type entry is "avian";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "[one of]avian[or]raptor[at random]";		[ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;			[ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;			[ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;		[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
