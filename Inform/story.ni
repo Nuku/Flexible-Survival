@@ -5682,6 +5682,7 @@ Include Albino Mouse by Stripes.
 Include Cat Ninjas by Stripes.
 Include Flaming Lynx for FS by Stripes.
 Include Komodo Dragon for FS by Stripes.
+Include Beaver for FS by Stripes.
 Include Reindeer by Stripes.
 Include Snow Leopard for FS by Stripes.
 Include Grey Squirrel for FS by Stripes.
