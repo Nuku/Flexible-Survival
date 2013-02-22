@@ -62,7 +62,7 @@ to say losetobeaver:
 
 
 to say beatthebeaver:
-	say "     You knock the pudgy beaver over, sending him falling onto his rather padded backside.  'Ooof!  [one of]Whatcha do that for, you hoser?' he groans[or]I'll call the Mounties on you!' he says indignantly[or]Why're all you Americans so rude?' he grumbles[or]Well, we still beat you in 1812!' he yells[or]Câlice de tarbernacle, mon ostie!  That hurt!' he cusses colourfully[or]I think I sprained my Molson muscle,' he complains, rubbing his pudgy belly[or]Did you get the license plate of that transport?' he moans, rubbing his head[at random] as he struggles to get back up";
+	say "     You knock the pudgy beaver over, sending him falling onto his rather padded backside.  'Ooof!  [one of]Whatcha do that for, you hoser?' he groans[or]I'll call the Mounties on you!' he says indignantly[or]Why're all you Americans so rude?' he grumbles[or]Well, we still beat you in 1812!' he yells[or]CÃ¢lice de tarbernacle, mon ostie!  That hurt!' he cusses colourfully[or]I think I sprained my Molson muscle,' he complains, rubbing his pudgy belly[or]Did you get the license plate of that transport?' he moans, rubbing his head[at random] as he struggles to get back up";
 	if nobeaversex > 2:
 		if bodyname of player is "Beaver":
 			say ".  As with the others of his kind, you resist the urge for sex and help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way.  After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
