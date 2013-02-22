@@ -47,26 +47,26 @@ When Play begins:
 	now ass change entry is "you feel it becoming tighter, leaner, and more fit.  This is followed by a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquefying.  The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it begins to grow thicker, large bumps sprouting up all across its surface. At first, you think it is some sort of strange disease, but, then you realize that this entire thing is some sort of disease";
 	now str entry is 20;
-	now dex entry is 8;
-	now sta entry is 14;					
+	now dex entry is 9;
+	now sta entry is 14;
 	now per entry is 5;
 	now int entry is 3;
 	now cha entry is 0;
-	now sex entry is "Male"; 	
-	now hp entry is 50;			
-	now lev entry is 4;			 
-	now wdam entry is 9;			
+	now sex entry is "Male";
+	now hp entry is 50;
+	now lev entry is 5;
+	now wdam entry is 10;
 	now area entry is "Mall";
-	now cocks entry is 1;			
-	now cock length entry is 18;		
-	now cock width entry is 8;		
-	now breasts entry is 0;			
-	now breast size entry is 0;		
-	now male breast size entry is 0;	
-	now cunts entry is 0;			
-	now cunt length entry is 0;		
-	now cunt width entry is 0;		
-	now libido entry is 45;			
+	now cocks entry is 1;
+	now cock length entry is 18;
+	now cock width entry is 8;
+	now breasts entry is 0;
+	now breast size entry is 0;
+	now male breast size entry is 0;
+	now cunts entry is 0;
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 45;
 	now loot entry is "demon seed";			[ Loot monster drops, ]
 	now lootchance entry is 50;		[ Chance of loot dropping 0-100 ]
 	[ These represent the new additions to the table of random critters ]
