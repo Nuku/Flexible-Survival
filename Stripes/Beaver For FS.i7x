@@ -151,13 +151,13 @@ When Play begins:
 	now body entry is "short and pudgy in a strangely sleek manner.  The webbed paws on your hands and feet lead you to suspect you'd be more agile swimming than you are walking around";
 	now skin entry is "brown fur";
 	now tail entry is "You have a very broad, flat beaver tail.";
-	now cock entry is "[one of]dark brown[or]chestnut[at random]";
-	now face change entry is "your head changes in some descriptive manner";	[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your body takes on a newly described form";	[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "you gain fur/scales/skin/patterns described herein";	[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your tail or ass changes in the manner described by this text";	[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it takes on a new, kinky form";		[ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 16;			[ These are now the creature's stats... ]
+	now cock entry is "[one of]dark brown[or]chestnut[or]chubby[at random]";
+	now face change entry is "your head fills with the sounds of a hockey fight where every blow is another snap of your skull as it reshapes itself.  When it is finally broken up, it settles into the shape of a beaver's head";
+	now body change entry is "you're wracked with stomach cramps and feel bloated.  You are worried for a moment that you'll be sick, but suddenly all the pressure building up shifts and your body bulges outward, forming a rounded belly with a stout stature.  As the changes progress out to your limbs, they start to change shape to match.  Once at your extremities, your hands and feet form into webbed paws that almost look like flippers, but are more flexible";
+	now skin change entry is "a coat of oily brown fur spreads across your body.  It looks a little ruffled and coarse, but is quite soft and warm in actuality.  It has a glossy sheen to it as well, oils coating it to keep water off of you";
+	now ass change entry is "you feel something heavy putting at the base of your spine.  As it grows out, it flattens, forming in the broad, flat oval of a beaver tail";
+	now cock change entry is "it pulses and throbs, releasing spurts of cum as it gets chubbier.  It is general human-like in form, but has also gained on a chestnut brown colour.  You can't help but find the look of it pleasing";
+	now str entry is 14;			[ These are now the creature's stats... ]
 	now dex entry is 15;			[ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 15;			[ These values may be used as part of alternate combat.]
 	now per entry is 12;
