@@ -1,5 +1,5 @@
-Version 2 of Bouncy Castle by Stripes begins here.
-[Version 2.1 - Anime Babe vulnerability]
+Version 3 of Bouncy Castle by Stripes begins here.
+[Version 3 - Great Hall and King's Chamber added]
 "Save the vixen 'princess' from the 'castle'."
 
 Section 1 - Starting Event
@@ -115,6 +115,9 @@ Section 3 - Bouncy Castle Layout
 
 bcswordplay is a truth state that varies.  bcswordplay is normally false.
 bcseenplayroom is a truth state that varies.  bcseenplayroom is normally false.
+bcplayroomlast is a truth state that varies.  bcplayroomlast is normally true.
+bcseenkingchair is a truth state that varies.  bcseenkingchair is normally false.
+bcseenkingknight is a truth state that varies.  bcseenkingknight is normally false.
 lastsealfight is a number that varies.  lastsealfight is normally 255.
 lastoctofight is a number that varies.  lastoctofight is normally 255.
 lastorcafight is a number that varies.  lastorcafight is normally 255.
@@ -136,6 +139,12 @@ The description of Ball Pit Room is "[bcballpitroom]".
 The Toy Room is a room.  The Toy Room is west of Bouncy Castle.
 The description of Toy Room is "[bctoyroom]".
 
+The Great Hall is a room.  The Great Hall is east of Bouncing Play Room.
+The description of Great Hall is "[bcgreathall]".
+
+The King's Chambers is a room.  The King's Chambers is north of Great Hall.
+The description of King's Chambers is "[bckingschamber]".
+
 The Parapets is a room.  The Parapets is up from Ball Pit Room.
 The description of Parapets is "[bcparapets]".
 
@@ -152,7 +161,11 @@ the scent of Bouncing Play Room is "This place smells of rubber and the ocean, t
 
 the scent of Ball Pit Room is "This place smells of rubber and the ocean.";
 
-the scent of Toy Room is "This place smells of rubber and the ocean.";
+the scent of Toy Room is "This place smells of rubber and the ocean, though there's a lingering scent of arousal and sex as well.";
+
+the scent of Great Hall is "This place smells of rubber and the ocean.";
+
+the scent of King's Chambers is "This place smells of rubber and the ocean.";
 
 the scent of Parapets is "This place smells of rubber and the ocean.";
 
@@ -160,6 +173,8 @@ the scent of Slide Room is "This place smells of rubber and the ocean.";
 
 
 Section 4 - Inside the Bouncy Castle
+
+Book 1 - Ground Floor
 
 Chapter 1 - Entrance
 
@@ -182,7 +197,7 @@ instead of going north from Bouncy Castle:
 Chapter 2 - Fencing Room
 
 to say bcfencingroom:
-	say "     This room is similar to the first room you were in, but has an arched window set into each of the two outer walls[if daytimer is day], letting in some light[otherwise].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].  Unlike the first room, there are several drawings of knights swordfighting on the walls";
+	say "     This room is similar to the first room you were in, but has an arched window set into the outer wall[if daytimer is day], letting in some light[otherwise].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].  Unlike the first room, there are several drawings of knights swordfighting on the walls";
 	if bcswordplay is false:		[swords active - foam sword fight!]
 		say ".  Scattered on the floor are several foam swords which, as you pause for a moment to look at them, start to rise up into the air on their own, swinging wildly at you.  The blows don't really hurt, but you are knocked around on the unsteady floor.";
 		say "     Shall you: Grab one of the swords and [link]fight back (1)[as]1[end link] or make a break for the [if bcseenplayroom is true]play room[otherwise]doorway[end if] to the [link]south (2)[as]2[end link] or back to the entrance to the [link]west (3)[as]3[end link]?";
@@ -227,8 +242,9 @@ to say bcfencingroom:
 Chapter 3 - Bouncing Play Room
 
 to say bcplayroom:
+	now bcplayroomlast is true;
 	now bcseenplayroom is true;
-	say "     This room is a large, open room with a plenty of space for kids to bounce and play inside it.  It is very similar to the entrance room with its green floor, blue walls, red ceiling and yellow for the rounded columns that form the corners.  There's a small arched window on the east wall and two more on the west wall[if daytimer is day], letting in some light[otherwise].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].  There's a few toys and things scattered around this room, clearly from when the dolphin girls would frolic in here.  From the scent in the air, you can tell that the room's been used for more adult frolicing as well.";
+	say "     This room is a large, open room with a plenty of space for kids to bounce and play inside it.  It is very similar to the entrance room with its green floor, blue walls, red ceiling and yellow for the rounded columns that form the corners.  There's a pair of arched window on the south wall[if daytimer is day], letting in some light[otherwise].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].  There's a few toys and things scattered around this room, clearly from when the dolphin girls would frolic in here.  From the scent in the air, you can tell that the room's been used for more adult frolicing as well.";
 	if lastsealfight - turns >= 4:
 		if lastsealfight is 255:
 			say "     Now that you're in the room, you do notice a bright yellow seal-shaped floating seat in the northwest corner.  It's fairly small and would only really be suitable for toddlers.  It has a drawn-on face with a friendly smile, blue eyes, black nose and cute whiskers and a pair of small handles at its shoulders.  As you look at it, it starts to stir, flapping its flippers and giving a squeaking bark.  'Play!' it squeaks, crawling forward to have fun with the newcomer.  As it moves, you spot a pointed penis inflating at its underside - clearly a new feature to this once innocent toy.";
@@ -282,7 +298,7 @@ to say bcplayroom:
 Chapter 4 - Ball Pit Room
 
 to say bcballpitroom:
-	say "     The ball pit room has a rounded, raised edge and seems sunk further into the floor, making it somewhat less springy under all those balls.  You are able to wade your way through them slowly to move around.  The room itself is fairly large, bigger than the entrance room, but having the same overall design.  There's two arch-shaped windows in the south wall and another on the west wall[if daytimer is day], letting in some light[otherwise].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].  In the southwest corner of the room, there is a large mesh ladder for the children to climb [link]up[end link] to the upper level of the bouncy castle.  There are also two doorways out of here, one to the [link]north[end link] leading to the smaller room with all the beach toys the dolphin girls have collected, and the other to the [link]east[end link] and a play room as large as this one.";
+	say "     The ball pit room has a rounded, raised edge and seems sunk further into the floor, making it somewhat less springy under all those balls.  You are able to wade your way through them slowly to move around.  The room itself is fairly large, bigger than the entrance room, but having the same overall design.  There's two arch-shaped windows in the south wall[if daytimer is day], letting in some light[otherwise].  Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].  In the southwest corner of the room, there is a large mesh ladder for the children to climb [link]up[end link] to the upper level of the bouncy castle.  There are also three doorways out of here, one to the [link]north[end link] leading to the smaller room with all the beach toys the dolphin girls have collected, another to the [link]east[end link] and a play room as large as this one and the final to the west heading to a hall filled with .";
 
 
 Chapter 5 - Toy Room
@@ -324,7 +340,184 @@ to say bctoyroom:
 		say "     You glance over and notice the yellow octopus lurking among the junk, but it seems content to leave you alone for now.  You can see two child-sized doors out of here.  The one to the [link]east[end link] heads back to the entrance room you started in while the [link]southern[as]south[end link] one leads to a large ball pit in which you can see a mesh ladder to climb to the upper level.";
 
 
-Chapter 6 - Parapets
+Chapter 6 - Great Hall
+
+to say bcgreathall:
+	say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the west wall and tapestries between the windows on the east.  There's a door at the north and another at the southern corner of the east wall, the one which first brought you in here.  But you have little opportunity to take in much more detail than this, for the room also holds ";
+	if lastorcafight is 255:
+		say "a large, inflatable orca toy.  It is very round and bigger than the dolphin toys you've seen, being over two yards in from end to end and big enough for an adult to use.  The black and white inflatable bobs up in to the air and rolls over a few times with a trilling noise before charging towards you to bump you with its nose.  The blow doesn't really hurt much, but makes you stumble back on the rocking, swaying floor.  It seems intent on playfully bumping you back out the door you just came in from.";
+		now lastorcafight is turns;
+	otherwise:
+		say "the large orca inflatable from earlier.  It trills happily to see you again moves in to charge at you, clearly wanting to bump you around some more as part of its game.";
+	let bonus be ( dexterity of player - 10 ) / 2;
+	let dice be a random number from 1 to 20;
+	say "     You roll 1d20([dice])+[bonus] + [3 - scalevalue of player]: [dice + bonus + 3 - scalevalue of player] vs 15: ";
+	if bonus + dice + 3 - scalevalue of player is greater than 14:
+		say "     You manage to weave in one direction and then push off in the other, dodging another charge from the orca which would have knocked you roughly out the doorway.  You have a quick moment to decide which direction you'd like to go.  Shall you head through the door to the [link]north (Y)[as]y[end link] or head back the way you came by going [link]west (N)[as]n[end link] back to the play room?";
+		if the player consents:
+			say "     You move quickly to the northern doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you.  The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring in here.";
+			move player to King's Chambers;
+		otherwise:
+			say "     You move quickly to door in the southeast end of the room.  Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
+			move player to Bouncing Play Room;
+	otherwise:
+		say "     You try to dodge, but the unsure footing [if scalevalue of player > 3]and your large size make[otherwise]makes[end if] you an easy target and you're bumped back and sent tumbling out the door your just entered through.  You roll and come to a stop on the soft floor, knocked particularly hard by the rubber inflatable.  You are left a little dizzy and confused from your tumble, but seem otherwise unharmed.";
+		decrease humanity of player by 5;
+		if humanity of player < 10:
+			say "That last tumble knocks something loose in your already shaken mind and the last threads of your humanity snap.";
+			end the game saying "Your brain (shaken, not stirred) gave into the infection.";
+		otherwise:
+			if bcplayroomlast is true:
+				move player to Bouncing Play Room;
+			otherwise:
+				move player to King's Chambers;
+
+
+Chapter 7 - King's Chambers
+
+to say bckingschamber:
+	let compnumber be the number of entries in childrenfaces;
+	if companion of player is not nullpet, increase compnumber by 1;
+	now bcplayroomlast is false;
+	say "     This room is designed to be the king's chambers.  The wall designs have a pair of guards by the door, tapestries by the windows, a bed and treasure chest as large decals to show a childish representation of this.  There's no exit from this room save the one you entered by.  There's a window on the north wall and another two on the east.  There's not much in this room - a few beach balls, some other assorted odds and ends, and ";
+	if bcseenkingchair is false:
+		say "a very mundane looking inflatable chair resting on its side.  The discarded or forgotten chair is transparent and yellow[if scalevalue of player < 3].  It seems a little on the small side, but this makes it just about the right size for your [body size of player] [bodydesc of player] body[otherwise if scalevalue of player > 3].  It seems larger than normal, seeming just about the right size for your [body size of player] [bodydesc of player] body[otherwise].  It seems just about the right size for your [bodydesc of player] body[end if].";
+		say "     Feeling a little worn out from your trip through the castle and from evading the orca, you push the chair upright and take a seat in it, relaxing for a moment to take a break[if compnumber is 1].  Your companion takes the opportunity to unwind as well, playing with one of the beach balls[otherwise if compnumber > 1].  Your companions take the opportunity to unwind as well, tossing around one of the beach balls[end if].  Enjoying your much-needed break, you start to doze off, only to be startled awake by a strange sensation coming over you.";
+		say "[bckingchair]";
+	otherwise:
+		say "the inflatable chair.  When you set your eyes on it, you feel an attraction towards the yellow inflatable, wanting to sit in it again, to accept joining with it this time.  Shall you resist the impulse (Y) or take a seat willingly this time (N)?";
+		if player consents:
+			let bonus be ( humanity of player - libido of player ) / 20;			[+5 to -5 for humanity vs libido]
+			if skinname of player is listed in infections of Latexlist, decrease bonus by 1;
+			increase bonus by ( ( ( hp of player * 100 ) / maxhp of player ) / 25 );	[-4 to 0 for current hp]
+			let levbonus be level of player / 3;
+			if levbonus > 5, now levbonus is 5;
+			increase bonus by levbonus;
+			let difficulty be 10;
+			if hardmode is true, increase difficulty by 2;
+			let dice be a random number from 1 to 20;
+			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
+			if dice + bonus >= difficulty:
+				say "     Managing to resist the impulse and averting your eyes, you make for the door again with all due haste before you're lured back into the chair.";
+				move player to Great Hall;
+			otherwise:
+				say "     You try to resist the pull of the chair, but your eyes remain locked on it.  And the chair wasn't really that bad, was it?  It was certainly comfortable and you could really use a break after all you've been through here.  Before you can realize what you're doing, you sit down on the chair and sigh in pleasure, taking a load off.  It's not until the strange sensation of the chair starting to pull you in that you realize what you've done.";
+				say "[bckingchair]";
+		otherwise:
+			say "[bckingchair_accept]";
+
+
+to say bckingchair:
+	let chairescape be false;
+	let compnumber be the number of entries in childrenfaces;
+	if companion of player is not nullpet, increase compnumber by 1;
+	say "     As you start awake, you realize that the inflatable chair has started to stick to you.  You can see its armrests clinging to your arms, the material pulling them gradually in.  As you try to stand, you can feel that the same is happening to your back and legs.  There's something pleasant and appealing about the touch of the material upon you, but you try to shake it off.  Unsure what its plans are, but suspecting that they're not good at all, you start to struggle";
+	if compnumber is 1:
+		say "[if bcseenkingknight is true].  Looking over at your companion for assistance, you can see that the knights have once again emerged from the wall and are keeping your companion occupied[otherwise].  Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures.  They slash with their swords, keeping your companion too occupied to assist you, despite several attempts to reach you[end if]";
+		now bcseenkingknight is true;
+	otherwise if compnumber > 1:
+		say "[if bcseenkingknight is true].  Looking over at your companions for assistance, you can see that the knights have once again emerged from the wall and are keeping them occupied[otherwise].  Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures.  They slash with their swords, keeping your companions too occupied to assist you, despite several attempts by them to reach you[end if]";
+		now bcseenkingknight is true;
+	say ".";
+	attempttowait;
+	let playernum be a random number between 1 and strength of player;
+	let chairnum be 15;
+	if skinname of player is listed in infections of Latexlist, increase chairnum by 2;
+	if hardmode is true, increase chairnum by ( level of player / 5 );
+	let chairnum be a random number between 1 and chairnum;
+	if playernum >= chairnum:
+		let chairescape be true;
+	otherwise:
+		say "     You try to force yourself free of the chair, but it's already managed to get a good grip on you.  You can see the yellow material has covered about half of your arms and even your hards are starting to sink into it.  Looking at your body as you thrash about, you notice two things.  The first the clear yellow plastic is now visibly sliding in around your sides and the other ";
+		if cunts of player > 0 and "More Anal" is listed in feats of player:
+			say "is the growing sensation of bulging rubber pressing against your rear.  This pressure grows as the chair inflates a set of phallic dildos to push into your juicy cunt[sfn] and relaxing anus.  For some reason, you've become aroused by the chair's actions and the feel of those cock-like bulges pushing into you has made you realize it.";
+		otherwise if cunts of player > 0:
+			say "is the growing sensation of bulging rubber pressing against your rear.  This pressure grows as the chair inflates a [if cunts of player > 1]set of phallic dildos[otherwise]phallic dildo[end if] to push into your juicy cunt[sfn].  For some reason, you've become aroused by the chair's actions and the feel of [if cunts of player > 1]those cock-like bulges[otherwise]that cock-like bulge[end if] pushing into you has made you realize it.";
+		otherwise:
+			say "is the growing sensation of bulging rubber pressing against your rear.  This pressure grows as the chair inflates a a phallic dildo to push into your relaxing anus.  For some reason, you've become aroused by the chair's actions and the feel of that cock-like bulge pushing into you has made you realize it.";
+		attempttowait;
+		let playernum be ( 150 + humanity of player + level of player + strength of player - libido of player);
+		let playernum be a random number between 1 and playernum;
+		let chairnum be 170;
+		if skinname of player is listed in infections of Latexlist, increase chairnum by 30;
+		if hardmode is true, increase chairnum by level of player;
+		let chairnum be a random number between 1 and chairnum;
+		if playernum >= chairnum:
+			let chairescape be true;
+		otherwise:
+			say "     You try to keep struggling, the feel of that smooth material sliding inside you becomes increasingly pleasurable and distracting.  You try to keep your mind focused, but surely it wouldn't hurt to stop and enjoy this at least for a little while.  Sit, relax, catch your breath.  After that, you can pull free.  But why bother, if this feels so good.  It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated.  You sigh softly in pleasure as relax into your seat to enjoy the moment.";
+			say "     It is a lucky glance down that has you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch.  The sudden realization that this chair intends to keep you or somehow transform you as part of its fun startles you from your complacency and you make a final attempt to pull free of the alluring inflatable.";
+			increase libido of player by 8;
+			decrease humanity of player by 3;
+			if "Pure" is listed in feats of player, increase humanity of player by 1;
+			if "Corrupt" is listed in feats of player, increase humanity of player by 1;
+			if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
+			if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
+			if libido of player > 100, now libido of player is 100;
+	let playernum be a random number between 1 and strength of player;
+	let chairnum be 18;
+	if skinname of player is listed in infections of Latexlist, increase chairnum by 3;
+	if hardmode is true, increase chairnum by ( level of player / 5 );
+	let chairnum be a random number between 1 and chairnum;
+	if playernum >= chairnum:
+		let chairescape be true;
+	otherwise:
+		say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat.  As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1].  With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights.  There they are flattened out, turning into more knight decals to decorate the castle.  You can't help but smile at this, feeling that it's somehow right[otherwise if compnumber is 1].  With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights.  As they are flattened out, they turning into another knight decals to decorate the castle.  You can't help but smile at this, feeling that it's somehow right[otherwise].  Happiness grows and swells inside you and you smile[end if].  Your smile stretches and becomes transfixed on your face as your head becomes inflatable.  You are left with a smile and big, happy eyes as permanent designs on your face.";
+		say "     As you and the chair continue to merge, your [bodytype of player] body becomes one with it, reshaping it as you and it become one happy whole.  Now a yellow inflatable chair version of a [bodyname of player] with a matching head.  There's even cute matching prints at the end of the chair's arms to complete the look.";
+		now bcending is 3;
+		now bodyname of player is "Captured";
+		now facename of player is "Captured";
+		now skinname of player is "Captured";
+		now tailname of player is "Captured";
+		now cockname of player is "Captured";
+		now humanity of player is 0;
+		end the game saying "You are transformed into an inflatable [bodyname of player] chair.";
+	if chairescape is true:
+		say "     Managing to get some leverage by shifting your weight, you throw all your effort into pulling one of your arms free.  The yellow material stretches upwards at first, reluctant to release you, but eventually gives way and is pulled back down into its normal shape.  With an arm free, it becomes easier to pull the other free as well.  You take care not to leave your hands on the chair in any one spot too long, but are eventually able to pull the rest of your body free of it in the end.";
+		say "     You move away from it quickly and head back to the door to make your escape";
+		if compnumber > 0:
+			say ".  Coming at the knights from behind, they are forced to retreat back into the wall, adhering themselves to it again as if they'd never left";
+		say ".  Feeling a growing desire to take a seat in the chair again, you head out of the room as quickly as you can, having already wasted plenty of time in here.";
+		if bcseenkingchair is false:
+			increase score by 20;
+			now bcseenkingchair is true;
+		follow the turnpass rule;
+		if vixdol < 99:
+			move player to Great Hall;
+
+
+to say bckingchair_accept:
+	let compnumber be the number of entries in childrenfaces;
+	if companion of player is not nullpet, increase compnumber by 1;
+	say "     Choosing not to resist the chair's call this time, you drop your gear and flop down onto it.  Its plastic material gives a happy squeak as it rubs against the rubbery floor.  Settling into it, you rub your body against the padded seat and grips the arm rests, pressing yourself lightly against the chair's material.  Sure enough, it starts to slide over you as your body starts to sink into it with a pleasant sensation";
+	if compnumber is 1:
+		say "[if bcseenkingknight is true].  Looking over at your companion, you can see that the knights have once again emerged from the wall and are keeping your companion at bay.  Thus occupied, they're unable to reach you to save you, not that you want rescue from this lovely thing[otherwise].  Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures.  They slash with their swords, keeping your companion too occupied to come rescue you, not that you want rescue from this lovely thing[end if]";
+	otherwise if compnumber > 1:
+		say "[if bcseenkingknight is true].  Looking over at your companion, you can see that the knights have once again emerged from the wall and are keeping your companion at bay.  Thus occupied, they're unable to reach you to save you, not that you want rescue from this lovely thing[otherwise].  Hearing some struggling by the door, you can see that the knight designs have pulled themselves from the wall as two-dimensional figures.  They slash with their swords, keeping your companion too occupied to come rescue you, not that you want rescue from this lovely thing[end if]";
+	say ".";
+	say "     As the clear yellow plastic continues to creep further around you, another sensation starts to well up at your rear";
+	if cunts of player > 0 and "More Anal" is listed in feats of player:
+		say ".  To further make you happy, the chair grows some bulging rubber that inflates into a set of phallic dildos to push into your juicy cunt[sfn] and relaxing anus.  Already quite aroused by the chair's actions, having those cock-like bulges pushing into you feels all the better, filling a needy ache inside you.";
+	otherwise if cunts of player > 0:
+		say ".  To further make you happy, the chair grows some bulging rubber that inflates into a [if cunts of player > 1]set of phallic dildos[otherwise]phallic dildo[end if] to push into your juicy cunt[sfn].  Already quite aroused by the chair's actions, having [if cunts of player > 1]those cock-like bulges[otherwise]that cock-like bulge[end if] pushing into you feels all the better, filling a needy ache inside you.";
+	otherwise:
+		say ".  To further make you happy, the chair grows some bulging rubber that inflates into a phallic dildo to push into your relaxing anus.  Already quite aroused by the chair's actions, having that cock-like bulge pushing into you feels all the better, filling a needy ache inside you.";
+	say "     Squirming happily in your seat, the feel of the smooth material inside you becomes increasingly pleasurable and distracting.  You let your mind wander simply basking in the simple pleasure of sitting in the chair.  It is so soft, so comfy.  There's no reason to resist, you feel.  It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated.  You sigh softly in pleasure as relax into your seat to enjoy the moment.";
+	say "     As your mind fades away further, you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch.  Lost in the relaxing pleasure of the chair, you can't help but smile.  Sitting in this wonderful chair feels so good, so being this wonderful chair must be even better.  As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1].  With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights.  Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into more knight decals to decorate the castle.  You can't help but smile at this, feeling that it's somehow right[otherwise if compnumber is 1].  With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights.  Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, they turning into another knight decal to decorate the castle.  You can't help but smile at this, feeling that it's somehow right[otherwise].  Happiness grows and swells inside you and you smile[end if].  Your smile stretches and becomes transfixed on your face as your head becomes inflatable.  You are left with a smile and big, happy eyes as permanent designs on your face.";
+	say "     As you and the chair continue to merge, your [bodytype of player] body becomes one with it, reshaping it as you and it become one happy whole.  Now a yellow inflatable chair version of a [bodyname of player] with a matching head.  There's even cute matching prints at the end of the chair's arms to complete the look.";
+	now bcending is 3;
+	now bodyname of player is "Captured";
+	now facename of player is "Captured";
+	now skinname of player is "Captured";
+	now tailname of player is "Captured";
+	now cockname of player is "Captured";
+	now humanity of player is 0;
+	end the game saying "You are transformed into an inflatable [bodyname of player] chair.";
+
+
+Book 2 - Upper Floor
+
+Chapter 10 - Parapets
 
 to say bcparapets:
 	say "[bcparapets_new]";
@@ -380,7 +573,7 @@ to say bcparapets_new:
 			otherwise:
 				move player to Ball Pit Room;
 		otherwise:
-			say "     You take care as you navigate the room, planning to avoid the red spots in the hopes of not activating the chair again.  But you are suddenly surprised as one of the spots slides across the floor, moving quickly under your foot as you're bringing it down.  Your foot sinks into the flesh-like hole that forms and your other foot is similarly caught moments later[if compnumber > 1].  Nearby, you can hear your companions struggling against bands of material growing out of the mesh safety walls[otherwise if compnumber is 1].  Nearby, you can hear your companions struggling against bands of material growing out of the mesh safety walls[end if][if weapon object of player is journal]You end up dropping your [weapon object of player] when the spots shift quickly back to their original positions and you're sent tumbling forwards.  Shall you attempt to struggle against the sex chair again?";
+			say "     You take care as you navigate the room, planning to avoid the red spots in the hopes of not activating the chair again.  But you are suddenly surprised as one of the spots slides across the floor, moving quickly under your foot as you're bringing it down.  Your foot sinks into the flesh-like hole that forms and your other foot is similarly caught moments later[if compnumber > 1].  Nearby, you can hear your companions struggling against bands of material growing out of the mesh safety walls[otherwise if compnumber is 1].  Nearby, you can hear your companion struggling against bands of material growing out of the mesh safety walls[end if][if weapon object of player is journal]You end up dropping your [weapon object of player] when the spots shift quickly back to their original positions and you're sent tumbling forwards.  Shall you attempt to struggle against the sex chair again?";
 			now lastbcchair is turns;
 			if the player consents:
 				say "[bcchairfight]";
@@ -569,7 +762,7 @@ to say bcchairsubmit:
 				end the game saying "You become part of the Bouncy Castle.";
 
 
-Chapter 7 - Slide Room
+Chapter 11 - Slide Room
 
 to say bcslideroom:
 	say "     The second half of the bouncy castle's upper level has the same bright, colourful walls on three sides.  The eastern wall and the ceiling are made with open mesh across parapets and towers like the previous room.  Unlike that one, there is a gap in the mesh wall to allow access to the blue waterslide down into the sea below.  There is a constant flow of water and even some sprinklers running on the way down despite the lack of any motor or pump you could hear anywhere in the castle to keep it inflated or to send water up here.  If you want to leave the castle and head back to shore, you can [link]take the slide[end link].  Alternatively, there's also the doorway to the [link]west[end link] to the parapets.";
@@ -809,10 +1002,10 @@ an everyturn rule:
 			now Bouncy Castle is unknown;
 			now vixdol is 99;
 			decrease score by 10;
-	otherwise if vixdol is 2 and ( the player is in Bouncy Castle or the player is in Fencing Room or the player is in Bouncing Play Room or the player is in Ball Pit Room or the player is in Toy Room or the player is in Parapets ):
+	otherwise if vixdol is 2 and ( the player is in Bouncy Castle or the player is in Fencing Room or the player is in Bouncing Play Room or the player is in Ball Pit Room or the player is in Toy Room or the player is in Parapets or the player is in Great Hall or the player is in King's Chambers):
 		decrease vixcountdown by 1;
 		if vixcountdown <= 0:
-			say "     As you pause for a moment to catch your breath, you hear loud, muffled cries of ecstacy coming from somewhere on the upper level of the castle.  Given the mix of yiffs and trills to the sound and how they finish by becoming purely trills of delight, you sadly have to assume that that was the vixen girl finally giving in to whatever is happening to her.  Deciding there's little point in remaining here any longer, you push your way back to the entrance.";
+			say "     As you pause for a moment to catch your breath, you hear loud, muffled cries of ecstacy coming from somewhere on the upper level of the castle.  Given the mix of yiffs and trills to the sound and how they finish by becoming purely trills of delight, you sadly have to assume that was the vixen girl finally giving in to whatever is happening to her.  Deciding there's little point in remaining here any longer, you push your way back to the entrance.";
 			if pocketknife is owned or combat knife is owned or bonesaw is owned or infected sword is owned or cleaver is owned:
 				say "     Frustrated with the time you've wasted on this project, you leap back into the water and swim to the mooring lines securing the castle and cut through them.  The giant inflatable starts to drift away from shore, floating out to sea as the tide goes out and it's taken by the current.  You [if boatfound is 3 or boatfound is 2]climb back into your boat and head back to shore[otherwise]start the long swim back to shore[end if].  Once on the beach, you stare out of the water, feeling smug satisfaction as you watch the bouncy castle drift further and further out to sea.  Someone else will have to deal with it, but at least you've gotten rid of a bunch of those strange dolphin-making suits.";
 			otherwise:
@@ -856,6 +1049,9 @@ when play ends:
 			say ".  Still sharing some connection with your body, you get to enjoy this as well as all the other physical pleasures the castle provides, more directly sharing them with your united consciousness.";
 		otherwise:
 			say ".  Still sharing some connection with your body, you get to enjoy all the physical pleasures the castle provides, more directly sharing them with your united consiousness.";
+	otherwise if bodyname of player is "Captured" and bcending is 3:
+		say "     Having little mind of your own past a vague sense of happiness as an inflatable chair, you spend some time in the lonely room with only the knights to watch as they'll occasionally take a break from their stoic vigil to play with one another on the walls.  Eventually though, one of the inflatable dolphin girls finds you.  Having been lonely, you do your best to look inviting and comfy and yellow.  Drawn in, she takes a seat in you.  When you inflate a cock in your seat for her to ride, she's very happy and bounces around to ride it.  Being sat in and being able to please (and pleasure) someone feels very good.  She rides herself to several orgasms in you, leaving your seat pleasantly wet and sticky.";
+		say "     When she's finally satisfied and a new thought enters her bubbleheaded mind, your pleased that she takes you out with her, showing you off to her friends.  They all take turns in you and you have a wonderful time pleasing them.  You're eventually left in the toy room where they keep all their beach toys and inflatables, but they're in there much more often than the out of the way room where you were, so you get much more use now.  You have a happy life pleasing the dolphin girls and distracting the occasional intruder until they can be found and made them into another cute dolphin playmate.";
 
 
 Bouncy Castle ends here.
