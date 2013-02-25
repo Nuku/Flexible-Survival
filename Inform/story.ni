@@ -10,7 +10,7 @@ Use MAX_PROP_TABLE_SIZE of 500000.
 use MAX_STATIC_DATA of 1250000.
 Use MAX_OBJ_PROP_COUNT of 128.
 use MAX_SYMBOLS of 130000. [increase if "Translating the Source - Failed " and "Compiler finished with code 10" error occurs.]
-use MAX_NUM_STATIC_STRINGS of 55000.
+use MAX_NUM_STATIC_STRINGS of 57500.
 use ALLOC_CHUNK_SIZE of 135000.
 use MAX_OBJECTS of 1100.
 use MAX_ACTIONS of 300.
@@ -4303,7 +4303,7 @@ to say spontaneousorgasm:
 	otherwise if cunts of player > 0:
 		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously that knocks you to your knees.  Your [if cunts of player is 1]cunt[otherwise]cunts[end if] overflows with hot, feminine juices that soak your thighs.  You leave a [if ( 2 * cunt width of player ) < 18]messy splotch[otherwise if ( 2 * cunt width of player ) < 25]messy puddle[otherwise]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	otherwise:		[neuter]
-		say "     Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with an painful, aching need.  Lacking any other means, you rub over your body until it finally passes, leaving you weak, tired and largely unsatisfied.";
+		say "     Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with an painful, aching need.  Lacking any other means, you rub over your [bodytype of player] body until it finally passes, leaving you weak, tired and largely unsatisfied.";
 		now hp of player is ( 3 * hp of player ) / 4;
 
 This is the monster injury rule:
