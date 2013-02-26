@@ -32,7 +32,7 @@ To say Manticore loss:
 	say "In the confusion, the manticore ends up lying flat on his side as your last attack sends the other sprawling back to the ground. Growling in both pain and defeat, the leonine beast slowly gets up on shaky legs and then turns to regard you with something akin to disbelief on its impressively regal face. Rust red fur gleaming with sweat the beast shakes himself off before coming up over to you and then rubbing himself against your legs. Like a cat wanting its master's attention, it would see that the manticore has accepted your dominance over it... at the moment anyway. The fight having both tired you as well as excited you, do you use the other for your sexual relief?";
 	if player consents:
 		let pick be 0;
-		if cunts of the player is greater than 0:
+		if cunts of player > 0 and cocks of player > 0:
 			say "Deciding that you want to know just how virile this lion-like creature is, you nibble on your lower lip while looking over its majestic form hungrily. However which part of you should do you want satisfied by the beast? (Y=Cunt, N=Cock)";
 			if the player consents:
 				now pick is 1;
