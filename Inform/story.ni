@@ -276,6 +276,10 @@ Definition: The player is submissive:
 	if "Submissive" is listed in feats of player, yes;
 	no;
 
+Definition: The player is twistcapped:
+	if "Twisted Capacity" is listed in feats of player, yes;
+	no;
+
 [pregnancy related checks]
 Definition: The player is impreg_ok:		[can the player become pregnant in general]
 	if "Sterile" is listed in feats of player, no;
