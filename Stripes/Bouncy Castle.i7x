@@ -1,5 +1,5 @@
 Version 3 of Bouncy Castle by Stripes begins here.
-[Version 3 - Great Hall and King's Chamber added]
+[Version 3.1 - Great Hall and King's Chamber loop broken]
 "Save the vixen 'princess' from the 'castle'."
 
 Section 1 - Starting Event
@@ -398,13 +398,10 @@ to say bckingschamber:
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			if dice + bonus >= difficulty:
-				say "     Managing to resist the impulse and averting your eyes, you make for the door again with all due haste before you're lured back into the chair.";
-				move player to Great Hall;
+				say "     Managing to resist the impulse and averting your eyes, you turn away from it.  As there's nothing else of interest here, you should probably leave soon.  The only exit is to the [link]south[end link].";
 			otherwise:
 				say "     You try to resist the pull of the chair, but your eyes remain locked on it.  And the chair wasn't really that bad, was it?  It was certainly comfortable and you could really use a break after all you've been through here.  Before you can realize what you're doing, you sit down on the chair and sigh in pleasure, taking a load off.  It's not until the strange sensation of the chair starting to pull you in that you realize what you've done.";
 				say "[bckingchair]";
-		otherwise:
-			say "[bckingchair_accept]";
 
 
 to say bckingchair:
@@ -454,36 +451,35 @@ to say bckingchair:
 			if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 			if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
 			if libido of player > 100, now libido of player is 100;
-	let playernum be a random number between 1 and strength of player;
-	let chairnum be 18;
-	if skinname of player is listed in infections of Latexlist, increase chairnum by 3;
-	if hardmode is true, increase chairnum by ( level of player / 5 );
-	let chairnum be a random number between 1 and chairnum;
-	if playernum >= chairnum:
-		let chairescape be true;
-	otherwise:
-		say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat.  As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1].  With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights.  There they are flattened out, turning into more knight decals to decorate the castle.  You can't help but smile at this, feeling that it's somehow right[otherwise if compnumber is 1].  With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights.  As they are flattened out, they turning into another knight decals to decorate the castle.  You can't help but smile at this, feeling that it's somehow right[otherwise].  Happiness grows and swells inside you and you smile[end if].  Your smile stretches and becomes transfixed on your face as your head becomes inflatable.  You are left with a smile and big, happy eyes as permanent designs on your face.";
-		say "     As you and the chair continue to merge, your [bodytype of player] body becomes one with it, reshaping it as you and it become one happy whole.  Now a yellow inflatable chair version of a [bodyname of player] with a matching head.  There's even cute matching prints at the end of the chair's arms to complete the look.";
-		now bcending is 3;
-		now bodyname of player is "Captured";
-		now facename of player is "Captured";
-		now skinname of player is "Captured";
-		now tailname of player is "Captured";
-		now cockname of player is "Captured";
-		now humanity of player is 0;
-		end the game saying "You are transformed into an inflatable [bodyname of player] chair.";
+			attempttowait;
+			let playernum be a random number between 1 and strength of player;
+			let chairnum be 18;
+			if skinname of player is listed in infections of Latexlist, increase chairnum by 3;
+			if hardmode is true, increase chairnum by ( level of player / 5 );
+			let chairnum be a random number between 1 and chairnum;
+			if playernum >= chairnum:
+				let chairescape be true;
+			otherwise:
+				say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat.  As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1].  With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights.  There they are flattened out, turning into more knight decals to decorate the castle.  You can't help but smile at this, feeling that it's somehow right[otherwise if compnumber is 1].  With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights.  As they are flattened out, they turning into another knight decals to decorate the castle.  You can't help but smile at this, feeling that it's somehow right[otherwise].  Happiness grows and swells inside you and you smile[end if].  Your smile stretches and becomes transfixed on your face as your head becomes inflatable.  You are left with a smile and big, happy eyes as permanent designs on your face.";
+				say "     As you and the chair continue to merge, your [bodytype of player] body becomes one with it, reshaping it as you and it become one happy whole.  Now a yellow inflatable chair version of a [bodyname of player] with a matching head.  There's even cute matching prints at the end of the chair's arms to complete the look.";
+				now bcending is 3;
+				now bodyname of player is "Captured";
+				now facename of player is "Captured";
+				now skinname of player is "Captured";
+				now tailname of player is "Captured";
+				now cockname of player is "Captured";
+				now humanity of player is 0;
+				end the game saying "You are transformed into an inflatable [bodyname of player] chair.";
 	if chairescape is true:
 		say "     Managing to get some leverage by shifting your weight, you throw all your effort into pulling one of your arms free.  The yellow material stretches upwards at first, reluctant to release you, but eventually gives way and is pulled back down into its normal shape.  With an arm free, it becomes easier to pull the other free as well.  You take care not to leave your hands on the chair in any one spot too long, but are eventually able to pull the rest of your body free of it in the end.";
-		say "     You move away from it quickly and head back to the door to make your escape";
+		say "     You move away from it quickly and while trying to clear your head and refocus your thoughts";
 		if compnumber > 0:
 			say ".  Coming at the knights from behind, they are forced to retreat back into the wall, adhering themselves to it again as if they'd never left";
-		say ".  Feeling a growing desire to take a seat in the chair again, you head out of the room as quickly as you can, having already wasted plenty of time in here.";
+		say ".  Feeling a growing desire to take a seat in the chair again, you avert your eyes from it.  Perhaps you'd best leave this room soon.  The only exit is to the [link]south[end link].";
 		if bcseenkingchair is false:
 			increase score by 20;
 			now bcseenkingchair is true;
 		follow the turnpass rule;
-		if vixdol < 99:
-			move player to Great Hall;
 
 
 to say bckingchair_accept:
