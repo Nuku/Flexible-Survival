@@ -835,6 +835,8 @@ To reciting2:
 						now thirst of Eric is 1;
 					if hp of Eric is 21 or hp of Eric is 22:
 						now thirst of Eric is 21;
+					if hp of Eric is 31 or hp of Eric is 32:
+						now thirst of Eric is 31;
 					if hp of Eric is 11:
 						now thirst of Eric is 11;
 			-- 102:	[Christy the Stuck Dragoness]
@@ -2036,6 +2038,8 @@ Carry out reciting:
 						now thirst of Eric is 1;
 					if hp of Eric is 21 or hp of Eric is 22:
 						now thirst of Eric is 21;
+					if hp of Eric is 31 or hp of Eric is 32:
+						now thirst of Eric is 31;
 					if hp of Eric is 11:
 						now thirst of Eric is 11;
 			-- 102:	[Christy the Stuck Dragoness]
