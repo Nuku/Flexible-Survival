@@ -26,12 +26,6 @@ To decide which number is the absolute value of (N - a number):
 		let N be 0 minus N;
 	decide on N.
 
-Instead of sniffing something (called x):
-	if the scent of x is "":
-		say "It smells pretty normal for a/an [x].";
-	otherwise:
-		say "[scent of x][line break]";
-
 To say a/an (T - text):
 	let Txt be indexed text;
 	let Txt be T;
@@ -40,6 +34,12 @@ To say a/an (T - text):
 	otherwise:
 		say "a ";
 	say T.
+
+Instead of sniffing something (called x):
+	if the scent of x is "":
+		say "It smells pretty normal for a/an [x].";
+	otherwise:
+		say "[scent of x][line break]";
 
 To wait for any key:
 	if hypernull is 0:
@@ -5767,6 +5767,7 @@ Include Sugar Ferret for FS by Stripes.
 Include Candy Striper by Stripes.
 Include Badger by StripeGuy.
 Include Opossum Sailor by StripeGuy.
+Include Tenrec by StripeGuy.
 
 
 [NPCs]
