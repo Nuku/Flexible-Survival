@@ -368,12 +368,10 @@ to say satyrwine_eric:
 Section 3 - Fucking Eric
 
 Instead of fucking the Eric:
-	[puts Centaur Stallion as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if name entry is "Centaur Stallion":
-			now monster is y;
-			break;
+	if hp of Eric is 21 or hp of Eric is 22:
+		setmonster "Centaur Stallion";
+	otherwise if hp of Eric is 31 or hp of Eric is 32:
+		setmonster "Satyr";
 	if (hp of Eric is 0):   [virgin - in the lockerroom]
 		if(cocks of player > 0):
 			say "     As you approach Eric and ask him if he wants some fun, his gaze drops down to your crotch and he hesitates. Swallowing hard and turning rather red in the face, he then shakes his head, saying 'I - I can't - I mean - I'm not gay. But thanks for the offer.'";
