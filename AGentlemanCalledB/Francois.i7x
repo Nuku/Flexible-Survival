@@ -162,7 +162,6 @@ Section 3 - François
 François is a man. François is in Bone-Appetit.
 The description of François is "[Françoisdesc]";
 The conversation of François is { "Numnum!" }.
-lastfuck of François is normally 555.
 understand "Francis" as François.
 understand "Francois" as François.
 Françoistalk1 is a truth state that varies.  Françoistalk1 is normally false.
@@ -193,6 +192,7 @@ instead of fucking the François:
 		say "     He licks his muzzle and eyes your crotch, but shakes his head.  'As much as I would relish to opportunity to show you my thanks again, there is so much else that needs to be done.  Perhaps a little later though?' he adds with a smile and the brush of a paw down your side.";
 	otherwise if libido of François is 1:
 		say "[françoissex1]";
+		now lastfuck of François is turns;
 	otherwise:
 		say "     Looking over at the oddly attractive hybrid, you smile and suggest taking a break to have a little fun together.  He smiles at your offer and moves up against you, running his paws over your [bodydesc of player] body.  He nuzzles at your chest as he helps you out of your clothes and gear[if breast size of player is 0].  He licks across your manly pecs, teasing your nipples with his tongue[end if].  As you run a hand through his fur and feathers, you wonder exactly what you'd like to do with him.";
 		if libido of François is 2:
@@ -201,10 +201,14 @@ instead of fucking the François:
 				say "[françoissex2]";
 			otherwise:
 				say "[françoissex1]";
+			now lastfuck of François is turns;
 		otherwise:
 			say "[françoissexmenu]";
+			now lastfuck of François is turns;
 
 to say françoissexmenu:
+	now sextablerun is 0;
+	now calcnumber is -1;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Mount him";
