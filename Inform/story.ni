@@ -5479,6 +5479,7 @@ Include Parasite by Stripes.
 Include Zephyr Inc by Nuku Valente.
 Include Red Light by Hiccup.
 Include High Rise District by Batroo.
+Include Grizzly Bear by UrsaOmega.
 Include Stables by Sarokcat.
 Include New Ewe Store by Sarokcat.
 Include Hyena Hideout by Sarokcat.
