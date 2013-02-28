@@ -929,7 +929,6 @@ To reciting2:
 			-- 111:	[Camp Bravo / Adam]
 				if the player's command matches "[number]":
 					now hp of Adam is the number understood;
-					now Red Light Requisition is resolved;
 					now Trickster's Masterpiece is resolved;
 					now Back at the Camp is resolved;
 					now Camp Bravo Entrance is unknown;
@@ -939,8 +938,9 @@ To reciting2:
 					remove Adam from play;
 					if guy is banned or furry is banned:
 						now Red Light Requisition is resolved;
+						now Trickster's Masterpiece is resolved;
 					otherwise if hp of Adam is 0:
-						now Red Light Requisition is unresolved;
+						now Trickster's Masterpiece is unresolved;
 					otherwise if hp of Adam is 1:
 						now Trickster's Masterpiece is unresolved;
 					otherwise if hp of Adam is 2:
@@ -2132,7 +2132,6 @@ Carry out reciting:
 			-- 111:	[Camp Bravo / Adam]
 				if the player's command matches "[number]":
 					now hp of Adam is the number understood;
-					now Red Light Requisition is resolved;
 					now Trickster's Masterpiece is resolved;
 					now Back at the Camp is resolved;
 					now Camp Bravo Entrance is unknown;
@@ -2142,8 +2141,9 @@ Carry out reciting:
 					remove Adam from play;
 					if guy is banned or furry is banned:
 						now Red Light Requisition is resolved;
+						now Trickster's Masterpiece is resolved;
 					otherwise if hp of Adam is 0:
-						now Red Light Requisition is unresolved;
+						now Trickster's Masterpiece is unresolved;
 					otherwise if hp of Adam is 1:
 						now Trickster's Masterpiece is unresolved;
 					otherwise if hp of Adam is 2:
