@@ -272,52 +272,63 @@ Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if the absolute value of ( scalevalue of player - objsize of x ) > 1, yes;
 	no;
 
-Definition: The player is submissive:
-	if "Submissive" is listed in feats of player, yes;
+A person can be submissive.  A person is usually not submissive.
+
+Definition: A person (called x) is submissive:
+	if "Submissive" is listed in feats of x, yes;
 	no;
 
-Definition: The player is twistcapped:
-	if "Twisted Capacity" is listed in feats of player, yes;
+A person can be twistcapped.  A person is usually not twistcapped.
+
+Definition: A person (called x) is twistcapped:
+	if "Twisted Capacity" is listed in feats of x, yes;
 	no;
 
 [pregnancy related checks]
-Definition: The player is impreg_ok:		[can the player become pregnant in general]
-	if "Sterile" is listed in feats of player, no;
-	if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ), yes;
+
+A person can be impreg_ok.  A person is usually not impreg_ok.
+A person can be impreg_able.  A person is usually not impreg_able.
+A person can be impreg_now.  A person is usually not impreg_now.
+A person can be mpreg_ok.  A person is usually not mpreg_ok.
+A person can be mpreg_able.  A person is usually not mpreg_able.
+A person can be mpreg_now.  A person is usually not mpreg_now.
+
+Definition: A person (called x) is impreg_ok:		[can the player become pregnant in general]
+	if "Sterile" is listed in feats of x, no;
+	if ( cunts of x > 0 or ( "MPreg" is listed in feats of x and ( level of Velos is not 1 or hp of Velos < 3 ) ) ), yes;
 	no;
 
-
-Definition: The player is impreg_able:		[can the player current be impregnated]
-	if "Sterile" is listed in feats of player, no;
+Definition: A person (called x) is impreg_able:		[can the player current be impregnated]
+	if "Sterile" is listed in feats of x, no;
 	if gestation of child > 0 or child is born, no;
 	if larvaegg is 2, no;
-	if ( cunts of player > 0 or ( "MPreg" is listed in feats of player and ( level of Velos is not 1 or hp of Velos < 3 ) ) ), yes;
+	if ( cunts of player > 0 or ( "MPreg" is listed in feats of x and ( level of Velos is not 1 or hp of Velos < 3 ) ) ), yes;
 	no;
 
-Definition: The player is impreg_now:		[is the player currently pregnant]
+Definition: A person (called x) is impreg_now:		[is the player currently pregnant]
 	if gestation of child > 0, yes;
 	no;
 
 [MPreg-pregnancy checks]
-Definition: The player is mpreg_ok:			[can the player become male-pregnant in general]
-	if "Sterile" is listed in feats of player, no;
-	if "MPreg" is listed in feats of player, yes;
+Definition: A person (called x) is mpreg_ok:			[can the player become male-pregnant in general]
+	if "Sterile" is listed in feats of x, no;
+	if "MPreg" is listed in feats of x, yes;
 	no;
 
-Definition: The player is mpreg_able:		[can the player current be male-impregnated]
-	if "Sterile" is listed in feats of player, no;
+Definition: A person (called x) is mpreg_able:		[can the player current be male-impregnated]
+	if "Sterile" is listed in feats of x, no;
 	if gestation of child > 0 or child is born, no;
 	if larvaegg is 2, no;
 	if level of Velos is 1 and hp of Velos > 2, no;
-	if "MPreg" is listed in feats of player, yes;
+	if "MPreg" is listed in feats of x, yes;
 	no;
 
-Definition: The player is mpreg_now:		[is the player currently male-impregnated]
-	if gestation of child > 0 and "MPreg" is listed in feats of player and cunts of player is 0, yes;
+Definition: A person (called x) is mpreg_now:		[is the player currently male-impregnated]
+	if gestation of child > 0 and "MPreg" is listed in feats of x and cunts of x is 0, yes;
 	no;
 
 
-Definition: The player is perminfected:
+Definition: A person (called x) is perminfected:
 	if ( jackalmantf > 0 or jackalboytf > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
 	no;
 
@@ -5543,6 +5554,7 @@ Include Zoo Events by Sarokcat.
 Include Fair Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Capitol Events by Blue Bishop.
+Include Warehouse Events by StripeGuy.
 Include Infected Pool for FS by Hellerhound.
 Include Hyena Situations by Hellerhound.
 Include Catapult Encounter by Hellerhound.

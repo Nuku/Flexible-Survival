@@ -53,13 +53,13 @@ Section 3- Wyvern Flight
 [Moved to CEO1 file.]
 
 
-Section 4- Abandoned player
+Section 4- Abandonedplayer
 
-Abandoned player is a situation.  The sarea of Abandoned player is "Warehouse".
+Abandonedplayer is a situation.  The sarea of Abandonedplayer is "Warehouse".
 
-Instead of Resolving a Abandoned player:
+Instead of Resolving a Abandonedplayer:
 	say "As you search the deserted streets of the area close to the waterfront, you hear some noise coming from a nearby alley, cautiously following it you prepare for combat as you move closer.  Gripping your makeshift weapon tightly, you duck around the corner and prepare to engage in epic combat... with an abandoned CD player.  Sighing you lower you weapon before looking around you in embarrassment, fortunately there was no one around to see that.  Checking the music player you decide to leave the instrument of your ridicule where it was so it wont remind you of today, besides, you never liked that artist much anyways.";
-	Now Abandoned player is resolved;
+	Now Abandonedplayer is resolved;
 
 
 Section 5- Hyena Gang
